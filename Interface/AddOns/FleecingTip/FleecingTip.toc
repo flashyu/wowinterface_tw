@@ -1,0 +1,45 @@
+## Interface: 11303
+## Version: 113.1770(200720)
+## Author: bazelle
+## X-Website: 
+## Title: FleecingTip |cffa330c9(Classic Edition)|r
+## Notes: Tooltip information on where an item that could instead be obtained/bought from a vendor, quest or a drop.  Baa!...Stop being fleeced!
+## X-Category: Interface Enhancements
+## SavedVariables: FleecingTipDB, FT_NewItemInfo
+## LoadManagers: AddonLoader
+## X-LoadOn-Always: delayed
+
+localization.lua
+
+Utilities\FTUtils.lua
+Utilities\FTTable.lua
+
+FT_ItemInfo.lua
+Items\Alchemy_Info.lua
+Items\Armor_Info.lua
+Items\Bags_Info.lua
+Items\Blacksmithing_Info.lua
+Items\Books_Info.lua
+Items\Cooking_Info.lua
+Items\Enchanting_Info.lua
+Items\Engineering_Info.lua
+Items\FirstAid_Info.lua
+Items\Fishing_Info.lua
+Items\Jewelry_Info.lua
+Items\Leatherworking_Info.lua
+Items\Mounts_Info.lua
+Items\Pets_Info.lua
+Items\Quest_Info.lua
+Items\Quivers_Info.lua
+Items\Tailoring_Info.lua
+Items\Weapons_Info.lua
+
+FT_Vendors.lua
+Vendors\Alliance.lua
+Vendors\Horde.lua
+Vendors\Neutral.lua
+Vendors\Drops.lua
+
+Main.lua
+Options.lua
+Main.xml

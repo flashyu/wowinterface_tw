@@ -1,0 +1,4 @@
+VER 3 0000000000000001 "初始化" "INV_MISC_QUESTIONMARK"
+/console cameraDistanceMaxZoomFactor 4
+/console ffxDeath 0
+END
