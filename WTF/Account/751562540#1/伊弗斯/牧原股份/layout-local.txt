@@ -4,7 +4,7 @@ FrameLevel: 1
 Anchor: TOPLEFT
 X: 3
 Y: -40
-W: 124
+W: 117
 H: 21
 Frame: ColorPickerFrame
 FrameLevel: 1

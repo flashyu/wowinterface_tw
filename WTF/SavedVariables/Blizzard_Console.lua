@@ -710,6 +710,306 @@ Blizzard_Console_SavedVars = {
 			"[WowEntitlements] [BNetAccount-0-00002CCBEF2C] [WowAccount-0-00004F005247] Initialized with 5 entitlements.", -- [1]
 			0, -- [2]
 		}, -- [177]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [178]
+		{
+			"Failed to set SpellClutter callback on graphicsQuality CVar - using default of 30.0", -- [1]
+			0, -- [2]
+		}, -- [179]
+		{
+			"Failed to set SpellClutter callback on RAIDgraphicsQuality CVar - using default of 30.0", -- [1]
+			0, -- [2]
+		}, -- [180]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [181]
+		{
+			"Proficiency in item class 2 set to 0x00000010", -- [1]
+			0, -- [2]
+		}, -- [182]
+		{
+			"Proficiency in item class 2 set to 0x00000410", -- [1]
+			0, -- [2]
+		}, -- [183]
+		{
+			"Proficiency in item class 2 set to 0x00000430", -- [1]
+			0, -- [2]
+		}, -- [184]
+		{
+			"Proficiency in item class 2 set to 0x00008430", -- [1]
+			0, -- [2]
+		}, -- [185]
+		{
+			"Proficiency in item class 4 set to 0x00000100", -- [1]
+			0, -- [2]
+		}, -- [186]
+		{
+			"Proficiency in item class 4 set to 0x00000101", -- [1]
+			0, -- [2]
+		}, -- [187]
+		{
+			"Proficiency in item class 2 set to 0x0000c430", -- [1]
+			0, -- [2]
+		}, -- [188]
+		{
+			"Proficiency in item class 4 set to 0x00000105", -- [1]
+			0, -- [2]
+		}, -- [189]
+		{
+			"Proficiency in item class 4 set to 0x00000107", -- [1]
+			0, -- [2]
+		}, -- [190]
+		{
+			"Proficiency in item class 2 set to 0x0000e430", -- [1]
+			0, -- [2]
+		}, -- [191]
+		{
+			"Proficiency in item class 2 set to 0x0000e430", -- [1]
+			0, -- [2]
+		}, -- [192]
+		{
+			"Proficiency in item class 4 set to 0x00000107", -- [1]
+			0, -- [2]
+		}, -- [193]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [194]
+		{
+			"Time set to 7/22/2021 (Thu) 23:11", -- [1]
+			0, -- [2]
+		}, -- [195]
+		{
+			"Gamespeed set from 0.017 to 0.017", -- [1]
+			0, -- [2]
+		}, -- [196]
+		{
+			"Value out of range (1.000000 - 4.000000)\n", -- [1]
+			0, -- [2]
+		}, -- [197]
+		{
+			"World transfer aborted (reason: 30)", -- [1]
+			0, -- [2]
+		}, -- [198]
+		{
+			"Skill 95 increased from 290 to 291", -- [1]
+			0, -- [2]
+		}, -- [199]
+		{
+			"Skill 95 increased from 291 to 292", -- [1]
+			0, -- [2]
+		}, -- [200]
+		{
+			"Skill 95 increased from 292 to 293", -- [1]
+			0, -- [2]
+		}, -- [201]
+		{
+			"Skill 124 increased from 295 to 300", -- [1]
+			0, -- [2]
+		}, -- [202]
+		{
+			"Skill 134 increased from 295 to 300", -- [1]
+			0, -- [2]
+		}, -- [203]
+		{
+			"Skill 183 increased from 295 to 300", -- [1]
+			0, -- [2]
+		}, -- [204]
+		{
+			"Skill 573 increased from 295 to 300", -- [1]
+			0, -- [2]
+		}, -- [205]
+		{
+			"Skill 574 increased from 295 to 300", -- [1]
+			0, -- [2]
+		}, -- [206]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [207]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [208]
+		{
+			"Trainer service 3286 unavailable", -- [1]
+			0, -- [2]
+		}, -- [209]
+		{
+			"World transfer aborted (reason: 30)", -- [1]
+			0, -- [2]
+		}, -- [210]
+		{
+			"World transfer pending...", -- [1]
+			0, -- [2]
+		}, -- [211]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [212]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [213]
+		{
+			"Skill 762 increased from 75 to 150", -- [1]
+			0, -- [2]
+		}, -- [214]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [215]
+		{
+			"Trainer service 25298 unavailable", -- [1]
+			0, -- [2]
+		}, -- [216]
+		{
+			"Trainer service 17402 unavailable", -- [1]
+			0, -- [2]
+		}, -- [217]
+		{
+			"Trainer service 25299 unavailable", -- [1]
+			0, -- [2]
+		}, -- [218]
+		{
+			"Trainer service 9863 unavailable", -- [1]
+			0, -- [2]
+		}, -- [219]
+		{
+			"Trainer service 20748 unavailable", -- [1]
+			0, -- [2]
+		}, -- [220]
+		{
+			"Trainer service 25297 unavailable", -- [1]
+			0, -- [2]
+		}, -- [221]
+		{
+			"Trainer service 9858 unavailable", -- [1]
+			0, -- [2]
+		}, -- [222]
+		{
+			"Trainer service 9885 unavailable", -- [1]
+			0, -- [2]
+		}, -- [223]
+		{
+			"Trainer service 21850 unavailable", -- [1]
+			0, -- [2]
+		}, -- [224]
+		{
+			"Trainer service 31018 unavailable", -- [1]
+			0, -- [2]
+		}, -- [225]
+		{
+			"Trainer service 9896 unavailable", -- [1]
+			0, -- [2]
+		}, -- [226]
+		{
+			"World transfer pending...", -- [1]
+			0, -- [2]
+		}, -- [227]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [228]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [229]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [230]
+		{
+			"Attempted to register existing command: ShowObjUsage\n", -- [1]
+			0, -- [2]
+		}, -- [231]
+		{
+			"Attempted to register existing command: SetDifficulty\n", -- [1]
+			0, -- [2]
+		}, -- [232]
+		{
+			"Failed to set SpellClutter callback on graphicsQuality CVar - using default of 30.0", -- [1]
+			0, -- [2]
+		}, -- [233]
+		{
+			"Failed to set SpellClutter callback on RAIDgraphicsQuality CVar - using default of 30.0", -- [1]
+			0, -- [2]
+		}, -- [234]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [235]
+		{
+			"Proficiency in item class 2 set to 0x00000010", -- [1]
+			0, -- [2]
+		}, -- [236]
+		{
+			"Proficiency in item class 2 set to 0x00000410", -- [1]
+			0, -- [2]
+		}, -- [237]
+		{
+			"Proficiency in item class 2 set to 0x00000430", -- [1]
+			0, -- [2]
+		}, -- [238]
+		{
+			"Proficiency in item class 2 set to 0x00008430", -- [1]
+			0, -- [2]
+		}, -- [239]
+		{
+			"Proficiency in item class 4 set to 0x00000100", -- [1]
+			0, -- [2]
+		}, -- [240]
+		{
+			"Proficiency in item class 4 set to 0x00000101", -- [1]
+			0, -- [2]
+		}, -- [241]
+		{
+			"Proficiency in item class 2 set to 0x0000c430", -- [1]
+			0, -- [2]
+		}, -- [242]
+		{
+			"Proficiency in item class 4 set to 0x00000105", -- [1]
+			0, -- [2]
+		}, -- [243]
+		{
+			"Proficiency in item class 4 set to 0x00000107", -- [1]
+			0, -- [2]
+		}, -- [244]
+		{
+			"Proficiency in item class 2 set to 0x0000e430", -- [1]
+			0, -- [2]
+		}, -- [245]
+		{
+			"Proficiency in item class 2 set to 0x0000e430", -- [1]
+			0, -- [2]
+		}, -- [246]
+		{
+			"Proficiency in item class 4 set to 0x00000107", -- [1]
+			0, -- [2]
+		}, -- [247]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [248]
+		{
+			"Time set to 7/23/2021 (Fri) 3:18", -- [1]
+			0, -- [2]
+		}, -- [249]
+		{
+			"Gamespeed set from 0.017 to 0.017", -- [1]
+			0, -- [2]
+		}, -- [250]
+		{
+			"Value out of range (1.000000 - 4.000000)\n", -- [1]
+			0, -- [2]
+		}, -- [251]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [252]
 	},
 	["height"] = 300,
 	["fontHeight"] = 14,

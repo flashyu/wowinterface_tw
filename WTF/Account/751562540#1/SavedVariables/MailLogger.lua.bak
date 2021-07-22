@@ -27,5 +27,32 @@ MailLoggerDB = {
 		["LogEverything"] = false,
 	},
 	["TradeLog"] = {
+		{
+			["TargetName"] = "特變電工",
+			["PlayerName"] = "牧原股份",
+			["ReceiveMoney"] = 0,
+			["Time"] = "03:13:22",
+			["GiveMoney"] = 0,
+			["Location"] = "莫高雷",
+			["GiveItems"] = {
+			},
+			["Date"] = "2021-07-23",
+			["ReceiveItems"] = {
+			},
+		}, -- [1]
+		{
+			["TargetName"] = "特變電工",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-07-23",
+			["ReceiveMoney"] = 6000000,
+			["Time"] = "03:13:22",
+			["GiveMoney"] = 0,
+			["Location"] = "莫高雷",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [2]
 	},
 }
