@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0521,
+	["LastPlayerFullName"] = "牧原股份-伊弗斯",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 29940,
@@ -83,8 +85,6 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:29911::::::::58::::::::|h[阿迦瑪甘羽刺]|h|r",
 		}, -- [16]
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "牧原股份-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

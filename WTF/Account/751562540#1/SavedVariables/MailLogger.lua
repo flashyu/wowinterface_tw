@@ -29,14 +29,14 @@ MailLoggerDB = {
 	["TradeLog"] = {
 		{
 			["Date"] = "2021-07-23",
-			["PlayerName"] = "牧原股份",
+			["TargetName"] = "特變電工",
 			["ReceiveMoney"] = 0,
-			["GiveItems"] = {
-			},
+			["Time"] = "03:13:22",
 			["GiveMoney"] = 0,
 			["Location"] = "莫高雷",
-			["TargetName"] = "特變電工",
-			["Time"] = "03:13:22",
+			["GiveItems"] = {
+			},
+			["PlayerName"] = "牧原股份",
 			["ReceiveItems"] = {
 			},
 		}, -- [1]
