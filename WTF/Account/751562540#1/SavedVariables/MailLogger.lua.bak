@@ -28,19 +28,6 @@ MailLoggerDB = {
 	},
 	["TradeLog"] = {
 		{
-			["Date"] = "2021-07-23",
-			["TargetName"] = "特變電工",
-			["ReceiveMoney"] = 0,
-			["Time"] = "03:13:22",
-			["GiveMoney"] = 0,
-			["Location"] = "莫高雷",
-			["GiveItems"] = {
-			},
-			["PlayerName"] = "牧原股份",
-			["ReceiveItems"] = {
-			},
-		}, -- [1]
-		{
 			["TargetName"] = "特變電工",
 			["PlayerName"] = "牧原股份",
 			["Date"] = "2021-07-23",
@@ -51,6 +38,30 @@ MailLoggerDB = {
 			["GiveItems"] = {
 			},
 			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [1]
+		{
+			["TargetName"] = "豬圈一",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-07-25",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+				{
+					["Number"] = 104,
+					["ItemLink"] = "|cffffffff|Hitem:21877::::::::61::::::::|h[幽紋布]|h|r",
+					["Name"] = "幽紋布",
+				}, -- [1]
+				[4] = {
+					["Number"] = 109,
+					["ItemLink"] = "|cffffffff|Hitem:14047::::::::61::::::::|h[符文布]|h|r",
+					["Name"] = "符文布",
+				},
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "地獄火半島",
+			["Time"] = "01:47:08",
+			["Result"] = "sent",
 			["ReceiveItems"] = {
 			},
 		}, -- [2]

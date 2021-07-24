@@ -1,1 +1,0 @@
-Local git copy of AceLocale-3.0 - https://repos.wowace.com/wow/ace3/trunk/AceLocale-3.0

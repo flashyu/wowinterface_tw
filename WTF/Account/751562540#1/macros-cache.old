@@ -1,3 +1,11 @@
+VER 3 0000000000000004 "target" "132177"
+/target 博學者阿勒迪斯
+END
+VER 3 0000000000000003 "治療之觸" "136041"
+#showtooltip
+/stopcasting
+/cast [modifier:shift] 治療之觸(等級 4); 治療之觸
+END
 VER 3 0000000000000002 "精靈之火" "136033"
 #showtooltip
 /cancelform [nostance:0/1/3]

@@ -1,11 +1,4 @@
 Version: 1
-Frame: AccountantClassicMoneyInfoFrame
-FrameLevel: 1
-Anchor: TOPLEFT
-X: 3
-Y: -40
-W: 123
-H: 21
 Frame: ColorPickerFrame
 FrameLevel: 1
 Anchor: CENTER
@@ -20,10 +13,3 @@ X: 0
 Y: 128
 W: 200
 H: 50
-Frame: WIM3_msgFrame1
-FrameLevel: 2
-Anchor: TOPLEFT
-X: 338
-Y: -163
-W: 333
-H: 220

@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0521,
+	["LastPlayerFullName"] = "牧原股份-伊弗斯",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 29940,
@@ -19,9 +21,9 @@ PawnOptions = {
 		}, -- [3]
 		nil, -- [4]
 		{
-			["ID"] = 29938,
-			["Level"] = 81,
-			["Link"] = "|cff1eff00|Hitem:29938::::::::58::::::::|h[軍用搜索者護胸]|h|r",
+			["ID"] = 31718,
+			["Level"] = 88,
+			["Link"] = "|cff0070dd|Hitem:31718::::::::61::::::::|h[黑暗風暴外套]|h|r",
 		}, -- [5]
 		{
 			["ID"] = 25504,
@@ -34,9 +36,9 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:29939::::::::58::::::::|h[鐮奪怪皮護腿]|h|r",
 		}, -- [7]
 		{
-			["ID"] = 186031,
-			["Level"] = 52,
-			["Link"] = "|cff1eff00|Hitem:186031::::::::58::::::::|h[共治長靴]|h|r",
+			["ID"] = 28074,
+			["Level"] = 91,
+			["Link"] = "|cff0070dd|Hitem:28074::::::::61::::::::|h[釘甲綠色裹足]|h|r",
 		}, -- [8]
 		{
 			["ID"] = 24604,
@@ -61,10 +63,10 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:29398::::::::61::::::::|h[放逐戒指]|h|r",
 		}, -- [12]
 		{
-			["ID"] = 185985,
-			["Level"] = 52,
+			["ID"] = 28041,
+			["Level"] = 88,
 			["AlsoFitsIn"] = 14,
-			["Link"] = "|cff1eff00|Hitem:185985::::::::58::::::::|h[共治突襲之石]|h|r",
+			["Link"] = "|cff0070dd|Hitem:28041::::::::61::::::::|h[刃拳飾物]|h|r",
 		}, -- [13]
 		{
 			["ID"] = 185985,
@@ -83,8 +85,6 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:29911::::::::58::::::::|h[阿迦瑪甘羽刺]|h|r",
 		}, -- [16]
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "牧原股份-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

@@ -1,1 +1,0 @@
-Local git copy of LibStub - https://repos.wowace.com/wow/ace3/trunk/LibStub

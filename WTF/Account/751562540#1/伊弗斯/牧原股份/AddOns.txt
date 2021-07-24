@@ -15,3 +15,5 @@ WeakAurasCompanion: enabled
 WeakAurasArchive: enabled
 Plater: disabled
 ElvUI_OptionsUI: enabled
+AdiBags: enabled
+WideQuestLogLevels: enabled

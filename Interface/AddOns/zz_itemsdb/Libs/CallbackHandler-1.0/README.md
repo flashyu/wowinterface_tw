@@ -1,1 +1,0 @@
-Local git copy of CallbackHandler-1.0 - https://repos.wowace.com/wow/ace3/trunk/CallbackHandler-1.0
