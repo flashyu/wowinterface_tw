@@ -1,4 +1,9 @@
-VER 3 0000000000000001 "初始化" "INV_MISC_QUESTIONMARK"
+VER 3 0000000000000002 "精靈之火" "136033"
+#showtooltip
+/cancelform [nostance:0/1/3]
+/cast [stance:1/3] 精靈之火(野性);[nostance] 精靈之火
+END
+VER 3 0000000000000001 "遠視" "132150"
 /console cameraDistanceMaxZoomFactor 4
 /console ffxDeath 0
 END

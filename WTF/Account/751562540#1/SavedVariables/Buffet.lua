@@ -5,5 +5,5 @@ BuffetItemDB = {
 	["customMacros"] = {
 	},
 	["version"] = "2.5.1.78",
-	["build"] = 39170,
+	["build"] = 39475,
 }
