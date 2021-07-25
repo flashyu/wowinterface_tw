@@ -17,3 +17,4 @@ Plater: disabled
 ElvUI_OptionsUI: enabled
 AdiBags: enabled
 WideQuestLogLevels: enabled
+InFlight: disabled

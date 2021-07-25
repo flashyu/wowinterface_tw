@@ -1,6 +1,15 @@
 
 CliqueDB = nil
 CliqueDB3 = {
+	["char"] = {
+		["牧原股份 - 伊弗斯"] = {
+			["spec1_profileKey"] = "牧原股份 - 伊弗斯",
+			["specswap"] = false,
+			["downclick"] = false,
+			["alerthidden"] = true,
+			["fastooc"] = false,
+		},
+	},
 	["profileKeys"] = {
 		["牧原股份 - 伊弗斯"] = "牧原股份 - 伊弗斯",
 	},
@@ -8,10 +17,10 @@ CliqueDB3 = {
 		["牧原股份 - 伊弗斯"] = {
 			["bindings"] = {
 				{
-					["type"] = "target",
 					["sets"] = {
 						["default"] = true,
 					},
+					["type"] = "target",
 					["key"] = "BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]

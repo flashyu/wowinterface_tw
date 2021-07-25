@@ -1,0 +1,7 @@
+
+InFlightDB = {
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

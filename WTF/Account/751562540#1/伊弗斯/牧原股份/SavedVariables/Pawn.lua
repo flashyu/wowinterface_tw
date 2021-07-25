@@ -1,13 +1,11 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0521,
-	["LastPlayerFullName"] = "牧原股份-伊弗斯",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
-			["ID"] = 29940,
-			["Level"] = 81,
-			["Link"] = "|cff1eff00|Hitem:29940::::::::59::::::::|h[精兵顱帽]|h|r",
+			["ID"] = 25617,
+			["Level"] = 96,
+			["Link"] = "|cff1eff00|Hitem:25617::::::::62::::::::|h[克羅斯上尉的撞擊盔帽]|h|r",
 		}, -- [1]
 		{
 			["ID"] = 25487,
@@ -41,14 +39,14 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:28074::::::::61::::::::|h[釘甲綠色裹足]|h|r",
 		}, -- [8]
 		{
-			["ID"] = 24604,
-			["Level"] = 87,
-			["Link"] = "|cff1eff00|Hitem:24604::::::-16:1010827286:60::::::::|h[耐力之星火裹腕]|h|r",
+			["ID"] = 31661,
+			["Level"] = 96,
+			["Link"] = "|cff1eff00|Hitem:31661::::::::62::::::::|h[里薩歐腕環]|h|r",
 		}, -- [9]
 		{
-			["ID"] = 186033,
-			["Level"] = 52,
-			["Link"] = "|cff1eff00|Hitem:186033::::::::58::::::::|h[共治手套]|h|r",
+			["ID"] = 31788,
+			["Level"] = 90,
+			["Link"] = "|cff1eff00|Hitem:31788::::::::62::::::::|h[黑刺手套]|h|r",
 		}, -- [10]
 		{
 			["ID"] = 29398,
@@ -69,15 +67,15 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:28041::::::::61::::::::|h[刃拳飾物]|h|r",
 		}, -- [13]
 		{
-			["ID"] = 185985,
-			["Level"] = 52,
+			["ID"] = 28041,
+			["Level"] = 88,
 			["AlsoFitsIn"] = 13,
-			["Link"] = "|cff1eff00|Hitem:185985::::::::59::::::::|h[共治突襲之石]|h|r",
+			["Link"] = "|cff0070dd|Hitem:28041::::::::62::::::::|h[刃拳飾物]|h|r",
 		}, -- [14]
 		{
-			["ID"] = 27731,
-			["Level"] = 90,
-			["Link"] = "|cff1eff00|Hitem:27731::::::::59::::::::|h[復仇者披風]|h|r",
+			["ID"] = 25621,
+			["Level"] = 96,
+			["Link"] = "|cff1eff00|Hitem:25621::::::::62::::::::|h[菲拉芬毒蛇之魂披氅]|h|r",
 		}, -- [15]
 		{
 			["ID"] = 29911,
@@ -85,6 +83,8 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:29911::::::::58::::::::|h[阿迦瑪甘羽刺]|h|r",
 		}, -- [16]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "牧原股份-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

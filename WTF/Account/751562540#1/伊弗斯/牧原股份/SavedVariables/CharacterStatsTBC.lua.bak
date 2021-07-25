@@ -2,7 +2,7 @@
 CharacterStatsTbcCharacterDB = {
 	["showSideStatsMelee"] = true,
 	["showSideStatsDefense"] = true,
-	["sideStatsFrameHidden"] = false,
+	["sideStatsFrameHidden"] = true,
 	["selectedLeftStatsCategory"] = 1,
 	["showSideStatsRanged"] = true,
 	["showSideStatsSpell"] = true,
