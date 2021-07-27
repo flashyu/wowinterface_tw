@@ -1,5 +1,5 @@
 VER 3 0000000000000004 "target" "132177"
-/target 鳥爾卡斯
+/target 羅卡格
 END
 VER 3 0000000000000003 "治療之觸" "136041"
 #showtooltip

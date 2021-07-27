@@ -1,8 +1,5 @@
 
 AdiBagsDB = {
-	["profileKeys"] = {
-		["牧原股份 - 伊弗斯"] = "Default",
-	},
 	["namespaces"] = {
 		["ItemLevel"] = {
 		},
@@ -19,14 +16,17 @@ AdiBagsDB = {
 		},
 		["Equipment"] = {
 		},
-		["AdiBags_TooltipInfo"] = {
+		["MoneyFrame"] = {
 		},
 		["DataSource"] = {
 		},
 		["Junk"] = {
 		},
-		["MoneyFrame"] = {
+		["AdiBags_TooltipInfo"] = {
 		},
+	},
+	["profileKeys"] = {
+		["牧原股份 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

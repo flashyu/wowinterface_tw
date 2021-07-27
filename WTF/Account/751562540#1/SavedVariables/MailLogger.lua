@@ -118,5 +118,29 @@ MailLoggerDB = {
 			["ReceiveItems"] = {
 			},
 		}, -- [4]
+		{
+			["TargetName"] = "豬圈一",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-07-28",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+				{
+					["Number"] = 42,
+					["ItemLink"] = "|cffffffff|Hitem:14047::::::::63::::::::|h[符文布]|h|r",
+					["Name"] = "符文布",
+				}, -- [1]
+				[3] = {
+					["Number"] = 43,
+					["ItemLink"] = "|cffffffff|Hitem:21877::::::::63::::::::|h[幽紋布]|h|r",
+					["Name"] = "幽紋布",
+				},
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["Time"] = "01:22:06",
+			["Result"] = "sent",
+			["ReceiveItems"] = {
+			},
+		}, -- [5]
 	},
 }
