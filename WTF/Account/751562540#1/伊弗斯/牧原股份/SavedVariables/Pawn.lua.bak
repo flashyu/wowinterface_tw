@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0521,
+	["LastPlayerFullName"] = "牧原股份-伊弗斯",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 25617,
@@ -13,9 +15,9 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:25487::::::::60::::::::|h[風舞者項鍊]|h|r",
 		}, -- [2]
 		{
-			["ID"] = 24707,
-			["Level"] = 84,
-			["Link"] = "|cff1eff00|Hitem:24707::::::-13:1987903517:59::::::::|h[孤狼之海艾斯肩鎧]|h|r",
+			["ID"] = 27724,
+			["Level"] = 93,
+			["Link"] = "|cff1eff00|Hitem:27724::::::::63::::::::|h[野性肩墊]|h|r",
 		}, -- [3]
 		nil, -- [4]
 		{
@@ -49,10 +51,10 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:31788::::::::62::::::::|h[黑刺手套]|h|r",
 		}, -- [10]
 		{
-			["ID"] = 29398,
-			["Level"] = 93,
+			["ID"] = 25926,
+			["Level"] = 99,
 			["AlsoFitsIn"] = 12,
-			["Link"] = "|cff1eff00|Hitem:29398::::::::60::::::::|h[放逐戒指]|h|r",
+			["Link"] = "|cff1eff00|Hitem:25926::::::::63::::::::|h[奈薩斯捕獵者指環]|h|r",
 		}, -- [11]
 		{
 			["ID"] = 29398,
@@ -83,8 +85,6 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:29911::::::::58::::::::|h[阿迦瑪甘羽刺]|h|r",
 		}, -- [16]
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "牧原股份-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

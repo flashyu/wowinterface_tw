@@ -142,5 +142,69 @@ MailLoggerDB = {
 			["ReceiveItems"] = {
 			},
 		}, -- [5]
+		{
+			["TargetName"] = "豬圈一",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-07-29",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+				{
+					["Number"] = 66,
+					["ItemLink"] = "|cffffffff|Hitem:21877::::::::64::::::::|h[幽紋布]|h|r",
+					["Name"] = "幽紋布",
+				}, -- [1]
+				[5] = {
+					["Number"] = 40,
+					["ItemLink"] = "|cffffffff|Hitem:14047::::::::64::::::::|h[符文布]|h|r",
+					["Name"] = "符文布",
+				},
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "雷霆崖",
+			["Time"] = "01:45:13",
+			["Result"] = "sent",
+			["ReceiveItems"] = {
+			},
+		}, -- [6]
+		{
+			["PlayerName"] = "牧原股份",
+			["TargetName"] = "部落拍賣場",
+			["Reason"] = 1,
+			["Date"] = "2021-07-29",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:57:13",
+			["GiveMoney"] = 0,
+			["Location"] = "雷霆崖",
+			["GiveItems"] = {
+			},
+			["Result"] = "received",
+			["ReceiveItems"] = {
+				{
+					["Number"] = 4,
+					["ItemLink"] = "|cff1eff00|Hitem:21841::::::::64::::::::|h[幽紋布包]|h|r",
+					["Name"] = "幽紋布包",
+				}, -- [1]
+			},
+		}, -- [7]
+		{
+			["PlayerName"] = "牧原股份",
+			["TargetName"] = "部落拍賣場",
+			["Reason"] = 1,
+			["Date"] = "2021-07-29",
+			["ReceiveMoney"] = 0,
+			["Time"] = "02:01:05",
+			["GiveMoney"] = 0,
+			["Location"] = "雷霆崖",
+			["GiveItems"] = {
+			},
+			["Result"] = "received",
+			["ReceiveItems"] = {
+				{
+					["Number"] = 1,
+					["ItemLink"] = "|cff1eff00|Hitem:21841::::::::64::::::::|h[幽紋布包]|h|r",
+					["Name"] = "幽紋布包",
+				}, -- [1]
+			},
+		}, -- [8]
 	},
 }
