@@ -6,6 +6,13 @@ X: 0
 Y: 0
 W: 365
 H: 240
+Frame: AdiBagsAnchor1
+FrameLevel: 1
+Anchor: BOTTOMRIGHT
+X: -64
+Y: 229
+W: 80
+H: 80
 Frame: GroupBulletinBoardFrame
 FrameLevel: 1
 Anchor: TOPRIGHT
@@ -20,10 +27,3 @@ X: 0
 Y: 128
 W: 200
 H: 50
-Frame: AdiBagsAnchor1
-FrameLevel: 1
-Anchor: BOTTOMRIGHT
-X: -64
-Y: 229
-W: 80
-H: 80

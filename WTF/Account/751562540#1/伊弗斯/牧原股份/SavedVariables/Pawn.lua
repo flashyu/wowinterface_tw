@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0521,
+	["LastPlayerFullName"] = "牧原股份-伊弗斯",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 25617,
@@ -61,16 +63,16 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:25926::::::::64::::::::|h[奈薩斯捕獵者指環]|h|r",
 		}, -- [12]
 		{
-			["ID"] = 28041,
-			["Level"] = 88,
+			["ID"] = 25628,
+			["Level"] = 102,
 			["AlsoFitsIn"] = 14,
-			["Link"] = "|cff0070dd|Hitem:28041::::::::61::::::::|h[刃拳飾物]|h|r",
+			["Link"] = "|cff1eff00|Hitem:25628::::::::64::::::::|h[巨魔槌兵徽章]|h|r",
 		}, -- [13]
 		{
-			["ID"] = 28041,
-			["Level"] = 88,
+			["ID"] = 25628,
+			["Level"] = 102,
 			["AlsoFitsIn"] = 13,
-			["Link"] = "|cff0070dd|Hitem:28041::::::::62::::::::|h[刃拳飾物]|h|r",
+			["Link"] = "|cff1eff00|Hitem:25628::::::::65::::::::|h[巨魔槌兵徽章]|h|r",
 		}, -- [14]
 		{
 			["ID"] = 25621,
@@ -78,13 +80,11 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:25621::::::::62::::::::|h[菲拉芬毒蛇之魂披氅]|h|r",
 		}, -- [15]
 		{
-			["ID"] = 29911,
-			["Level"] = 81,
-			["Link"] = "|cff1eff00|Hitem:29911::::::::58::::::::|h[阿迦瑪甘羽刺]|h|r",
+			["ID"] = 25622,
+			["Level"] = 102,
+			["Link"] = "|cff1eff00|Hitem:25622::::::::64::::::::|h[四金幣法杖]|h|r",
 		}, -- [16]
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "牧原股份-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

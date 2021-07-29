@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0521,
-	["LastPlayerFullName"] = "牧原股份-伊弗斯",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 25617,
@@ -10,9 +8,9 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:25617::::::::62::::::::|h[克羅斯上尉的撞擊盔帽]|h|r",
 		}, -- [1]
 		{
-			["ID"] = 25487,
-			["Level"] = 93,
-			["Link"] = "|cff1eff00|Hitem:25487::::::::60::::::::|h[風舞者項鍊]|h|r",
+			["ID"] = 31727,
+			["Level"] = 94,
+			["Link"] = "|cff0070dd|Hitem:31727::::::::64::::::::|h[純種羽毛頸飾]|h|r",
 		}, -- [2]
 		{
 			["ID"] = 27724,
@@ -26,9 +24,9 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:31718::::::::61::::::::|h[黑暗風暴外套]|h|r",
 		}, -- [5]
 		{
-			["ID"] = 25504,
-			["Level"] = 90,
-			["Link"] = "|cff1eff00|Hitem:25504::::::::60::::::::|h[朝聖腰帶]|h|r",
+			["ID"] = 28496,
+			["Level"] = 99,
+			["Link"] = "|cff1eff00|Hitem:28496::::::-49:309329954:64::::::::|h[叢林之鷹爪腰帶]|h|r",
 		}, -- [6]
 		{
 			["ID"] = 29939,
@@ -57,10 +55,10 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:25926::::::::63::::::::|h[奈薩斯捕獵者指環]|h|r",
 		}, -- [11]
 		{
-			["ID"] = 29398,
-			["Level"] = 93,
+			["ID"] = 25926,
+			["Level"] = 99,
 			["AlsoFitsIn"] = 11,
-			["Link"] = "|cff1eff00|Hitem:29398::::::::61::::::::|h[放逐戒指]|h|r",
+			["Link"] = "|cff1eff00|Hitem:25926::::::::64::::::::|h[奈薩斯捕獵者指環]|h|r",
 		}, -- [12]
 		{
 			["ID"] = 28041,
@@ -85,6 +83,8 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:29911::::::::58::::::::|h[阿迦瑪甘羽刺]|h|r",
 		}, -- [16]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "牧原股份-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

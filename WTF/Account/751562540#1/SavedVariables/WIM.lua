@@ -27,7 +27,15 @@ WIM3_Data = {
 				["autofocus"] = true,
 				["onReceive"] = true,
 			},
-			["pvp"] = {
+			["alwaysOther"] = false,
+			["arena"] = {
+				["keepfocus"] = false,
+				["supress"] = false,
+				["onSend"] = false,
+				["autofocus"] = false,
+				["onReceive"] = false,
+			},
+			["raid"] = {
 				["keepfocus"] = false,
 				["supress"] = true,
 				["onSend"] = true,
@@ -41,21 +49,13 @@ WIM3_Data = {
 				["autofocus"] = false,
 				["onReceive"] = true,
 			},
-			["raid"] = {
+			["pvp"] = {
 				["keepfocus"] = false,
 				["supress"] = true,
 				["onSend"] = true,
 				["autofocus"] = false,
 				["onReceive"] = true,
 			},
-			["arena"] = {
-				["keepfocus"] = false,
-				["supress"] = false,
-				["onSend"] = false,
-				["autofocus"] = false,
-				["onReceive"] = false,
-			},
-			["alwaysOther"] = false,
 		},
 		["chat"] = {
 			["other"] = {
@@ -88,14 +88,8 @@ WIM3_Data = {
 				["autofocus"] = false,
 				["onReceive"] = false,
 			},
-			["pvp"] = {
-				["keepfocus"] = false,
-				["supress"] = false,
-				["onSend"] = false,
-				["autofocus"] = false,
-				["onReceive"] = false,
-			},
-			["party"] = {
+			["alwaysOther"] = true,
+			["arena"] = {
 				["keepfocus"] = false,
 				["supress"] = false,
 				["onSend"] = false,
@@ -109,14 +103,20 @@ WIM3_Data = {
 				["autofocus"] = false,
 				["onReceive"] = false,
 			},
-			["arena"] = {
+			["party"] = {
 				["keepfocus"] = false,
 				["supress"] = false,
 				["onSend"] = false,
 				["autofocus"] = false,
 				["onReceive"] = false,
 			},
-			["alwaysOther"] = true,
+			["pvp"] = {
+				["keepfocus"] = false,
+				["supress"] = false,
+				["onSend"] = false,
+				["autofocus"] = false,
+				["onReceive"] = false,
+			},
 		},
 	},
 	["timeStampFormat"] = "%H:%M",
@@ -145,9 +145,9 @@ WIM3_Data = {
 			["custom_sml"] = "Chat Blip",
 			["say_sml"] = "Chat Blip",
 			["raid_sml"] = "Chat Blip",
+			["guild_sml"] = "Chat Blip",
 			["raidleader_sml"] = "Chat Blip",
 			["officer_sml"] = "Chat Blip",
-			["guild_sml"] = "Chat Blip",
 			["battlegroundleader_sml"] = "Chat Blip",
 			["battleground_sml"] = "Chat Blip",
 		},
@@ -171,83 +171,78 @@ WIM3_Data = {
 	["lastState"] = "other",
 	["displayColors"] = {
 		["wispOut"] = {
-			["r"] = 1,
-			["g"] = 0.0784313725490196,
 			["b"] = 0.9882352941176471,
+			["g"] = 0.0784313725490196,
+			["r"] = 1,
 		},
 		["wispIn"] = {
-			["r"] = 0.5607843137254902,
-			["g"] = 0.03137254901960784,
 			["b"] = 0.7607843137254902,
+			["g"] = 0.03137254901960784,
+			["r"] = 0.5607843137254902,
 		},
 		["sysMsg"] = {
-			["r"] = 1,
-			["g"] = 0.6627450980392157,
 			["b"] = 0,
+			["g"] = 0.6627450980392157,
+			["r"] = 1,
 		},
 		["BNwispOut"] = {
-			["r"] = 0.1725490196078431,
-			["g"] = 0.6352941176470588,
 			["b"] = 1,
+			["g"] = 0.6352941176470588,
+			["r"] = 0.1725490196078431,
 		},
 		["historyIn"] = {
-			["r"] = 0.4705882352941176,
-			["g"] = 0.4705882352941176,
 			["b"] = 0.4705882352941176,
+			["g"] = 0.4705882352941176,
+			["r"] = 0.4705882352941176,
 		},
 		["errorMsg"] = {
-			["r"] = 1,
-			["g"] = 0,
 			["b"] = 0,
-		},
-		["useSkin"] = true,
-		["BNwispIn"] = {
-			["r"] = 0,
-			["g"] = 0.4862745098039216,
-			["b"] = 0.6549019607843137,
-		},
-		["historyOut"] = {
-			["r"] = 0.7058823529411764,
-			["g"] = 0.7058823529411764,
-			["b"] = 0.7058823529411764,
+			["g"] = 0,
+			["r"] = 1,
 		},
 		["webAddress"] = {
-			["r"] = 1,
-			["g"] = 1,
 			["b"] = 1,
+			["g"] = 1,
+			["r"] = 1,
+		},
+		["useSkin"] = true,
+		["historyOut"] = {
+			["b"] = 0.7058823529411764,
+			["g"] = 0.7058823529411764,
+			["r"] = 0.7058823529411764,
+		},
+		["BNwispIn"] = {
+			["b"] = 0.6549019607843137,
+			["g"] = 0.4862745098039216,
+			["r"] = 0,
 		},
 	},
 	["fontSize"] = 12,
 	["showToolTips"] = true,
 	["minimap"] = {
 		["free_position"] = {
-			["y"] = -85.3610222619543,
-			["x"] = -118.1154105679225,
+			["y"] = -119.9890033406945,
+			["x"] = -161.5500472187982,
 			["point"] = "TOPRIGHT",
 		},
-		["position"] = 200,
-		["rightClickNew"] = false,
 		["free"] = false,
+		["rightClickNew"] = false,
+		["position"] = 200,
 	},
 	["winAnimation"] = true,
 	["expose"] = {
 		["protect"] = 1,
 		["borderSize"] = 20,
 		["combat"] = true,
-		["direction"] = 1,
-		["border"] = false,
 		["groupOnly"] = false,
+		["border"] = false,
+		["direction"] = 1,
 	},
 	["alias"] = {
 		["title_string"] = "{n} - {a}",
 	},
-	["winSize"] = {
-		["height"] = 220,
-		["strata"] = "DIALOG",
-		["scale"] = 100,
-		["width"] = 333,
-	},
-	["windowOnTop"] = true,
+	["menuSortActivity"] = true,
+	["whoLookups"] = true,
 	["modules"] = {
 		["ChatSounds"] = {
 			["enabled"] = true,
@@ -288,73 +283,17 @@ WIM3_Data = {
 		["URLHandler"] = {
 			["enabled"] = true,
 		},
-		["Filters"] = {
-			["enabled"] = true,
-		},
-		["Menu"] = {
+		["Tabs"] = {
 			["enabled"] = true,
 		},
 		["ClickControl"] = {
 			["enabled"] = true,
 		},
-		["Tabs"] = {
+		["Menu"] = {
 			["enabled"] = true,
 		},
-	},
-	["ignoreArrowKeys"] = true,
-	["coloredNames"] = true,
-	["winLoc"] = {
-		["left"] = 217,
-		["top"] = 664,
-	},
-	["clampToScreen"] = true,
-	["stats"] = {
-		["startDate"] = "",
-		["versions"] = 1,
-		["whispers"] = 0,
-		["mostConvos"] = 0,
-	},
-	["winFade"] = true,
-	["skin"] = {
-		["font_outline"] = "",
-		["selected"] = "WIM Classic",
-		["font"] = "ChatFontNormal",
-		["suggest"] = true,
-	},
-	["ClickControl"] = {
-		["clickSensitivity"] = 0.2,
-	},
-	["tabs"] = {
-		["sortBy"] = 2,
-		["whispers"] = {
-			["enabled"] = false,
-			["guild"] = false,
-			["friends"] = false,
-		},
-		["chat"] = {
-			["enabled"] = false,
-			["aswhisper"] = false,
-		},
-	},
-	["history"] = {
-		["ageLimit"] = true,
-		["maxPer"] = true,
-		["previewCount"] = 25,
-		["whispers"] = {
-			["friends"] = true,
-			["all"] = false,
-			["guild"] = true,
-		},
-		["maxAge"] = 1209600,
-		["preview"] = true,
-		["maxCount"] = 500,
-		["chat"] = {
-			["ageLimit"] = true,
-			["maxAge"] = 1209600,
-			["maxPer"] = true,
-			["preview"] = true,
-			["maxCount"] = 500,
-			["previewCount"] = 25,
+		["Filters"] = {
+			["enabled"] = true,
 		},
 	},
 	["chat"] = {
@@ -374,10 +313,7 @@ WIM3_Data = {
 		},
 		["say"] = {
 		},
-		["world"] = {
-			["enabled"] = false,
-			["channelSettings"] = {
-			},
+		["battleground"] = {
 		},
 		["raid"] = {
 			["showAlerts"] = true,
@@ -385,25 +321,90 @@ WIM3_Data = {
 		["officer"] = {
 			["showAlerts"] = true,
 		},
-		["battleground"] = {
+		["world"] = {
+			["enabled"] = false,
+			["channelSettings"] = {
+			},
 		},
 	},
+	["history"] = {
+		["ageLimit"] = true,
+		["previewCount"] = 25,
+		["maxPer"] = true,
+		["whispers"] = {
+			["friends"] = true,
+			["all"] = false,
+			["guild"] = true,
+		},
+		["maxAge"] = 1209600,
+		["preview"] = true,
+		["maxCount"] = 500,
+		["chat"] = {
+			["ageLimit"] = true,
+			["maxAge"] = 1209600,
+			["previewCount"] = 25,
+			["preview"] = true,
+			["maxCount"] = 500,
+			["maxPer"] = true,
+		},
+	},
+	["tabs"] = {
+		["sortBy"] = 2,
+		["whispers"] = {
+			["enabled"] = false,
+			["guild"] = false,
+			["friends"] = false,
+		},
+		["chat"] = {
+			["enabled"] = false,
+			["aswhisper"] = false,
+		},
+	},
+	["ClickControl"] = {
+		["clickSensitivity"] = 0.2,
+	},
+	["skin"] = {
+		["font_outline"] = "",
+		["selected"] = "WIM Classic",
+		["font"] = "ChatFontNormal",
+		["suggest"] = true,
+	},
+	["winFade"] = true,
+	["stats"] = {
+		["startDate"] = "",
+		["versions"] = 1,
+		["whispers"] = 0,
+		["mostConvos"] = 0,
+	},
+	["clampToScreen"] = true,
+	["coloredNames"] = true,
+	["winLoc"] = {
+		["left"] = 217,
+		["top"] = 664,
+	},
+	["ignoreArrowKeys"] = true,
 	["tabAdvance"] = false,
-	["whoLookups"] = true,
-	["menuSortActivity"] = true,
+	["windowOnTop"] = true,
+	["winSize"] = {
+		["height"] = 220,
+		["strata"] = "DIALOG",
+		["scale"] = 100,
+		["width"] = 333,
+	},
 }
 WIM3_Cache = {
 	["伊弗斯"] = {
 		["牧原股份"] = {
 			["friendList"] = {
+				["Harlso"] = 1,
 				["|Km1|k"] = 2,
 				["|Km2|k"] = 2,
-				["Harlso"] = 1,
+				["和風牛肉"] = 1,
 			},
 			["guildList"] = {
 				["Reliable"] = 12,
 				["肯呔羅"] = 63,
-				["一身萊姆病"] = 54,
+				["一身萊姆病"] = 53,
 				["軟爛膝蓋"] = 72,
 				["滅眾生"] = 31,
 				["恕嵐轎"] = 57,
@@ -424,61 +425,61 @@ WIM3_Cache = {
 				["兔陶"] = 24,
 				["檳榔仙"] = 77,
 				["亞曼德"] = 17,
+				["迷你桔"] = 74,
 				["白毛大狗妖"] = 61,
 				["哭哭貓咪"] = 8,
 				["薩柒多思"] = 2,
 				["細皮嫩肉"] = 15,
+				["灰色八度空間"] = 71,
+				["夭壽麥"] = 69,
+				["今晚不打烊"] = 68,
 				["柔情似水"] = 59,
+				["破麻再世"] = 67,
 				["雷蟲"] = 16,
 				["善哉善哉"] = 25,
-				["太狠了"] = 27,
+				["烏雷克馬奇努"] = 60,
+				["吃我種子拉"] = 18,
+				["曼丁希爾"] = 58,
+				["幸運魔人"] = 56,
 				["風味小札"] = 47,
+				["小冷"] = 55,
+				["吃我颱風拉"] = 54,
+				["Musashi"] = 52,
 				["千櫻若月"] = 45,
+				["Cutmedown"] = 51,
+				["希爾德烈日"] = 49,
 				["陰陽聖女"] = 11,
-				["Akina"] = 51,
+				["Akina"] = 50,
 				["蘋果巨硬"] = 10,
 				["拿手卷換壽司"] = 30,
 				["尼默爾艾默"] = 1,
 				["都給妳啦"] = 41,
+				["琥珀穗"] = 46,
+				["一拳揍飛你"] = 43,
 				["速嵐轎"] = 65,
-				["迷你桔"] = 74,
-				["小冷"] = 56,
+				["三浦建太郎"] = 23,
+				["腎騎"] = 5,
+				["十二火兒"] = 42,
+				["追山小"] = 40,
+				["黑雪魔君"] = 39,
+				["賽亞人"] = 37,
 				["距離太遠了"] = 64,
 				["大巧克力棒"] = 26,
-				["灰色八度空間"] = 71,
-				["曼丁希爾"] = 58,
-				["小得得"] = 28,
-				["滴踢滴愛上頭"] = 14,
-				["牧原股份"] = 21,
-				["夭壽麥"] = 69,
-				["哈佛說我負責"] = 9,
-				["吃我颱風拉"] = 55,
-				["希爾德烈日"] = 49,
-				["特變電工"] = 33,
-				["想當熊的血蹄"] = 5,
-				["烏雷克馬奇努"] = 60,
-				["一拳揍飛你"] = 43,
-				["老衲送你歸西"] = 34,
-				["黑雪魔君"] = 39,
-				["追山小"] = 40,
-				["三浦建太郎"] = 23,
-				["十二火兒"] = 42,
-				["背骨陰仔"] = 78,
 				["漾兒"] = 19,
-				["琥珀穗"] = 46,
-				["強運魔人"] = 22,
-				["腎騎"] = 6,
-				["羽天星"] = 62,
-				["幸運魔人"] = 50,
-				["Cutmedown"] = 52,
+				["特變電工"] = 33,
+				["小得得"] = 28,
+				["老衲送你歸西"] = 34,
+				["太狠了"] = 27,
+				["滴踢滴愛上頭"] = 14,
 				["銀月土鑑師"] = 20,
-				["破麻再世"] = 67,
+				["牧原股份"] = 21,
+				["哈佛說我負責"] = 9,
+				["背骨陰仔"] = 78,
+				["強運魔人"] = 22,
+				["羽天星"] = 62,
 				["我聖粉啦"] = 13,
-				["Musashi"] = 53,
-				["今晚不打烊"] = 68,
-				["吃我種子拉"] = 18,
-				["賽亞人"] = 37,
-				["Kamisato"] = 4,
+				["想當熊的血蹄"] = 4,
+				["Kamisato"] = 6,
 			},
 		},
 	},
@@ -492,9 +493,9 @@ WIM3_Filters = {
 		["sent"] = true,
 		["name"] = "由插件所發出的密語",
 		["received"] = true,
-		["protected"] = true,
-		["stats"] = 0,
 		["action"] = 2,
+		["stats"] = 0,
+		["protected"] = true,
 		["tag"] = "addons",
 	}, -- [1]
 	{
@@ -504,19 +505,19 @@ WIM3_Filters = {
 		["friend"] = true,
 		["party"] = true,
 		["name"] = "密語選擇 1",
-		["stats"] = 0,
+		["guild"] = true,
 		["raid"] = true,
 		["received"] = true,
-		["guild"] = true,
+		["stats"] = 0,
 	}, -- [2]
 	{
 		["enabled"] = false,
 		["type"] = 2,
 		["name"] = "密語選擇 2",
-		["stats"] = 0,
+		["action"] = 2,
 		["all"] = true,
 		["received"] = true,
-		["action"] = 2,
+		["stats"] = 0,
 	}, -- [3]
 }
 WIM3_History = {
@@ -1131,6 +1132,218 @@ WIM3_History = {
 					["inbound"] = true,
 					["convo"] = "疾風#4455",
 				}, -- [76]
+				["info"] = {
+				},
+			},
+			["和風牛肉"] = {
+				{
+					["type"] = 1,
+					["time"] = 1627569437,
+					["from"] = "和風牛肉",
+					["msg"] = "你解哪個?",
+					["inbound"] = true,
+					["convo"] = "和風牛肉",
+				}, -- [1]
+				{
+					["type"] = 1,
+					["time"] = 1627569464,
+					["from"] = "牧原股份",
+					["msg"] = "[[65] 別殺那個胖子 (9889)]",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [2]
+				{
+					["type"] = 1,
+					["time"] = 1627569481,
+					["from"] = "和風牛肉",
+					["msg"] = "解過了哈哈",
+					["inbound"] = true,
+					["convo"] = "和風牛肉",
+				}, -- [3]
+				{
+					["type"] = 1,
+					["time"] = 1627569496,
+					["from"] = "牧原股份",
+					["msg"] = "嗯 一會和你匯合",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [4]
+				{
+					["type"] = 1,
+					["time"] = 1627569512,
+					["from"] = "和風牛肉",
+					["msg"] = "那邊好像連續",
+					["inbound"] = true,
+					["convo"] = "和風牛肉",
+				}, -- [5]
+				{
+					["type"] = 1,
+					["time"] = 1627569553,
+					["from"] = "牧原股份",
+					["msg"] = "等下看看殺玩一波",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [6]
+				{
+					["type"] = 1,
+					["time"] = 1627569849,
+					["from"] = "牧原股份",
+					["msg"] = "|cff8787ed我回來了|r 一起不？",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [7]
+				{
+					["type"] = 1,
+					["time"] = 1627569887,
+					["from"] = "和風牛肉",
+					["msg"] = "你幫我打嗎，好像沒有共通任務",
+					["inbound"] = true,
+					["convo"] = "和風牛肉",
+				}, -- [8]
+				{
+					["type"] = 1,
+					["time"] = 1627569902,
+					["from"] = "牧原股份",
+					["msg"] = "沒事 我去幫你打下 等下進度就一樣了 、",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [9]
+				{
+					["type"] = 1,
+					["time"] = 1627569908,
+					["from"] = "牧原股份",
+					["msg"] = "稍等我買點水",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [10]
+				{
+					["type"] = 1,
+					["time"] = 1627569937,
+					["from"] = "和風牛肉",
+					["msg"] = "KK",
+					["inbound"] = true,
+					["convo"] = "和風牛肉",
+				}, -- [11]
+				{
+					["type"] = 1,
+					["time"] = 1627570092,
+					["from"] = "和風牛肉",
+					["msg"] = "剛那個你朋友?",
+					["inbound"] = true,
+					["convo"] = "和風牛肉",
+				}, -- [12]
+				{
+					["type"] = 1,
+					["time"] = 1627570097,
+					["from"] = "牧原股份",
+					["msg"] = "不是",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [13]
+				{
+					["type"] = 1,
+					["time"] = 1627570112,
+					["from"] = "和風牛肉",
+					["msg"] = "你們進度一樣",
+					["inbound"] = true,
+					["convo"] = "和風牛肉",
+				}, -- [14]
+				{
+					["type"] = 1,
+					["time"] = 1627570117,
+					["from"] = "牧原股份",
+					["msg"] = "嗯 碰巧了 ",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [15]
+				{
+					["type"] = 1,
+					["time"] = 1627570120,
+					["from"] = "牧原股份",
+					["msg"] = "嘿嘿",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [16]
+				{
+					["type"] = 1,
+					["time"] = 1627570322,
+					["from"] = "和風牛肉",
+					["msg"] = "@@",
+					["inbound"] = true,
+					["convo"] = "和風牛肉",
+				}, -- [17]
+				{
+					["type"] = 1,
+					["time"] = 1627570350,
+					["from"] = "牧原股份",
+					["msg"] = "不是 我第一次玩",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [18]
+				{
+					["type"] = 1,
+					["time"] = 1627570374,
+					["from"] = "牧原股份",
+					["msg"] = "我看出來了 哈哈",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [19]
+				{
+					["type"] = 1,
+					["time"] = 1627570377,
+					["from"] = "牧原股份",
+					["msg"] = "一摸一樣",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [20]
+				{
+					["type"] = 1,
+					["time"] = 1627570423,
+					["from"] = "牧原股份",
+					["msg"] = "你之前玩過這個麽",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [21]
+				{
+					["type"] = 1,
+					["time"] = 1627570440,
+					["from"] = "牧原股份",
+					["msg"] = "我也是",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [22]
+				{
+					["type"] = 1,
+					["time"] = 1627570447,
+					["from"] = "牧原股份",
+					["msg"] = "他們都滿級了",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [23]
+				{
+					["type"] = 1,
+					["time"] = 1627570481,
+					["from"] = "牧原股份",
+					["msg"] = "哦 你們可以一起做任務 ",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [24]
+				{
+					["type"] = 1,
+					["time"] = 1627570541,
+					["from"] = "牧原股份",
+					["msg"] = "哦 ",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [25]
+				{
+					["type"] = 1,
+					["time"] = 1627570574,
+					["from"] = "牧原股份",
+					["msg"] = "我還沒大國本",
+					["inbound"] = false,
+					["convo"] = "和風牛肉",
+				}, -- [26]
 				["info"] = {
 				},
 			},
