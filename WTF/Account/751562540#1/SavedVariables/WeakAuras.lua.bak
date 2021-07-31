@@ -97,18 +97,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["fullCircle"] = true,
-			["animate"] = false,
-			["xOffset"] = 0,
-			["scale"] = 1,
 			["rowSpace"] = 1,
+			["animate"] = false,
+			["fullCircle"] = true,
+			["scale"] = 1,
+			["radius"] = 200,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["selfPoint"] = "TOP",
 			["gridType"] = "RD",
+			["arcLength"] = 360,
 			["constantFactor"] = "RADIUS",
 			["rotation"] = 0,
 			["borderOffset"] = 4,
@@ -122,13 +122,13 @@ WeakAurasSaved = {
 			["uid"] = "ZX3oWFkARRy",
 			["config"] = {
 			},
-			["radius"] = 200,
+			["selfPoint"] = "TOP",
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["arcLength"] = 360,
+			["xOffset"] = 0,
 		},
 		["lan"] = {
 			["grow"] = "DOWN",
@@ -224,18 +224,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["fullCircle"] = true,
-			["animate"] = false,
-			["xOffset"] = -202.2230834960938,
-			["scale"] = 1,
 			["rowSpace"] = 1,
+			["animate"] = false,
+			["fullCircle"] = true,
+			["scale"] = 1,
+			["radius"] = 200,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["selfPoint"] = "TOP",
 			["gridType"] = "RD",
+			["arcLength"] = 360,
 			["constantFactor"] = "RADIUS",
 			["rotation"] = 0,
 			["borderOffset"] = 4,
@@ -249,13 +249,13 @@ WeakAurasSaved = {
 			["uid"] = "I7Y0mTf5KSP",
 			["config"] = {
 			},
-			["radius"] = 200,
+			["selfPoint"] = "TOP",
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["arcLength"] = 360,
+			["xOffset"] = -202.2230834960938,
 		},
 		["New"] = {
 			["sparkWidth"] = 10,

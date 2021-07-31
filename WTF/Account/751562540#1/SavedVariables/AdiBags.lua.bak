@@ -1,8 +1,5 @@
 
 AdiBagsDB = {
-	["profileKeys"] = {
-		["牧原股份 - 伊弗斯"] = "Default",
-	},
 	["namespaces"] = {
 		["ItemLevel"] = {
 		},
@@ -28,8 +25,14 @@ AdiBagsDB = {
 		["MoneyFrame"] = {
 		},
 	},
+	["profileKeys"] = {
+		["牧原股份 - 伊弗斯"] = "Default",
+	},
 	["profiles"] = {
 		["Default"] = {
+			["columnWidth"] = {
+				["Backpack"] = 13,
+			},
 			["positions"] = {
 				["anchor"] = {
 					["xOffset"] = -64.223388671875,
@@ -43,9 +46,6 @@ AdiBagsDB = {
 					["xOffset"] = 418.1110902147157,
 					["yOffset"] = -344.5556513153861,
 				},
-			},
-			["columnWidth"] = {
-				["Backpack"] = 13,
 			},
 		},
 	},

@@ -546,6 +546,9 @@ AutoBarDB = {
 				["AutoBarButtonMount"] = {
 					["arrangeOnUse"] = 184865,
 				},
+				["AutoBarButtonBuff"] = {
+					["arrangeOnUse"] = 27502,
+				},
 				["AutoBarButtonRaidTarget"] = {
 					["arrangeOnUse"] = "macrotext:2",
 				},
