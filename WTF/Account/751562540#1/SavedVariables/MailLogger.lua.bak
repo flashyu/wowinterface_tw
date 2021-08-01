@@ -344,5 +344,43 @@ MailLoggerDB = {
 			["ReceiveItems"] = {
 			},
 		}, -- [12]
+		{
+			["TargetName"] = "豬圈一",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-01",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+				{
+					["Number"] = 68,
+					["ItemLink"] = "|cffffffff|Hitem:21877::::::::67::::::::|h[幽紋布]|h|r",
+					["Name"] = "幽紋布",
+				}, -- [1]
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "劍刃山脈",
+			["Time"] = "14:47:32",
+			["Result"] = "sent",
+			["ReceiveItems"] = {
+			},
+		}, -- [13]
+		{
+			["TargetName"] = "豬圈一",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-01",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+				{
+					["Number"] = 60,
+					["ItemLink"] = "|cffffffff|Hitem:21877::::::::67::::::::|h[幽紋布]|h|r",
+					["Name"] = "幽紋布",
+				}, -- [1]
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "虛空風暴",
+			["Time"] = "19:08:14",
+			["Result"] = "sent",
+			["ReceiveItems"] = {
+			},
+		}, -- [14]
 	},
 }

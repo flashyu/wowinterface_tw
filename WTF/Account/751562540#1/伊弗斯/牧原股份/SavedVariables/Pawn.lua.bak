@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0521,
+	["LastPlayerFullName"] = "牧原股份-伊弗斯",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 25617,
@@ -13,9 +15,9 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:25562::::::::66::::::::|h[土靈夷平印記]|h|r",
 		}, -- [2]
 		{
-			["ID"] = 24747,
-			["Level"] = 99,
-			["Link"] = "|cff1eff00|Hitem:24747::::::-16:108789794:66::::::::|h[耐力之遊俠肩鎧]|h|r",
+			["ID"] = 30218,
+			["Level"] = 108,
+			["Link"] = "|cff1eff00|Hitem:30218::::::::67::::::::|h[資淺技師第三級護肩]|h|r",
 		}, -- [3]
 		nil, -- [4]
 		{
@@ -34,9 +36,9 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:25821::::::::66::::::::|h[無盡突襲護腿]|h|r",
 		}, -- [7]
 		{
-			["ID"] = 28074,
-			["Level"] = 91,
-			["Link"] = "|cff0070dd|Hitem:28074::::::::61::::::::|h[釘甲綠色裹足]|h|r",
+			["ID"] = 31532,
+			["Level"] = 108,
+			["Link"] = "|cff1eff00|Hitem:31532::::::::67::::::::|h[柔軟皮靴]|h|r",
 		}, -- [8]
 		{
 			["ID"] = 31661,
@@ -83,8 +85,6 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:25761::::::::65::::::::|h[野獸之杖]|h|r",
 		}, -- [16]
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "牧原股份-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {
