@@ -50,7 +50,6 @@ GroupBulletinBoardDBChar = {
 	["FilterDungeonSWP"] = true,
 	["FilterDungeonSETH"] = true,
 	["FilterDungeonOHB"] = true,
-	["HeroicOnly"] = false,
 	["channel"] = {
 		true, -- [1]
 		true, -- [2]
@@ -73,6 +72,7 @@ GroupBulletinBoardDBChar = {
 		true, -- [19]
 		true, -- [20]
 	},
+	["HeroicOnly"] = false,
 	["FilterDungeonEOTS"] = true,
 	["FilterDungeonBM"] = true,
 	["FilterDungeonARC"] = true,
