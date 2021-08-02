@@ -1,13 +1,11 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0521,
-	["LastPlayerFullName"] = "牧原股份-伊弗斯",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
-			["ID"] = 25617,
-			["Level"] = 96,
-			["Link"] = "|cff1eff00|Hitem:25617::::::::62::::::::|h[克羅斯上尉的撞擊盔帽]|h|r",
+			["ID"] = 30362,
+			["Level"] = 108,
+			["Link"] = "|cff1eff00|Hitem:30362::::::::68::::::::|h[充能頭盔]|h|r",
 		}, -- [1]
 		{
 			["ID"] = 25562,
@@ -85,6 +83,8 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:25761::::::::65::::::::|h[野獸之杖]|h|r",
 		}, -- [16]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "牧原股份-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

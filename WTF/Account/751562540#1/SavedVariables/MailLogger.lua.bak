@@ -382,5 +382,37 @@ MailLoggerDB = {
 			["ReceiveItems"] = {
 			},
 		}, -- [14]
+		{
+			["TargetName"] = "Kurani",
+			["PlayerName"] = "牧原股份",
+			["ReceiveMoney"] = 0,
+			["Time"] = "00:37:45",
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["GiveItems"] = {
+			},
+			["Date"] = "2021-08-02",
+			["ReceiveItems"] = {
+			},
+		}, -- [15]
+		{
+			["TargetName"] = "豬圈一",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-02",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+				{
+					["Number"] = 88,
+					["ItemLink"] = "|cffffffff|Hitem:21877::::::::68::::::::|h[幽紋布]|h|r",
+					["Name"] = "幽紋布",
+				}, -- [1]
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "納葛蘭",
+			["Time"] = "01:35:24",
+			["Result"] = "sent",
+			["ReceiveItems"] = {
+			},
+		}, -- [16]
 	},
 }
