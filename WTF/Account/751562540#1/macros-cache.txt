@@ -1,6 +1,15 @@
 VER 3 0000000000000004 "target" "132177"
 /target 拉文德維爾
 END
+VER 3 0000000000000006 "割碎" "132135"
+#showtooltip
+/startattack
+/cast 割碎(獵豹形態)
+END
+VER 3 0000000000000005 "回春熊" "132091"
+/cast [stance:1]回春术
+/cast 巨熊形态
+END
 VER 3 0000000000000003 "治療之觸" "136041"
 #showtooltip
 /stopcasting

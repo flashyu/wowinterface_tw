@@ -384,14 +384,14 @@ MailLoggerDB = {
 		}, -- [14]
 		{
 			["Date"] = "2021-08-02",
-			["PlayerName"] = "牧原股份",
+			["TargetName"] = "Kurani",
 			["ReceiveMoney"] = 0,
-			["GiveItems"] = {
-			},
+			["Time"] = "00:37:45",
 			["GiveMoney"] = 0,
 			["Location"] = "撒塔斯城",
-			["TargetName"] = "Kurani",
-			["Time"] = "00:37:45",
+			["GiveItems"] = {
+			},
+			["PlayerName"] = "牧原股份",
 			["ReceiveItems"] = {
 			},
 		}, -- [15]
@@ -414,5 +414,49 @@ MailLoggerDB = {
 			["ReceiveItems"] = {
 			},
 		}, -- [16]
+		{
+			["TargetName"] = "豬圈一",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-05",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+				{
+					["Number"] = 48,
+					["ItemLink"] = "|cffffffff|Hitem:21877::::::::68::::::::|h[幽紋布]|h|r",
+					["Name"] = "幽紋布",
+				}, -- [1]
+				[4] = {
+					["Number"] = 14,
+					["ItemLink"] = "|cffffffff|Hitem:22576::::::::68::::::::|h[法力微粒]|h|r",
+					["Name"] = "法力微粒",
+				},
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "虛空風暴",
+			["Time"] = "00:32:49",
+			["Result"] = "sent",
+			["ReceiveItems"] = {
+			},
+		}, -- [17]
+		{
+			["PlayerName"] = "牧原股份",
+			["TargetName"] = "部落拍賣場",
+			["Reason"] = 1,
+			["Date"] = "2021-08-05",
+			["ReceiveMoney"] = 0,
+			["Time"] = "02:48:23",
+			["GiveMoney"] = 0,
+			["Location"] = "雷霆崖",
+			["GiveItems"] = {
+			},
+			["Result"] = "received",
+			["ReceiveItems"] = {
+				{
+					["Number"] = 1,
+					["ItemLink"] = "|cff1eff00|Hitem:29740::::::::69::::::::|h[魔化武器]|h|r",
+					["Name"] = "魔化武器",
+				}, -- [1]
+			},
+		}, -- [18]
 	},
 }

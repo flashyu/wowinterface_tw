@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0521,
-	["LastPlayerFullName"] = "牧原股份-伊弗斯",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 30362,
@@ -26,9 +24,9 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:31486::::::::66::::::::|h[熊力背心]|h|r",
 		}, -- [5]
 		{
-			["ID"] = 28496,
-			["Level"] = 99,
-			["Link"] = "|cff1eff00|Hitem:28496::::::-49:309329954:64::::::::|h[叢林之鷹爪腰帶]|h|r",
+			["ID"] = 29772,
+			["Level"] = 111,
+			["Link"] = "|cff1eff00|Hitem:29772::::::::68::::::::|h[肯瑞瓦斥候腰帶]|h|r",
 		}, -- [6]
 		{
 			["ID"] = 25821,
@@ -63,10 +61,10 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:25779::::::::66::::::::|h[戰槌殺戮者指環]|h|r",
 		}, -- [12]
 		{
-			["ID"] = 25628,
-			["Level"] = 102,
+			["ID"] = 29776,
+			["Level"] = 108,
 			["AlsoFitsIn"] = 14,
-			["Link"] = "|cff1eff00|Hitem:25628::::::::64::::::::|h[巨魔槌兵徽章]|h|r",
+			["Link"] = "|cff1eff00|Hitem:29776::::::::69::::::::|h[阿其羅斯核心]|h|r",
 		}, -- [13]
 		{
 			["ID"] = 25628,
@@ -85,6 +83,8 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:25761::::::::65::::::::|h[野獸之杖]|h|r",
 		}, -- [16]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "牧原股份-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

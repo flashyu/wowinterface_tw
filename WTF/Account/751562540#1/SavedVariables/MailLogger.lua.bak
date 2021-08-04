@@ -383,15 +383,15 @@ MailLoggerDB = {
 			},
 		}, -- [14]
 		{
-			["TargetName"] = "Kurani",
+			["Date"] = "2021-08-02",
 			["PlayerName"] = "牧原股份",
 			["ReceiveMoney"] = 0,
-			["Time"] = "00:37:45",
-			["GiveMoney"] = 0,
-			["Location"] = "撒塔斯城",
 			["GiveItems"] = {
 			},
-			["Date"] = "2021-08-02",
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["TargetName"] = "Kurani",
+			["Time"] = "00:37:45",
 			["ReceiveItems"] = {
 			},
 		}, -- [15]
