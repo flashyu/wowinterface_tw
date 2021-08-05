@@ -20,6 +20,13 @@ VER 3 0000000000000002 "精靈之火" "136033"
 /cancelform [nostance:0/1/3]
 /cast [stance:1/3] 精靈之火(野性);[nostance] 精靈之火
 END
+VER 3 0000000000000007 "跑路" "132128"
+#showtooltip
+/cast [swimming] 水棲形態
+/cast [outdoors,combat] 旅行形態
+/cast [outdoors,flyable] 飛行形態
+/script UIErrorsFrame:Clear()
+END
 VER 3 0000000000000001 "遠視" "132150"
 /console cameraDistanceMaxZoomFactor 4
 /console ffxDeath 0

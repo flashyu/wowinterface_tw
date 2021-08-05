@@ -10,7 +10,7 @@ LootMonitorDB = {
 			"RIGHT", -- [1]
 			nil, -- [2]
 			"RIGHT", -- [3]
-			-20, -- [4]
+			-20.00000762939453, -- [4]
 			0, -- [5]
 		},
 		["OutputToRaidWarning"] = false,
@@ -20,7 +20,7 @@ LootMonitorDB = {
 			"CENTER", -- [1]
 			nil, -- [2]
 			"CENTER", -- [3]
-			210, -- [4]
+			210.0000915527344, -- [4]
 			0, -- [5]
 		},
 		["ExpireDay"] = 14,

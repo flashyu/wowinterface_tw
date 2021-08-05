@@ -17,7 +17,7 @@ MailLoggerDB = {
 			"RIGHT", -- [1]
 			true, -- [2]
 			"RIGHT", -- [3]
-			-20, -- [4]
+			-20.00000762939453, -- [4]
 			0, -- [5]
 		},
 		["LogDays"] = 90,
@@ -383,15 +383,15 @@ MailLoggerDB = {
 			},
 		}, -- [14]
 		{
-			["Date"] = "2021-08-02",
+			["PlayerName"] = "牧原股份",
 			["TargetName"] = "Kurani",
 			["ReceiveMoney"] = 0,
-			["Time"] = "00:37:45",
-			["GiveMoney"] = 0,
-			["Location"] = "撒塔斯城",
 			["GiveItems"] = {
 			},
-			["PlayerName"] = "牧原股份",
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["Date"] = "2021-08-02",
+			["Time"] = "00:37:45",
 			["ReceiveItems"] = {
 			},
 		}, -- [15]
@@ -458,5 +458,24 @@ MailLoggerDB = {
 				}, -- [1]
 			},
 		}, -- [18]
+		{
+			["TargetName"] = "豬圈一",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-06",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+				{
+					["Number"] = 96,
+					["ItemLink"] = "|cffffffff|Hitem:21877::::::::69::::::::|h[幽紋布]|h|r",
+					["Name"] = "幽紋布",
+				}, -- [1]
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["Time"] = "00:59:22",
+			["Result"] = "sent",
+			["ReceiveItems"] = {
+			},
+		}, -- [19]
 	},
 }
