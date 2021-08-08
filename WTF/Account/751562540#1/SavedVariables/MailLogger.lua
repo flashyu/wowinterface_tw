@@ -383,15 +383,15 @@ MailLoggerDB = {
 			},
 		}, -- [14]
 		{
-			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-02",
 			["TargetName"] = "Kurani",
 			["ReceiveMoney"] = 0,
-			["GiveItems"] = {
-			},
+			["Time"] = "00:37:45",
 			["GiveMoney"] = 0,
 			["Location"] = "撒塔斯城",
-			["Date"] = "2021-08-02",
-			["Time"] = "00:37:45",
+			["GiveItems"] = {
+			},
+			["PlayerName"] = "牧原股份",
 			["ReceiveItems"] = {
 			},
 		}, -- [15]
@@ -477,5 +477,200 @@ MailLoggerDB = {
 			["ReceiveItems"] = {
 			},
 		}, -- [19]
+		{
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-06",
+			["ReceiveMoney"] = 0,
+			["Time"] = "23:40:36",
+			["GiveMoney"] = 0,
+			["Location"] = "黑色沼澤",
+			["GiveItems"] = {
+			},
+			["TargetName"] = "寶島滿漢香腸",
+			["ReceiveItems"] = {
+			},
+		}, -- [20]
+		{
+			["TargetName"] = "寶島滿漢香腸",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-06",
+			["ReceiveMoney"] = 0,
+			["Time"] = "23:40:36",
+			["GiveMoney"] = 200000,
+			["Location"] = "黑色沼澤",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+				{
+					["Number"] = 20,
+					["ItemLink"] = "|cffffffff|Hitem:27860::::::::69::::::::|h[淨化過的德萊尼水]|h|r",
+					["Name"] = "淨化過的德萊尼水",
+				}, -- [1]
+				{
+					["Number"] = 20,
+					["ItemLink"] = "|cffffffff|Hitem:27860::::::::69::::::::|h[淨化過的德萊尼水]|h|r",
+					["Name"] = "淨化過的德萊尼水",
+				}, -- [2]
+			},
+		}, -- [21]
+		{
+			["TargetName"] = "Yiren",
+			["PlayerName"] = "牧原股份",
+			["ReceiveMoney"] = 0,
+			["Time"] = "11:01:10",
+			["GiveMoney"] = 0,
+			["Location"] = "暗影迷宮",
+			["GiveItems"] = {
+			},
+			["Date"] = "2021-08-07",
+			["ReceiveItems"] = {
+			},
+		}, -- [22]
+		{
+			["TargetName"] = "Yiren",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-07",
+			["ReceiveMoney"] = 0,
+			["Time"] = "11:01:10",
+			["GiveMoney"] = 6000000,
+			["Location"] = "暗影迷宮",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [23]
+		{
+			["TargetName"] = "豬圈一",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-07",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+				{
+					["Number"] = 55,
+					["ItemLink"] = "|cffffffff|Hitem:21877::::::::70::::::::|h[幽紋布]|h|r",
+					["Name"] = "幽紋布",
+				}, -- [1]
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["Time"] = "23:09:48",
+			["Result"] = "sent",
+			["ReceiveItems"] = {
+			},
+		}, -- [24]
+		{
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-08",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:32:35",
+			["GiveMoney"] = 0,
+			["Location"] = "塔納利斯",
+			["GiveItems"] = {
+			},
+			["TargetName"] = "丹楓公孫月",
+			["ReceiveItems"] = {
+			},
+		}, -- [25]
+		{
+			["Date"] = "2021-08-08",
+			["TargetName"] = "Kazawar",
+			["ReceiveMoney"] = 0,
+			["Time"] = "19:13:52",
+			["GiveMoney"] = 0,
+			["Location"] = "亞克崔茲",
+			["GiveItems"] = {
+			},
+			["PlayerName"] = "牧原股份",
+			["ReceiveItems"] = {
+			},
+		}, -- [26]
+		{
+			["Date"] = "2021-08-08",
+			["TargetName"] = "特變電工",
+			["ReceiveMoney"] = 0,
+			["Time"] = "20:22:02",
+			["GiveMoney"] = 0,
+			["Location"] = "奧格瑪",
+			["GiveItems"] = {
+			},
+			["PlayerName"] = "牧原股份",
+			["ReceiveItems"] = {
+			},
+		}, -- [27]
+		{
+			["TargetName"] = "特變電工",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-08",
+			["ReceiveMoney"] = 0,
+			["Time"] = "20:22:02",
+			["GiveMoney"] = 30000000,
+			["Location"] = "奧格瑪",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [28]
+		{
+			["TargetName"] = "豬圈一",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-08",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+				{
+					["Number"] = 59,
+					["ItemLink"] = "|cffffffff|Hitem:21877::::::::70::::::::|h[幽紋布]|h|r",
+					["Name"] = "幽紋布",
+				}, -- [1]
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["Time"] = "22:44:43",
+			["Result"] = "sent",
+			["ReceiveItems"] = {
+			},
+		}, -- [29]
+		{
+			["Date"] = "2021-08-09",
+			["PlayerName"] = "牧原股份",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["TargetName"] = "特變電工",
+			["Time"] = "01:06:46",
+			["ReceiveItems"] = {
+			},
+		}, -- [30]
+		{
+			["Date"] = "2021-08-09",
+			["PlayerName"] = "牧原股份",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["TargetName"] = "特變電工",
+			["Time"] = "01:06:56",
+			["ReceiveItems"] = {
+			},
+		}, -- [31]
+		{
+			["TargetName"] = "特變電工",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-09",
+			["ReceiveMoney"] = 50000000,
+			["Time"] = "01:06:56",
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [32]
 	},
 }

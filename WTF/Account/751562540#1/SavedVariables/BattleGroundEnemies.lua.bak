@@ -5,6 +5,7 @@ BattleGroundEnemiesDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
+			["onlyShowWhenNewVersion"] = true,
 			["lastReadVersion"] = "9.0.5.6",
 		},
 	},

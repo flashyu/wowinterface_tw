@@ -36,7 +36,7 @@ L.resetToSetButton = "重置到初始状态";
 L.readOnlyButton = "\124cff00ff00点击\124r设置";
 L.closeButton = "关闭窗口";
 
-L.classTabButton = "\n\124cff00ff00左键\124r切换职业\n\124cff00ff00右键\124r加载已保存的天赋\n\124cff00ff00Shift+左键\124r删除天赋";
+L.classTabButton = "\n\124cff00ff00左键\124r切换职业\n\124cff00ff00右键\124r加载已保存的天赋\n\124cff00ff00Shift+左键\124r删除保存的天赋";
 L.inspectTargetButton = "观察目标天赋";
 L.spellTabButton = "技能列表窗口";
 L.spellAvailable = "\124cff00ff00技能可用\124r";
@@ -196,3 +196,6 @@ L.CASTINGTIME = "%d秒施法时间";
 L.CASTINGTIMEINSTANT = "瞬发技能";
 L.CDSECOND = "%d秒冷却时间";
 L.CDMINUTE = "%d分钟冷却时间";
+
+L["CANNOT APPLY : NEED MORE TALENT POINTS."] = "无法应用天赋: 需要更多天赋点数";
+L["CANNOT APPLY : TALENTS IN CONFLICT."] = "无法应用天赋: 跟当前天赋存在冲突";

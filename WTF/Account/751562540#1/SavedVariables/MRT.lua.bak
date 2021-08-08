@@ -32,26 +32,37 @@ VMRT = {
 			[72] = 10,
 			[104] = 10,
 			[73] = 10,
-			[252] = 10,
-			[105] = 10,
-			[254] = 10,
-			[256] = 10,
-			[577] = 10,
 			[581] = 10,
+			[105] = 10,
+			[577] = 10,
+			[256] = 10,
+			[254] = 10,
+			[252] = 10,
 		},
 		["Type"] = 2,
-		["timeToKillAnalyze"] = 15,
 		["Strata"] = "HIGH",
+		["timeToKillAnalyze"] = 15,
 	},
 	["ProfileKeys"] = {
 		["牧原股份-伊弗斯"] = "default",
 	},
 	["Encounter"] = {
-		["names"] = {
-		},
 		["list"] = {
 			["牧原股份"] = {
+				"^649^176^1628426500^177^1^25^56.92^Azzinoth", -- [1]
+				"^650^176^1628427095^0^0^25^56.92^Azzinoth", -- [2]
+				"^650^176^1628427897^519^0^25^56.92^牧原股份", -- [3]
+				"^650^176^1628428689^363^0^25^69.88^Azzinoth", -- [4]
+				"^650^176^1628429313^403^1^25^69.88^Azzinoth", -- [5]
+				"^651^176^1628431300^0^0^25^80.07^大包衛生紙", -- [6]
+				"^651^176^1628431895^0^0^25^81.81^Faddedflower", -- [7]
+				"^651^176^1628432699^585^1^25^81.81^Azzinoth", -- [8]
 			},
+		},
+		["names"] = {
+			[650] = "弒龍者戈魯爾",
+			[649] = "大君王莫卡爾",
+			[651] = "瑪瑟里頓",
 		},
 	},
 	["Marks"] = {
@@ -61,24 +72,75 @@ VMRT = {
 	["ExCD2"] = {
 		["upd4525"] = true,
 		["gnGUIDs"] = {
-			["牧原股份"] = 0,
-			["Exa"] = 0,
-			["Emxd"] = 0,
-			["Harlso"] = 0,
+			["涵妮萳妑"] = 0,
+			["Pony"] = 0,
 			["提籃叫共酒桃"] = 0,
-			["專斬畜生"] = 0,
-			["Csninetyeig"] = 0,
-			["Boleyn"] = 0,
+			["牛頭人大丁丁"] = 0,
+			["Sinanju"] = 0,
+			["唉喲薇"] = 0,
+			["Yiren"] = 0,
+			["紅辣"] = 0,
 			["拉維妮絲"] = 0,
+			["和風牛肉"] = 0,
+			["不給窺就搗蛋"] = 0,
+			["表哥好身手"] = 0,
+			["冷冷德"] = 0,
+			["注意長度"] = 0,
+			["我叫王大錘"] = 0,
+			["Exa"] = 0,
+			["浩然之氣"] = 0,
+			["Csninetyeig"] = 0,
+			["Workmen"] = 0,
+			["戴萩芙蒙黛奈"] = 0,
+			["我是魔族"] = 0,
+			["Reroll"] = 0,
+			["威瑪舒培"] = 0,
+			["鷹刀"] = 0,
+			["Usadapekora"] = 0,
+			["Thd"] = 0,
+			["阿阿哈哈先生"] = 0,
+			["六月棉"] = 0,
+			["Harlso"] = 0,
+			["我是餅乾寶貝"] = 0,
+			["Battleman"] = 0,
+			["壞人來襲"] = 0,
+			["Kazawar"] = 0,
+			["Yysera"] = 0,
 			["翔平達埜"] = 0,
+			["玩火者"] = 0,
+			["特變電工"] = 0,
 			["Yenn"] = 0,
 			["不死神帝"] = 0,
-			["我叫王大錘"] = 0,
-			["和風牛肉"] = 0,
-			["特變電工"] = 0,
-			["表哥好身手"] = 0,
-			["阿阿哈哈先生"] = 0,
-			["注意長度"] = 0,
+			["牧原股份"] = 0,
+			["光頭小怪怪"] = 0,
+			["佛仔"] = 0,
+			["林王韋"] = 0,
+			["春風吹花蕊"] = 0,
+			["無限境界"] = 0,
+			["Faddedflower"] = 0,
+			["Envious"] = 0,
+			["專斬畜生"] = 0,
+			["Emxd"] = 0,
+			["里楊"] = 0,
+			["Rmaster"] = 0,
+			["綠帽戰士"] = 0,
+			["福利貝爾"] = 0,
+			["魔法關公"] = 0,
+			["Boleyn"] = 0,
+			["奶媽沒點補"] = 0,
+			["柔情似水"] = 0,
+			["丹楓公孫月"] = 0,
+			["胡恩高嶺"] = 0,
+			["我找一下聖光"] = 0,
+			["冷面判官"] = 0,
+			["秋條人"] = 0,
+			["咪咪不是秘密"] = 0,
+			["窟窟珂蓮娜"] = 0,
+			["光蛋"] = 0,
+			["欣寶"] = 0,
+			["Orwell"] = 0,
+			["阿宗葛格"] = 0,
+			["月巴豸苗"] = 0,
 		},
 		["NoRaid"] = true,
 		["CDECol"] = {
@@ -101,13 +163,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 			}, -- [1]
 			{
 				["enabled"] = true,
@@ -116,13 +178,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 			}, -- [2]
 			{
 				["enabled"] = true,
@@ -131,13 +193,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 			}, -- [3]
 			{
 				["frameGeneral"] = true,
@@ -145,13 +207,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 			}, -- [4]
 			{
 				["frameGeneral"] = true,
@@ -159,13 +221,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 			}, -- [5]
 			{
 				["frameGeneral"] = true,
@@ -173,13 +235,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 			}, -- [6]
 			{
 				["frameGeneral"] = true,
@@ -187,13 +249,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 			}, -- [7]
 			{
 				["frameGeneral"] = true,
@@ -201,13 +263,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 			}, -- [8]
 			{
 				["frameGeneral"] = true,
@@ -215,13 +277,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 			}, -- [9]
 			{
 				["frameGeneral"] = true,
@@ -229,13 +291,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 			}, -- [10]
 			{
 				["frameGeneral"] = true,
@@ -243,13 +305,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 			}, -- [11]
 		},
 		["Priority"] = {
@@ -273,28 +335,32 @@ VMRT = {
 		["ColorizeLowIlvl685"] = false,
 		["ColorizeNoEnch"] = true,
 		["ColorizeNoGems"] = true,
-		["ColorizeNoTopEnchGems"] = false,
 		["ColorizeLowIlvl"] = true,
+		["ColorizeNoTopEnchGems"] = false,
 		["ColorizeNoValorUpgrade"] = false,
 	},
-	["RaidCheck"] = {
-		["FlaskExp"] = 1,
-		["BuffsCheck"] = true,
-		["ReadyCheckFrame"] = true,
-		["ReadyCheckFrameTimerFade"] = 4,
-		["WeaponEnch"] = {
+	["InviteTool"] = {
+		["Words"] = "инв inv byd штм 123",
+		["InvByChat"] = true,
+		["RaidDiff"] = 16,
+		["PromoteRank"] = 2,
+		["Ranks"] = {
+			true, -- [1]
 		},
-		["ReadyCheckFrameOnlyRL"] = true,
+		["LootThreshold"] = 2,
+		["MasterLooters"] = "",
+		["LootMethod"] = "group",
+		["PromoteNames"] = "",
+		["OnlyGuild"] = true,
+		["Rank"] = 1,
 	},
 	["Addon"] = {
 		["Timer"] = 0.1,
-		["Scale"] = 1,
-		["Version"] = 4560,
 		["PreVersion"] = 4560,
+		["Version"] = 4560,
+		["Scale"] = 1,
 	},
 	["WhoPulled"] = {
-	},
-	["Profiles"] = {
 	},
 	["BossWatcher"] = {
 		["optionsDamageGraph"] = true,
@@ -303,6 +369,8 @@ VMRT = {
 		["optionsHealingGraph"] = true,
 		["trackingDamageSpells"] = {
 		},
+	},
+	["Profiles"] = {
 	},
 	["Profile"] = "default",
 	["LootLink"] = {
@@ -327,9 +395,9 @@ VMRT = {
 			"", -- [3]
 		},
 		["Strata"] = "HIGH",
-		["OnlyPromoted"] = true,
 		["BlackLastUpdateTime"] = {
 		},
+		["OnlyPromoted"] = true,
 		["OptionsFormatting"] = true,
 	},
 	["Logging"] = {
@@ -337,7 +405,6 @@ VMRT = {
 	["MarksBar"] = {
 		["pulltimer"] = 10,
 		["pulltimer_right"] = 10,
-		["Strata"] = "HIGH",
 		["Show"] = {
 			true, -- [1]
 			true, -- [2]
@@ -345,26 +412,24 @@ VMRT = {
 			true, -- [4]
 			true, -- [5]
 		},
+		["Strata"] = "HIGH",
 	},
 	["VisNote"] = {
 		["data"] = {
+			{
+				"4487001348021628276201", -- [1]
+			}, -- [1]
 		},
 		["sync_data"] = {
 		},
 	},
-	["InviteTool"] = {
-		["Words"] = "инв inv byd штм 123",
-		["InvByChat"] = true,
-		["RaidDiff"] = 16,
-		["PromoteRank"] = 2,
-		["Ranks"] = {
-			true, -- [1]
+	["RaidCheck"] = {
+		["FlaskExp"] = 1,
+		["BuffsCheck"] = true,
+		["ReadyCheckFrame"] = true,
+		["ReadyCheckFrameTimerFade"] = 4,
+		["ReadyCheckFrameOnlyRL"] = true,
+		["WeaponEnch"] = {
 		},
-		["LootThreshold"] = 2,
-		["MasterLooters"] = "",
-		["LootMethod"] = "group",
-		["PromoteNames"] = "",
-		["OnlyGuild"] = true,
-		["Rank"] = 1,
 	},
 }
