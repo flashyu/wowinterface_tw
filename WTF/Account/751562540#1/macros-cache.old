@@ -11,8 +11,9 @@ VER 3 0000000000000006 "割碎" "132135"
 /cast 割碎(獵豹形態)
 END
 VER 3 0000000000000005 "回春熊" "132091"
-/cast [stance:1]回春术
-/cast 巨熊形态
+/castsequence [stance:1] reset=60 巨熊形態,生命之花
+/stopcasting
+/cast [nostance] 巨熊形態
 END
 VER 3 0000000000000003 "治療之觸" "136041"
 #showtooltip
@@ -26,10 +27,8 @@ VER 3 0000000000000002 "精靈之火" "136033"
 END
 VER 3 0000000000000007 "跑路" "132128"
 #showtooltip
-/cast [swimming] 水棲形態
-/cast [outdoors,nocombat] 旅行形態
-/cast [outdoors,flyable] 飛行形態
-/script UIErrorsFrame:Clear()
+/cast 迅捷紫色雙足飛龍
+/cast [swimming]!水棲形態;[indoors]!獵豹形態;[flyable,nocombat]!飛行形態;!旅行形態
 END
 VER 3 0000000000000009 "迅愈" "136015"
 #showtooltip

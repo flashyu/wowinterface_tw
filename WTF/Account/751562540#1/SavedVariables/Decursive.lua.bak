@@ -1,7 +1,7 @@
 
 DecursiveDB = {
-	["profileKeys"] = {
-		["牧原股份 - 伊弗斯"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1628535646,
 	},
 	["class"] = {
 		["DRUID"] = {
@@ -16,8 +16,8 @@ DecursiveDB = {
 			},
 		},
 	},
-	["global"] = {
-		["LastVersionAnnounce"] = 1628442362,
+	["profileKeys"] = {
+		["牧原股份 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

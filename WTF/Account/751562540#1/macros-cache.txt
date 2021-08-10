@@ -15,6 +15,11 @@ VER 3 0000000000000005 "回春熊" "132091"
 /stopcasting
 /cast [nostance] 巨熊形態
 END
+VER 3 000000000000000A "愈合" "136085"
+#showtooltip
+/stopcasting
+/cast [modifier:shift] 癒合(等級 8); 癒合
+END
 VER 3 0000000000000003 "治療之觸" "136041"
 #showtooltip
 /stopcasting

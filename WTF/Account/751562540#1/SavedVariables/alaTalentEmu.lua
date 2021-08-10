@@ -1,14 +1,14 @@
 
 alaTalentEmuSV = {
+	["set"] = {
+		["credible"] = false,
+		["supreme"] = false,
+		["talents_in_tip"] = false,
+		["minimapPos"] = 185,
+	},
+	["_version"] = 210524,
 	["var"] = {
 		["savedTalent"] = {
 		},
-	},
-	["_version"] = 210524,
-	["set"] = {
-		["credible"] = false,
-		["minimapPos"] = 185,
-		["talents_in_tip"] = false,
-		["supreme"] = false,
 	},
 }
