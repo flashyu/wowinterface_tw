@@ -33,6 +33,37 @@ TomTomWaypointsM = {
 	},
 	["profiles"] = {
 		["牧原股份 - 伊弗斯"] = {
+			[1944] = {
+				["1944:477000000:536000000:『信使』維斯路登"] = {
+					1944, -- [1]
+					0.477, -- [2]
+					0.536, -- [3]
+					["arrivaldistance"] = 15,
+					["callbacks"] = {
+						["distance"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+					},
+					["persistent"] = true,
+					["minimap"] = true,
+					["cleardistance"] = 10,
+					["title"] = "『信使』維斯路登",
+					["from"] = "?",
+					["crazy"] = true,
+					["world"] = true,
+				},
+			},
 		},
 	},
 }

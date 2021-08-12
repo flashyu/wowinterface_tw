@@ -6,10 +6,10 @@ __DEJUNK_SAVED_VARIABLES__ = {
 	},
 	["Profiles"] = {
 		["牧原股份-伊弗斯"] = {
-			["version"] = 3,
 			["general"] = {
 				["autoRepair"] = true,
 			},
+			["version"] = 3,
 		},
 	},
 }

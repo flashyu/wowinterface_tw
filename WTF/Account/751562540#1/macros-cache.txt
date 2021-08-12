@@ -38,7 +38,13 @@ END
 VER 3 0000000000000009 "迅愈" "136015"
 #showtooltip
 /stopcasting
-/cast 迅癒
+/cast [@hbtarget] 迅癒
+END
+VER 3 000000000000000B "迅捷觸" "136076"
+#showtooltip
+/stopcasting
+/cast 自然迅捷
+/cast [@hbtarget] 治療之觸
 END
 VER 3 0000000000000001 "遠視" "132150"
 /console cameraDistanceMaxZoomFactor 4

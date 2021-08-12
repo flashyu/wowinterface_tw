@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0521,
-	["LastPlayerFullName"] = "牧原股份-伊弗斯",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 28183,
@@ -84,7 +82,14 @@ PawnOptions = {
 			["Level"] = 115,
 			["Link"] = "|cff0070dd|Hitem:31304::::::::70::::::::|h[精華集中器]|h|r",
 		}, -- [16]
+		{
+			["ID"] = 28387,
+			["Level"] = 115,
+			["Link"] = "|cff0070dd|Hitem:28387::::::::70::::::::|h[安寧和祥提燈]|h|r",
+		}, -- [17]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "牧原股份-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {
