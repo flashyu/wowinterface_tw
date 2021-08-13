@@ -1,12 +1,15 @@
 
 AtlasLootClassicDB = {
+	["profileKeys"] = {
+		["豬圈一 - 伊弗斯"] = "豬圈一 - 伊弗斯",
+		["牧原股份 - 伊弗斯"] = "牧原股份 - 伊弗斯",
+	},
 	["global"] = {
 		["__addonrevision"] = 2030001,
 	},
-	["profileKeys"] = {
-		["牧原股份 - 伊弗斯"] = "牧原股份 - 伊弗斯",
-	},
 	["profiles"] = {
+		["豬圈一 - 伊弗斯"] = {
+		},
 		["牧原股份 - 伊弗斯"] = {
 			["GUI"] = {
 				["point"] = {
@@ -18,8 +21,8 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"ShadowLabyrinth", -- [2]
-					4, -- [3]
+					"TheArcatraz", -- [2]
+					3, -- [3]
 					6, -- [4]
 					0, -- [5]
 				},

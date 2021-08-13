@@ -2,6 +2,7 @@
 TomTomDB = {
 	["profileKeys"] = {
 		["牧原股份 - 伊弗斯"] = "Default",
+		["豬圈一 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -30,15 +31,23 @@ TomTomWaypoints = nil
 TomTomWaypointsM = {
 	["profileKeys"] = {
 		["牧原股份 - 伊弗斯"] = "牧原股份 - 伊弗斯",
+		["豬圈一 - 伊弗斯"] = "豬圈一 - 伊弗斯",
 	},
 	["profiles"] = {
 		["牧原股份 - 伊弗斯"] = {
 			[1944] = {
-				["1944:477000000:536000000:『信使』維斯路登"] = {
+				["1944:564547677.26161:379706601.46699:郵箱"] = {
 					1944, -- [1]
-					0.477, -- [2]
-					0.536, -- [3]
+					0.5645476772616137, -- [2]
+					0.3797066014669926, -- [3]
 					["arrivaldistance"] = 15,
+					["crazy"] = true,
+					["persistent"] = true,
+					["desc"] = "郵箱",
+					["silent"] = true,
+					["cleardistance"] = 10,
+					["title"] = "郵箱",
+					["from"] = "?",
 					["callbacks"] = {
 						["distance"] = {
 							[10] = nil --[[ skipped inline function ]],
@@ -55,15 +64,12 @@ TomTomWaypointsM = {
 							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 					},
-					["persistent"] = true,
 					["minimap"] = true,
-					["cleardistance"] = 10,
-					["title"] = "『信使』維斯路登",
-					["from"] = "?",
-					["crazy"] = true,
 					["world"] = true,
 				},
 			},
+		},
+		["豬圈一 - 伊弗斯"] = {
 		},
 	},
 }

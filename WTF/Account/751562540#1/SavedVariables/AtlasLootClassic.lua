@@ -1,10 +1,11 @@
 
 AtlasLootClassicDB = {
-	["profileKeys"] = {
-		["牧原股份 - 伊弗斯"] = "牧原股份 - 伊弗斯",
-	},
 	["global"] = {
 		["__addonrevision"] = 2030001,
+	},
+	["profileKeys"] = {
+		["牧原股份 - 伊弗斯"] = "牧原股份 - 伊弗斯",
+		["豬圈一 - 伊弗斯"] = "豬圈一 - 伊弗斯",
 	},
 	["profiles"] = {
 		["牧原股份 - 伊弗斯"] = {
@@ -18,12 +19,14 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"TheBotanica", -- [2]
-					5, -- [3]
-					1, -- [4]
+					"TheArcatraz", -- [2]
+					3, -- [3]
+					6, -- [4]
 					0, -- [5]
 				},
 			},
+		},
+		["豬圈一 - 伊弗斯"] = {
 		},
 	},
 }
