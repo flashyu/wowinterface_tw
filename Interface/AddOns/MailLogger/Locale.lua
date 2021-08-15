@@ -15,12 +15,12 @@ L["Feedback & Update Link"] = "https://www.curseforge.com/wow/addons/maillogger"
 
 local locale = GetLocale()
 
-if locale == "enUs" then
+if locale == "enUS" then
 	--Tips
 	L["MAILLOGGER TIPS"] = "|cFFBA55D3MailLogger|r Tips:Use |cFF00BFFF/maillogger|r |cFFFF4500gui|r or |cFF00BFFF/ml|r |cFFFF4500gui|r open Option Interface, Use |cFF00BFFF/maillogger|r |cFFFF9000all|r or |cFF00BFFF/ml|r |cFFFF9000all|r open All Logs, |cFF00BFFF/maillogger|r |cFFFF9000tl|r or |cFF00BFFF/ml|r |cFFFF9000tl|r open Trade Logs, |cFF00BFFF/maillogger|r |cFFFF9000ml|r or |cFF00BFFF/ml|r |cFFFF9000ml|r open Mail Logs, Use |cFF00BFFF/maillogger|r |cFFFF9000all|r or |cFF00BFFF/ml|r |cFFFF9000sm|r open Sent Mail Logs, Use |cFF00BFFF/maillogger|r |cFFFF9000all|r or |cFF00BFFF/ml|r |cFFFF9000rm|r open Received Mail Logs."
 	--Trades
-	L["MAILLOGGER_TEXT_TRADE_ERROR"] = "Trade with %s was failed, caused by %s."
-	L["MAILLOGGER_TEXT_TRADE_SUCCEED"] = "Trade with %s was succeed."
+	L["MAILLOGGER_TEXT_TRADE_ERROR"] = "Trade with %s failed, caused by %s."
+	L["MAILLOGGER_TEXT_TRADE_SUCCEED"] = "Trade with %s succeed."
 	L["MAILLOGGER_TEXT_TRADE_ITEMS_RECEIVE"] = " Received #num# item(s), included #item# (#quantity#)."
 	L["MAILLOGGER_TEXT_TRADE_ITEMS_GIVE"] = " Gave #num# item(s), included #item# (#quantity#)."
 	L["MAILLOGGER_TEXT_TRADE_MONEY_RECEIVE"] = " Received %s."

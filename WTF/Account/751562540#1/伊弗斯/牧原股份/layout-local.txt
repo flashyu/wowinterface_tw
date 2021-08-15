@@ -1,11 +1,4 @@
 Version: 1
-Frame: f1_HealBot_Action
-FrameLevel: 1
-Anchor: CENTER
-X: 403
-Y: 76
-W: 102
-H: 99
 Frame: DcrMUFsContainer
 FrameLevel: 1
 Anchor: CENTER
@@ -30,8 +23,8 @@ H: 80
 Frame: AtlasLoot_GUI-Frame
 FrameLevel: 1
 Anchor: CENTER
-X: 0
-Y: 1
+X: -283
+Y: 144
 W: 920
 H: 600
 Frame: CodexBrowser
@@ -45,7 +38,7 @@ Frame: HealBot_Options
 FrameLevel: 1
 Anchor: TOPLEFT
 X: 45
-Y: -30
+Y: -32
 W: 860
 H: 750
 Frame: GroupBulletinBoardFrame
@@ -62,3 +55,10 @@ X: 0
 Y: 128
 W: 200
 H: 50
+Frame: aux_frame
+FrameLevel: 1
+Anchor: TOPLEFT
+X: 92
+Y: -144
+W: 768
+H: 447

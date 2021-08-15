@@ -6,8 +6,8 @@ CliqueDB3 = {
 			["spec1_profileKey"] = "牧原股份 - 伊弗斯",
 			["specswap"] = false,
 			["downclick"] = false,
-			["fastooc"] = false,
 			["alerthidden"] = true,
+			["fastooc"] = false,
 		},
 	},
 	["profileKeys"] = {

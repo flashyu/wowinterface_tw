@@ -448,17 +448,11 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["arcLength"] = 360,
+			["useLimit"] = false,
 			["animate"] = false,
-			["fullCircle"] = true,
-			["scale"] = 1,
 			["authorOptions"] = {
 			},
-			["border"] = false,
-			["borderEdge"] = "Square Full White",
-			["regionType"] = "dynamicgroup",
-			["borderSize"] = 2,
-			["sort"] = "none",
+			["scale"] = 1,
 			["animation"] = {
 				["start"] = {
 					["easeStrength"] = 3,
@@ -479,7 +473,13 @@ WeakAurasSaved = {
 					["easeType"] = "none",
 				},
 			},
-			["internalVersion"] = 45,
+			["border"] = false,
+			["borderEdge"] = "Square Full White",
+			["regionType"] = "dynamicgroup",
+			["borderSize"] = 2,
+			["sort"] = "none",
+			["rotation"] = 0,
+			["fullCircle"] = true,
 			["constantFactor"] = "RADIUS",
 			["uid"] = "6fKxSS1HyT)",
 			["borderOffset"] = 4,
@@ -493,12 +493,12 @@ WeakAurasSaved = {
 			["gridType"] = "RD",
 			["borderInset"] = 1,
 			["limit"] = 5,
-			["useLimit"] = false,
+			["internalVersion"] = 45,
 			["conditions"] = {
 			},
 			["information"] = {
 			},
-			["rotation"] = 0,
+			["arcLength"] = 360,
 		},
 		["lan"] = {
 			["grow"] = "DOWN",
@@ -594,18 +594,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["radius"] = 200,
+			["gridType"] = "RD",
 			["animate"] = false,
-			["rowSpace"] = 1,
-			["scale"] = 1,
 			["selfPoint"] = "TOP",
+			["scale"] = 1,
+			["arcLength"] = 360,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["arcLength"] = 360,
-			["xOffset"] = -202.2230834960938,
+			["fullCircle"] = true,
+			["rowSpace"] = 1,
 			["constantFactor"] = "RADIUS",
 			["config"] = {
 			},
@@ -619,13 +619,13 @@ WeakAurasSaved = {
 			["limit"] = 5,
 			["borderInset"] = 1,
 			["rotation"] = 0,
-			["gridType"] = "RD",
+			["xOffset"] = -202.2230834960938,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["fullCircle"] = true,
+			["radius"] = 200,
 		},
 		["迅愈"] = {
 			["sparkWidth"] = 10,
@@ -1061,18 +1061,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["radius"] = 200,
+			["gridType"] = "RD",
 			["animate"] = false,
-			["rowSpace"] = 1,
-			["scale"] = 1,
 			["selfPoint"] = "TOP",
+			["scale"] = 1,
+			["arcLength"] = 360,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["arcLength"] = 360,
-			["xOffset"] = 0,
+			["fullCircle"] = true,
+			["rowSpace"] = 1,
 			["constantFactor"] = "RADIUS",
 			["config"] = {
 			},
@@ -1086,13 +1086,13 @@ WeakAurasSaved = {
 			["limit"] = 5,
 			["borderInset"] = 1,
 			["rotation"] = 0,
-			["gridType"] = "RD",
+			["xOffset"] = 0,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["fullCircle"] = true,
+			["radius"] = 200,
 		},
 		["New"] = {
 			["sparkWidth"] = 10,

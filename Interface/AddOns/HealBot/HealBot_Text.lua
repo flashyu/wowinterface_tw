@@ -436,8 +436,7 @@ function HealBot_Text_TextNameColours(button)
         if UnitIsFriend("player",button.unit) then
             if HealBot_Action_ResPending(button, GetTime()) then
                 atcR,atcG,atcB=0.2, 1.0, 0.2
-            elseif not UnitIsUnit(button.unit, "player") and
-               ((HealBot_Init_retSmartCast_MassRes() and button.status.range>-1) or button.status.range==1) then
+            elseif not UnitIsUnit(button.unit, "player") and button.status.range>0 then
                 atcR,atcG,atcB=1.0, 0.2, 0.2
             else
                 atcR,atcG,atcB=0.5, 0.5, 0.5

@@ -242,18 +242,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["gridType"] = "RD",
+			["xOffset"] = -202.2230834960938,
 			["animate"] = false,
-			["selfPoint"] = "TOP",
-			["scale"] = 1,
 			["arcLength"] = 360,
+			["scale"] = 1,
+			["fullCircle"] = true,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["fullCircle"] = true,
-			["rowSpace"] = 1,
+			["radius"] = 200,
+			["selfPoint"] = "TOP",
 			["constantFactor"] = "RADIUS",
 			["rotation"] = 0,
 			["borderOffset"] = 4,
@@ -267,13 +267,13 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["uid"] = "I7Y0mTf5KSP",
-			["xOffset"] = -202.2230834960938,
+			["rowSpace"] = 1,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["radius"] = 200,
+			["gridType"] = "RD",
 		},
 		["cd"] = {
 			["grow"] = "DOWN",
@@ -351,11 +351,8 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["useLimit"] = false,
+			["internalVersion"] = 45,
 			["animate"] = false,
-			["authorOptions"] = {
-			},
-			["scale"] = 1,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -376,13 +373,16 @@ WeakAurasSaved = {
 					["easeType"] = "none",
 				},
 			},
+			["scale"] = 1,
+			["rotation"] = 0,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["rotation"] = 0,
-			["fullCircle"] = true,
+			["arcLength"] = 360,
+			["authorOptions"] = {
+			},
 			["constantFactor"] = "RADIUS",
 			["limit"] = 5,
 			["borderOffset"] = 4,
@@ -396,12 +396,12 @@ WeakAurasSaved = {
 			["uid"] = "6fKxSS1HyT)",
 			["config"] = {
 			},
-			["internalVersion"] = 45,
+			["fullCircle"] = true,
 			["conditions"] = {
 			},
 			["information"] = {
 			},
-			["arcLength"] = 360,
+			["useLimit"] = false,
 		},
 		["迅捷"] = {
 			["sparkWidth"] = 10,
@@ -720,18 +720,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["gridType"] = "RD",
+			["xOffset"] = 0,
 			["animate"] = false,
-			["selfPoint"] = "TOP",
-			["scale"] = 1,
 			["arcLength"] = 360,
+			["scale"] = 1,
+			["fullCircle"] = true,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["fullCircle"] = true,
-			["rowSpace"] = 1,
+			["radius"] = 200,
+			["selfPoint"] = "TOP",
 			["constantFactor"] = "RADIUS",
 			["rotation"] = 0,
 			["borderOffset"] = 4,
@@ -745,13 +745,13 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["uid"] = "ZX3oWFkARRy",
-			["xOffset"] = 0,
+			["rowSpace"] = 1,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["radius"] = 200,
+			["gridType"] = "RD",
 		},
 		["迅捷ok"] = {
 			["iconSource"] = -1,

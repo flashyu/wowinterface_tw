@@ -35,39 +35,6 @@ TomTomWaypointsM = {
 	},
 	["profiles"] = {
 		["牧原股份 - 伊弗斯"] = {
-			[1944] = {
-				["1944:564547677.26161:379706601.46699:郵箱"] = {
-					1944, -- [1]
-					0.5645476772616137, -- [2]
-					0.3797066014669926, -- [3]
-					["arrivaldistance"] = 15,
-					["crazy"] = true,
-					["persistent"] = true,
-					["desc"] = "郵箱",
-					["silent"] = true,
-					["cleardistance"] = 10,
-					["title"] = "郵箱",
-					["from"] = "?",
-					["callbacks"] = {
-						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-					},
-					["minimap"] = true,
-					["world"] = true,
-				},
-			},
 		},
 		["豬圈一 - 伊弗斯"] = {
 		},

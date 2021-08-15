@@ -21,6 +21,7 @@ ElvDB = {
 			["mapAlphaWhenMoving"] = 0.5,
 			["locale"] = "zhCN",
 		},
+		["ignoreIncompatible"] = true,
 	},
 	["faction"] = {
 		["伊弗斯"] = {
@@ -40,8 +41,8 @@ ElvDB = {
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["牧原股份"] = 57022321,
-			["豬圈一"] = 30,
+			["牧原股份"] = 129552043,
+			["豬圈一"] = 999550,
 		},
 	},
 	["profiles"] = {
@@ -77,9 +78,9 @@ ElvDB = {
 				["experience"] = {
 					["font"] = "2002",
 					["hideAtMaxLevel"] = false,
-					["height"] = 223,
-					["questCompletedOnly"] = true,
 					["orientation"] = "VERTICAL",
+					["questCompletedOnly"] = true,
+					["height"] = 223,
 					["width"] = 10,
 				},
 				["transparent"] = false,
@@ -97,6 +98,7 @@ ElvDB = {
 				},
 				["topPanel"] = true,
 				["afk"] = false,
+				["autoRepair"] = true,
 				["minimap"] = {
 					["size"] = 175,
 				},
@@ -189,8 +191,8 @@ ElvDB = {
 					["player"] = true,
 				},
 				["vendorGrays"] = {
-					["details"] = true,
 					["enable"] = true,
+					["details"] = true,
 				},
 				["countFontOutline"] = "THICKOUTLINE",
 				["bagSize"] = 42,
@@ -202,12 +204,19 @@ ElvDB = {
 				},
 				["bankSize"] = 42,
 			},
-			["chat"] = {
-				["timeStampLocalTime"] = false,
-				["emotionIcons"] = false,
-				["panelHeight"] = 200,
-				["throttleInterval"] = 0,
-				["panelWidth"] = 472,
+			["auras"] = {
+				["buffs"] = {
+					["horizontalSpacing"] = 1,
+					["verticalSpacing"] = 20,
+					["maxWraps"] = 2,
+					["size"] = 28,
+				},
+				["debuffs"] = {
+					["horizontalSpacing"] = 1,
+					["verticalSpacing"] = 20,
+					["maxWraps"] = 2,
+					["size"] = 28,
+				},
 			},
 			["dbConverted"] = 2.1,
 			["datatexts"] = {
@@ -331,13 +340,13 @@ ElvDB = {
 				["bar5"] = {
 					["enabled"] = false,
 					["countFont"] = "Expressway",
-					["buttons"] = 12,
+					["buttonSize"] = 35,
 					["macroFont"] = "Expressway",
 					["countFontOutline"] = "OUTLINE",
 					["backdrop"] = true,
 					["macroFontOutline"] = "OUTLINE",
 					["macroTextPosition"] = "BOTTOMRIGHT",
-					["buttonSize"] = 35,
+					["buttons"] = 12,
 					["hotkeyFont"] = "Expressway",
 					["hotkeyFontOutline"] = "OUTLINE",
 					["macrotext"] = true,
@@ -377,8 +386,8 @@ ElvDB = {
 					["buttonSpacing"] = 1,
 					["macroFontOutline"] = "OUTLINE",
 					["macroTextPosition"] = "BOTTOMRIGHT",
-					["hotkeyFontOutline"] = "OUTLINE",
 					["hotkeyFont"] = "Expressway",
+					["hotkeyFontOutline"] = "OUTLINE",
 					["macrotext"] = true,
 					["buttonsPerRow"] = 12,
 					["visibility"] = "[petbattle] hide; show",
@@ -389,45 +398,27 @@ ElvDB = {
 				["units"] = {
 					["PLAYER"] = {
 						["enable"] = true,
-						["castbar"] = {
-							["castTimeFormat"] = "CURRENTMAX",
-						},
 						["power"] = {
 							["text"] = {
 								["enable"] = true,
 							},
 						},
-					},
-				},
-			},
-			["auras"] = {
-				["debuffs"] = {
-					["horizontalSpacing"] = 1,
-					["verticalSpacing"] = 20,
-					["maxWraps"] = 2,
-					["size"] = 28,
-				},
-				["buffs"] = {
-					["horizontalSpacing"] = 1,
-					["verticalSpacing"] = 20,
-					["maxWraps"] = 2,
-					["size"] = 28,
-				},
-			},
-			["unitframe"] = {
-				["font"] = "Expressway",
-				["colors"] = {
-					["auraBarBuff"] = {
-						["b"] = 0.45,
-						["g"] = 0.83,
-						["r"] = 0.67,
-					},
-					["castClassColor"] = true,
-					["frameGlow"] = {
-						["targetGlow"] = {
-							["enable"] = false,
+						["castbar"] = {
+							["castTimeFormat"] = "CURRENTMAX",
 						},
 					},
+				},
+			},
+			["chat"] = {
+				["timeStampLocalTime"] = false,
+				["emotionIcons"] = false,
+				["panelHeight"] = 200,
+				["throttleInterval"] = 0,
+				["panelWidth"] = 472,
+			},
+			["unitframe"] = {
+				["smoothbars"] = true,
+				["colors"] = {
 					["powerPrediction"] = {
 						["color"] = {
 							["g"] = 0,
@@ -438,11 +429,22 @@ ElvDB = {
 							["b"] = 0.074509803921569,
 						},
 					},
+					["castClassColor"] = true,
+					["auraBarBuff"] = {
+						["b"] = 0.45,
+						["g"] = 0.83,
+						["r"] = 0.67,
+					},
+					["frameGlow"] = {
+						["targetGlow"] = {
+							["enable"] = false,
+						},
+					},
 					["colorhealthbyvalue"] = false,
 					["healthclass"] = true,
 				},
 				["fontOutline"] = "OUTLINE",
-				["smoothbars"] = true,
+				["font"] = "Expressway",
 				["units"] = {
 					["tank"] = {
 						["threatStyle"] = "NONE",
@@ -512,7 +514,9 @@ ElvDB = {
 							["text_format"] = "",
 							["yOffset"] = 2,
 						},
-						["verticalSpacing"] = 5,
+						["buffs"] = {
+							["perrow"] = 3,
+						},
 						["healPrediction"] = {
 							["enable"] = true,
 						},
@@ -531,9 +535,7 @@ ElvDB = {
 						},
 						["groupBy"] = "GROUP",
 						["height"] = 60,
-						["buffs"] = {
-							["perrow"] = 3,
-						},
+						["verticalSpacing"] = 5,
 						["rdebuffs"] = {
 							["enable"] = false,
 							["font"] = "PT Sans Narrow",
@@ -563,22 +565,22 @@ ElvDB = {
 							["enable"] = true,
 							["fullOverlay"] = true,
 						},
-						["power"] = {
-							["attachTextTo"] = "InfoPanel",
+						["castbar"] = {
+							["height"] = 20,
+							["insideInfoPanel"] = false,
 						},
 						["disableMouseoverGlow"] = true,
+						["health"] = {
+							["attachTextTo"] = "InfoPanel",
+						},
 						["name"] = {
 							["attachTextTo"] = "InfoPanel",
 							["text_format"] = "[level]-[namecolor][name]",
 						},
-						["health"] = {
-							["attachTextTo"] = "InfoPanel",
-						},
 						["height"] = 65,
 						["orientation"] = "LEFT",
-						["castbar"] = {
-							["height"] = 20,
-							["insideInfoPanel"] = false,
+						["power"] = {
+							["attachTextTo"] = "InfoPanel",
 						},
 						["aurabar"] = {
 							["enable"] = false,
@@ -611,16 +613,16 @@ ElvDB = {
 							["enable"] = true,
 							["fullOverlay"] = true,
 						},
-						["castbar"] = {
-							["height"] = 20,
-							["format"] = "CURRENTMAX",
-							["insideInfoPanel"] = false,
-						},
-						["disableMouseoverGlow"] = true,
 						["power"] = {
 							["attachTextTo"] = "Power",
 							["xOffset"] = 2,
 							["position"] = "LEFT",
+						},
+						["disableMouseoverGlow"] = true,
+						["castbar"] = {
+							["height"] = 20,
+							["format"] = "CURRENTMAX",
+							["insideInfoPanel"] = false,
 						},
 						["name"] = {
 							["attachTextTo"] = "InfoPanel",

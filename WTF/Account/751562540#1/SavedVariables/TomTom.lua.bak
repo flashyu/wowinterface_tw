@@ -37,29 +37,6 @@ TomTomWaypointsM = {
 		["豬圈一 - 伊弗斯"] = {
 		},
 		["牧原股份 - 伊弗斯"] = {
-			[1944] = {
-				["1944:564547677.26161:379706601.46699:郵箱"] = {
-					1944, -- [1]
-					0.5645476772616137, -- [2]
-					0.3797066014669926, -- [3]
-					["arrivaldistance"] = 15,
-					["callbacks"] = {
-						["distance"] = {
-						},
-						["minimap"] = {
-						},
-						["world"] = {
-						},
-					},
-					["persistent"] = true,
-					["minimap"] = true,
-					["cleardistance"] = 10,
-					["title"] = "郵箱",
-					["from"] = "?",
-					["crazy"] = true,
-					["world"] = true,
-				},
-			},
 		},
 	},
 }

@@ -210,14 +210,14 @@ AutoBarDB = {
 					["defaultButtonIndex"] = 3,
 				},
 				["AutoBarButtonPickLock"] = {
-					["arrangeOnUse"] = true,
-					["buttonClass"] = "AutoBarButtonPickLock",
-					["square_popups"] = true,
-					["barKey"] = "AutoBarClassBarRogue",
 					["enabled"] = true,
 					["targeted"] = "Lockpicking",
 					["buttonKey"] = "AutoBarButtonPickLock",
 					["defaultButtonIndex"] = "*",
+					["arrangeOnUse"] = true,
+					["buttonClass"] = "AutoBarButtonPickLock",
+					["square_popups"] = true,
+					["barKey"] = "AutoBarClassBarRogue",
 				},
 				["AutoBarButtonInterrupt"] = {
 					["barKey"] = "AutoBarClassBarRogue",

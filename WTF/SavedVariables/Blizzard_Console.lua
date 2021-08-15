@@ -23,73 +23,685 @@ Blizzard_Console_SavedVars = {
 			0, -- [2]
 		}, -- [5]
 		{
-			"Proficiency in item class 2 set to 0x00000010", -- [1]
+			"Proficiency in item class 2 set to 0x00008000", -- [1]
 			0, -- [2]
 		}, -- [6]
 		{
-			"Proficiency in item class 2 set to 0x00000410", -- [1]
+			"Proficiency in item class 2 set to 0x00018000", -- [1]
 			0, -- [2]
 		}, -- [7]
 		{
-			"Proficiency in item class 2 set to 0x00000430", -- [1]
+			"Proficiency in item class 4 set to 0x00000001", -- [1]
 			0, -- [2]
 		}, -- [8]
 		{
-			"Proficiency in item class 2 set to 0x00008430", -- [1]
+			"Proficiency in item class 2 set to 0x0001c000", -- [1]
 			0, -- [2]
 		}, -- [9]
 		{
-			"Proficiency in item class 4 set to 0x00000100", -- [1]
+			"Proficiency in item class 4 set to 0x00000005", -- [1]
 			0, -- [2]
 		}, -- [10]
 		{
-			"Proficiency in item class 4 set to 0x00000101", -- [1]
+			"Proficiency in item class 4 set to 0x00000007", -- [1]
 			0, -- [2]
 		}, -- [11]
 		{
-			"Proficiency in item class 2 set to 0x0000c430", -- [1]
+			"Proficiency in item class 2 set to 0x0001c000", -- [1]
 			0, -- [2]
 		}, -- [12]
 		{
-			"Proficiency in item class 4 set to 0x00000105", -- [1]
+			"Proficiency in item class 4 set to 0x00000007", -- [1]
 			0, -- [2]
 		}, -- [13]
 		{
-			"Proficiency in item class 4 set to 0x00000107", -- [1]
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
 			0, -- [2]
 		}, -- [14]
 		{
-			"Proficiency in item class 2 set to 0x0000e430", -- [1]
+			"Time set to 8/16/2021 (Mon) 1:07", -- [1]
 			0, -- [2]
 		}, -- [15]
 		{
-			"Proficiency in item class 2 set to 0x0000e430", -- [1]
+			"Gamespeed set from 0.017 to 0.017", -- [1]
 			0, -- [2]
 		}, -- [16]
 		{
-			"Proficiency in item class 4 set to 0x00000107", -- [1]
+			"Value out of range (1.000000 - 4.000000)\n", -- [1]
 			0, -- [2]
 		}, -- [17]
 		{
-			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
 			0, -- [2]
 		}, -- [18]
 		{
-			"Time set to 8/14/2021 (Sat) 2:41", -- [1]
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
 			0, -- [2]
 		}, -- [19]
 		{
-			"Gamespeed set from 0.017 to 0.017", -- [1]
+			"Attempted to register existing command: ShowObjUsage\n", -- [1]
 			0, -- [2]
 		}, -- [20]
 		{
-			"Value out of range (1.000000 - 4.000000)\n", -- [1]
+			"Attempted to register existing command: SetDifficulty\n", -- [1]
 			0, -- [2]
 		}, -- [21]
 		{
-			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			"Failed to set SpellClutter callback on graphicsQuality CVar - using default of 30.0", -- [1]
 			0, -- [2]
 		}, -- [22]
+		{
+			"Failed to set SpellClutter callback on RAIDgraphicsQuality CVar - using default of 30.0", -- [1]
+			0, -- [2]
+		}, -- [23]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [24]
+		{
+			"Proficiency in item class 2 set to 0x00000010", -- [1]
+			0, -- [2]
+		}, -- [25]
+		{
+			"Proficiency in item class 2 set to 0x00000410", -- [1]
+			0, -- [2]
+		}, -- [26]
+		{
+			"Proficiency in item class 2 set to 0x00000430", -- [1]
+			0, -- [2]
+		}, -- [27]
+		{
+			"Proficiency in item class 2 set to 0x00008430", -- [1]
+			0, -- [2]
+		}, -- [28]
+		{
+			"Proficiency in item class 4 set to 0x00000100", -- [1]
+			0, -- [2]
+		}, -- [29]
+		{
+			"Proficiency in item class 4 set to 0x00000101", -- [1]
+			0, -- [2]
+		}, -- [30]
+		{
+			"Proficiency in item class 2 set to 0x0000c430", -- [1]
+			0, -- [2]
+		}, -- [31]
+		{
+			"Proficiency in item class 4 set to 0x00000105", -- [1]
+			0, -- [2]
+		}, -- [32]
+		{
+			"Proficiency in item class 4 set to 0x00000107", -- [1]
+			0, -- [2]
+		}, -- [33]
+		{
+			"Proficiency in item class 2 set to 0x0000e430", -- [1]
+			0, -- [2]
+		}, -- [34]
+		{
+			"Proficiency in item class 2 set to 0x0000e430", -- [1]
+			0, -- [2]
+		}, -- [35]
+		{
+			"Proficiency in item class 4 set to 0x00000107", -- [1]
+			0, -- [2]
+		}, -- [36]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [37]
+		{
+			"Time set to 8/16/2021 (Mon) 1:11", -- [1]
+			0, -- [2]
+		}, -- [38]
+		{
+			"Gamespeed set from 0.017 to 0.017", -- [1]
+			0, -- [2]
+		}, -- [39]
+		{
+			"Value out of range (1.000000 - 4.000000)\n", -- [1]
+			0, -- [2]
+		}, -- [40]
+		{
+			"Skill 197 increased from 175 to 176", -- [1]
+			0, -- [2]
+		}, -- [41]
+		{
+			"Skill 197 increased from 176 to 177", -- [1]
+			0, -- [2]
+		}, -- [42]
+		{
+			"Skill 197 increased from 177 to 178", -- [1]
+			0, -- [2]
+		}, -- [43]
+		{
+			"Skill 197 increased from 178 to 179", -- [1]
+			0, -- [2]
+		}, -- [44]
+		{
+			"Skill 197 increased from 179 to 180", -- [1]
+			0, -- [2]
+		}, -- [45]
+		{
+			"Skill 197 increased from 180 to 181", -- [1]
+			0, -- [2]
+		}, -- [46]
+		{
+			"Skill 197 increased from 181 to 182", -- [1]
+			0, -- [2]
+		}, -- [47]
+		{
+			"Skill 197 increased from 182 to 183", -- [1]
+			0, -- [2]
+		}, -- [48]
+		{
+			"Skill 197 increased from 183 to 184", -- [1]
+			0, -- [2]
+		}, -- [49]
+		{
+			"Skill 197 increased from 184 to 185", -- [1]
+			0, -- [2]
+		}, -- [50]
+		{
+			"Skill 197 increased from 185 to 186", -- [1]
+			0, -- [2]
+		}, -- [51]
+		{
+			"Skill 197 increased from 186 to 187", -- [1]
+			0, -- [2]
+		}, -- [52]
+		{
+			"Skill 197 increased from 187 to 188", -- [1]
+			0, -- [2]
+		}, -- [53]
+		{
+			"Skill 197 increased from 188 to 189", -- [1]
+			0, -- [2]
+		}, -- [54]
+		{
+			"Skill 197 increased from 189 to 190", -- [1]
+			0, -- [2]
+		}, -- [55]
+		{
+			"Skill 197 increased from 190 to 191", -- [1]
+			0, -- [2]
+		}, -- [56]
+		{
+			"Skill 197 increased from 191 to 192", -- [1]
+			0, -- [2]
+		}, -- [57]
+		{
+			"Skill 197 increased from 192 to 193", -- [1]
+			0, -- [2]
+		}, -- [58]
+		{
+			"Skill 197 increased from 193 to 194", -- [1]
+			0, -- [2]
+		}, -- [59]
+		{
+			"Skill 197 increased from 194 to 195", -- [1]
+			0, -- [2]
+		}, -- [60]
+		{
+			"Skill 197 increased from 195 to 196", -- [1]
+			0, -- [2]
+		}, -- [61]
+		{
+			"Skill 197 increased from 196 to 197", -- [1]
+			0, -- [2]
+		}, -- [62]
+		{
+			"Skill 197 increased from 197 to 198", -- [1]
+			0, -- [2]
+		}, -- [63]
+		{
+			"Skill 197 increased from 198 to 199", -- [1]
+			0, -- [2]
+		}, -- [64]
+		{
+			"Skill 197 increased from 199 to 200", -- [1]
+			0, -- [2]
+		}, -- [65]
+		{
+			"Skill 197 increased from 200 to 201", -- [1]
+			0, -- [2]
+		}, -- [66]
+		{
+			"Skill 197 increased from 201 to 202", -- [1]
+			0, -- [2]
+		}, -- [67]
+		{
+			"Skill 197 increased from 202 to 203", -- [1]
+			0, -- [2]
+		}, -- [68]
+		{
+			"Skill 197 increased from 203 to 204", -- [1]
+			0, -- [2]
+		}, -- [69]
+		{
+			"Skill 197 increased from 204 to 205", -- [1]
+			0, -- [2]
+		}, -- [70]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [71]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [72]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [73]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [74]
+		{
+			"Skill 197 increased from 205 to 206", -- [1]
+			0, -- [2]
+		}, -- [75]
+		{
+			"Skill 197 increased from 206 to 207", -- [1]
+			0, -- [2]
+		}, -- [76]
+		{
+			"Skill 197 increased from 207 to 208", -- [1]
+			0, -- [2]
+		}, -- [77]
+		{
+			"Skill 197 increased from 208 to 209", -- [1]
+			0, -- [2]
+		}, -- [78]
+		{
+			"Skill 197 increased from 209 to 210", -- [1]
+			0, -- [2]
+		}, -- [79]
+		{
+			"Skill 197 increased from 210 to 211", -- [1]
+			0, -- [2]
+		}, -- [80]
+		{
+			"Skill 197 increased from 211 to 212", -- [1]
+			0, -- [2]
+		}, -- [81]
+		{
+			"Skill 197 increased from 212 to 213", -- [1]
+			0, -- [2]
+		}, -- [82]
+		{
+			"Skill 197 increased from 213 to 214", -- [1]
+			0, -- [2]
+		}, -- [83]
+		{
+			"Skill 197 increased from 214 to 215", -- [1]
+			0, -- [2]
+		}, -- [84]
+		{
+			"Skill 197 increased from 215 to 216", -- [1]
+			0, -- [2]
+		}, -- [85]
+		{
+			"Skill 197 increased from 216 to 217", -- [1]
+			0, -- [2]
+		}, -- [86]
+		{
+			"Skill 197 increased from 217 to 218", -- [1]
+			0, -- [2]
+		}, -- [87]
+		{
+			"Skill 197 increased from 218 to 219", -- [1]
+			0, -- [2]
+		}, -- [88]
+		{
+			"Skill 197 increased from 219 to 220", -- [1]
+			0, -- [2]
+		}, -- [89]
+		{
+			"Skill 197 increased from 220 to 221", -- [1]
+			0, -- [2]
+		}, -- [90]
+		{
+			"Skill 197 increased from 221 to 222", -- [1]
+			0, -- [2]
+		}, -- [91]
+		{
+			"Skill 197 increased from 222 to 223", -- [1]
+			0, -- [2]
+		}, -- [92]
+		{
+			"Skill 197 increased from 223 to 224", -- [1]
+			0, -- [2]
+		}, -- [93]
+		{
+			"Skill 197 increased from 224 to 225", -- [1]
+			0, -- [2]
+		}, -- [94]
+		{
+			"Skill 197 increased from 225 to 226", -- [1]
+			0, -- [2]
+		}, -- [95]
+		{
+			"Skill 197 increased from 226 to 227", -- [1]
+			0, -- [2]
+		}, -- [96]
+		{
+			"Skill 197 increased from 227 to 228", -- [1]
+			0, -- [2]
+		}, -- [97]
+		{
+			"Skill 197 increased from 228 to 229", -- [1]
+			0, -- [2]
+		}, -- [98]
+		{
+			"Skill 197 increased from 229 to 230", -- [1]
+			0, -- [2]
+		}, -- [99]
+		{
+			"Skill 197 increased from 230 to 231", -- [1]
+			0, -- [2]
+		}, -- [100]
+		{
+			"Skill 197 increased from 231 to 232", -- [1]
+			0, -- [2]
+		}, -- [101]
+		{
+			"Skill 197 increased from 232 to 233", -- [1]
+			0, -- [2]
+		}, -- [102]
+		{
+			"Skill 197 increased from 233 to 234", -- [1]
+			0, -- [2]
+		}, -- [103]
+		{
+			"Skill 197 increased from 234 to 235", -- [1]
+			0, -- [2]
+		}, -- [104]
+		{
+			"Skill 197 increased from 235 to 236", -- [1]
+			0, -- [2]
+		}, -- [105]
+		{
+			"Skill 197 increased from 236 to 237", -- [1]
+			0, -- [2]
+		}, -- [106]
+		{
+			"Skill 197 increased from 237 to 238", -- [1]
+			0, -- [2]
+		}, -- [107]
+		{
+			"Skill 197 increased from 238 to 239", -- [1]
+			0, -- [2]
+		}, -- [108]
+		{
+			"Skill 197 increased from 239 to 240", -- [1]
+			0, -- [2]
+		}, -- [109]
+		{
+			"Skill 197 increased from 240 to 241", -- [1]
+			0, -- [2]
+		}, -- [110]
+		{
+			"Skill 197 increased from 241 to 242", -- [1]
+			0, -- [2]
+		}, -- [111]
+		{
+			"Skill 197 increased from 242 to 243", -- [1]
+			0, -- [2]
+		}, -- [112]
+		{
+			"Skill 197 increased from 243 to 244", -- [1]
+			0, -- [2]
+		}, -- [113]
+		{
+			"Skill 197 increased from 244 to 245", -- [1]
+			0, -- [2]
+		}, -- [114]
+		{
+			"Skill 197 increased from 245 to 246", -- [1]
+			0, -- [2]
+		}, -- [115]
+		{
+			"Skill 197 increased from 246 to 247", -- [1]
+			0, -- [2]
+		}, -- [116]
+		{
+			"Skill 197 increased from 247 to 248", -- [1]
+			0, -- [2]
+		}, -- [117]
+		{
+			"Skill 197 increased from 248 to 249", -- [1]
+			0, -- [2]
+		}, -- [118]
+		{
+			"Skill 197 increased from 249 to 250", -- [1]
+			0, -- [2]
+		}, -- [119]
+		{
+			"Skill 197 increased from 250 to 251", -- [1]
+			0, -- [2]
+		}, -- [120]
+		{
+			"Skill 197 increased from 251 to 252", -- [1]
+			0, -- [2]
+		}, -- [121]
+		{
+			"Skill 197 increased from 252 to 253", -- [1]
+			0, -- [2]
+		}, -- [122]
+		{
+			"Skill 197 increased from 253 to 254", -- [1]
+			0, -- [2]
+		}, -- [123]
+		{
+			"Skill 197 increased from 254 to 255", -- [1]
+			0, -- [2]
+		}, -- [124]
+		{
+			"Skill 197 increased from 255 to 256", -- [1]
+			0, -- [2]
+		}, -- [125]
+		{
+			"Skill 197 increased from 256 to 257", -- [1]
+			0, -- [2]
+		}, -- [126]
+		{
+			"Skill 197 increased from 257 to 258", -- [1]
+			0, -- [2]
+		}, -- [127]
+		{
+			"Skill 197 increased from 258 to 259", -- [1]
+			0, -- [2]
+		}, -- [128]
+		{
+			"Skill 197 increased from 259 to 260", -- [1]
+			0, -- [2]
+		}, -- [129]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [130]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [131]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [132]
+		{
+			"Skill 197 increased from 260 to 261", -- [1]
+			0, -- [2]
+		}, -- [133]
+		{
+			"Skill 197 increased from 261 to 262", -- [1]
+			0, -- [2]
+		}, -- [134]
+		{
+			"Skill 197 increased from 262 to 263", -- [1]
+			0, -- [2]
+		}, -- [135]
+		{
+			"Skill 197 increased from 263 to 264", -- [1]
+			0, -- [2]
+		}, -- [136]
+		{
+			"Skill 197 increased from 264 to 265", -- [1]
+			0, -- [2]
+		}, -- [137]
+		{
+			"Skill 197 increased from 265 to 266", -- [1]
+			0, -- [2]
+		}, -- [138]
+		{
+			"Skill 197 increased from 266 to 267", -- [1]
+			0, -- [2]
+		}, -- [139]
+		{
+			"Skill 197 increased from 267 to 268", -- [1]
+			0, -- [2]
+		}, -- [140]
+		{
+			"Skill 197 increased from 268 to 269", -- [1]
+			0, -- [2]
+		}, -- [141]
+		{
+			"Skill 197 increased from 269 to 270", -- [1]
+			0, -- [2]
+		}, -- [142]
+		{
+			"Skill 197 increased from 270 to 271", -- [1]
+			0, -- [2]
+		}, -- [143]
+		{
+			"Skill 197 increased from 271 to 272", -- [1]
+			0, -- [2]
+		}, -- [144]
+		{
+			"Skill 197 increased from 272 to 273", -- [1]
+			0, -- [2]
+		}, -- [145]
+		{
+			"Skill 197 increased from 273 to 274", -- [1]
+			0, -- [2]
+		}, -- [146]
+		{
+			"Skill 197 increased from 274 to 275", -- [1]
+			0, -- [2]
+		}, -- [147]
+		{
+			"Skill 197 increased from 275 to 276", -- [1]
+			0, -- [2]
+		}, -- [148]
+		{
+			"Skill 197 increased from 276 to 277", -- [1]
+			0, -- [2]
+		}, -- [149]
+		{
+			"Skill 197 increased from 277 to 278", -- [1]
+			0, -- [2]
+		}, -- [150]
+		{
+			"Skill 197 increased from 278 to 279", -- [1]
+			0, -- [2]
+		}, -- [151]
+		{
+			"Skill 197 increased from 279 to 280", -- [1]
+			0, -- [2]
+		}, -- [152]
+		{
+			"Skill 197 increased from 280 to 281", -- [1]
+			0, -- [2]
+		}, -- [153]
+		{
+			"Skill 197 increased from 281 to 282", -- [1]
+			0, -- [2]
+		}, -- [154]
+		{
+			"Skill 197 increased from 282 to 283", -- [1]
+			0, -- [2]
+		}, -- [155]
+		{
+			"Skill 197 increased from 283 to 284", -- [1]
+			0, -- [2]
+		}, -- [156]
+		{
+			"Skill 197 increased from 284 to 285", -- [1]
+			0, -- [2]
+		}, -- [157]
+		{
+			"Skill 197 increased from 285 to 286", -- [1]
+			0, -- [2]
+		}, -- [158]
+		{
+			"Skill 197 increased from 286 to 287", -- [1]
+			0, -- [2]
+		}, -- [159]
+		{
+			"Skill 197 increased from 287 to 288", -- [1]
+			0, -- [2]
+		}, -- [160]
+		{
+			"Skill 197 increased from 288 to 289", -- [1]
+			0, -- [2]
+		}, -- [161]
+		{
+			"Skill 197 increased from 289 to 290", -- [1]
+			0, -- [2]
+		}, -- [162]
+		{
+			"Skill 197 increased from 290 to 291", -- [1]
+			0, -- [2]
+		}, -- [163]
+		{
+			"Skill 197 increased from 291 to 292", -- [1]
+			0, -- [2]
+		}, -- [164]
+		{
+			"Skill 197 increased from 292 to 293", -- [1]
+			0, -- [2]
+		}, -- [165]
+		{
+			"Skill 197 increased from 293 to 294", -- [1]
+			0, -- [2]
+		}, -- [166]
+		{
+			"Skill 197 increased from 294 to 295", -- [1]
+			0, -- [2]
+		}, -- [167]
+		{
+			"Skill 197 increased from 295 to 296", -- [1]
+			0, -- [2]
+		}, -- [168]
+		{
+			"Skill 197 increased from 296 to 297", -- [1]
+			0, -- [2]
+		}, -- [169]
+		{
+			"Skill 197 increased from 297 to 298", -- [1]
+			0, -- [2]
+		}, -- [170]
+		{
+			"Skill 197 increased from 298 to 299", -- [1]
+			0, -- [2]
+		}, -- [171]
+		{
+			"Skill 197 increased from 299 to 300", -- [1]
+			0, -- [2]
+		}, -- [172]
+		{
+			"World transfer pending...", -- [1]
+			0, -- [2]
+		}, -- [173]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [174]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [175]
 	},
 	["height"] = 300,
 	["fontHeight"] = 14,
