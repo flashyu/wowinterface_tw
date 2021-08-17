@@ -1,15 +1,17 @@
 
 MBB_Exclude = {
+	"LibDBIcon10_ItemRack", -- [1]
+	"WIM3MinimapButton", -- [2]
 }
 MBB_Options = {
 	["CollapseTimeout"] = 1,
 	["AltExpandDirection"] = 4,
 	["AttachToMinimap"] = 1,
-	["MaxButtonsPerLine"] = 0,
+	["ExpandDirection"] = 1,
 	["DetachedButtonPos"] = "TOPLEFT",
 	["ButtonPos"] = {
-		-9.277506828308105, -- [1]
-		-106.7929763793945, -- [2]
+		-26.84424591064453, -- [1]
+		-68.63438415527344, -- [2]
 	},
-	["ExpandDirection"] = 1,
+	["MaxButtonsPerLine"] = 0,
 }
