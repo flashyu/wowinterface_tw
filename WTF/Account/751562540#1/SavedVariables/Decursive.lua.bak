@@ -29,14 +29,14 @@ DecursiveDB = {
 		},
 	},
 	["global"] = {
-		["LastVersionAnnounce"] = 1629215671,
+		["LastVersionAnnounce"] = 1629310405,
 	},
 	["profiles"] = {
 		["Default"] = {
 			["DebuffsFrameContainer_y"] = 503.8222934261939,
-			["DebuffsFrameContainer_x"] = 944.7114632590528,
 			["MainBarX"] = 682.6667034912098,
 			["MainBarY"] = -95.99999785423279,
+			["DebuffsFrameContainer_x"] = 944.7114632590528,
 		},
 	},
 }

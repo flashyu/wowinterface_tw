@@ -7,8 +7,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "未知",
 			["InstanceName"] = "Gruul's Lair",
 			["Date"] = "2021-08-08",
-			["Class"] = "DRUID",
 			["FirstClass"] = "UNKNOWN",
+			["Class"] = "DRUID",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4491-565-17222-18831-00000FCA14",
@@ -43,8 +43,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "貓咪的尾巴",
 			["InstanceName"] = "Magtheridon's Lair",
 			["Date"] = "2021-08-08",
-			["Class"] = "DRUID",
 			["FirstClass"] = "PALADIN",
+			["Class"] = "DRUID",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4491-544-18233-17257-00000FE7A9",
@@ -368,10 +368,46 @@ LootMonitorDB = {
 				}, -- [25]
 			},
 			["Date"] = "2021-08-10",
-			["Class"] = "DRUID",
 			["FirstClass"] = "PRIEST",
+			["Class"] = "DRUID",
 			["InstanceName"] = "Karazhan",
 		}, -- [3]
+		{
+			["InstanceID"] = 565,
+			["FirstPlayer"] = "小小煌",
+			["InstanceName"] = "Gruul's Lair",
+			["Class"] = "DRUID",
+			["Date"] = "2021-08-18",
+			["FirstClass"] = "WARLOCK",
+			["LootTable"] = {
+				{
+					["GUID"] = "Creature-0-5580-565-820-18831-00001D235D",
+					["Time"] = "23:49:42",
+					["Class"] = "WARRIOR",
+					["Date"] = "2021-08-18",
+					["Looter"] = "風雅華麗",
+					["Name"] = "大君王莫卡爾",
+					["Loots"] = {
+						"|cffa335ee|Hitem:28797::::::::70::::::::|h[野蠻巨魔僧侶披風]|h|r", -- [1]
+						"|cffa335ee|Hitem:29763::::::::70::::::::|h[逝往勇士肩鎧]|h|r", -- [2]
+					},
+				}, -- [1]
+				{
+					["GUID"] = "Creature-0-5580-565-820-19044-00001D235D",
+					["Time"] = "00:18:12",
+					["Class"] = "WARRIOR",
+					["Date"] = "2021-08-19",
+					["Looter"] = "風雅華麗",
+					["Name"] = "弒龍者戈魯爾",
+					["Loots"] = {
+						"|cffa335ee|Hitem:28810::::::::70::::::::|h[風剪長靴]|h|r", -- [1]
+						"|cffa335ee|Hitem:29767::::::::70::::::::|h[逝往防衛者護腿]|h|r", -- [2]
+						"|cffa335ee|Hitem:28826::::::::70::::::::|h[否定手裏劍]|h|r", -- [3]
+					},
+				}, -- [2]
+			},
+			["Player"] = "牧原股份",
+		}, -- [4]
 	},
 	["Config"] = {
 		["ShowMinimapIcon"] = true,

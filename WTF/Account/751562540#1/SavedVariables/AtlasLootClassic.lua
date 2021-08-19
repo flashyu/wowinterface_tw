@@ -19,9 +19,9 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"TheBlackMorass", -- [2]
-					4, -- [3]
-					6, -- [4]
+					"TheSlavePens", -- [2]
+					nil, -- [3]
+					1, -- [4]
 					0, -- [5]
 				},
 			},

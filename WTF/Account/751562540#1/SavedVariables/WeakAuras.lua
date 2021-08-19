@@ -10,6 +10,14 @@ WeakAurasSaved = {
 	},
 	["lastUpgrade"] = 1626874520,
 	["dbVersion"] = 45,
+	["registered"] = {
+	},
+	["frame"] = {
+		["xOffset"] = -1183.888671875,
+		["width"] = 830.0001831054688,
+		["height"] = 665.0001220703125,
+		["yOffset"] = -151.9443359375,
+	},
 	["displays"] = {
 		["迅愈ok"] = {
 			["iconSource"] = -1,
@@ -91,16 +99,16 @@ WeakAurasSaved = {
 			["zoom"] = 0,
 			["authorOptions"] = {
 			},
-			["frameStrata"] = 1,
-			["id"] = "迅愈ok",
-			["cooldownTextDisabled"] = false,
-			["alpha"] = 1,
 			["anchorFrameType"] = "SCREEN",
+			["id"] = "迅愈ok",
 			["config"] = {
 			},
+			["frameStrata"] = 1,
+			["width"] = 64,
+			["alpha"] = 1,
 			["uid"] = "2FkzxVxkJcU",
 			["inverse"] = false,
-			["width"] = 64,
+			["cooldownTextDisabled"] = false,
 			["conditions"] = {
 			},
 			["information"] = {
@@ -242,38 +250,38 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["gridType"] = "RD",
+			["fullCircle"] = true,
 			["animate"] = false,
-			["radius"] = 200,
+			["xOffset"] = -202.2230834960938,
 			["scale"] = 1,
-			["selfPoint"] = "TOP",
+			["radius"] = 200,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
+			["gridType"] = "RD",
 			["rowSpace"] = 1,
-			["fullCircle"] = true,
 			["constantFactor"] = "RADIUS",
 			["arcLength"] = 360,
 			["borderOffset"] = 4,
-			["rotation"] = 0,
 			["borderInset"] = 1,
+			["rotation"] = 0,
 			["id"] = "lan",
-			["limit"] = 5,
 			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["gridWidth"] = 5,
-			["uid"] = "I7Y0mTf5KSP",
-			["useLimit"] = false,
+			["anchorFrameType"] = "SCREEN",
+			["limit"] = 5,
 			["config"] = {
 			},
+			["uid"] = "I7Y0mTf5KSP",
+			["useLimit"] = false,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["xOffset"] = -202.2230834960938,
+			["selfPoint"] = "TOP",
 		},
 		["cd"] = {
 			["grow"] = "DOWN",
@@ -351,19 +359,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["useLimit"] = false,
+			["rotation"] = 0,
 			["animate"] = false,
-			["arcLength"] = 360,
+			["internalVersion"] = 45,
 			["scale"] = 1,
-			["authorOptions"] = {
-			},
+			["arcLength"] = 360,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
+			["useLimit"] = false,
 			["fullCircle"] = true,
-			["rotation"] = 0,
 			["constantFactor"] = "RADIUS",
 			["animation"] = {
 				["start"] = {
@@ -386,22 +393,23 @@ WeakAurasSaved = {
 				},
 			},
 			["borderOffset"] = 4,
-			["limit"] = 5,
 			["borderInset"] = 1,
+			["limit"] = 5,
 			["id"] = "cd",
-			["gridType"] = "RD",
 			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["gridWidth"] = 5,
+			["anchorFrameType"] = "SCREEN",
+			["gridType"] = "RD",
+			["uid"] = "6fKxSS1HyT)",
 			["config"] = {
 			},
 			["rowSpace"] = 1,
-			["uid"] = "6fKxSS1HyT)",
 			["conditions"] = {
 			},
 			["information"] = {
 			},
-			["internalVersion"] = 45,
+			["authorOptions"] = {
+			},
 		},
 		["迅捷"] = {
 			["sparkWidth"] = 10,
@@ -490,13 +498,13 @@ WeakAurasSaved = {
 					["text_shadowYOffset"] = -1,
 					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
+					["text_fontType"] = "None",
 					["text_anchorPoint"] = "INNER_LEFT",
 					["text_text_format_p_time_format"] = 0,
 					["text_text_format_p_format"] = "timed",
 					["text_fontSize"] = 12,
 					["anchorXOffset"] = 0,
-					["text_fontType"] = "None",
+					["text_visible"] = true,
 				}, -- [2]
 				{
 					["text_shadowXOffset"] = 1,
@@ -579,16 +587,16 @@ WeakAurasSaved = {
 			},
 			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["spark"] = false,
-			["alpha"] = 1,
-			["id"] = "迅捷",
-			["anchorFrameType"] = "SCREEN",
 			["frameStrata"] = 1,
-			["width"] = 95,
 			["sparkHidden"] = "NEVER",
-			["uid"] = ")a1EtHFChix",
-			["inverse"] = false,
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["width"] = 95,
+			["id"] = "迅捷",
 			["config"] = {
 			},
+			["inverse"] = false,
+			["uid"] = ")a1EtHFChix",
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 				{
@@ -612,121 +620,6 @@ WeakAurasSaved = {
 					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-		},
-		["迅捷ok"] = {
-			["iconSource"] = -1,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["cooldownSwipe"] = true,
-			["cooldownEdge"] = false,
-			["icon"] = true,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "spell",
-						["spellName"] = 17116,
-						["subeventSuffix"] = "_CAST_START",
-						["genericShowOn"] = "showOnCooldown",
-						["duration"] = "1.5",
-						["event"] = "Cooldown Ready (Spell)",
-						["subeventPrefix"] = "SPELL",
-						["realSpellName"] = "自然迅捷",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["unit"] = "player",
-						["use_genericShowOn"] = true,
-						["names"] = {
-						},
-						["use_track"] = true,
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-				["activeTriggerMode"] = -10,
-			},
-			["internalVersion"] = 45,
-			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
-			["desaturate"] = false,
-			["subRegions"] = {
-			},
-			["height"] = 64,
-			["load"] = {
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["regionType"] = "icon",
-			["parent"] = "cd",
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["cooldown"] = false,
-			["xOffset"] = 0,
-			["zoom"] = 0,
-			["authorOptions"] = {
-			},
-			["frameStrata"] = 1,
-			["id"] = "迅捷ok",
-			["cooldownTextDisabled"] = false,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["config"] = {
-			},
-			["uid"] = "OqCWQzZvN6m",
-			["inverse"] = false,
-			["width"] = 64,
-			["conditions"] = {
-			},
-			["information"] = {
-			},
-			["animation"] = {
-				["start"] = {
-					["type"] = "preset",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["preset"] = "grow",
-					["easeStrength"] = 3,
 				},
 				["main"] = {
 					["type"] = "none",
@@ -835,38 +728,153 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["gridType"] = "RD",
+			["fullCircle"] = true,
 			["animate"] = false,
-			["radius"] = 200,
+			["xOffset"] = 0,
 			["scale"] = 1,
-			["selfPoint"] = "TOP",
+			["radius"] = 200,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
+			["gridType"] = "RD",
 			["rowSpace"] = 1,
-			["fullCircle"] = true,
 			["constantFactor"] = "RADIUS",
 			["arcLength"] = 360,
 			["borderOffset"] = 4,
-			["rotation"] = 0,
 			["borderInset"] = 1,
+			["rotation"] = 0,
 			["id"] = "Details! Boss Mods Group",
-			["limit"] = 5,
 			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["gridWidth"] = 5,
-			["uid"] = "ZX3oWFkARRy",
-			["useLimit"] = false,
+			["anchorFrameType"] = "SCREEN",
+			["limit"] = 5,
 			["config"] = {
 			},
+			["uid"] = "ZX3oWFkARRy",
+			["useLimit"] = false,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
+			["selfPoint"] = "TOP",
+		},
+		["迅捷ok"] = {
+			["iconSource"] = -1,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["cooldownSwipe"] = true,
+			["cooldownEdge"] = false,
+			["icon"] = true,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "spell",
+						["spellName"] = 17116,
+						["subeventSuffix"] = "_CAST_START",
+						["genericShowOn"] = "showOnCooldown",
+						["duration"] = "1.5",
+						["event"] = "Cooldown Ready (Spell)",
+						["subeventPrefix"] = "SPELL",
+						["realSpellName"] = "自然迅捷",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["unit"] = "player",
+						["use_genericShowOn"] = true,
+						["names"] = {
+						},
+						["use_track"] = true,
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+				["activeTriggerMode"] = -10,
+			},
+			["internalVersion"] = 45,
+			["keepAspectRatio"] = false,
+			["selfPoint"] = "CENTER",
+			["desaturate"] = false,
+			["subRegions"] = {
+			},
+			["height"] = 64,
+			["load"] = {
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["regionType"] = "icon",
+			["parent"] = "cd",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["cooldown"] = false,
 			["xOffset"] = 0,
+			["zoom"] = 0,
+			["authorOptions"] = {
+			},
+			["anchorFrameType"] = "SCREEN",
+			["id"] = "迅捷ok",
+			["config"] = {
+			},
+			["frameStrata"] = 1,
+			["width"] = 64,
+			["alpha"] = 1,
+			["uid"] = "OqCWQzZvN6m",
+			["inverse"] = false,
+			["cooldownTextDisabled"] = false,
+			["conditions"] = {
+			},
+			["information"] = {
+			},
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "grow",
+					["easeStrength"] = 3,
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 		},
 		["迅愈"] = {
 			["sparkWidth"] = 10,
@@ -957,13 +965,13 @@ WeakAurasSaved = {
 					["text_shadowYOffset"] = -1,
 					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
+					["text_fontType"] = "None",
 					["text_anchorPoint"] = "INNER_LEFT",
 					["text_text_format_p_time_format"] = 0,
 					["text_text_format_p_format"] = "timed",
 					["text_fontSize"] = 10,
 					["anchorXOffset"] = 0,
-					["text_fontType"] = "None",
+					["text_visible"] = true,
 				}, -- [2]
 				{
 					["text_shadowXOffset"] = 1,
@@ -1046,16 +1054,16 @@ WeakAurasSaved = {
 			},
 			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["spark"] = false,
-			["alpha"] = 1,
-			["id"] = "迅愈",
-			["anchorFrameType"] = "SCREEN",
 			["frameStrata"] = 1,
-			["width"] = 95,
 			["sparkHidden"] = "NEVER",
-			["uid"] = "i8AXeqGJS3W",
-			["inverse"] = false,
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["width"] = 95,
+			["id"] = "迅愈",
 			["config"] = {
 			},
+			["inverse"] = false,
+			["uid"] = "i8AXeqGJS3W",
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 				{
@@ -1225,7 +1233,7 @@ WeakAurasSaved = {
 			},
 			["endAngle"] = 360,
 			["internalVersion"] = 45,
-			["advance"] = false,
+			["model_fileId"] = "122968",
 			["animation"] = {
 				["start"] = {
 					["easeStrength"] = 3,
@@ -1316,7 +1324,7 @@ WeakAurasSaved = {
 				},
 			},
 			["sparkOffsetX"] = 0,
-			["mirror"] = false,
+			["border"] = false,
 			["borderEdge"] = "None",
 			["borderColor"] = {
 				1, -- [1]
@@ -1332,7 +1340,7 @@ WeakAurasSaved = {
 			["model_path"] = "spells/arcanepower_state_chest.m2",
 			["sparkHeight"] = 30,
 			["model_z"] = 0,
-			["border"] = false,
+			["mirror"] = false,
 			["user_y"] = 0,
 			["model_st_rx"] = 270,
 			["borderOffset"] = 5,
@@ -1343,7 +1351,7 @@ WeakAurasSaved = {
 			["user_x"] = 0,
 			["desaturateBackground"] = false,
 			["inverse"] = false,
-			["model_fileId"] = "122968",
+			["advance"] = false,
 			["orientation"] = "HORIZONTAL",
 			["crop_x"] = 0.41,
 			["information"] = {
@@ -1355,14 +1363,6 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-	},
-	["registered"] = {
-	},
-	["frame"] = {
-		["xOffset"] = -1183.888671875,
-		["width"] = 830.0001831054688,
-		["height"] = 665.0001220703125,
-		["yOffset"] = -151.9443359375,
 	},
 	["editor_theme"] = "Monokai",
 }
