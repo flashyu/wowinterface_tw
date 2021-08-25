@@ -9,9 +9,30 @@ CodexConfig = {
 	["trackingMethod"] = 1,
 	["minimumDropChance"] = 2,
 	["showLowLevel"] = false,
-	["spawnMarkerSize"] = 15,
+	["_tom_waypoint"] = {
+		1955, -- [1]
+		0.54, -- [2]
+		0.448, -- [3]
+		["arrivaldistance"] = 15,
+		["callbacks"] = {
+			["distance"] = {
+			},
+			["world"] = {
+			},
+			["minimap"] = {
+			},
+		},
+		["persistent"] = true,
+		["minimap"] = true,
+		["cleardistance"] = 10,
+		["title"] = "阿达尔",
+		["from"] = "?",
+		["crazy"] = true,
+		["world"] = true,
+	},
 	["minimapButton"] = true,
 	["autoTurnin"] = false,
+	["spawnMarkerSize"] = 15,
 	["showFestival"] = false,
 	["alwaysShowId"] = false,
 	["nameplateIcon"] = false,

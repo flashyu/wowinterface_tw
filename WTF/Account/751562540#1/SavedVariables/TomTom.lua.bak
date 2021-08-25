@@ -37,37 +37,6 @@ TomTomWaypointsM = {
 		["豬圈一 - 伊弗斯"] = {
 		},
 		["牧原股份 - 伊弗斯"] = {
-			[1944] = {
-				["1944:713447432.76284:439364303.17848:惡魔搶奪者"] = {
-					1944, -- [1]
-					0.7134474327628362, -- [2]
-					0.4393643031784841, -- [3]
-					["arrivaldistance"] = 15,
-					["callbacks"] = {
-						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-					},
-					["persistent"] = true,
-					["minimap"] = true,
-					["cleardistance"] = 10,
-					["title"] = "惡魔搶奪者",
-					["from"] = "?",
-					["crazy"] = true,
-					["world"] = true,
-				},
-			},
 		},
 	},
 }
