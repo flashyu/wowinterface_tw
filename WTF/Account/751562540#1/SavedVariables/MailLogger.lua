@@ -2274,5 +2274,145 @@ MailLoggerDB = {
 			["ReceiveItems"] = {
 			},
 		}, -- [126]
+		{
+			["PlayerName"] = "牧原股份",
+			["TargetName"] = "小夏目",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "奧格瑪",
+			["Date"] = "2021-08-28",
+			["Time"] = "21:52:25",
+			["ReceiveItems"] = {
+			},
+		}, -- [127]
+		{
+			["TargetName"] = "小夏目",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-28",
+			["ReceiveMoney"] = 100000000,
+			["Time"] = "21:52:25",
+			["GiveMoney"] = 0,
+			["Location"] = "奧格瑪",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [128]
+		{
+			["TargetName"] = "特變電工",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-28",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 5000000,
+			["Location"] = "奧格瑪",
+			["Time"] = "23:46:01",
+			["Result"] = "sent",
+			["ReceiveItems"] = {
+			},
+		}, -- [129]
+		{
+			["TargetName"] = "Edvin",
+			["PlayerName"] = "牧原股份",
+			["ReceiveMoney"] = 0,
+			["Time"] = "00:19:22",
+			["GiveMoney"] = 0,
+			["Location"] = "破碎大廳",
+			["GiveItems"] = {
+			},
+			["Date"] = "2021-08-29",
+			["ReceiveItems"] = {
+			},
+		}, -- [130]
+		{
+			["TargetName"] = "特變電工",
+			["PlayerName"] = "牧原股份",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:37:08",
+			["GiveMoney"] = 0,
+			["Location"] = "暗影迷宮",
+			["GiveItems"] = {
+			},
+			["Date"] = "2021-08-29",
+			["ReceiveItems"] = {
+			},
+		}, -- [131]
+		{
+			["TargetName"] = "特變電工",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-29",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:37:08",
+			["GiveMoney"] = 0,
+			["Location"] = "暗影迷宮",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+				{
+					["Number"] = 1,
+					["ItemLink"] = "|cff0070dd|Hitem:27892::::::::70::::::::|h[煽動者披風]|h|r",
+					["Name"] = "煽動者披風",
+				}, -- [1]
+			},
+		}, -- [132]
+		{
+			["TargetName"] = "特變電工",
+			["PlayerName"] = "牧原股份",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:57:13",
+			["GiveMoney"] = 0,
+			["Location"] = "暗影迷宮",
+			["GiveItems"] = {
+			},
+			["Date"] = "2021-08-29",
+			["ReceiveItems"] = {
+			},
+		}, -- [133]
+		{
+			["TargetName"] = "特變電工",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-29",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:57:13",
+			["GiveMoney"] = 0,
+			["Location"] = "暗影迷宮",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [134]
+		{
+			["TargetName"] = "孟善",
+			["PlayerName"] = "牧原股份",
+			["ReceiveMoney"] = 0,
+			["Time"] = "02:23:48",
+			["GiveMoney"] = 0,
+			["Location"] = "幽暗城",
+			["GiveItems"] = {
+			},
+			["Date"] = "2021-08-29",
+			["ReceiveItems"] = {
+			},
+		}, -- [135]
+		{
+			["TargetName"] = "孟善",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-08-29",
+			["ReceiveMoney"] = 0,
+			["Time"] = "02:23:48",
+			["GiveMoney"] = 100000,
+			["Location"] = "幽暗城",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [136]
 	},
 }

@@ -60,8 +60,8 @@ HealBot_Config = {
 	["DisableHealBot"] = false,
 	["CurrentSpec"] = 1,
 	["DisableSolo"] = false,
-	["LastAutoSkinChangeTime"] = 87645.614,
 	["EnableHealthy"] = true,
+	["LastAutoSkinChangeTime"] = 10613.327,
 	["LastAutoSkinChangeType"] = "None",
 	["DisabledNow"] = 0,
 }

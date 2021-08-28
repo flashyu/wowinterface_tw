@@ -58,8 +58,8 @@ LootMonitorDB = {
 				}, -- [4]
 			},
 			["Date"] = "2021-08-18",
-			["FirstClass"] = "WARLOCK",
 			["Class"] = "DRUID",
+			["FirstClass"] = "WARLOCK",
 			["InstanceName"] = "Gruul's Lair",
 		}, -- [1]
 		{
@@ -68,8 +68,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "佛仔",
 			["InstanceName"] = "Magtheridon's Lair",
 			["Date"] = "2021-08-22",
-			["FirstClass"] = "DRUID",
 			["Class"] = "DRUID",
+			["FirstClass"] = "DRUID",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4491-544-17761-17257-0000224949",
