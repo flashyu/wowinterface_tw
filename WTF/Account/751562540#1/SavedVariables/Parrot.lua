@@ -1,8 +1,8 @@
 
 ParrotDB = {
 	["profileKeys"] = {
-		["牧原股份 - 伊弗斯"] = "Default",
 		["豬圈一 - 伊弗斯"] = "Default",
+		["牧原股份 - 伊弗斯"] = "Default",
 	},
 	["namespaces"] = {
 		["CombatEvents"] = {
@@ -21,32 +21,32 @@ ParrotDB = {
 						["Notification"] = {
 							["stickyDirection"] = "UP;CENTER",
 							["direction"] = "UP;CENTER",
-							["stickyAnimationStyle"] = "Pow",
+							["yOffset"] = 175,
 							["iconSide"] = "LEFT",
 							["xOffset"] = 0,
 							["size"] = 150,
 							["animationStyle"] = "Straight",
-							["yOffset"] = 175,
-						},
-						["Incoming"] = {
-							["stickyDirection"] = "DOWN;RIGHT",
-							["direction"] = "DOWN;LEFT",
 							["stickyAnimationStyle"] = "Pow",
-							["iconSide"] = "RIGHT",
-							["xOffset"] = -60,
-							["size"] = 260,
-							["animationStyle"] = "Parabola",
-							["yOffset"] = -30,
 						},
 						["Outgoing"] = {
 							["stickyDirection"] = "DOWN;LEFT",
 							["direction"] = "DOWN;RIGHT",
-							["stickyAnimationStyle"] = "Pow",
+							["yOffset"] = -30,
 							["iconSide"] = "LEFT",
 							["xOffset"] = 60,
 							["size"] = 260,
 							["animationStyle"] = "Parabola",
+							["stickyAnimationStyle"] = "Pow",
+						},
+						["Incoming"] = {
+							["stickyDirection"] = "DOWN;RIGHT",
+							["direction"] = "DOWN;LEFT",
 							["yOffset"] = -30,
+							["iconSide"] = "RIGHT",
+							["xOffset"] = -60,
+							["size"] = 260,
+							["animationStyle"] = "Parabola",
+							["stickyAnimationStyle"] = "Pow",
 						},
 					},
 					["dbver"] = 2,
@@ -60,8 +60,8 @@ ParrotDB = {
 		["Triggers"] = {
 			["profiles"] = {
 				["Default"] = {
-					["dbver2"] = 0,
 					["dbver3"] = 1,
+					["dbver2"] = 0,
 					["triggers2"] = 0,
 				},
 			},

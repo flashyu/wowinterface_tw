@@ -212,7 +212,6 @@ if (GetLocale() == "ruRU") then
 		["AutoBarButtonClassPet"] = "Классовые питомцы",
 		["AutoBarButtonConjure"] = "Сотворение",
 		["AutoBarButtonOpenable"] = "Openable",
-		["AutoBarButtonCooldownDrums"] = "Перезарядка: Барабаны",
 		["AutoBarButtonCooldownPotionCombat"] = "Перезарядка Зелья: Боевые",
 		["AutoBarButtonCooldownPotionHealth"] = "Перезарядка Зелья: Здоровья",
 		["AutoBarButtonCooldownPotionMana"] = "Перезарядка Зелья: Маны",
@@ -455,7 +454,6 @@ if (GetLocale() == "ruRU") then
 		["Consumable.Anti-Venom"] = "Противоядие";
 
 		["Consumable.Warlock.Soulstone"] = "Камни души";
-		["Consumable.Cooldown.Stone.Health.Warlock"] = "Камни здоровья";
 		["Spell.Warlock.Create Healthstone"] = "Создать Камень здоровья";
 		["Spell.Warlock.Create Soulstone"] = "Создать Камень души";
 		["Consumable.Cooldown.Stone.Mana.Mana Stone"] = "Камни маны";

@@ -193,7 +193,6 @@ if (GetLocale() == "enUS") then
 		["AutoBarButtonClassPets3"] = "Pet Misc",
 		["AutoBarButtonConjure"] = "Conjure",
 		["AutoBarButtonOpenable"] = "Openable",
-		["AutoBarButtonCooldownDrums"] = "Cooldown: Drums",
 		["AutoBarButtonCooldownPotionCombat"] = "Potion Cooldown: Combat",
 		["AutoBarButtonCooldownPotionHealth"] = "Potion Cooldown: Health",
 		["AutoBarButtonCooldownPotionMana"] = "Potion Cooldown: Mana",
@@ -384,7 +383,6 @@ if (GetLocale() == "enUS") then
 		["Consumable.Anti-Venom"] = "Anti-Venom";
 
 		["Consumable.Warlock.Soulstone"] = "Soulstone";
-		["Consumable.Cooldown.Stone.Health.Warlock"] = "Healthstone";
 		["Spell.Warlock.Create Healthstone"] = "Create Healthstone";
 		["Spell.Warlock.Create Soulstone"] = "Create Soulstone";
 		["Consumable.Cooldown.Stone.Mana.Mana Stone"] = "Mana Gem";

@@ -1,52 +1,10 @@
-lightweight tag 2b280addcb29558d2895dc5f1f3d4300dbbeb98f v2.1.8
-Author:	GitHub <noreply@github.com>
-Date:	Sat Jul 31 13:15:24 2021 +0200
+lightweight tag 44e768f3b16cd9663bd538f3d1031ae0a46a6892 v2.1.10
+Author:	Simon Hirsig <simon.hirsig@gmail.com>
+Date:	Wed Sep 1 17:47:08 2021 +0200
 
-commit 2c66423ca9380d5072cf13012cffbee154b54b12
+commit 44e768f3b16cd9663bd538f3d1031ae0a46a6892
 Author: Simon Hirsig <simon.hirsig@gmail.com>
-Date:   Sat Jul 31 13:13:03 2021 +0200
+Date:   Wed Sep 1 17:47:08 2021 +0200
 
-    fix for changed popup api
-
-commit 2c66423ca9380d5072cf13012cffbee154b54b12
-Author: Simon Hirsig <simon.hirsig@gmail.com>
-Date:   Sat Jul 31 13:13:03 2021 +0200
-
-    fix for changed popup api
-
-commit dc664401eb80cd6996f250e39a864a067b82ba8e
-Author: Artur <Artur91425@gmail.com>
-Date:   Wed Jul 14 18:29:32 2021 +0300
-
-    prevent a set of an empty string
-    
-    now empty string restore default value
-
-commit 69a2740e655696da39341ccdcd175fd43f98100c
-Author: Artur <Artur91425@gmail.com>
-Date:   Thu Jul 15 22:05:09 2021 +0300
-
-    add color for quality dropdown
-    
-    this will make much faster selection of the desired quality of items, focusing on the color, and not reading the white text
-
-commit dc664401eb80cd6996f250e39a864a067b82ba8e
-Author: Artur <Artur91425@gmail.com>
-Date:   Wed Jul 14 18:29:32 2021 +0300
-
-    prevent a set of an empty string
-    
-    now empty string restore default value
-
-commit fb52ce44662f5955d35abae312bd16a51bf8adca
-Author: Artur <Artur91425@gmail.com>
-Date:   Wed Jul 14 15:14:57 2021 +0300
-
-    add a feature to set the name for favorite queries
-
-commit f6bc4b7e1c06175cdd79904dfd3a5a118d4a2f5b
-Author: Artur <Artur91425@gmail.com>
-Date:   Wed Jul 14 14:58:58 2021 +0300
-
-    update AUX_REMOVE_FAVORITE_CONFIRMATION dialog
+    disabling stack count when posting suffix items because the api ignores them
 

@@ -210,7 +210,6 @@ if (GetLocale() == "esMX") then
 		["AutoBarButtonClassPet"] = "Mascota de Clase",
 		["AutoBarButtonConjure"] = "Conjuro",
 		["AutoBarButtonOpenable"] = "Openable",
-		["AutoBarButtonCooldownDrums"] = "Reutilización: Tambores",
 		["AutoBarButtonCooldownPotionCombat"] = "Potion Cooldown: Combat",
 		["AutoBarButtonCooldownPotionHealth"] = "Reutilización: Salud",
 		["AutoBarButtonCooldownPotionMana"] = "Reutilización: Maná",
@@ -453,7 +452,6 @@ if (GetLocale() == "esMX") then
 		["Consumable.Anti-Venom"] = "Anti-Veneno";
 
 		["Consumable.Warlock.Soulstone"] = "Piedra del Alma";
-		["Consumable.Cooldown.Stone.Health.Warlock"] = "Piedras de Salud";
 		["Spell.Warlock.Create Healthstone"] = "Crear Piedra de Salud";
 		["Spell.Warlock.Create Soulstone"] = "Crear Piedra del Alma";
 		["Consumable.Cooldown.Stone.Mana.Mana Stone"] = "Piedras de Maná";

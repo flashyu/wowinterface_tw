@@ -113,6 +113,7 @@ function ABGCode.InitializeCategories()
 	{
 		"HUNTER", ABGCode.GetSpellNameByName("Call Pet"),
 		"PRIEST", ABGCode.GetSpellNameByName("Shadowfiend"),
+		"MAGE",  ABGCode.GetSpellNameByName("Summon Water Elemental"),
 		"WARLOCK", ABGCode.GetSpellNameByName("Eye of Kilrogg"),
 		"WARLOCK", ABGCode.GetSpellNameByName("Summon Infernal"),
 		"WARLOCK", ABGCode.GetSpellNameByName("Summon Felhunter"),
@@ -168,14 +169,13 @@ function ABGCode.InitializeCategories()
 		"MAGE", 			ABGCode.GetSpellNameByName("Frost Armor"), ABGCode.GetSpellNameByName("Ice Barrier"),
 		"MAGE", 			ABGCode.GetSpellNameByName("Ice Armor"), ABGCode.GetSpellNameByName("Ice Barrier"),
 		"MAGE", 			ABGCode.GetSpellNameByName("Mage Armor"), ABGCode.GetSpellNameByName("Ice Barrier"),
+		"MAGE", 			ABGCode.GetSpellNameByName("Molten Armor"), ABGCode.GetSpellNameByName("Ice Barrier"),
 		"PALADIN", 		ABGCode.GetSpellNameByName("Divine Protection"), ABGCode.GetSpellNameByName("Divine Shield"),
 		"PALADIN", 		ABGCode.GetSpellNameByName("Divine Shield"), ABGCode.GetSpellNameByName("Divine Protection"),
 		"PRIEST", 		ABGCode.GetSpellNameByName("Power Word: Shield"), ABGCode.GetSpellNameByName("Power Word: Shield"),
 		"ROGUE", 		ABGCode.GetSpellNameByName("Evasion"), 		ABGCode.GetSpellNameByName("Evasion"),
 		"WARRIOR", 		ABGCode.GetSpellNameByName("Shield Block"), ABGCode.GetSpellNameByName("Shield Wall"),
 		"WARRIOR", 		ABGCode.GetSpellNameByName("Shield Wall"), ABGCode.GetSpellNameByName("Shield Block"),
-
-
 		"WARLOCK", ABGCode.GetSpellNameByName("Demon Skin"),  ABGCode.GetSpellNameByName("Shadow Ward"),
 		"WARLOCK", ABGCode.GetSpellNameByName("Demon Armor"), ABGCode.GetSpellNameByName("Shadow Ward"),
 		"WARLOCK", ABGCode.GetSpellNameByName("Fel Armor"), ABGCode.GetSpellNameByName("Shadow Ward"),
@@ -300,13 +300,14 @@ function ABGCode.InitializeCategories()
 		"WARLOCK", ABGCode.GetSpellNameByName("Curse of Recklessness"),
 		"WARLOCK", ABGCode.GetSpellNameByName("Curse of Shadow"),
 		"WARLOCK", ABGCode.GetSpellNameByName("Curse of the Elements"),
-		"WARLOCK", ABGCode.GetSpellNameByName("Curse of Weakness"),	--y
+		"WARLOCK", ABGCode.GetSpellNameByName("Curse of Weakness"),
+		"WARLOCK", ABGCode.GetSpellNameByName("Curse of Exhaustion"),
 	})
 
 
 	AutoBarCategoryList["Spell.Fishing"] = SpellsCategory:new("Spell.Fishing", spellIconList["Fishing"],
 	{
-		"*", ABGCode.GetSpellNameByName("Fishing"), --y
+		"*", ABGCode.GetSpellNameByName("Fishing"),
 	})
 
 
@@ -344,6 +345,7 @@ function ABGCode.InitializeCategories()
 
 	AutoBarCategoryList["Spell.Charge"] = SpellsCategory:new( "Spell.Charge", spellIconList["Charge"],
 	{
+		"ROGUE", ABGCode.GetSpellNameByName("Shadowstep"),
 		"WARRIOR", ABGCode.GetSpellNameByName("Charge"),
 		"WARRIOR", ABGCode.GetSpellNameByName("Intercept"),
 	})

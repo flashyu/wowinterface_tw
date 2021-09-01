@@ -74,9 +74,15 @@ ABGCS.CacheSpellData(34600, "Snake Trap");
 ABGCS.CacheSpellData(168, "Frost Armor");
 ABGCS.CacheSpellData(7302, "Ice Armor");
 ABGCS.CacheSpellData(6117, "Mage Armor");
+ABGCS.CacheSpellData(30482, "Molten Armor");
+ABGCS.CacheSpellData(27619, "Ice Block");
+ABGCS.CacheSpellData(11426, "Ice Barrier");
 
 ABGCS.CacheSpellData(1459, "Arcane Intellect");
 ABGCS.CacheSpellData(23028, "Arcane Brilliance");
+ABGCS.CacheSpellData(130, "Slow Fall");
+ABGCS.CacheSpellData(1008, "Amplify Magic");
+ABGCS.CacheSpellData(604, "Dampen Magic");
 
 ABGCS.CacheSpellData(5504, "Conjure Water");
 ABGCS.CacheSpellData(587, "Conjure Food");
@@ -87,17 +93,13 @@ ABGCS.CacheSpellData(3552, "Conjure Mana Jade");
 ABGCS.CacheSpellData(10053, "Conjure Mana Citrine");
 ABGCS.CacheSpellData(27101, "Conjure Mana Emerald");
 
-
-ABGCS.CacheSpellData(11426, "Ice Barrier");
-ABGCS.CacheSpellData(130, "Slow Fall");
-ABGCS.CacheSpellData(1008, "Amplify Magic");
-ABGCS.CacheSpellData(604, "Dampen Magic");
+ABGCS.CacheSpellData(31687, "Summon Water Elemental");
 
 --ABGCS.CacheSpellData(42955, "Conjure Refreshment");
 --ABGCS.CacheSpellData(43987, "Conjure Refreshment Table");
 ABGCS.CacheSpellData(7870, "Lesser Invisibility");
 ABGCS.CacheSpellData(66, "Invisibility");
-ABGCS.CacheSpellData(27619, "Ice Block");
+
 ABGCS.CacheSpellData(11418, "Portal: Undercity");
 ABGCS.CacheSpellData(3563, "Teleport: Undercity");
 ABGCS.CacheSpellData(11420, "Portal: Thunder Bluff");
@@ -110,7 +112,6 @@ ABGCS.CacheSpellData(11416, "Portal: Ironforge");
 ABGCS.CacheSpellData(3562, "Teleport: Ironforge");
 ABGCS.CacheSpellData(11417, "Portal: Orgrimmar");
 ABGCS.CacheSpellData(3567, "Teleport: Orgrimmar");
-
 ABGCS.CacheSpellData(49361, "Portal: Stonard");
 ABGCS.CacheSpellData(49360, "Portal: Theramore");
 ABGCS.CacheSpellData(32266, "Portal: Exodar");
@@ -137,7 +138,7 @@ ABGCS.CacheSpellData(19742, "Blessing of Wisdom");
 ABGCS.CacheSpellData(25894, "Greater Blessing of Wisdom");
 ABGCS.CacheSpellData(633, "Lay on Hands");
 
-ABGCS.CacheSpellData(19740, "Blessing of Might"); --y
+ABGCS.CacheSpellData(19740, "Blessing of Might");
 
 ABGCS.CacheSpellData(32223, "Crusader Aura");
 ABGCS.CacheSpellData(465, "Devotion Aura");
@@ -159,7 +160,7 @@ ABGCS.CacheSpellData(348700, "Seal of the Martyr");
 ABGCS.CacheSpellData(20166, "Seal of Wisdom");
 --#endregion
 
---Priest
+--#region Priest
 ABGCS.CacheSpellData(588, "Inner Fire");
 ABGCS.CacheSpellData(1243, "Power Word: Fortitude");
 ABGCS.CacheSpellData(21562, "Prayer of Fortitude");
@@ -173,7 +174,7 @@ ABGCS.CacheSpellData(13896, "Feedback");
 ABGCS.CacheSpellData(2651, "Elune's Grace");
 ABGCS.CacheSpellData(2652, "Touch of Weakness");
 ABGCS.CacheSpellData(6346, "Fear Ward");
-
+--#endregion
 
 --Rogue
 ABGCS.CacheSpellData(1842, "Disarm Trap");
@@ -183,6 +184,7 @@ ABGCS.CacheSpellData(1784, "Stealth");
 ABGCS.CacheSpellData(1856, "Vanish");
 ABGCS.CacheSpellData(2094, "Blind");
 ABGCS.CacheSpellData(6770, "Sap");
+ABGCS.CacheSpellData(36554, "Shadowstep");
 
 
 --#region Shaman
@@ -262,9 +264,10 @@ ABGCS.CacheSpellData(5500, "Sense Demons");
 
 ABGCS.CacheSpellData(704, "Curse of Recklessness");
 ABGCS.CacheSpellData(1714, "Curse of Tongues");
-ABGCS.CacheSpellData(702, "Curse of Weakness"); --y
+ABGCS.CacheSpellData(702, "Curse of Weakness");
 ABGCS.CacheSpellData(17862, "Curse of Shadow");
 ABGCS.CacheSpellData(1490, "Curse of the Elements");
+ABGCS.CacheSpellData(18223, "Curse of Exhaustion");
 
 ABGCS.CacheSpellData(693, "Create Soulstone (Minor)");
 ABGCS.CacheSpellData(20752, "Create Soulstone (Lesser)");
@@ -301,21 +304,21 @@ ABGCS.CacheSpellData(2458, "Berserker Stance");
 
 
 --Skills
-ABGCS.CacheSpellData(3273, "First Aid"); --y
-ABGCS.CacheSpellData(2259, "Alchemy"); --y
-ABGCS.CacheSpellData(818, "Basic Campfire"); --y
-ABGCS.CacheSpellData(2018, "Blacksmithing"); --y
+ABGCS.CacheSpellData(3273, "First Aid");
+ABGCS.CacheSpellData(2259, "Alchemy");
+ABGCS.CacheSpellData(818, "Basic Campfire");
+ABGCS.CacheSpellData(2018, "Blacksmithing");
 ABGCS.CacheSpellData(2550, "Cooking");	--y
-ABGCS.CacheSpellData(13262, "Disenchant"); --y
-ABGCS.CacheSpellData(7411, "Enchanting");  --y
-ABGCS.CacheSpellData(4036, "Engineering"); --y
-ABGCS.CacheSpellData(2108, "Leatherworking"); --y
-ABGCS.CacheSpellData(2656, "Smelting"); --y
-ABGCS.CacheSpellData(3908, "Tailoring"); --y
-ABGCS.CacheSpellData(7620, "Fishing"); --y
-ABGCS.CacheSpellData(2580, "Find Minerals"); --y
-ABGCS.CacheSpellData(2383, "Find Herbs"); --y
-ABGCS.CacheSpellData(25229, "Jewelcrafting"); --y
+ABGCS.CacheSpellData(13262, "Disenchant");
+ABGCS.CacheSpellData(7411, "Enchanting");
+ABGCS.CacheSpellData(4036, "Engineering");
+ABGCS.CacheSpellData(2108, "Leatherworking");
+ABGCS.CacheSpellData(2656, "Smelting");
+ABGCS.CacheSpellData(3908, "Tailoring");
+ABGCS.CacheSpellData(7620, "Fishing");
+ABGCS.CacheSpellData(2580, "Find Minerals");
+ABGCS.CacheSpellData(2383, "Find Herbs");
+ABGCS.CacheSpellData(25229, "Jewelcrafting");
 ABGCS.CacheSpellData(31252, "Prospecting");
 
 

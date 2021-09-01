@@ -95,6 +95,23 @@ AutoBarGlobalDataObject.TickScheduler =
 }
 
 
+function AB.Dump(o, p_max_depth)
+	local depth = p_max_depth or 5
+	if type(o) == 'table' and (depth >= 1)  then
+		depth = depth - 1
+		local s = '{ '
+		for k,v in pairs(o) do
+			if type(k) ~= 'number' then
+				k = '"'..k..'"'
+			end
+			s = s .. '['..k..'] = ' .. AB.Dump(v, depth) .. ','
+		end
+		return s .. '} '
+	else
+		return tostring(o)
+	end
+end
+
 
 local function table_pack(...)
   return { n = select("#", ...), ... }
@@ -369,22 +386,24 @@ function AutoBarGlobalCodeSpace.LogEventStart(p_event_name)
 		if (logItems[p_event_name]) then
 			--print(p_event_name, "restarted before previous completion")
 		else
-			logItems[p_event_name] = GetTime()
+			logItems[p_event_name] = debugprofilestop()
 			--print(p_event_name, "started time:", logItems[p_event_name])
 		end
 	end
 
 	if (AutoBar.db.account.logEvents) then
 			memory = memory or ""
-			print(event_name_colour .. p_event_name .. "|r", "time:", GetTime(), memory)
+			print(event_name_colour .. p_event_name .. "|r", "time:", debugprofilestop(), memory)
 	end
 end
 
 function AutoBarGlobalCodeSpace.LogEventEnd(p_event_name, p_arg1)	--ToDo: There can actually be multiple args
 	if (AutoBar.db.account.performance) then
 		if (logItems[p_event_name]) then
-			local elapsed = GetTime() - logItems[p_event_name]
-			--print(p_event_name, p_arg1, elapsed, "=", GetTime(), " - ", logItems[p_event_name])
+			local elapsed = debugprofilestop() - logItems[p_event_name]
+			-- if (p_event_name == "SPELLS_CHANGED") then
+			-- 	print(p_event_name, p_arg1, elapsed, "=", debugprofilestop(), " - ", logItems[p_event_name])
+			-- end
 			if (elapsed > AutoBarDB2.performance_threshold) then
 				print(event_name_colour .. p_event_name .. "|r", (p_arg1 or ""), "time:", elapsed)
 			end

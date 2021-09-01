@@ -212,7 +212,6 @@ if (GetLocale() == "koKR") then
 		["AutoBarButtonClassPet"] = "직업 소환수",
 		["AutoBarButtonConjure"] = "창조",
 		["AutoBarButtonOpenable"] = "열기",
-		["AutoBarButtonCooldownDrums"] = "대기시간: 북소리",
 		["AutoBarButtonCooldownPotionCombat"] = "물약 대기시간: 전투",
 		["AutoBarButtonCooldownPotionHealth"] = "물약 대기시간: 생명력",
 		["AutoBarButtonCooldownPotionMana"] = "물약 대기시간: 마나",
@@ -455,7 +454,6 @@ if (GetLocale() == "koKR") then
 		["Consumable.Anti-Venom"] = "해독제";
 
 		["Consumable.Warlock.Soulstone"] = "영혼석";
-		["Consumable.Cooldown.Stone.Health.Warlock"] = "생명석";
 		["Spell.Warlock.Create Healthstone"] = "생명석 창조";
 		["Spell.Warlock.Create Soulstone"] = "영혼석 창조";
 		["Consumable.Cooldown.Stone.Mana.Mana Stone"] = "마나석";

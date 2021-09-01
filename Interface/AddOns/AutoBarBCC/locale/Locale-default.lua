@@ -61,6 +61,7 @@ atl("Muffin.Flask", "Muffin.Flask");
 atl("AutoBar.Garrison", "Garrison");
 atl("AutoBarButtonGarrison", "Garrison");
 atl("AutoBarButtonToyBox", "Toy Box");
+atl("AutoBarButtonDrums", "Drums");
 atl("Spell.Stealth", "Spell.Stealth");
 atl("Spell.Track", "Spell.Track");
 atl("AutoBarButtonInterrupt", "Interrupts");
@@ -179,6 +180,7 @@ local quick_sets =
 	"Muffin.Battle Pet Items.Level",
 	"Muffin.Battle Pet Items.Pet Treat",
 	"Muffin.Battle Pet Items.Upgrade",
+	"Muffin.Drum",
 	"Muffin.Food.Combo.Basic",
 	"Muffin.Food.Combo.Buff",
 	"Muffin.Food.Health.Buff",
@@ -194,6 +196,7 @@ local quick_sets =
 	"Muffin.Order Hall.Order Resources",
 	"Muffin.Potion.Mana",
 	"Muffin.Misc.Reputation",
+	"Muffin.Misc.Repair",
 	"Muffin.Skill.Fishing.Misc",
 	"Muffin.Skill.Fishing.Rare Fish",
 	"Muffin.SunSongRanch",

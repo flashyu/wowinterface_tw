@@ -212,7 +212,6 @@ if (GetLocale() == "deDE") then
 		["AutoBarButtonClassPet"] = "klassen Begleiter",
 		["AutoBarButtonConjure"] = "Conjure",
 		["AutoBarButtonOpenable"] = "Openable",
-		["AutoBarButtonCooldownDrums"] = "Abklingzeit: Drums",
 		["AutoBarButtonCooldownPotionCombat"] = "Trank Abklingzeit: Combat",
 		["AutoBarButtonCooldownPotionHealth"] = "Trank Abklingzeit: Health",
 		["AutoBarButtonCooldownPotionMana"] = "Trank Abklingzeit: Mana",
@@ -455,7 +454,6 @@ if (GetLocale() == "deDE") then
 		["Consumable.Anti-Venom"] = "Gegengift",
 
 		["Consumable.Warlock.Soulstone"] = "Seelenstein",
-		["Consumable.Cooldown.Stone.Health.Warlock"] = "Gesundheitssteine",
 		["Spell.Warlock.Create Healthstone"] = "Herstellen Healthstone",
 		["Spell.Warlock.Create Soulstone"] = "Herstellen Soulstone",
 		["Consumable.Cooldown.Stone.Mana.Mana Stone"] = "Manasteine",

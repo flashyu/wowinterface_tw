@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0523,
+	["LastVersion"] = 2.0525,
 	["ItemLevels"] = {
 		{
 			["ID"] = 28803,
@@ -55,10 +55,10 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:29291::::::::70::::::::|h[紫羅蘭徽記]|h|r",
 		}, -- [11]
 		{
-			["ID"] = 28510,
-			["Level"] = 115,
+			["ID"] = 29291,
+			["Level"] = 120,
 			["AlsoFitsIn"] = 11,
-			["Link"] = "|cffa335ee|Hitem:28510::::::::70::::::::|h[經絡鬼靈指環]|h|r",
+			["Link"] = "|cffa335ee|Hitem:29291:2928:::::::70::::::::|h[紫羅蘭徽記]|h|r",
 		}, -- [12]
 		{
 			["ID"] = 28190,

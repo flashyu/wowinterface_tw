@@ -212,7 +212,6 @@ if (GetLocale() == "zhCN") then
 		["AutoBarButtonClassPet"] = "战斗宠物",
 		["AutoBarButtonConjure"] = "法术: 制造",
 		["AutoBarButtonOpenable"] = "Openable",
-		["AutoBarButtonCooldownDrums"] = "冷却：战鼓",
 		["AutoBarButtonCooldownPotionCombat"] = "药水冷却：战斗",
 		["AutoBarButtonCooldownPotionHealth"] = "药水冷却：生命",
 		["AutoBarButtonCooldownPotionMana"] = "药水冷却：法力",
@@ -455,7 +454,6 @@ if (GetLocale() == "zhCN") then
 		["Consumable.Anti-Venom"] = "抗毒药剂";
 
 		["Consumable.Warlock.Soulstone"] = "灵魂石";
-		["Consumable.Cooldown.Stone.Health.Warlock"] = "治疗石";
 		["Spell.Warlock.Create Healthstone"] = "制造治疗石";
 		["Spell.Warlock.Create Soulstone"] = "制造灵魂石";
 		["Consumable.Cooldown.Stone.Mana.Mana Stone"] = "法力石";

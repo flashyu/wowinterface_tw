@@ -747,8 +747,6 @@ function ABGCode.InitializeAllCategories()
 	AutoBarCategoryList["Consumable.Cooldown.Potion.Mana.Pvp"]:SetBattleground(true)
 
 
-	AutoBarCategoryList["Consumable.Cooldown.Stone.Health.Warlock"] = ItemsCategory:new("Consumable.Cooldown.Stone.Health.Warlock", "INV_Stone_04", "Consumable.Cooldown.Stone.Health.Warlock")
-
 	AutoBarCategoryList["Misc.Booze"] = ItemsCategory:new("Misc.Booze", "INV_Drink_03", "Misc.Booze")
 	AutoBarCategoryList["Misc.Booze"]:SetNonCombat(true)
 
@@ -758,8 +756,6 @@ function ABGCode.InitializeAllCategories()
 	AutoBarCategoryList["Consumable.Cooldown.Potion.Rejuvenation"] = ItemsCategory:new("Consumable.Cooldown.Potion.Rejuvenation", "INV_Potion_47", "Consumable.Cooldown.Potion.Rejuvenation")
 
 	AutoBarCategoryList["Consumable.Cooldown.Stone.Health.Statue"] = ItemsCategory:new("Consumable.Cooldown.Stone.Health.Statue", "INV_Misc_Statue_10", "Consumable.Cooldown.Stone.Health.Statue")
-
-	AutoBarCategoryList["Consumable.Cooldown.Drums"] = ItemsCategory:new("Consumable.Cooldown.Drums", "INV_Misc_Drum_05", "Consumable.Cooldown.Drums")
 
 	AutoBarCategoryList["Consumable.Cooldown.Potion"] = ItemsCategory:new("Consumable.Cooldown.Potion", "INV_Potion_47", "Consumable.Cooldown.Potion")
 

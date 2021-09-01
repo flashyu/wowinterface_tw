@@ -127,7 +127,8 @@ function AutoBar.InitializeDB()
 	AutoBarDB2 = AutoBarDB2 or {}
 	AutoBarDB2.custom_categories = AutoBarDB2.custom_categories or AutoBar.db.account.customCategories or {}
 	AutoBarDB2.whatsnew_version = AutoBarDB2.whatsnew_version or AutoBarDB.whatsnew_version
-	AutoBarDB2.performance_threshold = AutoBarDB2.performance_threshold or 0.002
+	AutoBarDB2.performance_threshold = AutoBarDB2.performance_threshold or 100
+	if (AutoBarDB2.performance_threshold < 20) then AutoBarDB2.performance_threshold = 100; end;
 
 	AutoBar:UpgradeVersion()
 	AutoBar:InitializeDefaults()
@@ -475,10 +476,10 @@ function AutoBar:InitializeDefaults()
 	end
 
 
-	if (not AutoBar.db.account.buttonList["AutoBarButtonCooldownDrums"]) then
-		AutoBar.db.account.buttonList["AutoBarButtonCooldownDrums"] = {
-			buttonKey = "AutoBarButtonCooldownDrums",
-			buttonClass = "AutoBarButtonCooldownDrums",
+	if (not AutoBar.db.account.buttonList["AutoBarButtonDrums"]) then
+		AutoBar.db.account.buttonList["AutoBarButtonDrums"] = {
+			buttonKey = "AutoBarButtonDrums",
+			buttonClass = "AutoBarButtonDrums",
 			barKey = "AutoBarClassBarBasic",
 			defaultButtonIndex = 14,
 			enabled = true,
@@ -1108,6 +1109,7 @@ function AutoBar:InitializeDefaults()
 			"AutoBarButtonGuildSpell", "AutoBarButtonStagForm", "AutoBarButtonCooldownStoneHealth",
 			"AutoBarButtonCooldownPotionHealth", "AutoBarButtonMillHerbs", "AutoBarButtonCooldownStoneMana",
 			"AutoBarButtonMana", "AutoBarButtonCooldownPotionMana",
+			"AutoBarButtonCooldownDrums",
 		}
 	elseif (ABGData.is_mainline_wow) then
 
@@ -1120,9 +1122,12 @@ function AutoBar:InitializeDefaults()
 			"AutoBarButtonTrack", "AutoBarButtonCooldownPotionHealth", "AutoBarButtonCooldownStoneHealth",
 			"AutoBarButtonCooldownStoneMana", "AutoBarButtonAquatic",
 			"AutoBarButtonMana", "AutoBarButtonCooldownPotionMana",
+			"AutoBarButtonCooldownDrums",
 		}
 	else
-		deprecated_buttons = {}
+		deprecated_buttons = {
+			"AutoBarButtonCooldownDrums",
+		}
 	end
 
 	for _, dep in ipairs(deprecated_buttons) do
