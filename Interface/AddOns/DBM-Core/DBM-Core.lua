@@ -71,9 +71,9 @@ local function showRealDate(curseDate)
 end
 
 DBM = {
-	Revision = parseCurseDate("20210815214240"),
-	DisplayVersion = "2.5.10", -- the string that is shown as version
-	ReleaseRevision = releaseDate(2021, 8, 15) -- the date of the latest stable version that is available, optionally pass hours, minutes, and seconds for multiple releases in one day
+	Revision = parseCurseDate("20210831171746"),
+	DisplayVersion = "2.5.11", -- the string that is shown as version
+	ReleaseRevision = releaseDate(2021, 8, 31) -- the date of the latest stable version that is available, optionally pass hours, minutes, and seconds for multiple releases in one day
 }
 DBM.HighestRelease = DBM.ReleaseRevision --Updated if newer version is detected, used by update nags to reflect critical fixes user is missing on boss pulls
 
@@ -10344,7 +10344,9 @@ do
 				end
 			end
 			fireEvent("DBM_TimerStart", id, msg, timer, self.icon, self.type, self.spellId, colorId, self.mod.id, self.keep, self.fade, self.name, guid)
-			tinsert(self.startedTimers, id)
+			if not findEntry(self.startedTimers, id) then--Make sure timer doesn't exist already before adding it
+				tinsert(self.startedTimers, id)
+			end
 			if not self.keep then--Don't ever remove startedTimers on a schedule, if it's a keep timer
 				self.mod:Unschedule(removeEntry, self.startedTimers, id)
 				self.mod:Schedule(timer, removeEntry, self.startedTimers, id)

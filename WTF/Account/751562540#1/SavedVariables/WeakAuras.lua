@@ -3,13 +3,6 @@ WeakAurasSaved = {
 	["dynamicIconCache"] = {
 	},
 	["editor_tab_spaces"] = 4,
-	["login_squelch_time"] = 10,
-	["lastArchiveClear"] = 1626874514,
-	["minimap"] = {
-		["hide"] = false,
-	},
-	["lastUpgrade"] = 1626874520,
-	["dbVersion"] = 45,
 	["displays"] = {
 		["迅愈ok"] = {
 			["iconSource"] = -1,
@@ -231,11 +224,11 @@ WeakAurasSaved = {
 						1, -- [4]
 					},
 					["text_font"] = "Friz Quadrata TT",
-					["text_fontType"] = "None",
+					["text_visible"] = true,
 					["text_shadowYOffset"] = -1,
 					["anchorXOffset"] = 0,
 					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
+					["text_fontType"] = "None",
 					["text_anchorPoint"] = "INNER_LEFT",
 					["text_text_format_p_time_format"] = 0,
 					["text_text_format_p_format"] = "timed",
@@ -331,19 +324,19 @@ WeakAurasSaved = {
 				},
 			},
 			["icon_side"] = "RIGHT",
-			["config"] = {
-			},
+			["uid"] = ")a1EtHFChix",
 			["sparkHeight"] = 30,
 			["texture"] = "Blizzard",
-			["uid"] = ")a1EtHFChix",
+			["config"] = {
+			},
 			["zoom"] = 0,
 			["spark"] = false,
-			["sparkHidden"] = "NEVER",
 			["id"] = "迅捷",
+			["sparkHidden"] = "NEVER",
 			["width"] = 95,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
 			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -448,24 +441,24 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["fullCircle"] = true,
+			["arcLength"] = 360,
 			["animate"] = false,
-			["useLimit"] = false,
+			["rotation"] = 0,
 			["scale"] = 1,
-			["authorOptions"] = {
-			},
+			["rowSpace"] = 1,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["rotation"] = 0,
-			["arcLength"] = 360,
+			["fullCircle"] = true,
+			["authorOptions"] = {
+			},
 			["constantFactor"] = "RADIUS",
-			["uid"] = "6fKxSS1HyT)",
-			["borderOffset"] = 4,
 			["config"] = {
 			},
+			["borderOffset"] = 4,
+			["uid"] = "6fKxSS1HyT)",
 			["gridType"] = "RD",
 			["id"] = "cd",
 			["gridWidth"] = 5,
@@ -493,12 +486,12 @@ WeakAurasSaved = {
 					["easeType"] = "none",
 				},
 			},
-			["internalVersion"] = 45,
+			["useLimit"] = false,
 			["conditions"] = {
 			},
 			["information"] = {
 			},
-			["rowSpace"] = 1,
+			["internalVersion"] = 45,
 		},
 		["lan"] = {
 			["grow"] = "DOWN",
@@ -594,23 +587,23 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["rowSpace"] = 1,
+			["radius"] = 200,
 			["animate"] = false,
-			["gridType"] = "RD",
+			["fullCircle"] = true,
 			["scale"] = 1,
-			["selfPoint"] = "TOP",
+			["useLimit"] = false,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["fullCircle"] = true,
-			["radius"] = 200,
+			["rowSpace"] = 1,
+			["selfPoint"] = "TOP",
 			["constantFactor"] = "RADIUS",
+			["uid"] = "I7Y0mTf5KSP",
+			["borderOffset"] = 4,
 			["config"] = {
 			},
-			["borderOffset"] = 4,
-			["uid"] = "I7Y0mTf5KSP",
 			["limit"] = 5,
 			["id"] = "lan",
 			["gridWidth"] = 5,
@@ -619,13 +612,13 @@ WeakAurasSaved = {
 			["rotation"] = 0,
 			["borderInset"] = 1,
 			["arcLength"] = 360,
-			["xOffset"] = -202.7703247070313,
+			["gridType"] = "RD",
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["useLimit"] = false,
+			["xOffset"] = -202.7703247070313,
 		},
 		["迅愈"] = {
 			["sparkWidth"] = 10,
@@ -712,11 +705,11 @@ WeakAurasSaved = {
 						1, -- [4]
 					},
 					["text_font"] = "Friz Quadrata TT",
-					["text_fontType"] = "None",
+					["text_visible"] = true,
 					["text_shadowYOffset"] = -1,
 					["anchorXOffset"] = 0,
 					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
+					["text_fontType"] = "None",
 					["text_anchorPoint"] = "INNER_LEFT",
 					["text_text_format_p_time_format"] = 0,
 					["text_text_format_p_format"] = "timed",
@@ -812,19 +805,19 @@ WeakAurasSaved = {
 				},
 			},
 			["icon_side"] = "RIGHT",
-			["config"] = {
-			},
+			["uid"] = "i8AXeqGJS3W",
 			["sparkHeight"] = 30,
 			["texture"] = "Blizzard",
-			["uid"] = "i8AXeqGJS3W",
+			["config"] = {
+			},
 			["zoom"] = 0,
 			["spark"] = false,
-			["sparkHidden"] = "NEVER",
 			["id"] = "迅愈",
+			["sparkHidden"] = "NEVER",
 			["width"] = 95,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
 			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -852,6 +845,132 @@ WeakAurasSaved = {
 			["information"] = {
 			},
 			["iconSource"] = -1,
+		},
+		["Details! Boss Mods Group"] = {
+			["grow"] = "DOWN",
+			["controlledChildren"] = {
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["authorOptions"] = {
+			},
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["space"] = 2,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["names"] = {
+						},
+						["type"] = "aura2",
+						["spellIds"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
+						["subeventPrefix"] = "SPELL",
+						["event"] = "Health",
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["columnSpace"] = 1,
+			["internalVersion"] = 45,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
+			["align"] = "CENTER",
+			["stagger"] = 0,
+			["subRegions"] = {
+			},
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["zoneIds"] = "",
+			},
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["radius"] = 200,
+			["animate"] = false,
+			["fullCircle"] = true,
+			["scale"] = 1,
+			["useLimit"] = false,
+			["border"] = false,
+			["borderEdge"] = "Square Full White",
+			["regionType"] = "dynamicgroup",
+			["borderSize"] = 2,
+			["sort"] = "none",
+			["rowSpace"] = 1,
+			["selfPoint"] = "TOP",
+			["constantFactor"] = "RADIUS",
+			["uid"] = "ZX3oWFkARRy",
+			["borderOffset"] = 4,
+			["config"] = {
+			},
+			["limit"] = 5,
+			["id"] = "Details! Boss Mods Group",
+			["gridWidth"] = 5,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["rotation"] = 0,
+			["borderInset"] = 1,
+			["arcLength"] = 360,
+			["gridType"] = "RD",
+			["conditions"] = {
+			},
+			["information"] = {
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["xOffset"] = 0,
 		},
 		["迅捷ok"] = {
 			["iconSource"] = -1,
@@ -968,132 +1087,6 @@ WeakAurasSaved = {
 			["cooldown"] = false,
 			["parent"] = "cd",
 		},
-		["Details! Boss Mods Group"] = {
-			["grow"] = "DOWN",
-			["controlledChildren"] = {
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["authorOptions"] = {
-			},
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["borderColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["space"] = 2,
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["names"] = {
-						},
-						["type"] = "aura2",
-						["spellIds"] = {
-						},
-						["subeventSuffix"] = "_CAST_START",
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["event"] = "Health",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["columnSpace"] = 1,
-			["internalVersion"] = 45,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["align"] = "CENTER",
-			["stagger"] = 0,
-			["subRegions"] = {
-			},
-			["load"] = {
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["zoneIds"] = "",
-			},
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["rowSpace"] = 1,
-			["animate"] = false,
-			["gridType"] = "RD",
-			["scale"] = 1,
-			["selfPoint"] = "TOP",
-			["border"] = false,
-			["borderEdge"] = "Square Full White",
-			["regionType"] = "dynamicgroup",
-			["borderSize"] = 2,
-			["sort"] = "none",
-			["fullCircle"] = true,
-			["radius"] = 200,
-			["constantFactor"] = "RADIUS",
-			["config"] = {
-			},
-			["borderOffset"] = 4,
-			["uid"] = "ZX3oWFkARRy",
-			["limit"] = 5,
-			["id"] = "Details! Boss Mods Group",
-			["gridWidth"] = 5,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["rotation"] = 0,
-			["borderInset"] = 1,
-			["arcLength"] = 360,
-			["xOffset"] = 0,
-			["conditions"] = {
-			},
-			["information"] = {
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["useLimit"] = false,
-		},
 		["New"] = {
 			["sparkWidth"] = 10,
 			["modelIsUnit"] = false,
@@ -1174,7 +1167,7 @@ WeakAurasSaved = {
 			["crop_x"] = 0.41,
 			["blendMode"] = "BLEND",
 			["sparkRotationMode"] = "AUTO",
-			["model_fileId"] = "122968",
+			["advance"] = false,
 			["desaturateForeground"] = false,
 			["triggers"] = {
 				{
@@ -1223,7 +1216,7 @@ WeakAurasSaved = {
 			},
 			["endAngle"] = 360,
 			["internalVersion"] = 45,
-			["advance"] = false,
+			["model_fileId"] = "122968",
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -1301,8 +1294,8 @@ WeakAurasSaved = {
 			["borderOffset"] = 5,
 			["model_st_rx"] = 270,
 			["user_y"] = 0,
-			["border"] = false,
 			["mirror"] = false,
+			["border"] = false,
 			["borderEdge"] = "None",
 			["model_z"] = 0,
 			["borderSize"] = 16,
@@ -1356,6 +1349,13 @@ WeakAurasSaved = {
 			},
 		},
 	},
+	["lastArchiveClear"] = 1626874514,
+	["minimap"] = {
+		["hide"] = false,
+	},
+	["lastUpgrade"] = 1626874520,
+	["dbVersion"] = 45,
+	["login_squelch_time"] = 10,
 	["registered"] = {
 	},
 	["frame"] = {

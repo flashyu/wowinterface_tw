@@ -1,4 +1,4 @@
-## Interface: 20501
+## Interface: 20502
 ## Title: 黑盒工坊配置同步模块
 ## Version: 1.0
 ## SavedVariables:  HEYBOX_SAVED_PLAYER_INFOS

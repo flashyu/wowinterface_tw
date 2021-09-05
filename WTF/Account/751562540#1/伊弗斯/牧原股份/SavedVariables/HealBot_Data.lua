@@ -54,14 +54,14 @@ HealBot_Config = {
 		},
 	},
 	["MyFriend"] = "x",
-	["LastVersionUpdate"] = "9.1.0.6",
+	["LastVersionUpdate"] = "9.1.0.7",
 	["BuffReset"] = "6.0.0",
 	["Profile"] = 1,
 	["DisableHealBot"] = false,
 	["CurrentSpec"] = 1,
 	["DisableSolo"] = false,
-	["LastAutoSkinChangeTime"] = 180545.636,
 	["EnableHealthy"] = true,
+	["LastAutoSkinChangeTime"] = 9380.433,
 	["LastAutoSkinChangeType"] = "None",
 	["DisabledNow"] = 0,
 }
@@ -79,7 +79,18 @@ HealBot_Config_Spells = {
 	},
 	["EnemySpellTrinket2"] = {
 	},
-	["ButtonCastMethod"] = 2,
+	["EmergSpellTrinket1"] = {
+	},
+	["EnemyKeyCombo"] = {
+	},
+	["EmergAvoidBlueCursor"] = {
+	},
+	["EnemySpellTarget"] = {
+	},
+	["EmergSpellTarget"] = {
+	},
+	["EmergKeyCombo"] = {
+	},
 	["EnabledKeyCombo"] = {
 		["Alt-ShiftRight4"] = "C:B",
 		["AltLeft1"] = "C:A",
@@ -116,14 +127,13 @@ HealBot_Config_Spells = {
 		["Left3"] = "S:9856",
 		["CtrlLeft2"] = "S:2782",
 	},
-	["EnemyKeyCombo"] = {
+	["EnabledSpellTrinket1"] = {
 	},
 	["EnabledAvoidBlueCursor"] = {
 	},
-	["EnemySpellTarget"] = {
+	["EmergSpellTrinket2"] = {
 	},
-	["EnabledSpellTrinket1"] = {
-	},
+	["ButtonCastMethod"] = 2,
 }
 HealBot_Config_Buffs = {
 	["CustomItemName"] = {
@@ -325,18 +335,18 @@ HealBot_Config_Cures = {
 	["HealBot_CDCWarnRange_Screen"] = 2,
 	["DebuffWatchInCombat"] = true,
 	["HealBot_Custom_Defuffs_All"] = {
-		["Curse"] = false,
 		["Disease"] = false,
-		["Magic"] = false,
 		["Poison"] = false,
+		["Magic"] = false,
+		["Curse"] = false,
 	},
 	["ShowTimeMaxDuration"] = 31,
 	["IgnoreFastDurDebuffsSecs"] = 2,
 	["HealBot_CDCWarnRange_Bar"] = 3,
 	["HealBot_CDCWarnRange_Sound"] = 3,
-	["DebuffWatchWhenGrouped"] = false,
-	["SoundDebuffWarning"] = false,
 	["SoundDebuffPlay"] = "Tribal Bass Drum",
+	["SoundDebuffWarning"] = false,
+	["DebuffWatchWhenGrouped"] = false,
 	["HealBotDebuffDropDown"] = {
 		4, -- [1]
 		4, -- [2]
@@ -358,25 +368,25 @@ HealBot_Config_Cures = {
 	["IgnoreOnCooldownDebuffs"] = false,
 	["AlwaysShowTimed"] = false,
 	["CDCBarColour"] = {
-		["Curse"] = {
-			["B"] = 0.09,
-			["G"] = 0.43,
-			["R"] = 0.83,
-		},
 		["Disease"] = {
 			["B"] = 0.7,
 			["G"] = 0.19,
 			["R"] = 0.55,
+		},
+		["Poison"] = {
+			["B"] = 0.24,
+			["G"] = 0.46,
+			["R"] = 0.12,
 		},
 		["Magic"] = {
 			["B"] = 0.83,
 			["G"] = 0.33,
 			["R"] = 0.26,
 		},
-		["Poison"] = {
-			["B"] = 0.24,
-			["G"] = 0.46,
-			["R"] = 0.12,
+		["Curse"] = {
+			["B"] = 0.09,
+			["G"] = 0.43,
+			["R"] = 0.83,
 		},
 	},
 	["HealBotDebuffPriority"] = {

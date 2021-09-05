@@ -19,7 +19,7 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"ShadowLabyrinth", -- [2]
+					"MagtheridonsLair", -- [2]
 					nil, -- [3]
 					6, -- [4]
 					0, -- [5]

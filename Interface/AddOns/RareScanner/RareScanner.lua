@@ -1113,6 +1113,13 @@ function RareScanner:IsVignetteAlreadyFound(vignetteID, isNavigating, npcID)
 end
 
 function RareScanner:UpdateRareFound(entityID, vignetteInfo, coordinates)
+	-- Theres no maps in dungeons, so ignore it
+	local isInstance, instanceType = IsInInstance()
+	if (isInstance == true) then
+		RSLogger:PrintDebugMessage(string.format("UpdateRareFound[%s]: Se ignora por encontrarse en una mazmorra", entityID))
+		return
+	end
+
 	-- Calculates all the parameters
 	local atlasName
 
@@ -1161,16 +1168,16 @@ function RareScanner:UpdateRareFound(entityID, vignetteInfo, coordinates)
 		RSLogger:PrintDebugMessage(string.format("UpdateRareFound[%s]: Error! No se ha podido calcular el mapID para la entidad recien encontrada!", entityID))
 		return
 	end
-
-	-- Extract the coordinates from the parameter if we are simulating a vignette, or from a real vignette info
-	local vignettePosition = nil
-	if (coordinates and coordinates.x and coordinates.y) then
-		vignettePosition = coordinates
-	else
-		vignettePosition = C_VignetteInfo.GetVignettePosition(vignetteInfo.vignetteGUID, mapID)
+			
+	-- Ignore if the map is a continent (which might happend in the areas outside a dungeon)
+	for continentID, _ in pairs (private.CONTINENT_ZONE_IDS) do
+		if (mapID == continentID) then
+			RSLogger:PrintDebugMessage(string.format("UpdateRareFound[%s]: Error! Se ha obtenido un mapID de un continente!", entityID))
+			return
+		end
 	end
 
-	if (not vignettePosition) then
+	if (not coordinates or not coordinates.x or not coordinates.y) then
 		RSLogger:PrintDebugMessage(string.format("UpdateRareFound[%s]: Error! No se han podido calcular las coordenadas para la entidad recien encontrada!", entityID))
 		return
 	end
@@ -1179,18 +1186,26 @@ function RareScanner:UpdateRareFound(entityID, vignetteInfo, coordinates)
 
 	-- Updates if it was found before
 	if (RSGeneralDB.GetAlreadyFoundEntity(entityID)) then
-		RSGeneralDB.UpdateAlreadyFoundEntity(entityID, mapID, vignettePosition.x, vignettePosition.y, artID, atlasName)
+		RSGeneralDB.UpdateAlreadyFoundEntity(entityID, mapID, coordinates.x, coordinates.y, artID, atlasName)
 		-- Adds if its the first time found
 	else
-		RSGeneralDB.AddAlreadyFoundEntity(entityID, mapID, vignettePosition.x, vignettePosition.y, artID, atlasName)
+		RSGeneralDB.AddAlreadyFoundEntity(entityID, mapID, coordinates.x, coordinates.y, artID, atlasName)
 	end
 end
 
 function scanner_button:PlaySoundAlert(atlasName)
 	if (not RSConfigDB.IsPlayingObjectsSound() and (RSConstants.IsContainerAtlas(atlasName) or RSConstants.IsEventAtlas(atlasName))) then
-		PlaySoundFile(string.gsub(private.SOUNDS[RSConfigDB.GetSoundPlayedWithObjects()], "-4", "-"..RSConfigDB.GetSoundVolume()), RSConfigDB.GetSoundChannel())
+		if (RSConfigDB.GetCustomSound(RSConfigDB.GetSoundPlayedWithObjects())) then
+			PlaySoundFile(string.format(RSConstants.EXTERNAL_SOUND_FOLDER, RSConfigDB.GetCustomSoundsFolder(), RSConfigDB.GetCustomSound(RSConfigDB.GetSoundPlayedWithObjects())), RSConfigDB.GetSoundChannel())
+		else
+			PlaySoundFile(string.gsub(RSConstants.DEFAULT_SOUNDS[RSConfigDB.GetSoundPlayedWithObjects()], "-4", "-"..RSConfigDB.GetSoundVolume()), RSConfigDB.GetSoundChannel())
+		end
 	elseif (not RSConfigDB.IsPlayingSound() and RSConstants.IsNpcAtlas(atlasName)) then
-		PlaySoundFile(string.gsub(private.SOUNDS[RSConfigDB.GetSoundPlayedWithNpcs()], "-4", "-"..RSConfigDB.GetSoundVolume()), RSConfigDB.GetSoundChannel())
+		if (RSConfigDB.GetCustomSound(RSConfigDB.GetSoundPlayedWithNpcs())) then
+			PlaySoundFile(string.format(RSConstants.EXTERNAL_SOUND_FOLDER, RSConfigDB.GetCustomSoundsFolder(), RSConfigDB.GetCustomSound(RSConfigDB.GetSoundPlayedWithNpcs())), RSConfigDB.GetSoundChannel())
+		else
+			PlaySoundFile(string.gsub(RSConstants.DEFAULT_SOUNDS[RSConfigDB.GetSoundPlayedWithNpcs()], "-4", "-"..RSConfigDB.GetSoundVolume()), RSConfigDB.GetSoundChannel())
+		end
 	end
 end
 

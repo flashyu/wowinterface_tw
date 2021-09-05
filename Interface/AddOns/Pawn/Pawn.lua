@@ -7,7 +7,7 @@
 -- Main non-UI code
 ------------------------------------------------------------
 
-PawnVersion = 2.0525
+PawnVersion = 2.0526
 
 -- Pawn requires this version of VgerCore:
 local PawnVgerCoreVersionRequired = 1.13
@@ -793,16 +793,11 @@ end
 function GetPawnStatusForArkInventoryRule(...)
 	if not PawnIsInitialized then VgerCore.Fail("Can't check to see if items are upgrades until Pawn is initialized") return end
 
-	-- Verify that the item string information is loaded and not nil and that it is a valid item before continuing.
-	if not ArkInventoryRules.Object.h or ArkInventoryRules.Object.class ~= "item" then return false end
-
-	-- Parse the incoming item and retrieve the data
-	local Info = ArkInventory.ObjectInfoArray(ArkInventoryRules.Object.h)
-
-	-- Extract the itemLink from the ArkInventory info object
-	local ItemLink = Info.info[2]
+	local Info = ArkInventoryRules.Object.info
+	if not Info or ArkInventoryRules.Object.class ~= "item" then return false end
 
 	-- Use the same logic for determining whether or not an arrow should be shown, for consistency
+	local ItemLink = Info.h
 	return PawnIsItemDefinitivelyAnUpgrade(ItemLink, true)
 end
 
@@ -1667,7 +1662,7 @@ function PawnUpdateTooltip(TooltipName, MethodName, Param1, ...)
 
 	-- Color or reset the tooltip border as necessary.
 	if PawnCommon.ColorTooltipBorder then
-		if UpgradeInfo or (ItemLevelIncrease and PawnCommon.ShowItemLevelUpgrades) then Tooltip:SetBackdropBorderColor(0, 1, 0) else Tooltip:SetBackdropBorderColor(1, 1, 1) end
+		if UpgradeInfo or (ItemLevelIncrease and PawnCommon.ShowItemLevelUpgrades) then PawnSetTooltipBorderColor(Tooltip, 0, 1, 0) else PawnSetTooltipBorderColor(Tooltip, 1, 1, 1) end
 	end
 	
 	-- Add the item ID to the tooltip if known.
@@ -1689,6 +1684,28 @@ function PawnUpdateTooltip(TooltipName, MethodName, Param1, ...)
 	if Item and PawnCommon.DebugDoubleTooltips and TooltipName == "GameTooltip" then
 		VgerCore.Message("===== Annotating " .. TooltipName .. " for " .. tostring(Item.Name) .. ": =====")
 		VgerCore.Message(debugstack(5))
+	end
+end
+
+-- A wrapper for Tooltip:SetBackdropBorderColor that continues to work in WoW 9.1.5+.
+function PawnSetTooltipBorderColor(Tooltip, r, g, b, a)
+	if a == nil then a = 1 end
+	if Tooltip.SetBackdropBorderColor then
+		Tooltip:SetBackdropBorderColor(r, g, b, a)
+	elseif Tooltip.NineSlice.TopEdge then
+		-- Seems like this SHOULD work:
+		-- Tooltip.NineSlice:SetBorderColor(r, g, b, a)
+		-- ...but for some reason it doesn't (in the 9.1.5 PTR), so just do it manually for now.
+		Tooltip.NineSlice.TopLeftCorner:SetVertexColor(r, g, b, a)
+		Tooltip.NineSlice.TopRightCorner:SetVertexColor(r, g, b, a)
+		Tooltip.NineSlice.BottomLeftCorner:SetVertexColor(r, g, b, a)
+		Tooltip.NineSlice.BottomRightCorner:SetVertexColor(r, g, b, a)
+		Tooltip.NineSlice.TopEdge:SetVertexColor(r, g, b, a)
+		Tooltip.NineSlice.BottomEdge:SetVertexColor(r, g, b, a)
+		Tooltip.NineSlice.LeftEdge:SetVertexColor(r, g, b, a)
+		Tooltip.NineSlice.RightEdge:SetVertexColor(r, g, b, a)
+	else
+		VgerCore.Fail("Pawn doesn't know how to change tooltip border colors in this version of WoW.")
 	end
 end
 
