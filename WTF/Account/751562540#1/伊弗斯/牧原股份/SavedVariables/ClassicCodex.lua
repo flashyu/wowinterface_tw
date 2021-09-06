@@ -17,9 +17,9 @@ CodexConfig = {
 		["callbacks"] = {
 			["distance"] = {
 			},
-			["world"] = {
-			},
 			["minimap"] = {
+			},
+			["world"] = {
 			},
 		},
 		["persistent"] = true,
@@ -30,17 +30,17 @@ CodexConfig = {
 		["crazy"] = true,
 		["world"] = true,
 	},
-	["continentIcon"] = false,
-	["currentQuestGivers"] = true,
+	["minimapButton"] = true,
+	["autoTurnin"] = false,
 	["spawnMarkerSize"] = 15,
-	["colorBySpawn"] = true,
+	["showFestival"] = false,
 	["alwaysShowId"] = false,
 	["nameplateIcon"] = false,
 	["zoneMapIcon"] = true,
-	["showFestival"] = false,
+	["colorBySpawn"] = true,
 	["miniMapIcon"] = true,
-	["autoTurnin"] = false,
-	["minimapButton"] = true,
+	["currentQuestGivers"] = true,
+	["continentIcon"] = false,
 	["questMarkerSize"] = 15,
 }
 CodexHiddenQuests = {

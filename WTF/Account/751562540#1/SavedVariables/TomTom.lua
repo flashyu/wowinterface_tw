@@ -1,8 +1,8 @@
 
 TomTomDB = {
 	["profileKeys"] = {
-		["豬圈一 - 伊弗斯"] = "Default",
 		["牧原股份 - 伊弗斯"] = "Default",
+		["豬圈一 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -30,13 +30,13 @@ TomTomDB = {
 TomTomWaypoints = nil
 TomTomWaypointsM = {
 	["profileKeys"] = {
-		["豬圈一 - 伊弗斯"] = "豬圈一 - 伊弗斯",
 		["牧原股份 - 伊弗斯"] = "牧原股份 - 伊弗斯",
+		["豬圈一 - 伊弗斯"] = "豬圈一 - 伊弗斯",
 	},
 	["profiles"] = {
-		["豬圈一 - 伊弗斯"] = {
-		},
 		["牧原股份 - 伊弗斯"] = {
+		},
+		["豬圈一 - 伊弗斯"] = {
 		},
 	},
 }

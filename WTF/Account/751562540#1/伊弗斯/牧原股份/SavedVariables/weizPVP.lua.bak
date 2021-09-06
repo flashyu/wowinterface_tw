@@ -10,9 +10,6 @@ _weizpvp_chardb = {
 					["LastCleaned"] = 1630843202,
 					["VERSION"] = 3,
 				},
-				["Addon"] = {
-					["Enabled"] = false,
-				},
 				["Window"] = {
 					["Pinned"] = true,
 				},

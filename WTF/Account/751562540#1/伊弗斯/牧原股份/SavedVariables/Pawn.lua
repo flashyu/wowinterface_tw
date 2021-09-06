@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0526,
-	["LastPlayerFullName"] = "牧原股份-伊弗斯",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 28803,
@@ -75,9 +73,9 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:30841::::::::70::::::::|h[陰鬱城祈禱者之書]|h|r",
 		}, -- [14]
 		{
-			["ID"] = 28373,
-			["Level"] = 115,
-			["Link"] = "|cff0070dd|Hitem:28373::::::::70::::::::|h[閃爍光環披風]|h|r",
+			["ID"] = 28764,
+			["Level"] = 125,
+			["Link"] = "|cffa335ee|Hitem:28764::::::::70:::::::::|h[遠行者迷惑披風]|h|r",
 		}, -- [15]
 		{
 			["ID"] = 28771,
@@ -90,6 +88,8 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:28387::::::::70::::::::|h[安寧和祥提燈]|h|r",
 		}, -- [17]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "牧原股份-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {
