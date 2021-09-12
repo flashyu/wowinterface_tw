@@ -193,9 +193,9 @@ LootMonitorDB = {
 					},
 				}, -- [16]
 			},
-			["FirstClass"] = "UNKNOWN",
-			["Date"] = "2021-08-30",
 			["Class"] = "DRUID",
+			["Date"] = "2021-08-30",
+			["FirstClass"] = "UNKNOWN",
 			["InstanceName"] = "Karazhan",
 			["FirstPlayer"] = "未知",
 		}, -- [1]
@@ -205,8 +205,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "Metatron",
 			["InstanceName"] = "Gruul's Lair",
 			["Date"] = "2021-09-05",
-			["FirstClass"] = "PRIEST",
 			["Class"] = "DRUID",
+			["FirstClass"] = "PRIEST",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4490-565-4832-18831-000034B4D3",
@@ -252,8 +252,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "歐趴賊",
 			["InstanceName"] = "Magtheridon's Lair",
 			["Date"] = "2021-09-05",
-			["FirstClass"] = "ROGUE",
 			["Class"] = "DRUID",
+			["FirstClass"] = "ROGUE",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4490-544-6166-17257-000034C7C8",
@@ -278,8 +278,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "小冰妹",
 			["InstanceName"] = "Karazhan",
 			["Date"] = "2021-09-06",
-			["Class"] = "DRUID",
 			["FirstClass"] = "PRIEST",
+			["Class"] = "DRUID",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4490-532-21808-16152-00003631A6",
@@ -415,6 +415,68 @@ LootMonitorDB = {
 				}, -- [11]
 			},
 		}, -- [4]
+		{
+			["InstanceID"] = 565,
+			["Player"] = "牧原股份",
+			["FirstPlayer"] = "紅十字急救站",
+			["InstanceName"] = "Gruul's Lair",
+			["Date"] = "2021-09-12",
+			["Class"] = "DRUID",
+			["FirstClass"] = "PRIEST",
+			["LootTable"] = {
+				{
+					["GUID"] = "Creature-0-5580-565-7494-18831-00003DED00",
+					["Time"] = "20:52:06",
+					["Looter"] = "貓咪的尾巴",
+					["Date"] = "2021-09-12",
+					["Class"] = "PALADIN",
+					["Name"] = "大君王莫卡爾",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29763::::::::70:::::::::|h[逝往勇士肩鎧]|h|r", -- [1]
+						"|cffa335ee|Hitem:28795::::::::70:::::::::|h[劍刃氏族戰爭手環]|h|r", -- [2]
+					},
+				}, -- [1]
+				{
+					["GUID"] = "Creature-0-5580-565-7494-19044-00003DED00",
+					["Time"] = "21:07:27",
+					["Looter"] = "馨香",
+					["Date"] = "2021-09-12",
+					["Class"] = "MAGE",
+					["Name"] = "弒龍者戈魯爾",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29765::::::::70:::::::::|h[逝往英雄護腿]|h|r", -- [1]
+						"|cffa335ee|Hitem:28810::::::::70:::::::::|h[風剪長靴]|h|r", -- [2]
+						"|cffa335ee|Hitem:28827::::::::70:::::::::|h[屠龍者護手]|h|r", -- [3]
+					},
+				}, -- [2]
+			},
+		}, -- [5]
+		{
+			["InstanceID"] = 544,
+			["Player"] = "牧原股份",
+			["FirstPlayer"] = "牧原股份",
+			["InstanceName"] = "Magtheridon's Lair",
+			["Date"] = "2021-09-12",
+			["Class"] = "DRUID",
+			["FirstClass"] = "DRUID",
+			["LootTable"] = {
+				{
+					["GUID"] = "Creature-0-4491-544-14150-17257-00003DFE9C",
+					["Time"] = "21:37:58",
+					["Looter"] = "煙毒屍髮",
+					["Date"] = "2021-09-12",
+					["Class"] = "ROGUE",
+					["Name"] = "瑪瑟里頓",
+					["Loots"] = {
+						"|cffa335ee|Hitem:34845::::::::70:::::::::|h[深淵領主的背包]|h|r", -- [1]
+						"|cffa335ee|Hitem:28777::::::::70:::::::::|h[地窖潛行者披風]|h|r", -- [2]
+						"|cffa335ee|Hitem:28789::::::::70:::::::::|h[瑪瑟里頓之眼]|h|r", -- [3]
+						"|cffa335ee|Hitem:29755::::::::70:::::::::|h[逝往英雄護胸]|h|r", -- [4]
+						"|cffa335ee|Hitem:32386::::::::70:::::::::|h[瑪瑟里頓之首]|h|r", -- [5]
+					},
+				}, -- [1]
+			},
+		}, -- [6]
 	},
 	["Config"] = {
 		["ShowMinimapIcon"] = true,

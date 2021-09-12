@@ -229,6 +229,17 @@ function RSNpcDB.GetInternalNpcInfo(npcID)
 	return nil
 end
 
+function RSNpcDB.GetInternalMapID(npcID)
+	if (npcID) then
+		if (RSNpcDB.IsInternalNpcMonoZone(npcID)) then
+			local npcInfo = RSNpcDB.GetInternalNpcInfo(npcID)
+			return npcInfo.zoneID
+		end
+	end
+	
+	return nil
+end
+
 local function GetInternalNpcInfoByMapID(npcID, mapID)
 	if (npcID and mapID) then
 		if (RSNpcDB.IsInternalNpcMultiZone(npcID)) then

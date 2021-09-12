@@ -35,6 +35,37 @@ TomTomWaypointsM = {
 	},
 	["profiles"] = {
 		["牧原股份 - 伊弗斯"] = {
+			[1944] = {
+				["1944:460146699.2665:545965770.17115:集合石"] = {
+					1944, -- [1]
+					0.4601466992665037, -- [2]
+					0.5459657701711492, -- [3]
+					["arrivaldistance"] = 15,
+					["callbacks"] = {
+						["distance"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+					},
+					["persistent"] = true,
+					["minimap"] = true,
+					["cleardistance"] = 10,
+					["title"] = "集合石",
+					["from"] = "?",
+					["crazy"] = true,
+					["world"] = true,
+				},
+			},
 		},
 		["豬圈一 - 伊弗斯"] = {
 		},

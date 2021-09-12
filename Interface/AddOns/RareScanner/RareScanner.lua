@@ -276,6 +276,13 @@ scanner_button:SetScript("OnEvent", function(self, event, ...)
 				-- If player in a zone with vignettes ignore it
 				local mapID = C_Map.GetBestMapForUnit("player")
 				if (not mapID) then
+					-- Check if the NPC is in a dungeon
+					mapID = RSNpcDB.GetInternalMapID(npcID)
+					if (mapID and private.DUNGEONS_IDS[mapID]) then
+						local nameplateUnitName, _ = UnitName(nameplateid)
+						self:SimulateRareFound(npcID, nameplateUnitGuid, nameplateUnitName, 0, 0, RSConstants.NPC_VIGNETTE)
+					end
+					
 					return
 				end
 
@@ -536,6 +543,7 @@ function scanner_button:SimulateRareFound(npcID, objectGUID, name, x, y, atlasNa
 	vignetteInfo.objectGUID = objectGUID or string.format("a-a-a-a-a-%s-a", npcID)
 	vignetteInfo.x = x
 	vignetteInfo.y = y
+	vignetteInfo.mapID = RSNpcDB.GetInternalMapID(npcID)
 	self:DetectedNewVignette(self, vignetteInfo)
 end
 
@@ -849,7 +857,7 @@ function scanner_button:DetectedNewVignette(self, vignetteInfo, isNavigating)
 		return
 	end
 
-	local mapID = C_Map.GetBestMapForUnit("player")
+	local mapID = C_Map.GetBestMapForUnit("player") or vignetteInfo.mapID
 
 	if (not isNavigating) then
 		-- If the vignette is simulated
