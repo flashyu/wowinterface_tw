@@ -8,3 +8,4 @@ ElvUI_DTBars2: disabled
 ElvUI_QuestXP: disabled
 WeakAurasCompanion: enabled
 WeakAurasArchive: enabled
+Plater: disabled

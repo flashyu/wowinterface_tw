@@ -7,6 +7,9 @@ AdiBagsDB = {
 			["profiles"] = {
 				["Default"] = {
 					["version"] = 3,
+					["overrides"] = {
+						[28663] = "裝備#護甲",
+					},
 				},
 			},
 		},

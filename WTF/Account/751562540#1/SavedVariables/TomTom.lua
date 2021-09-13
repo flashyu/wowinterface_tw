@@ -41,6 +41,13 @@ TomTomWaypointsM = {
 					0.4601466992665037, -- [2]
 					0.5459657701711492, -- [3]
 					["arrivaldistance"] = 15,
+					["crazy"] = true,
+					["persistent"] = true,
+					["desc"] = "集合石",
+					["silent"] = true,
+					["cleardistance"] = 10,
+					["title"] = "集合石",
+					["from"] = "?",
 					["callbacks"] = {
 						["distance"] = {
 							[10] = nil --[[ skipped inline function ]],
@@ -57,12 +64,7 @@ TomTomWaypointsM = {
 							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 					},
-					["persistent"] = true,
 					["minimap"] = true,
-					["cleardistance"] = 10,
-					["title"] = "集合石",
-					["from"] = "?",
-					["crazy"] = true,
 					["world"] = true,
 				},
 			},
