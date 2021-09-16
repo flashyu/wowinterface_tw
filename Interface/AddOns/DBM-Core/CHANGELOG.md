@@ -1,16 +1,14 @@
 # Deadly Boss Mods Core
 
-## [2.5.11](https://github.com/DeadlyBossMods/DBM-TBC-Classic/tree/2.5.11) (2021-08-31)
-[Full Changelog](https://github.com/DeadlyBossMods/DBM-TBC-Classic/compare/2.5.10...2.5.11) [Previous Releases](https://github.com/DeadlyBossMods/DBM-TBC-Classic/releases)
+## [2.5.12](https://github.com/DeadlyBossMods/DBM-TBC-Classic/tree/2.5.12) (2021-09-14)
+[Full Changelog](https://github.com/DeadlyBossMods/DBM-TBC-Classic/compare/2.5.11...2.5.12) [Previous Releases](https://github.com/DeadlyBossMods/DBM-TBC-Classic/releases)
 
-- Update Chromaggus for TBC which uses multiple spellId's  
-- prevent duplicate timer entries through additional validation check  
-- bump all tocs and prepare release  
-- Fixed Typo (#46)  
-- Update koKR (BCC) (#45)  
-- adjust phase 4 start timer to pre nerf value for kaelThas  
-- Fix KT lua error  
-- fixed bug in last  
-- Improve support for pre nerf solarian  
-- improve excludes  
-- increment alpha version  
+- Prep new tags  
+- Fix other adds icon  
+- Fix icon for Shade in BT  
+- Sync bad args fix from classic.  
+- Deploy DBM-TBC with Meo's taintfix library for entering battlegrounds  
+- Fix p3 phase timer start. when i took a minute off, i took 100 off because I'm dumb, meant to take only 60 off  
+- By user request, keep whirlwind timer on screen when CD ends for Maulgar  
+- Change Magtheridon TW yell, Closes #47  
+- bump alpha  

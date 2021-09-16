@@ -3,7 +3,7 @@ VER 3 0000000000000008 "Decursive" "INV_MISC_QUESTIONMARK"
 /cast [@mouseover,nomod,exists] 解除詛咒;  [@mouseover,exists,mod:ctrl] 驅毒術; [@mouseover,exists,mod:shift] 解除詛咒
 END
 VER 3 0000000000000004 "target" "132177"
-/target 拉文德維爾
+/target 塞可長者
 END
 VER 3 0000000000000006 "割碎" "132135"
 #showtooltip
@@ -49,4 +49,7 @@ END
 VER 3 0000000000000001 "遠視" "132150"
 /console cameraDistanceMaxZoomFactor 4
 /console ffxDeath 0
+END
+VER 3 000000000000000C "鑰匙包" "135828"
+/script ToggleBag(KEYRING_CONTAINER)
 END

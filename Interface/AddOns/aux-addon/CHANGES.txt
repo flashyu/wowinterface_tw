@@ -1,10 +1,10 @@
-lightweight tag 44e768f3b16cd9663bd538f3d1031ae0a46a6892 v2.1.10
+lightweight tag 58f1b99a270e734a66148d40aafdb864cb05813f v2.1.11
 Author:	Simon Hirsig <simon.hirsig@gmail.com>
-Date:	Wed Sep 1 17:47:08 2021 +0200
+Date:	Wed Sep 15 21:16:26 2021 +0200
 
-commit 44e768f3b16cd9663bd538f3d1031ae0a46a6892
+commit 58f1b99a270e734a66148d40aafdb864cb05813f
 Author: Simon Hirsig <simon.hirsig@gmail.com>
-Date:   Wed Sep 1 17:47:08 2021 +0200
+Date:   Wed Sep 15 21:16:26 2021 +0200
 
-    disabling stack count when posting suffix items because the api ignores them
+    updating client version
 

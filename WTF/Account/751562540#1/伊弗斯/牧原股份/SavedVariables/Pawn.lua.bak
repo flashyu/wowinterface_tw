@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0527,
-	["LastPlayerFullName"] = "牧原股份-伊弗斯",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 28803,
@@ -51,16 +49,16 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:27468::::::::70::::::::|h[月光林地裹手]|h|r",
 		}, -- [10]
 		{
-			["ID"] = 28790,
-			["Level"] = 125,
+			["ID"] = 29290,
+			["Level"] = 130,
 			["AlsoFitsIn"] = 12,
-			["Link"] = "|cffa335ee|Hitem:28790::::::::70:::::::::|h[那魯光明護衛指環]|h|r",
+			["Link"] = "|cffa335ee|Hitem:29290::::::::70:::::::::|h[大治癒者之紫羅蘭徽記]|h|r",
 		}, -- [11]
 		{
-			["ID"] = 28790,
-			["Level"] = 125,
+			["ID"] = 29290,
+			["Level"] = 130,
 			["AlsoFitsIn"] = 11,
-			["Link"] = "|cffa335ee|Hitem:28790:2930:::::::70:::::::::|h[那魯光明護衛指環]|h|r",
+			["Link"] = "|cffa335ee|Hitem:29290:2930:::::::70:::::::::|h[大治癒者之紫羅蘭徽記]|h|r",
 		}, -- [12]
 		{
 			["ID"] = 28190,
@@ -90,6 +88,8 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:28387::::::::70::::::::|h[安寧和祥提燈]|h|r",
 		}, -- [17]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "牧原股份-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {
