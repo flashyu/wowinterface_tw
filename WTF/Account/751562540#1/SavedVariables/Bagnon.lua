@@ -30,9 +30,6 @@ Bagnon_Sets = {
 	["mineColor"] = {
 	},
 	["version"] = "9.0.8",
-	["displayBlizzard"] = false,
-	["fridgeColor"] = {
-	},
 	["global"] = {
 		["inventory"] = {
 			["rules"] = {
@@ -179,4 +176,7 @@ Bagnon_Sets = {
 			["showBags"] = true,
 		},
 	},
+	["fridgeColor"] = {
+	},
+	["displayBlizzard"] = false,
 }

@@ -19,3 +19,4 @@ AdiBags: enabled
 WideQuestLogLevels: enabled
 InFlight: disabled
 ItemRackOptions: enabled
+BattleGroundEnemies: disabled

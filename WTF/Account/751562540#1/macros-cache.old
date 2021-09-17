@@ -50,3 +50,6 @@ VER 3 0000000000000001 "遠視" "132150"
 /console cameraDistanceMaxZoomFactor 4
 /console ffxDeath 0
 END
+VER 3 000000000000000C "鑰匙包" "135828"
+/script ToggleBag(KEYRING_CONTAINER)
+END

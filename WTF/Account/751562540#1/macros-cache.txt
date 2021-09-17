@@ -33,7 +33,7 @@ END
 VER 3 0000000000000007 "跑路" "132128"
 #showtooltip
 /cast 迅捷紫色雙足飛龍
-/cast [swimming]!水棲形態;[indoors]!獵豹形態;[flyable,nocombat]!飛行形態;!旅行形態
+/cast [swimming]!水棲形態;[indoors]!獵豹形態;[flyable,nocombat]!迅捷飛行形態;!旅行形態
 END
 VER 3 0000000000000009 "迅愈" "136015"
 #showtooltip

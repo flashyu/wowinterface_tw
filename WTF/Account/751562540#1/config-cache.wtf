@@ -1,6 +1,6 @@
 SET showTargetOfTarget "1"
 SET instantQuestText "1"
-SET flaggedTutorials "v##M##$##=##8##&##%##'##+##,##;##E##1##:##6##5##-##4##K##F##A##(##C##3##.##/##<##)##*##7##J##9##I##D##0##L##N##?##@##U##O##Q##>##S"
+SET flaggedTutorials "v##M##$##=##8##&##%##'##+##,##;##E##1##:##6##5##-##4##K##F##A##(##C##3##.##/##<##)##*##7##J##9##I##D##0##L##N##?##@##U##O##Q##>##S##T"
 SET actionedAdventureJournalEntries "v"
 SET guildShowOffline "0"
 SET nameplateTargetRadialPosition "1"
