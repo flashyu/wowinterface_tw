@@ -1,0 +1,26 @@
+## Interface: 20501
+## Version: 9.1.000
+## Title: |cFF22B14CCoolLine v|r9.1.000
+
+## Notes: Shows cooldowns on a single bar. |cff00b3ff v9.1.000 (Burning Crusade)|r modifications by |cff00ffdaLoneWanderer-GH
+
+## Author: TotalPackage, Phanx, |cff00ffdaLoneWanderer-GH|r with contributions from |cFF22B14Ccapoferro
+
+## X-Curse-Project-ID: 356973
+
+## SavedVariables: CoolLineDB
+## SavedVariablesPerCharacter: CoolLineCharDB
+
+## OptionalDeps: LibSharedMedia-3.0
+
+## LoadManagers: AddonLoader
+## X-LoadOn-Always: delayed
+
+# packaged on 20210529150243
+
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+Libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua
+
+core.lua
+

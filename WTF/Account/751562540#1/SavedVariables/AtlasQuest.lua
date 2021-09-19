@@ -1,5 +1,6 @@
 
 AtlasQuest_Options = {
+	["Version"] = "4.12.82",
 	["豬圈一"] = {
 		["ShownSide"] = "Left",
 		["AtlasAutoShow"] = 1,
@@ -8,5 +9,4 @@ AtlasQuest_Options = {
 		["ShownSide"] = "Left",
 		["AtlasAutoShow"] = 1,
 	},
-	["Version"] = "4.12.82",
 }
