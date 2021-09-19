@@ -1,8 +1,8 @@
 
 TomTomDB = {
 	["profileKeys"] = {
-		["豬圈一 - 伊弗斯"] = "Default",
 		["牧原股份 - 伊弗斯"] = "Default",
+		["豬圈一 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -30,12 +30,10 @@ TomTomDB = {
 TomTomWaypoints = nil
 TomTomWaypointsM = {
 	["profileKeys"] = {
-		["豬圈一 - 伊弗斯"] = "豬圈一 - 伊弗斯",
 		["牧原股份 - 伊弗斯"] = "牧原股份 - 伊弗斯",
+		["豬圈一 - 伊弗斯"] = "豬圈一 - 伊弗斯",
 	},
 	["profiles"] = {
-		["豬圈一 - 伊弗斯"] = {
-		},
 		["牧原股份 - 伊弗斯"] = {
 			[1421] = {
 				["1421:461858190.70905:683374083.12958:集合石"] = {
@@ -43,6 +41,13 @@ TomTomWaypointsM = {
 					0.4618581907090465, -- [2]
 					0.6833740831295843, -- [3]
 					["arrivaldistance"] = 15,
+					["crazy"] = true,
+					["persistent"] = true,
+					["desc"] = "集合石",
+					["silent"] = true,
+					["cleardistance"] = 10,
+					["title"] = "集合石",
+					["from"] = "?",
 					["callbacks"] = {
 						["distance"] = {
 							[10] = nil --[[ skipped inline function ]],
@@ -59,15 +64,12 @@ TomTomWaypointsM = {
 							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 					},
-					["persistent"] = true,
 					["minimap"] = true,
-					["cleardistance"] = 10,
-					["title"] = "集合石",
-					["from"] = "?",
-					["crazy"] = true,
 					["world"] = true,
 				},
 			},
+		},
+		["豬圈一 - 伊弗斯"] = {
 		},
 	},
 }

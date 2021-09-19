@@ -7,7 +7,7 @@ ItemRackUser = {
 	["MainScale"] = 1,
 	["SetMenuWrapValue"] = 3,
 	["SetMenuWrap"] = "OFF",
-	["EnableQueues"] = "ON",
+	["CurrentSet"] = "Health",
 	["Sets"] = {
 		["Health"] = {
 			["Queues"] = {
@@ -39,51 +39,6 @@ ItemRackUser = {
 			["icon"] = 133526,
 			["old"] = {
 				[14] = "32481::::::::70:::::::::",
-			},
-		},
-		["~Unequip"] = {
-			["equip"] = {
-			},
-		},
-		["飛行"] = {
-			["oldset"] = "Health",
-			["equip"] = {
-				[14] = "32481::::::::70:::::::::",
-			},
-			["icon"] = 136037,
-			["old"] = {
-				[14] = "28590::::::::70:::::::::",
-			},
-		},
-		["~CombatQueue"] = {
-			["equip"] = {
-			},
-		},
-		["Null"] = {
-			["Queues"] = {
-				{
-				}, -- [1]
-			},
-			["equip"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				nil, -- [4]
-				0, -- [5]
-				0, -- [6]
-				0, -- [7]
-				0, -- [8]
-				0, -- [9]
-				0, -- [10]
-				nil, -- [11]
-				nil, -- [12]
-				0, -- [13]
-				0, -- [14]
-				0, -- [15]
-				0, -- [16]
-			},
-			["icon"] = 136520,
-			["old"] = {
 			},
 		},
 		["TT"] = {
@@ -140,8 +95,54 @@ ItemRackUser = {
 				"27886::::::::70:::::::::", -- [18]
 			},
 		},
+		["飛行"] = {
+			["oldset"] = "Health",
+			["equip"] = {
+				[14] = "32481::::::::70:::::::::",
+			},
+			["icon"] = 136037,
+			["old"] = {
+				[14] = "28590::::::::70:::::::::",
+			},
+		},
+		["~CombatQueue"] = {
+			["equip"] = {
+				[14] = "28590::::::::70:::::::::",
+			},
+		},
+		["Null"] = {
+			["equip"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				nil, -- [4]
+				0, -- [5]
+				0, -- [6]
+				0, -- [7]
+				0, -- [8]
+				0, -- [9]
+				0, -- [10]
+				nil, -- [11]
+				nil, -- [12]
+				0, -- [13]
+				0, -- [14]
+				0, -- [15]
+				0, -- [16]
+			},
+			["Queues"] = {
+				{
+				}, -- [1]
+			},
+			["icon"] = 136520,
+			["old"] = {
+			},
+		},
+		["~Unequip"] = {
+			["equip"] = {
+			},
+		},
 	},
-	["EnablePerSetQueues"] = "OFF",
+	["EnableQueues"] = "ON",
 	["Queues"] = {
 		{
 			"25975::::::::66::::::::", -- [1]
@@ -168,7 +169,8 @@ ItemRackUser = {
 			0, -- [4]
 		},
 	},
-	["Alpha"] = 1,
+	["Buttons"] = {
+	},
 	["ItemsUsed"] = {
 	},
 	["Events"] = {
@@ -179,16 +181,15 @@ ItemRackUser = {
 		},
 		["Set"] = {
 			["飛行"] = "飛行",
-			["Druid Tree of Life"] = "Health",
-			["Druid Bear"] = "TT",
 			["Druid Humanoid"] = "Health",
+			["Druid Bear"] = "TT",
+			["Druid Tree of Life"] = "Health",
 		},
 	},
+	["EnableEvents"] = "ON",
 	["Hidden"] = {
 	},
-	["EnableEvents"] = "ON",
-	["Buttons"] = {
-	},
+	["Alpha"] = 1,
 	["MenuScale"] = 0.85,
-	["CurrentSet"] = "飛行",
+	["EnablePerSetQueues"] = "OFF",
 }
