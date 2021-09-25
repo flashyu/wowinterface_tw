@@ -58,8 +58,8 @@ HealBot_Config = {
 	["Skin_ID"] = -1,
 	["Profile"] = 1,
 	["LastAutoSkinChangeType"] = "None",
-	["LastAutoSkinChangeTime"] = 162935.489,
 	["EnableHealthy"] = true,
+	["LastAutoSkinChangeTime"] = 29547.511,
 	["DisableSolo"] = false,
 	["CurrentSpec"] = 1,
 	["DisableHealBot"] = false,
@@ -81,13 +81,13 @@ HealBot_Config_Spells = {
 	},
 	["EmergSpellTrinket1"] = {
 	},
-	["ButtonCastMethod"] = 2,
+	["EmergSpellTarget"] = {
+	},
 	["EmergAvoidBlueCursor"] = {
 	},
 	["EmergSpellTrinket2"] = {
 	},
-	["EmergSpellTarget"] = {
-	},
+	["ButtonCastMethod"] = 2,
 	["EmergKeyCombo"] = {
 	},
 	["EnabledKeyCombo"] = {

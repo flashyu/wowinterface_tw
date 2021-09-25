@@ -3363,5 +3363,165 @@ MailLoggerDB = {
 			["ReceiveItems"] = {
 			},
 		}, -- [197]
+		{
+			["TargetName"] = "終焉之戰",
+			["Date"] = "2021-09-19",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "風暴要塞",
+			["PlayerName"] = "牧原股份",
+			["Time"] = "22:39:55",
+			["ReceiveItems"] = {
+			},
+		}, -- [198]
+		{
+			["TargetName"] = "終焉之戰",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-09-19",
+			["ReceiveMoney"] = 0,
+			["Time"] = "22:39:55",
+			["GiveMoney"] = 2000000,
+			["Location"] = "風暴要塞",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+				{
+					["Number"] = 1,
+					["ItemLink"] = "|cffa335ee|Hitem:29984::::::::70:::::::::|h[札爾塔束腰]|h|r",
+					["Name"] = "札爾塔束腰",
+				}, -- [1]
+			},
+		}, -- [199]
+		{
+			["TargetName"] = "卐紅猴卐",
+			["Date"] = "2021-09-20",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "虛空風暴",
+			["PlayerName"] = "牧原股份",
+			["Time"] = "00:45:27",
+			["ReceiveItems"] = {
+			},
+		}, -- [200]
+		{
+			["TargetName"] = "卐紅猴卐",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-09-20",
+			["ReceiveMoney"] = 620000,
+			["Time"] = "00:45:27",
+			["GiveMoney"] = 0,
+			["Location"] = "虛空風暴",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [201]
+		{
+			["TargetName"] = "辛多雷之女",
+			["Date"] = "2021-09-20",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "虛空風暴",
+			["PlayerName"] = "牧原股份",
+			["Time"] = "00:45:45",
+			["ReceiveItems"] = {
+			},
+		}, -- [202]
+		{
+			["TargetName"] = "辛多雷之女",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-09-20",
+			["ReceiveMoney"] = 9440000,
+			["Time"] = "00:45:45",
+			["GiveMoney"] = 0,
+			["Location"] = "虛空風暴",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [203]
+		{
+			["Date"] = "2021-09-25",
+			["TargetName"] = "Kitt",
+			["ReceiveMoney"] = 0,
+			["Time"] = "11:42:15",
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["GiveItems"] = {
+			},
+			["PlayerName"] = "牧原股份",
+			["ReceiveItems"] = {
+			},
+		}, -- [204]
+		{
+			["TargetName"] = "Kitt",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-09-25",
+			["ReceiveMoney"] = 0,
+			["Time"] = "11:42:15",
+			["GiveMoney"] = 500000,
+			["Location"] = "撒塔斯城",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [205]
+		{
+			["PlayerName"] = "牧原股份",
+			["TargetName"] = "部落拍賣場",
+			["Reason"] = 1,
+			["Date"] = "2021-09-25",
+			["ReceiveMoney"] = 0,
+			["Time"] = "12:04:24",
+			["GiveMoney"] = 0,
+			["Location"] = "奧格瑪",
+			["GiveItems"] = {
+			},
+			["Result"] = "received",
+			["ReceiveItems"] = {
+				{
+					["Number"] = 1,
+					["ItemLink"] = "|cff1eff00|Hitem:21885::::::::70:::::::::|h[原始之水]|h|r",
+					["Name"] = "原始之水",
+				}, -- [1]
+			},
+		}, -- [206]
+		{
+			["Date"] = "2021-09-25",
+			["PlayerName"] = "牧原股份",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "瑪瑟里頓的巢穴",
+			["TargetName"] = "我有小琥牙",
+			["Time"] = "15:34:42",
+			["ReceiveItems"] = {
+			},
+		}, -- [207]
+		{
+			["TargetName"] = "我有小琥牙",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2021-09-25",
+			["ReceiveMoney"] = 6600000,
+			["Time"] = "15:34:42",
+			["GiveMoney"] = 0,
+			["Location"] = "瑪瑟里頓的巢穴",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [208]
 	},
 }
