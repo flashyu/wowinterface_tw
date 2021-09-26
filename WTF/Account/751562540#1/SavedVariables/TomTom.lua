@@ -1,8 +1,8 @@
 
 TomTomDB = {
 	["profileKeys"] = {
-		["牧原股份 - 伊弗斯"] = "Default",
 		["豬圈一 - 伊弗斯"] = "Default",
+		["牧原股份 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -30,45 +30,18 @@ TomTomDB = {
 TomTomWaypoints = nil
 TomTomWaypointsM = {
 	["profileKeys"] = {
-		["牧原股份 - 伊弗斯"] = "牧原股份 - 伊弗斯",
 		["豬圈一 - 伊弗斯"] = "豬圈一 - 伊弗斯",
+		["牧原股份 - 伊弗斯"] = "牧原股份 - 伊弗斯",
 	},
 	["profiles"] = {
+		["豬圈一 - 伊弗斯"] = {
+		},
 		["牧原股份 - 伊弗斯"] = {
-			[1944] = {
-				["1944:549000000:360000000:卡萨雷兹"] = {
-					1944, -- [1]
-					0.5489999999999999, -- [2]
-					0.36, -- [3]
-					["arrivaldistance"] = 15,
-					["callbacks"] = {
-						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-					},
-					["persistent"] = true,
-					["minimap"] = true,
-					["cleardistance"] = 10,
-					["title"] = "卡萨雷兹",
-					["from"] = "?",
-					["crazy"] = true,
-					["world"] = true,
-				},
-				["1944:564547677.26161:379706601.46699:郵箱"] = {
-					1944, -- [1]
-					0.5645476772616137, -- [2]
-					0.3797066014669926, -- [3]
+			[1955] = {
+				["1955:469193154.03423:253545232.27384:郵箱"] = {
+					1955, -- [1]
+					0.4691931540342298, -- [2]
+					0.2535452322738386, -- [3]
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
@@ -95,8 +68,6 @@ TomTomWaypointsM = {
 					["world"] = true,
 				},
 			},
-		},
-		["豬圈一 - 伊弗斯"] = {
 		},
 	},
 }

@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0527,
-	["LastPlayerFullName"] = "牧原股份-伊弗斯",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 28803,
@@ -41,9 +39,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:30092::24029:24029:::::70:::::::::|h[逆戟鯨皮之靴]|h|r",
 		}, -- [8]
 		{
-			["ID"] = 28174,
-			["Level"] = 115,
-			["Link"] = "|cff0070dd|Hitem:28174::::::::70::::::::|h[撒塔斯裹帶]|h|r",
+			["ID"] = 30062,
+			["Level"] = 128,
+			["Link"] = "|cffa335ee|Hitem:30062:2617:::::::70:::::::::|h[雷姆洛斯樹叢手環]|h|r",
 		}, -- [9]
 		{
 			["ID"] = 27468,
@@ -90,6 +88,8 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:28387::::::::70::::::::|h[安寧和祥提燈]|h|r",
 		}, -- [17]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "牧原股份-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {
