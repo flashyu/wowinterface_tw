@@ -2,75 +2,13 @@
 LootMonitorDB = {
 	["LootLog"] = {
 		{
-			["InstanceID"] = 565,
-			["Player"] = "牧原股份",
-			["FirstPlayer"] = "紅十字急救站",
-			["InstanceName"] = "Gruul's Lair",
-			["Date"] = "2021-09-12",
-			["Class"] = "DRUID",
-			["FirstClass"] = "PRIEST",
-			["LootTable"] = {
-				{
-					["GUID"] = "Creature-0-5580-565-7494-18831-00003DED00",
-					["Time"] = "20:52:06",
-					["Looter"] = "貓咪的尾巴",
-					["Date"] = "2021-09-12",
-					["Class"] = "PALADIN",
-					["Name"] = "大君王莫卡爾",
-					["Loots"] = {
-						"|cffa335ee|Hitem:29763::::::::70:::::::::|h[逝往勇士肩鎧]|h|r", -- [1]
-						"|cffa335ee|Hitem:28795::::::::70:::::::::|h[劍刃氏族戰爭手環]|h|r", -- [2]
-					},
-				}, -- [1]
-				{
-					["GUID"] = "Creature-0-5580-565-7494-19044-00003DED00",
-					["Time"] = "21:07:27",
-					["Looter"] = "馨香",
-					["Date"] = "2021-09-12",
-					["Class"] = "MAGE",
-					["Name"] = "弒龍者戈魯爾",
-					["Loots"] = {
-						"|cffa335ee|Hitem:29765::::::::70:::::::::|h[逝往英雄護腿]|h|r", -- [1]
-						"|cffa335ee|Hitem:28810::::::::70:::::::::|h[風剪長靴]|h|r", -- [2]
-						"|cffa335ee|Hitem:28827::::::::70:::::::::|h[屠龍者護手]|h|r", -- [3]
-					},
-				}, -- [2]
-			},
-		}, -- [1]
-		{
-			["InstanceID"] = 544,
-			["Player"] = "牧原股份",
-			["FirstPlayer"] = "牧原股份",
-			["InstanceName"] = "Magtheridon's Lair",
-			["Date"] = "2021-09-12",
-			["Class"] = "DRUID",
-			["FirstClass"] = "DRUID",
-			["LootTable"] = {
-				{
-					["GUID"] = "Creature-0-4491-544-14150-17257-00003DFE9C",
-					["Time"] = "21:37:58",
-					["Looter"] = "煙毒屍髮",
-					["Date"] = "2021-09-12",
-					["Class"] = "ROGUE",
-					["Name"] = "瑪瑟里頓",
-					["Loots"] = {
-						"|cffa335ee|Hitem:34845::::::::70:::::::::|h[深淵領主的背包]|h|r", -- [1]
-						"|cffa335ee|Hitem:28777::::::::70:::::::::|h[地窖潛行者披風]|h|r", -- [2]
-						"|cffa335ee|Hitem:28789::::::::70:::::::::|h[瑪瑟里頓之眼]|h|r", -- [3]
-						"|cffa335ee|Hitem:29755::::::::70:::::::::|h[逝往英雄護胸]|h|r", -- [4]
-						"|cffa335ee|Hitem:32386::::::::70:::::::::|h[瑪瑟里頓之首]|h|r", -- [5]
-					},
-				}, -- [1]
-			},
-		}, -- [2]
-		{
 			["InstanceID"] = 532,
 			["Player"] = "牧原股份",
 			["FirstPlayer"] = "強運魔人",
 			["InstanceName"] = "Karazhan",
 			["Date"] = "2021-09-13",
-			["FirstClass"] = "PALADIN",
 			["Class"] = "DRUID",
+			["FirstClass"] = "PALADIN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4490-532-25060-16152-00003F6C72",
@@ -226,15 +164,15 @@ LootMonitorDB = {
 					},
 				}, -- [13]
 			},
-		}, -- [3]
+		}, -- [1]
 		{
 			["InstanceID"] = 550,
 			["Player"] = "牧原股份",
 			["FirstPlayer"] = "未知",
 			["InstanceName"] = "Tempest Keep",
 			["Date"] = "2021-09-19",
-			["FirstClass"] = "UNKNOWN",
 			["Class"] = "DRUID",
+			["FirstClass"] = "UNKNOWN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4490-550-28822-20031-00014722C7",
@@ -349,15 +287,15 @@ LootMonitorDB = {
 					},
 				}, -- [10]
 			},
-		}, -- [4]
+		}, -- [2]
 		{
 			["InstanceID"] = 565,
 			["Player"] = "牧原股份",
 			["FirstPlayer"] = "偶盈",
 			["InstanceName"] = "Gruul's Lair",
 			["Date"] = "2021-09-25",
-			["FirstClass"] = "PALADIN",
 			["Class"] = "DRUID",
+			["FirstClass"] = "PALADIN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-5580-565-23081-18831-00004EBFB8",
@@ -387,15 +325,15 @@ LootMonitorDB = {
 					},
 				}, -- [2]
 			},
-		}, -- [5]
+		}, -- [3]
 		{
 			["InstanceID"] = 544,
 			["Player"] = "牧原股份",
 			["FirstPlayer"] = "牧原股份",
 			["InstanceName"] = "Magtheridon's Lair",
 			["Date"] = "2021-09-25",
-			["FirstClass"] = "DRUID",
 			["Class"] = "DRUID",
+			["FirstClass"] = "DRUID",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-5580-544-24654-17257-00004ECB5E",
@@ -414,15 +352,15 @@ LootMonitorDB = {
 					},
 				}, -- [1]
 			},
-		}, -- [6]
+		}, -- [4]
 		{
 			["InstanceID"] = 548,
 			["Player"] = "牧原股份",
 			["FirstPlayer"] = "柒刻",
 			["InstanceName"] = "Serpentshrine Cavern",
 			["Date"] = "2021-09-25",
-			["Class"] = "DRUID",
 			["FirstClass"] = "SHAMAN",
+			["Class"] = "DRUID",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-5580-548-4303-21216-00004F0DBB",
@@ -508,7 +446,88 @@ LootMonitorDB = {
 					},
 				}, -- [7]
 			},
-		}, -- [7]
+		}, -- [5]
+		{
+			["InstanceID"] = 550,
+			["FirstPlayer"] = "未知",
+			["InstanceName"] = "Tempest Keep",
+			["Class"] = "DRUID",
+			["Date"] = "2021-09-26",
+			["FirstClass"] = "UNKNOWN",
+			["LootTable"] = {
+				{
+					["GUID"] = "Creature-0-5580-550-29713-19514-00005073DE",
+					["Time"] = "21:35:35",
+					["Class"] = "WARRIOR",
+					["Date"] = "2021-09-26",
+					["Looter"] = "特變電工",
+					["Name"] = "歐爾",
+					["Loots"] = {
+						"|cffa335ee|Hitem:30448::::::::70:::::::::|h[歐爾之爪]|h|r", -- [1]
+						"|cffa335ee|Hitem:30447::::::::70:::::::::|h[火焰救贖寶典]|h|r", -- [2]
+					},
+				}, -- [1]
+				{
+					["GUID"] = "Creature-0-5580-550-29713-20041-0000505E13",
+					["Time"] = "21:43:01",
+					["Class"] = "PALADIN",
+					["Date"] = "2021-09-26",
+					["Looter"] = "歐艾丹",
+					["Name"] = "水晶之核哨兵",
+					["Loots"] = {
+						"|cffa335ee|Hitem:30304::::::::70:::::::::|h[圖樣:季風腰帶]|h|r", -- [1]
+					},
+				}, -- [2]
+				{
+					["GUID"] = "Creature-0-5580-550-29713-19516-0000505E13",
+					["Time"] = "22:08:55",
+					["Class"] = "WARLOCK",
+					["Date"] = "2021-09-26",
+					["Looter"] = "來與正妹裸聊",
+					["Name"] = "虛無搶奪者",
+					["Loots"] = {
+						"|cffa335ee|Hitem:30249::::::::70:::::::::|h[征服防衛者肩鎧]|h|r", -- [1]
+						"|cffa335ee|Hitem:29985::::::::70:::::::::|h[虛無搶奪者護脛]|h|r", -- [2]
+						"|cffa335ee|Hitem:30249::::::::70:::::::::|h[征服防衛者肩鎧]|h|r", -- [3]
+					},
+				}, -- [3]
+				{
+					["GUID"] = "Creature-0-5580-550-29713-20044-0002D05E13",
+					["Time"] = "22:15:42",
+					["Class"] = "PALADIN",
+					["Date"] = "2021-09-26",
+					["Looter"] = "啾咪丸",
+					["Name"] = "星術師初學者",
+					["Loots"] = {
+						"|cffa335ee|Hitem:30183::::::::70:::::::::|h[虛空漩渦]|h|r", -- [1]
+					},
+				}, -- [4]
+				{
+					["GUID"] = "Creature-0-5580-550-29713-20036-0001D05E14",
+					["Time"] = "22:30:05",
+					["Class"] = "WARRIOR",
+					["Date"] = "2021-09-26",
+					["Looter"] = "特變電工",
+					["Name"] = "血守衛扈從",
+					["Loots"] = {
+						"|cffa335ee|Hitem:30029::::::::70:::::::::|h[古老智慧的樹皮手套]|h|r", -- [1]
+					},
+				}, -- [5]
+				{
+					["GUID"] = "Creature-0-5580-550-29713-18805-0000505E13",
+					["Time"] = "23:04:31",
+					["Class"] = "WARRIOR",
+					["Date"] = "2021-09-26",
+					["Looter"] = "特變電工",
+					["Name"] = "高階星術師索拉瑞恩",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29982::::::::70:::::::::|h[被遺忘之星魔杖]|h|r", -- [1]
+						"|cffa335ee|Hitem:29962::::::::70:::::::::|h[撕心匕首]|h|r", -- [2]
+					},
+				}, -- [6]
+			},
+			["Player"] = "牧原股份",
+		}, -- [6]
 	},
 	["Config"] = {
 		["ShowMinimapIcon"] = true,

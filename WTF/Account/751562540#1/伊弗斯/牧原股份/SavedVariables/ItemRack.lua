@@ -7,7 +7,7 @@ ItemRackUser = {
 	["MainScale"] = 1,
 	["SetMenuWrapValue"] = 3,
 	["SetMenuWrap"] = "OFF",
-	["EnableQueues"] = "ON",
+	["EnablePerSetQueues"] = "OFF",
 	["Sets"] = {
 		["Health"] = {
 			["Queues"] = {
@@ -60,10 +60,6 @@ ItemRackUser = {
 			},
 		},
 		["Null"] = {
-			["Queues"] = {
-				{
-				}, -- [1]
-			},
 			["equip"] = {
 				0, -- [1]
 				0, -- [2]
@@ -82,19 +78,15 @@ ItemRackUser = {
 				0, -- [15]
 				0, -- [16]
 			},
+			["Queues"] = {
+				{
+				}, -- [1]
+			},
 			["icon"] = 136520,
 			["old"] = {
 			},
 		},
 		["TT"] = {
-			["Queues"] = {
-				{
-				}, -- [1]
-				{
-				}, -- [2]
-				[16] = {
-				},
-			},
 			["equip"] = {
 				"24777::::::-40:379715636:70:::::::::", -- [1]
 				"28674::::::::70:::::::::", -- [2]
@@ -117,12 +109,20 @@ ItemRackUser = {
 				"31779::::::::70:::::::::", -- [19]
 				[0] = 0,
 			},
+			["Queues"] = {
+				{
+				}, -- [1]
+				{
+				}, -- [2]
+				[16] = {
+				},
+			},
 			["icon"] = 132117,
 			["old"] = {
 			},
 		},
 	},
-	["EnablePerSetQueues"] = "OFF",
+	["EnableQueues"] = "ON",
 	["Queues"] = {
 		{
 			"25975::::::::66::::::::", -- [1]
@@ -159,10 +159,11 @@ ItemRackUser = {
 			["Druid Tree of Life"] = true,
 		},
 		["Set"] = {
-			["飛行"] = "飛行",
 			["Druid Tree of Life"] = "Health",
-			["Druid Bear"] = "TT",
 			["Druid Humanoid"] = "Health",
+			["Druid Aquatic"] = "Health",
+			["飛行"] = "飛行",
+			["Druid Bear"] = "TT",
 		},
 	},
 	["Hidden"] = {
@@ -171,5 +172,5 @@ ItemRackUser = {
 	["Buttons"] = {
 	},
 	["MenuScale"] = 0.85,
-	["CurrentSet"] = "Health",
+	["CurrentSet"] = "飛行",
 }

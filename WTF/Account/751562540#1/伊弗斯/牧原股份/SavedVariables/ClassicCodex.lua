@@ -10,9 +10,9 @@ CodexConfig = {
 	["minimumDropChance"] = 2,
 	["showLowLevel"] = false,
 	["_tom_waypoint"] = {
-		1948, -- [1]
-		0.626, -- [2]
-		0.284, -- [3]
+		1952, -- [1]
+		0.499, -- [2]
+		0.467, -- [3]
 		["arrivaldistance"] = 15,
 		["callbacks"] = {
 			["distance"] = {
@@ -33,7 +33,7 @@ CodexConfig = {
 		["persistent"] = true,
 		["minimap"] = true,
 		["cleardistance"] = 10,
-		["title"] = "学者希拉",
+		["title"] = "驱魔师瓦沙",
 		["from"] = "?",
 		["crazy"] = true,
 		["world"] = true,
