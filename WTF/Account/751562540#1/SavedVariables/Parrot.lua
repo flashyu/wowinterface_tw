@@ -1,9 +1,5 @@
 
 ParrotDB = {
-	["profileKeys"] = {
-		["牧原股份 - 伊弗斯"] = "Default",
-		["豬圈一 - 伊弗斯"] = "Default",
-	},
 	["namespaces"] = {
 		["CombatEvents"] = {
 			["profiles"] = {
@@ -18,6 +14,15 @@ ParrotDB = {
 			["profiles"] = {
 				["Default"] = {
 					["areas"] = {
+						["新增滾動區域"] = {
+							["stickyDirection"] = "DOWN;CENTER",
+							["direction"] = "DOWN;CENTER",
+							["stickyAnimationStyle"] = "Pow",
+							["xOffset"] = 0,
+							["size"] = 150,
+							["animationStyle"] = "Straight",
+							["yOffset"] = 0,
+						},
 						["Notification"] = {
 							["stickyDirection"] = "UP;CENTER",
 							["direction"] = "UP;CENTER",
@@ -39,8 +44,8 @@ ParrotDB = {
 							["yOffset"] = -30,
 						},
 						["Outgoing"] = {
-							["stickyDirection"] = "DOWN;LEFT",
-							["direction"] = "DOWN;RIGHT",
+							["stickyDirection"] = "DOWN;RIGHT",
+							["direction"] = "DOWN;LEFT",
 							["stickyAnimationStyle"] = "Pow",
 							["iconSide"] = "LEFT",
 							["xOffset"] = 60,
@@ -66,5 +71,9 @@ ParrotDB = {
 				},
 			},
 		},
+	},
+	["profileKeys"] = {
+		["牧原股份 - 伊弗斯"] = "Default",
+		["豬圈一 - 伊弗斯"] = "Default",
 	},
 }

@@ -7,8 +7,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "未知",
 			["InstanceName"] = "Tempest Keep",
 			["Date"] = "2021-09-19",
-			["FirstClass"] = "UNKNOWN",
 			["Class"] = "DRUID",
+			["FirstClass"] = "UNKNOWN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4490-550-28822-20031-00014722C7",
@@ -130,8 +130,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "偶盈",
 			["InstanceName"] = "Gruul's Lair",
 			["Date"] = "2021-09-25",
-			["FirstClass"] = "PALADIN",
 			["Class"] = "DRUID",
+			["FirstClass"] = "PALADIN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-5580-565-23081-18831-00004EBFB8",
@@ -168,8 +168,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "牧原股份",
 			["InstanceName"] = "Magtheridon's Lair",
 			["Date"] = "2021-09-25",
-			["FirstClass"] = "DRUID",
 			["Class"] = "DRUID",
+			["FirstClass"] = "DRUID",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-5580-544-24654-17257-00004ECB5E",
@@ -195,8 +195,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "柒刻",
 			["InstanceName"] = "Serpentshrine Cavern",
 			["Date"] = "2021-09-25",
-			["Class"] = "DRUID",
 			["FirstClass"] = "SHAMAN",
+			["Class"] = "DRUID",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-5580-548-4303-21216-00004F0DBB",
@@ -287,9 +287,9 @@ LootMonitorDB = {
 			["InstanceID"] = 550,
 			["FirstPlayer"] = "未知",
 			["InstanceName"] = "Tempest Keep",
-			["FirstClass"] = "UNKNOWN",
-			["Date"] = "2021-09-26",
 			["Class"] = "DRUID",
+			["Date"] = "2021-09-26",
+			["FirstClass"] = "UNKNOWN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-5580-550-29713-19514-00005073DE",
@@ -370,8 +370,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "未知",
 			["InstanceName"] = "Karazhan",
 			["Date"] = "2021-09-30",
-			["Class"] = "DRUID",
 			["FirstClass"] = "UNKNOWN",
+			["Class"] = "DRUID",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4490-532-4085-16152-0000548DBB",
@@ -494,6 +494,44 @@ LootMonitorDB = {
 				}, -- [10]
 			},
 		}, -- [6]
+		{
+			["InstanceID"] = 565,
+			["FirstPlayer"] = "未知",
+			["InstanceName"] = "Gruul's Lair",
+			["Class"] = "DRUID",
+			["Date"] = "2021-10-01",
+			["FirstClass"] = "UNKNOWN",
+			["LootTable"] = {
+				{
+					["GUID"] = "Creature-0-5580-565-22081-18831-000055E53F",
+					["Time"] = "00:40:04",
+					["Class"] = "PALADIN",
+					["Date"] = "2021-10-01",
+					["Looter"] = "微風小騎士",
+					["Name"] = "大君王莫卡爾",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29762::::::::70:::::::::|h[逝往英雄肩鎧]|h|r", -- [1]
+						"|cffa335ee|Hitem:28801::::::::70:::::::::|h[莫卡爾的戰爭頭盔]|h|r", -- [2]
+						"|cffa335ee|Hitem:29762::::::::70:::::::::|h[逝往英雄肩鎧]|h|r", -- [3]
+					},
+				}, -- [1]
+				{
+					["GUID"] = "Creature-0-5580-565-22081-19044-000055E53F",
+					["Time"] = "00:49:49",
+					["Class"] = "ROGUE",
+					["Date"] = "2021-10-01",
+					["Looter"] = "霸道樹蛙總裁",
+					["Name"] = "弒龍者戈魯爾",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29765::::::::70:::::::::|h[阵亡英雄的护腿]|h|r", -- [1]
+						"|cffa335ee|Hitem:29765::::::::70:::::::::|h[阵亡英雄的护腿]|h|r", -- [2]
+						"|cffa335ee|Hitem:28802::::::::70:::::::::|h[血喉魔剑]|h|r", -- [3]
+						"|cffa335ee|Hitem:28828::::::::70:::::::::|h[戈隆缝合束带]|h|r", -- [4]
+					},
+				}, -- [2]
+			},
+			["Player"] = "牧原股份",
+		}, -- [7]
 	},
 	["Config"] = {
 		["ShowMinimapIcon"] = true,
