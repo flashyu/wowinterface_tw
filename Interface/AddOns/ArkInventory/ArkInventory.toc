@@ -4,7 +4,7 @@
 ## Title-zhCN: [背包]ArkInventory 整合背包银行
 ## Author: Arkayenro - Khaz'goroth
 ## Email: arkayenro at gmail dot com
-## Version: 30957
+## Version: 30958
 ## X-ReleaseType: 
 ## SavedVariables: ARKINVDB
 

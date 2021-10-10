@@ -1,13 +1,15 @@
 
 AtlasLootClassicDB = {
-	["global"] = {
-		["__addonrevision"] = 2030003,
-	},
 	["profileKeys"] = {
-		["牧原股份 - 伊弗斯"] = "牧原股份 - 伊弗斯",
 		["豬圈一 - 伊弗斯"] = "豬圈一 - 伊弗斯",
+		["牧原股份 - 伊弗斯"] = "牧原股份 - 伊弗斯",
+	},
+	["global"] = {
+		["__addonrevision"] = 2030004,
 	},
 	["profiles"] = {
+		["豬圈一 - 伊弗斯"] = {
+		},
 		["牧原股份 - 伊弗斯"] = {
 			["GUI"] = {
 				["point"] = {
@@ -19,14 +21,12 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"GruulsLair", -- [2]
-					nil, -- [3]
+					"TempestKeep", -- [2]
+					4, -- [3]
 					6, -- [4]
 					0, -- [5]
 				},
 			},
-		},
-		["豬圈一 - 伊弗斯"] = {
 		},
 	},
 }

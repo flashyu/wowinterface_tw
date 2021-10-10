@@ -632,17 +632,27 @@ end
 function ArkInventory:EVENT_ARKINV_BANK_UPDATE( ... )
 	
 	local event, arg1 = ...
---	ArkInventory.Output( "[", event, "] [", arg1, "]" )
+	--ArkInventory.Output( "[", event, "] [", arg1, "]" )
 
 	-- player changed a bank bag or item
 	
-	local count = GetContainerNumSlots( BANK_CONTAINER )
+	local count = GetContainerNumSlots( BANK_CONTAINER ) --  fix this once blizzard have fixed their shit in classic
+	if count < 28 then
+		-- hard coded to a minimum of 28 until blizzard return the correct values for the bank bag slot ids in classic
+		-- they are out by 4 as if the bank has 28, and not 24, slots at the moment so it screws up the calculation
+		count = 28
+	end
+	
 	
 	if arg1 <= count then
 		-- item was changed
 		ArkInventory:EVENT_ARKINV_BAG_UPDATE( event, BANK_CONTAINER )
 	else
 		-- bag was changed
+		
+		-- 29 - 28 + 4 = 5
+		
+		--ArkInventory.Output( "bag changed: ", arg1, " - ", count, " + ", NUM_BAG_SLOTS, " = ", arg1 - count + NUM_BAG_SLOTS )
 		ArkInventory:EVENT_ARKINV_BAG_UPDATE( event, arg1 - count + NUM_BAG_SLOTS )
 	end
 	
@@ -651,7 +661,7 @@ end
 function ArkInventory:EVENT_ARKINV_BANK_SLOT( ... )
 	
 --	local event = ...
---	ArkInventory.Output( "[", event, "]" )
+	--ArkInventory.Output( "[", event, "]" )
 	
 	-- player just purchased a bank bag slot, re-scan and force a reload
 	
@@ -5080,6 +5090,31 @@ function ArkInventory.ObjectCountGetRaw( search_id, thread_id )
 						
 						--ArkInventory.Output( "ItemCountRaw[", search_id, "][", pid, "].location[", loc_id, "] = ", icr_now )
 						
+					end
+					
+					if not pid then
+						ArkInventory.OutputError( "code failure: pid is nil" )
+						error( "code failure" )
+					end
+					
+					if not loc_id then
+						ArkInventory.OutputError( "code failure: loc_id is nil" )
+						error( "code failure" )
+					end
+					
+					if not icr[pid] then
+						ArkInventory.OutputError( "code failure: icr[", pid, "] is nil" )
+						error( "code failure" )
+					end
+					
+					if not icr[pid].total then
+						ArkInventory.OutputError( "code failure: icr[", pid, "].total is nil" )
+						error( "code failure" )
+					end
+					
+					if not icr[pid].location[loc_id] then
+						ArkInventory.OutputError( "code failure: icr[", pid, "].location[", loc_id, "] is nil" )
+						error( "code failure" )
 					end
 					
 					icr[pid].total = icr[pid].total + icr[pid].location[loc_id].c

@@ -1682,14 +1682,14 @@ local function Scan_Threaded( thread_id )
 		
 		local petID, speciesID, isOwned, customName, level, isFavorite, isRevoked, petName, petIcon, petType, creatureID, sourceText, description, isWild, canBattle, isTradable, isUnique, isObtainable = C_PetJournal.GetPetInfoByIndex( index )
 		
-		if string.sub( petName, 1, 4 ) == "Fort" then
-		--	ArkInventory.Output( petID, " / ", speciesID, " / ", creatureID, " / ", petName )
-		end
+--		if string.sub( petName, 1, 4 ) == "Fort" then
+--			ArkInventory.Output( petID, " / ", speciesID, " / ", creatureID, " / ", petName )
+--		end
 		-- species data (generate for all species)
 		local sd = ScanSpecies( speciesID )
 		if not sd then
 			FilterActionRestore( )
-			ArkInventory.Output( "ABORTED (NO SPECIES DATA)" )
+			--ArkInventory.Output( "ABORTED (NO SPECIES DATA)" )
 			ArkInventory:SendMessage( "EVENT_ARKINV_COLLECTION_PET_UPDATE_BUCKET", "NO_SPECIES_DATA" )
 			return
 		end

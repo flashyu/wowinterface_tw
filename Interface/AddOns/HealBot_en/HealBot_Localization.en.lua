@@ -65,6 +65,9 @@ function HealBot_Lang_enALL()
     HEALBOT_ADDON                           = HEALBOT_HEALBOT .. " " .. HEALBOT_VERSION;
     HEALBOT_LOADED                          = " loaded.";
 
+    HEALBOT_RANK   = {[1]="(Rank 1)", [2]="(Rank 2)", [3]="(Rank 3)", [4]="(Rank 4)", [5]="(Rank 5)", [6]="(Rank 6)", [7]="(Rank 7)",
+                      [8]="(Rank 8)", [9]="(Rank 9)", [10]="(Rank 10)", [11]="(Rank 11)", [12]="(Rank 12)", [13]="(Rank 13)"}
+
     HEALBOT_ACTION_OPTIONS                  = "Options";
     HEALBOT_ACTION_UNLOCKED                 = "Unlocked";
 
@@ -793,6 +796,7 @@ function HealBot_Lang_enALL()
     HEALBOT_CMD_CLEARBLACKLIST              = "Clear BlackList"
     HEALBOT_CMD_TOGGLEDISLIKEMOUNT          = "Toggle Dislike Mount"
     HEALBOT_OPTION_DISLIKEMOUNT_ON          = "Now Dislike Mount"
+    HEALBOT_CMD_DISMOUNT                    = "Dismount"
     HEALBOT_OPTION_DISLIKEMOUNT_OFF         = "No longer Dislike Mount"
     HEALBOT_CMD_COPYSPELLS                  = "Copy current spells to all specs"
     HEALBOT_CMD_RESETSPELLS                 = "Reset spells"

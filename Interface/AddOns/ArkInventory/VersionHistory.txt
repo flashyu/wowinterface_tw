@@ -14,6 +14,12 @@
  
  
  
+*3.09.58 (06-OCT-2021)*
+ * fixed - issue with some leftover pet test code
+ * fixed - issue with ilevel value for some items
+ * added - extra error catching code for a weird item count (i think) issue that i cant duplicate yet and only rarely happens
+ * fixed - (classic) added a workaround to cater for an issue where the bank bag slot id values returned by blizzard are incorrect.  they are out by 4 as if the bank had 28 slots instead of 24
+ 
 *3.09.57 (16-SEP-2021)*
  * fixed - conflict with skillet.  scan on load is now ignored if skillet is loaded and enabled.  you have to open the blizzard tradeskill window to trigger a scan, it will not scan the skillet window.
  * fixed - issue with extracting the stock value from tooltip for some languages

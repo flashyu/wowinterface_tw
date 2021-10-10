@@ -218,14 +218,15 @@ local function UpdateObjectInfo( info, thread_id )
 					
 				end
 				
-				info.ilvl = ilvl or stock or info.ilvl
-				
 				if not stock then
 					info.ready = false
 				elseif stock ~= -1 then
+					--ilvl = ilvl or stock
 					--ArkInventory.Output( info.h, " = ", stock )
 				end
 				info.stock = stock or info.stock
+				
+				info.ilvl = ilvl or info.ilvl
 				
 			end
 			
