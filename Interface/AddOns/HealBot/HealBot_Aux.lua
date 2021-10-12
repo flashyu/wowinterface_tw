@@ -15,6 +15,7 @@ HealBot_Aux_luVars["AuxFluidBarOpacityUpdate"]=0.02
 HealBot_Aux_luVars["AuxFluidBarOpacityFreq"]=0.088
 HealBot_Aux_luVars["AuxFluidBarUpdate"]=50
 HealBot_Aux_luVars["AuxFluidBarFreq"]=0.088
+HealBot_Aux_luVars["FluidBarSmoothAdj"]=5
 
 function HealBot_Aux_setLuVars(vName, vValue)
     HealBot_Aux_luVars[vName]=vValue
@@ -292,6 +293,7 @@ end
 
 --------------------------------
 
+local hbSmooth=0
 local function HealBot_Aux_UpdateFluidBarsValue(button, PrevTime) 
     ufaBarActive=false
     HealBot_Aux_luVars["AuxFluidBarElapsed"]=(GetTime()-PrevTime)*2
@@ -300,7 +302,12 @@ local function HealBot_Aux_UpdateFluidBarsValue(button, PrevTime)
         if button.aux[x]["FLUID"]>-1 then
             aBarGetValue=button.gref.aux[x]:GetValue()
             if aBarGetValue>button.aux[x]["FLUID"] then
-                aBarSetValue=aBarGetValue-HealBot_Aux_luVars["AuxFluidBarUpdateElapsed"]
+                hbSmooth=floor((aBarGetValue-button.aux[x]["FLUID"])/HealBot_Aux_luVars["FluidBarSmoothAdj"])
+                if hbSmooth<HealBot_Aux_luVars["AuxFluidBarUpdateElapsed"] and hbSmooth>0 then
+                    aBarSetValue=aBarGetValue-hbSmooth
+                else
+                    aBarSetValue=aBarGetValue-HealBot_Aux_luVars["AuxFluidBarUpdateElapsed"]
+                end
                 if aBarSetValue<button.aux[x]["FLUID"] then 
                     aBarSetValue=button.aux[x]["FLUID"]
                     button.aux[x]["FLUID"]=-1
@@ -309,6 +316,12 @@ local function HealBot_Aux_UpdateFluidBarsValue(button, PrevTime)
                 end
                 button.gref.aux[x]:SetValue(aBarSetValue)
             elseif aBarGetValue<button.aux[x]["FLUID"] then
+                hbSmooth=floor((button.aux[x]["FLUID"]-aBarGetValue)/HealBot_Aux_luVars["FluidBarSmoothAdj"])
+                if hbSmooth<HealBot_Aux_luVars["AuxFluidBarUpdateElapsed"] and hbSmooth>0 then
+                    aBarSetValue=aBarGetValue+hbSmooth
+                else
+                    aBarSetValue=aBarGetValue+HealBot_Aux_luVars["AuxFluidBarUpdateElapsed"]
+                end
                 aBarSetValue=aBarGetValue+HealBot_Aux_luVars["AuxFluidBarUpdateElapsed"]
                 if aBarSetValue>button.aux[x]["FLUID"] then 
                     aBarSetValue=button.aux[x]["FLUID"]

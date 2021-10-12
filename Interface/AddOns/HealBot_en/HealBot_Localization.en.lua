@@ -732,6 +732,8 @@ function HealBot_Lang_enALL()
     HEALBOT_OPTIONS_OTHERSPELLS             = "Other spells"
     HEALBOT_WORD_MACROS                     = "Macros"
     HEALBOT_WORD_SELECT                     = "Select"
+    HEALBOT_WORD_SELECT_ALL                 = "Select all"
+    HEALBOT_WORD_SELECT_NONE                = "Select none"
     HEALBOT_OPTIONS_QUESTION                = "?"
     HEALBOT_WORD_CANCEL                     = "Cancel"
     HEALBOT_WORD_COMMANDS                   = "Commands"
@@ -1266,10 +1268,12 @@ function HealBot_Lang_enALL()
     HEALBOT_OPTIONS_ADDON_FAIL              = "Failed to load headbot addon"
     
     HEALBOT_OPTIONS_IN_A_GROUP              = "Only when in a Group or Raid"
+    HEALBOT_OPTIONS_ALSO_WHEN_MOUNTED       = "also when mounted"
     HEALBOT_OPTIONS_PALADIN_BLESSINGS       = "View all my blessings as same"
     
     
     HEALBOT_OPTIONS_TAB_EFFECTS              = "Effects"
+    HEALBOT_OPTIONS_TAB_EMERG                = "Emergency"
     HEALBOT_OPTIONS_CONTENT_SKINS_GENERAL    = "    " .. HEALBOT_OPTIONS_TAB_GENERAL
     HEALBOT_OPTIONS_CONTENT_SKINS_EFFECTS    = "    " .. HEALBOT_OPTIONS_TAB_EFFECTS
     HEALBOT_OPTIONS_CONTENT_SKINS_ENEMY      = "    " .. HEALBOT_CUSTOM_CASTBY_ENEMY
@@ -1279,7 +1283,7 @@ function HealBot_Lang_enALL()
     HEALBOT_OPTIONS_CONTENT_SKINS_BARS       = "        " .. HEALBOT_OPTIONS_TAB_BARS
     HEALBOT_OPTIONS_CONTENT_SKINS_ICONS      = "        " .. HEALBOT_OPTIONS_TAB_ICONS
     HEALBOT_OPTIONS_CONTENT_SKINS_INDICATORS = "        " .. HEALBOT_OPTIONS_TAB_INDICATORS
-    HEALBOT_OPTIONS_CONTENT_SKINS_EMERG      = "        Emergency"
+    HEALBOT_OPTIONS_CONTENT_SKINS_EMERG      = "        " .. HEALBOT_OPTIONS_TAB_EMERG
     HEALBOT_OPTIONS_CONTENT_SKINS_AGGRO      = "    " .. HEALBOT_OPTIONS_TAB_AGGRO
     HEALBOT_OPTIONS_CONTENT_SKINS_CHAT       = "    " .. HEALBOT_OPTIONS_TAB_CHAT
     HEALBOT_OPTIONS_CONTENT_SKINS_TEXT       = "        " .. HEALBOT_OPTIONS_TEXTOPTIONS
@@ -1321,7 +1325,10 @@ function HealBot_Lang_enALL()
     HEALBOT_OPTIONS_FRAME_ALIAS             = "Alias"
     HEALBOT_OPTIONS_CONTENT_SKINS_HEALGROUP = "        " .. "Heal Groups"
     HEALBOT_OPTIONS_CONTENT_SKINS_BARCOLOUR = "        " .. "Bar Col"..HEALBOT_enWORD_COLOUR_SUFFIX.."s"
-    HEALBOT_OPTIONS_SET_ALL_FRAMES          = "Apply current tab settings to all Frames"
+    HEALBOT_OPTIONS_SET_ALL_FRAMES          = "Copy current frame and tabs to other frames"
+    HEALBOT_OPTIONS_CURRENT_FRAME           = "Current frame: "
+    HEALBOT_OPTIONS_COPY_TABS               = "Copy tabs"
+    HEALBOT_OPTIONS_TO_FRAMES               = "To frames"
     HEALBOT_WORDS_PROFILE                   = "Profile"
     HEALBOT_WORDS_GLOBALPROFILE             = "Global profile"
     HEALBOT_SHARE_SCREENSHOT                = "ScreenShot taken"

@@ -2178,7 +2178,7 @@ function HealComm:COMBAT_LOG_EVENT_UNFILTERED(...)
 	-- It's more efficient/accurate to have the library keep track of this locally, spamming the comm channel would not be a very good thing especially when a single player can have 4 - 8 hots/channels going on them.
 	if( eventType == "SPELL_HEAL" or eventType == "SPELL_PERIODIC_HEAL" ) then
 		local pending = sourceGUID and pendingHots[sourceGUID] and pendingHots[sourceGUID][spellName]
-		if( pending and pending[destGUID] and pending.bitType and bit.band(pending.bitType, OVERTIME_HEALS) > 0 ) then
+		if( sourceGUID and spellID and pending and pending[destGUID] and pending.bitType and bit.band(pending.bitType, OVERTIME_HEALS) > 0 ) then
 			local amount, stack, _, ticksLeft = getRecord(pending, destGUID)
 			ticksLeft = ticksLeft - 1
 			local endTime = GetTime() + pending.tickInterval * ticksLeft

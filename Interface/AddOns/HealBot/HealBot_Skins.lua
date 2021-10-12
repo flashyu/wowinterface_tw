@@ -584,8 +584,8 @@ function HealBot_Skins_ResetSkin(barType,button,numcols)
                             AuxRight=b.gref.aux[x]
                         end
                     end
+                    b.gref.aux[x]:SetValue(1000)
                     if testBarsOn then
-                        b.gref.aux[x]:SetValue(1000)
                         if Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["USE"]==2 then
                             b.gref.aux[x]:SetStatusBarColor(0.8,1,0.8,1)
                         elseif Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["USE"]==3 then
