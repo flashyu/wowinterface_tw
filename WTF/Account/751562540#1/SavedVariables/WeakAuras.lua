@@ -3,6 +3,21 @@ WeakAurasSaved = {
 	["dynamicIconCache"] = {
 	},
 	["editor_tab_spaces"] = 4,
+	["login_squelch_time"] = 10,
+	["lastArchiveClear"] = 1626874514,
+	["minimap"] = {
+		["hide"] = false,
+	},
+	["lastUpgrade"] = 1626874520,
+	["dbVersion"] = 45,
+	["registered"] = {
+	},
+	["frame"] = {
+		["xOffset"] = -1050.96533203125,
+		["width"] = 830,
+		["height"] = 665.0001220703125,
+		["yOffset"] = -190.78173828125,
+	},
 	["displays"] = {
 		["Details! Aura Group"] = {
 			["grow"] = "DOWN",
@@ -97,18 +112,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["fullCircle"] = true,
+			["gridType"] = "RD",
 			["animate"] = false,
-			["xOffset"] = 0,
+			["selfPoint"] = "TOP",
 			["scale"] = 1,
-			["rowSpace"] = 1,
+			["arcLength"] = 360,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["selfPoint"] = "TOP",
-			["gridType"] = "RD",
+			["fullCircle"] = true,
+			["rowSpace"] = 1,
 			["constantFactor"] = "RADIUS",
 			["rotation"] = 0,
 			["borderOffset"] = 4,
@@ -119,16 +134,16 @@ WeakAurasSaved = {
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
 			["useLimit"] = false,
-			["uid"] = "KcmUnf8yeJE",
 			["config"] = {
 			},
-			["radius"] = 200,
+			["uid"] = "KcmUnf8yeJE",
+			["xOffset"] = 0,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["arcLength"] = 360,
+			["radius"] = 200,
 		},
 		["lan"] = {
 			["grow"] = "DOWN",
@@ -224,18 +239,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["xOffset"] = -202.7703247070313,
+			["gridType"] = "RD",
 			["animate"] = false,
-			["selfPoint"] = "TOP",
+			["useLimit"] = false,
 			["scale"] = 1,
-			["fullCircle"] = true,
+			["rowSpace"] = 1,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["useLimit"] = false,
-			["gridType"] = "RD",
+			["xOffset"] = -202.7703247070313,
+			["fullCircle"] = true,
 			["constantFactor"] = "RADIUS",
 			["arcLength"] = 360,
 			["borderOffset"] = 4,
@@ -246,16 +261,16 @@ WeakAurasSaved = {
 			["gridWidth"] = 5,
 			["anchorFrameType"] = "SCREEN",
 			["limit"] = 5,
-			["uid"] = "I7Y0mTf5KSP",
 			["config"] = {
 			},
-			["radius"] = 200,
+			["uid"] = "I7Y0mTf5KSP",
+			["selfPoint"] = "TOP",
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["rowSpace"] = 1,
+			["radius"] = 200,
 		},
 		["Details! Boss Mods Group"] = {
 			["grow"] = "DOWN",
@@ -350,18 +365,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["xOffset"] = 0,
+			["gridType"] = "RD",
 			["animate"] = false,
-			["selfPoint"] = "TOP",
+			["useLimit"] = false,
 			["scale"] = 1,
-			["fullCircle"] = true,
+			["rowSpace"] = 1,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["useLimit"] = false,
-			["gridType"] = "RD",
+			["xOffset"] = 0,
+			["fullCircle"] = true,
 			["constantFactor"] = "RADIUS",
 			["arcLength"] = 360,
 			["borderOffset"] = 4,
@@ -372,16 +387,16 @@ WeakAurasSaved = {
 			["gridWidth"] = 5,
 			["anchorFrameType"] = "SCREEN",
 			["limit"] = 5,
-			["uid"] = "ZX3oWFkARRy",
 			["config"] = {
 			},
-			["radius"] = 200,
+			["uid"] = "ZX3oWFkARRy",
+			["selfPoint"] = "TOP",
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["rowSpace"] = 1,
+			["radius"] = 200,
 		},
 		["New"] = {
 			["sparkWidth"] = 10,
@@ -514,7 +529,7 @@ WeakAurasSaved = {
 			},
 			["endAngle"] = 360,
 			["internalVersion"] = 45,
-			["advance"] = false,
+			["model_fileId"] = "122968",
 			["animation"] = {
 				["start"] = {
 					["easeStrength"] = 3,
@@ -605,7 +620,7 @@ WeakAurasSaved = {
 				},
 			},
 			["sparkOffsetX"] = 0,
-			["mirror"] = false,
+			["border"] = false,
 			["borderEdge"] = "None",
 			["borderColor"] = {
 				1, -- [1]
@@ -621,7 +636,7 @@ WeakAurasSaved = {
 			["model_path"] = "spells/arcanepower_state_chest.m2",
 			["sparkHeight"] = 30,
 			["model_z"] = 0,
-			["border"] = false,
+			["mirror"] = false,
 			["user_y"] = 0,
 			["model_st_rx"] = 270,
 			["borderOffset"] = 5,
@@ -632,7 +647,7 @@ WeakAurasSaved = {
 			["user_x"] = 0,
 			["desaturateBackground"] = false,
 			["inverse"] = false,
-			["model_fileId"] = "122968",
+			["advance"] = false,
 			["orientation"] = "HORIZONTAL",
 			["crop_x"] = 0.41,
 			["information"] = {
@@ -701,14 +716,8 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
 				["encounterid"] = "732",
-				["use_zone"] = true,
-				["use_encounterid"] = true,
-				["difficulty"] = {
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -716,15 +725,8 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
+				["use_encounterid"] = true,
+				["difficulty"] = {
 					["multi"] = {
 					},
 				},
@@ -732,6 +734,19 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
+				["use_zone"] = true,
 				["zone"] = "风暴要塞,Tempest Keep",
 				["size"] = {
 					["multi"] = {
@@ -785,7 +800,9 @@ WeakAurasSaved = {
 						["custom_type"] = "stateupdate",
 						["useName"] = false,
 						["type"] = "custom",
-						["unevent"] = "timed",
+						["auraspellids"] = {
+							"33045", -- [1]
+						},
 						["subeventPrefix"] = "SPELL",
 						["duration"] = "1",
 						["buffShowOn"] = "showOnActive",
@@ -814,9 +831,7 @@ WeakAurasSaved = {
 						},
 						["remOperator"] = ">=",
 						["useExactSpellId"] = true,
-						["auraspellids"] = {
-							"33045", -- [1]
-						},
+						["unevent"] = "timed",
 						["useRem"] = false,
 					},
 					["untrigger"] = {
@@ -873,9 +888,9 @@ WeakAurasSaved = {
 			["icon"] = true,
 			["text1"] = "%n",
 			["text2"] = "%p",
-			["semver"] = "1.9.0",
-			["anchorFrameType"] = "SCREEN",
 			["justify"] = "LEFT",
+			["anchorFrameType"] = "SCREEN",
+			["semver"] = "1.9.0",
 			["text1Containment"] = "INSIDE",
 			["id"] = "大星术师索兰莉安—奥术飞弹—团队框架高亮 2",
 			["selfPoint"] = "CENTER",
@@ -898,21 +913,6 @@ WeakAurasSaved = {
 			},
 			["preferToUpdate"] = false,
 		},
-	},
-	["lastArchiveClear"] = 1626874514,
-	["minimap"] = {
-		["hide"] = false,
-	},
-	["lastUpgrade"] = 1626874520,
-	["dbVersion"] = 45,
-	["login_squelch_time"] = 10,
-	["registered"] = {
-	},
-	["frame"] = {
-		["xOffset"] = -1050.96533203125,
-		["width"] = 830,
-		["height"] = 665.0001220703125,
-		["yOffset"] = -190.78173828125,
 	},
 	["editor_theme"] = "Monokai",
 }

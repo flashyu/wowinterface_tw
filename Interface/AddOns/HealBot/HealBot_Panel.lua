@@ -2784,12 +2784,10 @@ function HealBot_Panel_PartyChanged(preCombat, changeType)
     else
         HealBot_Panel_PrePartyChanged(preCombat, changeType)
     end
-    if not HealBot_Data["UILOCK"] then 
-        local nMembers=(GetNumGroupMembers()+HealBot_Panel_luVars["NumPrivate"]+HealBot_Panel_luVars["NumPets"])+14
-        if nMembers>HealBot_Globals.AutoCacheSize then    
-            HealBot_Globals.AutoCacheSize=nMembers
-        end
+    local nMembers=GetNumGroupMembers()+HealBot_Panel_luVars["NumPrivate"]+HealBot_Panel_luVars["NumPets"]+14
+    if nMembers>HealBot_Globals.AutoCacheSize then    
+        HealBot_Globals.AutoCacheSize=nMembers
     end
-    HealBot_fastUpdateEveryFrame(1)
+    HealBot_fastUpdateEveryFrame(2)
       --HealBot_setCall("HealBot_Panel_PartyChanged")
 end

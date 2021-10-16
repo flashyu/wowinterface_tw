@@ -54,14 +54,14 @@ HealBot_Config = {
 		},
 	},
 	["MyFriend"] = "x",
-	["LastVersionUpdate"] = "9.1.0.11",
+	["LastVersionUpdate"] = "9.1.0.12",
 	["BuffReset"] = "6.0.0",
 	["Profile"] = 1,
 	["DisableHealBot"] = false,
 	["CurrentSpec"] = 1,
 	["DisableSolo"] = false,
+	["LastAutoSkinChangeTime"] = 338413.134,
 	["EnableHealthy"] = true,
-	["LastAutoSkinChangeTime"] = 4040.238,
 	["LastAutoSkinChangeType"] = "None",
 	["DisabledNow"] = 0,
 }
@@ -87,8 +87,7 @@ HealBot_Config_Spells = {
 	},
 	["EnemySpellTarget"] = {
 	},
-	["EmergSpellTarget"] = {
-	},
+	["ButtonCastMethod"] = 2,
 	["EmergKeyCombo"] = {
 	},
 	["EnabledKeyCombo"] = {
@@ -133,7 +132,8 @@ HealBot_Config_Spells = {
 	},
 	["EmergSpellTrinket2"] = {
 	},
-	["ButtonCastMethod"] = 2,
+	["EmergSpellTarget"] = {
+	},
 }
 HealBot_Config_Buffs = {
 	["CustomItemName"] = {
@@ -142,6 +142,7 @@ HealBot_Config_Buffs = {
 		"", -- [3]
 	},
 	["HealBot_CBWarnRange_Screen"] = 2,
+	["BuffWatchWhenMounted"] = false,
 	["CBshownHB"] = true,
 	["ShowGroups"] = {
 		true, -- [1]
@@ -335,18 +336,22 @@ HealBot_Config_Cures = {
 	["HealBot_CDCWarnRange_Screen"] = 2,
 	["DebuffWatchInCombat"] = true,
 	["HealBot_Custom_Defuffs_All"] = {
-		["Curse"] = false,
 		["Disease"] = false,
-		["Magic"] = false,
 		["Poison"] = false,
+		["Magic"] = false,
+		["Curse"] = false,
 	},
 	["ShowTimeMaxDuration"] = 31,
 	["IgnoreFastDurDebuffsSecs"] = 2,
 	["HealBot_CDCWarnRange_Bar"] = 3,
-	["HealBot_CDCWarnRange_Sound"] = 3,
-	["SoundDebuffPlay"] = "Tribal Bass Drum",
-	["SoundDebuffWarning"] = false,
 	["DebuffWatchWhenGrouped"] = false,
+	["HealBot_CDCWarnRange_Sound"] = 3,
+	["DebuffWatchWhenMounted"] = false,
+	["SoundDebuffWarning"] = false,
+	["SoundDebuffPlay"] = "Tribal Bass Drum",
+	["IgnoreFriendDebuffs"] = true,
+	["AlwaysShowTimed"] = false,
+	["IgnoreOnCooldownDebuffs"] = false,
 	["HealBotDebuffDropDown"] = {
 		4, -- [1]
 		4, -- [2]
@@ -364,29 +369,26 @@ HealBot_Config_Cures = {
 		["11"] = 4,
 		["32"] = 4,
 	},
-	["IgnoreFriendDebuffs"] = true,
-	["IgnoreOnCooldownDebuffs"] = false,
-	["AlwaysShowTimed"] = false,
 	["CDCBarColour"] = {
-		["Curse"] = {
-			["B"] = 0.09,
-			["G"] = 0.43,
-			["R"] = 0.83,
-		},
 		["Disease"] = {
 			["B"] = 0.7,
 			["G"] = 0.19,
 			["R"] = 0.55,
+		},
+		["Poison"] = {
+			["B"] = 0.24,
+			["G"] = 0.46,
+			["R"] = 0.12,
 		},
 		["Magic"] = {
 			["B"] = 0.83,
 			["G"] = 0.33,
 			["R"] = 0.26,
 		},
-		["Poison"] = {
-			["B"] = 0.24,
-			["G"] = 0.46,
-			["R"] = 0.12,
+		["Curse"] = {
+			["B"] = 0.09,
+			["G"] = 0.43,
+			["R"] = 0.83,
 		},
 	},
 	["HealBotDebuffPriority"] = {

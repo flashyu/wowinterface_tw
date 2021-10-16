@@ -97,23 +97,23 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["arcLength"] = 360,
+			["radius"] = 200,
 			["animate"] = false,
-			["gridType"] = "RD",
+			["rowSpace"] = 1,
 			["scale"] = 1,
-			["xOffset"] = 0,
+			["selfPoint"] = "TOP",
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["rowSpace"] = 1,
-			["radius"] = 200,
+			["arcLength"] = 360,
+			["xOffset"] = 0,
 			["constantFactor"] = "RADIUS",
-			["uid"] = "KcmUnf8yeJE",
-			["borderOffset"] = 4,
 			["config"] = {
 			},
+			["borderOffset"] = 4,
+			["uid"] = "KcmUnf8yeJE",
 			["useLimit"] = false,
 			["id"] = "Details! Aura Group",
 			["frameStrata"] = 1,
@@ -122,13 +122,13 @@ WeakAurasSaved = {
 			["limit"] = 5,
 			["borderInset"] = 1,
 			["rotation"] = 0,
-			["fullCircle"] = true,
+			["gridType"] = "RD",
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["selfPoint"] = "TOP",
+			["fullCircle"] = true,
 		},
 		["lan"] = {
 			["grow"] = "DOWN",
@@ -224,23 +224,23 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["rowSpace"] = 1,
+			["radius"] = 200,
 			["animate"] = false,
-			["gridType"] = "RD",
+			["fullCircle"] = true,
 			["scale"] = 1,
-			["selfPoint"] = "TOP",
+			["useLimit"] = false,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["fullCircle"] = true,
-			["radius"] = 200,
+			["rowSpace"] = 1,
+			["selfPoint"] = "TOP",
 			["constantFactor"] = "RADIUS",
-			["uid"] = "I7Y0mTf5KSP",
-			["borderOffset"] = 4,
 			["config"] = {
 			},
+			["borderOffset"] = 4,
+			["uid"] = "I7Y0mTf5KSP",
 			["limit"] = 5,
 			["id"] = "lan",
 			["gridWidth"] = 5,
@@ -249,13 +249,13 @@ WeakAurasSaved = {
 			["rotation"] = 0,
 			["borderInset"] = 1,
 			["arcLength"] = 360,
-			["xOffset"] = -202.7703247070313,
+			["gridType"] = "RD",
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["useLimit"] = false,
+			["xOffset"] = -202.7703247070313,
 		},
 		["Details! Boss Mods Group"] = {
 			["grow"] = "DOWN",
@@ -350,23 +350,23 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["rowSpace"] = 1,
+			["radius"] = 200,
 			["animate"] = false,
-			["gridType"] = "RD",
+			["fullCircle"] = true,
 			["scale"] = 1,
-			["selfPoint"] = "TOP",
+			["useLimit"] = false,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["fullCircle"] = true,
-			["radius"] = 200,
+			["rowSpace"] = 1,
+			["selfPoint"] = "TOP",
 			["constantFactor"] = "RADIUS",
-			["uid"] = "ZX3oWFkARRy",
-			["borderOffset"] = 4,
 			["config"] = {
 			},
+			["borderOffset"] = 4,
+			["uid"] = "ZX3oWFkARRy",
 			["limit"] = 5,
 			["id"] = "Details! Boss Mods Group",
 			["gridWidth"] = 5,
@@ -375,13 +375,13 @@ WeakAurasSaved = {
 			["rotation"] = 0,
 			["borderInset"] = 1,
 			["arcLength"] = 360,
-			["xOffset"] = 0,
+			["gridType"] = "RD",
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["useLimit"] = false,
+			["xOffset"] = 0,
 		},
 		["大星术师索兰莉安—奥术飞弹—团队框架高亮 2"] = {
 			["glow"] = false,
@@ -444,8 +444,11 @@ WeakAurasSaved = {
 					},
 				},
 				["zone"] = "风暴要塞,Tempest Keep",
-				["encounterid"] = "732",
-				["role"] = {
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -454,15 +457,8 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
+				["use_zone"] = true,
 				["class"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
@@ -470,11 +466,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_zone"] = true,
-				["spec"] = {
+				["pvptalent"] = {
 					["multi"] = {
 					},
 				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["encounterid"] = "732",
 				["zoneIds"] = "",
 			},
 			["shadowXOffset"] = 1,
@@ -523,10 +523,10 @@ WeakAurasSaved = {
 						["debuffType"] = "HARMFUL",
 						["custom_type"] = "stateupdate",
 						["useName"] = false,
-						["unevent"] = "timed",
 						["auraspellids"] = {
 							"33045", -- [1]
 						},
+						["unevent"] = "timed",
 						["useExactSpellId"] = true,
 						["duration"] = "1",
 						["names"] = {
@@ -613,13 +613,13 @@ WeakAurasSaved = {
 			["font"] = "Friz Quadrata TT",
 			["text2Font"] = "Friz Quadrata TT",
 			["width"] = 6.9999866485596,
-			["justify"] = "LEFT",
+			["semver"] = "1.9.0",
 			["text1Containment"] = "INSIDE",
 			["id"] = "大星术师索兰莉安—奥术飞弹—团队框架高亮 2",
 			["selfPoint"] = "CENTER",
 			["frameStrata"] = 9,
 			["anchorFrameType"] = "SCREEN",
-			["semver"] = "1.9.0",
+			["justify"] = "LEFT",
 			["text2"] = "%p",
 			["inverse"] = false,
 			["config"] = {
@@ -717,7 +717,7 @@ WeakAurasSaved = {
 			["crop_x"] = 0.41,
 			["blendMode"] = "BLEND",
 			["sparkRotationMode"] = "AUTO",
-			["advance"] = false,
+			["model_fileId"] = "122968",
 			["desaturateForeground"] = false,
 			["triggers"] = {
 				{
@@ -766,7 +766,7 @@ WeakAurasSaved = {
 			},
 			["endAngle"] = 360,
 			["internalVersion"] = 45,
-			["model_fileId"] = "122968",
+			["advance"] = false,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -844,8 +844,8 @@ WeakAurasSaved = {
 			["borderOffset"] = 5,
 			["model_st_rx"] = 270,
 			["user_y"] = 0,
-			["mirror"] = false,
 			["border"] = false,
+			["mirror"] = false,
 			["borderEdge"] = "None",
 			["model_z"] = 0,
 			["borderSize"] = 16,
@@ -905,6 +905,7 @@ WeakAurasSaved = {
 	},
 	["lastUpgrade"] = 1626874520,
 	["dbVersion"] = 45,
+	["login_squelch_time"] = 10,
 	["registered"] = {
 	},
 	["frame"] = {
@@ -913,6 +914,5 @@ WeakAurasSaved = {
 		["height"] = 665.0001220703125,
 		["width"] = 830,
 	},
-	["login_squelch_time"] = 10,
 	["editor_theme"] = "Monokai",
 }

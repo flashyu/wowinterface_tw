@@ -617,7 +617,7 @@ function HealBot_Aura_AutoUpdateCustomDebuff(button, name, spellId)
             end
             if dID~=name then 
                 HealBot_Options_CDebuffResetList()
-                button.aura.check=true
+                HealBot_Check_UnitAura(button)
             end
             break
         end
@@ -1549,16 +1549,14 @@ function HealBot_Aura_SetAuraCheckFlags()
     
     if HealBot_Config_Buffs.NoAuraWhenRested and IsResting() then 
         buffCheck=false 
-    elseif HealBot_Config_Buffs.BuffWatch then
-        if UnitOnTaxi("player") or (not HealBot_Config_Buffs.BuffWatchWhenMounted and IsMounted()) then
-            buffCheck=false
+    elseif HealBot_Config_Buffs.BuffWatch and not UnitOnTaxi("player") then 
+        buffCheck=true
+        if (not HealBot_Config_Buffs.BuffWatchWhenGrouped or GetNumGroupMembers()>0) and 
+           (HealBot_Config_Buffs.BuffWatchInCombat or not HealBot_Data["UILOCK"]) and
+           (HealBot_Config_Buffs.BuffWatchWhenMounted or not IsMounted()) then
+            generalBuffs=true
         else
-            buffCheck=true
-            if (not HealBot_Config_Buffs.BuffWatchWhenGrouped or GetNumGroupMembers()>0) and (HealBot_Config_Buffs.BuffWatchInCombat or not HealBot_Data["UILOCK"]) then
-                generalBuffs=true
-            else
-                generalBuffs=false
-            end
+            generalBuffs=false
         end
     else
         buffCheck=false 
@@ -1566,10 +1564,8 @@ function HealBot_Aura_SetAuraCheckFlags()
     
     if HealBot_Config_Buffs.NoAuraWhenRested and IsResting() then 
         debuffCheck=false 
-    elseif HealBot_Config_Cures.DebuffWatch and 
-           (not HealBot_Config_Cures.DebuffWatchWhenGrouped or GetNumGroupMembers()>0) and 
-           (HealBot_Config_Cures.DebuffWatchInCombat or not HealBot_Data["UILOCK"])  then
-        if UnitOnTaxi("player") or (not HealBot_Config_Buffs.DebuffWatchWhenMounted and IsMounted()) then
+    elseif HealBot_Config_Cures.DebuffWatch and (not HealBot_Config_Cures.DebuffWatchWhenGrouped or GetNumGroupMembers()>0) and (HealBot_Config_Cures.DebuffWatchInCombat or not HealBot_Data["UILOCK"]) then
+        if UnitOnTaxi("player") or (not HealBot_Data["UILOCK"] and not HealBot_Config_Cures.DebuffWatchWhenMounted and IsMounted()) then
             debuffCheck=false
         else
             debuffCheck=true

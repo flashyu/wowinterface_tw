@@ -773,13 +773,13 @@ end
 
 if( playerClass == "DRUID" ) then
 	LoadClassData = function()
-		local GiftofNature = GetSpellInfo(17104)
-		local HealingTouch = GetSpellInfo(5185)
-		local ImprovedRejuv = GetSpellInfo(17111)
-		local MarkoftheWild = GetSpellInfo(1126)
-		local Regrowth = GetSpellInfo(8936)
-		local Rejuvenation = GetSpellInfo(774)
-		local Tranquility = GetSpellInfo(740)
+		local GiftofNature = GetSpellInfo(17104) or "GiftofNature"
+		local HealingTouch = GetSpellInfo(5185) or "HealingTouch"
+		local ImprovedRejuv = GetSpellInfo(17111) or "ImprovedRejuv"
+		local MarkoftheWild = GetSpellInfo(1126) or "MarkoftheWild"
+		local Regrowth = GetSpellInfo(8936) or "Regrowth"
+		local Rejuvenation = GetSpellInfo(774) or "Rejuvenation"
+		local Tranquility = GetSpellInfo(740) or "Tranquility"
 		local Lifebloom = GetSpellInfo(33763) or "Lifebloom"
 		local EmpoweredRejuv = GetSpellInfo(33886) or "EmpoweredRejuv"
 		local EmpoweredTouch = GetSpellInfo(33879) or "EmpoweredTouch"
@@ -1006,10 +1006,10 @@ local hasDivineFavor
 
 if( playerClass == "PALADIN" ) then
 	LoadClassData = function()
-		local DivineFavor = GetSpellInfo(20216)
-		local FlashofLight = GetSpellInfo(19750)
-		local HealingLight = GetSpellInfo(20237)
-		local HolyLight = GetSpellInfo(635)
+		local DivineFavor = GetSpellInfo(20216) or "Divine Favor"
+		local FlashofLight = GetSpellInfo(19750) or "Flash of Light"
+		local HealingLight = GetSpellInfo(20237) or "Healing Light"
+		local HolyLight = GetSpellInfo(635) or "Holy Light"
 
 		spellData[HolyLight] = { coeff = 2.5 / 3.5, levels = {1, 6, 14, 22, 30, 38, 46, 54, 60, 62, 70}, averages = {
 			{avg(39, 47), avg(39, 48), avg(40, 49), avg(41, 50), avg(42, 51)},
@@ -1126,19 +1126,19 @@ end
 
 if( playerClass == "PRIEST" ) then
 	LoadClassData = function()
-		local Renew = GetSpellInfo(139)
-		local GreaterHeal = GetSpellInfo(2060)
-		local PrayerofHealing = GetSpellInfo(596)
-		local FlashHeal = GetSpellInfo(2061)
-		local Heal = GetSpellInfo(2054)
-		local LesserHeal = GetSpellInfo(2050)
-		local SpiritualHealing = GetSpellInfo(14898)
-		local ImprovedRenew = GetSpellInfo(14908)
-		local GreaterHealHot = GetSpellInfo(22009)
-		local CureDisease = GetSpellInfo(528)
+		local Renew = GetSpellInfo(139) or "Renew"
+		local GreaterHeal = GetSpellInfo(2060) or "Greater Heal"
+		local PrayerofHealing = GetSpellInfo(596) or "Prayer of Healing"
+		local FlashHeal = GetSpellInfo(2061) or "Flash Heal"
+		local Heal = GetSpellInfo(2054) or "Heal"
+		local LesserHeal = GetSpellInfo(2050) or "Lesser Heal"
+		local SpiritualHealing = GetSpellInfo(14898) or "Spiritual Healing"
+		local ImprovedRenew = GetSpellInfo(14908) or "Improved Renew"
+		local GreaterHealHot = GetSpellInfo(22009) or "22009"
+		local CureDisease = GetSpellInfo(528) or "Cure Disease"
 		local BindingHeal = GetSpellInfo(32546) or "Binding Heal"
 		local EmpoweredHealing = GetSpellInfo(33158) or "Empowered Healing"
-		local Renewal = GetSpellInfo(37563) and "37563" -- T4 bonus
+		local Renewal = GetSpellInfo(37563) or "37563" -- T4 bonus
 
 		hotData[Renew] = {coeff = 1, interval = 3, ticks = 5, levels = {8, 14, 20, 26, 32, 38, 44, 50, 56, 60, 65, 70}, averages = {
 			45, 100, 175, 245, 315, 400, 510, 650, 810, 970, 1010, 1110 }}
@@ -1309,12 +1309,12 @@ end
 
 if( playerClass == "SHAMAN" ) then
 	LoadClassData = function()
-		local ChainHeal = GetSpellInfo(1064)
-		local HealingWave = GetSpellInfo(331)
-		local LesserHealingWave = GetSpellInfo(8004)
+		local ChainHeal = GetSpellInfo(1064) or "ChainHeal"
+		local HealingWave = GetSpellInfo(331) or "HealingWave"
+		local LesserHealingWave = GetSpellInfo(8004) or "LesserHealingWave"
 		local ImpChainHeal = GetSpellInfo(30872) or "Improved Chain Heal"
-		local HealingWay = GetSpellInfo(29206)
-		local Purification = GetSpellInfo(16178)
+		local HealingWay = GetSpellInfo(29206) or "HealingWay"
+		local Purification = GetSpellInfo(16178) or "Purification"
 
 		spellData[ChainHeal] = {coeff = 2.5 / 3.5, levels = {40, 46, 54, 61, 68}, averages = {
 			{avg(320, 368), avg(322, 371), avg(325, 373), avg(327, 376), avg(330, 378), avg(332, 381)},
@@ -1417,7 +1417,7 @@ end
 
 if( playerClass == "HUNTER" ) then
 	LoadClassData = function()
-		local MendPet = GetSpellInfo(136)
+		local MendPet = GetSpellInfo(136) or "Mend Pet"
 
 		if isTBC then
 			hotData[MendPet] = { interval = 3, levels = { 12, 20, 28, 36, 44, 52, 60, 68 }, ticks = 5, averages = {125, 250, 450, 700, 1000, 1400, 1825, 2375 } }
@@ -1453,9 +1453,9 @@ end
 
 if( playerClass == "WARLOCK" ) then
 	LoadClassData = function()
-		local HealthFunnel = GetSpellInfo(755)
-		local DrainLife = GetSpellInfo(689)
-		local ImpHealthFunnel = GetSpellInfo(18703)
+		local HealthFunnel = GetSpellInfo(755) or "HealthFunnel"
+		local DrainLife = GetSpellInfo(689) or "DrainLife"
+		local ImpHealthFunnel = GetSpellInfo(18703) or "ImpHealthFunnel"
 
 		spellData[HealthFunnel] = { interval = 1, levels = { 12, 20, 28, 36, 44, 52, 60, 68 }, ticks = 10, averages = { 120, 240, 430, 640, 890, 1190, 1530, 1880 } }
 		spellData[DrainLife] = { interval = 1, levels = { 14, 22, 30, 38, 46, 54, 62, 69 }, ticks = 5, averages = { 10 * 5, 17 * 5, 29 * 5, 41 * 5, 55 * 5, 71 * 5, 87 * 5, 108 * 5 } }

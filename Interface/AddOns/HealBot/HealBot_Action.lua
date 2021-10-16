@@ -20,7 +20,6 @@ HealBot_Action_luVars["FocusGroups"]=false
 HealBot_Action_luVars["FGDimming"]=2
 HealBot_Action_luVars["FluidBarAlphaUpdate"]=0.025
 HealBot_Action_luVars["FluidBarAlphaFreq"]=0.025
-HealBot_Action_luVars["FluidBarUpdate"]=100
 HealBot_Action_luVars["FluidBarSmoothAdj"]=5
 HealBot_Action_luVars["FluidBarFreq"]=0.025
 HealBot_Action_luVars["FGroups"]={[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true}
@@ -350,39 +349,31 @@ local aufbSetRValue,aufbSetGValue,aufbSetBValue=0,0,0
 
 function HealBot_Action_setFluid_Aborbs_BarButtons(button)
     HealBot_Fluid_AbsorbButtons[button.id]=button
-    if not HealBot_Action_luVars["FluidBarInUse"] then HealBot_Action_UpdateFluidBars(GetTime()-0.01) end
+    if not HealBot_Action_luVars["FluidBarInUse"] then HealBot_Action_UpdateFluidBars() end
       --HealBot_setCall("HealBot_Action_setFluid_Aborbs_BarButtons")
 end
 
 function HealBot_Action_setFluid_InHeal_BarButtons(button)
     HealBot_Fluid_InHealButtons[button.id]=button
-    if not HealBot_Action_luVars["FluidBarInUse"] then HealBot_Action_UpdateFluidBars(GetTime()-0.01) end
+    if not HealBot_Action_luVars["FluidBarInUse"] then HealBot_Action_UpdateFluidBars() end
       --HealBot_setCall("HealBot_Action_setFluid_InHeal_BarButtons")
 end
 
 function HealBot_Action_setFluid_BarButtons(button)
     HealBot_Fluid_BarButtons[button.id]=button
-    if not HealBot_Action_luVars["FluidBarInUse"] then HealBot_Action_UpdateFluidBars(GetTime()-0.01) end
+    if not HealBot_Action_luVars["FluidBarInUse"] then HealBot_Action_UpdateFluidBars() end
       --HealBot_setCall("HealBot_Action_setFluid_BarButtons")
 end
 
 local hbSmooth=0
-function HealBot_Action_UpdateFluidBars(PrevTime)
+function HealBot_Action_UpdateFluidBars()
     HealBot_Action_luVars["FluidBarInUse"]=false
-    HealBot_Action_luVars["FluidBarElapsed"]=(GetTime()-PrevTime)*2
-    HealBot_Action_luVars["FluidBarUpdateElapsed"]=ceil(HealBot_Action_luVars["FluidBarElapsed"]*HealBot_Action_luVars["FluidBarUpdate"])
-    --HealBot_Action_luVars["FluidBarUpdateElapsed"]=HealBot_Action_luVars["FluidBarUpdate"]
     for id,xButton in pairs(HealBot_Fluid_BarButtons) do
         aufbButtonActive=false
         if xButton.status.current<HealBot_Unit_Status["DEAD"] then
             aufbBarValue=xButton.gref["Bar"]:GetValue()
             if aufbBarValue>xButton.health.hptc then
-                hbSmooth=floor((aufbBarValue-xButton.health.hptc)/HealBot_Action_luVars["FluidBarSmoothAdj"])
-                if hbSmooth<HealBot_Action_luVars["FluidBarUpdateElapsed"] and hbSmooth>0 then
-                    aufbSetValue=aufbBarValue-hbSmooth
-                else
-                    aufbSetValue=aufbBarValue-HealBot_Action_luVars["FluidBarUpdateElapsed"]
-                end
+                aufbSetValue=aufbBarValue-ceil((aufbBarValue-xButton.health.hptc)/HealBot_Action_luVars["FluidBarSmoothAdj"])
                 if aufbSetValue<xButton.health.hptc then 
                     aufbSetValue=xButton.health.hptc
                 else
@@ -390,12 +381,7 @@ function HealBot_Action_UpdateFluidBars(PrevTime)
                 end
                 xButton.gref["Bar"]:SetValue(aufbSetValue)
             elseif aufbBarValue<xButton.health.hptc then
-                hbSmooth=ceil((xButton.health.hptc-aufbBarValue)/HealBot_Action_luVars["FluidBarSmoothAdj"])
-                if hbSmooth<HealBot_Action_luVars["FluidBarUpdateElapsed"] and hbSmooth>0 then
-                    aufbSetValue=aufbBarValue+hbSmooth
-                else
-                    aufbSetValue=aufbBarValue+HealBot_Action_luVars["FluidBarUpdateElapsed"]
-                end
+                aufbSetValue=aufbBarValue+ceil((xButton.health.hptc-aufbBarValue)/HealBot_Action_luVars["FluidBarSmoothAdj"])
                 if aufbSetValue>xButton.health.hptc then 
                     aufbSetValue=xButton.health.hptc
                 else
@@ -415,27 +401,17 @@ function HealBot_Action_UpdateFluidBars(PrevTime)
     
     for id,xButton in pairs(HealBot_Fluid_InHealButtons) do
         if xButton.status.current>HealBot_Unit_Status["ENABLEDOOR"] and xButton.status.current<HealBot_Unit_Status["DEAD"] and xButton.health.incoming>0 then
-            HealBot_Action_luVars["FluidBarInUse"]=true
-            aufbBarValue=0
             aufbBarValue=xButton.gref["InHeal"]:GetValue()
             if aufbBarValue>xButton.health.inhptc then
-                hbSmooth=ceil((aufbBarValue-xButton.health.inhptc)/HealBot_Action_luVars["FluidBarSmoothAdj"])
-                if hbSmooth<HealBot_Action_luVars["FluidBarUpdateElapsed"] and hbSmooth>1 then
-                    aufbSetValue=aufbBarValue-hbSmooth
-                else
-                    aufbSetValue=aufbBarValue-HealBot_Action_luVars["FluidBarUpdateElapsed"]
-                end
+                aufbSetValue=aufbBarValue-ceil((aufbBarValue-xButton.health.inhptc)/HealBot_Action_luVars["FluidBarSmoothAdj"])
                 if aufbSetValue<xButton.health.inhptc then aufbSetValue=xButton.health.inhptc end
                 xButton.gref["InHeal"]:SetValue(aufbSetValue)
+                HealBot_Action_luVars["FluidBarInUse"]=true
             elseif aufbBarValue<xButton.health.inhptc then
-                hbSmooth=ceil((xButton.health.inhptc-aufbBarValue)/HealBot_Action_luVars["FluidBarSmoothAdj"])
-                if hbSmooth<HealBot_Action_luVars["FluidBarUpdateElapsed"] and hbSmooth>1 then
-                    aufbSetValue=aufbBarValue+hbSmooth
-                else
-                    aufbSetValue=aufbBarValue+HealBot_Action_luVars["FluidBarUpdateElapsed"]
-                end
+                aufbSetValue=aufbBarValue+ceil((xButton.health.inhptc-aufbBarValue)/HealBot_Action_luVars["FluidBarSmoothAdj"])
                 if aufbSetValue>xButton.health.inhptc then aufbSetValue=xButton.health.inhptc end
                 xButton.gref["InHeal"]:SetValue(aufbSetValue)
+                HealBot_Action_luVars["FluidBarInUse"]=true
             end
         else
             xButton.gref["InHeal"]:SetValue(0)
@@ -446,17 +422,17 @@ function HealBot_Action_UpdateFluidBars(PrevTime)
 
     for id,xButton in pairs(HealBot_Fluid_AbsorbButtons) do
         if xButton.status.current>HealBot_Unit_Status["ENABLEDOOR"] and xButton.status.current<HealBot_Unit_Status["DEAD"] and xButton.health.absorbs>0 then
-            HealBot_Action_luVars["FluidBarInUse"]=true
-            aufbBarValue=0
             aufbBarValue=xButton.gref["Absorb"]:GetValue()
             if aufbBarValue>xButton.health.abptc then
-                aufbSetValue=aufbBarValue-HealBot_Action_luVars["FluidBarUpdateElapsed"]
+                aufbSetValue=aufbBarValue-ceil((aufbBarValue-xButton.health.abptc)/HealBot_Action_luVars["FluidBarSmoothAdj"])
                 if aufbSetValue<xButton.health.abptc then aufbSetValue=xButton.health.abptc end
                 xButton.gref["Absorb"]:SetValue(aufbSetValue)
+                HealBot_Action_luVars["FluidBarInUse"]=true
             elseif aufbBarValue<xButton.health.abptc then
-                aufbSetValue=aufbBarValue+HealBot_Action_luVars["FluidBarUpdateElapsed"]
+                aufbSetValue=aufbBarValue+ceil((xButton.health.abptc-aufbBarValue)/HealBot_Action_luVars["FluidBarSmoothAdj"])
                 if aufbSetValue>xButton.health.abptc then aufbSetValue=xButton.health.abptc end
                 xButton.gref["Absorb"]:SetValue(aufbSetValue)
+                HealBot_Action_luVars["FluidBarInUse"]=true
             end
         else
             xButton.gref["Absorb"]:SetValue(0)
@@ -465,9 +441,7 @@ function HealBot_Action_UpdateFluidBars(PrevTime)
         end
     end
     if HealBot_Action_luVars["FluidBarInUse"] then
-        PrevTime=GetTime()
-        C_Timer.After(HealBot_Action_luVars["FluidBarFreq"], function() HealBot_Action_UpdateFluidBars(PrevTime) end)
-        --C_Timer.After(0.001, function() HealBot_Action_UpdateFluidBars(PrevTime) end)
+        C_Timer.After(HealBot_Action_luVars["FluidBarFreq"], function() HealBot_Action_UpdateFluidBars() end)
     end
     --HealBot_Aux_setLuVars("FluidBarInUse", HealBot_Action_luVars["FluidBarInUse"])
       --HealBot_setCall("HealBot_Action_UpdateFluidBars")
@@ -1148,7 +1122,7 @@ function HealBot_Action_UpdateTheDeadButton(button, TimeNow)
     elseif HealBot_Action_IsUnitDead(button) then
         if not UnitIsDeadOrGhost(button.unit) then
             button.status.current=HealBot_Unit_Status["CHECK"]
-            button.aura.check=true
+            HealBot_Check_UnitAura(button)
             HealBot_Action_UpdateBackgroundButton(button)
             HealBot_Action_Refresh(button)
         end
@@ -1846,10 +1820,11 @@ local hbEventFuncs={["UNIT_AURA"]=HealBot_Check_UnitAura,
                     ["PLAYER_SPECIALIZATION_CHANGED"]=HealBot_OnEvent_SpecChange,
                    }
 function HealBot_Action_InitButton(button)
+    erButton=HealBot_Emerg_Button[button.id]
     button.guid="nil"
     button.unit="nil"
+    erButton.unit="nil"
     button.skin=""
-    erButton=HealBot_Emerg_Button[button.id]
     button.aura={}
     button.aura.buff={}
     button.aura.buff.recheck={}
@@ -2699,7 +2674,7 @@ function HealBot_Action_ToggelMyFriend(button)
     else
         HealBot_Config.MyFriend=button.guid
     end
-    button.aura.check=true
+    HealBot_Check_UnitAura(button)
     --HealBot_setCall("HealBot_Action_ToggelMyFriend")
 end
 
@@ -2960,10 +2935,9 @@ end
 
 function HealBot_Action_AlterSpell2Macro(spellName, spellTar, spellTrin1, spellTrin2, spellAvoidBC, unit, status)
     local smName=""
-    local scText=""
     local spellType="help"
     if status=="Enemy" then spellType="harm" end
-    scText="/cast [@"..unit..","..spellType.."] "..spellName.."\n"
+    local scText="/cast [@"..unit..","..spellType.."] "..spellName.."\n"
 
     if HealBot_Globals.MacroSuppressError==1 then smName=smName..'/hb se3\n' end
     if HealBot_Globals.MacroSuppressSound==1 then smName=smName..'/hb se1\n' end
@@ -3106,8 +3080,9 @@ function HealBot_Action_DoSetButtonAttrib(button,status,j,unit,HB_prefix,buttonT
             end
         elseif mId ~= 0 then
             local _,_,mText=GetMacroInfo(mId)
-            if HealBot_UnitPet(unit) and UnitExists(HealBot_UnitPet(unit)) then
-                mText=string.gsub(mText,"hbtargetpet",HealBot_UnitPet(unit))
+            local pet=HealBot_UnitPet(button.unit)
+            if pet and UnitExists(pet) then
+                mText=string.gsub(mText,"hbtargetpet",pet)
             end
             mText=string.gsub(mText,"hbtargettargettarget",unit.."targettarget")
             mText=string.gsub(mText,"hbtargettarget",unit.."target")
@@ -3341,6 +3316,7 @@ function HealBot_Action_SetHealButton(unit,hbGUID,hbCurFrame,unitType,duplicate,
             tSetHealButton.reset=false
             --tSetHealButton.guid=hbGUID
             tSetHealButton.unit=unit
+            erButton.unit=unit
             tSetHealButton:SetAttribute("unit", unit);
             erButton:SetAttribute("unit", unit);
             HealBot_Action_SetAllButtonAttribs(tSetHealButton,"Enemy") 
@@ -4165,9 +4141,10 @@ function HealBot_Action_UseSmartCast(bp,button)
         else
             local mId=GetMacroIndexByName(sName)
             if mId ~= 0 then
-               local _,_,mText=GetMacroInfo(mId)
-                if HealBot_UnitPet(button.unit) and UnitExists(HealBot_UnitPet(button.unit)) then
-                    mText=string.gsub(mText,"hbtargetpet",HealBot_UnitPet(button.unit))
+                local _,_,mText=GetMacroInfo(mId)
+                local pet=HealBot_UnitPet(button.unit)
+                if pet and UnitExists(pet) then
+                    mText=string.gsub(mText,"hbtargetpet",pet)
                 end
                 mText=string.gsub(mText,"hbtarget",button.unit)
                 mText=string.gsub(mText,"hbtargettarget",button.unit.."target")

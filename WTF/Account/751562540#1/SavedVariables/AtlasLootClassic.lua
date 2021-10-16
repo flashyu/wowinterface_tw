@@ -19,8 +19,8 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"AuchenaiCrypts", -- [2]
-					nil, -- [3]
+					"SerpentshrineCavern", -- [2]
+					5, -- [3]
 					6, -- [4]
 					0, -- [5]
 				},

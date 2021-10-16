@@ -7,7 +7,7 @@ ItemRackUser = {
 	["MainScale"] = 1,
 	["SetMenuWrapValue"] = 3,
 	["SetMenuWrap"] = "OFF",
-	["EnableQueues"] = "ON",
+	["EnablePerSetQueues"] = "OFF",
 	["Sets"] = {
 		["Health"] = {
 			["Queues"] = {
@@ -57,7 +57,6 @@ ItemRackUser = {
 		},
 		["~CombatQueue"] = {
 			["equip"] = {
-				[14] = "30841::::::::70:::::::::",
 			},
 		},
 		["Null"] = {
@@ -123,7 +122,7 @@ ItemRackUser = {
 			},
 		},
 	},
-	["EnablePerSetQueues"] = "OFF",
+	["EnableQueues"] = "ON",
 	["Queues"] = {
 		{
 			"25975::::::::66::::::::", -- [1]
@@ -173,5 +172,5 @@ ItemRackUser = {
 	["Buttons"] = {
 	},
 	["MenuScale"] = 0.85,
-	["CurrentSet"] = "飛行",
+	["CurrentSet"] = "Health",
 }

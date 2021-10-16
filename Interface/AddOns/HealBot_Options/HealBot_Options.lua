@@ -3853,43 +3853,35 @@ function HealBot_Options_PerfPlugin_adj(fluidAdj, flashAdj, stateAdj, cpuAdj)
 end
 
 function HealBot_Options_BarFreq_setVars()
-    local fluidFreqUpd=0
+ --   local fluidFreqUpd=0
     local stateFreqUpd=0
     local stateFreq=0.02
     local flashFreqUpd=0
     local flashFreq=0.02
     local smoothAdj=9
     if HealBot_Globals.OverrideEffects["USE"]==1 then
-        fluidFreqUpd=275+(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FLUIDFREQ"]*25)
+ --       fluidFreqUpd=275+(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FLUIDFREQ"]*25)
         stateFreqUpd=0.058+(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FLUIDFREQ"]/200)
         flashFreqUpd=0.025+(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["OFREQ"]*0.4)
         fluidFreq=HealBot_Comm_round(HealBot_Options_luVars["FluidFreqAdj"]-(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FLUIDFREQ"]/1800),4)
-        if HEALBOT_GAME_VERSION>3 then
-            smoothAdj=9-ceil(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FLUIDFREQ"]/3)
-        else
-            smoothAdj=12-ceil(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FLUIDFREQ"]/2)
-        end
+        smoothAdj=12-ceil(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FLUIDFREQ"]/2)
     else
-        fluidFreqUpd=275+(HealBot_Globals.OverrideEffects["FLUIDFREQ"]*25)
+ --       fluidFreqUpd=275+(HealBot_Globals.OverrideEffects["FLUIDFREQ"]*25)
         stateFreqUpd=0.058+(HealBot_Globals.OverrideEffects["FLUIDFREQ"]/200)
         flashFreqUpd=0.025+(HealBot_Globals.OverrideEffects["OFREQ"]*0.4)
         fluidFreq=HealBot_Comm_round(HealBot_Options_luVars["FluidFreqAdj"]-(HealBot_Globals.OverrideEffects["FLUIDFREQ"]/1800),4)
-        if HEALBOT_GAME_VERSION>3 then
-            smoothAdj=9-ceil(HealBot_Globals.OverrideEffects["FLUIDFREQ"]/3)
-        else
-            smoothAdj=12-ceil(HealBot_Globals.OverrideEffects["FLUIDFREQ"]/2)
-        end
+        smoothAdj=12-ceil(HealBot_Globals.OverrideEffects["FLUIDFREQ"]/2)
     end
     flashFreq=HealBot_Comm_round(HealBot_Options_luVars["FlashFreqAdj"]-(flashFreqUpd/8),4)
     stateFreq=HealBot_Comm_round(HealBot_Options_luVars["StateFreqAdj"]-(stateFreqUpd/8),4)
     if fluidFreq<0.005 then fluidFreq=0.005 end
     if stateFreq<=0.005 then stateFreq=0.005 end
     if flashFreq<=0.005 then flashFreq=0.005 end
-    if smoothAdj<2 then fluidFreq=2 end
+    if smoothAdj<2 then smoothAdj=2 end
 
-    HealBot_Action_setLuVars("FluidBarUpdate", fluidFreqUpd)
+ --   HealBot_Action_setLuVars("FluidBarUpdate", fluidFreqUpd)
     HealBot_Action_setLuVars("FluidBarFreq", fluidFreq)
-    HealBot_Aux_setLuVars("AuxFluidBarUpdate", fluidFreqUpd)
+ --   HealBot_Aux_setLuVars("AuxFluidBarUpdate", fluidFreqUpd)
     HealBot_Aux_setLuVars("AuxFluidBarFreq", fluidFreq)
     
     HealBot_Aux_setLuVars("AuxFluidBarOpacityUpdate", HealBot_Comm_round(flashFreqUpd,2))
@@ -3904,7 +3896,7 @@ function HealBot_Options_BarFreq_setVars()
     HealBot_Aux_setLuVars("AuxFluidBarAlphaFreq", stateFreq)
     HealBot_Aux_setLuVars("FluidBarSmoothAdj", smoothAdj)
     
-    HealBot_AddDebug("fluidFreq="..fluidFreq.."  fluidFreqUpd="..fluidFreqUpd, "Perf", true)
+  --  HealBot_AddDebug("fluidFreq="..fluidFreq.."  fluidFreqUpd="..fluidFreqUpd, "Perf", true)
     HealBot_AddDebug("stateFreq="..stateFreq.."  stateFreqUpd="..HealBot_Comm_round(stateFreqUpd,2), "Perf", true)
     HealBot_AddDebug("flashFreq="..HealBot_Comm_round(flashFreq,4).."  flashFreqUpd="..flashFreqUpd, "Perf", true)
 end
@@ -19349,6 +19341,7 @@ function HealBot_Options_ShowPanel(self, tabNo, subTabNo)
         if subTabNo==51 then
             HealBot_Options_MonitorBuffsInCombat:Show()
             HealBot_Options_MonitorBuffsWhenGrouped:Show()
+            HealBot_Options_MonitorBuffsWhenMounted:Show()
             if HealBot_Data["PCLASSTRIM"]==HealBot_Class_En[HEALBOT_PALADIN] and HEALBOT_GAME_VERSION<4 then
                 HealBot_Options_MonitorBuffsPalaBlessing:Show()
             else
@@ -19358,6 +19351,7 @@ function HealBot_Options_ShowPanel(self, tabNo, subTabNo)
             HealBot_Options_MonitorBuffsInCombat:Hide()
             HealBot_Options_MonitorBuffsWhenGrouped:Hide()
             HealBot_Options_MonitorBuffsPalaBlessing:Hide()
+            HealBot_Options_MonitorBuffsWhenMounted:Hide()
         end
     end;
     
