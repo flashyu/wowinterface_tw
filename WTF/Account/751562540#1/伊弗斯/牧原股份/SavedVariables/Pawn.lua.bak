@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0527,
+	["LastVersion"] = 2.053,
 	["LastPlayerFullName"] = "牧原股份-伊弗斯",
 	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
@@ -26,9 +26,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:21875::::::::70::::::::|h[原始月布長袍]|h|r",
 		}, -- [5]
 		{
-			["ID"] = 24677,
-			["Level"] = 117,
-			["Link"] = "|cff1eff00|Hitem:24677::::::-38:438632489:70::::::::|h[預言者之大法師之帶]|h|r",
+			["ID"] = 28828,
+			["Level"] = 125,
+			["Link"] = "|cffa335ee|Hitem:28828::::::::70:::::::::|h[古羅縫製束腰]|h|r",
 		}, -- [6]
 		{
 			["ID"] = 27873,
@@ -80,9 +80,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:28764::::::::70:::::::::|h[遠行者迷惑披風]|h|r",
 		}, -- [15]
 		{
-			["ID"] = 28771,
-			["Level"] = 125,
-			["Link"] = "|cffa335ee|Hitem:28771::::::::70::::::::|h[聖光正義之錘]|h|r",
+			["ID"] = 30317,
+			["Level"] = 175,
+			["Link"] = "|cffff8000|Hitem:30317::::::::70:::::::::|h[宇宙灌溉者]|h|r",
 		}, -- [16]
 		{
 			["ID"] = 28387,

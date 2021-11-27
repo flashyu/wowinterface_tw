@@ -1,10 +1,10 @@
-## Interface: 90100
+## Interface: 90105
 
 ## Title: ArkInventory
 ## Title-zhCN: [背包]ArkInventory 整合背包银行
 ## Author: Arkayenro - Khaz'goroth
 ## Email: arkayenro at gmail dot com
-## Version: 30958
+## Version: 30961
 ## X-ReleaseType: 
 ## SavedVariables: ARKINVDB
 

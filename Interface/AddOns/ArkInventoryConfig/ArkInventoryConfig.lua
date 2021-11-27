@@ -2,8 +2,8 @@
 
 License: All Rights Reserved, (c) 2006-2018
 
-$Revision: 2913 $
-$Date: 2021-08-24 23:38:23 +1000 (Tue, 24 Aug 2021) $
+$Revision: 2955 $
+$Date: 2021-11-17 12:36:32 +1100 (Wed, 17 Nov 2021) $
 
 ]]--
 
@@ -1495,6 +1495,8 @@ function ArkInventory.ConfigInternal( )
 							end,
 							set = function( info, v )
 								ArkInventory.db.option.junk.raritycutoff = tonumber( v )
+								ArkInventory.ItemCacheClear( )
+								ArkInventory.Frame_Main_Generate( nil, ArkInventory.Const.Window.Draw.Recalculate )
 							end,
 						},
 						limit = {
@@ -1512,8 +1514,22 @@ function ArkInventory.ConfigInternal( )
 								ArkInventory.db.option.junk.limit = not ArkInventory.db.option.junk.limit
 							end,
 						},
-						delete = {
+						combat = {
 							order = 500,
+							name = ArkInventory.Localise["COMBAT"],
+							desc = ArkInventory.Localise["CONFIG_JUNK_COMBAT_DESC"],
+							type = "toggle",
+							width = "half",
+							disabled = not ArkInventory.Global.Junk.process,
+							get = function( info )
+								return ArkInventory.db.option.junk.combat
+							end,
+							set = function( info, v )
+								ArkInventory.db.option.junk.combat = not ArkInventory.db.option.junk.combat
+							end,
+						},
+						delete = {
+							order = 600,
 							name = ArkInventory.Localise["DELETE"],
 							desc = ArkInventory.Localise["CONFIG_JUNK_DELETE_DESC"],
 							type = "toggle",
@@ -1529,7 +1545,7 @@ function ArkInventory.ConfigInternal( )
 							end,
 						},
 						notify = {
-							order = 600,
+							order = 700,
 							name = ArkInventory.Localise["NOTIFY"],
 							desc = ArkInventory.Localise["CONFIG_JUNK_NOTIFY_DESC"],
 							type = "toggle",
@@ -1545,7 +1561,7 @@ function ArkInventory.ConfigInternal( )
 							end,
 						},
 						list = {
-							order = 700,
+							order = 800,
 							name = ArkInventory.Localise["LIST"],
 							desc = ArkInventory.Localise["CONFIG_JUNK_LIST_DESC"],
 							type = "toggle",
@@ -1561,7 +1577,7 @@ function ArkInventory.ConfigInternal( )
 							end,
 						},
 						timeout = {
-							order = 800,
+							order = 900,
 							name = ArkInventory.Localise["CONFIG_GENERAL_WORKAROUND_THREAD"],
 							desc = ArkInventory.Localise["CONFIG_JUNK_TIMER_DESC"],
 							type = "range",
@@ -1582,7 +1598,7 @@ function ArkInventory.ConfigInternal( )
 							end,
 						},
 						soulbound = {
-							order = 1000,
+							order = 5000,
 							name = ArkInventory.Localise["SOULBOUND"],
 							type = "group",
 							inline = true,
@@ -1600,10 +1616,12 @@ function ArkInventory.ConfigInternal( )
 									end,
 									set = function( info, v )
 										ArkInventory.db.option.junk.soulbound.known = not ArkInventory.db.option.junk.soulbound.known
+										ArkInventory.ItemCacheClear( )
+										ArkInventory.Frame_Main_Generate( nil, ArkInventory.Const.Window.Draw.Recalculate )
 									end,
 								},
 								equipment = {
-									order = 100,
+									order = 200,
 									name = ArkInventory.Localise["EQUIPMENT"],
 									desc = ArkInventory.Localise["CONFIG_JUNK_SOULBOUND_EQUIPMENT_DESC"],
 									type = "toggle",
@@ -1615,6 +1633,25 @@ function ArkInventory.ConfigInternal( )
 									end,
 									set = function( info, v )
 										ArkInventory.db.option.junk.soulbound.equipment = not ArkInventory.db.option.junk.soulbound.equipment
+										ArkInventory.ItemCacheClear( )
+										ArkInventory.Frame_Main_Generate( nil, ArkInventory.Const.Window.Draw.Recalculate )
+									end,
+								},
+								itemlevel = {
+									order = 300,
+									name = ArkInventory.Localise["ITEM_LEVEL"],
+									desc = ArkInventory.Localise["CONFIG_JUNK_SOULBOUND_ITEMLEVEL_DESC"],
+									type = "toggle",
+									disabled = function( info )
+										return not ArkInventory.Global.Junk.process or not ArkInventory.db.option.junk.soulbound.equipment
+									end,
+									get = function( info )
+										return ArkInventory.db.option.junk.soulbound.itemlevel
+									end,
+									set = function( info, v )
+										ArkInventory.db.option.junk.soulbound.itemlevel = not ArkInventory.db.option.junk.soulbound.itemlevel
+										ArkInventory.ItemCacheClear( )
+										ArkInventory.Frame_Main_Generate( nil, ArkInventory.Const.Window.Draw.Recalculate )
 									end,
 								},
 							},
@@ -2573,6 +2610,25 @@ function ArkInventory.ConfigInternal( )
 									end,
 									set = function( info, v )
 										ArkInventory.db.option.message.realm.loaded = v
+									end,
+								},
+							},
+						},
+						objectcache = {
+							order = 100,
+							name = ArkInventory.Localise["CONFIG_GENERAL_MESSAGES_OBJECTCACHE"],
+							type = "group",
+							args = {
+								state = {
+									order = 100,
+									name = ArkInventory.Localise["CONFIG_GENERAL_MESSAGES_OBJECTCACHE_NOTFOUND"],
+									desc = ArkInventory.Localise["CONFIG_GENERAL_MESSAGES_OBJECTCACHE_NOTFOUND_DESC"],
+									type = "toggle",
+									get = function( info )
+										return ArkInventory.db.option.message.object.notfound
+									end,
+									set = function( info, v )
+										ArkInventory.db.option.message.object.notfound = v
 									end,
 								},
 							},

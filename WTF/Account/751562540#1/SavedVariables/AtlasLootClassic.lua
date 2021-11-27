@@ -1,7 +1,7 @@
 
 AtlasLootClassicDB = {
 	["global"] = {
-		["__addonrevision"] = 2030004,
+		["__addonrevision"] = 2040000,
 	},
 	["profileKeys"] = {
 		["牧原股份 - 伊弗斯"] = "牧原股份 - 伊弗斯",
@@ -14,13 +14,13 @@ AtlasLootClassicDB = {
 					"TOPLEFT", -- [1]
 					nil, -- [2]
 					"TOPLEFT", -- [3]
-					270.8121948242188, -- [4]
-					-130.5470428466797, -- [5]
+					270.9999694824219, -- [4]
+					-130.9999694824219, -- [5]
 				},
 				["selected"] = {
 					nil, -- [1]
-					"SerpentshrineCavern", -- [2]
-					5, -- [3]
+					"TempestKeep", -- [2]
+					4, -- [3]
 					6, -- [4]
 					0, -- [5]
 				},

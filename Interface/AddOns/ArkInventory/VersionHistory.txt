@@ -13,12 +13,34 @@
  ** note - a recipe item will show "Learn" next to the characters that have not currently learned that recipe (skill level requirements are not checked)
  
  
+*3.09.61 (19-NOV-2021)*
+ * fixed - (mostly) issue when right clicking on a completely identical item in your bags that you are also currently wearing not updating the locked status (remained faded) when they swap (if you keep swapping them multiple times it will eventually get out of sync until the next window update)
+ * fixed - issue with the junk quality, and soulbound options, not clearing the item cache when you change them (so would need a reload to actually change)
+ * fixed - (maybe) belowaverage rule function to stop an issue where it somehow collects more items than it should
+ * fixed - inactive heart of azeroth items are no longer considered unusable (or junk because of that)
+ * fixed - issue with unequipable status if you enter the game while in the arena, mythic plus, or torghast, or while in combat and open your bags while still in combat
+ * added - config option for junk soulbound equipment to ignore item level requirement (ie a level 60 item when you are level 58 would no longer be considered junk) - enabled by default
+ 
+*3.09.60 (10-NOV-2021)*
+ * added - config option to disable object data not found warning message - disabled by default
+ * added - config option for junk selling to continue while in combat - disabled by default
+ * added - rule function belowaverage( )
+ * fixed - issue with item count array being erased while in the middle of building
+ * fixed - issue with sell junk items destroy code.  you can only destroy one item/stack per keypress
+ * fixed - typo in the soulbound equip junk code that was causing it to never do the check
+ * changed - toc updated to 90105
+ * changed - updated workaround for the issue with bank bag slot id values to use the GetFirstBagBankSlotIndex( ) function if available
+ * changed - already known for junk purposes should now apply to all items
+ * removed - no longer listen for action bar events
+
+*3.09.59 (xx-xxx-xxxx)*
+ * no longer available
  
 *3.09.58 (06-OCT-2021)*
  * fixed - issue with some leftover pet test code
  * fixed - issue with ilevel value for some items
- * added - extra error catching code for a weird item count (i think) issue that i cant duplicate yet and only rarely happens
  * fixed - (classic) added a workaround to cater for an issue where the bank bag slot id values returned by blizzard are incorrect.  they are out by 4 as if the bank had 28 slots instead of 24
+ * added - extra error catching code for a weird item count (i think) issue that i cant duplicate yet and only rarely happens
  
 *3.09.57 (16-SEP-2021)*
  * fixed - conflict with skillet.  scan on load is now ignored if skillet is loaded and enabled.  you have to open the blizzard tradeskill window to trigger a scan, it will not scan the skillet window.

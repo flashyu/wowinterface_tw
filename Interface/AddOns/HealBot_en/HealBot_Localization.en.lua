@@ -14,13 +14,13 @@
 --
 
 
-if HEALBOT_GAME_VERSION>3 then
+--if HEALBOT_GAME_VERSION>3 then
     HEALBOT_classicABSORBHOT="absorb"
     HEALBOT_classicABSORBHOTUP="Absorb"
-else    
-    HEALBOT_classicABSORBHOT="HoT"
-    HEALBOT_classicABSORBHOTUP="HoT"
-end
+--else    
+--    HEALBOT_classicABSORBHOT="HoT"
+--    HEALBOT_classicABSORBHOTUP="HoT"
+--end
     
 function HealBot_Lang_enUK()
     HEALBOT_enWORD_COLOUR_SUFFIX = "our"

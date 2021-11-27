@@ -3,6 +3,37 @@
 ArkInventory.CrossClient = { }
 
 
+function ArkInventory.CrossClient.GetAverageItemLevel( )
+	
+	if GetAverageItemLevel then
+		
+		local overall, equipped, pvp = GetAverageItemLevel( )
+		return math.floor( equipped )
+		
+	else
+		
+		return 1
+		
+	end
+	
+end
+
+function ArkInventory.CrossClient.GetFirstBagBankSlotIndex( )
+	
+	if GetFirstBagBankSlotIndex then
+		
+		-- classic
+		return GetFirstBagBankSlotIndex( )
+		
+	else
+		
+		-- retail and tbc
+		return GetContainerNumSlots( BANK_CONTAINER )
+		
+	end
+	
+end
+
 function ArkInventory.CrossClient.IsAnimaItemByID( ... )
 	
 	if C_Item and C_Item.IsAnimaItemByID then
@@ -303,7 +334,7 @@ local p = string.lower( ArkInventory.CrossClient.GetCVar( "portal" ) )
 
 ArkInventory.CrossClient.TemplateVersion = 1
 
-if WOW_PROJECT_ID == 1 then
+if WOW_PROJECT_ID == ( WOW_PROJECT_MAINLINE or 1 ) then
 	if string.match( a, "beta" ) then
 		ArkInventory.Const.BLIZZARD.CLIENT.ID = ArkInventory.Const.BLIZZARD.CLIENT.CODE.RETAIL_BETA
 		ArkInventory.Const.BLIZZARD.CLIENT.NAME = string.format( "%s: Beta", ArkInventory.Const.BLIZZARD.CLIENT.NAME )
@@ -313,7 +344,7 @@ if WOW_PROJECT_ID == 1 then
 	else
 		ArkInventory.Const.BLIZZARD.CLIENT.ID = ArkInventory.Const.BLIZZARD.CLIENT.CODE.RETAIL
 	end
-elseif WOW_PROJECT_ID == 2 then
+elseif WOW_PROJECT_ID == ( WOW_PROJECT_CLASSIC or 2 ) then
 	ArkInventory.CrossClient.TemplateVersion = 2
 	if string.match( a, "beta" ) then
 		ArkInventory.Const.BLIZZARD.CLIENT.ID = ArkInventory.Const.BLIZZARD.CLIENT.CODE.CLASSIC_BETA
@@ -324,7 +355,7 @@ elseif WOW_PROJECT_ID == 2 then
 	else
 		ArkInventory.Const.BLIZZARD.CLIENT.ID = ArkInventory.Const.BLIZZARD.CLIENT.CODE.CLASSIC
 	end
-elseif WOW_PROJECT_ID == 5 then
+elseif WOW_PROJECT_ID == ( WOW_PROJECT_BURNING_CRUSADE_CLASSIC or 5 ) then
 	ArkInventory.CrossClient.TemplateVersion = 2
 	if string.match( a, "beta" ) then
 		ArkInventory.Const.BLIZZARD.CLIENT.ID = ArkInventory.Const.BLIZZARD.CLIENT.CODE.TBC_BETA

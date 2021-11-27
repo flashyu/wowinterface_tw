@@ -32,7 +32,7 @@ Turn in [QT10225 Report to Engineering].\\Accept [QA10224 Essence for the Engine
 [G42.5,72.3 Netherstorm]Zap the [QC10203,4 Big Wagon Full of Explosives].
 [G40.3,72.9 Netherstorm]Complete [QC10203].
 Head back toward *Area 52* and complete [QC10342].
-[G34.3,70.0 Netherstorm]Kill and loot *Mana Wraiths* to work on [QC10224]. If you kill them all and have not completed the quest, manually complete this step and move on.
+[G34.3,70.0 Netherstorm]Kill and loot *Mana Wraiths* at this waypoint to work on [QC10224]. If you kill them all and have not completed the quest, manually complete this step and move on.
 Turn in [QT10203 Invaluable Asset Zapping].\\Accept [QA10221 Dr. Boom!]
 [G34.5,66.4 Netherstorm]
 [G33.8,63.9 Netherstorm]Speak with *Krexcil* to acquire the flight path.
@@ -77,7 +77,7 @@ Turn in [QT10194 Stealth Flight].\\Accept [QA10652 Behind Enemy Lines].
 Speak with *Veronia* again and finish the conversation to fly to Coruu.
 
 Turn in [QT10652 Behind Enemy Lines].\\Accept [QA10197 A Convincing Disguise].
-On your way to the next step, kill and loot *Arcanists, Guardsmen and Arch Mages for [QC10197,2 Sunfury Guardsman Medallion][O] and [QC10197,3 Sunfury Arcanist Robes].
+On your way to the next step, kill and loot *Arcanists, Guardsmen* and *Arch Mages* for [QC10197,2 Sunfury Guardsman Medallion][O] and [QC10197,3 Sunfury Arcanist Robes][O].
 [G47.4,81.0 Netherstorm]
 Head inside to kill and loot a *Researcher* and complete [QC10197].
 Turn in [QT10197 A Convinceing Disguise].\\Accept [QA10198 Information Gathering].

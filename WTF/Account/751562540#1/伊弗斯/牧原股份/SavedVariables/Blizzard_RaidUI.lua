@@ -1,8 +1,8 @@
 
 RAID_PULLOUT_POSITIONS = {
 	["HUNTER"] = {
-		["y"] = 971.4872436523438,
-		["x"] = 252.1709747314453,
+		["y"] = 941.9488525390625,
+		["x"] = 112.6838226318359,
 		["point"] = "TOP",
 		["relativePoint"] = "BOTTOMLEFT",
 		["class"] = "獵人",
@@ -10,8 +10,8 @@ RAID_PULLOUT_POSITIONS = {
 		},
 	},
 	["PRIEST"] = {
-		["y"] = 998.837646484375,
-		["x"] = 299.7607116699219,
+		["y"] = 938.1197509765625,
+		["x"] = 36,
 		["point"] = "TOP",
 		["relativePoint"] = "BOTTOMLEFT",
 		["class"] = "牧師",

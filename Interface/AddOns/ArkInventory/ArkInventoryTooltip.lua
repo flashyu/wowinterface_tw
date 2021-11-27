@@ -1185,16 +1185,22 @@ function ArkInventory.TooltipContains( tooltip, TextToFind, IgnoreLeft, IgnoreRi
 end
 
 
-local function helper_AcceptableRedText( txt, ignoreknown )
+local function helper_AcceptableRedText( txt, allow_known, allow_level )
+	
+	-- what red text is allowed to exist
+	
 	if txt == ArkInventory.Localise["ALREADY_KNOWN"] then
-		--ArkInventory.Output2( "ALREADY_KNOWN" )
-		if ignoreknown then
+		--ArkInventory.Output( "ALREADY_KNOWN" )
+		if allow_known then
 			return true
 		else
 			return false
 		end
 	elseif txt == ArkInventory.Localise["DURABILITY"] then
 		--ArkInventory.Output2( "DURABILITY" )
+		return true
+	elseif string.match( txt, ArkInventory.Localise["WOW_TOOLTIP_DURABLITY"] ) then
+		--ArkInventory.Output2( "WOW_TOOLTIP_DURABLITY" )
 		return true
 	elseif txt == ArkInventory.Localise["ITEM_NOT_DISENCHANTABLE"] then
 		--ArkInventory.Output2( "ITEM_NOT_DISENCHANTABLE" )
@@ -1205,14 +1211,31 @@ local function helper_AcceptableRedText( txt, ignoreknown )
 	elseif txt == ArkInventory.Localise["WOW_TOOLTIP_RETRIEVING_ITEM_INFO"] then
 		--ArkInventory.Output2( "WOW_TOOLTIP_RETRIEVING_ITEM_INFO" )
 		return true
-	elseif string.match( txt, ArkInventory.Localise["WOW_TOOLTIP_DURABLITY"] ) then
-		--ArkInventory.Output2( "WOW_TOOLTIP_DURABLITY" )
+	elseif txt == ArkInventory.Localise["HEART_OF_AZEROTH_INACTIVE"] then
 		return true
+	elseif txt == ArkInventory.Localise["CANNOT_UNEQUIP_COMBAT"] then
+		return true
+	elseif txt == ArkInventory.Localise["CANNOT_UNEQUIP_ARENA"] then
+		return true
+	elseif txt == ArkInventory.Localise["CANNOT_UNEQUIP_MYTHIC_PLUS"] then
+		return true
+	elseif txt == ArkInventory.Localise["CANNOT_UNEQUIP_TORGHAST"] then
+		return true
+	elseif string.match( txt, ArkInventory.Localise["WOW_TOOLTIP_REQUIRES_LEVEL"] ) then
+		--ArkInventory.Output( "WOW_TOOLTIP_REQUIRES_LEVEL" )
+		if allow_level then
+			return true
+		else
+			return false
+		end
 	end
+	
+	--ArkInventory.Output( "red text: ", txt )
 	return false
+	
 end
 
-function ArkInventory.TooltipCanUseBackwards( tooltip, ignoreknown )
+function ArkInventory.TooltipCanUseBackwards( tooltip, allow_known, allow_level )
 	
 	local l = { "TextLeft", "TextRight" }
 	local n = ArkInventory.TooltipGetNumLines( tooltip )
@@ -1231,7 +1254,7 @@ function ArkInventory.TooltipCanUseBackwards( tooltip, ignoreknown )
 				local c = ArkInventory.ColourRGBtoCode( r, g, b, a, true )
 				if c == ArkInventory.Const.BLIZZARD.GLOBAL.FONT.COLOR.ALREADYKNOWN then
 					txt = ArkInventory.TooltipCleanText( txt )
-					if not helper_AcceptableRedText( txt, ignoreknown ) then
+					if not helper_AcceptableRedText( txt, allow_known, allow_level ) then
 						--ArkInventory.Output2( "line[", i, "]=[", txt, "] backwards - unusable" )
 						return false
 					end
@@ -1245,7 +1268,7 @@ function ArkInventory.TooltipCanUseBackwards( tooltip, ignoreknown )
 	
 end
 
-function ArkInventory.TooltipCanUse( tooltip, ignoreknown )
+function ArkInventory.TooltipCanUse( tooltip, allow_known, allow_level )
 	
 	local l = { "TextLeft", "TextRight" }
 	local n = ArkInventory.TooltipGetNumLines( tooltip )
@@ -1258,15 +1281,15 @@ function ArkInventory.TooltipCanUse( tooltip, ignoreknown )
 				
 				local txt = obj:GetText( )
 				if txt == "" or string.find( txt, "^\10" ) or string.find( txt, "^\n" ) or string.find( txt, "^|n" ) then
-					return ArkInventory.TooltipCanUseBackwards( tooltip, ignoreknown )
+					return ArkInventory.TooltipCanUseBackwards( tooltip, allow_known, allow_level )
 				end
 				
 				local r, g, b, a = obj:GetTextColor( )
 				local c = ArkInventory.ColourRGBtoCode( r, g, b, a, true )
 				if c == ArkInventory.Const.BLIZZARD.GLOBAL.FONT.COLOR.ALREADYKNOWN then
 					txt = ArkInventory.TooltipCleanText( txt )
-					if not helper_AcceptableRedText( txt, ignoreknown ) then
-						--ArkInventory.Output2( "line[", i, "]=[", txt, "] forwards - unusable" )
+					if not helper_AcceptableRedText( txt, allow_known, allow_level ) then
+						--ArkInventory.Output( "line[", i, "]=[", txt, "] forwards - unusable" )
 						return false
 					end
 				end

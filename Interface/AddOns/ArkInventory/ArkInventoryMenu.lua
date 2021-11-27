@@ -1561,7 +1561,7 @@ function ArkInventory.MenuItemOpen( frame )
 							ArkInventory.Lib.Dewdrop:AddLine( "text", string.format( "%s: %s%s", ArkInventory.Localise["MENU_ITEM_DEBUG_FAMILY"], LIGHTYELLOW_FONT_COLOR_CODE, ifam ) )
 							
 							if ArkInventory.ClientCheck( ArkInventory.Const.BLIZZARD.CLIENT.CODE.RETAIL ) then
-								ArkInventory.Lib.Dewdrop:AddLine( "text", string.format( "%s: %s%s (%s)", ArkInventory.Localise["EXPANSION"], LIGHTYELLOW_FONT_COLOR_CODE, info.expansion, _G[string.format( "EXPANSION_NAME%d", info.expansion )] ) )
+								ArkInventory.Lib.Dewdrop:AddLine( "text", string.format( "%s: %s%s (%s)", ArkInventory.Localise["EXPANSION"], LIGHTYELLOW_FONT_COLOR_CODE, info.expansion or -1, _G[string.format( "EXPANSION_NAME%d", info.expansion )] or ArkInventory.Localise["UNKNOWN"] ) )
 							end
 							
 						elseif info.class == "battlepet" then

@@ -1,21 +1,21 @@
 local mod	= DBM:NewMod("Vashj", "DBM-Serpentshrine")
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision("20211011130926")
+mod:SetRevision("20211022173722")
 mod:SetCreatureID(21212)
 mod:SetEncounterID(628, 2463)
 mod:SetModelID(20748)
-mod:SetUsedIcons(1)
+mod:SetUsedIcons(1, 2, 3)
 mod:SetHotfixNoticeRev(20210919000000)
 mod:SetMinSyncRevision(20210919000000)
 
 mod:RegisterCombat("combat")
 
 mod:RegisterEventsInCombat(
-	"SPELL_AURA_APPLIED 38280 38575 360327",
-	"SPELL_AURA_REMOVED 38280 38132",
+	"SPELL_AURA_APPLIED 38280 38575 360327 38511",
+	"SPELL_AURA_REMOVED 38280 38132 38112",
 	"SPELL_CAST_START 38253",
-	"SPELL_CAST_SUCCESS 38316",
+	"SPELL_CAST_SUCCESS 38316 38511",
 	"UNIT_DIED",
 	"CHAT_MSG_MONSTER_YELL"
 --	"CHAT_MSG_LOOT"
@@ -27,9 +27,10 @@ local warnPhase2		= mod:NewPhaseAnnounce(2)
 local warnElemental		= mod:NewAnnounce("WarnElemental", 4, 31687)
 local warnStrider		= mod:NewAnnounce("WarnStrider", 3, 475)
 local warnNaga			= mod:NewAnnounce("WarnNaga", 3, 2120)
---local warnShield		= mod:NewAnnounce("WarnShield", 3)
+local warnShield		= mod:NewAnnounce("WarnShield", 3, 38112)
 --local warnLoot			= mod:NewAnnounce("WarnLoot", 4, 38132)
 local warnPhase3		= mod:NewPhaseAnnounce(3)
+local warnPersuasion	= mod:NewTargetNoFilterAnnounce(38511, 4)
 
 --local specWarnCore		= mod:NewSpecialWarning("SpecWarnCore", nil, nil, nil, 1, 8)
 local specWarnCharge	= mod:NewSpecialWarningMoveAway(38280, nil, nil, nil, 1, 2)
@@ -42,14 +43,17 @@ local timerElemental	= mod:NewTimer(22, "TimerElementalActive", 39088, nil, nil,
 local timerElementalCD	= mod:NewTimer(45, "TimerElemental", 39088, nil, nil, 1)--46-57 variation. because of high variation the pre warning special warning not useful, fortunately we can detect spawns with precise timing.
 local timerStrider		= mod:NewTimer(63, "TimerStrider", 475, nil, nil, 1)
 local timerNaga			= mod:NewTimer(47.5, "TimerNaga", 2120, nil, nil, 1)
+local timerMC			= mod:NewCDTimer(21, 38511, nil, nil, nil, 3)--21-27
 
 mod:AddRangeFrameOption(10, 38280)
 mod:AddSetIconOption("ChargeIcon", 38280, false, false, {1})
+mod:AddSetIconOption("MCIcon", 38511, false, false, {2, 3})
 
 mod.vb.shieldLeft = 4
 mod.vb.nagaCount = 1
 mod.vb.striderCount = 1
 mod.vb.elementalCount = 1
+mod.vb.mcIcon = 2
 local elementals = {}
 
 local function StriderSpawn(self)
@@ -73,6 +77,7 @@ function mod:OnCombatStart(delay)
 	self.vb.nagaCount = 1
 	self.vb.striderCount = 1
 	self.vb.elementalCount = 1
+	self.vb.mcIcon = 2
 end
 
 function mod:OnCombatEnd()
@@ -100,6 +105,12 @@ function mod:SPELL_AURA_APPLIED(args)
 	elseif args:IsSpellID(38575, 360327) and args:IsPlayer() and self:AntiSpam() then
 		specWarnToxic:Show()
 		specWarnToxic:Play("runaway")
+	elseif args.spellId == 38511 then
+		if self.Options.MCIcon then
+			self:SetIcon(args.destName, self.vb.mcIcon)
+		end
+		self.vb.mcIcon = self.vb.mcIcon + 1
+		warnPersuasion:CombinedShow(0.3, args.destName)
 	end
 end
 
@@ -118,9 +129,13 @@ function mod:SPELL_AURA_REMOVED(args)
 		if self.Options.LootIcon then
 			self:SetIcon(args.destName, 0)
 		end
-	--[[elseif args.spellId == 38112 then
+	elseif args.spellId == 38511 then
+		if self.Options.MCIcon then
+			self:SetIcon(args.destName, 0)
+		end
+	elseif args.spellId == 38112 then--and not self:IsTrivial()
 		self.vb.shieldLeft = self.vb.shieldLeft - 1
-		warnShield:Show(self.vb.shieldLeft)]]
+		warnShield:Show(self.vb.shieldLeft)
 	end
 end
 
@@ -135,6 +150,9 @@ end
 function mod:SPELL_CAST_SUCCESS(args)
 	if args.spellId == 38316 then
 		warnEntangle:Show()
+	elseif args.spellId == 38511 then
+		self.vb.mcIcon = 2
+		timerMC:Start()
 	end
 end
 
@@ -193,6 +211,7 @@ do
 			warnElemental:Cancel()
 			timerStrider:Cancel()
 			warnStrider:Cancel()
+			--timerMC:Start()--Unknown initial
 			self:Unschedule(NagaSpawn)
 			self:Unschedule(StriderSpawn)
 --		elseif msg == "LootMsg" and playerName then

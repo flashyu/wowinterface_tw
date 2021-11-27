@@ -52,8 +52,8 @@ Turn in [QT10435 Retrieving the Goods].
 [G39.3,20.6 Netherstorm]Use the *Mental Interference Rod* from your inventory on a *Cyber-Rage Forgelord.* Then use the Forgelord's ability near (and facing) the teleporter to complete [QC10857].
 Turn in [QT10427 Creatures of the Eco-Domes].\\Accept [QA10429 When Nature Goes Too Far].
 Turn in [QT10857 Teleport This!]
-[G44.7,28.6 Netherstorm]Complete [QC10429][A Warrior,Rogue,Druid,Shaman,Paladin]. *Note:* Melee classes will need to do this fight under water! You'll basically be inside his body.
-[G44.7,28.6 Netherstorm]Complete [QC10429][A Hunter,Mage,Warlock,Priest].
+[G44.7,28.6 Netherstorm]Kill and loot *Markaru* to complete [QC10429][A Warrior,Rogue,Druid,Shaman,Paladin]. *Note:* Melee classes will need to do this fight under water! You'll basically be inside his body.
+[G44.7,28.6 Netherstorm]Kill and loot *Markaru* to complete [QC10429][A Hunter,Mage,Warlock,Priest].
 
 [G51.6,20.5 Netherstorm]Use the *Surveying Markers* in your inventory to complete [QC10335,1 Surveying Marker One placed].
 [G55.2,24.8 Netherstorm]
@@ -129,7 +129,7 @@ Turn in [QT10317 Dealing with the Foreman].\\Accept [QA10318 Dealing with the Ov
 Before leaving the cave, complete [QC10432].
 Head out of the cave and complete [QC10315].
 Turn in [QT10315 Neutralizing the Nethermancers].
-Turn in [QT10275 Triangulation Point Two] and [QT10318 Dealing with the Overmaster].
+Turn in [QT10318 Dealing with the Overmaster] and [QT10275 Triangulation Point Two].
 Fly to [F Area 52].
 Turn in [QT10237 Warn Area 52!]
 Turn in [QT10432 Damning Evidence].

@@ -758,17 +758,17 @@ end
 local CalculateHealing, GetHealTargets, AuraHandler, CalculateHotHealing, ResetChargeData, LoadClassData
 
 local function getBaseHealAmount(spellData, spellName, spellID, spellRank)
-	if spellID == 37563 then
+	if spellID == 37563 and spellData["37563"] then
 		spellData = spellData["37563"]
 	else
 		spellData = spellData[spellName]
 	end
-	local average = spellData.averages[spellRank]
+	local average = spellData.averages[spellRank] or ((80*spellRank)-50) -- Just hacking this as the lib is soon to be depreicated 
 	if type(average) == "number" then
 		return average
 	end
 	local requiresLevel = spellData.levels[spellRank]
-	return average[min(playerLevel - requiresLevel + 1, #average)]
+	return average[min(playerLevel - (requiresLevel or ceil(playerLevel/2)) + 1, #average)]  -- Just hacking this as the lib is soon to be depreicated 
 end
 
 if( playerClass == "DRUID" ) then
@@ -1230,7 +1230,7 @@ if( playerClass == "PRIEST" ) then
 				healAmount = healAmount * (1 + talentData[SpiritualHealing].current)
 			end
 
-			if( spellName == Renew or spellName == GreaterHealHot ) then
+			if( spellName == Renew or spellName == GreaterHealHot or spellName == Renewal) then
 				if isTBC then
 					healModifier = healModifier * (1 + talentData[ImprovedRenew].current)
 				else

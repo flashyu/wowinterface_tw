@@ -27,6 +27,9 @@ local objectCorrections = {
 		[124461] = {
 			[ArkInventory.Const.BLIZZARD.FUNCTION.GETITEMINFO.EXPANSION] = ArkInventory.Const.BLIZZARD.GLOBAL.EXPANSION.LEGION,
 		},
+		[182441] = {
+			[ArkInventory.Const.BLIZZARD.FUNCTION.GETITEMINFO.EXPANSION] = ArkInventory.Const.BLIZZARD.GLOBAL.EXPANSION.SHADOWLANDS,
+		},
 		[186727] = {
 			[ArkInventory.Const.BLIZZARD.FUNCTION.GETITEMINFO.EXPANSION] = ArkInventory.Const.BLIZZARD.GLOBAL.EXPANSION.SHADOWLANDS,
 		},
@@ -36,6 +39,7 @@ local objectCorrections = {
 		[187083] = {
 			[ArkInventory.Const.BLIZZARD.FUNCTION.GETITEMINFO.SUBTYPE] = ArkInventory.Const.ItemClass.ARMOR_COSMETIC,
 		},
+		
 	},
 }
 
@@ -233,7 +237,7 @@ local function UpdateObjectInfo( info, thread_id )
 		end
 		
 		
-		if not info.ready then
+		if ArkInventory.db.option.message.object.notfound and not info.ready then
 			if info.retry >= maxRetry then
 				if info.retrywarning then
 					ArkInventory.OutputDebug( "could not retrieve data from server for ", info.h, " / ", info.osd.hs )

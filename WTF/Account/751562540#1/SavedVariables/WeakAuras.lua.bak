@@ -97,18 +97,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["radius"] = 200,
-			["animate"] = false,
-			["rowSpace"] = 1,
-			["scale"] = 1,
 			["selfPoint"] = "TOP",
+			["animate"] = false,
+			["radius"] = 200,
+			["scale"] = 1,
+			["gridType"] = "RD",
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["arcLength"] = 360,
 			["xOffset"] = 0,
+			["fullCircle"] = true,
 			["constantFactor"] = "RADIUS",
 			["config"] = {
 			},
@@ -122,13 +122,13 @@ WeakAurasSaved = {
 			["limit"] = 5,
 			["borderInset"] = 1,
 			["rotation"] = 0,
-			["gridType"] = "RD",
+			["arcLength"] = 360,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["fullCircle"] = true,
+			["rowSpace"] = 1,
 		},
 		["lan"] = {
 			["grow"] = "DOWN",
@@ -224,18 +224,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["radius"] = 200,
-			["animate"] = false,
-			["fullCircle"] = true,
-			["scale"] = 1,
 			["useLimit"] = false,
+			["animate"] = false,
+			["radius"] = 200,
+			["scale"] = 1,
+			["gridType"] = "RD",
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["rowSpace"] = 1,
 			["selfPoint"] = "TOP",
+			["xOffset"] = -202.7703247070313,
 			["constantFactor"] = "RADIUS",
 			["config"] = {
 			},
@@ -249,13 +249,13 @@ WeakAurasSaved = {
 			["rotation"] = 0,
 			["borderInset"] = 1,
 			["arcLength"] = 360,
-			["gridType"] = "RD",
+			["rowSpace"] = 1,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["xOffset"] = -202.7703247070313,
+			["fullCircle"] = true,
 		},
 		["Details! Boss Mods Group"] = {
 			["grow"] = "DOWN",
@@ -350,18 +350,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["radius"] = 200,
-			["animate"] = false,
-			["fullCircle"] = true,
-			["scale"] = 1,
 			["useLimit"] = false,
+			["animate"] = false,
+			["radius"] = 200,
+			["scale"] = 1,
+			["gridType"] = "RD",
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["rowSpace"] = 1,
 			["selfPoint"] = "TOP",
+			["xOffset"] = 0,
 			["constantFactor"] = "RADIUS",
 			["config"] = {
 			},
@@ -375,13 +375,13 @@ WeakAurasSaved = {
 			["rotation"] = 0,
 			["borderInset"] = 1,
 			["arcLength"] = 360,
-			["gridType"] = "RD",
+			["rowSpace"] = 1,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["xOffset"] = 0,
+			["fullCircle"] = true,
 		},
 		["大星术师索兰莉安—奥术飞弹—团队框架高亮 2"] = {
 			["glow"] = false,
@@ -448,7 +448,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -457,7 +457,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_zone"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["multi"] = {
 					},
@@ -470,10 +473,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
+				["use_zone"] = true,
 				["encounterid"] = "732",
 				["zoneIds"] = "",
 			},

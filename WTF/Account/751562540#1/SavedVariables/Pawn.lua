@@ -443,7 +443,7 @@ PawnCommon = {
 	},
 	["ShowSocketingAdvisor"] = true,
 	["ShowSpecIcons"] = true,
-	["LastVersion"] = 2.0527,
+	["LastVersion"] = 2.053,
 	["ButtonPosition"] = 2,
 	["ShowLootUpgradeAdvisor"] = true,
 	["ShowQuestUpgradeAdvisor"] = true,

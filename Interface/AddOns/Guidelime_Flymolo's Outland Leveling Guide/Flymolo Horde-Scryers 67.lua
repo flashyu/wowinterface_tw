@@ -8,7 +8,8 @@ Guidelime.registerGuide([[
 Grind to [XP67 level 67].
 
 Accept [QA10183 Off to Area 52]. If *Netherologist Coppernickels* on the bridge into Netherstorm is not offering this quest, check your quest log and *DROP* any "breadcrumb quest" that is completed in Netherstorm.
-[G32.3,63.9 Netherstorm]*Manually* accept the quest *Securing the Shaleskin Shale* if *Boots* is alive. (If he is not alive, look for him when you come back to *Area 52.) Then manually complete this step.
+[G32.3,63.9 Netherstorm]
+*Manually* accept the quest *Securing the Shaleskin Shale* if *Boots* is alive. (If he is not alive, look for him when you come back to *Area 52.) Then manually complete this step.
 Accept [QA10265 Consortium Crystal Collection].
 Turn in [QT10183 Off to Area 52].\\Accept [QA10186 You're Hired].
 Accept [QA10189 Manaforge B'naar].
@@ -31,7 +32,7 @@ Turn in [QT10225 Report to Engineering].\\Accept [QA10224 Essence for the Engine
 [G42.5,72.3 Netherstorm]Zap the [QC10203,4 Big Wagon Full of Explosives].
 [G40.3,72.9 Netherstorm]Complete [QC10203].
 Head back toward *Area 52* and complete [QC10342].
-[G34.3,70.0 Netherstorm]Kill and loot *Mana Wraiths* to work on [QC10224]. If you kill them all and have not completed the quest, manually complete this step and move on.
+[G34.3,70.0 Netherstorm]Kill and loot *Mana Wraiths* at this waypoint to work on [QC10224]. If you kill them all and have not completed the quest, manually complete this step and move on.
 Turn in [QT10203 Invaluable Asset Zapping].\\Accept [QA10221 Dr. Boom!]
 [G34.5,66.4 Netherstorm]
 [G33.8,63.9 Netherstorm]Speak with *Krexcil* to acquire the flight path.
@@ -76,7 +77,7 @@ Turn in [QT10194 Stealth Flight].\\Accept [QA10652 Behind Enemy Lines].
 Speak with *Veronia* again and finish the conversation to fly to Coruu.
 
 Turn in [QT10652 Behind Enemy Lines].\\Accept [QA10197 A Convincing Disguise].
-On your way to the next step, kill and loot *Arcanists, Guardsmen and Arch Mages for [QC10197,2 Sunfury Guardsman Medallion][O] and [QC10197,3 Sunfury Arcanist Robes].
+On your way to the next step, kill and loot *Arcanists, Guardsmen* and *Arch Mages* for [QC10197,2 Sunfury Guardsman Medallion][O] and [QC10197,3 Sunfury Arcanist Robes][O].
 [G47.4,81.0 Netherstorm]
 Head inside to kill and loot a *Researcher* and complete [QC10197].
 Turn in [QT10197 A Convinceing Disguise].\\Accept [QA10198 Information Gathering].

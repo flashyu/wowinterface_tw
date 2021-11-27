@@ -341,6 +341,10 @@ if not L then return end
 	L["CONFIG_GENERAL_MESSAGES_RULES_REGISTRATION_DESC"] = "Show a message for each third party rule registration"
 	L["CONFIG_GENERAL_MESSAGES_CROSSREALM_LOADED"] = "Loaded"
 	L["CONFIG_GENERAL_MESSAGES_CROSSREALM_LOADED_DESC"] = "Show a message when connected realm data is loaded"
+	L["CONFIG_GENERAL_MESSAGES_OBJECTCACHE"] = "Object Cache"
+	L["CONFIG_GENERAL_MESSAGES_OBJECTCACHE_NOTFOUND"] = "Not Found"
+	L["CONFIG_GENERAL_MESSAGES_OBJECTCACHE_NOTFOUND_DESC"] = "Show a message when object data is not returned from the server after five attempts"
+	
 	
 	L["CONFIG_GENERAL_BUCKET"] = "Update Timers"
 	L["CONFIG_GENERAL_BUCKET_DESC"] = "Adjust the update time for the %1$s\n\nUpdate timers run every X seconds allowing you to throttle window updates."
@@ -564,27 +568,36 @@ if not L then return end
 	
 	
 -- junk
+	L["CONFIG_JUNK_SELL_BINDING"] = "Sell Junk Items"
+	L["CONFIG_JUNK_SELL_BINDING_AUTO"] = "[Automatic]"
+	L["CONFIG_JUNK_SELL_BINDING_MANUAL"] = "[Manual]"
 	L["CONFIG_JUNK_SELL_AUTO"] = "Auto Sell"
 	L["CONFIG_JUNK_SELL_AUTO_DESC"] = "Sell all junk items as soon as you open a merchant window"
+	L["CONFIG_JUNK_SELL_CANDESTROY"] = "You have %s items that can be destroyed, please use the manual keybinding to destroy them"
 	L["CONFIG_JUNK_NOTIFY_SOLD"] = "Sold your junk items for %s."
 	L["CONFIG_JUNK_NOTIFY_DESTROYED"] = "Destroyed %s junk items."
-	L["CONFIG_JUNK_NOTIFY_LIMIT"] = "Aborting auto sell due to buyback limit (%s) being reached."
+	L["CONFIG_JUNK_NOTIFY_LIMIT"] = "Aborting automatic sell due to buyback limit (%s) being reached."
 	L["CONFIG_JUNK_LIMIT"] = "Limit to Buyback"
-	L["CONFIG_JUNK_LIMIT_DESC"] = "As a safety precaution stop selling your junk when the buyback limit (%i) is reached"
-	L["CONFIG_JUNK_DELETE_DESC"] = "Delete items that cannot be vendored (have no sell price)\n\nnote - you can only delete items via the keybinding"
+	L["CONFIG_JUNK_LIMIT_DESC"] = "As a safety precaution stop selling your junk items when the buyback limit (%i) is reached"
+	L["CONFIG_JUNK_DELETE_DESC"] = "Delete items that cannot be vendored (have no sell price)\n\nnote - you can only delete items via the keybinding, and only one item at a time"
 	L["CONFIG_JUNK_NOTIFY_DESC"] = "Display a notification about how much gold you sold your items for"
 	L["CONFIG_JUNK_QUALITY_CUTOFF_DESC"] = "Only sell/destroy an item if its quality is at or below: %s%s|r"
-	L["CONFIG_JUNK_CATEGORY_DESC"] = "Auto sells/destroys all items assigned to %s when you talk to a vendor"
+	L["CONFIG_JUNK_CATEGORY_DESC"] = "Automatically sells all items assigned to %s when you talk to a vendor"
 	L["CONFIG_JUNK_LIST_DESC"] = "Display a notification for each item that is sold or destroyed."
-	L["CONFIG_JUNK_LIST_SELL_DESC"] = "Selling: %s x %s for %s"
-	L["CONFIG_JUNK_LIST_DESTROY_DESC"] = "Destroying: %s x %s"
+	L["CONFIG_JUNK_LIST_SELL_DESC"] = "Sold: %s x %s for %s"
+	L["CONFIG_JUNK_LIST_DESTROY_DESC"] = "Destroyed: %s x %s"
+	L["CONFIG_JUNK_LIST_DESTROY_LIMIT"] = "You have %s more items that could not be destroyed as you can only destroy one item per keypress"
 	L["CONFIG_JUNK_TESTMODE"] = "Test Mode"
 	L["CONFIG_JUNK_TESTMODE_DESC"] = "When this option is enabled no items are actually sold or destroyed.\n\nUse with the List option to see what would normally get sold or destroyed."
-	L["CONFIG_JUNK_TESTMODE_ALERT"] = "Test mode is enabled in your config, no items were actually sold or destroyed."
+	L["CONFIG_JUNK_TESTMODE_ALERT_SOLD"] = "Test mode is enabled, no items were actually sold."
+	L["CONFIG_JUNK_TESTMODE_ALERT_DESTROYED"] = "Test mode is enabled, no items were actually destroyed."
 	L["CONFIG_JUNK_TIMER_DESC"] = "the number of millseconds to wait before processing the next item"
 	L["CONFIG_JUNK_PROCESSING_DISABLED_DESC"] = "All junk selling options have been disabled due to the %s addon being loaded"
 	L["CONFIG_JUNK_SOULBOUND_ALREADY_KNOWN_DESC"] = "Categorise any soulbound item (typically recipes), that you already know, as junk"
 	L["CONFIG_JUNK_SOULBOUND_EQUIPMENT_DESC"] = "Categorise any soulbound equipable item, that you cannot use, as junk"
+	L["CONFIG_JUNK_SOULBOUND_ITEMLEVEL_DESC"] = "Ignore item level requirement on equipment for junk purposes"
+	L["CONFIG_JUNK_COMBAT_DESC"] = "When enabled will keep selling/destroying while in combat"
+	
 	
 	
 -- sorting
@@ -875,7 +888,6 @@ if not L then return end
 	L["COVENANT"] = "Covenant"
 	L["ALPHA"] = "Alpha"
 	L["BAGS"] = "Bags"
-	L["BINDING_JUNK_SELL_MANUAL"] = "Sell Junk Items"
 	
 	
 -- libdatabroker

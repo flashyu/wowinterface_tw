@@ -1,8 +1,8 @@
 
 ## Title: Guidelime_Flymolo's Outland Leveling Guide
 ## Author: Flymolo
-## Version: 1.7.0-Release
-## Interface: 20501
+## Version: 2.0.1-Release
+## Interface: 20502
 ## Dependencies: Guidelime
 ## Notes: Flymolo's Outland Leveling Guide
 

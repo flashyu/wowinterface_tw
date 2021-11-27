@@ -124,7 +124,7 @@ Turn in [QT10777 Asghar's Totem].\\Accept [QA10778 The Rod of Lianthe].
 
 Turn in [QT10677 The Second Course].\\Accept [QA10678 The Main Course!]
 [G47.5,71.7 Shadowmoon Valley]Kill and loot *Eclipsians* until you acquire [QC10778,1 Lianthe's Key].
-Loot *Lianthe's Strongbox* to complete [QC10778].
+[G47.5,71.7 Shadowmoon Valley]Loot *Lianthe's Strongbox* to complete [QC10778].
 [G53.2,57.0 Shadowmoon Valley]
 [G51.2,52.8 Shadowmoon Valley]Clear the area and then destroy the totems, the elementals that spawn, and kill and loot *Eykenen* to acquire [QC10574,1 Eykenen's Medallion Fragment].
 [G54.7,53.4 Shadowmoon Valley]

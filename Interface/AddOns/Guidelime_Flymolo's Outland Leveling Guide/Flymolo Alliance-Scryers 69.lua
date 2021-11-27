@@ -107,7 +107,7 @@ Turn in [QT10480 Enraged Spirits of Water].\\Accept [QA10481 Enraged Spirits of 
 
 Turn in [QT10677 The Second Course].\\Accept [QA10678 The Main Course!]
 [G47.5,71.7 Shadowmoon Valley]Kill and loot *Eclipsians* until you acquire [QC10778,1 Lianthe's Key].
-Loot *Lianthe's Strongbox* to complete [QC10778].
+[G47.5,71.7 Shadowmoon Valley]Loot *Lianthe's Strongbox* to complete [QC10778].
 
 Turn in [QT10807 The Ashtongue Broken].\\Accept [QA10817 The Great Retribution].
 Turn in [QT10683 Tablets of Baa'ri].\\Accept [QA10684 Oronu the Elder].

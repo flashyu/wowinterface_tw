@@ -99,6 +99,7 @@ function ArkInventory.PlayerInfoSet( )
 	local id = ArkInventory.PlayerIDSelf( )
 	
 	local player = ArkInventory.db.player.data[id].info
+	ArkInventory.Global.Me = player
 	
 	player.proj = WOW_PROJECT_ID
 	player.guid = UnitGUID( "player" ) or player.guid
@@ -121,6 +122,8 @@ function ArkInventory.PlayerInfoSet( )
 	player.class = class or player.class
 	
 	player.level = UnitLevel( "player" ) or player.level or 1
+	
+	player.itemlevel = ArkInventory.CrossClient.GetAverageItemLevel( ) or player.itemlevel or 1
 	
 	local race_local, race = UnitRace( "player" )
 	player.race_local = race_local or player.race_local
@@ -480,47 +483,73 @@ end
 function ArkInventory:EVENT_ARKINV_BAG_UPDATE( ... )
 	
 	local event, arg1 = ...
-	--ArkInventory.Output2( "[", event, "] [", arg1, "]" )
+	--ArkInventory.Output( "[", event, "] [", arg1, "]" )
 	
 	ArkInventory:SendMessage( "EVENT_ARKINV_BAG_UPDATE_BUCKET", arg1 )
 	
 end
 
-function ArkInventory:EVENT_ARKINV_BAG_LOCK( ... )
+function ArkInventory:EVENT_ARKINV_ITEM_LOCK_CHANGED( ... )
 	
-	local event, arg1, arg2 = ...
-	--ArkInventory.Output( "[", event, "] [", arg1, "/", arg2, "]" )
+	local event, blizzard_id, slot_id = ...
+	--ArkInventory.Output( "[", event, "] [", blizzard_id, "/", slot_id, "]" )
 	
-	if not arg2 then
+	if not slot_id then
 		
-		-- player bag lock
+		-- player inventory lock
 		ArkInventory.Frame_Changer_Update( ArkInventory.Const.Location.Bag )
 		
 	else
 		
-		if arg1 == BANK_CONTAINER then
+		if blizzard_id == BANK_CONTAINER then
 			
 			local count = GetContainerNumSlots( BANK_CONTAINER )
 			
-			if arg2 <= count then
+			if slot_id <= count then
+				
 				-- bank item lock
-				local loc_id, bag_id = ArkInventory.BlizzardBagIdToInternalId( arg1 )
-				ArkInventory.Frame_Item_Update( loc_id, bag_id, arg2 )
+				local loc_id, bag_id = ArkInventory.BlizzardBagIdToInternalId( blizzard_id )
+				ArkInventory.Frame_Item_Update( loc_id, bag_id, slot_id )
+				
 			else
+				
 				-- bank bag lock
 				ArkInventory.Frame_Changer_Update( ArkInventory.Const.Location.Bank )
+				
 			end
 			
 		else
 			
 			-- player item lock
-			local loc_id, bag_id = ArkInventory.BlizzardBagIdToInternalId( arg1 )
-			ArkInventory.Frame_Item_Update( loc_id, bag_id, arg2 )
+			local loc_id, bag_id = ArkInventory.BlizzardBagIdToInternalId( blizzard_id )
+			ArkInventory.Frame_Item_Update( loc_id, bag_id, slot_id )
 			
 		end
 		
 	end
 	
+end
+
+function ArkInventory:EVENT_ARKINV_AVG_ITEM_LEVEL_UPDATE_BUCKET( bucket )
+	
+	--ArkInventory.Output( "[EVENT_ARKINV_AVG_ITEM_LEVEL_UPDATE_BUCKET] [", bucket, "]" )
+	
+	local player = ArkInventory.Global.Me
+	
+	local itemlevel_old = player.itemlevel or 1
+	local itemlevel_new = ArkInventory.CrossClient.GetAverageItemLevel( )
+	
+	if itemlevel_old ~= itemlevel_new then
+		player.itemlevel = itemlevel_new
+		--ArkInventory.Output( "item level changed from ", itemlevel_old, " to ", itemlevel_new )
+		ArkInventory.ItemCacheClear( )
+		ArkInventory.Frame_Main_DrawStatus( nil, ArkInventory.Const.Window.Draw.Refresh )
+	end
+	
+end
+
+function ArkInventory:EVENT_ARKINV_AVG_ITEM_LEVEL_UPDATE( event )
+	ArkInventory:SendMessage( "EVENT_ARKINV_AVG_ITEM_LEVEL_UPDATE_BUCKET", event )
 end
 
 function ArkInventory:EVENT_ARKINV_CHANGER_UPDATE_BUCKET( bucket )
@@ -636,24 +665,16 @@ function ArkInventory:EVENT_ARKINV_BANK_UPDATE( ... )
 
 	-- player changed a bank bag or item
 	
-	local count = GetContainerNumSlots( BANK_CONTAINER ) --  fix this once blizzard have fixed their shit in classic
-	if count < 28 then
-		-- hard coded to a minimum of 28 until blizzard return the correct values for the bank bag slot ids in classic
-		-- they are out by 4 as if the bank has 28, and not 24, slots at the moment so it screws up the calculation
-		count = 28
-	end
-	
-	
+	local count = GetContainerNumSlots( BANK_CONTAINER )
 	if arg1 <= count then
 		-- item was changed
 		ArkInventory:EVENT_ARKINV_BAG_UPDATE( event, BANK_CONTAINER )
 	else
 		-- bag was changed
-		
-		-- 29 - 28 + 4 = 5
-		
-		--ArkInventory.Output( "bag changed: ", arg1, " - ", count, " + ", NUM_BAG_SLOTS, " = ", arg1 - count + NUM_BAG_SLOTS )
-		ArkInventory:EVENT_ARKINV_BAG_UPDATE( event, arg1 - count + NUM_BAG_SLOTS )
+		-- warning classic has 24 slots but still indexes the bags from 28
+		local offset = ArkInventory.CrossClient.GetFirstBagBankSlotIndex( )
+		--ArkInventory.Output( "bag changed: ", arg1, " - ", offset, " + ", NUM_BAG_SLOTS, " = ", arg1 - offset + NUM_BAG_SLOTS )
+		ArkInventory:EVENT_ARKINV_BAG_UPDATE( event, arg1 - offset + NUM_BAG_SLOTS )
 	end
 	
 end
@@ -1473,7 +1494,7 @@ end
 function ArkInventory:EVENT_ARKINV_BAG_UPDATE_DELAYED( ... )
 	
 	local event, arg1, arg2, arg3, arg4 = ...
-	ArkInventory.Output( "[", event, "] [", arg1, "] [", arg2, "] [", arg3, "] [", arg4, "]" )
+	--ArkInventory.Output( "[", event, "] [", arg1, "] [", arg2, "] [", arg3, "] [", arg4, "]" )
 	
 end
 
@@ -1524,8 +1545,10 @@ function ArkInventory.HookCovenantSanctumDepositAnima( )
 end
 
 function ArkInventory:EVENT_ARKINV_ACTIONBAR_UPDATE_USABLE_BUCKET( argtbl )
-	--ArkInventory.Output( "[EVENT_ARKINV_ACTIONBAR_UPDATE_USABLE_BUCKET] [", argtbl, "]" )
-	if not ArkInventory.Global.Mode.Combat then
+	if ArkInventory.Global.Mode.Combat then
+		ArkInventory.Output( "IGNORED - IN COMBAT - [EVENT_ARKINV_ACTIONBAR_UPDATE_USABLE_BUCKET] [", argtbl, "]" )
+	else
+		ArkInventory.Output( "[EVENT_ARKINV_ACTIONBAR_UPDATE_USABLE_BUCKET] [", argtbl, "]" )
 		ArkInventory:SendMessage( "EVENT_ARKINV_LDB_MOUNT_UPDATE_BUCKET" )
 		ArkInventory:SendMessage( "EVENT_ARKINV_LDB_PET_UPDATE_BUCKET" )
 	end
@@ -1923,9 +1946,9 @@ function ArkInventory.getItemTinted( i, codex )
 			
 			ArkInventory.TooltipSetHyperlink( ArkInventory.Global.Tooltip.Scan, i.h )
 			
-			local ignoreAlreadyKnown = ( ( i.q or 0 ) == ArkInventory.Const.BLIZZARD.GLOBAL.ITEMQUALITY.HEIRLOOM )
+			local allow_known = ( ( i.q or 0 ) == ArkInventory.Const.BLIZZARD.GLOBAL.ITEMQUALITY.HEIRLOOM )
 			
-			if not ArkInventory.TooltipCanUse( ArkInventory.Global.Tooltip.Scan, ignoreAlreadyKnown ) then
+			if not ArkInventory.TooltipCanUse( ArkInventory.Global.Tooltip.Scan, allow_known ) then
 				return true
 			end
 			
@@ -4874,11 +4897,13 @@ function ArkInventory.ObjectCountGetRaw( search_id, thread_id )
 			for loc_id, loc_data in pairs( ArkInventory.Global.Location ) do
 				--if ArkInventory.isLocationMonitored( loc_id, pid ) then
 					
-					if not icr[pid].location[loc_id] then
+					local icr_loc = icr[pid].location[loc_id]
+					
+					if not icr_loc then
 						
 						-- rebuild missing location data
 						icr[pid].location[loc_id] = { c = 0, s = 0 }
-						local icr_now = icr[pid].location[loc_id]
+						icr_loc = icr[pid].location[loc_id]
 						
 						changed = true
 						ok = true
@@ -4920,7 +4945,15 @@ function ArkInventory.ObjectCountGetRaw( search_id, thread_id )
 									if sd and sd.h then
 										
 										if thread_id then
+											
 											ArkInventory.ThreadYield( thread_id )
+											
+											if not icr[pid] or not icr[pid].location[loc_id] then
+												-- object count data for this was wiped while yielding, do it again
+												ArkInventory.Output( "DEBUG: ObjectCountGetRaw[", search_id, " was wiped while yielding - restarting" )
+												return ArkInventory.ObjectCountGetRaw( search_id, thread_id )
+											end
+											
 										end
 										
 										-- primary match
@@ -4948,8 +4981,8 @@ function ArkInventory.ObjectCountGetRaw( search_id, thread_id )
 											if loc_id == ArkInventory.Const.Location.Reputation or loc_id == ArkInventory.Const.Location.Tradeskill then
 												lc = 0
 												bc = 0
-												icr_now.e = sd.h
-												--ArkInventory.Output( pid, " / ", loc_id, " / ", sd.h, " / ", icr_now.e )
+												icr_loc.e = sd.h
+												--ArkInventory.Output( pid, " / ", loc_id, " / ", sd.h, " / ", icr_loc.e )
 												break
 											end
 											
@@ -4962,8 +4995,8 @@ function ArkInventory.ObjectCountGetRaw( search_id, thread_id )
 								if loc_id == ArkInventory.Const.Location.Vault then
 									local td = ok and bc or nil
 									if td then
-										icr_now.e = icr_now.e or { }
-										icr_now.e[b] = td
+										icr_loc.e = icr_loc.e or { }
+										icr_loc.e[b] = td
 									end
 								end
 								
@@ -4976,8 +5009,8 @@ function ArkInventory.ObjectCountGetRaw( search_id, thread_id )
 							end
 							
 --							if loc_id == ArkInventory.Const.Location.Reputation then
---								if icr_now.e then
---									ArkInventory.Output2( pid, " / ", icr_now.e )
+--								if icr_loc.e then
+--									ArkInventory.Output2( pid, " / ", icr_loc.e )
 --								end
 --							end
 							
@@ -4987,13 +5020,13 @@ function ArkInventory.ObjectCountGetRaw( search_id, thread_id )
 								
 								--ArkInventory.Output2( " " )
 								--ArkInventory.Output2( "player: ", pid )
-								--ArkInventory.Output2( "extra: [", icr_now.e, "]" )
+								--ArkInventory.Output2( "extra: [", icr_loc.e, "]" )
 								
 								local objectType, info = ArkInventory.Tradeskill.isTradeskillObject( search_id )
 								
 								if info and not ArkInventory.Table.IsEmpty( info ) then
 									
-									--ArkInventory.Output2( search_id, " / ", icr_now.e, " / ", objectType, " / ", info )
+									--ArkInventory.Output2( search_id, " / ", icr_loc.e, " / ", objectType, " / ", info )
 									local skillName = ArkInventory.Localise["UNKNOWN"]
 									local skillKnown = false
 									
@@ -5032,9 +5065,9 @@ function ArkInventory.ObjectCountGetRaw( search_id, thread_id )
 									
 									--ArkInventory.Output2( "skill known = ", skillKnown, " / ", pid )
 									
-									if icr_now.e then
+									if icr_loc.e then
 										
-										--ArkInventory.Output2( "matched: ", icr_now.e )
+										--ArkInventory.Output2( "matched: ", icr_loc.e )
 										if skillKnown then
 											-- should hope so, you matched on the enchant
 											if objectType == ArkInventory.Tradeskill.Const.Type.Enchant then
@@ -5055,7 +5088,7 @@ function ArkInventory.ObjectCountGetRaw( search_id, thread_id )
 										
 									else
 										
-										--ArkInventory.Output2( "did not match: ", icr_now.e )
+										--ArkInventory.Output2( "did not match: ", icr_loc.e )
 										if skillKnown then
 											-- but i dont know how to craft that enchant
 											if objectType == ArkInventory.Tradeskill.Const.Type.Enchant then
@@ -5079,16 +5112,16 @@ function ArkInventory.ObjectCountGetRaw( search_id, thread_id )
 									
 								end
 								
-								icr_now.e = rc
+								icr_loc.e = rc
 								
 							end
 							
 						end
 						
-						icr_now.c = lc
-						icr_now.s = ls
+						icr_loc.c = lc
+						icr_loc.s = ls
 						
-						--ArkInventory.Output( "ItemCountRaw[", search_id, "][", pid, "].location[", loc_id, "] = ", icr_now )
+						--ArkInventory.Output( "ItemCountRaw[", search_id, "][", pid, "].location[", loc_id, "] = ", icr_loc )
 						
 					end
 					
@@ -5116,6 +5149,8 @@ function ArkInventory.ObjectCountGetRaw( search_id, thread_id )
 						ArkInventory.OutputError( "code failure: icr[", pid, "].location[", loc_id, "] is nil" )
 						error( "code failure" )
 					end
+					
+					
 					
 					icr[pid].total = icr[pid].total + icr[pid].location[loc_id].c
 					

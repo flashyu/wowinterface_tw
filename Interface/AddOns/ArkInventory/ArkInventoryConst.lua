@@ -1259,12 +1259,12 @@ end
 
 -- item_openable = right click to open
 --[[
-local z = "thousands"
+local z = "cannot change equip"
 ArkInventory.Output( "search=", z )
 for k, v in pairs (_G) do
 	if type( k ) == "string" and type( v ) == "string" then
-		if string.match( string.lower( k ), string.lower( z ) ) then -- found in key
-		--if string.match( string.lower( v ), string.lower( z ) ) then -- found in value
+		--if string.match( string.lower( k ), string.lower( z ) ) then -- found in key
+		if string.match( string.lower( v ), string.lower( z ) ) then -- found in value
 		--if string.lower( v ) == string.lower( z ) then -- exact match with value
 			ArkInventory.Output( k, "=", v )
 		end

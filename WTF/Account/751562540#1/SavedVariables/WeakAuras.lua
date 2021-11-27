@@ -3,21 +3,6 @@ WeakAurasSaved = {
 	["dynamicIconCache"] = {
 	},
 	["editor_tab_spaces"] = 4,
-	["login_squelch_time"] = 10,
-	["lastArchiveClear"] = 1626874514,
-	["minimap"] = {
-		["hide"] = false,
-	},
-	["lastUpgrade"] = 1626874520,
-	["dbVersion"] = 45,
-	["registered"] = {
-	},
-	["frame"] = {
-		["xOffset"] = -1050.96533203125,
-		["width"] = 830,
-		["height"] = 665.0001220703125,
-		["yOffset"] = -190.78173828125,
-	},
 	["displays"] = {
 		["Details! Aura Group"] = {
 			["grow"] = "DOWN",
@@ -112,18 +97,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["gridType"] = "RD",
-			["animate"] = false,
-			["selfPoint"] = "TOP",
-			["scale"] = 1,
 			["arcLength"] = 360,
+			["animate"] = false,
+			["gridType"] = "RD",
+			["scale"] = 1,
+			["xOffset"] = 0,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["fullCircle"] = true,
 			["rowSpace"] = 1,
+			["radius"] = 200,
 			["constantFactor"] = "RADIUS",
 			["rotation"] = 0,
 			["borderOffset"] = 4,
@@ -137,13 +122,13 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["uid"] = "KcmUnf8yeJE",
-			["xOffset"] = 0,
+			["fullCircle"] = true,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["radius"] = 200,
+			["selfPoint"] = "TOP",
 		},
 		["lan"] = {
 			["grow"] = "DOWN",
@@ -239,18 +224,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["gridType"] = "RD",
-			["animate"] = false,
-			["useLimit"] = false,
-			["scale"] = 1,
 			["rowSpace"] = 1,
+			["animate"] = false,
+			["gridType"] = "RD",
+			["scale"] = 1,
+			["selfPoint"] = "TOP",
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["xOffset"] = -202.7703247070313,
 			["fullCircle"] = true,
+			["radius"] = 200,
 			["constantFactor"] = "RADIUS",
 			["arcLength"] = 360,
 			["borderOffset"] = 4,
@@ -264,13 +249,13 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["uid"] = "I7Y0mTf5KSP",
-			["selfPoint"] = "TOP",
+			["xOffset"] = -202.7703247070313,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["radius"] = 200,
+			["useLimit"] = false,
 		},
 		["Details! Boss Mods Group"] = {
 			["grow"] = "DOWN",
@@ -365,18 +350,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["gridType"] = "RD",
-			["animate"] = false,
-			["useLimit"] = false,
-			["scale"] = 1,
 			["rowSpace"] = 1,
+			["animate"] = false,
+			["gridType"] = "RD",
+			["scale"] = 1,
+			["selfPoint"] = "TOP",
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["xOffset"] = 0,
 			["fullCircle"] = true,
+			["radius"] = 200,
 			["constantFactor"] = "RADIUS",
 			["arcLength"] = 360,
 			["borderOffset"] = 4,
@@ -390,13 +375,13 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["uid"] = "ZX3oWFkARRy",
-			["selfPoint"] = "TOP",
+			["xOffset"] = 0,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["radius"] = 200,
+			["useLimit"] = false,
 		},
 		["New"] = {
 			["sparkWidth"] = 10,
@@ -721,16 +706,13 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
+				["use_zone"] = true,
 				["use_encounterid"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -746,7 +728,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_zone"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["zone"] = "风暴要塞,Tempest Keep",
 				["size"] = {
 					["multi"] = {
@@ -914,5 +899,20 @@ WeakAurasSaved = {
 			["preferToUpdate"] = false,
 		},
 	},
+	["lastArchiveClear"] = 1626874514,
+	["minimap"] = {
+		["hide"] = false,
+	},
+	["lastUpgrade"] = 1626874520,
+	["dbVersion"] = 45,
+	["registered"] = {
+	},
+	["frame"] = {
+		["xOffset"] = -1050.96533203125,
+		["width"] = 830,
+		["height"] = 665.0001220703125,
+		["yOffset"] = -190.78173828125,
+	},
+	["login_squelch_time"] = 10,
 	["editor_theme"] = "Monokai",
 }
