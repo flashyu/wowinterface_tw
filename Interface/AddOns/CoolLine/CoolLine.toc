@@ -1,8 +1,8 @@
-## Interface: 20501
-## Version: 9.1.000
-## Title: |cFF22B14CCoolLine v|r9.1.000
+## Interface: 20503
+## Version: 9.3.000
+## Title: |cFF22B14CCoolLine v|r9.3.000
 
-## Notes: Shows cooldowns on a single bar. |cff00b3ff v9.1.000 (Burning Crusade)|r modifications by |cff00ffdaLoneWanderer-GH
+## Notes: Shows cooldowns on a single bar. |cff00b3ff v9.3.000 (Burning Crusade)|r modifications by |cff00ffdaLoneWanderer-GH
 
 ## Author: TotalPackage, Phanx, |cff00ffdaLoneWanderer-GH|r with contributions from |cFF22B14Ccapoferro
 
@@ -16,7 +16,7 @@
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Always: delayed
 
-# packaged on 20210529150243
+# packaged on 20220119232345
 
 Libs\LibStub\LibStub.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua

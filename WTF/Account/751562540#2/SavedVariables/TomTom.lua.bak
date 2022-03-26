@@ -1,0 +1,42 @@
+
+TomTomDB = {
+	["profileKeys"] = {
+		["隔離 - 伊弗斯"] = "Default",
+		["騎風 - 伊弗斯"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["arrow"] = {
+				["position"] = {
+					"CENTER", -- [1]
+					nil, -- [2]
+					"CENTER", -- [3]
+					0, -- [4]
+					0, -- [5]
+				},
+			},
+			["block"] = {
+				["position"] = {
+					"TOPRIGHT", -- [1]
+					nil, -- [2]
+					"TOPRIGHT", -- [3]
+					-223.888671875, -- [4]
+					-207.7779388427734, -- [5]
+				},
+			},
+		},
+	},
+}
+TomTomWaypoints = nil
+TomTomWaypointsM = {
+	["profileKeys"] = {
+		["隔離 - 伊弗斯"] = "隔離 - 伊弗斯",
+		["騎風 - 伊弗斯"] = "騎風 - 伊弗斯",
+	},
+	["profiles"] = {
+		["隔離 - 伊弗斯"] = {
+		},
+		["騎風 - 伊弗斯"] = {
+		},
+	},
+}

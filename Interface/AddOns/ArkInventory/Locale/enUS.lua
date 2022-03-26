@@ -1,4 +1,4 @@
-local L = LibStub( "AceLocale-3.0" ):NewLocale( "ArkInventory", "enUS", true, false )
+﻿local L = LibStub( "AceLocale-3.0" ):NewLocale( "ArkInventory", "enUS", true, false )
 if not L then return end
 
 -- post updated translations at http://groups.google.com/group/wow-arkinventory (modify this file and include as an attachment)
@@ -96,6 +96,7 @@ if not L then return end
 	L["CATEGORY_CONSUMABLE_SCROLL"] = "Scroll"
 	L["CATEGORY_CONSUMABLE_CHAMPION_EQUIPMENT"] = "Champion Equipment"
 	L["CATEGORY_CONSUMABLE_POWER_SYSTEM_OLD"] = "Power Systems (Old)"
+	L["CATEGORY_CONSUMABLE_ABILITIES_AND_ACTIONS"] = "Abilities and Actions"
 	
 	
 --	bag names - used to name the empty slots in the status frame (and LDB)
@@ -896,10 +897,13 @@ if not L then return end
 	L["LDB_OBJECT_TEXT_SET_DESC"] = "Set this %1$s as the LDB object text"
 	L["LDB_OBJECT_TEXT_INCLUDE"] = "Include in Text"
 	L["LDB_OBJECT_TEXT_INCLUDE_DESC"] = "Include the icon and count for this %1$s in the LDB object text"
-	L["LDB_OBJECT_TEXT_FORMAT DESC"] = "What format do you want to use to build the values in the LDB object text"
+	L["LDB_OBJECT_TEXT_FORMAT_DESC"] = "What format do you want to use to build the values in the LDB object text"
 	L["LDB_OBJECT_TOOLTIP_INCLUDE"] = "Include in Tooltip"
 	L["LDB_OBJECT_TOOLTIP_INCLUDE_DESC"] = "Include the icon and count for this %1$s in the LDB object tooltip"
 	L["LDB_OBJECT_TOOLTIP_FORMAT_DESC"] = "What format do you want to use to build the values in the LDB object tooltip"
+	
+	L["LDB_ITEMS_SHOWZERO"] = "Show Zero"
+	L["LDB_ITEMS_SHOWZERO_DESC"] = "Show items that have a count of zero"
 	
 	L["LDB_TRACKED_NONE"] = "no %1$s is currently being tracked"
 	L["LDB_LOCATION_NOT_READY"] = "%1$s data is not ready"

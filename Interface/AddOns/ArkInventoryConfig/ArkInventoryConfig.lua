@@ -1,9 +1,9 @@
-	--[[
+﻿	--[[
 
 License: All Rights Reserved, (c) 2006-2018
 
-$Revision: 2955 $
-$Date: 2021-11-17 12:36:32 +1100 (Wed, 17 Nov 2021) $
+$Revision: 2962 $
+$Date: 2021-11-24 19:28:09 +1100 (Wed, 24 Nov 2021) $
 
 ]]--
 
@@ -2225,13 +2225,26 @@ function ArkInventory.ConfigInternal( )
 --							disabled = not ArkInventory.ClientCheck( ArkInventory.LDB.Tracking_Currency.proj ),
 --							args = { },
 --						},
---						items = {
---							order = 400,
---							type = "group",
---							name = string.format( "%s: %s", ArkInventory.Localise["TRACKING"], ArkInventory.Localise["ITEMS"] ),
---							disabled = not ArkInventory.ClientCheck( ArkInventory.LDB.Tracking_Item.proj ),
---							args = { },
---						},
+						items = {
+							order = 400,
+							type = "group",
+							name = string.format( "%s: %s", ArkInventory.Localise["TRACKING"], ArkInventory.Localise["ITEMS"] ),
+							args = {
+								showzero = {
+									order = 100,
+									type = "toggle",
+									name = ArkInventory.Localise["LDB_ITEMS_SHOWZERO"],
+									desc = ArkInventory.Localise["LDB_ITEMS_SHOWZERO_DESC"],
+									get = function( info )
+										return ArkInventory.db.option.tracking.item.showzero
+									end,
+									set = function( info, v )
+										ArkInventory.db.option.tracking.item.showzero = v
+										ArkInventory:SendMessage( "EVENT_ARKINV_LDB_ITEM_UPDATE_BUCKET" )
+									end,
+								},
+							},
+						},
 						reputation = {
 							order = 400,
 							type = "group",
@@ -2257,7 +2270,7 @@ function ArkInventory.ConfigInternal( )
 								format_text = {
 									order = 310,
 									name = ArkInventory.Localise["TEXT"],
-									desc = string.format( "%s%s", ArkInventory.Localise["LDB_OBJECT_TEXT_FORMAT DESC"], ArkInventory.Localise["CONFIG_GENERAL_TOOLTIP_REPUTATION_TOKEN_DESC"] ),
+									desc = string.format( "%s%s", ArkInventory.Localise["LDB_OBJECT_TEXT_FORMAT_DESC"], ArkInventory.Localise["CONFIG_GENERAL_TOOLTIP_REPUTATION_TOKEN_DESC"] ),
 									type = "input",
 									width = "double",
 									disabled = function( )

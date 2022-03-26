@@ -1,0 +1,98 @@
+
+ParrotDB = {
+	["namespaces"] = {
+		["CombatEvents"] = {
+			["profiles"] = {
+				["Default"] = {
+					["Incoming"] = {
+						["Heals over time"] = {
+							["disabled"] = false,
+						},
+						["Heals"] = {
+							["disabled"] = false,
+						},
+						["Self heals over time"] = {
+							["disabled"] = false,
+						},
+						["Self heals"] = {
+							["disabled"] = false,
+						},
+					},
+					["dbver"] = 5,
+					["Notification"] = {
+						["Currency gains"] = {
+							["disabled"] = false,
+						},
+						["Skill gains"] = {
+							["disabled"] = false,
+						},
+						["Extra attacks"] = {
+							["disabled"] = false,
+						},
+						["Experience gains"] = {
+							["disabled"] = false,
+						},
+					},
+				},
+			},
+		},
+		["Suppressions"] = {
+		},
+		["ScrollAreas"] = {
+			["profiles"] = {
+				["Default"] = {
+					["areas"] = {
+						["Notification"] = {
+							["stickyDirection"] = "UP;CENTER",
+							["direction"] = "UP;CENTER",
+							["yOffset"] = 175,
+							["iconSide"] = "LEFT",
+							["xOffset"] = 0,
+							["size"] = 150,
+							["animationStyle"] = "Straight",
+							["stickyAnimationStyle"] = "Pow",
+						},
+						["Outgoing"] = {
+							["stickyDirection"] = "DOWN;LEFT",
+							["direction"] = "DOWN;RIGHT",
+							["yOffset"] = -30,
+							["iconSide"] = "LEFT",
+							["xOffset"] = 60,
+							["size"] = 260,
+							["animationStyle"] = "Parabola",
+							["stickyAnimationStyle"] = "Pow",
+						},
+						["Incoming"] = {
+							["stickyDirection"] = "DOWN;RIGHT",
+							["direction"] = "DOWN;LEFT",
+							["yOffset"] = -30,
+							["iconSide"] = "RIGHT",
+							["xOffset"] = -60,
+							["size"] = 260,
+							["animationStyle"] = "Parabola",
+							["stickyAnimationStyle"] = "Pow",
+						},
+					},
+					["dbver"] = 2,
+				},
+			},
+		},
+		["Cooldowns"] = {
+		},
+		["Display"] = {
+		},
+		["Triggers"] = {
+			["profiles"] = {
+				["Default"] = {
+					["dbver3"] = 1,
+					["dbver2"] = 0,
+					["triggers2"] = 0,
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["隔離 - 伊弗斯"] = "Default",
+		["騎風 - 伊弗斯"] = "Default",
+	},
+}

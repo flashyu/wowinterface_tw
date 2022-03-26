@@ -1,9 +1,9 @@
-## Interface: 90105
+## Interface: 90200
 
 ## Title: ArkInventory [Search]
 ## Author: Arkayenro - Khaz'goroth
 ## Email: arkayenro at gmail dot com
-## Version: 30951
+## Version: 30966
 
 ## Notes: Search for ArkInventory
 

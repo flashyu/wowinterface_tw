@@ -76,6 +76,21 @@ function HealBot_Tooltip_GetHealSpell(button,sName)
     return sName, 0, 1
 end
 
+function HealBot_Tooltip_GCDV1()
+    return 1.5
+end
+
+local gcdDUR=0
+function HealBot_Tooltip_GCDV4()
+    _, gcdDUR = GetSpellCooldown(61304) -- GCD
+    return gcdDUR
+end
+
+local HealBot_Tooltip_GCD=HealBot_Tooltip_GCDV1
+if HEALBOT_GAME_VERSION>3 then
+    HealBot_Tooltip_GCD=HealBot_Tooltip_GCDV4
+end
+
 function HealBot_Tooltip_setspellName(button, spellName)
     if spellName and string.len(spellName)>0 then
         local validSpellName=spellName
@@ -88,12 +103,7 @@ function HealBot_Tooltip_setspellName(button, spellName)
                     local z, x, _ = GetSpellCooldown(spellName);
                     local gcd=0
                     if HealBot_Globals.Tooltip_IgnoreGCD then
-                        if HEALBOT_GAME_VERSION>3 then
-                            local gcdSTART, gcdDUR = GetSpellCooldown(61304) -- GCD
-                            gcd=gcdDUR
-                        else
-                            gcd=1.5
-                        end
+                        gcd=HealBot_Tooltip_GCD()
                     end
                     if HealBot_Globals.Tooltip_ShowCD and x and x>gcd then 
                         z = HealBot_Comm_round(x-(GetTime()-z),0)
@@ -406,6 +416,10 @@ function HealBot_Action_GetTimeOffline(button)
     return timeOffline;
 end
 
+function HealBot_Tooltip_setPlayerPowerCols(r,g,b)
+    playerPowerCols.r,playerPowerCols.g,playerPowerCols.b=r,g,b
+end
+
 function HealBot_Action_DoRefreshTooltip()
     if HealBot_Data["TIPTYPE"]=="NONE" then return end
     if HealBot_Globals.ShowTooltip==false then return end
@@ -430,7 +444,6 @@ function HealBot_Action_DoRefreshTooltip()
     local mana=xButton.mana.current
     local maxmana=xButton.mana.max
     powerCols.r,powerCols.g,powerCols.b=xButton.mana.r,xButton.mana.g,xButton.mana.b
-    playerPowerCols.r,playerPowerCols.g,playerPowerCols.b=xButton.mana.r,xButton.mana.g,xButton.mana.b
     if powerCols.r==0 and powerCols.g==0 then
         powerCols.r=0.28
         powerCols.g=0.28
@@ -443,6 +456,8 @@ function HealBot_Action_DoRefreshTooltip()
     if hlth>maxhlth then hlth=maxhlth end
   
     local UnitOffline=HealBot_Action_GetTimeOffline(xButton); --added by Diacono
+    local UnitTag=xButton.text.tag
+    if UnitOffline then UnitTag="" end
     local DebuffType=xButton.aura.debuff.type;
 
     local spellLeft = HealBot_Action_SpellPattern("Left");
@@ -503,85 +518,98 @@ function HealBot_Action_DoRefreshTooltip()
                     uClass=HEALBOT_WORDS_UNKNOWN 
                 end
             end
-            if HEALBOT_GAME_VERSION>3 and xButton.spec==" " and xButton.isplayer and not HealBot_Data["INSPECT"] then
+            local uSpec=" "
+            if HealBot_Panel_RaidUnitGUID(xButton.guid) then
+                uSpec=HealBot_Action_getGuidData(xButton, "SPEC")
+            else
+                uSpec=xButton.spec
+            end
+            if HEALBOT_GAME_VERSION>3 and uSpec==" " and xButton.isplayer and not HealBot_Data["INSPECT"] then
                 HealBot_Data["INSPECT"]=true
                 HealBot_TalentQuery(xUnit)
-            end
-            HealBot_Tooltip_SetLine(linenum,uName,r,g,b,1,uLvl..xButton.spec..uClass,r,g,b,1)                     
-      
-            local zone=HealBot_UnitZone(xButton)
-
-            linenum=linenum+1
-            if hlth and maxhlth then
-                local inHeal, inAbsorb = HealBot_IncHeals_retHealsIn(xUnit, xButton)
-                local hPct=100
-                if maxhlth>0 then
-                    hPct=floor((hlth/maxhlth)*100)
-                end
-                hlth=HealBot_Text_readNumber(hlth)
-                maxhlth=HealBot_Text_readNumber(maxhlth)
-                if UnitOffline then 
-                    HealBot_Tooltip_SetLine(linenum,HB_TOOLTIP_OFFLINE..": "..UnitOffline,1,1,1,1,hlth.."/"..maxhlth.." ("..hPct.."%)",xButton.health.rcol,xButton.health.gcol,0,1)
-                elseif zone and not strfind(zone,"Level") then
-                    HealBot_Tooltip_SetLine(linenum,zone,1,1,1,1,hlth.."/"..maxhlth.." ("..hPct.."%)",xButton.health.rcol,xButton.health.gcol,0,1)
-                else
-                    HealBot_Tooltip_SetLine(linenum," ",1,1,1,1,hlth.."/"..maxhlth.." ("..hPct.."%)",xButton.health.rcol,xButton.health.gcol,0,1)
-                end
-                local vUnit=HealBot_retIsInVehicle(xUnit)
-                if vUnit then
-                    linenum=linenum+1
-                    local lr,lg,lb=HealBot_Action_ClassColour(vUnit)
-                    hlth,maxhlth=HealBot_VehicleHealth(vUnit)
-                    local hPct=floor((hlth/maxhlth)*100)
-                    hlth=HealBot_Text_readNumber(hlth)
-                    maxhlth=HealBot_Text_readNumber(maxhlth)
-                    if UnitExists(vUnit) then
-                        HealBot_Tooltip_SetLine(linenum,"  "..HealBot_GetUnitName(vUnit),lr,lg,lb,1,hlth.."/"..maxhlth.." ("..hPct.."%)",xButton.health.rcol,xButton.health.gcol,0,1)
-                    else
-                        HealBot_Tooltip_SetLine(linenum,"  "..HEALBOT_VEHICLE,lr,lg,lb,1,hlth.."/"..maxhlth.." ("..hPct.."%)",xButton.health.rcol,xButton.health.gcol,0,1)
-                    end
-                end
             end
             HealBot_Tooltip_luVars["uGroup"]=0
             if IsInRaid() then 
                 HealBot_Tooltip_luVars["uGroup"]=xButton.group
             end
-            if xButton.isplayer and xButton.aggro.threatpct>0 or mana or HealBot_Tooltip_luVars["uGroup"]>0 then
-                if not mana or (maxmana and maxmana==0) then
-                    if xButton.aggro.threatpct>0 then
-                        linenum=linenum+1
-                        HealBot_Tooltip_SetLine(linenum,HEALBOT_WORD_THREAT.." "..xButton.aggro.threatpct.."%",1,0.1,0.1,1," ",0,0,0,0)
-                        linenum=linenum+1
-                        local threatvalue=HealBot_Text_readNumber(xButton.aggro.threatvalue)
-                        HealBot_Tooltip_SetLine(linenum,xButton.aggro.mobname.." ("..threatvalue..")",1,0.1,0.1,1," ",0,0,0,0)
-                    elseif HealBot_Tooltip_luVars["showID"] then
-                        linenum=linenum+1
-                        HealBot_Tooltip_SetLine(linenum,xButton.unit,1,1,1,1," ",0,0,0,0)
-                    elseif HealBot_Tooltip_luVars["uGroup"]>0 then
-                        linenum=linenum+1
-                        HealBot_Tooltip_SetLine(linenum,HEALBOT_OPTIONS_GROUPHEALS.." "..HealBot_Tooltip_luVars["uGroup"],1,1,1,1," ",0,0,0,0)
+            if mana and maxmana>0 and not UnitOffline and HealBot_Tooltip_luVars["uGroup"]>0 and string.len(UnitTag)>0 then
+                HealBot_Tooltip_SetLine(linenum,uName.." - "..UnitTag,r,g,b,1,uLvl..uSpec..uClass,r,g,b,1)
+            else
+                HealBot_Tooltip_SetLine(linenum,uName,r,g,b,1,uLvl..uSpec..uClass,r,g,b,1)
+            end
+      
+            local zone=HealBot_UnitZone(xButton)
+
+            linenum=linenum+1
+            if UnitOffline then
+                linenum=linenum+1
+                HealBot_Tooltip_SetLine(linenum,HB_TOOLTIP_OFFLINE,1,0.5,0,1,UnitOffline,1,1,1,1)
+            else
+                if hlth and maxhlth then
+                    local inHeal, inAbsorb = HealBot_IncHeals_retHealsIn(xUnit, xButton)
+                    local hPct=100
+                    if maxhlth>0 then
+                        hPct=floor((hlth/maxhlth)*100)
                     end
-                else
-                    linenum=linenum+1
-                    local mPct=100
-                    if maxmana>0 then
-                        mPct=floor((mana/maxmana)*100)
+                    hlth=HealBot_Text_readNumber(hlth)
+                    maxhlth=HealBot_Text_readNumber(maxhlth)
+                    if zone and not strfind(zone,"Level") then
+                        HealBot_Tooltip_SetLine(linenum,zone,1,1,1,1,hlth.."/"..maxhlth.." ("..hPct.."%)",xButton.health.rcol,xButton.health.gcol,0,1)
+                    else
+                        HealBot_Tooltip_SetLine(linenum," ",1,1,1,1,hlth.."/"..maxhlth.." ("..hPct.."%)",xButton.health.rcol,xButton.health.gcol,0,1)
                     end
-                    mana=HealBot_Text_readNumber(mana)
-                    maxmana=HealBot_Text_readNumber(maxmana)
-                    if xButton.aggro.threatpct<1 then
-                        if HealBot_Tooltip_luVars["showID"] then
-                            HealBot_Tooltip_SetLine(linenum,xButton.unit,1,1,1,1,mana.."/"..maxmana.." ("..mPct.."%)",powerCols.r,powerCols.g,powerCols.b,1)
-                        elseif HealBot_Tooltip_luVars["uGroup"]>0 then
-                            HealBot_Tooltip_SetLine(linenum,HEALBOT_OPTIONS_GROUPHEALS.." "..HealBot_Tooltip_luVars["uGroup"],1,1,1,1,mana.."/"..maxmana.." ("..mPct.."%)",powerCols.r,powerCols.g,powerCols.b,1)
+                    local vUnit=HealBot_retIsInVehicle(xUnit)
+                    if vUnit then
+                        linenum=linenum+1
+                        local lr,lg,lb=HealBot_Action_ClassColour(vUnit)
+                        hlth,maxhlth=HealBot_VehicleHealth(vUnit)
+                        local hPct=floor((hlth/maxhlth)*100)
+                        hlth=HealBot_Text_readNumber(hlth)
+                        maxhlth=HealBot_Text_readNumber(maxhlth)
+                        if UnitExists(vUnit) then
+                            HealBot_Tooltip_SetLine(linenum,"  "..HealBot_GetUnitName(vUnit),lr,lg,lb,1,hlth.."/"..maxhlth.." ("..hPct.."%)",xButton.health.rcol,xButton.health.gcol,0,1)
                         else
-                            HealBot_Tooltip_SetLine(linenum," ",0,0,0,0,mana.."/"..maxmana.." ("..mPct.."%)",powerCols.r,powerCols.g,powerCols.b,1)
+                            HealBot_Tooltip_SetLine(linenum,"  "..HEALBOT_VEHICLE,lr,lg,lb,1,hlth.."/"..maxhlth.." ("..hPct.."%)",xButton.health.rcol,xButton.health.gcol,0,1)
+                        end
+                    end
+                end
+                if xButton.aggro.threatpct>0 or mana or HealBot_Tooltip_luVars["uGroup"]>0 or string.len(UnitTag)>0 then
+                    if not mana or (maxmana and maxmana==0) then
+                        if xButton.aggro.threatpct>0 then
+                            linenum=linenum+1
+                            HealBot_Tooltip_SetLine(linenum,HEALBOT_WORD_THREAT.." "..xButton.aggro.threatpct.."%",1,0.1,0.1,1,UnitTag,xButton.text.sr,xButton.text.sg,xButton.text.sb,1)
+                            linenum=linenum+1
+                            local threatvalue=HealBot_Text_readNumber(xButton.aggro.threatvalue)
+                            HealBot_Tooltip_SetLine(linenum,xButton.aggro.mobname.." ("..threatvalue..")",1,0.1,0.1,1,UnitTag,xButton.text.sr,xButton.text.sg,xButton.text.sb,1)
+                        elseif HealBot_Tooltip_luVars["uGroup"]>0 then
+                            linenum=linenum+1
+                            HealBot_Tooltip_SetLine(linenum,HEALBOT_OPTIONS_GROUPHEALS.." "..HealBot_Tooltip_luVars["uGroup"],1,1,1,1,UnitTag,xButton.text.sr,xButton.text.sg,xButton.text.sb,1)
+                        elseif string.len(UnitTag)>0 then
+                            linenum=linenum+1
+                            HealBot_Tooltip_SetLine(linenum,UnitTag,xButton.text.sr,xButton.text.sg,xButton.text.sb,1," ",0,0,0,0)
                         end
                     else
-                        HealBot_Tooltip_SetLine(linenum,HEALBOT_WORD_THREAT.." "..xButton.aggro.threatpct.."%",1,0.1,0.1,1,mana.."/"..maxmana.." ("..mPct.."%)",powerCols.r,powerCols.g,powerCols.b,1)
                         linenum=linenum+1
-                        local threatvalue=HealBot_Text_readNumber(xButton.aggro.threatvalue)
-                        HealBot_Tooltip_SetLine(linenum,xButton.aggro.mobname.." ("..threatvalue..")",1,0.1,0.1,1," ",0,0,0,0)
+                        local mPct=100
+                        if maxmana>0 then
+                            mPct=floor((mana/maxmana)*100)
+                        end
+                        mana=HealBot_Text_readNumber(mana)
+                        maxmana=HealBot_Text_readNumber(maxmana)
+                        if xButton.aggro.threatpct<1 then
+                            if HealBot_Tooltip_luVars["uGroup"]>0 then
+                                HealBot_Tooltip_SetLine(linenum,HEALBOT_OPTIONS_GROUPHEALS.." "..HealBot_Tooltip_luVars["uGroup"],1,1,1,1,mana.."/"..maxmana.." ("..mPct.."%)",powerCols.r,powerCols.g,powerCols.b,1)
+                            elseif string.len(UnitTag)>0 then
+                                HealBot_Tooltip_SetLine(linenum,UnitTag,xButton.text.sr,xButton.text.sg,xButton.text.sb,1,mana.."/"..maxmana.." ("..mPct.."%)",powerCols.r,powerCols.g,powerCols.b,1)
+                            else
+                                HealBot_Tooltip_SetLine(linenum," ",0,0,0,0,mana.."/"..maxmana.." ("..mPct.."%)",powerCols.r,powerCols.g,powerCols.b,1)
+                            end
+                        else
+                            HealBot_Tooltip_SetLine(linenum,HEALBOT_WORD_THREAT.." "..xButton.aggro.threatpct.."%",1,0.1,0.1,1,mana.."/"..maxmana.." ("..mPct.."%)",powerCols.r,powerCols.g,powerCols.b,1)
+                            linenum=linenum+1
+                            local threatvalue=HealBot_Text_readNumber(xButton.aggro.threatvalue)
+                            HealBot_Tooltip_SetLine(linenum,xButton.aggro.mobname.." ("..threatvalue..")",1,0.1,0.1,1," ",UnitTag,xButton.text.sr,xButton.text.sg,xButton.text.sb,1)
+                        end
                     end
                 end
             end
@@ -750,10 +778,6 @@ function HealBot_Action_DoRefreshTargetTooltip(button)
 end
 
 function HealBot_Action_RefreshTooltip()
-    if HealBot_Tooltip_luVars["doInit"] then
-        HealBot_Tooltip_luVars["doInit"]=false
-        HealBot_Tooltip_InitFont()
-    end
     HealBot_Action_DoRefreshTooltip()
 end
 
@@ -990,10 +1014,6 @@ function HealBot_Tooltip_Options_Show(noLines)
     if HealBot_Globals.UseGameTooltip then
         GameTooltip:Show();
     else
-        if HealBot_Tooltip_luVars["doInit"] then
-            HealBot_Tooltip_luVars["doInit"]=false
-            HealBot_Tooltip_InitFont()
-        end
         local height = 20 
         local width = 0
         for x = 1, noLines do

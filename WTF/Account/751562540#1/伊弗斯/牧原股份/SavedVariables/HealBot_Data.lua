@@ -54,12 +54,12 @@ HealBot_Config = {
 		},
 	},
 	["MyFriend"] = "x",
-	["LastVersionUpdate"] = "9.1.0.12",
+	["LastVersionUpdate"] = "9.2.0.5",
 	["Skin_ID"] = -1,
 	["Profile"] = 1,
 	["LastAutoSkinChangeType"] = "None",
+	["LastAutoSkinChangeTime"] = 21650.36,
 	["EnableHealthy"] = true,
-	["LastAutoSkinChangeTime"] = 433.851,
 	["DisableSolo"] = false,
 	["CurrentSpec"] = 1,
 	["DisableHealBot"] = false,
@@ -81,13 +81,13 @@ HealBot_Config_Spells = {
 	},
 	["EmergSpellTrinket1"] = {
 	},
-	["EmergSpellTarget"] = {
-	},
+	["ButtonCastMethod"] = 2,
 	["EmergAvoidBlueCursor"] = {
 	},
 	["EmergSpellTrinket2"] = {
 	},
-	["ButtonCastMethod"] = 2,
+	["EmergSpellTarget"] = {
+	},
 	["EmergKeyCombo"] = {
 	},
 	["EnabledKeyCombo"] = {
@@ -343,12 +343,12 @@ HealBot_Config_Cures = {
 	},
 	["ShowTimeMaxDuration"] = 31,
 	["IgnoreFastDurDebuffsSecs"] = 2,
-	["HealBot_CDCWarnRange_Bar"] = 3,
-	["DebuffWatchWhenGrouped"] = false,
-	["HealBot_CDCWarnRange_Sound"] = 3,
 	["DebuffWatchWhenMounted"] = false,
-	["SoundDebuffWarning"] = false,
+	["HealBot_CDCWarnRange_Bar"] = 3,
 	["SoundDebuffPlay"] = "Tribal Bass Drum",
+	["HealBot_CDCWarnRange_Sound"] = 3,
+	["DebuffWatchWhenGrouped"] = false,
+	["SoundDebuffWarning"] = false,
 	["HealBotDebuffDropDown"] = {
 		4, -- [1]
 		4, -- [2]

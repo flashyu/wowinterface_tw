@@ -1,4 +1,4 @@
-local L = LibStub( "AceLocale-3.0" ):NewLocale( "ArkInventory", "enUS", true, false )
+﻿local L = LibStub( "AceLocale-3.0" ):NewLocale( "ArkInventory", "enUS", true, false )
 if not L then return end
 
 local function FormatForPattern( text )
@@ -192,8 +192,10 @@ L["ITEM_BIND1"] = ITEM_BIND_ON_USE or true
 L["ITEM_BIND2"] = ITEM_BIND_ON_EQUIP or true
 L["ITEM_BIND3"] = ITEM_SOULBOUND or true
 L["ITEM_BIND4"] = ITEM_ACCOUNTBOUND or true
+L["ITEM_CANNOT_DISENCHANT"] = ITEM_DISENCHANT_NOT_DISENCHANTABLE or true
+L["ITEM_CANNOT_OBLITERATE"] = ITEM_OBLITERATEABLE_NOT or true
+L["ITEM_CANNOT_SCRAP"] = ITEM_SCRAPABLE_NOT or true
 L["ITEM_LEVEL"] = STAT_AVERAGE_ITEM_LEVEL or true
-L["ITEM_NOT_DISENCHANTABLE"] = ITEM_DISENCHANT_NOT_DISENCHANTABLE or true
 L["ITEMS"] = ITEMS or true
 L["JUNK"] = BAG_FILTER_JUNK or true
 L["KEYRING"] = KEYRING or true

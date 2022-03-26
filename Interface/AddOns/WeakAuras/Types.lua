@@ -375,14 +375,16 @@ Private.format_types = {
   },
   Unit = {
     display = L["Formats |cFFFF0000%unit|r"],
-    AddOptions = function(symbol, hidden, addOption, get)
-      addOption(symbol .. "_color", {
-        type = "select",
-        name = L["Color"],
-        width = WeakAuras.normalWidth,
-        values = Private.unit_color_types,
-        hidden = hidden,
-      })
+    AddOptions = function(symbol, hidden, addOption, get, withoutColor)
+      if not withoutColor then
+        addOption(symbol .. "_color", {
+          type = "select",
+          name = L["Color"],
+          width = WeakAuras.normalWidth,
+          values = Private.unit_color_types,
+          hidden = hidden,
+        })
+      end
       addOption(symbol .. "_realm_name", {
         type = "select",
         name = L["Realm Name"],
@@ -409,8 +411,8 @@ Private.format_types = {
         end
       })
     end,
-    CreateFormatter = function(symbol, get)
-      local color = get(symbol .. "_color", true)
+    CreateFormatter = function(symbol, get, withoutColor)
+      local color = not withoutColor and get(symbol .. "_color", true)
       local realm = get(symbol .. "_realm_name", "never")
       local abbreviate = get(symbol .. "_abbreviate", false)
       local abbreviateMax = get(symbol .. "_abbreviate_max", 8)
@@ -420,7 +422,7 @@ Private.format_types = {
       local abbreviateFunc
       if color == "class" then
         colorFunc = function(unit, text)
-          if unit and UnitPlayerControlled(unit) then
+          if unit and Private.UnitPlayerControlledFixed(unit) then
             local classFilename = select(2, UnitClass(unit))
             if classFilename then
               return WrapTextInColorCode(text, WA_GetClassColor(classFilename))
@@ -500,14 +502,16 @@ Private.format_types = {
   },
   guid = {
     display = L["Formats Player's |cFFFF0000%guid|r"],
-    AddOptions = function(symbol, hidden, addOption, get)
-      addOption(symbol .. "_color", {
-        type = "select",
-        name = L["Color"],
-        width = WeakAuras.normalWidth,
-        values = Private.unit_color_types,
-        hidden = hidden,
-      })
+    AddOptions = function(symbol, hidden, addOption, get, withoutColor)
+      if not withoutColor then
+        addOption(symbol .. "_color", {
+          type = "select",
+          name = L["Color"],
+          width = WeakAuras.normalWidth,
+          values = Private.unit_color_types,
+          hidden = hidden,
+        })
+      end
       addOption(symbol .. "_realm_name", {
         type = "select",
         name = L["Realm Name"],
@@ -533,8 +537,8 @@ Private.format_types = {
         end
       })
     end,
-    CreateFormatter = function(symbol, get)
-      local color = get(symbol .. "_color", true)
+    CreateFormatter = function(symbol, get, withoutColor)
+      local color = not withoutColor and get(symbol .. "_color", true)
       local realm = get(symbol .. "_realm_name", "never")
       local abbreviate = get(symbol .. "_abbreviate", false)
       local abbreviateMax = get(symbol .. "_abbreviate_max", 8)
@@ -762,7 +766,8 @@ Private.trigger_modes = {
 
 Private.debuff_types = {
   HELPFUL = L["Buff"],
-  HARMFUL = L["Debuff"]
+  HARMFUL = L["Debuff"],
+  BOTH = L["Buff/Debuff"]
 }
 
 Private.tooltip_count = {
@@ -773,7 +778,7 @@ Private.tooltip_count = {
 
 Private.aura_types = {
   BUFF = L["Buff"],
-  DEBUFF = L["Debuff"]
+  DEBUFF = L["Debuff"],
 }
 
 
@@ -833,9 +838,13 @@ Private.actual_unit_types_cast = {
   member = L["Specific Unit"],
 }
 
+Private.actual_unit_types_cast_tooltip = L["• |cff00ff00Player|r, |cff00ff00Target|r, |cff00ff00Focus|r, and |cff00ff00Pet|r correspond directly to those individual unitIDs.\n• |cff00ff00Specific Unit|r lets you provide a specific valid unitID to watch.\n|cffff0000Note|r: The game will not fire events for all valid unitIDs, making some untrackable by this trigger.\n• |cffffff00Party|r, |cffffff00Raid|r, |cffffff00Boss|r, |cffffff00Arena|r, and |cffffff00Nameplate|r can match multiple corresponding unitIDs.\n• |cffffff00Smart Group|r adjusts to your current group type, matching just the \"player\" when solo, \"party\" units (including \"player\") in a party or \"raid\" units in a raid.\n\n|cffffff00*|r Yellow Unit settings will create clones for each matching unit while this trigger is providing Dynamic Info to the Aura."]
+
 Private.threat_unit_types = {
   target = L["Target"],
   focus = L["Focus"],
+  nameplate = L["Nameplate"],
+  boss = L["Boss"],
   member = L["Specific Unit"],
   none = L["At Least One Enemy"]
 }
@@ -880,7 +889,7 @@ do
     [23] = true,
     [33] = true
   }
-  if WeakAuras.IsClassic() then
+  if WeakAuras.IsClassic() or WeakAuras.IsBCC() then
     unplayableRace[9] = true
   end
 
@@ -1060,12 +1069,6 @@ Private.include_pets_types = {
   PetsOnly = L["Pets only"]
 }
 
-Private.category_event_prototype = {}
-for name, prototype in pairs(Private.event_prototypes) do
-  Private.category_event_prototype[prototype.type] = Private.category_event_prototype[prototype.type] or {}
-  Private.category_event_prototype[prototype.type][name] = prototype.name
-end
-
 Private.subevent_prefix_types = {
   SWING = L["Swing"],
   RANGE = L["Range"],
@@ -1187,7 +1190,8 @@ Private.environmental_types = {
 Private.combatlog_flags_check_type = {
   Mine = L["Mine"],
   InGroup = L["In Group"],
-  NotInGroup = L["Not in Group"]
+  InParty = L["In Party"],
+  NotInGroup = L["Not in Smart Group"]
 }
 
 Private.combatlog_flags_check_reaction = {
@@ -1204,6 +1208,48 @@ Private.combatlog_flags_check_object_type = {
   Player = L["Player"]
 }
 
+Private.combatlog_spell_school_types = {
+  [1] = STRING_SCHOOL_PHYSICAL,
+  [2] = STRING_SCHOOL_HOLY,
+  [4] = STRING_SCHOOL_FIRE,
+  [8] = STRING_SCHOOL_NATURE,
+  [16] = STRING_SCHOOL_FROST,
+  [32] = STRING_SCHOOL_SHADOW,
+  [64] = STRING_SCHOOL_ARCANE,
+  [3] = STRING_SCHOOL_HOLYSTRIKE,
+  [5] = STRING_SCHOOL_FLAMESTRIKE,
+  [6] = STRING_SCHOOL_HOLYFIRE,
+  [9] = STRING_SCHOOL_STORMSTRIKE,
+  [10] = STRING_SCHOOL_HOLYSTORM,
+  [12] = STRING_SCHOOL_FIRESTORM,
+  [17] = STRING_SCHOOL_FROSTSTRIKE,
+  [18] = STRING_SCHOOL_HOLYFROST,
+  [20] = STRING_SCHOOL_FROSTFIRE,
+  [24] = STRING_SCHOOL_FROSTSTORM,
+  [33] = STRING_SCHOOL_SHADOWSTRIKE,
+  [34] = STRING_SCHOOL_SHADOWLIGHT,
+  [36] = STRING_SCHOOL_SHADOWFLAME,
+  [40] = STRING_SCHOOL_SHADOWSTORM,
+  [48] = STRING_SCHOOL_SHADOWFROST,
+  [65] = STRING_SCHOOL_SPELLSTRIKE,
+  [66] = STRING_SCHOOL_DIVINE,
+  [68] = STRING_SCHOOL_SPELLFIRE,
+  [72] = STRING_SCHOOL_SPELLSTORM,
+  [80] = STRING_SCHOOL_SPELLFROST,
+  [96] = STRING_SCHOOL_SPELLSHADOW,
+  [28] = STRING_SCHOOL_ELEMENTAL,
+  [62] = STRING_SCHOOL_CHROMATIC,
+  [106] = STRING_SCHOOL_COSMIC,
+  [124] = STRING_SCHOOL_CHAOS,
+  [126] = STRING_SCHOOL_MAGIC,
+  [127] = STRING_SCHOOL_CHAOS,
+}
+
+Private.combatlog_spell_school_types_for_ui = {}
+for id, str in pairs(Private.combatlog_spell_school_types) do
+  Private.combatlog_spell_school_types_for_ui[id] = ("%.3d - %s"):format(id, str)
+end
+
 Private.combatlog_raid_mark_check_type = {
   [0] = RAID_TARGET_NONE,
   "|TInterface\\TARGETINGFRAME\\UI-RaidTargetingIcon_1:14|t " .. RAID_TARGET_1, -- Star
@@ -1216,6 +1262,9 @@ Private.combatlog_raid_mark_check_type = {
   "|TInterface\\TARGETINGFRAME\\UI-RaidTargetingIcon_8:14|t " .. RAID_TARGET_8, -- Skull
   L["Any"]
 }
+
+Private.raid_mark_check_type = CopyTable(Private.combatlog_raid_mark_check_type)
+Private.raid_mark_check_type[9] = nil
 
 Private.orientation_types = {
   HORIZONTAL_INVERSE = L["Left to Right"],
@@ -1697,6 +1746,10 @@ Private.texture_types = {
     ["Interface\\TargetingFrame\\UI-RaidTargetingIcon_6"] = RAID_TARGET_6,
     ["Interface\\TargetingFrame\\UI-RaidTargetingIcon_7"] = RAID_TARGET_7,
     ["Interface\\TargetingFrame\\UI-RaidTargetingIcon_8"] = RAID_TARGET_8,
+  },
+  ["WeakAuras"] = {
+    ["Interface\\AddOns\\WeakAuras\\Media\\Textures\\logo_64.tga"] = "WeakAuras logo 64px",
+    ["Interface\\AddOns\\WeakAuras\\Media\\Textures\\logo_256.tga"] = "WeakAuras logo 256px"
   }
 }
 local BuildInfo = select(4, GetBuildInfo())
@@ -2640,6 +2693,7 @@ end
 Private.update_categories = {
   {
     name = "anchor",
+    -- Note, these are special cased for child auras and considered arrangment
     fields = {
       "xOffset",
       "yOffset",
@@ -2758,6 +2812,8 @@ Private.internal_fields = {
   internalVersion = true,
   sortHybridTable = true,
   tocversion = true,
+  parent = true,
+  controlledChildren = true,
 }
 
 -- fields that are not included in exported data
@@ -2766,6 +2822,14 @@ Private.internal_fields = {
 Private.non_transmissable_fields = {
   controlledChildren = true,
   parent = true,
+  authorMode = true,
+  skipWagoUpdate = true,
+  ignoreWagoUpdate = true,
+  preferToUpdate = true,
+}
+
+-- For nested groups, we do transmit parent + controlledChildren
+Private.non_transmissable_fields_v2000 = {
   authorMode = true,
   skipWagoUpdate = true,
   ignoreWagoUpdate = true,
@@ -3110,7 +3174,7 @@ for i = 1, 4 do
 end
 
 if WeakAuras.IsRetail() then
-  for i = 1, MAX_BOSS_FRAMES do
+  for i = 1, 10 do
     Private.baseUnitId["boss"..i] = true
     Private.multiUnitUnits.boss["boss"..i] = true
   end
@@ -3205,6 +3269,12 @@ Private.noreset_swing_spells = {
   [35478] = true, -- Drums of Restoration
   [34120] = true, -- Steady Shot (rank 1)
   [19434] = true, -- Aimed Shot (rank 1)
+  [1464] = true, -- Slam (rank 1)
+  [8820] = true, -- Slam (rank 2)
+  [11604] = true, -- Slam (rank 3)
+  [11605] = true, -- Slam (rank 4)
+  [25241] = true, -- Slam (rank 5)
+  [25242] = true, -- Slam (rank 6)
   --35474 Drums of Panic DO reset the swing timer, do not add
 }
 
@@ -3215,7 +3285,7 @@ skippedWeaponTypes[11] = true -- Bear Claws
 skippedWeaponTypes[12] = true -- Cat Claws
 skippedWeaponTypes[14] = true -- Misc
 skippedWeaponTypes[17] = true -- Spears
-if WeakAuras.IsClassic() then
+if WeakAuras.IsClassic() or WeakAuras.IsBCC() then
   skippedWeaponTypes[9] = true -- Glaives
 else
   skippedWeaponTypes[16] = true -- Thrown
@@ -3394,8 +3464,6 @@ if WeakAuras.IsClassic() then
   for i, spellid in ipairs(reset_swing_spell_list) do
     Private.reset_swing_spells[spellid] = true
   end
-
-  Private.glow_types.ACShine = nil
 end
 
 if WeakAuras.IsBCC() then
@@ -3403,9 +3471,13 @@ if WeakAuras.IsBCC() then
   Private.item_slot_types[18] = RANGEDSLOT
   Private.talent_extra_option_types[0] = nil
   Private.talent_extra_option_types[2] = nil
+  Private.multiUnitId.boss = nil
+  wipe(Private.multiUnitUnits.boss)
+  Private.unit_types_bufftrigger_2.boss = nil
+  Private.actual_unit_types_cast.boss = nil
 
   local reset_swing_spell_list = {
-    1464, 8820, 11604, 11605, 25242, -- Slam
+    1464, 8820, 11604, 11605, 25241, 25242, -- Slam
     78, 284, 285, 1608, 11564, 11565, 11566, 11567, 25286, 29707, 30324, -- Heroic Strike
     845, 7369, 11608, 11609, 20569, 25231, -- Cleave
     2973, 14260, 14261, 14262, 14263, 14264, 14265, 14266, 27014, -- Raptor Strike
@@ -3414,6 +3486,10 @@ if WeakAuras.IsBCC() then
     2764, 3018, -- Shoots,
     19434, 20900, 20901, 20902, 20903, 20904, 27065, -- Aimed Shot
     20066, -- Repentance
+    11350, -- Fire Shield (Oil of Immolation)
+    50986, -- Sulfuron Slammer
+    439, 440, 441, 2024, 4042, 17534, 28495, -- Minor/Lesser/Greater/Superior/Major/Super Healing Potion
+    41619, 41620 -- Cenarion Healing Salve/Bottled Nethergon Vapor
   }
   for _, spellid in ipairs(reset_swing_spell_list) do
     Private.reset_swing_spells[spellid] = true
@@ -3427,6 +3503,4 @@ if WeakAuras.IsBCC() then
   for _, spellid in ipairs(reset_ranged_swing_spell_list) do
     Private.reset_ranged_swing_spells[spellid] = true
   end
-
-  Private.glow_types.ACShine = nil
 end

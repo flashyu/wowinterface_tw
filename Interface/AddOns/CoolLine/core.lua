@@ -19,7 +19,7 @@ local MAX_SUPPORTED_VERSION                   = 19999
 --@end-version-classic@]====]
 
 --@version-bcc@
-local MAX_SUPPORTED_VERSION                   = 20501
+local MAX_SUPPORTED_VERSION                   = 20599
 --@end-version-bcc@
 
 --@non-version-classic@
@@ -40,7 +40,7 @@ end)
 
 if build_toc_version > MAX_SUPPORTED_VERSION or (major_version < MAX_MAJOR_VERSION) then
     print(format("!!! %sBEWARE %s!!!!", LIGHTRED, "|r"))
-    local coolline_version = "9.1.000"
+    local coolline_version = "9.3.000"
     print(format("%sCoolLine v%s hasn't been updated to support WoW v |r%s - %sbuild|r %s- %sdate|r %s - %sversion number|r %s",
                  ORANGEY, coolline_version, version,
                  ORANGEY, build,

@@ -1,0 +1,26 @@
+
+_weizpvp_chardb = {
+	["profileKeys"] = {
+		["騎風 - 伊弗斯"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["Options"] = {
+				["Database"] = {
+					["LastCleaned"] = 1648223096,
+					["VERSION"] = 3,
+				},
+				["Frames"] = {
+					["Point"] = "TOPLEFT",
+					["Width"] = 251.0000915527344,
+					["Y"] = 836.8331298828125,
+					["X"] = 0,
+					["List"] = {
+						["Height"] = 360.0000305175781,
+					},
+					["Height"] = 216.0000305175781,
+				},
+			},
+		},
+	},
+}

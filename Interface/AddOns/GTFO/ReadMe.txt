@@ -17,6 +17,7 @@ Special thanks:
 		Andyca, and BNSSNB (Traditional Chinese Translations)
 		Phalk and Omukeka (Brazilian Portuguese Translations)
 		Asixandur (Italian Translations)
+		LantisNT (Controller vibration support)
 
 Change Log:
 
@@ -1692,3 +1693,38 @@ Change Log:
 
 4.65.2
 * Fixed BC spells for Serpentshrine Cavern
+
+4.65.3
+* Updated ToCs to latest for Vanilla & BC
+* Fixed BC spells for Serpentshrine Cavern
+* Added Shadowlands spells (world)
+* Added SL spells for Sepulcher of the First Ones
+* Added BC spells for Black Temple
+
+4.65.4
+* Updated for patch 9.2
+* Added SL spells for Sepulcher of the First Ones
+* Added BC spells for Black Temple
+
+4.66
+* Added controller vibration support - Thanks LantisNT
+* Added support for custom sounds by Blizzard Sound ID #
+* Added Shadowlands spells (world)
+* Added BC spells for Black Temple
+
+4.66.1
+* Added Shadowlands spells (world)
+* Added SL spells for Sepulcher of the First Ones
+
+4.66.2
+* Added Shadowlands spells (world)
+* Added SL spells for Sepulcher of the First Ones
+
+4.66.3
+* Added Shadowlands spells (world)
+* Added SL spells for Sepulcher of the First Ones
+
+4.66.4
+* Added Shadowlands spells (world)
+* Added SL spells for Sepulcher of the First Ones
+* Fixed BC spells for Black Temple

@@ -734,6 +734,9 @@ end
 -- 交易/邮件通报和记录
 function Frame:UI_INFO_MESSAGE(...)
 	local arg = {...}
+	if not Current then
+		return
+	end
 	if arg[2] == ERR_TRADE_CANCELLED then
 		Current.Result = "cancelled"
 		Current.Reason = arg[2]

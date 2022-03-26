@@ -1,4 +1,4 @@
-local L = LibStub( "AceLocale-3.0" ):NewLocale( "ArkInventory", "ruRU" )
+﻿local L = LibStub( "AceLocale-3.0" ):NewLocale( "ArkInventory", "ruRU" )
 if not L then return end
 
 -- post updated translations at http://groups.google.com/group/wow-arkinventory (modify this file and include as an attachment)
@@ -96,6 +96,7 @@ if not L then return end
 --	L["CATEGORY_CONSUMABLE_SCROLL"] = ""
 --	L["CATEGORY_CONSUMABLE_CHAMPION_EQUIPMENT"] = ""
 --	L["CATEGORY_CONSUMABLE_POWER_SYSTEM_OLD"] = ""
+--	L["CATEGORY_CONSUMABLE_ABILITIES_AND_ACTIONS"] = ""
 	
 	
 --	bag names - used to name the empty slots in the status frame
@@ -894,10 +895,13 @@ if not L then return end
 --	L["LDB_OBJECT_TEXT_SET_DESC"] = ""
 --	L["LDB_OBJECT_TEXT_INCLUDE"] = ""
 --	L["LDB_OBJECT_TEXT_INCLUDE_DESC"] = ""
---	L["LDB_OBJECT_TEXT_FORMAT DESC"] = ""
+--	L["LDB_OBJECT_TEXT_FORMAT_DESC"] = ""
 --	L["LDB_OBJECT_TOOLTIP_INCLUDE"] = ""
 --	L["LDB_OBJECT_TOOLTIP_INCLUDE_DESC"] = ""
 --	L["LDB_OBJECT_TOOLTIP_FORMAT_DESC"] = ""
+	
+--	L["LDB_ITEMS_SHOWZERO"] = ""
+--	L["LDB_ITEMS_SHOWZERO_DESC"] = ""
 	
 --	L["LDB_TRACKED_NONE"] = ""
 --	L["LDB_LOCATION_NOT_READY"] = ""

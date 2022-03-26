@@ -7,7 +7,7 @@ ItemRackUser = {
 	["MainScale"] = 1,
 	["SetMenuWrapValue"] = 3,
 	["SetMenuWrap"] = "OFF",
-	["CurrentSet"] = "Health",
+	["CurrentSet"] = "飛行",
 	["Sets"] = {
 		["Health"] = {
 			["Queues"] = {
@@ -142,7 +142,7 @@ ItemRackUser = {
 			},
 		},
 	},
-	["EnablePerSetQueues"] = "OFF",
+	["EnableQueues"] = "ON",
 	["Queues"] = {
 		{
 			"25975::::::::66::::::::", -- [1]
@@ -192,5 +192,5 @@ ItemRackUser = {
 	},
 	["Alpha"] = 1,
 	["MenuScale"] = 0.85,
-	["EnableQueues"] = "ON",
+	["EnablePerSetQueues"] = "OFF",
 }

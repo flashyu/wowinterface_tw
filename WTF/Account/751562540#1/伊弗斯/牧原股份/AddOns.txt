@@ -20,3 +20,6 @@ WideQuestLogLevels: enabled
 InFlight: disabled
 ItemRackOptions: enabled
 BattleGroundEnemies: disabled
+ElvUI_CustomTags: disabled
+kExtraBossFrames: disabled
+alaTalentEmu: disabled

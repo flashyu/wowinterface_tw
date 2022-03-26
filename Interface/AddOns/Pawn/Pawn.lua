@@ -1,13 +1,13 @@
 ﻿-- Pawn by Vger-Azjol-Nerub
 -- www.vgermods.com
--- © 2006-2021 Travis Spomer.  This mod is released under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 license.
+-- © 2006-2022 Travis Spomer.  This mod is released under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 license.
 -- See Readme.htm for more information.
 
 -- 
 -- Main non-UI code
 ------------------------------------------------------------
 
-PawnVersion = 2.0530
+PawnVersion = 2.0534
 
 -- Pawn requires this version of VgerCore:
 local PawnVgerCoreVersionRequired = 1.13
@@ -861,7 +861,7 @@ function PawnDebugMessage(Message)
 	end
 end
 
--- Processes an Pawn slash command.
+-- Processes a Pawn slash command.
 function PawnCommand(Command)
 	if Command == "" then
 		PawnUIShow()
@@ -875,6 +875,17 @@ function PawnCommand(Command)
 		if PawnUIFrame_DebugCheck then PawnUIFrame_DebugCheck:SetChecked(PawnCommon.Debug) end
 	elseif Command == "backup" then
 		PawnUIExportAllScales()
+	elseif strsub(Command, 1, 7) == "tooltip" then
+		local ItemLink = strsub(Command, 9)
+		local ItemID = tonumber(ItemLink)
+		ItemRefTooltip:SetOwner(UIParent, "ANCHOR_PRESERVE")
+		if ItemID then
+			ItemRefTooltip:SetItemByID(ItemID)
+		else
+			if strsub(ItemLink, 1, 5) ~= "item:" then ItemLink = "item:" .. ItemLink end
+			ItemRefTooltip:SetHyperlink(ItemLink)
+		end
+		ItemRefTooltip:Show()
 	elseif strsub(Command, 1, 7) == "compare" then
 		local CompareIndex, ItemLink1, ItemLink2
 		if strsub(Command, 9, 13) == "left " then
@@ -1335,13 +1346,6 @@ function PawnGetItemData(ItemLink)
 			PawnDebugMessage("")
 			PawnDebugMessage("Copying meta socket effect (" .. Item.UnenchantedStats.MetaSocketEffect .. ") from base to current.")
 			Item.Stats.MetaSocketEffect = Item.UnenchantedStats.MetaSocketEffect
-		end
-
-		-- Same with DominationSocket.
-		if Item.UnenchantedStats and Item.Stats and Item.UnenchantedStats.DominationSocket and not Item.Stats.DominationSocket then
-			PawnDebugMessage("")
-			PawnDebugMessage("Copying domination socket value from base to current.")
-			Item.Stats.DominationSocket = Item.UnenchantedStats.DominationSocket
 		end
 
 		-- Enchanted items should not get points for empty sockets, nor do they get socket bonuses if there are any empty sockets.
@@ -2638,8 +2642,7 @@ function PawnGetItemValue(Item, ItemLevel, SocketBonus, ScaleName, DebugMessages
 			Stat ~= "YellowSocket" and
 			Stat ~= "BlueSocket" and
 			Stat ~= "MetaSocket" and
-			Stat ~= "MetaSocketEffect" and
-			Stat ~= "DominationSocket"
+			Stat ~= "MetaSocketEffect"
 		then
 			if ThisValue then
 				-- This stat has a value; add it to the running total.
@@ -2674,8 +2677,7 @@ function PawnGetItemValue(Item, ItemLevel, SocketBonus, ScaleName, DebugMessages
 				Item.YellowSocket or
 				Item.BlueSocket or
 				Item.MetaSocket or
-				Item.MetaSocketEffect or
-				Item.DominationSocket
+				Item.MetaSocketEffect
 			) then
 
 				local GemQualityLevel = PawnGetGemQualityForItem(PawnGemQualityLevels, ItemLevel)
@@ -2733,17 +2735,6 @@ function PawnGetItemValue(Item, ItemLevel, SocketBonus, ScaleName, DebugMessages
 				ThisValue = ScaleValues.MetaSocketEffect
 				if ThisValue then
 					Stat = "MetaSocketEffect"
-					Quantity = Item[Stat]
-					if Quantity then
-						TotalSocketValue = TotalSocketValue + Quantity * ThisValue
-						if DebugMessages then PawnDebugMessage(format(PawnLocal.ValueCalculationMessage, Quantity, Stat, ThisValue, Quantity * ThisValue)) end
-					end
-				end
-
-				-- Same with domination sockets.
-				ThisValue = ScaleValues.DominationSocket
-				if ThisValue then
-					Stat = "DominationSocket"
 					Quantity = Item[Stat]
 					if Quantity then
 						TotalSocketValue = TotalSocketValue + Quantity * ThisValue
@@ -3159,6 +3150,9 @@ function PawnCorrectScaleErrors(ScaleName)
 
 	-- Patch 9.0 removed the Corruption stat, though it still shows up on items.
 	ThisScale.Corruption = nil
+
+	-- Patch 9.2 removed the effects of domination shards outside of the Maw.
+	ThisScale.DominationSocket = nil
 end
 
 -- Replaces one incorrect stat with a correct stat.
@@ -5524,11 +5518,6 @@ function PawnAddPluginScaleFromTemplate(ProviderInternalName, ClassID, SpecID, S
 		for StatName, Value in pairs(Stats) do
 			ScaleValues[StatName] = Stats[StatName]
 		end
-	end
-
-	if ScaleValues.DominationSocket == nil and ScaleValues.Leech then
-		-- Desolate Shard of Rev provides 45 Leech and is easy for non-raiders to attain, so use that as the default value for a domination socket.
-		ScaleValues.DominationSocket = ScaleValues.Leech * 45
 	end
 
 	local Color
