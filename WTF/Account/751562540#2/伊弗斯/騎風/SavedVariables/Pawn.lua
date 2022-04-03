@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0534,
+	["LastPlayerFullName"] = "騎風-伊弗斯",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 29040,
@@ -90,8 +92,6 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:28439:2673:::::::70:::::::::|h[龍擊]|h|r",
 		}, -- [17]
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "騎風-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

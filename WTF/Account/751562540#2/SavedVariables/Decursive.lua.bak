@@ -1,8 +1,7 @@
 
 DecursiveDB = {
-	["profileKeys"] = {
-		["隔離 - 伊弗斯"] = "Default",
-		["騎風 - 伊弗斯"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1648962884,
 	},
 	["class"] = {
 		["WARLOCK"] = {
@@ -28,8 +27,9 @@ DecursiveDB = {
 			},
 		},
 	},
-	["global"] = {
-		["LastVersionAnnounce"] = 1648957319,
+	["profileKeys"] = {
+		["隔離 - 伊弗斯"] = "Default",
+		["騎風 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
