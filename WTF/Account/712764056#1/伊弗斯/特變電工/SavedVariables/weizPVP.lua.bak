@@ -1,0 +1,26 @@
+
+_weizpvp_chardb = {
+	["profileKeys"] = {
+		["特變電工 - 伊弗斯"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["Options"] = {
+				["Database"] = {
+					["LastCleaned"] = 1648476376,
+					["VERSION"] = 3,
+				},
+				["Frames"] = {
+					["Point"] = "TOPLEFT",
+					["Width"] = 251.0000457763672,
+					["Y"] = 434.0559997558594,
+					["X"] = 10.61111068725586,
+					["List"] = {
+						["Height"] = 360.0000915527344,
+					},
+					["Height"] = 216,
+				},
+			},
+		},
+	},
+}

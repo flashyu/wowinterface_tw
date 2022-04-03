@@ -1,42 +1,32 @@
 # <DBM> Outlands
 
-## [2.5.30](https://github.com/DeadlyBossMods/DBM-TBC-Classic/tree/2.5.30) (2022-03-22)
-[Full Changelog](https://github.com/DeadlyBossMods/DBM-TBC-Classic/compare/2.5.29...2.5.30) [Previous Releases](https://github.com/DeadlyBossMods/DBM-TBC-Classic/releases)
+## [2.5.31](https://github.com/DeadlyBossMods/DBM-TBC-Classic/tree/2.5.31) (2022-03-30)
+[Full Changelog](https://github.com/DeadlyBossMods/DBM-TBC-Classic/compare/2.5.30...2.5.31) [Previous Releases](https://github.com/DeadlyBossMods/DBM-TBC-Classic/releases)
 
-- prep new retail and tbc tags  
-- bump BCC toc Raise boss unit ID scan to boss 10, per hotfix last week, now allows up to 10 and all return valid unit events  
-- bump BCC toc  
-- Update koKR (#90)  
-- revise tanking check with a new option to only request status 3 check  
-- Update localization.cn.lua (#89)  
-- add a you pos count object.  
-- Update commonlocal.cn.lua (#88)  
-- Update localization.tw.lua (#87)  
-- Update commonlocal.tw.lua (#86)  
-- Update alpha revision  
+- Tag all the things  
+- Add whirlwind to zul'jin  
+- Re-add 2 used icons.  
+- Cleanup some unused files; - Move spark.blp to DBM-StatusBarTimers - Remove LOA sound, as it exists in classic/bcc now - Remove default.blp from DBM-Core, as it's a duplicate of DBM-StatusBarTimers (and all references point there) - Removed unused arrow textures - Remove ? unused textures (CryptFiendBurrow, CryptFiendUnBurrow) - Remove redundant PvP textures (GuardTower, OrcTower)  
+- Check warlock has an imp for Singe Magic dispell  
+- Update commonlocal.ru.lua (#93)  
+- NewTimer object that isn't auto localized also needs a way to inject group spellid  
+- Update koKR (#92) Co-authored-by: Adam <MysticalOS@users.noreply.github.com>  
+- Also error out if no function passes so author knows they are using it incorrectly.  
+- Do not allow all callbacks to be unregistered by any mod that forgets to pass a valid function, that's just bad. now it should just error out if a function isn't passed and leave it at that. This resolves issues with one mod breaking other mods, Ref https://github.com/BigWigsMods/Transcriptor/pull/30 Also added more CL  
+- that's what I get for copy and paste out of github's bad editor. it actually converted some of tabs to spaces but left some tabs? wtf github. make your editor less shit  
+- Update localization.ru.lua (#91)  
+- Fix https://github.com/DeadlyBossMods/DBM-TBC-Classic/issues/111  
+- This is hacky, but it won't throw errors setting a custom name.  
+- This should revert it to last stable point  
+- fuck it, i'm going to bed  
+- make luachec happy  
+- Fix bad copy paste  
+- not sure why this check is here, so remove it  
+- Update koKR (BCC) (DeadlyBossMods#107) (#110)  
+- Fix up Luacheck  
+- Fix logic  
+- no idea what spell is, since mods were lazy typed and poorly documented back then. it doesn't exist in classic tbc though so just remove it for now  
+- bump alpha  
 - prep new tag for retail  
-- Find and report duplicate entries (usually typos in objects that cause problems)  
-- Update commonlocal.ru.lua (#83) Add one phrase. Small cleaning.  
-- Update koKR (#84)  
-- Add count variant of tank combo  
-- swear i copy/pasted that  
-- set new alpha revision  
-- prep fresh retail tag  
-- Closing out another feature request. It's now possible to set pull timer countdown voice seperately from regular countdown options.  
-- bump alpha  
-- ready new release now that LFR updated, changed bosses updated, and last 3 updated. :)  
-- Update localization.fr.lua (#79)  
-- support up to 8 boss unit ids, apparently 6-8 were added in 9.2?  
-- Update localization.cn.lua (#82)  
-- bump alpha, again  
-- prep new tag, no revision update  
-- bumped alpha version (aka tomorrows release with fridays hotfixes probably :D)  
-- prep new retail tag  
-- bump alpha  
-- Bump version and ready new retail tag  
-- prep next cycle  
-- Fix missing comma on shadowlands outdoor addition  
-- Fix up sounds for BCC/Classic based on accurate SoundKitID's  
-- Update localization.ru.lua (#80) So correct.  
-- Kill off extended raid icons feature, blizzard broke it in recent builds (predicted they would, but hoped they'd actually finish feature instead, was wishful thinking I suppose)  
+- Fixed a bug with timer text on kagath  
 - bump alphas  

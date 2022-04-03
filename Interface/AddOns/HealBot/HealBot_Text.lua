@@ -1085,7 +1085,7 @@ function HealBot_Text_setNameTextSeperate(button)
             if Healbot_Config_Skins.BarText[Healbot_Config_Skins.Current_Skin][button.frame]["NAMEONBAR"] then
                 tConcat[vHealthTextConcatIndex+1]=vSetNameTextClass
                 tConcat[vHealthTextConcatIndex+2]=vTextChars["Colon"]
-                tConcat[vHealthTextConcatIndex+3]=HealBot_GetUnitName(button.unit, button.guid)
+                tConcat[vHealthTextConcatIndex+3]=HealBot_GetUnitName(button)
                 vSetNameTextName=HealBot_Text_Concat(vHealthTextConcatIndex+3)
             elseif vHealthTextConcatIndex>0 then
                 tConcat[2]=vSetNameTextClass
@@ -1098,14 +1098,14 @@ function HealBot_Text_setNameTextSeperate(button)
             if Healbot_Config_Skins.BarAggro[Healbot_Config_Skins.Current_Skin][button.frame]["SHOWTEXT"]>1 and 
                    (button.aggro.status or 0)>Healbot_Config_Skins.BarAggro[Healbot_Config_Skins.Current_Skin][button.frame]["ALERT"] then
                 tConcat[vHealthTextConcatIndex+1]=hbNameFormats["AggroLeft"][button.frame]
-                tConcat[vHealthTextConcatIndex+2]=HealBot_GetUnitName(button.unit, button.guid)
+                tConcat[vHealthTextConcatIndex+2]=HealBot_GetUnitName(button)
                 tConcat[vHealthTextConcatIndex+3]=hbNameFormats["AggroRight"][button.frame]
                 vSetNameTextName=HealBot_Text_Concat(vHealthTextConcatIndex+3)
             elseif vHealthTextConcatIndex>0 then
-                tConcat[2]=HealBot_GetUnitName(button.unit, button.guid)
+                tConcat[2]=HealBot_GetUnitName(button)
                 vSetNameTextName=HealBot_Text_Concat(2)
             else
-                vSetNameTextName=HealBot_GetUnitName(button.unit, button.guid)
+                vSetNameTextName=HealBot_GetUnitName(button)
             end
         else
             vSetNameTextName=vTextChars["Nothing"]
@@ -1160,7 +1160,7 @@ function HealBot_Text_setNameTextCombined(button)
             if Healbot_Config_Skins.BarText[Healbot_Config_Skins.Current_Skin][button.frame]["NAMEONBAR"] then
                 tConcat[vHealthTextConcatIndex+1]=vSetNameTextClass
                 tConcat[vHealthTextConcatIndex+2]=vTextChars["Colon"]
-                tConcat[vHealthTextConcatIndex+3]=HealBot_GetUnitName(button.unit, button.guid)
+                tConcat[vHealthTextConcatIndex+3]=HealBot_GetUnitName(button)
                 vSetNameTextName=HealBot_Text_Concat(vHealthTextConcatIndex+3)
             elseif vHealthTextConcatIndex>0 then
                 tConcat[2]=vSetNameTextClass
@@ -1178,14 +1178,14 @@ function HealBot_Text_setNameTextCombined(button)
             if Healbot_Config_Skins.BarAggro[Healbot_Config_Skins.Current_Skin][button.frame]["SHOWTEXT"]>1 and 
                    (button.aggro.status or 0)>Healbot_Config_Skins.BarAggro[Healbot_Config_Skins.Current_Skin][button.frame]["ALERT"] then
                 tConcat[vHealthTextConcatIndex+1]=hbNameFormats["AggroLeft"][button.frame]
-                tConcat[vHealthTextConcatIndex+2]=HealBot_GetUnitName(button.unit, button.guid)
+                tConcat[vHealthTextConcatIndex+2]=HealBot_GetUnitName(button)
                 tConcat[vHealthTextConcatIndex+3]=hbNameFormats["AggroRight"][button.frame]
                 vSetNameTextName=HealBot_Text_Concat(vHealthTextConcatIndex+3)
             elseif vHealthTextConcatIndex>0 then
-                tConcat[2]=HealBot_GetUnitName(button.unit, button.guid)
+                tConcat[2]=HealBot_GetUnitName(button)
                 vSetNameTextName=HealBot_Text_Concat(2)
             else
-                vSetNameTextName=HealBot_GetUnitName(button.unit, button.guid)
+                vSetNameTextName=HealBot_GetUnitName(button)
             end
         elseif string.len(button.text.tag)>0 and not Healbot_Config_Skins.BarText[Healbot_Config_Skins.Current_Skin][button.frame]["TAGSTATEONLYTIP"] then
             vSetNameTextName=button.text.tag
@@ -1458,7 +1458,8 @@ function HealBot_Text_UpdateText(button)
                 end
                 button.text.nr, button.text.ng, button.text.nb = HealBot_Text_TextNameColours(button)
             else
-                button.text.nr, button.text.ng, button.text.nb, button.text.na = 0.5, 0.5, 0.5, 0.8
+                button.text.nr, button.text.ng, button.text.nb= 0.5, 0.5, 0.5
+                button.text.na = HealBot_Action_BarColourAlpha(button, 0.8, 1)
             end
             HealBot_Text_UpdateNameColour(button)
             button.gref.txt["text"]:SetText(button.text.name);

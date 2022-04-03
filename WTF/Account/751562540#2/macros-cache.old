@@ -1,3 +1,65 @@
 VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
-/script DecursiveRootTable.Dcr:Println('沒有可用法術')
+/stopcasting
+/cast [@mouseover,nomod,exists] 消毒術;  [@mouseover,exists,mod:ctrl] 祛病術; [@mouseover,exists,mod:shift] 淨魔術
+END
+VER 3 0000000000000005 "TT一條龍" "132865"
+#showtooltip
+/startattack
+/castsequence reset=combat 風暴打擊,烈焰震擊,風怒圖騰(等級 1),風之優雅圖騰,水之護盾,地震術,風暴打擊,風怒圖騰(等級 1),風之優雅圖騰,烈焰震擊,風暴打擊,地震術,風怒圖騰(等級 1),風之優雅圖騰,水之護盾,烈焰震擊,風暴打擊,風怒圖騰(等級 1),風之優雅圖騰,地震術
+/script UIErrorsFrame:Hide()
+END
+VER 3 0000000000000006 "一條龍" "132314"
+#showtooltip
+/startattack
+/castsequence reset=combat 風暴打擊,烈焰震擊,水之護盾,地震術,風暴打擊,烈焰震擊,風暴打擊,地震術,水之護盾,烈焰震擊,風暴打擊,地震術
+/script UIErrorsFrame:Hide()
+END
+VER 3 0000000000000004 "同速" "132157"
+/cleartarget
+/targetlasttarget
+/startattack
+END
+VER 3 000000000000000A "地震術" "136026"
+#showtooltip
+/cast 地震術
+/startattack
+END
+VER 3 0000000000000008 "坐騎" "132242"
+/cast 迅捷紅色雙足飛龍
+/cast 阿曼尼戰熊
+END
+VER 3 0000000000000002 "打斷" "132147"
+/cast [@focus] 地震術(等級 1) 
+END
+VER 3 000000000000000F "火舞" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [modifier:alt] 熔岩圖騰(等級 5);火焰新星圖騰(等級 7) 
+END
+VER 3 000000000000000D "烈焰震擊" "135813"
+#showtooltip
+/cast 烈焰震擊
+/startattack
+END
+VER 3 000000000000000B "紅" "136124"
+/use 極強效治療石
+/use 角瓶虛空噴劑
+/use 極效治療藥水
+/use 超强效治療藥水
+END
+VER 3 0000000000000009 "遠視" "132177"
+/console cameraDistanceMaxZoomFactor 4
+/console ffxDeath 0
+END
+VER 3 0000000000000007 "防暫離" "132311"
+/script T,F=T or 0,F or CreateFrame("frame")if X then X=nil print("OFF.")else print("ON.") X=function()local t=GetTime()if t-T>1 then StaticPopup1Button2:Click()T=t end end end F:SetScript("OnUpdate",X)
+END
+VER 3 000000000000000C "風暴打擊" "132314"
+#showtooltip
+/cast 風暴打擊
+/startattack
+END
+VER 3 0000000000000003 "風舞" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/startattack
+/castsequence reset=combat/15 風怒圖騰,風之優雅圖騰 
 END

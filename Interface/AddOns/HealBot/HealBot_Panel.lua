@@ -153,7 +153,7 @@ end
 function HealBot_Panel_addDataStore(unit, nRaidID, isPlayer)
     if UnitExists(unit) then
         local dsGUID=UnitGUID(unit)
-        local dsName=HealBot_GetUnitName(unit)
+        local dsName=UnitName(unit)
         if dsGUID then
             if isPlayer then
                 --if UnitIsUnit(unit, "player") then unit="player" end
@@ -345,7 +345,7 @@ function HealBot_Panel_ToggelHealTarget(unit, perm)
         if HealBot_Globals.HealBot_PermMyTargets[xGUID] then
             HealBot_Globals.HealBot_PermMyTargets[xGUID]=nil
         else
-            HealBot_Globals.HealBot_PermMyTargets[xGUID]=HealBot_GetUnitName(unit, xGUID) or "unKnown"
+            HealBot_Globals.HealBot_PermMyTargets[xGUID]=UnitName(unit) or "unKnown"
         end
     else
         local mti=0
@@ -373,7 +373,7 @@ function HealBot_Panel_ToggelPrivateTanks(unit, perm)
         if HealBot_Globals.HealBot_PermPrivateTanks[xGUID] then
             HealBot_Globals.HealBot_PermPrivateTanks[xGUID]=nil
         else
-            HealBot_Globals.HealBot_PermPrivateTanks[xGUID]=HealBot_GetUnitName(unit, xGUID) or "unKnown"
+            HealBot_Globals.HealBot_PermPrivateTanks[xGUID]=UnitName(unit) or "unKnown"
         end
     else
         if HealBot_MyPrivateTanks[xGUID] then
@@ -395,7 +395,7 @@ function HealBot_Panel_ToggelPrivateHealers(unit, perm)
         if HealBot_Globals.HealBot_PermPrivateHealers[xGUID] then
             HealBot_Globals.HealBot_PermPrivateHealers[xGUID]=nil
         else
-            HealBot_Globals.HealBot_PermPrivateHealers[xGUID]=HealBot_GetUnitName(unit, xGUID) or "unKnown"
+            HealBot_Globals.HealBot_PermPrivateHealers[xGUID]=UnitName(unit) or "unKnown"
         end
     else
         if HealBot_MyPrivateHealers[xGUID] then
@@ -644,6 +644,12 @@ function HealBot_Panel_AnchorButton(button, backFrame, relButton, newColumn, chi
     end
 end
 
+function HealBot_Panel_UpdateHeadersOpacity()
+    for _,header in pairs(HealBot_Header_Frames) do
+        HealBot_Action_UpdateHeaderOpacity(header)
+    end
+end
+
 local vSpecialAnchor={}
 function HealBot_Panel_PositionButton(button,xHeader,relButton,newColumn,preCombat)
     if xHeader then
@@ -653,6 +659,9 @@ function HealBot_Panel_PositionButton(button,xHeader,relButton,newColumn,preComb
             HealBot_Header_Frames[xHeader]=vPosParentHF
         end
         local backFrame=_G[vPosParentHF:GetName().."Bar5"]
+        vPosParentHF.bar=_G[vPosParentHF:GetName().."Bar"]
+        vPosParentHF.bar.txt=_G[vPosParentHF.bar:GetName().."_text"]
+        vPosParentHF.bar.txt2=_G[vPosParentHF.bar:GetName().."_text2"]
         if backFrame~=relButton then
             if vPosParentHF.frame~=button.frame then
                 local vPosFrameHF=_G["f"..button.frame.."_HealBot_Action"]
@@ -668,8 +677,7 @@ function HealBot_Panel_PositionButton(button,xHeader,relButton,newColumn,preComb
             end
             HealBot_Track_Headers[xHeader]=true
             HealBot_Panel_AnchorButton(button, backFrame, relButton, newColumn)
-            local vPosFrameHB = _G[vPosParentHF:GetName().."Bar_text"]
-            vPosFrameHB:SetText(xHeader);
+            vPosParentHF.bar.txt:SetText(xHeader);
             vPosParentHF:Show();
         end
         return backFrame
@@ -2415,8 +2423,8 @@ function HealBot_Panel_TargetChangedCheckFocus()
                 HealBot_Action_OnLoad(vFocusFrame) 
                 vFocusFrame:RegisterForClicks("LeftButtonUp", "RightButtonUp")
             end
-            if not HealBot_Data["UILOCK"] and UnitExists("target") and HealBot_Globals.FocusMonitor[HealBot_GetUnitName("target")] then
-                if UnitExists("focus") and HealBot_Globals.FocusMonitor[HealBot_GetUnitName("focus")] then
+            if not HealBot_Data["UILOCK"] and UnitExists("target") and HealBot_Globals.FocusMonitor[UnitName("target")] then
+                if UnitExists("focus") and HealBot_Globals.FocusMonitor[UnitName("focus")] then
                     vFocusFrame:Hide()
                 else
                     HealBot_Skins_ResetSkin("hbfocus",vFocusFrame,Healbot_Config_Skins.HealBar[Healbot_Config_Skins.Current_Skin][8]["NUMCOLS"])

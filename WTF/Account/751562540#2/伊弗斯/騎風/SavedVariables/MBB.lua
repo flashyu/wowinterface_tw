@@ -1,15 +1,16 @@
 
 MBB_Exclude = {
+	"LibDBIcon10_ItemRack", -- [1]
 }
 MBB_Options = {
 	["CollapseTimeout"] = 1,
 	["AltExpandDirection"] = 4,
 	["AttachToMinimap"] = 1,
-	["ExpandDirection"] = 1,
-	["DetachedButtonPos"] = "CENTER",
+	["DetachedButtonPos"] = "TOPLEFT",
+	["MaxButtonsPerLine"] = 6,
 	["ButtonPos"] = {
-		-18, -- [1]
-		-100, -- [2]
+		-19.80520820617676, -- [1]
+		-90.50213623046875, -- [2]
 	},
-	["MaxButtonsPerLine"] = 0,
+	["ExpandDirection"] = 1,
 }

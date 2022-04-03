@@ -429,7 +429,7 @@ function HealBot_Action_DoRefreshTooltip()
     xUnit=xButton.unit
     xGUID=UnitGUID(xUnit)
     if not xGUID then return end
-    local uName=HealBot_GetUnitName(xUnit, xGUID)
+    local uName=HealBot_GetUnitName(xButton)
     if not uName then return end;
     
     HealBot_ToolTip_SetTooltipPos(xButton.frame);
@@ -567,7 +567,7 @@ function HealBot_Action_DoRefreshTooltip()
                         hlth=HealBot_Text_readNumber(hlth)
                         maxhlth=HealBot_Text_readNumber(maxhlth)
                         if UnitExists(vUnit) then
-                            HealBot_Tooltip_SetLine(linenum,"  "..HealBot_GetUnitName(vUnit),lr,lg,lb,1,hlth.."/"..maxhlth.." ("..hPct.."%)",xButton.health.rcol,xButton.health.gcol,0,1)
+                            HealBot_Tooltip_SetLine(linenum,"  "..UnitName(vUnit),lr,lg,lb,1,hlth.."/"..maxhlth.." ("..hPct.."%)",xButton.health.rcol,xButton.health.gcol,0,1)
                         else
                             HealBot_Tooltip_SetLine(linenum,"  "..HEALBOT_VEHICLE,lr,lg,lb,1,hlth.."/"..maxhlth.." ("..hPct.."%)",xButton.health.rcol,xButton.health.gcol,0,1)
                         end
@@ -756,9 +756,9 @@ function HealBot_Action_DoRefreshTargetTooltip(button)
     local r,g,b=button.text.r,button.text.g,button.text.b
 
     if UnitClass(button.unit) then
-        HealBot_Tooltip_SetLine(linenum,HealBot_GetUnitName(button.unit, button.guid),r,g,b,1,"Level "..UnitLevel(button.unit)..button.spec..UnitClass(button.unit),r,g,b,1)    
+        HealBot_Tooltip_SetLine(linenum,HealBot_GetUnitName(button),r,g,b,1,"Level "..UnitLevel(button.unit)..button.spec..UnitClass(button.unit),r,g,b,1)    
     else
-        HealBot_Tooltip_SetLine(linenum,HealBot_GetUnitName(button.unit, button.guid),r,g,b,1,rText,rR,rG,rB,ra)
+        HealBot_Tooltip_SetLine(linenum,HealBot_GetUnitName(button),r,g,b,1,rText,rR,rG,rB,ra)
     end
     linenum=linenum+1
     HealBot_Tooltip_SetLine(linenum,HEALBOT_TOOLTIP_TARGETBAR,1,1,0.5,1,HEALBOT_OPTIONS_TAB_SPELLS.." "..HEALBOT_SKIN_DISTEXT,1,1,0,1)

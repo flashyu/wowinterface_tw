@@ -1,4 +1,11 @@
 Version: 1
+Frame: Recount_MainWindow
+FrameLevel: 40
+Anchor: BOTTOMLEFT
+X: 4
+Y: 228
+W: 232
+H: 209
 Frame: ItemRefTooltip
 FrameLevel: 1
 Anchor: LEFT
@@ -22,9 +29,9 @@ W: 920
 H: 600
 Frame: aux_frame
 FrameLevel: 1
-Anchor: TOP
-X: 118
-Y: -87
+Anchor: CENTER
+X: 249
+Y: 139
 W: 768
 H: 447
 Frame: CodexBrowser

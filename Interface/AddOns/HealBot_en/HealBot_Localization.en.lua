@@ -497,6 +497,7 @@ function HealBot_Lang_enALL()
     HEALBOT_OPTION_USEFLUIDBARS             = "Use fluid bars"
     HEALBOT_OPTION_USEFOCUSGROUPS           = "Use focus groups"
     HEALBOT_OPTION_FOCUSGROUPDIMMING        = "Unfocused groups - Opacity reduction"
+    HEALBOT_OPTION_GLOBALDIMMING            = "Mouse not over frames - Opacity reduction"
     HEALBOT_OPTION_FLUIDBARS                = "Fluid Bars"
     HEALBOT_OPTIONS_RELOADUIMSG             = "This option requires a UI Reload, Reload now?"
 

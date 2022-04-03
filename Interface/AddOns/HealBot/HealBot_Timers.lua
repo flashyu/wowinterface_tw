@@ -426,6 +426,7 @@ local hbTimerFuncs={["INIT"]={
                         ["RefreshPartyNextRecalcPets"]=HealBot_Timers_nextRecalcPets,
                         ["RefreshPartyNextRecalcVehicle"]=HealBot_Timers_nextRecalcVehicle,
                         ["ResetUnitStatus"]=HealBot_Action_ResetUnitStatus,
+                        ["ResetUnitOpacity"]=HealBot_Action_ResetUnitOpacity,
                         ["ResetAllButtons"]=HealBot_Action_ResetAllButtons,
                         ["LowManaTrig"]=HealBot_Action_setLowManaTrig,
                         ["CheckLowMana"]=HealBot_Timers_CheckLowMana,

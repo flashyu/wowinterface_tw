@@ -1728,3 +1728,12 @@ Change Log:
 * Added Shadowlands spells (world)
 * Added SL spells for Sepulcher of the First Ones
 * Fixed BC spells for Black Temple
+
+4.66.5
+* Added Shadowlands spells (world)
+* Added SL spells for Sepulcher of the First Ones
+* Added SL spells for Torghast
+* Added Cataclysm spells for Zul'Aman
+
+4.66.6
+* Fixed BC ToC

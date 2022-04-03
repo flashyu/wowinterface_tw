@@ -1986,7 +1986,7 @@ function HealBot_Options_setNewSkin(newSkinName)
     Healbot_Config_Skins.DuplicateBars[newSkinName] = Healbot_Config_Skins.DuplicateBars[Healbot_Config_Skins.Current_Skin]
     Healbot_Config_Skins.Indicators[newSkinName] = HealBot_Options_copyTable(Healbot_Config_Skins.Indicators[Healbot_Config_Skins.Current_Skin])
     Healbot_Config_Skins.Emerg[newSkinName] = HealBot_Options_copyTable(Healbot_Config_Skins.Emerg[Healbot_Config_Skins.Current_Skin])
-    Healbot_Config_Skins.Author[newSkinName] = HealBot_GetUnitName("Player").." "..HEALBOT_PLAYER_OF_REALM.." "..GetRealmName()
+    Healbot_Config_Skins.Author[newSkinName] = UnitName("Player").." "..HEALBOT_PLAYER_OF_REALM.." "..GetRealmName()
     if not HealBot_Options_checkSkinName(newSkinName) then
         table.insert(Healbot_Config_Skins.Skins,2,newSkinName)
         Healbot_Config_Skins.Skin_ID = 2;
@@ -2208,10 +2208,12 @@ function HealBot_Options_FocusGroupDimming_OnValueChanged(self)
     local val=HealBot_Comm_round(self:GetValue(),1)
     if val~=self:GetValue() then
         self:SetValue(val) 
-    elseif Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FGDIMMING"]~=val then
+    else
         val=val/10;
-        Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FGDIMMING"] = val;
-        HealBot_Timers_Set("SKINS","SetFocusGroups")
+        if Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FGDIMMING"]~=val then
+            Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FGDIMMING"] = val;
+            HealBot_Timers_Set("SKINS","SetFocusGroups")
+        end
     end
 end
 
@@ -2219,10 +2221,12 @@ function HealBot_Options_OverrideFocusGroupDimming_OnValueChanged(self)
     local val=HealBot_Comm_round(self:GetValue(),1)
     if val~=self:GetValue() then
         self:SetValue(val) 
-    elseif HealBot_Globals.OverrideEffects["FGDIMMING"]~=val then
+    else
         val=val/10;
-        HealBot_Globals.OverrideEffects["FGDIMMING"] = val;
-        HealBot_Timers_Set("SKINS","SetFocusGroups")
+        if HealBot_Globals.OverrideEffects["FGDIMMING"]~=val then
+            HealBot_Globals.OverrideEffects["FGDIMMING"] = val;
+            HealBot_Timers_Set("SKINS","SetFocusGroups")
+        end
     end
 end
 
@@ -4347,13 +4351,13 @@ function HealBot_Options_BarFreq_setVars()
     local smoothAdj=9
     if HealBot_Globals.OverrideEffects["USE"]==1 then
  --       fluidFreqUpd=275+(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FLUIDFREQ"]*25)
-        stateFreqUpd=0.058+(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FLUIDFREQ"]/200)
+        stateFreqUpd=0.058+(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FLUIDFREQ"]/100)
         flashFreqUpd=0.025+(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["OFREQ"]*0.4)
         fluidFreq=HealBot_Comm_round(HealBot_Options_luVars["FluidFreqAdj"]-(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FLUIDFREQ"]/1800),4)
         smoothAdj=12-ceil(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FLUIDFREQ"]/2)
     else
  --       fluidFreqUpd=275+(HealBot_Globals.OverrideEffects["FLUIDFREQ"]*25)
-        stateFreqUpd=0.058+(HealBot_Globals.OverrideEffects["FLUIDFREQ"]/200)
+        stateFreqUpd=0.058+(HealBot_Globals.OverrideEffects["FLUIDFREQ"]/100)
         flashFreqUpd=0.025+(HealBot_Globals.OverrideEffects["OFREQ"]*0.4)
         fluidFreq=HealBot_Comm_round(HealBot_Options_luVars["FluidFreqAdj"]-(HealBot_Globals.OverrideEffects["FLUIDFREQ"]/1800),4)
         smoothAdj=12-ceil(HealBot_Globals.OverrideEffects["FLUIDFREQ"]/2)
@@ -4709,6 +4713,19 @@ function HealBot_Options_UseStickyFrames_OnClick(self)
         end
         HealBot_Timers_Set("INITSLOW","FramesSetPoint")
         HealBot_Options_framesChanged(false)
+    end
+end
+
+function HealBot_Options_NotInUseOpacity_OnValueChanged(self)
+    local val=HealBot_Comm_round(self:GetValue(),1)
+    if val~=self:GetValue() then
+        self:SetValue(val) 
+    else
+        val=val/10;
+        if Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["GLOBALDIMMING"]~=val then
+            Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["GLOBALDIMMING"] = val;
+            HealBot_Action_ResetGlobalDimming()
+        end
     end
 end
 
@@ -12105,6 +12122,7 @@ function HealBot_Options_DoSet_Current_Skin(newSkin, ddRefresh, noCallback, optS
                     HealBot_setLuVars("FocusNeedReset", true)
                     --HealBot_Timers_Set("PARTYSLOW","RefreshPartyNextRecalcAll")
                     if HealBot_Data["TIPUSE"] then HealBot_Tooltip_CustomAnchor_Hide() end
+                    HealBot_Action_ResetGlobalDimming()
                 end
             end
             if hbValidSkins then
@@ -18126,8 +18144,8 @@ function HealBot_Options_InitSub1(subNo)
             HealBot_Options_Pct_OnLoad_MinMax(HealBot_Options_OverrideAuxBarFlashAlphaMin,HEALBOT_WORDS_MIN,0,0.8,0.05,2)
             HealBot_Options_OverrideAuxBarFlashFreq:SetValue(HealBot_Globals.OverrideEffects["OFREQ"]*100)
             HealBot_Options_SetText(HealBot_Options_OverrideAuxBarFlashFreq, HEALBOT_OPTIONS_AGGROFLASHFREQ) 
-            HealBot_Options_sliderlabels_Init(HealBot_Options_OverrideFocusGroupDimming,HEALBOT_OPTION_FOCUSGROUPDIMMING,12,38,1,2,HEALBOT_WORD_LOW,HEALBOT_WORD_HIGH)
-            HealBot_Options_OverrideFocusGroupDimming:SetValue((HealBot_Globals.OverrideEffects["FGDIMMING"] or 2.5)*10)
+            HealBot_Options_sliderlabels_Init(HealBot_Options_OverrideFocusGroupDimming,HEALBOT_OPTION_FOCUSGROUPDIMMING,12,88,1,4,HEALBOT_WORD_LOW,HEALBOT_WORD_HIGH)
+            HealBot_Options_OverrideFocusGroupDimming:SetValue((HealBot_Globals.OverrideEffects["FGDIMMING"] or 2.8)*10)
             HealBot_Options_SetText(HealBot_Options_OverrideFocusGroupDimming, HEALBOT_OPTION_FOCUSGROUPDIMMING) 
             HealBot_Options_SetLabel("HealBot_OverrideSkinsAggroAlphaText",HEALBOT_OPTIONS_AGGROFLASHALPHA)
             
@@ -18624,8 +18642,8 @@ function HealBot_Options_InitSub1(subNo)
             HealBot_Options_Pct_OnLoad_MinMax(HealBot_Options_AuxBarFlashAlphaMin,HEALBOT_WORDS_MIN,0,0.8,0.05,2)
             HealBot_Options_AuxBarFlashFreq:SetValue(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["OFREQ"]*100)
             HealBot_Options_SetText(HealBot_Options_AuxBarFlashFreq,HEALBOT_OPTIONS_AGGROFLASHFREQ) 
-            HealBot_Options_sliderlabels_Init(HealBot_Options_FocusGroupDimming,HEALBOT_OPTION_FOCUSGROUPDIMMING,12,38,1,2,HEALBOT_WORD_LOW,HEALBOT_WORD_HIGH)
-            HealBot_Options_FocusGroupDimming:SetValue((Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FGDIMMING"] or 2.5)*10)
+            HealBot_Options_sliderlabels_Init(HealBot_Options_FocusGroupDimming,HEALBOT_OPTION_FOCUSGROUPDIMMING,12,88,1,4,HEALBOT_WORD_LOW,HEALBOT_WORD_HIGH)
+            HealBot_Options_FocusGroupDimming:SetValue((Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["FGDIMMING"] or 2.8)*10)
             HealBot_Options_SetText(HealBot_Options_FocusGroupDimming,HEALBOT_OPTION_FOCUSGROUPDIMMING) 
             HealBot_Options_AuxBarFlashAlphaMin:SetValue(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["OMIN"])
             HealBot_Options_Pct_OnValueChanged(HealBot_Options_AuxBarFlashAlphaMin)
@@ -18699,6 +18717,9 @@ function HealBot_Options_InitSub1(subNo)
             HealBot_Options_SetText(HealBot_Options_PartyFrames,HEALBOT_OPTIONS_HIDEPARTYFRAMES)
             HealBot_Options_UseStickyFrames:SetChecked(Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["STICKYFRAME"])
             HealBot_Options_SetText(HealBot_Options_UseStickyFrames,HEALBOT_OPTIONS_STICKYFRAMES)
+            HealBot_Options_sliderlabels_Init(HealBot_Options_NotInUseOpacity,HEALBOT_OPTION_GLOBALDIMMING,10,100,1,5,HEALBOT_WORDS_NONE,HEALBOT_WORD_HIGH)
+            HealBot_Options_NotInUseOpacity:SetValue((Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["GLOBALDIMMING"] or 1)*10)
+            HealBot_Options_SetText(HealBot_Options_NotInUseOpacity,HEALBOT_OPTION_GLOBALDIMMING) 
             HealBot_Options_UnitInCombat.initialize = HealBot_Options_UnitInCombat_DropDown
             UIDropDownMenu_SetText(HealBot_Options_UnitInCombat, HealBot_Options_Lists["UnitInCombat"][Healbot_Config_Skins.General[Healbot_Config_Skins.Current_Skin]["UNITINCOMBAT"]])
             HealBot_Options_SetLabel("HealBot_UnitInCombat_Txt",HEALBOT_OPTIONS_UNITINCOMBAT)

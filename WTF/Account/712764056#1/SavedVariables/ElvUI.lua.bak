@@ -1,0 +1,83 @@
+
+ElvDB = {
+	["profileKeys"] = {
+		["特變電工 - 伊弗斯"] = "Default",
+		["邁克爾假死 - 伊弗斯"] = "Default",
+	},
+	["faction"] = {
+		["伊弗斯"] = {
+			["特變電工"] = "Horde",
+			["邁克爾假死"] = "Horde",
+		},
+	},
+	["global"] = {
+		["nameplates"] = {
+			["filters"] = {
+				["ElvUI_NonTarget"] = {
+				},
+				["ElvUI_Target"] = {
+				},
+				["ElvUI_Boss"] = {
+				},
+			},
+		},
+	},
+	["gold"] = {
+		["伊弗斯"] = {
+			["特變電工"] = 901986020,
+			["邁克爾假死"] = 509770,
+		},
+	},
+	["serverID"] = {
+		[4487] = {
+			["伊弗斯"] = true,
+		},
+	},
+	["class"] = {
+		["伊弗斯"] = {
+			["特變電工"] = "WARRIOR",
+			["邁克爾假死"] = "HUNTER",
+		},
+	},
+	["DisabledAddOns"] = {
+	},
+	["profiles"] = {
+		["Default"] = {
+			["chat"] = {
+				["panelSnapRightID"] = 4,
+				["panelSnapLeftID"] = 1,
+			},
+			["dbConverted"] = 2.39,
+			["actionbar"] = {
+				["bar6"] = {
+					["enabled"] = true,
+					["buttons"] = 6,
+					["buttonsPerRow"] = 6,
+				},
+				["microbar"] = {
+					["buttons"] = 8,
+				},
+				["bar5"] = {
+					["enabled"] = false,
+					["buttons"] = 12,
+					["buttonsPerRow"] = 12,
+				},
+			},
+			["convertPages"] = true,
+		},
+	},
+}
+ElvPrivateDB = {
+	["profileKeys"] = {
+		["特變電工 - 伊弗斯"] = "特變電工 - 伊弗斯",
+		["邁克爾假死 - 伊弗斯"] = "邁克爾假死 - 伊弗斯",
+	},
+	["profiles"] = {
+		["特變電工 - 伊弗斯"] = {
+			["install_complete"] = 2.39,
+		},
+		["邁克爾假死 - 伊弗斯"] = {
+			["install_complete"] = 2.39,
+		},
+	},
+}
