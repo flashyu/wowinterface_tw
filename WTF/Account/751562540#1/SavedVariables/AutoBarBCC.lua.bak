@@ -1,6 +1,90 @@
 
 AutoBarDB = {
 	["classes"] = {
+		["戰士"] = {
+			["barList"] = {
+				["AutoBarClassBarWarrior"] = {
+					["share"] = "2",
+					["fadeOut"] = false,
+					["buttonHeight"] = 36,
+					["rows"] = 1,
+					["dockShiftY"] = 0,
+					["alignButtons"] = "3",
+					["posX"] = 300,
+					["hide"] = false,
+					["enabled"] = true,
+					["columns"] = 10,
+					["WARRIOR"] = true,
+					["frameStrata"] = "LOW",
+					["buttonWidth"] = 36,
+					["buttonKeys"] = {
+						"AutoBarButtonShields", -- [1]
+						"AutoBarButtonCharge", -- [2]
+						"AutoBarButtonInterrupt", -- [3]
+						"AutoBarButtonER", -- [4]
+						"AutoBarButtonStance", -- [5]
+						"AutoBarButtonClassBuff", -- [6]
+					},
+					["scale"] = 1,
+					["posY"] = 280,
+					["DEMONHUNTER"] = true,
+					["popupDirection"] = "1",
+					["padding"] = 0,
+					["dockShiftX"] = 0,
+					["alpha"] = 1,
+				},
+			},
+			["buttonList"] = {
+				["AutoBarButtonStance"] = {
+					["barKey"] = "AutoBarClassBarWarrior",
+					["buttonClass"] = "AutoBarButtonStance",
+					["square_popups"] = true,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonStance",
+					["defaultButtonIndex"] = 5,
+				},
+				["AutoBarButtonShields"] = {
+					["barKey"] = "AutoBarClassBarWarrior",
+					["buttonClass"] = "AutoBarButtonShields",
+					["square_popups"] = true,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonShields",
+					["defaultButtonIndex"] = 1,
+				},
+				["AutoBarButtonCharge"] = {
+					["barKey"] = "AutoBarClassBarWarrior",
+					["buttonClass"] = "AutoBarButtonCharge",
+					["square_popups"] = true,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonCharge",
+					["defaultButtonIndex"] = 2,
+				},
+				["AutoBarButtonER"] = {
+					["barKey"] = "AutoBarClassBarWarrior",
+					["buttonClass"] = "AutoBarButtonER",
+					["square_popups"] = true,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonER",
+					["defaultButtonIndex"] = 4,
+				},
+				["AutoBarButtonInterrupt"] = {
+					["barKey"] = "AutoBarClassBarWarrior",
+					["buttonClass"] = "AutoBarButtonInterrupt",
+					["square_popups"] = true,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonInterrupt",
+					["defaultButtonIndex"] = 3,
+				},
+				["AutoBarButtonClassBuff"] = {
+					["barKey"] = "AutoBarClassBarWarrior",
+					["buttonClass"] = "AutoBarButtonClassBuff",
+					["square_popups"] = true,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonClassBuff",
+					["defaultButtonIndex"] = 6,
+				},
+			},
+		},
 		["盜賊"] = {
 			["barList"] = {
 				["AutoBarClassBarRogue"] = {
@@ -261,90 +345,6 @@ AutoBarDB = {
 				},
 			},
 		},
-		["戰士"] = {
-			["barList"] = {
-				["AutoBarClassBarWarrior"] = {
-					["share"] = "2",
-					["fadeOut"] = false,
-					["buttonHeight"] = 36,
-					["rows"] = 1,
-					["dockShiftY"] = 0,
-					["alignButtons"] = "3",
-					["posX"] = 300,
-					["hide"] = false,
-					["enabled"] = true,
-					["columns"] = 10,
-					["WARRIOR"] = true,
-					["alpha"] = 1,
-					["buttonWidth"] = 36,
-					["buttonKeys"] = {
-						"AutoBarButtonShields", -- [1]
-						"AutoBarButtonCharge", -- [2]
-						"AutoBarButtonInterrupt", -- [3]
-						"AutoBarButtonER", -- [4]
-						"AutoBarButtonStance", -- [5]
-						"AutoBarButtonClassBuff", -- [6]
-					},
-					["scale"] = 1,
-					["posY"] = 280,
-					["DEMONHUNTER"] = true,
-					["popupDirection"] = "1",
-					["padding"] = 0,
-					["dockShiftX"] = 0,
-					["frameStrata"] = "LOW",
-				},
-			},
-			["buttonList"] = {
-				["AutoBarButtonStance"] = {
-					["barKey"] = "AutoBarClassBarWarrior",
-					["buttonClass"] = "AutoBarButtonStance",
-					["square_popups"] = true,
-					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonStance",
-					["defaultButtonIndex"] = 5,
-				},
-				["AutoBarButtonShields"] = {
-					["barKey"] = "AutoBarClassBarWarrior",
-					["buttonClass"] = "AutoBarButtonShields",
-					["square_popups"] = true,
-					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonShields",
-					["defaultButtonIndex"] = 1,
-				},
-				["AutoBarButtonCharge"] = {
-					["barKey"] = "AutoBarClassBarWarrior",
-					["buttonClass"] = "AutoBarButtonCharge",
-					["square_popups"] = true,
-					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonCharge",
-					["defaultButtonIndex"] = 2,
-				},
-				["AutoBarButtonER"] = {
-					["barKey"] = "AutoBarClassBarWarrior",
-					["buttonClass"] = "AutoBarButtonER",
-					["square_popups"] = true,
-					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonER",
-					["defaultButtonIndex"] = 4,
-				},
-				["AutoBarButtonInterrupt"] = {
-					["barKey"] = "AutoBarClassBarWarrior",
-					["buttonClass"] = "AutoBarButtonInterrupt",
-					["square_popups"] = true,
-					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonInterrupt",
-					["defaultButtonIndex"] = 3,
-				},
-				["AutoBarButtonClassBuff"] = {
-					["barKey"] = "AutoBarClassBarWarrior",
-					["buttonClass"] = "AutoBarButtonClassBuff",
-					["square_popups"] = true,
-					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonClassBuff",
-					["defaultButtonIndex"] = 6,
-				},
-			},
-		},
 	},
 	["account"] = {
 		["barList"] = {
@@ -390,11 +390,11 @@ AutoBarDB = {
 				["posY"] = 123.3915206794845,
 				["columns"] = 16,
 				["DEATHKNIGHT"] = true,
-				["frameStrata"] = "LOW",
 				["alpha"] = 1,
-				["PRIEST"] = true,
-				["buttonHeight"] = 36,
+				["frameStrata"] = "LOW",
 				["buttonWidth"] = 36,
+				["buttonHeight"] = 36,
+				["PRIEST"] = true,
 				["WARLOCK"] = true,
 				["DEMONHUNTER"] = true,
 				["PALADIN"] = true,
@@ -428,15 +428,15 @@ AutoBarDB = {
 				["MONK"] = true,
 				["enabled"] = true,
 				["DEATHKNIGHT"] = true,
-				["posY"] = 50.35727914786457,
 				["columns"] = 9,
+				["posY"] = 50.35727914786457,
 				["PALADIN"] = true,
 				["fadeOut"] = false,
-				["alpha"] = 1,
 				["frameStrata"] = "LOW",
-				["PRIEST"] = true,
-				["alignButtons"] = "3",
+				["alpha"] = 1,
 				["buttonWidth"] = 36,
+				["alignButtons"] = "3",
+				["PRIEST"] = true,
 				["WARLOCK"] = true,
 				["DEMONHUNTER"] = true,
 				["buttonHeight"] = 36,
@@ -619,12 +619,14 @@ AutoBarDB = {
 				["buttonKey"] = "AutoBarButtonFoodBuff",
 				["square_popups"] = true,
 			},
-			["AutoBarButtonBandages"] = {
-				["barKey"] = "AutoBarClassBarBasic",
-				["buttonClass"] = "AutoBarButtonBandages",
-				["defaultButtonIndex"] = 3,
+			["AutoBarButtonFood"] = {
 				["enabled"] = true,
-				["buttonKey"] = "AutoBarButtonBandages",
+				["include_combo_basic"] = true,
+				["buttonKey"] = "AutoBarButtonFood",
+				["defaultButtonIndex"] = 15,
+				["buttonClass"] = "AutoBarButtonFood",
+				["disableConjure"] = false,
+				["barKey"] = "AutoBarClassBarBasic",
 				["square_popups"] = true,
 			},
 			["AutoBarButtonSpeed"] = {
@@ -687,14 +689,12 @@ AutoBarDB = {
 				["buttonKey"] = "AutoBarButtonCooldownPotionRejuvenation",
 				["square_popups"] = true,
 			},
-			["AutoBarButtonFood"] = {
-				["enabled"] = true,
-				["include_combo_basic"] = true,
-				["buttonKey"] = "AutoBarButtonFood",
-				["defaultButtonIndex"] = 15,
-				["buttonClass"] = "AutoBarButtonFood",
-				["disableConjure"] = false,
+			["AutoBarButtonBandages"] = {
 				["barKey"] = "AutoBarClassBarBasic",
+				["buttonClass"] = "AutoBarButtonBandages",
+				["defaultButtonIndex"] = 3,
+				["enabled"] = true,
+				["buttonKey"] = "AutoBarButtonBandages",
 				["square_popups"] = true,
 			},
 			["AutoBarButtonFishing"] = {

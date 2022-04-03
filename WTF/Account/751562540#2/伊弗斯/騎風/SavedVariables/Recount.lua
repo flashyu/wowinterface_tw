@@ -3,10 +3,10 @@ RecountPerCharDB = {
 	["version"] = "1.3",
 	["combatants"] = {
 		["火焰元素圖騰 <騎風>"] = {
-			["GUID"] = "Creature-0-4490-530-55-15439-0000491959",
+			["GUID"] = "Creature-0-4490-0-11466-15439-000049E23F",
 			["TimeLast"] = {
-				["OVERALL"] = 57323.834,
-				["DeathCount"] = 57323.834,
+				["OVERALL"] = 108752.156,
+				["DeathCount"] = 108752.156,
 			},
 			["LastEventType"] = {
 				"MISC", -- [1]
@@ -18,11 +18,10 @@ RecountPerCharDB = {
 			},
 			["enClass"] = "PET",
 			["level"] = 1,
-			["LastFightIn"] = 4,
+			["LastFightIn"] = 54,
 			["type"] = "Pet",
 			["FightsSaved"] = 5,
 			["ownerName"] = "騎風",
-			["NextEventNum"] = 2,
 			["DeathLogs"] = {
 				{
 					["MessageTimes"] = {
@@ -36,7 +35,7 @@ RecountPerCharDB = {
 					},
 					["HealthMax"] = {
 					},
-					["DeathAt"] = 57325.834,
+					["DeathAt"] = 108754.156,
 					["EventNum"] = {
 						0, -- [1]
 					},
@@ -47,17 +46,18 @@ RecountPerCharDB = {
 					},
 				}, -- [1]
 			},
+			["NextEventNum"] = 2,
 			["LastEvents"] = {
 				"火焰元素圖騰 <騎風>死亡。", -- [1]
 			},
 			["Name"] = "火焰元素圖騰",
-			["LastEventTimes"] = {
-				57324.15, -- [1]
-			},
 			["LastEventIncoming"] = {
 				true, -- [1]
 			},
-			["UnitLockout"] = 57323.834,
+			["LastEventTimes"] = {
+				108752.273, -- [1]
+			},
+			["UnitLockout"] = 108752.156,
 			["Fights"] = {
 				["LastFightData"] = {
 					["DOTs"] = {
@@ -269,2867 +269,42 @@ RecountPerCharDB = {
 					["DeathCount"] = 1,
 				},
 			},
-			["LastAbility"] = 65856.144,
-		},
-		["治療之泉圖騰 VI <騎風>"] = {
-			["GUID"] = "Creature-0-4490-530-55-15488-0000492A9E",
-			["TimeLast"] = {
-				["HOT_Time"] = 60637.847,
-				["OVERALL"] = 60652.831,
-				["Overhealing"] = 60637.847,
-				["DeathCount"] = 60652.831,
-			},
-			["LastEventType"] = {
-				"HEAL", -- [1]
-				"MISC", -- [2]
-				"HEAL", -- [3]
-				"HEAL", -- [4]
-				"HEAL", -- [5]
-				"HEAL", -- [6]
-				"HEAL", -- [7]
-				"HEAL", -- [8]
-				"HEAL", -- [9]
-				"HEAL", -- [10]
-				"HEAL", -- [11]
-				"HEAL", -- [12]
-				"HEAL", -- [13]
-				"HEAL", -- [14]
-				"HEAL", -- [15]
-				"HEAL", -- [16]
-				"HEAL", -- [17]
-				"HEAL", -- [18]
-				"HEAL", -- [19]
-				"HEAL", -- [20]
-				"HEAL", -- [21]
-				"HEAL", -- [22]
-				"HEAL", -- [23]
-				"HEAL", -- [24]
-				"HEAL", -- [25]
-				"HEAL", -- [26]
-				"HEAL", -- [27]
-				"HEAL", -- [28]
-				"HEAL", -- [29]
-				"HEAL", -- [30]
-				"HEAL", -- [31]
-				"HEAL", -- [32]
-				"HEAL", -- [33]
-				"HEAL", -- [34]
-				"HEAL", -- [35]
-				"HEAL", -- [36]
-				"HEAL", -- [37]
-				"HEAL", -- [38]
-				"HEAL", -- [39]
-				"HEAL", -- [40]
-				"HEAL", -- [41]
-				"HEAL", -- [42]
-				"HEAL", -- [43]
-				"HEAL", -- [44]
-				"HEAL", -- [45]
-				"HEAL", -- [46]
-				"HEAL", -- [47]
-				"HEAL", -- [48]
-				"HEAL", -- [49]
-				"HEAL", -- [50]
-			},
-			["TimeWindows"] = {
-				["DeathCount"] = {
-					3, -- [1]
-				},
-				["HOT_Time"] = {
-					12, -- [1]
-				},
-				["Overhealing"] = {
-					145, -- [1]
-				},
-			},
-			["enClass"] = "PET",
-			["level"] = 1,
-			["LastFightIn"] = 22,
-			["type"] = "Pet",
-			["FightsSaved"] = 5,
-			["ownerName"] = "騎風",
-			["LastActive"] = 60651.831,
-			["LastEventTimes"] = {
-				60652.564, -- [1]
-				60652.964, -- [2]
-				60594.579, -- [3]
-				60594.579, -- [4]
-				60596.562, -- [5]
-				60596.562, -- [6]
-				60598.563, -- [7]
-				60598.563, -- [8]
-				60600.563, -- [9]
-				60600.563, -- [10]
-				60602.579, -- [11]
-				60602.579, -- [12]
-				60604.563, -- [13]
-				60604.563, -- [14]
-				60606.563, -- [15]
-				60606.563, -- [16]
-				60608.563, -- [17]
-				60608.563, -- [18]
-				60610.48, -- [19]
-				60610.58, -- [20]
-				60612.496, -- [21]
-				60612.496, -- [22]
-				60614.513, -- [23]
-				60614.513, -- [24]
-				60616.53, -- [25]
-				60616.53, -- [26]
-				60618.563, -- [27]
-				60618.563, -- [28]
-				60620.58, -- [29]
-				60620.58, -- [30]
-				60622.58, -- [31]
-				60622.58, -- [32]
-				60624.563, -- [33]
-				60624.563, -- [34]
-				60626.563, -- [35]
-				60626.563, -- [36]
-				60628.563, -- [37]
-				60630.58, -- [38]
-				60632.58, -- [39]
-				60634.547, -- [40]
-				60636.564, -- [41]
-				60638.564, -- [42]
-				60640.564, -- [43]
-				60642.564, -- [44]
-				60644.564, -- [45]
-				60646.564, -- [46]
-				60648.514, -- [47]
-				60649.914, -- [48]
-				60649.914, -- [49]
-				60652.114, -- [50]
-			},
-			["NextEventNum"] = 3,
-			["LastEventIncoming"] = {
-				true, -- [1]
-				true, -- [2]
-				true, -- [3]
-				false, -- [4]
-				true, -- [5]
-				false, -- [6]
-				true, -- [7]
-				false, -- [8]
-				true, -- [9]
-				false, -- [10]
-				true, -- [11]
-				false, -- [12]
-				true, -- [13]
-				false, -- [14]
-				true, -- [15]
-				false, -- [16]
-				true, -- [17]
-				false, -- [18]
-				true, -- [19]
-				false, -- [20]
-				true, -- [21]
-				false, -- [22]
-				true, -- [23]
-				false, -- [24]
-				true, -- [25]
-				false, -- [26]
-				true, -- [27]
-				false, -- [28]
-				true, -- [29]
-				false, -- [30]
-				true, -- [31]
-				false, -- [32]
-				true, -- [33]
-				false, -- [34]
-				true, -- [35]
-				false, -- [36]
-				true, -- [37]
-				true, -- [38]
-				true, -- [39]
-				true, -- [40]
-				true, -- [41]
-				true, -- [42]
-				true, -- [43]
-				true, -- [44]
-				true, -- [45]
-				true, -- [46]
-				true, -- [47]
-				false, -- [48]
-				true, -- [49]
-				false, -- [50]
-			},
-			["LastEvents"] = {
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +37 (37 過量治療)", -- [1]
-				"治療之泉圖騰 VI <騎風>死亡。", -- [2]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [3]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +36 (36 過量治療)", -- [4]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [5]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +37 (37 過量治療)", -- [6]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [7]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +36 (36 過量治療)", -- [8]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [9]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +37 (37 過量治療)", -- [10]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [11]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +37 (37 過量治療)", -- [12]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [13]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +37 (37 過量治療)", -- [14]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [15]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +37 (37 過量治療)", -- [16]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [17]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +36 (36 過量治療)", -- [18]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [19]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +36 (36 過量治療)", -- [20]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [21]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +36 (36 過量治療)", -- [22]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [23]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +36 (36 過量治療)", -- [24]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [25]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +36 (36 過量治療)", -- [26]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [27]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +36 (36 過量治療)", -- [28]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [29]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +36 (36 過量治療)", -- [30]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +37 (37 過量治療)", -- [31]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +36 (36 過量治療)", -- [32]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +37 (37 過量治療)", -- [33]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +37 (37 過量治療)", -- [34]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [35]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +36 (36 過量治療)", -- [36]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +37 (37 過量治療)", -- [37]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [38]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +37 (37 過量治療)", -- [39]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [40]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [41]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [42]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [43]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +37 (37 過量治療)", -- [44]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [45]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [46]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [47]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +37", -- [48]
-				"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [49]
-				"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +36", -- [50]
-			},
-			["Name"] = "治療之泉圖騰 VI",
-			["DeathLogs"] = {
-				{
-					["MessageTimes"] = {
-						-14.40000000000146, -- [1]
-						-12.40000000000146, -- [2]
-						-10.40000000000146, -- [3]
-						-8.400000000001455, -- [4]
-						-6.400000000001455, -- [5]
-						-4.44999999999709, -- [6]
-						-3.049999999995634, -- [7]
-						-3.049999999995634, -- [8]
-						-0.8499999999985448, -- [9]
-						-0.4000000000014552, -- [10]
-						0, -- [11]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-						true, -- [2]
-						true, -- [3]
-						true, -- [4]
-						true, -- [5]
-						true, -- [6]
-						false, -- [7]
-						true, -- [8]
-						false, -- [9]
-						true, -- [10]
-						true, -- [11]
-					},
-					["Messages"] = {
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [1]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [2]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +37 (37 過量治療)", -- [3]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [4]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [5]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [6]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +37", -- [7]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +36 (36 過量治療)", -- [8]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +36", -- [9]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +37 (37 過量治療)", -- [10]
-						"治療之泉圖騰 VI <騎風>死亡。", -- [11]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 60654.831,
-					["EventNum"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						0, -- [4]
-						0, -- [5]
-						0, -- [6]
-						0, -- [7]
-						0, -- [8]
-						0, -- [9]
-						0, -- [10]
-						0, -- [11]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"HEAL", -- [1]
-						"HEAL", -- [2]
-						"HEAL", -- [3]
-						"HEAL", -- [4]
-						"HEAL", -- [5]
-						"HEAL", -- [6]
-						"HEAL", -- [7]
-						"HEAL", -- [8]
-						"HEAL", -- [9]
-						"HEAL", -- [10]
-						"MISC", -- [11]
-					},
-				}, -- [1]
-				{
-					["MessageTimes"] = {
-						-14.38300000000163, -- [1]
-						-14.38300000000163, -- [2]
-						-12.38300000000163, -- [3]
-						-12.38300000000163, -- [4]
-						-10.38300000000163, -- [5]
-						-10.38300000000163, -- [6]
-						-8.400000000001455, -- [7]
-						-8.400000000001455, -- [8]
-						-6.38300000000163, -- [9]
-						-6.38300000000163, -- [10]
-						-4.43300000000454, -- [11]
-						-4.43300000000454, -- [12]
-						-2.43300000000454, -- [13]
-						-2.43300000000454, -- [14]
-						-0.3830000000016298, -- [15]
-						-0.3830000000016298, -- [16]
-						0, -- [17]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-						false, -- [2]
-						true, -- [3]
-						false, -- [4]
-						true, -- [5]
-						false, -- [6]
-						true, -- [7]
-						false, -- [8]
-						true, -- [9]
-						false, -- [10]
-						true, -- [11]
-						false, -- [12]
-						true, -- [13]
-						false, -- [14]
-						true, -- [15]
-						false, -- [16]
-						true, -- [17]
-					},
-					["Messages"] = {
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +33 (33 過量治療)", -- [1]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +33 (33 過量治療)", -- [2]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +33 (33 過量治療)", -- [3]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +33 (33 過量治療)", -- [4]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +33 (33 過量治療)", -- [5]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +33 (33 過量治療)", -- [6]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +33 (33 過量治療)", -- [7]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +34 (34 過量治療)", -- [8]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +33 (33 過量治療)", -- [9]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +33 (33 過量治療)", -- [10]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +33 (33 過量治療)", -- [11]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +33 (33 過量治療)", -- [12]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +33 (33 過量治療)", -- [13]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +34 (34 過量治療)", -- [14]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +33 (33 過量治療)", -- [15]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +33 (33 過量治療)", -- [16]
-						"治療之泉圖騰 VI <騎風>死亡。", -- [17]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 58669.84,
-					["EventNum"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						0, -- [4]
-						0, -- [5]
-						0, -- [6]
-						0, -- [7]
-						0, -- [8]
-						0, -- [9]
-						0, -- [10]
-						0, -- [11]
-						0, -- [12]
-						0, -- [13]
-						0, -- [14]
-						0, -- [15]
-						0, -- [16]
-						0, -- [17]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"HEAL", -- [1]
-						"HEAL", -- [2]
-						"HEAL", -- [3]
-						"HEAL", -- [4]
-						"HEAL", -- [5]
-						"HEAL", -- [6]
-						"HEAL", -- [7]
-						"HEAL", -- [8]
-						"HEAL", -- [9]
-						"HEAL", -- [10]
-						"HEAL", -- [11]
-						"HEAL", -- [12]
-						"HEAL", -- [13]
-						"HEAL", -- [14]
-						"HEAL", -- [15]
-						"HEAL", -- [16]
-						"MISC", -- [17]
-					},
-				}, -- [2]
-				{
-					["MessageTimes"] = {
-						-14.31700000000274, -- [1]
-						-14.31700000000274, -- [2]
-						-12.31700000000274, -- [3]
-						-12.31700000000274, -- [4]
-						-10.33299999999872, -- [5]
-						-10.33299999999872, -- [6]
-						-8.317000000002736, -- [7]
-						-8.317000000002736, -- [8]
-						-6.317000000002736, -- [9]
-						-6.317000000002736, -- [10]
-						-4.317000000002736, -- [11]
-						-4.317000000002736, -- [12]
-						-2.317000000002736, -- [13]
-						-2.317000000002736, -- [14]
-						-0.4160000000047148, -- [15]
-						-0.4160000000047148, -- [16]
-						0, -- [17]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-						false, -- [2]
-						true, -- [3]
-						false, -- [4]
-						true, -- [5]
-						false, -- [6]
-						true, -- [7]
-						false, -- [8]
-						true, -- [9]
-						false, -- [10]
-						true, -- [11]
-						false, -- [12]
-						true, -- [13]
-						false, -- [14]
-						true, -- [15]
-						false, -- [16]
-						true, -- [17]
-					},
-					["Messages"] = {
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +35 (35 過量治療)", -- [1]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +35 (35 過量治療)", -- [2]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +35 (35 過量治療)", -- [3]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +35 (35 過量治療)", -- [4]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +35 (35 過量治療)", -- [5]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +35 (35 過量治療)", -- [6]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +35 (35 過量治療)", -- [7]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +35 (35 過量治療)", -- [8]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +35 (35 過量治療)", -- [9]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +34 (34 過量治療)", -- [10]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +35 (35 過量治療)", -- [11]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +35 (35 過量治療)", -- [12]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +34 (34 過量治療)", -- [13]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +35 (35 過量治療)", -- [14]
-						"治療之泉圖騰 VI <騎風> 治療之泉 治療之泉圖騰 VI <騎風> Tick +34 (34 過量治療)", -- [15]
-						"治療之泉圖騰 VI <騎風> 治療之泉 騎風 Tick +35 (35 過量治療)", -- [16]
-						"治療之泉圖騰 VI <騎風>死亡。", -- [17]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 58340.847,
-					["EventNum"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						0, -- [4]
-						0, -- [5]
-						0, -- [6]
-						0, -- [7]
-						0, -- [8]
-						0, -- [9]
-						0, -- [10]
-						0, -- [11]
-						0, -- [12]
-						0, -- [13]
-						0, -- [14]
-						0, -- [15]
-						0, -- [16]
-						0, -- [17]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"HEAL", -- [1]
-						"HEAL", -- [2]
-						"HEAL", -- [3]
-						"HEAL", -- [4]
-						"HEAL", -- [5]
-						"HEAL", -- [6]
-						"HEAL", -- [7]
-						"HEAL", -- [8]
-						"HEAL", -- [9]
-						"HEAL", -- [10]
-						"HEAL", -- [11]
-						"HEAL", -- [12]
-						"HEAL", -- [13]
-						"HEAL", -- [14]
-						"HEAL", -- [15]
-						"HEAL", -- [16]
-						"MISC", -- [17]
-					},
-				}, -- [3]
-			},
-			["Fights"] = {
-				["LastFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["CurrentFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["OverallData"] = {
-					["DeathCount"] = 3,
-					["HOT_Time"] = 12,
-					["OverHeals"] = {
-						["治療之泉"] = {
-							["Details"] = {
-								["Tick"] = {
-									["max"] = 37,
-									["min"] = 36,
-									["count"] = 4,
-									["amount"] = 145,
-								},
-							},
-							["count"] = 4,
-							["amount"] = 145,
-						},
-					},
-					["HOTs"] = {
-						["治療之泉"] = {
-							["Details"] = {
-								["治療之泉圖騰 VI <騎風>"] = {
-									["count"] = 12,
-								},
-							},
-							["amount"] = 12,
-						},
-					},
-					["Overhealing"] = 145,
-				},
-			},
-			["LastFlags"] = 2600,
-			["UnitLockout"] = 60652.831,
-			["LastAbility"] = 65856.144,
 		},
 		["風怒圖騰 V <騎風>"] = {
-			["GUID"] = "Creature-0-4490-530-55-15497-0000493BEE",
+			["GUID"] = "Creature-0-4490-0-11466-15497-000049E10F",
 			["TimeLast"] = {
-				["OVERALL"] = 62441.032,
-				["DamageTaken"] = 61603.225,
-				["DeathCount"] = 62441.032,
+				["DamageTaken"] = 107519.154,
+				["OVERALL"] = 107519.154,
 			},
+			["LastAttackedBy"] = "不死的看守者",
 			["LastEventType"] = {
 				"DAMAGE", -- [1]
-				"MISC", -- [2]
-				"MISC", -- [3]
-				"MISC", -- [4]
 			},
 			["TimeWindows"] = {
 				["DamageTaken"] = {
-					545, -- [1]
-				},
-				["DeathCount"] = {
-					3, -- [1]
+					171, -- [1]
 				},
 			},
 			["enClass"] = "PET",
-			["LastDamageTaken"] = 545,
-			["level"] = 1,
-			["LastDamageAbility"] = "閃電吐息",
-			["LastFightIn"] = 27,
-			["type"] = "Pet",
-			["FightsSaved"] = 5,
-			["ownerName"] = "騎風",
-			["LastActive"] = 61603.225,
-			["LastEventTimes"] = {
-				61604.208, -- [1]
-				61604.208, -- [2]
-				61752.162, -- [3]
-				62441.382, -- [4]
-			},
-			["NextEventNum"] = 5,
-			["LastEventIncoming"] = {
-				true, -- [1]
-				true, -- [2]
-				true, -- [3]
-				true, -- [4]
-			},
-			["LastEvents"] = {
-				"迅翼絞碎者 閃電吐息 風怒圖騰 V <騎風> Hit -545 (Nature)", -- [1]
-				"風怒圖騰 V <騎風>死亡。", -- [2]
-				"風怒圖騰 V <騎風>死亡。", -- [3]
-				"風怒圖騰 V <騎風>死亡。", -- [4]
-			},
-			["Name"] = "風怒圖騰 V",
-			["DeathLogs"] = {
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"風怒圖騰 V <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 62443.032,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [1]
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"風怒圖騰 V <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 61753.229,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [2]
-				{
-					["MessageIncoming"] = {
-						true, -- [1]
-						true, -- [2]
-					},
-					["Messages"] = {
-						"迅翼絞碎者 閃電吐息 風怒圖騰 V <騎風> Hit -545 (Nature)", -- [1]
-						"風怒圖騰 V <騎風>死亡。", -- [2]
-					},
-					["DeathAt"] = 61605.225,
-					["EventNum"] = {
-						0, -- [1]
-						0, -- [2]
-					},
-					["MessageTimes"] = {
-						0, -- [1]
-						0, -- [2]
-					},
-					["HealthMax"] = {
-					},
-					["Health"] = {
-					},
-					["KilledBy"] = "迅翼絞碎者",
-					["MessageType"] = {
-						"DAMAGE", -- [1]
-						"MISC", -- [2]
-					},
-				}, -- [3]
-			},
-			["Fights"] = {
-				["LastFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["CurrentFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["OverallData"] = {
-					["PartialResist"] = {
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 1,
-						},
-					},
-					["DeathCount"] = 3,
-					["PartialAbsorb"] = {
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 0,
-						},
-					},
-					["WhoDamaged"] = {
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電吐息"] = {
-									["count"] = 545,
-								},
-							},
-							["amount"] = 545,
-						},
-					},
-					["ElementTaken"] = {
-						["Nature"] = 545,
-					},
-					["DamageTaken"] = 545,
-					["ElementHitsTaken"] = {
-						["Nature"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 1,
-						},
-					},
-				},
-			},
-			["LastFlags"] = 2600,
-			["UnitLockout"] = 62441.032,
-			["LastAbility"] = 65856.144,
-		},
-		["熔岩圖騰 V <騎風>"] = {
-			["GUID"] = "Creature-0-4490-530-55-15484-0000492202",
-			["TimeLast"] = {
-				["OVERALL"] = 59441.846,
-				["DeathCount"] = 59441.846,
-			},
-			["LastEventType"] = {
-				"MISC", -- [1]
-			},
-			["TimeWindows"] = {
-				["DeathCount"] = {
-					1, -- [1]
-				},
-			},
-			["enClass"] = "PET",
-			["level"] = 1,
-			["LastFightIn"] = 14,
-			["type"] = "Pet",
-			["FightsSaved"] = 5,
-			["ownerName"] = "騎風",
-			["NextEventNum"] = 2,
-			["DeathLogs"] = {
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"熔岩圖騰 V <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 59443.846,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [1]
-			},
-			["LastEvents"] = {
-				"熔岩圖騰 V <騎風>死亡。", -- [1]
-			},
-			["Name"] = "熔岩圖騰 V",
-			["LastEventTimes"] = {
-				59442.163, -- [1]
-			},
-			["LastEventIncoming"] = {
-				true, -- [1]
-			},
-			["UnitLockout"] = 59441.846,
-			["Fights"] = {
-				["LastFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["CurrentFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["OverallData"] = {
-					["DeathCount"] = 1,
-				},
-			},
-			["LastAbility"] = 65856.144,
-		},
-		["根基圖騰 <騎風>"] = {
-			["GUID"] = "Creature-0-4490-530-55-5925-0000492380",
-			["TimeLast"] = {
-				["OVERALL"] = 59846.857,
-				["DeathCount"] = 59846.857,
-			},
-			["LastEventType"] = {
-				"MISC", -- [1]
-				"MISC", -- [2]
-			},
-			["TimeWindows"] = {
-				["DeathCount"] = {
-					2, -- [1]
-				},
-			},
-			["enClass"] = "PET",
-			["level"] = 1,
-			["LastFightIn"] = 16,
-			["type"] = "Pet",
-			["FightsSaved"] = 5,
-			["ownerName"] = "騎風",
-			["LastFlags"] = 2600,
-			["NextEventNum"] = 3,
-			["LastEventTimes"] = {
-				59687.803, -- [1]
-				59847.524, -- [2]
-			},
-			["LastEvents"] = {
-				"根基圖騰 <騎風>死亡。", -- [1]
-				"根基圖騰 <騎風>死亡。", -- [2]
-			},
-			["Name"] = "根基圖騰",
-			["LastEventIncoming"] = {
-				true, -- [1]
-				true, -- [2]
-			},
-			["DeathLogs"] = {
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"根基圖騰 <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 59848.857,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [1]
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"根基圖騰 <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 59688.837,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [2]
-			},
-			["UnitLockout"] = 59846.857,
-			["Fights"] = {
-				["LastFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["CurrentFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["OverallData"] = {
-					["DeathCount"] = 2,
-				},
-			},
-			["LastAbility"] = 65856.144,
-		},
-		["戰慄圖騰 <騎風>"] = {
-			["GUID"] = "Creature-0-4490-530-55-5913-0000492AD5",
-			["TimeLast"] = {
-				["OVERALL"] = 59773.839,
-				["DeathCount"] = 59773.839,
-			},
-			["LastEventType"] = {
-				"MISC", -- [1]
-				"MISC", -- [2]
-				"MISC", -- [3]
-			},
-			["TimeWindows"] = {
-				["DeathCount"] = {
-					3, -- [1]
-				},
-			},
-			["enClass"] = "PET",
-			["level"] = 1,
-			["LastFightIn"] = 14,
-			["type"] = "Pet",
-			["FightsSaved"] = 5,
-			["ownerName"] = "騎風",
-			["LastFlags"] = 2600,
-			["NextEventNum"] = 4,
-			["LastEventTimes"] = {
-				57424.903, -- [1]
-				59397.978, -- [2]
-				59773.989, -- [3]
-			},
-			["LastEvents"] = {
-				"戰慄圖騰 <騎風>死亡。", -- [1]
-				"戰慄圖騰 <騎風>死亡。", -- [2]
-				"戰慄圖騰 <騎風>死亡。", -- [3]
-			},
-			["Name"] = "戰慄圖騰",
-			["LastEventIncoming"] = {
-				true, -- [1]
-				true, -- [2]
-				true, -- [3]
-			},
-			["DeathLogs"] = {
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"戰慄圖騰 <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 59775.839,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [1]
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"戰慄圖騰 <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 59399.845,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [2]
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"戰慄圖騰 <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 57426.837,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [3]
-			},
-			["UnitLockout"] = 59773.839,
-			["Fights"] = {
-				["LastFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["CurrentFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["OverallData"] = {
-					["DeathCount"] = 3,
-				},
-			},
-			["LastAbility"] = 65856.144,
-		},
-		["火焰新星圖騰 VII <騎風>"] = {
-			["GUID"] = "Creature-0-4490-530-55-15483-0000493BDA",
-			["TimeLast"] = {
-				["DeathCount"] = 66040.435,
-				["ActiveTime"] = 66039.43400000001,
-				["OVERALL"] = 66040.435,
-				["TimeDamage"] = 66039.43400000001,
-				["Damage"] = 66039.43400000001,
-			},
-			["LastEventType"] = {
-				"MISC", -- [1]
-				"MISC", -- [2]
-				"MISC", -- [3]
-				"MISC", -- [4]
-				"MISC", -- [5]
-				"DAMAGE", -- [6]
-				"MISC", -- [7]
-			},
-			["TimeWindows"] = {
-				["Damage"] = {
-					743, -- [1]
-				},
-				["DeathCount"] = {
-					6, -- [1]
-				},
-				["TimeDamage"] = {
-					1.5, -- [1]
-				},
-				["ActiveTime"] = {
-					1.5, -- [1]
-				},
-			},
-			["enClass"] = "PET",
-			["level"] = 1,
-			["LastFightIn"] = 40,
-			["type"] = "Pet",
-			["FightsSaved"] = 5,
-			["ownerName"] = "騎風",
-			["LastEventTimes"] = {
-				59417.846, -- [1]
-				59505.248, -- [2]
-				59551.816, -- [3]
-				59578.133, -- [4]
-				59998.062, -- [5]
-				66039.551, -- [6]
-				66040.768, -- [7]
-			},
-			["LastActive"] = 66039.43400000001,
-			["LastFlags"] = 2600,
-			["NextEventNum"] = 8,
-			["LastDamageTime"] = 66039.551,
-			["LastEvents"] = {
-				"火焰新星圖騰 VII <騎風>死亡。", -- [1]
-				"火焰新星圖騰 VII <騎風>死亡。", -- [2]
-				"火焰新星圖騰 VII <騎風>死亡。", -- [3]
-				"火焰新星圖騰 VII <騎風>死亡。", -- [4]
-				"火焰新星圖騰 VII <騎風>死亡。", -- [5]
-				"火焰新星圖騰 VII <騎風> 火焰新星 迅翼絞碎者 Hit -743 (Fire)", -- [6]
-				"火焰新星圖騰 VII <騎風>死亡。", -- [7]
-			},
-			["Name"] = "火焰新星圖騰 VII",
-			["LastEventIncoming"] = {
-				true, -- [1]
-				true, -- [2]
-				true, -- [3]
-				true, -- [4]
-				true, -- [5]
-				false, -- [6]
-				true, -- [7]
-			},
-			["DeathLogs"] = {
-				{
-					["MessageTimes"] = {
-						-1.216999999989639, -- [1]
-						0, -- [2]
-					},
-					["MessageIncoming"] = {
-						false, -- [1]
-						true, -- [2]
-					},
-					["Messages"] = {
-						"火焰新星圖騰 VII <騎風> 火焰新星 迅翼絞碎者 Hit -743 (Fire)", -- [1]
-						"火焰新星圖騰 VII <騎風>死亡。", -- [2]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 66042.43400000001,
-					["EventNum"] = {
-						0, -- [1]
-						0, -- [2]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"DAMAGE", -- [1]
-						"MISC", -- [2]
-					},
-				}, -- [1]
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"火焰新星圖騰 VII <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 59999.845,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [2]
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"火焰新星圖騰 VII <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 59579.834,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [3]
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"火焰新星圖騰 VII <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 59552.833,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [4]
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"火焰新星圖騰 VII <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 59506.831,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [5]
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"火焰新星圖騰 VII <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 59419.846,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [6]
-			},
-			["UnitLockout"] = 66040.435,
-			["Fights"] = {
-				["CurrentFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["LastFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-						["Fire"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-						["Fire"] = 0,
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["火焰新星"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["火焰新星"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-						["火焰新星"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["火焰新星"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["OverallData"] = {
-					["TimeSpent"] = {
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["火焰新星"] = {
-									["count"] = 1.5,
-								},
-							},
-							["amount"] = 1.5,
-						},
-					},
-					["ElementHitsDone"] = {
-						["Fire"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 1,
-						},
-					},
-					["ElementDone"] = {
-						["Fire"] = 743,
-					},
-					["DeathCount"] = 6,
-					["DamagedWho"] = {
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["火焰新星"] = {
-									["count"] = 743,
-								},
-							},
-							["amount"] = 743,
-						},
-					},
-					["TimeDamage"] = 1.5,
-					["TimeDamaging"] = {
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["火焰新星"] = {
-									["count"] = 1.5,
-								},
-							},
-							["amount"] = 1.5,
-						},
-					},
-					["Attacks"] = {
-						["火焰新星"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 743,
-									["min"] = 743,
-									["count"] = 1,
-									["amount"] = 743,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 743,
-						},
-					},
-					["ActiveTime"] = 1.5,
-					["Damage"] = 743,
-				},
-			},
-			["LastAbility"] = 65856.144,
-		},
-		["祛病圖騰 <騎風>"] = {
-			["GUID"] = "Creature-0-4490-530-55-5924-0000492ADE",
-			["TimeLast"] = {
-				["OVERALL"] = 61808.214,
-				["DeathCount"] = 61808.214,
-			},
-			["LastEventType"] = {
-				"MISC", -- [1]
-			},
-			["TimeWindows"] = {
-				["DeathCount"] = {
-					1, -- [1]
-				},
-			},
-			["enClass"] = "PET",
-			["level"] = 1,
-			["LastFightIn"] = 25,
-			["type"] = "Pet",
-			["FightsSaved"] = 5,
-			["ownerName"] = "騎風",
-			["NextEventNum"] = 2,
-			["DeathLogs"] = {
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"祛病圖騰 <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 61810.214,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [1]
-			},
-			["LastEvents"] = {
-				"祛病圖騰 <騎風>死亡。", -- [1]
-			},
-			["Name"] = "祛病圖騰",
-			["LastEventTimes"] = {
-				61808.447, -- [1]
-			},
-			["LastEventIncoming"] = {
-				true, -- [1]
-			},
-			["UnitLockout"] = 61808.214,
-			["Fights"] = {
-				["LastFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["CurrentFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["OverallData"] = {
-					["DeathCount"] = 1,
-				},
-			},
-			["LastAbility"] = 65856.144,
-		},
-		["法力之泉圖騰 V <騎風>"] = {
-			["GUID"] = "Creature-0-4490-530-55-15489-0000493BF0",
-			["TimeLast"] = {
-				["DeathCount"] = 57424.837,
-				["DamageTaken"] = 61600.224,
-				["OVERALL"] = 61600.224,
-			},
-			["LastAttackedBy"] = "扭曲追趕者",
-			["LastEventType"] = {
-				"MISC", -- [1]
-				"DAMAGE", -- [2]
-			},
-			["TimeWindows"] = {
-				["DamageTaken"] = {
-					310, -- [1]
-				},
-				["DeathCount"] = {
-					1, -- [1]
-				},
-			},
-			["enClass"] = "PET",
-			["LastDamageTaken"] = 310,
+			["LastDamageTaken"] = 171,
 			["level"] = 1,
 			["LastDamageAbility"] = "近戰",
-			["LastFightIn"] = 24,
+			["LastFightIn"] = 7,
 			["type"] = "Pet",
 			["FightsSaved"] = 5,
 			["ownerName"] = "騎風",
-			["LastActive"] = 61600.224,
+			["NextEventNum"] = 2,
+			["LastFlags"] = 2600,
+			["LastEvents"] = {
+				"不死的看守者 近戰 風怒圖騰 V <騎風> Hit -171 (Physical)", -- [1]
+			},
+			["Name"] = "風怒圖騰 V",
+			["LastEventIncoming"] = {
+				true, -- [1]
+			},
+			["LastEventTimes"] = {
+				107520.154, -- [1]
+			},
 			["Fights"] = {
 				["LastFightData"] = {
 					["DOTs"] = {
@@ -3352,7 +527,6 @@ RecountPerCharDB = {
 							["amount"] = 1,
 						},
 					},
-					["DeathCount"] = 1,
 					["PartialAbsorb"] = {
 						["近戰"] = {
 							["Details"] = {
@@ -3368,23 +542,23 @@ RecountPerCharDB = {
 						},
 					},
 					["WhoDamaged"] = {
-						["扭曲追趕者"] = {
+						["不死的看守者"] = {
 							["Details"] = {
 								["近戰"] = {
-									["count"] = 310,
+									["count"] = 171,
 								},
 							},
-							["amount"] = 310,
+							["amount"] = 171,
 						},
 					},
 					["ElementTaken"] = {
-						["Melee"] = 310,
+						["Melee"] = 171,
 					},
-					["DamageTaken"] = 310,
+					["DamageTaken"] = 171,
 					["ElementHitsTaken"] = {
 						["Melee"] = {
 							["Details"] = {
-								["Crit"] = {
+								["Hit"] = {
 									["count"] = 1,
 								},
 							},
@@ -3393,6394 +567,64 @@ RecountPerCharDB = {
 					},
 				},
 			},
-			["NextEventNum"] = 3,
-			["DeathLogs"] = {
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"法力之泉圖騰 V <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 57426.837,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [1]
-			},
-			["LastEvents"] = {
-				"法力之泉圖騰 V <騎風>死亡。", -- [1]
-				"扭曲追趕者 近戰 法力之泉圖騰 V <騎風> Crit -310 (Physical)", -- [2]
-			},
-			["Name"] = "法力之泉圖騰 V",
-			["LastEventIncoming"] = {
-				true, -- [1]
-				true, -- [2]
-			},
-			["LastEventTimes"] = {
-				57425.72, -- [1]
-				61601.091, -- [2]
-			},
-			["LastFlags"] = 2600,
-			["UnitLockout"] = 61600.224,
-			["LastAbility"] = 65856.144,
-		},
-		["風之優雅圖騰 III <騎風>"] = {
-			["GUID"] = "Creature-0-4490-530-55-15463-0000493BF1",
-			["TimeLast"] = {
-				["OVERALL"] = 59399.845,
-				["DeathCount"] = 59399.845,
-			},
-			["LastEventType"] = {
-				"MISC", -- [1]
-				"MISC", -- [2]
-				"MISC", -- [3]
-			},
-			["TimeWindows"] = {
-				["DeathCount"] = {
-					3, -- [1]
-				},
-			},
-			["enClass"] = "PET",
-			["level"] = 1,
-			["LastFightIn"] = 14,
-			["type"] = "Pet",
-			["FightsSaved"] = 5,
-			["ownerName"] = "騎風",
-			["LastFlags"] = 2600,
-			["NextEventNum"] = 4,
-			["LastEventTimes"] = {
-				57423.287, -- [1]
-				57646.743, -- [2]
-				59400.445, -- [3]
-			},
-			["LastEvents"] = {
-				"風之優雅圖騰 III <騎風>死亡。", -- [1]
-				"風之優雅圖騰 III <騎風>死亡。", -- [2]
-				"風之優雅圖騰 III <騎風>死亡。", -- [3]
-			},
-			["Name"] = "風之優雅圖騰 III",
-			["LastEventIncoming"] = {
-				true, -- [1]
-				true, -- [2]
-				true, -- [3]
-			},
-			["DeathLogs"] = {
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"風之優雅圖騰 III <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 59401.845,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [1]
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"風之優雅圖騰 III <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 57647.843,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [2]
-				{
-					["MessageTimes"] = {
-						0, -- [1]
-					},
-					["MessageIncoming"] = {
-						true, -- [1]
-					},
-					["Messages"] = {
-						"風之優雅圖騰 III <騎風>死亡。", -- [1]
-					},
-					["HealthMax"] = {
-					},
-					["DeathAt"] = 57424.837,
-					["EventNum"] = {
-						0, -- [1]
-					},
-					["Health"] = {
-					},
-					["MessageType"] = {
-						"MISC", -- [1]
-					},
-				}, -- [3]
-			},
-			["UnitLockout"] = 59399.845,
-			["Fights"] = {
-				["LastFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["CurrentFightData"] = {
-					["DOTs"] = {
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
-					},
-					["ElementTakenAbsorb"] = {
-					},
-					["ElementTaken"] = {
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
-					["PartialAbsorb"] = {
-					},
-					["DamagedWho"] = {
-					},
-					["PartialBlock"] = {
-					},
-					["WhoDamaged"] = {
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["PartialResist"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-					},
-					["TimeHealing"] = {
-					},
-					["OverHeals"] = {
-					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
-					["RageGained"] = {
-					},
-					["HealedWho"] = {
-					},
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["Heals"] = {
-					},
-					["WhoHealed"] = {
-					},
-					["EnergyGained"] = {
-					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
-					},
-					["Dispelled"] = 0,
-					["Attacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["RageGain"] = 0,
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
-					["DispelledWho"] = {
-					},
-				},
-				["OverallData"] = {
-					["DeathCount"] = 3,
-				},
-			},
-			["LastAbility"] = 65856.144,
+			["UnitLockout"] = 107519.154,
+			["LastActive"] = 107519.154,
 		},
 		["騎風"] = {
 			["GUID"] = "Player-4487-00152DE8",
 			["LastEventHealth"] = {
-				6629, -- [1]
-				6629, -- [2]
-				6448, -- [3]
-				6448, -- [4]
-				6129, -- [5]
-				6129, -- [6]
-				6129, -- [7]
-				6129, -- [8]
-				6129, -- [9]
-				6143, -- [10]
-				6143, -- [11]
-				6143, -- [12]
-				6143, -- [13]
-				6143, -- [14]
-				5502, -- [15]
-				5502, -- [16]
-				5483, -- [17]
-				5464, -- [18]
-				5466, -- [19]
-				5466, -- [20]
-				5466, -- [21]
-				5330, -- [22]
-				5330, -- [23]
-				5330, -- [24]
-				5184, -- [25]
-				5184, -- [26]
-				5184, -- [27]
-				5184, -- [28]
-				5184, -- [29]
-				5048, -- [30]
-				5048, -- [31]
-				4410, -- [32]
-				4410, -- [33]
-				4410, -- [34]
-				4410, -- [35]
-				4410, -- [36]
-				4410, -- [37]
-				4473, -- [38]
-				7394, -- [39]
-				7204, -- [40]
-				7204, -- [41]
-				7204, -- [42]
-				7204, -- [43]
-				7035, -- [44]
-				7035, -- [45]
-				7035, -- [46]
-				7035, -- [47]
-				7035, -- [48]
-				7035, -- [49]
-				6629, -- [50]
+				5365, -- [1]
+				5365, -- [2]
+				5211, -- [3]
+				5211, -- [4]
+				5211, -- [5]
+				5031, -- [6]
+				5031, -- [7]
+				5031, -- [8]
+				5031, -- [9]
+				5031, -- [10]
+				5031, -- [11]
+				5227, -- [12]
+				5227, -- [13]
+				5227, -- [14]
+				5227, -- [15]
+				5227, -- [16]
+				5066, -- [17]
+				5066, -- [18]
+				5066, -- [19]
+				5066, -- [20]
+				4904, -- [21]
+				4904, -- [22]
+				4904, -- [23]
+				4904, -- [24]
+				4707, -- [25]
+				4707, -- [26]
+				4707, -- [27]
+				4707, -- [28]
+				4707, -- [29]
+				4707, -- [30]
+				4707, -- [31]
+				6555, -- [32]
+				8379, -- [33]
+				8379, -- [34]
+				5645, -- [35]
+				5458, -- [36]
+				5458, -- [37]
+				5458, -- [38]
+				5458, -- [39]
+				5242, -- [40]
+				5242, -- [41]
+				5242, -- [42]
+				5242, -- [43]
+				5148, -- [44]
+				5148, -- [45]
+				5148, -- [46]
+				5365, -- [47]
+				5365, -- [48]
+				5365, -- [49]
+				5365, -- [50]
 			},
-			["LastAttackedBy"] = "日怒射手",
-			["LastEventType"] = {
-				"DAMAGE", -- [1]
-				"DAMAGE", -- [2]
-				"DAMAGE", -- [3]
-				"DAMAGE", -- [4]
-				"DAMAGE", -- [5]
-				"DAMAGE", -- [6]
-				"DAMAGE", -- [7]
-				"DAMAGE", -- [8]
-				"DAMAGE", -- [9]
-				"DAMAGE", -- [10]
-				"DAMAGE", -- [11]
-				"DAMAGE", -- [12]
-				"DAMAGE", -- [13]
-				"DAMAGE", -- [14]
-				"DAMAGE", -- [15]
-				"DAMAGE", -- [16]
-				"DAMAGE", -- [17]
-				"DAMAGE", -- [18]
-				"MISC", -- [19]
-				"DAMAGE", -- [20]
-				"DAMAGE", -- [21]
-				"DAMAGE", -- [22]
-				"DAMAGE", -- [23]
-				"DAMAGE", -- [24]
-				"DAMAGE", -- [25]
-				"DAMAGE", -- [26]
-				"DAMAGE", -- [27]
-				"DAMAGE", -- [28]
-				"DAMAGE", -- [29]
-				"DAMAGE", -- [30]
-				"DAMAGE", -- [31]
-				"DAMAGE", -- [32]
-				"DAMAGE", -- [33]
-				"DAMAGE", -- [34]
-				"DAMAGE", -- [35]
-				"DAMAGE", -- [36]
-				"DAMAGE", -- [37]
-				"HEAL", -- [38]
-				"DAMAGE", -- [39]
-				"DAMAGE", -- [40]
-				"DAMAGE", -- [41]
-				"DAMAGE", -- [42]
-				"DAMAGE", -- [43]
-				"DAMAGE", -- [44]
-				"DAMAGE", -- [45]
-				"DAMAGE", -- [46]
-				"DAMAGE", -- [47]
-				"DAMAGE", -- [48]
-				"DAMAGE", -- [49]
-				"DAMAGE", -- [50]
-			},
-			["TimeWindows"] = {
-				["TimeHeal"] = {
-					6, -- [1]
-				},
-				["Dispelled"] = {
-					2, -- [1]
-				},
-				["Dispels"] = {
-					2, -- [1]
-				},
-				["Healing"] = {
-					10095, -- [1]
-				},
-				["DamageTaken"] = {
-					89691, -- [1]
-				},
-				["HealingTaken"] = {
-					10095, -- [1]
-				},
-				["ActiveTime"] = {
-					585.3500000000006, -- [1]
-				},
-				["TimeDamage"] = {
-					579.3500000000006, -- [1]
-				},
-				["Interrupts"] = {
-					14, -- [1]
-				},
-				["ManaGain"] = {
-					7706, -- [1]
-				},
-				["DOT_Time"] = {
-					201, -- [1]
-				},
-				["Damage"] = {
-					349498, -- [1]
-				},
-			},
-			["enClass"] = "SHAMAN",
-			["unit"] = "騎風",
-			["LastActive"] = 67042.446,
-			["LastEventHealthMax"] = {
-				8059, -- [1]
-				8059, -- [2]
-				8059, -- [3]
-				8059, -- [4]
-				8059, -- [5]
-				8059, -- [6]
-				8059, -- [7]
-				8059, -- [8]
-				8059, -- [9]
-				8059, -- [10]
-				8059, -- [11]
-				8059, -- [12]
-				8059, -- [13]
-				8059, -- [14]
-				8059, -- [15]
-				8059, -- [16]
-				8059, -- [17]
-				8059, -- [18]
-				8059, -- [19]
-				8059, -- [20]
-				8059, -- [21]
-				8059, -- [22]
-				8059, -- [23]
-				8059, -- [24]
-				8059, -- [25]
-				8059, -- [26]
-				8059, -- [27]
-				8059, -- [28]
-				8059, -- [29]
-				8059, -- [30]
-				8059, -- [31]
-				8059, -- [32]
-				8059, -- [33]
-				8059, -- [34]
-				8059, -- [35]
-				8059, -- [36]
-				8059, -- [37]
-				8059, -- [38]
-				8059, -- [39]
-				8059, -- [40]
-				8059, -- [41]
-				8059, -- [42]
-				8059, -- [43]
-				8059, -- [44]
-				8059, -- [45]
-				8059, -- [46]
-				8059, -- [47]
-				8059, -- [48]
-				8059, -- [49]
-				8059, -- [50]
-			},
-			["LastDamageTaken"] = 319,
-			["level"] = 70,
-			["LastDamageAbility"] = "近戰",
-			["LastFightIn"] = 46,
-			["LastEventIncoming"] = {
-				true, -- [1]
-				false, -- [2]
-				false, -- [3]
-				true, -- [4]
-				false, -- [5]
-				false, -- [6]
-				false, -- [7]
-				false, -- [8]
-				false, -- [9]
-				false, -- [10]
-				false, -- [11]
-				false, -- [12]
-				true, -- [13]
-				true, -- [14]
-				false, -- [15]
-				true, -- [16]
-				true, -- [17]
-				true, -- [18]
-				false, -- [19]
-				false, -- [20]
-				true, -- [21]
-				false, -- [22]
-				false, -- [23]
-				true, -- [24]
-				false, -- [25]
-				false, -- [26]
-				true, -- [27]
-				false, -- [28]
-				false, -- [29]
-				false, -- [30]
-				true, -- [31]
-				false, -- [32]
-				false, -- [33]
-				false, -- [34]
-				false, -- [35]
-				false, -- [36]
-				false, -- [37]
-				true, -- [38]
-				true, -- [39]
-				false, -- [40]
-				false, -- [41]
-				false, -- [42]
-				true, -- [43]
-				false, -- [44]
-				false, -- [45]
-				true, -- [46]
-				false, -- [47]
-				false, -- [48]
-				true, -- [49]
-				false, -- [50]
-			},
-			["type"] = "Self",
-			["FightsSaved"] = 5,
-			["GuardianReverseGUIDs"] = {
-				["熔岩圖騰 V"] = {
-					["LatestGuardian"] = 0,
-					["GUIDs"] = {
-						[0] = "Creature-0-4490-530-55-15484-0000492202",
-					},
-				},
-				["火焰新星圖騰 VII"] = {
-					["LatestGuardian"] = 5,
-					["GUIDs"] = {
-						"Creature-0-4490-530-55-15483-0000492252", -- [1]
-						"Creature-0-4490-530-55-15483-0000492281", -- [2]
-						"Creature-0-4490-530-55-15483-000049229B", -- [3]
-						"Creature-0-4490-530-55-15483-000049243F", -- [4]
-						"Creature-0-4490-530-55-15483-0000493BDA", -- [5]
-						[0] = "Creature-0-4490-530-55-15483-00004921FA",
-					},
-				},
-				["治療之泉圖騰 VI"] = {
-					["LatestGuardian"] = 3,
-					["GUIDs"] = {
-						"Creature-0-4490-530-55-15488-0000491E9A", -- [1]
-						"Creature-0-4490-530-55-15488-000049265A", -- [2]
-						"Creature-0-4490-530-55-15488-0000492A9E", -- [3]
-						[0] = "Creature-0-4490-530-55-15488-0000491D51",
-					},
-				},
-				["戰慄圖騰"] = {
-					["LatestGuardian"] = 3,
-					["GUIDs"] = {
-						"Creature-0-4490-530-55-5913-0000492173", -- [1]
-						"Creature-0-4490-530-55-5913-00004922EB", -- [2]
-						"Creature-0-4490-530-55-5913-0000492AD5", -- [3]
-						[0] = "Creature-0-4490-530-55-5913-00004919BE",
-					},
-				},
-				["祛病圖騰"] = {
-					["LatestGuardian"] = 0,
-					["GUIDs"] = {
-						[0] = "Creature-0-4490-530-55-5924-0000492ADE",
-					},
-				},
-				["風怒圖騰 V"] = {
-					["LatestGuardian"] = 8,
-					["GUIDs"] = {
-						"Creature-0-4490-530-55-15497-0000491A92", -- [1]
-						"Creature-0-4490-530-55-15497-0000491A9B", -- [2]
-						"Creature-0-4490-530-55-15497-0000491E04", -- [3]
-						"Creature-0-4490-530-55-15497-0000492172", -- [4]
-						"Creature-0-4490-530-55-15497-0000492A75", -- [5]
-						"Creature-0-4490-530-55-15497-0000492AA6", -- [6]
-						"Creature-0-4490-530-55-15497-0000492D57", -- [7]
-						"Creature-0-4490-530-55-15497-0000493BEE", -- [8]
-						[0] = "Creature-0-4490-530-55-15497-0000491A89",
-					},
-				},
-				["法力之泉圖騰 V"] = {
-					["LatestGuardian"] = 7,
-					["GUIDs"] = {
-						"Creature-0-4490-530-55-15489-00004919BF", -- [1]
-						"Creature-0-4490-530-55-15489-0000491B28", -- [2]
-						"Creature-0-4490-530-55-15489-0000491D50", -- [3]
-						"Creature-0-4490-530-55-15489-0000492174", -- [4]
-						"Creature-0-4490-530-55-15489-0000492A77", -- [5]
-						"Creature-0-4490-530-55-15489-0000492AA0", -- [6]
-						"Creature-0-4490-530-55-15489-0000493BF0", -- [7]
-						[0] = "Creature-0-4490-530-55-15489-0000491910",
-					},
-				},
-				["火焰元素圖騰"] = {
-					["LatestGuardian"] = 0,
-					["GUIDs"] = {
-						[0] = "Creature-0-4490-530-55-15439-0000491959",
-					},
-				},
-				["大地之力圖騰 VI"] = {
-					["LatestGuardian"] = 2,
-					["GUIDs"] = {
-						"Creature-0-4490-530-55-15479-0000492A76", -- [1]
-						"Creature-0-4490-530-55-15479-0000493BEF", -- [2]
-						[0] = "Creature-0-4490-530-55-15479-0000492659",
-					},
-				},
-				["根基圖騰"] = {
-					["LatestGuardian"] = 1,
-					["GUIDs"] = {
-						"Creature-0-4490-530-55-5925-0000492380", -- [1]
-						[0] = "Creature-0-4490-530-55-5925-00004922E0",
-					},
-				},
-				["強效火焰元素"] = {
-					["LatestGuardian"] = 0,
-					["GUIDs"] = {
-						[0] = "Creature-0-4490-530-55-15438-0000491959",
-					},
-				},
-				["風之優雅圖騰 III"] = {
-					["LatestGuardian"] = 5,
-					["GUIDs"] = {
-						"Creature-0-4490-530-55-15463-0000491A8A", -- [1]
-						"Creature-0-4490-530-55-15463-0000491A93", -- [2]
-						"Creature-0-4490-530-55-15463-0000491A9C", -- [3]
-						"Creature-0-4490-530-55-15463-0000492176", -- [4]
-						"Creature-0-4490-530-55-15463-0000493BF1", -- [5]
-						[0] = "Creature-0-4490-530-55-15463-00004919BD",
-					},
-				},
-			},
-			["LastEventTimes"] = {
-				67039.53, -- [1]
-				67039.53, -- [2]
-				67039.63, -- [3]
-				67041.563, -- [4]
-				67041.563, -- [5]
-				67041.696, -- [6]
-				67041.696, -- [7]
-				67041.696, -- [8]
-				67042.913, -- [9]
-				66971.261, -- [10]
-				66971.261, -- [11]
-				66971.261, -- [12]
-				66972.361, -- [13]
-				66972.711, -- [14]
-				66973.261, -- [15]
-				66974.278, -- [16]
-				66976.344, -- [17]
-				66978.361, -- [18]
-				66981.895, -- [19]
-				66981.895, -- [20]
-				66981.895, -- [21]
-				66982.91100000001, -- [22]
-				66982.91100000001, -- [23]
-				66983.91100000001, -- [24]
-				66984.961, -- [25]
-				66985.778, -- [26]
-				66985.778, -- [27]
-				66985.778, -- [28]
-				66985.778, -- [29]
-				66987.011, -- [30]
-				66987.561, -- [31]
-				66987.778, -- [32]
-				66989.045, -- [33]
-				66989.761, -- [34]
-				66991.011, -- [35]
-				66991.011, -- [36]
-				66991.011, -- [37]
-				67000.562, -- [38]
-				67031.563, -- [39]
-				67032.929, -- [40]
-				67032.929, -- [41]
-				67032.929, -- [42]
-				67033.563, -- [43]
-				67034.246, -- [44]
-				67034.963, -- [45]
-				67035.563, -- [46]
-				67036.963, -- [47]
-				67036.963, -- [48]
-				67037.513, -- [49]
-				67038.663, -- [50]
-			},
-			["Owner"] = false,
-			["Pet"] = {
-				"法力之泉圖騰 V <騎風>", -- [1]
-				"火焰元素圖騰 <騎風>", -- [2]
-				"強效火焰元素 <騎風>", -- [3]
-				"風之優雅圖騰 III <騎風>", -- [4]
-				"戰慄圖騰 <騎風>", -- [5]
-				"風怒圖騰 V <騎風>", -- [6]
-				"治療之泉圖騰 VI <騎風>", -- [7]
-				"火焰新星圖騰 VII <騎風>", -- [8]
-				"熔岩圖騰 V <騎風>", -- [9]
-				"根基圖騰 <騎風>", -- [10]
-				"大地之力圖騰 VI <騎風>", -- [11]
-				"祛病圖騰 <騎風>", -- [12]
-			},
-			["NextEventNum"] = 10,
-			["LastDamageTime"] = 67042.913,
-			["LastEvents"] = {
-				"日怒射手 近戰 騎風 Hit -181 (Physical)", -- [1]
-				"騎風 近戰 日怒射手 Crit -396 (Physical)", -- [2]
-				"騎風 近戰 日怒射手 Hit -420 (Physical)", -- [3]
-				"日怒射手 近戰 騎風 Crit -319 (Physical)", -- [4]
-				"騎風 近戰 日怒射手 Hit -188 (Physical)", -- [5]
-				"騎風 近戰 日怒射手 Crit -818 (Physical)", -- [6]
-				"騎風 風怒攻擊 日怒射手 Hit -535 (Physical)", -- [7]
-				"騎風 風怒攻擊 日怒射手 Hit -581 (Physical)", -- [8]
-				"騎風 近戰 日怒射手 Crit -718 (Physical)", -- [9]
-				"騎風 近戰 扭曲追趕者 Miss (1)", -- [10]
-				"騎風 風怒攻擊 扭曲追趕者 Hit -653 (Physical)", -- [11]
-				"騎風 風怒攻擊 扭曲追趕者 Hit -539 (Physical)", -- [12]
-				"扭曲追趕者 毒性之咬 騎風 Hit -349 (Nature)", -- [13]
-				"扭曲追趕者 近戰 騎風 Crit -292 (Physical)", -- [14]
-				"騎風 近戰 扭曲追趕者 Hit -403 (Physical)", -- [15]
-				"扭曲追趕者 毒性之咬 (傷害/跳) 騎風 Tick -41 (Nature)", -- [16]
-				"扭曲追趕者 毒性之咬 (傷害/跳) 騎風 Tick -40 (Nature)", -- [17]
-				"扭曲追趕者 毒性之咬 (傷害/跳) 騎風 Tick -40 (Nature)", -- [18]
-				"騎風 interrupts 迅翼絞碎者 閃電吐息 (地震術)", -- [19]
-				"騎風 地震術 迅翼絞碎者 Hit -810 (Nature)", -- [20]
-				"迅翼絞碎者 閃電之盾 騎風 Hit -136 (Nature)", -- [21]
-				"騎風 近戰 迅翼絞碎者 Dodge (1)", -- [22]
-				"騎風 近戰 迅翼絞碎者 Crit -364 (Physical)", -- [23]
-				"迅翼絞碎者 近戰 騎風 Hit -146 (Physical)", -- [24]
-				"騎風 近戰 迅翼絞碎者 Hit -393 (Physical)", -- [25]
-				"騎風 近戰 迅翼絞碎者 Hit -200 (Physical)", -- [26]
-				"迅翼絞碎者 閃電之盾 騎風 Hit -136 (Nature)", -- [27]
-				"騎風 風怒攻擊 迅翼絞碎者 Hit -320 (Physical)", -- [28]
-				"騎風 風怒攻擊 迅翼絞碎者 Hit -323 (Physical)", -- [29]
-				"騎風 近戰 迅翼絞碎者 Crit -727 (Physical)", -- [30]
-				"迅翼絞碎者 閃電吐息 騎風 Hit -638 (Nature)", -- [31]
-				"騎風 近戰 迅翼絞碎者 Crit -356 (Physical)", -- [32]
-				"騎風 近戰 迅翼絞碎者 Hit -354 (Physical)", -- [33]
-				"騎風 近戰 迅翼絞碎者 Crit -404 (Physical)", -- [34]
-				"騎風 近戰 迅翼絞碎者 Crit -724 (Physical)", -- [35]
-				"騎風 風怒攻擊 迅翼絞碎者 Crit -1383 (Physical)", -- [36]
-				"騎風 風怒攻擊 迅翼絞碎者 Hit -641 (Physical)", -- [37]
-				"騎風 治療波 騎風 Hit +2606", -- [38]
-				"日怒射手 近戰 騎風 Hit -190 (Physical)", -- [39]
-				"騎風 近戰 日怒射手 Crit -695 (Physical)", -- [40]
-				"騎風 風怒攻擊 日怒射手 Hit -626 (Physical)", -- [41]
-				"騎風 風怒攻擊 日怒射手 Hit -550 (Physical)", -- [42]
-				"日怒射手 近戰 騎風 Hit -169 (Physical)", -- [43]
-				"騎風 近戰 日怒射手 Hit -203 (Physical)", -- [44]
-				"騎風 近戰 日怒射手 Hit -351 (Physical)", -- [45]
-				"日怒射手 近戰 騎風 Dodge (1)", -- [46]
-				"騎風 近戰 日怒射手 Hit -158 (Physical)", -- [47]
-				"騎風 近戰 日怒射手 Miss (1)", -- [48]
-				"日怒射手 近戰 騎風 Crit -406 (Physical)", -- [49]
-				"騎風 地震術 日怒射手 Hit -822 (Nature)", -- [50]
-			},
-			["Name"] = "騎風",
-			["Fights"] = {
-				["Fight3"] = {
-					["DOTs"] = {
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["扭曲追趕者"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 990,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-						["Melee"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 2,
-								},
-								["Dodge"] = {
-									["count"] = 1,
-								},
-								["Crit"] = {
-									["count"] = 1,
-								},
-								["Parry"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 4,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 1,
-								},
-								["Tick"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 2,
-						},
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["ElementTaken"] = {
-						["Melee"] = 600,
-						["Nature"] = 390,
-					},
-					["HOTs"] = {
-					},
-					["Damage"] = 6496,
-					["ElementDoneAbsorb"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["PartialBlock"] = {
-					},
-					["DamagedWho"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 797,
-								},
-								["風怒攻擊"] = {
-									["count"] = 2980,
-								},
-								["近戰"] = {
-									["count"] = 2719,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 6496,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["FAttacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["ElementDone"] = {
-						["Fire"] = 0,
-						["Physical"] = 2980,
-						["Melee"] = 2719,
-						["Nature"] = 797,
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementHitsDone"] = {
-						["Fire"] = {
-							["Details"] = {
-								["Tick"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["Physical"] = {
-							["Details"] = {
-								["Crit"] = {
-									["count"] = 1,
-								},
-								["Hit"] = {
-									["count"] = 3,
-								},
-							},
-							["amount"] = 4,
-						},
-						["Melee"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 1,
-								},
-								["Hit"] = {
-									["count"] = 3,
-								},
-								["Dodge"] = {
-									["count"] = 0,
-								},
-								["Block"] = {
-									["count"] = 0,
-								},
-								["Crit"] = {
-									["count"] = 3,
-								},
-								["Parry"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 7,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 1,
-						},
-					},
-					["ManaGainedFrom"] = {
-						["法力之泉圖騰 V <騎風>"] = {
-							["Details"] = {
-								["法力之泉"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["騎風"] = {
-							["Details"] = {
-								["水之盾"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["WhoDamaged"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["毒性之咬 (傷害/跳)"] = {
-									["count"] = 41,
-								},
-								["近戰"] = {
-									["count"] = 600,
-								},
-								["毒性之咬"] = {
-									["count"] = 349,
-								},
-							},
-							["amount"] = 990,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電之盾"] = {
-									["count"] = 0,
-								},
-								["閃電吐息"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-						["Melee"] = 0,
-					},
-					["TimeHealing"] = {
-					},
-					["Dispelled"] = 0,
-					["WhoHealed"] = {
-					},
-					["HealedWho"] = {
-					},
-					["CCBreak"] = 0,
-					["ElementTakenAbsorb"] = {
-					},
-					["FDamage"] = 0,
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-						["水之盾"] = {
-							["Details"] = {
-								["騎風"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["法力之泉"] = {
-							["Details"] = {
-								["法力之泉圖騰 V <騎風>"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["PartialAbsorb"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 0,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 4,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 4,
-							["amount"] = 0,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 0,
-						},
-					},
-					["ActiveTime"] = 7.02,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 1.5,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 5.52,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 7.02,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-					},
-					["ElementTakenResist"] = {
-					},
-					["Heals"] = {
-					},
-					["Interrupts"] = 0,
-					["EnergyGained"] = {
-					},
-					["PartialResist"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 1,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 4,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 4,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 1,
-						},
-					},
-					["Healing"] = 0,
-					["RageGained"] = {
-					},
-					["OverHeals"] = {
-					},
-					["Attacks"] = {
-						["風暴打擊"] = {
-							["Details"] = {
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["烈焰震擊"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["地震術"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 797,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 797,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 797,
-						},
-						["風怒攻擊"] = {
-							["Details"] = {
-								["Crit"] = {
-									["max"] = 1207,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 1207,
-								},
-								["Hit"] = {
-									["max"] = 653,
-									["min"] = 0,
-									["count"] = 3,
-									["amount"] = 1773,
-								},
-							},
-							["count"] = 4,
-							["amount"] = 2980,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 1,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 403,
-									["min"] = 0,
-									["count"] = 3,
-									["amount"] = 1002,
-								},
-								["Hit (被格擋)"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Dodge"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Crit"] = {
-									["max"] = 706,
-									["min"] = 0,
-									["count"] = 3,
-									["amount"] = 1717,
-								},
-								["Parry"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 7,
-							["amount"] = 2719,
-						},
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["Tick"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["RageGain"] = 0,
-					["FDamagedWho"] = {
-					},
-					["TimeDamage"] = 7.02,
-					["TimeDamaging"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 1.5,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 5.52,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 7.02,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ManaGain"] = 0,
-					["DOT_Time"] = 0,
-					["DispelledWho"] = {
-					},
-				},
-				["Fight5"] = {
-					["ElementDoneBlock"] = {
-						["Melee"] = 0,
-						["Physical"] = 0,
-					},
-					["DOTs"] = {
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["扭曲追趕者"] = {
-									["count"] = 0,
-								},
-								["迅翼絞碎者"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["TimeSpent"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["閃電箭"] = {
-									["count"] = 1.5,
-								},
-								["風暴打擊"] = {
-									["count"] = 1.07,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0.58,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 8.059999999999999,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 11.21,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["DamageTaken"] = 823,
-					["PartialResist"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 6,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 6,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["ManaGained"] = {
-						["水之盾"] = {
-							["Details"] = {
-								["騎風"] = {
-									["count"] = 610,
-								},
-							},
-							["amount"] = 610,
-						},
-						["法力之泉"] = {
-							["Details"] = {
-								["法力之泉圖騰 V <騎風>"] = {
-									["count"] = 500,
-								},
-							},
-							["amount"] = 500,
-						},
-					},
-					["PartialAbsorb"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 6,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 6,
-							["amount"] = 0,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["ActiveTime"] = 11.21,
-					["InterruptData"] = {
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電吐息 (地震術)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ElementTaken"] = {
-						["Melee"] = 823,
-						["Nature"] = 0,
-					},
-					["DOT_Time"] = 0,
-					["Damage"] = 6578,
-					["Interrupts"] = 0,
-					["WhoDispelled"] = {
-						["騎風"] = {
-							["Details"] = {
-								["毒性之咬 (消毒術)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["TimeDamaging"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["閃電箭"] = {
-									["count"] = 1.5,
-								},
-								["風暴打擊"] = {
-									["count"] = 1.07,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0.58,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 8.059999999999999,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 11.21,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["Dispels"] = 0,
-					["Dispelled"] = 0,
-					["Healing"] = 0,
-					["ManaGainedFrom"] = {
-						["騎風"] = {
-							["Details"] = {
-								["水之盾"] = {
-									["count"] = 610,
-								},
-							},
-							["amount"] = 610,
-						},
-						["法力之泉圖騰 V <騎風>"] = {
-							["Details"] = {
-								["法力之泉"] = {
-									["count"] = 500,
-								},
-							},
-							["amount"] = 500,
-						},
-					},
-					["Attacks"] = {
-						["閃電箭"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 925,
-									["min"] = 925,
-									["count"] = 1,
-									["amount"] = 925,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 925,
-						},
-						["風暴打擊"] = {
-							["Details"] = {
-								["Dodge"] = {
-									["count"] = 1,
-									["amount"] = 0,
-								},
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 0,
-						},
-						["烈焰震擊"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["地震術"] = {
-							["Details"] = {
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 855,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 855,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 855,
-						},
-						["風怒攻擊"] = {
-							["Details"] = {
-								["Hit (被格擋)"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Dodge"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 402,
-									["min"] = 0,
-									["count"] = 4,
-									["amount"] = 1473,
-								},
-							},
-							["count"] = 4,
-							["amount"] = 1473,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 429,
-									["min"] = 0,
-									["count"] = 5,
-									["amount"] = 1609,
-								},
-								["Hit (被格擋)"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Dodge"] = {
-									["count"] = 1,
-									["amount"] = 0,
-								},
-								["Crit"] = {
-									["max"] = 883,
-									["min"] = 0,
-									["count"] = 3,
-									["amount"] = 1716,
-								},
-								["Parry"] = {
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 10,
-							["amount"] = 3325,
-						},
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["Tick"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["ElementDone"] = {
-						["Fire"] = 0,
-						["Physical"] = 1473,
-						["Melee"] = 3325,
-						["Nature"] = 1780,
-					},
-					["ElementHitsDone"] = {
-						["Fire"] = {
-							["Details"] = {
-								["Tick"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["Physical"] = {
-							["Details"] = {
-								["Dodge"] = {
-									["count"] = 1,
-								},
-								["Block"] = {
-									["count"] = 0,
-								},
-								["Crit"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 4,
-								},
-							},
-							["amount"] = 5,
-						},
-						["Melee"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 5,
-								},
-								["Dodge"] = {
-									["count"] = 1,
-								},
-								["Block"] = {
-									["count"] = 0,
-								},
-								["Crit"] = {
-									["count"] = 3,
-								},
-								["Parry"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 10,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Crit"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 2,
-								},
-							},
-							["amount"] = 2,
-						},
-					},
-					["DamagedWho"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["閃電箭"] = {
-									["count"] = 925,
-								},
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 855,
-								},
-								["風怒攻擊"] = {
-									["count"] = 1473,
-								},
-								["近戰"] = {
-									["count"] = 3325,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 6578,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["TimeDamage"] = 11.21,
-					["WhoDamaged"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["毒性之咬 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 823,
-								},
-								["毒性之咬"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 823,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電之盾"] = {
-									["count"] = 0,
-								},
-								["閃電吐息"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ManaGain"] = 1110,
-					["ElementHitsTaken"] = {
-						["Melee"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 5,
-								},
-								["Dodge"] = {
-									["count"] = 1,
-								},
-								["Miss"] = {
-									["count"] = 0,
-								},
-								["Crit"] = {
-									["count"] = 0,
-								},
-								["Parry"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 6,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Tick"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["DispelledWho"] = {
-						["騎風"] = {
-							["Details"] = {
-								["毒性之咬 (消毒術)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-				},
-				["CurrentFightData"] = {
-					["DOTs"] = {
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["扭曲追趕者"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 0,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-						["Melee"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 0,
-								},
-								["Dodge"] = {
-									["count"] = 0,
-								},
-								["Miss"] = {
-									["count"] = 0,
-								},
-								["Crit"] = {
-									["count"] = 0,
-								},
-								["Parry"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 0,
-								},
-								["Tick"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["ElementTaken"] = {
-						["Melee"] = 0,
-						["Nature"] = 0,
-					},
-					["HOTs"] = {
-					},
-					["Damage"] = 0,
-					["ElementDoneAbsorb"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["PartialBlock"] = {
-					},
-					["DamagedWho"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["FAttacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["ElementDone"] = {
-						["Physical"] = 0,
-						["Fire"] = 0,
-						["Melee"] = 0,
-						["Nature"] = 0,
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementHitsDone"] = {
-						["Physical"] = {
-							["Details"] = {
-								["Dodge"] = {
-									["count"] = 0,
-								},
-								["Crit"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["Fire"] = {
-							["Details"] = {
-								["Tick"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["Melee"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 0,
-								},
-								["Dodge"] = {
-									["count"] = 0,
-								},
-								["Miss"] = {
-									["count"] = 0,
-								},
-								["Block"] = {
-									["count"] = 0,
-								},
-								["Crit"] = {
-									["count"] = 0,
-								},
-								["Parry"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ManaGainedFrom"] = {
-						["法力之泉圖騰 V <騎風>"] = {
-							["Details"] = {
-								["法力之泉"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["騎風"] = {
-							["Details"] = {
-								["水之盾"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["WhoDamaged"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["毒性之咬 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["毒性之咬"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電之盾"] = {
-									["count"] = 0,
-								},
-								["閃電吐息"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-						["Melee"] = 0,
-					},
-					["TimeHealing"] = {
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["Dispelled"] = 0,
-					["WhoHealed"] = {
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["HealedWho"] = {
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["CCBreak"] = 0,
-					["ElementTakenAbsorb"] = {
-					},
-					["FDamage"] = 0,
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-						["水之盾"] = {
-							["Details"] = {
-								["騎風"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["法力之泉"] = {
-							["Details"] = {
-								["法力之泉圖騰 V <騎風>"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["PartialAbsorb"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["ActiveTime"] = 0,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電吐息 (地震術)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ElementTakenResist"] = {
-					},
-					["Heals"] = {
-						["治療波"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["Interrupts"] = 0,
-					["EnergyGained"] = {
-					},
-					["PartialResist"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["Healing"] = 0,
-					["RageGained"] = {
-					},
-					["OverHeals"] = {
-					},
-					["Attacks"] = {
-						["風暴打擊"] = {
-							["Details"] = {
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["烈焰震擊"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["地震術"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["風怒攻擊"] = {
-							["Details"] = {
-								["Dodge"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Miss"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit (被格擋)"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Dodge"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Parry"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["Tick"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["RageGain"] = 0,
-					["FDamagedWho"] = {
-					},
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ManaGain"] = 0,
-					["DOT_Time"] = 0,
-					["DispelledWho"] = {
-					},
-				},
-				["Fight2"] = {
-					["DOTs"] = {
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["扭曲追趕者"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 1056,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-						["Melee"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 0,
-								},
-								["Dodge"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 1,
-								},
-								["Crit"] = {
-									["count"] = 0,
-								},
-								["Parry"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 1,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Tick"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 3,
-								},
-							},
-							["amount"] = 3,
-						},
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["ElementTaken"] = {
-						["Melee"] = 146,
-						["Nature"] = 910,
-					},
-					["HOTs"] = {
-					},
-					["Damage"] = 6999,
-					["ElementDoneAbsorb"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["PartialBlock"] = {
-					},
-					["DamagedWho"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["冰霜震擊"] = {
-									["count"] = 0,
-								},
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["地震術"] = {
-									["count"] = 810,
-								},
-								["風怒攻擊"] = {
-									["count"] = 2667,
-								},
-								["近戰"] = {
-									["count"] = 3522,
-								},
-							},
-							["amount"] = 6999,
-						},
-					},
-					["FAttacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["ElementDone"] = {
-						["Frost"] = 0,
-						["Melee"] = 3522,
-						["Fire"] = 0,
-						["Physical"] = 2667,
-						["Nature"] = 810,
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementHitsDone"] = {
-						["Frost"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["Melee"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 3,
-								},
-								["Dodge"] = {
-									["count"] = 1,
-								},
-								["Block"] = {
-									["count"] = 0,
-								},
-								["Crit"] = {
-									["count"] = 5,
-								},
-								["Parry"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 9,
-						},
-						["Fire"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 0,
-								},
-								["Tick"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["Physical"] = {
-							["Details"] = {
-								["Dodge"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 3,
-								},
-								["Block"] = {
-									["count"] = 0,
-								},
-								["Crit"] = {
-									["count"] = 1,
-								},
-								["Parry"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 4,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Crit"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 1,
-						},
-					},
-					["ManaGainedFrom"] = {
-						["法力之泉圖騰 V <騎風>"] = {
-							["Details"] = {
-								["法力之泉"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["騎風"] = {
-							["Details"] = {
-								["水之盾"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["WhoDamaged"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["毒性之咬 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["毒性之咬"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電之盾"] = {
-									["count"] = 272,
-								},
-								["近戰"] = {
-									["count"] = 146,
-								},
-								["閃電吐息"] = {
-									["count"] = 638,
-								},
-							},
-							["amount"] = 1056,
-						},
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-						["Melee"] = 0,
-						["Physical"] = 0,
-					},
-					["TimeHealing"] = {
-					},
-					["Dispelled"] = 0,
-					["WhoHealed"] = {
-					},
-					["HealedWho"] = {
-					},
-					["CCBreak"] = 0,
-					["ElementTakenAbsorb"] = {
-					},
-					["FDamage"] = 0,
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-						["水之盾"] = {
-							["Details"] = {
-								["騎風"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["法力之泉"] = {
-							["Details"] = {
-								["法力之泉圖騰 V <騎風>"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["PartialAbsorb"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 2,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 2,
-							["amount"] = 0,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 0,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 0,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["ActiveTime"] = 10.08,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["冰霜震擊"] = {
-									["count"] = 0,
-								},
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["地震術"] = {
-									["count"] = 1.5,
-								},
-								["近戰"] = {
-									["count"] = 8.579999999999998,
-								},
-							},
-							["amount"] = 10.08,
-						},
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電吐息 (地震術)"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 1,
-						},
-					},
-					["ElementTakenResist"] = {
-					},
-					["Heals"] = {
-					},
-					["Interrupts"] = 1,
-					["EnergyGained"] = {
-					},
-					["PartialResist"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 2,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 2,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 1,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 1,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["Healing"] = 0,
-					["RageGained"] = {
-					},
-					["OverHeals"] = {
-					},
-					["Attacks"] = {
-						["冰霜震擊"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["風暴打擊"] = {
-							["Details"] = {
-								["Parry"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Dodge"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["烈焰震擊"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["地震術"] = {
-							["Details"] = {
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 810,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 810,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 810,
-						},
-						["風怒攻擊"] = {
-							["Details"] = {
-								["Hit (被格擋)"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Crit"] = {
-									["max"] = 1383,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 1383,
-								},
-								["Hit"] = {
-									["max"] = 641,
-									["min"] = 0,
-									["count"] = 3,
-									["amount"] = 1284,
-								},
-							},
-							["count"] = 4,
-							["amount"] = 2667,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 393,
-									["min"] = 0,
-									["count"] = 3,
-									["amount"] = 947,
-								},
-								["Hit (被格擋)"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Dodge"] = {
-									["count"] = 1,
-									["amount"] = 0,
-								},
-								["Crit"] = {
-									["max"] = 727,
-									["min"] = 0,
-									["count"] = 5,
-									["amount"] = 2575,
-								},
-								["Parry"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 9,
-							["amount"] = 3522,
-						},
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["Tick"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["RageGain"] = 0,
-					["FDamagedWho"] = {
-					},
-					["TimeDamage"] = 10.08,
-					["TimeDamaging"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["冰霜震擊"] = {
-									["count"] = 0,
-								},
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["地震術"] = {
-									["count"] = 1.5,
-								},
-								["近戰"] = {
-									["count"] = 8.579999999999998,
-								},
-							},
-							["amount"] = 10.08,
-						},
-					},
-					["ManaGain"] = 0,
-					["DOT_Time"] = 0,
-					["DispelledWho"] = {
-					},
-				},
-				["Fight4"] = {
-					["DOTs"] = {
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["迅翼絞碎者"] = {
-									["count"] = 0,
-								},
-								["扭曲追趕者"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 1691,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-						["Melee"] = {
-							["Details"] = {
-								["Dodge"] = {
-									["count"] = 1,
-								},
-								["Hit"] = {
-									["count"] = 6,
-								},
-								["Miss"] = {
-									["count"] = 0,
-								},
-								["Crit"] = {
-									["count"] = 0,
-								},
-								["Parry"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 8,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 0,
-								},
-								["Tick"] = {
-									["count"] = 5,
-								},
-								["Hit"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 6,
-						},
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["ElementTaken"] = {
-						["Melee"] = 1017,
-						["Nature"] = 674,
-					},
-					["HOTs"] = {
-					},
-					["Damage"] = 6654,
-					["ElementDoneAbsorb"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["PartialBlock"] = {
-					},
-					["DamagedWho"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 814,
-								},
-								["風怒攻擊"] = {
-									["count"] = 2032,
-								},
-								["近戰"] = {
-									["count"] = 3808,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 6654,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["FAttacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["ElementDone"] = {
-						["Fire"] = 0,
-						["Physical"] = 2032,
-						["Melee"] = 3808,
-						["Nature"] = 814,
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementHitsDone"] = {
-						["Fire"] = {
-							["Details"] = {
-								["Tick"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["Physical"] = {
-							["Details"] = {
-								["Parry"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 6,
-								},
-								["Crit"] = {
-									["count"] = 0,
-								},
-								["Dodge"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 6,
-						},
-						["Melee"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 2,
-								},
-								["Hit"] = {
-									["count"] = 9,
-								},
-								["Dodge"] = {
-									["count"] = 1,
-								},
-								["Block"] = {
-									["count"] = 0,
-								},
-								["Crit"] = {
-									["count"] = 2,
-								},
-								["Parry"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 14,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Crit"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 1,
-						},
-					},
-					["ManaGainedFrom"] = {
-						["法力之泉圖騰 V <騎風>"] = {
-							["Details"] = {
-								["法力之泉"] = {
-									["count"] = 240,
-								},
-							},
-							["amount"] = 240,
-						},
-						["騎風"] = {
-							["Details"] = {
-								["水之盾"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["WhoDamaged"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["毒性之咬 (傷害/跳)"] = {
-									["count"] = 203,
-								},
-								["近戰"] = {
-									["count"] = 1017,
-								},
-								["毒性之咬"] = {
-									["count"] = 471,
-								},
-							},
-							["amount"] = 1691,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電之盾"] = {
-									["count"] = 0,
-								},
-								["閃電吐息"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-						["Melee"] = 0,
-					},
-					["TimeHealing"] = {
-					},
-					["Dispelled"] = 0,
-					["WhoHealed"] = {
-					},
-					["HealedWho"] = {
-					},
-					["CCBreak"] = 0,
-					["ElementTakenAbsorb"] = {
-					},
-					["FDamage"] = 0,
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-						["水之盾"] = {
-							["Details"] = {
-								["騎風"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["法力之泉"] = {
-							["Details"] = {
-								["法力之泉圖騰 V <騎風>"] = {
-									["count"] = 240,
-								},
-							},
-							["amount"] = 240,
-						},
-					},
-					["PartialAbsorb"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 5,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 5,
-							["amount"] = 0,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 8,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 8,
-							["amount"] = 0,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 0,
-						},
-					},
-					["ActiveTime"] = 14.92,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 1.43,
-								},
-								["近戰"] = {
-									["count"] = 13.49,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 14.92,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電吐息 (地震術)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ElementTakenResist"] = {
-					},
-					["Heals"] = {
-					},
-					["Interrupts"] = 0,
-					["EnergyGained"] = {
-					},
-					["PartialResist"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 5,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 5,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 8,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 8,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 1,
-						},
-					},
-					["Healing"] = 0,
-					["RageGained"] = {
-					},
-					["OverHeals"] = {
-					},
-					["Attacks"] = {
-						["風暴打擊"] = {
-							["Details"] = {
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["烈焰震擊"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["地震術"] = {
-							["Details"] = {
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 814,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 814,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 814,
-						},
-						["風怒攻擊"] = {
-							["Details"] = {
-								["Parry"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 371,
-									["min"] = 0,
-									["count"] = 6,
-									["amount"] = 2032,
-								},
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Dodge"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 6,
-							["amount"] = 2032,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["Dodge"] = {
-									["count"] = 1,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 415,
-									["min"] = 0,
-									["count"] = 9,
-									["amount"] = 2317,
-								},
-								["Hit (被格擋)"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Miss"] = {
-									["count"] = 2,
-									["amount"] = 0,
-								},
-								["Crit"] = {
-									["max"] = 784,
-									["min"] = 0,
-									["count"] = 2,
-									["amount"] = 1491,
-								},
-								["Parry"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 14,
-							["amount"] = 3808,
-						},
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["Tick"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["RageGain"] = 0,
-					["FDamagedWho"] = {
-					},
-					["TimeDamage"] = 14.92,
-					["TimeDamaging"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 1.43,
-								},
-								["近戰"] = {
-									["count"] = 13.49,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 14.92,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ManaGain"] = 240,
-					["DOT_Time"] = 0,
-					["DispelledWho"] = {
-					},
-				},
-				["LastFightData"] = {
-					["DOTs"] = {
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["扭曲追趕者"] = {
-									["count"] = 0,
-								},
-								["迅翼絞碎者"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 1265,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-						["Melee"] = {
-							["Details"] = {
-								["Dodge"] = {
-									["count"] = 1,
-								},
-								["Miss"] = {
-									["count"] = 0,
-								},
-								["Crit"] = {
-									["count"] = 2,
-								},
-								["Hit"] = {
-									["count"] = 3,
-								},
-							},
-							["amount"] = 6,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 0,
-								},
-								["Tick"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["ElementTaken"] = {
-						["Melee"] = 1265,
-						["Nature"] = 0,
-					},
-					["HOTs"] = {
-					},
-					["Damage"] = 7061,
-					["ElementDoneAbsorb"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["PartialBlock"] = {
-					},
-					["DamagedWho"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["日怒射手"] = {
-							["Details"] = {
-								["地震術"] = {
-									["count"] = 822,
-								},
-								["風怒攻擊"] = {
-									["count"] = 2292,
-								},
-								["近戰"] = {
-									["count"] = 3947,
-								},
-							},
-							["amount"] = 7061,
-						},
-					},
-					["FAttacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["ElementDone"] = {
-						["Fire"] = 0,
-						["Physical"] = 2292,
-						["Melee"] = 3947,
-						["Nature"] = 822,
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementHitsDone"] = {
-						["Fire"] = {
-							["Details"] = {
-								["Tick"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["Physical"] = {
-							["Details"] = {
-								["Crit"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 4,
-								},
-							},
-							["amount"] = 4,
-						},
-						["Melee"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 1,
-								},
-								["Hit"] = {
-									["count"] = 5,
-								},
-								["Block"] = {
-									["count"] = 1,
-								},
-								["Crit"] = {
-									["count"] = 4,
-								},
-								["Parry"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 11,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 1,
-						},
-					},
-					["ManaGainedFrom"] = {
-						["法力之泉圖騰 V <騎風>"] = {
-							["Details"] = {
-								["法力之泉"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["騎風"] = {
-							["Details"] = {
-								["水之盾"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["WhoDamaged"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["毒性之咬 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["毒性之咬"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電之盾"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["閃電吐息"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["日怒射手"] = {
-							["Details"] = {
-								["近戰"] = {
-									["count"] = 1265,
-								},
-							},
-							["amount"] = 1265,
-						},
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-						["Melee"] = 49,
-					},
-					["TimeHealing"] = {
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["Dispelled"] = 0,
-					["WhoHealed"] = {
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["HealedWho"] = {
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["CCBreak"] = 0,
-					["ElementTakenAbsorb"] = {
-					},
-					["FDamage"] = 0,
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-						["水之盾"] = {
-							["Details"] = {
-								["騎風"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["法力之泉"] = {
-							["Details"] = {
-								["法力之泉圖騰 V <騎風>"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["PartialAbsorb"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 6,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 6,
-							["amount"] = 0,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["ActiveTime"] = 10.36,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["日怒射手"] = {
-							["Details"] = {
-								["近戰"] = {
-									["count"] = 8.86,
-								},
-								["地震術"] = {
-									["count"] = 1.5,
-								},
-							},
-							["amount"] = 10.36,
-						},
-					},
-					["WhoDispelled"] = {
-						["騎風"] = {
-							["Details"] = {
-								["毒性之咬 (消毒術)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["InterruptData"] = {
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電吐息 (地震術)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ElementTakenResist"] = {
-					},
-					["Heals"] = {
-						["治療波"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["Interrupts"] = 0,
-					["EnergyGained"] = {
-					},
-					["PartialResist"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 6,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 6,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["Healing"] = 0,
-					["RageGained"] = {
-					},
-					["OverHeals"] = {
-					},
-					["Attacks"] = {
-						["風暴打擊"] = {
-							["Details"] = {
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["烈焰震擊"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["地震術"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 822,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 822,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 822,
-						},
-						["風怒攻擊"] = {
-							["Details"] = {
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 626,
-									["min"] = 0,
-									["count"] = 4,
-									["amount"] = 2292,
-								},
-							},
-							["count"] = 4,
-							["amount"] = 2292,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 1,
-									["amount"] = 0,
-								},
-								["Hit (被格擋)"] = {
-									["max"] = 351,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 351,
-								},
-								["Hit"] = {
-									["max"] = 420,
-									["min"] = 0,
-									["count"] = 4,
-									["amount"] = 969,
-								},
-								["Crit"] = {
-									["max"] = 818,
-									["min"] = 0,
-									["count"] = 4,
-									["amount"] = 2627,
-								},
-								["Parry"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 10,
-							["amount"] = 3947,
-						},
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["Tick"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["RageGain"] = 0,
-					["FDamagedWho"] = {
-					},
-					["TimeDamage"] = 10.36,
-					["TimeDamaging"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["日怒射手"] = {
-							["Details"] = {
-								["近戰"] = {
-									["count"] = 8.86,
-								},
-								["地震術"] = {
-									["count"] = 1.5,
-								},
-							},
-							["amount"] = 10.36,
-						},
-					},
-					["ManaGain"] = 0,
-					["DOT_Time"] = 0,
-					["DispelledWho"] = {
-						["騎風"] = {
-							["Details"] = {
-								["毒性之咬 (消毒術)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-				},
-				["Fight1"] = {
-					["DOTs"] = {
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["扭曲追趕者"] = {
-									["count"] = 0,
-								},
-								["迅翼絞碎者"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ElementDoneResist"] = {
-					},
-					["Ressed"] = 0,
-					["DamageTaken"] = 1265,
-					["RageGainedFrom"] = {
-					},
-					["ElementHitsTaken"] = {
-						["Melee"] = {
-							["Details"] = {
-								["Dodge"] = {
-									["count"] = 1,
-								},
-								["Miss"] = {
-									["count"] = 0,
-								},
-								["Crit"] = {
-									["count"] = 2,
-								},
-								["Hit"] = {
-									["count"] = 3,
-								},
-							},
-							["amount"] = 6,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 0,
-								},
-								["Tick"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["DeathCount"] = 0,
-					["HOT_Time"] = 0,
-					["ElementTakenBlock"] = {
-					},
-					["RunicPowerGain"] = 0,
-					["ElementTaken"] = {
-						["Melee"] = 1265,
-						["Nature"] = 0,
-					},
-					["HOTs"] = {
-					},
-					["Damage"] = 7061,
-					["ElementDoneAbsorb"] = {
-					},
-					["TimeHeal"] = 0,
-					["RessedWho"] = {
-					},
-					["Dispels"] = 0,
-					["PartialBlock"] = {
-					},
-					["DamagedWho"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["日怒射手"] = {
-							["Details"] = {
-								["地震術"] = {
-									["count"] = 822,
-								},
-								["風怒攻擊"] = {
-									["count"] = 2292,
-								},
-								["近戰"] = {
-									["count"] = 3947,
-								},
-							},
-							["amount"] = 7061,
-						},
-					},
-					["FAttacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["ElementDone"] = {
-						["Fire"] = 0,
-						["Physical"] = 2292,
-						["Melee"] = 3947,
-						["Nature"] = 822,
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementHitsDone"] = {
-						["Fire"] = {
-							["Details"] = {
-								["Tick"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["Physical"] = {
-							["Details"] = {
-								["Crit"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 4,
-								},
-							},
-							["amount"] = 4,
-						},
-						["Melee"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 1,
-								},
-								["Hit"] = {
-									["count"] = 5,
-								},
-								["Block"] = {
-									["count"] = 1,
-								},
-								["Crit"] = {
-									["count"] = 4,
-								},
-								["Parry"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 11,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 0,
-								},
-								["Hit"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 1,
-						},
-					},
-					["ManaGainedFrom"] = {
-						["法力之泉圖騰 V <騎風>"] = {
-							["Details"] = {
-								["法力之泉"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["騎風"] = {
-							["Details"] = {
-								["水之盾"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["WhoDamaged"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["毒性之咬 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["毒性之咬"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電之盾"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["閃電吐息"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["日怒射手"] = {
-							["Details"] = {
-								["近戰"] = {
-									["count"] = 1265,
-								},
-							},
-							["amount"] = 1265,
-						},
-					},
-					["EnergyGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBroken"] = {
-					},
-					["ElementDoneBlock"] = {
-						["Melee"] = 49,
-					},
-					["TimeHealing"] = {
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["Dispelled"] = 0,
-					["WhoHealed"] = {
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["HealedWho"] = {
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["CCBreak"] = 0,
-					["ElementTakenAbsorb"] = {
-					},
-					["FDamage"] = 0,
-					["EnergyGain"] = 0,
-					["ManaGained"] = {
-						["水之盾"] = {
-							["Details"] = {
-								["騎風"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["法力之泉"] = {
-							["Details"] = {
-								["法力之泉圖騰 V <騎風>"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["PartialAbsorb"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 6,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 6,
-							["amount"] = 0,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["ActiveTime"] = 10.36,
-					["Overhealing"] = 0,
-					["TimeSpent"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["日怒射手"] = {
-							["Details"] = {
-								["近戰"] = {
-									["count"] = 8.86,
-								},
-								["地震術"] = {
-									["count"] = 1.5,
-								},
-							},
-							["amount"] = 10.36,
-						},
-					},
-					["WhoDispelled"] = {
-						["騎風"] = {
-							["Details"] = {
-								["毒性之咬 (消毒術)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["InterruptData"] = {
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電吐息 (地震術)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ElementTakenResist"] = {
-					},
-					["Heals"] = {
-						["治療波"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["Interrupts"] = 0,
-					["EnergyGained"] = {
-					},
-					["PartialResist"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 6,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 6,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["Healing"] = 0,
-					["RageGained"] = {
-					},
-					["OverHeals"] = {
-					},
-					["Attacks"] = {
-						["風暴打擊"] = {
-							["Details"] = {
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["烈焰震擊"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["地震術"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 822,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 822,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 822,
-						},
-						["風怒攻擊"] = {
-							["Details"] = {
-								["Crit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 626,
-									["min"] = 0,
-									["count"] = 4,
-									["amount"] = 2292,
-								},
-							},
-							["count"] = 4,
-							["amount"] = 2292,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 1,
-									["amount"] = 0,
-								},
-								["Hit (被格擋)"] = {
-									["max"] = 351,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 351,
-								},
-								["Hit"] = {
-									["max"] = 420,
-									["min"] = 0,
-									["count"] = 4,
-									["amount"] = 969,
-								},
-								["Crit"] = {
-									["max"] = 818,
-									["min"] = 0,
-									["count"] = 4,
-									["amount"] = 2627,
-								},
-								["Parry"] = {
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 10,
-							["amount"] = 3947,
-						},
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["Tick"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["RageGain"] = 0,
-					["FDamagedWho"] = {
-					},
-					["TimeDamage"] = 10.36,
-					["TimeDamaging"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊"] = {
-									["count"] = 0,
-								},
-								["地震術"] = {
-									["count"] = 0,
-								},
-								["近戰"] = {
-									["count"] = 0,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["日怒射手"] = {
-							["Details"] = {
-								["近戰"] = {
-									["count"] = 8.86,
-								},
-								["地震術"] = {
-									["count"] = 1.5,
-								},
-							},
-							["amount"] = 10.36,
-						},
-					},
-					["ManaGain"] = 0,
-					["DOT_Time"] = 0,
-					["DispelledWho"] = {
-						["騎風"] = {
-							["Details"] = {
-								["毒性之咬 (消毒術)"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-				},
-				["OverallData"] = {
-					["DOTs"] = {
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["扭曲追趕者"] = {
-									["count"] = 132,
-								},
-								["迅翼絞碎者"] = {
-									["count"] = 69,
-								},
-							},
-							["amount"] = 201,
-						},
-					},
-					["ElementHitsTaken"] = {
-						["Melee"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 178,
-								},
-								["Dodge"] = {
-									["count"] = 27,
-								},
-								["Miss"] = {
-									["count"] = 12,
-								},
-								["Crit"] = {
-									["count"] = 14,
-								},
-								["Parry"] = {
-									["count"] = 13,
-								},
-							},
-							["amount"] = 244,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 8,
-								},
-								["Tick"] = {
-									["count"] = 103,
-								},
-								["Hit"] = {
-									["count"] = 112,
-								},
-							},
-							["amount"] = 223,
-						},
-					},
-					["DamageTaken"] = 89691,
-					["ElementTaken"] = {
-						["Melee"] = 35216,
-						["Nature"] = 54475,
-					},
-					["DOT_Time"] = 201,
-					["Damage"] = 349498,
-					["TimeHeal"] = 6,
-					["Dispels"] = 2,
-					["ElementDone"] = {
-						["Physical"] = 118943,
-						["Melee"] = 160214,
-						["Fire"] = 19919,
-						["Frost"] = 785,
-						["Nature"] = 49637,
-					},
-					["ManaGainedFrom"] = {
-						["騎風"] = {
-							["Details"] = {
-								["水之盾"] = {
-									["count"] = 4118,
-								},
-							},
-							["amount"] = 4118,
-						},
-						["法力之泉圖騰 V <騎風>"] = {
-							["Details"] = {
-								["法力之泉"] = {
-									["count"] = 3588,
-								},
-							},
-							["amount"] = 3588,
-						},
-					},
-					["WhoDamaged"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["毒性之咬 (傷害/跳)"] = {
-									["count"] = 4269,
-								},
-								["近戰"] = {
-									["count"] = 30343,
-								},
-								["毒性之咬"] = {
-									["count"] = 9818,
-								},
-							},
-							["amount"] = 44430,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電之盾"] = {
-									["count"] = 4790,
-								},
-								["近戰"] = {
-									["count"] = 3608,
-								},
-								["閃電吐息"] = {
-									["count"] = 35598,
-								},
-							},
-							["amount"] = 43996,
-						},
-						["日怒射手"] = {
-							["Details"] = {
-								["近戰"] = {
-									["count"] = 1265,
-								},
-							},
-							["amount"] = 1265,
-						},
-					},
-					["ElementDoneBlock"] = {
-						["Melee"] = 1119,
-						["Physical"] = 98,
-					},
-					["TimeHealing"] = {
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 6,
-								},
-							},
-							["amount"] = 6,
-						},
-					},
-					["Dispelled"] = 2,
-					["PartialResist"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 37,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 37,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 57,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 57,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 103,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 103,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 244,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 244,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 26,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 26,
-						},
-					},
-					["ManaGained"] = {
-						["水之盾"] = {
-							["Details"] = {
-								["騎風"] = {
-									["count"] = 4118,
-								},
-							},
-							["amount"] = 4118,
-						},
-						["法力之泉"] = {
-							["Details"] = {
-								["法力之泉圖騰 V <騎風>"] = {
-									["count"] = 3588,
-								},
-							},
-							["amount"] = 3588,
-						},
-					},
-					["PartialAbsorb"] = {
-						["閃電之盾"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 37,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 37,
-							["amount"] = 0,
-						},
-						["閃電吐息"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 57,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 57,
-							["amount"] = 0,
-						},
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 103,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 103,
-							["amount"] = 0,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 244,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 244,
-							["amount"] = 0,
-						},
-						["毒性之咬"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 26,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 26,
-							["amount"] = 0,
-						},
-					},
-					["ActiveTime"] = 585.3500000000006,
-					["InterruptData"] = {
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["閃電吐息 (地震術)"] = {
-									["count"] = 14,
-								},
-							},
-							["amount"] = 14,
-						},
-					},
-					["Heals"] = {
-						["治療波"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 2664,
-									["min"] = 2441,
-									["count"] = 4,
-									["amount"] = 10095,
-								},
-							},
-							["count"] = 4,
-							["amount"] = 10095,
-						},
-					},
-					["WhoDispelled"] = {
-						["騎風"] = {
-							["Details"] = {
-								["毒性之咬 (消毒術)"] = {
-									["count"] = 2,
-								},
-							},
-							["amount"] = 2,
-						},
-					},
-					["ElementHitsDone"] = {
-						["Physical"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 203,
-								},
-								["Dodge"] = {
-									["count"] = 5,
-								},
-								["Block"] = {
-									["count"] = 2,
-								},
-								["Crit"] = {
-									["count"] = 45,
-								},
-								["Parry"] = {
-									["count"] = 2,
-								},
-							},
-							["amount"] = 257,
-						},
-						["Melee"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 47,
-								},
-								["Hit"] = {
-									["count"] = 314,
-								},
-								["Dodge"] = {
-									["count"] = 17,
-								},
-								["Block"] = {
-									["count"] = 23,
-								},
-								["Crit"] = {
-									["count"] = 135,
-								},
-								["Parry"] = {
-									["count"] = 19,
-								},
-							},
-							["amount"] = 555,
-						},
-						["Fire"] = {
-							["Details"] = {
-								["Tick"] = {
-									["count"] = 67,
-								},
-								["Hit"] = {
-									["count"] = 23,
-								},
-							},
-							["amount"] = 90,
-						},
-						["Frost"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 1,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 1,
-								},
-								["Crit"] = {
-									["count"] = 5,
-								},
-								["Hit"] = {
-									["count"] = 47,
-								},
-							},
-							["amount"] = 53,
-						},
-					},
-					["HealedWho"] = {
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 10095,
-								},
-							},
-							["amount"] = 10095,
-						},
-					},
-					["Healing"] = 10095,
-					["TimeSpent"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["閃電箭"] = {
-									["count"] = 1.5,
-								},
-								["冰霜震擊"] = {
-									["count"] = 1.5,
-								},
-								["風暴打擊"] = {
-									["count"] = 19.34,
-								},
-								["烈焰震擊"] = {
-									["count"] = 17.05,
-								},
-								["地震術"] = {
-									["count"] = 24.53,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0.66,
-								},
-								["近戰"] = {
-									["count"] = 288.71,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 39.7,
-								},
-							},
-							["amount"] = 392.9900000000003,
-						},
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 6,
-								},
-							},
-							["amount"] = 6,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 10.76,
-								},
-								["烈焰震擊"] = {
-									["count"] = 12,
-								},
-								["地震術"] = {
-									["count"] = 12.18,
-								},
-								["近戰"] = {
-									["count"] = 120.82,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 20.24,
-								},
-							},
-							["amount"] = 176,
-						},
-						["日怒射手"] = {
-							["Details"] = {
-								["近戰"] = {
-									["count"] = 8.86,
-								},
-								["地震術"] = {
-									["count"] = 1.5,
-								},
-							},
-							["amount"] = 10.36,
-						},
-					},
-					["Interrupts"] = 14,
-					["Attacks"] = {
-						["閃電箭"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 925,
-									["min"] = 925,
-									["count"] = 1,
-									["amount"] = 925,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 925,
-						},
-						["冰霜震擊"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 785,
-									["min"] = 785,
-									["count"] = 1,
-									["amount"] = 785,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 785,
-						},
-						["風暴打擊"] = {
-							["Details"] = {
-								["Parry"] = {
-									["count"] = 1,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 446,
-									["min"] = 170,
-									["count"] = 70,
-									["amount"] = 20818,
-								},
-								["Crit"] = {
-									["max"] = 916,
-									["min"] = 343,
-									["count"] = 19,
-									["amount"] = 10209,
-								},
-								["Dodge"] = {
-									["count"] = 2,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 92,
-							["amount"] = 31027,
-						},
-						["烈焰震擊"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 499,
-									["min"] = 451,
-									["count"] = 23,
-									["amount"] = 10474,
-								},
-							},
-							["count"] = 23,
-							["amount"] = 10474,
-						},
-						["地震術"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 1,
-									["amount"] = 0,
-								},
-								["Crit"] = {
-									["max"] = 1542,
-									["min"] = 1217,
-									["count"] = 5,
-									["amount"] = 6678,
-								},
-								["Hit"] = {
-									["max"] = 1038,
-									["min"] = 797,
-									["count"] = 46,
-									["amount"] = 42034,
-								},
-							},
-							["count"] = 52,
-							["amount"] = 48712,
-						},
-						["風怒攻擊"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 692,
-									["min"] = 291,
-									["count"] = 131,
-									["amount"] = 61349,
-								},
-								["Hit (被格擋)"] = {
-									["max"] = 565,
-									["min"] = 488,
-									["count"] = 2,
-									["amount"] = 1053,
-								},
-								["Dodge"] = {
-									["count"] = 3,
-									["amount"] = 0,
-								},
-								["Crit"] = {
-									["max"] = 1383,
-									["min"] = 618,
-									["count"] = 26,
-									["amount"] = 25514,
-								},
-								["Parry"] = {
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 163,
-							["amount"] = 87916,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 47,
-									["amount"] = 0,
-								},
-								["Hit"] = {
-									["max"] = 446,
-									["min"] = 139,
-									["count"] = 291,
-									["amount"] = 78981,
-								},
-								["Hit (被格擋)"] = {
-									["max"] = 372,
-									["min"] = 120,
-									["count"] = 23,
-									["amount"] = 6316,
-								},
-								["Dodge"] = {
-									["count"] = 17,
-									["amount"] = 0,
-								},
-								["Crit"] = {
-									["max"] = 894,
-									["min"] = 297,
-									["count"] = 135,
-									["amount"] = 74917,
-								},
-								["Parry"] = {
-									["count"] = 19,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 532,
-							["amount"] = 160214,
-						},
-						["烈焰震擊 (傷害/跳)"] = {
-							["Details"] = {
-								["Tick"] = {
-									["max"] = 162,
-									["min"] = 139,
-									["count"] = 67,
-									["amount"] = 9445,
-								},
-							},
-							["count"] = 67,
-							["amount"] = 9445,
-						},
-					},
-					["HealingTaken"] = 10095,
-					["DamagedWho"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["閃電箭"] = {
-									["count"] = 925,
-								},
-								["冰霜震擊"] = {
-									["count"] = 785,
-								},
-								["風暴打擊"] = {
-									["count"] = 19684,
-								},
-								["烈焰震擊"] = {
-									["count"] = 6344,
-								},
-								["地震術"] = {
-									["count"] = 32005,
-								},
-								["風怒攻擊"] = {
-									["count"] = 58240,
-								},
-								["近戰"] = {
-									["count"] = 108041,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 6192,
-								},
-							},
-							["amount"] = 232216,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 11343,
-								},
-								["烈焰震擊"] = {
-									["count"] = 4130,
-								},
-								["地震術"] = {
-									["count"] = 15885,
-								},
-								["風怒攻擊"] = {
-									["count"] = 27384,
-								},
-								["近戰"] = {
-									["count"] = 48226,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 3253,
-								},
-							},
-							["amount"] = 110221,
-						},
-						["日怒射手"] = {
-							["Details"] = {
-								["地震術"] = {
-									["count"] = 822,
-								},
-								["風怒攻擊"] = {
-									["count"] = 2292,
-								},
-								["近戰"] = {
-									["count"] = 3947,
-								},
-							},
-							["amount"] = 7061,
-						},
-					},
-					["TimeDamage"] = 579.3500000000006,
-					["TimeDamaging"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["閃電箭"] = {
-									["count"] = 1.5,
-								},
-								["冰霜震擊"] = {
-									["count"] = 1.5,
-								},
-								["風暴打擊"] = {
-									["count"] = 19.34,
-								},
-								["烈焰震擊"] = {
-									["count"] = 17.05,
-								},
-								["地震術"] = {
-									["count"] = 24.53,
-								},
-								["風怒攻擊"] = {
-									["count"] = 0.66,
-								},
-								["近戰"] = {
-									["count"] = 288.71,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 39.7,
-								},
-							},
-							["amount"] = 392.9900000000003,
-						},
-						["迅翼絞碎者"] = {
-							["Details"] = {
-								["風暴打擊"] = {
-									["count"] = 10.76,
-								},
-								["烈焰震擊"] = {
-									["count"] = 12,
-								},
-								["地震術"] = {
-									["count"] = 12.18,
-								},
-								["近戰"] = {
-									["count"] = 120.82,
-								},
-								["烈焰震擊 (傷害/跳)"] = {
-									["count"] = 20.24,
-								},
-							},
-							["amount"] = 176,
-						},
-						["日怒射手"] = {
-							["Details"] = {
-								["近戰"] = {
-									["count"] = 8.86,
-								},
-								["地震術"] = {
-									["count"] = 1.5,
-								},
-							},
-							["amount"] = 10.36,
-						},
-					},
-					["ManaGain"] = 7706,
-					["WhoHealed"] = {
-						["騎風"] = {
-							["Details"] = {
-								["治療波"] = {
-									["count"] = 10095,
-								},
-							},
-							["amount"] = 10095,
-						},
-					},
-					["DispelledWho"] = {
-						["騎風"] = {
-							["Details"] = {
-								["毒性之咬 (消毒術)"] = {
-									["count"] = 2,
-								},
-							},
-							["amount"] = 2,
-						},
-					},
-				},
-			},
-			["LastHealTime"] = 64155.347,
-			["TimeLast"] = {
-				["TimeHeal"] = 64154.397,
-				["Dispelled"] = 57807.831,
-				["Dispels"] = 57807.831,
-				["OVERALL"] = 67042.446,
-				["DamageTaken"] = 67041.446,
-				["TimeDamage"] = 67042.446,
-				["HealingTaken"] = 64154.397,
-				["ActiveTime"] = 67042.446,
-				["Interrupts"] = 66981.445,
-				["Healing"] = 64154.397,
-				["ManaGain"] = 66151.438,
-				["DOT_Time"] = 66038.43400000001,
-				["Damage"] = 67042.446,
-			},
-			["UnitLockout"] = 57089.843,
-			["LastAbility"] = 65856.144,
-		},
-		["強效火焰元素 <騎風>"] = {
-			["GUID"] = "Creature-0-4490-530-55-15438-0000491959",
-			["TimeLast"] = {
-				["ActiveTime"] = 57263.832,
-				["TimeDamage"] = 57263.832,
-				["OVERALL"] = 57266.832,
-				["DamageTaken"] = 57266.832,
-				["Damage"] = 57263.832,
-			},
-			["LastAttackedBy"] = "扭曲追趕者",
+			["LastAttackedBy"] = "Environment",
 			["LastEventType"] = {
 				"DAMAGE", -- [1]
 				"DAMAGE", -- [2]
@@ -9807,86 +651,7139 @@ RecountPerCharDB = {
 				"DAMAGE", -- [23]
 				"DAMAGE", -- [24]
 				"DAMAGE", -- [25]
+				"DAMAGE", -- [26]
+				"DAMAGE", -- [27]
+				"DAMAGE", -- [28]
+				"DAMAGE", -- [29]
+				"DAMAGE", -- [30]
+				"DAMAGE", -- [31]
+				"DAMAGE", -- [32]
+				"DAMAGE", -- [33]
+				"DAMAGE", -- [34]
+				"DAMAGE", -- [35]
+				"DAMAGE", -- [36]
+				"DAMAGE", -- [37]
+				"DAMAGE", -- [38]
+				"DAMAGE", -- [39]
+				"DAMAGE", -- [40]
+				"DAMAGE", -- [41]
+				"DAMAGE", -- [42]
+				"DAMAGE", -- [43]
+				"DAMAGE", -- [44]
+				"DAMAGE", -- [45]
+				"DAMAGE", -- [46]
+				"DAMAGE", -- [47]
+				"DAMAGE", -- [48]
+				"DAMAGE", -- [49]
+				"DAMAGE", -- [50]
+			},
+			["TimeWindows"] = {
+				["Interrupts"] = {
+					7, -- [1]
+				},
+				["Healing"] = {
+					0, -- [1]
+				},
+				["DOT_Time"] = {
+					150, -- [1]
+				},
+				["ActiveTime"] = {
+					678.4800000000005, -- [1]
+				},
+				["TimeDamage"] = {
+					678.4800000000005, -- [1]
+				},
+				["ManaGain"] = {
+					12077, -- [1]
+				},
+				["DamageTaken"] = {
+					57431, -- [1]
+				},
+				["Damage"] = {
+					486769, -- [1]
+				},
+			},
+			["enClass"] = "SHAMAN",
+			["unit"] = "騎風",
+			["TimeLast"] = {
+				["OVERALL"] = 109804.153,
+				["DamageTaken"] = 109804.153,
+				["Interrupts"] = 109079.149,
+				["Healing"] = 108752.156,
+				["TimeDamage"] = 109326.156,
+				["ActiveTime"] = 109326.156,
+				["ManaGain"] = 109200.152,
+				["DOT_Time"] = 109326.156,
+				["Damage"] = 109326.156,
+			},
+			["level"] = 70,
+			["LastDamageAbility"] = "Falling",
+			["LastFightIn"] = 77,
+			["LastEventHealthMax"] = {
+				8379, -- [1]
+				8379, -- [2]
+				8379, -- [3]
+				8379, -- [4]
+				8379, -- [5]
+				8379, -- [6]
+				8379, -- [7]
+				8379, -- [8]
+				8379, -- [9]
+				8379, -- [10]
+				8379, -- [11]
+				8379, -- [12]
+				8379, -- [13]
+				8379, -- [14]
+				8379, -- [15]
+				8379, -- [16]
+				8379, -- [17]
+				8379, -- [18]
+				8379, -- [19]
+				8379, -- [20]
+				8379, -- [21]
+				8379, -- [22]
+				8379, -- [23]
+				8379, -- [24]
+				8379, -- [25]
+				8379, -- [26]
+				8379, -- [27]
+				8379, -- [28]
+				8379, -- [29]
+				8379, -- [30]
+				8379, -- [31]
+				8379, -- [32]
+				8379, -- [33]
+				8379, -- [34]
+				8379, -- [35]
+				8379, -- [36]
+				8379, -- [37]
+				8379, -- [38]
+				8379, -- [39]
+				8379, -- [40]
+				8379, -- [41]
+				8379, -- [42]
+				8379, -- [43]
+				8379, -- [44]
+				8379, -- [45]
+				8379, -- [46]
+				8379, -- [47]
+				8379, -- [48]
+				8379, -- [49]
+				8379, -- [50]
+			},
+			["type"] = "Self",
+			["FightsSaved"] = 5,
+			["GuardianReverseGUIDs"] = {
+				["大地之力圖騰 VI"] = {
+					["LatestGuardian"] = 2,
+					["GUIDs"] = {
+						"Creature-0-4490-0-11466-15479-000049DDE3", -- [1]
+						"Creature-0-4490-0-11466-15479-000049E110", -- [2]
+						[0] = "Creature-0-4490-0-11466-15479-000049DD57",
+					},
+				},
+				["土元素圖騰"] = {
+					["LatestGuardian"] = 0,
+					["GUIDs"] = {
+						[0] = "Creature-0-4490-0-11466-15430-000049E11D",
+					},
+				},
+				["強效火焰元素"] = {
+					["LatestGuardian"] = 0,
+					["GUIDs"] = {
+						[0] = "Creature-0-4490-0-11466-15438-000049E23F",
+					},
+				},
+				["法力之泉圖騰 V"] = {
+					["LatestGuardian"] = 0,
+					["GUIDs"] = {
+						[0] = "Creature-0-4490-0-11466-15489-000049DD58",
+					},
+				},
+				["火焰元素圖騰"] = {
+					["LatestGuardian"] = 0,
+					["GUIDs"] = {
+						[0] = "Creature-0-4490-0-11466-15439-000049E23F",
+					},
+				},
+				["風之優雅圖騰 III"] = {
+					["LatestGuardian"] = 0,
+					["GUIDs"] = {
+						[0] = "Creature-0-4490-0-11466-15463-000049E3B1",
+					},
+				},
+				["風怒圖騰"] = {
+					["LatestGuardian"] = 0,
+					["GUIDs"] = {
+						[0] = "Creature-0-4490-0-11466-6112-000049E3B0",
+					},
+				},
+				["風怒圖騰 V"] = {
+					["LatestGuardian"] = 2,
+					["GUIDs"] = {
+						"Creature-0-4490-0-11466-15497-000049DDE2", -- [1]
+						"Creature-0-4490-0-11466-15497-000049E10F", -- [2]
+						[0] = "Creature-0-4490-0-11466-15497-000049DD56",
+					},
+				},
+				["強效土元素"] = {
+					["LatestGuardian"] = 0,
+					["GUIDs"] = {
+						[0] = "Creature-0-4490-0-11466-15352-000049E11D",
+					},
+				},
+			},
+			["LastDamageTaken"] = 559,
+			["Owner"] = false,
+			["Pet"] = {
+				"風怒圖騰 V <騎風>", -- [1]
+				"大地之力圖騰 VI <騎風>", -- [2]
+				"法力之泉圖騰 V <騎風>", -- [3]
+				"土元素圖騰 <騎風>", -- [4]
+				"強效土元素 <騎風>", -- [5]
+				"火焰元素圖騰 <騎風>", -- [6]
+				"強效火焰元素 <騎風>", -- [7]
+				"風怒圖騰 <騎風>", -- [8]
+				"風之優雅圖騰 III <騎風>", -- [9]
+			},
+			["NextEventNum"] = 35,
+			["LastDamageTime"] = 109327.039,
+			["LastEvents"] = {
+				"不死的居民 近戰 騎風 Hit -154 (Physical)", -- [1]
+				"騎風 風怒攻擊 不死的居民 Hit -399 (Physical)", -- [2]
+				"騎風 近戰 不死的居民 Hit -453 (Physical)", -- [3]
+				"騎風 近戰 不死的居民 Hit -197 (Physical)", -- [4]
+				"不死的居民 近戰 騎風 Hit -180 (Physical)", -- [5]
+				"騎風 近戰 不死的居民 Crit -788 (Physical)", -- [6]
+				"不死的居民 近戰 騎風 Miss (1)", -- [7]
+				"騎風 近戰 不死的居民 Miss (1)", -- [8]
+				"騎風 近戰 不死的居民 Hit -367 (Physical)", -- [9]
+				"騎風 風怒攻擊 不死的居民 Crit -1421 (Physical)", -- [10]
+				"騎風 風怒攻擊 不死的居民 Hit -741 (Physical)", -- [11]
+				"騎風 烈焰震擊 不死的居民 Hit -464 (Fire)", -- [12]
+				"騎風 近戰 不死的居民 Crit -354 (Physical)", -- [13]
+				"騎風 烈焰震擊 (傷害/跳) 不死的居民 Tick -146 (Fire)", -- [14]
+				"騎風 近戰 不死的居民 Hit -389 (Physical)", -- [15]
+				"不死的居民 近戰 騎風 Hit -161 (Physical)", -- [16]
+				"騎風 近戰 不死的居民 Glancing -408 (Physical)", -- [17]
+				"騎風 風暴打擊 不死的居民 Hit -442 (Physical)", -- [18]
+				"騎風 風暴打擊 不死的居民 Hit -181 (Physical)", -- [19]
+				"不死的居民 近戰 騎風 Hit -162 (Physical)", -- [20]
+				"騎風 近戰 不死的居民 Hit -142 (Physical)", -- [21]
+				"騎風 烈焰震擊 (傷害/跳) 不死的居民 Tick -146 (Fire)", -- [22]
+				"騎風 近戰 不死的居民 Miss (1)", -- [23]
+				"不死的居民 近戰 騎風 Hit -197 (Physical)", -- [24]
+				"騎風 烈焰震擊 (傷害/跳) 不死的居民 Tick -145 (Fire)", -- [25]
+				"騎風 近戰 不死的居民 Crit -374 (Physical)", -- [26]
+				"不死的居民 近戰 騎風 Dodge (1)", -- [27]
+				"騎風 地震術 不死的居民 Hit -1046 (Nature)", -- [28]
+				"騎風 近戰 不死的居民 Hit -383 (Physical)", -- [29]
+				"騎風 風怒攻擊 不死的居民 Hit -672 (Physical)", -- [30]
+				"騎風 風怒攻擊 不死的居民 Hit -690 (Physical)", -- [31]
+				"Environment Falling 騎風 Hit -349 (Physical)", -- [32]
+				"森林食苔蛛 近戰 騎風 Dodge (1)", -- [33]
+				"Environment Falling 騎風 Hit -559 (Physical)", -- [34]
+				"騎風 近戰 不死的看守者 Hit -426 (Physical)", -- [35]
+				"不死的看守者 近戰 騎風 Miss (1)", -- [36]
+				"騎風 風暴打擊 不死的看守者 Hit -448 (Physical)", -- [37]
+				"騎風 風暴打擊 不死的看守者 Hit -180 (Physical)", -- [38]
+				"不死的看守者 衰弱打擊 騎風 Hit -216 (Physical)", -- [39]
+				"不死的看守者 近戰 騎風 Miss (1)", -- [40]
+				"騎風 地震術 不死的看守者 Hit -1033 (Nature)", -- [41]
+				"不死的看守者 近戰 騎風 Hit -94 (Physical)", -- [42]
+				"騎風 近戰 不死的看守者 Hit -52 (Physical)", -- [43]
+				"騎風 近戰 不死的看守者 Hit -107 (Physical)", -- [44]
+				"騎風 風怒攻擊 不死的看守者 Hit -172 (Physical)", -- [45]
+				"騎風 風怒攻擊 不死的看守者 Hit -153 (Physical)", -- [46]
+				"騎風 地震術 不死的居民 Hit -826 (Nature)", -- [47]
+				"騎風 近戰 不死的居民 Miss (1)", -- [48]
+				"騎風 近戰 不死的居民 Crit -381 (Physical)", -- [49]
+				"騎風 風怒攻擊 不死的居民 Parry (Physical)", -- [50]
+			},
+			["Name"] = "騎風",
+			["LastEventIncoming"] = {
+				true, -- [1]
+				false, -- [2]
+				false, -- [3]
+				false, -- [4]
+				true, -- [5]
+				false, -- [6]
+				true, -- [7]
+				false, -- [8]
+				false, -- [9]
+				false, -- [10]
+				false, -- [11]
+				false, -- [12]
+				false, -- [13]
+				false, -- [14]
+				false, -- [15]
+				true, -- [16]
+				false, -- [17]
+				false, -- [18]
+				false, -- [19]
+				true, -- [20]
+				false, -- [21]
+				false, -- [22]
+				false, -- [23]
+				true, -- [24]
+				false, -- [25]
+				false, -- [26]
+				true, -- [27]
+				false, -- [28]
+				false, -- [29]
+				false, -- [30]
+				false, -- [31]
+				true, -- [32]
+				true, -- [33]
+				true, -- [34]
+				false, -- [35]
+				true, -- [36]
+				false, -- [37]
+				false, -- [38]
+				true, -- [39]
+				true, -- [40]
+				false, -- [41]
+				true, -- [42]
+				false, -- [43]
+				false, -- [44]
+				false, -- [45]
+				false, -- [46]
+				false, -- [47]
+				false, -- [48]
+				false, -- [49]
+				false, -- [50]
+			},
+			["LastEventTimes"] = {
+				109292.822, -- [1]
+				109292.822, -- [2]
+				109294.188, -- [3]
+				109294.772, -- [4]
+				109294.772, -- [5]
+				109296.088, -- [6]
+				109296.855, -- [7]
+				109297.272, -- [8]
+				109298.088, -- [9]
+				109298.088, -- [10]
+				109298.088, -- [11]
+				109317.406, -- [12]
+				109320.206, -- [13]
+				109320.406, -- [14]
+				109320.406, -- [15]
+				109320.872, -- [16]
+				109322.422, -- [17]
+				109322.789, -- [18]
+				109322.789, -- [19]
+				109322.789, -- [20]
+				109323.139, -- [21]
+				109323.322, -- [22]
+				109324.706, -- [23]
+				109324.889, -- [24]
+				109326.406, -- [25]
+				109326.572, -- [26]
+				109326.889, -- [27]
+				109327.039, -- [28]
+				109327.039, -- [29]
+				109327.039, -- [30]
+				109327.039, -- [31]
+				109499.677, -- [32]
+				109731.701, -- [33]
+				109804.536, -- [34]
+				109266.837, -- [35]
+				109267.038, -- [36]
+				109267.187, -- [37]
+				109267.187, -- [38]
+				109267.321, -- [39]
+				109268.521, -- [40]
+				109268.688, -- [41]
+				109269.054, -- [42]
+				109269.054, -- [43]
+				109269.338, -- [44]
+				109269.338, -- [45]
+				109269.338, -- [46]
+				109291.538, -- [47]
+				109292.038, -- [48]
+				109292.822, -- [49]
+				109292.822, -- [50]
+			},
+			["Fights"] = {
+				["Fight5"] = {
+					["ElementDoneBlock"] = {
+						["Melee"] = 0,
+					},
+					["DOTs"] = {
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["不安寧的陰影"] = {
+									["count"] = 6,
+								},
+								["被詛咒的靈魂"] = {
+									["count"] = 0,
+								},
+								["哀嚎的幽靈"] = {
+									["count"] = 0,
+								},
+								["不死的居民"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 6,
+						},
+					},
+					["TimeSpent"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0.13,
+								},
+								["烈焰震擊"] = {
+									["count"] = 1.5,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 3.45,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 2.12,
+								},
+							},
+							["amount"] = 7.2,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["DamageTaken"] = 378,
+					["PartialResist"] = {
+						["Falling"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 3,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 3,
+						},
+						["衰弱打擊"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["ManaGained"] = {
+						["水之盾"] = {
+							["Details"] = {
+								["騎風"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["PartialAbsorb"] = {
+						["Falling"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 3,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 0,
+						},
+						["衰弱打擊"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["ActiveTime"] = 7.2,
+					["ElementTaken"] = {
+						["Shadow"] = 0,
+						["Fire"] = 0,
+						["Melee"] = 378,
+						["Physical"] = 0,
+					},
+					["DOT_Time"] = 6,
+					["Damage"] = 5792,
+					["InterruptData"] = {
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["暗影箭 (地震術)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["Interrupts"] = 0,
+					["Healing"] = 0,
+					["ManaGainedFrom"] = {
+						["騎風"] = {
+							["Details"] = {
+								["水之盾"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ElementDone"] = {
+						["Physical"] = 2831,
+						["Fire"] = 771,
+						["Melee"] = 2190,
+						["Nature"] = 0,
+					},
+					["Attacks"] = {
+						["風暴打擊"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 849,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 849,
+								},
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 849,
+						},
+						["烈焰震擊"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 472,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 472,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 472,
+						},
+						["地震術"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["風怒攻擊"] = {
+							["Details"] = {
+								["Parry"] = {
+									["count"] = 1,
+									["amount"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 709,
+									["min"] = 0,
+									["count"] = 3,
+									["amount"] = 1982,
+								},
+							},
+							["count"] = 4,
+							["amount"] = 1982,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 442,
+									["min"] = 0,
+									["count"] = 3,
+									["amount"] = 1058,
+								},
+								["Miss"] = {
+									["count"] = 1,
+									["amount"] = 0,
+								},
+								["Hit (被格擋)"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 761,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 1132,
+								},
+								["Parry"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 6,
+							["amount"] = 2190,
+						},
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 150,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 299,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 299,
+						},
+					},
+					["ElementHitsDone"] = {
+						["Physical"] = {
+							["Details"] = {
+								["Parry"] = {
+									["count"] = 1,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 3,
+								},
+							},
+							["amount"] = 5,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Tick"] = {
+									["count"] = 2,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 3,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 3,
+								},
+								["Miss"] = {
+									["count"] = 1,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Block"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 2,
+								},
+								["Parry"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 6,
+						},
+						["Nature"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["DamagedWho"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 849,
+								},
+								["烈焰震擊"] = {
+									["count"] = 472,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 1982,
+								},
+								["近戰"] = {
+									["count"] = 2190,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 299,
+								},
+							},
+							["amount"] = 5792,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["TimeDamage"] = 7.2,
+					["WhoDamaged"] = {
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗影鷲"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Environment"] = {
+							["Details"] = {
+								["Falling"] = {
+									["count"] = 0,
+								},
+								["Fire"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["暗影箭"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["衰弱打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 378,
+								},
+							},
+							["amount"] = 378,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ManaGain"] = 0,
+					["ElementHitsTaken"] = {
+						["Shadow"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Parry"] = {
+									["count"] = 0,
+								},
+								["Miss"] = {
+									["count"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 3,
+						},
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["TimeDamaging"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0.13,
+								},
+								["烈焰震擊"] = {
+									["count"] = 1.5,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 3.45,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 2.12,
+								},
+							},
+							["amount"] = 7.2,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+				},
+				["Fight2"] = {
+					["DOTs"] = {
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["不死的看守者"] = {
+									["count"] = 0,
+								},
+								["不安寧的陰影"] = {
+									["count"] = 0,
+								},
+								["被詛咒的靈魂"] = {
+									["count"] = 0,
+								},
+								["不死的居民"] = {
+									["count"] = 9,
+								},
+							},
+							["amount"] = 9,
+						},
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 520,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 3,
+								},
+								["Miss"] = {
+									["count"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 1,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 4,
+						},
+						["Shadow"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+						["Fire"] = {
+							["Details"] = {
+								["Tick"] = {
+									["count"] = 3,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 4,
+						},
+						["Physical"] = {
+							["Details"] = {
+								["Parry"] = {
+									["count"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 4,
+								},
+							},
+							["amount"] = 4,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["count"] = 1,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Miss"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 3,
+								},
+								["Block"] = {
+									["count"] = 1,
+								},
+								["Crit"] = {
+									["count"] = 2,
+								},
+								["Parry"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 8,
+						},
+						["Nature"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 1,
+						},
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+						["Physical"] = 0,
+						["Melee"] = 520,
+						["Shadow"] = 0,
+					},
+					["DOT_Time"] = 9,
+					["Damage"] = 5982,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+						["Fire"] = 901,
+						["Physical"] = 1985,
+						["Melee"] = 2050,
+						["Nature"] = 1046,
+					},
+					["PartialAbsorb"] = {
+						["衰弱打擊"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["Falling"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 4,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 4,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["DamagedWho"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 623,
+								},
+								["烈焰震擊"] = {
+									["count"] = 464,
+								},
+								["地震術"] = {
+									["count"] = 1046,
+								},
+								["風怒攻擊"] = {
+									["count"] = 1362,
+								},
+								["近戰"] = {
+									["count"] = 2050,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 437,
+								},
+							},
+							["amount"] = 5982,
+						},
+					},
+					["PartialBlock"] = {
+					},
+					["WhoDamaged"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Environment"] = {
+							["Details"] = {
+								["Falling"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["衰弱打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["暗影箭"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 520,
+								},
+							},
+							["amount"] = 520,
+						},
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+						["衰弱打擊"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["Falling"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 4,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 4,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+						["Melee"] = 50,
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+						["法力之泉圖騰 V <騎風>"] = {
+							["Details"] = {
+								["法力之泉"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["騎風"] = {
+							["Details"] = {
+								["水之盾"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+						["水之盾"] = {
+							["Details"] = {
+								["騎風"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["法力之泉"] = {
+							["Details"] = {
+								["法力之泉圖騰 V <騎風>"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0.37,
+								},
+								["烈焰震擊"] = {
+									["count"] = 1.5,
+								},
+								["地震術"] = {
+									["count"] = 0.47,
+								},
+								["近戰"] = {
+									["count"] = 4.9,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 1.88,
+								},
+							},
+							["amount"] = 9.120000000000001,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 9.120000000000001,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+						["風暴打擊"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 442,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 623,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 623,
+						},
+						["烈焰震擊"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 464,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 464,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 464,
+						},
+						["地震術"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 1046,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 1046,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 1046,
+						},
+						["風怒攻擊"] = {
+							["Details"] = {
+								["Parry"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 690,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 1362,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 1362,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["max"] = 408,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 408,
+								},
+								["Hit"] = {
+									["max"] = 389,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 772,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Miss"] = {
+									["count"] = 1,
+									["amount"] = 0,
+								},
+								["Hit (被格擋)"] = {
+									["max"] = 142,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 142,
+								},
+								["Block"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 374,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 728,
+								},
+								["Parry"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 7,
+							["amount"] = 2050,
+						},
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 146,
+									["min"] = 0,
+									["count"] = 3,
+									["amount"] = 437,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 437,
+						},
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 9.120000000000001,
+					["TimeDamaging"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0.37,
+								},
+								["烈焰震擊"] = {
+									["count"] = 1.5,
+								},
+								["地震術"] = {
+									["count"] = 0.47,
+								},
+								["近戰"] = {
+									["count"] = 4.9,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 1.88,
+								},
+							},
+							["amount"] = 9.120000000000001,
+						},
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["CurrentFightData"] = {
+					["DOTs"] = {
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["不死的看守者"] = {
+									["count"] = 0,
+								},
+								["被詛咒的靈魂"] = {
+									["count"] = 0,
+								},
+								["不安寧的陰影"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 0,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Miss"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Shadow"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+						["Physical"] = {
+							["Details"] = {
+								["Parry"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["count"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Miss"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 0,
+								},
+								["Block"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Tick"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Frost"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Nature"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+						["Shadow"] = 0,
+						["Melee"] = 0,
+						["Physical"] = 0,
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+						["Physical"] = 0,
+						["Melee"] = 0,
+						["Fire"] = 0,
+						["Frost"] = 0,
+						["Nature"] = 0,
+					},
+					["PartialAbsorb"] = {
+						["衰弱打擊"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["Falling"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["DamagedWho"] = {
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["冰霜震擊"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["PartialBlock"] = {
+					},
+					["WhoDamaged"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Environment"] = {
+							["Details"] = {
+								["Falling"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["暗影箭"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+						["衰弱打擊"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["Falling"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+						["Melee"] = 0,
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+						["騎風"] = {
+							["Details"] = {
+								["水之盾"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+						["水之盾"] = {
+							["Details"] = {
+								["騎風"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["冰霜震擊"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["暗影箭 (地震術)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 0,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+						["冰霜震擊"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["風暴打擊"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["烈焰震擊"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["地震術"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["風怒攻擊"] = {
+							["Details"] = {
+								["Parry"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Miss"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit (被格擋)"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 0,
+					["TimeDamaging"] = {
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["冰霜震擊"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["Fight3"] = {
+					["DOTs"] = {
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["被詛咒的靈魂"] = {
+									["count"] = 0,
+								},
+								["不死的居民"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 334,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Physical"] = {
+							["Details"] = {
+								["Miss"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 2,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Miss"] = {
+									["count"] = 1,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 3,
+						},
+						["Shadow"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+						["Fire"] = {
+							["Details"] = {
+								["Tick"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 2,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Block"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 1,
+								},
+								["Parry"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 4,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 3,
+								},
+								["Miss"] = {
+									["count"] = 2,
+								},
+								["Block"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 2,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 7,
+						},
+						["Nature"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 1,
+						},
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+						["Melee"] = 334,
+						["Shadow"] = 0,
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 5573,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+						["Fire"] = 0,
+						["Physical"] = 2561,
+						["Melee"] = 2186,
+						["Nature"] = 826,
+					},
+					["PartialAbsorb"] = {
+						["破甲攻擊"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 3,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["DamagedWho"] = {
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 826,
+								},
+								["風怒攻擊"] = {
+									["count"] = 2561,
+								},
+								["近戰"] = {
+									["count"] = 2186,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 5573,
+						},
+					},
+					["PartialBlock"] = {
+					},
+					["WhoDamaged"] = {
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["暗影箭"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 334,
+								},
+							},
+							["amount"] = 334,
+						},
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+						["破甲攻擊"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 3,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 3,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+						["Melee"] = 0,
+						["Physical"] = 0,
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+						["騎風"] = {
+							["Details"] = {
+								["水之盾"] = {
+									["count"] = 0,
+								},
+								["薩滿之怒"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+						["水之盾"] = {
+							["Details"] = {
+								["騎風"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["薩滿之怒"] = {
+							["Details"] = {
+								["騎風"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 1.5,
+								},
+								["近戰"] = {
+									["count"] = 6.550000000000001,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 8.05,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["暗影箭 (地震術)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 8.05,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+						["風暴打擊"] = {
+							["Details"] = {
+								["Dodge"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["烈焰震擊"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["地震術"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 826,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 826,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 826,
+						},
+						["風怒攻擊"] = {
+							["Details"] = {
+								["Hit (被格擋)"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 1,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 1421,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 1421,
+								},
+								["Hit"] = {
+									["max"] = 741,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 1140,
+								},
+							},
+							["count"] = 4,
+							["amount"] = 2561,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 453,
+									["min"] = 0,
+									["count"] = 3,
+									["amount"] = 1017,
+								},
+								["Hit (被格擋)"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Miss"] = {
+									["count"] = 2,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 788,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 1169,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 7,
+							["amount"] = 2186,
+						},
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 8.05,
+					["TimeDamaging"] = {
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 1.5,
+								},
+								["近戰"] = {
+									["count"] = 6.550000000000001,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 8.05,
+						},
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["Fight4"] = {
+					["DOTs"] = {
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["不死的看守者"] = {
+									["count"] = 0,
+								},
+								["哀嚎的幽靈"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 1261,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Miss"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 1,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 4,
+								},
+								["Miss"] = {
+									["count"] = 2,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 2,
+								},
+								["Parry"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 8,
+						},
+						["Shadow"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+						["Fire"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Tick"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Physical"] = {
+							["Details"] = {
+								["Parry"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 6,
+								},
+							},
+							["amount"] = 6,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 5,
+								},
+								["Miss"] = {
+									["count"] = 1,
+								},
+								["Block"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 6,
+						},
+						["Nature"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 2,
+						},
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+						["Physical"] = 216,
+						["Melee"] = 1045,
+						["Shadow"] = 0,
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 5735,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+						["Fire"] = 0,
+						["Physical"] = 2239,
+						["Melee"] = 1219,
+						["Nature"] = 2277,
+					},
+					["PartialAbsorb"] = {
+						["衰弱打擊"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+						["亡靈的哭嚎"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 8,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 8,
+							["amount"] = 0,
+						},
+						["腳踢"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["DamagedWho"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 628,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 2277,
+								},
+								["風怒攻擊"] = {
+									["count"] = 1611,
+								},
+								["近戰"] = {
+									["count"] = 1219,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 5735,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["PartialBlock"] = {
+					},
+					["WhoDamaged"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 1045,
+								},
+								["衰弱打擊"] = {
+									["count"] = 216,
+								},
+							},
+							["amount"] = 1261,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["亡靈的哭嚎"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+						["衰弱打擊"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 1,
+						},
+						["亡靈的哭嚎"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 8,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 8,
+						},
+						["腳踢"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+						["Melee"] = 0,
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+						["騎風"] = {
+							["Details"] = {
+								["水之盾"] = {
+									["count"] = 0,
+								},
+								["薩滿之怒"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+						["水之盾"] = {
+							["Details"] = {
+								["騎風"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["薩滿之怒"] = {
+							["Details"] = {
+								["騎風"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0.35,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 3,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 5.970000000000001,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 9.319999999999999,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["暗影箭 (地震術)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 9.319999999999999,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+						["風暴打擊"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 448,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 628,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 628,
+						},
+						["烈焰震擊"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["地震術"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 1244,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 1244,
+								},
+								["Hit"] = {
+									["max"] = 1033,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 1033,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 2277,
+						},
+						["風怒攻擊"] = {
+							["Details"] = {
+								["Parry"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 645,
+									["min"] = 0,
+									["count"] = 4,
+									["amount"] = 1611,
+								},
+							},
+							["count"] = 4,
+							["amount"] = 1611,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["Miss"] = {
+									["count"] = 1,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 426,
+									["min"] = 0,
+									["count"] = 5,
+									["amount"] = 1219,
+								},
+								["Hit (被格擋)"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 6,
+							["amount"] = 1219,
+						},
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 9.319999999999999,
+					["TimeDamaging"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0.35,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 3,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 5.970000000000001,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 9.319999999999999,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["LastFightData"] = {
+					["DOTs"] = {
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["被詛咒的靈魂"] = {
+									["count"] = 0,
+								},
+								["不死的看守者"] = {
+									["count"] = 0,
+								},
+								["哀嚎的幽靈"] = {
+									["count"] = 0,
+								},
+								["不安寧的陰影"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 0,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Shadow"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Miss"] = {
+									["count"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 1,
+						},
+						["Arcane"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+						["Fire"] = {
+							["Details"] = {
+								["Tick"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Block"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 0,
+								},
+								["Miss"] = {
+									["count"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Block"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Nature"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+						["Physical"] = 0,
+						["Shadow"] = 0,
+						["Melee"] = 0,
+						["Arcane"] = 0,
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+						["Fire"] = 0,
+						["Physical"] = 0,
+						["Melee"] = 0,
+						["Nature"] = 0,
+					},
+					["PartialAbsorb"] = {
+						["衰弱打擊"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["秘法箭"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+						["Falling"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["DamagedWho"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["PartialBlock"] = {
+					},
+					["WhoDamaged"] = {
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Environment"] = {
+							["Details"] = {
+								["Falling"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["衰弱打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["秘法箭"] = {
+									["count"] = 0,
+								},
+								["暗影箭"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+						["衰弱打擊"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["秘法箭"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 1,
+						},
+						["Falling"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+						["Melee"] = 0,
+						["Physical"] = 0,
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+						["法力之泉圖騰 V <騎風>"] = {
+							["Details"] = {
+								["法力之泉"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["騎風"] = {
+							["Details"] = {
+								["水之盾"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+						["水之盾"] = {
+							["Details"] = {
+								["騎風"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["法力之泉"] = {
+							["Details"] = {
+								["法力之泉圖騰 V <騎風>"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["暗影箭 (地震術)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 0,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+						["風暴打擊"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["烈焰震擊"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["地震術"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["風怒攻擊"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit (被格擋)"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Miss"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit (被格擋)"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 0,
+					["TimeDamaging"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["Fight1"] = {
+					["DOTs"] = {
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["被詛咒的靈魂"] = {
+									["count"] = 0,
+								},
+								["不死的看守者"] = {
+									["count"] = 0,
+								},
+								["哀嚎的幽靈"] = {
+									["count"] = 0,
+								},
+								["不安寧的陰影"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 0,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Shadow"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Miss"] = {
+									["count"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 1,
+						},
+						["Arcane"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+						["Fire"] = {
+							["Details"] = {
+								["Tick"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Block"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 0,
+								},
+								["Miss"] = {
+									["count"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Block"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Nature"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+						["Physical"] = 0,
+						["Shadow"] = 0,
+						["Melee"] = 0,
+						["Arcane"] = 0,
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+						["Fire"] = 0,
+						["Physical"] = 0,
+						["Melee"] = 0,
+						["Nature"] = 0,
+					},
+					["PartialAbsorb"] = {
+						["衰弱打擊"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["秘法箭"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+						["Falling"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["DamagedWho"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["PartialBlock"] = {
+					},
+					["WhoDamaged"] = {
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Environment"] = {
+							["Details"] = {
+								["Falling"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["衰弱打擊"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["秘法箭"] = {
+									["count"] = 0,
+								},
+								["暗影箭"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+						["衰弱打擊"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["秘法箭"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 1,
+						},
+						["Falling"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+						["Melee"] = 0,
+						["Physical"] = 0,
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+						["法力之泉圖騰 V <騎風>"] = {
+							["Details"] = {
+								["法力之泉"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["騎風"] = {
+							["Details"] = {
+								["水之盾"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+						["水之盾"] = {
+							["Details"] = {
+								["騎風"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["法力之泉"] = {
+							["Details"] = {
+								["法力之泉圖騰 V <騎風>"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["暗影箭 (地震術)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 0,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+						["風暴打擊"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["烈焰震擊"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["地震術"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["風怒攻擊"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit (被格擋)"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Miss"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit (被格擋)"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Dodge"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Parry"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 0,
+					["TimeDamaging"] = {
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊"] = {
+									["count"] = 0,
+								},
+								["地震術"] = {
+									["count"] = 0,
+								},
+								["近戰"] = {
+									["count"] = 0,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["OverallData"] = {
+					["ElementDoneBlock"] = {
+						["Melee"] = 1547,
+						["Physical"] = 300,
+					},
+					["DOTs"] = {
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["不安寧的陰影"] = {
+									["count"] = 27,
+								},
+								["被詛咒的靈魂"] = {
+									["count"] = 30,
+								},
+								["不死的看守者"] = {
+									["count"] = 27,
+								},
+								["哀嚎的幽靈"] = {
+									["count"] = 42,
+								},
+								["不死的居民"] = {
+									["count"] = 24,
+								},
+							},
+							["amount"] = 150,
+						},
+					},
+					["TimeSpent"] = {
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 13.74,
+								},
+								["烈焰震擊"] = {
+									["count"] = 6.22,
+								},
+								["地震術"] = {
+									["count"] = 25.79,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0.1,
+								},
+								["近戰"] = {
+									["count"] = 126.86,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 12.65,
+								},
+							},
+							["amount"] = 185.3599999999999,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 8.18,
+								},
+								["烈焰震擊"] = {
+									["count"] = 9,
+								},
+								["地震術"] = {
+									["count"] = 13.3,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0.3,
+								},
+								["近戰"] = {
+									["count"] = 125.39,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 7.829999999999999,
+								},
+							},
+							["amount"] = 164,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["冰霜震擊"] = {
+									["count"] = 1.5,
+								},
+								["風暴打擊"] = {
+									["count"] = 15.07,
+								},
+								["烈焰震擊"] = {
+									["count"] = 10.5,
+								},
+								["地震術"] = {
+									["count"] = 20.50999999999999,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0.1,
+								},
+								["近戰"] = {
+									["count"] = 49.83,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 10.81,
+								},
+							},
+							["amount"] = 108.32,
+						},
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 12.92,
+								},
+								["烈焰震擊"] = {
+									["count"] = 7.5,
+								},
+								["地震術"] = {
+									["count"] = 17.55,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0.1,
+								},
+								["近戰"] = {
+									["count"] = 105.6500000000001,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 5.7,
+								},
+							},
+							["amount"] = 149.42,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 4.53,
+								},
+								["烈焰震擊"] = {
+									["count"] = 5.37,
+								},
+								["地震術"] = {
+									["count"] = 5.15,
+								},
+								["近戰"] = {
+									["count"] = 50.17,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 6.16,
+								},
+							},
+							["amount"] = 71.38000000000002,
+						},
+					},
+					["DamageTaken"] = 57431,
+					["PartialResist"] = {
+						["秘法箭"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 1,
+						},
+						["亡靈的哭嚎"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 1,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 383,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 383,
+						},
+						["衰弱打擊"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 11,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 11,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 12,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 12,
+						},
+						["腳踢"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 1,
+						},
+						["破甲攻擊"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 1,
+						},
+						["Falling"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 4,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 4,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 1,
+						},
+					},
+					["ManaGained"] = {
+						["水之盾"] = {
+							["Details"] = {
+								["騎風"] = {
+									["count"] = 5697,
+								},
+							},
+							["amount"] = 5697,
+						},
+						["薩滿之怒"] = {
+							["Details"] = {
+								["騎風"] = {
+									["count"] = 6040,
+								},
+							},
+							["amount"] = 6040,
+						},
+						["法力之泉"] = {
+							["Details"] = {
+								["法力之泉圖騰 V <騎風>"] = {
+									["count"] = 340,
+								},
+							},
+							["amount"] = 340,
+						},
+					},
+					["PartialAbsorb"] = {
+						["秘法箭"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+						["亡靈的哭嚎"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 383,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 383,
+							["amount"] = 0,
+						},
+						["衰弱打擊"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 11,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 11,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 12,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 12,
+							["amount"] = 0,
+						},
+						["腳踢"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+						["破甲攻擊"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+						["Falling"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 4,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 4,
+							["amount"] = 0,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["ActiveTime"] = 678.4800000000005,
+					["ElementTaken"] = {
+						["Physical"] = 2960,
+						["Melee"] = 43612,
+						["Arcane"] = 969,
+						["Fire"] = 12,
+						["Shadow"] = 9878,
+					},
+					["DOT_Time"] = 150,
+					["Damage"] = 486769,
+					["InterruptData"] = {
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["暗影箭 (地震術)"] = {
+									["count"] = 7,
+								},
+							},
+							["amount"] = 7,
+						},
+					},
+					["Interrupts"] = 7,
+					["Healing"] = 0,
+					["ManaGainedFrom"] = {
+						["法力之泉圖騰 V <騎風>"] = {
+							["Details"] = {
+								["法力之泉"] = {
+									["count"] = 340,
+								},
+							},
+							["amount"] = 340,
+						},
+						["騎風"] = {
+							["Details"] = {
+								["水之盾"] = {
+									["count"] = 5697,
+								},
+								["薩滿之怒"] = {
+									["count"] = 6040,
+								},
+							},
+							["amount"] = 11737,
+						},
+					},
+					["ElementDone"] = {
+						["Physical"] = 202339,
+						["Melee"] = 184816,
+						["Fire"] = 20437,
+						["Frost"] = 833,
+						["Nature"] = 78344,
+					},
+					["Attacks"] = {
+						["冰霜震擊"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 833,
+									["min"] = 833,
+									["count"] = 1,
+									["amount"] = 833,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 833,
+						},
+						["風暴打擊"] = {
+							["Details"] = {
+								["Dodge"] = {
+									["count"] = 2,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 1130,
+									["min"] = 335,
+									["count"] = 30,
+									["amount"] = 18647,
+								},
+								["Hit"] = {
+									["max"] = 550,
+									["min"] = 168,
+									["count"] = 111,
+									["amount"] = 35194,
+								},
+							},
+							["count"] = 143,
+							["amount"] = 53841,
+						},
+						["烈焰震擊"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 695,
+									["min"] = 695,
+									["count"] = 3,
+									["amount"] = 2085,
+								},
+								["Hit"] = {
+									["max"] = 479,
+									["min"] = 118,
+									["count"] = 25,
+									["amount"] = 11341,
+								},
+							},
+							["count"] = 28,
+							["amount"] = 13426,
+						},
+						["地震術"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 1508,
+									["min"] = 1244,
+									["count"] = 3,
+									["amount"] = 4049,
+								},
+								["Hit"] = {
+									["max"] = 1204,
+									["min"] = 210,
+									["count"] = 83,
+									["amount"] = 74295,
+								},
+							},
+							["count"] = 86,
+							["amount"] = 78344,
+						},
+						["風怒攻擊"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 905,
+									["min"] = 153,
+									["count"] = 179,
+									["amount"] = 95332,
+								},
+								["Hit (被格擋)"] = {
+									["max"] = 645,
+									["min"] = 309,
+									["count"] = 6,
+									["amount"] = 3248,
+								},
+								["Dodge"] = {
+									["count"] = 9,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 1665,
+									["min"] = 639,
+									["count"] = 47,
+									["amount"] = 49918,
+								},
+								["Parry"] = {
+									["count"] = 11,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 252,
+							["amount"] = 148498,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["max"] = 408,
+									["min"] = 106,
+									["count"] = 10,
+									["amount"] = 2974,
+								},
+								["Dodge"] = {
+									["count"] = 21,
+									["amount"] = 0,
+								},
+								["Miss"] = {
+									["count"] = 72,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 537,
+									["min"] = 46,
+									["count"] = 308,
+									["amount"] = 91892,
+								},
+								["Hit (被格擋)"] = {
+									["max"] = 455,
+									["min"] = 43,
+									["count"] = 30,
+									["amount"] = 8303,
+								},
+								["Block"] = {
+									["count"] = 1,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 1055,
+									["min"] = 88,
+									["count"] = 136,
+									["amount"] = 81647,
+								},
+								["Parry"] = {
+									["count"] = 12,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 590,
+							["amount"] = 184816,
+						},
+						["烈焰震擊 (傷害/跳)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 153,
+									["min"] = 37,
+									["count"] = 50,
+									["amount"] = 7011,
+								},
+							},
+							["count"] = 50,
+							["amount"] = 7011,
+						},
+					},
+					["ElementHitsDone"] = {
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 296,
+								},
+								["Dodge"] = {
+									["count"] = 11,
+								},
+								["Block"] = {
+									["count"] = 6,
+								},
+								["Crit"] = {
+									["count"] = 77,
+								},
+								["Parry"] = {
+									["count"] = 11,
+								},
+							},
+							["amount"] = 401,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["count"] = 10,
+								},
+								["Dodge"] = {
+									["count"] = 21,
+								},
+								["Hit"] = {
+									["count"] = 338,
+								},
+								["Miss"] = {
+									["count"] = 72,
+								},
+								["Block"] = {
+									["count"] = 32,
+								},
+								["Crit"] = {
+									["count"] = 136,
+								},
+								["Parry"] = {
+									["count"] = 12,
+								},
+							},
+							["amount"] = 621,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Tick"] = {
+									["count"] = 50,
+								},
+								["Crit"] = {
+									["count"] = 3,
+								},
+								["Hit"] = {
+									["count"] = 25,
+								},
+							},
+							["amount"] = 78,
+						},
+						["Frost"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 1,
+						},
+						["Nature"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 3,
+								},
+								["Hit"] = {
+									["count"] = 83,
+								},
+							},
+							["amount"] = 86,
+						},
+					},
+					["DamagedWho"] = {
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 12234,
+								},
+								["烈焰震擊"] = {
+									["count"] = 1986,
+								},
+								["地震術"] = {
+									["count"] = 23683,
+								},
+								["風怒攻擊"] = {
+									["count"] = 37809,
+								},
+								["近戰"] = {
+									["count"] = 50397,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 1726,
+								},
+							},
+							["amount"] = 127835,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 9348,
+								},
+								["烈焰震擊"] = {
+									["count"] = 3027,
+								},
+								["地震術"] = {
+									["count"] = 19146,
+								},
+								["風怒攻擊"] = {
+									["count"] = 34317,
+								},
+								["近戰"] = {
+									["count"] = 37821,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 1319,
+								},
+							},
+							["amount"] = 104978,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["冰霜震擊"] = {
+									["count"] = 833,
+								},
+								["風暴打擊"] = {
+									["count"] = 16202,
+								},
+								["烈焰震擊"] = {
+									["count"] = 3267,
+								},
+								["地震術"] = {
+									["count"] = 14177,
+								},
+								["風怒攻擊"] = {
+									["count"] = 27927,
+								},
+								["近戰"] = {
+									["count"] = 31838,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 1464,
+								},
+							},
+							["amount"] = 95708,
+						},
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 11579,
+								},
+								["烈焰震擊"] = {
+									["count"] = 2580,
+								},
+								["地震術"] = {
+									["count"] = 15229,
+								},
+								["風怒攻擊"] = {
+									["count"] = 31430,
+								},
+								["近戰"] = {
+									["count"] = 43396,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 1335,
+								},
+							},
+							["amount"] = 105549,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 4478,
+								},
+								["烈焰震擊"] = {
+									["count"] = 2566,
+								},
+								["地震術"] = {
+									["count"] = 6109,
+								},
+								["風怒攻擊"] = {
+									["count"] = 17015,
+								},
+								["近戰"] = {
+									["count"] = 21364,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 1167,
+								},
+							},
+							["amount"] = 52699,
+						},
+					},
+					["TimeDamage"] = 678.4800000000005,
+					["WhoDamaged"] = {
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 15040,
+								},
+								["亡靈的哭嚎"] = {
+									["count"] = 233,
+								},
+							},
+							["amount"] = 15273,
+						},
+						["暗影鷲"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 57,
+								},
+							},
+							["amount"] = 57,
+						},
+						["Environment"] = {
+							["Details"] = {
+								["Falling"] = {
+									["count"] = 1568,
+								},
+								["Fire"] = {
+									["count"] = 12,
+								},
+							},
+							["amount"] = 1580,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 14139,
+								},
+								["衰弱打擊"] = {
+									["count"] = 1392,
+								},
+							},
+							["amount"] = 15531,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["秘法箭"] = {
+									["count"] = 969,
+								},
+								["暗影箭"] = {
+									["count"] = 9645,
+								},
+								["近戰"] = {
+									["count"] = 1959,
+								},
+							},
+							["amount"] = 12573,
+						},
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 8272,
+								},
+							},
+							["amount"] = 8272,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 4145,
+								},
+							},
+							["amount"] = 4145,
+						},
+					},
+					["ManaGain"] = 12077,
+					["ElementHitsTaken"] = {
+						["Physical"] = {
+							["Details"] = {
+								["Dodge"] = {
+									["count"] = 3,
+								},
+								["Miss"] = {
+									["count"] = 2,
+								},
+								["Hit"] = {
+									["count"] = 12,
+								},
+							},
+							["amount"] = 17,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 235,
+								},
+								["Miss"] = {
+									["count"] = 49,
+								},
+								["Dodge"] = {
+									["count"] = 65,
+								},
+								["Crit"] = {
+									["count"] = 14,
+								},
+								["Parry"] = {
+									["count"] = 20,
+								},
+							},
+							["amount"] = 383,
+						},
+						["Arcane"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 1,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 1,
+						},
+						["Shadow"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 12,
+								},
+							},
+							["amount"] = 13,
+						},
+					},
+					["TimeDamaging"] = {
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 13.74,
+								},
+								["烈焰震擊"] = {
+									["count"] = 6.22,
+								},
+								["地震術"] = {
+									["count"] = 25.79,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0.1,
+								},
+								["近戰"] = {
+									["count"] = 126.86,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 12.65,
+								},
+							},
+							["amount"] = 185.3599999999999,
+						},
+						["不死的看守者"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 8.18,
+								},
+								["烈焰震擊"] = {
+									["count"] = 9,
+								},
+								["地震術"] = {
+									["count"] = 13.3,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0.3,
+								},
+								["近戰"] = {
+									["count"] = 125.39,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 7.829999999999999,
+								},
+							},
+							["amount"] = 164,
+						},
+						["被詛咒的靈魂"] = {
+							["Details"] = {
+								["冰霜震擊"] = {
+									["count"] = 1.5,
+								},
+								["風暴打擊"] = {
+									["count"] = 15.07,
+								},
+								["烈焰震擊"] = {
+									["count"] = 10.5,
+								},
+								["地震術"] = {
+									["count"] = 20.50999999999999,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0.1,
+								},
+								["近戰"] = {
+									["count"] = 49.83,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 10.81,
+								},
+							},
+							["amount"] = 108.32,
+						},
+						["不安寧的陰影"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 12.92,
+								},
+								["烈焰震擊"] = {
+									["count"] = 7.5,
+								},
+								["地震術"] = {
+									["count"] = 17.55,
+								},
+								["風怒攻擊"] = {
+									["count"] = 0.1,
+								},
+								["近戰"] = {
+									["count"] = 105.6500000000001,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 5.7,
+								},
+							},
+							["amount"] = 149.42,
+						},
+						["不死的居民"] = {
+							["Details"] = {
+								["風暴打擊"] = {
+									["count"] = 4.53,
+								},
+								["烈焰震擊"] = {
+									["count"] = 5.37,
+								},
+								["地震術"] = {
+									["count"] = 5.15,
+								},
+								["近戰"] = {
+									["count"] = 50.17,
+								},
+								["烈焰震擊 (傷害/跳)"] = {
+									["count"] = 6.16,
+								},
+							},
+							["amount"] = 71.38000000000002,
+						},
+					},
+				},
+			},
+			["UnitLockout"] = 104452.149,
+			["LastActive"] = 109804.153,
+		},
+		["強效土元素 <騎風>"] = {
+			["GUID"] = "Creature-0-4490-0-11466-15352-000049E11D",
+			["TimeLast"] = {
+				["ActiveTime"] = 108349.145,
+				["TimeDamage"] = 108349.145,
+				["OVERALL"] = 108349.145,
+				["DamageTaken"] = 108348.161,
+				["Damage"] = 108349.145,
+			},
+			["LastAttackedBy"] = "哀嚎的幽靈",
+			["LastEventType"] = {
+				"DAMAGE", -- [1]
+				"DAMAGE", -- [2]
+				"DAMAGE", -- [3]
+				"DAMAGE", -- [4]
+				"DAMAGE", -- [5]
+				"DAMAGE", -- [6]
+				"DAMAGE", -- [7]
+				"DAMAGE", -- [8]
+				"DAMAGE", -- [9]
 			},
 			["TimeWindows"] = {
 				["TimeDamage"] = {
-					13.97, -- [1]
+					7.5, -- [1]
 				},
 				["Damage"] = {
-					3327, -- [1]
+					940, -- [1]
 				},
 				["DamageTaken"] = {
-					1210, -- [1]
+					679, -- [1]
 				},
 				["ActiveTime"] = {
-					13.97, -- [1]
+					7.5, -- [1]
 				},
 			},
 			["enClass"] = "PET",
-			["LastDamageTaken"] = 40,
 			["level"] = 1,
-			["LastDamageAbility"] = "毒性之咬 (傷害/跳)",
-			["LastFightIn"] = 2,
+			["LastDamageAbility"] = "近戰",
+			["LastFightIn"] = 43,
 			["type"] = "Pet",
 			["FightsSaved"] = 5,
 			["ownerName"] = "騎風",
-			["LastActive"] = 57266.832,
-			["NextEventNum"] = 26,
-			["LastDamageTime"] = 57264.665,
-			["LastEvents"] = {
-				"強效火焰元素 <騎風> 火焰衝擊 扭曲追趕者 Hit -523 (Fire)", -- [1]
-				"扭曲追趕者 近戰 強效火焰元素 <騎風> Parry (1)", -- [2]
-				"強效火焰元素 <騎風> 近戰 扭曲追趕者 Hit -127 (Physical)", -- [3]
-				"強效火焰元素 <騎風> 火焰之盾 扭曲追趕者 Hit -84 (Fire)", -- [4]
-				"扭曲追趕者 近戰 強效火焰元素 <騎風> Parry (1)", -- [5]
-				"強效火焰元素 <騎風> 近戰 扭曲追趕者 Hit -141 (Physical)", -- [6]
-				"扭曲追趕者 近戰 強效火焰元素 <騎風> Parry (1)", -- [7]
-				"強效火焰元素 <騎風> 近戰 扭曲追趕者 Hit -133 (Physical)", -- [8]
-				"扭曲追趕者 毒性之咬 強效火焰元素 <騎風> Hit -439 (Nature)", -- [9]
-				"強效火焰元素 <騎風> 火焰之盾 扭曲追趕者 Hit -84 (Fire)", -- [10]
-				"扭曲追趕者 近戰 強效火焰元素 <騎風> Hit -131 (Physical)", -- [11]
-				"強效火焰元素 <騎風> 火焰新星 扭曲追趕者 Hit -681 (Fire)", -- [12]
-				"扭曲追趕者 毒性之咬 (傷害/跳) 強效火焰元素 <騎風> Tick -40 (Nature)", -- [13]
-				"強效火焰元素 <騎風> 火焰衝擊 扭曲追趕者 Hit -554 (Fire)", -- [14]
-				"強效火焰元素 <騎風> 火焰之盾 扭曲追趕者 Hit -84 (Fire)", -- [15]
-				"扭曲追趕者 近戰 強效火焰元素 <騎風> Hit -150 (Physical)", -- [16]
-				"扭曲追趕者 毒性之咬 (傷害/跳) 強效火焰元素 <騎風> Tick -40 (Nature)", -- [17]
-				"強效火焰元素 <騎風> 近戰 扭曲追趕者 Hit -137 (Physical)", -- [18]
-				"扭曲追趕者 近戰 強效火焰元素 <騎風> Hit -162 (Physical)", -- [19]
-				"扭曲追趕者 毒性之咬 (傷害/跳) 強效火焰元素 <騎風> Tick -40 (Nature)", -- [20]
-				"強效火焰元素 <騎風> 火焰之盾 扭曲追趕者 Hit -84 (Fire)", -- [21]
-				"強效火焰元素 <騎風> 火焰新星 扭曲追趕者 Hit -695 (Fire)", -- [22]
-				"扭曲追趕者 近戰 強效火焰元素 <騎風> Hit -128 (Physical)", -- [23]
-				"扭曲追趕者 毒性之咬 (傷害/跳) 強效火焰元素 <騎風> Tick -40 (Nature)", -- [24]
-				"扭曲追趕者 毒性之咬 (傷害/跳) 強效火焰元素 <騎風> Tick -40 (Nature)", -- [25]
+			["LastDamageTaken"] = 129,
+			["LastEventHealthMax"] = {
+				nil, -- [1]
+				7371, -- [2]
+				7371, -- [3]
+				6986, -- [4]
+				6986, -- [5]
+				6986, -- [6]
+				6986, -- [7]
 			},
-			["Name"] = "強效火焰元素",
+			["LastEventHealth"] = {
+				nil, -- [1]
+				7371, -- [2]
+				7371, -- [3]
+				6797, -- [4]
+				3782, -- [5]
+				3354, -- [6]
+				2481, -- [7]
+			},
+			["NextEventNum"] = 10,
+			["LastDamageTime"] = 108349.944,
+			["LastEvents"] = {
+				"強效土元素 <騎風> 近戰 不死的看守者 Hit -203 (Physical)", -- [1]
+				"強效土元素 <騎風> 近戰 哀嚎的幽靈 Hit -189 (Physical)", -- [2]
+				"哀嚎的幽靈 亡靈的哭嚎 強效土元素 <騎風> Hit -252 (Shadow)", -- [3]
+				"哀嚎的幽靈 近戰 強效土元素 <騎風> Hit -141 (Physical)", -- [4]
+				"強效土元素 <騎風> 近戰 哀嚎的幽靈 Hit -196 (Physical)", -- [5]
+				"哀嚎的幽靈 近戰 強效土元素 <騎風> Hit -157 (Physical)", -- [6]
+				"強效土元素 <騎風> 近戰 哀嚎的幽靈 Hit -175 (Physical)", -- [7]
+				"哀嚎的幽靈 近戰 強效土元素 <騎風> Hit -129 (Physical)", -- [8]
+				"強效土元素 <騎風> 近戰 哀嚎的幽靈 Hit -177 (Physical)", -- [9]
+			},
+			["Name"] = "強效土元素",
 			["LastEventTimes"] = {
-				57250.915, -- [1]
-				57252.948, -- [2]
-				57252.948, -- [3]
-				57254.565, -- [4]
-				57254.948, -- [5]
-				57254.948, -- [6]
-				57256.948, -- [7]
-				57256.948, -- [8]
-				57257.398, -- [9]
-				57257.632, -- [10]
-				57258.948, -- [11]
-				57258.948, -- [12]
-				57259.415, -- [13]
-				57260.248, -- [14]
-				57260.615, -- [15]
-				57260.898, -- [16]
-				57261.415, -- [17]
-				57262.248, -- [18]
-				57262.982, -- [19]
-				57263.415, -- [20]
-				57263.615, -- [21]
-				57264.665, -- [22]
-				57264.982, -- [23]
-				57265.415, -- [24]
-				57267.415, -- [25]
+				108341.978, -- [1]
+				108343.978, -- [2]
+				108344.178, -- [3]
+				108345.044, -- [4]
+				108345.978, -- [5]
+				108347.044, -- [6]
+				108347.911, -- [7]
+				108348.994, -- [8]
+				108349.944, -- [9]
+			},
+			["LastEventIncoming"] = {
+				false, -- [1]
+				false, -- [2]
+				true, -- [3]
+				true, -- [4]
+				false, -- [5]
+				true, -- [6]
+				false, -- [7]
+				true, -- [8]
+				false, -- [9]
 			},
 			["Fights"] = {
 				["LastFightData"] = {
@@ -10096,66 +7993,64 @@ RecountPerCharDB = {
 					},
 				},
 				["OverallData"] = {
-					["PartialBlock"] = {
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 3,
+								},
+							},
+							["amount"] = 3,
+						},
+						["Shadow"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 1,
+						},
+					},
+					["PartialAbsorb"] = {
 						["近戰"] = {
 							["Details"] = {
-								["被格擋"] = {
-									["max"] = 6,
-									["min"] = 6,
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 3,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 0,
+						},
+						["亡靈的哭嚎"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
 									["count"] = 1,
-									["amount"] = 6,
+									["amount"] = 0,
 								},
 							},
 							["count"] = 1,
-							["amount"] = 6,
+							["amount"] = 0,
 						},
 					},
-					["TimeSpent"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["火焰新星"] = {
-									["count"] = 2.37,
-								},
-								["近戰"] = {
-									["count"] = 4.88,
-								},
-								["火焰衝擊"] = {
-									["count"] = 2.8,
-								},
-								["火焰之盾"] = {
-									["count"] = 3.92,
-								},
-							},
-							["amount"] = 13.97,
-						},
-					},
-					["DamageTaken"] = 1210,
 					["PartialResist"] = {
-						["毒性之咬 (傷害/跳)"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 5,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 5,
-						},
 						["近戰"] = {
 							["Details"] = {
 								["未被抵抗"] = {
 									["max"] = 0,
 									["min"] = 0,
-									["count"] = 7,
+									["count"] = 3,
 									["amount"] = 0,
 								},
 							},
 							["count"] = 0,
-							["amount"] = 7,
+							["amount"] = 3,
 						},
-						["毒性之咬"] = {
+						["亡靈的哭嚎"] = {
 							["Details"] = {
 								["未被抵抗"] = {
 									["max"] = 0,
@@ -10168,32 +8063,366 @@ RecountPerCharDB = {
 							["amount"] = 1,
 						},
 					},
-					["PartialAbsorb"] = {
-						["毒性之咬 (傷害/跳)"] = {
+					["Attacks"] = {
+						["近戰"] = {
 							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
+								["Hit"] = {
+									["max"] = 203,
+									["min"] = 175,
 									["count"] = 5,
-									["amount"] = 0,
+									["amount"] = 940,
 								},
 							},
 							["count"] = 5,
-							["amount"] = 0,
+							["amount"] = 940,
 						},
+					},
+					["TimeSpent"] = {
+						["不死的看守者"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 1.5,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 6,
+								},
+							},
+							["amount"] = 6,
+						},
+					},
+					["DamageTaken"] = 679,
+					["WhoDamaged"] = {
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 427,
+								},
+								["亡靈的哭嚎"] = {
+									["count"] = 252,
+								},
+							},
+							["amount"] = 679,
+						},
+					},
+					["ElementDone"] = {
+						["Melee"] = 940,
+					},
+					["ElementHitsDone"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 5,
+								},
+							},
+							["amount"] = 5,
+						},
+					},
+					["DamagedWho"] = {
+						["不死的看守者"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 203,
+								},
+							},
+							["amount"] = 203,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 737,
+								},
+							},
+							["amount"] = 737,
+						},
+					},
+					["TimeDamage"] = 7.5,
+					["TimeDamaging"] = {
+						["不死的看守者"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 1.5,
+						},
+						["哀嚎的幽靈"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 6,
+								},
+							},
+							["amount"] = 6,
+						},
+					},
+					["ElementTaken"] = {
+						["Melee"] = 427,
+						["Shadow"] = 252,
+					},
+					["ActiveTime"] = 7.5,
+					["Damage"] = 940,
+				},
+			},
+			["UnitLockout"] = 108349.145,
+			["LastActive"] = 108349.145,
+		},
+		["大地之力圖騰 VI <騎風>"] = {
+			["GUID"] = "Creature-0-4490-0-11466-15479-000049E110",
+			["TimeLast"] = {
+				["DeathCount"] = 107495.153,
+				["DamageTaken"] = 107518.154,
+				["OVERALL"] = 107518.154,
+			},
+			["LastAttackedBy"] = "不死的看守者",
+			["LastEventType"] = {
+				"MISC", -- [1]
+				"DAMAGE", -- [2]
+			},
+			["TimeWindows"] = {
+				["DamageTaken"] = {
+					179, -- [1]
+				},
+				["DeathCount"] = {
+					1, -- [1]
+				},
+			},
+			["enClass"] = "PET",
+			["LastDamageTaken"] = 179,
+			["level"] = 1,
+			["LastDamageAbility"] = "近戰",
+			["LastFightIn"] = 7,
+			["type"] = "Pet",
+			["FightsSaved"] = 5,
+			["ownerName"] = "騎風",
+			["Fights"] = {
+				["LastFightData"] = {
+					["DOTs"] = {
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 0,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+					},
+					["PartialAbsorb"] = {
+					},
+					["DamagedWho"] = {
+					},
+					["PartialBlock"] = {
+					},
+					["WhoDamaged"] = {
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 0,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 0,
+					["TimeDamaging"] = {
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["CurrentFightData"] = {
+					["DOTs"] = {
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 0,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+					},
+					["PartialAbsorb"] = {
+					},
+					["DamagedWho"] = {
+					},
+					["PartialBlock"] = {
+					},
+					["WhoDamaged"] = {
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 0,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 0,
+					["TimeDamaging"] = {
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["OverallData"] = {
+					["PartialResist"] = {
 						["近戰"] = {
 							["Details"] = {
-								["未被吸收"] = {
+								["未被抵抗"] = {
 									["max"] = 0,
 									["min"] = 0,
-									["count"] = 7,
+									["count"] = 1,
 									["amount"] = 0,
 								},
 							},
-							["count"] = 7,
-							["amount"] = 0,
+							["count"] = 0,
+							["amount"] = 1,
 						},
-						["毒性之咬"] = {
+					},
+					["DeathCount"] = 1,
+					["PartialAbsorb"] = {
+						["近戰"] = {
 							["Details"] = {
 								["未被吸收"] = {
 									["max"] = 0,
@@ -10206,539 +8435,1097 @@ RecountPerCharDB = {
 							["amount"] = 0,
 						},
 					},
-					["ActiveTime"] = 13.97,
-					["ElementTaken"] = {
-						["Melee"] = 571,
-						["Nature"] = 639,
+					["WhoDamaged"] = {
+						["不死的看守者"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 179,
+								},
+							},
+							["amount"] = 179,
+						},
 					},
-					["Damage"] = 3327,
+					["ElementTaken"] = {
+						["Melee"] = 179,
+					},
+					["DamageTaken"] = 179,
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 1,
+						},
+					},
+				},
+			},
+			["LastFlags"] = 2600,
+			["DeathLogs"] = {
+				{
+					["MessageTimes"] = {
+						0, -- [1]
+					},
+					["MessageIncoming"] = {
+						true, -- [1]
+					},
+					["Messages"] = {
+						"大地之力圖騰 VI <騎風>死亡。", -- [1]
+					},
+					["HealthMax"] = {
+					},
+					["DeathAt"] = 107497.153,
+					["EventNum"] = {
+						0, -- [1]
+					},
+					["Health"] = {
+					},
+					["MessageType"] = {
+						"MISC", -- [1]
+					},
+				}, -- [1]
+			},
+			["NextEventNum"] = 3,
+			["LastEvents"] = {
+				"大地之力圖騰 VI <騎風>死亡。", -- [1]
+				"不死的看守者 近戰 大地之力圖騰 VI <騎風> Hit -179 (Physical)", -- [2]
+			},
+			["Name"] = "大地之力圖騰 VI",
+			["LastEventIncoming"] = {
+				true, -- [1]
+				true, -- [2]
+			},
+			["LastEventTimes"] = {
+				107495.803, -- [1]
+				107518.237, -- [2]
+			},
+			["UnitLockout"] = 107518.154,
+			["LastActive"] = 107518.154,
+		},
+		["強效火焰元素 <騎風>"] = {
+			["GUID"] = "Creature-0-4490-0-11466-15438-000049E23F",
+			["TimeLast"] = {
+				["ActiveTime"] = 108637.153,
+				["TimeDamage"] = 108637.153,
+				["OVERALL"] = 108637.153,
+				["DamageTaken"] = 108633.153,
+				["Damage"] = 108637.153,
+			},
+			["LastAttackedBy"] = "不死的看守者",
+			["LastEventType"] = {
+				"DAMAGE", -- [1]
+				"DAMAGE", -- [2]
+				"DAMAGE", -- [3]
+				"DAMAGE", -- [4]
+				"DAMAGE", -- [5]
+				"DAMAGE", -- [6]
+				"DAMAGE", -- [7]
+			},
+			["TimeWindows"] = {
+				["TimeDamage"] = {
+					5.829999999999999, -- [1]
+				},
+				["Damage"] = {
+					1564, -- [1]
+				},
+				["DamageTaken"] = {
+					152, -- [1]
+				},
+				["ActiveTime"] = {
+					5.829999999999999, -- [1]
+				},
+			},
+			["enClass"] = "PET",
+			["LastDamageTaken"] = 152,
+			["level"] = 1,
+			["LastDamageAbility"] = "近戰",
+			["LastFightIn"] = 53,
+			["type"] = "Pet",
+			["FightsSaved"] = 5,
+			["ownerName"] = "騎風",
+			["NextEventNum"] = 8,
+			["LastDamageTime"] = 108637.719,
+			["LastEvents"] = {
+				"強效火焰元素 <騎風> 近戰 不死的看守者 Hit -131 (Physical)", -- [1]
+				"強效火焰元素 <騎風> 火焰衝擊 不死的看守者 Hit -519 (Fire)", -- [2]
+				"不死的看守者 近戰 強效火焰元素 <騎風> Hit -152 (Physical)", -- [3]
+				"強效火焰元素 <騎風> 火焰之盾 不死的看守者 Hit -83 (Fire)", -- [4]
+				"強效火焰元素 <騎風> 火焰新星 不死的看守者 Hit -695 (Fire)", -- [5]
+				"強效火焰元素 <騎風> 近戰 不死的看守者 Hit -136 (Physical)", -- [6]
+				"強效火焰元素 <騎風> 火焰之盾 不死的看守者 Resist (Fire)", -- [7]
+			},
+			["Name"] = "強效火焰元素",
+			["LastEventTimes"] = {
+				108632.286, -- [1]
+				108632.586, -- [2]
+				108633.403, -- [3]
+				108634.686, -- [4]
+				108635.419, -- [5]
+				108637.419, -- [6]
+				108637.719, -- [7]
+			},
+			["LastEventIncoming"] = {
+				false, -- [1]
+				false, -- [2]
+				true, -- [3]
+				false, -- [4]
+				false, -- [5]
+				false, -- [6]
+				false, -- [7]
+			},
+			["Fights"] = {
+				["LastFightData"] = {
+					["DOTs"] = {
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 0,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 0,
 					["ElementTakenBlock"] = {
-						["Melee"] = 6,
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDone"] = {
-						["Melee"] = 538,
-						["Fire"] = 2789,
+					},
+					["PartialAbsorb"] = {
+					},
+					["DamagedWho"] = {
+					},
+					["PartialBlock"] = {
+					},
+					["WhoDamaged"] = {
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 0,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 0,
+					["TimeDamaging"] = {
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["CurrentFightData"] = {
+					["DOTs"] = {
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 0,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+					},
+					["PartialAbsorb"] = {
+					},
+					["DamagedWho"] = {
+					},
+					["PartialBlock"] = {
+					},
+					["WhoDamaged"] = {
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 0,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 0,
+					["TimeDamaging"] = {
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["OverallData"] = {
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 1,
+						},
+					},
+					["PartialAbsorb"] = {
+						["近戰"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["PartialResist"] = {
+						["近戰"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 1,
+						},
 					},
 					["Attacks"] = {
 						["火焰新星"] = {
 							["Details"] = {
 								["Hit"] = {
 									["max"] = 695,
-									["min"] = 681,
-									["count"] = 2,
-									["amount"] = 1376,
+									["min"] = 695,
+									["count"] = 1,
+									["amount"] = 695,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 695,
+						},
+						["火焰之盾"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 1,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 83,
+									["min"] = 83,
+									["count"] = 1,
+									["amount"] = 83,
 								},
 							},
 							["count"] = 2,
-							["amount"] = 1376,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 141,
-									["min"] = 127,
-									["count"] = 4,
-									["amount"] = 538,
-								},
-							},
-							["count"] = 4,
-							["amount"] = 538,
+							["amount"] = 83,
 						},
 						["火焰衝擊"] = {
 							["Details"] = {
 								["Hit"] = {
-									["max"] = 554,
-									["min"] = 523,
+									["max"] = 519,
+									["min"] = 519,
+									["count"] = 1,
+									["amount"] = 519,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 519,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 136,
+									["min"] = 131,
 									["count"] = 2,
-									["amount"] = 1077,
+									["amount"] = 267,
 								},
 							},
 							["count"] = 2,
-							["amount"] = 1077,
+							["amount"] = 267,
 						},
-						["火焰之盾"] = {
+					},
+					["TimeSpent"] = {
+						["不死的看守者"] = {
 							["Details"] = {
-								["Hit"] = {
-									["max"] = 84,
-									["min"] = 84,
-									["count"] = 4,
-									["amount"] = 336,
+								["火焰新星"] = {
+									["count"] = 0.73,
+								},
+								["火焰之盾"] = {
+									["count"] = 1.8,
+								},
+								["火焰衝擊"] = {
+									["count"] = 0.3,
+								},
+								["近戰"] = {
+									["count"] = 3,
 								},
 							},
-							["count"] = 4,
-							["amount"] = 336,
+							["amount"] = 5.829999999999999,
 						},
+					},
+					["DamageTaken"] = 152,
+					["WhoDamaged"] = {
+						["不死的看守者"] = {
+							["Details"] = {
+								["近戰"] = {
+									["count"] = 152,
+								},
+							},
+							["amount"] = 152,
+						},
+					},
+					["ElementDone"] = {
+						["Melee"] = 267,
+						["Fire"] = 1297,
 					},
 					["ElementHitsDone"] = {
 						["Melee"] = {
 							["Details"] = {
 								["Hit"] = {
-									["count"] = 4,
+									["count"] = 2,
+								},
+							},
+							["amount"] = 2,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 3,
 								},
 							},
 							["amount"] = 4,
 						},
-						["Fire"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 8,
-								},
-							},
-							["amount"] = 8,
-						},
-					},
-					["TimeDamage"] = 13.97,
-					["TimeDamaging"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["火焰新星"] = {
-									["count"] = 2.37,
-								},
-								["近戰"] = {
-									["count"] = 4.88,
-								},
-								["火焰衝擊"] = {
-									["count"] = 2.8,
-								},
-								["火焰之盾"] = {
-									["count"] = 3.92,
-								},
-							},
-							["amount"] = 13.97,
-						},
-					},
-					["WhoDamaged"] = {
-						["扭曲追趕者"] = {
-							["Details"] = {
-								["毒性之咬 (傷害/跳)"] = {
-									["count"] = 200,
-								},
-								["近戰"] = {
-									["count"] = 571,
-								},
-								["毒性之咬"] = {
-									["count"] = 439,
-								},
-							},
-							["amount"] = 1210,
-						},
 					},
 					["DamagedWho"] = {
-						["扭曲追趕者"] = {
+						["不死的看守者"] = {
 							["Details"] = {
 								["火焰新星"] = {
-									["count"] = 1376,
-								},
-								["近戰"] = {
-									["count"] = 538,
-								},
-								["火焰衝擊"] = {
-									["count"] = 1077,
+									["count"] = 695,
 								},
 								["火焰之盾"] = {
-									["count"] = 336,
+									["count"] = 83,
+								},
+								["火焰衝擊"] = {
+									["count"] = 519,
+								},
+								["近戰"] = {
+									["count"] = 267,
 								},
 							},
-							["amount"] = 3327,
+							["amount"] = 1564,
 						},
 					},
-					["ElementHitsTaken"] = {
-						["Melee"] = {
+					["TimeDamage"] = 5.829999999999999,
+					["TimeDamaging"] = {
+						["不死的看守者"] = {
 							["Details"] = {
-								["Block"] = {
-									["count"] = 1,
+								["火焰新星"] = {
+									["count"] = 0.73,
 								},
-								["Hit"] = {
-									["count"] = 4,
+								["火焰之盾"] = {
+									["count"] = 1.8,
 								},
-								["Parry"] = {
+								["火焰衝擊"] = {
+									["count"] = 0.3,
+								},
+								["近戰"] = {
 									["count"] = 3,
 								},
 							},
-							["amount"] = 8,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Tick"] = {
-									["count"] = 5,
-								},
-								["Hit"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 6,
+							["amount"] = 5.829999999999999,
 						},
 					},
+					["ElementTaken"] = {
+						["Melee"] = 152,
+					},
+					["ActiveTime"] = 5.829999999999999,
+					["Damage"] = 1564,
 				},
 			},
-			["LastEventIncoming"] = {
-				false, -- [1]
-				true, -- [2]
-				false, -- [3]
-				false, -- [4]
-				true, -- [5]
-				false, -- [6]
-				true, -- [7]
-				false, -- [8]
-				true, -- [9]
-				false, -- [10]
-				true, -- [11]
-				false, -- [12]
-				true, -- [13]
-				false, -- [14]
-				false, -- [15]
-				true, -- [16]
-				true, -- [17]
-				false, -- [18]
-				true, -- [19]
-				true, -- [20]
-				false, -- [21]
-				false, -- [22]
-				true, -- [23]
-				true, -- [24]
-				true, -- [25]
-			},
-			["UnitLockout"] = 57266.832,
-			["LastAbility"] = 65856.144,
+			["UnitLockout"] = 108637.153,
+			["LastActive"] = 108637.153,
 		},
 	},
-	["FightNum"] = 47,
+	["FightNum"] = 77,
 	["CombatTimes"] = {
 		{
-			57089.843, -- [1]
-			57121.833, -- [2]
-			"11:47:52", -- [3]
-			"11:48:24", -- [4]
-			"扭曲追趕者", -- [5]
+			106919.153, -- [1]
+			106936.154, -- [2]
+			"01:38:22", -- [3]
+			"01:38:38", -- [4]
+			"暗影鷲", -- [5]
 		}, -- [1]
 		{
-			57149.845, -- [1]
-			57166.846, -- [2]
-			"11:48:52", -- [3]
-			"11:49:09", -- [4]
-			"扭曲追趕者", -- [5]
+			106989.156, -- [1]
+			107011.156, -- [2]
+			"01:39:32", -- [3]
+			"01:39:53", -- [4]
+			"不死的居民", -- [5]
 		}, -- [2]
 		{
-			57259.832, -- [1]
-			57267.832, -- [2]
-			"11:50:42", -- [3]
-			"11:50:50", -- [4]
-			"扭曲追趕者", -- [5]
+			107353.149, -- [1]
+			107362.15, -- [2]
+			"01:45:36", -- [3]
+			"01:45:44", -- [4]
+			"不死的居民", -- [5]
 		}, -- [3]
 		{
-			57307.833, -- [1]
-			57319.833, -- [2]
-			"11:51:30", -- [3]
-			"11:51:42", -- [4]
-			"扭曲追趕者", -- [5]
+			107368.15, -- [1]
+			107395.15, -- [2]
+			"01:45:51", -- [3]
+			"01:46:17", -- [4]
+			"不死的看守者", -- [5]
 		}, -- [4]
 		{
-			57362.835, -- [1]
-			57375.835, -- [2]
-			"11:52:25", -- [3]
-			"11:52:38", -- [4]
-			"迅翼絞碎者", -- [5]
+			107417.151, -- [1]
+			107430.151, -- [2]
+			"01:46:40", -- [3]
+			"01:46:52", -- [4]
+			"不死的看守者", -- [5]
 		}, -- [5]
 		{
-			57627.843, -- [1]
-			57652.843, -- [2]
-			"11:56:50", -- [3]
-			"11:57:15", -- [4]
-			"扭曲追趕者", -- [5]
+			107435.152, -- [1]
+			107449.152, -- [2]
+			"01:46:58", -- [3]
+			"01:47:11", -- [4]
+			"不安寧的陰影", -- [5]
 		}, -- [6]
 		{
-			57797.831, -- [1]
-			57810.831, -- [2]
-			"11:59:41", -- [3]
-			"11:59:53", -- [4]
-			"扭曲追趕者", -- [5]
+			107475.153, -- [1]
+			107489.153, -- [2]
+			"01:47:38", -- [3]
+			"01:47:51", -- [4]
+			"哀嚎的幽靈", -- [5]
 		}, -- [7]
 		{
-			58195.843, -- [1]
-			58212.843, -- [2]
-			"12:06:18", -- [3]
-			"12:06:35", -- [4]
-			"迅翼絞碎者", -- [5]
+			107516.154, -- [1]
+			107534.155, -- [2]
+			"01:48:19", -- [3]
+			"01:48:36", -- [4]
+			"被詛咒的靈魂", -- [5]
 		}, -- [8]
 		{
-			58377.832, -- [1]
-			58390.832, -- [2]
-			"12:09:20", -- [3]
-			"12:09:33", -- [4]
-			"扭曲追趕者", -- [5]
+			107570.155, -- [1]
+			107577.156, -- [2]
+			"01:49:12", -- [3]
+			"01:49:19", -- [4]
+			"被詛咒的靈魂", -- [5]
 		}, -- [9]
 		{
-			58419.833, -- [1]
-			58447.834, -- [2]
-			"12:10:02", -- [3]
-			"12:10:30", -- [4]
-			"扭曲追趕者", -- [5]
+			107582.156, -- [1]
+			107587.156, -- [2]
+			"01:49:24", -- [3]
+			"01:49:29", -- [4]
+			"被詛咒的靈魂", -- [5]
 		}, -- [10]
 		{
-			58502.835, -- [1]
-			58513.836, -- [2]
-			"12:11:26", -- [3]
-			"12:11:36", -- [4]
-			"扭曲追趕者", -- [5]
+			107591.156, -- [1]
+			107601.156, -- [2]
+			"01:49:33", -- [3]
+			"01:49:43", -- [4]
+			"不安寧的陰影", -- [5]
 		}, -- [11]
 		{
-			59056.835, -- [1]
-			59066.838, -- [2]
-			"12:20:39", -- [3]
-			"12:20:49", -- [4]
-			"扭曲追趕者", -- [5]
+			107607.157, -- [1]
+			107618.157, -- [2]
+			"01:49:50", -- [3]
+			"01:50:00", -- [4]
+			"哀嚎的幽靈", -- [5]
 		}, -- [12]
 		{
-			59108.837, -- [1]
-			59115.837, -- [2]
-			"12:21:32", -- [3]
-			"12:21:38", -- [4]
-			"迅翼絞碎者", -- [5]
+			107621.157, -- [1]
+			107626.145, -- [2]
+			"01:50:04", -- [3]
+			"01:50:08", -- [4]
+			"被詛咒的靈魂", -- [5]
 		}, -- [13]
 		{
-			59120.837, -- [1]
-			59128.837, -- [2]
-			"12:21:43", -- [3]
-			"12:21:51", -- [4]
-			"扭曲追趕者", -- [5]
+			107636.157, -- [1]
+			107645.158, -- [2]
+			"01:50:19", -- [3]
+			"01:50:27", -- [4]
+			"不安寧的陰影", -- [5]
 		}, -- [14]
 		{
-			59757.839, -- [1]
-			59775.839, -- [2]
-			"12:32:20", -- [3]
-			"12:32:38", -- [4]
-			"迅翼絞碎者", -- [5]
+			107658.158, -- [1]
+			107667.158, -- [2]
+			"01:50:41", -- [3]
+			"01:50:49", -- [4]
+			"不安寧的陰影", -- [5]
 		}, -- [15]
 		{
-			59802.84, -- [1]
-			59819.84, -- [2]
-			"12:33:05", -- [3]
-			"12:33:22", -- [4]
-			"扭曲追趕者", -- [5]
+			107678.159, -- [1]
+			107684.159, -- [2]
+			"01:51:00", -- [3]
+			"01:51:06", -- [4]
+			"被詛咒的靈魂", -- [5]
 		}, -- [16]
 		{
-			60371.839, -- [1]
-			60384.84, -- [2]
-			"12:42:34", -- [3]
-			"12:42:47", -- [4]
-			"迅翼絞碎者", -- [5]
+			107686.159, -- [1]
+			107697.159, -- [2]
+			"01:51:09", -- [3]
+			"01:51:19", -- [4]
+			"哀嚎的幽靈", -- [5]
 		}, -- [17]
 		{
-			60397.84, -- [1]
-			60408.84, -- [2]
-			"12:43:00", -- [3]
-			"12:43:11", -- [4]
-			"扭曲追趕者", -- [5]
+			107699.159, -- [1]
+			107714.16, -- [2]
+			"01:51:22", -- [3]
+			"01:51:36", -- [4]
+			"哀嚎的幽靈", -- [5]
 		}, -- [18]
 		{
-			60428.841, -- [1]
-			60440.841, -- [2]
-			"12:43:31", -- [3]
-			"12:43:43", -- [4]
-			"扭曲追趕者", -- [5]
+			107728.16, -- [1]
+			107737.16, -- [2]
+			"01:51:50", -- [3]
+			"01:51:59", -- [4]
+			"不安寧的陰影", -- [5]
 		}, -- [19]
 		{
-			60463.842, -- [1]
-			60485.843, -- [2]
-			"12:44:06", -- [3]
-			"12:44:28", -- [4]
-			"迅翼絞碎者", -- [5]
+			107740.16, -- [1]
+			107747.164, -- [2]
+			"01:52:02", -- [3]
+			"01:52:09", -- [4]
+			"不安寧的陰影", -- [5]
 		}, -- [20]
 		{
-			60496.843, -- [1]
-			60508.835, -- [2]
-			"12:44:39", -- [3]
-			"12:44:51", -- [4]
-			"扭曲追趕者", -- [5]
+			107785.145, -- [1]
+			107795.145, -- [2]
+			"01:52:48", -- [3]
+			"01:52:57", -- [4]
+			"不安寧的陰影", -- [5]
 		}, -- [21]
 		{
-			60630.847, -- [1]
-			60639.847, -- [2]
-			"12:46:53", -- [3]
-			"12:47:02", -- [4]
-			"扭曲追趕者", -- [5]
+			107802.145, -- [1]
+			107812.146, -- [2]
+			"01:53:05", -- [3]
+			"01:53:14", -- [4]
+			"不死的看守者", -- [5]
 		}, -- [22]
 		{
-			60805.218, -- [1]
-			60814.21900000001, -- [2]
-			"12:49:47", -- [3]
-			"12:49:56", -- [4]
-			"迅翼絞碎者", -- [5]
+			107836.146, -- [1]
+			107847.147, -- [2]
+			"01:53:38", -- [3]
+			"01:53:49", -- [4]
+			"被詛咒的靈魂", -- [5]
 		}, -- [23]
 		{
-			60928.222, -- [1]
-			60938.222, -- [2]
-			"12:51:50", -- [3]
-			"12:52:00", -- [4]
-			"扭曲追趕者", -- [5]
+			107857.147, -- [1]
+			107868.147, -- [2]
+			"01:54:00", -- [3]
+			"01:54:10", -- [4]
+			"不死的看守者", -- [5]
 		}, -- [24]
 		{
-			61588.224, -- [1]
-			61618.225, -- [2]
-			"13:02:51", -- [3]
-			"13:03:20", -- [4]
-			"扭曲追趕者", -- [5]
+			107878.148, -- [1]
+			107891.148, -- [2]
+			"01:54:20", -- [3]
+			"01:54:33", -- [4]
+			"哀嚎的幽靈", -- [5]
 		}, -- [25]
 		{
-			62264.227, -- [1]
-			62281.227, -- [2]
-			"13:14:07", -- [3]
-			"13:14:23", -- [4]
-			"迅翼絞碎者", -- [5]
+			107895.148, -- [1]
+			107899.148, -- [2]
+			"01:54:38", -- [3]
+			"01:54:41", -- [4]
+			"被詛咒的靈魂", -- [5]
 		}, -- [26]
 		{
-			62285.994, -- [1]
-			62314.028, -- [2]
-			"13:14:44", -- [3]
-			"13:14:56", -- [4]
-			"扭曲追趕者", -- [5]
+			107914.149, -- [1]
+			107926.149, -- [2]
+			"01:54:57", -- [3]
+			"01:55:08", -- [4]
+			"哀嚎的幽靈", -- [5]
 		}, -- [27]
 		{
-			62522.017, -- [1]
-			62540.018, -- [2]
-			"13:18:24", -- [3]
-			"13:18:42", -- [4]
-			"扭曲追趕者", -- [5]
+			107961.15, -- [1]
+			107970.15, -- [2]
+			"01:55:44", -- [3]
+			"01:55:52", -- [4]
+			"不安寧的陰影", -- [5]
 		}, -- [28]
 		{
-			62704.023, -- [1]
-			62722.023, -- [2]
-			"13:21:27", -- [3]
-			"13:21:44", -- [4]
-			"迅翼絞碎者", -- [5]
+			107973.15, -- [1]
+			107981.151, -- [2]
+			"01:55:56", -- [3]
+			"01:56:03", -- [4]
+			"被詛咒的靈魂", -- [5]
 		}, -- [29]
 		{
-			62804.025, -- [1]
-			62819.026, -- [2]
-			"13:23:06", -- [3]
-			"13:23:21", -- [4]
-			"扭曲追趕者", -- [5]
+			107990.151, -- [1]
+			108004.151, -- [2]
+			"01:56:13", -- [3]
+			"01:56:26", -- [4]
+			"不死的看守者", -- [5]
 		}, -- [30]
 		{
-			62855.027, -- [1]
-			62869.027, -- [2]
-			"13:23:57", -- [3]
-			"13:24:11", -- [4]
-			"迅翼絞碎者", -- [5]
+			108009.151, -- [1]
+			108017.152, -- [2]
+			"01:56:32", -- [3]
+			"01:56:39", -- [4]
+			"不安寧的陰影", -- [5]
 		}, -- [31]
 		{
-			63352.408, -- [1]
-			63361.408, -- [2]
-			"13:32:15", -- [3]
-			"13:32:23", -- [4]
-			"扭曲追趕者", -- [5]
+			108021.152, -- [1]
+			108031.152, -- [2]
+			"01:56:43", -- [3]
+			"01:56:53", -- [4]
+			"哀嚎的幽靈", -- [5]
 		}, -- [32]
 		{
-			63565.397, -- [1]
-			63575.397, -- [2]
-			"13:35:48", -- [3]
-			"13:35:57", -- [4]
-			"扭曲追趕者", -- [5]
+			108034.152, -- [1]
+			108041.152, -- [2]
+			"01:56:56", -- [3]
+			"01:57:03", -- [4]
+			"被詛咒的靈魂", -- [5]
 		}, -- [33]
 		{
-			63614.39900000001, -- [1]
-			63629.39900000001, -- [2]
-			"13:36:36", -- [3]
-			"13:36:51", -- [4]
-			"扭曲追趕者", -- [5]
+			108059.153, -- [1]
+			108069.153, -- [2]
+			"01:57:21", -- [3]
+			"01:57:31", -- [4]
+			"不安寧的陰影", -- [5]
 		}, -- [34]
 		{
-			63654.4, -- [1]
-			63715.401, -- [2]
-			"13:37:17", -- [3]
-			"13:38:17", -- [4]
-			"扭曲追趕者", -- [5]
+			108069.153, -- [1]
+			108081.153, -- [2]
+			"01:57:32", -- [3]
+			"01:57:43", -- [4]
+			"哀嚎的幽靈", -- [5]
 		}, -- [35]
 		{
-			64118.428, -- [1]
-			64170.398, -- [2]
-			"13:45:01", -- [3]
-			"13:45:52", -- [4]
-			"迅翼絞碎者", -- [5]
+			108086.154, -- [1]
+			108100.154, -- [2]
+			"01:57:49", -- [3]
+			"01:58:02", -- [4]
+			"哀嚎的幽靈", -- [5]
 		}, -- [36]
 		{
-			64900.418, -- [1]
-			64923.403, -- [2]
-			"13:58:03", -- [3]
-			"13:58:25", -- [4]
-			"扭曲追趕者", -- [5]
+			108125.155, -- [1]
+			108134.155, -- [2]
+			"01:58:27", -- [3]
+			"01:58:36", -- [4]
+			"哀嚎的幽靈", -- [5]
 		}, -- [37]
 		{
-			65722.409, -- [1]
-			65732.41, -- [2]
-			"14:11:45", -- [3]
-			"14:11:54", -- [4]
-			"扭曲追趕者", -- [5]
+			108153.155, -- [1]
+			108159.156, -- [2]
+			"01:58:56", -- [3]
+			"01:59:01", -- [4]
+			"被詛咒的靈魂", -- [5]
 		}, -- [38]
 		{
-			65971.433, -- [1]
-			65981.433, -- [2]
-			"14:15:54", -- [3]
-			"14:16:03", -- [4]
-			"扭曲追趕者", -- [5]
+			108168.156, -- [1]
+			108177.156, -- [2]
+			"01:59:10", -- [3]
+			"01:59:19", -- [4]
+			"被詛咒的靈魂", -- [5]
 		}, -- [39]
 		{
-			65981.433, -- [1]
-			65996.433, -- [2]
-			"14:16:04", -- [3]
-			"14:16:18", -- [4]
-			"扭曲追趕者", -- [5]
+			108182.156, -- [1]
+			108189.156, -- [2]
+			"01:59:24", -- [3]
+			"01:59:31", -- [4]
+			"不死的看守者", -- [5]
 		}, -- [40]
 		{
-			66033.43400000001, -- [1]
-			66042.43400000001, -- [2]
-			"14:16:55", -- [3]
-			"14:17:04", -- [4]
-			"迅翼絞碎者", -- [5]
+			108214.157, -- [1]
+			108226.158, -- [2]
+			"01:59:56", -- [3]
+			"02:00:08", -- [4]
+			"不死的看守者", -- [5]
 		}, -- [41]
 		{
-			66060.435, -- [1]
-			66072.435, -- [2]
-			"14:17:23", -- [3]
-			"14:17:34", -- [4]
-			"扭曲追趕者", -- [5]
+			108298.16, -- [1]
+			108307.16, -- [2]
+			"02:01:21", -- [3]
+			"02:01:29", -- [4]
+			"不安寧的陰影", -- [5]
 		}, -- [42]
 		{
-			66109.436, -- [1]
-			66128.437, -- [2]
-			"14:18:12", -- [3]
-			"14:18:30", -- [4]
-			"扭曲追趕者", -- [5]
+			108312.16, -- [1]
+			108320.16, -- [2]
+			"02:01:35", -- [3]
+			"02:01:42", -- [4]
+			"不安寧的陰影", -- [5]
 		}, -- [43]
 		{
-			66939.443, -- [1]
-			66957.444, -- [2]
-			"14:32:02", -- [3]
-			"14:32:19", -- [4]
-			"扭曲追趕者", -- [5]
+			108326.161, -- [1]
+			108351.145, -- [2]
+			"02:01:48", -- [3]
+			"02:02:13", -- [4]
+			"不死的看守者", -- [5]
 		}, -- [44]
 		{
-			66965.444, -- [1]
-			66974.444, -- [2]
-			"14:32:28", -- [3]
-			"14:32:36", -- [4]
-			"扭曲追趕者", -- [5]
+			108366.145, -- [1]
+			108373.145, -- [2]
+			"02:02:29", -- [3]
+			"02:02:35", -- [4]
+			"不死的居民", -- [5]
 		}, -- [45]
 		{
-			66981.445, -- [1]
-			66993.445, -- [2]
-			"14:32:44", -- [3]
-			"14:32:55", -- [4]
-			"迅翼絞碎者", -- [5]
+			108428.147, -- [1]
+			108436.147, -- [2]
+			"02:03:30", -- [3]
+			"02:03:38", -- [4]
+			"不死的居民", -- [5]
 		}, -- [46]
 		{
-			67031.446, -- [1]
-			67044.446, -- [2]
-			"14:33:34", -- [3]
-			"14:33:46", -- [4]
-			"日怒射手", -- [5]
+			108451.147, -- [1]
+			108461.148, -- [2]
+			"02:03:53", -- [3]
+			"02:04:03", -- [4]
+			"哀嚎的幽靈", -- [5]
 		}, -- [47]
+		{
+			108465.148, -- [1]
+			108470.148, -- [2]
+			"02:04:07", -- [3]
+			"02:04:12", -- [4]
+			"不安寧的陰影", -- [5]
+		}, -- [48]
+		{
+			108482.148, -- [1]
+			108493.149, -- [2]
+			"02:04:25", -- [3]
+			"02:04:35", -- [4]
+			"不死的居民", -- [5]
+		}, -- [49]
+		{
+			108502.149, -- [1]
+			108508.149, -- [2]
+			"02:04:44", -- [3]
+			"02:04:50", -- [4]
+			"不死的看守者", -- [5]
+		}, -- [50]
+		{
+			108510.149, -- [1]
+			108521.149, -- [2]
+			"02:04:53", -- [3]
+			"02:05:03", -- [4]
+			"哀嚎的幽靈", -- [5]
+		}, -- [51]
+		{
+			108542.15, -- [1]
+			108550.15, -- [2]
+			"02:05:25", -- [3]
+			"02:05:32", -- [4]
+			"不死的看守者", -- [5]
+		}, -- [52]
+		{
+			108610.152, -- [1]
+			108620.152, -- [2]
+			"02:06:33", -- [3]
+			"02:06:42", -- [4]
+			"不安寧的陰影", -- [5]
+		}, -- [53]
+		{
+			108625.152, -- [1]
+			108641.153, -- [2]
+			"02:06:47", -- [3]
+			"02:07:03", -- [4]
+			"被詛咒的靈魂", -- [5]
+		}, -- [54]
+		{
+			108741.156, -- [1]
+			108764.156, -- [2]
+			"02:08:43", -- [3]
+			"02:09:06", -- [4]
+			"被詛咒的靈魂", -- [5]
+		}, -- [55]
+		{
+			108843.159, -- [1]
+			108849.159, -- [2]
+			"02:10:26", -- [3]
+			"02:10:31", -- [4]
+			"不死的居民", -- [5]
+		}, -- [56]
+		{
+			108883.16, -- [1]
+			108891.16, -- [2]
+			"02:11:06", -- [3]
+			"02:11:13", -- [4]
+			"不死的居民", -- [5]
+		}, -- [57]
+		{
+			108940.145, -- [1]
+			108954.145, -- [2]
+			"02:12:03", -- [3]
+			"02:12:16", -- [4]
+			"不死的看守者", -- [5]
+		}, -- [58]
+		{
+			108958.145, -- [1]
+			108967.146, -- [2]
+			"02:12:21", -- [3]
+			"02:12:29", -- [4]
+			"被詛咒的靈魂", -- [5]
+		}, -- [59]
+		{
+			108971.146, -- [1]
+			108978.146, -- [2]
+			"02:12:33", -- [3]
+			"02:12:40", -- [4]
+			"不安寧的陰影", -- [5]
+		}, -- [60]
+		{
+			108983.146, -- [1]
+			108992.146, -- [2]
+			"02:12:46", -- [3]
+			"02:12:54", -- [4]
+			"被詛咒的靈魂", -- [5]
+		}, -- [61]
+		{
+			108997.146, -- [1]
+			109008.147, -- [2]
+			"02:12:59", -- [3]
+			"02:13:10", -- [4]
+			"哀嚎的幽靈", -- [5]
+		}, -- [62]
+		{
+			109037.148, -- [1]
+			109044.148, -- [2]
+			"02:13:39", -- [3]
+			"02:13:46", -- [4]
+			"被詛咒的靈魂", -- [5]
+		}, -- [63]
+		{
+			109051.148, -- [1]
+			109058.148, -- [2]
+			"02:13:54", -- [3]
+			"02:14:00", -- [4]
+			"不安寧的陰影", -- [5]
+		}, -- [64]
+		{
+			109061.148, -- [1]
+			109069.148, -- [2]
+			"02:14:04", -- [3]
+			"02:14:11", -- [4]
+			"不死的看守者", -- [5]
+		}, -- [65]
+		{
+			109072.149, -- [1]
+			109092.149, -- [2]
+			"02:14:15", -- [3]
+			"02:14:34", -- [4]
+			"被詛咒的靈魂", -- [5]
+		}, -- [66]
+		{
+			109095.149, -- [1]
+			109105.149, -- [2]
+			"02:14:37", -- [3]
+			"02:14:47", -- [4]
+			"不安寧的陰影", -- [5]
+		}, -- [67]
+		{
+			109114.15, -- [1]
+			109127.15, -- [2]
+			"02:14:57", -- [3]
+			"02:15:09", -- [4]
+			"哀嚎的幽靈", -- [5]
+		}, -- [68]
+		{
+			109132.15, -- [1]
+			109144.151, -- [2]
+			"02:15:14", -- [3]
+			"02:15:26", -- [4]
+			"哀嚎的幽靈", -- [5]
+		}, -- [69]
+		{
+			109152.151, -- [1]
+			109169.151, -- [2]
+			"02:15:35", -- [3]
+			"02:15:51", -- [4]
+			"哀嚎的幽靈", -- [5]
+		}, -- [70]
+		{
+			109187.152, -- [1]
+			109204.152, -- [2]
+			"02:16:09", -- [3]
+			"02:16:26", -- [4]
+			"不死的看守者", -- [5]
+		}, -- [71]
+		{
+			109213.153, -- [1]
+			109219.153, -- [2]
+			"02:16:35", -- [3]
+			"02:16:41", -- [4]
+			"被詛咒的靈魂", -- [5]
+		}, -- [72]
+		{
+			109221.153, -- [1]
+			109228.153, -- [2]
+			"02:16:43", -- [3]
+			"02:16:50", -- [4]
+			"不安寧的陰影", -- [5]
+		}, -- [73]
+		{
+			109260.154, -- [1]
+			109271.154, -- [2]
+			"02:17:23", -- [3]
+			"02:17:33", -- [4]
+			"不死的看守者", -- [5]
+		}, -- [74]
+		{
+			109291.155, -- [1]
+			109300.155, -- [2]
+			"02:17:54", -- [3]
+			"02:18:02", -- [4]
+			"不死的居民", -- [5]
+		}, -- [75]
+		{
+			109317.156, -- [1]
+			109328.156, -- [2]
+			"02:18:19", -- [3]
+			"02:18:30", -- [4]
+			"不死的居民", -- [5]
+		}, -- [76]
+		{
+			109731.151, -- [1]
+			109743.153, -- [2]
+			"02:25:14", -- [3]
+			"02:25:25", -- [4]
+			"森林食苔蛛", -- [5]
+		}, -- [77]
 	},
 	["FoughtWho"] = {
-		"日怒射手 14:33:34-14:33:46", -- [1]
-		"迅翼絞碎者 14:32:44-14:32:55", -- [2]
-		"扭曲追趕者 14:32:28-14:32:36", -- [3]
-		"扭曲追趕者 14:32:02-14:32:19", -- [4]
-		"扭曲追趕者 14:18:12-14:18:30", -- [5]
+		"森林食苔蛛 02:25:14-02:25:25", -- [1]
+		"不死的居民 02:18:19-02:18:30", -- [2]
+		"不死的居民 02:17:54-02:18:02", -- [3]
+		"不死的看守者 02:17:23-02:17:33", -- [4]
+		"不安寧的陰影 02:16:43-02:16:50", -- [5]
 	},
 }

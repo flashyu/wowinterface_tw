@@ -7,10 +7,9 @@ GTFOData = {
 		true, -- [4]
 	},
 	["Active"] = true,
-	["SoundOverrides"] = {
-	},
-	["TrivialDamagePercent"] = 2,
 	["SoundChannel"] = "Master",
+	["TrivialDamagePercent"] = 2,
+	["EnableVibration"] = false,
 	["TestMode"] = false,
 	["DataCode"] = "4",
 	["UnmuteMode"] = false,
@@ -18,6 +17,7 @@ GTFOData = {
 	["IgnoreOptions"] = {
 		["Fatigue"] = false,
 	},
-	["EnableVibration"] = false,
+	["SoundOverrides"] = {
+	},
 	["TrivialMode"] = false,
 }

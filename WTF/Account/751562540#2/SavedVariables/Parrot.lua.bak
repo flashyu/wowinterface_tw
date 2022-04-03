@@ -92,7 +92,8 @@ ParrotDB = {
 							["disabled"] = false,
 							["scrollArea"] = "受到",
 						},
-						["Skill blocks"] = {
+						["Pet skill resists"] = {
+							["disabled"] = true,
 							["scrollArea"] = "提示",
 						},
 						["Pet heals"] = {
@@ -108,16 +109,14 @@ ParrotDB = {
 							["disabled"] = true,
 							["scrollArea"] = "提示",
 						},
-						["Pet melee deflects"] = {
-							["disabled"] = true,
-							["scrollArea"] = "提示",
+						["Dispel fail"] = {
+							["scrollArea"] = "受到",
 						},
 						["Melee absorbs"] = {
 							["scrollArea"] = "提示",
 						},
-						["Reactive skills"] = {
-							["disabled"] = false,
-							["scrollArea"] = "受到",
+						["Skill blocks"] = {
+							["scrollArea"] = "提示",
 						},
 						["Skill interrupts"] = {
 							["disabled"] = false,
@@ -126,7 +125,8 @@ ParrotDB = {
 						["Melee immunes"] = {
 							["scrollArea"] = "提示",
 						},
-						["Skill reflects"] = {
+						["Pet melee evades"] = {
+							["disabled"] = true,
 							["scrollArea"] = "提示",
 						},
 						["Pet melee immunes"] = {
@@ -144,8 +144,8 @@ ParrotDB = {
 							["disabled"] = true,
 							["scrollArea"] = "提示",
 						},
-						["Pet melee damage"] = {
-							["scrollArea"] = "受到",
+						["Skill reflects"] = {
+							["scrollArea"] = "提示",
 						},
 						["Melee deflects"] = {
 							["scrollArea"] = "提示",
@@ -198,9 +198,8 @@ ParrotDB = {
 							["disabled"] = true,
 							["scrollArea"] = "提示",
 						},
-						["Pet melee evades"] = {
-							["disabled"] = true,
-							["scrollArea"] = "提示",
+						["Pet melee damage"] = {
+							["scrollArea"] = "受到",
 						},
 						["Melee blocks"] = {
 							["scrollArea"] = "提示",
@@ -216,18 +215,19 @@ ParrotDB = {
 							["disabled"] = true,
 							["scrollArea"] = "提示",
 						},
-						["Pet skill resists"] = {
-							["disabled"] = true,
-							["scrollArea"] = "提示",
-						},
-						["Dispel fail"] = {
+						["Reactive skills"] = {
+							["disabled"] = false,
 							["scrollArea"] = "受到",
+						},
+						["Skill resists"] = {
+							["scrollArea"] = "提示",
 						},
 						["Pet skill reflects"] = {
 							["disabled"] = true,
 							["scrollArea"] = "提示",
 						},
-						["Skill resists"] = {
+						["Pet melee deflects"] = {
+							["disabled"] = true,
 							["scrollArea"] = "提示",
 						},
 						["Skill damage"] = {

@@ -613,7 +613,7 @@ AutoBarDB = {
 		["騎風 - 伊弗斯"] = {
 			["buttonDataList"] = {
 				["AutoBarButtonRaidTarget"] = {
-					["arrangeOnUse"] = "macrotext:8",
+					["arrangeOnUse"] = "macrotext:3",
 				},
 			},
 			["barList"] = {

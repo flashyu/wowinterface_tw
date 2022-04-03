@@ -46,6 +46,9 @@ VER 3 000000000000000B "紅" "136124"
 /use 極效治療藥水
 /use 超强效治療藥水
 END
+VER 3 0000000000000010 "脚底光圈" "133566"
+/console findyourselfmode 1
+END
 VER 3 0000000000000009 "遠視" "132177"
 /console cameraDistanceMaxZoomFactor 4
 /console ffxDeath 0

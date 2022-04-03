@@ -145,9 +145,9 @@ WIM3_Data = {
 			["custom_sml"] = "Chat Blip",
 			["say_sml"] = "Chat Blip",
 			["raid_sml"] = "Chat Blip",
+			["raidleader_sml"] = "Chat Blip",
 			["officer_sml"] = "Chat Blip",
 			["guild_sml"] = "Chat Blip",
-			["raidleader_sml"] = "Chat Blip",
 			["battlegroundleader_sml"] = "Chat Blip",
 			["battleground_sml"] = "Chat Blip",
 		},
@@ -221,8 +221,8 @@ WIM3_Data = {
 	["showToolTips"] = true,
 	["minimap"] = {
 		["free_position"] = {
-			["y"] = -119.9890033406945,
-			["x"] = -161.5500472187982,
+			["y"] = -85.3610222619543,
+			["x"] = -118.1154105679225,
 			["point"] = "TOPRIGHT",
 		},
 		["position"] = 200,
@@ -396,14 +396,15 @@ WIM3_Cache = {
 	["伊弗斯"] = {
 		["騎風"] = {
 			["friendList"] = {
-				["牧原股份"] = 1,
+				["徐定貴"] = 1,
 				["大福星"] = 1,
 				["|Kq2|k"] = 2,
-				["特變電工"] = 1,
-				["柳七夜"] = 1,
+				["牧原股份"] = 1,
 				["百合妹妹"] = 1,
-				["羽菱"] = 1,
+				["特變電工"] = 1,
 				["|Kq1|k"] = 2,
+				["柳七夜"] = 1,
+				["羽菱"] = 1,
 				["靜靜看你"] = 1,
 			},
 			["guildList"] = {
@@ -427,11 +428,11 @@ WIM3_Cache = {
 				["陰牙婦產科"] = 27,
 				["聖經"] = 23,
 				["程昱"] = 22,
+				["內魯岡"] = 8,
 				["森井冰檸檬"] = 16,
 				["必出鳳凰"] = 6,
-				["歿天使"] = 18,
-				["內魯岡"] = 8,
 				["柒丌"] = 13,
+				["歿天使"] = 18,
 				["特變電工"] = 19,
 				["獵艷狂魔"] = 20,
 				["神戶牛刺身"] = 21,
@@ -642,6 +643,42 @@ WIM3_History = {
 					["inbound"] = false,
 					["convo"] = "大福星",
 				}, -- [11]
+				["info"] = {
+				},
+			},
+			["徐定貴"] = {
+				{
+					["type"] = 1,
+					["time"] = 1648981305,
+					["from"] = "徐定貴",
+					["msg"] = "寄給妳了 這樣 收著吧",
+					["inbound"] = true,
+					["convo"] = "徐定貴",
+				}, -- [1]
+				{
+					["type"] = 1,
+					["time"] = 1648981305,
+					["from"] = "騎風",
+					["msg"] = "我下次加油  這次先這樣吧 沒關係的 哈哈",
+					["inbound"] = false,
+					["convo"] = "徐定貴",
+				}, -- [2]
+				{
+					["type"] = 1,
+					["time"] = 1648981309,
+					["from"] = "騎風",
+					["msg"] = "。。。。",
+					["inbound"] = false,
+					["convo"] = "徐定貴",
+				}, -- [3]
+				{
+					["type"] = 1,
+					["time"] = 1648981313,
+					["from"] = "騎風",
+					["msg"] = "好吧 感謝了",
+					["inbound"] = false,
+					["convo"] = "徐定貴",
+				}, -- [4]
 				["info"] = {
 				},
 			},

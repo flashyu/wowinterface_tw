@@ -10,9 +10,9 @@ CodexConfig = {
 	["minimumDropChance"] = 2,
 	["showLowLevel"] = false,
 	["_tom_waypoint"] = {
-		1948, -- [1]
-		0.5710000000000001, -- [2]
-		0.737, -- [3]
+		1944, -- [1]
+		0.552, -- [2]
+		0.388, -- [3]
 		["arrivaldistance"] = 15,
 		["callbacks"] = {
 			["distance"] = {
@@ -25,7 +25,7 @@ CodexConfig = {
 		["persistent"] = true,
 		["minimap"] = true,
 		["cleardistance"] = 10,
-		["title"] = "哈鲁姆",
+		["title"] = "泽格·纳克布斯",
 		["from"] = "?",
 		["crazy"] = true,
 		["world"] = true,
