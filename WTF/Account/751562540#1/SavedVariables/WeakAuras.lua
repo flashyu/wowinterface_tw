@@ -97,18 +97,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["xOffset"] = 0,
+			["selfPoint"] = "TOP",
 			["animate"] = false,
-			["arcLength"] = 360,
+			["radius"] = 200,
 			["scale"] = 1,
-			["fullCircle"] = true,
+			["gridType"] = "RD",
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["radius"] = 200,
-			["selfPoint"] = "TOP",
+			["xOffset"] = 0,
+			["fullCircle"] = true,
 			["constantFactor"] = "RADIUS",
 			["rotation"] = 0,
 			["borderOffset"] = 4,
@@ -119,16 +119,16 @@ WeakAurasSaved = {
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
 			["useLimit"] = false,
-			["uid"] = "KcmUnf8yeJE",
 			["config"] = {
 			},
-			["rowSpace"] = 1,
+			["uid"] = "KcmUnf8yeJE",
+			["arcLength"] = 360,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["gridType"] = "RD",
+			["rowSpace"] = 1,
 		},
 		["lan"] = {
 			["grow"] = "DOWN",
@@ -224,18 +224,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["selfPoint"] = "TOP",
+			["useLimit"] = false,
 			["animate"] = false,
-			["rowSpace"] = 1,
+			["radius"] = 200,
 			["scale"] = 1,
-			["xOffset"] = -202.7703247070313,
+			["gridType"] = "RD",
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["radius"] = 200,
-			["useLimit"] = false,
+			["selfPoint"] = "TOP",
+			["xOffset"] = -202.7703247070313,
 			["constantFactor"] = "RADIUS",
 			["arcLength"] = 360,
 			["borderOffset"] = 4,
@@ -246,16 +246,16 @@ WeakAurasSaved = {
 			["gridWidth"] = 5,
 			["anchorFrameType"] = "SCREEN",
 			["limit"] = 5,
-			["uid"] = "I7Y0mTf5KSP",
 			["config"] = {
 			},
-			["fullCircle"] = true,
+			["uid"] = "I7Y0mTf5KSP",
+			["rowSpace"] = 1,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["gridType"] = "RD",
+			["fullCircle"] = true,
 		},
 		["Details! Boss Mods Group"] = {
 			["grow"] = "DOWN",
@@ -350,18 +350,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["selfPoint"] = "TOP",
+			["useLimit"] = false,
 			["animate"] = false,
-			["rowSpace"] = 1,
+			["radius"] = 200,
 			["scale"] = 1,
-			["xOffset"] = 0,
+			["gridType"] = "RD",
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["radius"] = 200,
-			["useLimit"] = false,
+			["selfPoint"] = "TOP",
+			["xOffset"] = 0,
 			["constantFactor"] = "RADIUS",
 			["arcLength"] = 360,
 			["borderOffset"] = 4,
@@ -372,16 +372,16 @@ WeakAurasSaved = {
 			["gridWidth"] = 5,
 			["anchorFrameType"] = "SCREEN",
 			["limit"] = 5,
-			["uid"] = "ZX3oWFkARRy",
 			["config"] = {
 			},
-			["fullCircle"] = true,
+			["uid"] = "ZX3oWFkARRy",
+			["rowSpace"] = 1,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["gridType"] = "RD",
+			["fullCircle"] = true,
 		},
 		["New"] = {
 			["sparkWidth"] = 10,
@@ -514,7 +514,7 @@ WeakAurasSaved = {
 			},
 			["endAngle"] = 360,
 			["internalVersion"] = 51,
-			["advance"] = false,
+			["model_fileId"] = "122968",
 			["animation"] = {
 				["start"] = {
 					["easeStrength"] = 3,
@@ -608,7 +608,7 @@ WeakAurasSaved = {
 				},
 			},
 			["sparkOffsetX"] = 0,
-			["mirror"] = false,
+			["border"] = false,
 			["borderEdge"] = "None",
 			["borderColor"] = {
 				1, -- [1]
@@ -624,7 +624,7 @@ WeakAurasSaved = {
 			["model_path"] = "spells/arcanepower_state_chest.m2",
 			["sparkHeight"] = 30,
 			["model_z"] = 0,
-			["border"] = false,
+			["mirror"] = false,
 			["user_y"] = 0,
 			["model_st_rx"] = 270,
 			["borderOffset"] = 5,
@@ -635,7 +635,7 @@ WeakAurasSaved = {
 			["user_x"] = 0,
 			["desaturateBackground"] = false,
 			["inverse"] = false,
-			["model_fileId"] = "122968",
+			["advance"] = false,
 			["orientation"] = "HORIZONTAL",
 			["crop_x"] = 0.41,
 			["information"] = {
@@ -704,22 +704,18 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["encounterid"] = "732",
 				["spec"] = {
 					["multi"] = {
 					},
 				},
-				["encounterid"] = "732",
-				["race"] = {
-					["multi"] = {
-					},
-				},
+				["use_zone"] = true,
 				["use_encounterid"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["use_zone"] = true,
-				["faction"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -727,11 +723,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -788,7 +788,9 @@ WeakAurasSaved = {
 						["custom_type"] = "stateupdate",
 						["useName"] = false,
 						["type"] = "custom",
-						["unevent"] = "timed",
+						["auraspellids"] = {
+							"33045", -- [1]
+						},
 						["subeventPrefix"] = "SPELL",
 						["duration"] = "1",
 						["buffShowOn"] = "showOnActive",
@@ -817,9 +819,7 @@ WeakAurasSaved = {
 						},
 						["remOperator"] = ">=",
 						["useExactSpellId"] = true,
-						["auraspellids"] = {
-							"33045", -- [1]
-						},
+						["unevent"] = "timed",
 						["useRem"] = false,
 					},
 					["untrigger"] = {
@@ -881,9 +881,9 @@ WeakAurasSaved = {
 			["icon"] = true,
 			["text1"] = "%n",
 			["text2"] = "%p",
-			["semver"] = "1.9.0",
-			["anchorFrameType"] = "SCREEN",
 			["justify"] = "LEFT",
+			["anchorFrameType"] = "SCREEN",
+			["semver"] = "1.9.0",
 			["text1Containment"] = "INSIDE",
 			["id"] = "大星术师索兰莉安—奥术飞弹—团队框架高亮 2",
 			["selfPoint"] = "CENTER",
