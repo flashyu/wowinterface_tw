@@ -11,11 +11,12 @@ PawnCommon = {
 	["Debug"] = false,
 	["ColorTooltipBorder"] = true,
 	["ShowTooltipIcons"] = true,
-	["ShowSpecIcons"] = true,
-	["ShowSocketingAdvisor"] = true,
 	["Scales"] = {
 		["\"Classic\":WARRIOR2"] = {
 			["PerCharacterOptions"] = {
+				["我在哪-伊弗斯"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "c69b6d",
 			["LocalizedName"] = "戰士: 狂怒",
@@ -131,6 +132,9 @@ PawnCommon = {
 		},
 		["\"Classic\":WARRIOR3"] = {
 			["PerCharacterOptions"] = {
+				["我在哪-伊弗斯"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "c69b6d",
 			["LocalizedName"] = "戰士: 防護",
@@ -221,6 +225,9 @@ PawnCommon = {
 		},
 		["\"Classic\":WARRIOR1"] = {
 			["PerCharacterOptions"] = {
+				["我在哪-伊弗斯"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "c69b6d",
 			["LocalizedName"] = "戰士: 武器",
@@ -437,6 +444,8 @@ PawnCommon = {
 			["SpecID"] = 2,
 		},
 	},
+	["ShowSocketingAdvisor"] = true,
+	["ShowSpecIcons"] = true,
 	["IgnoreGemsWhileLeveling"] = true,
 	["ButtonPosition"] = 2,
 	["ShowLootUpgradeAdvisor"] = true,

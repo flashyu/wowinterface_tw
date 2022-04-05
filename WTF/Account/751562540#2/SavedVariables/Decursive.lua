@@ -1,9 +1,20 @@
 
 DecursiveDB = {
 	["global"] = {
-		["LastVersionAnnounce"] = 1649142627,
+		["LastVersionAnnounce"] = 1649175998,
 	},
 	["class"] = {
+		["WARRIOR"] = {
+			["CureOrder"] = {
+				-11, -- [1]
+				-15, -- [2]
+				nil, -- [3]
+				-12, -- [4]
+				[8] = -13,
+				[16] = -14,
+				[32] = -16,
+			},
+		},
 		["WARLOCK"] = {
 			["CureOrder"] = {
 				-11, -- [1]
@@ -28,8 +39,9 @@ DecursiveDB = {
 		},
 	},
 	["profileKeys"] = {
-		["隔離 - 伊弗斯"] = "Default",
 		["騎風 - 伊弗斯"] = "Default",
+		["隔離 - 伊弗斯"] = "Default",
+		["我在哪 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

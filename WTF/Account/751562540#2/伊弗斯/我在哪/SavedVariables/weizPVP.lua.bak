@@ -1,0 +1,26 @@
+
+_weizpvp_chardb = {
+	["profileKeys"] = {
+		["我在哪 - 伊弗斯"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["Options"] = {
+				["Database"] = {
+					["LastCleaned"] = 1649173955,
+					["VERSION"] = 3,
+				},
+				["Frames"] = {
+					["Point"] = "TOPLEFT",
+					["X"] = 1506.721923828125,
+					["Y"] = 526.2778930664062,
+					["Width"] = 251.0000915527344,
+					["List"] = {
+						["Height"] = 360.0000305175781,
+					},
+					["Height"] = 216.0000305175781,
+				},
+			},
+		},
+	},
+}

@@ -1,6 +1,5 @@
 VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
-/stopcasting
-/cast [@mouseover,nomod,exists] 消毒術;  [@mouseover,exists,mod:ctrl] 祛病術; [@mouseover,exists,mod:shift] 淨魔術
+/script DecursiveRootTable.Dcr:Println('沒有可用法術')
 END
 VER 3 0000000000000005 "TT一條龍" "132865"
 #showtooltip
@@ -14,8 +13,13 @@ VER 3 0000000000000006 "一條龍" "132314"
 /castsequence reset=combat 風暴打擊,烈焰震擊,水之護盾,地震術,風暴打擊,烈焰震擊,風暴打擊,地震術,水之護盾,烈焰震擊,風暴打擊,地震術
 /script UIErrorsFrame:Hide()
 END
+VER 3 0000000000000012 "冰霜震擊" "135849"
+#showtooltip
+/cast 冰霜震擊
+/startattack
+END
 VER 3 0000000000000004 "同速" "132157"
-/cleartarget
+/tar player
 /targetlasttarget
 /startattack
 END
@@ -41,8 +45,14 @@ VER 3 000000000000000D "烈焰震擊" "135813"
 /startattack
 END
 VER 3 0000000000000011 "爆發" "135726"
+#showtooltip
 /cast 血性狂暴
+/use 狂戰士的吶喊
 /use 嗜血胸針
+END
+VER 3 0000000000000013 "盾舞" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [modifier:alt] 閃電之盾;水之盾
 END
 VER 3 000000000000000B "紅" "136124"
 /use 極強效治療石

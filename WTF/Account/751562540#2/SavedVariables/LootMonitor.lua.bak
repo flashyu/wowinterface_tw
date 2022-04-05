@@ -123,9 +123,9 @@ LootMonitorDB = {
 					},
 				}, -- [9]
 			},
-			["FirstClass"] = "UNKNOWN",
-			["Date"] = "2022-04-03",
 			["Class"] = "SHAMAN",
+			["Date"] = "2022-04-03",
+			["FirstClass"] = "UNKNOWN",
 			["InstanceName"] = "Serpentshrine Cavern",
 			["FirstPlayer"] = "未知",
 		}, -- [1]
@@ -133,9 +133,9 @@ LootMonitorDB = {
 			["InstanceID"] = 550,
 			["FirstPlayer"] = "燹火",
 			["InstanceName"] = "Tempest Keep",
-			["FirstClass"] = "ROGUE",
-			["Date"] = "2022-04-03",
 			["Class"] = "SHAMAN",
+			["Date"] = "2022-04-03",
+			["FirstClass"] = "ROGUE",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4491-550-14695-20039-0001495B90",
@@ -293,8 +293,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "未知",
 			["InstanceName"] = "Zul'Aman",
 			["Date"] = "2022-04-04",
-			["Class"] = "SHAMAN",
 			["FirstClass"] = "UNKNOWN",
+			["Class"] = "SHAMAN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4490-568-20210-23574-00004AF281",

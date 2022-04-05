@@ -236,7 +236,6 @@ BN_WHISPER
 END
 
 CHANNELS
-尋求組隊
 鏡花水月
 END
 

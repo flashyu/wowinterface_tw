@@ -8,7 +8,7 @@ ItemRackSettings = {
 	["HideTradables"] = "OFF",
 	["AllowHidden"] = "ON",
 	["minimap"] = {
-		["minimapPos"] = 225.195045066953,
+		["minimapPos"] = 207.8755837817188,
 		["hide"] = false,
 	},
 	["NotifyChatAlso"] = "OFF",

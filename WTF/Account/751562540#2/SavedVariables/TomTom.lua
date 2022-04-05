@@ -1,8 +1,9 @@
 
 TomTomDB = {
 	["profileKeys"] = {
-		["隔離 - 伊弗斯"] = "Default",
 		["騎風 - 伊弗斯"] = "Default",
+		["隔離 - 伊弗斯"] = "Default",
+		["我在哪 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -30,13 +31,16 @@ TomTomDB = {
 TomTomWaypoints = nil
 TomTomWaypointsM = {
 	["profileKeys"] = {
-		["隔離 - 伊弗斯"] = "隔離 - 伊弗斯",
 		["騎風 - 伊弗斯"] = "騎風 - 伊弗斯",
+		["隔離 - 伊弗斯"] = "隔離 - 伊弗斯",
+		["我在哪 - 伊弗斯"] = "我在哪 - 伊弗斯",
 	},
 	["profiles"] = {
+		["騎風 - 伊弗斯"] = {
+		},
 		["隔離 - 伊弗斯"] = {
 		},
-		["騎風 - 伊弗斯"] = {
+		["我在哪 - 伊弗斯"] = {
 		},
 	},
 }

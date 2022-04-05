@@ -28,6 +28,11 @@ AUCTIONATOR_PRICE_DATABASE = {
 }
 AUCTIONATOR_LAST_SCAN_TIME = nil
 AUCTIONATOR_TOONS = {
+	["我在哪"] = {
+		["firstSeen"] = 1649173957,
+		["guid"] = "Player-4487-00153D1C",
+		["firstVersion"] = "2.5.5-1-g17bf777",
+	},
 	["騎風"] = {
 		["firstSeen"] = 1648223103,
 		["guid"] = "Player-4487-00152DE8",

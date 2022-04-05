@@ -1,5 +1,8 @@
 
 HEYBOX_SAVED_PLAYER_INFOS = {
+	["我在哪-伊弗斯"] = {
+		["class"] = "WARRIOR",
+	},
 	["隔離-伊弗斯"] = {
 		["class"] = "WARLOCK",
 	},

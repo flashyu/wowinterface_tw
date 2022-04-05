@@ -97,18 +97,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["selfPoint"] = "TOP",
-			["animate"] = false,
-			["radius"] = 200,
-			["scale"] = 1,
 			["gridType"] = "RD",
+			["animate"] = false,
+			["selfPoint"] = "TOP",
+			["scale"] = 1,
+			["arcLength"] = 360,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["xOffset"] = 0,
 			["fullCircle"] = true,
+			["rowSpace"] = 1,
 			["constantFactor"] = "RADIUS",
 			["rotation"] = 0,
 			["borderOffset"] = 4,
@@ -122,13 +122,13 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["uid"] = "KcmUnf8yeJE",
-			["arcLength"] = 360,
+			["xOffset"] = 0,
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["rowSpace"] = 1,
+			["radius"] = 200,
 		},
 		["lan"] = {
 			["grow"] = "DOWN",
@@ -224,18 +224,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["useLimit"] = false,
-			["animate"] = false,
-			["radius"] = 200,
-			["scale"] = 1,
 			["gridType"] = "RD",
+			["animate"] = false,
+			["useLimit"] = false,
+			["scale"] = 1,
+			["rowSpace"] = 1,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["selfPoint"] = "TOP",
 			["xOffset"] = -202.7703247070313,
+			["fullCircle"] = true,
 			["constantFactor"] = "RADIUS",
 			["arcLength"] = 360,
 			["borderOffset"] = 4,
@@ -249,13 +249,13 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["uid"] = "I7Y0mTf5KSP",
-			["rowSpace"] = 1,
+			["selfPoint"] = "TOP",
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["fullCircle"] = true,
+			["radius"] = 200,
 		},
 		["Details! Boss Mods Group"] = {
 			["grow"] = "DOWN",
@@ -350,18 +350,18 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["useLimit"] = false,
-			["animate"] = false,
-			["radius"] = 200,
-			["scale"] = 1,
 			["gridType"] = "RD",
+			["animate"] = false,
+			["useLimit"] = false,
+			["scale"] = 1,
+			["rowSpace"] = 1,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["sort"] = "none",
-			["selfPoint"] = "TOP",
 			["xOffset"] = 0,
+			["fullCircle"] = true,
 			["constantFactor"] = "RADIUS",
 			["arcLength"] = 360,
 			["borderOffset"] = 4,
@@ -375,13 +375,13 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["uid"] = "ZX3oWFkARRy",
-			["rowSpace"] = 1,
+			["selfPoint"] = "TOP",
 			["conditions"] = {
 			},
 			["information"] = {
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["fullCircle"] = true,
+			["radius"] = 200,
 		},
 		["New"] = {
 			["sparkWidth"] = 10,
@@ -709,16 +709,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_zone"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["use_encounterid"] = true,
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
+				["use_zone"] = true,
 				["pvptalent"] = {
 					["multi"] = {
 					},
@@ -731,7 +731,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},

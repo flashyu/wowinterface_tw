@@ -1,0 +1,15 @@
+Version: 1
+Frame: Recount_MainWindow
+FrameLevel: 40
+Anchor: LEFT
+X: 170
+Y: -192
+W: 140
+H: 200
+Frame: ColorPickerFrame
+FrameLevel: 1
+Anchor: CENTER
+X: 0
+Y: 0
+W: 365
+H: 240
