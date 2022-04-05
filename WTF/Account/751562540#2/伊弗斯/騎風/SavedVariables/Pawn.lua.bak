@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0534,
+	["LastPlayerFullName"] = "騎風-伊弗斯",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 29040,
@@ -8,9 +10,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:29040::::::::70:::::::::|h[颶風戰馭頭盔]|h|r",
 		}, -- [1]
 		{
-			["ID"] = 25069,
-			["Level"] = 114,
-			["Link"] = "|cff1eff00|Hitem:25069::::::-35:1050804254:70:::::::::|h[暗影防護之綠簾石項鍊]|h|r",
+			["ID"] = 33297,
+			["Level"] = 128,
+			["Link"] = "|cffa335ee|Hitem:33297::::::::70:::::::::|h[野蠻頸飾]|h|r",
 		}, -- [2]
 		{
 			["ID"] = 32264,
@@ -39,9 +41,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:30880::::::::70:::::::::|h[迅行者底鞋]|h|r",
 		}, -- [8]
 		{
-			["ID"] = 30091,
-			["Level"] = 128,
-			["Link"] = "|cffa335ee|Hitem:30091::::::::70:::::::::|h[精準遠行者手環]|h|r",
+			["ID"] = 32574,
+			["Level"] = 141,
+			["Link"] = "|cffa335ee|Hitem:32574::::::::70:::::::::|h[電光反射束腕]|h|r",
 		}, -- [9]
 		{
 			["ID"] = 29947,
@@ -49,28 +51,28 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:29947::::::::70:::::::::|h[灼熱掌握手套]|h|r",
 		}, -- [10]
 		{
-			["ID"] = 28730,
-			["Level"] = 115,
+			["ID"] = 29299,
+			["Level"] = 136,
 			["AlsoFitsIn"] = 12,
-			["Link"] = "|cffa335ee|Hitem:28730::::::::70:::::::::|h[無疤秘銀指環]|h|r",
+			["Link"] = "|cffa335ee|Hitem:29299::::::::70:::::::::|h[永恆指環]|h|r",
 		}, -- [11]
 		{
-			["ID"] = 29280,
-			["Level"] = 115,
+			["ID"] = 29298,
+			["Level"] = 128,
 			["AlsoFitsIn"] = 11,
-			["Link"] = "|cff0070dd|Hitem:29280::::::::70:::::::::|h[紫羅蘭徽記]|h|r",
+			["Link"] = "|cffa335ee|Hitem:29298::::::::70:::::::::|h[永恆指環]|h|r",
 		}, -- [12]
+		{
+			["ID"] = 33831,
+			["Level"] = 133,
+			["AlsoFitsIn"] = 14,
+			["Link"] = "|cffa335ee|Hitem:33831::::::::70:::::::::|h[狂戰士的吶喊]|h|r",
+		}, -- [13]
 		{
 			["ID"] = 29383,
 			["Level"] = 110,
-			["AlsoFitsIn"] = 14,
-			["Link"] = "|cffa335ee|Hitem:29383::::::::70:::::::::|h[嗜血胸針]|h|r",
-		}, -- [13]
-		{
-			["ID"] = 185985,
-			["Level"] = 52,
 			["AlsoFitsIn"] = 13,
-			["Link"] = "|cff1eff00|Hitem:185985::::::::58:::::::::|h[共治突襲之石]|h|r",
+			["Link"] = "|cffa335ee|Hitem:29383::::::::70:::::::::|h[嗜血胸針]|h|r",
 		}, -- [14]
 		{
 			["ID"] = 28777,
@@ -90,8 +92,6 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:28439:2673:::::::70:::::::::|h[龍擊]|h|r",
 		}, -- [17]
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "騎風-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

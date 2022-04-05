@@ -1,6 +1,5 @@
-## v4.11.25 Changes
+## v4.11.26 Changes
 
-* [Retail] New disenchant info detection
-* [BCC] Updated for 2.5.4
+* [Classic] Fix incorrect disenchantables
 
 [Known Issues](https://support.tradeskillmaster.com/en_US/known_issues)

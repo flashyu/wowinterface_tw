@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0534,
-	["LastPlayerFullName"] = "騎風-伊弗斯",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 29040,
@@ -10,9 +8,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:29040::::::::70:::::::::|h[颶風戰馭頭盔]|h|r",
 		}, -- [1]
 		{
-			["ID"] = 25069,
-			["Level"] = 114,
-			["Link"] = "|cff1eff00|Hitem:25069::::::-35:1050804254:70:::::::::|h[暗影防護之綠簾石項鍊]|h|r",
+			["ID"] = 33297,
+			["Level"] = 128,
+			["Link"] = "|cffa335ee|Hitem:33297::::::::70:::::::::|h[野蠻頸飾]|h|r",
 		}, -- [2]
 		{
 			["ID"] = 32264,
@@ -63,16 +61,16 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:29298::::::::70:::::::::|h[永恆指環]|h|r",
 		}, -- [12]
 		{
-			["ID"] = 29383,
-			["Level"] = 110,
+			["ID"] = 33831,
+			["Level"] = 133,
 			["AlsoFitsIn"] = 14,
-			["Link"] = "|cffa335ee|Hitem:29383::::::::70:::::::::|h[嗜血胸針]|h|r",
+			["Link"] = "|cffa335ee|Hitem:33831::::::::70:::::::::|h[狂戰士的吶喊]|h|r",
 		}, -- [13]
 		{
-			["ID"] = 185985,
-			["Level"] = 52,
+			["ID"] = 29383,
+			["Level"] = 110,
 			["AlsoFitsIn"] = 13,
-			["Link"] = "|cff1eff00|Hitem:185985::::::::58:::::::::|h[共治突襲之石]|h|r",
+			["Link"] = "|cffa335ee|Hitem:29383::::::::70:::::::::|h[嗜血胸針]|h|r",
 		}, -- [14]
 		{
 			["ID"] = 28777,
@@ -92,6 +90,8 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:28439:2673:::::::70:::::::::|h[龍擊]|h|r",
 		}, -- [17]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "騎風-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

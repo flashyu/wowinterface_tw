@@ -1,11 +1,11 @@
 
 AtlasLootClassicDB = {
+	["global"] = {
+		["__addonrevision"] = 2040001,
+	},
 	["profileKeys"] = {
 		["隔離 - 伊弗斯"] = "隔離 - 伊弗斯",
 		["騎風 - 伊弗斯"] = "騎風 - 伊弗斯",
-	},
-	["global"] = {
-		["__addonrevision"] = 2040001,
 	},
 	["profiles"] = {
 		["隔離 - 伊弗斯"] = {
@@ -16,14 +16,14 @@ AtlasLootClassicDB = {
 					nil, -- [1]
 					nil, -- [2]
 					"CENTER", -- [3]
-					243.3331756591797, -- [4]
-					128.3334503173828, -- [5]
+					242.9999694824219, -- [4]
+					128, -- [5]
 				},
 				["selected"] = {
-					"AtlasLootClassic_Crafting", -- [1]
-					"EnchantingBC", -- [2]
-					5, -- [3]
-					1, -- [4]
+					nil, -- [1]
+					"ZulAman", -- [2]
+					6, -- [3]
+					6, -- [4]
 					0, -- [5]
 				},
 			},
