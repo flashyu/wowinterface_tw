@@ -27,7 +27,7 @@ RecountDB = {
 			},
 			["DetailWindowY"] = -237.8889923095703,
 			["DetailWindowX"] = 656.5554809570312,
-			["LastInstanceName"] = "開啟黑暗之門",
+			["LastInstanceName"] = "祖爾法拉克",
 			["CurDataSet"] = "LastFightData",
 			["GraphWindowX"] = 842.7222290039062,
 			["MainWindowWidth"] = 343.3334045410156,

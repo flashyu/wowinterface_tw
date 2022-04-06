@@ -22,26 +22,11 @@ RecountPerCharDB = {
 			["LastDamageAbility"] = "Fire",
 			["LastFightIn"] = 0,
 			["type"] = "Self",
+			["LastAbility"] = 33704.376,
 			["LastDamageTaken"] = 11,
 			["Owner"] = false,
-			["TimeLast"] = {
-				["DamageTaken"] = 33236.92,
-				["OVERALL"] = 33236.92,
-			},
+			["UnitLockout"] = 33236.92,
 			["NextEventNum"] = 2,
-			["LastEventHealthMax"] = {
-				8619, -- [1]
-			},
-			["LastEvents"] = {
-				"Environment Fire 騎風 Hit -11 (Fire)", -- [1]
-			},
-			["Name"] = "騎風",
-			["LastEventIncoming"] = {
-				true, -- [1]
-			},
-			["LastEventTimes"] = {
-				33237.87, -- [1]
-			},
 			["Fights"] = {
 				["CurrentFightData"] = {
 					["PartialResist"] = {
@@ -152,7 +137,23 @@ RecountPerCharDB = {
 					},
 				},
 			},
-			["UnitLockout"] = 33236.92,
+			["LastEvents"] = {
+				"Environment Fire 騎風 Hit -11 (Fire)", -- [1]
+			},
+			["Name"] = "騎風",
+			["LastEventTimes"] = {
+				33237.87, -- [1]
+			},
+			["LastEventIncoming"] = {
+				true, -- [1]
+			},
+			["TimeLast"] = {
+				["DamageTaken"] = 33236.92,
+				["OVERALL"] = 33236.92,
+			},
+			["LastEventHealthMax"] = {
+				8619, -- [1]
+			},
 			["LastActive"] = 33236.92,
 		},
 	},

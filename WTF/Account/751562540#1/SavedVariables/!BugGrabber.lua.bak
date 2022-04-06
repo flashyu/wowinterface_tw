@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
+	["session"] = 28,
 	["lastSanitation"] = 3,
-	["session"] = 25,
 	["errors"] = {
 		{
 			["message"] = "Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua:300: attempt to index a nil value",
