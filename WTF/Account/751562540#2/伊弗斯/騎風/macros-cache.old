@@ -1,0 +1,4 @@
+VER 3 0000000001000002 "TT Cast" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/castsequence reset=combat/15 灼熱圖騰(等級 5), 石甲圖騰(等級 6), 治療之泉圖騰(等級 4), 根基圖騰
+END

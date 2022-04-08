@@ -3,14 +3,15 @@ LootMonitorDB = {
 	["LootLog"] = {
 		{
 			["InstanceID"] = 548,
+			["FirstPlayer"] = "未知",
 			["Player"] = "騎風",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4491-548-30088-21220-0000C948CE",
 					["Time"] = "15:26:37",
-					["Looter"] = "徐定貴",
-					["Date"] = "2022-04-03",
 					["Class"] = "WARRIOR",
+					["Date"] = "2022-04-03",
+					["Looter"] = "徐定貴",
 					["Name"] = "盤牙女祭司",
 					["Loots"] = {
 						"|cffa335ee|Hitem:30023::::::::70:::::::::|h[漩渦圖騰]|h|r", -- [1]
@@ -19,9 +20,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-548-30088-21301-00044948CE",
 					["Time"] = "15:27:58",
-					["Looter"] = "徐定貴",
-					["Date"] = "2022-04-03",
 					["Class"] = "WARRIOR",
+					["Date"] = "2022-04-03",
+					["Looter"] = "徐定貴",
 					["Name"] = "盤牙破碎者",
 					["Loots"] = {
 						"|cffa335ee|Hitem:30183::::::::70:::::::::|h[虛空漩渦]|h|r", -- [1]
@@ -30,9 +31,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-548-30088-21301-0001C948CF",
 					["Time"] = "15:31:16",
-					["Looter"] = "騎風",
-					["Date"] = "2022-04-03",
 					["Class"] = "SHAMAN",
+					["Date"] = "2022-04-03",
+					["Looter"] = "騎風",
 					["Name"] = "盤牙破碎者",
 					["Loots"] = {
 						"|cff0070dd|Hitem:24164::::::::70:::::::::|h[設計圖:精緻的恆金戒指]|h|r", -- [1]
@@ -41,9 +42,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-548-30088-21217-0000494DF5",
 					["Time"] = "15:37:42",
-					["Looter"] = "大肉肉",
-					["Date"] = "2022-04-03",
 					["Class"] = "DRUID",
+					["Date"] = "2022-04-03",
+					["Looter"] = "大肉肉",
 					["Name"] = "海底潛伏者",
 					["Loots"] = {
 						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
@@ -55,9 +56,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-548-30088-21212-00004948CF",
 					["Time"] = "15:50:00",
-					["Looter"] = "大肉肉",
-					["Date"] = "2022-04-03",
 					["Class"] = "DRUID",
+					["Date"] = "2022-04-03",
+					["Looter"] = "大肉肉",
 					["Name"] = "瓦許女士",
 					["Loots"] = {
 						"|cffa335ee|Hitem:30183::::::::70:::::::::|h[虛空漩渦]|h|r", -- [1]
@@ -72,9 +73,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-548-30088-21228-00004948CE",
 					["Time"] = "15:59:34",
-					["Looter"] = "粉紅色鯊魚",
-					["Date"] = "2022-04-03",
 					["Class"] = "PALADIN",
+					["Date"] = "2022-04-03",
+					["Looter"] = "粉紅色鯊魚",
 					["Name"] = "潮行者海法師",
 					["Loots"] = {
 						"|cffa335ee|Hitem:30183::::::::70:::::::::|h[虛空漩渦]|h|r", -- [1]
@@ -83,9 +84,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-548-30088-21224-00004948CE",
 					["Time"] = "16:00:38",
-					["Looter"] = "分身八月四日",
-					["Date"] = "2022-04-03",
 					["Class"] = "PALADIN",
+					["Date"] = "2022-04-03",
+					["Looter"] = "分身八月四日",
 					["Name"] = "潮行者深淵先知",
 					["Loots"] = {
 						"|cffa335ee|Hitem:30183::::::::70:::::::::|h[虛空漩渦]|h|r", -- [1]
@@ -95,9 +96,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-548-30088-21214-00004948CE",
 					["Time"] = "16:16:01",
-					["Class"] = "SHAMAN",
-					["Date"] = "2022-04-03",
 					["Looter"] = "秋波若水",
+					["Date"] = "2022-04-03",
+					["Class"] = "SHAMAN",
 					["Name"] = "深淵之王卡拉薩瑞斯",
 					["Loots"] = {
 						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
@@ -110,9 +111,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-548-30088-21215-00004948CE",
 					["Time"] = "16:28:45",
-					["Class"] = "SHAMAN",
-					["Date"] = "2022-04-03",
 					["Looter"] = "秋波若水",
+					["Date"] = "2022-04-03",
+					["Class"] = "SHAMAN",
 					["Name"] = "『盲目者』李奧薩拉斯",
 					["Loots"] = {
 						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
@@ -123,26 +124,26 @@ LootMonitorDB = {
 					},
 				}, -- [9]
 			},
-			["FirstClass"] = "UNKNOWN",
 			["Date"] = "2022-04-03",
+			["FirstClass"] = "UNKNOWN",
 			["Class"] = "SHAMAN",
 			["InstanceName"] = "Serpentshrine Cavern",
-			["FirstPlayer"] = "未知",
 		}, -- [1]
 		{
 			["InstanceID"] = 550,
+			["Player"] = "騎風",
 			["FirstPlayer"] = "燹火",
 			["InstanceName"] = "Tempest Keep",
-			["FirstClass"] = "ROGUE",
 			["Date"] = "2022-04-03",
+			["FirstClass"] = "ROGUE",
 			["Class"] = "SHAMAN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4491-550-14695-20039-0001495B90",
 					["Time"] = "16:50:17",
-					["Class"] = "WARRIOR",
-					["Date"] = "2022-04-03",
 					["Looter"] = "徐定貴",
+					["Date"] = "2022-04-03",
+					["Class"] = "WARRIOR",
 					["Name"] = "鳳鷹",
 					["Loots"] = {
 						"|cffa335ee|Hitem:30183::::::::70:::::::::|h[虛空漩渦]|h|r", -- [1]
@@ -151,9 +152,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-550-14695-19514-0000495B90",
 					["Time"] = "17:02:17",
-					["Class"] = "ROGUE",
-					["Date"] = "2022-04-03",
 					["Looter"] = "燹火",
+					["Date"] = "2022-04-03",
+					["Class"] = "ROGUE",
 					["Name"] = "歐爾",
 					["Loots"] = {
 						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
@@ -166,9 +167,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-550-14695-20042-0002495B90",
 					["Time"] = "17:10:40",
-					["Class"] = "PALADIN",
-					["Date"] = "2022-04-03",
 					["Looter"] = "日炎",
+					["Date"] = "2022-04-03",
+					["Class"] = "PALADIN",
 					["Name"] = "風暴要塞-鐵匠",
 					["Loots"] = {
 						"|cff0070dd|Hitem:31304::::::::70:::::::::|h[精華集中器]|h|r", -- [1]
@@ -177,9 +178,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-550-14695-19516-0000495B90",
 					["Time"] = "17:23:49",
-					["Class"] = "WARRIOR",
-					["Date"] = "2022-04-03",
 					["Looter"] = "徐定貴",
+					["Date"] = "2022-04-03",
+					["Class"] = "WARRIOR",
 					["Name"] = "虛無搶奪者",
 					["Loots"] = {
 						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
@@ -192,9 +193,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-550-14695-21268-0000496BF0",
 					["Time"] = "17:42:33",
-					["Class"] = "SHAMAN",
-					["Date"] = "2022-04-03",
 					["Looter"] = "騎風",
+					["Date"] = "2022-04-03",
+					["Class"] = "SHAMAN",
 					["Name"] = "虛空之絃長弓",
 					["Loots"] = {
 						"|cffff8000|Hitem:30318::::::::70:::::::::|h[虛空之絃長弓]|h|r", -- [1]
@@ -203,9 +204,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-550-14695-21270-0000496BF0",
 					["Time"] = "17:43:08",
-					["Class"] = "ROGUE",
-					["Date"] = "2022-04-03",
 					["Looter"] = "燹火",
+					["Date"] = "2022-04-03",
+					["Class"] = "ROGUE",
 					["Name"] = "宇宙灌溉者",
 					["Loots"] = {
 						"|cffff8000|Hitem:30317::::::::70:::::::::|h[宇宙灌溉者]|h|r", -- [1]
@@ -214,9 +215,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-550-14695-21274-0000496BF0",
 					["Time"] = "17:43:10",
-					["Class"] = "PRIEST",
-					["Date"] = "2022-04-03",
 					["Looter"] = "茉莉莉",
+					["Date"] = "2022-04-03",
+					["Class"] = "PRIEST",
 					["Name"] = "瓦解之杖",
 					["Loots"] = {
 						"|cffff8000|Hitem:30313::::::::70:::::::::|h[瓦解之杖]|h|r", -- [1]
@@ -225,9 +226,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-550-14695-21272-0000496BF0",
 					["Time"] = "17:43:15",
-					["Class"] = "SHAMAN",
-					["Date"] = "2022-04-03",
 					["Looter"] = "騎風",
+					["Date"] = "2022-04-03",
+					["Class"] = "SHAMAN",
 					["Name"] = "扭曲分割者",
 					["Loots"] = {
 						"|cffff8000|Hitem:30311::::::::70:::::::::|h[扭曲分割者]|h|r", -- [1]
@@ -236,9 +237,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-550-14695-21273-0000496BF0",
 					["Time"] = "17:43:20",
-					["Class"] = "PRIEST",
-					["Date"] = "2022-04-03",
 					["Looter"] = "爆躁小柔",
+					["Date"] = "2022-04-03",
+					["Class"] = "PRIEST",
 					["Name"] = "相位壁壘",
 					["Loots"] = {
 						"|cffff8000|Hitem:30314::::::::70:::::::::|h[相位壁壘]|h|r", -- [1]
@@ -247,9 +248,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-550-14695-21271-0000496BF0",
 					["Time"] = "17:43:24",
-					["Class"] = "HUNTER",
-					["Date"] = "2022-04-03",
 					["Looter"] = "Kazahunter",
+					["Date"] = "2022-04-03",
+					["Class"] = "HUNTER",
 					["Name"] = "無盡之刃",
 					["Loots"] = {
 						"|cffff8000|Hitem:30312::::::::70:::::::::|h[無盡之刃]|h|r", -- [1]
@@ -258,9 +259,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-550-14695-21269-0000496BF0",
 					["Time"] = "17:43:29",
-					["Class"] = "SHAMAN",
-					["Date"] = "2022-04-03",
 					["Looter"] = "秋波若水",
+					["Date"] = "2022-04-03",
+					["Class"] = "SHAMAN",
 					["Name"] = "毀滅",
 					["Loots"] = {
 						"|cffff8000|Hitem:30316::::::::70:::::::::|h[毀滅]|h|r", -- [1]
@@ -269,9 +270,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4491-550-14695-19622-0000495B91",
 					["Time"] = "17:48:21",
-					["Class"] = "ROGUE",
-					["Date"] = "2022-04-03",
 					["Looter"] = "燹火",
+					["Date"] = "2022-04-03",
+					["Class"] = "ROGUE",
 					["Name"] = "凱爾薩斯·逐日者",
 					["Loots"] = {
 						"|cffa335ee|Hitem:30183::::::::70:::::::::|h[虛空漩渦]|h|r", -- [1]
@@ -285,23 +286,21 @@ LootMonitorDB = {
 					},
 				}, -- [12]
 			},
-			["Player"] = "騎風",
 		}, -- [2]
 		{
 			["InstanceID"] = 568,
-			["Player"] = "騎風",
 			["FirstPlayer"] = "未知",
 			["InstanceName"] = "Zul'Aman",
+			["FirstClass"] = "UNKNOWN",
 			["Date"] = "2022-04-04",
 			["Class"] = "SHAMAN",
-			["FirstClass"] = "UNKNOWN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4490-568-20210-23574-00004AF281",
 					["Time"] = "21:40:20",
-					["Looter"] = "動物大百科",
-					["Date"] = "2022-04-04",
 					["Class"] = "DRUID",
+					["Date"] = "2022-04-04",
+					["Looter"] = "動物大百科",
 					["Name"] = "阿奇爾森",
 					["Loots"] = {
 						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
@@ -311,9 +310,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4490-568-20210-23576-00004AF281",
 					["Time"] = "21:50:48",
-					["Looter"] = "终焉誓約",
-					["Date"] = "2022-04-04",
 					["Class"] = "PALADIN",
+					["Date"] = "2022-04-04",
+					["Looter"] = "终焉誓約",
 					["Name"] = "納羅拉克",
 					["Loots"] = {
 						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
@@ -323,9 +322,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4490-568-20210-23578-00004AF281",
 					["Time"] = "21:59:43",
-					["Looter"] = "终焉誓約",
-					["Date"] = "2022-04-04",
 					["Class"] = "PALADIN",
+					["Date"] = "2022-04-04",
+					["Looter"] = "终焉誓約",
 					["Name"] = "賈納雷",
 					["Loots"] = {
 						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
@@ -335,9 +334,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4490-568-20210-24059-0001CAF282",
 					["Time"] = "22:06:25",
-					["Looter"] = "曹洪",
-					["Date"] = "2022-04-04",
 					["Class"] = "PALADIN",
+					["Date"] = "2022-04-04",
+					["Looter"] = "曹洪",
 					["Name"] = "阿曼尼希馴獸師",
 					["Loots"] = {
 						"|cff0070dd|Hitem:29549::::::::70:::::::::|h[聖典:堅韌禱言 III]|h|r", -- [1]
@@ -346,9 +345,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4490-568-20210-23577-00004AF281",
 					["Time"] = "22:15:26",
-					["Looter"] = "騎風",
-					["Date"] = "2022-04-04",
 					["Class"] = "SHAMAN",
+					["Date"] = "2022-04-04",
+					["Looter"] = "騎風",
 					["Name"] = "哈拉齊",
 					["Loots"] = {
 						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
@@ -358,9 +357,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4490-568-20210-24239-00004AFD7E",
 					["Time"] = "22:28:46",
-					["Looter"] = "別逼我擋怪",
-					["Date"] = "2022-04-04",
 					["Class"] = "WARRIOR",
+					["Date"] = "2022-04-04",
+					["Looter"] = "別逼我擋怪",
 					["Name"] = "妖術領主瑪拉克雷斯",
 					["Loots"] = {
 						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
@@ -371,9 +370,9 @@ LootMonitorDB = {
 				{
 					["GUID"] = "Creature-0-4490-568-20210-23863-00004B009E",
 					["Time"] = "22:36:26",
-					["Looter"] = "特變電工",
-					["Date"] = "2022-04-04",
 					["Class"] = "WARRIOR",
+					["Date"] = "2022-04-04",
+					["Looter"] = "特變電工",
 					["Name"] = "祖爾金",
 					["Loots"] = {
 						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
@@ -383,7 +382,50 @@ LootMonitorDB = {
 					},
 				}, -- [7]
 			},
+			["Player"] = "騎風",
 		}, -- [3]
+		{
+			["InstanceID"] = 565,
+			["FirstPlayer"] = "峰仔",
+			["InstanceName"] = "Gruul's Lair",
+			["Class"] = "SHAMAN",
+			["Date"] = "2022-04-07",
+			["FirstClass"] = "WARLOCK",
+			["LootTable"] = {
+				{
+					["GUID"] = "Creature-0-4490-565-18541-18831-00004F041E",
+					["Time"] = "23:43:03",
+					["Class"] = "PALADIN",
+					["Date"] = "2022-04-07",
+					["Looter"] = "Lightblessu",
+					["Name"] = "大君王莫卡爾",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
+						"|cffa335ee|Hitem:29762::::::::70:::::::::|h[逝往英雄肩鎧]|h|r", -- [2]
+						"|cffa335ee|Hitem:29763::::::::70:::::::::|h[逝往勇士肩鎧]|h|r", -- [3]
+						"|cffa335ee|Hitem:28799::::::::70:::::::::|h[神聖鼓舞腰帶]|h|r", -- [4]
+						"|cffa335ee|Hitem:29764::::::::70:::::::::|h[逝往防衛者肩鎧]|h|r", -- [5]
+					},
+				}, -- [1]
+				{
+					["GUID"] = "Creature-0-4490-565-18541-19044-00004F041E",
+					["Time"] = "23:49:38",
+					["Class"] = "PALADIN",
+					["Date"] = "2022-04-07",
+					["Looter"] = "Lightblessu",
+					["Name"] = "弒龍者戈魯爾",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
+						"|cffa335ee|Hitem:28826::::::::70:::::::::|h[否定手裏劍]|h|r", -- [2]
+						"|cffa335ee|Hitem:29765::::::::70:::::::::|h[逝往英雄護腿]|h|r", -- [3]
+						"|cffa335ee|Hitem:28802::::::::70:::::::::|h[血喉魔導師之刃]|h|r", -- [4]
+						"|cffa335ee|Hitem:29766::::::::70:::::::::|h[逝往勇士護腿]|h|r", -- [5]
+						"|cffa335ee|Hitem:29766::::::::70:::::::::|h[逝往勇士護腿]|h|r", -- [6]
+					},
+				}, -- [2]
+			},
+			["Player"] = "騎風",
+		}, -- [4]
 	},
 	["Config"] = {
 		["ShowMinimapIcon"] = true,

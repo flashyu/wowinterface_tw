@@ -1,5 +1,6 @@
 VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
-/script DecursiveRootTable.Dcr:Println('沒有可用法術')
+/stopcasting
+/cast [@mouseover,nomod,exists] 消毒術;  [@mouseover,exists,mod:ctrl] 祛病術; [@mouseover,exists,mod:shift] 淨魔術
 END
 VER 3 0000000000000005 "TT一條龍" "132865"
 #showtooltip

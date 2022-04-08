@@ -1,17 +1,17 @@
 
 AtlasLootClassicDB = {
-	["global"] = {
-		["__addonrevision"] = 2040001,
-	},
 	["profileKeys"] = {
 		["騎風 - 伊弗斯"] = "騎風 - 伊弗斯",
 		["隔離 - 伊弗斯"] = "隔離 - 伊弗斯",
 		["我在哪 - 伊弗斯"] = "我在哪 - 伊弗斯",
 	},
+	["global"] = {
+		["__addonrevision"] = 2040001,
+	},
 	["profiles"] = {
 		["騎風 - 伊弗斯"] = {
 			["minimap"] = {
-				["minimapPos"] = 195.9589303733836,
+				["minimapPos"] = 201.8336181030789,
 			},
 			["GUI"] = {
 				["point"] = {
@@ -23,9 +23,9 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"OldHillsbradFoothills", -- [2]
-					6, -- [3]
-					6, -- [4]
+					"GruulsLair", -- [2]
+					2, -- [3]
+					1, -- [4]
 					0, -- [5]
 				},
 			},

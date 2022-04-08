@@ -237,6 +237,7 @@ END
 
 CHANNELS
 鏡花水月
+尋求組隊
 END
 
 ZONECHANNELS 0
