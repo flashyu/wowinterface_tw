@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 18,
 	["lastSanitation"] = 3,
+	["session"] = 21,
 	["errors"] = {
 		{
 			["message"] = "...e\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\ItemString.lua:261: bad argument #1 to 'strmatch' (string expected, got nil)",
@@ -55,20 +55,13 @@ BugGrabberDB = {
 			["counter"] = 3,
 		}, -- [7]
 		{
-			["message"] = "[string \"Error in: 2.6/2.6 同速 2\"]:5: attempt to perform arithmetic on field 'expirationTime' (a nil value)",
-			["time"] = "2022/04/07 01:14:35",
-			["stack"] = "[string \"=[C]\"]: in function `xpcall'\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:611: in function <Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:537>\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:747: in function `ScanEventsInternal'\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:708: in function `ScanEvents'\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:1433: in function <Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:1431>",
-			["session"] = 17,
-			["counter"] = 538,
-		}, -- [8]
-		{
 			["message"] = "Interface\\AddOns\\ItemRack\\ItemRack-3.69.nil.lua:1943: Usage: SaveBindings(1||2)",
 			["time"] = "2022/04/09 00:42:49",
 			["locals"] = "(*temporary) = 0\n",
 			["stack"] = "[string \"=[C]\"]: in function `SaveBindings'\n[string \"@Interface\\AddOns\\ItemRack\\ItemRack-3.69.nil.lua\"]:1943: in function `SetSetBindings'\n[string \"@Interface\\AddOns\\ItemRack\\ItemRack-3.69.nil.lua\"]:233: in function `?'\n[string \"@Interface\\AddOns\\ItemRack\\ItemRack-3.69.nil.lua\"]:198: in function `OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>",
 			["session"] = 18,
 			["counter"] = 1,
-		}, -- [9]
+		}, -- [8]
 		{
 			["message"] = "...TBC\\AddOns\\Blizzard_AuctionUI\\Blizzard_AuctionUI.lua:751: attempt to index local 'color' (a nil value)",
 			["time"] = "2022/04/09 01:12:48",
@@ -76,14 +69,28 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface_TBC\\AddOns\\Blizzard_AuctionUI\\Blizzard_AuctionUI.lua\"]:751: in function <...TBC\\AddOns\\Blizzard_AuctionUI\\Blizzard_AuctionUI.lua:684>\n[string \"=(tail call)\"]: ?\n[string \"@Interface_TBC\\AddOns\\Blizzard_AuctionUI\\Blizzard_AuctionUI.lua\"]:277: in function <...TBC\\AddOns\\Blizzard_AuctionUI\\Blizzard_AuctionUI.lua:275>",
 			["session"] = 18,
 			["counter"] = 1,
+		}, -- [9]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 嘗試調用保護功能 'VerticalMultiBarsContainer:SetSize()'。",
+			["time"] = "2022/04/09 20:41:54",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `SetSize'\n[string \"@Interface\\FrameXML\\MultiActionBars.lua\"]:104: in function `MultiActionBar_Update'\n[string \"@Interface_TBC\\FrameXML\\InterfaceOptionsPanels.lua\"]:1179: in function `setFunc'\n[string \"@Interface_TBC\\FrameXML\\InterfaceOptionsPanels.lua\"]:87: in function <Interface_TBC\\FrameXML\\InterfaceOptionsPanels.lua:83>\n[string \"=[C]\"]: in function `pcall'\n[string \"@Interface\\FrameXML\\InterfaceOptionsFrame.lua\"]:216: in function <Interface\\FrameXML\\InterfaceOptionsFrame.lua:215>\n[string \"=[C]\"]: ?\n[string \"@Interface\\FrameXML\\InterfaceOptionsFrame.lua\"]:251: in function <Interface\\FrameXML\\InterfaceOptionsFrame.lua:247>\n[string \"=[C]\"]: in function `Click'\n[string \"@Interface_TBC\\FrameXML\\UIParent.lua\"]:3439: in function `ToggleGameMenu'\n[string \"TOGGLEGAMEMENU\"]:1: in function <[string \"TOGGLEGAMEMENU\"]:1>",
+			["session"] = 20,
+			["counter"] = 1,
 		}, -- [10]
+		{
+			["message"] = "[string \"Error in: 2.6/2.6 同速 2\"]:5: attempt to perform arithmetic on field 'expirationTime' (a nil value)",
+			["time"] = "2022/04/07 01:14:35",
+			["stack"] = "[string \"=[C]\"]: in function `xpcall'\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:611: in function <Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:537>\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:747: in function `ScanEventsInternal'\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:708: in function `ScanEvents'\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:1433: in function <Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:1431>",
+			["session"] = 21,
+			["counter"] = 567,
+		}, -- [11]
 		{
 			["message"] = "Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua:300: attempt to index a nil value",
 			["time"] = "2022/04/03 15:14:50",
 			["locals"] = "GearScore = 2966\nItemLevel = 117\nRed = 0.004080\nBlue = 0.966000\nGreen = 0.517000\ni = 0\nTooltipFound = 0\n(for index) = 4\n(for limit) = 4\n(for step) = 1\ni = 4\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"\"\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index a nil value\"\n",
 			["stack"] = "[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:300: in function `GearScore_UpdateGTData'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:276: in function <Interface\\AddOns\\GearScoreLite\\GearScoreLite.lua:269>",
-			["session"] = 18,
-			["counter"] = 446,
-		}, -- [11]
+			["session"] = 21,
+			["counter"] = 675,
+		}, -- [12]
 	},
 }

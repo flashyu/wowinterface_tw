@@ -1,9 +1,7 @@
 
 DecursiveDB = {
-	["profileKeys"] = {
-		["騎風 - 伊弗斯"] = "Default",
-		["隔離 - 伊弗斯"] = "Default",
-		["我在哪 - 伊弗斯"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1649508094,
 	},
 	["class"] = {
 		["WARRIOR"] = {
@@ -40,15 +38,21 @@ DecursiveDB = {
 			},
 		},
 	},
-	["global"] = {
-		["LastVersionAnnounce"] = 1649346715,
+	["profileKeys"] = {
+		["騎風 - 伊弗斯"] = "Default",
+		["隔離 - 伊弗斯"] = "Default",
+		["我在哪 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
-			["DebuffsFrameContainer_y"] = 494.9333014373784,
-			["MainBarX"] = 682.6667034912098,
-			["MainBarY"] = -95.99999785423279,
-			["DebuffsFrameContainer_x"] = 1024.000055236815,
+			["DebuffsFrameContainer_y"] = 477.1557315222381,
+			["MainBarX"] = 775.8220139090263,
+			["MainBarY"] = -104.5334351634956,
+			["MiniMapIcon"] = {
+				["minimapPos"] = 157.6769477525857,
+				["hide"] = false,
+			},
+			["DebuffsFrameContainer_x"] = 862.9341994619172,
 		},
 	},
 }

@@ -37,37 +37,6 @@ TomTomWaypointsM = {
 	},
 	["profiles"] = {
 		["騎風 - 伊弗斯"] = {
-			[1948] = {
-				["1948:300000000:277000000:主药剂师希尔达迦"] = {
-					1948, -- [1]
-					0.3, -- [2]
-					0.277, -- [3]
-					["arrivaldistance"] = 15,
-					["callbacks"] = {
-						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-					},
-					["persistent"] = true,
-					["minimap"] = true,
-					["cleardistance"] = 10,
-					["title"] = "主药剂师希尔达迦",
-					["from"] = "?",
-					["crazy"] = true,
-					["world"] = true,
-				},
-			},
 		},
 		["隔離 - 伊弗斯"] = {
 		},
