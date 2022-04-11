@@ -27,13 +27,6 @@ X: 271
 Y: -131
 W: 920
 H: 600
-Frame: aux_frame
-FrameLevel: 1
-Anchor: CENTER
-X: 249
-Y: 139
-W: 768
-H: 447
 Frame: CodexBrowser
 FrameLevel: 1
 Anchor: CENTER
@@ -48,3 +41,10 @@ X: 119
 Y: -47
 W: 860
 H: 750
+Frame: aux_frame
+FrameLevel: 1
+Anchor: CENTER
+X: 249
+Y: 139
+W: 768
+H: 447

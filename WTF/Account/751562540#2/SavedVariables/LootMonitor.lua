@@ -123,9 +123,9 @@ LootMonitorDB = {
 					},
 				}, -- [9]
 			},
-			["Class"] = "SHAMAN",
-			["Date"] = "2022-04-03",
 			["FirstClass"] = "UNKNOWN",
+			["Date"] = "2022-04-03",
+			["Class"] = "SHAMAN",
 			["InstanceName"] = "Serpentshrine Cavern",
 			["FirstPlayer"] = "未知",
 		}, -- [1]
@@ -133,9 +133,9 @@ LootMonitorDB = {
 			["InstanceID"] = 550,
 			["FirstPlayer"] = "燹火",
 			["InstanceName"] = "Tempest Keep",
-			["Class"] = "SHAMAN",
-			["Date"] = "2022-04-03",
 			["FirstClass"] = "ROGUE",
+			["Date"] = "2022-04-03",
+			["Class"] = "SHAMAN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4491-550-14695-20039-0001495B90",
@@ -293,8 +293,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "未知",
 			["InstanceName"] = "Zul'Aman",
 			["Date"] = "2022-04-04",
-			["FirstClass"] = "UNKNOWN",
 			["Class"] = "SHAMAN",
+			["FirstClass"] = "UNKNOWN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4490-568-20210-23574-00004AF281",
@@ -390,8 +390,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "峰仔",
 			["InstanceName"] = "Gruul's Lair",
 			["Date"] = "2022-04-07",
-			["Class"] = "SHAMAN",
 			["FirstClass"] = "WARLOCK",
+			["Class"] = "SHAMAN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4490-565-18541-18831-00004F041E",
@@ -429,11 +429,11 @@ LootMonitorDB = {
 		{
 			["InstanceID"] = 564,
 			["Player"] = "騎風",
-			["InstanceName"] = "Black Temple",
 			["FirstPlayer"] = "魔令古二世",
+			["InstanceName"] = "Black Temple",
 			["Date"] = "2022-04-09",
-			["Class"] = "SHAMAN",
 			["FirstClass"] = "MAGE",
+			["Class"] = "SHAMAN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4490-564-23592-22884-0000D16FBB",
@@ -918,8 +918,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "熙夏",
 			["InstanceName"] = "Hyjal Summit",
 			["Date"] = "2022-04-09",
-			["Class"] = "SHAMAN",
 			["FirstClass"] = "UNKNOWN",
+			["Class"] = "SHAMAN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4491-534-17345-17895-0000D1AB78",
@@ -1109,6 +1109,93 @@ LootMonitorDB = {
 				}, -- [16]
 			},
 		}, -- [6]
+		{
+			["InstanceID"] = 568,
+			["FirstPlayer"] = "未知",
+			["InstanceName"] = "Zul'Aman",
+			["Class"] = "SHAMAN",
+			["Date"] = "2022-04-11",
+			["FirstClass"] = "UNKNOWN",
+			["LootTable"] = {
+				{
+					["GUID"] = "Creature-0-4490-568-28093-23574-000054346E",
+					["Time"] = "22:18:29",
+					["Class"] = "MAGE",
+					["Date"] = "2022-04-11",
+					["Looter"] = "熙夏",
+					["Name"] = "阿奇爾森",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
+						"|cffa335ee|Hitem:33283::::::::70:::::::::|h[阿曼尼懲戒之錘]|h|r", -- [2]
+					},
+				}, -- [1]
+				{
+					["GUID"] = "Creature-0-4490-568-28093-23576-000054346E",
+					["Time"] = "22:30:00",
+					["Class"] = "WARRIOR",
+					["Date"] = "2022-04-11",
+					["Looter"] = "特變電工",
+					["Name"] = "納羅拉克",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
+						"|cffa335ee|Hitem:33285::::::::70:::::::::|h[熊族之怒]|h|r", -- [2]
+					},
+				}, -- [2]
+				{
+					["GUID"] = "Creature-0-4490-568-28093-23578-000054346E",
+					["Time"] = "22:38:43",
+					["Class"] = "MAGE",
+					["Date"] = "2022-04-11",
+					["Looter"] = "熙夏",
+					["Name"] = "賈納雷",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
+						"|cffa335ee|Hitem:33329::::::::70:::::::::|h[影牙食人妖皮胸衣]|h|r", -- [2]
+					},
+				}, -- [3]
+				{
+					["GUID"] = "Creature-0-4490-568-28093-23577-000054346E",
+					["Time"] = "22:53:17",
+					["Class"] = "HUNTER",
+					["Date"] = "2022-04-11",
+					["Looter"] = "獵艷狂魔",
+					["Name"] = "哈拉齊",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
+						"|cffa335ee|Hitem:33317::::::::70:::::::::|h[過往靈魂之袍]|h|r", -- [2]
+					},
+				}, -- [4]
+				{
+					["GUID"] = "Creature-0-4490-568-28093-24239-00005440CE",
+					["Time"] = "23:09:10",
+					["Class"] = "MAGE",
+					["Date"] = "2022-04-11",
+					["Looter"] = "熙夏",
+					["Name"] = "妖術領主瑪拉克雷斯",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
+						"|cffa335ee|Hitem:33421::::::::70:::::::::|h[鬥爭牙衛]|h|r", -- [2]
+						"|cffa335ee|Hitem:33464::::::::70:::::::::|h[妖術領主的巫毒肩鎧]|h|r", -- [3]
+						"|cffa335ee|Hitem:34029::::::::70:::::::::|h[小巫毒面具]|h|r", -- [4]
+					},
+				}, -- [5]
+				{
+					["GUID"] = "Creature-0-4490-568-28093-23863-000054448C",
+					["Time"] = "23:16:01",
+					["Class"] = "WARLOCK",
+					["Date"] = "2022-04-11",
+					["Looter"] = "慕之內走步",
+					["Name"] = "祖爾金",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
+						"|cffa335ee|Hitem:33102::::::::70:::::::::|h[祖爾金之血]|h|r", -- [2]
+						"|cffa335ee|Hitem:33474::::::::70:::::::::|h[上古阿曼尼長弓]|h|r", -- [3]
+						"|cffa335ee|Hitem:33478::::::::70:::::::::|h[金羅克，偉大的天啟之劍]|h|r", -- [4]
+					},
+				}, -- [6]
+			},
+			["Player"] = "騎風",
+		}, -- [7]
 	},
 	["Config"] = {
 		["ShowMinimapIcon"] = true,

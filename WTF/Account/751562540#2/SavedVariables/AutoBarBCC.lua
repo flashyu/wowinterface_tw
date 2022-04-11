@@ -14,8 +14,8 @@ AutoBarDB = {
 					["hide"] = false,
 					["enabled"] = true,
 					["columns"] = 10,
-					["frameStrata"] = "LOW",
 					["alpha"] = 1,
+					["frameStrata"] = "LOW",
 					["buttonWidth"] = 36,
 					["buttonKeys"] = {
 						"AutoBarButtonShields", -- [1]
@@ -138,13 +138,13 @@ AutoBarDB = {
 				},
 			},
 			["buttonList"] = {
-				["AutoBarButtonShields"] = {
+				["AutoBarButtonTotemEarth"] = {
 					["barKey"] = "AutoBarClassBarShaman",
-					["buttonClass"] = "AutoBarButtonShields",
+					["buttonClass"] = "AutoBarButtonTotemEarth",
 					["defaultButtonIndex"] = "*",
 					["arrangeOnUse"] = true,
 					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonShields",
+					["buttonKey"] = "AutoBarButtonTotemEarth",
 					["square_popups"] = true,
 				},
 				["AutoBarButtonTravel"] = {
@@ -156,13 +156,13 @@ AutoBarDB = {
 					["buttonKey"] = "AutoBarButtonTravel",
 					["square_popups"] = true,
 				},
-				["AutoBarButtonTotemEarth"] = {
+				["AutoBarButtonShields"] = {
 					["barKey"] = "AutoBarClassBarShaman",
-					["buttonClass"] = "AutoBarButtonTotemEarth",
+					["buttonClass"] = "AutoBarButtonShields",
 					["defaultButtonIndex"] = "*",
 					["arrangeOnUse"] = true,
 					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonTotemEarth",
+					["buttonKey"] = "AutoBarButtonShields",
 					["square_popups"] = true,
 				},
 				["AutoBarButtonInterrupt"] = {
@@ -183,13 +183,13 @@ AutoBarDB = {
 					["buttonKey"] = "AutoBarButtonTotemFire",
 					["square_popups"] = true,
 				},
-				["AutoBarButtonER"] = {
+				["AutoBarButtonTotemAir"] = {
 					["barKey"] = "AutoBarClassBarShaman",
-					["buttonClass"] = "AutoBarButtonER",
+					["buttonClass"] = "AutoBarButtonTotemAir",
 					["defaultButtonIndex"] = "*",
-					["noPopup"] = true,
+					["arrangeOnUse"] = true,
 					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonER",
+					["buttonKey"] = "AutoBarButtonTotemAir",
 					["square_popups"] = true,
 				},
 				["AutoBarButtonTotemWater"] = {
@@ -201,13 +201,13 @@ AutoBarDB = {
 					["buttonKey"] = "AutoBarButtonTotemWater",
 					["square_popups"] = true,
 				},
-				["AutoBarButtonTotemAir"] = {
+				["AutoBarButtonER"] = {
 					["barKey"] = "AutoBarClassBarShaman",
-					["buttonClass"] = "AutoBarButtonTotemAir",
+					["buttonClass"] = "AutoBarButtonER",
 					["defaultButtonIndex"] = "*",
-					["arrangeOnUse"] = true,
+					["noPopup"] = true,
 					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonTotemAir",
+					["buttonKey"] = "AutoBarButtonER",
 					["square_popups"] = true,
 				},
 			},
@@ -225,8 +225,8 @@ AutoBarDB = {
 					["hide"] = false,
 					["enabled"] = true,
 					["columns"] = 10,
-					["alpha"] = 1,
 					["frameStrata"] = "LOW",
+					["alpha"] = 1,
 					["buttonWidth"] = 36,
 					["buttonKeys"] = {
 						"AutoBarButtonShields", -- [1]
@@ -336,15 +336,15 @@ AutoBarDB = {
 				["MONK"] = true,
 				["enabled"] = true,
 				["DEATHKNIGHT"] = true,
-				["columns"] = 16,
 				["posY"] = 84.7165410751877,
+				["columns"] = 16,
 				["buttonHeight"] = 36,
 				["WARRIOR"] = true,
-				["alpha"] = 1,
 				["frameStrata"] = "LOW",
-				["buttonWidth"] = 36,
-				["ROGUE"] = true,
+				["alpha"] = 1,
 				["PRIEST"] = true,
+				["ROGUE"] = true,
+				["buttonWidth"] = 36,
 				["WARLOCK"] = true,
 				["DEMONHUNTER"] = true,
 				["alignButtons"] = "3",
@@ -359,6 +359,7 @@ AutoBarDB = {
 				["MAGE"] = true,
 				["rows"] = 1,
 				["dockShiftY"] = 0,
+				["alignButtons"] = "3",
 				["buttonKeys"] = {
 					"AutoBarButtonSpeed", -- [1]
 					"AutoBarButtonFreeAction", -- [2]
@@ -371,7 +372,6 @@ AutoBarDB = {
 					"AutoBarButtonReputation", -- [9]
 					"AutoBarButtonRaidTarget", -- [10]
 				},
-				["alignButtons"] = "3",
 				["posX"] = 1235.678800505426,
 				["WARRIOR"] = true,
 				["DRUID"] = true,
@@ -382,11 +382,11 @@ AutoBarDB = {
 				["columns"] = 9,
 				["posY"] = 148.610787693915,
 				["enabled"] = true,
-				["PRIEST"] = true,
-				["alpha"] = 1,
 				["buttonWidth"] = 36,
-				["scale"] = 1,
 				["frameStrata"] = "LOW",
+				["PRIEST"] = true,
+				["scale"] = 1,
+				["alpha"] = 1,
 				["WARLOCK"] = true,
 				["DEMONHUNTER"] = true,
 				["PALADIN"] = true,

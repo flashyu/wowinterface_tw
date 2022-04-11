@@ -30,41 +30,41 @@ MailLoggerDB = {
 	},
 	["TradeLog"] = {
 		{
+			["TargetName"] = "Bumhh",
 			["PlayerName"] = "牧原股份",
-			["Date"] = "2022-03-26",
 			["ReceiveMoney"] = 0,
 			["Time"] = "15:54:47",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["TargetName"] = "Bumhh",
+			["Date"] = "2022-03-26",
 			["ReceiveItems"] = {
 			},
 		}, -- [1]
 		{
+			["TargetName"] = "Bumhh",
 			["PlayerName"] = "牧原股份",
-			["Date"] = "2022-03-26",
 			["ReceiveMoney"] = 0,
 			["Time"] = "15:54:54",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["TargetName"] = "Bumhh",
+			["Date"] = "2022-03-26",
 			["ReceiveItems"] = {
 			},
 		}, -- [2]
 		{
+			["TargetName"] = "Bumhh",
 			["PlayerName"] = "牧原股份",
-			["Date"] = "2022-03-26",
 			["ReceiveMoney"] = 0,
 			["Time"] = "15:55:20",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["TargetName"] = "Bumhh",
+			["Date"] = "2022-03-26",
 			["ReceiveItems"] = {
 			},
 		}, -- [3]
@@ -88,15 +88,15 @@ MailLoggerDB = {
 			},
 		}, -- [4]
 		{
+			["TargetName"] = "Boifara",
 			["PlayerName"] = "牧原股份",
-			["Date"] = "2022-03-26",
 			["ReceiveMoney"] = 0,
 			["Time"] = "15:56:24",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["TargetName"] = "Boifara",
+			["Date"] = "2022-03-26",
 			["ReceiveItems"] = {
 			},
 		}, -- [5]
@@ -120,28 +120,28 @@ MailLoggerDB = {
 			},
 		}, -- [6]
 		{
+			["TargetName"] = "騎風",
 			["PlayerName"] = "牧原股份",
-			["Date"] = "2022-03-26",
 			["ReceiveMoney"] = 0,
 			["Time"] = "16:01:59",
 			["GiveMoney"] = 0,
 			["Location"] = "地獄火半島",
 			["GiveItems"] = {
 			},
-			["TargetName"] = "騎風",
+			["Date"] = "2022-03-26",
 			["ReceiveItems"] = {
 			},
 		}, -- [7]
 		{
+			["TargetName"] = "騎風",
 			["PlayerName"] = "牧原股份",
-			["Date"] = "2022-03-26",
 			["ReceiveMoney"] = 0,
 			["Time"] = "16:08:40",
 			["GiveMoney"] = 0,
 			["Location"] = "地獄火半島",
 			["GiveItems"] = {
 			},
-			["TargetName"] = "騎風",
+			["Date"] = "2022-03-26",
 			["ReceiveItems"] = {
 			},
 		}, -- [8]
@@ -160,15 +160,15 @@ MailLoggerDB = {
 			},
 		}, -- [9]
 		{
+			["TargetName"] = "騎風",
 			["PlayerName"] = "牧原股份",
-			["Date"] = "2022-03-26",
 			["ReceiveMoney"] = 0,
 			["Time"] = "16:09:26",
 			["GiveMoney"] = 0,
 			["Location"] = "地獄火半島",
 			["GiveItems"] = {
 			},
-			["TargetName"] = "騎風",
+			["Date"] = "2022-03-26",
 			["ReceiveItems"] = {
 			},
 		}, -- [10]
@@ -201,15 +201,15 @@ MailLoggerDB = {
 			},
 		}, -- [12]
 		{
+			["PlayerName"] = "牧原股份",
 			["Date"] = "2022-03-27",
-			["TargetName"] = "騎風",
 			["ReceiveMoney"] = 0,
 			["Time"] = "00:07:33",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["PlayerName"] = "牧原股份",
+			["TargetName"] = "騎風",
 			["ReceiveItems"] = {
 			},
 		}, -- [13]
@@ -228,15 +228,15 @@ MailLoggerDB = {
 			},
 		}, -- [14]
 		{
+			["PlayerName"] = "牧原股份",
 			["Date"] = "2022-03-27",
-			["TargetName"] = "騎風",
 			["ReceiveMoney"] = 0,
 			["Time"] = "00:09:18",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["PlayerName"] = "牧原股份",
+			["TargetName"] = "騎風",
 			["ReceiveItems"] = {
 			},
 		}, -- [15]
@@ -260,15 +260,15 @@ MailLoggerDB = {
 			},
 		}, -- [16]
 		{
+			["PlayerName"] = "牧原股份",
 			["Date"] = "2022-03-27",
-			["TargetName"] = "騎風",
 			["ReceiveMoney"] = 0,
 			["Time"] = "00:11:28",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["PlayerName"] = "牧原股份",
+			["TargetName"] = "騎風",
 			["ReceiveItems"] = {
 			},
 		}, -- [17]
@@ -307,14 +307,14 @@ MailLoggerDB = {
 			},
 		}, -- [18]
 		{
-			["Date"] = "2022-03-27",
 			["PlayerName"] = "牧原股份",
+			["TargetName"] = "騎風",
 			["ReceiveMoney"] = 0,
 			["GiveItems"] = {
 			},
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
-			["TargetName"] = "騎風",
+			["Date"] = "2022-03-27",
 			["Time"] = "00:15:10",
 			["ReceiveItems"] = {
 			},
@@ -334,15 +334,15 @@ MailLoggerDB = {
 			},
 		}, -- [20]
 		{
+			["TargetName"] = "特變電工",
 			["PlayerName"] = "牧原股份",
-			["Date"] = "2022-03-29",
 			["ReceiveMoney"] = 0,
 			["Time"] = "21:35:18",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["TargetName"] = "特變電工",
+			["Date"] = "2022-03-29",
 			["ReceiveItems"] = {
 			},
 		}, -- [21]
@@ -385,15 +385,15 @@ MailLoggerDB = {
 			},
 		}, -- [23]
 		{
+			["TargetName"] = "特變電工",
 			["PlayerName"] = "牧原股份",
-			["Date"] = "2022-03-29",
 			["ReceiveMoney"] = 0,
 			["Time"] = "21:52:22",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["TargetName"] = "特變電工",
+			["Date"] = "2022-03-29",
 			["ReceiveItems"] = {
 			},
 		}, -- [24]
@@ -593,27 +593,27 @@ MailLoggerDB = {
 			},
 		}, -- [33]
 		{
-			["TargetName"] = "騎風",
 			["Date"] = "2022-03-31",
+			["PlayerName"] = "牧原股份",
 			["ReceiveMoney"] = 0,
 			["GiveItems"] = {
 			},
 			["GiveMoney"] = 0,
 			["Location"] = "蒸汽洞窟",
-			["PlayerName"] = "牧原股份",
+			["TargetName"] = "騎風",
 			["Time"] = "22:14:06",
 			["ReceiveItems"] = {
 			},
 		}, -- [34]
 		{
-			["TargetName"] = "騎風",
 			["Date"] = "2022-03-31",
+			["PlayerName"] = "牧原股份",
 			["ReceiveMoney"] = 0,
 			["GiveItems"] = {
 			},
 			["GiveMoney"] = 0,
 			["Location"] = "蒸汽洞窟",
-			["PlayerName"] = "牧原股份",
+			["TargetName"] = "騎風",
 			["Time"] = "22:14:59",
 			["ReceiveItems"] = {
 			},
@@ -781,15 +781,15 @@ MailLoggerDB = {
 			},
 		}, -- [43]
 		{
+			["TargetName"] = "大姐別這樣",
 			["PlayerName"] = "牧原股份",
-			["Date"] = "2022-03-31",
 			["ReceiveMoney"] = 0,
 			["Time"] = "23:19:08",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["TargetName"] = "大姐別這樣",
+			["Date"] = "2022-03-31",
 			["ReceiveItems"] = {
 			},
 		}, -- [44]
@@ -1731,14 +1731,14 @@ MailLoggerDB = {
 			},
 		}, -- [87]
 		{
-			["PlayerName"] = "牧原股份",
 			["TargetName"] = "快樂阿法",
+			["Date"] = "2022-04-03",
 			["ReceiveMoney"] = 0,
 			["GiveItems"] = {
 			},
 			["GiveMoney"] = 0,
 			["Location"] = "撒塔斯城",
-			["Date"] = "2022-04-03",
+			["PlayerName"] = "牧原股份",
 			["Time"] = "23:45:28",
 			["ReceiveItems"] = {
 			},
@@ -1787,15 +1787,15 @@ MailLoggerDB = {
 			},
 		}, -- [90]
 		{
+			["PlayerName"] = "牧原股份",
 			["Date"] = "2022-04-04",
-			["TargetName"] = "騎風",
 			["ReceiveMoney"] = 0,
 			["Time"] = "00:01:34",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["PlayerName"] = "牧原股份",
+			["TargetName"] = "騎風",
 			["ReceiveItems"] = {
 			},
 		}, -- [91]
@@ -1820,15 +1820,15 @@ MailLoggerDB = {
 			},
 		}, -- [92]
 		{
+			["PlayerName"] = "牧原股份",
 			["Date"] = "2022-04-04",
-			["TargetName"] = "騎風",
 			["ReceiveMoney"] = 0,
 			["Time"] = "00:02:18",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["PlayerName"] = "牧原股份",
+			["TargetName"] = "騎風",
 			["ReceiveItems"] = {
 			},
 		}, -- [93]
@@ -1858,15 +1858,15 @@ MailLoggerDB = {
 			},
 		}, -- [94]
 		{
+			["PlayerName"] = "牧原股份",
 			["Date"] = "2022-04-04",
-			["TargetName"] = "騎風",
 			["ReceiveMoney"] = 0,
 			["Time"] = "00:05:14",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["PlayerName"] = "牧原股份",
+			["TargetName"] = "騎風",
 			["ReceiveItems"] = {
 			},
 		}, -- [95]
@@ -1891,15 +1891,15 @@ MailLoggerDB = {
 			},
 		}, -- [96]
 		{
+			["PlayerName"] = "牧原股份",
 			["Date"] = "2022-04-04",
-			["TargetName"] = "騎風",
 			["ReceiveMoney"] = 0,
 			["Time"] = "00:31:47",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["PlayerName"] = "牧原股份",
+			["TargetName"] = "騎風",
 			["ReceiveItems"] = {
 			},
 		}, -- [97]
@@ -1938,28 +1938,28 @@ MailLoggerDB = {
 			},
 		}, -- [98]
 		{
+			["PlayerName"] = "牧原股份",
 			["Date"] = "2022-04-04",
-			["TargetName"] = "騎風",
 			["ReceiveMoney"] = 0,
 			["Time"] = "00:37:06",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["PlayerName"] = "牧原股份",
+			["TargetName"] = "騎風",
 			["ReceiveItems"] = {
 			},
 		}, -- [99]
 		{
+			["PlayerName"] = "牧原股份",
 			["Date"] = "2022-04-04",
-			["TargetName"] = "騎風",
 			["ReceiveMoney"] = 0,
 			["Time"] = "00:37:19",
 			["GiveMoney"] = 0,
 			["Location"] = "奧格瑪",
 			["GiveItems"] = {
 			},
-			["PlayerName"] = "牧原股份",
+			["TargetName"] = "騎風",
 			["ReceiveItems"] = {
 			},
 		}, -- [100]
@@ -2225,15 +2225,15 @@ MailLoggerDB = {
 			},
 		}, -- [111]
 		{
+			["Date"] = "2022-04-07",
 			["TargetName"] = "騎風",
-			["PlayerName"] = "牧原股份",
 			["ReceiveMoney"] = 0,
 			["Time"] = "01:16:34",
 			["GiveMoney"] = 0,
 			["Location"] = "祖爾法拉克",
 			["GiveItems"] = {
 			},
-			["Date"] = "2022-04-07",
+			["PlayerName"] = "牧原股份",
 			["ReceiveItems"] = {
 			},
 		}, -- [112]
@@ -2257,15 +2257,15 @@ MailLoggerDB = {
 			},
 		}, -- [113]
 		{
+			["Date"] = "2022-04-07",
 			["TargetName"] = "騎風",
-			["PlayerName"] = "牧原股份",
 			["ReceiveMoney"] = 0,
 			["Time"] = "01:17:19",
 			["GiveMoney"] = 0,
 			["Location"] = "祖爾法拉克",
 			["GiveItems"] = {
 			},
-			["Date"] = "2022-04-07",
+			["PlayerName"] = "牧原股份",
 			["ReceiveItems"] = {
 			},
 		}, -- [114]
@@ -2314,15 +2314,15 @@ MailLoggerDB = {
 			},
 		}, -- [115]
 		{
+			["Date"] = "2022-04-07",
 			["TargetName"] = "騎風",
-			["PlayerName"] = "牧原股份",
 			["ReceiveMoney"] = 0,
 			["Time"] = "01:29:13",
 			["GiveMoney"] = 0,
 			["Location"] = "撒塔斯城",
 			["GiveItems"] = {
 			},
-			["Date"] = "2022-04-07",
+			["PlayerName"] = "牧原股份",
 			["ReceiveItems"] = {
 			},
 		}, -- [116]
@@ -2361,14 +2361,14 @@ MailLoggerDB = {
 			},
 		}, -- [117]
 		{
-			["TargetName"] = "殺手謝",
 			["Date"] = "2022-04-07",
+			["PlayerName"] = "牧原股份",
 			["ReceiveMoney"] = 0,
 			["GiveItems"] = {
 			},
 			["GiveMoney"] = 0,
 			["Location"] = "祖爾格拉布",
-			["PlayerName"] = "牧原股份",
+			["TargetName"] = "殺手謝",
 			["Time"] = "22:12:50",
 			["ReceiveItems"] = {
 			},
@@ -2416,5 +2416,44 @@ MailLoggerDB = {
 			["ReceiveItems"] = {
 			},
 		}, -- [120]
+		{
+			["TargetName"] = "騎風",
+			["PlayerName"] = "牧原股份",
+			["Date"] = "2022-04-12",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+				{
+					["Number"] = 7,
+					["ItemLink"] = "|cff1eff00|Hitem:22446::::::::70:::::::::|h[強效異界精華]|h|r",
+					["Name"] = "強效異界精華",
+				}, -- [1]
+				{
+					["Number"] = 1,
+					["ItemLink"] = "|cff0070dd|Hitem:22449::::::::70:::::::::|h[大塊稜石裂片]|h|r",
+					["Name"] = "大塊稜石裂片",
+				}, -- [2]
+				{
+					["Number"] = 1,
+					["ItemLink"] = "|cff1eff00|Hitem:3868::::::::70:::::::::|h[設計圖:霜虎之刃]|h|r",
+					["Name"] = "設計圖:霜虎之刃",
+				}, -- [3]
+				{
+					["Number"] = 10,
+					["ItemLink"] = "|cffffffff|Hitem:13446::::::::70:::::::::|h[極效治療藥水]|h|r",
+					["Name"] = "極效治療藥水",
+				}, -- [4]
+				[7] = {
+					["Number"] = 30,
+					["ItemLink"] = "|cffffffff|Hitem:22445::::::::70:::::::::|h[魔塵]|h|r",
+					["Name"] = "魔塵",
+				},
+			},
+			["GiveMoney"] = 50000000,
+			["Location"] = "奧格瑪",
+			["Time"] = "01:26:54",
+			["Result"] = "sent",
+			["ReceiveItems"] = {
+			},
+		}, -- [121]
 	},
 }

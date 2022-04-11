@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0535,
+	["LastVersion"] = 2.0536,
 	["LastPlayerFullName"] = "騎風-伊弗斯",
 	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
@@ -86,10 +86,10 @@ PawnOptions = {
 			["Link"] = "|cffff8000|Hitem:30312::::::::70:::::::::|h[無盡之刃]|h|r",
 		}, -- [16]
 		{
-			["ID"] = 28439,
-			["Level"] = 136,
+			["ID"] = 32236,
+			["Level"] = 141,
 			["AlsoFitsIn"] = 16,
-			["Link"] = "|cffa335ee|Hitem:28439:2673:::::::70:::::::::|h[龍擊]|h|r",
+			["Link"] = "|cffa335ee|Hitem:32236::::::::70:::::::::|h[潮起之斧]|h|r",
 		}, -- [17]
 	},
 }
