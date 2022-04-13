@@ -1,11 +1,10 @@
 ------------------------------------------------------------------------
-r253 | funkehdude | 2022-02-23 15:48:38 +0000 (Wed, 23 Feb 2022) | 1 line
+r257 | funkehdude | 2022-03-23 21:59:43 +0000 (Wed, 23 Mar 2022) | 1 line
 Changed paths:
-   D /trunk/!BugGrabber-BCC.toc
-   D /trunk/!BugGrabber-Classic.toc
-   A /trunk/!BugGrabber_TBC.toc
-   A /trunk/!BugGrabber_Vanilla.toc
+   M /trunk/!BugGrabber.toc
+   M /trunk/!BugGrabber_TBC.toc
+   M /trunk/!BugGrabber_Vanilla.toc
 
-Back to the new naming scheme again
+add project version
 ------------------------------------------------------------------------
 

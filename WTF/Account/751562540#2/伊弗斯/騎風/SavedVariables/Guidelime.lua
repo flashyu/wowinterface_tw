@@ -30,7 +30,7 @@ GuidelimeDataChar = {
 	["currentGuide"] = "Flymolo's Outland Leveling Guide 58-61 -Part 1- Flymolo's Horde Guide",
 	["editorFrameRelative"] = "CENTER",
 	["arrowX"] = -9.445097923278809,
-	["mainFrameFontSize"] = 14,
+	["mainFrameY"] = 0,
 	["mainFrameShowing"] = false,
 	["version"] = "2.026",
 	["guideSize"] = {
@@ -38,7 +38,7 @@ GuidelimeDataChar = {
 	},
 	["showArrow"] = true,
 	["mainFrameShowScrollBar"] = true,
-	["mainFrameY"] = 0,
+	["mainFrameFontSize"] = 14,
 	["mainFrameRelative"] = "RIGHT",
 	["arrowAlpha"] = 0.8,
 }

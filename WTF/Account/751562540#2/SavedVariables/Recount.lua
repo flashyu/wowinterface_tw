@@ -27,7 +27,7 @@ RecountDB = {
 			},
 			["DetailWindowY"] = -238.0000610351563,
 			["DetailWindowX"] = 656.6666259765625,
-			["LastInstanceName"] = "開啟黑暗之門",
+			["LastInstanceName"] = "風暴要塞:亞克崔茲",
 			["CurDataSet"] = "LastFightData",
 			["GraphWindowX"] = 842.7222290039062,
 			["MainWindowWidth"] = 343.3334045410156,

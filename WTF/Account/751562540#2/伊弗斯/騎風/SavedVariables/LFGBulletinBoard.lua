@@ -1,6 +1,6 @@
 
 GroupBulletinBoardDBChar = {
-	["FilterDungeonBF"] = true,
+	["FilterDungeonBF"] = false,
 	["FilterDungeonMT"] = true,
 	["FilterDungeonBRD"] = false,
 	["FilterDungeonSMA"] = false,
@@ -11,11 +11,11 @@ GroupBulletinBoardDBChar = {
 	["FilterDungeonMAR"] = false,
 	["FilterDungeonRFK"] = false,
 	["FilterLevel"] = false,
-	["FilterDungeonSH"] = true,
-	["FilterDungeonRAMPS"] = true,
+	["FilterDungeonSH"] = false,
+	["FilterDungeonRAMPS"] = false,
 	["FilterDungeonSMC"] = false,
 	["FilterDungeonONY"] = false,
-	["FilterDungeonSL"] = true,
+	["FilterDungeonSL"] = false,
 	["FilterDungeonWSG"] = false,
 	["FilterDungeonSP"] = false,
 	["NormalOnly"] = false,
@@ -26,7 +26,7 @@ GroupBulletinBoardDBChar = {
 	["FilterDungeonZA"] = false,
 	["FilterDungeonSTK"] = false,
 	["FilterDungeonKARA"] = true,
-	["FilterDungeonMECH"] = true,
+	["FilterDungeonMECH"] = false,
 	["FilterDungeonAV"] = false,
 	["FilterDungeonULD"] = false,
 	["FilterDungeonRFD"] = false,
@@ -37,7 +37,7 @@ GroupBulletinBoardDBChar = {
 	["FilterDungeonZF"] = false,
 	["FilterDungeonSFK"] = false,
 	["FilterDungeonBAD"] = true,
-	["FilterDungeonSV"] = false,
+	["FilterDungeonSV"] = true,
 	["FilterDungeonBFD"] = false,
 	["FilterDungeonAB"] = false,
 	["FilterDungeonSMG"] = false,
@@ -51,12 +51,12 @@ GroupBulletinBoardDBChar = {
 	["FilterDungeonSCH"] = false,
 	["FilterDungeonSM2"] = false,
 	["FilterDungeonAQ40"] = false,
-	["FilterDungeonARC"] = true,
+	["FilterDungeonSETH"] = false,
 	["FilterDungeonBWL"] = false,
 	["FilterDungeonZG"] = false,
-	["FilterDungeonBREW"] = false,
+	["FilterDungeonBM"] = false,
 	["FilterDungeonEOTS"] = false,
-	["FilterDungeonBM"] = true,
+	["FilterDungeonBREW"] = false,
 	["FilterDungeonMC"] = false,
 	["FilterDungeonSWP"] = false,
 	["FilterDungeonSTR"] = false,
@@ -71,6 +71,7 @@ GroupBulletinBoardDBChar = {
 	["FilterDungeonLBRS"] = false,
 	["FilterDungeonSSC"] = true,
 	["FilterDungeonMGT"] = false,
+	["HeroicOnly"] = false,
 	["channel"] = {
 		true, -- [1]
 		true, -- [2]
@@ -93,8 +94,7 @@ GroupBulletinBoardDBChar = {
 		true, -- [19]
 		true, -- [20]
 	},
-	["HeroicOnly"] = false,
-	["FilterDungeonSETH"] = true,
-	["FilterDungeonOHB"] = true,
+	["FilterDungeonARC"] = true,
+	["FilterDungeonOHB"] = false,
 	["FilterDungeonEYE"] = true,
 }

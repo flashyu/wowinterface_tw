@@ -1,0 +1,7 @@
+## Interface: 20501
+## Title: SpellReplay
+## Author: Mako (Venoxis) - Original: Oldsalt (Smolderforge)
+## Notes: Displays the spells you just casted and much more
+## DefaultState: enabled
+## SavedVariables: replaySavedSettings, displayToPartyTable
+SpellReplay.lua

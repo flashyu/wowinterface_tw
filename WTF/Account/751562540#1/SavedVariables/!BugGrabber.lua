@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
+	["session"] = 38,
 	["lastSanitation"] = 3,
-	["session"] = 37,
 	["errors"] = {
 		{
 			["message"] = "...e\\AddOns\\TradeSkillMaster\\Core\\UI\\AuctionUI\\Core.lua:232: assertion failed!",

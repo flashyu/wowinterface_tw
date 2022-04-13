@@ -4856,5 +4856,192 @@ MailLoggerDB = {
 			["ReceiveItems"] = {
 			},
 		}, -- [212]
+		{
+			["TargetName"] = "Mensa",
+			["Date"] = "2022-04-12",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "卡拉贊",
+			["PlayerName"] = "騎風",
+			["Time"] = "23:14:19",
+			["ReceiveItems"] = {
+			},
+		}, -- [213]
+		{
+			["TargetName"] = "Mensa",
+			["Date"] = "2022-04-12",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "卡拉贊",
+			["PlayerName"] = "騎風",
+			["Time"] = "23:14:41",
+			["ReceiveItems"] = {
+			},
+		}, -- [214]
+		{
+			["TargetName"] = "Mensa",
+			["PlayerName"] = "騎風",
+			["Date"] = "2022-04-12",
+			["ReceiveMoney"] = 0,
+			["Time"] = "23:14:41",
+			["GiveMoney"] = 1000000,
+			["Location"] = "卡拉贊",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+				{
+					["Number"] = 1,
+					["ItemLink"] = "|cffa335ee|Hitem:28523::::::::70:::::::::|h[治癒大雨圖騰]|h|r",
+					["Name"] = "治癒大雨圖騰",
+				}, -- [1]
+			},
+		}, -- [215]
+		{
+			["TargetName"] = "Mensa",
+			["Date"] = "2022-04-13",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "卡拉贊",
+			["PlayerName"] = "騎風",
+			["Time"] = "00:38:29",
+			["ReceiveItems"] = {
+			},
+		}, -- [216]
+		{
+			["TargetName"] = "Mensa",
+			["PlayerName"] = "騎風",
+			["Date"] = "2022-04-13",
+			["ReceiveMoney"] = 0,
+			["Time"] = "00:38:29",
+			["GiveMoney"] = 1000000,
+			["Location"] = "卡拉贊",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+				{
+					["Number"] = 1,
+					["ItemLink"] = "|cffa335ee|Hitem:30667::::::::70:::::::::|h[無情風暴之戒]|h|r",
+					["Name"] = "無情風暴之戒",
+				}, -- [1]
+			},
+		}, -- [217]
+		{
+			["TargetName"] = "咩咩哞",
+			["Date"] = "2022-04-13",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["PlayerName"] = "騎風",
+			["Time"] = "00:41:56",
+			["ReceiveItems"] = {
+			},
+		}, -- [218]
+		{
+			["TargetName"] = "咩咩哞",
+			["PlayerName"] = "騎風",
+			["Date"] = "2022-04-13",
+			["ReceiveMoney"] = 2770000,
+			["Time"] = "00:41:56",
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [219]
+		{
+			["TargetName"] = "牧原股份",
+			["PlayerName"] = "騎風",
+			["Date"] = "2022-04-13",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+				{
+					["Number"] = 1,
+					["ItemLink"] = "|cff1eff00|Hitem:25239::::::-5:1509687352:70:::::::::|h[靈猴之傳說大刀]|h|r",
+					["Name"] = "靈猴之傳說大刀",
+				}, -- [1]
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["Time"] = "01:19:19",
+			["Result"] = "sent",
+			["ReceiveItems"] = {
+			},
+		}, -- [220]
+		{
+			["TargetName"] = "我是甲",
+			["PlayerName"] = "騎風",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:05:37",
+			["GiveMoney"] = 0,
+			["Location"] = "奴隸監獄",
+			["GiveItems"] = {
+			},
+			["Date"] = "2022-04-14",
+			["ReceiveItems"] = {
+			},
+		}, -- [221]
+		{
+			["TargetName"] = "我是甲",
+			["PlayerName"] = "騎風",
+			["Date"] = "2022-04-14",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:05:37",
+			["GiveMoney"] = 0,
+			["Location"] = "奴隸監獄",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+				{
+					["Number"] = 1,
+					["ItemLink"] = "|cff0070dd|Hitem:22449::::::::70:::::::::|h[大塊稜石裂片]|h|r",
+					["Name"] = "大塊稜石裂片",
+				}, -- [1]
+			},
+		}, -- [222]
+		{
+			["TargetName"] = "我是甲",
+			["PlayerName"] = "騎風",
+			["ReceiveMoney"] = 0,
+			["Time"] = "02:04:17",
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["GiveItems"] = {
+			},
+			["Date"] = "2022-04-14",
+			["ReceiveItems"] = {
+			},
+		}, -- [223]
+		{
+			["TargetName"] = "我是甲",
+			["PlayerName"] = "騎風",
+			["Date"] = "2022-04-14",
+			["ReceiveMoney"] = 0,
+			["Time"] = "02:04:17",
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+				{
+					["Number"] = 1,
+					["ItemLink"] = "|cff0070dd|Hitem:22449::::::::70:::::::::|h[大塊稜石裂片]|h|r",
+					["Name"] = "大塊稜石裂片",
+				}, -- [1]
+			},
+		}, -- [224]
 	},
 }
