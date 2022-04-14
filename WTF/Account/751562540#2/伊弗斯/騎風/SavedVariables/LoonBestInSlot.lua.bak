@@ -1,13 +1,13 @@
 
 LoonBestInSlotSettings = {
-	["minimap"] = {
-		["minimapPos"] = 180,
-		["hide"] = false,
-	},
+	["SelectedPhase"] = "All",
 	["SelectedZone"] = "All",
 	["ShowTooltip"] = true,
 	["SelectedSource"] = "All",
 	["SelectedSlot"] = "All",
 	["SelectedSpec"] = "",
-	["SelectedPhase"] = "All",
+	["minimap"] = {
+		["minimapPos"] = 180,
+		["hide"] = false,
+	},
 }

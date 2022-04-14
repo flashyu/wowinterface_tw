@@ -1,12 +1,12 @@
 
 AtlasLootClassicDB = {
-	["global"] = {
-		["__addonrevision"] = 2040001,
-	},
 	["profileKeys"] = {
 		["騎風 - 伊弗斯"] = "騎風 - 伊弗斯",
 		["隔離 - 伊弗斯"] = "隔離 - 伊弗斯",
 		["我在哪 - 伊弗斯"] = "我在哪 - 伊弗斯",
+	},
+	["global"] = {
+		["__addonrevision"] = 2040001,
 	},
 	["profiles"] = {
 		["騎風 - 伊弗斯"] = {
@@ -15,15 +15,15 @@ AtlasLootClassicDB = {
 			},
 			["GUI"] = {
 				["point"] = {
-					nil, -- [1]
+					"TOPRIGHT", -- [1]
 					nil, -- [2]
-					"CENTER", -- [3]
-					242.9999694824219, -- [4]
-					128, -- [5]
+					"TOPRIGHT", -- [3]
+					-173.8887176513672, -- [4]
+					-100.5554962158203, -- [5]
 				},
 				["selected"] = {
 					nil, -- [1]
-					"ShadowLabyrinth", -- [2]
+					"TheSteamvault", -- [2]
 					nil, -- [3]
 					1, -- [4]
 					0, -- [5]

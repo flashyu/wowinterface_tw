@@ -212,7 +212,58 @@ RecountPerCharDB = {
 				["Damage"] = 26624.169,
 			},
 			["Owner"] = false,
-			["Name"] = "牧原股份",
+			["LastEventIncoming"] = {
+				false, -- [1]
+				false, -- [2]
+				true, -- [3]
+				false, -- [4]
+				false, -- [5]
+				true, -- [6]
+				false, -- [7]
+				false, -- [8]
+				true, -- [9]
+				false, -- [10]
+				false, -- [11]
+				true, -- [12]
+				false, -- [13]
+				true, -- [14]
+				false, -- [15]
+				true, -- [16]
+				true, -- [17]
+				true, -- [18]
+				false, -- [19]
+				false, -- [20]
+				false, -- [21]
+				false, -- [22]
+				false, -- [23]
+				false, -- [24]
+				false, -- [25]
+				false, -- [26]
+				false, -- [27]
+				false, -- [28]
+				false, -- [29]
+				false, -- [30]
+				false, -- [31]
+				false, -- [32]
+				true, -- [33]
+				false, -- [34]
+				false, -- [35]
+				true, -- [36]
+				true, -- [37]
+				false, -- [38]
+				true, -- [39]
+				false, -- [40]
+				true, -- [41]
+				true, -- [42]
+				true, -- [43]
+				true, -- [44]
+				true, -- [45]
+				false, -- [46]
+				false, -- [47]
+				false, -- [48]
+				true, -- [49]
+				false, -- [50]
+			},
 			["NextEventNum"] = 33,
 			["LastDamageTime"] = 26624.419,
 			["LastEvents"] = {
@@ -267,58 +318,7 @@ RecountPerCharDB = {
 				"高階祭司塞卡爾 重擊 牧原股份 Hit -906 (Physical)", -- [49]
 				"牧原股份 生命之花 殺手謝 Tick +258", -- [50]
 			},
-			["LastEventIncoming"] = {
-				false, -- [1]
-				false, -- [2]
-				true, -- [3]
-				false, -- [4]
-				false, -- [5]
-				true, -- [6]
-				false, -- [7]
-				false, -- [8]
-				true, -- [9]
-				false, -- [10]
-				false, -- [11]
-				true, -- [12]
-				false, -- [13]
-				true, -- [14]
-				false, -- [15]
-				true, -- [16]
-				true, -- [17]
-				true, -- [18]
-				false, -- [19]
-				false, -- [20]
-				false, -- [21]
-				false, -- [22]
-				false, -- [23]
-				false, -- [24]
-				false, -- [25]
-				false, -- [26]
-				false, -- [27]
-				false, -- [28]
-				false, -- [29]
-				false, -- [30]
-				false, -- [31]
-				false, -- [32]
-				true, -- [33]
-				false, -- [34]
-				false, -- [35]
-				true, -- [36]
-				true, -- [37]
-				false, -- [38]
-				true, -- [39]
-				false, -- [40]
-				true, -- [41]
-				true, -- [42]
-				true, -- [43]
-				true, -- [44]
-				true, -- [45]
-				false, -- [46]
-				false, -- [47]
-				false, -- [48]
-				true, -- [49]
-				false, -- [50]
-			},
+			["Name"] = "牧原股份",
 			["LastEventTimes"] = {
 				27268.904, -- [1]
 				27269.404, -- [2]
@@ -385,13 +385,14 @@ RecountPerCharDB = {
 					},
 					["DeathCount"] = 0,
 					["HOT_Time"] = 0,
-					["Damage"] = 0,
+					["ElementTakenBlock"] = {
+					},
 					["RunicPowerGain"] = 0,
 					["ElementTaken"] = {
 					},
-					["DOT_Time"] = 0,
-					["ElementTakenBlock"] = {
+					["HOTs"] = {
 					},
+					["Damage"] = 0,
 					["ElementDoneAbsorb"] = {
 					},
 					["TimeHeal"] = 0,
@@ -400,33 +401,32 @@ RecountPerCharDB = {
 					["Dispels"] = 0,
 					["PartialBlock"] = {
 					},
-					["ElementHitsDone"] = {
+					["DamagedWho"] = {
 					},
 					["FAttacks"] = {
 					},
 					["HealingTaken"] = 0,
 					["ElementDone"] = {
 					},
-					["DamagedWho"] = {
+					["ElementHitsDone"] = {
 					},
 					["ManaGainedFrom"] = {
 					},
-					["RunicPowerGainedFrom"] = {
+					["RunicPowerGained"] = {
 					},
 					["WhoDamaged"] = {
 					},
 					["EnergyGainedFrom"] = {
 					},
-					["RunicPowerGained"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 					},
 					["TimeHealing"] = {
 					},
-					["OverHeals"] = {
-					},
+					["Dispelled"] = 0,
 					["WhoHealed"] = {
 					},
 					["HealedWho"] = {
@@ -434,14 +434,13 @@ RecountPerCharDB = {
 					["CCBreak"] = 0,
 					["ElementTakenAbsorb"] = {
 					},
-					["PartialAbsorb"] = {
-					},
-					["PartialResist"] = {
-					},
+					["FDamage"] = 0,
+					["EnergyGain"] = 0,
 					["ManaGained"] = {
 					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
+					["PartialAbsorb"] = {
+					},
+					["ActiveTime"] = 0,
 					["Overhealing"] = 0,
 					["TimeSpent"] = {
 					},
@@ -453,12 +452,14 @@ RecountPerCharDB = {
 					},
 					["Heals"] = {
 					},
-					["ActiveTime"] = 0,
+					["Interrupts"] = 0,
 					["EnergyGained"] = {
 					},
-					["EnergyGain"] = 0,
+					["PartialResist"] = {
+					},
 					["Healing"] = 0,
-					["Dispelled"] = 0,
+					["OverHeals"] = {
+					},
 					["RageGained"] = {
 					},
 					["Attacks"] = {
@@ -470,8 +471,7 @@ RecountPerCharDB = {
 					["TimeDamaging"] = {
 					},
 					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
+					["DOT_Time"] = 0,
 					["DispelledWho"] = {
 					},
 				},
@@ -513,15 +513,38 @@ RecountPerCharDB = {
 					},
 					["DeathCount"] = 0,
 					["HOT_Time"] = 402,
-					["Damage"] = 0,
+					["ElementTakenBlock"] = {
+					},
 					["RunicPowerGain"] = 0,
 					["ElementTaken"] = {
 						["Melee"] = 5404,
 						["Physical"] = 3298,
 					},
-					["DOT_Time"] = 0,
-					["ElementTakenBlock"] = {
+					["HOTs"] = {
+						["生命之花"] = {
+							["Details"] = {
+								["牧原股份"] = {
+									["count"] = 32,
+								},
+								["殺手謝"] = {
+									["count"] = 189,
+								},
+								["時尚網俠"] = {
+									["count"] = 157,
+								},
+							},
+							["amount"] = 378,
+						},
+						["回春術"] = {
+							["Details"] = {
+								["殺手謝"] = {
+									["count"] = 24,
+								},
+							},
+							["amount"] = 24,
+						},
 					},
+					["Damage"] = 0,
 					["ElementDoneAbsorb"] = {
 					},
 					["TimeHeal"] = 174.47,
@@ -530,18 +553,18 @@ RecountPerCharDB = {
 					["Dispels"] = 0,
 					["PartialBlock"] = {
 					},
-					["ElementHitsDone"] = {
+					["DamagedWho"] = {
 					},
 					["FAttacks"] = {
 					},
 					["HealingTaken"] = 8923,
 					["ElementDone"] = {
 					},
-					["DamagedWho"] = {
+					["ElementHitsDone"] = {
 					},
 					["ManaGainedFrom"] = {
 					},
-					["RunicPowerGainedFrom"] = {
+					["RunicPowerGained"] = {
 					},
 					["WhoDamaged"] = {
 						["高階祭司塞卡爾"] = {
@@ -582,9 +605,9 @@ RecountPerCharDB = {
 					},
 					["EnergyGainedFrom"] = {
 					},
-					["RunicPowerGained"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 					},
@@ -623,50 +646,7 @@ RecountPerCharDB = {
 							["amount"] = 91.75000000000003,
 						},
 					},
-					["OverHeals"] = {
-						["生命之花"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 1625,
-									["min"] = 331,
-									["count"] = 4,
-									["amount"] = 5206,
-								},
-								["Tick"] = {
-									["max"] = 774,
-									["min"] = 14,
-									["count"] = 185,
-									["amount"] = 87805,
-								},
-							},
-							["count"] = 189,
-							["amount"] = 93011,
-						},
-						["回春術"] = {
-							["Details"] = {
-								["Tick"] = {
-									["max"] = 940,
-									["min"] = 42,
-									["count"] = 7,
-									["amount"] = 5668,
-								},
-							},
-							["count"] = 7,
-							["amount"] = 5668,
-						},
-						["迅癒"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 1597,
-									["min"] = 1597,
-									["count"] = 1,
-									["amount"] = 1597,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 1597,
-						},
-					},
+					["Dispelled"] = 0,
 					["WhoHealed"] = {
 						["牧原股份"] = {
 							["Details"] = {
@@ -715,6 +695,10 @@ RecountPerCharDB = {
 					["CCBreak"] = 0,
 					["ElementTakenAbsorb"] = {
 					},
+					["FDamage"] = 0,
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+					},
 					["PartialAbsorb"] = {
 						["重擊"] = {
 							["Details"] = {
@@ -753,48 +737,7 @@ RecountPerCharDB = {
 							["amount"] = 0,
 						},
 					},
-					["PartialResist"] = {
-						["重擊"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 3,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 3,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 10,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 10,
-						},
-						["衝鋒"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 2,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 2,
-						},
-					},
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
+					["ActiveTime"] = 174.47,
 					["Overhealing"] = 100276,
 					["TimeSpent"] = {
 						["牧原股份"] = {
@@ -893,12 +836,92 @@ RecountPerCharDB = {
 							["amount"] = 5980,
 						},
 					},
-					["ActiveTime"] = 174.47,
+					["Interrupts"] = 0,
 					["EnergyGained"] = {
 					},
-					["EnergyGain"] = 0,
+					["PartialResist"] = {
+						["重擊"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 3,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 3,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 10,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 10,
+						},
+						["衝鋒"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 2,
+						},
+					},
 					["Healing"] = 86361,
-					["Dispelled"] = 0,
+					["OverHeals"] = {
+						["生命之花"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 1625,
+									["min"] = 331,
+									["count"] = 4,
+									["amount"] = 5206,
+								},
+								["Tick"] = {
+									["max"] = 774,
+									["min"] = 14,
+									["count"] = 185,
+									["amount"] = 87805,
+								},
+							},
+							["count"] = 189,
+							["amount"] = 93011,
+						},
+						["回春術"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 940,
+									["min"] = 42,
+									["count"] = 7,
+									["amount"] = 5668,
+								},
+							},
+							["count"] = 7,
+							["amount"] = 5668,
+						},
+						["迅癒"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 1597,
+									["min"] = 1597,
+									["count"] = 1,
+									["amount"] = 1597,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 1597,
+						},
+					},
 					["RageGained"] = {
 					},
 					["Attacks"] = {
@@ -910,30 +933,7 @@ RecountPerCharDB = {
 					["TimeDamaging"] = {
 					},
 					["ManaGain"] = 0,
-					["HOTs"] = {
-						["生命之花"] = {
-							["Details"] = {
-								["牧原股份"] = {
-									["count"] = 32,
-								},
-								["殺手謝"] = {
-									["count"] = 189,
-								},
-								["時尚網俠"] = {
-									["count"] = 157,
-								},
-							},
-							["amount"] = 378,
-						},
-						["回春術"] = {
-							["Details"] = {
-								["殺手謝"] = {
-									["count"] = 24,
-								},
-							},
-							["amount"] = 24,
-						},
-					},
+					["DOT_Time"] = 0,
 					["DispelledWho"] = {
 					},
 				},
@@ -975,15 +975,38 @@ RecountPerCharDB = {
 					},
 					["DeathCount"] = 0,
 					["HOT_Time"] = 402,
-					["Damage"] = 0,
+					["ElementTakenBlock"] = {
+					},
 					["RunicPowerGain"] = 0,
 					["ElementTaken"] = {
 						["Melee"] = 5404,
 						["Physical"] = 3298,
 					},
-					["DOT_Time"] = 0,
-					["ElementTakenBlock"] = {
+					["HOTs"] = {
+						["生命之花"] = {
+							["Details"] = {
+								["牧原股份"] = {
+									["count"] = 32,
+								},
+								["殺手謝"] = {
+									["count"] = 189,
+								},
+								["時尚網俠"] = {
+									["count"] = 157,
+								},
+							},
+							["amount"] = 378,
+						},
+						["回春術"] = {
+							["Details"] = {
+								["殺手謝"] = {
+									["count"] = 24,
+								},
+							},
+							["amount"] = 24,
+						},
 					},
+					["Damage"] = 0,
 					["ElementDoneAbsorb"] = {
 					},
 					["TimeHeal"] = 174.47,
@@ -992,18 +1015,18 @@ RecountPerCharDB = {
 					["Dispels"] = 0,
 					["PartialBlock"] = {
 					},
-					["ElementHitsDone"] = {
+					["DamagedWho"] = {
 					},
 					["FAttacks"] = {
 					},
 					["HealingTaken"] = 8923,
 					["ElementDone"] = {
 					},
-					["DamagedWho"] = {
+					["ElementHitsDone"] = {
 					},
 					["ManaGainedFrom"] = {
 					},
-					["RunicPowerGainedFrom"] = {
+					["RunicPowerGained"] = {
 					},
 					["WhoDamaged"] = {
 						["高階祭司塞卡爾"] = {
@@ -1044,9 +1067,9 @@ RecountPerCharDB = {
 					},
 					["EnergyGainedFrom"] = {
 					},
-					["RunicPowerGained"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 					},
@@ -1085,50 +1108,7 @@ RecountPerCharDB = {
 							["amount"] = 91.75000000000003,
 						},
 					},
-					["OverHeals"] = {
-						["生命之花"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 1625,
-									["min"] = 331,
-									["count"] = 4,
-									["amount"] = 5206,
-								},
-								["Tick"] = {
-									["max"] = 774,
-									["min"] = 14,
-									["count"] = 185,
-									["amount"] = 87805,
-								},
-							},
-							["count"] = 189,
-							["amount"] = 93011,
-						},
-						["回春術"] = {
-							["Details"] = {
-								["Tick"] = {
-									["max"] = 940,
-									["min"] = 42,
-									["count"] = 7,
-									["amount"] = 5668,
-								},
-							},
-							["count"] = 7,
-							["amount"] = 5668,
-						},
-						["迅癒"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 1597,
-									["min"] = 1597,
-									["count"] = 1,
-									["amount"] = 1597,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 1597,
-						},
-					},
+					["Dispelled"] = 0,
 					["WhoHealed"] = {
 						["牧原股份"] = {
 							["Details"] = {
@@ -1177,6 +1157,10 @@ RecountPerCharDB = {
 					["CCBreak"] = 0,
 					["ElementTakenAbsorb"] = {
 					},
+					["FDamage"] = 0,
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+					},
 					["PartialAbsorb"] = {
 						["重擊"] = {
 							["Details"] = {
@@ -1215,48 +1199,7 @@ RecountPerCharDB = {
 							["amount"] = 0,
 						},
 					},
-					["PartialResist"] = {
-						["重擊"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 3,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 3,
-						},
-						["近戰"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 10,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 10,
-						},
-						["衝鋒"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 2,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 2,
-						},
-					},
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
+					["ActiveTime"] = 174.47,
 					["Overhealing"] = 100276,
 					["TimeSpent"] = {
 						["牧原股份"] = {
@@ -1355,12 +1298,92 @@ RecountPerCharDB = {
 							["amount"] = 5980,
 						},
 					},
-					["ActiveTime"] = 174.47,
+					["Interrupts"] = 0,
 					["EnergyGained"] = {
 					},
-					["EnergyGain"] = 0,
+					["PartialResist"] = {
+						["重擊"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 3,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 3,
+						},
+						["近戰"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 10,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 10,
+						},
+						["衝鋒"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 2,
+						},
+					},
 					["Healing"] = 86361,
-					["Dispelled"] = 0,
+					["OverHeals"] = {
+						["生命之花"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 1625,
+									["min"] = 331,
+									["count"] = 4,
+									["amount"] = 5206,
+								},
+								["Tick"] = {
+									["max"] = 774,
+									["min"] = 14,
+									["count"] = 185,
+									["amount"] = 87805,
+								},
+							},
+							["count"] = 189,
+							["amount"] = 93011,
+						},
+						["回春術"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 940,
+									["min"] = 42,
+									["count"] = 7,
+									["amount"] = 5668,
+								},
+							},
+							["count"] = 7,
+							["amount"] = 5668,
+						},
+						["迅癒"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 1597,
+									["min"] = 1597,
+									["count"] = 1,
+									["amount"] = 1597,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 1597,
+						},
+					},
 					["RageGained"] = {
 					},
 					["Attacks"] = {
@@ -1372,30 +1395,7 @@ RecountPerCharDB = {
 					["TimeDamaging"] = {
 					},
 					["ManaGain"] = 0,
-					["HOTs"] = {
-						["生命之花"] = {
-							["Details"] = {
-								["牧原股份"] = {
-									["count"] = 32,
-								},
-								["殺手謝"] = {
-									["count"] = 189,
-								},
-								["時尚網俠"] = {
-									["count"] = 157,
-								},
-							},
-							["amount"] = 378,
-						},
-						["回春術"] = {
-							["Details"] = {
-								["殺手謝"] = {
-									["count"] = 24,
-								},
-							},
-							["amount"] = 24,
-						},
-					},
+					["DOT_Time"] = 0,
 					["DispelledWho"] = {
 					},
 				},
@@ -2265,7 +2265,7 @@ RecountPerCharDB = {
 			},
 			["LastHealTime"] = 27283.738,
 			["UnitLockout"] = 26591.168,
-			["LastAbility"] = 89120.658,
+			["LastAbility"] = 95658.534,
 		},
 		["殺手謝"] = {
 			["GUID"] = "Player-4487-00043303",
@@ -2485,7 +2485,58 @@ RecountPerCharDB = {
 			},
 			["LastDamageTaken"] = 386,
 			["Owner"] = false,
-			["Name"] = "殺手謝",
+			["LastEventIncoming"] = {
+				true, -- [1]
+				true, -- [2]
+				false, -- [3]
+				true, -- [4]
+				false, -- [5]
+				true, -- [6]
+				false, -- [7]
+				false, -- [8]
+				false, -- [9]
+				true, -- [10]
+				false, -- [11]
+				false, -- [12]
+				true, -- [13]
+				false, -- [14]
+				false, -- [15]
+				false, -- [16]
+				false, -- [17]
+				false, -- [18]
+				false, -- [19]
+				false, -- [20]
+				false, -- [21]
+				true, -- [22]
+				false, -- [23]
+				false, -- [24]
+				true, -- [25]
+				false, -- [26]
+				true, -- [27]
+				false, -- [28]
+				false, -- [29]
+				false, -- [30]
+				false, -- [31]
+				false, -- [32]
+				false, -- [33]
+				true, -- [34]
+				true, -- [35]
+				false, -- [36]
+				true, -- [37]
+				false, -- [38]
+				true, -- [39]
+				false, -- [40]
+				true, -- [41]
+				false, -- [42]
+				false, -- [43]
+				true, -- [44]
+				true, -- [45]
+				false, -- [46]
+				false, -- [47]
+				false, -- [48]
+				false, -- [49]
+				true, -- [50]
+			},
 			["NextEventNum"] = 10,
 			["LastDamageTime"] = 27285.638,
 			["LastEvents"] = {
@@ -2540,58 +2591,7 @@ RecountPerCharDB = {
 				"殺手謝 致命毒藥 VII (傷害/跳) 高階祭司塞卡爾 Tick -230 (Nature)", -- [49]
 				"高階祭司塞卡爾 近戰 殺手謝 Dodge (1)", -- [50]
 			},
-			["LastEventIncoming"] = {
-				true, -- [1]
-				true, -- [2]
-				false, -- [3]
-				true, -- [4]
-				false, -- [5]
-				true, -- [6]
-				false, -- [7]
-				false, -- [8]
-				false, -- [9]
-				true, -- [10]
-				false, -- [11]
-				false, -- [12]
-				true, -- [13]
-				false, -- [14]
-				false, -- [15]
-				false, -- [16]
-				false, -- [17]
-				false, -- [18]
-				false, -- [19]
-				false, -- [20]
-				false, -- [21]
-				true, -- [22]
-				false, -- [23]
-				false, -- [24]
-				true, -- [25]
-				false, -- [26]
-				true, -- [27]
-				false, -- [28]
-				false, -- [29]
-				false, -- [30]
-				false, -- [31]
-				false, -- [32]
-				false, -- [33]
-				true, -- [34]
-				true, -- [35]
-				false, -- [36]
-				true, -- [37]
-				false, -- [38]
-				true, -- [39]
-				false, -- [40]
-				true, -- [41]
-				false, -- [42]
-				false, -- [43]
-				true, -- [44]
-				true, -- [45]
-				false, -- [46]
-				false, -- [47]
-				false, -- [48]
-				false, -- [49]
-				true, -- [50]
-			},
+			["Name"] = "殺手謝",
 			["LastEventTimes"] = {
 				27282.904, -- [1]
 				27282.904, -- [2]
@@ -2666,14 +2666,15 @@ RecountPerCharDB = {
 					},
 					["DeathCount"] = 0,
 					["HOT_Time"] = 0,
-					["Damage"] = 3416,
+					["ElementTakenBlock"] = {
+					},
 					["RunicPowerGain"] = 0,
 					["ElementTaken"] = {
 						["Melee"] = 136,
 					},
-					["DOT_Time"] = 0,
-					["ElementTakenBlock"] = {
+					["HOTs"] = {
 					},
+					["Damage"] = 3416,
 					["ElementDoneAbsorb"] = {
 					},
 					["TimeHeal"] = 0,
@@ -2681,6 +2682,29 @@ RecountPerCharDB = {
 					},
 					["Dispels"] = 0,
 					["PartialBlock"] = {
+					},
+					["DamagedWho"] = {
+						["祖利安幼虎"] = {
+							["Details"] = {
+								["剔骨"] = {
+									["count"] = 519,
+								},
+								["近戰"] = {
+									["count"] = 679,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 2218,
+								},
+							},
+							["amount"] = 3416,
+						},
+					},
+					["FAttacks"] = {
+					},
+					["HealingTaken"] = 0,
+					["ElementDone"] = {
+						["Melee"] = 679,
+						["Physical"] = 2737,
 					},
 					["ElementHitsDone"] = {
 						["Melee"] = {
@@ -2703,32 +2727,9 @@ RecountPerCharDB = {
 							["amount"] = 3,
 						},
 					},
-					["FAttacks"] = {
-					},
-					["HealingTaken"] = 0,
-					["ElementDone"] = {
-						["Melee"] = 679,
-						["Physical"] = 2737,
-					},
-					["DamagedWho"] = {
-						["祖利安幼虎"] = {
-							["Details"] = {
-								["剔骨"] = {
-									["count"] = 519,
-								},
-								["近戰"] = {
-									["count"] = 679,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 2218,
-								},
-							},
-							["amount"] = 3416,
-						},
-					},
 					["ManaGainedFrom"] = {
 					},
-					["RunicPowerGainedFrom"] = {
+					["RunicPowerGained"] = {
 					},
 					["WhoDamaged"] = {
 						["祖利安幼虎"] = {
@@ -2742,22 +2743,25 @@ RecountPerCharDB = {
 					},
 					["EnergyGainedFrom"] = {
 					},
-					["RunicPowerGained"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 					},
 					["TimeHealing"] = {
 					},
-					["OverHeals"] = {
-					},
+					["Dispelled"] = 0,
 					["WhoHealed"] = {
 					},
 					["HealedWho"] = {
 					},
 					["CCBreak"] = 0,
 					["ElementTakenAbsorb"] = {
+					},
+					["FDamage"] = 0,
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
 					},
 					["PartialAbsorb"] = {
 						["近戰"] = {
@@ -2773,24 +2777,7 @@ RecountPerCharDB = {
 							["amount"] = 0,
 						},
 					},
-					["PartialResist"] = {
-						["近戰"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 2,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 2,
-						},
-					},
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
+					["ActiveTime"] = 3.57,
 					["Overhealing"] = 0,
 					["TimeSpent"] = {
 						["祖利安幼虎"] = {
@@ -2816,12 +2803,26 @@ RecountPerCharDB = {
 					},
 					["Heals"] = {
 					},
-					["ActiveTime"] = 3.57,
+					["Interrupts"] = 0,
 					["EnergyGained"] = {
 					},
-					["EnergyGain"] = 0,
+					["PartialResist"] = {
+						["近戰"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 2,
+						},
+					},
 					["Healing"] = 0,
-					["Dispelled"] = 0,
+					["OverHeals"] = {
+					},
 					["RageGained"] = {
 					},
 					["Attacks"] = {
@@ -2889,8 +2890,7 @@ RecountPerCharDB = {
 						},
 					},
 					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
+					["DOT_Time"] = 0,
 					["DispelledWho"] = {
 					},
 				},
@@ -2907,13 +2907,14 @@ RecountPerCharDB = {
 					},
 					["DeathCount"] = 0,
 					["HOT_Time"] = 0,
-					["Damage"] = 0,
+					["ElementTakenBlock"] = {
+					},
 					["RunicPowerGain"] = 0,
 					["ElementTaken"] = {
 					},
-					["DOT_Time"] = 0,
-					["ElementTakenBlock"] = {
+					["HOTs"] = {
 					},
+					["Damage"] = 0,
 					["ElementDoneAbsorb"] = {
 					},
 					["TimeHeal"] = 0,
@@ -2922,33 +2923,32 @@ RecountPerCharDB = {
 					["Dispels"] = 0,
 					["PartialBlock"] = {
 					},
-					["ElementHitsDone"] = {
+					["DamagedWho"] = {
 					},
 					["FAttacks"] = {
 					},
 					["HealingTaken"] = 0,
 					["ElementDone"] = {
 					},
-					["DamagedWho"] = {
+					["ElementHitsDone"] = {
 					},
 					["ManaGainedFrom"] = {
 					},
-					["RunicPowerGainedFrom"] = {
+					["RunicPowerGained"] = {
 					},
 					["WhoDamaged"] = {
 					},
 					["EnergyGainedFrom"] = {
 					},
-					["RunicPowerGained"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 					},
 					["TimeHealing"] = {
 					},
-					["OverHeals"] = {
-					},
+					["Dispelled"] = 0,
 					["WhoHealed"] = {
 					},
 					["HealedWho"] = {
@@ -2956,14 +2956,13 @@ RecountPerCharDB = {
 					["CCBreak"] = 0,
 					["ElementTakenAbsorb"] = {
 					},
-					["PartialAbsorb"] = {
-					},
-					["PartialResist"] = {
-					},
+					["FDamage"] = 0,
+					["EnergyGain"] = 0,
 					["ManaGained"] = {
 					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
+					["PartialAbsorb"] = {
+					},
+					["ActiveTime"] = 0,
 					["Overhealing"] = 0,
 					["TimeSpent"] = {
 					},
@@ -2975,12 +2974,14 @@ RecountPerCharDB = {
 					},
 					["Heals"] = {
 					},
-					["ActiveTime"] = 0,
+					["Interrupts"] = 0,
 					["EnergyGained"] = {
 					},
-					["EnergyGain"] = 0,
+					["PartialResist"] = {
+					},
 					["Healing"] = 0,
-					["Dispelled"] = 0,
+					["OverHeals"] = {
+					},
 					["RageGained"] = {
 					},
 					["Attacks"] = {
@@ -2992,8 +2993,7 @@ RecountPerCharDB = {
 					["TimeDamaging"] = {
 					},
 					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
+					["DOT_Time"] = 0,
 					["DispelledWho"] = {
 					},
 				},
@@ -3548,16 +3548,17 @@ RecountPerCharDB = {
 					},
 					["DeathCount"] = 0,
 					["HOT_Time"] = 0,
-					["Damage"] = 400144,
+					["ElementTakenBlock"] = {
+					},
 					["RunicPowerGain"] = 0,
 					["ElementTaken"] = {
 						["Physical"] = 23950,
 						["Melee"] = 26607,
 						["Nature"] = 1860,
 					},
-					["DOT_Time"] = 423,
-					["ElementTakenBlock"] = {
+					["HOTs"] = {
 					},
+					["Damage"] = 400144,
 					["ElementDoneAbsorb"] = {
 					},
 					["TimeHeal"] = 9,
@@ -3565,82 +3566,6 @@ RecountPerCharDB = {
 					},
 					["Dispels"] = 0,
 					["PartialBlock"] = {
-					},
-					["ElementHitsDone"] = {
-						["Physical"] = {
-							["Details"] = {
-								["Glancing"] = {
-									["count"] = 1,
-								},
-								["Dodge"] = {
-									["count"] = 2,
-								},
-								["Hit"] = {
-									["count"] = 144,
-								},
-								["Tick"] = {
-									["count"] = 30,
-								},
-								["Block"] = {
-									["count"] = 1,
-								},
-								["Crit"] = {
-									["count"] = 32,
-								},
-								["Parry"] = {
-									["count"] = 2,
-								},
-							},
-							["amount"] = 212,
-						},
-						["Melee"] = {
-							["Details"] = {
-								["Glancing"] = {
-									["count"] = 55,
-								},
-								["Dodge"] = {
-									["count"] = 5,
-								},
-								["Hit"] = {
-									["count"] = 175,
-								},
-								["Miss"] = {
-									["count"] = 19,
-								},
-								["Block"] = {
-									["count"] = 2,
-								},
-								["Crit"] = {
-									["count"] = 135,
-								},
-								["Parry"] = {
-									["count"] = 13,
-								},
-							},
-							["amount"] = 404,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 17,
-								},
-								["Tick"] = {
-									["count"] = 111,
-								},
-								["Hit"] = {
-									["count"] = 41,
-								},
-							},
-							["amount"] = 169,
-						},
-					},
-					["FAttacks"] = {
-					},
-					["HealingTaken"] = 52417,
-					["ElementDone"] = {
-						["Physical"] = 168464,
-						["Melee"] = 210532,
-						["Nature"] = 21148,
 					},
 					["DamagedWho"] = {
 						["狂熱者洛卡恩"] = {
@@ -3771,9 +3696,85 @@ RecountPerCharDB = {
 							["amount"] = 86064,
 						},
 					},
+					["FAttacks"] = {
+					},
+					["HealingTaken"] = 52417,
+					["ElementDone"] = {
+						["Physical"] = 168464,
+						["Melee"] = 210532,
+						["Nature"] = 21148,
+					},
+					["ElementHitsDone"] = {
+						["Physical"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["count"] = 1,
+								},
+								["Dodge"] = {
+									["count"] = 2,
+								},
+								["Hit"] = {
+									["count"] = 144,
+								},
+								["Tick"] = {
+									["count"] = 30,
+								},
+								["Block"] = {
+									["count"] = 1,
+								},
+								["Crit"] = {
+									["count"] = 32,
+								},
+								["Parry"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 212,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["count"] = 55,
+								},
+								["Dodge"] = {
+									["count"] = 5,
+								},
+								["Hit"] = {
+									["count"] = 175,
+								},
+								["Miss"] = {
+									["count"] = 19,
+								},
+								["Block"] = {
+									["count"] = 2,
+								},
+								["Crit"] = {
+									["count"] = 135,
+								},
+								["Parry"] = {
+									["count"] = 13,
+								},
+							},
+							["amount"] = 404,
+						},
+						["Nature"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 17,
+								},
+								["Tick"] = {
+									["count"] = 111,
+								},
+								["Hit"] = {
+									["count"] = 41,
+								},
+							},
+							["amount"] = 169,
+						},
+					},
 					["ManaGainedFrom"] = {
 					},
-					["RunicPowerGainedFrom"] = {
+					["RunicPowerGained"] = {
 					},
 					["WhoDamaged"] = {
 						["狂熱者洛卡恩"] = {
@@ -3851,9 +3852,9 @@ RecountPerCharDB = {
 							["amount"] = 1164,
 						},
 					},
-					["RunicPowerGained"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 						["Melee"] = 90,
@@ -3872,32 +3873,7 @@ RecountPerCharDB = {
 							["amount"] = 9,
 						},
 					},
-					["OverHeals"] = {
-						["生命之花"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 1625,
-									["min"] = 911,
-									["count"] = 11,
-									["amount"] = 16374,
-								},
-							},
-							["count"] = 11,
-							["amount"] = 16374,
-						},
-						["治療藥水"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 146,
-									["min"] = 146,
-									["count"] = 1,
-									["amount"] = 146,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 146,
-						},
-					},
+					["Dispelled"] = 0,
 					["WhoHealed"] = {
 						["牧原股份"] = {
 							["Details"] = {
@@ -3943,6 +3919,10 @@ RecountPerCharDB = {
 					},
 					["CCBreak"] = 0,
 					["ElementTakenAbsorb"] = {
+					},
+					["FDamage"] = 0,
+					["EnergyGain"] = 1164,
+					["ManaGained"] = {
 					},
 					["PartialAbsorb"] = {
 						["高速切砍 (傷害/跳)"] = {
@@ -4064,6 +4044,193 @@ RecountPerCharDB = {
 							},
 							["count"] = 3,
 							["amount"] = 0,
+						},
+					},
+					["ActiveTime"] = 285.3700000000002,
+					["Overhealing"] = 16520,
+					["TimeSpent"] = {
+						["狂熱者洛卡恩"] = {
+							["Details"] = {
+								["致命毒藥 VII"] = {
+									["count"] = 1.03,
+								},
+								["速效毒藥 VII"] = {
+									["count"] = 1.72,
+								},
+								["致命毒藥 VII (傷害/跳)"] = {
+									["count"] = 15.91,
+								},
+								["腳踢"] = {
+									["count"] = 1.05,
+								},
+								["近戰"] = {
+									["count"] = 27.95999999999999,
+								},
+								["劍刃亂舞"] = {
+									["count"] = 0.05,
+								},
+								["近戰 (劍類武器專精)"] = {
+									["count"] = 0.02,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 5.68,
+								},
+							},
+							["amount"] = 53.42000000000002,
+						},
+						["高階祭司塞卡爾"] = {
+							["Details"] = {
+								["致命毒藥 VII"] = {
+									["count"] = 6.21,
+								},
+								["速效毒藥 VII"] = {
+									["count"] = 1.39,
+								},
+								["割裂 (傷害/跳)"] = {
+									["count"] = 9.6,
+								},
+								["近戰"] = {
+									["count"] = 97.73999999999997,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 17.61,
+								},
+								["致命毒藥 VII (傷害/跳)"] = {
+									["count"] = 28.65,
+								},
+								["剔骨"] = {
+									["count"] = 0.35,
+								},
+								["劍刃亂舞"] = {
+									["count"] = 0.7200000000000003,
+								},
+								["近戰 (劍類武器專精)"] = {
+									["count"] = 0.02,
+								},
+							},
+							["amount"] = 162.2900000000003,
+						},
+						["祖利安猛虎"] = {
+							["Details"] = {
+								["劍刃亂舞"] = {
+									["count"] = 0.3099999999999999,
+								},
+								["近戰"] = {
+									["count"] = 6.08,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 2.13,
+								},
+							},
+							["amount"] = 8.520000000000001,
+						},
+						["殺手謝"] = {
+							["Details"] = {
+								["生命之花"] = {
+									["count"] = 7.5,
+								},
+								["治療藥水"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 9,
+						},
+						["祖利安守護者"] = {
+							["Details"] = {
+								["劍刃亂舞"] = {
+									["count"] = 0.27,
+								},
+								["近戰"] = {
+									["count"] = 2.68,
+								},
+								["致命毒藥 VII (傷害/跳)"] = {
+									["count"] = 0.17,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 0.25,
+								},
+							},
+							["amount"] = 3.37,
+						},
+						["狂熱者札斯"] = {
+							["Details"] = {
+								["致命毒藥 VII (傷害/跳)"] = {
+									["count"] = 10.05,
+								},
+								["劍刃亂舞"] = {
+									["count"] = 0.29,
+								},
+								["近戰"] = {
+									["count"] = 33.2,
+								},
+								["近戰 (劍類武器專精)"] = {
+									["count"] = 0.02,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 5.210000000000001,
+								},
+							},
+							["amount"] = 48.77,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+						["狂熱者洛卡恩"] = {
+							["Details"] = {
+								["強效治療術 (腳踢)"] = {
+									["count"] = 7,
+								},
+							},
+							["amount"] = 7,
+						},
+					},
+					["ElementTakenResist"] = {
+						["Nature"] = 620,
+					},
+					["Heals"] = {
+						["生命之花"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 1625,
+									["min"] = 602,
+									["count"] = 5,
+									["amount"] = 5378,
+								},
+							},
+							["count"] = 5,
+							["amount"] = 5378,
+						},
+						["治療藥水"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 1700,
+									["min"] = 1700,
+									["count"] = 1,
+									["amount"] = 1700,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 1700,
+						},
+					},
+					["Interrupts"] = 7,
+					["EnergyGained"] = {
+						["無情打擊效果"] = {
+							["Details"] = {
+								["殺手謝"] = {
+									["count"] = 450,
+								},
+							},
+							["amount"] = 450,
+						},
+						["作戰潛能"] = {
+							["Details"] = {
+								["殺手謝"] = {
+									["count"] = 714,
+								},
+							},
+							["amount"] = 714,
 						},
 					},
 					["PartialResist"] = {
@@ -4200,199 +4367,33 @@ RecountPerCharDB = {
 							["amount"] = 3,
 						},
 					},
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 7,
-					["Overhealing"] = 16520,
-					["TimeSpent"] = {
-						["狂熱者洛卡恩"] = {
-							["Details"] = {
-								["致命毒藥 VII"] = {
-									["count"] = 1.03,
-								},
-								["速效毒藥 VII"] = {
-									["count"] = 1.72,
-								},
-								["致命毒藥 VII (傷害/跳)"] = {
-									["count"] = 15.91,
-								},
-								["腳踢"] = {
-									["count"] = 1.05,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.05,
-								},
-								["近戰 (劍類武器專精)"] = {
-									["count"] = 0.02,
-								},
-								["近戰"] = {
-									["count"] = 27.95999999999999,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 5.68,
-								},
-							},
-							["amount"] = 53.42000000000002,
-						},
-						["高階祭司塞卡爾"] = {
-							["Details"] = {
-								["致命毒藥 VII"] = {
-									["count"] = 6.21,
-								},
-								["速效毒藥 VII"] = {
-									["count"] = 1.39,
-								},
-								["割裂 (傷害/跳)"] = {
-									["count"] = 9.6,
-								},
-								["近戰"] = {
-									["count"] = 97.73999999999997,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 17.61,
-								},
-								["致命毒藥 VII (傷害/跳)"] = {
-									["count"] = 28.65,
-								},
-								["剔骨"] = {
-									["count"] = 0.35,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.7200000000000003,
-								},
-								["近戰 (劍類武器專精)"] = {
-									["count"] = 0.02,
-								},
-							},
-							["amount"] = 162.2900000000003,
-						},
-						["祖利安猛虎"] = {
-							["Details"] = {
-								["劍刃亂舞"] = {
-									["count"] = 0.3099999999999999,
-								},
-								["近戰"] = {
-									["count"] = 6.08,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 2.13,
-								},
-							},
-							["amount"] = 8.520000000000001,
-						},
-						["祖利安守護者"] = {
-							["Details"] = {
-								["近戰"] = {
-									["count"] = 2.68,
-								},
-								["致命毒藥 VII (傷害/跳)"] = {
-									["count"] = 0.17,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.27,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 0.25,
-								},
-							},
-							["amount"] = 3.37,
-						},
-						["殺手謝"] = {
-							["Details"] = {
-								["生命之花"] = {
-									["count"] = 7.5,
-								},
-								["治療藥水"] = {
-									["count"] = 1.5,
-								},
-							},
-							["amount"] = 9,
-						},
-						["狂熱者札斯"] = {
-							["Details"] = {
-								["致命毒藥 VII (傷害/跳)"] = {
-									["count"] = 10.05,
-								},
-								["近戰"] = {
-									["count"] = 33.2,
-								},
-								["近戰 (劍類武器專精)"] = {
-									["count"] = 0.02,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.29,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 5.210000000000001,
-								},
-							},
-							["amount"] = 48.77,
-						},
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-						["狂熱者洛卡恩"] = {
-							["Details"] = {
-								["強效治療術 (腳踢)"] = {
-									["count"] = 7,
-								},
-							},
-							["amount"] = 7,
-						},
-					},
-					["ElementTakenResist"] = {
-						["Nature"] = 620,
-					},
-					["Heals"] = {
+					["Healing"] = 7078,
+					["OverHeals"] = {
 						["生命之花"] = {
 							["Details"] = {
 								["Hit"] = {
 									["max"] = 1625,
-									["min"] = 602,
-									["count"] = 5,
-									["amount"] = 5378,
+									["min"] = 911,
+									["count"] = 11,
+									["amount"] = 16374,
 								},
 							},
-							["count"] = 5,
-							["amount"] = 5378,
+							["count"] = 11,
+							["amount"] = 16374,
 						},
 						["治療藥水"] = {
 							["Details"] = {
 								["Hit"] = {
-									["max"] = 1700,
-									["min"] = 1700,
+									["max"] = 146,
+									["min"] = 146,
 									["count"] = 1,
-									["amount"] = 1700,
+									["amount"] = 146,
 								},
 							},
 							["count"] = 1,
-							["amount"] = 1700,
+							["amount"] = 146,
 						},
 					},
-					["ActiveTime"] = 285.3700000000002,
-					["EnergyGained"] = {
-						["無情打擊效果"] = {
-							["Details"] = {
-								["殺手謝"] = {
-									["count"] = 450,
-								},
-							},
-							["amount"] = 450,
-						},
-						["作戰潛能"] = {
-							["Details"] = {
-								["殺手謝"] = {
-									["count"] = 714,
-								},
-							},
-							["amount"] = 714,
-						},
-					},
-					["EnergyGain"] = 1164,
-					["Healing"] = 7078,
-					["Dispelled"] = 0,
 					["RageGained"] = {
 					},
 					["Attacks"] = {
@@ -4642,14 +4643,14 @@ RecountPerCharDB = {
 								["腳踢"] = {
 									["count"] = 1.05,
 								},
+								["近戰"] = {
+									["count"] = 27.95999999999999,
+								},
 								["劍刃亂舞"] = {
 									["count"] = 0.05,
 								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
-								},
-								["近戰"] = {
-									["count"] = 27.95999999999999,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.68,
@@ -4705,14 +4706,14 @@ RecountPerCharDB = {
 						},
 						["祖利安守護者"] = {
 							["Details"] = {
+								["劍刃亂舞"] = {
+									["count"] = 0.27,
+								},
 								["近戰"] = {
 									["count"] = 2.68,
 								},
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 0.17,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.27,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 0.25,
@@ -4725,14 +4726,14 @@ RecountPerCharDB = {
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 10.05,
 								},
+								["劍刃亂舞"] = {
+									["count"] = 0.29,
+								},
 								["近戰"] = {
 									["count"] = 33.2,
 								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.29,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.210000000000001,
@@ -4742,8 +4743,7 @@ RecountPerCharDB = {
 						},
 					},
 					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
+					["DOT_Time"] = 423,
 					["DispelledWho"] = {
 					},
 				},
@@ -4836,16 +4836,17 @@ RecountPerCharDB = {
 					},
 					["DeathCount"] = 0,
 					["HOT_Time"] = 0,
-					["Damage"] = 400144,
+					["ElementTakenBlock"] = {
+					},
 					["RunicPowerGain"] = 0,
 					["ElementTaken"] = {
 						["Physical"] = 23950,
 						["Melee"] = 26607,
 						["Nature"] = 1860,
 					},
-					["DOT_Time"] = 423,
-					["ElementTakenBlock"] = {
+					["HOTs"] = {
 					},
+					["Damage"] = 400144,
 					["ElementDoneAbsorb"] = {
 					},
 					["TimeHeal"] = 9,
@@ -4853,82 +4854,6 @@ RecountPerCharDB = {
 					},
 					["Dispels"] = 0,
 					["PartialBlock"] = {
-					},
-					["ElementHitsDone"] = {
-						["Physical"] = {
-							["Details"] = {
-								["Glancing"] = {
-									["count"] = 1,
-								},
-								["Dodge"] = {
-									["count"] = 2,
-								},
-								["Hit"] = {
-									["count"] = 144,
-								},
-								["Tick"] = {
-									["count"] = 30,
-								},
-								["Block"] = {
-									["count"] = 1,
-								},
-								["Crit"] = {
-									["count"] = 32,
-								},
-								["Parry"] = {
-									["count"] = 2,
-								},
-							},
-							["amount"] = 212,
-						},
-						["Melee"] = {
-							["Details"] = {
-								["Glancing"] = {
-									["count"] = 55,
-								},
-								["Dodge"] = {
-									["count"] = 5,
-								},
-								["Hit"] = {
-									["count"] = 175,
-								},
-								["Miss"] = {
-									["count"] = 19,
-								},
-								["Block"] = {
-									["count"] = 2,
-								},
-								["Crit"] = {
-									["count"] = 135,
-								},
-								["Parry"] = {
-									["count"] = 13,
-								},
-							},
-							["amount"] = 404,
-						},
-						["Nature"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 17,
-								},
-								["Tick"] = {
-									["count"] = 111,
-								},
-								["Hit"] = {
-									["count"] = 41,
-								},
-							},
-							["amount"] = 169,
-						},
-					},
-					["FAttacks"] = {
-					},
-					["HealingTaken"] = 52417,
-					["ElementDone"] = {
-						["Physical"] = 168464,
-						["Melee"] = 210532,
-						["Nature"] = 21148,
 					},
 					["DamagedWho"] = {
 						["狂熱者洛卡恩"] = {
@@ -5059,9 +4984,85 @@ RecountPerCharDB = {
 							["amount"] = 86064,
 						},
 					},
+					["FAttacks"] = {
+					},
+					["HealingTaken"] = 52417,
+					["ElementDone"] = {
+						["Physical"] = 168464,
+						["Melee"] = 210532,
+						["Nature"] = 21148,
+					},
+					["ElementHitsDone"] = {
+						["Physical"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["count"] = 1,
+								},
+								["Dodge"] = {
+									["count"] = 2,
+								},
+								["Hit"] = {
+									["count"] = 144,
+								},
+								["Tick"] = {
+									["count"] = 30,
+								},
+								["Block"] = {
+									["count"] = 1,
+								},
+								["Crit"] = {
+									["count"] = 32,
+								},
+								["Parry"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 212,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Glancing"] = {
+									["count"] = 55,
+								},
+								["Dodge"] = {
+									["count"] = 5,
+								},
+								["Hit"] = {
+									["count"] = 175,
+								},
+								["Miss"] = {
+									["count"] = 19,
+								},
+								["Block"] = {
+									["count"] = 2,
+								},
+								["Crit"] = {
+									["count"] = 135,
+								},
+								["Parry"] = {
+									["count"] = 13,
+								},
+							},
+							["amount"] = 404,
+						},
+						["Nature"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 17,
+								},
+								["Tick"] = {
+									["count"] = 111,
+								},
+								["Hit"] = {
+									["count"] = 41,
+								},
+							},
+							["amount"] = 169,
+						},
+					},
 					["ManaGainedFrom"] = {
 					},
-					["RunicPowerGainedFrom"] = {
+					["RunicPowerGained"] = {
 					},
 					["WhoDamaged"] = {
 						["狂熱者洛卡恩"] = {
@@ -5139,9 +5140,9 @@ RecountPerCharDB = {
 							["amount"] = 1164,
 						},
 					},
-					["RunicPowerGained"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 						["Melee"] = 90,
@@ -5160,32 +5161,7 @@ RecountPerCharDB = {
 							["amount"] = 9,
 						},
 					},
-					["OverHeals"] = {
-						["生命之花"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 1625,
-									["min"] = 911,
-									["count"] = 11,
-									["amount"] = 16374,
-								},
-							},
-							["count"] = 11,
-							["amount"] = 16374,
-						},
-						["治療藥水"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 146,
-									["min"] = 146,
-									["count"] = 1,
-									["amount"] = 146,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 146,
-						},
-					},
+					["Dispelled"] = 0,
 					["WhoHealed"] = {
 						["牧原股份"] = {
 							["Details"] = {
@@ -5231,6 +5207,10 @@ RecountPerCharDB = {
 					},
 					["CCBreak"] = 0,
 					["ElementTakenAbsorb"] = {
+					},
+					["FDamage"] = 0,
+					["EnergyGain"] = 1164,
+					["ManaGained"] = {
 					},
 					["PartialAbsorb"] = {
 						["高速切砍 (傷害/跳)"] = {
@@ -5352,6 +5332,193 @@ RecountPerCharDB = {
 							},
 							["count"] = 3,
 							["amount"] = 0,
+						},
+					},
+					["ActiveTime"] = 285.3700000000002,
+					["Overhealing"] = 16520,
+					["TimeSpent"] = {
+						["狂熱者洛卡恩"] = {
+							["Details"] = {
+								["致命毒藥 VII"] = {
+									["count"] = 1.03,
+								},
+								["速效毒藥 VII"] = {
+									["count"] = 1.72,
+								},
+								["致命毒藥 VII (傷害/跳)"] = {
+									["count"] = 15.91,
+								},
+								["腳踢"] = {
+									["count"] = 1.05,
+								},
+								["近戰"] = {
+									["count"] = 27.95999999999999,
+								},
+								["劍刃亂舞"] = {
+									["count"] = 0.05,
+								},
+								["近戰 (劍類武器專精)"] = {
+									["count"] = 0.02,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 5.68,
+								},
+							},
+							["amount"] = 53.42000000000002,
+						},
+						["高階祭司塞卡爾"] = {
+							["Details"] = {
+								["致命毒藥 VII"] = {
+									["count"] = 6.21,
+								},
+								["速效毒藥 VII"] = {
+									["count"] = 1.39,
+								},
+								["割裂 (傷害/跳)"] = {
+									["count"] = 9.6,
+								},
+								["近戰"] = {
+									["count"] = 97.73999999999997,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 17.61,
+								},
+								["致命毒藥 VII (傷害/跳)"] = {
+									["count"] = 28.65,
+								},
+								["剔骨"] = {
+									["count"] = 0.35,
+								},
+								["劍刃亂舞"] = {
+									["count"] = 0.7200000000000003,
+								},
+								["近戰 (劍類武器專精)"] = {
+									["count"] = 0.02,
+								},
+							},
+							["amount"] = 162.2900000000003,
+						},
+						["祖利安猛虎"] = {
+							["Details"] = {
+								["劍刃亂舞"] = {
+									["count"] = 0.3099999999999999,
+								},
+								["近戰"] = {
+									["count"] = 6.08,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 2.13,
+								},
+							},
+							["amount"] = 8.520000000000001,
+						},
+						["殺手謝"] = {
+							["Details"] = {
+								["生命之花"] = {
+									["count"] = 7.5,
+								},
+								["治療藥水"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 9,
+						},
+						["祖利安守護者"] = {
+							["Details"] = {
+								["劍刃亂舞"] = {
+									["count"] = 0.27,
+								},
+								["近戰"] = {
+									["count"] = 2.68,
+								},
+								["致命毒藥 VII (傷害/跳)"] = {
+									["count"] = 0.17,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 0.25,
+								},
+							},
+							["amount"] = 3.37,
+						},
+						["狂熱者札斯"] = {
+							["Details"] = {
+								["致命毒藥 VII (傷害/跳)"] = {
+									["count"] = 10.05,
+								},
+								["劍刃亂舞"] = {
+									["count"] = 0.29,
+								},
+								["近戰"] = {
+									["count"] = 33.2,
+								},
+								["近戰 (劍類武器專精)"] = {
+									["count"] = 0.02,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 5.210000000000001,
+								},
+							},
+							["amount"] = 48.77,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+						["狂熱者洛卡恩"] = {
+							["Details"] = {
+								["強效治療術 (腳踢)"] = {
+									["count"] = 7,
+								},
+							},
+							["amount"] = 7,
+						},
+					},
+					["ElementTakenResist"] = {
+						["Nature"] = 620,
+					},
+					["Heals"] = {
+						["生命之花"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 1625,
+									["min"] = 602,
+									["count"] = 5,
+									["amount"] = 5378,
+								},
+							},
+							["count"] = 5,
+							["amount"] = 5378,
+						},
+						["治療藥水"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 1700,
+									["min"] = 1700,
+									["count"] = 1,
+									["amount"] = 1700,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 1700,
+						},
+					},
+					["Interrupts"] = 7,
+					["EnergyGained"] = {
+						["無情打擊效果"] = {
+							["Details"] = {
+								["殺手謝"] = {
+									["count"] = 450,
+								},
+							},
+							["amount"] = 450,
+						},
+						["作戰潛能"] = {
+							["Details"] = {
+								["殺手謝"] = {
+									["count"] = 714,
+								},
+							},
+							["amount"] = 714,
 						},
 					},
 					["PartialResist"] = {
@@ -5488,199 +5655,33 @@ RecountPerCharDB = {
 							["amount"] = 3,
 						},
 					},
-					["ManaGained"] = {
-					},
-					["FDamage"] = 0,
-					["Interrupts"] = 7,
-					["Overhealing"] = 16520,
-					["TimeSpent"] = {
-						["狂熱者洛卡恩"] = {
-							["Details"] = {
-								["致命毒藥 VII"] = {
-									["count"] = 1.03,
-								},
-								["速效毒藥 VII"] = {
-									["count"] = 1.72,
-								},
-								["致命毒藥 VII (傷害/跳)"] = {
-									["count"] = 15.91,
-								},
-								["腳踢"] = {
-									["count"] = 1.05,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.05,
-								},
-								["近戰 (劍類武器專精)"] = {
-									["count"] = 0.02,
-								},
-								["近戰"] = {
-									["count"] = 27.95999999999999,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 5.68,
-								},
-							},
-							["amount"] = 53.42000000000002,
-						},
-						["高階祭司塞卡爾"] = {
-							["Details"] = {
-								["致命毒藥 VII"] = {
-									["count"] = 6.21,
-								},
-								["速效毒藥 VII"] = {
-									["count"] = 1.39,
-								},
-								["割裂 (傷害/跳)"] = {
-									["count"] = 9.6,
-								},
-								["近戰"] = {
-									["count"] = 97.73999999999997,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 17.61,
-								},
-								["致命毒藥 VII (傷害/跳)"] = {
-									["count"] = 28.65,
-								},
-								["剔骨"] = {
-									["count"] = 0.35,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.7200000000000003,
-								},
-								["近戰 (劍類武器專精)"] = {
-									["count"] = 0.02,
-								},
-							},
-							["amount"] = 162.2900000000003,
-						},
-						["祖利安猛虎"] = {
-							["Details"] = {
-								["劍刃亂舞"] = {
-									["count"] = 0.3099999999999999,
-								},
-								["近戰"] = {
-									["count"] = 6.08,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 2.13,
-								},
-							},
-							["amount"] = 8.520000000000001,
-						},
-						["祖利安守護者"] = {
-							["Details"] = {
-								["近戰"] = {
-									["count"] = 2.68,
-								},
-								["致命毒藥 VII (傷害/跳)"] = {
-									["count"] = 0.17,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.27,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 0.25,
-								},
-							},
-							["amount"] = 3.37,
-						},
-						["殺手謝"] = {
-							["Details"] = {
-								["生命之花"] = {
-									["count"] = 7.5,
-								},
-								["治療藥水"] = {
-									["count"] = 1.5,
-								},
-							},
-							["amount"] = 9,
-						},
-						["狂熱者札斯"] = {
-							["Details"] = {
-								["致命毒藥 VII (傷害/跳)"] = {
-									["count"] = 10.05,
-								},
-								["近戰"] = {
-									["count"] = 33.2,
-								},
-								["近戰 (劍類武器專精)"] = {
-									["count"] = 0.02,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.29,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 5.210000000000001,
-								},
-							},
-							["amount"] = 48.77,
-						},
-					},
-					["WhoDispelled"] = {
-					},
-					["InterruptData"] = {
-						["狂熱者洛卡恩"] = {
-							["Details"] = {
-								["強效治療術 (腳踢)"] = {
-									["count"] = 7,
-								},
-							},
-							["amount"] = 7,
-						},
-					},
-					["ElementTakenResist"] = {
-						["Nature"] = 620,
-					},
-					["Heals"] = {
+					["Healing"] = 7078,
+					["OverHeals"] = {
 						["生命之花"] = {
 							["Details"] = {
 								["Hit"] = {
 									["max"] = 1625,
-									["min"] = 602,
-									["count"] = 5,
-									["amount"] = 5378,
+									["min"] = 911,
+									["count"] = 11,
+									["amount"] = 16374,
 								},
 							},
-							["count"] = 5,
-							["amount"] = 5378,
+							["count"] = 11,
+							["amount"] = 16374,
 						},
 						["治療藥水"] = {
 							["Details"] = {
 								["Hit"] = {
-									["max"] = 1700,
-									["min"] = 1700,
+									["max"] = 146,
+									["min"] = 146,
 									["count"] = 1,
-									["amount"] = 1700,
+									["amount"] = 146,
 								},
 							},
 							["count"] = 1,
-							["amount"] = 1700,
+							["amount"] = 146,
 						},
 					},
-					["ActiveTime"] = 285.3700000000002,
-					["EnergyGained"] = {
-						["無情打擊效果"] = {
-							["Details"] = {
-								["殺手謝"] = {
-									["count"] = 450,
-								},
-							},
-							["amount"] = 450,
-						},
-						["作戰潛能"] = {
-							["Details"] = {
-								["殺手謝"] = {
-									["count"] = 714,
-								},
-							},
-							["amount"] = 714,
-						},
-					},
-					["EnergyGain"] = 1164,
-					["Healing"] = 7078,
-					["Dispelled"] = 0,
 					["RageGained"] = {
 					},
 					["Attacks"] = {
@@ -5930,14 +5931,14 @@ RecountPerCharDB = {
 								["腳踢"] = {
 									["count"] = 1.05,
 								},
+								["近戰"] = {
+									["count"] = 27.95999999999999,
+								},
 								["劍刃亂舞"] = {
 									["count"] = 0.05,
 								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
-								},
-								["近戰"] = {
-									["count"] = 27.95999999999999,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.68,
@@ -5993,14 +5994,14 @@ RecountPerCharDB = {
 						},
 						["祖利安守護者"] = {
 							["Details"] = {
+								["劍刃亂舞"] = {
+									["count"] = 0.27,
+								},
 								["近戰"] = {
 									["count"] = 2.68,
 								},
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 0.17,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.27,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 0.25,
@@ -6013,14 +6014,14 @@ RecountPerCharDB = {
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 10.05,
 								},
+								["劍刃亂舞"] = {
+									["count"] = 0.29,
+								},
 								["近戰"] = {
 									["count"] = 33.2,
 								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.29,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.210000000000001,
@@ -6030,8 +6031,7 @@ RecountPerCharDB = {
 						},
 					},
 					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
+					["DOT_Time"] = 423,
 					["DispelledWho"] = {
 					},
 				},
@@ -6238,27 +6238,24 @@ RecountPerCharDB = {
 						},
 					},
 					["WhoDamaged"] = {
-						["古拉巴什狂戰士"] = {
+						["祖利安猛虎"] = {
 							["Details"] = {
-								["雷霆一擊"] = {
-									["count"] = 406,
-								},
 								["近戰"] = {
-									["count"] = 16293,
-								},
-								["擊退"] = {
-									["count"] = 1050,
+									["count"] = 563,
 								},
 							},
-							["amount"] = 17749,
+							["amount"] = 563,
 						},
-						["祖利安幼虎"] = {
+						["狂熱者洛卡恩"] = {
 							["Details"] = {
 								["近戰"] = {
-									["count"] = 136,
+									["count"] = 5917,
+								},
+								["閃電之盾"] = {
+									["count"] = 1860,
 								},
 							},
-							["amount"] = 136,
+							["amount"] = 7777,
 						},
 						["狂熱者札斯"] = {
 							["Details"] = {
@@ -6274,13 +6271,19 @@ RecountPerCharDB = {
 							},
 							["amount"] = 3365,
 						},
-						["祖利安猛虎"] = {
+						["古拉巴什狂戰士"] = {
 							["Details"] = {
+								["雷霆一擊"] = {
+									["count"] = 406,
+								},
 								["近戰"] = {
-									["count"] = 563,
+									["count"] = 16293,
+								},
+								["擊退"] = {
+									["count"] = 1050,
 								},
 							},
-							["amount"] = 563,
+							["amount"] = 17749,
 						},
 						["高階祭司塞卡爾"] = {
 							["Details"] = {
@@ -6310,16 +6313,13 @@ RecountPerCharDB = {
 							},
 							["amount"] = 1565,
 						},
-						["狂熱者洛卡恩"] = {
+						["祖利安幼虎"] = {
 							["Details"] = {
 								["近戰"] = {
-									["count"] = 5917,
-								},
-								["閃電之盾"] = {
-									["count"] = 1860,
+									["count"] = 136,
 								},
 							},
-							["amount"] = 7777,
+							["amount"] = 136,
 						},
 					},
 					["EnergyGainedFrom"] = {
@@ -6595,57 +6595,6 @@ RecountPerCharDB = {
 					["Healing"] = 11285,
 					["Interrupts"] = 7,
 					["TimeSpent"] = {
-						["狂熱者札斯"] = {
-							["Details"] = {
-								["致命毒藥 VII (傷害/跳)"] = {
-									["count"] = 10.05,
-								},
-								["近戰"] = {
-									["count"] = 33.2,
-								},
-								["近戰 (劍類武器專精)"] = {
-									["count"] = 0.02,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.29,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 5.210000000000001,
-								},
-							},
-							["amount"] = 48.77,
-						},
-						["祖利安守護者"] = {
-							["Details"] = {
-								["近戰"] = {
-									["count"] = 2.68,
-								},
-								["致命毒藥 VII (傷害/跳)"] = {
-									["count"] = 0.17,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.27,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 0.25,
-								},
-							},
-							["amount"] = 3.37,
-						},
-						["祖利安幼虎"] = {
-							["Details"] = {
-								["剔骨"] = {
-									["count"] = 1.05,
-								},
-								["近戰"] = {
-									["count"] = 2.2,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 0.32,
-								},
-							},
-							["amount"] = 3.57,
-						},
 						["高階祭司塞卡爾"] = {
 							["Details"] = {
 								["致命毒藥 VII"] = {
@@ -6678,19 +6627,70 @@ RecountPerCharDB = {
 							},
 							["amount"] = 162.2900000000003,
 						},
-						["古拉巴什狂戰士"] = {
+						["祖利安守護者"] = {
 							["Details"] = {
-								["近戰 (劍類武器專精)"] = {
-									["count"] = 0.04,
+								["劍刃亂舞"] = {
+									["count"] = 0.27,
 								},
 								["近戰"] = {
-									["count"] = 38.59,
+									["count"] = 2.68,
+								},
+								["致命毒藥 VII (傷害/跳)"] = {
+									["count"] = 0.17,
 								},
 								["邪惡攻擊"] = {
-									["count"] = 5.04,
+									["count"] = 0.25,
 								},
 							},
-							["amount"] = 43.67000000000001,
+							["amount"] = 3.37,
+						},
+						["祖利安幼虎"] = {
+							["Details"] = {
+								["剔骨"] = {
+									["count"] = 1.05,
+								},
+								["近戰"] = {
+									["count"] = 2.2,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 0.32,
+								},
+							},
+							["amount"] = 3.57,
+						},
+						["狂熱者札斯"] = {
+							["Details"] = {
+								["致命毒藥 VII (傷害/跳)"] = {
+									["count"] = 10.05,
+								},
+								["劍刃亂舞"] = {
+									["count"] = 0.29,
+								},
+								["近戰"] = {
+									["count"] = 33.2,
+								},
+								["近戰 (劍類武器專精)"] = {
+									["count"] = 0.02,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 5.210000000000001,
+								},
+							},
+							["amount"] = 48.77,
+						},
+						["祖利安猛虎"] = {
+							["Details"] = {
+								["劍刃亂舞"] = {
+									["count"] = 0.3099999999999999,
+								},
+								["近戰"] = {
+									["count"] = 6.08,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 2.13,
+								},
+							},
+							["amount"] = 8.520000000000001,
 						},
 						["狂熱者洛卡恩"] = {
 							["Details"] = {
@@ -6706,14 +6706,14 @@ RecountPerCharDB = {
 								["腳踢"] = {
 									["count"] = 1.05,
 								},
+								["近戰"] = {
+									["count"] = 27.95999999999999,
+								},
 								["劍刃亂舞"] = {
 									["count"] = 0.05,
 								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
-								},
-								["近戰"] = {
-									["count"] = 27.95999999999999,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.68,
@@ -6732,19 +6732,19 @@ RecountPerCharDB = {
 							},
 							["amount"] = 13.5,
 						},
-						["祖利安猛虎"] = {
+						["古拉巴什狂戰士"] = {
 							["Details"] = {
-								["劍刃亂舞"] = {
-									["count"] = 0.3099999999999999,
+								["近戰 (劍類武器專精)"] = {
+									["count"] = 0.04,
 								},
 								["近戰"] = {
-									["count"] = 6.08,
+									["count"] = 38.59,
 								},
 								["邪惡攻擊"] = {
-									["count"] = 2.13,
+									["count"] = 5.04,
 								},
 							},
-							["amount"] = 8.520000000000001,
+							["amount"] = 43.67000000000001,
 						},
 					},
 					["Attacks"] = {
@@ -6979,6 +6979,20 @@ RecountPerCharDB = {
 					["DamageTaken"] = 70302,
 					["TimeDamage"] = 323.6099999999997,
 					["TimeDamaging"] = {
+						["祖利安幼虎"] = {
+							["Details"] = {
+								["剔骨"] = {
+									["count"] = 1.05,
+								},
+								["近戰"] = {
+									["count"] = 2.2,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 0.32,
+								},
+							},
+							["amount"] = 3.57,
+						},
 						["狂熱者洛卡恩"] = {
 							["Details"] = {
 								["致命毒藥 VII"] = {
@@ -6993,34 +7007,20 @@ RecountPerCharDB = {
 								["腳踢"] = {
 									["count"] = 1.05,
 								},
+								["近戰"] = {
+									["count"] = 27.95999999999999,
+								},
 								["劍刃亂舞"] = {
 									["count"] = 0.05,
 								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
 								},
-								["近戰"] = {
-									["count"] = 27.95999999999999,
-								},
 								["邪惡攻擊"] = {
 									["count"] = 5.68,
 								},
 							},
 							["amount"] = 53.42000000000002,
-						},
-						["祖利安幼虎"] = {
-							["Details"] = {
-								["剔骨"] = {
-									["count"] = 1.05,
-								},
-								["近戰"] = {
-									["count"] = 2.2,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 0.32,
-								},
-							},
-							["amount"] = 3.57,
 						},
 						["高階祭司塞卡爾"] = {
 							["Details"] = {
@@ -7054,57 +7054,6 @@ RecountPerCharDB = {
 							},
 							["amount"] = 162.2900000000003,
 						},
-						["祖利安猛虎"] = {
-							["Details"] = {
-								["劍刃亂舞"] = {
-									["count"] = 0.3099999999999999,
-								},
-								["近戰"] = {
-									["count"] = 6.08,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 2.13,
-								},
-							},
-							["amount"] = 8.520000000000001,
-						},
-						["狂熱者札斯"] = {
-							["Details"] = {
-								["致命毒藥 VII (傷害/跳)"] = {
-									["count"] = 10.05,
-								},
-								["近戰"] = {
-									["count"] = 33.2,
-								},
-								["近戰 (劍類武器專精)"] = {
-									["count"] = 0.02,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.29,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 5.210000000000001,
-								},
-							},
-							["amount"] = 48.77,
-						},
-						["祖利安守護者"] = {
-							["Details"] = {
-								["近戰"] = {
-									["count"] = 2.68,
-								},
-								["致命毒藥 VII (傷害/跳)"] = {
-									["count"] = 0.17,
-								},
-								["劍刃亂舞"] = {
-									["count"] = 0.27,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 0.25,
-								},
-							},
-							["amount"] = 3.37,
-						},
 						["古拉巴什狂戰士"] = {
 							["Details"] = {
 								["近戰 (劍類武器專精)"] = {
@@ -7118,6 +7067,57 @@ RecountPerCharDB = {
 								},
 							},
 							["amount"] = 43.67000000000001,
+						},
+						["狂熱者札斯"] = {
+							["Details"] = {
+								["致命毒藥 VII (傷害/跳)"] = {
+									["count"] = 10.05,
+								},
+								["劍刃亂舞"] = {
+									["count"] = 0.29,
+								},
+								["近戰"] = {
+									["count"] = 33.2,
+								},
+								["近戰 (劍類武器專精)"] = {
+									["count"] = 0.02,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 5.210000000000001,
+								},
+							},
+							["amount"] = 48.77,
+						},
+						["祖利安守護者"] = {
+							["Details"] = {
+								["劍刃亂舞"] = {
+									["count"] = 0.27,
+								},
+								["近戰"] = {
+									["count"] = 2.68,
+								},
+								["致命毒藥 VII (傷害/跳)"] = {
+									["count"] = 0.17,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 0.25,
+								},
+							},
+							["amount"] = 3.37,
+						},
+						["祖利安猛虎"] = {
+							["Details"] = {
+								["劍刃亂舞"] = {
+									["count"] = 0.3099999999999999,
+								},
+								["近戰"] = {
+									["count"] = 6.08,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 2.13,
+								},
+							},
+							["amount"] = 8.520000000000001,
 						},
 					},
 					["PartialResist"] = {
@@ -7304,6 +7304,20 @@ RecountPerCharDB = {
 						},
 					},
 					["DamagedWho"] = {
+						["祖利安幼虎"] = {
+							["Details"] = {
+								["剔骨"] = {
+									["count"] = 519,
+								},
+								["近戰"] = {
+									["count"] = 679,
+								},
+								["邪惡攻擊"] = {
+									["count"] = 2218,
+								},
+							},
+							["amount"] = 3416,
+						},
 						["狂熱者洛卡恩"] = {
 							["Details"] = {
 								["腳踢 (劍類武器專精)"] = {
@@ -7332,20 +7346,6 @@ RecountPerCharDB = {
 								},
 							},
 							["amount"] = 72410,
-						},
-						["祖利安幼虎"] = {
-							["Details"] = {
-								["剔骨"] = {
-									["count"] = 519,
-								},
-								["近戰"] = {
-									["count"] = 679,
-								},
-								["邪惡攻擊"] = {
-									["count"] = 2218,
-								},
-							},
-							["amount"] = 3416,
 						},
 						["高階祭司塞卡爾"] = {
 							["Details"] = {
@@ -7382,22 +7382,19 @@ RecountPerCharDB = {
 							},
 							["amount"] = 209648,
 						},
-						["祖利安猛虎"] = {
+						["古拉巴什狂戰士"] = {
 							["Details"] = {
-								["劍刃亂舞"] = {
-									["count"] = 8036,
-								},
-								["速效毒藥 VII"] = {
-									["count"] = 693,
+								["近戰 (劍類武器專精)"] = {
+									["count"] = 3370,
 								},
 								["近戰"] = {
-									["count"] = 7550,
+									["count"] = 26219,
 								},
 								["邪惡攻擊"] = {
-									["count"] = 2924,
+									["count"] = 18790,
 								},
 							},
-							["amount"] = 19203,
+							["amount"] = 48379,
 						},
 						["狂熱者札斯"] = {
 							["Details"] = {
@@ -7445,26 +7442,29 @@ RecountPerCharDB = {
 							},
 							["amount"] = 12819,
 						},
-						["古拉巴什狂戰士"] = {
+						["祖利安猛虎"] = {
 							["Details"] = {
-								["近戰 (劍類武器專精)"] = {
-									["count"] = 3370,
+								["劍刃亂舞"] = {
+									["count"] = 8036,
+								},
+								["速效毒藥 VII"] = {
+									["count"] = 693,
 								},
 								["近戰"] = {
-									["count"] = 26219,
+									["count"] = 7550,
 								},
 								["邪惡攻擊"] = {
-									["count"] = 18790,
+									["count"] = 2924,
 								},
 							},
-							["amount"] = 48379,
+							["amount"] = 19203,
 						},
 					},
 				},
 			},
 			["LastHealTime"] = 27272.404,
 			["UnitLockout"] = 26594.168,
-			["LastAbility"] = 89120.658,
+			["LastAbility"] = 95658.534,
 		},
 		["時尚網俠"] = {
 			["GUID"] = "Player-4487-00076168",
@@ -7684,7 +7684,58 @@ RecountPerCharDB = {
 			},
 			["LastDamageTaken"] = 181,
 			["Owner"] = false,
-			["Name"] = "時尚網俠",
+			["LastEventIncoming"] = {
+				true, -- [1]
+				false, -- [2]
+				true, -- [3]
+				false, -- [4]
+				true, -- [5]
+				false, -- [6]
+				false, -- [7]
+				true, -- [8]
+				true, -- [9]
+				false, -- [10]
+				true, -- [11]
+				false, -- [12]
+				true, -- [13]
+				true, -- [14]
+				true, -- [15]
+				false, -- [16]
+				false, -- [17]
+				true, -- [18]
+				false, -- [19]
+				true, -- [20]
+				false, -- [21]
+				true, -- [22]
+				false, -- [23]
+				false, -- [24]
+				true, -- [25]
+				true, -- [26]
+				true, -- [27]
+				false, -- [28]
+				false, -- [29]
+				true, -- [30]
+				false, -- [31]
+				true, -- [32]
+				false, -- [33]
+				false, -- [34]
+				true, -- [35]
+				true, -- [36]
+				false, -- [37]
+				true, -- [38]
+				true, -- [39]
+				false, -- [40]
+				false, -- [41]
+				true, -- [42]
+				true, -- [43]
+				false, -- [44]
+				false, -- [45]
+				true, -- [46]
+				true, -- [47]
+				true, -- [48]
+				false, -- [49]
+				false, -- [50]
+			},
 			["NextEventNum"] = 31,
 			["LastDamageTime"] = 27285.021,
 			["LastEvents"] = {
@@ -7739,58 +7790,7 @@ RecountPerCharDB = {
 				"時尚網俠 挫敗 高階祭司塞卡爾 Hit -278 (Physical)", -- [49]
 				"時尚網俠 近戰 高階祭司塞卡爾 Hit -203 (Physical)", -- [50]
 			},
-			["LastEventIncoming"] = {
-				true, -- [1]
-				false, -- [2]
-				true, -- [3]
-				false, -- [4]
-				true, -- [5]
-				false, -- [6]
-				false, -- [7]
-				true, -- [8]
-				true, -- [9]
-				false, -- [10]
-				true, -- [11]
-				false, -- [12]
-				true, -- [13]
-				true, -- [14]
-				true, -- [15]
-				false, -- [16]
-				false, -- [17]
-				true, -- [18]
-				false, -- [19]
-				true, -- [20]
-				false, -- [21]
-				true, -- [22]
-				false, -- [23]
-				false, -- [24]
-				true, -- [25]
-				true, -- [26]
-				true, -- [27]
-				false, -- [28]
-				false, -- [29]
-				true, -- [30]
-				false, -- [31]
-				true, -- [32]
-				false, -- [33]
-				false, -- [34]
-				true, -- [35]
-				true, -- [36]
-				false, -- [37]
-				true, -- [38]
-				true, -- [39]
-				false, -- [40]
-				false, -- [41]
-				true, -- [42]
-				true, -- [43]
-				false, -- [44]
-				false, -- [45]
-				true, -- [46]
-				true, -- [47]
-				true, -- [48]
-				false, -- [49]
-				false, -- [50]
-			},
+			["Name"] = "時尚網俠",
 			["LastEventTimes"] = {
 				27274.787, -- [1]
 				27275.421, -- [2]
@@ -8443,8 +8443,8 @@ RecountPerCharDB = {
 								["英勇打擊"] = {
 									["count"] = 2043,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 4557,
+								["挫敗"] = {
+									["count"] = 4909,
 								},
 								["近戰"] = {
 									["count"] = 9354,
@@ -8452,8 +8452,8 @@ RecountPerCharDB = {
 								["復仇"] = {
 									["count"] = 3169,
 								},
-								["挫敗"] = {
-									["count"] = 4909,
+								["盾牌猛擊"] = {
+									["count"] = 4557,
 								},
 							},
 							["amount"] = 25844,
@@ -8463,8 +8463,8 @@ RecountPerCharDB = {
 								["雷霆一擊"] = {
 									["count"] = 1056,
 								},
-								["挫敗"] = {
-									["count"] = 2465,
+								["盾牌猛擊"] = {
+									["count"] = 2291,
 								},
 								["英勇打擊"] = {
 									["count"] = 1342,
@@ -8472,17 +8472,17 @@ RecountPerCharDB = {
 								["盾擊"] = {
 									["count"] = 138,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 2291,
+								["挫敗"] = {
+									["count"] = 2465,
 								},
 								["重傷 (傷害/跳)"] = {
 									["count"] = 938,
 								},
-								["復仇"] = {
-									["count"] = 2180,
-								},
 								["近戰"] = {
 									["count"] = 7634,
+								},
+								["復仇"] = {
+									["count"] = 2180,
 								},
 							},
 							["amount"] = 18044,
@@ -8492,11 +8492,11 @@ RecountPerCharDB = {
 								["雷霆一擊"] = {
 									["count"] = 1132,
 								},
-								["英勇打擊"] = {
-									["count"] = 3499,
-								},
 								["重傷 (傷害/跳)"] = {
 									["count"] = 1253,
+								},
+								["英勇打擊"] = {
+									["count"] = 3499,
 								},
 								["復仇"] = {
 									["count"] = 5989,
@@ -8507,11 +8507,11 @@ RecountPerCharDB = {
 								["盾牌猛擊"] = {
 									["count"] = 15338,
 								},
-								["撕裂 (傷害/跳)"] = {
-									["count"] = 193,
-								},
 								["近戰"] = {
 									["count"] = 17455,
+								},
+								["撕裂 (傷害/跳)"] = {
+									["count"] = 193,
 								},
 							},
 							["amount"] = 57538,
@@ -8735,6 +8735,16 @@ RecountPerCharDB = {
 							["count"] = 26,
 							["amount"] = 11338,
 						},
+						["挑戰怒吼"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
 						["撕裂 (傷害/跳)"] = {
 							["Details"] = {
 								["Tick"] = {
@@ -8746,16 +8756,6 @@ RecountPerCharDB = {
 							},
 							["count"] = 7,
 							["amount"] = 193,
-						},
-						["挑戰怒吼"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 0,
 						},
 					},
 					["HealingTaken"] = 35409,
@@ -8770,8 +8770,8 @@ RecountPerCharDB = {
 								["英勇打擊"] = {
 									["count"] = 4.02,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 2.92,
+								["挫敗"] = {
+									["count"] = 8.350000000000001,
 								},
 								["近戰"] = {
 									["count"] = 28.48,
@@ -8779,16 +8779,16 @@ RecountPerCharDB = {
 								["復仇"] = {
 									["count"] = 2.88,
 								},
-								["挫敗"] = {
-									["count"] = 8.350000000000001,
+								["盾牌猛擊"] = {
+									["count"] = 2.92,
 								},
 							},
 							["amount"] = 57.90000000000001,
 						},
 						["狂熱者洛卡恩"] = {
 							["Details"] = {
-								["挫敗"] = {
-									["count"] = 6.520000000000001,
+								["盾牌猛擊"] = {
+									["count"] = 1.71,
 								},
 								["英勇打擊"] = {
 									["count"] = 2.64,
@@ -8796,17 +8796,17 @@ RecountPerCharDB = {
 								["盾擊"] = {
 									["count"] = 0.83,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 1.71,
+								["挫敗"] = {
+									["count"] = 6.520000000000001,
 								},
 								["重傷 (傷害/跳)"] = {
 									["count"] = 17.46,
 								},
-								["近戰"] = {
-									["count"] = 17.12,
-								},
 								["復仇"] = {
 									["count"] = 5.109999999999999,
+								},
+								["近戰"] = {
+									["count"] = 17.12,
 								},
 							},
 							["amount"] = 51.39,
@@ -8840,11 +8840,11 @@ RecountPerCharDB = {
 								["復仇"] = {
 									["count"] = 8.940000000000001,
 								},
-								["撕裂 (傷害/跳)"] = {
-									["count"] = 3.25,
-								},
 								["挑戰怒吼"] = {
 									["count"] = 1.5,
+								},
+								["撕裂 (傷害/跳)"] = {
+									["count"] = 3.25,
 								},
 							},
 							["amount"] = 161.77,
@@ -8867,8 +8867,8 @@ RecountPerCharDB = {
 								["英勇打擊"] = {
 									["count"] = 4.02,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 2.92,
+								["挫敗"] = {
+									["count"] = 8.350000000000001,
 								},
 								["近戰"] = {
 									["count"] = 28.48,
@@ -8876,16 +8876,16 @@ RecountPerCharDB = {
 								["復仇"] = {
 									["count"] = 2.88,
 								},
-								["挫敗"] = {
-									["count"] = 8.350000000000001,
+								["盾牌猛擊"] = {
+									["count"] = 2.92,
 								},
 							},
 							["amount"] = 57.90000000000001,
 						},
 						["狂熱者洛卡恩"] = {
 							["Details"] = {
-								["挫敗"] = {
-									["count"] = 6.520000000000001,
+								["盾牌猛擊"] = {
+									["count"] = 1.71,
 								},
 								["英勇打擊"] = {
 									["count"] = 2.64,
@@ -8893,17 +8893,17 @@ RecountPerCharDB = {
 								["盾擊"] = {
 									["count"] = 0.83,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 1.71,
+								["挫敗"] = {
+									["count"] = 6.520000000000001,
 								},
 								["重傷 (傷害/跳)"] = {
 									["count"] = 17.46,
 								},
-								["近戰"] = {
-									["count"] = 17.12,
-								},
 								["復仇"] = {
 									["count"] = 5.109999999999999,
+								},
+								["近戰"] = {
+									["count"] = 17.12,
 								},
 							},
 							["amount"] = 51.39,
@@ -8937,11 +8937,11 @@ RecountPerCharDB = {
 								["復仇"] = {
 									["count"] = 8.940000000000001,
 								},
-								["撕裂 (傷害/跳)"] = {
-									["count"] = 3.25,
-								},
 								["挑戰怒吼"] = {
 									["count"] = 1.5,
+								},
+								["撕裂 (傷害/跳)"] = {
+									["count"] = 3.25,
 								},
 							},
 							["amount"] = 161.77,
@@ -9569,8 +9569,8 @@ RecountPerCharDB = {
 								["英勇打擊"] = {
 									["count"] = 2043,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 4557,
+								["挫敗"] = {
+									["count"] = 4909,
 								},
 								["近戰"] = {
 									["count"] = 9354,
@@ -9578,8 +9578,8 @@ RecountPerCharDB = {
 								["復仇"] = {
 									["count"] = 3169,
 								},
-								["挫敗"] = {
-									["count"] = 4909,
+								["盾牌猛擊"] = {
+									["count"] = 4557,
 								},
 							},
 							["amount"] = 25844,
@@ -9589,8 +9589,8 @@ RecountPerCharDB = {
 								["雷霆一擊"] = {
 									["count"] = 1056,
 								},
-								["挫敗"] = {
-									["count"] = 2465,
+								["盾牌猛擊"] = {
+									["count"] = 2291,
 								},
 								["英勇打擊"] = {
 									["count"] = 1342,
@@ -9598,17 +9598,17 @@ RecountPerCharDB = {
 								["盾擊"] = {
 									["count"] = 138,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 2291,
+								["挫敗"] = {
+									["count"] = 2465,
 								},
 								["重傷 (傷害/跳)"] = {
 									["count"] = 938,
 								},
-								["復仇"] = {
-									["count"] = 2180,
-								},
 								["近戰"] = {
 									["count"] = 7634,
+								},
+								["復仇"] = {
+									["count"] = 2180,
 								},
 							},
 							["amount"] = 18044,
@@ -9618,11 +9618,11 @@ RecountPerCharDB = {
 								["雷霆一擊"] = {
 									["count"] = 1132,
 								},
-								["英勇打擊"] = {
-									["count"] = 3499,
-								},
 								["重傷 (傷害/跳)"] = {
 									["count"] = 1253,
+								},
+								["英勇打擊"] = {
+									["count"] = 3499,
 								},
 								["復仇"] = {
 									["count"] = 5989,
@@ -9633,11 +9633,11 @@ RecountPerCharDB = {
 								["盾牌猛擊"] = {
 									["count"] = 15338,
 								},
-								["撕裂 (傷害/跳)"] = {
-									["count"] = 193,
-								},
 								["近戰"] = {
 									["count"] = 17455,
+								},
+								["撕裂 (傷害/跳)"] = {
+									["count"] = 193,
 								},
 							},
 							["amount"] = 57538,
@@ -9861,6 +9861,16 @@ RecountPerCharDB = {
 							["count"] = 26,
 							["amount"] = 11338,
 						},
+						["挑戰怒吼"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
 						["撕裂 (傷害/跳)"] = {
 							["Details"] = {
 								["Tick"] = {
@@ -9872,16 +9882,6 @@ RecountPerCharDB = {
 							},
 							["count"] = 7,
 							["amount"] = 193,
-						},
-						["挑戰怒吼"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 0,
 						},
 					},
 					["HealingTaken"] = 35409,
@@ -9896,8 +9896,8 @@ RecountPerCharDB = {
 								["英勇打擊"] = {
 									["count"] = 4.02,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 2.92,
+								["挫敗"] = {
+									["count"] = 8.350000000000001,
 								},
 								["近戰"] = {
 									["count"] = 28.48,
@@ -9905,16 +9905,16 @@ RecountPerCharDB = {
 								["復仇"] = {
 									["count"] = 2.88,
 								},
-								["挫敗"] = {
-									["count"] = 8.350000000000001,
+								["盾牌猛擊"] = {
+									["count"] = 2.92,
 								},
 							},
 							["amount"] = 57.90000000000001,
 						},
 						["狂熱者洛卡恩"] = {
 							["Details"] = {
-								["挫敗"] = {
-									["count"] = 6.520000000000001,
+								["盾牌猛擊"] = {
+									["count"] = 1.71,
 								},
 								["英勇打擊"] = {
 									["count"] = 2.64,
@@ -9922,17 +9922,17 @@ RecountPerCharDB = {
 								["盾擊"] = {
 									["count"] = 0.83,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 1.71,
+								["挫敗"] = {
+									["count"] = 6.520000000000001,
 								},
 								["重傷 (傷害/跳)"] = {
 									["count"] = 17.46,
 								},
-								["近戰"] = {
-									["count"] = 17.12,
-								},
 								["復仇"] = {
 									["count"] = 5.109999999999999,
+								},
+								["近戰"] = {
+									["count"] = 17.12,
 								},
 							},
 							["amount"] = 51.39,
@@ -9966,11 +9966,11 @@ RecountPerCharDB = {
 								["復仇"] = {
 									["count"] = 8.940000000000001,
 								},
-								["撕裂 (傷害/跳)"] = {
-									["count"] = 3.25,
-								},
 								["挑戰怒吼"] = {
 									["count"] = 1.5,
+								},
+								["撕裂 (傷害/跳)"] = {
+									["count"] = 3.25,
 								},
 							},
 							["amount"] = 161.77,
@@ -9993,8 +9993,8 @@ RecountPerCharDB = {
 								["英勇打擊"] = {
 									["count"] = 4.02,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 2.92,
+								["挫敗"] = {
+									["count"] = 8.350000000000001,
 								},
 								["近戰"] = {
 									["count"] = 28.48,
@@ -10002,16 +10002,16 @@ RecountPerCharDB = {
 								["復仇"] = {
 									["count"] = 2.88,
 								},
-								["挫敗"] = {
-									["count"] = 8.350000000000001,
+								["盾牌猛擊"] = {
+									["count"] = 2.92,
 								},
 							},
 							["amount"] = 57.90000000000001,
 						},
 						["狂熱者洛卡恩"] = {
 							["Details"] = {
-								["挫敗"] = {
-									["count"] = 6.520000000000001,
+								["盾牌猛擊"] = {
+									["count"] = 1.71,
 								},
 								["英勇打擊"] = {
 									["count"] = 2.64,
@@ -10019,17 +10019,17 @@ RecountPerCharDB = {
 								["盾擊"] = {
 									["count"] = 0.83,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 1.71,
+								["挫敗"] = {
+									["count"] = 6.520000000000001,
 								},
 								["重傷 (傷害/跳)"] = {
 									["count"] = 17.46,
 								},
-								["近戰"] = {
-									["count"] = 17.12,
-								},
 								["復仇"] = {
 									["count"] = 5.109999999999999,
+								},
+								["近戰"] = {
+									["count"] = 17.12,
 								},
 							},
 							["amount"] = 51.39,
@@ -10063,11 +10063,11 @@ RecountPerCharDB = {
 								["復仇"] = {
 									["count"] = 8.940000000000001,
 								},
-								["撕裂 (傷害/跳)"] = {
-									["count"] = 3.25,
-								},
 								["挑戰怒吼"] = {
 									["count"] = 1.5,
+								},
+								["撕裂 (傷害/跳)"] = {
+									["count"] = 3.25,
 								},
 							},
 							["amount"] = 161.77,
@@ -10117,13 +10117,14 @@ RecountPerCharDB = {
 					},
 					["DeathCount"] = 0,
 					["HOT_Time"] = 0,
-					["Damage"] = 0,
+					["ElementTakenBlock"] = {
+					},
 					["RunicPowerGain"] = 0,
 					["ElementTaken"] = {
 					},
-					["DOT_Time"] = 0,
-					["ElementTakenBlock"] = {
+					["HOTs"] = {
 					},
+					["Damage"] = 0,
 					["ElementDoneAbsorb"] = {
 					},
 					["TimeHeal"] = 0,
@@ -10132,33 +10133,32 @@ RecountPerCharDB = {
 					["Dispels"] = 0,
 					["PartialBlock"] = {
 					},
-					["ElementHitsDone"] = {
+					["DamagedWho"] = {
 					},
 					["FAttacks"] = {
 					},
 					["HealingTaken"] = 0,
 					["ElementDone"] = {
 					},
-					["DamagedWho"] = {
+					["ElementHitsDone"] = {
 					},
 					["ManaGainedFrom"] = {
 					},
-					["RunicPowerGainedFrom"] = {
+					["RunicPowerGained"] = {
 					},
 					["WhoDamaged"] = {
 					},
 					["EnergyGainedFrom"] = {
 					},
-					["RunicPowerGained"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 					},
 					["TimeHealing"] = {
 					},
-					["OverHeals"] = {
-					},
+					["Dispelled"] = 0,
 					["WhoHealed"] = {
 					},
 					["HealedWho"] = {
@@ -10166,14 +10166,13 @@ RecountPerCharDB = {
 					["CCBreak"] = 0,
 					["ElementTakenAbsorb"] = {
 					},
-					["PartialAbsorb"] = {
-					},
-					["PartialResist"] = {
-					},
+					["FDamage"] = 0,
+					["EnergyGain"] = 0,
 					["ManaGained"] = {
 					},
-					["FDamage"] = 0,
-					["Interrupts"] = 0,
+					["PartialAbsorb"] = {
+					},
+					["ActiveTime"] = 0,
 					["Overhealing"] = 0,
 					["TimeSpent"] = {
 					},
@@ -10185,12 +10184,14 @@ RecountPerCharDB = {
 					},
 					["Heals"] = {
 					},
-					["ActiveTime"] = 0,
+					["Interrupts"] = 0,
 					["EnergyGained"] = {
 					},
-					["EnergyGain"] = 0,
+					["PartialResist"] = {
+					},
 					["Healing"] = 0,
-					["Dispelled"] = 0,
+					["OverHeals"] = {
+					},
 					["RageGained"] = {
 						["血性狂暴"] = {
 							["Details"] = {
@@ -10210,8 +10211,7 @@ RecountPerCharDB = {
 					["TimeDamaging"] = {
 					},
 					["ManaGain"] = 0,
-					["HOTs"] = {
-					},
+					["DOT_Time"] = 0,
 					["DispelledWho"] = {
 					},
 				},
@@ -10814,8 +10814,8 @@ RecountPerCharDB = {
 								["英勇打擊"] = {
 									["count"] = 2043,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 4557,
+								["挫敗"] = {
+									["count"] = 4909,
 								},
 								["近戰"] = {
 									["count"] = 9354,
@@ -10823,8 +10823,8 @@ RecountPerCharDB = {
 								["復仇"] = {
 									["count"] = 3169,
 								},
-								["挫敗"] = {
-									["count"] = 4909,
+								["盾牌猛擊"] = {
+									["count"] = 4557,
 								},
 							},
 							["amount"] = 25844,
@@ -10834,8 +10834,8 @@ RecountPerCharDB = {
 								["雷霆一擊"] = {
 									["count"] = 1056,
 								},
-								["挫敗"] = {
-									["count"] = 2465,
+								["盾牌猛擊"] = {
+									["count"] = 2291,
 								},
 								["英勇打擊"] = {
 									["count"] = 1342,
@@ -10843,17 +10843,17 @@ RecountPerCharDB = {
 								["盾擊"] = {
 									["count"] = 138,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 2291,
+								["挫敗"] = {
+									["count"] = 2465,
 								},
 								["重傷 (傷害/跳)"] = {
 									["count"] = 938,
 								},
-								["復仇"] = {
-									["count"] = 2180,
-								},
 								["近戰"] = {
 									["count"] = 7634,
+								},
+								["復仇"] = {
+									["count"] = 2180,
 								},
 							},
 							["amount"] = 18044,
@@ -10863,11 +10863,11 @@ RecountPerCharDB = {
 								["雷霆一擊"] = {
 									["count"] = 1132,
 								},
-								["英勇打擊"] = {
-									["count"] = 3499,
-								},
 								["重傷 (傷害/跳)"] = {
 									["count"] = 1253,
+								},
+								["英勇打擊"] = {
+									["count"] = 3499,
 								},
 								["復仇"] = {
 									["count"] = 5989,
@@ -10878,11 +10878,11 @@ RecountPerCharDB = {
 								["盾牌猛擊"] = {
 									["count"] = 15338,
 								},
-								["撕裂 (傷害/跳)"] = {
-									["count"] = 193,
-								},
 								["近戰"] = {
 									["count"] = 17455,
+								},
+								["撕裂 (傷害/跳)"] = {
+									["count"] = 193,
 								},
 							},
 							["amount"] = 57538,
@@ -11106,6 +11106,16 @@ RecountPerCharDB = {
 							["count"] = 26,
 							["amount"] = 11338,
 						},
+						["挑戰怒吼"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
 						["撕裂 (傷害/跳)"] = {
 							["Details"] = {
 								["Tick"] = {
@@ -11117,16 +11127,6 @@ RecountPerCharDB = {
 							},
 							["count"] = 7,
 							["amount"] = 193,
-						},
-						["挑戰怒吼"] = {
-							["Details"] = {
-								["Resist"] = {
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 0,
 						},
 					},
 					["HealingTaken"] = 35409,
@@ -11141,8 +11141,8 @@ RecountPerCharDB = {
 								["英勇打擊"] = {
 									["count"] = 4.02,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 2.92,
+								["挫敗"] = {
+									["count"] = 8.350000000000001,
 								},
 								["近戰"] = {
 									["count"] = 28.48,
@@ -11150,16 +11150,16 @@ RecountPerCharDB = {
 								["復仇"] = {
 									["count"] = 2.88,
 								},
-								["挫敗"] = {
-									["count"] = 8.350000000000001,
+								["盾牌猛擊"] = {
+									["count"] = 2.92,
 								},
 							},
 							["amount"] = 57.90000000000001,
 						},
 						["狂熱者洛卡恩"] = {
 							["Details"] = {
-								["挫敗"] = {
-									["count"] = 6.520000000000001,
+								["盾牌猛擊"] = {
+									["count"] = 1.71,
 								},
 								["英勇打擊"] = {
 									["count"] = 2.64,
@@ -11167,17 +11167,17 @@ RecountPerCharDB = {
 								["盾擊"] = {
 									["count"] = 0.83,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 1.71,
+								["挫敗"] = {
+									["count"] = 6.520000000000001,
 								},
 								["重傷 (傷害/跳)"] = {
 									["count"] = 17.46,
 								},
-								["近戰"] = {
-									["count"] = 17.12,
-								},
 								["復仇"] = {
 									["count"] = 5.109999999999999,
+								},
+								["近戰"] = {
+									["count"] = 17.12,
 								},
 							},
 							["amount"] = 51.39,
@@ -11211,11 +11211,11 @@ RecountPerCharDB = {
 								["復仇"] = {
 									["count"] = 8.940000000000001,
 								},
-								["撕裂 (傷害/跳)"] = {
-									["count"] = 3.25,
-								},
 								["挑戰怒吼"] = {
 									["count"] = 1.5,
+								},
+								["撕裂 (傷害/跳)"] = {
+									["count"] = 3.25,
 								},
 							},
 							["amount"] = 161.77,
@@ -11238,8 +11238,8 @@ RecountPerCharDB = {
 								["英勇打擊"] = {
 									["count"] = 4.02,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 2.92,
+								["挫敗"] = {
+									["count"] = 8.350000000000001,
 								},
 								["近戰"] = {
 									["count"] = 28.48,
@@ -11247,16 +11247,16 @@ RecountPerCharDB = {
 								["復仇"] = {
 									["count"] = 2.88,
 								},
-								["挫敗"] = {
-									["count"] = 8.350000000000001,
+								["盾牌猛擊"] = {
+									["count"] = 2.92,
 								},
 							},
 							["amount"] = 57.90000000000001,
 						},
 						["狂熱者洛卡恩"] = {
 							["Details"] = {
-								["挫敗"] = {
-									["count"] = 6.520000000000001,
+								["盾牌猛擊"] = {
+									["count"] = 1.71,
 								},
 								["英勇打擊"] = {
 									["count"] = 2.64,
@@ -11264,17 +11264,17 @@ RecountPerCharDB = {
 								["盾擊"] = {
 									["count"] = 0.83,
 								},
-								["盾牌猛擊"] = {
-									["count"] = 1.71,
+								["挫敗"] = {
+									["count"] = 6.520000000000001,
 								},
 								["重傷 (傷害/跳)"] = {
 									["count"] = 17.46,
 								},
-								["近戰"] = {
-									["count"] = 17.12,
-								},
 								["復仇"] = {
 									["count"] = 5.109999999999999,
+								},
+								["近戰"] = {
+									["count"] = 17.12,
 								},
 							},
 							["amount"] = 51.39,
@@ -11308,11 +11308,11 @@ RecountPerCharDB = {
 								["復仇"] = {
 									["count"] = 8.940000000000001,
 								},
-								["撕裂 (傷害/跳)"] = {
-									["count"] = 3.25,
-								},
 								["挑戰怒吼"] = {
 									["count"] = 1.5,
+								},
+								["撕裂 (傷害/跳)"] = {
+									["count"] = 3.25,
 								},
 							},
 							["amount"] = 161.77,
@@ -11344,7 +11344,7 @@ RecountPerCharDB = {
 			},
 			["LastHealTime"] = 27233.786,
 			["UnitLockout"] = 26996.163,
-			["LastAbility"] = 89120.658,
+			["LastAbility"] = 95658.534,
 		},
 	},
 	["FightNum"] = 3,
