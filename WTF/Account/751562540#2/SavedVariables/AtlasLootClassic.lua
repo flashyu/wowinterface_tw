@@ -1,12 +1,12 @@
 
 AtlasLootClassicDB = {
-	["global"] = {
-		["__addonrevision"] = 2040002,
-	},
 	["profileKeys"] = {
 		["騎風 - 伊弗斯"] = "騎風 - 伊弗斯",
 		["隔離 - 伊弗斯"] = "隔離 - 伊弗斯",
 		["我在哪 - 伊弗斯"] = "我在哪 - 伊弗斯",
+	},
+	["global"] = {
+		["__addonrevision"] = 2040002,
 	},
 	["profiles"] = {
 		["騎風 - 伊弗斯"] = {
@@ -23,8 +23,8 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"TheBotanica", -- [2]
-					2, -- [3]
+					"BlackTemple", -- [2]
+					9, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},

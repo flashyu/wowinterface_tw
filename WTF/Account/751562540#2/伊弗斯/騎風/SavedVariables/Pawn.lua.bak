@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0537,
-	["LastPlayerFullName"] = "騎風-伊弗斯",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 29040,
@@ -10,9 +8,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:29040::::::::70:::::::::|h[颶風戰馭頭盔]|h|r",
 		}, -- [1]
 		{
-			["ID"] = 33297,
-			["Level"] = 128,
-			["Link"] = "|cffa335ee|Hitem:33297::::::::70:::::::::|h[野蠻頸飾]|h|r",
+			["ID"] = 32260,
+			["Level"] = 141,
+			["Link"] = "|cffa335ee|Hitem:32260::::::::70:::::::::|h[無盡夢魘頸飾]|h|r",
 		}, -- [2]
 		{
 			["ID"] = 32264,
@@ -21,9 +19,9 @@ PawnOptions = {
 		}, -- [3]
 		nil, -- [4]
 		{
-			["ID"] = 29038,
-			["Level"] = 120,
-			["Link"] = "|cffa335ee|Hitem:29038::::::::70:::::::::|h[颶風戰馭胸甲]|h|r",
+			["ID"] = 31018,
+			["Level"] = 146,
+			["Link"] = "|cffa335ee|Hitem:31018::::::::70:::::::::|h[碎天者戰馭外套]|h|r",
 		}, -- [5]
 		{
 			["ID"] = 30919,
@@ -51,16 +49,16 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:29947::::::::70:::::::::|h[灼熱掌握手套]|h|r",
 		}, -- [10]
 		{
-			["ID"] = 29299,
-			["Level"] = 136,
+			["ID"] = 32335,
+			["Level"] = 141,
 			["AlsoFitsIn"] = 12,
-			["Link"] = "|cffa335ee|Hitem:29299::::::::70:::::::::|h[永恆指環]|h|r",
+			["Link"] = "|cffa335ee|Hitem:32335::::::::70:::::::::|h[強勁侵略者指環]|h|r",
 		}, -- [11]
 		{
-			["ID"] = 29298,
-			["Level"] = 128,
+			["ID"] = 29299,
+			["Level"] = 136,
 			["AlsoFitsIn"] = 11,
-			["Link"] = "|cffa335ee|Hitem:29298::::::::70:::::::::|h[永恆指環]|h|r",
+			["Link"] = "|cffa335ee|Hitem:29299::::::::70:::::::::|h[永恆指環]|h|r",
 		}, -- [12]
 		{
 			["ID"] = 33831,
@@ -92,6 +90,8 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:32236::::::::70:::::::::|h[潮起之斧]|h|r",
 		}, -- [17]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "騎風-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

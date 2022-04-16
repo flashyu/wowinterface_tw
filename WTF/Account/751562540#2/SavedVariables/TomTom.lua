@@ -37,6 +37,39 @@ TomTomWaypointsM = {
 	},
 	["profiles"] = {
 		["騎風 - 伊弗斯"] = {
+			[1948] = {
+				["1948:645476772.61614:467237163.81418:集合石"] = {
+					1948, -- [1]
+					0.645476772616137, -- [2]
+					0.467237163814181, -- [3]
+					["arrivaldistance"] = 15,
+					["crazy"] = true,
+					["persistent"] = true,
+					["desc"] = "集合石",
+					["silent"] = true,
+					["cleardistance"] = 10,
+					["title"] = "集合石",
+					["from"] = "?",
+					["callbacks"] = {
+						["distance"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+					},
+					["minimap"] = true,
+					["world"] = true,
+				},
+			},
 		},
 		["隔離 - 伊弗斯"] = {
 		},

@@ -1,9 +1,7 @@
 
 DecursiveDB = {
-	["profileKeys"] = {
-		["牧原股份 - 伊弗斯"] = "Default",
-		["豬圈一 - 伊弗斯"] = "Default",
-		["微搭 - 伊弗斯"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1649958547,
 	},
 	["class"] = {
 		["DRUID"] = {
@@ -40,8 +38,10 @@ DecursiveDB = {
 			},
 		},
 	},
-	["global"] = {
-		["LastVersionAnnounce"] = 1649949991,
+	["profileKeys"] = {
+		["牧原股份 - 伊弗斯"] = "Default",
+		["豬圈一 - 伊弗斯"] = "Default",
+		["微搭 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
