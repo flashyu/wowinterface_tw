@@ -117,7 +117,6 @@ function HealBot_Lang_Options_enALL()
                                  ["SFOFFSETV"]=HEALBOT_OPTIONS_STICKFRAMEOFFSETV,
                                  ["FRAMEBACKCOL"]="Frame Background",
                                  ["FRAMEBORDERCOL"]="Frame Border",
-                                 ["TOOLTIPPOSITION"]=HEALBOT_OPTIONS_SETTOOLTIP_POSITION,
                         -- Skins Frames Heal Groups tab
                                  ["SELECTFRAMEFORGROUP"]=HEALBOT_OPTIONS_FRAME,
                                  ["ENABLEHEALGROUP"]=HEALBOT_OPTIONS_FRAME,

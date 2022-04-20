@@ -1267,6 +1267,7 @@ local curBuffRange=0
 function HealBot_Aura_BuffWarnings(button, buffName, force)
     if button.aura.buff.name~=buffName or force then
         button.aura.buff.name=buffName
+        HealBot_Emerg_Button[button.id].buffupdate=true
         button.aura.buff.r,button.aura.buff.g,button.aura.buff.b=HealBot_Options_RetBuffRGB(button)
         if button.aura.buff.missingbuff and button.status.rangespell~=button.aura.buff.name then
             curBuffRange=HealBot_UnitInRangeExc30(button, button.aura.buff.name)
@@ -1304,6 +1305,7 @@ local curDebuffRange,curDebuffSpell=0,""
 function HealBot_Aura_DebuffWarnings(button, debuffName, force)
     if button.aura.debuff.name~=debuffName or force then
         button.aura.debuff.name=debuffName
+        HealBot_Emerg_Button[button.id].debuffupdate=true
         button.aura.debuff.r,button.aura.debuff.g,button.aura.debuff.b=HealBot_Options_RetDebuffRGB(button)
         curDebuffSpell=HealBot_Options_retDebuffCureSpell(button.aura.debuff.type) or button.status.rangespell
         if button.status.rangespell~=curDebuffSpell then
@@ -1319,7 +1321,7 @@ function HealBot_Aura_DebuffWarnings(button, debuffName, force)
         if button.mouseover and HealBot_Data["TIPBUTTON"] then 
             HealBot_Action_RefreshTooltip() 
         end
-        if debuffWarning and (not HealBot_Aura_WarningFilter[button.unit][button.aura.debuff.name] or HealBot_Aura_WarningFilter[button.unit][button.aura.debuff.name]<TimeNow) then
+        if debuffWarnings and (not HealBot_Aura_WarningFilter[button.unit][button.aura.debuff.name] or HealBot_Aura_WarningFilter[button.unit][button.aura.debuff.name]<TimeNow) then
             HealBot_Aura_WarningFilter[button.unit][button.aura.debuff.name]=HealBot_UnitDebuffIcons[button.id][51]["expirationTime"]
             if HealBot_Config_Cures.ShowDebuffWarning then
                 if curDebuffRange>(HealBot_Config_Cures.HealBot_CDCWarnRange_Screen-3) then
@@ -1673,15 +1675,20 @@ function HealBot_Aura_CheckUnitDebuffs(button)
 end
 
 function HealBot_Aura_CheckUnitAuras(button)
-    button.aura.update=false
     if not UnitIsFriend("player",button.unit) then
+        button.aura.update=false
         HealBot_Aura_RefreshEnemyAuras(button)
     else
-        HealBot_Aura_CheckUnitDebuffs(button)
-        HealBot_Aura_CheckUnitBuffs(button)
-    end
-    if button.status.refresh then
-        HealBot_Action_UpdateDebuffButton(button)
+        if button.aura.buffupdate then
+            button.aura.update=false
+            HealBot_Aura_CheckUnitBuffs(button)
+        else
+            HealBot_Aura_CheckUnitDebuffs(button)
+            button.aura.buffupdate=true
+        end
+        if button.status.refresh then
+            HealBot_Action_UpdateDebuffButton(button)
+        end
     end
 end
 
@@ -1710,9 +1717,9 @@ function HealBot_Aura_SetAuraWarningFlags()
         buffWarnings=false
     end
     if HealBot_Config_Cures.SoundDebuffWarning or HealBot_Config_Cures.ShowDebuffWarning then
-        debuffWarning=true
+        debuffWarnings=true
     else
-        debuffWarning=false
+        debuffWarnings=false
     end
 end
 
@@ -1745,8 +1752,10 @@ function HealBot_Aura_SetAuraCheckFlags(debuffMounted, buffMounted, onTaxi, rest
     end
     
     if tmpBCheck~=buffCheck or tmpGBuffs~=generalBuffs or tmpDCheck~=debuffCheck then
-        HealBot_Aura_RemoveAllBuffIcons()
-        HealBot_Aura_RemoveAllDebuffIcons()
+        if debuffMounted or buffMounted or onTaxi or resting then
+            HealBot_Aura_RemoveAllBuffIcons()
+            HealBot_Aura_RemoveAllDebuffIcons()
+        end
         HealBot_AuraCheck()
     end
 end
@@ -1921,7 +1930,7 @@ function HealBot_Aura_ClearBuffWatch(buffName)
       --HealBot_setCall("HealBot_Aura_ClearBuffWatch")
 end
 
-local buffExistsInWatch=false
+local addBuffToWatch=true
 function HealBot_Aura_SetBuffWatch(buffName)
     addBuffToWatch=true
     for j=1, #HealBot_BuffWatchList do

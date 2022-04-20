@@ -34,8 +34,8 @@ Turn in [QT10142 The Path of Anguish].\\Accept [QA10143 Expedition Point].
 [G66.8,67.4 Hellfire Peninsula] Kill *Bleeding Hollow Orcs* until you find a *Cursed Talisman* to complete [QC10483].
 Turn in [QT10483 Ill Omens].\\Accept [QA10484 Cursed Talismans].
 Turn in [QT10143 Expedition Point].\\Accept [QA10144 Disrupt Their Reinforcements].
-Hearth to [H Honor Hold].
 Accept [QA10895 Zeth'Gor Must Burn!]
+Hearth to [H Honor Hold].
 Accept [QA10058 An Old Gift].
 Accept [QA10047 The Path of Glory].
 Accept [QA10050 Unyielding Souls].

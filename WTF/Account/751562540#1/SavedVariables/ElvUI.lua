@@ -137,7 +137,7 @@ ElvDB = {
 					["maxWraps"] = 2,
 				},
 			},
-			["dbConverted"] = 2.42,
+			["dbConverted"] = 2.43,
 			["convertPages"] = true,
 			["tooltip"] = {
 				["healthBar"] = {
@@ -648,7 +648,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["牧原股份"] = 5941791,
+			["牧原股份"] = 894788,
 			["豬圈一"] = 997360,
 			["微搭"] = 41,
 		},

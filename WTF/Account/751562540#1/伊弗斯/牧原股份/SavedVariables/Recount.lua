@@ -146,7 +146,7 @@ RecountPerCharDB = {
 			},
 			["enClass"] = "ROGUE",
 			["unit"] = true,
-			["LastAbility"] = 40458.983,
+			["LastAbility"] = 88895.032,
 			["level"] = 70,
 			["LastDamageAbility"] = "近戰",
 			["LastFightIn"] = 2,
@@ -236,7 +236,7 @@ RecountPerCharDB = {
 					},
 					["OverHeals"] = {
 					},
-					["RunicPowerGained"] = {
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 					},
@@ -312,9 +312,9 @@ RecountPerCharDB = {
 					["HealedWho"] = {
 					},
 					["Healing"] = 0,
-					["RunicPowerGainedFrom"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGained"] = {
 					},
 					["Attacks"] = {
 						["剔骨"] = {
@@ -452,7 +452,7 @@ RecountPerCharDB = {
 					},
 					["OverHeals"] = {
 					},
-					["RunicPowerGained"] = {
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 					},
@@ -490,9 +490,9 @@ RecountPerCharDB = {
 					["HealedWho"] = {
 					},
 					["Healing"] = 0,
-					["RunicPowerGainedFrom"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGained"] = {
 					},
 					["Attacks"] = {
 					},
@@ -1715,14 +1715,14 @@ RecountPerCharDB = {
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 10.05,
 								},
-								["近戰"] = {
-									["count"] = 33.2,
-								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
 								},
 								["劍刃亂舞"] = {
 									["count"] = 0.29,
+								},
+								["近戰"] = {
+									["count"] = 33.2,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.210000000000001,
@@ -1732,14 +1732,14 @@ RecountPerCharDB = {
 						},
 						["祖利安守護者"] = {
 							["Details"] = {
-								["近戰"] = {
-									["count"] = 2.68,
-								},
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 0.17,
 								},
 								["劍刃亂舞"] = {
 									["count"] = 0.27,
+								},
+								["近戰"] = {
+									["count"] = 2.68,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 0.25,
@@ -1761,14 +1761,14 @@ RecountPerCharDB = {
 								["腳踢"] = {
 									["count"] = 1.05,
 								},
-								["劍刃亂舞"] = {
-									["count"] = 0.05,
-								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
 								},
 								["近戰"] = {
 									["count"] = 27.95999999999999,
+								},
+								["劍刃亂舞"] = {
+									["count"] = 0.05,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.68,
@@ -1878,14 +1878,14 @@ RecountPerCharDB = {
 								["腳踢"] = {
 									["count"] = 1.05,
 								},
-								["劍刃亂舞"] = {
-									["count"] = 0.05,
-								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
 								},
 								["近戰"] = {
 									["count"] = 27.95999999999999,
+								},
+								["劍刃亂舞"] = {
+									["count"] = 0.05,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.68,
@@ -1895,14 +1895,14 @@ RecountPerCharDB = {
 						},
 						["祖利安守護者"] = {
 							["Details"] = {
-								["近戰"] = {
-									["count"] = 2.68,
-								},
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 0.17,
 								},
 								["劍刃亂舞"] = {
 									["count"] = 0.27,
+								},
+								["近戰"] = {
+									["count"] = 2.68,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 0.25,
@@ -1915,14 +1915,14 @@ RecountPerCharDB = {
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 10.05,
 								},
-								["近戰"] = {
-									["count"] = 33.2,
-								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
 								},
 								["劍刃亂舞"] = {
 									["count"] = 0.29,
+								},
+								["近戰"] = {
+									["count"] = 33.2,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.210000000000001,
@@ -2286,7 +2286,7 @@ RecountPerCharDB = {
 							["amount"] = 146,
 						},
 					},
-					["RunicPowerGained"] = {
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 						["Melee"] = 90,
@@ -2510,14 +2510,14 @@ RecountPerCharDB = {
 								["腳踢"] = {
 									["count"] = 1.05,
 								},
-								["劍刃亂舞"] = {
-									["count"] = 0.05,
-								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
 								},
 								["近戰"] = {
 									["count"] = 27.95999999999999,
+								},
+								["劍刃亂舞"] = {
+									["count"] = 0.05,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.68,
@@ -2576,14 +2576,14 @@ RecountPerCharDB = {
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 10.05,
 								},
-								["近戰"] = {
-									["count"] = 33.2,
-								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
 								},
 								["劍刃亂舞"] = {
 									["count"] = 0.29,
+								},
+								["近戰"] = {
+									["count"] = 33.2,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.210000000000001,
@@ -2604,14 +2604,14 @@ RecountPerCharDB = {
 						},
 						["祖利安守護者"] = {
 							["Details"] = {
-								["近戰"] = {
-									["count"] = 2.68,
-								},
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 0.17,
 								},
 								["劍刃亂舞"] = {
 									["count"] = 0.27,
+								},
+								["近戰"] = {
+									["count"] = 2.68,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 0.25,
@@ -2800,9 +2800,9 @@ RecountPerCharDB = {
 						},
 					},
 					["Healing"] = 7078,
-					["RunicPowerGainedFrom"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGained"] = {
 					},
 					["Attacks"] = {
 						["致命毒藥 VII"] = {
@@ -3117,14 +3117,14 @@ RecountPerCharDB = {
 								["腳踢"] = {
 									["count"] = 1.05,
 								},
-								["劍刃亂舞"] = {
-									["count"] = 0.05,
-								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
 								},
 								["近戰"] = {
 									["count"] = 27.95999999999999,
+								},
+								["劍刃亂舞"] = {
+									["count"] = 0.05,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.68,
@@ -3180,14 +3180,14 @@ RecountPerCharDB = {
 						},
 						["祖利安守護者"] = {
 							["Details"] = {
-								["近戰"] = {
-									["count"] = 2.68,
-								},
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 0.17,
 								},
 								["劍刃亂舞"] = {
 									["count"] = 0.27,
+								},
+								["近戰"] = {
+									["count"] = 2.68,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 0.25,
@@ -3200,14 +3200,14 @@ RecountPerCharDB = {
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 10.05,
 								},
-								["近戰"] = {
-									["count"] = 33.2,
-								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
 								},
 								["劍刃亂舞"] = {
 									["count"] = 0.29,
+								},
+								["近戰"] = {
+									["count"] = 33.2,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.210000000000001,
@@ -3574,7 +3574,7 @@ RecountPerCharDB = {
 							["amount"] = 146,
 						},
 					},
-					["RunicPowerGained"] = {
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 						["Melee"] = 90,
@@ -3798,14 +3798,14 @@ RecountPerCharDB = {
 								["腳踢"] = {
 									["count"] = 1.05,
 								},
-								["劍刃亂舞"] = {
-									["count"] = 0.05,
-								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
 								},
 								["近戰"] = {
 									["count"] = 27.95999999999999,
+								},
+								["劍刃亂舞"] = {
+									["count"] = 0.05,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.68,
@@ -3864,14 +3864,14 @@ RecountPerCharDB = {
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 10.05,
 								},
-								["近戰"] = {
-									["count"] = 33.2,
-								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
 								},
 								["劍刃亂舞"] = {
 									["count"] = 0.29,
+								},
+								["近戰"] = {
+									["count"] = 33.2,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.210000000000001,
@@ -3892,14 +3892,14 @@ RecountPerCharDB = {
 						},
 						["祖利安守護者"] = {
 							["Details"] = {
-								["近戰"] = {
-									["count"] = 2.68,
-								},
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 0.17,
 								},
 								["劍刃亂舞"] = {
 									["count"] = 0.27,
+								},
+								["近戰"] = {
+									["count"] = 2.68,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 0.25,
@@ -4088,9 +4088,9 @@ RecountPerCharDB = {
 						},
 					},
 					["Healing"] = 7078,
-					["RunicPowerGainedFrom"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGained"] = {
 					},
 					["Attacks"] = {
 						["致命毒藥 VII"] = {
@@ -4405,14 +4405,14 @@ RecountPerCharDB = {
 								["腳踢"] = {
 									["count"] = 1.05,
 								},
-								["劍刃亂舞"] = {
-									["count"] = 0.05,
-								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
 								},
 								["近戰"] = {
 									["count"] = 27.95999999999999,
+								},
+								["劍刃亂舞"] = {
+									["count"] = 0.05,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.68,
@@ -4468,14 +4468,14 @@ RecountPerCharDB = {
 						},
 						["祖利安守護者"] = {
 							["Details"] = {
-								["近戰"] = {
-									["count"] = 2.68,
-								},
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 0.17,
 								},
 								["劍刃亂舞"] = {
 									["count"] = 0.27,
+								},
+								["近戰"] = {
+									["count"] = 2.68,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 0.25,
@@ -4488,14 +4488,14 @@ RecountPerCharDB = {
 								["致命毒藥 VII (傷害/跳)"] = {
 									["count"] = 10.05,
 								},
-								["近戰"] = {
-									["count"] = 33.2,
-								},
 								["近戰 (劍類武器專精)"] = {
 									["count"] = 0.02,
 								},
 								["劍刃亂舞"] = {
 									["count"] = 0.29,
+								},
+								["近戰"] = {
+									["count"] = 33.2,
 								},
 								["邪惡攻擊"] = {
 									["count"] = 5.210000000000001,
@@ -5339,7 +5339,7 @@ RecountPerCharDB = {
 			},
 			["enClass"] = "DRUID",
 			["unit"] = true,
-			["LastAbility"] = 40458.983,
+			["LastAbility"] = 88895.032,
 			["level"] = 70,
 			["LastDamageAbility"] = "重擊",
 			["LastFightIn"] = 2,
@@ -5396,7 +5396,7 @@ RecountPerCharDB = {
 					},
 					["OverHeals"] = {
 					},
-					["RunicPowerGained"] = {
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 					},
@@ -5434,9 +5434,9 @@ RecountPerCharDB = {
 					["HealedWho"] = {
 					},
 					["Healing"] = 0,
-					["RunicPowerGainedFrom"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGained"] = {
 					},
 					["Attacks"] = {
 					},
@@ -6159,7 +6159,7 @@ RecountPerCharDB = {
 							["amount"] = 1597,
 						},
 					},
-					["RunicPowerGained"] = {
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 					},
@@ -6430,9 +6430,9 @@ RecountPerCharDB = {
 						},
 					},
 					["Healing"] = 86361,
-					["RunicPowerGainedFrom"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGained"] = {
 					},
 					["Attacks"] = {
 					},
@@ -6950,7 +6950,7 @@ RecountPerCharDB = {
 							["amount"] = 1597,
 						},
 					},
-					["RunicPowerGained"] = {
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 					},
@@ -7221,9 +7221,9 @@ RecountPerCharDB = {
 						},
 					},
 					["Healing"] = 86361,
-					["RunicPowerGainedFrom"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGained"] = {
 					},
 					["Attacks"] = {
 					},
@@ -7610,7 +7610,7 @@ RecountPerCharDB = {
 			},
 			["enClass"] = "WARRIOR",
 			["unit"] = "時尚網俠",
-			["LastAbility"] = 40458.983,
+			["LastAbility"] = 88895.032,
 			["level"] = 70,
 			["LastDamageAbility"] = "近戰",
 			["LastFightIn"] = 2,
@@ -9935,7 +9935,7 @@ RecountPerCharDB = {
 					},
 					["OverHeals"] = {
 					},
-					["RunicPowerGained"] = {
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 					},
@@ -9973,9 +9973,9 @@ RecountPerCharDB = {
 					["HealedWho"] = {
 					},
 					["Healing"] = 0,
-					["RunicPowerGainedFrom"] = {
-					},
 					["CCBroken"] = {
+					},
+					["RunicPowerGained"] = {
 					},
 					["Attacks"] = {
 					},

@@ -493,7 +493,6 @@ function HealBot_Lang_Options_ptBR()
                                  ["TOOLTIPGAMETIP"]=HEALBOT_OPTIONS_USEGAMETOOLTIP,
                                  ["TOOLTIPMONBUFFS"]=HEALBOT_OPTIONS_TOOLTIPSHOWHOT,
                                  ["TOOLTIPFONTSIZE"]=HEALBOT_OPTIONS_SKINFHEIGHT,
-                                 ["TOOLTIPPOSITION"]=HEALBOT_OPTIONS_SETTOOLTIP_POSITION,
                                  ["TOOLTIPPOSITIONLINK"]=HEALBOT_OPTIONS_SETTOOLTIP_POSITION,
                                  ["TOOLTIPCUSTOMANCHOR"]=HEALBOT_OPTIONS_SETTOOLTIP_CUSTOMANCHOR,
                                  ["TOOLTIPALPHA"]=HEALBOT_OPTIONS_TTALPHA,

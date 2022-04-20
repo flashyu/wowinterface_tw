@@ -33,6 +33,13 @@ VER 3 0000000000000008 "坐騎" "132242"
 /cast 迅捷紅色雙足飛龍
 /cast 阿曼尼戰熊
 END
+VER 3 0000000000000014 "幽靈" "136040"
+/cleartarget
+/targetenemy
+/cast 靈魂箭雨
+/cast 靈魂枷鎖
+/cast 靈魂之矛
+END
 VER 3 0000000000000002 "打斷" "132147"
 /cast [@focus] 地震術(等級 1) 
 END

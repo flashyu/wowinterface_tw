@@ -5423,5 +5423,61 @@ MailLoggerDB = {
 			["ReceiveItems"] = {
 			},
 		}, -- [245]
+		{
+			["TargetName"] = "牧原股份",
+			["PlayerName"] = "騎風",
+			["Date"] = "2022-04-17",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+				{
+					["Number"] = 1,
+					["ItemLink"] = "|cff1eff00|Hitem:29739::::::::70:::::::::|h[秘法寶典]|h|r",
+					["Name"] = "秘法寶典",
+				}, -- [1]
+				{
+					["Number"] = 1,
+					["ItemLink"] = "|cff1eff00|Hitem:25002::::::-27:1085407284:70:::::::::|h[防禦之血拳盔帽]|h|r",
+					["Name"] = "防禦之血拳盔帽",
+				}, -- [2]
+				{
+					["Number"] = 2,
+					["ItemLink"] = "|cffffffff|Hitem:24368::::::::70:::::::::|h[盤牙裝備]|h|r",
+					["Name"] = "盤牙裝備",
+				}, -- [3]
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["Time"] = "20:44:33",
+			["Result"] = "sent",
+			["ReceiveItems"] = {
+			},
+		}, -- [246]
+		{
+			["Date"] = "2022-04-19",
+			["TargetName"] = "別逼我解魔",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:05:00",
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["GiveItems"] = {
+			},
+			["PlayerName"] = "騎風",
+			["ReceiveItems"] = {
+			},
+		}, -- [247]
+		{
+			["TargetName"] = "別逼我解魔",
+			["PlayerName"] = "騎風",
+			["Date"] = "2022-04-19",
+			["ReceiveMoney"] = 37800000,
+			["Time"] = "01:05:00",
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [248]
 	},
 }

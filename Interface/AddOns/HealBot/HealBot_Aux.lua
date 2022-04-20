@@ -204,6 +204,16 @@ function HealBot_Aux_clearAllBars(button)
       --HealBot_setCall("HealBot_Aux_clearAllBars")
 end
 
+function HealBot_Aux_resetBars()
+    if HealBot_retLuVars("Loaded") then
+        HealBot_Timers_Set("AUX","ClearBars")
+        HealBot_Timers_Set("AUX","SetBars")
+        HealBot_Timers_Set("AUX","UpdateAllUnitBars")
+    else
+        HealBot_Timers_Set("AUX","ResetBars")
+    end
+end
+
 function HealBot_Aux_resetAllBars()
     for _,xButton in pairs(HealBot_AuxStatic_Buttons) do
         for x=1,9 do

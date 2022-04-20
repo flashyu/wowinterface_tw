@@ -88,7 +88,7 @@ function HealBot_Aggro_UpdateUnit(button,status,threatStatus,threatPct,extra,thr
     if (button.aggro.status==3 or threatStatus==3) then
         if button.aggro.status~=threatStatus then
             button.aggro.status=threatStatus
-            HealBot_Action_UpdateHealthButtonState(button, true)
+            HealBot_Action_UpdateHealthButtonState(button)
         end
     end
     button.aggro.status=threatStatus
@@ -125,22 +125,22 @@ end
 function HealBot_Aggro_UpdateAggroText()
     for _,xButton in pairs(HealBot_Unit_Button) do
         xButton.gref.txt["text4"]:SetText("")
-        HealBot_Text_setAggroText(xButton, true)
+        HealBot_Text_setAggroText(xButton)
     end
     for _,xButton in pairs(HealBot_Private_Button) do
         xButton.gref.txt["text4"]:SetText("")
-        HealBot_Text_setAggroText(xButton, true)
+        HealBot_Text_setAggroText(xButton)
     end
     for _,xButton in pairs(HealBot_Pet_Button) do
         xButton.gref.txt["text4"]:SetText("")
-        HealBot_Text_setAggroText(xButton, true)
+        HealBot_Text_setAggroText(xButton)
     end
     for _,xButton in pairs(HealBot_Vehicle_Button) do
         xButton.gref.txt["text4"]:SetText("")
-        HealBot_Text_setAggroText(xButton, true)
+        HealBot_Text_setAggroText(xButton)
     end
     for _,xButton in pairs(HealBot_Extra_Button) do
         xButton.gref.txt["text4"]:SetText("")
-        HealBot_Text_setAggroText(xButton, true)
+        HealBot_Text_setAggroText(xButton)
     end
 end

@@ -629,8 +629,8 @@ function HealBot_Lang_enALL()
                     [6] = "[HealBot] /hb pcs <n> -- Adjust the size of the Holy power charge indicator by <n>, Default value is 7 ",
                     [7] = "[HealBot] /hb hrfm -- Toggle method for hiding Blizzard raid frames, disable completely or just hide",
                     [8] = "[HealBot] /hb ws -- Toggle Hide/Show the Weaken Soul icon instead of the PW:S with a -",
-                    [8] = "[HealBot] /hb rld <n> -- In seconds, how long the players name stays green after a res",
-                    [9] = "[HealBot] - Also see Commands on the General tab in Options",
+                    [9] = "[HealBot] /hb rld <n> -- In seconds, how long the players name stays green after a res",
+                    [10] = "[HealBot] - Also see Commands on the General tab in Options",
                   }
                   
                   

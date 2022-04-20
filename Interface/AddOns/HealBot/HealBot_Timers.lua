@@ -54,10 +54,6 @@ local HealBot_Timers_NoCalls={}
 local HealBot_Timers_luVars={}
 HealBot_Timers_luVars["UpdateAllBuffIcons"]=false
 HealBot_Timers_luVars["LastDelayedTime"]=0
-HealBot_Timers_luVars["LastInitSlowTime"]=0
-HealBot_Timers_luVars["LastPartySlowTime"]=0
-HealBot_Timers_luVars["LastPlayerSlowTime"]=0
-HealBot_Timers_luVars["LastSkinSlowTime"]=0
 HealBot_Timers_luVars["LastLastTime"]=0
 HealBot_Timers_luVars["DoneBuffReset"]=false
 HealBot_Timers_luVars["nCalls"]=0
@@ -260,15 +256,21 @@ function HealBot_Timers_BuffsReset()
     HealBot_Timers_Set("INIT","DebuffReset")
 end
 
+function HealBot_Timers_LoadComplete()
+    HealBot_Timers_luVars["LoadComplete"]=true
+end
+
 function HealBot_Timers_LastUpdate()
     HealBot_Timers_Set("LAST","UpdateAllHealth")
     HealBot_Timers_Set("LAST","PlayerCheckExtended")
     HealBot_Timers_Set("DELAYED","AuraCheckUnits")
 	HealBot_Timers_Set("DELAYED","UpdateAllUnitBars")
-    HealBot_Timers_Set("DELAYED","DeleteMarkedButtons")
+    HealBot_Timers_Set("DELAYED","ProcCacheButtons")
+    HealBot_Timers_Set("DELAYED","LoadComplete")
 end
 
 function HealBot_Timers_LastLoad()
+    HealBot_Timers_Set("SKINS","EmergHealthCol")
     HealBot_Timers_Set("AURA","ConfigClassHoT")
     HealBot_Timers_Set("LAST","InitSpells")
     HealBot_Timers_Set("LAST","SpellsLoaded")
@@ -306,6 +308,25 @@ function HealBot_Timers_CheckDC()
         --HealBot_setCall("HealBot_Timers_CheckDC")
 end
 
+function HealBot_Timers_QuickFramesChanged()
+    HealBot_Options_framesChanged(false)
+end
+
+function HealBot_Timers_SkinsFramesChanged()
+    HealBot_Options_framesChanged(true)
+end
+
+function HealBot_Timers_IconsFramesChanged()
+    HealBot_Options_framesChanged(false, true)
+end
+
+function HealBot_Timers_IndicatorFramesChanged()
+    HealBot_Options_framesChanged(false, false, true)
+end
+
+function HealBot_Timers_AllFramesChanged()
+    HealBot_Options_framesChanged(true, true, true)
+end
 
 function HealBot_Timers_Loaded()
     HealBot_AddChat(HEALBOT_HEALBOT .. " " .. _G["GREEN_FONT_COLOR_CODE"]..HEALBOT_VERSION.._G["FONT_COLOR_CODE_CLOSE"] .. HEALBOT_LOADED .. " " .. HEALBOT_FORHELP .. _G["YELLOW_FONT_COLOR_CODE"].." /hb h".._G["FONT_COLOR_CODE_CLOSE"]);
@@ -374,12 +395,14 @@ local hbTimerFuncs={["INIT"]={
                         ["FluidFlashInUse"]=HealBot_Options_FluidFlashInUse,
                         ["SetFocusGroups"]=HealBot_Action_SetFocusGroups,
                         ["SwitchStateFontString"]=HealBot_Text_SwitchStateFontString,
+                        ["EmergHealthCol"]=HealBot_Action_EmergHealthCol,
                     },
                     ["AUX"]={
                         ["ClearBars"]=HealBot_Options_clearAuxBars,
                         ["SetBars"]=HealBot_Options_setAuxBars,
                         ["BarFlashAlphaMinMax"]=HealBot_Options_AuxBarFlashAlphaMinMaxSet,
                         ["UpdateAllUnitBars"]=HealBot_UpdateAllAuxBars,
+                        ["ResetBars"]=HealBot_Aux_resetBars,
                     },
                     ["EMERG"]={
                         ["ResetBars"]=HealBot_Action_ResetEmergBars,
@@ -398,6 +421,7 @@ local hbTimerFuncs={["INIT"]={
                         ["CustomDebuffFilterCastBy"]=HealBot_Aura_setCustomDebuffFilterCastBy,
                         ["ResetDebuffCache"]=HealBot_Aura_ResetDebuffCache,
                         ["CustomDebuffFilterDisabled"]=HealBot_Aura_setCustomDebuffFilterDisabled,
+                        ["SetIconUpdateInterval"]=HealBot_Aura_SetIconUpdateInterval,
                     },
                     ["CHAT"]={
                         ["OverrideChatUseToggle"]=HealBot_Options_Override_ChatUse_Toggle,
@@ -466,7 +490,7 @@ local hbTimerFuncs={["INIT"]={
                         ["TextUpdateNames"]=HealBot_Text_UpdateNames,
                         ["TextUpdateHealth"]=HealBot_Text_UpdateHealth,
                         ["CheckDC"]=HealBot_Timers_CheckDC,
-                        ["DeleteMarkedButtons"]=HealBot_Action_DeleteMarkedButtons,
+                        ["ProcCacheButtons"]=HealBot_Action_ProcCacheButtons,
                         ["LastLoad"]=HealBot_Timers_LastLoad,
                         ["LastUpdate"]=HealBot_Timers_LastUpdate,
                         ["WheelUpdate"]=HealBot_Timers_MouseWheelUpdate,
@@ -480,7 +504,15 @@ local hbTimerFuncs={["INIT"]={
                         ["AuraCheckUnits"]=HealBot_AuraCheck,
                         ["UpdateAllUnitBars"]=HealBot_UpdateAllUnitBars,
                         ["Reload"]=HealBot_Reload,
+                        ["FullReload"]=HealBot_FullReload,
                         ["ReadyCheck"]=HealBot_ReadyCheck,
+                        ["LoadComplete"]=HealBot_Timers_LoadComplete,
+                        ["QuickFramesChanged"]=HealBot_Timers_QuickFramesChanged,
+                        ["SkinsFramesChanged"]=HealBot_Timers_SkinsFramesChanged,
+                        ["IconsFramesChanged"]=HealBot_Timers_IconsFramesChanged,
+                        ["IndicatorFramesChanged"]=HealBot_Timers_IndicatorFramesChanged,
+                        ["AllFramesChanged"]=HealBot_Timers_AllFramesChanged,
+                        ["UpdateMaxUnitsAdj"]=HealBot_UpdateMaxUnitsAdj,
                     },
                    }
 
@@ -513,12 +545,15 @@ function HealBot_Timers_Set(cat,timer)
 end
 
 local NoCallsInx=""
+function HealBot_Timers_Usage(cat, timer)
+    NoCallsInx=cat..":"..timer
+    if not HealBot_Timers_NoCalls[NoCallsInx] then HealBot_Timers_NoCalls[NoCallsInx]=0 end
+    HealBot_Timers_NoCalls[NoCallsInx]=HealBot_Timers_NoCalls[NoCallsInx]+1
+    HealBot_AddDebug(NoCallsInx.."="..HealBot_Timers_NoCalls[NoCallsInx],"Timers",true)
+end
+
 function HealBot_Timers_RunTimer(cat, timer)
     if hbTimerFuncs[cat][timer] then
-        --NoCallsInx=cat..":"..timer
-        --if not HealBot_Timers_NoCalls[NoCallsInx] then HealBot_Timers_NoCalls[NoCallsInx]=0 end
-        --HealBot_Timers_NoCalls[NoCallsInx]=HealBot_Timers_NoCalls[NoCallsInx]+1
-        --HealBot_AddDebug(NoCallsInx.."="..HealBot_Timers_NoCalls[NoCallsInx],"Timers",true)
         HealBot_Timers_NoDups[cat][timer]=false
         hbTimerFuncs[cat][timer]()
     else
@@ -526,26 +561,8 @@ function HealBot_Timers_RunTimer(cat, timer)
         HealBot_AddDebug(HEALBOT_HEALBOT .. " " .. _G["ORANGE_FONT_COLOR_CODE"] .. "ERROR: Timer " .._G["FONT_COLOR_CODE_CLOSE"] .. _G["YELLOW_FONT_COLOR_CODE"] .. NoCallsInx  .._G["FONT_COLOR_CODE_CLOSE"].. _G["ORANGE_FONT_COLOR_CODE"] .." not found.")
         HealBot_AddDebug(HEALBOT_HEALBOT .. " " .. _G["ORANGE_FONT_COLOR_CODE"] .. "ERROR: Timer " .._G["FONT_COLOR_CODE_CLOSE"] .. _G["YELLOW_FONT_COLOR_CODE"] .. NoCallsInx  .._G["FONT_COLOR_CODE_CLOSE"].. _G["ORANGE_FONT_COLOR_CODE"] .." not found.","Timers",true)
     end
+    --HealBot_Timers_Usage(cat, timer)
           --HealBot_setCall("HealBot_Timers_RunTimer-"..cat..":"..timer)
-end
-
-function HealBot_Timers_RunInitTimers()
-    if not HealBot_Timers_luVars["DoneBuffReset"] then
-        HealBot_Timers_BuffsReset()
-    end
-    if #HealBot_Timers["INIT"]>0 then
-        for x=1, #HealBot_Timers["INIT"] do
-            HealBot_Timers_RunTimer("INIT", HealBot_Timers["INIT"][1])
-            table.remove(HealBot_Timers["INIT"],1)
-        end
-        HealBot_Timers_Set("LAST","Reload")
-    end
-    if #HealBot_Timers["INITSLOW"]>0 then
-        for x=1, #HealBot_Timers["INITSLOW"] do
-            HealBot_Timers_RunTimer("RUNDELAYED", HealBot_Timers["INITSLOW"][1])
-            table.remove(HealBot_Timers["INITSLOW"],1)
-        end
-    end
 end
 
 function HealBot_Timers_SetDelayedTimer(cat, timer)
@@ -555,6 +572,61 @@ end
 
 function HealBot_Timers_RunDelayedTimer(cat, timer, delay)
     C_Timer.After(delay, function() HealBot_Timers_SetDelayedTimer(cat,timer) end)
+end
+
+function HealBot_Timers_ClearTimers()
+    if #HealBot_Timers["INIT"]>0 then
+        for x=1, #HealBot_Timers["INIT"] do
+            HealBot_Timers_RunTimer("INIT", HealBot_Timers["INIT"][1])
+            table.remove(HealBot_Timers["INIT"],1)
+        end
+    end
+    if #HealBot_Timers["SKINS"]>0 then
+        for x=1, #HealBot_Timers["SKINS"] do
+            HealBot_Timers_RunTimer("SKINS", HealBot_Timers["SKINS"][1])
+            table.remove(HealBot_Timers["SKINS"],1)
+        end
+    end
+    if #HealBot_Timers["AUX"]>0 then
+        for x=1, #HealBot_Timers["AUX"] do
+            HealBot_Timers_RunTimer("AUX", HealBot_Timers["AUX"][1])
+            table.remove(HealBot_Timers["AUX"],1)
+        end
+    end
+    if #HealBot_Timers["EMERG"]>0 then
+        for x=1, #HealBot_Timers["EMERG"] do
+            HealBot_Timers_RunTimer("EMERG", HealBot_Timers["EMERG"][1])
+            table.remove(HealBot_Timers["EMERG"],1)
+        end
+    end
+    if #HealBot_Timers["AURA"]>0 then
+        for x=1, #HealBot_Timers["AURA"] do
+            HealBot_Timers_RunTimer("AURA", HealBot_Timers["AURA"][1])
+            table.remove(HealBot_Timers["AURA"],1)
+        end
+    end
+
+end
+
+function HealBot_Timers_PlayerRegenDisabled()
+    if not HealBot_Timers_luVars["DoneBuffReset"] then
+        if not HealBot_retLuVars("Loaded") then
+            HealBot_OnEvent_VariablesLoaded()
+            HealBot_Timers_Set("DELAYED","FullReload")
+        end
+        HealBot_Timers_Set("INIT","InitBuffList")
+        HealBot_Timers_Set("INIT","SpellsTabText")
+        HealBot_Timers_Set("INIT","FluidFlash")
+        HealBot_Timers_BuffsReset()
+        for x=1,3 do
+            HealBot_Timers_ClearTimers()
+        end
+    else
+        for x=1,2 do
+            HealBot_Timers_ClearTimers()
+        end
+        if not HealBot_Timers_luVars["LoadComplete"] then HealBot_Timers_Set("DELAYED","Reload") end
+    end
 end
 
 local hbCurTimer=""
@@ -588,39 +660,27 @@ function HealBot_Timers_Run()
         HealBot_Timers_RunTimer("RUNDELAYED", HealBot_Timers["RUNDELAYED"][1])
         table.remove(HealBot_Timers["RUNDELAYED"],1)
     elseif HealBot_Timers["INITSLOW"][1] then
-        if HealBot_Timers_luVars["LastInitSlowTime"]<GetTime() then
-            HealBot_Timers_luVars["LastInitSlowTime"]=GetTime()+0.01
-            HealBot_Timers_RunDelayedTimer("INITSLOW", HealBot_Timers["INITSLOW"][1],0.025)
-            table.remove(HealBot_Timers["INITSLOW"],1)
-        end
+        HealBot_Timers_SetDelayedTimer("INITSLOW", HealBot_Timers["INITSLOW"][1])
+        table.remove(HealBot_Timers["INITSLOW"],1)
     elseif HealBot_Timers["PARTYSLOW"][1] then
-        if HealBot_Timers_luVars["LastPartySlowTime"]<GetTime() then
-            HealBot_Timers_luVars["LastPartySlowTime"]=GetTime()+0.02
-            HealBot_Timers_RunDelayedTimer("PARTYSLOW", HealBot_Timers["PARTYSLOW"][1],0.05)
-            table.remove(HealBot_Timers["PARTYSLOW"],1)
-        end
+        HealBot_Timers_SetDelayedTimer("PARTYSLOW", HealBot_Timers["PARTYSLOW"][1])
+        table.remove(HealBot_Timers["PARTYSLOW"],1)
     elseif HealBot_Timers["PLAYERSLOW"][1] then
-        if HealBot_Timers_luVars["LastPlayerSlowTime"]<GetTime() then
-            HealBot_Timers_luVars["LastPlayerSlowTime"]=GetTime()+0.03
-            HealBot_Timers_RunDelayedTimer("PLAYERSLOW", HealBot_Timers["PLAYERSLOW"][1],0.075)
-            table.remove(HealBot_Timers["PLAYERSLOW"],1)
-        end
+        HealBot_Timers_SetDelayedTimer("PLAYERSLOW", HealBot_Timers["PLAYERSLOW"][1])
+        table.remove(HealBot_Timers["PLAYERSLOW"],1)
     elseif HealBot_Timers["SKINSSLOW"][1] then
-        if HealBot_Timers_luVars["LastSkinSlowTime"]<GetTime() then
-            HealBot_Timers_luVars["LastSkinSlowTime"]=GetTime()+0.04
-            HealBot_Timers_RunDelayedTimer("SKINSSLOW", HealBot_Timers["SKINSSLOW"][1],0.1)
-            table.remove(HealBot_Timers["SKINSSLOW"],1)
-        end
+        HealBot_Timers_SetDelayedTimer("SKINSSLOW", HealBot_Timers["SKINSSLOW"][1])
+        table.remove(HealBot_Timers["SKINSSLOW"],1)
     elseif HealBot_Timers["LAST"][1] then
         if HealBot_Timers_luVars["LastLastTime"]<GetTime() then
-            HealBot_Timers_luVars["LastLastTime"]=GetTime()+0.05
-            HealBot_Timers_RunDelayedTimer("LAST", HealBot_Timers["LAST"][1],0.2)
+            HealBot_Timers_luVars["LastLastTime"]=GetTime()+0.025
+            HealBot_Timers_RunDelayedTimer("LAST", HealBot_Timers["LAST"][1],0.025)
             table.remove(HealBot_Timers["LAST"],1)
         end
     elseif HealBot_Timers["DELAYED"][1] then
         if HealBot_Timers_luVars["LastDelayedTime"]<GetTime() then
-            HealBot_Timers_luVars["LastDelayedTime"]=GetTime()+0.1
-            HealBot_Timers_RunDelayedTimer("DELAYED", HealBot_Timers["DELAYED"][1],0.5)
+            HealBot_Timers_luVars["LastDelayedTime"]=GetTime()+0.05
+            HealBot_Timers_RunDelayedTimer("DELAYED", HealBot_Timers["DELAYED"][1],0.05)
             table.remove(HealBot_Timers["DELAYED"],1)
         end
     else

@@ -8,13 +8,13 @@ ParrotDB = {
 						["Currency gains"] = {
 							["disabled"] = false,
 						},
-						["Experience gains"] = {
+						["Extra attacks"] = {
 							["disabled"] = false,
 						},
 						["Skill gains"] = {
 							["disabled"] = false,
 						},
-						["Extra attacks"] = {
+						["Experience gains"] = {
 							["disabled"] = false,
 						},
 					},
@@ -65,22 +65,7 @@ ParrotDB = {
 						["Pet dispel"] = {
 							["scrollArea"] = "受到",
 						},
-						["Pet melee misses"] = {
-							["disabled"] = true,
-							["scrollArea"] = "提示",
-						},
-						["Melee parries"] = {
-							["scrollArea"] = "提示",
-						},
 						["Pet skill deflects"] = {
-							["disabled"] = true,
-							["scrollArea"] = "提示",
-						},
-						["Skill DoTs"] = {
-							["disabled"] = false,
-							["scrollArea"] = "受到",
-						},
-						["Pet skill immunes"] = {
 							["disabled"] = true,
 							["scrollArea"] = "提示",
 						},
@@ -88,7 +73,22 @@ ParrotDB = {
 							["disabled"] = true,
 							["scrollArea"] = "提示",
 						},
+						["Pet melee misses"] = {
+							["disabled"] = true,
+							["scrollArea"] = "提示",
+						},
 						["Self heals"] = {
+							["disabled"] = false,
+							["scrollArea"] = "受到",
+						},
+						["Pet skill immunes"] = {
+							["disabled"] = true,
+							["scrollArea"] = "提示",
+						},
+						["Melee parries"] = {
+							["scrollArea"] = "提示",
+						},
+						["Skill DoTs"] = {
 							["disabled"] = false,
 							["scrollArea"] = "受到",
 						},
@@ -99,8 +99,7 @@ ParrotDB = {
 						["Pet heals"] = {
 							["disabled"] = true,
 						},
-						["Pet skill reflects"] = {
-							["disabled"] = true,
+						["Melee resists"] = {
 							["scrollArea"] = "提示",
 						},
 						["Melee misses"] = {
@@ -138,8 +137,7 @@ ParrotDB = {
 							["disabled"] = false,
 							["scrollArea"] = "受到",
 						},
-						["Pet skill evades"] = {
-							["disabled"] = true,
+						["Skill dodges"] = {
 							["scrollArea"] = "提示",
 						},
 						["Pet melee blocks"] = {
@@ -209,7 +207,8 @@ ParrotDB = {
 						["Skill absorbs"] = {
 							["scrollArea"] = "提示",
 						},
-						["Skill dodges"] = {
+						["Pet skill evades"] = {
+							["disabled"] = true,
 							["scrollArea"] = "提示",
 						},
 						["Pet melee dodges"] = {
@@ -223,7 +222,8 @@ ParrotDB = {
 						["Skill resists"] = {
 							["scrollArea"] = "提示",
 						},
-						["Melee resists"] = {
+						["Pet skill reflects"] = {
+							["disabled"] = true,
 							["scrollArea"] = "提示",
 						},
 						["Pet melee deflects"] = {

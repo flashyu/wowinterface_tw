@@ -1,7 +1,7 @@
 
 GroupBulletinBoardDBChar = {
 	["FilterDungeonBF"] = false,
-	["FilterDungeonMT"] = true,
+	["FilterDungeonMT"] = false,
 	["FilterDungeonBRD"] = false,
 	["FilterDungeonSMA"] = false,
 	["FilterDungeonCRYPTS"] = false,
@@ -23,10 +23,10 @@ GroupBulletinBoardDBChar = {
 	["FilterDungeonWC"] = false,
 	["FilterDungeonHYJAL"] = false,
 	["FilterDungeonRFC"] = false,
-	["FilterDungeonZA"] = false,
+	["FilterDungeonZA"] = true,
 	["FilterDungeonSTK"] = false,
 	["FilterDungeonKARA"] = true,
-	["FilterDungeonMECH"] = false,
+	["FilterDungeonMECH"] = true,
 	["FilterDungeonAV"] = false,
 	["FilterDungeonULD"] = false,
 	["FilterDungeonRFD"] = false,
@@ -37,7 +37,7 @@ GroupBulletinBoardDBChar = {
 	["FilterDungeonZF"] = false,
 	["FilterDungeonSFK"] = false,
 	["FilterDungeonBAD"] = true,
-	["FilterDungeonSV"] = true,
+	["FilterDungeonSV"] = false,
 	["FilterDungeonBFD"] = false,
 	["FilterDungeonAB"] = false,
 	["FilterDungeonSMG"] = false,
@@ -51,12 +51,12 @@ GroupBulletinBoardDBChar = {
 	["FilterDungeonSCH"] = false,
 	["FilterDungeonSM2"] = false,
 	["FilterDungeonAQ40"] = false,
-	["FilterDungeonARC"] = true,
+	["FilterDungeonSETH"] = false,
 	["FilterDungeonBWL"] = false,
 	["FilterDungeonZG"] = false,
-	["FilterDungeonBREW"] = false,
-	["FilterDungeonEOTS"] = false,
 	["FilterDungeonBM"] = false,
+	["FilterDungeonEOTS"] = false,
+	["FilterDungeonBREW"] = false,
 	["FilterDungeonMC"] = false,
 	["FilterDungeonSWP"] = false,
 	["FilterDungeonSTR"] = false,
@@ -71,6 +71,7 @@ GroupBulletinBoardDBChar = {
 	["FilterDungeonLBRS"] = false,
 	["FilterDungeonSSC"] = true,
 	["FilterDungeonMGT"] = false,
+	["HeroicOnly"] = false,
 	["channel"] = {
 		true, -- [1]
 		true, -- [2]
@@ -93,8 +94,7 @@ GroupBulletinBoardDBChar = {
 		true, -- [19]
 		true, -- [20]
 	},
-	["HeroicOnly"] = false,
-	["FilterDungeonSETH"] = false,
+	["FilterDungeonARC"] = true,
 	["FilterDungeonOHB"] = false,
 	["FilterDungeonEYE"] = true,
 }

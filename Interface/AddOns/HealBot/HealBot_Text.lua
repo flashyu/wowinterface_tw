@@ -594,7 +594,7 @@ function HealBot_Text_TextAggroColours(button)
         atacG=button.health.gcol
         atacB=0
     else
-        atacR,atacG,atacB=button.health.mixcolr
+        atacR=button.health.mixcolr
         atacG=button.health.mixcolg
         atacB=button.health.mixcolb
     end
@@ -1073,7 +1073,7 @@ function HealBot_Text_setNameTextSeperate(button)
             vHealthTextConcatIndex=0
             vSetNameTextClass=UnitClass(button.unit)
             if Healbot_Config_Skins.BarText[Healbot_Config_Skins.Current_Skin][button.frame]["SHOWROLE"] then
-                vSetNameTextRole=HealBot_Panel_UnitRole(button.unit, button.guid)
+                vSetNameTextRole=HealBot_Panel_UnitRole(button.unit)
                 if vSetNameTextRole=="DAMAGER" then
                     vSetNameTextClass=HEALBOT_WORD_DAMAGER
                 elseif vSetNameTextRole=="HEALER" then
@@ -1148,7 +1148,7 @@ function HealBot_Text_setNameTextCombined(button)
             end
             vSetNameTextClass=UnitClass(button.unit)
             if Healbot_Config_Skins.BarText[Healbot_Config_Skins.Current_Skin][button.frame]["SHOWROLE"] then
-                vSetNameTextRole=HealBot_Panel_UnitRole(button.unit, button.guid)
+                vSetNameTextRole=HealBot_Panel_UnitRole(button.unit)
                 if vSetNameTextRole=="DAMAGER" then
                     vSetNameTextClass=HEALBOT_WORD_DAMAGER
                 elseif vSetNameTextRole=="HEALER" then

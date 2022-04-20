@@ -1929,8 +1929,8 @@ function HealBot_Skins_Check_Skin(SkinName, fromImport)
         if not Healbot_Config_Skins.Emerg[SkinName][gl]["A"] then Healbot_Config_Skins.Emerg[SkinName][gl]["A"]=1 end
         if not Healbot_Config_Skins.Emerg[SkinName][gl]["OA"] then Healbot_Config_Skins.Emerg[SkinName][gl]["OA"]=0.5 end
         if not Healbot_Config_Skins.Emerg[SkinName][gl]["DA"] then Healbot_Config_Skins.Emerg[SkinName][gl]["DA"]=0.2 end
-        if not Healbot_Config_Skins.Emerg[SkinName][gl]["CRITICAL"] then Healbot_Config_Skins.Emerg[SkinName][gl]["CRITICAL"]=25 end
-        if not Healbot_Config_Skins.Emerg[SkinName][gl]["INJURED"] then Healbot_Config_Skins.Emerg[SkinName][gl]["INJURED"]=50 end
+        if not Healbot_Config_Skins.Emerg[SkinName][gl]["CRITICAL"] then Healbot_Config_Skins.Emerg[SkinName][gl]["CRITICAL"]=0.25 end
+        if not Healbot_Config_Skins.Emerg[SkinName][gl]["INJURED"] then Healbot_Config_Skins.Emerg[SkinName][gl]["INJURED"]=0.5 end
         if Healbot_Config_Skins.Emerg[SkinName][gl]["BUFFBARCOL"]==nil then 
             Healbot_Config_Skins.Emerg[SkinName][gl]["BUFFBARCOL"]=false 
         elseif type(Healbot_Config_Skins.Emerg[SkinName][gl]["BUFFBARCOL"])=="number" then
