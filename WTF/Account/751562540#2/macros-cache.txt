@@ -52,11 +52,16 @@ VER 3 000000000000000D "烈焰震擊" "135813"
 /cast 烈焰震擊
 /startattack
 END
-VER 3 0000000000000011 "爆發" "135726"
+VER 3 0000000000000015 "爆發" "INV_Misc_QuestionMark"
 #showtooltip
 /cast 血性狂暴
 /use 狂戰士的吶喊
 /use 嗜血胸針
+END
+VER 3 0000000000000011 "爆發" "135726"
+#showtooltip
+/cast 血性狂暴
+/use 狂戰士的吶喊
 END
 VER 3 0000000000000013 "盾舞" "INV_MISC_QUESTIONMARK"
 #showtooltip
