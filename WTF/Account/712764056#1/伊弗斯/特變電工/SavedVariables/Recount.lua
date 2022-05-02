@@ -17,31 +17,16 @@ RecountPerCharDB = {
 				},
 			},
 			["enClass"] = "SHAMAN",
-			["unit"] = "騎風",
+			["unit"] = true,
 			["level"] = 70,
 			["LastDamageAbility"] = "Falling",
 			["LastFightIn"] = 0,
-			["type"] = "Grouped",
-			["LastDamageTaken"] = 459,
+			["type"] = "Ungrouped",
+			["LastAbility"] = 417598.189,
+			["UnitLockout"] = 5503.071,
 			["Owner"] = false,
-			["TimeLast"] = {
-				["DamageTaken"] = 5503.071,
-				["OVERALL"] = 5503.071,
-			},
+			["LastDamageTaken"] = 459,
 			["NextEventNum"] = 2,
-			["LastEventHealthMax"] = {
-				8859, -- [1]
-			},
-			["LastEvents"] = {
-				"Environment Falling 騎風 Hit -459 (Physical)", -- [1]
-			},
-			["Name"] = "騎風",
-			["LastEventIncoming"] = {
-				true, -- [1]
-			},
-			["LastEventTimes"] = {
-				5503.671, -- [1]
-			},
 			["Fights"] = {
 				["CurrentFightData"] = {
 					["PartialResist"] = {
@@ -152,7 +137,23 @@ RecountPerCharDB = {
 					},
 				},
 			},
-			["UnitLockout"] = 5503.071,
+			["LastEvents"] = {
+				"Environment Falling 騎風 Hit -459 (Physical)", -- [1]
+			},
+			["LastEventIncoming"] = {
+				true, -- [1]
+			},
+			["LastEventTimes"] = {
+				5503.671, -- [1]
+			},
+			["Name"] = "騎風",
+			["TimeLast"] = {
+				["DamageTaken"] = 5503.071,
+				["OVERALL"] = 5503.071,
+			},
+			["LastEventHealthMax"] = {
+				8859, -- [1]
+			},
 			["LastActive"] = 5503.071,
 		},
 	},

@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0537,
+	["LastPlayerFullName"] = "特變電工-伊弗斯",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 32373,
@@ -13,9 +15,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:32260::::::::70:::::::::|h[無盡夢魘頸飾]|h|r",
 		}, -- [2]
 		{
-			["ID"] = 30117,
-			["Level"] = 133,
-			["Link"] = "|cffa335ee|Hitem:30117:2991:24033:24033:::::70:::::::::|h[毀滅者防禦肩衛]|h|r",
+			["ID"] = 30979,
+			["Level"] = 146,
+			["Link"] = "|cffa335ee|Hitem:30979:2997:32205:32226:::::70:::::::::|h[猛擊戰甲肩刃]|h|r",
 		}, -- [3]
 		nil, -- [4]
 		{
@@ -29,9 +31,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:33331::32205:32205:::::70:::::::::|h[狂怒釋放之鍊]|h|r",
 		}, -- [6]
 		{
-			["ID"] = 30116,
-			["Level"] = 133,
-			["Link"] = "|cffa335ee|Hitem:30116:3013:24055::::::70:::::::::|h[毀滅者防禦腿甲]|h|r",
+			["ID"] = 32341,
+			["Level"] = 141,
+			["Link"] = "|cffa335ee|Hitem:32341:3012:::::::70:::::::::|h[神聖懲戒護腿]|h|r",
 		}, -- [7]
 		{
 			["ID"] = 32345,
@@ -44,9 +46,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:30057:2647:24067::::::70:::::::::|h[消滅護腕]|h|r",
 		}, -- [9]
 		{
-			["ID"] = 28824,
-			["Level"] = 125,
-			["Link"] = "|cffa335ee|Hitem:28824:2984:22459:22459:::::70:::::::::|h[火星完美護手]|h|r",
+			["ID"] = 32278,
+			["Level"] = 141,
+			["Link"] = "|cffa335ee|Hitem:32278:684:32193:32193:::::70:::::::::|h[寂靜正義手套]|h|r",
 		}, -- [10]
 		{
 			["ID"] = 32497,
@@ -95,8 +97,6 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:33474::::::::70:::::::::|h[上古阿曼尼長弓]|h|r",
 		}, -- [18]
 	},
-	["LastPlayerFullName"] = "特變電工-伊弗斯",
-	["AutoSelectScales"] = false,
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

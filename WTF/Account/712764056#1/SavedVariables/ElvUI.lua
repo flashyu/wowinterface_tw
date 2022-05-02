@@ -1,13 +1,11 @@
 
 ElvDB = {
+	["profileKeys"] = {
+		["特變電工 - 伊弗斯"] = "Default",
+	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["特變電工"] = 80167741,
-		},
-	},
-	["faction"] = {
-		["伊弗斯"] = {
-			["特變電工"] = "Horde",
+			["特變電工"] = 170560852,
 		},
 	},
 	["global"] = {
@@ -34,32 +32,34 @@ ElvDB = {
 			["特變電工"] = "WARRIOR",
 		},
 	},
-	["profileKeys"] = {
-		["特變電工 - 伊弗斯"] = "Default",
+	["faction"] = {
+		["伊弗斯"] = {
+			["特變電工"] = "Horde",
+		},
 	},
 	["profiles"] = {
 		["Default"] = {
-			["convertPages"] = true,
-			["dbConverted"] = 2.43,
+			["chat"] = {
+				["panelSnapRightID"] = 4,
+				["panelSnapLeftID"] = 1,
+			},
+			["dbConverted"] = 2.44,
 			["actionbar"] = {
 				["bar6"] = {
 					["enabled"] = true,
-					["buttonsPerRow"] = 6,
 					["buttons"] = 6,
+					["buttonsPerRow"] = 6,
 				},
 				["microbar"] = {
 					["buttons"] = 8,
 				},
 				["bar5"] = {
 					["enabled"] = false,
-					["buttonsPerRow"] = 12,
 					["buttons"] = 12,
+					["buttonsPerRow"] = 12,
 				},
 			},
-			["chat"] = {
-				["panelSnapLeftID"] = 1,
-				["panelSnapRightID"] = 4,
-			},
+			["convertPages"] = true,
 		},
 	},
 }

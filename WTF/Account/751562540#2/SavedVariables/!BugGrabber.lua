@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 46,
 	["lastSanitation"] = 3,
+	["session"] = 51,
 	["errors"] = {
 		{
 			["message"] = "...e\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\ItemString.lua:261: bad argument #1 to 'strmatch' (string expected, got nil)",
@@ -70,20 +70,13 @@ BugGrabberDB = {
 			["counter"] = 1,
 		}, -- [9]
 		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 嘗試調用保護功能 'PartyMemberFrame1:Hide()'。",
-			["time"] = "2022/04/03 19:47:38",
-			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `Hide'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:1267: in function <...\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua:1257>\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:1343: in function `DisableBlizzard'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:1180: in function `UpdateAllHeaders'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:961: in function `HandleSmartVisibility'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:966: in function `?'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:119: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...vUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
-			["session"] = 33,
-			["counter"] = 5,
-		}, -- [10]
-		{
 			["message"] = "...TBC\\AddOns\\Blizzard_AuctionUI\\Blizzard_AuctionUI.lua:751: attempt to index local 'color' (a nil value)",
 			["time"] = "2022/04/09 01:12:48",
 			["locals"] = "numBatchAuctions = 23328\ntotalAuctions = 23328\nbutton = BrowseButton2 {\n 0 = <userdata>\n itemCount = 1\n bidAmount = 47500\n buyoutPrice = 50000\n itemIndex = 2\n PriceTooltipFrame = <unnamed> {\n }\n}\nbuttonName = \"BrowseButton2\"\nbuttonHighlight = BrowseButton2Highlight {\n 0 = <userdata>\n PixelSnapDisabled = true\n}\niconTexture = BrowseButton1ItemIconTexture {\n 0 = <userdata>\n PixelSnapDisabled = true\n}\nitemName = BrowseButton2Name {\n SetVertexColor = <function> defined =[C]:-1\n PixelSnapDisabled = true\n 0 = <userdata>\n Hide = <function> defined =[C]:-1\n}\ncolor = nil\nitemCount = BrowseButton1ItemCount {\n 0 = <userdata>\n}\nmoneyFrame = BrowseButton1MoneyFrame {\n 0 = <userdata>\n vadjust = 1\n trialErrorButton = BrowseButton1MoneyFrameTrialErrorButton {\n }\n moneyType = \"AUCTION\"\n info = <table> {\n }\n small = 1\n staticMoney = 469680\n maxDisplayWidth = 146\n}\nyourBidText = BrowseButton1YourBidText {\n 0 = <userdata>\n}\nbuyoutFrame = BrowseButton1BuyoutFrame {\n 0 = <userdata>\n}\nbuyoutMoney = BrowseButton1BuyoutFrameMoney {\n 0 = <userdata>\n vadjust = 1\n trialErrorButton = BrowseButton1BuyoutFrameMoneyTrialErrorButton {\n }\n moneyType = \"AUCTION\"\n info = <table> {\n }\n small = 1\n staticMoney = 494400\n maxDisplayWidth = 146\n}\noffset = 0\nindex = 2\nisLastSlotEmpty = nil\nname = \"\"\ntexture = 135616\ncount = 1\nquality = -1\ncanUse = false\nlevel = 990722560\nlevelColHeader = nil\nminBid = 295419\nminIncrement = 0\nbuyoutPrice = 310968\nduration = 2\nbidAmount = 0\nhighBidder = false\nbidderFullName = nil\nowner = nil\nownerFullName = nil\nsaleStatus = 0\nitemId = 4369\nhasAllInfo = true\ndisplayedPrice = 469680\nrequiredBid = 469680\n(for index) = 2\n(for limit) = 8\n(for step) = 1\ni = 2\nshouldHide = false\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = BrowseButton2Name {\n SetVertexColor = <function> defined =[C]:-1\n PixelSnapDisabled = true\n 0 = <userdata>\n Hide = <function> defined =[C]:-1\n}\n(*temporary) = \"\"\n(*temporary) = <userdata>\n(*temporary) = false\n(*temporary) = 990722560\n(*temporary) = nil\n(*temporary) = 295419\n(*temporary) = 0\n(*temporary) = 310968\n(*temporary) = 0\n(*temporary) = false\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 0\n(*temporary) = 4369\n(*temporary) = true\n(*temporary) = \"attempt to index local 'color' (a nil value)\"\n",
 			["stack"] = "[string \"@Interface_TBC\\AddOns\\Blizzard_AuctionUI\\Blizzard_AuctionUI.lua\"]:751: in function <...TBC\\AddOns\\Blizzard_AuctionUI\\Blizzard_AuctionUI.lua:684>\n[string \"=(tail call)\"]: ?\n[string \"@Interface_TBC\\AddOns\\Blizzard_AuctionUI\\Blizzard_AuctionUI.lua\"]:277: in function <...TBC\\AddOns\\Blizzard_AuctionUI\\Blizzard_AuctionUI.lua:275>",
 			["session"] = 41,
 			["counter"] = 2,
-		}, -- [11]
+		}, -- [10]
 		{
 			["message"] = "...TBC\\AddOns\\Blizzard_AuctionUI\\Blizzard_AuctionUI.lua:1793: attempt to compare number with nil",
 			["time"] = "2022/04/21 00:04:34",
@@ -91,37 +84,52 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface_TBC\\AddOns\\Blizzard_AuctionUI\\Blizzard_AuctionUI.lua\"]:1793: in function <...TBC\\AddOns\\Blizzard_AuctionUI\\Blizzard_AuctionUI.lua:1792>\n[string \"@Interface_TBC\\AddOns\\Blizzard_AuctionUI\\Blizzard_AuctionUI.lua\"]:1842: in function <...TBC\\AddOns\\Blizzard_AuctionUI\\Blizzard_AuctionUI.lua:1836>",
 			["session"] = 41,
 			["counter"] = 2,
-		}, -- [12]
+		}, -- [11]
 		{
 			["message"] = "Interface\\AddOns\\ItemRack\\ItemRack-3.69.nil.lua:1943: Usage: SaveBindings(1||2)",
 			["time"] = "2022/04/09 00:42:49",
 			["locals"] = "(*temporary) = 0\n",
 			["stack"] = "[string \"=[C]\"]: in function `SaveBindings'\n[string \"@Interface\\AddOns\\ItemRack\\ItemRack-3.69.nil.lua\"]:1943: in function `SetSetBindings'\n[string \"@Interface\\AddOns\\ItemRack\\ItemRack-3.69.nil.lua\"]:233: in function `?'\n[string \"@Interface\\AddOns\\ItemRack\\ItemRack-3.69.nil.lua\"]:198: in function `OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>",
-			["session"] = 43,
-			["counter"] = 3,
-		}, -- [13]
+			["session"] = 47,
+			["counter"] = 4,
+		}, -- [12]
 		{
 			["message"] = "...lizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:428: attempt to index local 'layers' (a nil value)",
 			["time"] = "2022/04/24 21:38:22",
 			["locals"] = "self = <unnamed> {\n 0 = <userdata>\n MarkCanvasDirty = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:384\n GetMinZoomViewRect = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:547\n GetNormalizedHorizontalScroll = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:703\n SetPanTarget = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:580\n DenormalizeVerticalSize = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:728\n IsAtMaxZoom = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:647\n AccumulateMouseDeltas = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:248\n currentScale = 1.000000\n ScalingMode = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:293\n GetMap = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:659\n IsZoomingIn = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:639\n currentScrollY = 0.500000\n ZoomOut = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:601\n ShouldZoomInstantly = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:539\n SetScalingMode = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:289\n targetScale = 1.000000\n GetNormalizedCursorPosition = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:752\n TryPanOrZoomOnClick = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:87\n shouldPanOnClick = false\n SetZoomTarget = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:585\n normalizedPanXLerpAmount = 0.150000\n NormalizeUIPosition = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:747\n OnMouseUp = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:105\n MarkAreaTriggersDirty = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:376\n CalculateViewRect = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:551\n ResetZoom = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:613\n NormalizeHorizontalSize = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:716\n SetNormalizedHorizontalScroll = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:698\n OnLoad = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:7\n Child = <unnamed> {\n }\n zoomLevels = <table> {\n }\n SetShouldPanOnClick = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:527\n currentScrollX = 0.500000\n scrollYExtentsMin = 0.500000\n areaTriggersDirty = true\n scrollXExtentsMin = 0.500000\n SetCanvasSize = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:217\n normalizedZoomLerpAmount = 0.150000\n zoomAmountPerMouseWheelDelta = 0.075000\n GetScaleForMaxZoom = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:663\n CalculateLerpScaling = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:264\n GetCanvasScale = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:682\n FindBestLocationForClick = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:58\n OnMouseDown = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua:26\n ShouldZoomInOnClick = <function> defined @Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMix",
 			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua\"]:428: in function `CreateZoomLevels'\n[string \"@Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua\"]:415: in function `OnCanvasSizeChanged'\n[string \"@Interface\\AddOns\\Blizzard_MapCanvas\\MapCanvas_ScrollContainerMixin.lua\"]:407: in function `SetMapID'\n[string \"@Interface\\AddOns\\Blizzard_MapCanvas\\Blizzard_MapCanvas.lua\"]:35: in function `SetMapID'\n[string \"@Interface\\AddOns\\ClassicCodex\\map.lua\"]:197: in function `ShowMapId'\n[string \"@Interface\\AddOns\\ClassicCodex\\quest.lua\"]:302: in function `ShowCurrentQuest'\n[string \"@Interface\\AddOns\\ClassicCodex\\quest.lua\"]:330: in function <Interface\\AddOns\\ClassicCodex\\quest.lua:329>",
-			["session"] = 43,
-			["counter"] = 1,
+			["session"] = 48,
+			["counter"] = 2,
+		}, -- [13]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 嘗試調用保護功能 'PartyMemberFrame1:Hide()'。",
+			["time"] = "2022/04/03 19:47:38",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `Hide'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:1267: in function <...\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua:1257>\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:1343: in function `DisableBlizzard'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:1180: in function `UpdateAllHeaders'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:961: in function `HandleSmartVisibility'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:966: in function `?'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:119: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...vUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
+			["session"] = 48,
+			["counter"] = 6,
 		}, -- [14]
 		{
 			["message"] = "[string \"Error in: 2.6/2.6 同速 2\"]:5: attempt to perform arithmetic on field 'expirationTime' (a nil value)",
 			["time"] = "2022/04/07 01:14:35",
 			["stack"] = "[string \"=[C]\"]: in function `xpcall'\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:611: in function <Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:537>\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:747: in function `ScanEventsInternal'\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:708: in function `ScanEvents'\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:1433: in function <Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:1431>",
-			["session"] = 43,
-			["counter"] = 958,
+			["session"] = 50,
+			["counter"] = 1349,
 		}, -- [15]
+		{
+			["message"] = "Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua:235: attempt to compare number with nil",
+			["time"] = "2022/05/02 23:47:41",
+			["locals"] = "ItemScore = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to compare number with nil\"\n",
+			["stack"] = "[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:235: in function `GearScore_GetQuality'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:448: in function `GearScore_SetTargetData'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:328: in function <Interface\\AddOns\\GearScoreLite\\GearScoreLite.lua:326>",
+			["session"] = 51,
+			["counter"] = 21,
+		}, -- [16]
 		{
 			["message"] = "Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua:300: attempt to index a nil value",
 			["time"] = "2022/04/03 15:14:50",
 			["locals"] = "GearScore = 2966\nItemLevel = 117\nRed = 0.004080\nBlue = 0.966000\nGreen = 0.517000\ni = 0\nTooltipFound = 0\n(for index) = 4\n(for limit) = 4\n(for step) = 1\ni = 4\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"\"\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index a nil value\"\n",
 			["stack"] = "[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:300: in function `GearScore_UpdateGTData'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:276: in function <Interface\\AddOns\\GearScoreLite\\GearScoreLite.lua:269>",
-			["session"] = 46,
-			["counter"] = 1453,
-		}, -- [16]
+			["session"] = 51,
+			["counter"] = 1949,
+		}, -- [17]
 	},
 }
