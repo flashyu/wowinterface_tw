@@ -10,7 +10,7 @@ RecountDB = {
 			["MainWindow"] = {
 				["Position"] = {
 					["y"] = -482.0000953674316,
-					["x"] = -408.0001220703125,
+					["x"] = -408.0001525878906,
 					["w"] = 343,
 					["h"] = 228,
 				},
@@ -27,7 +27,7 @@ RecountDB = {
 			},
 			["DetailWindowY"] = -238.0000610351563,
 			["DetailWindowX"] = 657.2222290039062,
-			["LastInstanceName"] = "風暴要塞",
+			["LastInstanceName"] = "祖阿曼",
 			["CurDataSet"] = "CurrentFightData",
 			["GraphWindowX"] = 842.7222290039062,
 			["MainWindowWidth"] = 343.3334045410156,
