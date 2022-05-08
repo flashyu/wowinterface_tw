@@ -53,16 +53,16 @@ VER 3 0000000001000003 "王子" "132148"
 /targetenemyplayer
 /castsequence reset=alt/5 破甲攻擊(等級 6),破甲攻擊(等級 6),破甲攻擊(等級 6)
 END
-VER 3 0000000001000011 "盾反宏" "132361"
-/cast [stance:1/3] 防禦姿態
-/equip 殘暴者
-/equip 卡茲洛加堅固之心
-/cast 法術反射
-END
 VER 3 000000000100000B "盾反宏" "132361"
 /cast [stance:1/3] 防禦姿態
 /equip 潮汐之錘
 /equip 奧多爾遺產防衛者
+/cast 法術反射
+END
+VER 3 0000000001000011 "盾反宏" "132361"
+/cast [stance:1/3] 防禦姿態
+/equip 殘暴者
+/equip 卡茲洛加堅固之心
 /cast 法術反射
 END
 VER 3 0000000001000006 "致死" "132355"

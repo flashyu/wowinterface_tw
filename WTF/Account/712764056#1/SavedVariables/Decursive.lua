@@ -1,7 +1,7 @@
 
 DecursiveDB = {
-	["global"] = {
-		["LastVersionAnnounce"] = 1651395116,
+	["profileKeys"] = {
+		["特變電工 - 伊弗斯"] = "Default",
 	},
 	["class"] = {
 		["WARRIOR"] = {
@@ -16,8 +16,8 @@ DecursiveDB = {
 			},
 		},
 	},
-	["profileKeys"] = {
-		["特變電工 - 伊弗斯"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1652023924,
 	},
 	["profiles"] = {
 		["Default"] = {

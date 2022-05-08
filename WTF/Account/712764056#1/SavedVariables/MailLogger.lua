@@ -27,5 +27,70 @@ MailLoggerDB = {
 		["LogEverything"] = false,
 	},
 	["TradeLog"] = {
+		{
+			["TargetName"] = "騎風",
+			["PlayerName"] = "特變電工",
+			["ReceiveMoney"] = 0,
+			["Time"] = "23:35:49",
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["GiveItems"] = {
+			},
+			["Date"] = "2022-05-08",
+			["ReceiveItems"] = {
+			},
+		}, -- [1]
+		{
+			["TargetName"] = "騎風",
+			["PlayerName"] = "特變電工",
+			["Date"] = "2022-05-08",
+			["ReceiveMoney"] = 0,
+			["Time"] = "23:35:49",
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+				{
+					["Number"] = 6,
+					["ItemLink"] = "|cffffffff|Hitem:22445::::::::70:::::::::|h[魔塵]|h|r",
+					["Name"] = "魔塵",
+				}, -- [1]
+			},
+		}, -- [2]
+		{
+			["TargetName"] = "騎風",
+			["PlayerName"] = "特變電工",
+			["ReceiveMoney"] = 0,
+			["Time"] = "23:36:07",
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["GiveItems"] = {
+			},
+			["Date"] = "2022-05-08",
+			["ReceiveItems"] = {
+			},
+		}, -- [3]
+		{
+			["TargetName"] = "騎風",
+			["PlayerName"] = "特變電工",
+			["Date"] = "2022-05-08",
+			["ReceiveMoney"] = 0,
+			["Time"] = "23:36:07",
+			["GiveMoney"] = 0,
+			["Location"] = "撒塔斯城",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+				[7] = {
+					["Number"] = 1,
+					["Enchantment"] = "附魔護腕 - 健壯",
+					["ItemLink"] = "|cffa335ee|Hitem:32324::::::::70:::::::::|h[隱伏手環]|h|r",
+					["Name"] = "隱伏手環",
+				},
+			},
+		}, -- [4]
 	},
 }

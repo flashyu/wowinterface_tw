@@ -1,13 +1,5 @@
 
 ElvDB = {
-	["profileKeys"] = {
-		["特變電工 - 伊弗斯"] = "Default",
-	},
-	["gold"] = {
-		["伊弗斯"] = {
-			["特變電工"] = 170560852,
-		},
-	},
 	["global"] = {
 		["nameplates"] = {
 			["filters"] = {
@@ -20,7 +12,18 @@ ElvDB = {
 			},
 		},
 	},
-	["DisabledAddOns"] = {
+	["faction"] = {
+		["伊弗斯"] = {
+			["特變電工"] = "Horde",
+		},
+	},
+	["profileKeys"] = {
+		["特變電工 - 伊弗斯"] = "Default",
+	},
+	["gold"] = {
+		["伊弗斯"] = {
+			["特變電工"] = 290956859,
+		},
 	},
 	["serverID"] = {
 		[4487] = {
@@ -32,10 +35,7 @@ ElvDB = {
 			["特變電工"] = "WARRIOR",
 		},
 	},
-	["faction"] = {
-		["伊弗斯"] = {
-			["特變電工"] = "Horde",
-		},
+	["DisabledAddOns"] = {
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -43,7 +43,7 @@ ElvDB = {
 				["panelSnapRightID"] = 4,
 				["panelSnapLeftID"] = 1,
 			},
-			["dbConverted"] = 2.44,
+			["dbConverted"] = 2.46,
 			["actionbar"] = {
 				["bar6"] = {
 					["enabled"] = true,

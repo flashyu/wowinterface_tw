@@ -2,13 +2,13 @@
 AUCTIONATOR_SAVEDVARS = {
 	["_50000"] = 500,
 	["_2000"] = 100,
-	["_500"] = 5,
-	["STARTING_DISCOUNT"] = 5,
+	["_5000000"] = 10000,
+	["_200000"] = 1000,
 	["_1000000"] = 2500,
 	["_10000"] = 200,
+	["_500"] = 5,
 	["LOG_DE_DATA_X"] = true,
-	["_200000"] = 1000,
-	["_5000000"] = 10000,
+	["STARTING_DISCOUNT"] = 5,
 }
 AUCTIONATOR_PRICING_HISTORY = {
 }
@@ -30,8 +30,8 @@ AUCTIONATOR_LAST_SCAN_TIME = nil
 AUCTIONATOR_TOONS = {
 	["特變電工"] = {
 		["firstSeen"] = 1650901910,
-		["firstVersion"] = "2.5.5-1-g17bf777",
 		["guid"] = "Player-4487-0012ECFA",
+		["firstVersion"] = "2.5.5-1-g17bf777",
 	},
 }
 AUCTIONATOR_STACKING_PREFS = {

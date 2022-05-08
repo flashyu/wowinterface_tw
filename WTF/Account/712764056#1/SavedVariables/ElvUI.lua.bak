@@ -1,5 +1,13 @@
 
 ElvDB = {
+	["profileKeys"] = {
+		["特變電工 - 伊弗斯"] = "Default",
+	},
+	["gold"] = {
+		["伊弗斯"] = {
+			["特變電工"] = 170560852,
+		},
+	},
 	["global"] = {
 		["nameplates"] = {
 			["filters"] = {
@@ -14,14 +22,6 @@ ElvDB = {
 	},
 	["DisabledAddOns"] = {
 	},
-	["profileKeys"] = {
-		["特變電工 - 伊弗斯"] = "Default",
-	},
-	["faction"] = {
-		["伊弗斯"] = {
-			["特變電工"] = "Horde",
-		},
-	},
 	["serverID"] = {
 		[4487] = {
 			["伊弗斯"] = true,
@@ -32,9 +32,9 @@ ElvDB = {
 			["特變電工"] = "WARRIOR",
 		},
 	},
-	["gold"] = {
+	["faction"] = {
 		["伊弗斯"] = {
-			["特變電工"] = 170560852,
+			["特變電工"] = "Horde",
 		},
 	},
 	["profiles"] = {
