@@ -8,6 +8,7 @@ LoonBestInSlot:AddItem(spec, "33464", "Shoulders", "Hex Lord's Voodoo Pauldrons"
 
 LoonBestInSlot:AddItem(spec, "32524", "Back", "Shroud of the Highborne", "BIS")
 LoonBestInSlot:AddItem(spec, "33592", "Back", "Cloak of Ancient Rituals", "Alt")
+LoonBestInSlot:AddItem(spec, "35324", "Back", "Cloak of Swift Reprieve", "Alt")
 
 LoonBestInSlot:AddItem(spec, "31016", "Chest", "Skyshatter Chestguard", "BIS")
 LoonBestInSlot:AddItem(spec, "31091", "Chest", "Chestguard of the Forgotten Protector", "BIS")
@@ -36,6 +37,7 @@ LoonBestInSlot:AddItem(spec, "32609", "Feet", "Boots of the Divine Light", "Alt"
 
 LoonBestInSlot:AddItem(spec, "33281", "Neck", "Brooch of Nature's Mercy", "BIS")
 LoonBestInSlot:AddItem(spec, "32370", "Neck", "Nadina's Pendant of Purity", "BIS")
+LoonBestInSlot:AddItem(spec, "35317", "Neck", "Vindicator's Pendant of Reprieve", "Alt")
 
 LoonBestInSlot:AddItem(spec, "32528", "Ring", "Blessed Band of Karabor", "BIS")
 LoonBestInSlot:AddItem(spec, "33498", "Ring", "Signet of the Quiet Forest", "Alt")

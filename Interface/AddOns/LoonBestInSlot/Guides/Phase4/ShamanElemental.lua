@@ -9,6 +9,7 @@ LoonBestInSlot:AddItem(spec, "32587", "Shoulders", "Mantle of Nimble Thought", "
 
 LoonBestInSlot:AddItem(spec, "32331", "Back", "Cloak of the Illidari Council", "BIS")
 LoonBestInSlot:AddItem(spec, "33591", "Back", "Shadowcaster's Drape", "Alt")
+LoonBestInSlot:AddItem(spec, "35321", "Back", "Cloak of Arcane Alacrity", "Alt")
 
 LoonBestInSlot:AddItem(spec, "31017", "Chest", "Skyshatter Breastplate", "BIS")
 LoonBestInSlot:AddItem(spec, "31091", "Chest", "Chestguard of the Forgotten Protector", "BIS")
@@ -21,11 +22,14 @@ LoonBestInSlot:AddItem(spec, "31094", "Gloves", "Gloves of the Forgotten Protect
 LoonBestInSlot:AddItem(spec, "33586", "Gloves", "Studious Wraps", "Alt")
 
 LoonBestInSlot:AddItem(spec, "32276", "Belt", "Flashfire Girdle", "BIS")
+LoonBestInSlot:AddItem(spec, "30914", "Belt", "Belt of the Crescent Moon", "Alt")
+LoonBestInSlot:AddItem(spec, "33559", "Belt", "Starfire Waistband", "Alt")
 
 LoonBestInSlot:AddItem(spec, "30916", "Legs", "Leggings of Channeled Elements", "BIS")
 LoonBestInSlot:AddItem(spec, "33584", "Legs", "Pantaloons of Arcane Annihilation", "BIS")
 LoonBestInSlot:AddItem(spec, "31020", "Legs", "Skyshatter Legguards", "BIS")
 LoonBestInSlot:AddItem(spec, "31100", "Legs", "Leggings of the Forgotten Protector", "BIS")
+LoonBestInSlot:AddItem(spec, "33533", "Legs", "Avalanche Leggings", "Alt")
 
 LoonBestInSlot:AddItem(spec, "32239", "Feet", "Slippers of the Seacaller", "BIS")
 LoonBestInSlot:AddItem(spec, "32352", "Feet", "Naturewarden's Treads", "BIS")
@@ -57,4 +61,4 @@ LoonBestInSlot:AddItem(spec, "33334", "OH", "Fetish of the Primal Gods", "BIS")
 LoonBestInSlot:AddItem(spec, "30872", "OH", "Chronicle of Dark Secrets", "Alt")
 
 LoonBestInSlot:AddItem(spec, "32330", "Totem", "Totem of Ancestral Guidance", "BIS")
-LoonBestInSlot:AddItem(spec, "33506", "Totem", "Skycall Totem", "Alt")
+LoonBestInSlot:AddItem(spec, "33506", "Totem", "Skycall Totem", "BIS")

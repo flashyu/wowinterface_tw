@@ -174,17 +174,6 @@ data["BadgeofJustice4"] = {
 	gameVersion = 2,
 	items = {
 		{
-			name = ALIL["Back"],
-			[NORMAL_DIFF] = {
-				{ 1, 33593 },
-				{ 2, 35321 },
-				{ 3, 33304 },
-				{ 4, 35324 },
-				{ 5, 33484 },
-				{ 6, 33333 },
-			},
-		},
-		{
 			name = ALIL["Cloth"],
 			[NORMAL_DIFF] = {
 				{1, 33588 },
@@ -245,19 +234,6 @@ data["BadgeofJustice4"] = {
 			},
 		},
 		{
-			name = ALIL["Neck"],
-			[NORMAL_DIFF] = {
-				{1, 33296},
-			},
-		},
-		{
-			name = ALIL["Off-Hand"],
-			[NORMAL_DIFF] = {
-				{ 1, 33334 },
-				{ 2, 33325 },
-			},
-		},
-		{
 			name = ALIL["Plate"],
 			[NORMAL_DIFF] = {
 				{1, 33810 },
@@ -279,6 +255,30 @@ data["BadgeofJustice4"] = {
 				{20, 33524 },
 				{21, 33515 },
 				{22, 33523 },
+			},
+		},
+		{
+			name = ALIL["Off Hand"],
+			[NORMAL_DIFF] = {
+				{ 1, 33334 },
+				{ 2, 33325 },
+			},
+		},
+		{
+			name = ALIL["Neck"],
+			[NORMAL_DIFF] = {
+				{1, 33296},
+			},
+		},
+		{
+			name = ALIL["Back"],
+			[NORMAL_DIFF] = {
+				{ 1, 33593 },
+				{ 2, 35321 },
+				{ 3, 33304 },
+				{ 4, 35324 },
+				{ 5, 33484 },
+				{ 6, 33333 },
 			},
 		},
 		{
@@ -339,17 +339,6 @@ data["BadgeofJusticeP5"] = {
 			},
 		},
 		{
-			name = ALIL["Gem"],
-			[NORMAL_DIFF] = {
-				{1, 32228},
-				{2, 32249},
-				{3, 32231},
-				{4, 32230},
-				{5, 32227},
-				{6, 32229},
-			},
-		},
-		{
 			name = ALIL["Leather"],
 			[NORMAL_DIFF] = {
 				{1, 34911}, --bonus armor
@@ -398,15 +387,6 @@ data["BadgeofJusticeP5"] = {
 			},
 		},
 		{
-			name = ALIL["Finger"],
-			[NORMAL_DIFF] = {
-				{1, 34887},
-				{2, 34890},
-				{3, 34889},
-				{4, 34888},
-			},
-		},
-		{
 			name = ALIL["Weapon"],
 			[NORMAL_DIFF] = {
 				{1, 34894},  -- 1H Dagger
@@ -420,6 +400,87 @@ data["BadgeofJusticeP5"] = {
 				{20, 34898}, -- Staff AP
 				{22, 34895}, -- MH Dagger - SP
 				{24, 34896}, -- MH Mace - Healing
+			},
+		},
+		{
+			name = ALIL["Finger"],
+			[NORMAL_DIFF] = {
+				{1, 34887},
+				{2, 34890},
+				{3, 34889},
+				{4, 34888},
+			},
+		},
+		{
+			name = ALIL["Gem"],
+			[NORMAL_DIFF] = {
+				{1, 32228},
+				{2, 32249},
+				{3, 32231},
+				{4, 32230},
+				{5, 32227},
+				{6, 32229},
+			},
+		},
+	}
+}
+
+data["BCCSunmote"] = {
+	name = format(AL["'%s' Vendor"], AL["Sunmote"]),
+	ContentType = VENDOR_CONTENT,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = 2,
+	items = {
+		{
+			name = ALIL["Cloth"],
+			[NORMAL_DIFF] = {
+				{ 1, 34405 }, -- Helm of Arcane Purity
+				{ 3, 34393 }, -- Shoulderpads of Knowledge's Pursuit
+				{ 5, 34399 }, -- Robes of Ghostly Hatred
+				{ 7, 34406 }, -- Gloves of Tyri's Power
+				{ 9, 34386 }, -- Pantaloons of Growing Strife
+			},
+		},
+		{
+			name = ALIL["Leather"],
+			[NORMAL_DIFF] = {
+				-- int
+				{ 1, 34403 }, -- Cover of Ursoc the Mighty
+				{ 3, 34391 }, -- Spaulders of Devastation
+				{ 5, 34398 }, -- Utopian Tunic of Elune
+				{ 7, 34407 }, -- Tranquil Moonlight Wraps
+				{ 9, 34384 }, -- Breeches of Natural Splendor
+				-- agi
+				{ 16, 34404 }, -- Mask of the Fury Hunter
+				{ 18, 34397 }, -- Bladed Chaos Tunic
+				{ 20, 34392 }, -- Demontooth Shoulderpads
+				{ 22, 34408 }, -- Gloves of the Forest Drifter
+				{ 24, 34385 }, -- Leggings of the Immortal Beast
+			},
+		},
+		{
+			name = ALIL["Mail"],
+			[NORMAL_DIFF] = {
+				{ 1, 34402 }, -- Cover of Ursoc the Mighty
+				{ 3, 34396 }, -- Garments of Crashing Shores
+				{ 5, 34390 }, -- Erupting Epaulets
+				{ 7, 34409 }, -- Gauntlets of the Ancient Frostwolf
+				{ 9, 34383 }, -- Kilt of Spiritual Reconstruction
+			},
+		},
+		{
+			name = ALIL["Plate"],
+			[NORMAL_DIFF] = {
+				-- int
+				{ 1, 34401 }, -- Helm of Uther's Resolve
+				{ 3, 34389 }, -- Spaulders of the Thalassian Defender
+				{ 5, 34395 }, -- Noble Judicator's Chestguard
+				{ 7, 34382 }, -- Judicator's Legguards
+				-- stam
+				{ 16, 34400 }, -- Crown of Dath'Remar
+				{ 18, 34388 }, -- Pauldrons of Berserking
+				{ 20, 34394 }, -- Breastplate of Agony's Aversion
+				{ 22, 34381 }, -- Felstrength Legplates
 			},
 		},
 	}

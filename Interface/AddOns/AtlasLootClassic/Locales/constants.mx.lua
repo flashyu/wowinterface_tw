@@ -29,6 +29,8 @@ AL["AtlasLoot"] = "AtlasLoot"
 AL["AtlasLoot Modules"] = "Módulos de AtlasLoot"
 AL["Balzaphon"] = "Balzaphon"
 AL["Bonus"] = "Bonus"
+--[[Translation missing --]]
+--[[ AL["Bought with..."] = "Bought with..."--]] 
 AL["Bow"] = "Arco"
 AL["Brutal Gladiator's Aegis"] = "Égida de Gladiador brutal"
 AL["Brutal Gladiator's Battlegear"] = "Equipo de batalla de Gladiador brutal"

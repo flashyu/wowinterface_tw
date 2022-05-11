@@ -98,6 +98,8 @@ end
 local function IsInPhase(specItem, specItemSource)
     if specItemSource.SourceType == "Token" then
         return false;
+    elseif strfind(specItem.Bis, "Transmute") ~= nil then
+        return false;
     elseif LoonBestInSlotSettings.SelectedPhase == "All" and specItem.Phase ~= "0" then
         return true;
     elseif LoonBestInSlotSettings.SelectedPhase == "PreRaid" and specItem.Phase == "0" then
@@ -109,6 +111,8 @@ local function IsInPhase(specItem, specItemSource)
     elseif LoonBestInSlotSettings.SelectedPhase == "Phase 3" and FindInPhase(specItem.Phase, "3") then
         return true;
     elseif LoonBestInSlotSettings.SelectedPhase == "Phase 4" and FindInPhase(specItem.Phase, "4") then
+        return true;
+    elseif LoonBestInSlotSettings.SelectedPhase == "Phase 5" and FindInPhase(specItem.Phase, "5") then
         return true;
     elseif LoonBestInSlotSettings.SelectedPhase == "BIS" and strfind(specItem.Bis, "BIS") ~= nil then
         return true;
@@ -151,23 +155,49 @@ local function IsNotInClassic(specItem)
     return true;
 end
 
+
+local function SetTooltipOnButton(b, item)
+    
+    b:SetScript("OnClick", 
+        function(self, button)
+            if button == "LeftButton" then
+                HandleModifiedItemClick(item.Link);
+            end
+        end
+    );
+
+    b:SetScript("OnEnter", 
+        function(self)
+            GameTooltip:SetOwner(self, "ANCHOR_LEFT");
+            GameTooltip:SetItemByID(item.Id);
+            GameTooltip:Show();
+            itemIsOnEnter = true;
+                
+            if IsShiftKeyDown() and itemIsOnEnter then
+                GameTooltip_ShowCompareItem(tooltip)
+            end
+        end
+    );
+
+    b:SetScript("OnLeave", 
+        function(self)
+            itemIsOnEnter = false;
+            GameTooltip:SetOwner(UIParent, "ANCHOR_NONE");
+            GameTooltip:Hide();
+        end
+    );
+end
+
 local failedLoad = false;
 
 local function createItemRow(specItem, specItemSource, point)
     local window = LoonBestInSlot.BrowserWindow.Window;
     local spacing = 1;
     local alt_color = false;
-    local item = LoonBestInSlot:GetItemInfo(specItem.Id);
     local name = "frame_"..item.Id;
-    local f, tex, t, l, b, d, dl, fh = nil, nil, nil, nil, nil, nil, nil, nil;
+    local f, t, l, b, d, dl = nil, nil, nil, nil, nil, nil, nil;
     local reusing = false;
     
-
-    if item == nil or item.Id == nil or item.Link == nil or item.Type == nil then
-        failedLoad = true;
-        return point;
-    end
-
     -- attempting to reuse a previous child frame if it exists 
     -- (which should include the previously created fontstring and button)
     if(next(deleted_windows) ~= nil) then
@@ -178,136 +208,123 @@ local function createItemRow(specItem, specItemSource, point)
             end
         end
     end
-
-    if(not resuing) then
+    
+    if not resuing then
         f = CreateFrame("Frame", "frame_"..item.Id, window.Container);
-        
-        tex = f:CreateTexture(nil, "BACKGROUND");
-        tex:SetAllPoints();            
 
-        --Create Item Button and Text
-
-        b = CreateFrame("Button", nil, f);
-        b:SetSize(32, 32);
-        local bt = b:CreateTexture();
-        bt:SetAllPoints();
-        bt:SetTexture(item.Texture);
-        b:SetPoint("TOPLEFT", f, 2, -5);
-        
-        t = f:CreateFontString(nil, nil, "GameFontNormal");
-        t:SetText((item.Link or item.Name):gsub("[%[%]]", ""));
-        t:SetPoint("TOPLEFT", b, "TOPRIGHT", 2, -2);
-
-        local type = item.Type;
-        if item.Subtype and item.Type ~= item.Subtype then
-            type = item.Type .. ", " .. item.Subtype;
-        end
-        type = type.. ", "..specItem.Slot;
-        local st = f:CreateFontString(nil, nil,"GameFontNormalGraySmall");
-        st:SetText(type);
-        st:SetPoint("BOTTOMLEFT", b, "BOTTOMRIGHT", 2, 2);
-
-        local pt = f:CreateFontString(nil, nil, "GameFontNormalLarge");
-        if specItem.Phase == "0" then
-            pt:SetText("("..specItem.Bis..")");
-        else
-            pt:SetText("("..specItem.Bis.." "..specItem.Phase..")");
-        end
-        pt:SetPoint("TOPLEFT", t, "TOPRIGHT", 4, 4);
-
-        fh = b:GetHeight()+10;
-
-        --Create Drop Text
-        local dtColor = "|cFF7727FF";
-        if specItemSource.SourceType == "Profession" then
-            dtColor = "|cFF33ADFF";
-        elseif specItemSource.SourceType == "Reputation" then
-            dtColor = "|cFF23E4C4";
-        elseif specItemSource.SourceType == "Quest" then
-            dtColor = "|cFFFFEF27";
-        elseif specItemSource.SourceType == "Dungeon Token" then
-            dtColor = "|cFFFF276D";
-        elseif specItemSource.SourceType == "PvP" then
-            dtColor = "|cFFE52AED";
-        end
-        d = f:CreateFontString(nil, nil, "GameFontNormal");
-        d:SetText(dtColor..specItemSource.SourceType);
-        d:SetJustifyH("LEFT");
-        d:SetWidth(window.ScrollFrame:GetWidth() / 2);
-        d:SetPoint("TOPLEFT", (window.ScrollFrame:GetWidth() / 2), -5);
-
-        dl = f:CreateFontString(nil, nil, "GameFontNormalSmall");
-        if specItemSource.SourceLocation == "" then
-            dl:SetText(specItemSource.Source);
-        else
-            dl:SetText(specItemSource.Source.." - "..specItemSource.SourceLocation);
-        end      
-        dl:SetPoint("TOPLEFT", d, "BOTTOMLEFT", 0, -5);
-
-        local userItemCache = LoonBestInSlot.UserItems[item.Id];
-        if userItemCache then
-            local ot = f:CreateTexture(nil,"BACKGROUND")
-            ot:SetSize(24, 24);
-            if userItemCache == "player" then
-                ot:SetTexture("Interface/AddOns/LoonBestInSlot/Icons/checkmark.tga")
-            elseif userItemCache == "bag" then
-                ot:SetTexture("Interface/AddOns/LoonBestInSlot/Icons/bag.tga")
-            elseif userItemCache == "bank" then
-                ot:SetTexture("Interface/AddOns/LoonBestInSlot/Icons/bank.tga")
+        LoonBestInSlot:GetItemInfo(specItem.Id, function(item)
+            if item == nil or item.Id == nil or item.Link == nil or item.Type == nil then
+                LoonBestInSlot:Error("Failed Load: "..specItem.Id);
+                failedLoad = true;
+                return point;
             end
-            ot:SetPoint("TOPRIGHT", -2, -6);
-        end
+            --Create Item Button and Text
+        
+            b = CreateFrame("Button", nil, f);
+            b:SetSize(32, 32);
+            local bt = b:CreateTexture();
+            bt:SetAllPoints();
+            bt:SetTexture(item.Texture);
+            b:SetPoint("TOPLEFT", f, 2, -5);
 
+            SetTooltipOnButton(b, item);
+        
+            t = f:CreateFontString(nil, nil, "GameFontNormal");
+            t:SetText((item.Link or item.Name):gsub("[%[%]]", ""));
+            t:SetPoint("TOPLEFT", b, "TOPRIGHT", 2, -2);
+
+            local type = item.Type;
+            if item.Subtype and item.Type ~= item.Subtype then
+                type = item.Type .. ", " .. item.Subtype;
+            end
+            type = type.. ", "..specItem.Slot;
+            local st = f:CreateFontString(nil, nil,"GameFontNormalGraySmall");
+            st:SetText(type);
+            st:SetPoint("BOTTOMLEFT", b, "BOTTOMRIGHT", 2, 2);
+
+            local pt = f:CreateFontString(nil, nil, "GameFontNormalLarge");
+            if specItem.Phase == "0" then
+                pt:SetText("("..specItem.Bis..")");
+            else
+                pt:SetText("("..specItem.Bis.." "..specItem.Phase..")");
+            end
+            pt:SetPoint("TOPLEFT", t, "TOPRIGHT", 4, 4);
+
+            --Create Drop Text
+            local dtColor = "|cFF7727FF";
+            if specItemSource.SourceType == "Profession" then
+                dtColor = "|cFF33ADFF";
+            elseif specItemSource.SourceType == "Reputation" then
+                dtColor = "|cFF23E4C4";
+            elseif specItemSource.SourceType == "Quest" then
+                dtColor = "|cFFFFEF27";
+            elseif specItemSource.SourceType == "Dungeon Token" then
+                dtColor = "|cFFFF276D";
+            elseif specItemSource.SourceType == "PvP" then
+                dtColor = "|cFFE52AED";
+            elseif specItemSource.SourceType == "Transmute" then
+                dtColor = "|cFFFC6A03";
+            end
+            d = f:CreateFontString(nil, nil, "GameFontNormal");
+            d:SetText(dtColor..specItemSource.SourceType);
+            d:SetJustifyH("LEFT");
+            d:SetWidth(window.ScrollFrame:GetWidth() / 2);
+            d:SetPoint("TOPLEFT", (window.ScrollFrame:GetWidth() / 2), -5);
+
+            dl = f:CreateFontString(nil, nil, "GameFontNormalSmall");
+            if specItemSource.SourceLocation == "" then
+                dl:SetText(specItemSource.Source);
+                dl:SetPoint("TOPLEFT", d, "BOTTOMLEFT", 0, -5);
+            elseif specItemSource.SourceType == "Transmute" then
+            
+                LoonBestInSlot:GetItemInfo(tonumber(specItemSource.Source), function(transmuteItem)
+
+                    local tb = CreateFrame("Button", nil, f);
+                    tb:SetSize(32, 32);
+                    local bt = tb:CreateTexture();
+                    bt:SetAllPoints();
+                    bt:SetTexture(transmuteItem.Texture);
+                    tb:SetPoint("BOTTOMLEFT", dl, "BOTTOMRIGHT", 5, -2);
+                    SetTooltipOnButton(tb, transmuteItem);
+                                        
+                    local ft = f:CreateFontString(nil, nil, "GameFontNormalSmall")
+                    ft:SetText("From:");
+                    ft:SetPoint("TOPRIGHT", tb, "TOPLEFT", -3, -3);
+                end);
+
+                dl:SetText(specItemSource.SourceLocation);
+                dl:SetPoint("TOPLEFT", d, "BOTTOMLEFT", 0, -5);
+            else
+                dl:SetText(specItemSource.Source.." - "..specItemSource.SourceLocation);
+                dl:SetPoint("TOPLEFT", d, "BOTTOMLEFT", 0, -5);
+            end      
+
+            local userItemCache = LoonBestInSlot.UserItems[item.Id];
+            if userItemCache then
+                local ot = f:CreateTexture(nil,"BACKGROUND")
+                ot:SetSize(24, 24);
+                if userItemCache == "player" then
+                    ot:SetTexture("Interface/AddOns/LoonBestInSlot/Icons/checkmark.tga")
+                elseif userItemCache == "bag" then
+                    ot:SetTexture("Interface/AddOns/LoonBestInSlot/Icons/bag.tga")
+                elseif userItemCache == "bank" then
+                    ot:SetTexture("Interface/AddOns/LoonBestInSlot/Icons/bank.tga")
+                end
+                ot:SetPoint("TOPRIGHT", -2, -6);
+            end            
+        end);
+        
         l = f:CreateLine();
         l:SetColorTexture(1,1,1,0.5);
         l:SetThickness(1);
         l:SetStartPoint("BOTTOMLEFT",5, 0);
         l:SetEndPoint("BOTTOMRIGHT",-5, 0);
-
-        b:SetScript("OnClick", 
-            function(self, button)
-                if button == "LeftButton" then
-                    HandleModifiedItemClick(item.Link);
-                end
-            end
-        );
-
-        b:SetScript("OnEnter", 
-            function(self)
-                GameTooltip:SetOwner(self, "ANCHOR_LEFT");
-                GameTooltip:SetItemByID(item.Id);
-                GameTooltip:Show();
-                itemIsOnEnter = true;
-                
-                if IsShiftKeyDown() and itemIsOnEnter then
-                    GameTooltip_ShowCompareItem(tooltip)
-                end
-            end
-        );
-
-        b:SetScript("OnLeave", 
-            function(self)
-                itemIsOnEnter = false;
-                GameTooltip:SetOwner(UIParent, "ANCHOR_NONE");
-                GameTooltip:Hide();
-            end
-        );
-        
     end
-    
     -- even if we are reusing, it may not be in the same order
-    f:SetSize(window.ScrollFrame:GetWidth(), fh);
+    f:SetSize(window.ScrollFrame:GetWidth(), 42);
     f:ClearAllPoints();
     f:SetPoint("TOPLEFT", window.Container, 0, point);
     
-    -- also may not have the same colour
-    if(alt_color) then
-        tex:SetColorTexture(1, 1, 1, 0.0);
-        alt_color = false;
-    else 
-        tex:SetColorTexture(1, 1, 1, 0.05);
-        alt_color = true;
-    end
     point = point - (f:GetHeight()+spacing);
     
     LoonBestInSlot.BrowserWindow.MaxHeight = LoonBestInSlot.BrowserWindow.MaxHeight + (f:GetHeight()+spacing);
@@ -316,6 +333,7 @@ local function createItemRow(specItem, specItemSource, point)
 
     return point;
 end
+
 
 local itemSlotOrder = {}
 itemSlotOrder["Head"] = 0;
@@ -549,7 +567,7 @@ function LoonBestInSlot.BrowserWindow:CreateBrowserWindow()
         ['name']='phase',
         ['parent']=window,
         ['title']='Phase:',
-        ['items']= { "All", "PreRaid", "Phase 1", "Phase 2", "Phase 3", "Phase 4", "BIS" },
+        ['items']= { "All", "PreRaid", "Phase 1", "Phase 2", "Phase 3", "Phase 4", "Phase 5", "BIS" },
         ['defaultVal']=LoonBestInSlotSettings.SelectedPhase,
         ['changeFunc']=function(dropdown_frame, dropdown_val)
             LoonBestInSlotSettings.SelectedPhase = dropdown_val;
@@ -563,7 +581,7 @@ function LoonBestInSlot.BrowserWindow:CreateBrowserWindow()
         ['name']='source',
         ['parent']=window,
         ['title']='Source:',
-        ['items']= { "All", "Drop", "Profession", "Reputation", "Dungeon Token", "Quest", "PvP" },
+        ['items']= { "All", "Drop", "Profession", "Reputation", "Dungeon Token", "Quest", "PvP", "Transmute" },
         ['defaultVal']= LoonBestInSlotSettings.SelectedSource,
         ['changeFunc']=function(dropdown_frame, dropdown_val)
             LoonBestInSlotSettings.SelectedSource = dropdown_val;
@@ -577,7 +595,7 @@ function LoonBestInSlot.BrowserWindow:CreateBrowserWindow()
         ['name']='zone',
         ['parent']=window,
         ['title']='Zone:',
-        ['items']= { "All", "Karazhan", "Gruul's Lair", "Magtheridon's Lair", "Serpentshrine Cavern", "Tempest Keep", "Hyjal Summit", "Black Temple", "Zul'Aman"},
+        ['items']= { "All", "Karazhan", "Gruul's Lair", "Magtheridon's Lair", "Serpentshrine Cavern", "Tempest Keep", "Hyjal Summit", "Black Temple", "Zul'Aman", "Sunwell Plateau"},
         ['defaultVal']= LoonBestInSlotSettings.SelectedZone,
         ['changeFunc']=function(dropdown_frame, dropdown_val)
             LoonBestInSlotSettings.SelectedZone = dropdown_val;

@@ -41,7 +41,7 @@ DecursiveDB = {
 		},
 	},
 	["global"] = {
-		["LastVersionAnnounce"] = 1652026778,
+		["LastVersionAnnounce"] = 1652287139,
 	},
 	["profiles"] = {
 		["Default"] = {

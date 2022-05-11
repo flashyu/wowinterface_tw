@@ -6,7 +6,7 @@ AtlasLootClassicDB = {
 		["我在哪 - 伊弗斯"] = "我在哪 - 伊弗斯",
 	},
 	["global"] = {
-		["__addonrevision"] = 2040002,
+		["__addonrevision"] = 2040003,
 	},
 	["profiles"] = {
 		["騎風 - 伊弗斯"] = {
@@ -23,8 +23,8 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"GruulsLair", -- [2]
-					2, -- [3]
+					"ZulAman", -- [2]
+					6, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},

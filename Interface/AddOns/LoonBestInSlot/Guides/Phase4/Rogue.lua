@@ -39,7 +39,7 @@ LoonBestInSlot:AddItem(spec, "29301", "Ring", "Band of the Eternal Champion", "A
 
 LoonBestInSlot:AddItem(spec, "28830", "Trinket", "Dragonspine Trophy", "BIS")
 LoonBestInSlot:AddItem(spec, "30450", "Trinket", "Warp-Spring Coil", "BIS")
-LoonBestInSlot:AddItem(spec, "33831", "Trinket", "Berserker's Call", "Alt")
+LoonBestInSlot:AddItem(spec, "33831", "Trinket", "Berserker's Call", "BIS")
 
 LoonBestInSlot:AddItem(spec, "32837", "MH", "Warglaive of Azzinoth", "BIS")
 LoonBestInSlot:AddItem(spec, "33388", "MH", "Heartless", "Alt")

@@ -7,8 +7,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "魚被水嗆到",
 			["InstanceName"] = "Gruul's Lair",
 			["Date"] = "2022-05-01",
-			["Class"] = "SHAMAN",
 			["FirstClass"] = "DRUID",
+			["Class"] = "SHAMAN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4490-565-9766-18831-00006E2ABD",
@@ -49,8 +49,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "望法",
 			["InstanceName"] = "Zul'Aman",
 			["Date"] = "2022-05-02",
-			["FirstClass"] = "WARRIOR",
 			["Class"] = "SHAMAN",
+			["FirstClass"] = "WARRIOR",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-5580-568-31120-23574-00006EBC03",
@@ -134,9 +134,9 @@ LootMonitorDB = {
 			["InstanceID"] = 548,
 			["FirstPlayer"] = "威靈頓霜牙",
 			["InstanceName"] = "Serpentshrine Cavern",
-			["Class"] = "SHAMAN",
-			["Date"] = "2022-05-02",
 			["FirstClass"] = "WARLOCK",
+			["Date"] = "2022-05-02",
+			["Class"] = "SHAMAN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-5580-548-29439-21301-00016FE96E",
@@ -301,9 +301,9 @@ LootMonitorDB = {
 					},
 				}, -- [10]
 			},
-			["Class"] = "SHAMAN",
-			["Date"] = "2022-05-04",
 			["FirstClass"] = "UNKNOWN",
+			["Date"] = "2022-05-04",
+			["Class"] = "SHAMAN",
 			["InstanceName"] = "Karazhan",
 			["FirstPlayer"] = "未知",
 		}, -- [4]
@@ -313,8 +313,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "菊一文字",
 			["InstanceName"] = "Zul'Aman",
 			["Date"] = "2022-05-04",
-			["Class"] = "SHAMAN",
 			["FirstClass"] = "PALADIN",
+			["Class"] = "SHAMAN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-5580-568-640-23574-000072783A",
@@ -400,8 +400,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "Panthergirl",
 			["InstanceName"] = "Magtheridon's Lair",
 			["Date"] = "2022-05-06",
-			["FirstClass"] = "PRIEST",
 			["Class"] = "SHAMAN",
+			["FirstClass"] = "PRIEST",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-5580-544-4490-17257-0000753865",
@@ -459,12 +459,133 @@ LootMonitorDB = {
 					},
 				}, -- [2]
 			},
-			["Class"] = "SHAMAN",
-			["Date"] = "2022-05-06",
 			["FirstClass"] = "WARRIOR",
+			["Date"] = "2022-05-06",
+			["Class"] = "SHAMAN",
 			["InstanceName"] = "Gruul's Lair",
 			["FirstPlayer"] = "特變電工",
 		}, -- [7]
+		{
+			["InstanceID"] = 568,
+			["Player"] = "騎風",
+			["FirstPlayer"] = "冰淩",
+			["InstanceName"] = "Zul'Aman",
+			["Date"] = "2022-05-11",
+			["Class"] = "SHAMAN",
+			["FirstClass"] = "HUNTER",
+			["LootTable"] = {
+				{
+					["GUID"] = "Creature-0-4491-568-11397-23574-00007BD6DE",
+					["Time"] = "23:42:18",
+					["Looter"] = "跳著走著",
+					["Date"] = "2022-05-11",
+					["Class"] = "WARRIOR",
+					["Name"] = "阿奇爾森",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
+						"|cffa335ee|Hitem:33216::::::::70:::::::::|h[隱匿意圖護胸]|h|r", -- [2]
+					},
+				}, -- [1]
+				{
+					["GUID"] = "Creature-0-4491-568-11397-23576-00007BD6DE",
+					["Time"] = "23:51:21",
+					["Looter"] = "跳著走著",
+					["Date"] = "2022-05-11",
+					["Class"] = "WARRIOR",
+					["Name"] = "納羅拉克",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
+					},
+				}, -- [2]
+				{
+					["GUID"] = "Creature-0-4491-568-11397-23578-00007BD6DE",
+					["Time"] = "23:59:38",
+					["Looter"] = "Yenboo",
+					["Date"] = "2022-05-11",
+					["Class"] = "DRUID",
+					["Name"] = "賈納雷",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
+						"|cffa335ee|Hitem:33326::::::::70:::::::::|h[阿曼尼帝國壁壘]|h|r", -- [2]
+					},
+				}, -- [3]
+				{
+					["GUID"] = "Creature-0-4491-568-11397-23577-00007BD6DE",
+					["Time"] = "00:12:41",
+					["Looter"] = "跳著走著",
+					["Date"] = "2022-05-12",
+					["Class"] = "WARRIOR",
+					["Name"] = "哈拉齊",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
+						"|cffa335ee|Hitem:33299::::::::70:::::::::|h[擁護者肩甲]|h|r", -- [2]
+					},
+				}, -- [4]
+				{
+					["GUID"] = "Creature-0-4491-568-11397-24239-00007BE077",
+					["Time"] = "00:23:47",
+					["Looter"] = "跳著走著",
+					["Date"] = "2022-05-12",
+					["Class"] = "WARRIOR",
+					["Name"] = "妖術領主瑪拉克雷斯",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
+						"|cffa335ee|Hitem:33388::::::::70:::::::::|h[冷酷無心]|h|r", -- [2]
+						"|cffa335ee|Hitem:33465::::::::70:::::::::|h[原初狂怒法杖]|h|r", -- [3]
+					},
+				}, -- [5]
+				{
+					["GUID"] = "Creature-0-4491-568-11397-23863-00007BE313",
+					["Time"] = "00:29:38",
+					["Looter"] = "跳著走著",
+					["Date"] = "2022-05-12",
+					["Class"] = "WARRIOR",
+					["Name"] = "祖爾金",
+					["Loots"] = {
+						"|cffa335ee|Hitem:33102::::::::70:::::::::|h[祖爾金之血]|h|r", -- [1]
+						"|cffa335ee|Hitem:33467::::::::70:::::::::|h[扭曲幻象之刃]|h|r", -- [2]
+						"|cffa335ee|Hitem:33476::::::::70:::::::::|h[難恕斬斧]|h|r", -- [3]
+					},
+				}, -- [6]
+			},
+		}, -- [8]
+		{
+			["InstanceID"] = 532,
+			["Player"] = "騎風",
+			["FirstPlayer"] = "未知",
+			["InstanceName"] = "Karazhan",
+			["Date"] = "2022-05-12",
+			["Class"] = "SHAMAN",
+			["FirstClass"] = "UNKNOWN",
+			["LootTable"] = {
+				{
+					["GUID"] = "Creature-0-5580-532-27387-16152-00007BE868",
+					["Time"] = "00:47:37",
+					["Looter"] = "騎風",
+					["Date"] = "2022-05-12",
+					["Class"] = "SHAMAN",
+					["Name"] = "獵人阿圖曼",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
+						"|cffa335ee|Hitem:28453::::::::70:::::::::|h[白雄鹿護腕]|h|r", -- [2]
+						"|cffa335ee|Hitem:28508::::::::70:::::::::|h[聖使祝福手套]|h|r", -- [3]
+					},
+				}, -- [1]
+				{
+					["GUID"] = "Creature-0-5580-532-27387-15687-00007BE73B",
+					["Time"] = "00:53:43",
+					["Looter"] = "夏亞阿滋納布",
+					["Date"] = "2022-05-12",
+					["Class"] = "PALADIN",
+					["Name"] = "摩洛",
+					["Loots"] = {
+						"|cffa335ee|Hitem:29434::::::::70:::::::::|h[正義徽章]|h|r", -- [1]
+						"|cffa335ee|Hitem:28525::::::::70:::::::::|h[堅信之戒]|h|r", -- [2]
+						"|cffa335ee|Hitem:28569::::::::70:::::::::|h[剛勇之靴]|h|r", -- [3]
+					},
+				}, -- [2]
+			},
+		}, -- [9]
 	},
 	["Config"] = {
 		["ShowMinimapIcon"] = true,

@@ -5,9 +5,9 @@ LootMonitorDB = {
 			["InstanceID"] = 565,
 			["FirstPlayer"] = "魚被水嗆到",
 			["InstanceName"] = "Gruul's Lair",
-			["FirstClass"] = "DRUID",
-			["Date"] = "2022-05-01",
 			["Class"] = "SHAMAN",
+			["Date"] = "2022-05-01",
+			["FirstClass"] = "DRUID",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4490-565-9766-18831-00006E2ABD",
@@ -47,9 +47,9 @@ LootMonitorDB = {
 			["InstanceID"] = 568,
 			["FirstPlayer"] = "望法",
 			["InstanceName"] = "Zul'Aman",
-			["Class"] = "SHAMAN",
-			["Date"] = "2022-05-02",
 			["FirstClass"] = "WARRIOR",
+			["Date"] = "2022-05-02",
+			["Class"] = "SHAMAN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-5580-568-31120-23574-00006EBC03",
@@ -136,8 +136,8 @@ LootMonitorDB = {
 			["FirstPlayer"] = "威靈頓霜牙",
 			["InstanceName"] = "Serpentshrine Cavern",
 			["Date"] = "2022-05-02",
-			["Class"] = "SHAMAN",
 			["FirstClass"] = "WARLOCK",
+			["Class"] = "SHAMAN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-5580-548-29439-21301-00016FE96E",
@@ -303,17 +303,17 @@ LootMonitorDB = {
 				}, -- [10]
 			},
 			["Date"] = "2022-05-04",
-			["Class"] = "SHAMAN",
 			["FirstClass"] = "UNKNOWN",
+			["Class"] = "SHAMAN",
 			["InstanceName"] = "Karazhan",
 		}, -- [4]
 		{
 			["InstanceID"] = 568,
 			["FirstPlayer"] = "菊一文字",
 			["InstanceName"] = "Zul'Aman",
-			["FirstClass"] = "PALADIN",
-			["Date"] = "2022-05-04",
 			["Class"] = "SHAMAN",
+			["Date"] = "2022-05-04",
+			["FirstClass"] = "PALADIN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-5580-568-640-23574-000072783A",
@@ -398,9 +398,9 @@ LootMonitorDB = {
 			["InstanceID"] = 544,
 			["FirstPlayer"] = "Panthergirl",
 			["InstanceName"] = "Magtheridon's Lair",
-			["Class"] = "SHAMAN",
-			["Date"] = "2022-05-06",
 			["FirstClass"] = "PRIEST",
+			["Date"] = "2022-05-06",
+			["Class"] = "SHAMAN",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-5580-544-4490-17257-0000753865",
@@ -426,6 +426,7 @@ LootMonitorDB = {
 		{
 			["InstanceID"] = 565,
 			["FirstPlayer"] = "特變電工",
+			["Player"] = "騎風",
 			["LootTable"] = {
 				{
 					["GUID"] = "Creature-0-4490-565-5695-18831-00007541F6",
@@ -459,10 +460,9 @@ LootMonitorDB = {
 					},
 				}, -- [2]
 			},
-			["Player"] = "騎風",
 			["Date"] = "2022-05-06",
-			["Class"] = "SHAMAN",
 			["FirstClass"] = "WARRIOR",
+			["Class"] = "SHAMAN",
 			["InstanceName"] = "Gruul's Lair",
 		}, -- [7]
 	},

@@ -9,7 +9,7 @@ LoonBestInSlot:AddItem(spec, "33590", "Back", "Cloak of Fiends", "BIS")
 LoonBestInSlot:AddItem(spec, "33122", "Back", "Cloak of Darkness", "Alt")
 LoonBestInSlot:AddItem(spec, "30098", "Back", "Razor-Scale Battlecloak", "Alt")
 LoonBestInSlot:AddItem(spec, "24259", "Back", "Vengeance Wrap", "Alt")
-LoonBestInSlot:AddItem(spec, "27878", "Back", "Auchenai Death Shroud", "BIS")
+LoonBestInSlot:AddItem(spec, "27878", "Back", "Auchenai Death Shroud", "Alt")
 
 LoonBestInSlot:AddItem(spec, "30905", "Chest", "Midnight Chestguard", "BIS")
 
@@ -19,6 +19,8 @@ LoonBestInSlot:AddItem(spec, "29947", "Gloves", "Gloves of the Searing Grip", "B
 LoonBestInSlot:AddItem(spec, "32347", "Gloves", "Grips of Damnation", "Alt")
 
 LoonBestInSlot:AddItem(spec, "30106", "Belt", "Belt of One-Hundred Deaths", "BIS")
+LoonBestInSlot:AddItem(spec, "32265", "Belt", "Shadow-walker's Cord", "Alt")
+LoonBestInSlot:AddItem(spec, "32606", "Belt", "Girdle of the Lightbearer", "Alt")
 
 LoonBestInSlot:AddItem(spec, "30900", "Legs", "Bow-stitched Leggings", "BIS")
 

@@ -10,7 +10,7 @@ RecountDB = {
 			["MainWindow"] = {
 				["Position"] = {
 					["y"] = -482.0000953674316,
-					["x"] = -408.0001525878906,
+					["x"] = -408.0001220703125,
 					["w"] = 343,
 					["h"] = 228,
 				},
@@ -26,7 +26,7 @@ RecountDB = {
 				},
 			},
 			["DetailWindowY"] = -238.0000610351563,
-			["DetailWindowX"] = 657.2222290039062,
+			["DetailWindowX"] = 657.6666259765625,
 			["LastInstanceName"] = "戈魯爾之巢",
 			["CurDataSet"] = "OverallData",
 			["GraphWindowX"] = 842.7222290039062,

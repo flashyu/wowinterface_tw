@@ -4,8 +4,7 @@ if not AL then return end
 
 -- These localization strings are translated on Curseforge: https://www.curseforge.com/wow/addons/atlaslootclassic/localization
 -- Collections
---[[Translation missing --]]
---[[ AL["'%s %s' Vendor"] = "'%s %s' Vendor"--]] 
+AL["'%s %s' Vendor"] = "Vendedor de '%s %s'"
 AL["%s Sets"] = "Conjuntos de %s"
 AL["'%s' Vendor"] = "'%s' Vendedor"
 AL["Abyssal Dukes"] = "Duques abisales"
@@ -14,8 +13,7 @@ AL["Abyssal Templars"] = "Templarios abisales"
 AL["Ahune"] = "Ahune"
 AL["Avalanchion"] = "Avalanchion"
 AL["Azure Templar"] = "Templario azur"
---[[Translation missing --]]
---[[ AL["Badge of Justice"] = "Badge of Justice"--]] 
+AL["Badge of Justice"] = "Distintivo de justicia"
 AL["Baron Charr"] = "Barón Charr"
 AL["Baron Kazum"] = "Barón Kazum"
 AL["Box of Chocolates"] = "Caja de bombones"
@@ -45,11 +43,9 @@ AL["Hallow's End"] = "Halloween"
 AL["Harvest Festival"] = "Festival de la Cosecha"
 AL["High Marshal Whirlaxis"] = "Alto mariscal Eje Torbellino"
 AL["Hoary Templar"] = "Templario vetusto"
---[[Translation missing --]]
---[[ AL["Idols"] = "Idols"--]] 
+AL["Idols"] = "Ídolos"
 AL["Legendarys"] = "Legendarios"
---[[Translation missing --]]
---[[ AL["Librams"] = "Librams"--]] 
+AL["Librams"] = "Tratados"
 AL["Lord Blackwood"] = "Lord Bosque Negro"
 AL["Lord Skwol"] = "Lord Skwol"
 AL["Love is in the Air"] = "Amor en el aire"
@@ -73,14 +69,15 @@ AL["Silithus Abyssal"] = "Abisal Silithus"
 AL["Smokywood Pastures"] = "Pastos de Bosquehumeante"
 AL["Smokywood Pastures Special Gift"] = "Obsequio especial de Pastos de Bosquehumeante"
 AL["Stranglethorn Fishing Extravaganza"] = "Gran espectáculo de pesca de Tuercespina"
+--[[Translation missing --]]
+--[[ AL["Sunmote"] = "Sunmote"--]] 
 AL["The Duke of Cynders"] = "Duque de las Brasas"
 AL["The Duke of Fathoms"] = "Duque de las Profundidades"
 AL["The Duke of Shards"] = "Duque de las Esquirlas"
 AL["The Duke of Zephyrs"] = "Duque de los Céfiros"
 AL["The Windreaver"] = "El Atracavientos"
 AL["Tier Sets"] = "Conjuntos de Tier"
---[[Translation missing --]]
---[[ AL["Totems"] = "Totems"--]] 
+AL["Totems"] = "Tótems"
 AL["Two-Handed Weapons"] = "Armas de dos manos"
 AL["Unobtainable"] = "Inobtenible"
 AL["Wands"] = "Varitas"
