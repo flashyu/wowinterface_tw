@@ -1954,7 +1954,6 @@ NS:BuildEnv("emu");
 				SendAddonMessage(ADDON_PREFIX, ADDON_MSG_PUSH .. code .. "#" .. GUID, channel, target);
 			end
 		end
-		_G.emustream = {}
 		function NS.CHAT_MSG_ADDON(prefix, msg, channel, sender, target, zoneChannelID, localID, name, instanceID)
 			local name = Ambiguate(sender, 'none');
 			if prefix == ADDON_PREFIX then
@@ -1985,7 +1984,6 @@ NS:BuildEnv("emu");
 						end
 					end
 				elseif control_code == ADDON_MSG_REPLY_EQUIPMENTS or control_code == ADDON_MSG_REPLY_EQUIPMENTS_1 or control_code == ADDON_MSG_REPLY_EQUIPMENTS_2 then
-					tinsert(_G.emustream , msg)
 					local code = strsub(msg, ADDON_MSG_CONTROL_CODE_LEN + 1, - 1);
 					-- queryCache
 					-- NS.specializedMainFrameInspect

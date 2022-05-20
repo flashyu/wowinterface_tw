@@ -19,6 +19,10 @@ VER 3 0000000000000012 "冰霜震擊" "135849"
 /cast 冰霜震擊
 /startattack
 END
+VER 3 0000000000000016 "加速爆發" "134730"
+/use 戰鬥之鼓
+/use 急速藥水
+END
 VER 3 0000000000000004 "同速" "132157"
 /tar player
 /targetlasttarget
@@ -55,9 +59,9 @@ END
 VER 3 0000000000000015 "爆發" "INV_Misc_QuestionMark"
 #showtooltip
 /cast 血性狂暴
-/use 戰鬥之鼓
 /use 狂戰士的吶喊
 /use 嗜血胸針
+/use 戰鬥之鼓
 END
 VER 3 0000000000000013 "盾舞" "INV_MISC_QUESTIONMARK"
 #showtooltip

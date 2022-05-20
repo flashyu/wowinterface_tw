@@ -19,6 +19,10 @@ VER 3 0000000000000012 "冰霜震擊" "135849"
 /cast 冰霜震擊
 /startattack
 END
+VER 3 0000000000000016 "加速爆發" "134730"
+/use 戰鬥之鼓
+/use 急速藥水
+END
 VER 3 0000000000000004 "同速" "132157"
 /tar player
 /targetlasttarget
@@ -58,20 +62,9 @@ VER 3 0000000000000015 "爆發" "INV_Misc_QuestionMark"
 /use 狂戰士的吶喊
 /use 嗜血胸針
 END
-VER 3 0000000000000011 "爆發" "135726"
-#showtooltip
-/cast 血性狂暴
-/use 狂戰士的吶喊
-END
 VER 3 0000000000000013 "盾舞" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [modifier:alt] 閃電之盾;水之盾
-END
-VER 3 0000000000000016 "紅" "136124"
-/use 極強效治療石
-/use 角瓶虛空噴劑
-/use 極效治療藥水
-/use 超强效治療藥水
 END
 VER 3 000000000000000B "紅" "136124"
 /use 極強效治療石

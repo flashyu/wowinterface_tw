@@ -69,8 +69,7 @@ AL["Silithus Abyssal"] = "Abisal Silithus"
 AL["Smokywood Pastures"] = "Pastos de Bosquehumeante"
 AL["Smokywood Pastures Special Gift"] = "Obsequio especial de Pastos de Bosquehumeante"
 AL["Stranglethorn Fishing Extravaganza"] = "Gran espectáculo de pesca de Tuercespina"
---[[Translation missing --]]
---[[ AL["Sunmote"] = "Sunmote"--]] 
+AL["Sunmote"] = "Mota de sol"
 AL["The Duke of Cynders"] = "Duque de las Brasas"
 AL["The Duke of Fathoms"] = "Duque de las Profundidades"
 AL["The Duke of Shards"] = "Duque de las Esquirlas"
