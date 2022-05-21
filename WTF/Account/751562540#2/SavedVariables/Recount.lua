@@ -9,8 +9,8 @@ RecountDB = {
 			["GraphWindowY"] = -168.9999389648438,
 			["MainWindow"] = {
 				["Position"] = {
-					["y"] = -482.0000953674316,
-					["x"] = -408.0001220703125,
+					["y"] = -482.0000076293945,
+					["x"] = -408.0000610351563,
 					["w"] = 343,
 					["h"] = 228,
 				},
@@ -27,8 +27,8 @@ RecountDB = {
 			},
 			["DetailWindowY"] = -238.0000610351563,
 			["DetailWindowX"] = 657.6666259765625,
-			["LastInstanceName"] = "黑暗神廟",
-			["CurDataSet"] = "OverallData",
+			["LastInstanceName"] = "太阳之井",
+			["CurDataSet"] = "Fight1",
 			["GraphWindowX"] = 842.7222290039062,
 			["MainWindowWidth"] = 343.3334045410156,
 			["MainWindowHeight"] = 228.3333587646484,

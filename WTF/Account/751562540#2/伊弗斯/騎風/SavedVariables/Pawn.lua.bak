@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0538,
-	["LastPlayerFullName"] = "騎風-伊弗斯",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 31015,
@@ -57,10 +55,10 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:29301::::::::70:::::::::|h[永恆勇士指環]|h|r",
 		}, -- [11]
 		{
-			["ID"] = 32335,
-			["Level"] = 141,
+			["ID"] = 29301,
+			["Level"] = 152,
 			["AlsoFitsIn"] = 11,
-			["Link"] = "|cffa335ee|Hitem:32335::::::::70:::::::::|h[強勁侵略者指環]|h|r",
+			["Link"] = "|cffa335ee|Hitem:29301::::::::70:::::::::|h[永恒勇士之戒]|h|r",
 		}, -- [12]
 		{
 			["ID"] = 33831,
@@ -69,10 +67,10 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:33831::::::::70:::::::::|h[狂戰士的吶喊]|h|r",
 		}, -- [13]
 		{
-			["ID"] = 30627,
-			["Level"] = 128,
+			["ID"] = 33831,
+			["Level"] = 133,
 			["AlsoFitsIn"] = 13,
-			["Link"] = "|cffa335ee|Hitem:30627::::::::70:::::::::|h[海嘯護符]|h|r",
+			["Link"] = "|cffa335ee|Hitem:33831::::::::70:::::::::|h[狂暴者的召唤]|h|r",
 		}, -- [14]
 		{
 			["ID"] = 33590,
@@ -92,6 +90,8 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:32236::::::::70:::::::::|h[潮起之斧]|h|r",
 		}, -- [17]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "騎風-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

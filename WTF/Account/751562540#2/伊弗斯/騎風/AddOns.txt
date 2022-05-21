@@ -32,4 +32,5 @@ HealBot_de: disabled
 HealBot_fr: disabled
 HealBot_ExtraSkins: disabled
 ItemRackOptions: enabled
-Questie: enabled
+Questie: disabled
+TellMeWhen: enabled

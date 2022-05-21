@@ -1,27 +1,15 @@
 VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
 /stopcasting
-/cast [@mouseover,nomod,exists] 消毒術;  [@mouseover,exists,mod:ctrl] 祛病術; [@mouseover,exists,mod:shift] 淨魔術
-END
-VER 3 0000000000000005 "TT一條龍" "132865"
-#showtooltip
-/startattack
-/castsequence reset=combat 風暴打擊,烈焰震擊,風怒圖騰(等級 1),風之優雅圖騰,水之護盾,地震術,風暴打擊,風怒圖騰(等級 1),風之優雅圖騰,烈焰震擊,風暴打擊,地震術,風怒圖騰(等級 1),風之優雅圖騰,水之護盾,烈焰震擊,風暴打擊,風怒圖騰(等級 1),風之優雅圖騰,地震術
-/script UIErrorsFrame:Hide()
-END
-VER 3 0000000000000006 "一條龍" "132314"
-#showtooltip
-/startattack
-/castsequence reset=combat 風暴打擊,烈焰震擊,水之護盾,地震術,風暴打擊,烈焰震擊,風暴打擊,地震術,水之護盾,烈焰震擊,風暴打擊,地震術
-/script UIErrorsFrame:Hide()
+/cast [@mouseover,nomod,exists] 消毒术;  [@mouseover,exists,mod:ctrl] 祛病术; [@mouseover,exists,mod:shift] 净化术
 END
 VER 3 0000000000000012 "冰霜震擊" "135849"
 #showtooltip
-/cast 冰霜震擊
+/cast 冰霜震击
 /startattack
 END
 VER 3 0000000000000016 "加速爆發" "134730"
-/use 戰鬥之鼓
-/use 急速藥水
+/use 战斗之鼓
+/use 加速药水
 END
 VER 3 0000000000000004 "同速" "132157"
 /tar player
@@ -30,45 +18,48 @@ VER 3 0000000000000004 "同速" "132157"
 END
 VER 3 000000000000000A "地震術" "136026"
 #showtooltip
-/cast 地震術
+/cast 地震术
 /startattack
 END
 VER 3 0000000000000008 "坐騎" "132242"
-/cast 迅捷紅色雙足飛龍
-/cast 阿曼尼戰熊
+/cast 迅捷红色驭风者
+/cast 阿曼尼战熊
 END
 VER 3 0000000000000014 "幽靈" "136040"
 /cleartarget
 /targetenemy
-/cast 靈魂箭雨
-/cast 靈魂枷鎖
-/cast 靈魂之矛
+/cast 灵魂剑雨
+/cast 灵魂枷锁
+/cast 灵魂之矛
 END
 VER 3 0000000000000002 "打斷" "132147"
-/cast [@focus] 地震術(等級 1) 
+/cast [@focus] 地震术(等级 1) 
+END
+VER 3 0000000000000017 "攻擊宏" "132269"
+/startattack
 END
 VER 3 000000000000000F "火舞" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [modifier:alt] 熔岩圖騰(等級 5);火焰新星圖騰(等級 7) 
+/cast [modifier:alt] 熔岩图腾; 火焰新星图腾
 END
 VER 3 000000000000000D "烈焰震擊" "135813"
 #showtooltip
-/cast 烈焰震擊
+/cast 烈焰震击
 /startattack
 END
 VER 3 0000000000000015 "爆發" "INV_Misc_QuestionMark"
 #showtooltip
-/cast 血性狂暴
-/use 狂戰士的吶喊
-/use 嗜血胸針
+/cast 血性狂怒
+/use 狂暴者的召唤
+/use 嗜血胸针
+/use 战斗之鼓
 END
 VER 3 0000000000000013 "盾舞" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [modifier:alt] 閃電之盾;水之盾
+/cast [modifier:alt] 闪电之盾;水之护盾
 END
 VER 3 000000000000000B "紅" "136124"
 /use 極強效治療石
-/use 角瓶虛空噴劑
 /use 極效治療藥水
 /use 超強效治療藥水
 END
@@ -84,11 +75,10 @@ VER 3 0000000000000007 "防暫離" "132311"
 END
 VER 3 000000000000000C "風暴打擊" "132314"
 #showtooltip
-/cast 風暴打擊
+/cast 风暴打击
 /startattack
 END
 VER 3 0000000000000003 "風舞" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/startattack
-/castsequence reset=combat/15 風怒圖騰,風之優雅圖騰 
+/castsequence reset=combat/15 风怒图腾,风之优雅图腾 
 END
