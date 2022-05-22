@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 81,
+	["session"] = 85,
 	["errors"] = {
 		{
 			["message"] = "...e\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\ItemString.lua:261: bad argument #1 to 'strmatch' (string expected, got nil)",
@@ -125,20 +125,13 @@ BugGrabberDB = {
 			["counter"] = 8,
 		}, -- [16]
 		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ClassicCodex-loader' 尝试调用保护功能 'CompactRaidFrame3:Show()'。",
-			["time"] = "2022/05/21 20:46:40",
-			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:359: in function `CompactUnitFrame_UpdateVisible'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:292: in function `CompactUnitFrame_UpdateAll'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:187: in function <Interface\\FrameXML\\CompactUnitFrame.lua:187>",
-			["session"] = 78,
-			["counter"] = 1,
-		}, -- [17]
-		{
 			["message"] = "Interface\\AddOns\\DBM-Sunwell\\KalecgosFrame.lua:14: attempt to index field 'Options' (a nil value)",
 			["time"] = "2022/05/14 23:48:41",
 			["locals"] = "Skipped (In Encounter)",
 			["stack"] = "[string \"@Interface\\AddOns\\DBM-Sunwell\\KalecgosFrame.lua\"]:14: in function `initFunction'\n[string \"@Interface\\FrameXML\\UIDropDownMenu.lua\"]:79: in function `UIDropDownMenu_Initialize'\n[string \"*:OnMouseUp\"]:5: in function <[string \"*:OnMouseUp\"]:1>",
 			["session"] = 78,
 			["counter"] = 2,
-		}, -- [18]
+		}, -- [17]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ClassicCodex-loader' 尝试调用保护功能 'CompactRaidFrame34:Show()'。",
 			["time"] = "2022/05/21 22:43:27",
@@ -146,15 +139,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:359: in function `CompactUnitFrame_UpdateVisible'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:292: in function `CompactUnitFrame_UpdateAll'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:187: in function <Interface\\FrameXML\\CompactUnitFrame.lua:187>",
 			["session"] = 80,
 			["counter"] = 1,
-		}, -- [19]
-		{
-			["message"] = "Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua:300: attempt to index a nil value",
-			["time"] = "2022/04/03 15:14:50",
-			["locals"] = "GearScore = 2966\nItemLevel = 117\nRed = 0.004080\nBlue = 0.966000\nGreen = 0.517000\ni = 0\nTooltipFound = 0\n(for index) = 4\n(for limit) = 4\n(for step) = 1\ni = 4\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"\"\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index a nil value\"\n",
-			["stack"] = "[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:300: in function `GearScore_UpdateGTData'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:276: in function <Interface\\AddOns\\GearScoreLite\\GearScoreLite.lua:269>",
-			["session"] = 80,
-			["counter"] = 3669,
-		}, -- [20]
+		}, -- [18]
 		{
 			["message"] = "Interface\\AddOns\\SpellReplay\\SpellReplay.lua:89: attempt to index field '?' (a nil value)",
 			["time"] = "2022/05/07 00:04:00",
@@ -162,7 +147,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\SpellReplay\\SpellReplay.lua\"]:89: in function <Interface\\AddOns\\SpellReplay\\SpellReplay.lua:87>\n[string \"=[C]\"]: in function `SetUIVisibility'\n[string \"TOGGLEUI\"]:7: in function <[string \"TOGGLEUI\"]:1>",
 			["session"] = 80,
 			["counter"] = 6,
-		}, -- [21]
+		}, -- [19]
 		{
 			["message"] = "Interface\\AddOns\\SpellReplay\\SpellReplay.lua:67: attempt to index field '?' (a nil value)",
 			["time"] = "2022/05/07 00:04:00",
@@ -170,20 +155,51 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\SpellReplay\\SpellReplay.lua\"]:67: in function <Interface\\AddOns\\SpellReplay\\SpellReplay.lua:65>\n[string \"=[C]\"]: in function `SetUIVisibility'\n[string \"TOGGLEUI\"]:7: in function <[string \"TOGGLEUI\"]:1>",
 			["session"] = 80,
 			["counter"] = 6,
-		}, -- [22]
+		}, -- [20]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ClassicCodex-loader' 尝试调用保护功能 'CompactRaidFrame9:Hide()'。",
 			["time"] = "2022/05/22 01:17:11",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `Hide'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:361: in function `CompactUnitFrame_UpdateVisible'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:292: in function `CompactUnitFrame_UpdateAll'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:187: in function <Interface\\FrameXML\\CompactUnitFrame.lua:187>",
 			["session"] = 81,
 			["counter"] = 1,
+		}, -- [21]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ClassicCodex-loader' 尝试调用保护功能 'CompactRaidFrame3:Show()'。",
+			["time"] = "2022/05/21 20:46:40",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:359: in function `CompactUnitFrame_UpdateVisible'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:292: in function `CompactUnitFrame_UpdateAll'\n[string \"@Interface\\FrameXML\\CompactUnitFrame.lua\"]:187: in function <Interface\\FrameXML\\CompactUnitFrame.lua:187>",
+			["session"] = 83,
+			["counter"] = 2,
+		}, -- [22]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 尝试调用保护功能 'CreateFrame()'。",
+			["time"] = "2022/05/22 20:24:54",
+			["locals"] = "Skipped (In Encounter)",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:519: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:519>\n[string \"=[C]\"]: in function `CreateFrame'\n[string \"@Interface\\FrameXML\\SecureGroupHeaders.lua\"]:171: in function <Interface\\FrameXML\\SecureGroupHeaders.lua:130>\n[string \"@Interface\\FrameXML\\SecureGroupHeaders.lua\"]:495: in function `SecureGroupHeader_Update'\n[string \"@Interface\\FrameXML\\SecureGroupHeaders.lua\"]:62: in function <Interface\\FrameXML\\SecureGroupHeaders.lua:60>",
+			["session"] = 83,
+			["counter"] = 1,
 		}, -- [23]
 		{
 			["message"] = "[string \"Error in: 2.6/2.6 同速 2\"]:5: attempt to perform arithmetic on field 'expirationTime' (a nil value)",
 			["time"] = "2022/04/07 01:14:35",
 			["stack"] = "[string \"=[C]\"]: in function `xpcall'\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:611: in function <Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:537>\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:747: in function `ScanEventsInternal'\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:708: in function `ScanEvents'\n[string \"@Interface\\AddOns\\WeakAuras\\GenericTrigger.lua\"]:1433: in function <Interface\\AddOns\\WeakAuras\\GenericTrigger.lua:1431>",
-			["session"] = 81,
-			["counter"] = 31935,
+			["session"] = 83,
+			["counter"] = 35255,
 		}, -- [24]
+		{
+			["message"] = "...e\\AddOns\\TradeSkillMaster\\Core\\UI\\AuctionUI\\Core.lua:232: assertion failed!",
+			["time"] = "2022/05/23 00:10:57",
+			["locals"] = "(*temporary) = false\n",
+			["stack"] = "[string \"=[C]\"]: in function `assert'\n[string \"@Interface\\AddOns\\TradeSkillMaster\\Core\\UI\\AuctionUI\\Core.lua\"]:232: in function `callback'\n[string \"@Interface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Event.lua\"]:85: in function `ProcessEvent'\n[string \"@Interface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Event.lua\"]:101: in function <...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Event.lua:93>\n[string \"=[C]\"]: in function `CloseAuctionHouse'\n[string \"@Interface\\AddOns\\aux-addon\\frame.lua\"]:29: in function <Interface\\AddOns\\aux-addon\\frame.lua:29>\n[string \"=[C]\"]: in function `Hide'\n[string \"@Interface\\AddOns\\aux-addon\\frame.lua\"]:54: in function <Interface\\AddOns\\aux-addon\\frame.lua:54>",
+			["session"] = 83,
+			["counter"] = 1,
+		}, -- [25]
+		{
+			["message"] = "Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua:300: attempt to index a nil value",
+			["time"] = "2022/04/03 15:14:50",
+			["locals"] = "GearScore = 2966\nItemLevel = 117\nRed = 0.004080\nBlue = 0.966000\nGreen = 0.517000\ni = 0\nTooltipFound = 0\n(for index) = 4\n(for limit) = 4\n(for step) = 1\ni = 4\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"\"\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index a nil value\"\n",
+			["stack"] = "[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:300: in function `GearScore_UpdateGTData'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:276: in function <Interface\\AddOns\\GearScoreLite\\GearScoreLite.lua:269>",
+			["session"] = 84,
+			["counter"] = 3961,
+		}, -- [26]
 	},
 }

@@ -8,8 +8,8 @@ VER 3 0000000000000012 "冰霜震擊" "135849"
 /startattack
 END
 VER 3 0000000000000016 "加速爆發" "134730"
-/use 战斗之鼓
 /use 加速药水
+/use 战斗之鼓
 END
 VER 3 0000000000000004 "同速" "132157"
 /tar player
@@ -59,9 +59,9 @@ VER 3 0000000000000013 "盾舞" "INV_MISC_QUESTIONMARK"
 /cast [modifier:alt] 闪电之盾;水之护盾
 END
 VER 3 000000000000000B "紅" "136124"
-/use 極強效治療石
-/use 極效治療藥水
-/use 超強效治療藥水
+/use 极效治疗石
+/use 极效治疗药水
+/use 超强治疗药水
 END
 VER 3 0000000000000010 "脚底光圈" "133566"
 /console findyourselfmode 1

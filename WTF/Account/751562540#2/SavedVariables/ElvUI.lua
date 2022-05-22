@@ -5,12 +5,7 @@ ElvDB = {
 		["隔離 - 伊弗斯"] = "Default",
 		["我在哪 - 伊弗斯"] = "Default",
 	},
-	["gold"] = {
-		["伊弗斯"] = {
-			["我在哪"] = 0,
-			["騎風"] = 1269353125,
-			["隔離"] = 0,
-		},
+	["DisabledAddOns"] = {
 	},
 	["global"] = {
 		["general"] = {
@@ -31,11 +26,11 @@ ElvDB = {
 			},
 		},
 	},
-	["faction"] = {
+	["gold"] = {
 		["伊弗斯"] = {
-			["我在哪"] = "Horde",
-			["騎風"] = "Horde",
-			["隔離"] = "Horde",
+			["我在哪"] = 0,
+			["騎風"] = 1424638595,
+			["隔離"] = 0,
 		},
 	},
 	["serverID"] = {
@@ -50,7 +45,12 @@ ElvDB = {
 			["隔離"] = "WARLOCK",
 		},
 	},
-	["DisabledAddOns"] = {
+	["faction"] = {
+		["伊弗斯"] = {
+			["我在哪"] = "Horde",
+			["騎風"] = "Horde",
+			["隔離"] = "Horde",
+		},
 	},
 	["profiles"] = {
 		["騎風 - 伊弗斯"] = {
@@ -166,10 +166,10 @@ ElvDB = {
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-203,300",
 				["ElvUF_FocusCastbarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-530,380",
 				["ElvUF_RaidpetMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,737",
-				["ElvUF_PlayerAuraMover"] = "BOTTOM,ElvUIParent,BOTTOM,-202,331",
+				["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,77",
 				["TooltipMover"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-478,207",
 				["ElvUF_FocusMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-530,400",
-				["ArenaHeaderMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-357,304",
+				["ElvUF_TargetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,203,280",
 				["MicrobarMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,-1,0",
 				["ClassBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-202,331",
 				["DurabilityFrameMover"] = "TOPRIGHT,UIParent,TOPRIGHT,-4,-328",
@@ -187,24 +187,24 @@ ElvDB = {
 				["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,-1",
 				["ElvAB_2"] = "TOPLEFT,UIParent,TOPLEFT,4,-184",
 				["BelowMinimapContainerMover"] = "TOPRIGHT,UIParent,TOPRIGHT,-4,-236",
+				["ElvAB_4"] = "BOTTOM,ElvUIParent,BOTTOM,0,38",
 				["QuestTimerFrameMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-135,-300",
-				["TalkingHeadFrameMover"] = "BOTTOM,ElvUIParent,BOTTOM,-1,373",
 				["ReputationBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,484,4",
 				["AzeriteBarMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-3,-245",
 				["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,339,0",
 				["ElvAB_5"] = "TOPLEFT,UIParent,TOPLEFT,4,-67",
 				["VehicleLeaveButton"] = "BOTTOM,UIParent,BOTTOM,191,445",
 				["AltPowerBarMover"] = "TOP,ElvUIParent,TOP,-1,-36",
-				["ElvAB_4"] = "BOTTOM,ElvUIParent,BOTTOM,0,38",
+				["TalkingHeadFrameMover"] = "BOTTOM,ElvUIParent,BOTTOM,-1,373",
 				["ObjectiveFrameMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-163,-325",
 				["BNETMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-273",
 				["ElvNP_PlayerMover"] = "TOP,UIParent,CENTER,0,-150",
 				["VOICECHAT"] = "TOPLEFT,ElvUIParent,TOPLEFT,4,-150",
 				["HonorBarMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-3,-255",
-				["ElvUF_TargetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,203,280",
+				["ArenaHeaderMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-357,304",
 				["ElvAB_10"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,276",
 				["ElvUF_TankMover"] = "TOPLEFT,UIParent,TOPLEFT,4,-34",
-				["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,77",
+				["ElvUF_PlayerAuraMover"] = "BOTTOM,ElvUIParent,BOTTOM,-202,331",
 				["ElvUF_PetMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,418,287",
 				["ElvAB_7"] = "TOP,ElvUIParent,TOP,0,-539",
 				["ElvUF_PartyMover"] = "TOPLEFT,UIParent,TOPLEFT,4,-222",
@@ -235,6 +235,7 @@ ElvDB = {
 						["debuffs"] = {
 							["enable"] = true,
 						},
+						["enable"] = true,
 						["infoPanel"] = {
 							["enable"] = true,
 						},
