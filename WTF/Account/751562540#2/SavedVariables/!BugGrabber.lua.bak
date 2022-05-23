@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 84,
 	["lastSanitation"] = 3,
+	["session"] = 87,
 	["errors"] = {
 		{
 			["message"] = "...e\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\ItemString.lua:261: bad argument #1 to 'strmatch' (string expected, got nil)",
