@@ -3,11 +3,11 @@ VERSION 7
 ADDEDVERSION 22
 
 CHANNELS
-尋求組隊 1 1 0
-綜合 0 2 0
-交易 0 3 0
-本地防務 0 4 0
-鏡花水月 1 5 0
+尋求組隊 1 2 0
+鏡花水月 1 3 0
+交易 0 4 0
+寻求组队 1 5 0
+交易頻道 1 6 0
 END
 
 ZONECHANNELS 0
@@ -152,6 +152,8 @@ END
 
 CHANNELS
 尋求組隊
+寻求组队
+交易頻道
 END
 
 ZONECHANNELS 2097155

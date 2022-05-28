@@ -2,13 +2,9 @@ VER 3 0000000001000004 "1321" "INV_MISC_QUESTIONMARK"
 #showtooltip 風之優雅圖騰(等級 3)
 /castsequence reset=target 風怒圖騰(等級 5),風之優雅圖騰(等級 3)
 END
-VER 3 0000000001000003 "TT Cast" "INV_Misc_QuestionMark"
-#showtooltips
-/castsequence reset=combat/15 熔岩圖騰(等級 5), 戰慄圖騰, 法力之泉圖騰(等級 5), 風之優雅圖騰(等級 3)
-END
 VER 3 0000000001000002 "TT Cast" "INV_MISC_QUESTIONMARK"
 #showtooltips
-/castsequence reset=combat/15 熔岩圖騰(等級 5), 大地之力圖騰(等級 6), 法力之泉圖騰(等級 5), 風之優雅圖騰(等級 3)
+/castsequence reset=combat/15 熔岩圖騰(等級 5), 戰慄圖騰, 法力之泉圖騰(等級 5), 風之優雅圖騰(等級 3)
 END
 VER 3 0000000001000005 "TT Cast" "INV_Misc_QuestionMark"
 #showtooltips
@@ -19,6 +15,10 @@ VER 3 0000000001000007 "TT Cast" "INV_Misc_QuestionMark"
 /castsequence reset=combat/15 灼熱圖騰(等級 5), 石甲圖騰(等級 6), 治療之泉圖騰(等級 4), 根基圖騰
 END
 VER 3 0000000001000006 "TT Cast" "INV_Misc_QuestionMark"
+#showtooltips
+/castsequence reset=combat/15 熔岩圖騰(等級 5), 戰慄圖騰, 法力之泉圖騰(等級 5), 風之優雅圖騰(等級 3)
+END
+VER 3 0000000001000003 "TT Cast" "INV_Misc_QuestionMark"
 #showtooltips
 /castsequence reset=combat/15 熔岩圖騰(等級 5), 戰慄圖騰, 法力之泉圖騰(等級 5), 風之優雅圖騰(等級 3)
 END

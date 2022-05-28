@@ -2,6 +2,9 @@ VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
 /stopcasting
 /cast [@mouseover,nomod,exists] 消毒术;  [@mouseover,exists,mod:ctrl] 祛病术; [@mouseover,exists,mod:shift] 净化术
 END
+VER 3 0000000000000019 "亂碼" "INV_MISC_QUESTIONMARK"
+/console SET profanityFilter "0"
+END
 VER 3 0000000000000018 "停止攻擊" "132598"
 /stopattack
 END

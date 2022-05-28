@@ -410,6 +410,9 @@ AutoBarDB = {
 	["chars"] = {
 		["騎風 - 伊弗斯"] = {
 			["buttonDataList"] = {
+				["AutoBarButtonBuffWeapon1"] = {
+					["arrangeOnUse"] = "风怒武器",
+				},
 				["AutoBarButtonBuff"] = {
 					["arrangeOnUse"] = 27498,
 				},
@@ -417,7 +420,7 @@ AutoBarDB = {
 					["arrangeOnUse"] = "空气之怒图腾",
 				},
 				["AutoBarButtonRaidTarget"] = {
-					["arrangeOnUse"] = "macrotext:4",
+					["arrangeOnUse"] = "macrotext:8",
 				},
 			},
 			["barList"] = {
