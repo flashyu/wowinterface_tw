@@ -44,6 +44,10 @@ END
 VER 3 0000000000000017 "攻擊宏" "132269"
 /startattack
 END
+VER 3 000000000000001A "救命" "136043"
+/cast 自然迅捷
+/cast 治療波
+END
 VER 3 000000000000000F "火舞" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /cast [modifier:alt] 熔岩图腾; 火焰新星图腾

@@ -144,6 +144,9 @@ function QuestieTBCQuestFixes:Load()
         [1719] = {
             [questKeys.triggerEnd] = {"Step on the grate to begin the Affray", {[zoneIDs.THE_BARRENS]={{68.61,48.72}}}},
         },
+        [1799] = {
+            [questKeys.preQuestSingle] = {4967,4969},
+        },
         [1800] = {
             [questKeys.questLevel] = -1,
         },
@@ -184,6 +187,11 @@ function QuestieTBCQuestFixes:Load()
         [3505] = {
             [questKeys.triggerEnd] = {"Find Magus Rimtori's camp", {[zoneIDs.AZSHARA]={{59.29,31.21}}}},
         },
+        [3631] = {
+            [questKeys.startedBy] = {{3326}},
+            [questKeys.finishedBy] = {{6251}},
+            [questKeys.requiredRaces] = raceIDs.ORC + raceIDs.UNDEAD + raceIDs.BLOOD_ELF,
+        },
         [4021] = {
             [questKeys.extraObjectives] = {{{[zoneIDs.THE_BARRENS]={{44.7,28.1}}}, ICON_TYPE_EVENT, "Defeat Centaur to summon Warlord Krom'zar", 0}}
         },
@@ -193,7 +201,22 @@ function QuestieTBCQuestFixes:Load()
         [4486] = {
             [questKeys.startedBy] = {}, -- Hiding via startedBy because the quest does not exist in TBC, but does in Era
         },
-        [4740] = {
+        [4487] = {
+            [questKeys.startedBy] = {{5172}},
+            [questKeys.finishedBy] = {{6251}},
+        },
+        [4488] = {
+            [questKeys.startedBy] = {{461}},
+            [questKeys.finishedBy] = {{6251}},
+        },
+        [4489] = {
+            [questKeys.startedBy] = {{4563}},
+            [questKeys.finishedBy] = {{6251}},
+            [questKeys.requiredRaces] = raceIDs.ORC + raceIDs.UNDEAD + raceIDs.BLOOD_ELF,
+        },
+        [4490] = {
+            [questKeys.startedBy] = {{6251}},
+            [questKeys.finishedBy] = {{6251}},
             [questKeys.requiredRaces] = raceIDs.ALL_ALLIANCE,
         },
         [4822] = {
@@ -2423,8 +2446,15 @@ function QuestieTBCQuestFixes:Load()
         [11446] = {
             [questKeys.startedBy] = {{19169,19175,19176,19177,19178,20102},nil,nil}
         },
+        [11481] = {
+            [questKeys.requiredMinRep] = {932,3000},
+        },
+        [11482] = {
+            [questKeys.requiredMinRep] = {934,3000},
+        },
         [11496] = {
-            [questKeys.triggerEnd] = {"Energize a Crystal Ward", {[zoneIDs.SUNWELL_PLATEAU]={{47.7,34.52},{48.43,31.21}}}},
+            [questKeys.extraObjectives] = {{nil, ICON_TYPE_EVENT, "Energize a Crystal Ward", 0, {{"object", 187078}}}},
+            [questKeys.triggerEnd] = {"Energize a Crystal Ward", {}}, -- Dummy to not tirgger objective missing error
         },
         [11502] = {
             [questKeys.requiredMinRep] = {978,0},
@@ -2438,11 +2468,61 @@ function QuestieTBCQuestFixes:Load()
         [11506] = {
             [questKeys.triggerEnd] = {"Secure a Spirit Tower", {[zoneIDs.TEROKKAR_FOREST]={{42.49,54},{32.47,57.86},{48.98,60.29},{47.2,72.29},{40.48,77.99}}}},
         },
+        [11513] = {
+            [questKeys.preQuestSingle] = {},
+        },
+        [11514] = {
+            [questKeys.preQuestSingle] = {},
+        },
+        [11515] = {
+            [questKeys.requiredSourceItems] = {34259},
+            [questKeys.extraObjectives] = {{nil, ICON_TYPE_SLAY, "Use Fel Siphon and then kill the weakened Felblood Initiate", 0, {{"monster", 24918}}}},
+        },
         [11516] = {
             [questKeys.triggerEnd] = {"Legion Gateway Destroyed", {[zoneIDs.HELLFIRE_PENINSULA]={{58.51,18.5}}}},
+            [questKeys.extraObjectives] = {{nil, ICON_TYPE_SLAY, "Kill Incandescent Fel Sparks after summoning your Living Flare", 0, {{"monster", 22323}}}},
+        },
+        [11517] = {
+            [questKeys.exclusiveTo] = {11513,11514},
+            [questKeys.requiredMinRep] = {932,3000},
+        },
+        [11520] = {
+            [questKeys.extraObjectives] = {
+                {nil, ICON_TYPE_EVENT, "Use Razorthorn Flayer Gland on Razorthorn Ravager to tame it", 0, {{"monster", 24922}}},
+                {nil, ICON_TYPE_OBJECT, "Use Expose Razorthorn Root of your tamed Razorthorn Ravager to expose Razorthorn Root", 0, {{"object", 187073}}},
+            },
         },
         [11523] = {
-            [questKeys.triggerEnd] = {"Energize a Crystal Ward", {[zoneIDs.SUNWELL_PLATEAU]={{47.7,34.52},{48.43,31.21}}}},
+            [questKeys.extraObjectives] = {{nil, ICON_TYPE_EVENT, "Energize a Crystal Ward", 0, {{"object", 187078}}}},
+            [questKeys.triggerEnd] = {"Energize a Crystal Ward", {}}, -- Dummy to not tirgger objective missing error
+        },
+        [11524] = {
+            [questKeys.objectives] = {{{24972, "Converted Sentry Deployed"}}},
+        },
+        [11525] = {
+            [questKeys.objectives] = {{{24972, "Converted Sentry Deployed"}}},
+        },
+        [11526] = {
+            [questKeys.preQuestSingle] = {},
+        },
+        [11532] = {
+            [questKeys.extraObjectives] = {{nil, ICON_TYPE_EVENT, "Speak to Ayren Cloudbreaker", 0, {{"monster", 25059}}}},
+        },
+        [11533] = {
+            [questKeys.extraObjectives] = {{nil, ICON_TYPE_EVENT, "Speak to Ayren Cloudbreaker", 0, {{"monster", 25059}}}},
+        },
+        [11534] = {
+            [questKeys.exclusiveTo] = {11513,11514},
+            [questKeys.requiredMinRep] = {934,3000},
+        },
+        [11537] = {
+            [questKeys.objectives] = {{{25003,"Emissary of Hate Impaled"},},nil,nil,nil,{{24999,25001,25002,25008,25068,},25068},},
+        },
+        [11538] = {
+            [questKeys.objectives] = {{{25003,"Emissary of Hate Impaled"},},nil,nil,nil,{{24999,25001,25002,25008,25068,},25068},},
+        },
+        [11544] = {
+            [questKeys.extraObjectives] = {{nil, ICON_TYPE_EVENT, "Break down Ata'mal Metal on the anvil to cleanse it", 0, {{"object", 187111}}}},
         },
         [11580] = {
             [questKeys.startedBy] = {nil,{187559},nil},
@@ -2912,6 +2992,15 @@ function QuestieTBCQuestFixes:Load()
         },
         [11863] = {
             [questKeys.startedBy] = {{25947},nil,nil},
+        },
+        [11875] = {
+            [questKeys.preQuestSingle] = {},
+        },
+        [11877] = {
+            [questKeys.preQuestSingle] = {},
+        },
+        [11880] = {
+            [questKeys.preQuestSingle] = {},
         },
         [11882] = {
             [questKeys.startedBy] = {{25962},nil,nil},

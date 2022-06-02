@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0538,
+	["LastPlayerFullName"] = "騎風-伊弗斯",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 31015,
@@ -73,9 +75,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:33831::::::::70:::::::::|h[狂暴者的召唤]|h|r",
 		}, -- [14]
 		{
-			["ID"] = 33590,
-			["Level"] = 128,
-			["Link"] = "|cffa335ee|Hitem:33590::::::::70:::::::::|h[惡魔披風]|h|r",
+			["ID"] = 33484,
+			["Level"] = 136,
+			["Link"] = "|cffa335ee|Hitem:33484::::::::70:::::::::|h[多莉的拥抱]|h|r",
 		}, -- [15]
 		{
 			["ID"] = 30312,
@@ -84,14 +86,11 @@ PawnOptions = {
 			["Link"] = "|cffff8000|Hitem:30312::::::::70:::::::::|h[無盡之刃]|h|r",
 		}, -- [16]
 		{
-			["ID"] = 32236,
-			["Level"] = 141,
-			["AlsoFitsIn"] = 16,
-			["Link"] = "|cffa335ee|Hitem:32236::::::::70:::::::::|h[潮起之斧]|h|r",
+			["ID"] = 34346,
+			["Level"] = 154,
+			["Link"] = "|cffa335ee|Hitem:34346::::::::70:::::::::|h[复仇]|h|r",
 		}, -- [17]
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "騎風-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {
