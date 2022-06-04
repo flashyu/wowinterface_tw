@@ -454,6 +454,7 @@ function HealBot_Lang_enALL()
     HEALBOT_WORD_EXTREME                    = "Extreme"
     HEALBOT_WORD_CASTER                     = "Caster"
     HEALBOT_WORD_TYPE                       = "Type"
+    HEALBOT_WORD_FROM                       = "From"
     
 
     HEALBOT_ASSIST                          = "Assist";
@@ -688,6 +689,8 @@ function HealBot_Lang_enALL()
     HEALBOT_OPTIONS_COMBOAUTOTARGET         = "Auto\nTarget"
     HEALBOT_OPTIONS_COMBOAUTOTRINKET        = "Auto Trinket"
     HEALBOT_OPTIONS_GROUPSPERCOLUMN         = "Use Groups per Column"
+    HEALBOT_WORD_WHISPER                    = "Whisper"
+    HEALBOT_WORD_GUILD                      = "Guild"
 
     HEALBOT_OPTIONS_MAINSORT                = "Main sort"
     HEALBOT_OPTIONS_SUBSORT                 = "Sub sort"
@@ -718,11 +721,14 @@ function HealBot_Lang_enALL()
     HEALBOT_OPTIONS_EXPORTSKIN              = "Select Skin"
     HEALBOT_OPTIONS_EXTRASKINS              = "Extra Skins"
     HEALBOT_OPTIONS_BUTTONEXPORT            = "Export"
+    HEALBOT_OPTIONS_BUTTONPOSTLINK          = "Post Link"
+    HEALBOT_OPTIONS_BUTTONPOST              = "Post"
     HEALBOT_OPTIONS_BUTTONIMPORT            = "Import"
     HEALBOT_OPTIONS_BUTTONIMPORTMETHOD      = "Import Method"
-    HEALBOT_IMPORT_OVERWRITEALL             = "Overwrite All (Delete existing then insert all)"
-    HEALBOT_IMPORT_MERGEALL                 = "Merge All (Update existing and insert new)"
-    HEALBOT_IMPORT_MERGENEW                 = "Merge New (Only insert new)"
+    HEALBOT_IMPORT_OVERWRITEALL             = "Overwrite All"
+    HEALBOT_IMPORT_MERGEALL                 = "Merge All"
+    HEALBOT_IMPORT_MERGENEW                 = "Merge New"
+    HEALBOT_IMPORT_CREATEORREPLACE          = "Create or Replace"
 
     HEALBOT_CHAT_ADDONID                    = "[HealBot]  "
     HEALBOT_CHAT_NEWVERSION1                = "A newer version is available"
@@ -744,7 +750,7 @@ function HealBot_Lang_enALL()
     HEALBOT_CHAT_CONFIRMCURESRESET          = "Cures have been reset"
     HEALBOT_CHAT_CONFIRMBUFFSRESET          = "Buffs have been reset"
     HEALBOT_CHAT_CONFIRMICONRESET           = "Icons have been reset"
-    HEALBOT_CHAT_POSSIBLEMISSINGMEDIA       = "Unable to receive all Skin settings - Possibly missing SharedMedia, download from curse.com"
+    HEALBOT_CHAT_POSSIBLEMISSINGMEDIA       = "Unable to receive all Skin settings - Possibly missing SharedMedia"
     HEALBOT_CHAT_MACROSOUNDON               = "Sound not suppressed when using auto trinkets"
     HEALBOT_CHAT_MACROSOUNDOFF              = "Sound suppressed when using auto trinkets"
     HEALBOT_CHAT_MACROERRORON               = "Errors not suppressed when using auto trinkets"
@@ -906,7 +912,8 @@ function HealBot_Lang_enALL()
     HEALBOT_SKIN_INCHEALBARCOL_TEXT         = "Incoming heals";
     HEALBOT_OPTIONS_GROUP_PETS_BY_FIVE      = "Pets: Groups of five"
     HEALBOT_OPTIONS_OWN_PET_WITH_SELF       = "Own pet: with self"
-    HEALBOT_OPTIONS_USEGAMETOOLTIP          = "Use Game Tooltip"
+    HEALBOT_OPTIONS_USEGAMETOOLTIP          = "Use game tooltip style"
+    HEALBOT_OPTIONS_SHOWWOWTOOLTIP          = "Show game tooltip information"
     HEALBOT_OPTIONS_SHOWPOWERCOUNTER        = "Show power counter"
     HEALBOT_OPTIONS_SHOWPOWERCOUNTER_PALA   = "Show holy power"
     HEALBOT_OPTIONS_SHOWPOWERCOUNTER_ROGU   = "Show combo points"
@@ -1313,6 +1320,23 @@ function HealBot_Lang_enALL()
     HEALBOT_OPTIONS_LANG_ADDON_FAIL3        = "Note in the current version, this is the only warning for"
     HEALBOT_OPTIONS_IMPORT_FAIL1            = "Failed to Import"
     HEALBOT_OPTIONS_IMPORT_FAIL2            = "Reason for failure is:"
+    HEALBOT_OPTIONS_IMPORT_VALID1           = "Valid Import"
+    HEALBOT_OPTIONS_IMPORT_VALID2           = " data ready to be loaded\n\nContinue?"
+    HEALBOT_OPTIONS_LINK_REQUEST_DENIED     = "Link Request Denied\n\nPlease wait a few seconds before sending another request."
+    HEALBOT_OPTIONS_LINK_REQUEST1           = "HealBot Share Request"
+    HEALBOT_OPTIONS_LINK_CREATELR           = "Create HealBot Share Request Link"
+    HEALBOT_OPTIONS_LINK_REQUEST2           = "This is how your share request is presented."
+    HEALBOT_OPTIONS_LINK_REQUESTSENDQ       = "Send Request?"
+    HEALBOT_OPTIONS_LINK_WAITQUEUE          = "Waiting in queue";
+    HEALBOT_OPTIONS_LINK_TRANSCOMPLETE      = "Transfer complete";
+    HEALBOT_OPTIONS_LINK_TRANSSTARTED       = "Transfer started";
+    HEALBOT_OPTIONS_LINK_TRANSINPROGRESS    = "Transfer in progress ";
+    HEALBOT_OPTIONS_LINK_POSTCHANNEL        = "Post to channel";
+    HEALBOT_OPTIONS_LINK_POSTWHISPER        = "Whisper other HealBot users.";
+    HEALBOT_OPTIONS_LINK_CHAN1              = "Comms are sent using the addon channels. This means:"
+    HEALBOT_OPTIONS_LINK_CHAN2              = "-  Only HealBot users will receive your link."
+    HEALBOT_OPTIONS_LINK_CHAN3              = "-  Your link is displayed in their default chat channel."
+    HEALBOT_OPTIONS_LINK_CHAN4              = "-  You can whisper yourself to see how this works."
     
     HEALBOT_OPTIONS_ADDON_FAIL              = "Failed to load headbot addon"
     

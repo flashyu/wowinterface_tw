@@ -1,6 +1,6 @@
 
 HealBot_Config = {
-	["BuffReset"] = "6.0.0",
+	["Skin_ID"] = -1,
 	["MacroUse10"] = 0,
 	["SkinDefault"] = {
 		["Standard"] = {
@@ -9,11 +9,11 @@ HealBot_Config = {
 			["BG 40"] = false,
 			["Party"] = false,
 			["BG 10"] = false,
-			["Raid 25"] = false,
+			["Pet Battle"] = false,
 			["Raid 40"] = false,
 			["Arena"] = false,
 			["BG 15"] = false,
-			["Pet Battle"] = false,
+			["Raid 25"] = false,
 		},
 		["Raid 40"] = {
 			["Raid 10"] = false,
@@ -21,11 +21,11 @@ HealBot_Config = {
 			["BG 40"] = false,
 			["Party"] = false,
 			["BG 10"] = false,
-			["Raid 25"] = false,
+			["Pet Battle"] = false,
 			["Raid 40"] = false,
 			["Arena"] = false,
 			["BG 15"] = false,
-			["Pet Battle"] = false,
+			["Raid 25"] = false,
 		},
 		["Group"] = {
 			["Raid 10"] = false,
@@ -33,11 +33,11 @@ HealBot_Config = {
 			["BG 40"] = false,
 			["Party"] = false,
 			["BG 10"] = false,
-			["Raid 25"] = false,
+			["Pet Battle"] = false,
 			["Raid 40"] = false,
 			["Arena"] = false,
 			["BG 15"] = false,
-			["Pet Battle"] = false,
+			["Raid 25"] = false,
 		},
 		["Raid 25"] = {
 			["Raid 10"] = false,
@@ -45,23 +45,23 @@ HealBot_Config = {
 			["BG 40"] = false,
 			["Party"] = false,
 			["BG 10"] = false,
-			["Raid 25"] = false,
+			["Pet Battle"] = false,
 			["Raid 40"] = false,
 			["Arena"] = false,
 			["BG 15"] = false,
-			["Pet Battle"] = false,
+			["Raid 25"] = false,
 		},
 	},
 	["MyFriend"] = "x",
-	["LastVersionUpdate"] = "9.2.0.11",
-	["Skin_ID"] = -1,
+	["LastVersionUpdate"] = "9.2.0.13",
+	["BuffReset"] = "6.0.0",
 	["Profile"] = 1,
-	["LastAutoSkinChangeType"] = "None",
-	["EnableHealthy"] = true,
-	["LastAutoSkinChangeTime"] = 0,
-	["DisableSolo"] = false,
-	["CurrentSpec"] = 1,
 	["DisableHealBot"] = false,
+	["CurrentSpec"] = 1,
+	["DisableSolo"] = false,
+	["LastAutoSkinChangeTime"] = 0,
+	["EnableHealthy"] = true,
+	["LastAutoSkinChangeType"] = "None",
 	["DisabledNow"] = 0,
 }
 HealBot_Config_Spells = {
@@ -79,10 +79,11 @@ HealBot_Config_Spells = {
 	},
 	["EmergSpellTrinket1"] = {
 	},
-	["ButtonCastMethod"] = 2,
+	["EnemyKeyCombo"] = {
+	},
 	["EmergAvoidBlueCursor"] = {
 	},
-	["EmergSpellTrinket2"] = {
+	["EnemySpellTarget"] = {
 	},
 	["EmergSpellTarget"] = {
 	},
@@ -112,25 +113,25 @@ HealBot_Config_Spells = {
 		["Alt-ShiftLeft"] = "C:A",
 		["Alt-ShiftRight1"] = "C:B",
 		["CtrlLeft1"] = "S:1064",
-		["ShiftMiddle1"] = "S:6377",
-		["Ctrl-ShiftLeft"] = "C:D",
+		["Left3"] = "S:331",
+		["Ctrl-ShiftLeft3"] = "C:D",
 		["ShiftLeft2"] = "S:10622",
 		["Alt-ShiftLeft4"] = "C:A",
 		["Ctrl-ShiftRight4"] = "C:E",
 		["Left2"] = "S:331",
-		["Right1"] = "S:25420",
 		["ShiftLeft3"] = "S:10622",
+		["Ctrl-ShiftLeft"] = "C:D",
 		["ShiftMiddle"] = "S:6377",
 		["Alt-ShiftRight"] = "C:B",
-		["Alt-ShiftLeft3"] = "C:A",
-		["Right4"] = "S:8004",
-		["ShiftMiddle2"] = "S:6377",
-		["ShiftLeft1"] = "S:10622",
-		["Ctrl-ShiftRight3"] = "C:E",
 		["Left"] = "S:331",
+		["Right4"] = "S:8004",
+		["Ctrl-ShiftRight3"] = "C:E",
+		["ShiftLeft1"] = "S:10622",
+		["ShiftMiddle2"] = "S:6377",
+		["Alt-ShiftLeft3"] = "C:A",
 		["ShiftLeft"] = "S:10622",
-		["Ctrl-ShiftLeft3"] = "C:D",
-		["Left3"] = "S:331",
+		["Right1"] = "S:25420",
+		["ShiftMiddle1"] = "S:6377",
 	},
 	["EmergKeyCombo"] = {
 	},
@@ -138,10 +139,9 @@ HealBot_Config_Spells = {
 	},
 	["EnabledAvoidBlueCursor"] = {
 	},
-	["EnemySpellTarget"] = {
+	["EmergSpellTrinket2"] = {
 	},
-	["EnemyKeyCombo"] = {
-	},
+	["ButtonCastMethod"] = 2,
 }
 HealBot_Config_Buffs = {
 	["CustomItemName"] = {
@@ -199,11 +199,7 @@ HealBot_Config_Buffs = {
 	["ShowBuffWarning"] = false,
 	["PalaBlessingsAsOne"] = false,
 	["BuffWatchInCombat"] = false,
-	["CustomBuffName"] = {
-		"", -- [1]
-		"", -- [2]
-		"", -- [3]
-	},
+	["LongBuffTimer"] = 120,
 	["HealBot_CBWarnRange_Sound"] = 3,
 	["CustomBuffCheck"] = {
 		false, -- [1]
@@ -211,24 +207,7 @@ HealBot_Config_Buffs = {
 		false, -- [3]
 	},
 	["SoundBuffWarning"] = false,
-	["HealBotBuffColR"] = {
-		1, -- [1]
-		1, -- [2]
-		1, -- [3]
-		1, -- [4]
-		1, -- [5]
-		1, -- [6]
-		1, -- [7]
-		1, -- [8]
-		1, -- [9]
-		1, -- [10]
-		1, -- [11]
-		1, -- [12]
-		1, -- [13]
-		1, -- [14]
-	},
-	["SoundBuffPlay"] = "Tribal Bass Drum",
-	["BuffWatchWhenGrouped"] = false,
+	["NoAuraWhenRested"] = false,
 	["HealBotBuffDropDown"] = {
 		4, -- [1]
 		4, -- [2]
@@ -275,7 +254,24 @@ HealBot_Config_Buffs = {
 		["22"] = 4,
 		["32"] = 4,
 	},
-	["NoAuraWhenRested"] = false,
+	["BuffWatchWhenGrouped"] = false,
+	["SoundBuffPlay"] = "Tribal Bass Drum",
+	["HealBotBuffColR"] = {
+		1, -- [1]
+		1, -- [2]
+		1, -- [3]
+		1, -- [4]
+		1, -- [5]
+		1, -- [6]
+		1, -- [7]
+		1, -- [8]
+		1, -- [9]
+		1, -- [10]
+		1, -- [11]
+		1, -- [12]
+		1, -- [13]
+		1, -- [14]
+	},
 	["HealBotBuffText"] = {
 		"空", -- [1]
 		"空", -- [2]
@@ -288,39 +284,43 @@ HealBot_Config_Buffs = {
 		"空", -- [9]
 		["42"] = "空",
 		["43"] = "空",
-		["32"] = "空",
+		["23"] = "空",
 		["41"] = "空",
 		["47"] = "空",
 		["46"] = "空",
 		["34"] = "空",
 		["44"] = "空",
 		["48"] = "空",
-		["11"] = "空",
+		["33"] = "空",
 		["28"] = "空",
 		["38"] = "空",
-		["12"] = "空",
-		["31"] = "空",
-		["26"] = "空",
-		["16"] = "空",
-		["24"] = "空",
-		["14"] = "空",
-		["22"] = "空",
-		["36"] = "空",
+		["21"] = "空",
+		["13"] = "空",
+		["17"] = "空",
+		["27"] = "空",
+		["15"] = "空",
+		["25"] = "空",
+		["35"] = "空",
+		["45"] = "空",
 		["37"] = "空",
 		["18"] = "空",
-		["45"] = "空",
-		["35"] = "空",
-		["25"] = "空",
-		["15"] = "空",
-		["27"] = "空",
-		["17"] = "空",
-		["13"] = "空",
-		["21"] = "空",
-		["33"] = "空",
-		["23"] = "空",
+		["36"] = "空",
+		["22"] = "空",
+		["14"] = "空",
+		["24"] = "空",
+		["16"] = "空",
+		["26"] = "空",
+		["31"] = "空",
+		["12"] = "空",
+		["11"] = "空",
+		["32"] = "空",
 	},
 	["HealBot_CBWarnRange_Bar"] = 3,
-	["LongBuffTimer"] = 120,
+	["CustomBuffName"] = {
+		"", -- [1]
+		"", -- [2]
+		"", -- [3]
+	},
 }
 HealBot_Config_Cures = {
 	["CDCshownHB"] = true,
@@ -342,15 +342,15 @@ HealBot_Config_Cures = {
 		["42"] = "空",
 		["43"] = "空",
 		["41"] = "空",
-		["32"] = "空",
-		["11"] = "空",
-		["21"] = "空",
-		["31"] = "空",
-		["22"] = "空",
-		["13"] = "空",
-		["12"] = "空",
-		["33"] = "空",
 		["23"] = "空",
+		["33"] = "空",
+		["12"] = "空",
+		["13"] = "空",
+		["22"] = "空",
+		["31"] = "空",
+		["21"] = "空",
+		["11"] = "空",
+		["32"] = "空",
 	},
 	["IgnoreFastDurDebuffs"] = true,
 	["ShowDebuffWarning"] = true,
@@ -365,6 +365,8 @@ HealBot_Config_Cures = {
 	["ShowTimeMaxDuration"] = 31,
 	["IgnoreFastDurDebuffsSecs"] = 2,
 	["HealBot_CDCWarnRange_Bar"] = 3,
+	["SoundDebuffPlay"] = "Tribal Bass Drum",
+	["HealBot_CDCWarnRange_Sound"] = 3,
 	["HealBotDebuffDropDown"] = {
 		4, -- [1]
 		4, -- [2]
@@ -372,44 +374,42 @@ HealBot_Config_Cures = {
 		["42"] = 4,
 		["43"] = 4,
 		["41"] = 4,
-		["32"] = 4,
-		["11"] = 4,
-		["21"] = 4,
-		["31"] = 4,
-		["22"] = 4,
-		["13"] = 4,
-		["12"] = 4,
-		["33"] = 4,
 		["23"] = 4,
+		["33"] = 4,
+		["12"] = 4,
+		["13"] = 4,
+		["22"] = 4,
+		["31"] = 4,
+		["21"] = 4,
+		["11"] = 4,
+		["32"] = 4,
 	},
-	["HealBot_CDCWarnRange_Sound"] = 3,
-	["DebuffWatchWhenGrouped"] = false,
 	["SoundDebuffWarning"] = false,
-	["SoundDebuffPlay"] = "Tribal Bass Drum",
-	["HealBot_CDCWarnRange_Screen"] = 2,
+	["DebuffWatchWhenGrouped"] = false,
+	["IgnoreFriendDebuffs"] = false,
 	["AlwaysShowTimed"] = false,
 	["IgnoreOnCooldownDebuffs"] = false,
-	["IgnoreFriendDebuffs"] = false,
+	["HealBot_CDCWarnRange_Screen"] = 2,
 	["CDCBarColour"] = {
 		["Disease"] = {
-			["R"] = 0.55,
-			["G"] = 0.19,
 			["B"] = 0.7,
+			["G"] = 0.19,
+			["R"] = 0.55,
 		},
 		["Poison"] = {
-			["R"] = 0.12,
-			["G"] = 0.46,
 			["B"] = 0.24,
+			["G"] = 0.46,
+			["R"] = 0.12,
 		},
 		["Magic"] = {
-			["R"] = 0.26,
-			["G"] = 0.33,
 			["B"] = 0.83,
+			["G"] = 0.33,
+			["R"] = 0.26,
 		},
 		["Curse"] = {
-			["R"] = 0.83,
-			["G"] = 0.43,
 			["B"] = 0.09,
+			["G"] = 0.43,
+			["R"] = 0.83,
 		},
 	},
 	["HealBotDebuffPriority"] = {

@@ -5,8 +5,13 @@ local HealBotAddonSummaryNoCommsSort={}
 local _
 
 local qAddonMsg={}
-function HealBot_Comms_SendAddonMsg(addon_id, msg, aType, pName)
-    local aMsg=addon_id.."~"..msg.."~"..aType.."~"..pName
+function HealBot_Comms_SendAddonMsg(msg, aType, pName)
+    local aMsg=""
+    if pName then
+        aMsg=msg.."~"..aType.."~"..pName
+    else
+        aMsg=msg.."~"..aType
+    end
     local unique=true;
     table.foreach(qAddonMsg, function (index,msg)
         if msg==aMsg then unique=false; end
@@ -16,38 +21,32 @@ function HealBot_Comms_SendAddonMsg(addon_id, msg, aType, pName)
     end
 end
 
+local function HealBot_Comms_SendInstantAddonMsg(addon_id, msg)
+    if IsInRaid() then
+        C_ChatInfo.SendAddonMessage(HEALBOT_HEALBOT, msg, "RAID")
+    elseif IsInGroup() then
+        C_ChatInfo.SendAddonMessage(HEALBOT_HEALBOT, msg, "PARTY")
+    end
+end
+
 function HealBot_Comms_SendAddonMessage()
     if #qAddonMsg>0 then
         local aMsg=qAddonMsg[1]
         table.remove(qAddonMsg,1)
         
-        local addon_id, msg, aType, pName=string.split("~", aMsg)
+        local msg, aType, pName=string.split("~", aMsg)
         aType=tonumber(aType)
-        if aType<4 then
-            if IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
-                C_ChatInfo.SendAddonMessage(addon_id, msg, "INSTANCE_CHAT" );
-            elseif IsInRaid() then
-                C_ChatInfo.SendAddonMessage(addon_id, msg, "RAID" );
-            elseif IsInGroup() then
-                C_ChatInfo.SendAddonMessage(addon_id, msg, "PARTY" );
-            end
-        elseif aType==4 and pName then
+        if aType==1 then
+            HealBot_Comms_SendInstantAddonMsg(HEALBOT_HEALBOT, msg)
+        elseif aType==2 and pName then
             local xUnit=HealBot_Panel_RaidUnitName(pName)
             if xUnit and UnitIsPlayer(xUnit) then
-                C_ChatInfo.SendAddonMessage(addon_id, msg, "WHISPER", pName );
+                C_ChatInfo.SendAddonMessage(HEALBOT_HEALBOT, msg, "WHISPER", pName );
             end
-        elseif aType==5 then
-            C_ChatInfo.SendAddonMessage(addon_id, msg, "GUILD" );
+        elseif aType==3 and IsInGuild() then
+            C_ChatInfo.SendAddonMessage(HEALBOT_HEALBOT, msg, "GUILD" );
         end
         --HealBot_AddDebug("comms="..aMsg)
-    end
-end
-
-function HealBot_Comms_SendInstantAddonMsg(addon_id, msg)
-    if IsInRaid() then
-        C_ChatInfo.SendAddonMessage(addon_id, msg, "RAID" );
-    elseif IsInGroup() then
-        C_ChatInfo.SendAddonMessage(addon_id, msg, "PARTY" );
     end
 end
 

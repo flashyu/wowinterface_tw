@@ -497,6 +497,7 @@ function HealBot_Lang_Options_enALL()
                                  ["TOOLTIPWHEELCMD"]=HEALBOT_OPTIONS_SHOWMOUSEWHEELTOOLTIP,
                                  ["TOOLTIPHOTREC"]=HEALBOT_OPTIONS_SHOWRECTOOLTIP,
                                  ["TOOLTIPGAMETIP"]=HEALBOT_OPTIONS_USEGAMETOOLTIP,
+                                 ["TOOLTIPSHOWGAMEUNIT"]=HEALBOT_OPTIONS_SHOWWOWTOOLTIP,
                                  ["TOOLTIPMONBUFFS"]=HEALBOT_OPTIONS_TOOLTIPSHOWHOT,
                                  ["TOOLTIPFONTSIZE"]=HEALBOT_OPTIONS_SKINFHEIGHT,
                                  ["TOOLTIPPOSITION"]=HEALBOT_OPTIONS_SETTOOLTIP_POSITION,
@@ -524,21 +525,26 @@ function HealBot_Lang_Options_enALL()
                         -- Import/Export Skins tab
                                  ["INOUTSELECTSKIN"]=HEALBOT_OPTIONS_EXPORTSKIN,
                                  ["INEXTRASKIN"]=HEALBOT_OPTIONS_EXTRASKINS,
+                                 ["INOUTPOSTSKIN"]=HEALBOT_OPTIONS_BUTTONPOSTLINK,
                                  ["INOUTEXPORTSKIN"]=HEALBOT_OPTIONS_BUTTONEXPORT,
                                  ["INOUTIMPORTSKIN"]=HEALBOT_OPTIONS_BUTTONIMPORT,
                         -- Import/Export Custom Debuffs tab
+                                 ["INOUTPOSTCDEBUFF"]=HEALBOT_OPTIONS_BUTTONPOSTLINK,
                                  ["INOUTEXPORTCDEBUFF"]=HEALBOT_OPTIONS_BUTTONEXPORT,
                                  ["INOUTIMPORTCDEBUFFMETHOD"]=HEALBOT_OPTIONS_BUTTONIMPORTMETHOD,
                                  ["INOUTIMPORTCDEBUFF"]=HEALBOT_OPTIONS_BUTTONIMPORT,
                         -- Import/Export Custom Buffs tab
+                                 ["INOUTPOSTCBUFF"]=HEALBOT_OPTIONS_BUTTONPOSTLINK,
                                  ["INOUTEXPORTCBUFF"]=HEALBOT_OPTIONS_BUTTONEXPORT,
                                  ["INOUTIMPORTCBUFFMETHOD"]=HEALBOT_OPTIONS_BUTTONIMPORTMETHOD,
                                  ["INOUTIMPORTCBUFF"]=HEALBOT_OPTIONS_BUTTONIMPORT,
                         -- Import/Export Spells tab
+                                 ["INOUTPOSTSPELLS"]=HEALBOT_OPTIONS_BUTTONPOSTLINK,
                                  ["INOUTEXPORTSPELLS"]=HEALBOT_OPTIONS_BUTTONEXPORT,
                                  ["INOUTIMPORTSPELLSMETHOD"]=HEALBOT_OPTIONS_BUTTONIMPORTMETHOD,
                                  ["INOUTIMPORTSPELLS"]=HEALBOT_OPTIONS_BUTTONIMPORT,
                         -- Import/Export Preset Colours tab
+                                 ["INOUTPOSTPRESETCOLS"]=HEALBOT_OPTIONS_BUTTONPOSTLINK,
                                  ["INOUTEXPORTPRESETCOLS"]=HEALBOT_OPTIONS_BUTTONEXPORT,
                                  ["INOUTIMPORTPRESETCOLS"]=HEALBOT_OPTIONS_BUTTONIMPORT,
                         -- Plugin Tab
@@ -1026,7 +1032,8 @@ function HealBot_Lang_Options_enALL()
                                ["TOOLTIPIGNORESPELLGCD"]="Ignore the global cooldown on the spell.",
                                ["TOOLTIPWHEELCMD"]="Show the commands defined on the Mouse Wheel tab.",
                                ["TOOLTIPHOTREC"]="Show best HoT depending on current circumstances.",
-                               ["TOOLTIPGAMETIP"]="Use the game tooltip, this includes tooltip addons.",
+                               ["TOOLTIPGAMETIP"]="Use the game tooltip style, this includes tooltip addons.",
+                               ["TOOLTIPSHOWGAMEUNIT"]="Show standard unit information.\n--\n".._G["YELLOW_FONT_COLOR_CODE"].."NOTE: This entirely replaces the healbot tooltip.",
                                ["TOOLTIPMONBUFFS"]="On all monitored Buffs / HoT's\nshow who cast the spell and duration left.",
                                ["TOOLTIPFONTSIZE"]="Set the size using Blizzards standard font sizes.",
                                ["TOOLTIPPOSITIONLINK"]="Links to the Skins Frame General tab,\nallowing for different positions per frame.",
@@ -1053,21 +1060,26 @@ function HealBot_Lang_Options_enALL()
                         -- Import/Export Skins tab
                                ["INOUTSELECTSKIN"]="Select the skin to be exported.",
                                ["INEXTRASKIN"]="Select an extra skin to import.\n--\n".._G["YELLOW_FONT_COLOR_CODE"].."NOTE: After importing extra skins, delete any that are not used.\n".._G["YELLOW_FONT_COLOR_CODE"].."This will reduce the addons main memory usage.\n--\n".._G["YELLOW_FONT_COLOR_CODE"].."NOTE: Images can be viewed at "..HEALBOT_ABOUT_URL,
-                               ["INOUTEXPORTSKIN"]="Export populates the large text box with data for the selected skin.\nThis can then be copied and saved outside the game.\n--\n".."|cff77c8ff".."TIP: To reduce the number of characters, first do the following:\n".."|cff77c8ff".."For all tabs possible, in Skins>Frames, select the top frame and use Apply current tab settings to all Frames.",
+                               ["INOUTPOSTSKIN"]="Post a link in chat to share the selected skin.",
+                               ["INOUTEXPORTSKIN"]="Export populates the large text box with data for the selected skin.\nThis can then be copied and saved outside the game.",
                                ["INOUTIMPORTSKIN"]="Import reads the text from the large text box and sets the skin.\n--\n".._G["YELLOW_FONT_COLOR_CODE"].."NOTE: This will overwrite any existing skin with the same name.",
                         -- Import/Export Custom Debuffs tab
+                               ["INOUTPOSTCDEBUFF"]="Post a link in chat to share all your current custom debuffs.",
                                ["INOUTEXPORTCDEBUFF"]="Export populates the large text box with data of all current custom debuffs.\nThis can then be copied and saved outside the game.",
                                ["INOUTIMPORTCDEBUFFMETHOD"]="On Import the following methods can be used.\n".._G["GREEN_FONT_COLOR_CODE"].."- Overwrite All - Delete all existing custom debuffs, then load and insert custom debuffs.\n".._G["GREEN_FONT_COLOR_CODE"].."- Merge All - Insert missing custom debuffs and update existing custom debuffs.\n".._G["GREEN_FONT_COLOR_CODE"].."- Merge New - Only insert missing custom debuffs, no updates to existing custom debuffs.",
                                ["INOUTIMPORTCDEBUFF"]="Import loads in the data from the large text box\nusing the import method selected above.",
                         -- Import/Export Custom Buffs tab
+                               ["INOUTPOSTCBUFF"]="Post a link in chat to share all your current custom buffs.",
                                ["INOUTEXPORTCBUFF"]="Export populates the large text box with data of all current custom buffs.\nThis can then be copied and saved outside the game.",
                                ["INOUTIMPORTCBUFFMETHOD"]="On Import the following methods can be used.\n".._G["GREEN_FONT_COLOR_CODE"].."- Overwrite All - Delete all existing custom buffs, then load and insert custom buffs.\n".._G["GREEN_FONT_COLOR_CODE"].."- Merge All - Insert missing custom buffs and update existing custom buffs.\n".._G["GREEN_FONT_COLOR_CODE"].."- Merge New - Only insert missing custom buffs, no updates to existing custom buffs.",
                                ["INOUTIMPORTCBUFF"]="Import loads in the data from the large text box\nusing the import method selected above.",
                         -- Import/Export Spells tab
+                               ["INOUTPOSTSPELLS"]="Post a link in chat to share all your current spells.",
                                ["INOUTEXPORTSPELLS"]="Export populates the large text box with data of all current spells.\nThis can then be copied and saved outside the game.",
                                ["INOUTIMPORTSPELLSMETHOD"]="On Import the following methods can be used.\n".._G["GREEN_FONT_COLOR_CODE"].."- Overwrite All - Delete all existing spells, then load and insert spells.\n".._G["GREEN_FONT_COLOR_CODE"].."- Merge All - Insert missing spells and update existing spells.\n".._G["GREEN_FONT_COLOR_CODE"].."- Merge New - Only insert missing spells, no updates to existing spells.",
                                ["INOUTIMPORTSPELLS"]="Import loads in the data from the large text box\nusing the import method selected above.",
                         -- Import/Export Preset Colours tab
+                               ["INOUTPOSTPRESETCOLS"]="Post a link in chat to share all your preset col"..HEALBOT_enWORD_COLOUR_SUFFIX.."s.",
                                ["INOUTEXPORTPRESETCOLS"]="Export populates the large text box with data of all preset col"..HEALBOT_enWORD_COLOUR_SUFFIX.."s.\nThis can then be copied and saved outside the game.",
                                ["INOUTIMPORTPRESETCOLS"]="Import loads in the data from the large text box.",
                         -- Plugin Tab

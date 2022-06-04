@@ -2,6 +2,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
   <Script file="HealBot_Comms.lua" />
+  <Script file="HealBot_Share.lua" />
   <Script file="HealBot_Options.lua" />
   
     <ScrollFrame name="HealBotUIPanelScrollFrameCodeTemplate" virtual="true">
@@ -23263,6 +23264,20 @@
                       <OnLeave>HealBot_Options_Show_Help("TOOLTIPGAMETIP",false)</OnLeave>
                     </Scripts>
                   </CheckButton>
+                  <CheckButton name="HealBot_Options_ShowTooltipShowUnitTip" inherits="SendMailRadioButtonTemplate" id="1">
+                    <Anchors>
+                      <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ShowTooltipUseGameTip" relativePoint="TOPRIGHT">
+                        <Offset>
+                          <AbsDimension x="170" y="-5"/>
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts>
+                      <OnClick>HealBot_Options_ShowTooltipShowUnitTip_OnClick(self)</OnClick>
+                      <OnEnter>HealBot_Options_Show_Help("TOOLTIPSHOWGAMEUNIT",true)</OnEnter>
+                      <OnLeave>HealBot_Options_Show_Help("TOOLTIPSHOWGAMEUNIT",false)</OnLeave>
+                    </Scripts>
+                  </CheckButton>
                   <CheckButton name="HealBot_Options_ShowTooltipShowHoT" inherits="OptionsCheckButtonTemplate">
                     <Anchors>
                       <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ShowTooltipUseGameTip" relativePoint="TOPLEFT">
@@ -24013,7 +24028,7 @@
                       <OnLeave>HealBot_Options_Show_Help("INOUTSELECTSKIN",false)</OnLeave>
                     </Scripts>
                   </Frame>
-                  <Button name="HealBot_Options_ShareSkinb" inherits="UIPanelButtonTemplate" text="HEALBOT_OPTIONS_BUTTONEXPORT">
+                  <Button name="HealBot_Options_PostSkinb" inherits="UIPanelButtonTemplate" text="HEALBOT_OPTIONS_BUTTONPOSTLINK">
                     <Size>
                       <AbsDimension x="170" y="22"/>
                     </Size>
@@ -24025,7 +24040,24 @@
                       </Anchor>
                     </Anchors>
                     <Scripts>
-                      <OnClick>HealBot_Options_ShareSkinb_OnClick(self)</OnClick>
+                      <OnClick>HealBot_Share_ShowPostSkinFrame()</OnClick>
+                      <OnEnter>HealBot_Options_Show_Help("INOUTPOSTSKIN",true)</OnEnter>
+                      <OnLeave>HealBot_Options_Show_Help("INOUTPOSTSKIN",false)</OnLeave>
+                    </Scripts>
+                  </Button>
+                  <Button name="HealBot_Options_ShareSkinb" inherits="UIPanelButtonTemplate" text="HEALBOT_OPTIONS_BUTTONEXPORT">
+                    <Size>
+                      <AbsDimension x="170" y="22"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="TOPLEFT">
+                        <Offset>
+                          <AbsDimension x="105" y="-90" />
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts>
+                      <OnClick>HealBot_Share_ExportSkin_OnClick(self)</OnClick>
                       <OnEnter>HealBot_Options_Show_Help("INOUTEXPORTSKIN",true)</OnEnter>
                       <OnLeave>HealBot_Options_Show_Help("INOUTEXPORTSKIN",false)</OnLeave>
                     </Scripts>
@@ -24034,7 +24066,7 @@
                     <Anchors>
                       <Anchor point="TOPRIGHT">
                         <Offset>
-                          <AbsDimension x="-80" y="-25" />
+                          <AbsDimension x="-80" y="-55" />
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -24064,29 +24096,29 @@
                     <Anchors>
                       <Anchor point="TOPRIGHT">
                         <Offset>
-                          <AbsDimension x="-105" y="-60" />
+                          <AbsDimension x="-105" y="-90" />
                         </Offset>
                       </Anchor>
                     </Anchors>
                     <Scripts>
-                      <OnClick>HealBot_Options_LoadSkinb_OnClick(self)</OnClick>
+                      <OnClick>HealBot_Share_ImportSkin_OnClick(self)</OnClick>
                       <OnEnter>HealBot_Options_Show_Help("INOUTIMPORTSKIN",true)</OnEnter>
                       <OnLeave>HealBot_Options_Show_Help("INOUTIMPORTSKIN",false)</OnLeave>
                     </Scripts>
                   </Button>
                   <Frame name="HealBot_Options_ShareExternalEditBoxFrame" inherits="BackdropTemplate">
                     <Size>
-                      <AbsDimension y="485"/>
+                      <AbsDimension y="455"/>
                     </Size>
                     <Anchors>
                       <Anchor point="TOPLEFT">
                         <Offset>
-                          <AbsDimension x="25" y="-100"/>
+                          <AbsDimension x="25" y="-130"/>
                         </Offset>
                       </Anchor>
                       <Anchor point="TOPRIGHT">
                         <Offset>
-                          <AbsDimension x="-25" y="-100"/>
+                          <AbsDimension x="-25" y="-130"/>
                         </Offset>
                       </Anchor>
                     </Anchors>
@@ -24142,6 +24174,23 @@
                   </Layer>
                 </Layers>
                 <Frames>
+                  <Button name="HealBot_Options_PostCDebuffb" inherits="UIPanelButtonTemplate" text="HEALBOT_OPTIONS_BUTTONPOSTLINK">
+                    <Size>
+                      <AbsDimension x="170" y="22"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="TOPLEFT">
+                        <Offset>
+                          <AbsDimension x="105" y="-25" />
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts>
+                      <OnClick>HealBot_Share_ShowPostDebuffFrame()</OnClick>
+                      <OnEnter>HealBot_Options_Show_Help("INOUTPOSTCDEBUFF",true)</OnEnter>
+                      <OnLeave>HealBot_Options_Show_Help("INOUTPOSTCDEBUFF",false)</OnLeave>
+                    </Scripts>
+                  </Button>
                   <Button name="HealBot_Options_ShareCDebuffb" inherits="UIPanelButtonTemplate" text="HEALBOT_OPTIONS_BUTTONEXPORT">
                     <Size>
                       <AbsDimension x="170" y="22"/>
@@ -24154,7 +24203,7 @@
                       </Anchor>
                     </Anchors>
                     <Scripts>
-                      <OnClick>HealBot_Options_ShareCDebuffb_OnClick(self)</OnClick>
+                      <OnClick>HealBot_Share_ExportDebuffs_OnClick(self)</OnClick>
                       <OnEnter>HealBot_Options_Show_Help("INOUTEXPORTCDEBUFF",true)</OnEnter>
                       <OnLeave>HealBot_Options_Show_Help("INOUTEXPORTCDEBUFF",false)</OnLeave>
                     </Scripts>
@@ -24198,7 +24247,7 @@
                       </Anchor>
                     </Anchors>
                     <Scripts>
-                      <OnClick>HealBot_Options_LoadCDebuffb_OnClick(self)</OnClick>
+                      <OnClick>HealBot_Share_ImportDebuffs_OnClick(self)</OnClick>
                       <OnEnter>HealBot_Options_Show_Help("INOUTIMPORTCDEBUFF",true)</OnEnter>
                       <OnLeave>HealBot_Options_Show_Help("INOUTIMPORTCDEBUFF",false)</OnLeave>
                     </Scripts>
@@ -24271,6 +24320,23 @@
                   </Layer>
                 </Layers>
                 <Frames>
+                  <Button name="HealBot_Options_PostBuffsb" inherits="UIPanelButtonTemplate" text="HEALBOT_OPTIONS_BUTTONPOSTLINK">
+                    <Size>
+                      <AbsDimension x="170" y="22"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="TOPLEFT">
+                        <Offset>
+                          <AbsDimension x="105" y="-25" />
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts>
+                      <OnClick>HealBot_Share_ShowPostBuffFrame()</OnClick>
+                      <OnEnter>HealBot_Options_Show_Help("INOUTPOSTCBUFF",true)</OnEnter>
+                      <OnLeave>HealBot_Options_Show_Help("INOUTPOSTCBUFF",false)</OnLeave>
+                    </Scripts>
+                  </Button>
                   <Button name="HealBot_Options_ShareBuffsb" inherits="UIPanelButtonTemplate" text="HEALBOT_OPTIONS_BUTTONEXPORT">
                     <Size>
                       <AbsDimension x="170" y="22"/>
@@ -24283,7 +24349,7 @@
                       </Anchor>
                     </Anchors>
                     <Scripts>
-                      <OnClick>HealBot_Options_ShareBuffsb_OnClick(self)</OnClick>
+                      <OnClick>HealBot_Share_ExportBuffs_OnClick(self)</OnClick>
                       <OnEnter>HealBot_Options_Show_Help("INOUTEXPORTCBUFF",true)</OnEnter>
                       <OnLeave>HealBot_Options_Show_Help("INOUTEXPORTCBUFF",false)</OnLeave>
                     </Scripts>
@@ -24327,7 +24393,7 @@
                       </Anchor>
                     </Anchors>
                     <Scripts>
-                      <OnClick>HealBot_Options_LoadBuffsb_OnClick(self)</OnClick>
+                      <OnClick>HealBot_Share_ImportBuffs_OnClick(self)</OnClick>
                       <OnEnter>HealBot_Options_Show_Help("INOUTIMPORTCBUFF",true)</OnEnter>
                       <OnLeave>HealBot_Options_Show_Help("INOUTIMPORTCBUFF",false)</OnLeave>
                     </Scripts>
@@ -24400,6 +24466,23 @@
                   </Layer>
                 </Layers>
                 <Frames>
+                  <Button name="HealBot_Options_PostSpellsb" inherits="UIPanelButtonTemplate" text="HEALBOT_OPTIONS_BUTTONPOSTLINK">
+                    <Size>
+                      <AbsDimension x="170" y="22"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="TOPLEFT">
+                        <Offset>
+                          <AbsDimension x="105" y="-25" />
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts>
+                      <OnClick>HealBot_Share_ShowPostSpellsFrame()</OnClick>
+                      <OnEnter>HealBot_Options_Show_Help("INOUTPOSTSPELLS",true)</OnEnter>
+                      <OnLeave>HealBot_Options_Show_Help("INOUTPOSTSPELLS",false)</OnLeave>
+                    </Scripts>
+                  </Button>
                   <Button name="HealBot_Options_ShareSpellsb" inherits="UIPanelButtonTemplate" text="HEALBOT_OPTIONS_BUTTONEXPORT">
                     <Size>
                       <AbsDimension x="170" y="22"/>
@@ -24412,7 +24495,7 @@
                       </Anchor>
                     </Anchors>
                     <Scripts>
-                      <OnClick>HealBot_Options_ShareSpellsb_OnClick(self)</OnClick>
+                      <OnClick>HealBot_Share_ExportSpells_OnClick(self)</OnClick>
                       <OnEnter>HealBot_Options_Show_Help("INOUTEXPORTSPELLS",true)</OnEnter>
                       <OnLeave>HealBot_Options_Show_Help("INOUTEXPORTSPELLS",false)</OnLeave>
                     </Scripts>
@@ -24456,7 +24539,7 @@
                       </Anchor>
                     </Anchors>
                     <Scripts>
-                      <OnClick>HealBot_Options_LoadSpellsb_OnClick(self)</OnClick>
+                      <OnClick>HealBot_Share_ImportSpells_OnClick(self)</OnClick>
                       <OnEnter>HealBot_Options_Show_Help("INOUTIMPORTSPELLS",true)</OnEnter>
                       <OnLeave>HealBot_Options_Show_Help("INOUTIMPORTSPELLS",false)</OnLeave>
                     </Scripts>
@@ -24529,6 +24612,23 @@
                   </Layer>
                 </Layers>
                 <Frames>
+                  <Button name="HealBot_Options_PostPresetColsb" inherits="UIPanelButtonTemplate" text="HEALBOT_OPTIONS_BUTTONPOSTLINK">
+                    <Size>
+                      <AbsDimension x="170" y="22"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="TOPLEFT">
+                        <Offset>
+                          <AbsDimension x="105" y="-25" />
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts>
+                      <OnClick>HealBot_Share_ShowPostPresetColsFrame()</OnClick>
+                      <OnEnter>HealBot_Options_Show_Help("INOUTPOSTPRESETCOLS",true)</OnEnter>
+                      <OnLeave>HealBot_Options_Show_Help("INOUTPOSTPRESETCOLS",false)</OnLeave>
+                    </Scripts>
+                  </Button>
                   <Button name="HealBot_Options_SharePresetColsb" inherits="UIPanelButtonTemplate" text="HEALBOT_OPTIONS_BUTTONEXPORT">
                     <Size>
                       <AbsDimension x="170" y="22"/>
@@ -24536,12 +24636,12 @@
                     <Anchors>
                       <Anchor point="TOPLEFT">
                         <Offset>
-                          <AbsDimension x="105" y="-30" />
+                          <AbsDimension x="105" y="-60" />
                         </Offset>
                       </Anchor>
                     </Anchors>
                     <Scripts>
-                      <OnClick>HealBot_Options_SharePresetColsb_OnClick(self)</OnClick>
+                      <OnClick>HealBot_Share_ExportPresetCols_OnClick(self)</OnClick>
                       <OnEnter>HealBot_Options_Show_Help("INOUTEXPORTPRESETCOLS",true)</OnEnter>
                       <OnLeave>HealBot_Options_Show_Help("INOUTEXPORTPRESETCOLS",false)</OnLeave>
                     </Scripts>
@@ -24553,29 +24653,29 @@
                     <Anchors>
                       <Anchor point="TOPRIGHT">
                         <Offset>
-                          <AbsDimension x="-105" y="-30" />
+                          <AbsDimension x="-105" y="-60" />
                         </Offset>
                       </Anchor>
                     </Anchors>
                     <Scripts>
-                      <OnClick>HealBot_Options_LoadPresetColsb_OnClick(self)</OnClick>
+                      <OnClick>HealBot_Share_ImportPresetCols_OnClick(self)</OnClick>
                       <OnEnter>HealBot_Options_Show_Help("INOUTIMPORTPRESETCOLS",true)</OnEnter>
                       <OnLeave>HealBot_Options_Show_Help("INOUTIMPORTPRESETCOLS",false)</OnLeave>
                     </Scripts>
                   </Button>
                   <Frame name="HealBot_Options_SharePresetColsExternalEditBoxFrame" inherits="BackdropTemplate">
                     <Size>
-                      <AbsDimension y="515"/>
+                      <AbsDimension y="485"/>
                     </Size>
                     <Anchors>
                       <Anchor point="TOPLEFT">
                         <Offset>
-                          <AbsDimension x="25" y="-70"/>
+                          <AbsDimension x="25" y="-100"/>
                         </Offset>
                       </Anchor>
                       <Anchor point="TOPRIGHT">
                         <Offset>
-                          <AbsDimension x="-25" y="-70"/>
+                          <AbsDimension x="-25" y="-100"/>
                         </Offset>
                       </Anchor>
                     </Anchors>

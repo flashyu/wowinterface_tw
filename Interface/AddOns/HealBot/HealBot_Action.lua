@@ -4241,7 +4241,9 @@ function HealBot_Action_HealUnit_OnEnter(self)
     end
     if HealBot_Globals.ShowTooltip and HealBot_Data["TIPUSE"] and UnitExists(self.unit) then
         HealBot_Data["TIPBUTTON"] = self
-        if not UnitIsFriend("player",self.unit) then
+        if HealBot_Globals.UseGameTooltip and HealBot_Globals.ShowGameUnitInfo then
+            HealBot_Data["TIPTYPE"] = "WoWUnit"
+        elseif not UnitIsFriend("player",self.unit) then
             HealBot_Data["TIPTYPE"] = "Enemy"
         else
             HealBot_Data["TIPTYPE"] = "Enabled"
@@ -4275,9 +4277,13 @@ end
 function HealBot_Action_EmergUnit_OnEnter(self)
     if HealBot_Globals.ShowTooltip and HealBot_Data["TIPUSE"] then
         xButton=HealBot_Buttons[self.id]
-        if xButton and UnitExists(xButton.unit) and not UnitIsEnemy("player",xButton.unit) then
+        if xButton and UnitExists(xButton.unit) then
             HealBot_Data["TIPBUTTON"]=xButton
-            HealBot_Data["TIPTYPE"] = "Emerg"
+            if HealBot_Globals.UseGameTooltip and HealBot_Globals.ShowGameUnitInfo then
+                HealBot_Data["TIPTYPE"] = "WoWUnit"
+            else
+                HealBot_Data["TIPTYPE"] = "Emerg"
+            end
             HealBot_Action_RefreshTooltip();
         end
     end

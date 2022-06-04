@@ -7,7 +7,7 @@ local TimeNow=GetTime()+1
 --local strfind=strfind
 local scName, scStartTime, scEndTime="",0,0
 local arrg = {}
-local LSM = HealBot_Libs_LSM() --LibStub and LibStub:GetLibrary("LibSharedMedia-3.0", true)
+local LSM = HealBot_Libs_LSM()
 local LDB11 = HealBot_Libs_LDB11()
 local LDBIcon = HealBot_Libs_LDBIcon()
 local libCHC = HealBot_Libs_CHC()
@@ -94,7 +94,7 @@ HealBot_luVars["prevNumUnits"]=0
 HealBot_luVars["UpdateID"]=1
 HealBot_luVars["UpdateAllAura"]=0
 HealBot_luVars["CheckAuraFlags"]=true
-HealBot_luVars["GetVersions"]=TimeNow+15
+HealBot_luVars["GetVersions"]=false
 HealBot_luVars["MaxFastQueue"]=12
 HealBot_luVars["fastQueueSwitch"]=0
 HealBot_luVars["PlayerCheck"]=TimeNow+15
@@ -765,7 +765,10 @@ function HealBot_SlashCmd(cmd)
             HealBot_OnEvent_UnitHealth(pButton)
         end
     elseif (HBcmd=="zzz") then
-        HealBot_AddDebug("#: UpdateMaxUnits="..HealBot_luVars["UpdateMaxUnits"].." UpdateNumUnits="..HealBot_luVars["UpdateNumUnits"].." MaxFastQueue="..#HealBot_luVars["MaxFastQueue"])
+        HealBot_AddDebug("#: UpdateMaxUnits="..HealBot_luVars["UpdateMaxUnits"].." UpdateNumUnits="..HealBot_luVars["UpdateNumUnits"])
+
+        HealBot_Share_TestLink()
+    
     --    _,xButton,pButton = HealBot_UnitID("player")
     --    local button=xButton or pButton
     else
@@ -1507,11 +1510,11 @@ end
 
 function HealBot_Load(hbCaller)
     if not HealBot_luVars["Loaded"] then
+        HealBot_CheckVersions()
         HealBot_Options_ItemsInBagsInitScan()
         HealBot_Data["POWERTYPE"]=UnitPowerType("player") or 0
         if HealBot_Data["POWERTYPE"]<0 or HealBot_Data["POWERTYPE"]>9 then HealBot_Data["POWERTYPE"]=0 end
         HealBot_Skins_ResetSkin("init")
-        if HealBot_luVars["AddonMsgType"]==2 then HealBot_Comms_SendAddonMsg("CTRA", "SR", HealBot_luVars["AddonMsgType"], UnitName("player")) end
         if not HealBot_luVars["HelpNotice"] then
             HealBot_Timers_Set("INITSLOW","HealBotLoaded")
             HealBot_luVars["HelpNotice"]=true
@@ -2339,102 +2342,6 @@ function HealBot_Update_Skins(forceCheck)
                 end
             end
         end
-        if not HealBot_Globals.OverrideEffects["FGDIMMING"] then HealBot_Globals.OverrideEffects["FGDIMMING"]=2.5 end
-        if HealBot_Globals.OverrideEffects["HEALTHDROP"]==nil then HealBot_Globals.OverrideEffects["HEALTHDROP"]=false end
-        if not HealBot_Globals.OverrideEffects["HEALTHDROPPCT"] then HealBot_Globals.OverrideEffects["HEALTHDROPPCT"]=350 end
-        if not HealBot_Globals.OverrideEffects["HEALTHDROPSPEED"] then HealBot_Globals.OverrideEffects["HEALTHDROPSPEED"]=40 end
-        if not HealBot_Config_Buffs.ShowGroups then 
-            HealBot_Config_Buffs.ShowGroups={}
-            for x=1,8 do
-                HealBot_Config_Buffs.ShowGroups[x]=true
-            end
-        end
-        if not HealBot_Config_Cures.ShowGroups then 
-            HealBot_Config_Cures.ShowGroups={}
-            for x=1,8 do
-                HealBot_Config_Cures.ShowGroups[x]=true
-            end
-        end
-        if tonumber(tMinor)==0 then
-            if tonumber(tPatch)<3 then
-                if tonumber(tHealbot)<4 then
-                    local key=""
-                    local cmd=""
-                    for x=1,4 do
-                        cmd=HealBot_Action_SpellCmdCodes("ENABLED", HEALBOT_MENU)
-                        if cmd and HealBot_Config_Spells.EnabledKeyCombo then
-                            key="Alt-Ctrl-ShiftLeft"..x
-                            cmd="C:"..cmd
-                            HealBot_Config_Spells.EnabledKeyCombo[key] = cmd
-                            if HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]] then
-                                HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]].EnabledKeyCombo[key] = cmd
-                            end
-                        end
-                        cmd=HealBot_Action_SpellCmdCodes("ENABLED", HEALBOT_HBMENU)
-                        if cmd and HealBot_Config_Spells.EnabledKeyCombo then
-                            key="Alt-Ctrl-ShiftRight"..x
-                            cmd="C:"..cmd
-                            HealBot_Config_Spells.EnabledKeyCombo[key] = cmd
-                            if HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]] then
-                                HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]].EnabledKeyCombo[key] = cmd
-                            end
-                        end
-                    end
-                end
-                if tonumber(tHealbot)<9 then
-                    if HealBot_Globals.OverrideEffects["FLUIDFREQ"]<12 then
-                        HealBot_Globals.OverrideEffects["FLUIDFREQ"]=HealBot_Globals.OverrideEffects["FLUIDFREQ"]+5
-                    elseif HealBot_Globals.OverrideEffects["FLUIDFREQ"]<15 then
-                        HealBot_Globals.OverrideEffects["FLUIDFREQ"]=HealBot_Globals.OverrideEffects["FLUIDFREQ"]+2
-                    end
-                    if HealBot_Globals.OverrideEffects["FOCUSGROUPS"]==true then 
-                        HealBot_Globals.OverrideEffects["FOCUSGROUPS"]=2
-                    elseif not HealBot_Globals.OverrideEffects["FOCUSGROUPS"] then
-                        HealBot_Globals.OverrideEffects["FOCUSGROUPS"]=1
-                    end
-                end
-                if tonumber(tHealbot)<11 then
-                    HealBot_Globals.OverrideEffects["FLUIDFREQ"]=HealBot_Globals.OverrideEffects["FLUIDFREQ"]-6
-                    if HealBot_Globals.OverrideEffects["FLUIDFREQ"]<3 then HealBot_Globals.OverrideEffects["FLUIDFREQ"]=3 end
-                end
-            end
-
-            HealBot_Options_NewHoTBuffBtn_OnClick(HEALBOT_LIFEBLOOM, HealBot_Class_En[HEALBOT_DRUID])
-            HealBot_Options_NewHoTBuffBtn_OnClick(HEALBOT_PRAYER_OF_MENDING, HealBot_Class_En[HEALBOT_PRIEST])
-            if HealBot_Globals.NoSpellsOnDisabled~=nil then HealBot_Globals.NoSpellsOnDisabled=nil end
-            if HealBot_Globals.TestBars["BARS"] then HealBot_Globals.TestBars["BARS"]=nil end
-            if HealBot_Globals.EnLibQuickHealth then HealBot_Globals.EnLibQuickHealth=nil end
-            if HealBot_Globals.EnAutoCombat then HealBot_Globals.EnAutoCombat=nil end
-            if HealBot_Globals.QueryTalents then HealBot_Globals.QueryTalents=nil end
-            if HealBot_Config.AdjustMaxHealth then HealBot_Config.AdjustMaxHealth=nil end
-            if HealBot_Config.EnableHealthy then HealBot_Config.EnableHealthy=nil end
-            if HealBot_Config_Spells.DisabledKeyCombo then HealBot_Config_Spells.DisabledKeyCombo=nil end
-            if HealBot_Config_Spells.DisabledSpellTarget then HealBot_Config_Spells.DisabledSpellTarget=nil end
-            if HealBot_Config_Spells.DisabledSpellTrinket1 then HealBot_Config_Spells.DisabledSpellTrinket1=nil end
-            if HealBot_Config_Spells.DisabledSpellTrinket2 then HealBot_Config_Spells.DisabledSpellTrinket2=nil end
-            if HealBot_Config_Spells.DisabledAvoidBlueCursor then HealBot_Config_Spells.DisabledAvoidBlueCursor=nil end
-            if HealBot_Config_Cures.SpamFilterSecs then HealBot_Config_Cures.SpamFilterSecs=nil end
-            if HealBot_Globals.ByPassLock then HealBot_Globals.ByPassLock=nil end
-            if HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]] then
-                if HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]].DisabledKeyCombo then HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]].DisabledKeyCombo=nil end
-                if HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]].DisabledSpellTarget then HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]].DisabledSpellTarget=nil end
-                if HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]].DisabledSpellTrinket1 then HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]].DisabledSpellTrinket1=nil end
-                if HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]].DisabledSpellTrinket2 then HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]].DisabledSpellTrinket2=nil end
-                if HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]].DisabledAvoidBlueCursor then HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]].DisabledAvoidBlueCursor=nil end
-            end
-            if HealBot_Globals.mapScale then HealBot_Globals.mapScale=nil end
-            if HealBot_Globals.TooltipUpdate~=nil then HealBot_Globals.TooltipUpdate=nil end
-            if HealBot_Globals.CureCustomDefaultCastBy=="ALL" then HealBot_Globals.CureCustomDefaultCastBy=1 end
-            if HealBot_Globals.CureCustomDefaultCastBy=="ENEMY" then HealBot_Globals.CureCustomDefaultCastBy=2 end
-            local customDebuffPriority=HEALBOT_CUSTOM_en.."15"
-            if not HealBot_Globals.CDCBarColour[customDebuffPriority] then
-                HealBot_Globals.CDCBarColour[customDebuffPriority]={}
-                HealBot_Globals.CDCBarColour[customDebuffPriority]["R"] = 0.45
-                HealBot_Globals.CDCBarColour[customDebuffPriority]["G"] = 0
-                HealBot_Globals.CDCBarColour[customDebuffPriority]["B"] = 0.28
-            end
-            if Healbot_Config_Skins.Protection then Healbot_Config_Skins.Protection=nil end
-        end
         if tonumber(tMinor)<2 then
             HealBot_Globals.Custom_Debuff_Categories[HEALBOT_CUSTOM_CAT_CUSTOM_AUTOMATIC]=1
             HealBot_Globals.HealBot_Custom_Debuffs[HEALBOT_CUSTOM_CAT_CUSTOM_AUTOMATIC]=15
@@ -2482,7 +2389,25 @@ function HealBot_Update_Skins(forceCheck)
             if not HealBot_Globals.VersionResetDone["DEBUFF"] then HealBot_Globals.VersionResetDone["DEBUFF"]="9.1.0.0" end
             if not HealBot_Globals.VersionResetDone["CDEBUFF"] then HealBot_Globals.VersionResetDone["CDEBUFF"]="9.1.0.0" end
         end
-        HealBot_Globals.ResLagDuration=nil
+        if tonumber(tMajor)==9 then
+            if not HealBot_Globals.OverrideEffects["FGDIMMING"] then HealBot_Globals.OverrideEffects["FGDIMMING"]=2.5 end
+            if HealBot_Globals.OverrideEffects["HEALTHDROP"]==nil then HealBot_Globals.OverrideEffects["HEALTHDROP"]=false end
+            if not HealBot_Globals.OverrideEffects["HEALTHDROPPCT"] then HealBot_Globals.OverrideEffects["HEALTHDROPPCT"]=350 end
+            if not HealBot_Globals.OverrideEffects["HEALTHDROPSPEED"] then HealBot_Globals.OverrideEffects["HEALTHDROPSPEED"]=40 end
+            if not HealBot_Config_Buffs.ShowGroups then 
+                HealBot_Config_Buffs.ShowGroups={}
+                for x=1,8 do
+                    HealBot_Config_Buffs.ShowGroups[x]=true
+                end
+            end
+            if not HealBot_Config_Cures.ShowGroups then 
+                HealBot_Config_Cures.ShowGroups={}
+                for x=1,8 do
+                    HealBot_Config_Cures.ShowGroups[x]=true
+                end
+            end
+            HealBot_Globals.ResLagDuration=nil
+        end
     end
     tMajor, tMinor, tPatch, tHealbot = string.split(".", HealBot_Config.LastVersionUpdate)
     if HealBot_Config.LastVersionUpdate~=HEALBOT_VERSION_SC or forceCheck then 
@@ -2636,6 +2561,7 @@ function HealBot_OnEvent_AddOnLoaded(addonName)
         if HealBot_Globals.CatchAltDebuffIDs["init"] then
             HealBot_Reset_AutoUpdateDebuffIDs()
         end
+        HealBot_Action_InitFrames()
         HealBot_Options_SetFrames()
         HealBot_Timer_TogglePartyFrames(true)
         HealBot_Timer_ToggleMiniBossFrames(true)
@@ -2658,7 +2584,6 @@ function HealBot_OnEvent_AddOnLoaded(addonName)
         HealBot_Panel_SethbTopRole(HealBot_Globals.TopRole)
         HealBot_Options_IgnoreDebuffsDuration_setAura()
         HealBot_Text_SwitchStateFontString()
-        HealBot_Action_InitFrames()
         --HealBot_Action_InitCacheButtons()
         HealBot_luVars["AddonLoaded"]=true
     end
@@ -2666,22 +2591,26 @@ end
 
         
 function HealBot_OnEvent_VariablesLoaded()
-    if LSM then
-        for i = 1, #HealBot_Default_Textures do
-            LSM:Register("statusbar", HealBot_Default_Textures[i].name, HealBot_Default_Textures[i].file)
+    if HealBot_luVars["AddonLoaded"] then
+        if LSM then
+            for i = 1, #HealBot_Default_Textures do
+                LSM:Register("statusbar", HealBot_Default_Textures[i].name, HealBot_Default_Textures[i].file)
+            end
+            for i = 1, #HealBot_Default_Sounds do
+                LSM:Register("sound", HealBot_Default_Sounds[i].name, HealBot_Default_Sounds[i].file)
+            end
+            for i = 1, #HealBot_Default_Fonts do
+                LSM:Register("font", HealBot_Default_Fonts[i].name, HealBot_Default_Fonts[i].file)
+            end
         end
-        for i = 1, #HealBot_Default_Sounds do
-            LSM:Register("sound", HealBot_Default_Sounds[i].name, HealBot_Default_Sounds[i].file)
-        end
-        for i = 1, #HealBot_Default_Fonts do
-            LSM:Register("font", HealBot_Default_Fonts[i].name, HealBot_Default_Fonts[i].file)
-        end
+        HealBot_Options_InitVars()
+        HealBot_Action_ResetGlobalDimming()
+        HealBot_Comms_PerfLevel(hbLTfps[HealBot_Globals.CPUUsage])
+        --HealBot_Skins_ResetSkin("init")
+        HealBot_Load("VarsLoaded")
+    else
+        HealBot_Timers_Set("DELAYED","FullReload")
     end
-    HealBot_Options_InitVars()
-    HealBot_Action_ResetGlobalDimming()
-    HealBot_Comms_PerfLevel(hbLTfps[HealBot_Globals.CPUUsage])
-    --HealBot_Skins_ResetSkin("init")
-    HealBot_Load("VarsLoaded")
       --HealBot_setCall("HealBot_OnEvent_VariablesLoaded")
 end
 
@@ -2818,16 +2747,10 @@ function HealBot_GetTalentInfo(button)
 end
 
 function HealBot_SetAddonComms()
-    if not HealBot_luVars["inBG"] then
-        if GetNumGroupMembers()>5 then
-            HealBot_luVars["AddonMsgType"]=2;
-        elseif GetNumGroupMembers()>0 then
-            HealBot_luVars["AddonMsgType"]=3;
-        else
-            HealBot_luVars["AddonMsgType"]=4;
-        end
-    else
+    if IsInRaid() or IsInGroup() then
         HealBot_luVars["AddonMsgType"]=1;
+    else
+        HealBot_luVars["AddonMsgType"]=2;
     end
       --HealBot_setCall("HealBot_SetAddonComms")
 end
@@ -3005,6 +2928,10 @@ function HealBot_Timer_ToggleRaidFrames(onLoad)
     end
 end
 
+function HealBot_CheckVersions()
+    if not HealBot_luVars["GetVersions"] then HealBot_luVars["GetVersions"]=TimeNow+15 end
+end
+
 function HealBot_Timer_ZoneUpdate()
     local mapAreaID = C_Map.GetBestMapForUnit("player")
     local y,z = IsInInstance()
@@ -3019,16 +2946,12 @@ function HealBot_Timer_ZoneUpdate()
     elseif z and z=="arena" then 
         mapName="Arena"
     end
-    if z and (z=="pvp" or z=="arena") then 
-        HealBot_luVars["inBG"]=true 
-    else
-        HealBot_luVars["inBG"]=nil
-    end                            
     HealBot_Aura_setLuVars("hbInsName", mapName)
     HealBot_Panel_setLuVars("MAPID", mapAreaID)
     HealBot_Options_SetEnableDisableCDBtn()
     HealBot_Options_SetEnableDisableBuffBtn()
     HealBot_SetAddonComms()
+    HealBot_CheckVersions()
 end
 
 function HealBot_Timer_EmoteOOM()
@@ -3297,7 +3220,10 @@ function HealBot_getDefaultSkin()
     local LastAutoSkinChangeType="None"
     local newSkinName=HEALBOT_SKINS_STD
     for x in pairs (Healbot_Config_Skins.Skins) do
-        if Healbot_Config_Skins.Skins[x]==Healbot_Config_Skins.Current_Skin then newSkinName=Healbot_Config_Skins.Current_Skin end
+        if Healbot_Config_Skins.Skins[x]==Healbot_Config_Skins.Current_Skin then 
+            newSkinName=Healbot_Config_Skins.Current_Skin 
+            break
+        end
     end
     if z == "arena" then
         for x in pairs (Healbot_Config_Skins.Skins) do
@@ -3392,7 +3318,8 @@ function HealBot_PartyUpdate_CheckSolo()
     local PrevSolo=HealBot_luVars["IsSolo"]
     if IsInRaid() or IsInGroup() then
         if HealBot_luVars["IsSolo"] then
-            HealBot_luVars["GetVersions"]=TimeNow+5
+            HealBot_SetAddonComms()
+            HealBot_CheckVersions()
         end
         HealBot_luVars["IsSolo"]=false
     else
@@ -3564,7 +3491,6 @@ function HealBot_SetUnitDisconnect(button)
             if offlineStart or button.status.current==HealBot_Unit_Status["DC"] then
                 if offlineStart then
                     HealBot_Action_setGuidData(button, "OFFLINE", false)
-                    HealBot_luVars["GetVersions"]=TimeNow+5
                 end
                 HealBot_SetUnitDisconnectChange(button, HealBot_Unit_Status["CHECK"])
             end
@@ -3694,8 +3620,13 @@ function HealBot_Update_Slow()
             HealBot_Set_FPS()
         elseif HealBot_luVars["slowSwitch"]<3 then
             if HealBot_luVars["GetVersions"] and HealBot_luVars["GetVersions"]<TimeNow then
-                HealBot_Comms_SendAddonMsg(HEALBOT_HEALBOT, "R", HealBot_luVars["AddonMsgType"], UnitName("player"))
+                HealBot_Comms_SendAddonMsg("R", HealBot_luVars["AddonMsgType"])
+                HealBot_Comms_SendAddonMsg("S:"..HEALBOT_VERSION, HealBot_luVars["AddonMsgType"])
                 HealBot_luVars["GetVersions"]=false
+                if not HealBot_luVars["GetVersionsGuild"] then
+                    HealBot_Comms_SendAddonMsg("R", 3)
+                    HealBot_luVars["GetVersionsGuild"]=true
+                end
             end
             if not HealBot_luVars["ProcessRefresh"] then
                 for guid,_ in pairs(HealBot_ClearGUIDQueue) do
@@ -3717,7 +3648,7 @@ function HealBot_Update_Slow()
                 table.remove(HealBot_DebugMsg,1)
             end
             if HealBot_luVars["VersionRequest"] then
-                HealBot_Comms_SendAddonMsg(HEALBOT_HEALBOT, "S:"..HEALBOT_VERSION, HealBot_luVars["AddonMsgType"], UnitName("player"))
+                
                 HealBot_luVars["VersionRequest"]=false;
             end
             HealBot_Comms_SendAddonMessage()
@@ -4347,50 +4278,22 @@ function HealBot_OnEvent_AddonMsg(addon_id,msg,distribution,sender_id)
         local datatype, datamsg = string.split(":", msg)
         if datatype then
             if datatype=="R" then
-                HealBot_luVars["VersionRequest"]=amSenderId
-            elseif datatype=="G" then
-                HealBot_Comms_SendAddonMsg(HEALBOT_HEALBOT, "H:"..HEALBOT_VERSION, 4, amSenderId)
+                HealBot_Comms_SendAddonMsg("S:"..HEALBOT_VERSION, 2, amSenderId)
                 if not HealBot_Vers[amSenderId] then
-                    HealBot_Comms_SendAddonMsg(HEALBOT_HEALBOT, "G", 4, amSenderId)
+                    HealBot_Comms_SendAddonMsg("R:"..HEALBOT_VERSION, 2, amSenderId)
                 end
-            elseif datatype=="F" then
-                HealBot_Comms_SendAddonMsg(HEALBOT_HEALBOT, "C:"..HEALBOT_VERSION, 4, amSenderId)
-                if not HealBot_Vers[amSenderId] then
-                    HealBot_Comms_SendAddonMsg(HEALBOT_HEALBOT, "F", 4, amSenderId)
-                end
-            elseif datamsg then
-                if datatype=="S" or datatype=="H" or datatype=="C" then
+            elseif datatype=="S" then
+                if datamsg then
                     HealBot_Vers[amSenderId]=datamsg
                     HealBot_AddDebug(amSenderId..": "..datamsg, "Version", false);
                     HealBot_Comms_CheckVer(amSenderId, datamsg)
                 end
+            elseif datatype=="L" then
+                HealBot_Share_LinkMsg(datamsg, amSenderId)
             end
         end
     end
       --HealBot_setCall("HealBot_OnEvent_AddonMsg")
-end
-
-local extShareSkin={}
-function HealBot_ShareSkinSendMsg(cmd, msg)
-    if cmd=="Init" then
-        if tonumber(msg) then msg='#'..msg end
-        extShareSkin={[1]=msg}
-        HealBot_luVars["saveSkinsTabSize"]=1
-        HealBot_AddChat(HEALBOT_SHARE_INSTRUCTION)
-    elseif cmd and msg then
-        HealBot_luVars["saveSkinsTabSize"]=HealBot_luVars["saveSkinsTabSize"]+1
-        extShareSkin[HealBot_luVars["saveSkinsTabSize"]]=cmd.."!"..msg
-        if cmd=="Complete" then
-            local ssStr="Skin"
-            local ssStr=ssStr.."\n"..extShareSkin[1]
-            for j=2,#extShareSkin do
-                ssStr=ssStr.."\n"..extShareSkin[j] 
-            end
-            ssStr=HealBot_Options_Compress(ssStr)
-            HealBot_Options_ShareExternalEditBox:SetText(ssStr)
-        end
-    end
-      --HealBot_setCall("HealBot_ShareSkinSendMsg")
 end
 
 function HealBot_GetInfo()

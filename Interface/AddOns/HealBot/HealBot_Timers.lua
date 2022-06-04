@@ -107,7 +107,8 @@ function HealBot_Timers_nextRecalcEnemy()
 end
 
 function HealBot_Timers_MouseWheelUpdate()
-    if not InCombatLockdown() then
+    local g = _G["f1_HealBot_Action"]
+    if not InCombatLockdown() and g then
         for i=1, 10 do
             local g = _G["f"..i.."_HealBot_Action"]
             if HealBot_Globals.HealBot_Enable_MouseWheel then

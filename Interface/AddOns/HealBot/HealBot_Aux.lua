@@ -209,6 +209,10 @@ function HealBot_Aux_resetBars()
         HealBot_Timers_Set("AUX","ClearBars")
         HealBot_Timers_Set("AUX","SetBars")
         HealBot_Timers_Set("AUX","UpdateAllUnitBars")
+        HealBot_Timers_Set("PLAYER","PlayerTargetChanged")
+        HealBot_Timers_Set("INITSLOW","SkinsFramesChanged")
+        HealBot_Timers_Set("INITSLOW","UpdateAllUnitBars")
+        HealBot_Timers_Set("INITSLOW","AuraCheckUnits")
     else
         HealBot_Timers_Set("AUX","ResetBars")
     end

@@ -45,8 +45,13 @@ VER 3 0000000000000017 "攻擊宏" "132269"
 /startattack
 END
 VER 3 000000000000001A "救命" "136043"
+/stopcasting
 /cast 自然迅捷
-/cast 治療波
+/cast [@hbtarget] 治疗波
+END
+VER 3 000000000000001B "治疗自己" "136043"
+/stopcasting
+/cast [target=player] 次级治疗波
 END
 VER 3 000000000000000F "火舞" "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -71,6 +76,7 @@ END
 VER 3 000000000000000B "紅" "136124"
 /use 极效治疗石
 /use 极效治疗药水
+/use 治疗药水注射器
 /use 超强治疗药水
 END
 VER 3 0000000000000010 "脚底光圈" "133566"
