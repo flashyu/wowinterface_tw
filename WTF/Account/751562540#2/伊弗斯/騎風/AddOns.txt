@@ -11,7 +11,7 @@ kExtraBossFrames: disabled
 WeakAurasCompanion: enabled
 WeakAurasArchive: enabled
 ElvUI_OptionsUI: enabled
-HealBot: enabled
+HealBot: disabled
 Parrot: enabled
 alaTalentEmu: enabled
 ArkInventoryRules_Example: enabled

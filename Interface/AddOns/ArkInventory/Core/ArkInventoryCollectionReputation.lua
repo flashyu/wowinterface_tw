@@ -757,7 +757,10 @@ local function Scan_Threaded( thread_id )
 	
 	--ArkInventory.Output( "Reputation: End Scan @ ", time( ), " ( ", collection.numOwned, " of ", collection.numTotal, " ) update=", update )
 	
-	collection.isReady = true
+	if not collection.isReady then
+		collection.isReady = true
+		ArkInventory:SendMessage( "EVENT_ARKINV_LDB_REPUTATION_UPDATE_BUCKET" )
+	end
 	
 	if update then
 		--ArkInventory.Output( "UPDATING" )

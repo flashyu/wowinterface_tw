@@ -435,7 +435,10 @@ local function Scan_Threaded( thread_id )
 	
 	--ArkInventory.Output( "Currency: End Scan @ ", time( ), " [", collection.numOwned, "] [", collection.numTotal, "] [", update, "]" )
 	
-	collection.isReady = true
+	if not collection.isReady then
+		collection.isReady = true
+		ArkInventory:SendMessage( "EVENT_ARKINV_LDB_CURRENCY_UPDATE_BUCKET" )
+	end
 	
 	if update then
 		ArkInventory.ScanLocation( loc_id )

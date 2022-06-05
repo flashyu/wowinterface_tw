@@ -1,10 +1,10 @@
-## Interface: 90200
+## Interface: 90205
 
 ## Title: ArkInventory [Rules]
 ## Notes: Rules for ArkInventory
 ## Author: Arkayenro
 ## Email: arkayenro at gmail dot com
-## Version: 30966
+## Version: 30967
 
 ## DefaultState: Enabled
 ## LoadOnDemand: 0

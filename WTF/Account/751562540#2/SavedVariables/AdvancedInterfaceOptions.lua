@@ -32,7 +32,7 @@ AdvancedInterfaceOptionsSaved = {
 		["nameplateshowfriends"] = "[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `SetCVar'\n[string \"FRIENDNAMEPLATES\"]:3: in function <[string \"FRIENDNAMEPLATES\"]:1>\n:(unhandled exception)",
 		["sound_mastervolume"] = "Interface\\FrameXML\\OptionsPanelTemplates.lua:209",
 		["autolootdefault"] = "Interface\\FrameXML\\OptionsPanelTemplates.lua:209",
-		["cameradistancemaxzoomfactor"] = "Interface\\FrameXML\\OptionsPanelTemplates.lua:69",
+		["cameradistancemaxzoomfactor"] = "Interface\\FrameXML\\OptionsPanelTemplates.lua:475",
 		["floatingcombattextdamagereduction"] = "Interface\\FrameXML\\OptionsPanelTemplates.lua:209",
 		["shownewbietips"] = "Interface\\FrameXML\\OptionsPanelTemplates.lua:209",
 		["sound_musicvolume"] = "Interface\\FrameXML\\OptionsPanelTemplates.lua:209",

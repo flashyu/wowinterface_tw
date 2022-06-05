@@ -1260,7 +1260,7 @@ end
 
 -- item_openable = right click to open
 --[[
-local z = "reputation with"
+local z = "protoform"
 ArkInventory.Output( "search=", z )
 for k, v in pairs (_G) do
 	if type( k ) == "string" and type( v ) == "string" then
