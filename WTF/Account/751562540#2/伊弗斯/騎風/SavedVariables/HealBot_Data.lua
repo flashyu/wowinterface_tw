@@ -357,10 +357,10 @@ HealBot_Config_Cures = {
 	["DebuffWatchWhenMounted"] = false,
 	["DebuffWatchInCombat"] = true,
 	["HealBot_Custom_Defuffs_All"] = {
-		["Poison"] = false,
-		["Curse"] = false,
-		["Magic"] = false,
 		["Disease"] = false,
+		["Poison"] = false,
+		["Magic"] = false,
+		["Curse"] = false,
 	},
 	["ShowTimeMaxDuration"] = 31,
 	["IgnoreFastDurDebuffsSecs"] = 2,
@@ -391,25 +391,25 @@ HealBot_Config_Cures = {
 	["IgnoreOnCooldownDebuffs"] = false,
 	["HealBot_CDCWarnRange_Screen"] = 2,
 	["CDCBarColour"] = {
+		["Disease"] = {
+			["B"] = 0.7,
+			["G"] = 0.19,
+			["R"] = 0.55,
+		},
 		["Poison"] = {
 			["B"] = 0.24,
 			["G"] = 0.46,
 			["R"] = 0.12,
-		},
-		["Curse"] = {
-			["B"] = 0.09,
-			["G"] = 0.43,
-			["R"] = 0.83,
 		},
 		["Magic"] = {
 			["B"] = 0.83,
 			["G"] = 0.33,
 			["R"] = 0.26,
 		},
-		["Disease"] = {
-			["B"] = 0.7,
-			["G"] = 0.19,
-			["R"] = 0.55,
+		["Curse"] = {
+			["B"] = 0.09,
+			["G"] = 0.43,
+			["R"] = 0.83,
 		},
 	},
 	["HealBotDebuffPriority"] = {

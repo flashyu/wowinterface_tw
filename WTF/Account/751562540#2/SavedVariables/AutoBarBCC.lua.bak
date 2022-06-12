@@ -802,7 +802,7 @@ AutoBarDB = {
 					["arrangeOnUse"] = "风怒武器",
 				},
 				["AutoBarButtonBuff"] = {
-					["arrangeOnUse"] = 27498,
+					["arrangeOnUse"] = 27503,
 				},
 				["AutoBarButtonTotemAir"] = {
 					["arrangeOnUse"] = "空气之怒图腾",

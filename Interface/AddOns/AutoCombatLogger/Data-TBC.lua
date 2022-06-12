@@ -411,6 +411,18 @@ addon.Raids = {
 			["25"] = true,
 		},
 	},
+	["Zul'Aman"] = {
+		tier = 6.5,
+		difficulties = {
+			["10"] = true,
+		},
+	},
+	["The Sunwell"] = {
+		tier = 7,
+		difficulties = {
+			["25"] = true,
+		},
+	},
 
 	-- Classic Raids
 	["Molten Core"] = {

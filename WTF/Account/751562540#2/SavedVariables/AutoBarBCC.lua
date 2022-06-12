@@ -414,7 +414,7 @@ AutoBarDB = {
 					["arrangeOnUse"] = "风怒武器",
 				},
 				["AutoBarButtonBuff"] = {
-					["arrangeOnUse"] = 27498,
+					["arrangeOnUse"] = 27503,
 				},
 				["AutoBarButtonTotemAir"] = {
 					["arrangeOnUse"] = "空气之怒图腾",
@@ -837,6 +837,13 @@ AutoBarDB = {
 AutoBarDB2 = {
 	["performance_threshold"] = 100,
 	["custom_categories"] = {
+		["Custom自定义1"] = {
+			["categoryKey"] = "Custom自定义1",
+			["items"] = {
+			},
+			["name"] = "自定义1",
+			["desc"] = "自定义1",
+		},
 	},
 	["whatsnew_version"] = "2.05.1.10",
 }

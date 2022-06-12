@@ -19,11 +19,11 @@ ElvDB = {
 			},
 		},
 	},
-	["faction"] = {
+	["gold"] = {
 		["伊弗斯"] = {
-			["我在哪"] = "Horde",
-			["騎風"] = "Horde",
-			["隔離"] = "Horde",
+			["我在哪"] = 0,
+			["騎風"] = 517660326,
+			["隔離"] = 0,
 		},
 	},
 	["profileKeys"] = {
@@ -31,7 +31,12 @@ ElvDB = {
 		["隔離 - 伊弗斯"] = "Default",
 		["我在哪 - 伊弗斯"] = "Default",
 	},
-	["DisabledAddOns"] = {
+	["faction"] = {
+		["伊弗斯"] = {
+			["我在哪"] = "Horde",
+			["騎風"] = "Horde",
+			["隔離"] = "Horde",
+		},
 	},
 	["serverID"] = {
 		[4487] = {
@@ -45,12 +50,7 @@ ElvDB = {
 			["隔離"] = "WARLOCK",
 		},
 	},
-	["gold"] = {
-		["伊弗斯"] = {
-			["我在哪"] = 0,
-			["騎風"] = 863507070,
-			["隔離"] = 0,
-		},
+	["DisabledAddOns"] = {
 	},
 	["profiles"] = {
 		["騎風 - 伊弗斯"] = {
@@ -142,7 +142,7 @@ ElvDB = {
 				},
 			},
 			["movers"] = {
-				["ElvAB_8"] = "TOP,ElvUIParent,TOP,-346,-340",
+				["ElvAB_8"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-74,277",
 				["ElvUF_AssistMover"] = "TOPLEFT,UIParent,TOPLEFT,4,-102",
 				["PetAB"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,317,250",
 				["ElvUF_PlayerCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-203,280",
@@ -158,12 +158,12 @@ ElvDB = {
 				["ZoneAbility"] = "BOTTOM,ElvUIParent,BOTTOM,-1,293",
 				["SocialMenuMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,4,-187",
 				["ElvUF_PetMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,418,287",
-				["ElvUF_PlayerAuraMover"] = "BOTTOM,ElvUIParent,BOTTOM,-202,331",
+				["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,77",
 				["ElvUF_RaidpetMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,737",
-				["ElvUF_TargetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,203,280",
+				["ArenaHeaderMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-357,304",
 				["ElvAB_10"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,276",
 				["ElvUF_FocusMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-530,340",
-				["ArenaHeaderMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-357,304",
+				["ElvUF_TargetCastbarMover"] = "BOTTOM,ElvUIParent,BOTTOM,203,280",
 				["DurabilityFrameMover"] = "TOPRIGHT,UIParent,TOPRIGHT,-4,-328",
 				["ClassBarMover"] = "BOTTOM,ElvUIParent,BOTTOM,-202,331",
 				["MicrobarMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,-1,0",
@@ -181,21 +181,21 @@ ElvDB = {
 				["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,-1",
 				["ElvAB_9"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-40,277",
 				["BelowMinimapContainerMover"] = "TOPRIGHT,UIParent,TOPRIGHT,-4,-236",
+				["QuestTimerFrameMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-135,-300",
 				["TalkingHeadFrameMover"] = "BOTTOM,ElvUIParent,BOTTOM,-1,373",
-				["ElvAB_4"] = "BOTTOM,ElvUIParent,BOTTOM,0,38",
 				["AltPowerBarMover"] = "TOP,ElvUIParent,TOP,-1,-36",
 				["AzeriteBarMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-3,-245",
 				["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,339,0",
 				["ReputationBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,484,4",
 				["VehicleLeaveButton"] = "BOTTOM,UIParent,BOTTOM,191,445",
 				["ElvAB_5"] = "TOPLEFT,UIParent,TOPLEFT,208,-98",
-				["QuestTimerFrameMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-135,-300",
+				["ElvAB_4"] = "BOTTOM,ElvUIParent,BOTTOM,0,38",
 				["ObjectiveFrameMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-163,-325",
 				["BNETMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-273",
 				["ShiftAB"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,315,326",
 				["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,203,300",
 				["HonorBarMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-3,-255",
-				["ElvAB_6"] = "BOTTOM,ElvUIParent,BOTTOM,0,77",
+				["ElvUF_PlayerAuraMover"] = "BOTTOM,ElvUIParent,BOTTOM,-202,331",
 				["TooltipMover"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-478,207",
 				["ElvUF_TankMover"] = "TOPLEFT,UIParent,TOPLEFT,4,-34",
 				["ElvUF_FocusCastbarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-530,319",
@@ -445,11 +445,14 @@ ElvDB = {
 					["hotkeyFont"] = "Expressway",
 					["macroFont"] = "Expressway",
 					["macroTextPosition"] = "BOTTOMRIGHT",
+					["buttonSize"] = 35,
+					["buttonSpacing"] = 0,
 					["macroFontOutline"] = "OUTLINE",
 					["countFont"] = "Expressway",
 					["countFontOutline"] = "OUTLINE",
 					["hotkeyFontOutline"] = "OUTLINE",
 					["macrotext"] = true,
+					["buttonsPerRow"] = 1,
 				},
 				["fontOutline"] = "OUTLINE",
 				["bar9"] = {
@@ -606,7 +609,6 @@ ElvDB = {
 					},
 					["ENEMY_PLAYER"] = {
 						["debuffs"] = {
-							["enable"] = false,
 							["numAuras"] = 8,
 						},
 						["raidTargetIndicator"] = {
@@ -615,9 +617,6 @@ ElvDB = {
 						["power"] = {
 							["enable"] = true,
 							["classColor"] = true,
-						},
-						["buffs"] = {
-							["enable"] = false,
 						},
 					},
 					["PLAYER"] = {
