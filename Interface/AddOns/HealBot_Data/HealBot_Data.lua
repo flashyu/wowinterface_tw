@@ -130,6 +130,7 @@ HealBot_Config_BuffsDefaults = {
   BuffWatchWhenGrouped=false,
   BuffWatchWhenMounted=false,
   NoAuraWhenRested=false,
+  ExtraBuffsOnlyInInstance=false,
   HealBotBuffText={},
   HealBotBuffDropDown={},
   HealBotBuffColR={},

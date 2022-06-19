@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0538,
-	["LastPlayerFullName"] = "騎風-伊弗斯",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 31015,
@@ -15,9 +13,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:32260::::::::70:::::::::|h[無盡夢魘頸飾]|h|r",
 		}, -- [2]
 		{
-			["ID"] = 32264,
-			["Level"] = 141,
-			["Link"] = "|cffa335ee|Hitem:32264::::::::70:::::::::|h[隱藏捕獵者護肩]|h|r",
+			["ID"] = 31024,
+			["Level"] = 146,
+			["Link"] = "|cffa335ee|Hitem:31024:2986:32217:32217:::::70:::::::::|h[破天护肩]|h|r",
 		}, -- [3]
 		nil, -- [4]
 		{
@@ -91,6 +89,8 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:34346::::::::70:::::::::|h[复仇]|h|r",
 		}, -- [17]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "騎風-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

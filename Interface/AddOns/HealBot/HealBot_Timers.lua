@@ -56,6 +56,7 @@ HealBot_Timers_luVars["UpdateAllBuffIcons"]=false
 HealBot_Timers_luVars["SlowDelayedTime"]=0
 HealBot_Timers_luVars["DoneBuffReset"]=false
 HealBot_Timers_luVars["nCalls"]=0
+HealBot_Timers_luVars["GetGuildVersion"]=true
 
 function HealBot_Timers_setLuVars(vName, vValue)
     HealBot_Timers_luVars[vName]=vValue
@@ -261,6 +262,8 @@ function HealBot_Timers_LoadComplete()
 end
 
 function HealBot_Timers_LastUpdate()
+    HealBot_Timers_luVars["GetGuildVersion"]=true
+    HealBot_CheckVersions()
     HealBot_Timers_Set("INITSLOW","DisableCheck")
     HealBot_Timers_Set("LAST","UpdateAllHealth")
     HealBot_Timers_Set("LAST","PlayerCheckExtended")
@@ -316,6 +319,20 @@ function HealBot_Timers_CheckDC()
         end
     end
         --HealBot_setCall("HealBot_Timers_CheckDC")
+end
+
+function HealBot_Timers_GetGuildVersion()
+    HealBot_Comms_SendAddonMsg("R", 3)
+    HealBot_Comms_SendAddonMsg("S:"..HEALBOT_VERSION, 3)
+end
+
+function HealBot_Timers_GetVersion()
+    HealBot_Comms_SendAddonMsg("R", 1)
+    HealBot_Comms_SendAddonMsg("S:"..HEALBOT_VERSION, 1)
+    if HealBot_Timers_luVars["GetGuildVersion"] then
+        HealBot_Timers_luVars["GetGuildVersion"]=false
+        HealBot_Timers_Set("DELAYED","GetGuildVersion")
+    end
 end
 
 function HealBot_Timers_QuickFramesChanged()
@@ -526,6 +543,8 @@ local hbTimerFuncs={["INIT"]={
                         ["UpdateMaxUnitsAdj"]=HealBot_UpdateMaxUnitsAdj,
                         ["SetLang"]=HealBot_Timers_Lang,
                         ["DisableCheck"]=HealBot_Options_DisableCheck,
+                        ["GetVersion"]=HealBot_Timers_GetVersion,
+                        ["GetGuildVersion"]=HealBot_Timers_GetGuildVersion,
                     },
                    }
 

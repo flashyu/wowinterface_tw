@@ -731,8 +731,7 @@ function HealBot_Lang_enALL()
     HEALBOT_IMPORT_CREATEORREPLACE          = "Create or Replace"
 
     HEALBOT_CHAT_ADDONID                    = "[HealBot]  "
-    HEALBOT_CHAT_NEWVERSION1                = "A newer version is available"
-    HEALBOT_CHAT_NEWVERSION2                = "at "..HEALBOT_ABOUT_URL
+    HEALBOT_CHAT_NEWVERSION1                = "A new version is available"
     HEALBOT_CHAT_SHARESKINERR1              = " Skin not found for Sharing"
     HEALBOT_CHAT_SHARESKINERR3              = " not found for Skin Sharing"
     HEALBOT_CHAT_SHARESKINACPT              = "Share Skin accepted from "
@@ -1340,9 +1339,10 @@ function HealBot_Lang_enALL()
     
     HEALBOT_OPTIONS_ADDON_FAIL              = "Failed to load headbot addon"
     
-    HEALBOT_OPTIONS_IN_A_GROUP              = "Only when in a Group or Raid"
+    HEALBOT_OPTIONS_IN_A_GROUP              = "Only in a Group or Raid"
     HEALBOT_OPTIONS_ALSO_WHEN_MOUNTED       = "also when mounted"
     HEALBOT_OPTIONS_PALADIN_BLESSINGS       = "View all my blessings as same"
+    HEALBOT_OPTIONS_ONLY_IN_INSTANCE        = "Only in instance"
     
     HEALBOT_OPTIONS_TAB_EFFECTS              = "Effects"
     HEALBOT_OPTIONS_TAB_EMERG                = "Emergency"

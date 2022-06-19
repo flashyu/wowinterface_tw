@@ -45,14 +45,14 @@ TellMeWhenDB = {
 								{
 									["Type"] = "OFFHAND",
 									["Operator"] = "<=",
-									["AndOr"] = "OR",
 									["Level"] = 5,
+									["AndOr"] = "OR",
 								}, -- [1]
 								{
 									["Type"] = "MAINHAND",
 									["Operator"] = "<=",
-									["AndOr"] = "OR",
 									["Level"] = 5,
+									["AndOr"] = "OR",
 								}, -- [2]
 								["n"] = 2,
 							},
@@ -206,8 +206,8 @@ TellMeWhenDB = {
 					["Name"] = "功能组",
 					["Point"] = {
 						["y"] = 5.41265869140625,
-						["relativeTo"] = "TMW:group:1Xn6tR1fm2iE",
 						["x"] = 338.64306640625,
+						["relativeTo"] = "TMW:group:1Xn6tR1fm2iE",
 					},
 				}, -- [1]
 				{
@@ -218,19 +218,6 @@ TellMeWhenDB = {
 						{
 							["Type"] = "cooldown",
 							["Name"] = "地震术",
-							["ManaCheck"] = true,
-							["States"] = {
-								nil, -- [1]
-								nil, -- [2]
-								{
-									["Alpha"] = 0,
-								}, -- [3]
-								{
-									["Alpha"] = 0,
-								}, -- [4]
-							},
-							["RangeCheck"] = true,
-							["FakeHidden"] = true,
 							["GUID"] = "TMW:icon:1XeX1Gk9RpC7",
 							["Conditions"] = {
 								{
@@ -252,44 +239,44 @@ TellMeWhenDB = {
 								{
 									["Type"] = "CASTING",
 									["Unit"] = "target",
-									["AndOr"] = "OR",
-									["Name"] = "治疗波",
 									["Level"] = 1,
+									["Name"] = "治疗波",
+									["AndOr"] = "OR",
 								}, -- [4]
 								{
 									["Type"] = "CASTING",
 									["Unit"] = "target",
-									["AndOr"] = "OR",
-									["Name"] = "法力燃烧",
 									["Level"] = 1,
+									["Name"] = "法力燃烧",
+									["AndOr"] = "OR",
 								}, -- [5]
 								{
 									["Type"] = "CASTING",
 									["Unit"] = "target",
-									["AndOr"] = "OR",
-									["Name"] = "治疗术",
 									["Level"] = 1,
+									["Name"] = "治疗术",
+									["AndOr"] = "OR",
 								}, -- [6]
 								{
 									["Type"] = "CASTING",
 									["Unit"] = "target",
-									["AndOr"] = "OR",
-									["Name"] = "圣光闪现",
 									["Level"] = 1,
+									["Name"] = "圣光闪现",
+									["AndOr"] = "OR",
 								}, -- [7]
 								{
 									["Type"] = "CASTING",
 									["Unit"] = "target",
-									["AndOr"] = "OR",
-									["Name"] = "暗影箭雨",
 									["Level"] = 1,
+									["Name"] = "暗影箭雨",
+									["AndOr"] = "OR",
 								}, -- [8]
 								{
 									["Type"] = "CASTING",
 									["Unit"] = "target",
-									["AndOr"] = "OR",
-									["Name"] = "炎爆术",
 									["Level"] = 1,
+									["Name"] = "炎爆术",
+									["AndOr"] = "OR",
 								}, -- [9]
 								{
 									["Type"] = "NAME",
@@ -300,6 +287,19 @@ TellMeWhenDB = {
 								}, -- [10]
 								["n"] = 10,
 							},
+							["States"] = {
+								nil, -- [1]
+								nil, -- [2]
+								{
+									["Alpha"] = 0,
+								}, -- [3]
+								{
+									["Alpha"] = 0,
+								}, -- [4]
+							},
+							["RangeCheck"] = true,
+							["FakeHidden"] = true,
+							["ManaCheck"] = true,
 							["GCDAsUnusable"] = true,
 						}, -- [1]
 						{
@@ -385,9 +385,9 @@ TellMeWhenDB = {
 									["Type"] = "CASTING",
 									["PrtsAfter"] = 1,
 									["Unit"] = "target",
-									["AndOr"] = "OR",
-									["Name"] = "神圣愤怒",
 									["Level"] = 1,
+									["Name"] = "神圣愤怒",
+									["AndOr"] = "OR",
 								}, -- [5]
 								["n"] = 5,
 							},
@@ -442,8 +442,8 @@ TellMeWhenDB = {
 					},
 					["Point"] = {
 						["y"] = -49.54278564453125,
-						["relativeTo"] = "TMW:group:1Xn6tR1fm2iE",
 						["x"] = 338.6427001953125,
+						["relativeTo"] = "TMW:group:1Xn6tR1fm2iE",
 					},
 				}, -- [2]
 				{
@@ -546,11 +546,16 @@ TellMeWhenDB = {
 					},
 					["Point"] = {
 						["y"] = -97.74310302734375,
-						["relativeTo"] = "TMW:group:1Xn6tR1fm2iE",
 						["x"] = 345.72314453125,
+						["relativeTo"] = "TMW:group:1Xn6tR1fm2iE",
 					},
 				}, -- [3]
 				{
+					["Point"] = {
+						["y"] = -234.3067016601563,
+						["x"] = 269.3917236328125,
+						["relativeTo"] = "TMW:group:1X_0=Lpa6dSC",
+					},
 					["Scale"] = 1,
 					["Rows"] = 3,
 					["Locked"] = true,
@@ -653,7 +658,16 @@ TellMeWhenDB = {
 						[11] = {
 							["Type"] = "cooldown",
 							["Name"] = "地震术",
-							["ManaCheck"] = true,
+							["GUID"] = "TMW:icon:1Y7DNUM3XtSR",
+							["Conditions"] = {
+								{
+									["Type"] = "NAME",
+									["Unit"] = "target",
+									["Name"] = "欲望精华; 阴暗通灵师; 女公爵玛兰德; 莎赫拉丝主母",
+									["Level"] = 1,
+								}, -- [1]
+								["n"] = 1,
+							},
 							["States"] = {
 								nil, -- [1]
 								nil, -- [2]
@@ -666,16 +680,7 @@ TellMeWhenDB = {
 							},
 							["RangeCheck"] = true,
 							["FakeHidden"] = true,
-							["GUID"] = "TMW:icon:1Y7DNUM3XtSR",
-							["Conditions"] = {
-								{
-									["Type"] = "NAME",
-									["Unit"] = "target",
-									["Name"] = "欲望精华; 阴暗通灵师; 女公爵玛兰德; 莎赫拉丝主母",
-									["Level"] = 1,
-								}, -- [1]
-								["n"] = 1,
-							},
+							["ManaCheck"] = true,
 							["GCDAsUnusable"] = true,
 						},
 						[13] = {
@@ -788,11 +793,6 @@ TellMeWhenDB = {
 						["n"] = 7,
 					},
 					["GUID"] = "TMW:group:1Y2FNTArQmen",
-					["Point"] = {
-						["y"] = -234.3067016601563,
-						["relativeTo"] = "TMW:group:1X_0=Lpa6dSC",
-						["x"] = 269.3917236328125,
-					},
 				}, -- [4]
 				{
 					["Point"] = {
@@ -809,7 +809,7 @@ TellMeWhenDB = {
 						{
 							["Type"] = "cooldown",
 							["Name"] = "火焰新星图腾",
-							["ManaCheck"] = true,
+							["GUID"] = "TMW:icon:1XeX1GWIKsKM",
 							["Conditions"] = {
 								{
 									["Type"] = "COMBAT",
@@ -892,13 +892,13 @@ TellMeWhenDB = {
 							},
 							["RangeCheck"] = true,
 							["FakeHidden"] = true,
-							["GUID"] = "TMW:icon:1XeX1GWIKsKM",
+							["ManaCheck"] = true,
 							["Enabled"] = true,
 						}, -- [1]
 						{
 							["Type"] = "cooldown",
 							["Name"] = "火焰新星图腾",
-							["ManaCheck"] = true,
+							["GUID"] = "TMW:icon:1XpQ2OOg8Zyx",
 							["Conditions"] = {
 								{
 									["Type"] = "COMBAT",
@@ -956,7 +956,7 @@ TellMeWhenDB = {
 							},
 							["RangeCheck"] = true,
 							["FakeHidden"] = true,
-							["GUID"] = "TMW:icon:1XpQ2OOg8Zyx",
+							["ManaCheck"] = true,
 							["Enabled"] = true,
 						}, -- [2]
 						nil, -- [3]
@@ -970,7 +970,7 @@ TellMeWhenDB = {
 						{
 							["Type"] = "cooldown",
 							["Name"] = "熔岩图腾",
-							["ManaCheck"] = true,
+							["GUID"] = "TMW:icon:1XiAsbhpzM4_",
 							["Conditions"] = {
 								{
 									["Type"] = "TOTEM1",
@@ -1027,13 +1027,13 @@ TellMeWhenDB = {
 							},
 							["RangeCheck"] = true,
 							["FakeHidden"] = true,
-							["GUID"] = "TMW:icon:1XiAsbhpzM4_",
+							["ManaCheck"] = true,
 							["Enabled"] = true,
 						}, -- [11]
 						{
 							["Type"] = "cooldown",
 							["Name"] = "熔岩图腾",
-							["ManaCheck"] = true,
+							["GUID"] = "TMW:icon:1XiB9m0jlbe9",
 							["Conditions"] = {
 								{
 									["Type"] = "TOTEM1",
@@ -1084,13 +1084,13 @@ TellMeWhenDB = {
 							},
 							["RangeCheck"] = true,
 							["FakeHidden"] = true,
-							["GUID"] = "TMW:icon:1XiB9m0jlbe9",
+							["ManaCheck"] = true,
 							["Enabled"] = true,
 						}, -- [12]
 						{
 							["Type"] = "cooldown",
 							["Name"] = "灼热图腾",
-							["ManaCheck"] = true,
+							["GUID"] = "TMW:icon:1XiBSFGDNfeY",
 							["States"] = {
 								nil, -- [1]
 								nil, -- [2]
@@ -1104,7 +1104,7 @@ TellMeWhenDB = {
 							["RangeCheck"] = true,
 							["FakeHidden"] = true,
 							["Enabled"] = true,
-							["GUID"] = "TMW:icon:1XiBSFGDNfeY",
+							["ManaCheck"] = true,
 							["Conditions"] = {
 								{
 									["Type"] = "TOTEM1",
@@ -1143,7 +1143,7 @@ TellMeWhenDB = {
 						{
 							["Type"] = "cooldown",
 							["Name"] = "大地之力图腾",
-							["ManaCheck"] = true,
+							["GUID"] = "TMW:icon:1XeX1GWbFQuX",
 							["Conditions"] = {
 								{
 									["Type"] = "BUFFDUR",
@@ -1167,7 +1167,7 @@ TellMeWhenDB = {
 							},
 							["RangeCheck"] = true,
 							["FakeHidden"] = true,
-							["GUID"] = "TMW:icon:1XeX1GWbFQuX",
+							["ManaCheck"] = true,
 							["Enabled"] = true,
 						}, -- [21]
 						{
@@ -1229,7 +1229,7 @@ TellMeWhenDB = {
 								["n"] = 1,
 							},
 							["Name"] = "风怒图腾",
-							["ManaCheck"] = true,
+							["GUID"] = "TMW:icon:1XeX1GWl_IKm",
 							["Conditions"] = {
 								{
 									["Type"] = "TIMER",
@@ -1240,9 +1240,9 @@ TellMeWhenDB = {
 									["Type"] = "TIMER",
 									["PrtsAfter"] = 1,
 									["Operator"] = ">=",
-									["AndOr"] = "OR",
-									["Name"] = "风怒图腾",
 									["Level"] = 9,
+									["Name"] = "风怒图腾",
+									["AndOr"] = "OR",
 								}, -- [2]
 								{
 									["Type"] = "MANA",
@@ -1280,13 +1280,13 @@ TellMeWhenDB = {
 							},
 							["RangeCheck"] = true,
 							["FakeHidden"] = true,
-							["GUID"] = "TMW:icon:1XeX1GWl_IKm",
+							["ManaCheck"] = true,
 							["Enabled"] = true,
 						}, -- [31]
 						{
 							["Type"] = "cooldown",
 							["Name"] = "风之优雅图腾",
-							["ManaCheck"] = true,
+							["GUID"] = "TMW:icon:1XeX1GWzwzW8",
 							["Conditions"] = {
 								{
 									["Type"] = "BUFFDUR",
@@ -1310,13 +1310,13 @@ TellMeWhenDB = {
 							},
 							["RangeCheck"] = true,
 							["FakeHidden"] = true,
-							["GUID"] = "TMW:icon:1XeX1GWzwzW8",
+							["ManaCheck"] = true,
 							["Enabled"] = true,
 						}, -- [32]
 						[41] = {
 							["Type"] = "cooldown",
 							["Name"] = "法力之泉图腾",
-							["ManaCheck"] = true,
+							["GUID"] = "TMW:icon:1XeX1GXPdR0B",
 							["Conditions"] = {
 								{
 									["Type"] = "BUFFDUR",
@@ -1340,7 +1340,7 @@ TellMeWhenDB = {
 							},
 							["RangeCheck"] = true,
 							["FakeHidden"] = true,
-							["GUID"] = "TMW:icon:1XeX1GXPdR0B",
+							["ManaCheck"] = true,
 							["Enabled"] = true,
 						},
 					},
@@ -1458,8 +1458,8 @@ TellMeWhenDB = {
 							["Type"] = "cleu",
 							["CLEUDur"] = 0.1,
 							["Name"] = "火焰新星图腾",
+							["Enabled"] = true,
 							["GUID"] = "TMW:icon:1XiAunpX4GOJ",
-							["SourceUnit"] = "player",
 							["Events"] = {
 								{
 									["TimerOperation"] = "restart",
@@ -1470,14 +1470,14 @@ TellMeWhenDB = {
 								["n"] = 1,
 							},
 							["FakeHidden"] = true,
-							["Enabled"] = true,
+							["SourceUnit"] = "player",
 						}, -- [10]
 					},
 					["Name"] = "风怒计时器",
 					["Point"] = {
 						["y"] = -389.5129699707031,
-						["relativeTo"] = "TMW:group:1Xn6tR1fm2iE",
 						["x"] = 344.5423583984375,
+						["relativeTo"] = "TMW:group:1Xn6tR1fm2iE",
 					},
 				}, -- [6]
 				{
@@ -1569,8 +1569,8 @@ TellMeWhenDB = {
 								}, -- [1]
 								{
 									["Type"] = "ALIVE",
-									["AndOr"] = "OR",
 									["Level"] = 1,
+									["AndOr"] = "OR",
 								}, -- [2]
 								["n"] = 2,
 							},
@@ -1588,6 +1588,13 @@ TellMeWhenDB = {
 					},
 				}, -- [7]
 				{
+					["Point"] = {
+						["y"] = 22.12384033203125,
+						["relativeTo"] = "TMW:group:1Xn6tR1fm2iE",
+						["point"] = "RIGHT",
+						["relativePoint"] = "RIGHT",
+						["x"] = 698.52294921875,
+					},
 					["Scale"] = 1,
 					["Rows"] = 2,
 					["Locked"] = true,
@@ -1606,7 +1613,7 @@ TellMeWhenDB = {
 								["n"] = 1,
 							},
 							["UnConditionDur"] = 1,
-							["GUID"] = "TMW:icon:1VLNpV7Y4dCb",
+							["Enabled"] = true,
 							["Events"] = {
 								{
 									["Type"] = "Counter",
@@ -1791,7 +1798,7 @@ TellMeWhenDB = {
 							},
 							["CustomTex"] = "247443",
 							["FakeHidden"] = true,
-							["Enabled"] = true,
+							["GUID"] = "TMW:icon:1VLNpV7Y4dCb",
 						}, -- [1]
 						{
 							["GUID"] = "TMW:icon:1VLNpV7YA0Wf",
@@ -1883,16 +1890,13 @@ TellMeWhenDB = {
 					},
 					["Name"] = "5码小怪",
 					["GUID"] = "TMW:group:1VLNpV7kQyS2",
-					["Point"] = {
-						["y"] = 22.12384033203125,
-						["relativeTo"] = "TMW:group:1Xn6tR1fm2iE",
-						["point"] = "RIGHT",
-						["relativePoint"] = "RIGHT",
-						["x"] = 698.52294921875,
-					},
 				}, -- [8]
 				{
 					["Strata"] = "TOOLTIP",
+					["Point"] = {
+						["point"] = "TOPLEFT",
+						["relativePoint"] = "TOPLEFT",
+					},
 					["Rows"] = 2,
 					["Locked"] = true,
 					["Columns"] = 2,
@@ -1926,12 +1930,15 @@ TellMeWhenDB = {
 						},
 					},
 					["GUID"] = "TMW:group:1XcD3fuZduaU",
-					["Point"] = {
-						["point"] = "TOPLEFT",
-						["relativePoint"] = "TOPLEFT",
-					},
 				}, -- [9]
 				{
+					["Point"] = {
+						["y"] = -56.755126953125,
+						["relativeTo"] = "TMW:group:1Xn6tR1fm2iE",
+						["point"] = "TOPLEFT",
+						["relativePoint"] = "TOPLEFT",
+						["x"] = 703.2440185546875,
+					},
 					["Scale"] = 1,
 					["Rows"] = 3,
 					["Locked"] = true,
@@ -1995,15 +2002,13 @@ TellMeWhenDB = {
 					},
 					["Name"] = "近战范围小怪的数量",
 					["GUID"] = "TMW:group:1RNozLnGszMQ",
-					["Point"] = {
-						["y"] = -56.755126953125,
-						["relativeTo"] = "TMW:group:1Xn6tR1fm2iE",
-						["point"] = "TOPLEFT",
-						["relativePoint"] = "TOPLEFT",
-						["x"] = 703.2440185546875,
-					},
 				}, -- [10]
 				{
+					["Point"] = {
+						["y"] = -60.85595703125,
+						["x"] = -75.44677734375,
+						["relativeTo"] = "TMW:group:1X_0=Lpa6dSC",
+					},
 					["Scale"] = 1,
 					["Rows"] = 2,
 					["Locked"] = true,
@@ -2217,13 +2222,12 @@ TellMeWhenDB = {
 						["n"] = 5,
 					},
 					["GUID"] = "TMW:group:1Xn6tR1fm2iE",
-					["Point"] = {
-						["y"] = -60.85595703125,
-						["relativeTo"] = "TMW:group:1X_0=Lpa6dSC",
-						["x"] = -75.44677734375,
-					},
 				}, -- [11]
 				{
+					["Point"] = {
+						["y"] = -60,
+						["relativeTo"] = "TMW:group:1Xn6tR1fm2iE",
+					},
 					["Scale"] = 1,
 					["Rows"] = 2,
 					["Locked"] = true,
@@ -2436,10 +2440,6 @@ TellMeWhenDB = {
 						["n"] = 5,
 					},
 					["GUID"] = "TMW:group:1XpSPMgAj=0t",
-					["Point"] = {
-						["y"] = -60,
-						["relativeTo"] = "TMW:group:1Xn6tR1fm2iE",
-					},
 				}, -- [12]
 				{
 					["Point"] = {

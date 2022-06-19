@@ -660,7 +660,7 @@ local vHealthTextConcatIndex,vHealthTextConcatResult,vSetHealthTextStrLen,vSetHe
 local vHealthTextTotal,sepHealTxt,absorbinTxt,ahtNumSuffix,ahitNumSuffix,ignoreInHeals=0,0,0,"","",false
 function HealBot_Text_ConcatHealthText(button)
     vSetHealthTextStrLen=hbStringLen(hbutf8sub(button.text.health, "%s+", ""))
-    if HealBot_Panel_isSpecialUnit(button.unit)>0 then
+    if button.frame==10 and HealBot_Panel_isSpecialUnit(button.unit)>0 then
         vSetHealthTextBtnLen=HealBot_Text_EnemySizeWidth["HLTH"][HealBot_Panel_isSpecialUnit(button.unit)]
     else
         vSetHealthTextBtnLen=hbBarHealthTextLen[button.frame]
@@ -675,7 +675,7 @@ function HealBot_Text_ConcatHealthText(button)
         tHealthConcat[2]=button.text.inheal
         button.text.healthcomplete=HealBot_Text_HealthConcat(2)
     elseif vSetHealthTextStrLen>vSetHealthTextBtnLen then
-        if HealBot_Panel_isSpecialUnit(button.unit)>0 then
+        if button.frame==10 and HealBot_Panel_isSpecialUnit(button.unit)>0 then
             tConcat[1]=hbStringSub(button.text.health,1,HealBot_Text_EnemySizeWidth["HLTH"][HealBot_Panel_isSpecialUnit(button.unit)])
         else
             tConcat[1]=hbStringSub(button.text.health,1,hbBarHealthTextLen[button.frame])
@@ -1115,13 +1115,13 @@ function HealBot_Text_setNameTextSeperate(button)
     end
 
     vSetNameTextStrLen=hbStringLen(hbutf8sub(vSetNameTextName, "%s+", ""))
-    if HealBot_Panel_isSpecialUnit(button.unit)>0 then
+    if button.frame==10 and HealBot_Panel_isSpecialUnit(button.unit)>0 then
         vSetNameTextBtnLen=HealBot_Text_EnemySizeWidth["NAME"][HealBot_Panel_isSpecialUnit(button.unit)]-vSetNameTextStrLen
     else
         vSetNameTextBtnLen=hbBarTextLen[button.frame]-vSetNameTextStrLen
     end
     if vSetNameTextBtnLen<0 then
-        if HealBot_Panel_isSpecialUnit(button.unit)>0 then
+        if button.frame==10 and HealBot_Panel_isSpecialUnit(button.unit)>0 then
             tConcat[1]=hbStringSub(vSetNameTextName,1,HealBot_Text_EnemySizeWidth["NAME"][HealBot_Panel_isSpecialUnit(button.unit)])
         else
             tConcat[1]=hbStringSub(vSetNameTextName,1,hbBarTextLen[button.frame])
@@ -1203,13 +1203,13 @@ function HealBot_Text_setNameTextCombined(button)
     end
 
     vSetNameTextStrLen=hbStringLen(hbutf8sub(vSetNameTextName, "%s+", ""))
-    if HealBot_Panel_isSpecialUnit(button.unit)>0 then
+    if button.frame==10 and HealBot_Panel_isSpecialUnit(button.unit)>0 then
         vSetNameTextBtnLen=HealBot_Text_EnemySizeWidth["NAME"][HealBot_Panel_isSpecialUnit(button.unit)]-vSetNameTextStrLen
     else
         vSetNameTextBtnLen=hbBarTextLen[button.frame]-vSetNameTextStrLen
     end
     if vSetNameTextBtnLen<0 then
-        if HealBot_Panel_isSpecialUnit(button.unit)>0 then
+        if button.frame==10 and HealBot_Panel_isSpecialUnit(button.unit)>0 then
             tConcat[1]=hbStringSub(vSetNameTextName,1,HealBot_Text_EnemySizeWidth["NAME"][HealBot_Panel_isSpecialUnit(button.unit)])
         else
             tConcat[1]=hbStringSub(vSetNameTextName,1,hbBarTextLen[button.frame])

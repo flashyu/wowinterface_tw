@@ -874,7 +874,7 @@ function HealBot_Aura_CheckGeneralBuff(button)
             end
         end
     end
-    if not button.aura.buff.missingbuff and button.player then
+    if not button.aura.buff.missingbuff and button.player and (IsInInstance() or not HealBot_Config_Buffs.ExtraBuffsOnlyInInstance) then
         for x=1,2 do
             if HealBot_Weapon_Enchant[x] then
                 local hasMainHandEnchant, mainHandExpiration, _, mainHandEnchantID, hasOffHandEnchant, offHandExpiration, _, offHandEnchantID = GetWeaponEnchantInfo()
@@ -2286,7 +2286,7 @@ function HealBot_Aura_InitItemsDataReady()
 
     if HealBot_Config_Buffs.CheckWellFed then
         hbCustomItemID=GetItemInfoInstant(HealBot_Config_Buffs.WellFedItem) or 0
-        if hbCustomItemID>0 and HealBot_IsItemInBag(hbCustomItemID) then
+        if hbCustomItemID>0 and HealBot_IsItemInBag(hbCustomItemID) and (IsInInstance() or not HealBot_Config_Buffs.ExtraBuffsOnlyInInstance) then
             HealBot_Buff_Aura2Item[HEALBOT_WELL_FED] = hbCustomItemID
             if not HealBot_BuffWatch[HealBot_Config_Buffs.WellFedItem] then
                 HealBot_Aura_SetBuffWatch(HealBot_Config_Buffs.WellFedItem)
@@ -2300,7 +2300,7 @@ function HealBot_Aura_InitItemsDataReady()
     for x=1,3 do
         if string.len(HealBot_Config_Buffs.CustomBuffName[x])>0 then
             hbCustomItemID=GetItemInfoInstant(HealBot_Config_Buffs.CustomItemName[x]) or 0
-            if HealBot_Config_Buffs.CustomBuffCheck[x] and hbCustomItemID>0 and HealBot_IsItemInBag(hbCustomItemID) then
+            if HealBot_Config_Buffs.CustomBuffCheck[x] and hbCustomItemID>0 and HealBot_IsItemInBag(hbCustomItemID) and (IsInInstance() or not HealBot_Config_Buffs.ExtraBuffsOnlyInInstance) then
                 HealBot_Buff_Aura2Item[HealBot_Config_Buffs.CustomBuffName[x]] = hbCustomItemID
                 if not HealBot_BuffWatch[HealBot_Config_Buffs.CustomItemName[x]] then
                     HealBot_Aura_SetBuffWatch(HealBot_Config_Buffs.CustomItemName[x])
@@ -2327,14 +2327,13 @@ function HealBot_Aura_InitItemsDataReady()
     HealBot_Timers_Set("AURA","DeleteExcludeBuffInCache")
     HealBot_Timers_Set("AURA","ResetBuffCache")
     HealBot_Timers_Set("AURA","CheckPlayer")
-    
 end
 
 function HealBot_Aura_InitItemsData()
     if HealBot_retLuVars("BagsScanned") then
         HealBot_Timers_Set("INITSLOW","InitItemsDataReady")
     else
-        HealBot_Timers_Set("LAST","InitItemsData")
+        HealBot_Timers_Set("DELAYED","InitItemsData")
         --HealBot_AddDebug("InitItemsData","Buff",true)
     end
 end

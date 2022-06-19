@@ -823,7 +823,6 @@ function HealBot_Action_setState(button, state, a)
     if button.status.enabled~=state then
         button.status.enabled=state
         HealBot_Action_ShowHideFrames(button) 
-        HealBot_Aura_Update_AllIcons(button)
         HealBot_Text_UpdateButton(button)
         if not state then
             if button.health.incoming>0 then HealBot_OnEvent_HealsInUpdate(button, true) end
@@ -833,6 +832,7 @@ function HealBot_Action_setState(button, state, a)
     if button.status.alpha~=a then
         button.status.alpha=a
         HealBot_Aux_UpdBar(button)
+        HealBot_Aura_Update_AllIcons(button)
     end
 end
 
@@ -1880,7 +1880,7 @@ local hbEventFuncs={["UNIT_AURA"]=HealBot_Check_UnitAura,
                     ["PLAYER_TARGET_SET_ATTACKING"]=HealBot_CalcThreat,
                     ["UNIT_TARGET"]=HealBot_OnEvent_UnitTarget,
                     ["UNIT_PHASE"]=HealBot_OnEvent_UnitPhase,
-                    ["UNIT_NAME_UPDATE"]=HealBot_UpdateUnitGUIDChange,
+                    ["UNIT_NAME_UPDATE"]=HealBot_CheckUpdateUnitGUIDChange,
                     ["UNIT_DISPLAYPOWER"]=HealBot_OnEvent_UnitManaUpdate,
                     ["UNIT_CONNECTION"]=HealBot_CheckUnitStatus,
                     ["PARTY_MEMBER_ENABLE"]=HealBot_CheckUnitStatus,
@@ -1902,7 +1902,7 @@ local hbEnemyEventFuncs={["UNIT_AURA"]=HealBot_EnemyCheck_UnitAura,
                          ["UNIT_SPELLCAST_CHANNEL_STOP"]=HealBot_OnEvent_UnitSpellCastStop,
                          ["UNIT_SPELLCAST_STOP"]=HealBot_OnEvent_UnitSpellCastStop,
                          ["UNIT_PHASE"]=HealBot_OnEvent_UnitPhase,
-                         ["UNIT_NAME_UPDATE"]=HealBot_UpdateUnitGUIDChange,
+                         ["UNIT_NAME_UPDATE"]=HealBot_CheckUpdateUnitGUIDChange,
                          ["UNIT_DISPLAYPOWER"]=HealBot_OnEvent_UnitManaUpdate,
                    }
 function HealBot_Action_InitButton(button)
@@ -3469,12 +3469,12 @@ function HealBot_Action_SetHealButton(unit,guid,frame,unitType,duplicate,role,pr
     if guid then
         if unitType<5 then
             hButton=HealBot_Private_Button[unit] or HealBot_Action_CreateButton(frame)
-        elseif unitType>10 then
-            hButton=HealBot_Enemy_Button[unit] or HealBot_Action_CreateButton(frame)
         elseif unitType==8 then
             hButton=HealBot_Pet_Button[unit] or HealBot_Action_CreateButton(frame)
         elseif unitType==7 then
             hButton=HealBot_Vehicle_Button[unit] or HealBot_Action_CreateButton(frame)
+        elseif unitType>10 then
+            hButton=HealBot_Enemy_Button[unit] or HealBot_Action_CreateButton(frame)
         elseif unitType>8 then
             hButton=HealBot_Extra_Button[unit] or HealBot_Action_CreateButton(frame)
         else
@@ -3504,6 +3504,29 @@ function HealBot_Action_SetHealButton(unit,guid,frame,unitType,duplicate,role,pr
             hButton.status.role=role
             if hButton.unit~=unit or hButton.reset or hButton.guid~=guid or hButton.status.unittype~=unitType then 
                 hButton.reset=false
+                if unitType>10 then 
+                    HealBot_Enemy_Button[unit]=hButton
+                    if vEnemyUnitsWithEvents[unit] then
+                        hButton.status.unittype = 12
+                    else
+                        hButton.status.unittype = 11
+                    end
+                else
+                    hButton.status.unittype = unitType            -- 1=Tanks  2=Healers  3=Self  4=Private  5=Raid  6=Group
+                    if unitType==8 then                           -- 7=vehicle  8=pet  9=target  10=focus  11=enemy without events  12=enemy with events 
+                        HealBot_Pet_Button[unit]=hButton
+                    elseif unitType==7 then
+                        HealBot_Vehicle_Button[unit]=hButton
+                    elseif unitType<5 then
+                        HealBot_Private_Button[unit]=hButton
+                        hbShouldHealSomePrivateFrames[frame]=true
+                    elseif unitType>8 then
+                        HealBot_Extra_Button[unit]=hButton
+                    else
+                        HealBot_Unit_Button[unit]=hButton 
+                        hbShouldHealSomePlayerFrames[frame]=true
+                    end
+                end
                 if hButton.unit~=unit or hButton.guid~=guid then 
                     hButton.unit=unit
                     erButton.unit=unit
@@ -3529,29 +3552,6 @@ function HealBot_Action_SetHealButton(unit,guid,frame,unitType,duplicate,role,pr
                 HealBot_Action_SetAllButtonAttribs(erButton,"Emerg")
                 if not hButton.status.events then HealBot_Action_RegisterUnitEvents(hButton) end
                 HealBot_HealthAlertLevel(preCombat, hButton)
-                if unitType>10 then 
-                    HealBot_Enemy_Button[unit]=hButton
-                    if vEnemyUnitsWithEvents[unit] then
-                        hButton.status.unittype = 12
-                    else
-                        hButton.status.unittype = 11
-                    end
-                else
-                    hButton.status.unittype = unitType            -- 1=Tanks  2=Healers  3=Self  4=Private  5=Raid  6=Group
-                    if unitType==8 then                           -- 7=vehicle  8=pet  9=target  10=focus  11=enemy without events  12=enemy with events 
-                        HealBot_Pet_Button[unit]=hButton
-                    elseif unitType==7 then
-                        HealBot_Vehicle_Button[unit]=hButton
-                    elseif unitType<5 then
-                        HealBot_Private_Button[unit]=hButton
-                        hbShouldHealSomePrivateFrames[frame]=true
-                    elseif unitType>8 then
-                        HealBot_Extra_Button[unit]=hButton
-                    else
-                        HealBot_Unit_Button[unit]=hButton 
-                        hbShouldHealSomePlayerFrames[frame]=true
-                    end
-                end
                 if UnitExists(unit) then
                     hButton.status.change=true
                     HealBot_OnEvent_UnitHealth(hButton)

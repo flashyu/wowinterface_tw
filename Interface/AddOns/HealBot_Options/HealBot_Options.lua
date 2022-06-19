@@ -188,6 +188,8 @@ HealBot_Options_luVars["AuxBar"]=1
 HealBot_Options_luVars["AuxTxtBar"]=1
 HealBot_Options_luVars["Options_Opened"]=false
 HealBot_Options_luVars["cSkin"]=""
+HealBot_Options_luVars["HeaderSwitchNumColsHdrOn"]=0
+HealBot_Options_luVars["HeaderSwitchNumColsHdrOff"]=0
 
 function HealBot_Options_setLuVars(vName, vValue)
     HealBot_Options_luVars[vName]=vValue
@@ -1453,7 +1455,10 @@ function HealBot_Options_InitBuffSpellsClassList(tClass)
             HEALBOT_WATER_BREATHING,
         }
         local sName=HealBot_KnownSpell(HEALBOT_FLAMETONGUE_SPELL)
-        if sName then HealBot_Options_InsertBuffSpellsWeaponEnchantList(sName, 2) end
+        if sName then 
+            HealBot_Options_InsertBuffSpellsWeaponEnchantList(sName, 1)
+            HealBot_Options_InsertBuffSpellsWeaponEnchantList(sName, 2)
+        end
         sName=HealBot_KnownSpell(HEALBOT_WINDFURY_SPELL)
         if sName then HealBot_Options_InsertBuffSpellsWeaponEnchantList(sName, 1) end
         sName=HealBot_KnownSpell(HBC_ROCKBITER_WEAPON)
@@ -2345,9 +2350,19 @@ function HealBot_Options_ShowHeaders_OnClick(self)
         Healbot_Config_Skins.HeadBar[Healbot_Config_Skins.Current_Skin][HealBot_Options_luVars["FramesSelFrame"]]["SHOW"] = self:GetChecked()
         if HealBot_Options_luVars["cSkin"]==Healbot_Config_Skins.Current_Skin then
             if Healbot_Config_Skins.HeadBar[Healbot_Config_Skins.Current_Skin][HealBot_Options_luVars["FramesSelFrame"]]["SHOW"] then
-                Healbot_Config_Skins.HealBar[Healbot_Config_Skins.Current_Skin][HealBot_Options_luVars["FramesSelFrame"]]["NUMCOLS"]=HealBot_Panel_retHeadersCols(HealBot_Options_luVars["FramesSelFrame"])
+                HealBot_Options_luVars["HeaderSwitchNumColsHdrOff"]=Healbot_Config_Skins.HealBar[Healbot_Config_Skins.Current_Skin][HealBot_Options_luVars["FramesSelFrame"]]["NUMCOLS"]
+                if HealBot_Options_luVars["HeaderSwitchNumColsHdrOn"]>0 then
+                    Healbot_Config_Skins.HealBar[Healbot_Config_Skins.Current_Skin][HealBot_Options_luVars["FramesSelFrame"]]["NUMCOLS"]=HealBot_Options_luVars["HeaderSwitchNumColsHdrOn"]
+                else
+                    Healbot_Config_Skins.HealBar[Healbot_Config_Skins.Current_Skin][HealBot_Options_luVars["FramesSelFrame"]]["NUMCOLS"]=HealBot_Panel_retHeadersCols(HealBot_Options_luVars["FramesSelFrame"])
+                end
             else
-                Healbot_Config_Skins.HealBar[Healbot_Config_Skins.Current_Skin][HealBot_Options_luVars["FramesSelFrame"]]["NUMCOLS"]=HealBot_Panel_retNoCols(HealBot_Options_luVars["FramesSelFrame"])
+                HealBot_Options_luVars["HeaderSwitchNumColsHdrOn"]=Healbot_Config_Skins.HealBar[Healbot_Config_Skins.Current_Skin][HealBot_Options_luVars["FramesSelFrame"]]["NUMCOLS"]
+                if HealBot_Options_luVars["HeaderSwitchNumColsHdrOff"]>0 then
+                    Healbot_Config_Skins.HealBar[Healbot_Config_Skins.Current_Skin][HealBot_Options_luVars["FramesSelFrame"]]["NUMCOLS"]=HealBot_Options_luVars["HeaderSwitchNumColsHdrOff"]
+                else
+                    Healbot_Config_Skins.HealBar[Healbot_Config_Skins.Current_Skin][HealBot_Options_luVars["FramesSelFrame"]]["NUMCOLS"]=HealBot_Panel_retNoCols(HealBot_Options_luVars["FramesSelFrame"])
+                end
             end
         end
         HealBot_Options_BarNumColsS:SetValue(Healbot_Config_Skins.HealBar[Healbot_Config_Skins.Current_Skin][HealBot_Options_luVars["FramesSelFrame"]]["NUMCOLS"] or 2)
@@ -4951,6 +4966,13 @@ function HealBot_Options_MonitorBuffsWhenMounted_OnClick(self)
         HealBot_Config_Buffs.BuffWatchWhenMounted = self:GetChecked()
         HealBot_Timers_Set("INITSLOW","BuffReset")
         HealBot_Timers_Set("PLAYERSLOW","PlayerCheckExtended")
+    end
+end
+
+function HealBot_Options_MonitorExtraBuffsOnlyInInstance_OnClick(self)
+    if HealBot_Config_Buffs.ExtraBuffsOnlyInInstance~=self:GetChecked() then
+        HealBot_Config_Buffs.ExtraBuffsOnlyInInstance = self:GetChecked()
+        HealBot_Timers_Set("LAST","InitItemsData")
     end
 end
 
@@ -19462,6 +19484,8 @@ function HealBot_Options_InitSub2(subNo)
             HealBot_Options_SetText(HealBot_Options_MonitorBuffsInCombat,HEALBOT_OPTIONS_MONITORBUFFSC)
             HealBot_Options_MonitorBuffsWhenMounted:SetChecked(HealBot_Config_Buffs.BuffWatchWhenMounted)
             HealBot_Options_SetText(HealBot_Options_MonitorBuffsWhenMounted,HEALBOT_OPTIONS_ALSO_WHEN_MOUNTED)
+            HealBot_Options_MonitorExtraBuffsOnlyInInstance:SetChecked(HealBot_Config_Buffs.ExtraBuffsOnlyInInstance)
+            HealBot_Options_SetText(HealBot_Options_MonitorExtraBuffsOnlyInInstance,HEALBOT_OPTIONS_ONLY_IN_INSTANCE)
             HealBot_Options_MonitorBuffsWhenGrouped:SetChecked(HealBot_Config_Buffs.BuffWatchWhenGrouped)
             HealBot_Options_SetText(HealBot_Options_MonitorBuffsWhenGrouped,HEALBOT_OPTIONS_IN_A_GROUP)
             HealBot_Options_MonitorBuffsPalaBlessing:SetChecked(HealBot_Config_Buffs.PalaBlessingsAsOne)
@@ -19830,7 +19854,9 @@ end
 local HealBot_disabledState=-1
 function HealBot_Options_SetSkins(force)
     if hbCurSkin~=Healbot_Config_Skins.Current_Skin or force then
-        if hbCurSkin~=Healbot_Config_Skins.Current_Skin then 
+        if hbCurSkin~=Healbot_Config_Skins.Current_Skin then
+            HealBot_Options_luVars["HeaderSwitchNumColsHdrOn"]=0
+            HealBot_Options_luVars["HeaderSwitchNumColsHdrOff"]=0
             HealBot_Panel_resetInitFrames()
             HealBot_Options_ResetDoInittab(3) 
             HealBot_Options_InitSub(102)

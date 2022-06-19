@@ -21266,6 +21266,20 @@
                           </Layer>
                         </Layers>
                         <Frames>
+                          <CheckButton name="HealBot_Options_MonitorExtraBuffsOnlyInInstance" inherits="SendMailRadioButtonTemplate">
+                            <Anchors>
+                              <Anchor point="TOPLEFT" relativeTo="HealBot_BuffExtra_Text" relativePoint="TOPRIGHT">
+                                <Offset>
+                                  <AbsDimension x="15" y="3"/>
+                                </Offset>
+                              </Anchor>
+                            </Anchors>
+                            <Scripts>
+                              <OnClick>HealBot_Options_MonitorExtraBuffsOnlyInInstance_OnClick(self)</OnClick>
+                              <OnEnter>HealBot_Options_Show_Help("MONITORININSTANCE",true)</OnEnter>
+                              <OnLeave>HealBot_Options_Show_Help("MONITORININSTANCE",false)</OnLeave>
+                            </Scripts>
+                          </CheckButton>
                           <Frame name="HealBot_Options_BuffsPanelExtraBuffsWeaponEnchants" inherits="BackdropTemplate">
                             <Size>
                               <AbsDimension y="120"/>

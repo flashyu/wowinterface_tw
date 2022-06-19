@@ -1195,7 +1195,9 @@ end
 function HealBot_Share_PostLink()
     local s="|cffe6cc80|Hgarrmission:healbot|hHealBot Share [~"..HealBot_Share_luVars["RequestString"].."~]|h|r"
     s=HealBot_Share_Compress(s)
-    if HealBot_Share_luVars["PostChannel"]==1 and IsInGroup() then
+    if HealBot_Share_luVars["PostChannel"]<3 and IsInInstance() and (IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInRaid(LE_PARTY_CATEGORY_INSTANCE)) then
+        C_ChatInfo.SendAddonMessage(HEALBOT_HEALBOT, "L:L~"..s, "INSTANCE_CHAT")
+    elseif HealBot_Share_luVars["PostChannel"]==1 and IsInGroup() then
         C_ChatInfo.SendAddonMessage(HEALBOT_HEALBOT, "L:L~"..s, "PARTY")
     elseif HealBot_Share_luVars["PostChannel"]==2 and IsInRaid() then
         C_ChatInfo.SendAddonMessage(HEALBOT_HEALBOT, "L:L~"..s, "RAID")

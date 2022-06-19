@@ -15,7 +15,6 @@ local barScale,h,hwidth,hheight,iScale,diScale,itScale,x,hcpct=nil,nil,nil,nil,n
 local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10]=4,[11]=4,[12]=4,[13]=4,[14]=4,[15]=5}
 local auxWidth,auxHeight,auxTmp,auxOffsetBelow,auxOffsetLeft=0,0,0,0,0
 local lIconWidth,rIconWidth,bIconHeight=0,0,0
-local barOffsetV, barOffsetH, barOffsetH2=0,0,0
 local maxIcons=0
 local AuxOverlapOffset=0
 local maxScale=0
@@ -75,7 +74,7 @@ function HealBot_Skins_ResetSkinWidth(button)
     frameScale = Healbot_Config_Skins.Frame[Healbot_Config_Skins.Current_Skin][button.frame]["SCALE"]
     bWidth = ceil(Healbot_Config_Skins.HealBar[Healbot_Config_Skins.Current_Skin][button.frame]["WIDTH"]*frameScale);
     bOutline = ceil(Healbot_Config_Skins.BarCol[Healbot_Config_Skins.Current_Skin][button.frame]["BOUT"]*frameScale);
-    if HealBot_Panel_isSpecialUnit(button.unit)>0 then
+    if button.frame==10 and HealBot_Panel_isSpecialUnit(button.unit)>0 then
         HealBot_Skins_AdjustSpecialBarWidth(button)
     end
     button.gref["Bar"]:SetWidth(bWidth)
@@ -306,6 +305,7 @@ function HealBot_Skins_IndicatorVOffset(anchor, offset)
     return indOffset
 end
 
+local tmpHeightOffset=0
 function HealBot_Skins_ResetSkin(barType,button,numcols)
     if button and button.frame then 
         frameScale = Healbot_Config_Skins.Frame[Healbot_Config_Skins.Current_Skin][button.frame]["SCALE"]
@@ -326,37 +326,26 @@ function HealBot_Skins_ResetSkin(barType,button,numcols)
         auxOffsetLeft=0
         for x=1,9 do
             if Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["USE"]>1 then
+                auxTmp=Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["DEPTH"]+Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["OFFSET"]
                 if Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["ANCHOR"]<3 then
-                    if Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["ANCHOR"]==1 then
-                        auxTmp=Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["DEPTH"]+Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["OFFSET"]
-                        if auxTmp<0 then auxTmp=0 end
-                        barOffsetV=barOffsetV+auxTmp
-                        auxOffsetBelow=Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["DEPTH"]+Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["OFFSET"]
+                    if auxTmp>0 then
+                        if Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["ANCHOR"]==1 then
+                            auxOffsetBelow=auxOffsetBelow+auxTmp
+                        end
+                        auxHeight=auxHeight+auxTmp
                     end
-                    auxTmp=auxHeight
-                    auxHeight=auxHeight+Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["DEPTH"]
-                    auxHeight=auxHeight+Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["OFFSET"]
-                    if auxHeight<auxTmp then auxHeight=auxTmp end
                 else
-                    if Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["ANCHOR"]==3 then
-                        auxTmp=Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["DEPTH"]+barOffsetH+Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["OFFSET"]
-                        if auxTmp<0 then auxTmp=0 end
-                        barOffsetH=auxTmp--barOffsetH+auxTmp
-                        auxOffsetLeft=Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["DEPTH"]+Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["OFFSET"]
-                    else
-                        auxTmp=Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["DEPTH"]+barOffsetH+Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["OFFSET"]
-                        if auxTmp<0 then auxTmp=0 end
-                        barOffsetH2=auxTmp
+                    if auxTmp>0 then
+                        if Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["ANCHOR"]==3 then
+                            auxOffsetLeft=auxOffsetLeft+auxTmp
+                        end
+                        auxWidth=auxWidth+auxTmp
                     end
-                    auxTmp=auxWidth
-                    auxWidth=auxWidth+Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["DEPTH"]
-                    auxWidth=auxWidth+Healbot_Config_Skins.AuxBar[Healbot_Config_Skins.Current_Skin][x][button.frame]["OFFSET"]
-                    if auxWidth<auxTmp then auxWidth=auxTmp end
                 end
             end
         end
-        if auxOffsetBelow<0 then auxOffsetBelow=0 end
-        if auxOffsetLeft<0 then auxOffsetLeft=0 end
+        auxOffsetBelow=ceil(auxOffsetBelow*frameScale)
+        auxOffsetLeft=ceil(auxOffsetLeft*frameScale)
         auxHeight=ceil(auxHeight*frameScale)
         auxWidth=ceil(auxWidth*frameScale)
     end
@@ -365,9 +354,6 @@ function HealBot_Skins_ResetSkin(barType,button,numcols)
         lIconWidth=0
         rIconWidth=0
         bIconHeight=0
-        barOffsetH2=0
-        barOffsetV=bOutline
-        barOffsetH=bOutline
         b=button
         
         if b.skinreset then
@@ -471,7 +457,7 @@ function HealBot_Skins_ResetSkin(barType,button,numcols)
                 bIconHeight=ceil(bIconHeight*frameScale)
             end
             pWidth=bWidth
-            if HealBot_Panel_isSpecialUnit(button.unit)>0 then
+            if button.frame==10 and HealBot_Panel_isSpecialUnit(button.unit)>0 then
                 HealBot_Skins_AdjustSpecialBarWidth(button)        
                 if Healbot_Config_Skins.Enemy[Healbot_Config_Skins.Current_Skin]["DOUBLEWIDTH"] then 
                     pWidth=pWidth*(2-(pWidth/7800))
@@ -517,7 +503,7 @@ function HealBot_Skins_ResetSkin(barType,button,numcols)
             b.gref["Bar"]:SetStatusBarTexture(LSM:Fetch('statusbar',Healbot_Config_Skins.HealBar[Healbot_Config_Skins.Current_Skin][b.frame]["TEXTURE"]));
             b.gref["Bar"]:GetStatusBarTexture():SetHorizTile(false)
             b.gref["Bar"]:ClearAllPoints()
-            b.gref["Bar"]:SetPoint("BOTTOMLEFT",b.gref["Back"],"BOTTOMLEFT",auxOffsetLeft+barOffsetH+lIconWidth,auxOffsetBelow+barOffsetV+bIconHeight)
+            b.gref["Bar"]:SetPoint("BOTTOMLEFT",b.gref["Back"],"BOTTOMLEFT",auxOffsetLeft+bOutline+lIconWidth,auxOffsetBelow+bOutline+bIconHeight)
             
             erButton=HealBot_Emerg_Button[button.id]
             if b.frame<10 and Healbot_Config_Skins.Emerg[Healbot_Config_Skins.Current_Skin][b.frame]["USE"] then

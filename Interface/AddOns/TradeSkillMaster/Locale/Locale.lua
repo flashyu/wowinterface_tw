@@ -18700,8 +18700,7 @@ L["Level Up"] = "升級"
 --[[Translation missing --]]
 L["Limit"] = "Limit"
 L["Link to Another Operation"] = "連接到另一個作業"
---[[Translation missing --]]
-L["Loading..."] = "Loading..."
+L["Loading..."] = "載入中..."
 L["Lock Column Width"] = "鎖定直欄寬度"
 --[[Translation missing --]]
 L["Lock task list's background"] = "Lock task list's background"
