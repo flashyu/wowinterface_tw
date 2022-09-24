@@ -26,15 +26,15 @@ local collection = {
 	owned = { }, -- [mta] = { } array of all mounts of that type that you own, updated here when scanned
 	usable = { }, -- [mta] = { } array of all mounts of that type that you can use at the location you called it, updated via LDB
 	
-	filter = {
-		ignore = false,
-		search = nil,
-		collected = true,
-		uncollected = true,
-		family = { },
-		source = { },
-		backup = false,
-	},
+--	filter = {
+--		ignore = false,
+--		search = nil,
+--		collected = true,
+--		uncollected = true,
+--		family = { },
+--		source = { },
+--		backup = false,
+--	},
 	
 }
 

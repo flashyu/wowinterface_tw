@@ -154,6 +154,8 @@ local function FilterActionRestore( )
 	
 	collection.filter.ignore = true
 	
+	FilterActionClear( )
+	
 	FilterSetSearch( collection.filter.search )
 	FilterSetCollected( collection.filter.collected )
 	FilterSetUncollected( collection.filter.uncollected )

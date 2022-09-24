@@ -1,10 +1,10 @@
-lightweight tag af3c9839e6061566488b053df8194faa578b0613 v2.4.1-tbc
+lightweight tag 5c1fca56a462c575ace07f81c7917638ce5ed9b0 v2.5.0-v3.4.0
 Author:	Boshi Lian <farmer1992@gmail.com>
-Date:	Tue May 25 03:25:25 2021 -0700
+Date:	Mon Sep 5 05:03:40 2022 -0700
 
-commit af3c9839e6061566488b053df8194faa578b0613
+commit 5c1fca56a462c575ace07f81c7917638ce5ed9b0
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Tue May 25 03:25:25 2021 -0700
+Date:   Mon Sep 5 05:03:40 2022 -0700
 
-    support font size
+    disable quick join
 

@@ -1,4 +1,4 @@
-## Interface: 20501
+## Interface: 30400
 ## Title: Battle Info
 ## Title-zhCN: BattleInfo 战场助手
 ## Title-zhTW: 戰場資訊增強
@@ -13,8 +13,8 @@ locales.lua
 event.lua
 options.lua
 utils.lua
-quickjoin.lua
-newbattle.lua
+#quickjoin.lua
+#newbattle.lua
 widgetbar.lua
 auto.lua
 map.lua

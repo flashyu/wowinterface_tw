@@ -15,27 +15,11 @@
 -- ADDON GLOBALS AND LOCALS
 -- ---------------------------------
 
-if WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
-	StaticPopupDialogs["TMW_PROJECT_MISMATCH"] = {
-		-- This is not localizable, because AceLocale might not have loaded
-		-- (this is why we don't bother to load AceLocale until after these checks).
-		text = ("You've installed TellMeWhen for Classic TBC, but this is %s. Please double-check which version of TMW you downloaded."):format(_G["EXPANSION_NAME" .. GetExpansionLevel()]), 
-		button1 = EXIT_GAME,
-		button2 = CANCEL,
-		OnAccept = ForceQuit,
-		timeout = 0,
-		showAlert = true,
-		whileDead = true,
-		preferredIndex = 3, -- http://forums.wowace.com/showthread.php?p=320956
-	}
-	StaticPopup_Show("TMW_PROJECT_MISMATCH")
-	return
-end
 
-TELLMEWHEN_VERSION = "9.2.2"
+TELLMEWHEN_VERSION = "9.2.5"
 
 TELLMEWHEN_VERSION_MINOR = ""
-local projectVersion = "9.2.2-bcc" -- comes out like "6.2.2-21-g4e91cee"
+local projectVersion = "9.2.5-wrath" -- comes out like "6.2.2-21-g4e91cee"
 if projectVersion:find("project%-version") then
 	TELLMEWHEN_VERSION_MINOR = "dev"
 elseif strmatch(projectVersion, "%-%d+%-") then
@@ -43,7 +27,7 @@ elseif strmatch(projectVersion, "%-%d+%-") then
 end
 
 TELLMEWHEN_VERSION_FULL = TELLMEWHEN_VERSION .. " " .. TELLMEWHEN_VERSION_MINOR
-TELLMEWHEN_VERSIONNUMBER = 92200 -- NEVER DECREASE THIS NUMBER (duh?).  IT IS ALSO ONLY INTERNAL (for versioning of)
+TELLMEWHEN_VERSIONNUMBER = 92500 -- NEVER DECREASE THIS NUMBER (duh?).  IT IS ALSO ONLY INTERNAL (for versioning of)
 
 TELLMEWHEN_FORCECHANGELOG = 86005 -- if the user hasn't seen the changelog until at least this version, show it to them.
 
@@ -76,9 +60,9 @@ if not AceDB or not LibOO or not LSM then
 Normally, these come bundled with TMW, but you may have installed a nolib version of TMW by accident.
 
 This can happen especially if you use the Twitch app - ensure "Install Libraries Separately" isn't check for TellMeWhen in the Twitch app.]], 
-		button1 = EXIT_GAME,
+		button1 = RELOADUI,
 		button2 = CANCEL,
-		OnAccept = ForceQuit,
+		OnAccept = ReloadUI,
 		timeout = 0,
 		showAlert = true,
 		whileDead = true,
@@ -87,6 +71,23 @@ This can happen especially if you use the Twitch app - ensure "Install Libraries
 	StaticPopup_Show("TMW_MISSINGLIB")
 
 	-- Stop trying to load TMW.
+	return
+end
+
+if WOW_PROJECT_ID ~= WOW_PROJECT_WRATH_CLASSIC  then
+	StaticPopupDialogs["TMW_PROJECT_MISMATCH"] = {
+		-- This is not localizable, because AceLocale might not have loaded
+		-- (this is why we don't bother to load AceLocale until after these checks).
+		text = ("You've installed TellMeWhen for Wrath Classic, but this is %s. Please double-check which version of TMW you downloaded."):format(_G["EXPANSION_NAME" .. GetExpansionLevel()]), 
+		button1 = RELOADUI,
+		button2 = CANCEL,
+		OnAccept = ReloadUI,
+		timeout = 0,
+		showAlert = true,
+		whileDead = true,
+		preferredIndex = 3, -- http://forums.wowace.com/showthread.php?p=320956
+	}
+	StaticPopup_Show("TMW_PROJECT_MISMATCH")
 	return
 end
 
@@ -1065,39 +1066,7 @@ function TMW:PLAYER_LOGIN()
 	TMW.PLAYER_LOGIN = nil
 
 	-- Check for wrong WoW version
-	if select(4, GetBuildInfo()) < 20501 or select(4, GetBuildInfo()) > 29999 then
-		-- GLOBALS: StaticPopupDialogs, StaticPopup_Show, EXIT_GAME, CANCEL, ForceQuit
-		local version = GetBuildInfo()
-		StaticPopupDialogs["TMW_BADWOWVERSION"] = {
-			text = "TellMeWhen %s is only compatible with TBC Classic.",
-			button1 = OKAY,
-			timeout = 0,
-			showAlert = true,
-			whileDead = true,
-			preferredIndex = 3, -- http://forums.wowace.com/showthread.php?p=320956
-		}
-		StaticPopup_Show("TMW_BADWOWVERSION", TELLMEWHEN_VERSION_FULL, version)
-		return
-
-	-- -- if the file IS required for gross functionality
-	-- elseif not LibStub("LibClassicCasterino", true) then
-	-- 	local fileName = "TellMeWhen/Lib/LibClassicCasterino/LibClassicCasterino.lua"
-
-	-- 	-- this also includes upgrading from older than 3.0 (pre-Ace3 DB settings)
-	-- 	-- GLOBALS: StaticPopupDialogs, StaticPopup_Show, EXIT_GAME, CANCEL, ForceQuit
-	-- 	StaticPopupDialogs["TMW_RESTARTNEEDED"] = {
-	-- 		text = L["ERROR_MISSINGFILE"], 
-	-- 		button1 = OKAY,
-	-- 		timeout = 0,
-	-- 		showAlert = true,
-	-- 		whileDead = true,
-	-- 		preferredIndex = 3, -- http://forums.wowace.com/showthread.php?p=320956
-	-- 	}
-	-- 	StaticPopup_Show("TMW_RESTARTNEEDED", TELLMEWHEN_VERSION_FULL, fileName) -- arg3 could also be L["ERROR_MISSINGFILE_REQFILE"]
-	-- 	return
-
-	-- if the file is NOT required for gross functionality
-	elseif not LibStub("DRList-1.0", true) then
+	if not LibStub("DRList-1.0", true) then
 		StaticPopupDialogs["TMW_RESTARTNEEDED"] = {
 			text = L["ERROR_MISSINGFILE_NOREQ"], 
 			button1 = OKAY,
@@ -1357,6 +1326,8 @@ function TMW:GetSettingsFromGUID(GUID)
 			-- match returns that are returned when we get results from the iterator
 			-- for icons below (settings [,owner], groupSettings, domain, groupID, iconID)
 			return owner:GetSettings(), owner, owner.group:GetSettings(), owner.group.Domain, owner.group.ID, owner.ID
+		elseif owner.class == TMW.C.Group then
+			return owner:GetSettings(), owner, owner.domain, owner.ID
 		end
 		return owner:GetSettings(), owner
 	end
@@ -1528,6 +1499,18 @@ TMW.C.TMW:Inherit("Core_Upgrades")
 function TMW:GetBaseUpgrades()			-- upgrade functions
 	return {
 
+		[92400] = {
+			-- The lua import detector for the luavalue icon type
+			-- implemented its rawget guard incorrectly,
+			-- leading to extra per-view settings getting created on imported data.
+			group = function(self, gs)
+				gs.SettingsPerView.LuaCode = nil
+			end,
+			icon = function(self, ics)
+				ics.SettingsPerView.LuaCode = nil
+			end,
+		},
+		
 		[81206] = {
 			group = function(self, gs, domain, groupID)
 				-- the old upgrade accidentaly set these to false instead of nil

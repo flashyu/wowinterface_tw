@@ -10,45 +10,53 @@ end
 local function buildExtraTip(tooltip, entry)
     local r,g,b = .9,.8,.5
     LibExtraTip:AddLine(tooltip," ",r,g,b,true)
-	LibExtraTip:AddLine(tooltip,"# Gear best for:",r,g,b,true)
+	LibExtraTip:AddLine(tooltip,LBIS.L["# Gear best for:"],r,g,b,true)
 
 	local combinedTooltip = {};
-	local mageCount = 0;
-	local warriorDpsCount = 0;
-	local warlockCount = 0;
-	local hunterCount = 0;
+	local mageCount, warriorDpsCount, warlockCount = 0, 0, 0;
+	local hunterCount, dkCount, rogueCount = 0, 0, 0;
 
 	for k, v in pairs(entry) do
-		local classSpec = LoonBestInSlot.ClassSpec[k]
-		if classSpec.Class == "Warrior" and (classSpec.Spec == "Fury" or classSpec.Spec == "Arms") then
+		local classSpec = LBIS.ClassSpec[k]
+		if classSpec.Class == LBIS.L["Warrior"] and (classSpec.Spec == LBIS.L["Fury"] or classSpec.Spec == LBIS.L["Arms"]) then
 			warriorDpsCount = warriorDpsCount + 1;
 		end
 
-		if classSpec.Class == "Warlock" then
+		if classSpec.Class == LBIS.L["Warlock"] then
 			warlockCount = warlockCount + 1;
 		end
 
-		if classSpec.Class == "Mage" then
+		if classSpec.Class == LBIS.L["Mage"] then
 			mageCount = mageCount + 1;
 		end
 
-		if classSpec.Class == "Hunter" then
+		if classSpec.Class == LBIS.L["Hunter"] then
 			hunterCount = hunterCount + 1;
+		end
+
+		if classSpec.Class == LBIS.L["Death Knight"] then
+			dkCount = dkCount + 1;
+		end
+		
+		if classSpec.Class == LBIS.L["Rogue"] then
+			rogueCount = rogueCount + 1;
 		end
 	end
 
 	for k, v in pairs(entry) do
-		local classSpec = LoonBestInSlot.ClassSpec[k]
+		local classSpec = LBIS.ClassSpec[k]
 		local foundMatch = false;
 
 		for _, ttItem in pairs(combinedTooltip) do
-			if (ttItem.Class == "Warrior" and warriorDpsCount == 2) or 
-			   (ttItem.Class == "Warlock" and warlockCount == 3) or 
-			   (ttItem.Class == "Mage" and mageCount == 3) or
-			   (ttItem.Class == "Hunter" and hunterCount == 3) then
+			if (ttItem.Class == LBIS.L["Warrior"] and warriorDpsCount == 2) or 
+			   (ttItem.Class == LBIS.L["Warlock"] and warlockCount == 3) or 
+			   (ttItem.Class == LBIS.L["Mage"] and mageCount == 3) or
+			   (ttItem.Class == LBIS.L["Hunter"] and hunterCount == 3) or
+			   (ttItem.Class == LBIS.L["Death Knight"] and dkCount == 3) or
+			   (ttItem.Class == LBIS.L["Rogue"] and rogueCount == 3) then
 				if classSpec.Class == ttItem.Class and v.Bis == ttItem.Bis and v.Phase == ttItem.Phase then
 					foundMatch = true;
-					if ttItem.Class == "Warrior" and (ttItem.Spec == "Fury" or ttItem.Spec == "Arms") then
+					if ttItem.Class == LBIS.L["Warrior"] and (ttItem.Spec == LBIS.L["Fury"] or ttItem.Spec == LBIS.L["Arms"]) then
 						ttItem.Spec = "DPS";
 					else
 						ttItem.Spec = "";
@@ -64,7 +72,7 @@ local function buildExtraTip(tooltip, entry)
 	end
 
 	for k, v in pairs(combinedTooltip) do
-		local class = v.Class:upper()
+		local class = LBIS.ENGLISH_CLASS[v.Class]:upper()
 		local color = RAID_CLASS_COLORS[class]
 		local coords = CLASS_ICON_TCOORDS[class]
 		local classfontstring = "|T" .. iconpath .. ":14:14:::256:256:" .. iconOffset(coords[1] * 4, coords[3] * 4) .. "|t"
@@ -85,16 +93,16 @@ local function onTooltipSetItem(tooltip, itemLink, quantity)
 	local itemString = string.match(itemLink, "item[%-?%d:]+")
 	local itemId = ({ strsplit(":", itemString) })[2]
 
-	if LoonBestInSlot.Items[itemId] and LoonBestInSlotSettings.ShowTooltip then
-		buildExtraTip(tooltip, LoonBestInSlot.Items[itemId])
+	if LBIS.Items[itemId] and LBISSettings.ShowTooltip then
+		buildExtraTip(tooltip, LBIS.Items[itemId])
 	end
 end  
 
-LoonBestInSlot:RegisterEvent("PLAYER_ENTERING_WORLD" , function ()
-	LoonBestInSlot.EventFrame:UnregisterEvent("PLAYER_ENTERING_WORLD")
+LBIS:RegisterEvent("PLAYER_ENTERING_WORLD" , function ()
+	LBIS.EventFrame:UnregisterEvent("PLAYER_ENTERING_WORLD")
 	LibExtraTip:AddCallback({type = "item", callback = onTooltipSetItem, allevents = true})
 	LibExtraTip:RegisterTooltip(GameTooltip)
 	LibExtraTip:RegisterTooltip(ItemRefTooltip)
 
-    LoonBestInSlot:Startup();
+    LBIS:Startup();
 end);

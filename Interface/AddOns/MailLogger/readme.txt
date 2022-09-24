@@ -45,3 +45,5 @@ MailLogger：
 1.4.3 解决跨服交易通报目标不正确的问题
 1.4.4 解决部分翻译错误
 1.4.6 Fix nil var error.
+1.4.7 Fix misspelling.
+1.4.8 Remove prevent trade function.

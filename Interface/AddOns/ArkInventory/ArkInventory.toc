@@ -1,9 +1,9 @@
-## Interface: 90205
+## Interface: 90207
 
 ## Title: ArkInventory
 ## Author: Arkayenro - Khaz'goroth
 ## Email: arkayenro at gmail dot com
-## Version: 30967
+## Version: 30968
 ## X-ReleaseType: 
 ## SavedVariables: ARKINVDB
 

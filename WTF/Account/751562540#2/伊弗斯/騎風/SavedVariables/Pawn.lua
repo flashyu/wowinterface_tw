@@ -1,8 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0538,
-	["LastPlayerFullName"] = "騎風-伊弗斯",
-	["AutoSelectScales"] = false,
+	["LastVersion"] = 2.0606,
 	["ItemLevels"] = {
 		{
 			["ID"] = 31015,
@@ -31,9 +29,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:34545::::::::70:::::::::|h[破天束腰]|h|r",
 		}, -- [6]
 		{
-			["ID"] = 31021,
-			["Level"] = 146,
-			["Link"] = "|cffa335ee|Hitem:31021::::::::70:::::::::|h[碎天者戰馭便褲]|h|r",
+			["ID"] = 34168,
+			["Level"] = 159,
+			["Link"] = "|cffa335ee|Hitem:34168::::::::70:::::::::|h[逐星者护腿]|h|r",
 		}, -- [7]
 		{
 			["ID"] = 34567,
@@ -91,9 +89,11 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:34346::::::::70:::::::::|h[复仇]|h|r",
 		}, -- [17]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "騎風-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {
 	["LastClass"] = "SHAMAN",
-	["LastAdded"] = 2,
+	["LastAdded"] = 3,
 }

@@ -110,7 +110,7 @@ local function getMapIcon(t, element, highlight)
 	if addon.mapIcons[t] ~= nil then
 		for i, mapIcon in ipairs(addon.mapIcons[t]) do
 			if mapIcon.inUse then 
-				if mapIcon.instance == element.instance and mapIcon.wx == element.wx and mapIcon.wy == element.wy then
+				if mapIcon.mapID == element.mapID and mapIcon.x == element.x and mapIcon.y == element.y then
 					return mapIcon
 				end
 			else
@@ -148,10 +148,7 @@ local function getTooltip(element)
 end
 
 function addon.addMapIcon(element, highlight, ignoreMaxNumOfMarkers)
-	if element.wx == nil or element.wy == nil or element.instance == nil then
-		if addon.debugging then print("LIME: no world coordinates for map marker", element.mapID, element.x and (element.x / 100), element.y and (element.y / 100), highlight) end
-		return
-	end	
+	if element.x == nil or element.y == nil or element.mapID == nil then return end	
 	local mapIcon = getMapIcon(element.markerTyp or element.t, element, highlight)
 	if mapIcon == nil then return end
 	if not ignoreMaxNumOfMarkers then
@@ -160,7 +157,10 @@ function addon.addMapIcon(element, highlight, ignoreMaxNumOfMarkers)
 	end
 	mapIcon.instance = element.instance
 	mapIcon.wx = element.wx
-	mapIcon.wy = element.wy
+	mapIcon.wy = element.wy	
+	mapIcon.mapID = element.mapID
+	mapIcon.x = element.x
+	mapIcon.y = element.y
 	local tooltip = getTooltip(element)
 	if not mapIcon.inUse then
 		mapIcon.map.tooltip = tooltip
@@ -192,8 +192,16 @@ end
 local function showMapIcon(mapIcon, t)
 	if mapIcon ~= nil and mapIcon.inUse then
 		if t ~= "GOTO" then t = "LOC" end
-		if GuidelimeData["showMapMarkers" .. t] then HBDPins:AddWorldMapIconWorld(addon, mapIcon.map, mapIcon.instance, mapIcon.wx, mapIcon.wy, 3) end
-		if GuidelimeData["showMinimapMarkers" .. t] then HBDPins:AddMinimapIconWorld(addon, mapIcon.minimap, mapIcon.instance, mapIcon.wx, mapIcon.wy, mapIcon.index == 0) end
+		if addon.debugging then print("LIME: showMapIcon", mapIcon.mapID, mapIcon.x / 100, mapIcon.y / 100, mapIcon.instance, mapIcon.wx, mapIcon.wy) end
+		-- Hack for Scarlet Enclave: world map icons are not shown in Scarlet Enclave therefore use map icon
+		-- map icons are not useful for other zones on the other hand as then the icon will only appear in the map of the given zone and not in others
+		if mapIcon.mapID == 124 then
+			if GuidelimeData["showMapMarkers" .. t] then HBDPins:AddWorldMapIconMap(addon, mapIcon.map, mapIcon.mapID, mapIcon.x / 100, mapIcon.y / 100, 3) end
+			if GuidelimeData["showMinimapMarkers" .. t] and not addon.hideMinimapIconsAndArrowWhileBuffed then HBDPins:AddMinimapIconMap(addon, mapIcon.minimap, mapIcon.mapID, mapIcon.x / 100, mapIcon.y / 100, true, mapIcon.index == 0) end
+		else
+			if GuidelimeData["showMapMarkers" .. t] then HBDPins:AddWorldMapIconWorld(addon, mapIcon.map, mapIcon.instance, mapIcon.wx, mapIcon.wy, 3) end
+			if GuidelimeData["showMinimapMarkers" .. t] and not addon.hideMinimapIconsAndArrowWhileBuffed then HBDPins:AddMinimapIconWorld(addon, mapIcon.minimap, mapIcon.instance, mapIcon.wx, mapIcon.wy, true, mapIcon.index == 0) end
+		end
 	end
 end
 
@@ -299,7 +307,7 @@ function addon.updateArrow()
 	if addon.arrowFrame == nil or addon.x == nil or addon.y == nil then return end
 	
 	addon.arrowX, addon.arrowY = nil, nil
-	if GuidelimeDataChar.showArrow then
+	if GuidelimeDataChar.showArrow and not addon.hideMinimapIconsAndArrowWhileBuffed then
 		if not addon.isAlive() then
 			local corpse = HBD:GetPlayerZone() and C_DeathInfo.GetCorpseMapPosition(HBD:GetPlayerZone())
 			if corpse ~= nil then
@@ -330,9 +338,10 @@ function addon.updateArrow()
 		addon.arrowFrame.texture:SetTexCoord(addon.arrowFrame.col * 56 / 512, (addon.arrowFrame.col + 1) * 56 / 512, addon.arrowFrame.row * 42 / 512, (addon.arrowFrame.row + 1) * 42 / 512)
 	end
 	local dist2 = (addon.x - addon.arrowX) * (addon.x - addon.arrowX) + (addon.y - addon.arrowY) * (addon.y - addon.arrowY)
-	if addon.arrowFrame.element and addon.arrowFrame.element.radius and addon.lastDistance2 then
+	if addon.arrowFrame.element and addon.arrowFrame.element.radius then
 		local radius2 = addon.arrowFrame.element.radius * addon.arrowFrame.element.radius
-		if (dist2 < radius2 and addon.lastDistance2 >= radius2) or (dist2 >= radius2 * addon.GOTO_HYSTERESIS_FACTOR and addon.lastDistance2 <= radius2 * addon.GOTO_HYSTERESIS_FACTOR) then
+		if (dist2 < radius2 and (not addon.lastDistance2 or addon.lastDistance2 >= radius2)) 
+		or (dist2 >= radius2 * addon.GOTO_HYSTERESIS_FACTOR and addon.lastDistance2 and addon.lastDistance2 <= radius2 * addon.GOTO_HYSTERESIS_FACTOR) then
 			if addon.debugging then print("LIME: position reached/left") end
 			addon.updateSteps()
 		end
@@ -355,6 +364,7 @@ function addon.showArrow(element)
 	if addon.arrowFrame ~= nil then
 		addon.arrowFrame.element = element 
 	end
+	addon.lastDistance2 = nil
 end
 
 function addon.hideArrow()

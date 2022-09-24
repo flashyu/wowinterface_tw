@@ -76,7 +76,7 @@ local genericsLocales = {
     },
     ["Reload UI"] = {
         ["ptBR"] = "Recarregar interface",
-        ["ruRU"] = "Перезагрузка интерфейса",
+        ["ruRU"] = "Перезагрузка",
         ["deDE"] = "Interface neu laden",
         ["koKR"] = "Reload UI",
         ["esMX"] = "Recargar IU",
@@ -278,6 +278,18 @@ local genericsLocales = {
         ["esES"] = "Detalles del objeto",
         ["frFR"] = "Détails de l'objet",
     },
+    ["Item Details"] = {
+        ["ptBR"] = false,
+        ["ruRU"] = "Подробности о предмете",
+        ["deDE"] = "Item-Details",
+        ["koKR"] = false,
+        ["esMX"] = "Detalles de objeto",
+        ["enUS"] = true,
+        ["zhCN"] = false,
+        ["zhTW"] = false,
+        ["esES"] = "Detalles de objeto",
+        ["frFR"] = "Détails de l’objet",
+    },
     ["Required Level"] = {
         ["ptBR"] = "Nível necessário",
         ["ruRU"] = "Требуемый уровень",
@@ -369,7 +381,7 @@ local genericsLocales = {
         ["koKR"] = nil,
         ["esMX"] = "Grupo",
         ["enUS"] = true,
-        ["zhCN"] = nil,
+        ["zhCN"] = "队伍",
         ["zhTW"] = nil,
         ["esES"] = "Grupo",
         ["frFR"] = "Groupe",
@@ -381,11 +393,23 @@ local genericsLocales = {
         ["koKR"] = nil,
         ["esMX"] = "Banda",
         ["enUS"] = true,
-        ["zhCN"] = nil,
+        ["zhCN"] = "团队",
         ["zhTW"] = nil,
         ["esES"] = "Banda",
         ["frFR"] = "Raid",
     },
+    ["Vendors"] = {
+        ["ptBR"] = false,
+        ["ruRU"] = "Продавцы",
+        ["deDE"] = "Händler",
+        ["koKR"] = false,
+        ["esMX"] = "Vendedores",
+        ["enUS"] = true,
+        ["zhCN"] = false,
+        ["zhTW"] = false,
+        ["esES"] = "Vendedores",
+        ["frFR"] = "Vendeurs",
+    }
 }
 
 for k, v in pairs(genericsLocales) do

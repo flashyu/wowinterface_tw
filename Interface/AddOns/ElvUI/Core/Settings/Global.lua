@@ -49,6 +49,7 @@ G.datatexts = {
 		Crit = { Label = '', NoLabel = false, decimalLength = 1 },
 		Currencies = { goldFormat = 'BLIZZARD', goldCoins = true, displayedCurrency = 'BACKPACK', displayStyle = 'ICON', tooltipData = {}, idEnable = {}, headers = true, maxCurrency = false },
 		Durability = { Label = '', NoLabel = false, percThreshold = 30 },
+		DualSpecialization = { NoLabel = false },
 		ElvUI = { Label = '' },
 		Experience = { textFormat = 'CUR' },
 		Friends = {
@@ -72,6 +73,7 @@ G.datatexts = {
 		Guild = { Label = '', NoLabel = false },
 		Haste = { Label = '', NoLabel = false, decimalLength = 1 },
 		Hit = { Label = '', NoLabel = false, decimalLength = 1 },
+		Intellect = { Label = '', NoLabel = false},
 		Mastery = { Label = '', NoLabel = false, decimalLength = 1 },
 		MovementSpeed = { Label = '', NoLabel = false, decimalLength = 1 },
 		QuickJoin = { Label = '', NoLabel = false },
@@ -229,8 +231,9 @@ G.profileCopy = {
 			boss = true,
 			arena = true,
 			party = true,
-			raid = true,
-			raid40 = true,
+			raid1 = true,
+			raid2 = true,
+			raid3 = true,
 			raidpet = true,
 			tank = true,
 			assist = true

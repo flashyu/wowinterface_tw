@@ -1,7 +1,6 @@
 
-## v9.2.2
-### Bug Fixes
-* Fix #1931 - Group controller Buff/Debuff icons not checking any specific aura were not responding to UNIT_AURA events.
-  
+## v9.2.5
+* Fix for Blizzard changing WOW_PROJECT_ID without warning.
 
-[View Full Changelog](https://github.com/ascott18/TellMeWhen/blob/8e1e7143dbae3b37e7112ea3cdfd9766639fdae6/CHANGELOG.md)
+
+[View Full Changelog](https://github.com/ascott18/TellMeWhen/blob/de8703b0553f8f89b8e6595a316586308afb5a40/CHANGELOG.md)

@@ -1,0 +1,102 @@
+
+ElvDB = {
+	["profileKeys"] = {
+		["骑风 - 祈福"] = "Default",
+	},
+	["DisabledAddOns"] = {
+	},
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["class"] = {
+		["祈福"] = {
+			["骑风"] = "DRUID",
+		},
+	},
+	["profiles"] = {
+		["Default"] = {
+			["convertPages"] = true,
+			["general"] = {
+				["valuecolor"] = {
+					["b"] = 0.04,
+					["g"] = 0.49,
+					["r"] = 1,
+				},
+			},
+			["dbConverted"] = 3,
+			["unitframe"] = {
+				["colors"] = {
+					["auraBarBuff"] = {
+						["b"] = 0.04,
+						["g"] = 0.49,
+						["r"] = 1,
+					},
+					["healthclass"] = true,
+					["castClassColor"] = true,
+				},
+			},
+			["actionbar"] = {
+				["bar6"] = {
+					["enabled"] = true,
+					["buttonsPerRow"] = 6,
+					["buttons"] = 6,
+				},
+				["microbar"] = {
+					["buttons"] = 10,
+				},
+				["bar5"] = {
+					["enabled"] = false,
+					["buttonsPerRow"] = 12,
+					["buttons"] = 12,
+				},
+			},
+			["chat"] = {
+				["tabSelectorColor"] = {
+					["b"] = 0.04,
+					["g"] = 0.49,
+					["r"] = 1,
+				},
+				["panelSnapLeftID"] = 1,
+			},
+		},
+	},
+	["gold"] = {
+		["祈福"] = {
+			["骑风"] = 1000000,
+		},
+	},
+	["serverID"] = {
+		[4778] = {
+			["祈福"] = true,
+		},
+	},
+	["faction"] = {
+		["祈福"] = {
+			["骑风"] = "Alliance",
+		},
+	},
+	["global"] = {
+		["nameplates"] = {
+			["filters"] = {
+				["ElvUI_NonTarget"] = {
+				},
+				["ElvUI_Target"] = {
+				},
+				["ElvUI_Boss"] = {
+				},
+			},
+		},
+	},
+}
+ElvPrivateDB = {
+	["profileKeys"] = {
+		["骑风 - 祈福"] = "骑风 - 祈福",
+	},
+	["profiles"] = {
+		["骑风 - 祈福"] = {
+			["theme"] = "class",
+			["install_complete"] = 3,
+		},
+	},
+}

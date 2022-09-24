@@ -521,9 +521,8 @@ function addon.loadCurrentGuide(reset)
 					end						
 				elseif element.t == "GET_FLIGHT_POINT" then
 					if guide.autoAddCoordinatesGOTO and (GuidelimeData.showMapMarkersGOTO or GuidelimeData.showMinimapMarkersGOTO) and not step.hasGoto and not element.optional then
-						local gotoElement = {}
-						gotoElement.wx, gotoElement.wy, gotoElement.instance = addon.getFlightPoint(element.flightmaster)
-						if gotoElement.wx ~= nil then
+						local gotoElement = addon.getFlightPoint(element.flightmaster)
+						if gotoElement ~= nil and gotoElement.x ~= nil then
 							gotoElement.t = "GOTO"
 							gotoElement.step = step
 							gotoElement.radius = addon.DEFAULT_GOTO_RADIUS
@@ -574,7 +573,7 @@ local function loadStepOnActivation(i)
 		local j = 1
 		while j <= #step.elements do
 			local element = step.elements[j]
-			if element.questId ~= nil then
+			if element.questId ~= nil and element.available then
 				local objectives = addon.getQuestObjectives(element.questId, element.t)						
 				if objectives ~= nil then
 					local a, b = element.objective, element.objective
@@ -1196,7 +1195,7 @@ local function updateFirstActiveIndex()
 	return oldFirstActiveIndex ~= addon.currentGuide.firstActiveIndex
 end
 
-local function getQuestActiveObjectives(id, objective)
+function addon.getQuestActiveObjectives(id, objective)
 	local objectiveList = addon.getQuestObjectives(id)
 	if objectiveList == nil then return {} end
 	local objectives
@@ -1227,9 +1226,10 @@ function addon.updateStepsMapIcons()
 			for _, element in ipairs(step.elements) do
 				if element.t == "GOTO" and step.active and not element.completed then
 					if element.specialLocation == "NEAREST_FLIGHT_POINT" and addon.x ~= nil and addon.y ~= nil then
-						element.wx, element.wy, element.instance = addon.getNearestFlightPoint(addon.x, addon.y, addon.instance, addon.faction)
+						for k,v in pairs(addon.getNearestFlightPoint(addon.x, addon.y, addon.instance, addon.faction) or {}) do element[k] = v end
+						if addon.debugging then print("LIME: nearest flight point", element.x, element.y, element.mapID, element.wx, element.wy, element.instance) end
 					end
-					if element.wx ~= nil then
+					if element.x ~= nil then
 						addon.addMapIcon(element, highlight)
 						if highlight then
 							if GuidelimeDataChar.showArrow and addon.instance == element.instance then 
@@ -1242,7 +1242,8 @@ function addon.updateStepsMapIcons()
 					not element.completed and element.specialLocation == nil and (element.attached == nil or not element.attached.completed) then
 					local found = true
 					if element.objectives ~= nil and element.attached ~= nil and element.attached.questId ~= nil then
-						local objectives = getQuestActiveObjectives(element.attached.questId, element.attached.objective)
+						--if addon.debugging then print("LIME: GOTO for quest objective", element.attached.questId, element.t, element.index, step.index, element.objectives) end
+						local objectives = addon.getQuestActiveObjectives(element.attached.questId, element.attached.objective)
 						found = false
 						for _, o in ipairs(element.objectives) do
 							if addon.contains(objectives, o) then found = true; break; end

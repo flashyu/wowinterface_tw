@@ -1,9 +1,9 @@
-## Interface: 20504
+## Interface: 30400
 ## Title: Loon BestInSlot
 ## Notes: 
 ## OptionalDeps: LibExtraTip
-## SavedVariablesPerCharacter: LoonBestInSlotSettings
-## Version: 3.1.0
+## SavedVariablesPerCharacter: LBISSettings
+## Version: 4.0.0
 
 libs\LibStub.lua
 libs\CallbackHandler-1.0.lua
@@ -12,12 +12,20 @@ libs\LibDBIcon-1.0.lua
 
 libs\LibExtraTip\Load.xml
 
+Localization\Localization.xml
+
+ItemSources.lua
+GemSources.lua
+EnchantSources.lua
+
 LoonBestInSlot.lua
 Common.lua
-ItemSources.lua
 Guides\Guides.xml
 UpdateTooltips.lua
 UserItemCache.lua
 MinimapButton.lua
 
 LootBrowser.lua
+ItemList.lua
+GemList.lua
+EnchantList.lua

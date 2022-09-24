@@ -52,7 +52,8 @@ ArkInventory.Lib.PeriodicTable:AddData( "ArkInventory", "1", {
 	["ArkInventory.System.Quest.Shadowlands.Treasure.Bastion"] = "190239",
 	["ArkInventory.System.Quest.Shadowlands.Treasure.Zereth Mortis"] = "187908,190239",
 	["ArkInventory.System.Quest.Shadowlands.Other"] = "172451,173973,183987,184043,187909",
-	["ArkInventory.System.Quest.BFA"] = "160735",
+	["ArkInventory.System.Quest.BFA.Nazjatar"] = "170189,170191",
+	["ArkInventory.System.Quest.BFA.Voldun"] = "160735",
 	["ArkInventory.System.Quest.Legion.Argus"] = "152941",
 	["ArkInventory.System.Quest.Legion.Other"] = "152999",
 	["ArkInventory.System.Quest.Draenor.Other"] = "115463",
@@ -73,6 +74,10 @@ ArkInventory.Lib.PeriodicTable:AddData( "ArkInventory", "1", {
 	
 	["ArkInventory.System.Junk.Achievement.Shadowlands.Zereth Mortis.Firim in Exile"] = "189580,189581,189575,189576,189578,189579,189582,189753",
 	["ArkInventory.System.Junk.Achievement.Shadowlands.Zereth Mortis.Traversing the Spheres"] = "187879,187885,187889,187890,187891,187892,187893,187894,190128,190129",
+	["ArkInventory.System.Junk.Achievement.Secret Fish"] = "167705,167706,167707,167708,167709,167710,167711,167712,167713,167714,167715,167716,167717,167718,167719,167720,167721,167722,167723,167724,167725,167726,167727,167728,167729,167730,169870,169884,169897,169898",
+	["ArkInventory.System.Junk.Achievement.A Penny For Your Thoughts"] = "43702,43703,43704,43705,43706,43707,43708,43709,43710,43711,43712,43713,43714,43715,43716,43717,43718,43719,43720,43721,43722,43723",
+	["ArkInventory.System.Junk.Achievement.Silver in the City"] = "43643,43644,43675,43676,43677,43678,43679,43680,43681,43682,43683,43684,43685,43686,43687",
+	["ArkInventory.System.Junk.Achievement.Theres Gold In That There Fountain"] = "43627,43628,43629,43630,43631,43632,43633,43634,43635,43636,43637,43638,43639,43640,43641",
 	
 	
 	-- used for both item to currency mappings (itemid:currencyid), and just knowing what items are currencies
@@ -101,7 +106,7 @@ ArkInventory.Lib.PeriodicTable:AddData( "ArkInventory", "1", {
 	["ArkInventory.System.Reputation.Shadowlands.Court of Harvesters"] = "184119:2413",
 	["ArkInventory.System.Reputation.Shadowlands.The Ascended"] = "184121:2407",
 	["ArkInventory.System.Reputation.Shadowlands.The Undying Army"] = "184124:2410",
-	["ArkInventory.System.Reputation.Shadowlands.The Avowed"] = "172999:2439,173001:2439,180451:2439",
+	["ArkInventory.System.Reputation.Shadowlands.The Avowed"] = "172996:2439,172997:2439,172998:2439,172999:2439,173000:2349,173001:2439,173005:2349,173006:2439,173007:2439,180451:2439",
 	["ArkInventory.System.Reputation.Shadowlands.Other"] = "184120",
 	["ArkInventory.System.Reputation.BFA.Other"] = "",
 	["ArkInventory.System.Reputation.Legion.Argussian Reach"] = "152959:2170,152960:2170,152961:2170,152954:2170",
@@ -299,13 +304,13 @@ ArkInventory.Lib.PeriodicTable:AddData( "ArkInventory", "1", {
 	
 	-- shadowlands covenant other items
 	["ArkInventory.Consumable.Power.Shadowlands.Kyrian.Ascended Crafting"] = "180479,180579,181140,181145,181846,181157,181159,181239,181240",
-	["ArkInventory.Consumable.Power.Shadowlands.Necrolord.Abominable Stitching"] = "178061,183744,183754,183755,183760,183824,183830,184204,184205,184224,184225",
+	["ArkInventory.Consumable.Power.Shadowlands.Necrolord.Abominable Stitching"] = "178061,183744,183754,183755,183760,183824,183829,183830,184204,184205,184224,184225",
 	["ArkInventory.Consumable.Power.Shadowlands.Night Fae.Queens Conservatory"] = "176832,176921,176922,177953,177698,177699,177700,178874,178878,178879,178877,178880,178881,178882,178883,178884,183520,183521,183522,183704,183805,183806,184779",
-	["ArkInventory.Consumable.Power.Shadowlands.Venthyr.Ember Court"] = "177230,177231,177232,177233,177234,177235,177236,177237,177238,177239,177241,177242,177243,177244,177245,180248,181436,181437,181438,181439,181440,181441,181442,181443,181444,181445,181446,181447,181448,181449,181451,181517,181518,181519,181520,181521,181522,181523,181524,181530,181532,181533,181535,181536,181537,181538,182243,182342,182296,183956,183957,184627,184628,184663",
-	["ArkInventory.Consumable.Power.Shadowlands.Conduit.Boost"] = "187148,187216",
+	["ArkInventory.Consumable.Power.Shadowlands.Venthyr.Ember Court"] = "176134,177230,177231,177232,177233,177234,177235,177236,177237,177238,177239,177241,177242,177243,177244,177245,180248,181436,181437,181438,181439,181440,181441,181442,181443,181444,181445,181446,181447,181448,181449,181451,181517,181518,181519,181520,181521,181522,181523,181524,181530,181532,181533,181535,181536,181537,181538,182243,182342,182296,183956,183957,184627,184628,184663",
+	["ArkInventory.Consumable.Power.Shadowlands.Conduit.Boost.Random"] = "187216:226,187148:252",
+	["ArkInventory.Consumable.Power.Shadowlands.Conduit.Boost.All"] = "190184:200,190640:226,190956:239",
+	["ArkInventory.Consumable.Power.Shadowlands.Renown.Boost"] = "191300:1,188167:60",
 	["ArkInventory.Consumable.Power.BFA.Mechagon"] = "166846,166970,166971,167562,168327,168262,168832,169610",
-	["ArkInventory.Consumable.Power.Testing"] = "184146",
-	
 	
 	
 	

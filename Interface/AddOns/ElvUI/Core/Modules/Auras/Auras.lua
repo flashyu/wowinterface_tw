@@ -295,7 +295,7 @@ function A:UpdateTempEnchant(button, index, expiration)
 		button:SetBackdropBorderColor(r, g, b)
 		button.statusBar.backdrop:SetBackdropBorderColor(r, g, b)
 
-		local remaining = (expiration / 1000) or 0
+		local remaining = (expiration * 0.001) or 0
 		A:SetAuraTime(button, remaining + GetTime(), (remaining <= 3600 and remaining > 1800) and 3600 or (remaining <= 1800 and remaining > 600) and 1800 or 600)
 	else
 		A:ClearAuraTime(button)
@@ -428,7 +428,6 @@ function A:UpdateHeader(header)
 	E:UpdateClassColor(db.barColor)
 
 	if header.filter == 'HELPFUL' then
-		header:SetAttribute('consolidateTo', 0)
 		header:SetAttribute('weaponTemplate', template)
 	end
 
@@ -522,6 +521,10 @@ function A:Initialize()
 	if E.private.auras.disableBlizzard then
 		_G.BuffFrame:Kill()
 		_G.TemporaryEnchantFrame:Kill()
+
+		if E.Wrath then
+			_G.ConsolidatedBuffs:Kill()
+		end
 	end
 
 	if not E.private.auras.enable then return end
@@ -532,6 +535,7 @@ function A:Initialize()
 	local xoffset = -(6 + E.Border)
 	if E.private.auras.buffsHeader then
 		A.BuffFrame = A:CreateAuraHeader('HELPFUL')
+
 		A.BuffFrame:ClearAllPoints()
 		A.BuffFrame:SetPoint('TOPRIGHT', _G.MMHolder or _G.MinimapCluster, 'TOPLEFT', xoffset, -E.Spacing)
 		E:CreateMover(A.BuffFrame, 'BuffsMover', L["Player Buffs"], nil, nil, nil, nil, nil, 'auras,buffs')

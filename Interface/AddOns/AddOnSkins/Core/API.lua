@@ -81,7 +81,7 @@ function AS:CleanTexture(Object, Kill, Alpha)
 	elseif Alpha then
 		Object:SetAlpha(0)
 	else
-		Object:SetTexture()
+		Object:SetTexture('')
 	end
 end
 
@@ -737,6 +737,33 @@ function AS:SkinScrollBar(Frame)
 			Thumb.Backdrop:SetBackdropColor(0.6, 0.6, 0.6)
 		end
 	end
+end
+
+-- WoWTrimScrollBar (from the amazing Simpy aka Shrimpy)
+local function ReskinScrollBarArrow(frame, direction)
+	AS:SkinArrowButton(frame, direction)
+	frame.Overlay:SetAlpha(0)
+	frame.Texture:Hide()
+end
+
+function AS:SkinTrimScrollBar(frame)
+	frame.Background:Hide()
+	frame:StripTextures()
+
+	local track = frame.Track
+	track:SetTemplate('Transparent')
+	track:ClearAllPoints()
+	track:Point('TOPLEFT', 4, -21)
+	track:Point('BOTTOMRIGHT', -3, 21)
+
+	local thumb = track.Thumb
+	thumb.Middle:Hide()
+	thumb.Begin:Hide()
+	thumb.End:Hide()
+	thumb:SetTemplate(nil, true, true)
+	thumb:SetBackdropColor(unpack(AS.Color))
+	ReskinScrollBarArrow(frame.Back, 'up')
+	ReskinScrollBarArrow(frame.Forward, 'down')
 end
 
 function AS:SkinTab(Tab)

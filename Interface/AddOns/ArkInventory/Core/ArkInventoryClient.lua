@@ -366,6 +366,17 @@ elseif WOW_PROJECT_ID == ( WOW_PROJECT_BURNING_CRUSADE_CLASSIC or 5 ) then
 	else
 		ArkInventory.Const.BLIZZARD.CLIENT.ID = ArkInventory.Const.BLIZZARD.CLIENT.CODE.TBC
 	end
+elseif WOW_PROJECT_ID == ( WOW_PROJECT_WRATH_CLASSIC or 11 ) then
+	ArkInventory.CrossClient.TemplateVersion = 2
+	if string.match( a, "beta" ) then
+		ArkInventory.Const.BLIZZARD.CLIENT.ID = ArkInventory.Const.BLIZZARD.CLIENT.CODE.WRATH_BETA
+		ArkInventory.Const.BLIZZARD.CLIENT.NAME = string.format( "%s: Beta", ArkInventory.Const.BLIZZARD.CLIENT.NAME )
+	elseif string.match( a, "ptr" ) or p == "test" then
+		ArkInventory.Const.BLIZZARD.CLIENT.ID = ArkInventory.Const.BLIZZARD.CLIENT.CODE.WRATH_PTR
+		ArkInventory.Const.BLIZZARD.CLIENT.NAME = string.format( "%s: PTR", ArkInventory.Const.BLIZZARD.CLIENT.NAME )
+	else
+		ArkInventory.Const.BLIZZARD.CLIENT.ID = ArkInventory.Const.BLIZZARD.CLIENT.CODE.WRATH
+	end
 end
 
 if ArkInventory.Const.BLIZZARD.CLIENT.ID == "" then

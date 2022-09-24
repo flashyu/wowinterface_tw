@@ -1310,6 +1310,8 @@ local function FilterActionRestore( )
 	
 	collection.filter.ignore = true
 	
+	FilterActionClear( )
+	
 	FilterSetSearch( collection.filter.search )
 	FilterSetCollected( collection.filter.collected )
 	FilterSetUncollected( collection.filter.uncollected )
@@ -1613,9 +1615,14 @@ end
 
 local function ScanSpecies( speciesID, foundAfter )
 	
-	assert( speciesID, "speciesID is nil" )
-	assert( type( speciesID ) == "number", "speciesID not a number" )
-	assert( speciesID > 0, "species ID <= 0 " )
+	if speciesID and type( speciesID ) == "number" and speciesID > 0 then
+		-- good to go
+	else
+		--assert( speciesID, "speciesID is nil" )
+		--assert( type( speciesID ) == "number", "speciesID not a number" )
+		--assert( speciesID > 0, "species ID <= 0 " )
+		return
+	end
 	
 	local species = collection.species
 	
@@ -1674,8 +1681,7 @@ local function ScanSpecies( speciesID, foundAfter )
 end
 
 function ArkInventory.Collection.Pet.GetSpeciesInfo( speciesID )
-	if not collection.isReady then return end
-	if speciesID and type( speciesID ) == "number" and speciesID > 0 then
+	if collection.isReady then
 		return ScanSpecies( speciesID, true )
 	end
 end

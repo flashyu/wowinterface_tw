@@ -7,5 +7,5 @@ CharacterStatsTbcCharacterDB = {
 	["showSideStatsRanged"] = true,
 	["showSideStatsSpell"] = true,
 	["showStatsFromArgentDawnItems"] = true,
-	["selectedRightStatsCategory"] = 2,
+	["selectedRightStatsCategory"] = 4,
 }

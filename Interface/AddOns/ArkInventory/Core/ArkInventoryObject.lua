@@ -816,6 +816,8 @@ function ArkInventory.GetObjectInfo( h, i )
 	
 	UpdateObjectInfo( info )
 	
+	--ArkInventory.Output( info.ready, " = ", info )
+	
 	if info.class == "copper" then
 		-- do not cache
 	elseif info.class == "empty" then

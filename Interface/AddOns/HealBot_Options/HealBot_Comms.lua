@@ -35,6 +35,7 @@ function HealBot_Comms_SendAddonMessage()
     if #qAddonMsg>0 then
         local aMsg=qAddonMsg[1]
         table.remove(qAddonMsg,1)
+        HealBot_AddDebug(aMsg,"Comms",true)
         
         local msg, aType, pName=string.split("~", aMsg)
         aType=tonumber(aType)
@@ -42,7 +43,7 @@ function HealBot_Comms_SendAddonMessage()
             HealBot_Comms_SendInstantAddonMsg(HEALBOT_HEALBOT, msg)
         elseif aType==2 and pName then
             local xUnit=HealBot_Panel_RaidUnitName(pName)
-            if xUnit and UnitIsPlayer(xUnit) then
+            if xUnit and UnitExists(xUnit) and UnitIsConnected(xUnit) and UnitIsPlayer(xUnit) and UnitName(xUnit)==pName then
                 C_ChatInfo.SendAddonMessage(HEALBOT_HEALBOT, msg, "WHISPER", pName );
             end
         elseif aType==3 and IsInGuild() then

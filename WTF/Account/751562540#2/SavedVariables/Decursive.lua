@@ -1,9 +1,7 @@
 
 DecursiveDB = {
-	["profileKeys"] = {
-		["騎風 - 伊弗斯"] = "Default",
-		["隔離 - 伊弗斯"] = "Default",
-		["我在哪 - 伊弗斯"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1664030551,
 	},
 	["class"] = {
 		["WARRIOR"] = {
@@ -31,17 +29,19 @@ DecursiveDB = {
 		["SHAMAN"] = {
 			["CureOrder"] = {
 				-14, -- [1]
-				3, -- [2]
+				2, -- [2]
 				nil, -- [3]
 				-15, -- [4]
 				[8] = 1,
-				[16] = 2,
+				[16] = 3,
 				[32] = -16,
 			},
 		},
 	},
-	["global"] = {
-		["LastVersionAnnounce"] = 1655653365,
+	["profileKeys"] = {
+		["騎風 - 伊弗斯"] = "Default",
+		["隔離 - 伊弗斯"] = "Default",
+		["我在哪 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

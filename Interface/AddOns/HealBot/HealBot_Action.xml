@@ -14,8 +14,6 @@
     </Size>
     <Scripts>
       <OnLoad>HealBot_Action_OnLoad(self)</OnLoad>
-      <OnEnter>HealBot_Action_HealUnit_OnEnter(self);</OnEnter>
-      <OnLeave>HealBot_Action_HealUnit_OnLeave(self);</OnLeave>
     </Scripts>
     <Frames>
       <StatusBar name="$parentBar" inherits="HealBot_StatusBar">
@@ -313,6 +311,15 @@
         </Anchors>
       </StatusBar>
       <StatusBar name="$parentBar7" inherits="HealBot_StatusBar">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </StatusBar>
+      <StatusBar name="$parentBar8" inherits="HealBot_StatusBar">
         <Anchors>
           <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
             <Offset>
@@ -1179,14 +1186,12 @@
     </Anchors>
   </Button>  
   
-   <Button name="HealingButtonTemplateEmerg" virtual="true" inherits="SecureUnitButtonTemplate">
+   <Button name="HealingButtonTemplateEmerg" virtual="true" inherits="SecureUnitButtonTemplate,SecureHandlerEnterLeaveTemplate,SecureHandlerShowHideTemplate">
     <Size>
       <AbsDimension x="128" y="18" />
     </Size>
     <Scripts>
       <OnLoad>HealBot_Action_EmergOnLoad(self)</OnLoad>
-      <OnEnter>HealBot_Action_EmergUnit_OnEnter(self);</OnEnter>
-      <OnLeave>HealBot_Action_EmergUnit_OnLeave(self);</OnLeave>
     </Scripts>
     <Frames>
       <StatusBar name="$parentBar" inherits="HealBot_StatusBar">

@@ -26,7 +26,7 @@ end
 addon.range = range
 
 addon.addonTitle = _G.GetAddOnMetadata(ADDON_NAME,"Title")
-addon.addonVersion = cleanupVersion("9.2.4")
+addon.addonVersion = cleanupVersion("9.2.5")
 
 local function versionInRange(version, start, finish)
 	if _G.type(version) ~= "number" then return false end
@@ -40,4 +40,5 @@ addon.CURRENT_BUILD, addon.CURRENT_INTERNAL,
 	addon.CURRENT_BUILD_DATE, addon.CURRENT_UI_VERSION = _G.GetBuildInfo()
 addon.Classic = versionInRange(addon.CURRENT_UI_VERSION, 0, 20000)
 addon.TBC = versionInRange(addon.CURRENT_UI_VERSION, 20000, 30000)
+addon.Wrath = versionInRange(addon.CURRENT_UI_VERSION, 30000, 40000)
 addon.Retail = versionInRange(addon.CURRENT_UI_VERSION, 90000)

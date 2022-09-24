@@ -88,9 +88,9 @@ end
 
 function addon.getQuestTypeQuestie(id)
 	if id == nil or not checkQuestie() then return end
-	if QuestieDB:IsDungeonQuest(id) then return "Dungeon" end
-	if QuestieDB:IsRaidQuest(id) then return "Raid" end
-	if QuestieDB:GetQuestTagInfo(id) == 1 then return "Group" end
+	if QuestieDB.IsDungeonQuest(id) then return "Dungeon" end
+	if QuestieDB.IsRaidQuest(id) then return "Raid" end
+	if QuestieDB.GetQuestTagInfo(id) == 1 then return "Group" end
 	local _, _, _, _, _, isElite = GetQuestTagInfo(id)
 	if isElite then return "Elite" end
 end
@@ -138,7 +138,7 @@ function addon.getQuestClassesQuestie(id)
 	local bitmask = quest.requiredClasses
 	if bitmask == nil or bitmask == 0 then return end
 	local classes = {}
-	for i, class in pairs({"Warrior", "Paladin", "Hunter", "Rogue", "Priest", "", "Shaman", "Mage", "Warlock", "", "Druid"}) do
+	for i, class in pairs({"Warrior", "Paladin", "Hunter", "Rogue", "Priest", "DeathKnight", "Shaman", "Mage", "Warlock", "", "Druid"}) do
 		if class ~= "" and addon.hasbit(bitmask, addon.bit(i)) then 
 			table.insert(classes, class) 
 		end
@@ -230,12 +230,12 @@ function addon.getQuestPositionsQuestie(id, typ, index, filterZone)
 						if filterZone == nil then
 							for zone, posList in pairs(list[i].Coordinates) do
 								for _, pos in ipairs(posList) do
-									table.insert(positions, {x = pos[1], y = pos[2], zone = addon.zoneNames[ZoneDB:GetUiMapIdByAreaId(zone)] or zone, objectives = oi})
+									table.insert(positions, {x = pos[1], y = pos[2], zone = addon.zoneNames[ZoneDB:GetUiMapIdByAreaId(zone)] or zone, objectives = {oi}})
 								end
 							end
 						elseif list[i].Coordinates[filterZoneId] ~= nil then
 							for _, pos in ipairs(list[i].Coordinates[filterZoneId]) do
-								table.insert(positions, {x = pos[1], y = pos[2], zone = filterZone, objectives = oi})
+								table.insert(positions, {x = pos[1], y = pos[2], zone = filterZone, objectives = {oi}})
 							end
 						end
 					end

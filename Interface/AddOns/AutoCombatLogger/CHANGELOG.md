@@ -1,6 +1,9 @@
 # Auto Combat Logger
 
-## [9.2.4](https://github.com/Talryn/AutoCombatLogger/tree/9.2.4) (2022-05-19)
-[Full Changelog](https://github.com/Talryn/AutoCombatLogger/compare/9.2.3...9.2.4) [Previous Releases](https://github.com/Talryn/AutoCombatLogger/releases)
+## [9.2.5](https://github.com/Talryn/AutoCombatLogger/tree/9.2.5) (2022-08-30)
+[Full Changelog](https://github.com/Talryn/AutoCombatLogger/compare/9.2.4...9.2.5) [Previous Releases](https://github.com/Talryn/AutoCombatLogger/releases)
 
-- Fix typo for Sunwell raid.  
+- Add Wago Id.  
+- Add Wrath raids and remove older Naxxramas.  
+- Add Wrath dungeons.  
+- Basic Wrath support.  

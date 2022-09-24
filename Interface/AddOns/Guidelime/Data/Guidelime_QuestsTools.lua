@@ -569,6 +569,7 @@ function addon.getQuestPositionsLimited(id, typ, index, maxNumber, onlyWorld)
 	if positions == nil then return end
 	if #positions == 0 and filterZone ~= nil then
 		positions = addon.getQuestPositions(id, typ, index)
+		if positions == nil then return end
 	end
 	if maxNumber > 0 and #positions > maxNumber then
 		local positions2 = {}
@@ -770,7 +771,8 @@ function addon.getNPCPosition(id)
 	if addon.dataSource == "CLASSIC_CODEX" then return addon.getNPCPositionClassicCodex(id) end
 	if addon.creaturesDB[id] == nil or addon.creaturesDB[id].positions == nil then return end
 	local p = addon.creaturesDB[id].positions[1]
-	return {instance = p.mapid, wx = p.y, wy = p.x}
+	local x, y, z = addon.GetZoneCoordinatesFromWorld(p.y, p.x, p.mapid)
+	return {instance = p.mapid, wx = p.y, wy = p.x, mapID = addon.mapIDs[z], x = x, y = y}
 end
 
 

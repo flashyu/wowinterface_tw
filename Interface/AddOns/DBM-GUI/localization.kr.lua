@@ -15,6 +15,7 @@ L.OTabPlugins	= "핵심 플러그인"
 L.OTabAbout		= "소개"
 
 L.TabCategory_OTHER			= "기타 모드"
+L.TabCategory_AFFIXES		= "어픽스"
 
 L.BossModLoaded 			= "%s 통계"
 L.BossModLoad_now 			= [[보스 모드가 로딩되지 않았습니다.
@@ -422,10 +423,9 @@ L.FilterInterruptsHeader	= "상황에 따라 주문 차단 알림을 표시하�
 L.FilterInterrupts			= "주문 시전 몹이 현재 대상/주시 대상이 아닐 때 (항상)"
 L.FilterInterrupts2			= "주문 시전 몹이 현재 대상/주시 대상이 아니거나 (항상) 차단기가 쿨타임일 때 (보스 전투만)"
 L.FilterInterrupts3			= "주문 시전 몹이 현재 대상/주시 대상이 아니거나 (항상) 차단기가 쿨타임일 때 (보스 및 쫄 정리시)"
-L.FilterInterrupts4			= "모든 차단 알림 표시하지 않음 (아예 보고 싶지 않을때)"
 L.FilterInterruptNoteName	= "사용자 메모에 자기 이름이 포함되지 않은 경우 차단 가능 주문의 알림 보지 않기"
 L.FilterDispels				= "해제 주문이 쿨타임일땐 해제 알림 보지 않기"
-L.FilterTrashWarnings		= "일반 및 영웅 던전에선 일반몹 알림 보지 않기"
+L.FilterTrashWarnings		= "일반, 영웅, 이전 확장팩 던전에선 일반몹 알림 보지 않기"
 
 L.Area_PullTimer			= "풀링, 휴식, 전투, 사용자 지정 바 관련 필터 설정"
 L.DontShowPTNoID			= "같은 지역에 없는 사용자가 보낸 DBM 풀링 타이머 차단 (지역의 ID가 포함되지 않은 상태로 전송된 BigWigs 타이머는 절대 차단하지 않음)"

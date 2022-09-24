@@ -1,0 +1,34 @@
+
+TellMeWhenDB = {
+	["profileKeys"] = {
+		["骑风 - 祈福"] = "骑风 - 祈福",
+	},
+	["global"] = {
+		["TextLayouts"] = {
+			["icon1"] = {
+				{
+				}, -- [1]
+				{
+				}, -- [2]
+			},
+			["bar2"] = {
+				{
+				}, -- [1]
+				{
+				}, -- [2]
+			},
+		},
+	},
+	["Version"] = 92500,
+	["profiles"] = {
+		["骑风 - 祈福"] = {
+			["Version"] = 92500,
+			["Groups"] = {
+				{
+					["GUID"] = "TMW:group:1ZBoPrCTAXyu",
+				}, -- [1]
+			},
+			["Locked"] = true,
+		},
+	},
+}

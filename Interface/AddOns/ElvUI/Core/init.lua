@@ -43,7 +43,9 @@ Engine[4] = E.DF.profile
 Engine[5] = E.DF.global
 _G.ElvUI = Engine
 
-E.oUF = Engine.oUF
+E.oUF = _G.ElvUF
+assert(E.oUF, 'ElvUI was unable to locate oUF.')
+
 E.ActionBars = E:NewModule('ActionBars','AceHook-3.0','AceEvent-3.0')
 E.AFK = E:NewModule('AFK','AceEvent-3.0','AceTimer-3.0')
 E.Auras = E:NewModule('Auras','AceHook-3.0','AceEvent-3.0')
@@ -63,7 +65,7 @@ E.PluginInstaller = E:NewModule('PluginInstaller')
 E.RaidUtility = E:NewModule('RaidUtility','AceEvent-3.0')
 E.Skins = E:NewModule('Skins','AceTimer-3.0','AceHook-3.0','AceEvent-3.0')
 E.Tooltip = E:NewModule('Tooltip','AceTimer-3.0','AceHook-3.0','AceEvent-3.0')
-E.TotemBar = E:NewModule('Totems','AceEvent-3.0')
+E.TotemTracker = E:NewModule('TotemTracker','AceEvent-3.0')
 E.UnitFrames = E:NewModule('UnitFrames','AceTimer-3.0','AceEvent-3.0','AceHook-3.0')
 E.WorldMap = E:NewModule('WorldMap','AceHook-3.0','AceEvent-3.0','AceTimer-3.0')
 
@@ -74,14 +76,11 @@ E.twoPixelsPlease = false -- changing this option is not supported! :P
 -- Expansions
 E.Retail = WOW_PROJECT_ID == WOW_PROJECT_MAINLINE
 E.Classic = WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
-E.TBC = WOW_PROJECT_ID == (WOW_PROJECT_BURNING_CRUSADE_CLASSIC or 5)
-E.Wrath = false
+E.TBC = WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC
+E.Wrath = WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC
 
 -- Item Qualitiy stuff, also used by MerathilisUI
-E.QualityColors = {}
-for index, value in pairs(_G.BAG_ITEM_QUALITY_COLORS) do
-	E.QualityColors[index] = {r = value.r, g = value.g, b = value.b}
-end
+E.QualityColors = CopyTable(_G.BAG_ITEM_QUALITY_COLORS)
 E.QualityColors[-1] = {r = 0, g = 0, b = 0}
 E.QualityColors[Enum.ItemQuality.Poor] = {r = .61, g = .61, b = .61}
 E.QualityColors[Enum.ItemQuality.Common or Enum.ItemQuality.Standard] = {r = 0, g = 0, b = 0}
@@ -125,10 +124,13 @@ do
 	E:AddLib('Base64', 'LibBase64-1.0-ElvUI')
 	E:AddLib('Masque', 'Masque', true)
 	E:AddLib('Translit', 'LibTranslit-1.0')
+	E:AddLib('Dispel', 'LibDispel-1.0')
 
-	if E.Retail then
+	if E.Retail or E.Wrath then
 		E:AddLib('DualSpec', 'LibDualSpec-1.0')
-	else
+	end
+
+	if not E.Retail then
 		E:AddLib('LCS', 'LibClassicSpecs-ElvUI')
 
 		if E.Classic then
@@ -263,7 +265,7 @@ function E:OnInitialize()
 		E.Minimap:SetGetMinimapShape() -- This is just to support for other mods, keep below UIMult
 	end
 
-	if not E.Retail then -- temp cause blizz broke it?
+	if E.Classic or E.TBC then
 		RegisterCVar('fstack_showhighlight', '1')
 	end
 

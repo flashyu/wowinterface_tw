@@ -1,5 +1,6 @@
 local E, L, V, P, G = unpack(ElvUI)
 local S = E:GetModule('Skins')
+local LibStub = _G.LibStub
 
 local _G = _G
 local tinsert, xpcall, next, ipairs, pairs = tinsert, xpcall, next, ipairs, pairs
@@ -330,17 +331,23 @@ end
 
 -- DropDownMenu library support
 function S:SkinLibDropDownMenu(prefix)
-	if _G[prefix..'_UIDropDownMenu_CreateFrames'] and not S[prefix..'_UIDropDownMenuSkinned'] then
-		local bd = _G[prefix..'_DropDownList1Backdrop']
-		local mbd = _G[prefix..'_DropDownList1MenuBackdrop']
-		if bd and not bd.template then bd:SetTemplate('Transparent') end
-		if mbd and not mbd.template then mbd:SetTemplate('Transparent') end
+	if S[prefix..'_UIDropDownMenuSkinned'] then return end
 
-		S[prefix..'_UIDropDownMenuSkinned'] = true
-		hooksecurefunc(prefix..'_UIDropDownMenu_CreateFrames', function()
-			local lvls = _G[(prefix == 'Lib' and 'LIB' or prefix)..'_UIDROPDOWNMENU_MAXLEVELS']
-			local ddbd = lvls and _G[prefix..'_DropDownList'..lvls..'Backdrop']
-			local ddmbd = lvls and _G[prefix..'_DropDownList'..lvls..'MenuBackdrop']
+	local key = (prefix == 'L4' or prefix == 'L3') and 'L' or prefix
+
+	local bd = _G[key..'_DropDownList1Backdrop']
+	local mbd = _G[key..'_DropDownList1MenuBackdrop']
+	if bd and not bd.template then bd:SetTemplate('Transparent') end
+	if mbd and not mbd.template then mbd:SetTemplate('Transparent') end
+
+	S[prefix..'_UIDropDownMenuSkinned'] = true
+
+	local lib = prefix == 'L4' and LibStub.libs['LibUIDropDownMenu-4.0']
+	if (lib and lib.UIDropDownMenu_CreateFrames) or _G[key..'_UIDropDownMenu_CreateFrames'] then
+		hooksecurefunc(lib or _G, (lib and '' or key..'_') .. 'UIDropDownMenu_CreateFrames', function()
+			local lvls = _G[(key == 'Lib' and 'LIB' or key)..'_UIDROPDOWNMENU_MAXLEVELS']
+			local ddbd = lvls and _G[key..'_DropDownList'..lvls..'Backdrop']
+			local ddmbd = lvls and _G[key..'_DropDownList'..lvls..'MenuBackdrop']
 			if ddbd and not ddbd.template then ddbd:SetTemplate('Transparent') end
 			if ddmbd and not ddmbd.template then ddmbd:SetTemplate('Transparent') end
 		end)
@@ -569,8 +576,8 @@ do
 	end
 
 	function S:HandleTrimScrollBar(frame)
-		frame.Background:Hide()
 		frame:StripTextures()
+		frame.Background:Hide()
 
 		local track = frame.Track
 		track:SetTemplate('Transparent')
@@ -1331,14 +1338,17 @@ end
 
 do
 	local function selectionOffset(frame)
-		local point, _, relativePoint, xOffset = frame:GetPoint()
+		local point, anchor, relativePoint, xOffset = frame:GetPoint()
 		if xOffset <= 0 then
+			local x = frame.BorderBox and 4 or 38 -- adjust values for wrath
+			local y = frame.BorderBox and 0 or -10
+
 			frame:ClearAllPoints()
-			frame:Point(point, frame == _G.MacroPopupFrame and _G.MacroFrame, relativePoint, strfind(point, 'LEFT') and 4 or -4, 0)
+			frame:Point(point, (frame == _G.MacroPopupFrame and _G.MacroFrame) or anchor, relativePoint, strfind(point, 'LEFT') and x or -x, y)
 		end
 	end
 
-	function S:HandleIconSelectionFrame(frame, numIcons, buttonNameTemplate, frameNameOverride)
+	function S:HandleIconSelectionFrame(frame, numIcons, buttonNameTemplate, frameNameOverride, dontOffset)
 		assert(frame, 'HandleIconSelectionFrame: frame argument missing')
 		assert(numIcons and type(numIcons) == 'number', 'HandleIconSelectionFrame: numIcons argument missing or not a number')
 		assert(buttonNameTemplate and type(buttonNameTemplate) == 'string', 'HandleIconSelectionFrame: buttonNameTemplate argument missing or not a string')
@@ -1351,18 +1361,24 @@ do
 			frame:Hide() -- can hide it right away
 		end
 
-		frame:HookScript('OnShow', selectionOffset) -- place it off to the side of parent with correct offsets
+		if not dontOffset then -- place it off to the side of parent with correct offsets
+			frame:HookScript('OnShow', selectionOffset)
+		end
 
+		local borderBox = frame.BorderBox or _G.BorderBox -- it's a sub frame only on retail, on wrath it's a global?
 		local frameName = frameNameOverride or frame:GetName() --We need override in case Blizzard fucks up the naming (guild bank)
 		local scrollFrame = frame.ScrollFrame or _G[frameName..'ScrollFrame']
 		local editBox = frame.EditBox or _G[frameName..'EditBox']
-		local cancel = frame.CancelButton or frame.BorderBox.CancelButton or _G[frameName..'Cancel']
-		local okay = frame.OkayButton or frame.BorderBox.OkayButton or _G[frameName..'Okay']
+		local cancel = frame.CancelButton or (borderBox and borderBox.CancelButton) or _G[frameName..'Cancel']
+		local okay = frame.OkayButton or (borderBox and borderBox.OkayButton) or _G[frameName..'Okay']
 
 		frame:StripTextures()
 		frame:SetTemplate('Transparent')
 		frame:Height(frame:GetHeight() + 10)
-		frame.BorderBox:StripTextures()
+
+		if borderBox then
+			borderBox:StripTextures()
+		end
 
 		cancel:ClearAllPoints()
 		cancel:SetPoint('BOTTOMRIGHT', frame, -4, 4)
@@ -1382,16 +1398,16 @@ do
 		for i = 1, numIcons do
 			local button = _G[buttonNameTemplate..i]
 			if button then
-				local icon, texture = button.Icon or _G[buttonNameTemplate..i..'Icon']
-				if icon then
-					icon:SetTexCoord(unpack(E.TexCoords))
-					icon:SetInside(button.backdrop)
-					texture = icon:GetTexture()
-				end
-
 				button:StripTextures()
 				button:SetTemplate()
 				button:StyleButton(nil, true)
+
+				local icon, texture = button.Icon or _G[buttonNameTemplate..i..'Icon']
+				if icon then
+					icon:SetTexCoord(unpack(E.TexCoords))
+					icon:SetInside(button)
+					texture = icon:GetTexture()
+				end
 
 				if texture then
 					icon:SetTexture(texture)
@@ -1674,7 +1690,7 @@ function S:Initialize()
 			end
 		end
 		for _, n in next, S.EarlyAceTooltips do
-			S:Ace3_SkinTooltip(_G.LibStub(n, true))
+			S:Ace3_SkinTooltip(LibStub(n, true))
 		end
 	end
 	if S.EarlyDropdowns then
