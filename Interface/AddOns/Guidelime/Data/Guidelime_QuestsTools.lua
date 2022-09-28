@@ -801,3 +801,54 @@ function addon.getObjectName(id)
 	end
 	return addon.objectNames[id]
 end
+
+function addon.getItemStartingQuest(id)
+	local objectives = addon.getQuestObjectives(id, "ACCEPT")
+	if objectives then
+		for _, o in ipairs(objectives) do
+			if o.type == "item" then
+				return o.ids.item[1]
+			end
+		end
+	end
+end	
+
+function addon.getItemProvidedByQuest(id)
+	if id == nil then return end
+	if addon.dataSource == "QUESTIE" then return addon.getItemProvidedByQuestQuestie(id) end
+end
+
+function addon.isItemUsable(id)
+	if id == nil then return end
+	local _,_,enable = GetItemCooldown(id)
+	if enable == 1 then return true end
+	if addon.dataSource == "QUESTIE" then return addon.isItemUsableQuestie(id) end
+	return false
+end
+
+function addon.getUsableQuestItems(id)
+	if id == nil then return end
+	if addon.dataSource == "QUESTIE" then return addon.getUsableQuestItemsQuestie(id) end
+end
+
+addon.questItemIsFor = {
+	[6145] = false,
+	[34688] = false,
+	[34908] = false,
+	[34968] = false,
+	[36726] = false,
+	[35746] = false,
+	[36760] = false,
+	[40652] = false,
+	[40641] = false,
+	[41615] = false,
+	[42422] = false,
+	[42839] = false,
+	[42918] = false,
+	[18597] = "TURNIN",
+	[28455] = "TURNIN",
+	[34971] = "TURNIN",
+	[35797] = "TURNIN",
+	[40971] = "TURNIN",
+}
+setmetatable(addon.questItemIsFor, {__index = function() return "COMPLETE" end})

@@ -1,9 +1,8 @@
 LBIS.ItemList = {};
 
-local VendorPrice = AtlasLoot.Data.VendorPrice;
---TODO: Show Profession Icon & Tooltip so you can see mats
+--local VendorPrice = AtlasLoot.Data.VendorPrice;
 --TODO: Show Guild members with each pattern (PIE IN THE SKY)
---TODO: Fix Gluth Item Sources (He Seems to drop all tier pieces)
+--TODO: Fix atlasloot integration
 local itemSlotOrder = {}
 itemSlotOrder[LBIS.L["Head"]] = 0;
 itemSlotOrder[LBIS.L["Shoulder"]] = 1;
@@ -331,6 +330,20 @@ local function createItemRow(f, specItem, specItemSource)
 
             dl:SetText(specItemSource.SourceLocation);
             dl:SetPoint("TOPLEFT", d, "BOTTOMLEFT", 0, -5);
+        elseif specItemSource.SourceType == LBIS.L["Profession"] and tonumber(specItemSource.SourceLocation) ~= nil then
+            LBIS:GetSpellInfo(tonumber(specItemSource.SourceLocation), function(professionSpell)
+
+                local tb = CreateFrame("Button", nil, f);
+                tb:SetSize(32, 32);
+                local bt = tb:CreateTexture();
+                bt:SetAllPoints();
+                bt:SetTexture(professionSpell.Texture);
+                tb:SetPoint("BOTTOMLEFT", dl, "BOTTOMRIGHT", 5, -2);
+                LBIS:SetTooltipOnButton(tb, professionSpell, true);
+                
+                dl:SetText(specItemSource.Source.."("..specItemSource.SourceNumber..")");
+                dl:SetPoint("TOPLEFT", d, "BOTTOMLEFT", 0, -5);
+            end);
         else
             printSource(specItem.Id, specItemSource, dl)
             dl:SetPoint("TOPLEFT", d, "BOTTOMLEFT", 0, -5);

@@ -199,11 +199,11 @@ TalentEmuSV = {
 		["minimapPos"] = 185,
 	},
 	["var"] = {
+		["Player-4778-05244F19"] = "!T3216111HVNb2CvkyLG3x2:::UT9!G3211n+9:xMB:71u+-:18C:G1u+-:z7C:31u+9:hMB:01u+-:HRC:11u+!E320+^+7m8:6^b:181Uo-1:161:9+HJ9:861:9+J59:861:9+^+K69:861:9+egk:861:9+S89:861:9+L59:861:9+M59:861:9+hgk:861:9+Whk:861:9+3t8:6^b:1c0UdW1:161:9+GK9:861:9+EK9:861:9+igk:861:9+F09:861:9+Skk:861:9+Kjk:861:9+^",
 		["savedTalent"] = {
 			["|cffff7c0a德鲁伊|r- |cff7fbfff平衡51|r 野性战斗 0 恢复 5"] = "!T321E111HVNb2CvUfK:3x2:::UT9",
 			["|cffff7c0a德鲁伊|r- |cff7fbfff平衡56|r 野性战斗 0 恢复 7"] = "!T321E111HVNb2CvkyLG3x2:::Ea9",
 		},
-		["Player-4778-05244F19"] = "!T3216111HVNb2CvkyLG3x2:::UT9!G3211V+9:xMB:71u+-:18C:G1u++9:hMB:01u++!E320+^+bgk:861:9+Thk:861:9+cgk:861:9+^+dgk:861:9+egk:861:9+fgk:861:9+vgk:861:9+jgk:861:9+hgk:861:9+Whk:861:9+Hkk:861:9+ehk:861:9+dhk:861:9+igk:861:9+Rkk:861:9+Skk:861:9+Kjk:861:9+^",
 	},
 	["_version"] = 220811,
 	["_GlobalAssign"] = {

@@ -9,17 +9,38 @@ CodexConfig = {
 	["trackingMethod"] = 1,
 	["minimumDropChance"] = 2,
 	["showLowLevel"] = false,
+	["_tom_waypoint"] = {
+		1417, -- [1]
+		0.5, -- [2]
+		0.44, -- [3]
+		["arrivaldistance"] = 15,
+		["callbacks"] = {
+			["distance"] = {
+			},
+			["minimap"] = {
+			},
+			["world"] = {
+			},
+		},
+		["persistent"] = true,
+		["minimap"] = true,
+		["cleardistance"] = 10,
+		["title"] = "吞火者",
+		["from"] = "?",
+		["crazy"] = true,
+		["world"] = true,
+	},
+	["minimapButton"] = true,
+	["autoTurnin"] = false,
 	["spawnMarkerSize"] = 15,
-	["continentIcon"] = false,
-	["currentQuestGivers"] = true,
-	["showFestival"] = false,
+	["zoneMapIcon"] = true,
 	["alwaysShowId"] = false,
 	["nameplateIcon"] = false,
 	["colorBySpawn"] = true,
-	["zoneMapIcon"] = true,
+	["showFestival"] = false,
 	["miniMapIcon"] = true,
-	["autoTurnin"] = false,
-	["minimapButton"] = true,
+	["currentQuestGivers"] = true,
+	["continentIcon"] = false,
 	["questMarkerSize"] = 15,
 }
 CodexHiddenQuests = {
@@ -35,4 +56,19 @@ CodexBrowserFavorites = {
 	},
 }
 CodexColors = {
+	["部落篝火"] = {
+		0.7490196078431373, -- [1]
+		0.3843137254901961, -- [2]
+		0.1647058823529412, -- [3]
+	},
+	["吞火者"] = {
+		0.6470588235294118, -- [1]
+		0.4235294117647059, -- [2]
+		0.5490196078431373, -- [3]
+	},
+	["奥术师莱斯坦"] = {
+		0.984313725490196, -- [1]
+		0.5411764705882353, -- [2]
+		0.5254901960784314, -- [3]
+	},
 }

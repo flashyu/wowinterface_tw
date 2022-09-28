@@ -32,26 +32,26 @@ VMRT = {
 			[72] = 10,
 			[104] = 10,
 			[73] = 10,
-			[581] = 10,
-			[105] = 10,
-			[577] = 10,
-			[256] = 10,
-			[254] = 10,
 			[252] = 10,
+			[105] = 10,
+			[254] = 10,
+			[256] = 10,
+			[577] = 10,
+			[581] = 10,
 		},
 		["Type"] = 2,
-		["Strata"] = "HIGH",
 		["timeToKillAnalyze"] = 15,
+		["Strata"] = "HIGH",
 	},
 	["ProfileKeys"] = {
 		["骑风-祈福"] = "default",
 	},
 	["Encounter"] = {
+		["names"] = {
+		},
 		["list"] = {
 			["骑风"] = {
 			},
-		},
-		["names"] = {
 		},
 	},
 	["Marks"] = {
@@ -61,7 +61,89 @@ VMRT = {
 	["ExCD2"] = {
 		["upd4525"] = true,
 		["gnGUIDs"] = {
+			["误导胸"] = 0,
+			["貌美"] = 0,
+			["清醒亦是地狱"] = 0,
+			["耳钉丶"] = 0,
+			["贰靈贰靈"] = 0,
+			["一春哥七十六"] = 0,
+			["从小就妩媚"] = 0,
+			["魔王未成年"] = 0,
+			["小妞中的小妞"] = 0,
+			["Ganyu"] = 0,
+			["茄猫尔"] = 0,
+			["Griiffith"] = 0,
+			["夏栀"] = 0,
+			["星光"] = 0,
+			["雾气腾腾"] = 0,
+			["英雄迟牧"] = 0,
+			["名字很重要"] = 0,
+			["夜丶奶好你"] = 0,
+			["旺仔小小馒头"] = 0,
+			["圣光指引前进"] = 0,
+			["哒咩哒咩哟"] = 0,
+			["圣光的感觉丨"] = 0,
 			["骑风"] = 0,
+			["Chopsoup"] = 0,
+			["烟南渡"] = 0,
+			["纵横逸气"] = 0,
+			["旺仔欧泡果奶"] = 0,
+			["滑轨不冲锋"] = 0,
+			["痛苦源头"] = 0,
+			["小迷糊蛋"] = 0,
+			["专治吹牛哔"] = 0,
+			["昱晟雾"] = 0,
+			["浅暮雪百年"] = 0,
+			["春哥十五"] = 0,
+			["长征长"] = 0,
+			["灰烬续缘"] = 0,
+			["老恭魏武"] = 0,
+			["考银贝斯"] = 0,
+			["一春哥七十七"] = 0,
+			["天呐你真猥琐"] = 0,
+			["圣光芭比"] = 0,
+			["踏風"] = 0,
+			["一春哥七十二"] = 0,
+			["静沛然"] = 0,
+			["半島丶鐵盒"] = 0,
+			["李叶叶"] = 0,
+			["第叁象缐"] = 0,
+			["一春哥八十七"] = 0,
+			["一春哥九十五"] = 0,
+			["一春哥八十无"] = 0,
+			["淺唱丶"] = 0,
+			["意难平心难靖"] = 0,
+			["春哥八三"] = 0,
+			["深水地平线"] = 0,
+			["很酷不说话"] = 0,
+			["憨猪尔"] = 0,
+			["二变化无常二"] = 0,
+			["一春哥九九四"] = 0,
+			["尐法師"] = 0,
+			["琴沐"] = 0,
+			["疯狂杀机"] = 0,
+			["济源污妖王"] = 0,
+			["七月幻想"] = 0,
+			["风中的承诺丶"] = 0,
+			["大葱丨蘸酱"] = 0,
+			["一春哥九十六"] = 0,
+			["夢回丶江南"] = 0,
+			["喵嗷咪咪"] = 0,
+			["十一月十八"] = 0,
+			["小雪祈福"] = 0,
+			["幕後丶殺手"] = 0,
+			["蝶儿飛飛"] = 0,
+			["一春哥七十三"] = 0,
+			["春哥十二"] = 0,
+			["不想下副本"] = 0,
+			["长江电力"] = 0,
+			["学风大佬"] = 0,
+			["寒树"] = 0,
+			["德艺雙馨"] = 0,
+			["死乄不安稳"] = 0,
+			["雨中妹"] = 0,
+			["卡拉塔"] = 0,
+			["十年一剑寒"] = 0,
 		},
 		["NoRaid"] = true,
 		["CDECol"] = {
@@ -84,13 +166,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [1]
 			{
 				["enabled"] = true,
@@ -99,13 +181,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [2]
 			{
 				["enabled"] = true,
@@ -114,13 +196,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [3]
 			{
 				["frameGeneral"] = true,
@@ -128,13 +210,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [4]
 			{
 				["frameGeneral"] = true,
@@ -142,13 +224,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [5]
 			{
 				["frameGeneral"] = true,
@@ -156,13 +238,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [6]
 			{
 				["frameGeneral"] = true,
@@ -170,13 +252,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [7]
 			{
 				["frameGeneral"] = true,
@@ -184,13 +266,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [8]
 			{
 				["frameGeneral"] = true,
@@ -198,13 +280,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [9]
 			{
 				["frameGeneral"] = true,
@@ -212,13 +294,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [10]
 			{
 				["frameGeneral"] = true,
@@ -226,13 +308,13 @@ VMRT = {
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
 				["blacklistGeneral"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
 				["visibilityGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [11]
 		},
 		["Priority"] = {
@@ -256,31 +338,26 @@ VMRT = {
 		["ColorizeLowIlvl685"] = false,
 		["ColorizeNoEnch"] = true,
 		["ColorizeNoGems"] = true,
-		["ColorizeLowIlvl"] = true,
 		["ColorizeNoTopEnchGems"] = false,
+		["ColorizeLowIlvl"] = true,
 		["ColorizeNoValorUpgrade"] = false,
 	},
-	["InviteTool"] = {
-		["Words"] = "инв inv byd штм 123",
-		["InvByChat"] = true,
-		["RaidDiff"] = 16,
-		["PromoteRank"] = 2,
-		["Ranks"] = {
-			true, -- [1]
+	["RaidCheck"] = {
+		["FlaskExp"] = 1,
+		["ReadyCheckFrame"] = true,
+		["ReadyCheckFrameTimerFade"] = 4,
+		["WeaponEnch"] = {
 		},
-		["LootThreshold"] = 2,
-		["MasterLooters"] = "",
-		["LootMethod"] = "group",
-		["PromoteNames"] = "",
-		["OnlyGuild"] = true,
-		["Rank"] = 1,
+		["ReadyCheckFrameOnlyRL"] = true,
 	},
 	["Addon"] = {
 		["Timer"] = 0.1,
-		["Version"] = 4650,
-		["PreVersion"] = 4650,
+		["Version"] = 4660,
+		["PreVersion"] = 4660,
 	},
 	["WhoPulled"] = {
+	},
+	["Profiles"] = {
 	},
 	["BossWatcher"] = {
 		["optionsDamageGraph"] = true,
@@ -289,8 +366,6 @@ VMRT = {
 		["optionsHealingGraph"] = true,
 		["trackingDamageSpells"] = {
 		},
-	},
-	["Profiles"] = {
 	},
 	["Profile"] = "default",
 	["LootLink"] = {
@@ -315,9 +390,9 @@ VMRT = {
 			"", -- [3]
 		},
 		["Strata"] = "HIGH",
+		["OnlyPromoted"] = true,
 		["BlackLastUpdateTime"] = {
 		},
-		["OnlyPromoted"] = true,
 		["OptionsFormatting"] = true,
 	},
 	["Logging"] = {
@@ -325,6 +400,7 @@ VMRT = {
 	["MarksBar"] = {
 		["pulltimer"] = 10,
 		["pulltimer_right"] = 10,
+		["Strata"] = "HIGH",
 		["Show"] = {
 			true, -- [1]
 			true, -- [2]
@@ -332,7 +408,6 @@ VMRT = {
 			true, -- [4]
 			true, -- [5]
 		},
-		["Strata"] = "HIGH",
 	},
 	["VisNote"] = {
 		["data"] = {
@@ -340,13 +415,19 @@ VMRT = {
 		["sync_data"] = {
 		},
 	},
-	["RaidCheck"] = {
-		["FlaskExp"] = 1,
-		["BuffsCheck"] = true,
-		["ReadyCheckFrame"] = true,
-		["ReadyCheckFrameTimerFade"] = 4,
-		["ReadyCheckFrameOnlyRL"] = true,
-		["WeaponEnch"] = {
+	["InviteTool"] = {
+		["Words"] = "инв inv byd штм 123",
+		["InvByChat"] = true,
+		["RaidDiff"] = 16,
+		["PromoteRank"] = 2,
+		["Ranks"] = {
+			true, -- [1]
 		},
+		["LootThreshold"] = 2,
+		["MasterLooters"] = "",
+		["LootMethod"] = "group",
+		["PromoteNames"] = "",
+		["OnlyGuild"] = true,
+		["Rank"] = 1,
 	},
 }

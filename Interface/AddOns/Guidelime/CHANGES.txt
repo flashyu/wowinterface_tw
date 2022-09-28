@@ -1,10 +1,12 @@
-lightweight tag 619f69e11e6c66fa33fe9cb3f354b847ca1f3448 v2.041
+tag 445c76b0ae91091d3ce7c41a2b6f3c96cdde33b6 v2.018(TBC)
 Author:	max-ri <51713394+max-ri@users.noreply.github.com>
-Date:	Tue Sep 13 18:11:25 2022 +0200
+Date:	Tue Jun 1 22:43:20 2021 +0200
 
-commit 619f69e11e6c66fa33fe9cb3f354b847ca1f3448
+v2.018(TBC)
+
+commit c793521da10a2321593137e9592dff50a315eed6
 Author: max-ri <51713394+max-ri@users.noreply.github.com>
-Date:   Tue Sep 13 18:11:25 2022 +0200
+Date:   Tue Jun 1 22:43:20 2021 +0200
 
-    v2.041(WOTLK)
+    v2.018(TBC)
 

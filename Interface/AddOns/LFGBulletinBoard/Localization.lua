@@ -7,6 +7,7 @@ GBB.locales = {
 		["GuildChannel"]="Guild Channel",
 				
 		["msgNbRequest"]="%d request(s) - click to whisper - shift+click to 'who' - ctrl+click to 'invite'",
+		["msgLfgRequest"] = "Time since last update %s --- %d requests(s) - click to invite/apply to group",
 		["msgRequestHere"] = "Enter here your lfg message.",
 		["msgStartWho"]="request who on %s...",
 		["msgNewRequest"]="New request by %s for dungeon %s.",
@@ -29,7 +30,8 @@ GBB.locales = {
 		
 		["HeaderSettings"]="Settings",
 		["PanelFilter"]="Vanilla Filter",
-		["TBCPanelFilter"]="Filter",
+		["TBCPanelFilter"]="TBC Filter",
+		["WotlkPanelFilter"]="Filter",
 		["HeaderTags"]="Search patterns",	
 		["HeaderTagsCustom"]="Custom search patterns",
 		["PanelTags"]="Search patterns",
@@ -117,6 +119,7 @@ GBB.locales = {
 		
 		["TabRequest"]="Requests",
 		["TabGroup"]="Members",
+		["TabLfg"]="Tool Requests",
 		
 		["AboutUsage"]="GBB searches the chat messages for dungeon requests in the background. To whisper a person, simply click on the entry with the left mouse button. For a '/who' a shift + left click is enough. The dungeon list can be filtered in the settings. You can also fold this by left-clicking on the dungeon name.|nOld entries are filtered out after 150 seconds.",
 			

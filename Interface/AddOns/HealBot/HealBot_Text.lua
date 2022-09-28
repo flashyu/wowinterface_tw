@@ -362,17 +362,17 @@ end
 local vHex=""
 function HealBot_Text_setExtraCustomCols()
     for j=1,10 do
-        vHex=HealBot_Text_RGBPercToHex(Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["HECR"],
-                                       Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["HECG"],
-                                       Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["HECB"])
+        vHex=HealBot_Text_RGBPercToHex(Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["HECR"] or 1,
+                                       Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["HECG"] or 1,
+                                       Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["HECB"] or 1)
         vTextCustomCols["Health"][j]="|cff"..vHex
-        vHex=HealBot_Text_RGBPercToHex(Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["OCR"],
-                                       Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["OCG"],
-                                       Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["OCB"])
+        vHex=HealBot_Text_RGBPercToHex(Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["OCR"] or 1,
+                                       Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["OCG"] or 1,
+                                       Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["OCB"] or 1)
         vTextCustomCols["OverHeal"][j]="|cff"..vHex
-        vHex=HealBot_Text_RGBPercToHex(Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["ICR"],
-                                       Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["ICG"],
-                                       Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["ICB"])
+        vHex=HealBot_Text_RGBPercToHex(Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["ICR"] or 1,
+                                       Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["ICG"] or 1,
+                                       Healbot_Config_Skins.BarTextCol[Healbot_Config_Skins.Current_Skin][j]["ICB"] or 1)
         vTextCustomCols["InHeal"][j]="|cff"..vHex
     end
 end
@@ -1531,9 +1531,11 @@ function HealBot_Text_UpdateTestText(button)
     end
 end
 
+local cText=""
 function HealBot_Text_UpdateNameButton(button)
-    button.gref.txt["text"]:SetText(button.text.name.." ")
-    button.text.name=""
+    cText=button.gref.txt["text"]:GetText() or button.text.namecomplete or "."
+    button.gref.txt["text"]:SetText(cText.." ")
+    button.gref.txt["text"]:SetText(cText)
     HealBot_Text_setNameText(button)
 end
 
@@ -1560,8 +1562,9 @@ function HealBot_Text_UpdateNames()
 end
 
 function HealBot_Text_UpdateHealthButton(button)
-    button.gref.txt["text2"]:SetText(button.text.health.." ")
-    button.text.health=""
+    cText=button.gref.txt["text2"]:GetText() or button.text.healthcomplete or "."
+    button.gref.txt["text2"]:SetText(cText.." ")
+    button.gref.txt["text2"]:SetText(cText)
     HealBot_Text_setHealthText(button)
 end
 
@@ -1589,11 +1592,12 @@ end
 
 function HealBot_Text_UpdateStateButton(button)
     if not Healbot_Config_Skins.BarText[Healbot_Config_Skins.Current_Skin][button.frame]["TAGSTATEONLYTIP"] then
-        button.gref.txt["text3"]:SetText(button.text.tag.." ")
+        cText=button.gref.txt["text3"]:GetText() or button.text.tag or "."
+        button.gref.txt["text3"]:SetText(cText.." ")
+        button.gref.txt["text3"]:SetText(cText)
     else
         button.gref.txt["text3"]:SetText("")
     end
-    button.text.tag=""
     HealBot_Text_setNameTag(button)
 end
 

@@ -1,13 +1,11 @@
 
 ParrotDB = {
-	["profileKeys"] = {
-		["骑风 - 祈福"] = "Default",
-	},
 	["namespaces"] = {
 		["CombatEvents"] = {
 			["profiles"] = {
 				["Default"] = {
 					["dbver"] = 5,
+					["disable_in_raid"] = true,
 				},
 			},
 		},
@@ -59,11 +57,18 @@ ParrotDB = {
 		["Triggers"] = {
 			["profiles"] = {
 				["Default"] = {
-					["dbver3"] = 1,
 					["dbver2"] = 0,
+					["dbver3"] = 1,
 					["triggers2"] = 0,
 				},
 			},
+		},
+	},
+	["profileKeys"] = {
+		["骑风 - 祈福"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
 		},
 	},
 }

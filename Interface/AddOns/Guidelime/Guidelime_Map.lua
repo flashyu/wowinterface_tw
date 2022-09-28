@@ -192,7 +192,6 @@ end
 local function showMapIcon(mapIcon, t)
 	if mapIcon ~= nil and mapIcon.inUse then
 		if t ~= "GOTO" then t = "LOC" end
-		if addon.debugging then print("LIME: showMapIcon", mapIcon.mapID, mapIcon.x / 100, mapIcon.y / 100, mapIcon.instance, mapIcon.wx, mapIcon.wy) end
 		-- Hack for Scarlet Enclave: world map icons are not shown in Scarlet Enclave therefore use map icon
 		-- map icons are not useful for other zones on the other hand as then the icon will only appear in the map of the given zone and not in others
 		if mapIcon.mapID == 124 then
@@ -312,17 +311,34 @@ function addon.updateArrow()
 			local corpse = HBD:GetPlayerZone() and C_DeathInfo.GetCorpseMapPosition(HBD:GetPlayerZone())
 			if corpse ~= nil then
 				addon.arrowX, addon.arrowY = HBD:GetWorldCoordinatesFromZone(corpse.x, corpse.y, HBD:GetPlayerZone())
+				addon.arrowInstance = addon.instance
 			end
-		elseif addon.arrowFrame.element ~= nil and addon.arrowFrame.element.wx ~= nil and addon.arrowFrame.element.wy ~= nil and addon.arrowFrame.element.instance == addon.instance then
-			addon.arrowX, addon.arrowY = addon.arrowFrame.element.wx, addon.arrowFrame.element.wy
+		elseif addon.arrowFrame.element ~= nil and addon.arrowFrame.element.wx ~= nil and addon.arrowFrame.element.wy ~= nil then
+			addon.arrowX, addon.arrowY, addon.arrowInstance = addon.arrowFrame.element.wx, addon.arrowFrame.element.wy, addon.arrowFrame.element.instance
 		end
 	end
 	
 	if addon.arrowX == nil or addon.arrowY == nil then 
 		if addon.arrowFrame:IsShown() then addon.arrowFrame:Hide() end
+		if addon.lastArrowX and addon.lastArrowY and addon.arrowRadius2 then
+			local dist2 = (addon.x - addon.lastArrowX) * (addon.x - addon.lastArrowX) + (addon.y - addon.lastArrowY) * (addon.y - addon.lastArrowY)
+			if addon.lastArrowInstance ~= addon.instance or (dist2 >= addon.arrowRadius2 * addon.GOTO_HYSTERESIS_FACTOR and addon.lastDistance2 and addon.lastDistance2 <= addon.arrowRadius2 * addon.GOTO_HYSTERESIS_FACTOR) then
+				if addon.debugging then print("LIME: position left") end
+				addon.updateSteps()
+				addon.lastArrowX, addon.lastArrowY, addon.lastArrowInstance = nil, nil, nil
+			end
+			addon.lastDistance2 = dist2
+		end
 		return 
 	end
-	local angle = addon.face - math.atan2(addon.arrowX - addon.x, addon.arrowY - addon.y)
+	addon.lastArrowX, addon.lastArrowY, addon.lastArrowInstance = addon.arrowX, addon.arrowY, addon.arrowInstance
+	
+	local angle
+	if addon.arrowInstance == addon.instance then
+		angle = addon.face - math.atan2(addon.arrowX - addon.x, addon.arrowY - addon.y)
+	else
+		angle = math.pi
+	end
 	if GuidelimeData.arrowStyle == 1 then
 		local index = angle * 32 / math.pi
 		if index >= 64 then index = index - 64 elseif index < 0 then index = index + 64 end
@@ -337,17 +353,24 @@ function addon.updateArrow()
 		addon.arrowFrame.row = math.floor(index / 9)
 		addon.arrowFrame.texture:SetTexCoord(addon.arrowFrame.col * 56 / 512, (addon.arrowFrame.col + 1) * 56 / 512, addon.arrowFrame.row * 42 / 512, (addon.arrowFrame.row + 1) * 42 / 512)
 	end
-	local dist2 = (addon.x - addon.arrowX) * (addon.x - addon.arrowX) + (addon.y - addon.arrowY) * (addon.y - addon.arrowY)
-	if addon.arrowFrame.element and addon.arrowFrame.element.radius then
-		local radius2 = addon.arrowFrame.element.radius * addon.arrowFrame.element.radius
-		if (dist2 < radius2 and (not addon.lastDistance2 or addon.lastDistance2 >= radius2)) 
-		or (dist2 >= radius2 * addon.GOTO_HYSTERESIS_FACTOR and addon.lastDistance2 and addon.lastDistance2 <= radius2 * addon.GOTO_HYSTERESIS_FACTOR) then
-			if addon.debugging then print("LIME: position reached/left") end
-			addon.updateSteps()
+	local dist2
+	if addon.arrowInstance == addon.instance then
+		dist2 = (addon.x - addon.arrowX) * (addon.x - addon.arrowX) + (addon.y - addon.arrowY) * (addon.y - addon.arrowY)
+		if addon.arrowFrame.element and addon.arrowFrame.element.radius then
+			addon.arrowRadius2 = addon.arrowFrame.element.radius * addon.arrowFrame.element.radius
+			if dist2 < addon.arrowRadius2 and (not addon.lastDistance2 or addon.lastDistance2 >= addon.arrowRadius2) then
+				if addon.debugging then print("LIME: position reached") end
+				addon.updateSteps()
+			end
+		else
+			addon.arrowRadius2 = nil
 		end
+		addon.lastDistance2 = dist2
 	end
-	addon.lastDistance2 = dist2
-	if GuidelimeData.arrowDistance then
+	if addon.arrowInstance ~= addon.instance then
+		addon.arrowFrame.text:SetText(string.format(L.ARROW_GO_TO_INSTANCE, GetRealZoneText(addon.arrowInstance)))
+		addon.arrowFrame.text:Show()
+	elseif GuidelimeData.arrowDistance then
 	 	local dist = math.floor(math.sqrt(dist2))
 		addon.arrowFrame.text:SetText(dist .. " " .. L.YARDS)
 		addon.arrowFrame.text:Show()

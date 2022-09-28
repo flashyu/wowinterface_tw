@@ -38,6 +38,7 @@ if GetLocale() == "esMX" then
   LBIS.L["Battle at Valhalas: Final Challenge"] = "Batalla en Valhalas: desafío final";
 --  LBIS.L["Bear"] = "";
   LBIS.L["Beast Mastery"] = "Dominio de bestias";
+  LBIS.L["Betrayal"] = "Traición";
 --  LBIS.L["BIS"] = "";
   LBIS.L["Blacksmithing"] = "Herrería";
   LBIS.L["Blood"] = "Sangre";
@@ -191,6 +192,7 @@ if GetLocale() == "esMX" then
   LBIS.L["Moroes"] = "Moroes";
   LBIS.L["My Old Enemy"] = "Mi eterna enemiga";
   LBIS.L["Mystery of the Infinite, Redux"] = "El misterio del Infinito, Vuelta atrás";
+--  LBIS.L["Nascent Val'kyr"] = "";
   LBIS.L["Naxxramas"] = "Naxxramas";
   LBIS.L["Naxxramas (10)"] = "Naxxramas (10)";
   LBIS.L["Naxxramas (25)"] = "Naxxramas (25)";
@@ -334,7 +336,6 @@ if GetLocale() == "esMX" then
 --  LBIS.L["Wintergrasp Marks"] = "";
 --  LBIS.L["Wintergrasp Quartermaster"] = "";
 --  LBIS.L["World Drop"] = "";
---  LBIS.L["World Drop (Nascent Val'kyr)"] = "";
 --  LBIS.L["World Drop (Skoll)"] = "";
   LBIS.L["Wrist"] = "Muñeca";
   LBIS.L["Xevozz"] = "Xevozz";

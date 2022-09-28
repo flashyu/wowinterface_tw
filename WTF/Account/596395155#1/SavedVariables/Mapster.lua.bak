@@ -11,6 +11,9 @@ MapsterDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
+			["arrowScale"] = 1,
+			["ejScale"] = 1,
+			["poiScale"] = 1,
 		},
 	},
 }

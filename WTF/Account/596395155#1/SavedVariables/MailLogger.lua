@@ -28,15 +28,15 @@ MailLoggerDB = {
 	},
 	["TradeLog"] = {
 		{
-			["TargetName"] = "帅的不敢出门",
 			["PlayerName"] = "骑风",
+			["TargetName"] = "帅的不敢出门",
 			["ReceiveMoney"] = 0,
-			["Time"] = "00:00:15",
-			["GiveMoney"] = 0,
-			["Location"] = "泰罗卡森林",
 			["GiveItems"] = {
 			},
+			["GiveMoney"] = 0,
+			["Location"] = "泰罗卡森林",
 			["Date"] = "2022-09-25",
+			["Time"] = "00:00:15",
 			["ReceiveItems"] = {
 			},
 		}, -- [1]
@@ -54,5 +54,374 @@ MailLoggerDB = {
 			["ReceiveItems"] = {
 			},
 		}, -- [2]
+		{
+			["Date"] = "2022-09-25",
+			["PlayerName"] = "骑风",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "沙塔斯城",
+			["TargetName"] = "春哥十六",
+			["Time"] = "19:56:52",
+			["ReceiveItems"] = {
+			},
+		}, -- [3]
+		{
+			["TargetName"] = "春哥十六",
+			["PlayerName"] = "骑风",
+			["Date"] = "2022-09-25",
+			["ReceiveMoney"] = 0,
+			["Time"] = "19:56:52",
+			["GiveMoney"] = 50000,
+			["Location"] = "沙塔斯城",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [4]
+		{
+			["Date"] = "2022-09-27",
+			["PlayerName"] = "骑风",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "铁炉堡",
+			["TargetName"] = "小雪祈福",
+			["Time"] = "00:38:47",
+			["ReceiveItems"] = {
+			},
+		}, -- [5]
+		{
+			["TargetName"] = "小雪祈福",
+			["PlayerName"] = "骑风",
+			["Date"] = "2022-09-27",
+			["ReceiveMoney"] = 100000000,
+			["Time"] = "00:38:47",
+			["GiveMoney"] = 0,
+			["Location"] = "铁炉堡",
+			["GiveItems"] = {
+				{
+					["Number"] = 20,
+					["ItemLink"] = "|cffffffff|Hitem:38430::::::::70:::::::::|h[黑石矿泉水]|h|r",
+					["Name"] = "黑石矿泉水",
+				}, -- [1]
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [6]
+		{
+			["Date"] = "2022-09-27",
+			["PlayerName"] = "骑风",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "黑石山",
+			["TargetName"] = "春哥十五",
+			["Time"] = "01:17:09",
+			["ReceiveItems"] = {
+			},
+		}, -- [7]
+		{
+			["TargetName"] = "春哥十五",
+			["PlayerName"] = "骑风",
+			["Date"] = "2022-09-27",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:17:09",
+			["GiveMoney"] = 50000,
+			["Location"] = "黑石山",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [8]
+		{
+			["Date"] = "2022-09-27",
+			["PlayerName"] = "骑风",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "黑石深渊",
+			["TargetName"] = "十一月十八",
+			["Time"] = "01:33:12",
+			["ReceiveItems"] = {
+			},
+		}, -- [9]
+		{
+			["TargetName"] = "十一月十八",
+			["PlayerName"] = "骑风",
+			["Date"] = "2022-09-27",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:33:12",
+			["GiveMoney"] = 1000000,
+			["Location"] = "黑石深渊",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [10]
+		{
+			["Date"] = "2022-09-27",
+			["PlayerName"] = "骑风",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "黑石深渊",
+			["TargetName"] = "专治吹牛哔",
+			["Time"] = "01:33:22",
+			["ReceiveItems"] = {
+			},
+		}, -- [11]
+		{
+			["TargetName"] = "专治吹牛哔",
+			["PlayerName"] = "骑风",
+			["Date"] = "2022-09-27",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:33:22",
+			["GiveMoney"] = 1000000,
+			["Location"] = "黑石深渊",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [12]
+		{
+			["Date"] = "2022-09-27",
+			["PlayerName"] = "骑风",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "黑石深渊",
+			["TargetName"] = "误导胸",
+			["Time"] = "01:33:34",
+			["ReceiveItems"] = {
+			},
+		}, -- [13]
+		{
+			["TargetName"] = "误导胸",
+			["PlayerName"] = "骑风",
+			["Date"] = "2022-09-27",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:33:34",
+			["GiveMoney"] = 1000000,
+			["Location"] = "黑石深渊",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [14]
+		{
+			["Date"] = "2022-09-27",
+			["PlayerName"] = "骑风",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "黑石深渊",
+			["TargetName"] = "夏栀",
+			["Time"] = "01:33:45",
+			["ReceiveItems"] = {
+			},
+		}, -- [15]
+		{
+			["TargetName"] = "夏栀",
+			["PlayerName"] = "骑风",
+			["Date"] = "2022-09-27",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:33:45",
+			["GiveMoney"] = 1000000,
+			["Location"] = "黑石深渊",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [16]
+		{
+			["PlayerName"] = "骑风",
+			["TargetName"] = "春哥十二",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "沙塔斯城",
+			["Date"] = "2022-09-28",
+			["Time"] = "00:34:01",
+			["ReceiveItems"] = {
+			},
+		}, -- [17]
+		{
+			["TargetName"] = "春哥十二",
+			["PlayerName"] = "骑风",
+			["Date"] = "2022-09-28",
+			["ReceiveMoney"] = 0,
+			["Time"] = "00:34:01",
+			["GiveMoney"] = 50000,
+			["Location"] = "沙塔斯城",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [18]
+		{
+			["PlayerName"] = "骑风",
+			["TargetName"] = "春哥十二",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "沙塔斯城",
+			["Date"] = "2022-09-28",
+			["Time"] = "00:42:14",
+			["ReceiveItems"] = {
+			},
+		}, -- [19]
+		{
+			["TargetName"] = "春哥十二",
+			["PlayerName"] = "骑风",
+			["Date"] = "2022-09-28",
+			["ReceiveMoney"] = 0,
+			["Time"] = "00:42:14",
+			["GiveMoney"] = 50000,
+			["Location"] = "沙塔斯城",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [20]
+		{
+			["PlayerName"] = "骑风",
+			["TargetName"] = "春哥九二",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "北风苔原",
+			["Date"] = "2022-09-28",
+			["Time"] = "00:59:30",
+			["ReceiveItems"] = {
+			},
+		}, -- [21]
+		{
+			["TargetName"] = "春哥九二",
+			["PlayerName"] = "骑风",
+			["Date"] = "2022-09-28",
+			["ReceiveMoney"] = 0,
+			["Time"] = "00:59:30",
+			["GiveMoney"] = 50000,
+			["Location"] = "北风苔原",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [22]
+		{
+			["PlayerName"] = "骑风",
+			["TargetName"] = "春哥八三",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "铁炉堡",
+			["Date"] = "2022-09-28",
+			["Time"] = "01:33:36",
+			["ReceiveItems"] = {
+			},
+		}, -- [23]
+		{
+			["PlayerName"] = "骑风",
+			["TargetName"] = "春哥八三",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "铁炉堡",
+			["Date"] = "2022-09-28",
+			["Time"] = "01:33:50",
+			["ReceiveItems"] = {
+			},
+		}, -- [24]
+		{
+			["TargetName"] = "春哥八三",
+			["PlayerName"] = "骑风",
+			["Date"] = "2022-09-28",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:33:50",
+			["GiveMoney"] = 50000,
+			["Location"] = "铁炉堡",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [25]
+		{
+			["PlayerName"] = "骑风",
+			["TargetName"] = "春哥十三",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "黑石山",
+			["Date"] = "2022-09-28",
+			["Time"] = "01:36:08",
+			["ReceiveItems"] = {
+			},
+		}, -- [26]
+		{
+			["TargetName"] = "春哥十三",
+			["PlayerName"] = "骑风",
+			["Date"] = "2022-09-28",
+			["ReceiveMoney"] = 0,
+			["Time"] = "01:36:08",
+			["GiveMoney"] = 50000,
+			["Location"] = "黑石山",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [27]
+		{
+			["Date"] = "2022-09-28",
+			["PlayerName"] = "骑风",
+			["ReceiveMoney"] = 0,
+			["GiveItems"] = {
+			},
+			["GiveMoney"] = 0,
+			["Location"] = "北风苔原",
+			["TargetName"] = "春哥六二",
+			["Time"] = "22:17:52",
+			["ReceiveItems"] = {
+			},
+		}, -- [28]
+		{
+			["TargetName"] = "春哥六二",
+			["PlayerName"] = "骑风",
+			["Date"] = "2022-09-28",
+			["ReceiveMoney"] = 0,
+			["Time"] = "22:17:52",
+			["GiveMoney"] = 50000,
+			["Location"] = "北风苔原",
+			["GiveItems"] = {
+			},
+			["Result"] = "completed",
+			["ReceiveItems"] = {
+			},
+		}, -- [29]
 	},
 }

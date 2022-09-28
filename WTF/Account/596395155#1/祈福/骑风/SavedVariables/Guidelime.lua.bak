@@ -3,30 +3,52 @@ GuidelimeDataChar = {
 	["mainFrameHeight"] = 400,
 	["showUnavailableSteps"] = true,
 	["guideSkip"] = {
+		["TUGs The Ultimate (Leveling) Guides 70- a1 Howling Fjord - Alliance"] = {
+		},
+		["TUGs The Ultimate (Leveling) Guides 70- b1 Borean Tundra - Alliance"] = {
+			true, -- [1]
+			true, -- [2]
+			true, -- [3]
+			true, -- [4]
+		},
+		["TUGs The Ultimate (Leveling) Guides 70- b2 Borean Tundra - Alliance"] = {
+			true, -- [1]
+			true, -- [2]
+			[25] = true,
+			[40] = true,
+		},
 	},
 	["completedSteps"] = {
+		[27] = true,
+		[28] = true,
 	},
 	["arrowY"] = -20,
 	["arrowRelative"] = "TOP",
-	["mainFrameX"] = 0,
+	["mainFrameX"] = -78.88880920410156,
 	["mainFrameLocked"] = false,
 	["mainFrameWidth"] = 350,
+	["arrowSize"] = 64,
 	["arrowLocked"] = false,
+	["arrowAlpha"] = 0.8,
 	["editorFrameY"] = 0,
 	["showCompletedSteps"] = false,
-	["arrowAlpha"] = 0.8,
-	["mainFrameFontSize"] = 14,
-	["mainFrameAlpha"] = 0.5,
-	["mainFrameShowScrollBar"] = true,
-	["arrowX"] = 0,
-	["mainFrameY"] = 0,
-	["arrowSize"] = 64,
 	["showArrow"] = true,
-	["version"] = "2.041",
-	["editorFrameRelative"] = "CENTER",
 	["mainFrameShowing"] = true,
-	["editorFrameX"] = 0,
-	["mainFrameRelative"] = "RIGHT",
+	["mainFrameAlpha"] = 0.5,
+	["currentGuide"] = "TUGs The Ultimate (Leveling) Guides 70- b2 Borean Tundra - Alliance",
+	["showTitle"] = true,
+	["arrowX"] = 0,
+	["mainFrameY"] = -1.66667902469635,
+	["version"] = "2.041",
 	["guideSize"] = {
+		["TUGs The Ultimate (Leveling) Guides 70- a1 Howling Fjord - Alliance"] = 56,
+		["TUGs The Ultimate (Leveling) Guides 70- b1 Borean Tundra - Alliance"] = 78,
+		["TUGs The Ultimate (Leveling) Guides 70- b2 Borean Tundra - Alliance"] = 92,
 	},
+	["editorFrameRelative"] = "CENTER",
+	["mainFrameFontSize"] = 14,
+	["mainFrameShowScrollBar"] = true,
+	["showUseItemButtons"] = "LEFT",
+	["mainFrameRelative"] = "RIGHT",
+	["editorFrameX"] = 0,
 }

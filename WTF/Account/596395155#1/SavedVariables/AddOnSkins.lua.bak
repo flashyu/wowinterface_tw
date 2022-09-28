@@ -5,8 +5,11 @@ AddOnSkinsDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
+			["Auctionator"] = false,
 		},
 	},
 }
 AddOnSkinsDS = {
+	[4.6] = {
+	},
 }

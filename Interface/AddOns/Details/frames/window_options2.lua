@@ -126,6 +126,7 @@ function Details.options.InitializeOptionsWindow(instance)
     
     local instanceSelection = DF:NewDropDown (f, _, "$parentInstanceSelectDropdown", "instanceDropdown", 200, 18, buildInstanceMenu) --, nil, options_dropdown_template
     instanceSelection:SetPoint("bottomright", f, "bottomright", -7, 09)
+    instanceSelection:SetTemplate(options_dropdown_template)
     instanceSelection:SetHook("OnEnter", function()
         GameCooltip:Reset()
         GameCooltip:Preset (2)
@@ -213,11 +214,13 @@ function Details.options.InitializeOptionsWindow(instance)
                     local sectionOptions = allSectionOptions[i]
                     local lastLabel = nil
                     for k, setting in pairs(sectionOptions) do
-                        if (setting.type == "label") then
-                            lastLabel = setting
-                        end
-                        if (setting.name) then
-                            allOptions[#allOptions+1] = {setting = setting, label = lastLabel, header = allSectionNames[i]}
+                        if (type(setting) == "table") then
+                            if (setting.type == "label") then
+                                lastLabel = setting
+                            end
+                            if (setting.name) then
+                                allOptions[#allOptions+1] = {setting = setting, label = lastLabel, header = allSectionNames[i]}
+                            end
                         end
                     end
                 end
@@ -327,10 +330,17 @@ function Details.options.InitializeOptionsWindow(instance)
             local realBackdropAreaFrame = CreateFrame("frame", "$parentTab" .. sectionId .. "BackdropArea", f, "BackdropTemplate")
             realBackdropAreaFrame:SetFrameLevel(f:GetFrameLevel()-1)
             realBackdropAreaFrame:SetBackdrop({edgeFile = [[Interface\Buttons\WHITE8X8]], edgeSize = 1, bgFile = [[Interface\Tooltips\UI-Tooltip-Background]], tileSize = 64, tile = true})
-            realBackdropAreaFrame:SetBackdropColor(0, 0, 0, .1)
+            realBackdropAreaFrame:SetBackdropColor(0.1215, 0.1176, 0.1294, .1)
             realBackdropAreaFrame:SetBackdropBorderColor(0.2, 0.2, 0.2, .05)
             realBackdropAreaFrame:SetPoint("topleft", f, "topleft", 150, -27)
             realBackdropAreaFrame:SetSize(770, 570)
+
+			local leftGradient = DetailsFramework:CreateTexture(sectionFrame, {gradient = "horizontal", fromColor = {0, 0, 0, 0}, toColor = {0, 0, 0, 0.3}}, 10, 1, "artwork", {0, 1, 0, 1}, "leftGradient")
+			leftGradient:SetPoint("right-left", realBackdropAreaFrame, 1)
+
+			local bottomGradient = DetailsFramework:CreateTexture(realBackdropAreaFrame, {gradient = "vertical", fromColor = {0, 0, 0, 1}, toColor = {0, 0, 0, 0}}, 1, 20, "artwork", {0, 1, 0, 1}, "bottomGradient")
+            bottomGradient.sublevel = 7
+			bottomGradient:SetPoint("bottoms")
 
             sectionFrame.name = sectionsName[sectionId]
             --tinsert(f.sectionFramesContainer, sectionFrame)

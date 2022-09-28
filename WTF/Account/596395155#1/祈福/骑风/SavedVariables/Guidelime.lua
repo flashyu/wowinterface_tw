@@ -3,30 +3,58 @@ GuidelimeDataChar = {
 	["mainFrameHeight"] = 400,
 	["showUnavailableSteps"] = true,
 	["guideSkip"] = {
+		["TUGs The Ultimate (Leveling) Guides 70- b3 Borean Tundra - Alliance"] = {
+			true, -- [1]
+			true, -- [2]
+			nil, -- [3]
+			true, -- [4]
+		},
+		["TUGs The Ultimate (Leveling) Guides 70- a1 Howling Fjord - Alliance"] = {
+		},
+		["TUGs The Ultimate (Leveling) Guides 70- b1 Borean Tundra - Alliance"] = {
+			true, -- [1]
+			true, -- [2]
+			true, -- [3]
+			true, -- [4]
+		},
+		["TUGs The Ultimate (Leveling) Guides 70- b2 Borean Tundra - Alliance"] = {
+			true, -- [1]
+			true, -- [2]
+			[25] = true,
+			[40] = true,
+		},
 	},
 	["completedSteps"] = {
+		[3] = true,
 	},
 	["arrowY"] = -20,
 	["arrowRelative"] = "TOP",
-	["mainFrameX"] = -78.88874816894531,
+	["mainFrameX"] = -63.14239501953125,
 	["mainFrameLocked"] = false,
 	["mainFrameWidth"] = 350,
+	["editorFrameX"] = 0,
 	["arrowLocked"] = false,
+	["arrowAlpha"] = 0.8,
 	["editorFrameY"] = 0,
 	["showCompletedSteps"] = false,
-	["mainFrameY"] = -1.66667902469635,
-	["guideSize"] = {
-	},
-	["mainFrameAlpha"] = 0.5,
-	["editorFrameX"] = 0,
+	["showUseItemButtons"] = "LEFT",
+	["mainFrameShowScrollBar"] = true,
+	["showArrow"] = true,
+	["currentGuide"] = "TUGs The Ultimate (Leveling) Guides 70- b3 Borean Tundra - Alliance",
+	["showTitle"] = true,
 	["arrowX"] = 0,
+	["mainFrameY"] = 3.920664072036743,
 	["mainFrameFontSize"] = 14,
-	["mainFrameShowing"] = false,
 	["editorFrameRelative"] = "CENTER",
 	["version"] = "2.041",
-	["showArrow"] = true,
-	["mainFrameShowScrollBar"] = true,
-	["arrowSize"] = 64,
+	["guideSize"] = {
+		["TUGs The Ultimate (Leveling) Guides 70- b3 Borean Tundra - Alliance"] = 129,
+		["TUGs The Ultimate (Leveling) Guides 70- a1 Howling Fjord - Alliance"] = 56,
+		["TUGs The Ultimate (Leveling) Guides 70- b1 Borean Tundra - Alliance"] = 78,
+		["TUGs The Ultimate (Leveling) Guides 70- b2 Borean Tundra - Alliance"] = 92,
+	},
+	["mainFrameShowing"] = true,
+	["mainFrameAlpha"] = 0.5,
 	["mainFrameRelative"] = "RIGHT",
-	["arrowAlpha"] = 0.8,
+	["arrowSize"] = 64,
 }

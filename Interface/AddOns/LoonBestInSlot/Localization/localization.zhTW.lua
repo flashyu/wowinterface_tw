@@ -38,6 +38,7 @@ if GetLocale() == "zhTW" then
   LBIS.L["Battle at Valhalas: Final Challenge"] = "英靈殿之戰:最後的挑戰";
 --  LBIS.L["Bear"] = "";
   LBIS.L["Beast Mastery"] = "野獸控制";
+  LBIS.L["Betrayal"] = "背叛";
 --  LBIS.L["BIS"] = "";
   LBIS.L["Blacksmithing"] = "鍛造";
   LBIS.L["Blood"] = "血魄";
@@ -191,6 +192,7 @@ if GetLocale() == "zhTW" then
   LBIS.L["Moroes"] = "摩洛斯";
   LBIS.L["My Old Enemy"] = "我的宿敵";
   LBIS.L["Mystery of the Infinite, Redux"] = "恆龍之謎，復甦";
+--  LBIS.L["Nascent Val'kyr"] = "";
   LBIS.L["Naxxramas"] = "納克薩瑪斯";
   LBIS.L["Naxxramas (10)"] = "納克薩瑪斯 (10)";
   LBIS.L["Naxxramas (25)"] = "納克薩瑪斯 (25)";
@@ -334,7 +336,6 @@ if GetLocale() == "zhTW" then
 --  LBIS.L["Wintergrasp Marks"] = "";
 --  LBIS.L["Wintergrasp Quartermaster"] = "";
 --  LBIS.L["World Drop"] = "";
---  LBIS.L["World Drop (Nascent Val'kyr)"] = "";
 --  LBIS.L["World Drop (Skoll)"] = "";
   LBIS.L["Wrist"] = "手腕";
   LBIS.L["Xevozz"] = "基沃滋";

@@ -2,6 +2,22 @@
 
 Group Bulletin Board 	
 
+3.03
+- Added tab for LFG Tool requests 
+- Never use custom in lfg tool because it makes things blow up
+- Added support for the lfg tool tab
+- Fixed a bug and introduced new ones
+- Too tired to update this properly 
+
+3.02 
+- Some fixes for wotlk panel
+
+3.01
+- Added new panel for wotlk dungeons
+- Added wotlk dungeons
+- Improved performance
+- Some clean up of code
+
 2.63
 - Improved performance (fingers crossed). All thanks to dkcas11 who made the changes unless it doesn't work then blame him
 

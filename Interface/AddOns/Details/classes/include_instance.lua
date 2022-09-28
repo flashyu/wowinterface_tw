@@ -175,6 +175,9 @@ _detalhes.instance_defaults = {
 			enable_custom_text = false,
 			custom_text = "{name}",
 			show_timer = true,
+			show_timer_always = false, --show the timer even when not in an encounter
+			show_timer_bg = true, --show the timer within battleground, the timer is the elapsed battleground time
+			show_timer_arena = true, ---show the timer within arena, the timer is the elapsed time of the arena match
 		},
 	--auto hide window borders statusbar main menu
 		menu_alpha = {enabled = false, iconstoo = true, onenter = 1, onleave = 1, ignorebars = false},
@@ -422,7 +425,8 @@ _detalhes.instance_defaults = {
 			texcoord = {0, 1, 0, 1},
 			width = 0,
 			height = 0,
-			overlay = {1, 1, 1, 1}
+			overlay = {1, 1, 1, 1},
+			level = 2,
 		},
 	--tooltip amounts
 	tooltip = {
