@@ -10,16 +10,16 @@ AutoBarDB = {
 					["rows"] = 1,
 					["dockShiftY"] = 0,
 					["alignButtons"] = "3",
-					["posX"] = 300,
+					["posX"] = 1080.065887368306,
 					["DRUID"] = true,
-					["hide"] = false,
+					["hide"] = true,
 					["enabled"] = true,
 					["columns"] = 10,
 					["alpha"] = 1,
 					["buttonWidth"] = 36,
 					["frameStrata"] = "LOW",
 					["scale"] = 1,
-					["posY"] = 280,
+					["posY"] = 565.9541773735764,
 					["DEMONHUNTER"] = true,
 					["popupDirection"] = "1",
 					["padding"] = 0,
@@ -27,17 +27,17 @@ AutoBarDB = {
 					["buttonKeys"] = {
 						"AutoBarButtonBear", -- [1]
 						"AutoBarButtonCat", -- [2]
-						"AutoBarButtonTravel", -- [3]
-						"AutoBarButtonMoonkin", -- [4]
-						"AutoBarButtonTreeForm", -- [5]
-						"AutoBarButtonStealth", -- [6]
-						"AutoBarButtonDebuff", -- [7]
-						"AutoBarButtonClassBuff", -- [8]
-						"AutoBarButtonShields", -- [9]
-						"AutoBarButtonInterrupt", -- [10]
-						"AutoBarButtonER", -- [11]
-						"AutoBarButtonStance", -- [12]
-						"AutoBarButtonAquatic", -- [13]
+						"AutoBarButtonStance", -- [3]
+						"AutoBarButtonAquatic", -- [4]
+						"AutoBarButtonTravel", -- [5]
+						"AutoBarButtonMoonkin", -- [6]
+						"AutoBarButtonTreeForm", -- [7]
+						"AutoBarButtonStealth", -- [8]
+						"AutoBarButtonClassBuff", -- [9]
+						"AutoBarButtonShields", -- [10]
+						"AutoBarButtonDebuff", -- [11]
+						"AutoBarButtonER", -- [12]
+						"AutoBarButtonInterrupt", -- [13]
 					},
 				},
 			},
@@ -152,13 +152,16 @@ AutoBarDB = {
 	["account"] = {
 		["barList"] = {
 			["AutoBarClassBarBasic"] = {
-				["popupDirection"] = "1",
-				["fadeOut"] = false,
-				["PALADIN"] = true,
-				["buttonHeight"] = 36,
-				["rows"] = 1,
+				["HUNTER"] = true,
+				["WARRIOR"] = true,
+				["ROGUE"] = true,
 				["scale"] = 1,
+				["rows"] = 1,
+				["buttonWidth"] = 36,
 				["dockShiftY"] = 0,
+				["fadeOut"] = false,
+				["alignButtons"] = "3",
+				["posX"] = 585.2754844175834,
 				["buttonKeys"] = {
 					"AutoBarButtonHearth", -- [1]
 					"AutoBarButtonBandages", -- [2]
@@ -182,37 +185,35 @@ AutoBarDB = {
 					"AutoBarButtonTrinket1", -- [20]
 					"AutoBarButtonTrinket2", -- [21]
 				},
-				["alignButtons"] = "3",
-				["posX"] = 300,
-				["enabled"] = true,
 				["DRUID"] = true,
 				["MONK"] = true,
 				["hide"] = false,
-				["DEATHKNIGHT"] = true,
-				["ROGUE"] = true,
-				["columns"] = 16,
-				["MAGE"] = true,
-				["posY"] = 200,
+				["enabled"] = true,
 				["frameStrata"] = "LOW",
+				["posY"] = 224.6119193926552,
+				["buttonHeight"] = 36,
+				["SHAMAN"] = true,
+				["columns"] = 16,
 				["alpha"] = 1,
 				["PRIEST"] = true,
-				["HUNTER"] = true,
-				["buttonWidth"] = 36,
+				["MAGE"] = true,
+				["DEATHKNIGHT"] = true,
 				["WARLOCK"] = true,
 				["DEMONHUNTER"] = true,
-				["SHAMAN"] = true,
+				["PALADIN"] = true,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
-				["WARRIOR"] = true,
+				["popupDirection"] = "1",
 			},
 			["AutoBarClassBarExtras"] = {
-				["popupDirection"] = "1",
-				["fadeOut"] = false,
-				["PALADIN"] = true,
-				["buttonHeight"] = 36,
+				["HUNTER"] = true,
+				["WARRIOR"] = true,
+				["ROGUE"] = true,
+				["MAGE"] = true,
 				["rows"] = 1,
-				["scale"] = 1,
+				["frameStrata"] = "LOW",
 				["dockShiftY"] = 0,
+				["scale"] = 1,
 				["buttonKeys"] = {
 					"AutoBarButtonSpeed", -- [1]
 					"AutoBarButtonFreeAction", -- [2]
@@ -226,28 +227,27 @@ AutoBarDB = {
 					"AutoBarButtonRaidTarget", -- [10]
 					"AutoBarButtonMillHerbs", -- [11]
 				},
-				["alignButtons"] = "3",
-				["posX"] = 300,
-				["enabled"] = true,
+				["posX"] = 1076.091644271925,
+				["DEATHKNIGHT"] = true,
 				["DRUID"] = true,
 				["MONK"] = true,
 				["hide"] = false,
-				["DEATHKNIGHT"] = true,
-				["ROGUE"] = true,
+				["enabled"] = true,
+				["buttonWidth"] = 36,
+				["posY"] = 148.0324163022651,
 				["columns"] = 9,
-				["MAGE"] = true,
-				["posY"] = 360,
-				["frameStrata"] = "LOW",
+				["buttonHeight"] = 36,
+				["PALADIN"] = true,
 				["alpha"] = 1,
 				["PRIEST"] = true,
-				["HUNTER"] = true,
-				["buttonWidth"] = 36,
+				["alignButtons"] = "3",
+				["fadeOut"] = false,
 				["WARLOCK"] = true,
 				["DEMONHUNTER"] = true,
-				["SHAMAN"] = true,
+				["popupDirection"] = "1",
 				["padding"] = 0,
 				["dockShiftX"] = 0,
-				["WARRIOR"] = true,
+				["SHAMAN"] = true,
 			},
 		},
 		["ldbIcon"] = {
@@ -413,15 +413,16 @@ AutoBarDB = {
 			["AutoBarButtonMount"] = {
 				["barKey"] = "AutoBarClassBarExtras",
 				["mount_reverse_sort"] = false,
-				["square_popups"] = true,
+				["enabled"] = true,
+				["mount_show_qiraji"] = false,
 				["buttonKey"] = "AutoBarButtonMount",
 				["defaultButtonIndex"] = "*",
 				["arrangeOnUse"] = true,
 				["buttonClass"] = "AutoBarButtonMount",
 				["mount_show_class"] = true,
-				["mount_show_qiraji"] = false,
-				["enabled"] = true,
+				["square_popups"] = true,
 				["mount_show_favourites"] = true,
+				["is_dirty"] = false,
 				["mount_show_rng_fave"] = false,
 				["mount_show_nonfavourites"] = false,
 			},
@@ -554,6 +555,7 @@ AutoBarDB = {
 		["骑风 - 祈福"] = {
 			["buttonDataList"] = {
 				["AutoBarButtonMount"] = {
+					["arrangeOnUse"] = "大型美酒节科多兽",
 				},
 			},
 			["barList"] = {
@@ -567,4 +569,5 @@ AutoBarDB2 = {
 	["performance_threshold"] = 100,
 	["custom_categories"] = {
 	},
+	["whatsnew_version"] = "3.00.4.04",
 }

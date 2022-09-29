@@ -14,11 +14,11 @@ VER 3 0000000000000008 "move" "132128"
 END
 VER 3 0000000000000007 "move2" "132128"
 #showtooltip
-/cast [nostance:5,outdoors,nocombat,flyable,noswimming]飞行形态
-/cast [nostance:4,outdoors,noswimming,nostance:5]旅行形态(变形) 
-/cast [nostance:2,swimming]水栖形态(变形) 
+/cast [outdoors,nocombat,flyable,noswimming]飞行形态
+/cast [nostance:4,outdoors,noswimming]旅行形态(变形)
+/cast [nostance:2,swimming]水栖形态(变形)
 /cast [nostance:3,indoors]猎豹形态
-/script UIErrorsFrame:Clear() 
+/script UIErrorsFrame:Clear()
 END
 VER 3 0000000000000002 "target宏" "INV_MISC_QUESTIONMARK"
 /target 逆风术士
@@ -29,10 +29,11 @@ VER 3 0000000000000004 "开蚌壳" "136058"
 /use 巨型蚌壳
 /use 巨型蚌壳
 END
-VER 3 0000000000000006 "影遁" "INV_MISC_QUESTIONMARK"
+VER 3 0000000000000006 "影遁逃跑" "INV_MISC_QUESTIONMARK"
 #showtooltip 影遁
-/施放 [combat,nomod]影遁; 
-/施放 [nocombat,stance:3,nomod]潜行;[nocombat,nostance:3,nomod]猎豹形态
+/cast [combat]影遁; 
+/cast [nocombat,stance:3]潜行;
+ [nocombat,nostance:3]猎豹形态;
 END
 VER 3 0000000000000003 "视野宏" "132092"
 /console cameraDistanceMaxZoomFactor 4

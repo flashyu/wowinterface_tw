@@ -1,31 +1,15 @@
-## Interface: 20501
+## Interface: 30400
 
 ## Notes: ClassicCodex-db-ruRU
-## Title: ClassicCodex ruRU data
-## Title-zhCN: ClassicCodex 俄语数据
-## Title-zhTW: ClassicCodex 俄語數據
+## Title: ClassicCodex ruRU data (Incompatible)
+## Title-zhCN: ClassicCodex 俄语数据 (不兼容)
+## Title-zhTW: ClassicCodex 俄語數據 (不兼容)
 
 ## Author: Pgarneau, Shagu, SwimmingTiger
-## Version: v0.4.9
+## Version: v1.5.2
 
 ## Dependencies: ClassicCodex-loader
 ## LoadOnDemand: 1
 
 ## X-Curse-Project-ID: 351302
 ## X-WoWI-ID: 25442
-
-# database ruRU
-items.lua
-units.lua
-objects.lua
-quests.lua
-zones.lua
-professions.lua
-
-# database ruRU for TBC
-items-tbc.lua
-units-tbc.lua
-objects-tbc.lua
-quests-tbc.lua
-zones-tbc.lua
-professions-tbc.lua

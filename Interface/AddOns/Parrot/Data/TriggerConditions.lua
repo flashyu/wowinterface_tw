@@ -1,5 +1,7 @@
 local _, ns = ...
 local Parrot = ns.addon
+if not Parrot then return end
+
 local module = Parrot:NewModule("TriggerConditionsData", "AceEvent-3.0")
 local L = LibStub("AceLocale-3.0"):GetLocale("Parrot")
 
@@ -155,6 +157,8 @@ local powerTypeChoices = {
 	[2] = _G.FOCUS,
 	[3] = _G.ENERGY,
 	[4] = _G.HAPPINESS,
+	[5] = _G.RUNES,
+	[6] = _G.RUNIC_POWER,
 	[14] = _G.COMBO_POINTS,
 }
 

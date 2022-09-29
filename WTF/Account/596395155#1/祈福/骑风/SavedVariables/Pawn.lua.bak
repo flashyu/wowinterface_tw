@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0701,
-	["LastPlayerFullName"] = "骑风-祈福",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 36884,
@@ -57,10 +55,10 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:36419::::::-39:1655046184:70:::::::::|h[祈灵之玻璃戒指]|h|r",
 		}, -- [11]
 		{
-			["ID"] = 199699,
-			["Level"] = 125,
+			["ID"] = 36419,
+			["Level"] = 138,
 			["AlsoFitsIn"] = 11,
-			["Link"] = "|cff1eff00|Hitem:199699::::::::70:::::::::|h[群集坚韧指环]|h|r",
+			["Link"] = "|cff1eff00|Hitem:36419::::::-39:1655046184:71:::::::::|h[祈灵之玻璃戒指]|h|r",
 		}, -- [12]
 		{
 			["ID"] = 38213,
@@ -90,6 +88,8 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:199710::::::::70:::::::::|h[群集玫瑰]|h|r",
 		}, -- [17]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "骑风-祈福",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

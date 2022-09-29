@@ -1,5 +1,7 @@
 local _, ns = ...
 local Parrot = ns.addon
+if not Parrot then return end
+
 local module = Parrot:NewModule("Triggers", "AceEvent-3.0", "AceTimer-3.0")
 local L = LibStub("AceLocale-3.0"):GetLocale("Parrot")
 
@@ -58,7 +60,7 @@ local cooldowns = {}
 local defaultTriggers = {
 	[1001] = [[{
 		name = L["Low Health!"],
-		class = "DRUID;HUNTER;MAGE;PALADIN;PRIEST;ROGUE;SHAMAN;WARLOCK;WARRIOR",
+		class = "DRUID;HUNTER;MAGE;PALADIN;PRIEST;ROGUE;SHAMAN;WARLOCK;WARRIOR;DEATHKNIGHT",
 		conditions = {
 			["Unit health"] = {
 				{
@@ -187,6 +189,41 @@ local defaultTriggers = {
 		sticky = true,
 		color = "1e90ff",
 	}]],
+	[1017] = [[{
+		-- Rime
+		name = L["%s!"]:format(GetSpellInfo(59052)),
+		icon = 59052,
+		class = "DEATHKNIGHT",
+		conditions = {
+			["Aura gain"] = {
+				[1] = {
+					spell = GetSpellInfo(59052),
+					unit = "player",
+					auraType = "BUFF",
+				},
+			},
+		},
+		sticky = true,
+		color = "0000ff",
+	}]],
+	[1018] = [[{
+		-- Killing Machine
+		name = L["%s!"]:format(GetSpellInfo(51124)),
+		icon = 51124,
+		class = "DEATHKNIGHT",
+		conditions = {
+			["Aura gain"] = {
+				[1] = {
+					spell = GetSpellInfo(51124),
+					unit = "player",
+					auraType = "BUFF",
+				},
+			},
+		},
+		sticky = true,
+		color = "0000ff",
+	}]],
+
 }
 -- start new entries at 1008
 
@@ -747,6 +784,7 @@ function module:OnOptionsCreate()
 		SHAMAN = LC["SHAMAN"],
 		WARLOCK = LC["WARLOCK"],
 		WARRIOR = LC["WARRIOR"],
+		DEATHKNIGHT = LC["DEATHKNIGHT"],
 	}
 
 	local function getConditionValue(info)

@@ -14,7 +14,7 @@ VER 3 0000000000000008 "move" "132128"
 END
 VER 3 0000000000000007 "move2" "132128"
 #showtooltip
-/cast [outdoors,nocombat,flyable,noswimming]飞行形态
+/cast [outdoors,nocombat,flyable,noswimming]迅捷飞行形态
 /cast [nostance:4,outdoors,noswimming]旅行形态(变形)
 /cast [nostance:2,swimming]水栖形态(变形)
 /cast [nostance:3,indoors]猎豹形态

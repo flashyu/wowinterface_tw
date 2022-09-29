@@ -1,8 +1,8 @@
-# ClassicCodex core
+# ClassicCodex core (Incompatible)
 
-## [v0.4.9](https://github.com/SwimmingTiger/ClassicCodex/tree/v0.4.9) (2021-08-06)
-[Full Changelog](https://github.com/SwimmingTiger/ClassicCodex/compare/v1.4.8a...v0.4.9) 
+## v1.5.2 (2022-09-28)
+ 
 
-- add missing object names  
-- Only one prompt message is displayed for each item with missing data  
-- add missing objects for TBC  
+- Packing script: Fix the packing path error  
+- Fix LUA error in the enUS locale  
+- remove unused TBC patches  

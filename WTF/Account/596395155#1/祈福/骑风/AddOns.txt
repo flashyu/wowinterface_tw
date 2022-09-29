@@ -11,3 +11,4 @@ kExtraBossFrames: disabled
 WeakAurasCompanion: enabled
 WeakAurasArchive: enabled
 ElvUI_OptionsUI: enabled
+Decursive: disabled
