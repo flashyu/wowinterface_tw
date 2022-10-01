@@ -1002,7 +1002,7 @@ end
 -- Add category to the end of the buttons list
 function AutoBarButton.prototype:AddCategory(p_category_name)
 	if not AutoBarCategoryList[p_category_name] then
-		ABGCode:LogWarning("AutoBar: Attempted to add nonexistent Category:", p_category_name)
+		ABGCode.LogWarning("AutoBar: Attempted to add nonexistent Category:", p_category_name)
 	end
 	for _, category in ipairs(self) do
 		if (category == p_category_name) then
@@ -1693,7 +1693,10 @@ function AutoBarButtonHearth.prototype:init(parentBar, buttonDB)
 		self:AddCategory("Spell.AncientDalaranPortals")
 	end
 
-	self:AddCategory("Muffin.Misc.Hearth")
+	if (AutoBarCategoryList["Muffin.Misc.Hearth"]) then
+		self:AddCategory("Muffin.Misc.Hearth")
+	end
+	self:AddCategory("Misc.Hearth")
 
 	if (ABGData.is_mainline_wow) then
 		AutoBarCategoryList["Muffin.Toys.Hearth"].only_favourites = buttonDB.only_favourite_hearth
@@ -2231,7 +2234,7 @@ function AutoBarButtonWaterBuff.prototype:init(parentBar, buttonDB)
 end
 
 
-if (LE_EXPANSION_LEVEL_CURRENT >= LE_EXPANSION_WRATH_OF_THE_LICH_KING) then
+if (LE_EXPANSION_WRATH_OF_THE_LICH_KING and LE_EXPANSION_LEVEL_CURRENT >= LE_EXPANSION_WRATH_OF_THE_LICH_KING) then
 
 	local AutoBarButtonMillHerbs = AceOO.Class(AutoBarButton)
 	AutoBar.Class["AutoBarButtonMillHerbs"] = AutoBarButtonMillHerbs

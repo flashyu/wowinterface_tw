@@ -554,7 +554,6 @@ function ABGCode.InitializeAllCategories()
 
 
 	AutoBarCategoryList["Misc.Hearth"] = ItemsCategory:new("Misc.Hearth", "INV_Misc_Rune_01", "Misc.Hearth")
-	AutoBarCategoryList["Muffin.Misc.Hearth"] = ItemsCategory:new("Muffin.Misc.Hearth", "INV_Misc_Rune_01", "Muffin.Misc.Hearth")
 
 	AutoBarCategoryList["Consumable.Buff.Free Action"] = ItemsCategory:new( "Consumable.Buff.Free Action", "INV_Potion_04", "Consumable.Buff.Free Action")
 
@@ -888,6 +887,8 @@ function ABGCode.InitializeAllCategories()
 	AutoBarCategoryList["Muffin.Gear.Trinket"] = ItemsCategory:new("Muffin.Gear.Trinket", "INV_Misc_OrnateBox", "Muffin.Gear.Trinket")
 
 	AutoBarCategoryList["Misc.Lockboxes"] = ItemsCategory:new("Misc.Lockboxes", "INV_Trinket_Naxxramas06", "Misc.Lockboxes")
+
+	AutoBarCategoryList["Misc.Unlock"] = ItemsCategory:new("Misc.Unlock", "INV_Trinket_Naxxramas06", "Misc.Unlock")
 
 	AutoBarCategoryList["Misc.Usable.BossItem"] = ItemsCategory:new("Misc.Usable.BossItem", "INV_BannerPVP_02", "Misc.Usable.BossItem")
 

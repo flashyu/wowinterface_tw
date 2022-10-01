@@ -20,9 +20,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -38,10 +38,10 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["subeventSuffix"] = "_CAST_START",
-						["unit"] = "player",
+						["useExactSpellId"] = true,
 						["names"] = {
 						},
-						["useExactSpellId"] = true,
+						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -50,7 +50,7 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "spell",
-						["debuffType"] = "HELPFUL",
+						["spellName"] = 26985,
 						["use_genericShowOn"] = true,
 						["event"] = "Action Usable",
 						["use_exact_spellName"] = true,
@@ -60,10 +60,10 @@ WeakAurasSaved = {
 						},
 						["names"] = {
 						},
-						["genericShowOn"] = "showAlways",
 						["unit"] = "player",
+						["genericShowOn"] = "showAlways",
 						["use_track"] = true,
-						["spellName"] = 26985,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -74,20 +74,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -108,9 +108,9 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_p_time_legacy_floor"] = false,
 					["type"] = "subtext",
-					["anchorXOffset"] = 0,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -120,20 +120,20 @@ WeakAurasSaved = {
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_time_mod_rate"] = true,
 					["text_shadowYOffset"] = 0,
-					["text_visible"] = true,
-					["text_wordWrap"] = "WordWrap",
-					["text_fontType"] = "OUTLINE",
-					["text_anchorPoint"] = "CENTER",
-					["text_text_format_p_time_format"] = 0,
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = true,
+					["text_anchorPoint"] = "CENTER",
+					["text_text_format_p_time_format"] = 0,
+					["text_fontType"] = "OUTLINE",
 					["text_fontSize"] = 12,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_text_format_p_time_legacy_floor"] = false,
+					["anchorXOffset"] = 0,
+					["text_text_format_p_time_precision"] = 1,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -150,15 +150,15 @@ WeakAurasSaved = {
 					},
 					["useGlowColor"] = false,
 					["glow"] = false,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
 			},
 			["height"] = 64,
 			["load"] = {
-				["talent"] = {
+				["size"] = {
 					["multi"] = {
 					},
 				},
@@ -170,33 +170,32 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 			},
 			["source"] = "import",
 			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
-			["information"] = {
-			},
 			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
+			["cooldown"] = false,
 			["authorOptions"] = {
 			},
+			["icon"] = true,
+			["xOffset"] = 0,
+			["alpha"] = 1,
 			["zoom"] = 0,
-			["frameStrata"] = 1,
-			["cooldownTextDisabled"] = false,
-			["config"] = {
-			},
+			["uid"] = "WwOVJKbhwK4",
 			["tocversion"] = 30400,
 			["id"] = "日蚀触发",
-			["alpha"] = 1,
-			["useCooldownModRate"] = true,
-			["anchorFrameType"] = "SCREEN",
 			["width"] = 64,
-			["uid"] = "WwOVJKbhwK4",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["useCooldownModRate"] = true,
+			["config"] = {
+			},
 			["inverse"] = false,
-			["xOffset"] = 0,
+			["cooldownTextDisabled"] = false,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -216,8 +215,9 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["cooldown"] = false,
-			["icon"] = true,
+			["information"] = {
+			},
+			["selfPoint"] = "CENTER",
 		},
 		["月蚀冷却 "] = {
 			["iconSource"] = 3,
@@ -240,30 +240,30 @@ WeakAurasSaved = {
 						["duration"] = "15",
 						["unit"] = "player",
 						["use_sourceNpcId"] = false,
-						["sourceFlags"] = "Mine",
+						["use_auraType"] = true,
 						["use_sourceFlags"] = true,
 						["use_cloneId"] = false,
 						["use_spellSchool"] = false,
 						["debuffType"] = "HELPFUL",
 						["type"] = "combatlog",
-						["subeventPrefix"] = "SPELL",
+						["matchesShowOn"] = "showAlways",
 						["useExactSpellId"] = true,
-						["auraspellids"] = {
-							"48517", -- [1]
-						},
+						["auraType"] = "BUFF",
 						["subeventSuffix"] = "_AURA_REMOVED",
 						["event"] = "Combat Log",
 						["names"] = {
 						},
-						["use_spellName"] = false,
 						["use_spellId"] = true,
+						["use_spellName"] = false,
 						["spellIds"] = {
 						},
 						["use_sourceUnit"] = true,
-						["auraType"] = "BUFF",
-						["matchesShowOn"] = "showAlways",
+						["auraspellids"] = {
+							"48517", -- [1]
+						},
+						["subeventPrefix"] = "SPELL",
 						["sourceUnit"] = "player",
-						["use_auraType"] = true,
+						["sourceFlags"] = "Mine",
 					},
 					["untrigger"] = {
 					},
@@ -272,12 +272,12 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "aura2",
 						["useExactSpellId"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 						["matchesShowOn"] = "showAlways",
 						["auraspellids"] = {
 							"48518", -- [1]
 						},
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -290,11 +290,11 @@ WeakAurasSaved = {
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 26986,
 						["use_spellName"] = true,
-						["debuffType"] = "HELPFUL",
+						["spellName"] = 26986,
 						["genericShowOn"] = "showOnCooldown",
 						["unit"] = "player",
 						["use_track"] = true,
-						["spellName"] = 26986,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -320,9 +320,9 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_legacy_floor"] = false,
+					["text_text_format_p_format"] = "timed",
 					["type"] = "subtext",
-					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["anchorXOffset"] = 0,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -332,20 +332,20 @@ WeakAurasSaved = {
 					["text_font"] = "聊天",
 					["text_shadowXOffset"] = 0,
 					["text_shadowYOffset"] = 0,
+					["text_fontType"] = "OUTLINE",
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = false,
+					["text_anchorPoint"] = "CENTER",
+					["text_text_format_p_time_format"] = 0,
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = false,
-					["text_anchorPoint"] = "CENTER",
-					["text_text_format_p_time_format"] = 0,
-					["text_fontType"] = "OUTLINE",
 					["text_fontSize"] = 16,
-					["anchorXOffset"] = 0,
-					["text_text_format_p_format"] = "timed",
+					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["text_text_format_p_time_legacy_floor"] = false,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -362,8 +362,8 @@ WeakAurasSaved = {
 					},
 					["glowXOffset"] = 0,
 					["glow"] = false,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -375,11 +375,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_alive"] = true,
 				["class"] = {
 					["multi"] = {
 					},
 				},
+				["use_alive"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -391,44 +391,52 @@ WeakAurasSaved = {
 			},
 			["source"] = "import",
 			["regionType"] = "icon",
-			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
-			["cooldown"] = true,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
+			["information"] = {
+			},
 			["authorOptions"] = {
 			},
-			["cooldownTextDisabled"] = false,
-			["alpha"] = 1,
-			["zoom"] = 0,
-			["uid"] = "bG5BVG3wv1u",
-			["tocversion"] = 30400,
-			["id"] = "月蚀冷却 ",
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
+			["xOffset"] = 0,
 			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 64,
-			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
+			["tocversion"] = 30400,
+			["id"] = "月蚀冷却 ",
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["width"] = 64,
+			["useCooldownModRate"] = true,
+			["uid"] = "bG5BVG3wv1u",
 			["inverse"] = false,
-			["xOffset"] = 0,
+			["zoom"] = 0,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -444,16 +452,8 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["information"] = {
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
+			["cooldown"] = true,
+			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
 		},
 		["月蚀触发 "] = {
 			["iconSource"] = 2,
@@ -482,10 +482,10 @@ WeakAurasSaved = {
 						["auraspellids"] = {
 							"48518", -- [1]
 						},
-						["useExactSpellId"] = true,
+						["unit"] = "player",
 						["names"] = {
 						},
-						["unit"] = "player",
+						["useExactSpellId"] = true,
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -499,11 +499,11 @@ WeakAurasSaved = {
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 26986,
 						["use_spellName"] = true,
-						["debuffType"] = "HELPFUL",
+						["spellName"] = 26986,
 						["genericShowOn"] = "showOnCooldown",
 						["unit"] = "player",
 						["use_track"] = true,
-						["spellName"] = 26986,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -529,9 +529,9 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_legacy_floor"] = false,
+					["text_text_format_p_format"] = "timed",
 					["type"] = "subtext",
-					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["anchorXOffset"] = 0,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -541,20 +541,20 @@ WeakAurasSaved = {
 					["text_font"] = "Friz Quadrata TT",
 					["text_shadowXOffset"] = 0,
 					["text_shadowYOffset"] = 0,
+					["text_fontType"] = "OUTLINE",
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = true,
+					["text_anchorPoint"] = "CENTER",
+					["text_text_format_p_time_format"] = 0,
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
-					["text_anchorPoint"] = "CENTER",
-					["text_text_format_p_time_format"] = 0,
-					["text_fontType"] = "OUTLINE",
 					["text_fontSize"] = 12,
-					["anchorXOffset"] = 0,
-					["text_text_format_p_format"] = "timed",
+					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["text_text_format_p_time_legacy_floor"] = false,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -571,15 +571,15 @@ WeakAurasSaved = {
 					},
 					["glowXOffset"] = 0,
 					["glow"] = false,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
 			},
 			["height"] = 64,
 			["load"] = {
-				["size"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -591,51 +591,59 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["talent"] = {
+				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
 			["source"] = "import",
 			["regionType"] = "icon",
-			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
-			["cooldown"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
+			["information"] = {
+			},
 			["authorOptions"] = {
 			},
-			["cooldownTextDisabled"] = false,
-			["alpha"] = 1,
-			["zoom"] = 0,
-			["uid"] = "LTHO4pI9bMU",
-			["tocversion"] = 30400,
-			["id"] = "月蚀触发 ",
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
+			["xOffset"] = 0,
 			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 64,
-			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
+			["tocversion"] = 30400,
+			["id"] = "月蚀触发 ",
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["width"] = 64,
+			["useCooldownModRate"] = true,
+			["uid"] = "LTHO4pI9bMU",
 			["inverse"] = false,
-			["xOffset"] = 0,
+			["zoom"] = 0,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -655,16 +663,8 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["information"] = {
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
+			["cooldown"] = false,
+			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
 		},
 		["日蚀冷却"] = {
 			["iconSource"] = 3,
@@ -682,9 +682,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -695,29 +695,29 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["use_sourceNpcId"] = false,
-						["use_auraType"] = true,
+						["sourceFlags"] = "Mine",
 						["use_sourceFlags"] = true,
 						["use_cloneId"] = false,
 						["use_spellSchool"] = false,
 						["debuffType"] = "HELPFUL",
 						["type"] = "combatlog",
-						["duration"] = "15",
+						["subeventPrefix"] = "SPELL",
 						["auraType"] = "BUFF",
-						["auraspellids"] = {
-							"48517", -- [1]
-						},
+						["subeventSuffix"] = "_AURA_REMOVED",
 						["useExactSpellId"] = true,
 						["event"] = "Combat Log",
 						["unit"] = "player",
-						["use_spellId"] = true,
 						["use_spellName"] = false,
+						["use_spellId"] = true,
 						["spellIds"] = {
 						},
 						["use_sourceUnit"] = true,
-						["subeventSuffix"] = "_AURA_REMOVED",
-						["subeventPrefix"] = "SPELL",
+						["auraspellids"] = {
+							"48517", -- [1]
+						},
+						["duration"] = "15",
 						["sourceUnit"] = "player",
-						["sourceFlags"] = "Mine",
+						["use_auraType"] = true,
 					},
 					["untrigger"] = {
 					},
@@ -726,12 +726,12 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "aura2",
 						["useExactSpellId"] = true,
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["matchesShowOn"] = "showAlways",
 						["auraspellids"] = {
 							"48517", -- [1]
 						},
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
@@ -744,11 +744,11 @@ WeakAurasSaved = {
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 26985,
 						["use_spellName"] = true,
-						["debuffType"] = "HELPFUL",
+						["spellName"] = 26985,
 						["genericShowOn"] = "showOnCooldown",
 						["unit"] = "player",
 						["use_track"] = true,
-						["spellName"] = 26985,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -759,20 +759,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -793,9 +793,9 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_p_time_legacy_floor"] = false,
 					["type"] = "subtext",
-					["anchorXOffset"] = 0,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -805,20 +805,20 @@ WeakAurasSaved = {
 					["text_font"] = "聊天",
 					["text_text_format_p_time_mod_rate"] = true,
 					["text_shadowYOffset"] = 0,
-					["text_visible"] = false,
-					["text_wordWrap"] = "WordWrap",
-					["text_fontType"] = "OUTLINE",
-					["text_anchorPoint"] = "CENTER",
-					["text_text_format_p_time_format"] = 0,
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = false,
+					["text_anchorPoint"] = "CENTER",
+					["text_text_format_p_time_format"] = 0,
+					["text_fontType"] = "OUTLINE",
 					["text_fontSize"] = 16,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_text_format_p_time_legacy_floor"] = false,
+					["anchorXOffset"] = 0,
+					["text_text_format_p_time_precision"] = 1,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -835,8 +835,8 @@ WeakAurasSaved = {
 					},
 					["useGlowColor"] = false,
 					["glow"] = false,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -848,11 +848,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_alive"] = true,
 				["class"] = {
 					["multi"] = {
 					},
 				},
-				["use_alive"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -864,26 +864,25 @@ WeakAurasSaved = {
 			},
 			["source"] = "import",
 			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
-			["information"] = {
-			},
 			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
+			["cooldown"] = true,
 			["authorOptions"] = {
 			},
+			["icon"] = true,
+			["xOffset"] = 0,
+			["alpha"] = 1,
 			["zoom"] = 0,
-			["frameStrata"] = 1,
-			["cooldownTextDisabled"] = false,
-			["config"] = {
-			},
+			["uid"] = "gMB1DBDCkGO",
 			["tocversion"] = 30400,
 			["id"] = "日蚀冷却",
-			["alpha"] = 1,
-			["useCooldownModRate"] = true,
-			["anchorFrameType"] = "SCREEN",
 			["width"] = 64,
-			["uid"] = "gMB1DBDCkGO",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["useCooldownModRate"] = true,
+			["config"] = {
+			},
 			["inverse"] = false,
-			["xOffset"] = 0,
+			["cooldownTextDisabled"] = false,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -899,8 +898,9 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["cooldown"] = true,
-			["icon"] = true,
+			["information"] = {
+			},
+			["selfPoint"] = "CENTER",
 		},
 		["雷德王阿姨-日蚀月蚀提示+内置cd"] = {
 			["arcLength"] = 360,
@@ -920,15 +920,15 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["debuffType"] = "HELPFUL",
+						["subeventPrefix"] = "SPELL",
 						["type"] = "aura2",
 						["spellIds"] = {
 						},
@@ -937,7 +937,7 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["event"] = "Health",
-						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -947,34 +947,39 @@ WeakAurasSaved = {
 			["internalVersion"] = 53,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
 			["align"] = "CENTER",
 			["stagger"] = 0,
-			["frameStrata"] = 1,
-			["uid"] = "pKJz0wdW89z",
+			["gridWidth"] = 5,
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
 			["subRegions"] = {
 			},
-			["space"] = 0,
-			["gridType"] = "RD",
+			["radius"] = 200,
+			["useLimit"] = false,
 			["load"] = {
-				["talent"] = {
+				["size"] = {
 					["multi"] = {
 					},
 				},
@@ -986,63 +991,58 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["authorOptions"] = {
-			},
+			["gridType"] = "RD",
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["radius"] = 200,
+			["authorOptions"] = {
+			},
 			["animate"] = false,
-			["rotation"] = 0,
+			["source"] = "import",
 			["scale"] = 1,
+			["selfPoint"] = "LEFT",
+			["border"] = false,
+			["borderEdge"] = "Square Full White",
+			["regionType"] = "dynamicgroup",
+			["borderSize"] = 2,
+			["sort"] = "none",
+			["borderInset"] = 1,
+			["anchorPerUnit"] = "CUSTOM",
+			["constantFactor"] = "RADIUS",
+			["grow"] = "RIGHT",
+			["borderOffset"] = 4,
+			["rowSpace"] = 1,
+			["tocversion"] = 30400,
+			["id"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
+			["limit"] = 5,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["config"] = {
+			},
+			["uid"] = "pKJz0wdW89z",
 			["sortHybridTable"] = {
 				["日蚀触发"] = false,
 				["月蚀触发 "] = false,
 				["日蚀冷却"] = false,
 				["月蚀冷却 "] = false,
 			},
-			["border"] = false,
-			["borderEdge"] = "Square Full White",
-			["regionType"] = "dynamicgroup",
-			["borderSize"] = 2,
-			["sort"] = "none",
-			["config"] = {
-			},
-			["borderColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["constantFactor"] = "RADIUS",
-			["limit"] = 5,
-			["borderOffset"] = 4,
-			["rowSpace"] = 1,
-			["tocversion"] = 30400,
-			["id"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
-			["grow"] = "RIGHT",
-			["gridWidth"] = 5,
-			["anchorFrameType"] = "SCREEN",
-			["anchorPerUnit"] = "CUSTOM",
-			["borderInset"] = 1,
-			["selfPoint"] = "LEFT",
-			["source"] = "import",
+			["rotation"] = 0,
 			["conditions"] = {
 			},
 			["information"] = {
 			},
-			["useLimit"] = false,
+			["space"] = 0,
 		},
 	},
-	["editor_font_size"] = 12,
+	["login_squelch_time"] = 10,
 	["lastArchiveClear"] = 1664034415,
 	["minimap"] = {
 		["hide"] = false,
@@ -1051,12 +1051,12 @@ WeakAurasSaved = {
 	["dbVersion"] = 53,
 	["registered"] = {
 	},
-	["login_squelch_time"] = 10,
+	["editor_font_size"] = 12,
 	["frame"] = {
 		["xOffset"] = -1124.55517578125,
-		["width"] = 830,
-		["height"] = 665.0001220703125,
 		["yOffset"] = -138.8649291992188,
+		["height"] = 665.0001220703125,
+		["width"] = 830,
 	},
 	["editor_theme"] = "Monokai",
 }

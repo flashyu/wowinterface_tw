@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
+	["session"] = 28,
 	["lastSanitation"] = 3,
-	["session"] = 27,
 	["errors"] = {
 		{
 			["message"] = "...ace\\AddOns\\AdvancedInterfaceOptions\\basicOptions.lua:344: attempt to index field 'CustomVars' (a nil value)",
@@ -264,62 +264,62 @@ BugGrabberDB = {
 		}, -- [33]
 		{
 			["message"] = "Binding AUTOBAR_CONFIG is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:47:01",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:47:01",
 			["counter"] = 18,
 		}, -- [34]
 		{
 			["message"] = "Binding AutoBarButtonHearth_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:47:01",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:47:01",
 			["counter"] = 18,
 		}, -- [35]
 		{
 			["message"] = "Binding AutoBarButtonMount_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["session"] = 18,
 			["time"] = "2022/09/24 23:48:35",
+			["session"] = 18,
 			["counter"] = 17,
 		}, -- [36]
 		{
 			["message"] = "Binding AutoBarButtonBandages_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["session"] = 18,
 			["time"] = "2022/09/24 23:48:35",
+			["session"] = 18,
 			["counter"] = 17,
 		}, -- [37]
 		{
 			["message"] = "Binding AutoBarButtonCrafting_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["session"] = 18,
 			["time"] = "2022/09/24 23:48:35",
+			["session"] = 18,
 			["counter"] = 17,
 		}, -- [38]
 		{
 			["message"] = "Binding AutoBarButtonHeal_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["session"] = 18,
 			["time"] = "2022/09/24 23:48:35",
+			["session"] = 18,
 			["counter"] = 15,
 		}, -- [39]
 		{
 			["message"] = "Binding AutoBarButtonRecovery_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["session"] = 18,
 			["time"] = "2022/09/24 23:48:35",
+			["session"] = 18,
 			["counter"] = 15,
 		}, -- [40]
 		{
 			["message"] = "Binding AutoBarButtonFood_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["session"] = 18,
 			["time"] = "2022/09/24 23:48:35",
+			["session"] = 18,
 			["counter"] = 10,
 		}, -- [41]
 		{
 			["message"] = "Binding AutoBarButtonWater_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["session"] = 18,
 			["time"] = "2022/09/24 23:48:35",
+			["session"] = 18,
 			["counter"] = 10,
 		}, -- [42]
 		{
 			["message"] = "Binding AutoBarButtonFoodBuff_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["session"] = 18,
 			["time"] = "2022/09/24 23:48:35",
+			["session"] = 18,
 			["counter"] = 10,
 		}, -- [43]
 		{
@@ -348,8 +348,8 @@ BugGrabberDB = {
 		}, -- [46]
 		{
 			["message"] = "Couldn't open Interface\\AddOns\\WideQuestLogLevels\\WideQuestLogLevels.toc",
-			["time"] = "2022/09/28 22:56:05",
 			["session"] = 23,
+			["time"] = "2022/09/28 22:56:05",
 			["counter"] = 2,
 		}, -- [47]
 		{
@@ -377,18 +377,11 @@ BugGrabberDB = {
 			["counter"] = 27,
 		}, -- [50]
 		{
-			["message"] = "...ace\\AddOns\\ElvUI\\Wrath\\Modules\\Skins\\Battlefield.lua:30: attempt to index local 'WintergraspTimer' (a nil value)",
-			["time"] = "2022/09/24 23:46:58",
-			["stack"] = "[string \"@Interface\\AddOns\\ElvUI\\Wrath\\Modules\\Skins\\Battlefield.lua\"]:30: in function <...ace\\AddOns\\ElvUI\\Wrath\\Modules\\Skins\\Battlefield.lua:9>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Skins\\Skins.lua\"]:1665: in function <Interface\\AddOns\\ElvUI\\Core\\Modules\\Skins\\Skins.lua:1660>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\Core.lua\"]:1766: in function `CallLoadFunc'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\Core.lua\"]:1781: in function `CallLoadedModule'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\Core.lua\"]:1807: in function `InitializeModules'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\Core.lua\"]:1916: in function `Initialize'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\init.lua\"]:225: in function <Interface\\AddOns\\ElvUI\\Core\\init.lua:224>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:70: in function <...vUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0.lua:65>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:527: in function `EnableAddon'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:630: in function <...vUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0.lua:615>",
+			["message"] = "(null)",
 			["session"] = 27,
+			["time"] = "2022/09/28 22:01:13",
 			["counter"] = 27,
 		}, -- [51]
-		{
-			["message"] = "(null)",
-			["time"] = "2022/09/28 22:01:13",
-			["session"] = 27,
-			["counter"] = 27,
-		}, -- [52]
 		{
 			["message"] = "Interface\\AddOns\\weizPVP\\Modules\\Events.lua:106: attempt to call upvalue 'C_PvP_IsWarModeDesired' (a nil value)",
 			["time"] = "2022/09/24 23:47:04",
@@ -396,7 +389,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\weizPVP\\Modules\\Events.lua\"]:106: in function `WarModeChanged'\n[string \"@Interface\\AddOns\\weizPVP\\Modules\\Zones.lua\"]:94: in function <Interface\\AddOns\\weizPVP\\Modules\\Zones.lua:56>",
 			["session"] = 27,
 			["counter"] = 112,
-		}, -- [53]
+		}, -- [52]
 		{
 			["message"] = "Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua:300: attempt to index a nil value",
 			["time"] = "2022/09/25 00:09:18",
@@ -404,6 +397,13 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:300: in function `GearScore_UpdateGTData'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:276: in function <Interface\\AddOns\\GearScoreLite\\GearScoreLite.lua:269>",
 			["session"] = 27,
 			["counter"] = 155,
+		}, -- [53]
+		{
+			["message"] = "...ace\\AddOns\\ElvUI\\Wrath\\Modules\\Skins\\Battlefield.lua:30: attempt to index local 'WintergraspTimer' (a nil value)",
+			["time"] = "2022/09/24 23:46:58",
+			["stack"] = "[string \"@Interface\\AddOns\\ElvUI\\Wrath\\Modules\\Skins\\Battlefield.lua\"]:30: in function <...ace\\AddOns\\ElvUI\\Wrath\\Modules\\Skins\\Battlefield.lua:9>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Skins\\Skins.lua\"]:1665: in function <Interface\\AddOns\\ElvUI\\Core\\Modules\\Skins\\Skins.lua:1660>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\Core.lua\"]:1766: in function `CallLoadFunc'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\Core.lua\"]:1781: in function `CallLoadedModule'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\Core.lua\"]:1807: in function `InitializeModules'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\Core.lua\"]:1916: in function `Initialize'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\init.lua\"]:225: in function <Interface\\AddOns\\ElvUI\\Core\\init.lua:224>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:70: in function <...vUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0.lua:65>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:527: in function `EnableAddon'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:630: in function <...vUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0.lua:615>",
+			["session"] = 28,
+			["counter"] = 28,
 		}, -- [54]
 	},
 }

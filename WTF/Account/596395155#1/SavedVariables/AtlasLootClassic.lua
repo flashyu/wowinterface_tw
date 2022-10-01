@@ -1,10 +1,10 @@
 
 AtlasLootClassicDB = {
-	["profileKeys"] = {
-		["骑风 - 祈福"] = "骑风 - 祈福",
-	},
 	["global"] = {
 		["__addonrevision"] = 3000003,
+	},
+	["profileKeys"] = {
+		["骑风 - 祈福"] = "骑风 - 祈福",
 	},
 	["profiles"] = {
 		["骑风 - 祈福"] = {
