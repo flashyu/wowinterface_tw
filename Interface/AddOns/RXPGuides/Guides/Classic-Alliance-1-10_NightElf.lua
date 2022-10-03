@@ -1,18 +1,18 @@
 RXPGuides.RegisterGuide([[
 #classic
 << Alliance
-#name 1-6 Shadowglen
+#name 1-6 幽影谷
 #version 1
-#group RestedXP Alliance 1-20
+#group RestedXP 联盟 1-20
 #defaultfor NightElf
-#next 6-11 Teldrassil
+#next 6-11 泰达希尔
 step << !NightElf
     #sticky
     #completewith next
-    +You have selected a guide meant for Night Elves. You should choose the same starter zone that you start in
+    +你选择了一个暗夜精灵的向导。你应该选择与你开始时相同的起始区域
 step
     .goto Teldrassil,58.7,44.4
-    .accept 456 >> Accept The Balance of Nature
+    .accept 456 >> 接受自然的平衡
 step
     #sticky
     #label balance1
@@ -22,77 +22,77 @@ step
 step
     .xp 2
 step
-    .accept 458 >> Accept The Woodland Protector
+    .accept 458 >> 接受林地保护人
 	.goto Teldrassil,59.9,42.5
-    .accept 4495 >> Accept A Good Friend
+    .accept 4495 >> 接受一个好朋友
     .goto Teldrassil,60.9,42.0
 step << Hunter
     #era
     .goto Teldrassil,59.8,34.1
-    .xp 4-610 >> Grind until you are 610xp away from level 4 (790/1400)
+    .xp 4-610 >> 研磨直到距离4级610xp(790/1400)
 step << Hunter
     #som
     .goto Teldrassil,59.8,34.1
-    .xp 4-755 >> Grind until you are 755xp away from level 4 (645/1400)
+    .xp 4-755 >> 研磨直到距离4级755xp(645/1400)
 step << Hunter
     .goto Teldrassil,54.6,33.0
-    .turnin 4495 >> Turn in A Good Friend
-    .accept 3519 >> Accept A Friend in Need
+    .turnin 4495 >> 交一个好朋友
+    .accept 3519 >> 接受有需要的朋友
 step << Hunter
     #sticky
     #completewith next
-    .hs >> Hearth back to the starting zone
+    .hs >> 炉底回到起跑区
 step << Hunter
     .goto Teldrassil,57.9,45.1
-    .turnin 458 >> Turn in The Woodland Protector
-    .accept 459 >> Accept The Woodland Protector
+    .turnin 458 >> 交出林地保护人
+    .accept 459 >> 接受林地保护人
 step
     #requires balance1
 	.goto Teldrassil,58.7,44.2
-    .turnin 456 >> Turn in The Balance of Nature
-    .accept 457 >> Accept The Balance of Nature
-	.accept 3116 >> Accept Simple Sigil << Warrior
-	.accept 3117 >> Accept Etched Sigil << Hunter
---	.accept 3118 >> Accept Encrypted Sigil << Rogue
-	.accept 3119 >> Accept Hallowed Sigil << Priest
-	.accept 3120 >> Accept Verdant Sigil << Druid
+    .turnin 456 >> 实现自然平衡
+    .accept 457 >> 接受自然的平衡
+	.accept 3116 >> 接受简单符号 << Warrior
+	.accept 3117 >> 接受蚀刻的符号 << Hunter
+--	.accept 3118 >> 接受加密符号 << Rogue
+	.accept 3119 >> 接受神圣的符号 << Priest
+	.accept 3120 >> 接受青翠符号 << Druid
 step << Warrior
     .goto Teldrassil,59.3,41.1
-	.vendor >> Go inside and vendor trash
+	.vendor >> 进屋和供应商垃圾箱
 step << Warrior
 	.goto Teldrassil,59.6,38.4
-	.turnin 3116 >> Turn in Simple Sigil
-	.trainer >> Run up the stairs behind the vendors. Train Battle Shout from the trainer
+	.turnin 3116 >> 转入简单符号
+	.trainer >> 跑上供应商后面的楼梯。训练师的训练战斗口号
 step << !Hunter
     .goto Teldrassil,59.8,34.1
     .complete 457,1 --Kill Mangy Nightsaber (x7)
     .complete 457,2 --Kill Thistle Boar (x7)
 step << !Hunter
     .goto Teldrassil,54.6,33.0
-    .turnin 4495 >> Turn in A Good Friend
-    .accept 3519 >> Accept A Friend in Need
+    .turnin 4495 >> 交一个好朋友
+    .accept 3519 >> 接受有需要的朋友
 step << !Hunter
     #sticky
     #completewith next
-    .hs >> Hearth back to the starting zone
+    .hs >> 炉底回到起跑区
 step << !Hunter
     .goto Teldrassil,57.9,45.1
-    .turnin 458 >> Turn in The Woodland Protector
-    .accept 459 >> Accept The Woodland Protector
+    .turnin 458 >> 交出林地保护人
+    .accept 459 >> 接受林地保护人
 step << !Hunter
     .goto Teldrassil,58.6,44.3
-    .turnin 457 >> Turn in The Balance of Nature
+    .turnin 457 >> 实现自然平衡
 step
     .goto Teldrassil,60.9,42.0
-    .turnin 3519 >> Turn in A Friend in Need
-    .accept 3521 >> Accept Iverron's Antidote
+    .turnin 3519 >> 交出需要帮助的朋友
+    .accept 3521 >> 接受艾弗隆的解药
 step << Hunter
     #completewith htraining
     .goto Teldrassil,59.3,41.1
-	.vendor >> Go inside, vendor trash and buy 3 stacks of arrows
+	.vendor >> 进去，小贩垃圾箱，买三堆箭
 step
     .goto Teldrassil,57.8,41.7
-    .accept 916 >> Accept Webwood Venom
+    .accept 916 >> 接受Webwood毒液
 step << Hunter
     #era
     .xp 4-40
@@ -101,84 +101,84 @@ step << Hunter
     .xp 4-50
 step << Hunter
     .goto Teldrassil,58.6,40.4
-    >>Climb the big tree and talk to the Hunter trainer
-    .train 1978 >>Train Serpent Sting
-    .turnin 3117 >> Turn in Etched Sigil
+    >>爬上大树，与猎人训练师交谈
+    .train 1978 >>火车蛇刺
+    .turnin 3117 >> 交上蚀刻的符号
 step
     .goto Teldrassil,58.1,36.7
-	>> Loot the yellow flowers around the lake
+	>> 抢劫湖边的黄花
     .complete 3521,2 --Collect Moonpetal Lily (x4)
 step
     .goto Teldrassil,56.8,31.7
-	>>Kill Spiders. Loot them for Ichor and Sacs
+	>>杀死蜘蛛。为了Ichor和Sacs抢劫他们
     .complete 3521,3 --Collect Webwood Ichor (x1)
     .complete 916,1 --Collect Webwood Venom Sac (x10)
 step
     .goto Teldrassil,55.0,43.7
-	>> Kill Grellkins. Loot them for Mushrooms and Moss
+	>> 杀死格雷金斯。抢走蘑菇和苔藓
     .complete 3521,1 --Collect Hyacinth Mushroom (x7)
     .complete 459,1 --Collect Fel Moss (x8)
 step
     .goto Teldrassil,57.8,45.1
-    .turnin 459 >> Turn in The Woodland Protector
+    .turnin 459 >> 交出林地保护人
 step
     .goto Teldrassil,60.9,42.0
-    .turnin 3521 >> Turn in Iverron's Antidote
-    .accept 3522 >> Accept Iverron's Antidote
+    .turnin 3521 >> 交出艾弗隆的解药
+    .accept 3522 >> 接受艾弗隆的解药
 step << !Priest
     .goto Teldrassil,59.3,41.1
-	.vendor >> Go inside and vendor trash << !Hunter
-	.vendor >> Go inside and vendor trash. Make sure you have at least 3 or 4 stacks of arrows for the next segment << Hunter
+	.vendor >> 进屋和供应商垃圾箱 << !Hunter
+	.vendor >> 进去卖垃圾。确保下一段至少有3或4组箭头 << Hunter
 step << Warrior
     .goto Teldrassil,59.6,38.4
-	.trainer >> Train your level 4 spells
+	.trainer >> 训练你的4级法术
 step << Priest
     .goto Teldrassil,59.5,41.1
-	.vendor >> Go inside, then upstairs and vendor trash
+	.vendor >> 进去，然后上楼，把小贩扔到垃圾桶里
 step << Priest
 	.goto Teldrassil,59.2,40.4
-	.turnin 3119 >> Turn in Hallowed Sigil
-	.trainer >> Train your level 4 spells
+	.turnin 3119 >> 交上神圣的符号
+	.trainer >> 训练你的4级法术
 step
     .goto Teldrassil,57.8,41.7
-    .turnin 916 >> Turn in Webwood Venom
-    .accept 917 >> Accept Webwood Egg
+    .turnin 916 >> 交出Webwood毒液
+    .accept 917 >> 接受Webwood蛋
 step << Druid
     .goto Teldrassil,58.6,40.3
-	>>Run up the big ramp and into the small room
-	.turnin 3120 >> Turn in Verdant Sigil
-	.train 8921 >>Train Moonfire
+	>>跑上大坡道，进入小房间
+	.turnin 3120 >> 交给葱郁的印记
+	.train 8921 >>火车月光
 step
     .goto Teldrassil,54.6,33.0
-    .turnin 3522 >> Turn in Iverron's Antidote
+    .turnin 3522 >> 交出艾弗隆的解药
 step
     .goto Teldrassil,57.0,26.4
-	>>Loot a spider egg at the back of the spider cave
+	>>在蜘蛛洞后面抢劫一个蜘蛛蛋
     .complete 917,1 --Collect Webwood Egg (x1)
 step
 	#softcore
 	#completewith next
-	.goto Teldrassil,57.8,41.7,150    >>Die on purpose and respawn at the graveyard
+	.goto Teldrassil,57.8,41.7,150    >>故意死亡并在墓地重生
 step
 	#hardcore
 	#completewith next
-	+Logout skip on the ledge behind the eggs. Move your character until it looks like they're floating, then log out, and back in.
-	>>If you fall down, just run out the cave normally to the quest turn in
-	.link https://www.youtube.com/watch?v=TTZZT3jpv1s >> CLICK HERE for reference
+	+注销时跳过鸡蛋后面的壁架。移动角色，直到其看起来像是浮动的，然后注销，再重新登录。
+	>>如果你摔倒了，就正常地跑出洞穴，去完成任务
+	.link https://www.youtube.com/watch?v=TTZZT3jpv1s >> 单击此处以供参考
 step
 	.goto Teldrassil,57.8,41.7
-    .turnin 917 >> Turn in Webwood Egg
-    .accept 920 >> Accept Tenaron's Summons
+    .turnin 917 >> 交回Webwood鸡蛋
+    .accept 920 >> 接受特纳龙的召唤
 step
     .goto Teldrassil,59.1,39.4
-    >>Take the ramp upwards and climb the big tree
-    .turnin 920 >> Turn in Tenaron's Summons
-    .accept 921 >> Accept Crown of the Earth
+    >>向上走坡道，爬上大树
+    .turnin 920 >> 交上特纳龙的传票
+    .accept 921 >> 接受地球之冠
 step
     #sticky
     #label vial1
     .goto Teldrassil,59.9,33.0
-	>>Fill the empty vial at the moonwell
+	>>在月光井装满空瓶子
     .complete 921,1 --Collect Filled Crystal Phial (x1)
 step << Hunter
     .goto Teldrassil,59.8,34.1
@@ -188,388 +188,388 @@ step
     #requires vial1
     #sticky
     #completewith next
-    .deathskip >> Die and respawn at the graveyard
+    .deathskip >> 死后在墓地重生
 step << Hunter
     #requires vial1
     .goto Teldrassil,58.6,44.3
-    .turnin 457 >> Turn in The Balance of Nature
+    .turnin 457 >> 实现自然平衡
 step << Priest
     #requires vial1
     .goto Teldrassil,59.2,40.5
-    .accept 5622 >> Accept In Favor of Elune
+    .accept 5622 >> 接受Elune
 step
     #requires vial1
     .goto Teldrassil,59.1,39.4
-	>>Take the ramp upwards and climb the big tree
-    .turnin 921 >> Turn in Crown of the Earth
-    .accept 928 >> Accept Crown of the Earth
+	>>向上走坡道，爬上大树
+    .turnin 921 >> 地球之冠
+    .accept 928 >> 接受地球之冠
 step
     .goto Teldrassil,61.2,47.6
-    .accept 2159 >> Accept Dolanaar Delivery
+    .accept 2159 >> 接受Dolanar交付
 ]])
 
 RXPGuides.RegisterGuide([[
 #classic
 << Alliance
-#name 6-11 Teldrassil
+#name 6-11 泰达希尔
 #version 1
-#group RestedXP Alliance 1-20
+#group RestedXP 联盟 1-20
 #defaultfor NightElf
-#next 11-16 Darkshore
+#next 11-16 黑海岸
 step
     .goto Teldrassil,60.5,56.3
-    .accept 488 >> Accept Zenn's Bidding
+    .accept 488 >> 接受Zenn的出价
 step
     #sticky
     #completewith zenn
-    >>Kill spiders/cats/owls as you quest
+    >>在你的任务中杀死蜘蛛/猫/猫头鹰
     .complete 488,1 --Collect Nightsaber Fang (x3)
     .complete 488,2 --Collect Strigid Owl Feather (x3)
     .complete 488,3 --Collect Webwood Spider Silk (x3)
 step
     #sticky
 	#completewith spiderLegs
-    >>Collect 7 Small Spider Legs for a quest later
+    >>收集7条小蜘蛛腿以备稍后任务
     .collect 5465,7,4161,1 --Collect Small Spider Leg (x7)
 step
     .goto Teldrassil,56.1,57.8
-    .accept 997 >> Accept Denalan's Earth
+    .accept 997 >> 接受Denalan的地球
 step
     .goto Teldrassil,55.9,57.3
-    .accept 475 >> Accept A Troubling Breeze
+    .accept 475 >> 接受烦恼的微风
 step << Priest
     .goto Teldrassil,55.6,56.8
-    .turnin 5622 >> Turn in In Favor of Elune
-    .accept 5621 >> Accept Garments of the Moon
-	.trainer >> Train your level 6 spells
+    .turnin 5622 >> 支持Elune
+    .accept 5621 >> 接受月亮的衣服
+	.trainer >> 训练你的6级法术
 step << Rogue
     .goto Teldrassil,55.51,57.14
-	>>Go to the second floor of the treehouse
-    .vendor >> Buy the level 3 thrown from Aldia. Equip it
+	>>去树屋的二楼
+    .vendor >> 购买Aldia的3级投掷。装备它
 step
     #era
     .goto Teldrassil,55.5,57.0
-    >>Go to the top of the treehouse
-   .accept 932 >> Accept Twisted Hatred
-    .accept 2438 >> Accept The Emerald Dreamcatcher
+    >>去树屋的顶端
+   .accept 932 >> 接受扭曲的仇恨
+    .accept 2438 >> 接受翡翠梦想家
 step
     #som
     .goto Teldrassil,55.5,57.0
-    >>Go to the top of the treehouse
-    .accept 932 >> Accept Twisted Hatred << !Hunter
-    .accept 2438 >> Accept The Emerald Dreamcatcher
+    >>去树屋的顶端
+    .accept 932 >> 接受扭曲的仇恨 << !Hunter
+    .accept 2438 >> 接受翡翠梦想家
 step << Hunter
     .goto Teldrassil,56.3,59.5
-    >>Repair your weapon. If you have enough money (2s 85c) buy a Hornwood Recurve Bow from Jeena. Otherwise, skip this step (you'll come back later)
-    >>Buy arrows until your Quiver is full (1000 arrows)
+    >>修理你的武器。如果你有足够的钱(2s85c)，从Jeena那里买一个Hornwood Recurve Bow。否则，请跳过此步骤(稍后再回来)
+    >>购买箭，直到你的Quiver满为止(1000支箭)
     .collect 2506,1 --Collect Hornwood Recurve Bow
 step << Warrior
     .goto Teldrassil,56.2,59.2
-	.trainer >> Train your level 6 spells
+	.trainer >> 训练你的6级法术
 step << Rogue
     .goto Teldrassil,56.4,60.1
-	.trainer >> Train your level 6 spells
+	.trainer >> 训练你的6级法术
 step << Warrior
     .goto Teldrassil,56.3,59.5
-    >>Repair your weapon. If you have enough money (5s 36c) buy a Gladius from Shalomon. Otherwise, skip this step (you'll come back later)
+    >>修理你的武器。如果你有足够的钱(5s36c)，从沙洛蒙买一辆格拉迪斯。否则，请跳过此步骤(稍后再回来)
     .collect 2488,1 --Collect Gladius
 step << Rogue
     .goto Teldrassil,56.31,59.49
-    >>Repair your weapon. If you have enough money (4s 1c) buy a Stiletto from Shalomon. Otherwise, skip this step (you'll come back later)
+    >>修理你的武器。如果你有足够的钱(4s1c)，就从沙洛蒙买一个细高跟鞋。否则，请跳过此步骤(稍后再回来)
     .collect 2494,1 --Stiletto (1)
 step << Druid
     .goto Teldrassil,56.31,59.49
-    >>Repair your weapon. If you have enough money (5s 4c) buy a Walking Stick from Shalomon. Otherwise, skip this step (you'll come back later)
+    >>修理你的武器。如果你有足够的钱(5s4c)，从沙洛蒙买一根拐杖。否则，请跳过此步骤(稍后再回来)
     .collect 2495,1 --Walking Stick (1)
 step
     .goto Teldrassil,55.7,59.8
-    .turnin 2159 >> Turn in Dolanaar Delivery
+    .turnin 2159 >> 交付Dolanar交付
 step << Hunter
     .goto Teldrassil,56.7,59.5
-	.train 3044>> Train Arcane Shot
+	.train 3044>> 火车奥术射击
 step << Druid
     .goto Teldrassil,55.9,61.6
-	.trainer >> Train your level 6 spells
+	.trainer >> 训练你的6级法术
 step
     .goto Teldrassil,56.2,61.7
-    .turnin 928 >> Turn in Crown of the Earth
-    .accept 929 >> Accept Crown of the Earth
+    .turnin 928 >> 地球之冠
+    .accept 929 >> 接受地球之冠
 step << Druid
     .goto Teldrassil,57.6,60.6
-    .train 2366 >> Train Herbalism
-    >>You'll need 5 Earthroot for a quest later. You can ditch Herbalism once you get 5 Earthroot
+    .train 2366 >> 训练草药
+    >>稍后你需要5个土拨鼠来完成任务。获得5个土生根后，你可以放弃草药
 step << Druid
     #completewith end
-    >>Level Herbalism to 15 and try to find 5 Earthroot for a level 15 quest later
+    >>药草等级达到15级，稍后尝试寻找5个土拨鼠进行15级任务
     .collect 2449,5
 step << Priest
-    >>Use Lesser Heal Rank 2 and then Power Word: Fortitude on Sentinel Shaya
+    >>在哨兵沙亚身上使用较低治疗等级2，然后使用咒语：坚韧
     .goto Teldrassil,57.2,63.5
     .complete 5621,1 --Heal and fortify Sentinel Shaya
 step
     .goto Teldrassil,60.9,68.5
-    .turnin 997 >> Turn in Denalan's Earth
-    .accept 918 >> Accept Timberling Seeds
-    .accept 919 >> Accept Timberling Sprouts
+    .turnin 997 >> 交给Denalan的地球
+    .accept 918 >> 接受林木种子
+    .accept 919 >> 接受木材萌芽
 step
     .goto Teldrassil,56.1,66.6
-    >>Run around the lake killing timberling mobs, and looting sprouts on the ground
+    >>在湖边跑来跑去，杀死伐木暴徒，抢劫地上的树苗
     .complete 918,1 --Collect Timberling Seed (x8)
     .complete 919,1 --Collect Timberling Sprout (x12)
 step
     .goto Teldrassil,60.9,68.5
-    .turnin 918 >> Turn in Timberling Seeds
-    .accept 922 >> Accept Rellian Greenspyre
-    .turnin 919 >> Turn in Timberling Sprouts
+    .turnin 918 >> 交出林木种子
+    .accept 922 >> 接受Rellian Greenspyre
+    .turnin 919 >> 转向木材萌芽
 step
     .goto Teldrassil,68.0,59.6
-	>>Loot the dresser inside the house
+	>>抢劫房子里的梳妆台
     .complete 2438,1 --Collect Emerald Dreamcatcher (x1)
 step
     .goto Teldrassil,66.3,58.6
-	>>Go upstairs in the house
-    .turnin 475 >> Turn in A Troubling Breeze
-    .accept 476 >> Accept Gnarlpine Corruption
+	>>到楼上的房子里去
+    .turnin 475 >> 一阵阵烦恼的微风
+    .accept 476 >> 接受Gnarlpine腐败
 step
     #label zenn
     .goto Teldrassil,63.4,58.1
-	>>Fill the empty vial at the moonwell
+	>>在月光井装满空瓶子
     .complete 929,1 --Collect Filled Jade Phial (x1)
 step
     .goto Teldrassil,63.1,61.0
-    >>Finish off Zenn's Bidding
+    >>完成Zenn的投标
     .complete 488,1 --Collect Nightsaber Fang (x3)
     .complete 488,2 --Collect Strigid Owl Feather (x3)
     .complete 488,3 --Collect Webwood Spider Silk (x3)
 step
     #era
     .goto Teldrassil,60.7,54.4
-	.xp 7+3500 >> Grind to level 7 +3500xp
+	.xp 7+3500 >> 升级到7+3500xp级
 step
     #som
     .goto Teldrassil,60.7,54.4
-	.xp 7+2900 >> Grind to level 7 +2900xp
+	.xp 7+2900 >> 升级到7+2900xp级
 step
     .goto Teldrassil,60.5,56.3
-    .turnin 488 >> Turn in Zenn's Bidding
+    .turnin 488 >> 提交Zenn的出价
 step
 	.goto Teldrassil,56.1,57.7
-    .accept 489 >> Accept Seek Redemption!
+    .accept 489 >> 接受寻求赎回！
 step
     .goto Teldrassil,55.9,57.3
-    .turnin 476 >> Turn in Gnarlpine Corruption
+    .turnin 476 >> 移交Gnarlpine腐败
 step << Priest
     .goto Teldrassil,55.5,56.7
-    .turnin 5621 >> Turn in Garments of the Moon
-	.trainer >> Train your level 8 spells
+    .turnin 5621 >> 穿上月亮的衣服
+	.trainer >> 训练你的8级法术
 step
     .goto Teldrassil,55.6,56.9
-    .turnin 2438 >> Turn in The Emerald Dreamcatcher
-    .accept 2459 >> Accept Ferocitas the Dream Eater
+    .turnin 2438 >> 交上翡翠捕梦网
+    .accept 2459 >> 接受食梦者Ferocitas
 step << Hunter
 	#completewith next
     .goto Teldrassil,56.3,59.5
-    >>Repair your weapon. If you have enough money (2s 85c) buy a Hornwood Recurve Bow from Jeena. Otherwise, skip this step (you'll come back later)
+    >>修理你的武器。如果你有足够的钱(2s85c)，从Jeena那里买一个Hornwood Recurve Bow。否则，请跳过此步骤(稍后再回来)
     .collect 2506,1 --Collect Hornwood Recurve Bow
 step << Hunter
     .goto Teldrassil,56.3,59.5
-	.vendor >>Buy arrows up to 800 total
+	.vendor >>总共购买800支箭
 step << Hunter
     .goto Teldrassil,56.7,59.5
-	.trainer >> Train your level 8 spells
+	.trainer >> 训练你的8级法术
 step << Warrior
     .goto Teldrassil,56.2,59.2
-	.trainer >> Train your level 8 spells
+	.trainer >> 训练你的8级法术
 step << Rogue
     .goto Teldrassil,56.4,60.1
-	.trainer >> Train your level 8 spells
+	.trainer >> 训练你的8级法术
 step << Warrior
     .goto Teldrassil,56.3,59.5
-    >>Repair your weapon. If you have enough money (5s 36c) buy a Gladius from Shalomon. Otherwise, skip this step (you'll come back later)
+    >>修理你的武器。如果你有足够的钱(5s36c)，从沙洛蒙买一辆格拉迪斯。否则，请跳过此步骤(稍后再回来)
     .collect 2488,1 --Collect Gladius
 step << Rogue
     .goto Teldrassil,56.31,59.49
-    >>Repair your weapon. If you have enough money (4s 1c) buy a Stiletto from Shalomon. Otherwise, skip this step (you'll come back later)
+    >>修理你的武器。如果你有足够的钱(4s1c)，就从沙洛蒙买一个细高跟鞋。否则，请跳过此步骤(稍后再回来)
     .collect 2494,1 --Stiletto (1)
 step << Druid
     .goto Teldrassil,56.31,59.49
-    >>Repair your weapon. If you have enough money (5s 4c) buy a Walking Stick from Shalomon. Otherwise, skip this step (you'll come back later)
+    >>修理你的武器。如果你有足够的钱(5s4c)，从沙洛蒙买一根拐杖。否则，请跳过此步骤(稍后再回来)
     .collect 2495,1 --Walking Stick (1)
 step << Druid
     .goto Teldrassil,56.2,61.7
-    .turnin 929 >> Turn in Crown of the Earth
-    .accept 933 >> Accept Crown of the Earth
+    .turnin 929 >> 地球之冠
+    .accept 933 >> 接受地球之冠
 step << Druid
     .goto Teldrassil,55.9,61.6
-	.trainer >> Train your level 8 spells
+	.trainer >> 训练你的8级法术
 step
     #sticky
 	#completewith jewel
-    >>Look for Fel Cones, usually located next to tree trunks
+    >>寻找Fel Cones，通常位于树干旁边
     .complete 489,1 --Collect Fel Cone (x3)
 step
     #label mystics
     #sticky
     .goto Teldrassil,69.2,53.3
     .complete 2459,1 --Kill Gnarlpine Mystic (x7)
-	>>Mystics share spawns with Gnarlpine Warriors. You may have to kill them to make the Mystics spawn
+	>>神秘人与侏儒勇士分享后代。你可能必须杀死他们才能让神秘主义者诞生
 step
     #label jewel
 	.goto Teldrassil,69.2,53.3
-	>>Kill Ferocitas. Loot the Necklace
+	>>杀死费罗西塔斯。抢走项链
     .collect 8049,1,2459,2 --Gnarlpine Necklace (1)
-    >>Right Click the Necklace to loot the Jewel
+    >>右击项链拾取宝石
     .complete 2459,2 --Collect Tallonkai's Jewel (x1)
 step
     #requires mystics
     .goto Teldrassil,58.7,55.7
-    >>Finish off Seek Redemption!
+    >>完成Seek Redemption！
     .complete 489,1 --Collect Fel Cone (x3)
 step
     .goto Teldrassil,60.4,56.4
-    .turnin 489 >> Turn in Seek Redemption!
+    .turnin 489 >> 交给Seek Redemption！
 step << Hunter
     #era
     .goto Teldrassil,51.2,50.6
-    >>Kill Lord Melenas. He can be located in many different spawnpoints of the cave, and is quite difficult
+    >>杀死梅勒纳斯勋爵。他可以位于洞穴的许多不同产卵点，而且很难找到
     .complete 932,1 --Collect Melenas' Head (x1)
 step << !Hunter
     .goto Teldrassil,51.2,50.6
-    >>Kill Lord Melenas. He can be located in many different spawnpoints of the cave, and is quite difficult
+    >>杀死梅勒纳斯勋爵。他可以位于洞穴的许多不同产卵点，而且很难找到
     .complete 932,1 --Collect Melenas' Head (x1)
 step
     #softcore
 	#completewith next
-	.deathskip >>Die on purpose and respawn at the graveyard
+	.deathskip >>故意死亡并在墓地重生
 step << !Druid
     .goto Teldrassil,56.2,61.7
-    .turnin 929 >> Turn in Crown of the Earth
+    .turnin 929 >> 地球之冠
 step
 	#era/som
     .goto Teldrassil,56.2,61.7
-    .accept 933 >> Accept Crown of the Earth
+    .accept 933 >> 接受地球之冠
 step
 	#era/som
 	.goto Teldrassil,42.54,76.08
-	>>Click on the big purple plant
-	.accept 930 >> Accept The Glowing Fruit
+	>>点击大紫色植物
+	.accept 930 >> 接受鲜果
 step
 	#era/som
 	#label spiderLegs
 	.goto Teldrassil,42.36,67.26
-	>>Fill the empty vial at the moonwell
+	>>在月光井装满空瓶子
 	.complete 933,1
 step
 	#era/som
-    >>Finish off collecting 7 Small Spider Legs
+    >>完成收集7条小蜘蛛腿
     .collect 5465,7,4161,1 --Collect Small Spider Leg (x7)
 step
 	#era/som
     #softcore
 	#completewith next
     .goto Teldrassil,43.50,68.42
-    .deathskip >>Die on purpose and respawn at the Dolanaar graveyard, make sure to die east of the moonwell, otherwise you might end up in Darnassus
+    .deathskip >>故意死亡并在多拉那尔墓地重生，确保死亡在月光井以东，否则你可能会死在达纳苏斯
 step
 	#era/som
     .goto Teldrassil,56.2,61.7
-    .turnin 933 >> Turn in Crown of the Earth
-    .accept 7383 >> Accept Crown of the Earth
+    .turnin 933 >> 地球之冠
+    .accept 7383 >> 接受地球之冠
 step
 	#era/som
     .goto Teldrassil,57.1,61.3
-    .train 2550 >>Train Cooking
-    .accept 4161 >> Accept Recipe of the Kaldorei
-    .turnin 4161 >> Turn in Recipe of the Kaldorei
+    .train 2550 >>火车烹饪
+    .accept 4161 >> 接受卡多雷食谱
+    .turnin 4161 >> 上交卡多雷食谱
 step
     .goto Teldrassil,55.7,59.8
-    .home >> Set your Hearthstone to Dolanaar
+    .home >> 将您的炉石设置为Dolanar
 step << Warrior/Rogue
     .goto Teldrassil,55.2,56.8
-    .train 3273 >> Train First Aid
+    .train 3273 >> 培训急救
 step
     #som
     .goto Teldrassil,55.5,56.9
-    .turnin 932 >> Turn in Twisted Hatred << !Hunter
-    .turnin 2459 >> Turn in Ferocitas the Dream Eater
+    .turnin 932 >> 交给扭曲的帽子 << !Hunter
+    .turnin 2459 >> 把Ferocitas交给食梦者
 step
     #era
     .goto Teldrassil,55.5,56.9
-    .turnin 932 >> Turn in Twisted Hatred
-    .turnin 2459 >> Turn in Ferocitas the Dream Eater
+    .turnin 932 >> 交给扭曲的帽子
+    .turnin 2459 >> 把Ferocitas交给食梦者
 step
     .goto Teldrassil,51.9,56.4
-    >>Find Moon Priestess Amara, she patrols the road west of Dolanaar
-    .accept 487 >> Accept The Road to Darnassus
+    >>找到月亮女祭司阿玛拉，她在多拉纳尔以西的路上巡逻
+    .accept 487 >> 接受通往达纳苏斯的道路
 step
     .goto Teldrassil,46.6,53.0
     .complete 487,1 --Kill Gnarlpine Ambusher (x6)
 step << Druid
     .goto Teldrassil,51.9,56.4
-    >>Find Moon Priestess Amara, she patrols the road west of Dolanaar
-    .turnin 487 >> Turn in The Road to Darnassus
+    >>找到月亮女祭司阿玛拉，她在多拉纳尔以西的路上巡逻
+    .turnin 487 >> 在通往达纳苏斯的道路上转弯
 step
 	#era/som
     .goto Teldrassil,38.3,34.3
-    .accept 937 >> Accept The Enchanted Glade
+    .accept 937 >> 接受迷人的喜悦
 step
 	#era/som
     .goto Teldrassil,38.4,34.1
-	>>Fill the empty phial at the moonwell
+	>>在月光井装满空瓶子
     .complete 7383,1 --Collect Filled Amethyst Phial (x1)
 step
 	#era/som
     #completewith xp10
 	#label harpies
-    >>Kill Harpies. Be careful of the Matriarchs as they heal and do a lot of damage. Try to burst them
+    >>杀死哈比。小心母系氏族，因为他们会愈合并造成大量伤害。试着把它们炸开
     .complete 937,1 --Collect Bloodfeather Belt (x6)
 step
 	#era/som
     .goto Teldrassil,34.6,28.9
-    .accept 931 >> Accept The Shimmering Frond
+    .accept 931 >> 接受闪闪发亮的额头
 step << Hunter
 	#era/som
     #completewith xp10
     #label mist1
     .goto Teldrassil,31.6,31.7
-    >>Start the escort quest
-    .accept 938 >> Accept Mist
+    >>开始护送任务
+    .accept 938 >> 接受薄雾
 step << Hunter
     #era
     #sticky
     #label xp10
-    .xp 10-2670 >> Grind until you are 2670 xp off level 10 (3830/6500)
-    >>Once you reach this xp breakpoint, skip the harpy/escort quest and go straight to Darnassus, you will have another opportunity to finish those quests later
+    .xp 10-2670 >> 研磨，直到距离10级2670 xp(3830/6500)
+    >>一旦你到达这个xp断点，跳过哈比/护卫任务，直接前往达纳苏斯，你将有另一个机会稍后完成这些任务
 step << Hunter
     #era/som
     #sticky
     #label xp10
-    .xp 10-3330 >> Grind until you are 3330 xp off level 10 (3170/6500)
-    >>Once you reach this xp breakpoint, skip the harpy/escort quest and go straight to Darnassus, you will have another opportunity to finish those quests later
+    .xp 10-3330 >> 研磨直到距离10级3330 xp(3170/6500)
+    >>一旦你到达这个xp断点，跳过哈比/护卫任务，直接前往达纳苏斯，你将有另一个机会稍后完成这些任务
 step << Hunter
 	#era/som
     #completewith xp10
     #requires mist1
     .goto Teldrassil,38.3,34.4
-    .turnin 938 >> Turn in Mist
+    .turnin 938 >> 雾中转弯
 step << Hunter
 	#era/som
     #completewith xp10
 	#requires harpies
     .goto Teldrassil,38.3,34.4
-    .turnin 937 >> Turn in The Enchanted Glade
-    .accept 940 >> Accept Teldrassil
+    .turnin 937 >> 交出迷人的光彩
+    .accept 940 >> 接受Teldrassil
 step << !Hunter
 	#era/som
     #label mist1
     .goto Teldrassil,31.6,31.7
-    >>Start the escort quest
-    .accept 938 >> Accept Mist
+    >>开始护送任务
+    .accept 938 >> 接受薄雾
 step << !Hunter
 	#era/som
     .goto Teldrassil,38.3,34.4
-    .turnin 937 >> Turn in The Enchanted Glade
-    .accept 940 >> Accept Teldrassil
-    .turnin 938 >> Turn in Mist
+    .turnin 937 >> 交出迷人的光彩
+    .accept 940 >> 接受Teldrassil
+    .turnin 938 >> 雾中转弯
 step << !Hunter
     #era
     #label xp10
@@ -585,7 +585,7 @@ step
 	#som
     #phase 3-6
 	.goto Teldrassil,38.6,58.0
-	>>Finish off collecting 7 Small Spider Legs
+	>>完成收集7条小蜘蛛腿
     .collect 5465,7,4161,1 --Collect Small Spider Leg (x7)
 step << Druid
 	#som
@@ -593,7 +593,7 @@ step << Druid
 	#label xp10
 	.xp 10-640
     .goto Teldrassil,38.3,34.4
-	>>If you're still behind on xp do the harpy quest north
+	>>如果你在xp上还落后，那就向北执行harpy任务
 step << !Druid
 	#som
 	#phase 3-6
@@ -603,69 +603,69 @@ step << !Rogue
 	#era/som
     #requires xp10
     #completewith next
-    .deathskip >>Die on purpose and respawn at the Darnassus graveyard
+    .deathskip >>故意死亡并在达纳苏斯墓地重生
 step << !Rogue
     #requires xp10
-	>>Run to Darnassus
+	>>跑到达纳苏斯
     .goto Darnassus,38.3,21.4
-    .turnin 922 >> Turn in Rellian Greenspyre
-    .accept 923 >> Accept Tumors
+    .turnin 922 >> 交给Rellian Greenspyre
+    .accept 923 >> 接受肿瘤
 step << !Hunter !Rogue
 	#era/som
     .goto Darnassus,34.7,9.0
-    >>Climb to the top of the tree house
-    .turnin 940 >> Turn in Teldrassil
+    >>爬到树屋的顶部
+    .turnin 940 >> 交给Teldrassil
 	.isOnQuest 940
 step << Druid
     .goto Darnassus,35.2,8.0
-    >>Head to the middle level of the tree house
-    .accept 5921 >> Accept Moonglade
-	.trainer >> Train your level 10 spells
+    >>前往树屋的中间层
+    .accept 5921 >> 接受Moonglade
+	.trainer >> 训练你的10级法术
 step << !Rogue
     .goto Darnassus,36.5,86.0
-    .accept 2518 >> Accept Tears of the Moon
+    .accept 2518 >> 接受月亮的眼泪
 step << Druid
     .goto Moonglade,56.2,30.8
-    >>Open your spellbook and teleport to Moonglade
-    .turnin 5921 >> Turn in Moonglade
-    .accept 5929 >> Accept Great Bear Spirit
+    >>打开你的魔法书并传送到月光大陆
+    .turnin 5921 >> 转入Moonglade
+    .accept 5929 >> 接受大熊精神
 step << Druid
     .goto Moonglade,39.1,27.5
-    >>Talk to the bear spirit just outside Nighthaven
+    >>与夜鹰城外的熊精灵交谈
     .complete 5929,1 --Seek out the Great Bear Spirit and learn what it has to share with you about the nature of the bear.
 step << Druid
     .goto Moonglade,56.2,30.5
-    >>Use your teleport spell to get back to the quest giver
-    .turnin 5929 >> Turn in Great Bear Spirit
-    .accept 5931 >> Accept Back to Darnassus
+    >>使用你的心灵传送法术返回任务给予者
+    .turnin 5929 >> 交出大熊精神
+    .accept 5931 >> 接受返回达纳苏斯
 step
     #requires xp10 << Rogue
     #completewith next << !Rogue
-    .hs >> Hearth to Dolanaar
+    .hs >> 从赫斯到多拉纳尔
 step << Hunter
     .goto Teldrassil,56.3,59.5
-	.vendor >> Buy 4 stacks of level 10 arrows. Equip them as soon as you get to level 10
+	.vendor >> 购买4堆10级箭头。达到10级后立即装备它们
 step
 	#som
 	#phase 3-6
     .goto Teldrassil,57.1,61.3
-    .train 2550 >>Train Cooking
-    .accept 4161 >> Accept Recipe of the Kaldorei
-    .turnin 4161 >> Turn in Recipe of the Kaldorei
+    .train 2550 >>火车烹饪
+    .accept 4161 >> 接受卡多雷食谱
+    .turnin 4161 >> 上交卡多雷食谱
 step
 	#som
 	#phase 3-6
     .goto Teldrassil,51.9,56.4
-    >>Find Moon Priestess Amara, she patrols the road west of Dolanaar
-    .turnin 487 >> Turn in The Road to Darnassus
+    >>找到月亮女祭司阿玛拉，她在多拉纳尔以西的路上巡逻
+    .turnin 487 >> 在通往达纳苏斯的道路上转弯
 	.maxlevel 9
 step << Hunter
     #completewith L10
     #level 10
     #label beast1
     .goto Teldrassil,56.7,59.6
-    .accept 6063 >> Accept Taming the Beast
-	.train 13165 >> Train your level 10 spells
+    .accept 6063 >> 接受驯服野兽
+	.train 13165 >> 训练你的10级法术
 step << Hunter
     #completewith L10
     #level 10
@@ -678,28 +678,28 @@ step << Hunter
     #level 10
     #requires beast2
     .goto Teldrassil,56.7,59.5
-    .turnin 6063 >> Turn in Taming the Beast
-    .accept 6101 >> Accept Taming the Beast
+    .turnin 6063 >> 转身驯服野兽
+    .accept 6101 >> 接受驯服野兽
 step
 	#era/som
     .goto Teldrassil,56.1,61.7
-    .turnin 7383 >> Turn in Crown of the Earth
-    .accept 935 >> Accept Crown of the Earth
+    .turnin 7383 >> 地球之冠
+    .accept 935 >> 接受地球之冠
 step
 	#era/som
 	.goto Teldrassil,60.9,68.4
-    .turnin 931 >> Turn in The Shimmering Frond
-    .turnin 930 >> Turn in The Glowing Fruit
+    .turnin 931 >> 把闪闪发亮的额头
+    .turnin 930 >> 交出鲜果
 step
 	#era/som
 	.goto Teldrassil,60.9,68.4
-	.turnin 927 >> Turn in The Moss-twined Heart
+	.turnin 927 >> 转入苔藓缠绕的心
     .isOnQuest 927
 step
 	#era/som
 	.goto Teldrassil,60.9,68.4
-	>>Click on the plant vase right next to the quest giver
-	.turnin 941 >> Turn in Planting the Heart
+	>>点击任务给予者旁边的植物花瓶
+	.turnin 941 >> 转身种植心脏
 	.isQuestTurnedIn 927
 step << Hunter
 	#era/som
@@ -714,149 +714,149 @@ step
     #softcore
 	#sticky
     #completewith next
-    .deathskip >> Die and respawn at the graveyard
+    .deathskip >> 死后在墓地重生
 step << Priest
     .goto Teldrassil,55.5,56.7
-	.trainer >> Train your level 10 spells
+	.trainer >> 训练你的10级法术
 step << Warrior
     .goto Teldrassil,56.2,59.2
-	.trainer >> Train your level 10 spells
+	.trainer >> 训练你的10级法术
 step << Rogue
     .goto Teldrassil,56.4,60.1
-	.trainer >> Train your level 10 spells
+	.trainer >> 训练你的10级法术
 step << Hunter
     .goto Teldrassil,56.7,59.6
-    .accept 6063 >> Accept Taming the Beast
-	.trainer >> Train your level 10 spells
+    .accept 6063 >> 接受驯服野兽
+	.trainer >> 训练你的10级法术
 step << Hunter
     .goto Teldrassil,59.9,58.8
     .complete 6063,1 --Tame a Webwood Lurker
 step << Hunter
     .goto Teldrassil,56.7,59.5
-    .turnin 6063 >> Turn in Taming the Beast
-    .accept 6101 >> Accept Taming the Beast
+    .turnin 6063 >> 转身驯服野兽
+    .accept 6101 >> 接受驯服野兽
 step << Hunter
     .goto Teldrassil,62.6,72.2
     .complete 6101,1 --Tame a Nightsaber Stalker
 step << Hunter
     .goto Teldrassil,56.7,59.5
-    .turnin 6101 >> Turn in Taming the Beast
-    .accept 6102 >> Accept Taming the Beast
+    .turnin 6101 >> 转身驯服野兽
+    .accept 6102 >> 接受驯服野兽
 step << Hunter
     .goto Teldrassil,64.7,66.7
     .complete 6102,1 --Tame a Strigid Screecher
 step << Hunter
     .goto Teldrassil,56.7,59.5
-    .turnin 6102 >> Turn in Taming the Beast
-    .accept 6103 >> Accept Training the Beast
+    .turnin 6102 >> 转身驯服野兽
+    .accept 6103 >> 接受训练野兽
 step << Warrior
     .goto Teldrassil,56.2,59.2
-    .accept 1684 >> Accept Elanaria
+    .accept 1684 >> 接受Elanaria
 step << Rogue
     .goto Teldrassil,56.2,60.0
-    .accept 2241 >> Accept The Apple Falls
+    .accept 2241 >> 接受苹果坠落
 step << Hunter
     .goto Teldrassil,56.3,59.5
     .money <0.0504
-    >>Buy a staff from the vendor, you'll equip it later.
-    >>Skip this step if you happened to find a staff from a mob
+    >>从供应商处购买员工，稍后您将装备它。
+    >>如果你碰巧从暴徒那里找到一名工作人员，请跳过这一步
     .collect 2495,1
 step << !Druid
     .goto Teldrassil,51.8,56.4
-    .turnin 487 >> Turn in The Road to Darnassus
+    .turnin 487 >> 在通往达纳苏斯的道路上转弯
 step << Rogue
     #completewith next
     .goto Teldrassil,44.0,54.6
-    .deathskip >>Once you get past the furbolg area, die on purpose and respawn at the Darnassus graveyard
+    .deathskip >>一旦你通过了起毛区，就故意死亡并在达纳苏斯墓地重生
 step << Rogue
     .goto Darnassus,38.3,21.4
-    .turnin 922 >> Turn in Rellian Greenspyre
-    .accept 923 >> Accept Tumors
+    .turnin 922 >> 交给Rellian Greenspyre
+    .accept 923 >> 接受肿瘤
 step << Rogue
     .goto Darnassus,34.7,9.0
-    >>Climb to the top of the tree house
-    .turnin 935 >> Turn in Crown of the Earth
-    .turnin 940 >> Turn in Teldrassil
-    .accept 952 >> Accept Grove of the Ancients
+    >>爬到树屋的顶部
+    .turnin 935 >> 地球之冠
+    .turnin 940 >> 交给Teldrassil
+    .accept 952 >> 接受古人的丛林
 step << Rogue
     .goto Darnassus,36.8,21.8
-    .turnin 2241 >> Turn in The Apple Falls
-    .accept 2242 >> Accept Destiny Calls
+    .turnin 2241 >> 上交苹果瀑布
+    .accept 2242 >> 接受命运召唤
 step << Rogue
     .goto Darnassus,36.5,86.0
-    .accept 2518 >> Accept Tears of the Moon
+    .accept 2518 >> 接受月亮的眼泪
 step << Hunter
     #sticky
 	.goto Teldrassil,41.2,44.4,0
 	.goto Teldrassil,44.2,39.8,0
 	.goto Teldrassil,45.6,31.4,0
 	.goto Teldrassil,37.6,28.8,0
-    .train 2981 >> Tame a Strigid Hunter and learn claw rank 2
+    .train 2981 >> 驯服猛击猎人并学习爪等级2
 step
     .goto Teldrassil,43.1,32.9
-    >>Exit Darnassus << Rogue
-	>>Kill timberling mobs around the river
+    >>退出达纳苏斯 << Rogue
+	>>杀死河流周围的伐木暴徒
     .complete 923,1 --Collect Mossy Tumor (x5)
 step
     #label Spinnerets
 	.goto Teldrassil,47.3,26.0
     .goto Teldrassil,37.9,25.1
     .goto Teldrassil,40.7,25.4
-    >>Kill Lady Sathrah, she has 3 possible spawn locations
+    >>杀死萨特拉夫人，她有3个可能的产卵地点
     .complete 2518,1 --Collect Silvery Spinnerets (x1)
 step << Rogue
     .goto Teldrassil,38.0,25.2
-    >>Pick pocket Sethir the Ancient, he walks along the big tree branch
-    >>You have to be sneaky, he hits hard and summon a bunch of adds if you fight him
+    >>拾起口袋的古代塞希尔，他沿着大树枝走
+    >>你必须鬼鬼祟祟，如果你打他，他会狠狠地打，还会叫上一堆加法
     .complete 2242,1
 step
 	#som << !Hunter
 	#phase 3-6 << !Hunter
     .goto Teldrassil,38.3,34.3
-    .accept 937 >> Accept The Enchanted Glade
+    .accept 937 >> 接受迷人的喜悦
 step
 	#som << !Hunter
 	#phase 3-6 << !Hunter
     #sticky
 	#label harpies2
-    >>Kill Harpies
+    >>杀死哈比
     .complete 937,1 --Collect Bloodfeather Belt (x6)
 step
 	#som << !Hunter
 	#phase 3-6 << !Hunter
     .goto Teldrassil,31.6,31.7
-    >>Start the escort quest
-    .accept 938 >> Accept Mist
+    >>开始护送任务
+    .accept 938 >> 接受薄雾
 step
 	#som << !Hunter
 	#phase 3-6 << !Hunter
     .goto Teldrassil,38.3,34.4
-    .turnin 938 >> Turn in Mist
+    .turnin 938 >> 雾中转弯
 step
 	#som << !Hunter
 	#phase 3-6 << !Hunter
     #requires harpies2
     .goto Teldrassil,38.3,34.4
-    .turnin 937 >> Turn in The Enchanted Glade
-    .accept 940 >> Accept Teldrassil
+    .turnin 937 >> 交出迷人的光彩
+    .accept 940 >> 接受Teldrassil
 step
     #softcore
 	#completewith next
-    .deathskip >>Die and respawn at the Darnassus graveyard
+    .deathskip >>在达纳苏斯墓地死亡并重生
 step
     .goto Darnassus,70.6,45.3
-    .accept 6344 >> Accept Nessa Shadowsong
+    .accept 6344 >> 接受Nessa Shadowsong
 step
-	.abandon 927 >> Abandon The Moss-twined Heart. You never have an opportunity to turn it in
+	.abandon 927 >> 抛弃苔藓缠绕的心。你永远没有机会交出
 step << Warrior
     .goto Darnassus,57.4,34.8
-    .turnin 1684 >> Turn in Elanaria
-    .accept 1683 >> Accept Vorlus Vilehoof
+    .turnin 1684 >> 转入Elanaria
+    .accept 1683 >> 接受Vorlus Vilehoof
 step << Warrior
     #sticky
     #completewith next
     .goto Teldrassil,48.7,62.2,18
-    >>The path to Vorlus Vilehoof starts here
+    >>通往Vorlus Vilehoof的路从这里开始
 step << Warrior
     .goto Teldrassil,47.2,63.7
     .complete 1683,1 --Collect Horn of Vorlus (x1)
@@ -865,80 +865,80 @@ step << Warrior
 	#sticky
     #completewith next
     .goto Teldrassil,43.6,54.3
-    .deathskip >>Die on purpose after you get past the furbolg area and respawn at Darnassus
+    .deathskip >>在你经过火山口地区并在达纳苏斯重生后，故意死亡
 step << Warrior
     .goto Darnassus,57.4,34.5
-    .turnin 1683 >> Turn in Vorlus Vilehoof
---	.accept 1686 >> Accept The Shade of Elura
+    .turnin 1683 >> 转入Vorlus Vilehoof
+--	.accept 1686 >> 接受埃卢拉的阴影
 step << Druid
     .goto Darnassus,35.1,8.6
-    .turnin 5931 >> Turn in Back to Darnassus
-    .accept 6001 >> Accept Body and Heart
+    .turnin 5931 >> 返回达纳苏斯
+    .accept 6001 >> 接受身体和心灵
 step
     .goto Darnassus,34.8,9.2
-    .turnin 935 >> Turn in Crown of the Earth
-    .turnin 940 >> Turn in Teldrassil << Hunter
-    .accept 952 >> Accept Grove of the Ancients
+    .turnin 935 >> 地球之冠
+    .turnin 940 >> 交给Teldrassil << Hunter
+    .accept 952 >> 接受古人的丛林
 step << Hunter
     .goto Darnassus,40.3,8.8
-    .turnin 6103 >> Turn in Training the Beast
+    .turnin 6103 >> 上缴训练野兽
 step << Rogue
     .goto Darnassus,36.8,21.8
-    .turnin 2242 >> Turn in Destiny Calls
+    .turnin 2242 >> 交出命运召唤
 step
     .goto Darnassus,38.3,21.7
-    .turnin 923 >> Turn in Tumors
+    .turnin 923 >> 转入肿瘤
 step << Rogue
     .goto Darnassus,62.68,65.58
-	>>Go to the second floor of the building
-    .vendor >> Buy the level 11 thrown from Turian. Equip it when you're level 11
+	>>去大楼的二楼
+    .vendor >> 购买从都灵投掷的11级。11级时装备它
 step
     .goto Darnassus,36.9,85.8
-    .turnin 2518 >> Turn in Tears of the Moon
-    .accept 2520 >> Accept Sathrah's Sacrifice
+    .turnin 2518 >> 月亮的眼泪
+    .accept 2520 >> 接受萨特拉的牺牲
 step
     .goto Darnassus,39.7,85.8
-	>>Use Sathrah's Sacrifice in your bags at the fountain
+	>>在喷泉的袋子里放上萨特拉的祭品
     .complete 2520,1 --Offer the sacrifice at the fountain
 step
     #label end
     .goto Darnassus,36.6,85.9
-    .turnin 2520 >> Turn in Sathrah's Sacrifice
+    .turnin 2520 >> 交出萨特拉的牺牲
 step << Druid
     .goto Darnassus,48.0,68.6
-    .train 2366 >> Train herbalism
-    >>You'll need 5 Earthroot for a quest later, you can ditch Herbalism once you get 5 Earthroot
+    .train 2366 >> 训练草药
+    >>稍后你需要5个土拨鼠来完成任务，你可以在获得5个土拔鼠后放弃草药
 step << Hunter/Warrior/Priest
     .goto Darnassus,57.8,46.6
-    .train 227 >>Train staves
-    >>Equip a staff if you have one in your bags << Hunter
+    .train 227 >>火车杠
+    >>如果您的包里有员工，请配备员工 << Hunter
 step << Hunter
     .goto Darnassus,58.76,44.48
 	.money <0.1751
-	.vendor >> Buy a Laminated Recurve Bow from Ariyell, as well as level 10 arrows if you have money. Equip it
+	.vendor >> 从Ariyell那里买一个层压递归弓，如果你有钱，也可以买10级箭。装备它
 	.collect 2507,1
 step << Warrior
     .goto Darnassus,58.76,44.48
 	.money <0.3022
-    >> Buy a Quarter Staff from Ariyell if you have money. Equip it at level 11
+    >> 如果你有钱，可以从Ariyell购买Quarter Staff。在11级装备
 	.collect 854,1
 step << Warrior
     .goto Darnassus,58.76,44.48
 	.money <0.2023
-    >> Buy a Cutlass from Ariyell if you have money and couldn't afford the Quarter Staff. Equip it
+    >> 如果你有钱，又买不起季度员工，就从Ariyell那里买一把弯刀。装备它
 	.collect 851,1
 step
     #completewith next
     .goto Darnassus,30.41,41.40
-    .goto Teldrassil,56.3,92.3,175 >> Go to Ruth'theran Village by taking the purple portal next to the bank
+    .goto Teldrassil,56.3,92.3,175 >> 通过银行旁边的紫色门户前往鲁思特兰村
 step
     .goto Teldrassil,56.3,92.3
-    .turnin 6344 >> Turn in Nessa Shadowsong
-    .accept 6341 >> Accept The Bounty of Teldrassil
+    .turnin 6344 >> 转入Nessa Shadowsong
+    .accept 6341 >> 接受Teldrassil的赏金
 step
     .goto Teldrassil,58.4,94.0
-    .turnin 6341 >> Turn in The Bounty of Teldrassil
-    .accept 6342 >> Accept Flight to Auberdine
+    .turnin 6341 >> 交出Teldrassil的赏金
+    .accept 6342 >> 接受飞往奥伯丁的航班
 step
-    .fly Darkshore >> Fly to Darkshore
+    .fly Darkshore >> 飞到黑海岸
 ]])

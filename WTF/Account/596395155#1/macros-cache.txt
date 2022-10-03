@@ -20,6 +20,9 @@ VER 3 0000000000000007 "move2" "132128"
 /cast [nostance:3,indoors]猎豹形态
 /script UIErrorsFrame:Clear()
 END
+VER 3 0000000000000009 "RXPTargeting" "Ability_eyeoftheowl"
+//RestedXP Guides - current step has no configured targets
+END
 VER 3 0000000000000002 "target宏" "INV_MISC_QUESTIONMARK"
 /target 逆风术士
 /script SetRaidTarget("target",6)

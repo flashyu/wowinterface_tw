@@ -2,43 +2,43 @@ RXPGuides.RegisterGuide([[
 #tbc
 #wotlk
 << Alliance !Warlock
-#name 11-14 Darkshore
+#name 11-14 黑海岸
 #version 1
-#group RestedXP Alliance 1-20
+#group RestedXP 联盟 1-20
 #defaultfor !Draenei
-#next 14-20 Bloodmyst
+#next 14-20 秘血岛
 #xprate <1.5 << Human Warlock
 step << !NightElf !Draenei wotlk
     #sticky
     .goto StormwindNew,21.8,56.2,20,0
     .goto StormwindNew,21.8,56.2,0
-    .zone Darkshore >> Head to the Stormwind Harbor and take the boat to Darkshore
+    .zone Darkshore >> 前往暴风港，乘船前往黑海岸
 step
-    >> Speak to Gwennyth ontop of the platform
+    >> 与平台的Gwennyth ontop对话
     .goto Darkshore,36.6,45.6
-    .accept 3524 >> Accept Washed Ashore
+    .accept 3524 >> 接受冲上岸
 step << !NightElf
 	.goto Darkshore,36.3,45.6
-    .fp Auberdine >> Get the Auberdine Flight Path
+    .fp Auberdine >> 获取奥伯丁飞行路线
 step << NightElf
     .goto Darkshore,36.8,44.3
-    .turnin 6342 >> Turn in Flight to Auberdine
+    .turnin 6342 >> 飞往奥伯丁
 step << !Warlock/!Rogue
 	.goto Darkshore,37.0,44.1
-    .home >> Set your Hearthstone to Auberdine
+    .home >> 将您的炉石设置为Auberdine
 step
-    >> Head upstairs
+    >> 上楼去
     .goto Darkshore,37.0,44.1
-    .accept 983 >> Accept Buzzbox 827
+    .accept 983 >> 接受Buzzbox 827
 step
-    >> Accept quests around Auberdine
-    .accept 2118 >> Accept Plagued Lands
+    >> 接受奥伯丁周围的任务
+    .accept 2118 >> 接受灾区
     .goto Darkshore,38.8,43.4
-    .accept 984 >> Accept How Big a Threat?
+    .accept 984 >> 接受威胁有多大？
     .goto Darkshore,39.3,43.4
 step << Dwarf Hunter tbc
     #sticky
-    .train 2981 >> Tame a Thistle Bear and learn Claw 2
+    .train 2981 >> 驯服蓟熊并学习爪2
     *Thistle Bears can stun, you have to use a dummy pet to tank the stun, abandon the pet and then tame the bear
 step
 	#sticky
@@ -50,12 +50,12 @@ step
 	.waypoint Darkshore,36.7,52.4,40,0
 	.waypoint Darkshore,35.6,47.6,40,0
 	.waypoint Darkshore,36.2,44.5,40,0
-	>> Kill crabs along the coast and loot them for their legs
+	>> 杀死沿海的螃蟹，并掠夺它们的腿
     .complete 983,1 --Collect Crawler Leg (x6)
 step
     .isOnQuest 3524
     .goto Darkshore,36.4,50.8
-	>> Loot the Beached Sea Creature
+	>> 抢劫海滩生物
     .complete 3524,1 --Collect Sea Creature Bones (x1)
 step
     .isOnQuest 2118
@@ -64,133 +64,133 @@ step
     .goto Darkshore,38.3,52.7,30,0
     .goto Darkshore,38.9,62.0,30,0
     .goto Darkshore,38.3,52.7
-    >>Keep going south until you find a Rabid Bear, use Tharnariun's Hope in your bags when you aggro one
+    >>继续向南走，直到你找到一只狂犬病熊，当你攻击一只时，用你袋子里的塔纳瑞恩希望
     .complete 2118,1 --Rabid Thistle Bear Captured
 step
    #label Crawlers
     .goto Darkshore,38.9,53.0
-    >> Run to the outskirts of the furbolg camp, try to not aggro any mobs.
+    >> 跑到弗波格营地的郊区，尽量不要激怒任何暴徒。
     .complete 984,1 --Find a corrupt furbolg camp
 step
     #requires Crawlers
     .isOnQuest 983
     .goto Darkshore,36.6,46.3
-    >> Click on the machine on the hill
-    .turnin 983 >> Turn in Buzzbox 827
+    >> 单击山上的机器
+    .turnin 983 >> 打开Buzzbox 827
 step
     .isOnQuest 3524
     .goto Darkshore,36.6,45.6
-    >> Head back to Gwennyth on the platform
-    .turnin 3524 >> Turn in Washed Ashore
-    .accept 4681 >> Accept Washed Ashore
+    >> 返回站台上的格温尼思
+    .turnin 3524 >> 转入冲上岸
+    .accept 4681 >> 接受冲上岸
 step
     #xprate <1.5
     .maxlevel 13
     .goto Darkshore,35.8,43.7
-    .accept 963 >> Accept For Love Eternal
+    .accept 963 >> 接受永恒的爱
 step
     .isOnQuest 4681
     .goto Darkshore,31.9,46.4
-	>> Loot the sea turtle bones underwater
+	>> 在水下抢劫海龟骨头
     * You can run along the docks to get their faster than just swimming!
     .complete 4681,1 --Collect Sea Turtle Remains (x1)
 step
     .isOnQuest 4681
-    >> Head back to Gwennyth
+    >> 返回Gwennyth
     .goto Darkshore,36.6,45.6
-    .turnin 4681,2 >> Turn in Washed Ashore << Druid/Paladin/Hunter
-    .turnin 4681 >> Turn in Washed Ashore << !Druid !Paladin !Hunter
+    .turnin 4681,2 >> 转入冲上岸 << Druid/Paladin/Hunter
+    .turnin 4681 >> 转入冲上岸 << !Druid !Paladin !Hunter
 step << !Dwarf/!Hunter
-    .xp 12 >> Grind to level 12
+    .xp 12 >> 升级到12级
 step << !Dwarf/!Hunter
-    >> Talk to Sentinel Glynda and Tharnariun
-    .accept 4811 >> Accept The Red Crystal
+    >> 与哨兵Glynda和Tharnariun交谈
+    .accept 4811 >> 接受红水晶
     .goto Darkshore,37.7,43.4
-    .turnin -2118 >> Turn in Plagued Lands
+    .turnin -2118 >> 交出瘟疫土地
     .goto Darkshore,38.8,43.4
 step
 #xprate <1.5
     .maxlevel 13
     .goto Darkshore,38.8,43.4
-    .accept 2138 >> Accept Cleansing of the Infected
+    .accept 2138 >> 接受感染者的清洁
 step
     #xprate <1.5
-    >> Talk to Terenthis inside the building
+    >> 与大楼内的特伦蒂斯交谈
     .goto Darkshore,39.3,43.5
-    .turnin 984 >> Turn in How Big a Threat?
-    .accept 985 >> Accept How Big a Threat?
-    .accept 4761 >> Accept Thundris Windweaver
+    .turnin 984 >> 交出威胁有多大？
+    .accept 985 >> 接受威胁有多大？
+    .accept 4761 >> 接受Thundris Windweaver
 step
     #xprate >1.499
-    >> Talk to Terenthis inside the building
+    >> 与大楼内的特伦蒂斯交谈
     .goto Darkshore,39.3,43.5
-    .turnin 984 >> Turn in How Big a Threat?
-    .accept 4761 >> Accept Thundris Windweaver
+    .turnin 984 >> 交出威胁有多大？
+    .accept 4761 >> 接受Thundris Windweaver
 step << Druid
     .goto Darkshore,43.5,45.9
-    .use 15208 >>Use the Cenarion Moondust inside the cave, defeat Lunaclaw and speak with his spirit after
+    .use 15208 >>使用洞穴内的塞纳里奥月光石，击败卢纳克劳，并在之后与他的灵魂对话
     .complete 6001,1 --Defeat Lunaclaw (x1)
 step << !Dwarf/!Hunter
     .goto Darkshore,47.2,48.6
-    >> Careful, the Moonkin in the area enrage and call for help, very deadly!
+    >> 当心，该地区的Moonkin愤怒地呼救，非常致命！
     .complete 4811,1 --Locate the large, red crystal on Darkshore's eastern mountain range
 step << wotlk !Dwarf/!Hunter
-    .deathskip >> Die to the Owl Beasts nearby and spawn in Auberdine
+    .deathskip >> 死于附近的猫头鹰野兽并在奥伯丁产卵
 step << !Dwarf/!Hunter
     .goto Darkshore,37.7,43.4
-    .turnin 4811 >> Turn in The Red Crystal
-    .accept 4812 >> Accept As Water Cascades
+    .turnin 4811 >> 交出红色水晶
+    .accept 4812 >> 接受为瀑布
 step << !Dwarf/!Hunter
     .goto Darkshore,37.8,44.0
-	>>Fill the water tube at the moonwell
+	>>在月光井处注满水管
     .complete 4812,1 --Collect Moonwell Water Tube (x1)
 step
     .goto Darkshore,37.4,40.2
-    >> Talk to Thundris in the town hall building
-    .turnin 4761 >> Turn in Thundris Windweaver
-    .accept 4762 >> Accept The Cliffspring River << !Warlock/!Rogue
-    .accept 954 >> Accept Bashal'Aran
+    >> 在市政厅大楼与桑德利斯交谈
+    .turnin 4761 >> 交出桑德里斯·温德韦弗
+    .accept 4762 >> 接受悬崖泉河 << !Warlock/!Rogue
+    .accept 954 >> 接受Bashal'Aran
 step
     #xprate <1.5
     .maxlevel 13
     .goto Darkshore,37.4,40.2
-    .accept 958 >> Accept Tools of the Highborne
+    .accept 958 >> 接受上流社会的工具
 step
     .goto Darkshore,44.1,36.3
-    >> Head to the ruins east of town
-    .turnin 954 >> Turn in Bashal'Aran
-    .accept 955 >> Accept Bashal'Aran
+    >> 前往城东的废墟
+    .turnin 954 >> 转入Bashal’Aran
+    .accept 955 >> 接受Bashal'Aran
 step << !Dwarf !Warlock/!Hunter !Warlock
     .goto Darkshore,47.3,48.6
-    >> Grind Grell as you head southeast to turn in the quest. We're coming back after.
-    .turnin 4812 >> Turn in As Water Cascades
-    .accept 4813 >> Accept The Fragments Within
+    >> 当你向东南方向转弯时，碾碎格雷尔。我们将在之后回来。
+    .turnin 4812 >> 随着瀑布转向
+    .accept 4813 >> 接受其中的片段
 step
     .goto Darkshore,44.8,37.2
-	>>Collect Grell Earrings
+	>>收集Grell耳环
     .complete 955,1 --Collect Grell Earring (x8)
 step
     .goto Darkshore,44.2,36.3
-    >> Return to the shrine
-    .turnin 955 >> Turn in Bashal'Aran
-    .accept 956 >> Accept Bashal'Aran
+    >> 回到神殿
+    .turnin 955 >> 转入Bashal’Aran
+    .accept 956 >> 接受Bashal'Aran
 step
     .goto Darkshore,45.6,36.9
-	>> Kill and loot Satyrs in Bashal'Aran
+	>> 杀戮和掠夺巴沙拉兰的萨提尔人
     .complete 956,1 --Collect Ancient Moonstone Seal (x1)
 step
     .goto Darkshore,44.2,36.3
-    >> Return to the shrine
-    .turnin 956 >> Turn in Bashal'Aran
+    >> 回到神殿
+    .turnin 956 >> 转入Bashal’Aran
 step
 #xprate <1.5
     .maxlevel 14
     .goto Darkshore,44.2,36.3
-    .accept 957 >> Accept Bashal'Aran
+    .accept 957 >> 接受Bashal'Aran
 step << Warlock
     .goto Darkshore,47.3,48.6
-    .turnin 4812 >> Turn in As Water Cascades
-    .accept 4813 >> Accept The Fragments Within
+    .turnin 4812 >> 随着瀑布转向
+    .accept 4813 >> 接受其中的片段
 step
 #xprate <1.5
 	#sticky
@@ -198,44 +198,44 @@ step
     #title Secondary Objective
     .maxlevel 14
     .goto Darkshore,42.3,66.9,0,0
-	>>Kill Rabid Thistle Bears as you quest
+	>>在你的任务中杀死狂犬病蓟熊
     .complete 2138,1 --Kill Rabid Thistle Bear (x20)
 step << !Warlock/!Rogue
     #xprate >1.499
     .goto Darkshore,41.94,31.47
-    .accept 4723 >> Accept Beached Sea Creature
+    .accept 4723 >> 接受海滩生物
 step << !Warlock/!Rogue
     #xprate >1.499
     .goto Darkshore,44.18,20.60
-    .accept 4725 >> Accept Beached Sea Turtle
+    .accept 4725 >> 接受海滩海龟
 step << !Warlock/!Rogue
     .isOnQuest 4762
     .goto Darkshore,50.8,25.6
-	.use 15844 >>Use the empty sampling tube at the base of the waterfall
-    * Grind mobs en route if your hearthstone is less than 3 minutes from being off cooldown
+	.use 15844 >>使用瀑布底部的空采样管
+    * 途中碾碎暴徒 if your hearthstone is less than 3 minutes from being off cooldown
     .complete 4762,1 --Collect Cliffspring River Sample (x1)
 step << Druid
     #sticky
     #completewith next
     .goto Moonglade,44.1,45.2
-    >>Teleport to Moonglade
-    .fly Teldrassil>> Fly to Teldrassil
+    >>传送至Moonglade
+    .fly Teldrassil>> 飞往Teldrassil
 step << Druid
     .goto Darnassus,35.4,8.4
-    .turnin 6001 >> Turn in Body and Heart
+    .turnin 6001 >> 全身心投入
 step << !Warlock/!Rogue
     #sticky
     #completewith next
-    .hs >> Hearth to Auberdine
+    .hs >> 奥伯丁之炉
 step << !Dwarf/!Hunter
-    >> Talk to Sentinel Glynda
+    >> 与哨兵Glynda交谈
     .goto Darkshore,37.7,43.4
-    .turnin 4813 >> Turn in The Fragments Within
+    .turnin 4813 >> 交出其中的碎片
 step << Dwarf Hunter
 #xprate <1.5
     .maxlevel 14
     .goto Darkshore,37.7,43.4
-    .accept 4811 >> Accept The Red Crystal
+    .accept 4811 >> 接受红水晶
 step << Dwarf Hunter
 #xprate <1.5
     .isOnQuest 4811
@@ -244,25 +244,25 @@ step << Dwarf Hunter
 step << !Dwarf/!Hunter
     #xprate <1.5
     .goto Darkshore,39.9,54.9
-    >> Head south to the furbolg camp
+    >> 向南前往弗堡营地
     .complete 985,1 --Kill Blackwood Pathfinder (x8)
     .complete 985,2 --Kill Blackwood Windtalker (x5)
 step
     .maxlevel 14
     .goto Darkshore,40.3,59.7
-    .accept 953 >> Accept The Fall of Ameth'Aran
+    .accept 953 >> 接受Ameth’Aran的堕落
     #xprate <1.5
 step
     .maxlevel 14
     .goto Darkshore,37.1,62.1
-    .accept 4722 >> Accept Beached Sea Turtle
+    .accept 4722 >> 接受海滩海龟
     #xprate <1.5
 step
     #requires bears
 	#sticky
 	#label anaya
     .isOnQuest 963
-	>>Kill Anaya Dawnrunner, she patrols around Ameth'Aran
+	>>杀死Anaya Dawnrunner，她在Ameth’Aran附近巡逻
     .goto Darkshore,43.3,58.8,0
     .complete 963,1 --Collect Anaya's Pendant (x1)
     #xprate <1.5
@@ -271,18 +271,18 @@ step
 	#sticky
 	#label relics1
     .goto Darkshore,42.0,59.3,0
-	>>Kill Ghosts. Loot them for their Relics
+	>>杀死幽灵。抢劫他们的文物
     .isOnQuest 958
     .complete 958,1 --Collect Highborne Relic (x7)
     #xprate <1.5
 step
     #requires bears
-	>> Click on the tablets in the area to read them (you don't have to scroll through their pages)
+	>> 点击区域中的平板电脑阅读(您不必滚动页面)
     .complete 953,2 --Collect Read the Fall of Ameth'Aran (x1)
     .goto Darkshore,42.7,63.1,-1
     .complete 953,1 --Collect Read the Lay of Ameth'Aran (x1)
     .goto Darkshore,43.3,58.8,-1
-	>>Click on the green flame under the gazebo
+	>>点击露台下的绿色火焰
     .complete 957,1 --Destroy the seal at the ancient flame (x1)
     .goto Darkshore,42.4,61.8,-1
     #xprate <1.5
@@ -291,7 +291,7 @@ step
     #requires anaya
     .isOnQuest 953
     .goto Darkshore,40.3,59.7
-    .turnin 953 >> Turn in The Fall of Ameth'Aran
+    .turnin 953 >> 《阿米思·阿兰的堕落》(The Fall of Ameth’Aran)
 step << Dwarf Hunter
     #requires relics1
     .isOnQuest 985
@@ -305,149 +305,149 @@ step
     #completewith next
     .goto Darkshore,42.0,58.3
     .isOnQuest 957
-    .deathskip >>Die at the north side of Ameth'Aran and spirit rez at the northern graveyard
+    .deathskip >>死在阿梅斯阿兰的北侧，死在北部墓地的灵雷兹
 step
 #xprate <1.5
     #requires relics1
     .isOnQuest 957
     .goto Darkshore,44.2,36.3
-    .turnin 957 >> Turn in Bashal'Aran
+    .turnin 957 >> 转入Bashal’Aran
 step
 #xprate <1.5
     .isOnQuest 958
     .goto Darkshore,37.4,40.1
-    .turnin 958 >> Turn in Tools of the Highborne
+    .turnin 958 >> 上流社会的工具
 step << !Warlock/!Rogue
-    >> Head back to town
-    .turnin -4762 >> Turn in The Cliffspring River
+    >> 回镇上去
+    .turnin -4762 >> 转入悬崖泉河
     .goto Darkshore,37.4,40.1,-1
-    .turnin -985 >> Turn in How Big a Threat?
+    .turnin -985 >> 交出威胁有多大？
     .goto Darkshore,39.3,43.5,-1
     .isQuestComplete 4762
 step << !Warlock/!Rogue
     #xprate >1.499
     .goto Darkshore,36.6,45.5
-    .turnin 4725 >> Turn in Beached Sea Turtle
-    .turnin 4727 >> Turn in Beached Sea Turtle
-    .turnin -4723 >> Turn in Beached Sea Creature
+    .turnin 4725 >> 上缴海滩海龟
+    .turnin 4727 >> 上缴海滩海龟
+    .turnin -4723 >> 上缴海滩生物
 step
 #xprate <1.5
     .goto Darkshore,38.8,43.4
-    .turnin 2138 >> Turn in Cleansing of the Infected
+    .turnin 2138 >> 上交感染者的清洁
     .isQuestComplete 2138
 step << Dwarf Hunter
     .goto Darkshore,37.7,43.4
-    .turnin 4811 >> Turn in The Red Crystal
+    .turnin 4811 >> 交出红色水晶
     .isQuestComplete 4811
 step
 #xprate <1.5
     .isOnQuest 4722
     .goto Darkshore,36.6,45.6
-    .turnin 4722 >> Turn in Beached Sea Turtle
-    .turnin -4723 >> Turn in Beached Sea Creature
+    .turnin 4722 >> 上缴海滩海龟
+    .turnin -4723 >> 上缴海滩生物
 step
 #xprate <1.5
     .isQuestComplete 963
     .goto Darkshore,35.7,43.7
-    .turnin 963 >> Turn in For Love Eternal
+    .turnin 963 >> 为了永恒的爱而投入
 step << Druid tbc
     #completewith next
-    >>Teleport to Moonglade
+    >>传送至Moonglade
     .goto Moonglade,52.4,40.6
-    .trainer 12042 >> Train spells
+    .trainer 12042 >> 火车咒语
 step << Druid tbc
     .goto Moonglade,48.1,67.2
-    .fly Auberdine>>Fly to Darkshore
+    .fly Auberdine>>飞到黑海岸
 step << Warlock wotlk/Rogue wotlk
-    .xp >> Grind to level 14
+    .xp >> 升级到14级
 step << Warlock wotlk/wotlk Gnome Rogue/wotlk Human Rogue/wotlk Dwarf Rogue
-    .hs >> Hearth to Stormwind
+    .hs >> 从火炉到暴风
 step << wotlk Night Elf Rogue
-    .hs >> Hearth to Darnassus
+    .hs >> 达纳苏斯之赫斯
 step << wotlk Night Elf Rogue
     .goto Teldrassil,56.4,60.1
-	.trainer >> Go and train your spells
+	.trainer >> 去训练你的法术吧
 step << wotlk Night Elf Rogue
-    .zone Darkshore >> Head to the Harbor and take the two boars to get to Azuremyst Isle.
+    .zone Darkshore >> 前往海港，带着两只公猪去Azuremyst岛。
     .zoneskip Azuremyst Isle
 step << Warlock wotlk
     #sticky
     #completewith next
     .goto StormwindClassic,29.2,74.0,15,0
-    .goto StormwindClassic,27.2,78.1,10 >> Go into The Slaughtered Lamb
+    .goto StormwindClassic,27.2,78.1,10 >> 走进屠宰羔羊
 step << Warlock wotlk
     .goto StormwindClassic,25.2,78.5
-    .train 6222 >>Train Corruption r2
-    >>Train drain life if you have cash to spare
+    .train 6222 >>培训腐败r2
+    >>如果你有多余的现金，培训会耗尽生命
 step << Warlock wotlk
-    >>Go in the building. Buy a Smoldering Wand if you have the money for it
+    >>进入大楼。如果你有钱买个阴燃魔杖
     .goto StormwindClassic,42.65,67.16,14,0
     .goto StormwindClassic,42.84,65.14
     .collect 5208,1 --Smoldering Wand (1)
     .money >0.3174
 step << Rogue wotlk
 	.goto StormwindClassic,74.6,52.8
-	.trainer >> Train your class spells
+	.trainer >> 训练你的职业咒语
 step << Warlock wotlk/wotlk Gnome Rogue/wotlk Human Rogue/wotlk Dwarf Rogue
     .goto StormwindNew,21.8,56.2
-    .zone Darkshore >> Head to the Stormwind Harbor and take the boat to Darkshore
+    .zone Darkshore >> 前往暴风港，乘船前往黑海岸
     .zoneskip Azuremyst Isle
 step
 	#label DarkshoreEnd
     .goto Darkshore,30.8,41.0
-    .zone Azuremyst Isle >>Take the Boat to Azuremyst Isle
+    .zone Azuremyst Isle >>乘船去Azuremyst岛
 ]])
 
 RXPGuides.RegisterGuide([[
 #tbc
 #wotlk
 << Alliance
-#name 14-20 Bloodmyst
+#name 14-20 秘血岛
 #version 1
-#group RestedXP Alliance 1-20
+#group RestedXP 联盟 1-20
 #defaultfor !Draenei
-#next RestedXP Alliance 20-32\20-21 Darkshore << !Warlock
-#next RestedXP Alliance 20-32\20-23 Darkshore/Ashenvale << Warlock
+#next RestedXP联盟20-32\20-21 黑海岸 << !Warlock
+#next RestedXP联盟20-32\20-23 黑海岸/灰谷 << Warlock
 step
     .goto The Exodar,68.3,63.5
-    .fp Exodar >> Get the The Exodar flight path
+    .fp Exodar >> 获取the Exodar飞行路线
 step << Shaman
 	.goto The Exodar,49.5,36.9,70,0
 	.goto The Exodar,33.2,24.6
-	.trainer >> Train spells in The Exodar
+	.trainer >> 《异国他乡》中的火车咒语
 step << Mage
 	.goto The Exodar,51.0,46.8,80,0
 	.goto The Exodar,47.2,62.3
-    .trainer >> Train spells in The Exodar
+    .trainer >> 《异国他乡》中的火车咒语
 step << Hunter
 	.goto The Exodar,42,71.4,60,0
 	.goto The Exodar,54.5,85.6,60,0
 	.goto The Exodar,47.6,88.3
-	.trainer >> Train spells in The Exodar
+	.trainer >> 《异国他乡》中的火车咒语
 step << Warrior
 	.goto The Exodar,42,71.4,60,0
 	.goto The Exodar,54.5,85.6,60,0
 	.goto The Exodar,55.6,82.3
-	.trainer >> Train spells in The Exodar
+	.trainer >> 《异国他乡》中的火车咒语
 step << Hunter/Warrior tbc/Paladin
-	>>Go into The Exodar and talk to the weapon master at the top floor of the Trader's Tier
+	>>进入《外族人》，与交易层顶层的武器大师交谈
     .goto The Exodar,53.3,85.7
-    .train 202 >>Train 2h swords << Hunter/Warrior tbc/Paladin
-	.train 5011 >>Train Crossbows << Hunter
+    .train 202 >>训练2h剑 << Hunter/Warrior tbc/Paladin
+	.train 5011 >>火车十字弓 << Hunter
 step
     .goto Bloodmyst Isle,63.4,88.7
-	.zone Bloodmyst Isle >>Head north to Bloodmyst Isle
+	.zone Bloodmyst Isle >>向北前往Bloodmyst Isle
 step
 	#sticky
 	#completewith monunment
     #title Secondary Objective
-	>> Collect Irradiated Crystal Shards from any mobs on Bloodmyst Isle. Don't throw these away.
+	>> 收集血晶岛上任何暴徒的辐照水晶碎片。不要把这些扔掉。
 	.collect 23984,10 -- Collect Irradiated Crystal Shard (x10)
 step
-    >> Talk to the Draenei at the ranch
-    .accept 9624 >> Accept A Favorite Treat
+    >> 与牧场的德雷尼族人交谈
+    .accept 9624 >> 接受最喜爱的款待
     .goto Bloodmyst Isle,63.5,88.8
-    .accept 9634 >> Accept Alien Predators
+    .accept 9634 >> 接受外星捕食者
     .goto Bloodmyst Isle,63.1,88.0
     .maxlevel 14
 step
@@ -455,7 +455,7 @@ step
     #sticky
     #completewith kesselstart
     .goto Bloodmyst Isle,59.3,89.1,0,0
-	>>Prioritize this quest. Collect the small pears on the ground. They can be hard to spot, check around trees. Only a finite amount of them can be spawned at once, if you don't see any, try the other side of the area.
+	>>确定此任务的优先级。收集地上的小梨子。它们可能很难被发现，在树周围检查一下。一次只能产生有限数量的它们，如果你看不到任何，请尝试区域的另一边。
     .complete 9624,1 --Collect Sand Pear (x10)
     .isOnQuest 9624
 step
@@ -466,114 +466,114 @@ step
     .isOnQuest 9634
 step
     #requires pears
-    >> Return to the ranch
+    >> 回到牧场
     .goto Bloodmyst Isle,63.4,88.7
-    .turnin 9624,3 >> Turn in A Favorite Treat << Warrior/Paladin
-    .turnin 9624 >> Turn in A Favorite Treat << !Warrior !Paladin
+    .turnin 9624,3 >> 交上最喜欢的款待 << Warrior/Paladin
+    .turnin 9624 >> 交上最喜欢的款待 << !Warrior !Paladin
     .isQuestComplete 9624
 step
     .goto Bloodmyst Isle,63.1,87.9
-    .turnin 9634,1 >> Turn in Alien Predators << Paladin
-    .turnin 9634 >> Turn in Alien Predators << !Paladin
+    .turnin 9634,1 >> 交出外星捕食者 << Paladin
+    .turnin 9634 >> 交出外星捕食者 << !Paladin
     .isQuestComplete 9634
 step
     #label kesselstart
-    >> Talk to Kessel
+    >> 与Kessel交谈
     .goto Bloodmyst Isle,63.0,87.5
-    .accept 9663 >> Accept The Kessel Run
+    .accept 9663 >> 接受Kessel跑步
 step
     #sticky
     #completewith next
-    >>Use the mount buff to run to Blood Watch, if you go to the right and jump across the river to get around the bridge you won't get dismounted
-    .abandon 9663 >> Abandon The Kessel Run once you lose the mount buff
+    >>使用坐骑buff跑向血腥守卫，如果你向右跳过河绕过大桥，你就不会下车
+    .abandon 9663 >> 失去坐骑buff后放弃Kessel Run
 step
     .goto Bloodmyst Isle,53.3,57.7
-    .accept 9629 >> Accept Catch and Release
+    .accept 9629 >> 接受捕获和释放
 step
     #sticky
     #completewith next
     .goto Bloodmyst Isle,55.7,59.7
-    .home >> Set your Hearthstone to Blood Watch
+    .home >> 将您的炉石设置为血液观察
 step
-    >> Accept quests around Blood Watch.
-    >> Talk to the Wanted Poster and Vindicator Aalesia
-    .accept 9646 >> Accept WANTED: Deathclaw
+    >> 接受血液观察周围的任务。
+    >> 与通缉海报和辩护人Aalesia交谈
+    .accept 9646 >> 接受通缉：死亡爪
     .goto Bloodmyst Isle,55.2,59.2
-    .accept 9567 >> Accept Know Thine Enemy
+    .accept 9567 >> 接受了解你的敌人
     .goto Bloodmyst Isle,55.0,58.0
-    >> Speak with the Tracker and Maatparm
-    .accept 9580 >> Accept The Bear Necessities
+    >> 与Tracker和Maatparm交谈
+    .accept 9580 >> 接受熊的需要
     .goto Bloodmyst Isle,55.9,56.9
-    .accept 9643 >> Accept Constrictor Vines
+    .accept 9643 >> 接受Constrictor Vines
     .goto Bloodmyst Isle,56.4,56.8
-    .accept 9648 >> Accept Maatparm Mushroom Menagerie
+    .accept 9648 >> 接受Maatparm Mushroom Menagerie
     .goto Bloodmyst Isle,56.4,56.8
 step << Paladin
 	.goto Bloodmyst Isle,55.6,55.4
-	.trainer >>Train class spells at Vindicator Aesom
+	.trainer >>维护者伊索的火车课咒语
 step
-    >> Talk to Vindicator Boros
+    >> 与维护者Boros交谈
     .goto Bloodmyst Isle,55.4,55.4
-    .accept 9641 >> Accept Irradiated Crystal Shards
+    .accept 9641 >> 接受辐照晶体碎片
 step
 	.goto Bloodmyst Isle,55.4,55.4
 	.itemcount 23984,10
-	.turnin 9641,3 >> Turn in Irradiated Crystal Shards << Warrior/Paladin/Hunter/Rogue/Shaman
-    .turnin 9641,2 >> Turn in Irradiated Crystal Shards << Mage/Priest/Warlock
-    .turnin 9641 >> Turn in Irradiated Crystal Shards << Druid
+	.turnin 9641,3 >> 转入辐照晶体碎片 << Warrior/Paladin/Hunter/Rogue/Shaman
+    .turnin 9641,2 >> 转入辐照晶体碎片 << Mage/Priest/Warlock
+    .turnin 9641 >> 转入辐照晶体碎片 << Druid
 step << Human Warrior/Human Paladin/Human Rogue
     .goto Bloodmyst Isle,56.2,54.2
-    .train 2580 >> Talk to the dwarf by the forge. Train Mining, cast Find Minerals
+    .train 2580 >> 与熔炉旁的侏儒交谈。训练采矿，铸造寻找矿物
 step
-    >> Speak to the Draenei in the building on the hill
+    >> 与山上建筑中的德雷尼人交谈
     .goto Bloodmyst Isle,52.7,53.3
-    .accept 9693 >> Accept What Argus Means to Me
-    .accept 9581 >> Accept Learning from the Crystals
+    .accept 9693 >> 接受阿格斯对我的意义
+    .accept 9581 >> 接受水晶的学习
 step << Dwarf Hunter
     .goto Bloodmyst Isle,55.4,55.4
-    .turnin 9693 >> Turn in What Argus Means to Me
-    .accept 9694 >> Accept Blood Watch
+    .turnin 9693 >> 把Argus对我意味着什么
+    .accept 9694 >> 接受血液监测
 step << Dwarf Hunter
-    >> Kill blood elves in the area
+    >> 杀死该地区的血精灵
     .goto Bloodmyst Isle,48.5,46.8
     .complete 9694,1 --Kill Sunhawk Spy (x10)
 step << Dwarf Hunter
     .goto Bloodmyst Isle,55.4,55.2
-    .turnin 9694 >> Turn in Blood Watch
-    .accept 9779 >> Accept Intercepting the Message
+    .turnin 9694 >> 交血表
+    .accept 9779 >> 接受拦截消息
 step
 	#sticky
     #label bloodmushroom
     .goto Bloodmyst Isle,42.9,71.3,0
-	>>Look for small red mushrooms while you quest through Bloodmyst
+	>>在血囊中寻找小的红色蘑菇
     .complete 9648,2 --Collect Blood Mushroom (x1)
 step
 	#sticky
 	#label monument
     .goto Bloodmyst Isle,36.5,71.5
-	>>Click on the small sign at the monument
+	>>点击纪念碑上的小标志
     .complete 9567,1 --Collect Nazzivus Monument Glyph (x1)
 step
     .goto Bloodmyst Isle,38.2,81.7,60,0
 	.goto Bloodmyst Isle,36.5,71.5,60,0
 	.goto Bloodmyst Isle,38.2,81.7
-    .use 23900 >>Kill Tzerak, the Felguard that roams the area.
-    >>Loot him for his Armor Plate, then click it in your bags.
-    *He walks from the summoning sigil to the monument and then despawn, a full spawn/despawn cycle takes about 6 minutes.
+    .use 23900 >>杀死在该地区游荡的恶魔守卫泽拉克。
+    >>抢走他的装甲牌，然后在你的包里点击它。
+    *He walks from the summoning sigil to the monument and then despawn, a full spawn/despawn cycle takes about 6 分钟
 	.collect 23900,1,9594 --Tzerak's Armor Plate
-    .accept 9594 >> Accept Signs of the Legion
+    .accept 9594 >> 接受军团的迹象
 	.unitscan Tzerak
 step
     #requires monument
     #sticky
     #completewith mtag1
     .goto Bloodmyst Isle,37.0,78.7
-	>>Look for small green mushrooms close to the satyr area
+	>>在萨提尔地区附近寻找小的绿色蘑菇
     .complete 9648,4 --Collect Fel Cone Fungus (x1)
 step
 	#requires monument
     .goto Bloodmyst Isle,37.0,78.7
-	>>Kill Satyrs and Felsworn in the area. You may have to kill Rogues to force the respawns of the satyr's you need.
+	>>杀死该地区的萨特尔斯和费卢瓦。你可能必须杀死盗贼才能迫使你所需要的萨提尔重生。
     .complete 9594,1 --Kill Nazzivus Satyr (x8)
     .complete 9594,2 --Kill Nazzivus Felsworn (x8)
     .isOnQuest 9594
@@ -582,232 +582,232 @@ step
     #sticky
     .goto Bloodmyst Isle,35.6,94.2,0,0
     .goto Bloodmyst Isle,51.3,93.9,0,0
-	.use 23995 >>Use the Blacksilt tagger in your bags to tag scouts. This will make them non-hostile towards you.
+	.use 23995 >>用你包里的黑淤泥标记器标记侦察兵。这将使他们对你没有敌意。
     .complete 9629,1 --Blacksilt Scouts Tagged (x6)
 step
     .goto Bloodmyst Isle,51.1,93.1,70,0
     .goto Bloodmyst Isle,43.0,94.4,70,0
     .goto Bloodmyst Isle,35.1,93.7
 	.line Bloodmyst Isle,51.1,93.1,43.0,94.4,35.1,93.7
-	.use 23870 >>Kill the named murloc, Cruelfin, that patrols the around the murloc camps. Loot him for the Pendant. Click it in your bags
+	.use 23870 >>杀死在穆洛克营地周围巡逻的名为“残忍”的穆洛克。抢他去拿吊坠。在您的包中点击它
 	.collect 23870,1,9576 --Red Crystal Pendant (1)
-    .accept 9576 >> Accept Cruelfin's Necklace
+    .accept 9576 >> 接受残忍的项链
 	.unitscan Cruelfin
 step
     #requires mtag1
     .goto Bloodmyst Isle,58.2,83.4
-	.use 23875 >>Use the pick in your bags to collect the small red crystal
+	.use 23875 >>用包里的镐来收集红色小水晶
     .complete 9581,1 --Collect Impact Site Crystal Sample (x1)
 step
     .goto Bloodmyst Isle,57.8,73.4
-	>>Loot a big red mushroom underwater, they can also drop from the fishes
+	>>在水下抢劫一个大的红色蘑菇，它们也可以从鱼身上掉下来
     .complete 9648,1 --Collect Aquatic Stinkhorn (x1)
 step
     .goto Bloodmyst Isle,53.3,57.9
-	>>Grind mobs en route
-    .turnin 9576 >> Turn in Cruelfin's Necklace
-    .turnin 9629,1 >> Turn in Catch and Release << Warrior/Paladin
-    .turnin 9629 >> Turn in Catch and Release << !Warrior !Paladin
-    .accept 9574 >> Accept Victims of Corruption
+	>>途中碾碎暴徒
+    .turnin 9576 >> 交上残忍的项链
+    .turnin 9629,1 >> 接住并松开 << Warrior/Paladin
+    .turnin 9629 >> 接住并松开 << !Warrior !Paladin
+    .accept 9574 >> 接受腐败受害者
 step
     #completewith next
     .goto Bloodmyst Isle,53.3,56.6
-    .vendor >> Vendor trash and repair
+    .vendor >> 供应商垃圾和维修
 step
     .goto Bloodmyst Isle,51.3,75.7
-	>>Kill treants around this area and loot them for their bark. Grind mobs en route.
+	>>杀死该区域周围的树人，并掠夺树皮。在途中碾碎暴徒。
     .complete 9574,1 --Collect Crystallized Bark (x6)
 step << Rogue/Warlock
     #completewith next
-    .hs >> Hearth back to Blood Watch
+    .hs >> 炉灶回到Blood Watch
 step
     #requires bloodmushroom
-    >> Return to town
+    >> 返回城镇
     .goto Bloodmyst Isle,53.3,57.8
-    .turnin 9574 >> Turn in Victims of Corruption
-    .accept 9578 >> Accept Searching for Galaen
+    .turnin 9574 >> 移交腐败受害者
+    .accept 9578 >> 接受对Galan的搜索
 step
-    >> Talk to Vindicator Aalesia
+    >> 与维护者Aalesia交谈
     .goto Bloodmyst Isle,55.0,58.1
-    .turnin 9594 >> Turn in Signs of the Legion
+    .turnin 9594 >> 交出军团的迹象
 	.isQuestComplete 9594
 step
     .goto Bloodmyst Isle,54.9,58.0
-    .turnin 9567 >> Turn in Know Thine Enemy
+    .turnin 9567 >> 交出知己知彼
 step << !Dwarf/!Hunter
-    >> Speak to Vindicator Boros
+    >> 与维护者Boros交谈
     .goto Bloodmyst Isle,55.4,55.4
-    .turnin 9693 >> Turn in What Argus Means to Me
-    .accept 9694 >> Accept Blood Watch
+    .turnin 9693 >> 把Argus对我意味着什么
+    .accept 9694 >> 接受血液监测
 step
 	.goto Bloodmyst Isle,55.4,55.4
 	.itemcount 23984,10
-	.turnin 9641,3 >> Turn in Irradiated Crystal Shards << Warrior/Paladin/Hunter/Rogue/Shaman
-    .turnin 9641,2 >> Turn in Irradiated Crystal Shards << Mage/Priest/Warlock
-    .turnin 9641 >> Turn in Irradiated Crystal Shards << Druid
+	.turnin 9641,3 >> 转入辐照晶体碎片 << Warrior/Paladin/Hunter/Rogue/Shaman
+    .turnin 9641,2 >> 转入辐照晶体碎片 << Mage/Priest/Warlock
+    .turnin 9641 >> 转入辐照晶体碎片 << Druid
 step
-    >> Head into the building on the hill
+    >> 进入山上的建筑物
     .goto Bloodmyst Isle,52.6,53.3
-    .turnin 9581,2 >> Turn in Learning from the Crystals << Warrior/Paladin
-    .turnin 9581 >> Turn in Learning from the Crystals << !Warrior !Paladin
-    .accept 9620 >> Accept The Missing Survey Team
+    .turnin 9581,2 >> 向水晶学习 << Warrior/Paladin
+    .turnin 9581 >> 向水晶学习 << !Warrior !Paladin
+    .accept 9620 >> 接受失踪调查小组
 step << !Dwarf/!Hunter
-    >> Kill blood elves in the area. Try to end on the south side, we're going back to town after.
+    >> 杀死该地区的血精灵。尽量在南边结束，我们将在之后返回城镇。
     .goto Bloodmyst Isle,48.5,46.8
     .complete 9694,1 --Kill Sunhawk Spy (x10)
 step << !Dwarf/!Hunter
-    >> Talk to Vindicator Boros
+    >> 与维护者Boros交谈
     .goto Bloodmyst Isle,55.4,55.2
-    .turnin 9694,3 >> Turn in Blood Watch << Hunter
-    .turnin 9694 >> Turn in Blood Watch << !Hunter
-    .accept 9779 >> Accept Intercepting the Message
+    .turnin 9694,3 >> 交血表 << Hunter
+    .turnin 9694 >> 交血表 << !Hunter
+    .accept 9779 >> 接受拦截消息
 step
     .goto Bloodmyst Isle,47.7,46.6
-	>>Kill Sunhawk Spies and loot them for their missive.
+	>>杀死Sunhawk间谍并为他们的信件洗劫他们。
     .complete 9779,1 --Collect Sunhawk Missive (x1)
 step
-    >> Head east and talk to the corpse in the naga ruins
+    >> 往东走，和那加废墟中的尸体交谈
     .goto Bloodmyst Isle,61.3,48.6
-    .turnin 9620 >> Turn in The Missing Survey Team
-    .accept 9628 >> Accept Salvaging the Data
+    .turnin 9620 >> 交出失踪的调查小组
+    .accept 9628 >> 接受挽救数据
 step
 	#sticky
 	#label bluemushroom
     .goto Bloodmyst Isle,60.7,49.1
-	>>Loot a small blue mushroom around the naga ruins
+	>>在那加废墟周围抢劫一只蓝色小蘑菇
     .complete 9648,3 --Collect Ruinous Polyspore (x1)
 step
     .goto Bloodmyst Isle,64.4,41.8
-	>>Kill nagas around this area and loot them
+	>>杀死这个地区周围的纳加人，然后将他们洗劫一空
     .complete 9628,1 --Collect Survey Data Crystal (x1)
 step
     #requires bluemushroom
-    >> Cross the ocean to the island
+    >> 横渡大洋去岛上
     .goto Bloodmyst Isle,74.3,33.4
-    .accept 9687 >> Accept Restoring Sanctity
+    .accept 9687 >> 接受恢复圣洁
 step
 	#sticky
 	#completewith next
-	.deathskip >> Die and respawn at Blood Watch
+	.deathskip >> 在血液观察站死去并重生
 step
-    >> Talk to Maatparm
+    >> 与Maatparm交谈
     .goto Bloodmyst Isle,56.4,56.8
-    .turnin 9648,3 >> Turn in Maatparm Mushroom Menagerie << Warrior/Paladin
-    .turnin 9648 >> Turn in Maatparm Mushroom Menagerie << !Warrior !Paladin
-    .accept 9649 >> Accept Ysera's Tears
+    .turnin 9648,3 >> 交出马塔帕姆蘑菇动物园 << Warrior/Paladin
+    .turnin 9648 >> 交出马塔帕姆蘑菇动物园 << !Warrior !Paladin
+    .accept 9649 >> 接受Ysera的眼泪
 step
     .goto Bloodmyst Isle,55.4,55.4
-    >> Talk to Vindicator Boros
-    .turnin 9779 >> Turn in Intercepting the Message
-    .accept 9696 >> Accept Translations...
+    >> 与维护者Boros交谈
+    .turnin 9779 >> 转入拦截消息
+    .accept 9696 >> 接受翻译。。。
 step << !Rogue !Warlock
-    >> Speak with Elysia by the cage
+    >> 在笼子旁与爱丽西亚交谈
     .goto Bloodmyst Isle,54.5,54.5
-    .turnin 9696 >> Turn in Translations...
-    .accept 9698 >> Accept Audience with the Prophet
+    .turnin 9696 >> 提交翻译。。。
+    .accept 9698 >> 接受先知的观众
 step << Rogue/Warlock
-    >> Speak with Elysia by the cage
+    >> 在笼子旁与爱丽西亚交谈
     .goto Bloodmyst Isle,54.5,54.5
-    .turnin 9696 >> Turn in Translations...
+    .turnin 9696 >> 提交翻译。。。
 step
-    >> Into the house up the hill
+    >> 到山上的房子里
     .goto Bloodmyst Isle,52.6,53.3
-    .turnin 9628 >> Turn in Salvaging the Data
-    .accept 9584 >> Accept The Second Sample
+    .turnin 9628 >> 交上来挽救数据
+    .accept 9584 >> 接受第二个样本
 step
-    >> Talk to the dwarf by the tree
+    >> 与树边的侏儒交谈
     .goto Bloodmyst Isle,56.3,54.3
-    .accept 10063 >> Accept Explorers' League, Is That Something for Gnomes?
+    .accept 10063 >> 接受探险家联盟，这是侏儒的事吗？
 step << !Rogue !Warlock
 	.goto Bloodmyst Isle,57.9,53.5
-    .fly Exodar>> Fly to The Exodar
+    .fly Exodar>> 飞到外族人
 step << !Rogue !Warlock
     #completewith audience
 	.goto The Exodar,75.0,54.8,80,0
 	.goto The Exodar,64.4,42.4,80,0
-    .goto The Exodar,56.9,50.2,100 >> Head into the Exodar
+    .goto The Exodar,56.9,50.2,100 >> 头撞到外族人
 step << Mage/Priest
     #completewith hs1
     .goto The Exodar,46.6,61.2
-    .vendor 16632>>Buy a Smoldering Wand (13 dps) if you don't have a Wand yet
-    >>Aternatively, you can try to buy a better wand from the Auction house
+    .vendor 16632>>如果你还没有魔杖，请购买一个阴燃魔杖(13 dps)
+    >>你可以试着从拍卖行买一根更好的魔杖
     .collect 5208,1,0,1,1 --Smoldering Wand (1)
 step << Shaman
 	.goto The Exodar,49.5,36.9,70,0
 	.goto The Exodar,33.2,24.6
-	.trainer >> Train spells in The Exodar
+	.trainer >> 《异国他乡》中的火车咒语
 step << Mage
 	.goto The Exodar,51.0,46.8,80,0
 	.goto The Exodar,47.2,62.3,20,0
 	    .goto The Exodar,46.0,62.7
-    .trainer >> Train spells in The Exodar
+    .trainer >> 《异国他乡》中的火车咒语
 step << Hunter
 	.goto The Exodar,42,71.4,60,0
 	.goto The Exodar,54.5,85.6,60,0
 	.goto The Exodar,47.6,88.3
-	.trainer >> Train spells in The Exodar
+	.trainer >> 《异国他乡》中的火车咒语
 step << Warrior
 	.goto The Exodar,42,71.4,60,0
 	.goto The Exodar,54.5,85.6,60,0
 	.goto The Exodar,55.6,82.3
-	.trainer >> Train spells in The Exodar
+	.trainer >> 《异国他乡》中的火车咒语
 step << Priest
-    >> Enter The Exodar and train your spells
-    .trainer >> Train your class spells
+    >> 进入外族人并训练你的法术
+    .trainer >> 训练你的职业咒语
     .goto The Exodar,39.2,51.3
 step << !Rogue !Warlock
     #label audience
     .goto The Exodar,32.8,54.4
-    >> Speak with Velen
-    .turnin 9698 >> Turn in Audience with the Prophet
-    .accept 9699 >> Accept Truth or Fiction
+    >> 与Velen交谈
+    .turnin 9698 >> 将观众交给先知
+    .accept 9699 >> 接受真相还是虚构
 step << Druid
-    >>Teleport to Moonglade
+    >>传送至Moonglade
     .goto Moonglade,52.4,40.6
-    .trainer 12042 >> Train spells
+    .trainer 12042 >> 火车咒语
 step << !Warlock !Rogue
     #label hs1
-    .hs >> Hearth back to Blood Watch
+    .hs >> 炉灶回到Blood Watch
     .zoneskip Bloodmyst Isle
 step
-    >> Talk to Vindicator Aalesia
-    .accept 9569 >> Accept Containing the Threat
+    >> 与维护者Aalesia交谈
+    .accept 9569 >> 接受遏制威胁
     .goto Bloodmyst Isle,55.0,58.0
-    >> Talk to Boros
-    .turnin -9699 >> Turn in Truth or Fiction
+    >> 与米堡交谈
+    .turnin -9699 >> 提交真实或虚构
     .goto Bloodmyst Isle,55.4,55.4
-    .accept 9700 >> Accept I Shoot Magic Into the Darkness
+    .accept 9700 >> 接受我将魔法射入黑暗
 step
     .itemcount 23984,10
     .goto Bloodmyst Isle,55.4,55.2
-    .turnin 9642,3 >> Turn in More Irradiated Crystal Shards << Warrior/Paladin/Hunter/Rogue/Shaman
-    .turnin 9642,2 >> Turn in More Irradiated Crystal Shards << Warlock/Priest/Mage
-    .turnin 9642 >> Turn in More Irradiated Crystal Shards << Druid
+    .turnin 9642,3 >> 交出更多受辐照的晶体碎片 << Warrior/Paladin/Hunter/Rogue/Shaman
+    .turnin 9642,2 >> 交出更多受辐照的晶体碎片 << Warlock/Priest/Mage
+    .turnin 9642 >> 交出更多受辐照的晶体碎片 << Druid
 step
     .goto Bloodmyst Isle,45.7,47.9
-	.use 23875 >>Use the pick in your bags to collect the crystal sample
+	.use 23875 >>用你袋子里的镐来收集水晶样品
     .complete 9584,1 --Collect Altered Crystal Sample (x1)
 step
 	#sticky
 	#completewith gnomeyboi
 	#label constrictors
-    >>Kill Mutated Constrictors. Loot them for their Vines
+    >>杀死变异收缩肌。抢走他们的葡萄藤
     .complete 9643,1 --Collect Thorny Constrictor Vine (x6)
 step
 	#sticky
 	#completewith next
-	>>Kill Bears. Loot them for their Bear Flanks
+	>>杀死熊。抢他们的熊侧翼
 	.complete 9580,1 --Elder Brown Bear Flank (8)
 step
     #label gnomeyboi
     .goto Bloodmyst Isle,42.0,21.2
-    >> Talk to the gnome in the turtle shell
-    .turnin 10063 >> Turn in Explorers' League, Is That Something for Gnomes?
-    .accept 9548 >> Accept Pilfered Equipment
-    .accept 9549 >> Accept Artifacts of the Blacksilt
+    >> 与龟壳里的侏儒交谈
+    .turnin 10063 >> 加入探险家联盟，这是侏儒的事吗？
+    .accept 9548 >> 接受打桩设备
+    .accept 9549 >> 接受黑淤泥的人工制品
 step
 	.goto Bloodmyst Isle,42.0,21.2
-	.vendor >> Buy a Bronze Tube from Clopper Wizbang (limited supply), skip this step if he doesn't have it
+	.vendor >> 从Clopper Wizbang(限量供应)处购买青铜管，如果他没有，请跳过此步骤
 	.collect 4371,1,175,1,1
 	.bronzetube
 step
@@ -820,49 +820,49 @@ step
 	.goto Bloodmyst Isle,43.8,22.4,30,0
 	.goto Bloodmyst Isle,46.4,20.5,30,0
 	.goto Bloodmyst Isle,40.4,20.4
-    >>Loot the crate that can spawn in any of the murloc camps
+    >>抢劫可以在任何一个穆洛克营地产卵的板条箱
     .complete 9548,1 --Collect Clopper's Equipment (x1)
 step
     .goto Bloodmyst Isle,39.5,20.7
-	>> Kill and loot murlocs
+	>> 杀戮和掠夺墨洛克人
     .complete 9549,1 --Collect Crude Murloc Idol (x3)
     .complete 9549,2 --Collect Crude Murloc Knife (x6)
 step
     #requires crate
 	#label bloodmyst1
     .goto Bloodmyst Isle,42.1,21.2
-    .turnin 9548 >> Turn in Pilfered Equipment
-    .turnin 9549 >> Turn in Artifacts of the Blacksilt
+    .turnin 9548 >> 交还被盗设备
+    .turnin 9549 >> 交出黑淤泥的文物
 step
     .goto Bloodmyst Isle,42.1,21.2
-	.vendor >> Buy a Bronze Tube from Clopper Wizbang (limited supply), skip this step if he doesn't have it or if you already have one
+	.vendor >> 从Clopper Wizbang(限量供应)处购买青铜管，如果他没有或你已经有了，请跳过此步骤
 	.collect 4371,1,175,1,1
 	.bronzetube
 step
 	#sticky
 	#completewith gnome
-    >>Kill Mutated Constrictors. Loot them for their Vines
+    >>杀死变异收缩肌。抢走他们的葡萄藤
     .complete 9643,1 --Collect Thorny Constrictor Vine (x6)
 step
 	#sticky
 	#completewith vinesdoneboss
-	>>Kill Bears. Loot them for their Bear Flanks
+	>>杀死熊。抢他们的熊侧翼
 	.complete 9580,1 --Elder Brown Bear Flank (8)
 step
     .goto Bloodmyst Isle,53.1,20.3
-    .use 23837 >>Click on the Weathered Treasure Map in your bags from the Artifacts of the Blacksilt quest
+    .use 23837 >>点击你袋子里的黑色淤泥任务的人工制品中的风化藏宝图
 	.collect 23837,1,9550 --Collect Weathered Treasure Map (x1)
-    .accept 9550 >> Accept A Map to Where?
+    .accept 9550 >> 接受指向何处的地图？
 step
 	#sticky
 	#label SunPortalSite
     .goto Bloodmyst Isle,53.1,20.3
-	>>Get close to the spaceship like building
+	>>靠近飞船般的建筑
 	.complete 9700,1 --Sun Portal Site Confirmed (1)
 step
     #label gnome
     .goto Bloodmyst Isle,52.5,25.2
-	>>Kill the Void Anomalies in the area
+	>>消灭该区域的虚空异常
     .complete 9700,2 --Kill Void Anomaly (x5)
 step
     #requires SunPortalSite
@@ -876,106 +876,106 @@ step
 	.goto Bloodmyst Isle,39.0,48.1,120,0
 	.goto Bloodmyst Isle,42.5,49.3,100,0
 	.goto Bloodmyst Isle,47.6,24.9
-    >>Finish killing Mutated Constrictors and looting them for their Vines
+    >>杀死变异的Constrictors并掠夺他们的葡萄藤
 	.complete 9643,1 --Collect Thorny Constrictor Vine (x6)
 step
     .goto Bloodmyst Isle,54.0,30.9,60,0
     .goto Bloodmyst Isle,53.9,35.4,60,0
     .goto Bloodmyst Isle,57.0,34.3,60,0
     .goto Bloodmyst Isle,56.1,40.2
-	>>Loot the Dragon Bones on the ground in the tree camps. Try to end towards the southeast side.
+	>>在树营地的地上抢劫龙骨。尽量朝东南方向结束。
     .complete 9687,1 --Collect Dragon Bone (x8)
 step
     .goto Bloodmyst Isle,61.1,41.9
-    >> Talk to the book in the ruins
-    .turnin 9550 >> Turn in A Map to Where?
-    .accept 9557 >> Accept Deciphering the Book
+    >> 与废墟中的书交谈
+    .turnin 9550 >> 交一张地图到哪里？
+    .accept 9557 >> 接受解读书籍
 step
-    .hs >> Hearth or run back into town and talk to Anchorite Paetheus. Don't wait for his roleplay sequence.
+    .hs >> 听到或跑回镇上与安克丽特·帕修斯交谈。不要等待他的角色扮演序列。
     .goto Bloodmyst Isle,54.7,54.1
-    .turnin 9557 >> Turn in Deciphering the Book
+    .turnin 9557 >> 交上来解密这本书
 step
-    >> Head into the building up the hill
+    >> 向山上的大楼走去
     .goto Bloodmyst Isle,52.6,53.3
-    .turnin 9584 >> Turn in The Second Sample
-    .accept 9585 >> Accept The Final Sample
-    .accept 10064 >> Accept Talk to the Hand
+    .turnin 9584 >> 交第二个样本
+    .accept 9585 >> 接受最终样品
+    .accept 10064 >> 接受与手交谈
 step
-    >> Return to the Anchorite
+    >> 返回安克雷特
     .goto Bloodmyst Isle,54.7,54.0
-    .accept 9561 >> Accept Nolkai's Words
+    .accept 9561 >> 接受诺凯的话
 step
     .goto Bloodmyst Isle,55.4,55.2
-    .turnin 9700,3 >> Turn in I Shoot Magic Into the Darkness << Warrior/Paladin
-    .turnin 9700 >> Turn in I Shoot Magic Into the Darkness << !Warrior !Paladin
-    .accept 9703 >> Accept The Cryo-Core
+    .turnin 9700,3 >> 我把魔法投向黑暗 << Warrior/Paladin
+    .turnin 9700 >> 我把魔法投向黑暗 << !Warrior !Paladin
+    .accept 9703 >> 接受Cryo Core
 step
     .itemcount 23984,10
     .goto Bloodmyst Isle,55.4,55.2
-    .turnin 9642,3 >> Turn in More Irradiated Crystal Shards << Warrior/Paladin/Hunter/Rogue/Shaman
-    .turnin 9642,2 >> Turn in More Irradiated Crystal Shards << Warlock/Priest/Mage
-    .turnin 9642 >> Turn in More Irradiated Crystal Shards << Druid
+    .turnin 9642,3 >> 交出更多受辐照的晶体碎片 << Warrior/Paladin/Hunter/Rogue/Shaman
+    .turnin 9642,2 >> 交出更多受辐照的晶体碎片 << Warlock/Priest/Mage
+    .turnin 9642 >> 交出更多受辐照的晶体碎片 << Druid
 step
 	#label flutterers
-    >> Speak to Tracker Lyceon
+    >> 与Tracker Lyceon交谈
     .goto Bloodmyst Isle,55.9,56.9
-    .turnin 9643 >> Turn in Constrictor Vines
-    .accept 9647 >> Accept Culling the Flutterers
+    .turnin 9643 >> 收起Constrictor Vines
+    .accept 9647 >> 接受筛选颤抖者
 step
 	.goto Bloodmyst Isle,55.9,56.9
 	.isQuestComplete 9580
-	.turnin 9580 >> Turn in The Bear Neccessities
+	.turnin 9580 >> 交出熊的必需品
 step
 	#requires flutterers
 	#sticky
 	#completewith bloodmyst2
-	>>Kill flutterers as you quest
+	>>在你的任务中杀死飞翔者
     .complete 9647,1 --Kill Royal Blue Flutterer (x10)
 step
     .goto Bloodmyst Isle,37.5,61.3
-    >> Prioritize turning in the quest, don't grind elves yet.
-    .turnin 9578 >> Turn in Searching for Galaen
-    .accept 9579 >> Accept Galaen's Fate
-    .accept 9706 >> Accept Galaen's Journal - The Fate of Vindicator Saruan
+    >> 优先处理任务中的转向，不要研磨精灵。
+    .turnin 9578 >> 转身寻找加伦
+    .accept 9579 >> 接受加伦的命运
+    .accept 9706 >> 接受加伦杂志-维护者萨鲁的命运
 step
     .goto Bloodmyst Isle,37.8,58.9
-	>>Kill and loot blood elves around this area
+	>>杀戮和掠夺附近的血精灵
     .complete 9579,1 --Collect Galaen's Amulet (x1)
     .complete 9703,1 --Collect Medical Supplies (x12)
 step
     .isQuestComplete 9579
-    >> Return to town
+    >> 返回城镇
     .goto Bloodmyst Isle,53.3,57.7
-    .turnin 9579 >> Turn in Galaen's Fate
+    .turnin 9579 >> 交出加伦的命运
 step
-    >> Talk to Achelus
+    >> 与Achelus交谈
     .goto Bloodmyst Isle,53.3,57.2
-    .accept 9669 >> Accept The Missing Expedition
+    .accept 9669 >> 接受缺失的远征
 step
     #completewith next
     .goto Bloodmyst Isle,53.3,56.7
-    .vendor >> Vendor and repair
+    .vendor >> 供应商和维修
 step
-    >> Talk to Vindicator Kuros
+    >> 与维护者Kuros交谈
     .goto Bloodmyst Isle,55.6,55.1
-    .turnin 9703,1 >> Turn in The Cryo-Core << Paladin
-    .turnin 9703 >> Turn in The Cryo-Core << !Paladin
-    .turnin 9706 >> Turn in Galaen's Journal - The Fate of Vindicator Saruan
-    .accept 9711 >> Accept Matis the Cruel
-    .accept 9748 >> Accept Don't Drink the Water
+    .turnin 9703,1 >> 交回Cryo Core << Paladin
+    .turnin 9703 >> 交回Cryo Core << !Paladin
+    .turnin 9706 >> 上交加伦杂志——维护者萨鲁的命运
+    .accept 9711 >> 接受残酷的马蒂斯
+    .accept 9748 >> 接受不要喝水
 step
 	#sticky
 	#completewith bearend
     .isOnQuest 9580
-	>>Kill Bears. Loot them for their Bear Flanks
+	>>杀死熊。抢他们的熊侧翼
 	.complete 9580,1 --Elder Brown Bear Flank (8)
 step
     .goto Bloodmyst Isle,41.3,30.6
-	.use 23875 >>Use the pick in your bags to collect the crystal sample
+	.use 23875 >>用你袋子里的镐来收集水晶样品
     .complete 9585,1 --Collect Axxarien Crystal Sample (x1)
 step
     .goto Bloodmyst Isle,41.9,29.6
-	>>Kill Satyrs and collect crystals around the camps
+	>>杀死萨蒂尔，在营地周围收集水晶
     .complete 9569,1 --Kill Zevrax (x1)
     .complete 9569,2 --Kill Axxarien Shadowstalker (x5)
     .complete 9569,3 --Kill Axxarien Hellcaller (x5)
@@ -987,85 +987,85 @@ step
     .goto Bloodmyst Isle,22.4,54.3,40,0
     .goto Bloodmyst Isle,43.9,43.7
 	.line Bloodmyst Isle,43.1,43.7,36.5,47.2,33.5,47.1,29.9,51.8,27.7,51.8,25.1,54.1,22.0,54.3
-    .use 24278 >>Look for Matis the Cruel, he patrols the main road next to Vindicator's Rest
+    .use 24278 >>寻找残忍的马蒂斯，他在维护者休息处旁边的主要道路上巡逻
     .complete 9711,1 --Capture Matis the Cruel
 	*Once you find him, use the flare in your bags to summon a Draenei NPC to assist you
 	*The flare gun only have 1 charge, if you fail this quest, you will have to abandon it
 	.unitscan Matis the Cruel
 step
     .goto Bloodmyst Isle,30.3,45.8
-    >> Talk to the Scouts at Vindicator's Rest
-    .turnin 10064 >> Turn in Talk to the Hand
-    .accept 10065 >> Accept Cutting a Path
-    .accept 9741 >> Accept Critters of the Void
+    >> 与维护者休息处的侦察员交谈
+    .turnin 10064 >> 转身和手说话
+    .accept 10065 >> 接受剪切路径
+    .accept 9741 >> 接受虚空的怪物
 step
-    >> Talk to Vindicator Corin
+    >> 与维护者Corin交谈
     .goto Bloodmyst Isle,30.8,46.8
-    .accept 10066 >> Accept Oh, the Tangled Webs They Weave
-    .accept 10067 >> Accept Fouled Water Spirits
+    .accept 10066 >> 接受哦，他们编织的纠结网
+    .accept 10067 >> 接受污水灵
 step
     #sticky
     #completewith next
     #label ravager3
-    >>Kill Ravagers and Tanglers as you quest
+    >>在你的任务中杀死掠夺者和探戈者
     .goto Bloodmyst Isle,30.3,57.2,0
     .complete 10066,1 --Kill Mutated Tangler (x8)
     .complete 10065,1 --Kill Enraged Ravager (x10)
 step
     .goto Bloodmyst Isle,19.6,63.2
-    >> You have to kill the anomalies in the water to eventually spawn the Critters
+    >> 你必须杀死水中的异常才能最终繁殖出怪物
     .complete 9741,1 --Kill Void Critter (x12)
 step
     #label ravager4
-    >>Finish off the Ravagers and Tanglers
+    >>消灭掠夺者和探戈者
     .goto Bloodmyst Isle,30.3,57.2
     .complete 10066,1 --Kill Mutated Tangler (x8)
     .complete 10065,1 --Kill Enraged Ravager (x10)
 step
     #requires ravager4
 	#label bloodmyst2
-    >> Return to Vindicator's Rest
-    .turnin 10066 >> Turn in Oh, the Tangled Webs They Weave
+    >> 返回维护者的休息
+    .turnin 10066 >> 哦，他们编织的纠结网
     .goto Bloodmyst Isle,30.7,46.9
-    .turnin 10065 >> Turn in Cutting a Path
+    .turnin 10065 >> 转弯切割路径
     .goto Bloodmyst Isle,30.3,46.0
 step
     .goto Bloodmyst Isle,38.4,47
-	>>Finish killing and looting Bears and Flutterers. Flutterers can typically be found near the Cyro Core. Bears north of the road towards Axxarien. Try to end on the north side.
+	>>完成熊和飞舞者的杀戮和掠夺。颤振器通常可以在Cyro Core附近找到。在通往Axxarien的道路北侧。尽量在北侧结束。
     .complete 9647,1 --Kill Royal Blue Flutterer (10)
 	.complete 9580,1 --Elder Brown Bear Flank (8)
 step
     .goto Bloodmyst Isle,29.6,39.5
-	>>Kill the Fouled Water Spirits in the area
+	>>杀死该地区的污水灵
     .complete 10067,1 --Kill Fouled Water Spirit (x6)
 step
     .goto Bloodmyst Isle,30.7,46.8
-    >> Quickly go back and turn in the quest
-    .turnin 10067 >> Turn in Fouled Water Spirits
+    >> 快速返回并返回任务
+    .turnin 10067 >> 交出污水灵
 step
     .goto Bloodmyst Isle,24.9,34.3
-    >> Head back north past the water elementals and talk to Researcher Cornelius
-    .accept 9670 >> Accept They're Alive! Maybe...
+    >> 返回北方，经过水元素，与科尼利厄斯研究员交谈
+    .accept 9670 >> 接受他们还活着！大概
 step
 	#sticky
 	#label Researchers
-	>>Destroy the egg sacs around this area. Kill them from range if possible as to not aggro potential mobs inside
+	>>破坏这个区域周围的卵囊。如果可能的话，在射程内杀死他们，以免激怒潜在的暴徒
     .goto Bloodmyst Isle,18.2,38.0,0,0
     .complete 9670,1 --Expedition Researcher Freed (5)
 step
     .goto Bloodmyst Isle,21.4,36.0,70,0
     .goto Bloodmyst Isle,17.2,28.4,40,0
     .goto Bloodmyst Isle,18.2,38.0
-	>>Kill the Myst Leechers and Spinners in the area, then kill Zarakh atop the mountain
+	>>杀死该地区的神秘水蛭和纺纱者，然后在山顶杀死扎拉克
     .complete 9669,1 --Kill Myst Leecher (x8)
     .complete 9669,2 --Kill Myst Spinner (x8)
     .complete 9669,3 --Kill Zarakh (x1)
 step
 	#requires Researchers
 	#label AliveM
-    >> Return to the Researcher
+    >> 返回研究员
     .goto Bloodmyst Isle,24.9,34.4
-    .turnin 9670 >> Turn in They're Alive! Maybe...
+    .turnin 9670 >> 上车他们还活着！大概
 step
     .goto Bloodmyst Isle,43.9,43.7,70,0
     .goto Bloodmyst Isle,30.1,51.7,70,0
@@ -1075,210 +1075,210 @@ step
     .goto Bloodmyst Isle,22.4,54.3,70,0
     .goto Bloodmyst Isle,30.1,51.7
 	.line Bloodmyst Isle,43.1,43.7,36.5,47.2,33.5,47.1,29.9,51.8,27.7,51.8,25.1,54.1,22.0,54.3
-    .use 24278 >>Look for Matis the Cruel, he patrols the main road next to Vindicator's Rest
+    .use 24278 >>寻找残忍的马蒂斯，他在维护者休息处旁边的主要道路上巡逻
     .complete 9711,1 --Capture Matis the Cruel
 	*Once you find him, use the flare in your bags to summon a Draenei NPC to assist you
 	*The flare gun only have 1 charge, if you fail this quest, you will have to abandon it
 	.unitscan Matis the Cruel
 step
     .goto Bloodmyst Isle,34.3,33.6
-	.use 24318 >>Use the Sampling Vial in your bags at the base of the waterfall
+	.use 24318 >>使用瀑布底部袋子中的取样瓶
     .complete 9748,1 --Collect Bloodmyst Water Sample (x1)
 step
     .goto Bloodmyst Isle,37.4,30.1
-	>>Kill the named bear. Loot him for his claw
+	>>杀死指定的熊。抢他的爪子
     .complete 9646,1 --Collect Deathclaw's Paw (x1)
 step << Druid
     #sticky
     #completewith next
     .goto Moonglade,44.1,45.2
-    >>Teleport to Moonglade
-    .fly Teldrassil>> Fly to Teldrassil
+    >>传送至Moonglade
+    .fly Teldrassil>> 飞往Teldrassil
 step << Druid
     .goto Darnassus,35.3,8.5
-    .accept 26 >> Accept A Lesson to Learn << tbc
-    .accept 6121 >> Accept Lessons Anew
+    .accept 26 >> 接受教训以学习 << tbc
+    .accept 6121 >> 接受新的教训
 step << Druid
     .goto Moonglade,56.1,30.7
-    >>Teleport to Moonglade
-    .turnin 6121 >> Turn in Lessons Anew
-    .accept 6122 >> Accept The Principal Source
-    .turnin 26 >> Turn in A Lesson to Learn << tbc
-    .accept 29 >> Accept Trial of the Lake << tbc
+    >>传送至Moonglade
+    .turnin 6121 >> 新上的课
+    .accept 6122 >> 接受主要来源
+    .turnin 26 >> 交一堂课来学习 << tbc
+    .accept 29 >> 接受湖的审判 << tbc
 step << Druid tbc
     .goto Moonglade,52.6,51.6
-    >>Dive into the lake and look for a Shrine Bauble, it looks like a small red jar
+    >>潜入湖中，寻找Shrine Bauble，它看起来像一个红色的小罐子
     .complete 29,1 --Complete the Trial of the Lake.
 step << Druid tbc
     .goto Moonglade,36.5,40.1
-    .turnin 29 >> Turn in Trial of the Lake
-    .accept 272 >> Accept Trial of the Sea Lion
+    .turnin 29 >> 《湖的试航》(Turn in Trial of the Lake)
+    .accept 272 >> 接受海狮的审判
 step
 	#completewith next
-    .hs >> Hearth to Blood Watch
+    .hs >> 心脏到血液观察
 step
     .goto Bloodmyst Isle,55.0,58.1
-    >> Talk to Vindicator Aalesia
-    .turnin 9569,1 >> Turn in Containing the Threat << Hunter
-    .turnin 9569,2 >> Turn in Containing the Threat << Warlock/Mage/Priest
-    .turnin 9569 >> Turn in Containing the Threat << !Warlock !Hunter !Mage !Priest
+    >> 与维护者Aalesia交谈
+    .turnin 9569,1 >> 转而遏制威胁 << Hunter
+    .turnin 9569,2 >> 转而遏制威胁 << Warlock/Mage/Priest
+    .turnin 9569 >> 转而遏制威胁 << !Warlock !Hunter !Mage !Priest
 step
-    >> Talk to Achelus
+    >> 与Achelus交谈
     .goto Bloodmyst Isle,53.4,57.1
-    .turnin 9669 >> Turn in The Missing Expedition
+    .turnin 9669 >> 交出失踪的探险队
 step
     #completewith next
-    .vendor >> Vendor and repair
+    .vendor >> 供应商和维修
 step
-    >> Go into the building up the hill
+    >> 到山上的大楼里去
     .goto Bloodmyst Isle,52.7,53.3
-    .turnin 9585 >> Turn in The Final Sample
-    .turnin 9646 >> Turn in WANTED: Deathclaw
+    .turnin 9585 >> 提交最终样本
+    .turnin 9646 >> 通缉犯：死亡爪
 step
-    >> Talk to Anchorite Paetheus
+    >> 与安克丽特·帕修斯交谈
     .goto Bloodmyst Isle,54.7,54.1
-    .accept 9632 >> Accept Newfound Allies
+    .accept 9632 >> 接受新发现的盟友
 step
-	>> Talk to the Vindicators
+	>> 与维护者交谈
     .goto Bloodmyst Isle,55.6,55.3
-    .turnin 9741 >> Turn in Critters of the Void
-    .turnin 9748 >> Turn in Don't Drink the Water
-    .turnin 9711,3 >> Turn in Matis the Cruel << Warrior/Paladin
-    .turnin 9711 >> Turn in Matis the Cruel << !Warrior !Paladin
-	.trainer >>Train class spells at Vindicator Aesom. << Paladin
+    .turnin 9741 >> 《空虚的怪物》
+    .turnin 9748 >> 睡觉，不要喝水
+    .turnin 9711,3 >> 把残忍的马蒂斯交出来 << Warrior/Paladin
+    .turnin 9711 >> 把残忍的马蒂斯交出来 << !Warrior !Paladin
+	.trainer >>维护者埃索的火车课咒语。 << Paladin
 step
     .itemcount 23984,10
     .goto Bloodmyst Isle,55.4,55.2
-    .turnin 9642,3 >> Turn in More Irradiated Crystal Shards << Warrior/Paladin/Hunter/Rogue/Shaman
-    .turnin 9642,2 >> Turn in More Irradiated Crystal Shards << Warlock/Priest/Mage
-    .turnin 9642 >> Turn in More Irradiated Crystal Shards << Druid
+    .turnin 9642,3 >> 交出更多受辐照的晶体碎片 << Warrior/Paladin/Hunter/Rogue/Shaman
+    .turnin 9642,2 >> 交出更多受辐照的晶体碎片 << Warlock/Priest/Mage
+    .turnin 9642 >> 交出更多受辐照的晶体碎片 << Druid
 step
 	#label bearend
-    >> Talk to Tracker Lyceon
+    >> 与Tracker Lyceon交谈
     .goto Bloodmyst Isle,55.9,56.9
-    .turnin 9647,3 >> Turn in Culling the Flutterers << Warrior/Paladin
-    .turnin 9647 >> Turn in Culling the Flutterers << !Warrior !Paladin
-    .turnin 9580 >> Turn in The Bear Necessities
+    .turnin 9647,3 >> 轮流淘汰颤抖者 << Warrior/Paladin
+    .turnin 9647 >> 轮流淘汰颤抖者 << !Warrior !Paladin
+    .turnin 9580 >> 交出熊的必需品
 step << Paladin wotlk
     .xp <20,1
     .goto Bloodmyst Isle,55.6,55.3
-    .train 13819 >> Train your mount spell, it will be under your "pet" tab of your character panel
+    .train 13819 >> 训练你的坐骑法术，它将在你角色面板的“宠物”标签下
 step
-    >> Head to the naga ruins
+    >> 前往那加废墟
     .goto Bloodmyst Isle,61.4,49.6
-    .turnin 9561 >> Turn in Nolkai's Words
+    .turnin 9561 >> 交出诺凯的话
 step
-    >> Swim to the island
+    >> 游到岛上
     .goto Bloodmyst Isle,74.6,33.6
-    .turnin 9687 >> Turn in Restoring Sanctity
-    .accept 9688 >> Accept Into the Dream
+    .turnin 9687 >> 交回恢复圣洁
+    .accept 9688 >> 接受梦想
 step
 	#sticky
     .goto Bloodmyst Isle,70.6,25.7,0
-	>>Collect the small mushrooms on the ground
+	>>收集地上的小蘑菇
     .complete 9649,1 --Collect Ysera's Tear (x2)
 step
     .goto Bloodmyst Isle,71.5,27.8
-	>>Kill whelps
+	>>杀死幼崽
     .complete 9688,1 --Kill Veridian Whelp (x5)
     .complete 9688,2 --Kill Veridian Broodling (x5)
 step
-    >> Return to the Prince
+    >> 回到王子身边
     .goto Bloodmyst Isle,74.3,33.4
-    .turnin 9688 >> Turn in Into the Dream
-    .accept 9689 >> Accept Razormaw
+    .turnin 9688 >> 变成梦想
+    .accept 9689 >> 接受Razormaw
 step
     .goto Bloodmyst Isle,73.0,21.0
-	>>Climb to the top of the mountain and click on the bonfire to summon Razormaw (elite). He can take some time to spawn in.
+	>>爬到山顶，点击篝火召唤剃须刀(精英)。他可以花一些时间来产卵。
     *Note: He can fear
     .complete 9689,1 --Kill Razormaw (x1)
     *This quest can be tough, skip this step if you can't find a group or solo this quest
 step
-    >> Return to the Prince
+    >> 回到王子身边
     .goto Bloodmyst Isle,74.3,33.4
-    .turnin 9689,2 >> Turn in Razormaw << Warrior/Paladin
-    .turnin 9689,3 >> Turn in Razormaw << Rogue/Hunter
-    .turnin 9689,1 >> Turn in Razormaw << Mage/Warlock/Priest
-    .turnin 9689 >> Turn in Razormaw << Druid/Shaman
+    .turnin 9689,2 >> 交给Razormaw << Warrior/Paladin
+    .turnin 9689,3 >> 交给Razormaw << Rogue/Hunter
+    .turnin 9689,1 >> 交给Razormaw << Mage/Warlock/Priest
+    .turnin 9689 >> 交给Razormaw << Druid/Shaman
 step << Hunter/Warlock/Mage
     #completewith next
     .goto Bloodmyst Isle,24.8,51.3
-    >>Do Limits of Physical Exhaustion if you still need XP
+    >>如果你仍然需要XP，那么做体力消耗的极限
     .complete 9746,1 --Kill Sunhawk Pyromancer (x10)
     .complete 9746,2 --Kill Sunhawk Defender (x10)
-    >>Skip this quest if you are already past the XP checkpoint
+    >>如果您已经通过XP检查点，请跳过此任务
 step << Hunter/Warlock/Mage
 	.xp 20-1350
-    >>You'll need to hit level 20 before leaving Bloodmyst
+    >>你需要达到20级才能离开血腥结晶
 step
     #completewith next
-    .deathskip >> Die and respawn at Blood Watch
+    .deathskip >> 在血液观察站死去并重生
 step
     .goto Bloodmyst Isle,56.4,56.7
-    .turnin 9649 >> Turn in Ysera's Tears
+    .turnin 9649 >> 交上伊瑟拉的眼泪
 step
     .itemcount 23984,10
     .goto Bloodmyst Isle,55.4,55.2
-    .turnin 9642,3 >> Turn in More Irradiated Crystal Shards << Warrior/Paladin/Hunter/Rogue/Shaman
-    .turnin 9642,2 >> Turn in More Irradiated Crystal Shards << Warlock/Priest/Mage
-    .turnin 9642 >> Turn in More Irradiated Crystal Shards << Druid
+    .turnin 9642,3 >> 交出更多受辐照的晶体碎片 << Warrior/Paladin/Hunter/Rogue/Shaman
+    .turnin 9642,2 >> 交出更多受辐照的晶体碎片 << Warlock/Priest/Mage
+    .turnin 9642 >> 交出更多受辐照的晶体碎片 << Druid
 step << Paladin
 	#completewith next
 	#level20
 	.goto Bloodmyst Isle,55.6,55.3
-	>>Train at Vindicator Aesom
+	>>Vindicator Esom培训
 step
 	#sticky
 	#completewith next
 	.goto Bloodmyst Isle,57.5,54.2
-    >>Make sure you are level 20 before leaving Bloodmyst << Hunter/Warlock/Mage
-    .fly Exodar>> Fly to the Exodar
+    >>在离开血腥结晶之前，确保你已经20级了 << Hunter/Warlock/Mage
+    .fly Exodar>> 飞到外族人那里
 step << Shaman
 	.goto The Exodar,49.5,36.9,70,0
 	.goto The Exodar,33.2,24.6
-	.trainer >> Train spells in The Exodar
+	.trainer >> 《异国他乡》中的火车咒语
 step << Mage
 	.goto The Exodar,51.0,46.8,80,0
 	.goto The Exodar,47.2,62.3,20,0
 	    .goto The Exodar,46.0,62.7
-    .trainer >> Train spells and teleportation in The Exodar
+    .trainer >> 在《异国他乡》中训练魔法和传送
 step << Mage
-    >>Buy 1 Rune of Teleportation
+    >>购买1个传送符文
     .collect 17031,1
     .goto The Exodar,44.8,63.2
 step << Hunter
 	.goto The Exodar,42,71.4,60,0
 	.goto The Exodar,54.5,85.6,60,0
 	.goto The Exodar,47.6,88.3
-	.trainer >> Train spells in The Exodar
+	.trainer >> 《异国他乡》中的火车咒语
 step << Warrior
 	.goto The Exodar,42,71.4,60,0
 	.goto The Exodar,54.5,85.6,60,0
 	.goto The Exodar,55.6,82.3
-	.trainer >> Train spells in The Exodar
+	.trainer >> 《异国他乡》中的火车咒语
 step << Priest
-    >> Enter The Exodar and buy a Burning Wand from the vendor
+    >> 进入The Exodar并从供应商处购买燃烧魔杖
     .collect 5210,1
     .goto The Exodar,46.4,61.4
-    .trainer >> Train your class spells
+    .trainer >> 训练你的职业咒语
     .goto The Exodar,39.2,51.3
 step
     .goto Azuremyst Isle,24.2,54.3
-	>>Talk to the Night Elf just outside of The Exodar back entrance
-    .turnin 9632 >> Turn in Newfound Allies
-    .accept 9633 >> Accept The Way to Auberdine
+	>>在外族人后门外面与暗夜精灵交谈
+    .turnin 9632 >> 交出新发现的盟友
+    .accept 9633 >> 接受通往奥伯丁的路
 step << !Druid
-    >>Head to the docks right next to the Night Elf you just spoke with. Level first aid while waiting.
+    >>前往你刚刚与之交谈的夜精灵旁边的码头。等待时进行水平急救。
     .goto Azuremyst Isle,20.4,54.2
-    .zone Darkshore >> Take the boat to Darkshore
+    .zone Darkshore >> 乘船去黑海岸
 step << Druid
     #completewith next
-    >>Teleport to Moonglade
+    >>传送至Moonglade
     .goto Moonglade,52.4,40.6
-    .trainer 12042 >> Train spells
+    .trainer 12042 >> 火车咒语
 step << Druid
     .goto Moonglade,48.1,67.2
-    .fly Auberdine>>Fly to Darkshore
+    .fly Auberdine>>飞到黑海岸
 
 ]])
 
@@ -1286,137 +1286,137 @@ RXPGuides.RegisterGuide([[
 #tbc
 #wotlk
 << Alliance !Warlock
-#name 20-21 Darkshore
+#name 20-21 黑海岸
 #version 1
-#group RestedXP Alliance 20-32
+#group RestedXP 联盟 20-32
 #defaultfor !Draenei
-#next 21-23 Ashenvale
+#next 21-23 灰谷
 step << NightElf wotlk
     .goto Darnassus,38.6,15.6
-    >> Take the boat or fly to Darnassus
-    .skill riding,1 >> Train riding skill and buy a mount
+    >> 乘船或飞往达纳苏斯
+    .技巧 riding,1 >> 训练骑术并购买坐骑
     .money <4.60
 step
 #xprate <1.5
     .maxlevel 21
     .goto Darkshore,36.1,44.9
-    .accept 1138 >> Accept Fruit of the Sea
+    .accept 1138 >> 接受大海的果实
 step
-    >> Talk to the Wanted Poster outside the inn
+    >> 与客栈外的通缉海报交谈
     .goto Darkshore,37.2,44.2
-    .accept 4740 >> Accept WANTED: Murkdeep!
+    .accept 4740 >> 接受通缉令：Murkdeep！
 step
 #xprate <1.5 << !Druid
     .maxlevel 21
     .goto Darkshore,37.3,43.7
-    .accept 947 >> Accept Cave Mushrooms
+    .accept 947 >> 接受洞穴蘑菇
 step
-    >> Talk to the dwarf by the town hall
+    >> 在市政厅旁与侏儒交谈
     .goto Darkshore,37.5,41.8
-    .accept 729 >> Accept The Absent Minded Prospector
+    .accept 729 >> 接受心不在焉的探矿者
 step
 #xprate <1.5
     .maxlevel 21
     .isQuestComplete 4762
     .goto Darkshore,37.4,40.1
-    .accept 4763 >> Accept The Blackwood Corrupted
+    .accept 4763 >> 接受Blackwood Corrupted
 step
 #xprate >1.5
     .isOnQuest 9633
     .goto Darkshore,37.4,40.2
-    .turnin 9633 >> Turn in The Way to Auberdine
-    .accept 10752 >> Accept Onward to Ashenvale
+    .turnin 9633 >> 在通往奥伯丁的路上转弯
+    .accept 10752 >> 接受前往灰谷
 step
 #xprate <1.5
     .maxlevel 21
     .goto Darkshore,38.1,41.2
-    .accept 982 >> Accept Deep Ocean, Vast Sea
+    .accept 982 >> 接受深海，浩瀚大海
 step
-    >> Talk to Gershala in the shrine
+    >> 在神殿里与格沙拉交谈
     .goto Darkshore,38.37,43.05
-    .accept 1275 >> Accept Researching the Corruption
+    .accept 1275 >> 接受腐败调查
 step
 #xprate <1.5
     .maxlevel 21
     .goto Darkshore,38.8,43.5
-    .accept 2139 >> Accept Tharnariun's Hope
+    .accept 2139 >> 接受塔纳瑞恩的希望
 	.isQuestTurnedIn 2138
 step
 #xprate <1.5
     .goto Darkshore,39.3,43.5
-    .accept 986 >> Accept A Lost Master
+    .accept 986 >> 接受丢失的主人
     .isQuestTurnedIn 985
 step
 #xprate <1.5 << !Druid
     .maxlevel 21
     .goto Darkshore,39.1,43.5
-    .accept 965 >> Accept The Tower of Althalaxx
+    .accept 965 >> 接受Althalaxx塔
 step
 #xprate <1.5
     .goto Darkshore,37.8,44.0
-    .use 12346 >>Fill the empty bowl at the moonwell
+    .use 12346 >>把月亮井的空碗装满
     .collect 12347,1,4763,1 --Collect Filled Cleansing Bowl (x1)
     .isOnQuest 4763
 step
     .isOnQuest 9633
     .goto Darkshore,37.4,40.2
-	.turnin 9633 >> Turn in The Way to Auberdine
-    .accept 10752 >> Accept Onward to Ashenvale
+	.turnin 9633 >> 在通往奥伯丁的路上转弯
+    .accept 10752 >> 接受前往灰谷
 step
 #xprate <1.5
     .isOnQuest 982
     .goto Darkshore,38.2,28.8
-	>>Enter the sunken ship through the hole on the hull and loot the chest at the bottom floor
+	>>通过船体上的洞进入沉船，并在底层抢劫箱子
     .complete 982,1 --Collect Silver Dawning's Lockbox (x1)
 step
 #xprate <1.5
     .isOnQuest 982
     .goto Darkshore,39.6,27.5
-	>>Enter the sunken ship through the hole on the hull and loot the chest at the bottom floor
+	>>通过船体上的洞进入沉船，并在底层抢劫箱子
     .complete 982,2 --Collect Mist Veil's Lockbox (x1)
 step
 #xprate <1.5
 	#sticky
     #completewith crabraveboys
-	>>Kill Reef Crawlers and Encrusted Tide Crawlers along the coast
+	>>杀死沿岸的珊瑚虫和结壳潮汐虫
     .complete 1138,1 --Collect Fine Crab Chunks (x6)
 step--murlocs
 #xprate <1.5 << !Druid
     .maxlevel 21
     .goto Darkshore,44.2,20.7
-    .accept 4725 >> Accept Beached Sea Turtle
+    .accept 4725 >> 接受海滩海龟
     .isQuestTurnedIn 4681
 step << Druid tbc
     .goto Darkshore,48.9,11.3
-    >>Loot the small lockbox underwater, located in between 2 big stones
+    >>在水下抢劫位于两块大石头之间的小锁盒
     .collect 15883,1 --Collect Half Pendant of Aquatic Agility (x1)
 step--encrusted crawlers
 #xprate <1.5
     .maxlevel 21
     .goto Darkshore,53.1,18.2
-    .accept 4727 >> Accept Beached Sea Turtle
+    .accept 4727 >> 接受海滩海龟
     .isQuestTurnedIn 4681
 step
 #xprate <1.5
     .isOnQuest 2098
-	>>Start heading north while grinding crabs along the coast
+	>>开始向北行驶，同时沿着海岸磨螃蟹
     .goto Darkshore,56.7,13.5
-    .accept 2098 >> Accept Gyromast's Retrieval
+    .accept 2098 >> 接受陀螺仪的检索
 step
 #xprate <1.5
 	#label foreststriders
 	#sticky
     .isOnQuest 2098
     .goto Darkshore,59.5,12.6
-	>>Kill Giant Foreststriders
+	>>杀死巨型森林蜘蛛
     .complete 2098,1 --Collect Top of Gelkak's Key (x1)
 step
 #xprate <1.5
     .isOnQuest 986
     .goto Darkshore,61.1,10.4
-	>>Kill Moonstalker Sires/Matriarchs. Loot them for their pelts
-	>>Sires share their spawns with Bears, and Matriarchs share their spawns with Foreststriders
-	>>If you cannot find any moonstalkers, skip this quest
+	>>杀死登月者陛下/女族长。抢走他们的皮毛
+	>>父辈与熊分享其产卵，母系氏族与林蛙共享其产卵
+	>>如果你找不到任何探月者，跳过这个任务
     .complete 986,1 --Collect Fine Moonstalker Pelt (x5)
 step
 #xprate <1.5
@@ -1424,21 +1424,21 @@ step
 	#sticky
     #label bottomkeyman
     .isOnQuest 2098
-    >>Kill Raging Reef Crawlers
+    >>杀死愤怒的珊瑚虫
     .complete 2098,3 --Collect Bottom of Gelkak's Key (x1)
 step
 #xprate <1.5
     .isOnQuest 2098
     .goto Darkshore,55.4,12.6
-	>>Kill murlocs next to the sunken ship
+	>>杀死沉船旁边的墨洛克人
     .complete 2098,2 --Collect Middle of Gelkak's Key (x1)
 step
 #xprate <1.5
     #requires bottomkeyman
     .isOnQuest 2098
     .goto Darkshore,56.7,13.5
-    .turnin 2098 >> Turn in Gyromast's Retrieval
-    .accept 2078 >> Accept Gyromast's Revenge
+    .turnin 2098 >> 交回陀螺仪检索
+    .accept 2078 >> 接受陀螺手的复仇
 step
     #requires crabraveboys
     .isOnQuest 1138
@@ -1446,46 +1446,46 @@ step
 #xprate <1.5
     .isOnQuest 2078
     .goto Darkshore,55.8,18.2
-	>>Talk to the big robot and escort him back to the quest giver and then kill it once it turns hostile
+	>>与大机器人对话，护送他回到任务给予者那里，然后在它变得敌对时杀死它
     .complete 2078,1 --Gelkak's First Mate
 step
 #xprate <1.5
     .isOnQuest 2078
     .goto Darkshore,56.7,13.5
-    .turnin 2078 >> Turn in Gyromast's Revenge
+    .turnin 2078 >> 交回陀螺手的复仇
 step << !Druid
 #xprate <1.5
 	#sticky
 	#completewith end
     .isQuestTurnedIn 2078
-	+Make sure to save your water breathing potions, you will need them later to deal with a couple of underwater sections from 30-40
+	+确保保存好你的吸水药剂，稍后你需要它们来处理30-40之间的几个水下部分
 step
 #xprate <1.5 << !Druid
     .isOnQuest 965
     .goto Darkshore,55.0,24.9
-    .turnin 965 >> Turn in The Tower of Althalaxx
-    .accept 966 >> Accept The Tower of Althalaxx
+    .turnin 965 >> 转入Althalaxx塔
+    .accept 966 >> 接受Althalaxx塔
 step
 #xprate <1.5 << !Druid
     .isOnQuest 966
     .goto Darkshore,55.3,26.7
-	>> Kill Dark Strand Fanatics and loot them for parchment
+	>> 杀死黑股狂热分子并掠夺他们的羊皮纸
     .complete 966,1 --Collect Worn Parchment (x4)
 step
 #xprate <1.5 << !Druid
     .isOnQuest 966
     .goto Darkshore,55.0,24.9
-    .turnin 966 >> Turn in The Tower of Althalaxx
-    .accept 967 >> Accept The Tower of Althalaxx
+    .turnin 966 >> 转入Althalaxx塔
+    .accept 967 >> 接受Althalaxx塔
 step << Druid
     .goto Darkshore,55.0,33.4
-    .use 15844 >>Use the Empty Sampler at the mouth of the cave
+    .use 15844 >>使用洞口的空采样器
     .complete 6122,1 --Collect Filled Cliffspring Falls Sampler (x1)
 step
 #xprate <1.5 << !Druid
     .isOnQuest 947
     .goto Darkshore,55.3,34.0
-	>> Loot mushrooms around the cave, hug right and check the upper level for a Death cap. If you don't see one you'll need to go down below.
+	>> 在洞穴周围掠夺蘑菇，向右拥抱，检查上层是否有死亡帽。如果你没有看到一个，你需要往下看。
     .complete 947,1 --Collect Scaber Stalk (x5)
     .complete 947,2 --Collect Death Cap (x1)
 
@@ -1494,7 +1494,7 @@ step
 	#sticky
 	#completewith next
     .isOnQuest 4763
-	>>Loot the Grain Stores around the furbolg camp
+	>>抢劫弗尔博格营地周围的粮食商店
 	.collect 12342,1
 	.goto Darkshore,50.74,34.68
 	.collect 12341,1
@@ -1502,7 +1502,7 @@ step
 step
 #xprate <1.5
     #label blackwood
-	.use 12347 >>Use the cleansing bowl at the bonfire and kill the named satyr once he spawns, then loot the small basket next to his corpse
+	.use 12347 >>使用篝火上的清洁碗，在命名的萨提尔产卵后杀死他，然后抢劫他尸体旁边的小篮子
     .goto Darkshore,52.4,33.5
     .complete 4763,1 --Collect Talisman of Corruption (x1)
     .isOnQuest 4763
@@ -1514,64 +1514,64 @@ step
 step << Dwarf Hunter/Rogue
 	#sticky
 	#completewith next
-	.deathskip >> Death skip to Auberdine
+	.deathskip >> 死亡跳到奥伯丁
 step
 #xprate <1.5
     .goto Darkshore,37.4,40.1
-    .turnin 4763 >> Turn in The Blackwood Corrupted
+    .turnin 4763 >> 交出腐败的黑木
     .isOnQuest 4763
 step << Druid
     .goto Darkshore,37.7,40.7
-    .turnin 6122 >> Turn in The Principal Source
+    .turnin 6122 >> 交出主要来源
 step
     .goto Darkshore,38.1,41.3
-    .turnin 982 >> Turn in Deep Ocean, Vast Sea
+    .turnin 982 >> 转向深海，浩瀚大海
     .isQuestComplete 982
 step
     .goto Darkshore,37.5,41.9
-    .accept 729 >> Accept The Absent Minded Prospector
+    .accept 729 >> 接受心不在焉的探矿者
 step
 #xprate <1.5
     .goto Darkshore,38.8,43.4
-    .turnin 2139 >> Turn in Tharnariun's Hope
+    .turnin 2139 >> 交给塔纳瑞恩的希望
     .isQuestComplete 2139
 step
 #xprate <1.5
     .goto Darkshore,39.3,43.4
-    .turnin 986 >> Turn in A Lost Master
+    .turnin 986 >> 交出一个丢失的主人
     .isQuestComplete 986
 step
 #xprate <1.5
 .goto Darkshore,39.3,43.4
-    .accept 993 >> Accept A Lost Master
+    .accept 993 >> 接受丢失的主人
     .isQuestTurnedIn 986
 step
 #xprate <1.5 << !Druid
     .isOnQuest 947
     .goto Darkshore,37.4,43.7
-    .turnin 947 >> Turn in Cave Mushrooms
-    .accept 948 >> Accept Onu
+    .turnin 947 >> 转入洞穴蘑菇
+    .accept 948 >> 接受Onu
 step
 #xprate <1.5 << !Druid
     .goto Darkshore,36.6,45.5
-    .turnin 4725 >> Turn in Beached Sea Turtle
-    .turnin 4727 >> Turn in Beached Sea Turtle
+    .turnin 4725 >> 上缴海滩海龟
+    .turnin 4727 >> 上缴海滩海龟
     .isQuestTurnedIn 4681
 step
 #xprate <1.5
     .isOnQuest 1138
     .goto Darkshore,36.1,44.9
-    .turnin 1138 >> Turn in Fruit of the Sea
+    .turnin 1138 >> 把海果交上来
 step << Dwarf Hunter/!NightElf Rogue
     .goto Darkshore,33.1,39.9
-    .zone Teldrassil>>Take the boat to Teldrassil
+    .zone Teldrassil>>乘船去Teldrassil
 step << NightElf Rogue
     #completewith next
-    .fly Teldrassil>>Fly to Teldrassil
+    .fly Teldrassil>>飞往Teldrassil
 step << Rogue
     .goto Teldrassil,56.0,90.0,30,0
     .goto Darnassus,58.7,44.6
-    >>Buy the level 21 weapon upgrade
+    >>购买21级武器升级
     .collect 923,1
 step << Dwarf Hunter
 	#sticky
@@ -1582,83 +1582,83 @@ step << Dwarf Hunter
 	.collect 3027,1
 step << Dwarf Hunter
 	.goto Teldrassil,29.2,56.7
-	.train 264 >> Train Bows
-    .train 227 >> Train Staves
+	.train 264 >> 火车弓
+    .train 227 >> 火车杆
 step << Rogue
     .goto Darnassus,32.7,16.3
-    >> Head into the tree
-    .trainer >> Train your level 20 spells
+    >> 往树上走
+    .trainer >> 训练你的20级法术
 step << Dwarf Hunter/!NightElf Rogue
     .goto Darnassus,31.0,41.5,30,0
     .goto Teldrassil,58.4,94.0
-    >> Exit Darnassus through the purple portal
-    .fp Rut'theran >> Get the Rut'theran Village flight path
+    >> 从紫色大门离开达纳苏斯
+    .fp Rut'theran >> 获得Rut'theran Village航线
 step << Dwarf Hunter/Rogue
     .goto Teldrassil,58.4,94.0
-    .fly Auberdine >>Fly back to Auberdine
+    .fly Auberdine >>飞回奥伯丁
 step
 #xprate <1.5 << !Druid
     .isOnQuest 948
     .goto Darkshore,43.5,76.2
-    .turnin 948 >> Turn in Onu
-    .accept 944 >> Accept The Master's Glaive
+    .turnin 948 >> Onu上车
+    .accept 944 >> 接受大师的垂涎
 step
     .isOnQuest 4740
-   >>Clear the camp, but be careful as going next to the campfire will start an event spawning 3 waves of mobs. Be sure to run away from the campfire so you don't keep aggroing them and can eat/drink after each wave. Murkdeep nets so be careful
+   >>清理营地，但要小心，靠近篝火会引发3波暴徒。一定要远离篝火，这样你就不会一直伤害他们，并且每次波浪过后都可以吃/喝。潜水网，所以要小心
 	.goto Darkshore,36.6,76.6
     .complete 4740,1 --Kill Murkdeep (x1)
 step
     .isOnQuest 729
     .goto Darkshore,35.7,83.7
-    .turnin 729 >> Turn in The Absent Minded Prospector
+    .turnin 729 >> 交回心不在焉的探矿者
 step
     .isQuestTurnedIn 729
     .goto Darkshore,35.7,83.7
-    >>Start the escort quest
-    .accept 731,1 >> Accept The Absent Minded Prospector
+    >>开始护送任务
+    .accept 731,1 >> 接受心不在焉的探矿者
 step
     .isOnQuest 731
-    .complete 731,1 --Escort Prospector Remtravel
+    .complete 731,1 --护送探矿者返程
 step
 #xprate <1.5 << !Druid
     .isQuestTurnedIn 947
     .goto Darkshore,39.0,86.4
-    .turnin 944 >> Turn in The Master's Glaive
-    .accept 949 >> Accept The Twilight Camp
+    .turnin 944 >> 交上大师的Glaive
+    .accept 949 >> 接受暮光之城营地
 step
 #xprate <1.5 << !Druid
     .isQuestTurnedIn 947
     .goto Darkshore,39.0,86.4
-    .use 5251 >>Use the scrying bowl in your bags and right click it
-    .turnin 944 >> Turn in The Master's Glaive
-    .accept 949 >> Accept The Twilight Camp
+    .use 5251 >>使用袋子里的烤面包碗，右击它
+    .turnin 944 >> 交上大师的Glaive
+    .accept 949 >> 接受暮光之城营地
 step
     .goto Darkshore,38.7,87.3
-	>>Talk to the dryad at the back of the camp. If she's not here someone else may be escorting here, skip this step if she's not around.
-    .accept 945 >> Accept Therylune's Escape
+	>>与营地后面的树妖对话。如果她不在这里，其他人可能会护送她，如果她不在场，跳过这一步。
+    .accept 945 >> 接受Therylune的逃脱
 step
     #sticky
     #label escort
-    .complete 945,1 --Escort Therylune
+    .complete 945,1 --护送Therylune
     .isOnQuest 945
 step
 #xprate <1.5 << !Druid
     .isOnQuest 949
     .goto Darkshore,38.6,86.1
-    >>Click on the tome on top of the pedestal
-    .turnin 949 >> Turn in The Twilight Camp
+    >>点击底座顶部的大部头
+    .turnin 949 >> 在暮光之城露营
 step
     #requires escort
     .goto Darkshore,45.0,85.3
-    .turnin -993 >> Turn in A Lost Master
+    .turnin -993 >> 交出一个丢失的主人
 step
     .goto Darkshore,45.0,85.3
-    .accept 994,1 >> Accept Escape Through Force
+    .accept 994,1 >> 接受武力逃跑
     .isQuestTurnedIn 986
 step
 	#label end
-    >> Lead Volcor to the road
-    .complete 994,1 --Escort Volcor
+    >> 带领Volcor上路
+    .complete 994,1 --护送Volcor
     .isQuestTurnedIn 986
 ]])
 
@@ -1666,143 +1666,143 @@ RXPGuides.RegisterGuide([[
 #tbc
 #wotlk
 << Alliance !Warlock
-#name 21-23 Ashenvale
+#name 21-23 灰谷
 #version 1
-#group RestedXP Alliance 20-32
+#group RestedXP 联盟 20-32
 #defaultfor !Draenei
-#next 23-24 Wetlands;24-27 Redridge/Duskwood
+#next 23-24 湿地;24-27 赤脊山/暮色森林
 step
 #xprate <1.5 << !Druid
     .goto Ashenvale,26.2,38.6
-    .turnin 967 >> Turn in The Tower of Althalaxx
+    .turnin 967 >> 转入Althalaxx塔
     .isOnQuest 967
 step
 #xprate <1.5
     .isQuestTurnedIn 967
     .goto Ashenvale,26.2,38.6
-    .accept 970 >> Accept The Tower of Althalaxx
+    .accept 970 >> 接受Althalaxx塔
     .maxlevel 21
 step
     .goto Ashenvale,26.4,38.6
-    .accept 1010 >> Accept Bathran's Hair
+    .accept 1010 >> 接受Bathran的头发
 step
     .goto Ashenvale,31.3,23.2
-	>> Loot the brown sacks in the area, they can be hard to spot.
+	>> 抢劫该地区的棕色麻袋，它们可能很难被发现。
     .complete 1010,1 --Collect Bathran's Hair (x5)
 step
 #xprate <1.5
     .isOnQuest 970
     .goto Ashenvale,31.4,31.0
-	>> The drop rate is very very low, just keep killing mobs.
+	>> 下降率非常非常低，继续杀戮暴徒。
     .complete 970,1 --Collect Glowing Soul Gem (x1)
     .maxlevel 21
 step
     .goto Ashenvale,26.4,38.6
-    .turnin 1010 >> Turn in Bathran's Hair
-    .accept 1020 >> Accept Orendil's Cure
+    .turnin 1010 >> 把Bathran的头发交上来
+    .accept 1020 >> 接受奥伦迪尔的治疗
 step
 #xprate <1.5
     .isQuestComplete 970
     .goto Ashenvale,26.2,38.6
-    .turnin 970 >> Turn in The Tower of Althalaxx
+    .turnin 970 >> 转入Althalaxx塔
 step
     #xprate <1.5
     .isQuestTurnedIn 970
     .goto Ashenvale,26.2,38.6
-    .accept 973 >> Accept The Tower of Althalaxx
+    .accept 973 >> 接受Althalaxx塔
 step
     .goto Ashenvale,34.40,48.00
-    .fp Astranaar>> Get the Astranaar Flight Path
+    .fp Astranaar>> 获取Astranaar飞行路线
 step
     .goto Ashenvale,34.7,48.8
-    .accept 1008 >> Accept The Zoram Strand
+    .accept 1008 >> 接受Zoram Strand
 step
     .goto Ashenvale,36.6,49.6
-    .accept 1054 >> Accept Culling the Threat
-    .turnin 10752 >> Turn in Onward to Ashenvale
-    .accept 991 >> Accept Raene's Cleansing
+    .accept 1054 >> 接受消除威胁
+    .turnin 10752 >> 转向灰谷
+    .accept 991 >> 接受Raene的清洁
 step
     .goto Ashenvale,37.0,49.3
-    .home >> Set your Hearthstone to Astranaar
+    .home >> 将您的炉石设置为Astranaar
 step
     #timer Orendil's Cure roleplay
     .goto Ashenvale,37.3,51.8
-    >> Wait for the roleplay, it takes 26 seconds.
-    .turnin 1020 >> Turn in Orendil's Cure
+    >> 等待角色扮演，需要26秒。
+    .turnin 1020 >> 交给奥伦迪尔的治疗
     .timer 26,Orendil's Cure roleplay
-    .accept 1033 >> Accept Elune's Tear
+    .accept 1033 >> 接受艾露恩的眼泪
 step
     .goto Ashenvale,46.2,45.9
-	>> Click on the small blue seed on the ground.
+	>> 点击地面上的蓝色小种子。
     .complete 1033,1 --Collect Elune's Tear (x1)
 step
     .goto Ashenvale,37.8,34.7
-	>> Kill Dal Bloodclaw and loot him for his skull. He patrols around the camps.
+	>> 杀死达尔·布洛德克劳，并洗劫他的头骨。他在营地周围巡逻。
 	.unitscan Dal Bloodclaw
     .complete 1054,1 --Collect Dal Bloodclaw's Skull (x1)
 step
     .goto Ashenvale,36.6,49.6
-    .turnin 1054 >> Turn in Culling the Threat
+    .turnin 1054 >> 转而消除威胁
 step
     .goto Ashenvale,37.3,51.8
-    >> Wait for the roleplay, it takes 10 seconds
-    .turnin 1033 >> Turn in Elune's Tear
+    >> 等待角色扮演，需要10秒钟
+    .turnin 1033 >> 艾露恩的眼泪
     .timer 10,Elune's tear roleplay
-    .accept 1034 >> Accept The Ruins of Stardust
+    .accept 1034 >> 接受星尘的废墟
 step
     .goto Ashenvale,33.3,67.4
-	>> Loot the stardust in the area
+	>> 掠夺该地区的星尘
     .complete 1034,1 --Collect Handful of Stardust (x5)
 step
 #xprate <1.5
     .isOnQuest 973
     .goto Ashenvale,25.3,60.8
-	>> Kill Ilkrud and loot him for his tome, you can stun him to stop him from summoning help.
+	>> 杀了伊尔克鲁德，抢走他的魔法书，你可以打晕他，阻止他寻求帮助。
     .complete 973,1 --Collect Ilkrud Magthrull's Tome (x1)
 step
     .goto Ashenvale,22.7,51.9
-    >> Run up and over the mountains then turn in Therylune's Escape
-    .turnin 945 >> Turn in Therylune's Escape
+    >> 跑上山，翻过山头，然后转入Therylune的逃亡
+    .turnin 945 >> 交给Therylune的逃亡
     .isQuestComplete 945
 step
     .goto Ashenvale,22.7,51.9
-    .abandon 945 >> Abandon Therylune's Escape if you haven't completed it
+    .abandon 945 >> 如果你还没有完成，就放弃Therylune的逃亡
 step
 #xprate <1.5
     .isOnQuest 973
     .goto Ashenvale,26.2,38.7
-    .turnin 973 >> Turn in The Tower of Althalaxx
+    .turnin 973 >> 转入Althalaxx塔
 step <<  NightElf Hunter wotlk/NightElf Rogue wotlk
     .goto Ashenvale,20.3,42.4
-    .turnin 991 >> Turn in Raene's Cleansing
-    .accept 1023 >> Accept Raene's Cleansing
+    .turnin 991 >> 交上Raene的清洁服务
+    .accept 1023 >> 接受Raene的清洁
 step << Hunter wotlk/NightElf Rogue wotlk
     .goto Ashenvale,20.3,42.4
-	>> Kill murlocs for the gem, the drop rate can be very low.
+	>> 为宝石杀死墨洛克人，掉落率可能很低。
     .complete 1023,1 --Collect Glowing Gem (x1)
 step
     .goto Ashenvale,14.7,31.3
-    .accept 1007 >> Accept The Ancient Statuette
+    .accept 1007 >> 接受古代雕像
 step
     #label nagas
     #sticky
     .goto Ashenvale,13.8,29.1,0,0
-	>>Kill nagas around the coast, loot them for their heads
+	>>杀死海岸附近的纳加人，洗劫他们的头
     .complete 1008,1 --Collect Wrathtail Head (x20)
 step
     .goto Ashenvale,14.2,20.6
-	>> Head to the Ancient Statuette and loot it off the ground. Kill naga en route but don't go out of your way for them, you have plenty of chances for heads.
+	>> 前往古雕像，将其从地上洗劫一空。在途中杀死纳加，但不要为他们让路，你有足够的机会杀掉他们。
     .complete 1007,1 --Collect Ancient Statuette (x1)
 step
     .goto Ashenvale,14.8,31.3
-	>> Kill naga en route but don't go out of your way for them.
-    .turnin 1007 >> Turn in The Ancient Statuette
+	>> 在途中杀死纳加，但不要为他们让路。
+    .turnin 1007 >> 上缴古代雕像
     .timer 25,The Ancient Statuette RP
-    .accept 1009 >> Accept Ruuzel
+    .accept 1009 >> 接受鲁泽尔
 step
     .goto Ashenvale,7.0,13.4
-	>>Head to the island north and kill Ruuzel
-	>> This fight can be hard, focus down one or two of her adds then reset if needed.
+	>>前往北岛，杀死鲁泽尔
+	>> 这场战斗可能很艰难，专注于她的一两个添加，然后在需要时重置。
     .complete 1009,1 --Collect Ring of Zoram (x1)
 step
     .goto 1414,43.97,35.31,20,0
@@ -1811,49 +1811,49 @@ step
 	.goto 1414,43.91,34.58,20,0
 	.goto 1414,44.02,34.58,20,0
 	.goto 1414,44.16,34.85
-    >>Enter the temple like building into the BFD caves and kill nagas/satyrs
+    >>进入寺庙般的建筑进入BFD洞穴，杀死纳迦/萨提尔
     .complete 1275,1
 step
     #requires nagas
     .goto Ashenvale,14.8,31.3
-    .turnin 1009 >> Turn in Ruuzel
+    .turnin 1009 >> 交给鲁泽尔
 step << Druid
     #completewith next
-    >>Teleport to Moonglade
+    >>传送至Moonglade
     .goto Moonglade,52.4,40.6
-    .trainer >> Train your spells
+    .trainer >> 训练你的法术
 step << wotlk Hunter/wotlk NightElf Rogue
     .goto Ashenvale,36.6,49.6
-    .hs >> Hearth to Astranaar
+    .hs >> 赫斯到阿斯特拉纳
 step << !Hunter !NightElf !Rogue tbc
     .goto Ashenvale,20.3,42.4
-    .turnin 991 >> Turn in Raene's Cleansing
-    .accept 1023 >> Accept Raene's Cleansing
+    .turnin 991 >> 交上Raene的清洁服务
+    .accept 1023 >> 接受Raene的清洁
 step << !Hunter !NightElf !Rogue tbc
     .goto Ashenvale,20.3,42.4
-	>> Kill murlocs for the gem, the drop rate is very low.
+	>> 为了宝石杀死murlocs，掉落率很低。
     .complete 1023,1 --Collect Glowing Gem (x1)
 step << !Hunter !NightElf !Rogue tbc
     #sticky
     #completewith next
-    .deathskip >>Head to the east side of the lake, die on purpose and respawn at Astranaar
+    .deathskip >>前往湖的东侧，故意死亡并在阿斯特拉纳重生
 step
     .isOnQuest 1023
     .goto Ashenvale,36.6,49.6
-    .turnin 1023 >> Turn in Raene's Cleansing
+    .turnin 1023 >> 交上Raene的清洁服务
 step
 #xprate <1.5 << tbc
     .goto Ashenvale,36.6,49.6
-    .accept 1025 >> Accept An Aggressive Defense
+    .accept 1025 >> 接受攻击性防御
 step
     .goto Ashenvale,37.3,51.8
-    .turnin 1034 >> Turn in The Ruins of Stardust
+    .turnin 1034 >> 交出星尘废墟
 step
     .goto Ashenvale,34.7,48.9
-    .turnin 1008 >> Turn in The Zoram Strand
+    .turnin 1008 >> 在Zoram Strand上转弯
 step
 #xprate <1.5 << tbc
-    >>Kill the mobs for An Aggressive Defense
+    >>杀死暴徒进行侵略性防御
     .goto Ashenvale,49.9,60.8,40,0
     .goto Ashenvale,56.9,63.7,40,0
     .goto Ashenvale,49.9,60.8
@@ -1864,87 +1864,87 @@ step
 step
 #xprate <1.5 << tbc
     .goto Ashenvale,49.8,67.2
-    .accept 1016 >> Accept Elemental Bracers
+    .accept 1016 >> 接受元素括号
 step
 #xprate <1.5 << tbc
-    >>Kill all water elementals on the island/in the water for Intact Elemental Bracers. When you have 5, right click the Divining Scroll
+    >>杀死岛上/水中的所有水元素以获得完整元素护腕。当你有5个时，右击占卜卷轴
     .goto Ashenvale,48.0,69.9
     .complete 1016,1 --Collect Divined Scroll (x1)
 step
 #xprate <1.5 << tbc
     .goto Ashenvale,49.8,67.2
-    .turnin 1016 >> Turn in Elemental Bracers
+    .turnin 1016 >> 交给Elemental Bracers
 step
 #xprate <1.5 << tbc
     .goto Ashenvale,36.6,49.6
-    .turnin 1025 >> Turn in An Aggressive Defense
+    .turnin 1025 >> 提交攻击性防御
     .isQuestComplete 1025
 step
     .goto Ashenvale,34.7,48.9
-    .turnin 1008 >> Turn in The Zoram Strand
+    .turnin 1008 >> 在Zoram Strand上转弯
 step
     .goto Ashenvale,34.40,48.00
-    .fp Astranaar>> Get the Astranaar Flight Path
-    .fly Auberdine>> Fly to Auberdine
+    .fp Astranaar>> 获取Astranaar飞行路线
+    .fly Auberdine>> 飞往奥伯丁
 step
     .goto Darkshore,37.7,43.4
-    .turnin 4740 >> Turn in WANTED: Murkdeep!
+    .turnin 4740 >> 通缉犯：笨蛋！
 step
     .goto Darkshore,38.36,43.07
-    .turnin 1275 >> Turn in Researching the Corruption
+    .turnin 1275 >> 转而研究腐败
 step
     .goto Darkshore,39.3,43.4
-    .turnin -994 >> Turn in Escape Through Force
+    .turnin -994 >> 通过武力逃跑
 step
     .goto Darkshore,37.5,41.9
-    .turnin 731 >> Turn in The Absent Minded Prospector
-	.accept 741 >> Accept The Absent Minded Prospector << !Hunter !NightElf !Rogue/NightElf wotlk
+    .turnin 731 >> 交回心不在焉的探矿者
+	.accept 741 >> 接受心不在焉的探矿者 << !Hunter !NightElf !Rogue/NightElf wotlk
 step << !Hunter !NightElf !Rogue
     .goto Darkshore,33.1,39.9
-    .zone Teldrassil>>Take the boat to Teldrassil
+    .zone Teldrassil>>乘船去Teldrassil
 step << NightElf wotlk
     .isOnQuest 741
     .goto Darkshore,36.3,45.6
-    .fly Teldrassil >> Fly to Teldrassil
+    .fly Teldrassil >> 飞往Teldrassil
 step << !Hunter !NightElf !Rogue/NightElf wotlk
 	.goto Teldrassil,23.7,64.5
     .isOnQuest 741
-	.turnin 741 >> Turn in The Absent Minded Prospector
-	.accept 942 >> Accept The Absent Minded Prospector
+	.turnin 741 >> 交回心不在焉的探矿者
+	.accept 942 >> 接受心不在焉的探矿者
 step << NightElf wotlk
     .goto Darnassus,38.6,15.6
-    >> Fly or take the boat to Darnassus
-    .skill riding,1 >> Train riding skill and buy a mount
+    >> 乘飞机或乘船去达纳苏斯
+    .技巧 riding,1 >> 训练骑术并购买坐骑
     .money <4.60
 step << Warrior tbc/Mage/Priest/Warlock
 	.goto Teldrassil,29.2,56.7
-    .train 227 >> Train Staves
+    .train 227 >> 火车杆
 step << !Hunter !NightElf !Rogue
     .goto Darnassus,31.0,41.5,30,0
     .goto Teldrassil,58.4,94.0
-    >> Exit Darnassus through the purple portal
-    .fp Rut'theran >> Get the Rut'theran Village flight path
+    >> 从紫色大门离开达纳苏斯
+    .fp Rut'theran >> 获得Rut'theran Village航线
 step << !Hunter !NightElf !Rogue
     .goto Teldrassil,58.4,94.0
-    .fly Auberdine >>Fly back to Auberdine
+    .fly Auberdine >>飞回奥伯丁
 step << Draenei !Paladin wotlk
     .goto Darkshore,30.8,41.0,40,0
 	.goto The Exodar,81.18,52.56
     .money <4.60
-    >> Take the western most boat to Azuremyst Isle
-    .skill riding,75 >>Head to Exodar, buy and train your mount
+    >> 乘最西边的船去Azuremyst岛
+    .技巧 riding,75 >>前往Exodar，购买并训练您的坐骑
 step << tbc
     .goto Darkshore,32.4,43.8,30,0
     .goto Darkshore,32.4,43.8,0
-    .zone Wetlands >>Take the boat to Wetlands
+    .zone Wetlands >>乘船去湿地
 step << Draenei tbc/NightElf tbc
 #xprate >1.499
     .goto Wetlands,9.5,59.7
-    .fp Menethil >> Get the Menethil Harbor flight path
+    .fp Menethil >> 获取Menethil Harbor航线
 step << Draenei tbc/NightElf tbc
 #xprate >1.499
-    .zone Stormwind City >> Use the website unstuck feature to teleport to Stormwind. This feature has a 8hr cooldown. Skip this step if you can't get it to work
-    .link https://us.battle.net/support/en/help/product/wow/197/834/solution >> Click here and copy paste the link into your browser for more info
+    .zone Stormwind City >> 使用网站解锁功能传送到暴风城。此功能具有8小时冷却时间。如果无法正常工作，请跳过此步骤
+    .link https://us.battle.net/support/en/help/product/wow/197/834/solution >> 单击此处并将链接复制粘贴到浏览器中以获取更多信息
     .zoneskip Elwynn Forest
 
 
@@ -1952,184 +1952,184 @@ step << Draenei tbc/NightElf tbc
 #xprate >1.499
    #completewith next
    .goto Wetlands,63.9,78.6
-   .zone Loch Modan >> Logout on top of the mushrooms at the back of the cave. When you log back in, this will teleport you to Thelsamar.
-   >>Make sure to logout as close as possible to the back of the cave. This trick won't work if you log out next to the edge of the mushroom closer to the mouth of the cave.
-   .link https://www.youtube.com/watch?v=21CuGto26Mk >> CLICK HERE for a reference
+   .zone Loch Modan >> 在洞穴后面的蘑菇上注销。当您重新登录时，这会将您传送到Thelsamar。
+   >>确保登出时尽可能靠近洞穴后部。如果你在靠近洞口的蘑菇边缘登出，这个技巧就行不通了。
+   .link https://www.youtube.com/watch?v=21CuGto26Mk >> 单击此处获取参考
    .zoneskip Elwynn Forest
    .zoneskip Stormwind City
 step << NightElf tbc/Draenei tbc
 #xprate >1.499
     .goto Loch Modan,33.9,50.9
-    .fp Thelsamar >> Get the Thelsamar flight path
+    .fp Thelsamar >> 获取Thelsamar飞行路线
     .zoneskip Elwynn Forest
     .zoneskip Stormwind City
 step << NightElf tbc/Draenei tbc
 #xprate >1.499
     #completewith next
     .goto Loch Modan,21.30,68.60,40,0
-    .zone Dun Morogh>> Run to Dun Morogh
+    .zone Dun Morogh>> 跑到邓莫罗
 step << NightElf tbc/Draenei tbc
 #xprate >1.499
-	>>Go inside the South-eastern Trogg cave. Perform a logout skip
+	>>进入东南特罗格洞穴。执行注销跳过
     .goto Dun Morogh,70.63,56.70,60,0
     .goto Dun Morogh,70.60,54.86
-	.link https://www.youtube.com/watch?v=yQBW3KyguCM >> CLICK HERE
-	.zone Ironforge >> Logout Skip or travel to Ironforge
+	.link https://www.youtube.com/watch?v=yQBW3KyguCM >> 单击此处
+	.zone Ironforge >> 注销跳过或前往铁炉堡
 step << NightElf tbc/Draenei tbc
 #xprate >1.499
     .goto Ironforge,76.03,50.98,30,0
-    .zone Stormwind City >> Take the tram to Stormwind
+    .zone Stormwind City >> 乘电车去暴风城
 step << wotlk
     .goto Darkshore,32.4,43.8,30,0
     .goto Darkshore,32.4,43.8,0
-    .zone Stormwind City >>Take the boat to Stormwind
+    .zone Stormwind City >>乘船去暴风城
 ]])
 
 RXPGuides.RegisterGuide([[
 #tbc
 #wotlk
 << Alliance Warlock
-#name 20-23 Darkshore/Ashenvale
+#name 20-23 黑海岸/灰谷
 #version 1
-#group RestedXP Alliance 20-32
-#next 23-24 Wetlands;24-27 Redridge/Duskwood
+#group RestedXP 联盟 20-32
+#next 23-24 湿地;24-27 赤脊山/暮色森林
 step
     .goto Darkshore,37.0,44.1
-    .home >> Set your Hearthstone to Auberdine
+    .home >> 将您的炉石设置为Auberdine
 step << wotlk
     #completewith next
     .goto Darkshore,32.4,43.8
-    .zone Stormwind City >>Take the boat to Stormwind
+    .zone Stormwind City >>乘船去暴风城
 step << tbc
     #completewith next
     .goto Darkshore,32.4,43.8
-    .zone Wetlands >>Take the boat to Wetlands
+    .zone Wetlands >>乘船去湿地
 step << tbc
     #completewith next
     .goto Wetlands,9.5,59.7
-    .fly Stormwind>> Fly to Stormwind
+    .fly Stormwind>> 飞到暴风城
 step << Warlock wotlk
     .goto StormwindNew,36.35,67.49
-    .accept 3765>>Accept The Corruption Abroad
+    .accept 3765>>接受海外腐败
 step << Warlock
     .goto StormwindClassic,25.3,78.7
-	.trainer >> Train your class spells
+	.trainer >> 训练你的职业咒语
 step << Warlock
     .goto StormwindClassic,25.2,78.5
-    .accept 1716 >> Accept Devourer of Souls
+    .accept 1716 >> 接受灵魂吞噬者
 step << Warlock tbc
     .goto StormwindNew,36.35,67.49
-    .accept 3765>>Accept The Corruption Abroad
+    .accept 3765>>接受海外腐败
 step << tbc
     #label exit
     .goto StormwindClassic,39.9,54.4
-    .zone Darkshore>>Enter the Stockades and ghetto hearth to Auberdine
-    >>While you are inside The Stockades, invite some random person and leave group so you can teleport back to Auberdine
-    .link /run InviteUnit("a");C_Timer.After(1,function() LeaveParty() end) >> CLICK HERE for an invite/leave macro
+    .zone Darkshore>>进入栅栏和犹太区壁炉，前往奥伯丁
+    >>当你在寨子里时，邀请一些随机的人离开小组，这样你就可以传送回奥伯丁
+    .link /run InviteUnit("a");C_Timer.After(1,function() LeaveParty() end) >> 单击此处查看邀请/离开宏
 step << wotlk
     .goto StormwindNew,21.8,56.2,20,0
     .goto StormwindNew,21.8,56.2,0
-    .zone Darkshore >> Head to the Stormwind Harbor and take the boat to Darkshore
+    .zone Darkshore >> 前往暴风港，乘船前往黑海岸
 step
     .goto Darkshore,37.2,44.2
-    .accept 4740 >> Accept WANTED: Murkdeep!
+    .accept 4740 >> 接受通缉令：Murkdeep！
 step
     .goto Darkshore,37.5,41.8
-    .accept 729 >> Accept The Absent Minded Prospector
+    .accept 729 >> 接受心不在焉的探矿者
 step
     #completewith next
     .goto Darkshore,38.37,43.05
-    .turnin -3765>>Turn in The Corruption Abroad
+    .turnin -3765>>向国外移交腐败
 step
     .goto Darkshore,38.37,43.05
-    .accept 1275 >> Accept Researching the Corruption
+    .accept 1275 >> 接受腐败调查
 step
     .goto Darkshore,37.4,40.2
-    .turnin 9633 >> Turn in The Way to Auberdine
-    .accept 10752 >> Accept Onward to Ashenvale
+    .turnin 9633 >> 在通往奥伯丁的路上转弯
+    .accept 10752 >> 接受前往灰谷
 step
     .goto Darkshore,36.6,76.6
-    >>Clear the camp, but be careful as going next to the campfire will start an event spawning 3 waves of mobs. Be sure to run away from the campfire so you don't keep aggroing them and can eat/drink after each wave. Murkdeep nets so be careful
+    >>清理营地，但要小心，靠近篝火会引发3波暴徒。一定要远离篝火，这样你就不会一直伤害他们，并且每次波浪过后都可以吃/喝。潜水网，所以要小心
     .complete 4740,1 --Kill Murkdeep (x1)
 step
     .goto Darkshore,35.7,83.7
-    .turnin 729 >> Turn in The Absent Minded Prospector
+    .turnin 729 >> 交回心不在焉的探矿者
 step
     .goto Darkshore,35.7,83.7
-    .accept 731 >> Accept The Absent Minded Prospector
+    .accept 731 >> 接受心不在焉的探矿者
 step
-    >>Be careful as golems can respawn on top of you, and be sure to prioritize the geomancer at the final wave at the end
-.complete 731,1 --Escort Prospector Remtravel
+    >>小心，因为傀儡可以在你身上重生，并确保在最后一波中优先考虑风水师
+.complete 731,1 --护送探矿者返程
 step
     .goto Darkshore,38.7,87.3
-	>> If she's not there just grind mobs in the area in the meantime.
-    .accept 945 >> Accept Therylune's Escape
+	>> 如果她不在那里，就在这段时间内在该地区捣乱。
+    .accept 945 >> 接受Therylune的逃脱
 step
-    .complete 945,1 --Escort Therylune
+    .complete 945,1 --护送Therylune
 step
     .goto Ashenvale,26.4,38.6
-    >>Head southeast to Ashenvale
-    .accept 1010 >> Accept Bathran's Hair
+    >>向东南方向驶往灰谷
+    .accept 1010 >> 接受Bathran的头发
 step
-    >>Look out for the hair. They look like little hay clumps on the ground. Turn down your ground clutter in your graphical settings as it may help (some are half-stuck in the ground).
+    >>注意头发。它们看起来像地上的小干草块。在图形设置中调低地面杂乱的程度，因为这可能会有所帮助(有些杂乱的东西半埋在地上)。
 .goto Ashenvale,31.3,23.2
     .complete 1010,1 --Collect Bathran's Hair (x5)
 step
     .goto Ashenvale,26.4,38.6
-    .turnin 1010 >> Turn in Bathran's Hair
-    .accept 1020 >> Accept Orendil's Cure
+    .turnin 1010 >> 把Bathran的头发交上来
+    .accept 1020 >> 接受奥伦迪尔的治疗
 step
     .goto Ashenvale,34.40,48.00
-    .fp Astranaar>> Get the Astranaar Flight Path
+    .fp Astranaar>> 获取Astranaar飞行路线
 step
     .goto Ashenvale,34.7,48.8
-    .accept 1008 >> Accept The Zoram Strand
+    .accept 1008 >> 接受Zoram Strand
 step
     .goto Ashenvale,36.6,49.6
-    .accept 1054 >> Accept Culling the Threat
-    .turnin 10752 >> Turn in Onward to Ashenvale
-    .accept 991 >> Accept Raene's Cleansing
+    .accept 1054 >> 接受消除威胁
+    .turnin 10752 >> 转向灰谷
+    .accept 991 >> 接受Raene的清洁
 step
     .goto Ashenvale,37.0,49.3
-    .home >> Set your Hearthstone to Astranaar
+    .home >> 将您的炉石设置为Astranaar
 step
     #timer Orendil's Cure RP
     .goto Ashenvale,37.3,51.8
-    .turnin 1020 >> Turn in Orendil's Cure
+    .turnin 1020 >> 交给奥伦迪尔的治疗
     .timer 26,Orendil's Cure RP
-    .accept 1033 >> Accept Elune's Tear
+    .accept 1033 >> 接受艾露恩的眼泪
 step
     .goto Ashenvale,46.2,45.9
-	>> Loot the tiny blue seed on the ground
+	>> 掠夺地上的蓝色小种子
     .complete 1033,1 --Collect Elune's Tear (x1)
 step
     #timer Elune's tear roleplay
     .goto Ashenvale,37.3,51.8
-    .turnin 1033 >> Turn in Elune's Tear
+    .turnin 1033 >> 艾露恩的眼泪
     .timer 10,Elune's tear roleplay
-    .accept 1034 >> Accept The Ruins of Stardust
+    .accept 1034 >> 接受星尘的废墟
 step
     .goto Ashenvale,33.3,67.4
     .complete 1034,1 --Collect Handful of Stardust (x5)
 step
     .isOnQuest 945
     .goto Ashenvale,22.7,51.9
-    .turnin 945 >> Turn in Therylune's Escape
+    .turnin 945 >> 交给Therylune的逃亡
 step
     .goto Ashenvale,20.3,42.4
-    .turnin 991 >> Turn in Raene's Cleansing
-    .accept 1023 >> Accept Raene's Cleansing
+    .turnin 991 >> 交上Raene的清洁服务
+    .accept 1023 >> 接受Raene的清洁
 step
-    >>Be careful of the nearby oracles, as they both heal and have a big-damage shock ability
+    >>小心附近的甲骨文，因为它们都可以愈合，并且有很大的伤害冲击能力
 .goto Ashenvale,20.3,42.4
     .complete 1023,1 --Collect Glowing Gem (x1)
 step
     .goto Ashenvale,14.7,31.3
-    .accept 1007 >> Accept The Ancient Statuette
+    .accept 1007 >> 接受古代雕像
 step
     #sticky
     #label nagas
-    >Kill Nagas for Wrathtail Heads en route to next quests
+    >杀死Nagas for Wrathtail Heads en route to next quests
 .goto Ashenvale,13.8,29.1,0,0
     .complete 1008,1 --Collect Wrathtail Head (x20)
 step
@@ -2137,12 +2137,12 @@ step
     .complete 1007,1 --Collect Ancient Statuette (x1)
 step
     .goto Ashenvale,14.8,31.3
-    .turnin 1007 >> Turn in The Ancient Statuette
+    .turnin 1007 >> 上缴古代雕像
     .timer 25,The Ancient Statuette RP
-    .accept 1009 >> Accept Ruuzel
+    .accept 1009 >> 接受鲁泽尔
 step
-	>>Head to the island north and kill Ruuzel
-	>> This fight can be hard, focus down one or two of her adds then reset if needed.
+	>>前往北岛，杀死鲁泽尔
+	>> 这场战斗可能很艰难，专注于她的一两个添加，然后在需要时重置。
     .goto Ashenvale,7.0,13.4
     .complete 1009,1 --Collect Ring of Zoram (x1)
 step
@@ -2152,40 +2152,40 @@ step
 	.goto 1414,43.91,34.58,20,0
 	.goto 1414,44.02,34.58,20,0
 	.goto 1414,44.16,34.85
-    >>Enter the temple like building into the BFD caves and kill nagas/satyrs
+    >>进入寺庙般的建筑进入BFD洞穴，杀死纳迦/萨提尔
     .complete 1275,1
 step
     #requires nagas
     .goto Ashenvale,14.8,31.3
-    .turnin 1009 >> Turn in Ruuzel
+    .turnin 1009 >> 交给鲁泽尔
 step
-    .hs >> Hearth to Astranaar
+    .hs >> 赫斯到阿斯特拉纳
 step << wotlk
     .goto Ashenvale,39.0,35.9
     .goto Ashenvale,35.9,32.0
-    >>Start looking for Dal Bloodclaw, he walks around the furbolg camp
+    >>开始寻找Dal Bloodclaw，他在furbolg营地附近走动
 	.unitscan Dal Bloodclaw
     .complete 1054,1 --Collect Dal Bloodclaw's Skull (x1)
 step
     .goto Ashenvale,36.6,49.6
-    .turnin 1023 >> Turn in Raene's Cleansing
+    .turnin 1023 >> 交上Raene的清洁服务
 step
 #xprate <1.5
     .goto Ashenvale,36.6,49.6
-    .accept 1025 >> Accept An Aggressive Defense
+    .accept 1025 >> 接受攻击性防御
 step
 #xprate <1.5 << tbc
     .goto Ashenvale,36.6,49.6
-    .accept 1025 >> Accept An Aggressive Defense
+    .accept 1025 >> 接受攻击性防御
 step
     .goto Ashenvale,37.3,51.8
-    .turnin 1034 >> Turn in The Ruins of Stardust
+    .turnin 1034 >> 交出星尘废墟
 step
     .goto Ashenvale,34.7,48.9
-    .turnin 1008 >> Turn in The Zoram Strand
+    .turnin 1008 >> 在Zoram Strand上转弯
 step
 #xprate <1.5 << tbc
-    >>Kill the mobs for An Aggressive Defense
+    >>杀死暴徒进行侵略性防御
     .goto Ashenvale,49.9,60.8
     .goto Ashenvale,56.9,63.7
     .complete 1025,1 --Kill Foulweald Den Watcher (x1)
@@ -2195,27 +2195,27 @@ step
 step
 #xprate <1.5 << tbc
     .goto Ashenvale,49.8,67.2
-    .accept 1016 >> Accept Elemental Bracers
+    .accept 1016 >> 接受元素括号
 step
 #xprate <1.5 << tbc
-    >>Kill all water elementals on the island/in the water for Intact Elemental Bracers. When you have 5, right click the Divining Scroll
+    >>杀死岛上/水中的所有水元素以获得完整元素护腕。当你有5个时，右击占卜卷轴
     .goto Ashenvale,48.0,69.9
     .complete 1016,1 --Collect Divined Scroll (x1)
 step
 #xprate <1.5 << tbc
     .goto Ashenvale,49.8,67.2
-    .turnin 1016 >> Turn in Elemental Bracers
+    .turnin 1016 >> 交给Elemental Bracers
 step
 #xprate <1.5 << tbc
     .goto Ashenvale,36.6,49.6
-    .turnin 1025 >> Turn in An Aggressive Defense
+    .turnin 1025 >> 提交攻击性防御
         .isQuestComplete 1025
 step
     .goto Ashenvale,34.7,48.9
-    .turnin 1008 >> Turn in The Zoram Strand
+    .turnin 1008 >> 在Zoram Strand上转弯
 step
 #xprate <1.5
-    >>Kill the mobs for An Aggressive Defense
+    >>杀死暴徒进行侵略性防御
     .goto Ashenvale,49.9,60.8
     .goto Ashenvale,56.9,63.7
     .complete 1025,1 --Kill Foulweald Den Watcher (x1)
@@ -2225,129 +2225,129 @@ step
 step
 #xprate <1.5
     .goto Ashenvale,49.8,67.2
-    .accept 1016 >> Accept Elemental Bracers
+    .accept 1016 >> 接受元素括号
 step
 #xprate <1.5
-    >>Kill all water elementals on the island/in the water for Intact Elemental Bracers. When you have 5, right click the Divining Scroll
+    >>杀死岛上/水中的所有水元素以获得完整元素护腕。当你有5个时，右击占卜卷轴
     .goto Ashenvale,48.0,69.9
     .complete 1016,1 --Collect Divined Scroll (x1)
 step
 #xprate <1.5
     .goto Ashenvale,49.8,67.2
-    .turnin 1016 >> Turn in Elemental Bracers
-    .accept 1017 >> Accept Mage Summoner << tbc
+    .turnin 1016 >> 交给Elemental Bracers
+    .accept 1017 >> 接受法师召唤师 << tbc
 step << tbc
     .goto The Barrens,49.0,5.3,80,0
     .goto The Barrens,49.0,5.3,0
-    .zone The Barrens>>Enter The Barrens through the broken wall. Be careful of the guards near the wall at the main road
+    .zone The Barrens>>穿过破墙进入荒地。小心大路围墙附近的警卫
 step << tbc
 #xprate <1.5
     .goto The Barrens,48.2,19.1
-    >>Climb the mountain and Kill Sarilus Foulborne
+    >>爬上山杀死萨里卢斯·福伯恩
     .complete 1017,1 --Collect Sarilus Foulborne's Head (x1)
 step << tbc
     #completewith next
     .goto The Barrens,50.8,32.6,0
-    .deathskip >>Die and respawn at the Spirit Healer
+    .deathskip >>在精神治疗师处死亡并重生
 step << tbc
     .goto The Barrens,49.3,57.1
-    .turnin 1716 >> Turn in Devourer of Souls
-    .accept 1738 >> Accept Heartswood
+    .turnin 1716 >> 交给灵魂吞噬者
+    .accept 1738 >> 接受Heartswood
 step << tbc
-    >>Run to Ratchet
+    >>跑向棘轮
     .goto The Barrens,63.1,37.2
-    .fp Ratchet >> Get the Ratchet flight path
-    .fly Astranaar>> Fly to Astranaar
+    .fp Ratchet >> 获取棘轮飞行路径
+    .fly Astranaar>> 飞往阿斯特拉纳
 step << tbc
     .goto Ashenvale,39.0,35.9
     .goto Ashenvale,35.9,32.0
-    >>Start looking for Dal Bloodclaw, he walks around the furbolg camp
+    >>开始寻找Dal Bloodclaw，他在furbolg营地附近走动
 	.unitscan Dal Bloodclaw
     .complete 1054,1 --Collect Dal Bloodclaw's Skull (x1)
 step << Warlock tbc
-    >>Loot the big tree
+    >>抢劫那棵大树
     .goto Ashenvale,31.6,31.6
     .complete 1738,1 --Collect Heartswood (x1)
 step << tbc
     .goto Ashenvale,40.1,53.1,0
-    .deathskip >>Head towards the murloc lake and die next to the base of the mountain, east side of the lake then respawn at the Spirit Healer
+    .deathskip >>前往穆洛克湖，死在山脚旁，湖的东侧，然后在精神治疗者重生
 step << tbc
 #xprate <1.5
     .goto Ashenvale,49.8,67.2
-    .turnin 1017 >> Turn in Mage Summoner
+    .turnin 1017 >> 交给法师召唤师
 step
 #xprate <1.5 << tbc
     #completewith next
-    .deathskip >>Die and respawn at the Spirit Healer in Astranaar
+    .deathskip >>在阿斯特拉纳的精神治疗师那里死去并重生
 step << wotlk !Paladin !Warlock
     #completewith next
     *If you have money on this server, mail yourself 5g, we'll be buying our mounts soon
 step
     .goto Ashenvale,36.6,49.6
-    .turnin 1054 >> Turn in Culling the Threat
+    .turnin 1054 >> 转而消除威胁
     .isQuestComplete 1054
 step
     .goto Ashenvale,36.6,49.6
-    .turnin 1025 >> Turn in An Aggressive Defense
+    .turnin 1025 >> 提交攻击性防御
     .isQuestComplete 1025
 step
     .goto Ashenvale,34.40,48.00
-    .fly Auberdine>> Fly to Auberdine
+    .fly Auberdine>> 飞往奥伯丁
 step
     .goto Darkshore,37.7,43.4
-    .turnin 4740 >> Turn in WANTED: Murkdeep!
+    .turnin 4740 >> 通缉犯：笨蛋！
 step
     .goto Darkshore,38.36,43.07
-    .turnin 1275 >> Turn in Researching the Corruption
+    .turnin 1275 >> 转而研究腐败
     .isQuestComplete 1275
 step
     .goto Darkshore,37.5,41.9
-    .turnin 731 >> Turn in The Absent Minded Prospector
-    .accept 741 >> Accept The Absent Minded Prospector
+    .turnin 731 >> 交回心不在焉的探矿者
+    .accept 741 >> 接受心不在焉的探矿者
 step
     #completewith next
     .goto Darkshore,33.2,40.2,25,0
     .goto Darkshore,33.2,40.2,0
-    .zone Teldrassil>>Take the boat to Darnassus
+    .zone Teldrassil>>乘船去达纳苏斯
 step
     #completewith next
     .goto Teldrassil,55.9,89.8
-    .zone Darnassus >> Take the purple portal to Darnassus
+    .zone Darnassus >> 把紫色大门带到达纳苏斯
 step << NightElf wotlk
 	.goto Darnassus,38.7,15.8
     .money <4.6
-	.skill riding,75 >> Train riding and buy your mount
+	.技巧 riding,75 >> 坐火车，买你的坐骑
 step << Warrior/Rogue
     .goto Darnassus,64.6,53.0
-    .collect 29009,1 >> Purchase a Heavy Throwing Dagger from Ellandrieth
+    .collect 29009,1 >> 从艾兰德里斯购买一把重型飞刀
 step
     .goto Darnassus,31.2,84.5
-    .turnin 741 >> Turn in The Absent Minded Prospector
-    .accept 942 >> Accept The Absent Minded Prospector
+    .turnin 741 >> 交回心不在焉的探矿者
+    .accept 942 >> 接受心不在焉的探矿者
 step
     .goto Darnassus,31.0,41.5,30,0
     .goto Teldrassil,58.4,94.0
-    >> Exit Darnassus through the purple portal
-    .fp Rut'theran >> Get the Rut'theran Village flight path
-    .fly Auberdine>> Fly to Auberdine
+    >> 从紫色大门离开达纳苏斯
+    .fp Rut'theran >> 获得Rut'theran Village航线
+    .fly Auberdine>> 飞往奥伯丁
 step << Draenei !Paladin wotlk
     .goto Darkshore,30.8,41.0,40,0
 	.goto The Exodar,81.18,52.56
     .money <4.60
-    >> Take the western most boat to Azuremyst Isle
-    .skill riding,75 >>Head to Exodar, buy and train your mount
+    >> 乘最西边的船去Azuremyst岛
+    .技巧 riding,75 >>前往Exodar，购买并训练您的坐骑
 step << tbc
     .goto Darkshore,32.4,43.8,30,0
     .goto Darkshore,32.4,43.8,0
-    .zone Wetlands >>Take the boat to Wetlands
+    .zone Wetlands >>乘船去湿地
 step << Draenei tbc/NightElf tbc
 #xprate >1.499
     .goto Wetlands,9.5,59.7
-    .fp Menethil >> Get the Menethil Harbor flight path
+    .fp Menethil >> 获取Menethil Harbor航线
 step << Draenei tbc/NightElf tbc
 #xprate >1.499
-    .zone Stormwind City >> Use the website unstuck feature to teleport to Stormwind. This feature has a 8hr cooldown. Skip this step if you can't get it to work
-    .link https://us.battle.net/support/en/help/product/wow/197/834/solution >> Click here and copy paste the link into your browser for more info
+    .zone Stormwind City >> 使用网站解锁功能传送到暴风城。此功能具有8小时冷却时间。如果无法正常工作，请跳过此步骤
+    .link https://us.battle.net/support/en/help/product/wow/197/834/solution >> 单击此处并将链接复制粘贴到浏览器中以获取更多信息
     .zoneskip Elwynn Forest
 
 
@@ -2355,39 +2355,39 @@ step << Draenei tbc/NightElf tbc
 #xprate >1.499
    #completewith next
    .goto Wetlands,63.9,78.6
-   .zone Loch Modan >> Logout on top of the mushrooms at the back of the cave. When you log back in, this will teleport you to Thelsamar.
-   >>Make sure to logout as close as possible to the back of the cave. This trick won't work if you log out next to the edge of the mushroom closer to the mouth of the cave.
-   .link https://www.youtube.com/watch?v=21CuGto26Mk >> CLICK HERE for a reference
+   .zone Loch Modan >> 在洞穴后面的蘑菇上注销。当您重新登录时，这会将您传送到Thelsamar。
+   >>确保登出时尽可能靠近洞穴后部。如果你在靠近洞口的蘑菇边缘登出，这个技巧就行不通了。
+   .link https://www.youtube.com/watch?v=21CuGto26Mk >> 单击此处获取参考
    .zoneskip Elwynn Forest
    .zoneskip Stormwind City
 step << NightElf tbc/Draenei tbc
 #xprate >1.499
     .goto Loch Modan,33.9,50.9
-    .fp Thelsamar >> Get the Thelsamar flight path
+    .fp Thelsamar >> 获取Thelsamar飞行路线
     .zoneskip Elwynn Forest
     .zoneskip Stormwind City
 step << NightElf tbc/Draenei tbc
 #xprate >1.499
     #completewith next
     .goto Loch Modan,21.30,68.60,40,0
-    .zone Dun Morogh>> Run to Dun Morogh
+    .zone Dun Morogh>> 跑到邓莫罗
 step << NightElf tbc/Draenei tbc
 #xprate >1.499
-	>>Go inside the South-eastern Trogg cave. Perform a logout skip
+	>>进入东南特罗格洞穴。执行注销跳过
     .goto Dun Morogh,70.63,56.70,60,0
     .goto Dun Morogh,70.60,54.86
-	.link https://www.youtube.com/watch?v=yQBW3KyguCM >> CLICK HERE
-	.zone Ironforge >> Logout Skip or travel to Ironforge
+	.link https://www.youtube.com/watch?v=yQBW3KyguCM >> 单击此处
+	.zone Ironforge >> 注销跳过或前往铁炉堡
 step << NightElf tbc/Draenei tbc
 #xprate >1.499
     .goto Ironforge,76.03,50.98,30,0
-    .zone Stormwind City >> Take the tram to Stormwind
+    .zone Stormwind City >> 乘电车去暴风城
 step << wotlk
     .zoneskip Darnassus,1
     .goto Teldrassil,58.4,94.0
-    >>Exit Darnassus through the purple portal
+    >>从紫色大门离开达纳苏斯
 step << wotlk
     .goto Darkshore,32.4,43.8,30,0
     .goto Darkshore,32.4,43.8,0
-    .zone Stormwind City >>Take the boat to Stormwind
+    .zone Stormwind City >>乘船去暴风城
 ]])
