@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 42,
 	["lastSanitation"] = 3,
+	["session"] = 43,
 	["errors"] = {
 		{
 			["message"] = "...ace\\AddOns\\AdvancedInterfaceOptions\\basicOptions.lua:344: attempt to index field 'CustomVars' (a nil value)",
@@ -248,62 +248,62 @@ BugGrabberDB = {
 		}, -- [31]
 		{
 			["message"] = "Binding AUTOBAR_CONFIG is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["session"] = 18,
 			["time"] = "2022/09/24 23:47:01",
+			["session"] = 18,
 			["counter"] = 18,
 		}, -- [32]
 		{
 			["message"] = "Binding AutoBarButtonHearth_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["session"] = 18,
 			["time"] = "2022/09/24 23:47:01",
+			["session"] = 18,
 			["counter"] = 18,
 		}, -- [33]
 		{
 			["message"] = "Binding AutoBarButtonMount_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 17,
 		}, -- [34]
 		{
 			["message"] = "Binding AutoBarButtonBandages_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 17,
 		}, -- [35]
 		{
 			["message"] = "Binding AutoBarButtonCrafting_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 17,
 		}, -- [36]
 		{
 			["message"] = "Binding AutoBarButtonHeal_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 15,
 		}, -- [37]
 		{
 			["message"] = "Binding AutoBarButtonRecovery_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 15,
 		}, -- [38]
 		{
 			["message"] = "Binding AutoBarButtonFood_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 10,
 		}, -- [39]
 		{
 			["message"] = "Binding AutoBarButtonWater_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 10,
 		}, -- [40]
 		{
 			["message"] = "Binding AutoBarButtonFoodBuff_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 10,
 		}, -- [41]
 		{
@@ -332,8 +332,8 @@ BugGrabberDB = {
 		}, -- [44]
 		{
 			["message"] = "Couldn't open Interface\\AddOns\\WideQuestLogLevels\\WideQuestLogLevels.toc",
-			["session"] = 23,
 			["time"] = "2022/09/28 22:56:05",
+			["session"] = 23,
 			["counter"] = 2,
 		}, -- [45]
 		{
@@ -346,8 +346,8 @@ BugGrabberDB = {
 		}, -- [46]
 		{
 			["message"] = "(null)",
-			["session"] = 27,
 			["time"] = "2022/09/28 22:01:13",
+			["session"] = 27,
 			["counter"] = 27,
 		}, -- [47]
 		{
@@ -384,8 +384,8 @@ BugGrabberDB = {
 		}, -- [51]
 		{
 			["message"] = "Couldn't open Interface\\AddOns\\Parrot\\Parrot_Wrath.toc",
-			["session"] = 35,
 			["time"] = "2022/10/04 01:21:10",
+			["session"] = 35,
 			["counter"] = 2,
 		}, -- [52]
 		{
@@ -416,16 +416,23 @@ BugGrabberDB = {
 			["time"] = "2022/10/04 01:43:26",
 			["locals"] = "popup = GearManagerDialogPopup {\n OnOkay = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2559\n OnBackdropLoaded = <function> defined @Interface\\SharedXML\\Backdrop.lua:152\n GetBackdropColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:390\n parentLeft = 0\n OnCancel = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2581\n SetBackdropBorderColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:422\n RightEdge = <unnamed> {\n }\n template = \"Transparent\"\n ApplyBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:294\n SetBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:329\n ClearBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:282\n TopLeft = <unnamed> {\n }\n GetBackdropBorderColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:409\n TopRight = <unnamed> {\n }\n SetBorderBlendMode = <function> defined @Interface\\SharedXML\\Backdrop.lua:266\n SetSelection = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2337\n BottomLeft = <unnamed> {\n }\n PixelSnapDisabled = true\n 0 = <userdata>\n SetupTextureCoordinates = <function> defined @Interface\\SharedXML\\Backdrop.lua:214\n OnBackdropSizeChanged = <function> defined @Interface\\SharedXML\\Backdrop.lua:182\n HasBackdropInfo = <function> defined @Interface\\SharedXML\\Backdrop.lua:278\n Center = <unnamed> {\n }\n GetBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:347\n BottomEdge = <unnamed> {\n }\n BottomLeftCorner = <unnamed> {\n }\n GetEdgeSize = <function> defined @Interface\\SharedXML\\Backdrop.lua:188\n BottomRightCorner = <unnamed> {\n }\n buttons = <table> {\n }\n TopEdge = <unnamed> {\n }\n isSkinned = true\n TopRightCorner = <unnamed> {\n }\n TopLeftCorner = <unnamed> {\n }\n BG = <unnamed> {\n }\n BottomRight = <unnamed> {\n }\n backdropInfo = <table> {\n }\n CancelButton = <unnamed> {\n }\n SetupPieceVisuals = <function> defined @Interface\\SharedXML\\Backdrop.lua:246\n SetBackdropColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:399\n LeftEdge = <unnamed> {\n }\n OkayButton = <unnamed> {\n }\n}\nselectedSet = GearSetButton2 {\n hover = <unnamed> {\n }\n checked = <unnamed> {\n }\n PixelSnapDisabled = true\n text = GearSetButton2Name {\n }\n backdrop = <unnamed> {\n }\n name = \"远程\"\n id = 1\n 0 = <userdata>\n Icon = GearSetButton2Icon {\n }\n icon = GearSetButton2Icon {\n }\n}\nindex = 284\n(*temporary) = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2337\n(*temporary) = GearManagerDialogPopup {\n OnOkay = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2559\n OnBackdropLoaded = <function> defined @Interface\\SharedXML\\Backdrop.lua:152\n GetBackdropColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:390\n parentLeft = 0\n OnCancel = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2581\n SetBackdropBorderColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:422\n RightEdge = <unnamed> {\n }\n template = \"Transparent\"\n ApplyBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:294\n SetBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:329\n ClearBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:282\n TopLeft = <unnamed> {\n }\n GetBackdropBorderColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:409\n TopRight = <unnamed> {\n }\n SetBorderBlendMode = <function> defined @Interface\\SharedXML\\Backdrop.lua:266\n SetSelection = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2337\n BottomLeft = <unnamed> {\n }\n PixelSnapDisabled = true\n 0 = <userdata>\n SetupTextureCoordinates = <function> defined @Interface\\SharedXML\\Backdrop.lua:214\n OnBackdropSizeChanged = <function> defined @Interface\\SharedXML\\Backdrop.lua:182\n HasBackdropInfo = <function> defined @Interface\\SharedXML\\Backdrop.lua:278\n Center = <unnamed> {\n }\n GetBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:347\n BottomEdge = <unnamed> {\n }\n BottomLeftCorner = <unnamed> {\n }\n GetEdgeSize = <function> defined @Interface\\SharedXML\\Backdrop.lua:188\n BottomRightCorner = <unnamed> {\n }\n buttons = <table> {\n }\n TopEdge = <unnamed> {\n }\n isSkinn",
 			["stack"] = "[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2379: in function `RecalculateGearManagerDialogPopup'\n[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2356: in function <Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2353>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2272: in function <Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2269>",
-			["session"] = 42,
-			["counter"] = 14,
+			["session"] = 43,
+			["counter"] = 17,
 		}, -- [56]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2521: attempt to compare number with nil",
 			["time"] = "2022/10/04 01:45:04",
 			["locals"] = "popup = GearManagerDialogPopup {\n OnOkay = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2559\n OnBackdropLoaded = <function> defined @Interface\\SharedXML\\Backdrop.lua:152\n GetBackdropColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:390\n parentLeft = 0\n OnCancel = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2581\n SetBackdropBorderColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:422\n RightEdge = <unnamed> {\n }\n template = \"Transparent\"\n ApplyBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:294\n SetBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:329\n ClearBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:282\n TopLeft = <unnamed> {\n }\n GetBackdropBorderColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:409\n TopRight = <unnamed> {\n }\n SetBorderBlendMode = <function> defined @Interface\\SharedXML\\Backdrop.lua:266\n SetSelection = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2337\n BottomLeft = <unnamed> {\n }\n PixelSnapDisabled = true\n BottomRightCorner = <unnamed> {\n }\n 0 = <userdata>\n SetupTextureCoordinates = <function> defined @Interface\\SharedXML\\Backdrop.lua:214\n OnBackdropSizeChanged = <function> defined @Interface\\SharedXML\\Backdrop.lua:182\n HasBackdropInfo = <function> defined @Interface\\SharedXML\\Backdrop.lua:278\n Center = <unnamed> {\n }\n GetBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:347\n BottomEdge = <unnamed> {\n }\n BottomLeftCorner = <unnamed> {\n }\n GetEdgeSize = <function> defined @Interface\\SharedXML\\Backdrop.lua:188\n buttons = <table> {\n }\n TopEdge = <unnamed> {\n }\n isSkinned = true\n TopRightCorner = <unnamed> {\n }\n TopLeftCorner = <unnamed> {\n }\n BG = <unnamed> {\n }\n BottomRight = <unnamed> {\n }\n backdropInfo = <table> {\n }\n CancelButton = <unnamed> {\n }\n SetupPieceVisuals = <function> defined @Interface\\SharedXML\\Backdrop.lua:246\n SetBackdropColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:399\n LeftEdge = <unnamed> {\n }\n OkayButton = <unnamed> {\n }\n}\nbuttons = <table> {\n 1 = GearManagerDialogPopupButton1 {\n }\n 2 = GearManagerDialogPopupButton2 {\n }\n 3 = GearManagerDialogPopupButton3 {\n }\n 4 = GearManagerDialogPopupButton4 {\n }\n 5 = GearManagerDialogPopupButton5 {\n }\n 6 = GearManagerDialogPopupButton6 {\n }\n 7 = GearManagerDialogPopupButton7 {\n }\n 8 = GearManagerDialogPopupButton8 {\n }\n 9 = GearManagerDialogPopupButton9 {\n }\n 10 = GearManagerDialogPopupButton10 {\n }\n 11 = GearManagerDialogPopupButton11 {\n }\n 12 = GearManagerDialogPopupButton12 {\n }\n 13 = GearManagerDialogPopupButton13 {\n }\n 14 = GearManagerDialogPopupButton14 {\n }\n 15 = GearManagerDialogPopupButton15 {\n }\n 16 = GearManagerDialogPopupButton16 {\n }\n 17 = GearManagerDialogPopupButton17 {\n }\n 18 = GearManagerDialogPopupButton18 {\n }\n 19 = GearManagerDialogPopupButton19 {\n }\n 20 = GearManagerDialogPopupButton20 {\n }\n 21 = GearManagerDialogPopupButton21 {\n }\n 22 = GearManagerDialogPopupButton22 {\n }\n 23 = GearManagerDialogPopupButton23 {\n }\n 24 = GearManagerDialogPopupButton24 {\n }\n 25 = GearManagerDialogPopupButton25 {\n }\n 26 = GearManagerDialogPopupButton26 {\n }\n 27 = GearManagerDialogPopupButton27 {\n }\n 28 = GearManagerDialogPopupButton28 {\n }\n 29 = GearManagerDialogPopupButton29 {\n }\n 30 = GearManagerDialogPopupButton30 {\n }\n 31 = GearManagerDialogPopupButton31 {\n }\n 32 = GearManagerDialogPopupButton32 {\n }\n 33 = GearManagerDialogPopupButton33 {\n }\n 34 = GearManagerDialogPopupButton34 {\n }\n 35 = GearManagerDialogPopupButton35 {\n }\n 36 = GearManagerDialogPopupButton36 {\n }\n 37 = GearManagerDialogPopupButton37 {\n }\n 38 = GearManagerDialogPopupButton38 {\n }\n 39 = GearManagerDialogPopupButton39 {\n }\n 40 = GearManagerDialogPopupButton40 {\n }\n 41 = GearManagerDialogPopupButton41 {\n }\n 42 = GearManagerDialogPopupButton42 {\n }\n 43 = GearManagerDialogPopupButton43 {\n }\n 44 = GearManagerDialogPopupButton44 {\n }\n 45 = GearManagerDialogPopupButton45 {\n }\n 46 = GearManagerDialogPopupButton46 {\n }\n 47 = GearManagerDialogPopupButton47 {\n }\n 48 = GearManagerDialogPopupButton48 {\n }\n 49 = GearManagerD",
 			["stack"] = "[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2521: in function <Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2509>\n[string \"=[C]\"]: in function `GearManagerDialogPopup_Update'\n[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2274: in function <Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2269>",
-			["session"] = 42,
-			["counter"] = 3,
+			["session"] = 43,
+			["counter"] = 8,
 		}, -- [57]
+		{
+			["message"] = "[ADDON_ACTION_FORBIDDEN] 插件 'WIM' 尝试调用保护功能 'RunBinding()'。",
+			["time"] = "2022/10/04 02:38:54",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `RunBinding'\n[string \"@Interface\\FrameXML\\StackSplitFrame.lua\"]:182: in function <Interface\\FrameXML\\StackSplitFrame.lua:179>\n[string \"=[C]\"]: in function `Hide'\n[string \"@Interface_Wrath\\FrameXML\\UIParent.lua\"]:2198: in function `SetUIPanel'\n[string \"@Interface_Wrath\\FrameXML\\UIParent.lua\"]:2278: in function `HideUIPanel'\n[string \"@Interface_Wrath\\FrameXML\\UIParent.lua\"]:1931: in function <Interface_Wrath\\FrameXML\\UIParent.lua:1923>\n[string \"=[C]\"]: in function `SetAttribute'\n[string \"@Interface_Wrath\\FrameXML\\UIParent.lua\"]:2738: in function `HideUIPanel'\n[string \"@Interface_TBC\\FrameXML\\MerchantFrame.lua\"]:29: in function <Interface_TBC\\FrameXML\\MerchantFrame.lua:24>",
+			["session"] = 43,
+			["counter"] = 1,
+		}, -- [58]
 	},
 }

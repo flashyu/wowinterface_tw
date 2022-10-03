@@ -1,13 +1,13 @@
 
 LBISSettings = {
-	["SelectedPhase"] = "All",
+	["minimap"] = {
+		["minimapPos"] = 180,
+		["hide"] = false,
+	},
 	["SelectedZone"] = "All",
 	["ShowTooltip"] = true,
 	["SelectedSourceType"] = "All",
 	["SelectedSlot"] = "All",
 	["SelectedSpec"] = "",
-	["minimap"] = {
-		["minimapPos"] = 180,
-		["hide"] = false,
-	},
+	["SelectedPhase"] = "All",
 }

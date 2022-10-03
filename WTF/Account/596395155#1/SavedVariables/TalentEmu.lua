@@ -199,11 +199,11 @@ TalentEmuSV = {
 		["minimapPos"] = 185,
 	},
 	["var"] = {
-		["Player-4778-05244F19"] = "!T321E121K12c2CvkyLGxq2:::E22u32LuEP1:::::UHLj5QiMz:=Jy1!G3221n+9:RMB:C1u+-:18C:G1u+-:08C:B1u+9:ZMB:G1u+-:HRC:11u+6++++++!E320+^+iV9:8E1:9+dQ-:8E1:9+2Y9:8E1:9+^+Vp-:8E1:9+7R9:8E1:9+1X-:8E1:9+iQ-:8E1:9+289:8E1:9+fh9:8E1:9+RR-:8E1:9+bQ-:8E1:9+EK9:8E1:9+hj-:8E1:9+Ji-:8E1:9+R0=:1qv:7E1:9+^+Kjk:8E1:9+HW-:8E1:9",
 		["savedTalent"] = {
-			["|cffff7c0a德鲁伊|r- 平衡13 野性战斗 0 |cff7fbfff恢复58|r"] = "!T321E111LuEP1:::::UHLj5QiMz:=Jy1",
 			["|cffff7c0a德鲁伊|r- |cff7fbfff平衡58|r 野性战斗 0 恢复13"] = "!T321E111K12c2CvkyLGxq2:::E22u32",
+			["|cffff7c0a德鲁伊|r- 平衡13 野性战斗 0 |cff7fbfff恢复58|r"] = "!T321E111LuEP1:::::UHLj5QiMz:=Jy1",
 		},
+		["Player-4778-05244F19"] = "!T321E122K12c2CvkyLGxq2:::E22u32LuEP1:::::UHLj5QiMz:=Jy1!G3222n+9:RMB:C1u+-:18C:G1u+-:08C:B1u+9:ZMB:G1u+-:HRC:11u+6++++++!E320+^+iV9:8E1:9+dQ-:8E1:9+2Y9:8E1:9+^+Vp-:8E1:9+7R9:8E1:9+1X-:8E1:9+iQ-:8E1:9+289:8E1:9+fh9:8E1:9+RR-:8E1:9+bQ-:8E1:9+EK9:8E1:9+hj-:8E1:9+Ji-:8E1:9+R0=:1qv:7E1:9+^+Kjk:8E1:9+HW-:8E1:9",
 	},
 	["_version"] = 220811,
 	["_GlobalAssign"] = {

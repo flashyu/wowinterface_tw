@@ -18,9 +18,9 @@ ElvDB = {
 		["Default"] = {
 			["general"] = {
 				["valuecolor"] = {
-					["r"] = 1,
-					["g"] = 0.49,
 					["b"] = 0.04,
+					["g"] = 0.49,
+					["r"] = 1,
 				},
 			},
 			["bags"] = {
@@ -48,17 +48,17 @@ ElvDB = {
 				["colors"] = {
 					["healthclass"] = true,
 					["auraBarBuff"] = {
-						["r"] = 1,
-						["g"] = 0.49,
 						["b"] = 0.04,
+						["g"] = 0.49,
+						["r"] = 1,
 					},
 					["castClassColor"] = true,
 				},
 			},
 			["actionbar"] = {
 				["bar3"] = {
-					["buttons"] = 12,
 					["buttonSize"] = 36,
+					["buttons"] = 12,
 					["buttonsPerRow"] = 12,
 				},
 				["flyoutSize"] = 35,
@@ -77,8 +77,8 @@ ElvDB = {
 					["buttonSize"] = 36,
 				},
 				["bar5"] = {
-					["buttons"] = 12,
 					["buttonSize"] = 36,
+					["buttons"] = 12,
 					["buttonsPerRow"] = 4,
 				},
 				["lockActionBars"] = false,
@@ -93,24 +93,24 @@ ElvDB = {
 			["movers"] = {
 				["TotemTrackerMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,417,26",
 				["ShiftAB"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,418,209",
-				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,256,319",
+				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,257,403",
 				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,256,267",
 				["ElvAB_2"] = "BOTTOM,ElvUIParent,BOTTOM,0,61",
-				["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,309,23",
 				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
-				["ElvUF_PetCastbarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,471,78",
+				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
 				["ElvUF_PlayerMover"] = "BOTTOM,UIParent,BOTTOM,-258,402",
+				["ElvUF_PetCastbarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,471,78",
 				["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,98",
 				["ElvAB_3"] = "BOTTOM,UIParent,BOTTOM,0,23",
-				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
+				["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,309,23",
 				["VehicleLeaveButton"] = "BOTTOM,UIParent,BOTTOM,0,493",
-				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,257,403",
+				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,256,319",
 			},
 			["chat"] = {
 				["tabSelectorColor"] = {
-					["r"] = 1,
-					["g"] = 0.49,
 					["b"] = 0.04,
+					["g"] = 0.49,
+					["r"] = 1,
 				},
 				["panelSnapLeftID"] = 1,
 			},
@@ -121,14 +121,17 @@ ElvDB = {
 			["骑风"] = 31925119,
 		},
 	},
-	["global"] = {
-		["general"] = {
-			["AceGUI"] = {
-				["height"] = 600,
-				["width"] = 800,
-			},
-			["UIScale"] = 0.7000000000000001,
+	["serverID"] = {
+		[4778] = {
+			["祈福"] = true,
 		},
+	},
+	["faction"] = {
+		["祈福"] = {
+			["骑风"] = "Alliance",
+		},
+	},
+	["global"] = {
 		["datatexts"] = {
 			["settings"] = {
 				["Currencies"] = {
@@ -149,6 +152,13 @@ ElvDB = {
 				},
 			},
 		},
+		["general"] = {
+			["AceGUI"] = {
+				["height"] = 600,
+				["width"] = 800,
+			},
+			["UIScale"] = 0.7000000000000001,
+		},
 		["nameplates"] = {
 			["filters"] = {
 				["ElvUI_NonTarget"] = {
@@ -158,16 +168,6 @@ ElvDB = {
 				["ElvUI_Boss"] = {
 				},
 			},
-		},
-	},
-	["faction"] = {
-		["祈福"] = {
-			["骑风"] = "Alliance",
-		},
-	},
-	["serverID"] = {
-		[4778] = {
-			["祈福"] = true,
 		},
 	},
 }
