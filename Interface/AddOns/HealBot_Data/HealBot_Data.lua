@@ -1,6 +1,3 @@
-HealBot_lastVerSkinUpdate="9.2.7.0"
-HealBot_lastVerUpdate="9.2.7.0"
-
 HealBot_Default_Textures={
     [1]= {name="HealBot 01", file=[[Interface\Addons\HealBot\Images\bar1.tga]]},
     [2]= {name="Waves", file=[[Interface\Addons\HealBot\Images\bar2.tga]]},
@@ -54,7 +51,7 @@ HealBot_Font_Outline={
 };
 
 HealBot_ConfigDefaults = {
-  LastVersionUpdate=HealBot_lastVerUpdate,
+  LastVersionUpdate=HEALBOT_VERSION_SC,
   MyFriend="x",
   CurrentSpec=9,
   Skin_ID = -1,
@@ -248,7 +245,7 @@ HealBot_GlobalsDefaults = {}
 
 function HealBot_Data_InitVars()
     HealBot_GlobalsDefaults = {
-        LastVersionSkinUpdate=HealBot_lastVerSkinUpdate,
+        LastVersionSkinUpdate=HEALBOT_VERSION_SC,
         FirstLoad = true,
         PluginThreat=true,
         PluginTimeToDie=true,

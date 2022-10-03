@@ -1226,6 +1226,7 @@ function HealBot_Lang_enALL()
     HEALBOT_PLUGIN_CPMACRO                  = "Macro name: "
     HEALBOT_PLUGIN_AGGRO2THRESHOLD          = "Aggro level 2 threshold"
     HEALBOT_PLUGIN_AGGRO3THRESHOLD          = "Aggro level 3 threshold"
+    HEALBOT_PLUGIN_INHEALHOTTIME            = "Incoming heals HoT time"
     HEALBOT_PLUGIN_AUTOTIMEDDURATION        = "Custom debuff - auto All Timed duration less than"
     HEALBOT_PLUGIN_ENABLEDALLBUFFS          = "Enable all custom buffs"
     HEALBOT_PLUGIN_DISABLEALLBUFFS          = "Disable all custom buffs"

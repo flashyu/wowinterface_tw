@@ -2,13 +2,22 @@
 RXPCData = {
 	["completedWaypoints"] = {
 	},
-	["currentStep"] = 1,
-	["currentGuideName"] = "",
+	["currentStep"] = 46,
+	["currentGuideName"] = "79-80 冰冠冰川",
 	["stepSkip"] = {
+		[24] = true,
+		[29] = true,
+		[16] = true,
+		[32] = true,
+		[34] = true,
+		[23] = true,
+		[6] = true,
+		[12] = true,
+		[22] = true,
 	},
 	["flightPaths"] = {
 	},
-	["currentGuideGroup"] = "",
+	["currentGuideGroup"] = "RestedXP 联盟 70-80",
 }
 RXPCTrackingData = {
 	["profileKeys"] = {
@@ -17,7 +26,7 @@ RXPCTrackingData = {
 	["profiles"] = {
 		["骑风 - 祈福"] = {
 			["levels"] = {
-				[76] = {
+				[79] = {
 					["groupExperience"] = 0,
 					["deaths"] = 0,
 					["mobs"] = {
@@ -27,7 +36,17 @@ RXPCTrackingData = {
 					["quests"] = {
 					},
 				},
-				[79] = {
+				[80] = {
+					["groupExperience"] = 0,
+					["deaths"] = 0,
+					["mobs"] = {
+					},
+					["timestamp"] = {
+					},
+					["quests"] = {
+					},
+				},
+				[76] = {
 					["groupExperience"] = 0,
 					["deaths"] = 0,
 					["mobs"] = {
@@ -47,6 +66,32 @@ RXPCComms = {
 	},
 	["profiles"] = {
 		["骑风 - 祈福"] = {
+			["announcements"] = {
+				["79-80 冰冠冰川"] = {
+					["collect"] = {
+					},
+					["complete"] = {
+					},
+				},
+			},
+			["players"] = {
+				["小飞棍来惹"] = {
+					["isRxp"] = true,
+					["lastSeen"] = 216233.928,
+					["xpPercentage"] = 30,
+					["level"] = 78,
+					["timePlayed"] = 0,
+					["class"] = "ROGUE",
+				},
+				["月下凌乱"] = {
+					["isRxp"] = true,
+					["lastSeen"] = 216300.347,
+					["xpPercentage"] = 0,
+					["level"] = 80,
+					["timePlayed"] = 0,
+					["class"] = "PALADIN",
+				},
+			},
 		},
 	},
 }
@@ -56,9 +101,12 @@ RXPCSettings = {
 	},
 	["profiles"] = {
 		["骑风 - 祈福"] = {
+			["hideGuideWindow"] = true,
 			["hardcore"] = false,
 			["frameHeight"] = 28.00007438659668,
+			["macroAnnounced"] = true,
 			["xprate"] = 1,
+			["hideInRaid"] = true,
 		},
 	},
 }

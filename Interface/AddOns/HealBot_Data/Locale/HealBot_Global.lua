@@ -378,7 +378,8 @@ function HealBot_globalVars()
     HEALBOT_DALARAN_BRILLIANCE              = 61316 --GetSpellInfo(61316) or "--Dalaran Brilliance";
     HBC_DAMPEN_MAGIC                        = 604
     HEALBOT_EVOCATION                       = 12051 --GetSpellInfo(12051) or "--Evocation";
-    HEALBOT_FOCUS_MAGIC                     = 54646 --GetSpellInfo(54646) or "--Focus Magic";
+    HBC_FOCUS_MAGIC                         = 54646 --GetSpellInfo(54646) or "--Focus Magic";
+    HEALBOT_FOCUS_MAGIC                     = 321358
     HBC_FROST_ARMOR                         = 168
     HBC_ICE_ARMOR                           = 7302
     HBC_MOLTEN_ARMOR                        = 30482
@@ -455,6 +456,7 @@ function HealBot_globalVars()
     HBC_SEAL_WISDOM                         = 20166
     HEALBOT_SEAL_OF_TRUTH                   = 31801 --GetSpellInfo(31801) or "--Seal of Truth";
     HEALBOT_SPEED_OF_LIGHT                  = 85499 --GetSpellInfo(85499) or "--Speed of Light";
+    HBC_SEAL_OF_CORRUPTION                  = 348704
     --Legion Added
     HEALBOT_BLESSING_OF_SACRIFICE           = 6940 --GetSpellInfo(199448) or "--Blessing of Sacrifice";
     HEALBOT_BESTOW_FAITH                    = 223306 --GetSpellInfo(223306) or "--Bestow Faith";

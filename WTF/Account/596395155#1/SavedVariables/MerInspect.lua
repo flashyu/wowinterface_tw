@@ -3,11 +3,11 @@ MerInspectDB = {
 	["ShowOwnFrameWhenInspecting"] = false,
 	["ShowCharacterItemStats"] = false,
 	["ShowInspectAngularBorder"] = false,
-	["ShowCharacterItemSheet"] = true,
+	["ShowCharacterItemSheet"] = false,
 	["ShowInspectItemSheet"] = true,
 	["version"] = 1,
-	["ShowItemSlotString"] = true,
 	["ShowItemStats"] = true,
+	["ShowItemSlotString"] = true,
 	["ShowInspectColoredLabel"] = true,
 	["ShowItemBorder"] = true,
 }

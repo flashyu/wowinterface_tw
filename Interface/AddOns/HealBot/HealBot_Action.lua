@@ -2521,7 +2521,7 @@ function HealBot_Action_PrepButton(button)
     button.text.healthupdate=true
     button.text.aggroupdate=true
     button.spec=" "
-    button.specupdate=false
+    button.specupdate=0
     button.gref["Bar"]:SetStatusBarColor(0, 0, 0, 0)
     button.gref["Bar"]:SetValue(1000)
     button.gref["InHeal"]:SetStatusBarColor(0, 0, 0, 0)
@@ -3719,7 +3719,7 @@ function HealBot_Action_SetAllButtonAttribs(button,cType,prep)
             end
             if hasSpells then
                 hbMaxMouseButtons[cType]=x
-            elseif x==15 and hbMaxMouseButtons[cType]==20 then 
+            elseif x==20 and hbMaxMouseButtons[cType]==20 then 
                 hbMaxMouseButtons[cType]=0
             end
             if not button.binds[cType].set then
@@ -3745,14 +3745,9 @@ function HealBot_Action_SetAllButtonAttribs(button,cType,prep)
             end
             button.binds[cType].set=true
         end
-        if HealBot_Data["TIPUSE"] then HealBot_Tooltip_setMaxButtons(hbMaxMouseButtons[cType], cType) end
     end
     --HealBot_AddDebug(cType.." Max Mouse Buttons used = "..hbMaxMouseButtons[cType])
     --HealBot_setCall("HealBot_Action_SetAllButtonAttribs")
-end
-
-function HealBot_Action_GetMaxButtons(cType)
-    return hbMaxMouseButtons[cType]
 end
 
 function HealBot_Action_PrepSetEnabledAttribs()
@@ -3906,11 +3901,11 @@ function HealBot_Action_initGuidData(button)
     end
 end
 
-function HealBot_Action_getGuidData(button, attrib)
-    if not hbGuidData[button.guid] then
+function HealBot_Action_getGuidData(guid, attrib)
+    if not hbGuidData[guid] then
         return hbGuidDefault[attrib]
     else
-        return hbGuidData[button.guid][attrib]
+        return hbGuidData[guid][attrib]
     end
 end
 
@@ -3921,6 +3916,11 @@ function HealBot_Action_setGuidData(button, attrib, value, callback)
         HealBot_Action_initGuidData(button)
         if not callback then HealBot_Action_setGuidData(button, attrib, value, true) end
     end
+end
+
+function HealBot_Action_setGuidSpec(button, spec)
+    HealBot_Action_setGuidData(button, "SPEC", " "..spec.." ")
+    if button.frame<6 then HealBot_Timers_Set("INIT","RefreshPartyNextRecalcPlayers",1.25) end
 end
 
 function HealBot_Action_SetRangeSpellType(button, hostile)
@@ -4442,7 +4442,7 @@ function HealBot_Action_MarkDeleteButton(button)
 end
 
 function HealBot_Action_Reset()
-    HealBot_Timers_TurboOn(1,1)
+    HealBot_Timers_TurboOn(1)
     if HealBot_Config.DisabledNow==1 then
         HealBot_Options_DisableHealBotOpt:SetChecked(false)
         HealBot_Options_DisableHealBot(false)
@@ -4583,7 +4583,7 @@ end
 
 function HealBot_Action_setPoint(hbCurFrame)
     if not hbCurFrame then return end
-    if not InCombatLockdown() then
+    if not HealBot_Data["UILOCK"] then
         HealBot_Action_CheckFrame(hbCurFrame, grpFrame[hbCurFrame])
         if not HealBot_Action_StickyFrame(hbCurFrame) then
             HealBot_Action_FrameSetPoint(hbCurFrame, grpFrame[hbCurFrame])
@@ -5149,7 +5149,7 @@ end
 
 function HealBot_Action_ButtonPreClick(self,mButton,button)
     usedSmartCast=false;
-    if not InCombatLockdown() and button and self.id<999 and UnitExists(button.unit) and UnitIsFriend("player",button.unit) then
+    if not HealBot_Data["UILOCK"] and button and self.id<999 and UnitExists(button.unit) and UnitIsFriend("player",button.unit) then
         HealBot_setLuVars("TargetUnitID", button.unit)
         if mButton=="LeftButton" then 
             abutton="Left"

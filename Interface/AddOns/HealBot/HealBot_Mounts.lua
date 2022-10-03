@@ -15,7 +15,7 @@ function HealBot_MountsPets_Dismount()
 end
 
 function HealBot_MountsPets_FavMount()
-    if not InCombatLockdown() then
+    if not HealBot_Data["UILOCK"] then
         if IsMounted() then
             Dismount()
         elseif HEALBOT_GAME_VERSION>2 and CanExitVehicle() then    
@@ -31,14 +31,14 @@ function HealBot_MountsPets_FavMount()
 end
 
 function HealBot_MountsPets_RandomPet(isFav)
-    if not InCombatLockdown() then
+    if not HealBot_Data["UILOCK"] then
         C_PetJournal.SummonRandomPet(isFav)
     end
 end
 
 function HealBot_MountsPets_Mount(mount)
     if HealBot_MountIndex[mount] then 
-        if not InCombatLockdown() then
+        if not HealBot_Data["UILOCK"] then
             if HEALBOT_GAME_VERSION>3 then
                 C_MountJournal.SummonByID(HealBot_MountIndex[mount]) 
             else
@@ -53,7 +53,7 @@ end
 
 local vToggleMountIndex=0
 function HealBot_MountsPets_ToggelMount(mountType)
-    if not InCombatLockdown() then
+    if not HealBot_Data["UILOCK"] then
         if IsMounted() then
             Dismount()
         elseif HEALBOT_GAME_VERSION>2 and CanExitVehicle() then    

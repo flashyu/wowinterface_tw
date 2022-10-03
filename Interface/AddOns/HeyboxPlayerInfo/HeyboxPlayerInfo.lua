@@ -461,7 +461,9 @@ function frm:ADDON_LOADED()
 		local itemID = GetInventoryItemID("Player", i)
 		if type(itemID) ~= "nil" then
 			Equipment["EquipID"] = itemID
-			local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, _, _,_, _, _, sellPrice, _, _, _,_, setID, _ = GetItemInfo(itemID)
+			local equipAddition = GetInventoryItemLink("Player", i)
+			Equipment["EquipAddition"] = equipAddition
+			local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, _, _,_, _, _, sellPrice, _, _, _,_, setID, _ = GetItemInfo(equipAddition)
 
 			local _, spellID = GetItemSpell(itemID)
 			Equipment["EquipSpellID"] = spellID
@@ -472,18 +474,18 @@ function frm:ADDON_LOADED()
 			Equipment['EquipPrice'] = sellPrice
 			local itemIcon = GetItemIcon(itemID)
 			Equipment['EquipIcon'] = itemIcon
-			if versionName == "wowretail" then
-				local itemStats = GetItemStats(itemLink) 
-                if itemStats ~= nil then
-                    Equipment["EquipAttribute"] = {}
-                    for k, v in pairs(itemStats) do
-                        Equipment["EquipAttribute"][k] = v
-                    end
-                    l = length(Equipment["EquipAttribute"])
-                    if l == 0 then
-                        Equipment["EquipAttribute"] = nil
-                    end
-                end
+			local ok, itemStats = pcall(getItemStats, itemLink)
+			if ok then
+				if itemStats ~= nil then
+					Equipment["EquipAttribute"] = {}
+					for k, v in pairs(itemStats) do
+						Equipment["EquipAttribute"][k] = v
+					end
+					l = length(Equipment["EquipAttribute"])
+					if l == 0 then
+						Equipment["EquipAttribute"] = nil
+					end
+				end
 			end
 			local current, maximum = GetInventoryItemDurability(i)
 			if current ~= nil and maximum ~= nil then
@@ -497,10 +499,6 @@ function frm:ADDON_LOADED()
 				Equipment['EquipItemIdForSource'] = itemIdForSource
 			end
 			
-			local equipAddition = GetInventoryItemLink("Player", i)
-			Equipment["EquipAddition"] = equipAddition
-
-
 			local isRangedWeapon = IsRangedWeapon()
 			if i == 16 then
 				local mainSpeed, _ = UnitAttackSpeed("player")
@@ -578,6 +576,11 @@ function getSlotVisualInfo(i)
 		local itemIdForSource = C_Transmog.GetItemIDForSource(appliedSourceID)
 		return itemIdForSource
 	end
+end
+
+function getItemStats(link)
+	local itemStats = GetItemStats(link)
+	return itemStats
 end
 
 function getNumTalentTabs()

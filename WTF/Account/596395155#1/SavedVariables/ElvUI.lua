@@ -28,7 +28,7 @@ ElvDB = {
 					["enable"] = true,
 				},
 			},
-			["dbConverted"] = 12.9,
+			["dbConverted"] = 12.91,
 			["convertPages"] = true,
 			["unitframe"] = {
 				["units"] = {
@@ -96,13 +96,13 @@ ElvDB = {
 				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,256,319",
 				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,256,267",
 				["ElvAB_2"] = "BOTTOM,ElvUIParent,BOTTOM,0,61",
-				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
 				["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,309,23",
+				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
 				["ElvUF_PetCastbarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,471,78",
 				["ElvUF_PlayerMover"] = "BOTTOM,UIParent,BOTTOM,-258,402",
 				["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,98",
 				["ElvAB_3"] = "BOTTOM,UIParent,BOTTOM,0,23",
-				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
+				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
 				["VehicleLeaveButton"] = "BOTTOM,UIParent,BOTTOM,0,493",
 				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,257,403",
 			},
@@ -118,26 +118,16 @@ ElvDB = {
 	},
 	["gold"] = {
 		["祈福"] = {
-			["骑风"] = 30524777,
+			["骑风"] = 31925119,
 		},
 	},
 	["global"] = {
 		["general"] = {
 			["AceGUI"] = {
 				["height"] = 600,
-				["width"] = 700,
+				["width"] = 800,
 			},
 			["UIScale"] = 0.7000000000000001,
-		},
-		["nameplates"] = {
-			["filters"] = {
-				["ElvUI_NonTarget"] = {
-				},
-				["ElvUI_Target"] = {
-				},
-				["ElvUI_Boss"] = {
-				},
-			},
 		},
 		["datatexts"] = {
 			["settings"] = {
@@ -156,6 +146,16 @@ ElvDB = {
 							true, -- [4]
 						},
 					},
+				},
+			},
+		},
+		["nameplates"] = {
+			["filters"] = {
+				["ElvUI_NonTarget"] = {
+				},
+				["ElvUI_Target"] = {
+				},
+				["ElvUI_Boss"] = {
 				},
 			},
 		},

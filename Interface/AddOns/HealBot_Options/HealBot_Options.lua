@@ -365,9 +365,18 @@ function HealBot_Options_cacheNames(list)
     end
 end
 
+function HealBot_Options_GetContainerNumSlots(bag)
+    --if HEALBOT_GAME_VERSION>9 then
+        --return C_Container.GetContainerNumSlots(bag)
+    --else
+        return GetContainerNumSlots(bag)
+    --end
+end
+
 function HealBot_Options_ItemsInBagInitScan(bag)
     local itemId,itemName=0,""
-    for slot = 1,GetContainerNumSlots(bag) do
+    local numSlots=HealBot_Options_GetContainerNumSlots(bag)
+    for slot = 1,numSlots do
         itemId=GetContainerItemID(bag,slot) or 0
         if itemId>0 then
             itemName=GetItemInfo(itemId)
@@ -1438,6 +1447,7 @@ function HealBot_Options_InitBuffSpellsClassList(tClass)
             HEALBOT_ARCANE_POWER,
             HEALBOT_SLOW_FALL,
             HEALBOT_FOCUS_MAGIC,
+            HBC_FOCUS_MAGIC,
             HEALBOT_ICE_WARD,
             HEALBOT_ICE_BARRIER,
             HBC_DAMPEN_MAGIC,
@@ -1489,6 +1499,7 @@ function HealBot_Options_InitBuffSpellsClassList(tClass)
             HEALBOT_SEAL_OF_COMMAND,
             HBC_SEAL_OF_COMMAND,
             HEALBOT_SEAL_OF_TRUTH,
+            HBC_SEAL_OF_CORRUPTION,
             HBC_SEAL_OF_THE_CRUSADER,
             HBC_SEAL_WISDOM,
             HEALBOT_SACRED_SHIELD,
@@ -8216,9 +8227,7 @@ function HealBot_Options_hbProfile_DropDown()
 end
 
 function HealBot_Options_hbProfile_OnClick(self)
-    if HealBot_Config.Profile>1 then
-        HealBot_Options_hbProfile_setClass()
-    end
+    HealBot_Options_LoadProfile()
 end
 
 function HealBot_Options_ProfileSpellCheck(sName,cType)
@@ -8262,53 +8271,55 @@ function HealBot_Options_hbProfile_setGlobalSpells(combo, globalcombo, maxButton
     end
 end
 
-function HealBot_Options_hbProfile_setClass()
-    if not HealBot_Data["PCLASSTRIM"] then HealBot_SetPlayerData() end
-    local saveSpells=false
-    if HealBot_Data["PCLASSTRIM"] then
-        if HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]] then
-            HealBot_Config_Spells=HealBot_Options_copyTable(HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]])
-            table.foreach(HealBot_Config_SpellsDefaults, function (key,val)
-                if HealBot_Config_Spells[key]==nil then
-                    HealBot_Config_Spells[key] = val;
-                end
-            end);
-        else
-            saveSpells=true
-        end
-        if HealBot_Class_Buffs[HealBot_Data["PCLASSTRIM"]] then
-            HealBot_Config_Buffs=HealBot_Options_copyTable(HealBot_Class_Buffs[HealBot_Data["PCLASSTRIM"]])
-            table.foreach(HealBot_Config_BuffsDefaults, function (key,val)
-                if HealBot_Config_Buffs[key]==nil then
-                    HealBot_Config_Buffs[key] = val;
-                end
-            end);        
-        else
-            HealBot_Options_hbProfile_saveClass("BUFFS")
-        end
-        if HealBot_Class_Cures[HealBot_Data["PCLASSTRIM"]] then
-            HealBot_Config_Cures=HealBot_Options_copyTable(HealBot_Class_Cures[HealBot_Data["PCLASSTRIM"]])
-            table.foreach(HealBot_Config_CuresDefaults, function (key,val)
-                if HealBot_Config_Cures[key]==nil then
-                    HealBot_Config_Cures[key] = val;
-                end
-            end);
-        else
-            HealBot_Options_hbProfile_saveClass("CURES")
-        end
-        if HealBot_Config.Profile==3 and HealBot_Class_Spells["GLOBAL"] then
-            HealBot_Options_hbProfile_setGlobalSpells(HealBot_Config_Spells.EnabledKeyCombo, HealBot_Class_Spells["GLOBAL"].EnabledKeyCombo, 20, "ENABLED")
-            HealBot_Options_hbProfile_setGlobalSpells(HealBot_Config_Spells.EnemyKeyCombo, HealBot_Class_Spells["GLOBAL"].EnemyKeyCombo, 20, "ENEMY")
-            HealBot_Options_hbProfile_setGlobalSpells(HealBot_Config_Spells.EmergKeyCombo, HealBot_Class_Spells["GLOBAL"].EmergKeyCombo, 5, "EMERG")
-            for x=1,20 do 
-                HealBot_Config_Spells.Binds[x]=HealBot_Class_Spells["GLOBAL"].Binds[x]
+function HealBot_Options_LoadProfile()
+    if HealBot_Config.Profile>1 then
+        if not HealBot_Data["PCLASSTRIM"] then HealBot_SetPlayerData() end
+        local saveSpells=false
+        if HealBot_Data["PCLASSTRIM"] then
+            if HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]] then
+                HealBot_Config_Spells=HealBot_Options_copyTable(HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]])
+                table.foreach(HealBot_Config_SpellsDefaults, function (key,val)
+                    if HealBot_Config_Spells[key]==nil then
+                        HealBot_Config_Spells[key] = val;
+                    end
+                end);
+            else
+                saveSpells=true
             end
+            if HealBot_Class_Buffs[HealBot_Data["PCLASSTRIM"]] then
+                HealBot_Config_Buffs=HealBot_Options_copyTable(HealBot_Class_Buffs[HealBot_Data["PCLASSTRIM"]])
+                table.foreach(HealBot_Config_BuffsDefaults, function (key,val)
+                    if HealBot_Config_Buffs[key]==nil then
+                        HealBot_Config_Buffs[key] = val;
+                    end
+                end);        
+            else
+                HealBot_Options_SaveProfile("BUFFS")
+            end
+            if HealBot_Class_Cures[HealBot_Data["PCLASSTRIM"]] then
+                HealBot_Config_Cures=HealBot_Options_copyTable(HealBot_Class_Cures[HealBot_Data["PCLASSTRIM"]])
+                table.foreach(HealBot_Config_CuresDefaults, function (key,val)
+                    if HealBot_Config_Cures[key]==nil then
+                        HealBot_Config_Cures[key] = val;
+                    end
+                end);
+            else
+                HealBot_Options_SaveProfile("CURES")
+            end
+            if HealBot_Config.Profile==3 and HealBot_Class_Spells["GLOBAL"] then
+                HealBot_Options_hbProfile_setGlobalSpells(HealBot_Config_Spells.EnabledKeyCombo, HealBot_Class_Spells["GLOBAL"].EnabledKeyCombo, 20, "ENABLED")
+                HealBot_Options_hbProfile_setGlobalSpells(HealBot_Config_Spells.EnemyKeyCombo, HealBot_Class_Spells["GLOBAL"].EnemyKeyCombo, 20, "ENEMY")
+                HealBot_Options_hbProfile_setGlobalSpells(HealBot_Config_Spells.EmergKeyCombo, HealBot_Class_Spells["GLOBAL"].EmergKeyCombo, 5, "EMERG")
+                for x=1,20 do 
+                    HealBot_Config_Spells.Binds[x]=HealBot_Class_Spells["GLOBAL"].Binds[x]
+                end
+            end
+            if saveSpells then HealBot_Options_SaveProfile("SPELLS") end
+            HealBot_Timers_InitExtraOptions()
+            HealBot_Timers_Set("INIT","PrepSetAllAttribs")
+        else
+            HealBot_Timers_Set("PLAYER","LoadProfile",1)
         end
-        if saveSpells then HealBot_Options_hbProfile_saveClass("SPELLS") end
-        HealBot_Timers_InitExtraOptions()
-        HealBot_Timers_Set("INIT","PrepSetAllAttribs")
-    else
-        HealBot_Timers_Set("PLAYER","SetProfile",1)
     end
 end
 
@@ -8338,31 +8349,33 @@ function HealBot_Options_hbProfile_saveGlobalCombo(combo, globalcombo, maxButton
     end
 end
 
-function HealBot_Options_hbProfile_saveClass(cType)
-    if not HealBot_Data["PCLASSTRIM"] or not HealBot_Data["PLEVEL"] then HealBot_SetPlayerData() end
-    if not HealBot_Data["PCLASSTRIM"] or not HealBot_Data["PLEVEL"] then return end
-    local sType=cType or "ALL"
-    if sType=="SPELLS" or sType=="ALL" then 
-        HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]]=HealBot_Options_copyTable(HealBot_Config_Spells) 
-        if HealBot_Config.Profile==3 then 
-            if not HealBot_Class_Spells["GLOBAL"] then 
-                HealBot_Class_Spells["GLOBAL"]={} 
-                HealBot_Class_Spells["GLOBAL"].EnabledKeyCombo={}
-                HealBot_Class_Spells["GLOBAL"].EnemyKeyCombo={}
-                HealBot_Class_Spells["GLOBAL"].EmergKeyCombo={}
-                HealBot_Class_Spells["GLOBAL"].Binds={}
-            end
-            HealBot_Options_hbProfile_saveGlobalCombo(HealBot_Config_Spells.EnabledKeyCombo, HealBot_Class_Spells["GLOBAL"].EnabledKeyCombo, 20)
-            HealBot_Options_hbProfile_saveGlobalCombo(HealBot_Config_Spells.EnemyKeyCombo, HealBot_Class_Spells["GLOBAL"].EnemyKeyCombo, 20)
-            HealBot_Options_hbProfile_saveGlobalCombo(HealBot_Config_Spells.EmergKeyCombo, HealBot_Class_Spells["GLOBAL"].EmergKeyCombo, 5)
-            for x=1,20 do 
-                HealBot_Class_Spells["GLOBAL"].Binds[x]=HealBot_Config_Spells.Binds[x]
-            end
+function HealBot_Options_SaveProfile(cType)
+    if HealBot_Config.Profile>1 then
+        if not HealBot_Data["PCLASSTRIM"] or not HealBot_Data["PLEVEL"] then HealBot_SetPlayerData() end
+        if not HealBot_Data["PCLASSTRIM"] or not HealBot_Data["PLEVEL"] then return end
+        local sType=cType or "ALL"
+        if sType=="SPELLS" or sType=="ALL" then 
+            HealBot_Class_Spells[HealBot_Data["PCLASSTRIM"]]=HealBot_Options_copyTable(HealBot_Config_Spells) 
+            if HealBot_Config.Profile==3 then 
+                if not HealBot_Class_Spells["GLOBAL"] then 
+                    HealBot_Class_Spells["GLOBAL"]={} 
+                    HealBot_Class_Spells["GLOBAL"].EnabledKeyCombo={}
+                    HealBot_Class_Spells["GLOBAL"].EnemyKeyCombo={}
+                    HealBot_Class_Spells["GLOBAL"].EmergKeyCombo={}
+                    HealBot_Class_Spells["GLOBAL"].Binds={}
+                end
+                HealBot_Options_hbProfile_saveGlobalCombo(HealBot_Config_Spells.EnabledKeyCombo, HealBot_Class_Spells["GLOBAL"].EnabledKeyCombo, 20)
+                HealBot_Options_hbProfile_saveGlobalCombo(HealBot_Config_Spells.EnemyKeyCombo, HealBot_Class_Spells["GLOBAL"].EnemyKeyCombo, 20)
+                HealBot_Options_hbProfile_saveGlobalCombo(HealBot_Config_Spells.EmergKeyCombo, HealBot_Class_Spells["GLOBAL"].EmergKeyCombo, 5)
+                for x=1,20 do 
+                    HealBot_Class_Spells["GLOBAL"].Binds[x]=HealBot_Config_Spells.Binds[x]
+                end
 
+            end
         end
+        if sType=="BUFFS" or sType=="ALL" then HealBot_Class_Buffs[HealBot_Data["PCLASSTRIM"]]=HealBot_Options_copyTable(HealBot_Config_Buffs) end
+        if sType=="CURES" or sType=="ALL" then HealBot_Class_Cures[HealBot_Data["PCLASSTRIM"]]=HealBot_Options_copyTable(HealBot_Config_Cures) end
     end
-    if sType=="BUFFS" or sType=="ALL" then HealBot_Class_Buffs[HealBot_Data["PCLASSTRIM"]]=HealBot_Options_copyTable(HealBot_Config_Buffs) end
-    if sType=="CURES" or sType=="ALL" then HealBot_Class_Cures[HealBot_Data["PCLASSTRIM"]]=HealBot_Options_copyTable(HealBot_Config_Cures) end
 end
 
 --------------------------------------------------------------------------------
@@ -12037,7 +12050,7 @@ function HealBot_Options_DoSet_Current_Skin(newSkin, ddRefresh, noCallback, optS
                     Healbot_Config_Skins.Current_Skin = Healbot_Config_Skins.Skins[j]
                     HealBot_Action_setAutoClose(true)
                     HealBot_Timers_Set("LAST","SetAutoClose", 3)
-                    HealBot_Timers_TurboOn(1,2)
+                    HealBot_Timers_TurboOn(1)
                     HealBot_Config.LastAutoSkinChangeTime=GetTime()+300
                     optSetSkins=true
                     HealBot_setLuVars("showReloadMsg", true)
@@ -12092,7 +12105,7 @@ function HealBot_Options_DoSet_Current_Skin(newSkin, ddRefresh, noCallback, optS
 end
 
 function HealBot_Options_Set_Current_Skin(newSkin, ddRefresh, noCallback, optSetSkins)
-    if not InCombatLockdown() then
+    if not HealBot_Data["UILOCK"] then
         local initCurFrame=HealBot_Options_DoSet_Current_Skin(newSkin, ddRefresh, noCallback, optSetSkins)
         if initCurFrame then HealBot_Options_SetSkins(true) end
     else
@@ -15698,6 +15711,7 @@ function HealBot_Options_CheckBindsOnChange(newBind, index)
         end
     end
     HealBot_Timers_Set("INIT","PrepSetAllAttribs",0.2)
+    HealBot_Timers_Set("PLAYER","SaveProfile",15)
 end
 
 function HealBot_Options_DoSpellsOnTextChanged(self, cType, bNo, key, spellText)
@@ -15725,6 +15739,7 @@ function HealBot_Options_SpellsOnTextChanged(self, bNo)
     spellText = strtrim(self:GetText())
     HealBot_Options_DoSpellsOnTextChanged(self, cType, bNo, key, spellText)
     if bNo==1 then HealBot_Timers_Set("PLAYER","SetRangeSpells",1) end
+    HealBot_Timers_Set("PLAYER","SaveProfile",15)
 end
 
 function HealBot_Options_SetBuffExtraItemTextColour(object, item)

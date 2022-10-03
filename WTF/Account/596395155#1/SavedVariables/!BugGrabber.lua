@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 32,
 	["lastSanitation"] = 3,
+	["session"] = 43,
 	["errors"] = {
 		{
 			["message"] = "...ace\\AddOns\\AdvancedInterfaceOptions\\basicOptions.lua:344: attempt to index field 'CustomVars' (a nil value)",
@@ -248,62 +248,62 @@ BugGrabberDB = {
 		}, -- [31]
 		{
 			["message"] = "Binding AUTOBAR_CONFIG is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["session"] = 18,
 			["time"] = "2022/09/24 23:47:01",
+			["session"] = 18,
 			["counter"] = 18,
 		}, -- [32]
 		{
 			["message"] = "Binding AutoBarButtonHearth_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["session"] = 18,
 			["time"] = "2022/09/24 23:47:01",
+			["session"] = 18,
 			["counter"] = 18,
 		}, -- [33]
 		{
 			["message"] = "Binding AutoBarButtonMount_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 17,
 		}, -- [34]
 		{
 			["message"] = "Binding AutoBarButtonBandages_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 17,
 		}, -- [35]
 		{
 			["message"] = "Binding AutoBarButtonCrafting_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 17,
 		}, -- [36]
 		{
 			["message"] = "Binding AutoBarButtonHeal_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 15,
 		}, -- [37]
 		{
 			["message"] = "Binding AutoBarButtonRecovery_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 15,
 		}, -- [38]
 		{
 			["message"] = "Binding AutoBarButtonFood_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 10,
 		}, -- [39]
 		{
 			["message"] = "Binding AutoBarButtonWater_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 10,
 		}, -- [40]
 		{
 			["message"] = "Binding AutoBarButtonFoodBuff_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 10,
 		}, -- [41]
 		{
@@ -332,8 +332,8 @@ BugGrabberDB = {
 		}, -- [44]
 		{
 			["message"] = "Couldn't open Interface\\AddOns\\WideQuestLogLevels\\WideQuestLogLevels.toc",
-			["session"] = 23,
 			["time"] = "2022/09/28 22:56:05",
+			["session"] = 23,
 			["counter"] = 2,
 		}, -- [45]
 		{
@@ -346,8 +346,8 @@ BugGrabberDB = {
 		}, -- [46]
 		{
 			["message"] = "(null)",
-			["session"] = 27,
 			["time"] = "2022/09/28 22:01:13",
+			["session"] = 27,
 			["counter"] = 27,
 		}, -- [47]
 		{
@@ -367,43 +367,72 @@ BugGrabberDB = {
 			["counter"] = 155,
 		}, -- [49]
 		{
-			["message"] = "Interface\\AddOns\\ItemRack\\ItemRack-3.73.nil.lua:1962: Usage: SaveBindings(1||2)",
-			["time"] = "2022/09/29 22:53:10",
-			["locals"] = "(*temporary) = 0\n",
-			["stack"] = "[string \"=[C]\"]: in function `SaveBindings'\n[string \"@Interface\\AddOns\\ItemRack\\ItemRack-3.73.nil.lua\"]:1962: in function `SetSetBindings'\n[string \"@Interface\\AddOns\\ItemRack\\ItemRack-3.73.nil.lua\"]:243: in function `?'\n[string \"@Interface\\AddOns\\ItemRack\\ItemRack-3.73.nil.lua\"]:208: in function `OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>",
-			["session"] = 29,
-			["counter"] = 2,
-		}, -- [50]
-		{
 			["message"] = "Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua:37: attempt to index global 'db' (a nil value)",
 			["time"] = "2022/09/24 23:47:00",
 			["locals"] = "frame = WIM3_OptionFrameFrame1 {\n ImportCustomObject = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:398\n welcome = WIM3_OptionFrameFrame2 {\n }\n CreateDropDownMenu = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:182\n CreateColorPicker = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:74\n CreateCheckButtonMenu = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:308\n lastObj = WIM3_OptionFrameFrame2 {\n }\n nextOffsetX = 0\n CreateButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:64\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n nextOffSetY = 0\n CreateSlider = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:127\n 0 = <userdata>\n CreateSection = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:353\n CreateText = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:340\n SetFullSize = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:59\n CreateFramedPanel = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:392\n}\n(*temporary) = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:257\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n _Enable = <function> defined =[C]:-1\n UpdateChildren = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:281\n _Disable = <function> defined =[C]:-1\n isCheckButton = true\n children = <table> {\n }\n Disable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:269\n}\n(*temporary) = \"小地图按钮自由移动\"\n(*temporary) = nil\n(*temporary) = <table> {\n enabled = false\n OnDisable = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:400\n RegisterWidget = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:311\n OnEnable = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:382\n Enable = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:307\n OnDisableWIM = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:371\n canDisable = true\n OnEnableWIM = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:360\n dPrint = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:309\n enableByDefault = true\n title = \"MinimapIcon\"\n RegisterEvent = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:306\n db_defaults = <table> {\n }\n resources = <table> {\n }\n hasWidget = false\n Disable = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:308\n}\n(*temporary) = \"enabled\"\n(*temporary) = nil\n(*temporary) = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua:36\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:257\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n _Enable = <function> defined =[C]:-1\n UpdateChildren = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:281\n _Disable = <function> defined =[C]:-1\n isCheckButton = true\n children = <table> {\n }\n Disable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:269\n}\n(*temporary) = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:46\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:257\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n _Enable = <function> defined =[C]:-1\n UpdateChi",
 			["stack"] = "[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua\"]:37: in function `frame'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:190: in function <Interface\\AddOns\\WIM\\Sources\\Options\\Options.lua:184>\n[string \"=[C]\"]: in function `Click'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:281: in function `UpdateSubCategories'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:104: in function <Interface\\AddOns\\WIM\\Sources\\Options\\Options.lua:104>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:327: in function `ShowOptions'\n[string \"@Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\WIM-3.9.6.lua\"]:11: in function <Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\WIM.lua:8>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\AddOnSkins\\Core\\Core.lua\"]:217: in function `CallSkin'\n[string \"@Interface\\AddOns\\AddOnSkins\\Core\\Core.lua\"]:311: in function `?'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:119: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...vUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
-			["session"] = 31,
-			["counter"] = 5,
+			["session"] = 34,
+			["counter"] = 6,
+		}, -- [50]
+		{
+			["message"] = "Interface\\AddOns\\ItemRack\\ItemRack-3.73.nil.lua:1962: Usage: SaveBindings(1||2)",
+			["time"] = "2022/09/29 22:53:10",
+			["locals"] = "(*temporary) = 0\n",
+			["stack"] = "[string \"=[C]\"]: in function `SaveBindings'\n[string \"@Interface\\AddOns\\ItemRack\\ItemRack-3.73.nil.lua\"]:1962: in function `SetSetBindings'\n[string \"@Interface\\AddOns\\ItemRack\\ItemRack-3.73.nil.lua\"]:243: in function `?'\n[string \"@Interface\\AddOns\\ItemRack\\ItemRack-3.73.nil.lua\"]:208: in function `OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>",
+			["session"] = 34,
+			["counter"] = 3,
 		}, -- [51]
+		{
+			["message"] = "Couldn't open Interface\\AddOns\\Parrot\\Parrot_Wrath.toc",
+			["time"] = "2022/10/04 01:21:10",
+			["session"] = 35,
+			["counter"] = 2,
+		}, -- [52]
 		{
 			["message"] = "Interface\\AddOns\\SpellReplay\\SpellReplay.lua:89: attempt to index field '?' (a nil value)",
 			["time"] = "2022/09/25 20:31:19",
 			["locals"] = "(for index) = 32\n(for limit) = 50\n(for step) = 1\ni = 32\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"32\"\n(*temporary) = nil\n(*temporary) = \"attempt to index field '?' (a nil value)\"\n",
 			["stack"] = "[string \"@Interface\\AddOns\\SpellReplay\\SpellReplay.lua\"]:89: in function <Interface\\AddOns\\SpellReplay\\SpellReplay.lua:87>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Misc\\AFK-离开.lua\"]:100: in function `SetAFK'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Misc\\AFK-离开.lua\"]:140: in function `?'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:119: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...vUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
-			["session"] = 31,
-			["counter"] = 6,
-		}, -- [52]
+			["session"] = 35,
+			["counter"] = 7,
+		}, -- [53]
 		{
 			["message"] = "Interface\\AddOns\\SpellReplay\\SpellReplay.lua:67: attempt to index field '?' (a nil value)",
 			["time"] = "2022/09/25 20:31:19",
 			["locals"] = "(for index) = 32\n(for limit) = 50\n(for step) = 1\ni = 32\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"32\"\n(*temporary) = nil\n(*temporary) = \"attempt to index field '?' (a nil value)\"\n",
 			["stack"] = "[string \"@Interface\\AddOns\\SpellReplay\\SpellReplay.lua\"]:67: in function <Interface\\AddOns\\SpellReplay\\SpellReplay.lua:65>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Misc\\AFK-离开.lua\"]:100: in function `SetAFK'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Misc\\AFK-离开.lua\"]:140: in function `?'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:119: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...vUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
-			["session"] = 31,
-			["counter"] = 6,
-		}, -- [53]
+			["session"] = 35,
+			["counter"] = 7,
+		}, -- [54]
 		{
 			["message"] = "...ace\\AddOns\\ElvUI\\Wrath\\Modules\\Skins\\Battlefield.lua:30: attempt to index local 'WintergraspTimer' (a nil value)",
 			["time"] = "2022/09/24 23:46:58",
 			["stack"] = "[string \"@Interface\\AddOns\\ElvUI\\Wrath\\Modules\\Skins\\Battlefield.lua\"]:30: in function <...ace\\AddOns\\ElvUI\\Wrath\\Modules\\Skins\\Battlefield.lua:9>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Skins\\Skins.lua\"]:1665: in function <Interface\\AddOns\\ElvUI\\Core\\Modules\\Skins\\Skins.lua:1660>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\Core.lua\"]:1766: in function `CallLoadFunc'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\Core.lua\"]:1781: in function `CallLoadedModule'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\Core.lua\"]:1807: in function `InitializeModules'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\Core.lua\"]:1916: in function `Initialize'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\init.lua\"]:225: in function <Interface\\AddOns\\ElvUI\\Core\\init.lua:224>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:70: in function <...vUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0.lua:65>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:527: in function `EnableAddon'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:630: in function <...vUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0.lua:615>",
-			["session"] = 32,
-			["counter"] = 32,
-		}, -- [54]
+			["session"] = 41,
+			["counter"] = 41,
+		}, -- [55]
+		{
+			["message"] = "Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2379: attempt to perform arithmetic on upvalue '_numItems' (a nil value)",
+			["time"] = "2022/10/04 01:43:26",
+			["locals"] = "popup = GearManagerDialogPopup {\n OnOkay = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2559\n OnBackdropLoaded = <function> defined @Interface\\SharedXML\\Backdrop.lua:152\n GetBackdropColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:390\n parentLeft = 0\n OnCancel = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2581\n SetBackdropBorderColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:422\n RightEdge = <unnamed> {\n }\n template = \"Transparent\"\n ApplyBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:294\n SetBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:329\n ClearBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:282\n TopLeft = <unnamed> {\n }\n GetBackdropBorderColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:409\n TopRight = <unnamed> {\n }\n SetBorderBlendMode = <function> defined @Interface\\SharedXML\\Backdrop.lua:266\n SetSelection = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2337\n BottomLeft = <unnamed> {\n }\n PixelSnapDisabled = true\n 0 = <userdata>\n SetupTextureCoordinates = <function> defined @Interface\\SharedXML\\Backdrop.lua:214\n OnBackdropSizeChanged = <function> defined @Interface\\SharedXML\\Backdrop.lua:182\n HasBackdropInfo = <function> defined @Interface\\SharedXML\\Backdrop.lua:278\n Center = <unnamed> {\n }\n GetBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:347\n BottomEdge = <unnamed> {\n }\n BottomLeftCorner = <unnamed> {\n }\n GetEdgeSize = <function> defined @Interface\\SharedXML\\Backdrop.lua:188\n BottomRightCorner = <unnamed> {\n }\n buttons = <table> {\n }\n TopEdge = <unnamed> {\n }\n isSkinned = true\n TopRightCorner = <unnamed> {\n }\n TopLeftCorner = <unnamed> {\n }\n BG = <unnamed> {\n }\n BottomRight = <unnamed> {\n }\n backdropInfo = <table> {\n }\n CancelButton = <unnamed> {\n }\n SetupPieceVisuals = <function> defined @Interface\\SharedXML\\Backdrop.lua:246\n SetBackdropColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:399\n LeftEdge = <unnamed> {\n }\n OkayButton = <unnamed> {\n }\n}\nselectedSet = GearSetButton2 {\n hover = <unnamed> {\n }\n checked = <unnamed> {\n }\n PixelSnapDisabled = true\n text = GearSetButton2Name {\n }\n backdrop = <unnamed> {\n }\n name = \"远程\"\n id = 1\n 0 = <userdata>\n Icon = GearSetButton2Icon {\n }\n icon = GearSetButton2Icon {\n }\n}\nindex = 284\n(*temporary) = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2337\n(*temporary) = GearManagerDialogPopup {\n OnOkay = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2559\n OnBackdropLoaded = <function> defined @Interface\\SharedXML\\Backdrop.lua:152\n GetBackdropColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:390\n parentLeft = 0\n OnCancel = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2581\n SetBackdropBorderColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:422\n RightEdge = <unnamed> {\n }\n template = \"Transparent\"\n ApplyBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:294\n SetBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:329\n ClearBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:282\n TopLeft = <unnamed> {\n }\n GetBackdropBorderColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:409\n TopRight = <unnamed> {\n }\n SetBorderBlendMode = <function> defined @Interface\\SharedXML\\Backdrop.lua:266\n SetSelection = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2337\n BottomLeft = <unnamed> {\n }\n PixelSnapDisabled = true\n 0 = <userdata>\n SetupTextureCoordinates = <function> defined @Interface\\SharedXML\\Backdrop.lua:214\n OnBackdropSizeChanged = <function> defined @Interface\\SharedXML\\Backdrop.lua:182\n HasBackdropInfo = <function> defined @Interface\\SharedXML\\Backdrop.lua:278\n Center = <unnamed> {\n }\n GetBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:347\n BottomEdge = <unnamed> {\n }\n BottomLeftCorner = <unnamed> {\n }\n GetEdgeSize = <function> defined @Interface\\SharedXML\\Backdrop.lua:188\n BottomRightCorner = <unnamed> {\n }\n buttons = <table> {\n }\n TopEdge = <unnamed> {\n }\n isSkinn",
+			["stack"] = "[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2379: in function `RecalculateGearManagerDialogPopup'\n[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2356: in function <Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2353>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2272: in function <Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2269>",
+			["session"] = 43,
+			["counter"] = 17,
+		}, -- [56]
+		{
+			["message"] = "Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2521: attempt to compare number with nil",
+			["time"] = "2022/10/04 01:45:04",
+			["locals"] = "popup = GearManagerDialogPopup {\n OnOkay = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2559\n OnBackdropLoaded = <function> defined @Interface\\SharedXML\\Backdrop.lua:152\n GetBackdropColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:390\n parentLeft = 0\n OnCancel = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2581\n SetBackdropBorderColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:422\n RightEdge = <unnamed> {\n }\n template = \"Transparent\"\n ApplyBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:294\n SetBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:329\n ClearBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:282\n TopLeft = <unnamed> {\n }\n GetBackdropBorderColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:409\n TopRight = <unnamed> {\n }\n SetBorderBlendMode = <function> defined @Interface\\SharedXML\\Backdrop.lua:266\n SetSelection = <function> defined @Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2337\n BottomLeft = <unnamed> {\n }\n PixelSnapDisabled = true\n BottomRightCorner = <unnamed> {\n }\n 0 = <userdata>\n SetupTextureCoordinates = <function> defined @Interface\\SharedXML\\Backdrop.lua:214\n OnBackdropSizeChanged = <function> defined @Interface\\SharedXML\\Backdrop.lua:182\n HasBackdropInfo = <function> defined @Interface\\SharedXML\\Backdrop.lua:278\n Center = <unnamed> {\n }\n GetBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:347\n BottomEdge = <unnamed> {\n }\n BottomLeftCorner = <unnamed> {\n }\n GetEdgeSize = <function> defined @Interface\\SharedXML\\Backdrop.lua:188\n buttons = <table> {\n }\n TopEdge = <unnamed> {\n }\n isSkinned = true\n TopRightCorner = <unnamed> {\n }\n TopLeftCorner = <unnamed> {\n }\n BG = <unnamed> {\n }\n BottomRight = <unnamed> {\n }\n backdropInfo = <table> {\n }\n CancelButton = <unnamed> {\n }\n SetupPieceVisuals = <function> defined @Interface\\SharedXML\\Backdrop.lua:246\n SetBackdropColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:399\n LeftEdge = <unnamed> {\n }\n OkayButton = <unnamed> {\n }\n}\nbuttons = <table> {\n 1 = GearManagerDialogPopupButton1 {\n }\n 2 = GearManagerDialogPopupButton2 {\n }\n 3 = GearManagerDialogPopupButton3 {\n }\n 4 = GearManagerDialogPopupButton4 {\n }\n 5 = GearManagerDialogPopupButton5 {\n }\n 6 = GearManagerDialogPopupButton6 {\n }\n 7 = GearManagerDialogPopupButton7 {\n }\n 8 = GearManagerDialogPopupButton8 {\n }\n 9 = GearManagerDialogPopupButton9 {\n }\n 10 = GearManagerDialogPopupButton10 {\n }\n 11 = GearManagerDialogPopupButton11 {\n }\n 12 = GearManagerDialogPopupButton12 {\n }\n 13 = GearManagerDialogPopupButton13 {\n }\n 14 = GearManagerDialogPopupButton14 {\n }\n 15 = GearManagerDialogPopupButton15 {\n }\n 16 = GearManagerDialogPopupButton16 {\n }\n 17 = GearManagerDialogPopupButton17 {\n }\n 18 = GearManagerDialogPopupButton18 {\n }\n 19 = GearManagerDialogPopupButton19 {\n }\n 20 = GearManagerDialogPopupButton20 {\n }\n 21 = GearManagerDialogPopupButton21 {\n }\n 22 = GearManagerDialogPopupButton22 {\n }\n 23 = GearManagerDialogPopupButton23 {\n }\n 24 = GearManagerDialogPopupButton24 {\n }\n 25 = GearManagerDialogPopupButton25 {\n }\n 26 = GearManagerDialogPopupButton26 {\n }\n 27 = GearManagerDialogPopupButton27 {\n }\n 28 = GearManagerDialogPopupButton28 {\n }\n 29 = GearManagerDialogPopupButton29 {\n }\n 30 = GearManagerDialogPopupButton30 {\n }\n 31 = GearManagerDialogPopupButton31 {\n }\n 32 = GearManagerDialogPopupButton32 {\n }\n 33 = GearManagerDialogPopupButton33 {\n }\n 34 = GearManagerDialogPopupButton34 {\n }\n 35 = GearManagerDialogPopupButton35 {\n }\n 36 = GearManagerDialogPopupButton36 {\n }\n 37 = GearManagerDialogPopupButton37 {\n }\n 38 = GearManagerDialogPopupButton38 {\n }\n 39 = GearManagerDialogPopupButton39 {\n }\n 40 = GearManagerDialogPopupButton40 {\n }\n 41 = GearManagerDialogPopupButton41 {\n }\n 42 = GearManagerDialogPopupButton42 {\n }\n 43 = GearManagerDialogPopupButton43 {\n }\n 44 = GearManagerDialogPopupButton44 {\n }\n 45 = GearManagerDialogPopupButton45 {\n }\n 46 = GearManagerDialogPopupButton46 {\n }\n 47 = GearManagerDialogPopupButton47 {\n }\n 48 = GearManagerDialogPopupButton48 {\n }\n 49 = GearManagerD",
+			["stack"] = "[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2521: in function <Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2509>\n[string \"=[C]\"]: in function `GearManagerDialogPopup_Update'\n[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2274: in function <Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2269>",
+			["session"] = 43,
+			["counter"] = 8,
+		}, -- [57]
+		{
+			["message"] = "[ADDON_ACTION_FORBIDDEN] 插件 'WIM' 尝试调用保护功能 'RunBinding()'。",
+			["time"] = "2022/10/04 02:38:54",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `RunBinding'\n[string \"@Interface\\FrameXML\\StackSplitFrame.lua\"]:182: in function <Interface\\FrameXML\\StackSplitFrame.lua:179>\n[string \"=[C]\"]: in function `Hide'\n[string \"@Interface_Wrath\\FrameXML\\UIParent.lua\"]:2198: in function `SetUIPanel'\n[string \"@Interface_Wrath\\FrameXML\\UIParent.lua\"]:2278: in function `HideUIPanel'\n[string \"@Interface_Wrath\\FrameXML\\UIParent.lua\"]:1931: in function <Interface_Wrath\\FrameXML\\UIParent.lua:1923>\n[string \"=[C]\"]: in function `SetAttribute'\n[string \"@Interface_Wrath\\FrameXML\\UIParent.lua\"]:2738: in function `HideUIPanel'\n[string \"@Interface_TBC\\FrameXML\\MerchantFrame.lua\"]:29: in function <Interface_TBC\\FrameXML\\MerchantFrame.lua:24>",
+			["session"] = 43,
+			["counter"] = 1,
+		}, -- [58]
 	},
 }

@@ -155,7 +155,7 @@ end
 
 local aRole = nil
 function HealBot_Panel_SetRole(unit,guid)
-    aRole = HealBot_Panel_UnitRole(unit)
+    aRole = HealBot_Panel_UnitRole(unit,guid)
     if aRole=="TANK" then
         HealBot_Panel_TankRole(unit,guid)
     elseif aRole=="HEALER" then
@@ -576,7 +576,7 @@ function HealBot_Panel_CheckRole(unit)
     return "TANK"
 end
 
-function HealBot_Panel_UnitRole(unit)
+function HealBot_Panel_UnitRole(unit,guid)
     local role = hbPanel_dataRoles[unit]
     if role==HEALBOT_WORDS_UNKNOWN then 
         if HEALBOT_GAME_VERSION>2 then
@@ -584,6 +584,9 @@ function HealBot_Panel_UnitRole(unit)
             if HEALBOT_GAME_VERSION==3 and not HealBot_Globals.AllowPlayerRoles then
                 if GetPartyAssignment('MAINTANK', unit) then 
                     role=HealBot_Panel_CheckRole(unit)
+                elseif HealBot_Panel_RaidUnitGUID(guid) then
+                    local s=HealBot_Action_getGuidData(guid, "SPEC")
+                    role=HealBot_Init_ClassicRoles(s)
                 else
                     role="DAMAGER"
                 end

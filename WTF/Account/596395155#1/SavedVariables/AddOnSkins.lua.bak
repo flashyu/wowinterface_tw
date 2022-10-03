@@ -5,7 +5,15 @@ AddOnSkinsDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
+			["Blizzard_Character"] = false,
+			["Blizzard_GuildBankUI"] = false,
+			["Blizzard_GuildUI"] = false,
 			["Auctionator"] = false,
+			["Blizzard_Quest"] = false,
+			["Blizzard_Friends"] = false,
+			["Blizzard_Others"] = false,
+			["Blizzard_Options"] = false,
+			["Blizzard_Mail"] = false,
 		},
 	},
 }

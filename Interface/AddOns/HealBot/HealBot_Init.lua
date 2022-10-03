@@ -351,6 +351,16 @@ function HealBot_Init_ClassicSpecs()
         }
 end
 
+function HealBot_Init_ClassicRoles(s)
+    if s==" "..HEALBOT_RESTORATION.." " or s==" "..HEALBOT_DISCIPLINE.." " or s==" "..HEALBOT_HOLY.." " or s==" "..HEALBOT_SHAMAN_RESTORATION.." " then
+        return "HEALER"
+    elseif s==" "..HEALBOT_PROTECTION.." " then
+        return "TANK"
+    else
+        return "DAMAGER"
+    end
+end
+
 function HealBot_Init_retSpec(class,tab)
     if HealBot_Spec[class] and HealBot_Spec[class][tab] then
         return HealBot_Spec[class][tab]

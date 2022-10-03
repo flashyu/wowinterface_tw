@@ -38,11 +38,11 @@ HealBot_Timers_luVars["nCalls"]=0
 HealBot_Timers_luVars["nProcs"]=9
 HealBot_Timers_luVars["turboEndTimer"]=0
 
-function HealBot_Timers_TurboOn(duration,x)
-    if HealBot_Timers_luVars["nProcs"]<(HealBot_Globals.CPUUsage*x) then
-        HealBot_Timers_luVars["nProcs"]=HealBot_Globals.CPUUsage*x
-        if HealBot_Timers_luVars["nProcs"]<4 then
-            HealBot_Timers_luVars["nProcs"]=4
+function HealBot_Timers_TurboOn(duration)
+    if HealBot_Timers_luVars["nProcs"]<ceil(HealBot_Globals.CPUUsage/2) then
+        HealBot_Timers_luVars["nProcs"]=ceil(HealBot_Globals.CPUUsage/2)
+        if HealBot_Timers_luVars["nProcs"]<2 then
+            HealBot_Timers_luVars["nProcs"]=2
         end
         HealBot_AddDebug("nProcs="..HealBot_Timers_luVars["nProcs"], "Perf", true)
     end
@@ -55,10 +55,10 @@ end
 function HealBot_Timers_TurboOff()
     if GetTime()<HealBot_Timers_luVars["turboEndTimer"] then
         HealBot_Timers_Set("LAST","TimerTurboOff",1)
-    elseif HealBot_Timers_luVars["nProcs"]~=floor(HealBot_Globals.CPUUsage/2) then
-        HealBot_Timers_luVars["nProcs"]=floor(HealBot_Globals.CPUUsage/2)
-        if HealBot_Timers_luVars["nProcs"]<2 then
-            HealBot_Timers_luVars["nProcs"]=2
+    elseif HealBot_Timers_luVars["nProcs"]~=floor(HealBot_Globals.CPUUsage/3) then
+        HealBot_Timers_luVars["nProcs"]=floor(HealBot_Globals.CPUUsage/3)
+        if HealBot_Timers_luVars["nProcs"]<1 then
+            HealBot_Timers_luVars["nProcs"]=1
         end
         HealBot_AddDebug("nProcs="..HealBot_Timers_luVars["nProcs"], "Perf", true)
     end
@@ -311,8 +311,7 @@ function HealBot_Timers_LastLoad()
     HealBot_Timers_Set("LAST","InitLoadSpells",0.25)
     HealBot_Timers_Set("LAST","CheckZone",0.4)
     HealBot_Timers_Set("PLAYER","InvChange",0.5)
-    HealBot_Timers_Set("LAST","LastUpdate",1)
-    HealBot_Timers_Set("LAST","InitLoadSpells",5)
+    HealBot_Timers_Set("LAST","LastUpdate",1) 
     C_Timer.After(2, HealBot_Timers_UpdateMediaIndex)
 end
 
@@ -473,7 +472,8 @@ local hbTimerFuncs={["INIT"]={
                         ["EmoteOOM"]=HealBot_Timer_EmoteOOM,
                         ["SpecUpdate"]=HealBot_ResetOnSpecChange,
                         ["PlayerCheck"]=HealBot_PlayerCheck,
-                        ["SetProfile"]=HealBot_Options_hbProfile_setClass
+                        ["LoadProfile"]=HealBot_Options_LoadProfile,
+                        ["SaveProfile"]=HealBot_Options_SaveProfile,
                     },
                     ["SKINS"]={
                         ["PartyUpdateCheckSkin"]=HealBot_PartyUpdate_CheckSkin,

@@ -10,7 +10,7 @@ end
 local function buildExtraTip(tooltip, entry)
     local r,g,b = .9,.8,.5
     LibExtraTip:AddLine(tooltip," ",r,g,b,true)
-	LibExtraTip:AddLine(tooltip,LBIS.L["# Gear best for:"],r,g,b,true)
+	LibExtraTip:AddLine(tooltip,LBIS.L["# Best for:"],r,g,b,true)
 
 	local combinedTooltip = {};
 	local mageCount, warriorDpsCount, warlockCount = 0, 0, 0;
@@ -80,11 +80,9 @@ local function buildExtraTip(tooltip, entry)
         if v.Phase == "0" then
             LibExtraTip:AddDoubleLine(tooltip, classfontstring .. " " .. v.Class .. " " .. v.Spec, v.Bis, color.r, color.g, color.b, color.r, color.g, color.b, true)
         else
-            LibExtraTip:AddDoubleLine(tooltip, classfontstring .. " " .. v.Class .. " " .. v.Spec, v.Bis.." "..v.Phase, color.r, color.g, color.b, color.r, color.g, color.b, true)
-        end
-		
-	end
-	
+            LibExtraTip:AddDoubleLine(tooltip, classfontstring .. " " .. v.Class .. " " .. v.Spec, v.Bis.." "..string.gsub(v.Phase, "0", "P"), color.r, color.g, color.b, color.r, color.g, color.b, true)
+        end		
+	end	
 end
 
 local function onTooltipSetItem(tooltip, itemLink, quantity)
