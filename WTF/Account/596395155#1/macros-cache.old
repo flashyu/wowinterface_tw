@@ -5,10 +5,16 @@ VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
 /stopcasting
 /cast [@mouseover,nomod,exists] 解除诅咒;  [@mouseover,exists,mod:ctrl] 驱毒术; [@mouseover,exists,mod:shift] 解除诅咒
 END
+VER 3 000000000000000D "healbot大迅捷" "INV_MISC_QUESTIONMARK"
+#showtooltip 自然迅捷
+/stopcasting
+/cast 自然迅捷
+/cast [@hbtarget,@target]治疗之触
+END
 VER 3 0000000000000008 "move" "132128"
 #showtooltips
 /use [swimming] 水栖形态
-/use [outdoors,flyable] 飞行形态
+/use [outdoors,flyable] 迅捷飞行形态
 /use [outdoors] 旅行形态
 /use 猎豹形态
 END
@@ -27,6 +33,12 @@ VER 3 0000000000000002 "target宏" "INV_MISC_QUESTIONMARK"
 /target 逆风术士
 /script SetRaidTarget("target",6)
 END
+VER 3 000000000000000E "变身" "132148"
+#showtooltip 变身
+/stopcasting
+/cast 生命之树
+/cast 枭兽形态
+END
 VER 3 000000000000000C "台风" "INV_MISC_QUESTIONMARK"
 #showtooltip 台风
 /stopcasting
@@ -39,14 +51,14 @@ VER 3 0000000000000004 "开蚌壳" "136058"
 END
 VER 3 0000000000000006 "影遁逃跑" "INV_MISC_QUESTIONMARK"
 #showtooltip 影遁
-/cast [combat]影遁; 
-/cast [nocombat,stance:3]潜行;
- [nocombat,nostance:3]猎豹形态;
+/cast [combat]影遁
+/cast [nocombat,nostance:3]猎豹形态(变形)
+/cast [nocombat,stance:3,nostealth]潜行
 END
-VER 3 000000000000000A "滋养" "INV_MISC_QUESTIONMARK"
+VER 3 000000000000000A "滋养-healbot" "INV_MISC_QUESTIONMARK"
 #showtooltip 滋养
 /stopcasting
-/cast 滋养
+/cast [@hbtarget,@target]滋养
 END
 VER 3 000000000000000B "生命" "134831"
 /use 超级治疗药水

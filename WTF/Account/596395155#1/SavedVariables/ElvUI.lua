@@ -93,16 +93,16 @@ ElvDB = {
 			["movers"] = {
 				["TotemTrackerMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,417,26",
 				["ShiftAB"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,418,209",
-				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,257,403",
+				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,268,413",
 				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,256,267",
 				["ElvAB_2"] = "BOTTOM,ElvUIParent,BOTTOM,0,61",
-				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
 				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
-				["ElvUF_PlayerMover"] = "BOTTOM,UIParent,BOTTOM,-258,402",
+				["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,309,23",
+				["ElvUF_PlayerMover"] = "BOTTOM,UIParent,BOTTOM,-269,413",
 				["ElvUF_PetCastbarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,471,78",
 				["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,98",
 				["ElvAB_3"] = "BOTTOM,UIParent,BOTTOM,0,23",
-				["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,309,23",
+				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
 				["VehicleLeaveButton"] = "BOTTOM,UIParent,BOTTOM,0,493",
 				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,256,319",
 			},
@@ -118,7 +118,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["祈福"] = {
-			["骑风"] = 31925119,
+			["骑风"] = 31644549,
 		},
 	},
 	["serverID"] = {
