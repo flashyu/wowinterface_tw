@@ -10,22 +10,22 @@ CodexConfig = {
 	["minimumDropChance"] = 2,
 	["showLowLevel"] = false,
 	["_tom_waypoint"] = {
-		121, -- [1]
-		0.4027000000000001, -- [2]
-		0.6662, -- [3]
+		125, -- [1]
+		0.4068, -- [2]
+		0.3535, -- [3]
 		["arrivaldistance"] = 15,
 		["callbacks"] = {
 			["distance"] = {
 			},
-			["minimap"] = {
-			},
 			["world"] = {
+			},
+			["minimap"] = {
 			},
 		},
 		["persistent"] = true,
 		["minimap"] = true,
 		["cleardistance"] = 10,
-		["title"] = "指挥官库恩斯",
+		["title"] = "提莫斯·琼斯",
 		["from"] = "?",
 		["crazy"] = true,
 		["world"] = true,

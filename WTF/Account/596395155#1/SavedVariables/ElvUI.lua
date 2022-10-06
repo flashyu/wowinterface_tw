@@ -96,13 +96,13 @@ ElvDB = {
 				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,268,413",
 				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,256,267",
 				["ElvAB_2"] = "BOTTOM,ElvUIParent,BOTTOM,0,61",
-				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
 				["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,309,23",
-				["ElvUF_PlayerMover"] = "BOTTOM,UIParent,BOTTOM,-269,413",
+				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
+				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-269,413",
 				["ElvUF_PetCastbarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,471,78",
 				["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,98",
 				["ElvAB_3"] = "BOTTOM,UIParent,BOTTOM,0,23",
-				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
+				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
 				["VehicleLeaveButton"] = "BOTTOM,UIParent,BOTTOM,0,493",
 				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,256,319",
 			},
@@ -118,7 +118,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["祈福"] = {
-			["骑风"] = 31644549,
+			["骑风"] = 18235610,
 		},
 	},
 	["serverID"] = {
@@ -132,6 +132,9 @@ ElvDB = {
 		},
 	},
 	["global"] = {
+		["general"] = {
+			["UIScale"] = 0.7000000000000001,
+		},
 		["datatexts"] = {
 			["settings"] = {
 				["Currencies"] = {
@@ -142,30 +145,33 @@ ElvDB = {
 							nil, -- [3]
 							true, -- [4]
 						}, -- [1]
-						[3] = {
+						nil, -- [2]
+						{
 							nil, -- [1]
 							nil, -- [2]
 							nil, -- [3]
 							true, -- [4]
-						},
+						}, -- [3]
+						{
+							nil, -- [1]
+							nil, -- [2]
+							nil, -- [3]
+							true, -- [4]
+						}, -- [4]
+						nil, -- [5]
+						{
+							nil, -- [1]
+							nil, -- [2]
+							nil, -- [3]
+							true, -- [4]
+						}, -- [6]
+						{
+							nil, -- [1]
+							nil, -- [2]
+							nil, -- [3]
+							true, -- [4]
+						}, -- [7]
 					},
-				},
-			},
-		},
-		["general"] = {
-			["AceGUI"] = {
-				["height"] = 600,
-				["width"] = 800,
-			},
-			["UIScale"] = 0.7000000000000001,
-		},
-		["nameplates"] = {
-			["filters"] = {
-				["ElvUI_NonTarget"] = {
-				},
-				["ElvUI_Target"] = {
-				},
-				["ElvUI_Boss"] = {
 				},
 			},
 		},
@@ -178,6 +184,9 @@ ElvPrivateDB = {
 	["profiles"] = {
 		["骑风 - 祈福"] = {
 			["bags"] = {
+				["enable"] = false,
+			},
+			["nameplates"] = {
 				["enable"] = false,
 			},
 			["theme"] = "class",

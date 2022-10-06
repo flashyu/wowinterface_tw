@@ -8,8 +8,8 @@ END
 VER 3 000000000000000D "healbot大迅捷" "INV_MISC_QUESTIONMARK"
 #showtooltip 自然迅捷
 /stopcasting
-/cast 自然迅捷
-/cast [@hbtarget,@target]治疗之触
+/cast 自然迅捷;
+/cast [@hbtarget]治疗之触;
 END
 VER 3 0000000000000008 "move" "132128"
 #showtooltips
@@ -52,15 +52,21 @@ END
 VER 3 0000000000000006 "影遁逃跑" "INV_MISC_QUESTIONMARK"
 #showtooltip 影遁
 /cast [combat]影遁
-/cast [nocombat,nostance:3]猎豹形态(变形)
-/cast [nocombat,stance:3,nostealth]潜行
+/cast [nocombat,nostance:3]猎豹形态(变形);
+/cast [nocombat,stance:3,nostealth]潜行;
+END
+VER 3 000000000000000F "滋养" "INV_MISC_QUESTIONMARK"
+#showtooltip 滋养
+/stopcasting
+/cast 滋养
 END
 VER 3 000000000000000A "滋养-healbot" "INV_MISC_QUESTIONMARK"
 #showtooltip 滋养
 /stopcasting
-/cast [@hbtarget,@target]滋养
+/cast [@hbtarget]滋养
 END
 VER 3 000000000000000B "生命" "134831"
+/use 邪能治疗;
 /use 超级治疗药水
 /use 符文治疗药水
 END

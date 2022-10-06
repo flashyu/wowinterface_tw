@@ -65,7 +65,14 @@ function LBIS.BrowserWindow:CreateItemRow(specItem, specItemSource, point, rowFu
         l:SetEndPoint("BOTTOMRIGHT",-5, 0);
     end
     -- even if we are reusing, it may not be in the same order
-    f:SetSize(window.ScrollFrame:GetWidth(), 46);
+    local _, count = string.gsub(specItemSource.Source, "/", "")
+    if count > 1 then
+        count = count - 1;
+    else 
+        count = 0;
+    end
+    local rowHeight = (46 + (count * 10));
+    f:SetSize(window.ScrollFrame:GetWidth(), rowHeight);
     f:ClearAllPoints();
     f:SetPoint("TOPLEFT", window.Container, 0, point);
     
@@ -222,7 +229,7 @@ function createDropDowns(window)
         end
     }
     window.SlotDropDown = LBIS:CreateDropdown(slot_opts);
-    window.SlotDropDown:SetPoint("TOPLEFT", window, 200, -28);
+    window.SlotDropDown:SetPoint("TOPLEFT", window, 210, -28);
 
     local phase_opts = {
         ['name']='phase',
@@ -313,10 +320,10 @@ function LBIS.BrowserWindow:CreateBrowserWindow()
     topLine:SetEndPoint("TOPRIGHT",-25, -59);
 
     scrollframe:SetPoint("TOPLEFT", 10, -60);
-    scrollframe:SetPoint("BOTTOMRIGHT", -25, 28);
+    scrollframe:SetPoint("BOTTOMRIGHT", -25, 10);
 
     scrollbar:SetPoint("TOPLEFT", window, "TOPRIGHT", -22, -78);
-    scrollbar:SetPoint("BOTTOMLEFT", window, "BOTTOMRIGHT", 22, 46);
+    scrollbar:SetPoint("BOTTOMLEFT", window, "BOTTOMRIGHT", 22, 20);
     scrollbar:SetMinMaxValues(0,0);
     scrollbar:SetWidth(16);
     scrollbar:SetValue(0);
@@ -328,34 +335,6 @@ function LBIS.BrowserWindow:CreateBrowserWindow()
             self:GetParent():SetVerticalScroll(value);
         end
     );
-
-    local botLine = window:CreateLine();
-    botLine:SetColorTexture(1,1,1,0.5);
-    botLine:SetThickness(1);
-    botLine:SetStartPoint("BOTTOMLEFT", scrollframe, 0, -1);
-    botLine:SetEndPoint("BOTTOMRIGHT",scrollframe, 0, -1);
-
-    local tooltipButton = CreateFrame("CheckButton", "TooltipCheckButton", window, "ChatConfigCheckButtonTemplate")
-    tooltipButton:SetHitRectInsets(0, 0, 0, 0)
-    local tooltipString = tooltipButton:CreateFontString("TooltipText", "OVERLAY", "GameFontNormalSmall");
-    tooltipString:SetPoint("TOPRIGHT", tooltipButton, "TOPLEFT", -2, -3);
-    tooltipString:SetText(LBIS.L["Show Tooltip:"]);
-    tooltipButton:SetPoint("BOTTOMRIGHT", window, "BOTTOMRIGHT", -175, 2);
-    tooltipButton:SetScript("OnClick", function(self)
-        LBIS:ShowHideTooltip(self:GetChecked());
-    end);
-    tooltipButton:SetChecked(LBISSettings.ShowTooltip);
-
-    local miniMapButton = CreateFrame("CheckButton", "MinimapCheckButton", window, "ChatConfigCheckButtonTemplate")
-    miniMapButton:SetHitRectInsets(0, 0, 0, 0)
-    local miniMapString = miniMapButton:CreateFontString("MiniMapText", "OVERLAY", "GameFontNormalSmall");
-    miniMapString:SetPoint("TOPRIGHT", miniMapButton, "TOPLEFT", -2, -3);
-    miniMapString:SetText(LBIS.L["Show Minimap Button:"]);
-    miniMapButton:SetPoint("BOTTOMRIGHT", window, "BOTTOMRIGHT", 0, 2);
-    miniMapButton:SetScript("OnClick", function(self)
-        LBIS:ShowHideMiniMap(not self:GetChecked());
-    end);
-    miniMapButton:SetChecked(not LBISSettings.minimap.hide);
 
     window.scrollframe = scrollframe;
     window.scrollbar = scrollbar;
