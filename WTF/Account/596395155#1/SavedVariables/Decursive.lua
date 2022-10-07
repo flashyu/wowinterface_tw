@@ -1,7 +1,7 @@
 
 DecursiveDB = {
-	["profileKeys"] = {
-		["骑风 - 祈福"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1665163951,
 	},
 	["class"] = {
 		["DRUID"] = {
@@ -16,8 +16,8 @@ DecursiveDB = {
 			},
 		},
 	},
-	["global"] = {
-		["LastVersionAnnounce"] = 1665079618,
+	["profileKeys"] = {
+		["骑风 - 祈福"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

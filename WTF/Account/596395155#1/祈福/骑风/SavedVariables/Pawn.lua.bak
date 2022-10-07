@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0702,
+	["LastPlayerFullName"] = "骑风-祈福",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 42554,
@@ -34,9 +36,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:37791::::::::80:::::::::|h[翼蛇护腿]|h|r",
 		}, -- [7]
 		{
-			["ID"] = 37730,
-			["Level"] = 200,
-			["Link"] = "|cff0070dd|Hitem:37730::::::::80:::::::::|h[祭司的亚麻鞋]|h|r",
+			["ID"] = 40270,
+			["Level"] = 213,
+			["Link"] = "|cffa335ee|Hitem:40270::::::::80:::::::::|h[腐伤之靴]|h|r",
 		}, -- [8]
 		{
 			["ID"] = 37696,
@@ -49,10 +51,10 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:37230::::::::80:::::::::|h[岩洞迷雾手套]|h|r",
 		}, -- [10]
 		{
-			["ID"] = 37732,
-			["Level"] = 200,
+			["ID"] = 40080,
+			["Level"] = 213,
 			["AlsoFitsIn"] = 12,
-			["Link"] = "|cff0070dd|Hitem:37732::::::::80:::::::::|h[预言者的幽魂徽记]|h|r",
+			["Link"] = "|cffa335ee|Hitem:40080::::::::80:::::::::|h[遗失的珠宝]|h|r",
 		}, -- [11]
 		{
 			["ID"] = 37232,
@@ -88,8 +90,6 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40698::::::::80:::::::::|h[紫罗兰城堡结界]|h|r",
 		}, -- [17]
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "骑风-祈福",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

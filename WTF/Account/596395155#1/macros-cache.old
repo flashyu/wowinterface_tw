@@ -55,6 +55,26 @@ VER 3 0000000000000006 "影遁逃跑" "INV_MISC_QUESTIONMARK"
 /cast [nocombat,nostance:3]猎豹形态(变形);
 /cast [nocombat,stance:3,nostealth]潜行;
 END
+VER 3 0000000000000011 "愤怒" "INV_MISC_QUESTIONMARK"
+#showtooltip 愤怒
+/stopcasting
+/cast 愤怒
+END
+VER 3 0000000000000012 "星火" "INV_MISC_QUESTIONMARK"
+#showtooltip 星火术
+/stopcasting
+/cast 星火术
+END
+VER 3 0000000000000013 "星辰坠落" "INV_MISC_QUESTIONMARK"
+#showtooltip 星辰坠落
+/stopcasting
+/cast 星辰坠落
+END
+VER 3 0000000000000015 "月火术" "INV_MISC_QUESTIONMARK"
+#showtooltip 月火术
+/stopcasting
+/cast 月火术
+END
 VER 3 000000000000000F "滋养" "INV_MISC_QUESTIONMARK"
 #showtooltip 滋养
 /stopcasting
@@ -73,4 +93,15 @@ END
 VER 3 0000000000000003 "视野宏" "132092"
 /console cameraDistanceMaxZoomFactor 4
 /console cursorsizepreferred 2
+END
+VER 3 0000000000000010 "钓鱼" "132931"
+/cast 钓鱼
+/use 巨型蚌壳
+/use 沉重的箱子
+/脚本 local a,i,j,l={"病鱼","纠结的鱼线","漂木","水草","破布","树枝","石块","骨鳞钳鱼","晶鳞鱼"}for i=1,#a do for j=1,114 do l=GetContainerItemLink(j/23,j%23)if l and l:find(a[i])then PickupContainerItem(j/23,j%23)DeleteCursorItem()end end end
+END
+VER 3 0000000000000014 "飓风" "INV_MISC_QUESTIONMARK"
+#showtooltip 飓风
+/stopcasting
+/cast 飓风
 END

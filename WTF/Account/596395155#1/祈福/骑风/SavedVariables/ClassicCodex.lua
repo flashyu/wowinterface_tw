@@ -10,37 +10,37 @@ CodexConfig = {
 	["minimumDropChance"] = 2,
 	["showLowLevel"] = false,
 	["_tom_waypoint"] = {
-		125, -- [1]
-		0.4068, -- [2]
-		0.3535, -- [3]
+		115, -- [1]
+		0.8724, -- [2]
+		0.574, -- [3]
 		["arrivaldistance"] = 15,
 		["callbacks"] = {
 			["distance"] = {
 			},
-			["world"] = {
-			},
 			["minimap"] = {
+			},
+			["world"] = {
 			},
 		},
 		["persistent"] = true,
 		["minimap"] = true,
 		["cleardistance"] = 10,
-		["title"] = "提莫斯·琼斯",
+		["title"] = "蒂尔达·达拉森",
 		["from"] = "?",
 		["crazy"] = true,
 		["world"] = true,
 	},
-	["continentIcon"] = false,
-	["currentQuestGivers"] = true,
+	["minimapButton"] = true,
+	["autoTurnin"] = false,
 	["spawnMarkerSize"] = 15,
-	["showFestival"] = false,
+	["zoneMapIcon"] = true,
 	["alwaysShowId"] = false,
 	["nameplateIcon"] = false,
 	["colorBySpawn"] = true,
-	["zoneMapIcon"] = true,
+	["showFestival"] = false,
 	["miniMapIcon"] = true,
-	["autoTurnin"] = false,
-	["minimapButton"] = true,
+	["currentQuestGivers"] = true,
+	["continentIcon"] = false,
 	["questMarkerSize"] = 15,
 }
 CodexHiddenQuests = {
@@ -56,6 +56,11 @@ CodexBrowserFavorites = {
 	},
 }
 CodexColors = {
+	["维赫亚"] = {
+		0.4745098039215686, -- [1]
+		0.04313725490196078, -- [2]
+		0.1372549019607843, -- [3]
+	},
 	["部落篝火"] = {
 		0.7490196078431373, -- [1]
 		0.3843137254901961, -- [2]

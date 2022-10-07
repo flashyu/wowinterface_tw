@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 70,
 	["lastSanitation"] = 3,
+	["session"] = 81,
 	["errors"] = {
 		{
 			["message"] = "...ace\\AddOns\\AdvancedInterfaceOptions\\basicOptions.lua:344: attempt to index field 'CustomVars' (a nil value)",
@@ -241,62 +241,62 @@ BugGrabberDB = {
 		}, -- [30]
 		{
 			["message"] = "Binding AUTOBAR_CONFIG is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["session"] = 18,
 			["time"] = "2022/09/24 23:47:01",
+			["session"] = 18,
 			["counter"] = 18,
 		}, -- [31]
 		{
 			["message"] = "Binding AutoBarButtonHearth_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["session"] = 18,
 			["time"] = "2022/09/24 23:47:01",
+			["session"] = 18,
 			["counter"] = 18,
 		}, -- [32]
 		{
 			["message"] = "Binding AutoBarButtonMount_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 17,
 		}, -- [33]
 		{
 			["message"] = "Binding AutoBarButtonBandages_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 17,
 		}, -- [34]
 		{
 			["message"] = "Binding AutoBarButtonCrafting_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 17,
 		}, -- [35]
 		{
 			["message"] = "Binding AutoBarButtonHeal_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 15,
 		}, -- [36]
 		{
 			["message"] = "Binding AutoBarButtonRecovery_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 15,
 		}, -- [37]
 		{
 			["message"] = "Binding AutoBarButtonFood_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 10,
 		}, -- [38]
 		{
 			["message"] = "Binding AutoBarButtonWater_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 10,
 		}, -- [39]
 		{
 			["message"] = "Binding AutoBarButtonFoodBuff_X is defined more than once in Interface\\AddOns\\AutoBarWrath\\Bindings.xml",
-			["time"] = "2022/09/24 23:48:35",
 			["session"] = 18,
+			["time"] = "2022/09/24 23:48:35",
 			["counter"] = 10,
 		}, -- [40]
 		{
@@ -325,8 +325,8 @@ BugGrabberDB = {
 		}, -- [43]
 		{
 			["message"] = "Couldn't open Interface\\AddOns\\WideQuestLogLevels\\WideQuestLogLevels.toc",
-			["session"] = 23,
 			["time"] = "2022/09/28 22:56:05",
+			["session"] = 23,
 			["counter"] = 2,
 		}, -- [44]
 		{
@@ -355,8 +355,8 @@ BugGrabberDB = {
 		}, -- [47]
 		{
 			["message"] = "Couldn't open Interface\\AddOns\\Parrot\\Parrot_Wrath.toc",
-			["session"] = 35,
 			["time"] = "2022/10/04 01:21:10",
+			["session"] = 35,
 			["counter"] = 2,
 		}, -- [48]
 		{
@@ -429,21 +429,13 @@ BugGrabberDB = {
 			["counter"] = 1,
 		}, -- [57]
 		{
-			["message"] = "Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2302: attempt to index global 'dialog' (a nil value)",
-			["time"] = "2022/10/06 00:31:47",
-			["locals"] = "self = GearSetButton1 {\n hover = <unnamed> {\n }\n checked = <unnamed> {\n }\n PixelSnapDisabled = true\n text = GearSetButton1Name {\n }\n backdrop = <unnamed> {\n }\n id = 0\n 0 = <userdata>\n Icon = GearSetButton1Icon {\n }\n icon = GearSetButton1Icon {\n }\n}\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = false\n(*temporary) = \"attempt to index global 'dialog' (a nil value)\"\n",
-			["stack"] = "[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2302: in function `GearSetButton_OnClick'\n[string \"*:OnClick\"]:1: in function <[string \"*:OnClick\"]:1>",
-			["session"] = 55,
-			["counter"] = 5,
-		}, -- [58]
-		{
 			["message"] = "...\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua:762: attempt to index field 'RaisedElement' (a nil value)",
 			["time"] = "2022/10/06 01:31:51",
 			["locals"] = "self = <table> {\n UnitSelectionType = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua:56\n BORDER = 1\n SetNamePlateEnemyClickThrough = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua:500\n modules = <table> {\n }\n CancelTimer = <function> defined @Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceTimer-3.0\\AceTimer-3.0.lua:147\n SecureHook = <function> defined @Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceHook-3.0\\AceHook-3.0.lua:336\n Update_Castbar = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Elements\\CastBar.lua:187\n PlateGUID = <table> {\n }\n StyleFilterRemoveCustomCheck = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\StyleFilter.lua:1723\n ThreatIndicator_PreUpdate = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Elements\\Threat.lua:16\n StyleFilterBorderLock = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\StyleFilter.lua:509\n Health_SetColors = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Elements\\Health.lua:87\n SetDefaultModulePrototype = <function> defined @Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0.lua:409\n BossMods_DisableHostile = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Elements\\BossMods.lua:236\n ConfigureAll = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua:599\n StyleFilterTargetFunction = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\StyleFilter.lua:1270\n Update_PortraitBackdrop = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Elements\\Portraits.lua:27\n IsEnabled = <function> defined @Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0.lua:451\n ScheduleTimer = <function> defined @Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceTimer-3.0\\AceTimer-3.0.lua:94\n StyleFilterAuraWait = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\StyleFilter.lua:323\n StyleFilterDefaultEvents = <table> {\n }\n StyleFilterEventWatch = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\StyleFilter.lua:1665\n ThreatIndicator_PostUpdate = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Elements\\Threat.lua:33\n RegisterMessage = <function> defined @Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:90\n ResetSettings = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua:78\n SetNamePlateClickThrough = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua:483\n StyleFilterClearVisibility = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\StyleFilter.lua:644\n hooks = <table> {\n }\n NewModule = <function> defined @Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0.lua:235\n Update_BossMods = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Elements\\BossMods.lua:270\n PlayerNamePlateAnchor = ElvUIPlayerNamePlateAnchor {\n }\n UpdateAuraSettings = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Elements\\Auras.lua:172\n multiplier = 0.350000\n Update_QuestIcons = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Elements\\Plugins.lua:32\n StyleFilterTickerCreate = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\StyleFilter.lua:319\n SetEnabledState = <function> defined @Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceAddon-3.0\\AceAddon-3.0.lua:424\n Hook = <function> defined @Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceHook-3.0\\AceHook-3.0.lua:274\n UpdatePlateType = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua:646\n Update_PvPIndicator = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Elements\\PvP.lua:21\n UpdatePlateGUID = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua:642\n Castbar_PostCastFail = <function> defined @Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Elements\\CastBar.lua:107\n Update_StatusBars = <function> defin",
 			["stack"] = "[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua\"]:762: in function `NamePlateCallBack'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua\"]:935: in function <...\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua:934>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\oUF\\ouf.lua\"]:852: in function <Interface\\AddOns\\ElvUI\\Libraries\\Core\\oUF\\ouf.lua:806>",
 			["session"] = 60,
 			["counter"] = 6,
-		}, -- [59]
+		}, -- [58]
 		{
 			["message"] = "...\\Modules\\Nameplates\\Elements\\RaidTargetIndicator.lua:32: attempt to call method 'IsElementEnabled' (a nil value)",
 			["time"] = "2022/10/06 01:31:51",
@@ -451,7 +443,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Elements\\RaidTargetIndicator.lua\"]:32: in function `Update_RaidTargetIndicator'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua\"]:334: in function `UpdatePlate'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua\"]:688: in function `UpdatePlateBase'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua\"]:709: in function `NamePlateCallBack'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua\"]:935: in function <...\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua:934>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\oUF\\ouf.lua\"]:829: in function <Interface\\AddOns\\ElvUI\\Libraries\\Core\\oUF\\ouf.lua:806>",
 			["session"] = 60,
 			["counter"] = 12,
-		}, -- [60]
+		}, -- [59]
 		{
 			["message"] = "Interface\\AddOns\\Plater\\Plater-Plater-v535-Wrath.lua:3783: attempt to call method 'Show' (a nil value)",
 			["time"] = "2022/10/06 01:31:52",
@@ -459,7 +451,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\Plater\\Plater-Plater-v535-Wrath.lua\"]:3783: in function `func'\n[string \"@Interface\\AddOns\\Plater\\Plater-Plater-v535-Wrath.lua\"]:4234: in function `EventHandler'\n[string \"@Interface\\AddOns\\Plater\\Plater-Plater-v535-Wrath.lua\"]:4245: in function `RunFunctionForEvent'\n[string \"@Interface\\AddOns\\Plater\\Plater-Plater-v535-Wrath.lua\"]:1823: in function <Interface\\AddOns\\Plater\\Plater.lua:1800>\n[string \"@Interface\\SharedXML\\C_TimerAugment.lua\"]:16: in function <Interface\\SharedXML\\C_TimerAugment.lua:14>",
 			["session"] = 60,
 			["counter"] = 6,
-		}, -- [61]
+		}, -- [60]
 		{
 			["message"] = "...\\ElvUI\\Core\\Modules\\Nameplates\\Elements\\BossMods.lua:195: attempt to index local 'element' (a nil value)",
 			["time"] = "2022/10/06 01:31:57",
@@ -467,35 +459,50 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Elements\\BossMods.lua\"]:195: in function `BossMods_UpdateIcon'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua\"]:793: in function `NamePlateCallBack'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua\"]:935: in function <...\\AddOns\\ElvUI\\Core\\Modules\\Nameplates\\Nameplates.lua:934>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\oUF\\ouf.lua\"]:865: in function <Interface\\AddOns\\ElvUI\\Libraries\\Core\\oUF\\ouf.lua:806>",
 			["session"] = 60,
 			["counter"] = 6,
-		}, -- [62]
-		{
-			["message"] = "Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
-			["time"] = "2022/09/24 23:46:51",
-			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
-			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:67: in function <Interface\\AddOns\\GearScoreLite\\GearScoreLite.lua:53>",
-			["session"] = 69,
-			["counter"] = 28,
-		}, -- [63]
-		{
-			["message"] = "(null)",
-			["session"] = 69,
-			["time"] = "2022/09/28 22:01:13",
-			["counter"] = 30,
-		}, -- [64]
+		}, -- [61]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 尝试调用保护功能 'OverrideActionBarButton4:Show()'。",
 			["time"] = "2022/09/27 23:14:20",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:357: in function `ActionButton_Update'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:694: in function `ActionButton_OnEvent'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:207: in function <Interface\\FrameXML\\ActionButton.lua:204>",
 			["session"] = 69,
 			["counter"] = 3,
-		}, -- [65]
+		}, -- [62]
+		{
+			["message"] = "Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2302: attempt to index global 'dialog' (a nil value)",
+			["time"] = "2022/10/06 00:31:47",
+			["locals"] = "self = GearSetButton1 {\n hover = <unnamed> {\n }\n checked = <unnamed> {\n }\n PixelSnapDisabled = true\n text = GearSetButton1Name {\n }\n backdrop = <unnamed> {\n }\n id = 0\n 0 = <userdata>\n Icon = GearSetButton1Icon {\n }\n icon = GearSetButton1Icon {\n }\n}\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = false\n(*temporary) = \"attempt to index global 'dialog' (a nil value)\"\n",
+			["stack"] = "[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2302: in function `GearSetButton_OnClick'\n[string \"*:OnClick\"]:1: in function <[string \"*:OnClick\"]:1>",
+			["session"] = 77,
+			["counter"] = 8,
+		}, -- [63]
 		{
 			["message"] = "Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua:37: attempt to index global 'db' (a nil value)",
 			["time"] = "2022/09/24 23:47:00",
 			["locals"] = "frame = WIM3_OptionFrameFrame1 {\n ImportCustomObject = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:398\n welcome = WIM3_OptionFrameFrame2 {\n }\n CreateDropDownMenu = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:182\n CreateColorPicker = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:74\n CreateCheckButtonMenu = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:308\n lastObj = WIM3_OptionFrameFrame2 {\n }\n nextOffsetX = 0\n CreateButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:64\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n nextOffSetY = 0\n CreateSlider = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:127\n 0 = <userdata>\n CreateSection = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:353\n CreateText = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:340\n SetFullSize = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:59\n CreateFramedPanel = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:392\n}\n(*temporary) = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:257\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n _Enable = <function> defined =[C]:-1\n UpdateChildren = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:281\n _Disable = <function> defined =[C]:-1\n isCheckButton = true\n children = <table> {\n }\n Disable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:269\n}\n(*temporary) = \"小地图按钮自由移动\"\n(*temporary) = nil\n(*temporary) = <table> {\n enabled = false\n OnDisable = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:400\n RegisterWidget = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:311\n OnEnable = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:382\n Enable = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:307\n OnDisableWIM = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:371\n canDisable = true\n OnEnableWIM = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:360\n dPrint = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:309\n enableByDefault = true\n title = \"MinimapIcon\"\n RegisterEvent = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:306\n db_defaults = <table> {\n }\n resources = <table> {\n }\n hasWidget = false\n Disable = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:308\n}\n(*temporary) = \"enabled\"\n(*temporary) = nil\n(*temporary) = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua:36\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:257\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n _Enable = <function> defined =[C]:-1\n UpdateChildren = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:281\n _Disable = <function> defined =[C]:-1\n isCheckButton = true\n children = <table> {\n }\n Disable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:269\n}\n(*temporary) = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:46\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:257\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n _Enable = <function> defined =[C]:-1\n UpdateChi",
 			["stack"] = "[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua\"]:37: in function `frame'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:190: in function <Interface\\AddOns\\WIM\\Sources\\Options\\Options.lua:184>\n[string \"=[C]\"]: in function `Click'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:281: in function `UpdateSubCategories'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:104: in function <Interface\\AddOns\\WIM\\Sources\\Options\\Options.lua:104>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:327: in function `ShowOptions'\n[string \"@Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\WIM-3.9.6.lua\"]:11: in function <Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\WIM.lua:8>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\AddOnSkins\\Core\\Core.lua\"]:217: in function `CallSkin'\n[string \"@Interface\\AddOns\\AddOnSkins\\Core\\Core.lua\"]:311: in function `?'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:119: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...vUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
-			["session"] = 70,
-			["counter"] = 10,
+			["session"] = 80,
+			["counter"] = 13,
+		}, -- [64]
+		{
+			["message"] = "Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
+			["time"] = "2022/09/24 23:46:51",
+			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
+			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:67: in function <Interface\\AddOns\\GearScoreLite\\GearScoreLite.lua:53>",
+			["session"] = 80,
+			["counter"] = 30,
+		}, -- [65]
+		{
+			["message"] = "(null)",
+			["time"] = "2022/09/28 22:01:13",
+			["session"] = 80,
+			["counter"] = 36,
 		}, -- [66]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 尝试调用保护功能 'OverrideActionBarButton6:Show()'。",
+			["time"] = "2022/10/08 01:01:47",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:357: in function `ActionButton_Update'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:694: in function `ActionButton_OnEvent'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:207: in function <Interface\\FrameXML\\ActionButton.lua:204>",
+			["session"] = 80,
+			["counter"] = 1,
+		}, -- [67]
 	},
 }

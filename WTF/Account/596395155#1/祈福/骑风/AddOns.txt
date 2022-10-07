@@ -119,3 +119,4 @@ DBM-TheEye: enabled
 DBM-BlackTemple: enabled
 DBM-BWL: enabled
 HeyboxPlayerInfo: enabled
+SimpleItemLevel: enabled

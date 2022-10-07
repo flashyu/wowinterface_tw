@@ -199,11 +199,11 @@ TalentEmuSV = {
 		["minimapPos"] = 185,
 	},
 	["var"] = {
+		["Player-4778-05244F19"] = "!T321E121K12c2CvkyLGxq2:::E22u32LuEP1:::::UHLj5QiMz:=Jy1!G3221w+9:hMB:01u+-:18C:G1u+-:08C:B1u+9:gMB:61u+-:HRC:11u+9:xMB:71uV+9:WLB:D1u++-:08C:B1u+++9:uLD:11u!E320+^+uM-:1gv:155-:1kl9:5E1:9+kc9:8E1:9+IA9:8E1:9+^+vd9:1om:1yk9:1Ol9:5E1:9+U89:8E1:9+TC9:8E1:9+Cp9:1Ks:1Ol9:6E1:9+0B9:1QY:7E1:9+o49:1Is:1Rr7:6E1:9+Em9:8E1:9+pX-:2Ol9:6E1:9+QA9:8E1:9+hj-:8E1:9+bC9:1lv:1Rr7:6E1:9+R0=:1qv:7E1:9+uv9:8E1:9+8w9:8E1:9+JW-:8E1:9",
 		["savedTalent"] = {
-			["|cffff7c0a德鲁伊|r- |cff7fbfff平衡58|r 野性战斗 0 恢复13"] = "!T321E111K12c2CvkyLGxq2:::E22u32",
 			["|cffff7c0a德鲁伊|r- 平衡13 野性战斗 0 |cff7fbfff恢复58|r"] = "!T321E111LuEP1:::::UHLj5QiMz:=Jy1",
+			["|cffff7c0a德鲁伊|r- |cff7fbfff平衡58|r 野性战斗 0 恢复13"] = "!T321E111K12c2CvkyLGxq2:::E22u32",
 		},
-		["Player-4778-05244F19"] = "!T321E121K12c2CvkyLGxq2:::E22u32LuEP1:::::UHLj5QiMz:=Jy1!G3221w+9:hMB:01u+-:18C:G1u+-:08C:B1u+9:gMB:61u+-:HRC:11u+9:xMB:71uV+9:WLB:D1u++-:08C:B1u+++9:uLD:11u!E320+^+uM-:1gv:155-:1kl9:5E1:9+JY-:8E1:9+IA9:8E1:9+^+vd9:2yk9:1Ol9:5E1:9+U89:8E1:9+TC9:8E1:9+x=9:1Ks:7E1:9+0B9:8E1:9+o49:8E1:9+YB9:8E1:9+k59:8E1:9+QA9:8E1:9+hj-:8E1:9+bC9:8E1:9+kV1:8E1:9+^+8w9:8E1:9+HW-:8E1:9",
 	},
 	["_version"] = 220811,
 	["_GlobalAssign"] = {
