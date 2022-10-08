@@ -16,18 +16,10 @@ CodexConfig = {
 		["arrivaldistance"] = 15,
 		["callbacks"] = {
 			["distance"] = {
-				[10] = nil --[[ skipped inline function ]],
-				[15] = nil --[[ skipped inline function ]],
-			},
-			["world"] = {
-				["onclick"] = nil --[[ skipped inline function ]],
-				["tooltip_update"] = nil --[[ skipped inline function ]],
-				["tooltip_show"] = nil --[[ skipped inline function ]],
 			},
 			["minimap"] = {
-				["onclick"] = nil --[[ skipped inline function ]],
-				["tooltip_update"] = nil --[[ skipped inline function ]],
-				["tooltip_show"] = nil --[[ skipped inline function ]],
+			},
+			["world"] = {
 			},
 		},
 		["persistent"] = true,
@@ -38,17 +30,17 @@ CodexConfig = {
 		["crazy"] = true,
 		["world"] = true,
 	},
-	["continentIcon"] = false,
-	["currentQuestGivers"] = true,
+	["minimapButton"] = true,
+	["autoTurnin"] = false,
 	["spawnMarkerSize"] = 15,
-	["showFestival"] = false,
+	["zoneMapIcon"] = true,
 	["alwaysShowId"] = false,
 	["nameplateIcon"] = false,
 	["colorBySpawn"] = true,
-	["zoneMapIcon"] = true,
+	["showFestival"] = false,
 	["miniMapIcon"] = true,
-	["autoTurnin"] = false,
-	["minimapButton"] = true,
+	["currentQuestGivers"] = true,
+	["continentIcon"] = false,
 	["questMarkerSize"] = 15,
 }
 CodexHiddenQuests = {
@@ -64,15 +56,15 @@ CodexBrowserFavorites = {
 	},
 }
 CodexColors = {
-	["部落篝火"] = {
-		0.7490196078431373, -- [1]
-		0.3843137254901961, -- [2]
-		0.1647058823529412, -- [3]
-	},
 	["维赫亚"] = {
 		0.4745098039215686, -- [1]
 		0.04313725490196078, -- [2]
 		0.1372549019607843, -- [3]
+	},
+	["部落篝火"] = {
+		0.7490196078431373, -- [1]
+		0.3843137254901961, -- [2]
+		0.1647058823529412, -- [3]
 	},
 	["吞火者"] = {
 		0.6470588235294118, -- [1]

@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0702,
-	["LastPlayerFullName"] = "骑风-祈福",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 42554,
@@ -31,9 +29,9 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:37680::::::::80:::::::::|h[凝聚灵魂腰带]|h|r",
 		}, -- [6]
 		{
-			["ID"] = 37791,
-			["Level"] = 200,
-			["Link"] = "|cffa335ee|Hitem:37791::::::::80:::::::::|h[翼蛇护腿]|h|r",
+			["ID"] = 41303,
+			["Level"] = 213,
+			["Link"] = "|cffa335ee|Hitem:41303::39998:40026:::::80:::::::::|h[致命角斗士的蟒皮护腿]|h|r",
 		}, -- [7]
 		{
 			["ID"] = 40270,
@@ -90,6 +88,8 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40698::::::::80:::::::::|h[紫罗兰城堡结界]|h|r",
 		}, -- [17]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "骑风-祈福",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

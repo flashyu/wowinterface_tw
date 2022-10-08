@@ -1,9 +1,22 @@
 
 DecursiveDB = {
-	["global"] = {
-		["LastVersionAnnounce"] = 1665163951,
+	["profileKeys"] = {
+		["红发男 - 祈福"] = "Default",
+		["死哪了 - 祈福"] = "Default",
+		["骑风 - 祈福"] = "Default",
 	},
 	["class"] = {
+		["MAGE"] = {
+			["CureOrder"] = {
+				-11, -- [1]
+				-15, -- [2]
+				nil, -- [3]
+				-12, -- [4]
+				[8] = -13,
+				[16] = -14,
+				[32] = -16,
+			},
+		},
 		["DRUID"] = {
 			["CureOrder"] = {
 				-13, -- [1]
@@ -15,9 +28,20 @@ DecursiveDB = {
 				[32] = -16,
 			},
 		},
+		["DEATHKNIGHT"] = {
+			["CureOrder"] = {
+				-11, -- [1]
+				-15, -- [2]
+				nil, -- [3]
+				-12, -- [4]
+				[8] = -13,
+				[16] = -14,
+				[32] = -16,
+			},
+		},
 	},
-	["profileKeys"] = {
-		["骑风 - 祈福"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1665248312,
 	},
 	["profiles"] = {
 		["Default"] = {

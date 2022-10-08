@@ -1,5 +1,10 @@
 
 AtlasLootClassicDB = {
+	["profileKeys"] = {
+		["红发男 - 祈福"] = "红发男 - 祈福",
+		["死哪了 - 祈福"] = "死哪了 - 祈福",
+		["骑风 - 祈福"] = "骑风 - 祈福",
+	},
 	["global"] = {
 		["__addonrevision"] = 3000005,
 		["VendorPrice"] = {
@@ -100,61 +105,62 @@ AtlasLootClassicDB = {
 			[41268] = "EmblemOfHeroism:30",
 			[41284] = "EmblemOfValor:30",
 			[48687] = "EmblemOfHeroism:40",
-			[46349] = "epicurean:100",
+			[40693] = "EmblemOfHeroism:40",
 			[41308] = "EmblemOfValor:45",
-			[41676] = "EmblemOfValor:45",
+			[42951] = "EmblemOfHeroism:40",
 			[41324] = "EmblemOfHeroism:45",
 			[43506] = "epicurean:3",
-			[43505] = "epicurean:3",
-			[43037] = "epicurean:3",
-			[43036] = "epicurean:3",
-			[43035] = "epicurean:3",
-			[43034] = "epicurean:3",
+			[40696] = "EmblemOfHeroism:40",
+			[40692] = "EmblemOfHeroism:40",
+			[43017] = "epicurean:5",
+			[42984] = "EmblemOfHeroism:40",
+			[40723] = "EmblemOfValor:25",
 			[40615] = "EmblemOfHeroism:60",
-			[43033] = "epicurean:3",
-			[43032] = "epicurean:3",
+			[48691] = "EmblemOfHeroism:40",
 			[41659] = "EmblemOfValor:45",
-			[43031] = "epicurean:3",
+			[40639] = "EmblemOfValor:60",
 			[42950] = "EmblemOfHeroism:40",
-			[43029] = "epicurean:3",
-			[43028] = "epicurean:3",
+			[41675] = "EmblemOfHeroism:45",
+			[40750] = "EmblemOfValor:40",
+			[43030] = "epicurean:3",
 			[40679] = "EmblemOfHeroism:25",
-			[41771] = "EmblemOfValor:30",
+			[40751] = "EmblemOfValor:40",
 			[40695] = "EmblemOfHeroism:40",
 			[40703] = "EmblemOfHeroism:50",
 			[40711] = "EmblemOfHeroism:15",
 			[40719] = "EmblemOfValor:25",
 			[43022] = "epicurean:3",
-			[43030] = "epicurean:3",
+			[40735] = "EmblemOfValor:60",
 			[40743] = "EmblemOfValor:40",
-			[40751] = "EmblemOfValor:40",
+			[41771] = "EmblemOfValor:30",
 			[41269] = "EmblemOfHeroism:45",
 			[43019] = "epicurean:3",
-			[48685] = "EmblemOfHeroism:40",
+			[42992] = "EmblemOfHeroism:50",
 			[43007] = "epicurean:1",
 			[41301] = "EmblemOfHeroism:45",
-			[42992] = "EmblemOfHeroism:50",
+			[48685] = "EmblemOfHeroism:40",
 			[43102] = "EmblemOfHeroism:10",
 			[41325] = "EmblemOfValor:45",
-			[40735] = "EmblemOfValor:60",
-			[40750] = "EmblemOfValor:40",
-			[41675] = "EmblemOfHeroism:45",
-			[40639] = "EmblemOfValor:60",
-			[48691] = "EmblemOfHeroism:40",
-			[40723] = "EmblemOfValor:25",
-			[42984] = "EmblemOfHeroism:40",
-			[43017] = "epicurean:5",
-			[40692] = "EmblemOfHeroism:40",
-			[40696] = "EmblemOfHeroism:40",
+			[43028] = "epicurean:3",
+			[43029] = "epicurean:3",
+			[43031] = "epicurean:3",
+			[43032] = "epicurean:3",
+			[43033] = "epicurean:3",
+			[43034] = "epicurean:3",
+			[43035] = "epicurean:3",
+			[43036] = "epicurean:3",
+			[43037] = "epicurean:3",
+			[43505] = "epicurean:3",
 			[42943] = "EmblemOfHeroism:65",
-			[42951] = "EmblemOfHeroism:40",
-			[40693] = "EmblemOfHeroism:40",
+			[41676] = "EmblemOfValor:45",
+			[46349] = "epicurean:100",
 		},
 	},
-	["profileKeys"] = {
-		["骑风 - 祈福"] = "骑风 - 祈福",
-	},
 	["profiles"] = {
+		["红发男 - 祈福"] = {
+		},
+		["死哪了 - 祈福"] = {
+		},
 		["骑风 - 祈福"] = {
 			["GUI"] = {
 				["point"] = {
@@ -166,8 +172,8 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"HallsofLightning", -- [2]
-					4, -- [3]
+					"TheNexus", -- [2]
+					nil, -- [3]
 					6, -- [4]
 					0, -- [5]
 				},

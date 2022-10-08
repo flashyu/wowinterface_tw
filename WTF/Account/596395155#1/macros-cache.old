@@ -2,8 +2,7 @@ VER 3 0000000000000005 "cz" "135811"
 /run ResetInstances()
 END
 VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
-/stopcasting
-/cast [@mouseover,nomod,exists] 解除诅咒;  [@mouseover,exists,mod:ctrl] 驱毒术; [@mouseover,exists,mod:shift] 解除诅咒
+/script DecursiveRootTable.Dcr:Println('没有相关技能')
 END
 VER 3 000000000000000D "healbot大迅捷" "INV_MISC_QUESTIONMARK"
 #showtooltip 自然迅捷
@@ -57,12 +56,10 @@ VER 3 0000000000000006 "影遁逃跑" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0000000000000011 "愤怒" "INV_MISC_QUESTIONMARK"
 #showtooltip 愤怒
-/stopcasting
 /cast 愤怒
 END
 VER 3 0000000000000012 "星火" "INV_MISC_QUESTIONMARK"
 #showtooltip 星火术
-/stopcasting
 /cast 星火术
 END
 VER 3 0000000000000013 "星辰坠落" "INV_MISC_QUESTIONMARK"
@@ -85,10 +82,25 @@ VER 3 000000000000000A "滋养-healbot" "INV_MISC_QUESTIONMARK"
 /stopcasting
 /cast [@hbtarget]滋养
 END
+VER 3 0000000000000017 "火箭靴" "132565"
+/use 8
+END
+VER 3 0000000000000016 "爆发" "135805"
+/use 14;
+/use 10;
+END
 VER 3 000000000000000B "生命" "134831"
 /use 邪能治疗;
 /use 超级治疗药水
 /use 符文治疗药水
+END
+VER 3 0000000000000019 "自然之力" "INV_MISC_QUESTIONMARK"
+#showtooltip 自然之力
+/cast 自然之力
+END
+VER 3 0000000000000018 "虫群" "INV_MISC_QUESTIONMARK"
+#showtooltip 虫群
+/cast 虫群
 END
 VER 3 0000000000000003 "视野宏" "132092"
 /console cameraDistanceMaxZoomFactor 4
@@ -97,11 +109,9 @@ END
 VER 3 0000000000000010 "钓鱼" "132931"
 /cast 钓鱼
 /use 巨型蚌壳
-/use 沉重的箱子
 /脚本 local a,i,j,l={"病鱼","纠结的鱼线","漂木","水草","破布","树枝","石块","骨鳞钳鱼","晶鳞鱼"}for i=1,#a do for j=1,114 do l=GetContainerItemLink(j/23,j%23)if l and l:find(a[i])then PickupContainerItem(j/23,j%23)DeleteCursorItem()end end end
 END
 VER 3 0000000000000014 "飓风" "INV_MISC_QUESTIONMARK"
 #showtooltip 飓风
-/stopcasting
 /cast 飓风
 END
