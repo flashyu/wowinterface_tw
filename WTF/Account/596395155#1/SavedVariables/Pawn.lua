@@ -11,11 +11,14 @@ PawnCommon = {
 	["Debug"] = false,
 	["ColorTooltipBorder"] = true,
 	["ShowTooltipIcons"] = true,
-	["LastVersion"] = 2.0702,
+	["LastVersion"] = 2.0703,
 	["ShowSocketingAdvisor"] = true,
 	["Scales"] = {
 		["\"Classic\":WARRIOR2"] = {
 			["PerCharacterOptions"] = {
+				["仓库技师-祈福"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "c69b6d",
 			["LocalizedName"] = "战士: 狂怒",
@@ -174,6 +177,9 @@ PawnCommon = {
 		},
 		["\"Classic\":WARRIOR3"] = {
 			["PerCharacterOptions"] = {
+				["仓库技师-祈福"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "c69b6d",
 			["LocalizedName"] = "战士: 防护",
@@ -365,6 +371,9 @@ PawnCommon = {
 		},
 		["\"Classic\":WARRIOR1"] = {
 			["PerCharacterOptions"] = {
+				["仓库技师-祈福"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "c69b6d",
 			["LocalizedName"] = "战士: 武器",

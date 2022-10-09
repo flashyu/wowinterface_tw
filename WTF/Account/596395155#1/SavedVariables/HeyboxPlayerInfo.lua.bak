@@ -1,6 +1,6 @@
 
 HEYBOX_SAVED_PLAYER_INFOS = {
-	["死哪了-祈福"] = {
-		["class"] = "DEATHKNIGHT",
+	["骑风-祈福"] = {
+		["class"] = "DRUID",
 	},
 }

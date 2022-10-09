@@ -1,8 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0702,
-	["LastPlayerFullName"] = "骑风-祈福",
-	["AutoSelectScales"] = false,
+	["LastVersion"] = 2.0703,
 	["ItemLevels"] = {
 		{
 			["ID"] = 42554,
@@ -69,10 +67,10 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:37660::::::::80:::::::::|h[熔炉的灰烬]|h|r",
 		}, -- [13]
 		{
-			["ID"] = 44013,
-			["Level"] = 174,
+			["ID"] = 40682,
+			["Level"] = 200,
 			["AlsoFitsIn"] = 13,
-			["Link"] = "|cff0070dd|Hitem:44013::::::::80:::::::::|h[炮兵的点火器]|h|r",
+			["Link"] = "|cffa335ee|Hitem:40682::::::::80:::::::::|h[流放者的日晷]|h|r",
 		}, -- [14]
 		{
 			["ID"] = 37799,
@@ -90,6 +88,8 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40698::::::::80:::::::::|h[紫罗兰城堡结界]|h|r",
 		}, -- [17]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "骑风-祈福",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

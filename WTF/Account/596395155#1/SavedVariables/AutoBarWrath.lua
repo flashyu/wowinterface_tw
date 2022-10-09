@@ -1,6 +1,89 @@
 
 AutoBarDB = {
 	["classes"] = {
+		["战士"] = {
+			["barList"] = {
+				["AutoBarClassBarWarrior"] = {
+					["share"] = "2",
+					["fadeOut"] = false,
+					["buttonHeight"] = 36,
+					["rows"] = 1,
+					["dockShiftY"] = 0,
+					["alignButtons"] = "3",
+					["posX"] = 300,
+					["hide"] = false,
+					["enabled"] = true,
+					["columns"] = 10,
+					["alpha"] = 1,
+					["buttonWidth"] = 36,
+					["frameStrata"] = "LOW",
+					["buttonKeys"] = {
+						"AutoBarButtonShields", -- [1]
+						"AutoBarButtonCharge", -- [2]
+						"AutoBarButtonInterrupt", -- [3]
+						"AutoBarButtonER", -- [4]
+						"AutoBarButtonStance", -- [5]
+						"AutoBarButtonClassBuff", -- [6]
+					},
+					["posY"] = 280,
+					["popupDirection"] = "1",
+					["scale"] = 1,
+					["padding"] = 0,
+					["dockShiftX"] = 0,
+					["WARRIOR"] = true,
+				},
+			},
+			["buttonList"] = {
+				["AutoBarButtonStance"] = {
+					["barKey"] = "AutoBarClassBarWarrior",
+					["buttonClass"] = "AutoBarButtonStance",
+					["defaultButtonIndex"] = 5,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonStance",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonShields"] = {
+					["barKey"] = "AutoBarClassBarWarrior",
+					["buttonClass"] = "AutoBarButtonShields",
+					["defaultButtonIndex"] = 1,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonShields",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonCharge"] = {
+					["barKey"] = "AutoBarClassBarWarrior",
+					["buttonClass"] = "AutoBarButtonCharge",
+					["defaultButtonIndex"] = 2,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonCharge",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonER"] = {
+					["barKey"] = "AutoBarClassBarWarrior",
+					["buttonClass"] = "AutoBarButtonER",
+					["defaultButtonIndex"] = 4,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonER",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonInterrupt"] = {
+					["barKey"] = "AutoBarClassBarWarrior",
+					["buttonClass"] = "AutoBarButtonInterrupt",
+					["defaultButtonIndex"] = 3,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonInterrupt",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonClassBuff"] = {
+					["barKey"] = "AutoBarClassBarWarrior",
+					["buttonClass"] = "AutoBarButtonClassBuff",
+					["defaultButtonIndex"] = 6,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonClassBuff",
+					["square_popups"] = true,
+				},
+			},
+		},
 		["法师"] = {
 			["barList"] = {
 				["AutoBarClassBarMage"] = {
@@ -739,6 +822,17 @@ AutoBarDB = {
 			["buttonList"] = {
 			},
 		},
+		["骑风 - 祈福"] = {
+			["buttonDataList"] = {
+				["AutoBarButtonMount"] = {
+					["arrangeOnUse"] = "大型美酒节科多兽",
+				},
+			},
+			["barList"] = {
+			},
+			["buttonList"] = {
+			},
+		},
 		["死哪了 - 祈福"] = {
 			["buttonDataList"] = {
 				["AutoBarButtonMount"] = {
@@ -749,10 +843,9 @@ AutoBarDB = {
 			["buttonList"] = {
 			},
 		},
-		["骑风 - 祈福"] = {
+		["仓库技师 - 祈福"] = {
 			["buttonDataList"] = {
 				["AutoBarButtonMount"] = {
-					["arrangeOnUse"] = "大型美酒节科多兽",
 				},
 			},
 			["barList"] = {
