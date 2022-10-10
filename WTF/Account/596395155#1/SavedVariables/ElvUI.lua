@@ -102,13 +102,13 @@ ElvDB = {
 				["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,268,350",
 				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,307,228",
 				["ElvAB_2"] = "BOTTOM,ElvUIParent,BOTTOM,0,23",
+				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
 				["ElvAB_5"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-490,22",
-				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-269,350",
 				["ElvUF_PetCastbarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,471,78",
 				["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,98",
 				["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,0,61",
-				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
+				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
 				["VehicleLeaveButton"] = "BOTTOM,UIParent,BOTTOM,0,493",
 				["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-574,282",
 			},
@@ -125,7 +125,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["祈福"] = {
-			["骑风"] = 184775516,
+			["骑风"] = 186993679,
 			["红发男"] = 0,
 			["仓库技师"] = 0,
 			["死哪了"] = 2000,
@@ -192,6 +192,12 @@ ElvDB = {
 							nil, -- [3]
 							true, -- [4]
 						}, -- [8]
+						{
+							nil, -- [1]
+							nil, -- [2]
+							nil, -- [3]
+							true, -- [4]
+						}, -- [9]
 					},
 				},
 			},

@@ -1,6 +1,6 @@
 
 BugGrabberDB = {
-	["session"] = 112,
+	["session"] = 114,
 	["lastSanitation"] = 3,
 	["errors"] = {
 		{
@@ -468,27 +468,20 @@ BugGrabberDB = {
 			["counter"] = 1,
 		}, -- [62]
 		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 尝试调用保护功能 'OverrideActionBarButton3:Show()'。",
-			["time"] = "2022/10/08 23:02:53",
-			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:357: in function `ActionButton_Update'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:694: in function `ActionButton_OnEvent'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:207: in function <Interface\\FrameXML\\ActionButton.lua:204>",
-			["session"] = 105,
-			["counter"] = 2,
-		}, -- [63]
-		{
 			["message"] = "...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:681: attempt to index local 'displayData' (a nil value)",
 			["time"] = "2022/10/09 19:30:39",
 			["locals"] = "self = <unnamed> {\n 0 = <userdata>\n RolesText = <unnamed> {\n }\n Roles = <table> {\n }\n Role2 = <unnamed> {\n }\n Role1 = <unnamed> {\n }\n Role3 = <unnamed> {\n }\n}\ndisplayData = nil\ndisabled = true\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index local 'displayData' (a nil value)\"\nLFGBROWSE_DELISTED_FONT_COLOR = <table> {\n b = 0.300000\n g = 0.300000\n r = 0.300000\n}\n",
 			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:681: in function `LFGBrowseGroupDataDisplaySolo_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:653: in function `LFGBrowseGroupDataDisplay_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:328: in function `LFGBrowseSearchEntry_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:239: in function `LFGBrowseSearchEntry_Init'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:59: in function `frameFactory'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:217: in function `AcquireInternal'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:250: in function `AcquireRange'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:503: in function `Rebuild'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:562: in function `ValidateDataRange'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBox.lua\"]:613: in function `Update'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBox.lua\"]:100: in function <Interface\\SharedXML\\Scroll\\ScrollBox.lua:94>\n[string \"=[C]\"]: in function `GetSize'\n...\n[string \"=[C]\"]: ?\n[string \"@Interface\\SharedXML\\CallbackRegistry.lua\"]:118: in function <Interface\\SharedXML\\CallbackRegistry.lua:117>\n[string \"=[C]\"]: ?\n[string \"@Interface\\SharedXML\\CallbackRegistry.lua\"]:121: in function `TriggerEvent'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:195: in function `SignalDataChangeEvent'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:175: in function `SetDataProvider'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBox.lua\"]:563: in function `SetDataProvider'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:146: in function `UpdateResults'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:122: in function `UpdateResultList'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:97: in function <...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:91>",
 			["session"] = 105,
 			["counter"] = 1,
-		}, -- [64]
+		}, -- [63]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 尝试调用保护功能 'OverrideActionBarButton4:Show()'。",
 			["time"] = "2022/09/27 23:14:20",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:357: in function `ActionButton_Update'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:694: in function `ActionButton_OnEvent'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:207: in function <Interface\\FrameXML\\ActionButton.lua:204>",
 			["session"] = 108,
 			["counter"] = 6,
-		}, -- [65]
+		}, -- [64]
 		{
 			["message"] = "Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua:37: attempt to index global 'db' (a nil value)",
 			["time"] = "2022/09/24 23:47:00",
@@ -496,7 +489,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua\"]:37: in function `frame'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:190: in function <Interface\\AddOns\\WIM\\Sources\\Options\\Options.lua:184>\n[string \"=[C]\"]: in function `Click'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:281: in function `UpdateSubCategories'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:104: in function <Interface\\AddOns\\WIM\\Sources\\Options\\Options.lua:104>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:327: in function `ShowOptions'\n[string \"@Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\WIM-3.9.6.lua\"]:11: in function <Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\WIM.lua:8>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\AddOnSkins\\Core\\Core.lua\"]:217: in function `CallSkin'\n[string \"@Interface\\AddOns\\AddOnSkins\\Core\\Core.lua\"]:311: in function `?'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:119: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...vUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 110,
 			["counter"] = 20,
-		}, -- [66]
+		}, -- [65]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2379: attempt to perform arithmetic on upvalue '_numItems' (a nil value)",
 			["time"] = "2022/10/04 01:43:26",
@@ -504,20 +497,27 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2379: in function `RecalculateGearManagerDialogPopup'\n[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2356: in function <Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2353>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2272: in function <Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2269>",
 			["session"] = 110,
 			["counter"] = 20,
+		}, -- [66]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 尝试调用保护功能 'OverrideActionBarButton3:Show()'。",
+			["time"] = "2022/10/08 23:02:53",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:357: in function `ActionButton_Update'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:694: in function `ActionButton_OnEvent'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:207: in function <Interface\\FrameXML\\ActionButton.lua:204>",
+			["session"] = 114,
+			["counter"] = 3,
 		}, -- [67]
 		{
 			["message"] = "Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
 			["time"] = "2022/09/24 23:46:51",
 			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
 			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:67: in function <Interface\\AddOns\\GearScoreLite\\GearScoreLite.lua:53>",
-			["session"] = 112,
-			["counter"] = 35,
+			["session"] = 114,
+			["counter"] = 36,
 		}, -- [68]
 		{
 			["message"] = "(null)",
-			["session"] = 112,
+			["session"] = 114,
 			["time"] = "2022/09/28 22:01:13",
-			["counter"] = 51,
+			["counter"] = 54,
 		}, -- [69]
 	},
 }

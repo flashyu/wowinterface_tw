@@ -118,12 +118,12 @@ AtlasLootClassicDB = {
 			[40723] = "EmblemOfValor:25",
 			[40615] = "EmblemOfHeroism:60",
 			[48691] = "EmblemOfHeroism:40",
-			[41659] = "EmblemOfValor:45",
 			[40639] = "EmblemOfValor:60",
-			[42950] = "EmblemOfHeroism:40",
+			[41659] = "EmblemOfValor:45",
 			[41675] = "EmblemOfHeroism:45",
+			[42950] = "EmblemOfHeroism:40",
 			[40750] = "EmblemOfValor:40",
-			[43030] = "epicurean:3",
+			[40735] = "EmblemOfValor:60",
 			[40679] = "EmblemOfHeroism:25",
 			[40751] = "EmblemOfValor:40",
 			[40695] = "EmblemOfHeroism:40",
@@ -131,7 +131,7 @@ AtlasLootClassicDB = {
 			[40711] = "EmblemOfHeroism:15",
 			[40719] = "EmblemOfValor:25",
 			[43022] = "epicurean:3",
-			[40735] = "EmblemOfValor:60",
+			[43030] = "epicurean:3",
 			[40743] = "EmblemOfValor:40",
 			[41771] = "EmblemOfValor:30",
 			[41269] = "EmblemOfHeroism:45",
@@ -171,8 +171,8 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"ObsidianSanctum", -- [2]
-					nil, -- [3]
+					"VioletHold", -- [2]
+					7, -- [3]
 					7, -- [4]
 					0, -- [5]
 				},
