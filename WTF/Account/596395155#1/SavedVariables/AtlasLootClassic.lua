@@ -118,12 +118,12 @@ AtlasLootClassicDB = {
 			[40723] = "EmblemOfValor:25",
 			[40615] = "EmblemOfHeroism:60",
 			[48691] = "EmblemOfHeroism:40",
-			[40639] = "EmblemOfValor:60",
 			[41659] = "EmblemOfValor:45",
-			[41675] = "EmblemOfHeroism:45",
+			[40639] = "EmblemOfValor:60",
 			[42950] = "EmblemOfHeroism:40",
+			[41675] = "EmblemOfHeroism:45",
 			[40750] = "EmblemOfValor:40",
-			[40735] = "EmblemOfValor:60",
+			[43030] = "epicurean:3",
 			[40679] = "EmblemOfHeroism:25",
 			[40751] = "EmblemOfValor:40",
 			[40695] = "EmblemOfHeroism:40",
@@ -131,7 +131,7 @@ AtlasLootClassicDB = {
 			[40711] = "EmblemOfHeroism:15",
 			[40719] = "EmblemOfValor:25",
 			[43022] = "epicurean:3",
-			[43030] = "epicurean:3",
+			[40735] = "EmblemOfValor:60",
 			[40743] = "EmblemOfValor:40",
 			[41771] = "EmblemOfValor:30",
 			[41269] = "EmblemOfHeroism:45",
@@ -163,16 +163,16 @@ AtlasLootClassicDB = {
 		["骑风 - 祈福"] = {
 			["GUI"] = {
 				["point"] = {
-					"TOP", -- [1]
+					"TOPLEFT", -- [1]
 					nil, -- [2]
-					"TOP", -- [3]
-					-164.0636138916016, -- [4]
-					-69.26988220214844, -- [5]
+					"TOPLEFT", -- [3]
+					12.45345783233643, -- [4]
+					-77.84343719482422, -- [5]
 				},
 				["selected"] = {
 					nil, -- [1]
-					"VioletHold", -- [2]
-					7, -- [3]
+					"NaxxramasWrath", -- [2]
+					3, -- [3]
 					7, -- [4]
 					0, -- [5]
 				},

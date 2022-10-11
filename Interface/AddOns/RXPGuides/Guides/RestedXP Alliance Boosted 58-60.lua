@@ -2,202 +2,202 @@ RXPGuides.RegisterGuide([[
 #tbc
 #wotlk
 << Alliance
-#name 增强字符58-60
+#name Boosted Character 58-60
 #version 1
-#group RestedXP联盟增加了58-60
+#group RestedXP Alliance Boosted 58-60
 #defaultfor 58Boost
-#next RestedXP 联盟 60-70\59-61 地狱火半岛
+#next RestedXP Alliance 60-70\59-61 Hellfire Peninsula
 step << Warrior
-.accept 64028 >>接受新的开始
-    .turnin 64028 >>开创新的开端
-    .accept 64031 >>接受生存工具
+.accept 64028 >>Accept A New Beginning
+    .turnin 64028 >>Turn in A New Beginning
+    .accept 64031 >>Accept Tools for Survival
     .complete 64031,1 --1/1 Open the Survival Kit (1)
     .complete 64031,2 --1/1 Equip a Weapon (1)
 step << Warrior
     .goto StormwindClassic,78.3,47.4
-    .turnin 64031 >>上缴生存工具
-    .accept 64034 >>接受战斗训练
+    .turnin 64031 >>Turn in Tools for Survival
+    .accept 64034 >>Accept Combat Training
     .complete 64034,1 --1/1 Train a Spell (1)
 step << Warrior
     .goto StormwindClassic,78.3,47.4
-    .turnin 64034 >>交战训练
-    .accept 64035 >>接受人才
+    .turnin 64034 >>Turn in Combat Training
+    .accept 64035 >>Accept Talented
     .complete 64035,1 --5 Talent Points Allocated (1)
 step << Warrior
     .goto StormwindClassic,78.3,47.4
-    .turnin 64035 >>上缴人才
-    .accept 64038 >>接受黑暗之门
+    .turnin 64035 >>Turn in Talented
+    .accept 64038 >>Accept The Dark Portal
 --
 step << Paladin
     .goto StormwindClassic,37.3,33.0
-    .accept 64028 >>接受新的开始
+    .accept 64028 >>Accept A New Beginning
 step << Paladin
     .goto StormwindClassic,37.2,33.2
-    .turnin 64028 >>开创新的开端
-    .accept 64031 >>接受生存工具
+    .turnin 64028 >>Turn in A New Beginning
+    .accept 64031 >>Accept Tools for Survival
     .complete 64031,1 --1/1 Open the Survival Kit (1)
     .complete 64031,2 --1/1 Equip a Weapon (1)
 step << Paladin
     .goto StormwindClassic,37.2,33.2
-    .turnin 64031 >>上缴生存工具
-    .accept 64034 >>接受战斗训练
+    .turnin 64031 >>Turn in Tools for Survival
+    .accept 64034 >>Accept Combat Training
     .complete 64034,1 --1/1 Train a Spell (1)
 step << Paladin
     .goto StormwindClassic,37.2,33.2
-    .turnin 64034 >>交战训练
-    .accept 64035 >>接受人才
+    .turnin 64034 >>Turn in Combat Training
+    .accept 64035 >>Accept Talented
     .complete 64035,1 --5 Talent Points Allocated (1)
 step << Paladin
     .goto StormwindClassic,37.2,33.2
-    .turnin 64035 >>上缴人才
-    .accept 64038 >>接受黑暗之门
+    .turnin 64035 >>Turn in Talented
+    .accept 64038 >>Accept The Dark Portal
 --
 step << Rogue
     .goto StormwindClassic,78.3,57.3
-    .accept 64028 >>接受新的开始
-    .turnin 64028 >>开创新的开端
-    .accept 64031 >>接受生存工具
+    .accept 64028 >>Accept A New Beginning
+    .turnin 64028 >>Turn in A New Beginning
+    .accept 64031 >>Accept Tools for Survival
     .complete 64031,1 --1/1 Open the Survival Kit (1)
     .complete 64031,2 --1/1 Equip a Weapon (1)
 step << Rogue
     .goto StormwindClassic,78.3,57.3
-    .turnin 64031 >>上缴生存工具
-    .accept 64034 >>接受战斗训练
+    .turnin 64031 >>Turn in Tools for Survival
+    .accept 64034 >>Accept Combat Training
     .complete 64034,1 --1/1 Train a Spell (1)
 step << Rogue
     .goto StormwindClassic,78.3,57.3
-    .turnin 64034 >>交战训练
-    .accept 64035 >>接受人才
+    .turnin 64034 >>Turn in Combat Training
+    .accept 64035 >>Accept Talented
     .complete 64035,1 --5 Talent Points Allocated (1)
 step << Rogue
     .goto StormwindClassic,78.3,57.3
-    .turnin 64035 >>上缴人才
-    .accept 64038 >>接受黑暗之门
+    .turnin 64035 >>Turn in Talented
+    .accept 64038 >>Accept The Dark Portal
 --
 step << Priest
     .goto StormwindClassic,38.8,26.4
-    .accept 64028 >>接受新的开始
-    .turnin 64028 >>开创新的开端
-    .accept 64031 >>接受生存工具
+    .accept 64028 >>Accept A New Beginning
+    .turnin 64028 >>Turn in A New Beginning
+    .accept 64031 >>Accept Tools for Survival
     .complete 64031,1 --1/1 Open the Survival Kit (1)
     .complete 64031,2 --1/1 Equip a Weapon (1)
 step << Priest
     .goto StormwindClassic,38.8,26.4
-    .turnin 64031 >>上缴生存工具
-    .accept 64034 >>接受战斗训练
+    .turnin 64031 >>Turn in Tools for Survival
+    .accept 64034 >>Accept Combat Training
     .complete 64034,1 --1/1 Train a Spell (1)
 step << Priest
     .goto StormwindClassic,38.8,26.4
-    .turnin 64034 >>交战训练
-    .accept 64035 >>接受人才
+    .turnin 64034 >>Turn in Combat Training
+    .accept 64035 >>Accept Talented
     .complete 64035,1 --5 Talent Points Allocated (1)
 step << Priest
     .goto StormwindClassic,38.8,26.4
-    .turnin 64035 >>上缴人才
-    .accept 64038 >>接受黑暗之门
+    .turnin 64035 >>Turn in Talented
+    .accept 64038 >>Accept The Dark Portal
 
 --
 step << Mage
     .goto StormwindClassic,38.7,79.3
-    .accept 64028 >>接受新的开始
-    .turnin 64028 >>开创新的开端
-    .accept 64031 >>接受生存工具
+    .accept 64028 >>Accept A New Beginning
+    .turnin 64028 >>Turn in A New Beginning
+    .accept 64031 >>Accept Tools for Survival
     .complete 64031,1 --1/1 Open the Survival Kit (1)
     .complete 64031,2 --1/1 Equip a Weapon (1)
 step << Mage
     .goto StormwindClassic,38.7,79.3
-    .turnin 64031 >>上缴生存工具
-    .accept 64034 >>接受战斗训练
+    .turnin 64031 >>Turn in Tools for Survival
+    .accept 64034 >>Accept Combat Training
     .complete 64034,1 --1/1 Train a Spell (1)
 step << Mage
     .goto StormwindClassic,38.7,79.3
-    .turnin 64034 >>交战训练
-    .accept 64035 >>接受人才
+    .turnin 64034 >>Turn in Combat Training
+    .accept 64035 >>Accept Talented
     .complete 64035,1 --5 Talent Points Allocated (1)
 step << Mage
     .goto StormwindClassic,38.7,79.3
-    .turnin 64035 >>上缴人才
-    .accept 64038 >>接受黑暗之门
+    .turnin 64035 >>Turn in Talented
+    .accept 64038 >>Accept The Dark Portal
 
 --
 step << Warlock
     .goto StormwindClassic,26.0,77.4
-    .accept 64028 >>接受新的开始
-    .turnin 64028 >>开创新的开端
-    .accept 64031 >>接受生存工具
+    .accept 64028 >>Accept A New Beginning
+    .turnin 64028 >>Turn in A New Beginning
+    .accept 64031 >>Accept Tools for Survival
     .complete 64031,1 --1/1 Open the Survival Kit (1)
     .complete 64031,2 --1/1 Equip a Weapon (1)
 step << Warlock
     .goto StormwindClassic,26.0,77.4
-    .turnin 64031 >>上缴生存工具
-    .accept 64034 >>接受战斗训练
+    .turnin 64031 >>Turn in Tools for Survival
+    .accept 64034 >>Accept Combat Training
     .complete 64034,1 --1/1 Train a Spell (1)
 step << Warlock
     .goto StormwindClassic,26.0,77.4
-    .turnin 64034 >>交战训练
-    .accept 64035 >>接受人才
+    .turnin 64034 >>Turn in Combat Training
+    .accept 64035 >>Accept Talented
     .complete 64035,1 --5 Talent Points Allocated (1)
 step << Warlock
     .goto StormwindClassic,26.1,77.4
-    .turnin 64035 >>上缴人才
-    .accept 64038 >>接受黑暗之门
+    .turnin 64035 >>Turn in Talented
+    .accept 64038 >>Accept The Dark Portal
 
 --
 step << Hunter
     .goto StormwindClassic,61.7,15.2
-    .accept 64028 >>接受新的开始
-    .turnin 64028 >>开创新的开端
-    .accept 64031 >>接受生存工具
+    .accept 64028 >>Accept A New Beginning
+    .turnin 64028 >>Turn in A New Beginning
+    .accept 64031 >>Accept Tools for Survival
     .complete 64031,1 --1/1 Open the Survival Kit (1)
     .complete 64031,2 --1/1 Equip a Weapon (1)
 step << Hunter
     .goto StormwindClassic,61.7,15.2
-    .turnin 64031 >>上缴生存工具
-    .accept 64034 >>接受战斗训练
+    .turnin 64031 >>Turn in Tools for Survival
+    .accept 64034 >>Accept Combat Training
     .complete 64034,1 --1/1 Train a Spell (1)
 step << Hunter
     .goto StormwindClassic,61.7,15.2
-    .turnin 64034 >>交战训练
-    .accept 64035 >>接受人才
+    .turnin 64034 >>Turn in Combat Training
+    .accept 64035 >>Accept Talented
     .complete 64035,1 --5 Talent Points Allocated (1)
 step << Hunter
     .goto StormwindClassic,61.7,15.2
-    .turnin 64035 >>上缴人才
-    .accept 64038 >>接受黑暗之门
+    .turnin 64035 >>Turn in Talented
+    .accept 64038 >>Accept The Dark Portal
 
 step << Druid
     .goto StormwindClassic,21.4,51.4
-    .turnin 64028 >>开创新的开端
-    .accept 64031 >>接受生存工具
+    .turnin 64028 >>Turn in A New Beginning
+    .accept 64031 >>Accept Tools for Survival
     .complete 64031,1 --1/1 Open the Survival Kit (1)
     .complete 64031,2 --1/1 Equip a Weapon (1)
 step << Druid
     .goto StormwindClassic,21.4,51.4
-    .turnin 64031 >>上缴生存工具
-    .accept 64034 >>接受战斗训练
+    .turnin 64031 >>Turn in Tools for Survival
+    .accept 64034 >>Accept Combat Training
     .complete 64034,1 --1/1 Train a Spell (1)
 step << Druid
     .goto StormwindClassic,21.4,51.4
-    .turnin 64034 >>交战训练
-    .accept 64035 >>接受人才
+    .turnin 64034 >>Turn in Combat Training
+    .accept 64035 >>Accept Talented
     .complete 64035,1 --5 Talent Points Allocated (1)
 step << Druid
     .goto StormwindClassic,21.4,51.4
-    .turnin 64035 >>上缴人才
-    .accept 64038 >>接受黑暗之门
+    .turnin 64035 >>Turn in Talented
+    .accept 64038 >>Accept The Dark Portal
 step << skip
     #completewith bs1
     .goto StormwindClassic,78.0,18.2
-    .accept 6182 >>接受第一个和最后一个
-    >>奥妮克希亚调谐任务中有一个长脚本RP序列，这使得伯瓦尔在几分钟内无法与玩家互动，如果是这样的话，跳过这一步，在完成燃烧的阶梯后再尝试获得这个任务
+    .accept 6182 >>Accept The First and the Last
+    >>There is a long scripted RP sequence part of the Onyxia attunement quest that makes Bolvar not able to interact with players for a few minutes, if that's the case, skip this step and try to get this quest later after finishing Burning Steppes
 step
     #label bs1
     .goto StormwindClassic,66.2,62.2
     .complete 64038,1 --Speak to Dungar Longdrink, the Gryphon Master (1)
-    .fly Morgan's Vigil>>飞往摩根守夜
+    .fly Morgan's Vigil>>Fly to Morgan's Vigil
 step
     .goto Burning Steppes,85.8,69.0
-    .accept 4182 >>接受龙皮威胁
+    .accept 4182 >>Accept Dragonkin Menace
 step
     .goto Burning Steppes,87.7,46.1
     .goto Burning Steppes,88.8,37.6
@@ -209,171 +209,171 @@ step
     .complete 4182,4 --Black Wyrmkin (4)
 step
     .goto Burning Steppes,85.8,68.9
-    .turnin 4182 >>上缴龙皮威胁
-    .accept 4183 >>接受真正的大师
+    .turnin 4182 >>Turn in Dragonkin Menace
+    .accept 4183 >>Accept The True Masters
 step
     .goto Burning Steppes,84.4,68.4
-    .fly Lakeshire >>飞往莱克郡
+    .fly Lakeshire >>Fly to Lakeshire
 step
     .goto Redridge Mountains,29.8,44.5
-    .turnin 4183 >>交上真正的大师赛
-    .accept 4184 >>接受真正的大师
+    .turnin 4183 >>Turn in The True Masters
+    .accept 4184 >>Accept The True Masters
 step
     .goto Redridge Mountains,30.58,59.41
-    .fly Stormwind>>飞到暴风城
+    .fly Stormwind>>Fly to Stormwind
 step
     .goto StormwindClassic,78.0,18.2
-    .turnin 4184 >>交上真正的大师赛
-    .accept 4185 >>接受真正的大师
--- .accept 6182 >>接受第一个和最后一个
+    .turnin 4184 >>Turn in The True Masters
+    .accept 4185 >>Accept The True Masters
+-- .accept 6182 >>Accept The First and the Last
 step
     .goto StormwindClassic,78.11,17.75
-    >>与Prestor女士交谈
+    >>Talk to Lady Prestor
     .complete 4185,1 --Advice from Lady Prestor (1)
 step
     .goto StormwindClassic,78.0,18.2
-    .turnin 4185 >>交上真正的大师赛
-    .accept 4186 >>接受真正的大师
+    .turnin 4185 >>Turn in The True Masters
+    .accept 4186 >>Accept The True Masters
 step << skip
     .goto StormwindClassic,75.9,59.8
-    .turnin 6182 >>交第一个和最后一个
-    .accept 6183 >>接受尊敬死者
-    .turnin 6183 >>向死者致敬
-    .accept 6184 >>接受Flint Shadowmore
+    .turnin 6182 >>Turn in The First and the Last
+    .accept 6183 >>Accept Honor the Dead
+    .turnin 6183 >>Turn in Honor the Dead
+    .accept 6184 >>Accept Flint Shadowmore
 step
     .goto StormwindClassic,66.2,62.3
-    .fly Lakeshire >>飞往莱克郡
+    .fly Lakeshire >>Fly to Lakeshire
 step
     .goto Redridge Mountains,29.8,44.5
-    .turnin 4186 >>交上真正的大师赛
-    .accept 4223 >>接受真正的大师
+    .turnin 4186 >>Turn in The True Masters
+    .accept 4223 >>Accept The True Masters
 step
     .goto Redridge Mountains,30.6,59.4
-    .fly Morgan's Vigil >>飞往摩根守夜
+    .fly Morgan's Vigil >>Fly to Morgan's Vigil
 step
     .goto Burning Steppes,84.6,68.9
-    .turnin 4223 >>交上真正的大师赛
+    .turnin 4223 >>Turn in The True Masters
 step
     .goto Burning Steppes,84.4,68.3
-    .fly Southshore >>飞往南岸
+    .fly Southshore >>Fly to Southshore
 step
     .goto Hillsbrad Foothills,51.1,58.9
-    .home >>把你的炉石放在南岸
+    .home >>Set your Hearthstone to Southshore
 step
     .goto Hillsbrad Foothills,49.4,52.3
-    .fly Chillwind Camp >>飞往奇风营地
+    .fly Chillwind Camp >>Fly to Chillwind Camp
 step
     #completewith mark1
     .goto Western Plaguelands,42.9,84.6,0
-    >>与《奇风》中的德莱尼NPC对话
-    .accept 9474 >>接受光明使者的标记
-    >>任务给予者是长脚本RP序列的一部分，如果你找不到他，请跳过这一步
+    >>Speak to the Draenei NPC in Chillwind
+    .accept 9474 >>Accept The Mark of the Lightbringer
+    >>The quest giver is part of a long scripted RP sequence, if you can't find him skip this step
 step
     .goto Western Plaguelands,42.8,84.0
-    .accept 5092 >>接受让路
+    .accept 5092 >>Accept Clear the Way
 step
     .goto Western Plaguelands,43.4,84.8
-    .accept 5903 >>接受你身上的瘟疫
+    .accept 5903 >>Accept A Plague Upon Thee
 step << skip
     .goto Western Plaguelands,43.7,84.5
-    .turnin 6184 >>加入Flint Shadowmore
-    .accept 6185 >>接受东部瘟疫
+    .turnin 6184 >>Turn in Flint Shadowmore
+    .accept 6185 >>Accept The Eastern Plagues
 step
     #label mark1
     .goto Western Plaguelands,42.9,85.0
-    .fly Light's Hope Chapel >>飞向光明的希望教堂
+    .fly Light's Hope Chapel >>Fly to Light's Hope Chapel
 step
     .goto Eastern Plaguelands,79.5,64.0
-    .accept 6021 >>接受被驱逐的扎达尔
-    .accept 5281 >>接受不安宁的灵魂
+    .accept 6021 >>Accept Zaeldarr the Outcast
+    .accept 5281 >>Accept The Restless Souls
 step << Hunter
     #sticky
-    .tame 8602 >> 如果你的宠物除了咆哮之外没有其他能力，那么在前往普雷格伍德的路上，抛弃你的宠物并驯服一只58级蝙蝠
-    >>买些真菌喂你的新宠物
+    .tame 8602 >> If your pet has no abilities other than Growl, ditch your pet and tame a level 58 bat on your way to Plaguewood
+    >>Buy some fungi to feed your new pet
     .collect 8948,20
     .goto Eastern Plaguelands,79.5,64.0
 step
     #sticky
-    .abandon 5211 >>如果你有这个任务，放弃达罗郡守卫
+    .abandon 5211 >>Abandon Defenders of Darrowshire if you have this quest
 step
     .goto Eastern Plaguelands,34.0,28.1
-	>>在Plaguewood周围寻找白蚁丘
+	>>Look for termite mounds around Plaguewood
     .complete 5903,1 --Collect Plagueland Termites (x100)
 step
     .goto Eastern Plaguelands,14.5,33.7
-    .turnin 5281 >>交回不安宁的灵魂
-    .accept 5282 >>接受不安宁的灵魂
+    .turnin 5281 >>Turn in The Restless Souls
+    .accept 5282 >>Accept The Restless Souls
 step
     #completewith next
-    .hs >> 炉灶到Southshore
+    .hs >> Hearth to Southshore
 step
     .goto Hillsbrad Foothills,49.4,52.3
-    .fly Chillwind Camp >>飞往奇风营地
+    .fly Chillwind Camp >>Fly to Chillwind Camp
 step
     #completewith tower
     .goto Western Plaguelands,42.9,84.6,0
-    >>与《奇风》中的德莱尼NPC对话
-    .accept 9474 >>接受光明使者的标记
-    >>任务给予者是一个长脚本RP序列的一部分，如果他不在奇风，只要在你通过区域进行任务时注意它即可
+    >>Speak to the Draenei NPC in Chillwind
+    .accept 9474 >>Accept The Mark of the Lightbringer
+    >>The quest giver is part of a long scripted RP sequence, if he's not at Chillwind just keep an eye for it while you quest through the zone
 step
     .goto Western Plaguelands,50.4,76.4
     .complete 5092,2 --Slavering Ghoul (10)
     .complete 5092,1 --Skeletal Flayer (10)
 step
     .goto Western Plaguelands,49.19,78.64
-    >>与房子里的玛琳·雷德帕斯交谈
-    .accept 5142 >>接受小帕梅拉
+    >>Speak to Marlene Redpath inside the house
+    .accept 5142 >>Accept Little Pamela
 step
     .goto Western Plaguelands,42.8,84.0
-    .turnin 5092 >>转弯让路
-    .accept 5097 >>沿望塔全部接受
-    .accept 5215 >>接受天灾大锅
+    .turnin 5092 >>Turn in Clear the Way
+    .accept 5097 >>Accept All Along the Watchtowers
+    .accept 5215 >>Accept The Scourge Cauldrons
 step
     .goto Western Plaguelands,43.0,84.6
-    .turnin 5215 >>交出天灾大锅
-    .accept 5216 >>接受目标：Felstone油田
+    .turnin 5215 >>Turn in The Scourge Cauldrons
+    .accept 5216 >>Accept Target: Felstone Field
 step
     .goto Western Plaguelands,43.4,84.8
-    .turnin 5903 >>向你倾诉瘟疫
-    .accept 5904 >>接受你身上的瘟疫
+    .turnin 5903 >>Turn in A Plague Upon Thee
+    .accept 5904 >>Accept A Plague Upon Thee
 step
     .goto Western Plaguelands,40.0,71.8
-	>>在塔楼门口的袋子里使用信标火炬
+	>>Use the beacon torch in your bags at the side of the doorway of the tower
     .complete 5097,1 --Tower One marked (1)
 step
     .goto Western Plaguelands,37.1,56.9
-    >>杀死釜主，抢夺釜钥匙
-    .turnin 5216 >>转入目标：Felstone油田
-    .accept 5217 >>接受返回奇风营地
+    >>Kill the cauldron lord and loot the cauldron key
+    .turnin 5216 >>Turn in Target: Felstone Field
+    .accept 5217 >>Accept Return to Chillwind Camp
 step
     .goto Western Plaguelands,42.3,66.2
-	>>在塔楼门口的袋子里使用信标火炬
+	>>Use the beacon torch in your bags at the side of the doorway of the tower
     .complete 5097,2 --Tower Two marked (1)
 step
     .goto Western Plaguelands,43.0,84.4
-    .turnin 5217 >>返回奇风营地
-    .accept 5219 >>接受目标：Dalson的眼泪
+    .turnin 5217 >>Turn in Return to Chillwind Camp
+    .accept 5219 >>Accept Target: Dalson's Tears
 step
     .goto Western Plaguelands,46.7,71.0
-	>>在塔楼门口的袋子里使用信标火炬
+	>>Use the beacon torch in your bags at the side of the doorway of the tower
     .complete 5097,4 --Tower Four marked (1)
 step
     .goto Western Plaguelands,53.7,64.7
-    .accept 4984 >>接受野生动物的痛苦
+    .accept 4984 >>Accept The Wildlife Suffers Too
 step
 	#completewith Businessman
     .goto Western Plaguelands,46.0,47.7,0
-	>>病狼与腐烂潜伏者分享产卵。如果你找不到狼，也杀了他们。
+	>>The Diseased Wolves share spawns with Carrion Lurkers. Kill them too if you're unable to find Wolves.
     .complete 4984,1 --Kill Diseased Wolf (x8)
 	.unitscan Diseased Wolf
 step
     .goto Western Plaguelands,47.8,50.8
-	>>点击谷仓内的日记
-    .turnin 5058 >> 交上Dalson夫人日记
+	>>Click on the diary inside the barn
+    .turnin 5058 >> Turn in Mrs. Dalson Diary
 step
 	#completewith DalsonsT
     .goto Western Plaguelands,46.9,51.5,0
-	>>寻找在农舍周围巡逻的流浪骷髅
+	>>Look for the Wandering Skeleton that patrols the area around the farmhouse
     .collect 12738,1 --Collect Dalson Outhouse Key (x1)
 	.unitscan Wandering Skeleton
 step
@@ -382,60 +382,60 @@ step
 step
 	#label DalsonsT
     .goto Western Plaguelands,46.2,52.1
-    .turnin 5219 >> 上缴目标：Dalson的眼泪
-    .accept 5220 >> 接受返回奇风营地
+    .turnin 5219 >> Turn in Target: Dalson's Tears
+    .accept 5220 >> Accept Return to Chillwind Camp
 step
     .goto Western Plaguelands,46.9,51.5
-	>>寻找在农舍周围巡逻的流浪骷髅
+	>>Look for the Wandering Skeleton that patrols the area around the farmhouse
     .collect 12738,1 --Collect Dalson Outhouse Key (x1)
 	.unitscan Wandering Skeleton
 step
 	#completewith next
     .goto Western Plaguelands,48.2,49.7
-	>>在睡觉前确保身体健康
-    .turnin 5059 >> 转入锁定状态
+	>>Make sure you're full health before turning in
+    .turnin 5059 >> Turn in Locked Away
 step
     .goto Western Plaguelands,48.2,49.7
-	>>杀死Farmer Dalson。抢他的钥匙
+	>>Kill Farmer Dalson. Loot him for the key
     .collect 12739,1 --Collect Dalson Cabinet Key (x1)
 step
     .goto Western Plaguelands,47.4,49.7
-	>>点击农舍顶层的橱柜
-    .turnin 5060 >> 转入锁定状态
+	>>Click on the cabinet at the top floor of the farmhouse
+    .turnin 5060 >> Turn in Locked Away
 step
     .goto Western Plaguelands,48.4,31.9
-    .turnin 5904 >>向你倾诉瘟疫
-    .accept 6389 >>接受你身上的瘟疫
+    .turnin 5904 >>Turn in A Plague Upon Thee
+    .accept 6389 >>Accept A Plague Upon Thee
 step
     .goto Western Plaguelands,51.9,28.1
-    .accept 6004 >>接受未完成的业务
+    .accept 6004 >>Accept Unfinished Business
 step
     .goto Western Plaguelands,52.0,44.3,70,0
     .goto Western Plaguelands,50.3,41.1,70,0
     .goto Western Plaguelands,40.7,52.2,70,0
     .goto Western Plaguelands,50.3,41.1,70,0
     .goto Western Plaguelands,52.0,44.3
-	>>杀死血腥暴徒。如果你找不到医护人员和猎人，在营地杀死暴徒，迫使他们重生，因为他们与其他暴徒类型共享重生
-	>>如果你找不到法师，杀死骑士(因为他们共享后代)
+	>>Kill Scarlet mobs. If you're unable to find medics and hunters, kill mobs at the camps to force new respawns, as they share respawns with other mob types
+	>>If you're unable to find Mages, kill Knights (as they share spawns)
     .complete 6004,1 --Scarlet Medic (2)
     .complete 6004,2 --Scarlet Hunter (2)
     .complete 6004,3 --Scarlet Mage (2)
     .complete 6004,4 --Scarlet Knight (2)
 step
     .goto Western Plaguelands,51.9,28.1
-    .turnin 6004 >>移交未完成的业务
-    .accept 6023 >>接受未完成的业务
+    .turnin 6004 >>Turn in Unfinished Business
+    .accept 6023 >>Accept Unfinished Business
 step
 	#label Businessman
     .goto Western Plaguelands,55.1,23.5
-    >>寻找在塔楼上下巡逻的指定暴徒
+    >>Look for the named mob that patrols up and down the tower
     .complete 6023,2 --Kill Cavalier Durgen (x1)
     *There is a level 63 elite mob that can spawn at the tower, if that's the case just be patient and wait for Durgen to come down
 	.unitscan Cavalier Durgen
 step
     #label tower
     .goto Western Plaguelands,55.1,23.5
-    >>抢劫塔顶的箱子，如果63级稀有精英挡道，请跳过此步骤
+    >>Loot the chest at the top of the tower, skip this step if the level 63 rare elite is blocking the way
     .complete 9474,1 --Collect Mark of the Lightbringer (x1)
     .isOnQuest 9474
 step
@@ -443,15 +443,15 @@ step
     .complete 6023,1 --Huntsman Radley (1)
 step
     .goto Western Plaguelands,52.0,28.1
-    .turnin 6023 >>移交未完成的业务
-    .accept 6025 >>接受未完成的业务
+    .turnin 6023 >>Turn in Unfinished Business
+    .accept 6025 >>Accept Unfinished Business
 step
-	>>跑到炉灶glen的塔顶
+	>>Run to the top of the tower in Hearthglen
     .goto Western Plaguelands,45.6,18.6
-    .complete 6025,1 --Overlook 炉灶glen from a high vantage point (1)
+    .complete 6025,1 --Overlook Hearthglen from a high vantage point (1)
 step
     .goto Western Plaguelands,52.0,28.1
-    .turnin 6025 >>移交未完成的业务
+    .turnin 6025 >>Turn in Unfinished Business
 step
     .goto Western Plaguelands,51.2,53.3,70,0
     .goto Western Plaguelands,46.9,47.0,70,0
@@ -459,193 +459,193 @@ step
     .goto Western Plaguelands,45.6,37.7,70,0
     .goto Western Plaguelands,42.8,56.7,70,0
     .goto Western Plaguelands,51.2,53.3
-	>>病狼与腐烂潜伏者分享产卵。如果你找不到狼，也杀了他们。
+	>>The Diseased Wolves share spawns with Carrion Lurkers. Kill them too if you're unable to find Wolves.
     .complete 4984,1 --Kill Diseased Wolf (x8)
 	.unitscan Diseased Wolf
 step
     .goto Western Plaguelands,44.3,63.2
-	>>在塔楼门口的袋子里使用信标火炬
+	>>Use the beacon torch in your bags at the side of the doorway of the tower
     .complete 5097,3 --Tower Three marked (1)
 step
     .goto Western Plaguelands,42.7,84.1
-    .turnin 5097 >>沿望塔全部上缴
-    .accept 5533 >>接受学校教育
+    .turnin 5097 >>Turn in All Along the Watchtowers
+    .accept 5533 >>Accept Scholomance
 step
     .goto Western Plaguelands,42.69,83.90
-    .turnin 5533 >>交学费
-    .accept 5537 >>接受骨骼碎片
+    .turnin 5533 >>Turn in Scholomance
+    .accept 5537 >>Accept Skeletal Fragments
 step
     .goto Western Plaguelands,42.94,84.42
-    .turnin 5220 >>返回奇风营地
-    .accept 5222 >>接受目标：旋转幽灵
+    .turnin 5220 >>Turn in Return to Chillwind Camp
+    .accept 5222 >>Accept Target: Writhing Haunt
 step
     .goto Western Plaguelands,42.94,84.42
-    .turnin 9474 >>交出光明使者的标记
+    .turnin 9474 >>Turn in The Mark of the Lightbringer
     .isQuestComplete 9474
 step
     .goto Western Plaguelands,43.5,84.9
-    .turnin 6389 >>向你倾诉瘟疫
+    .turnin 6389 >>Turn in A Plague Upon Thee
 step
     .goto Western Plaguelands,39.4,66.9
-    .accept 4971 >>接受时间问题
+    .accept 4971 >>Accept A Matter of Time
 step
     #completewith next
-    >>在安多哈尔杀死骷髅。抢劫他们的碎片
+    >>Kill Skeletons in Andorhal. Loot them for their Fragments
     .goto Western Plaguelands,42.10,69.98,0
     .complete 5537,1 --Skeletal Fragments (15)
 step
-	>>使用Andorhal中发光筒仓旁边的临时置换器。杀死产卵的暂时寄生虫
+	>>Use the Temporal Displacer next to the glowing Silos in Andorhal. Kill the Temporal Parasites that spawn
     .goto Western Plaguelands,48.2,66.5
     .complete 4971,1 --Temporal Parasite (10)
 step
-    >>在安多哈尔杀死骷髅。抢劫他们的碎片
+    >>Kill Skeletons in Andorhal. Loot them for their Fragments
     .goto Western Plaguelands,42.10,69.98
     .complete 5537,1 --Skeletal Fragments (15)
 step
     .goto Western Plaguelands,53.0,65.8
-    .turnin 5222 >>上缴目标：恶作剧
-    .accept 5223 >>接受返回奇风营地
+    .turnin 5222 >>Turn in Target: Writhing Haunt
+    .accept 5223 >>Accept Return to Chillwind Camp
 step
     .goto Western Plaguelands,53.7,64.7
-    .turnin 4984 >>交出野生动物的痛苦
-    .accept 4985 >>接受野生动物的痛苦
+    .turnin 4984 >>Turn in The Wildlife Suffers Too
+    .accept 4985 >>Accept The Wildlife Suffers Too
 step
     .goto Western Plaguelands,53.9,51.3
-	>>患病灰熊与瘟疫潜伏者共享产卵。如果你找不到灰熊，也杀了他们。
+	>>The Diseased Grizzlies share spawns with Plague Lurkers. Kill them too if you're unable to find Grizzlies.
     .complete 4985,1 --Diseased Grizzly (8)
 	.unitscan Diseased Grizzly
 step
     .goto Western Plaguelands,53.7,64.7
-    .turnin 4985 >>交出野生动物的痛苦
-    .accept 4986 >>接受雕纹Oaken Branch << !Shaman !Warlock !Paladin
+    .turnin 4985 >>Turn in The Wildlife Suffers Too
+    .accept 4986 >>Accept Glyphed Oaken Branch << !Shaman !Warlock !Paladin
 step
     .goto Western Plaguelands,42.9,84.5
-    .turnin 5223 >>返回奇风营地
-    .accept 5225 >>接受目标：加伦的枯萎
+    .turnin 5223 >>Turn in Return to Chillwind Camp
+    .accept 5225 >>Accept Target: Gahrron's Withering
 step
     .goto Western Plaguelands,62.6,58.7
-    .turnin 5225 >>上缴目标：Gahrron的枯萎
-    .accept 5226 >>接受返回奇风营地
+    .turnin 5225 >>Turn in Target: Gahrron's Withering
+    .accept 5226 >>Accept Return to Chillwind Camp
 step
-	>>去地下室的底部
+	>>Go to the bottom of the crypt
     .goto Eastern Plaguelands,27.3,85.3
     .complete 6021,1 --Zaeldarr's Head (1)
 step << skip
     .goto Eastern Plaguelands,28.8,79.8
-	>>单击地面上的骨架。抢走徽章
+	>>Click the skeleton on the ground. Loot it for the Insignia
     .complete 6185,2 --SI:7 Insignia (Rutger) (1)
 step << skip
     .goto Eastern Plaguelands,28.8,74.9
-	>>单击地面上的骨架。抢走徽章
+	>>Click the skeleton on the ground. Loot it for the Insignia
     .complete 6185,4 --SI:7 Insignia (Turyen) (1)
 step << skip
     .goto Eastern Plaguelands,27.2,75.0
-	>>单击地面上的骨架。抢走徽章
+	>>Click the skeleton on the ground. Loot it for the Insignia
     .complete 6185,3 --SI:7 Insignia (Fredo) (1)
     .complete 6185,1 --The Blightcaller Uncovered (1)
 step
     .goto Eastern Plaguelands,36.5,90.9
-    .turnin 5142 >>交给小帕梅拉
-    .accept 5149 >>接受帕梅拉的玩偶
+    .turnin 5142 >>Turn in Little Pamela
+    .accept 5149 >>Accept Pamela's Doll
 step
 	#completewith next
     .goto Eastern Plaguelands,38.14,92.43,20,0
     .goto Eastern Plaguelands,39.61,92.60,20,0
     .goto Eastern Plaguelands,39.60,90.00
-    >>抢劫达罗郡建筑物周围的3个玩偶部件。每次尝试抢劫时，都会生成一个鬼魂
+    >>Loot the 3 doll parts around the buildings of Darrowshire. A ghost spawns each time you try looting one
 	.collect 12886,1
 	.collect 12887,1
 	.collect 12888,1
 step
     .goto Eastern Plaguelands,36.4,90.8
-    >>点击任意一个玩偶部件，将其组合在一起
+    >>Combine the doll parts together by clicking on any of them
     .complete 5149,1 --Pamela's Doll (1)
 step
     .goto Eastern Plaguelands,36.4,90.8
-    .turnin 5149 >>交上帕梅拉的玩偶
-    .accept 5152 >>接受玛琳阿姨
-    .accept 5241 >>接受卡林叔叔
+    .turnin 5149 >>Turn in Pamela's Doll
+    .accept 5152 >>Accept Auntie Marlene
+    .accept 5241 >>Accept in Uncle Carlin
 step
     #completewith next
-    .hs >> 炉灶到Southshore
+    .hs >> Hearth to Southshore
 step
     .goto Eastern Plaguelands,81.6,59.3
-    .fly Chillwind Camp >>飞往奇风营地
+    .fly Chillwind Camp >>Fly to Chillwind Camp
 step
     .goto Western Plaguelands,42.9,84.5
-    .turnin 5226 >>返回奇风营地
+    .turnin 5226 >>Turn in Return to Chillwind Camp
 step
     .goto Western Plaguelands,42.7,84.1
-    .turnin 5237 >>交任务完成！
+    .turnin 5237 >>Turn in Mission Accomplished!
 step
     .goto Western Plaguelands,42.7,83.8
-    .turnin 5537 >>交出骨骼碎片
+    .turnin 5537 >>Turn in Skeletal Fragments
 step << skip
     .goto Western Plaguelands,43.6,84.4
-    .turnin 6185 >>东部瘟疫爆发
-    .accept 6186 >>接受Blightcaller Cometh
+    .turnin 6185 >>Turn in The Eastern Plagues
+    .accept 6186 >>Accept The Blightcaller Cometh
 step
     .goto Western Plaguelands,49.1,78.5
-    .turnin 5152 >>交给玛琳阿姨
-    .accept 5153 >>接受一位奇怪的历史学家
+    .turnin 5152 >>Turn in Auntie Marlene
+    .accept 5153 >>Accept A Strange Historian
 step
     .goto Western Plaguelands,49.6,76.7
-	>>盗取房子外面的墓碑
+	>>Loot the gravestone right outside the house
     .complete 5153,1 --Joseph's Wedding Ring (1)
 step
     .goto Western Plaguelands,39.46,66.90
-    .turnin 4971 >>交上来只是时间问题
-    .accept 4972 >>接受倒计时时间
-    .turnin 5153 >>交一位奇怪的历史学家
-    .accept 5154 >>接受《达罗郡年鉴》
+    .turnin 4971 >>Turn in A Matter of Time
+    .accept 4972 >>Accept Counting Out Time
+    .turnin 5153 >>Turn in A Strange Historian
+    .accept 5154 >>Accept The Annals of Darrowshire
 step
     #completewith next
     .goto Western Plaguelands,40.4,66.5,0
-    >>在被烧毁的房子里寻找小锁盒。每间房子应该有一个
+    >>Look for small lockboxes inside the burned houses. There should be one per house
     .complete 4972,1 --Andorhal Watch (5)
 step
     .goto Western Plaguelands,43.4,69.6
-	>>在安多哈尔市政厅内抢劫书籍，直到找到正确的书籍
+	>>Loot books inside the Andorhal town hall until you get the correct one
     .complete 5154,1 --Collect Annals of Darrowshire (x1)
 	*The correct book's pages has a lighter shade of grey and sometimes the correct book won't spawn
 	*If you're unlucky, you have to keep looting bad tomes until a good one spawns
 step
     .goto Western Plaguelands,40.4,66.5
-    >>在被烧毁的房子里寻找小锁盒。每间房子应该有一个
+    >>Look for small lockboxes inside the burned houses. There should be one per house
     .complete 4972,1 --Andorhal Watch (5)
 step
     .goto Western Plaguelands,39.45,66.88
-    .turnin 4972 >>转入倒计时时间
-    .turnin 5154 >>上交《达罗郡年鉴》
-    .accept 5210 >>接受卡林兄弟
+    .turnin 4972 >>Turn in Counting Out Time
+    .turnin 5154 >>Turn in The Annals of Darrowshire
+    .accept 5210 >>Accept Brother Carlin
 step
     .goto Western Plaguelands,42.9,85.0
-    .fly Light's Hope Chapel >>飞向光明的希望教堂
+    .fly Light's Hope Chapel >>Fly to Light's Hope Chapel
 step
     .goto Eastern Plaguelands,81.51,59.81
-    >>与Carlin Redpath交谈
-    .turnin 5241 >>交给卡林叔叔
-    .turnin 5210 >>交给卡林兄弟
-    .accept 5181 >>接受达罗郡的恶棍
+    >>Speak to Carlin Redpath
+    .turnin 5241 >>Turn in Uncle Carlin
+    .turnin 5210 >>Turn in Brother Carlin
+    .accept 5181 >>Accept Villains of Darrowshire
 step
     .goto Eastern Plaguelands,79.7,63.7
-    .turnin 6021 >> 交给被放逐的扎尔达尔
+    .turnin 6021 >> Turn in Zaeldarr the Outcast
 step
     #completewith next
     .goto Eastern Plaguelands,51.41,49.70
-    .xp 60-8750 >> 研磨xp直到距离60级8750xp
+    .xp 60-8750 >> Grind xp until you're 8750xp away from level 60
 step
-    >>如果你还需要xp，那么做达罗郡的恶棍
+    >>Do Villains of Darrowshire if you still need xp
     .complete 5181,1 --Skull of Horgus (1)
     .goto Eastern Plaguelands,51.41,49.70
     .complete 5181,2 --Shattered Sword of Marduk (1)
     .goto Eastern Plaguelands,53.90,65.71
-    .turnin 5181 >>移交达罗郡的恶棍
+    .turnin 5181 >>Turn in Villains of Darrowshire
     .goto Eastern Plaguelands,81.52,59.87
 step
     .goto Eastern Plaguelands,81.64,59.28
-    .fly Stormwind >>飞到暴风城
+    .fly Stormwind >>Fly to Stormwind
 step << skip
     .goto StormwindClassic,77.9,18.2
-    .turnin 6186 >>交出《闪电客来了》
+    .turnin 6186 >>Turn in The Blightcaller Cometh
 ]])

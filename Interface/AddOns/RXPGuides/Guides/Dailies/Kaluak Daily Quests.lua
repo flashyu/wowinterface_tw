@@ -1,57 +1,57 @@
 RXPGuides.RegisterGuide([[
 #version 1
-#group +RestedXP 诺森德每日任务
-#subgroup 阵营每日任务
+#group +RestedXP Northrend Daily Quests
+#subgroup Faction Daily Quests
 #wotlk
-#name Kalu'ak每日任务
+#name The Kalu'ak Daily Quests
 
 step
-	>>前往龙枯草的Moa'ki港。与毛伊交谈
-    .daily 11960 >>接受未来规划
-    .goto 龙枯草,48.25,74.35
+	>>Travel to Moa'ki Harbor in Dragonblight. Talk to Mau'i
+    .daily 11960 >>Accept Planning for the Future
+    .goto Dragonblight,48.25,74.35
 step
-    .goto 龙枯草,47.4,64.3,40,0
-    .goto 龙枯草,47.2,61.5,40,0
-    .goto 龙枯草,45.2,61.6
-	>>右击小屋附近的小沃尔瓦小狗
+    .goto Dragonblight,47.4,64.3,40,0
+    .goto Dragonblight,47.2,61.5,40,0
+    .goto Dragonblight,45.2,61.6
+	>>Right click the small Wolvar Pups located near the huts
     .complete 11960,1 --Snowfall Glade Pup (12)
 	.isOnQuest 11960
 step
-	>>返回莫阿基港。与毛伊交谈
-    .turnin 11960 >>为未来制定计划
-    .goto 龙枯草,48.25,74.35
+	>>Return to Moa'ki Harbor. Talk to Mau'i
+    .turnin 11960 >>Turn in Planning for the Future
+    .goto Dragonblight,48.25,74.35
 	.isQuestComplete 11960
 step
-	>>前往Borean苔原的Kaskala。与尤泰克交谈
-    .daily 11945 >>接受做最坏的准备
+	>>Travel to Kaskala in Borean Tundra. Talk to Utaik
+    .daily 11945 >>Accept Preparing for the Worst
     .goto BoreanTundra,63.95,45.72
 step
     .goto BoreanTundra,66.2,45.9,60,0
     .goto BoreanTundra,63.7,52.2
-	>>抢劫村庄周围的小篮子
+	>>Loot the small baskets all around the village
 	.complete 11945,1 --Kaskala Supplies (8)
     .isOnQuest 11945
 step
-	>>返回Utaik
-    .turnin 11945 >>上车做最坏的准备
+	>>Return to Utaik
+    .turnin 11945 >>Turn in Preparing for the Worst
     .goto BoreanTundra,63.95,45.72
     .isQuestComplete 11945
 step
-	>>前往嚎叫峡湾的卡马加。与Anunia交谈
-    .daily 11472 >>接受通往他内心的路。。。
+	>>Travel to Kamagua in Howling Fjord. Talk to Anunia
+    .daily 11472 >>Accept The Way to His Heart...
 	.goto HowlingFjord,24.59,58.87
 step
     .goto HowlingFjord,31.2,74.8,30,0
     .goto HowlingFjord,30.96,71.85
-	.use 40946 >>在该地区的美味礁鱼群上，用你袋子里的Anuniaq网钓大约7-8条美味礁鱼。你应该在大约2次发网中看到这个
-	.use 34127 >>将美味礁鱼以最大射程投掷到礁牛，它现在会到达你站的地方
-	>>把它带到海岸线另一边的一头礁牛上面
-	>>如果鱼用完了，再拿7-8块，再试一次
+	.use 40946 >>Use Anuniaq's Net in your bags on Schools of Tasty Reef Fish in the area to catch roughly 7-8 Tasty Reef Fish. You should have this in about 2 casts of the net
+	.use 34127 >>Throw the Tasty Reef fish at max range at a Reef Bull, it'll now go to where you stand
+	>>Lead it on top of a Reef Cow on the other side of the coastline
+	>>If you run out of fish get 7-8 more and try again
     .complete 11472,1 --Reef Bull led to a Reef Cow (1)
 	.isOnQuest 11472
 step
     .goto HowlingFjord,24.59,58.87
-	>>与Anuniaq交谈
-    .turnin 11472 >>在通往心灵的路上。。。
+	>>Talk to Anuniaq
+    .turnin 11472 >>Turn in The Way to His Heart...
 	.isQuestComplete 11472
 ]])

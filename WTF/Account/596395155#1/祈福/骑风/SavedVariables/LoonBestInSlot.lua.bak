@@ -1,6 +1,6 @@
 
 LBISSettings = {
-	["SelectedPhase"] = "All",
+	["SelectedPhase"] = "BIS",
 	["Tooltip"] = {
 		["BloodDeath Knight"] = true,
 		["BeastMasteryHunter"] = true,
@@ -38,7 +38,7 @@ LBISSettings = {
 	["ShowTooltip"] = true,
 	["SelectedSourceType"] = "All",
 	["SelectedSlot"] = "All",
-	["SelectedSpec"] = "",
+	["SelectedSpec"] = "平衡 德鲁伊",
 	["minimap"] = {
 		["minimapPos"] = 180,
 		["hide"] = false,

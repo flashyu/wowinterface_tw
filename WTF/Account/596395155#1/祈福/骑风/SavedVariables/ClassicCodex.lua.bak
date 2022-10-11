@@ -10,22 +10,22 @@ CodexConfig = {
 	["minimumDropChance"] = 2,
 	["showLowLevel"] = false,
 	["_tom_waypoint"] = {
-		115, -- [1]
-		0.8724, -- [2]
-		0.574, -- [3]
+		117, -- [1]
+		0.2459, -- [2]
+		0.5886, -- [3]
 		["arrivaldistance"] = 15,
 		["callbacks"] = {
 			["distance"] = {
 			},
-			["world"] = {
-			},
 			["minimap"] = {
+			},
+			["world"] = {
 			},
 		},
 		["persistent"] = true,
 		["minimap"] = true,
 		["cleardistance"] = 10,
-		["title"] = "蒂尔达·达拉森",
+		["title"] = "阿努尼克",
 		["from"] = "?",
 		["crazy"] = true,
 		["world"] = true,

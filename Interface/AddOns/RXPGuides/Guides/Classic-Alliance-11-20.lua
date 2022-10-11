@@ -1,88 +1,88 @@
 RXPGuides.RegisterGuide([[
 #classic
 << Alliance Hunter/NightElf
-#name 11-16 黑海岸
+#name 11-16 Darkshore
 #version 1
-#group RestedXP 联盟 1-20
-#next 16-19 黑海岸
+#group RestedXP Alliance 1-20
+#next 16-19 Darkshore
 
 step <<  NightElf
     .goto Teldrassil,56.25,92.44
-    .turnin 6344 >> 转入Nessa Shadowsong
-    .accept 6341 >> 接受Teldrassil的赏金
+    .turnin 6344 >> Turn in Nessa Shadowsong
+    .accept 6341 >> Accept The Bounty of Teldrassil
 step <<  NightElf
     .goto Teldrassil,58.39,94.01
-    .turnin 6341 >> 交出Teldrassil的赏金
-    .accept 6342 >> 接受飞往奥伯丁的航班
+    .turnin 6341 >> Turn in The Bounty of Teldrassil
+    .accept 6342 >> Accept Flight to Auberdine
 step <<  NightElf
      #completewith next
-    .fly Auberdine >> 飞到黑海岸
+    .fly Auberdine >> Fly to Darkshore
 step <<  !NightElf
     .goto Felwood,19.10,20.63
-    .fp Auberdine >> 获取奥伯丁飞行路线
+    .fp Auberdine >> Get the Auberdine flight path
 step
     .goto Felwood,19.10,20.63
-    .accept 3524 >> 接受冲上岸
+    .accept 3524 >> Accept Washed Ashore
 step <<  NightElf
     .goto Felwood,19.27,19.14
-    .turnin 6342 >> 飞往奥伯丁
-    >>跳过跟进
+    .turnin 6342 >> Turn in Flight to Auberdine
+    >>Skip the follow up
 step
     .goto Darkshore,37.0,44.0
-    .home >> 将您的炉石设置为Auberdine
+    .home >> Set your Hearthstone to Auberdine
 step
     .goto Felwood,19.51,18.97
-    >>上楼去
-    .accept 983 >> 接受Buzzbox 827
+    >>Head upstairs
+    .accept 983 >> Accept Buzzbox 827
 step
-    .accept 2118 >> 接受灾区
+    .accept 2118 >> Accept Plagued Lands
     .goto Felwood,21.63,18.15
 step
     .goto Felwood,22.24,18.22
-    .accept 984 >> 接受威胁有多大？
+    .accept 984 >> Accept How Big a Threat?
 step <<  Dwarf Hunter
     #sticky
-    .tame 2163 >> 驯服一只蓟熊，他们可以打晕你，让你的宠物攻击他们，当他们对你的宠物使用眩晕时，抛弃你现在的宠物并开始驯服它
+    .tame 2163 >> Tame a Thistle Bear, they can stun you, send your pet on them and when they use their stun on your pet, abandon your current pet and start taming it
 step
     #label crab1
     #sticky
-     >> 沿着海岸杀死螃蟹。
+     >> Kill crabs along the coast.
     .complete 983,1
 step
     .goto Felwood,18.81,26.69
-     >> 掠夺海洋生物遗骸
+     >> Loot the sea creature remains
     .complete 3524,1
 step << Druid
     #completewith end
-    >>将草药等级提升至15，并收集5个土生根供稍后任务使用
+    >>Level herbalism to 15 and collect 5 earthroot for a quest later
     .collect 2449,5
 step
     .goto Felwood,22.39,29.45
-     >> 前往弗尔博格营地
+     >> Head towards the furbolg camp
      .complete 984,1
 step
-    >> 找到一只狂犬病蓟熊。Aggro一号，在你的包里使用塔纳瑞恩的希望(紫色球体)
+    >> Find a Rabid Thistle Bear. Aggro one and use Tharnariun's Hope in your bags (purple orb)
     .goto Darkshore,38.47,57.92
     .complete 2118,1
     .unitscan Rabid Thistle Bear
 step
-     .xp 12-1500 >> 研磨怪物直到你离12级1500 xp
+     .xp 12-1500 >> Grind mobs until you are 1500xp off level 12
 step
     #requires crab1
     .goto Felwood,19.13,21.39
-    >> 单击Buzzbox
-    .turnin 983 >> 打开Buzzbox 827
+    >> Click the Buzzbox
+    .turnin 983 >> Turn in Buzzbox 827
 step
 	#era/som
 	.goto Felwood,19.13,21.39
-    .accept 1001 >> 接受Buzzbox 411
+    .accept 1001 >> Accept Buzzbox 411
 step
     .goto Felwood,19.10,20.63
-    .turnin 3524 >> 转入冲上岸
-    .accept 4681 >> 接受冲上岸
+    .turnin 3524 >> Turn in Washed Ashore
+    .accept 4681 >> Accept Washed Ashore
 step
     .goto Felwood,18.10,18.48
-    .accept 963 >> 接受永恒的爱
+    .accept 963 >> Accept For Love Eternal
 step
 	#era/som
     #sticky
@@ -90,48 +90,48 @@ step
     .goto Darkshore,33.59,40.36,0
     .goto Darkshore,30.94,45.79,0
     .goto Darkshore,33.03,48.13,0
-     >> 开始研究Darkshore Threshers。
+     >> Start working on Darkshore Threshers.
     .complete 1001,1
 step
     #completewith next
-    .goto Darkshore,33.70,42.45,60 >> 跑到码头，然后在十字路口跳入水中
+    .goto Darkshore,33.70,42.45,60 >> Run up to the docks then jump in the water at the intersection
 step
     .goto Felwood,13.63,21.44
-    >>点击海龟遗骸
+    >>Click on the sea turtle remains
     .complete 4681,1
 step
     #label washed1
     .goto Felwood,19.10,20.63
-    .turnin 4681 >> 转入冲上岸
+    .turnin 4681 >> Turn in Washed Ashore
 step
     .goto Felwood,19.90,18.40
-    .accept 947 >> 接受洞穴蘑菇
+    .accept 947 >> Accept Cave Mushrooms
 step
     .goto Felwood,20.34,18.12
-    .accept 4811 >> 接受红水晶
+    .accept 4811 >> Accept The Red Crystal
 step
     .goto Felwood,21.63,18.15
-    .turnin 2118 >> 交出瘟疫土地
-    .accept 2138 >> 接受感染者的清洁
+    .turnin 2118 >> Turn in Plagued Lands
+    .accept 2138 >> Accept Cleansing of the Infected
 step
     .goto Felwood,22.24,18.22
-    .turnin 984 >> 交出威胁有多大？
-    .accept 985 >> 接受威胁有多大？
-    .accept 4761 >> 接受Thundris Windweaver
+    .turnin 984 >> Turn in How Big a Threat?
+    .accept 985 >> Accept How Big a Threat?
+    .accept 4761 >> Accept Thundris Windweaver
 step <<  Dwarf/Gnome/Human
     .goto Felwood,20.80,15.58
-    .accept 982 >> 接受深海，浩瀚大海
+    .accept 982 >> Accept Deep Ocean, Vast Sea
 step
     #completewith next
     .goto Felwood,19.98,14.40
-    .vendor >> 如果需要，购买6个老虎袋
-    >>用弹药填充你的箭袋/弹药袋。你还有很长的磨合期 << Hunter
+    .vendor >> Buy 6 slot bags if needed
+    >>Fill your quiver/ammo pouch with ammo. You have a long grinding session ahead << Hunter
 step
     .goto Felwood,19.98,14.40
-    .turnin 4761 >> 交出桑德里斯·温德韦弗
-    .accept 4762 >> 接受悬崖泉河
-    .accept 958 >> 接受上流社会的工具
-    .accept 954 >> 接受Bashal'Aran
+    .turnin 4761 >> Turn in Thundris Windweaver
+    .accept 4762 >> Accept The Cliffspring River
+    .accept 958 >> Accept Tools of the Highborne
+    .accept 954 >> Accept Bashal'Aran
 step
 	#era/som
     #sticky
@@ -143,168 +143,168 @@ step
     .goto Darkshore,36.70,30.00,0
     .goto Darkshore,38.73,28.25,0
     .goto Darkshore,40.17,28.76,0
-     >> 杀死海里的黑暗海岸脱粒鸟
+     >> Kill darkshore threshers in the sea
     .complete 1001,1
 step << !NightElf
     .goto Felwood,20.94,1.49
-    >> 从船体上的洞进入第一艘船，在船底的水下洗劫箱子
-    >>小心，因为这个任务可能很困难
+    >> Enter the 1st ship by the hole on the hull, loot the chest underwater at the bottom floor of the ship
+    >>Be careful as this quest can be difficult
     .complete 982,1
 step << !NightElf
     .goto Darkshore,39.63,27.45
-    >> 通过船体上的孔进入第二艘飞船，在你发现第一个箱子的确切位置抢劫位于飞船上的箱子
-    >>小心，因为这个任务可能很困难
+    >> Enter the 2nd ship by the hole on the hull, loot the chest located in the ship at the exact place where you found the first chest
+    >>Be careful as this quest can be difficult
     .complete 982,2
 step
 	#era/som
     #requires threshers
     .goto Felwood,25.19,1.29
-    >>手伸进脱粒机的眼睛
-    .turnin 1001 >> 打开Buzzbox 411
-    .accept 1002 >> 接受Buzzbox 323
+    >>Hand in the thresher eyes
+    .turnin 1001 >> Turn in Buzzbox 411
+    .accept 1002 >> Accept Buzzbox 323
 step
     .goto Felwood,25.15,4.61
-    .accept 4723 >> 接受海滩生物
+    .accept 4723 >> Accept Beached Sea Creature
 step
     #completewith mbox
-     >> 杀死漫游者。掠夺他们以获取“漫游者肉”
+     >> Kill Striders. Loot them for Strider Meat
     .collect 5469,5,2178,1
 step
 	#era/som
     #sticky
     #completewith mbox
-     >> 杀死任何类型的登月者
+     >> Kill any type of Moonstalker
     .complete 1002,1
     .unitscan Moonstalker,Moonstalker Runt
 step
     .goto Felwood,27.70,10.03
-    .turnin 954 >> 转入Bashal’Aran
-    .accept 955 >> 接受Bashal'Aran
+    .turnin 954 >> Turn in Bashal'Aran
+    .accept 955 >> Accept Bashal'Aran
 step
     .goto Felwood,29.13,12.34
-     >> 杀死格雷金斯
+     >> Kill Grellkins
     .complete 955,1
 step
     .goto Felwood,27.70,10.03
-    .turnin 955 >> 转入Bashal’Aran
-    .accept 956 >> 接受Bashal'Aran
+    .turnin 955 >> Turn in Bashal'Aran
+    .accept 956 >> Accept Bashal'Aran
 step
     .goto Felwood,29.60,12.52
-     >> 杀死萨提尔
+     >> Kill satyrs
     .complete 956,1
 step
     .goto Felwood,27.70,10.03
-    .turnin 956 >> 转入Bashal’Aran
-    .accept 957 >> 接受Bashal'Aran
+    .turnin 956 >> Turn in Bashal'Aran
+    .accept 957 >> Accept Bashal'Aran
 step
-    .xp 13 >> 升级到13级
+    .xp 13 >> Grind to level 13
 step
     #completewith darn1 << Druid
      #completewith mbox << !Druid
-     + 开始收集9个小鸡蛋，稍后进行水平烹饪
-    >>你需要10点烹饪才能接受任务。如果你已经有10分了，跳过这一步
+     + Start collecting 9 small eggs for leveling cooking later
+    >>You will need 10 points cooking to accept a quest later. If you already have 10 points, skip this step
 step
     .goto Felwood,31.29,24.14
-     >>跑到山上的红水晶
+     >>Run up to The Red Crystal in the mountains
      .complete 4811,1
 step << Druid
     .goto Darkshore,43.5,45.9
-    >>使用洞穴内的塞纳里奥月光石，击败卢纳克劳，并在之后与他的灵魂对话
+    >>Use the Cenarion Moondust inside the cave, defeat Lunaclaw and speak with his spirit after
     .complete 6001,1 --Defeat Lunaclaw (x1)
 step << !Druid
 	#era/som
      #completewith next
-    .hs >> 奥伯丁之炉
+    .hs >> Hearth to Auberdine
 step
     .goto Felwood,20.34,18.12
-    .turnin 4811 >> 交出红色水晶
-    .accept 4812 >> 接受为瀑布
+    .turnin 4811 >> Turn in The Red Crystal
+    .accept 4812 >> Accept As Water Cascades
 step
     .goto Darkshore,37.78,44.06
-     >> 给月球井的空水管注满水
+     >> Fill the Empty Water Tube at the moonwell
     .complete 4812,1
 step <<  Hunter/Druid
     .goto Felwood,31.29,24.14
-     >> 点击红色水晶
-    .turnin 4812 >> 随着瀑布转向
-    .accept 4813 >> 接受其中的片段
+     >> Click on the red crystal
+    .turnin 4812 >> Turn in As Water Cascades
+    .accept 4813 >> Accept The Fragments Within
 step <<  Hunter/Druid
     .goto Felwood,20.34,18.12
-    .turnin 4813 >> 交出其中的碎片
+    .turnin 4813 >> Turn in The Fragments Within
 step << Druid
     #label darn1
     .goto Felwood,19.27,19.14
-    .accept 6343 >> 接受返回Nessa
+    .accept 6343 >> Accept Return to Nessa
 step << Druid
     #era
     .goto Felwood,22.39,29.45
-    .xp 14-1890 >> 研磨直到距离14级1890xp
+    .xp 14-1890 >> Grind until you are 1890xp away from level 14
 step << Druid
     #som
     .goto Felwood,22.39,29.45
-    .xp 14-2645 >> 研磨直到距离14级2645xp
+    .xp 14-2645 >> Grind until you are 2645xp away from level 14
 step << Druid
-    .fly Teldrassil>>飞往Teldrassil
+    .fly Teldrassil>>Fly to Teldrassil
 step << Druid
     .goto Teldrassil,56.25,92.44
-     >> 返回Nessa
-    .turnin 6343 >> 返回Nessa
+     >> Return to Nessa
+    .turnin 6343 >> Turn in Return to Nessa
 step << Druid
     .goto Darnassus,35.4,8.4
-    .turnin 6001 >> 全身心投入
-    .accept 6121 >> 接受新的教训
-    .trainer >> 训练你的职业咒语
+    .turnin 6001 >> Turn in Body and Heart
+    .accept 6121 >> Accept Lessons Anew
+    .trainer >> Train your class spells
 step << Druid
     .goto Moonglade,56.1,30.7
-    >>传送至Moonglade
-    .turnin 6121 >> 新上的课
-    .accept 6122 >> 接受主要来源
+    >>Teleport to Moonglade
+    .turnin 6121 >> Turn in Lessons Anew
+    .accept 6122 >> Accept The Principal Source
 step << Druid
-    .hs >> 炉灶到Darkshore
+    .hs >> Hearth to Darkshore
 
 
 step << !Hunter
-     >> 杀死分叉
+     >> Kill furbolgs
     .goto Felwood,22.39,29.45
     .complete 985,1
     .complete 985,2
 step
     .goto Darkshore,40.30,59.70
-    .accept 953 >> 接受Ameth’Aran的堕落
+    .accept 953 >> Accept The Fall of Ameth'Aran
 step
     .goto Felwood,19.64,39.52
-    .accept 4722 >> 接受海滩海龟
+    .accept 4722 >> Accept Beached Sea Turtle
 step
     #sticky
     #label anaya
-     >> 杀死Anaya Dawnrunner，她在Ameth’Aran巡逻
+     >> Kill Anaya Dawnrunner, she patrols Ameth'Aran
     .complete 963,1
     .unitscan ANAYA DAWNRUNNER
 step
     #label ghosts
     #sticky
     .goto Darkshore,42.66,61.90,0
-     >> 杀死鬼魂
+     >> Kill ghosts
     .complete 958,1
 step
     .goto Felwood,25.98,40.62
-     >> 点击地面上的平板电脑
+     >> Click on the tablet on the ground
     .complete 953,2
 step
     .goto Felwood,25.66,39.11
-     >> 点击露台上的火炬
+     >> Click on the torch at the gazebo
     .complete 957,1
 step
     .goto Felwood,26.71,35.53
-     >> 点击地面上的平板电脑
+     >> Click on the tablet on the ground
     .complete 953,1
 step
     #requires anaya
     .goto Felwood,23.29,36.73
-    .turnin 953 >> 《阿米思·阿兰的堕落》(The Fall of Ameth’Aran)
+    .turnin 953 >> Turn in The Fall of Ameth'Aran
 step << Hunter
     #requires ghosts
-     >> 杀死分叉
+     >> Kill furbolgs
     .goto Felwood,22.39,29.45
     .complete 985,1
     .complete 985,2
@@ -313,297 +313,297 @@ step << !Hunter
     #label xp15
     #requires ghosts
     .goto Felwood,22.39,29.45
-    .xp 15 >> 升级到15级
+    .xp 15 >> Grind to level 15
 step <<  Hunter
     #label xp15
     #era
     .goto Felwood,22.39,29.45
-    .xp 15.75 >> 升级到15+75%
+    .xp 15.75 >> Grind to level 15 + 75%
 step
     #label xp15
     #som
     .goto Felwood,22.39,29.45
-    .xp 15-3245 >> 研磨，直到距离15级3245xp
+    .xp 15-3245 >> Grind until you are 3245xp away from level 15
 step <<  !Hunter !Druid
     .goto Felwood,31.29,24.14
-     >> 点击红色水晶
-    .turnin 4812 >> 随着瀑布转向
-    .accept 4813 >> 接受其中的片段
+     >> Click on the red crystal
+    .turnin 4812 >> Turn in As Water Cascades
+    .accept 4813 >> Accept The Fragments Within
 step
     .goto Felwood,22.24,18.22
-    .turnin 985 >> 交出威胁有多大？
-    .accept 986 >> 接受丢失的主人
+    .turnin 985 >> Turn in How Big a Threat?
+    .accept 986 >> Accept A Lost Master
 step
     .goto Felwood,21.86,18.30
-     >> 跑上楼去
-    .accept 965 >> 接受Althalaxx塔
+     >> Run upstairs
+    .accept 965 >> Accept The Tower of Althalaxx
 step <<  !Druid !Hunter
     .goto Darkshore,37.70,43.39
-    .turnin 4813 >> 交出其中的碎片
+    .turnin 4813 >> Turn in The Fragments Within
 step << Druid
     .goto Felwood,19.27,19.14
-    .accept 6343 >> 接受返回Nessa
+    .accept 6343 >> Accept Return to Nessa
 step
     .goto Felwood,18.10,18.48
-    .turnin 963 >> 为了永恒的爱而投入
+    .turnin 963 >> Turn in For Love Eternal
 step << !Hunter
     .goto Felwood,19.10,20.63
-    .turnin 4722 >> 上缴海滩海龟
+    .turnin 4722 >> Turn in Beached Sea Turtle
 step
     .goto Felwood,18.50,19.87
-    .accept 1138 >> 接受大海的果实
-    >>如果你还未达到15级，请在飞行大师旁边提交海滩海龟任务 << Hunter
+    .accept 1138 >> Accept Fruit of the Sea
+    >>Turn in the Beached sea turtle quest next to the flight master if you're not yet level 15 << Hunter
 ---?
 step << NightElf
     .goto Felwood,20.80,15.58
-    .accept 982 >> 接受深海，浩瀚大海
+    .accept 982 >> Accept Deep Ocean, Vast Sea
 step << !NightElf
     .goto Felwood,20.80,15.58
-    .turnin 982 >> 转向深海，浩瀚大海
+    .turnin 982 >> Turn in Deep Ocean, Vast Sea
 step
     #completewith next
     .goto Felwood,20.80,15.58
-    .vendor 6301 >> 如果你在烹饪方面没有10分的话，买温和的香料，煮香草烤鸡蛋
+    .vendor 6301 >> Buy Mild Spice and cook herb baked eggs if you don't have 10 points in cooking
 step <<  NightElf
     .goto Felwood,19.98,14.40
-    .turnin 958 >> 上流社会的工具
+    .turnin 958 >> Turn in Tools of the Highborne
 step << !Druid !Hunter
     .goto Felwood,31.29,24.14
-     >> 点击红色水晶
-    .turnin 4812 >> 随着瀑布转向
-    .accept 4813 >> 接受其中的片段
+     >> Click on the red crystal
+    .turnin 4812 >> Turn in As Water Cascades
+    .accept 4813 >> Accept The Fragments Within
 step << !Druid !Hunter
     .goto Felwood,27.70,10.03
-    .turnin 957 >> 转入Bashal’Aran
+    .turnin 957 >> Turn in Bashal'Aran
 step << NightElf
     .goto Felwood,20.94,1.49
-    >> 从船体上的洞进入第一艘船，在船底的水下洗劫箱子
-    >>小心，因为这个任务可能很困难
+    >> Enter the 1st ship by the hole on the hull, loot the chest underwater at the bottom floor of the ship
+    >>Be careful as this quest can be difficult
     .complete 982,1
 step << NightElf
     .goto Darkshore,39.63,27.45
-    >> 通过船体上的孔进入第二艘飞船，在你发现第一个箱子的确切位置抢劫位于飞船上的箱子
-    >>小心，因为这个任务可能很困难
+    >> Enter the 2nd ship by the hole on the hull, loot the chest located in the ship at the exact place where you found the first chest
+    >>Be careful as this quest can be difficult
     .complete 982,2
 step
     #sticky
     #completewith end1
     #label bears
-     >> 在穿越黑暗之城时杀死熊
+     >> Kill bears as you quest through Darkshore
     .complete 2138,1
 step
     .goto Darkshore,44.18,20.60
-    .accept 4725 >> 接受海滩海龟
+    .accept 4725 >> Accept Beached Sea Turtle
 step
     #sticky
     #completewith mbox
-     >> 杀死沿海的珊瑚虫，不要特意完成这个任务
+     >> Kill Reef Crawlers along the coast, don't go out of your way to complete this quest
     .complete 1138,1
 step
     .goto Darkshore,50.81,25.50
-     >> 使用瀑布底部的空采样管
+     >> Use the Empty Sampling Tube at the base of the waterfall
     .complete 4762,1
 step
 	#era/som
     #label mbox
-    .goto 冬泉谷,1.42,26.89
-     >> 如果你没有足够的潜月者毒牙，跳过这一步
-    .turnin 1002 >> 打开Buzzbox 323
-    .accept 1003 >> 接受Buzzbox 525
+    .goto Winterspring,1.42,26.89
+     >> Skip this step if you don't have enough moonstalker fangs
+    .turnin 1002 >> Turn in Buzzbox 323
+    .accept 1003 >> Accept Buzzbox 525
 step << NightElf Hunter/Druid
-    .goto 冬泉谷,4.82,27.18
-    .turnin 965 >> 转入Althalaxx塔
-    .accept 966 >> 接受Althalaxx塔
+    .goto Winterspring,4.82,27.18
+    .turnin 965 >> Turn in The Tower of Althalaxx
+    .accept 966 >> Accept The Tower of Althalaxx
 step << NightElf Hunter/Druid
-    .goto 冬泉谷,6.06,28.81
-     >> 杀死信徒
+    .goto Winterspring,6.06,28.81
+     >> Kill cultists
     .complete 966,1
 step << NightElf Hunter/Druid
-    .goto 冬泉谷,4.82,27.18
-    .turnin 966 >> 转入Althalaxx塔
-    .accept 967 >> 接受Althalaxx塔
+    .goto Winterspring,4.82,27.18
+    .turnin 966 >> Turn in The Tower of Althalaxx
+    .accept 967 >> Accept The Tower of Althalaxx
 step
     .goto Darkshore,50.72,30.35
-    >> 完成获得5块漫游者肉
+    >> Finish getting 5 Strider Meat
     .collect 5469,5,2178,1
 step
     #completewith next
-    .goto 冬泉谷,5.49,36.64,35 >> 前往瀑布上方的洞穴
+    .goto Winterspring,5.49,36.64,35 >> Head to the cave above the waterfall
 step << Druid
-    >>在洞口的水中使用悬崖泉瀑布采样器
+    >>Use your Cliffspring Falls Sampler in the water at the mouth of the cave
     .goto Darkshore,54.80,33.16
     .complete 6122,1 --Filled Cliffspring Falls Sampler (1)
 step
     #label end1
     .goto Darkshore,55.66,34.89
-     >> 停留在洞穴的上部。如果顶部末端没有死亡帽，则从下面放下并取一个
-     >> 当你洗劫死亡帽时，洞口的第一个蓝色的应该已经复活了
+     >> Stay on the upper part of the cave. If theres no Death Cap at the end of the top side, then drop down and get one from below
+     >> The first blue one at the mouth of the cave should've respawned by the time you've looted the Death Cap
     .complete 947,1 --Scaber Stalk (5)
     .complete 947,2 --Death Cap (1)
 step <<  NightElf !Druid
     #softcore
     #completewith next
-     .deathskip >> 研磨直到你的高速冷却时间<6分钟，然后死亡扭曲到奥伯丁
+     .deathskip >> Grind until your HS cooldown is <6 minutes then death warp to Auberdine
 step <<  NightElf !Druid
     #hardcore
     #completewith next
-     +研磨直到你的HS冷却时间<9分钟，然后跑回奥伯丁
+     +Grind until your HS cooldown is <9 minutes then run back to Auberdine
 step <<  !NightElf
      #completewith next
-    .hs >> 赫斯回到奥伯丁
+    .hs >> Hearth back to Auberdine
 step <<  !NightElf
     .goto Felwood,20.04,16.35
-    .accept 729 >> 接受心不在焉的探矿者
+    .accept 729 >> Accept The Absent Minded Prospector
 step <<  !NightElf
     .goto Felwood,19.98,14.40
-    .turnin 958 >> 上流社会的工具
+    .turnin 958 >> Turn in Tools of the Highborne
 step
     .goto Darkshore,37.70,40.70
-    .accept 2178 >> 接受轻松漫游生活
-    .turnin 2178 >> 轻松漫游生活
-    >>这个任务需要烹饪10分
+    .accept 2178 >> Accept Easy Strider Living
+    .turnin 2178 >> Turn in Easy Strider Living
+    >>This quest requires 10 points in cooking
 step
     .goto Felwood,19.98,14.40
-    .turnin 4762 >> 转入悬崖泉河
-    .accept 4763 >> 接受Blackwood Corrupted
+    .turnin 4762 >> Turn in The Cliffspring River
+    .accept 4763 >> Accept The Blackwood Corrupted
 step << Druid
     .goto Darkshore,37.7,40.7
-    .turnin 6122 >> 交出主要来源
-    .accept 6123 >> 接受收集治疗
+    .turnin 6122 >> Turn in The Principal Source
+    .accept 6123 >> Accept Gathering the Cure
 step
     .goto Felwood,20.80,15.58
-    .turnin 982 >> 转向深海，浩瀚大海
+    .turnin 982 >> Turn in Deep Ocean, Vast Sea
 step
     .goto Felwood,20.34,18.12
-    .turnin 4813 >> 交出其中的碎片
+    .turnin 4813 >> Turn in The Fragments Within
 step
     .goto Felwood,19.90,18.40
-    .turnin 947 >> 转入洞穴蘑菇
-    .accept 948 >> 接受Onu
+    .turnin 947 >> Turn in Cave Mushrooms
+    .accept 948 >> Accept Onu
 step
     .goto Felwood,19.78,19.07
-     >> 点击酒店外的通缉海报
-    .accept 4740 >> 接受通缉令：Murkdeep！
+     >> Click on the wanted poster outside the inn
+    .accept 4740 >> Accept WANTED: Murkdeep!
 step
     #sticky
     #label bowl
     .goto Darkshore,37.78,44.06
-     >> 在月光井装满空碗
+     >> Fill the Empty Bowl at the moonwell
     .collect 12347,1,4763,1
 step <<  NightElf !Druid
     .goto Felwood,19.27,19.14
-    .accept 6343 >> 接受返回Nessa
+    .accept 6343 >> Accept Return to Nessa
 step
     #label end
     #requires bowl
     .goto Felwood,19.10,20.63
-    .turnin 4723 >> 上缴海滩生物
-    .turnin 4725 >> 上缴海滩海龟
-    .turnin 4722 >> 上缴海滩海龟 << Hunter
+    .turnin 4723 >> Turn in Beached Sea Creature
+    .turnin 4725 >> Turn in Beached Sea Turtle
+    .turnin 4722 >> Turn in Beached Sea Turtle << Hunter
 step <<  Druid
     .goto Felwood,22.39,29.45
     .xp 16
 step << Druid
-    .fly Teldrassil>>飞往Teldrassil
+    .fly Teldrassil>>Fly to Teldrassil
 step << Druid
     .goto Darnassus,35.4,8.4
-    .accept 26 >> 接受教训以学习
-    .trainer >> 训练你的职业咒语
+    .accept 26 >> Accept A Lesson to Learn
+    .trainer >> Train your class spells
 step << Druid
     .goto Darnassus,66.0,60.6
-    >>购买15级员工升级，如果您没有足够的钱购买，请跳过此步骤(56秒)
+    >>Buy the level 15 staff upgrade, skip this step if you don't have enough money to buy it (56s)
     .collect 2030,1
     .money <0.56
 step << Druid
     .goto Teldrassil,23.70,64.51
-    .accept 730 >> 接受黑暗中的麻烦？
+    .accept 730 >> Accept Trouble In Darkshore?
 step << Druid
     .goto Moonglade,56.1,30.7
-    >>传送至Moonglade
-    .turnin 26 >> 交一堂课来学习
-    .accept 29 >> 接受湖的审判
+    >>Teleport to Moonglade
+    .turnin 26 >> Turn in A Lesson to Learn
+    .accept 29 >> Accept Trial of the Lake
 step << Druid
     .goto Moonglade,52.6,51.6
-    >>潜入湖中，寻找Shrine Bauble，它看起来像一个红色的小罐子
+    >>Dive into the lake and look for a Shrine Bauble, it looks like a small red jar
     .complete 29,1 --Complete the Trial of the Lake.
 step << Druid
     .goto Moonglade,36.5,40.1
-    .turnin 29 >> 《湖的试航》(Turn in Trial of the Lake)
-    .accept 272 >> 接受海狮的审判
+    .turnin 29 >> Turn in Trial of the Lake
+    .accept 272 >> Accept Trial of the Sea Lion
 step << Druid
-    .hs >> 炉灶到Darkshore
+    .hs >> Hearth to Darkshore
 ]])
 
 RXPGuides.RegisterGuide([[
 #classic
 #era/som
 << Alliance
-#name 13-15 西部荒野
+#name 13-15 Westfall
 #version 1
-#group RestedXP 联盟 1-20
+#group RestedXP Alliance 1-20
 #defaultfor !NightElf !Hunter
-#next 14-19 黑海岸
+#next 14-19 Darkshore
 
 step
     #sticky
-    .zone Westfall >> 前往Westfall
+    .zone Westfall >> Head to Westfall
 step
     .goto Westfall,59.95,19.35
-    .accept 64 >> 接受被遗忘的传家宝
+    .accept 64 >> Accept The Forgotten Heirloom
 step
     .goto Westfall,59.91,19.41
-    .accept 36 >> 接受Westfall Stew
-    .accept 151 >> 接受可怜的老布兰奇
+    .accept 36 >> Accept Westfall Stew
+    .accept 151 >> Accept Poor Old Blanchy
 step
     .goto Westfall,56.10,31.30
-    .accept 9 >> 接受杀戮场
+    .accept 9 >> Accept The Killing Fields
 step
     .goto Westfall,56.40,30.50
-    .turnin 36 >> 转入威斯特福尔炖菜
-    .accept 38 >> 接受Westfall Stew
-    .accept 22 >> 接受Goretusk肝派
+    .turnin 36 >> Turn in Westfall Stew
+    .accept 38 >> Accept Westfall Stew
+    .accept 22 >> Accept Goretusk Liver Pie
 step << Human
     #sticky
     #label Lewis
     .goto Westfall,56.80,47.20
-    .turnin 6285 >> 交给刘易斯
+    .turnin 6285 >> Turn in Return to Lewis
 step << Gnome/Dwarf
     #completewith next
     .goto Westfall,56.40,47.60
-    .turnin 109 >> 向Gryan Stoutmantle提交报告
+    .turnin 109 >> Turn in Report to Gryan Stoutmantle
     .isOnQuest 109
 step
     .goto Westfall,56.40,47.60
-    .accept 12 >> 接受人民民兵
+    .accept 12 >> Accept The People's Militia
 step
     #era
     .goto Westfall,56.40,47.60
-    .accept 102 >> 接受巡逻Westfall
+    .accept 102 >> Accept Patrolling Westfall
 step << Human
     #requires Lewis
     .goto Westfall,54.00,53.00
-    .accept 153 >> 接受红色皮革头巾
+    .accept 153 >> Accept Red Leather Bandanas
 step << !Human
     .goto Westfall,54.00,53.00
-    .accept 153 >> 接受红色皮革头巾
+    .accept 153 >> Accept Red Leather Bandanas
 step
     .goto Westfall,52.86,53.71
-    .vendor >> 从希瑟那里买食物。如果你有钱的话，买些15级的食物。记住这里的五级食物非常便宜 << Warrior/Rogue
-    .vendor >> 从希瑟那里买食物/水。如果你有钱的话，买些15级的食物/水。记住这里的五级食物非常便宜 << !Warrior !Rogue
+    .vendor >> Buy food from Heather. Buy some level 15 food for later if you have money. Remember that the level 5 food here is VERY cheap << Warrior/Rogue
+    .vendor >> Buy food/water from Heather. Buy some level 15 food/water for later if you have money. Remember that the level 5 food here is VERY cheap << !Warrior !Rogue
 step
     #sticky
     #label Oats
-     >> 收集分散在威斯特福尔的燕麦小包
+     >> Collect the small satchels of oats scattered throughout Westfall
     .complete 151,1 --Handful of Oats (8)
 step
     #sticky
     #label Goretusks
-    >>杀死你看到的秃鹫/野猪。抢劫他们以获取任务物品
+    >>Kill Vultures/Boars you see. Loot them for quest items
     .complete 38,1 --Stringy Vulture Meat (3)
     .complete 38,3 --Goretusk Snout (3)
     .complete 22,1 --Goretusk Liver (8)
 step
-     >> 杀死德菲亚斯。抢他们的头巾
+     >> Kill the Defias. Loot them for their bandanas
     .goto Westfall,48.21,46.70,60,0
     .goto Westfall,46.74,52.87,60,0
     .goto Westfall,50.74,40.07,60,0
@@ -617,7 +617,7 @@ step
     .complete 153,1
 step
     .goto Westfall,49.30,19.20
-    >>你可以从外面洗劫壁橱(如果你的相机角度正确的话)。小心Benny
+    >>You can loot the closet from outside (if you angle your camera correctly). Be careful of Benny
     .complete 64,1 --Furlbrow's Pocket Watch
 step
     #era
@@ -632,25 +632,25 @@ step
     .goto Westfall,42.82,14.70
     .goto Westfall,52.36,14.82
     .goto Westfall,45.83,13.75
-    >>杀死侏儒。掠夺他们的爪子。如果你运气不好，你可能需要在等待重生的同时杀死穆洛克斯
+    >>Kill Gnolls. Loot them for their paws. You may need to kill Murlocs whilst waiting on respawns if you're unlucky
     .complete 102,1 --Gnoll Paw (8)
 step
     #requires Oats
     .goto Westfall,56.40,9.40
-    >>杀死穆洛克。抢走他们的眼睛
+    >>Kill Murlocs. Loot them for their eyes
     .complete 38,2 --Murloc Eye (3)
 step
     #era
     #requires Pawbs
     .goto Westfall,59.91,19.41
-    .turnin 151 >> 交给可怜的老布兰奇
-    .turnin 64 >> 交出被遗忘的传家宝
+    .turnin 151 >> Turn in Poor Old Blanchy
+    .turnin 64 >> Turn in The Forgotten Heirloom
 step
     #som
     #requires Pawbs
     .goto Westfall,59.91,19.41
-    .turnin 151 >> 交给可怜的老布兰奇
-    .turnin 64 >> 交出被遗忘的传家宝
+    .turnin 151 >> Turn in Poor Old Blanchy
+    .turnin 64 >> Turn in The Forgotten Heirloom
 step
     .goto Westfall,53.84,32.00,80,0
     .goto Westfall,50.80,21.76,80,0
@@ -661,44 +661,44 @@ step
     .goto Westfall,53.84,32.00
     .goto Westfall,44.47,35.35
     .goto Westfall,50.80,21.76
-    >>杀死收成观察者。为秋葵抢走他们
+    >>Kill Harvest Watchers. Loot them for Okra
     .complete 9,1 --Harvest Watcher (20)
     .complete 38,4 --Okra (3)
 step
     #requires Goretusks
     .goto Westfall,56.00,31.30
-    .turnin 9 >> 交出杀戮场
+    .turnin 9 >> Turn in The Killing Fields
 step
     .goto Westfall,56.40,30.50
-    .turnin 38 >> 转入威斯特福尔炖菜
-    .turnin 22 >> 上Goretusk肝派
+    .turnin 38 >> Turn in Westfall Stew
+    .turnin 22 >> Turn in Goretusk Liver Pie
 step
     .goto Westfall,56.30,47.50
-    .turnin 12 >> 交出人民民兵
+    .turnin 12 >> Turn in The People's Militia
 step
     #completewith end
     .goto Westfall,56.30,47.50
-    .accept 65 >> 接受Defias兄弟会
-    >>如果您尚未达到15级，请跳过此步骤
+    .accept 65 >> Accept The Defias Brotherhood
+    >>Skip this step if you're not yet level 15
 step
     #era
     .goto Westfall,56.30,47.50
-    .turnin 102 >> 转入巡逻Westfall
+    .turnin 102 >> Turn in Patrolling Westfall
 step
     .goto Westfall,54.00,52.90
-    .turnin 153 >> 上交红色皮革头巾
+    .turnin 153 >> Turn in Red Leather Bandanas
 step << Dwarf !Paladin/Gnome
     #label end
      #completewith next
-    .hs >> 炉灶回到Thelsamar
+    .hs >> Hearth back to Thelsamar
 step << Dwarf !Paladin/Gnome
     #softcore
     .goto Loch Modan,33.94,50.95
-    .fly Wetlands >> 飞到湿地
+    .fly Wetlands >> Fly to Wetlands
 step << Dwarf !Paladin/Gnome
     #hardcore
     #completewith next
-    .goto Dun Morogh,59.5,42.8,150 >> 前往跳跃点
+    .goto Dun Morogh,59.5,42.8,150 >> Travel to the skip spot
 step << Dwarf !Paladin/Gnome
     #hardcore
     .goto Dun Morogh,59.5,42.8,40,0
@@ -719,44 +719,44 @@ step << Dwarf !Paladin/Gnome
     .goto Wetlands,16.8,65.3,40,0
     .goto Wetlands,15.1,64.0,40,0
     .goto Wetlands,12.1,60.3,40,0
-    +打开此链接并在另一个屏幕上进行跟踪。
-    >>邓莫罗不死->湿地跳过
-    .link https://www.youtube.com/watch?v=9afQTimaiZQ >> 单击此处以供参考
-    .goto Wetlands,12.1,60.3,80 >> 前往米奈希尔港
+    +Open this link and follow it on another screen.
+    >>Do the Deathless Dun Morogh -> Wetlands skip
+    .link https://www.youtube.com/watch?v=9afQTimaiZQ >> CLICK HERE for reference
+    .goto Wetlands,12.1,60.3,80 >> Travel to Menethil Harbor
 step << Human/Dwarf Paladin
     #label end
     .goto Westfall,56.6,52.6
-    .fly Ironforge >> 飞往铁炉堡
+    .fly Ironforge >> Fly to Ironforge
 step << Human Warrior
     .goto Ironforge,62.0,89.6
-    .train 176 >>火车抛锚
+    .train 176 >>Train Thrown
 step << Dwarf Paladin
     .goto Ironforge,23.12,6.14
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Dwarf Paladin
     .goto Ironforge,23.6,8.5
-    >>和楼上的缪尔登谈谈
-    .turnin 1784 >>交上神性之父
-    .accept 1785 >>接受神性之父
+    >>Speak to Muiredon upstairs
+    .turnin 1784 >>Turn in The Tome of Divinity
+    .accept 1785 >>Accept The Tome of Divinity
 step << Dwarf Paladin
     .goto Ironforge,27.4,11.9
-    .turnin 1785 >>交上神性之父
+    .turnin 1785 >>Turn in The Tome of Divinity
 step << Dwarf Paladin
     #softcore
     .goto Ironforge,55.5,47.7
-    .fly Wetlands>> 飞到湿地
+    .fly Wetlands>> Fly to Wetlands
 step << Dwarf Paladin
     #hardcore
     .goto Dun Morogh,53.5,34.9
-    .zone Dun Morogh>>退出铁炉堡
+    .zone Dun Morogh>>Exit Ironforge
 step << Human
     .goto Dun Morogh,53.5,34.9
-    .zone Dun Morogh>>退出铁炉堡
+    .zone Dun Morogh>>Exit Ironforge
 --N add training before?
 step << Human/Dwarf Paladin
     #hardcore
     #completewith next
-    .goto Dun Morogh,59.43,42.85,150 >> 前往跳跃点
+    .goto Dun Morogh,59.43,42.85,150 >> Travel to the skip spot
 step << Human/Dwarf Paladin
     #hardcore
     .goto Dun Morogh,59.5,42.8,40,0
@@ -777,132 +777,132 @@ step << Human/Dwarf Paladin
     .goto Wetlands,16.8,65.3,40,0
     .goto Wetlands,15.1,64.0,40,0
     .goto Wetlands,12.1,60.3,40,0
-    >>打开此链接并在另一个屏幕上进行跟踪。
-    >>邓莫罗不死->湿地跳过
-    >>横渡大海时要避开鳄鱼
-    .link https://www.youtube.com/watch?v=9afQTimaiZQ >> 单击此处以供参考
-    .goto Wetlands,12.1,60.3,80 >> 前往米奈希尔港
+    >>Open this link and follow it on another screen.
+    >>Do the Deathless Dun Morogh -> Wetlands skip
+    >>Avoid the Crocodiles when crossing the sea
+    .link https://www.youtube.com/watch?v=9afQTimaiZQ >> CLICK HERE for reference
+    .goto Wetlands,12.1,60.3,80 >> Travel to Menethil Harbor
 step << Human
     #softcore
     #completewith next
-    .goto Dun Morogh,30.9,33.1,20 >>向北跑上山
+    .goto Dun Morogh,30.9,33.1,20 >>Run up the mountain north
 step << Human
     #softcore
-    .goto Dun Morogh,32.4,29.1,20 >>继续到这里
+    .goto Dun Morogh,32.4,29.1,20 >>Follow it up to here
 step << Human
     #softcore
     .goto Dun Morogh,33.0,27.2,20,0
     .goto Dun Morogh,33.0,25.2,20,0
     .goto Wetlands,11.6,43.4,60,0
-    .deathskip >>继续向北奔跑，摔倒死亡，然后重生
+    .deathskip >>Keep running straight north, drop down and die, then respawn
 step << Human
     #softcore
-    .goto Wetlands,12.7,46.7,80 >> 游到岸上
+    .goto Wetlands,12.7,46.7,80 >> Swim to shore
 step
     .money <0.08
     .goto Wetlands,10.4,56.0,15,0
     .goto Wetlands,10.1,56.9,15,0
     .goto Wetlands,10.6,57.2,15,0
     .goto Wetlands,10.7,56.8
-    .vendor >> 如果你有8s，检查Neal Allen的铜管，如果有就买
+    .vendor >> If you have 8s, Check for Bronze Tube from Neal Allen and buy it if it's there
 step << Human/Dwarf Paladin
     .goto Wetlands,9.5,59.7
-    .fp Menethil Harbor >> 获取Menethil Harbor航线
+    .fp Menethil Harbor >> Get the Menethil Harbor flight path
 step
     .money <0.04
     .goto Wetlands,8.1,56.3
-    .vendor >> 在大楼里，查看Dewin是否有治疗药剂，购买时间减至1秒
+    .vendor >> In the building, check Dewin for Heal Potions, buy down to 1s
 step
     #completewith next
-    +在这里等船。从你的魔法书中生一堆篝火，开始烹饪你早先保存下来的大块野猪肉。你现在最好需要10项技能
+    +Wait here for the boat. Make a Campfire from your spellbook and start cooking the Chunks of Boar Meat you saved from earlier. You ideally need 10 skill now
     .goto Wetlands,4.7,57.3
 step
-    .zone Darkshore >>船到了就上船。把它带到Darkshore去。
-    >>在等待船只的同时进行急救训练，您需要80分的急救积分才能完成24级任务 << Rogue
+    .zone Darkshore >>Get onto the boat when it comes. Take it to Darkshore.
+    >>Train first aid while waiting for the boat, you'll need 80 points in first aid for a level 24 quest later down the road << Rogue
 ]])
 
 RXPGuides.RegisterGuide([[
 #classic
 << Alliance
-#name 16-19 黑海岸
+#name 16-19 Darkshore
 #version 1
-#group RestedXP 联盟 1-20
+#group RestedXP Alliance 1-20
 #defaultfor Hunter/NightElf
-#next 19-20 赤脊山 << !Hunter
-#next 19-21 黑海岸/灰谷 << Hunter
+#next 19-20 Redridge << !Hunter
+#next 19-21 Darkshore/Ashenvale << Hunter
 
 step <<  NightElf !Druid
     #completewith next
     .goto Felwood,19.10,20.63
-    .fly Teldrassil >> 飞往Teldrassil
+    .fly Teldrassil >> Fly to Teldrassil
 step <<  NightElf !Druid
     .goto Teldrassil,56.25,92.44
-     >> 返回Nessa
-    .turnin 6343 >> 返回Nessa
+     >> Return to Nessa
+    .turnin 6343 >> Turn in Return to Nessa
 step << NightElf Warrior
     .goto Darnassus,58.72,34.92
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << NightElf Warrior
     .goto Darnassus,57.6,46.6
-    .train 176 >> 火车抛锚
+    .train 176 >> Train Thrown
 step <<  NightElf Hunter
     #completewith start
     .goto Darnassus,36.60,13.60
-    .trainer  >> 培训技能
+    .trainer  >> Train skills
 step <<  NightElf Hunter
      #completewith start
     .goto Darnassus,63.30,66.30
-    >> 补充库存/再补给
-    >>优先购买20级弓
+    >> Restock/Resupply
+    >>Prioritize buying a level 20 bow
     .collect 3027,1
     *Buy a level 16 bow if you have money to spare
 step <<  NightElf !Druid
     .goto Teldrassil,23.70,64.51
-    .accept 730 >> 接受黑暗中的麻烦？
+    .accept 730 >> Accept Trouble In Darkshore?
 step << NightElf Priest
     .goto Darnassus,37.88,82.73
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << NightElf Rogue
-    >>去塞纳里奥飞地
+    >>Go down into the Cenarion Enclave
     .goto Darnassus,31.84,16.69,30,0
     .goto Darnassus,37.00,21.92
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step <<  NightElf !Druid
     #label start
-    .hs >> 赫斯回到奥伯丁
+    .hs >> Hearth back to Auberdine
 step
     .goto Felwood,19.78,19.07
-     >> 点击酒店外的通缉海报
-    .accept 4740 >> 接受通缉令：Murkdeep！
+     >> Click on the wanted poster outside the inn
+    .accept 4740 >> Accept WANTED: Murkdeep!
 step << NightElf
      #completewith next
     .goto Felwood,20.04,16.35
-    .turnin 730 >> 在黑暗中交出麻烦？
+    .turnin 730 >> Turn in Trouble In Darkshore?
 step
     .goto Felwood,20.04,16.35
-     >> 心不在焉的探矿者
-    .accept 729 >> 接受心不在焉的探矿者
+     >> The Absent Minded Prospector
+    .accept 729 >> Accept The Absent Minded Prospector
 step
     .goto Felwood,19.98,14.40
-    .turnin 4762 >> 转入悬崖泉河
-    .accept 4763 >> 接受Blackwood Corrupted
+    .turnin 4762 >> Turn in The Cliffspring River
+    .accept 4763 >> Accept The Blackwood Corrupted
 step
     #completewith xabraxxis
     .goto Darkshore,37.78,44.06
-     >> 在月光井装满空碗
+     >> Fill the Empty Bowl at the moonwell
     .collect 12347,1,4763,1
 step
     .goto Felwood,18.50,19.87
-    .accept 1138 >> 接受大海的果实
+    .accept 1138 >> Accept Fruit of the Sea
 step
 	#era/som
     #sticky
-     >> 完成Buzzbox 323
+     >> Finish off Buzzbox 323
     .complete 1002,1
 step << Druid
     #sticky
     #label earthroot
-    >>在你的探索中收集土根
+    >>Gather earthroot as you quest
     .complete 6123,1
 step << Druid
     .goto Darkshore,43.4,45.9,90,0
@@ -914,475 +914,475 @@ step << Druid
     .goto Darkshore,43.3,49.1,0
     .goto Darkshore,42.4,52.6,0
     .goto Darkshore,45.7,50.3,0
-    >>在黑海岸中部的月牙洞里寻找蘑菇
+    >>Look for mushrooms inside the moonkin caves in central Darkshore
     .complete 6123,2
 step
     .goto Darkshore,39.99,78.46
-     >> 南行时杀死狂犬病蓟熊
+     >> Kill Rabid Thistle Bears as you grind your way south
     .complete 2138,1
 step
      #completewith south1
-     >> 杀死你找到的任何登月者陛下，他们与灰熊共享产卵，不要想方设法完成它
+     >> Kill any Moonstalker Sire you find, they share spawns with Grizzled Thistle Bears, don't go out of your way to finish it
     .complete 986,1
     .unitscan Moonstalker Sire
 step
 	#era/som
      #completewith south1
     .goto Darkshore,38.60,80.50,0
-     >> 杀死灰蓟熊
+     >> Kill Grizzled Thistle Bears
     .complete 1003,1
     .isOnQuest 1003
 step
     .goto Felwood,27.00,55.59
-    .turnin 952 >> 在古人的树林里转弯 << NightElf
-    .turnin 948 >> Onu上车
-    .accept 944 >> 接受大师的垂涎
+    .turnin 952 >> Turn in Grove of the Ancients << NightElf
+    .turnin 948 >> Turn in Onu
+    .accept 944 >> Accept The Master's Glaive
 step
     .goto Ashenvale,22.36,3.98
-     >> 进入大师的Glaive，清除中间祭坛周围的暴徒
+     >> Enter The Master's Glaive and clear mobs around the altar in the center
     .complete 944,1
 step
     #sticky
     .goto Ashenvale,22.36,3.98
-    .accept 945 >> 接受Therylune的逃脱
+    .accept 945 >> Accept Therylune's Escape
 step
-     >> 把烤鸡蛋的碗扔在地上
-    .turnin 944 >> 交上大师的Glaive
-    .accept 949 >> 接受暮光之城营地
+     >> Drop the scrying bowl on the ground
+    .turnin 944 >> Turn in The Master's Glaive
+    .accept 949 >> Accept The Twilight Camp
 step
     .goto Ashenvale,22.24,2.52
-     >> 点击底座顶部的书籍
-    .turnin 949 >> 在暮光之城露营
-    .accept 950 >> 接受返回Onu
+     >> Click on the book on top of the pedestal
+    .turnin 949 >> Turn in The Twilight Camp
+    .accept 950 >> Accept Return to Onu
 step
-    >> 完成护送任务
+    >> Finish the escort quest
     .complete 945,1
 step
 	#era/som
     .goto Felwood,24.53,60.46
-    .turnin 1003 >> 打开Buzzbox 525
+    .turnin 1003 >> Turn in Buzzbox 525
     .isOnQuest 1003
 step
     .goto Felwood,27.00,55.59
-    .turnin 950 >> 转入返回Onu
-    .accept 951 >> 接受Mathystra遗迹
+    .turnin 950 >> Turn in Return to Onu
+    .accept 951 >> Accept Mathystra Relics
 step << Hunter
     .xp 17
 step << Hunter
     #sticky
     #label prospector
     .goto Felwood,18.08,64.03
-    .turnin 729 >> 交回心不在焉的探矿者
+    .turnin 729 >> Turn in The Absent Minded Prospector
 step <<  Hunter
     .goto Darkshore,35.72,83.69
-     >> 开始护送任务
-     >>这个任务非常困难，你可以跳过这一步，稍后在19级时再回来
-    .accept 731 >> 接受心不在焉的探矿者
-    .link https://www.twitch.tv/videos/1182180918 >> 点击此处查看视频参考
+     >> Start the escort quest
+     >>This quest is VERY hard, you can skip this step and come back later at level 19
+    .accept 731 >> Accept The Absent Minded Prospector
+    .link https://www.twitch.tv/videos/1182180918 >> Click here for video reference
 step <<  Hunter
     #requires prospector
-     >> 护送探矿者返程
+     >> Escort Prospector Remtravel
      .complete 731,1
      .isOnQuest 731
-     *这个任务非常困难，你可以跳过这一步，稍后在19级时再回来
-    .link https://www.twitch.tv/videos/1182180918 >> 点击此处查看视频参考
+     *This quest is VERY hard, you can skip this step and come back later at level 19
+    .link https://www.twitch.tv/videos/1182180918 >> Click here for video reference
 step << Hunter
 	#era/som << Dwarf
     .goto Ashenvale,13.97,4.10
-    .accept 4733 >> 接受海滩生物
-    >>这个任务可能有点难，试着把墨洛克一个接一个地拉过来，否则你可能会惹恼整个阵营
-    .link https://www.twitch.tv/videos/992307825?t=05h48m36s >> 点击此处查看视频参考
+    .accept 4733 >> Accept Beached Sea Creature
+    >>This quest can be a little hard, try to pull the murlocs 1 by 1, otherwise you can end up aggroing the whole camp
+    .link https://www.twitch.tv/videos/992307825?t=05h48m36s >> Click here for video reference
 step << Hunter
 	#era/som << Dwarf
     .goto Ashenvale,13.93,2.01
-    .accept 4732 >> 接受海滩海龟
+    .accept 4732 >> Accept Beached Sea Turtle
 step << Hunter
 	#era/som << Dwarf
     .goto Felwood,13.47,64.01
-    .accept 4731 >> 接受海滩海龟
+    .accept 4731 >> Accept Beached Sea Turtle
 step << Hunter
 	#era/som << Dwarf
     .goto Felwood,14.62,60.72
-    .accept 4730 >> 接受海滩生物
+    .accept 4730 >> Accept Beached Sea Creature
 step
     #completewith south2
-     >> 在海岸杀死15级以上的螃蟹，获得优质螃蟹块，如果该区域过于拥挤，请跳过此步骤
+     >> Kill level 15+ crabs along the coast for Fine Crab Chunks, skip this step if the area is too crowded
     .complete 1138,1
 step
     .goto Darkshore,36.64,76.53
-     >> 清除穆洛克营地，远离中心的篝火
-    >>当你清理完所有东西后，移动到营地中心召唤默克迪普
+     >> Clear the murloc camp, stay away from the bonfire in the center
+    >>Once you clear everything, move to the center of the camp to summon Murkdeep
     .complete 4740,1
 step
     #label south1
     .goto Felwood,18.41,49.43
-    .accept 4728 >> 接受海滩生物
+    .accept 4728 >> Accept Beached Sea Creature
 step << !Druid
     .goto Felwood,19.64,39.52
-    .accept 4722 >> 接受海滩海龟
+    .accept 4722 >> Accept Beached Sea Turtle
 step << Druid
     #requires earthroot
-    >>传送至Moonglade
+    >>Teleport to Moonglade
     .goto Moonglade,52.4,40.6
-    .trainer >> 火车咒语
+    .trainer >> Train spells
 step << Druid
     .goto Moonglade,48.1,67.2
-    .fly Auberdine>>飞到黑海岸
+    .fly Auberdine>>Fly to Darkshore
 step
     .goto Darkshore,36.62,45.59
-    .turnin 4722 >> 上缴海滩海龟 << !Druid
-    .turnin 4728 >> 上缴海滩生物
+    .turnin 4722 >> Turn in Beached Sea Turtle << !Druid
+    .turnin 4728 >> Turn in Beached Sea Creature
 step << Hunter
 	#era/som << Dwarf
     .goto Darkshore,36.62,45.59
-    .turnin 4730 >> 上缴海滩生物
-    .turnin 4731 >> 上缴海滩海龟
-    .turnin 4732 >> 上缴海滩海龟
-    .turnin 4733 >> 上缴海滩生物
+    .turnin 4730 >> Turn in Beached Sea Creature
+    .turnin 4731 >> Turn in Beached Sea Turtle
+    .turnin 4732 >> Turn in Beached Sea Turtle
+    .turnin 4733 >> Turn in Beached Sea Creature
 step
     #label south2
     .goto Felwood,18.50,19.87
-    .turnin 1138 >> 把海果交上来
-    >>如果您尚未收集全部6项，请跳过此步骤
+    .turnin 1138 >> Turn in Fruit of the Sea
+    >>Skip this step if you haven't collected all 6 items
     .isQuestComplete 1138
 step
     .goto Felwood,20.34,18.12
-    .turnin 4740 >> 通缉犯：笨蛋！
+    .turnin 4740 >> Turn in WANTED: Murkdeep!
 step
     .goto Felwood,21.63,18.15
-    .turnin 2138 >> 上交感染者的清洁
-    .accept 2139 >> 接受塔纳瑞恩的希望
+    .turnin 2138 >> Turn in Cleansing of the Infected
+    .accept 2139 >> Accept Tharnariun's Hope
 step << Hunter
     .goto Felwood,20.04,16.35
-    .turnin 731 >> 交回心不在焉的探矿者
+    .turnin 731 >> Turn in The Absent Minded Prospector
     .isQuestComplete 731
 step << Hunter
     .goto Felwood,20.04,16.35
-    .accept 741 >> 接受心不在焉的探矿者
+    .accept 741 >> Accept The Absent Minded Prospector
     .isQuestTurnedIn 731
 step << Druid
     .goto Darkshore,37.7,40.7
-    .turnin 6123 >> 轮流收集治疗
-    .accept 6124 >> 接受治愈病人
+    .turnin 6123 >> Turn in Gathering the Cure
+    .accept 6124 >> Accept Curing the Sick
 step
     .goto Felwood,27.70,10.03
-    .turnin 957 >> 转入Bashal’Aran
+    .turnin 957 >> Turn in Bashal'Aran
 step << Druid
     #label deers
     #sticky
-    >>寻找病鹿，然后在它们身上涂抹动物药膏
+    >>Look for Sickly Deers as you quest and then use the animal salve on them
     .complete 6124,1
 step
      #completewith xabraxxis
     .goto Darkshore,50.74,34.68
-     >>从木桶中掠夺黑木谷物样本，然后向东南方向奔向巢穴母亲，掠夺木桶将导致2个暴徒繁殖，小心
+     >>Loot the Blackwood Grain Sample from the Barrel, then run south-east toward Den Mother, looting the barrel will make 2 mobs spawn, be careful
     .collect 12342,1
 step
     .goto Darkshore,52.60,36.65,45,0
-    >>杀死丹妈。小心，因为她的幼崽会把你打倒2秒钟
+    >>Kill Den Mother. Be careful as her cubs can knock you down for 2 seconds
     .goto Darkshore,51.48,38.26
     .complete 2139,1 --Den Mother (1)
 step
     #label xabraxxis
     .goto Darkshore,52.6,33.6
-    >> 抢劫北部营地的坚果/水果店，并使用篝火旁的碗召唤Xabraxxis
+    >> Loot the Nut/Fruit Stores at the northern camp and use the bowl at the bonfire to summon Xabraxxis
     .complete 4763,1
 step <<  !Hunter
     .goto Darkshore,52.6,33.6
-    .xp 18 >> 升级到18级
+    .xp 18 >> Grind to level 18
 step << Hunter
     .goto Darkshore,52.6,33.6
-    .xp 18.75 >> 升级到18+75%
-    >>确保HS冷却时间<10分钟
-    >>如果该区域过于拥挤，请跳过此步骤
+    .xp 18.75 >> Grind to 18 + 75%
+    >>Make sure your HS cooldown is <10 min
+    >>Skip this step if the area is too crowded
 step
 	#era/som
-    .goto 冬泉谷,1.42,26.89
-    .turnin 1002 >> 打开Buzzbox 323
-    .accept 1003 >> 接受Buzzbox 525
+    .goto Winterspring,1.42,26.89
+    .turnin 1002 >> Turn in Buzzbox 323
+    .accept 1003 >> Accept Buzzbox 525
 step
-    .goto 冬泉谷,4.82,27.18
-    .turnin 965 >> 转入Althalaxx塔
-    .accept 966 >> 接受Althalaxx塔
+    .goto Winterspring,4.82,27.18
+    .turnin 965 >> Turn in The Tower of Althalaxx
+    .accept 966 >> Accept The Tower of Althalaxx
 step
-    .goto 冬泉谷,6.06,28.81
-     >> 杀死信徒。抢他们的羊皮纸
+    .goto Winterspring,6.06,28.81
+     >> Kill cultists. Loot them for Parchments
     .complete 966,1
 step
-    .goto 冬泉谷,4.82,27.18
-    .turnin 966 >> 转入Althalaxx塔
-    .accept 967 >> 接受Althalaxx塔
+    .goto Winterspring,4.82,27.18
+    .turnin 966 >> Turn in The Tower of Althalaxx
+    .accept 967 >> Accept The Tower of Althalaxx
 step
-    .goto 冬泉谷,7.52,23.26
-     >> 寻找地面上的小遗迹
+    .goto Winterspring,7.52,23.26
+     >> Look for small relics on the ground
     .complete 951,1
 step  << !Warrior !Paladin !Rogue !Druid
-    .goto 冬泉谷,6.37,16.66
-    .accept 2098 >> 接受陀螺仪的检索
+    .goto Winterspring,6.37,16.66
+    .accept 2098 >> Accept Gyromast's Retrieval
 step  << !Warrior !Paladin !Rogue !Druid
     #sticky
     #completewith MoonstalkerP
     .goto Darkshore,56.10,16.88,0
-     >> 杀死海岸边的愤怒的暗礁爬行动物。小心，因为他们猛击，一次最多可以造成200点伤害。抢走钥匙的底部
+     >> Kill Raging Reef Crawlers along the coast. Be careful as they thrash and can deal up to 200 damage at once. Loot them for the bottom part of the key
     .complete 2098,3
 step  << !Warrior !Paladin !Rogue !Druid
     .goto Darkshore,55.59,12.90
-     >> 杀死Murlocs
+     >> Kill Murlocs
     .complete 2098,2
 step  << !Warrior !Paladin !Rogue !Druid
     #sticky
     #label foreststriders
     .goto Darkshore,61.40,9.40
-     >> 杀死林蛙
+     >> Kill Foreststriders
     .complete 2098,1
 step
     #label MoonstalkerP
     .goto Darkshore,61.40,9.40
-     >> 杀死登月者陛下/女族长。抢他们的皮毛
+     >> Kill Moonstalker Sire/Matriarchs. Loot them for pelts
     .complete 986,1
 step  << !Warrior !Paladin !Rogue !Druid
      .goto Darkshore,56.10,16.88
-     >> 杀死海岸边的愤怒的暗礁爬行动物。小心，因为他们猛击，一次最多可以造成200点伤害。抢走钥匙的底部
+     >> Kill Raging Reef Crawlers along the coast. Be careful as they thrash and can deal up to 200 damage at once. Loot them for the bottom part of the key
     .complete 2098,3
 step  << !Warrior !Paladin !Rogue !Druid
     #requires foreststriders
-    .goto 冬泉谷,6.37,16.66
-    .turnin 2098 >> 交回陀螺仪检索
-    .accept 2078 >> 接受陀螺手的复仇
+    .goto Winterspring,6.37,16.66
+    .turnin 2098 >> Turn in Gyromast's Retrieval
+    .accept 2078 >> Accept Gyromast's Revenge
 step << !Druid
-    .goto 冬泉谷,3.10,20.90
-    .accept 4727 >> 接受海滩海龟
+    .goto Winterspring,3.10,20.90
+    .accept 4727 >> Accept Beached Sea Turtle
 step << !Druid
     .goto Darkshore,51.50,22.26
-     >> 吃完海果
+     >> Finish off Fruit of the Sea
     .complete 1138,1
 step  << !Warrior !Paladin !Rogue !Druid
-    .goto 冬泉谷,5.59,21.09
-     >> 与Threshwackonator 4100交谈
-    >>护送它回Gyromast并杀死它
-    >>小心，因为这个任务非常困难
+    .goto Winterspring,5.59,21.09
+     >> Speak with The Threshwackonator 4100
+    >>Escort it back to Gyromast and kill it
+    >>Be careful as this quest is VERY difficult
     .complete 2078,1
-    .link https://clips.twitch.tv/VainAmorphousMacaroniPRChase-iGvhTnz0ked6LO0A >> 点击此处查看视频参考
+    .link https://clips.twitch.tv/VainAmorphousMacaroniPRChase-iGvhTnz0ked6LO0A >> Click here for video reference
 step  << !Warrior !Paladin !Rogue !Druid
-    .goto 冬泉谷,6.37,16.66
-    .turnin 2078 >> 交回陀螺手的复仇
+    .goto Winterspring,6.37,16.66
+    .turnin 2078 >> Turn in Gyromast's Revenge
     .isQuestComplete 2078
 step  << !Warrior !Paladin !Rogue !Druid
     #sticky
-    .destroy 7442 >> 从库存中删除陀螺仪的密钥
+    .destroy 7442 >> Delete Gyromast's Key from your inventory
 step << Druid
-    .goto 冬泉谷,3.10,20.90
-    .accept 4727 >> 接受海滩海龟
+    .goto Winterspring,3.10,20.90
+    .accept 4727 >> Accept Beached Sea Turtle
 step << Druid
     .goto Darkshore,51.50,22.26
-     >> 吃完海果
+     >> Finish off Fruit of the Sea
     .complete 1138,1
 step << Druid
     #requires deers
     .goto Darkshore,48.9,11.3
-    >>在水下抢劫位于两块大石头之间的小锁盒
+    >>Loot the small lockbox underwater, located in between 2 big stones
     .collect 15883,1,5061,1 --Collect Half Pendant of Aquatic Agility (x1)
 step <<  Dwarf Hunter
      #softcore
     #completewith next
-    .deathskip >> 研磨直到你的高速冷却时间<6分钟，然后死亡扭曲到奥伯丁
+    .deathskip >> Grind until your HS cooldown is <6 minutes then death warp to Auberdine
 step <<  Dwarf Hunter
      #hardcore
     #completewith next
-    +研磨直到你的HS冷却时间<9分钟，然后跑回奥伯丁
+    +Grind until your HS cooldown is <9 minutes then run back to Auberdine
 step <<  Dwarf Hunter
     .goto Felwood,19.98,14.40
-    .turnin 4763 >> 交出腐败的黑木
+    .turnin 4763 >> Turn in The Blackwood Corrupted
 step <<  Dwarf Hunter
     .goto Felwood,21.63,18.15
-    .turnin 2139 >> 交给塔纳瑞恩的希望
+    .turnin 2139 >> Turn in Tharnariun's Hope
 step << Dwarf Hunter
      .goto Darkshore,33.17,40.17,40,0
      .goto Darkshore,33.17,40.17,0
-    .zone Teldrassil >> 乘船去达纳苏斯
+    .zone Teldrassil >> Take the boat to Darnassus
     .zoneskip Darnassus
 step <<  Dwarf Hunter
     .goto Teldrassil,58.40,94.02
-    .fp Teldrassil >> 获取Teldrassil飞行路径
+    .fp Teldrassil >> Get the Teldrassil Flight Path
 step << Dwarf Hunter
     #completewith next
     .goto Teldrassil,55.95,89.88
-    .zone Darnassus >> 把紫色的大门带进达纳苏斯
+    .zone Darnassus >> Take the purple portal into Darnassus
 step <<  Dwarf Hunter
     .goto Darnassus,40.2,8.8
-    .trainer  >> 火车咒语
+    .trainer  >> Train spells
 step <<  Dwarf Hunter
     #sticky
     .goto Darnassus,57.55,46.73
-    .train 264 >> 火车弓
-    .train 227 >> 火车杆
+    .train 264 >> Train Bows
+    .train 227 >> Train Staves
 step <<  Dwarf Hunter
     #sticky
     .goto Darnassus,63.30,66.30
-     >> 购买20级弓和10槽箭袋
+     >> Buy a level 20 bow and a 10 slot quiver
     .collect 3027,1
     .collect 11362,1
 step <<  Dwarf Hunter
     .goto Teldrassil,23.70,64.51
-    .turnin 741 >> 交回心不在焉的探矿者
-    .accept 942 >> 接受心不在焉的探矿者
+    .turnin 741 >> Turn in The Absent Minded Prospector
+    .accept 942 >> Accept The Absent Minded Prospector
 step << Druid
     .goto Moonglade,56.2,30.4
-    >>传送至Moonglade
-    .turnin 6124 >> 治愈病人
-    .accept 6125 >> 接受权力战胜毒药
+    >>Teleport to Moonglade
+    .turnin 6124 >> Curing the Sick
+    .accept 6125 >> Accept Power over Poison
 step << Druid
     .goto Moonglade,52.53,40.56
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step
      #completewith next
-    .hs >> 赫斯回到奥伯丁
+    .hs >> Hearth back to Auberdine
 step
     .goto Felwood,19.10,20.63
-    .turnin 4727 >> 上缴海滩海龟
+    .turnin 4727 >> Turn in Beached Sea Turtle
 step
     .goto Felwood,18.50,19.87
-    .turnin 1138 >> 把海果交上来
+    .turnin 1138 >> Turn in Fruit of the Sea
 step
     .goto Felwood,19.98,14.40
-    .turnin 4763 >> 交出腐败的黑木
+    .turnin 4763 >> Turn in The Blackwood Corrupted
 step <<  NightElf Hunter
-    .vendor  >> 购买额外的箭头/补给
+    .vendor  >> Buy extra arrows/supplies
 step
     .goto Felwood,21.63,18.15
-    .turnin 2139 >> 交给塔纳瑞恩的希望
+    .turnin 2139 >> Turn in Tharnariun's Hope
 step
     .goto Darkshore,39.37,43.48
-    .turnin 986 >> 交出一个丢失的主人
-    .accept 993 >> 接受丢失的主人
+    .turnin 986 >> Turn in A Lost Master
+    .accept 993 >> Accept A Lost Master
  step <<  !Hunter
     .goto Darkshore,33.70,42.45
-     >> 在等待Menethil船时进行水平急救/烹饪
-    .zone Wetlands >> 乘船去米奈希尔港
+     >> Level first aid/cooking while waiting for the Menethil boat
+    .zone Wetlands >> Take the boat to Menethil Harbor
 step <<  !Hunter
     .goto Wetlands,9.49,59.69
-    .fp Wetlands>> 获取湿地飞行路径
+    .fp Wetlands>> Get the Wetlands flight path
 step <<  !Hunter
     .goto Wetlands,49.91,39.36
-    >>沿着这条路往东走
-    .accept 469 >> 接受每日交付
+    >>Follow the road east
+    .accept 469 >> Accept Daily Delivery
 step <<  !Hunter
     #completewith next
-    .goto Wetlands,53.7,72.3,75 >> 通往莫丹湖的路从这里开始
+    .goto Wetlands,53.7,72.3,75 >> The path to Loch Modan starts here
 step <<  !Hunter
     .goto Loch Modan,25.4,10.6
-    .zone Loch Modan >> 穿过隧道进入莫丹湖
+    .zone Loch Modan >> Cross the tunnel into Loch Modan
 step << !Hunter
     .goto Loch Modan,46.0,13.3
-    .accept 250 >> 接受黑暗威胁织机
+    .accept 250 >> Accept A Dark Threat Looms
 step << !Hunter
     .goto Loch Modan,56.1,13.3
-    >>点击小炸药桶
-    .turnin 250 >> 交出一个黑暗的威胁织机
-    .accept 199 >> 接受黑暗威胁织机
+    >>Click on the small explosive barrel
+    .turnin 250 >> Turn in A Dark Threat Looms
+    .accept 199 >> Accept A Dark Threat Looms
 step << !Hunter
     .goto Loch Modan,46.0,13.3
-    .turnin 199 >> 交出一个黑暗的威胁织机
+    .turnin 199 >> Turn in A Dark Threat Looms
 step <<  !Hunter
     #completewith next
-    .deathskip >> 在塞尔萨马尔死亡并重生
+    .deathskip >> Die and respawn at Thelsamar
 step <<  !Hunter
     .goto Loch Modan,33.9,50.9
-    .fp Thelsamar >> 获取Thelsamar飞行路线
+    .fp Thelsamar >> Get the Thelsamar flight path
 step <<  !Hunter
-    .goto Loch Modan,21.30,68.60,40 >> 跑到邓莫罗
+    .goto Loch Modan,21.30,68.60,40 >> Run to Dun Morogh
 step <<  !Hunter
      #completewith next
-    .deathskip >> 一旦区域文字变为Dun Morogh，故意死亡并在Kharanos重生
+    .deathskip >> Once the zone text changes to Dun Morogh, die on purpose and respawn at Kharanos
 step <<  !Hunter
     .goto Ironforge,14.90,87.10
-    .zone Ironforge >> 跑到铁炉堡
+    .zone Ironforge >> Run to Ironforge
 step << !Hunter
     .goto Ironforge,55.51,47.75
-    .fp Ironforge >> 获得铁炉堡飞行路线
+    .fp Ironforge >> Get the Ironforge flight path
 step <<  !Hunter
     #completewith next
     .goto Ironforge,67.84,42.50
-    .vendor >> 如果你还没有，就买一个铜管
-    >>这是一个限量供应项目，如果npc没有，请跳过此步骤
---    >>稍后的任务需要2个青铜管 << Rogue
+    .vendor >> Buy a Bronze Tube if you haven't already
+    >>This is a limited supply item, skip this step if the npc doesn't have it
+--    >>You will need 2 bronze tubes for a quest later << Rogue
     .bronzetube
 step <<  !Hunter
     .goto Ironforge,76.03,50.98,30,0
-    .zone Stormwind City >> 乘电车去暴风城
-    >>在等待/乘坐电车时进行急救训练，您需要80分的急救积分才能完成24级任务 << Rogue
+    .zone Stormwind City >> Take the tram to Stormwind
+    >>Train first aid while wating/riding the tram, you'll need 80 points in first aid for a level 24 quest later down the road << Rogue
 ]])
 
 RXPGuides.RegisterGuide([[
 #classic
 << Alliance !Hunter !NightElf
-#name 14-19 黑海岸
+#name 14-19 Darkshore
 #version 1
-#group RestedXP 联盟 1-20
+#group RestedXP Alliance 1-20
 #defaultfor !Hunter !NightElf
-#next 19-20 赤脊山
+#next 19-20 Redridge
 
 step
     .goto Felwood,19.10,20.63
-    >>前往奥伯丁
-    .accept 3524 >> 接受冲上岸
+    >>Head to Auberdine
+    .accept 3524 >> Accept Washed Ashore
 step <<  !NightElf
     .goto Felwood,19.10,20.63
-    .fp Auberdine >> 获取奥伯丁飞行路线
+    .fp Auberdine >> Get the Auberdine flight path
 step <<  NightElf
     .goto Felwood,19.27,19.14
-    .turnin 6342 >> 飞往奥伯丁
-    .accept 6343 >> 接受返回Nessa
+    .turnin 6342 >> Turn in Flight to Auberdine
+    .accept 6343 >> Accept Return to Nessa
 step
     .goto Darkshore,37.0,44.0
-    .home >> 将炉灶stone设置为Auberdine
+    .home >> Set Hearthstone to Auberdine
 step
-    >>上楼到顶层
+    >>Go upstairs to the top floor
     .goto Felwood,19.51,18.97
-    .accept 983 >> 接受Buzzbox 827
+    .accept 983 >> Accept Buzzbox 827
 step
     .goto Felwood,21.63,18.15
-    .accept 2118 >> 接受灾区
-    .accept 984 >> 接受威胁有多大？
+    .accept 2118 >> Accept Plagued Lands
+    .accept 984 >> Accept How Big a Threat?
 step
     #sticky
     #completewith crabs1
-     >> 沿着海岸杀死螃蟹。抢走他们的腿
+     >> Kill crabs along the coast. Loot them for their legs
     .complete 983,1
 step
     .goto Felwood,18.81,26.69
-     >> 掠夺海洋生物遗骸
+     >> Loot the sea creature remains
     .complete 3524,1
 step
     .goto Felwood,22.39,29.45
-     >> 前往弗尔博格营地
+     >> Head towards the furbolg camp
      .complete 984,1
 step
     #label crabs1
-    >> 找到一只狂犬病蓟熊。Aggro一号，在你的包里使用塔纳瑞恩的希望(紫色球体)
+    >> Find a Rabid Thistle Bear. Aggro one and use Tharnariun's Hope in your bags (purple orb)
     .goto Darkshore,38.47,57.92
     .complete 2118,1
     .unitscan Rabid Thistle Bear
 step
     .goto Felwood,19.13,21.39
-     >> 完成沿海螃蟹的捕杀和腿的掠夺
+     >> Finish killing crabs along the coast and looting them for their legs
     .complete 983,1
 step
     .goto Felwood,19.13,21.39
-    >>单击Buzzbox
-    .turnin 983 >> 打开Buzzbox 827
+    >>Click the Buzzbox
+    .turnin 983 >> Turn in Buzzbox 827
 step
 	#era/som
     .goto Felwood,19.13,21.39
-    .accept 1001 >> 接受Buzzbox 411
+    .accept 1001 >> Accept Buzzbox 411
 step
     .goto Felwood,19.10,20.63
-    .turnin 3524 >> 转入冲上岸
-    .accept 4681 >> 接受冲上岸
+    .turnin 3524 >> Turn in Washed Ashore
+    .accept 4681 >> Accept Washed Ashore
 step
-    >>在码头上
+    >>On the Dock
     .goto Felwood,18.10,18.48
-    .accept 963 >> 接受永恒的爱
+    .accept 963 >> Accept For Love Eternal
 step
 	#era/som
     #sticky
@@ -1390,43 +1390,43 @@ step
     .goto Darkshore,33.59,40.36,0
     .goto Darkshore,30.94,45.79,0
     .goto Darkshore,33.03,48.13,0
-     >> 开始研究Darkshore Threshers。
+     >> Start working on Darkshore Threshers.
     .complete 1001,1
 step
     #completewith next
-    .goto Darkshore,33.70,42.45,40 >> 跑到码头，然后在十字路口跳入水中
+    .goto Darkshore,33.70,42.45,40 >> Run up to the docks then jump in the water at the intersection
 step
     .goto Felwood,13.63,21.44
-    >>点击海龟遗骸
+    >>Click on the sea turtle remains
     .complete 4681,1
 step
     #label washed1
     .goto Felwood,19.10,20.63
-    .turnin 4681 >> 转入冲上岸
+    .turnin 4681 >> Turn in Washed Ashore
 step
     .goto Felwood,19.90,18.40
-    .accept 947 >> 接受洞穴蘑菇
+    .accept 947 >> Accept Cave Mushrooms
 step
     .goto Felwood,20.34,18.12
-    .accept 4811 >> 接受红水晶
+    .accept 4811 >> Accept The Red Crystal
 step
     .goto Felwood,21.63,18.15
-    .turnin 2118 >> 交出瘟疫土地
-    .accept 2138 >> 接受感染者的清洁
+    .turnin 2118 >> Turn in Plagued Lands
+    .accept 2138 >> Accept Cleansing of the Infected
 step
     .goto Felwood,22.24,18.22
-    .turnin 984 >> 交出威胁有多大？
-    .accept 985 >> 接受威胁有多大？
-    .accept 4761 >> 接受Thundris Windweaver
+    .turnin 984 >> Turn in How Big a Threat?
+    .accept 985 >> Accept How Big a Threat?
+    .accept 4761 >> Accept Thundris Windweaver
 step
     .goto Felwood,20.80,15.58
-    .accept 982 >> 接受深海，浩瀚大海
+    .accept 982 >> Accept Deep Ocean, Vast Sea
 step
     .goto Felwood,19.98,14.40
-    .turnin 4761 >> 交出桑德里斯·温德韦弗
-    .accept 4762 >> 接受悬崖泉河
-    .accept 958 >> 接受上流社会的工具
-    .accept 954 >> 接受Bashal'Aran
+    .turnin 4761 >> Turn in Thundris Windweaver
+    .accept 4762 >> Accept The Cliffspring River
+    .accept 958 >> Accept Tools of the Highborne
+    .accept 954 >> Accept Bashal'Aran
 step
 	#era/som
     #sticky
@@ -1438,406 +1438,406 @@ step
     .goto Darkshore,36.70,30.00,0
     .goto Darkshore,38.73,28.25,0
     .goto Darkshore,40.17,28.76,0
-     >> 在海岸外杀死黑海岸脱粒鸟。抢走他们的眼睛
+     >> Kill Darkshore Threshers off the coast. Loot them for their Eyes
     .complete 1001,1
 step
     .goto Felwood,20.94,1.49
-    >> 从船体上的洞进入第一艘船，在船底的水下洗劫箱子
-    >>小心，因为这个任务可能很困难
+    >> Enter the 1st ship by the hole on the hull, loot the chest underwater at the bottom floor of the ship
+    >>Be careful as this quest can be difficult
     .complete 982,1
 step
     .goto Darkshore,39.63,27.45
-    >> 通过船体上的孔进入第二艘飞船，在你发现第一个箱子的确切位置抢劫位于飞船上的箱子
-    >>小心，因为这个任务可能很困难
+    >> Enter the 2nd ship by the hole on the hull, loot the chest located in the ship at the exact place where you found the first chest
+    >>Be careful as this quest can be difficult
     .complete 982,2
 step
 	#era/som
     #requires threshers
     #label mbox1
     .goto Felwood,25.19,1.29
-    .turnin 1001 >> 打开Buzzbox 411
-    .accept 1002 >> 接受Buzzbox 323
+    .turnin 1001 >> Turn in Buzzbox 411
+    .accept 1002 >> Accept Buzzbox 323
 step
     .goto Felwood,25.15,4.61
-    .accept 4723 >> 接受海滩生物
+    .accept 4723 >> Accept Beached Sea Creature
 step
     #completewith Ameth
-     >> 杀死漫游者。掠夺他们以获取“漫游者肉”
+     >> Kill Striders. Loot them for Strider Meat
     .collect 5469,5,2178,1
 step
 	#era/som
     #completewith Ameth
-     >> 杀死任何类型的登月者
+     >> Kill any type of Moonstalker
     .complete 1002,1
 --N mushrooms
 step
     #completewith bears1
-     >> 在穿越黑暗海岸时杀死狂犬病蓟熊
+     >> Kill Rabid Thistle Bears as you quest through Darkshore
     .complete 2138,1
 --N bears
 step
     .goto Darkshore,44.18,20.60
-    .accept 4725 >> 接受海滩海龟
+    .accept 4725 >> Accept Beached Sea Turtle
 step
     .goto Darkshore,50.81,25.50
-     >> 使用瀑布底部的空采样管
+     >> Use the Empty Sampling Tube at the base of the waterfall
     .complete 4762,1
 step
     #label bears1
     .goto Felwood,27.70,10.03
-    .turnin 954 >> 转入Bashal’Aran
-    .accept 955 >> 接受Bashal'Aran
+    .turnin 954 >> Turn in Bashal'Aran
+    .accept 955 >> Accept Bashal'Aran
 step
     .goto Felwood,29.13,12.34
-     >> 杀死格雷金斯。抢劫他们的耳环
+     >> Kill Grellkins. Loot them for their earrings
     .complete 955,1
 step
     .goto Felwood,27.70,10.03
-    .turnin 955 >> 转入Bashal’Aran
-    .accept 956 >> 接受Bashal'Aran
+    .turnin 955 >> Turn in Bashal'Aran
+    .accept 956 >> Accept Bashal'Aran
 step
     .goto Felwood,29.60,12.52
-     >> 杀死萨特尔斯。抢劫他们以换取封印
+     >> Kill Satyrs. Loot them for the Seal
     .complete 956,1
 step
     .goto Felwood,27.70,10.03
-    .turnin 956 >> 转入Bashal’Aran
-    .accept 957 >> 接受Bashal'Aran
+    .turnin 956 >> Turn in Bashal'Aran
+    .accept 957 >> Accept Bashal'Aran
 step
     #completewith next
-    >>杀死猫头鹰并收集小鸡蛋，以便稍后进行平地烹饪。
+    >>Kill Owlbeasts and collect small eggs for leveling cooking later.
     .collect 6889,9,2178
 step
     .goto Felwood,31.29,24.14
-     >> 跑到山上的红水晶
+     >> Run up to The Red Crystal in the mountains
      .complete 4811,1
 step
     .goto Darkshore,44.4,51.2
-    >>杀死猫头鹰，确保你至少有9个小鸡蛋来烹饪
-    >>如果你在烹饪方面已经掌握了10分，请跳过这一步。
+    >>Kill Owlbeasts and make sure you have at least 9 small eggs to level cooking
+    >>Skip this step if you already have 10 points in cooking.
     .collect 6889,9,2178
 step
     #label Ameth
     .goto Darkshore,40.30,59.70
-    .accept 953 >> 接受Ameth’Aran的堕落
+    .accept 953 >> Accept The Fall of Ameth'Aran
 step
     #sticky
     #label anaya
     .goto Darkshore,42.29,60.46,0
-     >> 杀死Anaya Dawnrunner。她在Ameth’Aran市中心巡逻
+     >> Kill Anaya Dawnrunner. She patrols around the middle of Ameth'Aran
     .complete 963,1
     .unitscan ANAYA DAWNRUNNER
 step
     #label ghosts
     #sticky
     .goto Darkshore,42.66,61.90,0
-     >> 杀死和掠夺鬼魂
+     >> Kill and loot ghosts
     .complete 958,1
 step
     .goto Felwood,26.71,35.53
-     >> 点击地面上的平板电脑
+     >> Click on the tablet on the ground
     .complete 953,1
 step
     .goto Felwood,25.66,39.11
-     >> 点击露台上的绿色火炬
+     >> Click on the green torch at the gazebo
     .complete 957,1
 step
     .goto Felwood,25.98,40.62
-     >> 点击地面上的平板电脑
+     >> Click on the tablet on the ground
     .complete 953,2
 step
     #requires anaya
     .goto Felwood,23.29,36.73
-    .turnin 953 >> 《阿米思·阿兰的堕落》(The Fall of Ameth’Aran)
+    .turnin 953 >> Turn in The Fall of Ameth'Aran
 step
     #requires ghosts
     #completewith Bears
-     >> 杀死漫游者。掠夺他们以获取“漫游者肉”
+     >> Kill Striders. Loot them for Strider Meat
     .collect 5469,5,2178,1
 --N Bears
 step
 	#era/som
     #completewith Mushrooms
-     >> 杀死任何类型的登月者
+     >> Kill any type of Moonstalker
     .complete 1002,1
 --N mushrooms
 step
     #completewith Bears
-     >> 在穿越黑暗海岸时杀死狂犬病蓟熊
+     >> Kill Rabid Thistle Bears as you quest through Darkshore
     .complete 2138,1
 --N bears
 step
     #requires ghosts
     .goto Felwood,18.41,49.43
-    .accept 4728 >> 接受海滩生物
+    .accept 4728 >> Accept Beached Sea Creature
 step
     #label Bears
     .goto Felwood,19.64,39.52
-    .accept 4722 >> 接受海滩海龟
+    .accept 4722 >> Accept Beached Sea Turtle
 step
     .goto Darkshore,38.83,60.82
-    >>完成杀死狂犬病蓟熊并获得漫游者肉
+    >>Finish killing Rabid Thistle Bears and getting Strider Meat
     .complete 2138,1 --Rabid Thistle Bear (20)
     .collect 5469,5,2178,1
 step
     .goto Felwood,22.39,29.45
-     >> 杀死Furbolgs。当风语家施放“阵风”以躲避时，请远离风语家约10码
-     >> 像探路者猛击一样小心(每10秒左右一次攻击3次)。
+     >> Kill Furbolgs. Move about 10 yards away from the Windtalkers when they cast Gust of Wind to dodge it
+     >> Be careful as Pathfinders Thrash (3 attacks at once every 10s or so).
     .complete 985,1
     .complete 985,2
 step
     .goto Felwood,18.50,19.87
-    .accept 1138 >> 接受大海的果实
+    .accept 1138 >> Accept Fruit of the Sea
 step
     .goto Felwood,19.10,20.63
-    .turnin 4723 >> 上缴海滩生物
-    .turnin 4728 >> 上缴海滩生物
-    .turnin 4722 >> 上缴海滩海龟
-    .turnin 4725 >> 上缴海滩海龟
+    .turnin 4723 >> Turn in Beached Sea Creature
+    .turnin 4728 >> Turn in Beached Sea Creature
+    .turnin 4722 >> Turn in Beached Sea Turtle
+    .turnin 4725 >> Turn in Beached Sea Turtle
 step
-    >>在码头上
+    >>On the Dock
     .goto Felwood,18.10,18.48
-    .turnin 963 >> 为了永恒的爱而投入
+    .turnin 963 >> Turn in For Love Eternal
 step
     .goto Felwood,20.04,16.35
-    .accept 729 >> 接受心不在焉的探矿者
+    .accept 729 >> Accept The Absent Minded Prospector
 step
     #completewith ezstrider
     .goto Felwood,20.80,15.58
-    .vendor 6301 >> 如果你在烹饪方面没有10分的话，买温和的香料，煮香草烤鸡蛋
+    .vendor 6301 >> Buy Mild Spice and cook herb baked eggs if you don't have 10 points in cooking
 step
     .goto Felwood,20.80,15.58
-    .turnin 982 >> 转向深海，浩瀚大海
+    .turnin 982 >> Turn in Deep Ocean, Vast Sea
 step
     #label ezstrider
     .goto Darkshore,37.70,40.70
-    .accept 2178 >> 接受轻松漫游生活
-    .turnin 2178 >> 轻松漫游生活
-    >>这个任务需要烹饪10分
+    .accept 2178 >> Accept Easy Strider Living
+    .turnin 2178 >> Turn in Easy Strider Living
+    >>This quest requires 10 points in cooking
 step
     .goto Felwood,19.98,14.40
-    .turnin 958 >> 上流社会的工具
-    .turnin 4762 >> 转入悬崖泉河
-    .accept 4763 >> 接受Blackwood Corrupted
+    .turnin 958 >> Turn in Tools of the Highborne
+    .turnin 4762 >> Turn in The Cliffspring River
+    .accept 4763 >> Accept The Blackwood Corrupted
 step
     .goto Felwood,20.34,18.12
-    .turnin 4811 >> 交出红色水晶
-    .accept 4812 >> 接受为瀑布
+    .turnin 4811 >> Turn in The Red Crystal
+    .accept 4812 >> Accept As Water Cascades
 step
     .goto Darkshore,37.78,44.06
-     >> 在月光井处填充空水管/空碗
+     >> Fill the Empty Water Tube/Empty Bowl at the moonwell
     .complete 4812,1
     .collect 12347,1,4763,1
 step
     .goto Felwood,21.63,18.15
-    .turnin 2138 >> 上交感染者的清洁
-    .accept 2139 >> 接受塔纳瑞恩的希望
+    .turnin 2138 >> Turn in Cleansing of the Infected
+    .accept 2139 >> Accept Tharnariun's Hope
 step
     .goto Felwood,22.24,18.22
-    .turnin 985 >> 交出威胁有多大？
-    .accept 986 >> 接受丢失的主人
+    .turnin 985 >> Turn in How Big a Threat?
+    .accept 986 >> Accept A Lost Master
 step
     .goto Felwood,21.86,18.30
-     >> 跑上楼去
-    .accept 965 >> 接受Althalaxx塔
+     >> Run upstairs
+    .accept 965 >> Accept The Tower of Althalaxx
 step
     .goto Felwood,31.29,24.14
-     >> 点击红色水晶
-    .turnin 4812 >> 随着瀑布转向
-    .accept 4813 >> 接受其中的片段
+     >> Click on the red crystal
+    .turnin 4812 >> Turn in As Water Cascades
+    .accept 4813 >> Accept The Fragments Within
 step
     .goto Felwood,27.70,10.03
-    .turnin 957 >> 转入Bashal’Aran
+    .turnin 957 >> Turn in Bashal'Aran
 step << Paladin
 	#completewith next
     .goto Darkshore,50.74,34.68,0
-	>>开始保存从Furbolgs区域掠夺的亚麻布。
+	>>Start saving the Linen Cloth you loot in the area from the Furbolgs.
 	.collect 2589,10,1,1644 --Linen Cloth (10)
 step
     .goto Darkshore,50.74,34.68
-    >>从木桶中掠夺黑木谷物样本，然后向东南方向奔向巢穴母亲，掠夺木桶将导致2个暴徒繁殖，小心
+    >>Loot the Blackwood Grain Sample from the Barrel, then run south-east toward Den Mother, looting the barrel will make 2 mobs spawn, be careful
     .collect 12342,1,4763,1 --Blackwood Grain Sample (1)
 step
     .goto Darkshore,52.60,36.65,45,0
-    >>杀死丹妈。小心，因为她的幼崽会把你打倒2秒钟
+    >>Kill Den Mother. Be careful as her cubs can knock you down for 2 seconds
     .goto Darkshore,51.48,38.26
     .complete 2139,1 --Den Mother (1)
 step << Paladin
 	#completewith Fruit
     .goto Darkshore,50.74,34.68,0
-	>>开始保存从Furbolgs区域掠夺的亚麻布。
+	>>Start saving the Linen Cloth you loot in the area from the Furbolgs.
 	.collect 2589,10,1,1644 --Linen Cloth (10)
 step
-    >>从桶里偷走黑木坚果样本
+    >>Loot the Blackwood Nut Sample from the Barrel
     .goto Darkshore,51.80,33.51
     .collect 12343,1 --Blackwood Nut Sample (1)
 step
 	#label Fruit
-    >>从桶里偷走黑木果样本。一群暴徒会在你面前，以及在西部的小屋之间滋生，你可能不得不逃跑
+    >>Loot the Blackwood Fruit Sample from the Barrel. A mob will spawn in front of you, and in between the huts of the west - you may have to run
     .goto Darkshore,52.85,33.42
     .collect 12341,1 --Blackwood Fruit Sample (1)
 step
     #label xabraxxis
     .goto Darkshore,52.6,33.6
-     >> 使用篝火旁库存中的碗召唤Xabraxxis。杀了他
-     >> 小心，因为这个任务可能很困难，因为他对低血量感到愤怒，并造成大量伤害。但他确实死得很快
+     >> Use the bowl in your inventory near the bonfire to summon Xabraxxis. Kill him
+     >> Be careful, as this quest can be difficult as he enrages at low health and deals a LOT of damage. He does die quickly though
     .complete 4763,1
 step
     #completewith next
-    .goto 冬泉谷,5.49,36.64,45 >> 前往瀑布上方的洞穴
+    .goto Winterspring,5.49,36.64,45 >> Head to the cave above the waterfall
 step
     #label Mushrooms
     .goto Darkshore,55.66,34.89
-     >> 停留在洞穴的上部。如果顶部末端没有死亡帽，则从下面放下并取一个
-     >> 当你洗劫死亡帽时，洞口的第一个蓝色的应该已经复活了
+     >> Stay on the upper part of the cave. If theres no Death Cap at the end of the top side, then drop down and get one from below
+     >> The first blue one at the mouth of the cave should've respawned by the time you've looted the Death Cap
     .complete 947,1 --Scaber Stalk (5)
     .complete 947,2 --Death Cap (1)
 step
-    .goto 冬泉谷,4.82,27.18
-    .turnin 965 >> 转入Althalaxx塔
-    .accept 966 >> 接受Althalaxx塔
+    .goto Winterspring,4.82,27.18
+    .turnin 965 >> Turn in The Tower of Althalaxx
+    .accept 966 >> Accept The Tower of Althalaxx
 step << Paladin
 	#completewith next
     .goto Darkshore,55.36,26.84
-	>>杀死黑股狂热分子。抢他们10块亚麻布
+	>>Kill Dark Strand Fanatics. Loot them for 10 Linen Cloth
 	.collect 2589,10,1,1644 --Linen Cloth (10)
 step
-    >>杀死黑股狂热分子。抢他们的羊皮纸
+    >>Kill Dark Strand Fanatics. Loot them for Parchments
     .goto Darkshore,55.36,26.84
     .complete 966,1 --Worn Parchment (4)
 step << Paladin
     .goto Darkshore,55.36,26.84
-	>>杀死黑股狂热分子。抢他们10块亚麻布
+	>>Kill Dark Strand Fanatics. Loot them for 10 Linen Cloth
 	.collect 2589,10,1,1644 --Linen Cloth (10)
 step
-    .goto 冬泉谷,4.82,27.18
-    .turnin 966 >> 转入Althalaxx塔
-    .accept 967 >> 接受Althalaxx塔
+    .goto Winterspring,4.82,27.18
+    .turnin 966 >> Turn in The Tower of Althalaxx
+    .accept 967 >> Accept The Tower of Althalaxx
 step  << !Warrior !Paladin !Rogue !Druid
-    .goto 冬泉谷,6.37,16.66
-    .accept 2098 >> 接受陀螺仪的检索
+    .goto Winterspring,6.37,16.66
+    .accept 2098 >> Accept Gyromast's Retrieval
 step  << !Warrior !Paladin !Rogue !Druid
     .goto Darkshore,56.33,14.97
-    >> 杀死海岸边的愤怒的暗礁爬行动物。小心，因为他们猛击，一次最多可以造成200点伤害。抢走钥匙的底部
+    >> Kill Raging Reef Crawlers along the coast. Be careful as they thrash and can deal up to 200 damage at once. Loot them for the bottom part of the key
     .complete 2098,3
 step  << !Warrior !Paladin !Rogue !Druid
     .goto Darkshore,55.36,12.70
-     >> 在水中杀死穆洛克。当甲壳虫受到重击(80点闪电伤害)并且可以完全恢复时，请小心。抢走钥匙的中间部分
-    >>如果需要的话，你可以把神谕放在船头周围
+     >> Kill Murlocs in the water. Be careful as the Oracles hit hard (80 damage Lightning Bolts) and can heal to full. Loot them for the middle part of the key
+    >>You can LoS the oracles around the front of the boat if needed
     .complete 2098,2
 step  << !Warrior !Paladin !Rogue !Druid
     #sticky
     #label ForestKey
     .goto Darkshore,60.50,12.19,0
-     >> 杀死林蛙。抢走钥匙的顶部
+     >> Kill Foreststriders. Loot them for the top part of the key
     .complete 2098,1
 step
 	#era/som
     .goto Darkshore,61.40,9.40
-     >> 打磨登月者陛下/母兽的皮毛和毒牙
+     >> Grind Moonstalker Sires/Matriarchs for pelts and fangs
     .complete 986,1
     .complete 1002,1
 step
 	#som
 	#phase 3-6
     .goto Darkshore,61.40,9.40
-     >> 打磨登月者陛下/母兽的皮毛和毒牙
+     >> Grind Moonstalker Sires/Matriarchs for pelts and fangs
     .complete 986,1
 step  << !Warrior !Paladin !Rogue !Druid
     #requires ForestKey
-    .goto 冬泉谷,6.37,16.66
-    .turnin 2098 >> 交回陀螺仪检索
-    .accept 2078 >> 接受陀螺手的复仇  << !Warrior !Paladin !Rogue
+    .goto Winterspring,6.37,16.66
+    .turnin 2098 >> Turn in Gyromast's Retrieval
+    .accept 2078 >> Accept Gyromast's Revenge  << !Warrior !Paladin !Rogue
 step  << !Warrior !Paladin !Rogue !Druid
-    .goto 冬泉谷,5.59,21.09
-    >> 与Threshwackonator 4100交谈
-    >>护送它回Gyromast并杀死它
-    >>这个精英任务很难，如果你做不到，跳过这一步
+    .goto Winterspring,5.59,21.09
+    >> Speak with The Threshwackonator 4100
+    >>Escort it back to Gyromast and kill it
+    >>This elite quest is HARD, skip this step if you can't do it
     .complete 2078,1
-    .link https://clips.twitch.tv/VainAmorphousMacaroniPRChase-iGvhTnz0ked6LO0A >> 点击此处查看视频参考
+    .link https://clips.twitch.tv/VainAmorphousMacaroniPRChase-iGvhTnz0ked6LO0A >> Click here for video reference
 step  << !Warrior !Paladin !Rogue !Druid
-    .goto 冬泉谷,6.37,16.66
-    .turnin 2078 >> 交回陀螺手的复仇
+    .goto Winterspring,6.37,16.66
+    .turnin 2078 >> Turn in Gyromast's Revenge
     .isQuestComplete 2078
 step   << !Warrior !Paladin !Rogue !Druid
     #sticky
-    .destroy 7442>> 扔掉陀螺仪的钥匙
+    .destroy 7442>> Throw away Gyromast's Key
 step
-    .goto 冬泉谷,3.10,20.90
-    .accept 4727 >> 接受海滩海龟
+    .goto Winterspring,3.10,20.90
+    .accept 4727 >> Accept Beached Sea Turtle
 step
 	#era/som
     #completewith next
     .goto Darkshore,53.0,18.4,0
     .goto Darkshore,50.4,22.6,0
-     >> 杀死沿岸的珊瑚虫/结壳潮汐虫。抢走螃蟹块
+     >> Kill Reef Crawlers/Encrusted Tide Crawlers along the coast. Loot them for Crab Chunks
     .complete 1138,1
 step
 	#era/som
-    .goto 冬泉谷,1.42,26.89
-    .turnin 1002 >> 打开Buzzbox 323
-    .accept 1003 >> 接受Buzzbox 525
+    .goto Winterspring,1.42,26.89
+    .turnin 1002 >> Turn in Buzzbox 323
+    .accept 1003 >> Accept Buzzbox 525
 step
     .goto Darkshore,51.50,22.26,100,0
     .goto Darkshore,53.0,18.4,0
     .goto Darkshore,50.4,22.6,0
     .goto Darkshore,44.8,21.6,0
-     >> 杀死珊瑚虫/结壳潮汐虫。抢走螃蟹块
+     >> Kill Reef Crawlers/Encrusted Tide Crawlers. Loot them for Crab Chunks
     .complete 1138,1
 step <<  NightElf
      #softcore
     #completewith next
-    .deathskip >> 研磨直到你的炉石冷却时间<6分钟，然后死亡扭曲到奥伯丁
+    .deathskip >> Grind until your Hearthstone cooldown is <6 minutes then death warp to Auberdine
 step <<  NightElf
      #hardcore
     #completewith next
-    +研磨直到你的炉石冷却时间<9分钟，然后跑回奥伯丁
+    +Grind until your Hearthstone cooldown is <9 minutes then run back to Auberdine
 step
      #completewith next
-    .hs >> 赫斯回到奥伯丁
+    .hs >> Hearth back to Auberdine
 step
     .goto Felwood,19.10,20.63
-    .turnin 4727 >> 上缴海滩海龟
+    .turnin 4727 >> Turn in Beached Sea Turtle
 step
     .goto Felwood,18.50,19.87
-    .turnin 1138 >> 把海果交上来
+    .turnin 1138 >> Turn in Fruit of the Sea
 step
     .goto Felwood,19.78,19.07
-     >> 点击酒店外的通缉海报
-    .accept 4740 >> 接受通缉令：Murkdeep！
+     >> Click on the wanted poster outside the inn
+    .accept 4740 >> Accept WANTED: Murkdeep!
 step
     .goto Felwood,20.34,18.12
-    .turnin 4813 >> 交出其中的碎片
+    .turnin 4813 >> Turn in The Fragments Within
 step
     .goto Felwood,19.90,18.40
-    .turnin 947 >> 转入洞穴蘑菇
-    .accept 948 >> 接受Onu
+    .turnin 947 >> Turn in Cave Mushrooms
+    .accept 948 >> Accept Onu
 step
     .goto Felwood,21.63,18.15
-    .turnin 2139 >> 交给塔纳瑞恩的希望
+    .turnin 2139 >> Turn in Tharnariun's Hope
 step
     .goto Darkshore,39.37,43.48
-    .turnin 986 >> 交出一个丢失的主人
-    .accept 993 >> 接受丢失的主人
+    .turnin 986 >> Turn in A Lost Master
+    .accept 993 >> Accept A Lost Master
 step
     .goto Darkshore,37.70,40.70
-    .accept 2178 >> 接受轻松漫游生活
-    .turnin 2178 >> 轻松漫游生活
-    >>这个任务需要烹饪10分
+    .accept 2178 >> Accept Easy Strider Living
+    .turnin 2178 >> Turn in Easy Strider Living
+    >>This quest requires 10 points in cooking
 step
     .goto Felwood,19.98,14.40
-    .turnin 4763 >> 交出腐败的黑木
+    .turnin 4763 >> Turn in The Blackwood Corrupted
 step
     #softcore
     .goto Elwynn Forest,26.29,38.50
-    .zone Stormwind City >> 乘船前往米奈希尔，飞往铁炉堡，然后乘坐电车前往暴风城
-    >>或
-    >>使用网站解卡自助服务传送回暴风城(更快)
+    .zone Stormwind City >> Take the boat to Menethil, fly to Ironforge and take the tram to Stormwind
+    >>OR
+    >>Use the website unstuck self service to teleport back to Stormwind (much faster)
 step
     #hardcore
     .goto Darkshore,32.42,43.75,50,0
     .goto Darkshore,32.42,43.75,0
-    .zone Wetlands >> 乘船去米奈希尔
+    .zone Wetlands >> Take the boat to Menethil
 step
     #hardcore
     #completewith next
@@ -1846,421 +1846,421 @@ step
     .goto Wetlands,10.1,56.9,25,0
     .goto Wetlands,10.6,57.2,25,0
     .goto Wetlands,10.7,56.8
-    .vendor >> 如果你有8s，检查Neal Allen的青铜管，如果有就买。否则，请跳过此步骤
+    .vendor >> If you have 8s, Check for Bronze Tube from Neal Allen and buy it if it's there. Otherwise, skip this step
     .bronzetube
 step
     #hardcore
     .goto Wetlands,9.49,59.69
-    .fly Ironforge >> 飞往铁炉堡
+    .fly Ironforge >> Fly to Ironforge
 step
     #hardcore
     #completewith next
     .goto Ironforge,56.23,46.83,0
-    +执行注销跳过，跳到鹰头狮的头上，注销，然后再重新登录
-    .link https://www.youtube.com/watch?v=PWMJhodh6Bw >> 单击此处
+    +Perform a Logout skip by jumping on top of one of the Gryphon's heads, and logging out, then back in
+    .link https://www.youtube.com/watch?v=PWMJhodh6Bw >> CLICK HERE
 step
     #hardcore
-    .goto Ironforge,77.0,51.0,60 >> 跑到Deeprun Tram
-    >>在等待/乘坐电车时进行急救训练，您需要80分的急救积分才能完成24级任务 << Rogue
+    .goto Ironforge,77.0,51.0,60 >> Run to the Deeprun Tram
+    >>Train first aid while wating/riding the tram, you'll need 80 points in first aid for a level 24 quest later down the road << Rogue
 step
     #hardcore
     .goto Elwynn Forest,26.29,38.50
-    .zone Stormwind City >> 乘电车去暴风城
+    .zone Stormwind City >> Take the Tram to Stormwind City
 ]])
 
 RXPGuides.RegisterGuide([[
 #classic
 << Alliance Hunter
-#name 19-21 黑海岸/灰谷
+#name 19-21 Darkshore/Ashenvale
 #version 1
-#group RestedXP 联盟 1-20
-#next RestedXP联盟20-30\21-23灰谷/石爪
+#group RestedXP Alliance 1-20
+#next RestedXP Alliance 20-30\21-23 Ashenvale/Stonetalon
 
 step
     #sticky
     #label prospector
     .goto Felwood,18.08,64.03
-    .turnin 729 >> 交回心不在焉的探矿者
+    .turnin 729 >> Turn in The Absent Minded Prospector
 step <<  Hunter
     .goto Darkshore,35.72,83.69
-     >> 开始护送任务
-    >>这个任务很难，小心进行
-    .accept 731 >> 接受心不在焉的探矿者
-    .link https://www.twitch.tv/videos/1182180918 >> 点击此处查看视频参考
+     >> Start the escort quest
+    >>This quest is hard, proceed with caution
+    .accept 731 >> Accept The Absent Minded Prospector
+    .link https://www.twitch.tv/videos/1182180918 >> Click here for video reference
 step <<  Hunter
     #requires prospector
-     >> 护送探矿者返程
+     >> Escort Prospector Remtravel
      .complete 731,1
-    .link https://www.twitch.tv/videos/1182180918 >> 点击此处查看视频参考
+    .link https://www.twitch.tv/videos/1182180918 >> Click here for video reference
 step
     #completewith next
     .goto Ashenvale,22.36,3.98
-    >>开始护送任务
-    .accept 945 >> 接受Therylune的逃脱
+    >>Start the escort quest
+    .accept 945 >> Accept Therylune's Escape
 step
     .goto Ashenvale,22.36,3.98
-    >> 护送Therylune
+    >> Escort Therylune
     .complete 945,1
 step
 	#era/som
     .goto Ashenvale,13.97,4.10
-    .accept 4733 >> 接受海滩生物
-    >>这个任务可能有点难，试着把墨洛克一个接一个地拉过来，否则你可能会惹恼整个阵营
-    .link https://www.twitch.tv/videos/992307825?t=05h48m36s >> 点击此处查看视频参考
+    .accept 4733 >> Accept Beached Sea Creature
+    >>This quest can be a little hard, try to pull the murlocs 1 by 1, otherwise you can end up aggroing the whole camp
+    .link https://www.twitch.tv/videos/992307825?t=05h48m36s >> Click here for video reference
 step
 	#era/som
     .goto Ashenvale,13.93,2.01
-    .accept 4732 >> 接受海滩海龟
+    .accept 4732 >> Accept Beached Sea Turtle
 step
 	#era/som
     .goto Felwood,13.47,64.01
-    .accept 4731 >> 接受海滩海龟
+    .accept 4731 >> Accept Beached Sea Turtle
 step
 	#era/som
     .goto Felwood,14.62,60.72
-    .accept 4730 >> 接受海滩生物
+    .accept 4730 >> Accept Beached Sea Creature
 step
 	#era/som
-    >>杀死灰蓟熊
+    >>Kill Grizzled Thistle Bears
     .complete 1003,1
 step
 	#era/som
     .goto Felwood,24.53,60.46
-    .turnin 1003 >> 打开Buzzbox 525
+    .turnin 1003 >> Turn in Buzzbox 525
 step
     #label lostmaster1
     #completewith lostmaster2
     #sticky
     .goto Ashenvale,29.58,1.67
-    .turnin 993 >> 交出一个丢失的主人
+    .turnin 993 >> Turn in A Lost Master
 step
 	#era/som
-     >> 在接受这个任务之前，清除洞穴附近的裂谷
-    .accept 994 >> 接受武力逃跑
+     >> Clear the furbolgs near the cave before accepting this quest
+    .accept 994 >> Accept Escape Through Force
 step
 	#som
 	#phase 3-6
-     >> 接受请求并等待RP序列完成
-    .accept 995 >> 接受隐身逃跑
+     >> Accept the quest and wait for the RP sequence to finish
+    .accept 995 >> Accept Escape Through Stealth
 step
 	#era/som
     #requires lostmaster1
     #label lostmaster2
-     >> 护送Volcor
+     >> Escort Volcor
      .complete 994,1
 step
 	#som
 	#phase 3-6
     #requires lostmaster1
     #label lostmaster2
-     >> 等待RP对话结束
+     >> Wait for the RP dialogue to end
      .complete 995,1
 step
     .goto Felwood,27.00,55.59
-    .turnin 951 >> 交还Mathystra遗迹
+    .turnin 951 >> Turn in Mathystra Relics
 step
     .goto Felwood,27.96,55.76
-    >>与科隆尼安对话，开始护送任务
-    >>如果他不在，你可以跳过这个任务(根据其他玩家的不同，重生最多需要25分钟)
-    .accept 5321 >> 接受睡眠者醒来
+    >>Speak to Kerlonian and start the escort quest
+    >>If he's not there, you can skip this quest (can take up to 25 minutes to respawn depending on other players)
+    .accept 5321 >> Accept The Sleeper Has Awakened
 step
     .isOnQuest 5321
     .goto Darkshore,44.38,76.30
-     >> 抢劫任务给予者旁边的箱子
+     >> Loot the chest next to the quest giver
     .complete 5321,1
 step
      #completewith tower
-     .zone Ashenvale >> 向南前往灰谷
+     .zone Ashenvale >> Head south to Ashenvale
      .goto Ashenvale,29.7,13.6
 step
     .goto Ashenvale,27.26,35.58
-    >>在执行护送任务时，避免走在主要道路上
+    >>Avoid walking on the main road while doing the escort quest
      .complete 5321,2
      .isOnQuest 5321
 step
     .goto Ashenvale,27.26,35.58
-    .turnin 5321 >> 睡觉的人醒了
+    .turnin 5321 >> Turn in The Sleeper Has Awakened
     .isQuestComplete 5321
 step
     #label tower
     .goto Ashenvale,26.19,38.69
-    .turnin 967 >> 转入Althalaxx塔
+    .turnin 967 >> Turn in The Tower of Althalaxx
 step
 	#era/som
     .goto Ashenvale,26.19,38.69
-    .accept 970 >> 接受Althalaxx塔
+    .accept 970 >> Accept The Tower of Althalaxx
 step
 	#era/som
      #completewith next
     .goto Ashenvale,31.41,30.66
-     >> 杀死信徒
+     >> Kill cultists
     .complete 970,1
 step
 	#era/som
      #completewith next
     .goto Ashenvale,26.19,38.69
-    .turnin 970 >> 转入Althalaxx塔
+    .turnin 970 >> Turn in The Tower of Althalaxx
 step
-    .xp 20 >> 升级到20级
+    .xp 20 >> Grind to level 20
 step
     .goto Ashenvale,26.43,38.59
-    .accept 1010 >> 接受Bathran的头发
+    .accept 1010 >> Accept Bathran's Hair
 step
     .goto Ashenvale,31.63,22.33
-     >> 当心地上的药草袋
+     >> Look out for the herb sacks on the ground
     .complete 1010,1
 step
 	#era/som
     .goto Ashenvale,31.41,30.66
-     >> 杀死信徒
+     >> Kill cultists
     .complete 970,1
 step
     #sticky
     #label hair
     .goto Ashenvale,26.43,38.59
-    .turnin 1010 >> 把Bathran的头发交上来
-    .accept 1020 >> 接受奥伦迪尔的治疗
+    .turnin 1010 >> Turn in Bathran's Hair
+    .accept 1020 >> Accept Orendil's Cure
 step
 	#era/som
     .goto Ashenvale,26.43,38.59
-    .turnin 970 >> 转入Althalaxx塔
-    .accept 973 >> 接受Althalaxx塔
+    .turnin 970 >> Turn in The Tower of Althalaxx
+    .accept 973 >> Accept The Tower of Althalaxx
 step
     #requires hair
     .goto Ashenvale,22.64,51.91
-    .turnin 945 >> 交给Therylune的逃亡
+    .turnin 945 >> Turn in Therylune's Escape
     .isQuestComplete 945
 step
     #completewith end
-     +最多保存6条从该区域的蜘蛛身上掠夺的Gooey Spider Legs，以备日后使用
+     +Save up to 6 Gooey Spider Legs looted from the Spiders in the zone for later
 step <<  Hunter
     .goto Ashenvale,18.00,59.80
-    >>前往灰谷的猎人训练师
-    .train 5118 >> 与猎人训练师交谈，学习猎豹的特性
-    .train 15147 >> 训练宠物技能
+    >>Head to the Hunter trainer in Ashenvale
+    .train 5118 >> Speak to the hunter trainer and learn Aspect of the Cheetah
+    .train 15147 >> Train pet skills
 step
     .goto Ashenvale,34.40,48.00
-    .fp Astranaar>> 获取Astranaar飞行路线
+    .fp Astranaar>> Get the Astranaar Flight Path
 step
     .goto Ashenvale,34.67,48.83
-    .accept 1008 >> 接受Zoram Strand
+    .accept 1008 >> Accept The Zoram Strand
 step
     .goto Ashenvale,34.89,49.79
-    .accept 1070 >> 《石爪》中的守卫接受
+    .accept 1070 >> Accept On Guard in Stonetalon
 step
     .goto Ashenvale,35.76,49.10
-    .accept 1056 >> 接受石爪峰之旅
+    .accept 1056 >> Accept Journey to Stonetalon Peak
 step
     .goto Ashenvale,36.61,49.58
-    .accept 991 >> 接受Raene的清洁
-    .accept 1054 >> 接受消除威胁
+    .accept 991 >> Accept Raene's Cleansing
+    .accept 1054 >> Accept Culling the Threat
 step <<  !Dwarf/!Hunter
-    .home >> 将HS设置为Astranaar
+    .home >> Set your HS to Astranaar
 step
     .goto Ashenvale,37.36,51.79
-    .turnin 1020 >> 交给奥伦迪尔的治疗
+    .turnin 1020 >> Turn in Orendil's Cure
     .timer 26,Orendil's Cure RP
 step
     .goto Ashenvale,37.36,51.79
-     >> 等待RP序列结束
-    .accept 1033 >> 接受艾露恩的眼泪
+     >> Wait for the RP sequence to end
+    .accept 1033 >> Accept Elune's Tear
 step
     .goto Ashenvale,46.37,46.38
-     >> 抢劫珍珠状物品
-    >>小心潜入水下的暴徒
+     >> Loot the pearl shaped objects
+    >>Be careful with mobs sneaking underwater
     .complete 1033,1
 step
     .goto Ashenvale,37.36,51.79
-     >> 等待RP序列结束
-    .turnin 1033 >> 艾露恩的眼泪
-    .accept 1034 >> 接受星尘的废墟
+     >> Wait for the RP sequence to end
+    .turnin 1033 >> Turn in Elune's Tear
+    .accept 1034 >> Accept The Ruins of Stardust
 step
     .goto Ashenvale,33.30,67.79
-     >> 抢劫湖岛上的灌木丛
+     >> Loot the bushes at the lake island
     .complete 1034,1
 step
     #completewith next
-    .goto Ashenvale,31.67,64.24,15 >> 前往山脚
-    .goto Ashenvale,31.21,61.60,15 >>爬山时笔直向北跑
+    .goto Ashenvale,31.67,64.24,15 >> Head to the base of the mountain
+    .goto Ashenvale,31.21,61.60,15 >>Run straight north while climbing the mountain
 step
     #completewith next
-    .goto Ashenvale,27.50,60.76,8 >> 爬上火疤神殿入口右侧大树旁的小山
-    >>跳过树根，拥抱右侧，以避免暴徒的攻击
+    .goto Ashenvale,27.50,60.76,8 >> Climb the hill next to the big tree to the right of the Fire Scar Shrine entrance
+    >>Jump over the tree root and hug the right to avoid aggroing mobs
 step
 	#era/som
     .goto Ashenvale,25.27,60.68
-    >>杀死伊尔克鲁德·马格索尔
-    >>这个任务很难，你可以现在跳过这个，稍后在23级完成
+    >>Kill Ilkrud Magthrull
+    >>This quest is HARD, you can skip this right now and do it later at level 23
     .complete 973,1
-    .link https://www.twitch.tv/videos/1182187763 >> 点击此处查看视频参考
+    .link https://www.twitch.tv/videos/1182187763 >> Click here for video reference
 	.isOnQuest 973
 step
 	#era/som
     .isQuestComplete 973
     .goto Ashenvale,26.19,38.69
-    .turnin 973 >> 转入Althalaxx塔
+    .turnin 973 >> Turn in The Tower of Althalaxx
 step
     .goto Ashenvale,14.79,31.29
-    .accept 1007 >> 接受古代雕像
+    .accept 1007 >> Accept The Ancient Statuette
 step
     #sticky
     #label nagas
     .goto Ashenvale,7.00,15.20,0
-     >> 杀死海岸附近的纳加人
+     >> Kill nagas around the coast
     .complete 1008,1
 step
     .goto Ashenvale,14.20,20.64
-     >> 抢劫古代雕像
+     >> Loot The Ancient Statuette
     .complete 1007,1
 step
     .goto Ashenvale,14.79,31.29
-     >> 等待RP序列
-    .turnin 1007 >> 上缴古代雕像
+     >> Wait for the RP sequence
+    .turnin 1007 >> Turn in The Ancient Statuette
     .timer 25,The Ancient Statuette RP
-    .accept 1009 >> 接受鲁泽尔
+    .accept 1009 >> Accept Ruuzel
 step
     .goto Ashenvale,7.40,13.40
-     >> 杀死鲁泽尔
-    >>维斯皮亚女士(罕见)也会掉落戒指
+     >> Kill Ruuzel
+    >>Lady Vespia (rare) can also drop the ring
     .complete 1009,1
     .unitscan Lady Vespia
 step
     .goto Ashenvale,14.79,31.29
-    .turnin 1009 >> 交给鲁泽尔
+    .turnin 1009 >> Turn in Ruuzel
 step
     #requires nagas
     .goto Ashenvale,20.31,42.33
-    .turnin 991 >> 交上Raene的清洁服务
-    .accept 1023 >> 接受Raene的清洁
+    .turnin 991 >> Turn in Raene's Cleansing
+    .accept 1023 >> Accept Raene's Cleansing
 step
     .goto Ashenvale,20.41,43.82
-    >> 杀死Murlocs直到发光宝石掉落
-    >>保存Murloc翅片供以后使用
-    >>小心，因为神谕可以治愈，每隔几秒就有90点伤害的瞬发冲击法术
+    >> Kill Murlocs until the Glowing Gem drops
+    >>Save Murloc Fins for later
+    >>Be careful as the Oracles can heal, and have a 90 damage instant-cast shock spell every few seconds
     .complete 1023,1
 step <<  Dwarf Hunter
-    .hs >> 赫斯回到奥伯丁
+    .hs >> Hearth back to Auberdine
 step <<  !Dwarf/!Hunter
     #softcore
     #completewith next
-    .deathskip >> 死在湖的东侧，在阿斯特拉纳州的精神疗养院
+    .deathskip >> Die on the eastern side of the lake and spirit rez at Astranaar
 step <<  !Dwarf/!Hunter
     #hardcore
     #completewith next
-    .goto Ashenvale,34.40,48.00,200 >> 跑回阿斯特拉纳
+    .goto Ashenvale,34.40,48.00,200 >> Run back to Astranaar
 step <<  Hunter
     #completewith end
-    .stable  >> 稳定您的宠物
+    .stable  >> Stable your pet
 step <<  !Dwarf/!Hunter
     .goto Ashenvale,34.40,48.00
-    .fly Darkshore>>飞到黑海岸
+    .fly Darkshore>>Fly to Darkshore
 step
     .goto Felwood,20.04,16.35
-    .turnin 731 >> 交回心不在焉的探矿者
-    .accept 741 >> 接受心不在焉的探矿者
+    .turnin 731 >> Turn in The Absent Minded Prospector
+    .accept 741 >> Accept The Absent Minded Prospector
 step
     #completewith end
-    .vendor >> 补充库存/再补给
+    .vendor >> Restock/Resupply
 step
     .goto Felwood,22.24,18.22
-    .turnin 995 >> 转入秘密逃逸
+    .turnin 995 >> Turn in Escape Through Stealth
     .isOnQuest 995
 step
     .goto Felwood,22.24,18.22
-    .turnin 994 >> 通过武力逃跑
+    .turnin 994 >> Turn in Escape Through Force
     .isOnQuest 994
 step
 	#era/som
     .goto Darkshore,36.62,45.59
-    .turnin 4730 >> 上缴海滩生物
-    .turnin 4731 >> 上缴海滩海龟
-    .turnin 4732 >> 上缴海滩海龟
-    .turnin 4733 >> 上缴海滩生物
+    .turnin 4730 >> Turn in Beached Sea Creature
+    .turnin 4731 >> Turn in Beached Sea Turtle
+    .turnin 4732 >> Turn in Beached Sea Turtle
+    .turnin 4733 >> Turn in Beached Sea Creature
 step
     #completewith next
-    .fly Teldrassil>> 飞往Teldrassil
+    .fly Teldrassil>> Fly to Teldrassil
 step
     .goto Teldrassil,23.70,64.51
-    .turnin 741 >> 交回心不在焉的探矿者
-    .accept 942 >> 接受心不在焉的探矿者
+    .turnin 741 >> Turn in The Absent Minded Prospector
+    .accept 942 >> Accept The Absent Minded Prospector
 step <<  !Dwarf/!Hunter
     #label end
-    .hs >> 赫斯返回阿斯特拉纳
+    .hs >> Hearth back to Astranaar
 step <<  Dwarf Hunter
     #label end
-    .fly Ashenvale >> 飞到灰谷
+    .fly Ashenvale >> Fly to Ashenvale
 ]])
 
 RXPGuides.RegisterGuide([[
 #classic
 << Alliance !Hunter
-#name 19-20 赤脊山
+#name 19-20 Redridge
 #version 1
-#group RestedXP 联盟 1-20
-#next 20-21 黑海岸/灰谷
+#group RestedXP Alliance 1-20
+#next 20-21 Darkshore/Ashenvale
 step
     #completewith start
     .goto StormwindClassic,55.21,7.04
-    .vendor >> 如果你没有，就买一个铜管
-    >>这是一个限量供应项目，如果npc没有，请跳过此步骤
---    >>稍后的任务需要2个青铜管 << Rogue
+    .vendor >> Buy a Bronze Tube if you haven't
+    >>This is a limited supply item, skip this step if the npc doesn't have it
+--    >>You will need 2 bronze tubes for a quest later << Rogue
     .bronzetube
 step << !NightElf
 	.isOnQuest 1338
     .goto StormwindClassic,58.08,16.52
-    .turnin 1338 >> 提交Stormpike的命令
+    .turnin 1338 >> Turn in Stormpike's Order
 step << Warlock/Priest
-     >>进入大楼。如果是升级版，请购买燃烧魔杖
-     >>买一根非阴影魔杖很重要，你以后必须对付抵抗阴影伤害的怪物
+     >>Go in the building. Buy a Burning Wand if it's an upgrade
+     >>It's important to buy a non-shadow wand, you'll have to deal with mobs resistant to shadow damage later
     .goto StormwindClassic,42.65,67.16,14,0
     .goto StormwindClassic,42.84,65.14
     .collect 5210,1
 step << Warlock
     #completewith next
     .goto StormwindClassic,29.2,74.0,20,0
-    .goto StormwindClassic,27.2,78.1,15 >> 走进屠宰羔羊，下楼去
+    .goto StormwindClassic,27.2,78.1,15 >> Go into The Slaughtered Lamb and go downstairs
 step << Warlock
     .goto StormwindClassic,26.11,77.20
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Mage
-    .goto StormwindClassic,37.69,82.09,10 >> 爬上塔楼，然后穿过入口
-    .trainer >> 训练你的职业咒语
+    .goto StormwindClassic,37.69,82.09,10 >> Go up the tower, then through the portal
+    .trainer >> Train your class spells
 step << Paladin
-    >>为Duthorian Rall执行任务。确保您拥有之前的10块亚麻布
+    >>Do the quests for Duthorian Rall. Make sure you have the 10 Linen Cloth from earlier
     .goto StormwindClassic,39.80,29.77
-    .turnin 1641 >> 交上神性之父
+    .turnin 1641 >> Turn in The Tome of Divinity
     .collect 6775,1,1642 --Tome of Divinity (1)
-    .accept 1642 >> 接受神性之父
-    .turnin 1642 >> 交上神性之父
-    .accept 1643 >> 接受神性之父
+    .accept 1642 >> Accept The Tome of Divinity
+    .turnin 1642 >> Turn in The Tome of Divinity
+    .accept 1643 >> Accept The Tome of Divinity
 step << Paladin
     .goto StormwindClassic,38.68,32.85
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Priest !NightElf
     .goto StormwindClassic,38.54,26.86
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Rogue !NightElf
     .goto StormwindClassic,74.64,52.82
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Warrior !NightElf
-    >>进入指挥中心
+    >>Enter the Command Center
     .goto StormwindClassic,74.91,51.55,20,0
     .goto StormwindClassic,78.67,45.80
-    .trainer >> 上楼去。训练你的职业咒语
+    .trainer >> Go upstairs. Train your class spells
 step
     .goto StormwindClassic,57.0,57.6
-     .train 201 >> 与吴平交谈。训练1h剑 << Mage/Rogue/Warlock
-     .train 1180 >> 与吴平交谈。火车匕首 << Mage/Druid
-     .train 202 >> 与吴平交谈。训练2h剑 << Warrior/Paladin
+     .train 201 >> Talk to Woo Ping. Train 1h Swords << Mage/Rogue/Warlock
+     .train 1180 >> Talk to Woo Ping. Train Daggers << Mage/Druid
+     .train 202 >> Talk to Woo Ping. Train 2h Swords << Warrior/Paladin
 step << Paladin
     .goto StormwindClassic,57.08,61.74
-    .turnin 1643 >> 交上神性之父
-    .accept 1644 >> 接受神性之父
-    .turnin 1644 >> 交上神性之父
---  .accept 1780 >> 接受神性之父
+    .turnin 1643 >> Turn in The Tome of Divinity
+    .accept 1644 >> Accept The Tome of Divinity
+    .turnin 1644 >> Turn in The Tome of Divinity
+--  .accept 1780 >> Accept The Tome of Divinity
 step << Rogue
     .goto StormwindClassic,57.38,56.77
-    >>与玛尔达交谈。为你的主手买把长剑，为你的副手买把克里斯。
+    >>Talk to Marda. Buy a Longsword for your mainhand and Kris for your offhand.
     .collect 923,1 --Longsword
     .collect 2209,1 --Kris
 step << !Human !Warlock
@@ -2268,128 +2268,128 @@ step << !Human !Warlock
     #phase 3-6
      #completewith start
      .goto StormwindClassic,66.2,62.4
-    .fp Stormwind >> 获取暴风城飞行路线
+    .fp Stormwind >> Get the Stormwind City Flight Path
 step << !Human
     #era/som
      #completewith start
      .goto StormwindClassic,66.2,62.4
-    .fp Stormwind >> 获取暴风城飞行路线
+    .fp Stormwind >> Get the Stormwind City Flight Path
 step << NightElf
     .goto StormwindClassic,73.2,92.1
-    .zone Elwynn Forest >> 从正门离开暴风城
+    .zone Elwynn Forest >> Leave Stormwind through the main gate
 step << NightElf Warrior
     .goto Elwynn Forest,41.09,65.77
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << NightElf Rogue/NightElf Priest
-    >>进客栈，然后上楼
+    >>Go into the inn, then go upstairs
     .goto Elwynn Forest,43.17,65.70,20,0
     .goto Elwynn Forest,43.80,66.47,20,0
     .goto Elwynn Forest,43.28,65.72 << Priest
     .goto Elwynn Forest,43.87,65.94 << Rogue
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << !Human !Warlock
     #som
     #phase 3-6
     #level 20
-    >>跑向阿佐拉塔
+    >>Run to the Tower of Azora
     .goto Elwynn Forest,65.20,69.80
-    .accept 94 >> 接受警惕的目光
+    .accept 94 >> Accept A Watchful Eye
 step << NightElf
     #era/som
     #level 20
-    >>跑向阿佐拉塔
+    >>Run to the Tower of Azora
     .goto Elwynn Forest,65.20,69.80
-    .accept 94 >> 接受警惕的目光
+    .accept 94 >> Accept A Watchful Eye
 step << Human/Warlock
     #som
     #phase 3-6
     .goto StormwindClassic,66.27,62.13
-    .fly Redridge >>飞到雷德里奇山脉
+    .fly Redridge >>Fly to Redridge Mountains
 step << !NightElf
     #era/som
     .goto StormwindClassic,66.27,62.13
-    .fly Redridge >>飞到雷德里奇山脉
+    .fly Redridge >>Fly to Redridge Mountains
 step << !Human !Warlock
     #som
     #phase 3-6
     #label start
     .goto Redridge Mountains,15.27,71.45
-    .zone Redridge Mountains >> 前往雷德里奇山脉
+    .zone Redridge Mountains >> Head to Redridge Mountains
 step << !Human
     #era/som
     #label start
     .goto Redridge Mountains,15.27,71.45
-    .zone Redridge Mountains >> 前往雷德里奇山脉
+    .zone Redridge Mountains >> Head to Redridge Mountains
 step << NightElf
     #era/som
     .goto Redridge Mountains,15.27,71.45
-     >> 前往Redridge/Elwynn边境
-    .accept 244 >> 接受侵扰侏儒
+     >> Head to the Redridge/Elwynn border
+    .accept 244 >> Accept Encroaching Gnolls
 step << !Human !Warlock
     #som
     #phase 3-6
     .goto Redridge Mountains,15.27,71.45
-     >> 前往Redridge/Elwynn边境
-    .accept 244 >> 接受侵扰侏儒
+     >> Head to the Redridge/Elwynn border
+    .accept 244 >> Accept Encroaching Gnolls
 step
     #som
     #phase 3-6
     .goto Redridge Mountains,30.73,59.99
-    .turnin 244 >> 交出侵扰侏儒 << !Human !Warlock
-    .accept 246 >> 接受评估威胁 << !Human !Warlock
+    .turnin 244 >> Turn in Encroaching Gnolls << !Human !Warlock
+    .accept 246 >> Accept Assessing the Threat << !Human !Warlock
 step << NightElf
     #era/som
     .goto Redridge Mountains,30.73,59.99
-    .turnin 244 >> 交出侵扰侏儒
-    .accept 246 >> 接受评估威胁
+    .turnin 244 >> Turn in Encroaching Gnolls
+    .accept 246 >> Accept Assessing the Threat
 step
     .goto Redridge Mountains,33.50,48.90
-    .accept 20 >> 接受黑石威胁
+    .accept 20 >> Accept Blackrock Menace
 step
     .goto Redridge Mountains,32.20,48.60
-    .accept 125 >> 接受丢失的工具
+    .accept 125 >> Accept The Lost Tools
 step
     .goto Redridge Mountains,31.00,47.50
-    .accept 118 >> 接受鞋子的价格
+    .accept 118 >> Accept The Price of Shoes
 step
     .goto Redridge Mountains,29.80,44.50
-    >>进入大楼
-    .accept 120 >> 接受Messenger前往暴风城
+    >>Go inside the building
+    .accept 120 >> Accept Messenger to Stormwind
 step
     .goto Redridge Mountains,27.70,47.40
-    .accept 127 >> 接受卖鱼
+    .accept 127 >> Accept Selling Fish
 step
     .goto Redridge Mountains,26.80,44.40
-    >>进入客栈
-    .accept 129 >> 接受免费午餐
+    >>Go inside the Inn
+    .accept 129 >> Accept A Free Lunch
 step
     .goto Redridge Mountains,26.6,45.2
-    >>上楼去
-    .turnin 65 >> 交给Defias兄弟会
+    >>Head upstairs
+    .turnin 65 >> Turn in The Defias Brotherhood
     .isOnQuest 65
 step
     #era/som
     .goto Redridge Mountains,22.70,44.00
-    >>离开客栈。向西走，然后进入大楼
-    .accept 92 >> 接受Redridge Goulash
+    >>Exit the Inn. Go west then into the building
+    .accept 92 >> Accept Redridge Goulash
 step
     .goto Redridge Mountains,21.85,46.32
-    .accept 34 >> 接受不受欢迎的客人
+    .accept 34 >> Accept An Unwelcome Guest
 step << Warlock
      #completewith next
     .goto Redridge Mountains,15.68,49.30
-     >> 用风筝把Bellygrub引向湖郡守卫，杀死他
+     >> Kill Bellygrub by kiting him towards the Lakeshire guards
     .complete 34,1
-    .link https://youtu.be/6JE967OG3CU?t=1845 >> 点击此处查看视频参考
+    .link https://youtu.be/6JE967OG3CU?t=1845 >> Click here for video reference
 step << Warlock
     .goto Redridge Mountains,21.85,46.32
-     >>这是一个很难在这个级别独奏的任务，如果你不能独奏《贝利格鲁布》，跳过这一步，你将有另一个机会稍后完成它
-    .turnin 34 >> 交出不受欢迎的客人
+     >>This is a hard quest to solo at this level, if you can't solo Bellygrub, skip this step, you'll have another opportunity to finish it later
+    .turnin 34 >> Turn in An Unwelcome Guest
 step
     .goto Redridge Mountains,29.30,53.60
-    .accept 3741 >> 接受希拉里的项链
+    .accept 3741 >> Accept Hilary's Necklace
 step
-    >>在水下寻找希拉里的项链。它在一片褐色的泥土里
+    >>Look for Hilary's Necklace underwater. It's in a brown patch of dirt
     .goto Redridge Mountains,27.80,56.05,0
     .goto Redridge Mountains,26.56,50.63,0
     .goto Redridge Mountains,23.96,55.17,0
@@ -2402,16 +2402,16 @@ step
     .complete 3741,1 --Hilary's Necklace (1)
 step
     #softcore
-    >>潜水。抢劫灰色盒子
+    >>Go underwater. Loot the grey box
     .goto Redridge Mountains,41.52,54.68
     .complete 125,1 --Oslow's Toolbox (1)
 step
     #era
     #sticky
     #completewith orcs
-    >>杀死野猪换5个大猩猩鼻子，秃鹫换5块硬秃鹫肉，蜘蛛换5块脆蜘蛛肉
-    >>专注于这个任务。在交出任务之前，不要出售任何物品
-    >>也保存你得到的任何大块野猪肉。你想在到达Darkhire之前得到50份烹饪
+    >>Kill Boars for 5 Great Goretusk Snout, Condors for 5 Tough Condor Meat, and Spiders for 5 Crisp Spider Meat
+    >>Focus HEAVILY on this quest. Do not sell any of the items until you turn in the quest
+    >>Also save any Chunks of Boar Meat you get. You want to get 50 Cooking before reaching Darkshire
     .collect 2296,5,92,1
     .collect 1080,5,92,1
     .collect 1081,5,92,1
@@ -2420,26 +2420,26 @@ step
     #phase 1-2
     #sticky
     #completewith orcs
-    >>杀死野猪换5个大猩猩鼻子，秃鹫换5块硬秃鹫肉，蜘蛛换5块脆蜘蛛肉
-    >>专注于这个任务。在交出任务之前，不要出售任何物品
+    >>Kill Boars for 5 Great Goretusk Snout, Condors for 5 Tough Condor Meat, and Spiders for 5 Crisp Spider Meat
+    >>Focus HEAVILY on this quest. Do not sell any of the items until you turn in the quest
     .collect 2296,5,92,1
     .collect 1080,5,92,1
     .collect 1081,5,92,1
 step
     .goto Redridge Mountains,15.30,71.50
-    .accept 244 >> 接受侵扰侏儒
+    .accept 244 >> Accept Encroaching Gnolls
 step
     .goto Redridge Mountains,30.70,60.00
-    .turnin 244 >> 交出侵扰侏儒
-    .accept 246 >> 接受评估威胁
+    .turnin 244 >> Turn in Encroaching Gnolls
+    .accept 246 >> Accept Assessing the Threat
 step
     .goto Redridge Mountains,15.27,71.45
-    .turnin 129 >> 免费提供午餐
-    .accept 130 >> 接受拜访药师
+    .turnin 129 >> Turn in A Free Lunch
+    .accept 130 >> Accept Visit the Herbalist
 step
     #era/som
     .goto Redridge Mountains,9.35,78.96
-    >>杀死蜘蛛。抢了他们来买脆蜘蛛肉
+    >>Kill Spiders. Loot them for the Crisp Spider Meat
     .collect 1081,5,92,1
 step
     .goto Redridge Mountains,31.65,82.56
@@ -2447,188 +2447,188 @@ step
     .complete 246,2 --Redridge Poacher (6)
 step
     .goto Redridge Mountains,49.0,70.0
-    >> 杀死穆洛克。抢走它们来换取鱼翅和太阳鱼
+    >> Kill Murlocs. Loot them for Murloc Fins and Sunfish
     .complete 127,1
     .collect 1468,8,150,1
 step
     #era/som
     .goto Redridge Mountains,61.37,77.10
-    >> 杀死秃鹰。抢走他们的秃鹰肉
-    >> 如果周围没有秃鹰，跳过这一步
+    >> Kill Condors. Loot them for Condor Meat
+    >> If there's no Condors around, skip this step
     .collect 1080,5,92,1
 step
     #label orcs
-    >>杀死兽人。抢劫他们以获取斧头
+    >>Kill Orcs. Loot them for Axes
     .goto Redridge Mountains,74.00,79.00
     .complete 20,1 --Battleworn Axe (10)
 step
     #era/som
     .goto Redridge Mountains,61.37,77.10
-    >> 杀死秃鹰。抢了他们来买脆秃鹰肉
+    >> Kill Condors. Loot them for the Crisp Condor Meat
     .collect 1080,5,92,1
 step
     #hardcore
-    >>潜水。抢劫灰色盒子
+    >>Go underwater. Loot the grey box
     .goto Redridge Mountains,41.52,54.68
     .complete 125,1 --Oslow's Toolbox (1)
 step
     #era
-    .xp 20-6300 >> 研磨直到距离20级6300 xp
+    .xp 20-6300 >> Grind until you are 6300 xp away from level 20
 step
     #som
-    .xp 20-8800 >> 研磨，直到距离20级8800 xp
+    .xp 20-8800 >> Grind until you are 8800 xp away from level 20
 step << skip
      #softcore
      #completewith next
-     .deathskip >> 故意死在墓地
+     .deathskip >> Die on purpose and rez at the graveyard
 step
     #hardcore
     #completewith next
-    .goto Redridge Mountains,30.73,59.99,150 >> 跑回莱克郡
+    .goto Redridge Mountains,30.73,59.99,150 >> Run back to Lakeshire
 step
     .goto Redridge Mountains,30.73,59.99
-    .turnin 246 >> 提交威胁评估
+    .turnin 246 >> Turn in Assessing the Threat
 step
-    .xp 20 >> 如果你还未达到20级，请交出你所有的Redridge任务，交出的任务应该足够了
+    .xp 20 >> If you are not yet level 20, turn in all your Redridge quests, you should have enough from turn ins
 step
     .goto Redridge Mountains,30.59,59.42
-    .fp Redridge Mountains >> 获得Redridge Mountains飞行路线 << !Human !Warlock
-    .fly Stormwind >> 飞往暴风城
+    .fp Redridge Mountains >> Get the Redridge Mountains flight path << !Human !Warlock
+    .fly Stormwind >> Fly to Stormwind City
 step << Rogue
     .goto StormwindClassic,57.55,57.07
-    >>如果你有足够的钱，就买一把长剑。21点装备
-    >>如果便宜/更好，就从AH那里买东西
-    >>如果您有更好的选择，请跳过此步骤
+    >>Buy a Longsword if you have enough money. Equip it at 21
+    >>Buy something from the AH if its cheaper/better
+    >>Skip this step if you have something better
     .collect 923,1 --Longsword (1)
 step << Warrior/Paladin
     #softcore
     .goto StormwindClassic,57.55,57.07
-    >>如果你有足够的钱，就买一辆Dacian Falx。21点装备
-    >>如果便宜/更好，就从AH那里买东西
-    >>如果您有更好的选择，请跳过此步骤
+    >>Buy a Dacian Falx if you have enough money. Equip it at 21
+    >>Buy something from the AH if its cheaper/better
+    >>Skip this step if you have something better
     .collect 922,1 --Dacian Falx (1)
 step << Warrior/Paladin
     #hardcore
     .goto StormwindClassic,57.55,57.07
-    >>如果你有足够的钱，就买一辆Dacian Falx。21点装备
-    >>如果您有更好的选择，请跳过此步骤
+    >>Buy a Dacian Falx if you have enough money. Equip it at 21
+    >>Skip this step if you have something better
     .collect 922,1 --Dacian Falx (1)
 step << Warlock
     #sticky
     #completewith next
     .goto StormwindClassic,29.2,74.0,20,0
-    .goto StormwindClassic,27.2,78.1,15 >> 走进屠宰羔羊，下楼去
+    .goto StormwindClassic,27.2,78.1,15 >> Go into The Slaughtered Lamb and go downstairs
 step << Warlock
     .goto StormwindClassic,26.11,77.20
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
     .goto StormwindClassic,25.30,78.50
-    .accept 1716 >> 接受灵魂吞噬者
+    .accept 1716 >> Accept Devourer of Souls
 step << Mage
-    .goto StormwindClassic,37.69,82.09,10 >> 爬上塔楼，然后穿过入口
-    .trainer >> 训练你的职业咒语
+    .goto StormwindClassic,37.69,82.09,10 >> Go up the tower, then through the portal
+    .trainer >> Train your class spells
 step << Mage
     .goto StormwindClassic,39.83,79.46
-    .trainer >> 从拉里曼(Larimaine)到暴风门(Stormwind Portal)的列车
+    .trainer >> Train Stormwind Portal from Larimaine
 step
     .goto StormwindClassic,21.40,55.80
-    .accept 3765 >> 接受海外腐败
+    .accept 3765 >> Accept The Corruption Abroad
 step << Druid
     .goto StormwindClassic,21.0,55.6
-    .trainer >> 训练你的职业法术(确保你得到猫形态)
+    .trainer >> Train your class spells (Make sure you get Cat Form)
 step << Paladin
     .goto StormwindClassic,42.66,33.75,30,0
     .goto StormwindClassic,40.1,30.0
-    >>与Duthorian Rall对话，右键单击提供的Tome of Valor
+    >>Speak to Duthorian Rall and right click on the Tome of Valor provided
     .collect 6776,1,1649 --Tome of Valor (1)
-    .accept 1649 >>接受勇士之父
-    .turnin 1649 >>交给勇敢的人
-    .accept 1650 >>接受勇士之父
+    .accept 1649 >>Accept The Tome of Valor
+    .turnin 1649 >>Turn in The Tome of Valor
+    .accept 1650 >>Accept The Tome of Valor
 step << Paladin
     .goto StormwindClassic,38.68,32.85
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Priest
     .goto StormwindClassic,42.66,33.75,30,0
     .goto StormwindClassic,38.54,26.86
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Rogue
     .goto StormwindClassic,74.90,54.00,20,0
     .goto StormwindClassic,78.67,59.48,20,0
     .goto StormwindClassic,75.75,60.36
-    .trainer >> 训练你的职业法术。确保列车开锁
-    .accept 2281 >> 接受Redridge集合
-    .accept 2360 >> 接受Mathias和Defias
+    .trainer >> Train your class spells. Make sure to train lockpicking
+    .accept 2281 >> Accept Redridge Rendezvous
+    .accept 2360 >> Accept Mathias and the Defias
 step << Warrior
-    >>进入指挥中心
+    >>Enter the command center
     .goto StormwindClassic,74.91,51.55,20,0
     .goto StormwindClassic,78.67,45.80
-    .trainer >> 上楼去。训练你的职业咒语
+    .trainer >> Go upstairs. Train your class spells
 step
     .goto StormwindClassic,64.20,75.20
-    .turnin 120 >> 将Messenger交给Stormwind
-    .accept 121 >> 接受Messenger前往暴风城
+    .turnin 120 >> Turn in Messenger to Stormwind
+    .accept 121 >> Accept Messenger to Stormwind
 step
     .goto Elwynn Forest,41.80,65.60
-    >>离开暴风城前往金郡
-    .turnin 118 >> 上缴鞋子价格
-    .accept 119 >> 接受返回Verner
+    >>Leave Stormwind and head to Goldshire
+    .turnin 118 >> Turn in The Price of Shoes
+    .accept 119 >> Accept Return to Verner
 step
-    >>跑向阿佐拉塔
+    >>Run to the Tower of Azora
     .goto Elwynn Forest,65.20,69.80
-    .accept 94 >> 接受警惕的目光
+    .accept 94 >> Accept A Watchful Eye
 step
     #completewith RunR
     #label FlyR
     .goto StormwindClassic,66.30,62.30
-    >> 如果你在Goldshire，就回暴风城，然后飞往Redridge
-    .fly Redridge >> 飞到雷德里奇
+    >> Run back to Stormwind if you're in Goldshire, then fly to Redridge
+    .fly Redridge >> Fly to Redridge
 step
     #completewith FlyR
     #label RunR
     .goto Redridge Mountains,15.27,71.45
-    >> 如果你在阿佐拉塔，跑去雷德里奇
-    .zone Redridge Mountains >>前往Redridge
+    >> If you're at the Tower of Azora, run to Redridge
+    .zone Redridge Mountains >>Travel to Redridge
 step
     .goto Redridge Mountains,33.40,48.90
-    .turnin 20 >> 提交Blackrock威胁
+    .turnin 20 >> Turn in Blackrock Menace
 step
     .goto Redridge Mountains,32.00,48.80
-    .turnin 125 >> 交回丢失的工具
-    .accept 89 >> 接受Everstill桥
+    .turnin 125 >> Turn in The Lost Tools
+    .accept 89 >> Accept The Everstill Bridge
 step
     .goto Redridge Mountains,31.00,47.20
-    .turnin 119 >> 交回维纳
-    .accept 124 >> 接受Gnolls的Baying
+    .turnin 119 >> Turn in Return to Verner
+    .accept 124 >> Accept A Baying of Gnolls
 step
     #era
     .goto Redridge Mountains,31.00,47.20
-    .accept 122 >> 接受腹部秤
+    .accept 122 >> Accept Underbelly Scales
 step
     .goto Redridge Mountains,29.98,44.45
-    .turnin 121 >> 将Messenger交给Stormwind
+    .turnin 121 >> Turn in Messenger to Stormwind
 step
     .goto Redridge Mountains,29.20,53.60
-     .turnin 3741 >> 交出希拉里的项链
+     .turnin 3741 >> Turn in Hilary's Necklace
 step << Rogue
     .goto Redridge Mountains,28.07,52.02
-    .turnin 2281 >> 转入Redridge Rendevous
-    .accept 2282 >> 接受Alther's Mill
+    .turnin 2281 >> Turn in Redridge Rendevous
+    .accept 2282 >> Accept Alther's Mill
 step
     .goto Redridge Mountains,27.72,47.38
-    .turnin 127 >> 卖鱼上缴
-    .accept 150 >> 接受Murloc偷猎者
-    .turnin 150 >> 交出Murloc偷猎者
+    .turnin 127 >> Turn in Selling Fish
+    .accept 150 >> Accept Murloc Poachers
+    .turnin 150 >> Turn in Murloc Poachers
 step
     #era/som
     .isQuestComplete 92
     .goto Redridge Mountains,22.67,43.83
-    .turnin 92 >> 交给Redridge Goulash
+    .turnin 92 >> Turn in Redridge Goulash
 step
     .goto Redridge Mountains,21.90,46.20
-    .turnin 130 >> 交给药师看病
-    .accept 131 >> 接受交付水仙花
+    .turnin 130 >> Turn in Visit the Herbalist
+    .accept 131 >> Accept Delivering Daffodils
 step
     #era/som
-    >>杀死野猪。为了大猩猩的鼻子而抢劫它们
+    >>Kill Boars. Loot them for Great Goretusk Snouts
     .goto Redridge Mountains,16.23,48.35,100,0
     .goto Redridge Mountains,32.25,70.20,100,0
     .goto Redridge Mountains,16.23,48.35
@@ -2637,7 +2637,7 @@ step
 step
     #era/som
     .goto Redridge Mountains,22.67,43.83
-    .turnin 92 >> 交给Redridge Goulash
+    .turnin 92 >> Turn in Redridge Goulash
 step
     .goto Redridge Mountains,21.23,36.17,60,0
     .goto Redridge Mountains,34.20,39.70,60,0
@@ -2647,7 +2647,7 @@ step
     .goto Redridge Mountains,34.20,39.70,60,0
     .goto Redridge Mountains,39.61,31.46,60,0
     .goto Redridge Mountains,22.5,35.7,0
-    >>杀死侏儒。抢劫他们的长矛和铆钉
+    >>Kill Gnolls. Loot them for Pikes and Rivets
     .complete 89,1 --Iron Pike (5)
     .complete 89,2 --Iron Rivet (5)
     .complete 124,1 --Redridge Brute (10)
@@ -2661,313 +2661,313 @@ step
     .goto Redridge Mountains,24.0,35.0,0
     .complete 122,1 --Underbelly Whelp Scale (6)
 step << Rogue
-    >>解锁该区域的锁箱，直到你达到80技能
-    >>达到80技能后打开卢修斯的锁箱
+    >>Unlock lockboxes in the area until you reach 80 skill
+    >>Open Lucius's Lockbox once you reach 80 skill
     .goto Redridge Mountains,52.05,44.69
     .complete 2282,1 --Token of Thievery
 step
     .goto Redridge Mountains,26.80,44.30
-    .turnin 131 >> 交付水仙花
+    .turnin 131 >> Turn in Delivering Daffodils
 step
     #era
     .goto Redridge Mountains,26.52,44.95
     #completewith next
-    +在你之前收集的客栈里的火上煮大块野猪肉。确保你有50道菜
-    >>如果你不想吃50个菜，那就去西边多养些野猪吧
-    >>如果你在烹饪完所有东西后将烹饪到40岁或以下，跳过这一步
+    +Cook the Chunks of Boar Meat at the fire in the Inn which you collected earlier. Make sure you have 50 cooking
+    >>If you won't have 50 cooking, go farm some more boars to the west
+    >>If you're cooking will be 40 or below after cooking everything, skip this step
 step
     #era
     .goto Redridge Mountains,31.00,47.30
-    .turnin 124 >> 交出一批侏儒
-    .turnin 122 >> 上缴腹部秤
+    .turnin 124 >> Turn in A Baying of Gnolls
+    .turnin 122 >> Turn in Underbelly Scales
 step
     #som
     .goto Redridge Mountains,30.97,47.27
-    .turnin 124 >> 交出一批侏儒
+    .turnin 124 >> Turn in A Baying of Gnolls
 step << Rogue
     .goto Redridge Mountains,28.07,52.02
-    .turnin 2282 >> 转入Alther’s Mill
+    .turnin 2282 >> Turn in Alther's Mill
 step
     .goto Redridge Mountains,32.10,48.70
-    .turnin 89 >> 转入埃弗斯泰尔桥
+    .turnin 89 >> Turn in The Everstill Bridge
 step << Rogue
     --#softcore
     .goto Westfall,68.5,70.0
-    >>这是在威斯特福尔执行毒药任务的好时机，这个任务在20/21级很难完成，这一步是可选的，稍后在24级你还有机会执行
-    .turnin 2360 >> 交给Mathias和Defias
-    .link https://www.youtube.com/watch?v=t05Ux5Qis9k >>点击此处查看视频参考
+    >>This is a good time to do the poison quest in Westfall, this quest can be VERY HARD to do at level 20/21, this step is optional, you will have another chance to do it later at level 24
+    .turnin 2360 >> Turn in Mathias and the Defias
+    .link https://www.youtube.com/watch?v=t05Ux5Qis9k >>Click here for video reference
 step << Rogue
     --#softcore
     .goto Westfall,68.5,70.0
-    .accept 2359 >> 接受科拉文大厦
+    .accept 2359 >> Accept Klaven's Tower
     .isQuestTurnedIn 2360
 step << Rogue
     --#softcore
     .goto Westfall,70.6,72.8
-    >>盗取一个Defias Drones并抢夺塔钥匙
+    >>Pickpocket one of the Defias Drones and loot the tower key
     .complete 2359,2 --Collect Defias Tower Key (x1)
-    .link https://www.youtube.com/watch?v=t05Ux5Qis9k >>点击此处查看视频参考
+    .link https://www.youtube.com/watch?v=t05Ux5Qis9k >>Click here for video reference
     .isOnQuest 2359
 step << Rogue
     --#softcore
     .goto Westfall,70.4,74.0
-    >>爬到塔顶，从地板上的小箱子里抢东西
+    >>Climb to the top of the tower and loot the small chest on the floor
     .complete 2359,1 --Collect Klaven Mortwake's Journal (x1)
-    .link https://www.youtube.com/watch?v=t05Ux5Qis9k >>点击此处查看视频参考
+    .link https://www.youtube.com/watch?v=t05Ux5Qis9k >>Click here for video reference
     .isOnQuest 2359
 step << Rogue !Dwarf
     --#softcore
     .goto Duskwood,10.69,59.86,90,0
     .goto Duskwood,8.82,38.44
-    >>在黄昏杀死蜘蛛
-    >>为以后保存Gooey Spider Legs
-    >>你需要一个毒液囊来制作抗毒液并清除桑齐毒液 << Rogue !Dwarf
-    >>如果你有圣骑士或德鲁伊的朋友，你可以跳过这一步，让他们帮你删除它
+    >>Kill Spiders in Duskwood
+    >>Save Gooey Spider Legs for later
+    >>You'll need 1 venom sac to craft an anti-venom and remove the Zanzil poison << Rogue !Dwarf
+    >>If you have a Paladin or Druid friend you can skip this step and ask them to remove it for you
     .collect 1475,1,2359,1 << Rogue !Dwarf
     .isOnQuest 2359
 step << Rogue
     --#softcore
     #completewith next
     .goto Westfall,56.55,52.65
-    .fly Stormwind >> 飞到暴风城
+    .fly Stormwind >> Fly to Stormwind
 step << Rogue
     --#softcore
     .goto StormwindClassic,74.90,54.00,20,0
     .goto StormwindClassic,78.67,59.48,20,0
      .goto StormwindClassic,75.9,59.9
-    .turnin 2359 >> 转入Klaven’s Tower
+    .turnin 2359 >> Turn in Klaven's Tower
     .isQuestComplete 2359
 step << Rogue
     --#softcore
      .goto StormwindClassic,75.9,59.9
-    .accept 2607 >> 接受赞齐尔的触摸
+    .accept 2607 >> Accept The Touch of Zanzil
     .isQuestTurnedIn 2359
 step << Rogue
     --#softcore
     .goto StormwindClassic,78.1,59.0
-    >>去地下室
-    .turnin 2607 >> 《桑齐之触》(Turn in The Touch of Zanzil)
+    >>Head to the basement
+    .turnin 2607 >> Turn in The Touch of Zanzil
     .isQuestTurnedIn 2359
 step <<  NightElf
-    .fp Ironforge>> 飞往暴风城，乘坐电车前往铁炉堡，然后到达铁炉堡飞行路线
-    >>如果您已经拥有铁炉堡飞行路线，请跳过此步骤
+    .fp Ironforge>> Fly to Stormwind, take the tram to Ironforge and get the Ironforge flight path
+    >>Skip this step if you already have the Ironforge flight path
 ]])
 
 RXPGuides.RegisterGuide([[
 #classic
 << Alliance !Hunter
-#name 20-21 黑海岸/灰谷
+#name 20-21 Darkshore/Ashenvale
 #version 1
-#group RestedXP 联盟 1-20
-#next RestedXP联盟20-30\21-23 石爪山脉/灰谷
+#group RestedXP Alliance 1-20
+#next RestedXP Alliance 20-30\21-23 Stonetalon/Ashenvale
 
 step << Druid
-    >>传送至Moonglade
+    >>Teleport to Moonglade
     .goto Moonglade,52.53,40.56
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step
-    .hs >> 赫斯回到奥伯丁
+    .hs >> Hearth back to Auberdine
 step
     .goto Darkshore,37.44,41.83
-    .accept 729 >> 接受心不在焉的探矿者
+    .accept 729 >> Accept The Absent Minded Prospector
 step
     .goto Darkshore,37.32,43.64
-    .accept 948 >> 接受Onu
+    .accept 948 >> Accept Onu
 step
     .goto Darkshore,37.21,44.22
-    .accept 4740 >> 接受通缉令：Murkdeep！
+    .accept 4740 >> Accept WANTED: Murkdeep!
 step
     .goto Darkshore,39.37,43.48
-    .accept 993 >> 接受丢失的主人
+    .accept 993 >> Accept A Lost Master
 step
 	#era/som
     #completewith Murkdeep
     .goto Darkshore,40.23,81.28,0
-     >> 杀死灰蓟熊。抢他们的头皮
+     >> Kill Grizzled Thistle Bears. Loot them for their Scalps
     .complete 1003,1
     .isOnQuest 1003
 step <<  NightElf
      #completewith next
     .goto Felwood,27.00,55.59
-    .turnin 952 >> 在古人的树林里转弯
+    .turnin 952 >> Turn in Grove of the Ancients
 step
     .goto Felwood,27.00,55.59
-    .turnin 948 >> Onu上车
-    .accept 944 >> 接受大师的垂涎
+    .turnin 948 >> Turn in Onu
+    .accept 944 >> Accept The Master's Glaive
 step
     .goto Ashenvale,22.36,3.98
-     >> 进入大师的Glaive，清除中间祭坛周围的暴徒
+     >> Enter The Master's Glaive and clear mobs around the altar in the center
     .complete 944,1
 step
     #sticky
     #label TheryluneE
-     >> 开始护送任务
-    .accept 945 >> 接受Therylune的逃脱
+     >> Start the escort quest
+    .accept 945 >> Accept Therylune's Escape
 step
     .goto Ashenvale,22.36,3.98
-     >> 把烤鸡蛋的碗扔在地上
-    .turnin 944 >> 交上大师的Glaive
-    .accept 949 >> 接受暮光之城营地
+     >> Drop the scrying bowl on the ground
+    .turnin 944 >> Turn in The Master's Glaive
+    .accept 949 >> Accept The Twilight Camp
 step
     .goto Darkshore,38.55,86.03
-     >> 点击底座顶部的书。小心，如果你已经开始，Therylune就不会跑掉
-    .turnin 949 >> 在暮光之城露营
-    .accept 950 >> 接受返回Onu
+     >> Click on the book on top of the pedestal. Be careful that Therylune doesnt run off if you started it already
+    .turnin 949 >> Turn in The Twilight Camp
+    .accept 950 >> Accept Return to Onu
 step
     #label Therylune
     #requires TheryluneE
-    >> 完成护送任务
-    .complete 945,1 --护送Therylune away from the Master's Glaive (1)
+    >> Finish the escort quest
+    .complete 945,1 --Escort Therylune away from the Master's Glaive (1)
 step
     #completewith next
     .goto Felwood,18.08,64.03
-    .turnin 729 >> 交回心不在焉的探矿者
+    .turnin 729 >> Turn in The Absent Minded Prospector
 step
     .goto Darkshore,35.72,83.69
-     >> 开始护送任务
-    .accept 731 >> 接受心不在焉的探矿者
+     >> Start the escort quest
+    .accept 731 >> Accept The Absent Minded Prospector
 step
-     >> 护送探矿者返程。确保他先攻击暴徒，否则他不会帮你杀了他们
+     >> Escort Prospector Remtravel. Make sure he aggros the mobs first or he won't help you kill them
     .complete 731,1
 step
-    >>抢劫残骸。要小心，因为甲壳虫会对闪电造成90点伤害，当它们的生命低于55%时，可以将电波完全治愈。
+    >>Loot the remains. Be careful as the Oracles do 90 damage lightning bolts, and can healing wave to full when they're at <55% hp.
     .goto Ashenvale,13.97,4.10
-    .accept 4733 >> 接受海滩生物
+    .accept 4733 >> Accept Beached Sea Creature
 step
     .goto Ashenvale,13.93,2.01
-    .accept 4732 >> 接受海滩海龟
+    .accept 4732 >> Accept Beached Sea Turtle
 step
     .goto Felwood,13.47,64.01
-    .accept 4731 >> 接受海滩海龟
+    .accept 4731 >> Accept Beached Sea Turtle
 step
     .goto Felwood,14.62,60.72
-    .accept 4730 >> 接受海滩生物
+    .accept 4730 >> Accept Beached Sea Creature
 step
     #label Murkdeep
     .goto Darkshore,36.64,76.53
-    >> 清理穆洛克营地，保持安全距离
-    >> 靠近营地中的篝火召唤3波穆洛克：杀死1波和2波，然后在3波中杀死穆克迪普
-    >> 检查西边的海岸，看看Murkdeep是否已经活着。如果是，杀了他
+    >> Clear the murloc camp, maintain a safe distance while doing it
+    >> Move close to the Bonfire in the camp to summon 3 waves of Murlocs: Kill waves 1 and 2, then kill Murkdeep in wave 3
+    >> Check the coast to the west to see if Murkdeep is already alive. If he is, kill him
     .unitscan Murkdeep
     .complete 4740,1
 step
 	#era/som
     .goto Darkshore,40.23,81.28
-     >> 杀死灰蓟熊。抢他们的头皮
+     >> Kill Grizzled Thistle Bears. Loot them for their Scalps
     .complete 1003,1
     .isOnQuest 1003
 step
 	#era/som
     .goto Felwood,24.53,60.46
-    .turnin 1003 >> 打开Buzzbox 525
+    .turnin 1003 >> Turn in Buzzbox 525
     .isOnQuest 1003
 step
     .goto Darkshore,45.00,85.30
-    .turnin 993 >> 交出一个丢失的主人
-    .accept 995 >> 接受隐身逃跑
+    .turnin 993 >> Turn in A Lost Master
+    .accept 995 >> Accept Escape Through Stealth
 step
-     >> 等待RP序列结束
+     >> Wait until the RP sequence is over
     .complete 995,1
 step
     .goto Felwood,27.00,55.59
-    .turnin 951 >> 交还Mathystra遗迹
+    .turnin 951 >> Turn in Mathystra Relics
     .isQuestComplete 951
 step
     .goto Felwood,27.00,55.59
-    .turnin 950 >> 转入返回Onu
+    .turnin 950 >> Turn in Return to Onu
 step
     .goto Felwood,27.96,55.76
-    >>与科隆尼安对话，开始护送任务
-    >>如果他不在，你可以跳过这个任务(根据其他玩家的不同，重生最多需要25分钟)
-    .accept 5321 >> 接受睡眠者醒来
+    >>Speak to Kerlonian and start the escort quest
+    >>If he's not there, you can skip this quest (can take up to 25 minutes to respawn depending on other players)
+    .accept 5321 >> Accept The Sleeper Has Awakened
 step
     .isOnQuest 5321
     .goto Darkshore,44.38,76.30
-     >> 抢劫任务给予者旁边的箱子
+     >> Loot the chest next to the quest giver
     .complete 5321,1
 step
      #completewith tower
-     .zone Ashenvale >> 向南前往灰谷
+     .zone Ashenvale >> Head south to Ashenvale
      .goto Ashenvale,29.7,13.6
 step
     .goto Ashenvale,27.26,35.58
-    >>在执行护送任务时，避免走在主要道路上
+    >>Avoid walking on the main road while doing the escort quest
      .complete 5321,2
      .isOnQuest 5321
 step
     .goto Ashenvale,27.26,35.58
-    .turnin 5321 >> 睡觉的人醒了
+    .turnin 5321 >> Turn in The Sleeper Has Awakened
     .isQuestComplete 5321
 step
     #label tower
     .goto Ashenvale,26.19,38.69
-    .turnin 967 >> 转入Althalaxx塔
+    .turnin 967 >> Turn in The Tower of Althalaxx
 step
 	#era/som
     .goto Ashenvale,26.19,38.69
-    .accept 970 >> 接受Althalaxx塔
+    .accept 970 >> Accept The Tower of Althalaxx
 step
 	#era/som
      #completewith next
     .goto Ashenvale,31.41,30.66
-     >> 杀死信徒。掠夺他们以获取发光的灵魂宝石
+     >> Kill cultists. Loot them for the Glowing Soul Gem
     .complete 970,1
 step
 	#era/som
      #completewith next
     .goto Ashenvale,26.19,38.69
-    .turnin 970 >> 转入Althalaxx塔
+    .turnin 970 >> Turn in The Tower of Althalaxx
 step
-    .xp 20 >> 升级到20级
+    .xp 20 >> Grind to level 20
 step
     .goto Ashenvale,26.43,38.59
-    .accept 1010 >> 接受Bathran的头发
+    .accept 1010 >> Accept Bathran's Hair
 step
     .goto Ashenvale,31.63,22.33
-     >> 当心地上的药草袋
+     >> Look out for the herb sacks on the ground
     .complete 1010,1
 step
 	#era/som
     .goto Ashenvale,31.41,30.66
-     >> 杀死信徒。掠夺他们以获取发光的灵魂宝石
+     >> Kill cultists. Loot them for the Glowing Soul Gem
     .complete 970,1
 step
     #sticky
     #label hair
     .goto Ashenvale,26.43,38.59
-    .turnin 1010 >> 把Bathran的头发交上来
-    .accept 1020 >> 接受奥伦迪尔的治疗
+    .turnin 1010 >> Turn in Bathran's Hair
+    .accept 1020 >> Accept Orendil's Cure
 step
 	#era/som
     .goto Ashenvale,26.43,38.59
-    .turnin 970 >> 转入Althalaxx塔
-    .accept 973 >> 接受Althalaxx塔
+    .turnin 970 >> Turn in The Tower of Althalaxx
+    .accept 973 >> Accept The Tower of Althalaxx
 step
     #requires hair
-    >>跑向阿斯特拉纳
+    >>Run to Astranaar
     .goto Ashenvale,34.40,48.00
-    .fp Astranaar>> 获取Astranaar飞行路线
+    .fp Astranaar>> Get the Astranaar Flight Path
 step
     .goto Ashenvale,34.67,48.83
-    .accept 1008 >> 接受Zoram Strand
+    .accept 1008 >> Accept The Zoram Strand
 step
     .goto Ashenvale,34.89,49.79
-    .accept 1070 >> 《石爪》中的守卫接受
+    .accept 1070 >> Accept On Guard in Stonetalon
 step
     .goto Ashenvale,35.76,49.10
-    .accept 1056 >> 接受石爪峰之旅
+    .accept 1056 >> Accept Journey to Stonetalon Peak
 step
     .goto Ashenvale,36.61,49.58
-    .accept 991 >> 接受Raene的清洁
-    .accept 1054 >> 接受消除威胁
+    .accept 991 >> Accept Raene's Cleansing
+    .accept 1054 >> Accept Culling the Threat
 step << !Warlock
     #som
     .goto Ashenvale,36.99,49.22
-    .home >> 将您的炉石设置为Astranaar
+    .home >> Set your Hearthstone to Astranaar
 step
     #timer Orendil's Cure RP
     .goto Ashenvale,37.36,51.79
-    .turnin 1020 >> 交给奥伦迪尔的治疗
+    .turnin 1020 >> Turn in Orendil's Cure
     .timer 26,Orendil's Cure RP
-    .accept 1033 >> 接受艾露恩的眼泪
+    .accept 1033 >> Accept Elune's Tear
 ]])

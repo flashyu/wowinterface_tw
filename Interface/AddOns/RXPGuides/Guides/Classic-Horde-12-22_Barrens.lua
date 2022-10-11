@@ -1,105 +1,105 @@
 RXPGuides.RegisterGuide([[
 #classic
 << Horde
-#name 12-17 贫瘠之地
+#name 12-17 The Barrens
 #version 1
-#group RestedXP部落1-22
-#next 17-22 石爪山脉/贫瘠之地/灰谷
+#group RestedXP Horde 1-22
+#next 17-22 Stonetalon/Barrens/Ashenvale
 
 step << Tauren Shaman
     .goto Durotar,50.8,43.6
-    .accept 840 >>接受部落征兵
+    .accept 840 >>Accept Conscript of the Horde
 step << Tauren Shaman
     #completewith next
-    .goto Durotar,52.8,28.7,20 >> 到这里的洞穴里去
+    .goto Durotar,52.8,28.7,20 >> Go into the cave here
 step << Tauren Shaman
-    >>为了袋子杀死燃烧之刃信徒
+    >>Kill the Burning Blade Cultists for the Pouch
     .goto Durotar,52.5,26.7
     .complete 1525,2 --Reagent Pouch (1)
 step << Tauren Shaman
-    .goto Durotar,52.8,28.7,20 >> 离开洞穴
+    .goto Durotar,52.8,28.7,20 >> Leave the cave
 step << Tauren Shaman
     .goto The Barrens,62.2,19.4
-    .turnin 840 >>交出部落征兵
-    .accept 842 >>接受十字路口征兵
+    .turnin 840 >>Turn in Conscript of the Horde
+    .accept 842 >>Accept Crossroads Conscription
 step << Warrior
     #completewith next
-	.goto The Barrens,54.7,28.0,30 >>在这里跑上山
+	.goto The Barrens,54.7,28.0,30 >>Run up the mountain here
 step << Warrior
-    >>去山顶
+    >>Go to the top of the mountain
     .goto The Barrens,57.2,30.3
-    .turnin 1502 >>星期四的严酷火神
-    .accept 1503 >>接受锻钢
+    .turnin 1502 >>Turn in Thun'grim Firegaze
+    .accept 1503 >>Accept Forged Steel
 step << Warrior
-    >>抢劫灰色箱子以获得锻钢棒
+    >>Loot the gray chest for Forged Steel Bars
 	.goto The Barrens,55.0,26.7
     .complete 1503,1 --Forged Steel Bars (1)
 step << Warrior
     #completewith next
-    .goto The Barrens,54.7,28.0,30 >>在这里跑上山
+    .goto The Barrens,54.7,28.0,30 >>Run up the mountain here
 step << Warrior
     .goto The Barrens,57.2,30.3
-    .turnin 1503 >>转入锻钢
+    .turnin 1503 >>Turn in Forged Steel
 step << Shaman
     #sticky
-    >>杀死并掠夺剃须刀以获取火油
+    >>Kill and Loot Razormanes for Fire Tar
     .complete 1525,1 --Fire Tar (1)
 step << !Shaman !Warrior/Undead
-    .goto The Barrens,52.0,30.5,150 >> 跑到十字路口
+    .goto The Barrens,52.0,30.5,150 >> Run to the Crossroads
 step << !Shaman !Warrior/Undead
     .goto The Barrens,52.2,31.0
-    .turnin 842 >>交出十字路口征兵 << !Druid
-    .accept 844 >>接受平原漫游者威胁
+    .turnin 842 >>Turn in Crossroads Conscription << !Druid
+    .accept 844 >>Accept Plainstrider Menace
 step << !Shaman !Warrior/Undead
     .goto The Barrens,52.2,31.8
-    .accept 870 >>接受被遗忘的水池
+    .accept 870 >>Accept The Forgotten Pools
 step << Orc !Warrior !Shaman/Troll !Warrior !Shaman
     .goto The Barrens,52.5,29.8
-    .accept 6365 >>接受Orgrimmar的肉类
+    .accept 6365 >>Accept Meats to Orgrimmar
 step << Shaman Troll/Shaman Orc/Warrior Orc/Warrior Troll/Rogue Orc/Rogue Troll
     .goto The Barrens,52.62,29.84
-    .turnin 6386 >> 转弯返回十字路口
+    .turnin 6386 >> Turn in Return to the Crossroads
 step << Undead
     .goto The Barrens,51.99,29.89
-	.home >> 把炉子放在十字路口
+	.home >> Set your hearth to Crossroads
 step << !Shaman !Warrior/Undead
     .goto The Barrens,51.9,30.3
-    .accept 869 >>接受猛禽窃贼
+    .accept 869 >>Accept Raptor Thieves
 step << !Shaman !Warrior/Undead
     .goto The Barrens,51.5,30.8
-    .accept 871 >>接受破坏攻击
-    .accept 5041 >>接受十字路口的补给
+    .accept 871 >>Accept Disrupt the Attacks
+    .accept 5041 >>Accept Supplies for the Crossroads
 step << !Shaman !Warrior/Undead
 	#completewith next
     .goto The Barrens,51.5,30.4
-    .fp Crossroads >> 获取十字路口飞行路线
+    .fp Crossroads >> Get the Crossroads flight path
 step << Orc !Warrior !Shaman/Troll !Warrior !Shaman
-    >>不要去奥格瑞玛
+    >>do NOT go to Orgrimmar
     .goto The Barrens,51.5,30.3
-    .turnin 6365 >>将肉类交给Orgrimmar
-    .accept 6384 >>接受前往Orgrimmar的骑行 << !Rogue
+    .turnin 6365 >>Turn in Meats to Orgrimmar
+    .accept 6384 >>Accept Ride to Orgrimmar << !Rogue
 step << !Shaman
 	#era/som
     .goto The Barrens,51.5,30.1
-    .accept 848 >>接受真菌孢子
-    .accept 1492 >>接受码头管理员Dizzywig
-	.turnin 1358 >> 交给Helbrim的样品 << Undead/Rogue
+    .accept 848 >>Accept Fungal Spores
+    .accept 1492 >>Accept Wharfmaster Dizzywig
+	.turnin 1358 >> Turn in Sample for Helbrim << Undead/Rogue
 step << !Shaman
 	#som
 	#phase 3-6
     .goto The Barrens,51.5,30.1
-    .accept 848 >>接受真菌孢子
-    .accept 1492 >>接受码头管理员Dizzywig
+    .accept 848 >>Accept Fungal Spores
+    .accept 1492 >>Accept Wharfmaster Dizzywig
 step
     #sticky
     #completewith next
-    >>检查陈氏空桶的位置。抢走它并开始任务，否则你稍后会得到它
+    >>Check this location for Chen's Empty Keg. Loot it and start the quest, otherwise you'll get it later
     .goto The Barrens,55.7,27.3
     .collect 4926,1,819 --Collect Chen's Empty Keg
-    .accept 819 >> 收下陈的空桶
+    .accept 819 >> Accept Chen's Empty Keg
 step
     .goto The Barrens,55.6,26.6
-    >>杀死该地区的Quillboars
+    >>Kill Quillboars in the area
     .complete 871,2 --Razormane Thornweaver (8)
     .complete 871,1 --Razormane Water Seeker (8)
     .complete 871,3 --Razormane Hunter (3)
@@ -107,19 +107,19 @@ step << !Tauren !Undead
     #sticky
     #completewith next
     .goto The Barrens,62.3,20.0,0
-    >>如果你袋子里的缺陷能量石还有不到10分钟的时间，放下它，然后回去再次抢劫阿克泽洛斯旁边的紫石
-    .turnin 926 >>交出有缺陷的能量石
+    >>If the Flawed Power Stone in your bags has less than 10 minutes left, drop it, then go back and loot the Purple Stone next to Ak'Zeloth again
+    .turnin 926 >>Turn in Flawed Power Stone
 step << !Tauren !Undead !Rogue
     #sticky
     #completewith BeakCave
-    >>如果你有时间在瑕疵能量石上杀死一些平原漫游者。抢走他们的喙
+    >>Kill some Plainstriders en route if you have time on Flawed Power Stone. Loot them for Beaks
     .complete 844,1 --Plainstrider Beak (7)
 step << !Tauren !Undead !Rogue
     #label BeakCave
     .goto The Barrens,50.4,22.0,40,0
-    .goto The Barrens,47.6,19.2,40 >>跑上山，然后去山顶的洞穴
+    .goto The Barrens,47.6,19.2,40 >>Run up the mountain, then go to the cave on top
 step << !Tauren !Undead !Rogue
-    >>右键单击祭坛。确保你身上有一块能量石
+    >>Right click the Altar. Make sure you have a Power Stone on you
     .goto The Barrens,48.0,19.1
     .goto The Barrens,62.3,20.0,0
     .collect 4986,1,924 --Collect Flawed Power Stone
@@ -127,10 +127,10 @@ step << !Tauren !Undead !Rogue
 step
     #sticky
     #completewith next
-    >>杀死你看到的猛禽。掠夺他们以获取猛禽头颅-稍后你会得到更多
+    >>Kill Raptors that you see. Loot them for some Raptor Heads - you'll get more later
     .complete 869,1 --Raptor Head (12)
 step << !Tauren
-    >>杀死平原漫游者。抢走他们的喙
+    >>Kill Plainstriders. Loot them for Beaks
     .goto The Barrens,50.25,27.78
     .complete 844,1 --Plainstrider Beak (7)
 step << Tauren
@@ -141,33 +141,33 @@ step << Tauren
     .goto The Barrens,48.3,23.5,80,0
     .goto The Barrens,49.8,31.2,80,0
     .goto The Barrens,55.7,24.0
-    >>杀死平原漫游者。抢走他们的喙
+    >>Kill Plainstriders. Loot them for Beaks
     .complete 844,1 --Plainstrider Beak (7)
 step << !Tauren Warrior/!Tauren Shaman
-    >>跑回十字路口
+    >>Run back to The Crossroads
     .goto The Barrens,52.62,29.84
-    .turnin 6386 >>转入返回十字路口。
+    .turnin 6386 >>Turn in Return to the Crossroads.
 step
-    >>跑回十字路口 << !Tauren Warrior/!Tauren Shaman
+    >>Run back to The Crossroads << !Tauren Warrior/!Tauren Shaman
     .goto The Barrens,51.50,30.87
-    .turnin 871 >>转入干扰攻击
-    .accept 872 >>接受干扰结束
+    .turnin 871 >>Turn in Disrupt the Attacks
+    .accept 872 >>Accept The Disruption Ends
 step
 #era/som
     .goto The Barrens,51.62,30.90
-    >>跑到塔顶
-    .accept 867 >>接受哈比突袭者
+    >>Run up to the top of the tower
+    .accept 867 >>Accept Harpy Raiders
 step
     .goto The Barrens,52.2,31.0
-    .turnin 844 >>提交平原漫游者威胁
-    .accept 845 >>接受Zhevra
+    .turnin 844 >>Turn in Plainstrider Menace
+    .accept 845 >>Accept The Zhevra
 step << Tauren Shaman
     .goto The Barrens,52.2,31.0
-    .turnin 842 >>交出十字路口征兵
+    .turnin 842 >>Turn in Crossroads Conscription
 step << Warrior
      #sticky
     #completewith next
-    +检查利扎里克(哥布林)是否在十字路口，如果他在，并且你有足够的钱，买罐子和重型钉锤。
+    +Check if Lizzarik (Goblin) is in Crossroads, if he is, and you have enough money, buy pots and Heavy Spiked Mace.
     .goto The Barrens,52.5,30.7,0
 	.unitscan Lizzarik
 step << Warrior
@@ -175,26 +175,26 @@ step << Warrior
     #completewith next
     .collect 4778,1 --Collect Heavy Spiked Mace
 step << Warrior
-	.goto The Barrens,57.1,25.3,250 >> 跑到这里
+	.goto The Barrens,57.1,25.3,250 >> Run to here
 step
-    >>检查陈氏空桶的位置。抢走它，开始任务
+    >>Check this location for Chen's Empty Keg. Loot it and start the quest
     .goto The Barrens,55.78,20.00
     .collect 4926,1,819 --Collect Chen's Empty Keg
-    .accept 819 >> 收下陈的空桶
+    .accept 819 >> Accept Chen's Empty Keg
 step
     #sticky
     #completewith Supplycrate
-    >>在得到板条箱和杀死克雷尼格的同时杀死剃刀人
+    >>Kill Razormanes while getting the Crates and killing Kreenig
     .complete 872,1 --Razormane Geomancer (8)
     .complete 872,2 --Razormane Defender (8)
 step
     #sticky
     #completewith next
-    >>抢劫在该地区发现的棕色盒子
+    >>Loot the brown boxes found in the area
     .complete 5041,1 --Crossroads' Supply Crates (1)
 step
     #label Kreenig
-    >>杀死Krenig Snarlsnout。抢他的牙
+    >>Kill Kreenig Snarlsnout. Loot him for his Tusk
     .goto The Barrens,58.6,27.1
     .complete 872,3 --Kreenig Snarlsnout's Tusk (1)
 step
@@ -204,90 +204,90 @@ step
     .goto The Barrens,58.5,25.8,40,0
     .goto The Barrens,59.4,24.8,40,0
     .goto The Barrens,58.4,27.0,0
-    >>抢劫在该地区发现的棕色盒子
+    >>Loot the brown boxes found in the area
     .complete 5041,1 --Crossroads' Supply Crates (1)
 step
     .goto The Barrens,56.7,25.3
-    >>杀死剃须刀
+    >>Finish killing the Razormanes
     .complete 872,1 --Razormane Geomancer (8)
     .complete 872,2 --Razormane Defender (8)
 step << Warrior
-    >> 在这里抢劫酒桶。如果还没有结束，等待重生
+    >> Loot the Keg here. If it's not up, wait for the respawn
     .goto The Barrens,55.8,20.0
     .collect 4926,1,819 --Collect Chen's Empty Keg
-    .accept 819 >> 收下陈的空桶
+    .accept 819 >> Accept Chen's Empty Keg
 step << !Tauren !Undead
     #sticky
     #completewith next
-    >>杀死你看到的任何哲夫拉。抢走他们的马蹄
+    >>Kill any Zhevras you see. Loot them for Hooves
     .complete 845,1 --Zhevra Hooves (4)
 step << !Tauren !Undead
     .goto The Barrens,62.3,20.1
-    .turnin 924 >>交出恶魔种子
+    .turnin 924 >>Turn in The Demon Seed
 step << Shaman
     .goto Durotar,38.5,58.9
-    .turnin 1525 >>交火召唤
-    .accept 1526 >>接受火灾召唤
+    .turnin 1525 >>Turn in Call of Fire
+    .accept 1526 >>Accept Call of Fire
 step << Shaman
-    >>跑到山顶。单击钎焊器
+    >>Run to the top of the mountain. Click the Brazier
     .goto Durotar,39.0,58.2
     .complete 1526,1 --Glowing Ember (1)
 step << Shaman
     .goto Durotar,38.9,58.2
-    .turnin 1526 >>交火召唤
-    .accept 1527 >>接受火灾召唤
+    .turnin 1526 >>Turn in Call of Fire
+    .accept 1527 >>Accept Call of Fire
 step << Shaman
     #sticky
     #completewith next
-    >>杀死你看到的任何哲夫拉。抢走他们的马蹄
+    >>Kill any Zhevras you see. Loot them for Hooves
     .complete 845,1 --Zhevra Hooves (4)
 step << Shaman
     .goto The Barrens,55.9,19.9
-    .turnin 1527 >>交火召唤
+    .turnin 1527 >>Turn in Call of Fire
 step << Shaman
-     >> 在这里抢劫酒桶。如果还没有结束，等待重生
+     >> Loot the Keg here. If it's not up, wait for the respawn
     .goto The Barrens,55.8,20.0
     .collect 4926,1,819 --Collect Chen's Empty Keg
-    .accept 819 >> 收下陈的空桶
+    .accept 819 >> Accept Chen's Empty Keg
 step << !Shaman
-    >>杀死你看到的任何哲夫拉。抢走他们的马蹄。在进入棘轮之前，确保您有4个
+    >>Kill any Zhevras you see. Loot them for Hooves. Make sure you have 4 before entering Ratchet
     .goto The Barrens,63.9,35.8
     .complete 845,1 --Zhevra Hooves (4)
 step
-    >>建筑物顶层
+    >>Top floor of the building
     .goto The Barrens,62.7,36.3
-    .accept 887 >>接受Southsea Freebooters
+    .accept 887 >>Accept Southsea Freebooters
 step
     .goto The Barrens,63.1,37.1
-    .fp Ratchet >> 获取棘轮飞行路径
+    .fp Ratchet >> Get the Ratchet flight path
 step
     .goto The Barrens,63.0,37.2
-    .accept 894 >>接受Samophlange
+    .accept 894 >>Accept Samophlange
 step
-    >>单击通缉海报。如果你想，也可以在这里存款
+    >>Click the Wanted poster. You can bank here too if you want
     .goto The Barrens,62.6,37.5
-    .accept 895 >>接受通缉：Longshore男爵
+    .accept 895 >>Accept WANTED: Baron Longshore
 step
     .goto The Barrens,62.4,37.7
-    .accept 865 >>接受猛禽角
+    .accept 865 >>Accept Raptor Horns
 step << Rogue
     .goto The Barrens,62.2,37.4
-	.vendor	>> 去Ironzar买1-2把弯刀(如果它们比你现在的武器好的话)
+	.vendor	>> Go to Ironzar and buy 1-2 Scimitars (if they're better than your current weapons)
 step
     .goto The Barrens,62.3,38.4
-    .turnin 819 >>交回陈的空桶
-    .accept 821 >>收下陈的空桶
+    .turnin 819 >>Turn in Chen's Empty Keg
+    .accept 821 >>Accept Chen's Empty Keg
 step
     #sticky
     #label Southsea
-    >>杀死该地区的南海暴徒
+    >>Kill Southsea mobs in the area
     .goto The Barrens,62.59,43.99,0
     .complete 887,1 --Southsea Brigand (12)
     .complete 887,2 --Southsea Cannoneer (6)
 step << !Undead Rogue
 	#sticky
 	#completewith next
-	>>杀死塔赞。抢他的背包
+	>>Kill Tazan. Loot him for his Satchel
     .goto The Barrens,62.59,43.99,0
     .goto The Barrens,63.56,44.35,0
 	.unitscan Tazan
@@ -295,10 +295,10 @@ step << !Undead Rogue
 step
     .unitscan Baron Longshore
     .goto The Barrens,62.70,49.79
-    >>杀死男爵Longshore。在任何营地都能找到他。抢他的头
+    >>Kill Baron Longshore. He can be found in any of the camps. Loot him for his Head
     .complete 895,1 --Baron Longshore's Head (1)
 step << !Undead Rogue
-	>>杀死塔赞。抢他的背包
+	>>Kill Tazan. Loot him for his Satchel
     .goto The Barrens,62.59,43.99,60,0
     .goto The Barrens,63.56,44.35
 	.unitscan Tazan
@@ -306,32 +306,32 @@ step << !Undead Rogue
 step
     #requires Southsea
     .goto The Barrens,62.7,36.3
-    .turnin 887 >>交出南海自由球员
-    .accept 890 >>接受丢失的装运
-    .turnin 895 >>通缉犯：Longshore男爵
+    .turnin 887 >>Turn in Southsea Freebooters
+    .accept 890 >>Accept The Missing Shipment
+    .turnin 895 >>Turn in WANTED: Baron Longshore
 step << Rogue
 	.goto The Barrens,62.2,37.4
-	.vendor	>> 去Ironzar买1-2把弯刀(如果它们比你现在的武器好的话)
+	.vendor	>> Go to Ironzar and buy 1-2 Scimitars (if they're better than your current weapons)
 step << Shaman
 	.goto The Barrens,62.2,37.4
-	.vendor	>> 如果比你现在的武器更好，就从Ironzar那里买一根Gnarled Staff
+	.vendor	>> Buy a Gnarled Staff from Ironzar if it's better than your current weapon
 step
     .goto The Barrens,63.3,38.4
-    .turnin 1492 >>交码头管理员Dizzywig
-    .turnin 890 >>交回丢失的货物
-    .accept 892 >>接受丢失的装运
-    .accept 896 >>接受矿工的命运
+    .turnin 1492 >>Turn in Wharfmaster Dizzywig
+    .turnin 890 >>Turn in The Missing Shipment
+    .accept 892 >>Accept The Missing Shipment
+    .accept 896 >>Accept Miner's Fortune
 step
     .goto The Barrens,62.7,36.3
-    .turnin 892 >>交回丢失的货物
-    .accept 888 >>接受被盗战利品
+    .turnin 892 >>Turn in The Missing Shipment
+    .accept 888 >>Accept Stolen Booty
 step << !Warrior
     .goto The Barrens,63.08,37.16
-    .fly Crossroads >> 飞向十字路口
+    .fly Crossroads >> Fly to The Crossroads
 step << Warrior
     #completewith next
     .goto The Barrens,61.6,37.9,30,0
-    .goto The Barrens,52.5,30.7,150 >> 沿着这条路走到十字路口，留心利扎里克(Lizzarik)买一把重型钉锤(Heavy Spiked Mace)。如果他没有，就飞到十字路口
+    .goto The Barrens,52.5,30.7,150 >> Walk via the road to Crossroads, look out for Lizzarik to buy a Heavy Spiked Mace. If he doesn't have it, fly/run to The Crossroads
 step << Warrior
     #completewith next
 	#label HeavySMace
@@ -340,49 +340,49 @@ step << Warrior
 step << Warrior
 	#completewith next
 	#requires HeavySMace
-	.goto The Barrens,52.5,30.7,150 >> 如果你在棘轮里，就飞到十字路口；如果你在十字路口的半路上，就跑
+	.goto The Barrens,52.5,30.7,150 >> Fly to Crossroads if you're in Ratchet, or Run if you're halfway along the path to Crossroads
 step
     .goto The Barrens,51.99,29.89
-	.vendor >> 从客栈老板那里购买15级食物/水
+	.vendor >> Buy level 15 food/water from the Innkeeper
 step
     .goto The Barrens,52.2,31.0
-    .turnin 845 >>交出哲夫拉
-    .accept 903 >>接受贫瘠的游荡者
+    .turnin 845 >>Turn in The Zhevra
+    .accept 903 >>Accept Prowlers of the Barrens
 step
     .goto The Barrens,51.5,30.8
-    .turnin 5041 >>十字路口的上缴物资
-    .turnin 872 >>颠覆性结束
+    .turnin 5041 >>Turn in Supplies for the Crossroads
+    .turnin 872 >>Turn in The Disruption Ends
 step << Hunter
     .goto The Barrens,51.0,29.0
-	.vendor	>> 去乌思罗克买一个精致的长弓，有时商店里没有。如果不是，请购买加固长弓
-	>>买箭直到你的箭袋装满
+	.vendor	>> Check Uthrok for a Fine Longbow, sometimes it's not in the shop. If it's not, buy a Reinforced Longbow
+	>>Buy arrows until your quiver is full
 step
     #sticky
     #completewith next
-    >>杀死平原漫游者。抢劫他们的肾脏
+    >>Kill Plainstriders. Loot them for their Kidneys
     .complete 821,2 --Plainstrider Kidney (5)
 step << !Undead !Rogue
 	#era
     .goto The Barrens,45.4,28.4
-    .accept 850 >>接受Kolkar领导人
-    .accept 855 >> 接受半人马座护腕
+    .accept 850 >>Accept Kolkar Leaders
+    .accept 855 >> Accept Centaur Bracers
 step << !Undead !Rogue
 	#som
     .goto The Barrens,45.4,28.4
-    .accept 850 >>接受Kolkar领导人
+    .accept 850 >>Accept Kolkar Leaders
 step << Undead/Rogue
     .goto The Barrens,45.4,28.4
-    .accept 850 >>接受Kolkar领导人
+    .accept 850 >>Accept Kolkar Leaders
 step << !Shaman !Warrior/Undead
     #completewith next
-    >>收集遗忘池周围的白蘑菇
+    >>Collect the white mushrooms around The Forgotten Pools
     .complete 848,1 --Collect Fungal Spores (x4)
 step << !Shaman !Warrior/Undead
-    >>潜水至气泡裂缝
+    >>Dive underwater to the bubble fissure
     .goto The Barrens,45.1,22.5
-    .complete 870,1 --Explore the 水s of the Forgotten Pools
+    .complete 870,1 --Explore the waters of the Forgotten Pools
 step << !Shaman !Warrior/Undead
-    >>收集遗忘池周围的白蘑菇
+    >>Collect the white mushrooms around The Forgotten Pools
     .goto The Barrens,45.2,23.3,60,0
     .goto The Barrens,45.2,22.0,60,0
     .goto The Barrens,44.6,22.5,60,0
@@ -392,32 +392,32 @@ step << !Shaman !Warrior/Undead
 step << !Undead !Rogue
 	#era
     #completewith Leaders
-    >>杀死半人马座。掠夺他们的护腕。你稍后会完成这个
+    >>Kill Centaurs. Loot them for their bracers. You'll finish this later
     .complete 855,1 --Centaur Bracers (15)
 step
-	>>杀死科多班。在他射门、入网(然后射门)和重击时要小心。抢他的头
+	>>Kill Kodobane. Be careful as he shoots, nets, (then shoots) and hits hard. Loot him for his head
     .goto The Barrens,42.8,23.5
     .complete 850,1 --Kodobane's Head (1)
 step << !Undead !Rogue
 	#era
     .goto The Barrens,45.39,28.44
-   .turnin 850 >> 移交Kolkar领导人
-    .accept 851 >>接受苦行僧维罗
+   .turnin 850 >> Turn in Kolkar Leaders
+    .accept 851 >>Accept Verog the Dervish
 step << !Undead !Rogue
 	#era
 	.isQuestComplete 855
     .goto The Barrens,45.39,28.44
-    .turnin 855 >> 交出半人马座护腕
+    .turnin 855 >> Turn in Centaur Bracers
 step
 	#era
 	#label Leaders
     .goto The Barrens,45.39,28.44
-   .turnin 850 >> 移交Kolkar领导人
-    .accept 851 >>接受苦行僧维罗 << !Undead !Rogue
+   .turnin 850 >> Turn in Kolkar Leaders
+    .accept 851 >>Accept Verog the Dervish << !Undead !Rogue
 step
     #sticky
     #completewith Claws
-    >>杀死你看到的猛禽。掠夺他们以获取猛禽头颅-稍后你会得到更多
+    >>Kill Raptors that you see. Loot them for some Raptor Heads - you'll get more later
     .complete 869,1 --Raptor Head (12)
 step
     #sticky
@@ -427,13 +427,13 @@ step
 #som
 #phase 3-6
     #label Claws
-    >>杀死游荡者。掠夺他们的爪牙
+    >>Kill Prowlers. Loot them for their Claws and Tusks
     .goto The Barrens,53.00,16.00
     .complete 903,1 --Prowler Claws (7)
 step
 #era/som
     #label Claws
-    >>杀死游荡者。掠夺他们的爪牙
+    >>Kill Prowlers. Loot them for their Claws and Tusks
     .goto The Barrens,41.4,24.5,100,0
     .goto The Barrens,40.48,20.36
     .complete 903,1 --Prowler Claws (7)
@@ -443,404 +443,404 @@ step
     .goto The Barrens,40.7,14.6,90,0
     .goto The Barrens,42.6,15.1,90,0
     .goto The Barrens,40.2,18.9
-    >>杀死哈比。掠夺他们的魔爪
+    >>Kill Harpies. Loot them for their Talons
     .complete 867,1 --Witchwing Talon (8)
 step
     #sticky
     #completewith Samophlange
-    >>杀死平原漫游者。抢劫他们的肾脏
+    >>Kill Plainstriders. Loot them for their Kidneys
     .complete 821,2 --Plainstrider Kidney (5)
 step << Warrior
 #era/som
 	#completewith next
     .goto The Barrens,43.8,12.2
-	>> 如果有重型钉锤，请从Vrang购买 << Warrior
+	>> Buy the Heavy Spiked Mace from Vrang if it's available << Warrior
     .collect 4778,1 --Collect Heavy Spiked Mace << Warrior
 step
 #era/som
     .goto The Barrens,43.8,12.2
-	.vendor	>> 供应商垃圾、修理
+	.vendor	>> Vendor trash, repair
 step
 	#label Samophlange
-    >>单击控制台
+    >>Click on the Control Console
     .goto The Barrens,52.4,11.6
-    .turnin 894 >>交给Samophlange
-    .accept 900 >>接受Samophlange
+    .turnin 894 >>Turn in Samophlange
+    .accept 900 >>Accept Samophlange
 step
-    >>点击阀门
+    >>Click the Valve
     .goto The Barrens,52.4,11.4
     .complete 900,2 --Shut off Fuel Control Valve (1)
 step
-    >>单击“阀”。暴徒会滋生
+    >>Click the Valve. Mobs will spawn
     .goto The Barrens,52.3,11.4
     .complete 900,3 --Shut off Regulator Valve (1)
 step
-    >>单击“阀”。暴徒会滋生
+    >>Click the Valve. Mobs will spawn
     .goto The Barrens,52.3,11.6
     .complete 900,1 --Shut off Main Control Valve (1)
 step
-    >>单击控制台
+    >>Click on the Control Console
     .goto The Barrens,52.4,11.6
-    .turnin 900 >>交给Samophlange
-    .accept 901 >>接受Samophlange
+    .turnin 900 >>Turn in Samophlange
+    .accept 901 >>Accept Samophlange
 step
-    >>杀死大楼里的小精灵补锅匠。抢他拿控制台钥匙
+    >>Kill Tinkerer Sniggles in the building. Loot him for the Console Key
     .goto The Barrens,52.8,10.4
     .complete 901,1 --Console Key (1)
 step
     .goto The Barrens,52.4,11.6
-    .turnin 901 >>交给Samophlange
-    .accept 902 >>接受Samophlange
+    .turnin 901 >>Turn in Samophlange
+    .accept 902 >>Accept Samophlange
 step
     #sticky
     #completewith next
-    >>杀死平原漫游者。抢劫他们的肾脏
+    >>Kill Plainstriders. Loot them for their Kidneys
     .complete 821,2 --Plainstrider Kidney (5)
 step
     .goto The Barrens,54.3,12.3,90,0
     .goto The Barrens,54.6,16.7,90,0
     .goto The Barrens,42.6,15.1,90,0
     .goto The Barrens,54.3,12.3
-    >>杀死猛禽。抢他们的头
+    >>Kill Raptors. Loot them for their heads
     .complete 869,1 --Raptor Head (12)
 step
     .goto The Barrens,56.5,7.5
-    >>磨练到16级很重要，因为接下来的3个任务相当困难。
+    >>Grinding to level 16 here is important, due to the next 3 quests being quite hard.
 	.xp 16
 step
     .goto The Barrens,56.5,7.5
-    .accept 858 >>接受点火
+    .accept 858 >>Accept Ignition
 step
     #sticky
 	#hardcore
     #completewith next
-    +接下来的3个任务可能很难，要格外小心
+    +The next 3 quests can be quite hard, be extra careful
 
 step
-    >>杀死监督员Lugwizzle(他在整个塔上巡逻)。抢他取点火钥匙
+    >>Kill Supervisor Lugwizzle (He patrols all over the tower). Loot him for the Ignition Key
 .goto The Barrens,56.3,8.6
     .complete 858,1 --Ignition Key (1)
 step
-    >>这将开始护送。确保你完全健康
+    >>This will begin an escort. Make sure you're at full health
     .goto The Barrens,56.5,7.5
-    .turnin 858 >>接通点火开关
-    .accept 863 >>接受逃脱
+    .turnin 858 >>Turn in Ignition
+    .accept 863 >>Accept The Escape
 step
     #label Slugs
-    >>当碎纸机移动到较高的地面上时，会产生2个暴徒。杀死他们，然后等待他的RP事件结束
+    >>2 Mobs will spawn when the shredder moves onto the higher ground. Kill them then wait for his RP event at the end
     .goto The Barrens,55.3,7.8
     .complete 863,1 --Escort Wizzlecrank out of the Venture Co. drill site (1)
 step
     #sticky
     #completewith next
-    >>杀死平原漫游者。抢劫他们的肾脏
+    >>Kill Plainstriders. Loot them for their Kidneys
     .complete 821,2 --Plainstrider Kidney (5)
 step
-    >>在该地区捣乱暴徒。杀死大约25个暴徒，如果翡翠没有掉落，跳过这个任务。
+    >>Grind mobs in the area. Kill around 25 mobs, if the Emerald didn't drop skip this quest.
     .goto The Barrens,61.5,4.3
     .complete 896,1 -- Cats Eye Emerald (1)
 step
 	#completewith next
-    .goto Orgrimmar,11.5,67.0,50 >>跑到奥格瑞玛的西入口
+    .goto Orgrimmar,11.5,67.0,50 >>Run to the west entrance of Orgrimmar
 step << Mage
     .goto Orgrimmar,38.79,85.68
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Priest
     .goto Orgrimmar,35.59,87.83
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Tauren/Undead
-    >>跑到Flight Master塔台。获取飞行路径。不要飞到任何地方
+    >>Run to the Flight Master tower. Get the Flight Path. DON'T fly anywhere
     .goto Orgrimmar,45.2,63.8
-    .fp Orgrimmar >> 获取Orgrimmar飞行路线
+    .fp Orgrimmar >> Get the Orgrimmar flight path
 step
-    >>跑去Grommash Hold
+    >>Run to Grommash Hold
     .goto Orgrimmar,39.1,38.1
-    .accept 1061 >>接受石爪的精神
+    .accept 1061 >>Accept The Spirits of Stonetalon
 step << Druid
     .goto Orgrimmar,54.2,68.4
-	.fly Thunder Bluff >> 飞向雷霆崖
+	.fly Thunder Bluff >> Fly to Thunder Bluff
 step << !Rogue !Undead !Tauren !Shaman !Warrior
     .goto Orgrimmar,54.2,68.4
-    .turnin 6384 >>转入骑行前往奥格瑞玛
-    .accept 6385 >> 接受风骑士大师多拉斯
+    .turnin 6384 >>Turn in Ride to Orgrimmar
+    .accept 6385 >> Accept Doras the Wind Rider Master
 step << !Rogue !Undead !Tauren !Shaman !Warrior
     .goto Orgrimmar,45.2,63.8
-    .turnin 6385 >> 交给风骑士大师多拉斯
-    .accept 6386 >> 接受返回十字路口
+    .turnin 6385 >> Turn in Doras the Wind Rider Master
+    .accept 6386 >> Accept Return to the Crossroads
 step << Rogue
     .goto Orgrimmar,43.05,53.73
-    .trainer >> 训练你的职业咒语
-	>> 确保你已经训练过拾取锁定
-    .accept 2379 >> 接受赞多赞
-	.turnin 1963 >> 交给破碎的手 << !Undead
---	.accept 1858 >> 接受破碎的手
+    .trainer >> Train your class spells
+	>> Make sure you've trained Pick Lock
+    .accept 2379 >> Accept Zando'Zan
+	.turnin 1963 >> Turn in The Shattered Hand << !Undead
+--	.accept 1858 >> Accept The Shattered Hand
 --N ..Make sure you train Pick Pocket
 step << Rogue
     .goto Orgrimmar,42.72,52.95
-    .turnin 2379 >>交出Zando'zan
-    .accept 2382 >>接受棘轮的Wrenix
+    .turnin 2379 >>Turn in Zando'zan
+    .accept 2382 >>Accept Wrenix of Ratchet
 step << skip
-    >>客栈里的扒手游戏。打开你包里的泰山背包
+    >>Pickpocket Gamon in the Inn. Open Tazan's Satchel in your bags
 	.goto Orgrimmar,53.99,68.05
 	.collect 7208,1,1858,1 --Tazan's Key
 	.complete 1858,1 --Tazan's Logbook (1)
 --N Rogue class q
 step << skip
     .goto Orgrimmar,43.05,53.73
-	.turnin 1858 >> 交给破碎的手
+	.turnin 1858 >> Turn in The Shattered Hand
 --N Rogue class q
 step << Warlock
     .goto Orgrimmar,47.99,45.94
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Warlock
     .goto Orgrimmar,47.52,46.70
-    .vendor >> 购买消耗阴影r1，然后牺牲r1书籍(如果你有钱)
+    .vendor >> Buy Consume Shadows r1 then Sacrifice r1 books (if you have money)
 step << Shaman
     .goto Orgrimmar,38.79,36.37
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Warrior
     .goto Orgrimmar,80.39,32.39
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Hunter
     .goto Orgrimmar,66.04,18.52
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Hunter
     .goto Orgrimmar,66.31,14.80
-    .trainer >> 训练你的宠物法术
+    .trainer >> Train your pet spells
 step << Hunter
     .goto Orgrimmar,81.52,19.64
-	.train 227 >> 列车从河岸出发
+	.train 227 >> Train Staves from Hanashi
 step << Druid
 	.goto Thunder Bluff,76.4,27.6
-	.accept 27 >> 接受教训以学习
+	.accept 27 >> Accept A Lesson to Learn
 step << Druid
-    .zone Moonglade >>传送至Moonglade
+    .zone Moonglade >>Teleport to Moonglade
 step << Druid
-    >>楼上的
+    >>Upstairs
     .goto Moonglade,56.21,30.64
-	.turnin 27 >> 交一堂课来学习
-    .accept 28 >> 接受湖的审判
+	.turnin 27 >> Turn in A Lesson to Learn
+    .accept 28 >> Accept Trial of the Lake
 step << Druid
     .goto Moonglade,52.53,40.56
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Druid
     .goto Moonglade,36.52,40.10
-    .turnin 28 >> 《湖的试航》(Turn in Trial of the Lake)
---    .accept 30 >> 接受海狮的审判
+    .turnin 28 >> Turn in Trial of the Lake
+--    .accept 30 >> Accept Trial of the Sea Lion
 step
     #completewith next
-    .hs >>炉膛到十字路口
+    .hs >>Hearth to Crossroads
 step
     .goto The Barrens,51.9,30.3
-    .turnin 869 >>收缴猛禽窃贼
-    .accept 3281 >>接受被盗的银子
+    .turnin 869 >>Turn in Raptor Thieves
+    .accept 3281 >>Accept Stolen Silver
 step
     .goto The Barrens,52.3,31.0
-    .turnin 903 >>收缴贫瘠的游荡者
-    .accept 881 >>接受Echeyakee
+    .turnin 903 >>Turn in Prowlers of the Barrens
+    .accept 881 >>Accept Echeyakee
 step << !Rogue !Undead !Tauren !Shaman !Warrior
     .goto The Barrens,52.62,29.84
-    .turnin 6386 >> 转弯返回十字路口
+    .turnin 6386 >> Turn in Return to the Crossroads
 step
-    >>在你包里的骨头要召唤埃希亚基的地方使用埃希亚基之角。杀了他，抢走他的藏身之地
+    >>Use the Horn of Echeyakee in your bags where the bones are to summon Echeyakee. Kill him and loot him for his Hide
     .goto The Barrens,55.80,17.03
     .complete 881,1 --Echeyakee's Hide (1)
 step
     .goto The Barrens,52.2,31.0
-    .turnin 881 >>交给Echeyakee
-    .accept 905 >>接受愤怒的镰刀
+    .turnin 881 >>Turn in Echeyakee
+    .accept 905 >>Accept The Angry Scytheclaws
 step << !Warrior !Shaman
     .goto The Barrens,52.20,31.90
-    .turnin 870 >> 把被遗忘的水池交出来
-    .accept 877 >> 接受停滞的绿洲
+    .turnin 870 >> Turn in The Forgotten Pools
+    .accept 877 >> Accept The Stagnant Oasis
 step
     .goto The Barrens,52.00,31.60
-    .accept 899 >> 接受仇恨所消耗
-    .accept 4921 >> 接受战败
+    .accept 899 >> Accept Consumed by Hatred
+    .accept 4921 >> Accept Lost in Battle
 step
 #era/som
-    >>跑到塔顶
+    >>Run up to the top of the tower
     .goto The Barrens,51.6,30.9
-    .turnin 867 >>交出哈比突袭者
-    .accept 875 >>接受哈比中尉
+    .turnin 867 >>Turn in Harpy Raiders
+    .accept 875 >>Accept Harpy Lieutenants
 step << !Shaman !Warrior/Undead
     .goto The Barrens,51.50,30.20
-    .turnin 848 >> 倒入真菌孢子
+    .turnin 848 >> Turn in Fungal Spores
 step
     .goto The Barrens,51.5,30.3
-    .fly Ratchet >>飞到棘轮
+    .fly Ratchet >>Fly to Ratchet
 step << Rogue
     .goto The Barrens,63.07,36.31
-    .turnin 2382 >>卷进棘轮扳手
-    .accept 2381 >>接受掠夺者
+    .turnin 2382 >>Turn in Wrenix of Ratchet
+    .accept 2381 >>Accept Plundering the Plunderers
 step << Rogue
     .goto The Barrens,63.12,36.32
-    >>与Wrenix的Giztronic仪器交谈。获取E.C.A.C和窃贼工具
+    >>Talk to Wrenix's Gizmotronic Apparatus. Get an E.C.A.C and Thieves' Tools
     .collect 7970,1 --E.C.A.C. (1)
     .collect 5060,1 --Thieves' Tools (1)
 step
     .goto The Barrens,63.0,37.2
-    .turnin 902 >>交给Samophlange
-    .turnin 863 >> 上车逃生
-    .accept 1483 >> 接受Ziz Fizziks
+    .turnin 902 >>Turn in Samophlange
+    .turnin 863 >> Turn in The Escape
+    .accept 1483 >> Accept Ziz Fizziks
 step << Hunter
     .goto The Barrens,63.0,37.2
-    .accept 3921 >> 接受Wenikee Boltbucket
+    .accept 3921 >> Accept Wenikee Boltbucket
 step
     .isQuestComplete 896
 	.goto The Barrens,63.30,38.40
-    .turnin 896 >> 交给矿工的财富
+    .turnin 896 >> Turn in Miner's Fortune
 step
-    .abandon 896 >> 如果你现在还没有放弃矿工的财富
+    .abandon 896 >> Abandon Miner's Fortune if you haven't done it by now
 step
     .goto The Barrens,62.40,37.70
-    .accept 1069 >> 接受Deepmoss蜘蛛蛋
+    .accept 1069 >> Accept Deepmoss Spider Eggs
 step << Hunter
 	#completewith next
 	.goto The Barrens,61.92,38.80
-	.vendor >> 从Jazzik买箭，直到你的箭袋装满为止
+	.vendor >> Buy arrows from Jazzik until your quiver is full
 step << Rogue
 	#completewith next
     .goto The Barrens,65.04,45.44
-    +跳上船，下楼到二楼，把你的开锁机调平至80
+    +Jump onto the ship, go down to the 2nd floor and level your lockpicking up to 80
 step << Rogue
     .goto The Barrens,64.95,45.44
-    >>将E.C.A.C.拖到您的栏上。当你的开锁时间达到80时，去船的底层打开“南海之珠”
-    >>当波利从楼梯上产卵时，使用E.C.A.C
+    >>Drag the E.C.A.C. onto your bars. Go to the bottom floor of the ship and open The Jewel of the Southsea when your lockpicking is at 80
+    >>Use the E.C.A.C. on Polly when she spawns from the stairs
     .complete 2381,1 --Southsea Treasure (1)
 step
-    >>抢劫板条箱
+    >>Loot the crate
     .goto The Barrens,63.6,49.2
     .complete 888,2 --Telescopic Lens (1)
 step
-    >>抢劫板条箱
+    >>Loot the crate
     .goto The Barrens,62.6,49.6
     .complete 888,1 --Shipment of Boots (1)
 step
     #completewith CampTa
-    >>杀死平原漫游者。抢劫他们的肾脏
+    >>Kill Plainstriders. Loot them for their Kidneys
     .complete 821,2 --Plainstrider Kidney (5)
 step
     #sticky
     #completewith Nest
-    >>杀死你看到的猛禽。掠夺他们的角和羽毛。当他们猛击时要小心
+    >>Kill any Raptors you see. Loot them for their Horns and Feathers. Be careful as they thrash
     .complete 865,1 --Intact Raptor Horn (5)
 step
-    >>抢走被盗的银子
-    >>把你得到的Sunscale羽毛留到以后
+    >>Loot the chest for Stolen Silver
+    >>Save any Sunscale feathers you get for later
     .goto The Barrens,57.4,52.4,60,0
     .goto The Barrens,58.0,53.9
     .complete 3281,1 --Stolen Silver (1)
 step
-    >>在湖中，潜到水下，点击气泡裂缝。
+    >>In the middle of the lake, dive down underwater and click the Bubble Fissure.
     .goto The Barrens,55.6,42.7
     .complete 877,1 --Test the Dried Seeds (1)
 step << !Undead !Rogue
 	#era
-    >> 在湖边碾磨任何一个Centuar，直到它们产卵Verog
+    >> Grind any Centuar around the lake until they spawn Verog
     .goto The Barrens,52.95,41.77
     .complete 851,1 --Verog's Head (1)
 step
-    >>杀死周围的猛禽，直到你得到一个日晷羽毛。当你有蓝蛋的时候，就把它抢走。
+    >>Kill the surrounding Raptors until you get a Sunscale Feather. Loot the Blue Egg when you have one.
     .goto The Barrens,52.6,46.2
     .complete 905,1 --Visit Blue Raptor Nest (1)
 step
-    >>杀死周围的猛禽，直到你得到一个日晷羽毛。当你有红鸡蛋的时候，就把它抢走。
+    >>Kill the surrounding Raptors until you get a Sunscale Feather. Loot the Red Egg when you have one.
     .goto The Barrens,52.5,46.6
     .complete 905,3 --Visit Red Raptor Nest (1)
 step
     #label Nest
-    >>杀死周围的猛禽，直到你得到一个日晷羽毛。当你有一个黄鸡蛋时，就把它抢走。
+    >>Kill the surrounding Raptors until you get a Sunscale Feather. Loot the Yellow Egg when you have one.
     .goto The Barrens,52.0,46.5
     .complete 905,2 --Visit Yellow Raptor Nest (1)
 step
     .goto The Barrens,57.3,53.7,90,0
     .goto The Barrens,52.0,46.5,90,0
     .goto The Barrens,57.3,53.7
-    >>杀死猛禽。抢走他们的角
+    >>Finish killing Raptors. Loot them for their Horns
     .complete 865,1 --Intact Raptor Horn (5)
 step
-    >>与Mankrik的妻子交谈
+    >>Talk to Mankrik's Wife
     .goto The Barrens,49.3,50.4
     .complete 4921,1 --Find Mankrik's Wife (1)
 step
     #label CampTa
     .goto The Barrens,45.6,59.0
-    .home >>将您的炉石设置为陶拉霍营地
+    .home >>Set your Hearthstone to Camp Taurajo
 step
     .goto The Barrens,44.5,59.2
-    .accept 878 >>战争中接受部落
+    .accept 878 >>Accept Tribes at War
 step
     .goto The Barrens,44.5,59.2
-    .fp Camp Taurajo >> 获得Taurajo营地飞行路线 << !Shaman !Warrior !Tauren
-    .fly Crossroads >>飞向十字路口
+    .fp Camp Taurajo >> Get the Camp Taurajo flight path << !Shaman !Warrior !Tauren
+    .fly Crossroads >>Fly to Crossroads
 step
     .goto The Barrens,51.9,30.3
-    .turnin 3281 >>交出被盗的银子
+    .turnin 3281 >>Turn in Stolen Silver
 step
     .goto The Barrens,52.2,31.0
-    .turnin 905 >>交上愤怒的镰刀
-    .accept 3261 >>接受Jorn Skyseer
+    .turnin 905 >>Turn in The Angry Scytheclaws
+    .accept 3261 >>Accept Jorn Skyseer
 step
     .goto The Barrens,52.2,31.9
-    .turnin 877 >>转入停滞的绿洲
-    .accept 880 >>接受改变的存在
+    .turnin 877 >>Turn in The Stagnant Oasis
+    .accept 880 >>Accept Altered Beings
 step
     .goto The Barrens,52.0,31.6
-    .turnin 4921 >>交出战败
+    .turnin 4921 >>Turn in Lost in Battle
 step << Hunter
     .goto The Barrens,51.11,29.07
-    .vendor >> 从Uthrok购买10格箭袋。
-	>>用箭头填充10格箭袋，然后额外购买400个
+    .vendor >> Buy a 10 slot quiver from Uthrok.
+	>>Fill the 10 slot quiver with Arrows, and then buy 400 extra
 step
     #sticky
     #completewith LionT
     .goto The Barrens,47.48,26.02,0
-    >>杀死平原漫游者。抢劫他们的肾脏
+    >>Kill Plainstriders. Loot them for their Kidneys
     .complete 821,2 --Plainstrider Kidney (5)
 step
 	#som
 	#label Leaders
     .goto The Barrens,45.39,28.44
-   .turnin 850 >> 移交Kolkar领导人
+   .turnin 850 >> Turn in Kolkar Leaders
 step << !Undead !Rogue
 	#era
     .goto The Barrens,45.39,28.43
-    .turnin 851 >>交给德维什人维罗
-    .accept 852 >>接受真主党血迹
+    .turnin 851 >>Turn in Verog the Dervish
+    .accept 852 >>Accept Hezrul Bloodmark
 step << Undead/Rogue
 	#era
     .goto The Barrens,45.39,28.44
-   .turnin 850 >> 移交Kolkar领导人
+   .turnin 850 >> Turn in Kolkar Leaders
 step << !Undead !Rogue
 	#era
 	.isOnQuest 852
     .goto The Barrens,45.87,40.80
-    >> 找到并杀死真主党血腥标记。他在哀嚎洞穴湖边巡逻
+    >> Locate & kill Hezrul Bloodmark. He patrols around the Wailing Caverns lake
     .complete 852,1 --Hezrul's Head (1)
 	.unitscan Hezrul Bloodmark
 step << !Undead !Rogue
 	#era
     #sticky
     #completewith next
-    +下一个任务可能很难，要格外小心
+    +This next quest can be quite hard, be extra careful
     #hardcore
 step << !Undead !Rogue
 	#era
 	.isQuestComplete 852
     .goto The Barrens,45.37,28.43
-    .turnin 852 >>交出真主党血迹
+    .turnin 852 >>Turn in Hezrul Bloodmark
 step << !Undead !Rogue
 	#era
 	.isQuestTurnedIn 852
     .goto The Barrens,45.37,28.43
-    .accept 4021 >>接受反击！
+    .accept 4021 >>Accept Counterattack!
 step << !Undead !Rogue
 	#era
     #softcore
 	.isOnQuest 4021
-	>> 这个任务非常困难，建议分组。你可以使用任务给予者所在的建筑来风筝军阀克罗姆扎尔。
-	>> 如果你做不到，跳过这个任务
+	>> This quest is very hard & grouping up is recommended. You can kite Warlord Krom'zar around using the building where the quest giver is.
+	>> If you can't do it, skip this quest
     .goto The Barrens,44.33,28.14
     .complete 4021,1 --Piece of Krom'zar's Banner (1)
 --N need link of this
@@ -848,8 +848,8 @@ step << !Undead !Rogue
 	#era
     #hardcore
 	.isOnQuest 4021
-	>> 这个任务很艰巨。你可以使用任务给予者所在的建筑来风筝军阀克罗姆扎尔。
-	>> 如果你做不到，跳过这个任务
+	>> This quest is HARD. You can kite Warlord Krom'zar around using the building where the quest giver is.
+	>> If you can't do it, skip this quest
     .goto The Barrens,44.33,28.14
     .complete 4021,1 --Piece of Krom'zar's Banner (1)
 --N need link of this
@@ -857,38 +857,38 @@ step << !Undead !Rogue
 	#era
     .isQuestComplete 4021
     .goto The Barrens,45.39,28.44
-    .turnin 4021 >>反击！
+    .turnin 4021 >>Turn in Counterattack!
 step
 #era/som
     #sticky
     #completewith next
-    +杀戮者已经被处决了，要格外小心
+    +The slayers has execute, be extra careful
     #hardcore
 step
 #era/som
     .goto The Barrens,40.3,15.2
-    >>杀死巫师之翼杀戮者。抢劫他们以换取哈比中尉戒指
+    >>Kill Witchwing Slayers. Loot them for Harpy Lieutenant Rings
     .complete 875,1 --Harpy Lieutenant Ring (6)
 step
     #label LionT
     .goto The Barrens,40.48,20.36,100,0
     .goto The Barrens,41.4,24.5
-    >>杀死该地区的萨凡纳游荡者。抢他们的牙
+    >>Kill Savannah Prowlers in the area. Loot them for their Tusks
     .complete 821,1 --Savannah Lion Tusk (5)
 step
 	.goto The Barrens,35.3,27.9
-    .turnin 1061 >> 《石爪之魂》(The Spirits of Stonetalon)上映
-    .accept 1062 >> 接受地精侵略者
-    .accept 6548 >> 接受复仇我的村庄
+    .turnin 1061 >> Turn in The Spirits of Stonetalon
+    .accept 1062 >> Accept Goblin Invaders
+    .accept 6548 >> Accept Avenge My Village
 ]])
 
 RXPGuides.RegisterGuide([[
 #classic
 << Horde
-#name 17-22 石爪山脉/贫瘠之地/灰谷
+#name 17-22 Stonetalon/Barrens/Ashenvale
 #version 1
-#group RestedXP部落1-22
-#next RestedXP部落22-30\22-24 希尔斯布莱德丘陵
+#group RestedXP Horde 1-22
+#next RestedXP Horde 22-30\22-24 Hillsbrad
 
 step
     .goto Stonetalon Mountains,80.7,89.2,50,0
@@ -896,51 +896,51 @@ step
     .goto Stonetalon Mountains,84.7,84.3,50,0
     .goto Stonetalon Mountains,82.3,90.0,50,0
     .goto Stonetalon Mountains,80.7,89.2
-    >>杀死该地区的格里姆特姆斯
+    >>Kill Grimtotems in the area
     .complete 6548,2 --Kill Grimtotem Mercenary (x6)
     .complete 6548,1 --Kill Grimtotem Ruffian (x8)
 step
     .goto The Barrens,35.2,27.8
-    .turnin 6548 >> 上缴复仇我的村庄
-    .accept 6629 >> 接受Kill Grundig Darkcloud
+    .turnin 6548 >> Turn in Avenge My Village
+    .accept 6629 >> Accept Kill Grundig Darkcloud
 step
     #sticky
     #completewith next
-    .goto Stonetalon Mountains,75.89,87.49,30 >>沿着这条路跑到篝火旁。尽量避开暴徒
+    .goto Stonetalon Mountains,75.89,87.49,30 >>Run up the path to the bonfire here. Try to avoid mobs
 step
-    >>在开始内部任务之前，确保杀死所有6只野兽。在主帐篷前杀死格隆迪希
+    >>Make sure you kill all 6 brutes before starting the quest inside. Kill Grundig in front of the main tent
     .goto Stonetalon Mountains,74.0,86.2
     .complete 6629,1 --Kill Grundig Darkcloud (x1)
     .complete 6629,2 --Kill Grimtotem Brute (x6)
 step
-    >>启动卡亚护送
+    >>Start the Kaya Escort
     .goto Stonetalon Mountains,73.5,85.8
-    .accept 6523 >> 接受保护Kaya
+    .accept 6523 >> Accept Protect Kaya
 step
     #sticky
     #completewith next
-    +3名暴徒在最后繁殖，小心
+    +3 mobs spawn at the end, be careful
     #hardcore
 step
-     >>护送Kaya并靠近她。3灰熊会在篝火旁产卵。在她到达营地之前吃/喝
+     >>Escort Kaya and stay close to her. 3 Grimtotems will spawn at the bonfire. Eat/drink before she gets to the camp
     .goto Stonetalon Mountains,75.8,91.4
     .complete 6523,1 --Kaya Escorted to Camp Aparaje
 step
     .goto Stonetalon Mountains,71.4,95.1
-    .accept 6461 >> 接受输血器
+    .accept 6461 >> Accept Blood Feeders
 step << Warlock
-    >>点击通缉海报
+    >>Click the Wanted poster
     .goto Stonetalon Mountains,59.0,75.7
-    .accept 6284 >> 接受阿拉伯恐惧症
+    .accept 6284 >> Accept Arachnophobia
 step << Warlock
-    .goto Stonetalon Mountains,57.5,76.2,30 >>沿着这条小路跑到西希尔峡谷
+    .goto Stonetalon Mountains,57.5,76.2,30 >>Run up the path here to Sishir Canyon
 step  << Warlock
     #sticky
     #completewith Ziz
-    >>点击树旁的蜘蛛蛋
+    >>Click the spider eggs near the trees
     .complete 1069,1 --Collect Deepmoss Egg (x15)
 step  << Warlock
-    >>杀死该地区的深苔藓蜘蛛
+    >>Kill the Deepmoss Spiders in the area
     .goto Stonetalon Mountains,54.7,71.9,40,0
     .goto Stonetalon Mountains,52.6,71.8,40,0
     .goto Stonetalon Mountains,52.2,75.6,40,0
@@ -949,36 +949,36 @@ step  << Warlock
     .complete 6461,1 --Kill Deepmoss Creeper (x10)
     .complete 6461,2 --Kill Deepmoss Venomspitter (x7)
 step  << !Warlock
-    >>杀死该地区的深苔藓蜘蛛
+    >>Kill the Deepmoss Spiders in the area
     .goto Stonetalon Mountains,62.40,61.46
     .complete 6461,1 --Kill Deepmoss Creeper (x10)
     .complete 6461,2 --Kill Deepmoss Venomspitter (x7)
 step << Warlock
-    >>清理贝塞莱斯周围的区域。他给你织网时要小心。用点让他永远害怕
-    >>这个任务是可选的。如果你做不到，跳过这个任务。你可以稍后再试
-    .complete 6284,1 --Collect 贝塞莱斯的牙 (x1)
+    >>Clear the area out around Besseleth. Be careful as he webs you. Keep him permanently feared with dots
+    >>This quest is optional. If you can't do it, skip this quest. You can try it again later
+    .complete 6284,1 --Collect Besseleth's Fang (x1)
 step
     #label Ziz
 	.goto Stonetalon Mountains,59.0,62.6
-    .turnin 1483 >> 交给Ziz Fizziks
-    .accept 1093 >> 接受超级收割者6000
+    .turnin 1483 >> Turn in Ziz Fizziks
+    .accept 1093 >> Accept Super Reaper 6000
 step
     #sticky
     #completewith next
-    +下一个任务可能很难，要格外小心。14级蜘蛛可以繁殖22级蜘蛛。
+    +This next quest can be quite hard, be extra careful. The level 14 spiders can spawn level 22 spiders.
     #hardcore
 step
     .goto Stonetalon Mountains,62.40,61.46
-    >>点击树旁的蜘蛛蛋
+    >>Click the spider eggs near the trees
     .complete 1069,1 --Collect Deepmoss Egg (x15)
 step
     #sticky
     #completewith next
-    >>在搜索操作员以获取蓝图时杀死记录器
+    >>Kill Loggers as you search for Operators to get the Blueprints
     .complete 1062,1 --Kill Venture Co. Logger (x15)
 step
     #requires deepmossegg
-    >>杀死Venture Co.Operators直到你拿到蓝图
+    >>Kill Venture Co. Operators until you get the Blueprints
     .goto Stonetalon Mountains,62.8,53.7,100,0
     .goto Stonetalon Mountains,61.7,51.5,100,0
     .goto Stonetalon Mountains,66.8,45.3,100,0
@@ -987,37 +987,37 @@ step
     .goto Stonetalon Mountains,62.8,53.7
     .complete 1093,1 --Collect Super Reaper 6000 Blueprints (x1)
 step
-    >>结束杀死记录器
+    >>Finish killing Loggers
     .goto Stonetalon Mountains,64.1,56.7,100,0
     .goto Stonetalon Mountains,73.4,54.3
     .complete 1062,1 --Kill Venture Co. Logger (x15)
 step
    	 .goto Stonetalon Mountains,58.2,51.6
-	>> 去Veenix买一个Kris << Rogue
+	>> Go buy a Kris from Veenix << Rogue
 	.collect 2209,1 << Rogue
 --N other weapons for other classes?
 step
 	#completewith next
-	+如果你有超过15个深苔藓蛋，分割所有额外的堆叠(按住shift键并单击)，然后删除它们
+	+If you have over 15 Deepmoss Eggs, split the stack of any extras (shift click), then delete them
 step
     .goto Stonetalon Mountains,59.0,62.6
-    .turnin 1093 >> 转入超级收割台6000
-    .accept 1094 >> 接受进一步指示
+    .turnin 1093 >> Turn in Super Reaper 6000
+    .accept 1094 >> Accept Further Instructions
 step << Druid
-	>> 使用“传送到月光”法术
+	>> Use the spell Teleport to Moonglade
    	 .goto Moonglade,52.5,40.5
-	.trainer >> 去训练你的职业咒语
+	.trainer >> Go and train your class spells
 step
-    .hs >> 炉灶前往陶拉霍营地
-	.vendor >> 如果需要，购买食物/水
+    .hs >> Hearth to Camp Taurajo
+	.vendor >> Buy food/water if needed
 step
     .goto The Barrens,44.9,59.1
-    .turnin 3261 >>交给Jorn Skyseer
-    .accept 882 >>接受Ishamuhale
+    .turnin 3261 >>Turn in Jorn Skyseer
+    .accept 882 >>Accept Ishamuhale
 step
 	#completewith QuillboarAndy
     .goto The Barrens,44.84,47.69,0
-    >>杀死风暴吹牛。抢他们的角
+    >>Kill Stormstouts. Loot them for a Horn
     .complete 821,3 --Thunder Lizard Horn (1)
 step
 	#sticky
@@ -1027,12 +1027,12 @@ step
     .goto The Barrens,46.0,49.2,0
     .goto The Barrens,45.3,52.5,0
     .goto The Barrens,45.0,51.8,0
-	>>找到并杀死该地区的拉科塔·马尼(格雷·科多)。抢走他的蹄子。如果你找不到他，跳过这个任务。
+	>>Find & kill Lakota'mani (Gray Kodo) around the area. Loot his Hoof. If you can't find him, skip this quest.
 	.collect 5099,1,883 --Collect Hoof of Lakota'Mani
-	.accept 883 >>接受Lakota'Mani
+	.accept 883 >>Accept Lakota'Mani
 step
 	#label QuillboarAndy
-    >>杀死大量的绒猪。掠夺他们的象牙。保存你得到的血块
+    >>Kill a LOT of Quillboars. Loot them for their tusks. Save the Blood Shards you get
 	.goto The Barrens,44.3,52.3,100,0
     .goto The Barrens,47.1,53.3,100,0
     .goto The Barrens,45.2,54.3,100,0
@@ -1052,95 +1052,95 @@ step
     .complete 899,1 --Collect Bristleback Quilboar Tusk (x60)
 step
     .goto The Barrens,44.84,47.69
-    >>杀死风暴吹牛。抢他们的角
+    >>Kill Stormstouts. Loot them for a Horn
     .complete 821,3 --Thunder Lizard Horn (1)
 step
     .goto The Barrens,53.48,48.23
-    >>完成从平原漫游者那里获得肾脏
+    >>Finish getting Kidneys from Plainstriders
     .complete 821,2 --Plainstrider Kidney (5)
 step
-    >>绕着湖去杀海龟。抢他们的壳
+    >>Go around the lake and kill Turtles. Loot them for their Shells
 .goto The Barrens,55.5,42.6
     .complete 880,1 --Altered Snapjaw Shell (8)
 step
-    >>在该地区杀死一名哲夫拉。抢劫尸体
+    >>Kill a Zhevra in the area. Loot it for a Carcass
 	.goto The Barrens,61.0,32.2
 	.collect 10338,1 --Collect Fresh Zhevra Carcass
 step
-    >>用枯树上的新鲜哲夫拉尸体召唤Ishamuhale。杀了他，抢了他的牙
+    >>Use the Fresh Zhevra Carcass at the dead tree to summon Ishamuhale. Kill and loot him for his Fang
 .goto The Barrens,59.9,30.4
     .complete 882,1 --Ishamuhale's Fang (1)
 step << Rogue
-   >>跑回棘轮
+   >>Run back to Ratchet
     .goto The Barrens,63.07,36.31
-    .turnin 2381 >>轮流掠夺掠夺者
+    .turnin 2381 >>Turn in Plundering the Plunderers
 step
 .goto The Barrens,62.7,36.3
-    >>跑回棘轮 << !Rogue
-    .turnin 888 >>交出被盗战利品
+    >>Run back to Ratchet << !Rogue
+    .turnin 888 >>Turn in Stolen Booty
 step
     .goto The Barrens,63.0,37.2
-    .turnin 1094 >>提交进一步说明
-    .accept 1095 >>接受进一步指示
+    .turnin 1094 >>Turn in Further Instructions
+    .accept 1095 >>Accept Further Instructions
 step
     .goto The Barrens,62.4,37.6
-    .turnin 865 >>转入猛禽角
-    .turnin 1069 >>交上深苔藓蜘蛛蛋
+    .turnin 865 >>Turn in Raptor Horns
+    .turnin 1069 >>Turn in Deepmoss Spider Eggs
 step
     .goto The Barrens,62.3,38.4
-    .turnin 821 >>交回陈的空桶
+    .turnin 821 >>Turn in Chen's Empty Keg
 step << Warrior
     .goto The Barrens,62.2,38.4
-    .vendor >> 检查Grazlix的强力链裤。有钱就买
+    .vendor >> Check for Mighty Chain Pants from Grazlix. Buy them if you have money
 step << Rogue/Hunter/Warrior/Shaman/Druid
     .goto The Barrens,62.2,38.5
-    .vendor >> 检查Vexspindle的Wolf Bracers。有钱就买
+    .vendor >> Check for Wolf Bracers from Vexspindle. Buy them if you have money
 step
     .goto The Barrens,63.1,37.1
-    .fly Crossroads >>飞向十字路口
+    .fly Crossroads >>Fly to Crossroads
 step
     .goto The Barrens,52.2,31.9
-    .turnin 880 >>交出改变的存在
-    .accept 1489 >>接受Hamuul Runetotem
-    .accept 3301 >>接受Mura Runetotem
+    .turnin 880 >>Turn in Altered Beings
+    .accept 1489 >>Accept Hamuul Runetotem
+    .accept 3301 >>Accept Mura Runetotem
 step
     .goto The Barrens,52.0,31.6
-    .turnin 899 >>因仇恨而上缴
+    .turnin 899 >>Turn in Consumed by Hatred
 step
 #era/som
-    >>跑到塔顶
+    >>Run up to the top of the tower
     .goto The Barrens,51.60,30.90
-    .turnin 875 >> 交出哈比中尉
-    .accept 876 >> 接受Serena Bloodfeather
+    .turnin 875 >> Turn in Harpy Lieutenants
+    .accept 876 >> Accept Serena Bloodfeather
 step << !Tauren !Shaman !Warrior
-    >>这将启动定时任务
+    >>This starts a timed quest
     .goto The Barrens,51.4,30.2
-    .accept 853 >>接受药剂师Zamah
+    .accept 853 >>Accept Apothecary Zamah
 step
     .goto The Barrens,51.5,30.3
-    .fly Camp Taurajo >>飞往陶拉霍营地
+    .fly Camp Taurajo >>Fly to Camp Taurajo
 step
     .goto The Barrens,53.0,52.1
-    >>为了血块杀死公毛猪
+    >>Kill Quillboars for a Blood Shard
     .collect 5075 --Blood Shard (1)
 step
     .goto The Barrens,44.6,59.2
-    .turnin 878 >>战争中沦陷的部落
-    .accept 5052 >>接受阿加马根的血片
-    .turnin 5052 >>交出阿加马根血片
+    .turnin 878 >>Turn in Tribes at War
+    .accept 5052 >>Accept Blood Shards of Agamaggan
+    .turnin 5052 >>Turn in Blood Shards of Agamaggan
 step << Tauren/Warrior/Shaman
-    +在芒果的任何抛光上使用血碎片
+    +Use your Blood Shards on any buff from Mangletooth
 --N Different classes needing different buffs, e.g. need speed buff later for Mulgore run for classes that didnt get FP earlier
 step
     .goto The Barrens,44.8,59.1
-    .turnin 883 >>交给Lakota’mani
+    .turnin 883 >>Turn in Lakota'mani
     .isOnQuest 883
 step
 	.goto The Barrens,44.8,59.1
-    .turnin 882 >>转入Ishamuhale
-    .accept 907 >>接受愤怒的雷霆蜥蜴
-    .accept 1130 >>接受Melor发送消息
-    .accept 6382 >>接受灰谷狩猎
+    .turnin 882 >>Turn in Ishamuhale
+    .accept 907 >>Accept Enraged Thunder Lizards
+    .accept 1130 >>Accept Melor Sends Word
+    .accept 6382 >>Accept The Ashenvale Hunt
 step
     #sticky
     #label Owatanka2
@@ -1148,447 +1148,447 @@ step
     .goto The Barrens,44.2,62.1,0
     .goto The Barrens,49.2,62.6,0
     .goto The Barrens,49.6,60.0,0
-    >>在该区域周围搜索Owatanka(蓝雷蜥蜴)。如果你找到他，抢走他的尾钉并开始任务。如果你找不到他，跳过这个任务
+    >>Search for Owatanka (Blue Thunder Lizard) around this area. If you find him, loot his Tailspike and start the quest. If you can't find him, skip this quest
     .collect 5102,1,884 --Collect Owatanka's Tailspike
-    .accept 884 >>接受Owatanka
+    .accept 884 >>Accept Owatanka
 step
     #label BloodShard
 	.goto The Barrens,42.5,60.3,100,0
     .goto The Barrens,47.1,63.7,100,0
     .goto The Barrens,50.0,61.1,100,0
 	.goto The Barrens,42.5,60.3
-    >>杀死雷霆蜥蜴。抢他们的血
+    >>Kill Thunder Lizards. Loot them for their blood
     .complete 907,1 --Thunder Lizard Blood (3)
 step
     .goto The Barrens,44.9,59.1
-    .turnin 907 >>交出愤怒的雷霆蜥蜴
-    .accept 913 >>接受雷鹰的哭泣
+    .turnin 907 >>Turn in Enraged Thunder Lizards
+    .accept 913 >>Accept Cry of the Thunderhawk
 step
     .goto The Barrens,44.9,59.1
-    .turnin 884 >>交给Owatanka
+    .turnin 884 >>Turn in Owatanka
     .isOnQuest 884
 step
     .goto The Barrens,44.9,59.1
-    .turnin 907 >>交出愤怒的雷霆蜥蜴
-    .accept 913 >>接受雷鹰的哭泣
+    .turnin 907 >>Turn in Enraged Thunder Lizards
+    .accept 913 >>Accept Cry of the Thunderhawk
 step
     .goto The Barrens,44.8,63.2,100,0
     .goto The Barrens,47.0,61.6
-    >>杀死一只雷鹰。掠夺它的翅膀
+    >>Kill a Thunderhawk. Loot it for its Wings
     .complete 913,1 --Thunderhawk Wings (1)
 step
     .goto The Barrens,44.8,59.1
-    .turnin 913 >>交出雷鹰的哭声
-    .accept 874 >>接受Mahren Skyseer
+    .turnin 913 >>Turn in Cry of the Thunderhawk
+    .accept 874 >>Accept Mahren Skyseer
 step << !Tauren !Warrior !Shaman
     #completewith next
     .goto The Barrens,44.54,59.27
-    >>将你的血碎片交给来自芒果的风之精灵buff。如果意外出售了任何碎片，请跳过此步骤
-    .turnin 889 >> 风之灵归来
+    >>Turn in your Blood Shards for the Spirit of the Wind buff from Mangletooth. If you accidentally sold any shards, skip this step
+    .turnin 889 >> Turn in Spirit of the Wind
 step << !Tauren !Warrior !Shaman
-    .goto Thunder Bluff,32.0,66.9,40 >>跑向电梯，进入雷霆崖
+    .goto Thunder Bluff,32.0,66.9,40 >>Run to the lift and take it into Thunder Bluff
 step << Tauren/Warrior/Shaman
     .goto The Barrens,44.5,59.1
-    .fly Thunder Bluff >>飞向雷霆崖
+    .fly Thunder Bluff >>Fly to Thunder Bluff
 step << Warlock/Priest
     .goto Thunder Bluff,41.2,61.4
-	.trainer >> 训练员工技能
+	.trainer >> Train the Staves skill
 step << Rogue
     .goto Thunder Bluff,41.2,61.4
-	.trainer >> 训练锤技能
+	.trainer >> Train the Mace skill
 step
     .goto Thunder Bluff,45.9,64.7
-    .home >>将您的炉石设置为雷霆崖
+    .home >>Set your Hearthstone to Thunder Bluff
 step << Shaman/Warrior
 	#softcore
     #sticky
     #completewith next
-    +如果更便宜的话，可以从拍卖行买一个绿色的2小时锤
+    +If it's cheaper, buy a green 2h mace from the Auction House
 step << Shaman/Warrior
     .goto Thunder Bluff,53.2,58.2
-    >>如果是升级版，请从Etu购买一个Maul
+    >>Buy a Maul from Etu if it's an upgrade
     .collect 924,1
 step << Rogue
     .goto Thunder Bluff,53.2,56.8
-     >> 如果是升级，请从卡德购买长剑
+     >> Buy a Longsword from Kard if it's an upgrade
     .collect 923,1
 step << skip
     .goto Thunder Bluff,61.4,80.9
-    .turnin 1130 >>交出Melor发送消息
-    .accept 1131 >>接受Steelsnap
+    .turnin 1130 >>Turn in Melor Sends Word
+    .accept 1131 >>Accept Steelsnap
 step << Hunter
 	#era
     .goto Thunder Bluff,59.15,86.88
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Hunter
 	#era
     .goto Thunder Bluff,54.10,83.97
-    .trainer >> 训练您的宠物技能
+    .trainer >> Train your pet skills
 step << Warrior
 	#era
     .goto Thunder Bluff,57.2,87.4
-    .accept 1823 >>接受与Ruga交谈
-    .trainer >> 训练你的职业咒语
+    .accept 1823 >>Accept Speak with Ruga
+    .trainer >> Train your class spells
 step << Druid
 	#era
     .goto Thunder Bluff,77.0,29.9
-	.trainer >> 去训练你的职业咒语
+	.trainer >> Go and train your class spells
 step << !Tauren !Warrior !Shaman
     #completewith next
-    .goto Thunder Bluff,30.1,30.0,15 >>走进视野之池
+    .goto Thunder Bluff,30.1,30.0,15 >>Go into The Pools of Vision
 step << !Tauren !Warrior !Shaman
     #sticky
 	#label UntilD
     .goto Thunder Bluff,28.4,27.7
-    .accept 264 >>接受直到死亡我们分开
+    .accept 264 >>Accept Until Death Do Us Part
 step << !Tauren !Warrior !Shaman
     .goto Thunder Bluff,23.00,21.00
-    .turnin 853 >> 交给药剂师Zamah
+    .turnin 853 >> Turn in Apothecary Zamah
 step << Priest
 	#era
     .goto Thunder Bluff,24.56,22.60
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Mage
 	#era
     .goto Thunder Bluff,25.16,20.95
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Shaman
 	#era
     .goto Thunder Bluff,25.1,20.6
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Hunter
     .goto Thunder Bluff,46.8,45.8
-     >> 如果是升级版，请从Kuna购买重型递归弓。还要买箭来填充你的箭袋
+     >> Buy a Heavy Recurve Bow from Kuna if it's an upgrade. Also buy arrows to fill your quiver
     .collect 3027,1
 step << !Tauren !Shaman !Warrior
 	#requires UntilD
     .goto Thunder Bluff,46.9,49.9
-    .fp Thunder Bluff >> 获得Thunder Bluff飞行路线
+    .fp Thunder Bluff >> Get the Thunder Bluff flight path
 step << !Warlock/!Shaman
 	#som
     .goto The Barrens,51.50,30.34
-	.fly Orgrimmar >> 飞向十字路口
+	.fly Orgrimmar >> Fly to Crossroads
 step << Warlock/Shaman
 	#som
     .goto The Barrens,51.50,30.34
-	.fly Orgrimmar >> 飞往奥格瑞玛
+	.fly Orgrimmar >> Fly to Orgrimmar
 step << Shaman
 	#som
     .goto Orgrimmar,38.6,36.0
-.trainer >> 去训练你的职业咒语
+.trainer >> Go and train your class spells
 step << Shaman
 	#som
     .goto Orgrimmar,37.95,37.73
-	.accept 1528 >> 接受水的召唤
+	.accept 1528 >> Accept Call of Water
 step << Warlock
 	#som
     .goto Orgrimmar,48.15,45.28
-    .accept 1507 >>接受灵魂吞噬者
-	.trainer >> 训练你的职业咒语
+    .accept 1507 >>Accept Devourer of Souls
+	.trainer >> Train your class spells
 step << Warlock
 	#som
     .goto Orgrimmar,47.5,46.7
-	.vendor >> 如果你有钱，买你的宠物法术升级。
+	.vendor >> Buy your pet spell upgrades if you have the money.
 step << Warlock
 	#som
     .goto Orgrimmar,47.20,46.61
-    .turnin 1507 >>交给灵魂吞噬者
-    .accept 1508 >>接受盲Cazul
+    .turnin 1507 >>Turn in Devourer of Souls
+    .accept 1508 >>Accept Blind Cazul
 step << Warlock
 	#som
     .goto Orgrimmar,37.26,59.63
-    .turnin 1508 >>转入盲卡祖
-    .accept 1509 >>接受Dogran的消息
+    .turnin 1508 >>Turn in Blind Cazul
+    .accept 1509 >>Accept News of Dogran
 step << Warlock
 	#som
     .goto Orgrimmar,44.4,48.6
-    .collect 5211,1 >> 如果你有钱买黄昏魔杖。
+    .collect 5211,1 >> Buy Dusk Wand if you have the money for it.
 step << Warlock/Shaman
 	#som
     .goto Orgrimmar,45.13,63.88
-	.fly Crossroads >> 飞向十字路口
+	.fly Crossroads >> Fly to The Crossroads
 step << Warlock
 	#som
     .goto The Barrens,51.9,30.3
-    .turnin 1509 >>上交《狗跑新闻》
-    .accept 1510 >>接受Dogran的消息
+    .turnin 1509 >>Turn in News of Dogran
+    .accept 1510 >>Accept News of Dogran
 step
 #era/som
-    >>杀死Serena Bloodfeather。抢她的头
+    >>Kill Serena Bloodfeather. Loot her for her Head
 	.goto The Barrens,39.2,12.2
     .complete 876,1 --Serena's Head (1)
 step
     .goto The Barrens,35.3,27.9
-    .turnin 1062 >>交出地精侵略者
-    .turnin 6629 >>移交Kill Grundig Darkcloud
-    .turnin 6523 >>交出保护Kaya
-    .accept 6401 >>接受Kaya的活着
-    .accept 1063 >>接受长老克罗恩
-    .accept 1068 >> 接受切碎机
+    .turnin 1062 >>Turn in Goblin Invaders
+    .turnin 6629 >>Turn in Kill Grundig Darkcloud
+    .turnin 6523 >>Turn in Protect Kaya
+    .accept 6401 >>Accept Kaya's Alive
+    .accept 1063 >>Accept The Elder Crone
+    .accept 1068 >> Accept Shredding Machines
 step << Warlock
-	>>沿着左边的小路跑
+	>>Run up the path to the left
     .goto Stonetalon Mountains,82.19,98.62,60,0
     .goto Stonetalon Mountains,75.77,97.32,60,0
     .goto Stonetalon Mountains,73.2,95.1
-    .turnin 1510 >>上交《狗跑新闻》
-    .accept 1511 >>接受Ken'zigla的吃水
+    .turnin 1510 >>Turn in News of Dogran
+    .accept 1511 >>Accept Ken'zigla's Draught
 step
-	>>沿着左边的小路跑，然后进入洞穴 << !Warlock
+	>>Run up the path to the left, then go into the cave << !Warlock
     .goto Stonetalon Mountains,82.19,98.62,60,0 << !Warlock
     .goto Stonetalon Mountains,75.77,97.32,60,0 << !Warlock
     .goto Stonetalon Mountains,74.21,97.10,50,0
     .goto Stonetalon Mountains,74.53,97.94
-    .accept 1058 >> 接受Jin'Zils森林魔法
+    .accept 1058 >> Accept Jin'Zils Forest Magic
 	#era
 step
     .goto Stonetalon Mountains,71.3,95.1
-    .turnin 6461 >>收起输血器
+    .turnin 6461 >>Turn in Blood Feeders
 step << Hunter
-    >>点击通缉海报
+    >>Click the Wanted poster
     .goto Stonetalon Mountains,59.0,75.7
-    .accept 6284 >> 接受阿拉伯恐惧症
+    .accept 6284 >> Accept Arachnophobia
 step << Hunter
     .goto Stonetalon Mountains,52.61,71.85
-    >>清理贝塞莱斯周围的区域。小心点，因为他会上网
-    >>这个任务是可选的。如果你做不到，跳过这个任务
-    .complete 6284,1 --Collect 贝塞莱斯的牙 (x1)
+    >>Clear the area out around Besseleth. Be careful as he can web
+    >>This quest is optional. If you can't do it, skip this quest
+    .complete 6284,1 --Collect Besseleth's Fang (x1)
 	.unitscan Besseleth
 step
-	>>沿着左边的小路跑
+	>>Run up the path to the left
     .goto Stonetalon Mountains,49.08,62.44,40,0
     .goto Stonetalon Mountains,48.61,63.22,40,0
     .goto Stonetalon Mountains,47.3,64.2
-    .accept 6562 >>接受深层次的麻烦
-    .accept 6393 >> 接受元素战争
+    .accept 6562 >>Accept Trouble in the Deeps
+    .accept 6393 >> Accept Elemental War
 step << Hunter
 	.isQuestComplete 6284
     .goto Stonetalon Mountains,47.20,61.16
-	.turnin 6284 >> 上缴阿拉伯恐惧症
+	.turnin 6284 >> Turn in Arachnophobia
 step
     .goto Stonetalon Mountains,45.12,59.84
-    .fp Sun Rock>> 获取Sun Rock Retreat飞行路线
+    .fp Sun Rock>> Get the Sun Rock Retreat flight path
 step
     .goto Stonetalon Mountains,47.5,58.4
---    .accept 6301 >> 接受重生周期
-    .turnin 6401 >>活捉Kaya
+--    .accept 6301 >> Accept Cycle of Rebirth
+    .turnin 6401 >>Turn in Kaya's Alive
 step
     .goto Stonetalon Mountains,59.0,62.6
-    .turnin 1095 >>提交进一步说明
+    .turnin 1095 >>Turn in Further Instructions
 step
 	#era
     .unitscan XT:9
-    >>杀死XT:9。它在河的南侧巡逻
+    >>Kill XT:9. It patrols the southern side of the river
     .goto Stonetalon Mountains,60.23,53.04,90,0
     .goto Stonetalon Mountains,71.04,57.76
     .complete 1068,2 --XT:9 (1)
 step
 	#era
     .unitscan XT:4
-    >>杀死XT:4。它在河的北侧巡逻
+    >>Kill XT:4. It patrols the northern side of the river
     .goto Stonetalon Mountains,71.30,44.12,90,0
     .goto Stonetalon Mountains,63.96,47.37
     .complete 1068,1 --XT:4 (1)
 step
 	.goto Stonetalon Mountains,78.2,42.8,40,0
-	.goto Ashenvale,42.3,71.0,20    >> 前往Talondep Path。穿过洞穴跑到灰谷
+	.goto Ashenvale,42.3,71.0,20    >> Go to Talondeep Path. Run through the cave to Ashenvale
 step
 	#completewith next
-	.goto Ashenvale,16.3,29.8,90 >>前往Zoram'gar前哨。途中一定要避开阿斯特拉纳卫队
+	.goto Ashenvale,16.3,29.8,90 >>Go to the Zoram'gar Outpost. Be sure to avoid Astranaar guards en route
 step
      #completewith next
     .goto Ashenvale,12.20,33.80
-    .fp Zoram'gar Outpost >> 获取Zoram'gar前哨飞行路线
+    .fp Zoram'gar Outpost >> Get the Zoram'gar Outpost flight path
 step
 	#sticky
 	#label VorshaL
     .goto Ashenvale,12.06,34.63
-     >> 开始护送任务。小心，因为这很难，并且快速完成接下来的两个步骤
-    .accept 6641 >> 接受伏尔莎的激光
+     >> Start the escort quest. Be careful as it's difficult, and be quick doing the next 2 steps
+    .accept 6641 >> Accept Vorsha the Lasher
 step
-	>>在Zoram'gar完成所有任务
+	>>Take all the quests in Zoram'gar
     .goto Ashenvale,11.60,34.30
-    .turnin 6562 >> 深陷困境
-    .accept 6442 >> 在Zoram Strand接受Naga
-    .accept 216 >> 在石头和蓟马之间接受
-    .accept 6462 >> 接受巨魔魅力
+    .turnin 6562 >> Turn in Trouble in the Deeps
+    .accept 6442 >> Accept Naga at the Zoram Strand
+    .accept 216 >> Accept Between a Rock and a Thistlefur
+    .accept 6462 >> Accept Troll Charm
 --N might need to be changed back to accepting later depending on no. of quests in log
 step
     #sticky
     #completewith next
-    +下一个任务可能很难，要格外小心。老板造成了很大的损失。
+    +This next quest can be quite hard, be extra careful. The boss deals a lot of damage.
     #hardcore
 step
 	#requires VorshaL
-    >>到达后，单击“钎焊器”。
-    >>会有纳加海浪产卵。一旦沃沙出来，让莫格拉什在与他战斗之前先发脾气。
+    >>Click the Brazier when you get there.
+    >>There will be waves of Naga that spawn. Once Vorsha comes out, let Muglash get some aggro before fighting him.
     .goto Ashenvale,9.8,27.4
     .complete 6641,1 --Defeat Vorsha the Lasher
 step
     .goto Ashenvale,15.00,20.67
-    >>杀死Nagas。抢他们的头
+    >>Kill Nagas. Loot them for their Heads
     .complete 6442,1 --Wraithtail Head (20)
 step << !Druid
     .goto Ashenvale,7.00,15.20
-.xp 21+18070 >> 升级到18070+/25200 xp
+.xp 21+18070 >> Grind to 18070+/25200 xp
 step << Druid
     .goto Ashenvale,7.00,15.20
-.xp 21+18070 >> 升级到21450+/25200 xp
+.xp 21+18070 >> Grind to 21450+/25200 xp
 step
     #sticky
 	#label Vorsha
     .goto Ashenvale,12.20,34.30
-    .turnin 6641 >> 交给伏尔莎激光器
+    .turnin 6641 >> Turn in Vorsha the Lasher
 step
     .goto Ashenvale,11.70,34.80
-    .turnin 6442 >> 在Zoram Strand上交给Naga
+    .turnin 6442 >> Turn in Naga at the Zoram Strand
 step << Druid
 	#requires Vorsha
-	>> 使用“传送到月光”法术
+	>> Use the spell Teleport to Moonglade
     .goto Moonglade,52.5,40.5
-.trainer >> 去训练你的职业咒语
+.trainer >> Go and train your class spells
 step
 	#requires Vorsha
     #completewith next
-    .hs >> 炉底雷霆崖
+    .hs >> Hearth Thunder Bluff
 step
     .goto Thunder Bluff,54.60,51.40
 	#requires Vorsha
-	.accept 1195 >> 接受圣火
+	.accept 1195 >> Accept The Sacred Flame
 step
     .goto Thunder Bluff,70.00,30.90
-    .turnin 1063 >> 交给克罗恩长老
-    .accept 1064 >> 接受被遗弃的援助
+    .turnin 1063 >> Turn in The Elder Crone
+    .accept 1064 >> Accept Forsaken Aid
 step
     .goto Thunder Bluff,78.62,28.56
-    .turnin 1489 >> 交给Hamuul Runetotem
-    .accept 1490 >> 接受Nara Wildmane
+    .turnin 1489 >> Turn in Hamuul Runetotem
+    .accept 1490 >> Accept Nara Wildmane
 step
     .goto Thunder Bluff,75.65,31.62
-    .turnin 1490 >> 交给奈拉·威尔德曼
+    .turnin 1490 >> Turn in Nara Wildmane
 step << Tauren/Warrior/Shaman
-	>>走进视野之池
+	>>Go into The Pools of Vision
     .goto Thunder Bluff,30.1,30.0,25,0
     .goto Thunder Bluff,28.4,27.7
-    .accept 264 >>接受直到死亡我们分开
+    .accept 264 >>Accept Until Death Do Us Part
 step
     .goto Thunder Bluff,23.00,21.0
-   .turnin 1064 >> 交出被遗弃的援助
-   .accept 1065 >> 接受塔伦磨坊之旅
+   .turnin 1064 >> Turn in Forsaken Aid
+   .accept 1065 >> Accept Journey to Tarren Mill
 step << Priest
     .goto Thunder Bluff,25.4,15.0
-	.accept 5644 >> 接受吞噬瘟疫
+	.accept 5644 >> Accept Devouring Plague
 step << Shaman
     .goto Thunder Bluff,25.1,20.6
-	.accept 1529 >>接受水的召唤
+	.accept 1529 >>Accept Call of Water
 step
     .goto Thunder Bluff,54.70,51.30
-    .accept 1195 >> 接受圣火
+    .accept 1195 >> Accept The Sacred Flame
 step << Warlock
     .goto Thunder Bluff,46.8,50.0
-    .fly Camp Taurajo >>飞往陶拉霍营地
+    .fly Camp Taurajo >>Fly to Camp Taurajo
 step << Warlock
     .goto The Barrens,44.6,59.3
-    .turnin 1511 >>交上Ken'zigla的草稿
-    .accept 1515 >>接受道根的俘虏
+    .turnin 1511 >>Turn in Ken'zigla's Draught
+    .accept 1515 >>Accept Dogran's Captivity
 step << Warlock
 	.goto The Barrens,43.3,47.9
-    .turnin 1515 >>交出Dogran的俘虏
-    .accept 1512 >>接受爱的礼物
+    .turnin 1515 >>Turn in Dogran's Captivity
+    .accept 1512 >>Accept Love's Gift
 step << Warlock
 	.goto The Barrens,44.4,59.0
-    .fly Crossroads >>飞向十字路口
+    .fly Crossroads >>Fly to The Crossroads
 step << !Warlock
     .goto Thunder Bluff,46.8,50.0
-    .fly Crossroads >>飞向十字路口
+    .fly Crossroads >>Fly to The Crossroads
 step
 #era/som
     .goto The Barrens,51.60,30.90
-    .turnin 876 >> 交给Serena Bloodfeather
-    .accept 1060 >> 接受给金子的信
+    .turnin 876 >> Turn in Serena Bloodfeather
+    .accept 1060 >> Accept Letter to Jin'Zil
 step
     .goto The Barrens,51.10,29.60
-    .accept 868 >> 接受寻蛋
+    .accept 868 >> Accept Egg Hunt
 step
     .goto The Barrens,51.50,30.87
-    .accept 6541 >>接受向Kadrak报告
+    .accept 6541 >>Accept Report to Kadrak
 step << Hunter
     .goto The Barrens,49.00,11.20
-    .turnin 3921 >> 转入Wenikee Boltbucket
+    .turnin 3921 >> Turn in Wenikee Boltbucket
 step
-	>>去塔的二楼
+	>>Go to the 2nd floor of the tower
     .goto The Barrens,48.12,5.42
-    .turnin 6541 >>向卡德拉克提交报告
---    .accept 6543 >>接受战歌报告
+    .turnin 6541 >>Turn in Report to Kadrak
+--    .accept 6543 >>Accept The Warsong Reports
 step << Hunter
     .goto Ashenvale,68.30,75.30
-     >> 开始护送任务
-    .accept 6544 >> 接受Torek的袭击
+     >> Start the escort quest
+    .accept 6544 >> Accept Torek's Assault
 step << Hunter
      .goto Ashenvale,64.74,75.35,0
-     >> 护送Torek。当你杀死里面的怪物4时，跑到最后一个平台(因为会有更多的怪物产生)，让兽人反抗
-     >> 杀死对托雷克有仇恨的暴徒，然后杀死其他人。
+     >> Escort Torek. When you kill the mobs 4 inside, run to the end platform (as more mobs will spawn), and let the orcs take aggro
+     >> Kill the mobs that have aggro on Torek, then kill the rest.
     .complete 6544,1 --Take Silverwing Outpost. (1)
 step << Hunter
     .goto Ashenvale,73.00,62.50
-    .turnin 6544 >> 交出Torek的袭击
+    .turnin 6544 >> Turn in Torek's Assault
 step << Hunter
     .goto Ashenvale,73.78,61.46
-    .turnin 6382 >> 交出灰谷狩猎
-    .turnin 6383 >> 交出灰谷狩猎
+    .turnin 6382 >> Turn in The Ashenvale Hunt
+    .turnin 6383 >> Turn in The Ashenvale Hunt
 step << Hunter
     .goto Ashenvale,73.13,61.54
-    .fly Orgrimmar >>飞往奥格瑞玛
+    .fly Orgrimmar >>Fly to Orgrimmar
 	.maxlevel 24
 step << Shaman
     .goto The Barrens,51.5,30.4
-    .fly Ratchet >>飞到棘轮
+    .fly Ratchet >>Fly to Ratchet
 step << Shaman
 	#completewith call
     .goto The Barrens,65.8,43.8
-    .turnin 1528 >>水的召唤
+    .turnin 1528 >>Turn in Call of Water
 step << Shaman
 	#completewith next
     .goto The Barrens,65.8,43.8
-    .turnin 1529 >>水的召唤
+    .turnin 1529 >>Turn in Call of Water
 step << Shaman
 	#label call
     .goto The Barrens,65.8,43.8
-    .accept 1530 >>接受水的召唤
-    .turnin 874 >>提交Mahren Skyseer
+    .accept 1530 >>Accept Call of Water
+    .turnin 874 >>Turn in Mahren Skyseer
 step << Shaman
     .goto The Barrens,63.1,37.1
-    .fly Camp Taurajo >>飞往陶拉霍营地
+    .fly Camp Taurajo >>Fly to Camp Taurajo
 step << Shaman
     .goto The Barrens,45.6,59.0
-    .home >>将您的炉石设置为陶拉霍营地
+    .home >>Set your Hearthstone to Camp Taurajo
 step << Shaman
     .goto The Barrens,43.4,77.4
-    .turnin 1530 >>水的召唤
-    .accept 1535 >>接受水的召唤
+    .turnin 1530 >>Turn in Call of Water
+    .accept 1535 >>Accept Call of Water
 step << Shaman
     .goto The Barrens,44.1,76.9
     .complete 1535,1 --Filled Brown Waterskin (1)
 step << Shaman
     .goto The Barrens,43.4,77.4
-    .turnin 1535 >>水的召唤
-    .accept 1536 >>接受水的召唤
+    .turnin 1535 >>Turn in Call of Water
+    .accept 1536 >>Accept Call of Water
 step << !Hunter !Mage
 	#era/som
     .goto The Barrens,51.5,30.3 << !Shaman
     .goto The Barrens,44.5,59.1 << Shaman
-    .fly Orgrimmar >>飞往奥格瑞玛
+    .fly Orgrimmar >>Fly to Orgrimmar
 step << !Hunter !Mage !Shaman !Rogue !Warlock
 	#som
 	#phase 3-6
     .goto The Barrens,51.5,30.3 << !Shaman
     .goto The Barrens,44.5,59.1 << Shaman
-    .fly Orgrimmar >>飞往奥格瑞玛
+    .fly Orgrimmar >>Fly to Orgrimmar
 	.maxlevel 24
 step << Shaman/Rogue/Warlock
     .goto The Barrens,51.5,30.3
-    .fly Orgrimmar >>飞往奥格瑞玛
+    .fly Orgrimmar >>Fly to Orgrimmar
 step << Mage
 	#som
-	.zone Orgrimmar >> 电传或飞往奥格瑞玛
+	.zone Orgrimmar >> Teleport or Fly to Orgrimmar
 	.maxlevel 24
 ]])

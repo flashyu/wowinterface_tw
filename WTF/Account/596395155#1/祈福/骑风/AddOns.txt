@@ -120,3 +120,4 @@ DBM-BlackTemple: enabled
 DBM-BWL: enabled
 HeyboxPlayerInfo: enabled
 SimpleItemLevel: enabled
+Leatrix_Plus: enabled

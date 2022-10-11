@@ -6,8 +6,6 @@
     <Script file="Guides/Classic-Alliance-1-13_Human.lua"/>
     <Script file="Guides/Classic-Alliance-1-14_DwarfGnome.lua"/>
     <Script file="Guides/Classic-Alliance-11-20.lua"/>
-	<Script file="Guides/Alliance.lua"/>
-		
     <Script file="Guides/Classic-Horde-01-12_Durotar.lua"/>
     <Script file="Guides/Classic-Horde-01-14_Undead.lua"/>
     <Script file="Guides/Classic-Horde-1-12_Mulgore.lua"/>
@@ -19,7 +17,5 @@
     <Script file="Guides/RestedXP-Classic-Horde-1.lua"/>
     <Script file="Guides/RestedXP-Classic-Horde-2.lua"/>
     <Script file="Guides/RestedXP-Classic-H-Mage-1.lua"/>
-	<Script file="Guides/Horde.lua"/>
-	<Script file="Guides/Custom.lua"/>
     
 </Ui>

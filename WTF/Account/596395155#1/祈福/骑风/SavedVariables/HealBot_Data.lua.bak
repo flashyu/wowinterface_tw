@@ -164,7 +164,7 @@ HealBot_Config_Spells = {
 		["AltButton41"] = "healbot大迅捷",
 		["Left"] = "S:26980",
 		["Alt-ShiftRight1"] = "C:B",
-		["CtrlLeft1"] = "C:A",
+		["Left3"] = "S:48451",
 		["Middle3"] = "S:18562",
 		["Middle"] = "S:26982",
 		["Alt-ShiftLeft4"] = "C:A",
@@ -179,7 +179,7 @@ HealBot_Config_Spells = {
 		["Right4"] = "S:26979",
 		["AltMiddle1"] = "S:29166",
 		["ShiftLeft1"] = "S:48477",
-		["Left3"] = "S:48451",
+		["CtrlLeft1"] = "C:A",
 		["Button41"] = "healbot大迅捷",
 		["CtrlLeft"] = "S:2782",
 		["Ctrl-ShiftLeft3"] = "C:D",
@@ -230,7 +230,11 @@ HealBot_Config_Buffs = {
 		1, -- [13]
 		1, -- [14]
 	},
-	["ShowBuffWarning"] = false,
+	["CustomBuffName"] = {
+		"", -- [1]
+		"", -- [2]
+		"", -- [3]
+	},
 	["HealBotBuffColG"] = {
 		1, -- [1]
 		1, -- [2]
@@ -248,11 +252,7 @@ HealBot_Config_Buffs = {
 		1, -- [14]
 	},
 	["BuffWatch"] = true,
-	["CustomBuffName"] = {
-		"", -- [1]
-		"", -- [2]
-		"", -- [3]
-	},
+	["ShowBuffWarning"] = false,
 	["ShortBuffTimer"] = 10,
 	["ManaDrinkThreshold"] = 50,
 	["PalaBlessingsAsOne"] = false,
@@ -410,18 +410,14 @@ HealBot_Config_Cures = {
 	["DebuffWatchWhenMounted"] = false,
 	["DebuffWatchInCombat"] = true,
 	["HealBot_Custom_Defuffs_All"] = {
-		["Disease"] = false,
-		["Poison"] = false,
-		["Magic"] = false,
 		["Curse"] = false,
+		["Disease"] = false,
+		["Magic"] = false,
+		["Poison"] = false,
 	},
 	["ShowTimeMaxDuration"] = 31,
 	["IgnoreFastDurDebuffsSecs"] = 2,
 	["HealBot_CDCWarnRange_Bar"] = 3,
-	["DebuffWatchWhenGrouped"] = false,
-	["HealBot_CDCWarnRange_Sound"] = 3,
-	["SoundDebuffPlay"] = "Tribal Bass Drum",
-	["SoundDebuffWarning"] = false,
 	["HealBotDebuffDropDown"] = {
 		4, -- [1]
 		4, -- [2]
@@ -439,30 +435,34 @@ HealBot_Config_Cures = {
 		["33"] = 4,
 		["23"] = 4,
 	},
+	["HealBot_CDCWarnRange_Sound"] = 3,
+	["DebuffWatchWhenGrouped"] = false,
+	["SoundDebuffWarning"] = false,
+	["SoundDebuffPlay"] = "Tribal Bass Drum",
 	["HealBot_CDCWarnRange_Screen"] = 2,
 	["AlwaysShowTimed"] = false,
 	["IgnoreOnCooldownDebuffs"] = false,
 	["IgnoreFriendDebuffs"] = false,
 	["CDCBarColour"] = {
+		["Curse"] = {
+			["R"] = 0.83,
+			["G"] = 0.43,
+			["B"] = 0.09,
+		},
 		["Disease"] = {
 			["R"] = 0.55,
 			["G"] = 0.19,
 			["B"] = 0.7,
-		},
-		["Poison"] = {
-			["R"] = 0.12,
-			["G"] = 0.46,
-			["B"] = 0.24,
 		},
 		["Magic"] = {
 			["R"] = 0.26,
 			["G"] = 0.33,
 			["B"] = 0.83,
 		},
-		["Curse"] = {
-			["R"] = 0.83,
-			["G"] = 0.43,
-			["B"] = 0.09,
+		["Poison"] = {
+			["R"] = 0.12,
+			["G"] = 0.46,
+			["B"] = 0.24,
 		},
 	},
 	["HealBotDebuffPriority"] = {

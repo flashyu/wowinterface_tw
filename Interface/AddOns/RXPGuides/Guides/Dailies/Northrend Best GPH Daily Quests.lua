@@ -1,617 +1,617 @@
 RXPGuides.RegisterGuide([[
 #version 1
 #wotlk
-#group +RestedXP 诺森德每日任务
-#name 每日任务最佳路线
+#group +RestedXP Northrend Daily Quests
+#name Best Daily Quests Gold Per Hour Route
 
 --20 daily quests total
 --5(rep depending) quests from Hodir (didnt include dragon flying one. its terrible) may not be 5 quests for everyone. should be at least 3 though
 --6 from icecrown. quests from Ebon Blade
 --9 from icecrown. quests from gunship/surroundings
 --all of these quests require pre quests to be completed/unlocked. each section has checks to see if they have completed pre quests or not. if they havnt they're told to do pre quest guide
---gives the player still room to do daily heroic+普通和jc/烹饪/钓鱼日常任务
+--gives the player still room to do daily heroic+normal as well as jc/cooking/fishing daily quests
 
 
 --5 Quest section for The Sons of Hodir Daily Quests. Didn't include slaying dragon quest because its really bad/slow
 
 step
-	+要解锁霍迪尔之子每日任务，你必须首先在风暴峰完成他们的任务链。请使用Hodir之子解锁每日任务指南解锁每日任务
+	+To unlock The Sons of Hodir daily quests you must first complete their quest chain in The Storm Peaks. Please use The Sons of Hodir Unlock Daily Quests guide to unlock the daily quests
 	.isQuestAvailable 13047
 step
-	>>与Fjorn的铁砧、Hodir的角、Hodir's Helm、Frostworg Denmourt和Arngrim the Insatible交谈
-    .daily 12981 >>接受高温和低温
+	>>Talk to Fjorn's Anvil, Hodir's Horn, Hodir's Helm, Frostworg Denmother and Arngrim the Insatiable
+    .daily 12981 >>Accept Hot and Cold
     .goto TheStormPeaks,63.13,62.94
-    .daily 12977 >>接受Hodir的呼叫
+    .daily 12977 >>Accept Hodir's Call
     .goto TheStormPeaks,64.17,65.01
-	.daily 13006 >> 接受粘性清洁
+	.daily 13006 >> Accept A Viscous Cleaning
 	.goto TheStormPeaks,64.24,59.23
-	.daily 12994 >> 接受间谍猎人
+	.daily 12994 >> Accept Spy Hunter
 	.goto TheStormPeaks,63.49,59.73
-	.daily 13046 >> 接受进给Arngrim
+	.daily 13046 >> Accept Feeding Arngrim
 	.goto TheStormPeaks,67.61,59.95
 	.reputation 1119,revered,<0,1 -- if you're 0 into revered it will display this step
 	.isQuestTurnedIn 13047
 step
-	>>与Fjorn的铁砧、Hodir的角、Hodir's Helm和Frostworg Denmother交谈
-    .daily 12981 >>接受高温和低温
+	>>Talk to Fjorn's Anvil, Hodir's Horn, Hodir's Helm and Frostworg Denmother
+    .daily 12981 >>Accept Hot and Cold
     .goto TheStormPeaks,63.13,62.94
-    .daily 12977 >>接受Hodir的呼叫
+    .daily 12977 >>Accept Hodir's Call
     .goto TheStormPeaks,64.17,65.01
-	.daily 13006 >> 接受粘性清洁
+	.daily 13006 >> Accept A Viscous Cleaning
 	.goto TheStormPeaks,64.24,59.23
-	.daily 12994 >> 接受间谍猎人
+	.daily 12994 >> Accept Spy Hunter
 	.goto TheStormPeaks,63.49,59.73
 	.reputation 1119,honored,<0,1 -- if you're 0 into honored it will display this step
 	.isQuestTurnedIn 13047
 step
-	>>与Fjorn铁砧、Hodir角和Hodir头盔交谈
-    .daily 12981 >>接受高温和低温
+	>>Talk to Fjorn's Anvil, Hodir's Horn and Hodir's Helm
+    .daily 12981 >>Accept Hot and Cold
     .goto TheStormPeaks,63.13,62.94
-    .daily 12977 >>接受Hodir的呼叫
+    .daily 12977 >>Accept Hodir's Call
     .goto TheStormPeaks,64.17,65.01
-	.daily 13006 >> 接受粘性清洁
+	.daily 13006 >> Accept A Viscous Cleaning
 	.goto TheStormPeaks,64.24,59.23
 	.reputation 1119,friendly,<0,1 -- if you're 0 into friendly it will display this step
 	.isQuestTurnedIn 13047
 step
 	.goto TheStormPeaks,70.00,58.00,60,0
     .goto TheStormPeaks,70.14,61.16
-	>>杀死脆性叛徒。掠夺他们以获取冰的精华
+	>>Kill Brittle Revenants. Loot them for Essences of Ice
 	.collect 42246,6 --Essence of Ice (6)
 	.isOnQuest 12981
 step
 	.goto TheStormPeaks,73.5,62.9,70,0
     .goto TheStormPeaks,76.2,63.4
-	.use 42246 >> 使用弗约恩铁砧周围阴燃残渣旁边的冰块精华。抢劫冷冻铁屑
+	.use 42246 >> Use the Essences of Ice next to the Smoldering Scrap around Fjorn's Anvil. Loot the Frozen Iron Scrap
     .complete 12981,1 --Frozen Iron Scrap (6)
 	.isOnQuest 12981
 step
     .goto TheStormPeaks,70.73,50.96,65,0
 	.goto TheStormPeaks,73.00,49.05,65,0
     .goto TheStormPeaks,71.45,47.76
-	.use 42164 >> 杀死该地区的尼弗莱姆祖先和不安的弗罗斯特伯恩。用你袋子里的霍迪尔号角放在他们的尸体上解救他们
+	.use 42164 >> Kill Niffelem Forefathers and Restless Frostborn in the area. Use Hodir's Horn in your bags on their corpses to free them
     .complete 12977,1 --Niffelem Forefather freed (5)
     .complete 12977,2 --Restless Frostborn freed (5)
 	.isOnQuest 12977
 step
 	#completewith next
     .goto TheStormPeaks,57.23,64.02
-	.use 42479 >> 用你袋子里的虫牙放在堕落的虫子尸体上。跟随以太霜虫，直到它追踪到一个暴风渗透者，然后杀死它。
+	.use 42479 >> Use the Ethereal Worg's Fang in your bags on the Corpse of the Fallen Worg. Follow the Ethereal Frostworg until it tracks a Stormforged Infiltrator then kill it.
 	.complete 12994,1 --Stormforged Infiltrators Slain (3)
 	.isOnQuest 12994
 step
 	.goto TheStormPeaks,57.92,61.07,60,0
 	.goto TheStormPeaks,57.83,63.59,60,0
 	.goto TheStormPeaks,56.51,65.00
-	.use 42774 >> 在Roaming Jormungar上使用包中的Arngrim牙齿。伤害它30%或更少的生命值，但不要杀死它
+	.use 42774 >> Use Arngrim's Tooth in your bags on Roaming Jormungar. Damage it to 30% or less health but do not kill it
 	.complete 13046,1 --Arngrim's spirit fed (5)
 	.isOnQuest 13046
 step
     .goto TheStormPeaks,57.23,64.02
-	.use 42479 >> 用你袋子里的虫牙放在堕落的虫子尸体上。跟随以太霜虫，直到它追踪到一个暴风渗透者，然后杀死它。
+	.use 42479 >> Use the Ethereal Worg's Fang in your bags on the Corpse of the Fallen Worg. Follow the Ethereal Frostworg until it tracks a Stormforged Infiltrator then kill it.
 	.complete 12994,1 --Stormforged Infiltrators Slain (3)
 	.isOnQuest 12994
 step
 	.goto TheStormPeaks,55.84,63.94,50,0
     .goto TheStormPeaks,54.4,63.2
-	>>在冬眠洞穴杀死粘性油。掠夺他们的石油
+	>>Kill Viscous Oils in the Hibernal Cavern. Loot them for their Oil
     .complete 13006,1 --Viscous Oil (5)
 	.isOnQuest 13006
 step
-	>>返回Dun Niffelem
-	>>与Fjorn的铁砧、Hodir的角、Hodir's Helm、Frostworg Denmourt和Arngrim the Insatible交谈
-    .turnin 12981 >>转入冷热状态
+	>>Return to Dun Niffelem
+	>>Talk to Fjorn's Anvil, Hodir's Horn, Hodir's Helm, Frostworg Denmother and Arngrim the Insatiable
+    .turnin 12981 >>Turn in Hot and Cold
     .goto TheStormPeaks,63.13,62.94
-    .turnin 12977 >>交给霍迪尔的电话
+    .turnin 12977 >>Turn in Hodir's Call
     .goto TheStormPeaks,64.17,65.01
-	.turnin 13006 >> 交粘性清洁剂
+	.turnin 13006 >> Turn in A Viscous Cleaning
 	.goto TheStormPeaks,64.24,59.23
-	.turnin 12994 >> 交出间谍猎人
+	.turnin 12994 >> Turn in Spy Hunter
 	.goto TheStormPeaks,63.49,59.73
-	.turnin 13046 >> 转入进料Arngrim
+	.turnin 13046 >> Turn in Feeding Arngrim
 	.goto TheStormPeaks,67.61,59.95
 	.isQuestComplete 12994
 	.isQuestComplete 13046
 step
-	>>返回Dun Niffelem
-	>>与Fjorn的铁砧、Hodir的号角、Hodir's Helm和Insatible的Arngrim交谈
-    .turnin 12981 >>转入冷热状态
+	>>Return to Dun Niffelem
+	>>Talk to Fjorn's Anvil, Hodir's Horn, Hodir's Helm and Arngrim the Insatiable
+    .turnin 12981 >>Turn in Hot and Cold
     .goto TheStormPeaks,63.13,62.94
-    .turnin 12977 >>交给霍迪尔的电话
+    .turnin 12977 >>Turn in Hodir's Call
     .goto TheStormPeaks,64.17,65.01
-	.turnin 13006 >> 交粘性清洁剂
+	.turnin 13006 >> Turn in A Viscous Cleaning
 	.goto TheStormPeaks,64.24,59.23
-	.turnin 13046 >> 转入进料Arngrim
+	.turnin 13046 >> Turn in Feeding Arngrim
 	.goto TheStormPeaks,67.61,59.95
 	.isQuestComplete 13046
 step
-	>>返回Dun Niffelem
-	>>与Fjorn的铁砧、Hodir的角、Hodir's Helm和Frostworg Denmother交谈
-    .turnin 12981 >>转入冷热状态
+	>>Return to Dun Niffelem
+	>>Talk to Fjorn's Anvil, Hodir's Horn, Hodir's Helm and Frostworg Denmother
+    .turnin 12981 >>Turn in Hot and Cold
     .goto TheStormPeaks,63.13,62.94
-    .turnin 12977 >>交给霍迪尔的电话
+    .turnin 12977 >>Turn in Hodir's Call
     .goto TheStormPeaks,64.17,65.01
-	.turnin 13006 >> 交粘性清洁剂
+	.turnin 13006 >> Turn in A Viscous Cleaning
 	.goto TheStormPeaks,64.24,59.23
-	.turnin 12994 >> 交出间谍猎人
+	.turnin 12994 >> Turn in Spy Hunter
 	.goto TheStormPeaks,63.49,59.73
 	.isQuestComplete 12994
 step
-	>>返回Dun Niffelem
-	>>与Fjorn的铁砧、Hodir的角、Hodir's Helm、Frostworg Denmourt和Arngrim the Insatible交谈
-    .turnin 12981 >>转入冷热状态
+	>>Return to Dun Niffelem
+	>>Talk to Fjorn's Anvil, Hodir's Horn, Hodir's Helm, Frostworg Denmother and Arngrim the Insatiable
+    .turnin 12981 >>Turn in Hot and Cold
     .goto TheStormPeaks,63.13,62.94
-    .turnin 12977 >>交给霍迪尔的电话
+    .turnin 12977 >>Turn in Hodir's Call
     .goto TheStormPeaks,64.17,65.01
-	.turnin 13006 >> 交粘性清洁剂
+	.turnin 13006 >> Turn in A Viscous Cleaning
 	.goto TheStormPeaks,64.24,59.23
-	.turnin 12994 >> 交出间谍猎人
+	.turnin 12994 >> Turn in Spy Hunter
 	.goto TheStormPeaks,63.49,59.73
-	.turnin 13046 >> 转入进料Arngrim
+	.turnin 13046 >> Turn in Feeding Arngrim
 	.goto TheStormPeaks,67.61,59.95
 	.isQuestComplete 12994
 	.isQuestComplete 13046
 step
-	>>返回Dun Niffelem
-	>>与Fjorn的铁砧、Hodir的号角、Hodir's Helm和Insatible的Arngrim交谈
-    .turnin 12981 >>转入冷热状态
+	>>Return to Dun Niffelem
+	>>Talk to Fjorn's Anvil, Hodir's Horn, Hodir's Helm and Arngrim the Insatiable
+    .turnin 12981 >>Turn in Hot and Cold
     .goto TheStormPeaks,63.13,62.94
-    .turnin 12977 >>交给霍迪尔的电话
+    .turnin 12977 >>Turn in Hodir's Call
     .goto TheStormPeaks,64.17,65.01
-	.turnin 13006 >> 交粘性清洁剂
+	.turnin 13006 >> Turn in A Viscous Cleaning
 	.goto TheStormPeaks,65.00,60.95
-	.turnin 13046 >> 转入进料Arngrim
+	.turnin 13046 >> Turn in Feeding Arngrim
 	.goto TheStormPeaks,67.61,59.95
 	.isQuestComplete 13046
 step
-	>>返回Dun Niffelem
-	>>与Fjorn的铁砧、Hodir的角、Hodir's Helm和Frostworg Denmother交谈
-    .turnin 12981 >>转入冷热状态
+	>>Return to Dun Niffelem
+	>>Talk to Fjorn's Anvil, Hodir's Horn, Hodir's Helm and Frostworg Denmother
+    .turnin 12981 >>Turn in Hot and Cold
     .goto TheStormPeaks,63.13,62.94
-    .turnin 12977 >>交给霍迪尔的电话
+    .turnin 12977 >>Turn in Hodir's Call
     .goto TheStormPeaks,64.17,65.01
-	.turnin 13006 >> 交粘性清洁剂
+	.turnin 13006 >> Turn in A Viscous Cleaning
 	.goto TheStormPeaks,64.24,59.23
-	.turnin 12994 >> 交出间谍猎人
+	.turnin 12994 >> Turn in Spy Hunter
 	.goto TheStormPeaks,63.49,59.73
 	.isQuestComplete 12994
 step
-	>>返回Dun Niffelem
-	>>与Fjorn铁砧、Hodir角和Hodir头盔交谈
-    .turnin -12981 >>转入冷热状态
+	>>Return to Dun Niffelem
+	>>Talk to Fjorn's Anvil, Hodir's Horn and Hodir's Helm
+    .turnin -12981 >>Turn in Hot and Cold
     .goto TheStormPeaks,63.13,62.94
-    .turnin -12977 >>交给霍迪尔的电话
+    .turnin -12977 >>Turn in Hodir's Call
     .goto TheStormPeaks,64.17,65.01
-	.turnin -13006 >> 交粘性清洁剂
+	.turnin -13006 >> Turn in A Viscous Cleaning
 	.goto TheStormPeaks,64.24,59.23
 step << Mage
 	#completewith next
-	.zone Dalaran >> 传送至达拉然
-	>>飞向冰冠
+	.zone Dalaran >> Teleport to Dalaran
+	>>Fly to Icecrown
 step << !Mage
 	#completewith next
-    .hs >>如果你的炉子设在那里或冰冠附近，请向达拉然祈祷。
-	>>飞向冰冠
+    .hs >>Hearth to Dalaran if your Hearth is set there or somewhere near Icecrown.
+	>>Fly to Icecrown
 
---9 Quest section from 冰冠冰川 Gunship and close surroundings section. 6 Quests from the gunship, other 3 from on the ground/in Ymirheim
+--9 Quest section from Icecrown Gunship and close surroundings section. 6 Quests from the gunship, other 3 from on the ground/in Ymirheim
 
 step << Alliance
-	+要解锁所有冰冠炮舰每日任务，你必须先完成任务链。请使用冰冠炮舰解锁每日任务指南解锁所有每日任务
+	+To unlock all the Icecrown Gunship daily quests you must first complete the pre quest chain. Please use the Icecrown Gunship Unlock Daily Quests guide to unlock all the daily quests
 	.isQuestAvailable 13314,13342,13321,13318
 --	13314  Get the Message
 -- 	13342  Not a Bug
---	13321  Re测验 Now
+--	13321  Retest Now
 --	13318  Drag and Drop
 
 step << Horde
-	+要解锁所有冰冠炮舰每日任务，你必须先完成任务链。请使用冰冠炮舰任务前指南解锁所有日常任务
+	+To unlock all the Icecrown Gunship daily quests you must first complete the pre quest chain. Please use the Icecrown Gunship Pre Quests guide to unlock all the daily quests
 	.isQuestAvailable 13313,13356,13352,13358
 --	13313  Blinding the Eyes in the Sky
---	13356  Re测验 Now
+--	13356  Retest Now
 --	13352  Drag and Drop
 --	13358  Not a Bug
 
 step << Alliance
-    .goto 冰冠冰川Glacier,65.1,57.2,0
-    .goto 冰冠冰川Glacier,64.7,52.4,0
-    .goto 冰冠冰川Glacier,62.1,45.9,0
-    .goto 冰冠冰川Glacier,57.5,39.1,0
-    .goto 冰冠冰川Glacier,54.7,35.3,0
-	>>在冰冠，飞往联盟炮舰，破天荒号
-	>>与骑士队长Drosche、虔诚的Absalan、高级队长Justin Bartlett、总工程师Boltwrench和Thassarian交谈
-	>>它们分别位于船的左后方、上层甲板、主中央舱和下层甲板上
-    .daily 13336 >>接受被选中者的鲜血
-    .daily 13300 >>接受奴隶到沙龙
-    .daily 13322 >>立即接受重新测试
-    .daily 13323 >>接受拖放
-	.daily 13344 >>不接受Bug
-    .daily 13333 >>接受捕获更多调度
+    .goto IcecrownGlacier,65.1,57.2,0
+    .goto IcecrownGlacier,64.7,52.4,0
+    .goto IcecrownGlacier,62.1,45.9,0
+    .goto IcecrownGlacier,57.5,39.1,0
+    .goto IcecrownGlacier,54.7,35.3,0
+	>>In Icecrown, fly to the Alliance Gunship, The Skybreaker
+	>>Talk to Knight-Captain Drosche, Absalan the Pious, High Captain Justin Bartlett, Chief Engineer Boltwrench and Thassarian
+	>>They are positioned respectively back left of the ship, on the top deck, in the main central hold and below on the bottom deck
+    .daily 13336 >>Accept Blood of the Chosen
+    .daily 13300 >>Accept Slaves to Saronite
+    .daily 13322 >>Accept Retest Now
+    .daily 13323 >>Accept Drag and Drop
+	.daily 13344 >>Accept Not a Bug
+    .daily 13333 >>Accept Capture More Dispatches
 step << Horde
-	.goto 冰冠冰川Glacier,67.00,38,0
-	>>在冰冠，飞往部落炮舰，奥格瑞姆之锤
-	>>与战争使者达沃斯·里奥特、凯尔坦兄弟、天空收割者科姆·布莱克斯卡、首席工程师科珀克劳和科尔蒂拉·戴斯韦弗交谈
-	>>它们分别位于主前舱，巡视上层甲板和下层甲板
-    .daily 13330 >>接受被选中者的鲜血
-    .daily 13302 >>接受奴隶到沙龙
-    .daily 13357 >>立即接受重新测试
-    .daily 13353 >>接受拖放
-	.daily 13365 >>不接受Bug
-    .daily 13331 >>接受让联盟保持盲目
+	.goto IcecrownGlacier,67.00,38,0
+	>>In Icecrown, fly to the Horde Gunship, Orgrim's Hammer
+	>>Talk to Warbringer Davos Rioht, Brother Keltan, Sky-Reaver Korm Blackscar, Chief Engineer Copperclaw and Koltira Deathweaver
+	>>They are positioned respectively in the main front hold, patrolling the top deck and below on the bottom deck
+    .daily 13330 >>Accept Blood of the Chosen
+    .daily 13302 >>Accept Slaves to Saronite
+    .daily 13357 >>Accept Retest Now
+    .daily 13353 >>Accept Drag and Drop
+	.daily 13365 >>Accept Not a Bug
+    .daily 13331 >>Accept Keeping the Alliance Blind
 step << Alliance
-    .goto 冰冠冰川Glacier,62.6,51.3
-	>>飞到地面指挥官库普(在地面上，而不是在船上)
-    .daily 13309 >>接受空中袭击
+    .goto IcecrownGlacier,62.6,51.3
+	>>Fly to Ground Commander Koup (on the ground - not on the ship)
+    .daily 13309 >>Accept Assault by Air
 step << Alliance
     #completewith next
-    .goto 冰冠冰川,62.55,50.67
-    .vehicle 32227 >> 右击飞行机器顶部的炮塔开始任务
+    .goto Icecrown,62.55,50.67
+    .vehicle 32227 >> Right click the turret on top of the Flying Machine to start the quest
 	.isOnQuest 13309
 step << Alliance
-	>>射击你在飞行时看到的所有长矛枪，使其失效。当你这样做的时候，渗透者会掉下来
-    .goto 冰冠冰川,52.65,56.93
+	>>Shoot at all the Spear Guns to disable them you see while flying around. Infiltrators will drop as you do this
+    .goto Icecrown,52.65,56.93
     .complete 13309,1 --4/4 Skybreaker Infiltrators dropped
 	.isOnQuest 13309
 step << Alliance
-    .goto 冰冠冰川,62.55,51.29
-	>>退出飞行机器。你会收到一个降落伞。返回库普
-    .turnin 13309 >>空袭上缴
+    .goto Icecrown,62.55,51.29
+	>>Exit the Flying Machine. You will receive a parachute. Return to Koup
+    .turnin 13309 >>Turn in Assault by Air
 	.isQuestComplete 13309
 step << Horde
-	>>飞到地面指挥官Xutjja(在地面，而不是在船上)
-    .goto 冰冠冰川Glacier,58.3,46.0
-    .daily 13310 >>接受空中袭击
+	>>Fly to Ground Commander Xutjja (on the ground - not on the ship)
+    .goto IcecrownGlacier,58.3,46.0
+    .daily 13310 >>Accept Assault by Air
 step << Horde
 	#completewith next
-	.vehicle >>右击飞行机器顶部的炮塔开始任务
-    .goto 冰冠冰川Glacier,59.60,45.84
+	.vehicle >>Right click the turret on top of the Flying Machine to start the quest
+    .goto IcecrownGlacier,59.60,45.84
 	.isOnQuest 13310
 step << Horde
-	>>射击你在飞行时看到的所有长矛枪，使其失效。当你这样做的时候，渗透者会掉下来
-    .goto 冰冠冰川Glacier,56.8,64.3
+	>>Shoot at all the Spear Guns to disable them you see while flying around. Infiltrators will drop as you do this
+    .goto IcecrownGlacier,56.8,64.3
     .complete 13310,1 --Kor'kron Infiltrators dropped (4)
 	.isOnQuest 13310
 step << Horde
-    .goto 冰冠冰川Glacier,58.3,46.0
-	>>退出飞行机器。你会收到一个降落伞。返回Xutjja
-    .turnin 13310 >>空袭上缴
+    .goto IcecrownGlacier,58.3,46.0
+	>>Exit the Flying Machine. You will receive a parachute. Return to Xutjja
+    .turnin 13310 >>Turn in Assault by Air
 	.isQuestComplete 13310
 step << Alliance
-    .goto 冰冠冰川Glacier,62.5,51.1,15,0
-    .goto 冰冠冰川Glacier,62.8,51.6
-	>>与班组长交谈。如果其他人开始任务，并且有大约6分钟的重生时间，并且在库普右侧约10码处重生，他可能不会在这里。如果您不想等待或稍后检查，可以跳过此步骤
-    .daily 13284 >>接受地面攻击
+    .goto IcecrownGlacier,62.5,51.1,15,0
+    .goto IcecrownGlacier,62.8,51.6
+	>>Talk to the Squad Leader. He may not be here if someone else started the quest and has a roughly 6 minute respawn time, and respawns about 10 yards to the right of Koup. You may skip this if you don't want to wait or check later
+    .daily 13284 >>Accept Assault by Ground
 step << Alliance
-    .goto 冰冠冰川Glacier,58.2,55.9,0
-    .goto 冰冠冰川Glacier,59.6,59.3,0
-    .goto 冰冠冰川Glacier,57.8,62.6,0
+    .goto IcecrownGlacier,58.2,55.9,0
+    .goto IcecrownGlacier,59.6,59.3,0
+    .goto IcecrownGlacier,57.8,62.6,0
 	#completewith Mineslave
-	>>杀死整个伊米尔海姆的维库尔人
+	>>Kill the Vrykul throughout Ymirheim
 	.complete 13336,1 --Ymirheim Vrykul Slain (20)
 	.isOnQuest 13336
 step << Alliance
-    .goto 冰冠冰川,59.89,53.50
-	>>护送部队。如果需要，让一些部队坦克暴徒
+    .goto Icecrown,59.89,53.50
+	>>Escort the troops. Let some of the troops tank the mobs if needed
     .complete 13284,1 --4/4 Alliance troops escorted to Ymirheim
 	.isOnQuest 13284
 step << Alliance
 	#label Mineslave
-    .goto 冰冠冰川Glacier,55.7,57.3,40,0
-    .goto 冰冠冰川Glacier,56.2,58.9,40,0
-    .goto 冰冠冰川Glacier,55.6,59.7,40,0
-    .goto 冰冠冰川Glacier,54.5,60.0,40,0
-    .goto 冰冠冰川Glacier,55.7,57.3
-	>>进入沙龙矿。与奴隶交谈以营救他们(有时他们可能会攻击你)。
+    .goto IcecrownGlacier,55.7,57.3,40,0
+    .goto IcecrownGlacier,56.2,58.9,40,0
+    .goto IcecrownGlacier,55.6,59.7,40,0
+    .goto IcecrownGlacier,54.5,60.0,40,0
+    .goto IcecrownGlacier,55.7,57.3
+	>>Go into the Saronite Mine. Talk to the slaves to rescue them (sometimes they may attack you).
     .complete 13300,1 --Saronite Mine Slave rescued (10)
 	.skipgossip
 	.isOnQuest 13300
 step << Alliance
-    .goto 冰冠冰川Glacier,58.2,55.9,70,0
-    .goto 冰冠冰川Glacier,59.6,59.3,70,0
-    .goto 冰冠冰川Glacier,57.8,62.6
-	>>杀死整个伊米尔海姆的维库尔人
+    .goto IcecrownGlacier,58.2,55.9,70,0
+    .goto IcecrownGlacier,59.6,59.3,70,0
+    .goto IcecrownGlacier,57.8,62.6
+	>>Kill the Vrykul throughout Ymirheim
 	.complete 13336,1 --Ymirheim Vrykul Slain (20)
 	.isOnQuest 13336
 step << Alliance
-    .goto 冰冠冰川,57.01,62.53
-	>>注意：这个任务为你标记PVP。然而，这很容易。
-    .daily 13280 >>接受山之王
+    .goto Icecrown,57.01,62.53
+	>>NOTE: This quest flags you for PVP. It is VERY easy however.
+    .daily 13280 >>Accept King of the Mountain
 step << Alliance
     #completewith next
-    .goto 冰冠冰川,56.99,62.60
-    .vehicle 31784 >>右键单击看起来像侏儒的机器人
+    .goto Icecrown,56.99,62.60
+    .vehicle 31784 >>Right Click on the gnome looking robot
 	.isOnQuest 13280
 step << Alliance
-    .goto 冰冠冰川,54.89,60.12
-	>>垃圾邮件使用“Jump Jets”(3)快速攀登悬崖(没有冷却时间)。到达山顶后，使用“植物联盟战斗标准”(1)种植旗帜。然后，离开车辆
+    .goto Icecrown,54.89,60.12
+	>>Spam use "Jump Jets" (3) to quickly scale the cliff (it has no cooldown). Once you get to the top of the mountain, use "Plant Alliance Battle Standard" (1) to plant the banner. Then, leave the vehicle
     .complete 13280,1 --1/1 Alliance Battle Standard planted
 	.isOnQuest 13280
 step << Alliance
-    .goto 冰冠冰川,56.97,62.55
-    .turnin 13280 >>山之王归来
+    .goto Icecrown,56.97,62.55
+    .turnin 13280 >>Turn in King of the Mountain
 	.isQuestComplete 13280
 step << Alliance
-	>>返回地面指挥官库普
-    .goto 冰冠冰川,62.60,51.35
-    .turnin 13284 >>地面攻击中的转身
+	>>Return to Ground Commander Koup
+    .goto Icecrown,62.60,51.35
+    .turnin 13284 >>Turn in Assault by Ground
 	.isQuestComplete 13284
 step << Horde
-    .goto 冰冠冰川Glacier,58.3,46.0
-	>>与班组长交谈。如果其他人开始任务，并且有大约6分钟的重生时间，他可能不会在这里。如果您不想等待或稍后检查，可以跳过此步骤
-    .daily 13301 >>接受地面攻击
+    .goto IcecrownGlacier,58.3,46.0
+	>>Talk to the Squad Leader. He may not be here if someone else started the quest and has a roughly 6 minute respawn time. You may skip this if you don't want to wait or check later
+    .daily 13301 >>Accept Assault by Ground
 step << Horde
-    .goto 冰冠冰川Glacier,58.2,55.9,0
-    .goto 冰冠冰川Glacier,59.6,59.3,0
-    .goto 冰冠冰川Glacier,57.8,62.6,0
+    .goto IcecrownGlacier,58.2,55.9,0
+    .goto IcecrownGlacier,59.6,59.3,0
+    .goto IcecrownGlacier,57.8,62.6,0
 	#completewith Mineslave
-	>>杀死整个伊米尔海姆的维库尔人
+	>>Kill the Vrykul throughout Ymirheim
 	.complete 13330,1 --Ymirheim Vrykul Slain (20)
 	.isOnQuest 13330
 step << Horde
-	>>护送部队。如果需要，让一些部队坦克暴徒
-    .goto 冰冠冰川Glacier,59.4,52.8
+	>>Escort the troops. Let some of the troops tank the mobs if needed
+    .goto IcecrownGlacier,59.4,52.8
     .complete 13301,1 --Horde troops escorted to Ymirheim (4)
 	.isOnQuest 13301
 step << Horde
 	#label Mineslave
-    .goto 冰冠冰川Glacier,55.7,57.3,40,0
-    .goto 冰冠冰川Glacier,56.2,58.9,40,0
-    .goto 冰冠冰川Glacier,55.6,59.7,40,0
-    .goto 冰冠冰川Glacier,54.5,60.0,40,0
-    .goto 冰冠冰川Glacier,55.7,57.3
-	>>进入沙龙矿。与奴隶交谈以营救他们(有时他们可能会攻击你)。
+    .goto IcecrownGlacier,55.7,57.3,40,0
+    .goto IcecrownGlacier,56.2,58.9,40,0
+    .goto IcecrownGlacier,55.6,59.7,40,0
+    .goto IcecrownGlacier,54.5,60.0,40,0
+    .goto IcecrownGlacier,55.7,57.3
+	>>Go into the Saronite Mine. Talk to the slaves to rescue them (sometimes they may attack you).
     .complete 13302,1 --Saronite Mine Slave rescued (10)
 	.skipgossip
 	.isOnQuest 13302
 step << Horde
-    .goto 冰冠冰川Glacier,58.2,55.9,70,0
-    .goto 冰冠冰川Glacier,59.6,59.3,70,0
-    .goto 冰冠冰川Glacier,57.8,62.6
-	>>杀死整个伊米尔海姆的维库尔人
+    .goto IcecrownGlacier,58.2,55.9,70,0
+    .goto IcecrownGlacier,59.6,59.3,70,0
+    .goto IcecrownGlacier,57.8,62.6
+	>>Kill the Vrykul throughout Ymirheim
 	.complete 13330,1 --Ymirheim Vrykul Slain (20)
 	.isOnQuest 13330
 step << Horde
-    .goto 冰冠冰川Glacier,51.9,57.6
-	>>注意：这个任务为你标记PvP。然而，这很容易。
-    .daily 13283 >>接受山之王
+    .goto IcecrownGlacier,51.9,57.6
+	>>NOTE: This quest flags you for PvP. It is VERY easy however.
+    .daily 13283 >>Accept King of the Mountain
 step << Horde
     #completewith next
-    .goto 冰冠冰川,51.95,57.62
-    .vehicle >>右键单击看起来像侏儒的机器人
+    .goto Icecrown,51.95,57.62
+    .vehicle >>Right Click on the gnome looking robot
 	.isOnQuest 13283
 step << Horde
-    .goto 冰冠冰川,54.89,60.12
-	>>垃圾邮件使用“Jump Jets”(3)快速攀登悬崖(没有冷却时间)。到达山顶后，使用“植物部落战斗标准”(1)种植旗帜。然后，离开车辆
+    .goto Icecrown,54.89,60.12
+	>>Spam use "Jump Jets" (3) to quickly scale the cliff (it has no cooldown). Once you get to the top of the mountain, use "Plant Horde Battle Standard" (1) to plant the banner. Then, leave the vehicle
     .complete 13283,1 --1/1 Horde Battle Standard planted
 	.isOnQuest 13283
 step << Horde
-    .goto 冰冠冰川,51.9,57.6
-    .turnin 13283 >>山之王归来
+    .goto Icecrown,51.9,57.6
+    .turnin 13283 >>Turn in King of the Mountain
 	.isQuestComplete 13283
 step << Horde
-	>>返回地面指挥官Xutjja
-    .goto 冰冠冰川,58.3,46.0
-    .turnin 13301 >>地面攻击中的转身
+	>>Return to Ground Commander Xutjja
+    .goto Icecrown,58.3,46.0
+    .turnin 13301 >>Turn in Assault by Ground
 	.isQuestComplete 13301
 step
-	>>前往平台，杀死该区域内的苦涩元凶。掠夺他们的幻想之球
-	.use 44246 >>当你不在战斗中时，在该区域使用幻影之珠。
+	>>Head to the platform and kill Bitter Initiates in the area. Loot them for their Orbs of Illusion
+	.use 44246 >>Use the Orb of Illusion on Dark Subjugators in the area when you are out of combat.
 	.collect 44246,3,13353,1,-1 << Horde--Orb of Illusion (3 -1)
 	.collect 44246,3,13323,1,-1 << Alliance--Orb of Illusion (3 -1)
-    .goto 冰冠冰川Glacier,53.7,46.1
+    .goto IcecrownGlacier,53.7,46.1
     .complete 13323,1 << Alliance --Dark Subjugator dragged and dropped (3)
     .complete 13353,1 << Horde --Dark Subjugator dragged and dropped (3)
-    .goto 冰冠冰川Glacier,54.7,45.9,60,0
-    .goto 冰冠冰川Glacier,54.0,46.3,60,0
-    .goto 冰冠冰川Glacier,52.2,45.7,60,0
-    .goto 冰冠冰川Glacier,54.0,46.3
+    .goto IcecrownGlacier,54.7,45.9,60,0
+    .goto IcecrownGlacier,54.0,46.3,60,0
+    .goto IcecrownGlacier,52.2,45.7,60,0
+    .goto IcecrownGlacier,54.0,46.3
 	.isOnQuest 13323 << Alliance
 	.isOnQuest 13353 << Horde
 step
-    .goto 冰冠冰川Glacier,49.7,34.4
-	.use 44307 >>使用袋子里的稀释邪教补品获得“黑暗辨识”Buff。这允许你从你在该地区杀死的所有人形生物中掠夺被污染的精华
+    .goto IcecrownGlacier,49.7,34.4
+	.use 44307 >>Use the Diluted Cult Tonic in your bags to gain the "Dark Discernment" Buff. This allows you to loot the Tainted Essences from all the humanoids you kill in the area
 	.collect 44301,10,13322,1 << Alliance
 	.collect 44301,10,13357,1 << Horde
 	.isOnQuest 13322 << Alliance
 	.isOnQuest 13357 << Horde
 step
-    .goto 冰冠冰川Glacier,49.7,34.4
+    .goto IcecrownGlacier,49.7,34.4
 	.use 44301 -- to combine the 10 tainted essences into a writhing mass
-	.use 44304 >> 右击你袋子里的被污染的精华，将它们变成旋转的弥撒。扔进大锅
+	.use 44304 >> Right click the Tainted Essences in your bags to turn them into a Writhing Mass. Throw it into a cauldron
 	.complete 13322,1 << Alliance
 	.complete 13357,1 << Horde
 	.isOnQuest 13322 << Alliance
 	.isOnQuest 13357 << Horde
 step
-    .goto 冰冠冰川Glacier,54.1,31.4,70,0
-    .goto 冰冠冰川Glacier,54.7,28.0,70,0
-    .goto 冰冠冰川Glacier,57.0,28.8,70,0
-    .goto 冰冠冰川Glacier,54.1,31.4
-	.use 44433 >> 杀死5个奴役的小黄人(虚空行走者)。用吸吮棒在他们的尸体上寻找暗物质
+    .goto IcecrownGlacier,54.1,31.4,70,0
+    .goto IcecrownGlacier,54.7,28.0,70,0
+    .goto IcecrownGlacier,57.0,28.8,70,0
+    .goto IcecrownGlacier,54.1,31.4
+	.use 44433 >> Kill 5 Enslaved Minions (Voidwalkers). Use the Rod of Siphoning on their corpses for their Dark Matter
 	.collect 44434,5,13344,1 << Alliance --Dark Matter (5)
 	.collect 44434,5,13365,1 << Horde --Dark Matter (5)
 	.isOnQuest 13344 << Alliance
 	.isOnQuest 13365 << Horde
 step
-    .goto 冰冠冰川Glacier,53.8,33.6
-	>>点击召唤石
+    .goto IcecrownGlacier,53.8,33.6
+	>>Click on the Summoning Stone
 	.complete 13344,1 << Alliance  --Dark Messenger Summoned (1)
     .complete 13365,1 << Horde --Dark Messenger Summoned (1)
 	.isOnQuest 13344 << Alliance
 	.isOnQuest 13365 << Horde
 step << Alliance
-    .goto 冰冠冰川Glacier,46.2,52.1,70,0
-    .goto 冰冠冰川Glacier,42.4,59.4,0,0
-	.use 44222 >>在Orgrim’s Hammer Scouts的背包中使用飞镖枪(你可以在飞行坐骑上使用)。抢走他们的尸体
+    .goto IcecrownGlacier,46.2,52.1,70,0
+    .goto IcecrownGlacier,42.4,59.4,0,0
+	.use 44222 >>Use the Dart Gun in your bags on the Orgrim's Hammer Scouts (you can use it while on your flying mount). Loot their corpses for the Dispatches
     .complete 13333,1 --Orgrim's Hammer Dispatch (6)
 	.isOnQuest 13333
 step << Horde
-	.goto 冰冠冰川Glacier,48.85,40.44
-	.use 44212 >>在空中破天荒侦察机上使用你包里的SGM-3
+	.goto IcecrownGlacier,48.85,40.44
+	.use 44212 >>Use the SGM-3 in your bags on the Skybreaker Recon Fighters in the air
 	.complete 13331,1 --Skybreaker Recon Fighters shot down (6)
 	.isOnQuest 13331
 step << Alliance
-    .goto 冰冠冰川Glacier,65.1,57.2,0
-    .goto 冰冠冰川Glacier,64.7,52.4,0
-    .goto 冰冠冰川Glacier,62.1,45.9,0
-    .goto 冰冠冰川Glacier,57.5,39.1,0
-    .goto 冰冠冰川Glacier,54.7,35.3,0
-	>>返回破天者。与骑士队长Drosche、虔诚的Absalan、高级队长Justin Bartlett、总工程师Boltwrench和Thassarian交谈
-    .turnin -13336 >>献出被选中者的鲜血
-    .turnin -13300 >>把奴隶交给沙龙
-    .turnin -13322 >>立即提交重新测试
-    .turnin -13323 >>转入拖放
-	.turnin -13344 >>交上来的不是虫子
-    .turnin -13333 >>提交捕获更多调度
+    .goto IcecrownGlacier,65.1,57.2,0
+    .goto IcecrownGlacier,64.7,52.4,0
+    .goto IcecrownGlacier,62.1,45.9,0
+    .goto IcecrownGlacier,57.5,39.1,0
+    .goto IcecrownGlacier,54.7,35.3,0
+	>>Return to the Skybreaker. Talk to Knight-Captain Drosche, Absalan the Pious, High Captain Justin Bartlett, Chief Engineer Boltwrench and Thassarian
+    .turnin -13336 >>Turn in Blood of the Chosen
+    .turnin -13300 >>Turn in Slaves to Saronite
+    .turnin -13322 >>Turn in Retest Now
+    .turnin -13323 >>Turn in Drag and Drop
+	.turnin -13344 >>Turn in Not a Bug
+    .turnin -13333 >>Turn in Capture More Dispatches
 step << Horde
-	.goto 冰冠冰川Glacier,67.00,38.00
-	>>返回奥格里姆之锤。与战争使者达沃斯·里奥特、凯尔坦兄弟、天空收割者科姆·布莱克斯卡、首席工程师科珀克劳和科尔蒂拉·戴斯韦弗交谈
-    .turnin -13330 >>接受被选中者的鲜血
-    .turnin -13302 >>接受奴隶到沙龙
-    .turnin -13357 >>立即接受重新测试
-    .turnin -13353 >>接受拖放
-	.turnin -13365 >>不接受Bug
-    .turnin -13331 >>接受让联盟保持盲目
+	.goto IcecrownGlacier,67.00,38.00
+	>>Return to Orgrim's Hammer. Talk to Warbringer Davos Rioht, Brother Keltan, Sky-Reaver Korm Blackscar, Chief Engineer Copperclaw and Koltira Deathweaver
+    .turnin -13330 >>Accept Blood of the Chosen
+    .turnin -13302 >>Accept Slaves to Saronite
+    .turnin -13357 >>Accept Retest Now
+    .turnin -13353 >>Accept Drag and Drop
+	.turnin -13365 >>Accept Not a Bug
+    .turnin -13331 >>Accept Keeping the Alliance Blind
 
 --6 Quest section from Knights of the Ebon Blade. 3 come from The Shadow Vault, other 3 from Death's Rise
 
 step
-	+要解锁黑檀之刃骑士每日任务，你必须首先在冰冠完成他们的任务链。请使用Ebon Blade解锁每日任务指南解锁每日任务
+	+To unlock the Knights of the Ebon Blade daily quests you must first complete their quest chain in Icecrown. Please use the Ebon Blade Unlock Daily Quests guide to unlock the daily quests
 	.isQuestAvailable 12814
 
 -- 3 Quests from The Shadow Vault
 step
-	>>从暗影库接受3个每日任务
-    >>与Silver交谈
-	.daily 12995 >>接受并留下我们的印记
-	.goto 冰冠冰川,42.84,24.92
-	>>与Leaper交谈。他绕着帐篷走
-	.daily 13069 >>接受射击
-	.goto 冰冠冰川Glacier,43.5,25.0
-	>>跟维尔谈谈，他是个讨厌的家伙，在入口和主楼之间的小路上巡逻
-    .daily 13071 >>像火一样接受邪恶！
-    .goto 冰冠冰川Glacier,42.7,26.8,60,0
-    .goto 冰冠冰川Glacier,43.6,24.1
+	>>From The Shadow Vault accept the 3 daily quests
+    >>Talk to Silver
+	.daily 12995 >>Accept Leave Our Mark
+	.goto Icecrown,42.84,24.92
+	>>Talk to The Leaper. He walks around the tent
+	.daily 13069 >>Accept Shoot'Em Up
+	.goto IcecrownGlacier,43.5,25.0
+	>>Talk to Vile, he is an abomination that patrols the path between the entrance and the main building
+    .daily 13071 >>Accept Vile Like Fire!
+    .goto IcecrownGlacier,42.7,26.8,60,0
+    .goto IcecrownGlacier,43.6,24.1
 step
-    .goto 冰冠冰川Glacier,29.5,43.4,50,0
-    .goto 冰冠冰川Glacier,29.6,45.7,50,0
-    .goto 冰冠冰川Glacier,27.9,45.8,50,0
-    .goto 冰冠冰川Glacier,27.8,40.2,50,0
-    .goto 冰冠冰川Glacier,28.3,38.0,50,0
-    .goto 冰冠冰川Glacier,29.0,35.1,50,0
-    .goto 冰冠冰川Glacier,34.1,28.7,50,0
-    .goto 冰冠冰川Glacier,29.5,43.4
-	.use 42480 >>杀死该地区的维库尔。在他们的尸体上使用你袋子里的黑檀刀锋横幅
+    .goto IcecrownGlacier,29.5,43.4,50,0
+    .goto IcecrownGlacier,29.6,45.7,50,0
+    .goto IcecrownGlacier,27.9,45.8,50,0
+    .goto IcecrownGlacier,27.8,40.2,50,0
+    .goto IcecrownGlacier,28.3,38.0,50,0
+    .goto IcecrownGlacier,29.0,35.1,50,0
+    .goto IcecrownGlacier,34.1,28.7,50,0
+    .goto IcecrownGlacier,29.5,43.4
+	.use 42480 >>Kill Vrykul in the area. Use the Ebon Blade Banner in your bags on their corpses
     .complete 12995,1--Ebon Blade Banner planted near Vrykul corpse (15)
 	.isOnQuest 12995
 step
-    .goto 冰冠冰川Glacier,27.9,33.2
-	>>在鱼叉内部，垃圾邮件使用“速射鱼叉”(3)击落龙
+    .goto IcecrownGlacier,27.9,33.2
+	>>Whilst inside the Harpoon, spam use "Rapid-Fire Harpoon" (3) to shoot down the Dragons
 	.complete 13069,1 --Jotunheim Proto-Drakes & their riders shot down
 	.isOnQuest 13069
 step
 	#completewith next
-    .goto 冰冠冰川Glacier,28.0,37.7
-    .vehicle 30564 >> 右击Njorndar Proto Drake以安装它
+    .goto IcecrownGlacier,28.0,37.7
+    .vehicle 30564 >> Right click a Njorndar Proto-Drake to mount it
 	.isOnQuest 13071
 step
-    .goto 冰冠冰川Glacier,27.7,41.1,70,0
-    .goto 冰冠冰川Glacier,29.2,41.0,70,0
-    .goto 冰冠冰川Glacier,29.6,39.7,70,0
-    .goto 冰冠冰川Glacier,31.5,36.9,70,0
-    .goto 冰冠冰川Glacier,32.0,39.1,70,0
-    .goto 冰冠冰川Glacier,30.8,40.2,70,0
-    .goto 冰冠冰川Glacier,32.4,40.7,70,0
-    .goto 冰冠冰川Glacier,31.5,43.9,70,0
-    .goto 冰冠冰川Glacier,30.1,43.1,70,0
-    .goto 冰冠冰川Glacier,27.7,41.1
-	>>冷却时使用“速度爆发”(1)加快移动速度。使用“Strafe Jotunheim Building”(3)点燃建筑物
+    .goto IcecrownGlacier,27.7,41.1,70,0
+    .goto IcecrownGlacier,29.2,41.0,70,0
+    .goto IcecrownGlacier,29.6,39.7,70,0
+    .goto IcecrownGlacier,31.5,36.9,70,0
+    .goto IcecrownGlacier,32.0,39.1,70,0
+    .goto IcecrownGlacier,30.8,40.2,70,0
+    .goto IcecrownGlacier,32.4,40.7,70,0
+    .goto IcecrownGlacier,31.5,43.9,70,0
+    .goto IcecrownGlacier,30.1,43.1,70,0
+    .goto IcecrownGlacier,27.7,41.1
+	>>Use "Burst of Speed" (1) on cooldown to move faster. Use "Strafe Jotunheim Building" (3) to set the buildings ablaze
     .complete 13071,1 --Vrykul buildings set ablaze (8)
 	.isOnQuest 13071
 step
-    >>返回阴影库。与西尔弗、Leaper和Vile交谈
-	.turnin 12995 >>上车留下我们的标记
-	.goto 冰冠冰川,42.84,24.92
-    .turnin 13069 >>投篮得分
-	.goto 冰冠冰川Glacier,43.5,25.0
-    .turnin 13071 >>像火一样的卑鄙！
-    .goto 冰冠冰川Glacier,43.6,24.1,60,0
-    .goto 冰冠冰川Glacier,42.7,26.8
+    >>Return to The Shadow Vault. Talk to Silver, The Leaper and Vile
+	.turnin 12995 >>Turn in Leave Our Mark
+	.goto Icecrown,42.84,24.92
+    .turnin 13069 >>Turn in Shoot'Em Up
+	.goto IcecrownGlacier,43.5,25.0
+    .turnin 13071 >>Turn in Vile Like Fire!
+    .goto IcecrownGlacier,43.6,24.1,60,0
+    .goto IcecrownGlacier,42.7,26.8
 
 -- 3 Quests from Death's Rise
 step
-	>>从死亡复活开始接受3个每日任务
-	>>与Setaal交谈
-	.daily 12813 >>从他们的尸体上接受，起来！
-	.goto 冰冠冰川,19.67,48.39
-	>>与Aurochs交谈。他在中间的火周围巡逻
-    .daily 12838 >>接受情报收集
-    .goto 冰冠冰川Glacier,20.1,47.5,20,0
-    .goto 冰冠冰川Glacier,20.4,47.9,20,0
-    .goto 冰冠冰川Glacier,20.1,48.4,20,0
-    .goto 冰冠冰川Glacier,19.7,47.9
-	>>与Uzo交谈
-    .daily 12815 >>接受禁飞区
-	.goto 冰冠冰川,19.64,47.80
+	>>From Death's Rise accept the 3 daily quests
+	>>Talk to Setaal
+	.daily 12813 >>Accept From Their Corpses, Rise!
+	.goto Icecrown,19.67,48.39
+	>>Talk to Aurochs. He patrols around the middle fire
+    .daily 12838 >>Accept Intelligence Gathering
+    .goto IcecrownGlacier,20.1,47.5,20,0
+    .goto IcecrownGlacier,20.4,47.9,20,0
+    .goto IcecrownGlacier,20.1,48.4,20,0
+    .goto IcecrownGlacier,19.7,47.9
+	>>Talk to Uzo
+    .daily 12815 >>Accept No Fly Zone
+	.goto Icecrown,19.64,47.80
 step
 	#sticky
 	#label Gryphon
-	.goto 冰冠冰川Glacier,10.5,44.1,70,0
-    .goto 冰冠冰川Glacier,5.0,43.4,70,0
-    .goto 冰冠冰川Glacier,10.5,39.0,70,0
-    .goto 冰冠冰川Glacier,12.7,41.2,70,0
-    .goto 冰冠冰川Glacier,10.5,44.1
-	>>杀死该地区的鹰头狮骑士。用远程技能击落他们，或将他们中的多个组合在空中，然后飞下来杀死他们
+	.goto IcecrownGlacier,10.5,44.1,70,0
+    .goto IcecrownGlacier,5.0,43.4,70,0
+    .goto IcecrownGlacier,10.5,39.0,70,0
+    .goto IcecrownGlacier,12.7,41.2,70,0
+    .goto IcecrownGlacier,10.5,44.1
+	>>Kill the Gryphon Riders in the area. Shoot them down with ranged abilities or group multiple ones of them up in the air and then fly down and kill them
     .complete 12815,1 --Onslaught Gryphon Rider (10)
 	.isOnQuest 12815
 step
     #completewith next
-	.goto 冰冠冰川Glacier,9.5,44.8,50,0
-    .goto 冰冠冰川Glacier,9.5,44.8,0,0
-	.use 40587 >> 杀死该地区的暴徒。用你袋子里的黑曼德酊剂涂在他们的尸体上
+	.goto IcecrownGlacier,9.5,44.8,50,0
+    .goto IcecrownGlacier,9.5,44.8,0,0
+	.use 40587 >> Kill the Onslaught mobs in the area. Use Darkmender's Tincture in your bags on their corpses
     .complete 12813,1 --Scarlet Onslaught corpse transformed (10)
 	.isOnQuest 12813
 step
-	>>杀死暴徒，然后抢劫他们的钥匙。用它们在Onslaught Harbor周围打开箱子存放文件
-	>>文件箱没有100%下降率
-    .goto 冰冠冰川Glacier,10.7,45.6,40,0
-    .goto 冰冠冰川Glacier,10.3,46.4,40,0
-    .goto 冰冠冰川Glacier,8.8,46.7,40,0
-    .goto 冰冠冰川Glacier,8.8,42.2,40,0
-    .goto 冰冠冰川Glacier,10.6,42.9,40,0
-    .goto 冰冠冰川Glacier,9.6,40.6,40,0
-    .goto 冰冠冰川Glacier,9.3,37.5,40,0
-    .goto 冰冠冰川Glacier,10.1,36.2,40,0
-    .goto 冰冠冰川Glacier,9.1,36.3,40,0
-    .goto 冰冠冰川Glacier,8.5,36.4,40,0
-    .goto 冰冠冰川Glacier,10.7,45.6,40,0
-    .goto 冰冠冰川Glacier,10.3,46.4,40,0
-    .goto 冰冠冰川Glacier,8.8,46.7,40,0
-    .goto 冰冠冰川Glacier,8.8,42.2,40,0
-    .goto 冰冠冰川Glacier,10.6,42.9,40,0
-    .goto 冰冠冰川Glacier,9.6,40.6,40,0
-    .goto 冰冠冰川Glacier,9.3,37.5,40,0
-    .goto 冰冠冰川Glacier,10.1,36.2,40,0
-    .goto 冰冠冰川Glacier,9.1,36.3,40,0
-    .goto 冰冠冰川Glacier,8.5,36.4
+	>>Kill Onslaught mobs, then loot them for their keys. Use them to open chests all around the Onslaught Harbor for the Documents
+	>>The chests do not have a 100% droprate for the documents
+    .goto IcecrownGlacier,10.7,45.6,40,0
+    .goto IcecrownGlacier,10.3,46.4,40,0
+    .goto IcecrownGlacier,8.8,46.7,40,0
+    .goto IcecrownGlacier,8.8,42.2,40,0
+    .goto IcecrownGlacier,10.6,42.9,40,0
+    .goto IcecrownGlacier,9.6,40.6,40,0
+    .goto IcecrownGlacier,9.3,37.5,40,0
+    .goto IcecrownGlacier,10.1,36.2,40,0
+    .goto IcecrownGlacier,9.1,36.3,40,0
+    .goto IcecrownGlacier,8.5,36.4,40,0
+    .goto IcecrownGlacier,10.7,45.6,40,0
+    .goto IcecrownGlacier,10.3,46.4,40,0
+    .goto IcecrownGlacier,8.8,46.7,40,0
+    .goto IcecrownGlacier,8.8,42.2,40,0
+    .goto IcecrownGlacier,10.6,42.9,40,0
+    .goto IcecrownGlacier,9.6,40.6,40,0
+    .goto IcecrownGlacier,9.3,37.5,40,0
+    .goto IcecrownGlacier,10.1,36.2,40,0
+    .goto IcecrownGlacier,9.1,36.3,40,0
+    .goto IcecrownGlacier,8.5,36.4
 	.collect 40652,6,12838,-1
     .complete 12838,1 --Onslaught Intel Documents (5)
 	.isOnQuest 12838
 step
-	.goto 冰冠冰川Glacier,9.5,44.8,50,0
-    .goto 冰冠冰川Glacier,9.5,44.8,0,0
-	.use 40587 >> 杀死该地区的暴徒。用你袋子里的黑曼德酊剂涂在他们的尸体上
+	.goto IcecrownGlacier,9.5,44.8,50,0
+    .goto IcecrownGlacier,9.5,44.8,0,0
+	.use 40587 >> Kill the Onslaught mobs in the area. Use Darkmender's Tincture in your bags on their corpses
     .complete 12813,1 --Scarlet Onslaught corpse transformed (10)
 	.isOnQuest 12813
 step
 	#requires Gryphon
-	>>回归死亡的崛起。与Uzo、Setaal和Aurochs交谈
-    .turnin 12815 >>转入禁飞区
-    .goto 冰冠冰川,19.64,47.80
-    .turnin 12813 >>从他们的尸体上翻过来，起来！
-    .goto 冰冠冰川,19.67,48.39
-    .turnin 12838 >>提交情报收集
-    .goto 冰冠冰川Glacier,20.1,47.5,20,0
-    .goto 冰冠冰川Glacier,20.4,47.9,20,0
-    .goto 冰冠冰川Glacier,20.1,48.4,20,0
-    .goto 冰冠冰川Glacier,19.7,47.9
+	>>Return to Death's Rise. Talk to Uzo, Setaal and Aurochs
+    .turnin 12815 >>Turn in No Fly Zone
+    .goto Icecrown,19.64,47.80
+    .turnin 12813 >>Turn in From Their Corpses, Rise!
+    .goto Icecrown,19.67,48.39
+    .turnin 12838 >>Turn in Intelligence Gathering
+    .goto IcecrownGlacier,20.1,47.5,20,0
+    .goto IcecrownGlacier,20.4,47.9,20,0
+    .goto IcecrownGlacier,20.1,48.4,20,0
+    .goto IcecrownGlacier,19.7,47.9
 ]])

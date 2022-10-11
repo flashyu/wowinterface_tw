@@ -1,139 +1,139 @@
 RXPGuides.RegisterGuide([[
 #classic
 << Horde
-#name 1-11 提瑞斯法林地
+#name 1-11 Tirisfal Glades
 #version 1
-#group RestedXP部落1-22
+#group RestedXP Horde 1-22
 #defaultfor Undead
-#next 11-14 银松森林
-#next 12-17 贫瘠之地
+#next 11-14 Silverpine Forest
+#next 12-17 Barrens
 
 step << !Scourge
     #sticky
     #completewith next
     .goto Tirisfal Glades,30.2,71.7
-    +您选择了一个为亡灵准备的指南。建议您选择与开始时相同的起始区域
+    +You have selected a guide meant for Undead. It is recommended you choose the same starter zone that you start in
 step
-    >>放下你的炉石
+    >>Drop your Hearthstone
 	.destroy 6948
-     >>跑出地窖
+     >>Run out of the crypt
     .goto Tirisfal Glades,30.2,71.7
-    .accept 363 >> 接受粗鲁的觉醒
+    .accept 363 >> Accept Rude Awakening
 step << Warrior
     #sticky
     #completewith vendorWar
-    +把暴徒赶到镇上，直到你有10美分的可卖品
+    +Grind mobs toward town until you have 10c of vendorables
     .goto Tirisfal Glades,31.5,69.8
 step << Warlock
     #sticky
     #completewith vendorLock
-    +把暴徒赶到镇上，直到你有10美分的可卖品
+    +Grind mobs toward town until you have 10c of vendorables
     .goto Tirisfal Glades,31.5,69.8
 step << Priest/Mage
     #sticky
     #completewith vendorCaster
-    +把暴徒赶到镇上，直到你有35美分的可卖品
+    +Grind mobs toward town until you have 35c of vendorables
     .goto Tirisfal Glades,31.5,69.8
 step << Warrior
     #label vendorWar
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >> 供应商垃圾
+    .vendor >> Vendor trash
 step << Warrior
     .goto Tirisfal Glades,32.7,65.6
-    .train 6673 >>火车战斗呐喊
+    .train 6673 >>Train Battle Shout
 step << Priest/Mage
     #label vendorCaster
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >> 供应商扔掉垃圾，然后购买10杯清凉泉水
+    .vendor >> Vendor Trash and then purchase 10 Refreshing Spring Water
 	.collect 159,10 --Collect Refreshing Spring Water (x10)
 step << Warlock
     #label vendorLock
     .goto Tirisfal Glades,30.8,66.4
-    .vendor >>Demon Trainer的供应商垃圾
+    .vendor >>vendor trash at Demon Trainer
 step << Warlock
     .goto Tirisfal Glades,30.9,66.3
-    .train 348 >>火车献祭
+    .train 348 >>Train Immolate
 step << Warlock
     .goto Tirisfal Glades,31.0,66.4
-    .accept 1470 >>接受刺破面纱
+    .accept 1470 >>Accept Piercing the Veil
 step << Warlock
     .goto Tirisfal Glades,30.8,66.2
-    .turnin 363 >> 鲁莽地醒来
-    .accept 364 >> 接受无意识的人
+    .turnin 363 >> Turn in Rude Awakening
+    .accept 364 >> Accept The Mindless Ones
 step << Warlock
     .goto Tirisfal Glades,32.5,61.4
-    >> 在头骨区域杀死鼠笼骷髅
+    >> Kill Rattlecage Skeletons in the area for Skulls
     .complete 1470,1 --Rattlecage Skull (3)
 step << Warlock
     #completewith next
-    .goto Tirisfal Glades,32.3,65.4,30 >> 在回镇的路上磨碎，直到有25c+的可售物品
+    .goto Tirisfal Glades,32.3,65.4,30 >> Grind on your way back to town until 25c+ of vendorables
 step << Warlock
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >> 小贩垃圾，从Joshua那里买5杯水
+    .vendor >> vendor trash, buy 5 water from Joshua
 	.collect 159,5 --Collect Refreshing Spring Water (x5)
 step << Warlock
-    >>在你投降后召唤你的小鬼
+    >>Summon your Imp after you turnin
     .goto Tirisfal Glades,31.0,66.4
-    .turnin 1470 >>转身刺破面纱
+    .turnin 1470 >>Turn in Piercing the Veil
 step << Warlock
-    .xp 2 >> 升级到2级
+    .xp 2 >> Grind to level 2
 step << Mage
     .goto Tirisfal Glades,30.9,66.1
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Priest
     .goto Tirisfal Glades,31.1,66.0
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << !Warlock
     .goto Tirisfal Glades,30.8,66.2
-    .turnin 363 >> 鲁莽地醒来
-    .accept 364 >> 接受无意识的人
+    .turnin 363 >> Turn in Rude Awakening
+    .accept 364 >> Accept The Mindless Ones
 step
-    >> 杀死该地区的僵尸
+    >> Kill Zombies in the area
     .goto Tirisfal Glades,32.4,62.8
     .complete 364,1 --Kill Mindless Zombie (x8)
     .complete 364,2 --Kill Wretched Zombie (x8)
 step
 	.goto Tirisfal Glades,32.4,62.8
-	.xp 2 >> 升级到2级
+	.xp 2 >> Grind to level 2
 step << Mage/Warlock/Priest
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >>供应商垃圾，再购买10杯水
+    .vendor >>Vendor trash, buy 10 more water
 	.collect 159,10 --Collect Refreshing Spring Water (x10)
 step << Warrior/Rogue
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >>供应商垃圾
+    .vendor >>Vendor trash
 step
     .goto Tirisfal Glades,30.8,66.2
-    .turnin 364 >> 交给那些没头脑的人
+    .turnin 364 >> Turn in The Mindless Ones
 step
     #era/som
     .goto Tirisfal Glades,30.8,66.2
-    .accept 3095 >> 接受简单滚动 << Warrior
-    .accept 3096 >> 接受加密滚动 << Rogue
-    .accept 3097 >> 接受神圣卷轴 << Priest
-    .accept 3098 >> 接受字形滚动 << Mage
-    .accept 3099 >> 接受变形的卷轴 << Warlock
-    .accept 3901 >> 接受响尾蛇的叮当声
-    .accept 376 >> 接受该死的
+    .accept 3095 >> Accept Simple Scroll << Warrior
+    .accept 3096 >> Accept Encrypted Scroll << Rogue
+    .accept 3097 >> Accept Hallowed Scroll << Priest
+    .accept 3098 >> Accept Glyphic Scroll << Mage
+    .accept 3099 >> Accept Tainted Scroll << Warlock
+    .accept 3901 >> Accept Rattling the Rattlecages
+    .accept 376 >> Accept The Damned
 step
     #som
     #phase 3-6
     .goto Tirisfal Glades,30.8,66.2
-    .accept 3095 >> 接受简单滚动 << Warrior
-    .accept 3096 >> 接受加密滚动 << Rogue
-    .accept 3097 >> 接受神圣卷轴 << Priest
-    .accept 3098 >> 接受字形滚动 << Mage
-    .accept 3099 >> 接受变形的卷轴 << Warlock
-    .accept 376 >> 接受该死的
+    .accept 3095 >> Accept Simple Scroll << Warrior
+    .accept 3096 >> Accept Encrypted Scroll << Rogue
+    .accept 3097 >> Accept Hallowed Scroll << Priest
+    .accept 3098 >> Accept Glyphic Scroll << Mage
+    .accept 3099 >> Accept Tainted Scroll << Warlock
+    .accept 376 >> Accept The Damned
 step << Mage
     .goto Tirisfal Glades,30.9,66.1
-    .turnin 3098 >> 转入字形卷轴
+    .turnin 3098 >> Turn in Glyphic Scroll
 step << Warlock
     .goto Tirisfal Glades,30.9,66.3
-    .turnin 3099 >> 交上歪斜的卷轴
+    .turnin 3099 >> Turn in Tainted Scroll
 step << Priest
     .goto Tirisfal Glades,31.1,66.0
-    .turnin 3097 >> 交上神圣的卷轴
+    .turnin 3097 >> Turn in Hallowed Scroll
 step
     .goto Tirisfal Glades,29.5,67.2,40,0
     .goto Tirisfal Glades,29.6,61.3,50,0
@@ -143,62 +143,62 @@ step
     .goto Tirisfal Glades,29.6,61.3,50,0
     .goto Tirisfal Glades,32.5,56.7,50,0
     .goto Tirisfal Glades,35.2,57.0,50,0
-    >>磨狼和黄昏
+    >>Grind Wolves and Duskbats
     .complete 376,1 --Collect Scavenger Paw (x6)
     .complete 376,2 --Collect Duskbat Wing (x6)
 step
     #era/som
     .goto Tirisfal Glades,33.15,60.70
-    >> 杀死镇上的骷髅
+    >> Kill Skeletons in the town
     .complete 3901,1 --Kill Rattlecage Skeleton (12)
 step
-    .xp 3+980 >>在回镇的路上碾碎暴徒，达到980+/1400经验
+    .xp 3+980 >>Grind mobs en route back to town to 980+/1400xp
 step << Mage/Warlock
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >>供应商垃圾，购买不低于95摄氏度的水
+    .vendor >>Vendor trash, buy water down to no lower than 95c
 step << Priest
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >>供应商垃圾桶，购买不低于1s 90c的水
+    .vendor >>Vendor trash, buy water down to no lower than 1s 90c
 step
      #era/som
     .goto Tirisfal Glades,30.9,66.2
-    .turnin 3901 >> 转入响尾蛇笼
+    .turnin 3901 >> Turn in Rattling the Rattlecages
 step
     #label BatsWolves
     .goto Tirisfal Glades,30.9,66.1
-    .turnin 376 >> 交给该死的
+    .turnin 376 >> Turn in The Damned
 step
 	.goto Tirisfal Glades,30.9,66.1
-    .accept 6395 >> 接受玛拉的遗愿
+    .accept 6395 >> Accept Marla's Last Wish
 step << Priest
     .goto Tirisfal Glades,31.1,66.0
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Warlock
     .goto Tirisfal Glades,30.9,66.3
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Mage
     .goto Tirisfal Glades,30.9,66.1
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step
     .goto Tirisfal Glades,32.2,66.0
-    .accept 380 >> 接受夜网的空洞
+    .accept 380 >> Accept Night Web's Hollow
 step << Rogue/Warrior
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >>供应商垃圾
+    .vendor >>vendor trash
 step << Rogue
     .goto Tirisfal Glades,32.5,65.7
-    .turnin 3096 >> 交出加密卷轴
+    .turnin 3096 >> Turn in Encrypted Scroll
 step << Warrior
     .goto Tirisfal Glades,32.7,65.6
-    .turnin 3095 >> 转入简单滚动
-    .trainer >> 训练你的职业咒语
+    .turnin 3095 >> Turn in Simple Scroll
+    .trainer >> Train your class spells
 step
     .goto Tirisfal Glades,31.6,65.6
-    .accept 3902 >> 接受清理死亡丧钟
+    .accept 3902 >> Accept Scavenging Deathknell
 step
     #sticky
     #label Goods
-    >>收集成捆的棕色盒子，同时在途中碾磨2+级暴徒。你可以在外墙/建筑物内部找到这些
+    >>Collect bundles of brown boxes whilst grinding level 2+ mobs en route. You can find these on the outside walls/inside of buildings
     .goto Tirisfal Glades,33.84,64.09
     .complete 3902,1 --Collect Scavenged Goods (x6)
 step
@@ -208,7 +208,7 @@ step
     .goto Tirisfal Glades,26.8,59.4,30,0
     .goto Tirisfal Glades,24.0,58.2,60,0
 	.goto Tirisfal Glades,27.1,59.0
-    >>杀死洞穴外的所有年轻蜘蛛(2-3只除外)，然后进入洞穴并杀死洞穴内的夜蛛。离开时杀死剩下的2-3个年轻蜘蛛。
+    >>Kill all but 2-3 Young Spiders outside the cave and then enter the cave and kill the Night Web Spiders inside. Kill the remaining 2-3 Young Spiders as you leave.
     .complete 380,1 --Kill Young Night Web Spider (10)
 	complete 380,2 --Kill Night Web Spider (x8)
 step
@@ -218,84 +218,84 @@ step
     .goto Tirisfal Glades,26.8,59.4,30,0
     .goto Tirisfal Glades,24.0,58.2,60,0
 	.goto Tirisfal Glades,27.1,59.0
-    >>杀死洞穴外的年轻蜘蛛，然后进入洞穴，杀死洞穴内的夜蛛。我们在山洞里跳得死去活来，在你进去之前，一定要把年轻的蜘蛛都处理好。
+    >>Kill Young Spiders outside the cave and then enter the cave and kill the Night Web Spiders inside. We're deathskipping in the cave, make sure you're done with Young Spiders before entering.
     .complete 380,1 --Kill Young Night Web Spider (10)
 	complete 380,2 --Kill Night Web Spider (x8)
 step
     #softcore
     #completewith next
-    .deathskip >> 在精神治疗师处死亡并重生
+    .deathskip >> Die and respawn at the Spirit Healer
 step
     #hardcore
     #completewith next
-    .goto Tirisfal Glades,31.2,64.9,120 >> 跑出洞穴，回到死亡丧钟
+    .goto Tirisfal Glades,31.2,64.9,120 >> Run out of the cave, back to Deathknell
 step
     .goto Tirisfal Glades,31.6,65.6
-	>> 恢复你的小鬼 << Warlock
-    .turnin 3902 >> 交清丧钟
+	>> Resummon your imp << Warlock
+    .turnin 3902 >> Turn in Scavenging Deathknell
 step << Rogue/Warrior
     .goto Tirisfal Glades,32.41,65.66
-    .vendor >>供应商垃圾。修理你的武器
+    .vendor >>Vendor trash. Repair your weapon
 step << Priest/Mage/Warlock
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >>供应商垃圾桶，最多可购买15杯水
+    .vendor >>Vendor trash, buy up to 15 water
 	.collect 159,15 --Collect Refreshing Spring Water (x15)
 step
     .goto Tirisfal Glades,32.2,66.0
-    .turnin 380 >> 交给夜网的空洞
+    .turnin 380 >> Turn in Night Web's Hollow
 step
 	.goto Tirisfal Glades,32.2,66.0
-    .accept 381 >> 接受血腥十字军
+    .accept 381 >> Accept The Scarlet Crusade
 step
     .goto Tirisfal Glades,37.45,67.93
-    >>为臂章杀死血腥暴徒
+    >>Kill Scarlet mobs for Armbands
     .complete 381,1 --Collect Scarlet Armband (12)
 step
-    >>杀死塞缪尔·菲普斯，并掠夺他的遗体
+    >>Kill Samuel Fipps and loot him for his remains
     .goto Tirisfal Glades,36.7,61.6
     .collect 16333,1 --Collect Samuel's Remains
 step
     #softcore
 	.goto Tirisfal Glades,36.7,61.6
-    .deathskip >> 在精神治疗师处死亡并重生
+    .deathskip >> Die and respawn at the Spirit Healer
 step
     .goto Tirisfal Glades,31.2,65.1
-	>> 点击墓地中的坟墓埋葬塞缪尔的遗体
+	>> Bury Samuel's remains by clicking on the grave in the graveyard
     .complete 6395,1 --Collect Samuel's Remains Buried (1)
 step
     .goto Tirisfal Glades,30.9,66.1
-    .turnin 6395 >> 交出玛拉的遗愿
+    .turnin 6395 >> Turn in Marla's Last Wish
 step << Priest
     .goto Tirisfal Glades,31.11,66.03
-    .accept 5651 >> 接受黑暗
+    .accept 5651 >> Accept In Favor of Darkness
 step
     #completewith next
     .goto Tirisfal Glades,32.4,65.6
-    .vendor >>供应商垃圾和维修
+    .vendor >>Vendor trash and repair
 step
     .goto Tirisfal Glades,32.1,66.0
-    .turnin 381 >> 移交血腥十字军
+    .turnin 381 >> Turn in The Scarlet Crusade
 step
 	.goto Tirisfal Glades,32.1,66.0
-    .accept 382 >> 接受红色信使
+    .accept 382 >> Accept The Red Messenger
 step
-    >>杀死Meven并抢劫他的文件 << !Rogue !Warrior
-    >>杀了梅文，同时把他放回镇上。抢他的文件 << Rogue/Warrior
+    >>Kill Meven and loot him for the documents << !Rogue !Warrior
+    >>Kill Meven whilst kiting him back to town. Loot him for the documents << Rogue/Warrior
     .goto Tirisfal Glades,36.5,68.8
     .complete 382,1 --Collect Scarlet Crusade Documents (1)
 step
     .goto Tirisfal Glades,32.2,66.0
-    .turnin 382 >> 交出红色信使
-    .accept 383 >> 接受生命智力
+    .turnin 382 >> Turn in The Red Messenger
+    .accept 383 >> Accept Vital Intelligence
 step
     .goto Tirisfal Glades,38.1,56.6
-    .xp 5+2350 >>途中升级到2350+/2800xp
+    .xp 5+2350 >>Grind to 2350+/2800xp en route
 step
     .goto Tirisfal Glades,38.2,56.8
-    .accept 8 >> 接受盗贼的交易
+    .accept 8 >> Accept A Rogue's Deal
 step
     .goto Tirisfal Glades,40.91,54.17
-    .accept 365 >>接受悲伤的领域
+    .accept 365 >>Accept Fields of Grief
 step
     #era/som
     .unitscan Gordo
@@ -316,218 +316,218 @@ step
     .goto Tirisfal Glades,43.75,54.29,40,0
     .goto Tirisfal Glades,42.67,54.97,40,0
     .goto Tirisfal Glades,40.79,54.47,40,0
-    >>与戈多交谈。他是个可恶的家伙，在通往布里尔的路上巡逻
-    .accept 5481 >>接受戈多的任务
+    >>Talk to Gordo. He's an abomination that patrols along the road to Brill
+    .accept 5481 >>Accept Gordo's Task
 step << Priest
     #softcore
     .goto Tirisfal Glades,52.59,55.51
-    .trainer >> 列车定制。保留你的亚麻布以提高技能，然后再创造绿色，以驱除对魔杖的幻想
-    >> 如果你是alt/认为以后从AH购买会更容易，可以跳过这一步
+    .trainer >> Train Tailoring. Save your linen to skill up, then create greens later for disenchanting for a Wand
+    >> You can skip this step if you're an alt/think it'd be easier to buy one from the AH later
 step << Priest
     #hardcore
     .goto Tirisfal Glades,52.59,55.51
-    .trainer >> 列车定制。保留你的亚麻布以提高技能，然后再创造绿色，以驱除对魔杖的幻想
+    .trainer >> Train Tailoring. Save your linen to skill up, then create greens later for disenchanting for a Wand
 step
     #softcore
     #completewith next
-    .deathskip >> 如果你很早就找到戈多的话，就死在布里尔重生
+    .deathskip >> Die and respawn at Brill if you found Gordo pretty early
 step
     .goto Tirisfal Glades,60.6,51.8
-    .turnin 383 >> 交出生命智力
-    .accept 427 >>接受与血腥十字军的战争
+    .turnin 383 >> Turn in Vital Intelligence
+    .accept 427 >>Accept At War With The Scarlet Crusade
 step << Rogue
     .goto Tirisfal Glades,61.16,52.59
-    .vendor >> 买温特斯夫人扔的3级。装备它
+    .vendor >> Buy the level 3 thrown from Mrs. Winters. Equip it
 step
     .goto Tirisfal Glades,61.7,52.0
-    .turnin 8 >>交出流氓的交易
-    .home >> 将您的炉石设置为Brill
-    .vendor >> 供应商垃圾箱。购买一些5级食物 << !Mage !Priest !Warlock
-    .vendor >> 供应商垃圾。买一些5级水 << Mage/Priest/Warlock
-    >>至少节省1.3银币用于培训 << Warrior
-    >>至少为训练节省2银币 << Mage
-    >>至少节省2.3银币用于培训 << Rogue
-    >>至少节省3银币用于培训 << Warlock/Priest
+    .turnin 8 >>Turn in A Rogue's Deal
+    .home >> Set your Hearthstone to Brill
+    .vendor >> vendor trash. Buy some level 5 food << !Mage !Priest !Warlock
+    .vendor >> Vendor trash. Buy some level 5 water << Mage/Priest/Warlock
+    >>Save at least 1.3 silver for training << Warrior
+    >>Save at least 2 silver for training << Mage
+    >>Save at least 2.3 silver for training << Rogue
+    >>Save at least 3 silver for training << Warlock/Priest
 step << Warrior
     .goto Tirisfal Glades,61.85,52.55
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Mage
     .goto Tirisfal Glades,61.97,52.48
-    .trainer >> 上楼训练你的课堂咒语
+    .trainer >> Go upstairs and train your class spells
 step << Warlock
     .goto Tirisfal Glades,61.59,52.39
-    .trainer >> 上楼训练你的课堂咒语
+    .trainer >> Go upstairs and train your class spells
     .goto Tirisfal Glades,61.55,52.61
-    .vendor >> 如果你在训练后有钱，就买血盟书(否则以后再买)
+    .vendor >> Buy the Blood Pact book if you have money after training (otherwise buy it later)
 step << Priest
     .goto Tirisfal Glades,61.77,51.56
-    .trainer >> 列车魅力。将你找到的绿色魔法驱散(或通过裁缝制作)，最终制成魔杖
-    >> 如果你是alt/认为以后从AH购买会更容易，可以跳过这一步
+    .trainer >> Train Enchanting. Disenchant Greens you find (or craft through tailoring) to eventually make a Wand
+    >> You can skip this step if you're an alt/think it'd be easier to buy one from the AH later
 step << Priest
     .goto Tirisfal Glades,61.57,52.19
-    .trainer >> 上楼训练你的课堂咒语
-    .turnin 5651 >> 支持黑暗
-    .accept 5650 >> 接受黑暗的衣服
+    .trainer >> Go upstairs and train your class spells
+    .turnin 5651 >> Turn in In Favor of Darkness
+    .accept 5650 >> Accept Garments of Darkness
 step << Rogue
     .goto Tirisfal Glades,61.75,52.00
-    .trainer >> 上楼训练你的课堂咒语
+    .trainer >> Go upstairs and train your class spells
 step << Priest
     .goto Tirisfal Glades,59.18,46.49
-    >> 对死亡守卫Kel使用次级治疗(等级2)。然后用金字招牌：坚韧
+    >> Use Lesser Heal (Rank 2) on Deathguard Kel. Then buff him with Power Word: Fortitude
     .complete 5650,1 --Heal and fortify Deathguard Kel (1)
 step << Rogue
     .goto Tirisfal Glades,60.12,53.39
-    >>修理你的武器。如果你有足够的钱(4s1c)，就从奥利弗那里买一个细高跟鞋。否则，请跳过此步骤(稍后再回来)
+    >>Repair your weapon. If you have enough money (4s 1c) buy a Stiletto from Oliver. Otherwise, skip this step (you'll come back later)
     .collect 2494,1
 step << Warrior
     .goto Tirisfal Glades,60.12,53.39
-    >>修理你的武器。如果你有足够的钱(5s36c)，从奥利弗那里买一辆格拉迪斯。否则，请跳过此步骤(稍后再回来)
+    >>Repair your weapon. If you have enough money (5s 36c) buy a Gladius from Oliver. Otherwise, skip this step (you'll come back later)
     .collect 2488,1
 step
     .goto Tirisfal Glades,59.45,52.40
-    .accept 367 >>接受新瘟疫
+    .accept 367 >>Accept A New Plague
 step
     .goto Tirisfal Glades,58.20,51.45
-    .accept 404 >>接受腐烂任务
+    .accept 404 >>Accept A Putrid Task
 step
     #era/som
     #sticky
     #completewith next
-    >>掠夺地上的紫色小杂草
+    >>Loot the small purple Weeds on the ground
     .complete 5481,1 --Gloom Weed (3)
 step
     .goto Tirisfal Glades,52.14,52.39
-    >> 杀死该地区的僵尸。掠夺他们的爪子
+    >> Kill Zombies in the area. Loot them for their Claws
     .complete 404,1 --Putrid Claw (7)
 step
     #sticky
     #completewith Warriors
-    >>杀死你看到的任何Decrepeti Darkhounds。抢他们的血
+    >>Kill any Decrepit Darkhounds you see. Loot them for their Blood
     .complete 367,1 --Darkhound Blood (5)
 step
     #era/som
     .goto Tirisfal Glades,40.06,51.10
-    >>完成对地上紫色小杂草的掠夺。它们在西边去田地的路上随处可见
+    >>Finish looting the small purple Weeds on the ground. They can be found all the way en route west to the field
     .complete 5481,1 --Gloom Weed (3)
 step
-    >>抢劫在田里找到的南瓜。试着把你从现在开始得到的小治疗药剂也保存起来，以便以后使用
+    >>Loot the Pumpkins found in the field. Try to also save a Minor Healing Potion you get from now on too for later
     .goto Tirisfal Glades,35.92,50.61
     .complete 365,1 --Tirisfal Pumpkin (10)
 step
     #label Warriors
-    >>杀死血色勇士 << !Rogue !Warrior
-    >>杀死血腥勇士。当他们完成防御姿态动画后，要小心，8秒内他们的招架次数增加了50% << Rogue/Warrior
+    >>Kill Scarlet Warriors << !Rogue !Warrior
+    >>Kill Scarlet Warriors. Be careful as they have 50% increased parry for 8 seconds after they do their defense stance animation << Rogue/Warrior
     .goto Tirisfal Glades,30.26,50.70
     .complete 427,1 --Scarlet Warrior (10)
 step
     #softcore
     #completewith next
-     .deathskip >> 在布里尔死亡并重生
+     .deathskip >> Die and respawn at Brill
 step
     #hardcore
     #completewith next
-     .hs >> 从炉子到布里尔
+     .hs >> Hearth to Brill
 step
     #era/som
-    >>在初级药剂师那里交。他在墓地周围巡逻
+    >>Turn in at the Junior Apothecary. He patrols around the Graveyard
     .goto Tirisfal Glades,57.68,48.96
-    .turnin 5481 >>交出戈多的任务
-    .accept 5482 >>接受厄运杂草
+    .turnin 5481 >>Turn in Gordo's Task
+    .accept 5482 >>Accept Doom Weed
 step
     .goto Tirisfal Glades,58.20,51.45
-    .turnin 404 >>交一件腐烂的任务
-    .accept 426 >>接受磨坊过度运转
+    .turnin 404 >>Turn in A Putrid Task
+    .accept 426 >>Accept The Mills Overrun
 step
     .goto Tirisfal Glades,59.45,52.40
-    .turnin 365 >> 在悲伤之地
-    .accept 407 >> 接受悲伤的领域
+    .turnin 365 >> Turn in Fields of Grief
+    .accept 407 >> Accept Fields of Grief
 step
     .goto Tirisfal Glades,59.45,52.40
     .isQuestComplete 367
-    .turnin 367 >>带来新的瘟疫
+    .turnin 367 >>Turn in A New Plague
 step
     .goto Tirisfal Glades,59.45,52.40
-    .accept 368 >>接受新瘟疫
+    .accept 368 >>Accept A New Plague
 	.isQuestTurnedIn 367
 step
     .goto Tirisfal Glades,59.45,52.40
-    .turnin 365 >> 在悲伤之地
-    .accept 407 >> 接受悲伤的领域
+    .turnin 365 >> Turn in Fields of Grief
+    .accept 407 >> Accept Fields of Grief
 step
     .goto Tirisfal Glades,60.58,51.77
-    .turnin 427 >>与血腥十字军交战
-    .accept 370 >>接受与血腥十字军的战争
+    .turnin 427 >>Turn in At War With The Scarlet Crusade
+    .accept 370 >>Accept At War With The Scarlet Crusade
 step
     .goto Tirisfal Glades,60.73,51.52
-    .accept 398 >>接受通缉：魔眼
+    .accept 398 >>Accept Wanted: Maggot Eye
 step
-    >>进入大楼
+    >>Go inside the building
     .goto Tirisfal Glades,61.26,50.84
-    .accept 358 >>接受盗墓贼
+    .accept 358 >>Accept Graverobbers
 step
     .goto Tirisfal Glades,60.93,52.01
-    .accept 374 >>接受转让证明
+    .accept 374 >>Accept Proof of Demise
 step
     .xp 7
     .goto Tirisfal Glades,59.47,56.40
 step
     .goto Tirisfal Glades,61.72,52.29
-    .accept 354 >>接受家庭死亡
-    .accept 362 >>接受闹鬼的磨坊
+    .accept 354 >>Accept Deaths in the Family
+    .accept 362 >>Accept The Haunted Mills
 step
     #completewith next
-    .vendor >> 如果需要，购买食物/水
+    .vendor >> Buy food/water if needed
 step
-    >>进客栈老板后面的房间，然后下楼
+    >>Go in the room behind the innkeeper, then go downstairs
     .goto Tirisfal Glades,61.97,51.29
-    .turnin 407 >>在悲伤之地
+    .turnin 407 >>Turn in Fields of Grief
 step
     #era/som
-    >>上楼去
+    >>Go upstairs
     .goto Tirisfal Glades,61.89,52.73
-    .accept 375 >>接受死亡的寒冷
+    .accept 375 >>Accept The Chill of Death
 step << Priest
     #level 8
     .goto Tirisfal Glades,61.57,52.19
-    .turnin 5650 >>交上黑暗的衣服
-    .trainer >> 训练你的职业法术。
+    .turnin 5650 >>Turn in Garments of Darkness
+    .trainer >> Train your class spells.
 step << Priest
     .goto Tirisfal Glades,61.57,52.19
-    .turnin 5650 >>交上黑暗的衣服
+    .turnin 5650 >>Turn in Garments of Darkness
 step << Warrior
     #level 8
     .goto Tirisfal Glades,61.85,52.55
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Mage
     #level 8
     .goto Tirisfal Glades,61.97,52.48
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Warlock
     #level 8
     .goto Tirisfal Glades,61.59,52.39
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
     .goto Tirisfal Glades,61.55,52.61
-    .vendor >> 如果您在培训后有钱，请购买Firebolt书籍(否则请稍后购买)
+    .vendor >> Buy the Firebolt book if you have money after training (otherwise buy it later)
 step << Rogue
     #level 8
     .goto Tirisfal Glades,61.75,52.00
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Rogue
     .goto Tirisfal Glades,60.12,53.39
-    >>修理你的武器。如果你有足够的钱(4s1c)，就从奥利弗那里买一个细高跟鞋。否则，请跳过此步骤(稍后再回来)
+    >>Repair your weapon. If you have enough money (4s 1c) buy a Stiletto from Oliver. Otherwise, skip this step (you'll come back later)
     .collect 2494,1
 step << Warrior
     .goto Tirisfal Glades,60.12,53.39
-    >>修理你的武器。如果你有足够的钱(5s36c)，从奥利弗那里买一辆格拉迪斯。否则，请跳过此步骤(稍后再回来)
+    >>Repair your weapon. If you have enough money (5s 36c) buy a Gladius from Oliver. Otherwise, skip this step (you'll come back later)
     .collect 2488,1
 step
     #era/som
     #sticky
     #completewith NewPlague
-    >>杀死你看到的夜猫。掠夺他们的皮毛
+    >>Kill Duskbats that you see. Loot them for their Pelts
     .complete 375,1 --Duskbat Pelt (5)
 step
-    >>结束杀死黑暗势力并掠夺他们的鲜血
+    >>Finish killing Darkhounds and looting them for their blood
     .complete 367,1 --Darkhound Blood (5)
     .goto Tirisfal Glades,59.47,56.40,100,0
     .goto Tirisfal Glades,64.35,55.26,100,0
@@ -537,11 +537,11 @@ step
 step
     #label NewPlague
     .goto Tirisfal Glades,59.45,52.40
-    .turnin 367 >>带来新的瘟疫
-    .accept 368 >>接受新瘟疫
+    .turnin 367 >>Turn in A New Plague
+    .accept 368 >>Accept A New Plague
 step
     #era/som
-    >>杀死你看到的夜猫。掠夺他们的皮毛
+    >>Kill Duskbats that you see. Loot them for their Pelts
     .goto Tirisfal Glades,58.60,57.13,100,0
     .goto Tirisfal Glades,66.16,53.62,100,0
     .goto Tirisfal Glades,62.17,35.64,100,0
@@ -549,33 +549,33 @@ step
     .complete 375,1 --Duskbat Pelt (5)
 step << Rogue/Warrior
     #era/som
-    .xp 7+3800 >> 升级到3800+/4500
+    .xp 7+3800 >> Grind to 3800+/4500
 step << Rogue/Warrior
     #era/som
     .goto Tirisfal Glades,61.03,52.38
-    >>从Abigail购买粗线
+    >>Purchase a Coarse Thread from Abigail
     .complete 375,2 --Coarse Thread (1)
 step << Rogue/Warrior
     #era/som
-    >>上楼去
+    >>Go upstairs
     .goto Tirisfal Glades,61.89,52.73
-    .turnin 375 >>在死亡的寒冷中
+    .turnin 375 >>Turn in The Chill of Death
 step << Warrior
     .goto Tirisfal Glades,61.85,52.55
-    .trainer >> 训练你的8级法术
+    .trainer >> Train your level 8 spells
 step << Rogue
     .goto Tirisfal Glades,61.75,52.00
-    .trainer >> 训练你的8级法术
+    .trainer >> Train your level 8 spells
 step
     #era/som
     #sticky
     #completewith Eye
-    >>掠夺地上的紫色小杂草。他们在Gnoll地区的树附近被发现
+    >>Loot the small purple Weeds on the ground. They're found near trees in the Gnoll area
     .complete 5482,1 --Doom Weed (10)
 step
     #sticky
     #completewith Eye
-    >>杀死任何类型的侏儒。为他们的爱而掠夺他们
+    >>Kill any type of Gnoll. Loot them for their Ichor
     .complete 358,3 --Embalming Ichor (8)
 step
     .goto Tirisfal Glades,55.15,42.26
@@ -585,23 +585,23 @@ step
     .complete 358,2 --Rot Hide Mongrel (5)
 step
     #label Eye
-    >>杀死魔眼。小心点，因为他可能很难对付。如果你早些时候有健康药水，请在这里使用
+    >>Kill Maggot Eye. Be careful as he can be VERY difficult. Use health potions here if you got one earlier
     .goto Tirisfal Glades,58.66,30.76
     .complete 398,1 --Maggot Eye's Paw (1)
 step
    #sticky
     #label IchorAndy
     .goto Tirisfal Glades,59.61,37.09
-    >>杀死任何类型的侏儒。为他们的爱而掠夺他们
+    >>Kill any type of Gnoll. Loot them for their Ichor
     .complete 358,3 --Embalming Ichor (8)
 step
     #era/som
    .goto Tirisfal Glades,56.81,40.19
-    >>完成对地上紫色小杂草的掠夺。他们在Gnoll地区的树附近被发现
+    >>Finish looting the small purple Weeds on the ground. They're found near trees in the Gnoll area
     .complete 5482,1 --Doom Weed (10)
 step
     #requires IchorAndy
-    >>杀死穆洛克。掠夺他们的鳞片-小心这里，这些暴徒是半难对付的
+    >>Kill Murlocs. Loot them for their Scales - Take care around here, these mobs are semi-difficult
        .goto Tirisfal Glades,58.68,27.35,0
     .goto Tirisfal Glades,58.68,27.35,100,0
     .goto Tirisfal Glades,64.25,29.66,100,0
@@ -610,179 +610,179 @@ step
 step
     #softcore
     #completewith next
-     .deathskip >> 在布里尔死亡并重生
+     .deathskip >> Die and respawn at Brill
 step
     #hardcore
     #completewith next
-    .goto Tirisfal Glades,58.40,47.76,250 >> 跑回布里尔。如果它上升了，你会听到
+    .goto Tirisfal Glades,58.40,47.76,250 >> Run back to Brill. Hearth if its up
 step
     #era/som
     .goto Tirisfal Glades,58.40,47.76
-    .turnin 5482 >>交给厄运杂草
+    .turnin 5482 >>Turn in Doom Weed
 step
     .goto Tirisfal Glades,59.45,52.40
-    .turnin 368 >>带来新的瘟疫
-    .accept 369 >>接受新瘟疫
+    .turnin 368 >>Turn in A New Plague
+    .accept 369 >>Accept A New Plague
 step
     .goto Tirisfal Glades,60.58,51.77
-    .turnin 398 >>通缉犯：魔眼
+    .turnin 398 >>Turn in Wanted: Maggot Eye
 step
     .goto Tirisfal Glades,61.26,50.84
-    .turnin 358 >>交出盗墓贼
-    .accept 405 >>接受浪荡巫妖
-    .accept 359 >>接受被放弃的职责
+    .turnin 358 >>Turn in Graverobbers
+    .accept 405 >>Accept The Prodigal Lich
+    .accept 359 >>Accept Forsaken Duties
 step
     #era/som
     .goto Tirisfal Glades,61.03,52.38
-    >>从Abigail购买粗线
+    >>Purchase a Coarse Thread from Abigail
     .complete 375,2 --Coarse Thread (1)
 step << Warrior
     .goto Tirisfal Glades,61.85,52.55
-    .trainer >> 训练你的8级法术
+    .trainer >> Train your level 8 spells
 step
     #era/som
-    >>上楼去
+    >>Go upstairs
     .goto Tirisfal Glades,61.89,52.73
-    .turnin 375 >>在死亡的寒冷中
+    .turnin 375 >>Turn in The Chill of Death
 step << !Warrior !Rogue
     #completewith next
-    +如果需要，购买食物和水
+    +Buy Food and Water if needed
 step << Warrior/Rogue
     #completewith next
-    +如果需要，购买食物
+    +Buy Food if needed
 step << Priest
     .goto Tirisfal Glades,61.57,52.19
-    .trainer >> 训练你的8级法术
+    .trainer >> Train your level 8 spells
 step << Mage
     .goto Tirisfal Glades,61.97,52.48
-    .trainer >> 训练你的8级法术
+    .trainer >> Train your level 8 spells
 step << Warlock
     .goto Tirisfal Glades,61.59,52.39
-    .trainer >> 训练你的8级法术
+    .trainer >> Train your level 8 spells
     .goto Tirisfal Glades,61.55,52.61
-    .vendor >> 如果您在培训后有钱，请购买Firebolt书籍(否则请稍后购买)
+    .vendor >> Buy the Firebolt book if you have money after training (otherwise buy it later)
 step << Rogue
     .goto Tirisfal Glades,61.75,52.00
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Rogue/Warrior
     .goto Tirisfal Glades,61.82,52.82
-    .trainer >> 培训急救人员制作绷带。试着在你等待的时间点，比如齐柏林飞艇，做这些事情
+    .trainer >> Train First Aid to make Bandages. Try to make them during points at which you're waiting for things, such as Zeppelins
 step
     .goto Tirisfal Glades,61.7,52.0
-    .vendor >> 供应商垃圾箱。如果需要，购买食物/水
+    .vendor >> vendor trash. Buy food/water if needed
 step << Rogue
     .goto Tirisfal Glades,60.12,53.39
-    >>修理你的武器。如果你有足够的钱(4s1c)，就从奥利弗那里买一个细高跟鞋。否则，请跳过此步骤
+    >>Repair your weapon. If you have enough money (4s 1c) buy a Stiletto from Oliver. Otherwise, skip this step
     .collect 2494,1
 step << Warrior
     .goto Tirisfal Glades,60.12,53.39
-    >>修理你的武器。如果你有足够的钱(5s36c)，从奥利弗那里买一辆格拉迪斯。否则，请跳过此步骤
+    >>Repair your weapon. If you have enough money (5s 36c) buy a Gladius from Oliver. Otherwise, skip this step
     .collect 2488,1
 step
     #sticky
     #completewith Letter
-    >>留意该地区暴徒罕见的任务开始掉落
+    >>Keep an eye out for a rare quest start drop from mobs in the area
     .collect 2839,1,361 --Collect A Letter to Yvette (1)
-    .accept 361 >> 接受未送达的信件
+    .accept 361 >> Accept A Letter Undelivered
 step
     #sticky
     #label RibSkull
-    >>为肋骨杀死骷髅战士，为头骨杀死骷铐脚轮
+    >>Kill Skeleton Warriors for Ribs, kill Skeleton Casters for Skulls
     .complete 426,1 --Notched Rib (5)
     .complete 426,2 --Blackened Skull (3)
 step
-    >>升级到阿加曼德磨坊。杀死德夫林并掠夺他的遗体
+    >>Grind to Agamand Mills. Kill Devlin and loot him for his remains
     .complete 362,1 --Devlin's Remains (1)
     .goto Tirisfal Glades,47.34,40.78
 step
-    >>杀死尼萨。她可能在大楼里
+    >>Kill Nissa. She can be inside the building
     .goto Tirisfal Glades,49.34,36.02
     .complete 354,2 --Nissa's Remains (1)
 step
    .unitscan Gregor Agamand
-    >>杀死格雷戈(食尸鬼)。他可以在附近巡逻
+    >>Kill Gregor (a ghoul). He can patrol around a bit
     .goto Tirisfal Glades,45.85,29.23
     .complete 354,1 --Gregor's Remains (1)
 step
     #label Letter
     .unitscan Thurman Agamand
-    >>杀死瑟曼(僵尸)。他可以在附近巡逻
+    >>Kill Thurman (a zombie). He can patrol around a bit
     .goto Tirisfal Glades,42.89,32.26
     .complete 354,3 --Thurman's Remains (1)
 step
     .isOnQuest 361
-    .xp 9+3765 >> 升级到9 3765+/6500xp
+    .xp 9+3765 >> Grind to 9 3765+/6500xp
 step
-    .xp 9+4245 >> 升级到9 4245+/6500xp
+    .xp 9+4245 >> Grind to 9 4245+/6500xp
 --N needs fixing
 step
     #requires RibSkull
     #softcore
-     .deathskip >> 在布里尔死亡并重生
+     .deathskip >> Die and respawn at Brill
 step
     #hardcore
     #completewith next
-    .goto Tirisfal Glades,58.20,51.44,250 >> 跑回布里尔。如果它上升了，你会听到
+    .goto Tirisfal Glades,58.20,51.44,250 >> Run back to Brill. Hearth if its up
 step
     .goto Tirisfal Glades,58.20,51.44
-    .turnin 426 >>把磨坊的过剩部分交出来
+    .turnin 426 >>Turn in The Mills Overrun
 step
     .isOnQuest 361
     .goto Tirisfal Glades,61.58,52.60
-    .turnin 361 >>交一封未送达的信
+    .turnin 361 >>Turn in A Letter Undelivered
 step
     .goto Tirisfal Glades,61.72,52.29
-    .turnin 354 >>在家庭中交出死亡人数
-    .turnin 362 >>交出闹鬼的磨坊
-    .accept 355 >>接受与Sevren交谈
+    .turnin 354 >>Turn in Deaths in the Family
+    .turnin 362 >>Turn in The Haunted Mills
+    .accept 355 >>Accept Speak with Sevren
 step
     .xp 10
 step
     .goto Tirisfal Glades,61.7,52.0
-    .vendor >> 供应商垃圾箱。如果需要，购买食物/水
+    .vendor >> vendor trash. Buy food/water if needed
 step << Warrior
     .goto Tirisfal Glades,61.85,52.55
-    .trainer >> 训练你的职业咒语
-    .accept 1818 >> 接受与迪林杰交谈
+    .trainer >> Train your class spells
+    .accept 1818 >> Accept Speak with Dillinger
 step << Warrior
     .goto Tirisfal Glades,58.20,51.44
-    .turnin 1818 >> 转身与迪林杰交谈
-    .accept 1819 >> 接受切割者乌拉格
+    .turnin 1818 >> Turn in Speak with Dillinger
+    .accept 1819 >> Accept Ulag the Cleaver
 step << Warrior
     .goto Tirisfal Glades,59.16,48.51
-    >>点击地面上的头骨。这将召唤乌拉格。杀了他
+    >>Click on the skull on the ground. This will summon Ulag. Kill him
     .complete 1819,1 --Ulag the Cleaver (1)
 step << Warrior
     .goto Tirisfal Glades,58.20,51.44
-    .turnin 1819 >> 把乌拉格交给分裂者
-    .accept 1820 >> 接受与科尔曼交谈
+    .turnin 1819 >> Turn in Ulag the Cleaver
+    .accept 1820 >> Accept Speak with Coleman
 step << Mage
     .goto Tirisfal Glades,61.97,52.48
-    .trainer >> 上楼训练你的课堂咒语
-    .accept 1881 >> 接受与Anatasia交谈
+    .trainer >> Go upstairs and train your class spells
+    .accept 1881 >> Accept Speak with Anatasia
 step << Warlock
     .goto Tirisfal Glades,61.59,52.39
-    .trainer >> 上楼训练你的课堂咒语
+    .trainer >> Go upstairs and train your class spells
      .goto Tirisfal Glades,61.62,52.68
-    .accept 1478 >> 接受哈尔加的召唤
+    .accept 1478 >> Accept Halgar's Summons
 step << Priest
     .goto Tirisfal Glades,61.57,52.19
-    .trainer >> 上楼训练你的课堂咒语
+    .trainer >> Go upstairs and train your class spells
 step << Rogue
     .goto Tirisfal Glades,61.75,52.00
-    .trainer >> 上楼训练你的课堂咒语
-    .accept 1885 >> 接受Mennet Carkad
+    .trainer >> Go upstairs and train your class spells
+    .accept 1885 >> Accept Mennet Carkad
 step << Rogue
     .goto Tirisfal Glades,60.12,53.39
-    .vendor >> 修理你的武器。如果你有足够的钱(4s1c)，从奥利弗那里再买一个细高跟鞋。
+    .vendor >> Repair your weapon. If you have enough money (4s 1c) buy another Stiletto from Oliver.
 step << Warrior
     .goto Tirisfal Glades,60.12,53.39
-    >>修理你的武器。如果你有足够的钱(5s36c)，从奥利弗那里买一辆格拉迪斯。否则，请跳过此步骤
+    >>Repair your weapon. If you have enough money (5s 36c) buy a Gladius from Oliver. Otherwise, skip this step
     .collect 2488,1
 step << !Warlock
     #sticky
     #completewith next
-    >>该地区红色暴徒的抢劫戒指。你稍后会完成这个
+    >>Loot rings from scarlet mobs in the area. You'll finish this later
     .complete 374,1 --Scarlet Insignia Ring (10)
 step << !Warlock
     .goto Tirisfal Glades,51.13,67.80
@@ -790,148 +790,148 @@ step << !Warlock
     .complete 370,2 --Scarlet Zealot (3)
     .complete 370,3 --Scarlet Missionary (3)
 step
-    .goto Undercity,15.06,32.86,50 >> 通过下水道进入地下城
+    .goto Undercity,15.06,32.86,50 >> Go into Undercity via the Sewers
 step
-    >>乘一部电梯到幽暗城的主要部分
+    >>Take one of the lifts down to the main part of Undercity
     .goto Undercity,67.72,37.88
-    .home >> 将您的炉石设置为幽暗城
+    .home >> Set your Hearthstone to Undercity
 step << Warlock
     .goto Undercity,85.07,25.99
-    .turnin 1478 >> 提交哈尔加的传票
-    .accept 1473 >> 接受虚空生物
+    .turnin 1478 >> Turn in Halgar's Summons
+    .accept 1473 >> Accept Creature of the Void
 step << Rogue
     .goto Undercity,83.53,69.09
-    .turnin 1885 >> 交上Mennet Carkad
-    .accept 1886 >> 接受死亡追踪者
+    .turnin 1885 >> Turn in Mennet Carkad
+    .accept 1886 >> Accept The Deathstalkers
 step << Rogue
     .goto Undercity,77.50,49.63
-    .vendor >> 从纳撒尼尔那里购买你的11级投掷。11级时装备它
+    .vendor >> Buy your level 11 thrown from Nathaniel. Equip it when you're level 11
 step << Rogue
     .money <0.3200
     .goto Tirisfal Glades,64.16,75.54
-    >>与查尔斯交谈。从他那里买一把弯刀(20秒23分)。你很快就会训练剑。如果你的武器更好，或者AH上有更好的东西，跳过这个
+    >>Talk to Charles. Buy a Cutlass from him (20s 23c). You'll train Swords soon. Skip this if your weapon is better, or there's something better on the AH
     .collect 851,1 --Collect Cutlass (1)
 step << Warrior
     .money <0.3950
     .goto Tirisfal Glades,64.16,75.54
-    >>与查尔斯交谈。从他那里买一辆克莱莫尔牌汽车(26s76c)。你很快就会训练2小时剑。如果你的武器更好，或者AH上有更好的东西，跳过这个
+    >>Talk to Charles. Buy a Claymore from him (26s 76c). You'll train 2h Swords soon. Skip this if your weapon is better, or there's something better on the AH
     .collect 1198,1 --Collect Claymore (1)
 step << Warrior/Rogue
     .goto Undercity,60.18,29.10
-    .trainer >> 火车铁匠。这将允许你为你的武器制造+2伤害磨石，这些磨石非常坚固。
-    >> 如果你想从事自己的职业，跳过这一步
+    .trainer >> Train Blacksmithing. This will allow you to make +2 damage sharpening stones for your weapon which are very strong.
+    >> If you want to go for your own professions, skip this step
 step << Warrior/Rogue
     .goto Undercity,61.41,30.06
-     >> 从塞缪尔那里买一把采矿镐
-    .collect 2901,1 --采矿 Pick (1)
-    >> 如果你想从事自己的职业，跳过这一步
+     >> Buy a Mining Pick from Samuel
+    .collect 2901,1 --Mining Pick (1)
+    >> If you want to go for your own professions, skip this step
 step << Warrior
     .goto Undercity,57.32,32.77
-    .trainer >> 训练2h剑
+    .trainer >> Train 2h Swords
 step << Rogue
     .goto Undercity,57.32,32.77
-    .trainer >> 训练剑
+    .trainer >> Train Swords
 step << Warrior/Rogue
     .goto Undercity,56.04,37.47
-    .trainer >> 训练采矿。这将允许你为你的武器制造+2伤害磨石，这些磨石非常坚固。
-    >> 如果你想从事自己的职业，跳过这一步
+    .trainer >> Train Mining. This will allow you to make +2 damage sharpening stones for your weapon which are very strong.
+    >> If you want to go for your own professions, skip this step
 step << Mage
     .goto Undercity,85.13,10.03
-    .turnin 1881 >> 转身与Anatasia交谈
-    .accept 1882 >> 接受Balnir Farmstead
+    .turnin 1881 >> Turn in Speak with Anatasia
+    .accept 1882 >> Accept The Balnir Farmstead
 step
-    >>如果您培训了采矿，请记住在每次死亡/注销后打开查找矿物 << Rogue/Warrior
+    >>Remember to turn on Find Minerals after every death/logout if you trained Mining << Rogue/Warrior
     .goto Undercity,84.06,17.44
-    .turnin 405 >>交出恶霸巫妖
-    .accept 357 >>接受巫妖的身份
+    .turnin 405 >>Turn in The Prodigal Lich
+    .accept 357 >>Accept The Lich's Identity
 step
     #sticky
     #completewith next
     .goto Undercity,82.36,15.31
-    +转到右侧的试剂供应商，执行“注销跳过”，将角色定位在最低楼梯的最高部分，直到看起来像漂浮在空中，然后注销并重新登录。
-    .link https://www.youtube.com/watch?v=-Bi95bCN8dM >> 单击此处查看示例
-    >>如果你做不到这一点，就正常离开幽暗城
+    +Go to the Reagent Vendor on your right and perform a Logout Skip by positioning your character on the highest part of the lowest staircase until it looks like they're floating, then logging out and back in.
+    .link https://www.youtube.com/watch?v=-Bi95bCN8dM >> CLICK HERE for an example
+    >>If you can't do this, just run out of Undercity normally
 step
-    .goto Tirisfal Glades,61.85,66.59,60 >> 退出地下城
+    .goto Tirisfal Glades,61.85,66.59,60 >> Exit Undercity
 step << Rogue
     #sticky
     #completewith UnluckyRogue
     .unitscan Astor Hadren
-    >>如果你看到阿斯特，跟他谈谈，然后杀了他。抢他的信。他在布里尔和坟墓之间的道路上巡逻
+    >>If you see Astor, talk to him and kill him. Loot him for the letter. He patrols the road between Brill and The Sepulcher
     .complete 1886,1 --Astor's Letter of Introduction (1)
 step << Warlock
     #sticky
     #completewith next
-    >>该地区红色暴徒的抢劫戒指。你稍后会完成这个
+    >>Loot rings from scarlet mobs in the area. You'll finish this later
     .complete 374,1 --Scarlet Insignia Ring (10)
 step << Warlock
     .goto Tirisfal Glades,51.13,67.80
-    >> 把箱子里面偷走。杀死血腥暴徒
+    >> Loot the chest inside. Kill Scarlet mobs
     .complete 370,1 --Captain Perrine (1)
     .complete 370,2 --Scarlet Zealot (3)
     .complete 370,3 --Scarlet Missionary (3)
     .complete 1473,1 --Egalin's Grimoire (1)
 step << Warlock
-    >>回到幽暗城
+    >>Go back into Undercity
     .goto Undercity,85.07,25.99
-    .turnin 1473 >> 空虚的生物
-    .accept 1471 >> 接受绑定
+    .turnin 1473 >> Turn in Creature of the Void
+    .accept 1471 >> Accept The Binding
 step << Warlock
-    >>使用召唤符文在你的包中的召唤圈顶部。杀死虚空行者
+    >>Use the Runes of Summoning in your bag on top of the summoning circle. Kill the Voidwalker
     .goto Undercity,86.60,26.95
     .complete 1471,1 --Summoned Voidwalker (1)
 step << Warlock
-    >>建议在你得到魔术师之前使用虚空行者
+    >>It's recommended to use Voidwalker until you get your Succubus
     .goto Undercity,85.07,25.99
-    .turnin 1471 >> 交回装订本
+    .turnin 1471 >> Turn in The Binding
 step << Warlock
     #sticky
     #completewith next
     .goto Undercity,85.26,19.89
-    +在Relic Vendor上方执行“注销跳过”，方法是定位角色，直到其看起来像是浮动的，然后注销并重新登录。
-    .link https://www.youtube.com/watch?v=-Bi95bCN8dM >> 单击此处查看示例
-    >>如果你做不到这一点，就正常离开幽暗城
+    +Go above the Relic Vendor and perform a Logout Skip by positioning your character until it looks like they're floating, then logging out and back in.
+    .link https://www.youtube.com/watch?v=-Bi95bCN8dM >> CLICK HERE for an example
+    >>If you can't do this, just run out of Undercity normally
 step << Warlock
-    .goto Tirisfal Glades,61.85,66.59,60 >> 退出地下城
+    .goto Tirisfal Glades,61.85,66.59,60 >> Exit Undercity
 step
     .goto Tirisfal Glades,60.58,51.76
-    .turnin 370 >>与血腥十字军交战
-    .accept 371 >>接受与血腥十字军的战争
+    .turnin 370 >>Turn in At War With The Scarlet Crusade
+    .accept 371 >>Accept At War With The Scarlet Crusade
 step
     #completewith next
-    .vendor >> 如果你有多余的钱并且需要袋子，你可以从酒店门口旁边的温特斯夫人那里买6个座位。否则，请跳过此步骤
+    .vendor >> If you have spare money and need bags, you can buy 6 slots from Mrs.Winters next to the Inn entrance. Otherwise, skip this step
 step
     .goto Tirisfal Glades,61.7,52.0
-    .vendor 5688 >> 如果需要，在客栈内购买食物/水
+    .vendor 5688 >> Buy food/water inside the Inn if needed
 step
     #label UnluckyRogue
     .goto Tirisfal Glades,65.49,60.25
-    .turnin 359 >>移交被放弃的职责
-    .accept 360 >>接受交还治安法官
-    .accept 356 >>接受后防巡逻
+    .turnin 359 >>Turn in Forsaken Duties
+    .accept 360 >>Accept Return to the Magistrate
+    .accept 356 >>Accept Rear Guard Patrol
 step << Mage
     #sticky
     #label Snapdragon
-    >>点击附近的任何植物
+    >>Click any of the plants nearby
     .goto Tirisfal Glades,77.53,61.83
     .complete 1882,1 --Balnir Snapdragons (1)
 step
     .goto Tirisfal Glades,75.88,60.90
-    >>在野外杀死亡灵
+    >>Kill Undead in the field
     .complete 356,1 --Bleeding Horror (8)
     .complete 356,2 --Wandering Spirit (8)
 step
     #sticky
     #completewith next
-    >>该地区红色暴徒的抢劫戒指。你稍后会完成这个
+    >>Loot rings from scarlet mobs in the area. You'll finish this later
     .complete 374,1 --Scarlet Insignia Ring (10)
 step
-    >>修士们痊愈时要小心。在里面杀了Vachon上尉
+    >>Be careful as the Friars heal. Kill Captain Vachon inside
     .complete 371,1 --Captain Vachon (1)
     .complete 371,2 --Scarlet Friar (5)
     .goto Tirisfal Glades,79.47,55.92
 step
-    >>杀死蜘蛛。掠夺他们的毒液
+    >>Kill Spiders. Loot them for their venom
     .complete 369,1 --Vicious Night Web Spider Venom (4)
     .goto Tirisfal Glades,86.19,52.00
 step
@@ -941,720 +941,720 @@ step
     #softcore
     #completewith next
     .goto Tirisfal Glades,66.60,44.95
-    .deathskip >> 死在小岛上，在布里尔重生
+    .deathskip >> Die ON THE SMALLER ISLAND and respawn at Brill
 step
     #softcore
     #era/som
     .goto Tirisfal Glades,59.45,52.39
-    .turnin 369 >>带来新的瘟疫
-    .accept 492 >>接受新瘟疫
-    .accept 445 >>接受交付至银松森林
+    .turnin 369 >>Turn in A New Plague
+    .accept 492 >>Accept A New Plague
+    .accept 445 >>Accept Delivery to Silverpine Forest
 step
     #hardcore
     #era/som
-    >>跑回布里尔
+    >>Run back to Brill
     .goto Tirisfal Glades,59.45,52.39
-    .turnin 369 >>带来新的瘟疫
-    .accept 492 >>接受新瘟疫
-    .accept 445 >>接受交付至银松森林
+    .turnin 369 >>Turn in A New Plague
+    .accept 492 >>Accept A New Plague
+    .accept 445 >>Accept Delivery to Silverpine Forest
 step
     #softcore
     #som
     #phase 3-6
     .goto Tirisfal Glades,59.45,52.39
-    .turnin 369 >>带来新的瘟疫
-    .accept 492 >>接受新瘟疫
---  .accept 445 >>接受交付至银松森林
+    .turnin 369 >>Turn in A New Plague
+    .accept 492 >>Accept A New Plague
+--  .accept 445 >>Accept Delivery to Silverpine Forest
 step
     #hardcore
     #som
     #phase 3-6
-    >>跑回布里尔
+    >>Run back to Brill
     .goto Tirisfal Glades,59.45,52.39
-    .turnin 369 >>带来新的瘟疫
-    .accept 492 >>接受新瘟疫
---   .accept 445 >>接受交付至银松森林
+    .turnin 369 >>Turn in A New Plague
+    .accept 492 >>Accept A New Plague
+--   .accept 445 >>Accept Delivery to Silverpine Forest
 step
     .goto Tirisfal Glades,60.58,51.77
-    .turnin 371 >>与血腥十字军交战
-    .accept 372 >>接受与血腥十字军的战争
+    .turnin 371 >>Turn in At War With The Scarlet Crusade
+    .accept 372 >>Accept At War With The Scarlet Crusade
 step
     .goto Tirisfal Glades,61.26,50.84
-    .turnin 360 >>交回治安法官
-    .turnin 355 >>转身与塞夫伦交谈
+    .turnin 360 >>Turn in Return to the Magistrate
+    .turnin 355 >>Turn in Speak with Sevren
 step
     .isQuestComplete 374
     .goto Tirisfal Glades,60.93,52.01
-    .turnin 374 >>移交Demise证明
+    .turnin 374 >>Turn in Proof of Demise
 step
     #completewith next
-    .vendor >> 如果你有多余的钱并且需要袋子，你可以从酒店门口旁边的温特斯夫人那里买6个座位。否则，请跳过此步骤
+    .vendor >> If you have spare money and need bags, you can buy 6 slots from Mrs.Winters next to the Inn entrance. Otherwise, skip this step
 step
     .goto Tirisfal Glades,61.7,52.0
-    .vendor 5688 >> 如果需要，在客栈内购买食物/水
+    .vendor 5688 >> Buy food/water inside the Inn if needed
 step
     .goto Tirisfal Glades,61.94,51.40
-    .turnin 492 >>带来新的瘟疫
+    .turnin 492 >>Turn in A New Plague
 step
-    .hs >> 炉膛到地下城
+    .hs >> Hearth to Undercity
 step << Mage
-    >>选择任何奖励。个人偏好
+    >>Choose any reward. Personal preference
     .goto Undercity,85.15,10.04
-    .turnin 1882 >>交给Balnir Farmstead
+    .turnin 1882 >>Turn in The Balnir Farmstead
 step << Rogue
     .isQuestComplete 1886
     .goto Undercity,84.06,17.46
-    .turnin 357 >>交出巫妖的身份
-    .accept 366 >>接受并归还书籍
+    .turnin 357 >>Turn in The Lich's Identity
+    .accept 366 >>Accept Return the Book
 step << Rogue
     .money <0.2200
     .goto Tirisfal Glades,64.16,75.54
-    >>与查尔斯交谈。从他那里买一把弯刀(20秒23分)。如果你的武器更好，或者AH上有更好的东西，跳过这个
+    >>Talk to Charles. Buy a Cutlass from him (20s 23c). Skip this if your weapon is better, or there's something better on the AH
     .collect 851,1 --Collect Cutlass (1)
 step << Warrior
     .money <0.2950
     .goto Tirisfal Glades,64.16,75.54
-    >>与查尔斯交谈。从他那里买一辆克莱莫尔牌汽车(26s76c)。如果你的武器更好，或者AH上有更好的东西，跳过这个
+    >>Talk to Charles. Buy a Claymore from him (26s 76c). Skip this if your weapon is better, or there's something better on the AH
     .collect 1198,1 --Collect Claymore (1)
 step << Rogue
     .goto Undercity,83.52,69.10
-    .turnin 1886 >> 交出死亡追踪者
+    .turnin 1886 >> Turn in The Deathstalkers
     .isQuestComplete 1886
 step
     .goto Undercity,83.52,69.10
-    .accept 1898 >>接受死亡追踪者
+    .accept 1898 >>Accept The Deathstalkers
     .isQuestTurnedIn 1886
 step << Rogue
     .isQuestTurnedIn 1886
     .goto Undercity,54.84,76.31
-    .turnin 1898 >> 交出死亡追踪者
-    .accept 1899 >> 接受死亡追踪者
+    .turnin 1898 >> Turn in The Deathstalkers
+    .accept 1899 >> Accept The Deathstalkers
 step << Rogue
     .isQuestTurnedIn 1886
     .goto Undercity,55.43,76.87
-    >>在Andron身后抢劫书架
+    >>Loot the Bookshelf behind Andron
     .complete 1899,1
 step << Rogue
     .isQuestTurnedIn 1886
     .goto Undercity,83.53,69.12
-    .turnin 1899 >> 交出死亡追踪者
-    .accept 1978 >> 接受死亡追踪者
+    .turnin 1899 >> Turn in The Deathstalkers
+    .accept 1978 >> Accept The Deathstalkers
 step << Rogue
     .isQuestTurnedIn 1886
     .goto Tirisfal Glades,58.86,78.76,40,0
     .goto Tirisfal Glades,59.75,84.64
-    .turnin 1978 >>交出死亡追踪者
-    >>转到主平台的边缘，执行“注销跳过”，方法是定位角色，直到其看起来像是浮动的，然后注销并重新登录。
-    .link https://www.youtube.com/watch?v=jj85AXyF1XE >> 当跑向转弯处时，打开此标签。单击此处查看示例
-    >>如果你做不到这一点，就正常离开幽暗城
+    .turnin 1978 >>Turn in The Deathstalkers
+    >>Go to the edge of the main platform and perform a Logout Skip by positioning your character until it looks like they're floating, then logging out and back in.
+    .link https://www.youtube.com/watch?v=jj85AXyF1XE >> Open this tab when running to the turn in. CLICK HERE for an example
+    >>If you can't do this, just run out of Undercity normally
 step << Rogue
     .isQuestTurnedIn 1886
-    .goto Tirisfal Glades,61.85,66.59,60 >> 退出地下城
+    .goto Tirisfal Glades,61.85,66.59,60 >> Exit Undercity
 step
     .goto Undercity,84.06,17.46
-    .turnin 357 >>交出巫妖的身份
-    .accept 366 >>接受并归还书籍
+    .turnin 357 >>Turn in The Lich's Identity
+    .accept 366 >>Accept Return the Book
 step
     #sticky
     #completewith next
     .goto Undercity,82.36,15.31
-    +转到右侧的试剂供应商，执行“注销跳过”，将角色定位在最低楼梯的最高部分，直到看起来像漂浮在空中，然后注销并重新登录。
-    .link https://www.youtube.com/watch?v=-Bi95bCN8dM >> 单击此处查看示例
-    >>如果你做不到这一点，就正常离开幽暗城
+    +Go to the Reagent Vendor on your right and perform a Logout Skip by positioning your character on the highest part of the lowest staircase until it looks like they're floating, then logging out and back in.
+    .link https://www.youtube.com/watch?v=-Bi95bCN8dM >> CLICK HERE for an example
+    >>If you can't do this, just run out of Undercity normally
 step
-    .goto Tirisfal Glades,61.85,66.59,60 >> 退出地下城
+    .goto Tirisfal Glades,61.85,66.59,60 >> Exit Undercity
 step
     .goto Tirisfal Glades,65.49,60.25
-    .turnin 356 >>转入后防巡逻
+    .turnin 356 >>Turn in Rear Guard Patrol
 step
     #sticky
     #label Rings
-    >>你看到的猩红暴徒的抢劫戒指
+    >>Loot rings from scarlet mobs you see
     .complete 374,1 --Scarlet Insignia Ring (10)
 step
     .goto Tirisfal Glades,79.52,25.14
-    >>杀死塔内的Mellache上尉和他的卫兵
-    >>途中碾碎暴徒 << Warrior/Mage
+    >>Kill Captain Melrache and his guards in the tower
+    >>Grind mobs en route << Warrior/Mage
     .complete 372,1 --Captain Melrache (1)
     .complete 372,2 --Scarlet Bodyguard (2)
 step << Mage/Warrior
     .isOnQuest 374
-    .xp 11+5300 >> 升级到5300+/8800xp
+    .xp 11+5300 >> Grind to 5300+/8800xp
 step << Mage/Warrior
     .isQuestTurnedIn 374
-    .xp 11+5925 >> 升级到5925+/8800xp
+    .xp 11+5925 >> Grind to 5925+/8800xp
 step
     #requires Rings
     .goto Tirisfal Glades,68.19,41.92
-    .turnin 366 >>交回书
-    .accept 409 >>接受证明效忠
+    .turnin 366 >>Turn in Return the Book
+    .accept 409 >>Accept Proving Allegiance
 step
     .goto Tirisfal Glades,68.16,42.01
-    >>抢劫地上的那盒蜡烛
+    >>Loot the box of candles on the ground
     .collect 3080,1 --Collect Candle of Beckoning (1)
 step
     .goto Tirisfal Glades,66.64,44.89
-    >>在岛中央的桌子上单击鼠标右键。在Nefara产卵时杀死她
-    .turnin 410 >> 在昏睡的阴影中转身
+    >>Right click on the table in the middle of the island. Kill Nefara when she spawns
+    .turnin 410 >> Turn in The Dormant Shade
     .complete 409,1 --Lillith Nefara (1)
 step << Mage/Warrior
     .isOnQuest 374
-    .xp 11+5900 >> 升级到5900+/8800xp
+    .xp 11+5900 >> Grind to 5900+/8800xp
 step << Mage/Warrior
     .isQuestTurnedIn 374
-    .xp 11+6525 >> 升级到6525+/8800xp
+    .xp 11+6525 >> Grind to 6525+/8800xp
 step
     .goto Tirisfal Glades,68.20,41.92
-    .turnin 409 >>提交效忠证明
-    .accept 411 >>接受浪荡巫妖归来
+    .turnin 409 >>Turn in Proving Allegiance
+    .accept 411 >>Accept The Prodigal Lich Returns
 step
     #softcore
     #completewith next
-    .deathskip >> 向西游，被暴徒杀死，在布里尔重生
+    .deathskip >> Swim west, die to mobs, and respawn at Brill
     .goto Tirisfal Glades,64.40,42.65
 step
     #softcore
     .goto Tirisfal Glades,60.58,51.77
-    .turnin 372 >>与血腥十字军交战
+    .turnin 372 >>Turn in At War With The Scarlet Crusade
 step
     #hardcore
-    >>跑回布里尔
+    >>Run back to Brill
     .goto Tirisfal Glades,60.58,51.77
-    .turnin 372 >>与血腥十字军交战
+    .turnin 372 >>Turn in At War With The Scarlet Crusade
 step
     .goto Tirisfal Glades,60.93,52.01
-    .turnin 374 >>移交Demise证明
+    .turnin 374 >>Turn in Proof of Demise
 step << Rogue
     #sticky
     #completewith next
     .unitscan Astor Hadren
-    >>如果你看到阿斯特，跟他谈谈，然后杀了他。抢他的信。他在布里尔和坟墓之间的道路上巡逻
+    >>If you see Astor, talk to him and kill him. Loot him for the letter. He patrols the road between Brill and The Sepulcher
     .complete 1886,1 --Astor's Letter of Introduction (1)
 step
     .goto Undercity,66.36,0.36
-    .zone Undercity >> 跑到地下城
+    .zone Undercity >> Run to Undercity
 step << Rogue/Warrior
     .isQuestComplete 1886 << Rogue
     .goto Undercity,84.06,17.46
-    .turnin 411 >>移交神魔巫妖归来
+    .turnin 411 >>Turn in The Prodigal Lich Returns
 step << Rogue
     .money <0.2200
     .goto Tirisfal Glades,64.16,75.54
-    >>与查尔斯交谈。从他那里买一把弯刀(20秒23分)。如果你的武器更好，或者AH上有更好的东西，跳过这个
+    >>Talk to Charles. Buy a Cutlass from him (20s 23c). Skip this if your weapon is better, or there's something better on the AH
     .collect 851,1 --Collect Cutlass (1)
 step << Warrior
     #level 12
     .goto Undercity,46.93,15.23
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Warrior
     .money <0.2950
     .goto Tirisfal Glades,64.16,75.54
-    >>与查尔斯交谈。从他那里买一辆克莱莫尔牌汽车(26s76c)。如果你的武器更好，或者AH上有更好的东西，跳过这个
+    >>Talk to Charles. Buy a Claymore from him (26s 76c). Skip this if your weapon is better, or there's something better on the AH
     .collect 1198,1 --Collect Claymore (1)
 step << Warrior
     #sticky
     #completewith next
     .goto Undercity,82.36,15.31
-    +执行注销跳过，方法是定位角色，直到其看起来像漂浮在桥的边缘，然后注销并重新登录。
-    .link https://www.youtube.com/watch?v=-Bi95bCN8dM >> 单击此处查看示例
-    >>如果你做不到这一点，就正常离开幽暗城
+    +Perform a Logout Skip by positioning your character until it looks like they're floating on the edge of a bridge, then logging out and back in.
+    .link https://www.youtube.com/watch?v=-Bi95bCN8dM >> CLICK HERE for an example
+    >>If you can't do this, just run out of Undercity normally
 step << Warrior
-    .goto Tirisfal Glades,61.85,66.59,60 >> 退出地下城
+    .goto Tirisfal Glades,61.85,66.59,60 >> Exit Undercity
 step << Rogue
     .goto Undercity,83.52,69.10
-    .turnin 1886 >> 交出死亡追踪者
+    .turnin 1886 >> Turn in The Deathstalkers
     .isQuestComplete 1886
 step << Rogue
     .goto Undercity,83.52,69.10
-    .accept 1898 >>接受死亡追踪者
+    .accept 1898 >>Accept The Deathstalkers
     .isQuestTurnedIn 1886
 step << Rogue
     #level 12
     .goto Undercity,83.87,72.08
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Priest
      #level 12
     .goto Undercity,48.98,18.33
-    .trainer >> 训练你的职业咒语
-    .turnin 5663 >> 脆弱的触手可及
+    .trainer >> Train your class spells
+    .turnin 5663 >> Turn in Touch of Weakness
 step << Priest
     .goto Undercity,48.98,18.33
-    .turnin 5663 >> 脆弱的触手可及
+    .turnin 5663 >> Turn in Touch of Weakness
 step << Rogue
     .isQuestTurnedIn 1886
     .goto Undercity,54.84,76.31
-    .turnin 1898 >> 交出死亡追踪者
-    .accept 1899 >> 接受死亡追踪者
+    .turnin 1898 >> Turn in The Deathstalkers
+    .accept 1899 >> Accept The Deathstalkers
 step << Rogue
     .isQuestTurnedIn 1886
     .goto Undercity,55.43,76.87
-    >>在Andron身后抢劫书架
+    >>Loot the Bookshelf behind Andron
     .complete 1899,1
 step << Rogue
     .isQuestTurnedIn 1886
     .goto Undercity,83.53,69.12
-    .turnin 1899 >> 交出死亡追踪者
-    .accept 1978 >> 接受死亡追踪者
+    .turnin 1899 >> Turn in The Deathstalkers
+    .accept 1978 >> Accept The Deathstalkers
 step << Rogue
     .isQuestTurnedIn 1886
     .goto Tirisfal Glades,58.86,78.76,40,0
     .goto Tirisfal Glades,59.75,84.64
-    .turnin 1978 >>交出死亡追踪者
-    >>转到主平台的边缘，执行“注销跳过”，方法是定位角色，直到其看起来像是浮动的，然后注销并重新登录。
-    .link https://www.youtube.com/watch?v=jj85AXyF1XE >> 当跑向转弯处时，打开此标签。单击此处查看示例
-    >>如果你做不到这一点，就正常离开幽暗城
+    .turnin 1978 >>Turn in The Deathstalkers
+    >>Go to the edge of the main platform and perform a Logout Skip by positioning your character until it looks like they're floating, then logging out and back in.
+    .link https://www.youtube.com/watch?v=jj85AXyF1XE >> Open this tab when running to the turn in. CLICK HERE for an example
+    >>If you can't do this, just run out of Undercity normally
 step << Rogue
     .isQuestTurnedIn 1886
-    .goto Tirisfal Glades,61.85,66.59,60 >> 退出地下城
+    .goto Tirisfal Glades,61.85,66.59,60 >> Exit Undercity
 step << !Warrior
     .goto Undercity,84.07,17.45
-    .turnin 411 >>移交神魔巫妖归来
+    .turnin 411 >>Turn in The Prodigal Lich Returns
 step << Mage
     #level 12
     .goto Undercity,85.14,10.04
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Warlock
     #level 12
     .goto Undercity,86.20,15.92
-    .trainer >> 在建筑内训练你的职业法术
+    .trainer >> Train your class spells inside the building
 step << !Warrior
     #era/som
     .goto Undercity,46.16,43.97,50,0
     .goto Undercity,41.04,33.26,50,0
     .goto Undercity,23.86,35.90,50,0
-    .goto Undercity,15.06,32.86,50 >> 通过下水道退出地下城
+    .goto Undercity,15.06,32.86,50 >> Exit Undercity via the Sewers
 step << !Warrior
     #som
     #phase 3-6
     #sticky
     #completewith next
     .goto Undercity,82.36,15.31
-    +执行注销跳过，方法是定位角色，直到其看起来像漂浮在桥的边缘，然后注销并重新登录。
-    .link https://www.youtube.com/watch?v=-Bi95bCN8dM >> 单击此处查看示例
-    >>如果你做不到这一点，就正常离开幽暗城
+    +Perform a Logout Skip by positioning your character until it looks like they're floating on the edge of a bridge, then logging out and back in.
+    .link https://www.youtube.com/watch?v=-Bi95bCN8dM >> CLICK HERE for an example
+    >>If you can't do this, just run out of Undercity normally
 step << !Warrior
     #som
     #phase 3-6
-    .goto Tirisfal Glades,61.85,66.59,60 >> 退出地下城
+    .goto Tirisfal Glades,61.85,66.59,60 >> Exit Undercity
 step << Undead
     #som
     #phase 3-6
     #sticky
     #completewith next
-    +登上齐柏林塔。把齐柏林飞艇带到奥格瑞玛。在等待时制作磨砂石/绷带 << Warrior/Rogue
-    +登上齐柏林塔。把齐柏林飞艇带到奥格瑞玛。在等待时召唤食物/水 << Mage
-    +登上齐柏林塔。把齐柏林飞艇带到奥格瑞玛。 << !Warrior !Rogue !Mage
+    +Go up the Zeppelin Tower. Take the Zeppelin to Orgrimmar. Make Sharpening Stones/Bandages while you wait << Warrior/Rogue
+    +Go up the Zeppelin Tower. Take the Zeppelin to Orgrimmar. Conjure Food/water while you wait << Mage
+    +Go up the Zeppelin Tower. Take the Zeppelin to Orgrimmar. << !Warrior !Rogue !Mage
     .goto Tirisfal Glades,60.74,58.74
 step << Undead
     #som
     #phase 3-6
     .goto Tirisfal Glades,60.89,59.06,30,0
     .goto Tirisfal Glades,60.73,58.76
-    .zone Durotar >> 把齐柏林飞艇带到杜隆塔尔
+    .zone Durotar >> Take the zeppelin to Durotar
 step << Undead
     #som
     #phase 3-6
-    >>跑向Razor Hill
+    >>Run to Razor Hill
     .goto Durotar,50.85,43.59
-    .accept 840 >>接受部落征兵
+    .accept 840 >>Accept Conscript of the Horde
 step << Undead
     #som
     #phase 3-6
-    >>跑到荒野
+    >>Run to The Barrens
     .goto The Barrens,62.26,19.38
-    .turnin 840 >>交出部落征兵
-    .accept 842 >>接受十字路口征兵
+    .turnin 840 >>Turn in Conscript of the Horde
+    .accept 842 >>Accept Crossroads Conscription
 step << Undead
     #som
     #phase 3-6
     .goto The Barrens,52.23,31.01
-    .turnin 842 >>交出十字路口征兵
-    .accept 844 >>接受平原漫游者威胁
+    .turnin 842 >>Turn in Crossroads Conscription
+    .accept 844 >>Accept Plainstrider Menace
 step << Mage
     #som
     #phase 3-6
-    +如果您计划通过AoE调平，请手动选择“荒地AoE指南”。否则，请完成此步骤
+    +If you're planning on leveling via AoE, choose the Barrens AoE Guide manually. Otherwise, complete this step
 ]])
 
 RXPGuides.RegisterGuide([[
-#group RestedXP部落1-22
+#group RestedXP Horde 1-22
 << Horde
 #version 1
 #defaultfor Undead/Troll Rogue/Orc Rogue
 #classic
 #era/som
-#name 11-14 银松森林
-#next 12-17 贫瘠之地
+#name 11-14 Silverpine Forest
+#next 12-17 The Barrens
 
 step << !Undead Rogue
-    .goto Tirisfal Glades,61.87,65.02,40 >> 跑到地下城
+    .goto Tirisfal Glades,61.87,65.02,40 >> Run to Undercity
 step << !Undead Rogue
-    .goto Tirisfal Glades,61.81,74.42,30 >> 跑到电梯间
+    .goto Tirisfal Glades,61.81,74.42,30 >> Run to the Elevator room
 step << !Undead Rogue
-    >>把其中一部电梯放下
+    >>Take one of the elevators down
     .goto Undercity,63.25,48.56
-    .fp Undercity >> 获取幽暗城飞行路线
+    .fp Undercity >> Get the Undercity flight path
 step << !Undead Rogue
     .money <0.3023
     .goto Tirisfal Glades,64.16,75.54
-    >>与查尔斯交谈。从他那里买一把弯刀(20秒23分)。你很快就会训练剑。如果你的武器更好，或者AH上有更好的东西，跳过这个
+    >>Talk to Charles. Buy a Cutlass from him (20s 23c). You'll train Swords soon. Skip this if your weapon is better, or there's something better on the AH
     .collect 851,1 --Collect Cutlass (1)
 step << !Undead Rogue
     #softcore
     .goto Undercity,57.32,32.77
-    .trainer >> 训练剑。如果你之前没有足够的钱买一把弯刀，那么在买完之后，检查AH是否有武器
+    .trainer >> Train Swords. If you didn't have enough to buy a cutlass earlier, check the AH for a weapon after
 step << !Undead Rogue
     #hardcore
     .goto Undercity,57.32,32.77
-    .trainer >> 训练剑。如果你之前没有足够的钱买一把弯刀，那么从你看到的下一个小贩那里买一件便宜的武器，或者在任务中等待一件掉落
+    .trainer >> Train Swords. If you didn't have enough to buy a cutlass earlier, then buy a cheap weapon from the next vendor you see or wait for one to drop whilst questing
 step << !Undead Rogue
-    .goto Undercity,46.5,44.0,90 >> 通过下水道退出地下城
+    .goto Undercity,46.5,44.0,90 >> Exit Undercity via the Sewers
 step
     .goto Tirisfal Glades,54.90,72.42,120,0
-    .zone Silverpine Forest >> 跑向Silverpine
+    .zone Silverpine Forest >> Run to Silverpine
 step
     #sticky
     #completewith Rane
     .goto Silverpine Forest,57.42,9.80
-    >>杀死Worgs，掠夺他们的心。
+    >>Kill Worgs, loot them for their hearts.
     .collect 3164,6 --Collect Discolored Worg Heart (x6)
 step
     .unitscan Gorefang
-    >>与埃兰交谈，启动他的护航。全血/魔法值开始
+    >>Talk to Erland to start his escort. Start at full health/mana
     .goto Silverpine Forest,56.19,9.18
-    .accept 435 >>接受护送Erland
+    .accept 435 >>Accept Escorting Erland
 step
-    >>小心，一次最多可以有2只狼拉。战斗结束后立即进食/饮水
+    >>Be careful as up to 2 wolves can pull at once. Eat/drink as soon as you're out of combat
     .goto Silverpine Forest,54.12,13.45
     .complete 435,1 --Erland must reach Rane Yorick (1)
 step
     #label Rane
     .goto Silverpine Forest,53.46,13.43
-    .turnin 435 >>护送埃兰上车
-    .accept 429 >> 接受狂野的心
-    .accept 449 >>接受死亡追踪者报告
+    .turnin 435 >>Turn in Escorting Erland
+    .accept 429 >> Accept Wild Hearts
+    .accept 449 >>Accept The Deathstalkers' Report
 step
-    >>杀死Worgs，掠夺他们的心。
+    >>Kill Worgs, loot them for their hearts.
     .goto Silverpine Forest,57.42,9.80
     .collect 3164,6 --Collect Discolored Worg Heart (6)
 step
     #completewith next
     .goto Silverpine Forest,45.01,39.30
-    .vendor >> 供应商垃圾箱。修理
+    .vendor >> vendor trash. Repair
 step
     #sticky
     #completewith next
     #softcore
-    .deathskip >> 在坟墓中死去并重生
+    .deathskip >> Die and respawn at The Sepulcher
 step
     .goto Silverpine Forest,44.21,39.81
-    .accept 421 >>接受证明你的价值
+    .accept 421 >>Accept Prove Your Worth
     #softcore
 step
-    >>跑向坟墓
+    >>Run to The Sepulcher
     .goto Silverpine Forest,44.21,39.81
-    .accept 421 >>接受证明你的价值
+    .accept 421 >>Accept Prove Your Worth
     #hardcore
 step
     .goto Silverpine Forest,43.98,40.93
-    .accept 477 >>接受边界交叉
+    .accept 477 >>Accept Border Crossings
 step << Undead
     .goto Silverpine Forest,43.43,41.67
-    .accept 6321 >>接受墓穴供应
+    .accept 6321 >>Accept Supplying the Sepulcher
 step
     #sticky
     #completewith next
     .goto Silverpine Forest,43.17,41.28
-    .vendor >> 如果需要，购买食物/水
+    .vendor >> Buy food/water if needed
 step
-    >>下楼去地窖
+    >>Go downstairs into the Crypt
     .goto Silverpine Forest,43.43,40.87
-    .turnin 449 >>提交死亡跟踪者报告
-    .accept 3221 >>接受与Renferrel交谈
-    .accept 437 >>接受死区
+    .turnin 449 >>Turn in The Deathstalkers' Report
+    .accept 3221 >>Accept Speak with Renferrel
+    .accept 437 >>Accept The Dead Fields
 step
     .goto Silverpine Forest,42.80,40.86
-    .turnin 429 >> 《狂野的心》
-    .turnin 445 >>交付至银松森林
-    .turnin 3221 >>转身与伦费雷尔交谈
-    .accept 1359 >>接受Zinge的交付
-    .accept 447 >>接受死亡食谱
-    .accept 430 >>接受返回Quinn
+    .turnin 429 >> Turn in Wild Hearts
+    .turnin 445 >>Turn in Delivery to Silverpine Forest
+    .turnin 3221 >>Turn in Speak with Renferrel
+    .accept 1359 >>Accept Zinge's Delivery
+    .accept 447 >>Accept A Recipe For Death
+    .accept 430 >>Accept Return to Quinn
 step
     .goto Silverpine Forest,43.98,39.89
-    .vendor >> 用Edwin的6个插槽填充您的包插槽。如果你有多余的钱，就买药水
+    .vendor >> Finish filling your bag slots with 6 slots from Edwin. Buy potions if you have spare money
 step << Warlock/Mage/Priest
     #completewith next
     .money <0.1400
     .goto Silverpine Forest,44.80,39.24
-    .vendor >> 与安德里亚交谈，检查智者腰带。如果价格上涨就买
+    .vendor >> Talk to Andrea and check for a Wise Man's Belt. Buy it if its up
 step
     .unitscan Son of Arugal
     .goto Silverpine Forest,50.00,39.46,70,0
     .goto Silverpine Forest,49.19,34.42,70,0
     .goto Silverpine Forest,50.00,39.46
-    >>杀死该地区的Moonrage Whitescalps。避开阿鲁加尔之子
+    >>Kill Moonrage Whitescalps in the area. Avoid Sons of Arugal
     .complete 421,1 --Moonrage Whitescalp (5)
 step
     .goto Silverpine Forest,44.19,39.78
-    .turnin 421 >>上缴证明你的价值
-    .accept 422 >>接受阿鲁加尔的愚蠢
+    .turnin 421 >>Turn in Prove Your Worth
+    .accept 422 >>Accept Arugal's Folly
 step
     #sticky
     #completewith Nightlash
-    >>杀死熊。掠夺他们的心
+    >>Kill Bears. Loot them for their hearts
     .complete 447,1 --Grizzled Bear Heart (6)
 step
-    >>进入瓦尔根庄园房子的二楼。抢劫地板上的书
+    >>Go into the 2nd floor of the house in Valgan's Field. Loot the books on the floor
     .goto Silverpine Forest,52.82,28.58
     .complete 422,1 --Remedy of Arugal (1)
 step
-    >>到楼上去
+    >>Go upstairs in the building
     .goto Silverpine Forest,53.43,12.59
-    .turnin 430 >>交回奎因
+    .turnin 430 >>Turn in Return to Quinn
 step
-    >>回到外面去
+    >>Go back outside
     .goto Silverpine Forest,53.46,13.43
-    .accept 425 >>接受伊瓦尔的犯规
+    .accept 425 >>Accept Ivar the Foul
 step
-    >>在谷仓杀死伊瓦尔。抢走他的头
+    >>Kill Ivar in the Barn. Loot his Head
     .goto Silverpine Forest,51.51,13.90
     .complete 425,1 --Ivar's Head (1)
 step
     .goto Silverpine Forest,53.46,13.43
-    .turnin 425 >>将犯规交给Ivar
+    .turnin 425 >>Turn in Ivar the Foul
 step
     #label Nightlash
     .unitscan Nightlash
-    >>杀死死地周围的侏儒，直到夜鞭繁殖。为了她的精华而杀死并抢劫她
+    >>Kill Gnolls around The Dead Field until Nightlash spawns. Kill and Loot her for her Essence
     .goto Silverpine Forest,45.44,21.01
     .complete 437,1 --Enter the Dead Fields (1)
     .complete 437,2 --Essence of Nightlash (1)
 step
     .unitscan Son of Arugal
-    >>杀死该地区的熊。掠夺他们的心。避开阿鲁加尔之子
+    >>Kill Bears in the area. Loot them for their hearts. Avoid Sons of Arugal
     .goto Silverpine Forest,41.73,17.83
     .complete 447,1 --Grizzled Bear Heart (6)
 step
     .unitscan Krethis Shadowspinner
-    >>杀死该地区的蜘蛛。抢他们的血。
-    >> 小心这个地区的稀有物种，因为这不可能是困难的 << !Mage !Warlock
-    >> 小心这个地区的稀有物种，因为这很难但可行。她在15秒的冷却时间内拥有130点伤害的护盾，110点伤害的瞬间冲击能力 << Mage/Warlock
+    >>Kill Spiders in the area. Loot them for their Blood.
+    >> Be careful of the rare in the area, as it's impossibly difficult << !Mage !Warlock
+    >> Be careful of the rare in the area, as it's difficult but doable. She has a 130 damage shield on a 15s cooldown, and 110 damage instant shock ability << Mage/Warlock
     .goto Silverpine Forest,35.81,14.44
     .complete 447,2 --Skittering Blood (6)
 step
     #softcore
-    .deathskip >> 在坟墓中死去并重生
+    .deathskip >> Die and respawn at The Sepulcher
 step
     #era
     #hardcore
-    >>跑回坟墓
+    >>Run back to The Sepulcher
     .goto Silverpine Forest,44.20,39.75
-    .turnin 422 >> 交给阿鲁加尔的愚蠢
-    .accept 423 >> 接受阿鲁加尔的愚蠢
+    .turnin 422 >> Turn in Arugal's Folly
+    .accept 423 >> Accept Arugal's Folly
 step
     #som
     #hardcore
-    >>跑回坟墓
+    >>Run back to The Sepulcher
     .goto Silverpine Forest,44.20,39.75
-    .turnin 422 >> 交给阿鲁加尔的愚蠢
+    .turnin 422 >> Turn in Arugal's Folly
 step << Warlock/Mage/Priest
     #completewith next
     .money <0.1400
     .goto Silverpine Forest,44.80,39.24
-    >> 与安德里亚交谈，检查智者腰带。如果价格上涨就买
+    >> Talk to Andrea and check for a Wise Man's Belt. Buy it if its up
     .collect 4786,1
 step
     #era
     #softcore
     .goto Silverpine Forest,44.20,39.75
-    .turnin 422 >> 交给阿鲁加尔的愚蠢
-    .accept 423 >> 接受阿鲁加尔的愚蠢
+    .turnin 422 >> Turn in Arugal's Folly
+    .accept 423 >> Accept Arugal's Folly
 step
     #som
     #softcore
     .goto Silverpine Forest,44.20,39.75
-    .turnin 422 >> 交给阿鲁加尔的愚蠢
+    .turnin 422 >> Turn in Arugal's Folly
 step
-    >>下到地穴
+    >>Go down into the Crypt
     .goto Silverpine Forest,43.43,40.87
-    .turnin 437 >> 把死地交出来
-    .accept 438 >> 接受递减渡轮
+    .turnin 437 >> Turn in The Dead Fields
+    .accept 438 >> Accept The Decrepit Ferry
 step << Undead
     .goto Silverpine Forest,45.62,42.60
-    >>还不要去地下城
-    .turnin 6321 >>轮流供应墓穴
-    .accept 6323 >>接受前往地下城的骑行
-    .fp Sepulcher >> 获取墓穴飞行路线
+    >>DO NOT go Undercity yet
+    .turnin 6321 >>Turn in Supplying the Sepulcher
+    .accept 6323 >>Accept Ride to the Undercity
+    .fp Sepulcher >> Get the Sepulcher flight path
 step
-    >>单击船
+    >>Click on the Boat
     .goto Silverpine Forest,58.39,34.79
-    .turnin 438 >>在Decrepti Ferry转弯
-    .accept 439 >>接受腐烂隐藏线索
+    .turnin 438 >>Turn in The Decrepit Ferry
+    .accept 439 >>Accept Rot Hide Clues
 step
     #era
     #label Shackles
-    >>杀死该地区的沃根。抢劫他们的镣铐
+    >>Kill Worgen in the area. Loot them for their Shackles
     .goto Silverpine Forest,56.24,46.61
     .complete 423,1 --Glutton Shackle (6)
     .complete 423,2 --Darksoul Shackle (3)
 step
     #softcore
     .goto Silverpine Forest,49.89,60.33
-    >>跑进营地，点击板条箱。进去，拿起任务，然后死去。当暴徒施放冰箭时要小心
-    .turnin 477 >>交出过境点
-    .accept 478 >>接受地图和符文
-    .deathskip >> 在坟墓中死去并重生
+    >>Run into the camp and click on the crate. Turn in, pick up the quest, and die. Be careful as the mobs cast Frostbolt
+    .turnin 477 >>Turn in Border Crossings
+    .accept 478 >>Accept Maps and Runes
+    .deathskip >> Die and respawn in The Sepulcher
 step
     #hardcore
     .goto Silverpine Forest,49.89,60.33
-    >>点击营地中的板条箱。小心杀死该区域的暴徒，因为他们会施放冰霜箭，很容易逃跑并攻击其他暴徒
-    .turnin 477 >>交出过境点
-    .accept 478 >>接受地图和符文
+    >>Click on the crate in the camp. Be careful killing the mobs in the area, as they cast Frostbolt and can easily run away and aggro other mobs
+    .turnin 477 >>Turn in Border Crossings
+    .accept 478 >>Accept Maps and Runes
 step
     #softcore
     .goto Silverpine Forest,43.98,40.93
-    .turnin 478 >>交出地图和符文
-    .accept 481 >>接受达拉的分析
+    .turnin 478 >>Turn in Maps and Runes
+    .accept 481 >>Accept Dalar's Analysis
 step
     #hardcore
-    >>跑回坟墓
+    >>Run back to The Sepulcher
     .goto Silverpine Forest,43.98,40.93
-    .turnin 478 >>交出地图和符文
-    .accept 481 >>接受达拉的分析
+    .turnin 478 >>Turn in Maps and Runes
+    .accept 481 >>Accept Dalar's Analysis
 step
     #era
     .goto Silverpine Forest,44.18,39.77
-    .turnin 423 >>交给阿鲁加尔的愚蠢
-    .turnin 481 >>提交达拉的分析
-    .accept 482 >>接受达拉然的意图
---    .accept 424 >>接受阿鲁加尔的愚蠢
+    .turnin 423 >>Turn in Arugal's Folly
+    .turnin 481 >>Turn in Dalar's Analysis
+    .accept 482 >>Accept Dalaran's Intentions
+--    .accept 424 >>Accept Arugal's Folly
 step
     #som
     .goto Silverpine Forest,44.18,39.77
-    .turnin 481 >>提交达拉的分析
-    .accept 482 >>接受达拉然的意图
---    .accept 424 >>接受阿鲁加尔的愚蠢
+    .turnin 481 >>Turn in Dalar's Analysis
+    .accept 482 >>Accept Dalaran's Intentions
+--    .accept 424 >>Accept Arugal's Folly
 step
     .goto Silverpine Forest,43.98,40.93
-    .turnin 482 >>交出达拉然的意图
---   .accept 479 >>接受Ambermill调查
+    .turnin 482 >>Turn in Dalaran's Intentions
+--   .accept 479 >>Accept Ambermill Investigations
 step
-    >>下楼到地下室
+    >>Go downstairs into the crypt
     .goto Silverpine Forest,43.43,40.87
-    .turnin 439 >>交出腐烂隐藏线索
-    .accept 440 >>接受雕刻戒指 << Undead
---   .accept 443 >>接受腐烂隐藏Ichor
+    .turnin 439 >>Turn in Rot Hide Clues
+    .accept 440 >>Accept The Engraved Ring << Undead
+--   .accept 443 >>Accept Rot Hide Ichor
 -- Engraved ring q line worth it depending on class?
 step << Undead
     .xp 14
 step << Undead
-    .hs >> 炉膛到地下城
+    .hs >> Hearth to Undercity
 step << !Undead Rogue
    .goto Silverpine Forest,45.62,42.60
-    .fp Sepulcher >> 获取墓穴飞行路线
-    .fly Undercity >> 飞到地下城
+    .fp Sepulcher >> Get the Sepulcher flight path
+    .fly Undercity >> Fly to Undercity
 step << Undead
     .goto Undercity,61.48,41.81
-    .turnin 6323 >> 转入地下城
-    .accept 6322 >> 接受Michael Garrett
+    .turnin 6323 >> Turn in Ride to the Undercity
+    .accept 6322 >> Accept Michael Garrett
 step << Undead
     .goto Undercity,63.27,48.55
-    .turnin 6322 >>交给Michael Garrett
---    .accept 6324 >>接受返回Podrig
+    .turnin 6322 >>Turn in Michael Garrett
+--    .accept 6324 >>Accept Return to Podrig
 step << Warrior
     .goto Undercity,46.93,15.23
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Undead Rogue
     .isQuestComplete 1886
     .goto Undercity,83.52,69.10
-    .turnin 1886 >> 交出死亡追踪者
+    .turnin 1886 >> Turn in The Deathstalkers
 step << Undead Rogue
     .goto Undercity,83.52,69.10
-    .accept 1898 >>接受死亡追踪者
+    .accept 1898 >>Accept The Deathstalkers
     .isQuestTurnedIn 1886
 step << Rogue
     .goto Undercity,83.87,72.08
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Priest
     .goto Undercity,48.98,18.33
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Undead Rogue
     .isQuestTurnedIn 1886
     .goto Undercity,54.84,76.31
-    .turnin 1898 >> 交出死亡追踪者
-    .accept 1899 >> 接受死亡追踪者
+    .turnin 1898 >> Turn in The Deathstalkers
+    .accept 1899 >> Accept The Deathstalkers
 step << Undead Rogue
     .isQuestTurnedIn 1886
     .goto Undercity,55.43,76.87
-    >>在Andron身后抢劫书架
+    >>Loot the Bookshelf behind Andron
     .complete 1899,1
 step << Undead Rogue
     .isQuestTurnedIn 1886
     .goto Undercity,83.53,69.12
-    .turnin 1899 >> 交出死亡追踪者
-    .accept 1978 >> 接受死亡追踪者
+    .turnin 1899 >> Turn in The Deathstalkers
+    .accept 1978 >> Accept The Deathstalkers
 step << Mage
     .goto Undercity,85.15,10.04
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Warlock
     .goto Undercity,86.20,15.92
-    .trainer >> 在建筑内训练你的职业法术
+    .trainer >> Train your class spells inside the building
 step
     .goto Undercity,52.86,77.72,40,0
     .goto Undercity,48.83,69.28
-    .turnin 447 >>交出死亡处方
+    .turnin 447 >>Turn in A Recipe For Death
 step
     .goto Undercity,50.15,67.98
-    .turnin 1359 >> 交给Zinge的礼物
-    .accept 1358 >> 接受Helbrim的样本
+    .turnin 1359 >> Turn in Zinge's Delivery
+    .accept 1358 >> Accept Sample for Helbrim
 step << Undead Rogue
     .isQuestTurnedIn 1886
     .goto Tirisfal Glades,58.86,78.76,40,0
     .goto Tirisfal Glades,59.75,84.64
-    .turnin 1978 >>交出死亡追踪者
-    >>转到主平台的边缘，执行“注销跳过”，方法是定位角色，直到其看起来像是浮动的，然后注销并重新登录。
-    .link https://www.youtube.com/watch?v=jj85AXyF1XE >> 当跑向转弯处时，打开此标签。单击此处查看示例
-    >>如果你做不到这一点，就正常离开幽暗城
+    .turnin 1978 >>Turn in The Deathstalkers
+    >>Go to the edge of the main platform and perform a Logout Skip by positioning your character until it looks like they're floating, then logging out and back in.
+    .link https://www.youtube.com/watch?v=jj85AXyF1XE >> Open this tab when running to the turn in. CLICK HERE for an example
+    >>If you can't do this, just run out of Undercity normally
 step << Undead Rogue
     .isOnQuest 1886
-    >>放弃死亡追踪者，没有机会了
-    .abandon 1886 >> 抛弃死亡追踪者
+    >>Abandon The Deathstalkers, there's no opportunity left to do it
+    .abandon 1886 >> Abandon The Deathstalkers
 step << Undead !Rogue
     #sticky
     #completewith next
-    +执行注销跳过，跳到身后的书架上，然后注销并重新登录。
-    .link https://www.youtube.com/watch?v=c0DFOlRQrKs >> 单击此处查看示例
-    >>如果你做不到这一点，就正常离开幽暗城
+    +Perform a Logout Skip by jumping on the Bookshelf behind you, then logging out and back in.
+    .link https://www.youtube.com/watch?v=c0DFOlRQrKs >> CLICK HERE for an example
+    >>If you can't do this, just run out of Undercity normally
 step << !Undead Rogue
-    .hs >> 炉膛到十字路口
+    .hs >> Hearth to Crossroads
 step << Undead
-    .goto Tirisfal Glades,61.85,66.59,60 >> 退出地下城
+    .goto Tirisfal Glades,61.85,66.59,60 >> Exit Undercity
 step << Undead
     .goto Tirisfal Glades,61.26,50.84
-    .turnin 440 >>交出雕刻的戒指
-    .accept 441 >>接受罗利和幽暗城
+    .turnin 440 >>Turn in The Engraved Ring
+    .accept 441 >>Accept Raleigh and the Undercity
 step << Undead
     #sticky
     #completewith next
-    +登上齐柏林塔。把齐柏林飞艇带到奥格瑞玛。在等待时制作磨砂石/绷带 << Warrior/Rogue
-    +登上齐柏林塔。把齐柏林飞艇带到奥格瑞玛。在等待时召唤食物/水 << Mage
-    +登上齐柏林塔。把齐柏林飞艇带到奥格瑞玛。 << !Warrior !Rogue !Mage
+    +Go up the Zeppelin Tower. Take the Zeppelin to Orgrimmar. Make Sharpening Stones/Bandages while you wait << Warrior/Rogue
+    +Go up the Zeppelin Tower. Take the Zeppelin to Orgrimmar. Conjure Food/water while you wait << Mage
+    +Go up the Zeppelin Tower. Take the Zeppelin to Orgrimmar. << !Warrior !Rogue !Mage
     .goto Tirisfal Glades,60.74,58.74
 step << Undead
-    .zone Durotar >> 把齐柏林飞艇带到杜隆塔尔
+    .zone Durotar >> Take the zeppelin to Durotar
 step << Undead
     .goto Durotar,50.85,43.59
-    .accept 840 >>接受部落征兵
+    .accept 840 >>Accept Conscript of the Horde
 step << Undead
     .goto The Barrens,62.26,19.38
-    .turnin 840 >>交出部落征兵
-    .accept 842 >>接受十字路口征兵
+    .turnin 840 >>Turn in Conscript of the Horde
+    .accept 842 >>Accept Crossroads Conscription
 step << Undead
-    >>途中碾碎暴徒 << Warrior/Rogue
+    >>Grind mobs en route << Warrior/Rogue
     .goto The Barrens,52.23,31.01
-    .turnin 842 >>交出十字路口征兵
-    .accept 844 >>接受平原漫游者威胁
+    .turnin 842 >>Turn in Crossroads Conscription
+    .accept 844 >>Accept Plainstrider Menace
 step << Mage
-    +如果您计划通过AoE调平，请手动选择“荒地AoE指南”。否则，请完成此步骤
+    +If you're planning on leveling via AoE, choose the Barrens AoE Guide manually. Otherwise, complete this step
 ]])

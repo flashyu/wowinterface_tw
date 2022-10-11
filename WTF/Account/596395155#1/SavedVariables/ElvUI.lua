@@ -22,6 +22,14 @@ ElvDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
+			["databars"] = {
+				["reputation"] = {
+					["enable"] = true,
+					["width"] = 8,
+					["orientation"] = "VERTICAL",
+					["height"] = 202,
+				},
+			},
 			["general"] = {
 				["valuecolor"] = {
 					["b"] = 0.04,
@@ -29,13 +37,35 @@ ElvDB = {
 					["r"] = 1,
 				},
 			},
-			["bags"] = {
-				["vendorGrays"] = {
-					["enable"] = true,
-				},
-			},
 			["dbConverted"] = 12.91,
+			["movers"] = {
+				["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,268,350",
+				["ElvUF_FocusCastbarMover"] = "BOTTOM,UIParent,BOTTOM,309,203",
+				["TotemTrackerMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,417,26",
+				["ShiftAB"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,418,209",
+				["ElvAB_5"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-490,22",
+				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,307,228",
+				["ElvAB_2"] = "BOTTOM,ElvUIParent,BOTTOM,0,23",
+				["ReputationBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,417,4",
+				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
+				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-269,350",
+				["ElvUF_PetCastbarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,471,78",
+				["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,98",
+				["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,0,61",
+				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
+				["VehicleLeaveButton"] = "BOTTOM,UIParent,BOTTOM,0,493",
+				["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-574,282",
+			},
 			["convertPages"] = true,
+			["chat"] = {
+				["tabSelectorColor"] = {
+					["b"] = 0.04,
+					["g"] = 0.49,
+					["r"] = 1,
+				},
+				["panelSnapRightID"] = 4,
+				["panelSnapLeftID"] = 1,
+			},
 			["unitframe"] = {
 				["units"] = {
 					["party"] = {
@@ -59,6 +89,14 @@ ElvDB = {
 						["r"] = 1,
 					},
 					["castClassColor"] = true,
+				},
+			},
+			["datatexts"] = {
+				["panels"] = {
+					["MinimapPanel"] = {
+						"WeakAuras", -- [1]
+						"Date", -- [2]
+					},
 				},
 			},
 			["actionbar"] = {
@@ -95,37 +133,11 @@ ElvDB = {
 					["buttonSize"] = 36,
 				},
 			},
-			["movers"] = {
-				["ElvUF_FocusCastbarMover"] = "BOTTOM,UIParent,BOTTOM,309,203",
-				["TotemTrackerMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,417,26",
-				["ShiftAB"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,418,209",
-				["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,268,350",
-				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,307,228",
-				["ElvAB_2"] = "BOTTOM,ElvUIParent,BOTTOM,0,23",
-				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
-				["ElvAB_5"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-490,22",
-				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-269,350",
-				["ElvUF_PetCastbarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,471,78",
-				["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,98",
-				["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,0,61",
-				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
-				["VehicleLeaveButton"] = "BOTTOM,UIParent,BOTTOM,0,493",
-				["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-574,282",
-			},
-			["chat"] = {
-				["tabSelectorColor"] = {
-					["b"] = 0.04,
-					["g"] = 0.49,
-					["r"] = 1,
-				},
-				["panelSnapRightID"] = 4,
-				["panelSnapLeftID"] = 1,
-			},
 		},
 	},
 	["gold"] = {
 		["祈福"] = {
-			["骑风"] = 186993679,
+			["骑风"] = 189296334,
 			["红发男"] = 0,
 			["仓库技师"] = 0,
 			["死哪了"] = 2000,
@@ -226,6 +238,9 @@ ElvPrivateDB = {
 			["install_complete"] = 12.91,
 		},
 		["骑风 - 祈福"] = {
+			["general"] = {
+				["worldMap"] = false,
+			},
 			["bags"] = {
 				["enable"] = false,
 			},

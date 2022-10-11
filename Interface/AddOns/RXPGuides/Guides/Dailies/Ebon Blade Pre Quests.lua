@@ -1,396 +1,396 @@
 RXPGuides.RegisterGuide([[
 #version 1
-#group +RestedXP 诺森德每日任务
-#subgroup 阵营每日任务
+#group +RestedXP Northrend Daily Quests
+#subgroup Faction Daily Quests
 #wotlk
-#name 黑檀之刃解锁每日任务
+#name Ebon Blade Unlock Daily Quests
 
 step
-    +您已经完成了黑檀之刃骑士任务前链。请使用《黑檀之刃每日任务路线指南》完成每日任务。
+    +You have completed the Knights of the Ebon Blade Pre Quest chain. Please use the Ebon Blade Daily Quests Route guide to complete the daily quests.
 	.isQuestTurnedIn 12814
 
 step << Alliance
-    .goto 冰冠冰川Glacier,65.1,57.2,0
-    .goto 冰冠冰川Glacier,64.7,52.4,0
-    .goto 冰冠冰川Glacier,62.1,45.9,0
-    .goto 冰冠冰川Glacier,57.5,39.1,0
-    .goto 冰冠冰川Glacier,54.7,35.3,0
-	>>飞到破天荒号，联盟的大船，在高空盘旋
-	>>与船左后角的Thassarian交谈
-    .accept 12887 >>接受一切乐趣和游戏
+    .goto IcecrownGlacier,65.1,57.2,0
+    .goto IcecrownGlacier,64.7,52.4,0
+    .goto IcecrownGlacier,62.1,45.9,0
+    .goto IcecrownGlacier,57.5,39.1,0
+    .goto IcecrownGlacier,54.7,35.3,0
+	>>Fly to The Skybreaker, the big Alliance ship that's flying around high up in the air
+	>>Talk to Thassarian at the back left corner of the ship
+    .accept 12887 >>Accept It's All Fun and Games
 step << Horde
-	.goto 冰冠冰川,62.58,45.04
-	>>飞到奥格瑞姆之锤，一艘在高空盘旋的部落大船
-	>>在船的前室与Koltira Deathweaver交谈
-    .accept 12892 >>接受一切乐趣和游戏
+	.goto Icecrown,62.58,45.04
+	>>Fly to Orgrim's Hammer, the big Horde ship that's flying around high up in the air
+	>>Talk to Koltira Deathweaver in the front room of the ship
+    .accept 12892 >>Accept It's All Fun and Games
 step
-    .goto 冰冠冰川Glacier,44.5,21.6
-	.use 41265 >> 飞到塔顶。在眼袋中使用Eyesoir Blaster，直到其死亡
+    .goto IcecrownGlacier,44.5,21.6
+	.use 41265 >> Fly to the top of the tower. Use the Eyesore Blaster in your bags on the Ocular until it dies
     .complete 12887,1 << Alliance --The Ocular has been destroyed (1)
     .complete 12892,1 << Horde --The Ocular has been destroyed (1)
 step
-    .goto 冰冠冰川Glacier,44.1,24.7
-	>>一直飞到地面上的男爵西尔弗。跟他谈谈
-    .turnin 12887 >>交给It's All Fun and Games << Alliance
-    .turnin 12892 >>交给It's All Fun and Games << Horde
-    .accept 12891 >>接受我的想法，但首先。。。
+    .goto IcecrownGlacier,44.1,24.7
+	>>Fly all the way down to Baron Silver on the ground. Talk to him
+    .turnin 12887 >>Turn in It's All Fun and Games << Alliance
+    .turnin 12892 >>Turn in It's All Fun and Games << Horde
+    .accept 12891 >>Accept I Have an Idea, But First...
 step
-	>>杀死艺人并掠夺他们的绳索，杀死憎恶者并掠夺其钩子，杀死邪教教徒并掠夺它们的棍子，杀死亡灵暴徒并掠夺她们的灵魂
+	>>Kill Geists and loot them for their Rope, kill Abominations and loot them for their Hook, kill Cultists and loot them for their Rod, and kill Undead mobs and loot them for their Essence
     .complete 12891,1 --Cultist Rod (1)
-    .goto 冰冠冰川Glacier,43.8,24.2,40,0
-    .goto 冰冠冰川Glacier,43.6,25.1,40,0
-    .goto 冰冠冰川Glacier,43.7,25.4,40,0
-    .goto 冰冠冰川Glacier,42.5,25.1,40,0
-    .goto 冰冠冰川Glacier,42.3,26.1
+    .goto IcecrownGlacier,43.8,24.2,40,0
+    .goto IcecrownGlacier,43.6,25.1,40,0
+    .goto IcecrownGlacier,43.7,25.4,40,0
+    .goto IcecrownGlacier,42.5,25.1,40,0
+    .goto IcecrownGlacier,42.3,26.1
     .complete 12891,3 --Geist Rope (1)
-    .goto 冰冠冰川Glacier,43.4,25.6,40,0
-    .goto 冰冠冰川Glacier,43.3,26.6,40,0
-    .goto 冰冠冰川Glacier,42.5,26.4,40,0
-    .goto 冰冠冰川Glacier,42.9,24.5
+    .goto IcecrownGlacier,43.4,25.6,40,0
+    .goto IcecrownGlacier,43.3,26.6,40,0
+    .goto IcecrownGlacier,42.5,26.4,40,0
+    .goto IcecrownGlacier,42.9,24.5
     .complete 12891,2 --Abomination Hook (1)
-    .goto 冰冠冰川Glacier,43.3,24.1,40,0
-    .goto 冰冠冰川Glacier,43.5,26.2,40,0
-    .goto 冰冠冰川Glacier,42.5,28.1,40,0
-    .goto 冰冠冰川Glacier,42.7,25.7
+    .goto IcecrownGlacier,43.3,24.1,40,0
+    .goto IcecrownGlacier,43.5,26.2,40,0
+    .goto IcecrownGlacier,42.5,28.1,40,0
+    .goto IcecrownGlacier,42.7,25.7
    .complete 12891,4 --Scourge Essence (5)
-    .goto 冰冠冰川Glacier,43.6,24.1,40,0
-    .goto 冰冠冰川Glacier,42.6,27.2,40,0
-    .goto 冰冠冰川Glacier,42.3,26.1
+    .goto IcecrownGlacier,43.6,24.1,40,0
+    .goto IcecrownGlacier,42.6,27.2,40,0
+    .goto IcecrownGlacier,42.3,26.1
 step
-    .goto 冰冠冰川Glacier,44.2,24.6
-	>>返回银色
-    .turnin 12891 >>交上来我有个主意，但首先。。。
-    .accept 12893 >>接受自由思想
+    .goto IcecrownGlacier,44.2,24.6
+	>>Return to Silver
+    .turnin 12891 >>Turn in I Have an Idea, But First...
+    .accept 12893 >>Accept Free Your Mind
 step
-    .goto 冰冠冰川Glacier,44.4,27.0
-	.use 41366 >> 杀死维尔。在他的尸体上使用主权杖
+    .goto IcecrownGlacier,44.4,27.0
+	.use 41366 >> Kill Vile. Use the Sovereign Rod on his corpse
     .complete 12893,1 --Vile turned (1)
 step
-    .goto 冰冠冰川Glacier,41.8,24.5
-	.use 41366 >> 杀死夜鹰女士。在她的尸体上使用主权杖
+    .goto IcecrownGlacier,41.8,24.5
+	.use 41366 >> Kill Lady Nightswood. Use the Sovereign Rod on her corpse
     .complete 12893,2 --Lady Nightswood turned (1)
 step
-    .goto 冰冠冰川Glacier,43.0,23.5,70,0
-    .goto 冰冠冰川Glacier,44.8,24.3,70,0
-    .goto 冰冠冰川Glacier,46.2,21.9,70,0
-    .goto 冰冠冰川Glacier,45.7,19.7,70,0
-    .goto 冰冠冰川Glacier,43.7,19.0,70,0
-    .goto 冰冠冰川Glacier,42.6,21.1
-	.use 41366 >> 杀死Leaper。在他的尸体上使用主权杖。他在上层的主楼外面走动。
+    .goto IcecrownGlacier,43.0,23.5,70,0
+    .goto IcecrownGlacier,44.8,24.3,70,0
+    .goto IcecrownGlacier,46.2,21.9,70,0
+    .goto IcecrownGlacier,45.7,19.7,70,0
+    .goto IcecrownGlacier,43.7,19.0,70,0
+    .goto IcecrownGlacier,42.6,21.1
+	.use 41366 >> Kill The Leaper. Use the Sovereign Rod on his corpse. He walks around OUTSIDE the main building on the upper floor.
     .complete 12893,3 --The Leaper turned (1)
 	.unitscan The Leaper
 step
 	#label Freemind
-    .goto 冰冠冰川Glacier,44.2,24.7
-	>>返回银色
-    .turnin 12893 >>转身解放你的思想
-    .accept 12896 >>如果他不能被转动就接受 << Alliance
-    .accept 12897 >>如果他不能被转动就接受 << Horde
+    .goto IcecrownGlacier,44.2,24.7
+	>>Return to Silver
+    .turnin 12893 >>Turn in Free Your Mind
+    .accept 12896 >>Accept If He Cannot Be Turned << Alliance
+    .accept 12897 >>Accept If He Cannot Be Turned << Horde
 step
-    .goto 冰冠冰川Glacier,44.7,19.8
-	>> 进入大楼，点击将军的武器架。小心，因为这会产生精英。杀死Lightsbane将军
+    .goto IcecrownGlacier,44.7,19.8
+	>> Go into the building and click the General's Weapon Rack. Be careful as this spawns an elite. Kill General Lightsbane
     .complete 12896,1 << Alliance --General Lightsbane (1)
     .complete 12897,1 << Horde --General Lightsbane (1)
 step << Alliance
-    .goto 冰冠冰川Glacier,65.1,57.2,0
-    .goto 冰冠冰川Glacier,64.7,52.4,0
-    .goto 冰冠冰川Glacier,62.1,45.9,0
-    .goto 冰冠冰川Glacier,57.5,39.1,0
-    .goto 冰冠冰川Glacier,54.7,35.3,0
-	>>飞回破天者。与船左后角的Thassarian交谈
-    .turnin 12896 >>如果他不能被移交，则返回移交处
-    .accept 12898 >>接受阴影Vault
+    .goto IcecrownGlacier,65.1,57.2,0
+    .goto IcecrownGlacier,64.7,52.4,0
+    .goto IcecrownGlacier,62.1,45.9,0
+    .goto IcecrownGlacier,57.5,39.1,0
+    .goto IcecrownGlacier,54.7,35.3,0
+	>>Fly back to The Skybreaker. Talk to Thassarian at the back left corner of the ship
+    .turnin 12896 >>Return to the Turn in If He Cannot Be Turned
+    .accept 12898 >>Accept The Shadow Vault
 step << Horde
-	>>飞回奥格里姆之锤。在船的前室与Koltira Deathweaver交谈
-    .turnin 12897 >>如果他不能被移交就移交
-    .accept 12899 >>接受阴影Vault
+	>>Fly back to Orgrim's Hammer. Talk to Koltira Deathweaver in the front room of the ship
+    .turnin 12897 >>Turn in If He Cannot Be Turned
+    .accept 12899 >>Accept The Shadow Vault
 step
-    .goto 冰冠冰川Glacier,42.8,24.9
-	>>返回男爵西尔弗
-	.turnin 12898 >>交出暗影保险库 << Alliance
-    .turnin 12899 >>交出暗影保险库 << Horde
-    .accept 12938 >>接受公爵
+    .goto IcecrownGlacier,42.8,24.9
+	>>Return to Baron Silver
+	.turnin 12898 >>Turn in The Shadow Vault << Alliance
+    .turnin 12899 >>Turn in The Shadow Vault << Horde
+    .accept 12938 >>Accept The Duke
 step
 	#completewith next
-    .goto 冰冠冰川Glacier,43.7,24.4
-    .fp The Shadow Vault >> 获取阴影保险库飞行路径
+    .goto IcecrownGlacier,43.7,24.4
+    .fp The Shadow Vault >> Get the The Shadow Vault flight path
 step
-    .goto 冰冠冰川Glacier,44.7,20.3
-	>>进入大楼。与Lankral交谈
-    .turnin 12938 >>交给公爵
-    .accept 12939 >>接受荣誉挑战
+    .goto IcecrownGlacier,44.7,20.3
+	>>Go inside the building. Talk to Lankral
+    .turnin 12938 >>Turn in The Duke
+    .accept 12939 >>Accept Honor Challenge
 step
-    .goto 冰冠冰川,43.60,25.13
-	>>与Leaper交谈，他绕着帐篷走
-    .accept 12955 >>接受消除竞争
+    .goto Icecrown,43.60,25.13
+	>>Speak with The Leaper, he walks around the tent
+    .accept 12955 >>Accept Eliminate the Competition
 step
-    .goto 冰冠冰川Glacier,37.5,24.7,0,0
+    .goto IcecrownGlacier,37.5,24.7,0,0
 	#sticky
 	#label mjordincombat
-	.use 41372 >> 在远处的乔丹战斗人员身上使用挑战旗。你可以一次挑战多个战斗人员，只要你不参与战斗(但每两人一组只有一个怪物)
+	.use 41372 >> Use the Challenge Flag on the Mjordin Combatant from far away. You can challenge multiple Combatants at once as long as you stay out of combat (but only 1 mob per duo of 2)
     .complete 12939,1 --Mjordin Combatants challenged and defeated (6)
 step
-	>>飞向野蛮人边缘
-	>>在Savage Ledge与Tinky、Sigrid、Onu'zun和Efrem交谈。击败他们
+	>>Fly to the Savage Ledge
+	>>Talk to Tinky, Sigrid, Onu'zun and Efrem at the Savage Ledge. Defeat them
     .complete 12955,4 --Tinky Wickwhistle defeated (1)
-    .goto 冰冠冰川Glacier,36.1,23.6
+    .goto IcecrownGlacier,36.1,23.6
     .complete 12955,1 --Sigrid Iceborn defeated (1)
-    .goto 冰冠冰川Glacier,37.1,22.4
+    .goto IcecrownGlacier,37.1,22.4
     .complete 12955,3 --Onu'zun defeated (1)
-    .goto 冰冠冰川Glacier,37.9,22.9
+    .goto IcecrownGlacier,37.9,22.9
     .complete 12955,2 --Efrem the Faithful defeated (1)
-    .goto 冰冠冰川Glacier,37.9,25.1
+    .goto IcecrownGlacier,37.9,25.1
 	.skipgossip
 step
-    .goto 冰冠冰川Glacier,43.5,25.0
-	>>返回Leaper
-    .turnin 12955 >>上缴消除竞争
+    .goto IcecrownGlacier,43.5,25.0
+	>>Return to The Leaper
+    .turnin 12955 >>Turn in Eliminate the Competition
 step
-    .goto 冰冠冰川Glacier,44.7,20.3
-	>>进入大楼。与Lankral交谈
-    .turnin 12939 >>移交荣誉挑战
-    .accept 12943 >>接受暗影密室法令
+    .goto IcecrownGlacier,44.7,20.3
+	>>Go inside the building. Talk to Lankral
+    .turnin 12939 >>Turn in Honor Challenge
+    .accept 12943 >>Accept Shadow Vault Decree
 step
 	#completewith next
-    .goto 冰冠冰川Glacier,39.01,23.99,25 >> 通往乌夫兰大厅的路从这里开始
+    .goto IcecrownGlacier,39.01,23.99,25 >> The Path to Ufrang's Hall start here
 step
-    .goto 冰冠冰川Glacier,41.0,23.9
-	>> 回到野人山崖，然后进入乌夫兰的大厅。和被锁在里面的维伦谈谈
-    .accept 12949 >>接受获取密钥
+    .goto IcecrownGlacier,41.0,23.9
+	>> Go back to the Savage Ledge and then go inside Ufrang's Hall. Talk to Vaelen who is chained up inside
+    .accept 12949 >>Accept Get the Key
 step
-    .goto 冰冠冰川Glacier,40.3,23.9
-	.use 41776 >> 在Thane前面的包中使用影子金库法令。杀了他。
+    .goto IcecrownGlacier,40.3,23.9
+	.use 41776 >> Use the Shadow Vault Decree in your bags in front of Thane. Kill him.
     .complete 12943,1 --Thane Ufrang the Mighty (1)
 step
-    .goto 冰冠冰川Glacier,37.7,23.9,70,0
-    .goto 冰冠冰川Glacier,36.7,23.7
-	>>回到外面的野人山崖。杀死在附近巡逻的教官赫罗加。抢他的钥匙
+    .goto IcecrownGlacier,37.7,23.9,70,0
+    .goto IcecrownGlacier,36.7,23.7
+	>>Go back outside to the Savage Ledge. Kill Instructor Hroegar who is patrolling around. Loot him for his key
     .complete 12949,1 --Key to Vaelen's Chains (1)
 	.unitscan Instructor Hroegar
 step
-    .goto 冰冠冰川Glacier,41.0,23.9
-	>>回到乌夫兰的大厅。返回Vaelen
-    .turnin 12949 >>进去拿钥匙
-    .accept 12951 >>接受让男爵知道
+    .goto IcecrownGlacier,41.0,23.9
+	>>Go back inside Ufrang's hall. Return to Vaelen
+    .turnin 12949 >>Turn in Get the Key
+    .accept 12951 >>Accept Let the Baron Know
 step
-    .goto 冰冠冰川Glacier,39.01,23.99,25,0
-    .goto 冰冠冰川Glacier,42.9,24.9
-	>>离开大厅。返回男爵西尔弗
-    .turnin 12951 >>交上来让男爵知道
-    .daily 12995 >>接受并留下我们的印记
-    .accept 13085 >>接受Vaelen已返回
+    .goto IcecrownGlacier,39.01,23.99,25,0
+    .goto IcecrownGlacier,42.9,24.9
+	>>Exit the Hall. Return to Baron Silver
+    .turnin 12951 >>Turn in Let the Baron Know
+    .daily 12995 >>Accept Leave Our Mark
+    .accept 13085 >>Accept Vaelen Has Returned
 step
-    .goto 冰冠冰川Glacier,43.6,24.1,60,0
-    .goto 冰冠冰川Glacier,42.7,26.8
-	>>与沿着主要道路巡逻的Vile交谈
-    .accept 12992 >>接受Crush Dem Vrykuls！
+    .goto IcecrownGlacier,43.6,24.1,60,0
+    .goto IcecrownGlacier,42.7,26.8
+	>>Talk to Vile patrolling along the main road
+    .accept 12992 >>Accept Crush Dem Vrykuls!
 step
-    .goto 冰冠冰川Glacier,43.8,23.3,30,0
-    .goto 冰冠冰川Glacier,43.1,21.1
-	>> 进入大楼。与左侧的Vaelen交谈
-    .turnin 13085 >>Vaelen回来了
-    .accept 12982 >>接受黑檀之刃囚徒
+    .goto IcecrownGlacier,43.8,23.3,30,0
+    .goto IcecrownGlacier,43.1,21.1
+	>> Go inside the building. Talk to Vaelen inside on the left
+    .turnin 13085 >>Turn in Vaelen Has Returned
+    .accept 12982 >>Accept Ebon Blade Prisoners
 step
-    .goto 冰冠冰川Glacier,44.7,20.4
-	>>与Lankral交谈
-    .turnin 12943 >>转入阴影库递减步长
-    .accept 13084 >>接受故意破坏佐敦海姆
+    .goto IcecrownGlacier,44.7,20.4
+	>>Talk to Lankral
+    .turnin 12943 >>Turn in Shadow Vault Decreestep
+    .accept 13084 >>Accept Vandalizing Jotunheim
 step
-    .goto 冰冠冰川Glacier,29.5,43.4,50,0
-    .goto 冰冠冰川Glacier,29.6,45.7,50,0
-    .goto 冰冠冰川Glacier,27.9,45.8,50,0
-    .goto 冰冠冰川Glacier,27.8,40.2,50,0
-    .goto 冰冠冰川Glacier,28.3,38.0,50,0
-    .goto 冰冠冰川Glacier,29.0,35.1,50,0
-    .goto 冰冠冰川Glacier,34.1,28.7,50,0
-    .goto 冰冠冰川Glacier,29.5,43.4
-	.use 42480 >>杀死该地区的维库尔，并掠夺他们的笼子钥匙。在他们的尸体上使用你袋子里的黑檀刀锋横幅。点击在整个Jotenheim发现的笼子上抢劫的任何钥匙
-	>>烧毁在约腾海姆发现的旗帜
+    .goto IcecrownGlacier,29.5,43.4,50,0
+    .goto IcecrownGlacier,29.6,45.7,50,0
+    .goto IcecrownGlacier,27.9,45.8,50,0
+    .goto IcecrownGlacier,27.8,40.2,50,0
+    .goto IcecrownGlacier,28.3,38.0,50,0
+    .goto IcecrownGlacier,29.0,35.1,50,0
+    .goto IcecrownGlacier,34.1,28.7,50,0
+    .goto IcecrownGlacier,29.5,43.4
+	.use 42480 >>Kill Vrykul in the area and loot them for their cage keys. Use the Ebon Blade Banner in your bags on their corpses. Click any Keys looted on the cages found throughout Jotenheim
+	>>Burn the Banners found throughout Jotenheim
 	.collect 42422,8,12982,1,-1 --Jotunheim Cage Key (8)
     .complete 12982,1 --Ebon Blade Prisoners set free (8)
     .complete -12995,1 --Ebon Blade Banner planted near Vrykul corpse (0/15)
     .complete 12992,1 --Jotunheim Vrykul slain (0/15)
     .complete 13084,1 --Vrykul banners burned (10)
 step
-    .goto 冰冠冰川Glacier,42.7,26.8,60,0
-    .goto 冰冠冰川Glacier,43.6,24.1
-	>>返回阴影库。与沿着主要道路巡逻的Vile交谈
-    .turnin 12992 >>交给Crush Dem Vrykuls！
-    .daily 13071 >>像火一样接受邪恶！
+    .goto IcecrownGlacier,42.7,26.8,60,0
+    .goto IcecrownGlacier,43.6,24.1
+	>>Return to The Shadow Vault. Talk to Vile patrolling along the main road
+    .turnin 12992 >>Turn in Crush Dem Vrykuls!
+    .daily 13071 >>Accept Vile Like Fire!
 step
-    .goto 冰冠冰川Glacier,43.8,23.3,30,0
-    .goto 冰冠冰川Glacier,43.1,21.1
-	>> 进入大楼。与左侧的Vaelen交谈
-    .turnin 12982 >>交出黑檀之刃囚犯
+    .goto IcecrownGlacier,43.8,23.3,30,0
+    .goto IcecrownGlacier,43.1,21.1
+	>> Go inside the building. Talk to Vaelen inside on the left
+    .turnin 12982 >>Turn in Ebon Blade Prisoners
 step
-    .goto 冰冠冰川Glacier,44.7,20.4
-	>>与Lankral交谈
-    .turnin 13084 >>转入破坏佐敦海姆
+    .goto IcecrownGlacier,44.7,20.4
+	>>Talk to Lankral
+    .turnin 13084 >>Turn in Vandalizing Jotunheim
 step
-    .goto 冰冠冰川Glacier,42.9,24.9
-    >>返回银色
-	.turnin 12995 >>上车留下我们的标记
+    .goto IcecrownGlacier,42.9,24.9
+    >>Return to Silver
+	.turnin 12995 >>Turn in Leave Our Mark
 	.isQuestComplete 12995
 step
-    .goto 冰冠冰川Glacier,42.9,24.9
-	>>与Silver交谈
-    .accept 12806 >>尽快接受崛起！
+    .goto IcecrownGlacier,42.9,24.9
+	>>Talk to Silver
+    .accept 12806 >>Accept To the Rise with all Due Haste!
 step
-    .goto 冰冠冰川Glacier,43.5,25.0
-	>>与Leaper交谈，他绕着帐篷走
-    .daily 13069 >>接受射击
+    .goto IcecrownGlacier,43.5,25.0
+	>>Speak with The Leaper, he walks around the tent
+    .daily 13069 >>Accept Shoot 'Em Up
 step
-    .goto 冰冠冰川Glacier,27.9,33.2
-	>> 进入位于中心位置的佐敦海姆快速消防鱼叉。
-	>> 在鱼叉内部，垃圾邮件使用“速射鱼叉”(3)击落龙
+    .goto IcecrownGlacier,27.9,33.2
+	>> Get inside one of the centrally-located Jotunheim Rapid-Fire Harpoons.
+	>> Whilst inside the Harpoon, spam use "Rapid-Fire Harpoon" (3) to shoot down the Dragons
 	.complete 13069,1 --Jotunheim Proto-Drakes & their riders shot down
 	.isOnQuest 13069
 step
 	#completewith next
-    .goto 冰冠冰川Glacier,28.0,37.7
-    .vehicle 30564 >> 右击Njorndar Proto Drake以安装它
+    .goto IcecrownGlacier,28.0,37.7
+    .vehicle 30564 >> Right click a Njorndar Proto-Drake to mount it
 	.isOnQuest 13071
 step
-    .goto 冰冠冰川Glacier,27.7,41.1,70,0
-    .goto 冰冠冰川Glacier,29.2,41.0,70,0
-    .goto 冰冠冰川Glacier,29.6,39.7,70,0
-    .goto 冰冠冰川Glacier,31.5,36.9,70,0
-    .goto 冰冠冰川Glacier,32.0,39.1,70,0
-    .goto 冰冠冰川Glacier,30.8,40.2,70,0
-    .goto 冰冠冰川Glacier,32.4,40.7,70,0
-    .goto 冰冠冰川Glacier,31.5,43.9,70,0
-    .goto 冰冠冰川Glacier,30.1,43.1,70,0
-    .goto 冰冠冰川Glacier,27.7,41.1
-	>>冷却时使用“速度爆发”(1)加快移动速度。使用“Strafe Jotunheim Building”(3)点燃建筑物
+    .goto IcecrownGlacier,27.7,41.1,70,0
+    .goto IcecrownGlacier,29.2,41.0,70,0
+    .goto IcecrownGlacier,29.6,39.7,70,0
+    .goto IcecrownGlacier,31.5,36.9,70,0
+    .goto IcecrownGlacier,32.0,39.1,70,0
+    .goto IcecrownGlacier,30.8,40.2,70,0
+    .goto IcecrownGlacier,32.4,40.7,70,0
+    .goto IcecrownGlacier,31.5,43.9,70,0
+    .goto IcecrownGlacier,30.1,43.1,70,0
+    .goto IcecrownGlacier,27.7,41.1
+	>>Use "Burst of Speed" (1) on cooldown to move faster. Use "Strafe Jotunheim Building" (3) to set the buildings ablaze
     .complete 13071,1 --Vrykul buildings set ablaze (8)
 	.isOnQuest 13071
 step
-    .goto 冰冠冰川Glacier,19.5,48.1
-	>>下马，然后前往死亡之地。这是一个位于海平面和山顶之间的小平台。与阿雷特交谈
-    .turnin 12806 >>以应有的速度投身崛起！
-    .accept 12807 >>接受到目前为止的故事。。。
+    .goto IcecrownGlacier,19.5,48.1
+	>>Dismount the drake, then head to Death's Rise. It's a small platform located halfway between the sea level and the top of the mountain. Talk to Arete
+    .turnin 12806 >>Turn in To the Rise with all Due Haste!
+    .accept 12807 >>Accept The Story Thus Far...
 step
-    .goto 冰冠冰川Glacier,19.5,48.1
-	>>再和阿雷特少校谈谈
+    .goto IcecrownGlacier,19.5,48.1
+	>>Speak to Lord-Commander Arete again
     .complete 12807,1 --Lord-Commander Arete's tale listened to. (1)
-    .turnin 12807 >>把故事交上来。。。
-    .accept 12810 >>接受水中的鲜血
+    .turnin 12807 >>Turn in The Story Thus Far...
+    .accept 12810 >>Accept Blood in the Water
 	.skipgossip
 step
 	#sticky
 	#label DeathRise
-    .goto 冰冠冰川Glacier,19.3,47.8
-    .fp Death's Rise >> 获得死亡崛起飞行路径
+    .goto IcecrownGlacier,19.3,47.8
+    .fp Death's Rise >> Get the Death's Rise flight path
 step
-	>>与Setaal交谈
-    .daily 12813 >>从他们的尸体上接受，起来！
-    .goto 冰冠冰川,19.67,48.39
-	>>与Aurochs交谈。他在中间的火周围巡逻
-    .daily 12838 >>接受情报收集
-    .goto 冰冠冰川Glacier,20.1,47.5,20,0
-    .goto 冰冠冰川Glacier,20.4,47.9,20,0
-    .goto 冰冠冰川Glacier,20.1,48.4,20,0
-    .goto 冰冠冰川Glacier,19.7,47.9
-	>>可选择的你可以跳过或完成这两个每日任务
+	>>Talk to Setaal
+    .daily 12813 >>Accept From Their Corpses, Rise!
+    .goto Icecrown,19.67,48.39
+	>>Talk to Aurochs. He patrols around the middle fire
+    .daily 12838 >>Accept Intelligence Gathering
+    .goto IcecrownGlacier,20.1,47.5,20,0
+    .goto IcecrownGlacier,20.4,47.9,20,0
+    .goto IcecrownGlacier,20.1,48.4,20,0
+    .goto IcecrownGlacier,19.7,47.9
+	>>Optional. You can skip or complete these 2 Daily quests
 step
 	#requires DeathRise
     #sticky
 	#label transformedcorpse
-    .goto 冰冠冰川Glacier,9.5,44.8,50,0
-    .goto 冰冠冰川Glacier,9.5,44.8,0,0
-	.use 40587 >> 杀死该地区的暴徒。用你袋子里的黑曼德酊剂涂在他们的尸体上
+    .goto IcecrownGlacier,9.5,44.8,50,0
+    .goto IcecrownGlacier,9.5,44.8,0,0
+	.use 40587 >> Kill the Onslaught mobs in the area. Use Darkmender's Tincture in your bags on their corpses
     .complete 12813,1 --Scarlet Onslaught corpse transformed (10)
 	.isOnQuest 12813
 step
 	#requires DeathRise
-	>>杀死暴徒，然后抢劫他们的钥匙。用它们在Onslaught Harbor周围打开箱子存放文件
-	>>文件箱没有100%下降率
-    .goto 冰冠冰川Glacier,10.7,45.6,40,0
-    .goto 冰冠冰川Glacier,10.3,46.4,40,0
-    .goto 冰冠冰川Glacier,8.8,46.7,40,0
-    .goto 冰冠冰川Glacier,8.8,42.2,40,0
-    .goto 冰冠冰川Glacier,10.6,42.9,40,0
-    .goto 冰冠冰川Glacier,9.6,40.6,40,0
-    .goto 冰冠冰川Glacier,9.3,37.5,40,0
-    .goto 冰冠冰川Glacier,10.1,36.2,40,0
-    .goto 冰冠冰川Glacier,9.1,36.3,40,0
-    .goto 冰冠冰川Glacier,8.5,36.4,40,0
-    .goto 冰冠冰川Glacier,10.7,45.6,40,0
-    .goto 冰冠冰川Glacier,10.3,46.4,40,0
-    .goto 冰冠冰川Glacier,8.8,46.7,40,0
-    .goto 冰冠冰川Glacier,8.8,42.2,40,0
-    .goto 冰冠冰川Glacier,10.6,42.9,40,0
-    .goto 冰冠冰川Glacier,9.6,40.6,40,0
-    .goto 冰冠冰川Glacier,9.3,37.5,40,0
-    .goto 冰冠冰川Glacier,10.1,36.2,40,0
-    .goto 冰冠冰川Glacier,9.1,36.3,40,0
-    .goto 冰冠冰川Glacier,8.5,36.4
+	>>Kill Onslaught mobs, then loot them for their keys. Use them to open chests all around the Onslaught Harbor for the Documents
+	>>The chests do not have a 100% droprate for the Documents
+    .goto IcecrownGlacier,10.7,45.6,40,0
+    .goto IcecrownGlacier,10.3,46.4,40,0
+    .goto IcecrownGlacier,8.8,46.7,40,0
+    .goto IcecrownGlacier,8.8,42.2,40,0
+    .goto IcecrownGlacier,10.6,42.9,40,0
+    .goto IcecrownGlacier,9.6,40.6,40,0
+    .goto IcecrownGlacier,9.3,37.5,40,0
+    .goto IcecrownGlacier,10.1,36.2,40,0
+    .goto IcecrownGlacier,9.1,36.3,40,0
+    .goto IcecrownGlacier,8.5,36.4,40,0
+    .goto IcecrownGlacier,10.7,45.6,40,0
+    .goto IcecrownGlacier,10.3,46.4,40,0
+    .goto IcecrownGlacier,8.8,46.7,40,0
+    .goto IcecrownGlacier,8.8,42.2,40,0
+    .goto IcecrownGlacier,10.6,42.9,40,0
+    .goto IcecrownGlacier,9.6,40.6,40,0
+    .goto IcecrownGlacier,9.3,37.5,40,0
+    .goto IcecrownGlacier,10.1,36.2,40,0
+    .goto IcecrownGlacier,9.1,36.3,40,0
+    .goto IcecrownGlacier,8.5,36.4
 	.collect 40652,6,12838,-1
     .complete 12838,1 --Onslaught Intel Documents (5)
 	.isOnQuest 12838
 step
 	#requires transformedcorpse
-	.use 40551 >> 到离海岸30-90码的海里去，杀死贪婪的大白鲨。在他们尸体上用你袋子里的戈尔膀胱
-    .goto 冰冠冰川Glacier,4.8,41.5,90,0
-    .goto 冰冠冰川Glacier,4.3,35.9,90,0
-    .goto 冰冠冰川Glacier,11.7,35.6,90,0
-    .goto 冰冠冰川Glacier,13.7,42.0,90,0
-    .goto 冰冠冰川Glacier,10.3,41.5,90,0
-    .goto 冰冠冰川Glacier,4.8,41.5,90,0
-    .goto 冰冠冰川Glacier,4.3,35.9,90,0
-    .goto 冰冠冰川Glacier,11.7,35.6,90,0
-    .goto 冰冠冰川Glacier,13.7,42.0,90,0
-    .goto 冰冠冰川Glacier,10.3,41.5
+	.use 40551 >> Go out in the sea about 30-90 yards from the shore, and kill Ravenous Jaws. Use the Gore Bladder in your bags on top of their corpses
+    .goto IcecrownGlacier,4.8,41.5,90,0
+    .goto IcecrownGlacier,4.3,35.9,90,0
+    .goto IcecrownGlacier,11.7,35.6,90,0
+    .goto IcecrownGlacier,13.7,42.0,90,0
+    .goto IcecrownGlacier,10.3,41.5,90,0
+    .goto IcecrownGlacier,4.8,41.5,90,0
+    .goto IcecrownGlacier,4.3,35.9,90,0
+    .goto IcecrownGlacier,11.7,35.6,90,0
+    .goto IcecrownGlacier,13.7,42.0,90,0
+    .goto IcecrownGlacier,10.3,41.5
     .complete 12810,1 --Blood collected from Ravenous Jaws (10)
 step
-	>>回归死亡的崛起。与阿雷特交谈
-    .turnin 12810 >>把血倒在水里
-    .accept 12814 >>接受你需要鹰头狮
-    .goto 冰冠冰川Glacier,19.6,48.1
+	>>Return to Death's Rise. Talk to Arete
+    .turnin 12810 >>Turn in Blood in the Water
+    .accept 12814 >>Accept You'll Need a Gryphon
+    .goto IcecrownGlacier,19.6,48.1
 step
-	>>与Aurochs交谈。他在中间的火周围巡逻
-    .turnin -12838 >>提交情报收集
-    .goto 冰冠冰川Glacier,20.1,47.5,20,0
-    .goto 冰冠冰川Glacier,20.4,47.9,20,0
-    .goto 冰冠冰川Glacier,20.1,48.4,20,0
-    .goto 冰冠冰川Glacier,19.7,47.9
-	>>与Setaal交谈
-    .turnin -12813 >>从他们的尸体上翻过来，起来！
-    .goto 冰冠冰川Glacier,19.7,48.4
+	>>Talk to Aurochs. He patrols around the middle fire
+    .turnin -12838 >>Turn in Intelligence Gathering
+    .goto IcecrownGlacier,20.1,47.5,20,0
+    .goto IcecrownGlacier,20.4,47.9,20,0
+    .goto IcecrownGlacier,20.1,48.4,20,0
+    .goto IcecrownGlacier,19.7,47.9
+	>>Talk to Setaal
+    .turnin -12813 >>Turn in From Their Corpses, Rise!
+    .goto IcecrownGlacier,19.7,48.4
 step
-    .goto 冰冠冰川Glacier,10.4,44.1
-	>> 杀死该地区的Onslaught鹰头狮骑士。抢走他们的猎鹰缰绳
+    .goto IcecrownGlacier,10.4,44.1
+	>> Kill Onslaught Gryphon Riders in the area. Loot them for their Onslaught Gryphon Reins
 	.collect 40970,1,12814,1 --Onslaught Grpyhon Reins (1)
 step
-    .goto 冰冠冰川Glacier,19.6,47.8
-	>>在你的正常坐骑上返回死神复活。当你到达任务给予者处时，使用鹰头狮缰绳并使用“传送鹰头狮”(1)传送。
+    .goto IcecrownGlacier,19.6,47.8
+	>>Return to Death's Rise on your normal mount. When you get to the quest giver, use the Gryphon Reins and use "Deliver Gryphon" (1) to deliver it.
     .complete 12814,1 --Onslaught Gryphon delivered to Uzo Deathcaller (1)
 	.use 40970
 step
-    .goto 冰冠冰川,19.64,47.80
-	>>与Uzo Deathcaller交谈
-    .turnin 12814 >>上车你需要一个鹰头狮
-    .daily 12815 >>接受禁飞区
+    .goto Icecrown,19.64,47.80
+	>>Talk to Uzo Deathcaller
+    .turnin 12814 >>Turn in You'll Need a Gryphon
+    .daily 12815 >>Accept No Fly Zone
 step
-    .goto 冰冠冰川Glacier,10.5,44.1,70,0
-    .goto 冰冠冰川Glacier,5.0,43.4,70,0
-    .goto 冰冠冰川Glacier,10.5,39.0,70,0
-    .goto 冰冠冰川Glacier,12.7,41.2,70,0
-    .goto 冰冠冰川Glacier,10.5,44.1
-	>> 杀死该地区的鹰头狮骑士。用远程技能击落它们，或将它们中的多个组合在空中，然后飞下来杀死它们。如果你聚集了很多人，不要让他们打你的背部，否则你会下马。
+    .goto IcecrownGlacier,10.5,44.1,70,0
+    .goto IcecrownGlacier,5.0,43.4,70,0
+    .goto IcecrownGlacier,10.5,39.0,70,0
+    .goto IcecrownGlacier,12.7,41.2,70,0
+    .goto IcecrownGlacier,10.5,44.1
+	>> Kill the Gryphon Riders in the area. Shoot them down with ranged abilities or group multiple ones of them up in the air and then fly down and kill them. If you group up many, don't let them hit you in the back or you will be dismounted.
     .complete 12815,1 --Onslaught Gryphon Rider (10)
 step
-	.goto 冰冠冰川,19.64,47.80
-	>>回归死亡的崛起。与Uzo交谈
-    .turnin 12815 >>转入禁飞区
+	.goto Icecrown,19.64,47.80
+	>>Return to Death's Rise. Talk to Uzo
+    .turnin 12815 >>Turn in No Fly Zone
 step
-    >>返回阴影库。与Leaper和Vile交谈
-    .turnin -13069 >>投篮得分
-	.goto 冰冠冰川Glacier,43.5,25.0
-    .turnin -13071 >>像火一样的卑鄙！
-    .goto 冰冠冰川Glacier,43.6,24.1,60,0
-    .goto 冰冠冰川Glacier,42.7,26.8
+    >>Return to The Shadow Vault. Talk to The Leaper and Vile
+    .turnin -13069 >>Turn in Shoot 'Em Up
+	.goto IcecrownGlacier,43.5,25.0
+    .turnin -13071 >>Turn in Vile Like Fire!
+    .goto IcecrownGlacier,43.6,24.1,60,0
+    .goto IcecrownGlacier,42.7,26.8
 step
-    +您已经完成了黑檀之刃骑士任务前链。请使用《黑檀之刃每日任务路线指南》完成每日任务。请注意，由于已提前完成，有些可能今天无法提供
+    +You have completed the Knights of the Ebon Blade Pre Quest chain. Please use the Ebon Blade Daily Quests Route guide to complete the daily quests. Note some may not be available today due to already being completed earlier
 	.isQuestTurnedIn 12814
 ]])

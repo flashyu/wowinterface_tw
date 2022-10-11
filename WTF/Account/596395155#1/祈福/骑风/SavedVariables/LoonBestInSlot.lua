@@ -41,6 +41,6 @@ LBISSettings = {
 		["AfflictionWarlock"] = true,
 		["SubtletyRogue"] = true,
 	},
-	["SelectedSpec"] = "",
-	["SelectedPhase"] = "All",
+	["SelectedSpec"] = "平衡 德鲁伊",
+	["SelectedPhase"] = "BIS",
 }

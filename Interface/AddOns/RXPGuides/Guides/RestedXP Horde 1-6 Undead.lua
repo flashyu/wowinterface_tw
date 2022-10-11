@@ -2,151 +2,151 @@ RXPGuides.RegisterGuide([[
 #tbc
 #wotlk
 << Horde
-#name 1-6 提瑞斯法林地
+#name 1-6 Tirisfal Glades
 #version 1
-#group RestedXP部落1-30
+#group RestedXP Horde 1-30
 #defaultfor Scourge
-#next 6-10 永歌森林
+#next 6-10 Eversong Woods
 step << !Scourge
     #sticky
     #completewith next
     .goto Tirisfal Glades,30.2,71.7
-    +您选择了一个为亡灵准备的指南。建议您选择与开始时相同的起始区域
+    +You have selected a guide meant for Undead. It is recommended you choose the same starter zone that you start in
 step
 	.destroy 6948
-    >>跑出地窖并删除您的炉石 << tbc
+    >>Run out of the crypt and delete your Hearthstone << tbc
     .goto Tirisfal Glades,30.2,71.7 << tbc
     .goto Tirisfal Glades,29.99,71.86 << wotlk
-    .accept 363 >> 接受粗鲁的觉醒
+    .accept 363 >> Accept Rude Awakening
 step << Warrior
     #sticky
     #completewith vendorWar
-    +把暴徒赶到镇上，直到你有价值10美分的商品
+    +Grind mobs toward town until you have 10c worth of vendorables
     .goto Tirisfal Glades,31.5,69.8
 step << Warlock tbc
     #sticky
     #completewith vendorLock
-    +把暴徒赶到镇上，直到你有价值10美分的商品
+    +Grind mobs toward town until you have 10c worth of vendorables
     .goto Tirisfal Glades,31.5,69.8
 step << Priest/Mage
     #sticky
     #completewith vendorCaster
-    +把暴徒赶到镇上，直到你有价值35美分的商品
+    +Grind mobs toward town until you have 35c worth of vendorables
     .goto Tirisfal Glades,31.5,69.8
 step << Warrior
     #label vendorWar
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >> 供应商垃圾
+    .vendor >> Vendor trash
 step << Warrior
     .goto Tirisfal Glades,32.7,65.6
-    .train 6673 >>火车战斗呐喊
+    .train 6673 >>Train Battle Shout
 step << Priest/Mage
     #label vendorCaster
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >> 供应商扔掉垃圾，然后购买10杯清凉泉水 << tbc
-    .vendor >> 供应商垃圾箱 << wotlk	
+    .vendor >> Vendor Trash and then purchase 10 Refreshing Spring Water << tbc
+    .vendor >> Vendor Trash << wotlk	
 	.collect 159,10 << tbc --Collect Refreshing Spring Water (x10)
 step << Warlock tbc
     #label vendorLock
     .goto Tirisfal Glades,30.8,66.4
-    .vendor >>Demon Trainer的供应商垃圾
+    .vendor >>Vendor trash at Demon Trainer
 step << Warlock tbc
     .goto Tirisfal Glades,30.9,66.3
-    .train 348 >>火车献祭
+    .train 348 >>Train Immolate
 step << Warlock tbc
     .goto Tirisfal Glades,31.0,66.4
-    .accept 1470 >>接受刺破面纱
+    .accept 1470 >>Accept Piercing the Veil
 step << Warlock
     .goto Tirisfal Glades,30.8,66.2
-    .turnin 363 >> 鲁莽地醒来
-    .accept 364 >> 接受无意识的人
+    .turnin 363 >> Turn in Rude Awakening
+    .accept 364 >> Accept The Mindless Ones
 step << Warlock tbc
     .goto Tirisfal Glades,32.5,61.4
-    >> 在头骨区域杀死鼠笼骷髅
+    >> Kill Rattlecage Skeletons in the area for Skulls
     .complete 1470,1 --Rattlecage Skull (3)
 step << Warlock tbc
     #completewith next
-    .goto Tirisfal Glades,32.3,65.4,30 >> 在回镇的路上磨磨蹭蹭，直到你有25c+的可卖品
+    .goto Tirisfal Glades,32.3,65.4,30 >> Grind on your way back to town until you have 25c+ of vendorables
 step << Warlock tbc
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >> 供应商清理垃圾并从Joshua那里购买5杯水
+    .vendor >> Vendor trash & buy 5 water from Joshua
 	.collect 159,5 --Collect Refreshing Spring Water (x5)
 step << Warlock tbc
-    >>在你完成任务后召唤你的小鬼
+    >>Summon your Imp after you turnin your quest
     .goto Tirisfal Glades,31.0,66.4
-    .turnin 1470 >>转身刺破面纱
+    .turnin 1470 >>Turn in Piercing the Veil
 step << Warlock tbc
-    .xp 2 >> 升级到2级
+    .xp 2 >> Grind to level 2
 step << Mage
     #completewith next
     .goto Tirisfal Glades,30.9,66.1
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Priest
     #completewith next
     .goto Tirisfal Glades,31.1,66.0
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << !Warlock
     .goto Tirisfal Glades,30.8,66.2
-    .turnin 363 >> 鲁莽地醒来
-    .accept 364 >> 接受无意识的人
+    .turnin 363 >> Turn in Rude Awakening
+    .accept 364 >> Accept The Mindless Ones
 step
-    >> 杀死该地区的僵尸
+    >> Kill Zombies in the area
     .goto Tirisfal Glades,32.4,62.8
     .complete 364,1 --Kill Mindless Zombie (x8)
     .complete 364,2 --Kill Wretched Zombie (x8)
 step !Warlock tbc
 	.goto Tirisfal Glades,32.4,62.8
-	.xp 2 >> 升级到2级
+	.xp 2 >> Grind to level 2
 step << Mage tbc/Warlock tbc/Priest tbc
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >>供应商扔掉垃圾，再购买10瓶水
+    .vendor >>Vendor trash & buy 10 more waters
 	.collect 159,10 --Collect Refreshing Spring Water (x10)
 step << Mage wotlk/Priest wotlk
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >>供应商垃圾
+    .vendor >>Vendor trash
 step << Warrior/Rogue
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >>供应商垃圾
+    .vendor >>Vendor trash
 step << Warlock wotlk
     .goto Tirisfal Glades,32.3,65.4
 	.money >0.0054
-	.vendor >>研磨暴徒，直到你得到总共54铜。(从卖完所有商品后的商品)
+	.vendor >>Grind mobs until you get a total of 54 copper. (From items after vendoring everything)
 	*We will get 17c from a the next quest turn in and 12c from starting gear
 --95c for imp
 step
     .goto Tirisfal Glades,30.8,66.2
-    .turnin 364 >> 交给那些没头脑的人
+    .turnin 364 >> Turn in The Mindless Ones
 step
     .goto Tirisfal Glades,30.8,66.2
-    .accept 3095 >> 接受简单滚动 << Warrior
-    .accept 3096 >> 接受加密滚动 << Rogue
-    .accept 3097 >> 接受神圣卷轴 << Priest
-    .accept 3098 >> 接受字形滚动 << Mage
-    .accept 3099 >> 接受变形的卷轴 << Warlock
-    .accept 3901 >> 接受响尾蛇的叮当声
-    .accept 376 >> 接受该死的
+    .accept 3095 >> Accept Simple Scroll << Warrior
+    .accept 3096 >> Accept Encrypted Scroll << Rogue
+    .accept 3097 >> Accept Hallowed Scroll << Priest
+    .accept 3098 >> Accept Glyphic Scroll << Mage
+    .accept 3099 >> Accept Tainted Scroll << Warlock
+    .accept 3901 >> Accept Rattling the Rattlecages
+    .accept 376 >> Accept The Damned
 step << Mage
     .goto Tirisfal Glades,30.9,66.1
-    .turnin 3098 >> 转入字形卷轴
+    .turnin 3098 >> Turn in Glyphic Scroll
 step << Warlock
     .goto Tirisfal Glades,30.9,66.3
-    .turnin 3099 >> 交上歪斜的卷轴
+    .turnin 3099 >> Turn in Tainted Scroll
 step << Warlock wotlk
 	#completewith next
     .goto Tirisfal Glades,32.3,65.4
 	.money >0.0095
-	.vendor >>研磨暴徒，直到你得到总共95铜。如果有助于获得95铜，请尽可能提供任何产品。
+	.vendor >>Grind mobs until you get a total of 95 copper. Vendor anything you can if it helps you get 95 copper.
 --95c for imp	
 step << Warlock wotlk
 	#label impcheck
 	.goto Tirisfal Glades,30.9,66.3
-	.train 688 >> 列车召唤小鬼
+	.train 688 >> Train Summon Imp
 step << Priest
     .goto Tirisfal Glades,31.1,66.0
-    .turnin 3097 >> 交上神圣的卷轴
+    .turnin 3097 >> Turn in Hallowed Scroll
 step << Warlock wotlk
 	#completewith next
-	.cast 688 >> 召唤你的小鬼
+	.cast 688 >> Summon your Imp
 step
     .goto Tirisfal Glades,29.5,67.2,40,0
     .goto Tirisfal Glades,29.6,61.3,50,0
@@ -156,65 +156,65 @@ step
     .goto Tirisfal Glades,29.6,61.3,50,0
     .goto Tirisfal Glades,32.5,56.7,50,0
     .goto Tirisfal Glades,35.2,57.0,50,0
-    >>杀死和掠夺狼和夜猫
+    >>Kill & loot Wolves and Duskbats
     .complete 376,1 --Collect Scavenger Paw (x6)
     .complete 376,2 --Collect Duskbat Wing (x6)
 step
     .goto Tirisfal Glades,33.15,60.70
-    >> 杀死镇上的骷髅
+    >> Kill Skeletons in the town
     .complete 3901,1 --Kill Rattlecage Skeleton (12)
 step
-    .xp 3+980 >>在回镇的路上碾碎暴徒，达到980+/1400经验
+    .xp 3+980 >>Grind mobs en route back to town to 980+/1400xp
 step << Mage tbc/Mage wotlk/Warlock tbc
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >>供应商垃圾和购买水的温度不低于95摄氏度
+    .vendor >>Vendor trash & buy water down to no less than 95c
 step << Warlock wotlk
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >>供应商垃圾
+    .vendor >>Vendor trash
 step << Priest
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >>供应商垃圾处理和购买水，温度不低于1s 90c
+    .vendor >>Vendor trash & buy water down to no less than 1s 90c
 step
-    .turnin 3901 >> 转入响尾蛇笼
+    .turnin 3901 >> Turn in Rattling the Rattlecages
     .goto Tirisfal Glades,30.9,66.2	
-    .turnin 376 >> 交给该死的	
-    .accept 6395 >> 接受玛拉的遗愿	
+    .turnin 376 >> Turn in The Damned	
+    .accept 6395 >> Accept Marla's Last Wish	
     .goto Tirisfal Glades,30.9,66.1	
 step << Priest
     #completewith next
     .goto Tirisfal Glades,31.1,66.0
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Warlock
     #completewith next
     .goto Tirisfal Glades,30.9,66.3
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step << Mage
     #completewith next    
     .goto Tirisfal Glades,30.9,66.1
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step
     .goto Tirisfal Glades,32.2,66.0
-    .accept 380 >> 接受夜网的空洞
+    .accept 380 >> Accept Night Web's Hollow
 step << Rogue/Warrior
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >>供应商垃圾
+    .vendor >>Vendor trash
 step << Rogue
     .goto Tirisfal Glades,32.5,65.7
-    .turnin 3096 >> 交出加密卷轴
+    .turnin 3096 >> Turn in Encrypted Scroll
 step << Warrior
     .goto Tirisfal Glades,32.7,65.6
-    .turnin 3095 >> 转入简单滚动
+    .turnin 3095 >> Turn in Simple Scroll
 step << Warrior
     .goto Tirisfal Glades,32.7,65.6    
     #completewith next    
-    .trainer >> 训练你的职业咒语
+    .trainer >> Train your class spells
 step
     .goto Tirisfal Glades,31.6,65.6
-    .accept 3902 >> 接受清理死亡丧钟
+    .accept 3902 >> Accept Scavenging Deathknell
 step
     #sticky
     #label Goods
-    >>收集成捆的棕色盒子，同时在途中碾磨2+级暴徒。你可以在外墙/建筑物内部找到这些
+    >>Collect bundles of brown boxes whilst grinding level 2+ mobs en route. You can find these on the outside walls/inside of buildings
     .goto Tirisfal Glades,33.84,64.09
     .complete 3902,1 --Collect Scavenged Goods (x6)
 step
@@ -223,116 +223,116 @@ step
     .goto Tirisfal Glades,26.8,59.4,30,0
     .goto Tirisfal Glades,24.0,58.2,60,0
 	.goto Tirisfal Glades,27.1,59.0
-    >>杀死洞穴外的年轻蜘蛛，然后进入洞穴，杀死洞穴内的夜蛛。我们在山洞里跳得死去活来，在你进去之前，一定要把年轻的蜘蛛都处理好。
+    >>Kill Young Spiders outside the cave and then enter the cave and kill the Night Web Spiders inside. We're deathskipping in the cave, make sure you're done with Young Spiders before entering.
     .complete 380,1 --Kill Young Night Web Spider (10)
 	.complete 380,2 --Kill Night Web Spider (x8)
 step
     #completewith next
-    .deathskip >> 在精神治疗师处死亡并重生
+    .deathskip >> Die and respawn at the Spirit Healer
 step
     .goto Tirisfal Glades,31.6,65.6
-	.cast 688 >> 恢复你的小鬼 << Warlock
-    .turnin 3902 >> 交清丧钟
+	.cast 688 >> Resummon your Imp << Warlock
+    .turnin 3902 >> Turn in Scavenging Deathknell
 step << Rogue/Warrior
     .goto Tirisfal Glades,32.41,65.66
-    .vendor >>供应商丢弃并修复您的武器
+    .vendor >>Vendor trash & repair your weapon
 step << Priest tbc/Mage tbc/Warlock tbc
     .goto Tirisfal Glades,32.3,65.4
-    .vendor >>供应商垃圾处理和购买15水
+    .vendor >>Vendor trash & buy 15 water
 	.collect 159,15 --Collect Refreshing Spring Water (x15)
 step
     .goto Tirisfal Glades,32.2,66.0
-    .turnin 380 >> 交给夜网的空洞
+    .turnin 380 >> Turn in Night Web's Hollow
 step
 	.goto Tirisfal Glades,32.2,66.0
-    .accept 381 >> 接受血腥十字军
+    .accept 381 >> Accept The Scarlet Crusade
 step
     .goto Tirisfal Glades,37.45,67.93
-    >>为臂章杀死血腥暴徒
+    >>Kill Scarlet mobs for Armbands
     .complete 381,1 --Collect Scarlet Armband (12)
 step
-    >>杀死塞缪尔·菲普斯，并掠夺他的遗体
+    >>Kill Samuel Fipps and loot him for his remains
     .goto Tirisfal Glades,36.7,61.6
     .collect 16333,1 --Collect Samuel's Remains
     .unitscan Samuel Fipps
 step
 	.goto Tirisfal Glades,36.7,61.6
-    .deathskip >> 在精神治疗师处死亡并重生
+    .deathskip >> Die and respawn at the Spirit Healer
 step
     .goto Tirisfal Glades,31.2,65.1
-	>> 点击墓地中的坟墓埋葬塞缪尔的遗体
+	>> Bury Samuel's remains by clicking on the grave in the graveyard
     .complete 6395,1 --Collect Samuel's Remains Buried (1)
 step
     .goto Tirisfal Glades,30.9,66.1
-    .turnin 6395 >> 交出玛拉的遗愿
+    .turnin 6395 >> Turn in Marla's Last Wish
 step << Priest
     .goto Tirisfal Glades,31.11,66.03
-    .accept 5651 >> 接受黑暗
+    .accept 5651 >> Accept In Favor of Darkness
 step
     #completewith next
     .goto Tirisfal Glades,32.4,65.6
-    .vendor >>供应商垃圾和维修
+    .vendor >>Vendor trash and repair
 step
     .goto Tirisfal Glades,32.1,66.0
-    .turnin 381 >> 移交血腥十字军
+    .turnin 381 >> Turn in The Scarlet Crusade
 step
 	.goto Tirisfal Glades,32.1,66.0
-    .accept 382 >> 接受红色信使
+    .accept 382 >> Accept The Red Messenger
 step << Warlock
 	#completewith next
-	.cast 688 >> 恢复你的小鬼
+	.cast 688 >> Resummon your Imp
 step
-    >>杀死Meven并抢劫他的文件 << !Rogue !Warrior
-    >>杀了梅文，同时把他放回镇上。抢他的文件 << Rogue/Warrior
+    >>Kill Meven and loot him for the documents << !Rogue !Warrior
+    >>Kill Meven whilst kiting him back to town. Loot him for the documents << Rogue/Warrior
     .goto Tirisfal Glades,36.5,68.8
     .complete 382,1 --Collect Scarlet Crusade Documents (1)
 step
     .goto Tirisfal Glades,32.2,66.0
-    .turnin 382 >> 交出红色信使
-    .accept 383 >> 接受生命智力
+    .turnin 382 >> Turn in The Red Messenger
+    .accept 383 >> Accept Vital Intelligence
 step
     .goto Tirisfal Glades,38.1,56.6
-    >>开始走出死亡丧钟
-    .xp 5+2350 >>途中升级到2350+/2800xp
+    >>Start making your way out of Deathknell
+    .xp 5+2350 >>Grind to 2350+/2800xp en route
 step
     .goto Tirisfal Glades,38.2,56.8
-    .accept 8 >> 接受盗贼的交易
+    .accept 8 >> Accept A Rogue's Deal
 step
 	.goto Tirisfal Glades,42.59,51.30,50,0
 	.goto Tirisfal Glades,42.59,51.30	
-    .deathskip >> 在布里尔的精神疗养院死亡并重生
+    .deathskip >> Die and respawn at the Spirit Healer in Brill
 step
     .goto Tirisfal Glades,60.6,51.8
-    .turnin 383 >> 交出生命智力
+    .turnin 383 >> Turn in Vital Intelligence
 step
     .goto Tirisfal Glades,61.7,52.0
-    .turnin 8 >>交出流氓的交易
-    .vendor >>供应商垃圾
+    .turnin 8 >>Turn in A Rogue's Deal
+    .vendor >>Vendor trash
 step << Warrior
-    .xp 6 >> 升级到6
+    .xp 6 >> Grind to 6
 step << Warrior
     .goto Tirisfal Glades,61.9,52.5
-    .trainer >>列车招架
+    .trainer >>Train Parry
 step
     #completewith next
-    .goto Undercity,66.2,1.1,25 >>前往幽暗城
+    .goto Undercity,66.2,1.1,25 >>Go to Undercity
 step
-    .goto Undercity,62.0,11.3,20 >>在这里上楼梯
-step
-    #completewith next
-    .goto Undercity,54.9,11.3,20 >>使用易位球
-step
-    .zone Silvermoon City >>前往银月城
+    .goto Undercity,62.0,11.3,20 >>Go up the stairs here
 step
     #completewith next
-    .goto Eversong Woods,56.7,49.6,20 >>用完银月城
+    .goto Undercity,54.9,11.3,20 >>Use the Orb of Translocation
+step
+    .zone Silvermoon City >>Go to Silvermoon City
+step
+    #completewith next
+    .goto Eversong Woods,56.7,49.6,20 >>Run out of Silvermoon
 step
     .goto Eversong Woods,54.4,50.7
-    .fp Silvermoon City >> 获取银月城飞行路线
+    .fp Silvermoon City >> Get the Silvermoon City flight path
 step
     .goto Eversong Woods,50.3,50.8
-    .accept 8475 >> 接受死亡伤疤
+    .accept 8475 >> Accept The Dead Scar
 step
-    .goto Eversong Woods,46.5,49.2,35 >>跑向鹰翼广场
+    .goto Eversong Woods,46.5,49.2,35 >>Run to Falconwing Square
 ]])
 
