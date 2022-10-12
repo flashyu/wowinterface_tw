@@ -1,3 +1,6 @@
+3.0.29 - 12th October 2022
+- Added flight times.
+
 3.0.28 - 11th October 2022
 - For 'Mute game sounds' ('System'), you can now make Netherdrakes quieter.
 - Added flight times.

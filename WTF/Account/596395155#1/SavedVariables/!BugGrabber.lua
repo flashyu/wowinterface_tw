@@ -1,6 +1,6 @@
 
 BugGrabberDB = {
-	["session"] = 160,
+	["session"] = 168,
 	["lastSanitation"] = 3,
 	["errors"] = {
 		{
@@ -491,32 +491,25 @@ BugGrabberDB = {
 			["counter"] = 20,
 		}, -- [65]
 		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 尝试调用保护功能 'OverrideActionBarButton3:Show()'。",
-			["time"] = "2022/10/08 23:02:53",
-			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:357: in function `ActionButton_Update'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:694: in function `ActionButton_OnEvent'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:207: in function <Interface\\FrameXML\\ActionButton.lua:204>",
-			["session"] = 114,
-			["counter"] = 3,
-		}, -- [66]
-		{
 			["message"] = "Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
 			["time"] = "2022/09/24 23:46:51",
 			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
 			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:67: in function <Interface\\AddOns\\GearScoreLite\\GearScoreLite.lua:53>",
 			["session"] = 115,
 			["counter"] = 37,
-		}, -- [67]
+		}, -- [66]
 		{
 			["message"] = "(null)",
 			["session"] = 115,
 			["time"] = "2022/09/28 22:01:13",
 			["counter"] = 57,
-		}, -- [68]
+		}, -- [67]
 		{
 			["message"] = "Couldn't open Interface\\AddOns\\Mapster\\Mapster_Wrath.toc",
 			["session"] = 123,
 			["time"] = "2022/10/11 21:51:27",
 			["counter"] = 2,
-		}, -- [69]
+		}, -- [68]
 		{
 			["message"] = "Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua:37: attempt to index global 'db' (a nil value)",
 			["time"] = "2022/09/24 23:47:00",
@@ -524,6 +517,20 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua\"]:37: in function `frame'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:190: in function <Interface\\AddOns\\WIM\\Sources\\Options\\Options.lua:184>\n[string \"=[C]\"]: in function `Click'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:281: in function `UpdateSubCategories'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:104: in function <Interface\\AddOns\\WIM\\Sources\\Options\\Options.lua:104>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:327: in function `ShowOptions'\n[string \"@Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\WIM-3.9.6.lua\"]:11: in function <Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\WIM.lua:8>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\AddOnSkins\\Core\\Core.lua\"]:217: in function `CallSkin'\n[string \"@Interface\\AddOns\\AddOnSkins\\Core\\Core.lua\"]:311: in function `?'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:119: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...vUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 143,
 			["counter"] = 21,
+		}, -- [69]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 尝试调用保护功能 'OverrideActionBarButton3:Show()'。",
+			["time"] = "2022/10/08 23:02:53",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:357: in function `ActionButton_Update'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:694: in function `ActionButton_OnEvent'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:207: in function <Interface\\FrameXML\\ActionButton.lua:204>",
+			["session"] = 164,
+			["counter"] = 4,
 		}, -- [70]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'Questie' 尝试调用保护功能 'Questie_TrackedAchievements:SetHeight()'。",
+			["time"] = "2022/10/12 22:56:55",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetHeight'\n[string \"@Interface\\AddOns\\Questie\\Modules\\Tracker\\AchievementTracker.lua\"]:67: in function `LoadAchievements'\n[string \"@Interface\\AddOns\\Questie\\Modules\\Tracker\\AchievementTracker.lua\"]:96: in function <...ddOns\\Questie\\Modules\\Tracker\\AchievementTracker.lua:89>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...vUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
+			["session"] = 164,
+			["counter"] = 1,
+		}, -- [71]
 	},
 }

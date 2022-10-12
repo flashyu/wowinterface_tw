@@ -10,3 +10,4 @@ ElvUI_CustomTags: disabled
 kExtraBossFrames: disabled
 WeakAurasCompanion: enabled
 WeakAurasArchive: enabled
+Leatrix_Plus: enabled

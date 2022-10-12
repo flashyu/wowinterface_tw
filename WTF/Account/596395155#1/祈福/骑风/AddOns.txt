@@ -14,7 +14,7 @@ ElvUI_OptionsUI: enabled
 Decursive: enabled
 ElvUI: enabled
 SpellReplay: disabled
-Plater: enabled
+Plater: disabled
 AdvancedInterfaceOptions: enabled
 ArkInventoryRules_Example: enabled
 ArkInventory: enabled

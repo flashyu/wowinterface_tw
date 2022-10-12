@@ -171,9 +171,9 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"NaxxramasWrath", -- [2]
-					3, -- [3]
-					7, -- [4]
+					"VioletHold", -- [2]
+					7, -- [3]
+					1, -- [4]
 					0, -- [5]
 				},
 			},

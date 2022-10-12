@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0703,
+	["LastPlayerFullName"] = "骑风-祈福",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 42554,
@@ -88,8 +90,6 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40698::::::::80:::::::::|h[紫罗兰城堡结界]|h|r",
 		}, -- [17]
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "骑风-祈福",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {
