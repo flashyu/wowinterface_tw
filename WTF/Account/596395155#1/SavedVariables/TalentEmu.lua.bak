@@ -777,7 +777,7 @@ TalentEmuSV = {
 			["|cffff7c0a德鲁伊|r- |cff7fbfff平衡58|r 野性战斗 0 恢复13"] = "!T321E111K12c2CvkyLGxq2:::E22u32",
 		},
 		["Player-4778-053088A5"] = "!T32910110!G32116++++++!E320+^+^+^+^+a:81:9+^+^+b:81:9+c:81:9+^+^+^+^+^+^+^+m9A:81:9+^+^+^",
-		["Player-4778-05244F19"] = "!T321E121K12c2CtayLGhx2:::E22u32LuEP1:::::UHLj5QiMz:=Jy1!G3221w+9:hMB:01u+-:18C:G1u+-:z7C:31u+9:gMB:61u+-:HRC:11u+9:xMB:71uw+9:WLB:D1u+-:z7C:31u+-:18C:G1u+9:cMB:B1u+-:HRC:11u+9:uLD:11u!E320+^+uM-:1gv:155-:1ll9:5E1:9+kc9:8E1:9+IA9:1Wv:7E1:9+^+vd9:1om:1yk9:1Ol9:5E1:9+U89:8E1:9+L5-:17u:1yk9:1Ol9:5E1:9+Cp9:1Ks:1Ol9:6E1:9+wD9:1QY:7E1:9+sd9:1Is:1yk9:6E1:9+Em9:8E1:9+pX-:2Ol9:6E1:9+ev9:8E1:9+QA9:8E1:9+---:1Hw:7E1:9+R0=:1qv:7E1:9+uv9:8E1:9+8w9:8E1:9+GW-:8E1:9",
+		["Player-4778-05244F19"] = "!T321E121K12c2CtayLGhx2:::E22u32LuEP1:::::UHLj5QiMz:=Jy1!G3221w+9:hMB:01u+-:18C:G1u+-:z7C:31u+9:gMB:61u+-:HRC:11u+9:xMB:71uw+9:WLB:D1u+-:z7C:31u+-:18C:G1u+9:cMB:B1u+-:HRC:11u+9:uLD:11u!E320+^+uM-:1gv:155-:1ll9:5E1:9+kc9:8E1:9+IA9:1Wv:7E1:9+^+vd9:1om:1yk9:1Ol9:5E1:9+U89:8E1:9+L5-:17u:1yk9:1Ol9:5E1:9+Cp9:1Ks:1Ol9:6E1:9+wD9:1QY:7E1:9+sd9:1Is:1yk9:6E1:9+Em9:8E1:9+pX-:2Ol9:6E1:9+ev9:8E1:9+PK-:2ll9:1Ol9:5E1:9+---:1Hw:7E1:9+R0=:1qv:7E1:9+uv9:8E1:9+8w9:8E1:9+GW-:8E1:9",
 		["Player-4778-05305580"] = "!T32310110!G32116++++++!E320+^+^+^+^+ET1:81:9+s:81:9+^+nJ:81:9+r:81:9+^+^+^+^+^+^+^+X:81:9+^+^+^",
 	},
 	["_version"] = 220811,
