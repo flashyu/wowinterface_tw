@@ -1,0 +1,180 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/FrameXML/UI.xsd">
+  <Script file="TradeShout.lua"/>
+  <Script file="TradeShoutConfig.lua"/>
+
+  <CheckButton name="TradeShoutCheckButtonTemplate"
+      inherits="UICheckButtonTemplate" virtual="true">
+    <Scripts>
+      <OnClick>
+        TradeShoutConfig_CheckClick(self);
+        PlaySound(856, "master");
+      </OnClick>
+    </Scripts>
+  </CheckButton>
+
+  <Frame name="TradeShoutOptFrame" parent="UIParent" hidden="true"
+      movable="true" enableMouse="true" enableKeyboard="true">
+    <Size>
+      <AbsDimension x="300" y="300" />
+    </Size>
+    <Anchors>
+      <Anchor point="CENTER" />
+    </Anchors>
+    <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background"
+      edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+      <BackgroundInsets>
+        <AbsInset left="11" right="12" top="12" bottom="11"/>
+      </BackgroundInsets>
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+      <EdgeSize>
+        <AbsValue val="32"/>
+      </EdgeSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="ARTWORK">
+        <Texture name="$parentHeader"
+             file="Interface\DialogFrame\UI-DialogBox-Header">
+          <Size>
+            <AbsDimension x="356" y="64"/>
+          </Size>
+          <Anchors>
+            <Anchor point="TOP">
+              <Offset>
+                <AbsDimension x="0" y="12"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </Texture>
+        <FontString name="$parentTitle"
+            inherits="GameFontNormal" text="Trade Shout">
+          <Anchors>
+            <Anchor point="TOP" relativeTo="$parentHeader">
+              <Offset>
+                <AbsDimension x="0" y="-14"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <Frames>
+      <CheckButton name="$parentWhisper"
+          inherits="TradeShoutCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="20" y="-40" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </CheckButton>
+
+      <CheckButton name="$parentParty"
+          inherits="TradeShoutCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT"
+              relativeTo="$parentWhisper"
+              relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="-4" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </CheckButton>
+
+      <CheckButton name="$parentRaid"
+          inherits="TradeShoutCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT"
+              relativeTo="$parentParty"
+              relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="-4" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </CheckButton>
+      
+      <CheckButton name="$parentWarning"
+          inherits="TradeShoutCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT"
+              relativeTo="$parentRaid"
+              relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="-4" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </CheckButton>
+      
+      <CheckButton name="$parentSay"
+          inherits="TradeShoutCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT"
+              relativeTo="$parentWarning"
+              relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="-4" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </CheckButton>
+      
+      <CheckButton name="$parentThank"
+          inherits="TradeShoutCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT"
+              relativeTo="$parentSay"
+              relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="-4" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </CheckButton>
+
+      <Button name="$parentReset"
+          inherits="OptionsButtonTemplate" text="설정 초기화 (Default Settings)">
+        <Size>
+            <AbsDimension x="180" y="21" />
+        </Size>
+        <Anchors>
+          <Anchor point="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="16" y="20"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            PlaySound(798, "master");
+            TradeShoutConfig_Reset();
+            TradeShoutConfig_Initialize();
+            ReloadUI();
+          </OnClick>
+        </Scripts>
+      </Button>
+
+      <Button name="$parentClose"
+          inherits="OptionsButtonTemplate" text="확인 (Confirm)">
+        <Anchors>
+          <Anchor point="BOTTOMRIGHT">
+            <Offset>
+              <AbsDimension x="-16" y="20"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            PlaySound(798, "master");
+            TradeShout_ConditionCheck();
+            HideUIPanel(TradeShoutOptFrame);
+          </OnClick>
+        </Scripts>
+      </Button>
+    </Frames>
+  </Frame>
+</Ui>

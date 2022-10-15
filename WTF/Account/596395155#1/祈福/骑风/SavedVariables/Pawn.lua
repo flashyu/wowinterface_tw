@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0703,
-	["LastPlayerFullName"] = "骑风-祈福",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 42554,
@@ -15,9 +13,9 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:37141::::::::80:::::::::|h[耀眼光芒护符]|h|r",
 		}, -- [2]
 		{
-			["ID"] = 37652,
-			["Level"] = 200,
-			["Link"] = "|cff0070dd|Hitem:37652::::::::80:::::::::|h[克莱斯塔卢斯护肩]|h|r",
+			["ID"] = 40594,
+			["Level"] = 226,
+			["Link"] = "|cffa335ee|Hitem:40594::::::::80:::::::::|h[意志分裂护肩]|h|r",
 		}, -- [3]
 		nil, -- [4]
 		{
@@ -80,9 +78,9 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:37799::::::::80:::::::::|h[复活者的披风]|h|r",
 		}, -- [15]
 		{
-			["ID"] = 45085,
-			["Level"] = 200,
-			["Link"] = "|cffa335ee|Hitem:45085::::::::80:::::::::|h[泰坦神铁法术之刃]|h|r",
+			["ID"] = 40455,
+			["Level"] = 213,
+			["Link"] = "|cffa335ee|Hitem:40455::::::::80:::::::::|h[节制法杖]|h|r",
 		}, -- [16]
 		{
 			["ID"] = 40698,
@@ -90,6 +88,8 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40698::::::::80:::::::::|h[紫罗兰城堡结界]|h|r",
 		}, -- [17]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "骑风-祈福",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

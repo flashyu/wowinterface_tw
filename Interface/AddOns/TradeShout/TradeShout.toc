@@ -1,0 +1,8 @@
+## Interface: 11304
+## Title: TradeShout
+## Notes: 거래내역 알림이
+## Author: bout (인벤) / 아쿤델라르-얼음피 (클래식)
+## Version: 0.12.0
+## SavedVariables: TradeShoutOptions
+
+TradeShout.xml

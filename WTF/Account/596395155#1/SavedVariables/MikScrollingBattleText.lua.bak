@@ -1,0 +1,15 @@
+
+MSBTProfiles_SavedVars = {
+	["profiles"] = {
+		["Default"] = {
+			["enableBlizzardDamage"] = true,
+			["creationVersion"] = "5.7.153",
+		},
+	},
+}
+MSBT_SavedMedia = {
+	["fonts"] = {
+	},
+	["sounds"] = {
+	},
+}
