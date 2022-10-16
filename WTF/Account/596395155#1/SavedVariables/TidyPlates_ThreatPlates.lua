@@ -5,18 +5,39 @@ ThreatPlatesDB = {
 			["welcome"] = true,
 		},
 	},
-	["global"] = {
-		["version"] = "10.5.4",
-	},
 	["profileKeys"] = {
 		["骑风 - 祈福"] = "Default",
+	},
+	["global"] = {
+		["version"] = "10.5.4",
 	},
 	["profiles"] = {
 		["Default"] = {
 			["settings"] = {
+				["customtext"] = {
+					["size"] = 7,
+					["flags"] = "OUTLINE",
+				},
+				["eliteicon"] = {
+					["x"] = 59,
+					["scale"] = 11,
+				},
+				["healthbar"] = {
+					["width"] = 80,
+					["height"] = 4,
+				},
+				["skullicon"] = {
+					["scale"] = 15,
+				},
+				["castbar"] = {
+					["width"] = 80,
+				},
+				["name"] = {
+					["size"] = 8,
+				},
 				["frame"] = {
-					["height"] = 52.875,
-					["width"] = 154,
+					["height"] = 45.825,
+					["width"] = 98,
 				},
 			},
 		},

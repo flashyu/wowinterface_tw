@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0703,
+	["LastPlayerFullName"] = "骑风-祈福",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 42554,
@@ -19,14 +21,14 @@ PawnOptions = {
 		}, -- [3]
 		nil, -- [4]
 		{
-			["ID"] = 39547,
-			["Level"] = 200,
-			["Link"] = "|cffa335ee|Hitem:39547::::::::80:::::::::|h[英雄的梦游者外衣]|h|r",
+			["ID"] = 40469,
+			["Level"] = 213,
+			["Link"] = "|cffa335ee|Hitem:40469:3252:39998:40026:::::80:::::::::|h[勇猛的梦游者外衣]|h|r",
 		}, -- [5]
 		{
-			["ID"] = 37680,
-			["Level"] = 200,
-			["Link"] = "|cff0070dd|Hitem:37680::::::::80:::::::::|h[凝聚灵魂腰带]|h|r",
+			["ID"] = 40200,
+			["Level"] = 213,
+			["Link"] = "|cffa335ee|Hitem:40200::::::::80:::::::::|h[圣歌腰带]|h|r",
 		}, -- [6]
 		{
 			["ID"] = 41303,
@@ -39,9 +41,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40270::::::::80:::::::::|h[腐伤之靴]|h|r",
 		}, -- [8]
 		{
-			["ID"] = 37696,
-			["Level"] = 200,
-			["Link"] = "|cffa335ee|Hitem:37696::::::::80:::::::::|h[疫病侵蚀护腕]|h|r",
+			["ID"] = 40325,
+			["Level"] = 213,
+			["Link"] = "|cffa335ee|Hitem:40325::::::::80:::::::::|h[开拓思绪护腕]|h|r",
 		}, -- [9]
 		{
 			["ID"] = 37230,
@@ -73,9 +75,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40682::::::::80:::::::::|h[流放者的日晷]|h|r",
 		}, -- [14]
 		{
-			["ID"] = 37799,
-			["Level"] = 200,
-			["Link"] = "|cff0070dd|Hitem:37799::::::::80:::::::::|h[复活者的披风]|h|r",
+			["ID"] = 40253,
+			["Level"] = 213,
+			["Link"] = "|cffa335ee|Hitem:40253::::::::80:::::::::|h[修女披风]|h|r",
 		}, -- [15]
 		{
 			["ID"] = 40455,
@@ -83,13 +85,11 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40455::::::::80:::::::::|h[节制法杖]|h|r",
 		}, -- [16]
 		{
-			["ID"] = 40698,
-			["Level"] = 200,
-			["Link"] = "|cffa335ee|Hitem:40698::::::::80:::::::::|h[紫罗兰城堡结界]|h|r",
+			["ID"] = 40192,
+			["Level"] = 213,
+			["Link"] = "|cffa335ee|Hitem:40192::::::::80:::::::::|h[诅咒之脊]|h|r",
 		}, -- [17]
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "骑风-祈福",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

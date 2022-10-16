@@ -104,6 +104,7 @@ VER 3 0000000000000018 "虫群" "INV_MISC_QUESTIONMARK"
 /cast 虫群
 END
 VER 3 0000000000000003 "视野宏" "132092"
+/join 大脚世界频道
 /console cameraDistanceMaxZoomFactor 4
 /console cursorsizepreferred 2
 END
