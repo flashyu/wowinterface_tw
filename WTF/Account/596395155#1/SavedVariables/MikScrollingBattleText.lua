@@ -2,8 +2,29 @@
 MSBTProfiles_SavedVars = {
 	["profiles"] = {
 		["Default"] = {
-			["enableBlizzardDamage"] = false,
+			["scrollAreas"] = {
+				["Static"] = {
+					["direction"] = "Up",
+					["offsetY"] = 18,
+				},
+				["Outgoing"] = {
+					["offsetY"] = -141,
+					["offsetX"] = 102,
+				},
+				["Incoming"] = {
+					["offsetY"] = -140,
+				},
+			},
 			["creationVersion"] = "5.7.153",
+			["events"] = {
+				["NOTIFICATION_ITEM_COOLDOWN"] = {
+					["alwaysSticky"] = true,
+				},
+				["NOTIFICATION_COOLDOWN"] = {
+					["alwaysSticky"] = true,
+				},
+			},
+			["enableBlizzardDamage"] = true,
 		},
 	},
 }

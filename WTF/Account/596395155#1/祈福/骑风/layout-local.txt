@@ -20,3 +20,10 @@ X: -264
 Y: -54
 W: 768
 H: 447
+Frame: MSBTMainOptionsFrame
+FrameLevel: 1
+Anchor: RIGHT
+X: -34
+Y: 134
+W: 608
+H: 440
