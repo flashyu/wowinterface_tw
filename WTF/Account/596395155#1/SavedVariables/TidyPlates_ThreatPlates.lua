@@ -6,7 +6,7 @@ ThreatPlatesDB = {
 		},
 	},
 	["global"] = {
-		["version"] = "10.5.4",
+		["version"] = "10.5.6",
 	},
 	["profileKeys"] = {
 		["骑风 - 祈福"] = "Default",

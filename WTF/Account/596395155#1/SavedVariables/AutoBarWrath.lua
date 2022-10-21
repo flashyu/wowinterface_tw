@@ -412,6 +412,9 @@ AutoBarDB = {
 	["chars"] = {
 		["骑风 - 祈福"] = {
 			["buttonDataList"] = {
+				["AutoBarButtonQuest"] = {
+					["arrangeOnUse"] = 42104,
+				},
 				["AutoBarButtonMount"] = {
 					["arrangeOnUse"] = "大型美酒节科多兽",
 				},

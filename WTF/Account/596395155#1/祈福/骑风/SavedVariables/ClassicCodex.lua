@@ -10,9 +10,9 @@ CodexConfig = {
 	["minimumDropChance"] = 2,
 	["showLowLevel"] = false,
 	["_tom_waypoint"] = {
-		119, -- [1]
-		0.7211, -- [2]
-		0.5761999999999999, -- [3]
+		125, -- [1]
+		0.4068, -- [2]
+		0.3535, -- [3]
 		["arrivaldistance"] = 15,
 		["callbacks"] = {
 			["distance"] = {
@@ -25,7 +25,7 @@ CodexConfig = {
 		["persistent"] = true,
 		["minimap"] = true,
 		["cleardistance"] = 10,
-		["title"] = "残忍的阿图里斯",
+		["title"] = "提莫斯·琼斯",
 		["from"] = "?",
 		["crazy"] = true,
 		["world"] = true,

@@ -68,10 +68,23 @@ function frm:PLAYER_LOGIN()
 		array = {"UnitStrength", "UnitAgility", "UnitStamina", "UnitIntelligence", "UnitSpirit"}
 		last = 5
 	end
+
+	SAVED['CharacterInfo']['Buff'] = {}
 	for i = 1, last do
-		local unitStat, _, _, _ = UnitStat("Player", i)
+		local unitStat, _, posBuff, _ = UnitStat("Player", i)
 		SAVED['CharacterInfo'][array[i]] = unitStat
+		if versionName == 'wowclassictbc' then
+			if posBuff > 0 then
+				buff = {}
+				buff[array[i]] = posBuff
+				table.insert(SAVED['CharacterInfo']['Buff'], buff)
+			end
+		end
 	end
+	if length(SAVED['CharacterInfo']['Buff']) == 0 then
+		SAVED['CharacterInfo']['Buff'] = nil
+	end
+
 	local unitArmor = UnitArmor("Player")
 	SAVED['CharacterInfo']["UnitArmor"] = unitArmor
 
@@ -169,20 +182,30 @@ function frm:PLAYER_LOGIN()
 
 	if versionName == "wowretail" then
 		SAVED["SpecializedSkills"] = {}
-		local SpecializedSkill = {}
+		local maxLengthID = 0
+		local maxLength = 0
 		for specIndex = 1, 3 do
+			local specialID, _, _, _, _, _ = GetSpecializationInfo(specIndex)
+			SAVED["SpecializedSkills"][specialID] = {}
 			for tier = 1, 7 do
 				for column = 1, 3 do
 					local talentID, name, texture, selected, available, spellID, unknown, row, column, known, grantedByAura = GetTalentInfoBySpecialization(specIndex, tier, column)
 					if known == true then
 						specialSkill = {}
 						specialSkill['SpecializedSkillSpellID'] = spellID
-						table.insert(SAVED["SpecializedSkills"], specialSkill)
+						table.insert(SAVED["SpecializedSkills"][specialID], specialSkill)
 					end
 				end
 			end
+			if length(SAVED["SpecializedSkills"][specialID]) >= maxLength then
+				SAVED["SpecializedSkills"][maxLengthID] = nil
+				maxLength = length(SAVED["SpecializedSkills"][specialID])
+				maxLengthID = specialID
+			else
+				SAVED["SpecializedSkills"][specialID] = nil
+			end
 		end
-		
+
 		SAVED["SkillRelated"] = {}
 		for i = 1, 3 do
 			local PvpTalent = {}
@@ -374,6 +397,7 @@ function frm:PLAYER_LOGIN()
 		local covenantData = C_Covenants.GetCovenantData(C_Covenants.GetActiveCovenantID())
 		local soulBindIDs = covenantData["soulbindIDs"]
 		local activeSoulBindID = C_Soulbinds.GetActiveSoulbindID()
+		SAVED["Covenant"]["activeSoulBindID"] = activeSoulBindID
 		SAVED["Covenant"]["CovenantSkill"] = {}
 		for _, v in pairs(soulBindIDs) do
 			local isActive = false
@@ -405,8 +429,8 @@ function frm:PLAYER_LOGIN()
 	if versionName ~= "wowretail" then
 		local ok, num = pcall(getNumTalentTabs)
 		if ok then
+			SAVED["CharacterTalent"] = {}
 			for i = 1, num do
-				SAVED["CharacterTalent"] = {}
 				local talentTree = {}
 				local talentTabName, _, _, _ = GetTalentTabInfo(i)
 				local talentTreeLeaves = {}
@@ -469,9 +493,12 @@ function frm:ADDON_LOADED()
 			Equipment["EquipSpellID"] = spellID
 			Equipment["EquipSetID"] = setID
 			Equipment['EquipName'] = itemName
-			Equipment['EquipLevel'] = itemLevel
 			Equipment['EquipQuality'] = Quality[itemQuality]
 			Equipment['EquipPrice'] = sellPrice
+			
+			local effectiveILvl, _, _ = GetDetailedItemLevelInfo(equipAddition) 
+			Equipment['EquipLevel'] = effectiveILvl
+
 			local itemIcon = GetItemIcon(itemID)
 			Equipment['EquipIcon'] = itemIcon
 			local ok, itemStats = pcall(getItemStats, itemLink)

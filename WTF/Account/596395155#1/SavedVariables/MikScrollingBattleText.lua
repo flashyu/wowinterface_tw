@@ -8,8 +8,8 @@ MSBTProfiles_SavedVars = {
 					["offsetY"] = 18,
 				},
 				["Outgoing"] = {
-					["offsetY"] = -141,
 					["offsetX"] = 102,
+					["offsetY"] = -141,
 				},
 				["Incoming"] = {
 					["offsetY"] = -140,
