@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 231,
+	["session"] = 239,
 	["errors"] = {
 		{
 			["message"] = "...ace\\AddOns\\AdvancedInterfaceOptions\\basicOptions.lua:344: attempt to index field 'CustomVars' (a nil value)",
@@ -444,26 +444,18 @@ BugGrabberDB = {
 			["counter"] = 1,
 		}, -- [59]
 		{
-			["message"] = "...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:681: attempt to index local 'displayData' (a nil value)",
-			["time"] = "2022/10/09 19:30:39",
-			["locals"] = "self = <unnamed> {\n 0 = <userdata>\n RolesText = <unnamed> {\n }\n Roles = <table> {\n }\n Role2 = <unnamed> {\n }\n Role1 = <unnamed> {\n }\n Role3 = <unnamed> {\n }\n}\ndisplayData = nil\ndisabled = true\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index local 'displayData' (a nil value)\"\nLFGBROWSE_DELISTED_FONT_COLOR = <table> {\n b = 0.300000\n g = 0.300000\n r = 0.300000\n}\n",
-			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:681: in function `LFGBrowseGroupDataDisplaySolo_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:653: in function `LFGBrowseGroupDataDisplay_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:328: in function `LFGBrowseSearchEntry_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:239: in function `LFGBrowseSearchEntry_Init'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:59: in function `frameFactory'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:217: in function `AcquireInternal'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:250: in function `AcquireRange'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:503: in function `Rebuild'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:562: in function `ValidateDataRange'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBox.lua\"]:613: in function `Update'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBox.lua\"]:100: in function <Interface\\SharedXML\\Scroll\\ScrollBox.lua:94>\n[string \"=[C]\"]: in function `GetSize'\n...\n[string \"=[C]\"]: ?\n[string \"@Interface\\SharedXML\\CallbackRegistry.lua\"]:118: in function <Interface\\SharedXML\\CallbackRegistry.lua:117>\n[string \"=[C]\"]: ?\n[string \"@Interface\\SharedXML\\CallbackRegistry.lua\"]:121: in function `TriggerEvent'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:195: in function `SignalDataChangeEvent'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:175: in function `SetDataProvider'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBox.lua\"]:563: in function `SetDataProvider'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:146: in function `UpdateResults'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:122: in function `UpdateResultList'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:97: in function <...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:91>",
-			["session"] = 105,
-			["counter"] = 1,
-		}, -- [60]
-		{
 			["message"] = "Couldn't open Interface\\AddOns\\Mapster\\Mapster_Wrath.toc",
 			["time"] = "2022/10/11 21:51:27",
 			["session"] = 123,
 			["counter"] = 2,
-		}, -- [61]
+		}, -- [60]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'Questie' 尝试调用保护功能 'Questie_TrackedAchievements:SetHeight()'。",
 			["time"] = "2022/10/12 22:56:55",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetHeight'\n[string \"@Interface\\AddOns\\Questie\\Modules\\Tracker\\AchievementTracker.lua\"]:67: in function `LoadAchievements'\n[string \"@Interface\\AddOns\\Questie\\Modules\\Tracker\\AchievementTracker.lua\"]:96: in function <...ddOns\\Questie\\Modules\\Tracker\\AchievementTracker.lua:89>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...vUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 164,
 			["counter"] = 1,
-		}, -- [62]
+		}, -- [61]
 		{
 			["message"] = "...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:1106: attempt to index local 'roles' (a nil value)",
 			["time"] = "2022/10/13 23:07:23",
@@ -471,7 +463,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:1106: in function <...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:1103>\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:1201: in function <...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:1127>\n[string \"=[C]\"]: in function `sort'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:1230: in function `LFGBrowseUtil_SortSearchResults'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:121: in function `UpdateResultList'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:97: in function <...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:91>",
 			["session"] = 169,
 			["counter"] = 3,
-		}, -- [63]
+		}, -- [62]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2302: attempt to index global 'dialog' (a nil value)",
 			["time"] = "2022/10/06 00:31:47",
@@ -479,14 +471,14 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2302: in function `GearSetButton_OnClick'\n[string \"*:OnClick\"]:1: in function <[string \"*:OnClick\"]:1>",
 			["session"] = 169,
 			["counter"] = 14,
-		}, -- [64]
+		}, -- [63]
 		{
 			["message"] = "[ADDON_ACTION_FORBIDDEN] 插件 'WIM' 尝试调用保护功能 'CopyToClipboard()'。",
 			["time"] = "2022/10/15 01:08:21",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `CopyToClipboard'\n[string \"@Interface\\FrameXML\\UnitPopupSharedButtonMixins.lua\"]:1013: in function `OnClick'\n[string \"@Interface\\FrameXML\\UnitPopupShared.lua\"]:148: in function `func'\n[string \"@Interface\\FrameXML\\UIDropDownMenu.lua\"]:944: in function `UIDropDownMenuButton_OnClick'\n[string \"*:OnClick\"]:1: in function <[string \"*:OnClick\"]:1>",
 			["session"] = 175,
 			["counter"] = 1,
-		}, -- [65]
+		}, -- [64]
 		{
 			["message"] = "...rface\\AddOns\\LFGBulletinBoard\\GroupBulletinBoard.lua:435: attempt to call field 'GetDungeonNames' (a nil value)",
 			["time"] = "2022/10/15 01:31:57",
@@ -494,7 +486,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\LFGBulletinBoard\\GroupBulletinBoard.lua\"]:435: in function `Init'\n[string \"@Interface\\AddOns\\LFGBulletinBoard\\GroupBulletinBoard.lua\"]:698: in function `?'\n[string \"@Interface\\AddOns\\LFGBulletinBoard\\LibGPIToolBox.lua\"]:108: in function <Interface\\AddOns\\LFGBulletinBoard\\LibGPIToolBox.lua:105>",
 			["session"] = 178,
 			["counter"] = 1,
-		}, -- [66]
+		}, -- [65]
 		{
 			["message"] = "Interface\\AddOns\\LFGBulletinBoard\\Dungeons-地下城.lua:460: unfinished string near '\"净化斯坦索姆,'",
 			["time"] = "2022/10/15 01:31:57",
@@ -502,7 +494,7 @@ BugGrabberDB = {
 			["stack"] = "",
 			["session"] = 178,
 			["counter"] = 4,
-		}, -- [67]
+		}, -- [66]
 		{
 			["message"] = "Interface\\AddOns\\LFGBulletinBoard\\RequestList.lua:26: attempt to index local 'b' (a nil value)",
 			["time"] = "2022/10/15 01:52:58",
@@ -510,23 +502,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\LFGBulletinBoard\\RequestList.lua\"]:26: in function <Interface\\AddOns\\LFGBulletinBoard\\RequestList.lua:23>\n[string \"=[C]\"]: in function `sort'\n[string \"@Interface\\AddOns\\LFGBulletinBoard\\RequestList.lua\"]:344: in function `UpdateList'\n[string \"@Interface\\AddOns\\LFGBulletinBoard\\GroupBulletinBoard.lua\"]:742: in function `Entry'\n[string \"@Interface\\AddOns\\LFGBulletinBoard\\LibGPIToolBox.lua\"]:114: in function <Interface\\AddOns\\LFGBulletinBoard\\LibGPIToolBox.lua:112>",
 			["session"] = 181,
 			["counter"] = 7,
-		}, -- [68]
-		{
-			["message"] = "...ealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0-108.lua:818: attempt to perform arithmetic on local 'requiresLevel' (a nil value)",
-			["time"] = "2022/10/15 18:32:37",
-			["locals"] = "spellData = <table> {\n interval = 3\n levels = <table> {\n }\n averages = <table> {\n }\n}\nspellName = \"回春术\"\nspellID = 8070\nspellRank = nil\naverage = nil\nrequiresLevel = nil\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = 80\n(*temporary) = nil\n(*temporary) = \"attempt to perform arithmetic on local 'requiresLevel' (a nil value)\"\ntype = <function> defined =[C]:-1\nmin = <function> defined =[C]:-1\nplayerLevel = 80\n",
-			["stack"] = "[string \"@Interface\\AddOns\\HealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0-108.lua\"]:818: in function <...ealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0.lua:807>\n[string \"@Interface\\AddOns\\HealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0-108.lua\"]:967: in function <...ealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0.lua:965>\n[string \"@Interface\\AddOns\\HealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0-108.lua\"]:2706: in function `?'\n[string \"@Interface\\AddOns\\HealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0-108.lua\"]:3348: in function <...ealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0.lua:3346>",
-			["session"] = 193,
-			["counter"] = 1,
-		}, -- [69]
-		{
-			["message"] = "...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:245: attempt to index local 'searchResultInfo' (a nil value)",
-			["time"] = "2022/10/13 22:28:13",
-			["locals"] = "self = <unnamed> {\n 0 = <userdata>\n GetOrderIndex = <function> defined @Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua:11\n Highlight = <unnamed> {\n }\n ElementDataMatches = <function> defined @Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua:6\n PartyIcon = <unnamed> {\n }\n GetElementData = <function> defined @Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua:2\n DataDisplay = <unnamed> {\n }\n ActivityName = <unnamed> {\n }\n hasSelf = false\n isDelisted = false\n resultID = 12\n SetOrderIndex = <function> defined @Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua:15\n Name = <unnamed> {\n }\n NewPlayerFriendlyIcon = <unnamed> {\n }\n Selected = <unnamed> {\n }\n ResultBG = <unnamed> {\n }\n Level = <unnamed> {\n }\n ClassIcon = <unnamed> {\n }\n}\nsearchResultInfo = nil\nactiveEntryInfo = <table> {\n newPlayerFriendly = false\n activityIDs = <table> {\n }\n comment = \"\"\n duration = 43165\n}\n(*temporary) = <table> {\n newPlayerFriendly = false\n activityIDs = <table> {\n }\n comment = \"\"\n duration = 43165\n}\n(*temporary) = <table> {\n newPlayerFriendly = false\n activityIDs = <table> {\n }\n comment = \"\"\n duration = 43165\n}\n(*temporary) = false\n(*temporary) = 3\n(*temporary) = 1102\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index local 'searchResultInfo' (a nil value)\"\nLFGBROWSE_GROUPDATA_ATLASES = <table> {\n DEATHKNIGHT = \"groupfinder-icon-class-deathknight\"\n TANK = \"groupfinder-icon-role-large-tank\"\n PALADIN = \"groupfinder-icon-class-paladin\"\n DAMAGER = \"groupfinder-icon-role-large-dps\"\n HEALER = \"groupfinder-icon-role-large-heal\"\n PRIEST = \"groupfinder-icon-class-priest\"\n HUNTER = \"groupfinder-icon-class-hunter\"\n WARLOCK = \"groupfinder-icon-class-warlock\"\n MAGE = \"groupfinder-icon-class-mage\"\n ROGUE = \"groupfinder-icon-class-rogue\"\n DRUID = \"groupfinder-icon-class-druid\"\n WARRIOR = \"groupfinder-icon-class-warrior\"\n SHAMAN = \"groupfinder-icon-class-shaman\"\n}\nLFGBROWSE_ACTIVITY_NOMATCH_FONT_COLOR = <table> {\n GetRGB = <function> defined @Interface\\SharedXML\\Color.lua:20\n OnLoad = <function> defined @Interface\\SharedXML\\Color.lua:9\n b = 0.500000\n GenerateHexColorMarkup = <function> defined @Interface\\SharedXML\\Color.lua:51\n WrapTextInColorCode = <function> defined @Interface\\SharedXML\\Color.lua:55\n GenerateHexColor = <function> defined @Interface\\SharedXML\\Color.lua:47\n GetRGBA = <function> defined @Interface\\SharedXML\\Color.lua:28\n IsEqualTo = <function> defined @Interface\\SharedXML\\Color.lua:13\n g = 0.500000\n r = 0.500000\n SetRGBA = <function> defined @Interface\\SharedXML\\Color.lua:36\n GetRGBAsBytes = <function> defined @Interface\\SharedXML\\Color.lua:24\n SetRGB = <function> defined @Interface\\SharedXML\\Color.lua:43\n GetRGBAAsBytes = <function> defined @Interface\\SharedXML\\Color.lua:32\n}\nLFGBROWSE_DELISTED_FONT_COLOR = <table> {\n b = 0.300000\n g = 0.300000\n r = 0.300000\n}\nLFGBROWSE_SELF_FONT_COLOR = <table> {\n GetRGB = <function> defined @Interface\\SharedXML\\Color.lua:20\n OnLoad = <function> defined @Interface\\SharedXML\\Color.lua:9\n b = 0.375000\n GenerateHexColorMarkup = <function> defined @Interface\\SharedXML\\Color.lua:51\n WrapTextInColorCode = <function> defined @Interface\\SharedXML\\Color.lua:55\n GenerateHexColor = <function> defined @Interface\\SharedXML\\Color.lua:47\n GetRGBA = <function> defined @Interface\\SharedXML\\Color.lua:28\n IsEqualTo = <function> defined @Interface\\SharedXML\\Color.lua:13\n g = 1\n r = 0.400000\n SetRGBA = <function> defined @Interface\\SharedXML\\Color.lua:36\n GetRGBAsBytes = <function> defined @Interface\\SharedXML\\Color.lua:24\n SetRGB = <function> defined @Interface\\SharedXML\\Color.lua:43\n GetRGBAAsBytes = <function> defined @Interface\\SharedXML\\Color.lua:32\n}\nLFGBROWSE_ACTIVITY_MATCH_FONT_COLOR = <table> {\n GetRGB = <function> defined @Interface\\SharedXML\\Color.lua:20\n OnLoad = <function> defined @Interface\\SharedXML\\Color.lua:9\n b = 1\n GenerateHexColorMarkup = <function> defined @Interface",
-			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:245: in function `LFGBrowseSearchEntry_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:346: in function <...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:341>",
-			["session"] = 193,
-			["counter"] = 20,
-		}, -- [70]
+		}, -- [67]
 		{
 			["message"] = "C stack overflow",
 			["time"] = "2022/10/15 23:57:35",
@@ -534,7 +510,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n...\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?",
 			["session"] = 193,
 			["counter"] = 2,
-		}, -- [71]
+		}, -- [68]
 		{
 			["message"] = "...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:734: attempt to index local 'displayData' (a nil value)",
 			["time"] = "2022/10/13 23:52:47",
@@ -542,28 +518,20 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:734: in function `LFGBrowseGroupDataDisplayEnumerate_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:659: in function `LFGBrowseGroupDataDisplay_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:328: in function `LFGBrowseSearchEntry_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:346: in function <...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:341>",
 			["session"] = 211,
 			["counter"] = 3,
-		}, -- [72]
+		}, -- [69]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 尝试调用保护功能 'OverrideActionBarButton3:Show()'。",
 			["time"] = "2022/10/08 23:02:53",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:357: in function `ActionButton_Update'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:694: in function `ActionButton_OnEvent'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:207: in function <Interface\\FrameXML\\ActionButton.lua:204>",
 			["session"] = 211,
 			["counter"] = 6,
-		}, -- [73]
+		}, -- [70]
 		{
 			["message"] = "Error loading Interface\\AddOns\\guild-loot-tracker\\Lib\\LibSharedMedia-3.0\\LibSharedMedia-3.0\\LibSharedMedia-3.0-8020003.lua",
 			["session"] = 213,
 			["time"] = "2022/10/16 01:20:53",
 			["counter"] = 60,
-		}, -- [74]
-		{
-			["message"] = "...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:1187: attempt to index local 'roles1' (a nil value)",
-			["time"] = "2022/10/18 22:53:11",
-			["locals"] = "searchResultID1 = 57\nsearchResultID2 = 95\nsearchResultInfo1 = <table> {\n comment = \"\"\n leaderName = \"菁菁年輪\"\n voiceChat = \"\"\n newPlayerFriendly = true\n searchResultID = 57\n isWarMode = false\n isDelisted = true\n numGuildMates = 0\n requiredItemLevel = 0\n hasSelf = false\n numBNetFriends = 0\n numMembers = 1\n name = \"\"\n age = 3708\n autoAccept = false\n activityIDs = <table> {\n }\n numCharFriends = 0\n requiredHonorLevel = 0\n}\nsearchResultInfo2 = <table> {\n comment = \"\"\n leaderName = \"魔血的天空\"\n voiceChat = \"\"\n newPlayerFriendly = false\n searchResultID = 95\n isWarMode = false\n isDelisted = false\n numGuildMates = 0\n requiredItemLevel = 0\n hasSelf = false\n numBNetFriends = 0\n numMembers = 1\n name = \"\"\n age = 4639\n autoAccept = false\n activityIDs = <table> {\n }\n numCharFriends = 0\n requiredHonorLevel = 0\n}\nhasSelf1 = false\nhasSelf2 = false\nisSolo1 = true\nisSolo2 = true\nroleOrderings = <table> {\n 1 = \"TANK\"\n 2 = \"HEALER\"\n 3 = \"DAMAGER\"\n}\nroles1 = nil\nroles2 = <table> {\n HUNTER = 1\n WARRIOR = 0\n ROGUE = 0\n DAMAGER = 1\n LEADER_ROLE_HEALER = false\n NOROLE = 0\n HEALER_REMAINING = 1\n DRUID = 0\n DEATHKNIGHT = 0\n TANK = 0\n DAMAGER_REMAINING = 2\n LEADER_ROLE_DAMAGER = true\n HEALER = 0\n PRIEST = 0\n TANK_REMAINING = 1\n WARLOCK = 0\n MAGE = 0\n SHAMAN = 0\n PALADIN = 0\n LEADER_ROLE_TANK = false\n}\n(for generator) = <function> defined =[C]:-1\n(for state) = <table> {\n 1 = \"TANK\"\n 2 = \"HEALER\"\n 3 = \"DAMAGER\"\n}\n(for control) = 1\n_ = 1\ndesiredRole = \"TANK\"\n(*temporary) = \"LEADER_ROLE_TANK\"\n(*temporary) = \"TANK\"\n(*temporary) = \"TANK\"\n(*temporary) = \"attempt to index local 'roles1' (a nil value)\"\nactiveEntryInfo = nil\nactiveEntryUseDungeonRoles = false\ngroupMemberCounts = <table> {\n HUNTER = 0\n WARRIOR = 0\n PALADIN = 0\n DAMAGER = 0\n HEALER = 0\n NOROLE = 0\n PRIEST = 0\n MAGE = 0\n WARLOCK = 0\n SHAMAN = 0\n DEATHKNIGHT = 0\n DRUID = 0\n TANK = 0\n ROGUE = 0\n}\nLFGBROWSE_DUNGEON_NUM_TANKS_EXPECTED = 1\nLFGBROWSE_DUNGEON_NUM_HEALERS_EXPECTED = 1\nLFGBROWSE_DUNGEON_NUM_DPS_EXPECTED = 3\nHasRemainingSlotsForLocalPlayerRole = <function> defined @Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:1103\n",
-			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:1187: in function <...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:1127>\n[string \"=[C]\"]: in function `sort'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:1230: in function `LFGBrowseUtil_SortSearchResults'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:121: in function `UpdateResultList'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:97: in function <...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:91>",
-			["session"] = 218,
-			["counter"] = 2,
-		}, -- [75]
+		}, -- [71]
 		{
 			["message"] = "Interface\\AddOns\\aux-addon\\tabs\\search\\core.lua:35: attempt to index a nil value",
 			["time"] = "2022/10/05 19:18:31",
@@ -571,28 +539,14 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\aux-addon\\tabs\\search\\core.lua\"]:35: in function `USE_ITEM'\n[string \"@Interface\\AddOns\\aux-addon\\core\\shortcut.lua\"]:8: in function <Interface\\AddOns\\aux-addon\\core\\shortcut.lua:6>\n[string \"=[C]\"]: in function `HandleModifiedItemClick'\n[string \"*:OnClick\"]:2: in function <[string \"*:OnClick\"]:1>",
 			["session"] = 220,
 			["counter"] = 5,
-		}, -- [76]
-		{
-			["message"] = "Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
-			["time"] = "2022/09/24 23:46:51",
-			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
-			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:67: in function <Interface\\AddOns\\GearScoreLite\\GearScoreLite.lua:53>",
-			["session"] = 220,
-			["counter"] = 46,
-		}, -- [77]
-		{
-			["message"] = "(null)",
-			["time"] = "2022/09/28 22:01:13",
-			["session"] = 220,
-			["counter"] = 84,
-		}, -- [78]
+		}, -- [72]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 尝试调用保护功能 'OverrideActionBarButton4:Show()'。",
 			["time"] = "2022/09/27 23:14:20",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:357: in function `ActionButton_Update'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:694: in function `ActionButton_OnEvent'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:207: in function <Interface\\FrameXML\\ActionButton.lua:204>",
 			["session"] = 221,
 			["counter"] = 13,
-		}, -- [79]
+		}, -- [73]
 		{
 			["message"] = "Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua:37: attempt to index global 'db' (a nil value)",
 			["time"] = "2022/09/24 23:47:00",
@@ -600,7 +554,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua\"]:37: in function `frame'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:190: in function <Interface\\AddOns\\WIM\\Sources\\Options\\Options.lua:184>\n[string \"=[C]\"]: in function `Click'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:281: in function `UpdateSubCategories'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:104: in function <Interface\\AddOns\\WIM\\Sources\\Options\\Options.lua:104>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:327: in function `ShowOptions'\n[string \"@Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\WIM-3.9.6.lua\"]:11: in function <Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\WIM.lua:8>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\AddOnSkins\\Core\\Core.lua\"]:217: in function `CallSkin'\n[string \"@Interface\\AddOns\\AddOnSkins\\Core\\Core.lua\"]:311: in function `?'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:119: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...vUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 223,
 			["counter"] = 30,
-		}, -- [80]
+		}, -- [74]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2379: attempt to perform arithmetic on upvalue '_numItems' (a nil value)",
 			["time"] = "2022/10/04 01:43:26",
@@ -608,7 +562,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2379: in function `RecalculateGearManagerDialogPopup'\n[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2356: in function <Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2353>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2272: in function <Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2269>",
 			["session"] = 225,
 			["counter"] = 26,
-		}, -- [81]
+		}, -- [75]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2521: attempt to compare number with nil",
 			["time"] = "2022/10/04 01:45:04",
@@ -616,7 +570,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2521: in function <Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2509>\n[string \"=[C]\"]: in function `GearManagerDialogPopup_Update'\n[string \"@Interface_Wrath\\FrameXML\\PaperDollFrame.lua\"]:2274: in function <Interface_Wrath\\FrameXML\\PaperDollFrame.lua:2269>",
 			["session"] = 225,
 			["counter"] = 14,
-		}, -- [82]
+		}, -- [76]
 		{
 			["message"] = "...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Event.lua:97: assertion failed!",
 			["time"] = "2022/10/22 02:08:05",
@@ -624,7 +578,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: in function `assert'\n[string \"@Interface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Event.lua\"]:97: in function <...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Event.lua:93>",
 			["session"] = 226,
 			["counter"] = 16,
-		}, -- [83]
+		}, -- [77]
 		{
 			["message"] = "...e\\AddOns\\TradeSkillMaster\\Core\\UI\\AuctionUI\\Core.lua:232: assertion failed!",
 			["time"] = "2022/10/22 02:05:37",
@@ -632,6 +586,68 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: in function `assert'\n[string \"@Interface\\AddOns\\TradeSkillMaster\\Core\\UI\\AuctionUI\\Core.lua\"]:232: in function `callback'\n[string \"@Interface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Event.lua\"]:85: in function `ProcessEvent'\n[string \"@Interface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Event.lua\"]:101: in function <...erface\\AddOns\\TradeSkillMaster\\LibTSM\\Util\\Event.lua:93>\n[string \"=[C]\"]: in function `CloseAuctionHouse'\n[string \"@Interface\\AddOns\\aux-addon\\frame.lua\"]:29: in function <Interface\\AddOns\\aux-addon\\frame.lua:29>\n[string \"=[C]\"]: in function `Hide'\n[string \"@Interface\\AddOns\\aux-addon\\frame.lua\"]:54: in function <Interface\\AddOns\\aux-addon\\frame.lua:54>",
 			["session"] = 230,
 			["counter"] = 3,
+		}, -- [78]
+		{
+			["message"] = "Interface\\AddOns\\HealBot\\HealBot_Mounts-Mounts.lua:127: attempt to index local 'mapPos' (a nil value)",
+			["time"] = "2022/10/22 19:35:30",
+			["locals"] = "mapPos = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"player\"\n(*temporary) = \"attempt to index local 'mapPos' (a nil value)\"\nHealBot_mountData = <table> {\n ValidUse = true\n PrevGround# = 0\n PrevFlying# = 2\n playerFaction = 1\n incFlying = true\n}\n",
+			["stack"] = "[string \"@Interface\\AddOns\\HealBot\\HealBot_Mounts-Mounts.lua\"]:127: in function `?'\n[string \"@Interface\\AddOns\\HealBot\\HealBot_Timers.lua\"]:682: in function `HealBot_Timers_RunTimer'\n[string \"@Interface\\AddOns\\HealBot\\HealBot_Timers.lua\"]:779: in function `HealBot_Timers_Proc'\n[string \"@Interface\\AddOns\\HealBot\\HealBot_Timers.lua\"]:792: in function `HealBot_Timers_Run'\n[string \"@Interface\\AddOns\\HealBot\\HealBot-3.4.0.14.lua\"]:4616: in function `HealBot_OnUpdate'\n[string \"*:OnUpdate\"]:1: in function <[string \"*:OnUpdate\"]:1>",
+			["session"] = 236,
+			["counter"] = 212,
+		}, -- [79]
+		{
+			["message"] = "Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
+			["time"] = "2022/09/24 23:46:51",
+			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
+			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:67: in function <Interface\\AddOns\\GearScoreLite\\GearScoreLite.lua:53>",
+			["session"] = 239,
+			["counter"] = 47,
+		}, -- [80]
+		{
+			["message"] = "(null)",
+			["time"] = "2022/09/28 22:01:13",
+			["session"] = 239,
+			["counter"] = 87,
+		}, -- [81]
+		{
+			["message"] = "...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:681: attempt to index local 'displayData' (a nil value)",
+			["time"] = "2022/10/09 19:30:39",
+			["locals"] = "self = <unnamed> {\n 0 = <userdata>\n RolesText = <unnamed> {\n }\n Roles = <table> {\n }\n Role2 = <unnamed> {\n }\n Role1 = <unnamed> {\n }\n Role3 = <unnamed> {\n }\n}\ndisplayData = nil\ndisabled = true\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index local 'displayData' (a nil value)\"\nLFGBROWSE_DELISTED_FONT_COLOR = <table> {\n b = 0.300000\n g = 0.300000\n r = 0.300000\n}\n",
+			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:681: in function `LFGBrowseGroupDataDisplaySolo_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:653: in function `LFGBrowseGroupDataDisplay_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:328: in function `LFGBrowseSearchEntry_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:239: in function `LFGBrowseSearchEntry_Init'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:59: in function `frameFactory'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:217: in function `AcquireInternal'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:250: in function `AcquireRange'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:503: in function `Rebuild'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:562: in function `ValidateDataRange'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBox.lua\"]:613: in function `Update'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBox.lua\"]:100: in function <Interface\\SharedXML\\Scroll\\ScrollBox.lua:94>\n[string \"=[C]\"]: in function `GetSize'\n...\n[string \"=[C]\"]: ?\n[string \"@Interface\\SharedXML\\CallbackRegistry.lua\"]:118: in function <Interface\\SharedXML\\CallbackRegistry.lua:117>\n[string \"=[C]\"]: ?\n[string \"@Interface\\SharedXML\\CallbackRegistry.lua\"]:121: in function `TriggerEvent'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:195: in function `SignalDataChangeEvent'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua\"]:175: in function `SetDataProvider'\n[string \"@Interface\\SharedXML\\Scroll\\ScrollBox.lua\"]:563: in function `SetDataProvider'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:146: in function `UpdateResults'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:122: in function `UpdateResultList'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:97: in function <...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:91>",
+			["session"] = 239,
+			["counter"] = 2,
+		}, -- [82]
+		{
+			["message"] = "...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:245: attempt to index local 'searchResultInfo' (a nil value)",
+			["time"] = "2022/10/13 22:28:13",
+			["locals"] = "self = <unnamed> {\n 0 = <userdata>\n GetOrderIndex = <function> defined @Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua:11\n Highlight = <unnamed> {\n }\n ElementDataMatches = <function> defined @Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua:6\n PartyIcon = <unnamed> {\n }\n GetElementData = <function> defined @Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua:2\n DataDisplay = <unnamed> {\n }\n ActivityName = <unnamed> {\n }\n hasSelf = false\n isDelisted = false\n resultID = 12\n SetOrderIndex = <function> defined @Interface\\SharedXML\\Scroll\\ScrollBoxListView.lua:15\n Name = <unnamed> {\n }\n NewPlayerFriendlyIcon = <unnamed> {\n }\n Selected = <unnamed> {\n }\n ResultBG = <unnamed> {\n }\n Level = <unnamed> {\n }\n ClassIcon = <unnamed> {\n }\n}\nsearchResultInfo = nil\nactiveEntryInfo = <table> {\n newPlayerFriendly = false\n activityIDs = <table> {\n }\n comment = \"\"\n duration = 43165\n}\n(*temporary) = <table> {\n newPlayerFriendly = false\n activityIDs = <table> {\n }\n comment = \"\"\n duration = 43165\n}\n(*temporary) = <table> {\n newPlayerFriendly = false\n activityIDs = <table> {\n }\n comment = \"\"\n duration = 43165\n}\n(*temporary) = false\n(*temporary) = 3\n(*temporary) = 1102\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index local 'searchResultInfo' (a nil value)\"\nLFGBROWSE_GROUPDATA_ATLASES = <table> {\n DEATHKNIGHT = \"groupfinder-icon-class-deathknight\"\n TANK = \"groupfinder-icon-role-large-tank\"\n PALADIN = \"groupfinder-icon-class-paladin\"\n DAMAGER = \"groupfinder-icon-role-large-dps\"\n HEALER = \"groupfinder-icon-role-large-heal\"\n PRIEST = \"groupfinder-icon-class-priest\"\n HUNTER = \"groupfinder-icon-class-hunter\"\n WARLOCK = \"groupfinder-icon-class-warlock\"\n MAGE = \"groupfinder-icon-class-mage\"\n ROGUE = \"groupfinder-icon-class-rogue\"\n DRUID = \"groupfinder-icon-class-druid\"\n WARRIOR = \"groupfinder-icon-class-warrior\"\n SHAMAN = \"groupfinder-icon-class-shaman\"\n}\nLFGBROWSE_ACTIVITY_NOMATCH_FONT_COLOR = <table> {\n GetRGB = <function> defined @Interface\\SharedXML\\Color.lua:20\n OnLoad = <function> defined @Interface\\SharedXML\\Color.lua:9\n b = 0.500000\n GenerateHexColorMarkup = <function> defined @Interface\\SharedXML\\Color.lua:51\n WrapTextInColorCode = <function> defined @Interface\\SharedXML\\Color.lua:55\n GenerateHexColor = <function> defined @Interface\\SharedXML\\Color.lua:47\n GetRGBA = <function> defined @Interface\\SharedXML\\Color.lua:28\n IsEqualTo = <function> defined @Interface\\SharedXML\\Color.lua:13\n g = 0.500000\n r = 0.500000\n SetRGBA = <function> defined @Interface\\SharedXML\\Color.lua:36\n GetRGBAsBytes = <function> defined @Interface\\SharedXML\\Color.lua:24\n SetRGB = <function> defined @Interface\\SharedXML\\Color.lua:43\n GetRGBAAsBytes = <function> defined @Interface\\SharedXML\\Color.lua:32\n}\nLFGBROWSE_DELISTED_FONT_COLOR = <table> {\n b = 0.300000\n g = 0.300000\n r = 0.300000\n}\nLFGBROWSE_SELF_FONT_COLOR = <table> {\n GetRGB = <function> defined @Interface\\SharedXML\\Color.lua:20\n OnLoad = <function> defined @Interface\\SharedXML\\Color.lua:9\n b = 0.375000\n GenerateHexColorMarkup = <function> defined @Interface\\SharedXML\\Color.lua:51\n WrapTextInColorCode = <function> defined @Interface\\SharedXML\\Color.lua:55\n GenerateHexColor = <function> defined @Interface\\SharedXML\\Color.lua:47\n GetRGBA = <function> defined @Interface\\SharedXML\\Color.lua:28\n IsEqualTo = <function> defined @Interface\\SharedXML\\Color.lua:13\n g = 1\n r = 0.400000\n SetRGBA = <function> defined @Interface\\SharedXML\\Color.lua:36\n GetRGBAsBytes = <function> defined @Interface\\SharedXML\\Color.lua:24\n SetRGB = <function> defined @Interface\\SharedXML\\Color.lua:43\n GetRGBAAsBytes = <function> defined @Interface\\SharedXML\\Color.lua:32\n}\nLFGBROWSE_ACTIVITY_MATCH_FONT_COLOR = <table> {\n GetRGB = <function> defined @Interface\\SharedXML\\Color.lua:20\n OnLoad = <function> defined @Interface\\SharedXML\\Color.lua:9\n b = 1\n GenerateHexColorMarkup = <function> defined @Interface",
+			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:245: in function `LFGBrowseSearchEntry_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:346: in function <...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:341>",
+			["session"] = 239,
+			["counter"] = 24,
+		}, -- [83]
+		{
+			["message"] = "...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:1187: attempt to index local 'roles1' (a nil value)",
+			["time"] = "2022/10/18 22:53:11",
+			["locals"] = "searchResultID1 = 57\nsearchResultID2 = 95\nsearchResultInfo1 = <table> {\n comment = \"\"\n leaderName = \"菁菁年輪\"\n voiceChat = \"\"\n newPlayerFriendly = true\n searchResultID = 57\n isWarMode = false\n isDelisted = true\n numGuildMates = 0\n requiredItemLevel = 0\n hasSelf = false\n numBNetFriends = 0\n numMembers = 1\n name = \"\"\n age = 3708\n autoAccept = false\n activityIDs = <table> {\n }\n numCharFriends = 0\n requiredHonorLevel = 0\n}\nsearchResultInfo2 = <table> {\n comment = \"\"\n leaderName = \"魔血的天空\"\n voiceChat = \"\"\n newPlayerFriendly = false\n searchResultID = 95\n isWarMode = false\n isDelisted = false\n numGuildMates = 0\n requiredItemLevel = 0\n hasSelf = false\n numBNetFriends = 0\n numMembers = 1\n name = \"\"\n age = 4639\n autoAccept = false\n activityIDs = <table> {\n }\n numCharFriends = 0\n requiredHonorLevel = 0\n}\nhasSelf1 = false\nhasSelf2 = false\nisSolo1 = true\nisSolo2 = true\nroleOrderings = <table> {\n 1 = \"TANK\"\n 2 = \"HEALER\"\n 3 = \"DAMAGER\"\n}\nroles1 = nil\nroles2 = <table> {\n HUNTER = 1\n WARRIOR = 0\n ROGUE = 0\n DAMAGER = 1\n LEADER_ROLE_HEALER = false\n NOROLE = 0\n HEALER_REMAINING = 1\n DRUID = 0\n DEATHKNIGHT = 0\n TANK = 0\n DAMAGER_REMAINING = 2\n LEADER_ROLE_DAMAGER = true\n HEALER = 0\n PRIEST = 0\n TANK_REMAINING = 1\n WARLOCK = 0\n MAGE = 0\n SHAMAN = 0\n PALADIN = 0\n LEADER_ROLE_TANK = false\n}\n(for generator) = <function> defined =[C]:-1\n(for state) = <table> {\n 1 = \"TANK\"\n 2 = \"HEALER\"\n 3 = \"DAMAGER\"\n}\n(for control) = 1\n_ = 1\ndesiredRole = \"TANK\"\n(*temporary) = \"LEADER_ROLE_TANK\"\n(*temporary) = \"TANK\"\n(*temporary) = \"TANK\"\n(*temporary) = \"attempt to index local 'roles1' (a nil value)\"\nactiveEntryInfo = nil\nactiveEntryUseDungeonRoles = false\ngroupMemberCounts = <table> {\n HUNTER = 0\n WARRIOR = 0\n PALADIN = 0\n DAMAGER = 0\n HEALER = 0\n NOROLE = 0\n PRIEST = 0\n MAGE = 0\n WARLOCK = 0\n SHAMAN = 0\n DEATHKNIGHT = 0\n DRUID = 0\n TANK = 0\n ROGUE = 0\n}\nLFGBROWSE_DUNGEON_NUM_TANKS_EXPECTED = 1\nLFGBROWSE_DUNGEON_NUM_HEALERS_EXPECTED = 1\nLFGBROWSE_DUNGEON_NUM_DPS_EXPECTED = 3\nHasRemainingSlotsForLocalPlayerRole = <function> defined @Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:1103\n",
+			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:1187: in function <...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:1127>\n[string \"=[C]\"]: in function `sort'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:1230: in function `LFGBrowseUtil_SortSearchResults'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:121: in function `UpdateResultList'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:97: in function <...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:91>",
+			["session"] = 239,
+			["counter"] = 5,
 		}, -- [84]
+		{
+			["message"] = "...ealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0-108.lua:818: attempt to perform arithmetic on local 'requiresLevel' (a nil value)",
+			["time"] = "2022/10/15 18:32:37",
+			["locals"] = "spellData = <table> {\n interval = 3\n levels = <table> {\n }\n averages = <table> {\n }\n}\nspellName = \"回春术\"\nspellID = 8070\nspellRank = nil\naverage = nil\nrequiresLevel = nil\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = 80\n(*temporary) = nil\n(*temporary) = \"attempt to perform arithmetic on local 'requiresLevel' (a nil value)\"\ntype = <function> defined =[C]:-1\nmin = <function> defined =[C]:-1\nplayerLevel = 80\n",
+			["stack"] = "[string \"@Interface\\AddOns\\HealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0-108.lua\"]:818: in function <...ealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0.lua:807>\n[string \"@Interface\\AddOns\\HealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0-108.lua\"]:967: in function <...ealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0.lua:965>\n[string \"@Interface\\AddOns\\HealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0-108.lua\"]:2706: in function `?'\n[string \"@Interface\\AddOns\\HealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0-108.lua\"]:3348: in function <...ealBot_Data\\Libs\\LibHealComm-4.0\\LibHealComm-4.0.lua:3346>",
+			["session"] = 239,
+			["counter"] = 2,
+		}, -- [85]
+		{
+			["message"] = "...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:700: attempt to index local 'displayData' (a nil value)",
+			["time"] = "2022/10/23 01:01:38",
+			["locals"] = "self = <unnamed> {\n 0 = <userdata>\n TankIcon = <unnamed> {\n }\n HealerIcon = <unnamed> {\n }\n DamagerIcon = <unnamed> {\n }\n TankCount = <unnamed> {\n }\n DamagerCount = <unnamed> {\n }\n HealerCount = <unnamed> {\n }\n}\ndisplayData = nil\ndisabled = true\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = <unnamed> {\n 0 = <userdata>\n}\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index local 'displayData' (a nil value)\"\nLFGBROWSE_DELISTED_FONT_COLOR = <table> {\n b = 0.300000\n g = 0.300000\n r = 0.300000\n}\n",
+			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:700: in function `LFGBrowseGroupDataDisplayRoleCount_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:656: in function `LFGBrowseGroupDataDisplay_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:328: in function `LFGBrowseSearchEntry_Update'\n[string \"@Interface\\AddOns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua\"]:346: in function <...ns\\Blizzard_LookingForGroupUI\\Blizzard_LFGBrowse.lua:341>",
+			["session"] = 239,
+			["counter"] = 1,
+		}, -- [86]
 	},
 }

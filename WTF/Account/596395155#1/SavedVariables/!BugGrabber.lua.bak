@@ -1,6 +1,6 @@
 
 BugGrabberDB = {
-	["session"] = 230,
+	["session"] = 238,
 	["lastSanitation"] = 3,
 	["errors"] = {
 		{
@@ -633,5 +633,13 @@ BugGrabberDB = {
 			["session"] = 230,
 			["counter"] = 3,
 		}, -- [84]
+		{
+			["message"] = "Interface\\AddOns\\HealBot\\HealBot_Mounts-Mounts.lua:127: attempt to index local 'mapPos' (a nil value)",
+			["time"] = "2022/10/22 19:35:30",
+			["locals"] = "mapPos = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"player\"\n(*temporary) = \"attempt to index local 'mapPos' (a nil value)\"\nHealBot_mountData = <table> {\n ValidUse = true\n PrevGround# = 0\n PrevFlying# = 2\n playerFaction = 1\n incFlying = true\n}\n",
+			["stack"] = "[string \"@Interface\\AddOns\\HealBot\\HealBot_Mounts-Mounts.lua\"]:127: in function `?'\n[string \"@Interface\\AddOns\\HealBot\\HealBot_Timers.lua\"]:682: in function `HealBot_Timers_RunTimer'\n[string \"@Interface\\AddOns\\HealBot\\HealBot_Timers.lua\"]:779: in function `HealBot_Timers_Proc'\n[string \"@Interface\\AddOns\\HealBot\\HealBot_Timers.lua\"]:792: in function `HealBot_Timers_Run'\n[string \"@Interface\\AddOns\\HealBot\\HealBot-3.4.0.14.lua\"]:4616: in function `HealBot_OnUpdate'\n[string \"*:OnUpdate\"]:1: in function <[string \"*:OnUpdate\"]:1>",
+			["session"] = 236,
+			["counter"] = 212,
+		}, -- [85]
 	},
 }

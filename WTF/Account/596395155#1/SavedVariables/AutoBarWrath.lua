@@ -418,6 +418,9 @@ AutoBarDB = {
 				["AutoBarButtonMount"] = {
 					["arrangeOnUse"] = "大型美酒节科多兽",
 				},
+				["AutoBarButtonCrafting"] = {
+					["arrangeOnUse"] = "珠宝加工",
+				},
 			},
 			["barList"] = {
 			},
