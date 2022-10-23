@@ -124,3 +124,5 @@ Leatrix_Plus: enabled
 Leatrix_Maps: enabled
 TacoTip: enabled
 TidyPlates_ThreatPlates: enabled
+TellMeWhen: disabled
+TellMeWhen_Options: disabled

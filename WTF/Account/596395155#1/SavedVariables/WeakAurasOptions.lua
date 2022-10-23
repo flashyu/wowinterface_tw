@@ -51359,7 +51359,7 @@ WeakAurasOptionsSaved = {
 	},
 	["locale"] = "zhCN",
 	["needsRebuild"] = false,
-	["version"] = "4.1.4",
+	["version"] = "4.1.5",
 	["lockPositions"] = false,
 	["savedSnippets"] = {
 	},
