@@ -13,8 +13,8 @@ TomTomDB = {
 					"CENTER", -- [1]
 					nil, -- [2]
 					"CENTER", -- [3]
-					1.02609395980835, -- [4]
-					-86.55557250976562, -- [5]
+					1.53415846824646, -- [4]
+					-62.17470169067383, -- [5]
 				},
 			},
 			["block"] = {
@@ -39,6 +39,39 @@ TomTomWaypointsM = {
 	},
 	["profiles"] = {
 		["骑风 - 祈福"] = {
+			[121] = {
+				["121:133251833.74083:608801955.99022:瓦古唤亡者"] = {
+					121, -- [1]
+					0.1332518337408313, -- [2]
+					0.6088019559902201, -- [3]
+					["arrivaldistance"] = 15,
+					["crazy"] = true,
+					["persistent"] = true,
+					["desc"] = "瓦古唤亡者",
+					["silent"] = true,
+					["cleardistance"] = 10,
+					["title"] = "瓦古唤亡者",
+					["from"] = "Questie",
+					["callbacks"] = {
+						["distance"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+					},
+					["minimap"] = true,
+					["world"] = true,
+				},
+			},
 		},
 		["红发男 - 祈福"] = {
 		},

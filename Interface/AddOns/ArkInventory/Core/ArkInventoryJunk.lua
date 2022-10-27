@@ -8,7 +8,7 @@ local error = _G.error
 local table = _G.table
 
 
-local junk_addons = {"Scrap","SellJunk","ReagentRestocker"}
+local junk_addons = {"Scrap","SellJunk","ReagentRestocker","Peddler"}
 function ArkInventory.JunkProcessCheck( name )
 	for _, a in pairs( junk_addons ) do
 		--ArkInventory.Output( "checking ", a )
@@ -46,6 +46,13 @@ function ArkInventory.JunkCheck( i, codex )
 			elseif IsAddOnLoaded( "ReagentRestocker" ) and ReagentRestocker then
 				
 				if ReagentRestocker:isToBeSold( info.id ) then
+					isJunk = true
+				end
+				
+		  elseif IsAddOnLoaded( "Peddler" ) and PeddlerAPI then
+				
+				local itemID, uniqueItemID = PeddlerAPI.getUniqueItemID( i.blizzard_id, i.slot_id )
+				if PeddlerAPI.itemIsToBeSold( itemID, uniqueItemID ) then
 					isJunk = true
 				end
 				
@@ -88,7 +95,7 @@ function ArkInventory.JunkIterate( )
 	
 	local bags = ArkInventory.Global.Location[loc_id].Bags
 	local blizzard_id = bags[bag_id]
-	local numslots = GetContainerNumSlots( blizzard_id )
+	local numslots = ArkInventory.CrossClient.GetContainerNumSlots	( blizzard_id )
 	
 	local _, isJunk, isLocked, itemCount, itemLink, vendorPrice
 	
@@ -107,7 +114,7 @@ function ArkInventory.JunkIterate( )
 			elseif bag_id < #bags then
 				bag_id = bag_id + 1
 				blizzard_id = bags[bag_id]
-				numslots = GetContainerNumSlots( blizzard_id )
+				numslots = ArkInventory.CrossClient.GetContainerNumSlots( blizzard_id )
 				slot_id = 1
 			else
 				blizzard_id = nil
@@ -118,7 +125,10 @@ function ArkInventory.JunkIterate( )
 				break
 			end
 			
-			_, itemCount, isLocked, _, _, _, itemLink = GetContainerItemInfo( blizzard_id, slot_id )
+			local itemInfo = ArkInventory.CrossClient.GetContainerItemInfo( blizzard_id, slot_id )
+			itemCount = itemInfo.stackCount
+			isLocked = itemInfo.isLocked
+			itemLink = itemInfo.hyperlink
 			
 			if itemCount and not isLocked and itemLink then
 				isJunk, vendorPrice = ArkInventory.JunkCheck( player.data.location[loc_id].bag[bag_id].slot[slot_id], codex )
@@ -159,7 +169,7 @@ local function JunkDestroy( )
 						break
 					end
 					
-					PickupContainerItem( blizzard_id, slot_id )
+					ArkInventory.CrossClient.PickupContainerItem( blizzard_id, slot_id )
 					DeleteCursorItem( )
 					-- protected after 9.0.2 so can no longer delete items automatically, using a keybinding instead, but only one item can be destroyed per keypress
 					-- must also run non threaded or it will fail due to no longer being the same execution path that was launched from the keybinding

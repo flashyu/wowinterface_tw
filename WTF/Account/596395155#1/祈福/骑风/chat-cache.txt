@@ -3,7 +3,6 @@ VERSION 7
 ADDEDVERSION 22
 
 CHANNELS
-大脚世界频道 1 1 0
 综合 0 2 0
 交易 0 3 0
 本地防务 0 4 0
@@ -151,7 +150,6 @@ END
 CHANNELS
 寻求组队
 世界大脚频道
-大脚世界频道
 END
 
 ZONECHANNELS 2097155

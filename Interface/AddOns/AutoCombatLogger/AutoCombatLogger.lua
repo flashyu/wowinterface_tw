@@ -29,6 +29,7 @@ local addonHdr = GREEN.."%s %s"
 
 addon.zoneTimer = nil
 addon.enteringTimer = nil
+addon.DelayEndTimer = nil
 
 local range = addon.range
 
@@ -88,6 +89,10 @@ local defaults = {
 		},
 		chat = {
 			enabled = false,
+		},
+		delayEnd = {
+			arena = 30,
+			battleground = 30,
 		},
 		verbose = false,
 		debug = false,
@@ -319,15 +324,40 @@ function AutoCombatLogger:GetOptions()
 						order = 10,
 						values = localizedLogOptions
 					},
+					headerDisable = {
+						name = L["Delay"],
+						type = "header",
+						order = 30
+					},
+					descDisable = {
+						name = L["DelayHeaderDesc"],
+						type = "description",
+						order = 40
+					},
+					disableDelay = {
+                        order = 50,
+                        name = L["Delay"],
+                        desc = L["Delay_Desc"],
+                        type = "range",
+                        min = 0,
+                        max = 60,
+                        step = 1,
+                        set = function(info, val)
+                            self.db.profile.delayEnd.arena = val
+						end,
+						get = function(info, val)
+							return self.db.profile.delayEnd.arena
+						end,
+					},
 					header = {
 						name = L["Custom Settings"],
 						type = "header",
-						order = 20
+						order = 100
 					},
 					desc = {
 						name = L["For Custom, choose the individual arenas to log below."],
 						type = "description",
-						order = 30
+						order = 110
 					}
 				}
 			},
@@ -345,15 +375,40 @@ function AutoCombatLogger:GetOptions()
 						order = 10,
 						values = localizedLogOptions
 					},
+					headerDisable = {
+						name = L["Delay"],
+						type = "header",
+						order = 30
+					},
+					descDisable = {
+						name = L["DelayHeaderDesc"],
+						type = "description",
+						order = 40
+					},
+					disableDelay = {
+                        order = 50,
+                        name = L["Delay"],
+                        desc = L["Delay_Desc"],
+                        type = "range",
+                        min = 0,
+                        max = 60,
+                        step = 1,
+                        set = function(info, val)
+                            self.db.profile.delayEnd.battleground = val
+						end,
+						get = function(info, val)
+							return self.db.profile.delayEnd.battleground
+						end,
+					},
 					header = {
 						name = L["Custom Settings"],
 						type = "header",
-						order = 20
+						order = 100
 					},
 					desc = {
 						name = L["For Custom, choose the individual battlegrounds to log below."],
 						type = "description",
-						order = 30
+						order = 110
 					}
 				}
 			},
@@ -435,7 +490,7 @@ function AutoCombatLogger:GetOptions()
 	end
 
 	-- Dynamically add the instance options
-	local startOrder = 30
+	local startOrder = 200
 	for i, instance in ipairs(OrderedInstances) do
 		options.args.instances.args[instance] = {
 			name = self:GetLocalName(instance),
@@ -732,6 +787,7 @@ local LogChecks = {
 }
 
 local data = {}
+addon.previousInstance = ""
 function AutoCombatLogger:ProcessZoneChange()
 	local uiMapID = nil
 	if addon.newMapApi then
@@ -763,6 +819,7 @@ function AutoCombatLogger:ProcessZoneChange()
 
 	local profile = self.db.profile
 	local diffCheck = difficulty and difficulty ~= "None" and difficulty ~= ""
+	addon.previousInstance = type
 
 	if _G.UnitOnTaxi("player") then
 		if profile.log.Taxi then
@@ -829,7 +886,10 @@ function AutoCombatLogger:GetCurrentInstanceInfo()
 	return name, type, difficulty, maxPlayers, mapId
 end
 
+addon.previousReason = ""
+
 function AutoCombatLogger:EnableCombatLogging(reason)
+	addon.previousReason = reason
 	--if DEBUG then
 	--	self:Print("Attempt to Enable Combat Logging(".._G.tostring(reason)..")")
 	--end
@@ -837,13 +897,46 @@ function AutoCombatLogger:EnableCombatLogging(reason)
 	if _G.LoggingCombat() then return end
 
 	if self.db.profile.verbose then
-		self:Print(L["Enabling combat logging"])
+		self:Print(L["Enabling combat logging"]..(DEBUG and (" ["..reason.."]") or ""))
 	end
 	_G.LoggingCombat(true)
 end
 
+function AutoCombatLogger:DelayedDisableLogging()
+	addon.DelayEndTimer = nil
+	if self.db.profile.verbose then
+		self:Print("End of delayed disabling of combat logging...")
+	end
+	self:ProcessZoneChange()
+end
+
+function AutoCombatLogger:ShouldDelay(reason, variable)
+	if addon.previousReason == reason and 
+		_G.type(variable) == "number" and 
+		variable > 0 then
+		if not addon.DelayEndTimer then
+			addon.previousReason = ""
+			addon.DelayEndTimer = self:ScheduleTimer("DelayedDisableLogging", variable)
+			if self.db.profile.verbose then
+				self:Print("Delaying disabling combat logging...")
+			end
+		end
+		return true
+	end
+	return false
+end
+
 function AutoCombatLogger:DisableCombatLogging()
-	if not _G.LoggingCombat() then return end
+	if not _G.LoggingCombat() or addon.DelayEndTimer then return end
+
+	if self:ShouldDelay("Arena", self.db.profile.delayEnd.arena) then
+		return
+	end
+	if self:ShouldDelay("BG", self.db.profile.delayEnd.battleground) then
+		return
+	end
+
+	addon.previousReason = ""
 
 	if self.db.profile.verbose then
 		self:Print(L["Disabling combat logging"])

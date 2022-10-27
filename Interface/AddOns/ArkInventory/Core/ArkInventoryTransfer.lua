@@ -48,12 +48,12 @@ local function TransferBagCheck( loc_id, bag_id )
 	
 	local abort = false
 	local numSlots = GetContainerNumSlots( bag_id )
-	local freeSlots, bagType = GetContainerNumFreeSlots( bag_id )
+	local freeSlots, bagType = ArkInventory.CrossClient.GetContainerNumFreeSlots( bag_id )
 	
 	local it = GetItemFamily( h ) or 0
 	
 	
-	if bag_id == REAGENTBANK_CONTAINER and not ArkInventory.CrossClient.IsReagentBankUnlocked( ) then
+	if bag_id == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK and not ArkInventory.CrossClient.IsReagentBankUnlocked( ) then
 		-- reagent bank always returns its number of slots even if you havent unlocked it
 		numSlots = 0
 		freeSlots = 0
@@ -126,7 +126,7 @@ local function FindItem( loc_id, cl, cb, bp, cs, id, ct )
 				
 				if ok then
 					
-					if select( 3, GetContainerItemInfo( bag_id, slot_id ) ) then
+					if select( 3, ArkInventory.CrossClient.GetContainerItemInfo( bag_id, slot_id ) ) then
 						
 						-- this slot is locked, move on and check it again next time
 						--ArkInventory.Output( "locked> ", loc_id, ".", bag_id, ".", slot_id )
@@ -163,7 +163,7 @@ local function FindItem( loc_id, cl, cb, bp, cs, id, ct )
 		return FindItem( loc_id, cl, cb, bp, cs, id, ct )
 	end
 	
-	if loc_id == ArkInventory.Const.Location.Bank and cb == REAGENTBANK_CONTAINER and ArkInventory.db.option.transfer.topup then
+	if loc_id == ArkInventory.Const.Location.Bank and cb == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK and ArkInventory.db.option.transfer.topup then
 		-- we were transfering the reagent bank and found nothing
 		-- checked the bank and found nothing
 		-- now checking the bags because topup is enabled
@@ -202,7 +202,7 @@ local function FindPartialStack( loc_id, cl, cb, bp, cs, id )
 		
 		local bag_id = cb
 		
-		for slot_id = 1, ArkInventory.Const.BLIZZARD.GLOBAL.GUILDBANK.SLOTS_PER_TAB do
+		for slot_id = 1, ArkInventory.Const.BLIZZARD.GLOBAL.GUILDBANK.NUM_SLOT_TAB do
 			
 			if not ArkInventory.Global.Mode.Vault or bag_id ~= GetCurrentGuildBankTab( ) then
 				-- no longer at the vault or changed tabs, abort
@@ -276,7 +276,7 @@ local function FindPartialStack( loc_id, cl, cb, bp, cs, id )
 					if ( loc_id ~= cl ) or ( loc_id == cl and bag_pos < bp ) or ( loc_id == cl and bag_pos == bp and slot_id < cs )then
 					-- ( different location ) or (same location and lower bag) or (same location and same bag and lower slot)
 						
-						if select( 3, GetContainerItemInfo( bag_id, slot_id ) ) then
+						if select( 3, ArkInventory.CrossClient.GetContainerItemInfo( bag_id, slot_id ) ) then
 						
 							-- this slot is locked, move on and check it again next time
 							--ArkInventory.Output( "locked> ", loc_id, ".", bag_id, ".", slot_id )
@@ -293,7 +293,7 @@ local function FindPartialStack( loc_id, cl, cb, bp, cs, id )
 								local info = ArkInventory.GetObjectInfo( h )
 								if info.id == id then
 									
-									local count = select( 2, GetContainerItemInfo( bag_id, slot_id ) )
+									local count = select( 2, ArkInventory.CrossClient.GetContainerItemInfo( bag_id, slot_id ) )
 									if count < info.stacksize then
 										--ArkInventory.Output( "found > ", bag_id, ".", slot_id, " ", count, " of ", h, " for ", cb, ".", cs )
 										return abort, recheck, true, bag_id, slot_id
@@ -318,7 +318,7 @@ local function FindPartialStack( loc_id, cl, cb, bp, cs, id )
 		end
 		
 		
-		if cb == REAGENTBANK_CONTAINER then
+		if cb == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK then
 			
 			-- we were transfering the reagent bank and found nothing there
 			-- need to check the bank for stacks we can take from
@@ -362,7 +362,7 @@ local function FindNormalItem( loc_id, cl, cb, bp, cs )
 				return cl, recheck, false
 			end
 			
-			if bt == 0 and bag_id ~= REAGENTBANK_CONTAINER then
+			if bt == 0 and bag_id ~= ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK then
 				
 				for slot_id = 1, count do
 					
@@ -373,7 +373,7 @@ local function FindNormalItem( loc_id, cl, cb, bp, cs )
 					if ( loc_id ~= cl ) or ( loc_id == cl and bag_pos < bp ) or ( loc_id == cl and bag_pos == bp and slot_id < cs )then
 					-- ( different location ) or (same location and higher bag) or (same location and same bag and higher slot)
 						
-						if select( 3, GetContainerItemInfo( bag_id, slot_id ) ) then
+						if select( 3, ArkInventory.CrossClient.GetContainerItemInfo( bag_id, slot_id ) ) then
 							
 							-- this slot is locked, move on and check it again next time
 							--ArkInventory.Output( "locked> ", loc_id, ".", bag_id, ".", slot_id )
@@ -446,7 +446,7 @@ local function FindProfessionItem( loc_id, cl, cb, bp, cs, ct )
 			
 			if ArkInventory.db.option.transfer.priority then
 				-- priority is reagent bank
-				if bag_id ~= REAGENTBANK_CONTAINER and ( bt == 0 or bt == ct ) then
+				if bag_id ~= ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK and ( bt == 0 or bt == ct ) then
 					-- do not steal from the reagent bank
 					-- do not steal from profession bags, unless its for the reagent bank
 					pri_ok = true
@@ -472,7 +472,7 @@ local function FindProfessionItem( loc_id, cl, cb, bp, cs, ct )
 					if ( loc_id ~= cl ) or ( loc_id == cl and bag_pos < bp ) or ( loc_id == cl and bag_pos > bp and bt == 0 ) or ( loc_id == cl and bag_pos == bp and slot_id < cs ) then
 					-- ( different location ) or (same location and lower bag) or (same location and same bag and lower slot)
 						
-						if select( 3, GetContainerItemInfo( bag_id, slot_id ) ) then
+						if select( 3, ArkInventory.CrossClient.GetContainerItemInfo( bag_id, slot_id ) ) then
 							
 							-- this slot is locked, move on and check it again next time
 							--ArkInventory.Output( "locked> ", loc_id, ".", bag_id, ".", slot_id )
@@ -502,7 +502,7 @@ local function FindProfessionItem( loc_id, cl, cb, bp, cs, ct )
 										
 										local it = GetItemFamily( h ) or 0
 										
-										if ArkInventory.ClientCheck( ArkInventory.Const.BLIZZARD.CLIENT.CODE.RETAIL ) then
+										if ArkInventory.ClientCheck( ArkInventory.Const.ENUM.EXPANSION.CLASSIC ) then -- FIX ME
 											
 											if bit.band( it, ct ) > 0 then
 												--ArkInventory.Output( "found prof> ", ArkInventory.Global.Location[loc_id].Name, ".", bag_id, ".", slot_id, " " , h )
@@ -587,7 +587,7 @@ local function FindCraftingItem( loc_id, cl, cb, bp, cs )
 			
 			if ArkInventory.db.option.transfer.priority then
 				-- priority is reagent bank
-				if bag_id ~= REAGENTBANK_CONTAINER and ( bt == 0 or cb == REAGENTBANK_CONTAINER ) then
+				if bag_id ~= ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK and ( bt == 0 or cb == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK ) then
 					-- do not steal from the reagent bank
 					-- do not steal from profession bags, unless its for the reagent bank
 					pri_ok = true
@@ -615,7 +615,7 @@ local function FindCraftingItem( loc_id, cl, cb, bp, cs )
 						
 						--ArkInventory.Output( "check> ", loc_id, ".", bag_id, ".", slot_id )
 						
-						if select( 3, GetContainerItemInfo( bag_id, slot_id ) ) then
+						if select( 3, ArkInventory.CrossClient.GetContainerItemInfo( bag_id, slot_id ) ) then
 							
 							-- this slot is locked, move on and check it again next time
 							--ArkInventory.Output( "locked> ", loc_id, ".", bag_id, ".", slot_id )
@@ -706,7 +706,7 @@ local function StackBags( loc_id )
 					Transfer_Yield( cl )
 					--ArkInventory.Output( "checking ", loc_id, ".", bag_id, ".", slot_id )
 					
-					if select( 3, GetContainerItemInfo( bag_id, slot_id ) ) then
+					if select( 3, ArkInventory.CrossClient.GetContainerItemInfo( bag_id, slot_id ) ) then
 						
 						-- this slot is locked, move on and check it again next time
 						--ArkInventory.Output( "locked> ", loc_id, ".", bag_id, ".", slot_id )
@@ -721,7 +721,7 @@ local function StackBags( loc_id )
 						if h then
 							
 							local info = ArkInventory.GetObjectInfo( h )
-							local num = select( 2, GetContainerItemInfo( bag_id, slot_id ) )
+							local num = select( 2, ArkInventory.CrossClient.GetContainerItemInfo( bag_id, slot_id ) )
 							
 							if num < info.stacksize then
 								
@@ -749,8 +749,8 @@ local function StackBags( loc_id )
 									--ArkInventory.Output( "merge> ", bag_id, ".", slot_id, " + ", pb, ".", ps )
 									
 									ClearCursor( )
-									PickupContainerItem( pb, ps )
-									PickupContainerItem( bag_id, slot_id )
+									ArkInventory.CrossClient.PickupContainerItem( pb, ps )
+									ArkInventory.CrossClient.PickupContainerItem( bag_id, slot_id )
 									ClearCursor( )
 									
 									Transfer_Yield( cl )
@@ -810,7 +810,7 @@ local function ConsolidateBag( loc_id, bag_id, bag_pos )
 			
 			--ArkInventory.Output( "chk> ", loc_id, ".", bag_id, ".", slot_id )
 			
-			if select( 3, GetContainerItemInfo( bag_id, slot_id ) ) then
+			if select( 3, ArkInventory.CrossClient.GetContainerItemInfo( bag_id, slot_id ) ) then
 				
 				-- this slot is locked, move on and check it again next time
 				recheck = true
@@ -840,8 +840,8 @@ local function ConsolidateBag( loc_id, bag_id, bag_pos )
 						--ArkInventory.Output( "moving> ", sb, ".", ss, " to ", bag_id, ".", slot_id )
 						
 						ClearCursor( )
-						PickupContainerItem( sb, ss )
-						PickupContainerItem( bag_id, slot_id )
+						ArkInventory.CrossClient.PickupContainerItem( sb, ss )
+						ArkInventory.CrossClient.PickupContainerItem( bag_id, slot_id )
 						ClearCursor( )
 						
 						Transfer_Yield( loc_id )
@@ -897,7 +897,7 @@ local function Consolidate( loc_id )
 			
 			--ArkInventory.Output( "Consolidate ", loc_id, ".", bag_id, " ", bt )
 			
-			if count > 0 and ( bag_id == REAGENTBANK_CONTAINER or bt ~= 0 ) then
+			if count > 0 and ( bag_id == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK or bt ~= 0 ) then
 				
 				local ab, rc = ConsolidateBag( loc_id, bag_id, bag_pos )
 				
@@ -921,7 +921,7 @@ local function Consolidate( loc_id )
 			
 			-- fill up reagent bank with crafting items
 			
-			local bag_id = REAGENTBANK_CONTAINER
+			local bag_id = ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK
 			
 			if not me.player.data.option[loc_id].bag[bag_id].transfer.ignore then
 				
@@ -960,7 +960,7 @@ local function Consolidate( loc_id )
 						return cl, recheck, false
 					end
 					
-					if bt == 0 and bag_id ~= REAGENTBANK_CONTAINER then
+					if bt == 0 and bag_id ~= ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK then
 						
 						local ab, rc = ConsolidateBag( loc_id, bag_id, bag_pos )
 						
@@ -1017,7 +1017,7 @@ local function CompactBag( loc_id, bag_id, bag_pos )
 			
 			--ArkInventory.Output( "chk> ", loc_id, ".", bag_id, ".", slot_id )
 			
-			if select( 3, GetContainerItemInfo( bag_id, slot_id ) ) then
+			if select( 3, ArkInventory.CrossClient.GetContainerItemInfo( bag_id, slot_id ) ) then
 				
 				-- this slot is locked, move on and check it again next time
 				recheck = true
@@ -1043,8 +1043,8 @@ local function CompactBag( loc_id, bag_id, bag_pos )
 						--ArkInventory.Output( "moving> ", sb, ".", ss, " to ", bag_id, ".", slot_id )
 						
 						ClearCursor( )
-						PickupContainerItem( sb, ss )
-						PickupContainerItem( bag_id, slot_id )
+						ArkInventory.CrossClient.PickupContainerItem( sb, ss )
+						ArkInventory.CrossClient.PickupContainerItem( bag_id, slot_id )
 						ClearCursor( )
 						
 						Transfer_Yield( loc_id )
@@ -1095,7 +1095,7 @@ local function Compact( loc_id )
 				return cl, recheck, false
 			end
 			
-			if count > 0 and bt == 0 and bag_id ~= REAGENTBANK_CONTAINER then
+			if count > 0 and bt == 0 and bag_id ~= ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK then
 				
 				--ArkInventory.Output( "Compact ", loc_id, ".", bag_id, " ", bt )
 				
@@ -1137,7 +1137,7 @@ local function TransferRun_Threaded( loc_id )
 		
 		if ArkInventory.db.option.transfer.blizzard then
 			
-			SortBags( )
+			ArkInventory.CrossClient.SortBags( )
 			Transfer_Yield( loc_id )
 			
 		else
@@ -1203,7 +1203,7 @@ local function TransferRun_Threaded( loc_id )
 			
 			TransferMessageStart( loc_id )
 			
-			if ArkInventory.ClientCheck( ArkInventory.Const.BLIZZARD.CLIENT.CODE.RETAIL ) and ArkInventory.db.option.transfer.blizzard then
+			if ArkInventory.ClientCheck( ArkInventory.Const.ENUM.EXPANSION.CLASSIC ) and ArkInventory.db.option.transfer.blizzard then -- FIX ME
 				
 				ArkInventory.CrossClient.SetSortBagsRightToLeft( ArkInventory.db.option.transfer.reverse )
 				SortBankBags( )
@@ -1235,7 +1235,7 @@ local function TransferRun_Threaded( loc_id )
 							0.6,
 							function( )
 								if ArkInventory.Global.Mode.Bank then
-									SortReagentBankBags( )
+									ArkInventory.CrossClient.SortReagentBankBags( )
 								else
 									TransferMessageAbort( ArkInventory.Const.Location.Bank )
 								end
@@ -1371,7 +1371,7 @@ function ArkInventory.BarTransfer( loc_id, bar_id, dst_id )
 			local i = codex.player.data.location[loc_id].bag[bag_pos].slot[slot_id]
 			if i and i.h then
 				
-				local locked = select( 3, GetContainerItemInfo( bag_id, slot_id ) )
+				local locked = select( 3, ArkInventory.CrossClient.GetContainerItemInfo( bag_id, slot_id ) )
 				if not locked then
 					
 					local cat_id = ArkInventory.ItemCategoryGet( i )

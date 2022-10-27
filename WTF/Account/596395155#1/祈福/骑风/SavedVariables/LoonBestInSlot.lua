@@ -1,6 +1,6 @@
 
 LBISSettings = {
-	["SelectedPhase"] = "All",
+	["SelectedZone"] = "All",
 	["Tooltip"] = {
 		["BloodDeath Knight"] = true,
 		["BeastMasteryHunter"] = true,
@@ -34,13 +34,17 @@ LBISSettings = {
 		["RestorationDruid"] = true,
 		["SubtletyRogue"] = true,
 	},
-	["SelectedZone"] = "All",
-	["ShowTooltip"] = true,
-	["SelectedSourceType"] = "All",
-	["SelectedSlot"] = "All",
 	["SelectedSpec"] = "平衡 德鲁伊",
 	["minimap"] = {
 		["minimapPos"] = 180,
 		["hide"] = false,
 	},
+	["PhaseTooltip"] = {
+		["Phase 1"] = true,
+		["PreRaid"] = true,
+	},
+	["ShowTooltip"] = true,
+	["SelectedSourceType"] = "All",
+	["SelectedSlot"] = "All",
+	["SelectedPhase"] = "All",
 }

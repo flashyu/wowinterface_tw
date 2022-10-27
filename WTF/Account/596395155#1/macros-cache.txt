@@ -29,6 +29,9 @@ END
 VER 3 0000000000000009 "RXPTargeting" "Ability_eyeoftheowl"
 //RestedXP Guides - current step has no configured targets
 END
+VER 3 000000000000001A "target" "132177"
+/target 塞克卡尔
+END
 VER 3 0000000000000002 "target宏" "INV_MISC_QUESTIONMARK"
 /target 逆风术士
 /script SetRaidTarget("target",6)
@@ -106,7 +109,7 @@ END
 VER 3 0000000000000003 "视野宏" "132092"
 /join 大脚世界频道
 /console cameraDistanceMaxZoomFactor 4
-/console cursorsizepreferred 3
+/console cursorsizepreferred 2
 /console ffxGlow 0
 /console ffxDeath 0
 /console weatherDensity 0
