@@ -1,18 +1,16 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0706,
-	["LastPlayerFullName"] = "骑风-祈福",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
-			["ID"] = 42554,
-			["Level"] = 200,
-			["Link"] = "|cffa335ee|Hitem:42554::::::::80:::::::::|h[绿色视界护目镜]|h|r",
+			["ID"] = 40467,
+			["Level"] = 213,
+			["Link"] = "|cffa335ee|Hitem:40467:3820:41285:42144:::::80:::::::::|h[勇猛的梦游者罩帽]|h|r",
 		}, -- [1]
 		{
-			["ID"] = 44658,
-			["Level"] = 213,
-			["Link"] = "|cffa335ee|Hitem:44658::40026::::::80:::::::::|h[上古巨龙锁链]|h|r",
+			["ID"] = 44661,
+			["Level"] = 226,
+			["Link"] = "|cffa335ee|Hitem:44661::40026::::::80:::::::::|h[龙眠强能项链]|h|r",
 		}, -- [2]
 		{
 			["ID"] = 40594,
@@ -31,9 +29,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40200::::::::80:::::::::|h[圣歌腰带]|h|r",
 		}, -- [6]
 		{
-			["ID"] = 41303,
-			["Level"] = 213,
-			["Link"] = "|cffa335ee|Hitem:41303::39998:40026:::::80:::::::::|h[致命角斗士的蟒皮护腿]|h|r",
+			["ID"] = 40398,
+			["Level"] = 226,
+			["Link"] = "|cffa335ee|Hitem:40398:3719:39998:40026:::::80:::::::::|h[傲慢护腿]|h|r",
 		}, -- [7]
 		{
 			["ID"] = 40270,
@@ -46,9 +44,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40325::::::::80:::::::::|h[开拓思绪护腕]|h|r",
 		}, -- [9]
 		{
-			["ID"] = 37230,
-			["Level"] = 200,
-			["Link"] = "|cff0070dd|Hitem:37230::::::::80:::::::::|h[岩洞迷雾手套]|h|r",
+			["ID"] = 40466,
+			["Level"] = 213,
+			["Link"] = "|cffa335ee|Hitem:40466:3604:39998::::::80:::::::::|h[勇猛的梦游者手套]|h|r",
 		}, -- [10]
 		{
 			["ID"] = 40080,
@@ -90,6 +88,8 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40192::::::::80:::::::::|h[诅咒之脊]|h|r",
 		}, -- [17]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "骑风-祈福",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

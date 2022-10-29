@@ -1,8 +1,13 @@
 # AddOnSkins
 
-## [4.60-12-g5a07cbd](https://github.com/Azilroka/AddOnSkins/tree/5a07cbdd8fcde1288bc5dbfb75baeb6cd2d2a2e1) (2022-10-26)
-[Full Changelog](https://github.com/Azilroka/AddOnSkins/compare/4.60...5a07cbdd8fcde1288bc5dbfb75baeb6cd2d2a2e1) [Previous Releases](https://github.com/Azilroka/AddOnSkins/releases)
+## [4.60-15-g592a0aa](https://github.com/Azilroka/AddOnSkins/tree/592a0aa20fc15c503f53a9eb3f3098a2c21d7b65) (2022-10-28)
+[Full Changelog](https://github.com/Azilroka/AddOnSkins/compare/4.60...592a0aa20fc15c503f53a9eb3f3098a2c21d7b65) [Previous Releases](https://github.com/Azilroka/AddOnSkins/releases)
 
+- Fix tdBattlePetScript.  
+- Merge pull request #76 from TheGeneticsGuy/main  
+    Compatibility Update 10.0 DF,Classic,Wrath  
+- Compatibility Update 10.0 DF,Classic,Wrath  
+    Tested and compatible with all current builds with the 1.942 GRM release.  
 - Bump DF TOC  
 - Fix PremadeGroupsFilter Skin with the recent changes  
 - Updated Buffomat for WotLK (#67)  

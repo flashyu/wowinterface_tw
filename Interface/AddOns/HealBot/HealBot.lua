@@ -2684,7 +2684,6 @@ function HealBot_Update_Skins(forceCheck)
         HealBot_Config.LastVersionUpdate=HealBot_Config.LastVersionSkinUpdate
         HealBot_Config.LastVersionSkinUpdate=nil
     end
-    if HEALBOT_GAME_VERSION>3 then HealBot_Globals.Tooltip_ShowCD=true end
     
     local foundSkin=false
     for x in pairs (Healbot_Config_Skins.Skins) do
@@ -2950,16 +2949,6 @@ function HealBot_OnEvent_AddOnLoaded(addonName, reset)
         HealBot_setTooltipUpdateInterval()
         HealBot_Panel_InitOptBars()
         HealBot_Options_LoadTips()
-        local x=HealBot_Globals.ttalpha+0.12
-        if x>1 then x=1 end
-        HealBot_Tooltip:SetBackdrop({
-            bgFile = "Interface\\Tooltips\\UI-Tooltip-Background",
-            edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
-            tile = true, tileSize = 8, edgeSize = 8,
-            insets = { left = 0, right = 0, top = 0, bottom = 0, },
-        })
-        HealBot_Tooltip:SetBackdropColor(0,0,0,HealBot_Globals.ttalpha)
-        HealBot_Tooltip:SetBackdropBorderColor(0.32,0.32,0.4, x)
         HealBot_luVars["AddonLoaded"]=true
     end
 end

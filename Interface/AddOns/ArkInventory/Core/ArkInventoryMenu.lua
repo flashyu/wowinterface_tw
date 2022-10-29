@@ -2076,7 +2076,7 @@ function ArkInventory.MenuBagOpen( frame )
 				
 				if not ArkInventory.Global.Mode.Edit and loc_id == ArkInventory.Const.Location.Bank and bag.status == ArkInventory.Const.Bag.Status.Purchase then
 					
-					if bag_id == ArkInventory.Global.Location[loc_id].tabReagent then
+					if bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
 						
 						local cost = GetReagentBankCost( )
 						
@@ -2111,7 +2111,7 @@ function ArkInventory.MenuBagOpen( frame )
 						
 					end
 					
-				elseif not ArkInventory.Global.Mode.Edit and loc_id == ArkInventory.Const.Location.Bank and bag_id == ArkInventory.Global.Location[loc_id].tabReagent then
+				elseif not ArkInventory.Global.Mode.Edit and loc_id == ArkInventory.Const.Location.Bank and bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
 					
 					ArkInventory.Lib.Dewdrop:AddLine( )
 					ArkInventory.Lib.Dewdrop:AddLine(
@@ -2250,7 +2250,7 @@ function ArkInventory.MenuBagOpen( frame )
 									
 									if bag_id == 1 then
 										ArkInventory.CrossClient.SetBankAutosortDisabled( checked )
-									elseif bag_id == ArkInventory.Global.Location[loc_id].tabReagent then
+									elseif bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
 										-- already set
 									else
 										ArkInventory.CrossClient.SetBankBagSlotFlag( blizzard_id - ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS, ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.FILTER.IGNORECLEANUP, checked )

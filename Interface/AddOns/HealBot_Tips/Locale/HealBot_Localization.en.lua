@@ -526,14 +526,11 @@ function HealBot_Lang_Options_enALL()
                                  ["TOOLTIPIGNORESPELLGCD"]=HEALBOT_OPTIONS_IGNOREGCDTOOLTIP,
                                  ["TOOLTIPWHEELCMD"]=HEALBOT_OPTIONS_SHOWMOUSEWHEELTOOLTIP,
                                  ["TOOLTIPHOTREC"]=HEALBOT_OPTIONS_SHOWRECTOOLTIP,
-                                 ["TOOLTIPGAMETIP"]=HEALBOT_OPTIONS_USEGAMETOOLTIP,
                                  ["TOOLTIPSHOWGAMEUNIT"]=HEALBOT_OPTIONS_SHOWWOWTOOLTIP,
                                  ["TOOLTIPMONBUFFS"]=HEALBOT_OPTIONS_TOOLTIPSHOWHOT,
-                                 ["TOOLTIPFONTSIZE"]=HEALBOT_OPTIONS_SKINFHEIGHT,
                                  ["TOOLTIPPOSITION"]=HEALBOT_OPTIONS_SETTOOLTIP_POSITION,
                                  ["TOOLTIPPOSITIONLINK"]=HEALBOT_OPTIONS_SETTOOLTIP_POSITION,
                                  ["TOOLTIPCUSTOMANCHOR"]=HEALBOT_OPTIONS_SETTOOLTIP_CUSTOMANCHOR,
-                                 ["TOOLTIPALPHA"]=HEALBOT_OPTIONS_TTALPHA,
                         -- Binds tab
                                  ["BINDTOCLICK"]=HEALBOT_OPTIONS_BINDTOCLICK,
                         -- Test tab
@@ -1088,13 +1085,10 @@ function HealBot_Lang_Options_enALL()
                                ["TOOLTIPIGNORESPELLGCD"]="Ignore the global cooldown on the spell.",
                                ["TOOLTIPWHEELCMD"]="Show the commands defined on the Mouse Wheel tab.",
                                ["TOOLTIPHOTREC"]="Show best HoT depending on current circumstances.",
-                               ["TOOLTIPGAMETIP"]="Use the game tooltip style, this includes tooltip addons.",
                                ["TOOLTIPSHOWGAMEUNIT"]="Show standard unit information.\n--\n".._G["YELLOW_FONT_COLOR_CODE"].."NOTE: This entirely replaces the healbot tooltip.",
                                ["TOOLTIPMONBUFFS"]="On all monitored Buffs / HoT's\nshow who cast the spell and duration left.",
-                               ["TOOLTIPFONTSIZE"]="Set the size using Blizzards standard font sizes.",
                                ["TOOLTIPPOSITIONLINK"]="Links to the Skins Frame General tab,\nallowing for different positions per frame.",
                                ["TOOLTIPCUSTOMANCHOR"]="Show the Set custom anchor frame.\nA single custom anchor can be set per Skin.",
-                               ["TOOLTIPALPHA"]="Set the transparency of the tooltip.",
                         -- Binds tab
                                ["BINDTOCLICK"]="Select a key to bind to a button click.",
                         -- Test tab

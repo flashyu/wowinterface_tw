@@ -490,6 +490,7 @@ ArkInventory.Global = { -- globals
 			Texture = [[Interface\Icons\INV_Misc_Bag_07_Green]],
 			bagCount = 1, -- actual value set in OnLoad
 			Bags = { },
+			ReagentBag = nil,
 			canRestack = true,
 			hasChanger = true,
 			canSearch = true,
@@ -537,6 +538,7 @@ ArkInventory.Global = { -- globals
 			Texture = [[Interface\Icons\INV_Box_02]],
 			bagCount = 1, -- set in OnLoad
 			Bags = { },
+			ReagentBag = nil,
 			canRestack = true,
 			hasChanger = true,
 			canSearch = true,
@@ -548,8 +550,6 @@ ArkInventory.Global = { -- globals
 			canView = true,
 			canOverride = true,
 			canPurge = true,
-			
-			tabReagent = nil, -- set in OnLoad
 			
 			template = string.format( "ARKINV_TemplateButtonItem%s", ArkInventory.CrossClient.TemplateVersion ),
 			
@@ -1912,7 +1912,7 @@ ArkInventory.Const.DatabaseDefaults.global = {
 			["EVENT_ARKINV_MAIL_UPDATE_BUCKET"] = { default = 2 },
 			["EVENT_ARKINV_MERCHANT_LEAVE_BUCKET"] = { default = 0.3 },
 			["EVENT_ARKINV_TRANSMOG_LEAVE_BUCKET"] = { default = 0.3 },
-			["EVENT_ARKINV_PLAYER_EQUIPMENT_CHANGED_BUCKET"] = { },
+			["EVENT_ARKINV_PLAYER_EQUIPMENT_CHANGED_BUCKET"] = { 0.5 },
 			["EVENT_ARKINV_PLAYER_MONEY_BUCKET"] = { default = 1 },
 			["EVENT_ARKINV_QUEST_UPDATE_BUCKET"] = { default = 4 },
 			["EVENT_ARKINV_TOOLTIP_REBUILD_QUEUE_UPDATE_BUCKET"] = { default = 1 },
@@ -2472,7 +2472,7 @@ function ArkInventory.OnLoad( )
 	
 	
 	local loc_id = 0
-	local bags
+	local bags, rgnt
 	
 	
 	-- bags
@@ -2480,16 +2480,19 @@ function ArkInventory.OnLoad( )
 	bags = ArkInventory.Global.Location[loc_id].Bags
 	
 	bags[#bags + 1] = ArkInventory.Const.ENUM.BAGINDEX.BACKPACK
-	for x = 1, ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS_NORMAL do
+	
+	local base = ArkInventory.Const.ENUM.BAGINDEX.BACKPACK
+	for x = base + 1, base + ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS_NORMAL do
 		bags[#bags + 1] = x
 	end
 	
-	-- reagent bags
-	if ArkInventory.ClientCheck( ArkInventory.Const.ENUM.EXPANSION.DRAGONFLIGHT ) then
-		for x = ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS_NORMAL + 1, ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS do
-			bags[#bags + 1] = x
-			ArkInventory.Global.BlizzardReagentContainerIDs[x] = true
-		end
+	-- reagent bag
+	local base = ArkInventory.Const.ENUM.BAGINDEX.BACKPACK + ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS_NORMAL
+	for x = base + 1, base + ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS_REAGENT do
+		--ArkInventory.Output( "reagent bag ", x )
+		bags[#bags + 1] = x
+		ArkInventory.Global.BlizzardReagentContainerIDs[x] = true
+		ArkInventory.Global.Location[loc_id].ReagentBag = #bags
 	end
 	
 	ArkInventory.Global.Location[loc_id].bagCount = #bags
@@ -2507,20 +2510,21 @@ function ArkInventory.OnLoad( )
 	end
 	
 	
-	-- bank  ArkInventory.Global.Location[ArkInventory.Const.Location.Bank]
+	-- bank
 	loc_id = ArkInventory.Const.Location.Bank
 	bags = ArkInventory.Global.Location[loc_id].Bags
-	
 	bags[#bags + 1] = ArkInventory.Const.ENUM.BAGINDEX.BANK
-	for x = ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS + 1, ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS + ArkInventory.Const.BLIZZARD.GLOBAL.BANK.NUM_BAGS do
+	local base = ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS
+	for x = base + 1, base + ArkInventory.Const.BLIZZARD.GLOBAL.BANK.NUM_BAGS do
 		bags[#bags + 1] = x
 	end
 	
 	-- reagent bank
 	if ArkInventory.ClientCheck( ArkInventory.Const.ENUM.EXPANSION.DRAENOR ) then
-		bags[#bags + 1] = ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK
-		ArkInventory.Global.Location[loc_id].tabReagent = #bags
-		ArkInventory.Global.BlizzardReagentContainerIDs[ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK] = true
+		local x = ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK
+		bags[#bags + 1] = x
+		ArkInventory.Global.BlizzardReagentContainerIDs[x] = true
+		ArkInventory.Global.Location[loc_id].ReagentBag = #bags
 	end
 	
 	ArkInventory.Global.Location[loc_id].bagCount = #bags
@@ -2530,7 +2534,7 @@ function ArkInventory.OnLoad( )
 	loc_id = ArkInventory.Const.Location.Vault
 	bags = ArkInventory.Global.Location[loc_id].Bags
 	
-	for x = 1, MAX_GUILDBANK_TABS do
+	for x = 1, ArkInventory.Const.BLIZZARD.GLOBAL.GUILDBANK.NUM_TABS do
 		bags[#bags + 1] = ArkInventory.Const.Offset.Vault + x
 	end
 	ArkInventory.Global.Location[loc_id].bagCount = #bags
@@ -2595,7 +2599,7 @@ function ArkInventory.OnLoad( )
 	-- setup reverse lookup cache
 	for loc_id, loc_data in pairs( ArkInventory.Global.Location ) do
 		for bag_id, v in pairs( loc_data.Bags ) do
-			ArkInventory.Global.Cache.BlizzardBagIdToInternalId[v] = { loc_id=loc_id, bag_id=bag_id }
+			ArkInventory.Global.Cache.BlizzardBagIdToInternalId[v] = { loc_id = loc_id, bag_id = bag_id }
 		end
 	end
 	
@@ -3651,7 +3655,7 @@ function ArkInventory.PutItemInGuildBank( tab_id )
 				ArkInventory.QueryVault( tab_id )
 			end
 			
-			for x = 1, ArkInventory.Const.BLIZZARD.GLOBAL.GUILDBANK.NUM_SLOT_TAB do
+			for x = 1, ArkInventory.Const.BLIZZARD.GLOBAL.GUILDBANK.SLOTS_PER_TAB do
 				h = GetGuildBankItemLink( tab_id, x )
 				if not h then
 					if not PickupGuildBankItem( tab_id, x ) then --AutoStoreGuildBankItem
@@ -5663,7 +5667,6 @@ function ArkInventory.Frame_Container_Draw( frame )
 			
 			if ArkInventory.Global.Location[loc_id].drawState <= ArkInventory.Const.Window.Draw.Refresh then
 				
-				ArkInventory.OutputThread( loc_id, " Frame_Bar_DrawItems")
 				ArkInventory.Frame_Bar_DrawItems( obj )
 				ArkInventory.ThreadYield_Window( loc_id )
 				
@@ -6237,6 +6240,9 @@ function ArkInventory.Frame_Bar_DrawItems( frame )
 		return
 	end
 	
+	
+--	local tz = debugprofilestop( )
+	
 	if ArkInventory.Global.Location[loc_id].drawState <= ArkInventory.Const.Window.Draw.Resort then
 		
 		--ArkInventory.Output( "resorting loc[", loc_id, "] state[", ArkInventory.Global.Location[loc_id].drawState, "] bar[", bar_id, "] @ ", time( ) )
@@ -6431,6 +6437,10 @@ function ArkInventory.Frame_Bar_DrawItems( frame )
 		frame:GetParent( ):GetParent( ):SetVerticalScroll( 1 )
 		frame:GetParent( ):GetParent( ):UpdateScrollChildRect( )
 	end
+	
+	
+--	tz = debugprofilestop( ) - tz
+--	ArkInventory.OutputThread( "draw bar [", loc_id, "] [", bar_id, "] [", string.format( "%0.02fms", tz ), "] " )
 	
 end
 
@@ -6999,7 +7009,7 @@ function ArkInventory.Frame_Item_OnLoad( frame, tainted )
 		else
 			if loc_id == ArkInventory.Const.Location.Bank and bag_id == 1 then
 				BankFrameItemButton_OnLoad( frame )
-			elseif loc_id == ArkInventory.Const.Location.Bank and bag_id == ArkInventory.Global.Location[loc_id].tabReagent then
+			elseif loc_id == ArkInventory.Const.Location.Bank and bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
 				ReagentBankFrameItemButton_OnLoad( frame )
 			else
 				ContainerFrameItemButton_OnLoad( frame )
@@ -7964,7 +7974,7 @@ function ArkInventory.Frame_Item_Update_Border( frame, codex, changer )
 	
 	--ArkInventory.Output( frame.ARK_Data.loc_id, ".", frame.ARK_Data.bag_id, ".", frame.ARK_Data.slot_id )
 	
-	local obj = frame.ArkBorder
+	local obj = frame.ArkBorder or _G[frame:GetName( ).."ArkBorder"]
 	if obj then
 		
 		local loc_id = frame.ARK_Data.loc_id
@@ -8436,7 +8446,7 @@ function ArkInventory.Frame_Item_OnEnter( frame )
 					local inv_id = BankButtonIDToInvSlotID( slot_id )
 					hasItem, hasCooldown, repairCost, speciesID, level, breedQuality, maxHealth, power, speed, name = GameTooltip:SetInventoryItem( "player", inv_id )
 					
-				elseif bag_id == ArkInventory.Global.Location[loc_id].tabReagent then
+				elseif bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
 					
 					local inv_id = ReagentBankButtonIDToInvSlotID( slot_id )
 					hasItem, hasCooldown, repairCost = GameTooltip:SetInventoryItem( "player", inv_id )
@@ -9923,7 +9933,7 @@ end
 
 function ArkInventory.Frame_Changer_Vault_Tab_OnLoad( frame )
 	ArkInventory.Frame_Changer_Slot_OnLoad( frame )
-	if frame.ARK_Data.bag_id <= MAX_GUILDBANK_TABS then
+	if frame.ARK_Data.bag_id <= ArkInventory.Const.BLIZZARD.GLOBAL.GUILDBANK.NUM_TABS then
 		frame:Show( )
 		frame.UpdateTooltip = ArkInventory.Frame_Changer_Vault_Tab_OnEnter
 	end
@@ -10093,7 +10103,6 @@ function ArkInventory.Frame_Changer_Slot_OnLoad( frame )
 	
 	local framename = frame:GetName( )
 	local loc_id, bag_id = string.match( framename, "^" .. ArkInventory.Const.Frame.Main.Name .. "(%d+).-(%d+)$" )
-	
 	loc_id = tonumber( loc_id )
 	bag_id = tonumber( bag_id )
 	
@@ -10118,13 +10127,13 @@ function ArkInventory.Frame_Changer_Slot_OnLoad( frame )
 	
 	frame:RegisterForClicks( "LeftButtonUp", "RightButtonUp" )
 	
-	if ( loc_id == ArkInventory.Const.Location.Bag and bag_id > 1 ) or ( loc_id == ArkInventory.Const.Location.Bank and bag_id > 1 and bag_id ~= ArkInventory.Global.Location[loc_id].tabReagent ) then
+	if ( loc_id == ArkInventory.Const.Location.Bag and bag_id > 1 ) or ( loc_id == ArkInventory.Const.Location.Bank and bag_id > 1 and bag_id ~= ArkInventory.Global.Location[loc_id].ReagentBag ) then
 		frame:RegisterForDrag( "LeftButton" )
 	end
 	
 	if bag_id == 1 then
 		ArkInventory.SetItemButtonTexture( frame, ArkInventory.Global.Location[loc_id].Texture )
-	elseif loc_id == ArkInventory.Const.Location.Bank and bag_id == ArkInventory.Global.Location[loc_id].tabReagent then
+	elseif loc_id == ArkInventory.Const.Location.Bank and bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
 		ArkInventory.SetItemButtonTexture( frame, ArkInventory.Global.Location[loc_id].Texture )
 	else
 		ArkInventory.SetItemButtonTexture( frame, ArkInventory.Const.Texture.Empty.Bag )
@@ -10179,7 +10188,7 @@ function ArkInventory.Frame_Changer_Slot_OnClick( frame, button )
 			PutItemInBackpack( )
 		elseif loc_id == ArkInventory.Const.Location.Bank and bag_id == 1 then
 			ArkInventory.PutItemInBank( )
-		elseif loc_id == ArkInventory.Const.Location.Bank and bag_id == ArkInventory.Global.Location[loc_id].tabReagent then
+		elseif loc_id == ArkInventory.Const.Location.Bank and bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
 			ArkInventory.PutItemInReagentBank( )
 		end
 		
@@ -10194,7 +10203,7 @@ function ArkInventory.Frame_Changer_Slot_OnClick( frame, button )
 		if loc_id == ArkInventory.Const.Location.Bank then
 			if bag and bag.status == ArkInventory.Const.Bag.Status.Purchase then
 				PlaySound( SOUNDKIT.IG_MAINMENU_OPTION )
-				if bag_id == ArkInventory.Global.Location[loc_id].tabReagent then
+				if bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
 					StaticPopup_Show( "CONFIRM_BUY_REAGENTBANK_TAB" )
 				else
 					StaticPopup_Show( "CONFIRM_BUY_BANK_SLOT" )
@@ -10215,7 +10224,7 @@ function ArkInventory.Frame_Changer_Slot_OnClick( frame, button )
 				return
 			end
 			
-			if loc_id == ArkInventory.Const.Location.Bank and bag_id == ArkInventory.Global.Location[loc_id].tabReagent then
+			if loc_id == ArkInventory.Const.Location.Bank and bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
 				ArkInventory.PutItemInReagentBank( )
 				return
 			end
@@ -10231,7 +10240,7 @@ function ArkInventory.Frame_Changer_Slot_OnClick( frame, button )
 				return
 			end
 		
-			if loc_id == ArkInventory.Const.Location.Bank and ( bag_id == 1 or bag_id == ArkInventory.Global.Location[loc_id].tabReagent ) then
+			if loc_id == ArkInventory.Const.Location.Bank and ( bag_id == 1 or bag_id == ArkInventory.Global.Location[loc_id].ReagentBag ) then
 				-- do nothing
 				return
 			end
@@ -10273,7 +10282,7 @@ function ArkInventory.Frame_Changer_Slot_OnEnter( frame )
 				
 			else
 		
-				if loc_id == ArkInventory.Const.Location.Bank and bag_id == ArkInventory.Global.Location[loc_id].tabReagent then
+				if loc_id == ArkInventory.Const.Location.Bank and bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
 					
 					GameTooltip:SetText( ArkInventory.Localise["REAGENTBANK"], 1.0, 1.0, 1.0 )
 					
@@ -10295,7 +10304,7 @@ function ArkInventory.Frame_Changer_Slot_OnEnter( frame )
 				
 				if loc_id == ArkInventory.Const.Location.Bank then
 					
-					if bag_id == ArkInventory.Global.Location[loc_id].tabReagent then
+					if bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
 						GameTooltip:SetText( ArkInventory.Localise["TOOLTIP_PURCHASE_BANK_TAB_REAGENT"] )
 					else
 						GameTooltip:SetText( ArkInventory.Localise["TOOLTIP_PURCHASE_BANK_BAG_SLOT"] )
@@ -10305,7 +10314,7 @@ function ArkInventory.Frame_Changer_Slot_OnEnter( frame )
 				
 			elseif bag and bag.status == ArkInventory.Const.Bag.Status.Active then
 				
-				if loc_id == ArkInventory.Const.Location.Bank and bag_id == ArkInventory.Global.Location[loc_id].tabReagent then
+				if loc_id == ArkInventory.Const.Location.Bank and bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
 					
 					GameTooltip:SetText( ArkInventory.Localise["REAGENTBANK"], 1.0, 1.0, 1.0 )
 					
@@ -12149,9 +12158,9 @@ function ArkInventory.ThreadYield( thread_id )
 	if thread_id == ArkInventory.Global.Thread.Format.Force or duration >= timeout then
 		
 		if thread_id == ArkInventory.Global.Thread.Format.Force then
-			ArkInventory.OutputThread( GREEN_FONT_COLOR_CODE, string.format( "%s forced yield (%0.0fms)", thread_id, duration ) )
+			ArkInventory.OutputThread( string.format( "%s forced yield (%0.0fms)", thread_id, duration ) )
 		else
-			--ArkInventory.OutputThread( GREEN_FONT_COLOR_CODE, string.format( "%s yielding %0.0f >= %0.0f", thread_id, duration, timeout ) )
+			ArkInventory.OutputThread( string.format( "%s yielding %0.0f >= %0.0f", thread_id, duration, timeout ) )
 		end
 		
 		ARKINV_ThreadTimer:Show( )
@@ -12159,7 +12168,7 @@ function ArkInventory.ThreadYield( thread_id )
 		
 	else
 		
-		--ArkInventory.OutputThread( GREEN_FONT_COLOR_CODE, string.format( "%s continue %0.0f >= %0.0f", thread_id, duration, timeout ) )
+		--ArkInventory.OutputThread( string.format( "%s continue %0.0f <= %0.0f", thread_id, duration, timeout ) )
 		
 	end
 	

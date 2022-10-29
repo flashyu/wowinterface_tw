@@ -1249,7 +1249,7 @@ local function helper_AcceptableRedText( txt, allow_known, allow_level )
 	
 end
 
-function ArkInventory.TooltipCanUseBackwards( tooltip, start, allow_known, allow_level )
+function ArkInventory.TooltipJumpEmbeddedItem( tooltip, start, allow_known, allow_level )
 	
 	-- to jump over the embedded item in a recipe
 	-- start from the last line
@@ -1313,14 +1313,15 @@ function ArkInventory.TooltipCanUse( tooltip, start, allow_known, allow_level )
 				local ctxt = ArkInventory.TooltipCleanText( txt )
 				--ArkInventory.Output( "line [", i, "]=[", ctxt, "]" )
 				
-				if ( newscan ) and ( ctxt == "" or string.find( txt, "^\10" ) or string.find( txt, "^\n" ) or string.find( txt, "^|n" ) ) then
+				if ( i < n ) and ( newscan ) and ( ctxt == "" or string.find( txt, "^\10" ) or string.find( txt, "^\n" ) or string.find( txt, "^|n" ) ) then
 					--ArkInventory.Output( "jump from line[", i, "]" )
-					return ArkInventory.TooltipCanUseBackwards( tooltip, i + 1, allow_known, allow_level )
+					return ArkInventory.TooltipJumpEmbeddedItem( tooltip, i + 1, allow_known, allow_level )
 				end
 				
 				local r, g, b, a = obj:GetTextColor( )
 				local c = ArkInventory.ColourRGBtoCode( r, g, b, a, true )
-				if c == ArkInventory.Const.BLIZZARD.GLOBAL.FONT.COLOR.UNUSABLE then
+				--ArkInventory.Output( "line [", i, "]=[", c, "]" )
+				if c == ArkInventory.Const.BLIZZARD.GLOBAL.FONT.COLOR.UNUSABLE1 or c == ArkInventory.Const.BLIZZARD.GLOBAL.FONT.COLOR.UNUSABLE2 then
 					if not helper_AcceptableRedText( ctxt, allow_known, allow_level ) then
 						--ArkInventory.Output( "unusable line [", i, "]" )
 						return false
@@ -2628,7 +2629,7 @@ function ArkInventory.TooltipExtractValueArtifactPower( h )
 	end
 	
 	local _, _, amount, suffix = ArkInventory.TooltipFind( ArkInventory.Global.Tooltip.Scan, ArkInventory.Localise["WOW_TOOLTIP_ARTIFACT_POWER_AMOUNT"], false, true, true, 0, ArkInventory.Const.Tooltip.Search.Short )
-	amount = ArkInventory.ArkInventory.TooltipTextToNumber( amount )
+	amount = ArkInventory.TooltipTextToNumber( amount )
 	
 	--ArkInventory.Output2( h, "[", amount, "] [", suffix, "]" )
 	

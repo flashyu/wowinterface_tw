@@ -386,7 +386,8 @@ ArkInventory.Const = { -- constants
 			},
 			FONT = {
 				COLOR = {
-					UNUSABLE = "fefe1f1f",
+					UNUSABLE1 = "fefe1f1f", -- shadowlands
+					UNUSABLE2 = "ffff2020", -- dragonflight
 				},
 			},
 			PROFESSIONRANK = {
@@ -419,16 +420,17 @@ ArkInventory.Const = { -- constants
 				NUM_BAGS = 0, -- calculated further down
 			},
 			BANK = {
-				NUM_BAGS = NUM_BANKBAGSLOTS,
-				NUM_SLOTS = NUM_BANKGENERIC_SLOTS or 28,
+				NUM_BAGS = NUM_BANKBAGSLOTS or 7,
+				NUM_SLOTS = NUM_BANKGENERIC_SLOTS or 7 * 4,
 			},
 			REAGENTBANK = {
 				NUM_SLOTS = 7 * 7 * 2,
 			},
 			GUILDBANK = {
+				NUM_TABS = MAX_GUILDBANK_TABS,
 				WIDTH = NUM_GUILDBANK_COLUMNS or 14,
 				HEIGHT = NUM_SLOTS_PER_GUILDBANK_GROUP or 7,
-				NUM_SLOT_TAB = MAX_GUILDBANK_SLOTS_PER_TAB or 98,
+				SLOTS_PER_TAB = MAX_GUILDBANK_SLOTS_PER_TAB or 14 * 7,
 				LOG_TIME_PREPEND = GUILD_BANK_LOG_TIME_PREPEND or "|cff009999  ",
 			},
 			VOIDSTORAGE = {

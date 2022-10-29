@@ -4596,26 +4596,35 @@ function HealBot_Action_CheckFrame(hbCurFrame, HBframe)
 end
 
 local vFrameSetPointX,vFrameSetPointY=0,0
-function HealBot_Action_FrameSetPoint(hbCurFrame, gaf)
-    gaf:ClearAllPoints();
-    vFrameSetPointY=GetScreenHeight()*(Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["Y"]/100)
-    vFrameSetPointX=GetScreenWidth()*(Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["X"]/100)
-    if Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==1 then
-        gaf:SetPoint("TOPLEFT","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
-    elseif Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==2 then
-        gaf:SetPoint("BOTTOMLEFT","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
-    elseif Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==3 then
-        gaf:SetPoint("TOPRIGHT","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
-    elseif Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==4 then
-        gaf:SetPoint("BOTTOMRIGHT","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
-    elseif Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==5 then
-        gaf:SetPoint("TOP","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
-    elseif Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==6 then
-        gaf:SetPoint("LEFT","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
-    elseif Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==7 then
-        gaf:SetPoint("RIGHT","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
-    elseif Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==8 then
-        gaf:SetPoint("BOTTOM","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
+function HealBot_Action_FrameSetPoint(hbCurFrame, gaf, callback)
+    if Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin] and 
+       Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame] and
+       Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["Y"] and
+       Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["X"] then 
+        gaf:ClearAllPoints();
+        vFrameSetPointY=GetScreenHeight()*(Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["Y"]/100)
+        vFrameSetPointX=GetScreenWidth()*(Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["X"]/100)
+        if Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==1 then
+            gaf:SetPoint("TOPLEFT","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
+        elseif Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==2 then
+            gaf:SetPoint("BOTTOMLEFT","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
+        elseif Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==3 then
+            gaf:SetPoint("TOPRIGHT","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
+        elseif Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==4 then
+            gaf:SetPoint("BOTTOMRIGHT","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
+        elseif Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==5 then
+            gaf:SetPoint("TOP","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
+        elseif Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==6 then
+            gaf:SetPoint("LEFT","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
+        elseif Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==7 then
+            gaf:SetPoint("RIGHT","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
+        elseif Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame]["FRAME"]==8 then
+            gaf:SetPoint("BOTTOM","UIParent","BOTTOMLEFT",vFrameSetPointX,vFrameSetPointY);
+        end
+    elseif not callback and Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin] and 
+           Healbot_Config_Skins.Anchors[Healbot_Config_Skins.Current_Skin][hbCurFrame] then
+        HealBot_Action_CheckFrame(hbCurFrame, gaf)
+        HealBot_Action_FrameSetPoint(hbCurFrame, gaf, true)
     end
 end
 
@@ -4677,11 +4686,7 @@ end
 
 function HealBot_Action_HideTooltipFrame()
     if HealBot_Data["TIPUSE"] then
-        if HealBot_Globals.UseGameTooltip then
-            GameTooltip:Hide();
-        else
-            HealBot_Tooltip:Hide();
-        end
+        GameTooltip:Hide();
         HealBot_Data["TIPICON"]=false
     end
 end
@@ -4932,7 +4937,7 @@ function HealBot_Action_HealUnit_OnEnter(self)
     HealBot_Action_SetActiveButton(self.id)
     if HealBot_Globals.ShowTooltip and HealBot_Data["TIPUSE"] and UnitExists(self.unit) then
         HealBot_Data["TIPBUTTON"] = self
-        if HealBot_Globals.UseGameTooltip and HealBot_Globals.ShowGameUnitInfo then
+        if HealBot_Globals.ShowGameUnitInfo then
             HealBot_Data["TIPTYPE"] = "WoWUnit"
         elseif not UnitIsFriend("player",self.unit) then
             HealBot_Data["TIPTYPE"] = "Enemy"
@@ -4974,7 +4979,7 @@ function HealBot_Action_EmergUnit_OnEnter(self)
         xButton=HealBot_Buttons[self.id]
         if xButton and UnitExists(xButton.unit) then
             HealBot_Data["TIPBUTTON"]=xButton
-            if HealBot_Globals.UseGameTooltip and HealBot_Globals.ShowGameUnitInfo then
+            if HealBot_Globals.ShowGameUnitInfo then
                 HealBot_Data["TIPTYPE"] = "WoWUnit"
             else
                 HealBot_Data["TIPTYPE"] = "Emerg"
@@ -5310,7 +5315,6 @@ end
 
 local function HealBot_Action_setButtonRegisterForClicks(button)
     if HealBot_Action_luVars["TestBarsOn"] then
-        button:RegisterForClicks(nil)
         button:EnableMouse(false)
         button.regClicks=false
     else

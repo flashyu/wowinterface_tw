@@ -1,8 +1,8 @@
 # Auto Combat Logger
 
-## [10.0.0](https://github.com/Talryn/AutoCombatLogger/tree/10.0.0) (2022-10-25)
-[Full Changelog](https://github.com/Talryn/AutoCombatLogger/compare/9.2.6...10.0.0) [Previous Releases](https://github.com/Talryn/AutoCombatLogger/releases)
+## [10.0.2](https://github.com/Talryn/AutoCombatLogger/tree/10.0.2) (2022-10-28)
+[Full Changelog](https://github.com/Talryn/AutoCombatLogger/compare/10.0.1...10.0.2) [Previous Releases](https://github.com/Talryn/AutoCombatLogger/releases)
 
-- Update TOC.  
-- Add delay for BGs and cleanup code.  
-- Add delay option for arena.  
+- Merge pull request #5 from phuze/master  
+    Update retail interface version  
+- update retail interface version  

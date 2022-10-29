@@ -8,13 +8,17 @@
       <Onload>
         GameTooltip_OnLoad( self )
         self:SetOwner( UIParent, "ANCHOR_NONE" )
+        
+        if self:HasScript( "OnTooltipAddMoney" ) then
+          self:SetScript( "OnTooltipAddMoney", nil )
+        end
+        
+        if self:HasScript( "OnTooltipCleared" ) then
+          self:SetScript( "OnTooltipCleared", nil )
+        end
       </Onload>
-      <OnTooltipCleared>
-        <!-- override template, do nothing -->
-      </OnTooltipCleared>
     </Scripts>
   </GameTooltip>
-  
   
   <!-- FONTS -->
   

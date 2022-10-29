@@ -1,5 +1,7 @@
+      
 SAVED = _G.HEYBOX_SAVED_PER_PLAYER_INFOS or {}
 SAVED_ONE = _G.HEYBOX_SAVED_PLAYER_INFOS or {}
+
 
 versionName = "wowretail"
 
@@ -10,14 +12,107 @@ frm:SetScript("OnEvent", function(self, event, ...)
 	end 
 end)
 
-
 frm:RegisterEvent("PLAYER_LOGIN") 
 function frm:PLAYER_LOGIN() 
+	-- MMR初始化
+	SAVED["MMR"] = {}
+
+	-- AccountData
+	GetAccountData()
+
+	-- CharacterInfo
+	GetCharacterInfo()
+
+	-- SpecializedSkills
+	GetSpecializedSkills()
+
+	-- SkillRelated
+	GetSkillRelated()
+	
+	-- Mounts
+	GetMounts()
+
+	-- ClassicMounts
+	GetClassicMounts()
+
+	-- Achievements
+	GetAchievements()
+
+	-- RunHistory
+	GetRunHistory()
+
+	-- Reputations
+	GetReputations()
+
+	-- Covenant
+	GetCovenant()
+	
+	-- CharacterTalent
+	GetCharacterTalent()
+
+	-- HunterPets
+	GetHunterPets()
+
+	-- Glyphs
+	GetGlyphs()
+end
+
+
+frm:RegisterEvent("ADDON_LOADED")
+function frm:ADDON_LOADED()
+	local version, build, date, tocversion = GetBuildInfo()
+	local v = split(version, ".")[1]
+	local version = tonumber(v)
+	if version == 1 then
+		versionName = "wowclassicera"
+	elseif version > 1 and version < 9 then
+		versionName = "wowclassictbc"
+	end
+
+	-- Equipments
+	GetEquipments()
+	
+	-- Toys
+	GetToys()
+
+	-- PVPInfo
+	GetPVPInfo()
+end
+
+frm:RegisterEvent("UPDATE_BATTLEFIELD_STATUS")
+function frm:UPDATE_BATTLEFIELD_STATUS()
+	-- MMR
+	GetMMR()
+end
+
+
+frm:RegisterEvent("PLAYER_LOGOUT")   --退出游戏(返回角色选择界面)
+function frm:PLAYER_LOGOUT()  
+	local name_realm = tostring(UnitName'player') .. "-" .. tostring(GetRealmName())
+	SAVED_ONE[name_realm] = SAVED_ONE[name_realm] or {}
+	SAVED_ONE[name_realm].class = select(2,UnitClass'player')
+
+	-- Pets
+	GetPets()
+	
+	if length(SAVED["MMR"]) == 0 then
+		SAVED["MMR"] = nil
+	end
+
+	SAVED['Date'] = time()
+
+	_G.HEYBOX_SAVED_PER_PLAYER_INFOS = Encode(luaJson.table2json(SAVED), nil, nil)
+	_G.HEYBOX_SAVED_PLAYER_INFOS = SAVED_ONE
+end
+
+
+function GetAccountData()
 	SAVED['AccountData'] = {}
 	local accountType = IsTrialAccount()
-
 	SAVED['AccountData']["AccountType"] = accountType
+end
 
+function GetCharacterInfo()
 	SAVED['CharacterInfo'] = {}
 	local unitName = GetUnitName("Player")
 	SAVED['CharacterInfo']["UnitName"] = unitName
@@ -27,6 +122,9 @@ function frm:PLAYER_LOGIN()
 
 	local unitSex = UnitSex("Player")
 	SAVED['CharacterInfo']["UnitSex"] = unitSex
+
+	local unitTitle = GetCurrentTitle()
+	SAVED['CharacterInfo']['UnitTitle'] = unitTitle
 
 	local unitRace, _, unitRaceId = UnitRace("Player")
 	SAVED['CharacterInfo']["UnitRace"] = unitRace
@@ -85,7 +183,7 @@ function frm:PLAYER_LOGIN()
 		SAVED['CharacterInfo']['Buff'] = nil
 	end
 
-	local unitArmor = UnitArmor("Player")
+	local _, _, unitArmor = UnitArmor("Player")	
 	SAVED['CharacterInfo']["UnitArmor"] = unitArmor
 
 	if versionName == "wowclassicera" or versionName == "wowclassictbc" then 
@@ -122,6 +220,12 @@ function frm:PLAYER_LOGIN()
 		SAVED['CharacterInfo']["UnitCrHitRanged"] = unitCrHitRanged
 		local unitCrHitSpell = GetCombatRatingBonus(8)
 		SAVED['CharacterInfo']["UnitCrHitSpell"] = unitCrHitSpell
+		local unitHitLevelMelee = GetCombatRating(6)
+		SAVED['CharacterInfo']['UnitHitLevelMelee'] = unitHitLevelMelee
+		local unitHitLevelRange = GetCombatRating(7)
+		SAVED['CharacterInfo']['UnitHitLevelRange'] = unitHitLevelRange
+		local unitHitLevelSpell = GetCombatRating(8)
+		SAVED['CharacterInfo']['UnitHitLevelSpell'] = unitHitLevelSpell 
 		local unitSpellBonusHealing = GetSpellBonusHealing()
 		SAVED['CharacterInfo']["UnitSpellBonusHealing"] = unitSpellBonusHealing
 		local unitSpellBonusDamage = 0
@@ -136,6 +240,50 @@ function frm:PLAYER_LOGIN()
 		SAVED['CharacterInfo']["UnitCrWeaponSkillOffhand"] = unitCrWeaponSkillOffhand
 		local unitCrWeaponSkillRanged = GetCombatRatingBonus(23)
 		SAVED['CharacterInfo']["UnitCrWeaponSkillRanged"] = unitCrWeaponSkillRanged
+
+		local unitCrChanceMelee = GetCritChance()
+		SAVED['CharacterInfo']["UnitCrChanceMelee"] = unitCrChanceMelee
+		local unitCrChanceRanged = GetRangedCritChance()
+		SAVED['CharacterInfo']["UnitCrChanceRanged"] = unitCrChanceRanged
+		SAVED['CharacterInfo']["UnitCrChanceSpell"] = {}
+		for i = 1, 7 do
+			local spellCrChance = GetSpellCritChance(i)
+			local tmp = {}
+			tmp[i] = spellCrChance
+			table.insert(SAVED['CharacterInfo']["UnitCrChanceSpell"], tmp)
+		end
+		if length(SAVED['CharacterInfo']["UnitCrChanceSpell"]) == 0 then
+			SAVED['CharacterInfo']["UnitCrChanceSpell"] = nil
+		end
+
+        -- 近战护甲穿透等级
+        SAVED['CharacterInfo']['MeleeArmorPenetrationLevel'] = GetCombatRating(25)
+        -- 近战护甲穿透率
+        SAVED['CharacterInfo']['MeleeArmorPenetrationRating'] = GetArmorPenetration()
+        -- 远程护甲穿透等级
+        SAVED['CharacterInfo']['RangedArmorPenetrationLevel'] = GetCombatRating(25)
+        -- 远程护甲穿透率
+        SAVED['CharacterInfo']['RangedArmorPenetrationRating'] = GetArmorPenetration()
+        -- 法术护甲穿透等级
+        SAVED['CharacterInfo']['SpellArmorPenetrationLevel'] = GetSpellPenetration()
+        -- 法术护甲穿透率
+        SAVED['CharacterInfo']['SpellArmorPenetrationRating'] = GetSpellPenetration()
+		-- 近战伤害
+		local minUnitDamage, maxUnitDamage = UnitDamage("player")
+		local tmp = {}
+		tmp["MinUnitDamage"] = minUnitDamage
+		tmp["MaxUnitDamage"] = maxUnitDamage
+		SAVED['CharacterInfo']['UnitDamage'] = tmp
+		-- 远程伤害
+		local unitRangedAttackSpeed, minUnitRangedDamage, maxUnitRangedDamage = UnitRangedDamage("player")
+		local tmp = {}
+		tmp["MinUnitRangedDamage"] = minUnitRangedDamage
+		tmp["MaxUnitRangedDamage"] = maxUnitRangedDamage
+		SAVED['CharacterInfo']['UnitRangedDamage'] = tmp
+		-- 远程速度
+		SAVED['CharacterInfo']['UnitRangedAttackSpeed'] = unitRangedAttackSpeed
+		-- 近战速度
+		SAVED['CharacterInfo']['UnitMeleeAttackSpeed'] = UnitAttackSpeed("player")
 	end
 
 
@@ -145,6 +293,8 @@ function frm:PLAYER_LOGIN()
 	SAVED['CharacterInfo']["UnitIncreaseDamage"] = increaseDamage
 	local reduceTolerance = GetCombatRatingBonus(31)
 	SAVED['CharacterInfo']["UnitReduceTolerance"] = reduceTolerance
+	-- 韧性
+	SAVED['CharacterInfo']["UnitToughness"] = GetCombatRating(15)
 	local effectiveness = C_PaperDollInfo.GetArmorEffectiveness(unitArmor, unitLevel)
 	SAVED['CharacterInfo']["UnitArmorEffectiveness"] = effectiveness
 	local defenceLevel = GetCombatRating(2)
@@ -177,9 +327,14 @@ function frm:PLAYER_LOGIN()
 	local blockStrengthenPoints = GetCombatRating(5)
 	SAVED['CharacterInfo']["UnitBlockStrengthenPoints"] = blockStrengthenPoints
 
+	if not (SAVED['CharacterInfo']["UnitSex"] or SAVED['CharacterInfo']["UnitRaceId"] or SAVED['CharacterInfo']["UnitClass"] or SAVED['CharacterInfo']["UnitClassId"]) then
+		if versionName ~= "wowretail" or not (SAVED['CharacterInfo']["UnitSpecId"] or SAVED['CharacterInfo']["UnitLevel"] or SAVED['CharacterInfo']["ItemLevel"]) then
+			SAVED['CharacterInfo'] = nil
+		end
+	end
+end
 
-	
-
+function GetSpecializedSkills()
 	if versionName == "wowretail" then
 		SAVED["SpecializedSkills"] = {}
 		local maxLengthID = 0
@@ -205,7 +360,14 @@ function frm:PLAYER_LOGIN()
 				SAVED["SpecializedSkills"][specialID] = nil
 			end
 		end
+		if length(SAVED["SpecializedSkills"]) == 0 then
+			SAVED["SpecializedSkills"] = nil
+		end
+	end
+end
 
+function GetSkillRelated()
+	if versionName == "wowretail" then
 		SAVED["SkillRelated"] = {}
 		for i = 1, 3 do
 			local PvpTalent = {}
@@ -214,17 +376,22 @@ function frm:PLAYER_LOGIN()
 				for k, v in pairs(tmp) do
 					if k == "selectedTalentID" then
 						local talentID, name, icon, selected, available, spellID, unlocked, row, column, known, grantedByAura = GetPvpTalentInfoByID(v)
-						skill = {}
-						skill["SkillSpellID"] = spellID
-						table.insert(SAVED["SkillRelated"], skill)
+						if spellID ~= nil then 
+							local skill = {}
+							skill["SkillSpellID"] = spellID
+							table.insert(SAVED["SkillRelated"], skill)
+						end
 					end
 				end
 			end
 		end
+		if length(SAVED["SkillRelated"]) == 0 then
+			SAVED["SkillRelated"] = nil
+		end
 	end
+end
 
-	
-
+function GetMounts()
 	if versionName == "wowretail" then
 		SAVED['Mounts'] = {}
 		for _, id in pairs(C_MountJournal.GetMountIDs()) do
@@ -237,8 +404,13 @@ function frm:PLAYER_LOGIN()
 				table.insert(SAVED['Mounts'], Mount)
 			end
 		end
+		if length(SAVED['Mounts']) == 0 then
+			SAVED['Mounts'] = nil
+		end
 	end
+end
 
+function GetClassicMounts()
 	if versionName ~= "wowclassicera" and versionName ~= "wowretail" then
 		SAVED['ClassicMounts'] = {}
 		local nums = GetNumCompanions("Mount")
@@ -250,8 +422,13 @@ function frm:PLAYER_LOGIN()
 			ClassicMount["CreatureSpellID"] = creatureSpellID
 			table.insert(SAVED['ClassicMounts'], ClassicMount)
 		end
+		if length(SAVED['ClassicMounts']) == 0 then
+			SAVED['ClassicMounts'] = nil
+		end
 	end
+end
 
+function GetAchievements()
 	if versionName ~= "wowclassicera" then
 		SAVED['Achievements'] = {}
 
@@ -274,8 +451,17 @@ function frm:PLAYER_LOGIN()
 		end
 		local totalAchievementPoints = GetTotalAchievementPoints()
 		SAVED['AchievementPoints'] = totalAchievementPoints
+		
+		if SAVED['AchievementPoints'] == 0 then
+			SAVED['AchievementPoints'] = nil
+		end
+		if length(SAVED['Achievements']) == 0 then
+			SAVED['Achievements'] = nil
+		end
 	end
+end
 
+function GetRunHistory() 
 	if versionName == "wowretail" then
 		local runHistory = C_MythicPlus.GetRunHistory(true, true)
 		if length(runHistory) ~= 0 then
@@ -339,38 +525,14 @@ function frm:PLAYER_LOGIN()
 				end
 				table.insert(SAVED["RunHistory"], Mythic)
 			end
+			if length(SAVED["RunHistory"]) == 0 then
+				SAVED["RunHistory"] = nil
+			end
 		end
 	end
+end
 
-	SAVED["PVPInfo"] = {}
-	if versionName == "wowretail" then
-		local unitHonor = UnitHonorLevel("player")
-		SAVED["PVPInfo"]["PVPUnitHonor"] = unitHonor
-	end
-	local honorableKills, dishonorableKills, highestRank = GetPVPLifetimeStats()
-	SAVED["PVPInfo"]["PVPHonorKill"] = honorableKills
-
-	if versionName ~= "wowclassicera" then
-		SAVED["PVPInfo"]["PVPHistory"] = {}
-		local nvn = {"2v2", "3v3", "5v5", "10v10"}
-		local last = 4
-		if versionName == "wowclassictbc" then 
-			last = 3
-		end
-		for i = 1, last do
-			local pvpInfo = {}
-			local rating, seasonBest, _, seasonPlayed, seasonWon, weeklyPlayed, weeklyWon, _ = GetPersonalRatedInfo(i)
-			pvpInfo["Rating"] = rating
-			pvpInfo["SeasonBest"] = seasonBest
-			pvpInfo["SeasonPlayed"] = seasonPlayed
-			pvpInfo["SeasonWon"] = seasonWon
-			pvpInfo["WeeklyPlayed"] = weeklyPlayed
-			pvpInfo["WeeklyWon"] = weeklyWon
-			pvpInfo["Type"] = nvn[i]
-			table.insert(SAVED["PVPInfo"]["PVPHistory"], pvpInfo)
-		end
-	end
-
+function GetReputations()
 	SAVED["Reputations"] = {}
 	local standingTable = {"Hated", "Hostile", "Unfriendly", "Neutral", "Friendly", "Honored", "Revered", "Exalted"}
 	standingTable[0] = "Unknown"
@@ -390,7 +552,12 @@ function frm:PLAYER_LOGIN()
 		end
 		factionIndex = factionIndex + 1
 	end
+	if length(SAVED["Reputations"]) == 0 then
+		SAVED["Reputations"] = nil
+	end
+end
 
+function GetCovenant()
 	if versionName == "wowretail" then
 		SAVED["Covenant"] = {}
 		SAVED["Covenant"]["RenownLevel"] = C_CovenantSanctumUI.GetRenownLevel()
@@ -422,13 +589,21 @@ function frm:PLAYER_LOGIN()
 				node["Id"] = ID
 				table.insert(soulBindInfo["CovenantSkillNodes"], node)
 			end
-			table.insert(SAVED["Covenant"]["CovenantSkill"], soulBindInfo)
+			if length(soulBindInfo["CovenantSkillNodes"]) ~= 0 then
+				table.insert(SAVED["Covenant"]["CovenantSkill"], soulBindInfo)
+			end
+		end
+		if length(SAVED["Covenant"]) == 0 then
+			SAVED["Covenant"] = nil
 		end
 	end
+end
 
+function GetCharacterTalent()
 	if versionName ~= "wowretail" then
 		local ok, num = pcall(getNumTalentTabs)
 		if ok then
+			local upload = false
 			SAVED["CharacterTalent"] = {}
 			for i = 1, num do
 				local talentTree = {}
@@ -441,40 +616,68 @@ function frm:PLAYER_LOGIN()
 					characterTalent["Rank"] = rank
 					characterTalent["Tier"] = tier
 					characterTalent["Column"] = column
+					if rank ~= 0 then
+						upload = true
+					end
 					table.insert(talentTreeLeaves, characterTalent)
 				end
 				talentTree['TalentTreeRoot'] = talentTabName
 				talentTree['TalentTreeLeaves'] = talentTreeLeaves
 				table.insert(SAVED["CharacterTalent"], talentTree)
 			end
+			if not upload then
+				SAVED["CharacterTalent"] = nil
+			end
 		end
-	end
-
-	SAVED["HunterPets"] = {}
-	for i = 1, 205 do
-		local hunterPet = {}
-		local petIcon, petName, petLevel, petType, petTalents = GetStablePetInfo(i)
-		hunterPet['HunterPetId'] = i
-		hunterPet['HunterPetName'] = petName
-		hunterPet['HunterPetIcon'] = petIcon
-		hunterPet['HunterPetLevel'] = petLevel
-		hunterPet['HunterPetType'] = petType
-		table.insert(SAVED["HunterPets"], hunterPet)
 	end
 end
 
-
-frm:RegisterEvent("ADDON_LOADED")
-function frm:ADDON_LOADED()
-	local version, build, date, tocversion = GetBuildInfo()
-	local v = split(version, ".")[1]
-	local version = tonumber(v)
-	if version == 1 then
-		versionName = "wowclassicera"
-	elseif version > 1 and version < 9 then
-		versionName = "wowclassictbc"
+function GetHunterPets()
+	local unitClass, _, unitClassId = UnitClass("Player")
+	if unitClassId == 3 then
+		SAVED["HunterPets"] = {}
+		for i = 1, 205 do
+			local hunterPet = {}
+			local petIcon, petName, petLevel, petType, petTalents = GetStablePetInfo(i)
+			hunterPet['HunterPetId'] = i
+			hunterPet['HunterPetName'] = petName
+			hunterPet['HunterPetIcon'] = petIcon
+			hunterPet['HunterPetLevel'] = petLevel
+			hunterPet['HunterPetType'] = petType
+			table.insert(SAVED["HunterPets"], hunterPet)
+		end
+		if length(SAVED["HunterPets"]) == 0 then
+			SAVED["HunterPets"] = nil
+		end
 	end
-	
+end
+
+function GetGlyphs()
+	if versionName == "wowclassictbc" then
+        SAVED["Glyphs"] = {}
+        local num = GetNumGlyphSockets()
+        local talentGroup = GetActiveTalentGroup()
+		for i = 1, num do
+			local tmp = {}
+			local a, b, c, d = GetGlyphSocketInfo(i, talentGroup)
+			if b == 1 then
+				tmp['Type'] = 'big'
+			elseif b == 2 then
+				tmp['Type'] = 'small'
+			end
+			tmp['SpellID'] = c
+			if c == nil then
+				tmp = nil
+			end
+			table.insert(SAVED["Glyphs"], tmp)
+		end
+        if length(SAVED["Glyphs"]) == 0 then
+			SAVED["Glyphs"] = nil
+		end
+    end
+end
+
+function GetEquipments()
 	SAVED["Equipments"] = {}
 	local Quality = {"Common", "Uncommon", "Rare", "Epic", "Legendary", "Artifact", "Heirloom", "WoWToken"}
 	Quality[0] = "Poor"
@@ -550,24 +753,141 @@ function frm:ADDON_LOADED()
 				end
 			end
 		end
-		table.insert(SAVED["Equipments"], Equipment)
-	end
-
-	if versionName == "wowretail" then
-		SAVED["Toys"] = {}
-		local index = 1
-		while true
-		do	
-			local toy = {}
-			local itemId = C_ToyBox.GetToyFromIndex(index)
-			if itemId == -1 then
-				break
-			end
-			toy['ToyId'] = itemId
-			index = index + 1
-			table.insert(SAVED["Toys"], toy)
+		if (Equipment['EquipLevel'] or Equipment["EquipAddition"] or  Equipment["EquipDurability"] or Equipment["EquipAttribute"]) then
+			table.insert(SAVED["Equipments"], Equipment)
 		end
 	end
+	if length(SAVED["Equipments"]) == 0 then
+		SAVED["Equipments"] = nil
+	end
+end
+
+function GetToys()
+	if versionName == "wowretail" then
+		local switch_1 = C_ToyBox.GetCollectedShown()
+		local switch_2 = C_ToyBox.GetUncollectedShown()
+
+		C_ToyBox.SetCollectedShown(true) 
+		C_ToyBox.SetUncollectedShown(false)
+
+		SAVED["Toys"] = {}
+		local num = C_ToyBox.GetNumFilteredToys()
+		for i = 1, num do
+			local toy = {}
+			local itemId = C_ToyBox.GetToyFromIndex(i)
+			toy['ToyId'] = itemId
+			table.insert(SAVED["Toys"], toy)
+		end
+		if length(SAVED["Toys"]) == 0 then
+			SAVED["Toys"] = nil
+		end
+
+		C_ToyBox.SetCollectedShown(switch_1) 
+		C_ToyBox.SetUncollectedShown(switch_2)
+	end
+end
+
+function GetPVPInfo()
+	SAVED["PVPInfo"] = {}
+	if versionName == "wowretail" then
+		local unitHonor = UnitHonorLevel("player")
+		SAVED["PVPInfo"]["PVPUnitHonor"] = unitHonor
+	end
+	local honorableKills, dishonorableKills, highestRank = GetPVPLifetimeStats()
+	SAVED["PVPInfo"]["PVPHonorKill"] = honorableKills
+
+	if versionName ~= "wowclassicera" then
+		SAVED["PVPInfo"]["PVPHistory"] = {}
+		local nvn = {"2v2", "3v3", "5v5", "10v10"}
+		local last = 4
+		if versionName == "wowclassictbc" then 
+			last = 3
+		end
+		for i = 1, last do
+			local pvpInfo = {}
+			local rating, seasonBest, _, seasonPlayed, seasonWon, weeklyPlayed, weeklyWon, _, _, _, rank = GetPersonalRatedInfo(i)
+			pvpInfo["Rating"] = rating
+			pvpInfo["SeasonBest"] = seasonBest
+			pvpInfo["SeasonPlayed"] = seasonPlayed
+			pvpInfo["SeasonWon"] = seasonWon
+			pvpInfo["WeeklyPlayed"] = weeklyPlayed
+			pvpInfo["WeeklyWon"] = weeklyWon
+			pvpInfo["Rank"] = rank
+			pvpInfo["Type"] = nvn[i]
+
+			if (pvpInfo["SeasonPlayed"] ~= 0 or pvpInfo["SeasonBest"] ~= 0 or pvpInfo["SeasonWon"] ~= 0 or pvpInfo["Rating"] ~= 0) then
+				table.insert(SAVED["PVPInfo"]["PVPHistory"], pvpInfo)
+			end
+		end
+		if length(SAVED["PVPInfo"]["PVPHistory"]) == 0 then
+			SAVED["PVPInfo"]["PVPHistory"] = nil
+		end
+	end
+	if not SAVED["PVPInfo"]["PVPHonorKill"] or SAVED["PVPInfo"]["PVPHonorKill"] == 0 then
+		SAVED["PVPInfo"] = nil
+	end
+end
+
+function GetPets()
+	if versionName == "wowretail" then
+		SAVED["Pets"] = {}
+		local _, petNum = C_PetJournal.GetNumPets()
+		local petIndex = 1
+		local rarityTable = {"Poor", "Common", "Uncommon", "Rare", "Epic", "Legendary"}
+		while (petIndex <= petNum) do
+			local p = {}
+			local petID, speciesID, owned, customName, level, favorite, isRevoked, speciesName, icon, petType, companionID, tooltip, description, isWild, canBattle, isTradeable, isUnique, obtainable = C_PetJournal.GetPetInfoByIndex(petIndex)
+			p["PetID"] = companionID
+			p["PetName"] = customName
+			p["PetIcon"] = icon
+			local health, _, power, speed, rarity = C_PetJournal.GetPetStats(petID)
+			p["PetRarity"] = rarityTable[rarity]
+			p["PetSpeciesName"] = speciesName
+			local table1, table2 = C_PetJournal.GetPetAbilityList(speciesID)
+			for k, v in pairs(table1) do
+				local id, name, icon, maxCooldown, unparsedDescription, numTurns, petType, noStrongWeakHints = C_PetBattles.GetAbilityInfoByID(v)
+			end
+			
+			local petTypeStr = {"Humanoid", "Dragonkin", "Flying", "Undead", "Critter", "Magic", "Elemental", "Beast", "Aquatic", "Mechanical"}
+			p["PetAttributes"] = petTypeStr[petType]
+			p["PetLevel"] = level
+			p["PetHealth"] = health
+			p["PetPower"] = power
+			p["PetSpeed"] = speed
+			table.insert(SAVED["Pets"], p)
+			petIndex = petIndex + 1
+		end
+		if length(SAVED["Pets"]) == 0 then
+			SAVED["Pets"] = nil
+		end
+	end
+end
+
+function GetMMR()
+	local isUnratedArena, isRatedArena = IsActiveBattlefieldArena()
+    if (isRatedArena) then
+        local battlefieldWinner = GetBattlefieldWinner()
+        if (battlefieldWinner == nil) then
+            return
+        end
+
+        local teamName0, oldTeamRating0, newTeamRating0, matchMakingRating0 = GetBattlefieldTeamInfo(0)
+        local teamName1, oldTeamRating1, newTeamRating1, matchMakingRating1 = GetBattlefieldTeamInfo(1)
+
+		local mmr = {}
+		--Purple Team
+		mmr['TeamName0'] = teamName0
+		mmr['OldTeamRating0'] = oldTeamRating0
+		mmr['NewTeamRating0'] = newTeamRating0
+		mmr['MatchMakingRating0'] = matchMakingRating0
+        --Gold Team
+		mmr['TeamName1'] = teamName1
+		mmr['OldTeamRating1'] = oldTeamRating1
+		mmr['NewTeamRating1'] = newTeamRating1
+		mmr['MatchMakingRating1'] = matchMakingRating1
+
+		table.insert(SAVED["MMR"], mmr)
+    end
 end
 
 function split(str,delimiter)
@@ -1015,45 +1335,4 @@ function IsBase64(text)
 	return true
 end
 
-
-frm:RegisterEvent("PLAYER_LOGOUT")   --退出游戏(返回角色选择界面)
-function frm:PLAYER_LOGOUT()  
-	local name_realm = tostring(UnitName'player') .. "-" .. tostring(GetRealmName())
-	SAVED_ONE[name_realm] = SAVED_ONE[name_realm] or {}
-	SAVED_ONE[name_realm].class = select(2,UnitClass'player')
-
-	
-	if versionName == "wowretail" then
-		SAVED["Pets"] = {}
-		local _, petNum = C_PetJournal.GetNumPets()
-		local petIndex = 1
-		local rarityTable = {"Poor", "Common", "Uncommon", "Rare", "Epic", "Legendary"}
-		while (petIndex <= petNum) do
-			local p = {}
-			local petID, speciesID, owned, customName, level, favorite, isRevoked, speciesName, icon, petType, companionID, tooltip, description, isWild, canBattle, isTradeable, isUnique, obtainable = C_PetJournal.GetPetInfoByIndex(petIndex)
-			p["PetID"] = companionID
-			p["PetName"] = customName
-			p["PetIcon"] = icon
-			local health, _, power, speed, rarity = C_PetJournal.GetPetStats(petID)
-			p["PetRarity"] = rarityTable[rarity]
-			p["PetSpeciesName"] = speciesName
-			local table1, table2 = C_PetJournal.GetPetAbilityList(speciesID)
-			for k, v in pairs(table1) do
-				local id, name, icon, maxCooldown, unparsedDescription, numTurns, petType, noStrongWeakHints = C_PetBattles.GetAbilityInfoByID(v)
-			end
-			
-			local petTypeStr = {"Humanoid", "Dragonkin", "Flying", "Undead", "Critter", "Magic", "Elemental", "Beast", "Aquatic", "Mechanical"}
-			p["PetAttributes"] = petTypeStr[petType]
-			p["PetLevel"] = level
-			p["PetHealth"] = health
-			p["PetPower"] = power
-			p["PetSpeed"] = speed
-			table.insert(SAVED["Pets"], p)
-			petIndex = petIndex + 1
-		end
-	end
-
-	_G.HEYBOX_SAVED_PER_PLAYER_INFOS = Encode(luaJson.table2json(SAVED), nil, nil)
-	_G.HEYBOX_SAVED_PLAYER_INFOS = SAVED_ONE
-end
-
+    

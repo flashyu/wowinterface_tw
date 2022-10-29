@@ -44,28 +44,26 @@ local function TransferMessageAbort( loc1, loc2 )
 	
 end
 
-local function TransferBagCheck( loc_id, bag_id )
+local function TransferBagCheck( blizzard_id )
 	
 	local abort = false
-	local numSlots = GetContainerNumSlots( bag_id )
-	local freeSlots, bagType = ArkInventory.CrossClient.GetContainerNumFreeSlots( bag_id )
+	local numSlots = GetContainerNumSlots( blizzard_id )
+	local freeSlots, bagType = ArkInventory.CrossClient.GetContainerNumFreeSlots( blizzard_id )
 	
-	local it = GetItemFamily( h ) or 0
-	
-	
-	if bag_id == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK and not ArkInventory.CrossClient.IsReagentBankUnlocked( ) then
+	if blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK and not ArkInventory.CrossClient.IsReagentBankUnlocked( ) then
 		-- reagent bank always returns its number of slots even if you havent unlocked it
 		numSlots = 0
 		freeSlots = 0
 	end
 	
+	local loc_id, bag_pos = ArkInventory.BlizzardBagIdToInternalId( blizzard_id )
 	if ( loc_id == ArkInventory.Const.Location.Bank and not ArkInventory.Global.Mode.Bank ) or ( loc_id == ArkInventory.Const.Location.Vault and not ArkInventory.Global.Mode.Vault ) then
 		-- no longer at the location
 		--ArkInventory.OutputWarning( "aborting, no longer at location" )
 		abort = loc_id
 	end
 	
-	return abort, bagType, numSlots
+	return abort, bagType or 0, numSlots or 0
 	
 end
 
@@ -94,7 +92,7 @@ local function FindItem( loc_id, cl, cb, bp, cs, id, ct )
 			
 			Transfer_Yield( cl )
 			
-			local ab, bt, count = TransferBagCheck( loc_id, bag_id )
+			local ab, bt, count = TransferBagCheck( bag_id )
 			if ab then
 				return cl, recheck, false
 			end
@@ -105,7 +103,7 @@ local function FindItem( loc_id, cl, cb, bp, cs, id, ct )
 				
 				ok = false
 				
-				if TransferBagCheck( loc_id, bag_id ) then
+				if TransferBagCheck( bag_id ) then
 					return cl, recheck, false
 				end
 				
@@ -118,7 +116,7 @@ local function FindItem( loc_id, cl, cb, bp, cs, id, ct )
 				elseif loc_id == cl and bag_pos == bp and slot_id < cs then
 					-- same location and same bag and lower slot
 					ok = true
-				elseif ( ct ~= 0 and bag_pos ~= bp and bt == 0 ) and ( loc_id ~= ArkInventory.Const.Location.Bank and bag_id ~= ArkInventory.Global.Location[ArkInventory.Const.Location.Bank].tabReagent ) then
+				elseif ( ct ~= 0 and bag_pos ~= bp and bt == 0 ) and ( loc_id ~= ArkInventory.Const.Location.Bank and bag_id ~= ArkInventory.Global.Location[ArkInventory.Const.Location.Bank].ReagentBag ) then
 					-- full scan (bag type) and different bag and normal bag 
 					-- not at the bank and not the reagent bank (or it will loop endlessly)
 					ok = true
@@ -202,7 +200,7 @@ local function FindPartialStack( loc_id, cl, cb, bp, cs, id )
 		
 		local bag_id = cb
 		
-		for slot_id = 1, ArkInventory.Const.BLIZZARD.GLOBAL.GUILDBANK.NUM_SLOT_TAB do
+		for slot_id = 1, ArkInventory.Const.BLIZZARD.GLOBAL.GUILDBANK.SLOTS_PER_TAB do
 			
 			if not ArkInventory.Global.Mode.Vault or bag_id ~= GetCurrentGuildBankTab( ) then
 				-- no longer at the vault or changed tabs, abort
@@ -262,14 +260,14 @@ local function FindPartialStack( loc_id, cl, cb, bp, cs, id )
 				
 				Transfer_Yield( cl )
 				
-				local ab, bt, count = TransferBagCheck( loc_id, bag_id )
+				local ab, bt, count = TransferBagCheck( bag_id )
 				if ab then
 					return cl, recheck, false
 				end
 				
 				for slot_id = 1, count do
 					
-					if TransferBagCheck( loc_id, bag_id ) then
+					if TransferBagCheck( bag_id ) then
 						return cl, recheck, false
 					end
 					
@@ -357,7 +355,7 @@ local function FindNormalItem( loc_id, cl, cb, bp, cs )
 			
 			Transfer_Yield( cl )
 			
-			local ab, bt, count = TransferBagCheck( loc_id, bag_id )
+			local ab, bt, count = TransferBagCheck( bag_id )
 			if ab then
 				return cl, recheck, false
 			end
@@ -366,7 +364,7 @@ local function FindNormalItem( loc_id, cl, cb, bp, cs )
 				
 				for slot_id = 1, count do
 					
-					if TransferBagCheck( loc_id, bag_id ) then
+					if TransferBagCheck( bag_id ) then
 						return cl, recheck, false
 					end
 					
@@ -431,7 +429,7 @@ local function FindProfessionItem( loc_id, cl, cb, bp, cs, ct )
 	
 	for bag_pos, bag_id in ipairs( ArkInventory.Global.Location[loc_id].Bags ) do
 		
-		local ab, bt, count = TransferBagCheck( loc_id, bag_id )
+		local ab, bt, count = TransferBagCheck( bag_id )
 		if ab then
 			return cl, recheck, false
 		end
@@ -465,7 +463,7 @@ local function FindProfessionItem( loc_id, cl, cb, bp, cs, ct )
 				
 				for slot_id = 1, count do
 					
-					if TransferBagCheck( loc_id, bag_id ) then
+					if TransferBagCheck( bag_id ) then
 						return cl, recheck, false
 					end
 					
@@ -572,7 +570,7 @@ local function FindCraftingItem( loc_id, cl, cb, bp, cs )
 	
 	for bag_pos, bag_id in ipairs( ArkInventory.Global.Location[loc_id].Bags ) do
 		
-		local ab, bt, count = TransferBagCheck( loc_id, bag_id )
+		local ab, bt, count = TransferBagCheck( bag_id )
 		if ab then
 			return cl, recheck, false
 		end
@@ -606,7 +604,7 @@ local function FindCraftingItem( loc_id, cl, cb, bp, cs )
 				
 				for slot_id = 1, count do
 					
-					if TransferBagCheck( loc_id, bag_id ) then
+					if TransferBagCheck( bag_id ) then
 						return cl, recheck, false
 					end
 					
@@ -686,7 +684,7 @@ local function StackBags( loc_id )
 		
 		local bag_id = ArkInventory.Global.Location[loc_id].Bags[bag_pos]
 		
-		local ab, bt, count = TransferBagCheck( loc_id, bag_id )
+		local ab, bt, count = TransferBagCheck( bag_id )
 		if ab then
 			return cl, recheck, false
 		end
@@ -699,7 +697,7 @@ local function StackBags( loc_id )
 				
 				for slot_id = count, 1, -1 do
 					
-					if TransferBagCheck( loc_id, bag_id ) then
+					if TransferBagCheck( bag_id ) then
 						return cl, recheck, false
 					end
 					
@@ -793,7 +791,7 @@ local function ConsolidateBag( loc_id, bag_id, bag_pos )
 		
 		Transfer_Yield( loc_id )
 		
-		local ab, bt, count = TransferBagCheck( loc_id, bag_id )
+		local ab, bt, count = TransferBagCheck( bag_id )
 		if ab then
 			return cl, recheck, false
 		end
@@ -804,7 +802,7 @@ local function ConsolidateBag( loc_id, bag_id, bag_pos )
 		
 		for slot_id = count, 1, -1 do
 			
-			if TransferBagCheck( loc_id, bag_id ) then
+			if TransferBagCheck( bag_id ) then
 				return cl, recheck, false
 			end
 			
@@ -890,7 +888,7 @@ local function Consolidate( loc_id )
 			
 			Transfer_Yield( loc_id )
 			
-			local ab, bt, count = TransferBagCheck( loc_id, bag_id )
+			local ab, bt, count = TransferBagCheck( bag_id )
 			if ab then
 				return cl, recheck, false
 			end
@@ -927,7 +925,7 @@ local function Consolidate( loc_id )
 				
 				Transfer_Yield( loc_id )
 				
-				if TransferBagCheck( loc_id, bag_id ) then
+				if TransferBagCheck( bag_id ) then
 					return cl, recheck, false
 				end
 				
@@ -955,7 +953,7 @@ local function Consolidate( loc_id )
 				
 				if not me.player.data.option[loc_id].bag[bag_id].transfer.ignore then
 					
-					local ab, bt, count = TransferBagCheck( loc_id, bag_id )
+					local ab, bt, count = TransferBagCheck( bag_id )
 					if ab then
 						return cl, recheck, false
 					end
@@ -1000,7 +998,7 @@ local function CompactBag( loc_id, bag_id, bag_pos )
 		
 		--ArkInventory.Output( "CompactBag( ", loc_id, ".", bag_id, " )" )
 		
-		local ab, bt, count = TransferBagCheck( loc_id, bag_id )
+		local ab, bt, count = TransferBagCheck( bag_id )
 		if ab then
 			return cl, recheck, false
 		end
@@ -1011,7 +1009,7 @@ local function CompactBag( loc_id, bag_id, bag_pos )
 		
 		for slot_id = count, 1, -1 do
 			
-			if TransferBagCheck( loc_id, bag_id ) then
+			if TransferBagCheck( bag_id ) then
 				return cl, recheck, false
 			end
 			
@@ -1090,7 +1088,7 @@ local function Compact( loc_id )
 		
 		if not me.player.data.option[loc_id].bag[bag_id].transfer.ignore then
 			
-			local ab, bt, count = TransferBagCheck( loc_id, bag_id )
+			local ab, bt, count = TransferBagCheck( bag_id )
 			if ab then
 				return cl, recheck, false
 			end
@@ -1229,8 +1227,8 @@ local function TransferRun_Threaded( loc_id )
 						ArkInventory.Output( ArkInventory.Localise["TRANSFER"], ": ", REAGENTBANK_DEPOSIT, " " , ArkInventory.Localise["DISABLED"] )
 					end
 					
-					local bag_id = ArkInventory.Global.Location[loc_id].tabReagent
-					if not me.player.data.option[loc_id].bag[bag_id].transfer.ignore then
+					local bag_pos = ArkInventory.Global.Location[loc_id].ReagentBag
+					if not me.player.data.option[loc_id].bag[bag_pos].transfer.ignore then
 						C_Timer.After(
 							0.6,
 							function( )

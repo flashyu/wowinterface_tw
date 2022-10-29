@@ -30,7 +30,7 @@ VER 3 0000000000000009 "RXPTargeting" "Ability_eyeoftheowl"
 //RestedXP Guides - current step has no configured targets
 END
 VER 3 000000000000001A "target" "132177"
-/target 塞克卡尔
+/target 大领主提里奥·弗丁
 END
 VER 3 0000000000000002 "target宏" "INV_MISC_QUESTIONMARK"
 /target 逆风术士
@@ -95,8 +95,7 @@ VER 3 0000000000000016 "爆发" "135805"
 END
 VER 3 000000000000000B "生命" "134831"
 /use 邪能治疗石;
-/use 超级治疗药水
-/use 符文治疗药水
+/use 符文治疗药水;
 END
 VER 3 0000000000000019 "自然之力" "INV_MISC_QUESTIONMARK"
 #showtooltip 自然之力
@@ -115,7 +114,7 @@ VER 3 0000000000000003 "视野宏" "132092"
 /console weatherDensity 0
 END
 VER 3 0000000000000010 "钓鱼" "132931"
-/equip 精致的卡鲁亚克;
+/equip 珠宝钓鱼竿;
 /cast 钓鱼;
 /use 巨型蚌壳;
 /脚本 local a,i,j,l={"病鱼","纠结的鱼线","漂木","水草","破布","树枝","石块","骨鳞钳鱼","晶鳞鱼"}for i=1,#a do for j=1,114 do l=GetContainerItemLink(j/23,j%23)if l and l:find(a[i])then PickupContainerItem(j/23,j%23)DeleteCursorItem()end end end

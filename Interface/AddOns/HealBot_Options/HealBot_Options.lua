@@ -3929,14 +3929,6 @@ function HealBot_Options_TipMaxButtons_OnValueChanged(self)
     end
 end
 
-function HealBot_Options_TTAlpha_OnValueChanged(self)
-    HealBot_Globals.ttalpha = HealBot_Options_Pct_OnValueChanged(self);
-    local x=HealBot_Globals.ttalpha+0.12
-    if x>1 then x=1 end
-    HealBot_Tooltip:SetBackdropColor(0,0,0,HealBot_Globals.ttalpha)
-    HealBot_Tooltip:SetBackdropBorderColor(0.32,0.32,0.4, x)
-end
-
 function HealBot_Options_Tooltip_ShowCustomAnchor(self)
     if HealBot_Data["TIPUSE"] then 
         HealBot_Tooltip_ShowCustomAnchor()
@@ -6116,19 +6108,6 @@ function HealBot_Options_ShowTooltipSpellIgnoreGlobalCoolDown_OnClick(self)
     HealBot_Globals.Tooltip_IgnoreGCD = self:GetChecked()
 end
 
-function HealBot_Options_ShowTooltipUseGameTip_OnClick(self)
-    if HealBot_Globals.UseGameTooltip~=self:GetChecked() then
-        if HealBot_Data["TIPUSE"] then
-            HealBot_Tooltip_OptionsHide()
-        end
-        HealBot_Globals.UseGameTooltip = self:GetChecked()
-        if HealBot_Data["TIPUSE"] then
-            HealBot_Options_Show_Help("TOOLTIPGAMETIP",true)
-        end
-        HealBot_Options_SetTooltipState()
-    end
-end
-
 function HealBot_Options_ShowTooltipShowUnitTip_OnClick(self)
     if HealBot_Globals.ShowGameUnitInfo~=self:GetChecked() then
         HealBot_Globals.ShowGameUnitInfo = self:GetChecked()
@@ -8088,28 +8067,6 @@ end
 
 --------------------------------------------------------------------------------
 
-function HealBot_Options_TooltipTextSize_DropDown()
-    local info = UIDropDownMenu_CreateInfo()
-    if not HealBot_Globals.ShowTooltip or HealBot_Globals.UseGameTooltip then
-        info.text = " "
-        UIDropDownMenu_AddButton(info);
-    else
-        for j=1, getn(HealBot_Options_TooltipFontSize_List), 1 do
-            info.text = HealBot_Options_TooltipFontSize_List[j];
-            info.func = function(self)
-                            HealBot_Globals.Tooltip_TextSize = self:GetID()
-                            UIDropDownMenu_SetText(HealBot_Options_TooltipTextSize, HealBot_Options_TooltipFontSize_List[HealBot_Globals.Tooltip_TextSize])
-                            HealBot_Tooltip_setLuVars("doInit", true)
-                        end
-            info.checked = false;
-            if HealBot_Globals.Tooltip_TextSize == j then info.checked = true; end
-            UIDropDownMenu_AddButton(info);
-        end
-    end
-end
-
---------------------------------------------------------------------------------
-
 HealBot_Options_luVars["hbLangs"] = 3
 
 function HealBot_Options_hbLangs_DropDown()
@@ -9077,6 +9034,7 @@ function HealBot_Options_FullHealSpellsCombo_list(sType)
             HEALBOT_CHAIN_HEAL,
             HEALBOT_SPIRIT_LINK_TOTEM,
             HEALBOT_FLASH_HEAL,
+            HEALBOT_POWER_WORD_LIFE,
             HEALBOT_HOLY_WORD_SERENITY,
             HEALBOT_SURGING_MIST,
             HEALBOT_HOLY_WORD_SALVATION,
@@ -18873,21 +18831,13 @@ function HealBot_Options_TipsTab(tab)
         HealBot_Options_SetText(HealBot_Options_ShowTooltipSpellCoolDown,HEALBOT_OPTIONS_SHOWCDTOOLTIP)
         HealBot_Options_ShowTooltipSpellIgnoreGlobalCoolDown:SetChecked(HealBot_Globals.Tooltip_IgnoreGCD)
         HealBot_Options_SetText(HealBot_Options_ShowTooltipSpellIgnoreGlobalCoolDown,HEALBOT_OPTIONS_IGNOREGCDTOOLTIP)
-        HealBot_Options_ShowTooltipUseGameTip:SetChecked(HealBot_Globals.UseGameTooltip)
-        HealBot_Options_SetText(HealBot_Options_ShowTooltipUseGameTip,HEALBOT_OPTIONS_USEGAMETOOLTIP)
         HealBot_Options_ShowTooltipShowUnitTip:SetChecked(HealBot_Globals.ShowGameUnitInfo)
         HealBot_Options_SetText(HealBot_Options_ShowTooltipShowUnitTip,HEALBOT_OPTIONS_SHOWWOWTOOLTIP)
         HealBot_Options_ShowTooltipShowHoT:SetChecked(HealBot_Globals.Tooltip_ShowHoT)
         HealBot_Options_SetText(HealBot_Options_ShowTooltipShowHoT,HEALBOT_OPTIONS_TOOLTIPSHOWHOT)
-        HealBot_Options_Pct_OnLoad(HealBot_Options_TTAlpha,HEALBOT_OPTIONS_TTALPHA)
-        HealBot_Options_TTAlpha:SetValue(HealBot_Globals.ttalpha)
-        HealBot_Options_Pct_OnValueChanged(HealBot_Options_TTAlpha)
         HealBot_Options_val_OnLoad(HealBot_Options_TipMaxButtons,HEALBOT_OPTIONS_TTMAXBUTTONS,3,20,1,2)
         HealBot_Options_TipMaxButtons:SetValue(HealBot_Globals.Tooltip_MaxButtons)
         HealBot_Options_SetText(HealBot_Options_TipMaxButtons,HEALBOT_OPTIONS_TTMAXBUTTONS..": "..HealBot_Globals.Tooltip_MaxButtons)
-        HealBot_Options_TooltipTextSize.initialize = HealBot_Options_TooltipTextSize_DropDown
-        UIDropDownMenu_SetText(HealBot_Options_TooltipTextSize, HealBot_Options_TooltipFontSize_List[HealBot_Globals.Tooltip_TextSize])
-        HealBot_Options_SetLabel("healbottooltiptextsizefontstr",HEALBOT_OPTIONS_SKINFHEIGHT)
         HealBot_Options_SetTooltipState()
         HealBot_Options_TabRunOnce[tab]=true
     end
@@ -19401,8 +19351,10 @@ function HealBot_Options_SetTooltipState()
         HealBot_Options_ObjectsEnableDisable("HealBot_Options_HideTooltipInCombat",true)
         HealBot_Options_ObjectsEnableDisable("HealBot_Options_TooltipPosSettings",true)
         HealBot_Options_ObjectsEnableDisable("HealBot_Options_TooltipCustomAnchor",true)
-        HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipUseGameTip",true)
-        if HealBot_Globals.UseGameTooltip then
+
+
+
+
             HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipShowUnitTip",true)
             if HealBot_Globals.ShowGameUnitInfo then
                 HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipTarget",false)
@@ -19413,11 +19365,13 @@ function HealBot_Options_SetTooltipState()
                 HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipRanks",false)
                 HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipRoles",false)
                 HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipHideRoleWhenRank",false)
+                HealBot_Options_ObjectsEnableDisable("HealBot_Options_TipMaxButtons",false)
             else
                 HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipTarget",true)
                 HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipSpellCoolDown",true)
                 HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipSpellIgnoreGlobalCoolDown",true)
                 HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipShowHoT",true)
+                HealBot_Options_ObjectsEnableDisable("HealBot_Options_TipMaxButtons",true)
                 if HealBot_Globals.Tooltip_ShowTarget then
                     HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipMyBuffs",true)
                     HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipRanks",true)
@@ -19430,35 +19384,6 @@ function HealBot_Options_SetTooltipState()
                     HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipHideRoleWhenRank",false)
                 end
             end
-            HealBot_Options_ObjectsEnableDisable("HealBot_Options_TTAlpha",false)
-            HealBot_Options_ObjectsEnableDisable("HealBot_Options_TipMaxButtons",false)
-            HealBot_Options_TooltipTextSize:SetAlpha(0.4)
-            HealBot_Options_TooltipTextSize.initialize = HealBot_Options_TooltipTextSize_DropDown
-            UIDropDownMenu_SetText(HealBot_Options_TooltipTextSize, " ")
-        else
-            HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipShowUnitTip",false)
-            HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipTarget",true)
-            HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipSpellCoolDown",true)
-            HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipSpellIgnoreGlobalCoolDown",true)
-            HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipUseGameTip",true)
-            HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipShowHoT",true)
-            HealBot_Options_ObjectsEnableDisable("HealBot_Options_TTAlpha",true)
-            HealBot_Options_ObjectsEnableDisable("HealBot_Options_TipMaxButtons",true)
-            HealBot_Options_TooltipTextSize:SetAlpha(1)
-            HealBot_Options_TooltipTextSize.initialize = HealBot_Options_TooltipTextSize_DropDown
-            UIDropDownMenu_SetText(HealBot_Options_TooltipTextSize, HealBot_Options_TooltipFontSize_List[HealBot_Globals.Tooltip_TextSize])
-            if HealBot_Globals.Tooltip_ShowTarget then
-                HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipMyBuffs",true)
-                HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipRanks",true)
-                HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipRoles",true)
-                HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipHideRoleWhenRank",true)
-            else
-                HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipMyBuffs",false)
-                HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipRanks",false)
-                HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipRoles",false)
-                HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipHideRoleWhenRank",false)
-            end
-        end
     else
         HealBot_Options_ObjectsEnableDisable("HealBot_Options_HideTooltipInCombat",false)
         HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipTarget",false)
@@ -19473,14 +19398,7 @@ function HealBot_Options_SetTooltipState()
         HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipShowHoT",false)
         HealBot_Options_ObjectsEnableDisable("HealBot_Options_TooltipPosSettings",false)
         HealBot_Options_ObjectsEnableDisable("HealBot_Options_TooltipCustomAnchor",false)
-        HealBot_Options_ObjectsEnableDisable("HealBot_Options_TTAlpha",false)
         HealBot_Options_ObjectsEnableDisable("HealBot_Options_TipMaxButtons",false)
-        HealBot_Options_TooltipTextSize:SetAlpha(0.4)
-        HealBot_Options_TooltipTextSize.initialize = HealBot_Options_TooltipTextSize_DropDown
-        UIDropDownMenu_SetText(HealBot_Options_TooltipTextSize, " ")
-    end
-    if HEALBOT_GAME_VERSION>3 then
-        HealBot_Options_ObjectsEnableDisable("HealBot_Options_ShowTooltipUseGameTip",false)
     end
 end
 

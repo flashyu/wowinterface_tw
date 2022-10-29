@@ -9,7 +9,7 @@ ThreatPlatesDB = {
 		["骑风 - 祈福"] = "Default",
 	},
 	["global"] = {
-		["version"] = "11.0.1",
+		["version"] = "11.0.3",
 	},
 	["profiles"] = {
 		["Default"] = {

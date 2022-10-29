@@ -14,7 +14,7 @@ ElvUI_OptionsUI: enabled
 Decursive: enabled
 ElvUI: enabled
 SpellReplay: disabled
-Plater: disabled
+Plater: enabled
 AdvancedInterfaceOptions: enabled
 ArkInventoryRules_Example: enabled
 ArkInventory: enabled
@@ -123,6 +123,6 @@ SimpleItemLevel: enabled
 Leatrix_Plus: enabled
 Leatrix_Maps: enabled
 TacoTip: enabled
-TidyPlates_ThreatPlates: enabled
+TidyPlates_ThreatPlates: disabled
 TellMeWhen: disabled
 TellMeWhen_Options: disabled

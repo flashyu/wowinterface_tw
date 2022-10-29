@@ -735,7 +735,7 @@ function ArkInventory.VaultTabClick( tab_id, mode )
 	elseif mode == "moneylog" then
 		
 		--ArkInventory.Output( "query money", tab_id )
-		QueryGuildBankLog( MAX_GUILDBANK_TABS + 1 ) -- fires GUILDBANKLOG_UPDATE when data is available
+		QueryGuildBankLog( ArkInventory.Const.BLIZZARD.GLOBAL.GUILDBANK.NUM_TABS + 1 ) -- fires GUILDBANKLOG_UPDATE when data is available
 		
 	elseif mode == "tabinfo" then
 		
@@ -1687,14 +1687,14 @@ function ArkInventory.BagType( blizzard_id )
 		return ArkInventory.Const.Slot.Type.Bag
 	elseif blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK then
 		return ArkInventory.Const.Slot.Type.Reagent
-	elseif blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBAG then
-		return ArkInventory.Const.Slot.Type.Reagent
 	end
 	
 	local loc_id, bag_id = ArkInventory.BlizzardBagIdToInternalId( blizzard_id )
 	
 	if loc_id == nil then
 		return ArkInventory.Const.Slot.Type.Unknown
+	elseif loc_id == ArkInventory.Const.Location.Bag and bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
+		return ArkInventory.Const.Slot.Type.Reagent
 	elseif loc_id == ArkInventory.Const.Location.Vault then
 		return ArkInventory.Const.Slot.Type.Bag
 	elseif loc_id == ArkInventory.Const.Location.Mailbox then
@@ -2144,7 +2144,7 @@ function ArkInventory.ScanBag_Threaded( blizzard_id, loc_id, bag_id, thread_id, 
 		
 		count = ArkInventory.CrossClient.GetContainerNumSlots( blizzard_id )
 		
-		if bag_id == ArkInventory.Global.Location[loc_id].tabReagent then
+		if bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
 			
 			if not count or count == 0 then
 				
@@ -2278,6 +2278,8 @@ function ArkInventory.ScanBag_Threaded( blizzard_id, loc_id, bag_id, thread_id, 
 	
 	for slot_id = 1, bag.count do
 		
+		local tz = debugprofilestop( )
+		
 		if not bag.slot[slot_id] then
 			bag.slot[slot_id] = {
 				loc_id = loc_id,
@@ -2329,8 +2331,6 @@ function ArkInventory.ScanBag_Threaded( blizzard_id, loc_id, bag_id, thread_id, 
 			i.age = ArkInventory.TimeAsMinutes( )
 		end
 		
-		--ArkInventory.Output( loc_id, ".", bag_id, ".", slot_id, " = ", { i } )
-		
 		if changed_item then
 			
 			ArkInventory.Frame_Item_Update( loc_id, bag_id, slot_id )
@@ -2338,6 +2338,9 @@ function ArkInventory.ScanBag_Threaded( blizzard_id, loc_id, bag_id, thread_id, 
 			ArkInventory:SendMessage( "EVENT_ARKINV_CHANGER_UPDATE_BUCKET", loc_id )
 			
 		end
+		
+		tz = debugprofilestop( ) - tz
+		ArkInventory.OutputThread( "Scanned [", string.format( "%0.2fms", tz ), "] [", blizzard_id, " / ", loc_id, "] [", bag_id, "] [", slot_id, "] = ", i.h or "empty" )
 		
 		ArkInventory.ThreadYield_Scan( thread_id )
 		
@@ -2589,7 +2592,7 @@ function ArkInventory.ScanVault_Threaded( loc_id, bag_id, thread_id, rescan )
 		local name, icon, canView, canDeposit, numWithdrawals, remainingWithdrawals, filtered = GetGuildBankTabInfo( bag_id )
 		bag.name = name
 		bag.texture = icon
-		bag.count = ArkInventory.Const.BLIZZARD.GLOBAL.GUILDBANK.NUM_SLOT_TAB
+		bag.count = ArkInventory.Const.BLIZZARD.GLOBAL.GUILDBANK.SLOTS_PER_TAB
 		bag.status = ArkInventory.Const.Bag.Status.Active
 	end
 	
@@ -2712,7 +2715,7 @@ function ArkInventory.ScanVaultHeader( )
 	
 	local player = ArkInventory.GetPlayerStorage( nil, loc_id )
 	
-	for bag_id = 1, MAX_GUILDBANK_TABS do
+	for bag_id = 1, ArkInventory.Const.BLIZZARD.GLOBAL.GUILDBANK.NUM_TABS do
 		
 		--ArkInventory.Output( "scaning tab header: ", bag_id )
 		
@@ -2785,6 +2788,9 @@ end
 
 function ArkInventory.ScanWearing( rescan )
 	
+	-- temporarily disable wearing scan
+	--if true then return end
+	
 	local blizzard_id = ArkInventory.Const.Offset.Wearing + 1
 	local loc_id, bag_id = ArkInventory.BlizzardBagIdToInternalId( blizzard_id )
 	
@@ -2832,6 +2838,8 @@ function ArkInventory.ScanWearing_Threaded( blizzard_id, loc_id, bag_id, thread_
 	local ready = true
 	
 	for slot_id, v in ipairs( ArkInventory.Const.InventorySlotName ) do
+		
+		local tz = debugprofilestop( )
 		
 		bag.count = bag.count + 1
 		
@@ -2891,6 +2899,9 @@ function ArkInventory.ScanWearing_Threaded( blizzard_id, loc_id, bag_id, thread_
 			ArkInventory:SendMessage( "EVENT_ARKINV_CHANGER_UPDATE_BUCKET", loc_id )
 			
 		end
+		
+		tz = debugprofilestop( ) - tz
+		ArkInventory.OutputThread( "Scanned [", string.format( "%0.2fms", tz ), "] [", blizzard_id, " / ", loc_id, "] [", bag_id, "] [", slot_id, "] = ", i.h or "empty" )
 		
 	end
 	
@@ -4826,7 +4837,7 @@ function ArkInventory.InventoryIDGet( loc_id, bag_id, slot_id )
 		
 	elseif loc_id == ArkInventory.Const.Location.Bank then
 		
-		if bag_id == ArkInventory.Global.Location[loc_id].tabReagent then
+		if bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
 			
 			return nil
 			

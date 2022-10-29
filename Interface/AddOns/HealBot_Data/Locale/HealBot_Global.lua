@@ -1,4 +1,4 @@
-﻿HEALBOT_VERSION_SC = "9.2.7.20";
+﻿HEALBOT_VERSION_SC = "9.2.7.21";
 HEALBOT_VERSION    = GetAddOnMetadata("HealBot", "Version") or "9.x"
 HEALBOT_ABOUT_URL  = "healbot.dpm15.net"
 
@@ -246,6 +246,7 @@ function HealBot_globalVars()
     HEALBOT_RENEW                           = 139 --GetSpellInfo(139) or "--Renew";
     HEALBOT_PLEA                            = 200829 --GetSpellInfo(200829) or "--Plea";    
     HEALBOT_POWER_WORD_RADIANCE             = 194509 --GetSpellInfo(194509) or "--Power Word: Radiance";
+    HEALBOT_POWER_WORD_LIFE                 = 373481
     HEALBOT_SHADOW_MEND                     = 186263 --GetSpellInfo(186263) or "--Shadow Mend;"
     HEALBOT_HOLY_WORD_SANCTIFY              = 34861 --GetSpellInfo(34861) or "--Holy Word: Sanctify";
     HEALBOT_SPIRIT_OF_REDEMPTION            = 27827 --GetSpellInfo(20711) or "--Spirit of Redemption";

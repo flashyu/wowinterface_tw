@@ -17,9 +17,9 @@ CodexConfig = {
 		["callbacks"] = {
 			["distance"] = {
 			},
-			["minimap"] = {
-			},
 			["world"] = {
+			},
+			["minimap"] = {
 			},
 		},
 		["persistent"] = true,
@@ -30,17 +30,17 @@ CodexConfig = {
 		["crazy"] = true,
 		["world"] = true,
 	},
-	["minimapButton"] = true,
-	["autoTurnin"] = false,
+	["continentIcon"] = false,
+	["currentQuestGivers"] = true,
 	["spawnMarkerSize"] = 15,
-	["zoneMapIcon"] = true,
+	["showFestival"] = false,
 	["alwaysShowId"] = false,
 	["nameplateIcon"] = false,
 	["colorBySpawn"] = true,
-	["showFestival"] = false,
+	["zoneMapIcon"] = true,
 	["miniMapIcon"] = true,
-	["currentQuestGivers"] = true,
-	["continentIcon"] = false,
+	["autoTurnin"] = false,
+	["minimapButton"] = true,
 	["questMarkerSize"] = 15,
 }
 CodexHiddenQuests = {
@@ -71,14 +71,14 @@ CodexColors = {
 		0.4235294117647059, -- [2]
 		0.5490196078431373, -- [3]
 	},
-	["部落篝火"] = {
-		0.7490196078431373, -- [1]
-		0.3843137254901961, -- [2]
-		0.1647058823529412, -- [3]
-	},
 	["雄鹰神殿"] = {
 		0.3176470588235294, -- [1]
 		0.9921568627450981, -- [2]
 		0.5294117647058824, -- [3]
+	},
+	["部落篝火"] = {
+		0.7490196078431373, -- [1]
+		0.3843137254901961, -- [2]
+		0.1647058823529412, -- [3]
 	},
 }

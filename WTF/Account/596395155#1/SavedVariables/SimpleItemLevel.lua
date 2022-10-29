@@ -1,5 +1,5 @@
 
 SimpleItemLevelDB = {
-	["inspect"] = true,
 	["character"] = true,
+	["inspect"] = true,
 }

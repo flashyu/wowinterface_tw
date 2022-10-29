@@ -475,35 +475,33 @@ end
 
 function ArkInventory.CrossClient.GetContainerItemInfo( ... )
 	
-	local itemInfo
+	local info = { }
 	
 	if C_Container and C_Container.GetContainerItemInfo then
-		itemInfo = C_Container.GetContainerItemInfo( ... )
+		info = C_Container.GetContainerItemInfo( ... )
 	elseif GetContainerItemInfo then
 		local icon, count, locked, quality, readable, lootable, hyperlink, filtered, novalue, itemid, bound = GetContainerItemInfo( ... )
-		itemInfo = {
-			["iconFileID"] = icon,
-			["stackCount"] = count,
-			["isLocked"] = locked,
-			["quality"] = quality,
-			["isReadable"] = readable,
-			["hasLoot"] = lootable,
-			["hyperlink"] = hyperlink,
-			["isFiltered"] = filtered,
-			["hasNoValue"] = novalue,
-			["itemID"] = itemid,
-			["isBound"] = bound,
-		}
+		info.iconFileID = icon
+		info.stackCount = count
+		info.isLocked = locked
+		info.quality = quality
+		info.isReadable = readable
+		info.hasLoot = lootable
+		info.hyperlink = hyperlink
+		info.isFiltered = filtered
+		info.hasNoValue = novalue
+		info.itemID = itemid
+		info.isBound = bound
 	end
 	
-	if not itemInfo then
-		itemInfo = { }
+	if not info then
+		info = { }
 	end
 	
-	itemInfo.quality = itemInfo.quality or ArkInventory.Const.ENUM.ITEMQUALITY.POOR
-	itemInfo.stackCount = itemInfo.stackCount or 1
+	info.quality = info.quality or ArkInventory.Const.ENUM.ITEMQUALITY.POOR
+	info.stackCount = info.stackCount or 1
 	
-	return itemInfo
+	return info
 	
 end
 
@@ -532,15 +530,14 @@ function ArkInventory.CrossClient.GetContainerFreeSlots( ... )
 end
 
 function ArkInventory.CrossClient.GetContainerNumFreeSlots( ... )
+	-- return the number of free slots, and the bag type
 	if C_Container and C_Container.GetContainerNumFreeSlots then
-		-- FIX ME, fails on the bank and reagent bank, anything with an id < 0
-		local blizzard_id = ...
-		if blizzard_id < 0 or ArkInventory.Global.BlizzardReagentContainerIDs[blizzard_id] then
-			local f = #ArkInventory.CrossClient.GetContainerFreeSlots( blizzard_id )
-			return f, 0
-		else
-			return C_Container.GetContainerNumFreeSlots( ... )
+		local f, t = C_Container.GetContainerNumFreeSlots( ... )
+		if f == 0 and not t then
+			f = #ArkInventory.CrossClient.GetContainerFreeSlots( ... )
+			t = 0
 		end
+		return f, t
 	elseif GetContainerNumFreeSlots then
 		return GetContainerNumFreeSlots( ... )
 	end
@@ -681,7 +678,7 @@ else
 end
 
 
-function ArkInventory.ClientCheck( id_toc_min, id_toc_max )
+function ArkInventory.ClientCheck( id_toc_min, id_toc_max, loud )
 	
 	if type( id_toc_min ) == "boolean" then return id_toc_min end
 	
@@ -693,6 +690,10 @@ function ArkInventory.ClientCheck( id_toc_min, id_toc_max )
 	local tmax = id_toc_max or ArkInventory.Const.BLIZZARD.CLIENT.EXPANSION[ArkInventory.Const.ENUM.EXPANSION.CURRENT].TOC.MAX
 	if tmax < ArkInventory.Const.BLIZZARD.CLIENT.EXPANSION[ArkInventory.Const.ENUM.EXPANSION.CLASSIC].TOC.MIN then
 		tmax = ArkInventory.Const.BLIZZARD.CLIENT.EXPANSION[tmax].TOC.MAX or ArkInventory.Const.BLIZZARD.CLIENT.EXPANSION[ArkInventory.Const.ENUM.EXPANSION.CURRENT].TOC.MAX
+	end
+	
+	if loud then
+		ArkInventory.Output( ArkInventory.Const.BLIZZARD.TOC, " / ", tmin, " / ", tmax )
 	end
 	
 	if ArkInventory.Const.BLIZZARD.TOC >= tmin and ArkInventory.Const.BLIZZARD.TOC <= tmax then
