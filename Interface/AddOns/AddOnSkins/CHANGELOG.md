@@ -1,8 +1,10 @@
 # AddOnSkins
 
-## [4.60-15-g592a0aa](https://github.com/Azilroka/AddOnSkins/tree/592a0aa20fc15c503f53a9eb3f3098a2c21d7b65) (2022-10-28)
-[Full Changelog](https://github.com/Azilroka/AddOnSkins/compare/4.60...592a0aa20fc15c503f53a9eb3f3098a2c21d7b65) [Previous Releases](https://github.com/Azilroka/AddOnSkins/releases)
+## [4.60-17-gf0b3e2a](https://github.com/Azilroka/AddOnSkins/tree/f0b3e2a41a0597326b216d8a9566f56acf64cee8) (2022-10-30)
+[Full Changelog](https://github.com/Azilroka/AddOnSkins/compare/4.60...f0b3e2a41a0597326b216d8a9566f56acf64cee8) [Previous Releases](https://github.com/Azilroka/AddOnSkins/releases)
 
+- Update Auctionator skin. It still errors on first open tho :thinking:  
+- Fix the .pkgmeta externel reference to Ace3.  
 - Fix tdBattlePetScript.  
 - Merge pull request #76 from TheGeneticsGuy/main  
     Compatibility Update 10.0 DF,Classic,Wrath  
