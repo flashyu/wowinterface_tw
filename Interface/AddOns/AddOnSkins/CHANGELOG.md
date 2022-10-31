@@ -1,8 +1,9 @@
 # AddOnSkins
 
-## [4.60-17-gf0b3e2a](https://github.com/Azilroka/AddOnSkins/tree/f0b3e2a41a0597326b216d8a9566f56acf64cee8) (2022-10-30)
-[Full Changelog](https://github.com/Azilroka/AddOnSkins/compare/4.60...f0b3e2a41a0597326b216d8a9566f56acf64cee8) [Previous Releases](https://github.com/Azilroka/AddOnSkins/releases)
+## [4.60-18-ge2767a6](https://github.com/Azilroka/AddOnSkins/tree/e2767a6c0f32905195b7f959d5da77b9ab96bf60) (2022-10-31)
+[Full Changelog](https://github.com/Azilroka/AddOnSkins/compare/4.60...e2767a6c0f32905195b7f959d5da77b9ab96bf60) [Previous Releases](https://github.com/Azilroka/AddOnSkins/releases)
 
+- Same as previous  
 - Update Auctionator skin. It still errors on first open tho :thinking:  
 - Fix the .pkgmeta externel reference to Ace3.  
 - Fix tdBattlePetScript.  

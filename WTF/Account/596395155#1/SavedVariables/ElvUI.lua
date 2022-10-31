@@ -118,14 +118,14 @@ ElvDB = {
 				["ShiftAB"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,418,209",
 				["ElvUF_FocusMover"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-553,273",
 				["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,272,376",
-				["ElvUF_PetCastbarMover"] = "BOTTOM,UIParent,BOTTOM,-288,277",
+				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-272,376",
 				["ElvUF_TankMover"] = "TOPLEFT,UIParent,TOPLEFT,4,-183",
 				["MicrobarMover"] = "TOPLEFT,UIParent,TOPLEFT,462,-4",
-				["ElvUF_PetMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,553,301",
+				["ElvUF_PetCastbarMover"] = "BOTTOM,UIParent,BOTTOM,-288,277",
 				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
 				["ElvAB_5"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-490,22",
 				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
-				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-272,376",
+				["ElvUF_PetMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,553,301",
 				["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-554,311",
 			},
 			["chat"] = {
@@ -141,7 +141,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["祈福"] = {
-			["骑风"] = 29176284,
+			["骑风"] = 29112963,
 			["红发男"] = 0,
 			["仓库技师"] = 4865907,
 			["死哪了"] = 2000,
