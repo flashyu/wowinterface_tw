@@ -54,6 +54,12 @@ PlaterDB = {
 			["source"] = "绿队战士",
 			["npcID"] = 32321,
 		},
+		[75593] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["npcID"] = 29452,
+		},
 		[57055] = {
 			["encounterName"] = "埃曼尼塔",
 			["source"] = "埃曼尼塔",
@@ -73,6 +79,11 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 742,
 		},
+		[47985] = {
+			["source"] = "哈斯纳尔",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 1860,
+		},
 		[42380] = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "无头骑士",
@@ -85,8 +96,8 @@ PlaterDB = {
 			["npcID"] = 30284,
 		},
 		[34827] = {
-			["type"] = "BUFF",
 			["source"] = "战歌萨满祭司",
+			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 27678,
 		},
@@ -171,6 +182,12 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["encounterID"] = 742,
 		},
+		[34189] = {
+			["source"] = "利欲熏心的偷猎者",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 25806,
+		},
 		[32736] = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "金队战士",
@@ -234,6 +251,12 @@ PlaterDB = {
 			["source"] = "金队战士",
 			["npcID"] = 32322,
 		},
+		[31403] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "征服堡狂战士",
+			["npcID"] = 27500,
+		},
 		[67837] = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "虫洞",
@@ -250,6 +273,12 @@ PlaterDB = {
 			["npcID"] = 28733,
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 216,
+		},
+		[46119] = {
+			["source"] = "大德鲁伊拉索留斯",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 25809,
 		},
 		[59421] = {
 			["encounterName"] = "哈多诺克斯",
@@ -299,6 +328,12 @@ PlaterDB = {
 			["source"] = "石牙野猪",
 			["npcID"] = 113,
 		},
+		[27060] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "DEBUFF",
+			["source"] = "未知目标",
+			["npcID"] = 21864,
+		},
 		[56643] = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["type"] = "BUFF",
@@ -334,6 +369,18 @@ PlaterDB = {
 			["npcID"] = 28733,
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 216,
+		},
+		[53801] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "阿努巴尔碾压者",
+			["npcID"] = 28922,
+		},
+		[50272] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "冬鳞智者",
+			["npcID"] = 25216,
 		},
 		[57458] = {
 			["event"] = "SPELL_AURA_APPLIED",
@@ -373,6 +420,12 @@ PlaterDB = {
 			["source"] = "未知目标",
 			["npcID"] = 416,
 		},
+		[388378] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "小岩",
+			["npcID"] = 194870,
+		},
 		[59103] = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["type"] = "BUFF",
@@ -408,6 +461,12 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 217,
 		},
+		[17687] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "征服堡狂战士",
+			["npcID"] = 27500,
+		},
 		[59343] = {
 			["encounterName"] = "看门者克里克希尔",
 			["type"] = "DEBUFF",
@@ -422,6 +481,11 @@ PlaterDB = {
 			["npcID"] = 29217,
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 218,
+		},
+		[32019] = {
+			["source"] = "沼泽小鹿",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 25829,
 		},
 		[66021] = {
 			["source"] = "黑锋骑士团骑士",
@@ -442,10 +506,22 @@ PlaterDB = {
 			["source"] = "小岩",
 			["npcID"] = 194870,
 		},
+		[45658] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "斯卡迪尔织雾者",
+			["npcID"] = 25613,
+		},
 		[20825] = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "骷髅侍僧",
 			["npcID"] = 1789,
+		},
+		[388129] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "小岩",
+			["npcID"] = 194870,
 		},
 		[59008] = {
 			["source"] = "强壮的野狼",
@@ -517,9 +593,14 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 216,
 		},
+		[388135] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "小岩",
+			["npcID"] = 194870,
+		},
 		[66023] = {
-			["type"] = "BUFF",
 			["source"] = "黑锋骑士团骑士",
+			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 38505,
 		},
@@ -531,6 +612,12 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["encounterID"] = 742,
 		},
+		[33395] = {
+			["source"] = "水元素",
+			["type"] = "DEBUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 510,
+		},
 		[388137] = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["type"] = "BUFF",
@@ -538,10 +625,15 @@ PlaterDB = {
 			["npcID"] = 194870,
 		},
 		[52909] = {
-			["type"] = "BUFF",
 			["source"] = "图书馆员盖伦",
+			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 25291,
+		},
+		[50370] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "月溪旅陆战队员",
+			["npcID"] = 27501,
 		},
 		[36589] = {
 			["event"] = "SPELL_AURA_APPLIED",
@@ -597,6 +689,12 @@ PlaterDB = {
 			["npcID"] = 30622,
 			["event"] = "SPELL_AURA_APPLIED",
 			["encounterID"] = 215,
+		},
+		[32587] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "被遗忘的步兵",
+			["npcID"] = 27229,
 		},
 		[75447] = {
 			["event"] = "SPELL_AURA_APPLIED",
@@ -679,6 +777,11 @@ PlaterDB = {
 			["source"] = "林地行者",
 			["npcID"] = 31228,
 		},
+		[33844] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "上古看护者",
+			["npcID"] = 31229,
+		},
 		[59985] = {
 			["encounterName"] = "传令官沃拉兹",
 			["source"] = "扭曲之容",
@@ -692,6 +795,16 @@ PlaterDB = {
 			["npcID"] = 15439,
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 218,
+		},
+		[38619] = {
+			["source"] = "德雷森上尉",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 27751,
+		},
+		[27270] = {
+			["source"] = "哈斯纳尔",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 1860,
 		},
 		[59107] = {
 			["event"] = "SPELL_CAST_SUCCESS",
@@ -742,6 +855,11 @@ PlaterDB = {
 			["source"] = "塔达拉姆之眼",
 			["npcID"] = 30285,
 		},
+		[29426] = {
+			["source"] = "部落援兵",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 27749,
+		},
 		[60848] = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "被遗忘的无面者",
@@ -767,6 +885,11 @@ PlaterDB = {
 			["source"] = "金队战士",
 			["npcID"] = 32322,
 		},
+		[40504] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "可怕的赫迦尔",
+			["npcID"] = 26266,
+		},
 		[59986] = {
 			["encounterName"] = "传令官沃拉兹",
 			["source"] = "扭曲之容",
@@ -789,10 +912,20 @@ PlaterDB = {
 			["source"] = "暮光膜拜者",
 			["npcID"] = 30111,
 		},
+		[42724] = {
+			["source"] = "德雷森上尉",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 27751,
+		},
 		[59108] = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "深渊爬行者",
 			["npcID"] = 30279,
+		},
+		[27047] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "蝎子",
+			["npcID"] = 21864,
 		},
 		[25530] = {
 			["event"] = "SPELL_CAST_SUCCESS",
@@ -818,6 +951,27 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 742,
 		},
+		[38618] = {
+			["source"] = "德雷森上尉",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 27751,
+		},
+		[49241] = {
+			["source"] = "红玉警戒者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 27542,
+		},
+		[50361] = {
+			["source"] = "冰冷食尸鬼",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 27534,
+		},
+		[23829] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["npcID"] = 416,
+		},
 		[48090] = {
 			["encounterName"] = "萨塔里奥",
 			["type"] = "BUFF",
@@ -841,12 +995,49 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 216,
 		},
+		[39586] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "金队萨满祭司",
+			["npcID"] = 32340,
+		},
+		[25025] = {
+			["source"] = "战歌萨满祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 27678,
+		},
+		[50106] = {
+			["source"] = "天灾魔",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 31150,
+		},
+		[57580] = {
+			["source"] = "雷铸技师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29376,
+		},
+		[56352] = {
+			["source"] = "雷铸作战魔像",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29380,
+		},
+		[50262] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "冬鳞巡滩者",
+			["npcID"] = 25215,
+		},
 		[59987] = {
 			["encounterName"] = "传令官沃拉兹",
 			["source"] = "扭曲之容",
 			["npcID"] = 30622,
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 215,
+		},
+		[32193] = {
+			["source"] = "雷铸大法师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29374,
 		},
 		[44178] = {
 			["source"] = "金队法师",
@@ -858,12 +1049,46 @@ PlaterDB = {
 			["source"] = "暮光膜拜者",
 			["npcID"] = 30111,
 		},
+		[52701] = {
+			["type"] = "BUFF",
+			["source"] = "雷铸抢劫者",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 29586,
+		},
+		[61561] = {
+			["source"] = "雷铸学者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29843,
+		},
+		[59465] = {
+			["encounterName"] = "纳多克斯长老",
+			["source"] = "纳多克斯长老",
+			["npcID"] = 29309,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 212,
+		},
 		[61632] = {
 			["encounterName"] = "萨塔里奥",
 			["source"] = "萨塔里奥",
 			["npcID"] = 28860,
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 742,
+		},
+		[47496] = {
+			["source"] = "邪眼击碎者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 26125,
+		},
+		[67835] = {
+			["source"] = "虫洞",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35646,
+		},
+		[45328] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "国王姆嘎姆嘎",
+			["npcID"] = 25197,
 		},
 		[53520] = {
 			["encounterName"] = "阿努巴拉克",
@@ -872,6 +1097,29 @@ PlaterDB = {
 			["npcID"] = 29120,
 			["event"] = "SPELL_AURA_APPLIED",
 			["encounterID"] = 218,
+		},
+		[5915] = {
+			["source"] = "利欲熏心的潜水员",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 25836,
+		},
+		[15550] = {
+			["source"] = "长毛猛犸象",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24614,
+		},
+		[47257] = {
+			["source"] = "阿努巴尔教徒",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 26319,
+		},
+		[4167] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "DEBUFF",
+			["source"] = "未知目标",
+			["npcID"] = 31747,
 		},
 		[42869] = {
 			["source"] = "无头骑士之影",
@@ -886,6 +1134,12 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["encounterID"] = 742,
 		},
+		[51946] = {
+			["source"] = "龙骨秃鹫",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 26483,
+		},
 		[49560] = {
 			["encounterName"] = "传令官沃拉兹",
 			["type"] = "DEBUFF",
@@ -893,6 +1147,29 @@ PlaterDB = {
 			["npcID"] = 30625,
 			["event"] = "SPELL_AURA_APPLIED",
 			["encounterID"] = 215,
+		},
+		[24317] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "DEBUFF",
+			["source"] = "奥根",
+			["npcID"] = 14988,
+		},
+		[63900] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "蝎子",
+			["npcID"] = 21864,
+		},
+		[48616] = {
+			["source"] = "燃烧深渊通灵侍僧",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 27356,
+		},
+		[12024] = {
+			["source"] = "暗矛投枪手",
+			["type"] = "DEBUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 27560,
 		},
 		[59349] = {
 			["encounterName"] = "阿努巴拉克",
@@ -908,6 +1185,28 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 216,
 		},
+		[59346] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "阿努巴尔碾压者",
+			["npcID"] = 28922,
+		},
+		[58667] = {
+			["source"] = "自由的先知",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 33422,
+		},
+		[35848] = {
+			["source"] = "弗塔根战斗法师",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 27695,
+		},
+		[10937] = {
+			["source"] = "高阶牧师玛多妮尔",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 11053,
+		},
 		[15532] = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "金队法师",
@@ -918,11 +1217,28 @@ PlaterDB = {
 			["source"] = "金队萨满祭司",
 			["npcID"] = 32340,
 		},
+		[55931] = {
+			["encounterName"] = "塔达拉姆王子",
+			["source"] = "塔达拉姆王子",
+			["npcID"] = 29308,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 213,
+		},
+		[59114] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "恶鬼劫掠者",
+			["npcID"] = 30287,
+		},
 		[22888] = {
 			["source"] = "Major Mattingly",
 			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 173754,
+		},
+		[42746] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "安卡哈看守者",
+			["npcID"] = 31104,
 		},
 		[55964] = {
 			["encounterName"] = "塔达拉姆王子",
@@ -943,6 +1259,19 @@ PlaterDB = {
 			["source"] = "豹",
 			["npcID"] = 28297,
 		},
+		[57491] = {
+			["encounterName"] = "萨塔里奥",
+			["type"] = "DEBUFF",
+			["source"] = "烈焰飓风",
+			["npcID"] = 30616,
+			["event"] = "SPELL_AURA_APPLIED",
+			["encounterID"] = 742,
+		},
+		[15547] = {
+			["source"] = "弗塔根哨兵",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 27576,
+		},
 		[59110] = {
 			["source"] = "斑点雄鹿",
 			["event"] = "SPELL_CAST_SUCCESS",
@@ -955,11 +1284,40 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 742,
 		},
+		[39945] = {
+			["source"] = "战歌萨满祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 27678,
+		},
+		[32595] = {
+			["source"] = "弗塔根高阶祭司",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 27677,
+		},
 		[7804] = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["type"] = "BUFF",
 			["source"] = "未知目标",
 			["npcID"] = 416,
+		},
+		[49481] = {
+			["type"] = "DEBUFF",
+			["source"] = "弗塔根哨兵",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 27576,
+		},
+		[49474] = {
+			["source"] = "弗塔根神射手",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 27540,
+		},
+		[31732] = {
+			["source"] = "弗塔根骑士",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 27535,
 		},
 		[47996] = {
 			["encounterName"] = "萨塔里奥",
@@ -967,6 +1325,39 @@ PlaterDB = {
 			["npcID"] = 17252,
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 742,
+		},
+		[57475] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["npcID"] = 14223,
+		},
+		[12550] = {
+			["type"] = "BUFF",
+			["source"] = "雷铸学者",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 29843,
+		},
+		[57570] = {
+			["encounterName"] = "萨塔里奥",
+			["source"] = "塔尼布隆",
+			["npcID"] = 30452,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 742,
+		},
+		[23380] = {
+			["source"] = "牦牛人风怒者",
+			["type"] = "DEBUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 27571,
+		},
+		[59417] = {
+			["encounterName"] = "看门者克里克希尔",
+			["type"] = "DEBUFF",
+			["source"] = "哈多诺克斯",
+			["npcID"] = 28921,
+			["event"] = "SPELL_AURA_APPLIED",
+			["encounterID"] = 216,
 		},
 		[59845] = {
 			["event"] = "SPELL_AURA_APPLIED",
@@ -988,23 +1379,23 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 216,
 		},
-		[47257] = {
+		[11767] = {
+			["source"] = "未知目标",
 			["type"] = "BUFF",
-			["source"] = "阿努巴尔教徒",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 26319,
+			["npcID"] = 416,
 		},
-		[51946] = {
+		[27269] = {
+			["source"] = "佐尔塔尔",
 			["type"] = "BUFF",
-			["source"] = "龙骨秃鹫",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 26483,
+			["npcID"] = 416,
 		},
-		[51437] = {
+		[31540] = {
+			["source"] = "安加萨畸形体",
 			["type"] = "BUFF",
-			["source"] = "冒烟的骷髅",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 27360,
+			["npcID"] = 27631,
 		},
 		[59430] = {
 			["encounterName"] = "阿努巴拉克",
@@ -1021,17 +1412,15 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 218,
 		},
-		[6307] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 416,
+		[9532] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "冬鳞智者",
+			["npcID"] = 25216,
 		},
-		[48616] = {
-			["type"] = "BUFF",
-			["source"] = "燃烧深渊通灵侍僧",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 27356,
+		[72898] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "水元素",
+			["npcID"] = 37994,
 		},
 		[60005] = {
 			["encounterName"] = "传令官沃拉兹",
@@ -1040,10 +1429,11 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 215,
 		},
-		[15547] = {
-			["source"] = "弗塔根哨兵",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 27576,
+		[6307] = {
+			["source"] = "未知目标",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 416,
 		},
 		[61570] = {
 			["event"] = "SPELL_AURA_APPLIED",
@@ -1051,23 +1441,26 @@ PlaterDB = {
 			["source"] = "暮光传道者",
 			["npcID"] = 30179,
 		},
-		[50106] = {
+		[51800] = {
+			["event"] = "SPELL_AURA_APPLIED",
 			["type"] = "BUFF",
-			["source"] = "天灾魔",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 31150,
+			["source"] = "魔导师凯尔多努斯",
+			["npcID"] = 26828,
 		},
-		[34828] = {
-			["type"] = "DEBUFF",
-			["source"] = "战歌萨满祭司",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 27678,
-		},
-		[49474] = {
+		[52825] = {
+			["encounterName"] = "哈多诺克斯",
 			["type"] = "BUFF",
-			["source"] = "弗塔根神射手",
+			["source"] = "射手",
+			["npcID"] = 28086,
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 27540,
+			["encounterID"] = 217,
+		},
+		[60013] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["npcID"] = 30625,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 215,
 		},
 		[25228] = {
 			["event"] = "SPELL_AURA_APPLIED",
@@ -1093,24 +1486,23 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 742,
 		},
-		[35848] = {
+		[45987] = {
+			["source"] = "血孢收割者",
 			["type"] = "BUFF",
-			["source"] = "弗塔根战斗法师",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 27695,
+			["npcID"] = 25467,
 		},
-		[32595] = {
-			["type"] = "BUFF",
-			["source"] = "弗塔根高阶祭司",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 27677,
-		},
-		[52532] = {
-			["encounterName"] = "哈多诺克斯",
-			["source"] = "阿努巴尔战士",
-			["npcID"] = 28732,
+		[52474] = {
+			["encounterName"] = "萨塔里奥",
+			["source"] = "走出半生",
+			["npcID"] = 26672,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 217,
+			["encounterID"] = 742,
+		},
+		[33625] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "金队萨满祭司",
+			["npcID"] = 32340,
 		},
 		[7870] = {
 			["source"] = "卡尔艾沃里",
@@ -1124,22 +1516,24 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 32343,
 		},
-		[39945] = {
-			["source"] = "战歌萨满祭司",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 27678,
-		},
-		[31732] = {
+		[54131] = {
+			["encounterName"] = "萨塔里奥",
 			["type"] = "BUFF",
-			["source"] = "弗塔根骑士",
+			["source"] = "狼",
+			["npcID"] = 20330,
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 27535,
+			["encounterID"] = 742,
 		},
-		[12024] = {
-			["type"] = "DEBUFF",
-			["source"] = "暗矛投枪手",
+		[23768] = {
+			["source"] = "塞格",
+			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 27560,
+			["npcID"] = 14822,
+		},
+		[15090] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "金队牧师",
+			["npcID"] = 32325,
 		},
 		[56716] = {
 			["event"] = "SPELL_AURA_APPLIED",
@@ -1152,28 +1546,30 @@ PlaterDB = {
 			["source"] = "金队牧师",
 			["npcID"] = 32325,
 		},
-		[31540] = {
-			["type"] = "BUFF",
-			["source"] = "安加萨畸形体",
+		[54029] = {
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 27631,
-		},
-		[23380] = {
 			["type"] = "DEBUFF",
-			["source"] = "牦牛人风怒者",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 27571,
+			["source"] = "夺日者防御法师",
+			["npcID"] = 29255,
 		},
-		[61563] = {
+		[59106] = {
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "暮光黑暗法师",
-			["npcID"] = 30319,
+			["source"] = "安卡哈织网者",
+			["npcID"] = 30276,
 		},
-		[27269] = {
+		[28747] = {
+			["encounterName"] = "看门者克里克希尔",
 			["type"] = "BUFF",
-			["source"] = "佐尔塔尔",
+			["source"] = "看门者克里克希尔",
+			["npcID"] = 28684,
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 416,
+			["encounterID"] = 216,
+		},
+		[14514] = {
+			["source"] = "金队法师",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32341,
 		},
 		[59367] = {
 			["encounterName"] = "看门者克里克希尔",
@@ -1182,16 +1578,15 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 216,
 		},
-		[67838] = {
-			["source"] = "虫洞",
+		[387764] = {
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 35646,
+			["source"] = "小岩",
+			["npcID"] = 194870,
 		},
-		[11767] = {
-			["type"] = "BUFF",
-			["source"] = "未知目标",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 416,
+		[38204] = {
+			["source"] = "自由的先知",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 33422,
 		},
 		[61459] = {
 			["event"] = "SPELL_AURA_APPLIED",
@@ -1207,10 +1602,11 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["encounterID"] = 218,
 		},
-		[72898] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "水元素",
-			["npcID"] = 37994,
+		[54508] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "奥克因索克",
+			["npcID"] = 17252,
 		},
 		[59974] = {
 			["encounterName"] = "传令官沃拉兹",
@@ -1219,22 +1615,20 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 215,
 		},
-		[54792] = {
-			["type"] = "BUFF",
-			["source"] = "残忍的阿图里斯",
+		[29544] = {
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 28659,
+			["type"] = "DEBUFF",
+			["source"] = "绿队战士",
+			["npcID"] = 32321,
 		},
-		[60006] = {
-			["encounterName"] = "传令官沃拉兹",
-			["source"] = "扭曲之容",
-			["npcID"] = 30622,
+		[51830] = {
 			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 215,
+			["source"] = "魔导师凯尔多努斯",
+			["npcID"] = 26828,
 		},
 		[42648] = {
-			["type"] = "BUFF",
 			["source"] = "战歌苦工",
+			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 27558,
 		},
@@ -1249,18 +1643,17 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 27540,
 		},
-		[61676] = {
-			["source"] = "狼",
+		[31600] = {
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29452,
+			["source"] = "地穴爬行者",
+			["npcID"] = 25227,
 		},
-		[52825] = {
-			["encounterName"] = "哈多诺克斯",
-			["type"] = "BUFF",
-			["source"] = "射手",
-			["npcID"] = 28086,
-			["event"] = "SPELL_AURA_APPLIED",
-			["encounterID"] = 217,
+		[61251] = {
+			["encounterName"] = "萨塔里奥",
+			["source"] = "维斯匹隆",
+			["npcID"] = 30449,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 742,
 		},
 		[56525] = {
 			["source"] = "被解救的北伐军战士",
@@ -1268,11 +1661,10 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 30274,
 		},
-		[3105] = {
-			["source"] = "弃灵",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 2044,
+		[58867] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "幽灵狼",
+			["npcID"] = 29264,
 		},
 		[57579] = {
 			["encounterName"] = "萨塔里奥",
@@ -1297,25 +1689,21 @@ PlaterDB = {
 			["source"] = "未知目标",
 			["npcID"] = 416,
 		},
-		[57566] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
+		[31664] = {
+			["source"] = "狂乱的石像鬼",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 27691,
+		},
+		[15786] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "金队萨满祭司",
+			["npcID"] = 32340,
+		},
+		[1742] = {
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 417,
-		},
-		[52474] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "走出半生",
-			["npcID"] = 26672,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 742,
-		},
-		[59128] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "暮光裂隙",
-			["npcID"] = 30641,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 742,
+			["type"] = "BUFF",
+			["source"] = "狼",
+			["npcID"] = 29452,
 		},
 		[47982] = {
 			["encounterName"] = "萨塔里奥",
@@ -1347,10 +1735,10 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["encounterID"] = 742,
 		},
-		[61463] = {
+		[52473] = {
+			["source"] = "熔岩犬",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "塔达拉姆之眼",
-			["npcID"] = 30285,
+			["npcID"] = 17447,
 		},
 		[58793] = {
 			["encounterName"] = "萨塔里奥",
@@ -1359,16 +1747,15 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 742,
 		},
-		[60013] = {
-			["encounterName"] = "传令官沃拉兹",
-			["source"] = "扭曲之容",
-			["npcID"] = 30625,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 215,
+		[50550] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "翡翠幼龙",
+			["npcID"] = 27692,
 		},
 		[52182] = {
-			["type"] = "BUFF",
 			["source"] = "亚鲁乌特",
+			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 28667,
 		},
@@ -1377,23 +1764,23 @@ PlaterDB = {
 			["source"] = "阿努巴尔原始卫士",
 			["npcID"] = 29128,
 		},
-		[29544] = {
+		[56909] = {
+			["encounterName"] = "萨塔里奥",
+			["source"] = "萨塔里奥",
+			["npcID"] = 28860,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 742,
+		},
+		[67834] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "虫洞",
+			["npcID"] = 35646,
+		},
+		[50713] = {
 			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "绿队战士",
-			["npcID"] = 32321,
-		},
-		[59465] = {
-			["encounterName"] = "纳多克斯长老",
-			["source"] = "纳多克斯长老",
-			["npcID"] = 29309,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 212,
-		},
-		[23600] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队战士",
-			["npcID"] = 32322,
+			["type"] = "BUFF",
+			["source"] = "先锋军步兵",
+			["npcID"] = 27203,
 		},
 		[61460] = {
 			["event"] = "SPELL_AURA_APPLIED",
@@ -1407,31 +1794,27 @@ PlaterDB = {
 			["source"] = "卡玛洛斯神父",
 			["npcID"] = 32800,
 		},
-		[54029] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "夺日者防御法师",
-			["npcID"] = 29255,
-		},
-		[56909] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "萨塔里奥",
-			["npcID"] = 28860,
+		[23600] = {
 			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 742,
+			["source"] = "金队战士",
+			["npcID"] = 32322,
 		},
-		[15090] = {
+		[59975] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "传令官沃拉兹",
+			["npcID"] = 29311,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队牧师",
-			["npcID"] = 32325,
+			["encounterID"] = 215,
 		},
-		[28747] = {
-			["encounterName"] = "看门者克里克希尔",
-			["type"] = "BUFF",
-			["source"] = "看门者克里克希尔",
-			["npcID"] = 28684,
-			["event"] = "SPELL_AURA_APPLIED",
-			["encounterID"] = 216,
+		[40062] = {
+			["source"] = "诅咒教派破坏者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28538,
+		},
+		[29386] = {
+			["source"] = "绿队圣骑士",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32342,
 		},
 		[23145] = {
 			["encounterName"] = "哈多诺克斯",
@@ -1441,10 +1824,41 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["encounterID"] = 217,
 		},
-		[38204] = {
-			["source"] = "自由的先知",
+		[52086] = {
+			["encounterName"] = "看门者克里克希尔",
+			["source"] = "看守者希尔希克",
+			["npcID"] = 28731,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33422,
+			["encounterID"] = 216,
+		},
+		[60708] = {
+			["encounterName"] = "萨塔里奥",
+			["source"] = "萨塔里奥暮光雏龙",
+			["npcID"] = 31214,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 742,
+		},
+		[59128] = {
+			["encounterName"] = "萨塔里奥",
+			["source"] = "暮光裂隙",
+			["npcID"] = 30641,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 742,
+		},
+		[53401] = {
+			["encounterName"] = "萨塔里奥",
+			["type"] = "BUFF",
+			["source"] = "走出半生",
+			["npcID"] = 26672,
+			["event"] = "SPELL_AURA_APPLIED",
+			["encounterID"] = 742,
+		},
+		[60006] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["npcID"] = 30622,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 215,
 		},
 		[49806] = {
 			["encounterName"] = "哈多诺克斯",
@@ -1452,28 +1866,6 @@ PlaterDB = {
 			["npcID"] = 28732,
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 217,
-		},
-		[52473] = {
-			["source"] = "熔岩犬",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17447,
-		},
-		[14514] = {
-			["source"] = "金队法师",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32341,
-		},
-		[50550] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "翡翠幼龙",
-			["npcID"] = 27692,
-		},
-		[15786] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队萨满祭司",
-			["npcID"] = 32340,
 		},
 		[52470] = {
 			["encounterName"] = "看门者克里克希尔",
@@ -1491,33 +1883,35 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["encounterID"] = 742,
 		},
-		[54508] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "奥克因索克",
-			["npcID"] = 17252,
+		[50169] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "幽光海湾逆戟鲸",
+			["npcID"] = 25204,
 		},
-		[23829] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
+		[57566] = {
 			["source"] = "未知目标",
-			["npcID"] = 416,
-		},
-		[58867] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "幽灵狼",
-			["npcID"] = 29264,
-		},
-		[23768] = {
-			["source"] = "塞格",
 			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 14822,
+			["npcID"] = 417,
 		},
-		[67834] = {
+		[46604] = {
+			["source"] = "金队法师",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32341,
+		},
+		[52532] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "阿努巴尔战士",
+			["npcID"] = 28732,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "虫洞",
-			["npcID"] = 35646,
+			["encounterID"] = 217,
+		},
+		[45985] = {
+			["source"] = "血孢点火者",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 25470,
 		},
 		[47983] = {
 			["source"] = "未知目标",
@@ -1525,98 +1919,24 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 416,
 		},
-		[54131] = {
-			["encounterName"] = "萨塔里奥",
-			["type"] = "BUFF",
-			["source"] = "狼",
-			["npcID"] = 20330,
+		[52087] = {
+			["encounterName"] = "看门者克里克希尔",
+			["type"] = "DEBUFF",
+			["source"] = "射手",
+			["npcID"] = 28086,
 			["event"] = "SPELL_AURA_APPLIED",
-			["encounterID"] = 742,
+			["encounterID"] = 216,
 		},
-		[29386] = {
-			["source"] = "绿队圣骑士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32342,
+		[54792] = {
+			["source"] = "残忍的阿图里斯",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 28659,
 		},
 		[28902] = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "暮光传道者",
 			["npcID"] = 30179,
-		},
-		[60708] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "萨塔里奥暮光雏龙",
-			["npcID"] = 31214,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 742,
-		},
-		[59975] = {
-			["encounterName"] = "传令官沃拉兹",
-			["source"] = "传令官沃拉兹",
-			["npcID"] = 29311,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 215,
-		},
-		[52086] = {
-			["encounterName"] = "看门者克里克希尔",
-			["source"] = "看守者希尔希克",
-			["npcID"] = 28731,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 216,
-		},
-		[387764] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "小岩",
-			["npcID"] = 194870,
-		},
-		[53401] = {
-			["encounterName"] = "萨塔里奥",
-			["type"] = "BUFF",
-			["source"] = "走出半生",
-			["npcID"] = 26672,
-			["event"] = "SPELL_AURA_APPLIED",
-			["encounterID"] = 742,
-		},
-		[61251] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "维斯匹隆",
-			["npcID"] = 30449,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 742,
-		},
-		[64495] = {
-			["encounterName"] = "萨塔里奥",
-			["type"] = "BUFF",
-			["source"] = "走出半生",
-			["npcID"] = 26672,
-			["event"] = "SPELL_AURA_APPLIED",
-			["encounterID"] = 742,
-		},
-		[59106] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "安卡哈织网者",
-			["npcID"] = 30276,
-		},
-		[59417] = {
-			["encounterName"] = "看门者克里克希尔",
-			["type"] = "DEBUFF",
-			["source"] = "哈多诺克斯",
-			["npcID"] = 28921,
-			["event"] = "SPELL_AURA_APPLIED",
-			["encounterID"] = 216,
-		},
-		[59433] = {
-			["encounterName"] = "阿努巴拉克",
-			["source"] = "阿努巴拉克",
-			["npcID"] = 29120,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 218,
-		},
-		[46604] = {
-			["source"] = "金队法师",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32341,
 		},
 		[53333] = {
 			["encounterName"] = "看门者克里克希尔",
@@ -1631,6 +1951,71 @@ PlaterDB = {
 			["npcID"] = 26125,
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 742,
+		},
+		[61463] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "塔达拉姆之眼",
+			["npcID"] = 30285,
+		},
+		[61563] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "暮光黑暗法师",
+			["npcID"] = 30319,
+		},
+		[3105] = {
+			["source"] = "弃灵",
+			["type"] = "DEBUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 2044,
+		},
+		[67838] = {
+			["source"] = "虫洞",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35646,
+		},
+		[64495] = {
+			["encounterName"] = "萨塔里奥",
+			["type"] = "BUFF",
+			["source"] = "走出半生",
+			["npcID"] = 26672,
+			["event"] = "SPELL_AURA_APPLIED",
+			["encounterID"] = 742,
+		},
+		[58956] = {
+			["encounterName"] = "萨塔里奥",
+			["source"] = "萨塔里奥",
+			["npcID"] = 28860,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 742,
+		},
+		[61461] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "冰霜使者",
+			["npcID"] = 30286,
+		},
+		[59433] = {
+			["encounterName"] = "阿努巴拉克",
+			["source"] = "阿努巴拉克",
+			["npcID"] = 29120,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 218,
+		},
+		[59467] = {
+			["encounterName"] = "纳多克斯长老",
+			["source"] = "纳多克斯长老",
+			["npcID"] = 29309,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 212,
+		},
+		[50267] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "冬鳞战士",
+			["npcID"] = 25217,
+		},
+		[32909] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "翡翠天爪枭",
+			["npcID"] = 27244,
 		},
 		[57453] = {
 			["source"] = "未知目标",
@@ -1657,12 +2042,10 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["encounterID"] = 213,
 		},
-		[58956] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "萨塔里奥",
-			["npcID"] = 28860,
+		[9080] = {
 			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 742,
+			["source"] = "金队战士",
+			["npcID"] = 32322,
 		},
 		[14032] = {
 			["event"] = "SPELL_AURA_APPLIED",
@@ -1670,23 +2053,21 @@ PlaterDB = {
 			["source"] = "金队牧师",
 			["npcID"] = 32325,
 		},
-		[52087] = {
-			["encounterName"] = "看门者克里克希尔",
+		[34828] = {
+			["source"] = "战歌萨满祭司",
 			["type"] = "DEBUFF",
-			["source"] = "射手",
-			["npcID"] = 28086,
 			["event"] = "SPELL_AURA_APPLIED",
-			["encounterID"] = 216,
+			["npcID"] = 27678,
 		},
-		[42746] = {
+		[51944] = {
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "安卡哈看守者",
-			["npcID"] = 31104,
+			["source"] = "上古看护者",
+			["npcID"] = 31229,
 		},
-		[59114] = {
+		[52471] = {
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "恶鬼劫掠者",
-			["npcID"] = 30287,
+			["source"] = "蝎子",
+			["npcID"] = 21864,
 		},
 		[61685] = {
 			["encounterName"] = "萨塔里奥",
@@ -1696,30 +2077,27 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["encounterID"] = 742,
 		},
-		[57570] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "塔尼布隆",
-			["npcID"] = 30452,
+		[44415] = {
 			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 742,
+			["source"] = "金队牧师",
+			["npcID"] = 32325,
 		},
-		[59467] = {
-			["encounterName"] = "纳多克斯长老",
-			["source"] = "纳多克斯长老",
-			["npcID"] = 29309,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 212,
+		[35859] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "DEBUFF",
+			["source"] = "虚空雾气",
+			["npcID"] = 21002,
 		},
 		[27577] = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "绿队战士",
 			["npcID"] = 32321,
 		},
-		[57475] = {
-			["event"] = "SPELL_AURA_APPLIED",
+		[51437] = {
+			["source"] = "冒烟的骷髅",
 			["type"] = "BUFF",
-			["source"] = "未知目标",
-			["npcID"] = 14223,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 27360,
 		},
 		[61254] = {
 			["encounterName"] = "萨塔里奥",
@@ -1729,51 +2107,48 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["encounterID"] = 742,
 		},
-		[57491] = {
-			["encounterName"] = "萨塔里奥",
-			["type"] = "DEBUFF",
-			["source"] = "烈焰飓风",
-			["npcID"] = 30616,
-			["event"] = "SPELL_AURA_APPLIED",
-			["encounterID"] = 742,
+		[53177] = {
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "哈多诺克斯",
+			["npcID"] = 28921,
 		},
 		[67767] = {
-			["type"] = "DEBUFF",
 			["source"] = "黑锋骑士团骑士",
+			["type"] = "DEBUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 38505,
 		},
-		[33625] = {
+		[61676] = {
+			["source"] = "狼",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队萨满祭司",
-			["npcID"] = 32340,
+			["npcID"] = 29452,
 		},
-		[39586] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队萨满祭司",
-			["npcID"] = 32340,
+		[25810] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "DEBUFF",
+			["source"] = "剧毒蛇",
+			["npcID"] = 19833,
 		},
-		[44415] = {
+		[32588] = {
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队牧师",
-			["npcID"] = 32325,
+			["source"] = "可怕的赫迦尔",
+			["npcID"] = 26266,
 		},
-		[9080] = {
+		[52719] = {
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队战士",
-			["npcID"] = 32322,
+			["source"] = "月溪旅陆战队员",
+			["npcID"] = 27501,
 		},
-		[61461] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "冰霜使者",
-			["npcID"] = 30286,
+		[56520] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "被解救的北伐军战士",
+			["npcID"] = 30274,
 		},
-		[55931] = {
-			["encounterName"] = "塔达拉姆王子",
-			["source"] = "塔达拉姆王子",
-			["npcID"] = 29308,
+		[47993] = {
 			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 213,
+			["source"] = "祖瑞尔尼希",
+			["npcID"] = 17252,
 		},
 	},
 	["profiles"] = {
@@ -10606,13 +10981,25 @@ PlaterDB = {
 					"哈多诺克斯", -- [1]
 					"艾卓-尼鲁布", -- [2]
 				},
+				[163459] = {
+					"Ensalmador Rechazado", -- [1]
+					"Torres de Ascensión", -- [2]
+				},
 				[164362] = {
 					"Bocado limoso", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
+				[30453] = {
+					"黑岩圣殿卫士", -- [1]
+					"黑曜石圣殿", -- [2]
+				},
 				[168578] = {
 					"Fungimántico", -- [1]
 					"Plaga Abrumadora", -- [2]
+				},
+				[4308] = {
+					"自由的幽魂", -- [1]
+					"血色修道院", -- [2]
 				},
 				[171772] = {
 					"Defensora de Veloniebla", -- [1]
@@ -10622,13 +11009,17 @@ PlaterDB = {
 					"Granadero Grom'kar", -- [1]
 					"Depósito Riel siniestro", -- [2]
 				},
+				[81407] = {
+					"Bombardero Riel siniestro", -- [1]
+					"Depósito Riel siniestro", -- [2]
+				},
 				[167876] = {
 					"Inquisidor Sigar", -- [1]
 					"Salones de Expiación", -- [2]
 				},
-				[163459] = {
-					"Ensalmador Rechazado", -- [1]
-					"Torres de Ascensión", -- [2]
+				[83578] = {
+					"Trabajador ogron", -- [1]
+					"Muelles de hierro", -- [2]
 				},
 				[82597] = {
 					"Capitana Grom'kar", -- [1]
@@ -10638,9 +11029,9 @@ PlaterDB = {
 					"Comandante Zo'far", -- [1]
 					"Tazavesh, el Mercado Velado", -- [2]
 				},
-				[30453] = {
-					"黑岩圣殿卫士", -- [1]
-					"黑曜石圣殿", -- [2]
+				[30284] = {
+					"碾骨者", -- [1]
+					"安卡赫特：古代王国", -- [2]
 				},
 				[163086] = {
 					"Bolsa de gas rancio", -- [1]
@@ -10650,24 +11041,24 @@ PlaterDB = {
 					"缝合巨像", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[30621] = {
-					"米饭一蒸", -- [1]
+				[30277] = {
+					"安卡哈切碎者", -- [1]
 					"安卡赫特：古代王国", -- [2]
 				},
-				[81407] = {
-					"Bombardero Riel siniestro", -- [1]
-					"Depósito Riel siniestro", -- [2]
-				},
-				[83578] = {
-					"Trabajador ogron", -- [1]
-					"Muelles de hierro", -- [2]
-				},
-				[30622] = {
-					"枪手镇镇长", -- [1]
+				[30276] = {
+					"安卡哈织网者", -- [1]
 					"安卡赫特：古代王国", -- [2]
+				},
+				[16145] = {
+					"死亡骑士队长", -- [1]
+					"纳克萨玛斯", -- [2]
 				},
 				[30111] = {
 					"暮光膜拜者", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[30622] = {
+					"枪手镇镇长", -- [1]
 					"安卡赫特：古代王国", -- [2]
 				},
 				[167111] = {
@@ -10682,33 +11073,33 @@ PlaterDB = {
 					"Artillero Grom'kar", -- [1]
 					"Depósito Riel siniestro", -- [2]
 				},
-				[15953] = {
-					"黑女巫法琳娜", -- [1]
-					"纳克萨玛斯", -- [2]
+				[65310] = {
+					"Naba de boxeo", -- [1]
+					"Torres de Ascensión", -- [2]
 				},
 				[176565] = {
 					"Entidad desconocida", -- [1]
 					"Tazavesh, el Mercado Velado", -- [2]
 				},
-				[30276] = {
-					"安卡哈织网者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[16057] = {
-					"腐烂的蛆虫", -- [1]
-					"纳克萨玛斯", -- [2]
+				[32593] = {
+					"敏捷的爬虫", -- [1]
+					"艾卓-尼鲁布", -- [2]
 				},
 				[165515] = {
 					"Filoscuro depravado", -- [1]
 					"Salones de Expiación", -- [2]
 				},
+				[29153] = {
+					"重生的白骨", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
 				[164557] = {
 					"Esquirla de Halkias", -- [1]
 					"Salones de Expiación", -- [2]
 				},
-				[16037] = {
-					"疫病蝙蝠", -- [1]
-					"纳克萨玛斯", -- [2]
+				[184908] = {
+					"Entidad desconocida", -- [1]
+					"Plaga Abrumadora", -- [2]
 				},
 				[180015] = {
 					"Marinero de cubierta fornido", -- [1]
@@ -10718,9 +11109,9 @@ PlaterDB = {
 					"Sigilaria", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
-				[65310] = {
-					"Naba de boxeo", -- [1]
-					"Torres de Ascensión", -- [2]
+				[29097] = {
+					"阿努巴尔地穴魔", -- [1]
+					"艾卓-尼鲁布", -- [2]
 				},
 				[180335] = {
 					"Contrabandista del cártel", -- [1]
@@ -10774,13 +11165,13 @@ PlaterDB = {
 					"暮光黑暗法师", -- [1]
 					"安卡赫特：古代王国", -- [2]
 				},
-				[29153] = {
-					"重生的白骨", -- [1]
-					"艾卓-尼鲁布", -- [2]
+				[30084] = {
+					"能量火花", -- [1]
+					"永恒之眼", -- [2]
 				},
-				[184908] = {
-					"Entidad desconocida", -- [1]
-					"Plaga Abrumadora", -- [2]
+				[30391] = {
+					"未知目标", -- [1]
+					"安卡赫特：古代王国", -- [2]
 				},
 				[15954] = {
 					"药剂师诺斯", -- [1]
@@ -10790,13 +11181,13 @@ PlaterDB = {
 					"Cantante de soporte", -- [1]
 					"Regreso a Karazhan", -- [2]
 				},
-				[15978] = {
-					"地穴剥夺者", -- [1]
-					"纳克萨玛斯", -- [2]
+				[115417] = {
+					"Rata", -- [1]
+					"Regreso a Karazhan", -- [2]
 				},
-				[167533] = {
-					"Adventa Nuncamás", -- [1]
-					"Teatro del Dolor", -- [2]
+				[162040] = {
+					"Gran sobrestante", -- [1]
+					"Profundidades Sanguíneas", -- [2]
 				},
 				[169159] = {
 					"Lata inestable", -- [1]
@@ -10806,44 +11197,44 @@ PlaterDB = {
 					"Valet espectral", -- [1]
 					"Regreso a Karazhan", -- [2]
 				},
-				[30391] = {
-					"未知目标", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[30084] = {
-					"能量火花", -- [1]
-					"永恒之眼", -- [2]
-				},
-				[32593] = {
-					"敏捷的爬虫", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[15990] = {
-					"克尔苏加德", -- [1]
+				[15978] = {
+					"地穴剥夺者", -- [1]
 					"纳克萨玛斯", -- [2]
-				},
-				[115417] = {
-					"Rata", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[162040] = {
-					"Gran sobrestante", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[150253] = {
-					"Reptador armado", -- [1]
-					"Operación: Mecalópolis", -- [2]
 				},
 				[177817] = {
 					"Oficial de apoyo", -- [1]
 					"Tazavesh, el Mercado Velado", -- [2]
 				},
+				[167533] = {
+					"Adventa Nuncamás", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[15990] = {
+					"克尔苏加德", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[29120] = {
+					"阿努巴拉克", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[157824] = {
+					"Protector de la llama", -- [1]
+					"Castillo de Colmillo Oscuro", -- [2]
+				},
+				[150253] = {
+					"Reptador armado", -- [1]
+					"Operación: Mecalópolis", -- [2]
+				},
+				[28736] = {
+					"轻快的感染者", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
 				[28922] = {
 					"阿努巴尔碾压者", -- [1]
 					"艾卓-尼鲁布", -- [2]
 				},
-				[16060] = {
-					"收割者戈提克", -- [1]
+				[16297] = {
+					"变异幼虫", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
 				[169927] = {
@@ -10854,17 +11245,17 @@ PlaterDB = {
 					"外科助手", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[150254] = {
-					"Chataperro", -- [1]
+				[150297] = {
+					"Renormalizadora de Mecalópolis", -- [1]
 					"Operación: Mecalópolis", -- [2]
 				},
 				[16698] = {
 					"死尸甲虫", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[164562] = {
-					"Maestra de canes depravada", -- [1]
-					"Salones de Expiación", -- [2]
+				[150254] = {
+					"Chataperro", -- [1]
+					"Operación: Mecalópolis", -- [2]
 				},
 				[165137] = {
 					"Guardián de Zolramus", -- [1]
@@ -10874,17 +11265,17 @@ PlaterDB = {
 					"Amarth", -- [1]
 					"La Destrucción Necrótica", -- [2]
 				},
-				[171887] = {
-					"Bufé limoso", -- [1]
-					"Plaga Abrumadora", -- [2]
+				[162039] = {
+					"Opresora siniestra", -- [1]
+					"Profundidades Sanguíneas", -- [2]
 				},
-				[28736] = {
-					"轻快的感染者", -- [1]
-					"艾卓-尼鲁布", -- [2]
+				[172265] = {
+					"Remanente de furia", -- [1]
+					"Profundidades Sanguíneas", -- [2]
 				},
-				[16156] = {
-					"黑暗战士", -- [1]
-					"纳克萨玛斯", -- [2]
+				[167532] = {
+					"Heavin el destructor", -- [1]
+					"Teatro del Dolor", -- [2]
 				},
 				[114794] = {
 					"Sabueso esquelético", -- [1]
@@ -10902,25 +11293,25 @@ PlaterDB = {
 					"Bolsa de añublo", -- [1]
 					"La Destrucción Necrótica", -- [2]
 				},
-				[150297] = {
-					"Renormalizadora de Mecalópolis", -- [1]
-					"Operación: Mecalópolis", -- [2]
+				[30245] = {
+					"魔枢领主", -- [1]
+					"永恒之眼", -- [2]
 				},
-				[162039] = {
-					"Opresora siniestra", -- [1]
-					"Profundidades Sanguíneas", -- [2]
+				[16156] = {
+					"黑暗战士", -- [1]
+					"纳克萨玛斯", -- [2]
 				},
 				[168907] = {
 					"Tentáculo de baba", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
-				[30245] = {
-					"魔枢领主", -- [1]
-					"永恒之眼", -- [2]
+				[179893] = {
+					"Vagador del cártel", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
 				},
-				[167532] = {
-					"Heavin el destructor", -- [1]
-					"Teatro del Dolor", -- [2]
+				[167607] = {
+					"Mutilador petronato", -- [1]
+					"Salones de Expiación", -- [2]
 				},
 				[167566] = {
 					"Asesina alatétrica", -- [1]
@@ -10930,17 +11321,17 @@ PlaterDB = {
 					"阿努巴尔通灵师", -- [1]
 					"艾卓-尼鲁布", -- [2]
 				},
-				[150292] = {
-					"Caballería de Mecalópolis", -- [1]
-					"Operación: Mecalópolis", -- [2]
-				},
-				[30549] = {
-					"瑞文戴尔男爵", -- [1]
+				[16216] = {
+					"邪恶之剑", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[115402] = {
-					"Alfil", -- [1]
-					"Regreso a Karazhan", -- [2]
+				[168681] = {
+					"Vándalo Rechazado", -- [1]
+					"Torres de Ascensión", -- [2]
+				},
+				[174071] = {
+					"Gargon sañoso", -- [1]
+					"Castillo Nathria", -- [2]
 				},
 				[28619] = {
 					"未知目标", -- [1]
@@ -10950,9 +11341,9 @@ PlaterDB = {
 					"Defensora de muchos ojos", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
-				[179893] = {
-					"Vagador del cártel", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
+				[16427] = {
+					"冰冻废土的士兵", -- [1]
+					"纳克萨玛斯", -- [2]
 				},
 				[30176] = {
 					"安卡哈守护者", -- [1]
@@ -10966,9 +11357,9 @@ PlaterDB = {
 					"萨塔里奥暮光雏龙", -- [1]
 					"黑曜石圣殿", -- [2]
 				},
-				[178171] = {
-					"Guardián tronaforjado", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
+				[115019] = {
+					"Viuda Bruma Fría", -- [1]
+					"Regreso a Karazhan", -- [2]
 				},
 				[16142] = {
 					"胆汁软泥怪", -- [1]
@@ -10978,21 +11369,21 @@ PlaterDB = {
 					"Bocado limoso", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
-				[115019] = {
-					"Viuda Bruma Fría", -- [1]
+				[178171] = {
+					"Guardián tronaforjado", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[29216] = {
+					"阿努巴尔守护者", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[115401] = {
+					"Alfil", -- [1]
 					"Regreso a Karazhan", -- [2]
 				},
-				[168681] = {
-					"Vándalo Rechazado", -- [1]
-					"Torres de Ascensión", -- [2]
-				},
-				[174071] = {
-					"Gargon sañoso", -- [1]
-					"Castillo Nathria", -- [2]
-				},
-				[167607] = {
-					"Mutilador petronato", -- [1]
-					"Salones de Expiación", -- [2]
+				[168394] = {
+					"Bocado limoso", -- [1]
+					"Plaga Abrumadora", -- [2]
 				},
 				[114636] = {
 					"Aparición de custodio", -- [1]
@@ -11002,36 +11393,8 @@ PlaterDB = {
 					"看守者希尔希克", -- [1]
 					"艾卓-尼鲁布", -- [2]
 				},
-				[16216] = {
-					"邪恶之剑", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[29216] = {
-					"阿努巴尔守护者", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
 				[16506] = {
 					"纳克萨玛斯膜拜者", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[114796] = {
-					"Anfitriona íntegra", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[179386] = {
-					"Oficial corsario", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[16194] = {
-					"邪恶之斧", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[29063] = {
-					"阿努巴尔地穴魔", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[16061] = {
-					"教官拉苏维奥斯", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
 				[82590] = {
@@ -11042,13 +11405,17 @@ PlaterDB = {
 					"看守者加什拉", -- [1]
 					"艾卓-尼鲁布", -- [2]
 				},
-				[115020] = {
-					"Arcánido", -- [1]
+				[114796] = {
+					"Anfitriona íntegra", -- [1]
 					"Regreso a Karazhan", -- [2]
 				},
-				[170572] = {
-					"Aojadora hudú Atal'ai", -- [1]
-					"El Otro Lado", -- [2]
+				[16194] = {
+					"邪恶之斧", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[179386] = {
+					"Oficial corsario", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
 				},
 				[15974] = {
 					"恐惧爬行者", -- [1]
@@ -11061,6 +11428,30 @@ PlaterDB = {
 				[169893] = {
 					"Hablaoscuro nefario", -- [1]
 					"Teatro del Dolor", -- [2]
+				},
+				[16983] = {
+					"天灾勇士", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[115020] = {
+					"Arcánido", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[170572] = {
+					"Aojadora hudú Atal'ai", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[84028] = {
+					"Maestro de asedio Rokra", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[163058] = {
+					"Defensora de Veloniebla", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[83613] = {
+					"Koramar", -- [1]
+					"Muelles de hierro", -- [2]
 				},
 				[28859] = {
 					"玛里苟斯", -- [1]
@@ -11078,53 +11469,17 @@ PlaterDB = {
 					"感染的食尸鬼", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[84028] = {
-					"Maestro de asedio Rokra", -- [1]
-					"Muelles de hierro", -- [2]
-				},
-				[163058] = {
-					"Defensora de Veloniebla", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
-				},
-				[179388] = {
-					"Maresabia de reloj de arena", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
 				[167116] = {
 					"Atracador espinafauces", -- [1]
 					"Nieblas de Tirna Scithe", -- [2]
 				},
-				[114542] = {
-					"Filántropo fantasmal", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[180091] = {
-					"Can del Núcleo anciano", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[16286] = {
-					"孢子", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[165911] = {
-					"Creación leal", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[80816] = {
-					"Ahri'ok Dugru", -- [1]
-					"Muelles de hierro", -- [2]
-				},
-				[164506] = {
-					"Capitán antiguo", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[16290] = {
-					"辐射软泥怪", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
 				[168934] = {
 					"Espíritu enfurecido", -- [1]
 					"El Otro Lado", -- [2]
+				},
+				[179388] = {
+					"Maresabia de reloj de arena", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
 				},
 				[16984] = {
 					"天灾战士", -- [1]
@@ -11134,21 +11489,33 @@ PlaterDB = {
 					"Cuernosangre enfurecido", -- [1]
 					"Teatro del Dolor", -- [2]
 				},
-				[168627] = {
-					"Ligaplagas", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[167956] = {
-					"Acólita oscura", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[165529] = {
-					"Coleccionista depravada", -- [1]
-					"Salones de Expiación", -- [2]
-				},
-				[180348] = {
-					"Fortachón del cártel", -- [1]
+				[180091] = {
+					"Can del Núcleo anciano", -- [1]
 					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[164506] = {
+					"Capitán antiguo", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[165911] = {
+					"Creación leal", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[80816] = {
+					"Ahri'ok Dugru", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[16286] = {
+					"孢子", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16290] = {
+					"辐射软泥怪", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[114542] = {
+					"Filántropo fantasmal", -- [1]
+					"Regreso a Karazhan", -- [2]
 				},
 				[114584] = {
 					"Equipo fantasma", -- [1]
@@ -11162,49 +11529,73 @@ PlaterDB = {
 					"死灵骑士", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[16028] = {
-					"帕奇维克", -- [1]
-					"纳克萨玛斯", -- [2]
+				[167956] = {
+					"Acólita oscura", -- [1]
+					"Profundidades Sanguíneas", -- [2]
 				},
-				[16803] = {
-					"死亡骑士学员", -- [1]
-					"纳克萨玛斯", -- [2]
+				[165529] = {
+					"Coleccionista depravada", -- [1]
+					"Salones de Expiación", -- [2]
+				},
+				[180348] = {
+					"Fortachón del cártel", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
 				},
 				[16018] = {
 					"胆汁呕吐者", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[168022] = {
-					"Tentáculo de baba", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[30624] = {
-					"骑风", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
 				[16017] = {
 					"缝补傀儡", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[29051] = {
+					"阿努巴尔地穴魔", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[167536] = {
+					"Harugia la sanguinaria", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[16803] = {
+					"死亡骑士学员", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
 				[151814] = {
 					"Sombra almamuerta", -- [1]
 					"Torghast, la Torre de los Condenados", -- [2]
 				},
+				[163503] = {
+					"Éter del abismo", -- [1]
+					"Torres de Ascensión", -- [2]
+				},
+				[30624] = {
+					"骑风", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[114634] = {
+					"Sirviente inmortal", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[29064] = {
+					"阿努巴尔通灵师", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
 				[171343] = {
 					"Matriarca picofiloso", -- [1]
 					"El Otro Lado", -- [2]
 				},
-				[163503] = {
-					"Éter del abismo", -- [1]
-					"Torres de Ascensión", -- [2]
+				[171333] = {
+					"Devota Atal'ai", -- [1]
+					"El Otro Lado", -- [2]
 				},
 				[88163] = {
 					"Vidente cinéreo Grom'kar", -- [1]
 					"Depósito Riel siniestro", -- [2]
 				},
-				[167536] = {
-					"Harugia la sanguinaria", -- [1]
-					"Teatro del Dolor", -- [2]
+				[164873] = {
+					"Vetecuerno venado rúnico", -- [1]
+					"El Otro Lado", -- [2]
 				},
 				[30680] = {
 					"黑岩将军", -- [1]
@@ -11214,21 +11605,21 @@ PlaterDB = {
 					"沙德隆的信徒", -- [1]
 					"黑曜石圣殿", -- [2]
 				},
-				[29064] = {
-					"阿努巴尔通灵师", -- [1]
-					"艾卓-尼鲁布", -- [2]
+				[150160] = {
+					"Matón huesudo", -- [1]
+					"Operación: Mecalópolis", -- [2]
 				},
 				[115406] = {
 					"Caballo", -- [1]
 					"Regreso a Karazhan", -- [2]
 				},
-				[171333] = {
-					"Devota Atal'ai", -- [1]
-					"El Otro Lado", -- [2]
+				[114338] = {
+					"Confluencia de maná", -- [1]
+					"Regreso a Karazhan", -- [2]
 				},
-				[30329] = {
-					"野蛮洞穴兽", -- [1]
-					"安卡赫特：古代王国", -- [2]
+				[17055] = {
+					"迈克斯纳的小蜘蛛", -- [1]
+					"纳克萨玛斯", -- [2]
 				},
 				[28684] = {
 					"看门者克里克希尔", -- [1]
@@ -11262,13 +11653,13 @@ PlaterDB = {
 					"Cuidadora de Veloniebla", -- [1]
 					"Nieblas de Tirna Scithe", -- [2]
 				},
-				[150160] = {
-					"Matón huesudo", -- [1]
-					"Operación: Mecalópolis", -- [2]
+				[174210] = {
+					"Escupidor de lodo contagiado", -- [1]
+					"Teatro del Dolor", -- [2]
 				},
-				[114338] = {
-					"Confluencia de maná", -- [1]
-					"Regreso a Karazhan", -- [2]
+				[29818] = {
+					"死亡军马", -- [1]
+					"纳克萨玛斯", -- [2]
 				},
 				[15931] = {
 					"格罗布鲁斯", -- [1]
@@ -11286,24 +11677,24 @@ PlaterDB = {
 					"Torre", -- [1]
 					"Regreso a Karazhan", -- [2]
 				},
-				[29818] = {
-					"死亡军马", -- [1]
-					"纳克萨玛斯", -- [2]
+				[30329] = {
+					"野蛮洞穴兽", -- [1]
+					"安卡赫特：古代王国", -- [2]
 				},
 				[23694] = {
 					"跃动的南瓜", -- [1]
 					"血色修道院", -- [2]
 				},
-				[17055] = {
-					"迈克斯纳的小蜘蛛", -- [1]
-					"纳克萨玛斯", -- [2]
+				[178913] = {
+					"Grasslands Vombata", -- [1]
+					"Zereth Mortis", -- [2]
 				},
-				[176394] = {
-					"Trabajador de C.A.R.T.A.", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
+				[163618] = {
+					"Nigromante de Zolramus", -- [1]
+					"La Destrucción Necrótica", -- [2]
 				},
-				[16011] = {
-					"洛欧塞布", -- [1]
+				[15979] = {
+					"墓穴恐惧蛛魔", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
 				[179842] = {
@@ -11314,37 +11705,29 @@ PlaterDB = {
 					"Roc de plaga", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
-				[163618] = {
-					"Nigromante de Zolramus", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[15979] = {
-					"墓穴恐惧蛛魔", -- [1]
+				[15975] = {
+					"腐肉织网者", -- [1]
 					"纳克萨玛斯", -- [2]
+				},
+				[28860] = {
+					"萨塔里奥", -- [1]
+					"黑曜石圣殿", -- [2]
 				},
 				[166301] = {
 					"Acechador de Veloniebla", -- [1]
 					"Nieblas de Tirna Scithe", -- [2]
 				},
-				[174210] = {
-					"Escupidor de lodo contagiado", -- [1]
-					"Teatro del Dolor", -- [2]
+				[79720] = {
+					"Explotador Grom'kar", -- [1]
+					"Depósito Riel siniestro", -- [2]
 				},
 				[167962] = {
 					"Taladro dental destrozado", -- [1]
 					"El Otro Lado", -- [2]
 				},
-				[165919] = {
-					"Merodeador esqueletal", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[163458] = {
-					"Castigadora Rechazada", -- [1]
-					"Torres de Ascensión", -- [2]
-				},
-				[164578] = {
-					"Creación de Suturas", -- [1]
-					"La Destrucción Necrótica", -- [2]
+				[168594] = {
+					"Centinela de la cámara", -- [1]
+					"Profundidades Sanguíneas", -- [2]
 				},
 				[30449] = {
 					"维斯匹隆", -- [1]
@@ -11354,25 +11737,33 @@ PlaterDB = {
 					"Babosa pestilente", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
+				[176394] = {
+					"Trabajador de C.A.R.T.A.", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[16011] = {
+					"洛欧塞布", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
 				[166302] = {
 					"Cosechador de cadáveres", -- [1]
 					"La Destrucción Necrótica", -- [2]
-				},
-				[31104] = {
-					"安卡哈看守者", -- [1]
-					"安卡赫特：古代王国", -- [2]
 				},
 				[167963] = {
 					"Cliente sin cabeza", -- [1]
 					"El Otro Lado", -- [2]
 				},
+				[165919] = {
+					"Merodeador esqueletal", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
 				[179269] = {
 					"Seguridad del oasis", -- [1]
 					"Tazavesh, el Mercado Velado", -- [2]
 				},
-				[30085] = {
-					"警卫影魂", -- [1]
-					"纳克萨玛斯", -- [2]
+				[164578] = {
+					"Creación de Suturas", -- [1]
+					"La Destrucción Necrótica", -- [2]
 				},
 				[190128] = {
 					"Zul'gamux", -- [1]
@@ -11386,13 +11777,13 @@ PlaterDB = {
 					"Contrincante implacable", -- [1]
 					"Teatro del Dolor", -- [2]
 				},
+				[168572] = {
+					"Hongos de asalto", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
 				[173138] = {
 					"Escolta jurafauces", -- [1]
 					"Las Tierras de las Sombras", -- [2]
-				},
-				[178913] = {
-					"Grasslands Vombata", -- [1]
-					"Zereth Mortis", -- [2]
 				},
 				[167964] = {
 					"4.RF-4.RF", -- [1]
@@ -11406,9 +11797,9 @@ PlaterDB = {
 					"瑟里耶克爵士", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[166304] = {
-					"Aguijonero de Veloniebla", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
+				[81236] = {
+					"Técnico de Riel siniestro", -- [1]
+					"Depósito Riel siniestro", -- [2]
 				},
 				[163621] = {
 					"Muelecarne", -- [1]
@@ -11418,108 +11809,108 @@ PlaterDB = {
 					"Babosa coagulada", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
-				[81236] = {
-					"Técnico de Riel siniestro", -- [1]
-					"Depósito Riel siniestro", -- [2]
+				[166304] = {
+					"Aguijonero de Veloniebla", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
 				},
-				[79720] = {
-					"Explotador Grom'kar", -- [1]
-					"Depósito Riel siniestro", -- [2]
+				[173714] = {
+					"Noctiflor de Veloniebla", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
 				},
 				[167965] = {
 					"Lubricante", -- [1]
 					"El Otro Lado", -- [2]
 				},
-				[173714] = {
-					"Noctiflor de Veloniebla", -- [1]
+				[173720] = {
+					"Garganta sangrienta de Veloniebla", -- [1]
 					"Nieblas de Tirna Scithe", -- [2]
 				},
 				[30625] = {
 					"枪手镇镇长", -- [1]
 					"安卡赫特：古代王国", -- [2]
 				},
-				[168594] = {
-					"Centinela de la cámara", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[168572] = {
-					"Hongos de asalto", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[173720] = {
-					"Garganta sangrienta de Veloniebla", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
-				},
-				[83025] = {
-					"Maestro de batalla Grom'kar", -- [1]
-					"Muelles de hierro", -- [2]
-				},
-				[114803] = {
-					"Mano de establo espectral", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
 				[168310] = {
 					"Roc de plaga", -- [1]
 					"Plaga Abrumadora", -- [2]
+				},
+				[114526] = {
+					"Suplente fantasmal", -- [1]
+					"Regreso a Karazhan", -- [2]
 				},
 				[154744] = {
 					"Monstruosidad tóxica", -- [1]
 					"Operación: Mecalópolis", -- [2]
 				},
+				[83025] = {
+					"Maestro de batalla Grom'kar", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[30681] = {
+					"黑岩烈焰法师", -- [1]
+					"黑曜石圣殿", -- [2]
+				},
 				[30178] = {
 					"未知目标", -- [1]
 					"安卡赫特：古代王国", -- [2]
 				},
-				[1706] = {
-					"迪菲亚囚徒", -- [1]
-					"UNKNOWN", -- [2]
+				[114803] = {
+					"Mano de establo espectral", -- [1]
+					"Regreso a Karazhan", -- [2]
 				},
-				[171799] = {
-					"Celador de las profundidades", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[29308] = {
-					"塔达拉姆王子", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[162729] = {
-					"Soldado de remendejo", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[16163] = {
-					"死亡骑兵", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[167967] = {
-					"Aceite consciente", -- [1]
-					"El Otro Lado", -- [2]
+				[183424] = {
+					"Caballero virtuoso", -- [1]
+					"Regreso a Karazhan", -- [2]
 				},
 				[150146] = {
 					"Chamán huesudo", -- [1]
 					"Operación: Mecalópolis", -- [2]
 				},
-				[1708] = {
-					"迪菲亚狱友", -- [1]
+				[171799] = {
+					"Celador de las profundidades", -- [1]
+					"Profundidades Sanguíneas", -- [2]
+				},
+				[160495] = {
+					"Atrapaalmas maníaco", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[162729] = {
+					"Soldado de remendejo", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[83761] = {
+					"Trabajador ogron", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[16429] = {
+					"织魂者", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[1706] = {
+					"迪菲亚囚徒", -- [1]
 					"UNKNOWN", -- [2]
 				},
-				[1707] = {
-					"迪菲亚俘虏", -- [1]
-					"UNKNOWN", -- [2]
+				[16215] = {
+					"邪恶法杖", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16163] = {
+					"死亡骑兵", -- [1]
+					"纳克萨玛斯", -- [2]
 				},
 				[30258] = {
 					"埃曼尼塔", -- [1]
 					"安卡赫特：古代王国", -- [2]
 				},
-				[28733] = {
-					"阿努巴尔暗影法师", -- [1]
-					"艾卓-尼鲁布", -- [2]
+				[1708] = {
+					"迪菲亚狱友", -- [1]
+					"UNKNOWN", -- [2]
 				},
 				[83026] = {
 					"Maestro de asedio Olugar", -- [1]
 					"Muelles de hierro", -- [2]
 				},
-				[168886] = {
-					"Virulax Hilañublo", -- [1]
+				[163882] = {
+					"Gigante de carne descompuesto", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
 				[82579] = {
@@ -11530,9 +11921,9 @@ PlaterDB = {
 					"Destrero espectral", -- [1]
 					"Regreso a Karazhan", -- [2]
 				},
-				[160495] = {
-					"Atrapaalmas maníaco", -- [1]
-					"Teatro del Dolor", -- [2]
+				[16243] = {
+					"天灾软泥怪", -- [1]
+					"纳克萨玛斯", -- [2]
 				},
 				[1711] = {
 					"迪菲亚罪犯", -- [1]
@@ -11554,9 +11945,9 @@ PlaterDB = {
 					"Entidad desconocida", -- [1]
 					"Regreso a Karazhan", -- [2]
 				},
-				[165414] = {
-					"Desintegrador depravado", -- [1]
-					"Salones de Expiación", -- [2]
+				[4283] = {
+					"血色哨兵", -- [1]
+					"血色修道院", -- [2]
 				},
 				[29340] = {
 					"阿努巴尔虫巢卫士", -- [1]
@@ -11566,49 +11957,49 @@ PlaterDB = {
 					"地穴卫士", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[163882] = {
-					"Gigante de carne descompuesto", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[23775] = {
-					"无头骑士的脑袋", -- [1]
-					"血色修道院", -- [2]
-				},
-				[4293] = {
-					"血色占卜师", -- [1]
-					"血色修道院", -- [2]
-				},
-				[16243] = {
-					"天灾软泥怪", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[173016] = {
-					"Recolector de cadáveres", -- [1]
-					"La Destrucción Necrótica", -- [2]
+				[165414] = {
+					"Desintegrador depravado", -- [1]
+					"Salones de Expiación", -- [2]
 				},
 				[168992] = {
 					"Cultista resucitado", -- [1]
 					"El Otro Lado", -- [2]
 				},
+				[4293] = {
+					"血色占卜师", -- [1]
+					"血色修道院", -- [2]
+				},
+				[29308] = {
+					"塔达拉姆王子", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[173016] = {
+					"Recolector de cadáveres", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[23775] = {
+					"无头骑士的脑袋", -- [1]
+					"血色修道院", -- [2]
+				},
 				[173655] = {
 					"Matriarca de Veloniebla", -- [1]
 					"Nieblas de Tirna Scithe", -- [2]
 				},
-				[16215] = {
-					"邪恶法杖", -- [1]
-					"纳克萨玛斯", -- [2]
+				[28733] = {
+					"阿努巴尔暗影法师", -- [1]
+					"艾卓-尼鲁布", -- [2]
 				},
-				[83761] = {
-					"Trabajador ogron", -- [1]
-					"Muelles de hierro", -- [2]
+				[1707] = {
+					"迪菲亚俘虏", -- [1]
+					"UNKNOWN", -- [2]
 				},
-				[114526] = {
-					"Suplente fantasmal", -- [1]
-					"Regreso a Karazhan", -- [2]
+				[167967] = {
+					"Aceite consciente", -- [1]
+					"El Otro Lado", -- [2]
 				},
-				[4283] = {
-					"血色哨兵", -- [1]
-					"血色修道院", -- [2]
+				[28925] = {
+					"阿努巴尔通灵师", -- [1]
+					"艾卓-尼鲁布", -- [2]
 				},
 				[183173] = {
 					"Guardanegra jurafauces", -- [1]
@@ -11618,9 +12009,9 @@ PlaterDB = {
 					"Inquisidora Rechazada", -- [1]
 					"Torres de Ascensión", -- [2]
 				},
-				[16429] = {
-					"织魂者", -- [1]
-					"纳克萨玛斯", -- [2]
+				[168886] = {
+					"Virulax Hilañublo", -- [1]
+					"Plaga Abrumadora", -- [2]
 				},
 				[170147] = {
 					"Recuerdo volátil", -- [1]
@@ -11634,37 +12025,37 @@ PlaterDB = {
 					"Desechos asquerosos", -- [1]
 					"Teatro del Dolor", -- [2]
 				},
-				[183424] = {
-					"Caballero virtuoso", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[30681] = {
-					"黑岩烈焰法师", -- [1]
-					"黑曜石圣殿", -- [2]
-				},
-				[116410] = {
-					"Karam Lanzarcana", -- [1]
-					"Falla Cicatriz Aterradora - Plataforma de gesta de brujo", -- [2]
-				},
-				[178165] = {
-					"Goliat caminacosta", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
+				[31104] = {
+					"安卡哈看守者", -- [1]
+					"安卡赫特：古代王国", -- [2]
 				},
 				[114802] = {
 					"Oficial espectral", -- [1]
 					"Regreso a Karazhan", -- [2]
 				},
-				[16034] = {
-					"天灾兽", -- [1]
-					"纳克萨玛斯", -- [2]
+				[116410] = {
+					"Karam Lanzarcana", -- [1]
+					"Falla Cicatriz Aterradora - Plataforma de gesta de brujo", -- [2]
+				},
+				[163620] = {
+					"Gangrenoso", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[178165] = {
+					"Goliat caminacosta", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[28924] = {
+					"阿努巴尔勇士", -- [1]
+					"艾卓-尼鲁布", -- [2]
 				},
 				[163501] = {
 					"Hostigador Rechazado", -- [1]
 					"Torres de Ascensión", -- [2]
 				},
-				[163620] = {
-					"Gangrenoso", -- [1]
-					"La Destrucción Necrótica", -- [2]
+				[16034] = {
+					"天灾兽", -- [1]
+					"纳克萨玛斯", -- [2]
 				},
 				[171805] = {
 					"Escriba investigadora", -- [1]
@@ -11686,13 +12077,13 @@ PlaterDB = {
 					"Entidad desconocida", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
-				[28860] = {
-					"萨塔里奥", -- [1]
-					"黑曜石圣殿", -- [2]
-				},
-				[15975] = {
-					"腐肉织网者", -- [1]
+				[30085] = {
+					"警卫影魂", -- [1]
 					"纳克萨玛斯", -- [2]
+				},
+				[163458] = {
+					"Castigadora Rechazada", -- [1]
+					"Torres de Ascensión", -- [2]
 				},
 				[180429] = {
 					"Astrovidente ornamentado", -- [1]
@@ -11706,9 +12097,9 @@ PlaterDB = {
 					"阿努巴尔勇士", -- [1]
 					"艾卓-尼鲁布", -- [2]
 				},
-				[164873] = {
-					"Vetecuerno venado rúnico", -- [1]
-					"El Otro Lado", -- [2]
+				[168022] = {
+					"Tentáculo de baba", -- [1]
+					"Plaga Abrumadora", -- [2]
 				},
 				[115765] = {
 					"Anulador abstracto", -- [1]
@@ -11730,10 +12121,6 @@ PlaterDB = {
 					"死寒仆从", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[114634] = {
-					"Sirviente inmortal", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
 				[167113] = {
 					"Gargantácida espinafauces", -- [1]
 					"Nieblas de Tirna Scithe", -- [2]
@@ -11742,13 +12129,17 @@ PlaterDB = {
 					"闪电图腾", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
+				[16028] = {
+					"帕奇维克", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
 				[3981] = {
 					"沃瑞尔·森加斯", -- [1]
 					"血色修道院", -- [2]
 				},
-				[16025] = {
-					"缝合巨人", -- [1]
-					"纳克萨玛斯", -- [2]
+				[168627] = {
+					"Ligaplagas", -- [1]
+					"Plaga Abrumadora", -- [2]
 				},
 				[3983] = {
 					"审讯员韦沙斯", -- [1]
@@ -11794,9 +12185,9 @@ PlaterDB = {
 					"Cómplice devoto", -- [1]
 					"Tazavesh, el Mercado Velado", -- [2]
 				},
-				[83613] = {
-					"Koramar", -- [1]
-					"Muelles de hierro", -- [2]
+				[154758] = {
+					"Monstruosidad tóxica", -- [1]
+					"Operación: Mecalópolis", -- [2]
 				},
 				[29309] = {
 					"纳多克斯长老", -- [1]
@@ -11810,17 +12201,17 @@ PlaterDB = {
 					"阿努布雷坎", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[154758] = {
-					"Monstruosidad tóxica", -- [1]
-					"Operación: Mecalópolis", -- [2]
-				},
-				[16983] = {
-					"天灾勇士", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
 				[168891] = {
 					"Apestado manipulado", -- [1]
 					"Plaga Abrumadora", -- [2]
+				},
+				[16061] = {
+					"教官拉苏维奥斯", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[29063] = {
+					"阿努巴尔地穴魔", -- [1]
+					"艾卓-尼鲁布", -- [2]
 				},
 				[180433] = {
 					"Entidad desconocida", -- [1]
@@ -11838,17 +12229,17 @@ PlaterDB = {
 					"Robot chatarra descompuesto", -- [1]
 					"Operación: Mecalópolis", -- [2]
 				},
-				[168394] = {
-					"Bocado limoso", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[115401] = {
-					"Alfil", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
 				[16126] = {
 					"冷酷的骑兵", -- [1]
 					"纳克萨玛斯", -- [2]
+				},
+				[16146] = {
+					"死亡骑士", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[115402] = {
+					"Alfil", -- [1]
+					"Regreso a Karazhan", -- [2]
 				},
 				[30435] = {
 					"未知目标", -- [1]
@@ -11862,13 +12253,13 @@ PlaterDB = {
 					"沙德隆", -- [1]
 					"黑曜石圣殿", -- [2]
 				},
-				[16146] = {
-					"死亡骑士", -- [1]
+				[30549] = {
+					"瑞文戴尔男爵", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[16427] = {
-					"冰冻废土的士兵", -- [1]
-					"纳克萨玛斯", -- [2]
+				[150292] = {
+					"Caballería de Mecalópolis", -- [1]
+					"Operación: Mecalópolis", -- [2]
 				},
 				[16020] = {
 					"疯狂的科学家", -- [1]
@@ -11890,17 +12281,17 @@ PlaterDB = {
 					"狂乱蝙蝠", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[172265] = {
-					"Remanente de furia", -- [1]
-					"Profundidades Sanguíneas", -- [2]
+				[164562] = {
+					"Maestra de canes depravada", -- [1]
+					"Salones de Expiación", -- [2]
 				},
 				[184140] = {
 					"Acólito de Xy", -- [1]
 					"Sepulcro de los Primeros", -- [2]
 				},
-				[16297] = {
-					"变异幼虫", -- [1]
-					"纳克萨玛斯", -- [2]
+				[171887] = {
+					"Bufé limoso", -- [1]
+					"Plaga Abrumadora", -- [2]
 				},
 				[165872] = {
 					"Modelador de carne", -- [1]
@@ -11910,9 +12301,9 @@ PlaterDB = {
 					"疾病之蛆", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[157824] = {
-					"Protector de la llama", -- [1]
-					"Castillo de Colmillo Oscuro", -- [2]
+				[16060] = {
+					"收割者戈提克", -- [1]
+					"纳克萨玛斯", -- [2]
 				},
 				[16064] = {
 					"库尔塔兹领主", -- [1]
@@ -11934,25 +12325,25 @@ PlaterDB = {
 					"阿努巴尔勇士", -- [1]
 					"艾卓-尼鲁布", -- [2]
 				},
-				[29097] = {
-					"阿努巴尔地穴魔", -- [1]
-					"艾卓-尼鲁布", -- [2]
+				[6426] = {
+					"痛苦的死者", -- [1]
+					"血色修道院", -- [2]
 				},
-				[29120] = {
-					"阿努巴拉克", -- [1]
+				[29214] = {
+					"阿努巴尔刺客", -- [1]
 					"艾卓-尼鲁布", -- [2]
 				},
 				[167534] = {
 					"Rek la curtida", -- [1]
 					"Teatro del Dolor", -- [2]
 				},
-				[29214] = {
-					"阿努巴尔刺客", -- [1]
-					"艾卓-尼鲁布", -- [2]
+				[16057] = {
+					"腐烂的蛆虫", -- [1]
+					"纳克萨玛斯", -- [2]
 				},
-				[6426] = {
-					"痛苦的死者", -- [1]
-					"血色修道院", -- [2]
+				[16037] = {
+					"疫病蝙蝠", -- [1]
+					"纳克萨玛斯", -- [2]
 				},
 				[30643] = {
 					"熔岩烈焰", -- [1]
@@ -11966,8 +12357,8 @@ PlaterDB = {
 					"Nekthara el machacador", -- [1]
 					"Teatro del Dolor", -- [2]
 				},
-				[16145] = {
-					"死亡骑士队长", -- [1]
+				[15953] = {
+					"黑女巫法琳娜", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
 				[163894] = {
@@ -11978,25 +12369,25 @@ PlaterDB = {
 					"冷酷的学徒", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[30277] = {
-					"安卡哈切碎者", -- [1]
+				[30621] = {
+					"米饭一蒸", -- [1]
 					"安卡赫特：古代王国", -- [2]
-				},
-				[30284] = {
-					"碾骨者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[163128] = {
-					"Hechicero de Zolramus", -- [1]
-					"La Destrucción Necrótica", -- [2]
 				},
 				[170927] = {
 					"Moco eruptivo", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
-				[4308] = {
-					"自由的幽魂", -- [1]
-					"血色修道院", -- [2]
+				[163128] = {
+					"Hechicero de Zolramus", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[29119] = {
+					"阿努巴尔通灵师", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[16025] = {
+					"缝合巨人", -- [1]
+					"纳克萨玛斯", -- [2]
 				},
 			},
 			["indicator_anchor"] = {
@@ -12213,7 +12604,7 @@ PlaterDB = {
 				["nameplateOverlapH"] = "0.79750263690948",
 				["nameplatePersonalShowWithTarget"] = "0",
 			},
-			["login_counter"] = 8218,
+			["login_counter"] = 8238,
 			["click_space_friendly"] = {
 				116, -- [1]
 				26, -- [2]
@@ -15222,12 +15613,7 @@ PlaterDB = {
 						["Nameplate Updated"] = "function (self, unitId, unitFrame, envTable, modTable)\n    \n    local buffSpecialGlow = true\n    \n    \n    -- functions --\n    local auraContainers = {unitFrame.BuffFrame.PlaterBuffList}\n    \n    if (Plater.db.profile.buffs_on_aura2) then\n        auraContainers [2] = unitFrame.BuffFrame2.PlaterBuffList\n    end\n    \n    for containerID = 1, #auraContainers do\n        local auraContainer = auraContainers [containerID]\n        for index, auraIcon in ipairs (auraContainer) do\n            if (auraIcon:IsShown() and auraIcon.CanStealOrPurge) then\n                Plater.StartGlow(auraIcon, nil, modTable.options)\n                if modTable.config.outerGlow and auraIcon.__PlaterGlowFrame then\n                    auraIcon.__PlaterGlowFrame:ClearAllPoints()\n                    local offset = modTable.config.antsThickness\n                    auraIcon.__PlaterGlowFrame:SetPoint(\"topleft\", auraIcon, \"topleft\", -offset, offset)\n                    auraIcon.__PlaterGlowFrame:SetPoint(\"bottomright\", auraIcon, \"bottomright\", offset, -offset)\n                end\n            else\n                Plater.StopGlow(auraIcon, modTable.options.glowType, modTable.options.key)\n            end\n        end\n    end\n    \n    if buffSpecialGlow then\n        for _, auraIcon in ipairs (unitFrame.ExtraIconFrame.IconPool) do\n            if auraIcon:IsShown() then\n                if (auraIcon:IsShown() and auraIcon.canStealOrPurge) then\n                    Plater.StartGlow(auraIcon, nil, modTable.options)\n                    if modTable.config.outerGlow and auraIcon.__PlaterGlowFrame then\n                        auraIcon.__PlaterGlowFrame:ClearAllPoints()\n                        local offset = modTable.config.antsThickness\n                        auraIcon.__PlaterGlowFrame:SetPoint(\"topleft\", auraIcon, \"topleft\", -offset, offset)\n                        auraIcon.__PlaterGlowFrame:SetPoint(\"bottomright\", auraIcon, \"bottomright\", offset, -offset)\n                    end\n                else\n                    Plater.StopGlow(auraIcon, modTable.options.glowType, modTable.options.key)\n                end                \n            end\n        end\n    end\n    \nend\n\n\n",
 					},
 					["Prio"] = 99,
-					["Name"] = "Steal/Purge Aura Glow",
-					["PlaterCore"] = 1,
-					["HooksTemp"] = {
-					},
 					["Time"] = 1649570137,
-					["Icon"] = 136224,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -15250,6 +15636,11 @@ PlaterDB = {
 						["affix"] = {
 						},
 					},
+					["HooksTemp"] = {
+					},
+					["Name"] = "Steal/Purge Aura Glow",
+					["Icon"] = 136224,
+					["PlaterCore"] = 1,
 				}, -- [19]
 				{
 					["OptionsValues"] = {
@@ -15577,12 +15968,7 @@ PlaterDB = {
 						["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    \n    envTable.MarkToColor = {\n        [1] = \"#d9cf45\",--YellowStar\n        [2] = \"#ed820f\", --Orange Circle\n        [3] = \"#b30fd6\", --Purple Diamond\n        [4] = \"#24a824\", --Green Triangle\n        [5] = \"#99bfd9\", --Silver Moon\n        [6] = \"#00a3ff\", --Blue Square\n        [7] = \"#d12e2e\", --Red Cross\n        [8] = \"#e3d4bd\", --White Skull    \n    }\n    \nend\n\n\n",
 					},
 					["Prio"] = 99,
-					["Name"] = "Raid Mark Change Color",
-					["PlaterCore"] = 1,
-					["HooksTemp"] = {
-					},
 					["Time"] = 1638666923,
-					["Icon"] = 236221,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -15605,6 +15991,11 @@ PlaterDB = {
 						["affix"] = {
 						},
 					},
+					["HooksTemp"] = {
+					},
+					["Name"] = "Raid Mark Change Color",
+					["Icon"] = 236221,
+					["PlaterCore"] = 1,
 				}, -- [23]
 				{
 					["OptionsValues"] = {
@@ -15903,12 +16294,7 @@ PlaterDB = {
 						["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    \n    --SI QUIEREN ENTERARSE DE MAS MODS Y SCRIPTS PARA PLATER SIGANME EN REDES SOCIALES\n    --YOUTUBE: WEBS - Y2J\n    --TWITCH: https://www.twitch.tv/websy2j\n    --DISCORD: https://discord.com/invite/nc3vEsp\n    \n    envTable.glowSpells = {\n        \n        --DOTS CAZADOR--\n        \n        --CAZADOR PUNTERIA--\n        [ 5116]= 4, --Disparo de conmocion\n        [271788] = 6.0, --Picadura de serpiente\n        \n        -- CAZADOR SUPERVIVENCIA--\n        [259491] = 6.0, --Picadura de serpiente\n        \n        -- DOTS BRUJO--\n        \n        -- BRUJO AFLICCIÓN--\n        [980] = 5.4, -- Agony\n        [146739] = 4.2, -- Corruption\n        [63106] = 4.5, -- Siphon Life\n        [48181] = 4, -- Haunt\n        [32390] = 5, -- Shadow Embrace\n        [30108] = 6.3, --Unstable Affliction\n        \n        -- BRUJO DESTRUCCIÓN--\n        [157736] = 5.4, -- Immolate,\n        \n        --PÍCARO --\n        \n        --PICARO ASESINATO\n        [1943]= 7.0,--Rupture\n        \n        --DOTS DRUIDA--\n        [164812]= 6.0, --Moonfire\n        [202347]= 6.0, --Stellar Flare\n        [93402]= 6.0, --Sunfire\n        \n        \n        \n    }\n    \n    \n    -- for the LibCustomGlow implementation:\n    envTable.options = {\n        \n        \n        --color =\"red\", -- all plater color types accepted, from lib: {r,g,b,a}, color of lines and opacity, from 0 to 1.\n        N = 6, -- number of lines. Defaul value is 8;\n        --frequency = 0.25, -- frequency, set to negative to inverse direction of rotation. Default value is 0.25;\n        length = 4, -- length of lines. Default value depends on region size and number of lines;\n        th = 2, -- thickness of lines. Default value is 2;\n        xOffset =0,\n        yOffset =0, -- offset of glow relative to region border;\n        border = false, -- set to true to create border under lines;\n        key = \"pandemicGlowMod\"\n    }\n    \nend\n\n\n\n",
 					},
 					["Prio"] = 99,
-					["Name"] = "Pandemic Glow for all specs",
-					["PlaterCore"] = 1,
-					["HooksTemp"] = {
-					},
 					["Time"] = 1648682175,
-					["Icon"] = 132874,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -15931,6 +16317,11 @@ PlaterDB = {
 						["affix"] = {
 						},
 					},
+					["HooksTemp"] = {
+					},
+					["Name"] = "Pandemic Glow for all specs",
+					["Icon"] = 132874,
+					["PlaterCore"] = 1,
 				}, -- [27]
 				{
 					["Enabled"] = true,
@@ -15949,12 +16340,7 @@ PlaterDB = {
 						["Constructor"] = "\n--SI QUIEREN ENTERARSE DE MAS MODS Y SCRIPTS PARA PLATER SIGANME EN REDES SOCIALES\n--YOUTUBE: WEBS - Y2J\n--TWITCH: https://www.twitch.tv/websy2j\n--DISCORD: https://discord.com/invite/nc3vEsp\n\nfunction (self, unitId, unitFrame, envTable)\n    \n    local markerToHex = {\n        [1] = \"FFFFFFFF\", -- Yellow 5 Point Star\n        [2] = \"FFFFFFFF\", -- Orange Circle\n        [3] = \"FFFFFFFF\", -- Purple Diamond\n        [4] = \"FFFFFFFF\", -- Green Triangle\n        [5] = \"FFFFFFFF\", -- Light Blue Moon\n        [6] = \"FFFFFFFF\", -- Blue Square\n        [7] = \"FFFFFFFF\", -- Red Cross\n        [8] = \"FFFFFFFF\", -- White Skull\n    }\n    \n    --=========================================================================--\n    -- VER PRIMER NOMBRE--\n    --Si deseas ver el primer nombre de ciertos NPCS ,(USALO si tienes el juego en idioma Ingles)\n    ---=========================================================================--\n    \n    --Por Ejemplo: Mordretha, the Endless Empres ->Mordretha\n    \n    -- Mordretha, (the) Endless Empres--\n    --[\"the\"] = true--\n    \n    --[\"Waycrest\"] = true--\n    \n    local nameBlacklist = {\n        \n        [\"the\"] = true,\n        [\"of\"] = true,\n        \n        \n    }\n    --=========================================================================--\n    -- PONER APODO--\n    -- Si deseas poner un apodo a algun NPC o poner su nombre completo--\n    --=========================================================================--\n    --Por ejemplo [\"Aldeana tirnenn\"] = \"Grow\"--\n    \n    local renameTable = {\n        -- Agujas de ascension\n        -- [\"Devos\"] = \"Vieja Sabrosa\",\n        \n        --Nieblas de Tirna Scithe--\n        --[\"Aldeana tirnenn\"] = \"Grow\",\n        \n        --Teatro del dolor--\n        [\"Mordretha, the Endless Empress\"] = \"Mordretha\",     \n        \n        \n    }\n    \n    \n    function envTable.namer(unitId, marker, nameColouring, isBoss, debugMode, debugEntry)\n        if unitId then\n            \n            local name = UnitName(unitId)\n            local a,b,c,d,e,f= strsplit(' ', name, 5)\n            local unitName\n            \n            if debugMode then\n                print(\"DebugMode: \"..debugEntry..\" - Checking for dummy name\")\n                if b == \"Dummy\" or c == \"Dummy\" or d == \"Dummy\" or e == \"Dummy\" or f == \"Dummy\" then\n                    local lastName = b:find(\"Dummy\") and b or c:find(\"Dummy\") and c or d:find(\"Dummy\") and d\n                    print(\"DebugMode: \"..debugEntry..\" - Dummy Found!\")\n                    unitName = name ~=nil and lastName\n                end\n            end\n            \n            \n            if nameBlacklist[b] then\n                unitName = name ~=nil and (a or b or c or d or e or f) or nil\n            else\n                unitName = name ~=nil and (f or e or d or c or b or a) or ni\n            end\n            \n            if unitId and marker == nil and nameColouring then\n                marker = 8\n            end\n            \n            \n            \n            if unitName == nil then\n                unitName = name\n            end\n            \n            \n            if renameTable[name] then\n                unitName = renameTable[name]\n            end\n            if unitId and marker and nameColouring then\n                unitFrame.healthBar.unitName:SetText(WrapTextInColorCode(unitName, markerToHex[marker]))\n            elseif unitId then\n                unitFrame.healthBar.unitName:SetText(unitName)\n                \n            end    \n        end   \n    end\nend",
 					},
 					["Prio"] = 29,
-					["Name"] = "First or last Name & Rename(English)",
-					["PlaterCore"] = 1,
-					["HooksTemp"] = {
-					},
 					["Time"] = 1662655194,
-					["Icon"] = 134332,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -15977,6 +16363,11 @@ PlaterDB = {
 						["affix"] = {
 						},
 					},
+					["HooksTemp"] = {
+					},
+					["Name"] = "First or last Name & Rename(English)",
+					["Icon"] = 134332,
+					["PlaterCore"] = 1,
 				}, -- [28]
 				{
 					["OptionsValues"] = {
@@ -18033,8 +18424,14 @@ PlaterDB = {
 			["npcID"] = 29120,
 			["encounterID"] = 218,
 		},
+		[47496] = {
+			["npcID"] = 26125,
+		},
 		[72898] = {
 			["npcID"] = 37994,
+		},
+		[38618] = {
+			["npcID"] = 27751,
 		},
 		[59347] = {
 			["encounterName"] = "哈多诺克斯",
@@ -18076,8 +18473,23 @@ PlaterDB = {
 		[60848] = {
 			["npcID"] = 30414,
 		},
+		[49241] = {
+			["npcID"] = 27542,
+		},
 		[39647] = {
 			["npcID"] = 30453,
+		},
+		[9613] = {
+			["npcID"] = 27539,
+		},
+		[51681] = {
+			["npcID"] = 26605,
+		},
+		[40062] = {
+			["npcID"] = 28538,
+		},
+		[17274] = {
+			["npcID"] = 27695,
 		},
 		[50335] = {
 			["npcID"] = 27797,
@@ -18089,6 +18501,9 @@ PlaterDB = {
 			["encounterName"] = "塔达拉姆王子",
 			["npcID"] = 29308,
 			["encounterID"] = 213,
+		},
+		[51806] = {
+			["npcID"] = 26828,
 		},
 		[16367] = {
 			["npcID"] = 27678,
@@ -18107,6 +18522,12 @@ PlaterDB = {
 		[13323] = {
 			["npcID"] = 32341,
 		},
+		[31600] = {
+			["npcID"] = 25227,
+		},
+		[38556] = {
+			["npcID"] = 27560,
+		},
 		[54316] = {
 			["npcID"] = 15979,
 		},
@@ -18116,35 +18537,47 @@ PlaterDB = {
 		[57753] = {
 			["npcID"] = 30681,
 		},
+		[42281] = {
+			["npcID"] = 23694,
+		},
 		[60936] = {
 			["encounterName"] = "玛里苟斯",
 			["npcID"] = 28859,
 			["encounterID"] = 734,
-		},
-		[25054] = {
-			["npcID"] = 27677,
-		},
-		[17274] = {
-			["npcID"] = 27695,
-		},
-		[58793] = {
-			["encounterName"] = "萨塔里奥",
-			["npcID"] = 30452,
-			["encounterID"] = 742,
 		},
 		[59638] = {
 			["encounterName"] = "阿努布雷坎",
 			["npcID"] = 31216,
 			["encounterID"] = 1107,
 		},
-		[38556] = {
-			["npcID"] = 27560,
+		[28089] = {
+			["encounterName"] = "塔迪乌斯",
+			["npcID"] = 15928,
+			["encounterID"] = 1120,
+		},
+		[11986] = {
+			["npcID"] = 30179,
+		},
+		[20825] = {
+			["npcID"] = 1789,
+		},
+		[58793] = {
+			["encounterName"] = "萨塔里奥",
+			["npcID"] = 30452,
+			["encounterID"] = 742,
+		},
+		[59362] = {
+			["encounterName"] = "哈多诺克斯",
+			["npcID"] = 29335,
+			["encounterID"] = 217,
 		},
 		[25530] = {
 			["npcID"] = 15480,
 		},
-		[20825] = {
-			["npcID"] = 1789,
+		[55802] = {
+			["encounterName"] = "克尔苏加德",
+			["npcID"] = 15990,
+			["encounterID"] = 1114,
 		},
 		[61353] = {
 			["npcID"] = 29476,
@@ -18157,10 +18590,8 @@ PlaterDB = {
 			["npcID"] = 27829,
 			["encounterID"] = 1107,
 		},
-		[55638] = {
-			["encounterName"] = "收割者戈提克",
-			["npcID"] = 16126,
-			["encounterID"] = 1109,
+		[9532] = {
+			["npcID"] = 25216,
 		},
 		[58956] = {
 			["encounterName"] = "萨塔里奥",
@@ -18172,13 +18603,11 @@ PlaterDB = {
 			["npcID"] = 30258,
 			["encounterID"] = 1989,
 		},
+		[56632] = {
+			["npcID"] = 30276,
+		},
 		[55467] = {
 			["npcID"] = 16215,
-		},
-		[57061] = {
-			["encounterName"] = "埃曼尼塔",
-			["npcID"] = 30435,
-			["encounterID"] = 1989,
 		},
 		[59986] = {
 			["encounterName"] = "传令官沃拉兹",
@@ -18190,8 +18619,10 @@ PlaterDB = {
 			["npcID"] = 28733,
 			["encounterID"] = 216,
 		},
-		[11986] = {
-			["npcID"] = 30179,
+		[57465] = {
+			["encounterName"] = "天启四骑士",
+			["npcID"] = 16063,
+			["encounterID"] = 1121,
 		},
 		[59365] = {
 			["encounterName"] = "看门者克里克希尔",
@@ -18203,31 +18634,25 @@ PlaterDB = {
 			["npcID"] = 16065,
 			["encounterID"] = 1121,
 		},
-		[57465] = {
-			["encounterName"] = "天启四骑士",
-			["npcID"] = 16063,
-			["encounterID"] = 1121,
-		},
 		[60012] = {
 			["encounterName"] = "传令官沃拉兹",
 			["npcID"] = 30625,
 			["encounterID"] = 215,
 		},
-		[56632] = {
-			["npcID"] = 30276,
+		[25054] = {
+			["npcID"] = 27677,
 		},
-		[59362] = {
-			["encounterName"] = "哈多诺克斯",
-			["npcID"] = 29335,
-			["encounterID"] = 217,
+		[28280] = {
+			["npcID"] = 15931,
 		},
-		[55802] = {
-			["encounterName"] = "克尔苏加德",
-			["npcID"] = 15990,
-			["encounterID"] = 1114,
+		[54338] = {
+			["npcID"] = 16020,
 		},
-		[56067] = {
-			["npcID"] = 15981,
+		[31664] = {
+			["npcID"] = 27691,
+		},
+		[49110] = {
+			["npcID"] = 26933,
 		},
 		[54317] = {
 			["npcID"] = 15979,
@@ -18235,58 +18660,60 @@ PlaterDB = {
 		[12470] = {
 			["npcID"] = 32340,
 		},
-		[50092] = {
-			["npcID"] = 27791,
+		[58667] = {
+			["npcID"] = 33422,
 		},
 		[61568] = {
 			["npcID"] = 30111,
 		},
-		[54333] = {
-			["npcID"] = 16385,
-		},
-		[28280] = {
-			["npcID"] = 15931,
-		},
-		[54722] = {
-			["npcID"] = 16168,
-		},
-		[17843] = {
-			["npcID"] = 32325,
+		[38204] = {
+			["npcID"] = 33422,
 		},
 		[61461] = {
 			["npcID"] = 30286,
+		},
+		[54722] = {
+			["npcID"] = 16168,
 		},
 		[59433] = {
 			["encounterName"] = "阿努巴拉克",
 			["npcID"] = 29120,
 			["encounterID"] = 218,
 		},
+		[53333] = {
+			["encounterName"] = "看门者克里克希尔",
+			["npcID"] = 29064,
+			["encounterID"] = 216,
+		},
+		[17843] = {
+			["npcID"] = 32325,
+		},
 		[60072] = {
 			["encounterName"] = "玛里苟斯",
 			["npcID"] = 28859,
 			["encounterID"] = 734,
-		},
-		[38204] = {
-			["npcID"] = 33422,
-		},
-		[51681] = {
-			["npcID"] = 26605,
 		},
 		[54096] = {
 			["encounterName"] = "黑女巫法琳娜",
 			["npcID"] = 16506,
 			["encounterID"] = 1110,
 		},
+		[54333] = {
+			["npcID"] = 16385,
+		},
+		[49111] = {
+			["npcID"] = 27608,
+		},
 		[56405] = {
 			["encounterName"] = "收割者戈提克",
 			["npcID"] = 16060,
 			["encounterID"] = 1109,
 		},
-		[49111] = {
-			["npcID"] = 27608,
+		[50092] = {
+			["npcID"] = 27791,
 		},
-		[54338] = {
-			["npcID"] = 16020,
+		[56067] = {
+			["npcID"] = 15981,
 		},
 		[7799] = {
 			["npcID"] = 416,
@@ -18294,16 +18721,16 @@ PlaterDB = {
 		[49309] = {
 			["npcID"] = 32340,
 		},
-		[53333] = {
-			["encounterName"] = "看门者克里克希尔",
-			["npcID"] = 29064,
-			["encounterID"] = 216,
+		[59346] = {
+			["npcID"] = 28922,
 		},
 		[49317] = {
 			["npcID"] = 27682,
 		},
-		[49110] = {
-			["npcID"] = 26933,
+		[55638] = {
+			["encounterName"] = "收割者戈提克",
+			["npcID"] = 16126,
+			["encounterID"] = 1109,
 		},
 		[59993] = {
 			["encounterName"] = "传令官沃拉兹",
@@ -18329,19 +18756,19 @@ PlaterDB = {
 		[32103] = {
 			["npcID"] = 27540,
 		},
-		[28089] = {
-			["encounterName"] = "塔迪乌斯",
-			["npcID"] = 15928,
-			["encounterID"] = 1120,
+		[7068] = {
+			["npcID"] = 6426,
 		},
-		[42281] = {
-			["npcID"] = 23694,
+		[57061] = {
+			["encounterName"] = "埃曼尼塔",
+			["npcID"] = 30435,
+			["encounterID"] = 1989,
 		},
 		[15547] = {
 			["npcID"] = 27162,
 		},
-		[7068] = {
-			["npcID"] = 6426,
+		[33844] = {
+			["npcID"] = 31229,
 		},
 	},
 }

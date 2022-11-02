@@ -2274,12 +2274,12 @@ Healbot_Config_Skins = {
 			}, -- [2]
 			{
 				["BARS"] = 3,
-				["RIGHT"] = 402.188232421875,
-				["TOP"] = 1091.986206054688,
-				["LEFT"] = 267.1882019042969,
-				["Y"] = 99.53,
-				["X"] = 20.62,
-				["BOTTOM"] = 1032.986328125,
+				["RIGHT"] = 679.93603515625,
+				["TOP"] = 1097.142822265625,
+				["LEFT"] = 544.9359741210938,
+				["Y"] = 100,
+				["X"] = 34.86,
+				["BOTTOM"] = 1038.142944335938,
 				["FRAME"] = 3,
 				["GROW"] = 2,
 			}, -- [3]
@@ -33144,7 +33144,7 @@ HealBot_Globals = {
 			["B"] = 0.7,
 		},
 	},
-	["AutoCacheTime"] = 221031,
+	["AutoCacheTime"] = 221102,
 	["SmartCast"] = true,
 	["localLang"] = "zhCN",
 	["WatchHoT"] = {
@@ -33315,7 +33315,7 @@ HealBot_Globals = {
 		["Warlock"] = false,
 		["Death Knight"] = false,
 	},
-	["AutoCacheSize"] = 36,
+	["AutoCacheSize"] = 34,
 	["PluginMyCooldowns"] = true,
 	["IncMainAssist"] = true,
 	["OptionsTheme"] = 1,
@@ -33392,7 +33392,7 @@ HealBot_Globals = {
 	["ttalpha"] = 0.7999999523162842,
 	["HideOptions"] = false,
 	["HealBot_ButtonPosition"] = 300,
-	["FPS"] = 61,
+	["FPS"] = 55,
 	["OverrideEffects"] = {
 		["FLUIDFREQ"] = 10,
 		["USE"] = 1,

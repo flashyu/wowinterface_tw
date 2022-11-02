@@ -23,8 +23,11 @@ function frm:PLAYER_LOGIN()
 	-- CharacterInfo
 	GetCharacterInfo()
 
-	-- SpecializedSkills
-	GetSpecializedSkills()
+	-- SpecializedSkills -- 10版本已弃用，改用新的逻辑
+	-- GetSpecializedSkills()
+
+	-- TalentTreeRetail
+	GetTalentTreeRetail()
 
 	-- SkillRelated
 	GetSkillRelated()
@@ -61,6 +64,7 @@ end
 frm:RegisterEvent("ADDON_LOADED")
 function frm:ADDON_LOADED()
 	local version, build, date, tocversion = GetBuildInfo()
+	SAVED["Version"] = version
 	local v = split(version, ".")[1]
 	local version = tonumber(v)
 	if version == 1 then
@@ -363,6 +367,36 @@ function GetSpecializedSkills()
 		if length(SAVED["SpecializedSkills"]) == 0 then
 			SAVED["SpecializedSkills"] = nil
 		end
+	end
+end
+
+function GetTalentTreeRetail() 
+	if versionName ~= "wowretail" then
+		return
+	end
+	SAVED["TalentTreeRetail"] = {}
+	local lConfigID = C_ClassTalents.GetActiveConfigID();
+	local lConfigInfo = C_Traits.GetConfigInfo(lConfigID);
+	local lTreeIDs = lConfigInfo["treeIDs"];
+	for i = 1, #lTreeIDs do
+		for _, lNodeID in pairs(C_Traits.GetTreeNodes(lTreeIDs[i])) do
+			local lNodeInfo = C_Traits.GetNodeInfo(lConfigID, lNodeID);
+			if lNodeInfo.currentRank ~= 0 then
+				local tmp = {}
+				tmp["NodeID"] = lNodeID
+				tmp["Rank"] = lNodeInfo.currentRank
+				for k, v in pairs(lNodeInfo.entryIDsWithCommittedRanks) do
+					local lEntryInfo = C_Traits.GetEntryInfo(lConfigID,v);
+					local lDefinitionID = lEntryInfo["definitionID"];
+					local lDefinitionInfo = C_Traits.GetDefinitionInfo(lDefinitionID);
+					tmp["SpellID"] = lDefinitionInfo["spellID"]
+				end
+				table.insert(SAVED["TalentTreeRetail"], tmp)
+			end
+		end
+	end
+	if length(SAVED["TalentTreeRetail"]) == 0 then
+		SAVED["TalentTreeRetail"] = nil
 	end
 end
 
@@ -819,11 +853,8 @@ function GetPVPInfo()
 				table.insert(SAVED["PVPInfo"]["PVPHistory"], pvpInfo)
 			end
 		end
-		if length(SAVED["PVPInfo"]["PVPHistory"]) == 0 then
-			SAVED["PVPInfo"]["PVPHistory"] = nil
-		end
 	end
-	if not SAVED["PVPInfo"]["PVPHonorKill"] or SAVED["PVPInfo"]["PVPHonorKill"] == 0 then
+	if (not SAVED["PVPInfo"]["PVPHistory"]) or (length(SAVED["PVPInfo"]["PVPHistory"]) == 0) or (not SAVED["PVPInfo"]["PVPHonorKill"]) or (SAVED["PVPInfo"]["PVPHonorKill"] == 0) then
 		SAVED["PVPInfo"] = nil
 	end
 end

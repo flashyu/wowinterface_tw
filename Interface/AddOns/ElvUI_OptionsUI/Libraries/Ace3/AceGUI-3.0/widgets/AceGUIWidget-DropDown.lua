@@ -4,7 +4,7 @@ local AceGUI = LibStub("AceGUI-3.0")
 -- Lua APIs
 local min, max, floor = math.min, math.max, math.floor
 local select, pairs, ipairs, type, tostring = select, pairs, ipairs, type, tostring
-local tonumber, tsort, error = tonumber, table.sort, error
+local tsort, tonumber = table.sort, tonumber
 
 -- WoW APIs
 local PlaySound = PlaySound
@@ -39,7 +39,7 @@ end
 
 do
 	local widgetType = "Dropdown-Pullout"
-	local widgetVersion = 5
+	local widgetVersion = 3
 
 	--[[ Static data ]]--
 
@@ -193,7 +193,12 @@ do
 
 		local height = 8
 		for i, item in pairs(items) do
-			item:SetPoint("TOP", itemFrame, "TOP", 0, -2 + (i - 1) * -16)
+			if i == 1 then
+				item:SetPoint("TOP", itemFrame, "TOP", 0, -2)
+			else
+				item:SetPoint("TOP", items[i-1].frame, "BOTTOM", 0, 1)
+			end
+
 			item:Show()
 
 			height = height + 16
@@ -253,7 +258,7 @@ do
 
 	local function Constructor()
 		local count = AceGUI:GetNextWidgetNum(widgetType)
-		local frame = CreateFrame("Frame", "AceGUI30Pullout"..count, UIParent, BackdropTemplateMixin and "BackdropTemplate" or nil)
+		local frame = CreateFrame("Frame", "AceGUI30Pullout"..count, UIParent)
 		local self = {}
 		self.count = count
 		self.type = widgetType
@@ -304,7 +309,7 @@ do
 		scrollFrame.obj = self
 		itemFrame.obj = self
 
-		local slider = CreateFrame("Slider", "AceGUI30PulloutScrollbar"..count, scrollFrame, BackdropTemplateMixin and "BackdropTemplate" or nil)
+		local slider = CreateFrame("Slider", "AceGUI30PulloutScrollbar"..count, scrollFrame)
 		slider:SetOrientation("VERTICAL")
 		slider:SetHitRectInsets(0, 0, -10, 0)
 		slider:SetBackdrop(sliderBackdrop)
@@ -376,7 +381,7 @@ do
 
 	local function Dropdown_TogglePullout(this)
 		local self = this.obj
-		PlaySound(856) -- SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON
+		PlaySound("igMainMenuOptionCheckBoxOn") -- missleading name, but the Blizzard code uses this sound
 		if self.open then
 			self.open = nil
 			self.pullout:Close()
@@ -595,9 +600,15 @@ do
 		end
 	end
 
-	-- added by ElvUI
+	-- these were added by ElvUI
+	local sortStr1, sortStr2 = "%((%d+)%)", "%[(%d+)]"
 	local sortValue = function(a,b)
-		if a and b and a[2] and b[2] then
+		if a and b and (a[2] and b[2]) then
+			local a2 = tonumber(a[2]:match(sortStr1) or a[2]:match(sortStr2))
+			local b2 = tonumber(b[2]:match(sortStr1) or b[2]:match(sortStr2))
+			if a2 and b2 and (a2 ~= b2) then
+				return a2 < b2 -- try to sort by the number inside of brackets if we can
+			end
 			return a[2] < b[2]
 		end
 	end

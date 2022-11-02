@@ -2,7 +2,7 @@
 ## Title: Auto Combat Logger
 ## Notes: Automatically enables or disables combat logging based on location.
 ## Author: Talryn
-## Version: 10.0.2
+## Version: 10.0.3
 ## SavedVariables: AutoCombatLoggerDB
 ## OptionalDeps: Ace3, LibDataBroker-1.1, LibDBIcon-1.0, LibBabble-Zone-3.0
 ## X-Embeds: Ace3

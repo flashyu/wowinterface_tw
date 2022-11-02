@@ -1,8 +1,6 @@
 # xanSoundAlerts
 
-## [v2.6](https://github.com/Xruptor/xanSoundAlerts/tree/v2.6) (2022-10-31)
-[Full Changelog](https://github.com/Xruptor/xanSoundAlerts/compare/v2.5...v2.6) [Previous Releases](https://github.com/Xruptor/xanSoundAlerts/releases)
+## [v2.7](https://github.com/Xruptor/xanSoundAlerts/tree/v2.7) (2022-10-31)
+[Full Changelog](https://github.com/Xruptor/xanSoundAlerts/compare/v2.6...v2.7) [Previous Releases](https://github.com/Xruptor/xanSoundAlerts/releases)
 
-- Updated for Dragonflight retail changes.  
-    Updated TOC.  
-    Added additional support for Classic, WOTLK, etc...  
+- Slight bug fix for an bug that occurs on Retail when opening the options screen.  

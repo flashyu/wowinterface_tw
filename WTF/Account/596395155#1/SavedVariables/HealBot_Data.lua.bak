@@ -33119,7 +33119,7 @@ HealBot_Globals = {
 	["AllowPlayerRoles"] = false,
 	["PluginCombatProt"] = true,
 	["ShowGameUnitInfo"] = false,
-	["AutoCacheTime"] = 221031,
+	["AutoCacheTime"] = 221102,
 	["SmartCast"] = true,
 	["localLang"] = "zhCN",
 	["WatchHoT"] = {
@@ -33266,9 +33266,9 @@ HealBot_Globals = {
 	["IgnoreCustomDebuff"] = {
 	},
 	["EmergencyFClass"] = 4,
-	["CPUUsage"] = 6,
+	["CPUUsage"] = 5,
 	["PluginMyCooldowns"] = true,
-	["AutoCacheSize"] = 36,
+	["AutoCacheSize"] = 34,
 	["IncMainAssist"] = true,
 	["ShowTooltip"] = true,
 	["OptionsTheme"] = 1,
@@ -33317,7 +33317,7 @@ HealBot_Globals = {
 	},
 	["HealBot_PermMyTargets"] = {
 	},
-	["FPS"] = 60,
+	["FPS"] = 46,
 	["HealBot_ButtonPosition"] = 300,
 	["HealBot_Custom_Debuffs_ShowBarCol"] = {
 		[6788] = 1,

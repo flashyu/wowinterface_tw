@@ -1,6 +1,6 @@
 ## Interface: 00000
 ## Title: 黑盒工坊配置同步模块
-## Version: 1.9.6.1
+## Version: 1.9.7.3
 ## SavedVariables:  HEYBOX_SAVED_PLAYER_INFOS
 ## SavedVariablesPerCharacter:  HEYBOX_SAVED_PER_PLAYER_INFOS
 HeyboxPlayerInfo.lua
