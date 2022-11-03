@@ -910,18 +910,34 @@ function HealBot_Aura_ShowCustomBuff()
     buffCustomType=HealBot_Watch_HoT[uaName] or HealBot_Watch_HoT[uaSpellId] or false
     if buffCustomType then
         if buffCustomType=="A" then
+            HealBot_Options_MissingBuffPrio(uaSpellId)
             return true, false
-        elseif buffCustomType=="S" then
-            if uaUnitCaster=="player" then 
-                return true, false
-            end
+        elseif buffCustomType=="S" and uaUnitCaster=="player" then
+            HealBot_Options_MissingBuffPrio(uaSpellId)
+            return true, false
         elseif buffCustomType=="C" then
             _, scbUnitClassEN = UnitClass(uaUnitCaster)
             if scbUnitClassEN and HealBot_Data["PCLASSTRIM"]==strsub(scbUnitClassEN,1,4) then
+                HealBot_Options_MissingBuffPrio(uaSpellId)
                 return true, false
             end
         end
     else
+        if uaExpirationTime>0 then
+            if HealBot_Config_Buffs.AutoBuff==3 or (HealBot_Config_Buffs.AutoBuff==2 and uaDuration<HealBot_Config_Buffs.AutoBuffExpireTime) then
+                if HealBot_Config_Buffs.AutoBuffCastBy==3 then
+                    return true, false
+                elseif HealBot_Config_Buffs.AutoBuffCastBy==1 and uaUnitCaster=="player" then
+                    return true, false
+                else
+                    _, scbUnitClassEN = UnitClass(uaUnitCaster)
+                    if scbUnitClassEN and HealBot_Data["PCLASSTRIM"]==strsub(scbUnitClassEN,1,4) then
+                        return true, false
+                    end
+                end
+                return false, false
+            end
+        end
         return false, true
     end
     return false, false
@@ -933,12 +949,7 @@ function HealBot_Aura_CheckCurBuff()
     if ciCustomBuff or HealBot_BuffWatch[uaName] or HealBot_BuffNameTypes[uaName] then
         if not HealBot_AuraBuffCache[uaSpellId] or HealBot_AuraBuffCache[uaSpellId].reset then
             if not HealBot_AuraBuffCache[uaSpellId] then HealBot_AuraBuffCache[uaSpellId]={} end
-            local bPrio=HealBot_Globals.HealBot_Custom_Buffs[uaSpellId]
-            if not bPrio then
-                local bId=HealBot_Options_MissingBuffPrio(uaSpellId)
-                bPrio=HealBot_Globals.HealBot_Custom_Buffs[bId] or HealBot_Globals.HealBot_Custom_Buffs[uaName] or 20
-            end
-            HealBot_AuraBuffCache[uaSpellId]["priority"]=bPrio
+            HealBot_AuraBuffCache[uaSpellId]["priority"]=HealBot_Globals.HealBot_Custom_Buffs[uaName] or HealBot_Globals.HealBot_Custom_Buffs[uaSpellId] or 15
             HealBot_AuraBuffCache[uaSpellId]["texture"]=uaTexture
             HealBot_AuraBuffCache[uaSpellId]["name"]=uaName
             HealBot_AuraBuffCache[uaSpellId]["type"]=uaDebuffType
@@ -2260,12 +2271,12 @@ function HealBot_Aura_ConfigClassHoT()
             elseif GetSpellInfo(id) then
                 sName=GetSpellInfo(id)
             end
-            if x==4 then
-                HealBot_Aura_ConfigClassAllHoT(id, sName, "A")
-            elseif x==3 then
-                HealBot_Aura_ConfigClassAllHoT(id, sName, "C")
-            elseif x==2 then
+            if x==1 then
                 HealBot_Aura_ConfigClassAllHoT(id, sName, "S")
+            elseif x==2 then
+                HealBot_Aura_ConfigClassAllHoT(id, sName, "C")
+            else
+                HealBot_Aura_ConfigClassAllHoT(id, sName, "A")
             end
         end
     end
@@ -2478,6 +2489,8 @@ function HealBot_Aura_InitData()
         sName=GetSpellInfo(HBC_ROCKBITER_WEAPON)
         if sName then hbWeaponEnchants[sName]=true end
         sName=GetSpellInfo(HBC_EARTHLIVING_WEAPON)
+        if sName then hbWeaponEnchants[sName]=true end
+        sName=GetSpellInfo(HEALBOT_EARTHLIVING_WEAPON)
         if sName then hbWeaponEnchants[sName]=true end
         sName=GetSpellInfo(HBC_FLAMETONGUE_WEAPON)
         if sName then hbWeaponEnchants[sName]=true end

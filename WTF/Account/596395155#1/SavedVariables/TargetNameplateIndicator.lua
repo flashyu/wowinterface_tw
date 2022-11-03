@@ -1,0 +1,48 @@
+
+TargetNameplateIndicatorDB = {
+	["profileKeys"] = {
+		["骑风 - 祈福"] = "Default",
+		["仓库技师 - 祈福"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["target"] = {
+				["hostile"] = {
+					["width"] = 30,
+					["height"] = 30,
+					["yOffset"] = -5,
+					["texture"] = "Interface\\AddOns\\TargetNameplateIndicator\\Textures\\NeonRedArrow",
+				},
+			},
+			["mouseover"] = {
+				["hostile"] = {
+					["width"] = 20,
+					["height"] = 20,
+					["yOffset"] = -5,
+					["texture"] = "Interface\\AddOns\\TargetNameplateIndicator\\Textures\\NeonGreenArrow",
+				},
+			},
+			["targettarget"] = {
+				["self"] = {
+					["texture"] = "Interface\\AddOns\\TargetNameplateIndicator\\Textures\\NeonReticule",
+				},
+				["hostile"] = {
+					["width"] = 25,
+					["height"] = 25,
+					["yOffset"] = 0,
+					["texture"] = "Interface\\AddOns\\TargetNameplateIndicator\\Textures\\NeonReticule",
+				},
+				["friendly"] = {
+					["texture"] = "Interface\\AddOns\\TargetNameplateIndicator\\Textures\\NeonReticule",
+				},
+			},
+			["focus"] = {
+				["self"] = {
+					["width"] = 25,
+					["yOffset"] = 0,
+					["height"] = 25,
+				},
+			},
+		},
+	},
+}

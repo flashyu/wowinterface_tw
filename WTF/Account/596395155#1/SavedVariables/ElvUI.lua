@@ -1,8 +1,8 @@
 
 ElvDB = {
 	["profileKeys"] = {
-		["骑风 - 祈福"] = "Default",
 		["红发男 - 祈福"] = "Default",
+		["骑风 - 祈福"] = "Default",
 		["死哪了 - 祈福"] = "Default",
 		["仓库技师 - 祈福"] = "Default",
 	},
@@ -14,10 +14,10 @@ ElvDB = {
 	},
 	["class"] = {
 		["祈福"] = {
-			["死哪了"] = "DEATHKNIGHT",
+			["骑风"] = "DRUID",
 			["红发男"] = "MAGE",
 			["仓库技师"] = "WARRIOR",
-			["骑风"] = "DRUID",
+			["死哪了"] = "DEATHKNIGHT",
 		},
 	},
 	["profiles"] = {
@@ -26,22 +26,22 @@ ElvDB = {
 				["reputation"] = {
 					["enable"] = true,
 					["width"] = 8,
-					["height"] = 202,
 					["orientation"] = "VERTICAL",
+					["height"] = 202,
 				},
 			},
 			["general"] = {
 				["valuecolor"] = {
-					["r"] = 1,
-					["g"] = 0.49,
 					["b"] = 0.04,
+					["g"] = 0.49,
+					["r"] = 1,
 				},
 			},
 			["chat"] = {
 				["tabSelectorColor"] = {
-					["r"] = 1,
-					["g"] = 0.49,
 					["b"] = 0.04,
+					["g"] = 0.49,
+					["r"] = 1,
 				},
 				["panelSnapRightID"] = 4,
 				["panelSnapLeftID"] = 1,
@@ -57,16 +57,16 @@ ElvDB = {
 				["TotemTrackerMover"] = "TOPLEFT,UIParent,TOPLEFT,4,-355",
 				["ShiftAB"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,418,209",
 				["ElvUF_FocusMover"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-553,273",
-				["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-554,311",
+				["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,272,376",
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-272,376",
 				["ElvUF_TankMover"] = "TOPLEFT,UIParent,TOPLEFT,4,-183",
 				["MicrobarMover"] = "TOPLEFT,UIParent,TOPLEFT,462,-4",
 				["ElvUF_PetCastbarMover"] = "BOTTOM,UIParent,BOTTOM,-288,277",
-				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
-				["ElvAB_5"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-490,22",
 				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
+				["ElvAB_5"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-490,22",
+				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
 				["ElvUF_PetMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,553,301",
-				["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,272,376",
+				["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-554,311",
 			},
 			["unitframe"] = {
 				["units"] = {
@@ -86,9 +86,9 @@ ElvDB = {
 				["colors"] = {
 					["healthclass"] = true,
 					["auraBarBuff"] = {
-						["r"] = 1,
-						["g"] = 0.49,
 						["b"] = 0.04,
+						["g"] = 0.49,
+						["r"] = 1,
 					},
 					["castClassColor"] = true,
 				},
@@ -103,8 +103,8 @@ ElvDB = {
 			},
 			["actionbar"] = {
 				["bar3"] = {
-					["buttons"] = 12,
 					["buttonSize"] = 36,
+					["buttons"] = 12,
 					["buttonsPerRow"] = 12,
 				},
 				["flyoutSize"] = 35,
@@ -124,8 +124,8 @@ ElvDB = {
 					["buttonSize"] = 36,
 				},
 				["bar5"] = {
-					["buttons"] = 12,
 					["buttonSize"] = 36,
+					["buttons"] = 12,
 				},
 				["lockActionBars"] = false,
 				["keyDown"] = false,
@@ -141,10 +141,23 @@ ElvDB = {
 	},
 	["gold"] = {
 		["祈福"] = {
-			["死哪了"] = 2000,
+			["骑风"] = 34446325,
 			["红发男"] = 0,
-			["仓库技师"] = 4865907,
-			["骑风"] = 31046059,
+			["仓库技师"] = 4301429,
+			["死哪了"] = 2000,
+		},
+	},
+	["serverID"] = {
+		[4778] = {
+			["祈福"] = true,
+		},
+	},
+	["faction"] = {
+		["祈福"] = {
+			["骑风"] = "Alliance",
+			["红发男"] = "Alliance",
+			["仓库技师"] = "Alliance",
+			["死哪了"] = "Alliance",
 		},
 	},
 	["global"] = {
@@ -219,28 +232,21 @@ ElvDB = {
 			["UIScale"] = 0.7000000000000001,
 		},
 	},
-	["faction"] = {
-		["祈福"] = {
-			["死哪了"] = "Alliance",
-			["红发男"] = "Alliance",
-			["仓库技师"] = "Alliance",
-			["骑风"] = "Alliance",
-		},
-	},
-	["serverID"] = {
-		[4778] = {
-			["祈福"] = true,
-		},
-	},
 }
 ElvPrivateDB = {
 	["profileKeys"] = {
-		["骑风 - 祈福"] = "骑风 - 祈福",
 		["红发男 - 祈福"] = "红发男 - 祈福",
+		["骑风 - 祈福"] = "骑风 - 祈福",
 		["死哪了 - 祈福"] = "死哪了 - 祈福",
 		["仓库技师 - 祈福"] = "仓库技师 - 祈福",
 	},
 	["profiles"] = {
+		["红发男 - 祈福"] = {
+			["nameplates"] = {
+				["enable"] = false,
+			},
+			["install_complete"] = 12.91,
+		},
 		["骑风 - 祈福"] = {
 			["general"] = {
 				["worldMap"] = false,
@@ -253,12 +259,6 @@ ElvPrivateDB = {
 			},
 			["theme"] = "class",
 			["install_complete"] = 3,
-		},
-		["红发男 - 祈福"] = {
-			["nameplates"] = {
-				["enable"] = false,
-			},
-			["install_complete"] = 12.91,
 		},
 		["死哪了 - 祈福"] = {
 			["nameplates"] = {

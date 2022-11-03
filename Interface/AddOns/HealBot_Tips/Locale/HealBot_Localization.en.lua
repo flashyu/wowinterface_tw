@@ -504,6 +504,8 @@ function HealBot_Lang_Options_enALL()
                                  ["BUFFSCUSTOMCOLOURSHOW"]=HEALBOT_SKIN_HEADERBARCOL,
                                  ["BUFFSCUSTOMRESET"]=HEALBOT_WORD_RESET,
                                  ["BUFFSCUSTOMPAGE"]="Page",
+                                 ["BUFFSCUSTOMAUTO"]=HEALBOT_CUSTOM_CAT_CUSTOM_AUTOBUFFS,
+                                 ["BUFFSCUSTOMAUTOCASTBY"]=HEALBOT_OPTIONS_CUSTOM_CASTBY,
                         -- Buffs Warning tab
                                  ["BUFFSWARNINGBAR"]=HEALBOT_OPTIONS_CDCSHOWHBARS,
                                  ["BUFFSWARNINGBARRANGE"]="Range",
@@ -531,6 +533,10 @@ function HealBot_Lang_Options_enALL()
                                  ["TOOLTIPPOSITION"]=HEALBOT_OPTIONS_SETTOOLTIP_POSITION,
                                  ["TOOLTIPPOSITIONLINK"]=HEALBOT_OPTIONS_SETTOOLTIP_POSITION,
                                  ["TOOLTIPCUSTOMANCHOR"]=HEALBOT_OPTIONS_SETTOOLTIP_CUSTOMANCHOR,
+                                 ["TOOLTIPSETSCALE"]=HEALBOT_OPTIONS_TOOLTIPSETSCALE,
+                                 ["TOOLTIPSCALE"]=HEALBOT_OPTION_TOOLTIPSCALE,
+                                 ["TOOLTIPSETALPHA"]=HEALBOT_OPTIONS_SETALPHA,
+                                 ["TOOLTIPALPHA"]=HEALBOT_OPTIONS_ALPHA,
                         -- Binds tab
                                  ["BINDTOCLICK"]=HEALBOT_OPTIONS_BINDTOCLICK,
                         -- Test tab
@@ -1063,6 +1069,8 @@ function HealBot_Lang_Options_enALL()
                                ["BUFFSCUSTOMCOLOURSHOW"]="Turn on/off changing the bar col"..HEALBOT_enWORD_COLOUR_SUFFIX.." for the selected custom buff.",
                                ["BUFFSCUSTOMRESET"]="Reset settings to defaults for the selected custom buff.",
                                ["BUFFSCUSTOMPAGE"]="Page though the custom buffs.",
+                               ["BUFFSCUSTOMAUTO"]="Turn On or Off showing automatic buffs.\nTimed buffs are buff with a duration less than "..HealBot_Config_Buffs.AutoBuffExpireTime.."s.\n--\n".._G["YELLOW_FONT_COLOR_CODE"].."NOTE: Buffs with no duration are always excluded.",
+                               ["BUFFSCUSTOMAUTOCASTBY"]="Filter automatic buffs by the caster.\n--\n".._G["YELLOW_FONT_COLOR_CODE"].."NOTE: Buffs with no duration are always excluded.",
                         -- Buffs Warning tab
                                ["BUFFSWARNINGBAR"]="Change the health bar col"..HEALBOT_enWORD_COLOUR_SUFFIX.." to the settings defined.\nThis applies to all General and Custom buffs.",
                                ["BUFFSWARNINGBARRANGE"]="Set the range when the health bar col"..HEALBOT_enWORD_COLOUR_SUFFIX.." is changed.",
@@ -1089,6 +1097,10 @@ function HealBot_Lang_Options_enALL()
                                ["TOOLTIPMONBUFFS"]="On all monitored Buffs / HoT's\nshow who cast the spell and duration left.",
                                ["TOOLTIPPOSITIONLINK"]="Links to the Skins Frame General tab,\nallowing for different positions per frame.",
                                ["TOOLTIPCUSTOMANCHOR"]="Show the Set custom anchor frame.\nA single custom anchor can be set per Skin.",
+                               ["TOOLTIPSETSCALE"]="Turn On/Off setting the tooltip scale based on the scale slider.\n--\n".._G["YELLOW_FONT_COLOR_CODE"].."NOTE: Scaling may not be compatible with Tooltip addons\n".._G["YELLOW_FONT_COLOR_CODE"].."If any issues are encountered turn off scaling\n".._G["YELLOW_FONT_COLOR_CODE"].."and use scaling options in the tooltip addon.",
+                               ["TOOLTIPSCALE"]="Scale the tooltip.\n--\n".._G["YELLOW_FONT_COLOR_CODE"].."NOTE: Scaling may not be compatible with Tooltip addons\n".._G["YELLOW_FONT_COLOR_CODE"].."If any issues are encountered turn off scaling\n".._G["YELLOW_FONT_COLOR_CODE"].."and use scaling options in the tooltip addon.\n--\n".._G["YELLOW_FONT_COLOR_CODE"].."NOTE: Reset the custom anchor after changing the scale.",
+                               ["TOOLTIPSETALPHA"]="Turn On/Off setting tooltip opacity based on the opacity slider.\n--\n".._G["YELLOW_FONT_COLOR_CODE"].."NOTE: Opacity may not be compatible with Tooltip addons\n".._G["YELLOW_FONT_COLOR_CODE"].."If any issues are encountered turn off set opacity\n".._G["YELLOW_FONT_COLOR_CODE"].."and use opacity options in the tooltip addon.",
+                               ["TOOLTIPALPHA"]="Scale the tooltip.\n--\n".._G["YELLOW_FONT_COLOR_CODE"].."NOTE: Opacity may not be compatible with Tooltip addons\n".._G["YELLOW_FONT_COLOR_CODE"].."If any issues are encountered turn off set opacity\n".._G["YELLOW_FONT_COLOR_CODE"].."and use opacity options in the tooltip addon.",
                         -- Binds tab
                                ["BINDTOCLICK"]="Select a key to bind to a button click.",
                         -- Test tab

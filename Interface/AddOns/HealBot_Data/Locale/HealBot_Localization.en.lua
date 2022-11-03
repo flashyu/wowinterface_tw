@@ -120,12 +120,14 @@ function HealBot_Lang_enALL()
     
     HEALBOT_STRING_MATCH_WELLFED            = "become well fed"
     HEALBOT_STRING_MATCH_RESTOREMANA        = "(%d+)(%%*) (%u*)(%l*)ana over (%d+) sec"
+    HEALBOT_STRING_MATCH_EXTRABUFFS         = {"Flask", "Elixir", "Scroll", "Potion", "Rune$"}
     HEALBOT_WELL_FED                        = "Well Fed"
     HEALBOT_MANA_DRINK                      = "Mana Drink"
     HEALBOT_MANA_LOWTHRESHOLD               = "Low mana threshold"
 
     HEALBOT_OPTIONS_GLOBAL                  = "Global"
     HEALBOT_OPTIONS_ALPHA                   = "Opacity";
+    HEALBOT_OPTIONS_SETALPHA                = "Set Opacity";
     HEALBOT_OPTIONS_BARALPHA                = "Enabled opacity";
     HEALBOT_OPTIONS_BARALPHAINHEAL          = "Incoming heals opacity";
     HEALBOT_OPTIONS_BARALPHABACK            = "Background bar opacity";
@@ -560,6 +562,7 @@ function HealBot_Lang_enALL()
     HEALBOT_OPTION_HOTBARSDEBUFFPRIO        = "Debuff Priority threshold"           
     HEALBOT_OPTIONS_RELOADUIMSG             = "This option requires a UI Reload, Reload now?"
     HEALBOT_OPTION_USE                      = "Use"
+    HEALBOT_OPTION_TOOLTIPSCALE             = "Scale"
 
     HEALBOT_BUFF_PVP                        = "PvP"
     HEALBOT_BUFF_PVE                        = "PvE"
@@ -631,6 +634,8 @@ function HealBot_Lang_enALL()
     HEALBOT_OPTIONS_MAXICONS                = "Max Icons"
     HEALBOT_OPTIONS_ICONSPACER              = "Icon Spacer"
     HEALBOT_OPTIONS_EMERGBUTTONUSE          = "Use the Emergency Bar"
+    HEALBOT_OPTIONS_BUFFSAUTOTIMED          = "Timed Buffs"
+    HEALBOT_OPTIONS_BUFFSAUTOALL            = "All Buffs"
 
     HEALBOT_OPTIONS_AGGROBARSIZE            = "Aggro bar size"
     HEALBOT_OPTIONS_DOUBLETEXTLINES         = "Double text lines"
@@ -863,6 +868,7 @@ function HealBot_Lang_enALL()
     HEALBOT_OPTIONS_AGGROALERT              = "Aux bar alert level"
     HEALBOT_OPTIONS_AGGROINDALERT           = "Indicator alert level"
     HEALBOT_OPTIONS_TOOLTIPSHOWHOT          = "Show active monitored HoT details"
+    HEALBOT_OPTIONS_TOOLTIPSETSCALE         = "Set Scale"
     HEALBOT_WORDS_MIN                       = "min"
     HEALBOT_WORDS_MAX                       = "max"
     HEALBOT_CHAT_SELFPETSON                 = "Self Pet switched on"
@@ -1155,7 +1161,6 @@ function HealBot_Lang_enALL()
     HEALBOT_WORD_ENABLE                     = "Enable"
     HEALBOT_WORD_DISABLE                    = "Disable"
 
-    HEALBOT_OPTIONS_MYCLASS                 = "My Class"
     HEALBOT_OPTIONS_PLUGINS                 = "Plugins"
     HEALBOT_OPTIONS_PLUGIN_NA               = "Plugin not available"
 
@@ -1227,6 +1232,7 @@ function HealBot_Lang_enALL()
     HEALBOT_PLUGIN_AGGRO2THRESHOLD          = "Aggro level 2 threshold"
     HEALBOT_PLUGIN_AGGRO3THRESHOLD          = "Aggro level 3 threshold"
     HEALBOT_PLUGIN_INHEALHOTTIME            = "Incoming heals HoT time"
+    HEALBOT_PLUGIN_AUTOTIMEDBUFFDURATION    = "Custom buff - auto All Timed duration less than"
     HEALBOT_PLUGIN_AUTOTIMEDDURATION        = "Custom debuff - auto All Timed duration less than"
     HEALBOT_PLUGIN_ENABLEDALLBUFFS          = "Enable all custom buffs"
     HEALBOT_PLUGIN_DISABLEALLBUFFS          = "Disable all custom buffs"
@@ -1240,8 +1246,13 @@ function HealBot_Lang_enALL()
     HEALBOT_CUSTOM_CASTBY_EVERYONE          = "Everyone"
     HEALBOT_CUSTOM_CASTBY_ENEMY             = "Enemy"
     HEALBOT_CUSTOM_CASTBY_FRIEND            = "Friend"
+    HEALBOT_OPTIONS_MYCLASS                 = "My Class"
+    HEALBOT_OPTIONS_CASTBYSELF              = "Cast by Self"
+    HEALBOT_OPTIONS_CASTBYMYCLASS           = "Cast by My Class"
+    HEALBOT_OPTIONS_CASTBYEVERYONE          = "Cast by Everyone"
     
     HEALBOT_CUSTOM_CAT_CUSTOM_AUTOMATIC     = "Automatic Debuffs"
+    HEALBOT_CUSTOM_CAT_CUSTOM_AUTOBUFFS     = "Automatic Buffs"
     HEALBOT_CUSTOM_DEBUFF_CATS = {}
 
     HEALBOT_ABOUT_DESC1                    = "Add frames with skinable bars for healing, decursive, buffing, ressing, aggro tracking"

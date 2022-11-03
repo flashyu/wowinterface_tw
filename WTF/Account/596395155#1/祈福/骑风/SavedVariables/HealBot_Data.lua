@@ -69,7 +69,7 @@ HealBot_Config = {
 	["FavMount"] = "",
 	["MacroUse10"] = false,
 	["LastAutoSkinChangeType"] = "None",
-	["LastVersionUpdate"] = "9.2.7.21",
+	["LastVersionUpdate"] = "10.0.0.2",
 	["FavGroundMount"] = "迅捷雷刃豹",
 	["Profile"] = 1,
 	["DisableHealBot"] = false,
@@ -164,9 +164,9 @@ HealBot_Config_Spells = {
 		["Middle4"] = "S:26982",
 		["Button41"] = "healbot大迅捷",
 		["AltButton41"] = "healbot大迅捷",
-		["CtrlLeft1"] = "C:A",
-		["Alt-ShiftRight1"] = "C:B",
 		["Left3"] = "S:48451",
+		["Alt-ShiftRight1"] = "C:B",
+		["CtrlLeft1"] = "C:A",
 		["ShiftLeft1"] = "S:48477",
 		["AltMiddle1"] = "S:29166",
 		["Ctrl-ShiftRight3"] = "C:E",
@@ -200,12 +200,6 @@ HealBot_Config_Buffs = {
 	["ExtraBuffsOnlyInInstance"] = false,
 	["HealBot_CBWarnRange_Screen"] = 2,
 	["BuffWatchWhenMounted"] = false,
-	["CustomItemName"] = {
-		"", -- [1]
-		"", -- [2]
-		"", -- [3]
-	},
-	["CBshownHB"] = true,
 	["ShowGroups"] = {
 		true, -- [1]
 		true, -- [2]
@@ -216,31 +210,7 @@ HealBot_Config_Buffs = {
 		true, -- [7]
 		true, -- [8]
 	},
-	["ShowBuffWarning"] = false,
-	["WellFedItem"] = "",
-	["ShowTimeMaxDuration"] = 31,
-	["HealBotBuffColB"] = {
-		1, -- [1]
-		1, -- [2]
-		1, -- [3]
-		1, -- [4]
-		1, -- [5]
-		1, -- [6]
-		1, -- [7]
-		1, -- [8]
-		1, -- [9]
-		1, -- [10]
-		1, -- [11]
-		1, -- [12]
-		1, -- [13]
-		1, -- [14]
-	},
-	["NoAuraWhenRested"] = false,
-	["CustomBuffName"] = {
-		"", -- [1]
-		"", -- [2]
-		"", -- [3]
-	},
+	["SoundBuffPlay"] = "Tribal Bass Drum",
 	["HealBotBuffColG"] = {
 		1, -- [1]
 		1, -- [2]
@@ -257,8 +227,32 @@ HealBot_Config_Buffs = {
 		1, -- [13]
 		1, -- [14]
 	},
+	["AlwaysShowClass"] = false,
+	["BuffWatchWhenGrouped"] = false,
+	["ShowBuffWarning"] = false,
+	["PalaBlessingsAsOne"] = false,
+	["AutoBuffExpireTime"] = 31,
+	["NoAuraWhenRested"] = false,
+	["HealBot_CBWarnRange_Bar"] = 3,
+	["CustomItemName"] = {
+		"", -- [1]
+		"", -- [2]
+		"", -- [3]
+	},
+	["ManaDrinkItem"] = "",
+	["WellFedItem"] = "",
 	["BuffWatch"] = true,
 	["AlwaysShowSelf"] = false,
+	["ShortBuffTimer"] = 10,
+	["CustomBuffCheck"] = {
+		false, -- [1]
+		false, -- [2]
+		false, -- [3]
+	},
+	["LongBuffTimer"] = 120,
+	["BuffWatchInCombat"] = false,
+	["HealBot_CBWarnRange_Sound"] = 3,
+	["AlwaysShowTimed"] = false,
 	["HealBotBuffDropDown"] = {
 		4, -- [1]
 		4, -- [2]
@@ -303,21 +297,8 @@ HealBot_Config_Buffs = {
 		["11"] = 4,
 		["32"] = 4,
 	},
-	["CustomBuffCheck"] = {
-		false, -- [1]
-		false, -- [2]
-		false, -- [3]
-	},
-	["PalaBlessingsAsOne"] = false,
-	["HealBot_CBWarnRange_Sound"] = 3,
-	["LongBuffTimer"] = 120,
-	["BuffWatchWhenGrouped"] = false,
-	["ManaDrinkItem"] = "",
-	["ShortBuffTimer"] = 10,
+	["ShowTimeMaxDuration"] = 31,
 	["SoundBuffWarning"] = false,
-	["SoundBuffPlay"] = "Tribal Bass Drum",
-	["AlwaysShowClass"] = false,
-	["BuffWatchInCombat"] = false,
 	["ManaDrinkThreshold"] = 50,
 	["HealBotBuffColR"] = {
 		1, -- [1]
@@ -335,6 +316,28 @@ HealBot_Config_Buffs = {
 		1, -- [13]
 		1, -- [14]
 	},
+	["HealBotBuffColB"] = {
+		1, -- [1]
+		1, -- [2]
+		1, -- [3]
+		1, -- [4]
+		1, -- [5]
+		1, -- [6]
+		1, -- [7]
+		1, -- [8]
+		1, -- [9]
+		1, -- [10]
+		1, -- [11]
+		1, -- [12]
+		1, -- [13]
+		1, -- [14]
+	},
+	["CustomBuffName"] = {
+		"", -- [1]
+		"", -- [2]
+		"", -- [3]
+	},
+	["CBshownHB"] = true,
 	["HealBotBuffText"] = {
 		"None", -- [1]
 		"None", -- [2]
@@ -378,8 +381,8 @@ HealBot_Config_Buffs = {
 		["11"] = "None",
 		["32"] = "None",
 	},
-	["HealBot_CBWarnRange_Bar"] = 3,
-	["AlwaysShowTimed"] = false,
+	["AutoBuffCastBy"] = 1,
+	["AutoBuff"] = 2,
 }
 HealBot_Config_Cures = {
 	["CDCshownHB"] = true,
@@ -416,18 +419,14 @@ HealBot_Config_Cures = {
 	["DebuffWatchWhenMounted"] = false,
 	["DebuffWatchInCombat"] = true,
 	["HealBot_Custom_Defuffs_All"] = {
-		["Poison"] = false,
 		["Curse"] = false,
-		["Magic"] = false,
 		["Disease"] = false,
+		["Magic"] = false,
+		["Poison"] = false,
 	},
 	["ShowTimeMaxDuration"] = 31,
 	["IgnoreFastDurDebuffsSecs"] = 2,
 	["HealBot_CDCWarnRange_Bar"] = 3,
-	["DebuffWatchWhenGrouped"] = false,
-	["HealBot_CDCWarnRange_Sound"] = 3,
-	["SoundDebuffPlay"] = "Tribal Bass Drum",
-	["SoundDebuffWarning"] = false,
 	["HealBotDebuffDropDown"] = {
 		4, -- [1]
 		4, -- [2]
@@ -445,30 +444,34 @@ HealBot_Config_Cures = {
 		["11"] = 4,
 		["32"] = 4,
 	},
+	["HealBot_CDCWarnRange_Sound"] = 3,
+	["DebuffWatchWhenGrouped"] = false,
+	["SoundDebuffWarning"] = false,
+	["SoundDebuffPlay"] = "Tribal Bass Drum",
 	["IgnoreFriendDebuffs"] = false,
 	["AlwaysShowTimed"] = false,
 	["IgnoreOnCooldownDebuffs"] = false,
 	["HealBot_CDCWarnRange_Screen"] = 2,
 	["CDCBarColour"] = {
-		["Poison"] = {
-			["B"] = 0.24,
-			["G"] = 0.46,
-			["R"] = 0.12,
-		},
 		["Curse"] = {
 			["B"] = 0.09,
 			["G"] = 0.43,
 			["R"] = 0.83,
+		},
+		["Disease"] = {
+			["B"] = 0.7,
+			["G"] = 0.19,
+			["R"] = 0.55,
 		},
 		["Magic"] = {
 			["B"] = 0.83,
 			["G"] = 0.33,
 			["R"] = 0.26,
 		},
-		["Disease"] = {
-			["B"] = 0.7,
-			["G"] = 0.19,
-			["R"] = 0.55,
+		["Poison"] = {
+			["B"] = 0.24,
+			["G"] = 0.46,
+			["R"] = 0.12,
 		},
 	},
 	["HealBotDebuffPriority"] = {

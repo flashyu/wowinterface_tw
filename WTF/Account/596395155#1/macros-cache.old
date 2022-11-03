@@ -2,8 +2,7 @@ VER 3 0000000000000005 "cz" "135811"
 /run ResetInstances()
 END
 VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
-/stopcasting
-/cast [@mouseover,nomod,exists] 解除诅咒;  [@mouseover,exists,mod:ctrl] 驱毒术; [@mouseover,exists,mod:shift] 解除诅咒
+/script DecursiveRootTable.Dcr:Println('没有相关技能')
 END
 VER 3 000000000000000D "healbot大迅捷" "INV_MISC_QUESTIONMARK"
 #showtooltip 自然迅捷
@@ -30,7 +29,7 @@ VER 3 0000000000000009 "RXPTargeting" "Ability_eyeoftheowl"
 //RestedXP Guides - current step has no configured targets
 END
 VER 3 000000000000001A "target" "132177"
-/target 大领主提里奥·弗丁
+/target 远征军指挥官
 END
 VER 3 0000000000000002 "target宏" "INV_MISC_QUESTIONMARK"
 /target 逆风术士
@@ -114,7 +113,7 @@ VER 3 0000000000000003 "视野宏" "132092"
 /console weatherDensity 0
 END
 VER 3 0000000000000010 "钓鱼" "132931"
-/equip 珠宝钓鱼竿;
+/equip 珠宝鱼竿;
 /cast 钓鱼;
 /use 巨型蚌壳;
 /脚本 local a,i,j,l={"病鱼","纠结的鱼线","漂木","水草","破布","树枝","石块","骨鳞钳鱼","晶鳞鱼"}for i=1,#a do for j=1,114 do l=GetContainerItemLink(j/23,j%23)if l and l:find(a[i])then PickupContainerItem(j/23,j%23)DeleteCursorItem()end end end

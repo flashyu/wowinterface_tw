@@ -1,10 +1,22 @@
-# 3.10.03 (29-OCT-2022)
- - fixed - ArkInventory.API.BlizzardBagIdToInternalId
- - fixed - (wrath/classic) the first bank bag was being treated like a reagent bag
- - fixed - some of the restack ignore bag options were being ignored due to a code issue
- - updated - xml for ArkScanTooltipTemplate, OnTooltipAddMoney (deprecated in beta) and OnTooltipCleared removed and are now cleared in OnLoad if they exist.  this should fix the lag issues.
- - fixed - https://github.com/arkayenro/arkinventory/issues/1634 (dragonflight) usable rule function and tinting.  tooltips are using a new red color
+# 3.10.03 Alpha 5 (03-NOV-2022)
+ - fixed - tooltip text in edit mode for re-assignment to the default category
+ - workaround - added a config > advanced > workarounds > player interaction option to disable overriding the PlayerInteractionFrameManager.  The down side is that the default Bank and Vault frames will also open, but there should be no taint any more.
+ - changed - BAG_UPDATE timer reduced from 0.5 to 0.3 seconds
  
+# 3.10.03 Alpha 4 (01-NOV-2022)
+ - fixed - junk check code for peddler
+ - fixed - rule functions `wearable( )` and `unwearble( )`
+ 
+# 3.10.03 Alpha 3 (31-OCT-2022)
+ - no longer available
+
+# 3.10.03 Alpha 2 (30-OCT-2022)
+ - added - rule function `wearable( )`
+ - added - rule function `unwearable( )`
+ 
+# 3.10.03 Alpha 1 (30-OCT-2022)
+ - no longer available
+
 # known issues
  - (dragonflight) reagentbank slots are no longer readable unless the bank is open
  - (dragonflight) theres a weird issue where you randomly get an addon blocked due to resume( )
@@ -18,4 +30,4 @@
  - confirm things havent broken in classic, wrath, or shadowlands
  - restack disable - maybe change this to require a modifier key instead of a straight disable?  might be easier to shift/alt/ctrl click on it than turning it on/off and its not like youll accidentally do it (which is why the disable was added)
  - backpack tokens to scroll when max width reached on second line
- 
+

@@ -4,7 +4,6 @@ local xUnit=nil
 local xGUID=nil
 local xButton=nil
 local hbtMaxLines=0
-local hbGameTooltip = CreateFrame("GameTooltip", "hbGameTooltip", nil, "GameTooltipTemplate")
 local _
 local powerCols={["r"]=1,["g"]=1,["b"]=1}
 local playerPowerCols={["r"]=1,["g"]=1,["b"]=1}
@@ -104,6 +103,30 @@ local HealBot_Tooltip_GCD=HealBot_Tooltip_GCDV1
 if HEALBOT_GAME_VERSION>3 then
     HealBot_Tooltip_GCD=HealBot_Tooltip_GCDV4
 end
+function HealBot_Tooltip_getSpellCD(validSpellName, isMacro)
+    local z, x, _ = GetSpellCooldown(validSpellName);
+    local gcd=0
+    if HealBot_Globals.Tooltip_IgnoreGCD then
+        gcd=HealBot_Tooltip_GCD()
+    end
+    if HealBot_Globals.Tooltip_ShowCD and x and x>gcd then 
+        z = HealBot_Comm_round(x-(GetTime()-z),0)
+        local u=HEALBOT_TOOLTIP_SECS
+        if z>59 then
+            z = ceil(z/60)
+            u=HEALBOT_TOOLTIP_MINS
+        end                            
+        validSpellName=validSpellName..HEALBOT_TOOLTIP_CD..z..u 
+        if z>0 then return validSpellName,1,0.2,0 end
+    elseif not isMacro and (x or 1)>gcd then
+        return validSpellName,1,0.2,0
+    end
+    if isMacro then
+        return validSpellName,0.5,1,0
+    else
+        return validSpellName,1,1,1
+    end
+end
 
 function HealBot_Tooltip_setspellName(button, spellName)
     if spellName and string.len(spellName)>0 then
@@ -125,23 +148,7 @@ function HealBot_Tooltip_setspellName(button, spellName)
                 if mIdx==0 then 
                     validSpellName, spellAR, spellAG, spellAB, isItem = HealBot_Tooltip_GetHealSpell(button,spellName) 
                     if validSpellName and not isItem then
-                        local z, x, _ = GetSpellCooldown(spellName);
-                        local gcd=0
-                        if HealBot_Globals.Tooltip_IgnoreGCD then
-                            gcd=HealBot_Tooltip_GCD()
-                        end
-                        if HealBot_Globals.Tooltip_ShowCD and x and x>gcd then 
-                            z = HealBot_Comm_round(x-(GetTime()-z),0)
-                            local u=HEALBOT_TOOLTIP_SECS
-                            if z>59 then
-                                z = ceil(z/60)
-                                u=HEALBOT_TOOLTIP_MINS
-                            end                            
-                            validSpellName=validSpellName..HEALBOT_TOOLTIP_CD..z..u 
-                            if z>0 then spellAR,spellAG,spellAB=1,0.2,0 end
-                        elseif (x or 1)>gcd then
-                            spellAR,spellAG,spellAB=1,0.2,0
-                        end
+                        validSpellName,spellAR,spellAG,spellAB=HealBot_Tooltip_getSpellCD(validSpellName, false)
                     end
                 else
                     if validSpellName and GetMacroIndexByName(validSpellName)>0 then
@@ -154,7 +161,7 @@ function HealBot_Tooltip_setspellName(button, spellName)
                             end
                         end
                     end
-                    spellAR,spellAG,spellAB=0.5,1,0
+                    validSpellName,spellAR,spellAG,spellAB=HealBot_Tooltip_getSpellCD(validSpellName, true)
                 end
             end
         end
@@ -183,7 +190,6 @@ function HealBot_Tooltip_Init()
                     [6]=HEALBOT_WORD_DAMAGER.." ",
                     [7]=HEALBOT_WORD_RAIDER.." ",
                    }
-                    
 end
 
 function HealBot_Tooltip_SetLine(lNo,lText,lR,lG,lB,la,rText,rR,rG,rB,ra)
@@ -312,7 +318,7 @@ function HealBot_ToolTip_SetTooltipPos(frame)
         end
     else
         GameTooltip:SetOwner(hbtPosFrm, "ANCHOR_NONE")
-        GameTooltip_SetDefaultAnchor(GameTooltip, hbGameTooltip)
+        GameTooltip_SetDefaultAnchor(GameTooltip, HealBot_ScanTooltip)
     end
 end
 
@@ -690,7 +696,13 @@ function HealBot_Action_DoRefreshTooltip()
 
         HealBot_ToolTip_ShowHoT(xButton.id, xUnit)
     end
+    if HealBot_Globals.Tooltip_SetScale then 
+        GameTooltip:SetScale(HealBot_Globals.Tooltip_Scale)
+    end
     GameTooltip:Show()
+    if HealBot_Globals.Tooltip_SetAlpha then 
+        GameTooltip:SetAlpha(HealBot_Globals.Tooltip_SetAlphaValue)
+    end
     hbtMaxLines=linenum
 end
 
@@ -987,14 +999,51 @@ function HealBot_Tooltip_OptionsHelp(title,text)
     end
 end
 
-function HealBot_Tooltip_OptionsHide()
+function HealBot_Tooltip_Hide()
     GameTooltip:Hide()
+    if HealBot_Globals.Tooltip_SetScale then GameTooltip:SetScale(1) end
+    if HealBot_Globals.Tooltip_SetAlpha then GameTooltip:SetAlpha(1) end
 end
 
-local function HealBot_Tooltip_CustomAnchor_SetPoint()
+local function HealBot_Tooltip_CustomAnchor_SetPoint()    
+    local fScale=1
+    if HealBot_Globals.Tooltip_SetScale then 
+        fScale=HealBot_Globals.Tooltip_Scale
+    end
 	local fY=Healbot_Config_Skins.ToolTip[Healbot_Config_Skins.Current_Skin]["ANCHORY"] or 175
 	local fX=Healbot_Config_Skins.ToolTip[Healbot_Config_Skins.Current_Skin]["ANCHORX"] or -275
     local fPoint=Healbot_Config_Skins.ToolTip[Healbot_Config_Skins.Current_Skin]["ANCHORPOINT"] or "BOTTOMRIGHT"
+    local fWidth=hbCustomTipAnchor:GetWidth()
+    local fHeight=hbCustomTipAnchor:GetHeight()
+    if fPoint=="BOTTOMLEFT" then
+        if fY>floor(GetScreenHeight()/fScale)-fHeight then
+            fY=floor(GetScreenHeight()/fScale)-fHeight
+        end
+        if fX>floor(GetScreenWidth()/fScale)-fWidth then
+            fX=floor(GetScreenWidth()/fScale)-fWidth
+        end
+    elseif fPoint=="BOTTOMRIGHT" then
+        if fY>floor(GetScreenHeight()/fScale)-fHeight then
+            fY=floor(GetScreenHeight()/fScale)-fHeight
+        end
+        if fX<0-floor(GetScreenWidth()/fScale)+fWidth then
+            fX=0-floor(GetScreenWidth()/fScale)+fWidth
+        end
+    elseif fPoint=="TOPLEFT" then
+        if fY<0-floor(GetScreenHeight()/fScale)+fHeight then
+            fY=0-floor(GetScreenHeight()/fScale)+fHeight
+        end
+        if fX>floor(GetScreenWidth()/fScale)-fWidth then
+            fX=floor(GetScreenWidth()/fScale)-fWidth
+        end
+    elseif fPoint=="TOPRIGHT" then
+        if fY<0-floor(GetScreenHeight()/fScale)+fHeight then
+            fY=0-floor(GetScreenHeight()/fScale)+fHeight
+        end
+        if fX<0-floor(GetScreenWidth()/fScale)+fWidth then
+            fX=0-floor(GetScreenWidth()/fScale)+fWidth
+        end
+    end
 	Healbot_Config_Skins.ToolTip[Healbot_Config_Skins.Current_Skin]["ANCHORY"] = ceil(fY)
 	Healbot_Config_Skins.ToolTip[Healbot_Config_Skins.Current_Skin]["ANCHORX"] = ceil(fX)
     Healbot_Config_Skins.ToolTip[Healbot_Config_Skins.Current_Skin]["ANCHORPOINT"]=fPoint
@@ -1016,15 +1065,19 @@ local function HealBot_Tooltip_CustomAnchor_SetAnchorText()
 end
 
 local function HealBot_Tooltip_CustomAnchor_SavePoints()
-    local fX, fY=0, 0
+    local fX, fY=0, 0    
+    local fScale=1
+    if HealBot_Globals.Tooltip_SetScale then 
+        fScale=HealBot_Globals.Tooltip_Scale
+    end
     if Healbot_Config_Skins.ToolTip[Healbot_Config_Skins.Current_Skin]["ANCHORPOINT"]=="BOTTOMRIGHT" then
-        fX=hbCustomTipAnchor:GetRight()-GetScreenWidth()
+        fX=hbCustomTipAnchor:GetRight()-floor(GetScreenWidth()/fScale)
         fY=hbCustomTipAnchor:GetBottom()
         if fX>0 then fX=0 end
         if fY<0 then fY=0 end
     elseif Healbot_Config_Skins.ToolTip[Healbot_Config_Skins.Current_Skin]["ANCHORPOINT"]=="TOPRIGHT" then
-        fX=hbCustomTipAnchor:GetRight()-GetScreenWidth()
-        fY=hbCustomTipAnchor:GetTop()-GetScreenHeight()
+        fX=hbCustomTipAnchor:GetRight()-floor(GetScreenWidth()/fScale)
+        fY=hbCustomTipAnchor:GetTop()-floor(GetScreenHeight()/fScale)
         if fX>0 then fX=0 end
         if fY>0 then fY=0 end
     elseif Healbot_Config_Skins.ToolTip[Healbot_Config_Skins.Current_Skin]["ANCHORPOINT"]=="BOTTOMLEFT" then
@@ -1034,7 +1087,7 @@ local function HealBot_Tooltip_CustomAnchor_SavePoints()
         if fY<0 then fY=0 end
     else
         fX=hbCustomTipAnchor:GetLeft()
-        fY=hbCustomTipAnchor:GetTop()-GetScreenHeight()
+        fY=hbCustomTipAnchor:GetTop()-floor(GetScreenHeight()/fScale)
         if fX<0 then fX=0 end
         if fY>0 then fY=0 end
     end
@@ -1154,6 +1207,11 @@ function HealBot_Tooltip_ShowCustomAnchor()
         hbCustomTipAnchorObjects["CloseBtn"]:SetScript("OnMouseDown", function() HealBot_Tooltip_CustomAnchor_Hide(); end)
         
         HealBot_Tooltip_CustomAnchor_CreateText()
+    end
+    if HealBot_Globals.Tooltip_SetScale then 
+        hbCustomTipAnchor:SetScale(HealBot_Globals.Tooltip_Scale)
+    else
+        hbCustomTipAnchor:SetScale(1)
     end
     hbCustomTipAnchorObjects["TOPLEFT"]:SetChecked(false)
     hbCustomTipAnchorObjects["TOPRIGHT"]:SetChecked(false)

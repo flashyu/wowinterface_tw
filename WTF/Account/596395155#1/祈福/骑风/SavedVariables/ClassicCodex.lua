@@ -10,22 +10,30 @@ CodexConfig = {
 	["minimumDropChance"] = 2,
 	["showLowLevel"] = false,
 	["_tom_waypoint"] = {
-		116, -- [1]
-		0.1667, -- [2]
-		0.4829, -- [3]
+		1944, -- [1]
+		0.509, -- [2]
+		0.602, -- [3]
 		["arrivaldistance"] = 15,
 		["callbacks"] = {
 			["distance"] = {
-			},
-			["minimap"] = {
+				[10] = nil --[[ skipped inline function ]],
+				[15] = nil --[[ skipped inline function ]],
 			},
 			["world"] = {
+				["onclick"] = nil --[[ skipped inline function ]],
+				["tooltip_update"] = nil --[[ skipped inline function ]],
+				["tooltip_show"] = nil --[[ skipped inline function ]],
+			},
+			["minimap"] = {
+				["onclick"] = nil --[[ skipped inline function ]],
+				["tooltip_update"] = nil --[[ skipped inline function ]],
+				["tooltip_show"] = nil --[[ skipped inline function ]],
 			},
 		},
 		["persistent"] = true,
 		["minimap"] = true,
 		["cleardistance"] = 10,
-		["title"] = "马克·菲尔森",
+		["title"] = "阿曼蒂中尉",
 		["from"] = "?",
 		["crazy"] = true,
 		["world"] = true,
@@ -61,10 +69,20 @@ CodexColors = {
 		0.04313725490196078, -- [2]
 		0.1372549019607843, -- [3]
 	},
+	["The Stadium Capture Credit Marker"] = {
+		0.7803921568627451, -- [1]
+		0.3725490196078432, -- [2]
+		0.6627450980392157, -- [3]
+	},
 	["奥术师莱斯坦"] = {
 		0.984313725490196, -- [1]
 		0.5411764705882353, -- [2]
 		0.5254901960784314, -- [3]
+	},
+	["Broken Hill Capture Credit Marker"] = {
+		0.2392156862745098, -- [1]
+		0.611764705882353, -- [2]
+		0.4784313725490196, -- [3]
 	},
 	["吞火者"] = {
 		0.6470588235294118, -- [1]

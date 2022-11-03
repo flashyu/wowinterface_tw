@@ -2,6 +2,7 @@
 BisTooltipDB = {
 	["profileKeys"] = {
 		["骑风 - 祈福"] = "Default",
+		["仓库技师 - 祈福"] = "Default",
 	},
 	["char"] = {
 		["骑风 - 祈福"] = {
@@ -13,11 +14,13 @@ BisTooltipDB = {
 			},
 			["version"] = 6.1,
 			["phase_index"] = 2,
+			["spec_index"] = 2,
+			["filter_class_names"] = false,
 			["filter_specs"] = {
 				["Warrior"] = {
 					["Fury"] = true,
-					["Arms"] = true,
 					["Protection"] = true,
+					["Arms"] = true,
 				},
 				["Paladin"] = {
 					["Protection"] = true,
@@ -34,15 +37,15 @@ BisTooltipDB = {
 					["Assassination"] = true,
 				},
 				["Mage"] = {
-					["Arcane"] = true,
+					["Fire FFB"] = true,
 					["Frost"] = true,
 					["Fire"] = true,
-					["Fire FFB"] = true,
+					["Arcane"] = true,
 				},
 				["Druid"] = {
-					["Feral dps"] = true,
-					["Balance"] = true,
 					["Restoration"] = true,
+					["Balance"] = true,
+					["Feral dps"] = true,
 					["Feral tank"] = true,
 				},
 				["Death knight"] = {
@@ -52,22 +55,23 @@ BisTooltipDB = {
 				},
 				["Hunter"] = {
 					["Marksmanship"] = true,
-					["Beast mastery"] = true,
 					["Survival"] = true,
-				},
-				["Priest"] = {
-					["Discipline"] = true,
-					["Holy"] = true,
-					["Shadow"] = true,
+					["Beast mastery"] = true,
 				},
 				["Warlock"] = {
 					["Demonology"] = true,
 					["Affliction"] = true,
 					["Destruction"] = true,
 				},
+				["Priest"] = {
+					["Discipline"] = true,
+					["Shadow"] = true,
+					["Holy"] = true,
+				},
 			},
-			["filter_class_names"] = false,
-			["spec_index"] = 2,
+		},
+		["仓库技师 - 祈福"] = {
+			["version"] = 6.1,
 		},
 	},
 }

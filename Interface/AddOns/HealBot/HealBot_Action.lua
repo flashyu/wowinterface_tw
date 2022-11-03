@@ -2541,6 +2541,9 @@ function HealBot_Action_PrepButton(button)
     button.gref.txt["text3"]:SetText("")
     button.gref.txt["text4"]:SetText("")
     for x=1,9 do
+        button.aux[x]["R"]=1
+        button.aux[x]["G"]=1
+        button.aux[x]["B"]=1
         button.aux[x]["FLUID"]=-1
         button.aux[x]["TIMED"]=-1
         button.aux[x]["TIMEDH2L"]=-1
@@ -3628,7 +3631,7 @@ function HealBot_Action_DoSetButtonAttrib(button,cType,j,unit,HB_prefix,buttonTy
             end
         elseif mId ~= 0 then
             local _,_,mText=GetMacroInfo(mId)
-            if string.find(mText,"hbtargetpet")==1 then
+            if string.find(mText,"hbtargetpet") then
                 local pet=HealBot_UnitPet(button.unit)
                 if pet and UnitExists(pet) then
                     mText=string.gsub(mText,"hbtargetpet",pet)
@@ -4686,7 +4689,7 @@ end
 
 function HealBot_Action_HideTooltipFrame()
     if HealBot_Data["TIPUSE"] then
-        GameTooltip:Hide();
+        HealBot_Tooltip_Hide()
         HealBot_Data["TIPICON"]=false
     end
 end
@@ -5214,7 +5217,7 @@ function HealBot_Action_UseSmartCast(self,button)
             local mId=GetMacroIndexByName(sName)
             if mId ~= 0 then
                 local _,_,mText=GetMacroInfo(mId)
-                if string.find(mText,"hbtargetpet")==1 then
+                if string.find(mText,"hbtargetpet") then
                     local pet=HealBot_UnitPet(button.unit)
                     if pet and UnitExists(pet) then
                         mText=string.gsub(mText,"hbtargetpet",pet)

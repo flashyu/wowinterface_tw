@@ -348,6 +348,15 @@ function ArkInventory:EVENT_ARKINV_COMBAT_ENTER( ... )
 	
 end
 
+function ArkInventory:EVENT_ARKINV_PLAYER_LEVEL_UP( ... )
+	
+	local event = ...
+	ArkInventory.OutputDebug( "EVENT: ", event )
+	
+	ArkInventory.ItemCacheClear( )
+	
+end
+
 function ArkInventory:EVENT_ARKINV_COMBAT_LEAVE( ... )
 	
 	local event = ...
@@ -488,6 +497,30 @@ function ArkInventory:EVENT_ARKINV_BAG_UPDATE( ... )
 	ArkInventory:SendMessage( "EVENT_ARKINV_BAG_UPDATE_BUCKET", arg1 )
 end
 
+function ArkInventory:EVENT_ARKINV_ITEM_UPDATE_BUCKET( ... )
+	
+	local bucket = ...
+--	local changer = { }
+	--ArkInventory.Output( "bucket: ", bucket )
+	
+	for id in pairs( bucket ) do
+		local loc_id, bag_id, slot_id = ArkInventory.LocationDecode( id )
+		--ArkInventory.Output( "bucket: ", loc_id, "-", bag_id, "-", slot_id )
+--		changer[loc_id] = true
+		ArkInventory.Frame_Item_Update_Instant( loc_id, bag_id, slot_id )
+	end
+	
+--	for id in pairs( changer ) do
+--		ArkInventory:SendMessage( "EVENT_ARKINV_CHANGER_UPDATE_BUCKET", loc_id )
+--	end
+	
+end
+
+function ArkInventory:EVENT_ARKINV_BAG_UPDATE_DELAYED( ... )
+	local event = ...
+	--ArkInventory.OutputDebug( "EVENT: ", event, ", ", arg1, ", ", arg2, ", ", arg3, ", ", arg4 )
+end
+
 function ArkInventory:EVENT_ARKINV_ITEM_LOCK_CHANGED( ... )
 	
 	local event, blizzard_id, slot_id = ...
@@ -508,7 +541,7 @@ function ArkInventory:EVENT_ARKINV_ITEM_LOCK_CHANGED( ... )
 				
 				-- bank item lock
 				local loc_id, bag_id = ArkInventory.BlizzardBagIdToInternalId( blizzard_id )
-				ArkInventory.Frame_Item_Update( loc_id, bag_id, slot_id )
+				ArkInventory.Frame_Item_Update_Instant( loc_id, bag_id, slot_id, true )
 				
 			else
 				
@@ -521,7 +554,7 @@ function ArkInventory:EVENT_ARKINV_ITEM_LOCK_CHANGED( ... )
 			
 			-- player item lock
 			local loc_id, bag_id = ArkInventory.BlizzardBagIdToInternalId( blizzard_id )
-			ArkInventory.Frame_Item_Update( loc_id, bag_id, slot_id )
+			ArkInventory.Frame_Item_Update_Instant( loc_id, bag_id, slot_id, true )
 			
 		end
 		
@@ -1544,13 +1577,6 @@ function ArkInventory:EVENT_ARKINV_BAG_UPDATE_COOLDOWN( ... )
 	
 end
 
-function ArkInventory:EVENT_ARKINV_BAG_UPDATE_DELAYED( ... )
-	
-	local event, arg1, arg2, arg3, arg4 = ...
-	ArkInventory.OutputDebug( "EVENT: ", event, ", ", arg1, ", ", arg2, ", ", arg3, ", ", arg4 )
-	
-end
-
 function ArkInventory:EVENT_ARKINV_QUEST_UPDATE_BUCKET( ... )
 	
 	local event = ...
@@ -1590,6 +1616,18 @@ end
 function ArkInventory:EVENT_ARKINV_ZONE_CHANGED( ... )
 	local event = ...
 	ArkInventory:SendMessage( "EVENT_ARKINV_ZONE_CHANGED_BUCKET", event )
+end
+
+function ArkInventory:EVENT_ARKINV_PLAYER_INTERACTION_SHOW( ... )
+	local event, arg1 = ...
+	--ArkInventory.Output( "EVENT: ", event, ", ", arg1 )
+	ArkInventory:HookPlayerInteractionShow( arg1 )
+end
+
+function ArkInventory:EVENT_ARKINV_PLAYER_INTERACTION_HIDE( ... )
+	local event, arg1 = ...
+	--ArkInventory.Output( "EVENT: ", event, ", ", arg1 )
+	ArkInventory.HookPlayerInteractionHide( arg1 )
 end
 
 function ArkInventory.HookCovenantSanctumDepositAnima( )
@@ -2073,7 +2111,7 @@ end
 
 function ArkInventory.ScanBag_Threaded( blizzard_id, loc_id, bag_id, thread_id, rescan )
 	
-	ArkInventory.OutputThread( "ScanBag_Threaded( ", blizzard_id, " ) START" )
+	--ArkInventory.OutputThread( "ScanBag_Threaded( ", blizzard_id, " ) START" )
 	ArkInventory.ThreadYield_Scan( thread_id )
 	
 	local player = ArkInventory.GetPlayerStorage( nil, loc_id )
@@ -2275,6 +2313,7 @@ function ArkInventory.ScanBag_Threaded( blizzard_id, loc_id, bag_id, thread_id, 
 	end
 	
 	local ready = true
+	local update_changer = false
 	
 	for slot_id = 1, bag.count do
 		
@@ -2334,13 +2373,16 @@ function ArkInventory.ScanBag_Threaded( blizzard_id, loc_id, bag_id, thread_id, 
 		if changed_item then
 			
 			ArkInventory.Frame_Item_Update( loc_id, bag_id, slot_id )
-			
 			ArkInventory:SendMessage( "EVENT_ARKINV_CHANGER_UPDATE_BUCKET", loc_id )
+			
+			--local id = ArkInventory.LocationEncode( loc_id, bag_id, slot_id )
+			--ArkInventory.Output( "changed: ", loc_id, "-", bag_id, "-", slot_id )
+			--ArkInventory:SendMessage( "EVENT_ARKINV_ITEM_UPDATE_BUCKET", id )
 			
 		end
 		
-		tz = debugprofilestop( ) - tz
-		ArkInventory.OutputThread( "Scanned [", string.format( "%0.2fms", tz ), "] [", blizzard_id, " / ", loc_id, "] [", bag_id, "] [", slot_id, "] = ", i.h or "empty" )
+		--tz = debugprofilestop( ) - tz
+		--ArkInventory.OutputThread( "Scanned [", string.format( "%0.2fms", tz ), "] [", blizzard_id, " / ", loc_id, "] [", bag_id, "] [", slot_id, "] = ", i.h or "empty" )
 		
 		ArkInventory.ThreadYield_Scan( thread_id )
 		
@@ -2367,7 +2409,7 @@ function ArkInventory.ScanBag_Threaded( blizzard_id, loc_id, bag_id, thread_id, 
 	
 	ArkInventory.ScanCleanup( player, loc_id, bag_id, bag )
 	
-	ArkInventory.OutputThread( "ScanBag_Threaded( ", blizzard_id, " ) END" )
+	--ArkInventory.OutputThread( "ScanBag_Threaded( ", blizzard_id, " ) END" )
 	
 end
 

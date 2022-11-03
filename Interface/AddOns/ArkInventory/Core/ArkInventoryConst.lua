@@ -1289,6 +1289,13 @@ ArkInventory.Const = { -- constants
 	
 }
 
+ArkInventory.Const.ClassArmor = {
+	[ArkInventory.Const.ENUM.ITEMCLASS.ARMOR.CLOTH] = { MAGE = 1, PRIEST = 1, WARLOCK = 1 },
+	[ArkInventory.Const.ENUM.ITEMCLASS.ARMOR.LEATHER] = { DRUID = 1, ROGUE = 1, LOWLEVELHUNTER = 1, MONK = 1, DEMONHUNTER = 1 },
+	[ArkInventory.Const.ENUM.ITEMCLASS.ARMOR.MAIL] = { HUNTER = 1, SHAMAN = 1, EVOKER = 1 },
+	[ArkInventory.Const.ENUM.ITEMCLASS.ARMOR.PLATE] = { PALADIN = 1, WARRIOR = 1, DEATHKNIGHT = 1 },
+}
+
 ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS = ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS_NORMAL + ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS_REAGENT
 
 

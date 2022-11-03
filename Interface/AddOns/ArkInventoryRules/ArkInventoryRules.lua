@@ -448,8 +448,10 @@ function ArkInventoryRules.System.boolean_equip( ... )
 		return false
 	end
 	
+	
 	local e = string.trim( ArkInventoryRules.Object.info.equiploc )
-	if e == "" or e == "INVTYPE_BAG" then return false end
+	if e == "" or ArkInventoryRules.Object.info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.PARENT then return false end
+	
 	
 	local ge = string.trim( _G[e] or e )
 	if ge == "" then return false end
@@ -802,7 +804,7 @@ function ArkInventoryRules.System.boolean_itemfamily( ... )
 			
 			error( string.format( ArkInventory.Localise["RULE_FAILED_ARGUMENT_IS_NOT"], fn, ax, ArkInventory.Localise["NUMBER"] ), 0 )
 			
-		elseif ArkInventoryRules.Object.info.equiploc ~= "INVTYPE_BAG" then
+		elseif ArkInventoryRules.Object.info.itemtypeid ~= ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.PARENT then
 			
 			local it = GetItemFamily( ArkInventoryRules.Object.h ) or 0
 			
@@ -899,7 +901,7 @@ function ArkInventoryRules.System.boolean_outfit( ... )
 	end
 	
 	local e = string.trim( ArkInventoryRules.Object.info.equiploc )
-	if e == "" or e == "INVTYPE_BAG" then return false end
+	if e == "" or ArkInventoryRules.Object.info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.PARENT then return false end
 	
 	local fn = "outfit"
 	
@@ -1448,9 +1450,101 @@ function ArkInventoryRules.System.boolean_usable( )
 	end
 	
 	ArkInventory.TooltipSetHyperlink( ArkInventoryRules.Tooltip, ArkInventoryRules.Object.h )
-	
 	return ArkInventory.TooltipCanUse( ArkInventoryRules.Tooltip )
 	
+end
+
+function ArkInventoryRules.System.internal_unwearable( wearable )
+	
+	if not ArkInventoryRules.Object.h then
+		return false
+	end
+	
+	-- can it be equipped?
+	if not ArkInventoryRules.System.boolean_equip( ) then
+		return false
+	end
+	
+	-- is there any red text making it unwearable?
+	if not ArkInventoryRules.System.boolean_usable( ) then
+		if wearable then
+			--ArkInventory.Output( "wearable fail 1: ", ArkInventoryRules.Object.h )
+			return false
+		else
+			--ArkInventory.Output( "unwearable pass 1: ", ArkInventoryRules.Object.h )
+			return true
+		end
+	end
+	
+	
+	-- everything past here should be wearable
+	
+	-- anything that isnt armour is wearable
+	if ArkInventoryRules.Object.info.itemtypeid ~= ArkInventory.Const.ENUM.ITEMCLASS.ARMOR.PARENT then
+		if wearable then
+			--ArkInventory.Output( "wearable pass 1: ", ArkInventoryRules.Object.h )
+			return true
+		else
+			--ArkInventory.Output( "unwearable fail 0: ", ArkInventoryRules.Object.h )
+			return false
+		end
+	end
+	
+	-- cloaks are cloth, but everyone can wear them
+	if ArkInventoryRules.Object.info.equiploc == "INVTYPE_CLOAK" then
+		if wearble then
+			return true
+		else
+			return false
+		end
+	end
+	
+	
+	-- class based armor subtype restrictions
+	local class = ArkInventoryRules.Object.playerinfo.class
+	if class == HUNTER and ArkInventoryRules.Object.playerinfo.level < 40 then
+		class = LOWLEVELHUNTER
+	end
+	
+	
+	-- can this class wear this type of armor
+	if ( not ArkInventory.Const.ClassArmor[ArkInventoryRules.Object.info.itemsubtypeid] ) or ( ArkInventory.Const.ClassArmor[ArkInventoryRules.Object.info.itemsubtypeid] and ArkInventory.Const.ClassArmor[ArkInventoryRules.Object.info.itemsubtypeid][class] ) then
+		if wearable then
+			--ArkInventory.Output( "wearable pass 2: ", ArkInventoryRules.Object.h )
+			return true
+		else
+			--ArkInventory.Output( "unwearable fail 1: ", ArkInventoryRules.Object.h )
+			return false
+		end
+	end
+	
+	if ( ArkInventory.Const.ClassArmor[ArkInventoryRules.Object.info.itemsubtypeid] and not ArkInventory.Const.ClassArmor[ArkInventoryRules.Object.info.itemsubtypeid][class] ) then
+		if wearable then
+			--ArkInventory.Output( "wearable fail 3: ", ArkInventoryRules.Object.h )
+			return false
+		else
+			--ArkInventory.Output( "unwearable pass 2: ", ArkInventoryRules.Object.h )
+			return true
+		end
+	end
+	
+	
+	if wearable then
+		--ArkInventory.Output( "wearable fail final: ", ArkInventoryRules.Object.h )
+	else
+		--ArkInventory.Output( "unwearable fail final: ", ArkInventoryRules.Object.h, " / ", ArkInventory.Const.ClassArmor[ArkInventoryRules.Object.info.itemsubtypeid] )
+	end
+	
+	return false
+	
+end
+
+function ArkInventoryRules.System.boolean_unwearable( )
+	return ArkInventoryRules.System.internal_unwearable( )
+end
+
+function ArkInventoryRules.System.boolean_wearable( )
+	return ArkInventoryRules.System.internal_unwearable( true )
 end
 
 function ArkInventoryRules.System.boolean_count( ... )
@@ -1680,7 +1774,7 @@ function ArkInventoryRules.System.boolean_itemstat( ... )
 	end
 	
 	local e = string.trim( ArkInventoryRules.Object.info.equiploc )
-	if e == "" or e == "INVTYPE_BAG" then return false end
+	if e == "" or ArkInventoryRules.Object.info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.PARENT then return false end
 	
 	local fn = "itemstat"
 	
@@ -2186,6 +2280,10 @@ ArkInventoryRules.Environment = {
 	usable = ArkInventoryRules.System.boolean_usable,
 	use = ArkInventoryRules.System.boolean_usable,
 	useable = ArkInventoryRules.System.boolean_usable,
+	
+	wearable = ArkInventoryRules.System.boolean_wearable,
+	
+	unwearable = ArkInventoryRules.System.boolean_unwearable,
 	
 	count = ArkInventoryRules.System.boolean_count,
 	

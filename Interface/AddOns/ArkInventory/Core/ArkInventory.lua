@@ -913,6 +913,10 @@ ArkInventory.Global = { -- globals
 		
 	},
 	
+	Queue = {
+		LBS = { },
+	},
+	
 	Options = {
 		
 		Location = ArkInventory.Const.Location.Bag,
@@ -1895,8 +1899,9 @@ ArkInventory.Const.DatabaseDefaults.global = {
 			["EVENT_ARKINV_AUCTION_UPDATE_BUCKET"] = { default = 2 },
 			["EVENT_ARKINV_AVG_ITEM_LEVEL_UPDATE_BUCKET"] = { default = 1 },
 			["EVENT_ARKINV_BAG_RESCAN_BUCKET"] = { default = 2 },
-			["EVENT_ARKINV_BAG_UPDATE_BUCKET"] = { },
-			["EVENT_ARKINV_BAG_UPDATE_COOLDOWN_BUCKET"] = { },
+			["EVENT_ARKINV_BAG_UPDATE_BUCKET"] = { default = 0.2 },
+			["EVENT_ARKINV_ITEM_UPDATE_BUCKET"] = { default = 0.2 },
+			["EVENT_ARKINV_BAG_UPDATE_COOLDOWN_BUCKET"] = { default = 0.4 },
 			["EVENT_ARKINV_BANK_LEAVE_BUCKET"] = {  default = 0.3 },
 			["EVENT_ARKINV_CHANGER_UPDATE_BUCKET"] = { default = 1 },
 			["EVENT_ARKINV_COLLECTION_HEIRLOOM_UPDATE_BUCKET"] = { default = 1 },
@@ -1912,13 +1917,13 @@ ArkInventory.Const.DatabaseDefaults.global = {
 			["EVENT_ARKINV_MAIL_UPDATE_BUCKET"] = { default = 2 },
 			["EVENT_ARKINV_MERCHANT_LEAVE_BUCKET"] = { default = 0.3 },
 			["EVENT_ARKINV_TRANSMOG_LEAVE_BUCKET"] = { default = 0.3 },
-			["EVENT_ARKINV_PLAYER_EQUIPMENT_CHANGED_BUCKET"] = { 0.5 },
+			["EVENT_ARKINV_PLAYER_EQUIPMENT_CHANGED_BUCKET"] = { },
 			["EVENT_ARKINV_PLAYER_MONEY_BUCKET"] = { default = 1 },
 			["EVENT_ARKINV_QUEST_UPDATE_BUCKET"] = { default = 4 },
 			["EVENT_ARKINV_TOOLTIP_REBUILD_QUEUE_UPDATE_BUCKET"] = { default = 1 },
 			["EVENT_ARKINV_VAULT_LEAVE_BUCKET"] = { default = 0.3 },
 			["EVENT_ARKINV_VAULT_UPDATE_BUCKET"] = { default = 1.5 },
-			["EVENT_ARKINV_VAULT_TABS_UPDATE_BUCKET"] = { default = 0.5 },
+			["EVENT_ARKINV_VAULT_TABS_UPDATE_BUCKET"] = { },
 			["EVENT_ARKINV_VOID_UPDATE_BUCKET"] = { },
 			["EVENT_ARKINV_ZONE_CHANGED_BUCKET"] = { default = 5 },
 			["EVENT_ARKINV_BACKPACK_TOKEN_UPDATE_BUCKET"] = { default = 1 },
@@ -1941,6 +1946,9 @@ ArkInventory.Const.DatabaseDefaults.global = {
 			},
 			["itemlock"] = {
 				["delay"] = 0.6,
+			},
+			["interaction"] = {
+				["enable"] = true,
 			},
 		},
 		["tooltip"] = {
@@ -2712,7 +2720,7 @@ function ArkInventory.OnInitialize( )
 		{ "PLAYER_LEAVING_WORLD", "EVENT_ARKINV_PLAYER_LEAVE" }, -- when the player logs out or the UI is reloaded.
 		{ "PLAYER_REGEN_DISABLED", "EVENT_ARKINV_COMBAT_ENTER" }, -- player entered combat
 		{ "PLAYER_REGEN_ENABLED", "EVENT_ARKINV_COMBAT_LEAVE" }, -- player left combat
---		{ "PLAYER_LEVEL_UP", "EVENT_ARKINV_PLAYER_LEVEL_UP" }, -- player levelled up
+		{ "PLAYER_LEVEL_UP", "EVENT_ARKINV_PLAYER_LEVEL_UP" }, -- player levelled up
 --		{ "UNIT_POWER", "EVENT_ARKINV_UNIT_POWER" },
 		{ "ACTIVE_TALENT_GROUP_CHANGED", "EVENT_ARKINV_TALENT_CHANGED", ArkInventory.Const.ENUM.EXPANSION.WRATH },
 --		{ "UI_SCALE_CHANGED", "" },
@@ -2735,7 +2743,7 @@ function ArkInventory.OnInitialize( )
 --		{ "BAG_SLOT_FLAGS_UPDATED", "EVENT_ARKINV_BAG_UPDATE" },
 		{ "BAG_UPDATE", "EVENT_ARKINV_BAG_UPDATE" },
 		{ "BAG_UPDATE_COOLDOWN", "EVENT_ARKINV_BAG_UPDATE_COOLDOWN" },
---		{ "BAG_UPDATE_DELAYED", "EVENT_ARKINV_BAG_UPDATE_DELAYED" },
+--		{ "BAG_UPDATE_DELAYED", "EVENT_ARKINV_BAG_UPDATE_DELAYED" }, -- not overly helpful
 --		{ "ITEM_LOCKED", "EVENT_ARKINV_ITEM_LOCK_CHANGED" },
 --		{ "ITEM_UNLOCKED", "EVENT_ARKINV_ITEM_LOCK_CHANGED" },
 		{ "ITEM_LOCK_CHANGED", "EVENT_ARKINV_ITEM_LOCK_CHANGED" },
@@ -2852,6 +2860,8 @@ function ArkInventory.OnInitialize( )
 --		{ "ZONE_CHANGED_INDOORS", "EVENT_ARKINV_ZONE_CHANGED" },
 --		{ "ZONE_CHANGED_NEW_AREA", "EVENT_ARKINV_ZONE_CHANGED" },
 		
+		{ "PLAYER_INTERACTION_MANAGER_FRAME_SHOW", "EVENT_ARKINV_PLAYER_INTERACTION_SHOW", not ArkInventory.db.option.bugfix.interaction.enable and ArkInventory.Const.ENUM.EXPANSION.DRAGONFLIGHT },
+		{ "PLAYER_INTERACTION_MANAGER_FRAME_HIDE", "EVENT_ARKINV_PLAYER_INTERACTION_HIDE", not ArkInventory.db.option.bugfix.interaction.enable and ArkInventory.Const.ENUM.EXPANSION.DRAGONFLIGHT },
 	}
 	
 end
@@ -9306,6 +9316,14 @@ function ArkInventory.Frame_Item_OnDragStart_MountJournal( frame )
 end
 
 function ArkInventory.Frame_Item_Update( loc_id, bag_id, slot_id, lockevent )
+	local id = ArkInventory.LocationEncode( loc_id, bag_id, slot_id )
+	--ArkInventory.Output( "add: ", loc_id, "-", bag_id, "-", slot_id )
+	ArkInventory:SendMessage( "EVENT_ARKINV_ITEM_UPDATE_BUCKET", id )
+end
+
+function ArkInventory.Frame_Item_Update_Instant( loc_id, bag_id, slot_id, lockevent )
+	
+	--ArkInventory.Output( "draw: ", loc_id, "-", bag_id, "-", slot_id )
 	
 	local framename, frame = ArkInventory.ContainerItemNameGet( loc_id, bag_id, slot_id )
 	
@@ -9346,7 +9364,6 @@ function ArkInventory.Frame_Item_Update( loc_id, bag_id, slot_id, lockevent )
 		ArkInventory.Frame_Item_Update_Heirloom( frame )
 	end
 	
-	local codex = ArkInventory.GetLocationCodex( loc_id )
 	ArkInventory.Frame_Item_Update_List( frame, codex.style.window.list )
 	
 	ArkInventory.Frame_Item_Update_Cooldown( frame, codex )
@@ -9365,7 +9382,10 @@ function ArkInventory.Frame_Item_Update( loc_id, bag_id, slot_id, lockevent )
 		C_Timer.After(
 			ArkInventory.db.option.bugfix.itemlock.delay,
 			function( )
-				ArkInventory.Frame_Item_Update( loc_id, bag_id, slot_id )
+				ArkInventory.Frame_Item_Update_Instant( loc_id, bag_id, slot_id )
+				--local id = ArkInventory.LocationEncode( loc_id, bag_id, slot_id )
+				--ArkInventory.Output( "lockdelay: ", loc_id, "-", bag_id, "-", slot_id )
+				--ArkInventory:SendMessage( "EVENT_ARKINV_ITEM_UPDATE_BUCKET", id )
 			end
 		)
 	end
@@ -10955,10 +10975,10 @@ function ArkInventory.HookPlayerInteractionShow( ... )
 		
 		if index == Enum.PlayerInteractionType.Banker then
 			ArkInventory:EVENT_ARKINV_BANK_ENTER( event )
-			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bank ) then return end
+			if ArkInventory.db.option.bugfix.interaction.enable and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bank ) then return end
 		elseif index == Enum.PlayerInteractionType.GuildBanker then
 			ArkInventory:EVENT_ARKINV_VAULT_ENTER( event )
-			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Vault ) then return end
+			if ArkInventory.db.option.bugfix.interaction.enable and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Vault ) then return end
 		elseif index == Enum.PlayerInteractionType.MailInfo then
 			ArkInventory:EVENT_ARKINV_MAIL_ENTER( event )
 		elseif index == Enum.PlayerInteractionType.VoidStorageBanker then
@@ -10980,7 +11000,9 @@ function ArkInventory.HookPlayerInteractionShow( ... )
 	end
 	
 	
-	return ArkInventory.hooks[PlayerInteractionFrameManager].ShowFrame( ... )
+	if ArkInventory.db.option.bugfix.interaction.enable then
+		return ArkInventory.hooks[PlayerInteractionFrameManager].ShowFrame( ... )
+	end
 	
 end
 
@@ -10995,10 +11017,10 @@ function ArkInventory.HookPlayerInteractionHide( ... )
 		
 		if index == Enum.PlayerInteractionType.Banker then
 			ArkInventory:EVENT_ARKINV_BANK_LEAVE( event )
-			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bank ) then return end
+			if ArkInventory.db.option.bugfix.interaction.enable and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bank ) then return end
 		elseif index == Enum.PlayerInteractionType.GuildBanker then
 			ArkInventory:EVENT_ARKINV_VAULT_LEAVE( event )
-			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Vault ) then return end
+			if ArkInventory.db.option.bugfix.interaction.enable and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Vault ) then return end
 		elseif index == Enum.PlayerInteractionType.MailInfo then
 			ArkInventory:EVENT_ARKINV_MAIL_LEAVE( event )
 		elseif index == Enum.PlayerInteractionType.VoidStorageBanker then
@@ -11020,7 +11042,9 @@ function ArkInventory.HookPlayerInteractionHide( ... )
 	end
 	
 	
-	return ArkInventory.hooks[PlayerInteractionFrameManager].HideFrame( ... )
+	if ArkInventory.db.option.bugfix.interaction.enable then
+		return ArkInventory.hooks[PlayerInteractionFrameManager].HideFrame( ... )
+	end
 	
 end
 
@@ -11202,8 +11226,12 @@ function ArkInventory.BlizzardAPIHook( disable, reload )
 		
 		-- bank functions (dragonflight onwards as it now opens via the ui panels)
 		if ArkInventory.ClientCheck( ArkInventory.Const.ENUM.EXPANSION.DRAGONFLIGHT ) then
-			ArkInventory:RawHook( PlayerInteractionFrameManager, "ShowFrame", ArkInventory.HookPlayerInteractionShow, true )
-			ArkInventory:RawHook( PlayerInteractionFrameManager, "HideFrame", ArkInventory.HookPlayerInteractionHide, true )
+			if ArkInventory.db.option.bugfix.interaction.enable then
+				ArkInventory:RawHook( PlayerInteractionFrameManager, "ShowFrame", ArkInventory.HookPlayerInteractionShow, true )
+				ArkInventory:RawHook( PlayerInteractionFrameManager, "HideFrame", ArkInventory.HookPlayerInteractionHide, true )
+			else
+				ArkInventory.OutputWarning( "You have disabled overriding the PlayerInteractionFrameManager in Advanced > Workarounds" )
+			end
 		end
 		
 		
@@ -12273,4 +12301,32 @@ function ArkInventory.SetCursor( cursor )
 	else
 		ResetCursor( )
 	end
+end
+
+
+local factor_slot = 1000
+local factor_bag = 100
+local factor_loc = 10000
+
+function ArkInventory.LocationEncode( loc_id, bag_id, slot_id )
+	return ( slot_id or factor_slot - 1 ) + ( ( bag_id or factor_bag - 1 ) * factor_slot ) + ( ( loc_id or factor_loc - 1 ) * factor_slot * factor_bag )
+end
+
+-- /dump ArkInventory.LocationDecode( 102005 )
+function ArkInventory.LocationDecode( id )
+	
+	local loc_id = ( id or factor_slot * factor_bag * factor_loc - 1 )
+	local slot_id = mod( loc_id, factor_slot )
+	loc_id = ( loc_id - slot_id ) / factor_slot
+	local bag_id = mod( loc_id, factor_bag )
+	loc_id = ( loc_id - bag_id ) / factor_bag
+	
+	--ArkInventory.Output( "id ", loc_id, "-", bag_id, "-", slot_id )
+	
+	if slot_id == 999 then slot_id = nil end
+	if bag_id == 99 then bag_id = nil end
+	if loc_id == 9999 then loc_id = nil end
+	
+	return loc_id, bag_id, slot_id
+	
 end

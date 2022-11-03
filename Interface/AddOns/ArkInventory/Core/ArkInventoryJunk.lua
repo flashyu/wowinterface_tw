@@ -28,8 +28,7 @@ function ArkInventory.JunkCheck( i, codex )
 	if i and i.h then
 		
 		local info = i.info or ArkInventory.GetObjectInfo( i.h )
-		
-		if info.ready then
+		if info.ready and info.id then
 			
 			if IsAddOnLoaded( "Scrap" ) and Scrap then
 				
@@ -49,10 +48,9 @@ function ArkInventory.JunkCheck( i, codex )
 					isJunk = true
 				end
 				
-		  elseif IsAddOnLoaded( "Peddler" ) and PeddlerAPI then
+			elseif IsAddOnLoaded( "Peddler" ) and PeddlerAPI then
 				
-				local itemID, uniqueItemID = PeddlerAPI.getUniqueItemID( i.blizzard_id, i.slot_id )
-				if PeddlerAPI.itemIsToBeSold( itemID, uniqueItemID ) then
+				if PeddlerAPI.itemIsToBeSold( info.id ) then
 					isJunk = true
 				end
 				
@@ -61,11 +59,7 @@ function ArkInventory.JunkCheck( i, codex )
 				if not isJunk then
 					local cat_id = ArkInventory.ItemCategoryGet( i )
 					local cat_type, cat_num = ArkInventory.CategoryIdSplit( cat_id )
-					
 					isJunk = i.q <= ArkInventory.db.option.junk.raritycutoff and codex.catset.category.junk[cat_type][cat_num] == true
---					if isJunk then
---						ArkInventory.Output( i.h, " = ", cat_type, "!", cat_num )
---					end
 				end
 				
 			end

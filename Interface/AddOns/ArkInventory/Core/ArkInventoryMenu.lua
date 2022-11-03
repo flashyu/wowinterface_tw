@@ -1306,18 +1306,19 @@ function ArkInventory.MenuItemOpen( frame )
 					-- start changes !!!
 					local disabled = false
 					
+					local txt = string.format( "%s: %s%s%s", ArkInventory.Localise["DEFAULT"], LIGHTYELLOW_FONT_COLOR_CODE, cat2.fullname, FONT_COLOR_CODE_CLOSE )
 					local desc = ""
 					if cat0.type_code == "RULE" then
 						desc = string.format( ArkInventory.Localise["MENU_ITEM_ASSIGN_CURRENT_DESC"], itemname, cat0.fullname )
 						disabled = true
 					else
-						desc = string.format( ArkInventory.Localise["MENU_ITEM_ASSIGN_RESET_DESC"], itemname, cat0.fullname )
+						desc = string.format( ArkInventory.Localise["MENU_ITEM_ASSIGN_RESET_DESC"], itemname, cat2.fullname )
 						disabled = false
 					end
 					
 					ArkInventory.Lib.Dewdrop:AddLine(
-						"text", string.format( "%s: %s%s%s", ArkInventory.Localise["DEFAULT"], LIGHTYELLOW_FONT_COLOR_CODE, cat2.fullname, FONT_COLOR_CODE_CLOSE ),
-						"tooltipTitle", cat2.fullname,
+						"text", txt,
+						"tooltipTitle", txt,
 						"tooltipText", desc,
 						"icon", icon,
 						"hasArrow", true,
@@ -1808,7 +1809,7 @@ function ArkInventory.MenuItemCategoryAssignOpen( offset, level, value, i, loc_i
 			if req_id == "0" then
 				
 				-- from level 1
-				-- youve overridden the default and assigned a category
+				-- you have overridden the default and assigned a category
 				-- you cannot re-assign it from here
 				
 				desc = string.format( ArkInventory.Localise["MENU_ITEM_ASSIGN_CURRENT_DESC"], itemname, cat0.fullname )
@@ -1823,7 +1824,7 @@ function ArkInventory.MenuItemCategoryAssignOpen( offset, level, value, i, loc_i
 					desc = string.format( ArkInventory.Localise["MENU_ITEM_ASSIGN_CURRENT_DESC"], itemname, cat0.fullname )
 					disabled = true
 				else
-					desc = string.format( ArkInventory.Localise["MENU_ITEM_ASSIGN_RESET_DESC"], itemname, cat0.fullname )
+					desc = string.format( ArkInventory.Localise["MENU_ITEM_ASSIGN_RESET_DESC"], itemname, cat2.fullname )
 					disabled = false
 				end
 				

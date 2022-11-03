@@ -3,7 +3,6 @@ WeakAurasSaved = {
 	["dynamicIconCache"] = {
 	},
 	["editor_tab_spaces"] = 4,
-	["editor_font_size"] = 12,
 	["login_squelch_time"] = 10,
 	["lastArchiveClear"] = 1664034415,
 	["minimap"] = {
@@ -12,6 +11,13 @@ WeakAurasSaved = {
 	["lastUpgrade"] = 1666888036,
 	["dbVersion"] = 59,
 	["registered"] = {
+	},
+	["editor_font_size"] = 12,
+	["frame"] = {
+		["xOffset"] = -1028.77099609375,
+		["yOffset"] = -23.9998779296875,
+		["height"] = 711.2225341796875,
+		["width"] = 909.4918823242188,
 	},
 	["displays"] = {
 		["[Druid] Faerie Fire Fading Icon"] = {
@@ -49,16 +55,16 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["subeventSuffix"] = "_CAST_START",
-						["matchesShowOn"] = "showOnActive",
+						["subeventPrefix"] = "SPELL",
 						["debuffType"] = "HARMFUL",
 						["use_remaining"] = false,
 						["type"] = "aura2",
-						["unevent"] = "auto",
 						["auraspellids"] = {
 							"770", -- [1]
 							"16857", -- [2]
 						},
-						["duration"] = "1",
+						["unevent"] = "auto",
+						["use_unit"] = true,
 						["form"] = {
 							["multi"] = {
 								true, -- [1]
@@ -76,10 +82,10 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["use_unit"] = true,
+						["duration"] = "1",
 						["remOperator"] = "<=",
 						["useName"] = true,
-						["subeventPrefix"] = "SPELL",
+						["matchesShowOn"] = "showOnActive",
 						["useRem"] = true,
 					},
 					["untrigger"] = {
@@ -94,20 +100,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -119,7 +125,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_size"] = 1,
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -128,7 +134,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.5,
@@ -145,8 +151,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = true,
 					["glowXOffset"] = 0,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -180,45 +186,45 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["zoom"] = 0.29,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["parent"] = "[WotLK] Balance Druid (Top Group)",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["cooldown"] = false,
-			["conditions"] = {
-			},
-			["config"] = {
-			},
-			["frameStrata"] = 1,
 			["cooldownTextDisabled"] = false,
-			["auto"] = false,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Faerie Fire Fading Icon",
-			["width"] = 40,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["uid"] = "kncB(7LDLJD",
-			["inverse"] = false,
-			["selfPoint"] = "CENTER",
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_FaerieFire",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
+			},
+			["regionType"] = "icon",
+			["parent"] = "[WotLK] Balance Druid (Top Group)",
+			["selfPoint"] = "CENTER",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_FaerieFire",
+			["uid"] = "kncB(7LDLJD",
+			["frameStrata"] = 1,
+			["zoom"] = 0.29,
+			["auto"] = false,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Faerie Fire Fading Icon",
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["width"] = 40,
+			["useCooldownModRate"] = true,
+			["config"] = {
+			},
+			["inverse"] = false,
+			["xOffset"] = 0,
+			["conditions"] = {
+			},
+			["cooldown"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
 			},
 		},
 		["冰橙监控小德资源大光环"] = {
@@ -231,9 +237,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -246,15 +252,15 @@ WeakAurasSaved = {
 						["unit"] = "player",
 						["names"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
+						["use_unit"] = true,
 						["spellIds"] = {
 						},
-						["useExactSpellId"] = false,
+						["subeventPrefix"] = "SPELL",
 						["auraspellids"] = {
 							"48265", -- [1]
 						},
-						["subeventPrefix"] = "SPELL",
-						["use_unit"] = true,
+						["useExactSpellId"] = false,
+						["subeventSuffix"] = "_CAST_START",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -264,11 +270,11 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "unit",
 						["use_hostility"] = false,
-						["unit"] = "target",
+						["hostility"] = "hostile",
 						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["hostility"] = "hostile",
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -282,22 +288,22 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "grow",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
 					["type"] = "preset",
 					["easeType"] = "none",
 					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
 					["preset"] = "rotateClockwise",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "shrink",
+					["easeStrength"] = 3,
 				},
 			},
 			["desaturate"] = true,
@@ -319,13 +325,13 @@ WeakAurasSaved = {
 					["model_y"] = 1,
 					["model_st_rx"] = 270,
 					["rotation"] = 0,
-					["model_x"] = -0.3,
+					["model_alpha"] = 1,
 					["model_st_tx"] = 0,
 					["model_st_ry"] = 0,
 					["type"] = "submodel",
 					["model_visible"] = false,
 					["model_st_tz"] = 0,
-					["model_alpha"] = 1,
+					["model_x"] = -0.3,
 				}, -- [2]
 			},
 			["height"] = 230,
@@ -359,13 +365,13 @@ WeakAurasSaved = {
 			["mirror"] = false,
 			["regionType"] = "texture",
 			["blendMode"] = "ADD",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["discrete_rotation"] = 0,
 			["parent"] = "冰橙监控小德资源装饰环",
 			["texture"] = "166748",
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -374,19 +380,19 @@ WeakAurasSaved = {
 			["semver"] = "1.0.10",
 			["tocversion"] = 30400,
 			["id"] = "冰橙监控小德资源大光环",
+			["frameStrata"] = 2,
+			["alpha"] = 1,
+			["width"] = 230,
+			["config"] = {
+			},
+			["uid"] = "tFSNMeAkAdz",
+			["anchorFrameType"] = "SCREEN",
 			["color"] = {
 				0.592156862745098, -- [1]
 				0.2745098039215687, -- [2]
 				0.03137254901960784, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 2,
-			["width"] = 230,
-			["anchorFrameType"] = "SCREEN",
-			["config"] = {
-			},
-			["uid"] = "tFSNMeAkAdz",
-			["alpha"] = 1,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -404,7 +410,7 @@ WeakAurasSaved = {
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["discrete_rotation"] = 0,
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 		},
 		["冰橙监控小德低吼CD"] = {
 			["iconSource"] = -1,
@@ -417,9 +423,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -432,12 +438,12 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["debuffType"] = "HELPFUL",
-						["use_unit"] = true,
+						["use_absorbMode"] = true,
 						["type"] = "spell",
 						["unit"] = "player",
 						["subeventSuffix"] = "_CAST_START",
-						["subeventPrefix"] = "SPELL",
-						["use_itemName"] = true,
+						["use_genericShowOn"] = true,
+						["unevent"] = "auto",
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
 						["realSpellName"] = "低吼",
@@ -445,10 +451,10 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["spellName"] = 6795,
-						["unevent"] = "auto",
-						["use_genericShowOn"] = true,
+						["use_itemName"] = true,
+						["subeventPrefix"] = "SPELL",
 						["use_track"] = true,
-						["use_absorbMode"] = true,
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -457,14 +463,14 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["use_form"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 						["type"] = "unit",
 						["use_unit"] = true,
 						["form"] = {
 							["single"] = 1,
 						},
 						["event"] = "Stance/Form/Aura",
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -472,10 +478,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["use_unit"] = true,
+						["debuffType"] = "HELPFUL",
 						["unit"] = "target",
 						["event"] = "Unit Characteristics",
-						["debuffType"] = "HELPFUL",
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 					},
@@ -490,12 +496,12 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -503,8 +509,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["desaturate"] = false,
@@ -546,7 +552,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["type"] = "subborder",
-					["border_size"] = 2,
+					["border_offset"] = 0,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -557,7 +563,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 				}, -- [3]
 			},
 			["height"] = 45,
@@ -576,7 +582,11 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_vehicleUi"] = false,
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
 				["spec"] = {
 					["single"] = 3,
 					["multi"] = {
@@ -584,42 +594,26 @@ WeakAurasSaved = {
 						[3] = true,
 					},
 				},
-				["use_spec"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 			},
 			["source"] = "import",
-			["uid"] = "LPy0YCWp34d",
-			["icon"] = true,
+			["config"] = {
+			},
+			["selfPoint"] = "CENTER",
 			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
-			["cooldown"] = true,
-			["displayIcon"] = "",
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
 			},
-			["zoom"] = 0,
-			["anchorFrameType"] = "SCREEN",
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德低吼CD",
-			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["width"] = 45,
-			["useCooldownModRate"] = true,
-			["config"] = {
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["inverse"] = true,
-			["parent"] = "冰橙监控小德CD组 ",
 			["conditions"] = {
 				{
 					["check"] = {
@@ -647,23 +641,35 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["frameStrata"] = 1,
+			["width"] = 45,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德低吼CD",
+			["useCooldownModRate"] = true,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
+			["uid"] = "LPy0YCWp34d",
+			["inverse"] = true,
+			["icon"] = true,
+			["displayIcon"] = "",
+			["cooldown"] = true,
+			["parent"] = "冰橙监控小德CD组 ",
 		},
 		["冰橙监控小德猛虎之怒CD"] = {
 			["iconSource"] = -1,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -676,9 +682,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -691,12 +697,12 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["unit"] = "player",
-						["type"] = "aura2",
-						["names"] = {
-						},
 						["auranames"] = {
 							"猛虎之怒", -- [1]
 						},
+						["names"] = {
+						},
+						["type"] = "aura2",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -710,21 +716,21 @@ WeakAurasSaved = {
 						},
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
-						["unit"] = "player",
+						["use_unit"] = true,
 						["unevent"] = "auto",
 						["subeventPrefix"] = "SPELL",
-						["use_absorbMode"] = true,
+						["duration"] = "1",
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
 						["realSpellName"] = "猛虎之怒",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["spellName"] = 9845,
 						["subeventSuffix"] = "_CAST_START",
-						["duration"] = "1",
+						["spellName"] = 9845,
+						["use_absorbMode"] = true,
 						["use_track"] = true,
-						["use_unit"] = true,
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -733,14 +739,14 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["use_form"] = true,
 						["use_unit"] = true,
 						["form"] = {
 							["single"] = 3,
 						},
 						["event"] = "Stance/Form/Aura",
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
@@ -748,10 +754,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -801,7 +807,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["border_offset"] = 0,
-					["type"] = "subborder",
+					["border_size"] = 2,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -812,7 +818,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_size"] = 2,
+					["type"] = "subborder",
 				}, -- [3]
 				{
 					["glowFrequency"] = 0.25,
@@ -829,8 +835,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = false,
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -851,36 +857,32 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_spec"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_vehicleUi"] = false,
+				["zoneIds"] = "",
 				["spec"] = {
 					["single"] = 3,
 					["multi"] = {
 						[3] = true,
 					},
 				},
-				["zoneIds"] = "",
+				["use_vehicleUi"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["config"] = {
-			},
-			["xOffset"] = 70,
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["regionType"] = "icon",
+			["uid"] = "bs9UI3Stn6T",
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -888,14 +890,35 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["regionType"] = "icon",
+			["parent"] = "冰橙监控小德CD组 ",
+			["cooldown"] = true,
+			["displayIcon"] = 136121,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德猛虎之怒CD",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["width"] = 45,
+			["zoom"] = 0,
+			["config"] = {
+			},
+			["inverse"] = true,
+			["xOffset"] = 70,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -936,28 +959,11 @@ WeakAurasSaved = {
 					},
 				}, -- [3]
 			},
-			["parent"] = "冰橙监控小德CD组 ",
-			["zoom"] = 0,
-			["width"] = 45,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德猛虎之怒CD",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["uid"] = "bs9UI3Stn6T",
-			["inverse"] = true,
-			["icon"] = true,
-			["displayIcon"] = 136121,
-			["cooldown"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
+			["icon"] = true,
 		},
 		["冰橙监控小德施法条"] = {
 			["sparkWidth"] = 10,
@@ -971,9 +977,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -991,31 +997,31 @@ WeakAurasSaved = {
 						["type"] = "unit",
 						["unevent"] = "auto",
 						["event"] = "Cast",
-						["use_unit"] = true,
+						["hand"] = "ranged",
 						["spellIds"] = {
 						},
-						["duration"] = "1",
+						["unit"] = "player",
+						["subeventSuffix"] = "_CAST_START",
 						["names"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
-						["unit"] = "player",
-						["hand"] = "ranged",
+						["duration"] = "1",
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 					},
 				}, -- [1]
 				{
 					["trigger"] = {
-						["use_unit"] = true,
+						["debuffType"] = "HELPFUL",
 						["use_form"] = true,
 						["type"] = "unit",
-						["use_inverse"] = true,
-						["unit"] = "player",
 						["form"] = {
 							["single"] = 3,
 						},
+						["unit"] = "player",
+						["use_inverse"] = true,
 						["event"] = "Stance/Form/Aura",
-						["debuffType"] = "HELPFUL",
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 					},
@@ -1023,10 +1029,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -1049,7 +1055,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["desaturate"] = false,
-			["width"] = 335,
+			["anchorFrameType"] = "SCREEN",
 			["sparkOffsetY"] = 0,
 			["subRegions"] = {
 				{
@@ -1061,7 +1067,7 @@ WeakAurasSaved = {
 				{
 					["border_offset"] = 0,
 					["border_anchor"] = "bar",
-					["type"] = "subborder",
+					["border_size"] = 2,
 					["border_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -1070,33 +1076,33 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_size"] = 2,
+					["type"] = "subborder",
 				}, -- [3]
 				{
 					["text_text_format_t_time_precision"] = 1,
-					["text_text_format_t_time_dynamic_threshold"] = 60,
+					["text_shadowXOffset"] = 1,
 					["text_text_format_t_time_legacy_floor"] = true,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["anchorXOffset"] = 0,
+					["text_text_format_p_time_mod_rate"] = true,
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
-					["text_text_format_p_time_mod_rate"] = true,
-					["text_text"] = "%p/%t",
+					["anchorYOffset"] = 0,
 					["text_selfPoint"] = "AUTO",
 					["text_automaticWidth"] = "Auto",
 					["text_fixedWidth"] = 64,
 					["text_text_format_t_time_format"] = 0,
-					["anchorYOffset"] = 0,
+					["text_text_format_p_time_legacy_floor"] = true,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
 					["text_text_format_t_format"] = "timed",
-					["text_text_format_n_format"] = "none",
+					["text_text_format_p_time_precision"] = 1,
 					["text_text_format_p_format"] = "timed",
 					["type"] = "subtext",
-					["text_visible"] = true,
+					["text_fontType"] = "None",
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -1108,17 +1114,38 @@ WeakAurasSaved = {
 					["text_shadowYOffset"] = -1,
 					["text_text_format_t_time_mod_rate"] = true,
 					["text_wordWrap"] = "WordWrap",
-					["text_fontType"] = "None",
+					["text_visible"] = true,
 					["text_anchorPoint"] = "INNER_CENTER",
-					["text_text_format_p_time_precision"] = 1,
-					["text_text_format_p_time_legacy_floor"] = true,
+					["text_text_format_n_format"] = "none",
+					["text_text"] = "%p/%t",
 					["text_fontSize"] = 15,
-					["anchorXOffset"] = 0,
-					["text_shadowXOffset"] = 1,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["text_text_format_t_time_dynamic_threshold"] = 60,
 				}, -- [4]
 			},
 			["height"] = 15,
-			["icon"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+			},
 			["load"] = {
 				["use_petbattle"] = false,
 				["use_never"] = true,
@@ -1135,16 +1162,16 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_vehicleUi"] = false,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 				["class"] = {
 					["single"] = "DRUID",
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
@@ -1158,13 +1185,13 @@ WeakAurasSaved = {
 			["parent"] = "冰橙监控小德资源组",
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
 			},
-			["sparkOffsetX"] = 0,
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 			["smoothProgress"] = true,
 			["useAdjustededMin"] = false,
 			["regionType"] = "aurabar",
@@ -1176,30 +1203,30 @@ WeakAurasSaved = {
 			},
 			["uid"] = "0aO8WVpezGz",
 			["icon_side"] = "RIGHT",
-			["id"] = "冰橙监控小德施法条",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["sparkHeight"] = 30,
 			["texture"] = "Solid",
-			["frameStrata"] = 1,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["alpha"] = 1,
+			["zoom"] = 0,
 			["spark"] = false,
 			["tocversion"] = 30400,
 			["sparkHidden"] = "NEVER",
 			["auto"] = true,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
+			["frameStrata"] = 1,
+			["width"] = 335,
+			["id"] = "冰橙监控小德施法条",
 			["config"] = {
 			},
 			["inverse"] = false,
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["sparkOffsetX"] = 0,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 				{
 					["check"] = {
 						["trigger"] = 1,
 						["variable"] = "expirationTime",
-						["value"] = "1",
 						["op"] = ">=",
+						["value"] = "1",
 					},
 					["changes"] = {
 						{
@@ -1217,8 +1244,8 @@ WeakAurasSaved = {
 					["check"] = {
 						["trigger"] = 1,
 						["variable"] = "expirationTime",
-						["value"] = "1",
 						["op"] = "<",
+						["value"] = "1",
 					},
 					["changes"] = {
 						{
@@ -1262,28 +1289,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-			},
+			["icon"] = false,
 		},
 		["[WotLK] Balance Druid (Right Group)"] = {
 			["grow"] = "DOWN",
@@ -1312,15 +1318,15 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["debuffType"] = "HELPFUL",
+						["subeventPrefix"] = "SPELL",
 						["type"] = "aura2",
 						["spellIds"] = {
 						},
@@ -1329,7 +1335,7 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["event"] = "Health",
-						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -1340,88 +1346,9 @@ WeakAurasSaved = {
 			["selfPoint"] = "TOP",
 			["align"] = "CENTER",
 			["stagger"] = 0,
-			["frameStrata"] = 1,
-			["limit"] = 5,
-			["subRegions"] = {
-			},
-			["fullCircle"] = true,
-			["anchorPoint"] = "CENTER",
-			["load"] = {
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["rotation"] = 0,
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["internalVersion"] = 59,
-			["source"] = "import",
-			["useLimit"] = false,
-			["scale"] = 1,
-			["space"] = 5,
-			["border"] = false,
-			["anchorFrameFrame"] = "WeakAuras:[Druid] Eclipse (Missing)",
-			["regionType"] = "dynamicgroup",
-			["borderSize"] = 2,
-			["sort"] = "none",
-			["config"] = {
-			},
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["constantFactor"] = "RADIUS",
-			["animate"] = false,
-			["borderOffset"] = 4,
-			["uid"] = "NDwIGnfMNSw",
-			["tocversion"] = 30400,
-			["id"] = "[WotLK] Balance Druid (Right Group)",
-			["authorOptions"] = {
-			},
 			["gridWidth"] = 5,
-			["anchorFrameType"] = "SELECTFRAME",
-			["borderEdge"] = "Square Full White",
-			["borderInset"] = 1,
-			["parent"] = "[WotLK] Balance Druid (Main Group)",
-			["arcLength"] = 360,
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
+			["sort"] = "none",
+			["subRegions"] = {
 			},
 			["sortHybridTable"] = {
 				["[Druid] Barkskin"] = false,
@@ -1433,6 +1360,85 @@ WeakAurasSaved = {
 				["[Druid] Nature's Grasp CD"] = false,
 				["[Druid] Barkskin CD"] = false,
 			},
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["fullCircle"] = true,
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["internalVersion"] = 59,
+			["source"] = "import",
+			["rotation"] = 0,
+			["scale"] = 1,
+			["arcLength"] = 360,
+			["border"] = false,
+			["borderEdge"] = "Square Full White",
+			["regionType"] = "dynamicgroup",
+			["borderSize"] = 2,
+			["limit"] = 5,
+			["borderInset"] = 1,
+			["parent"] = "[WotLK] Balance Druid (Main Group)",
+			["constantFactor"] = "RADIUS",
+			["authorOptions"] = {
+			},
+			["borderOffset"] = 4,
+			["uid"] = "NDwIGnfMNSw",
+			["tocversion"] = 30400,
+			["id"] = "[WotLK] Balance Druid (Right Group)",
+			["animate"] = false,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SELECTFRAME",
+			["anchorFrameFrame"] = "WeakAuras:[Druid] Eclipse (Missing)",
+			["config"] = {
+			},
+			["space"] = 5,
+			["useLimit"] = false,
+			["conditions"] = {
+			},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["anchorPoint"] = "CENTER",
 		},
 		["[Druid] Gloves CD"] = {
 			["iconSource"] = -1,
@@ -1468,16 +1474,15 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showOnCooldown",
 						["subeventPrefix"] = "SPELL",
 						["itemSlot"] = 10,
-						["duration"] = "1",
-						["use_remaining"] = true,
+						["useExactSpellId"] = false,
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
+						["ignoreDisconnected"] = false,
 						["useName"] = true,
-						["type"] = "item",
-						["auraspellids"] = {
-							"29166", -- [1]
-						},
+						["use_genericShowOn"] = true,
 						["unevent"] = "auto",
-						["unit"] = "player",
+						["names"] = {
+						},
 						["form"] = {
 							["multi"] = {
 								true, -- [1]
@@ -1495,12 +1500,13 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["names"] = {
+						["unit"] = "player",
+						["auraspellids"] = {
+							"29166", -- [1]
 						},
-						["use_genericShowOn"] = true,
-						["ignoreDisconnected"] = false,
-						["use_unit"] = true,
-						["useExactSpellId"] = false,
+						["use_remaining"] = true,
+						["type"] = "item",
+						["duration"] = "1",
 					},
 					["untrigger"] = {
 						["itemSlot"] = 10,
@@ -1515,20 +1521,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -1540,7 +1546,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_size"] = 1,
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -1549,7 +1555,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.5,
@@ -1566,8 +1572,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = false,
 					["glowXOffset"] = 0,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -1586,8 +1592,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = true,
 					["glowXOffset"] = 0,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -1621,45 +1627,45 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["zoom"] = 0.29,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["parent"] = "[WotLK] Balance Druid (Top Group)",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["cooldown"] = true,
-			["conditions"] = {
-			},
-			["config"] = {
-			},
-			["frameStrata"] = 1,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Gloves CD",
-			["width"] = 40,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["uid"] = "yxLQ5ez8l7T",
-			["inverse"] = false,
-			["selfPoint"] = "CENTER",
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
+			},
+			["regionType"] = "icon",
+			["parent"] = "[WotLK] Balance Druid (Top Group)",
+			["selfPoint"] = "CENTER",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
+			["uid"] = "yxLQ5ez8l7T",
+			["frameStrata"] = 1,
+			["zoom"] = 0.29,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Gloves CD",
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["width"] = 40,
+			["useCooldownModRate"] = true,
+			["config"] = {
+			},
+			["inverse"] = false,
+			["xOffset"] = 0,
+			["conditions"] = {
+			},
+			["cooldown"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
 			},
 		},
 		["冰橙监控小德生存本能CD"] = {
@@ -1686,12 +1692,12 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["unit"] = "player",
+						["useName"] = true,
+						["names"] = {
+						},
 						["auranames"] = {
 							"生存本能", -- [1]
 						},
-						["names"] = {
-						},
-						["useName"] = true,
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -1705,21 +1711,21 @@ WeakAurasSaved = {
 						},
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
-						["use_unit"] = true,
+						["duration"] = "1",
 						["unevent"] = "auto",
 						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
+						["use_absorbMode"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
 						["realSpellName"] = "生存本能",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["spellName"] = 61336,
 						["subeventSuffix"] = "_CAST_START",
-						["use_absorbMode"] = true,
+						["spellName"] = 61336,
+						["subeventPrefix"] = "SPELL",
 						["use_track"] = true,
-						["duration"] = "1",
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -1728,7 +1734,7 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["use_form"] = false,
 						["use_unit"] = true,
 						["form"] = {
@@ -1739,7 +1745,7 @@ WeakAurasSaved = {
 							},
 						},
 						["event"] = "Stance/Form/Aura",
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
@@ -1747,10 +1753,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["use_unit"] = true,
+						["unit"] = "target",
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["unit"] = "target",
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 					},
@@ -1800,7 +1806,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["border_offset"] = 0,
-					["type"] = "subborder",
+					["border_size"] = 2,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -1811,7 +1817,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_size"] = 2,
+					["type"] = "subborder",
 				}, -- [3]
 				{
 					["glowFrequency"] = 0.25,
@@ -1828,8 +1834,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = false,
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -1852,10 +1858,7 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_spellknown"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 				["use_spec"] = true,
 				["use_vehicleUi"] = false,
 				["spec"] = {
@@ -1866,22 +1869,73 @@ WeakAurasSaved = {
 					},
 				},
 				["spellknown"] = 61336,
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["parent"] = "冰橙监控小德CD组 ",
-			["uid"] = "Vhk5GngqgHr",
+			["useCooldownModRate"] = true,
+			["config"] = {
+			},
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["easeStrength"] = 3,
+					["preset"] = "slideleft",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["easeStrength"] = 3,
+					["preset"] = "slideleft",
+				},
+			},
 			["xOffset"] = 225,
+			["regionType"] = "icon",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["displayIcon"] = "",
+			["useTooltip"] = false,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
 			},
-			["regionType"] = "icon",
-			["cooldown"] = true,
+			["width"] = 45,
+			["alpha"] = 1,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德生存本能CD",
+			["zoom"] = 0,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["uid"] = "Vhk5GngqgHr",
+			["inverse"] = true,
+			["parent"] = "冰橙监控小德CD组 ",
 			["conditions"] = {
 				{
 					["check"] = {
@@ -1922,56 +1976,8 @@ WeakAurasSaved = {
 					},
 				}, -- [3]
 			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["cooldown"] = true,
 			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["anchorFrameType"] = "SCREEN",
-			["frameStrata"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德生存本能CD",
-			["zoom"] = 0,
-			["useCooldownModRate"] = true,
-			["width"] = 45,
-			["alpha"] = 1,
-			["config"] = {
-			},
-			["inverse"] = true,
-			["useTooltip"] = false,
-			["displayIcon"] = "",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["preset"] = "slideleft",
-					["easeStrength"] = 3,
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["preset"] = "slideleft",
-					["easeStrength"] = 3,
-				},
-			},
 		},
 		["Wrath-Solar"] = {
 			["iconSource"] = -1,
@@ -1988,9 +1994,9 @@ WeakAurasSaved = {
 					["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\sonar.ogg",
 					["do_sound"] = true,
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -2003,7 +2009,7 @@ WeakAurasSaved = {
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
 						["use_targetRequired"] = false,
-						["subeventPrefix"] = "SPELL",
+						["spellName"] = 48461,
 						["event"] = "Action Usable",
 						["names"] = {
 						},
@@ -2011,11 +2017,11 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
 						["use_genericShowOn"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["unevent"] = "auto",
 						["use_track"] = true,
-						["spellName"] = 48461,
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnReady",
@@ -2023,18 +2029,18 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["trigger"] = {
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
-						["useName"] = false,
 						["auranames"] = {
 							"Decimation", -- [1]
 						},
+						["useExactSpellId"] = true,
 						["auraspellids"] = {
 							"48517", -- [1]
 						},
 						["matchesShowOn"] = "showOnActive",
-						["useExactSpellId"] = true,
-						["debuffType"] = "HELPFUL",
+						["useName"] = false,
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
@@ -2064,15 +2070,15 @@ WeakAurasSaved = {
 					["text_selfPoint"] = "AUTO",
 					["text_automaticWidth"] = "Auto",
 					["text_fixedWidth"] = 64,
-					["rotateText"] = "NONE",
+					["text_text_format_2.p_time_legacy_floor"] = true,
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["text_text_format_2.p_time_precision"] = 1,
-					["anchorXOffset"] = 0,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_text_format_2.p_format"] = "timed",
 					["text_text_format_p_format"] = "timed",
 					["type"] = "subtext",
-					["text_shadowXOffset"] = 0,
+					["text_text"] = "%2.p",
 					["text_color"] = {
 						0, -- [1]
 						1, -- [2]
@@ -2080,17 +2086,17 @@ WeakAurasSaved = {
 						1, -- [4]
 					},
 					["text_font"] = "Friz Quadrata TT",
-					["text_visible"] = true,
+					["text_text_format_p_time_precision"] = 1,
 					["text_shadowYOffset"] = 0,
 					["text_text_format_2.p_time_dynamic_threshold"] = 60,
 					["text_wordWrap"] = "WordWrap",
 					["text_fontType"] = "THICKOUTLINE",
 					["text_anchorPoint"] = "OUTER_TOP",
-					["text_text_format_p_time_precision"] = 1,
-					["text_text"] = "%2.p",
+					["text_visible"] = true,
+					["text_shadowXOffset"] = 0,
 					["text_fontSize"] = 17,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_text_format_2.p_time_legacy_floor"] = true,
+					["anchorXOffset"] = 0,
+					["rotateText"] = "NONE",
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -2107,8 +2113,8 @@ WeakAurasSaved = {
 					},
 					["glowXOffset"] = 0,
 					["glowScale"] = 1,
-					["glowThickness"] = 1,
 					["glow"] = true,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -2141,59 +2147,59 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["config"] = {
+			["uid"] = "h6t)wxva1xO",
+			["zoom"] = 0,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["icon"] = true,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["cooldownTextDisabled"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
+			["url"] = "https://wago.io/X6wQKkZUq/5",
+			["useCooldownModRate"] = true,
+			["width"] = 30,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "Wrath-Solar",
+			["frameStrata"] = 1,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["semver"] = "1.0.4",
+			["config"] = {
+			},
+			["inverse"] = false,
+			["parent"] = "平衡德循環助手",
+			["conditions"] = {
+			},
+			["cooldown"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
-			["cooldown"] = false,
-			["icon"] = true,
-			["parent"] = "平衡德循環助手",
-			["semver"] = "1.0.4",
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "Wrath-Solar",
-			["alpha"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 30,
-			["frameStrata"] = 1,
-			["uid"] = "h6t)wxva1xO",
-			["inverse"] = false,
-			["url"] = "https://wago.io/X6wQKkZUq/5",
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["xOffset"] = 0,
 		},
 		["[Druid] Eclipse (Missing)"] = {
 			["iconSource"] = -1,
@@ -2207,9 +2213,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
@@ -2218,21 +2224,21 @@ WeakAurasSaved = {
 						["type"] = "unit",
 						["use_alwaystrue"] = true,
 						["subeventSuffix"] = "_CAST_START",
-						["duration"] = "1",
 						["ownOnly"] = true,
+						["duration"] = "1",
 						["event"] = "Conditions",
 						["use_unit"] = true,
-						["names"] = {
-						},
-						["unit"] = "player",
+						["useName"] = true,
+						["unevent"] = "auto",
 						["spellIds"] = {
 						},
-						["subeventPrefix"] = "SPELL",
 						["auranames"] = {
 							"Eclipse (Solar)", -- [1]
 						},
-						["unevent"] = "auto",
-						["useName"] = true,
+						["subeventPrefix"] = "SPELL",
+						["unit"] = "player",
+						["names"] = {
+						},
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -2244,20 +2250,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -2269,7 +2275,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["type"] = "subborder",
-					["border_size"] = 2,
+					["border_offset"] = 0,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -2278,16 +2284,13 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 				}, -- [2]
 			},
 			["height"] = 60,
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -2305,42 +2308,45 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["zoom"] = 0.29,
-			["xOffset"] = 7.002853328685887e-05,
+			["cooldownTextDisabled"] = false,
+			["icon"] = true,
 			["regionType"] = "icon",
 			["parent"] = "[WotLK] Balance Druid (Main Group)",
-			["selfPoint"] = "CENTER",
-			["cooldown"] = true,
-			["conditions"] = {
-			},
-			["config"] = {
-			},
-			["useCooldownModRate"] = true,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Eclipse (Missing)",
-			["width"] = 60,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["alpha"] = 1,
-			["uid"] = "rfxH(QUg84Y",
-			["inverse"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayIcon"] = "Interface\\Icons\\Ability_Druid_Eclipse",
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["icon"] = true,
+			["displayIcon"] = "Interface\\Icons\\Ability_Druid_Eclipse",
+			["uid"] = "rfxH(QUg84Y",
+			["useCooldownModRate"] = true,
+			["zoom"] = 0.29,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Eclipse (Missing)",
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
+			["width"] = 60,
+			["alpha"] = 1,
+			["config"] = {
+			},
+			["inverse"] = false,
+			["xOffset"] = 7.002853328685887e-05,
+			["conditions"] = {
+			},
+			["cooldown"] = true,
+			["selfPoint"] = "CENTER",
 		},
 		["距离"] = {
 			["outline"] = "THICKOUTLINE",
@@ -2355,9 +2361,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -2373,8 +2379,8 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["use_range"] = true,
-						["use_unit"] = true,
 						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
 						["range_operator"] = "<=",
 						["debuffType"] = "HELPFUL",
 					},
@@ -2387,20 +2393,20 @@ WeakAurasSaved = {
 			["internalVersion"] = 59,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -2412,7 +2418,7 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["load"] = {
-				["talent"] = {
+				["size"] = {
 					["multi"] = {
 					},
 				},
@@ -2424,7 +2430,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -2437,6 +2443,32 @@ WeakAurasSaved = {
 			["preferToUpdate"] = false,
 			["wordWrap"] = "WordWrap",
 			["displayText_format_p_time_precision"] = 1,
+			["fixedWidth"] = 200,
+			["yOffset"] = 36.61126708984375,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["justify"] = "LEFT",
+			["tocversion"] = 30400,
+			["id"] = "距离",
+			["displayText_format_1.maxRange_format"] = "none",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SELECTFRAME",
+			["config"] = {
+			},
+			["uid"] = "ObIXoUzUAcl",
+			["authorOptions"] = {
+			},
+			["displayText"] = "%1.minRange — %1.maxRange",
+			["shadowColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -2447,14 +2479,14 @@ WeakAurasSaved = {
 							{
 								["trigger"] = 1,
 								["op"] = ">=",
-								["value"] = "5",
 								["variable"] = "range",
+								["value"] = "5",
 							}, -- [1]
 							{
 								["trigger"] = 1,
 								["op"] = "<=",
-								["value"] = "8",
 								["variable"] = "range",
+								["value"] = "8",
 							}, -- [2]
 						},
 					},
@@ -2474,8 +2506,8 @@ WeakAurasSaved = {
 					["check"] = {
 						["trigger"] = 1,
 						["op"] = "<=",
-						["variable"] = "range",
 						["value"] = "5",
+						["variable"] = "range",
 					},
 					["changes"] = {
 						{
@@ -2498,14 +2530,14 @@ WeakAurasSaved = {
 							{
 								["trigger"] = 1,
 								["op"] = ">=",
-								["variable"] = "range",
 								["value"] = "8",
+								["variable"] = "range",
 							}, -- [1]
 							{
 								["trigger"] = 1,
 								["op"] = "<=",
-								["variable"] = "range",
 								["value"] = "10",
+								["variable"] = "range",
 							}, -- [2]
 						},
 					},
@@ -2529,14 +2561,14 @@ WeakAurasSaved = {
 							{
 								["trigger"] = 1,
 								["op"] = ">=",
-								["variable"] = "range",
 								["value"] = "5",
+								["variable"] = "range",
 							}, -- [1]
 							{
 								["trigger"] = 1,
 								["op"] = "<=",
-								["variable"] = "range",
 								["value"] = "10",
+								["variable"] = "range",
 							}, -- [2]
 						},
 					},
@@ -2560,14 +2592,14 @@ WeakAurasSaved = {
 							{
 								["trigger"] = 1,
 								["op"] = ">=",
-								["value"] = "10",
 								["variable"] = "range",
+								["value"] = "10",
 							}, -- [1]
 							{
 								["trigger"] = 1,
 								["op"] = "<=",
-								["value"] = "15",
 								["variable"] = "range",
+								["value"] = "15",
 							}, -- [2]
 						},
 					},
@@ -2591,14 +2623,14 @@ WeakAurasSaved = {
 							{
 								["trigger"] = 1,
 								["op"] = ">=",
-								["variable"] = "range",
 								["value"] = "15",
+								["variable"] = "range",
 							}, -- [1]
 							{
 								["trigger"] = 1,
 								["op"] = "<=",
-								["variable"] = "range",
 								["value"] = "20",
+								["variable"] = "range",
 							}, -- [2]
 						},
 					},
@@ -2622,14 +2654,14 @@ WeakAurasSaved = {
 							{
 								["trigger"] = 1,
 								["op"] = ">=",
-								["value"] = "20",
 								["variable"] = "range",
+								["value"] = "20",
 							}, -- [1]
 							{
 								["trigger"] = 1,
 								["op"] = "<=",
-								["value"] = "25",
 								["variable"] = "range",
+								["value"] = "25",
 							}, -- [2]
 						},
 					},
@@ -2653,14 +2685,14 @@ WeakAurasSaved = {
 							{
 								["trigger"] = 1,
 								["op"] = ">=",
-								["variable"] = "range",
 								["value"] = "25",
+								["variable"] = "range",
 							}, -- [1]
 							{
 								["trigger"] = 1,
 								["op"] = "<=",
-								["variable"] = "range",
 								["value"] = "30",
+								["variable"] = "range",
 							}, -- [2]
 						},
 					},
@@ -2684,14 +2716,14 @@ WeakAurasSaved = {
 							{
 								["trigger"] = 1,
 								["op"] = ">=",
-								["value"] = "30",
 								["variable"] = "range",
+								["value"] = "30",
 							}, -- [1]
 							{
 								["trigger"] = 1,
 								["op"] = "<=",
-								["value"] = "35",
 								["variable"] = "range",
+								["value"] = "35",
 							}, -- [2]
 						},
 					},
@@ -2715,14 +2747,14 @@ WeakAurasSaved = {
 							{
 								["trigger"] = 1,
 								["op"] = ">=",
-								["variable"] = "range",
 								["value"] = "35",
+								["variable"] = "range",
 							}, -- [1]
 							{
 								["trigger"] = 1,
 								["op"] = "<=",
-								["variable"] = "range",
 								["value"] = "41",
+								["variable"] = "range",
 							}, -- [2]
 						},
 					},
@@ -2746,14 +2778,14 @@ WeakAurasSaved = {
 							{
 								["trigger"] = 1,
 								["op"] = ">=",
-								["value"] = "41",
 								["variable"] = "range",
+								["value"] = "41",
 							}, -- [1]
 							{
 								["trigger"] = 1,
 								["op"] = "<=",
-								["value"] = "45",
 								["variable"] = "range",
+								["value"] = "45",
 							}, -- [2]
 						},
 					},
@@ -2776,8 +2808,8 @@ WeakAurasSaved = {
 							{
 								["trigger"] = 1,
 								["op"] = ">=",
-								["variable"] = "range",
 								["value"] = "41",
+								["variable"] = "range",
 							}, -- [1]
 						},
 						["trigger"] = 1,
@@ -2797,32 +2829,6 @@ WeakAurasSaved = {
 					},
 				}, -- [12]
 			},
-			["yOffset"] = 36.61126708984375,
-			["displayText"] = "%1.minRange — %1.maxRange",
-			["justify"] = "LEFT",
-			["tocversion"] = 30400,
-			["id"] = "距离",
-			["authorOptions"] = {
-			},
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SELECTFRAME",
-			["uid"] = "ObIXoUzUAcl",
-			["config"] = {
-			},
-			["displayText_format_1.maxRange_format"] = "none",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["shadowColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["fixedWidth"] = 200,
 			["information"] = {
 				["forceEvents"] = true,
 			},
@@ -2838,9 +2844,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
@@ -2853,15 +2859,15 @@ WeakAurasSaved = {
 						["subeventPrefix"] = "SPELL",
 						["names"] = {
 						},
-						["custom_type"] = "status",
+						["unit"] = "player",
 						["spellIds"] = {
 						},
+						["use_unit"] = true,
+						["useExactSpellId"] = false,
 						["auraspellids"] = {
 							"48265", -- [1]
 						},
-						["useExactSpellId"] = false,
-						["use_unit"] = true,
-						["unit"] = "player",
+						["custom_type"] = "status",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -2871,11 +2877,11 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "unit",
 						["use_hostility"] = false,
-						["hostility"] = "hostile",
+						["unit"] = "target",
 						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["unit"] = "target",
+						["hostility"] = "hostile",
 					},
 					["untrigger"] = {
 					},
@@ -2904,13 +2910,13 @@ WeakAurasSaved = {
 					["model_y"] = 1,
 					["model_st_rx"] = 270,
 					["rotation"] = 0,
-					["type"] = "submodel",
+					["model_x"] = -0.3,
 					["model_st_tx"] = 0,
 					["model_z"] = 0,
 					["model_st_ry"] = 0,
 					["model_visible"] = false,
 					["model_st_tz"] = 0,
-					["model_x"] = -0.3,
+					["type"] = "submodel",
 				}, -- [2]
 			},
 			["height"] = 170,
@@ -2944,11 +2950,11 @@ WeakAurasSaved = {
 			["mirror"] = false,
 			["regionType"] = "texture",
 			["blendMode"] = "ADD",
-			["discrete_rotation"] = 0,
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -2960,40 +2966,40 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["preset"] = "grow",
 					["easeStrength"] = 3,
+					["preset"] = "grow",
 				},
 				["main"] = {
 					["type"] = "preset",
 					["easeType"] = "none",
 					["easeStrength"] = 3,
-					["preset"] = "rotateClockwise",
 					["duration_type"] = "seconds",
+					["preset"] = "rotateClockwise",
 				},
 				["finish"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["preset"] = "shrink",
 					["easeStrength"] = 3,
+					["preset"] = "shrink",
 				},
 			},
 			["semver"] = "1.0.10",
 			["tocversion"] = 30400,
 			["id"] = "冰橙监控小德资源小光环",
+			["alpha"] = 1,
+			["frameStrata"] = 2,
+			["anchorFrameType"] = "SCREEN",
+			["config"] = {
+			},
+			["uid"] = "AuqQhDSWorA",
+			["width"] = 170,
 			["color"] = {
 				0.592156862745098, -- [1]
 				0.2745098039215687, -- [2]
 				0.03137254901960784, -- [3]
 				1, -- [4]
 			},
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["width"] = 170,
-			["config"] = {
-			},
-			["uid"] = "AuqQhDSWorA",
-			["frameStrata"] = 2,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -3011,7 +3017,7 @@ WeakAurasSaved = {
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["discrete_rotation"] = 0,
 		},
 		["冰橙监控小德资源前景"] = {
 			["wagoID"] = "H_zZHwkG7",
@@ -3023,9 +3029,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
@@ -3039,10 +3045,10 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["subeventSuffix"] = "_CAST_START",
-						["use_unit"] = true,
-						["subeventPrefix"] = "SPELL",
 						["names"] = {
 						},
+						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -3052,11 +3058,11 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "unit",
 						["use_hostility"] = false,
-						["hostility"] = "hostile",
+						["unit"] = "target",
 						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["unit"] = "target",
+						["hostility"] = "hostile",
 					},
 					["untrigger"] = {
 					},
@@ -3103,11 +3109,11 @@ WeakAurasSaved = {
 			["mirror"] = false,
 			["regionType"] = "texture",
 			["blendMode"] = "BLEND",
-			["discrete_rotation"] = 0,
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -3119,12 +3125,12 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["preset"] = "grow",
 					["easeStrength"] = 3,
+					["preset"] = "grow",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -3132,26 +3138,26 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["preset"] = "shrink",
 					["easeStrength"] = 3,
+					["preset"] = "shrink",
 				},
 			},
 			["semver"] = "1.0.10",
 			["tocversion"] = 30400,
 			["id"] = "冰橙监控小德资源前景",
+			["alpha"] = 1,
+			["frameStrata"] = 2,
+			["anchorFrameType"] = "SCREEN",
+			["config"] = {
+			},
+			["uid"] = "fYRbGBGe9s(",
+			["width"] = 125,
 			["color"] = {
 				0, -- [1]
 				0, -- [2]
 				0, -- [3]
 				1, -- [4]
 			},
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["width"] = 125,
-			["config"] = {
-			},
-			["uid"] = "fYRbGBGe9s(",
-			["frameStrata"] = 2,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -3169,7 +3175,7 @@ WeakAurasSaved = {
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["discrete_rotation"] = 0,
 		},
 		["[Druid] Starfall Bar"] = {
 			["sparkWidth"] = 30,
@@ -3191,18 +3197,18 @@ WeakAurasSaved = {
 						["auranames"] = {
 							"星殞術", -- [1]
 						},
-						["use_unit"] = true,
+						["subeventPrefix"] = "SPELL",
 						["duration"] = "1",
 						["event"] = "Power",
-						["subeventPrefix"] = "SPELL",
-						["unevent"] = "auto",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
 						["powertype"] = 0,
 						["spellIds"] = {
 						},
-						["unit"] = "player",
 						["names"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
+						["unevent"] = "auto",
 						["use_powertype"] = true,
 						["debuffType"] = "HELPFUL",
 					},
@@ -3222,20 +3228,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -3247,7 +3253,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["desaturate"] = false,
-			["frameStrata"] = 1,
+			["alpha"] = 1,
 			["sparkOffsetY"] = 0,
 			["subRegions"] = {
 				{
@@ -3259,7 +3265,7 @@ WeakAurasSaved = {
 				{
 					["type"] = "subborder",
 					["border_anchor"] = "bar",
-					["border_size"] = 1,
+					["border_offset"] = 0,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -3268,17 +3274,14 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_offset"] = 0,
+					["border_size"] = 1,
 				}, -- [3]
 			},
 			["height"] = 9.999943238591248,
-			["sparkMirror"] = false,
+			["selfPoint"] = "CENTER",
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -3297,7 +3300,10 @@ WeakAurasSaved = {
 						["DRUID"] = true,
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
@@ -3311,13 +3317,14 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["xOffset"] = 59.99995705281367,
-			["sparkOffsetX"] = 0,
+			["authorOptions"] = {
+			},
 			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -3328,29 +3335,28 @@ WeakAurasSaved = {
 			["regionType"] = "aurabar",
 			["config"] = {
 			},
-			["zoom"] = 0,
-			["icon_side"] = "RIGHT",
-			["width"] = 59.99986514036378,
-			["sparkHeight"] = 20,
-			["texture"] = "Aluminium",
-			["sparkHidden"] = "BOTH",
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["spark"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Starfall Bar",
-			["auto"] = true,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["icon_side"] = "RIGHT",
+			["anchorFrameType"] = "SCREEN",
+			["sparkHeight"] = 20,
+			["texture"] = "Aluminium",
+			["spark"] = true,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Starfall Bar",
+			["sparkHidden"] = "BOTH",
+			["frameStrata"] = 1,
+			["width"] = 59.99986514036378,
+			["zoom"] = 0,
 			["uid"] = "6)Ie(sftaUO",
 			["inverse"] = false,
-			["authorOptions"] = {
-			},
+			["sparkOffsetX"] = 0,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
@@ -3358,7 +3364,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["selfPoint"] = "CENTER",
+			["sparkMirror"] = false,
 		},
 		["[WotLK] Balance Druid (Top Group)"] = {
 			["grow"] = "HORIZONTAL",
@@ -3385,15 +3391,15 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["debuffType"] = "HELPFUL",
+						["subeventPrefix"] = "SPELL",
 						["type"] = "aura2",
 						["spellIds"] = {
 						},
@@ -3402,7 +3408,7 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["event"] = "Health",
-						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -3413,20 +3419,14 @@ WeakAurasSaved = {
 			["useLimit"] = false,
 			["align"] = "CENTER",
 			["stagger"] = 0,
-			["gridWidth"] = 5,
-			["anchorFrameFrame"] = "WeakAuras:[Druid] Eclipse (Missing)",
+			["frameStrata"] = 1,
+			["borderEdge"] = "Square Full White",
 			["subRegions"] = {
 			},
-			["sortHybridTable"] = {
-				["[Druid] Mark 2"] = false,
-				["[Druid] Faerie Fire Fading Icon"] = false,
-				["[Druid] Gloves"] = false,
-				["[Druid] Gloves CD"] = false,
-				["[Druid] Faerie Fire"] = false,
-			},
-			["selfPoint"] = "CENTER",
+			["rotation"] = 0,
+			["parent"] = "[WotLK] Balance Druid (Main Group)",
 			["load"] = {
-				["size"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -3438,12 +3438,18 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["talent"] = {
+				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["xOffset"] = 0,
+			["sortHybridTable"] = {
+				["[Druid] Mark 2"] = false,
+				["[Druid] Faerie Fire Fading Icon"] = false,
+				["[Druid] Gloves"] = false,
+				["[Druid] Gloves CD"] = false,
+				["[Druid] Faerie Fire"] = false,
+			},
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -3452,56 +3458,56 @@ WeakAurasSaved = {
 			},
 			["rowSpace"] = 1,
 			["animate"] = false,
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
+			["xOffset"] = 0,
 			["scale"] = 1,
-			["anchorPoint"] = "CENTER",
+			["radius"] = 200,
 			["border"] = false,
-			["borderEdge"] = "Square Full White",
+			["anchorFrameFrame"] = "WeakAuras:[Druid] Eclipse (Missing)",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
-			["sort"] = "none",
-			["borderInset"] = 1,
-			["parent"] = "[WotLK] Balance Druid (Main Group)",
-			["constantFactor"] = "RADIUS",
-			["fullCircle"] = true,
-			["borderOffset"] = 4,
-			["uid"] = "3KtS9QmP5L0",
-			["tocversion"] = 30400,
-			["id"] = "[WotLK] Balance Druid (Top Group)",
-			["arcLength"] = 360,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SELECTFRAME",
 			["limit"] = 5,
 			["config"] = {
 			},
 			["source"] = "import",
-			["radius"] = 200,
+			["constantFactor"] = "RADIUS",
+			["arcLength"] = 360,
+			["borderOffset"] = 4,
+			["uid"] = "3KtS9QmP5L0",
+			["tocversion"] = 30400,
+			["id"] = "[WotLK] Balance Druid (Top Group)",
+			["fullCircle"] = true,
+			["gridWidth"] = 5,
+			["anchorFrameType"] = "SELECTFRAME",
+			["sort"] = "none",
+			["borderInset"] = 1,
+			["anchorPoint"] = "CENTER",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 			["conditions"] = {
 			},
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["rotation"] = 0,
+			["selfPoint"] = "CENTER",
 		},
 		["Insect Swarm-out"] = {
 			["iconSource"] = -1,
@@ -3520,16 +3526,16 @@ WeakAurasSaved = {
 					["do_glow"] = false,
 					["glow_action"] = "show",
 				},
+				["init"] = {
+				},
 				["finish"] = {
 					["glow_frame_type"] = "FRAMESELECTOR",
 					["hide_all_glows"] = false,
 					["glow_action"] = "show",
-					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Life Tap",
 					["glow_type"] = "Pixel",
 					["do_message"] = false,
-					["glow_frame"] = "WeakAuras:Life Tap",
-				},
-				["init"] = {
+					["do_glow"] = false,
 				},
 			},
 			["triggers"] = {
@@ -3548,18 +3554,18 @@ WeakAurasSaved = {
 						["subeventSuffix"] = "_CAST_START",
 						["event"] = "Health",
 						["subeventPrefix"] = "SPELL",
-						["names"] = {
-						},
-						["auraspellids"] = {
-							"48468", -- [1]
-							"27013", -- [2]
-						},
+						["useExactSpellId"] = true,
+						["ownOnly"] = true,
 						["spellIds"] = {
 						},
 						["useName"] = false,
 						["remOperator"] = "<",
-						["ownOnly"] = true,
-						["useExactSpellId"] = true,
+						["auraspellids"] = {
+							"48468", -- [1]
+							"27013", -- [2]
+						},
+						["names"] = {
+						},
 						["useRem"] = false,
 					},
 					["untrigger"] = {
@@ -3571,10 +3577,10 @@ WeakAurasSaved = {
 						["auraspellids"] = {
 							"48518", -- [1]
 						},
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["matchesShowOn"] = "showOnMissing",
 						["useExactSpellId"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
@@ -3585,10 +3591,10 @@ WeakAurasSaved = {
 						["auraspellids"] = {
 							"48517", -- [1]
 						},
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["matchesShowOn"] = "showOnMissing",
 						["useExactSpellId"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
@@ -3601,10 +3607,10 @@ WeakAurasSaved = {
 						["unit"] = "player",
 						["realSpellName"] = 0,
 						["use_spellName"] = true,
-						["debuffType"] = "HELPFUL",
+						["spellName"] = 48465,
 						["event"] = "Queued Action",
 						["use_track"] = true,
-						["spellName"] = 48465,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -3650,59 +3656,59 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["config"] = {
+			["uid"] = "IDFxDB)3iq(",
+			["zoom"] = 0,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["icon"] = true,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["cooldownTextDisabled"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
+			["url"] = "https://wago.io/X6wQKkZUq/5",
+			["useCooldownModRate"] = true,
+			["width"] = 30,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "Insect Swarm-out",
+			["frameStrata"] = 1,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["semver"] = "1.0.4",
+			["config"] = {
+			},
+			["inverse"] = false,
+			["parent"] = "平衡德循環助手",
+			["conditions"] = {
+			},
+			["cooldown"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
-			["cooldown"] = false,
-			["icon"] = true,
-			["parent"] = "平衡德循環助手",
-			["semver"] = "1.0.4",
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "Insect Swarm-out",
-			["alpha"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 30,
-			["frameStrata"] = 1,
-			["uid"] = "IDFxDB)3iq(",
-			["inverse"] = false,
-			["url"] = "https://wago.io/X6wQKkZUq/5",
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["xOffset"] = 0,
 		},
 		["冰橙监控猫连击点2"] = {
 			["sparkWidth"] = 10,
@@ -3716,9 +3722,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -3736,8 +3742,8 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["power"] = "1",
-						["use_unit"] = true,
 						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
 						["use_powertype"] = true,
 						["debuffType"] = "HELPFUL",
 					},
@@ -3747,14 +3753,14 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["use_form"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 						["type"] = "unit",
 						["use_unit"] = true,
 						["form"] = {
 							["single"] = 3,
 						},
 						["event"] = "Stance/Form/Aura",
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -3762,10 +3768,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -3799,7 +3805,7 @@ WeakAurasSaved = {
 				{
 					["border_size"] = 2,
 					["border_anchor"] = "bar",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 					["border_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -3808,11 +3814,11 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_offset"] = 0,
+					["type"] = "subborder",
 				}, -- [3]
 			},
 			["height"] = 15,
-			["id"] = "冰橙监控猫连击点2",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["load"] = {
 				["use_class"] = true,
 				["use_never"] = true,
@@ -3838,18 +3844,23 @@ WeakAurasSaved = {
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
 			["source"] = "import",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.5, -- [4]
+			},
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -3857,15 +3868,22 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["icon"] = false,
 			["xOffset"] = 103,
 			["useAdjustededMin"] = false,
 			["regionType"] = "aurabar",
-			["iconSource"] = -1,
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
 			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -3877,33 +3895,26 @@ WeakAurasSaved = {
 			},
 			["sparkHeight"] = 30,
 			["texture"] = "Skyline",
-			["width"] = 67,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
 			["spark"] = false,
 			["tocversion"] = 30400,
 			["sparkHidden"] = "NEVER",
-			["alpha"] = 1,
 			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
+			["alpha"] = 1,
+			["width"] = 67,
+			["id"] = "冰橙监控猫连击点2",
 			["uid"] = "SPTiWPur1f(",
 			["inverse"] = false,
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
+			["iconSource"] = -1,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 				{
 					["check"] = {
 						["trigger"] = 1,
 						["variable"] = "power",
-						["op"] = ">=",
 						["value"] = "2",
+						["op"] = ">=",
 					},
 					["changes"] = {
 						{
@@ -3947,12 +3958,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["backgroundColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.5, -- [4]
-			},
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 		},
 		["Force of Nature"] = {
 			["iconSource"] = -1,
@@ -3972,9 +3978,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -3997,12 +4003,12 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["names"] = {
-						},
+						["spellName"] = 33831,
 						["unit"] = "target",
 						["useName"] = true,
 						["use_track"] = true,
-						["spellName"] = 33831,
+						["names"] = {
+						},
 					},
 					["untrigger"] = {
 					},
@@ -4029,8 +4035,8 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_legacy_floor"] = true,
-					["text_text_format_p_time_dynamic_threshold"] = 0,
+					["text_text_format_p_time_mod_rate"] = true,
+					["anchorXOffset"] = 0,
 					["type"] = "subtext",
 					["text_text_format_p_format"] = "timed",
 					["text_color"] = {
@@ -4040,22 +4046,22 @@ WeakAurasSaved = {
 						1, -- [4]
 					},
 					["text_font"] = "Friz Quadrata TT",
-					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_p_time_format"] = 0,
 					["text_shadowYOffset"] = 0,
+					["text_visible"] = false,
+					["text_wordWrap"] = "WordWrap",
+					["text_fontType"] = "OUTLINE",
+					["text_anchorPoint"] = "CENTER",
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = false,
-					["text_anchorPoint"] = "CENTER",
-					["text_fontType"] = "OUTLINE",
-					["text_text_format_p_time_format"] = 0,
+					["text_text_format_p_time_precision"] = 1,
 					["text_fontSize"] = 14,
-					["anchorXOffset"] = 0,
-					["text_text_format_p_time_mod_rate"] = true,
+					["text_text_format_p_time_dynamic_threshold"] = 0,
+					["text_text_format_p_time_legacy_floor"] = true,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -4072,8 +4078,8 @@ WeakAurasSaved = {
 					},
 					["glowXOffset"] = 0,
 					["glowScale"] = 1,
-					["glowThickness"] = 1,
 					["glow"] = false,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -4086,16 +4092,16 @@ WeakAurasSaved = {
 					["multi"] = {
 						[52] = true,
 						[95] = true,
-						[18] = true,
 						[43] = true,
+						[18] = true,
+					},
+				},
+				["spec"] = {
+					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -4105,21 +4111,60 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["anchorFrameType"] = "SELECTFRAME",
+			["width"] = 30,
 			["source"] = "import",
-			["icon"] = true,
 			["xOffset"] = 0,
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
+			["icon"] = true,
+			["cooldown"] = true,
+			["displayIcon"] = "",
+			["anchorFrameFrame"] = "WeakAuras:Wrath (Main Anchor)",
+			["regionType"] = "icon",
+			["authorOptions"] = {
+			},
+			["BFgloss"] = 0,
+			["uid"] = "9dRxiDVegTw",
+			["useCooldownModRate"] = true,
+			["BFskin"] = "Epix",
+			["frameStrata"] = 1,
+			["cooldownTextDisabled"] = false,
+			["zoom"] = 0.20999999344349,
+			["semver"] = "1.0.4",
+			["tocversion"] = 30400,
+			["id"] = "Force of Nature",
+			["parent"] = "平衡德循環助手",
+			["alpha"] = 1,
+			["anchorFrameType"] = "SELECTFRAME",
+			["url"] = "https://wago.io/X6wQKkZUq/5",
+			["config"] = {
+			},
+			["inverse"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
 			},
 			["conditions"] = {
 				{
 					["check"] = {
 						["trigger"] = 1,
 						["op"] = "==",
-						["value"] = 1,
 						["variable"] = "onCooldown",
+						["value"] = 1,
 					},
 					["changes"] = {
 						{
@@ -4180,49 +4225,10 @@ WeakAurasSaved = {
 					},
 				}, -- [3]
 			},
-			["anchorFrameFrame"] = "WeakAuras:Wrath (Main Anchor)",
-			["regionType"] = "icon",
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["inverse"] = false,
-			["config"] = {
-			},
-			["url"] = "https://wago.io/X6wQKkZUq/5",
-			["BFskin"] = "Epix",
-			["alpha"] = 1,
-			["parent"] = "平衡德循環助手",
-			["cooldownTextDisabled"] = false,
-			["semver"] = "1.0.4",
-			["tocversion"] = 30400,
-			["id"] = "Force of Nature",
-			["zoom"] = 0.20999999344349,
-			["useCooldownModRate"] = true,
-			["width"] = 30,
-			["frameStrata"] = 1,
-			["uid"] = "9dRxiDVegTw",
-			["BFgloss"] = 0,
-			["authorOptions"] = {
-			},
-			["displayIcon"] = "",
-			["cooldown"] = true,
 			["iconInset"] = 0,
 		},
 		["冰橙监控小德树皮CD"] = {
@@ -4251,10 +4257,10 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["subeventPrefix"] = "SPELL",
-						["subeventSuffix"] = "_CAST_START",
+						["useName"] = true,
 						["names"] = {
 						},
-						["useName"] = true,
+						["subeventSuffix"] = "_CAST_START",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -4267,12 +4273,13 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showAlways",
 						["subeventPrefix"] = "SPELL",
 						["debuffType"] = "HELPFUL",
-						["use_genericShowOn"] = true,
 						["use_remaining"] = false,
+						["type"] = "spell",
 						["unit"] = "player",
 						["unevent"] = "auto",
-						["duration"] = "1",
-						["subeventSuffix"] = "_CAST_START",
+						["use_unit"] = true,
+						["names"] = {
+						},
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
 						["realSpellName"] = "树皮术",
@@ -4280,11 +4287,10 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["spellName"] = 22812,
-						["names"] = {
-						},
-						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["duration"] = "1",
 						["use_track"] = true,
-						["type"] = "spell",
+						["use_genericShowOn"] = true,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -4293,10 +4299,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -4311,12 +4317,12 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -4324,8 +4330,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
@@ -4367,7 +4373,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["border_offset"] = 0,
-					["type"] = "subborder",
+					["border_size"] = 2,
 					["border_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -4376,7 +4382,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_size"] = 2,
+					["type"] = "subborder",
 				}, -- [3]
 				{
 					["glowFrequency"] = 0.25,
@@ -4393,8 +4399,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = false,
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -4413,9 +4419,9 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_p_time_legacy_floor"] = false,
 					["type"] = "subtext",
-					["anchorXOffset"] = 0,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -4425,15 +4431,15 @@ WeakAurasSaved = {
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_format"] = "timed",
 					["text_shadowYOffset"] = 0,
-					["text_visible"] = true,
+					["text_text_format_p_time_mod_rate"] = true,
 					["text_wordWrap"] = "WordWrap",
 					["text_fontType"] = "OUTLINE",
 					["text_anchorPoint"] = "CENTER",
 					["text_text_format_p_time_format"] = 0,
-					["text_text_format_p_time_mod_rate"] = true,
+					["text_visible"] = true,
 					["text_fontSize"] = 12,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_text_format_p_time_legacy_floor"] = false,
+					["anchorXOffset"] = 0,
+					["text_text_format_p_time_precision"] = 1,
 				}, -- [5]
 			},
 			["height"] = 45,
@@ -4455,32 +4461,57 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_vehicleUi"] = false,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 				["class"] = {
 					["single"] = "DRUID",
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
+			["uid"] = "UFIfc4Az1oB",
+			["desaturate"] = false,
+			["selfPoint"] = "CENTER",
+			["regionType"] = "icon",
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["displayIcon"] = 136145,
+			["parent"] = "冰橙监控小德CD组 ",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德树皮CD",
+			["useCooldownModRate"] = true,
+			["alpha"] = 1,
+			["width"] = 45,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
+			["inverse"] = true,
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
 				},
+				["init"] = {
+				},
 			},
-			["selfPoint"] = "CENTER",
-			["regionType"] = "icon",
-			["desaturate"] = false,
-			["cooldown"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -4509,33 +4540,8 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["cooldownTextDisabled"] = false,
-			["width"] = 45,
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德树皮CD",
-			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["uid"] = "UFIfc4Az1oB",
-			["inverse"] = true,
+			["cooldown"] = true,
 			["xOffset"] = 25,
-			["displayIcon"] = 136145,
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["parent"] = "冰橙监控小德CD组 ",
 		},
 		["Starfall"] = {
 			["iconSource"] = -1,
@@ -4555,9 +4561,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -4580,12 +4586,12 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["names"] = {
-						},
+						["spellName"] = 48505,
 						["unit"] = "target",
 						["useName"] = true,
 						["use_track"] = true,
-						["spellName"] = 48505,
+						["names"] = {
+						},
 					},
 					["untrigger"] = {
 					},
@@ -4612,8 +4618,8 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_legacy_floor"] = true,
-					["text_text_format_p_time_dynamic_threshold"] = 0,
+					["text_text_format_p_time_mod_rate"] = true,
+					["anchorXOffset"] = 0,
 					["type"] = "subtext",
 					["text_text_format_p_format"] = "timed",
 					["text_color"] = {
@@ -4623,22 +4629,22 @@ WeakAurasSaved = {
 						1, -- [4]
 					},
 					["text_font"] = "Friz Quadrata TT",
-					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_p_time_format"] = 0,
 					["text_shadowYOffset"] = 0,
+					["text_visible"] = false,
+					["text_wordWrap"] = "WordWrap",
+					["text_fontType"] = "OUTLINE",
+					["text_anchorPoint"] = "CENTER",
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = false,
-					["text_anchorPoint"] = "CENTER",
-					["text_fontType"] = "OUTLINE",
-					["text_text_format_p_time_format"] = 0,
+					["text_text_format_p_time_precision"] = 1,
 					["text_fontSize"] = 14,
-					["anchorXOffset"] = 0,
-					["text_text_format_p_time_mod_rate"] = true,
+					["text_text_format_p_time_dynamic_threshold"] = 0,
+					["text_text_format_p_time_legacy_floor"] = true,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -4655,8 +4661,8 @@ WeakAurasSaved = {
 					},
 					["glowXOffset"] = 0,
 					["glowScale"] = 1,
-					["glowThickness"] = 1,
 					["glow"] = false,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -4670,16 +4676,16 @@ WeakAurasSaved = {
 					["multi"] = {
 						[52] = true,
 						[95] = true,
-						[18] = true,
 						[43] = true,
+						[18] = true,
+					},
+				},
+				["spec"] = {
+					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -4689,21 +4695,60 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["anchorFrameType"] = "SELECTFRAME",
+			["width"] = 30,
 			["source"] = "import",
-			["icon"] = true,
 			["xOffset"] = 0,
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
+			["icon"] = true,
+			["cooldown"] = true,
+			["displayIcon"] = "",
+			["anchorFrameFrame"] = "WeakAuras:Wrath (Main Anchor)",
+			["regionType"] = "icon",
+			["authorOptions"] = {
+			},
+			["BFgloss"] = 0,
+			["uid"] = "SwgQqXzGcNT",
+			["useCooldownModRate"] = true,
+			["BFskin"] = "Epix",
+			["frameStrata"] = 1,
+			["cooldownTextDisabled"] = false,
+			["zoom"] = 0.20999999344349,
+			["semver"] = "1.0.4",
+			["tocversion"] = 30400,
+			["id"] = "Starfall",
+			["parent"] = "平衡德循環助手",
+			["alpha"] = 1,
+			["anchorFrameType"] = "SELECTFRAME",
+			["url"] = "https://wago.io/X6wQKkZUq/5",
+			["config"] = {
+			},
+			["inverse"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
 			},
 			["conditions"] = {
 				{
 					["check"] = {
 						["trigger"] = 1,
 						["op"] = "==",
-						["value"] = 1,
 						["variable"] = "onCooldown",
+						["value"] = 1,
 					},
 					["changes"] = {
 						{
@@ -4764,49 +4809,10 @@ WeakAurasSaved = {
 					},
 				}, -- [3]
 			},
-			["anchorFrameFrame"] = "WeakAuras:Wrath (Main Anchor)",
-			["regionType"] = "icon",
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["inverse"] = false,
-			["config"] = {
-			},
-			["url"] = "https://wago.io/X6wQKkZUq/5",
-			["BFskin"] = "Epix",
-			["alpha"] = 1,
-			["parent"] = "平衡德循環助手",
-			["cooldownTextDisabled"] = false,
-			["semver"] = "1.0.4",
-			["tocversion"] = 30400,
-			["id"] = "Starfall",
-			["zoom"] = 0.20999999344349,
-			["useCooldownModRate"] = true,
-			["width"] = 30,
-			["frameStrata"] = 1,
-			["uid"] = "SwgQqXzGcNT",
-			["BFgloss"] = 0,
-			["authorOptions"] = {
-			},
-			["displayIcon"] = "",
-			["cooldown"] = true,
 			["iconInset"] = 0,
 		},
 		["[Druid] Moonfire"] = {
@@ -4830,12 +4836,12 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["type"] = "aura2",
-						["subeventPrefix"] = "SPELL",
-						["unit"] = "target",
 						["auranames"] = {
 							"月火術", -- [1]
 							"月火术", -- [2]
 						},
+						["unit"] = "target",
+						["subeventPrefix"] = "SPELL",
 						["debuffType"] = "HARMFUL",
 					},
 					["untrigger"] = {
@@ -4853,7 +4859,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["type"] = "subborder",
-					["border_size"] = 2,
+					["border_offset"] = 0,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -4862,7 +4868,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 				}, -- [2]
 				{
 					["text_text_format_p_time_format"] = 0,
@@ -4874,9 +4880,14 @@ WeakAurasSaved = {
 					["text_text_format_p_time_legacy_floor"] = true,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["anchorYOffset"] = 0,
+					["text_shadowColor"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
 					["type"] = "subtext",
-					["anchorXOffset"] = 0,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_color"] = {
 						1, -- [1]
 						0, -- [2]
@@ -4886,20 +4897,15 @@ WeakAurasSaved = {
 					["text_font"] = "Expressway",
 					["text_shadowXOffset"] = 0,
 					["text_shadowYOffset"] = 0,
-					["text_text_format_p_format"] = "timed",
-					["text_wordWrap"] = "WordWrap",
 					["text_visible"] = true,
+					["text_wordWrap"] = "WordWrap",
+					["text_fontType"] = "OUTLINE",
 					["text_anchorPoint"] = "CENTER",
 					["text_text_format_p_time_precision"] = 1,
-					["text_fontType"] = "OUTLINE",
+					["text_text_format_p_format"] = "timed",
 					["text_fontSize"] = 20,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_shadowColor"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
+					["anchorXOffset"] = 0,
+					["anchorYOffset"] = 0,
 				}, -- [3]
 				{
 					["glowFrequency"] = 0.2,
@@ -4916,8 +4922,8 @@ WeakAurasSaved = {
 					},
 					["type"] = "subglow",
 					["glowXOffset"] = 0,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 15,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -4925,10 +4931,7 @@ WeakAurasSaved = {
 			["height"] = 60,
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -4946,49 +4949,67 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
+			["zoom"] = 0.29,
+			["regionType"] = "icon",
+			["xOffset"] = -119.9997740485608,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
 			["authorOptions"] = {
 			},
-			["xOffset"] = -119.9997740485608,
-			["cooldown"] = true,
-			["alpha"] = 1,
-			["config"] = {
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["zoom"] = 0.29,
+			["frameStrata"] = 1,
+			["uid"] = "4rM7pk(aDd(",
+			["cooldownTextDisabled"] = false,
 			["auto"] = true,
 			["tocversion"] = 30400,
 			["id"] = "[Druid] Moonfire",
-			["useCooldownModRate"] = true,
-			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
 			["width"] = 60,
-			["uid"] = "4rM7pk(aDd(",
+			["useCooldownModRate"] = true,
+			["config"] = {
+			},
 			["inverse"] = false,
-			["cooldownTextDisabled"] = false,
+			["animation"] = {
+				["start"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 			["conditions"] = {
 				{
 					["check"] = {
 						["trigger"] = 1,
 						["variable"] = "expirationTime",
-						["value"] = "3",
 						["op"] = "<=",
+						["value"] = "3",
 					},
 					["changes"] = {
 						{
@@ -4998,28 +5019,13 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["animation"] = {
+			["cooldown"] = true,
+			["actions"] = {
 				["start"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
+				},
+				["init"] = {
 				},
 			},
 		},
@@ -5046,11 +5052,11 @@ WeakAurasSaved = {
 						["type"] = "unit",
 						["spellIds"] = {
 						},
-						["use_unit"] = true,
-						["use_inverse"] = true,
+						["subeventPrefix"] = "SPELL",
 						["names"] = {
 						},
-						["subeventPrefix"] = "SPELL",
+						["use_inverse"] = true,
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -5058,16 +5064,16 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["trigger"] = {
-						["use_unit"] = true,
+						["debuffType"] = "HELPFUL",
 						["type"] = "unit",
 						["use_form"] = true,
-						["use_inverse"] = true,
-						["unit"] = "player",
 						["form"] = {
 							["single"] = 3,
 						},
+						["unit"] = "player",
+						["use_inverse"] = true,
 						["event"] = "Stance/Form/Aura",
-						["debuffType"] = "HELPFUL",
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 					},
@@ -5075,10 +5081,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -5098,12 +5104,12 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -5111,8 +5117,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["barColor"] = {
@@ -5122,7 +5128,7 @@ WeakAurasSaved = {
 				0, -- [4]
 			},
 			["desaturate"] = false,
-			["anchorFrameType"] = "SCREEN",
+			["width"] = 335,
 			["sparkOffsetY"] = 0,
 			["subRegions"] = {
 				{
@@ -5134,7 +5140,7 @@ WeakAurasSaved = {
 				{
 					["border_size"] = 2,
 					["border_anchor"] = "bar",
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["border_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -5143,11 +5149,11 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [3]
 			},
 			["height"] = 15,
-			["selfPoint"] = "CENTER",
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 			["load"] = {
 				["use_petbattle"] = false,
 				["use_never"] = true,
@@ -5164,16 +5170,16 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_vehicleUi"] = false,
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "DRUID",
 					["multi"] = {
 					},
 				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 			},
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
@@ -5187,20 +5193,20 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
 			},
-			["xOffset"] = 170,
+			["iconSource"] = -1,
 			["smoothProgress"] = true,
 			["useAdjustededMin"] = false,
 			["regionType"] = "aurabar",
@@ -5208,18 +5214,18 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["icon_side"] = "LEFT",
-			["sparkHidden"] = "NEVER",
+			["zoom"] = 0,
 			["sparkHeight"] = 30,
 			["texture"] = "Skyline",
-			["alpha"] = 1,
-			["zoom"] = 0,
+			["frameStrata"] = 1,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["spark"] = false,
 			["tocversion"] = 30400,
 			["id"] = "冰橙监控小德施法条背景",
 			["auto"] = true,
-			["frameStrata"] = 1,
-			["width"] = 335,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["sparkHidden"] = "NEVER",
 			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -5227,7 +5233,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["inverse"] = false,
-			["iconSource"] = -1,
+			["xOffset"] = 170,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 				{
@@ -5260,7 +5266,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["selfPoint"] = "CENTER",
 		},
 		["[Druid] Earth and Moon"] = {
 			["sparkWidth"] = 30,
@@ -5276,9 +5282,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -5296,41 +5302,41 @@ WeakAurasSaved = {
 						["type"] = "aura2",
 						["unevent"] = "auto",
 						["event"] = "Power",
-						["useExactSpellId"] = true,
+						["unit"] = "target",
+						["use_unit"] = true,
+						["spellIds"] = {
+						},
+						["subeventPrefix"] = "SPELL",
+						["subeventSuffix"] = "_CAST_START",
+						["useName"] = true,
 						["auraspellids"] = {
 							"60433", -- [1]
 						},
-						["spellIds"] = {
-						},
-						["useName"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["subeventPrefix"] = "SPELL",
-						["use_unit"] = true,
-						["unit"] = "target",
+						["useExactSpellId"] = true,
 					},
 					["untrigger"] = {
 					},
 				}, -- [1]
 				{
 					["trigger"] = {
+						["subeventSuffix"] = "_CAST_START",
+						["type"] = "aura2",
+						["use_unit"] = true,
 						["auranames"] = {
 							"Nature's Grace", -- [1]
 						},
-						["type"] = "aura2",
 						["subeventPrefix"] = "SPELL",
-						["subeventSuffix"] = "_CAST_START",
-						["names"] = {
-						},
 						["matchesShowOn"] = "showOnMissing",
 						["event"] = "Power",
-						["use_unit"] = true,
-						["unevent"] = "auto",
+						["unit"] = "player",
+						["useName"] = true,
 						["powertype"] = 0,
 						["spellIds"] = {
 						},
 						["duration"] = "1",
-						["useName"] = true,
-						["unit"] = "player",
+						["unevent"] = "auto",
+						["names"] = {
+						},
 						["use_powertype"] = true,
 						["debuffType"] = "HELPFUL",
 					},
@@ -5350,20 +5356,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -5375,7 +5381,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["desaturate"] = false,
-			["frameStrata"] = 1,
+			["alpha"] = 1,
 			["sparkOffsetY"] = 0,
 			["subRegions"] = {
 				{
@@ -5387,7 +5393,7 @@ WeakAurasSaved = {
 				{
 					["border_size"] = 2,
 					["border_anchor"] = "bar",
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -5396,17 +5402,14 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [3]
 			},
 			["height"] = 10,
-			["sparkMirror"] = false,
+			["selfPoint"] = "CENTER",
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -5425,7 +5428,10 @@ WeakAurasSaved = {
 						["DRUID"] = true,
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
@@ -5443,35 +5449,35 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["sparkOffsetX"] = 0,
+			["authorOptions"] = {
+			},
 			["xOffset"] = 73.9998438719324,
 			["useAdjustededMin"] = false,
 			["regionType"] = "aurabar",
-			["uid"] = "LA5Es4OFhzv",
-			["zoom"] = 0,
-			["icon_side"] = "RIGHT",
-			["width"] = 151,
-			["sparkHeight"] = 20,
-			["texture"] = "Aluminium",
-			["sparkHidden"] = "BOTH",
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Earth and Moon",
-			["spark"] = true,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["config"] = {
-			},
 			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["inverse"] = false,
-			["authorOptions"] = {
+			["config"] = {
 			},
+			["icon_side"] = "RIGHT",
+			["anchorFrameType"] = "SCREEN",
+			["sparkHeight"] = 20,
+			["texture"] = "Aluminium",
+			["auto"] = true,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["spark"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Earth and Moon",
+			["sparkHidden"] = "BOTH",
+			["frameStrata"] = 1,
+			["width"] = 151,
+			["zoom"] = 0,
+			["uid"] = "LA5Es4OFhzv",
+			["inverse"] = false,
+			["sparkOffsetX"] = 0,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
@@ -5479,7 +5485,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["selfPoint"] = "CENTER",
+			["sparkMirror"] = false,
 		},
 		["冰橙监控小德狂暴回复CD"] = {
 			["iconSource"] = -1,
@@ -5505,12 +5511,12 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["unit"] = "player",
-						["type"] = "aura2",
-						["names"] = {
-						},
 						["auranames"] = {
 							"狂暴回复", -- [1]
 						},
+						["names"] = {
+						},
+						["type"] = "aura2",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -5523,22 +5529,22 @@ WeakAurasSaved = {
 						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
-						["subeventPrefix"] = "SPELL",
+						["names"] = {
+						},
 						["unevent"] = "auto",
 						["use_unit"] = true,
-						["duration"] = "1",
+						["use_genericShowOn"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
 						["realSpellName"] = "狂暴回复",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
 						["spellName"] = 22842,
-						["use_genericShowOn"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["duration"] = "1",
 						["use_track"] = true,
-						["names"] = {
-						},
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -5547,14 +5553,14 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["use_form"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 						["type"] = "unit",
 						["use_unit"] = true,
 						["form"] = {
 							["single"] = 1,
 						},
 						["event"] = "Stance/Form/Aura",
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -5562,10 +5568,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["use_unit"] = true,
+						["unit"] = "target",
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["unit"] = "target",
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 					},
@@ -5580,12 +5586,12 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["preset"] = "slideleft",
 					["easeStrength"] = 3,
+					["preset"] = "slideleft",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -5593,8 +5599,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["preset"] = "slideleft",
 					["easeStrength"] = 3,
+					["preset"] = "slideleft",
 				},
 			},
 			["desaturate"] = false,
@@ -5636,7 +5642,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["type"] = "subborder",
-					["border_size"] = 2,
+					["border_offset"] = 0,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -5647,7 +5653,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 				}, -- [3]
 				{
 					["glowFrequency"] = 0.25,
@@ -5664,8 +5670,8 @@ WeakAurasSaved = {
 					},
 					["type"] = "subglow",
 					["glowXOffset"] = 0,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -5686,49 +5692,30 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_spec"] = true,
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_vehicleUi"] = false,
 				["spec"] = {
 					["single"] = 3,
 					["multi"] = {
 						[3] = true,
 					},
 				},
-				["use_vehicleUi"] = false,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 			},
 			["source"] = "import",
-			["uid"] = "RBajl0r4h5j",
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
-			["cooldown"] = true,
-			["displayIcon"] = 136121,
-			["parent"] = "冰橙监控小德CD组 ",
-			["zoom"] = 0,
-			["anchorFrameType"] = "SCREEN",
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德狂暴回复CD",
-			["alpha"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 45,
-			["frameStrata"] = 1,
 			["config"] = {
 			},
-			["inverse"] = true,
-			["xOffset"] = 70,
+			["selfPoint"] = "CENTER",
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["regionType"] = "icon",
+			["parent"] = "冰橙监控小德CD组 ",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -5769,18 +5756,37 @@ WeakAurasSaved = {
 					},
 				}, -- [3]
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
 			},
+			["useCooldownModRate"] = true,
+			["width"] = 45,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德狂暴回复CD",
+			["frameStrata"] = 1,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
+			["uid"] = "RBajl0r4h5j",
+			["inverse"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
+			["displayIcon"] = 136121,
+			["cooldown"] = true,
+			["xOffset"] = 70,
 		},
 		["[Druid] Current Stance Missing"] = {
 			["iconSource"] = 0,
@@ -5813,11 +5819,12 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showOnReady",
 						["subeventPrefix"] = "SPELL",
 						["spellName"] = 20549,
-						["debuffType"] = "HELPFUL",
+						["names"] = {
+						},
 						["useName"] = true,
 						["unit"] = "player",
 						["subeventSuffix"] = "_CAST_START",
-						["use_unit"] = true,
+						["duration"] = "1",
 						["form"] = {
 							["multi"] = {
 								true, -- [1]
@@ -5830,17 +5837,16 @@ WeakAurasSaved = {
 							},
 						},
 						["event"] = "Stance/Form/Aura",
-						["type"] = "aura2",
+						["matchesShowOn"] = "showOnMissing",
 						["realSpellName"] = "War Stomp",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
 						["unevent"] = "auto",
-						["matchesShowOn"] = "showOnMissing",
-						["duration"] = "1",
+						["type"] = "aura2",
+						["use_unit"] = true,
 						["use_track"] = true,
-						["names"] = {
-						},
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnReady",
@@ -5858,7 +5864,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_offset"] = 0,
-					["type"] = "subborder",
+					["border_size"] = 1,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -5867,7 +5873,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_size"] = 1,
+					["type"] = "subborder",
 				}, -- [2]
 			},
 			["height"] = 40,
@@ -5896,60 +5902,60 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["zoom"] = 0.29,
-			["xOffset"] = 0,
+			["cooldownTextDisabled"] = false,
+			["authorOptions"] = {
+			},
 			["regionType"] = "icon",
 			["parent"] = "[WotLK] Balance Druid (Left Group)",
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["cooldown"] = false,
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
-			["uid"] = "AWzwA6E3v76",
-			["useCooldownModRate"] = true,
-			["cooldownTextDisabled"] = false,
-			["auto"] = false,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Current Stance Missing",
-			["width"] = 40,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["alpha"] = 1,
-			["config"] = {
-			},
-			["inverse"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
-			},
-			["conditions"] = {
 			},
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["authorOptions"] = {
+			["conditions"] = {
+			},
+			["config"] = {
+			},
+			["useCooldownModRate"] = true,
+			["zoom"] = 0.29,
+			["auto"] = false,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Current Stance Missing",
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
+			["width"] = 40,
+			["alpha"] = 1,
+			["uid"] = "AWzwA6E3v76",
+			["inverse"] = false,
+			["xOffset"] = 0,
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
+			["cooldown"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
 			},
 		},
 		["GCDHistoryBuffer1"] = {
@@ -5973,11 +5979,11 @@ WeakAurasSaved = {
 					["custom"] = "",
 					["do_custom"] = false,
 				},
+				["finish"] = {
+				},
 				["init"] = {
 					["custom"] = "aura_env.thisRegister = 1\n\naura_env.animX = aura_env.config[\"displayTime\"] * aura_env.region.width\nif aura_env.config[\"direction\"] == 1 then\n    aura_env.animDir = -1\nelse\n    aura_env.animDir = 1\nend\n\naura_env.xoff = 0\naura_env.castTime = 0",
 					["do_custom"] = true,
-				},
-				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -5987,28 +5993,28 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showOnActive",
 						["use_unit"] = true,
 						["customIcon"] = "function()\n    return aura_env.icon\nend\n\n\n\n\n\n\n\n",
-						["names"] = {
-						},
-						["custom_hide"] = "timed",
-						["use_cloneId"] = true,
+						["dynamicDuration"] = true,
 						["debuffType"] = "HELPFUL",
-						["duration"] = "3",
+						["use_cloneId"] = true,
+						["custom_hide"] = "timed",
+						["subeventPrefix"] = "SPELL",
 						["type"] = "custom",
-						["custom_type"] = "event",
 						["subeventSuffix"] = "_CAST_SUCCESS",
+						["custom_type"] = "event",
 						["spellIds"] = {
 						},
 						["events"] = "MYSTLER_GCDHISTORY_ADD",
 						["event"] = "Combat Log",
-						["unit"] = "player",
-						["customDuration"] = "function()\n    return aura_env.config[\"displayTime\"], aura_env.castTime + aura_env.config[\"displayTime\"]\nend\n\n\n\n\n\n\n\n\n\n\n\n",
 						["unevent"] = "timed",
+						["customDuration"] = "function()\n    return aura_env.config[\"displayTime\"], aura_env.castTime + aura_env.config[\"displayTime\"]\nend\n\n\n\n\n\n\n\n\n\n\n\n",
+						["unit"] = "player",
 						["custom"] = "function(event, arg1, arg2, arg3, arg4)\n    if arg1 == aura_env.thisRegister then\n        aura_env.icon = arg2\n        aura_env.xoff = 0\n        aura_env.castTime = arg3\n        if arg4 then\n            aura_env.region:SetDesaturated(true)\n            aura_env.region:Color(1,0,0,1)\n        else\n            aura_env.region:SetDesaturated(false)\n            aura_env.region:Color(1,1,1,1)\n        end\n        return true\n    end\n    return false\nend",
 						["use_sourceUnit"] = true,
 						["check"] = "event",
-						["subeventPrefix"] = "SPELL",
+						["duration"] = "3",
 						["sourceUnit"] = "player",
-						["dynamicDuration"] = true,
+						["names"] = {
+						},
 					},
 					["untrigger"] = {
 						["custom"] = "function() return true end",
@@ -6040,8 +6046,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["easeStrength"] = 3,
-					["preset"] = "fade",
 					["duration_type"] = "seconds",
+					["preset"] = "fade",
 				},
 				["main"] = {
 					["colorR"] = 1,
@@ -6059,12 +6065,12 @@ WeakAurasSaved = {
 					["alpha"] = 0,
 					["y"] = 0,
 					["x"] = 0,
-					["colorB"] = 1,
-					["duration"] = "100%",
-					["easeStrength"] = 3,
-					["rotate"] = 0,
-					["translateType"] = "custom",
 					["duration_type"] = "relative",
+					["translateType"] = "custom",
+					["rotate"] = 0,
+					["easeStrength"] = 3,
+					["duration"] = "100%",
+					["colorB"] = 1,
 				},
 				["finish"] = {
 					["colorR"] = 1,
@@ -6080,15 +6086,15 @@ WeakAurasSaved = {
 					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n    local x = startX + (progress * deltaX)\n    if aura_env.state then\n        x = x + aura_env.state.xoff\n    end\n    return x, startY + (progress * deltaY)\nend",
 					["scaley"] = 1,
 					["alpha"] = 0,
-					["colorB"] = 1,
+					["scalex"] = 1,
 					["y"] = 0,
 					["x"] = -150,
-					["preset"] = "fade",
-					["easeStrength"] = 3,
-					["translateType"] = "custom",
-					["rotate"] = 0,
 					["duration_type"] = "seconds",
-					["scalex"] = 1,
+					["rotate"] = 0,
+					["translateType"] = "custom",
+					["easeStrength"] = 3,
+					["preset"] = "fade",
+					["colorB"] = 1,
 				},
 			},
 			["desaturate"] = false,
@@ -6144,10 +6150,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 				["difficulty"] = {
 					["multi"] = {
 					},
@@ -6156,19 +6159,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -6176,54 +6167,39 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["width"] = 50,
-			["selfPoint"] = "CENTER",
-			["xOffset"] = 0,
-			["icon"] = true,
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["regionType"] = "icon",
-			["displayIcon"] = "",
-			["parent"] = "GCDHistoryGrp",
-			["cooldownEdge"] = false,
-			["config"] = {
-				["displayTime"] = 3,
-				["direction"] = 1,
-			},
-			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["cooldownTextDisabled"] = false,
-			["semver"] = "1.1.10",
-			["tocversion"] = 30400,
-			["id"] = "GCDHistoryBuffer1",
-			["auto"] = true,
-			["alpha"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["uid"] = "2mCEgufi1RT",
-			["inverse"] = false,
-			["stickyDuration"] = false,
-			["conditions"] = {
-			},
-			["cooldown"] = false,
+			["cooldownTextDisabled"] = false,
 			["authorOptions"] = {
 				{
-					["desc"] = "In which direction should the history expand?",
+					["width"] = 1,
 					["type"] = "select",
 					["values"] = {
 						"Left", -- [1]
 						"Right", -- [2]
 					},
-					["default"] = 1,
-					["key"] = "direction",
-					["useDesc"] = true,
 					["name"] = "Direction",
-					["width"] = 1,
+					["useDesc"] = true,
+					["key"] = "direction",
+					["default"] = 1,
+					["desc"] = "In which direction should the history expand?",
 				}, -- [1]
 				{
 					["type"] = "range",
@@ -6233,11 +6209,41 @@ WeakAurasSaved = {
 					["width"] = 1,
 					["min"] = 1,
 					["key"] = "displayTime",
-					["desc"] = "How long (in seconds) icons are shown at max.",
-					["name"] = "Display Time",
 					["default"] = 3,
+					["name"] = "Display Time",
+					["desc"] = "How long (in seconds) icons are shown at max.",
 				}, -- [2]
 			},
+			["xOffset"] = 0,
+			["cooldown"] = false,
+			["regionType"] = "icon",
+			["conditions"] = {
+			},
+			["stickyDuration"] = false,
+			["icon"] = true,
+			["uid"] = "2mCEgufi1RT",
+			["alpha"] = 1,
+			["semver"] = "1.1.10",
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "GCDHistoryBuffer1",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["width"] = 50,
+			["parent"] = "GCDHistoryGrp",
+			["config"] = {
+				["direction"] = 1,
+				["displayTime"] = 3,
+			},
+			["inverse"] = false,
+			["selfPoint"] = "CENTER",
+			["displayIcon"] = "",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["cooldownEdge"] = false,
 		},
 		["冰橙监控小德迅捷治愈CD"] = {
 			["iconSource"] = -1,
@@ -6263,21 +6269,21 @@ WeakAurasSaved = {
 						},
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
-						["use_unit"] = true,
+						["duration"] = "1",
 						["unevent"] = "auto",
 						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
+						["use_absorbMode"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
 						["realSpellName"] = "迅捷治愈",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["spellName"] = 18562,
 						["subeventSuffix"] = "_CAST_START",
-						["use_absorbMode"] = true,
+						["spellName"] = 18562,
+						["subeventPrefix"] = "SPELL",
 						["use_track"] = true,
-						["duration"] = "1",
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -6286,10 +6292,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -6339,7 +6345,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["border_offset"] = 0,
-					["type"] = "subborder",
+					["border_size"] = 2,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -6350,7 +6356,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_size"] = 2,
+					["type"] = "subborder",
 				}, -- [3]
 			},
 			["height"] = 45,
@@ -6367,11 +6373,14 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["use_spellknown"] = true,
-				["use_vehicleUi"] = false,
 				["use_spec"] = true,
+				["use_vehicleUi"] = false,
 				["spec"] = {
 					["single"] = 3,
 					["multi"] = {
@@ -6383,34 +6392,22 @@ WeakAurasSaved = {
 				},
 				["use_exact_spellknown"] = false,
 				["spellknown"] = 18562,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 			},
 			["source"] = "import",
-			["uid"] = "na6JorvAKc8",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
+			["config"] = {
 			},
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["regionType"] = "icon",
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -6418,27 +6415,17 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
-			["cooldown"] = true,
-			["displayIcon"] = "",
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["regionType"] = "icon",
 			["xOffset"] = 115,
-			["cooldownTextDisabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德迅捷治愈CD",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["width"] = 45,
-			["useCooldownModRate"] = true,
-			["config"] = {
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["inverse"] = true,
-			["parent"] = "冰橙监控小德CD组 ",
 			["conditions"] = {
 				{
 					["check"] = {
@@ -6454,18 +6441,37 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
 			},
+			["alpha"] = 1,
+			["width"] = 45,
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德迅捷治愈CD",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
+			["uid"] = "na6JorvAKc8",
+			["inverse"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["displayIcon"] = "",
+			["cooldown"] = true,
+			["parent"] = "冰橙监控小德CD组 ",
 		},
 		["冰橙WLK小德监控WA部分"] = {
 			["controlledChildren"] = {
@@ -6488,15 +6494,15 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
 						["spellIds"] = {
 						},
@@ -6505,7 +6511,7 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["event"] = "Health",
-						["debuffType"] = "HELPFUL",
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 					},
@@ -6514,20 +6520,20 @@ WeakAurasSaved = {
 			["internalVersion"] = 59,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -6541,7 +6547,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["multi"] = {
 					},
@@ -6551,10 +6560,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 			},
 			["backdropColor"] = {
 				1, -- [1]
@@ -6573,20 +6579,20 @@ WeakAurasSaved = {
 			["id"] = "冰橙WLK小德监控WA部分",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["uid"] = ")Y(5a3Wwk4b",
-			["config"] = {
+			["authorOptions"] = {
 			},
 			["borderInset"] = 1,
 			["selfPoint"] = "BOTTOMLEFT",
+			["config"] = {
+			},
 			["conditions"] = {
 			},
 			["information"] = {
-				["groupOffset"] = true,
-				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
+				["forceEvents"] = true,
+				["groupOffset"] = true,
 			},
-			["authorOptions"] = {
-			},
+			["uid"] = ")Y(5a3Wwk4b",
 		},
 		["冰橙监控小德月火术"] = {
 			["iconSource"] = -1,
@@ -6611,10 +6617,10 @@ WeakAurasSaved = {
 						},
 						["ownOnly"] = true,
 						["subeventPrefix"] = "SPELL",
-						["duration"] = "1",
-						["use_unit"] = true,
-						["use_absorbMode"] = true,
+						["use_genericShowOn"] = true,
+						["unit"] = "target",
 						["spellName"] = 19574,
+						["debuffType"] = "HARMFUL",
 						["useExactSpellId"] = false,
 						["type"] = "aura2",
 						["subeventSuffix"] = "_CAST_START",
@@ -6629,9 +6635,9 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["debuffType"] = "HARMFUL",
-						["unit"] = "target",
-						["use_genericShowOn"] = true,
+						["use_absorbMode"] = true,
+						["use_unit"] = true,
+						["duration"] = "1",
 						["use_track"] = true,
 						["useIgnoreName"] = false,
 					},
@@ -6643,11 +6649,11 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "unit",
 						["use_hostility"] = true,
-						["hostility"] = "hostile",
+						["use_unit"] = true,
 						["unit"] = "target",
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["hostility"] = "hostile",
 					},
 					["untrigger"] = {
 					},
@@ -6710,9 +6716,9 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_legacy_floor"] = false,
+					["text_text_format_p_time_precision"] = 1,
 					["type"] = "subtext",
-					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["anchorXOffset"] = 0,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -6722,19 +6728,19 @@ WeakAurasSaved = {
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_format"] = "timed",
 					["text_shadowYOffset"] = 0,
-					["text_text_format_p_time_mod_rate"] = true,
-					["text_wordWrap"] = "WordWrap",
 					["text_visible"] = true,
+					["text_wordWrap"] = "WordWrap",
+					["text_fontType"] = "OUTLINE",
 					["text_anchorPoint"] = "CENTER",
 					["text_text_format_p_time_format"] = 0,
-					["text_fontType"] = "OUTLINE",
+					["text_text_format_p_time_mod_rate"] = true,
 					["text_fontSize"] = 12,
-					["anchorXOffset"] = 0,
-					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["text_text_format_p_time_legacy_floor"] = false,
 				}, -- [3]
 				{
 					["type"] = "subborder",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -6745,7 +6751,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_size"] = 2,
+					["border_offset"] = 0,
 				}, -- [4]
 			},
 			["height"] = 30,
@@ -6764,41 +6770,32 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_spec"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_vehicleUi"] = false,
+				["zoneIds"] = "",
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["use_vehicleUi"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["uid"] = "z8)uaeV2)WC",
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
+			["config"] = {
 			},
-			["desaturate"] = false,
-			["regionType"] = "icon",
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -6806,33 +6803,16 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
-			["cooldown"] = true,
-			["displayIcon"] = 136096,
+			["desaturate"] = false,
+			["regionType"] = "icon",
 			["parent"] = "冰橙监控小德BUFF组",
-			["cooldownTextDisabled"] = false,
-			["width"] = 50,
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德月火术",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["config"] = {
-			},
-			["inverse"] = true,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
 			["conditions"] = {
 				{
@@ -6866,15 +6846,41 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
+			},
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德月火术",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["width"] = 50,
+			["cooldownTextDisabled"] = false,
+			["uid"] = "z8)uaeV2)WC",
+			["inverse"] = true,
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["displayIcon"] = 136096,
+			["cooldown"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
 			},
 		},
 		["冰橙监控小德影遁CD"] = {
@@ -6903,10 +6909,10 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["subeventPrefix"] = "SPELL",
-						["type"] = "aura2",
+						["subeventSuffix"] = "_CAST_START",
 						["names"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
+						["type"] = "aura2",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -6920,11 +6926,11 @@ WeakAurasSaved = {
 						["unit"] = "player",
 						["realSpellName"] = "影遁",
 						["use_spellName"] = true,
-						["spellName"] = 58984,
+						["debuffType"] = "HELPFUL",
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
 						["use_track"] = true,
-						["debuffType"] = "HELPFUL",
+						["spellName"] = 58984,
 					},
 					["untrigger"] = {
 					},
@@ -6932,10 +6938,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -6985,7 +6991,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["type"] = "subborder",
-					["border_size"] = 2,
+					["border_offset"] = 0,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -6996,7 +7002,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 				}, -- [3]
 				{
 					["glowFrequency"] = 0.25,
@@ -7013,8 +7019,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = false,
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -7033,14 +7039,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 				["use_class"] = true,
 				["use_spellknown"] = true,
-				["use_spec"] = true,
 				["use_vehicleUi"] = false,
+				["use_spec"] = true,
 				["spec"] = {
 					["single"] = 3,
 					["multi"] = {
@@ -7052,30 +7055,25 @@ WeakAurasSaved = {
 				},
 				["use_exact_spellknown"] = false,
 				["spellknown"] = 58984,
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["config"] = {
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
+			["uid"] = "9LKq32JZfHm",
+			["desaturate"] = false,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -7083,15 +7081,35 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["regionType"] = "icon",
-			["desaturate"] = false,
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
+			["xOffset"] = 315,
+			["cooldown"] = true,
+			["displayIcon"] = "",
+			["parent"] = "冰橙监控小德CD组 ",
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德影遁CD",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["width"] = 45,
+			["zoom"] = 0,
+			["config"] = {
+			},
+			["inverse"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
 			},
 			["conditions"] = {
 				{
@@ -7121,30 +7139,18 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["xOffset"] = 315,
-			["zoom"] = 0,
-			["width"] = 45,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德影遁CD",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["uid"] = "9LKq32JZfHm",
-			["inverse"] = true,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
 			},
-			["displayIcon"] = "",
-			["cooldown"] = true,
-			["parent"] = "冰橙监控小德CD组 ",
 		},
 		["冰橙监控小德资源组"] = {
 			["controlledChildren"] = {
@@ -7171,15 +7177,15 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
 						["spellIds"] = {
 						},
@@ -7188,7 +7194,7 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["event"] = "Health",
-						["debuffType"] = "HELPFUL",
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 					},
@@ -7197,20 +7203,20 @@ WeakAurasSaved = {
 			["internalVersion"] = 59,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -7219,7 +7225,7 @@ WeakAurasSaved = {
 			["subRegions"] = {
 			},
 			["load"] = {
-				["talent"] = {
+				["size"] = {
 					["multi"] = {
 					},
 				},
@@ -7231,7 +7237,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -7251,21 +7257,21 @@ WeakAurasSaved = {
 			["borderOffset"] = 4,
 			["tocversion"] = 30400,
 			["id"] = "冰橙监控小德资源组",
-			["config"] = {
-			},
+			["borderInset"] = 1,
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["xOffset"] = 0,
-			["borderInset"] = 1,
-			["uid"] = "UR0hTp)dO2g",
 			["authorOptions"] = {
 			},
+			["uid"] = "UR0hTp)dO2g",
+			["config"] = {
+			},
+			["selfPoint"] = "CENTER",
 			["conditions"] = {
 			},
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["selfPoint"] = "CENTER",
+			["xOffset"] = 0,
 		},
 		["[Druid] Innervate CD"] = {
 			["iconSource"] = -1,
@@ -7292,15 +7298,14 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showOnCooldown",
 						["use_unit"] = true,
 						["remaining"] = "170",
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
+						["duration"] = "1",
 						["spellName"] = 29166,
-						["names"] = {
-						},
+						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 						["useName"] = true,
-						["use_genericShowOn"] = true,
 						["subeventSuffix"] = "_CAST_START",
-						["type"] = "spell",
+						["unevent"] = "auto",
+						["remaining_operator"] = "<",
 						["form"] = {
 							["multi"] = {
 								true, -- [1]
@@ -7318,11 +7323,12 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["remaining_operator"] = "<",
-						["unevent"] = "auto",
-						["unit"] = "player",
+						["type"] = "spell",
+						["use_genericShowOn"] = true,
+						["names"] = {
+						},
 						["use_track"] = true,
-						["duration"] = "1",
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnCooldown",
@@ -7334,20 +7340,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -7372,9 +7378,9 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_p_time_legacy_floor"] = false,
 					["type"] = "subtext",
-					["anchorXOffset"] = 0,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -7384,19 +7390,19 @@ WeakAurasSaved = {
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_format"] = "timed",
 					["text_shadowYOffset"] = 0,
-					["text_visible"] = true,
+					["text_text_format_p_time_mod_rate"] = true,
 					["text_wordWrap"] = "WordWrap",
 					["text_fontType"] = "OUTLINE",
 					["text_anchorPoint"] = "CENTER",
 					["text_text_format_p_time_format"] = 0,
-					["text_text_format_p_time_mod_rate"] = true,
+					["text_visible"] = true,
 					["text_fontSize"] = 12,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_text_format_p_time_legacy_floor"] = false,
+					["anchorXOffset"] = 0,
+					["text_text_format_p_time_precision"] = 1,
 				}, -- [2]
 				{
 					["type"] = "subborder",
-					["border_size"] = 1,
+					["border_offset"] = 0,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -7405,7 +7411,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_offset"] = 0,
+					["border_size"] = 1,
 				}, -- [3]
 			},
 			["height"] = 40,
@@ -7434,47 +7440,47 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
+			["zoom"] = 0.29,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
+			["regionType"] = "icon",
+			["parent"] = "[WotLK] Balance Druid (Left Group)",
+			["authorOptions"] = {
+			},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["conditions"] = {
+			},
+			["config"] = {
+			},
+			["useCooldownModRate"] = true,
 			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Innervate CD",
+			["width"] = 40,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["uid"] = "DWXewZSg7iv",
+			["inverse"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
-			["parent"] = "[WotLK] Balance Druid (Left Group)",
-			["selfPoint"] = "CENTER",
-			["cooldown"] = true,
 			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
-			["uid"] = "DWXewZSg7iv",
-			["useCooldownModRate"] = true,
-			["zoom"] = 0.29,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Innervate CD",
-			["anchorFrameType"] = "SCREEN",
-			["frameStrata"] = 1,
-			["width"] = 40,
-			["alpha"] = 1,
-			["config"] = {
-			},
-			["inverse"] = false,
-			["authorOptions"] = {
-			},
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
+			["cooldown"] = true,
+			["selfPoint"] = "CENTER",
 		},
 		["[Druid] Gloves"] = {
 			["iconSource"] = -1,
@@ -7509,15 +7515,16 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showOnReady",
 						["unit"] = "player",
 						["itemSlot"] = 10,
-						["use_itemSlot"] = true,
-						["names"] = {
-						},
+						["useExactSpellId"] = false,
+						["use_genericShowOn"] = true,
 						["debuffType"] = "HELPFUL",
 						["useName"] = true,
 						["use_remaining"] = false,
-						["ownOnly"] = true,
 						["unevent"] = "auto",
-						["subeventPrefix"] = "SPELL",
+						["auraspellids"] = {
+							"29166", -- [1]
+						},
+						["use_unit"] = true,
 						["form"] = {
 							["multi"] = {
 								true, -- [1]
@@ -7535,13 +7542,12 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["use_unit"] = true,
-						["auraspellids"] = {
-							"29166", -- [1]
-						},
+						["subeventPrefix"] = "SPELL",
+						["ownOnly"] = true,
 						["type"] = "item",
-						["use_genericShowOn"] = true,
-						["useExactSpellId"] = false,
+						["names"] = {
+						},
+						["use_itemSlot"] = true,
 					},
 					["untrigger"] = {
 						["itemSlot"] = 10,
@@ -7556,20 +7562,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -7581,7 +7587,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_offset"] = 0,
-					["type"] = "subborder",
+					["border_size"] = 1,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -7590,7 +7596,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_size"] = 1,
+					["type"] = "subborder",
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.5,
@@ -7607,8 +7613,8 @@ WeakAurasSaved = {
 					},
 					["type"] = "subglow",
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -7642,46 +7648,46 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
+			["cooldownTextDisabled"] = false,
+			["authorOptions"] = {
+			},
+			["regionType"] = "icon",
+			["parent"] = "[WotLK] Balance Druid (Top Group)",
+			["selfPoint"] = "CENTER",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["conditions"] = {
+			},
+			["config"] = {
+			},
+			["frameStrata"] = 1,
 			["zoom"] = 0.29,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Gloves",
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["width"] = 40,
+			["useCooldownModRate"] = true,
+			["uid"] = "PSrmtn9r9A0",
+			["inverse"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
-			["parent"] = "[WotLK] Balance Druid (Top Group)",
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
+			["cooldown"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
 				},
-			},
-			["cooldown"] = false,
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
-			["uid"] = "PSrmtn9r9A0",
-			["frameStrata"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Gloves",
-			["width"] = 40,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["config"] = {
-			},
-			["inverse"] = false,
-			["selfPoint"] = "CENTER",
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["authorOptions"] = {
+				["init"] = {
+				},
 			},
 		},
 		["[Druid] Mana"] = {
@@ -7715,8 +7721,8 @@ WeakAurasSaved = {
 						},
 						["names"] = {
 						},
-						["unit"] = "player",
 						["subeventPrefix"] = "SPELL",
+						["unit"] = "player",
 						["use_powertype"] = true,
 						["debuffType"] = "HELPFUL",
 					},
@@ -7728,20 +7734,20 @@ WeakAurasSaved = {
 						["useName"] = true,
 						["type"] = "aura2",
 						["subeventSuffix"] = "_CAST_START",
-						["use_unit"] = true,
-						["duration"] = "1",
-						["event"] = "Power",
 						["names"] = {
 						},
-						["unevent"] = "auto",
-						["powertype"] = 0,
-						["spellIds"] = {
-						},
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
+						["duration"] = "1",
+						["event"] = "Power",
+						["use_unit"] = true,
 						["auranames"] = {
 							"Innervate", -- [1]
 						},
+						["powertype"] = 0,
+						["spellIds"] = {
+						},
+						["subeventPrefix"] = "SPELL",
+						["unit"] = "player",
+						["unevent"] = "auto",
 						["use_powertype"] = true,
 						["debuffType"] = "HELPFUL",
 					},
@@ -7762,7 +7768,7 @@ WeakAurasSaved = {
 			["selfPoint"] = "CENTER",
 			["sparkMirror"] = false,
 			["desaturate"] = false,
-			["alpha"] = 1,
+			["frameStrata"] = 1,
 			["sparkOffsetY"] = 0,
 			["subRegions"] = {
 				{
@@ -7774,7 +7780,7 @@ WeakAurasSaved = {
 				{
 					["border_offset"] = 0,
 					["border_anchor"] = "bar",
-					["type"] = "subborder",
+					["border_size"] = 2,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -7783,7 +7789,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_size"] = 2,
+					["type"] = "subborder",
 				}, -- [3]
 				{
 					["text_shadowXOffset"] = 1,
@@ -7812,11 +7818,11 @@ WeakAurasSaved = {
 					["text_wordWrap"] = "WordWrap",
 					["text_fontType"] = "None",
 					["text_anchorPoint"] = "INNER_CENTER",
-					["text_text_format_c_format"] = "none",
+					["text_text_format_n_format"] = "none",
 					["text_visible"] = true,
 					["text_fontSize"] = 15,
 					["anchorXOffset"] = 0,
-					["text_text_format_n_format"] = "none",
+					["text_text_format_c_format"] = "none",
 				}, -- [4]
 				{
 					["api"] = false,
@@ -7830,28 +7836,39 @@ WeakAurasSaved = {
 					["model_y"] = 0.2500002980232239,
 					["model_st_rx"] = 270,
 					["rotation"] = 0,
-					["bar_model_clip"] = true,
+					["model_z"] = 0,
 					["model_st_tx"] = 0,
 					["model_alpha"] = 1,
 					["model_st_ry"] = 0,
 					["model_visible"] = false,
 					["model_st_tz"] = 0,
-					["model_z"] = 0,
+					["bar_model_clip"] = true,
 				}, -- [5]
 			},
 			["height"] = 20,
-			["barColor"] = {
-				0, -- [1]
-				0.8, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
 			},
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -7870,7 +7887,10 @@ WeakAurasSaved = {
 						["DRUID"] = true,
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
@@ -7879,9 +7899,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["color"] = {
@@ -7890,43 +7910,43 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["sparkOffsetX"] = 0,
+			["authorOptions"] = {
+			},
 			["xOffset"] = 0,
 			["useAdjustededMin"] = false,
 			["regionType"] = "aurabar",
-			["uid"] = "ZwXs5DKFBWf",
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["icon_side"] = "RIGHT",
-			["anchorFrameType"] = "SCREEN",
-			["sparkHeight"] = 30,
-			["texture"] = "Aluminium",
-			["sparkHidden"] = "BOTH",
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Mana",
-			["spark"] = true,
-			["frameStrata"] = 1,
-			["width"] = 300,
+			["config"] = {
+			},
 			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["config"] = {
-			},
+			["icon_side"] = "RIGHT",
+			["width"] = 300,
+			["sparkHeight"] = 30,
+			["texture"] = "Aluminium",
+			["auto"] = true,
+			["zoom"] = 0,
+			["spark"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Mana",
+			["sparkHidden"] = "BOTH",
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["uid"] = "ZwXs5DKFBWf",
 			["inverse"] = false,
-			["authorOptions"] = {
-			},
+			["sparkOffsetX"] = 0,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 				{
 					["check"] = {
 						["trigger"] = 1,
 						["op"] = "<=",
-						["variable"] = "percentpower",
 						["value"] = "20",
+						["variable"] = "percentpower",
 					},
 					["changes"] = {
 						{
@@ -7958,25 +7978,11 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
+			["barColor"] = {
+				0, -- [1]
+				0.8, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
 		},
 		["Moonfire-out"] = {
@@ -7996,16 +8002,16 @@ WeakAurasSaved = {
 					["do_glow"] = false,
 					["glow_action"] = "show",
 				},
+				["init"] = {
+				},
 				["finish"] = {
 					["glow_frame_type"] = "FRAMESELECTOR",
 					["hide_all_glows"] = false,
 					["glow_action"] = "show",
-					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Life Tap",
 					["glow_type"] = "Pixel",
 					["do_message"] = false,
-					["glow_frame"] = "WeakAuras:Life Tap",
-				},
-				["init"] = {
+					["do_glow"] = false,
 				},
 			},
 			["triggers"] = {
@@ -8024,19 +8030,19 @@ WeakAurasSaved = {
 						["subeventSuffix"] = "_CAST_START",
 						["event"] = "Health",
 						["subeventPrefix"] = "SPELL",
-						["names"] = {
+						["useExactSpellId"] = true,
+						["ownOnly"] = true,
+						["spellIds"] = {
 						},
+						["useName"] = false,
+						["remOperator"] = "<",
 						["auraspellids"] = {
 							"48463", -- [1]
 							"48462", -- [2]
 							"26988", -- [3]
 						},
-						["spellIds"] = {
+						["names"] = {
 						},
-						["useName"] = false,
-						["remOperator"] = "<",
-						["ownOnly"] = true,
-						["useExactSpellId"] = true,
 						["useRem"] = false,
 					},
 					["untrigger"] = {
@@ -8048,10 +8054,10 @@ WeakAurasSaved = {
 						["auraspellids"] = {
 							"48517", -- [1]
 						},
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["matchesShowOn"] = "showOnMissing",
 						["useExactSpellId"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
@@ -8062,10 +8068,10 @@ WeakAurasSaved = {
 						["auraspellids"] = {
 							"48518", -- [1]
 						},
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["matchesShowOn"] = "showOnMissing",
 						["useExactSpellId"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
@@ -8079,12 +8085,12 @@ WeakAurasSaved = {
 						["unit"] = "player",
 						["realSpellName"] = "Starfire",
 						["use_spellId"] = true,
-						["spellName"] = 48461,
+						["debuffType"] = "HELPFUL",
 						["use_direction"] = true,
 						["genericShowOn"] = "showOnCooldown",
 						["use_spellName"] = true,
 						["use_track"] = true,
-						["debuffType"] = "HELPFUL",
+						["spellName"] = 48461,
 					},
 					["untrigger"] = {
 					},
@@ -8130,59 +8136,59 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["config"] = {
+			["uid"] = "gqctlRbq1AC",
+			["zoom"] = 0,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["icon"] = true,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["cooldownTextDisabled"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
+			["url"] = "https://wago.io/X6wQKkZUq/5",
+			["useCooldownModRate"] = true,
+			["width"] = 30,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "Moonfire-out",
+			["frameStrata"] = 1,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["semver"] = "1.0.4",
+			["config"] = {
+			},
+			["inverse"] = false,
+			["parent"] = "平衡德循環助手",
+			["conditions"] = {
+			},
+			["cooldown"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
-			["cooldown"] = false,
-			["icon"] = true,
-			["parent"] = "平衡德循環助手",
-			["semver"] = "1.0.4",
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "Moonfire-out",
-			["alpha"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 30,
-			["frameStrata"] = 1,
-			["uid"] = "gqctlRbq1AC",
-			["inverse"] = false,
-			["url"] = "https://wago.io/X6wQKkZUq/5",
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["xOffset"] = 0,
 		},
 		["冰橙监控小德BUFF组"] = {
 			["controlledChildren"] = {
@@ -8212,15 +8218,15 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
 						["spellIds"] = {
 						},
@@ -8229,7 +8235,7 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["event"] = "Health",
-						["debuffType"] = "HELPFUL",
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 					},
@@ -8238,20 +8244,20 @@ WeakAurasSaved = {
 			["internalVersion"] = 59,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -8260,7 +8266,7 @@ WeakAurasSaved = {
 			["subRegions"] = {
 			},
 			["load"] = {
-				["talent"] = {
+				["size"] = {
 					["multi"] = {
 					},
 				},
@@ -8272,7 +8278,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -8292,27 +8298,27 @@ WeakAurasSaved = {
 			["borderOffset"] = 4,
 			["tocversion"] = 30400,
 			["id"] = "冰橙监控小德BUFF组",
-			["config"] = {
-			},
+			["borderInset"] = 1,
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["parent"] = "冰橙WLK小德监控WA部分",
-			["borderInset"] = 1,
-			["uid"] = "70Kgm)8morE",
 			["xOffset"] = 0,
+			["uid"] = "70Kgm)8morE",
+			["config"] = {
+			},
+			["selfPoint"] = "CENTER",
 			["conditions"] = {
 			},
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["selfPoint"] = "CENTER",
+			["parent"] = "冰橙WLK小德监控WA部分",
 		},
 		["冰橙监控小德生命绽放"] = {
 			["iconSource"] = -1,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -8325,9 +8331,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
@@ -8341,10 +8347,11 @@ WeakAurasSaved = {
 						["use_unit"] = true,
 						["use_absorbMode"] = true,
 						["subeventPrefix"] = "SPELL",
-						["use_genericShowOn"] = true,
-						["unit"] = "target",
-						["matchesShowOn"] = "showOnActive",
+						["ownOnly"] = true,
+						["names"] = {
+						},
 						["debuffType"] = "HELPFUL",
+						["spellName"] = 19574,
 						["auraspellids"] = {
 							"184362", -- [1]
 						},
@@ -8359,10 +8366,9 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["spellName"] = 19574,
-						["names"] = {
-						},
-						["ownOnly"] = true,
+						["matchesShowOn"] = "showOnActive",
+						["unit"] = "target",
+						["use_genericShowOn"] = true,
 						["use_track"] = true,
 						["useIgnoreName"] = false,
 					},
@@ -8374,11 +8380,11 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "unit",
 						["use_hostility"] = true,
-						["hostility"] = "friendly",
+						["use_unit"] = true,
 						["unit"] = "target",
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["hostility"] = "friendly",
 					},
 					["untrigger"] = {
 					},
@@ -8393,12 +8399,12 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -8406,8 +8412,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["desaturate"] = false,
@@ -8449,7 +8455,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["border_offset"] = 0,
-					["border_size"] = 2,
+					["type"] = "subborder",
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -8460,7 +8466,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["type"] = "subborder",
+					["border_size"] = 2,
 				}, -- [3]
 			},
 			["height"] = 30,
@@ -8479,29 +8485,41 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_spec"] = true,
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_vehicleUi"] = false,
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
 					},
 				},
-				["use_vehicleUi"] = false,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 			},
 			["source"] = "import",
-			["config"] = {
-			},
-			["icon"] = true,
+			["uid"] = "QFfq(rpWoEi",
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 			["selfPoint"] = "CENTER",
 			["regionType"] = "icon",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
+			["parent"] = "冰橙监控小德BUFF组",
+			["cooldown"] = true,
+			["displayIcon"] = 134206,
+			["xOffset"] = 170,
+			["frameStrata"] = 1,
+			["width"] = 50,
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德生命绽放",
+			["useCooldownModRate"] = true,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
+			["config"] = {
 			},
+			["inverse"] = true,
+			["icon"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -8534,28 +8552,16 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["parent"] = "冰橙监控小德BUFF组",
-			["cooldownTextDisabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德生命绽放",
-			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["width"] = 50,
-			["useCooldownModRate"] = true,
-			["uid"] = "QFfq(rpWoEi",
-			["inverse"] = true,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayIcon"] = 134206,
-			["cooldown"] = true,
-			["xOffset"] = 170,
 		},
 		["月蚀冷却 "] = {
 			["iconSource"] = 3,
@@ -8578,30 +8584,30 @@ WeakAurasSaved = {
 						["duration"] = "15",
 						["unit"] = "player",
 						["use_sourceNpcId"] = false,
-						["sourceFlags"] = "Mine",
+						["use_auraType"] = true,
 						["use_sourceFlags"] = true,
 						["use_cloneId"] = false,
 						["use_spellSchool"] = false,
 						["debuffType"] = "HELPFUL",
 						["type"] = "combatlog",
-						["subeventPrefix"] = "SPELL",
+						["matchesShowOn"] = "showAlways",
 						["useExactSpellId"] = true,
-						["auraspellids"] = {
-							"48517", -- [1]
-						},
+						["auraType"] = "BUFF",
 						["subeventSuffix"] = "_AURA_REMOVED",
 						["event"] = "Combat Log",
 						["names"] = {
 						},
-						["use_spellName"] = false,
 						["use_spellId"] = true,
+						["use_spellName"] = false,
 						["spellIds"] = {
 						},
 						["use_sourceUnit"] = true,
-						["auraType"] = "BUFF",
-						["matchesShowOn"] = "showAlways",
+						["auraspellids"] = {
+							"48517", -- [1]
+						},
+						["subeventPrefix"] = "SPELL",
 						["sourceUnit"] = "player",
-						["use_auraType"] = true,
+						["sourceFlags"] = "Mine",
 					},
 					["untrigger"] = {
 					},
@@ -8610,12 +8616,12 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "aura2",
 						["useExactSpellId"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 						["matchesShowOn"] = "showAlways",
 						["auraspellids"] = {
 							"48518", -- [1]
 						},
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -8628,11 +8634,11 @@ WeakAurasSaved = {
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 26986,
 						["use_spellName"] = true,
-						["debuffType"] = "HELPFUL",
+						["spellName"] = 26986,
 						["genericShowOn"] = "showOnCooldown",
 						["unit"] = "player",
 						["use_track"] = true,
-						["spellName"] = 26986,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -8658,9 +8664,9 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_legacy_floor"] = false,
+					["text_text_format_p_format"] = "timed",
 					["type"] = "subtext",
-					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["anchorXOffset"] = 0,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -8670,20 +8676,20 @@ WeakAurasSaved = {
 					["text_font"] = "聊天",
 					["text_shadowXOffset"] = 0,
 					["text_shadowYOffset"] = 0,
+					["text_fontType"] = "OUTLINE",
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = true,
+					["text_anchorPoint"] = "CENTER",
+					["text_text_format_p_time_format"] = 0,
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
-					["text_wordWrap"] = "WordWrap",
-					["text_fontType"] = "OUTLINE",
-					["text_anchorPoint"] = "CENTER",
-					["text_text_format_p_time_format"] = 0,
-					["text_visible"] = true,
 					["text_fontSize"] = 16,
-					["anchorXOffset"] = 0,
-					["text_text_format_p_format"] = "timed",
+					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["text_text_format_p_time_legacy_floor"] = false,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -8700,8 +8706,8 @@ WeakAurasSaved = {
 					},
 					["glowXOffset"] = 0,
 					["glow"] = false,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -8713,11 +8719,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_alive"] = true,
 				["class"] = {
 					["multi"] = {
 					},
 				},
+				["use_alive"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -8729,51 +8735,46 @@ WeakAurasSaved = {
 			},
 			["source"] = "import",
 			["regionType"] = "icon",
+			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
+			["information"] = {
+				["forceEvents"] = true,
+			},
 			["authorOptions"] = {
 			},
-			["cooldown"] = true,
 			["xOffset"] = 0,
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
+			["cooldownTextDisabled"] = false,
+			["useCooldownModRate"] = true,
+			["zoom"] = 0,
+			["config"] = {
 			},
+			["tocversion"] = 30400,
+			["id"] = "月蚀冷却 ",
+			["alpha"] = 1,
+			["frameStrata"] = 1,
+			["width"] = 64,
+			["anchorFrameType"] = "SCREEN",
+			["uid"] = "bG5BVG3wv1u",
+			["inverse"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
-			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["uid"] = "bG5BVG3wv1u",
-			["tocversion"] = 30400,
-			["id"] = "月蚀冷却 ",
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["width"] = 64,
-			["frameStrata"] = 1,
-			["config"] = {
-			},
-			["inverse"] = false,
-			["zoom"] = 0,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -8789,10 +8790,15 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["information"] = {
-				["forceEvents"] = true,
+			["cooldown"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
 			},
-			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
 		},
 		["[Druid] Barkskin Tick"] = {
 			["iconSource"] = -1,
@@ -8805,9 +8811,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
@@ -8823,19 +8829,19 @@ WeakAurasSaved = {
 						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
 						["unevent"] = "auto",
-						["use_unit"] = true,
+						["spellName"] = 22812,
 						["subeventPrefix"] = "SPELL",
 						["event"] = "Cooldown Progress (Spell)",
-						["use_genericShowOn"] = true,
+						["unit"] = "player",
 						["realSpellName"] = "Barkskin",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
 						["useName"] = true,
-						["unit"] = "player",
+						["subeventSuffix"] = "_CAST_START",
+						["use_genericShowOn"] = true,
 						["use_track"] = true,
-						["spellName"] = 22812,
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnReady",
@@ -8847,20 +8853,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -8872,7 +8878,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_size"] = 1,
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -8881,7 +8887,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -8898,8 +8904,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = true,
 					["glowXOffset"] = 0,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -8931,39 +8937,39 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
+			["zoom"] = 0.29,
+			["regionType"] = "icon",
+			["xOffset"] = 0,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
-			["icon"] = true,
 			["authorOptions"] = {
-			},
-			["xOffset"] = 0,
-			["cooldown"] = true,
-			["useCooldownModRate"] = true,
-			["config"] = {
-			},
-			["zoom"] = 0.29,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Barkskin Tick",
-			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["width"] = 40,
-			["uid"] = "HitYaUIATdd",
-			["inverse"] = false,
-			["cooldownTextDisabled"] = false,
-			["conditions"] = {
 			},
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
+			["frameStrata"] = 1,
+			["uid"] = "HitYaUIATdd",
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Barkskin Tick",
+			["anchorFrameType"] = "SCREEN",
+			["useCooldownModRate"] = true,
+			["width"] = 40,
+			["alpha"] = 1,
+			["config"] = {
+			},
+			["inverse"] = false,
 			["selfPoint"] = "CENTER",
+			["conditions"] = {
+			},
+			["cooldown"] = true,
+			["icon"] = true,
 		},
 		["冰橙监控小德自然之握CD"] = {
 			["iconSource"] = -1,
@@ -8976,9 +8982,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
@@ -8993,10 +8999,10 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["subeventPrefix"] = "SPELL",
-						["type"] = "aura2",
+						["subeventSuffix"] = "_CAST_START",
 						["names"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
+						["type"] = "aura2",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -9010,22 +9016,22 @@ WeakAurasSaved = {
 						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
-						["use_genericShowOn"] = true,
+						["use_unit"] = true,
 						["unevent"] = "auto",
 						["names"] = {
 						},
-						["duration"] = "1",
+						["subeventPrefix"] = "SPELL",
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
 						["realSpellName"] = "自然之握",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
 						["spellName"] = 16689,
-						["subeventPrefix"] = "SPELL",
+						["subeventSuffix"] = "_CAST_START",
+						["duration"] = "1",
 						["use_track"] = true,
-						["use_unit"] = true,
+						["use_genericShowOn"] = true,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -9034,10 +9040,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -9087,7 +9093,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["border_offset"] = 0,
-					["type"] = "subborder",
+					["border_size"] = 2,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -9098,7 +9104,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_size"] = 2,
+					["type"] = "subborder",
 				}, -- [3]
 				{
 					["glowFrequency"] = 0.25,
@@ -9115,8 +9121,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = false,
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -9139,14 +9145,11 @@ WeakAurasSaved = {
 						true, -- [4]
 					},
 				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 				["use_class"] = true,
 				["use_spellknown"] = false,
-				["use_spec"] = true,
 				["use_vehicleUi"] = false,
+				["use_spec"] = true,
 				["class"] = {
 					["single"] = "DRUID",
 					["multi"] = {
@@ -9154,23 +9157,25 @@ WeakAurasSaved = {
 				},
 				["use_exact_spellknown"] = false,
 				["spellknown"] = 16689,
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["config"] = {
-			},
-			["icon"] = true,
+			["uid"] = "pq7YPU3LxY1",
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -9178,16 +9183,34 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["regionType"] = "icon",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
+			["cooldown"] = true,
+			["displayIcon"] = "",
+			["parent"] = "冰橙监控小德CD组 ",
+			["frameStrata"] = 1,
+			["width"] = 45,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德自然之握CD",
+			["useCooldownModRate"] = true,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
+			["config"] = {
+			},
+			["inverse"] = true,
+			["icon"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -9216,35 +9239,18 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["zoom"] = 0,
-			["anchorFrameType"] = "SCREEN",
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德自然之握CD",
-			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["width"] = 45,
-			["useCooldownModRate"] = true,
-			["uid"] = "pq7YPU3LxY1",
-			["inverse"] = true,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
 			},
-			["displayIcon"] = "",
-			["cooldown"] = true,
-			["parent"] = "冰橙监控小德CD组 ",
 		},
 		["[Druid] Force of Nature"] = {
 			["iconSource"] = -1,
@@ -9264,19 +9270,19 @@ WeakAurasSaved = {
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
 						["unevent"] = "auto",
-						["spellName"] = 33831,
+						["unit"] = "player",
 						["event"] = "Cooldown Progress (Spell)",
 						["use_unit"] = true,
 						["realSpellName"] = "自然之力",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["duration"] = "1",
-						["subeventSuffix"] = "_CAST_START",
 						["names"] = {
 						},
+						["subeventSuffix"] = "_CAST_START",
+						["duration"] = "1",
 						["use_track"] = true,
-						["unit"] = "player",
+						["spellName"] = 33831,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnReady",
@@ -9291,21 +9297,21 @@ WeakAurasSaved = {
 						["remaining"] = "5",
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
-						["use_unit"] = true,
+						["spellName"] = 33831,
 						["subeventSuffix"] = "_CAST_START",
 						["unit"] = "player",
-						["duration"] = "1",
+						["use_genericShowOn"] = true,
 						["event"] = "Cooldown Progress (Spell)",
-						["use_remaining"] = true,
+						["unevent"] = "auto",
 						["realSpellName"] = "自然之力",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
 						["subeventPrefix"] = "SPELL",
-						["unevent"] = "auto",
-						["use_genericShowOn"] = true,
+						["use_remaining"] = true,
+						["duration"] = "1",
 						["use_track"] = true,
-						["spellName"] = 33831,
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnCooldown",
@@ -9324,7 +9330,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["type"] = "subborder",
-					["border_size"] = 2,
+					["border_offset"] = 0,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -9333,7 +9339,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -9350,8 +9356,8 @@ WeakAurasSaved = {
 					},
 					["type"] = "subglow",
 					["glowXOffset"] = 0,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -9370,8 +9376,8 @@ WeakAurasSaved = {
 					},
 					["type"] = "subglow",
 					["glowXOffset"] = 0,
-					["glowThickness"] = 2,
 					["glowScale"] = 1,
+					["glowThickness"] = 2,
 					["glowLines"] = 20,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -9379,10 +9385,7 @@ WeakAurasSaved = {
 			["height"] = 60,
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -9400,42 +9403,60 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["xOffset"] = 119.9999141056273,
+			["zoom"] = 0.29,
 			["regionType"] = "icon",
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
+			["authorOptions"] = {
 			},
+			["xOffset"] = 119.9999141056273,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["authorOptions"] = {
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["cooldown"] = true,
-			["frameStrata"] = 1,
-			["config"] = {
-			},
-			["zoom"] = 0.29,
+			["alpha"] = 1,
+			["uid"] = "2)BugDSDefm",
+			["cooldownTextDisabled"] = false,
 			["auto"] = true,
 			["tocversion"] = 30400,
 			["id"] = "[Druid] Force of Nature",
-			["useCooldownModRate"] = true,
-			["alpha"] = 1,
 			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["width"] = 60,
-			["uid"] = "2)BugDSDefm",
+			["useCooldownModRate"] = true,
+			["config"] = {
+			},
 			["inverse"] = false,
-			["cooldownTextDisabled"] = false,
+			["animation"] = {
+				["start"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -9464,28 +9485,13 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["animation"] = {
+			["cooldown"] = true,
+			["actions"] = {
 				["start"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
+				},
+				["init"] = {
 				},
 			},
 		},
@@ -9517,12 +9523,12 @@ WeakAurasSaved = {
 				["Insect Swarm -Solar"] = false,
 				["Faerie Fire "] = false,
 				["Starfall"] = false,
-				["Moonfire -Lunar"] = false,
+				["Starfire-out"] = false,
 				["Wrath-out"] = false,
 				["Wrath-Solar"] = false,
 				["Insect Swarm-out"] = false,
 				["Moonfire-out"] = false,
-				["Starfire-out"] = false,
+				["Moonfire -Lunar"] = false,
 				["Starfire-Lunar"] = false,
 			},
 			["fullCircle"] = true,
@@ -9531,15 +9537,15 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
 						["spellIds"] = {
 						},
@@ -9548,7 +9554,7 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["event"] = "Health",
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
@@ -9564,10 +9570,10 @@ WeakAurasSaved = {
 			["version"] = 5,
 			["subRegions"] = {
 			},
-			["anchorPoint"] = "CENTER",
-			["source"] = "import",
+			["gridType"] = "RD",
+			["rowSpace"] = 1,
 			["load"] = {
-				["size"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -9579,12 +9585,17 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["talent"] = {
+				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["rowSpace"] = 1,
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -9593,58 +9604,53 @@ WeakAurasSaved = {
 			},
 			["grow"] = "HORIZONTAL",
 			["animate"] = false,
-			["radius"] = 200,
+			["anchorPoint"] = "CENTER",
 			["scale"] = 1,
-			["selfPoint"] = "CENTER",
+			["stagger"] = 0,
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
+			["limit"] = 7,
 			["sort"] = "none",
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
 			["uid"] = "bYz5QzjInUk",
 			["constantFactor"] = "RADIUS",
-			["gridWidth"] = 5,
+			["frameStrata"] = 1,
 			["borderOffset"] = 4,
 			["semver"] = "1.0.4",
 			["tocversion"] = 30400,
 			["id"] = "平衡德循環助手",
 			["xOffset"] = 320.0783081054688,
-			["frameStrata"] = 1,
+			["gridWidth"] = 5,
 			["anchorFrameType"] = "SCREEN",
-			["limit"] = 7,
+			["selfPoint"] = "CENTER",
 			["borderInset"] = 1,
-			["gridType"] = "RD",
-			["stagger"] = 0,
+			["radius"] = 200,
+			["source"] = "import",
 			["conditions"] = {
 			},
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["borderColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
 			},
 		},
 		["[Druid] Eclipse (Lunar) CD Timer "] = {
@@ -9659,9 +9665,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -9676,20 +9682,20 @@ WeakAurasSaved = {
 						["debuffType"] = "HELPFUL",
 						["spellName"] = "Eclipse (Lunar)",
 						["useName"] = true,
-						["unevent"] = "timed",
 						["auraType"] = "BUFF",
-						["unit"] = "player",
-						["subeventSuffix"] = "_AURA_APPLIED",
+						["unevent"] = "timed",
+						["names"] = {
+						},
+						["ownOnly"] = true,
 						["event"] = "Combat Log",
 						["type"] = "combatlog",
-						["use_spellId"] = true,
 						["use_spellName"] = false,
+						["use_spellId"] = true,
 						["spellIds"] = {
 						},
 						["use_sourceUnit"] = true,
-						["ownOnly"] = true,
-						["names"] = {
-						},
+						["subeventSuffix"] = "_AURA_APPLIED",
+						["unit"] = "player",
 						["sourceUnit"] = "player",
 						["use_auraType"] = true,
 					},
@@ -9703,41 +9709,46 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
-			["wordWrap"] = "WordWrap",
+			["color"] = {
+				0, -- [1]
+				0.5333333333333333, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["desaturate"] = false,
 			["font"] = "Expressway",
-			["shadowYOffset"] = -1,
+			["selfPoint"] = "CENTER",
 			["subRegions"] = {
 				{
 					["type"] = "subbackground",
 				}, -- [1]
 			},
 			["height"] = 60,
-			["cooldown"] = true,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -9755,56 +9766,51 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
-			["fixedWidth"] = 200,
-			["preferToUpdate"] = false,
+			["conditions"] = {
+			},
+			["wordWrap"] = "WordWrap",
 			["fontSize"] = 15,
 			["source"] = "import",
-			["authorOptions"] = {
-			},
+			["shadowYOffset"] = -1,
 			["shadowXOffset"] = 1,
-			["internalVersion"] = 59,
-			["uid"] = "GWzfwJM)zER",
-			["anchorFrameFrame"] = "WeakAuras:[Druid] Eclipse (Missing)",
-			["regionType"] = "text",
-			["color"] = {
-				0, -- [1]
-				0.5333333333333333, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["width"] = 60,
-			["frameStrata"] = 1,
-			["selfPoint"] = "CENTER",
-			["displayText_format_p_time_precision"] = 1,
-			["xOffset"] = 18,
-			["auto"] = true,
-			["zoom"] = 0.29,
-			["justify"] = "LEFT",
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Eclipse (Lunar) CD Timer ",
-			["displayText_format_p_format"] = "timed",
-			["alpha"] = 1,
-			["anchorFrameType"] = "SELECTFRAME",
-			["displayText_format_p_time_dynamic_threshold"] = 0,
+			["preferToUpdate"] = false,
 			["config"] = {
 			},
-			["inverse"] = false,
+			["anchorFrameFrame"] = "WeakAuras:[Druid] Eclipse (Missing)",
+			["regionType"] = "text",
+			["authorOptions"] = {
+			},
+			["anchorFrameType"] = "SELECTFRAME",
+			["alpha"] = 1,
+			["displayText_format_p_time_dynamic_threshold"] = 0,
+			["displayText_format_p_time_precision"] = 1,
+			["xOffset"] = 18,
+			["justify"] = "LEFT",
+			["zoom"] = 0.29,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Eclipse (Lunar) CD Timer ",
+			["internalVersion"] = 59,
+			["frameStrata"] = 1,
+			["width"] = 60,
 			["cooldownEdge"] = true,
+			["uid"] = "GWzfwJM)zER",
+			["inverse"] = false,
+			["icon"] = true,
 			["shadowColor"] = {
 				0, -- [1]
 				0, -- [2]
 				0, -- [3]
 				1, -- [4]
 			},
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["icon"] = true,
+			["fixedWidth"] = 200,
+			["cooldown"] = true,
+			["displayText_format_p_format"] = "timed",
 		},
 		["[Druid] Faerie Fire fading"] = {
 			["sparkWidth"] = 20,
@@ -9826,27 +9832,27 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "aura2",
-						["debuffType"] = "HARMFUL",
+						["useRem"] = true,
 						["auranames"] = {
 							"精靈之火", -- [1]
 						},
+						["rem"] = "30",
+						["names"] = {
+						},
+						["event"] = "Health",
+						["subeventPrefix"] = "SPELL",
+						["subeventSuffix"] = "_CAST_START",
+						["useName"] = false,
+						["spellIds"] = {
+						},
+						["unit"] = "target",
+						["remOperator"] = "<=",
+						["useExactSpellId"] = true,
 						["auraspellids"] = {
 							"770", -- [1]
 							"16857", -- [2]
 						},
-						["useExactSpellId"] = true,
-						["event"] = "Health",
-						["names"] = {
-						},
-						["subeventSuffix"] = "_CAST_START",
-						["unit"] = "target",
-						["spellIds"] = {
-						},
-						["useName"] = false,
-						["remOperator"] = "<=",
-						["subeventPrefix"] = "SPELL",
-						["rem"] = "30",
-						["useRem"] = true,
+						["debuffType"] = "HARMFUL",
 					},
 					["untrigger"] = {
 					},
@@ -9862,25 +9868,25 @@ WeakAurasSaved = {
 			["internalVersion"] = 59,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
-			["auto"] = true,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["barColor"] = {
 				0.6588235294117647, -- [1]
 				0, -- [2]
@@ -9888,7 +9894,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["desaturate"] = false,
-			["preferToUpdate"] = false,
+			["xOffset"] = 0,
 			["sparkOffsetY"] = 0,
 			["subRegions"] = {
 				{
@@ -9900,7 +9906,7 @@ WeakAurasSaved = {
 				{
 					["border_offset"] = 0,
 					["border_anchor"] = "bar",
-					["type"] = "subborder",
+					["border_size"] = 1,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -9909,17 +9915,14 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_size"] = 1,
+					["type"] = "subborder",
 				}, -- [3]
 			},
 			["height"] = 7,
 			["selfPoint"] = "CENTER",
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -9937,7 +9940,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = true,
@@ -9946,41 +9952,41 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
 				},
+				["finish"] = {
+				},
 			},
-			["color"] = {
+			["authorOptions"] = {
 			},
 			["sparkOffsetX"] = 0,
+			["config"] = {
+			},
+			["anchorFrameFrame"] = "WeakAuras:[Druid] Faerie Fire Fading Icon",
+			["regionType"] = "aurabar",
+			["uid"] = "4mueaH2hABS",
+			["anchorFrameType"] = "SELECTFRAME",
+			["icon_side"] = "RIGHT",
+			["frameStrata"] = 1,
+			["sparkHeight"] = 10,
+			["texture"] = "Blizzard",
+			["sparkHidden"] = "NEVER",
+			["zoom"] = 0,
+			["spark"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Faerie Fire fading",
+			["auto"] = true,
+			["alpha"] = 1,
+			["width"] = 38,
+			["useAdjustededMin"] = true,
 			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["anchorFrameFrame"] = "WeakAuras:[Druid] Faerie Fire Fading Icon",
-			["regionType"] = "aurabar",
-			["useAdjustededMin"] = true,
-			["width"] = 38,
-			["icon_side"] = "RIGHT",
-			["alpha"] = 1,
-			["sparkHeight"] = 10,
-			["texture"] = "Blizzard",
-			["id"] = "[Druid] Faerie Fire fading",
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["spark"] = true,
-			["tocversion"] = 30400,
-			["sparkHidden"] = "NEVER",
-			["zoom"] = 0,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SELECTFRAME",
-			["uid"] = "4mueaH2hABS",
-			["config"] = {
-			},
 			["inverse"] = false,
-			["authorOptions"] = {
+			["color"] = {
 			},
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
@@ -9989,7 +9995,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["xOffset"] = 0,
+			["preferToUpdate"] = false,
 		},
 		["GCDHistoryCastControl"] = {
 			["iconSource"] = -1,
@@ -10012,11 +10018,11 @@ WeakAurasSaved = {
 					["custom"] = "",
 					["do_custom"] = false,
 				},
+				["finish"] = {
+				},
 				["init"] = {
 					["custom"] = "aura_env.playerGUID = UnitGUID(\"player\")\naura_env.casting = false\naura_env.lastT = 0\naura_env.curRegister = 1\naura_env.maxRegister = aura_env.config[\"maxIcons\"]\n\naura_env.builtinBlacklist = {\n    [27576] = true, -- Rogue, Muti Off-hand\n    [212743] = true, -- Rogue, Shuriken Storm CP\n    [139546] = true, -- Rogue, Outlaw CP Gain\n    [162530] = true, -- Monk, Refreshing Jade Wind HoT\n    [147193] = true, -- Shadow Priest, Shadowy Apparition\n    [341263] = true, -- Shadow Priest, Shadowy Apparition\n    [324748] = true, -- Weapon enchant, Celestial Guidance\n    [209693] = true, -- Demon Hunter, Shattered Souls\n    [272790] = true, -- Hunter, Barbed Shot Frenzy\n    [354050] = true, -- Nimble Steps\n}",
 					["do_custom"] = true,
-				},
-				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -10028,11 +10034,12 @@ WeakAurasSaved = {
 						["customIcon"] = "function()\n    return aura_env.icon\nend\n\n\n\n\n\n\n\n",
 						["use_cloneId"] = true,
 						["debuffType"] = "HELPFUL",
-						["custom_hide"] = "custom",
+						["use_unit"] = true,
 						["type"] = "custom",
 						["use_absorbMode"] = true,
 						["custom_type"] = "event",
-						["unevent"] = "timed",
+						["names"] = {
+						},
 						["subeventSuffix"] = "_CAST_SUCCESS",
 						["event"] = "Combat Log",
 						["custom"] = "function(event, arg1, arg2, arg3)\n    local function onBlacklist(id)\n        if string.match(aura_env.config[\"blacklist\"], \"%f[%w_]\" .. id .. \"%f[^%w_]\") or\n        aura_env.builtinBlacklist[id] then\n            return true\n        end\n        return false\n    end\n    \n    local function newSpell(id, interrupted)\n        -- Run next register\n        local t = GetTime()\n        WeakAuras.ScanEvents(\"MYSTLER_GCDHISTORY_ADD\", aura_env.curRegister, select(3, GetSpellInfo(id)), t, interrupted)\n        \n        -- Adjust offset if necessary\n        local xoff = math.max(0, 1 - (t - aura_env.lastT)) * (aura_env.region.width + 2)\n        aura_env.lastT = t\n        if xoff > 0 then\n            for i=1,aura_env.maxRegister do\n                if i ~= aura_env.curRegister then\n                    WeakAuras.ScanEvents(\"MYSTLER_GCDHISTORY_OFFSET\", i, xoff)\n                end\n            end\n        end\n        \n        -- Advance register num\n        aura_env.curRegister = aura_env.curRegister + 1\n        if aura_env.curRegister > aura_env.maxRegister then\n            aura_env.curRegister = 1\n        end\n    end\n    \n    if event == \"COMBAT_LOG_EVENT_UNFILTERED\" then\n        local _,ce,_,guid,_,_,_,dguid,_,_,_,id,name = CombatLogGetCurrentEventInfo()\n        if onBlacklist(id) then\n            return aura_env.casting\n        end\n        if ce == \"SPELL_CAST_START\" and guid == aura_env.playerGUID then\n            local _,_,icon,casttime = GetSpellInfo(id)\n            if casttime > 0 then\n                aura_env.icon = icon\n                aura_env.casting = true\n            end\n        elseif ce == \"SPELL_CAST_SUCCESS\" and guid == aura_env.playerGUID then\n            if UnitChannelInfo(\"player\") == name then\n                return aura_env.casting\n            end\n            newSpell(id, false)\n            if select(4, GetSpellInfo(id)) > 0 then\n                aura_env.casting = false\n            end\n        end\n    elseif event == \"UNIT_SPELLCAST_INTERRUPTED\" and arg1 == \"player\" and aura_env.casting and not onBlacklist(arg3) then\n        newSpell(arg3, true)\n        aura_env.casting = false\n    elseif event == \"UNIT_SPELLCAST_CHANNEL_START\" and arg1 == \"player\" and not onBlacklist(arg3) then\n        if aura_env.casting then\n            newSpell(arg3, false) -- Already channeling\n        end\n        aura_env.icon = select(3, GetSpellInfo(arg3))\n        aura_env.casting = true\n    elseif event == \"UNIT_SPELLCAST_CHANNEL_STOP\" and arg1 == \"player\" and not onBlacklist(arg3) then\n        newSpell(arg3, false)\n        aura_env.casting = false\n    elseif event == \"CURRENT_SPELL_CAST_CHANGED\" and not UnitCastingInfo(\"player\") and not UnitChannelInfo(\"player\") then\n        aura_env.casting = false\n    end\n    return aura_env.casting\nend",
@@ -10042,10 +10049,9 @@ WeakAurasSaved = {
 						},
 						["use_sourceUnit"] = true,
 						["check"] = "event",
-						["names"] = {
-						},
+						["unevent"] = "timed",
 						["sourceUnit"] = "player",
-						["use_unit"] = true,
+						["custom_hide"] = "custom",
 					},
 					["untrigger"] = {
 						["custom"] = "function() return not aura_env.casting end",
@@ -10062,8 +10068,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["easeStrength"] = 3,
-					["preset"] = "fade",
 					["duration_type"] = "seconds",
+					["preset"] = "fade",
 				},
 				["main"] = {
 					["colorR"] = 1,
@@ -10081,12 +10087,12 @@ WeakAurasSaved = {
 					["alpha"] = 0,
 					["y"] = 0,
 					["x"] = 0,
-					["colorB"] = 1,
-					["duration"] = "3",
-					["easeStrength"] = 3,
-					["rotate"] = 0,
-					["translateType"] = "custom",
 					["duration_type"] = "seconds",
+					["translateType"] = "custom",
+					["rotate"] = 0,
+					["easeStrength"] = 3,
+					["duration"] = "3",
+					["colorB"] = 1,
 				},
 				["finish"] = {
 					["colorR"] = 1,
@@ -10102,15 +10108,15 @@ WeakAurasSaved = {
 					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n    local x = startX + (progress * deltaX)\n    if aura_env.state then\n        x = x + aura_env.state.xoff\n    end\n    return x, startY + (progress * deltaY)\nend",
 					["scaley"] = 1,
 					["alpha"] = 0,
-					["colorB"] = 1,
+					["scalex"] = 1,
 					["y"] = 0,
 					["x"] = -150,
-					["preset"] = "fade",
-					["easeStrength"] = 3,
-					["translateType"] = "custom",
-					["rotate"] = 0,
 					["duration_type"] = "seconds",
-					["scalex"] = 1,
+					["rotate"] = 0,
+					["translateType"] = "custom",
+					["easeStrength"] = 3,
+					["preset"] = "fade",
+					["colorB"] = 1,
 				},
 			},
 			["desaturate"] = false,
@@ -10166,10 +10172,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 				["difficulty"] = {
 					["multi"] = {
 					},
@@ -10178,19 +10181,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -10198,41 +10189,26 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["width"] = 50,
-			["selfPoint"] = "CENTER",
-			["xOffset"] = 0,
-			["icon"] = true,
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["regionType"] = "icon",
-			["displayIcon"] = "",
-			["parent"] = "GCDHistoryGrp",
-			["cooldownEdge"] = false,
-			["config"] = {
-				["maxIcons"] = 6,
-				["blacklist"] = "921",
-			},
-			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["cooldownTextDisabled"] = false,
-			["semver"] = "1.1.10",
-			["tocversion"] = 30400,
-			["id"] = "GCDHistoryCastControl",
-			["auto"] = true,
-			["alpha"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["uid"] = "UXp07D3aWhT",
-			["inverse"] = false,
-			["stickyDuration"] = false,
-			["conditions"] = {
-			},
-			["cooldown"] = false,
+			["cooldownTextDisabled"] = false,
 			["authorOptions"] = {
 				{
 					["type"] = "range",
@@ -10242,9 +10218,9 @@ WeakAurasSaved = {
 					["width"] = 2,
 					["min"] = 1,
 					["key"] = "maxIcons",
-					["desc"] = "Maximum number of icons shown simultaneously.",
-					["name"] = "Max Icons",
 					["default"] = 6,
+					["name"] = "Max Icons",
+					["desc"] = "Maximum number of icons shown simultaneously.",
 				}, -- [1]
 				{
 					["type"] = "input",
@@ -10252,12 +10228,42 @@ WeakAurasSaved = {
 					["width"] = 2,
 					["key"] = "blacklist",
 					["name"] = "Spell Blacklist",
-					["default"] = "",
-					["length"] = 10,
 					["desc"] = "Comma-separated list of Spell IDs to ignore.",
+					["length"] = 10,
+					["default"] = "",
 					["useLength"] = false,
 				}, -- [2]
 			},
+			["xOffset"] = 0,
+			["cooldown"] = false,
+			["regionType"] = "icon",
+			["conditions"] = {
+			},
+			["stickyDuration"] = false,
+			["icon"] = true,
+			["uid"] = "UXp07D3aWhT",
+			["alpha"] = 1,
+			["semver"] = "1.1.10",
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "GCDHistoryCastControl",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["width"] = 50,
+			["parent"] = "GCDHistoryGrp",
+			["config"] = {
+				["maxIcons"] = 6,
+				["blacklist"] = "921",
+			},
+			["inverse"] = false,
+			["selfPoint"] = "CENTER",
+			["displayIcon"] = "",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["cooldownEdge"] = false,
 		},
 		["[Druid] Rebirth"] = {
 			["iconSource"] = -1,
@@ -10286,16 +10292,19 @@ WeakAurasSaved = {
 						["unit"] = "group",
 						["remaining_operator"] = ">=",
 						["remaining"] = "170",
-						["use_unit"] = true,
-						["useName"] = false,
-						["spellName"] = 48477,
+						["names"] = {
+						},
+						["duration"] = "1",
+						["subeventPrefix"] = "SPELL",
+						["ignoreDead"] = false,
+						["subeventSuffix"] = "_CAST_START",
+						["debuffType"] = "HELPFUL",
+						["realSpellName"] = "复生",
 						["type"] = "spell",
 						["useExactSpellId"] = true,
-						["debuffType"] = "HELPFUL",
-						["ignoreDisconnected"] = false,
-						["ignoreDead"] = false,
-						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
+						["auraspellids"] = {
+							"29166", -- [1]
+						},
 						["use_remaining"] = false,
 						["form"] = {
 							["multi"] = {
@@ -10309,17 +10318,14 @@ WeakAurasSaved = {
 							},
 						},
 						["event"] = "Cooldown Progress (Spell)",
-						["auraspellids"] = {
-							"29166", -- [1]
-						},
-						["realSpellName"] = "复生",
+						["unevent"] = "auto",
+						["ignoreDisconnected"] = false,
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["subeventPrefix"] = "SPELL",
-						["duration"] = "1",
-						["names"] = {
-						},
+						["spellName"] = 48477,
+						["useName"] = false,
+						["use_unit"] = true,
 						["use_track"] = true,
 						["matchesShowOn"] = "showOnMissing",
 					},
@@ -10354,15 +10360,15 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showOnReady",
 						["names"] = {
 						},
-						["matchesShowOn"] = "showOnMissing",
+						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
-						["duration"] = "1",
 						["useName"] = false,
-						["use_genericShowOn"] = true,
+						["use_remaining"] = false,
 						["auraspellids"] = {
 							"29166", -- [1]
 						},
-						["subeventSuffix"] = "_CAST_START",
+						["unevent"] = "auto",
+						["type"] = "unit",
 						["form"] = {
 							["multi"] = {
 								true, -- [1]
@@ -10374,17 +10380,17 @@ WeakAurasSaved = {
 								[0] = true,
 							},
 						},
-						["use_unit"] = true,
+						["subeventPrefix"] = "SPELL",
 						["remaining_operator"] = ">=",
 						["realSpellName"] = "Rebirth",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["subeventPrefix"] = "SPELL",
-						["type"] = "unit",
-						["unevent"] = "auto",
-						["use_remaining"] = false,
-						["unit"] = "player",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["use_genericShowOn"] = true,
+						["duration"] = "1",
+						["matchesShowOn"] = "showOnMissing",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnReady",
@@ -10404,7 +10410,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_size"] = 1,
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -10413,7 +10419,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [2]
 				{
 					["glowFrequency"] = 1,
@@ -10430,8 +10436,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = false,
 					["glowXOffset"] = 0,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -10462,57 +10468,34 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["zoom"] = 0.29,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["cooldownTextDisabled"] = false,
+			["authorOptions"] = {
 			},
 			["regionType"] = "icon",
 			["parent"] = "[WotLK] Balance Druid (Left Group)",
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["cooldown"] = false,
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
-			["uid"] = "gbeIQVqVd5y",
-			["useCooldownModRate"] = true,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Rebirth",
-			["width"] = 40,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["frameStrata"] = 1,
-			["config"] = {
-			},
-			["inverse"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
+			},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
 			["conditions"] = {
 				{
@@ -10529,11 +10512,34 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
+			["config"] = {
 			},
-			["authorOptions"] = {
+			["useCooldownModRate"] = true,
+			["zoom"] = 0.29,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Rebirth",
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["width"] = 40,
+			["frameStrata"] = 1,
+			["uid"] = "gbeIQVqVd5y",
+			["inverse"] = false,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
+			["cooldown"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
 			},
 		},
 		["冰橙监控小德资源背景"] = {
@@ -10546,9 +10552,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
@@ -10562,10 +10568,10 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["subeventSuffix"] = "_CAST_START",
-						["use_unit"] = true,
-						["subeventPrefix"] = "SPELL",
 						["names"] = {
 						},
+						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -10575,11 +10581,11 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "unit",
 						["use_hostility"] = false,
-						["hostility"] = "hostile",
+						["unit"] = "target",
 						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["unit"] = "target",
+						["hostility"] = "hostile",
 					},
 					["untrigger"] = {
 					},
@@ -10608,13 +10614,13 @@ WeakAurasSaved = {
 					["model_y"] = 0,
 					["model_st_rx"] = 270,
 					["rotation"] = 0,
-					["type"] = "submodel",
+					["model_x"] = -0.3,
 					["model_st_tx"] = 0,
 					["model_z"] = 0,
 					["model_st_ry"] = 0,
 					["model_visible"] = false,
 					["model_st_tz"] = 0,
-					["model_x"] = -0.3,
+					["type"] = "submodel",
 				}, -- [2]
 			},
 			["height"] = 180,
@@ -10646,11 +10652,11 @@ WeakAurasSaved = {
 			["mirror"] = false,
 			["regionType"] = "texture",
 			["blendMode"] = "BLEND",
-			["discrete_rotation"] = 0,
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -10662,12 +10668,12 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["preset"] = "grow",
 					["easeStrength"] = 3,
+					["preset"] = "grow",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -10675,26 +10681,26 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["preset"] = "shrink",
 					["easeStrength"] = 3,
+					["preset"] = "shrink",
 				},
 			},
 			["semver"] = "1.0.10",
 			["tocversion"] = 30400,
 			["id"] = "冰橙监控小德资源背景",
+			["alpha"] = 1,
+			["frameStrata"] = 2,
+			["anchorFrameType"] = "SCREEN",
+			["config"] = {
+			},
+			["uid"] = "ocu8yjWJS20",
+			["width"] = 180,
 			["color"] = {
 				0, -- [1]
 				0, -- [2]
 				0, -- [3]
 				1, -- [4]
 			},
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["width"] = 180,
-			["config"] = {
-			},
-			["uid"] = "ocu8yjWJS20",
-			["frameStrata"] = 2,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -10712,14 +10718,14 @@ WeakAurasSaved = {
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["discrete_rotation"] = 0,
 		},
 		["冰橙监控小德枭兽狂乱"] = {
 			["iconSource"] = -1,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -10732,9 +10738,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
@@ -10749,18 +10755,17 @@ WeakAurasSaved = {
 						["use_genericShowOn"] = true,
 						["genericShowOn"] = "showAlways",
 						["unit"] = "player",
-						["names"] = {
-						},
+						["matchesShowOn"] = "showOnActive",
 						["use_absorbMode"] = true,
-						["subeventPrefix"] = "SPELL",
-						["use_unit"] = true,
+						["duration"] = "1",
 						["debuffType"] = "HELPFUL",
-						["useExactSpellId"] = false,
+						["spellName"] = 19574,
+						["ownOnly"] = true,
 						["type"] = "aura2",
+						["subeventSuffix"] = "_CAST_START",
 						["auraspellids"] = {
 							"85739", -- [1]
 						},
-						["subeventSuffix"] = "_CAST_START",
 						["unevent"] = "auto",
 						["useName"] = true,
 						["event"] = "Cooldown Progress (Spell)",
@@ -10769,11 +10774,12 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["ownOnly"] = true,
-						["spellName"] = 19574,
-						["duration"] = "1",
+						["useExactSpellId"] = false,
+						["use_unit"] = true,
+						["subeventPrefix"] = "SPELL",
 						["use_track"] = true,
-						["matchesShowOn"] = "showOnActive",
+						["names"] = {
+						},
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -10783,11 +10789,11 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "unit",
 						["use_hostility"] = false,
-						["hostility"] = "friendly",
+						["unit"] = "target",
 						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["unit"] = "target",
+						["hostility"] = "friendly",
 					},
 					["untrigger"] = {
 					},
@@ -10837,7 +10843,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["border_offset"] = 0,
-					["border_size"] = 2,
+					["type"] = "subborder",
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -10848,7 +10854,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["type"] = "subborder",
+					["border_size"] = 2,
 				}, -- [3]
 			},
 			["height"] = 30,
@@ -10869,33 +10875,32 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_spec"] = true,
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_vehicleUi"] = false,
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
 					},
 				},
-				["use_vehicleUi"] = false,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 			},
 			["source"] = "import",
-			["config"] = {
-			},
-			["icon"] = true,
+			["uid"] = "RuDGi7rGA6L",
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["preset"] = "slideleft",
 					["easeStrength"] = 3,
+					["preset"] = "slideleft",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -10903,36 +10908,13 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["preset"] = "slideleft",
 					["easeStrength"] = 3,
+					["preset"] = "slideleft",
 				},
 			},
 			["regionType"] = "icon",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["displayIcon"] = 236163,
 			["xOffset"] = 264,
-			["cooldownTextDisabled"] = false,
-			["width"] = 50,
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德枭兽狂乱",
-			["alpha"] = 1,
-			["useCooldownModRate"] = true,
-			["anchorFrameType"] = "SCREEN",
-			["frameStrata"] = 1,
-			["uid"] = "RuDGi7rGA6L",
-			["inverse"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["cooldown"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -10965,8 +10947,32 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["cooldown"] = true,
 			["parent"] = "冰橙监控小德BUFF组",
+			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德枭兽狂乱",
+			["frameStrata"] = 1,
+			["alpha"] = 1,
+			["width"] = 50,
+			["cooldownTextDisabled"] = false,
+			["config"] = {
+			},
+			["inverse"] = true,
+			["icon"] = true,
+			["displayIcon"] = 236163,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 		},
 		["冰橙监控小德激活CD"] = {
 			["iconSource"] = -1,
@@ -10989,10 +10995,10 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["subeventPrefix"] = "SPELL",
-						["type"] = "aura2",
+						["subeventSuffix"] = "_CAST_START",
 						["names"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
+						["type"] = "aura2",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -11005,24 +11011,24 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showAlways",
 						["subeventPrefix"] = "SPELL",
 						["debuffType"] = "HELPFUL",
-						["unit"] = "player",
+						["use_unit"] = true,
 						["type"] = "spell",
 						["names"] = {
 						},
 						["unevent"] = "auto",
-						["duration"] = "1",
-						["subeventSuffix"] = "_CAST_START",
+						["use_genericShowOn"] = true,
 						["event"] = "Cooldown Progress (Spell)",
+						["use_itemName"] = true,
 						["use_exact_spellName"] = false,
 						["realSpellName"] = "激活",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
 						["spellName"] = 29166,
-						["use_itemName"] = true,
-						["use_genericShowOn"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["duration"] = "1",
 						["use_track"] = true,
-						["use_unit"] = true,
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -11031,10 +11037,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -11084,7 +11090,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["border_size"] = 2,
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -11095,7 +11101,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [3]
 				{
 					["glowFrequency"] = 0.25,
@@ -11112,8 +11118,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = false,
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -11132,9 +11138,9 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_p_time_legacy_floor"] = false,
 					["type"] = "subtext",
-					["anchorXOffset"] = 0,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -11144,15 +11150,15 @@ WeakAurasSaved = {
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_format"] = "timed",
 					["text_shadowYOffset"] = 0,
-					["text_visible"] = true,
+					["text_text_format_p_time_mod_rate"] = true,
 					["text_wordWrap"] = "WordWrap",
 					["text_fontType"] = "OUTLINE",
 					["text_anchorPoint"] = "CENTER",
 					["text_text_format_p_time_format"] = 0,
-					["text_text_format_p_time_mod_rate"] = true,
+					["text_visible"] = true,
 					["text_fontSize"] = 12,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_text_format_p_time_legacy_floor"] = false,
+					["anchorXOffset"] = 0,
+					["text_text_format_p_time_precision"] = 1,
 				}, -- [5]
 			},
 			["height"] = 45,
@@ -11173,40 +11179,34 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_spec"] = true,
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_vehicleUi"] = false,
 				["spec"] = {
 					["single"] = 3,
 					["multi"] = {
 						[3] = true,
 					},
 				},
-				["use_vehicleUi"] = false,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 			},
 			["source"] = "import",
-			["uid"] = "4tmBxUxXl0b",
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
+			["config"] = {
 			},
+			["desaturate"] = false,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -11214,13 +11214,43 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["regionType"] = "icon",
-			["desaturate"] = false,
-			["cooldown"] = true,
+			["parent"] = "冰橙监控小德CD组 ",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["displayIcon"] = 135808,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德激活CD",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["width"] = 45,
+			["cooldownTextDisabled"] = false,
+			["uid"] = "4tmBxUxXl0b",
+			["inverse"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -11249,38 +11279,14 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["parent"] = "冰橙监控小德CD组 ",
-			["cooldownTextDisabled"] = false,
-			["width"] = 45,
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德激活CD",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["config"] = {
-			},
-			["inverse"] = true,
+			["cooldown"] = true,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
-			},
-			["displayIcon"] = 135808,
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
 			},
 		},
 		["[Druid] Barkskin"] = {
@@ -11302,18 +11308,18 @@ WeakAurasSaved = {
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
 						["subeventSuffix"] = "_CAST_START",
-						["unit"] = "player",
+						["spellName"] = 22812,
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
 						["realSpellName"] = "树皮术",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["use_unit"] = true,
-						["unevent"] = "auto",
 						["duration"] = "1",
+						["unevent"] = "auto",
+						["use_unit"] = true,
 						["use_track"] = true,
-						["spellName"] = 22812,
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnReady",
@@ -11331,7 +11337,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_offset"] = 0,
-					["type"] = "subborder",
+					["border_size"] = 1,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -11340,7 +11346,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_size"] = 1,
+					["type"] = "subborder",
 				}, -- [2]
 			},
 			["height"] = 40,
@@ -11371,72 +11377,72 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
+			["zoom"] = 0.29,
+			["regionType"] = "icon",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
-			["authorOptions"] = {
-			},
 			["xOffset"] = 0,
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["cooldown"] = false,
-			["frameStrata"] = 1,
-			["config"] = {
-			},
-			["zoom"] = 0.29,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Barkskin",
-			["width"] = 40,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["uid"] = "cyN4qla4ryW",
-			["inverse"] = false,
-			["cooldownTextDisabled"] = false,
-			["conditions"] = {
-			},
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
+			["alpha"] = 1,
+			["uid"] = "cyN4qla4ryW",
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Barkskin",
+			["frameStrata"] = 1,
+			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["width"] = 40,
+			["config"] = {
+			},
+			["inverse"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
 				},
+				["finish"] = {
+				},
+			},
+			["conditions"] = {
+			},
+			["cooldown"] = false,
+			["authorOptions"] = {
 			},
 		},
 		["冰橙监控小德自然力CD"] = {
 			["iconSource"] = -1,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -11449,9 +11455,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -11463,22 +11469,22 @@ WeakAurasSaved = {
 						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
-						["names"] = {
-						},
+						["use_genericShowOn"] = true,
 						["unevent"] = "auto",
 						["subeventPrefix"] = "SPELL",
-						["unit"] = "player",
+						["duration"] = "1",
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
 						["realSpellName"] = "自然之力",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["spellName"] = 33831,
 						["subeventSuffix"] = "_CAST_START",
-						["duration"] = "1",
+						["spellName"] = 33831,
+						["unit"] = "player",
 						["use_track"] = true,
-						["use_genericShowOn"] = true,
+						["names"] = {
+						},
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -11487,10 +11493,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -11540,7 +11546,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["border_size"] = 2,
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -11551,7 +11557,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [3]
 				{
 					["text_shadowXOffset"] = 0,
@@ -11568,9 +11574,9 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_p_time_legacy_floor"] = false,
 					["type"] = "subtext",
-					["anchorXOffset"] = 0,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -11580,15 +11586,15 @@ WeakAurasSaved = {
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_format"] = "timed",
 					["text_shadowYOffset"] = 0,
-					["text_visible"] = true,
+					["text_text_format_p_time_mod_rate"] = true,
 					["text_wordWrap"] = "WordWrap",
 					["text_fontType"] = "OUTLINE",
 					["text_anchorPoint"] = "CENTER",
 					["text_text_format_p_time_format"] = 0,
-					["text_text_format_p_time_mod_rate"] = true,
+					["text_visible"] = true,
 					["text_fontSize"] = 12,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_text_format_p_time_legacy_floor"] = false,
+					["anchorXOffset"] = 0,
+					["text_text_format_p_time_precision"] = 1,
 				}, -- [4]
 			},
 			["height"] = 45,
@@ -11605,11 +11611,14 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["use_spellknown"] = true,
-				["use_vehicleUi"] = false,
 				["use_spec"] = true,
+				["use_vehicleUi"] = false,
 				["spec"] = {
 					["single"] = 3,
 					["multi"] = {
@@ -11621,25 +11630,23 @@ WeakAurasSaved = {
 				},
 				["use_exact_spellknown"] = false,
 				["spellknown"] = 33831,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 			},
 			["source"] = "import",
-			["uid"] = "ruWqAcoapIs",
-			["icon"] = true,
+			["config"] = {
+			},
+			["desaturate"] = false,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -11647,33 +11654,15 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["regionType"] = "icon",
-			["desaturate"] = false,
-			["cooldown"] = true,
-			["displayIcon"] = "",
 			["xOffset"] = 225,
-			["zoom"] = 0,
-			["width"] = 45,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德自然力CD",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["config"] = {
-			},
-			["inverse"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
 			["conditions"] = {
 				{
@@ -11690,11 +11679,28 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
 			["parent"] = "冰橙监控小德CD组 ",
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德自然力CD",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["width"] = 45,
+			["zoom"] = 0,
+			["uid"] = "ruWqAcoapIs",
+			["inverse"] = true,
+			["icon"] = true,
+			["displayIcon"] = "",
+			["cooldown"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 		},
 		["[Druid] Insect Swarm"] = {
 			["iconSource"] = -1,
@@ -11720,9 +11726,9 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["type"] = "aura2",
-						["subeventPrefix"] = "SPELL",
-						["unit"] = "target",
 						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "target",
+						["subeventPrefix"] = "SPELL",
 						["debuffType"] = "HARMFUL",
 					},
 					["untrigger"] = {
@@ -11734,20 +11740,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -11759,7 +11765,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_offset"] = 0,
-					["type"] = "subborder",
+					["border_size"] = 2,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -11768,7 +11774,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_size"] = 2,
+					["type"] = "subborder",
 				}, -- [2]
 				{
 					["text_text_format_p_time_format"] = 0,
@@ -11780,9 +11786,14 @@ WeakAurasSaved = {
 					["text_text_format_p_time_legacy_floor"] = true,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["anchorYOffset"] = 0,
+					["text_shadowColor"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
 					["type"] = "subtext",
-					["anchorXOffset"] = 0,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_color"] = {
 						1, -- [1]
 						0, -- [2]
@@ -11792,20 +11803,15 @@ WeakAurasSaved = {
 					["text_font"] = "Expressway",
 					["text_shadowXOffset"] = 0,
 					["text_shadowYOffset"] = 0,
-					["text_text_format_p_format"] = "timed",
-					["text_wordWrap"] = "WordWrap",
 					["text_visible"] = true,
+					["text_wordWrap"] = "WordWrap",
+					["text_fontType"] = "OUTLINE",
 					["text_anchorPoint"] = "CENTER",
 					["text_text_format_p_time_precision"] = 1,
-					["text_fontType"] = "OUTLINE",
+					["text_text_format_p_format"] = "timed",
 					["text_fontSize"] = 20,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_shadowColor"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
+					["anchorXOffset"] = 0,
+					["anchorYOffset"] = 0,
 				}, -- [3]
 				{
 					["glowFrequency"] = 0.2,
@@ -11822,8 +11828,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = true,
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 15,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -11831,10 +11837,7 @@ WeakAurasSaved = {
 			["height"] = 60,
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -11852,49 +11855,50 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
+			["zoom"] = 0.29,
+			["regionType"] = "icon",
+			["selfPoint"] = "CENTER",
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
 				},
-			},
-			["regionType"] = "icon",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+				["finish"] = {
+				},
 			},
 			["authorOptions"] = {
 			},
-			["selfPoint"] = "CENTER",
-			["cooldown"] = true,
-			["useCooldownModRate"] = true,
-			["uid"] = "neyz7I4EbCy",
-			["zoom"] = 0.29,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["alpha"] = 1,
+			["config"] = {
+			},
+			["cooldownTextDisabled"] = false,
 			["auto"] = true,
 			["tocversion"] = 30400,
 			["id"] = "[Druid] Insect Swarm",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
 			["width"] = 60,
+			["useCooldownModRate"] = true,
 			["anchorFrameType"] = "SCREEN",
-			["config"] = {
-			},
+			["frameStrata"] = 1,
+			["uid"] = "neyz7I4EbCy",
 			["inverse"] = false,
-			["cooldownTextDisabled"] = false,
+			["xOffset"] = -59.99988702428038,
 			["conditions"] = {
 				{
 					["check"] = {
 						["trigger"] = 1,
 						["variable"] = "expirationTime",
-						["value"] = "3",
 						["op"] = "<=",
+						["value"] = "3",
 					},
 					["changes"] = {
 						{
@@ -11904,11 +11908,13 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
+			["cooldown"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
-			["xOffset"] = -59.99988702428038,
 		},
 		["GCDHistoryGrp"] = {
 			["controlledChildren"] = {
@@ -11937,15 +11943,16 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["debuffType"] = "HELPFUL",
+						["names"] = {
+						},
 						["type"] = "aura2",
 						["spellIds"] = {
 						},
@@ -11953,8 +11960,7 @@ WeakAurasSaved = {
 						["subeventPrefix"] = "SPELL",
 						["unit"] = "player",
 						["event"] = "Health",
-						["names"] = {
-						},
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -11963,20 +11969,20 @@ WeakAurasSaved = {
 			["internalVersion"] = 59,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -11988,7 +11994,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["multi"] = {
 					},
@@ -11997,10 +12006,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 			},
 			["backdropColor"] = {
 				1, -- [1]
@@ -12020,19 +12026,19 @@ WeakAurasSaved = {
 			["id"] = "GCDHistoryGrp",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["xOffset"] = -644.3976481529837,
-			["config"] = {
-			},
+			["borderInset"] = 11,
 			["uid"] = "xI9v)z6cL))",
 			["selfPoint"] = "BOTTOMLEFT",
+			["xOffset"] = -644.3976481529837,
 			["conditions"] = {
 			},
 			["information"] = {
-				["ignoreOptionsEventErrors"] = true,
-				["forceEvents"] = true,
 				["groupOffset"] = true,
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["borderInset"] = 11,
+			["config"] = {
+			},
 		},
 		["冰橙监控小德日蚀"] = {
 			["iconSource"] = -1,
@@ -12050,9 +12056,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -12069,17 +12075,17 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showAlways",
 						["names"] = {
 						},
-						["use_unit"] = true,
+						["use_genericShowOn"] = true,
 						["matchesShowOn"] = "showOnActive",
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
+						["use_absorbMode"] = true,
 						["debuffType"] = "HELPFUL",
-						["unevent"] = "auto",
+						["spellName"] = 19574,
+						["ownOnly"] = true,
 						["useName"] = true,
-						["useExactSpellId"] = false,
 						["auraspellids"] = {
 							"85739", -- [1]
 						},
+						["useExactSpellId"] = false,
 						["subeventSuffix"] = "_CAST_START",
 						["type"] = "aura2",
 						["event"] = "Cooldown Progress (Spell)",
@@ -12088,11 +12094,11 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["ownOnly"] = true,
-						["spellName"] = 19574,
-						["use_absorbMode"] = true,
+						["unevent"] = "auto",
+						["subeventPrefix"] = "SPELL",
+						["unit"] = "player",
 						["use_track"] = true,
-						["use_genericShowOn"] = true,
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -12101,10 +12107,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -12119,12 +12125,12 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -12132,8 +12138,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
@@ -12175,7 +12181,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["type"] = "subborder",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -12186,7 +12192,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_size"] = 2,
+					["border_offset"] = 0,
 				}, -- [3]
 			},
 			["height"] = 30,
@@ -12207,25 +12213,51 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_spec"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_vehicleUi"] = false,
+				["zoneIds"] = "",
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["use_vehicleUi"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["uid"] = "CmTExA5lXw(",
-			["icon"] = true,
+			["config"] = {
+			},
+			["selfPoint"] = "CENTER",
 			["desaturate"] = false,
 			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
-			["cooldown"] = true,
+			["xOffset"] = 313,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["displayIcon"] = 236152,
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["alpha"] = 1,
+			["width"] = 50,
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德日蚀",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
+			["uid"] = "CmTExA5lXw(",
+			["inverse"] = true,
+			["icon"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -12258,34 +12290,8 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["xOffset"] = 313,
-			["cooldownTextDisabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德日蚀",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["width"] = 50,
-			["useCooldownModRate"] = true,
-			["config"] = {
-			},
-			["inverse"] = true,
+			["cooldown"] = true,
 			["parent"] = "冰橙监控小德BUFF组",
-			["displayIcon"] = 236152,
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
 		},
 		["Starfire-out"] = {
 			["iconSource"] = -1,
@@ -12300,9 +12306,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -12315,7 +12321,7 @@ WeakAurasSaved = {
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
 						["use_targetRequired"] = true,
-						["subeventPrefix"] = "SPELL",
+						["spellName"] = 48465,
 						["event"] = "Action Usable",
 						["names"] = {
 						},
@@ -12323,11 +12329,11 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
 						["use_genericShowOn"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["unevent"] = "auto",
 						["use_track"] = true,
-						["spellName"] = 48465,
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnReady",
@@ -12335,36 +12341,36 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["trigger"] = {
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
-						["useName"] = false,
 						["auranames"] = {
 							"Decimation", -- [1]
 						},
+						["useExactSpellId"] = true,
 						["auraspellids"] = {
 							"48517", -- [1]
 						},
 						["matchesShowOn"] = "showOnMissing",
-						["useExactSpellId"] = true,
-						["debuffType"] = "HELPFUL",
+						["useName"] = false,
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
 				}, -- [2]
 				{
 					["trigger"] = {
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
-						["useName"] = false,
 						["auranames"] = {
 							"Decimation", -- [1]
 						},
+						["useExactSpellId"] = true,
 						["auraspellids"] = {
 							"48518", -- [1]
 						},
 						["matchesShowOn"] = "showOnMissing",
-						["useExactSpellId"] = true,
-						["debuffType"] = "HELPFUL",
+						["useName"] = false,
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
@@ -12377,14 +12383,14 @@ WeakAurasSaved = {
 						["duration"] = "30",
 						["event"] = "Combat Log",
 						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
+						["use_auraType"] = true,
 						["use_spellId"] = true,
 						["subeventPrefix"] = "SPELL",
 						["use_sourceUnit"] = true,
 						["auraType"] = "BUFF",
 						["use_destUnit"] = false,
 						["sourceUnit"] = "player",
-						["use_auraType"] = true,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -12397,10 +12403,10 @@ WeakAurasSaved = {
 							"48462", -- [2]
 							"26988", -- [3]
 						},
-						["unit"] = "target",
+						["debuffType"] = "HARMFUL",
 						["ownOnly"] = true,
 						["useExactSpellId"] = true,
-						["debuffType"] = "HARMFUL",
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -12413,14 +12419,14 @@ WeakAurasSaved = {
 						["duration"] = "30",
 						["event"] = "Combat Log",
 						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
+						["use_auraType"] = true,
 						["use_spellId"] = true,
 						["subeventPrefix"] = "SPELL",
 						["use_sourceUnit"] = true,
 						["auraType"] = "BUFF",
 						["use_destUnit"] = false,
 						["sourceUnit"] = "player",
-						["use_auraType"] = true,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -12433,14 +12439,14 @@ WeakAurasSaved = {
 						["duration"] = "15",
 						["event"] = "Combat Log",
 						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
+						["use_auraType"] = true,
 						["use_spellId"] = true,
 						["subeventPrefix"] = "SPELL",
 						["use_sourceUnit"] = true,
 						["auraType"] = "BUFF",
 						["use_destUnit"] = false,
 						["sourceUnit"] = "player",
-						["use_auraType"] = true,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -12453,14 +12459,14 @@ WeakAurasSaved = {
 						["duration"] = "15",
 						["event"] = "Combat Log",
 						["unit"] = "player",
-						["use_auraType"] = true,
+						["debuffType"] = "HELPFUL",
 						["use_spellId"] = true,
 						["subeventPrefix"] = "SPELL",
 						["use_sourceUnit"] = true,
 						["auraType"] = "BUFF",
 						["use_destUnit"] = false,
 						["sourceUnit"] = "player",
-						["debuffType"] = "HELPFUL",
+						["use_auraType"] = true,
 					},
 					["untrigger"] = {
 					},
@@ -12473,14 +12479,14 @@ WeakAurasSaved = {
 						["duration"] = "15",
 						["event"] = "Combat Log",
 						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
+						["use_auraType"] = true,
 						["use_spellId"] = true,
 						["subeventPrefix"] = "SPELL",
 						["use_sourceUnit"] = true,
 						["auraType"] = "BUFF",
 						["use_destUnit"] = false,
 						["sourceUnit"] = "player",
-						["use_auraType"] = true,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -12511,33 +12517,33 @@ WeakAurasSaved = {
 					["text_selfPoint"] = "AUTO",
 					["text_automaticWidth"] = "Auto",
 					["text_fixedWidth"] = 64,
-					["text_text_format_5.p_time_precision"] = 1,
+					["anchorXOffset"] = 0,
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_5.p_time_legacy_floor"] = true,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_text_format_p_format"] = "timed",
-					["text_shadowXOffset"] = 0,
+					["text_font"] = "Friz Quadrata TT",
 					["type"] = "subtext",
-					["text_text_format_p_time_precision"] = 1,
+					["text_visible"] = true,
 					["text_color"] = {
 						1, -- [1]
 						0.97647058823529, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
-					["text_font"] = "Friz Quadrata TT",
+					["text_text_format_5.p_time_mod_rate"] = true,
 					["text_text_format_5.p_format"] = "timed",
 					["text_shadowYOffset"] = 0,
 					["text_text_format_5.p_time_dynamic_threshold"] = 60,
 					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
-					["text_anchorPoint"] = "OUTER_BOTTOM",
 					["text_fontType"] = "OUTLINE",
-					["text_text_format_5.p_time_mod_rate"] = true,
+					["text_anchorPoint"] = "OUTER_BOTTOM",
+					["text_text_format_p_time_precision"] = 1,
+					["text_shadowXOffset"] = 0,
 					["text_fontSize"] = 17,
-					["anchorXOffset"] = 0,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["text_text_format_5.p_time_legacy_floor"] = true,
+					["text_text_format_5.p_time_precision"] = 1,
 				}, -- [2]
 			},
 			["height"] = 30,
@@ -12568,59 +12574,59 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["config"] = {
+			["uid"] = "l9zJ2RFDcgF",
+			["zoom"] = 0,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["icon"] = true,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["cooldownTextDisabled"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
+			["url"] = "https://wago.io/X6wQKkZUq/5",
+			["useCooldownModRate"] = true,
+			["width"] = 30,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "Starfire-out",
+			["frameStrata"] = 1,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["semver"] = "1.0.4",
+			["config"] = {
+			},
+			["inverse"] = false,
+			["parent"] = "平衡德循環助手",
+			["conditions"] = {
+			},
+			["cooldown"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
-			["cooldown"] = false,
-			["icon"] = true,
-			["parent"] = "平衡德循環助手",
-			["semver"] = "1.0.4",
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "Starfire-out",
-			["alpha"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 30,
-			["frameStrata"] = 1,
-			["uid"] = "l9zJ2RFDcgF",
-			["inverse"] = false,
-			["url"] = "https://wago.io/X6wQKkZUq/5",
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["xOffset"] = 0,
 		},
 		["Wrath-out"] = {
 			["iconSource"] = -1,
@@ -12635,9 +12641,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -12650,7 +12656,7 @@ WeakAurasSaved = {
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
 						["use_targetRequired"] = true,
-						["subeventPrefix"] = "SPELL",
+						["spellName"] = 48461,
 						["event"] = "Action Usable",
 						["names"] = {
 						},
@@ -12658,11 +12664,11 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
 						["use_genericShowOn"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["unevent"] = "auto",
 						["use_track"] = true,
-						["spellName"] = 48461,
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnReady",
@@ -12670,36 +12676,36 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["trigger"] = {
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
-						["useName"] = false,
 						["auranames"] = {
 							"Decimation", -- [1]
 						},
+						["useExactSpellId"] = true,
 						["auraspellids"] = {
 							"48517", -- [1]
 						},
 						["matchesShowOn"] = "showOnMissing",
-						["useExactSpellId"] = true,
-						["debuffType"] = "HELPFUL",
+						["useName"] = false,
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
 				}, -- [2]
 				{
 					["trigger"] = {
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
-						["useName"] = false,
 						["auranames"] = {
 							"Decimation", -- [1]
 						},
+						["useExactSpellId"] = true,
 						["auraspellids"] = {
 							"48518", -- [1]
 						},
 						["matchesShowOn"] = "showOnMissing",
-						["useExactSpellId"] = true,
-						["debuffType"] = "HELPFUL",
+						["useName"] = false,
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
@@ -12716,26 +12722,26 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showOnCooldown",
 						["unit"] = "player",
 						["use_unit"] = true,
-						["use_track"] = true,
-						["subeventPrefix"] = "SPELL",
+						["sourceUnit"] = "player",
 						["spellName"] = 48517,
-						["useName"] = false,
+						["debuffType"] = "HELPFUL",
+						["use_genericShowOn"] = true,
 						["type"] = "combatlog",
 						["matchesShowOn"] = "showOnMissing",
 						["auraType"] = "BUFF",
-						["subeventSuffix"] = "_AURA_APPLIED",
-						["use_spellId"] = true,
+						["useExactSpellId"] = true,
+						["use_spellName"] = false,
 						["event"] = "Combat Log",
 						["auraspellids"] = {
 							"48517", -- [1]
 						},
 						["realSpellName"] = "Eclipse (Solar)",
-						["use_spellName"] = false,
-						["useExactSpellId"] = true,
+						["use_spellId"] = true,
+						["subeventSuffix"] = "_AURA_APPLIED",
 						["use_sourceUnit"] = true,
-						["use_genericShowOn"] = true,
-						["debuffType"] = "HELPFUL",
-						["sourceUnit"] = "player",
+						["useName"] = false,
+						["subeventPrefix"] = "SPELL",
+						["use_track"] = true,
 						["use_auraType"] = true,
 					},
 					["untrigger"] = {
@@ -12748,10 +12754,10 @@ WeakAurasSaved = {
 							"48468", -- [1]
 							"27013", -- [2]
 						},
-						["unit"] = "target",
+						["debuffType"] = "HARMFUL",
 						["ownOnly"] = true,
 						["useExactSpellId"] = true,
-						["debuffType"] = "HARMFUL",
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -12768,26 +12774,26 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showOnCooldown",
 						["unit"] = "player",
 						["use_unit"] = true,
-						["use_track"] = true,
-						["subeventPrefix"] = "SPELL",
+						["sourceUnit"] = "player",
 						["spellName"] = 48517,
-						["useName"] = false,
+						["debuffType"] = "HELPFUL",
+						["use_genericShowOn"] = true,
 						["type"] = "combatlog",
 						["matchesShowOn"] = "showOnMissing",
 						["auraType"] = "BUFF",
-						["subeventSuffix"] = "_AURA_APPLIED",
-						["use_spellId"] = true,
+						["useExactSpellId"] = true,
+						["use_spellName"] = false,
 						["event"] = "Combat Log",
 						["auraspellids"] = {
 							"48517", -- [1]
 						},
 						["realSpellName"] = "Eclipse (Solar)",
-						["use_spellName"] = false,
-						["useExactSpellId"] = true,
+						["use_spellId"] = true,
+						["subeventSuffix"] = "_AURA_APPLIED",
 						["use_sourceUnit"] = true,
-						["use_genericShowOn"] = true,
-						["debuffType"] = "HELPFUL",
-						["sourceUnit"] = "player",
+						["useName"] = false,
+						["subeventPrefix"] = "SPELL",
+						["use_track"] = true,
 						["use_auraType"] = true,
 					},
 					["untrigger"] = {
@@ -12805,26 +12811,26 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showOnCooldown",
 						["unit"] = "player",
 						["use_unit"] = true,
-						["use_track"] = true,
-						["subeventPrefix"] = "SPELL",
+						["sourceUnit"] = "player",
 						["spellName"] = 48517,
-						["useName"] = false,
+						["debuffType"] = "HELPFUL",
+						["use_genericShowOn"] = true,
 						["type"] = "combatlog",
 						["matchesShowOn"] = "showOnMissing",
 						["auraType"] = "BUFF",
-						["subeventSuffix"] = "_CAST_SUCCESS",
-						["use_spellId"] = true,
+						["useExactSpellId"] = true,
+						["use_spellName"] = false,
 						["event"] = "Combat Log",
 						["auraspellids"] = {
 							"48517", -- [1]
 						},
 						["realSpellName"] = "Eclipse (Solar)",
-						["use_spellName"] = false,
-						["useExactSpellId"] = true,
+						["use_spellId"] = true,
+						["subeventSuffix"] = "_CAST_SUCCESS",
 						["use_sourceUnit"] = true,
-						["use_genericShowOn"] = true,
-						["debuffType"] = "HELPFUL",
-						["sourceUnit"] = "player",
+						["useName"] = false,
+						["subeventPrefix"] = "SPELL",
+						["use_track"] = true,
 						["use_auraType"] = true,
 					},
 					["untrigger"] = {
@@ -12842,26 +12848,26 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showOnCooldown",
 						["use_unit"] = true,
 						["subeventPrefix"] = "SPELL",
-						["sourceUnit"] = "player",
-						["unit"] = "player",
+						["use_track"] = true,
 						["spellName"] = 48517,
-						["subeventSuffix"] = "_CAST_SUCCESS",
+						["debuffType"] = "HELPFUL",
+						["use_genericShowOn"] = true,
 						["type"] = "combatlog",
-						["auraType"] = "BUFF",
 						["auraspellids"] = {
 							"48517", -- [1]
 						},
-						["useName"] = false,
-						["use_spellName"] = false,
+						["auraType"] = "BUFF",
+						["matchesShowOn"] = "showOnMissing",
+						["use_spellId"] = true,
 						["event"] = "Combat Log",
 						["useExactSpellId"] = true,
 						["realSpellName"] = "Eclipse (Solar)",
-						["use_spellId"] = true,
-						["matchesShowOn"] = "showOnMissing",
+						["use_spellName"] = false,
+						["useName"] = false,
 						["use_sourceUnit"] = true,
-						["use_genericShowOn"] = true,
-						["debuffType"] = "HELPFUL",
-						["use_track"] = true,
+						["subeventSuffix"] = "_CAST_SUCCESS",
+						["unit"] = "player",
+						["sourceUnit"] = "player",
 						["use_auraType"] = true,
 					},
 					["untrigger"] = {
@@ -12914,20 +12920,20 @@ WeakAurasSaved = {
 					["text_justify"] = "CENTER",
 					["text_text_format_5.p_time_precision"] = 1,
 					["type"] = "subtext",
-					["text_visible"] = true,
-					["text_font"] = "Friz Quadrata TT",
+					["anchorXOffset"] = 0,
 					["text_text_format_5.p_time_mod_rate"] = true,
-					["text_text_format_5.p_time_dynamic_threshold"] = 60,
+					["text_font"] = "Friz Quadrata TT",
+					["text_text_format_6.p_time_precision"] = 1,
+					["text_text_format_7.p_time_precision"] = 1,
 					["text_text_format_7.p_time_dynamic_threshold"] = 60,
-					["text_text_format_6.p_time_dynamic_threshold"] = 60,
-					["text_text_format_p_time_precision"] = 1,
+					["text_shadowXOffset"] = 0,
 					["text_text_format_6.p_time_format"] = 0,
 					["text_anchorPoint"] = "OUTER_BOTTOM",
-					["text_shadowXOffset"] = 0,
-					["text_text_format_7.p_time_precision"] = 1,
-					["text_text_format_6.p_time_precision"] = 1,
+					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_5.p_time_dynamic_threshold"] = 60,
+					["text_text_format_6.p_time_dynamic_threshold"] = 60,
 					["text_text_format_5.p_time_legacy_floor"] = true,
-					["anchorXOffset"] = 0,
+					["text_visible"] = true,
 				}, -- [2]
 			},
 			["height"] = 30,
@@ -12959,59 +12965,59 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["config"] = {
+			["uid"] = "pwlbS(iEd8X",
+			["zoom"] = 0,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["icon"] = true,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["cooldownTextDisabled"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
+			["url"] = "https://wago.io/X6wQKkZUq/5",
+			["useCooldownModRate"] = true,
+			["width"] = 30,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "Wrath-out",
+			["frameStrata"] = 1,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["semver"] = "1.0.4",
+			["config"] = {
+			},
+			["inverse"] = false,
+			["parent"] = "平衡德循環助手",
+			["conditions"] = {
+			},
+			["cooldown"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
-			["cooldown"] = false,
-			["icon"] = true,
-			["parent"] = "平衡德循環助手",
-			["semver"] = "1.0.4",
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "Wrath-out",
-			["alpha"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 30,
-			["frameStrata"] = 1,
-			["uid"] = "pwlbS(iEd8X",
-			["inverse"] = false,
-			["url"] = "https://wago.io/X6wQKkZUq/5",
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["xOffset"] = 0,
 		},
 		["GCDHistoryBuffer5"] = {
 			["iconSource"] = -1,
@@ -13034,11 +13040,11 @@ WeakAurasSaved = {
 					["custom"] = "",
 					["do_custom"] = false,
 				},
+				["finish"] = {
+				},
 				["init"] = {
 					["custom"] = "aura_env.thisRegister = 5\n\naura_env.animX = aura_env.config[\"displayTime\"] * aura_env.region.width\nif aura_env.config[\"direction\"] == 1 then\n    aura_env.animDir = -1\nelse\n    aura_env.animDir = 1\nend\n\naura_env.xoff = 0\naura_env.castTime = 0",
 					["do_custom"] = true,
-				},
-				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -13048,28 +13054,28 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showOnActive",
 						["use_unit"] = true,
 						["customIcon"] = "function()\n    return aura_env.icon\nend\n\n\n\n\n\n\n\n",
-						["names"] = {
-						},
-						["custom_hide"] = "timed",
-						["use_cloneId"] = true,
+						["dynamicDuration"] = true,
 						["debuffType"] = "HELPFUL",
-						["duration"] = "3",
+						["use_cloneId"] = true,
+						["custom_hide"] = "timed",
+						["subeventPrefix"] = "SPELL",
 						["type"] = "custom",
-						["custom_type"] = "event",
 						["subeventSuffix"] = "_CAST_SUCCESS",
+						["custom_type"] = "event",
 						["spellIds"] = {
 						},
 						["events"] = "MYSTLER_GCDHISTORY_ADD",
 						["event"] = "Combat Log",
-						["unit"] = "player",
-						["customDuration"] = "function()\n    return aura_env.config[\"displayTime\"], aura_env.castTime + aura_env.config[\"displayTime\"]\nend\n\n\n\n\n\n\n\n\n\n\n\n",
 						["unevent"] = "timed",
+						["customDuration"] = "function()\n    return aura_env.config[\"displayTime\"], aura_env.castTime + aura_env.config[\"displayTime\"]\nend\n\n\n\n\n\n\n\n\n\n\n\n",
+						["unit"] = "player",
 						["custom"] = "function(event, arg1, arg2, arg3, arg4)\n    if arg1 == aura_env.thisRegister then\n        aura_env.icon = arg2\n        aura_env.xoff = 0\n        aura_env.castTime = arg3\n        if arg4 then\n            aura_env.region:SetDesaturated(true)\n            aura_env.region:Color(1,0,0,1)\n        else\n            aura_env.region:SetDesaturated(false)\n            aura_env.region:Color(1,1,1,1)\n        end\n        return true\n    end\n    return false\nend",
 						["use_sourceUnit"] = true,
 						["check"] = "event",
-						["subeventPrefix"] = "SPELL",
+						["duration"] = "3",
 						["sourceUnit"] = "player",
-						["dynamicDuration"] = true,
+						["names"] = {
+						},
 					},
 					["untrigger"] = {
 						["custom"] = "function() return true end",
@@ -13101,8 +13107,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["easeStrength"] = 3,
-					["preset"] = "fade",
 					["duration_type"] = "seconds",
+					["preset"] = "fade",
 				},
 				["main"] = {
 					["colorR"] = 1,
@@ -13120,12 +13126,12 @@ WeakAurasSaved = {
 					["alpha"] = 0,
 					["y"] = 0,
 					["x"] = 0,
-					["colorB"] = 1,
-					["duration"] = "100%",
-					["easeStrength"] = 3,
-					["rotate"] = 0,
-					["translateType"] = "custom",
 					["duration_type"] = "relative",
+					["translateType"] = "custom",
+					["rotate"] = 0,
+					["easeStrength"] = 3,
+					["duration"] = "100%",
+					["colorB"] = 1,
 				},
 				["finish"] = {
 					["colorR"] = 1,
@@ -13141,15 +13147,15 @@ WeakAurasSaved = {
 					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n    local x = startX + (progress * deltaX)\n    if aura_env.state then\n        x = x + aura_env.state.xoff\n    end\n    return x, startY + (progress * deltaY)\nend",
 					["scaley"] = 1,
 					["alpha"] = 0,
-					["colorB"] = 1,
+					["scalex"] = 1,
 					["y"] = 0,
 					["x"] = -150,
-					["preset"] = "fade",
-					["easeStrength"] = 3,
-					["translateType"] = "custom",
-					["rotate"] = 0,
 					["duration_type"] = "seconds",
-					["scalex"] = 1,
+					["rotate"] = 0,
+					["translateType"] = "custom",
+					["easeStrength"] = 3,
+					["preset"] = "fade",
+					["colorB"] = 1,
 				},
 			},
 			["desaturate"] = false,
@@ -13205,10 +13211,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 				["difficulty"] = {
 					["multi"] = {
 					},
@@ -13217,19 +13220,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -13237,54 +13228,39 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["width"] = 50,
-			["selfPoint"] = "CENTER",
-			["xOffset"] = 0,
-			["icon"] = true,
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["regionType"] = "icon",
-			["displayIcon"] = "",
-			["parent"] = "GCDHistoryGrp",
-			["cooldownEdge"] = false,
-			["config"] = {
-				["displayTime"] = 3,
-				["direction"] = 1,
-			},
-			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["cooldownTextDisabled"] = false,
-			["semver"] = "1.1.10",
-			["tocversion"] = 30400,
-			["id"] = "GCDHistoryBuffer5",
-			["auto"] = true,
-			["alpha"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["uid"] = "Lq2SNWDDK0S",
-			["inverse"] = false,
-			["stickyDuration"] = false,
-			["conditions"] = {
-			},
-			["cooldown"] = false,
+			["cooldownTextDisabled"] = false,
 			["authorOptions"] = {
 				{
-					["desc"] = "In which direction should the history expand?",
+					["width"] = 1,
 					["type"] = "select",
 					["values"] = {
 						"Left", -- [1]
 						"Right", -- [2]
 					},
-					["default"] = 1,
-					["key"] = "direction",
-					["useDesc"] = true,
 					["name"] = "Direction",
-					["width"] = 1,
+					["useDesc"] = true,
+					["key"] = "direction",
+					["default"] = 1,
+					["desc"] = "In which direction should the history expand?",
 				}, -- [1]
 				{
 					["type"] = "range",
@@ -13294,11 +13270,41 @@ WeakAurasSaved = {
 					["width"] = 1,
 					["min"] = 1,
 					["key"] = "displayTime",
-					["desc"] = "How long (in seconds) icons are shown at max.",
-					["name"] = "Display Time",
 					["default"] = 3,
+					["name"] = "Display Time",
+					["desc"] = "How long (in seconds) icons are shown at max.",
 				}, -- [2]
 			},
+			["xOffset"] = 0,
+			["cooldown"] = false,
+			["regionType"] = "icon",
+			["conditions"] = {
+			},
+			["stickyDuration"] = false,
+			["icon"] = true,
+			["uid"] = "Lq2SNWDDK0S",
+			["alpha"] = 1,
+			["semver"] = "1.1.10",
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "GCDHistoryBuffer5",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["width"] = 50,
+			["parent"] = "GCDHistoryGrp",
+			["config"] = {
+				["direction"] = 1,
+				["displayTime"] = 3,
+			},
+			["inverse"] = false,
+			["selfPoint"] = "CENTER",
+			["displayIcon"] = "",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["cooldownEdge"] = false,
 		},
 		["[Druid] Mark 2"] = {
 			["iconSource"] = -1,
@@ -13334,13 +13340,11 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["debuffType"] = "HELPFUL",
-						["use_remaining"] = false,
+						["subeventSuffix"] = "_CAST_START",
 						["type"] = "aura2",
-						["auraspellids"] = {
-							"48470", -- [1]
-						},
+						["unit"] = "player",
 						["unevent"] = "auto",
-						["remaining_operator"] = ">=",
+						["matchesShowOn"] = "showOnMissing",
 						["form"] = {
 							["multi"] = {
 								true, -- [1]
@@ -13352,17 +13356,19 @@ WeakAurasSaved = {
 								[0] = true,
 							},
 						},
-						["useName"] = true,
-						["duration"] = "1",
+						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
 						["realSpellName"] = "Rebirth",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["use_unit"] = true,
-						["subeventPrefix"] = "SPELL",
-						["matchesShowOn"] = "showOnMissing",
-						["unit"] = "player",
-						["subeventSuffix"] = "_CAST_START",
+						["duration"] = "1",
+						["useName"] = true,
+						["remaining_operator"] = ">=",
+						["auraspellids"] = {
+							"48470", -- [1]
+						},
+						["use_remaining"] = false,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnReady",
@@ -13382,7 +13388,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["type"] = "subborder",
-					["border_size"] = 1,
+					["border_offset"] = 0,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -13391,7 +13397,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_offset"] = 0,
+					["border_size"] = 1,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.5,
@@ -13408,8 +13414,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = true,
 					["glowXOffset"] = 0,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -13443,72 +13449,72 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["zoom"] = 0.29,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["parent"] = "[WotLK] Balance Druid (Top Group)",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["cooldown"] = false,
-			["conditions"] = {
-			},
-			["config"] = {
-			},
-			["alpha"] = 1,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Mark 2",
-			["width"] = 40,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["uid"] = "dBBrrap4zKy",
-			["inverse"] = false,
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["regionType"] = "icon",
+			["parent"] = "[WotLK] Balance Druid (Top Group)",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
+			["uid"] = "dBBrrap4zKy",
+			["alpha"] = 1,
+			["zoom"] = 0.29,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Mark 2",
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
+			["width"] = 40,
+			["useCooldownModRate"] = true,
+			["config"] = {
+			},
+			["inverse"] = false,
+			["xOffset"] = 0,
+			["conditions"] = {
+			},
+			["cooldown"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 		},
 		["冰橙监控小德愈合"] = {
 			["iconSource"] = -1,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -13521,9 +13527,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
@@ -13537,10 +13543,11 @@ WeakAurasSaved = {
 						["subeventPrefix"] = "SPELL",
 						["use_absorbMode"] = true,
 						["unit"] = "target",
-						["duration"] = "1",
-						["use_unit"] = true,
-						["matchesShowOn"] = "showOnActive",
+						["use_genericShowOn"] = true,
+						["names"] = {
+						},
 						["spellName"] = 19574,
+						["debuffType"] = "HELPFUL",
 						["auraspellids"] = {
 							"184362", -- [1]
 						},
@@ -13555,10 +13562,9 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["debuffType"] = "HELPFUL",
-						["names"] = {
-						},
-						["use_genericShowOn"] = true,
+						["matchesShowOn"] = "showOnActive",
+						["use_unit"] = true,
+						["duration"] = "1",
 						["use_track"] = true,
 						["useIgnoreName"] = false,
 					},
@@ -13570,11 +13576,11 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "unit",
 						["use_hostility"] = true,
-						["hostility"] = "friendly",
+						["use_unit"] = true,
 						["unit"] = "target",
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["hostility"] = "friendly",
 					},
 					["untrigger"] = {
 					},
@@ -13589,12 +13595,12 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -13602,8 +13608,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
@@ -13645,7 +13651,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["type"] = "subborder",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -13656,7 +13662,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_size"] = 2,
+					["border_offset"] = 0,
 				}, -- [3]
 			},
 			["height"] = 30,
@@ -13675,29 +13681,46 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_spec"] = true,
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_vehicleUi"] = false,
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
 					},
 				},
-				["use_vehicleUi"] = false,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 			},
 			["source"] = "import",
-			["config"] = {
-			},
-			["icon"] = true,
+			["uid"] = "DtCbBbW6SsU",
+			["selfPoint"] = "CENTER",
 			["desaturate"] = false,
 			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
+			["xOffset"] = 124,
+			["cooldown"] = true,
+			["displayIcon"] = 136085,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
+			["alpha"] = 1,
+			["width"] = 50,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德愈合",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
+			["config"] = {
+			},
+			["inverse"] = true,
+			["icon"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -13730,36 +13753,19 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["xOffset"] = 124,
-			["zoom"] = 0,
-			["anchorFrameType"] = "SCREEN",
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德愈合",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["width"] = 50,
-			["useCooldownModRate"] = true,
-			["uid"] = "DtCbBbW6SsU",
-			["inverse"] = true,
-			["parent"] = "冰橙监控小德BUFF组",
-			["displayIcon"] = 136085,
-			["cooldown"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
+			["parent"] = "冰橙监控小德BUFF组",
 		},
 		["冰橙监控小德资源环 3"] = {
 			["user_y"] = 0,
 			["wagoID"] = "H_zZHwkG7",
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -13768,15 +13774,15 @@ WeakAurasSaved = {
 			["yOffset"] = -285,
 			["anchorPoint"] = "CENTER",
 			["desaturateBackground"] = false,
-			["alpha"] = 1,
+			["frameStrata"] = 2,
 			["sameTexture"] = true,
 			["url"] = "",
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
@@ -13801,16 +13807,16 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["trigger"] = {
-						["use_unit"] = true,
+						["debuffType"] = "HELPFUL",
 						["use_form"] = true,
 						["type"] = "unit",
+						["use_inverse"] = true,
+						["unit"] = "player",
 						["form"] = {
 							["single"] = 3,
 						},
-						["unit"] = "player",
-						["use_inverse"] = true,
 						["event"] = "Stance/Form/Aura",
-						["debuffType"] = "HELPFUL",
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 					},
@@ -13819,11 +13825,11 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "unit",
 						["use_hostility"] = false,
-						["unit"] = "target",
+						["hostility"] = "hostile",
 						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["hostility"] = "hostile",
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -13835,20 +13841,20 @@ WeakAurasSaved = {
 			["internalVersion"] = 59,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -13875,59 +13881,6 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["height"] = 120,
-			["crop_x"] = 0.41,
-			["crop_y"] = 0.41,
-			["xOffset"] = 170,
-			["useAdjustededMax"] = false,
-			["backgroundTexture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura3",
-			["source"] = "import",
-			["startAngle"] = 90,
-			["user_x"] = 0,
-			["fontSize"] = 12,
-			["mirror"] = false,
-			["useAdjustededMin"] = false,
-			["regionType"] = "progresstexture",
-			["config"] = {
-			},
-			["blendMode"] = "BLEND",
-			["load"] = {
-				["use_class"] = true,
-				["use_never"] = true,
-				["use_vehicleUi"] = false,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["anchorFrameType"] = "SCREEN",
-			["slantMode"] = "INSIDE",
-			["foregroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White",
-			["desaturateForeground"] = false,
-			["tocversion"] = 30400,
-			["semver"] = "1.0.10",
-			["compress"] = false,
-			["id"] = "冰橙监控小德资源环 3",
-			["parent"] = "冰橙监控小德资源装饰环",
-			["frameStrata"] = 2,
-			["width"] = 120,
-			["selfPoint"] = "CENTER",
-			["uid"] = "mVl53qDWlgM",
-			["inverse"] = false,
-			["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-			["orientation"] = "ANTICLOCKWISE",
 			["conditions"] = {
 				{
 					["check"] = {
@@ -13954,6 +13907,59 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
+			["crop_y"] = 0.41,
+			["xOffset"] = 170,
+			["useAdjustededMax"] = false,
+			["backgroundTexture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura3",
+			["source"] = "import",
+			["startAngle"] = 90,
+			["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
+			["fontSize"] = 12,
+			["mirror"] = false,
+			["useAdjustededMin"] = false,
+			["regionType"] = "progresstexture",
+			["uid"] = "mVl53qDWlgM",
+			["blendMode"] = "BLEND",
+			["selfPoint"] = "CENTER",
+			["width"] = 120,
+			["slantMode"] = "INSIDE",
+			["parent"] = "冰橙监控小德资源装饰环",
+			["desaturateForeground"] = false,
+			["compress"] = false,
+			["semver"] = "1.0.10",
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德资源环 3",
+			["foregroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White",
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["load"] = {
+				["use_class"] = true,
+				["use_never"] = true,
+				["use_vehicleUi"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["config"] = {
+			},
+			["inverse"] = false,
+			["user_x"] = 0,
+			["orientation"] = "ANTICLOCKWISE",
+			["crop_x"] = 0.41,
 			["information"] = {
 				["forceEvents"] = true,
 			},
@@ -13977,22 +13983,22 @@ WeakAurasSaved = {
 						["remaining"] = "5",
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
-						["spellName"] = 33831,
+						["use_unit"] = true,
 						["subeventSuffix"] = "_CAST_START",
 						["names"] = {
 						},
-						["use_genericShowOn"] = true,
+						["remaining_operator"] = ">",
 						["event"] = "Cooldown Progress (Spell)",
-						["unevent"] = "auto",
+						["use_remaining"] = true,
 						["realSpellName"] = "自然之力",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
 						["subeventPrefix"] = "SPELL",
-						["use_remaining"] = true,
-						["remaining_operator"] = ">",
+						["unevent"] = "auto",
+						["use_genericShowOn"] = true,
 						["use_track"] = true,
-						["use_unit"] = true,
+						["spellName"] = 33831,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnCooldown",
@@ -14011,7 +14017,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_size"] = 2,
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -14020,7 +14026,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [2]
 				{
 					["text_shadowXOffset"] = 0,
@@ -14037,9 +14043,9 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_p_time_legacy_floor"] = false,
 					["type"] = "subtext",
-					["anchorXOffset"] = 0,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -14049,15 +14055,15 @@ WeakAurasSaved = {
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_format"] = "timed",
 					["text_shadowYOffset"] = 0,
-					["text_visible"] = true,
+					["text_text_format_p_time_mod_rate"] = true,
 					["text_wordWrap"] = "WordWrap",
 					["text_fontType"] = "OUTLINE",
 					["text_anchorPoint"] = "CENTER",
 					["text_text_format_p_time_format"] = 0,
-					["text_text_format_p_time_mod_rate"] = true,
+					["text_visible"] = true,
 					["text_fontSize"] = 14,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_text_format_p_time_legacy_floor"] = false,
+					["anchorXOffset"] = 0,
+					["text_text_format_p_time_precision"] = 1,
 				}, -- [3]
 				{
 					["glowFrequency"] = 0.25,
@@ -14074,8 +14080,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = false,
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -14094,8 +14100,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = false,
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 2,
+					["glowScale"] = 1,
 					["glowLines"] = 20,
 					["glowBorder"] = false,
 				}, -- [5]
@@ -14103,10 +14109,7 @@ WeakAurasSaved = {
 			["height"] = 60,
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -14124,32 +14127,35 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
+			["cooldownTextDisabled"] = false,
+			["anchorFrameFrame"] = "WeakAuras:[Druid] Force of Nature",
+			["regionType"] = "icon",
+			["xOffset"] = 119.9999141056273,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
-			},
-			["anchorFrameFrame"] = "WeakAuras:[Druid] Force of Nature",
-			["regionType"] = "icon",
-			["authorOptions"] = {
 			},
 			["color"] = {
 				1, -- [1]
@@ -14157,35 +14163,35 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["xOffset"] = 119.9999141056273,
-			["cooldown"] = true,
-			["alpha"] = 1,
-			["uid"] = "1hGKlho5gIu",
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Force of Nature CD",
-			["useCooldownModRate"] = true,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["width"] = 60,
-			["config"] = {
-			},
-			["inverse"] = false,
-			["zoom"] = 0.29,
-			["conditions"] = {
-			},
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
+			["frameStrata"] = 1,
+			["config"] = {
+			},
+			["zoom"] = 0.29,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Force of Nature CD",
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["width"] = 60,
+			["useCooldownModRate"] = true,
+			["uid"] = "1hGKlho5gIu",
+			["inverse"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
 				},
+				["finish"] = {
+				},
+			},
+			["conditions"] = {
+			},
+			["cooldown"] = true,
+			["authorOptions"] = {
 			},
 		},
 		["Moonfire -Lunar"] = {
@@ -14205,16 +14211,16 @@ WeakAurasSaved = {
 					["do_glow"] = false,
 					["glow_action"] = "show",
 				},
+				["init"] = {
+				},
 				["finish"] = {
 					["glow_frame_type"] = "FRAMESELECTOR",
 					["hide_all_glows"] = false,
 					["glow_action"] = "show",
-					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Life Tap",
 					["glow_type"] = "Pixel",
 					["do_message"] = false,
-					["glow_frame"] = "WeakAuras:Life Tap",
-				},
-				["init"] = {
+					["do_glow"] = false,
 				},
 			},
 			["triggers"] = {
@@ -14233,19 +14239,19 @@ WeakAurasSaved = {
 						["subeventSuffix"] = "_CAST_START",
 						["event"] = "Health",
 						["subeventPrefix"] = "SPELL",
-						["names"] = {
+						["useExactSpellId"] = true,
+						["ownOnly"] = true,
+						["spellIds"] = {
 						},
+						["useName"] = false,
+						["remOperator"] = "<",
 						["auraspellids"] = {
 							"48463", -- [1]
 							"48462", -- [2]
 							"26988", -- [3]
 						},
-						["spellIds"] = {
+						["names"] = {
 						},
-						["useName"] = false,
-						["remOperator"] = "<",
-						["ownOnly"] = true,
-						["useExactSpellId"] = true,
 						["useRem"] = false,
 					},
 					["untrigger"] = {
@@ -14253,16 +14259,16 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["trigger"] = {
-						["useRem"] = true,
+						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
-						["unit"] = "player",
 						["auraspellids"] = {
 							"48518", -- [1]
 						},
+						["useExactSpellId"] = true,
 						["remOperator"] = ">=",
 						["rem"] = "13",
-						["useExactSpellId"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
+						["useRem"] = true,
 					},
 					["untrigger"] = {
 					},
@@ -14308,59 +14314,59 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["config"] = {
+			["uid"] = "WiS798xEhNd",
+			["zoom"] = 0,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["icon"] = true,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["cooldownTextDisabled"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
+			["url"] = "https://wago.io/X6wQKkZUq/5",
+			["useCooldownModRate"] = true,
+			["width"] = 30,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "Moonfire -Lunar",
+			["frameStrata"] = 1,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["semver"] = "1.0.4",
+			["config"] = {
+			},
+			["inverse"] = false,
+			["parent"] = "平衡德循環助手",
+			["conditions"] = {
+			},
+			["cooldown"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
-			["cooldown"] = false,
-			["icon"] = true,
-			["parent"] = "平衡德循環助手",
-			["semver"] = "1.0.4",
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "Moonfire -Lunar",
-			["alpha"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 30,
-			["frameStrata"] = 1,
-			["uid"] = "WiS798xEhNd",
-			["inverse"] = false,
-			["url"] = "https://wago.io/X6wQKkZUq/5",
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["xOffset"] = 0,
 		},
 		["Starfire-Lunar"] = {
 			["iconSource"] = -1,
@@ -14377,9 +14383,9 @@ WeakAurasSaved = {
 					["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\sonar.ogg",
 					["do_sound"] = true,
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -14392,7 +14398,7 @@ WeakAurasSaved = {
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
 						["use_targetRequired"] = true,
-						["subeventPrefix"] = "SPELL",
+						["spellName"] = 48465,
 						["event"] = "Action Usable",
 						["names"] = {
 						},
@@ -14400,11 +14406,11 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
 						["use_genericShowOn"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["unevent"] = "auto",
 						["use_track"] = true,
-						["spellName"] = 48465,
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnReady",
@@ -14412,18 +14418,18 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["trigger"] = {
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
-						["useName"] = false,
 						["auranames"] = {
 							"Decimation", -- [1]
 						},
+						["useExactSpellId"] = true,
 						["auraspellids"] = {
 							"48518", -- [1]
 						},
 						["matchesShowOn"] = "showOnActive",
-						["useExactSpellId"] = true,
-						["debuffType"] = "HELPFUL",
+						["useName"] = false,
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
@@ -14453,15 +14459,15 @@ WeakAurasSaved = {
 					["text_selfPoint"] = "AUTO",
 					["text_automaticWidth"] = "Auto",
 					["text_fixedWidth"] = 64,
-					["rotateText"] = "NONE",
+					["text_text_format_2.p_time_legacy_floor"] = true,
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["text_text_format_2.p_time_precision"] = 1,
-					["anchorXOffset"] = 0,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_text_format_2.p_format"] = "timed",
 					["text_text_format_p_format"] = "timed",
 					["type"] = "subtext",
-					["text_shadowXOffset"] = 0,
+					["text_text"] = "%2.p",
 					["text_color"] = {
 						0.062745098039216, -- [1]
 						1, -- [2]
@@ -14469,17 +14475,17 @@ WeakAurasSaved = {
 						1, -- [4]
 					},
 					["text_font"] = "Friz Quadrata TT",
-					["text_visible"] = true,
+					["text_text_format_p_time_precision"] = 1,
 					["text_shadowYOffset"] = 0,
 					["text_text_format_2.p_time_dynamic_threshold"] = 60,
 					["text_wordWrap"] = "WordWrap",
 					["text_fontType"] = "THICKOUTLINE",
 					["text_anchorPoint"] = "OUTER_TOP",
-					["text_text_format_p_time_precision"] = 1,
-					["text_text"] = "%2.p",
+					["text_visible"] = true,
+					["text_shadowXOffset"] = 0,
 					["text_fontSize"] = 17,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_text_format_2.p_time_legacy_floor"] = true,
+					["anchorXOffset"] = 0,
+					["rotateText"] = "NONE",
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -14496,8 +14502,8 @@ WeakAurasSaved = {
 					},
 					["glowXOffset"] = 0,
 					["glowScale"] = 1,
-					["glowThickness"] = 1,
 					["glow"] = true,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -14530,59 +14536,59 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["config"] = {
+			["uid"] = "dsKZyZHvLBS",
+			["zoom"] = 0,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["icon"] = true,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["cooldownTextDisabled"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
+			["url"] = "https://wago.io/X6wQKkZUq/5",
+			["useCooldownModRate"] = true,
+			["width"] = 30,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "Starfire-Lunar",
+			["frameStrata"] = 1,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["semver"] = "1.0.4",
+			["config"] = {
+			},
+			["inverse"] = false,
+			["parent"] = "平衡德循環助手",
+			["conditions"] = {
+			},
+			["cooldown"] = true,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
-			["cooldown"] = true,
-			["icon"] = true,
-			["parent"] = "平衡德循環助手",
-			["semver"] = "1.0.4",
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "Starfire-Lunar",
-			["alpha"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 30,
-			["frameStrata"] = 1,
-			["uid"] = "dsKZyZHvLBS",
-			["inverse"] = false,
-			["url"] = "https://wago.io/X6wQKkZUq/5",
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["xOffset"] = 0,
 		},
 		["[Druid] Nature's Grasp Tick"] = {
 			["iconSource"] = -1,
@@ -14605,20 +14611,20 @@ WeakAurasSaved = {
 						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
 						["unevent"] = "auto",
-						["use_unit"] = true,
+						["spellName"] = 53312,
 						["unit"] = "player",
 						["event"] = "Cooldown Progress (Spell)",
-						["duration"] = "1",
+						["names"] = {
+						},
 						["realSpellName"] = "Nature's Grasp",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
 						["useName"] = true,
-						["names"] = {
-						},
+						["subeventSuffix"] = "_CAST_START",
+						["duration"] = "1",
 						["use_track"] = true,
-						["spellName"] = 53312,
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnReady",
@@ -14636,7 +14642,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_size"] = 1,
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -14645,7 +14651,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -14662,8 +14668,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = true,
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 4,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -14691,17 +14697,17 @@ WeakAurasSaved = {
 						1, -- [4]
 					},
 					["text_font"] = "Expressway",
-					["text_visible"] = true,
+					["text_shadowXOffset"] = 0,
 					["text_shadowYOffset"] = 0,
-					["anchorXOffset"] = 0,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_wordWrap"] = "WordWrap",
 					["text_fontType"] = "OUTLINE",
 					["text_anchorPoint"] = "CENTER",
 					["text_text_format_p_format"] = "timed",
 					["text_text_format_p_time_precision"] = 1,
 					["text_fontSize"] = 20,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_shadowXOffset"] = 0,
+					["anchorXOffset"] = 0,
+					["text_visible"] = true,
 				}, -- [4]
 			},
 			["height"] = 40,
@@ -14732,64 +14738,64 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
+			["cooldownTextDisabled"] = false,
+			["regionType"] = "icon",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
 				},
+				["finish"] = {
+				},
 			},
-			["regionType"] = "icon",
+			["xOffset"] = 0,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["alpha"] = 1,
+			["uid"] = "q7KDFMADFYS",
+			["zoom"] = 0.29,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Nature's Grasp Tick",
+			["anchorFrameType"] = "SCREEN",
+			["useCooldownModRate"] = true,
+			["width"] = 40,
+			["frameStrata"] = 1,
+			["config"] = {
+			},
+			["inverse"] = false,
+			["authorOptions"] = {
+			},
+			["conditions"] = {
+			},
+			["cooldown"] = true,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
-			},
-			["xOffset"] = 0,
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["cooldown"] = true,
-			["useCooldownModRate"] = true,
-			["config"] = {
-			},
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Nature's Grasp Tick",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["width"] = 40,
-			["uid"] = "q7KDFMADFYS",
-			["inverse"] = false,
-			["zoom"] = 0.29,
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["authorOptions"] = {
 			},
 		},
 		["冰橙监控猫连击点1"] = {
@@ -14821,9 +14827,9 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["subeventSuffix"] = "_CAST_START",
+						["subeventPrefix"] = "SPELL",
 						["names"] = {
 						},
-						["subeventPrefix"] = "SPELL",
 						["use_powertype"] = true,
 						["debuffType"] = "HELPFUL",
 					},
@@ -14833,14 +14839,14 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["use_form"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 						["type"] = "unit",
 						["use_unit"] = true,
 						["form"] = {
 							["single"] = 3,
 						},
 						["event"] = "Stance/Form/Aura",
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -14848,10 +14854,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -14871,12 +14877,12 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -14884,8 +14890,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["barColor"] = {
@@ -14906,7 +14912,7 @@ WeakAurasSaved = {
 				{
 					["type"] = "subborder",
 					["border_anchor"] = "bar",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 					["border_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -14915,11 +14921,11 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_size"] = 2,
+					["border_offset"] = 0,
 				}, -- [3]
 			},
 			["height"] = 15,
-			["id"] = "冰橙监控猫连击点1",
+			["zoom"] = 0,
 			["load"] = {
 				["use_class"] = true,
 				["use_never"] = true,
@@ -14945,42 +14951,42 @@ WeakAurasSaved = {
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
 			["source"] = "import",
-			["selfPoint"] = "CENTER",
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 			["icon"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
 			},
 			["useAdjustededMin"] = false,
 			["regionType"] = "aurabar",
-			["iconSource"] = -1,
+			["xOffset"] = 36,
 			["uid"] = ")37RCdA5mlC",
 			["icon_side"] = "RIGHT",
 			["config"] = {
 			},
 			["sparkHeight"] = 30,
 			["texture"] = "Skyline",
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
+			["width"] = 67,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["spark"] = false,
 			["tocversion"] = 30400,
 			["sparkHidden"] = "NEVER",
-			["frameStrata"] = 1,
 			["alpha"] = 1,
-			["width"] = 67,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["id"] = "冰橙监控猫连击点1",
 			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -14988,15 +14994,15 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["inverse"] = false,
-			["xOffset"] = 36,
+			["iconSource"] = -1,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 				{
 					["check"] = {
 						["trigger"] = 1,
 						["variable"] = "power",
-						["op"] = ">=",
 						["value"] = "1",
+						["op"] = ">=",
 					},
 					["changes"] = {
 						{
@@ -15040,7 +15046,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["selfPoint"] = "CENTER",
 		},
 		["冰橙监控小德战争践踏CD"] = {
 			["iconSource"] = -1,
@@ -15063,10 +15069,10 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["subeventPrefix"] = "SPELL",
-						["type"] = "aura2",
+						["subeventSuffix"] = "_CAST_START",
 						["names"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
+						["type"] = "aura2",
 						["debuffType"] = "HARMFUL",
 					},
 					["untrigger"] = {
@@ -15080,22 +15086,22 @@ WeakAurasSaved = {
 						["subeventPrefix"] = "SPELL",
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
-						["unit"] = "player",
+						["use_absorbMode"] = true,
 						["unevent"] = "auto",
 						["use_unit"] = true,
-						["names"] = {
-						},
+						["use_genericShowOn"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
 						["realSpellName"] = "战争践踏",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["spellName"] = 20549,
 						["subeventSuffix"] = "_CAST_START",
-						["use_genericShowOn"] = true,
+						["spellName"] = 20549,
+						["names"] = {
+						},
 						["use_track"] = true,
-						["use_absorbMode"] = true,
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -15104,10 +15110,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -15157,7 +15163,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["border_size"] = 2,
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -15168,7 +15174,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [3]
 				{
 					["glowFrequency"] = 0.25,
@@ -15185,8 +15191,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = false,
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -15205,11 +15211,14 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["use_spellknown"] = true,
-				["use_vehicleUi"] = false,
 				["use_spec"] = true,
+				["use_vehicleUi"] = false,
 				["spec"] = {
 					["single"] = 3,
 					["multi"] = {
@@ -15221,32 +15230,23 @@ WeakAurasSaved = {
 				},
 				["use_exact_spellknown"] = false,
 				["spellknown"] = 20549,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 			},
 			["source"] = "import",
-			["uid"] = "bsfbbZaAdXZ",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
+			["config"] = {
 			},
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -15254,35 +15254,15 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["regionType"] = "icon",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["cooldown"] = true,
-			["displayIcon"] = "",
 			["parent"] = "冰橙监控小德CD组 ",
-			["zoom"] = 0,
-			["width"] = 45,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德战争践踏CD",
-			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["config"] = {
-			},
-			["inverse"] = true,
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
 			["conditions"] = {
 				{
@@ -15312,15 +15292,41 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
+			},
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德战争践踏CD",
+			["useCooldownModRate"] = true,
+			["alpha"] = 1,
+			["width"] = 45,
+			["zoom"] = 0,
+			["uid"] = "bsfbbZaAdXZ",
+			["inverse"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["displayIcon"] = "",
+			["cooldown"] = true,
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
 			},
 		},
 		["[Druid] Tauren Racial CD"] = {
@@ -15341,7 +15347,7 @@ WeakAurasSaved = {
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
 						["unevent"] = "auto",
-						["spellName"] = 20549,
+						["subeventPrefix"] = "SPELL",
 						["event"] = "Cooldown Progress (Spell)",
 						["names"] = {
 						},
@@ -15349,11 +15355,11 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["unit"] = "player",
-						["subeventSuffix"] = "_CAST_START",
 						["duration"] = "1",
+						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
 						["use_track"] = true,
-						["subeventPrefix"] = "SPELL",
+						["spellName"] = 20549,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnCooldown",
@@ -15371,7 +15377,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["type"] = "subborder",
-					["border_size"] = 1,
+					["border_offset"] = 0,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -15380,7 +15386,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_offset"] = 0,
+					["border_size"] = 1,
 				}, -- [2]
 			},
 			["height"] = 40,
@@ -15411,65 +15417,65 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["zoom"] = 0.29,
 			["regionType"] = "icon",
-			["xOffset"] = 0,
-			["authorOptions"] = {
-			},
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
-			["cooldown"] = true,
-			["alpha"] = 1,
-			["uid"] = "W2hNZ)lHN(K",
-			["zoom"] = 0.29,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Tauren Racial CD",
-			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 40,
-			["anchorFrameType"] = "SCREEN",
-			["config"] = {
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
 			},
-			["inverse"] = false,
-			["cooldownTextDisabled"] = false,
-			["conditions"] = {
+			["authorOptions"] = {
 			},
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
+			["useCooldownModRate"] = true,
+			["config"] = {
+			},
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Tauren Racial CD",
+			["width"] = 40,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
+			["uid"] = "W2hNZ)lHN(K",
+			["inverse"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["conditions"] = {
+			},
+			["cooldown"] = true,
+			["xOffset"] = 0,
 		},
 		["[Druid] Current Stance"] = {
 			["iconSource"] = -1,
@@ -15498,7 +15504,7 @@ WeakAurasSaved = {
 						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
-						["subeventPrefix"] = "SPELL",
+						["spellName"] = 20549,
 						["subeventSuffix"] = "_CAST_START",
 						["unit"] = "player",
 						["form"] = {
@@ -15513,17 +15519,17 @@ WeakAurasSaved = {
 							},
 						},
 						["event"] = "Stance/Form/Aura",
-						["use_genericShowOn"] = true,
+						["useName"] = true,
 						["realSpellName"] = "War Stomp",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
+						["unevent"] = "auto",
 						["names"] = {
 						},
-						["unevent"] = "auto",
-						["useName"] = true,
+						["use_genericShowOn"] = true,
 						["use_track"] = true,
-						["spellName"] = 20549,
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnReady",
@@ -15541,7 +15547,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["type"] = "subborder",
-					["border_size"] = 1,
+					["border_offset"] = 0,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -15550,7 +15556,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_offset"] = 0,
+					["border_size"] = 1,
 				}, -- [2]
 			},
 			["height"] = 40,
@@ -15579,64 +15585,64 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["xOffset"] = 0,
+			["zoom"] = 0.29,
 			["regionType"] = "icon",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["authorOptions"] = {
-			},
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
-			["cooldown"] = false,
-			["alpha"] = 1,
-			["config"] = {
-			},
-			["zoom"] = 0.29,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Current Stance",
-			["width"] = 40,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["uid"] = "RyeCa3r18ng",
-			["inverse"] = false,
-			["cooldownTextDisabled"] = false,
-			["conditions"] = {
+			["xOffset"] = 0,
+			["authorOptions"] = {
 			},
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
+			["frameStrata"] = 1,
+			["uid"] = "RyeCa3r18ng",
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Current Stance",
+			["alpha"] = 1,
+			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["width"] = 40,
+			["config"] = {
+			},
+			["inverse"] = false,
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
 				},
+				["finish"] = {
+				},
+			},
+			["conditions"] = {
+			},
+			["cooldown"] = false,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
 		},
 		["日蚀冷却"] = {
@@ -15655,9 +15661,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -15668,29 +15674,29 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["use_sourceNpcId"] = false,
-						["use_auraType"] = true,
+						["sourceFlags"] = "Mine",
 						["use_sourceFlags"] = true,
 						["use_cloneId"] = false,
 						["use_spellSchool"] = false,
 						["debuffType"] = "HELPFUL",
 						["type"] = "combatlog",
-						["duration"] = "15",
+						["subeventPrefix"] = "SPELL",
 						["auraType"] = "BUFF",
-						["auraspellids"] = {
-							"48517", -- [1]
-						},
+						["subeventSuffix"] = "_AURA_REMOVED",
 						["useExactSpellId"] = true,
 						["event"] = "Combat Log",
 						["unit"] = "player",
-						["use_spellId"] = true,
 						["use_spellName"] = false,
+						["use_spellId"] = true,
 						["spellIds"] = {
 						},
 						["use_sourceUnit"] = true,
-						["subeventSuffix"] = "_AURA_REMOVED",
-						["subeventPrefix"] = "SPELL",
+						["auraspellids"] = {
+							"48517", -- [1]
+						},
+						["duration"] = "15",
 						["sourceUnit"] = "player",
-						["sourceFlags"] = "Mine",
+						["use_auraType"] = true,
 					},
 					["untrigger"] = {
 					},
@@ -15699,12 +15705,12 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "aura2",
 						["useExactSpellId"] = true,
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["matchesShowOn"] = "showAlways",
 						["auraspellids"] = {
 							"48517", -- [1]
 						},
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
@@ -15717,11 +15723,11 @@ WeakAurasSaved = {
 						["use_exact_spellName"] = true,
 						["realSpellName"] = 26985,
 						["use_spellName"] = true,
-						["debuffType"] = "HELPFUL",
+						["spellName"] = 26985,
 						["genericShowOn"] = "showOnCooldown",
 						["unit"] = "player",
 						["use_track"] = true,
-						["spellName"] = 26985,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -15732,20 +15738,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -15766,9 +15772,9 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_p_time_legacy_floor"] = false,
 					["type"] = "subtext",
-					["anchorXOffset"] = 0,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -15778,20 +15784,20 @@ WeakAurasSaved = {
 					["text_font"] = "聊天",
 					["text_text_format_p_time_mod_rate"] = true,
 					["text_shadowYOffset"] = 0,
-					["text_fontType"] = "OUTLINE",
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
-					["text_anchorPoint"] = "CENTER",
-					["text_text_format_p_time_format"] = 0,
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = true,
+					["text_anchorPoint"] = "CENTER",
+					["text_text_format_p_time_format"] = 0,
+					["text_fontType"] = "OUTLINE",
 					["text_fontSize"] = 16,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_text_format_p_time_legacy_floor"] = false,
+					["anchorXOffset"] = 0,
+					["text_text_format_p_time_precision"] = 1,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -15808,8 +15814,8 @@ WeakAurasSaved = {
 					},
 					["useGlowColor"] = false,
 					["glow"] = false,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -15821,11 +15827,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_alive"] = true,
 				["class"] = {
 					["multi"] = {
 					},
 				},
-				["use_alive"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -15837,27 +15843,25 @@ WeakAurasSaved = {
 			},
 			["source"] = "import",
 			["regionType"] = "icon",
+			["selfPoint"] = "CENTER",
+			["cooldown"] = true,
 			["authorOptions"] = {
 			},
-			["information"] = {
-				["forceEvents"] = true,
-			},
 			["xOffset"] = 0,
-			["icon"] = true,
-			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
-			["frameStrata"] = 1,
 			["zoom"] = 0,
-			["config"] = {
-			},
+			["useCooldownModRate"] = true,
+			["cooldownTextDisabled"] = false,
+			["uid"] = "gMB1DBDCkGO",
 			["tocversion"] = 30400,
 			["id"] = "日蚀冷却",
-			["width"] = 64,
-			["useCooldownModRate"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["alpha"] = 1,
-			["uid"] = "gMB1DBDCkGO",
+			["anchorFrameType"] = "SCREEN",
+			["width"] = 64,
+			["config"] = {
+			},
 			["inverse"] = false,
-			["cooldownTextDisabled"] = false,
+			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
 			["conditions"] = {
 				{
 					["check"] = {
@@ -15873,8 +15877,10 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["cooldown"] = true,
-			["selfPoint"] = "CENTER",
+			["information"] = {
+				["forceEvents"] = true,
+			},
+			["icon"] = true,
 		},
 		["GCDHistoryBuffer6"] = {
 			["iconSource"] = -1,
@@ -15897,11 +15903,11 @@ WeakAurasSaved = {
 					["custom"] = "",
 					["do_custom"] = false,
 				},
+				["finish"] = {
+				},
 				["init"] = {
 					["custom"] = "aura_env.thisRegister = 6\n\naura_env.animX = aura_env.config[\"displayTime\"] * aura_env.region.width\nif aura_env.config[\"direction\"] == 1 then\n    aura_env.animDir = -1\nelse\n    aura_env.animDir = 1\nend\n\naura_env.xoff = 0\naura_env.castTime = 0",
 					["do_custom"] = true,
-				},
-				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -15911,28 +15917,28 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showOnActive",
 						["use_unit"] = true,
 						["customIcon"] = "function()\n    return aura_env.icon\nend\n\n\n\n\n\n\n\n",
-						["names"] = {
-						},
-						["custom_hide"] = "timed",
-						["use_cloneId"] = true,
+						["dynamicDuration"] = true,
 						["debuffType"] = "HELPFUL",
-						["duration"] = "3",
+						["use_cloneId"] = true,
+						["custom_hide"] = "timed",
+						["subeventPrefix"] = "SPELL",
 						["type"] = "custom",
-						["custom_type"] = "event",
 						["subeventSuffix"] = "_CAST_SUCCESS",
+						["custom_type"] = "event",
 						["spellIds"] = {
 						},
 						["events"] = "MYSTLER_GCDHISTORY_ADD",
 						["event"] = "Combat Log",
-						["unit"] = "player",
-						["customDuration"] = "function()\n    return aura_env.config[\"displayTime\"], aura_env.castTime + aura_env.config[\"displayTime\"]\nend\n\n\n\n\n\n\n\n\n\n\n\n",
 						["unevent"] = "timed",
+						["customDuration"] = "function()\n    return aura_env.config[\"displayTime\"], aura_env.castTime + aura_env.config[\"displayTime\"]\nend\n\n\n\n\n\n\n\n\n\n\n\n",
+						["unit"] = "player",
 						["custom"] = "function(event, arg1, arg2, arg3, arg4)\n    if arg1 == aura_env.thisRegister then\n        aura_env.icon = arg2\n        aura_env.xoff = 0\n        aura_env.castTime = arg3\n        if arg4 then\n            aura_env.region:SetDesaturated(true)\n            aura_env.region:Color(1,0,0,1)\n        else\n            aura_env.region:SetDesaturated(false)\n            aura_env.region:Color(1,1,1,1)\n        end\n        return true\n    end\n    return false\nend",
 						["use_sourceUnit"] = true,
 						["check"] = "event",
-						["subeventPrefix"] = "SPELL",
+						["duration"] = "3",
 						["sourceUnit"] = "player",
-						["dynamicDuration"] = true,
+						["names"] = {
+						},
 					},
 					["untrigger"] = {
 						["custom"] = "function() return true end",
@@ -15964,8 +15970,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["easeStrength"] = 3,
-					["preset"] = "fade",
 					["duration_type"] = "seconds",
+					["preset"] = "fade",
 				},
 				["main"] = {
 					["colorR"] = 1,
@@ -15983,12 +15989,12 @@ WeakAurasSaved = {
 					["alpha"] = 0,
 					["y"] = 0,
 					["x"] = 0,
-					["colorB"] = 1,
-					["duration"] = "100%",
-					["easeStrength"] = 3,
-					["rotate"] = 0,
-					["translateType"] = "custom",
 					["duration_type"] = "relative",
+					["translateType"] = "custom",
+					["rotate"] = 0,
+					["easeStrength"] = 3,
+					["duration"] = "100%",
+					["colorB"] = 1,
 				},
 				["finish"] = {
 					["colorR"] = 1,
@@ -16004,15 +16010,15 @@ WeakAurasSaved = {
 					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n    local x = startX + (progress * deltaX)\n    if aura_env.state then\n        x = x + aura_env.state.xoff\n    end\n    return x, startY + (progress * deltaY)\nend",
 					["scaley"] = 1,
 					["alpha"] = 0,
-					["colorB"] = 1,
+					["scalex"] = 1,
 					["y"] = 0,
 					["x"] = -150,
-					["preset"] = "fade",
-					["easeStrength"] = 3,
-					["translateType"] = "custom",
-					["rotate"] = 0,
 					["duration_type"] = "seconds",
-					["scalex"] = 1,
+					["rotate"] = 0,
+					["translateType"] = "custom",
+					["easeStrength"] = 3,
+					["preset"] = "fade",
+					["colorB"] = 1,
 				},
 			},
 			["desaturate"] = false,
@@ -16068,10 +16074,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 				["difficulty"] = {
 					["multi"] = {
 					},
@@ -16080,19 +16083,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -16100,54 +16091,39 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["width"] = 50,
-			["selfPoint"] = "CENTER",
-			["xOffset"] = 0,
-			["icon"] = true,
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["regionType"] = "icon",
-			["displayIcon"] = "",
-			["parent"] = "GCDHistoryGrp",
-			["cooldownEdge"] = false,
-			["config"] = {
-				["displayTime"] = 3,
-				["direction"] = 1,
-			},
-			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["cooldownTextDisabled"] = false,
-			["semver"] = "1.1.10",
-			["tocversion"] = 30400,
-			["id"] = "GCDHistoryBuffer6",
-			["auto"] = true,
-			["alpha"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["uid"] = "Vnt4Oz56VXZ",
-			["inverse"] = false,
-			["stickyDuration"] = false,
-			["conditions"] = {
-			},
-			["cooldown"] = false,
+			["cooldownTextDisabled"] = false,
 			["authorOptions"] = {
 				{
-					["desc"] = "In which direction should the history expand?",
+					["width"] = 1,
 					["type"] = "select",
 					["values"] = {
 						"Left", -- [1]
 						"Right", -- [2]
 					},
-					["default"] = 1,
-					["key"] = "direction",
-					["useDesc"] = true,
 					["name"] = "Direction",
-					["width"] = 1,
+					["useDesc"] = true,
+					["key"] = "direction",
+					["default"] = 1,
+					["desc"] = "In which direction should the history expand?",
 				}, -- [1]
 				{
 					["type"] = "range",
@@ -16157,11 +16133,41 @@ WeakAurasSaved = {
 					["width"] = 1,
 					["min"] = 1,
 					["key"] = "displayTime",
-					["desc"] = "How long (in seconds) icons are shown at max.",
-					["name"] = "Display Time",
 					["default"] = 3,
+					["name"] = "Display Time",
+					["desc"] = "How long (in seconds) icons are shown at max.",
 				}, -- [2]
 			},
+			["xOffset"] = 0,
+			["cooldown"] = false,
+			["regionType"] = "icon",
+			["conditions"] = {
+			},
+			["stickyDuration"] = false,
+			["icon"] = true,
+			["uid"] = "Vnt4Oz56VXZ",
+			["alpha"] = 1,
+			["semver"] = "1.1.10",
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "GCDHistoryBuffer6",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["width"] = 50,
+			["parent"] = "GCDHistoryGrp",
+			["config"] = {
+				["direction"] = 1,
+				["displayTime"] = 3,
+			},
+			["inverse"] = false,
+			["selfPoint"] = "CENTER",
+			["displayIcon"] = "",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["cooldownEdge"] = false,
 		},
 		["冰橙监控小德狂暴CD"] = {
 			["iconSource"] = -1,
@@ -16174,9 +16180,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
@@ -16191,10 +16197,10 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["unit"] = "player",
-						["useName"] = true,
+						["subeventSuffix"] = "_CAST_START",
 						["names"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
+						["useName"] = true,
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -16207,22 +16213,22 @@ WeakAurasSaved = {
 						["subeventPrefix"] = "SPELL",
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
-						["use_genericShowOn"] = true,
+						["names"] = {
+						},
 						["unevent"] = "auto",
 						["use_unit"] = true,
-						["duration"] = "1",
+						["unit"] = "player",
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
 						["realSpellName"] = "狂暴",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
 						["spellName"] = 50334,
-						["unit"] = "player",
+						["subeventSuffix"] = "_CAST_START",
+						["duration"] = "1",
 						["use_track"] = true,
-						["names"] = {
-						},
+						["use_genericShowOn"] = true,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -16231,7 +16237,7 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["use_form"] = false,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 						["type"] = "unit",
 						["use_unit"] = true,
 						["form"] = {
@@ -16242,7 +16248,7 @@ WeakAurasSaved = {
 							},
 						},
 						["event"] = "Stance/Form/Aura",
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -16250,10 +16256,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -16268,12 +16274,12 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -16281,8 +16287,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
@@ -16324,7 +16330,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["type"] = "subborder",
-					["border_size"] = 2,
+					["border_offset"] = 0,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -16335,7 +16341,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 				}, -- [3]
 				{
 					["glowFrequency"] = 0.25,
@@ -16352,8 +16358,8 @@ WeakAurasSaved = {
 					},
 					["type"] = "subglow",
 					["glowXOffset"] = 0,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -16376,7 +16382,10 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_spellknown"] = true,
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
 				["use_spec"] = true,
 				["use_vehicleUi"] = false,
 				["spec"] = {
@@ -16387,50 +16396,15 @@ WeakAurasSaved = {
 					},
 				},
 				["spellknown"] = 50334,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 			},
 			["source"] = "import",
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["config"] = {
-			},
-			["parent"] = "冰橙监控小德CD组 ",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "icon",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["displayIcon"] = "",
-			["icon"] = true,
-			["desaturate"] = false,
-			["width"] = 45,
-			["frameStrata"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德狂暴CD",
-			["zoom"] = 0,
 			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
 			["uid"] = "oz6GotPMzWQ",
-			["inverse"] = true,
-			["useTooltip"] = false,
+			["selfPoint"] = "CENTER",
+			["parent"] = "冰橙监控小德CD组 ",
+			["regionType"] = "icon",
+			["cooldown"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -16471,15 +16445,47 @@ WeakAurasSaved = {
 					},
 				}, -- [3]
 			},
-			["cooldown"] = true,
-			["selfPoint"] = "CENTER",
+			["useTooltip"] = false,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["anchorFrameType"] = "SCREEN",
+			["useCooldownModRate"] = true,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德狂暴CD",
+			["zoom"] = 0,
+			["frameStrata"] = 1,
+			["width"] = 45,
+			["icon"] = true,
+			["config"] = {
+			},
+			["inverse"] = true,
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["displayIcon"] = "",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["desaturate"] = false,
 		},
 		["冰橙监控小德挑战咆哮CD"] = {
 			["iconSource"] = -1,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -16499,22 +16505,22 @@ WeakAurasSaved = {
 						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
-						["use_absorbMode"] = true,
+						["use_unit"] = true,
 						["unevent"] = "auto",
 						["names"] = {
 						},
-						["use_genericShowOn"] = true,
+						["subeventPrefix"] = "SPELL",
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
 						["realSpellName"] = "挑战咆哮",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
 						["spellName"] = 5209,
-						["subeventPrefix"] = "SPELL",
+						["subeventSuffix"] = "_CAST_START",
+						["use_genericShowOn"] = true,
 						["use_track"] = true,
-						["use_unit"] = true,
+						["use_absorbMode"] = true,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -16523,14 +16529,14 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["use_form"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 						["type"] = "unit",
 						["use_unit"] = true,
 						["form"] = {
 							["single"] = 1,
 						},
 						["event"] = "Stance/Form/Aura",
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -16538,10 +16544,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -16556,12 +16562,12 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -16569,8 +16575,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
@@ -16612,7 +16618,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["border_size"] = 2,
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -16623,7 +16629,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [3]
 			},
 			["height"] = 45,
@@ -16640,14 +16646,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 				["use_class"] = true,
 				["use_spellknown"] = false,
-				["use_spec"] = true,
 				["use_vehicleUi"] = false,
+				["use_spec"] = true,
 				["spec"] = {
 					["single"] = 3,
 					["multi"] = {
@@ -16659,25 +16662,45 @@ WeakAurasSaved = {
 				},
 				["use_exact_spellknown"] = false,
 				["spellknown"] = 18562,
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
+			["uid"] = "p)4ruCnWy1j",
+			["selfPoint"] = "CENTER",
+			["desaturate"] = false,
+			["regionType"] = "icon",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["cooldown"] = true,
+			["displayIcon"] = "",
+			["parent"] = "冰橙监控小德CD组 ",
+			["alpha"] = 1,
+			["width"] = 45,
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德挑战咆哮CD",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
+			["inverse"] = true,
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
 				},
-			},
-			["desaturate"] = false,
-			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
+				["init"] = {
+				},
 			},
 			["conditions"] = {
 				{
@@ -16706,36 +16729,19 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["cooldownTextDisabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德挑战咆哮CD",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["width"] = 45,
-			["useCooldownModRate"] = true,
-			["uid"] = "p)4ruCnWy1j",
-			["inverse"] = true,
 			["xOffset"] = 270,
-			["displayIcon"] = "",
-			["cooldown"] = true,
-			["parent"] = "冰橙监控小德CD组 ",
 		},
 		["冰橙监控小德资源数字 2"] = {
 			["outline"] = "OUTLINE",
 			["displayText_format_1.percentpower_decimal_precision"] = 0,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -16749,9 +16755,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
@@ -16776,16 +16782,16 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["trigger"] = {
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["type"] = "unit",
 						["use_form"] = true,
+						["use_inverse"] = true,
+						["use_unit"] = true,
 						["form"] = {
 							["single"] = 1,
 						},
-						["use_unit"] = true,
-						["use_inverse"] = true,
 						["event"] = "Stance/Form/Aura",
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
@@ -16794,11 +16800,11 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "unit",
 						["use_hostility"] = false,
-						["hostility"] = "hostile",
+						["unit"] = "target",
 						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["unit"] = "target",
+						["hostility"] = "hostile",
 					},
 					["untrigger"] = {
 					},
@@ -16837,63 +16843,33 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayText_format_1.percentpower_round_type"] = "floor",
+			["shadowXOffset"] = 1,
 			["fontSize"] = 20,
 			["source"] = "import",
 			["displayText_format_1.power_format"] = "none",
+			["displayText_format_p_time_mod_rate"] = true,
+			["displayText_format_1.percentpower_format"] = "Number",
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
-			["displayText_format_1.percentpower_format"] = "Number",
-			["color"] = {
-				0.984313725490196, -- [1]
-				0.9803921568627451, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "text",
-			["fixedWidth"] = 200,
-			["displayText_format_p_time_dynamic_threshold"] = 60,
-			["preferToUpdate"] = false,
-			["displayText_format_1.percentpower_big_number_format"] = "AbbreviateNumbers",
-			["displayText_format_p_time_precision"] = 1,
-			["uid"] = "l3HA4cvRoql",
-			["parent"] = "冰橙监控小德资源装饰环",
-			["yOffset"] = -340,
-			["justify"] = "LEFT",
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德资源数字 2",
-			["xOffset"] = 170,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["wordWrap"] = "WordWrap",
-			["config"] = {
-			},
-			["displayText_format_p_time_mod_rate"] = true,
-			["shadowXOffset"] = 1,
-			["shadowColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
+			["displayText_format_1.percentpower_round_type"] = "floor",
 			["conditions"] = {
 				{
 					["check"] = {
@@ -16932,10 +16908,40 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
+			["displayText_format_p_time_legacy_floor"] = false,
+			["regionType"] = "text",
+			["displayText_format_1.percentpower_big_number_format"] = "AbbreviateNumbers",
+			["displayText_format_p_time_precision"] = 1,
+			["config"] = {
+			},
+			["wordWrap"] = "WordWrap",
+			["yOffset"] = -340,
+			["justify"] = "LEFT",
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德资源数字 2",
+			["xOffset"] = 170,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["parent"] = "冰橙监控小德资源装饰环",
+			["uid"] = "l3HA4cvRoql",
+			["displayText_format_p_time_dynamic_threshold"] = 60,
+			["color"] = {
+				0.984313725490196, -- [1]
+				0.9803921568627451, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["shadowColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["fixedWidth"] = 200,
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["displayText_format_p_time_legacy_floor"] = false,
+			["preferToUpdate"] = false,
 		},
 		["[Druid] Starfall"] = {
 			["iconSource"] = -1,
@@ -16956,18 +16962,18 @@ WeakAurasSaved = {
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
 						["subeventSuffix"] = "_CAST_START",
-						["unit"] = "player",
+						["spellName"] = 53201,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_unit"] = true,
 						["realSpellName"] = "星辰坠落",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["duration"] = "1",
-						["unevent"] = "auto",
 						["subeventPrefix"] = "SPELL",
+						["unevent"] = "auto",
+						["duration"] = "1",
 						["use_track"] = true,
-						["spellName"] = 53201,
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnReady",
@@ -16982,21 +16988,21 @@ WeakAurasSaved = {
 						["remaining"] = "5",
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
-						["use_unit"] = true,
+						["spellName"] = 53201,
 						["subeventSuffix"] = "_CAST_START",
 						["unit"] = "player",
-						["duration"] = "1",
+						["use_genericShowOn"] = true,
 						["event"] = "Cooldown Progress (Spell)",
-						["unevent"] = "auto",
+						["use_remaining"] = true,
 						["realSpellName"] = "星辰坠落",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
 						["subeventPrefix"] = "SPELL",
-						["use_remaining"] = true,
-						["use_genericShowOn"] = true,
+						["unevent"] = "auto",
+						["duration"] = "1",
 						["use_track"] = true,
-						["spellName"] = 53201,
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnCooldown",
@@ -17015,7 +17021,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_offset"] = 0,
-					["type"] = "subborder",
+					["border_size"] = 2,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -17024,7 +17030,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_size"] = 2,
+					["type"] = "subborder",
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -17041,8 +17047,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = false,
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -17061,8 +17067,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = false,
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 2,
+					["glowScale"] = 1,
 					["glowLines"] = 20,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -17070,10 +17076,7 @@ WeakAurasSaved = {
 			["height"] = 60,
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -17091,60 +17094,67 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
+			["zoom"] = 0.29,
+			["regionType"] = "icon",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
 				},
+				["finish"] = {
+				},
 			},
-			["regionType"] = "icon",
-			["xOffset"] = 60,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["cooldown"] = true,
-			["useCooldownModRate"] = true,
-			["config"] = {
-			},
-			["zoom"] = 0.29,
+			["alpha"] = 1,
+			["uid"] = "NorOs8aFxkX",
+			["cooldownTextDisabled"] = false,
 			["auto"] = true,
 			["tocversion"] = 30400,
 			["id"] = "[Druid] Starfall",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
 			["width"] = 60,
+			["useCooldownModRate"] = true,
 			["anchorFrameType"] = "SCREEN",
-			["uid"] = "NorOs8aFxkX",
+			["frameStrata"] = 1,
+			["config"] = {
+			},
 			["inverse"] = false,
-			["cooldownTextDisabled"] = false,
+			["authorOptions"] = {
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -17173,12 +17183,8 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["authorOptions"] = {
-			},
+			["cooldown"] = true,
+			["xOffset"] = 60,
 		},
 		["[Druid] Barkskin CD"] = {
 			["iconSource"] = -1,
@@ -17197,24 +17203,24 @@ WeakAurasSaved = {
 						["use_unit"] = true,
 						["remaining"] = "48",
 						["spellName"] = 22812,
-						["names"] = {
-						},
+						["debuffType"] = "HELPFUL",
 						["use_remaining"] = true,
 						["remaining_operator"] = "<",
 						["subeventSuffix"] = "_CAST_START",
-						["subeventPrefix"] = "SPELL",
-						["use_genericShowOn"] = true,
+						["unit"] = "player",
+						["duration"] = "1",
 						["event"] = "Cooldown Progress (Spell)",
-						["type"] = "spell",
+						["unevent"] = "auto",
 						["realSpellName"] = "树皮术",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["unevent"] = "auto",
-						["duration"] = "1",
-						["unit"] = "player",
+						["type"] = "spell",
+						["use_genericShowOn"] = true,
+						["subeventPrefix"] = "SPELL",
 						["use_track"] = true,
-						["debuffType"] = "HELPFUL",
+						["names"] = {
+						},
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnCooldown",
@@ -17232,7 +17238,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["type"] = "subborder",
-					["border_size"] = 1,
+					["border_offset"] = 0,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -17241,7 +17247,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_offset"] = 0,
+					["border_size"] = 1,
 				}, -- [2]
 			},
 			["height"] = 40,
@@ -17272,63 +17278,63 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
+			["zoom"] = 0.29,
+			["regionType"] = "icon",
+			["authorOptions"] = {
+			},
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
 			["xOffset"] = 0,
-			["authorOptions"] = {
-			},
-			["cooldown"] = true,
-			["useCooldownModRate"] = true,
-			["uid"] = "sFukyUN5sG5",
-			["zoom"] = 0.29,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Barkskin CD",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["width"] = 40,
-			["anchorFrameType"] = "SCREEN",
-			["config"] = {
-			},
-			["inverse"] = false,
-			["cooldownTextDisabled"] = false,
-			["conditions"] = {
-			},
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
+			["alpha"] = 1,
+			["config"] = {
+			},
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Barkskin CD",
+			["width"] = 40,
+			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
+			["uid"] = "sFukyUN5sG5",
+			["inverse"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
+				},
+			},
+			["conditions"] = {
+			},
+			["cooldown"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 		},
@@ -17362,8 +17368,8 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["power"] = "1",
-						["use_unit"] = true,
 						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
 						["use_powertype"] = true,
 						["debuffType"] = "HELPFUL",
 					},
@@ -17373,14 +17379,14 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["use_form"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 						["type"] = "unit",
 						["use_unit"] = true,
 						["form"] = {
 							["single"] = 3,
 						},
 						["event"] = "Stance/Form/Aura",
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -17388,10 +17394,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -17408,20 +17414,20 @@ WeakAurasSaved = {
 			["internalVersion"] = 59,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -17444,7 +17450,7 @@ WeakAurasSaved = {
 				{
 					["type"] = "subborder",
 					["border_anchor"] = "bar",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 					["border_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -17453,11 +17459,11 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_size"] = 2,
+					["border_offset"] = 0,
 				}, -- [3]
 			},
 			["height"] = 15,
-			["sparkHidden"] = "NEVER",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["load"] = {
 				["use_class"] = true,
 				["use_never"] = true,
@@ -17483,20 +17489,27 @@ WeakAurasSaved = {
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
 			["source"] = "import",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["selfPoint"] = "CENTER",
 			["icon"] = false,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
 			},
 			["useAdjustededMin"] = false,
 			["regionType"] = "aurabar",
-			["iconSource"] = -1,
+			["xOffset"] = 237,
 			["config"] = {
 			},
 			["icon_side"] = "RIGHT",
@@ -17508,26 +17521,26 @@ WeakAurasSaved = {
 			},
 			["sparkHeight"] = 30,
 			["texture"] = "Skyline",
-			["width"] = 67,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
 			["spark"] = false,
 			["tocversion"] = 30400,
 			["id"] = "冰橙监控猫连击点4",
-			["frameStrata"] = 1,
 			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
+			["frameStrata"] = 1,
+			["width"] = 67,
+			["sparkHidden"] = "NEVER",
 			["uid"] = "1Mopjhs)(NF",
 			["inverse"] = false,
-			["xOffset"] = 237,
+			["iconSource"] = -1,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 				{
 					["check"] = {
 						["trigger"] = 1,
 						["variable"] = "power",
-						["op"] = ">=",
 						["value"] = "4",
+						["op"] = ">=",
 					},
 					["changes"] = {
 						{
@@ -17571,14 +17584,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 		},
 		["[Druid] Nature's Grasp CD"] = {
 			["iconSource"] = -1,
@@ -17591,9 +17597,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -17606,18 +17612,18 @@ WeakAurasSaved = {
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
 						["subeventSuffix"] = "_CAST_START",
-						["spellName"] = 53312,
+						["subeventPrefix"] = "SPELL",
 						["event"] = "Cooldown Progress (Spell)",
 						["unit"] = "player",
 						["realSpellName"] = "自然之握",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["use_genericShowOn"] = true,
-						["unevent"] = "auto",
 						["use_unit"] = true,
+						["unevent"] = "auto",
+						["use_genericShowOn"] = true,
 						["use_track"] = true,
-						["subeventPrefix"] = "SPELL",
+						["spellName"] = 53312,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnCooldown",
@@ -17633,22 +17639,22 @@ WeakAurasSaved = {
 						["subeventPrefix"] = "SPELL",
 						["debuffType"] = "HELPFUL",
 						["useName"] = true,
-						["spellName"] = 53312,
+						["names"] = {
+						},
 						["subeventSuffix"] = "_CAST_START",
 						["use_unit"] = true,
-						["unit"] = "player",
+						["matchesShowOn"] = "showOnMissing",
 						["event"] = "Cooldown Progress (Spell)",
-						["type"] = "aura2",
+						["unevent"] = "auto",
 						["realSpellName"] = "Nature's Grasp",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
 						["duration"] = "1",
-						["unevent"] = "auto",
-						["matchesShowOn"] = "showOnMissing",
+						["type"] = "aura2",
+						["unit"] = "player",
 						["use_track"] = true,
-						["names"] = {
-						},
+						["spellName"] = 53312,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnCooldown",
@@ -17666,7 +17672,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_size"] = 1,
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -17675,7 +17681,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [2]
 			},
 			["height"] = 40,
@@ -17706,82 +17712,84 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["icon"] = true,
-			["regionType"] = "icon",
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["authorOptions"] = {
-			},
-			["xOffset"] = 0,
-			["cooldown"] = false,
-			["alpha"] = 1,
-			["uid"] = "lXn8Zdy6)UA",
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Nature's Grasp CD",
-			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["anchorFrameType"] = "SCREEN",
-			["width"] = 40,
-			["config"] = {
-			},
-			["inverse"] = false,
-			["zoom"] = 0.29,
-			["conditions"] = {
+			["regionType"] = "icon",
+			["xOffset"] = 0,
+			["icon"] = true,
+			["authorOptions"] = {
 			},
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
+			["useCooldownModRate"] = true,
+			["config"] = {
+			},
+			["zoom"] = 0.29,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Nature's Grasp CD",
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["width"] = 40,
+			["frameStrata"] = 1,
+			["uid"] = "lXn8Zdy6)UA",
+			["inverse"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
+			},
+			["conditions"] = {
+			},
+			["cooldown"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
 			},
 		},
-		["GCDHistoryBuffer2"] = {
-			["iconSource"] = -1,
-			["wagoID"] = "RvbxkQEv2",
+		["目标target->player玩家"] = {
+			["outline"] = "OUTLINE",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["preferToUpdate"] = false,
-			["customText"] = "\n\n",
-			["yOffset"] = 0,
+			["displayText"] = "%c",
+			["customText"] = "function()\n    if UnitName('target') then\n        local col = RAID_CLASS_COLORS[select(2, UnitClass(\"target\"))].colorStr    \n        local pcol = RAID_CLASS_COLORS[select(2, UnitClass(\"player\"))].colorStr    \n        \n        local ta ,pl\n        if aura_env.config.tar then--显示目标名字\n            ta=UnitName('target')            \n        else            \n            if (GetLocale() == \"zhCN\") then\n                ta='目标'\n            else\n                ta='target'\n            end \n        end\n        \n        if aura_env.config.pla then--显示player名字\n            pl=UnitName('player')            \n        else            \n            if (GetLocale() == \"zhCN\") then\n                pl='你'\n            else\n                pl='you'\n            end \n        end\n        \n        \n        if col then \n            return '|c'..col .. ta ..'|r'..aura_env.config.de..'|c'..pcol..pl..'|r'\n        else\n            return ta ..aura_env.config.de ..'|c'..pcol..pl..'|r'\n        end\n    end    \nend\n\n--if (GetLocale() == \"zhCN\") then\n--end ",
+			["shadowYOffset"] = -1,
 			["anchorPoint"] = "CENTER",
-			["cooldownSwipe"] = true,
 			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/RvbxkQEv2/19",
+			["automaticWidth"] = "Auto",
 			["actions"] = {
 				["start"] = {
-					["custom"] = "",
-					["do_custom"] = false,
+					["custom"] = "if aura_env.config.sa then\n    if UnitName('target') then \n        local m=UnitName('target') ..aura_env.config.de.. UnitName('player'),'SAY'\n        \n        --[[ v8.2 say\n        local i,_ = IsInInstance() --INSTANCE_CHAT\n        if  i  then\n            SendChatMessage(m,\"SAY\")\n        elseif IsInRaid() then\n            SendChatMessage(m,\"Raid\")\n        else\n            DEFAULT_CHAT_FRAME:AddMessage(m)\n        end\n        ]]\n         SendChatMessage(m)\n    end    \nend\n\n\n",
+					["do_sound"] = true,
+					["message_type"] = "YELL",
+					["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\bam.ogg",
+					["do_custom"] = true,
+					["do_message"] = true,
 				},
 				["init"] = {
-					["custom"] = "aura_env.thisRegister = 2\n\naura_env.animX = aura_env.config[\"displayTime\"] * aura_env.region.width\nif aura_env.config[\"direction\"] == 1 then\n    aura_env.animDir = -1\nelse\n    aura_env.animDir = 1\nend\n\naura_env.xoff = 0\naura_env.castTime = 0",
+					["custom"] = "SendChatMessage(UnitName('target') ..'->'..UnitName('player'),'YELL')",
 					["do_custom"] = true,
 				},
 				["finish"] = {
@@ -17790,184 +17798,51 @@ WeakAurasSaved = {
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["use_absorbMode"] = true,
-						["genericShowOn"] = "showOnActive",
-						["use_unit"] = true,
-						["customIcon"] = "function()\n    return aura_env.icon\nend\n\n\n\n\n\n\n\n",
+						["use_castType"] = false,
+						["duration"] = "1",
 						["names"] = {
 						},
-						["custom_hide"] = "timed",
-						["use_cloneId"] = true,
+						["destUnit"] = "player",
 						["debuffType"] = "HELPFUL",
-						["duration"] = "3",
 						["type"] = "custom",
-						["custom_type"] = "event",
-						["subeventSuffix"] = "_CAST_SUCCESS",
+						["unevent"] = "auto",
+						["event"] = "Cast",
+						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
+						["custom"] = "function()\n    if aura_env.config.set then \n        if UnitName('playertargettarget')==UnitName('player') then\n            return true\n        end\n    end\nend\n\n\n",
 						["spellIds"] = {
 						},
-						["events"] = "MYSTLER_GCDHISTORY_ADD",
-						["event"] = "Combat Log",
-						["unit"] = "player",
-						["customDuration"] = "function()\n    return aura_env.config[\"displayTime\"], aura_env.castTime + aura_env.config[\"displayTime\"]\nend\n\n\n\n\n\n\n\n\n\n\n\n",
-						["unevent"] = "timed",
-						["custom"] = "function(event, arg1, arg2, arg3, arg4)\n    if arg1 == aura_env.thisRegister then\n        aura_env.icon = arg2\n        aura_env.xoff = 0\n        aura_env.castTime = arg3\n        if arg4 then\n            aura_env.region:SetDesaturated(true)\n            aura_env.region:Color(1,0,0,1)\n        else\n            aura_env.region:SetDesaturated(false)\n            aura_env.region:Color(1,1,1,1)\n        end\n        return true\n    end\n    return false\nend",
-						["use_sourceUnit"] = true,
-						["check"] = "event",
-						["subeventPrefix"] = "SPELL",
-						["sourceUnit"] = "player",
-						["dynamicDuration"] = true,
+						["custom_type"] = "status",
+						["check"] = "update",
+						["use_destUnit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "target",
 					},
 					["untrigger"] = {
-						["custom"] = "function() return true end",
-						["unit"] = "player",
+						["unit"] = "target",
 					},
 				}, -- [1]
-				{
-					["trigger"] = {
-						["type"] = "custom",
-						["subeventSuffix"] = "_CAST_START",
-						["duration"] = "0",
-						["event"] = "Health",
-						["subeventPrefix"] = "SPELL",
-						["custom"] = "function(event, arg1, arg2)\n    if arg1 == aura_env.thisRegister then\n        aura_env.xoff = aura_env.xoff + arg2\n    end\n    return false\nend\n\n\n\n\n\n\n\n\n\n\n\n",
-						["custom_type"] = "event",
-						["events"] = "MYSTLER_GCDHISTORY_OFFSET",
-						["custom_hide"] = "timed",
-					},
-					["untrigger"] = {
-					},
-				}, -- [2]
-				["disjunctive"] = "any",
 				["activeTriggerMode"] = -10,
 			},
 			["internalVersion"] = 59,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["easeStrength"] = 3,
-					["preset"] = "fade",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["colorR"] = 1,
-					["scalex"] = 1,
-					["alphaType"] = "custom",
-					["colorA"] = 1,
-					["colorG"] = 1,
-					["alphaFunc"] = "function(progress, start, delta)\n    return math.min(1.0, (1.0 - progress) * 5.0)\nend\n\n\n",
-					["use_translate"] = true,
-					["use_alpha"] = true,
-					["type"] = "custom",
-					["easeType"] = "none",
-					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n    local x = startX + aura_env.animDir * (progress * aura_env.animX)\n    x = x + aura_env.animDir * aura_env.xoff\n    return x, startY\nend",
-					["scaley"] = 1,
-					["alpha"] = 0,
-					["y"] = 0,
-					["x"] = 0,
-					["colorB"] = 1,
-					["duration"] = "100%",
-					["easeStrength"] = 3,
-					["rotate"] = 0,
-					["translateType"] = "custom",
-					["duration_type"] = "relative",
-				},
-				["finish"] = {
-					["colorR"] = 1,
-					["duration"] = "0.2",
-					["alphaType"] = "straight",
-					["colorA"] = 1,
-					["colorG"] = 1,
-					["alphaFunc"] = "    function(progress, start, delta)\n      return start + (progress * delta)\n    end\n  ",
-					["use_translate"] = false,
-					["use_alpha"] = false,
-					["type"] = "none",
-					["easeType"] = "none",
-					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n    local x = startX + (progress * deltaX)\n    if aura_env.state then\n        x = x + aura_env.state.xoff\n    end\n    return x, startY + (progress * deltaY)\nend",
-					["scaley"] = 1,
-					["alpha"] = 0,
-					["colorB"] = 1,
-					["y"] = 0,
-					["x"] = -150,
-					["preset"] = "fade",
-					["easeStrength"] = 3,
-					["translateType"] = "custom",
-					["rotate"] = 0,
-					["duration_type"] = "seconds",
-					["scalex"] = 1,
-				},
-			},
-			["desaturate"] = false,
-			["version"] = 19,
+			["wordWrap"] = "WordWrap",
+			["desc"] = "https://wago.io/vy-5TmmcW  属性\nhttps://wago.io/pGwTKmbR2  战斗中，移动，升级，FPS , MS，分配方式\nhttps://wago.io/p/husandro2    其他WA字符\n---\n如果wa插件占内存大，请/ RELOAD，完后不要再打开wa插件选项界面\n",
+			["font"] = "聊天",
+			["version"] = 2,
 			["subRegions"] = {
 				{
 					["type"] = "subbackground",
 				}, -- [1]
-				{
-					["text_shadowXOffset"] = 0,
-					["text_text"] = " ",
-					["text_shadowColor"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["text_selfPoint"] = "AUTO",
-					["text_automaticWidth"] = "Auto",
-					["text_fixedWidth"] = 64,
-					["anchorYOffset"] = 0,
-					["text_justify"] = "CENTER",
-					["rotateText"] = "NONE",
-					["type"] = "subtext",
-					["text_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["text_font"] = "Friz Quadrata TT",
-					["text_shadowYOffset"] = 0,
-					["text_wordWrap"] = "WordWrap",
-					["text_fontType"] = "OUTLINE",
-					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
-					["text_fontSize"] = 12,
-					["anchorXOffset"] = 0,
-					["text_visible"] = false,
-				}, -- [2]
 			},
-			["height"] = 50,
 			["load"] = {
 				["ingroup"] = {
+					["single"] = "raid",
 					["multi"] = {
+						["raid"] = true,
 					},
 				},
-				["use_never"] = false,
+				["use_encounter"] = true,
 				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
 					["multi"] = {
 					},
 				},
@@ -17975,76 +17850,131 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
+				["use_ingroup"] = true,
+				["size"] = {
+					["single"] = "fortyman",
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
+				["class"] = {
 					["multi"] = {
 					},
 				},
+				["use_combat"] = true,
+				["use_size"] = true,
 				["zoneIds"] = "",
 			},
+			["fontSize"] = 72,
 			["source"] = "import",
-			["width"] = 50,
-			["selfPoint"] = "CENTER",
+			["shadowXOffset"] = 1,
+			["regionType"] = "text",
+			["conditions"] = {
+			},
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+				["main"] = {
+					["type"] = "preset",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "alphaPulse",
+					["easeStrength"] = 3,
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideright",
+					["easeStrength"] = 3,
+				},
+			},
+			["displayText_format_c_format"] = "none",
+			["url"] = "https://wago.io/tCVInbpOA/2",
+			["preferToUpdate"] = false,
+			["justify"] = "CENTER",
+			["semver"] = "1.0.1",
+			["tocversion"] = 11304,
+			["id"] = "目标target->player玩家",
+			["config"] = {
+				["sa"] = true,
+				["pla"] = false,
+				["de"] = "-->",
+				["set"] = true,
+				["tar"] = true,
+			},
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["authorOptions"] = {
+				{
+					["type"] = "toggle",
+					["default"] = true,
+					["key"] = "set",
+					["useDesc"] = false,
+					["name"] = "|cFFFF0000启用功能-Enable Function",
+					["width"] = 1,
+				}, -- [1]
+				{
+					["useName"] = false,
+					["text"] = "",
+					["type"] = "header",
+					["width"] = 1,
+				}, -- [2]
+				{
+					["type"] = "input",
+					["useDesc"] = true,
+					["width"] = 2,
+					["name"] = "分隔符 Delimiter",
+					["multiline"] = false,
+					["default"] = "->",
+					["length"] = 10,
+					["key"] = "de",
+					["useLength"] = false,
+				}, -- [3]
+				{
+					["type"] = "toggle",
+					["default"] = true,
+					["key"] = "sa",
+					["useDesc"] = false,
+					["name"] = "显示呼叫 Show SAY",
+					["width"] = 2,
+				}, -- [4]
+				{
+					["type"] = "toggle",
+					["default"] = false,
+					["key"] = "tar",
+					["useDesc"] = false,
+					["name"] = "显示目标名字 Show target name",
+					["width"] = 2,
+				}, -- [5]
+				{
+					["type"] = "toggle",
+					["default"] = false,
+					["key"] = "pla",
+					["useDesc"] = false,
+					["name"] = "显示玩家名字 Show player name ",
+					["width"] = 2,
+				}, -- [6]
+			},
+			["uid"] = "OSIBH89HCI)",
 			["xOffset"] = 0,
-			["icon"] = true,
+			["yOffset"] = 30,
+			["shadowColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["fixedWidth"] = 200,
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["regionType"] = "icon",
-			["displayIcon"] = "",
-			["parent"] = "GCDHistoryGrp",
-			["cooldownEdge"] = false,
-			["config"] = {
-				["displayTime"] = 3,
-				["direction"] = 1,
-			},
-			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["cooldownTextDisabled"] = false,
-			["semver"] = "1.1.10",
-			["tocversion"] = 30400,
-			["id"] = "GCDHistoryBuffer2",
-			["auto"] = true,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["uid"] = "RREM)OiEBjG",
-			["inverse"] = false,
-			["stickyDuration"] = false,
-			["conditions"] = {
-			},
-			["cooldown"] = false,
-			["authorOptions"] = {
-				{
-					["desc"] = "In which direction should the history expand?",
-					["type"] = "select",
-					["values"] = {
-						"Left", -- [1]
-						"Right", -- [2]
-					},
-					["default"] = 1,
-					["key"] = "direction",
-					["useDesc"] = true,
-					["name"] = "Direction",
-					["width"] = 1,
-				}, -- [1]
-				{
-					["type"] = "range",
-					["useDesc"] = true,
-					["max"] = 6,
-					["step"] = 0.5,
-					["width"] = 1,
-					["min"] = 1,
-					["key"] = "displayTime",
-					["desc"] = "How long (in seconds) icons are shown at max.",
-					["name"] = "Display Time",
-					["default"] = 3,
-				}, -- [2]
-			},
+			["selfPoint"] = "BOTTOM",
 		},
 		["日蚀触发"] = {
 			["iconSource"] = 2,
@@ -18062,9 +17992,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -18080,10 +18010,10 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["subeventSuffix"] = "_CAST_START",
-						["unit"] = "player",
+						["useExactSpellId"] = true,
 						["names"] = {
 						},
-						["useExactSpellId"] = true,
+						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -18092,7 +18022,7 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "spell",
-						["debuffType"] = "HELPFUL",
+						["spellName"] = 26985,
 						["use_genericShowOn"] = true,
 						["event"] = "Action Usable",
 						["use_exact_spellName"] = true,
@@ -18102,10 +18032,10 @@ WeakAurasSaved = {
 						},
 						["names"] = {
 						},
-						["genericShowOn"] = "showAlways",
 						["unit"] = "player",
+						["genericShowOn"] = "showAlways",
 						["use_track"] = true,
-						["spellName"] = 26985,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -18116,20 +18046,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -18150,9 +18080,9 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_p_time_legacy_floor"] = false,
 					["type"] = "subtext",
-					["anchorXOffset"] = 0,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -18162,20 +18092,20 @@ WeakAurasSaved = {
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_time_mod_rate"] = true,
 					["text_shadowYOffset"] = 0,
-					["text_fontType"] = "OUTLINE",
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
-					["text_anchorPoint"] = "CENTER",
-					["text_text_format_p_time_format"] = 0,
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = true,
+					["text_anchorPoint"] = "CENTER",
+					["text_text_format_p_time_format"] = 0,
+					["text_fontType"] = "OUTLINE",
 					["text_fontSize"] = 12,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_text_format_p_time_legacy_floor"] = false,
+					["anchorXOffset"] = 0,
+					["text_text_format_p_time_precision"] = 1,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -18192,15 +18122,15 @@ WeakAurasSaved = {
 					},
 					["useGlowColor"] = false,
 					["glow"] = false,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
 			},
 			["height"] = 64,
 			["load"] = {
-				["talent"] = {
+				["size"] = {
 					["multi"] = {
 					},
 				},
@@ -18212,34 +18142,32 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 			},
 			["source"] = "import",
 			["regionType"] = "icon",
+			["selfPoint"] = "CENTER",
+			["cooldown"] = false,
 			["authorOptions"] = {
 			},
-			["information"] = {
-				["forceEvents"] = true,
-			},
 			["xOffset"] = 0,
-			["icon"] = true,
-			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
-			["frameStrata"] = 1,
 			["zoom"] = 0,
-			["config"] = {
-			},
+			["useCooldownModRate"] = true,
+			["cooldownTextDisabled"] = false,
+			["uid"] = "WwOVJKbhwK4",
 			["tocversion"] = 30400,
 			["id"] = "日蚀触发",
-			["width"] = 64,
-			["useCooldownModRate"] = true,
-			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["alpha"] = 1,
-			["uid"] = "WwOVJKbhwK4",
+			["anchorFrameType"] = "SCREEN",
+			["width"] = 64,
+			["config"] = {
+			},
 			["inverse"] = false,
-			["cooldownTextDisabled"] = false,
+			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
 			["conditions"] = {
 				{
 					["check"] = {
@@ -18259,92 +18187,118 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["cooldown"] = false,
-			["selfPoint"] = "CENTER",
+			["information"] = {
+				["forceEvents"] = true,
+			},
+			["icon"] = true,
 		},
-		["[Druid] Nature's Grace"] = {
-			["sparkWidth"] = 30,
-			["iconSource"] = -1,
-			["parent"] = "[WotLK] Balance Druid (Main Group)",
-			["preferToUpdate"] = false,
-			["customText"] = "function()\n    mana = math.max(0, UnitPower(\"player\", 0)) / math.max(1, UnitPowerMax(\"player\", 0)) * 100;\n    return string.format(\"%.0f\", mana);\nend",
-			["yOffset"] = -13.00000677033671,
+		["冰橙监控小德资源数字 3"] = {
+			["outline"] = "OUTLINE",
+			["displayText_format_1.percentpower_decimal_precision"] = 0,
+			["parent"] = "冰橙监控小德资源装饰环",
+			["displayText_format_p_time_dynamic_threshold"] = 60,
+			["shadowYOffset"] = -1,
 			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
-			["sparkRotationMode"] = "AUTO",
-			["cooldownEdge"] = false,
-			["icon"] = false,
+			["displayText_format_p_time_format"] = 0,
+			["customTextUpdate"] = "event",
+			["automaticWidth"] = "Auto",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["auranames"] = {
-							"自然之賜", -- [1]
-						},
-						["duration"] = "1",
-						["subeventPrefix"] = "SPELL",
-						["powertype"] = 0,
-						["use_powertype"] = true,
-						["debuffType"] = "HELPFUL",
-						["useName"] = true,
+						["type"] = "unit",
 						["subeventSuffix"] = "_CAST_START",
 						["event"] = "Power",
-						["useExactSpellId"] = true,
-						["auraspellids"] = {
-							"16886", -- [1]
-						},
+						["use_unit"] = true,
+						["powertype"] = 3,
 						["spellIds"] = {
 						},
-						["type"] = "aura2",
 						["unit"] = "player",
+						["subeventPrefix"] = "SPELL",
 						["names"] = {
 						},
-						["use_unit"] = true,
-						["unevent"] = "auto",
+						["use_powertype"] = true,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
 				}, -- [1]
 				{
 					["trigger"] = {
-						["auranames"] = {
-							"自然之賜", -- [1]
-						},
-						["matchesShowOn"] = "showOnMissing",
-						["unit"] = "player",
-						["powertype"] = 0,
-						["use_powertype"] = true,
 						["debuffType"] = "HELPFUL",
-						["type"] = "aura2",
-						["auraspellids"] = {
-							"16886", -- [1]
+						["use_form"] = true,
+						["type"] = "unit",
+						["use_inverse"] = true,
+						["unit"] = "player",
+						["form"] = {
+							["single"] = 3,
 						},
-						["event"] = "Power",
-						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
-						["useExactSpellId"] = true,
-						["spellIds"] = {
-						},
-						["useName"] = true,
-						["subeventPrefix"] = "SPELL",
-						["duration"] = "1",
+						["event"] = "Stance/Form/Aura",
 						["use_unit"] = true,
-						["names"] = {
-						},
 					},
 					["untrigger"] = {
 					},
 				}, -- [2]
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["use_hostility"] = false,
+						["hostility"] = "hostile",
+						["use_unit"] = true,
+						["debuffType"] = "HELPFUL",
+						["event"] = "Unit Characteristics",
+						["unit"] = "target",
+					},
+					["untrigger"] = {
+					},
+				}, -- [3]
 				["disjunctive"] = "any",
 				["activeTriggerMode"] = -10,
 			},
-			["icon_color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["displayText_format_p_format"] = "timed",
 			["internalVersion"] = 59,
-			["keepAspectRatio"] = false,
+			["wordWrap"] = "WordWrap",
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["font"] = "伤害数字",
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
+			},
+			["load"] = {
+				["use_class"] = true,
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["selfPoint"] = "BOTTOM",
+			["fontSize"] = 20,
+			["source"] = "import",
+			["shadowXOffset"] = 1,
+			["displayText_format_p_time_mod_rate"] = true,
+			["displayText_format_1.percentpower_format"] = "Number",
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -18365,125 +18319,86 @@ WeakAurasSaved = {
 					["easeType"] = "none",
 				},
 			},
-			["barColor"] = {
-				0.5843137254901961, -- [1]
-				1, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["desaturate"] = false,
-			["frameStrata"] = 1,
-			["sparkOffsetY"] = 0,
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
-				}, -- [1]
-				{
-					["type"] = "subforeground",
-				}, -- [2]
-				{
-					["type"] = "subborder",
-					["border_anchor"] = "bar",
-					["border_size"] = 2,
-					["border_color"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["border_visible"] = true,
-					["border_edge"] = "Square Full White",
-					["border_offset"] = 0,
-				}, -- [3]
-			},
-			["height"] = 10,
-			["sparkMirror"] = false,
-			["load"] = {
-				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_never"] = false,
-				["talent"] = {
-					["multi"] = {
-						[28] = true,
-						[24] = true,
-					},
-				},
-				["use_vehicle"] = false,
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-						["DRUID"] = true,
-					},
-				},
-				["use_talent"] = false,
-			},
-			["sparkBlendMode"] = "ADD",
-			["useAdjustededMax"] = false,
-			["backgroundColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.5, -- [4]
-			},
-			["source"] = "import",
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["xOffset"] = -74.99999883741691,
-			["sparkOffsetX"] = 0,
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["useAdjustededMin"] = false,
-			["regionType"] = "aurabar",
-			["config"] = {
-			},
-			["zoom"] = 0,
-			["icon_side"] = "RIGHT",
-			["width"] = 151,
-			["sparkHeight"] = 20,
-			["texture"] = "Aluminium",
-			["sparkHidden"] = "BOTH",
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["spark"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Nature's Grace",
-			["auto"] = true,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
+			["displayText_format_1.percentpower_round_type"] = "floor",
+			["fixedWidth"] = 200,
+			["displayText_format_p_time_legacy_floor"] = false,
+			["regionType"] = "text",
+			["displayText_format_1.percentpower_big_number_format"] = "AbbreviateNumbers",
+			["displayText_format_p_time_precision"] = 1,
+			["uid"] = "9qPIXyuojAn",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["uid"] = "7gQXPsH1Yca",
-			["inverse"] = false,
-			["authorOptions"] = {
+			["yOffset"] = -340,
+			["justify"] = "LEFT",
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德资源数字 3",
+			["xOffset"] = 170,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["displayText_format_1.power_format"] = "none",
+			["config"] = {
 			},
-			["orientation"] = "HORIZONTAL",
+			["displayText"] = "%1.power",
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["shadowColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
 			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 2,
+						["variable"] = "show",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = {
+								1, -- [1]
+								1, -- [2]
+								1, -- [3]
+								0, -- [4]
+							},
+							["property"] = "color",
+						}, -- [1]
+					},
+				}, -- [1]
+				{
+					["check"] = {
+						["trigger"] = 3,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = {
+								1, -- [1]
+								1, -- [2]
+								1, -- [3]
+								0, -- [4]
+							},
+							["property"] = "color",
+						}, -- [1]
+					},
+				}, -- [2]
 			},
 			["information"] = {
 				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
 			},
-			["selfPoint"] = "CENTER",
+			["preferToUpdate"] = false,
 		},
 		["[Druid] Eclipse (Solar)"] = {
 			["iconSource"] = -1,
@@ -18505,16 +18420,16 @@ WeakAurasSaved = {
 						["event"] = "Health",
 						["subeventPrefix"] = "SPELL",
 						["subeventSuffix"] = "_CAST_START",
-						["names"] = {
-						},
+						["useName"] = false,
 						["spellIds"] = {
 						},
+						["useExactSpellId"] = true,
+						["unit"] = "player",
 						["auraspellids"] = {
 							"48517", -- [1]
 						},
-						["unit"] = "player",
-						["useExactSpellId"] = true,
-						["useName"] = false,
+						["names"] = {
+						},
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -18532,7 +18447,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_offset"] = 0,
-					["type"] = "subborder",
+					["border_size"] = 2,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -18541,7 +18456,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_size"] = 2,
+					["type"] = "subborder",
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -18558,8 +18473,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = true,
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -18567,10 +18482,7 @@ WeakAurasSaved = {
 			["height"] = 60,
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -18588,75 +18500,78 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
+			["zoom"] = 0.29,
+			["regionType"] = "icon",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
 				},
+				["finish"] = {
+				},
 			},
-			["regionType"] = "icon",
-			["xOffset"] = 7.002853328685887e-05,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["cooldown"] = true,
-			["useCooldownModRate"] = true,
-			["uid"] = "iEBY9Cv75A6",
-			["zoom"] = 0.29,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Eclipse (Solar)",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["width"] = 60,
-			["anchorFrameType"] = "SCREEN",
-			["config"] = {
-			},
-			["inverse"] = false,
-			["cooldownTextDisabled"] = false,
-			["conditions"] = {
-			},
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
+			["alpha"] = 1,
+			["config"] = {
+			},
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Eclipse (Solar)",
+			["width"] = 60,
+			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
+			["uid"] = "iEBY9Cv75A6",
+			["inverse"] = false,
 			["authorOptions"] = {
 			},
+			["conditions"] = {
+			},
+			["cooldown"] = true,
+			["xOffset"] = 7.002853328685887e-05,
 		},
 		["冰橙监控小德激怒CD"] = {
 			["iconSource"] = -1,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -18669,9 +18584,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
@@ -18684,12 +18599,12 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["unit"] = "player",
-						["type"] = "aura2",
-						["names"] = {
-						},
 						["auranames"] = {
 							"激怒", -- [1]
 						},
+						["names"] = {
+						},
+						["type"] = "aura2",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -18702,22 +18617,22 @@ WeakAurasSaved = {
 						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
-						["subeventPrefix"] = "SPELL",
+						["unit"] = "player",
 						["unevent"] = "auto",
 						["names"] = {
 						},
-						["duration"] = "1",
+						["use_genericShowOn"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
 						["realSpellName"] = "激怒",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
 						["spellName"] = 5229,
-						["use_genericShowOn"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["duration"] = "1",
 						["use_track"] = true,
-						["unit"] = "player",
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -18726,14 +18641,14 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["use_form"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 						["type"] = "unit",
 						["use_unit"] = true,
 						["form"] = {
 							["single"] = 1,
 						},
 						["event"] = "Stance/Form/Aura",
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -18741,10 +18656,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -18794,7 +18709,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["type"] = "subborder",
-					["border_size"] = 2,
+					["border_offset"] = 0,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -18805,7 +18720,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 				}, -- [3]
 				{
 					["glowFrequency"] = 0.25,
@@ -18822,8 +18737,8 @@ WeakAurasSaved = {
 					},
 					["glow"] = false,
 					["glowXOffset"] = 0,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [4]
@@ -18842,8 +18757,8 @@ WeakAurasSaved = {
 					},
 					["type"] = "subglow",
 					["glowXOffset"] = 0,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [5]
@@ -18864,35 +18779,33 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_spec"] = true,
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_vehicleUi"] = false,
 				["spec"] = {
 					["single"] = 3,
 					["multi"] = {
 						[3] = true,
 					},
 				},
-				["use_vehicleUi"] = false,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 			},
 			["source"] = "import",
-			["uid"] = "uNuRHAvspnp",
-			["icon"] = true,
-			["desaturate"] = false,
-			["regionType"] = "icon",
+			["config"] = {
+			},
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -18900,32 +18813,22 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
-			["cooldown"] = true,
-			["displayIcon"] = 136121,
+			["desaturate"] = false,
+			["regionType"] = "icon",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["zoom"] = 0,
-			["width"] = 45,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德激怒CD",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["config"] = {
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["inverse"] = true,
-			["parent"] = "冰橙监控小德CD组 ",
 			["conditions"] = {
 				{
 					["check"] = {
@@ -18966,11 +18869,23 @@ WeakAurasSaved = {
 					},
 				}, -- [3]
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
 			["xOffset"] = 315,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德激怒CD",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["width"] = 45,
+			["zoom"] = 0,
+			["uid"] = "uNuRHAvspnp",
+			["inverse"] = true,
+			["icon"] = true,
+			["displayIcon"] = 136121,
+			["cooldown"] = true,
+			["parent"] = "冰橙监控小德CD组 ",
 		},
 		["[Druid] Eclipse (Lunar)"] = {
 			["iconSource"] = -1,
@@ -18992,16 +18907,16 @@ WeakAurasSaved = {
 						["auranames"] = {
 							"48518", -- [1]
 						},
-						["unit"] = "player",
+						["useName"] = false,
 						["spellIds"] = {
+						},
+						["useExactSpellId"] = true,
+						["names"] = {
 						},
 						["auraspellids"] = {
 							"48518", -- [1]
 						},
-						["names"] = {
-						},
-						["useExactSpellId"] = true,
-						["useName"] = false,
+						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -19013,20 +18928,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -19038,7 +18953,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["type"] = "subborder",
-					["border_size"] = 2,
+					["border_offset"] = 0,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -19047,7 +18962,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -19064,8 +18979,8 @@ WeakAurasSaved = {
 					},
 					["type"] = "subglow",
 					["glowXOffset"] = 0,
-					["glowThickness"] = 1,
 					["glowScale"] = 1,
+					["glowThickness"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
@@ -19073,10 +18988,7 @@ WeakAurasSaved = {
 			["height"] = 60,
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -19094,49 +19006,52 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["xOffset"] = 7.002853328685887e-05,
+			["zoom"] = 0.29,
 			["regionType"] = "icon",
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
+			["authorOptions"] = {
 			},
+			["xOffset"] = 7.002853328685887e-05,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["authorOptions"] = {
-			},
-			["cooldown"] = true,
-			["frameStrata"] = 1,
-			["uid"] = "q6V4qxaQayG",
-			["zoom"] = 0.29,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Eclipse (Lunar)",
-			["useCooldownModRate"] = true,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["width"] = 60,
-			["config"] = {
-			},
-			["inverse"] = false,
-			["cooldownTextDisabled"] = false,
-			["conditions"] = {
-			},
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
+			["alpha"] = 1,
+			["config"] = {
+			},
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Eclipse (Lunar)",
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
+			["width"] = 60,
+			["useCooldownModRate"] = true,
+			["uid"] = "q6V4qxaQayG",
+			["inverse"] = false,
 			["selfPoint"] = "CENTER",
+			["conditions"] = {
+			},
+			["cooldown"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
 		},
 		["[Druid] Tauren Racial"] = {
 			["iconSource"] = -1,
@@ -19156,19 +19071,19 @@ WeakAurasSaved = {
 						["spellName"] = 20549,
 						["type"] = "spell",
 						["unevent"] = "auto",
-						["use_unit"] = true,
+						["unit"] = "player",
 						["event"] = "Cooldown Progress (Spell)",
 						["debuffType"] = "HELPFUL",
 						["realSpellName"] = "战争践踏",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["duration"] = "1",
-						["subeventSuffix"] = "_CAST_START",
 						["names"] = {
 						},
+						["subeventSuffix"] = "_CAST_START",
+						["duration"] = "1",
 						["use_track"] = true,
-						["unit"] = "player",
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnReady",
@@ -19180,20 +19095,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -19205,7 +19120,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_size"] = 1,
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -19214,7 +19129,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [2]
 			},
 			["height"] = 40,
@@ -19245,55 +19160,38 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
+			["zoom"] = 0.29,
+			["regionType"] = "icon",
+			["selfPoint"] = "CENTER",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
 			["authorOptions"] = {
-			},
-			["selfPoint"] = "CENTER",
-			["cooldown"] = false,
-			["alpha"] = 1,
-			["config"] = {
-			},
-			["zoom"] = 0.29,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Tauren Racial",
-			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["anchorFrameType"] = "SCREEN",
-			["width"] = 40,
-			["uid"] = "t3sw8c6f0oM",
-			["inverse"] = false,
-			["cooldownTextDisabled"] = false,
-			["conditions"] = {
 			},
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
+			["useCooldownModRate"] = true,
+			["uid"] = "t3sw8c6f0oM",
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Tauren Racial",
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["width"] = 40,
+			["frameStrata"] = 1,
+			["config"] = {
+			},
+			["inverse"] = false,
 			["xOffset"] = 0,
-		},
-		["[Druid] Moonfire Missing"] = {
-			["iconSource"] = -1,
-			["xOffset"] = -119.9997740485608,
-			["preferToUpdate"] = false,
-			["yOffset"] = 39.99994802569802,
-			["anchorPoint"] = "CENTER",
-			["cooldownSwipe"] = true,
-			["cooldownEdge"] = true,
+			["conditions"] = {
+			},
+			["cooldown"] = false,
 			["actions"] = {
 				["start"] = {
 				},
@@ -19302,135 +19200,247 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+		},
+		["冰橙监控小德资源数字"] = {
+			["outline"] = "OUTLINE",
+			["displayText_format_1.percentpower_decimal_precision"] = 0,
+			["parent"] = "冰橙监控小德资源装饰环",
+			["displayText_format_p_time_dynamic_threshold"] = 60,
+			["shadowYOffset"] = -1,
+			["anchorPoint"] = "CENTER",
+			["displayText_format_p_time_format"] = 0,
+			["customTextUpdate"] = "event",
+			["automaticWidth"] = "Auto",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["useName"] = true,
-						["use_alwaystrue"] = true,
+						["type"] = "unit",
 						["subeventSuffix"] = "_CAST_START",
-						["duration"] = "1",
-						["event"] = "Conditions",
+						["event"] = "Power",
+						["use_unit"] = true,
+						["powertype"] = 0,
+						["spellIds"] = {
+						},
+						["unit"] = "player",
 						["subeventPrefix"] = "SPELL",
 						["names"] = {
 						},
-						["use_unit"] = true,
-						["spellIds"] = {
-						},
-						["unit"] = "target",
-						["unevent"] = "auto",
-						["auranames"] = {
-							"Moonfire", -- [1]
-						},
-						["type"] = "unit",
-						["debuffType"] = "HARMFUL",
+						["use_powertype"] = true,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
 				}, -- [1]
+				{
+					["trigger"] = {
+						["debuffType"] = "HELPFUL",
+						["type"] = "unit",
+						["use_form"] = true,
+						["use_inverse"] = true,
+						["use_unit"] = true,
+						["form"] = {
+							["single"] = 1,
+						},
+						["event"] = "Stance/Form/Aura",
+						["unit"] = "player",
+					},
+					["untrigger"] = {
+					},
+				}, -- [2]
+				{
+					["trigger"] = {
+						["debuffType"] = "HELPFUL",
+						["use_form"] = true,
+						["type"] = "unit",
+						["use_inverse"] = true,
+						["unit"] = "player",
+						["form"] = {
+							["single"] = 3,
+						},
+						["event"] = "Stance/Form/Aura",
+						["use_unit"] = true,
+					},
+					["untrigger"] = {
+					},
+				}, -- [3]
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["use_hostility"] = false,
+						["hostility"] = "hostile",
+						["use_unit"] = true,
+						["debuffType"] = "HELPFUL",
+						["event"] = "Unit Characteristics",
+						["unit"] = "target",
+					},
+					["untrigger"] = {
+					},
+				}, -- [4]
+				["disjunctive"] = "any",
 				["activeTriggerMode"] = -10,
 			},
-			["internalVersion"] = 59,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["desaturate"] = true,
+			["displayText_format_p_format"] = "timed",
+			["displayText_format_p_time_legacy_floor"] = false,
+			["wordWrap"] = "WordWrap",
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["font"] = "伤害数字",
 			["subRegions"] = {
 				{
 					["type"] = "subbackground",
 				}, -- [1]
-				{
-					["border_size"] = 2,
-					["border_offset"] = 0,
-					["border_color"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["border_visible"] = true,
-					["border_edge"] = "Square Full White",
-					["type"] = "subborder",
-				}, -- [2]
 			},
-			["height"] = 60,
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_never"] = false,
+				["use_never"] = true,
 				["talent"] = {
 					["multi"] = {
-						[24] = true,
 					},
 				},
-				["use_vehicle"] = false,
 				["class"] = {
 					["single"] = "DRUID",
 					["multi"] = {
-						["DRUID"] = true,
 					},
 				},
 				["spec"] = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
+			["fontSize"] = 20,
 			["source"] = "import",
-			["cooldownTextDisabled"] = false,
+			["selfPoint"] = "BOTTOM",
+			["shadowXOffset"] = 1,
+			["displayText_format_1.percentpower_format"] = "Number",
+			["internalVersion"] = 59,
+			["regionType"] = "text",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
+			["fixedWidth"] = 200,
+			["displayText_format_1.percentpower_round_type"] = "floor",
+			["displayText_format_1.percentpower_big_number_format"] = "AbbreviateNumbers",
+			["displayText_format_p_time_precision"] = 1,
+			["displayText_format_p_time_mod_rate"] = true,
+			["uid"] = "wE4eb0HKTbL",
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["justify"] = "LEFT",
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德资源数字",
+			["xOffset"] = 170,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["yOffset"] = -340,
+			["config"] = {
+			},
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
-			["parent"] = "[WotLK] Balance Druid (Main Group)",
-			["icon"] = true,
-			["cooldown"] = true,
+			["preferToUpdate"] = false,
+			["shadowColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
 			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 2,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = {
+								1, -- [1]
+								1, -- [2]
+								1, -- [3]
+								0, -- [4]
+							},
+							["property"] = "color",
+						}, -- [1]
+					},
+				}, -- [1]
+				{
+					["check"] = {
+						["trigger"] = 3,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = {
+								1, -- [1]
+								1, -- [2]
+								1, -- [3]
+								0, -- [4]
+							},
+							["property"] = "color",
+						}, -- [1]
+					},
+				}, -- [2]
+				{
+					["check"] = {
+						["trigger"] = 4,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = {
+								1, -- [1]
+								1, -- [2]
+								1, -- [3]
+								0, -- [4]
+							},
+							["property"] = "color",
+						}, -- [1]
+					},
+				}, -- [3]
 			},
-			["config"] = {
-			},
-			["useCooldownModRate"] = true,
-			["zoom"] = 0.29,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Moonfire Missing",
-			["width"] = 60,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["alpha"] = 1,
-			["uid"] = ")kLF9mxrwmP",
-			["inverse"] = false,
-			["selfPoint"] = "CENTER",
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_StarFall",
 			["information"] = {
 				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
 			},
-			["authorOptions"] = {
-			},
+			["displayText"] = "%1.percentpower",
 		},
 		["New"] = {
 			["iconSource"] = -1,
@@ -19457,11 +19467,11 @@ WeakAurasSaved = {
 						},
 						["spellIds"] = {
 						},
-						["useExactSpellId"] = true,
-						["useName"] = false,
+						["unit"] = "player",
 						["names"] = {
 						},
-						["unit"] = "player",
+						["useName"] = false,
+						["useExactSpellId"] = true,
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -19493,9 +19503,9 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_legacy_floor"] = false,
+					["text_text_format_p_time_precision"] = 1,
 					["type"] = "subtext",
-					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["anchorXOffset"] = 0,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -19505,15 +19515,15 @@ WeakAurasSaved = {
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_format"] = "timed",
 					["text_shadowYOffset"] = 0,
-					["text_text_format_p_time_mod_rate"] = true,
-					["text_wordWrap"] = "WordWrap",
 					["text_fontType"] = "OUTLINE",
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = true,
 					["text_anchorPoint"] = "CENTER",
 					["text_text_format_p_time_format"] = 0,
-					["text_visible"] = true,
+					["text_text_format_p_time_mod_rate"] = true,
 					["text_fontSize"] = 12,
-					["anchorXOffset"] = 0,
-					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["text_text_format_p_time_legacy_floor"] = false,
 				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
@@ -19530,15 +19540,15 @@ WeakAurasSaved = {
 					},
 					["glowXOffset"] = 0,
 					["glow"] = false,
-					["glowScale"] = 1,
 					["glowThickness"] = 1,
+					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
 			},
 			["height"] = 64,
 			["load"] = {
-				["size"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -19550,41 +19560,62 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["talent"] = {
+				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
 			["regionType"] = "icon",
-			["cooldown"] = false,
-			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
-			["xOffset"] = 0,
+			["information"] = {
+				["forceEvents"] = true,
+			},
+			["animation"] = {
+				["start"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 			["authorOptions"] = {
 			},
-			["zoom"] = 0,
-			["cooldownTextDisabled"] = false,
-			["frameStrata"] = 1,
-			["config"] = {
-			},
-			["id"] = "New",
-			["width"] = 64,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["uid"] = "hs29osz3J68",
-			["inverse"] = false,
+			["xOffset"] = 0,
 			["actions"] = {
 				["start"] = {
 					["do_glow"] = false,
-					["glow_action"] = "show",
-					["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\ESPARK1.ogg",
 					["do_sound"] = true,
-				},
-				["init"] = {
+					["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\ESPARK1.ogg",
+					["glow_action"] = "show",
 				},
 				["finish"] = {
 				},
+				["init"] = {
+				},
 			},
+			["cooldownTextDisabled"] = false,
+			["alpha"] = 1,
+			["uid"] = "hs29osz3J68",
+			["id"] = "New",
+			["frameStrata"] = 1,
+			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["width"] = 64,
+			["config"] = {
+			},
+			["inverse"] = false,
+			["zoom"] = 0,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -19600,29 +19631,8 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["information"] = {
-				["forceEvents"] = true,
-			},
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
+			["cooldown"] = false,
+			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
 		},
 		["Threat Differential on Nameplates"] = {
 			["authorOptions"] = {
@@ -19630,12 +19640,12 @@ WeakAurasSaved = {
 					["type"] = "input",
 					["useDesc"] = true,
 					["width"] = 2,
-					["name"] = "Additional Tanks",
 					["default"] = "Tank1,Tank2,Tank3",
-					["desc"] = "Format: tank1,tank2,tank3,etc",
+					["name"] = "Additional Tanks",
+					["multiline"] = true,
 					["key"] = "addtanks",
 					["length"] = 10,
-					["multiline"] = true,
+					["desc"] = "Format: tank1,tank2,tank3,etc",
 					["useLength"] = false,
 				}, -- [1]
 				{
@@ -19646,8 +19656,8 @@ WeakAurasSaved = {
 					["width"] = 1,
 				}, -- [2]
 				{
-					["type"] = "description",
 					["text"] = "Size, position and font can be changed under  the \"Display\" tab.",
+					["type"] = "description",
 					["fontSize"] = "medium",
 					["width"] = 2,
 				}, -- [3]
@@ -19655,12 +19665,12 @@ WeakAurasSaved = {
 					["type"] = "space",
 					["variableWidth"] = true,
 					["height"] = 1,
-					["width"] = 1,
 					["useHeight"] = true,
+					["width"] = 1,
 				}, -- [4]
 				{
-					["type"] = "description",
 					["text"] = "Change colors under the \"Conditions\" tab.\nYou can add additional glows etc. to the different conditions.\n\"Untanked\"\n\"Insecurely Tanking\"\n\"Tanking\"\n\"Tanked by Other Tank\"",
+					["type"] = "description",
 					["fontSize"] = "medium",
 					["width"] = 2,
 				}, -- [5]
@@ -19675,12 +19685,12 @@ WeakAurasSaved = {
 					["custom"] = "",
 					["do_custom"] = false,
 				},
+				["finish"] = {
+					["do_custom"] = false,
+				},
 				["init"] = {
 					["custom"] = "local function split(input) -- sligtly modfied version of WeakAuras.split function\n    input = input or \"\"\n    local ret = {}\n    local split, element = true\n    split = input:find(\"[,%s]\")\n    while(split) do\n        element, input = input:sub(1, split-1), input:sub(split+1)\n        if(element ~= \"\") then\n            ret[element] = true\n        end\n        split = input:find(\"[,%s]\")\n    end\n    if(input ~= \"\") then\n        ret[input] = true\n    end\n    return ret\nend\n\naura_env.otherTanks = split(aura_env.config.addtanks)\n\n\naura_env.ThreatFunc = function(unit)\n    local firstUnit, secondUnit\n    local firstThreat, secondThreat = 0, 0\n    local threat, pet\n    for member in WA_IterateGroupMembers() do\n        threat = select(5, UnitDetailedThreatSituation(member, unit))\n        if threat then\n            if threat > firstThreat then\n                secondUnit = firstUnit\n                secondThreat = firstThreat\n                firstUnit = member\n                firstThreat = threat\n            elseif threat > secondThreat then\n                secondUnit = member\n                secondThreat = threat\n            end\n        end\n        \n        pet = member..\"pet\"\n        if UnitExists(pet) then\n            threat = select(5, UnitDetailedThreatSituation(pet, unit))\n            if threat then\n                if threat > firstThreat then\n                    secondUnit = firstUnit\n                    secondThreat = firstThreat\n                    firstUnit = pet\n                    firstThreat = threat\n                elseif threat > secondThreat then\n                    secondUnit = pet\n                    secondThreat = threat\n                end\n            end\n        end\n    end\n    return firstUnit, firstThreat, secondUnit, secondThreat\nend",
 					["do_custom"] = true,
-				},
-				["finish"] = {
-					["do_custom"] = false,
 				},
 			},
 			["keepAspectRatio"] = false,
@@ -19688,7 +19698,10 @@ WeakAurasSaved = {
 			["desc"] = "Shows the threat difference between yourself and the party/raid member with the most threat on enemy nameplates.\n\nColor determined by Tankstatus:\n\"Tanking\"  (default: green)\n\"Insecurely Tanking\" (default: yellow \"!!!\")\n\"Tanked by Other Tank\"  (default: blue)\n\"Untanked\" (default: red)",
 			["font"] = "Friz Quadrata TT",
 			["load"] = {
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
 				["talent2"] = {
 					["multi"] = {
 					},
@@ -19698,18 +19711,18 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["affixes"] = {
-					["single"] = 16,
+				["ingroup"] = {
 					["multi"] = {
-						[16] = true,
+						["group"] = true,
+						["raid"] = true,
 					},
 				},
 				["class"] = {
 					["multi"] = {
 					},
 				},
-				["use_affixes"] = true,
-				["spec"] = {
+				["use_ingroup"] = false,
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -19717,11 +19730,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["faction"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -19729,21 +19738,22 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_ingroup"] = false,
-				["race"] = {
+				["faction"] = {
 					["multi"] = {
 					},
 				},
-				["ingroup"] = {
-					["multi"] = {
-						["group"] = true,
-						["raid"] = true,
-					},
-				},
-				["size"] = {
+				["spec"] = {
 					["multi"] = {
 					},
 				},
+				["use_affixes"] = true,
+				["affixes"] = {
+					["single"] = 16,
+					["multi"] = {
+						[16] = true,
+					},
+				},
+				["zoneIds"] = "",
 			},
 			["shadowXOffset"] = 1,
 			["customAnchor"] = "function()\n    if (aura_env.state.unitId) then\n        return C_NamePlate.GetNamePlateForUnit(aura_env.state.unitId)\n    end\nend\n\n\n",
@@ -19772,20 +19782,20 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "custom",
 						["custom_type"] = "stateupdate",
-						["customVariables"] = "{\n    status = {\n        display = \"Threat Status\",\n        type = \"select\",\n        values = {\n            [1] = \"Untanked\", \n            [2] = \"Insecurely Tanking\", \n            [3] = \"Tanking\",\n            [4] = \"Tanked by Other Tank\"\n        }\n    }\n}",
-						["event"] = "Health",
+						["debuffType"] = "HELPFUL",
+						["subeventSuffix"] = "_CAST_START",
 						["genericShowOn"] = "showOnActive",
 						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["custom"] = "function(allstates, event, unitId)\n    if not unitId then\n        return\n    end\n    \n    if event == \"NAME_PLATE_UNIT_REMOVED\" then\n        local state = allstates[unitId]\n        if state then\n            state.show = false\n            state.changed = true\n            return true\n        end\n        \n    elseif unitId ~= \"target\" then\n        \n        local isTanking, threatStatus, _, _, threatValue = UnitDetailedThreatSituation(\"player\", unitId)\n        \n        if not threatValue then\n            return \n        end\n        \n        local firstUnit, firstThreat, secondUnit, secondThreat = aura_env.ThreatFunc(unitId)\n        local displayValue\n        \n        if isTanking then\n            displayValue = threatValue - secondThreat\n        else\n            displayValue = threatValue - firstThreat\n            if firstUnit\n            and not UnitIsUnit(firstUnit, \"player\")\n            and aura_env.otherTanks[UnitName(firstUnit)]\n            then\n                threatStatus = 4\n            end\n        end\n        \n        allstates[unitId] = allstates[unitId] or {unit = unitId}\n        local state = allstates[unitId]\n        state.changed = true\n        state.show = true\n        state.status = threatStatus < 1 and 1 or threatStatus\n        state.value = Round(math.abs(displayValue) / 100)\n        return true\n    end\nend",
-						["spellIds"] = {
-						},
-						["events"] = "NAME_PLATE_UNIT_ADDED, NAME_PLATE_UNIT_REMOVED, UNIT_THREAT_LIST_UPDATE, GROUP_ROSTER_UPDATE",
-						["check"] = "event",
 						["names"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
-						["debuffType"] = "HELPFUL",
+						["spellIds"] = {
+						},
+						["custom"] = "function(allstates, event, unitId)\n    if not unitId then\n        return\n    end\n    \n    if event == \"NAME_PLATE_UNIT_REMOVED\" then\n        local state = allstates[unitId]\n        if state then\n            state.show = false\n            state.changed = true\n            return true\n        end\n        \n    elseif unitId ~= \"target\" then\n        \n        local isTanking, threatStatus, _, _, threatValue = UnitDetailedThreatSituation(\"player\", unitId)\n        \n        if not threatValue then\n            return \n        end\n        \n        local firstUnit, firstThreat, secondUnit, secondThreat = aura_env.ThreatFunc(unitId)\n        local displayValue\n        \n        if isTanking then\n            displayValue = threatValue - secondThreat\n        else\n            displayValue = threatValue - firstThreat\n            if firstUnit\n            and not UnitIsUnit(firstUnit, \"player\")\n            and aura_env.otherTanks[UnitName(firstUnit)]\n            then\n                threatStatus = 4\n            end\n        end\n        \n        allstates[unitId] = allstates[unitId] or {unit = unitId}\n        local state = allstates[unitId]\n        state.changed = true\n        state.show = true\n        state.status = threatStatus < 1 and 1 or threatStatus\n        state.value = Round(math.abs(displayValue) / 100)\n        return true\n    end\nend",
+						["events"] = "NAME_PLATE_UNIT_ADDED, NAME_PLATE_UNIT_REMOVED, UNIT_THREAT_LIST_UPDATE, GROUP_ROSTER_UPDATE",
+						["check"] = "event",
+						["subeventPrefix"] = "SPELL",
+						["event"] = "Health",
+						["customVariables"] = "{\n    status = {\n        display = \"Threat Status\",\n        type = \"select\",\n        values = {\n            [1] = \"Untanked\", \n            [2] = \"Insecurely Tanking\", \n            [3] = \"Tanking\",\n            [4] = \"Tanked by Other Tank\"\n        }\n    }\n}",
 					},
 					["untrigger"] = {
 					},
@@ -19797,8 +19807,8 @@ WeakAurasSaved = {
 			["internalVersion"] = 59,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -19811,19 +19821,19 @@ WeakAurasSaved = {
 					["easeType"] = "none",
 					["scaley"] = 1,
 					["alpha"] = 0,
-					["colorB"] = 1,
+					["use_color"] = false,
 					["y"] = 0,
 					["x"] = 0,
-					["scalex"] = 1,
-					["easeStrength"] = 3,
-					["colorFunc"] = "function()    \n    --if not aura_env.state then return 0, 0, 0, 1 end  -- error checking.\n    if aura_env.state.status == 3 then\n        return unpack(aura_env.config[\"color_tanking\"]) -- Reminder: return R, G, B, Alpha (using numbers between 0 and 1)\n    elseif aura_env.state.status == 2 then        \n        return unpack(aura_env.config[\"color_insecure\"])\n    elseif aura_env.state.status == 4  then\n        return unpack(aura_env.config[\"color_others\"])\n    elseif aura_env.state.status <= 1 then\n        return unpack(aura_env.config[\"color_untanked\"])\n    else\n        return 0,0,0,1\n    end \nend",
-					["rotate"] = 0,
 					["colorType"] = "custom",
-					["use_color"] = false,
+					["rotate"] = 0,
+					["colorFunc"] = "function()    \n    --if not aura_env.state then return 0, 0, 0, 1 end  -- error checking.\n    if aura_env.state.status == 3 then\n        return unpack(aura_env.config[\"color_tanking\"]) -- Reminder: return R, G, B, Alpha (using numbers between 0 and 1)\n    elseif aura_env.state.status == 2 then        \n        return unpack(aura_env.config[\"color_insecure\"])\n    elseif aura_env.state.status == 4  then\n        return unpack(aura_env.config[\"color_others\"])\n    elseif aura_env.state.status <= 1 then\n        return unpack(aura_env.config[\"color_untanked\"])\n    else\n        return 0,0,0,1\n    end \nend",
+					["easeStrength"] = 3,
+					["scalex"] = 1,
+					["colorB"] = 1,
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -19840,30 +19850,30 @@ WeakAurasSaved = {
 			["displayText_format_s_format"] = "none",
 			["fontSize"] = 20,
 			["source"] = "import",
-			["displayText_format_c_format"] = "none",
+			["preferToUpdate"] = false,
 			["cooldownEdge"] = false,
 			["displayText_format_displayValue_format"] = "none",
 			["xOffset"] = -50,
 			["selfPoint"] = "CENTER",
-			["displayText_format_p_time_dynamic_threshold"] = 60,
+			["displayText_format_thing_format"] = "none",
 			["icon"] = true,
-			["displayText_format_p_time_precision"] = 1,
+			["config"] = {
+				["addtanks"] = "Tank1,Tank2,Tank3",
+			},
 			["anchorFrameParent"] = true,
 			["displayText_format_formatDiff_format"] = "none",
-			["wordWrap"] = "WordWrap",
-			["anchorFrameType"] = "NAMEPLATE",
 			["semver"] = "1.0.8",
+			["width"] = 40,
+			["justify"] = "LEFT",
 			["cooldownTextDisabled"] = false,
 			["id"] = "Threat Differential on Nameplates",
 			["desaturate"] = false,
 			["frameStrata"] = 1,
-			["width"] = 40,
-			["justify"] = "LEFT",
-			["config"] = {
-				["addtanks"] = "Tank1,Tank2,Tank3",
-			},
+			["anchorFrameType"] = "NAMEPLATE",
+			["wordWrap"] = "WordWrap",
+			["displayText_format_p_time_precision"] = 1,
 			["inverse"] = false,
-			["displayText_format_thing_format"] = "none",
+			["displayText_format_p_time_dynamic_threshold"] = 60,
 			["shadowColor"] = {
 				0, -- [1]
 				0, -- [2]
@@ -19875,8 +19885,8 @@ WeakAurasSaved = {
 					["check"] = {
 						["trigger"] = 1,
 						["op"] = "==",
-						["variable"] = "status",
 						["value"] = 1,
+						["variable"] = "status",
 					},
 					["changes"] = {
 						{
@@ -19894,8 +19904,8 @@ WeakAurasSaved = {
 					["check"] = {
 						["trigger"] = 1,
 						["op"] = "==",
-						["variable"] = "status",
 						["value"] = 2,
+						["variable"] = "status",
 					},
 					["changes"] = {
 						{
@@ -19913,8 +19923,8 @@ WeakAurasSaved = {
 					["check"] = {
 						["trigger"] = 1,
 						["op"] = "==",
-						["variable"] = "status",
 						["value"] = 3,
+						["variable"] = "status",
 					},
 					["changes"] = {
 						{
@@ -19932,8 +19942,8 @@ WeakAurasSaved = {
 					["check"] = {
 						["trigger"] = 1,
 						["op"] = "==",
-						["variable"] = "status",
 						["value"] = 4,
+						["variable"] = "status",
 					},
 					["changes"] = {
 						{
@@ -19952,74 +19962,291 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["preferToUpdate"] = false,
+			["displayText_format_c_format"] = "none",
 		},
-		["[Druid] Starfall CD"] = {
-			["iconSource"] = -1,
-			["parent"] = "[WotLK] Balance Druid (Main Group)",
+		["冰橙监控小德资源环 4"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["parent"] = "冰橙监控小德资源装饰环",
 			["preferToUpdate"] = false,
-			["yOffset"] = 39.9999830399646,
+			["yOffset"] = -285,
+			["foregroundColor"] = {
+				1, -- [1]
+				0.9254901960784314, -- [2]
+				0.05098039215686274, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["alpha"] = 1,
+			["sameTexture"] = true,
+			["url"] = "",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["subeventSuffix"] = "_CAST_START",
+						["event"] = "Power",
+						["use_unit"] = true,
+						["powertype"] = 3,
+						["spellIds"] = {
+						},
+						["unit"] = "player",
+						["subeventPrefix"] = "SPELL",
+						["names"] = {
+						},
+						["use_powertype"] = true,
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+				{
+					["trigger"] = {
+						["debuffType"] = "HELPFUL",
+						["type"] = "unit",
+						["use_form"] = true,
+						["form"] = {
+							["single"] = 1,
+						},
+						["use_unit"] = true,
+						["use_inverse"] = true,
+						["event"] = "Stance/Form/Aura",
+						["unit"] = "player",
+					},
+					["untrigger"] = {
+					},
+				}, -- [2]
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["use_hostility"] = false,
+						["unit"] = "target",
+						["use_unit"] = true,
+						["debuffType"] = "HELPFUL",
+						["event"] = "Unit Characteristics",
+						["hostility"] = "hostile",
+					},
+					["untrigger"] = {
+					},
+				}, -- [3]
+				["disjunctive"] = "any",
+				["activeTriggerMode"] = -10,
+			},
+			["endAngle"] = 270,
+			["internalVersion"] = 59,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
+			["desaturateForeground"] = false,
+			["anchorPoint"] = "CENTER",
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["rotation"] = 0,
+			["font"] = "Friz Quadrata TT",
+			["version"] = 11,
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
+			},
+			["height"] = 106,
+			["crop_x"] = 0.41,
+			["load"] = {
+				["use_class"] = true,
+				["use_talent"] = false,
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+						[59] = true,
+					},
+				},
+				["use_vehicleUi"] = false,
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["useAdjustededMax"] = false,
+			["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
+			["source"] = "import",
+			["startAngle"] = 90,
+			["backgroundTexture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura3",
+			["fontSize"] = 12,
+			["mirror"] = false,
+			["useAdjustededMin"] = false,
+			["regionType"] = "progresstexture",
+			["config"] = {
+			},
+			["blendMode"] = "BLEND",
+			["selfPoint"] = "CENTER",
+			["anchorFrameType"] = "SCREEN",
+			["slantMode"] = "INSIDE",
+			["xOffset"] = 170,
+			["backgroundColor"] = {
+				0, -- [1]
+				0.81960784313725, -- [2]
+				1, -- [3]
+				0, -- [4]
+			},
+			["tocversion"] = 30400,
+			["semver"] = "1.0.10",
+			["compress"] = false,
+			["id"] = "冰橙监控小德资源环 4",
+			["foregroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White",
+			["frameStrata"] = 2,
+			["width"] = 106,
+			["crop_y"] = 0.41,
+			["uid"] = "N2crMCKT8)Y",
+			["inverse"] = false,
+			["wagoID"] = "H_zZHwkG7",
+			["orientation"] = "ANTICLOCKWISE",
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 2,
+						["variable"] = "show",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [1]
+				{
+					["check"] = {
+						["trigger"] = 3,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [2]
+			},
+			["information"] = {
+				["forceEvents"] = true,
+			},
+			["backgroundOffset"] = 0,
+		},
+		["月蚀触发 "] = {
+			["iconSource"] = 2,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["preferToUpdate"] = false,
+			["yOffset"] = 0,
 			["anchorPoint"] = "CENTER",
 			["cooldownSwipe"] = true,
-			["cooldownEdge"] = true,
+			["cooldownEdge"] = false,
 			["icon"] = true,
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["remaining_operator"] = ">",
-						["genericShowOn"] = "showOnCooldown",
-						["names"] = {
-						},
-						["remaining"] = "5",
-						["debuffType"] = "HELPFUL",
-						["type"] = "spell",
-						["use_unit"] = true,
+						["type"] = "aura2",
 						["subeventSuffix"] = "_CAST_START",
-						["unit"] = "player",
-						["duration"] = "1",
-						["event"] = "Cooldown Progress (Spell)",
-						["use_remaining"] = true,
-						["realSpellName"] = "星辰坠落",
-						["use_spellName"] = true,
+						["matchesShowOn"] = "showOnActive",
+						["event"] = "Health",
+						["subeventPrefix"] = "SPELL",
 						["spellIds"] = {
 						},
-						["subeventPrefix"] = "SPELL",
-						["unevent"] = "auto",
-						["use_genericShowOn"] = true,
-						["use_track"] = true,
-						["spellName"] = 53201,
+						["auraspellids"] = {
+							"48518", -- [1]
+						},
+						["unit"] = "player",
+						["names"] = {
+						},
+						["useExactSpellId"] = true,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
-						["genericShowOn"] = "showOnCooldown",
 					},
 				}, -- [1]
-				["disjunctive"] = "any",
+				{
+					["trigger"] = {
+						["type"] = "spell",
+						["use_genericShowOn"] = true,
+						["event"] = "Action Usable",
+						["use_exact_spellName"] = true,
+						["realSpellName"] = 26986,
+						["use_spellName"] = true,
+						["spellName"] = 26986,
+						["genericShowOn"] = "showOnCooldown",
+						["unit"] = "player",
+						["use_track"] = true,
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [2]
 				["activeTriggerMode"] = -10,
 			},
 			["internalVersion"] = 59,
 			["keepAspectRatio"] = false,
 			["selfPoint"] = "CENTER",
-			["desaturate"] = true,
+			["desaturate"] = false,
 			["subRegions"] = {
 				{
 					["type"] = "subbackground",
 				}, -- [1]
 				{
-					["text_shadowXOffset"] = 0,
+					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_s_format"] = "none",
 					["text_text"] = "%p",
-					["text_shadowColor"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
+					["text_text_format_p_time_mod_rate"] = true,
 					["text_selfPoint"] = "AUTO",
 					["text_automaticWidth"] = "Auto",
 					["text_fixedWidth"] = 64,
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_p_format"] = "timed",
 					["type"] = "subtext",
 					["anchorXOffset"] = 0,
 					["text_color"] = {
@@ -20029,34 +20256,26 @@ WeakAurasSaved = {
 						1, -- [4]
 					},
 					["text_font"] = "Friz Quadrata TT",
-					["text_text_format_p_format"] = "timed",
+					["text_shadowXOffset"] = 0,
 					["text_shadowYOffset"] = 0,
-					["text_visible"] = true,
-					["text_wordWrap"] = "WordWrap",
 					["text_fontType"] = "OUTLINE",
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = true,
 					["text_anchorPoint"] = "CENTER",
 					["text_text_format_p_time_format"] = 0,
-					["text_text_format_p_time_mod_rate"] = true,
-					["text_fontSize"] = 14,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_text_format_p_time_legacy_floor"] = false,
-				}, -- [2]
-				{
-					["type"] = "subborder",
-					["border_size"] = 2,
-					["border_color"] = {
+					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
-					["border_visible"] = true,
-					["border_edge"] = "Square Full White",
-					["border_offset"] = 0,
-				}, -- [3]
+					["text_fontSize"] = 12,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["text_text_format_p_time_legacy_floor"] = false,
+				}, -- [2]
 				{
 					["glowFrequency"] = 0.25,
-					["glow"] = false,
+					["type"] = "subglow",
 					["useGlowColor"] = false,
 					["glowType"] = "buttonOverlay",
 					["glowLength"] = 10,
@@ -20067,834 +20286,450 @@ WeakAurasSaved = {
 						1, -- [3]
 						1, -- [4]
 					},
-					["type"] = "subglow",
 					["glowXOffset"] = 0,
+					["glow"] = false,
 					["glowThickness"] = 1,
 					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
-				}, -- [4]
-				{
-					["glowFrequency"] = 0.25,
-					["glow"] = false,
-					["useGlowColor"] = true,
-					["glowType"] = "Pixel",
-					["glowLength"] = 5,
-					["glowYOffset"] = 0,
-					["glowColor"] = {
-						1, -- [1]
-						0.04705882352941176, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["type"] = "subglow",
-					["glowXOffset"] = 0,
-					["glowThickness"] = 2,
-					["glowScale"] = 1,
-					["glowLines"] = 20,
-					["glowBorder"] = false,
-				}, -- [5]
+				}, -- [3]
 			},
-			["height"] = 60,
+			["height"] = 64,
 			["load"] = {
-				["use_class"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
 				},
+			},
+			["source"] = "import",
+			["regionType"] = "icon",
+			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
+			["information"] = {
+				["forceEvents"] = true,
+			},
+			["authorOptions"] = {
+			},
+			["xOffset"] = 0,
+			["cooldownTextDisabled"] = false,
+			["useCooldownModRate"] = true,
+			["zoom"] = 0,
+			["config"] = {
+			},
+			["tocversion"] = 30400,
+			["id"] = "月蚀触发 ",
+			["alpha"] = 1,
+			["frameStrata"] = 1,
+			["width"] = 64,
+			["anchorFrameType"] = "SCREEN",
+			["uid"] = "LTHO4pI9bMU",
+			["inverse"] = false,
+			["animation"] = {
+				["start"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "show",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = 2,
+							["property"] = "iconSource",
+						}, -- [1]
+						{
+							["value"] = true,
+							["property"] = "sub.3.glow",
+						}, -- [2]
+					},
+				}, -- [1]
+			},
+			["cooldown"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
+		},
+		["[WotLK] Balance Druid (Left Group)"] = {
+			["arcLength"] = 360,
+			["controlledChildren"] = {
+				"[Druid] Current Stance", -- [1]
+				"[Druid] Current Stance Missing", -- [2]
+				"[Druid] Innervate", -- [3]
+				"[Druid] Innervate CD", -- [4]
+				"[Druid] Innervate Cast", -- [5]
+				"[Druid] Rebirth", -- [6]
+				"[Druid] Rebirth CD", -- [7]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = -172.4999329463117,
+			["preferToUpdate"] = false,
+			["yOffset"] = 30,
+			["gridType"] = "RD",
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["rowSpace"] = 1,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["names"] = {
+						},
+						["type"] = "aura2",
+						["spellIds"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
+						["subeventPrefix"] = "SPELL",
+						["event"] = "Health",
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["columnSpace"] = 1,
+			["internalVersion"] = 59,
+			["selfPoint"] = "TOP",
+			["align"] = "CENTER",
+			["rotation"] = 0,
+			["frameStrata"] = 1,
+			["authorOptions"] = {
+			},
+			["subRegions"] = {
+			},
+			["useLimit"] = false,
+			["radius"] = 200,
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["animation"] = {
+				["start"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["grow"] = "DOWN",
+			["source"] = "import",
+			["parent"] = "[WotLK] Balance Druid (Main Group)",
+			["scale"] = 1,
+			["space"] = 5,
+			["border"] = false,
+			["anchorFrameFrame"] = "WeakAuras:[Druid] Eclipse (Missing)",
+			["regionType"] = "dynamicgroup",
+			["borderSize"] = 2,
+			["sort"] = "none",
+			["uid"] = "gaGj7DZXdLO",
+			["anchorPoint"] = "CENTER",
+			["constantFactor"] = "RADIUS",
+			["limit"] = 5,
+			["borderOffset"] = 4,
+			["config"] = {
+			},
+			["tocversion"] = 30400,
+			["id"] = "[WotLK] Balance Druid (Left Group)",
+			["stagger"] = 0,
+			["gridWidth"] = 5,
+			["anchorFrameType"] = "SELECTFRAME",
+			["borderEdge"] = "Square Full White",
+			["borderInset"] = 1,
+			["fullCircle"] = true,
+			["animate"] = false,
+			["conditions"] = {
+			},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["sortHybridTable"] = {
+				["[Druid] Innervate CD"] = false,
+				["[Druid] Innervate"] = false,
+				["[Druid] Current Stance"] = false,
+				["[Druid] Innervate Cast"] = false,
+				["[Druid] Rebirth"] = false,
+				["[Druid] Current Stance Missing"] = false,
+				["[Druid] Rebirth CD"] = false,
+			},
+		},
+		["[Druid] Force of Nature Bar"] = {
+			["sparkWidth"] = 30,
+			["sparkOffsetX"] = 0,
+			["parent"] = "[WotLK] Balance Druid (Main Group)",
+			["preferToUpdate"] = false,
+			["adjustedMin"] = "83%",
+			["yOffset"] = 73.50005768463649,
+			["anchorPoint"] = "CENTER",
+			["sparkRotation"] = 0,
+			["sparkRotationMode"] = "AUTO",
+			["cooldownEdge"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["auranames"] = {
+							"Starfall", -- [1]
+						},
+						["use_genericShowOn"] = true,
+						["genericShowOn"] = "showOnCooldown",
+						["subeventPrefix"] = "SPELL",
+						["powertype"] = 0,
+						["remaining"] = "150",
+						["use_powertype"] = true,
+						["debuffType"] = "HELPFUL",
+						["remaining_operator"] = ">=",
+						["type"] = "spell",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["duration"] = "1",
+						["unevent"] = "auto",
+						["event"] = "Cooldown Progress (Spell)",
+						["use_remaining"] = true,
+						["realSpellName"] = "自然之力",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["useName"] = true,
+						["names"] = {
+						},
+						["unit"] = "player",
+						["use_track"] = true,
+						["spellName"] = 33831,
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+				["disjunctive"] = "any",
+				["activeTriggerMode"] = -10,
+			},
+			["icon_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["internalVersion"] = 59,
+			["keepAspectRatio"] = false,
+			["selfPoint"] = "CENTER",
+			["id"] = "[Druid] Force of Nature Bar",
+			["sparkMirror"] = false,
+			["desaturate"] = false,
+			["xOffset"] = 119.9999841341605,
+			["authorOptions"] = {
+			},
+			["sparkOffsetY"] = 0,
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
+				{
+					["type"] = "subforeground",
+				}, -- [2]
+				{
+					["border_size"] = 1,
+					["border_anchor"] = "bar",
+					["type"] = "subborder",
+					["border_color"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["border_visible"] = true,
+					["border_edge"] = "Square Full White",
+					["border_offset"] = 0,
+				}, -- [3]
+			},
+			["height"] = 9.999943238591248,
+			["adjustedMax"] = "100%",
+			["load"] = {
+				["use_class"] = true,
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
+						[28] = true,
 						[24] = true,
 					},
 				},
 				["use_vehicle"] = false,
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "DRUID",
 					["multi"] = {
 						["DRUID"] = true,
 					},
 				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["use_talent"] = false,
-			},
-			["source"] = "import",
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["anchorFrameFrame"] = "WeakAuras:[Druid] Starfall",
-			["regionType"] = "icon",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["xOffset"] = 59.99995705281367,
-			["authorOptions"] = {
-			},
-			["cooldown"] = true,
-			["frameStrata"] = 1,
-			["config"] = {
-			},
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Starfall CD",
-			["useCooldownModRate"] = true,
-			["alpha"] = 1,
-			["width"] = 60,
-			["anchorFrameType"] = "SCREEN",
-			["uid"] = "qKlmydmvDse",
-			["inverse"] = false,
-			["zoom"] = 0.29,
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-		},
-		["冰橙监控小德精灵之火"] = {
-			["iconSource"] = -1,
-			["xOffset"] = 76,
-			["preferToUpdate"] = false,
-			["yOffset"] = -197,
-			["anchorPoint"] = "CENTER",
-			["cooldownSwipe"] = false,
-			["cooldownEdge"] = false,
-			["icon"] = true,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["auranames"] = {
-							"精灵之火", -- [1]
-							"精灵之火（野性）", -- [2]
-						},
-						["use_absorbMode"] = true,
-						["genericShowOn"] = "showAlways",
-						["use_unit"] = true,
-						["names"] = {
-						},
-						["use_genericShowOn"] = true,
-						["unit"] = "target",
-						["matchesShowOn"] = "showOnActive",
-						["debuffType"] = "HARMFUL",
-						["auraspellids"] = {
-							"184362", -- [1]
-						},
-						["type"] = "aura2",
-						["subeventSuffix"] = "_CAST_START",
-						["useExactSpellId"] = false,
-						["unevent"] = "auto",
-						["useName"] = true,
-						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = true,
-						["realSpellName"] = 19574,
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["duration"] = "1",
-						["spellName"] = 19574,
-						["subeventPrefix"] = "SPELL",
-						["use_track"] = true,
-						["useIgnoreName"] = false,
-					},
-					["untrigger"] = {
-						["genericShowOn"] = "showAlways",
-					},
-				}, -- [1]
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["use_hostility"] = true,
-						["hostility"] = "hostile",
-						["unit"] = "target",
-						["debuffType"] = "HELPFUL",
-						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
-					},
-					["untrigger"] = {
-					},
-				}, -- [2]
-				["disjunctive"] = "any",
-				["activeTriggerMode"] = -10,
-			},
-			["internalVersion"] = 59,
-			["keepAspectRatio"] = true,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-			},
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
-				}, -- [1]
-				{
-					["text_shadowXOffset"] = 0,
-					["text_text_format_s_format"] = "none",
-					["text_text"] = "%s",
-					["text_shadowColor"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["text_selfPoint"] = "AUTO",
-					["text_automaticWidth"] = "Auto",
-					["text_fixedWidth"] = 64,
-					["anchorYOffset"] = 0,
-					["text_justify"] = "CENTER",
-					["rotateText"] = "NONE",
-					["type"] = "subtext",
-					["text_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["text_font"] = "Friz Quadrata TT",
-					["text_shadowYOffset"] = 0,
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
-					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
-					["text_fontSize"] = 16,
-					["anchorXOffset"] = 0,
-					["text_fontType"] = "OUTLINE",
-				}, -- [2]
-				{
-					["border_offset"] = 0,
-					["border_size"] = 2,
-					["text_color"] = {
-					},
-					["border_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["border_visible"] = true,
-					["border_edge"] = "Blizzard Party",
-					["type"] = "subborder",
-				}, -- [3]
-				{
-					["text_shadowXOffset"] = 0,
-					["text_text"] = "%p",
-					["text_shadowColor"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["text_selfPoint"] = "AUTO",
-					["text_automaticWidth"] = "Auto",
-					["text_fixedWidth"] = 64,
-					["anchorYOffset"] = 0,
-					["text_justify"] = "CENTER",
-					["rotateText"] = "NONE",
-					["text_text_format_p_time_legacy_floor"] = false,
-					["type"] = "subtext",
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["text_font"] = "Friz Quadrata TT",
-					["text_text_format_p_format"] = "timed",
-					["text_shadowYOffset"] = 0,
-					["text_text_format_p_time_mod_rate"] = true,
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
-					["text_anchorPoint"] = "CENTER",
-					["text_text_format_p_time_format"] = 0,
-					["text_fontType"] = "OUTLINE",
-					["text_fontSize"] = 12,
-					["anchorXOffset"] = 0,
-					["text_text_format_p_time_precision"] = 1,
-				}, -- [4]
-			},
-			["height"] = 30,
-			["load"] = {
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["use_vehicle"] = false,
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
 				["size"] = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
-				["use_spellknown"] = false,
-				["use_vehicleUi"] = false,
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-					},
-				},
-				["use_exact_spellknown"] = false,
-				["spellknown"] = 12292,
-				["zoneIds"] = "",
 			},
+			["sparkBlendMode"] = "ADD",
+			["useAdjustededMax"] = true,
+			["customText"] = "function()\n    mana = math.max(0, UnitPower(\"player\", 0)) / math.max(1, UnitPowerMax(\"player\", 0)) * 100;\n    return string.format(\"%.0f\", mana);\nend",
 			["source"] = "import",
-			["uid"] = "9MXlK5JEZFz",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["desaturate"] = false,
-			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
-			["cooldown"] = true,
-			["displayIcon"] = 136033,
-			["parent"] = "冰橙监控小德BUFF组",
-			["cooldownTextDisabled"] = false,
-			["width"] = 50,
+			["uid"] = "RF4x)ctGNw0",
+			["icon"] = false,
+			["useAdjustededMin"] = true,
+			["regionType"] = "aurabar",
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
+			["icon_side"] = "RIGHT",
 			["zoom"] = 0,
+			["sparkHeight"] = 20,
+			["texture"] = "Aluminium",
+			["spark"] = true,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["auto"] = true,
 			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德精灵之火",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
+			["sparkHidden"] = "BOTH",
 			["config"] = {
 			},
-			["inverse"] = true,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-						{
-							["value"] = 0.3,
-							["property"] = "alpha",
-						}, -- [2]
-					},
-				}, -- [1]
-				{
-					["check"] = {
-						["trigger"] = 2,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = 0,
-							["property"] = "alpha",
-						}, -- [1]
-					},
-				}, -- [2]
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-		},
-		["冰橙监控小德回春术"] = {
-			["iconSource"] = -1,
-			["xOffset"] = 76,
-			["preferToUpdate"] = false,
-			["yOffset"] = -197,
-			["anchorPoint"] = "CENTER",
-			["cooldownSwipe"] = false,
-			["cooldownEdge"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["auranames"] = {
-							"回春术", -- [1]
-						},
-						["ownOnly"] = true,
-						["genericShowOn"] = "showAlways",
-						["names"] = {
-						},
-						["use_genericShowOn"] = true,
-						["unit"] = "target",
-						["duration"] = "1",
-						["subeventPrefix"] = "SPELL",
-						["matchesShowOn"] = "showAlways",
-						["debuffType"] = "HELPFUL",
-						["unevent"] = "auto",
-						["type"] = "aura2",
-						["useExactSpellId"] = false,
-						["auraspellids"] = {
-							"184362", -- [1]
-						},
-						["subeventSuffix"] = "_CAST_START",
-						["useName"] = true,
-						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = true,
-						["realSpellName"] = 19574,
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["spellName"] = 19574,
-						["use_unit"] = true,
-						["use_absorbMode"] = true,
-						["use_track"] = true,
-						["useIgnoreName"] = false,
-					},
-					["untrigger"] = {
-						["genericShowOn"] = "showAlways",
-					},
-				}, -- [1]
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["use_hostility"] = true,
-						["hostility"] = "friendly",
-						["unit"] = "target",
-						["debuffType"] = "HELPFUL",
-						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
-					},
-					["untrigger"] = {
-					},
-				}, -- [2]
-				["disjunctive"] = "any",
-				["activeTriggerMode"] = -10,
-			},
-			["internalVersion"] = 59,
-			["keepAspectRatio"] = true,
-			["selfPoint"] = "CENTER",
-			["desaturate"] = false,
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
-				}, -- [1]
-				{
-					["text_shadowXOffset"] = 0,
-					["text_text_format_s_format"] = "none",
-					["text_text"] = "%s",
-					["text_shadowColor"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["text_selfPoint"] = "AUTO",
-					["text_automaticWidth"] = "Auto",
-					["text_fixedWidth"] = 64,
-					["anchorYOffset"] = 0,
-					["text_justify"] = "CENTER",
-					["rotateText"] = "NONE",
-					["type"] = "subtext",
-					["text_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["text_font"] = "Friz Quadrata TT",
-					["text_shadowYOffset"] = 0,
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
-					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
-					["text_fontSize"] = 16,
-					["anchorXOffset"] = 0,
-					["text_fontType"] = "OUTLINE",
-				}, -- [2]
-				{
-					["border_offset"] = 0,
-					["border_size"] = 2,
-					["text_color"] = {
-					},
-					["border_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["border_visible"] = true,
-					["border_edge"] = "Blizzard Party",
-					["type"] = "subborder",
-				}, -- [3]
-				{
-					["text_shadowXOffset"] = 0,
-					["text_text"] = "%p",
-					["text_shadowColor"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["text_selfPoint"] = "AUTO",
-					["text_automaticWidth"] = "Auto",
-					["text_fixedWidth"] = 64,
-					["anchorYOffset"] = 0,
-					["text_justify"] = "CENTER",
-					["rotateText"] = "NONE",
-					["text_text_format_p_time_legacy_floor"] = false,
-					["type"] = "subtext",
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["text_font"] = "Friz Quadrata TT",
-					["text_text_format_p_format"] = "timed",
-					["text_shadowYOffset"] = 0,
-					["text_text_format_p_time_mod_rate"] = true,
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
-					["text_anchorPoint"] = "CENTER",
-					["text_text_format_p_time_format"] = 0,
-					["text_fontType"] = "OUTLINE",
-					["text_fontSize"] = 12,
-					["anchorXOffset"] = 0,
-					["text_text_format_p_time_precision"] = 1,
-				}, -- [4]
-			},
-			["height"] = 30,
-			["load"] = {
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["use_vehicle"] = false,
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["use_spec"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_vehicleUi"] = false,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-					},
-				},
-				["zoneIds"] = "",
-			},
-			["source"] = "import",
-			["parent"] = "冰橙监控小德BUFF组",
-			["uid"] = "NtLpjEKRnUm",
-			["color"] = {
-				1, -- [1]
+			["alpha"] = 1,
+			["width"] = 59.99986514036378,
+			["barColor"] = {
+				0.5058823529411764, -- [1]
 				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["regionType"] = "icon",
-			["cooldown"] = true,
-			["displayIcon"] = 136081,
-			["icon"] = true,
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["anchorFrameType"] = "SCREEN",
-			["alpha"] = 1,
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德回春术",
-			["cooldownTextDisabled"] = false,
-			["useCooldownModRate"] = true,
-			["width"] = 50,
-			["frameStrata"] = 1,
-			["config"] = {
-			},
-			["inverse"] = true,
-			["useTooltip"] = false,
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "buffed",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-						{
-							["value"] = 0.3,
-							["property"] = "alpha",
-						}, -- [2]
-					},
-				}, -- [1]
-				{
-					["check"] = {
-						["trigger"] = 2,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["property"] = "alpha",
-						}, -- [1]
-					},
-				}, -- [2]
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-			},
-		},
-		["FORM"] = {
-			["outline"] = "THICKOUTLINE",
-			["wagoID"] = "X6wQKkZUq",
-			["parent"] = "平衡德循環助手",
-			["displayText_format_p_time_dynamic_threshold"] = 60,
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["displayText_format_p_time_format"] = 0,
-			["customTextUpdate"] = "event",
-			["url"] = "https://wago.io/X6wQKkZUq/5",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["subeventSuffix"] = "_CAST_START",
-						["use_inverse"] = true,
-						["event"] = "Stance/Form/Aura",
-						["use_unit"] = true,
-						["use_form"] = true,
-						["spellIds"] = {
-						},
-						["subeventPrefix"] = "SPELL",
-						["form"] = {
-							["single"] = 5,
-						},
-						["names"] = {
-						},
-						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-				["activeTriggerMode"] = -10,
-			},
-			["displayText_format_p_format"] = "timed",
-			["internalVersion"] = 59,
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["font"] = "Friz Quadrata TT",
-			["version"] = 5,
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
-				}, -- [1]
-			},
-			["load"] = {
-				["use_class"] = true,
-				["talent"] = {
-					["multi"] = {
-						[18] = true,
-					},
-				},
-				["use_talent"] = false,
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["fontSize"] = 22,
-			["source"] = "import",
-			["shadowXOffset"] = 1,
-			["wordWrap"] = "WordWrap",
-			["regionType"] = "text",
-			["preferToUpdate"] = false,
-			["selfPoint"] = "BOTTOM",
-			["conditions"] = {
-			},
-			["displayText_format_p_time_precision"] = 1,
-			["displayText"] = "變咕咕",
-			["authorOptions"] = {
-			},
-			["config"] = {
-			},
-			["semver"] = "1.0.4",
-			["tocversion"] = 30400,
-			["id"] = "FORM",
-			["shadowYOffset"] = -1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["justify"] = "LEFT",
-			["uid"] = "Jk5pqNzUz4k",
-			["xOffset"] = 0,
-			["color"] = {
-				1, -- [1]
-				0.38823529411765, -- [2]
-				0.1921568627451, -- [3]
-				1, -- [4]
-			},
-			["shadowColor"] = {
-				0, -- [1]
-				0, -- [2]
 				0, -- [3]
 				1, -- [4]
 			},
-			["fixedWidth"] = 200,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["inverse"] = false,
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.5, -- [4]
+			},
+			["orientation"] = "HORIZONTAL",
+			["conditions"] = {
+			},
 			["information"] = {
 				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["automaticWidth"] = "Auto",
+			["iconSource"] = -1,
 		},
 		["冰橙监控小德CD组 "] = {
 			["controlledChildren"] = {
@@ -20938,15 +20773,15 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
 						["spellIds"] = {
 						},
@@ -20955,7 +20790,7 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["event"] = "Health",
-						["debuffType"] = "HELPFUL",
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
 					},
@@ -20964,20 +20799,20 @@ WeakAurasSaved = {
 			["internalVersion"] = 59,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -20986,7 +20821,7 @@ WeakAurasSaved = {
 			["subRegions"] = {
 			},
 			["load"] = {
-				["talent"] = {
+				["size"] = {
 					["multi"] = {
 					},
 				},
@@ -20998,7 +20833,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -21018,21 +20853,21 @@ WeakAurasSaved = {
 			["borderOffset"] = 4,
 			["tocversion"] = 30400,
 			["id"] = "冰橙监控小德CD组 ",
-			["uid"] = "b2eSfdij7uy",
+			["borderInset"] = 1,
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["xOffset"] = 0,
-			["borderInset"] = 1,
-			["config"] = {
-			},
 			["authorOptions"] = {
 			},
+			["config"] = {
+			},
+			["uid"] = "b2eSfdij7uy",
+			["selfPoint"] = "CENTER",
 			["conditions"] = {
 			},
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["selfPoint"] = "CENTER",
+			["xOffset"] = 0,
 		},
 		["冰橙监控小德形态"] = {
 			["iconSource"] = -1,
@@ -21060,16 +20895,16 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showAlways",
 						["names"] = {
 						},
-						["duration"] = "1",
+						["unit"] = "player",
 						["matchesShowOn"] = "showAlways",
-						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
+						["spellName"] = 19574,
+						["subeventPrefix"] = "SPELL",
+						["type"] = "aura2",
 						["auraspellids"] = {
 							"85739", -- [1]
 						},
-						["type"] = "aura2",
 						["useExactSpellId"] = false,
-						["subeventSuffix"] = "_CAST_START",
 						["use_genericShowOn"] = true,
 						["useName"] = true,
 						["event"] = "Stance/Form/Aura",
@@ -21079,10 +20914,10 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["unevent"] = "auto",
-						["subeventPrefix"] = "SPELL",
-						["spellName"] = 19574,
+						["subeventSuffix"] = "_CAST_START",
+						["use_unit"] = true,
 						["use_track"] = true,
-						["unit"] = "player",
+						["duration"] = "1",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -21091,10 +20926,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -21144,7 +20979,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["border_size"] = 2,
-					["type"] = "subborder",
+					["border_offset"] = 0,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -21155,7 +20990,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_offset"] = 0,
+					["type"] = "subborder",
 				}, -- [3]
 			},
 			["height"] = 30,
@@ -21176,39 +21011,33 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_spec"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_vehicleUi"] = false,
+				["zoneIds"] = "",
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["use_vehicleUi"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["uid"] = "xrr9Cp8Vvt1",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
+			["config"] = {
 			},
+			["desaturate"] = false,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -21216,13 +21045,43 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["regionType"] = "icon",
-			["desaturate"] = false,
-			["cooldown"] = true,
+			["parent"] = "冰橙监控小德BUFF组",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["displayIcon"] = "",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德形态",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["width"] = 50,
+			["cooldownTextDisabled"] = false,
+			["uid"] = "xrr9Cp8Vvt1",
+			["inverse"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -21255,153 +21114,118 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["parent"] = "冰橙监控小德BUFF组",
-			["cooldownTextDisabled"] = false,
-			["width"] = 50,
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德形态",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["config"] = {
-			},
-			["inverse"] = true,
+			["cooldown"] = true,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
 			},
-			["displayIcon"] = "",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
 		},
-		["冰橙监控猫连击点3"] = {
-			["sparkWidth"] = 10,
+		["[Druid] Nature's Grasp"] = {
 			["iconSource"] = -1,
-			["parent"] = "冰橙监控小德资源组",
+			["parent"] = "[WotLK] Balance Druid (Right Group)",
 			["preferToUpdate"] = false,
-			["yOffset"] = -235,
+			["yOffset"] = 0,
 			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
-			["sparkRotationMode"] = "AUTO",
-			["icon"] = false,
+			["cooldownSwipe"] = true,
+			["cooldownEdge"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["type"] = "unit",
-						["subeventSuffix"] = "_CAST_START",
-						["power_operator"] = ">=",
-						["use_power"] = false,
-						["event"] = "Power",
+						["use_genericShowOn"] = true,
+						["genericShowOn"] = "showOnReady",
 						["unit"] = "player",
-						["use_unit"] = true,
-						["powertype"] = 4,
-						["spellIds"] = {
-						},
-						["power"] = "1",
+						["spellName"] = 53312,
+						["type"] = "spell",
+						["unevent"] = "auto",
 						["names"] = {
 						},
-						["subeventPrefix"] = "SPELL",
-						["use_powertype"] = true,
+						["event"] = "Cooldown Progress (Spell)",
 						["debuffType"] = "HELPFUL",
+						["realSpellName"] = "自然之握",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["duration"] = "1",
+						["subeventSuffix"] = "_CAST_START",
+						["use_unit"] = true,
+						["use_track"] = true,
+						["subeventPrefix"] = "SPELL",
 					},
 					["untrigger"] = {
+						["genericShowOn"] = "showOnReady",
 					},
 				}, -- [1]
-				{
-					["trigger"] = {
-						["use_form"] = true,
-						["debuffType"] = "HELPFUL",
-						["type"] = "unit",
-						["use_unit"] = true,
-						["form"] = {
-							["single"] = 3,
-						},
-						["event"] = "Stance/Form/Aura",
-						["unit"] = "player",
-					},
-					["untrigger"] = {
-					},
-				}, -- [2]
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["unit"] = "target",
-						["debuffType"] = "HELPFUL",
-						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
-					},
-					["untrigger"] = {
-					},
-				}, -- [3]
-				["disjunctive"] = "any",
 				["activeTriggerMode"] = -10,
 			},
-			["icon_color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
 			["internalVersion"] = 59,
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				1, -- [1]
-				0.105882352941176, -- [2]
-				0.0352941176470588, -- [3]
-				0, -- [4]
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
 			},
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["sparkOffsetY"] = 0,
+			["desaturate"] = false,
 			["subRegions"] = {
 				{
 					["type"] = "subbackground",
 				}, -- [1]
 				{
-					["type"] = "subforeground",
-				}, -- [2]
-				{
+					["type"] = "subborder",
 					["border_offset"] = 0,
-					["border_anchor"] = "bar",
-					["border_size"] = 2,
 					["border_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
 						1, -- [4]
 					},
 					["border_visible"] = true,
-					["border_edge"] = "Blizzard Party",
-					["type"] = "subborder",
-				}, -- [3]
+					["border_edge"] = "Square Full White",
+					["border_size"] = 1,
+				}, -- [2]
 			},
-			["height"] = 15,
-			["id"] = "冰橙监控猫连击点3",
+			["height"] = 40,
 			["load"] = {
 				["use_class"] = true,
-				["use_never"] = true,
+				["use_spellknown"] = false,
+				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
+						[28] = true,
+						[24] = true,
 					},
 				},
 				["use_vehicle"] = false,
 				["class"] = {
 					["single"] = "DRUID",
 					["multi"] = {
+						["DRUID"] = true,
 					},
 				},
 				["spec"] = {
@@ -21413,136 +21237,47 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["sparkBlendMode"] = "ADD",
-			["useAdjustededMax"] = false,
 			["source"] = "import",
-			["desaturate"] = false,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["xOffset"] = 170,
-			["useAdjustededMin"] = false,
-			["regionType"] = "aurabar",
-			["sparkOffsetX"] = 0,
-			["config"] = {
-			},
-			["icon_side"] = "RIGHT",
-			["uid"] = "QQljStVYWhw",
-			["sparkHeight"] = 30,
-			["texture"] = "Skyline",
-			["width"] = 67,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["spark"] = false,
-			["tocversion"] = 30400,
-			["sparkHidden"] = "NEVER",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["sparkColor"] = {
+			["zoom"] = 0.29,
+			["regionType"] = "icon",
+			["selfPoint"] = "CENTER",
+			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["inverse"] = false,
 			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["orientation"] = "HORIZONTAL",
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "power",
-						["op"] = ">=",
-						["value"] = "3",
-					},
-					["changes"] = {
-						{
-							["value"] = {
-								1, -- [1]
-								0.9803921568627451, -- [2]
-								0.02352941176470588, -- [3]
-								1, -- [4]
-							},
-							["property"] = "backgroundColor",
-						}, -- [1]
-					},
-				}, -- [1]
-				{
-					["check"] = {
-						["trigger"] = 2,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["property"] = "alpha",
-						}, -- [1]
-					},
-				}, -- [2]
-				{
-					["check"] = {
-						["trigger"] = 3,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = 0,
-							["property"] = "alpha",
-						}, -- [1]
-					},
-				}, -- [3]
 			},
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["backgroundColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.5, -- [4]
+			["alpha"] = 1,
+			["uid"] = "f3uSztJgzbv",
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Nature's Grasp",
+			["frameStrata"] = 1,
+			["useCooldownModRate"] = true,
+			["width"] = 40,
+			["anchorFrameType"] = "SCREEN",
+			["config"] = {
 			},
+			["inverse"] = false,
+			["icon"] = true,
+			["conditions"] = {
+			},
+			["cooldown"] = false,
+			["xOffset"] = 0,
 		},
 		["冰橙监控小德熊野性冲锋CD"] = {
 			["iconSource"] = -1,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -21562,22 +21297,22 @@ WeakAurasSaved = {
 						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
-						["use_unit"] = true,
+						["use_genericShowOn"] = true,
 						["unevent"] = "auto",
 						["names"] = {
 						},
-						["subeventPrefix"] = "SPELL",
+						["duration"] = "1",
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
 						["realSpellName"] = "野性冲锋 - 熊",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["spellName"] = 16979,
 						["subeventSuffix"] = "_CAST_START",
-						["duration"] = "1",
+						["spellName"] = 16979,
+						["subeventPrefix"] = "SPELL",
 						["use_track"] = true,
-						["use_genericShowOn"] = true,
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -21586,14 +21321,14 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["use_form"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 						["type"] = "unit",
 						["use_unit"] = true,
 						["form"] = {
 							["single"] = 1,
 						},
 						["event"] = "Stance/Form/Aura",
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -21601,10 +21336,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -21654,7 +21389,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["border_size"] = 2,
-					["type"] = "subborder",
+					["border_offset"] = 0,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -21665,7 +21400,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_offset"] = 0,
+					["type"] = "subborder",
 				}, -- [3]
 			},
 			["height"] = 45,
@@ -21687,7 +21422,10 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_spellknown"] = true,
-				["zoneIds"] = "",
+				["size"] = {
+					["multi"] = {
+					},
+				},
 				["use_vehicleUi"] = false,
 				["class"] = {
 					["single"] = "DRUID",
@@ -21696,34 +21434,22 @@ WeakAurasSaved = {
 				},
 				["use_exact_spellknown"] = false,
 				["spellknown"] = 16979,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 			},
 			["source"] = "import",
-			["uid"] = "XT4(lp(YxyM",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
+			["config"] = {
 			},
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["regionType"] = "icon",
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -21731,35 +21457,19 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["displayIcon"] = 136145,
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["regionType"] = "icon",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["zoom"] = 0,
-			["width"] = 45,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德熊野性冲锋CD",
-			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["config"] = {
-			},
-			["inverse"] = true,
-			["parent"] = "冰橙监控小德CD组 ",
+			["cooldown"] = true,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -21786,8 +21496,33 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["cooldown"] = true,
 			["xOffset"] = 25,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德熊野性冲锋CD",
+			["useCooldownModRate"] = true,
+			["alpha"] = 1,
+			["width"] = 45,
+			["zoom"] = 0,
+			["uid"] = "XT4(lp(YxyM",
+			["inverse"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["displayIcon"] = 136145,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["parent"] = "冰橙监控小德CD组 ",
 		},
 		["[Druid] Innervate"] = {
 			["iconSource"] = -1,
@@ -21816,11 +21551,11 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["spellName"] = 29166,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 						["useName"] = true,
 						["subeventPrefix"] = "SPELL",
 						["subeventSuffix"] = "_CAST_START",
-						["duration"] = "1",
+						["use_unit"] = true,
 						["form"] = {
 							["multi"] = {
 								true, -- [1]
@@ -21833,16 +21568,16 @@ WeakAurasSaved = {
 							},
 						},
 						["event"] = "Cooldown Progress (Spell)",
-						["matchesShowOn"] = "showOnMissing",
+						["type"] = "spell",
 						["realSpellName"] = "激活",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
 						["unevent"] = "auto",
-						["type"] = "spell",
-						["use_unit"] = true,
+						["matchesShowOn"] = "showOnMissing",
+						["duration"] = "1",
 						["use_track"] = true,
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnReady",
@@ -21854,20 +21589,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -21879,7 +21614,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_size"] = 1,
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -21888,7 +21623,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [2]
 			},
 			["height"] = 40,
@@ -21917,493 +21652,149 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["cooldownTextDisabled"] = false,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["zoom"] = 0.29,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
 			},
 			["regionType"] = "icon",
 			["selfPoint"] = "CENTER",
-			["xOffset"] = 0,
-			["cooldown"] = false,
-			["conditions"] = {
+			["parent"] = "[WotLK] Balance Druid (Left Group)",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["uid"] = "u(fTc6SNtEZ",
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
+			["config"] = {
+			},
 			["frameStrata"] = 1,
-			["zoom"] = 0.29,
+			["cooldownTextDisabled"] = false,
 			["auto"] = true,
 			["tocversion"] = 30400,
 			["id"] = "[Druid] Innervate",
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
 			["width"] = 40,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["useCooldownModRate"] = true,
-			["config"] = {
-			},
+			["uid"] = "u(fTc6SNtEZ",
 			["inverse"] = false,
-			["parent"] = "[WotLK] Balance Druid (Left Group)",
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-		},
-		["冰橙监控小德生命"] = {
-			["sparkWidth"] = 10,
-			["sparkOffsetX"] = 0,
-			["parent"] = "冰橙监控小德资源组",
-			["preferToUpdate"] = false,
-			["yOffset"] = -220,
-			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
-			["sparkRotationMode"] = "AUTO",
-			["icon"] = false,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["unit"] = "player",
-						["type"] = "unit",
-						["event"] = "Health",
-						["unevent"] = "auto",
-						["subeventPrefix"] = "SPELL",
-						["class"] = "HUNTER",
-						["use_showCost"] = true,
-						["names"] = {
-						},
-						["use_class"] = false,
-						["powertype"] = 1,
-						["spellIds"] = {
-						},
-						["duration"] = "1",
-						["subeventSuffix"] = "_CAST_START",
-						["use_unit"] = true,
-						["use_powertype"] = true,
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["unit"] = "target",
-						["debuffType"] = "HELPFUL",
-						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
-					},
-					["untrigger"] = {
-					},
-				}, -- [2]
-				["disjunctive"] = "any",
-				["activeTriggerMode"] = -10,
-			},
-			["icon_color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["internalVersion"] = 59,
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.0588235294117647, -- [1]
-				1, -- [2]
-				0.0941176470588235, -- [3]
-				1, -- [4]
-			},
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["anchorFrameType"] = "SCREEN",
-			["sparkOffsetY"] = 0,
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
-				}, -- [1]
-				{
-					["type"] = "subforeground",
-				}, -- [2]
-				{
-					["border_offset"] = 0,
-					["border_anchor"] = "bar",
-					["border_size"] = 2,
-					["border_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["border_visible"] = true,
-					["border_edge"] = "Blizzard Party",
-					["type"] = "subborder",
-				}, -- [3]
-				{
-					["text_shadowXOffset"] = 1,
-					["text_text"] = "%p/%t",
-					["text_text_format_t_time_legacy_floor"] = true,
-					["anchorXOffset"] = 0,
-					["text_text_format_p_format"] = "timed",
-					["text_shadowColor"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["text_text_format_p_time_precision"] = 1,
-					["text_selfPoint"] = "AUTO",
-					["text_automaticWidth"] = "Auto",
-					["text_fixedWidth"] = 64,
-					["text_text_format_t_time_format"] = 0,
-					["text_text_format_p_time_legacy_floor"] = true,
-					["text_justify"] = "CENTER",
-					["rotateText"] = "NONE",
-					["text_text_format_t_format"] = "timed",
-					["text_text_format_n_format"] = "none",
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["type"] = "subtext",
-					["text_fontType"] = "None",
-					["text_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["text_font"] = "Friz Quadrata TT",
-					["text_text_format_p_time_format"] = 0,
-					["text_shadowYOffset"] = -1,
-					["text_text_format_t_time_mod_rate"] = true,
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
-					["text_anchorPoint"] = "INNER_CENTER",
-					["text_text_format_t_time_precision"] = 1,
-					["anchorYOffset"] = 0,
-					["text_fontSize"] = 15,
-					["text_text_format_t_time_dynamic_threshold"] = 60,
-					["text_text_format_p_time_mod_rate"] = true,
-				}, -- [4]
-			},
-			["height"] = 15,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-			},
-			["load"] = {
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["use_vehicle"] = false,
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["use_class"] = true,
-				["use_vehicleUi"] = false,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["zoneIds"] = "",
-			},
-			["sparkBlendMode"] = "ADD",
-			["useAdjustededMax"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["source"] = "import",
-			["backgroundColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.5, -- [4]
-			},
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["xOffset"] = 170,
-			["smoothProgress"] = true,
-			["useAdjustededMin"] = false,
-			["regionType"] = "aurabar",
-			["uid"] = "J(QK9tRlwXa",
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["icon_side"] = "RIGHT",
-			["spark"] = false,
-			["sparkHeight"] = 30,
-			["texture"] = "Solid",
-			["frameStrata"] = 1,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["sparkHidden"] = "NEVER",
-			["id"] = "冰橙监控小德生命",
-			["alpha"] = 1,
-			["width"] = 335,
-			["zoom"] = 0,
-			["config"] = {
-			},
-			["inverse"] = false,
-			["iconSource"] = -1,
-			["orientation"] = "HORIZONTAL",
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 2,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = 0,
-							["property"] = "alpha",
-						}, -- [1]
-					},
-				}, -- [1]
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["desaturate"] = false,
-		},
-		["GCDHistoryBuffer3"] = {
-			["iconSource"] = -1,
-			["wagoID"] = "RvbxkQEv2",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["conditions"] = {
+			},
+			["cooldown"] = false,
+			["xOffset"] = 0,
+		},
+		["[Druid] Insect Swarm Missing"] = {
+			["iconSource"] = -1,
+			["xOffset"] = -59.99988702428038,
 			["preferToUpdate"] = false,
-			["customText"] = "\n\n",
-			["yOffset"] = 0,
+			["yOffset"] = 39.99994802569802,
 			["anchorPoint"] = "CENTER",
 			["cooldownSwipe"] = true,
-			["customTextUpdate"] = "update",
-			["url"] = "https://wago.io/RvbxkQEv2/19",
+			["cooldownEdge"] = true,
 			["actions"] = {
 				["start"] = {
-					["custom"] = "",
-					["do_custom"] = false,
-				},
-				["init"] = {
-					["custom"] = "aura_env.thisRegister = 3\n\naura_env.animX = aura_env.config[\"displayTime\"] * aura_env.region.width\nif aura_env.config[\"direction\"] == 1 then\n    aura_env.animDir = -1\nelse\n    aura_env.animDir = 1\nend\n\naura_env.xoff = 0\naura_env.castTime = 0",
-					["do_custom"] = true,
 				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["use_absorbMode"] = true,
-						["genericShowOn"] = "showOnActive",
-						["use_unit"] = true,
-						["customIcon"] = "function()\n    return aura_env.icon\nend\n\n\n\n\n\n\n\n",
+						["useName"] = true,
+						["use_alwaystrue"] = true,
+						["auranames"] = {
+							"Insect Swarm", -- [1]
+						},
+						["duration"] = "1",
+						["event"] = "Conditions",
+						["subeventPrefix"] = "SPELL",
 						["names"] = {
 						},
-						["custom_hide"] = "timed",
-						["use_cloneId"] = true,
-						["debuffType"] = "HELPFUL",
-						["duration"] = "3",
-						["type"] = "custom",
-						["custom_type"] = "event",
-						["subeventSuffix"] = "_CAST_SUCCESS",
+						["type"] = "unit",
 						["spellIds"] = {
 						},
-						["events"] = "MYSTLER_GCDHISTORY_ADD",
-						["event"] = "Combat Log",
-						["unit"] = "player",
-						["customDuration"] = "function()\n    return aura_env.config[\"displayTime\"], aura_env.castTime + aura_env.config[\"displayTime\"]\nend\n\n\n\n\n\n\n\n\n\n\n\n",
-						["unevent"] = "timed",
-						["custom"] = "function(event, arg1, arg2, arg3, arg4)\n    if arg1 == aura_env.thisRegister then\n        aura_env.icon = arg2\n        aura_env.xoff = 0\n        aura_env.castTime = arg3\n        if arg4 then\n            aura_env.region:SetDesaturated(true)\n            aura_env.region:Color(1,0,0,1)\n        else\n            aura_env.region:SetDesaturated(false)\n            aura_env.region:Color(1,1,1,1)\n        end\n        return true\n    end\n    return false\nend",
-						["use_sourceUnit"] = true,
-						["check"] = "event",
-						["subeventPrefix"] = "SPELL",
-						["sourceUnit"] = "player",
-						["dynamicDuration"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["unevent"] = "auto",
+						["unit"] = "target",
+						["use_unit"] = true,
+						["debuffType"] = "HARMFUL",
 					},
 					["untrigger"] = {
-						["custom"] = "function() return true end",
-						["unit"] = "player",
 					},
 				}, -- [1]
-				{
-					["trigger"] = {
-						["type"] = "custom",
-						["subeventSuffix"] = "_CAST_START",
-						["duration"] = "0",
-						["event"] = "Health",
-						["subeventPrefix"] = "SPELL",
-						["custom"] = "function(event, arg1, arg2)\n    if arg1 == aura_env.thisRegister then\n        aura_env.xoff = aura_env.xoff + arg2\n    end\n    return false\nend\n\n\n\n\n\n\n\n\n\n\n\n",
-						["custom_type"] = "event",
-						["events"] = "MYSTLER_GCDHISTORY_OFFSET",
-						["custom_hide"] = "timed",
-					},
-					["untrigger"] = {
-					},
-				}, -- [2]
-				["disjunctive"] = "any",
 				["activeTriggerMode"] = -10,
 			},
 			["internalVersion"] = 59,
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
 					["easeStrength"] = 3,
-					["preset"] = "fade",
+					["type"] = "none",
 					["duration_type"] = "seconds",
+					["easeType"] = "none",
 				},
 				["main"] = {
-					["colorR"] = 1,
-					["scalex"] = 1,
-					["alphaType"] = "custom",
-					["colorA"] = 1,
-					["colorG"] = 1,
-					["alphaFunc"] = "function(progress, start, delta)\n    return math.min(1.0, (1.0 - progress) * 5.0)\nend\n\n\n",
-					["use_translate"] = true,
-					["use_alpha"] = true,
-					["type"] = "custom",
-					["easeType"] = "none",
-					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n    local x = startX + aura_env.animDir * (progress * aura_env.animX)\n    x = x + aura_env.animDir * aura_env.xoff\n    return x, startY\nend",
-					["scaley"] = 1,
-					["alpha"] = 0,
-					["y"] = 0,
-					["x"] = 0,
-					["colorB"] = 1,
-					["duration"] = "100%",
 					["easeStrength"] = 3,
-					["rotate"] = 0,
-					["translateType"] = "custom",
-					["duration_type"] = "relative",
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
 				},
 				["finish"] = {
-					["colorR"] = 1,
-					["duration"] = "0.2",
-					["alphaType"] = "straight",
-					["colorA"] = 1,
-					["colorG"] = 1,
-					["alphaFunc"] = "    function(progress, start, delta)\n      return start + (progress * delta)\n    end\n  ",
-					["use_translate"] = false,
-					["use_alpha"] = false,
-					["type"] = "none",
-					["easeType"] = "none",
-					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n    local x = startX + (progress * deltaX)\n    if aura_env.state then\n        x = x + aura_env.state.xoff\n    end\n    return x, startY + (progress * deltaY)\nend",
-					["scaley"] = 1,
-					["alpha"] = 0,
-					["colorB"] = 1,
-					["y"] = 0,
-					["x"] = -150,
-					["preset"] = "fade",
 					["easeStrength"] = 3,
-					["translateType"] = "custom",
-					["rotate"] = 0,
+					["type"] = "none",
 					["duration_type"] = "seconds",
-					["scalex"] = 1,
+					["easeType"] = "none",
 				},
 			},
-			["desaturate"] = false,
-			["version"] = 19,
+			["desaturate"] = true,
 			["subRegions"] = {
 				{
 					["type"] = "subbackground",
 				}, -- [1]
 				{
-					["text_shadowXOffset"] = 0,
-					["text_text"] = " ",
-					["text_shadowColor"] = {
+					["type"] = "subborder",
+					["border_offset"] = 0,
+					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
-					["text_selfPoint"] = "AUTO",
-					["text_automaticWidth"] = "Auto",
-					["text_fixedWidth"] = 64,
-					["anchorYOffset"] = 0,
-					["text_justify"] = "CENTER",
-					["rotateText"] = "NONE",
-					["type"] = "subtext",
-					["text_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["text_font"] = "Friz Quadrata TT",
-					["text_shadowYOffset"] = 0,
-					["text_wordWrap"] = "WordWrap",
-					["text_fontType"] = "OUTLINE",
-					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
-					["text_fontSize"] = 12,
-					["anchorXOffset"] = 0,
-					["text_visible"] = false,
+					["border_visible"] = true,
+					["border_edge"] = "Square Full White",
+					["border_size"] = 2,
 				}, -- [2]
 			},
-			["height"] = 50,
+			["height"] = 60,
 			["load"] = {
-				["ingroup"] = {
-					["multi"] = {
-					},
-				},
+				["use_class"] = true,
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
+						[24] = true,
 					},
 				},
+				["use_vehicle"] = false,
 				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+						["DRUID"] = true,
+					},
+				},
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -22411,19 +21802,115 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["difficulty"] = {
-					["multi"] = {
+			},
+			["source"] = "import",
+			["cooldownTextDisabled"] = false,
+			["icon"] = true,
+			["regionType"] = "icon",
+			["parent"] = "[WotLK] Balance Druid (Main Group)",
+			["authorOptions"] = {
+			},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_InsectSwarm",
+			["uid"] = "BdpzN3jEIdL",
+			["useCooldownModRate"] = true,
+			["zoom"] = 0.29,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Insect Swarm Missing",
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["width"] = 60,
+			["frameStrata"] = 1,
+			["config"] = {
+			},
+			["inverse"] = false,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "expirationTime",
+						["value"] = "3",
+						["op"] = "<=",
 					},
-				},
-				["race"] = {
-					["multi"] = {
+					["changes"] = {
+						{
+							["value"] = true,
+						}, -- [1]
 					},
+				}, -- [1]
+			},
+			["cooldown"] = true,
+			["selfPoint"] = "CENTER",
+		},
+		["冰橙监控小德资源装饰环"] = {
+			["controlledChildren"] = {
+				"冰橙监控小德资源大光环", -- [1]
+				"冰橙监控小德资源背景", -- [2]
+				"冰橙监控小德资源小光环", -- [3]
+				"冰橙监控小德资源环", -- [4]
+				"冰橙监控小德资源环 2", -- [5]
+				"冰橙监控小德资源环 3", -- [6]
+				"冰橙监控小德资源环 4", -- [7]
+				"冰橙监控小德资源前景", -- [8]
+				"冰橙监控小德资源数字", -- [9]
+				"冰橙监控小德资源数字 2", -- [10]
+				"冰橙监控小德资源数字 3", -- [11]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["authorOptions"] = {
+			},
+			["preferToUpdate"] = false,
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["actions"] = {
+				["start"] = {
 				},
-				["talent2"] = {
-					["multi"] = {
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["debuffType"] = "HELPFUL",
+						["type"] = "aura2",
+						["spellIds"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
+						["subeventPrefix"] = "SPELL",
+						["event"] = "Health",
+						["names"] = {
+						},
 					},
-				},
-				["faction"] = {
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["internalVersion"] = 59,
+			["selfPoint"] = "CENTER",
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["subRegions"] = {
+			},
+			["load"] = {
+				["size"] = {
 					["multi"] = {
 					},
 				},
@@ -22431,83 +21918,70 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
+				["class"] = {
 					["multi"] = {
 					},
 				},
-				["pvptalent"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+			},
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
 			},
 			["source"] = "import",
-			["width"] = 50,
-			["selfPoint"] = "CENTER",
-			["xOffset"] = 0,
-			["icon"] = true,
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["regionType"] = "icon",
-			["displayIcon"] = "",
-			["parent"] = "GCDHistoryGrp",
-			["cooldownEdge"] = false,
-			["config"] = {
-				["displayTime"] = 3,
-				["direction"] = 1,
-			},
-			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["cooldownTextDisabled"] = false,
-			["semver"] = "1.1.10",
+			["scale"] = 1,
+			["border"] = false,
+			["borderEdge"] = "Square Full White",
+			["regionType"] = "group",
+			["borderSize"] = 2,
+			["borderOffset"] = 4,
 			["tocversion"] = 30400,
-			["id"] = "GCDHistoryBuffer3",
-			["auto"] = true,
-			["alpha"] = 1,
+			["id"] = "冰橙监控小德资源装饰环",
+			["borderInset"] = 1,
+			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["uid"] = "fhYScDQpw0c",
-			["inverse"] = false,
-			["stickyDuration"] = false,
+			["xOffset"] = 0,
+			["uid"] = "U32ta9R6fId",
+			["config"] = {
+			},
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 			["conditions"] = {
 			},
-			["cooldown"] = false,
-			["authorOptions"] = {
-				{
-					["desc"] = "In which direction should the history expand?",
-					["type"] = "select",
-					["values"] = {
-						"Left", -- [1]
-						"Right", -- [2]
-					},
-					["default"] = 1,
-					["key"] = "direction",
-					["useDesc"] = true,
-					["name"] = "Direction",
-					["width"] = 1,
-				}, -- [1]
-				{
-					["type"] = "range",
-					["useDesc"] = true,
-					["max"] = 6,
-					["step"] = 0.5,
-					["width"] = 1,
-					["min"] = 1,
-					["key"] = "displayTime",
-					["desc"] = "How long (in seconds) icons are shown at max.",
-					["name"] = "Display Time",
-					["default"] = 3,
-				}, -- [2]
+			["information"] = {
+				["forceEvents"] = true,
 			},
+			["parent"] = "冰橙WLK小德监控WA部分",
 		},
 		["冰橙监控小德虫群"] = {
 			["iconSource"] = -1,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -22520,9 +21994,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -22539,9 +22013,9 @@ WeakAurasSaved = {
 						},
 						["subeventPrefix"] = "SPELL",
 						["duration"] = "1",
-						["unit"] = "target",
-						["use_genericShowOn"] = true,
-						["spellName"] = 19574,
+						["use_absorbMode"] = true,
+						["use_unit"] = true,
+						["matchesShowOn"] = "showOnActive",
 						["debuffType"] = "HARMFUL",
 						["unevent"] = "auto",
 						["type"] = "aura2",
@@ -22557,9 +22031,9 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["matchesShowOn"] = "showOnActive",
-						["use_unit"] = true,
-						["use_absorbMode"] = true,
+						["spellName"] = 19574,
+						["use_genericShowOn"] = true,
+						["unit"] = "target",
 						["use_track"] = true,
 						["useIgnoreName"] = false,
 					},
@@ -22571,11 +22045,11 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "unit",
 						["use_hostility"] = true,
-						["hostility"] = "hostile",
+						["use_unit"] = true,
 						["unit"] = "target",
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["hostility"] = "hostile",
 					},
 					["untrigger"] = {
 					},
@@ -22638,9 +22112,9 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_legacy_floor"] = false,
+					["text_text_format_p_time_precision"] = 1,
 					["type"] = "subtext",
-					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["anchorXOffset"] = 0,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -22650,19 +22124,19 @@ WeakAurasSaved = {
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_format"] = "timed",
 					["text_shadowYOffset"] = 0,
-					["text_text_format_p_time_mod_rate"] = true,
-					["text_wordWrap"] = "WordWrap",
 					["text_visible"] = true,
+					["text_wordWrap"] = "WordWrap",
+					["text_fontType"] = "OUTLINE",
 					["text_anchorPoint"] = "CENTER",
 					["text_text_format_p_time_format"] = 0,
-					["text_fontType"] = "OUTLINE",
+					["text_text_format_p_time_mod_rate"] = true,
 					["text_fontSize"] = 12,
-					["anchorXOffset"] = 0,
-					["text_text_format_p_time_precision"] = 1,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["text_text_format_p_time_legacy_floor"] = false,
 				}, -- [3]
 				{
 					["border_size"] = 2,
-					["type"] = "subborder",
+					["border_offset"] = 0,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -22673,7 +22147,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_offset"] = 0,
+					["type"] = "subborder",
 				}, -- [4]
 			},
 			["height"] = 30,
@@ -22692,32 +22166,33 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_spec"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_vehicleUi"] = false,
+				["zoneIds"] = "",
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["use_vehicleUi"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["uid"] = "NU1SduZmWsD",
-			["icon"] = true,
+			["config"] = {
+			},
+			["desaturate"] = false,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -22725,29 +22200,16 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
 			["regionType"] = "icon",
-			["desaturate"] = false,
-			["cooldown"] = true,
-			["displayIcon"] = 136045,
 			["parent"] = "冰橙监控小德BUFF组",
-			["zoom"] = 0,
-			["anchorFrameType"] = "SCREEN",
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德虫群",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["width"] = 50,
-			["useCooldownModRate"] = true,
-			["config"] = {
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["inverse"] = true,
-			["xOffset"] = 170,
 			["conditions"] = {
 				{
 					["check"] = {
@@ -22780,16 +22242,28 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["alpha"] = 1,
+			["width"] = 50,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德虫群",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
+			["uid"] = "NU1SduZmWsD",
+			["inverse"] = true,
+			["icon"] = true,
+			["displayIcon"] = 136045,
+			["cooldown"] = true,
+			["xOffset"] = 170,
 		},
 		["GCDHistoryBuffer4"] = {
 			["iconSource"] = -1,
@@ -22812,11 +22286,11 @@ WeakAurasSaved = {
 					["custom"] = "",
 					["do_custom"] = false,
 				},
+				["finish"] = {
+				},
 				["init"] = {
 					["custom"] = "aura_env.thisRegister = 4\n\naura_env.animX = aura_env.config[\"displayTime\"] * aura_env.region.width\nif aura_env.config[\"direction\"] == 1 then\n    aura_env.animDir = -1\nelse\n    aura_env.animDir = 1\nend\n\naura_env.xoff = 0\naura_env.castTime = 0",
 					["do_custom"] = true,
-				},
-				["finish"] = {
 				},
 			},
 			["triggers"] = {
@@ -22826,28 +22300,28 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showOnActive",
 						["use_unit"] = true,
 						["customIcon"] = "function()\n    return aura_env.icon\nend\n\n\n\n\n\n\n\n",
-						["names"] = {
-						},
-						["custom_hide"] = "timed",
-						["use_cloneId"] = true,
+						["dynamicDuration"] = true,
 						["debuffType"] = "HELPFUL",
-						["duration"] = "3",
+						["use_cloneId"] = true,
+						["custom_hide"] = "timed",
+						["subeventPrefix"] = "SPELL",
 						["type"] = "custom",
-						["custom_type"] = "event",
 						["subeventSuffix"] = "_CAST_SUCCESS",
+						["custom_type"] = "event",
 						["spellIds"] = {
 						},
 						["events"] = "MYSTLER_GCDHISTORY_ADD",
 						["event"] = "Combat Log",
-						["unit"] = "player",
-						["customDuration"] = "function()\n    return aura_env.config[\"displayTime\"], aura_env.castTime + aura_env.config[\"displayTime\"]\nend\n\n\n\n\n\n\n\n\n\n\n\n",
 						["unevent"] = "timed",
+						["customDuration"] = "function()\n    return aura_env.config[\"displayTime\"], aura_env.castTime + aura_env.config[\"displayTime\"]\nend\n\n\n\n\n\n\n\n\n\n\n\n",
+						["unit"] = "player",
 						["custom"] = "function(event, arg1, arg2, arg3, arg4)\n    if arg1 == aura_env.thisRegister then\n        aura_env.icon = arg2\n        aura_env.xoff = 0\n        aura_env.castTime = arg3\n        if arg4 then\n            aura_env.region:SetDesaturated(true)\n            aura_env.region:Color(1,0,0,1)\n        else\n            aura_env.region:SetDesaturated(false)\n            aura_env.region:Color(1,1,1,1)\n        end\n        return true\n    end\n    return false\nend",
 						["use_sourceUnit"] = true,
 						["check"] = "event",
-						["subeventPrefix"] = "SPELL",
+						["duration"] = "3",
 						["sourceUnit"] = "player",
-						["dynamicDuration"] = true,
+						["names"] = {
+						},
 					},
 					["untrigger"] = {
 						["custom"] = "function() return true end",
@@ -22879,8 +22353,8 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["easeStrength"] = 3,
-					["preset"] = "fade",
 					["duration_type"] = "seconds",
+					["preset"] = "fade",
 				},
 				["main"] = {
 					["colorR"] = 1,
@@ -22898,12 +22372,12 @@ WeakAurasSaved = {
 					["alpha"] = 0,
 					["y"] = 0,
 					["x"] = 0,
-					["colorB"] = 1,
-					["duration"] = "100%",
-					["easeStrength"] = 3,
-					["rotate"] = 0,
-					["translateType"] = "custom",
 					["duration_type"] = "relative",
+					["translateType"] = "custom",
+					["rotate"] = 0,
+					["easeStrength"] = 3,
+					["duration"] = "100%",
+					["colorB"] = 1,
 				},
 				["finish"] = {
 					["colorR"] = 1,
@@ -22919,15 +22393,15 @@ WeakAurasSaved = {
 					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n    local x = startX + (progress * deltaX)\n    if aura_env.state then\n        x = x + aura_env.state.xoff\n    end\n    return x, startY + (progress * deltaY)\nend",
 					["scaley"] = 1,
 					["alpha"] = 0,
-					["colorB"] = 1,
+					["scalex"] = 1,
 					["y"] = 0,
 					["x"] = -150,
-					["preset"] = "fade",
-					["easeStrength"] = 3,
-					["translateType"] = "custom",
-					["rotate"] = 0,
 					["duration_type"] = "seconds",
-					["scalex"] = 1,
+					["rotate"] = 0,
+					["translateType"] = "custom",
+					["easeStrength"] = 3,
+					["preset"] = "fade",
+					["colorB"] = 1,
 				},
 			},
 			["desaturate"] = false,
@@ -22983,10 +22457,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["zoneIds"] = "",
 				["difficulty"] = {
 					["multi"] = {
 					},
@@ -22995,19 +22466,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["talent2"] = {
-					["multi"] = {
-					},
-				},
 				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -23015,54 +22474,39 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["width"] = 50,
-			["selfPoint"] = "CENTER",
-			["xOffset"] = 0,
-			["icon"] = true,
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["regionType"] = "icon",
-			["displayIcon"] = "",
-			["parent"] = "GCDHistoryGrp",
-			["cooldownEdge"] = false,
-			["config"] = {
-				["displayTime"] = 3,
-				["direction"] = 1,
-			},
-			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["cooldownTextDisabled"] = false,
-			["semver"] = "1.1.10",
-			["tocversion"] = 30400,
-			["id"] = "GCDHistoryBuffer4",
-			["auto"] = true,
-			["alpha"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["uid"] = "fPKylY3er(o",
-			["inverse"] = false,
-			["stickyDuration"] = false,
-			["conditions"] = {
-			},
-			["cooldown"] = false,
+			["cooldownTextDisabled"] = false,
 			["authorOptions"] = {
 				{
-					["desc"] = "In which direction should the history expand?",
+					["width"] = 1,
 					["type"] = "select",
 					["values"] = {
 						"Left", -- [1]
 						"Right", -- [2]
 					},
-					["default"] = 1,
-					["key"] = "direction",
-					["useDesc"] = true,
 					["name"] = "Direction",
-					["width"] = 1,
+					["useDesc"] = true,
+					["key"] = "direction",
+					["default"] = 1,
+					["desc"] = "In which direction should the history expand?",
 				}, -- [1]
 				{
 					["type"] = "range",
@@ -23072,11 +22516,41 @@ WeakAurasSaved = {
 					["width"] = 1,
 					["min"] = 1,
 					["key"] = "displayTime",
-					["desc"] = "How long (in seconds) icons are shown at max.",
-					["name"] = "Display Time",
 					["default"] = 3,
+					["name"] = "Display Time",
+					["desc"] = "How long (in seconds) icons are shown at max.",
 				}, -- [2]
 			},
+			["xOffset"] = 0,
+			["cooldown"] = false,
+			["regionType"] = "icon",
+			["conditions"] = {
+			},
+			["stickyDuration"] = false,
+			["icon"] = true,
+			["uid"] = "fPKylY3er(o",
+			["alpha"] = 1,
+			["semver"] = "1.1.10",
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "GCDHistoryBuffer4",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["width"] = 50,
+			["parent"] = "GCDHistoryGrp",
+			["config"] = {
+				["direction"] = 1,
+				["displayTime"] = 3,
+			},
+			["inverse"] = false,
+			["selfPoint"] = "CENTER",
+			["displayIcon"] = "",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["cooldownEdge"] = false,
 		},
 		["雷德王阿姨-日蚀月蚀提示+内置cd"] = {
 			["arcLength"] = 360,
@@ -23097,15 +22571,15 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["debuffType"] = "HELPFUL",
+						["subeventPrefix"] = "SPELL",
 						["type"] = "aura2",
 						["spellIds"] = {
 						},
@@ -23114,7 +22588,7 @@ WeakAurasSaved = {
 						["names"] = {
 						},
 						["event"] = "Health",
-						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -23124,34 +22598,39 @@ WeakAurasSaved = {
 			["internalVersion"] = 59,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
 			["align"] = "CENTER",
 			["stagger"] = 0,
-			["frameStrata"] = 1,
-			["limit"] = 5,
+			["gridWidth"] = 5,
+			["sort"] = "none",
 			["subRegions"] = {
 			},
-			["radius"] = 200,
-			["rotation"] = 0,
+			["useLimit"] = false,
+			["sortHybridTable"] = {
+				["日蚀触发"] = false,
+				["月蚀触发 "] = false,
+				["日蚀冷却"] = false,
+				["月蚀冷却 "] = false,
+			},
 			["load"] = {
-				["talent"] = {
+				["size"] = {
 					["multi"] = {
 					},
 				},
@@ -23163,7 +22642,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -23175,26 +22654,20 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["sortHybridTable"] = {
-				["日蚀触发"] = false,
-				["月蚀触发 "] = false,
-				["日蚀冷却"] = false,
-				["月蚀冷却 "] = false,
-			},
+			["radius"] = 200,
 			["animate"] = false,
-			["source"] = "import",
+			["space"] = 0,
 			["scale"] = 1,
-			["grow"] = "RIGHT",
+			["gridType"] = "RD",
 			["border"] = false,
 			["borderEdge"] = "Square Full White",
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
-			["sort"] = "none",
-			["borderInset"] = 1,
 			["anchorPerUnit"] = "CUSTOM",
+			["uid"] = "pKJz0wdW89z",
+			["limit"] = 5,
 			["constantFactor"] = "RADIUS",
-			["config"] = {
-			},
+			["rowSpace"] = 1,
 			["borderOffset"] = 4,
 			["borderColor"] = {
 				0, -- [1]
@@ -23204,55 +22677,276 @@ WeakAurasSaved = {
 			},
 			["tocversion"] = 30400,
 			["id"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
-			["rowSpace"] = 1,
-			["gridWidth"] = 5,
-			["anchorFrameType"] = "SCREEN",
-			["authorOptions"] = {
+			["config"] = {
 			},
-			["uid"] = "pKJz0wdW89z",
-			["gridType"] = "RD",
-			["space"] = 0,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["grow"] = "RIGHT",
+			["borderInset"] = 1,
+			["source"] = "import",
+			["rotation"] = 0,
 			["conditions"] = {
 			},
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["useLimit"] = false,
+			["authorOptions"] = {
+			},
 		},
-		["冰橙监控小德猫野性冲锋CD"] = {
+		["冰橙监控小德资源环 2"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["preferToUpdate"] = false,
+			["yOffset"] = -285,
+			["anchorPoint"] = "CENTER",
+			["desaturateBackground"] = false,
+			["alpha"] = 1,
+			["sameTexture"] = true,
+			["url"] = "",
+			["desaturateForeground"] = false,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["subeventSuffix"] = "_CAST_START",
+						["event"] = "Power",
+						["use_unit"] = true,
+						["powertype"] = 1,
+						["spellIds"] = {
+						},
+						["unit"] = "player",
+						["subeventPrefix"] = "SPELL",
+						["names"] = {
+						},
+						["use_powertype"] = true,
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+				{
+					["trigger"] = {
+						["debuffType"] = "HELPFUL",
+						["type"] = "unit",
+						["use_form"] = true,
+						["use_inverse"] = true,
+						["use_unit"] = true,
+						["form"] = {
+							["single"] = 1,
+						},
+						["event"] = "Stance/Form/Aura",
+						["unit"] = "player",
+					},
+					["untrigger"] = {
+					},
+				}, -- [2]
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["use_hostility"] = false,
+						["unit"] = "target",
+						["use_unit"] = true,
+						["debuffType"] = "HELPFUL",
+						["event"] = "Unit Characteristics",
+						["hostility"] = "hostile",
+					},
+					["untrigger"] = {
+					},
+				}, -- [3]
+				["disjunctive"] = "any",
+				["activeTriggerMode"] = -10,
+			},
+			["endAngle"] = 270,
+			["internalVersion"] = 59,
+			["selfPoint"] = "CENTER",
+			["backgroundColor"] = {
+				0, -- [1]
+				0.81960784313725, -- [2]
+				1, -- [3]
+				0, -- [4]
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				0.0392156862745098, -- [2]
+				0.02352941176470588, -- [3]
+				1, -- [4]
+			},
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["rotation"] = 0,
+			["font"] = "Friz Quadrata TT",
+			["version"] = 11,
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
+			},
+			["height"] = 120,
+			["crop_x"] = 0.41,
+			["crop_y"] = 0.41,
+			["xOffset"] = 170,
+			["useAdjustededMax"] = false,
+			["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
+			["source"] = "import",
+			["startAngle"] = 90,
+			["backgroundTexture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura3",
+			["fontSize"] = 12,
+			["mirror"] = false,
+			["useAdjustededMin"] = false,
+			["regionType"] = "progresstexture",
+			["config"] = {
+			},
+			["blendMode"] = "BLEND",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
+			["anchorFrameType"] = "SCREEN",
+			["slantMode"] = "INSIDE",
+			["parent"] = "冰橙监控小德资源装饰环",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["tocversion"] = 30400,
+			["semver"] = "1.0.10",
+			["compress"] = false,
+			["id"] = "冰橙监控小德资源环 2",
+			["foregroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White",
+			["frameStrata"] = 2,
+			["width"] = 120,
+			["load"] = {
+				["use_class"] = true,
+				["use_never"] = true,
+				["use_vehicleUi"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["uid"] = "utXsN0dn6y7",
+			["inverse"] = false,
+			["wagoID"] = "H_zZHwkG7",
+			["orientation"] = "ANTICLOCKWISE",
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 2,
+						["variable"] = "show",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [1]
+				{
+					["check"] = {
+						["trigger"] = 3,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [2]
+			},
+			["information"] = {
+				["forceEvents"] = true,
+			},
+			["backgroundOffset"] = 0,
+		},
+		["冰橙监控小德潜行CD"] = {
 			["iconSource"] = -1,
-			["xOffset"] = 25,
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
 			["preferToUpdate"] = false,
 			["yOffset"] = -265,
 			["anchorPoint"] = "CENTER",
 			["cooldownSwipe"] = true,
 			["cooldownEdge"] = false,
-			["icon"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["triggers"] = {
 				{
 					["trigger"] = {
 						["track"] = "auto",
 						["duration"] = "1",
 						["genericShowOn"] = "showAlways",
-						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
 						["use_absorbMode"] = true,
 						["unevent"] = "auto",
-						["use_unit"] = true,
+						["subeventPrefix"] = "SPELL",
 						["use_genericShowOn"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
-						["realSpellName"] = "野性冲锋 - 豹",
+						["realSpellName"] = "潜行",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
 						["subeventSuffix"] = "_CAST_START",
-						["spellName"] = 49376,
+						["spellName"] = 6783,
+						["unit"] = "player",
+						["use_track"] = true,
 						["names"] = {
 						},
-						["use_track"] = true,
-						["unit"] = "player",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -23261,14 +22955,14 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["use_form"] = true,
 						["use_unit"] = true,
 						["form"] = {
 							["single"] = 3,
 						},
 						["event"] = "Stance/Form/Aura",
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
@@ -23289,35 +22983,14 @@ WeakAurasSaved = {
 			},
 			["internalVersion"] = 59,
 			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["preset"] = "slideleft",
-					["easeStrength"] = 3,
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["preset"] = "slideleft",
-					["easeStrength"] = 3,
-				},
-			},
+			["selfPoint"] = "CENTER",
 			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 			["subRegions"] = {
 				{
 					["type"] = "subbackground",
 				}, -- [1]
 				{
-					["text_shadowXOffset"] = 0,
+					["text_text_format_p_time_precision"] = 1,
 					["text_text_format_s_format"] = "none",
 					["text_text"] = "%s",
 					["text_shadowColor"] = {
@@ -23340,13 +23013,17 @@ WeakAurasSaved = {
 						1, -- [4]
 					},
 					["text_font"] = "Friz Quadrata TT",
+					["text_fontType"] = "OUTLINE",
 					["text_shadowYOffset"] = 0,
+					["anchorXOffset"] = 0,
 					["text_wordWrap"] = "WordWrap",
 					["text_visible"] = true,
 					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
+					["text_text_format_p_time_format"] = 0,
+					["text_text_format_p_format"] = "timed",
 					["text_fontSize"] = 16,
-					["anchorXOffset"] = 0,
-					["text_fontType"] = "OUTLINE",
+					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["text_shadowXOffset"] = 0,
 				}, -- [2]
 				{
 					["type"] = "subborder",
@@ -23373,45 +23050,64 @@ WeakAurasSaved = {
 					},
 				},
 				["use_vehicle"] = false,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-						true, -- [2]
-						true, -- [3]
-					},
-				},
-				["use_class"] = true,
-				["use_spellknown"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_vehicleUi"] = false,
 				["class"] = {
 					["single"] = "DRUID",
 					["multi"] = {
 					},
 				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["use_spellknown"] = false,
+				["use_spec"] = true,
+				["use_vehicleUi"] = false,
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+						nil, -- [2]
+						true, -- [3]
+						true, -- [4]
+					},
+				},
 				["use_exact_spellknown"] = false,
-				["spellknown"] = 16979,
+				["spellknown"] = 18562,
 				["zoneIds"] = "",
 			},
 			["source"] = "import",
 			["config"] = {
 			},
-			["actions"] = {
+			["desaturate"] = false,
+			["animation"] = {
 				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
-				["init"] = {
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
 				},
 				["finish"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
-			["selfPoint"] = "CENTER",
 			["regionType"] = "icon",
-			["desaturate"] = false,
-			["cooldown"] = true,
+			["xOffset"] = 315,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
 			["conditions"] = {
 				{
 					["check"] = {
@@ -23433,268 +23129,34 @@ WeakAurasSaved = {
 					},
 					["changes"] = {
 						{
-							["property"] = "alpha",
-						}, -- [1]
-					},
-				}, -- [2]
-			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["zoom"] = 0,
-			["anchorFrameType"] = "SCREEN",
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德猫野性冲锋CD",
-			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 45,
-			["alpha"] = 1,
-			["uid"] = "VvI6yqpY6GO",
-			["inverse"] = true,
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["displayIcon"] = 136145,
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["parent"] = "冰橙监控小德CD组 ",
-		},
-		["冰橙监控小德复生CD"] = {
-			["iconSource"] = -1,
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["preferToUpdate"] = false,
-			["yOffset"] = -265,
-			["anchorPoint"] = "CENTER",
-			["cooldownSwipe"] = true,
-			["cooldownEdge"] = true,
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["track"] = "auto",
-						["itemName"] = 6265,
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
-						["use_absorbMode"] = true,
-						["type"] = "spell",
-						["use_unit"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["use_genericShowOn"] = true,
-						["unevent"] = "auto",
-						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = false,
-						["realSpellName"] = "复生",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["spellName"] = 20747,
-						["use_itemName"] = true,
-						["unit"] = "player",
-						["use_track"] = true,
-						["names"] = {
-						},
-					},
-					["untrigger"] = {
-						["genericShowOn"] = "showAlways",
-					},
-				}, -- [1]
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["unit"] = "target",
-						["debuffType"] = "HELPFUL",
-						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
-					},
-					["untrigger"] = {
-					},
-				}, -- [2]
-				["disjunctive"] = "any",
-				["activeTriggerMode"] = -10,
-			},
-			["internalVersion"] = 59,
-			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
-				}, -- [1]
-				{
-					["text_shadowXOffset"] = 0,
-					["text_text_format_s_format"] = "none",
-					["text_text"] = "%s",
-					["text_shadowColor"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["text_selfPoint"] = "AUTO",
-					["text_automaticWidth"] = "Auto",
-					["text_fixedWidth"] = 64,
-					["anchorYOffset"] = 0,
-					["text_justify"] = "CENTER",
-					["rotateText"] = "NONE",
-					["type"] = "subtext",
-					["text_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["text_font"] = "Friz Quadrata TT",
-					["text_shadowYOffset"] = 0,
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
-					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
-					["text_fontSize"] = 16,
-					["anchorXOffset"] = 0,
-					["text_fontType"] = "OUTLINE",
-				}, -- [2]
-				{
-					["border_size"] = 2,
-					["border_offset"] = 0,
-					["text_color"] = {
-					},
-					["border_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["border_visible"] = true,
-					["border_edge"] = "Blizzard Party",
-					["type"] = "subborder",
-				}, -- [3]
-			},
-			["height"] = 45,
-			["load"] = {
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["use_vehicle"] = false,
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["use_vehicleUi"] = false,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-						[3] = true,
-					},
-				},
-				["zoneIds"] = "",
-			},
-			["source"] = "import",
-			["config"] = {
-			},
-			["icon"] = true,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-			},
-			["regionType"] = "icon",
-			["desaturate"] = false,
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 2,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
 							["value"] = 0,
 							["property"] = "alpha",
 						}, -- [1]
 					},
-				}, -- [1]
+				}, -- [2]
 			},
-			["xOffset"] = 70,
-			["cooldownTextDisabled"] = false,
+			["parent"] = "冰橙监控小德CD组 ",
+			["alpha"] = 1,
 			["anchorFrameType"] = "SCREEN",
 			["zoom"] = 0,
 			["auto"] = true,
 			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德复生CD",
-			["alpha"] = 1,
+			["id"] = "冰橙监控小德潜行CD",
+			["useCooldownModRate"] = true,
 			["frameStrata"] = 1,
 			["width"] = 45,
-			["useCooldownModRate"] = true,
-			["uid"] = "oNl0h6jIxAb",
+			["cooldownTextDisabled"] = false,
+			["uid"] = ")e2ewq(E4o5",
 			["inverse"] = true,
+			["icon"] = true,
+			["displayIcon"] = "",
+			["cooldown"] = true,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayIcon"] = "",
-			["cooldown"] = true,
-			["parent"] = "冰橙监控小德CD组 ",
 		},
 		["冰橙监控小德资源环"] = {
 			["user_y"] = 0,
@@ -23709,15 +23171,15 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["desaturateBackground"] = false,
-			["alpha"] = 1,
+			["frameStrata"] = 2,
 			["sameTexture"] = true,
 			["url"] = "",
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
@@ -23742,32 +23204,32 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["trigger"] = {
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 						["type"] = "unit",
 						["use_form"] = true,
+						["use_inverse"] = true,
+						["use_unit"] = true,
 						["form"] = {
 							["single"] = 1,
 						},
-						["use_unit"] = true,
-						["use_inverse"] = true,
 						["event"] = "Stance/Form/Aura",
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 					},
 				}, -- [2]
 				{
 					["trigger"] = {
-						["use_unit"] = true,
+						["debuffType"] = "HELPFUL",
 						["use_form"] = true,
 						["type"] = "unit",
+						["use_inverse"] = true,
+						["unit"] = "player",
 						["form"] = {
 							["single"] = 3,
 						},
-						["unit"] = "player",
-						["use_inverse"] = true,
 						["event"] = "Stance/Form/Aura",
-						["debuffType"] = "HELPFUL",
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
 					},
@@ -23776,11 +23238,11 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "unit",
 						["use_hostility"] = false,
-						["unit"] = "target",
+						["hostility"] = "hostile",
 						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["hostility"] = "hostile",
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -23792,20 +23254,20 @@ WeakAurasSaved = {
 			["internalVersion"] = 59,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -23822,71 +23284,6 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["height"] = 120,
-			["crop_x"] = 0.41,
-			["crop_y"] = 0.41,
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["useAdjustededMax"] = false,
-			["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-			["source"] = "import",
-			["startAngle"] = 90,
-			["wagoID"] = "H_zZHwkG7",
-			["backgroundTexture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura3",
-			["mirror"] = false,
-			["useAdjustededMin"] = false,
-			["regionType"] = "progresstexture",
-			["config"] = {
-			},
-			["blendMode"] = "BLEND",
-			["selfPoint"] = "CENTER",
-			["anchorFrameType"] = "SCREEN",
-			["slantMode"] = "INSIDE",
-			["foregroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White",
-			["load"] = {
-				["use_class"] = true,
-				["use_never"] = true,
-				["use_vehicleUi"] = false,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["tocversion"] = 30400,
-			["semver"] = "1.0.10",
-			["compress"] = false,
-			["id"] = "冰橙监控小德资源环",
-			["parent"] = "冰橙监控小德资源装饰环",
-			["frameStrata"] = 2,
-			["width"] = 120,
-			["backgroundColor"] = {
-				0, -- [1]
-				0.81960784313725, -- [2]
-				1, -- [3]
-				0, -- [4]
-			},
-			["uid"] = "oYt)Zy64TKn",
-			["inverse"] = false,
-			["fontSize"] = 12,
-			["orientation"] = "ANTICLOCKWISE",
 			["conditions"] = {
 				{
 					["check"] = {
@@ -23925,6 +23322,71 @@ WeakAurasSaved = {
 					},
 				}, -- [3]
 			},
+			["crop_y"] = 0.41,
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["useAdjustededMax"] = false,
+			["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
+			["source"] = "import",
+			["startAngle"] = 90,
+			["fontSize"] = 12,
+			["backgroundTexture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura3",
+			["mirror"] = false,
+			["useAdjustededMin"] = false,
+			["regionType"] = "progresstexture",
+			["uid"] = "oYt)Zy64TKn",
+			["blendMode"] = "BLEND",
+			["backgroundColor"] = {
+				0, -- [1]
+				0.81960784313725, -- [2]
+				1, -- [3]
+				0, -- [4]
+			},
+			["width"] = 120,
+			["slantMode"] = "INSIDE",
+			["parent"] = "冰橙监控小德资源装饰环",
+			["load"] = {
+				["use_class"] = true,
+				["use_never"] = true,
+				["use_vehicleUi"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["compress"] = false,
+			["semver"] = "1.0.10",
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德资源环",
+			["foregroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White",
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["selfPoint"] = "CENTER",
+			["config"] = {
+			},
+			["inverse"] = false,
+			["wagoID"] = "H_zZHwkG7",
+			["orientation"] = "ANTICLOCKWISE",
+			["crop_x"] = 0.41,
 			["information"] = {
 				["forceEvents"] = true,
 			},
@@ -23943,9 +23405,9 @@ WeakAurasSaved = {
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
+				},
+				["init"] = {
 				},
 			},
 			["triggers"] = {
@@ -23958,9 +23420,9 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["use_unit"] = true,
+						["unit"] = "target",
 						["names"] = {
 						},
-						["unit"] = "target",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -23972,20 +23434,20 @@ WeakAurasSaved = {
 			["internalVersion"] = 59,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -24026,23 +23488,20 @@ WeakAurasSaved = {
 			["fontSize"] = 20,
 			["source"] = "import",
 			["shadowXOffset"] = 1,
-			["selfPoint"] = "BOTTOM",
+			["displayText_format_p_time_legacy_floor"] = false,
 			["regionType"] = "text",
-			["preferToUpdate"] = false,
 			["displayText_format_p_format"] = "timed",
-			["fixedWidth"] = 200,
+			["selfPoint"] = "BOTTOM",
+			["conditions"] = {
+			},
 			["displayText_format_p_time_precision"] = 1,
-			["xOffset"] = 115,
-			["displayText"] = "%1.minRange",
-			["uid"] = "YaXt5T(7FdE",
-			["justify"] = "LEFT",
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德距离",
-			["yOffset"] = -295,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["wordWrap"] = "WordWrap",
-			["config"] = {
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
 			},
 			["color"] = {
 				1, -- [1]
@@ -24050,27 +23509,30 @@ WeakAurasSaved = {
 				0.0392156862745098, -- [3]
 				1, -- [4]
 			},
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
+			["config"] = {
 			},
+			["justify"] = "LEFT",
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德距离",
+			["wordWrap"] = "WordWrap",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["yOffset"] = -295,
+			["uid"] = "YaXt5T(7FdE",
+			["displayText"] = "%1.minRange",
+			["xOffset"] = 115,
 			["shadowColor"] = {
 				0, -- [1]
 				0, -- [2]
 				0, -- [3]
 				1, -- [4]
 			},
-			["conditions"] = {
-			},
+			["fixedWidth"] = 200,
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["displayText_format_p_time_legacy_floor"] = false,
+			["preferToUpdate"] = false,
 		},
 		["Insect Swarm -Solar"] = {
 			["iconSource"] = -1,
@@ -24089,16 +23551,16 @@ WeakAurasSaved = {
 					["do_glow"] = false,
 					["glow_action"] = "show",
 				},
+				["init"] = {
+				},
 				["finish"] = {
 					["glow_frame_type"] = "FRAMESELECTOR",
 					["hide_all_glows"] = false,
 					["glow_action"] = "show",
-					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Life Tap",
 					["glow_type"] = "Pixel",
 					["do_message"] = false,
-					["glow_frame"] = "WeakAuras:Life Tap",
-				},
-				["init"] = {
+					["do_glow"] = false,
 				},
 			},
 			["triggers"] = {
@@ -24117,18 +23579,18 @@ WeakAurasSaved = {
 						["subeventSuffix"] = "_CAST_START",
 						["event"] = "Health",
 						["subeventPrefix"] = "SPELL",
-						["names"] = {
-						},
-						["auraspellids"] = {
-							"48468", -- [1]
-							"27013", -- [2]
-						},
+						["useExactSpellId"] = true,
+						["ownOnly"] = true,
 						["spellIds"] = {
 						},
 						["useName"] = false,
 						["remOperator"] = "<",
-						["ownOnly"] = true,
-						["useExactSpellId"] = true,
+						["auraspellids"] = {
+							"48468", -- [1]
+							"27013", -- [2]
+						},
+						["names"] = {
+						},
 						["useRem"] = false,
 					},
 					["untrigger"] = {
@@ -24136,16 +23598,16 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["trigger"] = {
-						["useRem"] = true,
+						["debuffType"] = "HELPFUL",
 						["type"] = "aura2",
-						["unit"] = "player",
 						["auraspellids"] = {
 							"48517", -- [1]
 						},
+						["useExactSpellId"] = true,
 						["remOperator"] = ">=",
 						["rem"] = "13",
-						["useExactSpellId"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
+						["useRem"] = true,
 					},
 					["untrigger"] = {
 					},
@@ -24189,59 +23651,59 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["config"] = {
+			["uid"] = "J7od41mpWGd",
+			["zoom"] = 0,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["icon"] = true,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["cooldownTextDisabled"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
+			["url"] = "https://wago.io/X6wQKkZUq/5",
+			["useCooldownModRate"] = true,
+			["width"] = 30,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "Insect Swarm -Solar",
+			["frameStrata"] = 1,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["semver"] = "1.0.4",
+			["config"] = {
+			},
+			["inverse"] = false,
+			["parent"] = "平衡德循環助手",
+			["conditions"] = {
+			},
+			["cooldown"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
-			["cooldown"] = false,
-			["icon"] = true,
-			["parent"] = "平衡德循環助手",
-			["semver"] = "1.0.4",
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "Insect Swarm -Solar",
-			["alpha"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 30,
-			["frameStrata"] = 1,
-			["uid"] = "J7od41mpWGd",
-			["inverse"] = false,
-			["url"] = "https://wago.io/X6wQKkZUq/5",
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["xOffset"] = 0,
 		},
 		["[Druid] GCD"] = {
 			["sparkWidth"] = 30,
@@ -24263,18 +23725,18 @@ WeakAurasSaved = {
 						["auranames"] = {
 							"Innervate", -- [1]
 						},
-						["use_unit"] = true,
+						["subeventPrefix"] = "SPELL",
 						["duration"] = "1",
 						["event"] = "Global Cooldown",
-						["subeventPrefix"] = "SPELL",
-						["unevent"] = "auto",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
 						["powertype"] = 0,
 						["spellIds"] = {
 						},
-						["unit"] = "player",
 						["names"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
+						["unevent"] = "auto",
 						["use_powertype"] = true,
 						["debuffType"] = "HELPFUL",
 					},
@@ -24294,20 +23756,20 @@ WeakAurasSaved = {
 			["keepAspectRatio"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -24319,7 +23781,7 @@ WeakAurasSaved = {
 				0, -- [4]
 			},
 			["desaturate"] = false,
-			["frameStrata"] = 1,
+			["alpha"] = 1,
 			["sparkOffsetY"] = 0,
 			["subRegions"] = {
 				{
@@ -24330,17 +23792,13 @@ WeakAurasSaved = {
 				}, -- [2]
 			},
 			["height"] = 20,
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
+			["sparkMirror"] = false,
 			["load"] = {
 				["use_class"] = true,
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -24359,10 +23817,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 			},
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
@@ -24375,7 +23830,8 @@ WeakAurasSaved = {
 				0, -- [4]
 			},
 			["xOffset"] = 0,
-			["sparkOffsetX"] = 0,
+			["authorOptions"] = {
+			},
 			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -24386,29 +23842,28 @@ WeakAurasSaved = {
 			["regionType"] = "aurabar",
 			["config"] = {
 			},
-			["zoom"] = 0,
-			["icon_side"] = "RIGHT",
-			["width"] = 300,
-			["sparkHeight"] = 40,
-			["texture"] = "Aluminium",
-			["sparkHidden"] = "BOTH",
-			["sparkTexture"] = "Interface\\GLUES\\LoadingBar\\UI-LoadingBar-Spark",
-			["spark"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] GCD",
-			["auto"] = true,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["icon_side"] = "RIGHT",
+			["anchorFrameType"] = "SCREEN",
+			["sparkHeight"] = 40,
+			["texture"] = "Aluminium",
+			["spark"] = true,
+			["sparkTexture"] = "Interface\\GLUES\\LoadingBar\\UI-LoadingBar-Spark",
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] GCD",
+			["sparkHidden"] = "BOTH",
+			["frameStrata"] = 1,
+			["width"] = 300,
+			["zoom"] = 0,
 			["uid"] = "ZbQNr7(BYKk",
 			["inverse"] = false,
-			["authorOptions"] = {
-			},
+			["sparkOffsetX"] = 0,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
@@ -24416,131 +23871,6 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["sparkMirror"] = false,
-		},
-		["[Druid] Rebirth CD"] = {
-			["iconSource"] = -1,
-			["authorOptions"] = {
-			},
-			["preferToUpdate"] = false,
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["cooldownSwipe"] = true,
-			["cooldownEdge"] = true,
-			["icon"] = true,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["auranames"] = {
-							"Moonkin Form", -- [1]
-							"Dire Bear Form", -- [2]
-							"Bear Form", -- [3]
-							"Aquatic Form", -- [4]
-							"Cat Form", -- [5]
-							"Travel Form", -- [6]
-							"Flight Form", -- [7]
-						},
-						["use_genericShowOn"] = true,
-						["remaining_operator"] = ">=",
-						["genericShowOn"] = "showOnCooldown",
-						["names"] = {
-						},
-						["matchesShowOn"] = "showOnMissing",
-						["remaining"] = "170",
-						["use_unit"] = true,
-						["use_remaining"] = false,
-						["debuffType"] = "HELPFUL",
-						["type"] = "spell",
-						["useExactSpellId"] = true,
-						["spellName"] = 48477,
-						["realSpellName"] = "复生",
-						["useName"] = false,
-						["auraspellids"] = {
-							"29166", -- [1]
-						},
-						["subeventSuffix"] = "_CAST_START",
-						["ignoreDead"] = false,
-						["form"] = {
-							["multi"] = {
-								true, -- [1]
-								true, -- [2]
-								true, -- [3]
-								true, -- [4]
-								true, -- [5]
-								true, -- [6]
-								[0] = true,
-							},
-						},
-						["event"] = "Cooldown Progress (Spell)",
-						["unevent"] = "auto",
-						["ignoreDisconnected"] = false,
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["unit"] = "group",
-						["ownOnly"] = true,
-						["subeventPrefix"] = "SPELL",
-						["use_track"] = true,
-						["duration"] = "1",
-					},
-					["untrigger"] = {
-						["genericShowOn"] = "showOnCooldown",
-					},
-				}, -- [1]
-				["activeTriggerMode"] = -10,
-			},
-			["internalVersion"] = 59,
-			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
-			["desaturate"] = true,
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
-				}, -- [1]
-				{
-					["type"] = "subborder",
-					["border_size"] = 1,
-					["border_color"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["border_visible"] = true,
-					["border_edge"] = "Square Full White",
-					["border_offset"] = 0,
-				}, -- [2]
-			},
-			["height"] = 40,
-			["load"] = {
-				["use_class"] = true,
-				["use_spellknown"] = false,
-				["use_never"] = false,
-				["talent"] = {
-					["multi"] = {
-						[24] = true,
-					},
-				},
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-						["DRUID"] = true,
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["source"] = "import",
-			["zoom"] = 0.29,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["parent"] = "[WotLK] Balance Druid (Left Group)",
 			["actions"] = {
 				["start"] = {
 				},
@@ -24549,22 +23879,76 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
-			["cooldown"] = true,
-			["conditions"] = {
+		},
+		["冰橙监控猫连击点5"] = {
+			["sparkWidth"] = 10,
+			["iconSource"] = -1,
+			["parent"] = "冰橙监控小德资源组",
+			["preferToUpdate"] = false,
+			["yOffset"] = -235,
+			["anchorPoint"] = "CENTER",
+			["sparkRotation"] = 0,
+			["sparkRotationMode"] = "AUTO",
+			["icon"] = false,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["subeventSuffix"] = "_CAST_START",
+						["power_operator"] = ">=",
+						["use_power"] = false,
+						["event"] = "Power",
+						["unit"] = "player",
+						["use_unit"] = true,
+						["powertype"] = 4,
+						["spellIds"] = {
+						},
+						["power"] = "1",
+						["subeventPrefix"] = "SPELL",
+						["names"] = {
+						},
+						["use_powertype"] = true,
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+				{
+					["trigger"] = {
+						["use_form"] = true,
+						["unit"] = "player",
+						["type"] = "unit",
+						["use_unit"] = true,
+						["form"] = {
+							["single"] = 3,
+						},
+						["event"] = "Stance/Form/Aura",
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [2]
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["use_unit"] = true,
+						["debuffType"] = "HELPFUL",
+						["event"] = "Unit Characteristics",
+						["unit"] = "target",
+					},
+					["untrigger"] = {
+					},
+				}, -- [3]
+				["disjunctive"] = "any",
+				["activeTriggerMode"] = -10,
 			},
-			["config"] = {
+			["icon_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
-			["useCooldownModRate"] = true,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Rebirth CD",
-			["width"] = 40,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["frameStrata"] = 1,
-			["uid"] = "nbqOHIUg0MR",
-			["inverse"] = false,
+			["internalVersion"] = 59,
 			["animation"] = {
 				["start"] = {
 					["easeStrength"] = 3,
@@ -24585,31 +23969,70 @@ WeakAurasSaved = {
 					["easeType"] = "none",
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["color"] = {
+			["barColor"] = {
 				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+				0.105882352941176, -- [2]
+				0.0352941176470588, -- [3]
+				0, -- [4]
 			},
-		},
-		["冰橙监控小德台风CD"] = {
-			["iconSource"] = -1,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["sparkOffsetY"] = 0,
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
+				{
+					["type"] = "subforeground",
+				}, -- [2]
+				{
+					["border_size"] = 2,
+					["border_anchor"] = "bar",
+					["border_offset"] = 0,
+					["border_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["border_visible"] = true,
+					["border_edge"] = "Blizzard Party",
+					["type"] = "subborder",
+				}, -- [3]
 			},
-			["preferToUpdate"] = false,
-			["yOffset"] = -265,
-			["anchorPoint"] = "CENTER",
-			["cooldownSwipe"] = true,
-			["cooldownEdge"] = false,
+			["height"] = 15,
+			["zoom"] = 0,
+			["load"] = {
+				["use_class"] = true,
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["use_vehicle"] = false,
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["sparkBlendMode"] = "ADD",
+			["useAdjustededMax"] = false,
+			["source"] = "import",
+			["desaturate"] = false,
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.5, -- [4]
+			},
 			["actions"] = {
 				["start"] = {
 				},
@@ -24618,36 +24041,152 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["xOffset"] = 304,
+			["useAdjustededMin"] = false,
+			["regionType"] = "aurabar",
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["uid"] = "DOgx1d)yvVp",
+			["icon_side"] = "RIGHT",
+			["config"] = {
+			},
+			["sparkHeight"] = 30,
+			["texture"] = "Skyline",
+			["width"] = 67,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["spark"] = false,
+			["tocversion"] = 30400,
+			["sparkHidden"] = "NEVER",
+			["alpha"] = 1,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["id"] = "冰橙监控猫连击点5",
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["inverse"] = false,
+			["sparkOffsetX"] = 0,
+			["orientation"] = "HORIZONTAL",
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "power",
+						["value"] = "5",
+						["op"] = ">=",
+					},
+					["changes"] = {
+						{
+							["value"] = {
+								1, -- [1]
+								0.05882352941176471, -- [2]
+								0.04313725490196078, -- [3]
+								1, -- [4]
+							},
+							["property"] = "backgroundColor",
+						}, -- [1]
+					},
+				}, -- [1]
+				{
+					["check"] = {
+						["trigger"] = 2,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [2]
+				{
+					["check"] = {
+						["trigger"] = 3,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = 0,
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [3]
+			},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["selfPoint"] = "CENTER",
+		},
+		["冰橙监控小德自然迅捷CD"] = {
+			["iconSource"] = -1,
+			["xOffset"] = 70,
+			["preferToUpdate"] = false,
+			["yOffset"] = -265,
+			["anchorPoint"] = "CENTER",
+			["cooldownSwipe"] = true,
+			["cooldownEdge"] = false,
+			["icon"] = true,
 			["triggers"] = {
 				{
 					["trigger"] = {
+						["type"] = "aura2",
+						["auranames"] = {
+							"自然迅捷", -- [1]
+						},
+						["event"] = "Health",
+						["unit"] = "player",
+						["spellIds"] = {
+						},
+						["subeventPrefix"] = "SPELL",
+						["useName"] = true,
+						["names"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+				{
+					["trigger"] = {
 						["track"] = "auto",
-						["use_absorbMode"] = true,
+						["use_genericShowOn"] = true,
 						["genericShowOn"] = "showAlways",
 						["subeventPrefix"] = "SPELL",
 						["debuffType"] = "HELPFUL",
 						["type"] = "spell",
-						["unit"] = "player",
-						["unevent"] = "auto",
-						["use_unit"] = true,
 						["names"] = {
 						},
+						["unevent"] = "auto",
+						["use_unit"] = true,
+						["unit"] = "player",
 						["event"] = "Cooldown Progress (Spell)",
 						["use_exact_spellName"] = false,
-						["realSpellName"] = "台风",
+						["realSpellName"] = "自然迅捷",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["spellName"] = 50516,
+						["spellName"] = 17116,
 						["subeventSuffix"] = "_CAST_START",
-						["duration"] = "1",
+						["use_absorbMode"] = true,
 						["use_track"] = true,
-						["use_genericShowOn"] = true,
+						["duration"] = "1",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
 					},
-				}, -- [1]
+				}, -- [2]
 				{
 					["trigger"] = {
 						["type"] = "unit",
@@ -24658,7 +24197,7 @@ WeakAurasSaved = {
 					},
 					["untrigger"] = {
 					},
-				}, -- [2]
+				}, -- [3]
 				["disjunctive"] = "any",
 				["activeTriggerMode"] = -10,
 			},
@@ -24703,8 +24242,10 @@ WeakAurasSaved = {
 					["text_fontType"] = "OUTLINE",
 				}, -- [2]
 				{
-					["border_offset"] = 0,
 					["type"] = "subborder",
+					["border_offset"] = 0,
+					["text_color"] = {
+					},
 					["border_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -24717,7 +24258,7 @@ WeakAurasSaved = {
 				}, -- [3]
 				{
 					["glowFrequency"] = 0.25,
-					["glow"] = false,
+					["type"] = "subglow",
 					["useGlowColor"] = false,
 					["glowType"] = "Pixel",
 					["glowLength"] = 10,
@@ -24728,13 +24269,986 @@ WeakAurasSaved = {
 						1, -- [3]
 						1, -- [4]
 					},
-					["type"] = "subglow",
+					["glow"] = false,
 					["glowXOffset"] = 0,
 					["glowThickness"] = 1,
 					["glowScale"] = 1,
 					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [4]
+			},
+			["height"] = 45,
+			["load"] = {
+				["use_petbattle"] = false,
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["use_vehicle"] = false,
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["zoneIds"] = "",
+				["use_class"] = true,
+				["use_spellknown"] = true,
+				["use_vehicleUi"] = false,
+				["use_spec"] = true,
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+						nil, -- [2]
+						true, -- [3]
+						true, -- [4]
+					},
+				},
+				["use_exact_spellknown"] = false,
+				["spellknown"] = 17116,
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["source"] = "import",
+			["uid"] = "hrp6aKVgNAo",
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+			},
+			["regionType"] = "icon",
+			["parent"] = "冰橙监控小德CD组 ",
+			["cooldown"] = true,
+			["displayIcon"] = "",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["alpha"] = 1,
+			["width"] = 45,
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德自然迅捷CD",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
+			["config"] = {
+			},
+			["inverse"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "show",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "sub.4.glow",
+						}, -- [1]
+					},
+				}, -- [1]
+				{
+					["check"] = {
+						["trigger"] = 3,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = 0,
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [2]
+			},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+		},
+		["[Druid] Faerie Fire"] = {
+			["iconSource"] = 0,
+			["xOffset"] = 0,
+			["preferToUpdate"] = false,
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["cooldownSwipe"] = true,
+			["cooldownEdge"] = true,
+			["icon"] = true,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["spellId"] = 48477,
+						["auranames"] = {
+							"精靈之火", -- [1]
+							"精靈之火(野性)", -- [2]
+						},
+						["remaining_operator"] = ">=",
+						["use_spell"] = false,
+						["destUnit"] = "target",
+						["remaining"] = "170",
+						["spellName"] = 48477,
+						["ignoreDead"] = false,
+						["useExactSpellId"] = true,
+						["event"] = "Cast",
+						["ignoreDisconnected"] = false,
+						["use_spellId"] = true,
+						["use_destUnit"] = true,
+						["use_track"] = true,
+						["genericShowOn"] = "showOnReady",
+						["names"] = {
+						},
+						["debuffType"] = "HARMFUL",
+						["useName"] = true,
+						["use_remaining"] = false,
+						["auraspellids"] = {
+							"770", -- [1]
+							"16857", -- [2]
+						},
+						["unevent"] = "auto",
+						["type"] = "aura2",
+						["form"] = {
+							["multi"] = {
+								true, -- [1]
+								true, -- [2]
+								true, -- [3]
+								true, -- [4]
+								true, -- [5]
+								true, -- [6]
+								[0] = true,
+							},
+						},
+						["unit"] = "target",
+						["use_unit"] = true,
+						["realSpellName"] = "Rebirth",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["matchesShowOn"] = "showOnMissing",
+						["subeventPrefix"] = "SPELL",
+						["duration"] = "1",
+						["subeventSuffix"] = "_CAST_START",
+						["use_genericShowOn"] = true,
+					},
+					["untrigger"] = {
+						["genericShowOn"] = "showOnReady",
+						["unit"] = "player",
+					},
+				}, -- [1]
+				["disjunctive"] = "any",
+				["activeTriggerMode"] = -10,
+			},
+			["internalVersion"] = 59,
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
+			["desaturate"] = false,
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
+				{
+					["border_offset"] = 0,
+					["border_size"] = 1,
+					["border_color"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["border_visible"] = true,
+					["border_edge"] = "Square Full White",
+					["type"] = "subborder",
+				}, -- [2]
+				{
+					["glowFrequency"] = 0.5,
+					["glow"] = true,
+					["useGlowColor"] = true,
+					["glowType"] = "Pixel",
+					["glowLength"] = 5,
+					["glowYOffset"] = 0,
+					["glowColor"] = {
+						0.9764705882352941, -- [1]
+						0, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["type"] = "subglow",
+					["glowXOffset"] = 0,
+					["glowThickness"] = 1,
+					["glowScale"] = 1,
+					["glowLines"] = 16,
+					["glowBorder"] = false,
+				}, -- [3]
+			},
+			["height"] = 40,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+						[24] = true,
+					},
+				},
+				["use_vehicle"] = false,
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = false,
+				["use_class"] = true,
+				["use_spellknown"] = true,
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+						["DRUID"] = true,
+					},
+				},
+				["spellknown"] = 20549,
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["source"] = "import",
+			["cooldownTextDisabled"] = false,
+			["authorOptions"] = {
+			},
+			["regionType"] = "icon",
+			["parent"] = "[WotLK] Balance Druid (Top Group)",
+			["selfPoint"] = "CENTER",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["conditions"] = {
+			},
+			["config"] = {
+			},
+			["frameStrata"] = 1,
+			["zoom"] = 0.29,
+			["auto"] = false,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Faerie Fire",
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["width"] = 40,
+			["useCooldownModRate"] = true,
+			["uid"] = "F7e1870LTDj",
+			["inverse"] = false,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_FaerieFire",
+			["cooldown"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
+		},
+		["冰橙监控小德急奔CD"] = {
+			["iconSource"] = -1,
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["preferToUpdate"] = false,
+			["yOffset"] = -265,
+			["anchorPoint"] = "CENTER",
+			["cooldownSwipe"] = true,
+			["cooldownEdge"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
+						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
+						["type"] = "spell",
+						["use_absorbMode"] = true,
+						["unevent"] = "auto",
+						["use_unit"] = true,
+						["use_genericShowOn"] = true,
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = false,
+						["realSpellName"] = "急奔",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["spellName"] = 9821,
+						["names"] = {
+						},
+						["use_track"] = true,
+						["unit"] = "player",
+					},
+					["untrigger"] = {
+						["genericShowOn"] = "showAlways",
+					},
+				}, -- [1]
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["debuffType"] = "HELPFUL",
+						["use_form"] = true,
+						["use_unit"] = true,
+						["form"] = {
+							["single"] = 3,
+						},
+						["event"] = "Stance/Form/Aura",
+						["unit"] = "player",
+					},
+					["untrigger"] = {
+					},
+				}, -- [2]
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["use_unit"] = true,
+						["debuffType"] = "HELPFUL",
+						["event"] = "Unit Characteristics",
+						["unit"] = "target",
+					},
+					["untrigger"] = {
+					},
+				}, -- [3]
+				["disjunctive"] = "any",
+				["activeTriggerMode"] = -10,
+			},
+			["internalVersion"] = 59,
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+			},
+			["desaturate"] = false,
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
+				{
+					["text_shadowXOffset"] = 0,
+					["text_text_format_s_format"] = "none",
+					["text_text"] = "%s",
+					["text_shadowColor"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["text_selfPoint"] = "AUTO",
+					["text_automaticWidth"] = "Auto",
+					["text_fixedWidth"] = 64,
+					["anchorYOffset"] = 0,
+					["text_justify"] = "CENTER",
+					["rotateText"] = "NONE",
+					["type"] = "subtext",
+					["text_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["text_font"] = "Friz Quadrata TT",
+					["text_shadowYOffset"] = 0,
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = true,
+					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
+					["text_fontSize"] = 16,
+					["anchorXOffset"] = 0,
+					["text_fontType"] = "OUTLINE",
+				}, -- [2]
+				{
+					["type"] = "subborder",
+					["border_offset"] = 0,
+					["text_color"] = {
+					},
+					["border_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["border_visible"] = true,
+					["border_edge"] = "Blizzard Party",
+					["border_size"] = 2,
+				}, -- [3]
+				{
+					["glowFrequency"] = 0.25,
+					["type"] = "subglow",
+					["useGlowColor"] = false,
+					["glowType"] = "Pixel",
+					["glowLength"] = 10,
+					["glowYOffset"] = 0,
+					["glowColor"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["glow"] = false,
+					["glowXOffset"] = 0,
+					["glowThickness"] = 1,
+					["glowScale"] = 1,
+					["glowLines"] = 8,
+					["glowBorder"] = false,
+				}, -- [4]
+			},
+			["height"] = 45,
+			["load"] = {
+				["use_petbattle"] = false,
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 13,
+					["multi"] = {
+						[13] = true,
+					},
+				},
+				["use_vehicle"] = false,
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["use_vehicleUi"] = false,
+				["zoneIds"] = "",
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+						[3] = true,
+					},
+				},
+				["use_spec"] = true,
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["source"] = "import",
+			["alpha"] = 1,
+			["config"] = {
+			},
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["parent"] = "冰橙监控小德CD组 ",
+			["regionType"] = "icon",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["displayIcon"] = "",
+			["icon"] = true,
+			["xOffset"] = 270,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德急奔CD",
+			["cooldownTextDisabled"] = false,
+			["useCooldownModRate"] = true,
+			["width"] = 45,
+			["useTooltip"] = false,
+			["uid"] = "658JbThQaMD",
+			["inverse"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 2,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [1]
+				{
+					["check"] = {
+						["trigger"] = 3,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = 0,
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [2]
+			},
+			["cooldown"] = true,
+			["selfPoint"] = "CENTER",
+		},
+		["冰橙监控小德野性成长CD"] = {
+			["iconSource"] = -1,
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["preferToUpdate"] = false,
+			["yOffset"] = -265,
+			["anchorPoint"] = "CENTER",
+			["cooldownSwipe"] = true,
+			["cooldownEdge"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["track"] = "auto",
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
+						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
+						["type"] = "spell",
+						["use_unit"] = true,
+						["unevent"] = "auto",
+						["names"] = {
+						},
+						["subeventPrefix"] = "SPELL",
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = false,
+						["realSpellName"] = "野性成长",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["spellName"] = 48438,
+						["subeventSuffix"] = "_CAST_START",
+						["use_genericShowOn"] = true,
+						["use_track"] = true,
+						["use_absorbMode"] = true,
+					},
+					["untrigger"] = {
+						["genericShowOn"] = "showAlways",
+					},
+				}, -- [1]
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["unit"] = "target",
+						["debuffType"] = "HELPFUL",
+						["event"] = "Unit Characteristics",
+						["use_unit"] = true,
+					},
+					["untrigger"] = {
+					},
+				}, -- [2]
+				["disjunctive"] = "any",
+				["activeTriggerMode"] = -10,
+			},
+			["internalVersion"] = 59,
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["easeStrength"] = 3,
+					["preset"] = "slideleft",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["easeStrength"] = 3,
+					["preset"] = "slideleft",
+				},
+			},
+			["desaturate"] = false,
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
+				{
+					["text_shadowXOffset"] = 0,
+					["text_text_format_s_format"] = "none",
+					["text_text"] = "%s",
+					["text_shadowColor"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["text_selfPoint"] = "AUTO",
+					["text_automaticWidth"] = "Auto",
+					["text_fixedWidth"] = 64,
+					["anchorYOffset"] = 0,
+					["text_justify"] = "CENTER",
+					["rotateText"] = "NONE",
+					["type"] = "subtext",
+					["text_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["text_font"] = "Friz Quadrata TT",
+					["text_shadowYOffset"] = 0,
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = true,
+					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
+					["text_fontSize"] = 16,
+					["anchorXOffset"] = 0,
+					["text_fontType"] = "OUTLINE",
+				}, -- [2]
+				{
+					["border_offset"] = 0,
+					["border_size"] = 2,
+					["text_color"] = {
+					},
+					["border_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["border_visible"] = true,
+					["border_edge"] = "Blizzard Party",
+					["type"] = "subborder",
+				}, -- [3]
+			},
+			["height"] = 45,
+			["load"] = {
+				["use_petbattle"] = false,
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["use_vehicle"] = false,
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["zoneIds"] = "",
+				["use_class"] = true,
+				["use_spellknown"] = true,
+				["use_vehicleUi"] = false,
+				["use_spec"] = true,
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+						nil, -- [2]
+						true, -- [3]
+						true, -- [4]
+					},
+				},
+				["use_exact_spellknown"] = false,
+				["spellknown"] = 48438,
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["source"] = "import",
+			["uid"] = "uMqWssV5eev",
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["selfPoint"] = "CENTER",
+			["regionType"] = "icon",
+			["xOffset"] = 225,
+			["cooldown"] = true,
+			["displayIcon"] = "",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["useCooldownModRate"] = true,
+			["width"] = 45,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德野性成长CD",
+			["frameStrata"] = 1,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
+			["config"] = {
+			},
+			["inverse"] = true,
+			["parent"] = "冰橙监控小德CD组 ",
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 2,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = 0,
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [1]
+			},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["icon"] = true,
+		},
+		["冰橙监控小德节能施法"] = {
+			["iconSource"] = -1,
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["preferToUpdate"] = false,
+			["yOffset"] = -197,
+			["anchorPoint"] = "CENTER",
+			["cooldownSwipe"] = false,
+			["cooldownEdge"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["auranames"] = {
+							"节能施法", -- [1]
+						},
+						["use_genericShowOn"] = true,
+						["genericShowOn"] = "showAlways",
+						["use_unit"] = true,
+						["subeventPrefix"] = "SPELL",
+						["matchesShowOn"] = "showAlways",
+						["spellName"] = 19574,
+						["debuffType"] = "HELPFUL",
+						["names"] = {
+						},
+						["useName"] = true,
+						["auraspellids"] = {
+							"85739", -- [1]
+						},
+						["unevent"] = "auto",
+						["use_absorbMode"] = true,
+						["type"] = "aura2",
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = true,
+						["realSpellName"] = 19574,
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["useExactSpellId"] = false,
+						["unit"] = "player",
+						["use_track"] = true,
+						["duration"] = "1",
+					},
+					["untrigger"] = {
+						["genericShowOn"] = "showAlways",
+					},
+				}, -- [1]
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["use_unit"] = true,
+						["debuffType"] = "HELPFUL",
+						["event"] = "Unit Characteristics",
+						["unit"] = "target",
+					},
+					["untrigger"] = {
+					},
+				}, -- [2]
+				["disjunctive"] = "any",
+				["activeTriggerMode"] = -10,
+			},
+			["internalVersion"] = 59,
+			["keepAspectRatio"] = true,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+			},
+			["desaturate"] = false,
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
+				{
+					["text_shadowXOffset"] = 0,
+					["text_text_format_s_format"] = "none",
+					["text_text"] = "%s",
+					["text_shadowColor"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["text_selfPoint"] = "AUTO",
+					["text_automaticWidth"] = "Auto",
+					["text_fixedWidth"] = 64,
+					["anchorYOffset"] = 0,
+					["text_justify"] = "CENTER",
+					["rotateText"] = "NONE",
+					["type"] = "subtext",
+					["text_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["text_font"] = "Friz Quadrata TT",
+					["text_shadowYOffset"] = 0,
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = true,
+					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
+					["text_fontSize"] = 16,
+					["anchorXOffset"] = 0,
+					["text_fontType"] = "OUTLINE",
+				}, -- [2]
 				{
 					["text_shadowXOffset"] = 0,
 					["text_text"] = "%p",
@@ -24771,14 +25285,31 @@ WeakAurasSaved = {
 					["text_fontSize"] = 12,
 					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_text_format_p_time_legacy_floor"] = false,
-				}, -- [5]
+				}, -- [3]
+				{
+					["border_offset"] = 0,
+					["type"] = "subborder",
+					["text_color"] = {
+					},
+					["border_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["border_visible"] = true,
+					["border_edge"] = "Blizzard Party",
+					["border_size"] = 2,
+				}, -- [4]
 			},
-			["height"] = 45,
+			["height"] = 30,
 			["load"] = {
 				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
+					["single"] = 13,
 					["multi"] = {
+						[13] = true,
 					},
 				},
 				["use_vehicle"] = false,
@@ -24787,79 +25318,45 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
 				["use_class"] = true,
-				["use_spellknown"] = true,
-				["use_vehicleUi"] = false,
 				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-						nil, -- [2]
-						true, -- [3]
-						true, -- [4]
-					},
-				},
-				["use_exact_spellknown"] = false,
-				["spellknown"] = 50516,
 				["size"] = {
 					["multi"] = {
 					},
 				},
+				["use_vehicleUi"] = false,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+					},
+				},
+				["zoneIds"] = "",
 			},
 			["source"] = "import",
-			["uid"] = "YUB6N4Z96Aj",
-			["xOffset"] = 70,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["preset"] = "slideleft",
-					["easeStrength"] = 3,
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["preset"] = "slideleft",
-					["easeStrength"] = 3,
-				},
-			},
-			["regionType"] = "icon",
+			["uid"] = "O0GsJh)aE)1",
+			["selfPoint"] = "CENTER",
 			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["regionType"] = "icon",
+			["xOffset"] = 216,
 			["cooldown"] = true,
-			["displayIcon"] = "",
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["zoom"] = 0,
-			["width"] = 45,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德台风CD",
-			["alpha"] = 1,
-			["useCooldownModRate"] = true,
-			["anchorFrameType"] = "SCREEN",
-			["frameStrata"] = 1,
-			["config"] = {
-			},
-			["inverse"] = true,
-			["icon"] = true,
 			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "buffed",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [1]
+						{
+							["value"] = 0.3,
+							["property"] = "alpha",
+						}, -- [2]
+					},
+				}, -- [1]
 				{
 					["check"] = {
 						["trigger"] = 2,
@@ -24872,17 +25369,198 @@ WeakAurasSaved = {
 							["property"] = "alpha",
 						}, -- [1]
 					},
-				}, -- [1]
+				}, -- [2]
 			},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德节能施法",
+			["useCooldownModRate"] = true,
+			["alpha"] = 1,
+			["width"] = 50,
+			["cooldownTextDisabled"] = false,
+			["config"] = {
+			},
+			["inverse"] = true,
+			["icon"] = true,
+			["displayIcon"] = 136170,
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["parent"] = "冰橙监控小德CD组 ",
+			["parent"] = "冰橙监控小德BUFF组",
 		},
-		["[Druid] Faerie Fire"] = {
-			["iconSource"] = 0,
+		["[Druid] Eclipse (Solar) CD Timer"] = {
+			["outline"] = "OUTLINE",
+			["parent"] = "[WotLK] Balance Druid (Main Group)",
+			["displayText_format_p_time_dynamic_threshold"] = 0,
+			["shadowYOffset"] = -1,
+			["anchorPoint"] = "CENTER",
+			["displayText_format_p_time_format"] = 0,
+			["customTextUpdate"] = "event",
+			["cooldownEdge"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["spellId"] = "48517",
+						["auranames"] = {
+							"Eclipse (Solar)", -- [1]
+						},
+						["duration"] = "30",
+						["names"] = {
+						},
+						["debuffType"] = "HELPFUL",
+						["spellName"] = "Eclipse (Solar)",
+						["type"] = "combatlog",
+						["unevent"] = "timed",
+						["subeventSuffix"] = "_AURA_APPLIED",
+						["subeventPrefix"] = "SPELL",
+						["ownOnly"] = true,
+						["event"] = "Combat Log",
+						["useName"] = true,
+						["use_spellName"] = false,
+						["use_spellId"] = true,
+						["spellIds"] = {
+						},
+						["use_sourceUnit"] = true,
+						["auraType"] = "BUFF",
+						["unit"] = "player",
+						["sourceUnit"] = "player",
+						["use_auraType"] = true,
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+				["activeTriggerMode"] = -10,
+			},
+			["displayText_format_p_format"] = "timed",
+			["displayText_format_p_time_legacy_floor"] = true,
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 			["xOffset"] = 0,
+			["desaturate"] = false,
+			["font"] = "Expressway",
+			["displayText_format_p_time_mod_rate"] = true,
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
+			},
+			["height"] = 60,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["load"] = {
+				["use_class"] = true,
+				["use_talent"] = false,
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+						[24] = true,
+					},
+				},
+				["use_vehicle"] = false,
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+						["DRUID"] = true,
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["fixedWidth"] = 200,
+			["internalVersion"] = 59,
+			["fontSize"] = 15,
+			["source"] = "import",
+			["color"] = {
+				1, -- [1]
+				0.4117647058823529, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["shadowXOffset"] = 1,
+			["preferToUpdate"] = false,
+			["uid"] = "O8GR8)CHRJZ",
+			["anchorFrameFrame"] = "WeakAuras:[Druid] Eclipse (Missing)",
+			["regionType"] = "text",
+			["selfPoint"] = "CENTER",
+			["width"] = 60,
+			["frameStrata"] = 1,
+			["yOffset"] = 680,
+			["displayText_format_p_time_precision"] = 1,
+			["wordWrap"] = "WordWrap",
+			["auto"] = true,
+			["zoom"] = 0.29,
+			["justify"] = "LEFT",
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Eclipse (Solar) CD Timer",
+			["automaticWidth"] = "Auto",
+			["alpha"] = 1,
+			["anchorFrameType"] = "SELECTFRAME",
+			["icon"] = true,
+			["config"] = {
+			},
+			["inverse"] = false,
+			["authorOptions"] = {
+			},
+			["shadowColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["conditions"] = {
+			},
+			["cooldown"] = true,
+			["displayText"] = "%p",
+		},
+		["[Druid] Innervate Cast"] = {
+			["iconSource"] = -1,
+			["authorOptions"] = {
+			},
 			["preferToUpdate"] = false,
 			["yOffset"] = 0,
 			["anchorPoint"] = "CENTER",
@@ -24892,35 +25570,35 @@ WeakAurasSaved = {
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["spellId"] = 48477,
 						["auranames"] = {
-							"精靈之火", -- [1]
-							"精靈之火(野性)", -- [2]
-						},
-						["remaining_operator"] = ">=",
-						["use_spell"] = false,
-						["destUnit"] = "target",
-						["remaining"] = "170",
-						["spellName"] = 48477,
-						["ignoreDead"] = false,
-						["useExactSpellId"] = true,
-						["event"] = "Cast",
-						["ignoreDisconnected"] = false,
-						["use_spellId"] = true,
-						["use_destUnit"] = true,
-						["use_track"] = true,
-						["genericShowOn"] = "showOnReady",
-						["names"] = {
-						},
-						["debuffType"] = "HARMFUL",
-						["use_genericShowOn"] = true,
-						["useName"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["auraspellids"] = {
-							"770", -- [1]
-							"16857", -- [2]
+							"Moonkin Form", -- [1]
+							"Dire Bear Form", -- [2]
+							"Bear Form", -- [3]
+							"Aquatic Form", -- [4]
+							"Cat Form", -- [5]
+							"Travel Form", -- [6]
+							"Flight Form", -- [7]
 						},
 						["duration"] = "1",
+						["ownOnly"] = true,
+						["genericShowOn"] = "showOnCooldown",
+						["subeventPrefix"] = "SPELL",
+						["use_genericShowOn"] = true,
+						["remaining"] = "170",
+						["names"] = {
+						},
+						["remaining_operator"] = "<",
+						["use_unit"] = true,
+						["use_remaining"] = true,
+						["auraspellids"] = {
+							"29166", -- [1]
+						},
+						["spellName"] = 29166,
+						["realSpellName"] = "Innervate",
+						["useName"] = false,
+						["unevent"] = "auto",
+						["subeventSuffix"] = "_CAST_START",
+						["type"] = "aura2",
 						["form"] = {
 							["multi"] = {
 								true, -- [1]
@@ -24932,24 +25610,80 @@ WeakAurasSaved = {
 								[0] = true,
 							},
 						},
-						["subeventPrefix"] = "SPELL",
-						["matchesShowOn"] = "showOnMissing",
-						["realSpellName"] = "Rebirth",
+						["event"] = "Cooldown Progress (Spell)",
+						["useExactSpellId"] = true,
+						["ignoreDisconnected"] = false,
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["use_unit"] = true,
-						["unit"] = "target",
-						["type"] = "aura2",
-						["unevent"] = "auto",
-						["use_remaining"] = false,
+						["debuffType"] = "HELPFUL",
+						["ignoreDead"] = false,
+						["unit"] = "group",
+						["use_track"] = true,
+						["matchesShowOn"] = "showOnMissing",
 					},
 					["untrigger"] = {
-						["genericShowOn"] = "showOnReady",
-						["unit"] = "player",
+						["genericShowOn"] = "showOnCooldown",
 					},
 				}, -- [1]
-				["disjunctive"] = "any",
+				{
+					["trigger"] = {
+						["auranames"] = {
+							"Moonkin Form", -- [1]
+							"Dire Bear Form", -- [2]
+							"Bear Form", -- [3]
+							"Aquatic Form", -- [4]
+							"Cat Form", -- [5]
+							"Travel Form", -- [6]
+							"Flight Form", -- [7]
+						},
+						["ownOnly"] = true,
+						["duration"] = "1",
+						["genericShowOn"] = "showOnCooldown",
+						["names"] = {
+						},
+						["matchesShowOn"] = "showOnMissing",
+						["remaining"] = "170",
+						["use_unit"] = true,
+						["remaining_operator"] = ">=",
+						["subeventPrefix"] = "SPELL",
+						["type"] = "spell",
+						["useExactSpellId"] = true,
+						["spellName"] = 29166,
+						["ignoreDisconnected"] = false,
+						["useName"] = false,
+						["unevent"] = "auto",
+						["auraspellids"] = {
+							"29166", -- [1]
+						},
+						["use_remaining"] = true,
+						["form"] = {
+							["multi"] = {
+								true, -- [1]
+								true, -- [2]
+								true, -- [3]
+								true, -- [4]
+								true, -- [5]
+								true, -- [6]
+								[0] = true,
+							},
+						},
+						["event"] = "Cooldown Progress (Spell)",
+						["subeventSuffix"] = "_CAST_START",
+						["realSpellName"] = "激活",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["debuffType"] = "HELPFUL",
+						["ignoreDead"] = false,
+						["unit"] = "group",
+						["use_track"] = true,
+						["use_genericShowOn"] = true,
+					},
+					["untrigger"] = {
+						["genericShowOn"] = "showOnCooldown",
+					},
+				}, -- [2]
 				["activeTriggerMode"] = -10,
 			},
 			["internalVersion"] = 59,
@@ -24981,7 +25715,7 @@ WeakAurasSaved = {
 				}, -- [1]
 				{
 					["border_offset"] = 0,
-					["type"] = "subborder",
+					["border_size"] = 1,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -24990,59 +25724,92 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["border_size"] = 1,
+					["type"] = "subborder",
 				}, -- [2]
 				{
-					["glowFrequency"] = 0.5,
-					["glow"] = true,
+					["glowFrequency"] = 0.25,
+					["type"] = "subglow",
 					["useGlowColor"] = true,
-					["glowType"] = "Pixel",
-					["glowLength"] = 5,
+					["glowType"] = "ACShine",
+					["glowLength"] = 10,
 					["glowYOffset"] = 0,
 					["glowColor"] = {
-						0.9764705882352941, -- [1]
-						0, -- [2]
+						0, -- [1]
+						0.6862745098039216, -- [2]
 						1, -- [3]
 						1, -- [4]
 					},
-					["type"] = "subglow",
+					["glow"] = true,
 					["glowXOffset"] = 0,
 					["glowScale"] = 1,
 					["glowThickness"] = 1,
-					["glowLines"] = 16,
+					["glowLines"] = 8,
 					["glowBorder"] = false,
 				}, -- [3]
+				{
+					["text_text_format_p_time_format"] = 0,
+					["text_text"] = "%1.unitName",
+					["text_shadowColor"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["text_selfPoint"] = "AUTO",
+					["text_automaticWidth"] = "Auto",
+					["text_fixedWidth"] = 64,
+					["anchorYOffset"] = 0,
+					["text_justify"] = "CENTER",
+					["rotateText"] = "NONE",
+					["type"] = "subtext",
+					["text_shadowXOffset"] = 0,
+					["text_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["text_font"] = "Expressway",
+					["text_text_format_1.unitName_format"] = "none",
+					["text_shadowYOffset"] = 0,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = true,
+					["text_anchorPoint"] = "OUTER_LEFT",
+					["text_text_format_p_format"] = "timed",
+					["text_text_format_p_time_precision"] = 1,
+					["text_fontSize"] = 12,
+					["anchorXOffset"] = 0,
+					["text_fontType"] = "OUTLINE",
+				}, -- [4]
 			},
 			["height"] = 40,
 			["load"] = {
+				["use_class"] = true,
+				["use_spellknown"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
 						[24] = true,
 					},
 				},
-				["use_vehicle"] = false,
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["use_talent"] = false,
-				["use_class"] = true,
-				["use_spellknown"] = true,
 				["class"] = {
 					["single"] = "DRUID",
 					["multi"] = {
 						["DRUID"] = true,
 					},
 				},
-				["spellknown"] = 20549,
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
 			["source"] = "import",
-			["zoom"] = 0.29,
+			["cooldownTextDisabled"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -25050,7 +25817,30 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["regionType"] = "icon",
-			["parent"] = "[WotLK] Balance Druid (Top Group)",
+			["parent"] = "[WotLK] Balance Druid (Left Group)",
+			["selfPoint"] = "CENTER",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
+			["uid"] = "5gFDh27a(Tl",
+			["useCooldownModRate"] = true,
+			["zoom"] = 0.29,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Innervate Cast",
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
+			["width"] = 40,
+			["alpha"] = 1,
+			["config"] = {
+			},
+			["inverse"] = false,
+			["xOffset"] = 0,
+			["conditions"] = {
+			},
+			["cooldown"] = true,
 			["actions"] = {
 				["start"] = {
 				},
@@ -25059,30 +25849,963 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["cooldown"] = false,
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_FaerieFire",
-			["uid"] = "F7e1870LTDj",
-			["frameStrata"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = false,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Faerie Fire",
-			["width"] = 40,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["config"] = {
+		},
+		["RED POINT"] = {
+			["user_y"] = 0,
+			["modelIsUnit"] = false,
+			["user_x"] = 0,
+			["authorOptions"] = {
 			},
-			["inverse"] = false,
-			["selfPoint"] = "CENTER",
+			["preferToUpdate"] = false,
+			["yOffset"] = -40,
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sameTexture"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["model_path"] = "Creature/Arthaslichking/arthaslichking.m2",
+			["desaturate"] = false,
+			["rotation"] = 0,
+			["font"] = "Friz Quadrata TT",
+			["load"] = {
+				["ingroup"] = {
+					["multi"] = {
+					},
+				},
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["single"] = "flexible",
+					["multi"] = {
+						["flexible"] = true,
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						[2] = true,
+					},
+				},
+				["talent2"] = {
+					["multi"] = {
+					},
+				},
+				["use_zone"] = false,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["single"] = "Troll",
+					["multi"] = {
+						["Troll"] = true,
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["class"] = {
+					["single"] = "WARLOCK",
+					["multi"] = {
+						["WARLOCK"] = true,
+					},
+				},
+				["zoneIds"] = "",
+			},
+			["textureWrapMode"] = "CLAMP",
+			["sequence"] = 1,
+			["foregroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["scale"] = 1,
+			["regionType"] = "texture",
+			["blendMode"] = "BLEND",
+			["texture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura104",
+			["borderOffset"] = 5,
+			["compress"] = false,
+			["alpha"] = 1,
+			["borderInset"] = 11,
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				0.905882352941177, -- [1]
+				0.0392156862745098, -- [2]
+				0.145098039215686, -- [3]
+				0.75, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["desaturateForeground"] = false,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["duration"] = "1",
+						["genericShowOn"] = "showOnActive",
+						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
+						["spellName"] = 0,
+						["use_unit"] = true,
+						["type"] = "unit",
+						["use_health"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["ownOnly"] = true,
+						["unevent"] = "auto",
+						["event"] = "Conditions",
+						["health_operator"] = ">",
+						["health"] = "0",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["custom_type"] = "status",
+						["check"] = "event",
+						["use_alive"] = true,
+						["names"] = {
+							"协同魔典", -- [1]
+						},
+						["subeventPrefix"] = "SPELL",
+					},
+					["untrigger"] = {
+						["use_unit"] = true,
+						["use_spellName"] = true,
+						["unit"] = "player",
+						["spellName"] = 0,
+					},
+				}, -- [1]
+				["disjunctive"] = "any",
+				["activeTriggerMode"] = 1,
+			},
+			["internalVersion"] = 59,
+			["advance"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeStrength"] = 3,
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeStrength"] = 3,
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeStrength"] = 3,
+					["easeType"] = "none",
+				},
+			},
+			["stickyDuration"] = false,
+			["discrete_rotation"] = 0,
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
+			},
+			["height"] = 140,
+			["rotate"] = true,
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["source"] = "import",
+			["anchorPoint"] = "CENTER",
+			["mirror"] = true,
+			["borderEdge"] = "None",
+			["borderSize"] = 16,
+			["xOffset"] = 0,
+			["fontSize"] = 12,
 			["conditions"] = {
 			},
+			["tocversion"] = 30400,
+			["model_x"] = 0,
+			["config"] = {
+			},
+			["model_z"] = 0,
+			["anchorFrameType"] = "SCREEN",
+			["selfPoint"] = "CENTER",
+			["id"] = "RED POINT",
+			["model_y"] = 0,
+			["frameStrata"] = 9,
+			["width"] = 140,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["crop_y"] = 0.41,
+			["inverse"] = false,
+			["uid"] = "wncgQ3HUZWc",
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
+			["border"] = false,
+		},
+		["冰橙监控小德宁静CD"] = {
+			["iconSource"] = -1,
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["preferToUpdate"] = false,
+			["yOffset"] = -265,
+			["anchorPoint"] = "CENTER",
+			["cooldownSwipe"] = true,
+			["cooldownEdge"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "aura2",
+						["auranames"] = {
+							"宁静", -- [1]
+						},
+						["event"] = "Health",
+						["unit"] = "player",
+						["spellIds"] = {
+						},
+						["subeventPrefix"] = "SPELL",
+						["useName"] = true,
+						["names"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+				{
+					["trigger"] = {
+						["use_genericShowOn"] = true,
+						["genericShowOn"] = "showAlways",
+						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
+						["type"] = "spell",
+						["duration"] = "1",
+						["unevent"] = "auto",
+						["names"] = {
+						},
+						["use_absorbMode"] = true,
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = false,
+						["realSpellName"] = "宁静",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["spellName"] = 9862,
+						["use_unit"] = true,
+						["use_track"] = true,
+						["subeventPrefix"] = "SPELL",
+					},
+					["untrigger"] = {
+						["genericShowOn"] = "showAlways",
+					},
+				}, -- [2]
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["use_unit"] = true,
+						["debuffType"] = "HELPFUL",
+						["event"] = "Unit Characteristics",
+						["unit"] = "target",
+					},
+					["untrigger"] = {
+					},
+				}, -- [3]
+				["disjunctive"] = "any",
+				["activeTriggerMode"] = -10,
+			},
+			["internalVersion"] = 59,
+			["keepAspectRatio"] = false,
+			["selfPoint"] = "CENTER",
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
+				{
+					["text_shadowXOffset"] = 0,
+					["text_text_format_s_format"] = "none",
+					["text_text"] = "%s",
+					["text_shadowColor"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["text_selfPoint"] = "AUTO",
+					["text_automaticWidth"] = "Auto",
+					["text_fixedWidth"] = 64,
+					["anchorYOffset"] = 0,
+					["text_justify"] = "CENTER",
+					["rotateText"] = "NONE",
+					["type"] = "subtext",
+					["text_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["text_font"] = "Friz Quadrata TT",
+					["text_shadowYOffset"] = 0,
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = true,
+					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
+					["text_fontSize"] = 16,
+					["anchorXOffset"] = 0,
+					["text_fontType"] = "OUTLINE",
+				}, -- [2]
+				{
+					["border_offset"] = 0,
+					["border_size"] = 2,
+					["text_color"] = {
+					},
+					["border_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["border_visible"] = true,
+					["border_edge"] = "Blizzard Party",
+					["type"] = "subborder",
+				}, -- [3]
+				{
+					["glowFrequency"] = 0.25,
+					["type"] = "subglow",
+					["useGlowColor"] = false,
+					["glowType"] = "Pixel",
+					["glowLength"] = 10,
+					["glowYOffset"] = 0,
+					["glowColor"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["glow"] = false,
+					["glowXOffset"] = 0,
+					["glowThickness"] = 1,
+					["glowScale"] = 1,
+					["glowLines"] = 8,
+					["glowBorder"] = false,
+				}, -- [4]
+			},
+			["height"] = 45,
+			["load"] = {
+				["use_petbattle"] = false,
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 13,
+					["multi"] = {
+						[13] = true,
+					},
+				},
+				["use_vehicle"] = false,
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["use_vehicleUi"] = false,
+				["zoneIds"] = "",
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+						[3] = true,
+					},
+				},
+				["use_spec"] = true,
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["source"] = "import",
+			["useCooldownModRate"] = true,
+			["config"] = {
+			},
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+			},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "icon",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["displayIcon"] = "",
+			["icon"] = true,
+			["xOffset"] = 225,
+			["width"] = 45,
+			["alpha"] = 1,
+			["cooldownTextDisabled"] = false,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德宁静CD",
+			["zoom"] = 0,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["useTooltip"] = false,
+			["uid"] = "FoH3ssEgX7N",
+			["inverse"] = true,
+			["parent"] = "冰橙监控小德CD组 ",
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "show",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "sub.4.glow",
+						}, -- [1]
+					},
+				}, -- [1]
+				{
+					["check"] = {
+						["trigger"] = 3,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = 0,
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [2]
+			},
+			["cooldown"] = true,
+			["desaturate"] = false,
+		},
+		["冰橙监控小德星辰坠落CD"] = {
+			["iconSource"] = -1,
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["preferToUpdate"] = false,
+			["yOffset"] = -265,
+			["anchorPoint"] = "CENTER",
+			["cooldownSwipe"] = true,
+			["cooldownEdge"] = false,
+			["icon"] = true,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["useName"] = true,
+						["auranames"] = {
+							"星辰坠落", -- [1]
+						},
+						["event"] = "Health",
+						["subeventPrefix"] = "SPELL",
+						["spellIds"] = {
+						},
+						["unit"] = "player",
+						["type"] = "aura2",
+						["names"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+				{
+					["trigger"] = {
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
+						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
+						["type"] = "spell",
+						["use_absorbMode"] = true,
+						["unevent"] = "auto",
+						["use_unit"] = true,
+						["use_genericShowOn"] = true,
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = false,
+						["realSpellName"] = "星辰坠落",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["spellName"] = 48505,
+						["names"] = {
+						},
+						["use_track"] = true,
+						["unit"] = "player",
+					},
+					["untrigger"] = {
+						["genericShowOn"] = "showAlways",
+					},
+				}, -- [2]
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["unit"] = "target",
+						["debuffType"] = "HELPFUL",
+						["event"] = "Unit Characteristics",
+						["use_unit"] = true,
+					},
+					["untrigger"] = {
+					},
+				}, -- [3]
+				["disjunctive"] = "any",
+				["activeTriggerMode"] = -10,
+			},
+			["useTooltip"] = false,
+			["keepAspectRatio"] = false,
+			["selfPoint"] = "CENTER",
+			["desaturate"] = false,
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
+				{
+					["text_shadowXOffset"] = 0,
+					["text_text_format_s_format"] = "none",
+					["text_text"] = "%s",
+					["text_shadowColor"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["text_selfPoint"] = "AUTO",
+					["text_automaticWidth"] = "Auto",
+					["text_fixedWidth"] = 64,
+					["anchorYOffset"] = 0,
+					["text_justify"] = "CENTER",
+					["rotateText"] = "NONE",
+					["type"] = "subtext",
+					["text_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["text_font"] = "Friz Quadrata TT",
+					["text_shadowYOffset"] = 0,
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = true,
+					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
+					["text_fontSize"] = 16,
+					["anchorXOffset"] = 0,
+					["text_fontType"] = "OUTLINE",
+				}, -- [2]
+				{
+					["border_size"] = 2,
+					["type"] = "subborder",
+					["text_color"] = {
+					},
+					["border_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["border_visible"] = true,
+					["border_edge"] = "Blizzard Party",
+					["border_offset"] = 0,
+				}, -- [3]
+				{
+					["glowFrequency"] = 0.25,
+					["type"] = "subglow",
+					["useGlowColor"] = false,
+					["glowType"] = "Pixel",
+					["glowLength"] = 10,
+					["glowYOffset"] = 0,
+					["glowColor"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["glow"] = false,
+					["glowXOffset"] = 0,
+					["glowThickness"] = 1,
+					["glowScale"] = 1,
+					["glowLines"] = 8,
+					["glowBorder"] = false,
+				}, -- [4]
+				{
+					["text_shadowXOffset"] = 0,
+					["text_text"] = "%p",
+					["text_shadowColor"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["text_selfPoint"] = "AUTO",
+					["text_automaticWidth"] = "Auto",
+					["text_fixedWidth"] = 64,
+					["anchorYOffset"] = 0,
+					["text_justify"] = "CENTER",
+					["rotateText"] = "NONE",
+					["text_text_format_p_time_legacy_floor"] = false,
+					["type"] = "subtext",
+					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["text_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["text_font"] = "Friz Quadrata TT",
+					["text_text_format_p_format"] = "timed",
+					["text_shadowYOffset"] = 0,
+					["text_text_format_p_time_mod_rate"] = true,
+					["text_wordWrap"] = "WordWrap",
+					["text_fontType"] = "OUTLINE",
+					["text_anchorPoint"] = "CENTER",
+					["text_text_format_p_time_format"] = 0,
+					["text_visible"] = true,
+					["text_fontSize"] = 12,
+					["anchorXOffset"] = 0,
+					["text_text_format_p_time_precision"] = 1,
+				}, -- [5]
+			},
+			["height"] = 45,
+			["load"] = {
+				["use_petbattle"] = false,
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 13,
+					["multi"] = {
+						[13] = true,
+					},
+				},
+				["use_vehicle"] = false,
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+						[3] = true,
+					},
+				},
+				["zoneIds"] = "",
+				["use_class"] = true,
+				["use_spellknown"] = true,
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["use_vehicleUi"] = false,
+				["use_exact_spellknown"] = false,
+				["spellknown"] = 48505,
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["source"] = "import",
+			["alpha"] = 1,
+			["config"] = {
+			},
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["easeStrength"] = 3,
+					["preset"] = "slideleft",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["easeStrength"] = 3,
+					["preset"] = "slideleft",
+				},
+			},
+			["parent"] = "冰橙监控小德CD组 ",
+			["regionType"] = "icon",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["displayIcon"] = "",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["width"] = 45,
+			["frameStrata"] = 1,
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德星辰坠落CD",
+			["cooldownTextDisabled"] = false,
+			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["internalVersion"] = 59,
+			["uid"] = "ikrNpOctVyI",
+			["inverse"] = true,
+			["xOffset"] = 115,
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "show",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "sub.4.glow",
+						}, -- [1]
+					},
+				}, -- [1]
+				{
+					["check"] = {
+						["trigger"] = 3,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = 0,
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [2]
+			},
+			["cooldown"] = true,
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+		},
+		["[WotLK] Balance Druid (Main Group)"] = {
+			["controlledChildren"] = {
+				"[WotLK] Balance Druid (Left Group)", -- [1]
+				"[WotLK] Balance Druid (Right Group)", -- [2]
+				"[WotLK] Balance Druid (Top Group)", -- [3]
+				"[Druid] Mana", -- [4]
+				"[Druid] Nature's Grace", -- [5]
+				"[Druid] Earth and Moon", -- [6]
+				"[Druid] Starfall Bar", -- [7]
+				"[Druid] GCD", -- [8]
+				"[Druid] Starfall CD", -- [9]
+				"[Druid] Starfall", -- [10]
+				"[Druid] Insect Swarm Missing", -- [11]
+				"[Druid] Insect Swarm", -- [12]
+				"[Druid] Force of Nature Bar", -- [13]
+				"[Druid] Force of Nature CD", -- [14]
+				"[Druid] Force of Nature", -- [15]
+				"[Druid] Moonfire Missing", -- [16]
+				"[Druid] Moonfire", -- [17]
+				"[Druid] Eclipse (Missing)", -- [18]
+				"[Druid] Eclipse (Solar)", -- [19]
+				"[Druid] Eclipse (Lunar)", -- [20]
+				"[Druid] Eclipse (Solar) CD Timer", -- [21]
+				"[Druid] Eclipse (Lunar) CD Timer ", -- [22]
+				"[Druid] Faerie Fire fading", -- [23]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = 0,
+			["preferToUpdate"] = false,
+			["yOffset"] = -239.9999186457401,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["subeventPrefix"] = "SPELL",
+						["type"] = "aura2",
+						["spellIds"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
+						["names"] = {
+						},
+						["event"] = "Health",
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["internalVersion"] = 59,
+			["selfPoint"] = "BOTTOMLEFT",
+			["subRegions"] = {
+			},
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["source"] = "import",
+			["scale"] = 0.7000000000000001,
+			["border"] = false,
+			["borderEdge"] = "Square Full White",
+			["regionType"] = "group",
+			["borderSize"] = 2,
+			["borderOffset"] = 4,
+			["tocversion"] = 30400,
+			["id"] = "[WotLK] Balance Druid (Main Group)",
+			["frameStrata"] = 3,
+			["anchorFrameType"] = "SCREEN",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
+			["config"] = {
+			},
+			["uid"] = "GXzlFqAOb14",
 			["authorOptions"] = {
 			},
+			["conditions"] = {
+			},
+			["information"] = {
+				["ignoreOptionsEventErrors"] = true,
+				["forceEvents"] = true,
+				["groupOffset"] = true,
+			},
+			["borderInset"] = 1,
 		},
 		["Faerie Fire "] = {
 			["iconSource"] = -1,
@@ -25101,16 +26824,16 @@ WeakAurasSaved = {
 					["do_glow"] = false,
 					["glow_action"] = "show",
 				},
+				["init"] = {
+				},
 				["finish"] = {
 					["glow_frame_type"] = "FRAMESELECTOR",
 					["hide_all_glows"] = false,
 					["glow_action"] = "show",
-					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Life Tap",
 					["glow_type"] = "Pixel",
 					["do_message"] = false,
-					["glow_frame"] = "WeakAuras:Life Tap",
-				},
-				["init"] = {
+					["do_glow"] = false,
 				},
 			},
 			["triggers"] = {
@@ -25134,13 +26857,13 @@ WeakAurasSaved = {
 							"770", -- [1]
 							"16857", -- [2]
 						},
-						["unit"] = "target",
+						["subeventPrefix"] = "SPELL",
 						["spellIds"] = {
 						},
-						["subeventSuffix"] = "_CAST_START",
-						["remOperator"] = "<",
 						["type"] = "aura2",
-						["subeventPrefix"] = "SPELL",
+						["remOperator"] = "<",
+						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "target",
 						["useRem"] = false,
 					},
 					["untrigger"] = {
@@ -25150,20 +26873,20 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "unit",
 						["use_level"] = false,
-						["hostility"] = "hostile",
+						["use_unit"] = true,
 						["level_operator"] = ">",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["hostility"] = "hostile",
 						["use_class"] = false,
 						["use_unitisunit"] = false,
 						["use_hostility"] = false,
+						["unit"] = "target",
 						["classification"] = {
 							["single"] = "worldboss",
 							["multi"] = {
 								["worldboss"] = true,
 							},
 						},
-						["unit"] = "target",
 						["level"] = "81",
 						["use_attackable"] = true,
 						["debuffType"] = "HELPFUL",
@@ -25212,210 +26935,72 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["config"] = {
+			["uid"] = "B1nNrLrnAKn",
+			["zoom"] = 0,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["icon"] = true,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["cooldownTextDisabled"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["cooldown"] = false,
-			["icon"] = true,
-			["parent"] = "平衡德循環助手",
-			["semver"] = "1.0.4",
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
+			["url"] = "https://wago.io/X6wQKkZUq/5",
+			["useCooldownModRate"] = true,
+			["width"] = 30,
+			["cooldownTextDisabled"] = false,
 			["auto"] = true,
 			["tocversion"] = 30400,
 			["id"] = "Faerie Fire ",
-			["alpha"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 30,
 			["frameStrata"] = 1,
-			["uid"] = "B1nNrLrnAKn",
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["semver"] = "1.0.4",
+			["config"] = {
+			},
 			["inverse"] = false,
-			["url"] = "https://wago.io/X6wQKkZUq/5",
+			["parent"] = "平衡德循環助手",
 			["conditions"] = {
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["xOffset"] = 0,
-		},
-		["[WotLK] Balance Druid (Main Group)"] = {
-			["controlledChildren"] = {
-				"[WotLK] Balance Druid (Left Group)", -- [1]
-				"[WotLK] Balance Druid (Right Group)", -- [2]
-				"[WotLK] Balance Druid (Top Group)", -- [3]
-				"[Druid] Mana", -- [4]
-				"[Druid] Nature's Grace", -- [5]
-				"[Druid] Earth and Moon", -- [6]
-				"[Druid] Starfall Bar", -- [7]
-				"[Druid] GCD", -- [8]
-				"[Druid] Starfall CD", -- [9]
-				"[Druid] Starfall", -- [10]
-				"[Druid] Insect Swarm Missing", -- [11]
-				"[Druid] Insect Swarm", -- [12]
-				"[Druid] Force of Nature Bar", -- [13]
-				"[Druid] Force of Nature CD", -- [14]
-				"[Druid] Force of Nature", -- [15]
-				"[Druid] Moonfire Missing", -- [16]
-				"[Druid] Moonfire", -- [17]
-				"[Druid] Eclipse (Missing)", -- [18]
-				"[Druid] Eclipse (Solar)", -- [19]
-				"[Druid] Eclipse (Lunar)", -- [20]
-				"[Druid] Eclipse (Solar) CD Timer", -- [21]
-				"[Druid] Eclipse (Lunar) CD Timer ", -- [22]
-				"[Druid] Faerie Fire fading", -- [23]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["authorOptions"] = {
-			},
-			["preferToUpdate"] = false,
-			["yOffset"] = -239.9999186457401,
-			["anchorPoint"] = "CENTER",
-			["borderColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["debuffType"] = "HELPFUL",
-						["type"] = "aura2",
-						["spellIds"] = {
-						},
-						["subeventSuffix"] = "_CAST_START",
-						["unit"] = "player",
-						["names"] = {
-						},
-						["event"] = "Health",
-						["subeventPrefix"] = "SPELL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["internalVersion"] = 59,
+			["cooldown"] = false,
 			["animation"] = {
 				["start"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["main"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 				["finish"] = {
-					["easeStrength"] = 3,
 					["type"] = "none",
+					["easeStrength"] = 3,
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
 			},
-			["subRegions"] = {
-			},
-			["load"] = {
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["backdropColor"] = {
+		},
+		["冰橙监控小德台风CD"] = {
+			["iconSource"] = -1,
+			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.5, -- [4]
-			},
-			["source"] = "import",
-			["scale"] = 0.7000000000000001,
-			["border"] = false,
-			["borderEdge"] = "Square Full White",
-			["regionType"] = "group",
-			["borderSize"] = 2,
-			["borderOffset"] = 4,
-			["tocversion"] = 30400,
-			["id"] = "[WotLK] Balance Druid (Main Group)",
-			["frameStrata"] = 3,
-			["anchorFrameType"] = "SCREEN",
-			["selfPoint"] = "BOTTOMLEFT",
-			["uid"] = "GXzlFqAOb14",
-			["borderInset"] = 1,
-			["xOffset"] = 0,
-			["conditions"] = {
-			},
-			["information"] = {
-				["groupOffset"] = true,
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["config"] = {
-			},
-		},
-		["冰橙监控小德节能施法"] = {
-			["iconSource"] = -1,
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
+				1, -- [4]
 			},
 			["preferToUpdate"] = false,
-			["yOffset"] = -197,
+			["yOffset"] = -265,
 			["anchorPoint"] = "CENTER",
-			["cooldownSwipe"] = false,
+			["cooldownSwipe"] = true,
 			["cooldownEdge"] = false,
 			["actions"] = {
 				["start"] = {
@@ -25428,36 +27013,28 @@ WeakAurasSaved = {
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["auranames"] = {
-							"节能施法", -- [1]
-						},
-						["use_genericShowOn"] = true,
+						["track"] = "auto",
+						["use_absorbMode"] = true,
 						["genericShowOn"] = "showAlways",
+						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
+						["type"] = "spell",
+						["use_genericShowOn"] = true,
+						["unevent"] = "auto",
 						["use_unit"] = true,
 						["duration"] = "1",
-						["matchesShowOn"] = "showAlways",
-						["unit"] = "player",
-						["spellName"] = 19574,
-						["auraspellids"] = {
-							"85739", -- [1]
-						},
-						["useName"] = true,
-						["unevent"] = "auto",
-						["useExactSpellId"] = false,
-						["use_absorbMode"] = true,
-						["type"] = "aura2",
 						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = true,
-						["realSpellName"] = 19574,
+						["use_exact_spellName"] = false,
+						["realSpellName"] = "台风",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
 						["subeventSuffix"] = "_CAST_START",
+						["spellName"] = 50516,
 						["names"] = {
 						},
-						["debuffType"] = "HELPFUL",
 						["use_track"] = true,
-						["subeventPrefix"] = "SPELL",
+						["unit"] = "player",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -25478,29 +27055,8 @@ WeakAurasSaved = {
 				["activeTriggerMode"] = -10,
 			},
 			["internalVersion"] = 59,
-			["keepAspectRatio"] = true,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-			},
+			["keepAspectRatio"] = false,
+			["selfPoint"] = "CENTER",
 			["desaturate"] = false,
 			["subRegions"] = {
 				{
@@ -25539,6 +27095,39 @@ WeakAurasSaved = {
 					["text_fontType"] = "OUTLINE",
 				}, -- [2]
 				{
+					["border_offset"] = 0,
+					["border_size"] = 2,
+					["border_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["border_visible"] = true,
+					["border_edge"] = "Blizzard Party",
+					["type"] = "subborder",
+				}, -- [3]
+				{
+					["glowFrequency"] = 0.25,
+					["glow"] = false,
+					["useGlowColor"] = false,
+					["glowType"] = "Pixel",
+					["glowLength"] = 10,
+					["glowYOffset"] = 0,
+					["glowColor"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["type"] = "subglow",
+					["glowXOffset"] = 0,
+					["glowScale"] = 1,
+					["glowThickness"] = 1,
+					["glowLines"] = 8,
+					["glowBorder"] = false,
+				}, -- [4]
+				{
 					["text_shadowXOffset"] = 0,
 					["text_text"] = "%p",
 					["text_shadowColor"] = {
@@ -25567,38 +27156,21 @@ WeakAurasSaved = {
 					["text_shadowYOffset"] = 0,
 					["text_text_format_p_time_mod_rate"] = true,
 					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
+					["text_fontType"] = "OUTLINE",
 					["text_anchorPoint"] = "CENTER",
 					["text_text_format_p_time_format"] = 0,
-					["text_fontType"] = "OUTLINE",
+					["text_visible"] = true,
 					["text_fontSize"] = 12,
 					["anchorXOffset"] = 0,
 					["text_text_format_p_time_precision"] = 1,
-				}, -- [3]
-				{
-					["border_offset"] = 0,
-					["border_size"] = 2,
-					["text_color"] = {
-					},
-					["border_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["border_visible"] = true,
-					["border_edge"] = "Blizzard Party",
-					["type"] = "subborder",
-				}, -- [4]
+				}, -- [5]
 			},
-			["height"] = 30,
+			["height"] = 45,
 			["load"] = {
 				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
-					["single"] = 13,
 					["multi"] = {
-						[13] = true,
 					},
 				},
 				["use_vehicle"] = false,
@@ -25607,64 +27179,67 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
-				["use_spec"] = true,
-				["zoneIds"] = "",
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-					},
-				},
-				["use_vehicleUi"] = false,
 				["size"] = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["use_spellknown"] = true,
+				["use_spec"] = true,
+				["use_vehicleUi"] = false,
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+						nil, -- [2]
+						true, -- [3]
+						true, -- [4]
+					},
+				},
+				["use_exact_spellknown"] = false,
+				["spellknown"] = 50516,
+				["zoneIds"] = "",
 			},
 			["source"] = "import",
 			["config"] = {
 			},
-			["icon"] = true,
 			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["easeStrength"] = 3,
+					["preset"] = "slideleft",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["easeStrength"] = 3,
+					["preset"] = "slideleft",
+				},
+			},
 			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["displayIcon"] = 136170,
-			["xOffset"] = 216,
-			["cooldownTextDisabled"] = false,
-			["width"] = 50,
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德节能施法",
-			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["uid"] = "O0GsJh)aE)1",
-			["inverse"] = true,
-			["parent"] = "冰橙监控小德BUFF组",
 			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "buffed",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-						{
-							["value"] = 0.3,
-							["property"] = "alpha",
-						}, -- [2]
-					},
-				}, -- [1]
 				{
 					["check"] = {
 						["trigger"] = 2,
@@ -25677,176 +27252,27 @@ WeakAurasSaved = {
 							["property"] = "alpha",
 						}, -- [1]
 					},
-				}, -- [2]
-			},
-			["cooldown"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-		},
-		["[Druid] Eclipse (Solar) CD Timer"] = {
-			["outline"] = "OUTLINE",
-			["parent"] = "[WotLK] Balance Druid (Main Group)",
-			["displayText_format_p_time_dynamic_threshold"] = 0,
-			["shadowYOffset"] = -1,
-			["anchorPoint"] = "CENTER",
-			["displayText_format_p_time_format"] = 0,
-			["customTextUpdate"] = "event",
-			["cooldownEdge"] = true,
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["spellId"] = "48517",
-						["auranames"] = {
-							"Eclipse (Solar)", -- [1]
-						},
-						["duration"] = "30",
-						["names"] = {
-						},
-						["debuffType"] = "HELPFUL",
-						["spellName"] = "Eclipse (Solar)",
-						["type"] = "combatlog",
-						["subeventSuffix"] = "_AURA_APPLIED",
-						["unevent"] = "timed",
-						["unit"] = "player",
-						["auraType"] = "BUFF",
-						["event"] = "Combat Log",
-						["useName"] = true,
-						["use_spellId"] = true,
-						["use_spellName"] = false,
-						["spellIds"] = {
-						},
-						["use_sourceUnit"] = true,
-						["ownOnly"] = true,
-						["subeventPrefix"] = "SPELL",
-						["sourceUnit"] = "player",
-						["use_auraType"] = true,
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-				["activeTriggerMode"] = -10,
-			},
-			["displayText_format_p_format"] = "timed",
-			["displayText_format_p_time_legacy_floor"] = true,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["internalVersion"] = 59,
-			["desaturate"] = false,
-			["font"] = "Expressway",
-			["color"] = {
-				1, -- [1]
-				0.4117647058823529, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
 				}, -- [1]
 			},
-			["height"] = 60,
-			["cooldown"] = true,
-			["load"] = {
-				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_never"] = false,
-				["talent"] = {
-					["multi"] = {
-						[24] = true,
-					},
-				},
-				["use_vehicle"] = false,
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-						["DRUID"] = true,
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["use_talent"] = false,
-			},
-			["conditions"] = {
-			},
-			["preferToUpdate"] = false,
-			["fontSize"] = 15,
-			["source"] = "import",
-			["selfPoint"] = "CENTER",
-			["shadowXOffset"] = 1,
-			["automaticWidth"] = "Auto",
-			["config"] = {
-			},
-			["anchorFrameFrame"] = "WeakAuras:[Druid] Eclipse (Missing)",
-			["regionType"] = "text",
-			["xOffset"] = 0,
-			["anchorFrameType"] = "SELECTFRAME",
-			["alpha"] = 1,
-			["displayText_format_p_time_mod_rate"] = true,
-			["displayText_format_p_time_precision"] = 1,
-			["wordWrap"] = "WordWrap",
-			["justify"] = "LEFT",
-			["zoom"] = 0.29,
+			["parent"] = "冰橙监控小德CD组 ",
+			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
 			["auto"] = true,
 			["tocversion"] = 30400,
-			["id"] = "[Druid] Eclipse (Solar) CD Timer",
-			["displayText"] = "%p",
+			["id"] = "冰橙监控小德台风CD",
 			["frameStrata"] = 1,
-			["width"] = 60,
-			["yOffset"] = 680,
-			["uid"] = "O8GR8)CHRJZ",
-			["inverse"] = false,
+			["alpha"] = 1,
+			["width"] = 45,
+			["zoom"] = 0,
+			["uid"] = "YUB6N4Z96Aj",
+			["inverse"] = true,
+			["xOffset"] = 70,
+			["displayIcon"] = "",
+			["cooldown"] = true,
 			["icon"] = true,
-			["shadowColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["fixedWidth"] = 200,
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["authorOptions"] = {
-			},
 		},
-		["[Druid] Innervate Cast"] = {
+		["[Druid] Rebirth CD"] = {
 			["iconSource"] = -1,
 			["authorOptions"] = {
 			},
@@ -25868,25 +27294,24 @@ WeakAurasSaved = {
 							"Travel Form", -- [6]
 							"Flight Form", -- [7]
 						},
-						["duration"] = "1",
-						["ownOnly"] = true,
-						["genericShowOn"] = "showOnCooldown",
-						["subeventPrefix"] = "SPELL",
 						["use_genericShowOn"] = true,
-						["remaining"] = "170",
-						["unit"] = "group",
-						["ignoreDead"] = false,
-						["debuffType"] = "HELPFUL",
-						["useName"] = false,
-						["unevent"] = "auto",
-						["spellName"] = 29166,
-						["ignoreDisconnected"] = false,
-						["use_remaining"] = true,
-						["useExactSpellId"] = true,
-						["auraspellids"] = {
-							"29166", -- [1]
+						["remaining_operator"] = ">=",
+						["genericShowOn"] = "showOnCooldown",
+						["names"] = {
 						},
-						["type"] = "aura2",
+						["matchesShowOn"] = "showOnMissing",
+						["remaining"] = "170",
+						["subeventPrefix"] = "SPELL",
+						["ownOnly"] = true,
+						["unit"] = "group",
+						["useName"] = false,
+						["subeventSuffix"] = "_CAST_START",
+						["spellName"] = 48477,
+						["ignoreDisconnected"] = false,
+						["type"] = "spell",
+						["useExactSpellId"] = true,
+						["unevent"] = "auto",
+						["ignoreDead"] = false,
 						["form"] = {
 							["multi"] = {
 								true, -- [1]
@@ -25899,112 +27324,36 @@ WeakAurasSaved = {
 							},
 						},
 						["event"] = "Cooldown Progress (Spell)",
-						["subeventSuffix"] = "_CAST_START",
-						["realSpellName"] = "Innervate",
+						["auraspellids"] = {
+							"29166", -- [1]
+						},
+						["realSpellName"] = "复生",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
+						["debuffType"] = "HELPFUL",
+						["use_remaining"] = false,
 						["use_unit"] = true,
-						["remaining_operator"] = "<",
-						["names"] = {
-						},
 						["use_track"] = true,
-						["matchesShowOn"] = "showOnMissing",
+						["duration"] = "1",
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showOnCooldown",
 					},
 				}, -- [1]
-				{
-					["trigger"] = {
-						["auranames"] = {
-							"Moonkin Form", -- [1]
-							"Dire Bear Form", -- [2]
-							"Bear Form", -- [3]
-							"Aquatic Form", -- [4]
-							"Cat Form", -- [5]
-							"Travel Form", -- [6]
-							"Flight Form", -- [7]
-						},
-						["ownOnly"] = true,
-						["duration"] = "1",
-						["genericShowOn"] = "showOnCooldown",
-						["names"] = {
-						},
-						["matchesShowOn"] = "showOnMissing",
-						["remaining"] = "170",
-						["unit"] = "group",
-						["ignoreDead"] = false,
-						["debuffType"] = "HELPFUL",
-						["useName"] = false,
-						["unevent"] = "auto",
-						["spellName"] = 29166,
-						["realSpellName"] = "激活",
-						["type"] = "spell",
-						["subeventSuffix"] = "_CAST_START",
-						["useExactSpellId"] = true,
-						["use_remaining"] = true,
-						["form"] = {
-							["multi"] = {
-								true, -- [1]
-								true, -- [2]
-								true, -- [3]
-								true, -- [4]
-								true, -- [5]
-								true, -- [6]
-								[0] = true,
-							},
-						},
-						["event"] = "Cooldown Progress (Spell)",
-						["auraspellids"] = {
-							"29166", -- [1]
-						},
-						["ignoreDisconnected"] = false,
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["subeventPrefix"] = "SPELL",
-						["remaining_operator"] = ">=",
-						["use_unit"] = true,
-						["use_track"] = true,
-						["use_genericShowOn"] = true,
-					},
-					["untrigger"] = {
-						["genericShowOn"] = "showOnCooldown",
-					},
-				}, -- [2]
 				["activeTriggerMode"] = -10,
 			},
 			["internalVersion"] = 59,
 			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["desaturate"] = false,
+			["selfPoint"] = "CENTER",
+			["desaturate"] = true,
 			["subRegions"] = {
 				{
 					["type"] = "subbackground",
 				}, -- [1]
 				{
-					["border_offset"] = 0,
 					["type"] = "subborder",
+					["border_offset"] = 0,
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -26015,62 +27364,6 @@ WeakAurasSaved = {
 					["border_edge"] = "Square Full White",
 					["border_size"] = 1,
 				}, -- [2]
-				{
-					["glowFrequency"] = 0.25,
-					["type"] = "subglow",
-					["useGlowColor"] = true,
-					["glowType"] = "ACShine",
-					["glowLength"] = 10,
-					["glowYOffset"] = 0,
-					["glowColor"] = {
-						0, -- [1]
-						0.6862745098039216, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["glow"] = true,
-					["glowXOffset"] = 0,
-					["glowThickness"] = 1,
-					["glowScale"] = 1,
-					["glowLines"] = 8,
-					["glowBorder"] = false,
-				}, -- [3]
-				{
-					["text_text_format_p_time_format"] = 0,
-					["text_text"] = "%1.unitName",
-					["text_shadowColor"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["text_selfPoint"] = "AUTO",
-					["text_automaticWidth"] = "Auto",
-					["text_fixedWidth"] = 64,
-					["anchorYOffset"] = 0,
-					["text_justify"] = "CENTER",
-					["rotateText"] = "NONE",
-					["type"] = "subtext",
-					["text_fontType"] = "OUTLINE",
-					["text_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["text_font"] = "Expressway",
-					["text_text_format_1.unitName_format"] = "none",
-					["text_shadowYOffset"] = 0,
-					["anchorXOffset"] = 0,
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
-					["text_anchorPoint"] = "OUTER_LEFT",
-					["text_text_format_p_format"] = "timed",
-					["text_text_format_p_time_precision"] = 1,
-					["text_fontSize"] = 12,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_shadowXOffset"] = 0,
-				}, -- [4]
 			},
 			["height"] = 40,
 			["load"] = {
@@ -26098,53 +27391,72 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["zoom"] = 0.29,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["parent"] = "[WotLK] Balance Druid (Left Group)",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["cooldown"] = true,
-			["conditions"] = {
-			},
-			["config"] = {
-			},
-			["useCooldownModRate"] = true,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Innervate Cast",
-			["width"] = 40,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["alpha"] = 1,
-			["uid"] = "5gFDh27a(Tl",
-			["inverse"] = false,
-			["selfPoint"] = "CENTER",
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["regionType"] = "icon",
+			["parent"] = "[WotLK] Balance Druid (Left Group)",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
+			["uid"] = "nbqOHIUg0MR",
+			["useCooldownModRate"] = true,
+			["zoom"] = 0.29,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Rebirth CD",
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["width"] = 40,
+			["frameStrata"] = 1,
+			["config"] = {
+			},
+			["inverse"] = false,
+			["xOffset"] = 0,
+			["conditions"] = {
+			},
+			["cooldown"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 		},
-		["冰橙监控小德星辰坠落CD"] = {
+		["冰橙监控小德复生CD"] = {
 			["iconSource"] = -1,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
@@ -26153,49 +27465,39 @@ WeakAurasSaved = {
 			["yOffset"] = -265,
 			["anchorPoint"] = "CENTER",
 			["cooldownSwipe"] = true,
-			["cooldownEdge"] = false,
-			["icon"] = true,
+			["cooldownEdge"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["useName"] = true,
-						["auranames"] = {
-							"星辰坠落", -- [1]
-						},
-						["event"] = "Health",
-						["subeventPrefix"] = "SPELL",
-						["spellIds"] = {
-						},
-						["unit"] = "player",
-						["subeventSuffix"] = "_CAST_START",
-						["names"] = {
-						},
-						["type"] = "aura2",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-				{
-					["trigger"] = {
+						["track"] = "auto",
+						["itemName"] = 6265,
 						["duration"] = "1",
 						["genericShowOn"] = "showAlways",
 						["subeventPrefix"] = "SPELL",
 						["debuffType"] = "HELPFUL",
-						["type"] = "spell",
-						["unit"] = "player",
-						["unevent"] = "auto",
-						["use_unit"] = true,
 						["names"] = {
 						},
+						["type"] = "spell",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
 						["event"] = "Cooldown Progress (Spell)",
+						["use_itemName"] = true,
 						["use_exact_spellName"] = false,
-						["realSpellName"] = "星辰坠落",
+						["realSpellName"] = "复生",
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["spellName"] = 48505,
-						["subeventSuffix"] = "_CAST_START",
+						["spellName"] = 20747,
+						["unevent"] = "auto",
 						["use_genericShowOn"] = true,
 						["use_track"] = true,
 						["use_absorbMode"] = true,
@@ -26203,7 +27505,7 @@ WeakAurasSaved = {
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
 					},
-				}, -- [2]
+				}, -- [1]
 				{
 					["trigger"] = {
 						["type"] = "unit",
@@ -26214,14 +27516,14 @@ WeakAurasSaved = {
 					},
 					["untrigger"] = {
 					},
-				}, -- [3]
+				}, -- [2]
 				["disjunctive"] = "any",
 				["activeTriggerMode"] = -10,
 			},
-			["useTooltip"] = false,
+			["internalVersion"] = 59,
 			["keepAspectRatio"] = false,
 			["selfPoint"] = "CENTER",
-			["desaturate"] = false,
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 			["subRegions"] = {
 				{
 					["type"] = "subbackground",
@@ -26260,7 +27562,7 @@ WeakAurasSaved = {
 				}, -- [2]
 				{
 					["border_size"] = 2,
-					["border_offset"] = 0,
+					["type"] = "subborder",
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -26271,31 +27573,210 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["type"] = "subborder",
+					["border_offset"] = 0,
 				}, -- [3]
-				{
-					["glowFrequency"] = 0.25,
-					["type"] = "subglow",
-					["useGlowColor"] = false,
-					["glowType"] = "Pixel",
-					["glowLength"] = 10,
-					["glowYOffset"] = 0,
-					["glowColor"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
+			},
+			["height"] = 45,
+			["load"] = {
+				["use_petbattle"] = false,
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
 					},
-					["glow"] = false,
-					["glowXOffset"] = 0,
-					["glowScale"] = 1,
-					["glowThickness"] = 1,
-					["glowLines"] = 8,
-					["glowBorder"] = false,
-				}, -- [4]
+				},
+				["use_vehicle"] = false,
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["use_vehicleUi"] = false,
+				["zoneIds"] = "",
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+						[3] = true,
+					},
+				},
+				["use_spec"] = true,
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["source"] = "import",
+			["uid"] = "oNl0h6jIxAb",
+			["desaturate"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+			},
+			["regionType"] = "icon",
+			["xOffset"] = 70,
+			["cooldown"] = true,
+			["displayIcon"] = "",
+			["parent"] = "冰橙监控小德CD组 ",
+			["frameStrata"] = 1,
+			["width"] = 45,
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德复生CD",
+			["useCooldownModRate"] = true,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
+			["config"] = {
+			},
+			["inverse"] = true,
+			["icon"] = true,
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 2,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = 0,
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [1]
+			},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+		},
+		["冰橙监控小德猫野性冲锋CD"] = {
+			["iconSource"] = -1,
+			["xOffset"] = 25,
+			["preferToUpdate"] = false,
+			["yOffset"] = -265,
+			["anchorPoint"] = "CENTER",
+			["cooldownSwipe"] = true,
+			["cooldownEdge"] = false,
+			["icon"] = true,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["track"] = "auto",
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
+						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
+						["type"] = "spell",
+						["unit"] = "player",
+						["unevent"] = "auto",
+						["use_unit"] = true,
+						["names"] = {
+						},
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = false,
+						["realSpellName"] = "野性冲锋 - 豹",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["spellName"] = 49376,
+						["subeventSuffix"] = "_CAST_START",
+						["use_genericShowOn"] = true,
+						["use_track"] = true,
+						["use_absorbMode"] = true,
+					},
+					["untrigger"] = {
+						["genericShowOn"] = "showAlways",
+					},
+				}, -- [1]
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["debuffType"] = "HELPFUL",
+						["use_form"] = true,
+						["use_unit"] = true,
+						["form"] = {
+							["single"] = 3,
+						},
+						["event"] = "Stance/Form/Aura",
+						["unit"] = "player",
+					},
+					["untrigger"] = {
+					},
+				}, -- [2]
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["unit"] = "target",
+						["debuffType"] = "HELPFUL",
+						["event"] = "Unit Characteristics",
+						["use_unit"] = true,
+					},
+					["untrigger"] = {
+					},
+				}, -- [3]
+				["disjunctive"] = "any",
+				["activeTriggerMode"] = -10,
+			},
+			["internalVersion"] = 59,
+			["keepAspectRatio"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["easeStrength"] = 3,
+					["preset"] = "slideleft",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["easeStrength"] = 3,
+					["preset"] = "slideleft",
+				},
+			},
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
 				{
 					["text_shadowXOffset"] = 0,
-					["text_text"] = "%p",
+					["text_text_format_s_format"] = "none",
+					["text_text"] = "%s",
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
@@ -26308,9 +27789,7 @@ WeakAurasSaved = {
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_precision"] = 1,
 					["type"] = "subtext",
-					["anchorXOffset"] = 0,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -26318,106 +27797,90 @@ WeakAurasSaved = {
 						1, -- [4]
 					},
 					["text_font"] = "Friz Quadrata TT",
-					["text_text_format_p_format"] = "timed",
 					["text_shadowYOffset"] = 0,
-					["text_visible"] = true,
 					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = true,
+					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
+					["text_fontSize"] = 16,
+					["anchorXOffset"] = 0,
 					["text_fontType"] = "OUTLINE",
-					["text_anchorPoint"] = "CENTER",
-					["text_text_format_p_time_format"] = 0,
-					["text_text_format_p_time_mod_rate"] = true,
-					["text_fontSize"] = 12,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_text_format_p_time_legacy_floor"] = false,
-				}, -- [5]
+				}, -- [2]
+				{
+					["type"] = "subborder",
+					["border_size"] = 2,
+					["text_color"] = {
+					},
+					["border_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["border_visible"] = true,
+					["border_edge"] = "Blizzard Party",
+					["border_offset"] = 0,
+				}, -- [3]
 			},
 			["height"] = 45,
 			["load"] = {
 				["use_petbattle"] = false,
 				["use_never"] = true,
 				["talent"] = {
-					["single"] = 13,
 					["multi"] = {
-						[13] = true,
 					},
 				},
 				["use_vehicle"] = false,
 				["spec"] = {
-					["single"] = 3,
+					["single"] = 2,
 					["multi"] = {
 						true, -- [1]
-						[3] = true,
-					},
-				},
-				["size"] = {
-					["multi"] = {
+						true, -- [2]
+						true, -- [3]
 					},
 				},
 				["use_class"] = true,
 				["use_spellknown"] = true,
+				["zoneIds"] = "",
+				["use_vehicleUi"] = false,
 				["class"] = {
 					["single"] = "DRUID",
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
-				["use_vehicleUi"] = false,
 				["use_exact_spellknown"] = false,
-				["spellknown"] = 48505,
-				["zoneIds"] = "",
+				["spellknown"] = 16979,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
-			["xOffset"] = 115,
-			["uid"] = "ikrNpOctVyI",
-			["parent"] = "冰橙监控小德CD组 ",
+			["uid"] = "VvI6yqpY6GO",
+			["desaturate"] = false,
+			["selfPoint"] = "CENTER",
+			["regionType"] = "icon",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
-			["cooldown"] = true,
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "show",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "sub.4.glow",
-						}, -- [1]
-					},
-				}, -- [1]
-				{
-					["check"] = {
-						["trigger"] = 3,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = 0,
-							["property"] = "alpha",
-						}, -- [1]
-					},
-				}, -- [2]
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["internalVersion"] = 59,
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["anchorFrameType"] = "SCREEN",
+			["displayIcon"] = 136145,
+			["parent"] = "冰橙监控小德CD组 ",
 			["useCooldownModRate"] = true,
-			["zoom"] = 0,
+			["width"] = 45,
+			["cooldownTextDisabled"] = false,
 			["auto"] = true,
 			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德星辰坠落CD",
-			["cooldownTextDisabled"] = false,
+			["id"] = "冰橙监控小德猫野性冲锋CD",
 			["alpha"] = 1,
-			["width"] = 45,
 			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -26429,132 +27892,190 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
-			["displayIcon"] = "",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 2,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [1]
+				{
+					["check"] = {
+						["trigger"] = 3,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [2]
 			},
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["preset"] = "slideleft",
-					["easeStrength"] = 3,
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["preset"] = "slideleft",
-					["easeStrength"] = 3,
-				},
-			},
-		},
-		["冰橙监控小德宁静CD"] = {
-			["iconSource"] = -1,
+			["cooldown"] = true,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
 			},
+		},
+		["GCDHistoryBuffer3"] = {
+			["iconSource"] = -1,
+			["wagoID"] = "RvbxkQEv2",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["preferToUpdate"] = false,
-			["yOffset"] = -265,
+			["customText"] = "\n\n",
+			["yOffset"] = 0,
 			["anchorPoint"] = "CENTER",
 			["cooldownSwipe"] = true,
-			["cooldownEdge"] = false,
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/RvbxkQEv2/19",
 			["actions"] = {
 				["start"] = {
+					["custom"] = "",
+					["do_custom"] = false,
 				},
 				["finish"] = {
 				},
 				["init"] = {
+					["custom"] = "aura_env.thisRegister = 3\n\naura_env.animX = aura_env.config[\"displayTime\"] * aura_env.region.width\nif aura_env.config[\"direction\"] == 1 then\n    aura_env.animDir = -1\nelse\n    aura_env.animDir = 1\nend\n\naura_env.xoff = 0\naura_env.castTime = 0",
+					["do_custom"] = true,
 				},
 			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["type"] = "aura2",
-						["auranames"] = {
-							"宁静", -- [1]
-						},
-						["event"] = "Health",
-						["unit"] = "player",
+						["use_absorbMode"] = true,
+						["genericShowOn"] = "showOnActive",
+						["use_unit"] = true,
+						["customIcon"] = "function()\n    return aura_env.icon\nend\n\n\n\n\n\n\n\n",
+						["dynamicDuration"] = true,
+						["debuffType"] = "HELPFUL",
+						["use_cloneId"] = true,
+						["custom_hide"] = "timed",
+						["subeventPrefix"] = "SPELL",
+						["type"] = "custom",
+						["subeventSuffix"] = "_CAST_SUCCESS",
+						["custom_type"] = "event",
 						["spellIds"] = {
 						},
-						["subeventPrefix"] = "SPELL",
-						["subeventSuffix"] = "_CAST_START",
+						["events"] = "MYSTLER_GCDHISTORY_ADD",
+						["event"] = "Combat Log",
+						["unevent"] = "timed",
+						["customDuration"] = "function()\n    return aura_env.config[\"displayTime\"], aura_env.castTime + aura_env.config[\"displayTime\"]\nend\n\n\n\n\n\n\n\n\n\n\n\n",
+						["unit"] = "player",
+						["custom"] = "function(event, arg1, arg2, arg3, arg4)\n    if arg1 == aura_env.thisRegister then\n        aura_env.icon = arg2\n        aura_env.xoff = 0\n        aura_env.castTime = arg3\n        if arg4 then\n            aura_env.region:SetDesaturated(true)\n            aura_env.region:Color(1,0,0,1)\n        else\n            aura_env.region:SetDesaturated(false)\n            aura_env.region:Color(1,1,1,1)\n        end\n        return true\n    end\n    return false\nend",
+						["use_sourceUnit"] = true,
+						["check"] = "event",
+						["duration"] = "3",
+						["sourceUnit"] = "player",
 						["names"] = {
 						},
-						["useName"] = true,
-						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
+						["custom"] = "function() return true end",
+						["unit"] = "player",
 					},
 				}, -- [1]
 				{
 					["trigger"] = {
-						["use_genericShowOn"] = true,
-						["genericShowOn"] = "showAlways",
-						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
-						["type"] = "spell",
-						["subeventPrefix"] = "SPELL",
-						["unevent"] = "auto",
-						["names"] = {
-						},
-						["use_unit"] = true,
-						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = false,
-						["realSpellName"] = "宁静",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["spellName"] = 9862,
+						["type"] = "custom",
 						["subeventSuffix"] = "_CAST_START",
-						["use_absorbMode"] = true,
-						["use_track"] = true,
-						["duration"] = "1",
+						["duration"] = "0",
+						["event"] = "Health",
+						["subeventPrefix"] = "SPELL",
+						["custom"] = "function(event, arg1, arg2)\n    if arg1 == aura_env.thisRegister then\n        aura_env.xoff = aura_env.xoff + arg2\n    end\n    return false\nend\n\n\n\n\n\n\n\n\n\n\n\n",
+						["custom_type"] = "event",
+						["events"] = "MYSTLER_GCDHISTORY_OFFSET",
+						["custom_hide"] = "timed",
 					},
 					["untrigger"] = {
-						["genericShowOn"] = "showAlways",
 					},
 				}, -- [2]
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["unit"] = "target",
-						["debuffType"] = "HELPFUL",
-						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
-					},
-					["untrigger"] = {
-					},
-				}, -- [3]
 				["disjunctive"] = "any",
 				["activeTriggerMode"] = -10,
 			},
 			["internalVersion"] = 59,
 			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+				["main"] = {
+					["colorR"] = 1,
+					["scalex"] = 1,
+					["alphaType"] = "custom",
+					["colorA"] = 1,
+					["colorG"] = 1,
+					["alphaFunc"] = "function(progress, start, delta)\n    return math.min(1.0, (1.0 - progress) * 5.0)\nend\n\n\n",
+					["use_translate"] = true,
+					["use_alpha"] = true,
+					["type"] = "custom",
+					["easeType"] = "none",
+					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n    local x = startX + aura_env.animDir * (progress * aura_env.animX)\n    x = x + aura_env.animDir * aura_env.xoff\n    return x, startY\nend",
+					["scaley"] = 1,
+					["alpha"] = 0,
+					["y"] = 0,
+					["x"] = 0,
+					["duration_type"] = "relative",
+					["translateType"] = "custom",
+					["rotate"] = 0,
+					["easeStrength"] = 3,
+					["duration"] = "100%",
+					["colorB"] = 1,
+				},
+				["finish"] = {
+					["colorR"] = 1,
+					["duration"] = "0.2",
+					["alphaType"] = "straight",
+					["colorA"] = 1,
+					["colorG"] = 1,
+					["alphaFunc"] = "    function(progress, start, delta)\n      return start + (progress * delta)\n    end\n  ",
+					["use_translate"] = false,
+					["use_alpha"] = false,
+					["type"] = "none",
+					["easeType"] = "none",
+					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n    local x = startX + (progress * deltaX)\n    if aura_env.state then\n        x = x + aura_env.state.xoff\n    end\n    return x, startY + (progress * deltaY)\nend",
+					["scaley"] = 1,
+					["alpha"] = 0,
+					["scalex"] = 1,
+					["y"] = 0,
+					["x"] = -150,
+					["duration_type"] = "seconds",
+					["rotate"] = 0,
+					["translateType"] = "custom",
+					["easeStrength"] = 3,
+					["preset"] = "fade",
+					["colorB"] = 1,
+				},
+			},
+			["desaturate"] = false,
+			["version"] = 19,
 			["subRegions"] = {
 				{
 					["type"] = "subbackground",
 				}, -- [1]
 				{
 					["text_shadowXOffset"] = 0,
-					["text_text_format_s_format"] = "none",
-					["text_text"] = "%s",
+					["text_text"] = " ",
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
@@ -26577,197 +28098,14 @@ WeakAurasSaved = {
 					["text_font"] = "Friz Quadrata TT",
 					["text_shadowYOffset"] = 0,
 					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
-					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
-					["text_fontSize"] = 16,
-					["anchorXOffset"] = 0,
 					["text_fontType"] = "OUTLINE",
-				}, -- [2]
-				{
-					["border_offset"] = 0,
-					["type"] = "subborder",
-					["text_color"] = {
-					},
-					["border_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["border_visible"] = true,
-					["border_edge"] = "Blizzard Party",
-					["border_size"] = 2,
-				}, -- [3]
-				{
-					["glowFrequency"] = 0.25,
-					["type"] = "subglow",
-					["useGlowColor"] = false,
-					["glowType"] = "Pixel",
-					["glowLength"] = 10,
-					["glowYOffset"] = 0,
-					["glowColor"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["glow"] = false,
-					["glowXOffset"] = 0,
-					["glowScale"] = 1,
-					["glowThickness"] = 1,
-					["glowLines"] = 8,
-					["glowBorder"] = false,
-				}, -- [4]
-			},
-			["height"] = 45,
-			["load"] = {
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 13,
-					["multi"] = {
-						[13] = true,
-					},
-				},
-				["use_vehicle"] = false,
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["use_vehicleUi"] = false,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-						[3] = true,
-					},
-				},
-				["zoneIds"] = "",
-			},
-			["source"] = "import",
-			["parent"] = "冰橙监控小德CD组 ",
-			["uid"] = "FoH3ssEgX7N",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["xOffset"] = 225,
-			["regionType"] = "icon",
-			["cooldown"] = true,
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "show",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "sub.4.glow",
-						}, -- [1]
-					},
-				}, -- [1]
-				{
-					["check"] = {
-						["trigger"] = 3,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = 0,
-							["property"] = "alpha",
-						}, -- [1]
-					},
+					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
+					["text_fontSize"] = 12,
+					["anchorXOffset"] = 0,
+					["text_visible"] = false,
 				}, -- [2]
 			},
-			["useTooltip"] = false,
-			["desaturate"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["frameStrata"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德宁静CD",
-			["zoom"] = 0,
-			["useCooldownModRate"] = true,
-			["width"] = 45,
-			["alpha"] = 1,
-			["config"] = {
-			},
-			["inverse"] = true,
-			["icon"] = true,
-			["displayIcon"] = "",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-			},
-		},
-		["RED POINT"] = {
-			["user_y"] = 0,
-			["modelIsUnit"] = false,
-			["user_x"] = 0,
-			["authorOptions"] = {
-			},
-			["preferToUpdate"] = false,
-			["yOffset"] = -40,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["sameTexture"] = true,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["model_path"] = "Creature/Arthaslichking/arthaslichking.m2",
-			["desaturate"] = false,
-			["rotation"] = 0,
-			["font"] = "Friz Quadrata TT",
+			["height"] = 50,
 			["load"] = {
 				["ingroup"] = {
 					["multi"] = {
@@ -26778,35 +28116,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						[2] = true,
-					},
-				},
 				["class"] = {
-					["single"] = "WARLOCK",
 					["multi"] = {
-						["WARLOCK"] = true,
 					},
 				},
-				["race"] = {
-					["single"] = "Troll",
-					["multi"] = {
-						["Troll"] = true,
-					},
-				},
+				["zoneIds"] = "",
 				["difficulty"] = {
 					["multi"] = {
 					},
 				},
-				["use_zone"] = false,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["pvptalent"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -26814,342 +28133,303 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["talent2"] = {
 					["multi"] = {
 					},
 				},
 				["size"] = {
-					["single"] = "flexible",
 					["multi"] = {
-						["flexible"] = true,
 					},
 				},
 			},
-			["textureWrapMode"] = "CLAMP",
-			["sequence"] = 1,
-			["foregroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["scale"] = 1,
-			["regionType"] = "texture",
-			["blendMode"] = "BLEND",
-			["texture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura104",
-			["borderOffset"] = 5,
-			["compress"] = false,
-			["alpha"] = 1,
-			["borderInset"] = 11,
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["color"] = {
-				0.905882352941177, -- [1]
-				0.0392156862745098, -- [2]
-				0.145098039215686, -- [3]
-				0.75, -- [4]
+			["source"] = "import",
+			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
+			["authorOptions"] = {
+				{
+					["width"] = 1,
+					["type"] = "select",
+					["values"] = {
+						"Left", -- [1]
+						"Right", -- [2]
+					},
+					["name"] = "Direction",
+					["useDesc"] = true,
+					["key"] = "direction",
+					["default"] = 1,
+					["desc"] = "In which direction should the history expand?",
+				}, -- [1]
+				{
+					["type"] = "range",
+					["useDesc"] = true,
+					["max"] = 6,
+					["step"] = 0.5,
+					["width"] = 1,
+					["min"] = 1,
+					["key"] = "displayTime",
+					["default"] = 3,
+					["name"] = "Display Time",
+					["desc"] = "How long (in seconds) icons are shown at max.",
+				}, -- [2]
 			},
-			["desaturateBackground"] = false,
-			["desaturateForeground"] = false,
+			["xOffset"] = 0,
+			["cooldown"] = false,
+			["regionType"] = "icon",
+			["conditions"] = {
+			},
+			["stickyDuration"] = false,
+			["icon"] = true,
+			["uid"] = "fhYScDQpw0c",
+			["alpha"] = 1,
+			["semver"] = "1.1.10",
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "GCDHistoryBuffer3",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["width"] = 50,
+			["parent"] = "GCDHistoryGrp",
+			["config"] = {
+				["direction"] = 1,
+				["displayTime"] = 3,
+			},
+			["inverse"] = false,
+			["selfPoint"] = "CENTER",
+			["displayIcon"] = "",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["cooldownEdge"] = false,
+		},
+		["冰橙监控小德生命"] = {
+			["sparkWidth"] = 10,
+			["sparkOffsetX"] = 0,
+			["parent"] = "冰橙监控小德资源组",
+			["preferToUpdate"] = false,
+			["yOffset"] = -220,
+			["anchorPoint"] = "CENTER",
+			["sparkRotation"] = 0,
+			["sparkRotationMode"] = "AUTO",
+			["icon"] = false,
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["duration"] = "1",
-						["genericShowOn"] = "showOnActive",
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
 						["names"] = {
-							"协同魔典", -- [1]
 						},
 						["type"] = "unit",
-						["use_health"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["ownOnly"] = true,
+						["use_showCost"] = true,
 						["unevent"] = "auto",
-						["event"] = "Conditions",
-						["custom_type"] = "status",
+						["unit"] = "player",
+						["class"] = "HUNTER",
+						["event"] = "Health",
+						["use_unit"] = true,
+						["use_class"] = false,
+						["powertype"] = 1,
 						["spellIds"] = {
 						},
-						["use_spellName"] = true,
-						["health"] = "0",
-						["health_operator"] = ">",
-						["check"] = "event",
-						["use_alive"] = true,
-						["use_unit"] = true,
-						["spellName"] = 0,
+						["subeventSuffix"] = "_CAST_START",
+						["duration"] = "1",
+						["subeventPrefix"] = "SPELL",
+						["use_powertype"] = true,
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
-						["spellName"] = 0,
-						["use_spellName"] = true,
-						["unit"] = "player",
-						["use_unit"] = true,
 					},
 				}, -- [1]
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["use_unit"] = true,
+						["debuffType"] = "HELPFUL",
+						["event"] = "Unit Characteristics",
+						["unit"] = "target",
+					},
+					["untrigger"] = {
+					},
+				}, -- [2]
 				["disjunctive"] = "any",
-				["activeTriggerMode"] = 1,
+				["activeTriggerMode"] = -10,
+			},
+			["icon_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
 			["internalVersion"] = 59,
-			["advance"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["easeType"] = "none",
-				},
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.0588235294117647, -- [1]
+				1, -- [2]
+				0.0941176470588235, -- [3]
+				1, -- [4]
 			},
-			["stickyDuration"] = false,
-			["discrete_rotation"] = 0,
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["width"] = 335,
+			["sparkOffsetY"] = 0,
 			["subRegions"] = {
 				{
 					["type"] = "subbackground",
 				}, -- [1]
+				{
+					["type"] = "subforeground",
+				}, -- [2]
+				{
+					["border_offset"] = 0,
+					["border_anchor"] = "bar",
+					["type"] = "subborder",
+					["border_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["border_visible"] = true,
+					["border_edge"] = "Blizzard Party",
+					["border_size"] = 2,
+				}, -- [3]
+				{
+					["text_shadowXOffset"] = 1,
+					["text_shadowColor"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["text_text_format_t_time_legacy_floor"] = true,
+					["text_text_format_t_time_dynamic_threshold"] = 60,
+					["text_text_format_p_time_mod_rate"] = true,
+					["text_text_format_p_format"] = "timed",
+					["text_text_format_p_time_legacy_floor"] = true,
+					["text_selfPoint"] = "AUTO",
+					["text_automaticWidth"] = "Auto",
+					["text_fixedWidth"] = 64,
+					["text_text_format_t_time_format"] = 0,
+					["anchorYOffset"] = 0,
+					["text_justify"] = "CENTER",
+					["rotateText"] = "NONE",
+					["text_text_format_t_format"] = "timed",
+					["text_text_format_t_time_precision"] = 1,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["type"] = "subtext",
+					["text_visible"] = true,
+					["text_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["text_font"] = "Friz Quadrata TT",
+					["text_text_format_p_time_format"] = 0,
+					["text_shadowYOffset"] = -1,
+					["text_text_format_t_time_mod_rate"] = true,
+					["text_wordWrap"] = "WordWrap",
+					["text_fontType"] = "None",
+					["text_anchorPoint"] = "INNER_CENTER",
+					["text_text_format_n_format"] = "none",
+					["text_text_format_p_time_precision"] = 1,
+					["text_fontSize"] = 15,
+					["anchorXOffset"] = 0,
+					["text_text"] = "%p/%t",
+				}, -- [4]
 			},
-			["height"] = 140,
-			["rotate"] = true,
-			["backdropColor"] = {
+			["height"] = 15,
+			["desaturate"] = false,
+			["load"] = {
+				["use_petbattle"] = false,
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["use_vehicle"] = false,
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["use_class"] = true,
+				["use_vehicleUi"] = false,
+				["zoneIds"] = "",
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["sparkBlendMode"] = "ADD",
+			["useAdjustededMax"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["source"] = "import",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.5, -- [4]
+			},
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["iconSource"] = -1,
+			["smoothProgress"] = true,
+			["useAdjustededMin"] = false,
+			["regionType"] = "aurabar",
+			["uid"] = "J(QK9tRlwXa",
+			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.5, -- [4]
+				1, -- [4]
 			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["source"] = "import",
-			["fontSize"] = 12,
-			["border"] = false,
-			["borderEdge"] = "None",
-			["borderSize"] = 16,
-			["uid"] = "wncgQ3HUZWc",
-			["anchorPoint"] = "CENTER",
-			["crop_x"] = 0.41,
-			["mirror"] = true,
-			["model_x"] = 0,
-			["crop_y"] = 0.41,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["width"] = 140,
-			["selfPoint"] = "CENTER",
-			["id"] = "RED POINT",
-			["model_y"] = 0,
-			["frameStrata"] = 9,
+			["icon_side"] = "RIGHT",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["sparkHeight"] = 30,
+			["texture"] = "Solid",
+			["alpha"] = 1,
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["sparkHidden"] = "NEVER",
+			["id"] = "冰橙监控小德生命",
+			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["model_z"] = 0,
+			["spark"] = false,
 			["config"] = {
 			},
 			["inverse"] = false,
-			["xOffset"] = 0,
-			["orientation"] = "VERTICAL",
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["tocversion"] = 30400,
-		},
-		["冰橙监控小德野性成长CD"] = {
-			["iconSource"] = -1,
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["preferToUpdate"] = false,
-			["yOffset"] = -265,
-			["anchorPoint"] = "CENTER",
-			["cooldownSwipe"] = true,
-			["cooldownEdge"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["track"] = "auto",
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
-						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
-						["type"] = "spell",
-						["use_absorbMode"] = true,
-						["unevent"] = "auto",
-						["names"] = {
-						},
-						["use_genericShowOn"] = true,
-						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = false,
-						["realSpellName"] = "野性成长",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["subeventSuffix"] = "_CAST_START",
-						["spellName"] = 48438,
-						["subeventPrefix"] = "SPELL",
-						["use_track"] = true,
-						["use_unit"] = true,
-					},
-					["untrigger"] = {
-						["genericShowOn"] = "showAlways",
-					},
-				}, -- [1]
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["use_unit"] = true,
-						["debuffType"] = "HELPFUL",
-						["event"] = "Unit Characteristics",
-						["unit"] = "target",
-					},
-					["untrigger"] = {
-					},
-				}, -- [2]
-				["disjunctive"] = "any",
-				["activeTriggerMode"] = -10,
-			},
-			["internalVersion"] = 59,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["preset"] = "slideleft",
-					["easeStrength"] = 3,
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["preset"] = "slideleft",
-					["easeStrength"] = 3,
-				},
-			},
-			["desaturate"] = false,
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
-				}, -- [1]
-				{
-					["text_shadowXOffset"] = 0,
-					["text_text_format_s_format"] = "none",
-					["text_text"] = "%s",
-					["text_shadowColor"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["text_selfPoint"] = "AUTO",
-					["text_automaticWidth"] = "Auto",
-					["text_fixedWidth"] = 64,
-					["anchorYOffset"] = 0,
-					["text_justify"] = "CENTER",
-					["rotateText"] = "NONE",
-					["type"] = "subtext",
-					["text_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["text_font"] = "Friz Quadrata TT",
-					["text_shadowYOffset"] = 0,
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
-					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
-					["text_fontSize"] = 16,
-					["anchorXOffset"] = 0,
-					["text_fontType"] = "OUTLINE",
-				}, -- [2]
-				{
-					["border_offset"] = 0,
-					["type"] = "subborder",
-					["text_color"] = {
-					},
-					["border_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["border_visible"] = true,
-					["border_edge"] = "Blizzard Party",
-					["border_size"] = 2,
-				}, -- [3]
-			},
-			["height"] = 45,
-			["load"] = {
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["use_vehicle"] = false,
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["use_spellknown"] = true,
-				["use_spec"] = true,
-				["use_vehicleUi"] = false,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-						nil, -- [2]
-						true, -- [3]
-						true, -- [4]
-					},
-				},
-				["use_exact_spellknown"] = false,
-				["spellknown"] = 48438,
-				["zoneIds"] = "",
-			},
-			["source"] = "import",
-			["config"] = {
-			},
-			["parent"] = "冰橙监控小德CD组 ",
-			["selfPoint"] = "CENTER",
-			["regionType"] = "icon",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
+			["xOffset"] = 170,
+			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 				{
 					["check"] = {
@@ -27165,507 +28445,21 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["xOffset"] = 225,
-			["zoom"] = 0,
-			["anchorFrameType"] = "SCREEN",
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德野性成长CD",
-			["alpha"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 45,
-			["frameStrata"] = 1,
-			["uid"] = "uMqWssV5eev",
-			["inverse"] = true,
-			["icon"] = true,
-			["displayIcon"] = "",
-			["cooldown"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-		},
-		["冰橙监控小德急奔CD"] = {
-			["iconSource"] = -1,
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["preferToUpdate"] = false,
-			["yOffset"] = -265,
-			["anchorPoint"] = "CENTER",
-			["cooldownSwipe"] = true,
-			["cooldownEdge"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
-						["type"] = "spell",
-						["unit"] = "player",
-						["unevent"] = "auto",
-						["use_unit"] = true,
-						["names"] = {
-						},
-						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = false,
-						["realSpellName"] = "急奔",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["spellName"] = 9821,
-						["subeventSuffix"] = "_CAST_START",
-						["use_genericShowOn"] = true,
-						["use_track"] = true,
-						["use_absorbMode"] = true,
-					},
-					["untrigger"] = {
-						["genericShowOn"] = "showAlways",
-					},
-				}, -- [1]
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["unit"] = "player",
-						["use_form"] = true,
-						["use_unit"] = true,
-						["form"] = {
-							["single"] = 3,
-						},
-						["event"] = "Stance/Form/Aura",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [2]
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["unit"] = "target",
-						["debuffType"] = "HELPFUL",
-						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
-					},
-					["untrigger"] = {
-					},
-				}, -- [3]
-				["disjunctive"] = "any",
-				["activeTriggerMode"] = -10,
-			},
-			["internalVersion"] = 59,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-			},
-			["desaturate"] = false,
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
-				}, -- [1]
-				{
-					["text_shadowXOffset"] = 0,
-					["text_text_format_s_format"] = "none",
-					["text_text"] = "%s",
-					["text_shadowColor"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["text_selfPoint"] = "AUTO",
-					["text_automaticWidth"] = "Auto",
-					["text_fixedWidth"] = 64,
-					["anchorYOffset"] = 0,
-					["text_justify"] = "CENTER",
-					["rotateText"] = "NONE",
-					["type"] = "subtext",
-					["text_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["text_font"] = "Friz Quadrata TT",
-					["text_shadowYOffset"] = 0,
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
-					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
-					["text_fontSize"] = 16,
-					["anchorXOffset"] = 0,
-					["text_fontType"] = "OUTLINE",
-				}, -- [2]
-				{
-					["type"] = "subborder",
-					["border_size"] = 2,
-					["text_color"] = {
-					},
-					["border_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["border_visible"] = true,
-					["border_edge"] = "Blizzard Party",
-					["border_offset"] = 0,
-				}, -- [3]
-				{
-					["glowFrequency"] = 0.25,
-					["type"] = "subglow",
-					["useGlowColor"] = false,
-					["glowType"] = "Pixel",
-					["glowLength"] = 10,
-					["glowYOffset"] = 0,
-					["glowColor"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["glow"] = false,
-					["glowXOffset"] = 0,
-					["glowScale"] = 1,
-					["glowThickness"] = 1,
-					["glowLines"] = 8,
-					["glowBorder"] = false,
-				}, -- [4]
-			},
-			["height"] = 45,
-			["load"] = {
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 13,
-					["multi"] = {
-						[13] = true,
-					},
-				},
-				["use_vehicle"] = false,
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["use_vehicleUi"] = false,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-						[3] = true,
-					},
-				},
-				["zoneIds"] = "",
-			},
-			["source"] = "import",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["uid"] = "658JbThQaMD",
-			["parent"] = "冰橙监控小德CD组 ",
-			["xOffset"] = 270,
-			["regionType"] = "icon",
-			["cooldown"] = true,
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 2,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["property"] = "alpha",
-						}, -- [1]
-					},
-				}, -- [1]
-				{
-					["check"] = {
-						["trigger"] = 3,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = 0,
-							["property"] = "alpha",
-						}, -- [1]
-					},
-				}, -- [2]
-			},
-			["useTooltip"] = false,
-			["selfPoint"] = "CENTER",
-			["width"] = 45,
-			["useCooldownModRate"] = true,
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德急奔CD",
-			["cooldownTextDisabled"] = false,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["frameStrata"] = 1,
-			["config"] = {
-			},
-			["inverse"] = true,
-			["icon"] = true,
-			["displayIcon"] = "",
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
-			},
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-		},
-		["冰橙监控小德自然迅捷CD"] = {
-			["iconSource"] = -1,
-			["xOffset"] = 70,
-			["preferToUpdate"] = false,
-			["yOffset"] = -265,
-			["anchorPoint"] = "CENTER",
-			["cooldownSwipe"] = true,
-			["cooldownEdge"] = false,
-			["icon"] = true,
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "aura2",
-						["auranames"] = {
-							"自然迅捷", -- [1]
-						},
-						["event"] = "Health",
-						["unit"] = "player",
-						["spellIds"] = {
-						},
-						["subeventPrefix"] = "SPELL",
-						["subeventSuffix"] = "_CAST_START",
-						["names"] = {
-						},
-						["useName"] = true,
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-				{
-					["trigger"] = {
-						["track"] = "auto",
-						["use_genericShowOn"] = true,
-						["genericShowOn"] = "showAlways",
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
-						["type"] = "spell",
-						["duration"] = "1",
-						["unevent"] = "auto",
-						["use_unit"] = true,
-						["use_absorbMode"] = true,
-						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = false,
-						["realSpellName"] = "自然迅捷",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["subeventSuffix"] = "_CAST_START",
-						["spellName"] = 17116,
-						["unit"] = "player",
-						["use_track"] = true,
-						["names"] = {
-						},
-					},
-					["untrigger"] = {
-						["genericShowOn"] = "showAlways",
-					},
-				}, -- [2]
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["unit"] = "target",
-						["debuffType"] = "HELPFUL",
-						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
-					},
-					["untrigger"] = {
-					},
-				}, -- [3]
-				["disjunctive"] = "any",
-				["activeTriggerMode"] = -10,
-			},
-			["internalVersion"] = 59,
-			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
-			["desaturate"] = false,
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
-				}, -- [1]
-				{
-					["text_shadowXOffset"] = 0,
-					["text_text_format_s_format"] = "none",
-					["text_text"] = "%s",
-					["text_shadowColor"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["text_selfPoint"] = "AUTO",
-					["text_automaticWidth"] = "Auto",
-					["text_fixedWidth"] = 64,
-					["anchorYOffset"] = 0,
-					["text_justify"] = "CENTER",
-					["rotateText"] = "NONE",
-					["type"] = "subtext",
-					["text_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["text_font"] = "Friz Quadrata TT",
-					["text_shadowYOffset"] = 0,
-					["text_wordWrap"] = "WordWrap",
-					["text_visible"] = true,
-					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
-					["text_fontSize"] = 16,
-					["anchorXOffset"] = 0,
-					["text_fontType"] = "OUTLINE",
-				}, -- [2]
-				{
-					["type"] = "subborder",
-					["border_size"] = 2,
-					["text_color"] = {
-					},
-					["border_color"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["border_visible"] = true,
-					["border_edge"] = "Blizzard Party",
-					["border_offset"] = 0,
-				}, -- [3]
-				{
-					["glowFrequency"] = 0.25,
-					["type"] = "subglow",
-					["useGlowColor"] = false,
-					["glowType"] = "Pixel",
-					["glowLength"] = 10,
-					["glowYOffset"] = 0,
-					["glowColor"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["glow"] = false,
-					["glowXOffset"] = 0,
-					["glowScale"] = 1,
-					["glowThickness"] = 1,
-					["glowLines"] = 8,
-					["glowBorder"] = false,
-				}, -- [4]
-			},
-			["height"] = 45,
-			["load"] = {
-				["use_petbattle"] = false,
-				["use_never"] = true,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["use_vehicle"] = false,
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["use_spellknown"] = true,
-				["use_spec"] = true,
-				["use_vehicleUi"] = false,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-						nil, -- [2]
-						true, -- [3]
-						true, -- [4]
-					},
-				},
-				["use_exact_spellknown"] = false,
-				["spellknown"] = 17116,
-				["zoneIds"] = "",
-			},
-			["source"] = "import",
-			["config"] = {
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
 			},
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 				["main"] = {
-					["type"] = "none",
 					["easeStrength"] = 3,
+					["type"] = "none",
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
@@ -27673,75 +28467,12 @@ WeakAurasSaved = {
 					["type"] = "none",
 					["easeType"] = "none",
 					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
 					["preset"] = "slideleft",
+					["easeStrength"] = 3,
 				},
 			},
-			["regionType"] = "icon",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "show",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "sub.4.glow",
-						}, -- [1]
-					},
-				}, -- [1]
-				{
-					["check"] = {
-						["trigger"] = 3,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = 0,
-							["property"] = "alpha",
-						}, -- [1]
-					},
-				}, -- [2]
-			},
-			["parent"] = "冰橙监控小德CD组 ",
-			["cooldownTextDisabled"] = false,
-			["anchorFrameType"] = "SCREEN",
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德自然迅捷CD",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["width"] = 45,
-			["useCooldownModRate"] = true,
-			["uid"] = "hrp6aKVgNAo",
-			["inverse"] = true,
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["displayIcon"] = "",
-			["cooldown"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
 		},
-		["冰橙监控猫连击点5"] = {
+		["冰橙监控猫连击点3"] = {
 			["sparkWidth"] = 10,
 			["iconSource"] = -1,
 			["parent"] = "冰橙监控小德资源组",
@@ -27765,9 +28496,9 @@ WeakAurasSaved = {
 						["spellIds"] = {
 						},
 						["power"] = "1",
+						["subeventPrefix"] = "SPELL",
 						["names"] = {
 						},
-						["subeventPrefix"] = "SPELL",
 						["use_powertype"] = true,
 						["debuffType"] = "HELPFUL",
 					},
@@ -27777,14 +28508,14 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["use_form"] = true,
-						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
 						["type"] = "unit",
 						["use_unit"] = true,
 						["form"] = {
 							["single"] = 3,
 						},
 						["event"] = "Stance/Form/Aura",
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
 					},
@@ -27792,10 +28523,10 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HELPFUL",
 						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
+						["unit"] = "target",
 					},
 					["untrigger"] = {
 					},
@@ -27810,26 +28541,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["internalVersion"] = 59,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
+			["selfPoint"] = "CENTER",
 			["barColor"] = {
 				1, -- [1]
 				0.105882352941176, -- [2]
@@ -27846,7 +28558,7 @@ WeakAurasSaved = {
 					["type"] = "subforeground",
 				}, -- [2]
 				{
-					["border_size"] = 2,
+					["border_offset"] = 0,
 					["border_anchor"] = "bar",
 					["type"] = "subborder",
 					["border_color"] = {
@@ -27857,11 +28569,11 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 				}, -- [3]
 			},
 			["height"] = 15,
-			["id"] = "冰橙监控猫连击点5",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["load"] = {
 				["use_class"] = true,
 				["use_never"] = true,
@@ -27887,29 +28599,55 @@ WeakAurasSaved = {
 			["sparkBlendMode"] = "ADD",
 			["useAdjustededMax"] = false,
 			["source"] = "import",
-			["selfPoint"] = "CENTER",
 			["backgroundColor"] = {
 				0, -- [1]
 				0, -- [2]
 				0, -- [3]
 				0.5, -- [4]
 			},
+			["animation"] = {
+				["start"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 			["actions"] = {
 				["start"] = {
 				},
-				["init"] = {
-				},
 				["finish"] = {
 				},
+				["init"] = {
+				},
 			},
-			["xOffset"] = 304,
+			["xOffset"] = 170,
 			["useAdjustededMin"] = false,
 			["regionType"] = "aurabar",
-			["sparkOffsetX"] = 0,
-			["uid"] = "DOgx1d)yvVp",
-			["icon_side"] = "RIGHT",
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
 			["config"] = {
 			},
+			["icon_side"] = "RIGHT",
+			["uid"] = "QQljStVYWhw",
 			["sparkHeight"] = 30,
 			["texture"] = "Skyline",
 			["anchorFrameType"] = "SCREEN",
@@ -27917,10 +28655,10 @@ WeakAurasSaved = {
 			["spark"] = false,
 			["tocversion"] = 30400,
 			["sparkHidden"] = "NEVER",
-			["frameStrata"] = 1,
 			["alpha"] = 1,
+			["frameStrata"] = 1,
 			["width"] = 67,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["id"] = "冰橙监控猫连击点3",
 			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -27928,29 +28666,22 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["inverse"] = false,
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
+			["sparkOffsetX"] = 0,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 				{
 					["check"] = {
 						["trigger"] = 1,
 						["variable"] = "power",
+						["value"] = "3",
 						["op"] = ">=",
-						["value"] = "5",
 					},
 					["changes"] = {
 						{
 							["value"] = {
 								1, -- [1]
-								0.05882352941176471, -- [2]
-								0.04313725490196078, -- [3]
+								0.9803921568627451, -- [2]
+								0.02352941176470588, -- [3]
 								1, -- [4]
 							},
 							["property"] = "backgroundColor",
@@ -27989,54 +28720,193 @@ WeakAurasSaved = {
 			},
 			["desaturate"] = false,
 		},
-		["冰橙监控小德潜行CD"] = {
-			["iconSource"] = -1,
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["preferToUpdate"] = false,
-			["yOffset"] = -265,
+		["FORM"] = {
+			["outline"] = "THICKOUTLINE",
+			["wagoID"] = "X6wQKkZUq",
+			["parent"] = "平衡德循環助手",
+			["displayText_format_p_time_dynamic_threshold"] = 60,
+			["yOffset"] = 0,
 			["anchorPoint"] = "CENTER",
-			["cooldownSwipe"] = true,
-			["cooldownEdge"] = false,
+			["displayText_format_p_time_format"] = 0,
+			["customTextUpdate"] = "event",
+			["url"] = "https://wago.io/X6wQKkZUq/5",
 			["actions"] = {
 				["start"] = {
 				},
-				["finish"] = {
-				},
 				["init"] = {
+				},
+				["finish"] = {
 				},
 			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["track"] = "auto",
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
+						["type"] = "unit",
+						["subeventSuffix"] = "_CAST_START",
+						["use_inverse"] = true,
+						["event"] = "Stance/Form/Aura",
 						["use_unit"] = true,
-						["debuffType"] = "HELPFUL",
-						["type"] = "spell",
+						["use_form"] = true,
+						["spellIds"] = {
+						},
+						["unit"] = "player",
 						["names"] = {
 						},
-						["unevent"] = "auto",
+						["form"] = {
+							["single"] = 5,
+						},
 						["subeventPrefix"] = "SPELL",
-						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+				["activeTriggerMode"] = -10,
+			},
+			["displayText_format_p_format"] = "timed",
+			["internalVersion"] = 59,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
+			["font"] = "Friz Quadrata TT",
+			["version"] = 5,
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
+			},
+			["load"] = {
+				["use_class"] = true,
+				["talent"] = {
+					["multi"] = {
+						[18] = true,
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["use_talent"] = false,
+			},
+			["fontSize"] = 22,
+			["source"] = "import",
+			["shadowXOffset"] = 1,
+			["automaticWidth"] = "Auto",
+			["regionType"] = "text",
+			["selfPoint"] = "BOTTOM",
+			["wordWrap"] = "WordWrap",
+			["fixedWidth"] = 200,
+			["displayText_format_p_time_precision"] = 1,
+			["color"] = {
+				1, -- [1]
+				0.38823529411765, -- [2]
+				0.1921568627451, -- [3]
+				1, -- [4]
+			},
+			["xOffset"] = 0,
+			["uid"] = "Jk5pqNzUz4k",
+			["semver"] = "1.0.4",
+			["tocversion"] = 30400,
+			["id"] = "FORM",
+			["justify"] = "LEFT",
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["shadowYOffset"] = -1,
+			["config"] = {
+			},
+			["authorOptions"] = {
+			},
+			["displayText"] = "變咕咕",
+			["shadowColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["conditions"] = {
+			},
+			["information"] = {
+				["forceEvents"] = true,
+			},
+			["preferToUpdate"] = false,
+		},
+		["冰橙监控小德回春术"] = {
+			["iconSource"] = -1,
+			["xOffset"] = 76,
+			["preferToUpdate"] = false,
+			["yOffset"] = -197,
+			["anchorPoint"] = "CENTER",
+			["cooldownSwipe"] = false,
+			["cooldownEdge"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["auranames"] = {
+							"回春术", -- [1]
+						},
+						["ownOnly"] = true,
+						["genericShowOn"] = "showAlways",
+						["names"] = {
+						},
+						["use_genericShowOn"] = true,
+						["unit"] = "target",
+						["use_absorbMode"] = true,
+						["use_unit"] = true,
+						["debuffType"] = "HELPFUL",
+						["spellName"] = 19574,
+						["unevent"] = "auto",
+						["type"] = "aura2",
+						["useExactSpellId"] = false,
+						["auraspellids"] = {
+							"184362", -- [1]
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["useName"] = true,
 						["event"] = "Cooldown Progress (Spell)",
-						["use_exact_spellName"] = false,
-						["realSpellName"] = "潜行",
+						["use_exact_spellName"] = true,
+						["realSpellName"] = 19574,
 						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["spellName"] = 6783,
-						["subeventSuffix"] = "_CAST_START",
-						["use_genericShowOn"] = true,
+						["matchesShowOn"] = "showAlways",
+						["subeventPrefix"] = "SPELL",
+						["duration"] = "1",
 						["use_track"] = true,
-						["use_absorbMode"] = true,
+						["useIgnoreName"] = false,
 					},
 					["untrigger"] = {
 						["genericShowOn"] = "showAlways",
@@ -28045,42 +28915,29 @@ WeakAurasSaved = {
 				{
 					["trigger"] = {
 						["type"] = "unit",
-						["unit"] = "player",
-						["use_form"] = true,
+						["use_hostility"] = true,
 						["use_unit"] = true,
-						["form"] = {
-							["single"] = 3,
-						},
-						["event"] = "Stance/Form/Aura",
+						["unit"] = "target",
 						["debuffType"] = "HELPFUL",
+						["event"] = "Unit Characteristics",
+						["hostility"] = "friendly",
 					},
 					["untrigger"] = {
 					},
 				}, -- [2]
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["unit"] = "target",
-						["debuffType"] = "HELPFUL",
-						["event"] = "Unit Characteristics",
-						["use_unit"] = true,
-					},
-					["untrigger"] = {
-					},
-				}, -- [3]
 				["disjunctive"] = "any",
 				["activeTriggerMode"] = -10,
 			},
 			["internalVersion"] = 59,
-			["keepAspectRatio"] = false,
+			["keepAspectRatio"] = true,
 			["selfPoint"] = "CENTER",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["desaturate"] = false,
 			["subRegions"] = {
 				{
 					["type"] = "subbackground",
 				}, -- [1]
 				{
-					["text_text_format_p_time_precision"] = 1,
+					["text_shadowXOffset"] = 0,
 					["text_text_format_s_format"] = "none",
 					["text_text"] = "%s",
 					["text_shadowColor"] = {
@@ -28103,21 +28960,17 @@ WeakAurasSaved = {
 						1, -- [4]
 					},
 					["text_font"] = "Friz Quadrata TT",
-					["text_shadowXOffset"] = 0,
 					["text_shadowYOffset"] = 0,
-					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_wordWrap"] = "WordWrap",
-					["text_fontType"] = "OUTLINE",
+					["text_visible"] = true,
 					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
-					["text_text_format_p_time_format"] = 0,
-					["text_text_format_p_format"] = "timed",
 					["text_fontSize"] = 16,
 					["anchorXOffset"] = 0,
-					["text_visible"] = true,
+					["text_fontType"] = "OUTLINE",
 				}, -- [2]
 				{
+					["border_offset"] = 0,
 					["type"] = "subborder",
-					["border_size"] = 2,
 					["text_color"] = {
 					},
 					["border_color"] = {
@@ -28128,10 +28981,348 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Party",
-					["border_offset"] = 0,
+					["border_size"] = 2,
 				}, -- [3]
+				{
+					["text_shadowXOffset"] = 0,
+					["text_text"] = "%p",
+					["text_shadowColor"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["text_selfPoint"] = "AUTO",
+					["text_automaticWidth"] = "Auto",
+					["text_fixedWidth"] = 64,
+					["anchorYOffset"] = 0,
+					["text_justify"] = "CENTER",
+					["rotateText"] = "NONE",
+					["text_text_format_p_time_precision"] = 1,
+					["type"] = "subtext",
+					["anchorXOffset"] = 0,
+					["text_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["text_font"] = "Friz Quadrata TT",
+					["text_text_format_p_format"] = "timed",
+					["text_shadowYOffset"] = 0,
+					["text_visible"] = true,
+					["text_wordWrap"] = "WordWrap",
+					["text_fontType"] = "OUTLINE",
+					["text_anchorPoint"] = "CENTER",
+					["text_text_format_p_time_format"] = 0,
+					["text_text_format_p_time_mod_rate"] = true,
+					["text_fontSize"] = 12,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["text_text_format_p_time_legacy_floor"] = false,
+				}, -- [4]
 			},
-			["height"] = 45,
+			["height"] = 30,
+			["load"] = {
+				["use_petbattle"] = false,
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["use_vehicle"] = false,
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["use_spec"] = true,
+				["zoneIds"] = "",
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+					},
+				},
+				["use_vehicleUi"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["source"] = "import",
+			["useCooldownModRate"] = true,
+			["config"] = {
+			},
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+			},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "icon",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "buffed",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [1]
+						{
+							["value"] = 0.3,
+							["property"] = "alpha",
+						}, -- [2]
+					},
+				}, -- [1]
+				{
+					["check"] = {
+						["trigger"] = 2,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["property"] = "alpha",
+						}, -- [1]
+					},
+				}, -- [2]
+			},
+			["useTooltip"] = false,
+			["authorOptions"] = {
+				{
+					["type"] = "description",
+					["fontSize"] = "medium",
+					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+					["width"] = 1,
+				}, -- [1]
+			},
+			["width"] = 50,
+			["frameStrata"] = 1,
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德回春术",
+			["cooldownTextDisabled"] = false,
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["icon"] = true,
+			["uid"] = "NtLpjEKRnUm",
+			["inverse"] = true,
+			["parent"] = "冰橙监控小德BUFF组",
+			["displayIcon"] = 136081,
+			["cooldown"] = true,
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+		},
+		["冰橙监控小德精灵之火"] = {
+			["iconSource"] = -1,
+			["xOffset"] = 76,
+			["preferToUpdate"] = false,
+			["yOffset"] = -197,
+			["anchorPoint"] = "CENTER",
+			["cooldownSwipe"] = false,
+			["cooldownEdge"] = false,
+			["icon"] = true,
+			["triggers"] = {
+				{
+					["trigger"] = {
+						["auranames"] = {
+							"精灵之火", -- [1]
+							"精灵之火（野性）", -- [2]
+						},
+						["use_absorbMode"] = true,
+						["genericShowOn"] = "showAlways",
+						["use_unit"] = true,
+						["names"] = {
+						},
+						["use_genericShowOn"] = true,
+						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HARMFUL",
+						["spellName"] = 19574,
+						["duration"] = "1",
+						["type"] = "aura2",
+						["useExactSpellId"] = false,
+						["subeventSuffix"] = "_CAST_START",
+						["unevent"] = "auto",
+						["useName"] = true,
+						["event"] = "Cooldown Progress (Spell)",
+						["use_exact_spellName"] = true,
+						["realSpellName"] = 19574,
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["auraspellids"] = {
+							"184362", -- [1]
+						},
+						["matchesShowOn"] = "showOnActive",
+						["unit"] = "target",
+						["use_track"] = true,
+						["useIgnoreName"] = false,
+					},
+					["untrigger"] = {
+						["genericShowOn"] = "showAlways",
+					},
+				}, -- [1]
+				{
+					["trigger"] = {
+						["type"] = "unit",
+						["use_hostility"] = true,
+						["use_unit"] = true,
+						["unit"] = "target",
+						["debuffType"] = "HELPFUL",
+						["event"] = "Unit Characteristics",
+						["hostility"] = "hostile",
+					},
+					["untrigger"] = {
+					},
+				}, -- [2]
+				["disjunctive"] = "any",
+				["activeTriggerMode"] = -10,
+			},
+			["internalVersion"] = 59,
+			["keepAspectRatio"] = true,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+					["easeStrength"] = 3,
+				},
+			},
+			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
+			["subRegions"] = {
+				{
+					["type"] = "subbackground",
+				}, -- [1]
+				{
+					["text_shadowXOffset"] = 0,
+					["text_text_format_s_format"] = "none",
+					["text_text"] = "%s",
+					["text_shadowColor"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["text_selfPoint"] = "AUTO",
+					["text_automaticWidth"] = "Auto",
+					["text_fixedWidth"] = 64,
+					["anchorYOffset"] = 0,
+					["text_justify"] = "CENTER",
+					["rotateText"] = "NONE",
+					["type"] = "subtext",
+					["text_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["text_font"] = "Friz Quadrata TT",
+					["text_shadowYOffset"] = 0,
+					["text_wordWrap"] = "WordWrap",
+					["text_visible"] = true,
+					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
+					["text_fontSize"] = 16,
+					["anchorXOffset"] = 0,
+					["text_fontType"] = "OUTLINE",
+				}, -- [2]
+				{
+					["border_offset"] = 0,
+					["type"] = "subborder",
+					["text_color"] = {
+					},
+					["border_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["border_visible"] = true,
+					["border_edge"] = "Blizzard Party",
+					["border_size"] = 2,
+				}, -- [3]
+				{
+					["text_shadowXOffset"] = 0,
+					["text_text"] = "%p",
+					["text_shadowColor"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["text_selfPoint"] = "AUTO",
+					["text_automaticWidth"] = "Auto",
+					["text_fixedWidth"] = 64,
+					["anchorYOffset"] = 0,
+					["text_justify"] = "CENTER",
+					["rotateText"] = "NONE",
+					["text_text_format_p_time_precision"] = 1,
+					["type"] = "subtext",
+					["anchorXOffset"] = 0,
+					["text_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["text_font"] = "Friz Quadrata TT",
+					["text_text_format_p_format"] = "timed",
+					["text_shadowYOffset"] = 0,
+					["text_visible"] = true,
+					["text_wordWrap"] = "WordWrap",
+					["text_fontType"] = "OUTLINE",
+					["text_anchorPoint"] = "CENTER",
+					["text_text_format_p_time_format"] = 0,
+					["text_text_format_p_time_mod_rate"] = true,
+					["text_fontSize"] = 12,
+					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["text_text_format_p_time_legacy_floor"] = false,
+				}, -- [4]
+			},
+			["height"] = 30,
 			["load"] = {
 				["use_petbattle"] = false,
 				["use_never"] = true,
@@ -28148,89 +29339,52 @@ WeakAurasSaved = {
 				["zoneIds"] = "",
 				["use_class"] = true,
 				["use_spellknown"] = false,
-				["use_vehicleUi"] = false,
 				["use_spec"] = true,
+				["use_vehicleUi"] = false,
 				["spec"] = {
-					["single"] = 3,
+					["single"] = 2,
 					["multi"] = {
-						true, -- [1]
-						nil, -- [2]
-						true, -- [3]
-						true, -- [4]
 					},
 				},
 				["use_exact_spellknown"] = false,
-				["spellknown"] = 18562,
+				["spellknown"] = 12292,
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
 			["source"] = "import",
-			["uid"] = ")e2ewq(E4o5",
-			["icon"] = true,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-			},
-			["regionType"] = "icon",
-			["desaturate"] = false,
-			["cooldown"] = true,
-			["displayIcon"] = "",
-			["xOffset"] = 315,
-			["cooldownTextDisabled"] = false,
-			["width"] = 45,
-			["zoom"] = 0,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德潜行CD",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
 			["config"] = {
 			},
-			["inverse"] = true,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["selfPoint"] = "CENTER",
+			["desaturate"] = false,
+			["regionType"] = "icon",
+			["parent"] = "冰橙监控小德BUFF组",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
 			["conditions"] = {
 				{
 					["check"] = {
-						["trigger"] = 2,
+						["trigger"] = 1,
 						["variable"] = "show",
 						["value"] = 0,
 					},
 					["changes"] = {
 						{
-							["property"] = "alpha",
+							["value"] = true,
+							["property"] = "desaturate",
 						}, -- [1]
+						{
+							["value"] = 0.3,
+							["property"] = "alpha",
+						}, -- [2]
 					},
 				}, -- [1]
 				{
 					["check"] = {
-						["trigger"] = 3,
+						["trigger"] = 2,
 						["variable"] = "show",
 						["value"] = 0,
 					},
@@ -28242,320 +29396,215 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["parent"] = "冰橙监控小德CD组 ",
-		},
-		["冰橙监控小德资源环 2"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
 			["authorOptions"] = {
 				{
-					["fontSize"] = "medium",
 					["type"] = "description",
+					["fontSize"] = "medium",
 					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
 					["width"] = 1,
 				}, -- [1]
 			},
+			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "冰橙监控小德精灵之火",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["width"] = 50,
+			["cooldownTextDisabled"] = false,
+			["uid"] = "9MXlK5JEZFz",
+			["inverse"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayIcon"] = 136033,
+			["cooldown"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+		},
+		["[Druid] Starfall CD"] = {
+			["iconSource"] = -1,
+			["parent"] = "[WotLK] Balance Druid (Main Group)",
 			["preferToUpdate"] = false,
-			["yOffset"] = -285,
+			["yOffset"] = 39.9999830399646,
 			["anchorPoint"] = "CENTER",
-			["desaturateBackground"] = false,
-			["frameStrata"] = 2,
-			["sameTexture"] = true,
-			["url"] = "",
-			["desaturateForeground"] = false,
+			["cooldownSwipe"] = true,
+			["cooldownEdge"] = true,
+			["icon"] = true,
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["type"] = "unit",
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Power",
-						["use_unit"] = true,
-						["powertype"] = 1,
-						["spellIds"] = {
-						},
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
+						["remaining_operator"] = ">",
+						["genericShowOn"] = "showOnCooldown",
 						["names"] = {
 						},
-						["use_powertype"] = true,
+						["remaining"] = "5",
 						["debuffType"] = "HELPFUL",
+						["type"] = "spell",
+						["spellName"] = 53201,
+						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
+						["use_genericShowOn"] = true,
+						["event"] = "Cooldown Progress (Spell)",
+						["unevent"] = "auto",
+						["realSpellName"] = "星辰坠落",
+						["use_spellName"] = true,
+						["spellIds"] = {
+						},
+						["subeventPrefix"] = "SPELL",
+						["use_remaining"] = true,
+						["duration"] = "1",
+						["use_track"] = true,
+						["use_unit"] = true,
 					},
 					["untrigger"] = {
+						["genericShowOn"] = "showOnCooldown",
 					},
 				}, -- [1]
-				{
-					["trigger"] = {
-						["unit"] = "player",
-						["type"] = "unit",
-						["use_form"] = true,
-						["form"] = {
-							["single"] = 1,
-						},
-						["use_unit"] = true,
-						["use_inverse"] = true,
-						["event"] = "Stance/Form/Aura",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [2]
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["use_hostility"] = false,
-						["hostility"] = "hostile",
-						["use_unit"] = true,
-						["debuffType"] = "HELPFUL",
-						["event"] = "Unit Characteristics",
-						["unit"] = "target",
-					},
-					["untrigger"] = {
-					},
-				}, -- [3]
 				["disjunctive"] = "any",
 				["activeTriggerMode"] = -10,
 			},
-			["endAngle"] = 270,
 			["internalVersion"] = 59,
+			["keepAspectRatio"] = false,
 			["selfPoint"] = "CENTER",
-			["backgroundColor"] = {
-				0, -- [1]
-				0.81960784313725, -- [2]
-				1, -- [3]
-				0, -- [4]
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				0.0392156862745098, -- [2]
-				0.02352941176470588, -- [3]
-				1, -- [4]
-			},
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["rotation"] = 0,
-			["font"] = "Friz Quadrata TT",
-			["version"] = 11,
+			["desaturate"] = true,
 			["subRegions"] = {
 				{
 					["type"] = "subbackground",
 				}, -- [1]
-			},
-			["height"] = 120,
-			["conditions"] = {
 				{
-					["check"] = {
-						["trigger"] = 2,
-						["variable"] = "show",
-						["value"] = 1,
+					["text_shadowXOffset"] = 0,
+					["text_text"] = "%p",
+					["text_shadowColor"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
 					},
-					["changes"] = {
-						{
-							["property"] = "alpha",
-						}, -- [1]
+					["text_selfPoint"] = "AUTO",
+					["text_automaticWidth"] = "Auto",
+					["text_fixedWidth"] = 64,
+					["anchorYOffset"] = 0,
+					["text_justify"] = "CENTER",
+					["rotateText"] = "NONE",
+					["text_text_format_p_time_legacy_floor"] = false,
+					["type"] = "subtext",
+					["text_text_format_p_time_dynamic_threshold"] = 60,
+					["text_color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
 					},
-				}, -- [1]
-				{
-					["check"] = {
-						["trigger"] = 3,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["property"] = "alpha",
-						}, -- [1]
-					},
+					["text_font"] = "Friz Quadrata TT",
+					["text_text_format_p_format"] = "timed",
+					["text_shadowYOffset"] = 0,
+					["text_text_format_p_time_mod_rate"] = true,
+					["text_wordWrap"] = "WordWrap",
+					["text_fontType"] = "OUTLINE",
+					["text_anchorPoint"] = "CENTER",
+					["text_text_format_p_time_format"] = 0,
+					["text_visible"] = true,
+					["text_fontSize"] = 14,
+					["anchorXOffset"] = 0,
+					["text_text_format_p_time_precision"] = 1,
 				}, -- [2]
+				{
+					["type"] = "subborder",
+					["border_offset"] = 0,
+					["border_color"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["border_visible"] = true,
+					["border_edge"] = "Square Full White",
+					["border_size"] = 2,
+				}, -- [3]
+				{
+					["glowFrequency"] = 0.25,
+					["glow"] = false,
+					["useGlowColor"] = false,
+					["glowType"] = "buttonOverlay",
+					["glowLength"] = 10,
+					["glowYOffset"] = 0,
+					["glowColor"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["type"] = "subglow",
+					["glowXOffset"] = 0,
+					["glowScale"] = 1,
+					["glowThickness"] = 1,
+					["glowLines"] = 8,
+					["glowBorder"] = false,
+				}, -- [4]
+				{
+					["glowFrequency"] = 0.25,
+					["glow"] = false,
+					["useGlowColor"] = true,
+					["glowType"] = "Pixel",
+					["glowLength"] = 5,
+					["glowYOffset"] = 0,
+					["glowColor"] = {
+						1, -- [1]
+						0.04705882352941176, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["type"] = "subglow",
+					["glowXOffset"] = 0,
+					["glowScale"] = 1,
+					["glowThickness"] = 2,
+					["glowLines"] = 20,
+					["glowBorder"] = false,
+				}, -- [5]
 			},
-			["crop_y"] = 0.41,
-			["xOffset"] = 170,
-			["useAdjustededMax"] = false,
-			["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-			["source"] = "import",
-			["startAngle"] = 90,
-			["wagoID"] = "H_zZHwkG7",
-			["fontSize"] = 12,
-			["mirror"] = false,
-			["useAdjustededMin"] = false,
-			["regionType"] = "progresstexture",
-			["uid"] = "utXsN0dn6y7",
-			["blendMode"] = "BLEND",
+			["height"] = 60,
 			["load"] = {
 				["use_class"] = true,
-				["use_never"] = true,
-				["use_vehicleUi"] = false,
+				["use_talent"] = false,
+				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
+						[24] = true,
 					},
 				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
+				["use_vehicle"] = false,
 				["class"] = {
 					["single"] = "DRUID",
 					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["width"] = 120,
-			["slantMode"] = "INSIDE",
-			["foregroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["compress"] = false,
-			["semver"] = "1.0.10",
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德资源环 2",
-			["parent"] = "冰橙监控小德资源装饰环",
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["config"] = {
-			},
-			["inverse"] = false,
-			["backgroundTexture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura3",
-			["orientation"] = "ANTICLOCKWISE",
-			["crop_x"] = 0.41,
-			["information"] = {
-				["forceEvents"] = true,
-			},
-			["backgroundOffset"] = 0,
-		},
-		["冰橙监控小德资源装饰环"] = {
-			["controlledChildren"] = {
-				"冰橙监控小德资源大光环", -- [1]
-				"冰橙监控小德资源背景", -- [2]
-				"冰橙监控小德资源小光环", -- [3]
-				"冰橙监控小德资源环", -- [4]
-				"冰橙监控小德资源环 2", -- [5]
-				"冰橙监控小德资源环 3", -- [6]
-				"冰橙监控小德资源环 4", -- [7]
-				"冰橙监控小德资源前景", -- [8]
-				"冰橙监控小德资源数字", -- [9]
-				"冰橙监控小德资源数字 2", -- [10]
-				"冰橙监控小德资源数字 3", -- [11]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["authorOptions"] = {
-			},
-			["preferToUpdate"] = false,
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["borderColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["names"] = {
-						},
-						["type"] = "aura2",
-						["spellIds"] = {
-						},
-						["subeventSuffix"] = "_CAST_START",
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["event"] = "Health",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["internalVersion"] = 59,
-			["selfPoint"] = "CENTER",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["subRegions"] = {
-			},
-			["load"] = {
-				["talent"] = {
-					["multi"] = {
+						["DRUID"] = true,
 					},
 				},
 				["spec"] = {
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["multi"] = {
-					},
-				},
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
 			["source"] = "import",
-			["scale"] = 1,
-			["border"] = false,
-			["borderEdge"] = "Square Full White",
-			["regionType"] = "group",
-			["borderSize"] = 2,
-			["borderOffset"] = 4,
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德资源装饰环",
-			["config"] = {
-			},
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["parent"] = "冰橙WLK小德监控WA部分",
-			["borderInset"] = 1,
-			["uid"] = "U32ta9R6fId",
-			["xOffset"] = 0,
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
+			["cooldownTextDisabled"] = false,
+			["anchorFrameFrame"] = "WeakAuras:[Druid] Starfall",
+			["regionType"] = "icon",
+			["authorOptions"] = {
 			},
 			["animation"] = {
 				["start"] = {
@@ -28577,10 +29626,45 @@ WeakAurasSaved = {
 					["easeType"] = "none",
 				},
 			},
+			["xOffset"] = 59.99995705281367,
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["alpha"] = 1,
+			["uid"] = "qKlmydmvDse",
+			["zoom"] = 0.29,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Starfall CD",
+			["width"] = 60,
+			["frameStrata"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["useCooldownModRate"] = true,
+			["config"] = {
+			},
+			["inverse"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
+			["conditions"] = {
+			},
+			["cooldown"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 		},
-		["[Druid] Insect Swarm Missing"] = {
+		["[Druid] Moonfire Missing"] = {
 			["iconSource"] = -1,
-			["xOffset"] = -59.99988702428038,
+			["xOffset"] = -119.9997740485608,
 			["preferToUpdate"] = false,
 			["yOffset"] = 39.99994802569802,
 			["anchorPoint"] = "CENTER",
@@ -28599,21 +29683,21 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["useName"] = true,
 						["use_alwaystrue"] = true,
-						["auranames"] = {
-							"Insect Swarm", -- [1]
-						},
+						["subeventSuffix"] = "_CAST_START",
 						["duration"] = "1",
 						["event"] = "Conditions",
 						["subeventPrefix"] = "SPELL",
 						["names"] = {
 						},
-						["use_unit"] = true,
+						["type"] = "unit",
 						["spellIds"] = {
 						},
-						["unit"] = "target",
+						["auranames"] = {
+							"Moonfire", -- [1]
+						},
 						["unevent"] = "auto",
-						["subeventSuffix"] = "_CAST_START",
-						["type"] = "unit",
+						["unit"] = "target",
+						["use_unit"] = true,
 						["debuffType"] = "HARMFUL",
 					},
 					["untrigger"] = {
@@ -28649,8 +29733,8 @@ WeakAurasSaved = {
 					["type"] = "subbackground",
 				}, -- [1]
 				{
-					["type"] = "subborder",
 					["border_size"] = 2,
+					["type"] = "subborder",
 					["border_color"] = {
 						0, -- [1]
 						0, -- [2]
@@ -28665,10 +29749,7 @@ WeakAurasSaved = {
 			["height"] = 60,
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -28686,259 +29767,119 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["source"] = "import",
 			["zoom"] = 0.29,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["authorOptions"] = {
 			},
 			["regionType"] = "icon",
 			["parent"] = "[WotLK] Balance Druid (Main Group)",
 			["selfPoint"] = "CENTER",
-			["cooldown"] = true,
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "expirationTime",
-						["op"] = "<=",
-						["value"] = "3",
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-						}, -- [1]
-					},
-				}, -- [1]
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["config"] = {
-			},
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_StarFall",
+			["uid"] = ")kLF9mxrwmP",
 			["useCooldownModRate"] = true,
 			["cooldownTextDisabled"] = false,
 			["auto"] = true,
 			["tocversion"] = 30400,
-			["id"] = "[Druid] Insect Swarm Missing",
+			["id"] = "[Druid] Moonfire Missing",
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["width"] = 60,
 			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["frameStrata"] = 1,
-			["uid"] = "BdpzN3jEIdL",
+			["config"] = {
+			},
 			["inverse"] = false,
-			["authorOptions"] = {
-			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_InsectSwarm",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["icon"] = true,
-		},
-		["[Druid] Nature's Grasp"] = {
-			["iconSource"] = -1,
-			["parent"] = "[WotLK] Balance Druid (Right Group)",
-			["preferToUpdate"] = false,
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["cooldownSwipe"] = true,
-			["cooldownEdge"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["use_genericShowOn"] = true,
-						["genericShowOn"] = "showOnReady",
-						["unit"] = "player",
-						["spellName"] = 53312,
-						["type"] = "spell",
-						["unevent"] = "auto",
-						["subeventPrefix"] = "SPELL",
-						["event"] = "Cooldown Progress (Spell)",
-						["debuffType"] = "HELPFUL",
-						["realSpellName"] = "自然之握",
-						["use_spellName"] = true,
-						["spellIds"] = {
-						},
-						["use_unit"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["duration"] = "1",
-						["use_track"] = true,
-						["names"] = {
-						},
-					},
-					["untrigger"] = {
-						["genericShowOn"] = "showOnReady",
-					},
-				}, -- [1]
-				["activeTriggerMode"] = -10,
-			},
-			["internalVersion"] = 59,
-			["keepAspectRatio"] = false,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["desaturate"] = false,
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
-				}, -- [1]
-				{
-					["type"] = "subborder",
-					["border_size"] = 1,
-					["border_color"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-					["border_visible"] = true,
-					["border_edge"] = "Square Full White",
-					["border_offset"] = 0,
-				}, -- [2]
-			},
-			["height"] = 40,
-			["load"] = {
-				["use_class"] = true,
-				["use_spellknown"] = false,
-				["use_never"] = false,
-				["talent"] = {
-					["multi"] = {
-						[28] = true,
-						[24] = true,
-					},
-				},
-				["use_vehicle"] = false,
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-						["DRUID"] = true,
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["source"] = "import",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["regionType"] = "icon",
-			["xOffset"] = 0,
-			["authorOptions"] = {
-			},
-			["selfPoint"] = "CENTER",
-			["cooldown"] = false,
-			["frameStrata"] = 1,
-			["config"] = {
-			},
-			["zoom"] = 0.29,
-			["auto"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Nature's Grasp",
-			["anchorFrameType"] = "SCREEN",
-			["alpha"] = 1,
-			["width"] = 40,
-			["useCooldownModRate"] = true,
-			["uid"] = "f3uSztJgzbv",
-			["inverse"] = false,
-			["cooldownTextDisabled"] = false,
 			["conditions"] = {
 			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
+			["cooldown"] = true,
 			["icon"] = true,
 		},
-		["[Druid] Force of Nature Bar"] = {
+		["[Druid] Nature's Grace"] = {
 			["sparkWidth"] = 30,
-			["sparkOffsetX"] = 0,
+			["iconSource"] = -1,
 			["parent"] = "[WotLK] Balance Druid (Main Group)",
 			["preferToUpdate"] = false,
-			["adjustedMin"] = "83%",
-			["yOffset"] = 73.50005768463649,
+			["customText"] = "function()\n    mana = math.max(0, UnitPower(\"player\", 0)) / math.max(1, UnitPowerMax(\"player\", 0)) * 100;\n    return string.format(\"%.0f\", mana);\nend",
+			["yOffset"] = -13.00000677033671,
 			["anchorPoint"] = "CENTER",
 			["sparkRotation"] = 0,
 			["sparkRotationMode"] = "AUTO",
 			["cooldownEdge"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
+			["icon"] = false,
 			["triggers"] = {
 				{
 					["trigger"] = {
 						["auranames"] = {
-							"Starfall", -- [1]
+							"自然之賜", -- [1]
 						},
-						["use_genericShowOn"] = true,
-						["genericShowOn"] = "showOnCooldown",
+						["duration"] = "1",
 						["subeventPrefix"] = "SPELL",
 						["powertype"] = 0,
-						["spellName"] = 33831,
 						["use_powertype"] = true,
 						["debuffType"] = "HELPFUL",
-						["remaining_operator"] = ">=",
-						["type"] = "spell",
-						["unit"] = "player",
-						["subeventSuffix"] = "_CAST_START",
-						["names"] = {
-						},
 						["useName"] = true,
-						["event"] = "Cooldown Progress (Spell)",
-						["use_remaining"] = true,
-						["realSpellName"] = "自然之力",
-						["use_spellName"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["event"] = "Power",
+						["unevent"] = "auto",
+						["use_unit"] = true,
 						["spellIds"] = {
 						},
-						["unevent"] = "auto",
-						["duration"] = "1",
-						["use_unit"] = true,
-						["use_track"] = true,
-						["remaining"] = "150",
+						["names"] = {
+						},
+						["unit"] = "player",
+						["type"] = "aura2",
+						["auraspellids"] = {
+							"16886", -- [1]
+						},
+						["useExactSpellId"] = true,
 					},
 					["untrigger"] = {
 					},
 				}, -- [1]
+				{
+					["trigger"] = {
+						["auranames"] = {
+							"自然之賜", -- [1]
+						},
+						["matchesShowOn"] = "showOnMissing",
+						["unit"] = "player",
+						["powertype"] = 0,
+						["use_powertype"] = true,
+						["debuffType"] = "HELPFUL",
+						["type"] = "aura2",
+						["auraspellids"] = {
+							"16886", -- [1]
+						},
+						["event"] = "Power",
+						["names"] = {
+						},
+						["use_unit"] = true,
+						["duration"] = "1",
+						["spellIds"] = {
+						},
+						["subeventPrefix"] = "SPELL",
+						["useName"] = true,
+						["useExactSpellId"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["unevent"] = "auto",
+					},
+					["untrigger"] = {
+					},
+				}, -- [2]
 				["disjunctive"] = "any",
 				["activeTriggerMode"] = -10,
 			},
@@ -28950,13 +29891,34 @@ WeakAurasSaved = {
 			},
 			["internalVersion"] = 59,
 			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
-			["sparkHidden"] = "BOTH",
-			["sparkMirror"] = false,
-			["desaturate"] = false,
-			["iconSource"] = -1,
-			["authorOptions"] = {
+			["animation"] = {
+				["start"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
 			},
+			["barColor"] = {
+				0.5843137254901961, -- [1]
+				1, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["alpha"] = 1,
 			["sparkOffsetY"] = 0,
 			["subRegions"] = {
 				{
@@ -28966,7 +29928,7 @@ WeakAurasSaved = {
 					["type"] = "subforeground",
 				}, -- [2]
 				{
-					["border_size"] = 1,
+					["type"] = "subborder",
 					["border_anchor"] = "bar",
 					["border_offset"] = 0,
 					["border_color"] = {
@@ -28977,17 +29939,14 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Square Full White",
-					["type"] = "subborder",
+					["border_size"] = 2,
 				}, -- [3]
 			},
-			["height"] = 9.999943238591248,
-			["adjustedMax"] = "100%",
+			["height"] = 10,
+			["selfPoint"] = "CENTER",
 			["load"] = {
 				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
+				["use_talent"] = false,
 				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
@@ -29006,23 +29965,30 @@ WeakAurasSaved = {
 						["DRUID"] = true,
 					},
 				},
-				["use_talent"] = false,
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["sparkBlendMode"] = "ADD",
-			["useAdjustededMax"] = true,
-			["customText"] = "function()\n    mana = math.max(0, UnitPower(\"player\", 0)) / math.max(1, UnitPowerMax(\"player\", 0)) * 100;\n    return string.format(\"%.0f\", mana);\nend",
-			["source"] = "import",
+			["useAdjustededMax"] = false,
 			["backgroundColor"] = {
 				0, -- [1]
 				0, -- [2]
 				0, -- [3]
 				0.5, -- [4]
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["source"] = "import",
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
+			["xOffset"] = -74.99999883741691,
+			["authorOptions"] = {
 			},
 			["sparkColor"] = {
 				1, -- [1]
@@ -29030,52 +29996,32 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["barColor"] = {
-				0.5058823529411764, -- [1]
-				1, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["useAdjustededMin"] = true,
+			["useAdjustededMin"] = false,
 			["regionType"] = "aurabar",
-			["width"] = 59.99986514036378,
-			["alpha"] = 1,
-			["icon_side"] = "RIGHT",
 			["config"] = {
 			},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["icon_side"] = "RIGHT",
+			["anchorFrameType"] = "SCREEN",
 			["sparkHeight"] = 20,
 			["texture"] = "Aluminium",
-			["auto"] = true,
-			["zoom"] = 0,
 			["spark"] = true,
-			["tocversion"] = 30400,
-			["id"] = "[Druid] Force of Nature Bar",
 			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "[Druid] Nature's Grace",
+			["sparkHidden"] = "BOTH",
 			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["icon"] = false,
-			["uid"] = "RF4x)ctGNw0",
+			["width"] = 151,
+			["zoom"] = 0,
+			["uid"] = "7gQXPsH1Yca",
 			["inverse"] = false,
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
+			["sparkOffsetX"] = 0,
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
@@ -29083,157 +30029,11 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["xOffset"] = 119.9999841341605,
+			["sparkMirror"] = false,
 		},
-		["[WotLK] Balance Druid (Left Group)"] = {
-			["arcLength"] = 360,
-			["controlledChildren"] = {
-				"[Druid] Current Stance", -- [1]
-				"[Druid] Current Stance Missing", -- [2]
-				"[Druid] Innervate", -- [3]
-				"[Druid] Innervate CD", -- [4]
-				"[Druid] Innervate Cast", -- [5]
-				"[Druid] Rebirth", -- [6]
-				"[Druid] Rebirth CD", -- [7]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = -172.4999329463117,
-			["preferToUpdate"] = false,
-			["yOffset"] = 30,
-			["gridType"] = "RD",
-			["borderColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["rowSpace"] = 1,
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["debuffType"] = "HELPFUL",
-						["type"] = "aura2",
-						["spellIds"] = {
-						},
-						["subeventSuffix"] = "_CAST_START",
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["event"] = "Health",
-						["names"] = {
-						},
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["columnSpace"] = 1,
-			["internalVersion"] = 59,
-			["selfPoint"] = "TOP",
-			["align"] = "CENTER",
-			["rotation"] = 0,
-			["gridWidth"] = 5,
-			["source"] = "import",
-			["subRegions"] = {
-			},
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["sortHybridTable"] = {
-				["[Druid] Innervate CD"] = false,
-				["[Druid] Innervate"] = false,
-				["[Druid] Current Stance"] = false,
-				["[Druid] Innervate Cast"] = false,
-				["[Druid] Rebirth CD"] = false,
-				["[Druid] Rebirth"] = false,
-				["[Druid] Current Stance Missing"] = false,
-			},
-			["load"] = {
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "[WotLK] Balance Druid (Main Group)",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["grow"] = "DOWN",
-			["animate"] = false,
-			["fullCircle"] = true,
-			["scale"] = 1,
-			["authorOptions"] = {
-			},
-			["border"] = false,
-			["borderEdge"] = "Square Full White",
-			["regionType"] = "dynamicgroup",
-			["borderSize"] = 2,
-			["sort"] = "none",
-			["borderInset"] = 1,
-			["radius"] = 200,
-			["constantFactor"] = "RADIUS",
-			["stagger"] = 0,
-			["borderOffset"] = 4,
-			["config"] = {
-			},
-			["tocversion"] = 30400,
-			["id"] = "[WotLK] Balance Druid (Left Group)",
-			["limit"] = 5,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SELECTFRAME",
-			["anchorFrameFrame"] = "WeakAuras:[Druid] Eclipse (Missing)",
-			["uid"] = "gaGj7DZXdLO",
-			["anchorPoint"] = "CENTER",
-			["space"] = 5,
-			["conditions"] = {
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["useLimit"] = false,
-		},
-		["月蚀触发 "] = {
-			["iconSource"] = 2,
+		["GCDHistoryBuffer2"] = {
+			["iconSource"] = -1,
+			["wagoID"] = "RvbxkQEv2",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -29241,74 +30041,157 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["preferToUpdate"] = false,
+			["customText"] = "\n\n",
 			["yOffset"] = 0,
 			["anchorPoint"] = "CENTER",
 			["cooldownSwipe"] = true,
-			["cooldownEdge"] = false,
-			["icon"] = true,
+			["customTextUpdate"] = "update",
+			["url"] = "https://wago.io/RvbxkQEv2/19",
+			["actions"] = {
+				["start"] = {
+					["custom"] = "",
+					["do_custom"] = false,
+				},
+				["finish"] = {
+				},
+				["init"] = {
+					["custom"] = "aura_env.thisRegister = 2\n\naura_env.animX = aura_env.config[\"displayTime\"] * aura_env.region.width\nif aura_env.config[\"direction\"] == 1 then\n    aura_env.animDir = -1\nelse\n    aura_env.animDir = 1\nend\n\naura_env.xoff = 0\naura_env.castTime = 0",
+					["do_custom"] = true,
+				},
+			},
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["type"] = "aura2",
-						["subeventSuffix"] = "_CAST_START",
-						["matchesShowOn"] = "showOnActive",
-						["event"] = "Health",
+						["use_absorbMode"] = true,
+						["genericShowOn"] = "showOnActive",
+						["use_unit"] = true,
+						["customIcon"] = "function()\n    return aura_env.icon\nend\n\n\n\n\n\n\n\n",
+						["dynamicDuration"] = true,
+						["debuffType"] = "HELPFUL",
+						["use_cloneId"] = true,
+						["custom_hide"] = "timed",
 						["subeventPrefix"] = "SPELL",
+						["type"] = "custom",
+						["subeventSuffix"] = "_CAST_SUCCESS",
+						["custom_type"] = "event",
 						["spellIds"] = {
 						},
-						["auraspellids"] = {
-							"48518", -- [1]
-						},
-						["useExactSpellId"] = true,
+						["events"] = "MYSTLER_GCDHISTORY_ADD",
+						["event"] = "Combat Log",
+						["unevent"] = "timed",
+						["customDuration"] = "function()\n    return aura_env.config[\"displayTime\"], aura_env.castTime + aura_env.config[\"displayTime\"]\nend\n\n\n\n\n\n\n\n\n\n\n\n",
+						["unit"] = "player",
+						["custom"] = "function(event, arg1, arg2, arg3, arg4)\n    if arg1 == aura_env.thisRegister then\n        aura_env.icon = arg2\n        aura_env.xoff = 0\n        aura_env.castTime = arg3\n        if arg4 then\n            aura_env.region:SetDesaturated(true)\n            aura_env.region:Color(1,0,0,1)\n        else\n            aura_env.region:SetDesaturated(false)\n            aura_env.region:Color(1,1,1,1)\n        end\n        return true\n    end\n    return false\nend",
+						["use_sourceUnit"] = true,
+						["check"] = "event",
+						["duration"] = "3",
+						["sourceUnit"] = "player",
 						["names"] = {
 						},
-						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
+						["custom"] = "function() return true end",
+						["unit"] = "player",
 					},
 				}, -- [1]
 				{
 					["trigger"] = {
-						["type"] = "spell",
-						["use_genericShowOn"] = true,
-						["event"] = "Action Usable",
-						["use_exact_spellName"] = true,
-						["realSpellName"] = 26986,
-						["use_spellName"] = true,
-						["debuffType"] = "HELPFUL",
-						["genericShowOn"] = "showOnCooldown",
-						["unit"] = "player",
-						["use_track"] = true,
-						["spellName"] = 26986,
+						["type"] = "custom",
+						["subeventSuffix"] = "_CAST_START",
+						["duration"] = "0",
+						["event"] = "Health",
+						["subeventPrefix"] = "SPELL",
+						["custom"] = "function(event, arg1, arg2)\n    if arg1 == aura_env.thisRegister then\n        aura_env.xoff = aura_env.xoff + arg2\n    end\n    return false\nend\n\n\n\n\n\n\n\n\n\n\n\n",
+						["custom_type"] = "event",
+						["events"] = "MYSTLER_GCDHISTORY_OFFSET",
+						["custom_hide"] = "timed",
 					},
 					["untrigger"] = {
 					},
 				}, -- [2]
+				["disjunctive"] = "any",
 				["activeTriggerMode"] = -10,
 			},
 			["internalVersion"] = 59,
 			["keepAspectRatio"] = false,
-			["selfPoint"] = "CENTER",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["easeType"] = "none",
+					["easeStrength"] = 3,
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+				["main"] = {
+					["colorR"] = 1,
+					["scalex"] = 1,
+					["alphaType"] = "custom",
+					["colorA"] = 1,
+					["colorG"] = 1,
+					["alphaFunc"] = "function(progress, start, delta)\n    return math.min(1.0, (1.0 - progress) * 5.0)\nend\n\n\n",
+					["use_translate"] = true,
+					["use_alpha"] = true,
+					["type"] = "custom",
+					["easeType"] = "none",
+					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n    local x = startX + aura_env.animDir * (progress * aura_env.animX)\n    x = x + aura_env.animDir * aura_env.xoff\n    return x, startY\nend",
+					["scaley"] = 1,
+					["alpha"] = 0,
+					["y"] = 0,
+					["x"] = 0,
+					["duration_type"] = "relative",
+					["translateType"] = "custom",
+					["rotate"] = 0,
+					["easeStrength"] = 3,
+					["duration"] = "100%",
+					["colorB"] = 1,
+				},
+				["finish"] = {
+					["colorR"] = 1,
+					["duration"] = "0.2",
+					["alphaType"] = "straight",
+					["colorA"] = 1,
+					["colorG"] = 1,
+					["alphaFunc"] = "    function(progress, start, delta)\n      return start + (progress * delta)\n    end\n  ",
+					["use_translate"] = false,
+					["use_alpha"] = false,
+					["type"] = "none",
+					["easeType"] = "none",
+					["translateFunc"] = "function(progress, startX, startY, deltaX, deltaY)\n    local x = startX + (progress * deltaX)\n    if aura_env.state then\n        x = x + aura_env.state.xoff\n    end\n    return x, startY + (progress * deltaY)\nend",
+					["scaley"] = 1,
+					["alpha"] = 0,
+					["scalex"] = 1,
+					["y"] = 0,
+					["x"] = -150,
+					["duration_type"] = "seconds",
+					["rotate"] = 0,
+					["translateType"] = "custom",
+					["easeStrength"] = 3,
+					["preset"] = "fade",
+					["colorB"] = 1,
+				},
+			},
 			["desaturate"] = false,
+			["version"] = 19,
 			["subRegions"] = {
 				{
 					["type"] = "subbackground",
 				}, -- [1]
 				{
-					["text_text_format_p_time_precision"] = 1,
-					["text_text_format_s_format"] = "none",
-					["text_text"] = "%p",
-					["text_text_format_p_time_mod_rate"] = true,
+					["text_shadowXOffset"] = 0,
+					["text_text"] = " ",
+					["text_shadowColor"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
 					["text_selfPoint"] = "AUTO",
 					["text_automaticWidth"] = "Auto",
 					["text_fixedWidth"] = 64,
 					["anchorYOffset"] = 0,
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
-					["text_text_format_p_time_legacy_floor"] = false,
 					["type"] = "subtext",
-					["text_text_format_p_time_dynamic_threshold"] = 60,
 					["text_color"] = {
 						1, -- [1]
 						1, -- [2]
@@ -29316,869 +30199,48 @@ WeakAurasSaved = {
 						1, -- [4]
 					},
 					["text_font"] = "Friz Quadrata TT",
-					["text_shadowXOffset"] = 0,
 					["text_shadowYOffset"] = 0,
-					["text_shadowColor"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
 					["text_wordWrap"] = "WordWrap",
 					["text_fontType"] = "OUTLINE",
-					["text_anchorPoint"] = "CENTER",
-					["text_text_format_p_time_format"] = 0,
-					["text_visible"] = true,
+					["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
 					["text_fontSize"] = 12,
 					["anchorXOffset"] = 0,
-					["text_text_format_p_format"] = "timed",
-				}, -- [2]
-				{
-					["glowFrequency"] = 0.25,
-					["type"] = "subglow",
-					["useGlowColor"] = false,
-					["glowType"] = "buttonOverlay",
-					["glowLength"] = 10,
-					["glowYOffset"] = 0,
-					["glowColor"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["glowXOffset"] = 0,
-					["glow"] = false,
-					["glowScale"] = 1,
-					["glowThickness"] = 1,
-					["glowLines"] = 8,
-					["glowBorder"] = false,
-				}, -- [3]
-			},
-			["height"] = 64,
-			["load"] = {
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["source"] = "import",
-			["regionType"] = "icon",
-			["authorOptions"] = {
-			},
-			["cooldown"] = false,
-			["xOffset"] = 0,
-			["actions"] = {
-				["start"] = {
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["easeStrength"] = 3,
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["uid"] = "LTHO4pI9bMU",
-			["tocversion"] = 30400,
-			["id"] = "月蚀触发 ",
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["width"] = 64,
-			["frameStrata"] = 1,
-			["config"] = {
-			},
-			["inverse"] = false,
-			["zoom"] = 0,
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "show",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = 2,
-							["property"] = "iconSource",
-						}, -- [1]
-						{
-							["value"] = true,
-							["property"] = "sub.3.glow",
-						}, -- [2]
-					},
-				}, -- [1]
-			},
-			["information"] = {
-				["forceEvents"] = true,
-			},
-			["parent"] = "雷德王阿姨-日蚀月蚀提示+内置cd",
-		},
-		["冰橙监控小德资源环 4"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["parent"] = "冰橙监控小德资源装饰环",
-			["preferToUpdate"] = false,
-			["yOffset"] = -285,
-			["foregroundColor"] = {
-				1, -- [1]
-				0.9254901960784314, -- [2]
-				0.05098039215686274, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["frameStrata"] = 2,
-			["sameTexture"] = true,
-			["url"] = "",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Power",
-						["use_unit"] = true,
-						["powertype"] = 3,
-						["spellIds"] = {
-						},
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["names"] = {
-						},
-						["use_powertype"] = true,
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-				{
-					["trigger"] = {
-						["unit"] = "player",
-						["type"] = "unit",
-						["use_form"] = true,
-						["use_inverse"] = true,
-						["use_unit"] = true,
-						["form"] = {
-							["single"] = 1,
-						},
-						["event"] = "Stance/Form/Aura",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [2]
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["use_hostility"] = false,
-						["hostility"] = "hostile",
-						["use_unit"] = true,
-						["debuffType"] = "HELPFUL",
-						["event"] = "Unit Characteristics",
-						["unit"] = "target",
-					},
-					["untrigger"] = {
-					},
-				}, -- [3]
-				["disjunctive"] = "any",
-				["activeTriggerMode"] = -10,
-			},
-			["endAngle"] = 270,
-			["internalVersion"] = 59,
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["desaturateForeground"] = false,
-			["anchorPoint"] = "CENTER",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["rotation"] = 0,
-			["font"] = "Friz Quadrata TT",
-			["version"] = 11,
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
-				}, -- [1]
-			},
-			["height"] = 106,
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 2,
-						["variable"] = "show",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["property"] = "alpha",
-						}, -- [1]
-					},
-				}, -- [1]
-				{
-					["check"] = {
-						["trigger"] = 3,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["property"] = "alpha",
-						}, -- [1]
-					},
+					["text_visible"] = false,
 				}, -- [2]
 			},
-			["load"] = {
-				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_never"] = true,
-				["talent"] = {
-					["multi"] = {
-						[59] = true,
-					},
-				},
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["use_vehicleUi"] = false,
-				["use_talent"] = false,
-			},
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["useAdjustededMax"] = false,
-			["textureWrapMode"] = "CLAMPTOBLACKADDITIVE",
-			["source"] = "import",
-			["startAngle"] = 90,
-			["wagoID"] = "H_zZHwkG7",
-			["fontSize"] = 12,
-			["mirror"] = false,
-			["useAdjustededMin"] = false,
-			["regionType"] = "progresstexture",
-			["uid"] = "N2crMCKT8)Y",
-			["blendMode"] = "BLEND",
-			["crop_y"] = 0.41,
-			["width"] = 106,
-			["slantMode"] = "INSIDE",
-			["foregroundTexture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_White",
-			["backgroundColor"] = {
-				0, -- [1]
-				0.81960784313725, -- [2]
-				1, -- [3]
-				0, -- [4]
-			},
-			["compress"] = false,
-			["semver"] = "1.0.10",
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德资源环 4",
-			["xOffset"] = 170,
-			["alpha"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["selfPoint"] = "CENTER",
-			["config"] = {
-			},
-			["inverse"] = false,
-			["backgroundTexture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura3",
-			["orientation"] = "ANTICLOCKWISE",
-			["crop_x"] = 0.41,
-			["information"] = {
-				["forceEvents"] = true,
-			},
-			["backgroundOffset"] = 0,
-		},
-		["冰橙监控小德资源数字"] = {
-			["outline"] = "OUTLINE",
-			["displayText_format_1.percentpower_decimal_precision"] = 0,
-			["parent"] = "冰橙监控小德资源装饰环",
-			["displayText_format_p_time_dynamic_threshold"] = 60,
-			["shadowYOffset"] = -1,
-			["anchorPoint"] = "CENTER",
-			["displayText_format_p_time_format"] = 0,
-			["customTextUpdate"] = "event",
-			["automaticWidth"] = "Auto",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Power",
-						["use_unit"] = true,
-						["powertype"] = 0,
-						["spellIds"] = {
-						},
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["names"] = {
-						},
-						["use_powertype"] = true,
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-				{
-					["trigger"] = {
-						["unit"] = "player",
-						["type"] = "unit",
-						["use_form"] = true,
-						["form"] = {
-							["single"] = 1,
-						},
-						["use_unit"] = true,
-						["use_inverse"] = true,
-						["event"] = "Stance/Form/Aura",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [2]
-				{
-					["trigger"] = {
-						["use_unit"] = true,
-						["use_form"] = true,
-						["type"] = "unit",
-						["form"] = {
-							["single"] = 3,
-						},
-						["unit"] = "player",
-						["use_inverse"] = true,
-						["event"] = "Stance/Form/Aura",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [3]
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["use_hostility"] = false,
-						["unit"] = "target",
-						["use_unit"] = true,
-						["debuffType"] = "HELPFUL",
-						["event"] = "Unit Characteristics",
-						["hostility"] = "hostile",
-					},
-					["untrigger"] = {
-					},
-				}, -- [4]
-				["disjunctive"] = "any",
-				["activeTriggerMode"] = -10,
-			},
-			["displayText_format_p_format"] = "timed",
-			["displayText_format_p_time_legacy_floor"] = false,
-			["wordWrap"] = "WordWrap",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["font"] = "伤害数字",
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
-				}, -- [1]
-			},
-			["load"] = {
-				["use_class"] = true,
-				["use_never"] = true,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["fontSize"] = 20,
-			["source"] = "import",
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["shadowXOffset"] = 1,
-			["displayText_format_1.percentpower_format"] = "Number",
-			["preferToUpdate"] = false,
-			["displayText_format_1.percentpower_round_type"] = "floor",
-			["selfPoint"] = "BOTTOM",
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 2,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = {
-								1, -- [1]
-								1, -- [2]
-								1, -- [3]
-								0, -- [4]
-							},
-							["property"] = "color",
-						}, -- [1]
-					},
-				}, -- [1]
-				{
-					["check"] = {
-						["trigger"] = 3,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = {
-								1, -- [1]
-								1, -- [2]
-								1, -- [3]
-								0, -- [4]
-							},
-							["property"] = "color",
-						}, -- [1]
-					},
-				}, -- [2]
-				{
-					["check"] = {
-						["trigger"] = 4,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = {
-								1, -- [1]
-								1, -- [2]
-								1, -- [3]
-								0, -- [4]
-							},
-							["property"] = "color",
-						}, -- [1]
-					},
-				}, -- [3]
-			},
-			["displayText"] = "%1.percentpower",
-			["displayText_format_1.percentpower_big_number_format"] = "AbbreviateNumbers",
-			["displayText_format_p_time_precision"] = 1,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["config"] = {
-			},
-			["yOffset"] = -340,
-			["justify"] = "LEFT",
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德资源数字",
-			["xOffset"] = 170,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["uid"] = "wE4eb0HKTbL",
-			["displayText_format_p_time_mod_rate"] = true,
-			["regionType"] = "text",
-			["shadowColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["fixedWidth"] = 200,
-			["information"] = {
-				["forceEvents"] = true,
-			},
-			["internalVersion"] = 59,
-		},
-		["冰橙监控小德资源数字 3"] = {
-			["outline"] = "OUTLINE",
-			["displayText_format_1.percentpower_decimal_precision"] = 0,
-			["parent"] = "冰橙监控小德资源装饰环",
-			["displayText_format_p_time_dynamic_threshold"] = 60,
-			["shadowYOffset"] = -1,
-			["anchorPoint"] = "CENTER",
-			["displayText_format_p_time_format"] = 0,
-			["customTextUpdate"] = "event",
-			["automaticWidth"] = "Auto",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Power",
-						["use_unit"] = true,
-						["powertype"] = 3,
-						["spellIds"] = {
-						},
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["names"] = {
-						},
-						["use_powertype"] = true,
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-				{
-					["trigger"] = {
-						["use_unit"] = true,
-						["use_form"] = true,
-						["type"] = "unit",
-						["form"] = {
-							["single"] = 3,
-						},
-						["unit"] = "player",
-						["use_inverse"] = true,
-						["event"] = "Stance/Form/Aura",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [2]
-				{
-					["trigger"] = {
-						["type"] = "unit",
-						["use_hostility"] = false,
-						["unit"] = "target",
-						["use_unit"] = true,
-						["debuffType"] = "HELPFUL",
-						["event"] = "Unit Characteristics",
-						["hostility"] = "hostile",
-					},
-					["untrigger"] = {
-					},
-				}, -- [3]
-				["disjunctive"] = "any",
-				["activeTriggerMode"] = -10,
-			},
-			["displayText_format_p_format"] = "timed",
-			["internalVersion"] = 59,
-			["wordWrap"] = "WordWrap",
-			["desc"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-			["font"] = "伤害数字",
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
-				}, -- [1]
-			},
-			["load"] = {
-				["use_class"] = true,
-				["use_never"] = true,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["displayText_format_1.percentpower_round_type"] = "floor",
-			["fontSize"] = 20,
-			["source"] = "import",
-			["shadowXOffset"] = 1,
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["displayText_format_1.percentpower_format"] = "Number",
-			["authorOptions"] = {
-				{
-					["fontSize"] = "medium",
-					["type"] = "description",
-					["text"] = "冰橙原创，微信bcit666淘宝冰橙TMW",
-					["width"] = 1,
-				}, -- [1]
-			},
-			["regionType"] = "text",
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 2,
-						["variable"] = "show",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = {
-								1, -- [1]
-								1, -- [2]
-								1, -- [3]
-								0, -- [4]
-							},
-							["property"] = "color",
-						}, -- [1]
-					},
-				}, -- [1]
-				{
-					["check"] = {
-						["trigger"] = 3,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = {
-								1, -- [1]
-								1, -- [2]
-								1, -- [3]
-								0, -- [4]
-							},
-							["property"] = "color",
-						}, -- [1]
-					},
-				}, -- [2]
-			},
-			["displayText"] = "%1.power",
-			["preferToUpdate"] = false,
-			["displayText_format_1.percentpower_big_number_format"] = "AbbreviateNumbers",
-			["displayText_format_p_time_precision"] = 1,
-			["config"] = {
-			},
-			["displayText_format_1.power_format"] = "none",
-			["yOffset"] = -340,
-			["justify"] = "LEFT",
-			["tocversion"] = 30400,
-			["id"] = "冰橙监控小德资源数字 3",
-			["xOffset"] = 170,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["uid"] = "9qPIXyuojAn",
-			["displayText_format_p_time_mod_rate"] = true,
-			["selfPoint"] = "BOTTOM",
-			["shadowColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["fixedWidth"] = 200,
-			["information"] = {
-				["forceEvents"] = true,
-			},
-			["displayText_format_p_time_legacy_floor"] = false,
-		},
-		["目标target->player玩家"] = {
-			["outline"] = "OUTLINE",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["displayText"] = "%c",
-			["customText"] = "function()\n    if UnitName('target') then\n        local col = RAID_CLASS_COLORS[select(2, UnitClass(\"target\"))].colorStr    \n        local pcol = RAID_CLASS_COLORS[select(2, UnitClass(\"player\"))].colorStr    \n        \n        local ta ,pl\n        if aura_env.config.tar then--显示目标名字\n            ta=UnitName('target')            \n        else            \n            if (GetLocale() == \"zhCN\") then\n                ta='目标'\n            else\n                ta='target'\n            end \n        end\n        \n        if aura_env.config.pla then--显示player名字\n            pl=UnitName('player')            \n        else            \n            if (GetLocale() == \"zhCN\") then\n                pl='你'\n            else\n                pl='you'\n            end \n        end\n        \n        \n        if col then \n            return '|c'..col .. ta ..'|r'..aura_env.config.de..'|c'..pcol..pl..'|r'\n        else\n            return ta ..aura_env.config.de ..'|c'..pcol..pl..'|r'\n        end\n    end    \nend\n\n--if (GetLocale() == \"zhCN\") then\n--end ",
-			["shadowYOffset"] = -1,
-			["anchorPoint"] = "CENTER",
-			["customTextUpdate"] = "update",
-			["automaticWidth"] = "Auto",
-			["actions"] = {
-				["start"] = {
-					["custom"] = "if aura_env.config.sa then\n    if UnitName('target') then \n        local m=UnitName('target') ..aura_env.config.de.. UnitName('player'),'SAY'\n        \n        --[[ v8.2 say\n        local i,_ = IsInInstance() --INSTANCE_CHAT\n        if  i  then\n            SendChatMessage(m,\"SAY\")\n        elseif IsInRaid() then\n            SendChatMessage(m,\"Raid\")\n        else\n            DEFAULT_CHAT_FRAME:AddMessage(m)\n        end\n        ]]\n         SendChatMessage(m)\n    end    \nend\n\n\n",
-					["do_sound"] = true,
-					["message_type"] = "YELL",
-					["sound"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Sounds\\bam.ogg",
-					["do_custom"] = true,
-					["do_message"] = true,
-				},
-				["finish"] = {
-				},
-				["init"] = {
-					["custom"] = "SendChatMessage(UnitName('target') ..'->'..UnitName('player'),'YELL')",
-					["do_custom"] = true,
-				},
-			},
-			["triggers"] = {
-				{
-					["trigger"] = {
-						["use_castType"] = false,
-						["duration"] = "1",
-						["names"] = {
-						},
-						["destUnit"] = "player",
-						["debuffType"] = "HELPFUL",
-						["type"] = "custom",
-						["unevent"] = "auto",
-						["event"] = "Cast",
-						["unit"] = "target",
-						["subeventSuffix"] = "_CAST_START",
-						["spellIds"] = {
-						},
-						["custom"] = "function()\n    if aura_env.config.set then \n        if UnitName('playertargettarget')==UnitName('player') then\n            return true\n        end\n    end\nend\n\n\n",
-						["custom_type"] = "status",
-						["check"] = "update",
-						["use_destUnit"] = true,
-						["use_unit"] = true,
-						["subeventPrefix"] = "SPELL",
-					},
-					["untrigger"] = {
-						["unit"] = "target",
-					},
-				}, -- [1]
-				["activeTriggerMode"] = -10,
-			},
-			["internalVersion"] = 59,
-			["wordWrap"] = "WordWrap",
-			["desc"] = "https://wago.io/vy-5TmmcW  属性\nhttps://wago.io/pGwTKmbR2  战斗中，移动，升级，FPS , MS，分配方式\nhttps://wago.io/p/husandro2    其他WA字符\n---\n如果wa插件占内存大，请/ RELOAD，完后不要再打开wa插件选项界面\n",
-			["font"] = "聊天",
-			["version"] = 2,
-			["subRegions"] = {
-				{
-					["type"] = "subbackground",
-				}, -- [1]
-			},
+			["height"] = 50,
 			["load"] = {
 				["ingroup"] = {
-					["single"] = "raid",
 					["multi"] = {
-						["raid"] = true,
 					},
 				},
-				["use_encounter"] = true,
+				["use_never"] = false,
 				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
+				["zoneIds"] = "",
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["pvptalent"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -30186,138 +30248,76 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_ingroup"] = true,
-				["zoneIds"] = "",
-				["use_size"] = true,
-				["use_combat"] = true,
-				["class"] = {
+				["talent2"] = {
 					["multi"] = {
 					},
 				},
 				["size"] = {
-					["single"] = "fortyman",
 					["multi"] = {
 					},
 				},
 			},
-			["fontSize"] = 72,
 			["source"] = "import",
-			["shadowXOffset"] = 1,
-			["regionType"] = "text",
-			["fixedWidth"] = 200,
-			["animation"] = {
-				["start"] = {
-					["type"] = "preset",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideleft",
-				},
-				["main"] = {
-					["type"] = "preset",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "alphaPulse",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["easeType"] = "none",
-					["duration_type"] = "seconds",
-					["easeStrength"] = 3,
-					["preset"] = "slideright",
-				},
-			},
-			["displayText_format_c_format"] = "none",
-			["url"] = "https://wago.io/tCVInbpOA/2",
-			["yOffset"] = 30,
-			["xOffset"] = 0,
-			["justify"] = "CENTER",
-			["tocversion"] = 11304,
-			["id"] = "目标target->player玩家",
-			["uid"] = "OSIBH89HCI)",
-			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
+			["cooldownTextDisabled"] = false,
 			["authorOptions"] = {
 				{
-					["type"] = "toggle",
-					["default"] = true,
-					["key"] = "set",
-					["name"] = "|cFFFF0000启用功能-Enable Function",
-					["useDesc"] = false,
 					["width"] = 1,
+					["type"] = "select",
+					["values"] = {
+						"Left", -- [1]
+						"Right", -- [2]
+					},
+					["name"] = "Direction",
+					["useDesc"] = true,
+					["key"] = "direction",
+					["default"] = 1,
+					["desc"] = "In which direction should the history expand?",
 				}, -- [1]
 				{
-					["text"] = "",
-					["useName"] = false,
-					["type"] = "header",
-					["width"] = 1,
-				}, -- [2]
-				{
-					["type"] = "input",
+					["type"] = "range",
 					["useDesc"] = true,
-					["width"] = 2,
-					["name"] = "分隔符 Delimiter",
-					["multiline"] = false,
-					["key"] = "de",
-					["length"] = 10,
-					["default"] = "->",
-					["useLength"] = false,
-				}, -- [3]
-				{
-					["type"] = "toggle",
-					["default"] = true,
-					["key"] = "sa",
-					["name"] = "显示呼叫 Show SAY",
-					["useDesc"] = false,
-					["width"] = 2,
-				}, -- [4]
-				{
-					["type"] = "toggle",
-					["default"] = false,
-					["key"] = "tar",
-					["name"] = "显示目标名字 Show target name",
-					["useDesc"] = false,
-					["width"] = 2,
-				}, -- [5]
-				{
-					["type"] = "toggle",
-					["default"] = false,
-					["key"] = "pla",
-					["name"] = "显示玩家名字 Show player name ",
-					["useDesc"] = false,
-					["width"] = 2,
-				}, -- [6]
+					["max"] = 6,
+					["step"] = 0.5,
+					["width"] = 1,
+					["min"] = 1,
+					["key"] = "displayTime",
+					["default"] = 3,
+					["name"] = "Display Time",
+					["desc"] = "How long (in seconds) icons are shown at max.",
+				}, -- [2]
 			},
-			["config"] = {
-				["sa"] = true,
-				["pla"] = false,
-				["de"] = "-->",
-				["set"] = true,
-				["tar"] = true,
-			},
-			["semver"] = "1.0.1",
-			["preferToUpdate"] = false,
-			["shadowColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 0,
+			["cooldown"] = false,
+			["regionType"] = "icon",
 			["conditions"] = {
 			},
+			["stickyDuration"] = false,
+			["icon"] = true,
+			["uid"] = "RREM)OiEBjG",
+			["alpha"] = 1,
+			["semver"] = "1.1.10",
+			["zoom"] = 0,
+			["auto"] = true,
+			["tocversion"] = 30400,
+			["id"] = "GCDHistoryBuffer2",
+			["useCooldownModRate"] = true,
+			["frameStrata"] = 1,
+			["width"] = 50,
+			["parent"] = "GCDHistoryGrp",
+			["config"] = {
+				["direction"] = 1,
+				["displayTime"] = 3,
+			},
+			["inverse"] = false,
+			["selfPoint"] = "CENTER",
+			["displayIcon"] = "",
 			["information"] = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["selfPoint"] = "BOTTOM",
+			["cooldownEdge"] = false,
 		},
-	},
-	["frame"] = {
-		["xOffset"] = -1028.77099609375,
-		["width"] = 909.4918823242188,
-		["height"] = 711.2225341796875,
-		["yOffset"] = -23.9998779296875,
 	},
 	["editor_theme"] = "Monokai",
 }

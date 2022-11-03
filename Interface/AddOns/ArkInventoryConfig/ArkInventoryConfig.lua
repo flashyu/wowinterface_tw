@@ -2782,6 +2782,32 @@ function ArkInventory.ConfigInternal( )
 								},
 							},
 						},
+						interaction = {
+							order = 100,
+							name = "Player Interaction Frame Manager",
+							type = "group",
+							--inline = true,
+							args = {
+								desc = {
+									order = 100,
+									name = "In Dragonflight the default bank and vault frames will open unless I override them.  The problem is that they are now controlled by the PlayerInteractionFrameManager and the way I need to override that will cause taint which means that eventually the frames for several other interactions will end up warning about various blizzard only secure functions being called and want to disable arkiventory.\n\nits a bit of a catch 22 but if required you can disable that override here to stop the alerts but you will get the default frames opening as well\n\nYou will need to reload for this to take effect.",
+									type = "description",
+								},
+								enabled = {
+									order = 200,
+									name = ArkInventory.Localise["ENABLED"],
+									desc = "Override the PlayerInteractionFrameManager",
+									type = "toggle",
+									get = function( info )
+										return ArkInventory.db.option.bugfix.interaction.enable
+									end,
+									set = function( info, v )
+										ArkInventory.db.option.bugfix.interaction.enable = v
+										ArkInventory.OutputWarning( "dont forget to reload" )
+									end,
+								},
+							},
+						},
 					},
 				},
 				rules = {
