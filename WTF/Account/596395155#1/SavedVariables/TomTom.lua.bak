@@ -1,8 +1,8 @@
 
 TomTomDB = {
 	["profileKeys"] = {
-		["骑风 - 祈福"] = "Default",
 		["红发男 - 祈福"] = "Default",
+		["骑风 - 祈福"] = "Default",
 		["死哪了 - 祈福"] = "Default",
 		["仓库技师 - 祈福"] = "Default",
 	},
@@ -13,8 +13,8 @@ TomTomDB = {
 					"CENTER", -- [1]
 					nil, -- [2]
 					"CENTER", -- [3]
-					2.042098760604858, -- [4]
-					-61.66675567626953, -- [5]
+					1.02628481388092, -- [4]
+					-67.76203918457031, -- [5]
 				},
 			},
 			["block"] = {
@@ -32,15 +32,79 @@ TomTomDB = {
 TomTomWaypoints = nil
 TomTomWaypointsM = {
 	["profileKeys"] = {
-		["骑风 - 祈福"] = "骑风 - 祈福",
 		["红发男 - 祈福"] = "红发男 - 祈福",
+		["骑风 - 祈福"] = "骑风 - 祈福",
 		["死哪了 - 祈福"] = "死哪了 - 祈福",
 		["仓库技师 - 祈福"] = "仓库技师 - 祈福",
 	},
 	["profiles"] = {
-		["骑风 - 祈福"] = {
-		},
 		["红发男 - 祈福"] = {
+		},
+		["骑风 - 祈福"] = {
+			[123] = {
+				["123:800650045.41102:433130672.5941:TomTom 路径点"] = {
+					123, -- [1]
+					0.8006500454110164, -- [2]
+					0.4331306725940957, -- [3]
+					["arrivaldistance"] = 15,
+					["crazy"] = true,
+					["persistent"] = true,
+					["desc"] = "TomTom 路径点",
+					["silent"] = true,
+					["cleardistance"] = 10,
+					["title"] = "TomTom 路径点",
+					["from"] = "TomTom/wm",
+					["callbacks"] = {
+						["distance"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+					},
+					["minimap"] = true,
+					["world"] = true,
+				},
+				["123:493154034.22983:121026894.86553:Meeting Stone"] = {
+					123, -- [1]
+					0.4931540342298289, -- [2]
+					0.1210268948655257, -- [3]
+					["arrivaldistance"] = 15,
+					["crazy"] = true,
+					["persistent"] = true,
+					["desc"] = "Meeting Stone",
+					["silent"] = true,
+					["cleardistance"] = 10,
+					["title"] = "Meeting Stone",
+					["from"] = "Questie",
+					["callbacks"] = {
+						["distance"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+					},
+					["minimap"] = true,
+					["world"] = true,
+				},
+			},
 		},
 		["死哪了 - 祈福"] = {
 		},

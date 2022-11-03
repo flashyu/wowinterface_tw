@@ -1,4 +1,11 @@
 Version: 1
+Frame: f1_HealBot_Action
+FrameLevel: 1
+Anchor: LEFT
+X: 429
+Y: 232
+W: 135
+H: 95
 Frame: ColorPickerFrame
 FrameLevel: 1
 Anchor: CENTER
@@ -6,6 +13,13 @@ X: 0
 Y: 0
 W: 365
 H: 240
+Frame: InterfaceOptionsFrame
+FrameLevel: 1
+Anchor: TOP
+X: -92
+Y: -71
+W: 858
+H: 660
 Frame: aux_frame
 FrameLevel: 1
 Anchor: TOP
@@ -13,10 +27,3 @@ X: 208
 Y: -73
 W: 768
 H: 447
-Frame: LootBrowserWindow
-FrameLevel: 1
-Anchor: RIGHT
-X: -114
-Y: 91
-W: 800
-H: 600

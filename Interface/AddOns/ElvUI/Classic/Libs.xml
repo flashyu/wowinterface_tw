@@ -18,9 +18,9 @@
 	<Include file='..\Libraries\Core\Taintless\Taintless.xml'/>
 	<Include file='..\Libraries\Core\UTF8\UTF8.xml'/>
 
-	<Include file='..\Libraries\TBC\LibQuestXP\LibQuestXP.xml'/>
-	<Script file='..\Libraries\TBC\LibHealComm-4.0\LibHealComm-4.0.lua'/>
-	<Script file='..\Libraries\TBC\LibClassicSpecs\LibClassicSpecs.lua'/>
+	<Include file='..\Libraries\Classic\LibQuestXP\LibQuestXP.xml'/>
+	<Script file='..\Libraries\Classic\LibHealComm-4.0\LibHealComm-4.0.lua'/>
+	<Script file='..\Libraries\Classic\LibClassicSpecs\LibClassicSpecs.lua'/>
 	<Include file='..\Libraries\Classic\LibClassicDurations\LibClassicDurations.xml'/>
 	<Script file='..\Libraries\Classic\LibClassicCasterino-1.0\LibClassicCasterino.lua'/>
 
@@ -30,7 +30,7 @@
 	<Script file='..\Libraries\Core\LibCustomGlow-1.0\LibCustomGlow-1.0.lua'/>
 	<Script file='..\Libraries\Core\LibActionButton-1.0\LibActionButton-1.0.lua'/>
 	<Script file='..\Libraries\Core\LibDataBroker\LibDataBroker-1.1.lua'/>
-	<Script file='..\Libraries\Core\LibDualSpec-1.0\LibDualSpec-1.0.lua'/>
+	<Script file='..\Libraries\Core\LibDualSpec-1.0\LibDualSpec-1.0.lua'/> <!-- keep under LibClassicSpecs -->
 	<Script file='..\Libraries\Core\LibElvUIPlugin-1.0\LibElvUIPlugin-1.0.lua'/>
 	<Script file='..\Libraries\Core\LibSimpleSticky\LibSimpleSticky.lua'/>
 	<Script file='..\Libraries\Core\LibTranslit-1.0\LibTranslit-1.0.lua'/>

@@ -10,37 +10,37 @@ CodexConfig = {
 	["minimumDropChance"] = 2,
 	["showLowLevel"] = false,
 	["_tom_waypoint"] = {
-		1952, -- [1]
-		0.4558, -- [2]
-		0.9353, -- [3]
+		116, -- [1]
+		0.1667, -- [2]
+		0.4829, -- [3]
 		["arrivaldistance"] = 15,
 		["callbacks"] = {
 			["distance"] = {
 			},
-			["minimap"] = {
-			},
 			["world"] = {
+			},
+			["minimap"] = {
 			},
 		},
 		["persistent"] = true,
 		["minimap"] = true,
 		["cleardistance"] = 10,
-		["title"] = "对象 #185551 的简体中文文本遗失。\n请向开发者发送一个错误报告。",
+		["title"] = "马克·菲尔森",
 		["from"] = "?",
 		["crazy"] = true,
 		["world"] = true,
 	},
-	["minimapButton"] = true,
-	["autoTurnin"] = false,
+	["continentIcon"] = false,
+	["currentQuestGivers"] = true,
 	["spawnMarkerSize"] = 15,
-	["zoneMapIcon"] = true,
+	["showFestival"] = false,
 	["alwaysShowId"] = false,
 	["nameplateIcon"] = false,
 	["colorBySpawn"] = true,
-	["showFestival"] = false,
+	["zoneMapIcon"] = true,
 	["miniMapIcon"] = true,
-	["currentQuestGivers"] = true,
-	["continentIcon"] = false,
+	["autoTurnin"] = false,
+	["minimapButton"] = true,
 	["questMarkerSize"] = 15,
 }
 CodexHiddenQuests = {
@@ -71,14 +71,14 @@ CodexColors = {
 		0.4235294117647059, -- [2]
 		0.5490196078431373, -- [3]
 	},
-	["部落篝火"] = {
-		0.7490196078431373, -- [1]
-		0.3843137254901961, -- [2]
-		0.1647058823529412, -- [3]
-	},
 	["雄鹰神殿"] = {
 		0.3176470588235294, -- [1]
 		0.9921568627450981, -- [2]
 		0.5294117647058824, -- [3]
+	},
+	["部落篝火"] = {
+		0.7490196078431373, -- [1]
+		0.3843137254901961, -- [2]
+		0.1647058823529412, -- [3]
 	},
 }

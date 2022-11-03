@@ -152,6 +152,7 @@ function E:SetupCVars(noDisplayMsg)
 	SetCVar('threatWarning', 3)
 	SetCVar('alwaysShowActionBars', 1)
 	SetCVar('lockActionBars', 1)
+	SetCVar('ActionButtonUseKeyDown', 1)
 	SetCVar('fstack_preferParentKeys', 0) -- Add back the frame names via fstack!
 
 	if E.Retail then
@@ -160,8 +161,11 @@ function E:SetupCVars(noDisplayMsg)
 		SetCVar('chatClassColorOverride', 0)
 	end
 
-	_G.InterfaceOptionsActionBarsPanelPickupActionKeyDropDown:SetValue('SHIFT')
-	_G.InterfaceOptionsActionBarsPanelPickupActionKeyDropDown:RefreshValue()
+	local ActionButtonPickUp = _G.InterfaceOptionsActionBarsPanelPickupActionKeyDropDown
+	if ActionButtonPickUp then
+		ActionButtonPickUp:SetValue('SHIFT')
+		ActionButtonPickUp:RefreshValue()
+	end
 
 	if E.private.nameplates.enable then
 		NP:CVarReset()
