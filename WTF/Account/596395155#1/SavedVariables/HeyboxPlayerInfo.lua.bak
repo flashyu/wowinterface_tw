@@ -1,6 +1,6 @@
 
 HEYBOX_SAVED_PLAYER_INFOS = {
-	["仓库技师-祈福"] = {
-		["class"] = "WARRIOR",
+	["骑风-祈福"] = {
+		["class"] = "DRUID",
 	},
 }

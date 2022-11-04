@@ -11,29 +11,21 @@ CodexConfig = {
 	["showLowLevel"] = false,
 	["_tom_waypoint"] = {
 		1944, -- [1]
-		0.509, -- [2]
-		0.602, -- [3]
+		0.356, -- [2]
+		0.514, -- [3]
 		["arrivaldistance"] = 15,
 		["callbacks"] = {
 			["distance"] = {
-				[10] = nil --[[ skipped inline function ]],
-				[15] = nil --[[ skipped inline function ]],
-			},
-			["world"] = {
-				["onclick"] = nil --[[ skipped inline function ]],
-				["tooltip_update"] = nil --[[ skipped inline function ]],
-				["tooltip_show"] = nil --[[ skipped inline function ]],
 			},
 			["minimap"] = {
-				["onclick"] = nil --[[ skipped inline function ]],
-				["tooltip_update"] = nil --[[ skipped inline function ]],
-				["tooltip_show"] = nil --[[ skipped inline function ]],
+			},
+			["world"] = {
 			},
 		},
 		["persistent"] = true,
 		["minimap"] = true,
 		["cleardistance"] = 10,
-		["title"] = "阿曼蒂中尉",
+		["title"] = "The Stadium Capture Credit Marker",
 		["from"] = "?",
 		["crazy"] = true,
 		["world"] = true,
@@ -84,19 +76,19 @@ CodexColors = {
 		0.611764705882353, -- [2]
 		0.4784313725490196, -- [3]
 	},
-	["吞火者"] = {
-		0.6470588235294118, -- [1]
-		0.4235294117647059, -- [2]
-		0.5490196078431373, -- [3]
+	["雄鹰神殿"] = {
+		0.3176470588235294, -- [1]
+		0.9921568627450981, -- [2]
+		0.5294117647058824, -- [3]
 	},
 	["部落篝火"] = {
 		0.7490196078431373, -- [1]
 		0.3843137254901961, -- [2]
 		0.1647058823529412, -- [3]
 	},
-	["雄鹰神殿"] = {
-		0.3176470588235294, -- [1]
-		0.9921568627450981, -- [2]
-		0.5294117647058824, -- [3]
+	["吞火者"] = {
+		0.6470588235294118, -- [1]
+		0.4235294117647059, -- [2]
+		0.5490196078431373, -- [3]
 	},
 }

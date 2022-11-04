@@ -164,9 +164,9 @@ HealBot_Config_Spells = {
 		["Middle4"] = "S:26982",
 		["Button41"] = "healbot大迅捷",
 		["AltButton41"] = "healbot大迅捷",
-		["Left3"] = "S:48451",
-		["Alt-ShiftRight1"] = "C:B",
 		["CtrlLeft1"] = "C:A",
+		["Alt-ShiftRight1"] = "C:B",
+		["Left3"] = "S:48451",
 		["ShiftLeft1"] = "S:48477",
 		["AltMiddle1"] = "S:29166",
 		["Ctrl-ShiftRight3"] = "C:E",
@@ -199,7 +199,7 @@ HealBot_Config_Spells = {
 HealBot_Config_Buffs = {
 	["ExtraBuffsOnlyInInstance"] = false,
 	["HealBot_CBWarnRange_Screen"] = 2,
-	["BuffWatchWhenMounted"] = false,
+	["BuffWatchWhenMounted"] = true,
 	["ShowGroups"] = {
 		true, -- [1]
 		true, -- [2]
@@ -212,9 +212,9 @@ HealBot_Config_Buffs = {
 	},
 	["SoundBuffPlay"] = "Tribal Bass Drum",
 	["HealBotBuffColG"] = {
-		1, -- [1]
-		1, -- [2]
-		1, -- [3]
+		0.2, -- [1]
+		0.2, -- [2]
+		0, -- [3]
 		1, -- [4]
 		1, -- [5]
 		1, -- [6]
@@ -264,46 +264,48 @@ HealBot_Config_Buffs = {
 		4, -- [8]
 		2, -- [9]
 		2, -- [10]
-		["42"] = 4,
 		["43"] = 4,
-		["23"] = 4,
 		["41"] = 4,
 		["47"] = 4,
+		["37"] = 4,
+		["45"] = 4,
+		["35"] = 4,
+		["19"] = 1,
+		["25"] = 4,
+		["15"] = 4,
+		["27"] = 4,
+		["17"] = 4,
+		["13"] = 1,
+		["21"] = 4,
+		["33"] = 4,
+		["23"] = 4,
+		["42"] = 4,
+		["36"] = 4,
 		["46"] = 4,
 		["34"] = 4,
 		["44"] = 4,
 		["48"] = 4,
-		["33"] = 4,
 		["28"] = 4,
 		["38"] = 4,
-		["12"] = 4,
-		["13"] = 4,
-		["17"] = 4,
-		["27"] = 4,
-		["15"] = 4,
-		["25"] = 4,
-		["35"] = 4,
-		["45"] = 4,
-		["37"] = 4,
 		["18"] = 4,
-		["36"] = 4,
-		["22"] = 4,
+		["110"] = 1,
+		["31"] = 4,
 		["14"] = 4,
 		["24"] = 4,
 		["16"] = 4,
 		["26"] = 4,
-		["31"] = 4,
-		["21"] = 4,
 		["11"] = 4,
+		["12"] = 1,
+		["22"] = 4,
 		["32"] = 4,
 	},
 	["ShowTimeMaxDuration"] = 31,
 	["SoundBuffWarning"] = false,
 	["ManaDrinkThreshold"] = 50,
 	["HealBotBuffColR"] = {
-		1, -- [1]
-		1, -- [2]
-		1, -- [3]
+		0.8, -- [1]
+		0.8, -- [2]
+		0.969, -- [3]
 		1, -- [4]
 		1, -- [5]
 		1, -- [6]
@@ -317,8 +319,8 @@ HealBot_Config_Buffs = {
 		1, -- [14]
 	},
 	["HealBotBuffColB"] = {
-		1, -- [1]
-		1, -- [2]
+		0.8, -- [1]
+		0.8, -- [2]
 		1, -- [3]
 		1, -- [4]
 		1, -- [5]
@@ -361,7 +363,7 @@ HealBot_Config_Buffs = {
 		["28"] = "None",
 		["38"] = "None",
 		["21"] = "None",
-		["13"] = "None",
+		["13"] = "野性赐福",
 		["17"] = "None",
 		["27"] = "None",
 		["15"] = "None",
@@ -377,8 +379,8 @@ HealBot_Config_Buffs = {
 		["16"] = "None",
 		["26"] = "None",
 		["31"] = "None",
-		["12"] = "None",
-		["11"] = "None",
+		["12"] = "野性赐福",
+		["11"] = "野性赐福",
 		["32"] = "None",
 	},
 	["AutoBuffCastBy"] = 1,
@@ -427,6 +429,8 @@ HealBot_Config_Cures = {
 	["ShowTimeMaxDuration"] = 31,
 	["IgnoreFastDurDebuffsSecs"] = 2,
 	["HealBot_CDCWarnRange_Bar"] = 3,
+	["SoundDebuffPlay"] = "Tribal Bass Drum",
+	["HealBot_CDCWarnRange_Sound"] = 3,
 	["HealBotDebuffDropDown"] = {
 		4, -- [1]
 		4, -- [2]
@@ -444,10 +448,8 @@ HealBot_Config_Cures = {
 		["11"] = 4,
 		["32"] = 4,
 	},
-	["HealBot_CDCWarnRange_Sound"] = 3,
-	["DebuffWatchWhenGrouped"] = false,
 	["SoundDebuffWarning"] = false,
-	["SoundDebuffPlay"] = "Tribal Bass Drum",
+	["DebuffWatchWhenGrouped"] = false,
 	["IgnoreFriendDebuffs"] = false,
 	["AlwaysShowTimed"] = false,
 	["IgnoreOnCooldownDebuffs"] = false,
