@@ -1,1293 +1,496 @@
 
 PlaterDB = {
 	["captured_spells"] = {
-		[19659] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "迦顿男爵",
-			["npcID"] = 12056,
-		},
-		[57566] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "未知目标",
-			["npcID"] = 417,
-		},
-		[52474] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "小帮",
-			["encounterID"] = 583,
+		[15589] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
+			["encounterID"] = 787,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29452,
-		},
-		[3600] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "地缚图腾",
-			["npcID"] = 2630,
+			["npcID"] = 11382,
 		},
 		[75447] = {
+			["type"] = "BUFF",
 			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 26483,
+		},
+		[32943] = {
 			["type"] = "BUFF",
+			["source"] = "迁跃跟踪者",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 10200,
+			["npcID"] = 18464,
 		},
-		[29385] = {
-			["source"] = "绿队圣骑士",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32342,
-		},
-		[32919] = {
+		[24317] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "奥根",
+			["encounterID"] = 787,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "强壮的野狼",
-			["npcID"] = 31233,
+			["npcID"] = 14988,
 		},
-		[32736] = {
-			["source"] = "绿队战士",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32321,
-		},
-		[38067] = {
-			["source"] = "Air Force Alarm Bot (Horde)",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 2615,
-		},
-		[48291] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "伊米隆国王",
-			["encounterID"] = 583,
+		[16145] = {
+			["source"] = "塞泰克新兵",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26861,
-		},
-		[17201] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "狂热者洛卡恩",
-			["encounterID"] = 789,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11347,
-		},
-		[13864] = {
-			["source"] = "碎手侍僧",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 19415,
-		},
-		[32003] = {
-			["source"] = "兹克拉",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 18974,
-		},
-		[33796] = {
-			["source"] = "荣耀堡弓箭手",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 16896,
-		},
-		[59304] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "伊米隆国王",
-			["encounterID"] = 583,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26861,
+			["npcID"] = 18318,
 		},
 		[23600] = {
-			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "金队战士",
+			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 32322,
 		},
-		[59320] = {
-			["encounterName"] = "伊米隆国王",
-			["type"] = "BUFF",
-			["source"] = "灵魂之泉",
-			["encounterID"] = 583,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 27339,
-		},
-		[57567] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 417,
-		},
-		[22859] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "高阶祭司塞卡尔",
-			["encounterID"] = 789,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 14509,
-		},
 		[12611] = {
+			["source"] = "金队法师",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队法师",
-			["npcID"] = 32324,
-		},
-		[41534] = {
-			["source"] = "魔能机甲",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 18733,
-		},
-		[60667] = {
-			["source"] = "霜巢天爪龙",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 31137,
-		},
-		[51750] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "伊米隆国王",
-			["encounterID"] = 583,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26861,
-		},
-		[49973] = {
-			["source"] = "米莎",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 1557,
-		},
-		[22887] = {
-			["source"] = "古拉巴什掷斧者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11350,
-		},
-		[33924] = {
-			["source"] = "血环折磨者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 19424,
-		},
-		[58667] = {
-			["type"] = "DEBUFF",
-			["source"] = "自由的先知",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 33422,
+			["npcID"] = 32341,
 		},
 		[6713] = {
-			["source"] = "绿队战士",
+			["source"] = "金队战士",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32321,
-		},
-		[13398] = {
-			["source"] = "噬骨清理者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 18952,
-		},
-		[75593] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 22123,
-		},
-		[48770] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "瑟里纳尔",
-			["npcID"] = 26593,
-		},
-		[24453] = {
-			["source"] = "靈獸",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 38453,
+			["npcID"] = 32322,
 		},
 		[21401] = {
 			["source"] = "金队萨满祭司",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
+			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 32340,
 		},
-		[17843] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队牧师",
-			["npcID"] = 32325,
-		},
-		[15968] = {
-			["source"] = "痛苦魔女",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 19408,
-		},
 		[19134] = {
-			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "金队战士",
+			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 32322,
 		},
 		[61353] = {
-			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "达格娜·火石",
+			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 29476,
 		},
-		[34108] = {
-			["source"] = "塔加尔·断背者",
+		[27577] = {
+			["source"] = "金队战士",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 19443,
+			["npcID"] = 32322,
 		},
-		[54261] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队法师",
-			["npcID"] = 32324,
-		},
-		[8599] = {
-			["source"] = "血环步兵",
+		[24529] = {
 			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 16871,
-		},
-		[64493] = {
 			["source"] = "未知目标",
-			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 8211,
+			["npcID"] = 26483,
 		},
 		[29386] = {
 			["source"] = "绿队圣骑士",
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 32342,
 		},
-		[70893] = {
-			["source"] = "狼",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 8211,
-		},
-		[47982] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "卡哈姆",
-			["npcID"] = 416,
-		},
-		[53401] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "财运旺旺熊",
-			["npcID"] = 38453,
-		},
-		[67834] = {
-			["source"] = "虫洞",
+		[24314] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
+			["encounterID"] = 787,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 35646,
+			["npcID"] = 11382,
 		},
-		[35336] = {
-			["source"] = "孢子蝠幼崽",
+		[24318] = {
+			["encounterName"] = "血领主曼多基尔",
 			["type"] = "BUFF",
+			["source"] = "血领主曼多基尔",
+			["encounterID"] = 787,
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 20387,
-		},
-		[12470] = {
-			["source"] = "金队萨满祭司",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32340,
+			["npcID"] = 11382,
 		},
 		[15532] = {
 			["source"] = "金队法师",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
+			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 32341,
 		},
 		[14514] = {
-			["event"] = "SPELL_AURA_APPLIED",
 			["type"] = "BUFF",
-			["source"] = "绿队法师",
-			["npcID"] = 32324,
+			["source"] = "金队法师",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32341,
 		},
-		[34109] = {
-			["source"] = "塔加尔·断背者",
+		[3391] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "奥根",
+			["encounterID"] = 787,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 19443,
+			["npcID"] = 14988,
 		},
 		[11974] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队牧师",
-			["npcID"] = 32325,
-		},
-		[11976] = {
-			["source"] = "碎手步兵",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 16867,
+			["type"] = "BUFF",
+			["source"] = "绿队牧师",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32343,
 		},
 		[14032] = {
+			["source"] = "绿队牧师",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队牧师",
-			["npcID"] = 32325,
-		},
-		[63275] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "鱼语者伊尔塔斯克",
-			["npcID"] = 194795,
-		},
-		[35998] = {
-			["source"] = "前线指挥官金斯顿",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 19310,
-		},
-		[47481] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "白骨重击者",
-			["npcID"] = 26125,
-		},
-		[33974] = {
-			["source"] = "甘尔葛工兵",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 18827,
+			["npcID"] = 32343,
 		},
 		[13787] = {
-			["source"] = "碎手术士",
 			["type"] = "BUFF",
+			["source"] = "碎手术士",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 19411,
 		},
 		[57458] = {
+			["type"] = "BUFF",
 			["source"] = "未知目标",
-			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 2408,
-		},
-		[67836] = {
-			["source"] = "虫洞",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 35646,
-		},
-		[53434] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "财运旺旺熊",
-			["npcID"] = 38453,
-		},
-		[3149] = {
-			["source"] = "噬骨座狼",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 18706,
+			["npcID"] = 33776,
 		},
 		[35361] = {
-			["source"] = "林地行者",
 			["type"] = "BUFF",
+			["source"] = "林地行者",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 31228,
 		},
-		[12540] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "狂热者扎斯",
-			["encounterID"] = 789,
+		[16856] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
+			["encounterID"] = 787,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11348,
-		},
-		[12544] = {
-			["source"] = "奥术师布莱丁",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32169,
+			["npcID"] = 11382,
 		},
 		[12550] = {
-			["source"] = "血环黑暗萨满祭司",
 			["type"] = "BUFF",
+			["source"] = "乌雷克先知",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 16873,
-		},
-		[29120] = {
-			["source"] = "荣耀堡弓箭手",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 16896,
-		},
-		[33895] = {
-			["source"] = "甘尔葛工兵",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 18827,
+			["npcID"] = 17143,
 		},
 		[35696] = {
-			["source"] = "未知目标",
 			["type"] = "BUFF",
+			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 17252,
 		},
-		[4511] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "未知目标",
-			["npcID"] = 416,
-		},
-		[32722] = {
-			["source"] = "起泡的腐泥怪",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 16901,
-		},
-		[47482] = {
+		[33967] = {
+			["source"] = "塞泰克卫兵",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "白骨重击者",
-			["npcID"] = 26125,
-		},
-		[39107] = {
-			["source"] = "Zeth'Gor Quest Credit Marker, They Must Burn",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 21173,
+			["npcID"] = 18323,
 		},
 		[57475] = {
+			["type"] = "BUFF",
 			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 33776,
+		},
+		[33961] = {
 			["type"] = "BUFF",
+			["source"] = "塞泰克新兵",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 2408,
+			["npcID"] = 18318,
 		},
-		[53148] = {
-			["source"] = "狼",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 8211,
-		},
-		[52909] = {
-			["source"] = "图书馆员盖伦",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 25291,
-		},
-		[67838] = {
+		[32901] = {
+			["source"] = "塞泰克暗鹰",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "虫洞",
-			["npcID"] = 35646,
+			["npcID"] = 19429,
 		},
-		[36350] = {
-			["source"] = "Honor Hold Gryphon Brigadier, Forge",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 22405,
-		},
-		[8269] = {
-			["source"] = "古拉巴什掷斧者",
+		[32942] = {
 			["type"] = "BUFF",
+			["source"] = "迁跃跟踪者",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 11350,
+			["npcID"] = 18464,
 		},
-		[33625] = {
-			["source"] = "金队萨满祭司",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32340,
-		},
-		[14921] = {
-			["source"] = "狼",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 8211,
-		},
-		[32924] = {
-			["source"] = "西诺巫师",
+		[46604] = {
 			["type"] = "BUFF",
+			["source"] = "金队法师",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 18450,
+			["npcID"] = 32341,
+		},
+		[24407] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
+			["encounterID"] = 787,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 11382,
+		},
+		[54261] = {
+			["source"] = "金队法师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32341,
+		},
+		[18501] = {
+			["type"] = "BUFF",
+			["source"] = "古拉巴什战士",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 11355,
+		},
+		[11428] = {
+			["source"] = "古拉巴什战士",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 11355,
 		},
 		[44415] = {
+			["source"] = "绿队牧师",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队牧师",
-			["npcID"] = 32325,
-		},
-		[23829] = {
-			["type"] = "BUFF",
-			["source"] = "未知目标",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 416,
+			["npcID"] = 32343,
 		},
 		[39586] = {
-			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "金队萨满祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 32340,
 		},
-		[22666] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "高阶祭司塞卡尔",
-			["encounterID"] = 789,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 14509,
-		},
-		[11767] = {
-			["type"] = "BUFF",
-			["source"] = "未知目标",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 416,
-		},
-		[59300] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "伊米隆国王",
-			["encounterID"] = 583,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26861,
-		},
-		[57723] = {
-			["source"] = "未知目标",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 26125,
-		},
-		[7870] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "海尔欧拉",
-			["npcID"] = 1863,
-		},
 		[9080] = {
-			["source"] = "绿队战士",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32321,
-		},
-		[59305] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "伊米隆国王",
-			["encounterID"] = 583,
+			["source"] = "金队战士",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26861,
-		},
-		[63619] = {
-			["encounterName"] = "伊米隆国王",
-			["type"] = "BUFF",
-			["source"] = "暗影魔",
-			["encounterID"] = 583,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 19668,
-		},
-		[64495] = {
-			["encounterName"] = "伊米隆国王",
-			["type"] = "BUFF",
-			["source"] = "小帮",
-			["encounterID"] = 583,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29452,
-		},
-		[35076] = {
-			["source"] = "阿达尔",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 18481,
-		},
-		[11640] = {
-			["source"] = "金队牧师",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32325,
-		},
-		[54508] = {
-			["type"] = "BUFF",
-			["source"] = "沙托姆",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[47983] = {
-			["source"] = "沃尔匹特",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 416,
-		},
-		[61834] = {
-			["source"] = "米尼格布·魔爆",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32838,
-		},
-		[59008] = {
-			["source"] = "强壮的野狼",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 31233,
-		},
-		[9053] = {
-			["source"] = "噬骨唤魔者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 19701,
-		},
-		[52472] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "财运旺旺熊",
-			["npcID"] = 38453,
-		},
-		[59110] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "斑点雄鹿",
-			["npcID"] = 31236,
-		},
-		[16460] = {
-			["source"] = "噬骨座狼",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 18706,
-		},
-		[61676] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "财运旺旺熊",
-			["npcID"] = 38453,
-		},
-		[61684] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "未知目标",
-			["npcID"] = 17447,
-		},
-		[25810] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "剧毒蛇",
-			["npcID"] = 19833,
-		},
-		[33395] = {
-			["source"] = "水元素",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 510,
-		},
-		[61198] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "财运旺旺熊",
-			["npcID"] = 38453,
-		},
-		[35706] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[3606] = {
-			["source"] = "灼热图腾",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 2523,
+			["npcID"] = 32322,
 		},
 		[20424] = {
 			["source"] = "绿队圣骑士",
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 32342,
 		},
-		[36589] = {
-			["source"] = "强壮的野狼",
+		[23766] = {
 			["type"] = "BUFF",
+			["source"] = "塞格",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 31233,
+			["npcID"] = 14822,
 		},
-		[47468] = {
-			["source"] = "骨髓捕捉者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26125,
-		},
-		[9128] = {
-			["source"] = "绿队战士",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32321,
-		},
-		[25809] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "毒蛇",
-			["npcID"] = 19921,
-		},
-		[24185] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "高阶祭司塞卡尔",
-			["encounterID"] = 789,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 14509,
-		},
-		[24394] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "财运旺旺熊",
-			["npcID"] = 38453,
-		},
-		[24529] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 10200,
-		},
-		[13323] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队法师",
-			["npcID"] = 32324,
-		},
-		[49309] = {
-			["event"] = "SPELL_CAST_SUCCESS",
+		[33625] = {
 			["source"] = "金队萨满祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 32340,
-		},
-		[33675] = {
-			["source"] = "恐怖战术家",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 16959,
-		},
-		[24018] = {
-			["source"] = "古拉巴什掷斧者",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 11350,
-		},
-		[32723] = {
-			["source"] = "噬骨骑兵",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 16925,
-		},
-		[34086] = {
-			["source"] = "痛苦魔女",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 19408,
-		},
-		[55095] = {
-			["source"] = "符文武器",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 27893,
-		},
-		[61685] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 8211,
-		},
-		[48090] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[15786] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队萨满祭司",
-			["npcID"] = 32340,
-		},
-		[17261] = {
-			["source"] = "狼",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 8211,
-		},
-		[25228] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[15614] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "狂热者扎斯",
-			["encounterID"] = 789,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11348,
-		},
-		[46604] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "绿队法师",
-			["npcID"] = 32324,
-		},
-		[1604] = {
-			["source"] = "绿队战士",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32321,
 		},
 		[13704] = {
+			["source"] = "绿队牧师",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队牧师",
-			["npcID"] = 32325,
+			["npcID"] = 32343,
 		},
-		[20545] = {
-			["source"] = "狂热者洛卡恩",
+		[35706] = {
 			["type"] = "BUFF",
+			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 11347,
+			["npcID"] = 17252,
 		},
-		[53403] = {
-			["event"] = "SPELL_AURA_APPLIED",
+		[9128] = {
 			["type"] = "BUFF",
-			["source"] = "财运旺旺熊",
-			["npcID"] = 38453,
-		},
-		[34655] = {
+			["source"] = "金队战士",
 			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32322,
+		},
+		[13736] = {
+			["encounterName"] = "血领主曼多基尔",
+			["type"] = "BUFF",
+			["source"] = "血领主曼多基尔",
+			["encounterID"] = 787,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 11382,
+		},
+		[15786] = {
+			["source"] = "金队萨满祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32340,
+		},
+		[15284] = {
+			["source"] = "贫民窟士兵",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 19501,
+		},
+		[1604] = {
 			["type"] = "DEBUFF",
-			["source"] = "毒蛇",
-			["npcID"] = 19921,
+			["source"] = "秘教特工",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 19503,
 		},
-		[31707] = {
-			["source"] = "水元素",
+		[32736] = {
+			["source"] = "金队战士",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 510,
+			["npcID"] = 32322,
 		},
-		[15043] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队法师",
-			["npcID"] = 32324,
-		},
-		[13005] = {
+		[29385] = {
+			["type"] = "BUFF",
 			["source"] = "绿队圣骑士",
-			["event"] = "SPELL_CAST_SUCCESS",
+			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 32342,
 		},
-		[32902] = {
-			["source"] = "巨牙潜伏者",
-			["type"] = "DEBUFF",
+		[12544] = {
+			["type"] = "BUFF",
+			["source"] = "奥术师布莱丁",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 18466,
+			["npcID"] = 32169,
+		},
+		[24408] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
+			["encounterID"] = 787,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 11382,
+		},
+		[15043] = {
+			["source"] = "绿队法师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32324,
+		},
+		[25228] = {
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17252,
 		},
 		[19579] = {
+			["type"] = "BUFF",
 			["source"] = "未知目标",
-			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 8211,
+			["npcID"] = 32517,
 		},
-		[24020] = {
-			["source"] = "古拉巴什掷斧者",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 11350,
-		},
-		[15090] = {
+		[13323] = {
+			["source"] = "金队法师",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队牧师",
-			["npcID"] = 32325,
-		},
-		[6742] = {
-			["source"] = "血环黑暗萨满祭司",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 16873,
+			["npcID"] = 32341,
 		},
 		[20615] = {
-			["event"] = "SPELL_AURA_APPLIED",
 			["type"] = "DEBUFF",
 			["source"] = "金队战士",
+			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 32322,
 		},
 		[29544] = {
-			["event"] = "SPELL_AURA_APPLIED",
+			["encounterName"] = "血领主曼多基尔",
 			["type"] = "DEBUFF",
-			["source"] = "金队战士",
-			["npcID"] = 32322,
+			["source"] = "血领主曼多基尔",
+			["encounterID"] = 787,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 11382,
 		},
 		[44178] = {
-			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "金队法师",
+			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 32341,
 		},
-		[54131] = {
-			["source"] = "狼",
-			["type"] = "BUFF",
+		[3600] = {
+			["type"] = "DEBUFF",
+			["source"] = "地缚图腾",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 8211,
-		},
-		[27577] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队战士",
-			["npcID"] = 32322,
-		},
-		[19615] = {
-			["source"] = "狼",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 8211,
-		},
-		[33768] = {
-			["source"] = "空军指挥官达比利",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 19409,
-		},
-		[15581] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "狂热者扎斯",
-			["encounterID"] = 789,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11348,
-		},
-		[67837] = {
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "虫洞",
-			["npcID"] = 35646,
-		},
-		[27268] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "未知目标",
-			["npcID"] = 416,
+			["npcID"] = 2630,
 		},
 	},
 	["captured_casts"] = {
-		[47964] = {
-			["encounterName"] = "迈克斯纳",
-			["encounterID"] = 1116,
-			["npcID"] = 416,
-		},
-		[55334] = {
-			["npcID"] = 16163,
-		},
-		[15043] = {
-			["npcID"] = 32341,
-		},
-		[60667] = {
-			["npcID"] = 31137,
-		},
-		[54334] = {
-			["npcID"] = 16021,
-		},
-		[30091] = {
-			["npcID"] = 16165,
-		},
-		[33895] = {
-			["npcID"] = 18827,
-		},
-		[56505] = {
-			["encounterName"] = "玛里苟斯",
-			["encounterID"] = 734,
-			["npcID"] = 28859,
-		},
-		[59430] = {
-			["encounterName"] = "阿努巴拉克",
-			["encounterID"] = 218,
-			["npcID"] = 29120,
-		},
-		[47496] = {
-			["npcID"] = 26125,
-		},
-		[72898] = {
-			["npcID"] = 37994,
-		},
-		[55638] = {
-			["encounterName"] = "收割者戈提克",
-			["encounterID"] = 1109,
-			["npcID"] = 16126,
-		},
-		[38618] = {
-			["npcID"] = 27751,
-		},
-		[33796] = {
-			["npcID"] = 16896,
-		},
-		[42281] = {
-			["npcID"] = 23694,
-		},
-		[17274] = {
-			["npcID"] = 27695,
-		},
-		[28089] = {
-			["encounterName"] = "塔迪乌斯",
-			["encounterID"] = 1120,
-			["npcID"] = 15928,
-		},
-		[3606] = {
-			["npcID"] = 2523,
-		},
-		[33844] = {
-			["npcID"] = 31229,
-		},
-		[57061] = {
-			["encounterName"] = "埃曼尼塔",
-			["encounterID"] = 1989,
-			["npcID"] = 30435,
-		},
-		[58462] = {
-			["npcID"] = 31009,
-		},
-		[54021] = {
-			["encounterName"] = "阿努布雷坎",
-			["encounterID"] = 1107,
-			["npcID"] = 15956,
-		},
-		[59359] = {
-			["encounterName"] = "阿努巴拉克",
-			["encounterID"] = 218,
-			["npcID"] = 29217,
-		},
-		[47425] = {
-			["encounterName"] = "萨菲隆",
-			["npcID"] = 27285,
-		},
-		[56065] = {
-			["npcID"] = 15981,
-		},
-		[28353] = {
-			["npcID"] = 16145,
-		},
-		[9613] = {
-			["npcID"] = 27539,
-		},
-		[33974] = {
-			["npcID"] = 18827,
-		},
-		[11986] = {
-			["npcID"] = 30179,
-		},
-		[59366] = {
-			["encounterName"] = "看门者克里克希尔",
-			["encounterID"] = 216,
-			["npcID"] = 28731,
-		},
-		[59108] = {
-			["npcID"] = 30279,
-		},
-		[15453] = {
-			["npcID"] = 16165,
-		},
-		[60923] = {
-			["npcID"] = 32353,
-		},
-		[61562] = {
-			["npcID"] = 30319,
-		},
-		[59993] = {
-			["encounterName"] = "传令官沃拉兹",
-			["encounterID"] = 215,
-			["npcID"] = 30622,
-		},
-		[54331] = {
-			["npcID"] = 16029,
-		},
 		[15585] = {
 			["npcID"] = 16594,
-		},
-		[57465] = {
-			["encounterName"] = "天启四骑士",
-			["encounterID"] = 1121,
-			["npcID"] = 16063,
-		},
-		[49111] = {
-			["npcID"] = 27608,
-		},
-		[50092] = {
-			["npcID"] = 27791,
-		},
-		[33924] = {
-			["npcID"] = 19424,
-		},
-		[54338] = {
-			["npcID"] = 16020,
-		},
-		[39647] = {
-			["npcID"] = 30453,
-		},
-		[60880] = {
-			["encounterName"] = "岩石看守者阿尔卡冯",
-			["npcID"] = 31125,
-			["encounterID"] = 772,
-		},
-		[51681] = {
-			["npcID"] = 26605,
-		},
-		[60848] = {
-			["npcID"] = 30414,
-		},
-		[9053] = {
-			["npcID"] = 19136,
-		},
-		[7068] = {
-			["npcID"] = 6426,
-		},
-		[24208] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["encounterID"] = 789,
-			["npcID"] = 11347,
-		},
-		[53824] = {
-			["npcID"] = 23745,
-		},
-		[53333] = {
-			["encounterName"] = "看门者克里克希尔",
-			["encounterID"] = 216,
-			["npcID"] = 29064,
-		},
-		[31707] = {
-			["npcID"] = 510,
-		},
-		[28280] = {
-			["npcID"] = 15931,
-		},
-		[59102] = {
-			["npcID"] = 30278,
-		},
-		[55931] = {
-			["encounterName"] = "塔达拉姆王子",
-			["encounterID"] = 213,
-			["npcID"] = 29308,
-		},
-		[20825] = {
-			["npcID"] = 1789,
-		},
-		[16367] = {
-			["npcID"] = 27678,
-		},
-		[57467] = {
-			["encounterName"] = "天启四骑士",
-			["encounterID"] = 1121,
-			["npcID"] = 16064,
-		},
-		[39945] = {
-			["npcID"] = 27678,
-		},
-		[28294] = {
-			["npcID"] = 16021,
-		},
-		[38556] = {
-			["npcID"] = 27560,
-		},
-		[31600] = {
-			["npcID"] = 25227,
-		},
-		[60916] = {
-			["npcID"] = 32353,
-		},
-		[54316] = {
-			["npcID"] = 15979,
-		},
-		[49113] = {
-			["npcID"] = 26925,
-		},
-		[57753] = {
-			["npcID"] = 30681,
-		},
-		[17843] = {
-			["npcID"] = 32325,
-		},
-		[60936] = {
-			["encounterName"] = "玛里苟斯",
-			["encounterID"] = 734,
-			["npcID"] = 28859,
-		},
-		[58667] = {
-			["npcID"] = 33422,
 		},
 		[58793] = {
 			["encounterName"] = "萨塔里奥",
 			["encounterID"] = 742,
 			["npcID"] = 30452,
 		},
-		[58678] = {
-			["encounterName"] = "岩石看守者阿尔卡冯",
-			["npcID"] = 31125,
-			["encounterID"] = 772,
+		[49111] = {
+			["npcID"] = 27608,
 		},
-		[31747] = {
-			["npcID"] = 16844,
+		[59359] = {
+			["encounterName"] = "阿努巴拉克",
+			["encounterID"] = 218,
+			["npcID"] = 29217,
 		},
-		[59305] = {
-			["encounterName"] = "伊米隆国王",
-			["encounterID"] = 583,
-			["npcID"] = 26861,
+		[31664] = {
+			["npcID"] = 27691,
 		},
-		[30481] = {
-			["npcID"] = 16704,
-		},
-		[25530] = {
-			["npcID"] = 15480,
-		},
-		[38204] = {
-			["npcID"] = 33422,
-		},
-		[61353] = {
-			["npcID"] = 29476,
-		},
-		[48530] = {
-			["npcID"] = 27162,
-		},
-		[51963] = {
-			["encounterName"] = "阿努布雷坎",
-			["encounterID"] = 1107,
-			["npcID"] = 27829,
-		},
-		[9532] = {
-			["npcID"] = 25216,
-		},
-		[58956] = {
-			["encounterName"] = "萨塔里奥",
-			["encounterID"] = 742,
-			["npcID"] = 28860,
-		},
-		[57055] = {
+		[57088] = {
 			["encounterName"] = "埃曼尼塔",
 			["encounterID"] = 1989,
 			["npcID"] = 30258,
 		},
-		[33969] = {
-			["npcID"] = 18981,
-		},
 		[25054] = {
 			["npcID"] = 27677,
 		},
-		[49241] = {
-			["npcID"] = 27542,
+		[54331] = {
+			["npcID"] = 16029,
 		},
-		[59357] = {
-			["encounterName"] = "看门者克里克希尔",
-			["encounterID"] = 216,
-			["npcID"] = 28733,
+		[47964] = {
+			["encounterName"] = "迈克斯纳",
+			["encounterID"] = 1116,
+			["npcID"] = 416,
+		},
+		[55638] = {
+			["encounterName"] = "收割者戈提克",
+			["encounterID"] = 1109,
+			["npcID"] = 16126,
+		},
+		[3606] = {
+			["npcID"] = 2523,
+		},
+		[48530] = {
+			["npcID"] = 27162,
+		},
+		[50092] = {
+			["npcID"] = 27791,
+		},
+		[33796] = {
+			["npcID"] = 16896,
+		},
+		[30481] = {
+			["npcID"] = 16704,
+		},
+		[54722] = {
+			["npcID"] = 16168,
+		},
+		[59081] = {
+			["npcID"] = 26554,
+		},
+		[33844] = {
+			["npcID"] = 31229,
+		},
+		[54021] = {
+			["encounterName"] = "阿努布雷坎",
+			["encounterID"] = 1107,
+			["npcID"] = 15956,
+		},
+		[60667] = {
+			["npcID"] = 31137,
 		},
 		[22887] = {
 			["encounterName"] = "高阶祭司塞卡尔",
 			["encounterID"] = 789,
 			["npcID"] = 11350,
 		},
-		[59365] = {
-			["encounterName"] = "看门者克里克希尔",
-			["encounterID"] = 216,
-			["npcID"] = 28729,
+		[33924] = {
+			["npcID"] = 19424,
 		},
-		[56067] = {
-			["npcID"] = 15981,
+		[58667] = {
+			["npcID"] = 33422,
 		},
-		[49110] = {
-			["npcID"] = 26933,
+		[51806] = {
+			["npcID"] = 26828,
 		},
-		[60012] = {
-			["encounterName"] = "传令官沃拉兹",
-			["encounterID"] = 215,
-			["npcID"] = 30625,
+		[32103] = {
+			["npcID"] = 27540,
 		},
-		[29120] = {
-			["npcID"] = 16896,
-		},
-		[59986] = {
-			["encounterName"] = "传令官沃拉兹",
-			["encounterID"] = 215,
-			["npcID"] = 30621,
-		},
-		[31664] = {
-			["npcID"] = 27691,
-		},
-		[54096] = {
-			["encounterName"] = "黑女巫法琳娜",
-			["encounterID"] = 1110,
-			["npcID"] = 16506,
-		},
-		[54317] = {
-			["npcID"] = 15979,
-		},
-		[12470] = {
-			["npcID"] = 32340,
-		},
-		[12471] = {
-			["npcID"] = 17694,
-		},
-		[61568] = {
-			["npcID"] = 30111,
-		},
-		[54333] = {
-			["npcID"] = 16385,
+		[59241] = {
+			["npcID"] = 26670,
 		},
 		[57464] = {
 			["encounterName"] = "天启四骑士",
 			["encounterID"] = 1121,
 			["npcID"] = 16065,
 		},
-		[54722] = {
-			["npcID"] = 16168,
+		[28294] = {
+			["npcID"] = 16021,
 		},
-		[15620] = {
-			["npcID"] = 16704,
+		[61568] = {
+			["npcID"] = 30111,
 		},
-		[61461] = {
-			["npcID"] = 30286,
+		[30091] = {
+			["npcID"] = 16165,
+		},
+		[59305] = {
+			["encounterName"] = "伊米隆国王",
+			["encounterID"] = 583,
+			["npcID"] = 26861,
+		},
+		[61353] = {
+			["npcID"] = 29476,
+		},
+		[9613] = {
+			["npcID"] = 27539,
+		},
+		[38204] = {
+			["npcID"] = 33422,
+		},
+		[60923] = {
+			["npcID"] = 32353,
+		},
+		[54317] = {
+			["npcID"] = 15979,
 		},
 		[59433] = {
 			["encounterName"] = "阿努巴拉克",
 			["encounterID"] = 218,
 			["npcID"] = 29120,
-		},
-		[60072] = {
-			["encounterName"] = "玛里苟斯",
-			["encounterID"] = 734,
-			["npcID"] = 28859,
-		},
-		[55467] = {
-			["npcID"] = 16215,
-		},
-		[59638] = {
-			["encounterName"] = "阿努布雷坎",
-			["encounterID"] = 1107,
-			["npcID"] = 31216,
 		},
 		[30932] = {
 			["npcID"] = 17670,
@@ -1297,50 +500,299 @@ PlaterDB = {
 			["encounterID"] = 1109,
 			["npcID"] = 16060,
 		},
-		[50335] = {
-			["npcID"] = 27797,
+		[47496] = {
+			["npcID"] = 26125,
 		},
-		[13323] = {
-			["npcID"] = 32341,
+		[57465] = {
+			["encounterName"] = "天启四骑士",
+			["encounterID"] = 1121,
+			["npcID"] = 16063,
 		},
-		[7799] = {
-			["npcID"] = 416,
+		[55704] = {
+			["npcID"] = 29981,
 		},
-		[49309] = {
+		[39647] = {
+			["npcID"] = 30453,
+		},
+		[49106] = {
+			["npcID"] = 26696,
+		},
+		[12470] = {
 			["npcID"] = 32340,
+		},
+		[59083] = {
+			["npcID"] = 26554,
 		},
 		[59346] = {
 			["npcID"] = 28922,
-		},
-		[49317] = {
-			["npcID"] = 27682,
-		},
-		[56632] = {
-			["npcID"] = 30276,
-		},
-		[55802] = {
-			["encounterName"] = "克尔苏加德",
-			["encounterID"] = 1114,
-			["npcID"] = 15990,
 		},
 		[59362] = {
 			["encounterName"] = "哈多诺克斯",
 			["encounterID"] = 217,
 			["npcID"] = 29335,
 		},
+		[60916] = {
+			["npcID"] = 32353,
+		},
+		[47425] = {
+			["encounterName"] = "萨菲隆",
+			["npcID"] = 27285,
+		},
+		[11986] = {
+			["npcID"] = 30179,
+		},
+		[53824] = {
+			["npcID"] = 23745,
+		},
 		[40062] = {
 			["npcID"] = 28538,
 		},
-		[6660] = {
-			["npcID"] = 6237,
+		[7799] = {
+			["npcID"] = 416,
 		},
-		[57088] = {
+		[58956] = {
+			["encounterName"] = "萨塔里奥",
+			["encounterID"] = 742,
+			["npcID"] = 28860,
+		},
+		[33974] = {
+			["npcID"] = 18827,
+		},
+		[58462] = {
+			["npcID"] = 31009,
+		},
+		[61562] = {
+			["npcID"] = 30319,
+		},
+		[57753] = {
+			["npcID"] = 30681,
+		},
+		[49091] = {
+			["encounterName"] = "残忍的斯卡迪",
+			["npcID"] = 26692,
+		},
+		[60072] = {
+			["encounterName"] = "玛里苟斯",
+			["encounterID"] = 734,
+			["npcID"] = 28859,
+		},
+		[51681] = {
+			["npcID"] = 26605,
+		},
+		[25530] = {
+			["npcID"] = 15480,
+		},
+		[59108] = {
+			["npcID"] = 30279,
+		},
+		[29120] = {
+			["npcID"] = 16896,
+		},
+		[33895] = {
+			["npcID"] = 18827,
+		},
+		[13323] = {
+			["npcID"] = 32341,
+		},
+		[15620] = {
+			["npcID"] = 16704,
+		},
+		[58678] = {
+			["encounterName"] = "岩石看守者阿尔卡冯",
+			["npcID"] = 31125,
+			["encounterID"] = 772,
+		},
+		[54096] = {
+			["encounterName"] = "黑女巫法琳娜",
+			["encounterID"] = 1110,
+			["npcID"] = 16506,
+		},
+		[58702] = {
+			["encounterName"] = "迈克斯纳",
+			["encounterID"] = 1116,
+			["npcID"] = 31165,
+		},
+		[7068] = {
+			["npcID"] = 6426,
+		},
+		[59993] = {
+			["encounterName"] = "传令官沃拉兹",
+			["encounterID"] = 215,
+			["npcID"] = 30622,
+		},
+		[57467] = {
+			["encounterName"] = "天启四骑士",
+			["encounterID"] = 1121,
+			["npcID"] = 16064,
+		},
+		[50335] = {
+			["npcID"] = 27797,
+		},
+		[55467] = {
+			["npcID"] = 16215,
+		},
+		[57061] = {
 			["encounterName"] = "埃曼尼塔",
 			["encounterID"] = 1989,
-			["npcID"] = 30258,
+			["npcID"] = 30435,
 		},
-		[32103] = {
-			["npcID"] = 27540,
+		[55802] = {
+			["encounterName"] = "克尔苏加德",
+			["encounterID"] = 1114,
+			["npcID"] = 15990,
+		},
+		[56065] = {
+			["npcID"] = 15981,
+		},
+		[59986] = {
+			["encounterName"] = "传令官沃拉兹",
+			["encounterID"] = 215,
+			["npcID"] = 30621,
+		},
+		[28280] = {
+			["npcID"] = 15931,
+		},
+		[24208] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["encounterID"] = 789,
+			["npcID"] = 11347,
+		},
+		[15453] = {
+			["npcID"] = 16165,
+		},
+		[33961] = {
+			["npcID"] = 18318,
+		},
+		[55715] = {
+			["npcID"] = 29980,
+		},
+		[24314] = {
+			["encounterName"] = "血领主曼多基尔",
+			["encounterID"] = 787,
+			["npcID"] = 11382,
+		},
+		[54316] = {
+			["npcID"] = 15979,
+		},
+		[24173] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["encounterID"] = 789,
+			["npcID"] = 11347,
+		},
+		[12058] = {
+			["npcID"] = 29979,
+		},
+		[39945] = {
+			["npcID"] = 27678,
+		},
+		[49241] = {
+			["npcID"] = 27542,
+		},
+		[59252] = {
+			["npcID"] = 26694,
+		},
+		[59254] = {
+			["npcID"] = 28368,
+		},
+		[59357] = {
+			["encounterName"] = "看门者克里克希尔",
+			["encounterID"] = 216,
+			["npcID"] = 28733,
+		},
+		[59365] = {
+			["encounterName"] = "看门者克里克希尔",
+			["encounterID"] = 216,
+			["npcID"] = 28729,
+		},
+		[59331] = {
+			["encounterName"] = "残忍的斯卡迪",
+			["npcID"] = 26693,
+		},
+		[59246] = {
+			["encounterName"] = "残忍的斯卡迪",
+			["npcID"] = 26691,
+		},
+		[51764] = {
+			["npcID"] = 26280,
+		},
+		[50364] = {
+			["npcID"] = 25622,
+		},
+		[59638] = {
+			["encounterName"] = "阿努布雷坎",
+			["encounterID"] = 1107,
+			["npcID"] = 31216,
+		},
+		[28353] = {
+			["npcID"] = 16145,
+		},
+		[61461] = {
+			["npcID"] = 30286,
+		},
+		[15043] = {
+			["npcID"] = 32341,
+		},
+		[56632] = {
+			["npcID"] = 30276,
+		},
+		[54334] = {
+			["npcID"] = 16021,
+		},
+		[53333] = {
+			["encounterName"] = "看门者克里克希尔",
+			["encounterID"] = 216,
+			["npcID"] = 29064,
+		},
+		[31707] = {
+			["npcID"] = 510,
+		},
+		[33969] = {
+			["npcID"] = 18981,
+		},
+		[56505] = {
+			["encounterName"] = "玛里苟斯",
+			["encounterID"] = 734,
+			["npcID"] = 28859,
+		},
+		[17843] = {
+			["npcID"] = 32325,
+		},
+		[72898] = {
+			["npcID"] = 37994,
+		},
+		[55931] = {
+			["encounterName"] = "塔达拉姆王子",
+			["encounterID"] = 213,
+			["npcID"] = 29308,
+		},
+		[49309] = {
+			["npcID"] = 32340,
+		},
+		[49317] = {
+			["npcID"] = 27682,
+		},
+		[17274] = {
+			["npcID"] = 27695,
+		},
+		[38618] = {
+			["npcID"] = 27751,
+		},
+		[31747] = {
+			["npcID"] = 16844,
+		},
+		[28089] = {
+			["encounterName"] = "塔迪乌斯",
+			["encounterID"] = 1120,
+			["npcID"] = 15928,
+		},
+		[58700] = {
+			["npcID"] = 31162,
+		},
+		[49110] = {
+			["npcID"] = 26933,
+		},
+		[12471] = {
+			["npcID"] = 17694,
 		},
 		[59347] = {
 			["encounterName"] = "哈多诺克斯",
@@ -1350,11 +802,96 @@ PlaterDB = {
 		[31516] = {
 			["npcID"] = 16594,
 		},
+		[59366] = {
+			["encounterName"] = "看门者克里克希尔",
+			["encounterID"] = 216,
+			["npcID"] = 28731,
+		},
+		[57055] = {
+			["encounterName"] = "埃曼尼塔",
+			["encounterID"] = 1989,
+			["npcID"] = 30258,
+		},
+		[51963] = {
+			["encounterName"] = "阿努布雷坎",
+			["encounterID"] = 1107,
+			["npcID"] = 27829,
+		},
+		[42281] = {
+			["npcID"] = 23694,
+		},
+		[59102] = {
+			["npcID"] = 30278,
+		},
 		[15547] = {
 			["npcID"] = 27162,
 		},
-		[51806] = {
-			["npcID"] = 26828,
+		[60848] = {
+			["npcID"] = 30414,
+		},
+		[60880] = {
+			["encounterName"] = "岩石看守者阿尔卡冯",
+			["npcID"] = 31125,
+			["encounterID"] = 772,
+		},
+		[60936] = {
+			["encounterName"] = "玛里苟斯",
+			["encounterID"] = 734,
+			["npcID"] = 28859,
+		},
+		[55334] = {
+			["npcID"] = 16163,
+		},
+		[9053] = {
+			["npcID"] = 19136,
+		},
+		[59430] = {
+			["encounterName"] = "阿努巴拉克",
+			["encounterID"] = 218,
+			["npcID"] = 29120,
+		},
+		[54338] = {
+			["npcID"] = 16020,
+		},
+		[16367] = {
+			["npcID"] = 27678,
+		},
+		[38556] = {
+			["npcID"] = 27560,
+		},
+		[31600] = {
+			["npcID"] = 25227,
+		},
+		[24189] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["encounterID"] = 789,
+			["npcID"] = 14509,
+		},
+		[49113] = {
+			["npcID"] = 26925,
+		},
+		[20825] = {
+			["npcID"] = 1789,
+		},
+		[9532] = {
+			["npcID"] = 25216,
+		},
+		[60012] = {
+			["encounterName"] = "传令官沃拉兹",
+			["encounterID"] = 215,
+			["npcID"] = 30625,
+		},
+		[59255] = {
+			["npcID"] = 28368,
+		},
+		[56067] = {
+			["npcID"] = 15981,
+		},
+		[6660] = {
+			["npcID"] = 6237,
+		},
+		[54333] = {
+			["npcID"] = 16385,
 		},
 	},
 	["profileKeys"] = {
@@ -1398,14 +935,14 @@ PlaterDB = {
 				["Dont Have Aura"] = 1,
 				["Players Targetting Amount"] = 4,
 				["Color Automation"] = 1,
-				["Combo Points"] = 6,
+				["Hide Neutral Units"] = 1,
 				["Cast Bar Icon Config"] = 2,
 				["Execute Range"] = 1,
-				["Extra Border"] = 2,
+				["Combo Points"] = 6,
 				["Attacking Specific Unit"] = 2,
 				["Target Color"] = 3,
 				["Aura Reorder"] = 3,
-				["Hide Neutral Units"] = 1,
+				["Extra Border"] = 2,
 			},
 			["script_data"] = {
 				{
@@ -4880,13 +4417,13 @@ PlaterDB = {
 					["HooksTemp"] = {
 					},
 					["Author"] = "Kastfall-Azralon",
-					["version"] = -1,
+					["Name"] = "Reorder Nameplate [Plater]",
 					["Desc"] = "Function Plater.UpdatePlateSize from Plater.lua exported to scritps.",
 					["Hooks"] = {
 						["Nameplate Added"] = "\n\n-- exported function Plater.UpdatePlateSize() from Plater.lua\n--this is for advanced users which wants to reorder the nameplate frame at their desire\n\n\n\nfunction (self, unitId, unitFrame, envTable)\n    \n    --check if there's a type of unit on this nameplate\n    local plateFrame = unitFrame:GetParent()\n    if (not plateFrame.actorType) then\n        return\n    end\n    \n    --get all the frames and cache some variables\n    local ACTORTYPE_ENEMY_PLAYER = \"enemyplayer\"\n    local profile = Plater.db.profile\n    local DB_PLATE_CONFIG = profile.plate_config\n    local isInCombat = Plater.IsInCombat()\n    local actorType = plateFrame.actorType\n    \n    local unitFrame = plateFrame.unitFrame\n    local healthBar = unitFrame.healthBar\n    local castBar = unitFrame.castBar\n    local powerBar = unitFrame.powerBar\n    local buffFrame1 = unitFrame.BuffFrame\n    local buffFrame2 = unitFrame.BuffFrame2\n    \n    --use in combat bars when in pvp\n    if (plateFrame.actorType == ACTORTYPE_ENEMY_PLAYER) then\n        if ((Plater.ZoneInstanceType == \"pvp\" or Plater.ZoneInstanceType == \"arena\") and DB_PLATE_CONFIG.player.pvp_always_incombat) then\n            isInCombat = true\n        end\n    end\n    \n    --get the config for this actor type\n    local plateConfigs = DB_PLATE_CONFIG [actorType]\n    --get the config key based if the player is in combat\n    local castBarConfigKey, healthBarConfigKey, manaConfigKey = Plater.GetHashKey (isInCombat)\n    \n    --get the width and height from what the user set in the options panel\n    local healthBarWidth, healthBarHeight = unitFrame.customHealthBarWidth or plateConfigs [healthBarConfigKey][1], unitFrame.customHealthBarHeight or plateConfigs [healthBarConfigKey][2]\n    local castBarWidth, castBarHeight = unitFrame.customCastBarWidth or plateConfigs [castBarConfigKey][1], unitFrame.customCastBarHeight or plateConfigs [castBarConfigKey][2]\n    local powerBarWidth, powerBarHeight = unitFrame.customPowerBarHeight or plateConfigs [manaConfigKey][1], unitFrame.customPowerBarHeight or plateConfigs [manaConfigKey][2]\n    \n    --calculate the offset for the cast bar, this is done due to the cast bar be anchored to topleft and topright\n    local castBarOffSetX = (healthBarWidth - castBarWidth) / 2\n    local castBarOffSetY = plateConfigs.castbar_offset\n    \n    --calculate offsets for the power bar\n    local powerBarOffSetX = (healthBarWidth - powerBarWidth) / 2\n    local powerBarOffSetY = 0\n    \n    --calculate the size deviation for pets\n    local unitType = Plater.GetUnitType (plateFrame)\n    if (unitType == \"pet\") then\n        healthBarHeight = healthBarHeight * Plater.db.profile.pet_height_scale\n        healthBarWidth = healthBarWidth * Plater.db.profile.pet_width_scale\n        \n    elseif (unitType == \"minus\") then\n        healthBarHeight = healthBarHeight * Plater.db.profile.minor_height_scale\n        healthBarWidth = healthBarWidth * Plater.db.profile.minor_width_scale\n    end\n    \n    --unit frame - is set to be the same size as the plateFrame\n    unitFrame:ClearAllPoints()\n    unitFrame:SetAllPoints()\n    \n    --calculates the health bar anchor points\n    --it will always be placed in the center of the nameplate area (where it accepts mouse clicks) \n    local xOffSet = (plateFrame:GetWidth() - healthBarWidth) / 2\n    local yOffSet = (plateFrame:GetHeight() - healthBarHeight) / 2\n    \n    --set the health bar point\n    healthBar:ClearAllPoints()\n    PixelUtil.SetPoint (healthBar, \"topleft\", unitFrame, \"topleft\", xOffSet + profile.global_offset_x, -yOffSet + profile.global_offset_y)\n    PixelUtil.SetPoint (healthBar, \"bottomright\", unitFrame, \"bottomright\", -xOffSet + profile.global_offset_x, yOffSet + profile.global_offset_y)\n    \n    --set the cast bar point and size\n    castBar:ClearAllPoints()\n    PixelUtil.SetPoint (castBar, \"topleft\", healthBar, \"bottomleft\", castBarOffSetX, castBarOffSetY)\n    PixelUtil.SetPoint (castBar, \"topright\", healthBar, \"bottomright\", -castBarOffSetX, castBarOffSetY)\n    PixelUtil.SetHeight (castBar, castBarHeight)\n    PixelUtil.SetSize (castBar.Icon, castBarHeight, castBarHeight)\n    PixelUtil.SetSize (castBar.BorderShield, castBarHeight * 1.4, castBarHeight * 1.4)\n    \n    --set the power bar point and size\n    powerBar:ClearAllPoints()\n    PixelUtil.SetPoint (powerBar, \"topleft\", healthBar, \"bottomleft\", powerBarOffSetX, powerBarOffSetY)\n    PixelUtil.SetPoint (powerBar, \"topright\", healthBar, \"bottomright\", -powerBarOffSetX, powerBarOffSetY)\n    PixelUtil.SetHeight (powerBar, powerBarHeight)\n    \n    --power bar are hidden by default, show it if there's a custom size for it\n    if (unitFrame.customPowerBarWidth and unitFrame.customPowerBarHeight) then\n        powerBar:SetUnit (unitFrame.unit)\n    end\n    \n    --aura frames\n    local bf1Anchor = Plater.db.profile.aura_frame1_anchor\n    Plater.SetAnchor (buffFrame1, {side = bf1Anchor.side, x = bf1Anchor.x, y = bf1Anchor.y + plateConfigs.buff_frame_y_offset}, unitFrame.healthBar, (Plater.db.profile.aura_grow_direction or 2) == 2)\n    \n    local bf2Anchor = Plater.db.profile.aura_frame2_anchor\n    Plater.SetAnchor (buffFrame2, {side = bf2Anchor.side, x = bf2Anchor.x, y = bf2Anchor.y + plateConfigs.buff_frame_y_offset}, unitFrame.healthBar, (Plater.db.profile.aura2_grow_direction or 2) == 2)\n    \nend\n\n\n",
 					},
-					["Name"] = "Reorder Nameplate [Plater]",
 					["Time"] = 1596791840,
+					["version"] = -1,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -5100,15 +4637,15 @@ PlaterDB = {
 					["HooksTemp"] = {
 					},
 					["Author"] = "Ditador-Azralon",
-					["version"] = -1,
+					["Name"] = "Cast Bar Icon Settings [P]",
 					["Desc"] = "Move the icon of the spell cast to the left or right side of the nameplate.",
 					["Hooks"] = {
 						["Cast Start"] = "function (self, unitId, unitFrame, envTable)\n    \n    unitFrame.castBar.BorderShield:SetDrawLayer(\"artwork\")\n    envTable.UpdateIconPosition (unitFrame)\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 						["Cast Update"] = "function (self, unitId, unitFrame, envTable)\n    \n    envTable.UpdateIconPosition (unitFrame)\n    self.ThrottleUpdate = -1\n    \nend\n\n\n",
 						["Constructor"] = "function (self, unitId, unitFrame, envTable, modTable)\n    \n    --private:\n    function envTable.UpdateIconPosition (unitFrame)\n        local castBar = unitFrame.castBar\n        local icon = castBar.Icon\n        local noInterruptTexture = castBar.BorderShield\n        \n        if (modTable.config.showIcon) then\n            icon:ClearAllPoints()\n            \n            if (modTable.config.iconOnLeftSide) then\n                if (modTable.config.useFullSize) then\n                    icon:SetPoint (\"topright\", unitFrame.healthBar, \"topleft\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomright\", unitFrame.castBar, \"bottomleft\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                    \n                else\n                    \n                    icon:SetPoint (\"topright\", unitFrame.castBar, \"topleft\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomright\", unitFrame.castBar, \"bottomleft\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                end\n                \n            else\n                if (modTable.config.useFullSize) then\n                    icon:SetPoint (\"topleft\", unitFrame.healthBar, \"topright\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomleft\", unitFrame.castBar, \"bottomright\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                    \n                else\n                    \n                    icon:SetPoint (\"topleft\", unitFrame.castBar, \"topright\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomleft\", unitFrame.castBar, \"bottomright\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                end\n            end\n            \n            icon:SetWidth (icon:GetHeight())\n            icon:Show()\n        else\n            icon:Hide()\n        end\n        \n        if (modTable.config.showTexture and not castBar.canInterrupt) then\n            noInterruptTexture:Show()\n            \n            local texturePath = modTable.config.iconTexturePath\n            texturePath = texturePath:gsub(\"//\", \"/\")\n            texturePath = texturePath:gsub(\"\\\\\", \"/\")\n            \n            noInterruptTexture:SetTexture (texturePath)\n            noInterruptTexture:SetTexCoord (0, 1, 0, 1)\n            \n            if (modTable.config.desaturatedTexture) then\n                noInterruptTexture:SetDesaturated (modTable.config.desaturatedTexture)\n            else\n                noInterruptTexture:SetVertexColor (DetailsFramework:ParseColors (modTable.config.textureColor))\n            end\n            \n            noInterruptTexture:SetSize (modTable.config.textureWidth, castBar:GetHeight() + modTable.config.textureHeightMod)\n            noInterruptTexture:ClearAllPoints()\n            noInterruptTexture:SetPoint (\"center\", castBar, \"left\", modTable.config.texturePosition, 0)\n            noInterruptTexture:SetAlpha (modTable.config.textureAlpha)\n        else\n            noInterruptTexture:Hide()\n        end\n    end\nend",
 					},
-					["Name"] = "Cast Bar Icon Settings [P]",
 					["Time"] = 1597097268,
+					["version"] = -1,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -5338,14 +4875,14 @@ PlaterDB = {
 					["HooksTemp"] = {
 					},
 					["Author"] = "Kastfall-Azralon",
-					["version"] = -1,
+					["Name"] = "Attacking Specific Unit [Plater]",
 					["Desc"] = "Change the nameplate color if the unit is attacking a specific unit like Monk's Ox Statue or Druid's Treants. You may edit which units it track in the constructor script.",
 					["Hooks"] = {
 						["Initialization"] = "function (modTable)\n    --list of npcs and their colors, can be inserted:\n    --name of the unit\n    --name of the unit in lower case\n    --npcID of the unit\n    \n    --color can be added as:\n    --color names: \"red\", \"yellow\"\n    --color hex: \"#FF0000\", \"#FFFF00\"\n    --color table: {1, 0, 0}, {1, 1, 0}    \n    \n    modTable.changeBarColor = modTable.config.changeBarColor\n    modTable.changeBorderColor = modTable.config.changeBorderColor\n    modTable.resetColors = modTable.config.resetColors\n    \n    modTable.ListOfNpcs = {\n        [61146] = modTable.config.color, --\"olive\", --monk statue npcID\n        [103822] = modTable.config.color, --\"olive\", --druid treant npcID\n        [15352] = modTable.config.color, --\"olive\", --shaman elemental\n        [95072] = modTable.config.color, --\"olive\", --shaman greater earth elemental npcID\n        [61056] = modTable.config.color, --\"olive\", --shaman primal earth elemental npcID\n        \n    }\nend\n\n\n",
 						["Nameplate Updated"] = "function (self, unitId, unitFrame, envTable, modTable)\n    if not unitId then\n        return\n    end\n    --get the GUID of the target of the unit\n    local targetGUID = UnitGUID (unitId .. \"target\")\n    \n    if (targetGUID) then\n        \n        --get the npcID of the target\n        local npcID = Plater.GetNpcIDFromGUID (targetGUID)\n        local unitName = UnitName (unitId .. \"target\")\n        local unitNameLower = string.lower (unitName)\n        \n        --check if the npcID of this unit is in the npc list \n        local color = modTable.ListOfNpcs [npcID] or modTable.ListOfNpcs [unitName] or modTable.ListOfNpcs [unitNameLower]\n        \n        if color then\n            if modTable.changeBarColor then\n                Plater.SetNameplateColor (unitFrame, color)\n            end\n            if modTable.changeBorderColor then\n                Plater.SetBorderColor (unitFrame, color)\n            end\n            unitFrame.attackingSpecificUnitFromMod = true\n        elseif unitFrame.attackingSpecificUnitFromMod and modTable.resetColors then\n            if modTable.changeBorderColor then\n                Plater.SetBorderColor (unitFrame)\n            end\n            if modTable.changeBarColor then\n                Plater.RefreshNameplateColor (unitFrame)\n            end\n            unitFrame.attackingSpecificUnitFromMod = false\n        end\n    end\nend",
 					},
-					["Name"] = "Attacking Specific Unit [Plater]",
 					["Time"] = 1620377377,
+					["version"] = -1,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -5419,7 +4956,7 @@ PlaterDB = {
 					["HooksTemp"] = {
 					},
 					["Author"] = "Izimode-Azralon",
-					["version"] = -1,
+					["Name"] = "Combo Points [Plater]",
 					["Desc"] = "Show combo points above the nameplate for Druid Feral and Rogues.",
 					["Hooks"] = {
 						["Nameplate Created"] = "function (self, unitId, unitFrame, envTable)\n    \n    --run constructor!\n    --constructor is executed only once when any script of the hook runs.\n    \nend\n\n\n",
@@ -5431,8 +4968,8 @@ PlaterDB = {
 						["Player Talent Update"] = "function (self, unitId, unitFrame, envTable)\n    \n    --update the amount of comboo points shown when the player changes talents or specialization\n    envTable.UpdateComboPointAmount()\n    \n    --save the time of the last talent change\n    envTable.LastPlayerTalentUpdate = GetTime()\n    \n    \nend\n\n\n",
 						["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    --settings\n    local anchors = {\n        {\"bottom\", unitFrame.healthBar, \"top\", 0, 24},\n    }\n    \n    local sizes = {\n        width = 12,\n        height = 12,\n        scale = 1,\n    }\n    \n    local textures = {\n        backgroundTexture = [[Interface\\PLAYERFRAME\\ClassOverlayComboPoints]],\n        backgroundTexCoords = {0/128, 21/128, 101/128, 122/128},\n        \n        comboPointTexture = [[Interface\\PLAYERFRAME\\ClassOverlayComboPoints]],\n        comboPointTexCoords = {3/128, 18/128, 81/128, 96/128},\n    }\n    if WOW_PROJECT_ID ~= WOW_PROJECT_MAINLINE then\n        textures = {\n            backgroundTexture = [[Interface\\PLAYERFRAME\\ClassOverlayComboPoints]],\n            backgroundTexCoords = {78/128, 98/128, 21/64, 41/64},\n            \n            comboPointTexture = [[Interface\\PLAYERFRAME\\ClassOverlayComboPoints]],\n            comboPointTexCoords = {100/128, 120/128, 21/64, 41/64},\n        }\n    end\n    \n    local frameLevel = 1000\n    local frameStrata = \"high\"    \n    \n    --private\n    do\n        --store combo points frames on this table\n        envTable.ComboPoints = {}\n        --save when the player changed talents or spec\n        envTable.LastPlayerTalentUpdate = GetTime()\n        --save when this nameplate got a combo point amount and alignment update        \n        \n        --build combo points frame anchor (combo point are anchored to this)\n        if (not unitFrame.PlaterComboPointFrame) then\n            local hostFrame = CreateFrame (\"frame\", nil, unitFrame)\n            hostFrame.ComboPointFramesPool = {}\n            unitFrame.PlaterComboPointFrame = hostFrame\n            envTable.ComboPointFrame = hostFrame\n            envTable.ComboPointFrame:SetScale (sizes.scale)\n            \n            --DetailsFramework:ApplyStandardBackdrop (envTable.ComboPointFrame) --debug anchor size\n            \n            --animations\n            local onPlayShowAnimation = function (animation)\n                --stop the hide animation if it's playing\n                if (animation:GetParent():GetParent().HideAnimation:IsPlaying()) then\n                    animation:GetParent():GetParent().HideAnimation:Stop()\n                end\n                \n                animation:GetParent():Show()\n            end\n            \n            local onPlayHideAnimation = function (animation)\n                --stop the show animation if it's playing\n                if (animation:GetParent():GetParent().ShowAnimation:IsPlaying()) then\n                    animation:GetParent():GetParent().ShowAnimation:Stop()\n                end\n            end        \n            local onStopHideAnimation = function (animation)\n                animation:GetParent():Hide()       \n            end\n            \n            local createAnimations = function (comboPoint)\n                --on show\n                comboPoint.ShowAnimation = Plater:CreateAnimationHub (comboPoint.comboPointTexture, onPlayShowAnimation, nil)\n                Plater:CreateAnimation (comboPoint.ShowAnimation, \"scale\", 1, 0.1, 0, 0, 1, 1)\n                Plater:CreateAnimation (comboPoint.ShowAnimation, \"alpha\", 1, 0.1, .5, 1)\n                Plater:CreateAnimation (comboPoint.ShowAnimation, \"scale\", 2, 0.1, 1.2, 1.2, 1, 1)\n                \n                --on hide\n                comboPoint.HideAnimation = Plater:CreateAnimationHub (comboPoint.comboPointTexture, onPlayHideAnimation, onStopHideAnimation)\n                Plater:CreateAnimation (comboPoint.HideAnimation, \"scale\", 1, 0.1, 1, 1, 0, 0)\n                Plater:CreateAnimation (comboPoint.HideAnimation, \"alpha\", 1, 0.1, 1, 0)\n            end\n            \n            --build combo point frame        \n            for i =1, 10 do \n                local f = CreateFrame (\"frame\", nil, envTable.ComboPointFrame)\n                f:SetSize (sizes.width, sizes.height)\n                tinsert (envTable.ComboPoints, f)\n                tinsert (unitFrame.PlaterComboPointFrame.ComboPointFramesPool, f)\n                \n                local backgroundTexture = f:CreateTexture (nil, \"background\")\n                backgroundTexture:SetTexture (textures.backgroundTexture)\n                backgroundTexture:SetTexCoord (unpack (textures.backgroundTexCoords))\n                backgroundTexture:SetSize (sizes.width, sizes.height)\n                backgroundTexture:SetPoint (\"center\")\n                \n                local comboPointTexture = f:CreateTexture (nil, \"artwork\")\n                comboPointTexture:SetTexture (textures.comboPointTexture)\n                comboPointTexture:SetTexCoord (unpack (textures.comboPointTexCoords))\n                \n                comboPointTexture:SetSize (sizes.width, sizes.height)\n                comboPointTexture:SetPoint (\"center\")\n                comboPointTexture:Hide()            \n                \n                f.IsActive = false\n                \n                f.backgroundTexture = backgroundTexture\n                f.comboPointTexture = comboPointTexture\n                \n                createAnimations (f)\n            end\n            \n        else\n            envTable.ComboPointFrame = unitFrame.PlaterComboPointFrame\n            envTable.ComboPointFrame:SetScale (sizes.scale)\n            envTable.ComboPoints = unitFrame.PlaterComboPointFrame.ComboPointFramesPool\n            \n        end            \n        \n        envTable.ComboPointFrame:SetFrameLevel (frameLevel)\n        envTable.ComboPointFrame:SetFrameStrata (frameStrata)\n        \n        function envTable.UpdateComboPoints()\n            local comboPoints = GetComboPoints(\"player\", \"target\")\n            --UnitPower (\"player\", Enum.PowerType.ComboPoints)\n            \n            for i = 1, envTable.TotalComboPoints do\n                local thisComboPoint = envTable.ComboPoints [i]\n                \n                if (i <= comboPoints ) then\n                    --combo point enabled\n                    if (not thisComboPoint.IsActive) then\n                        thisComboPoint.ShowAnimation:Play()\n                        thisComboPoint.IsActive = true\n                        \n                    end\n                    \n                else\n                    --combo point disabled\n                    if (thisComboPoint.IsActive) then\n                        thisComboPoint.HideAnimation:Play()\n                        thisComboPoint.IsActive = false\n                        \n                    end\n                end\n            end\n            \n            \n        end\n        \n        function envTable.UpdateComboPointAmount()\n            local namePlateWidth = Plater.db.profile.plate_config.enemynpc.health_incombat[1]\n            local comboPoints = UnitPowerMax (\"player\", Enum.PowerType.ComboPoints)\n            local reservedSpace = (namePlateWidth - sizes.width * comboPoints)  / comboPoints \n            \n            --store the total amount of combo points\n            envTable.TotalComboPoints = comboPoints\n            \n            --update anchor frame\n            envTable.ComboPointFrame:SetWidth (namePlateWidth)\n            envTable.ComboPointFrame:SetHeight (20)\n            envTable.ComboPointFrame:ClearAllPoints()\n            for i = 1, #anchors do\n                local anchor = anchors[i]\n                envTable.ComboPointFrame:SetPoint (unpack (anchor))\n            end        \n            \n            --\n            for i = 1, #envTable.ComboPoints do\n                envTable.ComboPoints[i]:Hide()\n                envTable.ComboPoints[i]:ClearAllPoints()\n            end\n            \n            for i = 1, comboPoints do\n                local comboPoint = envTable.ComboPoints[i]\n                if i == 1 then\n                    comboPoint:SetPoint (\"left\", envTable.ComboPointFrame, \"left\", reservedSpace/2, 0)\n                else\n                    comboPoint:SetPoint (\"left\", envTable.ComboPoints[i-1], \"right\", reservedSpace, 0)\n                end\n                \n                comboPoint:Show()\n            end\n            \n            envTable.LastUpdate = GetTime()\n            \n            envTable.UpdateComboPoints()\n        end\n        \n        --initialize\n        envTable.UpdateComboPointAmount()\n        envTable.ComboPointFrame:Hide()\n    end\n    \n    \nend",
 					},
-					["Name"] = "Combo Points [Plater]",
 					["Time"] = 1621935143,
+					["version"] = -1,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -5474,13 +5011,13 @@ PlaterDB = {
 					["HooksTemp"] = {
 					},
 					["Author"] = "Ditador-Azralon",
-					["version"] = -1,
+					["Name"] = "Aura Reorder [Plater]",
 					["Desc"] = "Reorder buffs and debuffs following the settings set in the constructor.",
 					["Hooks"] = {
 						["Initialization"] = "function (modTable)\n    \n    --ATTENTION: after enabling this mod, you may have to adjust the anchor point at the Buff Settings tab\n    \n    local sortByTime = false\n    local invertSort = false\n    \n    --which auras goes first, assign a value (any number), bigger value goes first\n    local priority = {\n        [\"Vampiric Touch\"] = 50,\n        [\"Shadow Word: Pain\"] = 22,\n        [\"Mind Flay\"] = 5,\n        [\"Pistol Shot\"] = 50,\n        [\"Marked for Death\"] = 99,\n    }\n    \n    -- Sort function - do not touch\n    Plater.db.profile.aura_sort = true\n    \n    \n    function Plater.AuraIconsSortFunction (aura1, aura2)\n        local p1 = priority[aura1.SpellId] or priority[aura1.SpellName] or 1\n        local p2 = priority[aura2.SpellId] or priority[aura2.SpellName] or 1\n        \n        if sortByTime and p1 == p2 then\n            if invertSort then\n                return (aura1.Duration == 0 and 99999999 or aura1.RemainingTime or 0) > (aura2.Duration == 0 and 99999999 or aura2.RemainingTime or 0)\n            else\n                return (aura1.Duration == 0 and 99999999 or aura1.RemainingTime or 0) < (aura2.Duration == 0 and 99999999 or aura2.RemainingTime or 0)\n            end\n        else\n            if invertSort then\n                 return p1 < p2\n            else\n                return p1 > p2\n            end\n        end\n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 					},
-					["Name"] = "Aura Reorder [Plater]",
 					["Time"] = 1608663128,
+					["version"] = -1,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -5777,7 +5314,7 @@ PlaterDB = {
 		},
 		["PRUEBA DRAGO"] = {
 			["ui_parent_buff_special_level"] = 1,
-			["extra_icon_use_blizzard_border_color"] = false,
+			["aura_breakline_space"] = 15,
 			["script_data"] = {
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --settings (you may need /reload if some configs isn't applied immediately)    \n    --change the nameplate color to this if allowed\n    envTable.CanChangeNameplateColor = scriptTable.config.changeNameplateColor --\n    envTable.NameplateColor = scriptTable.config.nameplateColor\n    envTable.NameplateSizeOffset = scriptTable.config.nameplateSizeOffset --\n    \n    unitFrame.UnitImportantSkullTexture = unitFrame.UnitImportantSkullTexture or unitFrame:CreateTexture(nil, \"background\")\n    \n    unitFrame.UnitImportantSkullTexture:SetTexture([[Interface/AddOns/Plater/media/skullbones_128]])\n    unitFrame.UnitImportantSkullTexture:SetPoint(\"center\", unitFrame.healthBar, \"center\", 0, -5)\n    \n    unitFrame.UnitImportantSkullTexture:SetVertexColor(Plater:ParseColors(scriptTable.config.skullColor))\n    unitFrame.UnitImportantSkullTexture:SetAlpha(scriptTable.config.skullAlpha)\n    unitFrame.UnitImportantSkullTexture:SetScale(scriptTable.config.skullScale)\n    \n    unitFrame.UnitImportantSkullTexture:Hide()\nend\n\n--[=[\n\n154564 - debug\n\nUsing spellIDs for multi-language support\n\n164362 - smily morsel - plaguefall\n168882 - fleeting manifestation - sanguine depths\n170234 - oppressive banner - theater of pain\n168988 - overgrowth - Mists of Tirna Scithe\n170452 - essesnce orb - torghast\n\n\n--]=]",
@@ -6881,15 +6418,15 @@ PlaterDB = {
 					["Author"] = "Tercioo-Sylvanas",
 					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    if (scriptTable.config.glowEnabled) then\n        envTable.buffIconGlow:Show()\n    end\n    \n    if (scriptTable.config.dotsEnabled) then\n        envTable.dotAnimation = Plater.PlayDotAnimation(self, 6, scriptTable.config.dotsColor, 6, 3) \n    end\nend\n\n\n",
 					["Desc"] = "Add the debuff name in the trigger box.",
+					["Name"] = "Aura - Debuff Alert [Plater]",
+					["Temp_UpdateCode"] = "function (self, unitId, unitFrame, envTable)\n    \nend\n\n\n",
 					["SpellIds"] = {
 						337220, -- [1]
 						337253, -- [2]
 						337251, -- [3]
 					},
-					["Temp_UpdateCode"] = "function (self, unitId, unitFrame, envTable)\n    \nend\n\n\n",
-					["version"] = -1,
 					["PlaterCore"] = 1,
-					["Name"] = "Aura - Debuff Alert [Plater]",
+					["version"] = -1,
 					["Prio"] = 99,
 					["Temp_ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --creates a glow around the icon\n    envTable.buffIconGlow = envTable.buffIconGlow or Plater.CreateIconGlow (self, scriptTable.config.glowColor)\n    \nend\n\n\n",
 					["Enabled"] = true,
@@ -8506,6 +8043,8 @@ PlaterDB = {
 					["Author"] = "Tecno-Azralon",
 					["OnShowCode"] = "function (self, unitId, unitFrame, envTable)\n    \nend\n\n\n",
 					["Desc"] = "When an enemy places a debuff and starts to chase you. This script changes the nameplate color and place your name above the nameplate as well.",
+					["Name"] = "Fixate On You [Plater]",
+					["Temp_UpdateCode"] = "function (self, unitId, unitFrame, envTable)\n    \n    --swap this to true when it is fixated\n    local isFixated = false\n    \n    --check the debuffs the player has and see if any of these debuffs has been placed by this unit\n    for debuffId = 1, 40 do\n        local name, texture, count, debuffType, duration, expirationTime, caster = UnitDebuff (\"player\", debuffId)\n        \n        --cancel the loop if there's no more debuffs on the player\n        if (not name) then \n            break \n        end\n        \n        --check if the owner of the debuff is this unit\n        if (envTable.FixateDebuffs [name] and caster and UnitIsUnit (caster, unitId)) then\n            --the debuff the player has, has been placed by this unit, set the name above the unit name\n            envTable.FixateTarget:SetText (envTable.TextAboveNameplate)\n            envTable.FixateTarget:Show()\n            Plater.SetNameplateColor (unitFrame,  envTable.NameplateColor)\n            isFixated = true\n            \n            if (not envTable.IsFixated) then\n                envTable.IsFixated = true\n                Plater.FlashNameplateBody (unitFrame, \"fixate\", .2)\n            end\n        end\n        \n    end\n    \n    --check if the nameplate color is changed but isn't fixated any more\n    if (not isFixated and envTable.IsFixated) then\n        --refresh the nameplate color\n        Plater.RefreshNameplateColor (unitFrame)\n        --reset the text\n        envTable.FixateTarget:SetText (\"\")\n        \n        envTable.IsFixated = false\n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 					["SpellIds"] = {
 						"spawn of g'huun", -- [1]
 						"smuggled crawg", -- [2]
@@ -8517,10 +8056,8 @@ PlaterDB = {
 						"crawler mine", -- [8]
 						"rezan", -- [9]
 					},
-					["Temp_UpdateCode"] = "function (self, unitId, unitFrame, envTable)\n    \n    --swap this to true when it is fixated\n    local isFixated = false\n    \n    --check the debuffs the player has and see if any of these debuffs has been placed by this unit\n    for debuffId = 1, 40 do\n        local name, texture, count, debuffType, duration, expirationTime, caster = UnitDebuff (\"player\", debuffId)\n        \n        --cancel the loop if there's no more debuffs on the player\n        if (not name) then \n            break \n        end\n        \n        --check if the owner of the debuff is this unit\n        if (envTable.FixateDebuffs [name] and caster and UnitIsUnit (caster, unitId)) then\n            --the debuff the player has, has been placed by this unit, set the name above the unit name\n            envTable.FixateTarget:SetText (envTable.TextAboveNameplate)\n            envTable.FixateTarget:Show()\n            Plater.SetNameplateColor (unitFrame,  envTable.NameplateColor)\n            isFixated = true\n            \n            if (not envTable.IsFixated) then\n                envTable.IsFixated = true\n                Plater.FlashNameplateBody (unitFrame, \"fixate\", .2)\n            end\n        end\n        \n    end\n    \n    --check if the nameplate color is changed but isn't fixated any more\n    if (not isFixated and envTable.IsFixated) then\n        --refresh the nameplate color\n        Plater.RefreshNameplateColor (unitFrame)\n        --reset the text\n        envTable.FixateTarget:SetText (\"\")\n        \n        envTable.IsFixated = false\n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
-					["version"] = -1,
 					["PlaterCore"] = 1,
-					["Name"] = "Fixate On You [Plater]",
+					["version"] = -1,
 					["Prio"] = 99,
 					["Temp_ConstructorCode"] = "--todo: add npc ids for multilanguage support\n\nfunction (self, unitId, unitFrame, envTable)\n    \n    --settings\n    envTable.TextAboveNameplate = \"** On You **\"\n    envTable.NameplateColor = \"green\"\n    \n    --label to show the text above the nameplate\n    envTable.FixateTarget = Plater:CreateLabel (unitFrame);\n    envTable.FixateTarget:SetPoint (\"bottom\", unitFrame.healthBar, \"top\", 0, 30);\n    \n    --the spell casted by the npc in the trigger list needs to be in the list below as well\n    local spellList = {\n        [321891] = \"Freeze Tag Fixation\", --Illusionary Vulpin - MTS\n        \n    }\n    \n    --build the list with localized spell names\n    envTable.FixateDebuffs = {}\n    for spellID, enUSSpellName in pairs (spellList) do\n        local localizedSpellName = GetSpellInfo (spellID)\n        envTable.FixateDebuffs [localizedSpellName or enUSSpellName] = true\n    end\n    \n    --debug - smuggled crawg\n    envTable.FixateDebuffs [\"Jagged Maw\"] = true\n    \nend\n\n--[=[\nNpcIDs:\n136461: Spawn of G'huun (mythic uldir G'huun)\n\n--]=]\n\n\n\n\n",
 					["Enabled"] = true,
@@ -9782,216 +9319,436 @@ PlaterDB = {
 			["extra_icon_cooldown_reverse"] = false,
 			["health_cutoff_extra_glow"] = true,
 			["npc_cache"] = {
-				[6547] = {
-					"受难的牺牲者", -- [1]
-					"血色修道院", -- [2]
+				[165597] = {
+					"Soldado de remendejo", -- [1]
+					"La Destrucción Necrótica", -- [2]
 				},
-				[178139] = {
-					"Rompevalvas salsombría", -- [1]
+				[164702] = {
+					"Gusano carroñero", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[26550] = {
+					"掠龙死亡猎手", -- [1]
+					"乌特加德之巅", -- [2]
+				},
+				[180431] = {
+					"Ritualista concentrado", -- [1]
 					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[115407] = {
+					"Torre", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[23561] = {
+					"冰冻废土的士兵", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[184140] = {
+					"Acólito de Xy", -- [1]
+					"Sepulcro de los Primeros", -- [2]
+				},
+				[180432] = {
+					"Cómplice devoto", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[184908] = {
+					"Entidad desconocida", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[150254] = {
+					"Chataperro", -- [1]
+					"Operación: Mecalópolis", -- [2]
+				},
+				[11357] = {
+					"哈卡之子", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[11365] = {
+					"祖利安雌猎虎", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[180433] = {
+					"Entidad desconocida", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[120651] = {
+					"Entidad desconocida", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[164705] = {
+					"Babosa pestilente", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[16704] = {
+					"碎手狙击者", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 				},
 				[184910] = {
 					"Entidad desconocida", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
-				[16164] = {
-					"纳克萨玛斯之影", -- [1]
+				[30083] = {
+					"劫掠的恶鬼", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[16168] = {
-					"岩肤石像鬼", -- [1]
-					"纳克萨玛斯", -- [2]
+				[178133] = {
+					"Saltaolas salsombría", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
 				},
-				[168878] = {
-					"Apestado manipulado", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[168942] = {
-					"Portavoz de la muerte", -- [1]
-					"El Otro Lado", -- [2]
+				[30179] = {
+					"暮光传道者", -- [1]
+					"安卡赫特：古代王国", -- [2]
 				},
 				[184911] = {
 					"Entidad desconocida", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
-				[178141] = {
-					"Vinculaescamas salsombría", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[165430] = {
-					"Engendro del mal", -- [1]
+				[164707] = {
+					"Babosa coagulada", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
-				[167538] = {
-					"Dokigg el demoledor", -- [1]
+				[32353] = {
+					"阿尔卡冯守卫者", -- [1]
+					"阿尔卡冯的宝库", -- [2]
+				},
+				[185680] = {
+					"Reliquia Vy", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[30435] = {
+					"未知目标", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[30451] = {
+					"沙德隆", -- [1]
+					"黑曜石圣殿", -- [2]
+				},
+				[4308] = {
+					"自由的幽魂", -- [1]
+					"血色修道院", -- [2]
+				},
+				[178392] = {
+					"Guardián de la puerta Zo'mazz", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[32593] = {
+					"敏捷的爬虫", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[168418] = {
+					"Inquisidora Rechazada", -- [1]
+					"Torres de Ascensión", -- [2]
+				},
+				[17280] = {
+					"碎手军犬", -- [1]
+					"地狱火堡垒：城墙", -- [2]
+				},
+				[30643] = {
+					"熔岩烈焰", -- [1]
+					"黑曜石圣殿", -- [2]
+				},
+				[165222] = {
+					"Curahuesos de Zolramus", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[16385] = {
+					"闪电图腾", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[6426] = {
+					"痛苦的死者", -- [1]
+					"血色修道院", -- [2]
+				},
+				[185683] = {
+					"Reliquia Wo", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[170850] = {
+					"Cuernosangre enfurecido", -- [1]
 					"Teatro del Dolor", -- [2]
 				},
-				[170157] = {
-					"Forjador de runas estigio", -- [1]
-					"Las Tierras de las Sombras", -- [2]
+				[178139] = {
+					"Rompevalvas salsombría", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
 				},
-				[165111] = {
-					"Garra maliciosa drust", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
+				[174175] = {
+					"Petronato leal", -- [1]
+					"Salones de Expiación", -- [2]
 				},
-				[16236] = {
-					"眼柄", -- [1]
+				[16593] = {
+					"碎手争斗者", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+				},
+				[83763] = {
+					"Técnico Grom'kar", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[16017] = {
+					"缝补傀儡", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16025] = {
+					"缝合巨人", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[185685] = {
+					"Reliquia Urh", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[16057] = {
+					"腐烂的蛆虫", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16065] = {
+					"女公爵布劳缪克丝", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[30084] = {
+					"能量火花", -- [1]
+					"永恒之眼", -- [2]
+				},
+				[168934] = {
+					"Espíritu enfurecido", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[31219] = {
+					"维斯匹隆的追随者", -- [1]
+					"黑曜石圣殿", -- [2]
+				},
+				[160495] = {
+					"Atrapaalmas maníaco", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[16145] = {
+					"死亡骑士队长", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
 				[178142] = {
 					"Pescamante salsombría", -- [1]
 					"Tazavesh, el Mercado Velado", -- [2]
 				},
-				[164920] = {
-					"Rajaalmas drust", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
+				[30276] = {
+					"安卡哈织网者", -- [1]
+					"安卡赫特：古代王国", -- [2]
 				},
-				[150165] = {
-					"Elemental de baba", -- [1]
-					"Operación: Mecalópolis", -- [2]
-				},
-				[26861] = {
-					"伊米隆国王", -- [1]
-					"乌特加德之巅", -- [2]
-				},
-				[115388] = {
-					"Rey", -- [1]
-					"Regreso a Karazhan", -- [2]
+				[16193] = {
+					"骷髅铁匠", -- [1]
+					"纳克萨玛斯", -- [2]
 				},
 				[30452] = {
 					"塔尼布隆", -- [1]
 					"黑曜石圣殿", -- [2]
 				},
-				[185680] = {
-					"Reliquia Vy", -- [1]
-					"Plaga Abrumadora", -- [2]
+				[168681] = {
+					"Vándalo Rechazado", -- [1]
+					"Torres de Ascensión", -- [2]
 				},
-				[29119] = {
-					"阿努巴尔通灵师", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[26668] = {
-					"席瓦拉·索格蕾", -- [1]
-					"乌特加德之巅", -- [2]
-				},
-				[164921] = {
-					"Cosechador drust", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
-				},
-				[26555] = {
-					"天灾巨人", -- [1]
-					"乌特加德之巅", -- [2]
-				},
-				[171181] = {
-					"Picofiloso territorial", -- [1]
-					"El Otro Lado", -- [2]
-				},
-				[162047] = {
-					"Bruto insaciable", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[28733] = {
-					"阿努巴尔暗影法师", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[26536] = {
-					"无脑的仆从", -- [1]
-					"乌特加德之巅", -- [2]
-				},
-				[29214] = {
-					"阿努巴尔刺客", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[30276] = {
-					"安卡哈织网者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[17669] = {
-					"疯狂的军犬", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-				},
-				[84028] = {
-					"Maestro de asedio Rokra", -- [1]
-					"Muelles de hierro", -- [2]
-				},
-				[87252] = {
-					"Ogron rebelde", -- [1]
-					"Muelles de hierro", -- [2]
+				[16297] = {
+					"变异幼虫", -- [1]
+					"纳克萨玛斯", -- [2]
 				},
 				[177889] = {
 					"Juzgaalmas fauceforjada", -- [1]
 					"Sagrario de Dominación", -- [2]
 				},
-				[30277] = {
-					"安卡哈切碎者", -- [1]
-					"安卡赫特：古代王国", -- [2]
+				[26536] = {
+					"无脑的仆从", -- [1]
+					"乌特加德之巅", -- [2]
 				},
-				[11350] = {
-					"古拉巴什掷斧者", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[169905] = {
-					"Señor de la guerra resucitado", -- [1]
-					"El Otro Lado", -- [2]
-				},
-				[16807] = {
-					"高阶术士奈瑟库斯", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-				},
-				[155090] = {
-					"Espiralero anodizado", -- [1]
-					"Operación: Mecalópolis", -- [2]
-				},
-				[150168] = {
+				[154744] = {
 					"Monstruosidad tóxica", -- [1]
 					"Operación: Mecalópolis", -- [2]
 				},
-				[173360] = {
-					"Escupeplagas", -- [1]
-					"Plaga Abrumadora", -- [2]
+				[167532] = {
+					"Heavin el destructor", -- [1]
+					"Teatro del Dolor", -- [2]
 				},
-				[17694] = {
-					"影月暗法师", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-				},
-				[16360] = {
-					"肉用僵尸", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[185683] = {
-					"Reliquia Wo", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[164929] = {
-					"Aldeana de Tirnenn", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
-				},
-				[30643] = {
-					"熔岩烈焰", -- [1]
-					"黑曜石圣殿", -- [2]
-				},
-				[114783] = {
-					"Doncella reformada", -- [1]
+				[114584] = {
+					"Equipo fantasma", -- [1]
 					"Regreso a Karazhan", -- [2]
 				},
-				[150169] = {
-					"Acechador tóxico", -- [1]
-					"Operación: Mecalópolis", -- [2]
+				[26696] = {
+					"伊米亚狂战士", -- [1]
+					"乌特加德之巅", -- [2]
 				},
-				[171184] = {
-					"Mythresh, garfas del cielo", -- [1]
-					"El Otro Lado", -- [2]
+				[167533] = {
+					"Adventa Nuncamás", -- [1]
+					"Teatro del Dolor", -- [2]
 				},
 				[177891] = {
 					"Entidad desconocida", -- [1]
 					"Sagrario de Dominación", -- [2]
 				},
-				[31219] = {
-					"维斯匹隆的追随者", -- [1]
+				[11350] = {
+					"古拉巴什掷斧者", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[172265] = {
+					"Remanente de furia", -- [1]
+					"Profundidades Sanguíneas", -- [2]
+				},
+				[11382] = {
+					"血领主曼多基尔", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[79739] = {
+					"Granadero Grom'kar", -- [1]
+					"Depósito Riel siniestro", -- [2]
+				},
+				[165872] = {
+					"Modelador de carne", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[14507] = {
+					"高阶祭司温诺希斯", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[30085] = {
+					"警卫影魂", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[168942] = {
+					"Portavoz de la muerte", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[115417] = {
+					"Rata", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[167536] = {
+					"Harugia la sanguinaria", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[30245] = {
+					"魔枢领主", -- [1]
+					"永恒之眼", -- [2]
+				},
+				[162038] = {
+					"Bailarín de la niebla regio", -- [1]
+					"Profundidades Sanguíneas", -- [2]
+				},
+				[150146] = {
+					"Chamán huesudo", -- [1]
+					"Operación: Mecalópolis", -- [2]
+				},
+				[162039] = {
+					"Opresora siniestra", -- [1]
+					"Profundidades Sanguíneas", -- [2]
+				},
+				[30453] = {
+					"黑岩圣殿卫士", -- [1]
 					"黑曜石圣殿", -- [2]
+				},
+				[162040] = {
+					"Gran sobrestante", -- [1]
+					"Profundidades Sanguíneas", -- [2]
+				},
+				[30549] = {
+					"瑞文戴尔男爵", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[170480] = {
+					"Caminamuerte Atal'ai", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[171887] = {
+					"Bufé limoso", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[83578] = {
+					"Trabajador ogron", -- [1]
+					"Muelles de hierro", -- [2]
 				},
 				[171376] = {
 					"Custodio en jefe Javlin", -- [1]
+					"Profundidades Sanguíneas", -- [2]
+				},
+				[165111] = {
+					"Garra maliciosa drust", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[11830] = {
+					"哈卡祭司", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[15930] = {
+					"费尔根", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[15954] = {
+					"药剂师诺斯", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[15978] = {
+					"地穴剥夺者", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16018] = {
+					"胆汁呕吐者", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16034] = {
+					"天灾兽", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[151814] = {
+					"Sombra almamuerta", -- [1]
+					"Torghast, la Torre de los Condenados", -- [2]
+				},
+				[168310] = {
+					"Roc de plaga", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[15043] = {
+					"祖利安鳄鱼", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[29063] = {
+					"阿努巴尔地穴魔", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[16803] = {
+					"死亡骑士学员", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[114526] = {
+					"Suplente fantasmal", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[16146] = {
+					"死亡骑士", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[84028] = {
+					"Maestro de asedio Rokra", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[30278] = {
+					"安卡哈爆法者", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[16194] = {
+					"邪恶之斧", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[83389] = {
+					"Escupefuego Alahierro", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[29335] = {
+					"阿努巴尔织网者", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[173044] = {
+					"Asistente de costuras", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[154758] = {
+					"Monstruosidad tóxica", -- [1]
+					"Operación: Mecalópolis", -- [2]
+				},
+				[162047] = {
+					"Bruto insaciable", -- [1]
 					"Profundidades Sanguíneas", -- [2]
 				},
 				[115486] = {
@@ -10002,201 +9759,1285 @@ PlaterDB = {
 					"Zurcecorteza spriggan", -- [1]
 					"El Otro Lado", -- [2]
 				},
-				[164414] = {
-					"Mago reanimado", -- [1]
-					"La Destrucción Necrótica", -- [2]
+				[168058] = {
+					"Pluma imbuida", -- [1]
+					"Profundidades Sanguíneas", -- [2]
 				},
-				[83389] = {
-					"Escupefuego Alahierro", -- [1]
+				[166396] = {
+					"Hostigador noble", -- [1]
+					"Profundidades Sanguíneas", -- [2]
+				},
+				[83390] = {
+					"Retador Señor del Trueno", -- [1]
 					"Muelles de hierro", -- [2]
 				},
-				[163520] = {
-					"Líder de escuadrón Rechazada", -- [1]
-					"Torres de Ascensión", -- [2]
-				},
-				[114624] = {
-					"Celador arcano", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[16057] = {
-					"腐烂的蛆虫", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[28736] = {
-					"轻快的感染者", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[176551] = {
-					"Purificador de la bóveda", -- [1]
+				[180335] = {
+					"Contrabandista del cártel", -- [1]
 					"Tazavesh, el Mercado Velado", -- [2]
 				},
-				[30285] = {
-					"塔达拉姆之眼", -- [1]
-					"安卡赫特：古代王国", -- [2]
+				[171384] = {
+					"Escriba investigadora", -- [1]
+					"Profundidades Sanguíneas", -- [2]
 				},
-				[164926] = {
-					"Romperramas drust", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
+				[180336] = {
+					"Mafioso del cártel", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
 				},
-				[163457] = {
-					"Vanguardia Rechazada", -- [1]
+				[170490] = {
+					"Sumo sacerdote Atal'ai", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[168572] = {
+					"Hongos de asalto", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[11351] = {
+					"古拉巴什猎头者", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[174071] = {
+					"Gargon sañoso", -- [1]
+					"Castillo Nathria", -- [2]
+				},
+				[115488] = {
+					"Piromante imbuido", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[163458] = {
+					"Castigadora Rechazada", -- [1]
 					"Torres de Ascensión", -- [2]
 				},
-				[32353] = {
-					"阿尔卡冯守卫者", -- [1]
-					"阿尔卡冯的宝库", -- [2]
+				[164737] = {
+					"Emboscador de la colonia", -- [1]
+					"Plaga Abrumadora", -- [2]
 				},
-				[16061] = {
-					"教官拉苏维奥斯", -- [1]
+				[168318] = {
+					"Goliat Rechazado", -- [1]
+					"Torres de Ascensión", -- [2]
+				},
+				[150160] = {
+					"Matón huesudo", -- [1]
+					"Operación: Mecalópolis", -- [2]
+				},
+				[29064] = {
+					"阿努巴尔通灵师", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[178165] = {
+					"Goliat caminacosta", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[114338] = {
+					"Confluencia de maná", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[171772] = {
+					"Defensora de Veloniebla", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[30279] = {
+					"深渊爬行者", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[165251] = {
+					"Entidad desconocida", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[86526] = {
+					"Maestro de cadenas Grom'kar", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[30391] = {
+					"未知目标", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[81603] = {
+					"Campeona Druna", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[166275] = {
+					"Modelador de Veloniebla", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[4293] = {
+					"血色占卜师", -- [1]
+					"血色修道院", -- [2]
+				},
+				[166276] = {
+					"Guardián de Veloniebla", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[168578] = {
+					"Fungimántico", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[150292] = {
+					"Caballería de Mecalópolis", -- [1]
+					"Operación: Mecalópolis", -- [2]
+				},
+				[26555] = {
+					"天灾巨人", -- [1]
+					"乌特加德之巅", -- [2]
+				},
+				[162057] = {
+					"Centinela de la cámara", -- [1]
+					"Profundidades Sanguíneas", -- [2]
+				},
+				[150165] = {
+					"Elemental de baba", -- [1]
+					"Operación: Mecalópolis", -- [2]
+				},
+				[28729] = {
+					"看守者纳尔伊", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[6427] = {
+					"鬼魅幻影", -- [1]
+					"血色修道院", -- [2]
+				},
+				[11831] = {
+					"哈卡巫医", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[15931] = {
+					"格罗布鲁斯", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[23694] = {
+					"跃动的南瓜", -- [1]
+					"血色修道院", -- [2]
+				},
+				[170882] = {
+					"Mago de huesos", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[178171] = {
+					"Guardián tronaforjado", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[15979] = {
+					"墓穴恐惧蛛魔", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[28921] = {
+					"哈多诺克斯", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[16011] = {
+					"洛欧塞布", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[168837] = {
+					"Sigilaria", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[164873] = {
+					"Vetecuerno venado rúnico", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[164362] = {
+					"Bocado limoso", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[150168] = {
+					"Monstruosidad tóxica", -- [1]
+					"Operación: Mecalópolis", -- [2]
+				},
+				[180091] = {
+					"Can del Núcleo anciano", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[29097] = {
+					"阿努巴尔地穴魔", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[150169] = {
+					"Acechador tóxico", -- [1]
+					"Operación: Mecalópolis", -- [2]
+				},
+				[150297] = {
+					"Renormalizadora de Mecalópolis", -- [1]
+					"Operación: Mecalópolis", -- [2]
+				},
+				[29209] = {
+					"未知目标", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[6547] = {
+					"受难的牺牲者", -- [1]
+					"血色修道院", -- [2]
+				},
+				[16163] = {
+					"死亡骑兵", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[165515] = {
+					"Filoscuro depravado", -- [1]
+					"Salones de Expiación", -- [2]
+				},
+				[163086] = {
+					"Bolsa de gas rancio", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[16243] = {
+					"天灾软泥怪", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[43873] = {
+					"Altairus", -- [1]
+					"La Cumbre del Vórtice", -- [2]
+				},
+				[30680] = {
+					"黑岩将军", -- [1]
+					"黑曜石圣殿", -- [2]
+				},
+				[16390] = {
+					"死寒仆从", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[26668] = {
+					"席瓦拉·索格蕾", -- [1]
+					"乌特加德之巅", -- [2]
+				},
+				[28730] = {
+					"看守者加什拉", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[163089] = {
+					"Desechos asquerosos", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[179841] = {
+					"Veterano lanzachispa", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[11352] = {
+					"古拉巴什狂暴者", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[11360] = {
+					"祖利安幼虎", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[11368] = {
+					"觅血蝙蝠", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[23775] = {
+					"无头骑士的脑袋", -- [1]
+					"血色修道院", -- [2]
+				},
+				[179842] = {
+					"Agente comercial", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[14509] = {
+					"高阶祭司塞卡尔", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[29098] = {
+					"阿努巴尔通灵师", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[183424] = {
+					"Caballero virtuoso", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[165138] = {
+					"Bolsa de añublo", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[30249] = {
+					"永恒子嗣", -- [1]
+					"永恒之眼", -- [2]
+				},
+				[114794] = {
+					"Sabueso esquelético", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[30329] = {
+					"野蛮洞穴兽", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[163862] = {
+					"Defensora de muchos ojos", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[176394] = {
+					"Trabajador de C.A.R.T.A.", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[168594] = {
+					"Centinela de la cámara", -- [1]
+					"Profundidades Sanguíneas", -- [2]
+				},
+				[14821] = {
+					"拉扎什迅猛龙", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[176395] = {
+					"Elemental postal sobrecargado", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[30681] = {
+					"黑岩烈焰法师", -- [1]
+					"黑曜石圣殿", -- [2]
+				},
+				[183173] = {
+					"Guardanegra jurafauces", -- [1]
+					"Las Tierras de las Sombras", -- [2]
+				},
+				[167956] = {
+					"Acólita oscura", -- [1]
+					"Profundidades Sanguíneas", -- [2]
+				},
+				[3981] = {
+					"沃瑞尔·森加斯", -- [1]
+					"血色修道院", -- [2]
+				},
+				[3983] = {
+					"审讯员韦沙斯", -- [1]
+					"血色修道院", -- [2]
+				},
+				[15932] = {
+					"格拉斯", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[29818] = {
+					"死亡军马", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[15956] = {
+					"阿努布雷坎", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[165911] = {
+					"Creación leal", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[28859] = {
+					"玛里苟斯", -- [1]
+					"永恒之眼", -- [2]
+				},
+				[15980] = {
+					"纳克萨玛斯信徒", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[26861] = {
+					"伊米隆国王", -- [1]
+					"乌特加德之巅", -- [2]
+				},
+				[17670] = {
+					"碎手驯犬者", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+				},
+				[16020] = {
+					"疯狂的科学家", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16028] = {
+					"帕奇维克", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16036] = {
+					"狂乱蝙蝠", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16060] = {
+					"收割者戈提克", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[29051] = {
+					"阿努巴尔地穴魔", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[16807] = {
+					"高阶术士奈瑟库斯", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+				},
+				[16124] = {
+					"冷酷的学徒", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[173714] = {
+					"Noctiflor de Veloniebla", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[16148] = {
+					"鬼灵死亡骑士", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16156] = {
+					"黑暗战士", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16164] = {
+					"纳克萨玛斯之影", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16983] = {
+					"天灾勇士", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16236] = {
+					"眼柄", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[166299] = {
+					"Cuidadora de Veloniebla", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[177808] = {
+					"Sobrestante acorazado", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[167962] = {
+					"Taladro dental destrozado", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[164510] = {
+					"Ballestero desgarbado", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[171799] = {
+					"Celador de las profundidades", -- [1]
+					"Profundidades Sanguíneas", -- [2]
+				},
+				[167963] = {
+					"Cliente sin cabeza", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[30682] = {
+					"黑岩上尉", -- [1]
+					"黑曜石圣殿", -- [2]
+				},
+				[114544] = {
+					"Ujier esquelético", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[28684] = {
+					"看门者克里克希尔", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[167964] = {
+					"4.RF-4.RF", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[28732] = {
+					"阿努巴尔战士", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[172312] = {
+					"Atiborrador espinafauces", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[166302] = {
+					"Cosechador de cadáveres", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[11353] = {
+					"古拉巴什饮血者", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[11361] = {
+					"祖利安猛虎", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[28860] = {
+					"萨塔里奥", -- [1]
+					"黑曜石圣殿", -- [2]
+				},
+				[173720] = {
+					"Garganta sangrienta de Veloniebla", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[163618] = {
+					"Nigromante de Zolramus", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[166304] = {
+					"Aguijonero de Veloniebla", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[167967] = {
+					"Aceite consciente", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[163620] = {
+					"Gangrenoso", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[83025] = {
+					"Maestro de batalla Grom'kar", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[114802] = {
+					"Oficial espectral", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[16984] = {
+					"天灾战士", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[29308] = {
+					"塔达拉姆王子", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[171805] = {
+					"Escriba investigadora", -- [1]
+					"Profundidades Sanguíneas", -- [2]
+				},
+				[29340] = {
+					"阿努巴尔虫巢卫士", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[168992] = {
+					"Cultista resucitado", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[177816] = {
+					"Especialista en interrogatorios", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[4306] = {
+					"血色拷问者", -- [1]
+					"血色修道院", -- [2]
+				},
+				[83026] = {
+					"Maestro de asedio Olugar", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[114803] = {
+					"Mano de establo espectral", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[81236] = {
+					"Técnico de Riel siniestro", -- [1]
+					"Depósito Riel siniestro", -- [2]
+				},
+				[177817] = {
+					"Oficial de apoyo", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[82579] = {
+					"Clarividente Grom'kar", -- [1]
+					"Depósito Riel siniestro", -- [2]
+				},
+				[165414] = {
+					"Desintegrador depravado", -- [1]
+					"Salones de Expiación", -- [2]
+				},
+				[162729] = {
+					"Soldado de remendejo", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[16441] = {
+					"寒冰皇冠卫士", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[114804] = {
+					"Destrero espectral", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[16505] = {
+					"纳克萨玛斯追随者", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
 				[23682] = {
 					"El Jinete decapitado", -- [1]
 					"Monasterio Escarlata", -- [2]
 				},
-				[29311] = {
-					"传令官沃拉兹", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[17055] = {
-					"迈克斯纳的小蜘蛛", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[166396] = {
-					"Hostigador noble", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[29335] = {
-					"阿努巴尔织网者", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[83390] = {
-					"Retador Señor del Trueno", -- [1]
-					"Muelles de hierro", -- [2]
-				},
-				[167534] = {
-					"Rek la curtida", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[11374] = {
-					"钩齿狂鱼", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[15977] = {
-					"毒性蜘蛛", -- [1]
-					"纳克萨玛斯", -- [2]
+				[170147] = {
+					"Recuerdo volátil", -- [1]
+					"El Otro Lado", -- [2]
 				},
 				[15981] = {
 					"纳克萨玛斯侍僧", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[183707] = {
-					"Entidad desconocida", -- [1]
-					"Sepulcro de los Primeros", -- [2]
-				},
 				[15989] = {
 					"萨菲隆", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[14532] = {
-					"拉扎什毒血蜘蛛", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[168058] = {
-					"Pluma imbuida", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[167611] = {
-					"Evisceradora petronato", -- [1]
-					"Salones de Expiación", -- [2]
-				},
-				[17670] = {
-					"碎手驯犬者", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-				},
-				[30453] = {
-					"黑岩圣殿卫士", -- [1]
-					"黑曜石圣殿", -- [2]
-				},
-				[164737] = {
-					"Emboscador de la colonia", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[115488] = {
-					"Piromante imbuido", -- [1]
-					"Regreso a Karazhan", -- [2]
+				[28925] = {
+					"阿努巴尔通灵师", -- [1]
+					"艾卓-尼鲁布", -- [2]
 				},
 				[16021] = {
 					"畸形妖", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[16025] = {
-					"缝合巨人", -- [1]
+				[163882] = {
+					"Gigante de carne descompuesto", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[16037] = {
+					"疫病蝙蝠", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[16029] = {
-					"淤泥喷射者", -- [1]
+				[16061] = {
+					"教官拉苏维奥斯", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[16704] = {
-					"碎手狙击者", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
+				[169893] = {
+					"Hablaoscuro nefario", -- [1]
+					"Teatro del Dolor", -- [2]
 				},
-				[114626] = {
-					"Espíritu melancólico", -- [1]
+				[29117] = {
+					"阿努巴尔勇士", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[16125] = {
+					"冷酷的死亡骑士", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[29213] = {
+					"阿努巴尔突袭者", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[115765] = {
+					"Anulador abstracto", -- [1]
 					"Regreso a Karazhan", -- [2]
 				},
-				[168891] = {
+				[16165] = {
+					"死灵骑士", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[30284] = {
+					"碾骨者", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[29309] = {
+					"纳多克斯长老", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[183707] = {
+					"Entidad desconocida", -- [1]
+					"Sepulcro de los Primeros", -- [2]
+				},
+				[163503] = {
+					"Éter del abismo", -- [1]
+					"Torres de Ascensión", -- [2]
+				},
+				[81432] = {
+					"Técnico Grom'kar", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[26672] = {
+					"嗜血的苔原狼", -- [1]
+					"乌特加德之巅", -- [2]
+				},
+				[28734] = {
+					"阿努巴尔散兵", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[163121] = {
+					"Vanguardia cosida", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[16506] = {
+					"纳克萨玛斯膜拜者", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16698] = {
+					"死尸甲虫", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[87252] = {
+					"Ogron rebelde", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[168878] = {
 					"Apestado manipulado", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
-				[29062] = {
-					"阿努巴尔勇士", -- [1]
+				[29118] = {
+					"阿努巴尔地穴魔", -- [1]
 					"艾卓-尼鲁布", -- [2]
+				},
+				[176551] = {
+					"Purificador de la bóveda", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[29214] = {
+					"阿努巴尔刺客", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[171181] = {
+					"Picofiloso territorial", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[30285] = {
+					"塔达拉姆之眼", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[1706] = {
+					"迪菲亚囚徒", -- [1]
+					"UNKNOWN", -- [2]
+				},
+				[1707] = {
+					"迪菲亚俘虏", -- [1]
+					"UNKNOWN", -- [2]
+				},
+				[1708] = {
+					"迪菲亚狱友", -- [1]
+					"UNKNOWN", -- [2]
+				},
+				[1711] = {
+					"迪菲亚罪犯", -- [1]
+					"暴风城监狱", -- [2]
+				},
+				[163126] = {
+					"Mago de huesos frágiles", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[170927] = {
+					"Moco eruptivo", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[163894] = {
+					"Rompeespinas contagioso", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[162744] = {
+					"Nekthara el machacador", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[171184] = {
+					"Mythresh, garfas del cielo", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[163128] = {
+					"Hechicero de Zolramus", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[165430] = {
+					"Engendro del mal", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[168627] = {
+					"Ligaplagas", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[16427] = {
+					"冰冻废土的士兵", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16507] = {
+					"碎手斥候", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+				},
+				[16523] = {
+					"碎手蛮兵", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+				},
+				[164920] = {
+					"Rajaalmas drust", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[15974] = {
+					"恐惧爬行者", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[173360] = {
+					"Escupeplagas", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[15990] = {
+					"克尔苏加德", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16022] = {
+					"外科助手", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16699] = {
+					"碎手撕裂者", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+				},
+				[167607] = {
+					"Mutilador petronato", -- [1]
+					"Salones de Expiación", -- [2]
+				},
+				[168886] = {
+					"Virulax Hilañublo", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[29119] = {
+					"阿努巴尔通灵师", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[86809] = {
+					"Incineradora Grom'kar", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[16126] = {
+					"冷酷的骑兵", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[15111] = {
+					"疯狂仆从", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[16142] = {
+					"胆汁软泥怪", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[172979] = {
+					"Esporeadora Almíbar", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[30286] = {
+					"冰霜使者", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[29311] = {
+					"传令官沃拉兹", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[17083] = {
+					"邪兽人转化者", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+				},
+				[83613] = {
+					"Koramar", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[30414] = {
+					"被遗忘的无面者", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[152009] = {
+					"Robot chatarra descompuesto", -- [1]
+					"Operación: Mecalópolis", -- [2]
+				},
+				[172981] = {
+					"Cosido kyriano", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[16286] = {
+					"孢子", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[17259] = {
+					"噬骨饥饿者", -- [1]
+					"地狱火堡垒：城墙", -- [2]
+				},
+				[164414] = {
+					"Mago reanimado", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[167611] = {
+					"Evisceradora petronato", -- [1]
+					"Salones de Expiación", -- [2]
+				},
+				[180015] = {
+					"Marinero de cubierta fornido", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[30622] = {
+					"枪手镇镇长", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[164926] = {
+					"Romperramas drust", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[167612] = {
+					"Atracador petronato", -- [1]
+					"Salones de Expiación", -- [2]
+				},
+				[114624] = {
+					"Celador arcano", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[16428] = {
+					"势不可挡的憎恶", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[28736] = {
+					"轻快的感染者", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[11339] = {
+					"哈卡暗影猎手", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[11347] = {
+					"狂热者洛卡恩", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[11371] = {
+					"拉扎什毒蛇", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[176565] = {
+					"Entidad desconocida", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
 				},
 				[165824] = {
 					"Nar'zudah", -- [1]
 					"La Destrucción Necrótica", -- [2]
 				},
-				[165251] = {
-					"Entidad desconocida", -- [1]
+				[16700] = {
+					"碎手军团士兵", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+				},
+				[167615] = {
+					"Filoscura depravada", -- [1]
+					"Salones de Expiación", -- [2]
+				},
+				[30111] = {
+					"暮光膜拜者", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[29120] = {
+					"阿努巴拉克", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[31214] = {
+					"萨塔里奥暮光雏龙", -- [1]
+					"黑曜石圣殿", -- [2]
+				},
+				[114626] = {
+					"Espíritu melancólico", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[29216] = {
+					"阿努巴尔守护者", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[30287] = {
+					"恶鬼劫掠者", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[30319] = {
+					"暮光黑暗法师", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[179893] = {
+					"Vagador del cártel", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[4283] = {
+					"血色哨兵", -- [1]
+					"血色修道院", -- [2]
+				},
+				[115395] = {
+					"Reina", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[19429] = {
+					"塞泰克暗鹰", -- [1]
+					"奥金顿：塞泰克大厅", -- [2]
+				},
+				[17420] = {
+					"碎手蛮兵", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+				},
+				[114628] = {
+					"Camarero esquelético", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[16429] = {
+					"织魂者", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[14880] = {
+					"拉扎什诱捕者", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[26691] = {
+					"伊米亚巫医", -- [1]
+					"乌特加德之巅", -- [2]
+				},
+				[18318] = {
+					"塞泰克新兵", -- [1]
+					"奥金顿：塞泰克大厅", -- [2]
+				},
+				[18323] = {
+					"塞泰克卫兵", -- [1]
+					"奥金顿：塞泰克大厅", -- [2]
+				},
+				[14988] = {
+					"奥根", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[170690] = {
+					"Horror enfermo", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[11391] = {
+					"邪枝部族演讲者", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[168891] = {
+					"Apestado manipulado", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[16573] = {
+					"地穴卫士", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[15975] = {
+					"腐肉织网者", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[83392] = {
+					"Uñagrieta furioso", -- [1]
+					"Muelles de hierro", -- [2]
+				},
+				[155090] = {
+					"Espiralero anodizado", -- [1]
+					"Operación: Mecalópolis", -- [2]
+				},
+				[15068] = {
+					"祖利安守护者", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[190128] = {
+					"Zul'gamux", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[11373] = {
+					"拉扎什眼镜蛇", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[28368] = {
+					"伊米亚通灵师", -- [1]
+					"乌特加德之巅", -- [2]
+				},
+				[26694] = {
+					"伊米亚黑暗萨满祭司", -- [1]
+					"乌特加德之巅", -- [2]
+				},
+				[167111] = {
+					"Corvenado espinafauces", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[114796] = {
+					"Anfitriona íntegra", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[30688] = {
+					"沙德隆的信徒", -- [1]
+					"黑曜石圣殿", -- [2]
+				},
+				[16063] = {
+					"瑟里耶克爵士", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[26690] = {
+					"伊米亚战士", -- [1]
+					"乌特加德之巅", -- [2]
+				},
+				[167965] = {
+					"Lubricante", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[26670] = {
+					"伊米亚猎血者", -- [1]
+					"乌特加德之巅", -- [2]
+				},
+				[26554] = {
+					"掠龙先知", -- [1]
+					"乌特加德之巅", -- [2]
+				},
+				[179388] = {
+					"Maresabia de reloj de arena", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[17669] = {
+					"疯狂的军犬", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+				},
+				[30176] = {
+					"安卡哈守护者", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[79720] = {
+					"Explotador Grom'kar", -- [1]
+					"Depósito Riel siniestro", -- [2]
+				},
+				[16149] = {
+					"鬼灵战马", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16127] = {
+					"鬼灵学徒", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[80935] = {
+					"Explotador Grom'kar", -- [1]
+					"Depósito Riel siniestro", -- [2]
+				},
+				[178141] = {
+					"Vinculaescamas salsombría", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[167113] = {
+					"Gargantácida espinafauces", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[171333] = {
+					"Devota Atal'ai", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[167538] = {
+					"Dokigg el demoledor", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[170157] = {
+					"Forjador de runas estigio", -- [1]
+					"Las Tierras de las Sombras", -- [2]
+				},
+				[16150] = {
+					"鬼灵骑兵", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[115388] = {
+					"Rey", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[16215] = {
+					"邪恶法杖", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[164921] = {
+					"Cosechador drust", -- [1]
 					"Nieblas de Tirna Scithe", -- [2]
 				},
 				[77483] = {
 					"Artillero Grom'kar", -- [1]
 					"Depósito Riel siniestro", -- [2]
 				},
-				[81603] = {
-					"Campeona Druna", -- [1]
-					"Muelles de hierro", -- [2]
+				[81407] = {
+					"Bombardero Riel siniestro", -- [1]
+					"Depósito Riel siniestro", -- [2]
 				},
-				[16065] = {
-					"女公爵布劳缪克丝", -- [1]
-					"纳克萨玛斯", -- [2]
+				[30277] = {
+					"安卡哈切碎者", -- [1]
+					"安卡赫特：古代王国", -- [2]
 				},
-				[163126] = {
-					"Mago de huesos frágiles", -- [1]
-					"La Destrucción Necrótica", -- [2]
+				[116549] = {
+					"Cantante de soporte", -- [1]
+					"Regreso a Karazhan", -- [2]
 				},
-				[86809] = {
-					"Incineradora Grom'kar", -- [1]
-					"Muelles de hierro", -- [2]
+				[164557] = {
+					"Esquirla de Halkias", -- [1]
+					"Salones de Expiación", -- [2]
 				},
-				[178392] = {
-					"Guardián de la puerta Zo'mazz", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
+				[169905] = {
+					"Señor de la guerra resucitado", -- [1]
+					"El Otro Lado", -- [2]
 				},
-				[172979] = {
-					"Esporeadora Almíbar", -- [1]
+				[80936] = {
+					"Granadero Grom'kar", -- [1]
+					"Depósito Riel siniestro", -- [2]
+				},
+				[165529] = {
+					"Coleccionista depravada", -- [1]
+					"Salones de Expiación", -- [2]
+				},
+				[167534] = {
+					"Rek la curtida", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[164929] = {
+					"Aldeana de Tirnenn", -- [1]
 					"Nieblas de Tirna Scithe", -- [2]
 				},
-				[16064] = {
-					"库尔塔兹领主", -- [1]
+				[168394] = {
+					"Bocado limoso", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[16360] = {
+					"肉用僵尸", -- [1]
 					"纳克萨玛斯", -- [2]
+				},
+				[29062] = {
+					"阿努巴尔勇士", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[114783] = {
+					"Doncella reformada", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[30624] = {
+					"骑风", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[163520] = {
+					"Líder de escuadrón Rechazada", -- [1]
+					"Torres de Ascensión", -- [2]
+				},
+				[167116] = {
+					"Atracador espinafauces", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
+				},
+				[163457] = {
+					"Vanguardia Rechazada", -- [1]
+					"Torres de Ascensión", -- [2]
+				},
+				[16375] = {
+					"污水淤泥怪", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[17055] = {
+					"迈克斯纳的小蜘蛛", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[11374] = {
+					"钩齿狂鱼", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[114632] = {
+					"Auxiliar espectral", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[168907] = {
+					"Tentáculo de baba", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[15977] = {
+					"毒性蜘蛛", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[26692] = {
+					"伊米亚标枪手", -- [1]
+					"乌特加德之巅", -- [2]
+				},
+				[163459] = {
+					"Ensalmador Rechazado", -- [1]
+					"Torres de Ascensión", -- [2]
+				},
+				[16029] = {
+					"淤泥喷射者", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[14532] = {
+					"拉扎什毒血蜘蛛", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[11340] = {
+					"哈卡高阶祭司", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[11348] = {
+					"狂热者扎斯", -- [1]
+					"祖尔格拉布", -- [2]
+				},
+				[11356] = {
+					"古拉巴什勇士", -- [1]
+					"祖尔格拉布", -- [2]
 				},
 				[80805] = {
 					"Makogg Hoja de brasal", -- [1]
 					"Muelles de hierro", -- [2]
+				},
+				[11372] = {
+					"拉扎什蝰蛇", -- [1]
+					"祖尔格拉布", -- [2]
 				},
 				[30621] = {
 					"米饭一蒸", -- [1]
@@ -10206,545 +11047,121 @@ PlaterDB = {
 					"阿努巴尔勇士", -- [1]
 					"艾卓-尼鲁布", -- [2]
 				},
-				[162057] = {
-					"Centinela de la cámara", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[16060] = {
-					"收割者戈提克", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[29120] = {
-					"阿努巴拉克", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
 				[29128] = {
 					"阿努巴尔原始卫士", -- [1]
 					"艾卓-尼鲁布", -- [2]
-				},
-				[173044] = {
-					"Asistente de costuras", -- [1]
-					"La Destrucción Necrótica", -- [2]
 				},
 				[167998] = {
 					"Guardián de portal", -- [1]
 					"Teatro del Dolor", -- [2]
 				},
-				[16125] = {
-					"冷酷的死亡骑士", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[167615] = {
-					"Filoscura depravada", -- [1]
-					"Salones de Expiación", -- [2]
-				},
-				[150297] = {
-					"Renormalizadora de Mecalópolis", -- [1]
-					"Operación: Mecalópolis", -- [2]
-				},
-				[172981] = {
-					"Cosido kyriano", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[168318] = {
-					"Goliat Rechazado", -- [1]
-					"Torres de Ascensión", -- [2]
-				},
-				[16145] = {
-					"死亡骑士队长", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[170490] = {
-					"Sumo sacerdote Atal'ai", -- [1]
-					"El Otro Lado", -- [2]
-				},
-				[170927] = {
-					"Moco eruptivo", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[16441] = {
-					"寒冰皇冠卫士", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[26669] = {
-					"伊米亚野蛮者", -- [1]
-					"乌特加德之巅", -- [2]
-				},
-				[114628] = {
-					"Camarero esquelético", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[28729] = {
-					"看守者纳尔伊", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[166275] = {
-					"Modelador de Veloniebla", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
-				},
-				[30278] = {
-					"安卡哈爆法者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[30286] = {
-					"冰霜使者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[30284] = {
-					"碾骨者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[16505] = {
-					"纳克萨玛斯追随者", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[16193] = {
-					"骷髅铁匠", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[115395] = {
-					"Reina", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[16036] = {
-					"狂乱蝙蝠", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[166276] = {
-					"Guardián de Veloniebla", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
-				},
-				[171887] = {
-					"Bufé limoso", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[174175] = {
-					"Petronato leal", -- [1]
-					"Salones de Expiación", -- [2]
-				},
-				[15953] = {
-					"黑女巫法琳娜", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[174197] = {
-					"Ritualista del campo de batalla", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[16037] = {
-					"疫病蝙蝠", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[16593] = {
-					"碎手争斗者", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-				},
-				[80935] = {
-					"Explotador Grom'kar", -- [1]
-					"Depósito Riel siniestro", -- [2]
-				},
-				[157824] = {
-					"Protector de la llama", -- [1]
-					"Castillo de Colmillo Oscuro", -- [2]
-				},
-				[150292] = {
-					"Caballería de Mecalópolis", -- [1]
-					"Operación: Mecalópolis", -- [2]
-				},
-				[30414] = {
-					"被遗忘的无面者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[162038] = {
-					"Bailarín de la niebla regio", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[28921] = {
-					"哈多诺克斯", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[174773] = {
-					"Entidad desconocida", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[4306] = {
-					"血色拷问者", -- [1]
-					"血色修道院", -- [2]
-				},
-				[4308] = {
-					"自由的幽魂", -- [1]
-					"血色修道院", -- [2]
-				},
-				[29216] = {
-					"阿努巴尔守护者", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[16983] = {
-					"天灾勇士", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[164362] = {
-					"Bocado limoso", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[16297] = {
-					"变异幼虫", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[168578] = {
-					"Fungimántico", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[30622] = {
-					"枪手镇镇长", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[171772] = {
-					"Defensora de Veloniebla", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
-				},
-				[80936] = {
-					"Granadero Grom'kar", -- [1]
-					"Depósito Riel siniestro", -- [2]
-				},
-				[29097] = {
-					"阿努巴尔地穴魔", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[167876] = {
-					"Inquisidor Sigar", -- [1]
-					"Salones de Expiación", -- [2]
-				},
-				[165515] = {
-					"Filoscuro depravado", -- [1]
-					"Salones de Expiación", -- [2]
-				},
-				[17264] = {
-					"噬骨掠夺者", -- [1]
-					"地狱火堡垒：城墙", -- [2]
-				},
-				[179821] = {
-					"Comandante Zo'far", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[17280] = {
-					"碎手军犬", -- [1]
-					"地狱火堡垒：城墙", -- [2]
-				},
-				[163086] = {
-					"Bolsa de gas rancio", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[30071] = {
-					"缝合巨像", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[6426] = {
-					"痛苦的死者", -- [1]
-					"血色修道院", -- [2]
-				},
-				[11830] = {
-					"哈卡祭司", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[11339] = {
-					"哈卡暗影猎手", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[31125] = {
-					"岩石看守者阿尔卡冯", -- [1]
-					"阿尔卡冯的宝库", -- [2]
-				},
-				[30111] = {
-					"暮光膜拜者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[167111] = {
-					"Corvenado espinafauces", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
-				},
-				[86526] = {
-					"Maestro de cadenas Grom'kar", -- [1]
-					"Muelles de hierro", -- [2]
-				},
-				[80937] = {
-					"Artillero Grom'kar", -- [1]
-					"Depósito Riel siniestro", -- [2]
-				},
-				[116549] = {
-					"Cantante de soporte", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[176565] = {
-					"Entidad desconocida", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[11357] = {
-					"哈卡之子", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[11353] = {
-					"古拉巴什饮血者", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[29153] = {
-					"重生的白骨", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[164557] = {
-					"Esquirla de Halkias", -- [1]
-					"Salones de Expiación", -- [2]
-				},
-				[15978] = {
-					"地穴剥夺者", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[180015] = {
-					"Marinero de cubierta fornido", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[168837] = {
-					"Sigilaria", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[15956] = {
-					"阿努布雷坎", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[180432] = {
-					"Cómplice devoto", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[29209] = {
-					"未知目标", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[180335] = {
-					"Contrabandista del cártel", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[170690] = {
-					"Horror enfermo", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[114632] = {
-					"Auxiliar espectral", -- [1]
+				[114633] = {
+					"Valet espectral", -- [1]
 					"Regreso a Karazhan", -- [2]
 				},
 				[80938] = {
 					"Mole Grom'kar", -- [1]
 					"Depósito Riel siniestro", -- [2]
 				},
-				[170882] = {
-					"Mago de huesos", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[30279] = {
-					"深渊爬行者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[30287] = {
-					"恶鬼劫掠者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[15930] = {
-					"费尔根", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[180336] = {
-					"Mafioso del cártel", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[150251] = {
-					"Mecánico pistonero", -- [1]
-					"Operación: Mecalópolis", -- [2]
-				},
-				[30319] = {
-					"暮光黑暗法师", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[11347] = {
-					"狂热者洛卡恩", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[11351] = {
-					"古拉巴什猎头者", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[15954] = {
-					"药剂师诺斯", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[11359] = {
-					"灵魂掠夺者", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[15974] = {
-					"恐惧爬行者", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[30391] = {
-					"未知目标", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[11371] = {
-					"拉扎什毒蛇", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[114633] = {
-					"Valet espectral", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[16594] = {
-					"影月侍僧", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-				},
-				[16165] = {
-					"死灵骑士", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[30283] = {
-					"天灾漫步者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[15990] = {
-					"克尔苏加德", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[14509] = {
-					"高阶祭司塞卡尔", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[28734] = {
-					"阿努巴尔散兵", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[150253] = {
-					"Reptador armado", -- [1]
-					"Operación: Mecalópolis", -- [2]
-				},
-				[164562] = {
-					"Maestra de canes depravada", -- [1]
-					"Salones de Expiación", -- [2]
-				},
-				[28922] = {
-					"阿努巴尔碾压者", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[163157] = {
-					"Amarth", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[168394] = {
-					"Bocado limoso", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[16022] = {
-					"外科助手", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[6427] = {
-					"鬼魅幻影", -- [1]
-					"血色修道院", -- [2]
-				},
-				[16698] = {
-					"死尸甲虫", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[150254] = {
-					"Chataperro", -- [1]
-					"Operación: Mecalópolis", -- [2]
-				},
-				[165137] = {
-					"Guardián de Zolramus", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[171333] = {
-					"Devota Atal'ai", -- [1]
-					"El Otro Lado", -- [2]
-				},
-				[3983] = {
-					"审讯员韦沙斯", -- [1]
-					"血色修道院", -- [2]
-				},
-				[16017] = {
-					"缝补傀儡", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[179893] = {
-					"Vagador del cártel", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[114794] = {
-					"Sabueso esquelético", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[165010] = {
-					"Babosa coagulada", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[164563] = {
-					"Gargon sañoso", -- [1]
-					"Salones de Expiación", -- [2]
-				},
-				[165138] = {
-					"Bolsa de añublo", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[82590] = {
-					"Exploradora de Riel siniestro", -- [1]
+				[88163] = {
+					"Vidente cinéreo Grom'kar", -- [1]
 					"Depósito Riel siniestro", -- [2]
 				},
-				[16216] = {
-					"邪恶之剑", -- [1]
+				[26669] = {
+					"伊米亚野蛮者", -- [1]
+					"乌特加德之巅", -- [2]
+				},
+				[15953] = {
+					"黑女巫法琳娜", -- [1]
 					"纳克萨玛斯", -- [2]
-				},
-				[168907] = {
-					"Tentáculo de baba", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[164873] = {
-					"Vetecuerno venado rúnico", -- [1]
-					"El Otro Lado", -- [2]
-				},
-				[16390] = {
-					"死寒仆从", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[167566] = {
-					"Asesina alatétrica", -- [1]
-					"Castillo Nathria", -- [2]
-				},
-				[29098] = {
-					"阿努巴尔通灵师", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[30179] = {
-					"暮光传道者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[15952] = {
-					"迈克斯纳", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[30176] = {
-					"安卡哈守护者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[28619] = {
-					"未知目标", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[163862] = {
-					"Defensora de muchos ojos", -- [1]
-					"Plaga Abrumadora", -- [2]
 				},
 				[168398] = {
 					"Bocado limoso", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
-				[16126] = {
-					"冷酷的骑兵", -- [1]
+				[170572] = {
+					"Aojadora hudú Atal'ai", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[31104] = {
+					"安卡哈看守者", -- [1]
+					"安卡赫特：古代王国", -- [2]
+				},
+				[174197] = {
+					"Ritualista del campo de batalla", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[157824] = {
+					"Protector de la llama", -- [1]
+					"Castillo de Colmillo Oscuro", -- [2]
+				},
+				[29217] = {
+					"阿努巴尔制毒师", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[174773] = {
+					"Entidad desconocida", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[115401] = {
+					"Alfil", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[17264] = {
+					"噬骨掠夺者", -- [1]
+					"地狱火堡垒：城墙", -- [2]
+				},
+				[167876] = {
+					"Inquisidor Sigar", -- [1]
+					"Salones de Expiación", -- [2]
+				},
+				[164563] = {
+					"Gargon sañoso", -- [1]
+					"Salones de Expiación", -- [2]
+				},
+				[114634] = {
+					"Sirviente inmortal", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[82597] = {
+					"Capitana Grom'kar", -- [1]
+					"Depósito Riel siniestro", -- [2]
+				},
+				[179269] = {
+					"Seguridad del oasis", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[179821] = {
+					"Comandante Zo'far", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[163157] = {
+					"Amarth", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[30071] = {
+					"缝合巨像", -- [1]
 					"纳克萨玛斯", -- [2]
+				},
+				[31125] = {
+					"岩石看守者阿尔卡冯", -- [1]
+					"阿尔卡冯的宝库", -- [2]
+				},
+				[80937] = {
+					"Artillero Grom'kar", -- [1]
+					"Depósito Riel siniestro", -- [2]
+				},
+				[150251] = {
+					"Mecánico pistonero", -- [1]
+					"Operación: Mecalópolis", -- [2]
+				},
+				[29153] = {
+					"重生的白骨", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[30283] = {
+					"天灾漫步者", -- [1]
+					"安卡赫特：古代王国", -- [2]
 				},
 				[165076] = {
 					"Garrapata glotona", -- [1]
@@ -10754,581 +11171,233 @@ PlaterDB = {
 					"Alfil", -- [1]
 					"Regreso a Karazhan", -- [2]
 				},
-				[16427] = {
-					"冰冻废土的士兵", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[16142] = {
-					"胆汁软泥怪", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[16146] = {
-					"死亡骑士", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[178171] = {
-					"Guardián tronaforjado", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[16506] = {
-					"纳克萨玛斯膜拜者", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[16244] = {
-					"感染的食尸鬼", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[167116] = {
-					"Atracador espinafauces", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
-				},
-				[114636] = {
-					"Aparición de custodio", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[28731] = {
-					"看守者希尔希克", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[29063] = {
-					"阿努巴尔地穴魔", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[31214] = {
-					"萨塔里奥暮光雏龙", -- [1]
-					"黑曜石圣殿", -- [2]
-				},
-				[179386] = {
-					"Oficial corsario", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[114796] = {
-					"Anfitriona íntegra", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[16507] = {
-					"碎手斥候", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-				},
-				[16194] = {
-					"邪恶之斧", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[16523] = {
-					"碎手蛮兵", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-				},
-				[16984] = {
-					"天灾战士", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[30549] = {
-					"瑞文戴尔男爵", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[115401] = {
-					"Alfil", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[115020] = {
-					"Arcánido", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[170572] = {
-					"Aojadora hudú Atal'ai", -- [1]
-					"El Otro Lado", -- [2]
-				},
-				[168310] = {
-					"Roc de plaga", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[83613] = {
-					"Koramar", -- [1]
-					"Muelles de hierro", -- [2]
-				},
-				[178165] = {
-					"Goliat caminacosta", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[28859] = {
-					"玛里苟斯", -- [1]
-					"永恒之眼", -- [2]
-				},
-				[43873] = {
-					"Altairus", -- [1]
-					"La Cumbre del Vórtice", -- [2]
-				},
-				[115244] = {
-					"Archimago Xylem", -- [1]
-					"El Ojo de la Eternidad - Gesta", -- [2]
-				},
-				[168627] = {
-					"Ligaplagas", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[16028] = {
-					"帕奇维克", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[16385] = {
-					"闪电图腾", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[179388] = {
-					"Maresabia de reloj de arena", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[167113] = {
-					"Gargantácida espinafauces", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
-				},
-				[114634] = {
-					"Sirviente inmortal", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[180091] = {
-					"Can del Núcleo anciano", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[16699] = {
-					"碎手撕裂者", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-				},
-				[165911] = {
-					"Creación leal", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[114542] = {
-					"Filántropo fantasmal", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[168594] = {
-					"Centinela de la cámara", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[16290] = {
-					"辐射软泥怪", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[29064] = {
-					"阿努巴尔通灵师", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[177808] = {
-					"Sobrestante acorazado", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[150160] = {
-					"Matón huesudo", -- [1]
-					"Operación: Mecalópolis", -- [2]
-				},
-				[166359] = {
-					"祖利安猛虎", -- [1]
+				[11359] = {
+					"灵魂掠夺者", -- [1]
 					"祖尔格拉布", -- [2]
-				},
-				[167956] = {
-					"Acólita oscura", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[165529] = {
-					"Coleccionista depravada", -- [1]
-					"Salones de Expiación", -- [2]
-				},
-				[180348] = {
-					"Fortachón del cártel", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[30085] = {
-					"警卫影魂", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[116410] = {
-					"Karam Lanzarcana", -- [1]
-					"Falla Cicatriz Aterradora - Plataforma de gesta de brujo", -- [2]
-				},
-				[29051] = {
-					"阿努巴尔地穴魔", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[168022] = {
-					"Tentáculo de baba", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[16803] = {
-					"死亡骑士学员", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[163882] = {
-					"Gigante de carne descompuesto", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[164702] = {
-					"Gusano carroñero", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[30624] = {
-					"骑风", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[14821] = {
-					"拉扎什迅猛龙", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[166299] = {
-					"Cuidadora de Veloniebla", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
-				},
-				[171343] = {
-					"Matriarca picofiloso", -- [1]
-					"El Otro Lado", -- [2]
-				},
-				[17370] = {
-					"嘲颅执行者", -- [1]
-					"地狱火堡垒：鲜血熔炉", -- [2]
-				},
-				[88163] = {
-					"Vidente cinéreo Grom'kar", -- [1]
-					"Depósito Riel siniestro", -- [2]
-				},
-				[11372] = {
-					"拉扎什蝰蛇", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[30680] = {
-					"黑岩将军", -- [1]
-					"黑曜石圣殿", -- [2]
-				},
-				[30688] = {
-					"沙德隆的信徒", -- [1]
-					"黑曜石圣殿", -- [2]
-				},
-				[23775] = {
-					"无头骑士的脑袋", -- [1]
-					"血色修道院", -- [2]
-				},
-				[115406] = {
-					"Caballo", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[173016] = {
-					"Recolector de cadáveres", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[17083] = {
-					"邪兽人转化者", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-				},
-				[28684] = {
-					"看门者克里克希尔", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[16428] = {
-					"势不可挡的憎恶", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[114544] = {
-					"Ujier esquelético", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[164510] = {
-					"Ballestero desgarbado", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[30249] = {
-					"永恒子嗣", -- [1]
-					"永恒之眼", -- [2]
-				},
-				[15979] = {
-					"墓穴恐惧蛛魔", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[28732] = {
-					"阿努巴尔战士", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[11831] = {
-					"哈卡巫医", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[29308] = {
-					"塔达拉姆王子", -- [1]
-					"安卡赫特：古代王国", -- [2]
 				},
 				[30449] = {
 					"维斯匹隆", -- [1]
 					"黑曜石圣殿", -- [2]
 				},
-				[15931] = {
-					"格罗布鲁斯", -- [1]
-					"纳克萨玛斯", -- [2]
+				[16594] = {
+					"影月侍僧", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 				},
-				[179841] = {
-					"Veterano lanzachispa", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
+				[169159] = {
+					"Lata inestable", -- [1]
+					"Plaga Abrumadora", -- [2]
 				},
-				[165597] = {
-					"Soldado de remendejo", -- [1]
-					"La Destrucción Necrótica", -- [2]
+				[169927] = {
+					"Carnicero pútrido", -- [1]
+					"Teatro del Dolor", -- [2]
 				},
-				[115407] = {
-					"Torre", -- [1]
+				[150253] = {
+					"Reptador armado", -- [1]
+					"Operación: Mecalópolis", -- [2]
+				},
+				[28922] = {
+					"阿努巴尔碾压者", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[171343] = {
+					"Matriarca picofiloso", -- [1]
+					"El Otro Lado", -- [2]
+				},
+				[164562] = {
+					"Maestra de canes depravada", -- [1]
+					"Salones de Expiación", -- [2]
+				},
+				[115019] = {
+					"Viuda Bruma Fría", -- [1]
 					"Regreso a Karazhan", -- [2]
 				},
-				[29818] = {
-					"死亡军马", -- [1]
+				[165137] = {
+					"Guardián de Zolramus", -- [1]
+					"La Destrucción Necrótica", -- [2]
+				},
+				[165010] = {
+					"Babosa coagulada", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[65310] = {
+					"Naba de boxeo", -- [1]
+					"Torres de Ascensión", -- [2]
+				},
+				[82590] = {
+					"Exploradora de Riel siniestro", -- [1]
+					"Depósito Riel siniestro", -- [2]
+				},
+				[28924] = {
+					"阿努巴尔勇士", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[115244] = {
+					"Archimago Xylem", -- [1]
+					"El Ojo de la Eternidad - Gesta", -- [2]
+				},
+				[167566] = {
+					"Asesina alatétrica", -- [1]
+					"Castillo Nathria", -- [2]
+				},
+				[174210] = {
+					"Escupidor de lodo contagiado", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[28619] = {
+					"未知目标", -- [1]
+					"艾卓-尼鲁布", -- [2]
+				},
+				[114636] = {
+					"Aparición de custodio", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[16244] = {
+					"感染的食尸鬼", -- [1]
 					"纳克萨玛斯", -- [2]
 				},
-				[23694] = {
-					"跃动的南瓜", -- [1]
-					"血色修道院", -- [2]
+				[28731] = {
+					"看守者希尔希克", -- [1]
+					"艾卓-尼鲁布", -- [2]
 				},
-				[165919] = {
-					"Merodeador esqueletal", -- [1]
-					"La Destrucción Necrótica", -- [2]
+				[26693] = {
+					"残忍的斯卡迪", -- [1]
+					"乌特加德之巅", -- [2]
 				},
-				[11360] = {
-					"祖利安幼虎", -- [1]
+				[179386] = {
+					"Oficial corsario", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[15928] = {
+					"塔迪乌斯", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[15936] = {
+					"肮脏的希尔盖", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[115020] = {
+					"Arcánido", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[15952] = {
+					"迈克斯纳", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[114542] = {
+					"Filántropo fantasmal", -- [1]
+					"Regreso a Karazhan", -- [2]
+				},
+				[164506] = {
+					"Capitán antiguo", -- [1]
+					"Teatro del Dolor", -- [2]
+				},
+				[15976] = {
+					"毒性捕猎者", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16290] = {
+					"辐射软泥怪", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[166359] = {
+					"祖利安猛虎", -- [1]
 					"祖尔格拉布", -- [2]
 				},
-				[164578] = {
-					"Creación de Suturas", -- [1]
+				[116410] = {
+					"Karam Lanzarcana", -- [1]
+					"Falla Cicatriz Aterradora - Plataforma de gesta de brujo", -- [2]
+				},
+				[180348] = {
+					"Fortachón del cártel", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
+				},
+				[17694] = {
+					"影月暗法师", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+				},
+				[16024] = {
+					"腐液软泥怪", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[168022] = {
+					"Tentáculo de baba", -- [1]
+					"Plaga Abrumadora", -- [2]
+				},
+				[173016] = {
+					"Recolector de cadáveres", -- [1]
 					"La Destrucción Necrótica", -- [2]
 				},
-				[179842] = {
-					"Agente comercial", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
+				[17370] = {
+					"嘲颅执行者", -- [1]
+					"地狱火堡垒：鲜血熔炉", -- [2]
+				},
+				[16056] = {
+					"疾病之蛆", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[16064] = {
+					"库尔塔兹领主", -- [1]
+					"纳克萨玛斯", -- [2]
+				},
+				[163058] = {
+					"Defensora de Veloniebla", -- [1]
+					"Nieblas de Tirna Scithe", -- [2]
 				},
 				[168153] = {
 					"Roc de plaga", -- [1]
 					"Plaga Abrumadora", -- [2]
 				},
-				[163618] = {
-					"Nigromante de Zolramus", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[28860] = {
-					"萨塔里奥", -- [1]
-					"黑曜石圣殿", -- [2]
-				},
 				[166301] = {
 					"Acechador de Veloniebla", -- [1]
 					"Nieblas de Tirna Scithe", -- [2]
-				},
-				[16215] = {
-					"邪恶法杖", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[167962] = {
-					"Taladro dental destrozado", -- [1]
-					"El Otro Lado", -- [2]
-				},
-				[163620] = {
-					"Gangrenoso", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[167964] = {
-					"4.RF-4.RF", -- [1]
-					"El Otro Lado", -- [2]
-				},
-				[165222] = {
-					"Curahuesos de Zolramus", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[176394] = {
-					"Trabajador de C.A.R.T.A.", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[164705] = {
-					"Babosa pestilente", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[166302] = {
-					"Cosechador de cadáveres", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[150143] = {
-					"Picador huesudo", -- [1]
-					"Operación: Mecalópolis", -- [2]
-				},
-				[167963] = {
-					"Cliente sin cabeza", -- [1]
-					"El Otro Lado", -- [2]
-				},
-				[179269] = {
-					"Seguridad del oasis", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[16700] = {
-					"碎手军团士兵", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-				},
-				[190128] = {
-					"Zul'gamux", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[176395] = {
-					"Elemental postal sobrecargado", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[170838] = {
-					"Contrincante implacable", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[160495] = {
-					"Atrapaalmas maníaco", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[114802] = {
-					"Oficial espectral", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[17259] = {
-					"噬骨饥饿者", -- [1]
-					"地狱火堡垒：城墙", -- [2]
 				},
 				[173138] = {
 					"Escolta jurafauces", -- [1]
 					"Las Tierras de las Sombras", -- [2]
 				},
-				[16063] = {
-					"瑟里耶克爵士", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[81236] = {
-					"Técnico de Riel siniestro", -- [1]
-					"Depósito Riel siniestro", -- [2]
-				},
-				[163621] = {
-					"Muelecarne", -- [1]
+				[165919] = {
+					"Merodeador esqueletal", -- [1]
 					"La Destrucción Necrótica", -- [2]
 				},
-				[164707] = {
-					"Babosa coagulada", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[31104] = {
-					"安卡哈看守者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[30329] = {
-					"野蛮洞穴兽", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[167965] = {
-					"Lubricante", -- [1]
-					"El Otro Lado", -- [2]
-				},
-				[30625] = {
-					"枪手镇镇长", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[173714] = {
-					"Noctiflor de Veloniebla", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
-				},
-				[4283] = {
-					"血色哨兵", -- [1]
-					"血色修道院", -- [2]
-				},
-				[26553] = {
-					"掠龙狂热者", -- [1]
-					"乌特加德之巅", -- [2]
-				},
-				[114803] = {
-					"Mano de establo espectral", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[83025] = {
-					"Maestro de batalla Grom'kar", -- [1]
-					"Muelles de hierro", -- [2]
-				},
-				[1707] = {
-					"迪菲亚俘虏", -- [1]
-					"UNKNOWN", -- [2]
+				[164578] = {
+					"Creación de Suturas", -- [1]
+					"La Destrucción Necrótica", -- [2]
 				},
 				[30178] = {
 					"未知目标", -- [1]
 					"安卡赫特：古代王国", -- [2]
 				},
-				[154744] = {
-					"Monstruosidad tóxica", -- [1]
-					"Operación: Mecalópolis", -- [2]
-				},
-				[183424] = {
-					"Caballero virtuoso", -- [1]
+				[189878] = {
+					"Entidad desconocida", -- [1]
 					"Regreso a Karazhan", -- [2]
 				},
-				[1706] = {
-					"迪菲亚囚徒", -- [1]
-					"UNKNOWN", -- [2]
+				[28733] = {
+					"阿努巴尔暗影法师", -- [1]
+					"艾卓-尼鲁布", -- [2]
 				},
-				[171799] = {
-					"Celador de las profundidades", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[16429] = {
-					"织魂者", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[162729] = {
-					"Soldado de remendejo", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[163089] = {
-					"Desechos asquerosos", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[167967] = {
-					"Aceite consciente", -- [1]
-					"El Otro Lado", -- [2]
-				},
-				[150146] = {
-					"Chamán huesudo", -- [1]
+				[150143] = {
+					"Picador huesudo", -- [1]
 					"Operación: Mecalópolis", -- [2]
 				},
-				[30681] = {
-					"黑岩烈焰法师", -- [1]
-					"黑曜石圣殿", -- [2]
-				},
-				[16163] = {
-					"死亡骑兵", -- [1]
-					"纳克萨玛斯", -- [2]
+				[163621] = {
+					"Muelecarne", -- [1]
+					"La Destrucción Necrótica", -- [2]
 				},
 				[30258] = {
 					"埃曼尼塔", -- [1]
 					"安卡赫特：古代王国", -- [2]
 				},
-				[1708] = {
-					"迪菲亚狱友", -- [1]
-					"UNKNOWN", -- [2]
+				[16168] = {
+					"岩肤石像鬼", -- [1]
+					"纳克萨玛斯", -- [2]
 				},
-				[83026] = {
-					"Maestro de asedio Olugar", -- [1]
-					"Muelles de hierro", -- [2]
+				[30625] = {
+					"枪手镇镇长", -- [1]
+					"安卡赫特：古代王国", -- [2]
 				},
-				[166304] = {
-					"Aguijonero de Veloniebla", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
-				},
-				[82579] = {
-					"Clarividente Grom'kar", -- [1]
-					"Depósito Riel siniestro", -- [2]
-				},
-				[114804] = {
-					"Destrero espectral", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[79720] = {
-					"Explotador Grom'kar", -- [1]
-					"Depósito Riel siniestro", -- [2]
-				},
-				[1711] = {
-					"迪菲亚罪犯", -- [1]
-					"暴风城监狱", -- [2]
-				},
-				[172312] = {
-					"Atiborrador espinafauces", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
+				[26553] = {
+					"掠龙狂热者", -- [1]
+					"乌特加德之巅", -- [2]
 				},
 				[83761] = {
 					"Trabajador ogron", -- [1]
@@ -11338,452 +11407,40 @@ PlaterDB = {
 					"安卡哈群行蛛", -- [1]
 					"安卡赫特：古代王国", -- [2]
 				},
-				[189878] = {
-					"Entidad desconocida", -- [1]
-					"Regreso a Karazhan", -- [2]
+				[170838] = {
+					"Contrincante implacable", -- [1]
+					"Teatro del Dolor", -- [2]
 				},
-				[165414] = {
-					"Desintegrador depravado", -- [1]
-					"Salones de Expiación", -- [2]
-				},
-				[29340] = {
-					"阿努巴尔虫巢卫士", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[16573] = {
-					"地穴卫士", -- [1]
+				[16216] = {
+					"邪恶之剑", -- [1]
 					"纳克萨玛斯", -- [2]
-				},
-				[16011] = {
-					"洛欧塞布", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[170147] = {
-					"Recuerdo volátil", -- [1]
-					"El Otro Lado", -- [2]
-				},
-				[4293] = {
-					"血色占卜师", -- [1]
-					"血色修道院", -- [2]
-				},
-				[15975] = {
-					"腐肉织网者", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[16243] = {
-					"天灾软泥怪", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[168992] = {
-					"Cultista resucitado", -- [1]
-					"El Otro Lado", -- [2]
 				},
 				[173655] = {
 					"Matriarca de Veloniebla", -- [1]
 					"Nieblas de Tirna Scithe", -- [2]
 				},
-				[11352] = {
-					"古拉巴什狂暴者", -- [1]
-					"祖尔格拉布", -- [2]
+				[180429] = {
+					"Astrovidente ornamentado", -- [1]
+					"Tazavesh, el Mercado Velado", -- [2]
 				},
-				[11348] = {
-					"狂热者扎斯", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[28924] = {
-					"阿努巴尔勇士", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[28925] = {
-					"阿努巴尔通灵师", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[183173] = {
-					"Guardanegra jurafauces", -- [1]
-					"Las Tierras de las Sombras", -- [2]
-				},
-				[168418] = {
-					"Inquisidora Rechazada", -- [1]
-					"Torres de Ascensión", -- [2]
-				},
-				[163458] = {
-					"Castigadora Rechazada", -- [1]
-					"Torres de Ascensión", -- [2]
-				},
-				[16034] = {
-					"天灾兽", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[173720] = {
-					"Garganta sangrienta de Veloniebla", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
+				[115406] = {
+					"Caballo", -- [1]
+					"Regreso a Karazhan", -- [2]
 				},
 				[178913] = {
 					"Grasslands Vombata", -- [1]
 					"Zereth Mortis", -- [2]
 				},
-				[164506] = {
-					"Capitán antiguo", -- [1]
-					"Teatro del Dolor", -- [2]
+				[163501] = {
+					"Hostigador Rechazado", -- [1]
+					"Torres de Ascensión", -- [2]
 				},
 				[80816] = {
 					"Ahri'ok Dugru", -- [1]
 					"Muelles de hierro", -- [2]
 				},
-				[168886] = {
-					"Virulax Hilañublo", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[16286] = {
-					"孢子", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[168572] = {
-					"Hongos de asalto", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[114338] = {
-					"Confluencia de maná", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[163501] = {
-					"Hostigador Rechazado", -- [1]
-					"Torres de Ascensión", -- [2]
-				},
-				[114526] = {
-					"Suplente fantasmal", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[171805] = {
-					"Escriba investigadora", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[83763] = {
-					"Técnico Grom'kar", -- [1]
-					"Muelles de hierro", -- [2]
-				},
-				[30083] = {
-					"劫掠的恶鬼", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[79739] = {
-					"Granadero Grom'kar", -- [1]
-					"Depósito Riel siniestro", -- [2]
-				},
-				[120651] = {
-					"Entidad desconocida", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[171384] = {
-					"Escriba investigadora", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[174210] = {
-					"Escupidor de lodo contagiado", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[180429] = {
-					"Astrovidente ornamentado", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[81432] = {
-					"Técnico Grom'kar", -- [1]
-					"Muelles de hierro", -- [2]
-				},
-				[29117] = {
-					"阿努巴尔勇士", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[115019] = {
-					"Viuda Bruma Fría", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[115765] = {
-					"Anulador abstracto", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[16375] = {
-					"污水淤泥怪", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[30682] = {
-					"黑岩上尉", -- [1]
-					"黑曜石圣殿", -- [2]
-				},
-				[163503] = {
-					"Éter del abismo", -- [1]
-					"Torres de Ascensión", -- [2]
-				},
-				[151814] = {
-					"Sombra almamuerta", -- [1]
-					"Torghast, la Torre de los Condenados", -- [2]
-				},
-				[17420] = {
-					"碎手蛮兵", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-				},
-				[154758] = {
-					"Monstruosidad tóxica", -- [1]
-					"Operación: Mecalópolis", -- [2]
-				},
-				[174071] = {
-					"Gargon sañoso", -- [1]
-					"Castillo Nathria", -- [2]
-				},
-				[3981] = {
-					"沃瑞尔·森加斯", -- [1]
-					"血色修道院", -- [2]
-				},
-				[16018] = {
-					"胆汁呕吐者", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[29213] = {
-					"阿努巴尔突袭者", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[114584] = {
-					"Equipo fantasma", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
-				[180431] = {
-					"Ritualista concentrado", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[163121] = {
-					"Vanguardia cosida", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[170850] = {
-					"Cuernosangre enfurecido", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[169927] = {
-					"Carnicero pútrido", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[168934] = {
-					"Espíritu enfurecido", -- [1]
-					"El Otro Lado", -- [2]
-				},
-				[15928] = {
-					"塔迪乌斯", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[15932] = {
-					"格拉斯", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[15936] = {
-					"肮脏的希尔盖", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[163058] = {
-					"Defensora de Veloniebla", -- [1]
-					"Nieblas de Tirna Scithe", -- [2]
-				},
-				[169159] = {
-					"Lata inestable", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[29309] = {
-					"纳多克斯长老", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[169893] = {
-					"Hablaoscuro nefario", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[178133] = {
-					"Saltaolas salsombría", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[11361] = {
-					"祖利安猛虎", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[11365] = {
-					"祖利安雌猎虎", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[28730] = {
-					"看守者加什拉", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[180433] = {
-					"Entidad desconocida", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[15976] = {
-					"毒性捕猎者", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[15980] = {
-					"纳克萨玛斯信徒", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[152009] = {
-					"Robot chatarra descompuesto", -- [1]
-					"Operación: Mecalópolis", -- [2]
-				},
-				[29217] = {
-					"阿努巴尔制毒师", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[82597] = {
-					"Capitana Grom'kar", -- [1]
-					"Depósito Riel siniestro", -- [2]
-				},
-				[16156] = {
-					"黑暗战士", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[30435] = {
-					"未知目标", -- [1]
-					"安卡赫特：古代王国", -- [2]
-				},
-				[168681] = {
-					"Vándalo Rechazado", -- [1]
-					"Torres de Ascensión", -- [2]
-				},
-				[30451] = {
-					"沙德隆", -- [1]
-					"黑曜石圣殿", -- [2]
-				},
-				[172265] = {
-					"Remanente de furia", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[30245] = {
-					"魔枢领主", -- [1]
-					"永恒之眼", -- [2]
-				},
-				[16020] = {
-					"疯狂的科学家", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[16024] = {
-					"腐液软泥怪", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[167532] = {
-					"Heavin el destructor", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[177816] = {
-					"Especialista en interrogatorios", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[162039] = {
-					"Opresora siniestra", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[167607] = {
-					"Mutilador petronato", -- [1]
-					"Salones de Expiación", -- [2]
-				},
-				[184140] = {
-					"Acólito de Xy", -- [1]
-					"Sepulcro de los Primeros", -- [2]
-				},
-				[167536] = {
-					"Harugia la sanguinaria", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[165872] = {
-					"Modelador de carne", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[16056] = {
-					"疾病之蛆", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[167533] = {
-					"Adventa Nuncamás", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[177817] = {
-					"Oficial de apoyo", -- [1]
-					"Tazavesh, el Mercado Velado", -- [2]
-				},
-				[162040] = {
-					"Gran sobrestante", -- [1]
-					"Profundidades Sanguíneas", -- [2]
-				},
-				[115417] = {
-					"Rata", -- [1]
-					"Regreso a Karazhan", -- [2]
-				},
 				[81212] = {
 					"Vigía Supremo Riel siniestro", -- [1]
-					"Depósito Riel siniestro", -- [2]
-				},
-				[30084] = {
-					"能量火花", -- [1]
-					"永恒之眼", -- [2]
-				},
-				[83392] = {
-					"Uñagrieta furioso", -- [1]
-					"Muelles de hierro", -- [2]
-				},
-				[15043] = {
-					"祖利安鳄鱼", -- [1]
-					"祖尔格拉布", -- [2]
-				},
-				[184908] = {
-					"Entidad desconocida", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[32593] = {
-					"敏捷的爬虫", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[167612] = {
-					"Atracador petronato", -- [1]
-					"Salones de Expiación", -- [2]
-				},
-				[65310] = {
-					"Naba de boxeo", -- [1]
-					"Torres de Ascensión", -- [2]
-				},
-				[29118] = {
-					"阿努巴尔地穴魔", -- [1]
-					"艾卓-尼鲁布", -- [2]
-				},
-				[162744] = {
-					"Nekthara el machacador", -- [1]
-					"Teatro del Dolor", -- [2]
-				},
-				[163459] = {
-					"Ensalmador Rechazado", -- [1]
-					"Torres de Ascensión", -- [2]
-				},
-				[163894] = {
-					"Rompeespinas contagioso", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[16124] = {
-					"冷酷的学徒", -- [1]
-					"纳克萨玛斯", -- [2]
-				},
-				[185685] = {
-					"Reliquia Urh", -- [1]
-					"Plaga Abrumadora", -- [2]
-				},
-				[170480] = {
-					"Caminamuerte Atal'ai", -- [1]
-					"El Otro Lado", -- [2]
-				},
-				[163128] = {
-					"Hechicero de Zolramus", -- [1]
-					"La Destrucción Necrótica", -- [2]
-				},
-				[83578] = {
-					"Trabajador ogron", -- [1]
-					"Muelles de hierro", -- [2]
-				},
-				[81407] = {
-					"Bombardero Riel siniestro", -- [1]
 					"Depósito Riel siniestro", -- [2]
 				},
 			},
@@ -11944,7 +11601,7 @@ PlaterDB = {
 				["y"] = 3.6999969482422,
 				["x"] = -54.580001831055,
 			},
-			["aura_timer_text_font"] = "WEBSY2J",
+			["indicator_rare"] = false,
 			["extra_icon_stack_font"] = "DorisPP",
 			["non_targeted_alpha_enabled"] = true,
 			["cast_statusbar_bgtexture"] = "Melli",
@@ -12001,7 +11658,7 @@ PlaterDB = {
 				["nameplateSelfTopInset"] = "0.58063739776611",
 				["nameplateShowOnlyNames"] = "1",
 			},
-			["login_counter"] = 8286,
+			["login_counter"] = 8314,
 			["click_space_friendly"] = {
 				116, -- [1]
 				26, -- [2]
@@ -13426,15 +13083,15 @@ PlaterDB = {
 					false, -- [2]
 					"magenta", -- [3]
 				},
-				[154758] = {
-					true, -- [1]
-					false, -- [2]
-					"blue", -- [3]
-				},
 				[157824] = {
 					false, -- [1]
 					false, -- [2]
 					"aqua", -- [3]
+				},
+				[167533] = {
+					true, -- [1]
+					false, -- [2]
+					"blue", -- [3]
 				},
 				[115765] = {
 					true, -- [1]
@@ -13686,7 +13343,7 @@ PlaterDB = {
 					false, -- [2]
 					"blue", -- [3]
 				},
-				[167533] = {
+				[154758] = {
 					true, -- [1]
 					false, -- [2]
 					"blue", -- [3]
@@ -15016,7 +14673,11 @@ PlaterDB = {
 						["Nameplate Updated"] = "function (self, unitId, unitFrame, envTable, modTable)\n    \n    local buffSpecialGlow = true\n    \n    \n    -- functions --\n    local auraContainers = {unitFrame.BuffFrame.PlaterBuffList}\n    \n    if (Plater.db.profile.buffs_on_aura2) then\n        auraContainers [2] = unitFrame.BuffFrame2.PlaterBuffList\n    end\n    \n    for containerID = 1, #auraContainers do\n        local auraContainer = auraContainers [containerID]\n        for index, auraIcon in ipairs (auraContainer) do\n            if (auraIcon:IsShown() and auraIcon.CanStealOrPurge) then\n                Plater.StartGlow(auraIcon, nil, modTable.options)\n                if modTable.config.outerGlow and auraIcon.__PlaterGlowFrame then\n                    auraIcon.__PlaterGlowFrame:ClearAllPoints()\n                    local offset = modTable.config.antsThickness\n                    auraIcon.__PlaterGlowFrame:SetPoint(\"topleft\", auraIcon, \"topleft\", -offset, offset)\n                    auraIcon.__PlaterGlowFrame:SetPoint(\"bottomright\", auraIcon, \"bottomright\", offset, -offset)\n                end\n            else\n                Plater.StopGlow(auraIcon, modTable.options.glowType, modTable.options.key)\n            end\n        end\n    end\n    \n    if buffSpecialGlow then\n        for _, auraIcon in ipairs (unitFrame.ExtraIconFrame.IconPool) do\n            if auraIcon:IsShown() then\n                if (auraIcon:IsShown() and auraIcon.canStealOrPurge) then\n                    Plater.StartGlow(auraIcon, nil, modTable.options)\n                    if modTable.config.outerGlow and auraIcon.__PlaterGlowFrame then\n                        auraIcon.__PlaterGlowFrame:ClearAllPoints()\n                        local offset = modTable.config.antsThickness\n                        auraIcon.__PlaterGlowFrame:SetPoint(\"topleft\", auraIcon, \"topleft\", -offset, offset)\n                        auraIcon.__PlaterGlowFrame:SetPoint(\"bottomright\", auraIcon, \"bottomright\", offset, -offset)\n                    end\n                else\n                    Plater.StopGlow(auraIcon, modTable.options.glowType, modTable.options.key)\n                end                \n            end\n        end\n    end\n    \nend\n\n\n",
 					},
 					["Prio"] = 99,
+					["Name"] = "Steal/Purge Aura Glow",
+					["PlaterCore"] = 1,
+					["LastHookEdited"] = "Initialization",
 					["Time"] = 1649570137,
+					["Icon"] = 136224,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -15039,10 +14700,6 @@ PlaterDB = {
 						["spec"] = {
 						},
 					},
-					["LastHookEdited"] = "Initialization",
-					["Name"] = "Steal/Purge Aura Glow",
-					["Icon"] = 136224,
-					["PlaterCore"] = 1,
 				}, -- [19]
 				{
 					["OptionsValues"] = {
@@ -15371,7 +15028,11 @@ PlaterDB = {
 						["Raid Target"] = "function (self, unitId, unitFrame, envTable)\n    \n    local raidMark = Plater.GetRaidMark (unitFrame)    \n    \n    if (not raidMark) then\n        if envTable.HasRaidMark then\n            \n            Plater.RefreshNameplateColor(unitFrame)\n            envTable.HasRaidMark = nil\n            \n        end\n        \n    end\n    \nend",
 					},
 					["Prio"] = 99,
+					["Name"] = "Raid Mark Change Color",
+					["PlaterCore"] = 1,
+					["LastHookEdited"] = "Constructor",
 					["Time"] = 1638666923,
+					["Icon"] = 236221,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -15394,10 +15055,6 @@ PlaterDB = {
 						["spec"] = {
 						},
 					},
-					["LastHookEdited"] = "Constructor",
-					["Name"] = "Raid Mark Change Color",
-					["Icon"] = 236221,
-					["PlaterCore"] = 1,
 				}, -- [23]
 				{
 					["OptionsValues"] = {
@@ -15697,7 +15354,11 @@ PlaterDB = {
 						["Nameplate Updated"] = "function (self, unitId, unitFrame, envTable)\n    \n    local buffSpecialGlow = true\n    \n    \n    -- functions --\n    local auraContainers = {unitFrame.BuffFrame.PlaterBuffList}\n    \n    if (Plater.db.profile.buffs_on_aura2) then\n        auraContainers [2] = unitFrame.BuffFrame2.PlaterBuffList\n    end\n    \n    for containerID = 1, #auraContainers do\n        \n        local auraContainer = auraContainers [containerID]\n        \n        for index, auraIcon in ipairs (auraContainer) do\n            if (auraIcon:IsShown() and auraIcon.RemainingTime > 0 and (envTable.glowSpells[auraIcon.spellId] and envTable.glowSpells[auraIcon.spellId] > auraIcon.RemainingTime)) then\n                if not auraIcon.pandemicGlowStarted then\n                    \n                    --1-   \n                    --Plater.StartAntsGlow(auraIcon, nil, envTable.options)\n                    --Plater.StartPixelGlow(auraIcon, nil, envTable.options)\n                    Plater.StartButtonGlow(auraIcon, nil, envTable.options)\n                    auraIcon.pandemicGlowStarted = true\n                end\n            else\n                \n                if auraIcon.pandemicGlowStarted then\n                    --2-    \n                    --Plater.StopAntsGlow(auraIcon, envTable.options.key)\n                    --Plater.StopPixelGlow(auraIcon, envTable.options.key)\n                    Plater.StopButtonGlow(auraIcon, envTable.options.key)\n                    auraIcon.pandemicGlowStarted = false\n                end\n            end                \n        end\n        \n    end\n    \n    if buffSpecialGlow then\n        for _, auraIcon in ipairs (unitFrame.ExtraIconFrame.IconPool) do\n            if auraIcon:IsShown() then\n                local remainingTime = (auraIcon.startTime + auraIcon.duration - GetTime())\n                if (auraIcon:IsShown() and remainingTime > 0 and (envTable.glowSpells[auraIcon.spellId] and envTable.glowSpells[auraIcon.spellId] > remainingTime)) then\n                    if not auraIcon.pandemicGlowStarted then\n                        \n                        --3-     \n                        --Plater.StartAntsGlow(auraIcon, nil, envTable.options)\n                        --Plater.StartPixelGlow(auraIcon, nil, envTable.options)\n                        Plater.StartButtonGlow(auraIcon, nil, envTable.options)\n                        auraIcon.pandemicGlowStarted = true\n                    end\n                else\n                    if auraIcon.pandemicGlowStarted then\n                        --4-       \n                        --Plater.StopAntsGlow(auraIcon, envTable.options.key)\n                        --Plater.StopPixelGlow(auraIcon, envTable.options.key)\n                        Plater.StopButtonGlow(auraIcon, envTable.options.key)\n                        auraIcon.pandemicGlowStarted = false\n                        local auraContainer = auraContainers [containerID]   \n                        if modTable.config.outerGlow and auraIcon.__PlaterGlowFrame then\n                            auraIcon.__PlaterGlowFrame:ClearAllPoints()\n                            local offset = modTable.config.antsThickness\n                            auraIcon.__PlaterGlowFrame:SetPoint(\"topleft\", auraIcon, \"topleft\", -offset, offset)\n                            auraIcon.__PlaterGlowFrame:SetPoint(\"bottomright\", auraIcon, \"bottomright\", offset, -offset)\n                        end\n                    end                    \n                end  \n            end\n        end\n    end\nend\n\n\n",
 					},
 					["Prio"] = 99,
+					["Name"] = "Pandemic Glow for all specs",
+					["PlaterCore"] = 1,
+					["LastHookEdited"] = "",
 					["Time"] = 1648682175,
+					["Icon"] = 132874,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -15720,10 +15381,6 @@ PlaterDB = {
 						["spec"] = {
 						},
 					},
-					["LastHookEdited"] = "",
-					["Name"] = "Pandemic Glow for all specs",
-					["Icon"] = 132874,
-					["PlaterCore"] = 1,
 				}, -- [27]
 				{
 					["Enabled"] = true,
@@ -15743,7 +15400,11 @@ PlaterDB = {
 						["Constructor"] = "\n--SI QUIEREN ENTERARSE DE MAS MODS Y SCRIPTS PARA PLATER SIGANME EN REDES SOCIALES\n--YOUTUBE: WEBS - Y2J\n--TWITCH: https://www.twitch.tv/websy2j\n--DISCORD: https://discord.com/invite/nc3vEsp\n\nfunction (self, unitId, unitFrame, envTable)\n    \n    local markerToHex = {\n        [1] = \"FFFFFFFF\", -- Yellow 5 Point Star\n        [2] = \"FFFFFFFF\", -- Orange Circle\n        [3] = \"FFFFFFFF\", -- Purple Diamond\n        [4] = \"FFFFFFFF\", -- Green Triangle\n        [5] = \"FFFFFFFF\", -- Light Blue Moon\n        [6] = \"FFFFFFFF\", -- Blue Square\n        [7] = \"FFFFFFFF\", -- Red Cross\n        [8] = \"FFFFFFFF\", -- White Skull\n    }\n    \n    --=========================================================================--\n    -- VER PRIMER NOMBRE--\n    --Si deseas ver el primer nombre de ciertos NPCS ,(USALO si tienes el juego en idioma Ingles)\n    ---=========================================================================--\n    \n    --Por Ejemplo: Mordretha, the Endless Empres ->Mordretha\n    \n    -- Mordretha, (the) Endless Empres--\n    --[\"the\"] = true--\n    \n    --[\"Waycrest\"] = true--\n    \n    local nameBlacklist = {\n        \n        [\"the\"] = true,\n        [\"of\"] = true,\n        \n        \n    }\n    --=========================================================================--\n    -- PONER APODO--\n    -- Si deseas poner un apodo a algun NPC o poner su nombre completo--\n    --=========================================================================--\n    --Por ejemplo [\"Aldeana tirnenn\"] = \"Grow\"--\n    \n    local renameTable = {\n        -- Agujas de ascension\n        -- [\"Devos\"] = \"Vieja Sabrosa\",\n        \n        --Nieblas de Tirna Scithe--\n        --[\"Aldeana tirnenn\"] = \"Grow\",\n        \n        --Teatro del dolor--\n        [\"Mordretha, the Endless Empress\"] = \"Mordretha\",     \n        \n        \n    }\n    \n    \n    function envTable.namer(unitId, marker, nameColouring, isBoss, debugMode, debugEntry)\n        if unitId then\n            \n            local name = UnitName(unitId)\n            local a,b,c,d,e,f= strsplit(' ', name, 5)\n            local unitName\n            \n            if debugMode then\n                print(\"DebugMode: \"..debugEntry..\" - Checking for dummy name\")\n                if b == \"Dummy\" or c == \"Dummy\" or d == \"Dummy\" or e == \"Dummy\" or f == \"Dummy\" then\n                    local lastName = b:find(\"Dummy\") and b or c:find(\"Dummy\") and c or d:find(\"Dummy\") and d\n                    print(\"DebugMode: \"..debugEntry..\" - Dummy Found!\")\n                    unitName = name ~=nil and lastName\n                end\n            end\n            \n            \n            if nameBlacklist[b] then\n                unitName = name ~=nil and (a or b or c or d or e or f) or nil\n            else\n                unitName = name ~=nil and (f or e or d or c or b or a) or ni\n            end\n            \n            if unitId and marker == nil and nameColouring then\n                marker = 8\n            end\n            \n            \n            \n            if unitName == nil then\n                unitName = name\n            end\n            \n            \n            if renameTable[name] then\n                unitName = renameTable[name]\n            end\n            if unitId and marker and nameColouring then\n                unitFrame.healthBar.unitName:SetText(WrapTextInColorCode(unitName, markerToHex[marker]))\n            elseif unitId then\n                unitFrame.healthBar.unitName:SetText(unitName)\n                \n            end    \n        end   \n    end\nend",
 					},
 					["Prio"] = 29,
+					["Name"] = "First or last Name & Rename(English)",
+					["PlaterCore"] = 1,
+					["LastHookEdited"] = "Constructor",
 					["Time"] = 1662655194,
+					["Icon"] = 134332,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -15766,10 +15427,6 @@ PlaterDB = {
 						["spec"] = {
 						},
 					},
-					["LastHookEdited"] = "Constructor",
-					["Name"] = "First or last Name & Rename(English)",
-					["Icon"] = 134332,
-					["PlaterCore"] = 1,
 				}, -- [28]
 				{
 					["OptionsValues"] = {
@@ -17392,7 +17049,7 @@ PlaterDB = {
 			["pet_height_scale"] = 0.94999998807907,
 			["aura_x_offset"] = -54.580001831055,
 			["range_check_alpha_friendlies"] = 1,
-			["indicator_spec"] = false,
+			["indicator_elite"] = false,
 			["widget_bar_scale"] = 0.68999999761581,
 			["aura_stack_color"] = {
 				0.36078431372549, -- [1]
@@ -17403,8 +17060,27 @@ PlaterDB = {
 			},
 			["ui_parent_buff_level"] = 1,
 			["health_statusbar_bgtexture"] = "Otravi",
-			["ui_parent_target_strata"] = "BACKGROUND",
-			["aura_show_enrage"] = true,
+			["indicator_raidmark_anchor"] = {
+				["x"] = 0,
+				["side"] = 9,
+			},
+			["tank"] = {
+				["colors"] = {
+					["anothertank"] = {
+						0.72941176470588, -- [1]
+						0.91764705882353, -- [2]
+					},
+					["aggro"] = {
+						0.50196078431373, -- [1]
+						0.50196078431373, -- [2]
+					},
+					["nocombat"] = {
+						0.50588235294118, -- [1]
+						0.086274509803922, -- [2]
+						0.082352941176471, -- [3]
+					},
+				},
+			},
 			["aura_tracker"] = {
 				["buff_banned"] = {
 					["206150"] = true,
@@ -17457,7 +17133,8 @@ PlaterDB = {
 			["aggro_can_check_notank"] = true,
 			["aura_timer"] = false,
 			["version"] = 17,
-			["indicator_elite"] = false,
+			["extra_icon_use_blizzard_border_color"] = false,
+			["indicator_spec"] = false,
 			["health_animation_time_dilatation"] = 2.6199998855591,
 			["border_color"] = {
 				nil, -- [1]
@@ -17469,14 +17146,14 @@ PlaterDB = {
 				["Escudo de fuego"] = false,
 			},
 			["castbar_icon_attach_to_side"] = "right",
-			["cast_statusbar_fadeout_time"] = 0.49999997019768,
 			["patch_version"] = 20,
 			["no_spellname_length_limit"] = true,
 			["range_check_in_range_or_target_alpha"] = 1,
 			["aura_timer_text_size"] = 8,
 			["extra_icon_show_timer"] = false,
-			["aura_height2"] = 15,
+			["cast_statusbar_fadeout_time"] = 0.49999997019768,
 			["number_region_first_run"] = true,
+			["aura_height2"] = 15,
 			["health_statusbar_bgcolor"] = {
 				0.18823529411765, -- [1]
 				0.1921568627451, -- [2]
@@ -17719,25 +17396,8 @@ PlaterDB = {
 			["castbar_target_font"] = "WEBSY2J",
 			["aura_alpha"] = 1,
 			["target_shady_combat_only"] = false,
-			["aura_grow_direction"] = 3,
-			["color_override_colors"] = {
-				[3] = {
-					1, -- [1]
-					0.16470588235294, -- [2]
-					0.098039215686275, -- [3]
-				},
-				[4] = {
-					1, -- [1]
-					0.92156862745098, -- [2]
-					0.13333333333333, -- [3]
-				},
-				[5] = {
-					0.023529411764706, -- [1]
-					0.82352941176471, -- [2]
-					0.023529411764706, -- [3]
-				},
-			},
 			["first_run3"] = true,
+			["aura_grow_direction"] = 3,
 			["dps"] = {
 				["colors"] = {
 					["solo"] = {
@@ -17760,35 +17420,32 @@ PlaterDB = {
 					},
 				},
 			},
-			["tank"] = {
-				["colors"] = {
-					["anothertank"] = {
-						0.72941176470588, -- [1]
-						0.91764705882353, -- [2]
-					},
-					["aggro"] = {
-						0.50196078431373, -- [1]
-						0.50196078431373, -- [2]
-					},
-					["nocombat"] = {
-						0.50588235294118, -- [1]
-						0.086274509803922, -- [2]
-						0.082352941176471, -- [3]
-					},
+			["color_override_colors"] = {
+				[3] = {
+					1, -- [1]
+					0.16470588235294, -- [2]
+					0.098039215686275, -- [3]
+				},
+				[4] = {
+					1, -- [1]
+					0.92156862745098, -- [2]
+					0.13333333333333, -- [3]
+				},
+				[5] = {
+					0.023529411764706, -- [1]
+					0.82352941176471, -- [2]
+					0.023529411764706, -- [3]
 				},
 			},
-			["health_cutoff_upper"] = false,
-			["aura_breakline_space"] = 15,
-			["indicator_raidmark_anchor"] = {
-				["x"] = 0,
-				["side"] = 9,
-			},
+			["aura_show_enrage"] = true,
+			["ui_parent_target_strata"] = "BACKGROUND",
+			["aura_timer_text_font"] = "WEBSY2J",
 			["extra_icon_show_purge_border"] = {
 				0.19607843137255, -- [1]
 				0.83921568627451, -- [2]
 			},
 			["cast_statusbar_spark_width"] = 4,
-			["indicator_rare"] = false,
+			["health_cutoff_upper"] = false,
 		},
 	},
 }

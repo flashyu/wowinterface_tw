@@ -773,11 +773,12 @@ TalentEmuSV = {
 	["var"] = {
 		["Player-4778-05305A69"] = "!T32-r0110!G32116++++++!E320+^+QR8:8r:9+6Q9:8r:9+TR8:8r:9+^+OR8:8r:9+PR8:8r:9+UR8:8r:9+MR8:8r:9+RR8:8r:9+NR8:8r:9+WR8:8r:9+3I9:8r:9+^+^+XR8:8r:9+nQ9:1eo:7r:9+^+^+^",
 		["savedTalent"] = {
-			["|cffff7c0a德鲁伊|r- |cff7fbfff平衡58|r 野性战斗 0 恢复13"] = "!T321E111KVNb2CZcyLGJu2:::E22u32",
+			["|cffff7c0a德鲁伊|r- 平衡 0 |cff7fbfff野性战斗68|r 恢复 3"] = "!T321E111I::0LIOAIMaw-=-wk=z02",
+			["|cffff7c0a德鲁伊|r- |cff7fbfff平衡58|r 野性战斗 0 恢复13"] = "!T321E111KV3X1CZcyLGhx2:::E22u32",
 			["|cffff7c0a德鲁伊|r- 平衡13 野性战斗 0 |cff7fbfff恢复58|r"] = "!T321E111LuEP1:::::UHLj5QiMz:=Jy1",
 		},
 		["Player-4778-053088A5"] = "!T32910110!G32116++++++!E320+^+^+^+^+a:81:9+^+^+b:81:9+c:81:9+^+^+^+^+^+^+^+m9A:81:9+^+^+^",
-		["Player-4778-05244F19"] = "!T321E121KVNb2CZcyLGJu2:::E22u32LuEP1:::::UHLj5QiMz:=Jy1!G3221w+9:iMB:=1u+-:18C:G1u+-:z7C:31u+9:gMB:61u+-:HRC:11u+9:0-D:21uw+9:WLB:D1u+-:z7C:31u+-:18C:G1u+9:cMB:B1u+-:HRC:11u+9:uLD:11u!E320+^+Hs9:1gv:155-:1UG-:5E1:9+pt-:2Ol9:6E1:9+Ks9:1Wv:1yk9:6E1:9+^+Js9:1om:1yk9:1Ol9:5E1:9+8o9:2yk9:6E1:9+Cr9:17u:1yk9:1Ol9:5E1:9+7t9:1Ks:7E1:9+5q9:1QY:7E1:9+Gs9:1Is:1yk9:6E1:9+Em9:8E1:9+Xz=:8E1:9+ev9:8E1:9+PK-:2gG-:1gG-:5E1:9+xo9:1Hw:7E1:9+zb9:1uv:7E1:9+0o9:8E1:9+1q9:8E1:9+GW-:8E1:9",
+		["Player-4778-05244F19"] = "!T321E122KV3X1CZcyLGhx2:::E22u32I::0LIOAIMaw-=-wk=z02!G3222w+9:iMB:=1u+-:18C:G1u+-:z7C:31u+9:gMB:61u+-:HRC:11u+9:0-D:21uw+9:WLB:D1u+-:z7C:31u+-:18C:G1u+9:cMB:B1u+-:HRC:11u+9:uLD:11u!E320+^+9q9:1ev:1Y6-:6E1:9+bv9:8E1:9+4e9:1Uv:18l9:6E1:9+^+Jp9:1om:1fl9:1Ty8:5E1:9+-59:2Ty8:1Ty8:5E1:9+hs9:1iv:7E1:9+9o-:8E1:9+Ww9:1-w:7E1:9+eq9:1Km:18l9:6E1:9+Vz=:8E1:9+Xz=:8E1:9+Y59:8E1:9+Lh4:8E1:9+wo9:1=F:7E1:9+vD9:8E1:9+^+RL9:8E1:9+IW-:8E1:9",
 		["Player-4778-05305580"] = "!T32310110!G32116++++++!E320+^+^+^+^+ET1:81:9+s:81:9+^+nJ:81:9+r:81:9+^+^+^+^+^+^+^+X:81:9+^+^+^",
 	},
 	["_version"] = 220811,

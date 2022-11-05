@@ -104,8 +104,7 @@ L["Group.target.self.Desc"] = "These options are used when targeting yourself"
 L["Group.targettarget.friendly.Desc"] = "These options are used when your target's target is friendly to you"
 --[[Translation missing --]]
 L["Group.targettarget.hostile.Desc"] = "These options are used when your target's target is hostile to you"
---[[Translation missing --]]
-L["Group.targettarget.Name"] = "Target of Target"
+L["Group.targettarget.Name"] = "대상의 대상"
 --[[Translation missing --]]
 L["Group.targettarget.self.Desc"] = "These options are used when your target is targeting you"
 L["Option.Unit.enable.Desc"] = "이 유닛에 대해 표시기를 켜거나 끕니다."
@@ -122,8 +121,7 @@ L["Option.UnitReactionType.texture.Desc"] = "표시기에 사용할 텍스처"
 L["Option.UnitReactionType.texture.Name"] = "텍스처"
 --[[Translation missing --]]
 L["Option.UnitReactionType.textureCustom.Desc"] = "The custom texture path to use for the indicator"
---[[Translation missing --]]
-L["Option.UnitReactionType.textureCustom.Name"] = "Custom Texture"
+L["Option.UnitReactionType.textureCustom.Name"] = "사용자 정의 텍스처"
 L["Option.UnitReactionType.texturePoint.Desc"] = "이름표에 고정되어야 하는 텍스처의 지점"
 L["Option.UnitReactionType.texturePoint.Name"] = "텍스처 지점"
 L["Option.UnitReactionType.width.Desc"] = "텍스처의 너비"

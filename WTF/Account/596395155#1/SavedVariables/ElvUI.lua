@@ -57,9 +57,9 @@ ElvDB = {
 				["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,0,61",
 				["ElvAB_5"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-490,22",
 				["VehicleLeaveButton"] = "BOTTOM,UIParent,BOTTOM,0,493",
-				["VOICECHAT"] = "TOPLEFT,UIParent,TOPLEFT,452,-255",
-				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
 				["ReputationBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,417,4",
+				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
+				["VOICECHAT"] = "TOPLEFT,UIParent,TOPLEFT,452,-255",
 				["TotemTrackerMover"] = "TOPLEFT,UIParent,TOPLEFT,582,-33",
 				["ShiftAB"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,418,209",
 				["ElvUF_PetCastbarMover"] = "BOTTOM,UIParent,BOTTOM,-288,277",
@@ -148,7 +148,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["祈福"] = {
-			["骑风"] = 33152557,
+			["骑风"] = 42681872,
 			["红发男"] = 0,
 			["仓库技师"] = 4301429,
 			["死哪了"] = 2000,
@@ -232,10 +232,6 @@ ElvDB = {
 			},
 		},
 		["general"] = {
-			["AceGUI"] = {
-				["height"] = 709.21,
-				["width"] = 904.64,
-			},
 			["UIScale"] = 0.7000000000000001,
 		},
 	},

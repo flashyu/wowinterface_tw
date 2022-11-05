@@ -181,9 +181,9 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"HellfireRamparts", -- [2]
+					"ObsidianSanctum", -- [2]
 					nil, -- [3]
-					1, -- [4]
+					9, -- [4]
 					0, -- [5]
 				},
 			},
