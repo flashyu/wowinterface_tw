@@ -10,37 +10,45 @@ CodexConfig = {
 	["minimumDropChance"] = 2,
 	["showLowLevel"] = false,
 	["_tom_waypoint"] = {
-		1944, -- [1]
-		0.356, -- [2]
-		0.514, -- [3]
+		1946, -- [1]
+		0.802, -- [2]
+		0.652, -- [3]
 		["arrivaldistance"] = 15,
 		["callbacks"] = {
 			["distance"] = {
-			},
-			["minimap"] = {
+				[10] = nil --[[ skipped inline function ]],
+				[15] = nil --[[ skipped inline function ]],
 			},
 			["world"] = {
+				["onclick"] = nil --[[ skipped inline function ]],
+				["tooltip_update"] = nil --[[ skipped inline function ]],
+				["tooltip_show"] = nil --[[ skipped inline function ]],
+			},
+			["minimap"] = {
+				["onclick"] = nil --[[ skipped inline function ]],
+				["tooltip_update"] = nil --[[ skipped inline function ]],
+				["tooltip_show"] = nil --[[ skipped inline function ]],
 			},
 		},
 		["persistent"] = true,
 		["minimap"] = true,
 		["cleardistance"] = 10,
-		["title"] = "The Stadium Capture Credit Marker",
+		["title"] = "莫希斯·轻翼",
 		["from"] = "?",
 		["crazy"] = true,
 		["world"] = true,
 	},
-	["minimapButton"] = true,
-	["autoTurnin"] = false,
+	["continentIcon"] = false,
+	["currentQuestGivers"] = true,
 	["spawnMarkerSize"] = 15,
-	["zoneMapIcon"] = true,
+	["showFestival"] = false,
 	["alwaysShowId"] = false,
 	["nameplateIcon"] = false,
 	["colorBySpawn"] = true,
-	["showFestival"] = false,
+	["zoneMapIcon"] = true,
 	["miniMapIcon"] = true,
-	["currentQuestGivers"] = true,
-	["continentIcon"] = false,
+	["autoTurnin"] = false,
+	["minimapButton"] = true,
 	["questMarkerSize"] = 15,
 }
 CodexHiddenQuests = {
@@ -71,10 +79,10 @@ CodexColors = {
 		0.5411764705882353, -- [2]
 		0.5254901960784314, -- [3]
 	},
-	["Broken Hill Capture Credit Marker"] = {
-		0.2392156862745098, -- [1]
-		0.611764705882353, -- [2]
-		0.4784313725490196, -- [3]
+	["吞火者"] = {
+		0.6470588235294118, -- [1]
+		0.4235294117647059, -- [2]
+		0.5490196078431373, -- [3]
 	},
 	["雄鹰神殿"] = {
 		0.3176470588235294, -- [1]
@@ -86,9 +94,9 @@ CodexColors = {
 		0.3843137254901961, -- [2]
 		0.1647058823529412, -- [3]
 	},
-	["吞火者"] = {
-		0.6470588235294118, -- [1]
-		0.4235294117647059, -- [2]
-		0.5490196078431373, -- [3]
+	["Broken Hill Capture Credit Marker"] = {
+		0.2392156862745098, -- [1]
+		0.611764705882353, -- [2]
+		0.4784313725490196, -- [3]
 	},
 }

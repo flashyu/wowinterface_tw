@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0707,
-	["LastPlayerFullName"] = "部落太难-祈福",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 34652,
@@ -62,12 +60,21 @@ PawnOptions = {
 			["AlsoFitsIn"] = 11,
 			["Link"] = "|cff1eff00|Hitem:38147::::::::55:::::::::|h[腐蚀指环]|h|r",
 		}, -- [12]
-		[15] = {
+		nil, -- [13]
+		nil, -- [14]
+		{
 			["ID"] = 34659,
 			["Level"] = 60,
 			["Link"] = "|cff1eff00|Hitem:34659::::::::55:::::::::|h[阿彻鲁斯骑士披风]|h|r",
-		},
+		}, -- [15]
+		{
+			["ID"] = 38707,
+			["Level"] = 65,
+			["Link"] = "|cff0070dd|Hitem:38707::::::::55:::::::::|h[符文灵魂之剑]|h|r",
+		}, -- [16]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "部落太难-祈福",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

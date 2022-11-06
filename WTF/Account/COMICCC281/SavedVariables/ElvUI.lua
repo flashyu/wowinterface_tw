@@ -62,27 +62,15 @@ ElvDB = {
 			["部落太难"] = 2000,
 		},
 	},
-	["serverID"] = {
-		[4778] = {
-			["祈福"] = true,
-		},
-	},
 	["faction"] = {
 		["祈福"] = {
 			["芈灭"] = "Alliance",
 			["部落太难"] = "Horde",
 		},
 	},
-	["global"] = {
-		["nameplates"] = {
-			["filters"] = {
-				["ElvUI_NonTarget"] = {
-				},
-				["ElvUI_Target"] = {
-				},
-				["ElvUI_Boss"] = {
-				},
-			},
+	["serverID"] = {
+		[4778] = {
+			["祈福"] = true,
 		},
 	},
 }

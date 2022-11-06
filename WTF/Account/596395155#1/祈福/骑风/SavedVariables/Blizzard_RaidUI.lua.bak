@@ -1,8 +1,8 @@
 
 RAID_PULLOUT_POSITIONS = {
 	["ROGUE"] = {
-		["y"] = 890.4127807617188,
-		["x"] = 343.534423828125,
+		["y"] = 1027.047729492188,
+		["x"] = 421.2487487792969,
 		["point"] = "TOP",
 		["relativePoint"] = "BOTTOMLEFT",
 		["class"] = "潜行者",
