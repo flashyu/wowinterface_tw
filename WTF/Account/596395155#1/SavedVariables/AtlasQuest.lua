@@ -1,5 +1,9 @@
 
 AtlasQuest_Options = {
+	["Helloworlds"] = {
+		["ShownSide"] = "Left",
+		["AtlasAutoShow"] = 1,
+	},
 	["Version"] = "4.13.03",
 	["骑风"] = {
 		["ShownSide"] = "Left",
@@ -9,11 +13,11 @@ AtlasQuest_Options = {
 		["ShownSide"] = "Left",
 		["AtlasAutoShow"] = 1,
 	},
-	["仓库技师"] = {
+	["死哪了"] = {
 		["ShownSide"] = "Left",
 		["AtlasAutoShow"] = 1,
 	},
-	["死哪了"] = {
+	["仓库技师"] = {
 		["ShownSide"] = "Left",
 		["AtlasAutoShow"] = 1,
 	},

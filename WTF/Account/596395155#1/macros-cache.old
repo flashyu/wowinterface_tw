@@ -2,8 +2,7 @@ VER 3 0000000000000005 "cz" "135811"
 /run ResetInstances()
 END
 VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
-/stopcasting
-/cast [@mouseover,nomod,exists] 解除诅咒;  [@mouseover,exists,mod:ctrl] 驱毒术; [@mouseover,exists,mod:shift] 解除诅咒
+/script DecursiveRootTable.Dcr:Println('没有相关技能')
 END
 VER 3 000000000000000D "healbot大迅捷" "INV_MISC_QUESTIONMARK"
 #showtooltip 自然迅捷
@@ -30,7 +29,7 @@ VER 3 0000000000000009 "RXPTargeting" "Ability_eyeoftheowl"
 //RestedXP Guides - current step has no configured targets
 END
 VER 3 000000000000001A "target" "132177"
-/target 伊瑟基尔
+/target 精锐北伐军战士奥利卡
 END
 VER 3 0000000000000002 "target宏" "INV_MISC_QUESTIONMARK"
 /target 逆风术士

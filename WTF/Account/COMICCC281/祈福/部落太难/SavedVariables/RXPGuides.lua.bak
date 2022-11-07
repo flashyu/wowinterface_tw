@@ -1,0 +1,76 @@
+
+RXPCData = {
+	["completedWaypoints"] = {
+		[18] = {
+		},
+	},
+	["currentStep"] = 18,
+	["currentGuideName"] = "55-58 东瘟疫之地:血色领地",
+	["stepSkip"] = {
+		[11] = true,
+		[15] = true,
+		[17] = true,
+	},
+	["flightPaths"] = {
+	},
+	["currentGuideGroup"] = "RestedXP 死亡骑士 Start",
+}
+RXPCTrackingData = {
+	["profileKeys"] = {
+		["部落太难 - 祈福"] = "部落太难 - 祈福",
+	},
+	["profiles"] = {
+		["部落太难 - 祈福"] = {
+			["levels"] = {
+				[55] = {
+					["groupExperience"] = 0,
+					["deaths"] = 0,
+					["mobs"] = {
+						["东瘟疫之地：血色领地"] = {
+							["xp"] = 12250,
+							["count"] = 1,
+						},
+					},
+					["timestamp"] = {
+						["started"] = 0,
+					},
+					["quests"] = {
+						["东瘟疫之地：血色领地"] = {
+							[12641] = 12250,
+						},
+					},
+				},
+			},
+		},
+	},
+}
+RXPCComms = {
+	["profileKeys"] = {
+		["部落太难 - 祈福"] = "部落太难 - 祈福",
+	},
+	["profiles"] = {
+		["部落太难 - 祈福"] = {
+			["announcements"] = {
+				["55-58 东瘟疫之地:血色领地"] = {
+					["collect"] = {
+					},
+					["complete"] = {
+					},
+				},
+			},
+		},
+	},
+}
+RXPCSettings = {
+	["profileKeys"] = {
+		["部落太难 - 祈福"] = "部落太难 - 祈福",
+	},
+	["profiles"] = {
+		["部落太难 - 祈福"] = {
+			["guideFontSize"] = 13,
+			["frameHeight"] = 367.9197998046875,
+			["hardcore"] = false,
+			["xprate"] = 1,
+		},
+	},
+}

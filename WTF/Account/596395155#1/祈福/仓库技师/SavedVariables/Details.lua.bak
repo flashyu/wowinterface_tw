@@ -32,7 +32,7 @@ _detalhes_database = {
 		["pos"] = {
 		},
 	},
-	["last_version"] = "3.4.0 10136",
+	["last_version"] = "3.4.0 10259",
 	["SoloTablesSaved"] = {
 		["Mode"] = 1,
 	},
@@ -123,30 +123,14 @@ _detalhes_database = {
 			},
 			["main_frame_locked"] = false,
 			["arrow_anchor_x"] = 0,
-			["use_spark"] = true,
-			["row_texture"] = "Details Serenity",
-			["square_grow_direction"] = "right",
 			["row_color"] = {
 				0.1, -- [1]
 				0.1, -- [2]
 				0.1, -- [3]
 				0.4, -- [4]
 			},
-			["author"] = "Terciob",
-			["square_amount"] = 5,
-			["enabled"] = false,
-			["arrow_size"] = 10,
-			["y"] = 0,
-			["row_spacement"] = 21,
-			["main_frame_color"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.2, -- [4]
-			},
-			["main_frame_strata"] = "LOW",
-			["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
-			["font_size"] = 10,
+			["row_texture"] = "Details Serenity",
+			["square_grow_direction"] = "right",
 			["per_second"] = {
 				["enabled"] = false,
 				["point"] = "CENTER",
@@ -158,6 +142,22 @@ _detalhes_database = {
 				["update_speed"] = 0.05,
 				["size"] = 32,
 			},
+			["author"] = "Terciob",
+			["square_amount"] = 5,
+			["enabled"] = false,
+			["arrow_size"] = 10,
+			["font_size"] = 10,
+			["row_spacement"] = 21,
+			["main_frame_color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.2, -- [4]
+			},
+			["main_frame_strata"] = "LOW",
+			["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
+			["y"] = 0,
+			["use_spark"] = true,
 			["x"] = -3.0517578125e-05,
 			["font_face"] = "Friz Quadrata TT",
 			["square_size"] = 32,
@@ -172,12 +172,6 @@ _detalhes_database = {
 			["scale"] = 1,
 		},
 	},
-	["last_day"] = "12",
-	["last_instance_time"] = 0,
-	["announce_damagerecord"] = {
-		["enabled"] = true,
-		["channel"] = "SELF",
-	},
 	["mythic_dungeon_currentsaved"] = {
 		["dungeon_name"] = "",
 		["started"] = false,
@@ -189,6 +183,12 @@ _detalhes_database = {
 		["dungeon_zone_id"] = 0,
 		["previous_boss_killed_at"] = 0,
 	},
+	["last_day"] = "07",
+	["announce_damagerecord"] = {
+		["enabled"] = true,
+		["channel"] = "SELF",
+	},
+	["last_instance_time"] = 0,
 	["announce_firsthit"] = {
 		["enabled"] = true,
 		["channel"] = "SELF",
@@ -198,9 +198,9 @@ _detalhes_database = {
 	["savedStyles"] = {
 	},
 	["character_data"] = {
-		["logons"] = 4,
+		["logons"] = 8,
 	},
-	["combat_counter"] = 8,
+	["combat_counter"] = 16,
 	["announce_deaths"] = {
 		["enabled"] = false,
 		["last_hits"] = 1,
@@ -328,7 +328,7 @@ _detalhes_database = {
 		},
 	},
 	["nick_tag_cache"] = {
-		["nextreset"] = 1666578799,
+		["nextreset"] = 1668783890,
 		["last_version"] = 15,
 	},
 	["ignore_nicktag"] = false,
@@ -352,7 +352,7 @@ _detalhes_database = {
 			["attribute"] = 1,
 			["pos"] = {
 				["normal"] = {
-					["y"] = -118.0366821289063,
+					["y"] = -118.0365905761719,
 					["x"] = -820.2381134033203,
 					["w"] = 309.9999694824219,
 					["h"] = 157.9999237060547,
@@ -380,7 +380,6 @@ _detalhes_database = {
 	["cached_roles"] = {
 	},
 	["cached_specs"] = {
-		["Player-4778-05042A10"] = 251,
-		["Player-4778-0504F9E3"] = 252,
+		["Player-4509-04CE3361"] = 267,
 	},
 }

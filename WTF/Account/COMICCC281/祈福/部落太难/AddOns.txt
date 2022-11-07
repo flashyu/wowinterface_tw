@@ -12,3 +12,4 @@ kExtraBossFrames: disabled
 Leatrix_Plus: enabled
 WeakAurasCompanion: enabled
 WeakAurasArchive: enabled
+ElvUI_OptionsUI: enabled

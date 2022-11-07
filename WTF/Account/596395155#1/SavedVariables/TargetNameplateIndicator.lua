@@ -1,8 +1,9 @@
 
 TargetNameplateIndicatorDB = {
 	["profileKeys"] = {
-		["仓库技师 - 祈福"] = "Default",
 		["骑风 - 祈福"] = "Default",
+		["Helloworlds - 沙尔图拉"] = "Default",
+		["仓库技师 - 祈福"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -11,6 +12,13 @@ TargetNameplateIndicatorDB = {
 					["width"] = 30,
 					["height"] = 30,
 					["texture"] = "Interface\\AddOns\\TargetNameplateIndicator\\Textures\\NeonRedArrow",
+				},
+			},
+			["mouseover"] = {
+				["hostile"] = {
+					["width"] = 20,
+					["height"] = 20,
+					["texture"] = "Interface\\AddOns\\TargetNameplateIndicator\\Textures\\NeonGreenArrow",
 				},
 			},
 			["targettarget"] = {
@@ -24,13 +32,6 @@ TargetNameplateIndicatorDB = {
 				},
 				["friendly"] = {
 					["texture"] = "Interface\\AddOns\\TargetNameplateIndicator\\Textures\\NeonReticule",
-				},
-			},
-			["mouseover"] = {
-				["hostile"] = {
-					["width"] = 20,
-					["height"] = 20,
-					["texture"] = "Interface\\AddOns\\TargetNameplateIndicator\\Textures\\NeonGreenArrow",
 				},
 			},
 			["focus"] = {

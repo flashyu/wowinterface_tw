@@ -2,9 +2,10 @@
 Details_StreamerDB = {
 	["characters"] = {
 		["骑风 - 祈福"] = "骑风 - 祈福",
+		["Helloworlds - 沙尔图拉"] = "骑风 - 祈福",
+		["仓库技师 - 祈福"] = "骑风 - 祈福",
 		["红发男 - 祈福"] = "骑风 - 祈福",
 		["死哪了 - 祈福"] = "骑风 - 祈福",
-		["仓库技师 - 祈福"] = "骑风 - 祈福",
 	},
 	["profiles"] = {
 		["骑风 - 祈福"] = {
@@ -18,10 +19,7 @@ Details_StreamerDB = {
 				0.5, -- [4]
 			},
 			["scale"] = 1,
-			["main_frame_size"] = {
-				300, -- [1]
-				500.0000305175781, -- [2]
-			},
+			["arrow_anchor_y"] = 0,
 			["minimap"] = {
 				["minimapPos"] = 160,
 				["radius"] = 160,
@@ -42,21 +40,6 @@ Details_StreamerDB = {
 			["square_amount"] = 5,
 			["enabled"] = false,
 			["arrow_size"] = 10,
-			["font_size"] = 10,
-			["row_spacement"] = 21,
-			["main_frame_color"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.2, -- [4]
-			},
-			["row_color"] = {
-				0.1, -- [1]
-				0.1, -- [2]
-				0.1, -- [3]
-				0.4, -- [4]
-			},
-			["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
 			["per_second"] = {
 				["enabled"] = false,
 				["point"] = "CENTER",
@@ -68,14 +51,32 @@ Details_StreamerDB = {
 				["update_speed"] = 0.05,
 				["attribute_type"] = 1,
 			},
-			["use_spark"] = true,
+			["row_spacement"] = 21,
+			["main_frame_color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.2, -- [4]
+			},
+			["author"] = "Terciob",
+			["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
+			["y"] = 0,
+			["font_size"] = 10,
 			["x"] = -3.0517578125e-05,
 			["font_face"] = "Friz Quadrata TT",
 			["square_size"] = 32,
-			["y"] = 0,
-			["author"] = "Terciob",
+			["use_spark"] = true,
+			["row_color"] = {
+				0.1, -- [1]
+				0.1, -- [2]
+				0.1, -- [3]
+				0.4, -- [4]
+			},
 			["main_frame_locked"] = false,
-			["arrow_anchor_y"] = 0,
+			["main_frame_size"] = {
+				300, -- [1]
+				500.0000305175781, -- [2]
+			},
 		},
 	},
 }

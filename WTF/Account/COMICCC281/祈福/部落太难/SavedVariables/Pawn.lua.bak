@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0707,
+	["LastPlayerFullName"] = "部落太难-祈福",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 34652,
@@ -73,8 +75,6 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:38707::::::::55:::::::::|h[符文灵魂之剑]|h|r",
 		}, -- [16]
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "部落太难-祈福",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

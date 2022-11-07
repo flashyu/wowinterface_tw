@@ -6,6 +6,15 @@ ThreatClassic2DB = {
 	},
 	["profiles"] = {
 		["Default"] = {
+			["frame"] = {
+				["position"] = {
+					nil, -- [1]
+					nil, -- [2]
+					nil, -- [3]
+					24.30658531188965, -- [4]
+					-85.5473861694336, -- [5]
+				},
+			},
 			["bar"] = {
 				["count"] = 8,
 			},

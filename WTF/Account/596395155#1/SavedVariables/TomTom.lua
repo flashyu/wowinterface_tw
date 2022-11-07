@@ -2,9 +2,10 @@
 TomTomDB = {
 	["profileKeys"] = {
 		["骑风 - 祈福"] = "Default",
+		["Helloworlds - 沙尔图拉"] = "Default",
+		["仓库技师 - 祈福"] = "Default",
 		["红发男 - 祈福"] = "Default",
 		["死哪了 - 祈福"] = "Default",
-		["仓库技师 - 祈福"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -33,18 +34,21 @@ TomTomWaypoints = nil
 TomTomWaypointsM = {
 	["profileKeys"] = {
 		["骑风 - 祈福"] = "骑风 - 祈福",
+		["Helloworlds - 沙尔图拉"] = "Helloworlds - 沙尔图拉",
+		["仓库技师 - 祈福"] = "仓库技师 - 祈福",
 		["红发男 - 祈福"] = "红发男 - 祈福",
 		["死哪了 - 祈福"] = "死哪了 - 祈福",
-		["仓库技师 - 祈福"] = "仓库技师 - 祈福",
 	},
 	["profiles"] = {
 		["骑风 - 祈福"] = {
 		},
+		["Helloworlds - 沙尔图拉"] = {
+		},
+		["仓库技师 - 祈福"] = {
+		},
 		["红发男 - 祈福"] = {
 		},
 		["死哪了 - 祈福"] = {
-		},
-		["仓库技师 - 祈福"] = {
 		},
 	},
 }

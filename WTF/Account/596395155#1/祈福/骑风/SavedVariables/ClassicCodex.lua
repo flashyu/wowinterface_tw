@@ -16,18 +16,10 @@ CodexConfig = {
 		["arrivaldistance"] = 15,
 		["callbacks"] = {
 			["distance"] = {
-				[10] = nil --[[ skipped inline function ]],
-				[15] = nil --[[ skipped inline function ]],
 			},
 			["world"] = {
-				["onclick"] = nil --[[ skipped inline function ]],
-				["tooltip_update"] = nil --[[ skipped inline function ]],
-				["tooltip_show"] = nil --[[ skipped inline function ]],
 			},
 			["minimap"] = {
-				["onclick"] = nil --[[ skipped inline function ]],
-				["tooltip_update"] = nil --[[ skipped inline function ]],
-				["tooltip_show"] = nil --[[ skipped inline function ]],
 			},
 		},
 		["persistent"] = true,
@@ -79,15 +71,15 @@ CodexColors = {
 		0.5411764705882353, -- [2]
 		0.5254901960784314, -- [3]
 	},
-	["吞火者"] = {
-		0.6470588235294118, -- [1]
-		0.4235294117647059, -- [2]
-		0.5490196078431373, -- [3]
-	},
 	["雄鹰神殿"] = {
 		0.3176470588235294, -- [1]
 		0.9921568627450981, -- [2]
 		0.5294117647058824, -- [3]
+	},
+	["吞火者"] = {
+		0.6470588235294118, -- [1]
+		0.4235294117647059, -- [2]
+		0.5490196078431373, -- [3]
 	},
 	["部落篝火"] = {
 		0.7490196078431373, -- [1]
