@@ -10,22 +10,30 @@ CodexConfig = {
 	["minimumDropChance"] = 2,
 	["showLowLevel"] = false,
 	["_tom_waypoint"] = {
-		1946, -- [1]
-		0.802, -- [2]
-		0.652, -- [3]
+		1944, -- [1]
+		0.399, -- [2]
+		0.484, -- [3]
 		["arrivaldistance"] = 15,
 		["callbacks"] = {
 			["distance"] = {
+				[10] = nil --[[ skipped inline function ]],
+				[15] = nil --[[ skipped inline function ]],
 			},
 			["world"] = {
+				["onclick"] = nil --[[ skipped inline function ]],
+				["tooltip_update"] = nil --[[ skipped inline function ]],
+				["tooltip_show"] = nil --[[ skipped inline function ]],
 			},
 			["minimap"] = {
+				["onclick"] = nil --[[ skipped inline function ]],
+				["tooltip_update"] = nil --[[ skipped inline function ]],
+				["tooltip_show"] = nil --[[ skipped inline function ]],
 			},
 		},
 		["persistent"] = true,
 		["minimap"] = true,
 		["cleardistance"] = 10,
-		["title"] = "莫希斯·轻翼",
+		["title"] = "The Overlook Capture Credit Marker",
 		["from"] = "?",
 		["crazy"] = true,
 		["world"] = true,

@@ -49,6 +49,7 @@ ElvDB = {
 					["buttons"] = 12,
 					["buttonsPerRow"] = 12,
 				},
+				["lockActionBars"] = false,
 			},
 			["convertPages"] = true,
 			["chat"] = {
@@ -59,18 +60,18 @@ ElvDB = {
 	["gold"] = {
 		["祈福"] = {
 			["芈灭"] = 1036699,
-			["部落太难"] = 2000,
+			["部落太难"] = 128388,
+		},
+	},
+	["serverID"] = {
+		[4778] = {
+			["祈福"] = true,
 		},
 	},
 	["faction"] = {
 		["祈福"] = {
 			["芈灭"] = "Alliance",
 			["部落太难"] = "Horde",
-		},
-	},
-	["serverID"] = {
-		[4778] = {
-			["祈福"] = true,
 		},
 	},
 }

@@ -1,6 +1,6 @@
 
 BugGrabberDB = {
-	["session"] = 350,
+	["session"] = 354,
 	["lastSanitation"] = 3,
 	["errors"] = {
 		{
@@ -792,5 +792,21 @@ BugGrabberDB = {
 			["session"] = 350,
 			["counter"] = 9,
 		}, -- [104]
+		{
+			["message"] = "Interface\\FrameXML\\ChatFrame.lua:1094: bad argument #1 to 'random' (interval is empty)",
+			["time"] = "2022/11/08 23:19:35",
+			["locals"] = "(*temporary) = 0\n",
+			["stack"] = "[string \"=[C]\"]: in function `random'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:1094: in function <Interface\\FrameXML\\ChatFrame.lua:1077>\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:1229: in function `?'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4913: in function `ChatEdit_ParseText'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4596: in function `ChatEdit_SendText'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:2977: in function <Interface\\FrameXML\\ChatFrame.lua:2970>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `UseAction'\n[string \"@Interface\\FrameXML\\SecureTemplates.lua\"]:343: in function `handler'\n[string \"@Interface\\FrameXML\\SecureTemplates.lua\"]:625: in function <Interface\\FrameXML\\SecureTemplates.lua:569>\n[string \"=[C]\"]: ?\n[string \"@Interface\\FrameXML\\SecureHandlers.lua\"]:266: in function <Interface\\FrameXML\\SecureHandlers.lua:263>\n[string \"=[C]\"]: ?\n[string \"@Interface\\FrameXML\\SecureHandlers.lua\"]:296: in function <Interface\\FrameXML\\SecureHandlers.lua:279>\n[string \"=(tail call)\"]: ?",
+			["session"] = 354,
+			["counter"] = 8,
+		}, -- [105]
+		{
+			["message"] = "Interface\\FrameXML\\ChatFrame.lua:1060: bad argument #1 to 'strlower' (string expected, got nil)",
+			["time"] = "2022/11/08 23:22:27",
+			["locals"] = "(*temporary) = nil\n(*temporary) = \"string expected, got nil\"\n",
+			["stack"] = "[string \"=[C]\"]: in function `strlower'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:1060: in function <Interface\\FrameXML\\ChatFrame.lua:1055>",
+			["session"] = 354,
+			["counter"] = 3,
+		}, -- [106]
 	},
 }

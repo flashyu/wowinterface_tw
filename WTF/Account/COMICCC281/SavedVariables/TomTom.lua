@@ -37,6 +37,37 @@ TomTomWaypointsM = {
 		["芈灭 - 祈福"] = {
 		},
 		["部落太难 - 祈福"] = {
+			[1944] = {
+				["1944:399633387.19774:491743958.27555:TomTom 路径点"] = {
+					1944, -- [1]
+					0.399633387197741, -- [2]
+					0.4917439582755517, -- [3]
+					["arrivaldistance"] = 15,
+					["crazy"] = true,
+					["persistent"] = true,
+					["minimap"] = true,
+					["cleardistance"] = 10,
+					["title"] = "TomTom 路径点",
+					["from"] = "TomTom/wm",
+					["callbacks"] = {
+						["distance"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+					},
+					["world"] = true,
+				},
+			},
 		},
 	},
 }

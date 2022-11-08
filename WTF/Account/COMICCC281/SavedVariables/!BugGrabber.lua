@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
+	["session"] = 10,
 	["lastSanitation"] = 3,
-	["session"] = 9,
 	["errors"] = {
 		{
 			["message"] = "...ace\\AddOns\\AdvancedInterfaceOptions\\basicOptions.lua:351: attempt to index field 'CustomVars' (a nil value)",
@@ -63,8 +63,8 @@ BugGrabberDB = {
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'Questie' 尝试调用保护功能 'Questie_BaseFrame:SetWidth()'。",
 			["time"] = "2022/11/08 00:23:20",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetWidth'\n[string \"@Interface\\AddOns\\Questie\\Modules\\Tracker\\TrackerBaseFrame.lua\"]:313: in function `UpdateWidth'\n[string \"@Interface\\AddOns\\Questie\\Modules\\Tracker\\QuestieTracker.lua\"]:1026: in function `Update'\n[string \"@Interface\\AddOns\\Questie\\Modules\\Quest\\QuestieQuest.lua\"]:378: in function `val'\n[string \"@Interface\\AddOns\\Questie\\Modules\\TaskQueue.lua\"]:8: in function <Interface\\AddOns\\Questie\\Modules\\TaskQueue.lua:6>",
-			["session"] = 9,
-			["counter"] = 1,
+			["session"] = 10,
+			["counter"] = 2,
 		}, -- [8]
 	},
 }

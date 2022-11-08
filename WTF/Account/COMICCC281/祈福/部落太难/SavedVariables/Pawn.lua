@@ -1,11 +1,13 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0707,
+	["LastPlayerFullName"] = "部落太难-祈福",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
-			["ID"] = 34652,
-			["Level"] = 60,
-			["Link"] = "|cff1eff00|Hitem:34652::::::::55:::::::::|h[阿彻鲁斯骑士罩帽]|h|r",
+			["ID"] = 38661,
+			["Level"] = 70,
+			["Link"] = "|cff0070dd|Hitem:38661::::::::57:::::::::|h[天灾勇士的巨盔]|h|r",
 		}, -- [1]
 		{
 			["ID"] = 38662,
@@ -13,15 +15,15 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:38662::::::::55:::::::::|h[黑锋项链]|h|r",
 		}, -- [2]
 		{
-			["ID"] = 34655,
-			["Level"] = 60,
-			["Link"] = "|cff1eff00|Hitem:34655::::::::55:::::::::|h[阿彻鲁斯骑士护肩]|h|r",
+			["ID"] = 38663,
+			["Level"] = 70,
+			["Link"] = "|cff0070dd|Hitem:38663::::::::57:::::::::|h[浸血的萨隆邪铁肩铠]|h|r",
 		}, -- [3]
 		nil, -- [4]
 		{
-			["ID"] = 34650,
-			["Level"] = 60,
-			["Link"] = "|cff1eff00|Hitem:34650::::::::55:::::::::|h[阿彻鲁斯骑士外套]|h|r",
+			["ID"] = 38665,
+			["Level"] = 70,
+			["Link"] = "|cff0070dd|Hitem:38665::::::::57:::::::::|h[萨隆邪铁作战板甲]|h|r",
 		}, -- [5]
 		{
 			["ID"] = 38668,
@@ -44,9 +46,9 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:38666::::::::56:::::::::|h[萨隆邪铁板甲护腕]|h|r",
 		}, -- [9]
 		{
-			["ID"] = 34649,
-			["Level"] = 60,
-			["Link"] = "|cff1eff00|Hitem:34649::::::::55:::::::::|h[阿彻鲁斯骑士护手]|h|r",
+			["ID"] = 38667,
+			["Level"] = 70,
+			["Link"] = "|cff0070dd|Hitem:38667::::::::57:::::::::|h[血毒的命令护手]|h|r",
 		}, -- [10]
 		{
 			["ID"] = 38671,
@@ -84,8 +86,6 @@ PawnOptions = {
 			["Link"] = "|cffffffff|Hitem:39371::::::::56:::::::::|h[凯雷塞斯的说服者]|h|r",
 		}, -- [16]
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "部落太难-祈福",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

@@ -51,6 +51,10 @@ END
 VER 3 000000000000001B "团队" "136047"
 /script ConvertToRaid();
 END
+VER 3 000000000000001D "坐骑" "132242"
+#showtooltip
+/userandom 乌鸦之神
+END
 VER 3 0000000000000004 "开蚌壳" "136058"
 /use 巨型蚌壳
 /use 巨型蚌壳

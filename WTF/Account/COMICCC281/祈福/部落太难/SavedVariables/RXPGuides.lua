@@ -1,38 +1,21 @@
 
 RXPCData = {
 	["completedWaypoints"] = {
-		[76] = {
+		[11] = {
 		},
 	},
-	["currentStep"] = 76,
-	["currentGuideName"] = "55-58 东瘟疫之地:血色领地",
+	["currentStep"] = 11,
+	["currentGuideName"] = "59-61 地狱火半岛",
 	["stepSkip"] = {
-		[58] = true,
-		[30] = true,
-		[61] = true,
-		[33] = true,
-		[66] = true,
-		[36] = true,
-		[72] = true,
-		[74] = true,
-		[20] = true,
-		[11] = true,
-		[22] = true,
-		[17] = true,
-		[46] = true,
-		[48] = true,
-		[15] = true,
-		[67] = true,
-		[26] = true,
-		[52] = true,
-		[27] = true,
-		[34] = true,
-		[42] = true,
-		[64] = true,
+		[8] = true,
+		[2] = true,
+		[7] = true,
 	},
 	["flightPaths"] = {
+		[99] = "萨尔玛，地狱火半岛",
+		[130] = "地狱火半岛，黑暗之门，部落",
 	},
-	["currentGuideGroup"] = "RestedXP 死亡骑士 Start",
+	["currentGuideGroup"] = "RestedXP 部落 60-70",
 }
 RXPCTrackingData = {
 	["profileKeys"] = {
@@ -55,10 +38,10 @@ RXPCTrackingData = {
 							["monthDay"] = 7,
 							["day"] = 0,
 							["month"] = 11,
-							["minute"] = 44,
+							["weekday"] = 2,
 							["year"] = 2022,
 							["hour"] = 23,
-							["weekday"] = 2,
+							["minute"] = 44,
 						},
 						["finished"] = 12531,
 						["started"] = 0,
@@ -72,18 +55,18 @@ RXPCTrackingData = {
 							[12680] = 12250,
 							[12849] = 12250,
 							[12641] = 12250,
-							[12670] = 825,
 							[12657] = 12250,
+							[12670] = 825,
 						},
 					},
 				},
 				[57] = {
 					["groupExperience"] = 0,
-					["deaths"] = 0,
+					["deaths"] = 1,
 					["mobs"] = {
 						["东瘟疫之地：血色领地"] = {
-							["xp"] = 1801,
-							["count"] = 2,
+							["xp"] = 152613,
+							["count"] = 30,
 						},
 					},
 					["timestamp"] = {
@@ -91,15 +74,37 @@ RXPCTrackingData = {
 							["monthDay"] = 8,
 							["day"] = 0,
 							["month"] = 11,
-							["minute"] = 28,
+							["weekday"] = 3,
 							["year"] = 2022,
 							["hour"] = 0,
+							["minute"] = 28,
+						},
+						["finished"] = 19914,
+						["dateFinished"] = {
+							["monthDay"] = 8,
+							["day"] = 0,
+							["month"] = 11,
+							["minute"] = 12,
+							["year"] = 2022,
+							["hour"] = 23,
 							["weekday"] = 3,
 						},
 						["started"] = 15193,
 					},
 					["quests"] = {
 						["东瘟疫之地：血色领地"] = {
+							[12724] = 12250,
+							[12756] = 12250,
+							[12757] = 16350,
+							[12754] = 12250,
+							[12779] = 16350,
+							[12751] = 12250,
+							[12738] = 825,
+							[12725] = 12250,
+							[12727] = 16350,
+							[12755] = 12250,
+							[12739] = 12250,
+							[12778] = 825,
 							[12723] = 825,
 						},
 					},
@@ -118,20 +123,20 @@ RXPCTrackingData = {
 							["monthDay"] = 7,
 							["day"] = 0,
 							["month"] = 11,
-							["minute"] = 44,
+							["weekday"] = 2,
 							["year"] = 2022,
 							["hour"] = 23,
-							["weekday"] = 2,
+							["minute"] = 44,
 						},
 						["finished"] = 15192,
 						["dateFinished"] = {
 							["monthDay"] = 8,
 							["day"] = 0,
 							["month"] = 11,
-							["minute"] = 28,
+							["weekday"] = 3,
 							["year"] = 2022,
 							["hour"] = 0,
-							["weekday"] = 3,
+							["minute"] = 28,
 						},
 						["started"] = 12532,
 					},
@@ -145,12 +150,66 @@ RXPCTrackingData = {
 							[12717] = 12250,
 							[12719] = 12250,
 							[12706] = 16350,
-							[12716] = 12250,
+							[12715] = 825,
 							[12697] = 825,
 							[12714] = 825,
-							[12701] = 16350,
+							[12716] = 12250,
 							[12733] = 12250,
-							[12715] = 825,
+							[12701] = 16350,
+						},
+					},
+				},
+				[58] = {
+					["groupExperience"] = 0,
+					["deaths"] = 2,
+					["mobs"] = {
+						["奥格瑞玛"] = {
+							["xp"] = 12250,
+							["count"] = 1,
+						},
+						["地狱火半岛"] = {
+							["xp"] = 12925,
+							["count"] = 5,
+						},
+						["东瘟疫之地：血色领地"] = {
+							["xp"] = 17175,
+							["count"] = 2,
+						},
+						["东瘟疫之地"] = {
+							["xp"] = 13075,
+							["count"] = 2,
+						},
+					},
+					["timestamp"] = {
+						["dateStarted"] = {
+							["monthDay"] = 8,
+							["day"] = 0,
+							["month"] = 11,
+							["minute"] = 12,
+							["year"] = 2022,
+							["hour"] = 23,
+							["weekday"] = 3,
+						},
+						["started"] = 19915,
+					},
+					["quests"] = {
+						["奥格瑞玛"] = {
+							[13189] = 12250,
+						},
+						["地狱火半岛"] = {
+							[10289] = 2400,
+							[10121] = 975,
+							[10291] = 4750,
+							[10120] = 2400,
+							[9407] = 2400,
+						},
+						["东瘟疫之地：血色领地"] = {
+							[12800] = 825,
+							[12801] = 16350,
+						},
+						["东瘟疫之地"] = {
+							[13165] = 825,
+							[13166] = 12250,
 						},
 					},
 				},
@@ -166,6 +225,12 @@ RXPCComms = {
 		["部落太难 - 祈福"] = {
 			["announcements"] = {
 				["55-58 东瘟疫之地:血色领地"] = {
+					["collect"] = {
+					},
+					["complete"] = {
+					},
+				},
+				["59-61 地狱火半岛"] = {
 					["collect"] = {
 					},
 					["complete"] = {

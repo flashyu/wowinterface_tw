@@ -2,7 +2,8 @@ VER 3 0000000000000005 "cz" "135811"
 /run ResetInstances()
 END
 VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
-/script DecursiveRootTable.Dcr:Println('没有相关技能')
+/stopcasting
+/cast [@mouseover,nomod,exists] 解除诅咒;  [@mouseover,exists,mod:ctrl] 驱毒术; [@mouseover,exists,mod:shift] 解除诅咒
 END
 VER 3 000000000000000D "healbot大迅捷" "INV_MISC_QUESTIONMARK"
 #showtooltip 自然迅捷
