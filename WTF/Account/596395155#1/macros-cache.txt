@@ -106,8 +106,8 @@ VER 3 0000000000000016 "爆发" "135805"
 /use 10;
 END
 VER 3 000000000000000B "生命" "134831"
-/use 邪能治疗石;
-/use 符文治疗药水;
+/use 邪能治疗石
+/use 符文治疗药水
 END
 VER 3 0000000000000019 "自然之力" "INV_MISC_QUESTIONMARK"
 #showtooltip 自然之力

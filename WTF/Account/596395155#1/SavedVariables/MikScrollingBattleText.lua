@@ -4,18 +4,18 @@ MSBTProfiles_SavedVars = {
 		["Default"] = {
 			["scrollAreas"] = {
 				["Static"] = {
-					["offsetY"] = 18,
 					["direction"] = "Up",
-				},
-				["Incoming"] = {
-					["offsetY"] = -140,
+					["offsetY"] = 18,
 				},
 				["Outgoing"] = {
 					["offsetX"] = 102,
 					["offsetY"] = -141,
 				},
+				["Incoming"] = {
+					["offsetY"] = -140,
+				},
 			},
-			["enableBlizzardDamage"] = true,
+			["creationVersion"] = "5.7.153",
 			["events"] = {
 				["NOTIFICATION_ITEM_COOLDOWN"] = {
 					["alwaysSticky"] = true,
@@ -24,7 +24,7 @@ MSBTProfiles_SavedVars = {
 					["alwaysSticky"] = true,
 				},
 			},
-			["creationVersion"] = "5.7.153",
+			["enableBlizzardDamage"] = true,
 		},
 	},
 }

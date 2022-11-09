@@ -4,7 +4,7 @@
     for Classic/TBC/WOTLK
 
     Requires: LibStub, CallbackHandler-1.0, LibDetours-1.0
-    Version: 4 (2022-11-04)
+    Version: 5 (2022-11-07)
 
 --]]
 
@@ -19,7 +19,7 @@ assert(LibStub, "LibClassicInspector requires LibStub")
 assert(LibStub:GetLibrary("CallbackHandler-1.0", true), "LibClassicInspector requires CallbackHandler-1.0")
 assert(LibStub:GetLibrary("LibDetours-1.0", true), "LibClassicInspector requires LibDetours-1.0")
 
-local lib, oldminor = LibStub:NewLibrary("LibClassicInspector", 4)
+local lib, oldminor = LibStub:NewLibrary("LibClassicInspector", 5)
 
 -- already loaded
 if (not lib) then
@@ -81,16 +81,16 @@ lib.spec_table = lib.spec_table or {
 -- TODO: localization
 if (GetLocale() == "deDE") then
 lib.spec_table_localized = lib.spec_table_localized or {
-    ["WARRIOR"] = {"Arms", "Fury", "Protection"},
-    ["PALADIN"] = {"Holy", "Protection", "Retribution"},
-    ["HUNTER"] = {"Beast Mastery", "Marksmanship", "Survival"},
-    ["ROGUE"] = {"Assassination", "Combat", "Subtlety"},
-    ["PRIEST"] = {"Discipline", "Holy", "Shadow"},
-    ["DEATHKNIGHT"] = {"Blood", "Frost", "Unholy"},
-    ["SHAMAN"] = {"Elemental", "Enhancement", "Restoration"},
-    ["MAGE"] = {"Arcane", "Fire", "Frost"},
-    ["WARLOCK"] = {"Affliction", "Demonology", "Destruction"},
-    ["DRUID"] = {"Balance", "Feral Combat", "Restoration"}
+    ["WARRIOR"] = {"Waffen", "Furor", "Schutz"},
+    ["PALADIN"] = {"Heilig", "Schutz", "Vergeltung"},
+    ["HUNTER"] = {"Tierherrschaft", "Treffsicherheit", "\195\156berleben"},
+    ["ROGUE"] = {"Meuchseln", "Kampf", "T\195\164uschung"},
+    ["PRIEST"] = {"Disziplin", "Heilig", "Schatten"},
+    ["DEATHKNIGHT"] = {"Blut", "Frost", "Unheilig"},
+    ["SHAMAN"] = {"Elementar", "Verst\195\164rkung", "Wiederherstellung"},
+    ["MAGE"] = {"Arkan", "Feuer", "Frost"},
+    ["WARLOCK"] = {"Gebrechen", "D\195\164monologie", "Zerst\195\182rung"},
+    ["DRUID"] = {"Gleichgewicht", "Wildheit", "Wiederherstellung"}
 }
 elseif (GetLocale() == "esES") then
 lib.spec_table_localized = lib.spec_table_localized or {
@@ -159,16 +159,16 @@ lib.spec_table_localized = lib.spec_table_localized or {
 }
 elseif (GetLocale() == "ruRU") then
 lib.spec_table_localized = lib.spec_table_localized or {
-    ["WARRIOR"] = {"Arms", "Fury", "Protection"},
-    ["PALADIN"] = {"Holy", "Protection", "Retribution"},
-    ["HUNTER"] = {"Beast Mastery", "Marksmanship", "Survival"},
-    ["ROGUE"] = {"Assassination", "Combat", "Subtlety"},
-    ["PRIEST"] = {"Discipline", "Holy", "Shadow"},
-    ["DEATHKNIGHT"] = {"Blood", "Frost", "Unholy"},
-    ["SHAMAN"] = {"Elemental", "Enhancement", "Restoration"},
-    ["MAGE"] = {"Arcane", "Fire", "Frost"},
-    ["WARLOCK"] = {"Affliction", "Demonology", "Destruction"},
-    ["DRUID"] = {"Balance", "Feral Combat", "Restoration"}
+    ["WARRIOR"] = {"\208\158\209\128\209\131\208\182\208\184\208\181", "\208\157\208\181\208\184\209\129\209\130\208\190\208\178\209\129\209\130\208\178\208\190", "\208\151\208\176\209\137\208\184\209\130\208\176"},
+    ["PALADIN"] = {"\208\161\208\178\208\181\209\130", "\208\151\208\176\209\137\208\184\209\130\208\176", "\208\146\208\190\208\183\208\180\208\176\209\143\208\189\208\184\208\181"},
+    ["HUNTER"] = {"\208\159\208\190\208\178\208\181\208\187\208\184\209\130\208\181\208\187\209\140 \208\183\208\178\208\181\209\128\208\181\208\185", "\208\161\209\130\209\128\208\181\208\187\209\140\208\177\208\176", "\208\146\209\139\208\182\208\184\208\178\208\176\208\189\208\184\208\181"},
+    ["ROGUE"] = {"\208\155\208\184\208\186\208\178\208\184\208\180\208\176\209\134\208\184\209\143", "\208\145\208\190\208\185", "\208\161\208\186\209\128\209\139\209\130\208\189\208\190\209\129\209\130\209\140"},
+    ["PRIEST"] = {"\208\159\208\190\209\129\208\187\209\131\209\136\208\176\208\189\208\184\208\181", "\208\161\208\178\208\181\209\130", "\208\162\209\140\208\188\208\176"},
+    ["DEATHKNIGHT"] = {"\208\154\209\128\208\190\208\178\209\140", "\208\155\208\181\208\180", "\208\157\208\181\209\135\208\181\209\129\209\130\208\184\208\178\208\190\209\129\209\130\209\140"},
+    ["SHAMAN"] = {"\208\161\209\130\208\184\209\133\208\184\208\184", "\208\161\208\190\208\178\208\181\209\128\209\136\208\181\208\189\209\129\209\130\208\178\208\190\208\178\208\176\208\189\208\184\208\181", "\208\146\208\190\209\129\209\129\209\130\208\176\208\189\208\190\208\178\208\187\208\181\208\189\208\184\208\181"},
+    ["MAGE"] = {"\208\162\208\176\208\185\208\189\208\176\209\143 \208\188\208\176\208\179\208\184\209\143", "\208\158\208\179\208\190\208\189\209\140", "\208\155\208\181\208\180"},
+    ["WARLOCK"] = {"\208\154\208\190\208\187\208\180\208\190\208\178\209\129\209\130\208\178\208\190", "\208\148\208\181\208\188\208\190\208\189\208\190\208\187\208\190\208\179\208\184\209\143", "\208\160\208\176\208\183\209\128\209\131\209\136\208\181\208\189\208\184\208\181"},
+    ["DRUID"] = {"\208\145\208\176\208\187\208\176\208\189\209\129", "\208\161\208\184\208\187\208\176 \208\183\208\178\208\181\209\128\209\143", "\208\146\208\190\209\129\209\129\209\130\208\176\208\189\208\190\208\178\208\187\208\181\208\189\208\184\208\181"}
 }
 elseif (GetLocale() == "ptBR") then
 lib.spec_table_localized = lib.spec_table_localized or {
