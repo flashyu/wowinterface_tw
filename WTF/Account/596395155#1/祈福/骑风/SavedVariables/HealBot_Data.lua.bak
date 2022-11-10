@@ -255,7 +255,7 @@ HealBot_Config_Buffs = {
 		false, -- [3]
 	},
 	["LongBuffTimer"] = 120,
-	["BuffWatchInCombat"] = false,
+	["HealBot_CBWarnRange_Sound"] = 3,
 	["AutoBuffCastBy"] = 1,
 	["AlwaysShowTimed"] = false,
 	["CBshownHB"] = true,
@@ -388,7 +388,7 @@ HealBot_Config_Buffs = {
 		["33"] = "None",
 		["23"] = "None",
 	},
-	["HealBot_CBWarnRange_Sound"] = 3,
+	["BuffWatchInCombat"] = false,
 	["AutoBuff"] = 2,
 }
 HealBot_Config_Cures = {

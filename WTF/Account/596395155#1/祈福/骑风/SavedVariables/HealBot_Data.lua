@@ -139,9 +139,9 @@ HealBot_Config_Spells = {
 		["Ctrl-ShiftRight"] = "C:E",
 		["AltRight2"] = "S:50464",
 		["Button43"] = "S:53251",
+		["Button42"] = "healbot大迅捷",
 		["AltMiddle3"] = "S:29166",
 		["Middle"] = "S:26982",
-		["Button42"] = "healbot大迅捷",
 		["Alt-ShiftLeft1"] = "C:A",
 		["Left4"] = "S:26980",
 		["Ctrl-ShiftLeft2"] = "C:D",
@@ -248,14 +248,14 @@ HealBot_Config_Buffs = {
 	["BackupWellFedItem"] = "",
 	["BuffWatch"] = true,
 	["AlwaysShowSelf"] = false,
-	["HealBot_CBWarnRange_Sound"] = 3,
+	["BuffWatchInCombat"] = false,
 	["CustomBuffCheck"] = {
 		false, -- [1]
 		false, -- [2]
 		false, -- [3]
 	},
 	["LongBuffTimer"] = 120,
-	["BuffWatchInCombat"] = false,
+	["HealBot_CBWarnRange_Sound"] = 3,
 	["AutoBuffCastBy"] = 1,
 	["HealBotBuffDropDown"] = {
 		4, -- [1]
@@ -368,7 +368,7 @@ HealBot_Config_Buffs = {
 		["28"] = "None",
 		["38"] = "None",
 		["21"] = "None",
-		["13"] = "野性赐福",
+		["13"] = "空",
 		["17"] = "None",
 		["27"] = "None",
 		["15"] = "None",
@@ -384,7 +384,7 @@ HealBot_Config_Buffs = {
 		["16"] = "None",
 		["26"] = "None",
 		["31"] = "None",
-		["12"] = "野性赐福",
+		["12"] = "空",
 		["11"] = "野性赐福",
 		["32"] = "None",
 	},

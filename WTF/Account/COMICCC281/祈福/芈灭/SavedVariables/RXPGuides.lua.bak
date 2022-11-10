@@ -1,0 +1,64 @@
+
+RXPCData = {
+	["completedWaypoints"] = {
+	},
+	["currentStep"] = 1,
+	["currentGuideName"] = "",
+	["stepSkip"] = {
+	},
+	["flightPaths"] = {
+	},
+	["currentGuideGroup"] = "",
+}
+RXPCTrackingData = {
+	["profileKeys"] = {
+		["芈灭 - 祈福"] = "芈灭 - 祈福",
+	},
+	["profiles"] = {
+		["芈灭 - 祈福"] = {
+			["levels"] = {
+				[70] = {
+					["groupExperience"] = 0,
+					["deaths"] = 0,
+					["mobs"] = {
+					},
+					["timestamp"] = {
+					},
+					["quests"] = {
+					},
+				},
+			},
+		},
+	},
+}
+RXPCComms = {
+	["profileKeys"] = {
+		["芈灭 - 祈福"] = "芈灭 - 祈福",
+	},
+	["profiles"] = {
+		["芈灭 - 祈福"] = {
+			["players"] = {
+				["骑风"] = {
+					["isRxp"] = true,
+					["lastSeen"] = 1842701.026,
+					["xpPercentage"] = 0,
+					["level"] = 80,
+					["timePlayed"] = 0,
+					["class"] = "DRUID",
+				},
+			},
+		},
+	},
+}
+RXPCSettings = {
+	["profileKeys"] = {
+		["芈灭 - 祈福"] = "芈灭 - 祈福",
+	},
+	["profiles"] = {
+		["芈灭 - 祈福"] = {
+			["frameHeight"] = 125,
+			["xprate"] = 1,
+			["hardcore"] = false,
+		},
+	},
+}

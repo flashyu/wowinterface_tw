@@ -27,10 +27,10 @@ RXPCTrackingData = {
 							["monthDay"] = 9,
 							["day"] = 0,
 							["month"] = 10,
-							["minute"] = 33,
+							["weekday"] = 1,
 							["year"] = 2022,
 							["hour"] = 10,
-							["weekday"] = 1,
+							["minute"] = 33,
 						},
 						["started"] = 0,
 					},
@@ -57,8 +57,7 @@ RXPCSettings = {
 	["profiles"] = {
 		["仓库技师 - 祈福"] = {
 			["hardcore"] = false,
-			["frameHeight"] = 125.0000305175781,
-			["xprate"] = 1,
+			["frameHeight"] = 125.0001068115234,
 		},
 	},
 }

@@ -60,7 +60,19 @@ ElvDB = {
 	["gold"] = {
 		["祈福"] = {
 			["芈灭"] = 1036699,
-			["部落太难"] = 128388,
+			["部落太难"] = 311826,
+		},
+	},
+	["global"] = {
+		["nameplates"] = {
+			["filters"] = {
+				["ElvUI_NonTarget"] = {
+				},
+				["ElvUI_Target"] = {
+				},
+				["ElvUI_Boss"] = {
+				},
+			},
 		},
 	},
 	["serverID"] = {

@@ -5,6 +5,7 @@ RXPData = {
 }
 RXPDB = {
 	["profileKeys"] = {
+		["芈灭 - 祈福"] = "global",
 		["部落太难 - 祈福"] = "global",
 	},
 	["profiles"] = {

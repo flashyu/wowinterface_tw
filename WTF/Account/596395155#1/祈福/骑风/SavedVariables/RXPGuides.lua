@@ -40,8 +40,8 @@ RXPCData = {
 		[335] = "北伐军之峰，冰冠冰川",
 		[71] = "摩根的岗哨，燃烧平原",
 		[5] = "湖畔镇，赤脊山",
-		[19] = "藏宝海湾，荆棘谷",
 		[16] = "避难谷地，阿拉希高地",
+		[19] = "藏宝海湾，荆棘谷",
 		[8] = "塞尔萨玛，洛克莫丹",
 		[12] = "夜色镇，暮色森林",
 		[195] = "反抗军营地，荆棘谷",
@@ -75,7 +75,7 @@ RXPCTrackingData = {
 				},
 				[80] = {
 					["groupExperience"] = 0,
-					["deaths"] = 71,
+					["deaths"] = 73,
 					["mobs"] = {
 					},
 					["timestamp"] = {
@@ -272,6 +272,14 @@ RXPCComms = {
 					["timePlayed"] = 0,
 					["isRxp"] = true,
 				},
+				["佰鳥朝鳳"] = {
+					["level"] = 80,
+					["lastSeen"] = 1838426.608,
+					["xpPercentage"] = 0,
+					["class"] = "DEATHKNIGHT",
+					["timePlayed"] = 0,
+					["isRxp"] = true,
+				},
 				["灬影之哀伤灬"] = {
 					["isRxp"] = true,
 					["lastSeen"] = 458909.771,
@@ -320,6 +328,22 @@ RXPCComms = {
 					["timePlayed"] = 0,
 					["isRxp"] = true,
 				},
+				["芈灭"] = {
+					["class"] = "PALADIN",
+					["lastSeen"] = 1845782.156,
+					["xpPercentage"] = 3,
+					["isRxp"] = true,
+					["timePlayed"] = 0,
+					["level"] = 70,
+				},
+				["菊厂水师"] = {
+					["class"] = "WARLOCK",
+					["lastSeen"] = 207080.654,
+					["xpPercentage"] = 0,
+					["isRxp"] = true,
+					["timePlayed"] = 0,
+					["level"] = 80,
+				},
 				["圣光之左手"] = {
 					["level"] = 77,
 					["lastSeen"] = 301704.937,
@@ -343,14 +367,6 @@ RXPCComms = {
 					["level"] = 80,
 					["timePlayed"] = 0,
 					["class"] = "DEATHKNIGHT",
-				},
-				["菊厂水师"] = {
-					["class"] = "WARLOCK",
-					["lastSeen"] = 207080.654,
-					["xpPercentage"] = 0,
-					["isRxp"] = true,
-					["timePlayed"] = 0,
-					["level"] = 80,
 				},
 				["完全就搞不懂"] = {
 					["isRxp"] = true,
@@ -384,6 +400,14 @@ RXPCComms = {
 					["timePlayed"] = 0,
 					["class"] = "SHAMAN",
 				},
+				["阿咔先生"] = {
+					["level"] = 80,
+					["lastSeen"] = 1836024.688,
+					["xpPercentage"] = 0,
+					["class"] = "WARLOCK",
+					["timePlayed"] = 0,
+					["isRxp"] = true,
+				},
 				["悠悠学姐"] = {
 					["isRxp"] = true,
 					["lastSeen"] = 636225.102,
@@ -404,13 +428,13 @@ RXPCSettings = {
 		["骑风 - 祈福"] = {
 			["hideGuideWindow"] = true,
 			["disableArrow"] = true,
-			["hardcore"] = false,
 			["enableQuestAutomation"] = false,
 			["hideMiniMapPins"] = true,
 			["macroAnnounced"] = true,
 			["xprate"] = 1,
 			["frameHeight"] = 28.00007438659668,
 			["hideInRaid"] = true,
+			["hardcore"] = false,
 		},
 	},
 }

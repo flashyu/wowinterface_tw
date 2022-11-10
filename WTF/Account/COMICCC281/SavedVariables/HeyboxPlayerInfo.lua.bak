@@ -1,6 +1,6 @@
 
 HEYBOX_SAVED_PLAYER_INFOS = {
-	["部落太难-祈福"] = {
-		["class"] = "DEATHKNIGHT",
+	["芈灭-祈福"] = {
+		["class"] = "PALADIN",
 	},
 }

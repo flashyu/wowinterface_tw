@@ -2,8 +2,7 @@ VER 3 0000000000000005 "cz" "135811"
 /run ResetInstances()
 END
 VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
-/stopcasting
-/cast [@mouseover,nomod,exists] 解除诅咒;  [@mouseover,exists,mod:ctrl] 驱毒术; [@mouseover,exists,mod:shift] 解除诅咒
+/script DecursiveRootTable.Dcr:Println('没有相关技能')
 END
 VER 3 000000000000000D "healbot大迅捷" "INV_MISC_QUESTIONMARK"
 #showtooltip 自然迅捷
@@ -106,8 +105,8 @@ VER 3 0000000000000016 "爆发" "135805"
 /use 10;
 END
 VER 3 000000000000000B "生命" "134831"
-/use 邪能治疗石;
-/use 符文治疗药水;
+/use 邪能治疗石
+/use 符文治疗药水
 END
 VER 3 0000000000000019 "自然之力" "INV_MISC_QUESTIONMARK"
 #showtooltip 自然之力

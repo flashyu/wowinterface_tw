@@ -74,6 +74,18 @@ ElvDB = {
 			["祈福"] = true,
 		},
 	},
+	["global"] = {
+		["nameplates"] = {
+			["filters"] = {
+				["ElvUI_NonTarget"] = {
+				},
+				["ElvUI_Target"] = {
+				},
+				["ElvUI_Boss"] = {
+				},
+			},
+		},
+	},
 }
 ElvPrivateDB = {
 	["profileKeys"] = {

@@ -1,9 +1,8 @@
 
 HealBot_Config = {
-	["MyFriend"] = "x",
-	["SkinZoneEnabled"] = {
-	},
-	["LastAutoSkinChangeTime"] = 0,
+	["FavGroundMount"] = "军马",
+	["DisableHealBot"] = false,
+	["EnableHealthy"] = true,
 	["MacroUse10"] = false,
 	["SkinDefault"] = {
 		["Standard"] = {
@@ -55,16 +54,17 @@ HealBot_Config = {
 			["Pet Battle"] = false,
 		},
 	},
-	["DisableHealBot"] = false,
-	["FavGroundMount"] = "军马",
-	["Skin_ID"] = -1,
+	["MyFriend"] = "x",
+	["LastVersionUpdate"] = "10.0.0.3",
+	["BuffReset"] = "6.0.0",
 	["Profile"] = 1,
-	["EnableHealthy"] = true,
+	["SkinZoneEnabled"] = {
+	},
 	["LastAutoSkinChangeType"] = "None",
 	["CurrentSpec"] = 1,
+	["LastAutoSkinChangeTime"] = 0,
 	["DisableSolo"] = false,
-	["BuffReset"] = "6.0.0",
-	["LastVersionUpdate"] = "10.0.0.2",
+	["Skin_ID"] = -1,
 	["DisabledNow"] = 0,
 }
 HealBot_Config_Spells = {
@@ -171,6 +171,7 @@ HealBot_Config_Buffs = {
 		true, -- [7]
 		true, -- [8]
 	},
+	["BackupManaDrinkItem"] = "",
 	["SoundBuffPlay"] = "Tribal Bass Drum",
 	["HealBotBuffColG"] = {
 		1, -- [1]
@@ -204,6 +205,7 @@ HealBot_Config_Buffs = {
 	["WellFedItem"] = "",
 	["BuffWatch"] = true,
 	["AlwaysShowSelf"] = false,
+	["BackupWellFedItem"] = "",
 	["CustomBuffCheck"] = {
 		false, -- [1]
 		false, -- [2]
@@ -211,16 +213,11 @@ HealBot_Config_Buffs = {
 	},
 	["LongBuffTimer"] = 120,
 	["HealBot_CBWarnRange_Sound"] = 3,
-	["CustomBuffName"] = {
-		"", -- [1]
-		"", -- [2]
-		"", -- [3]
-	},
 	["BuffWatchInCombat"] = false,
-	["AlwaysShowTimed"] = false,
+	["AutoBuffCastBy"] = 1,
 	["ShowBuffWarning"] = false,
-	["SoundBuffWarning"] = false,
 	["CBshownHB"] = true,
+	["SoundBuffWarning"] = false,
 	["HealBotBuffColR"] = {
 		1, -- [1]
 		1, -- [2]
@@ -298,6 +295,7 @@ HealBot_Config_Buffs = {
 		["23"] = 1,
 	},
 	["BuffWatchWhenGrouped"] = false,
+	["AlwaysShowTimed"] = false,
 	["HealBotBuffText"] = {
 		"强效王者祝福", -- [1]
 		"强效力量祝福", -- [2]
@@ -342,7 +340,11 @@ HealBot_Config_Buffs = {
 		["33"] = "强效智慧祝福",
 		["23"] = "强效智慧祝福",
 	},
-	["AutoBuffCastBy"] = 1,
+	["CustomBuffName"] = {
+		"", -- [1]
+		"", -- [2]
+		"", -- [3]
+	},
 	["AutoBuff"] = 2,
 }
 HealBot_Config_Cures = {
@@ -380,10 +382,10 @@ HealBot_Config_Cures = {
 	["DebuffWatchWhenMounted"] = false,
 	["DebuffWatchInCombat"] = true,
 	["HealBot_Custom_Defuffs_All"] = {
-		["Poison"] = false,
 		["Curse"] = false,
-		["Magic"] = false,
 		["Disease"] = false,
+		["Magic"] = false,
+		["Poison"] = false,
 	},
 	["ShowTimeMaxDuration"] = 31,
 	["IgnoreFastDurDebuffsSecs"] = 2,
@@ -414,25 +416,25 @@ HealBot_Config_Cures = {
 	["IgnoreOnCooldownDebuffs"] = false,
 	["IgnoreFriendDebuffs"] = false,
 	["CDCBarColour"] = {
-		["Poison"] = {
-			["R"] = 0.12,
-			["G"] = 0.46,
-			["B"] = 0.24,
-		},
 		["Curse"] = {
 			["R"] = 0.83,
 			["G"] = 0.43,
 			["B"] = 0.09,
+		},
+		["Disease"] = {
+			["R"] = 0.55,
+			["G"] = 0.19,
+			["B"] = 0.7,
 		},
 		["Magic"] = {
 			["R"] = 0.26,
 			["G"] = 0.33,
 			["B"] = 0.83,
 		},
-		["Disease"] = {
-			["R"] = 0.55,
-			["G"] = 0.19,
-			["B"] = 0.7,
+		["Poison"] = {
+			["R"] = 0.12,
+			["G"] = 0.46,
+			["B"] = 0.24,
 		},
 	},
 	["HealBotDebuffPriority"] = {
