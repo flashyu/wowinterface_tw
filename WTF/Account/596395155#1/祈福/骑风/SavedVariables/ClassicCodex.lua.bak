@@ -17,9 +17,9 @@ CodexConfig = {
 		["callbacks"] = {
 			["distance"] = {
 			},
-			["world"] = {
-			},
 			["minimap"] = {
+			},
+			["world"] = {
 			},
 		},
 		["persistent"] = true,
@@ -30,17 +30,17 @@ CodexConfig = {
 		["crazy"] = true,
 		["world"] = true,
 	},
-	["continentIcon"] = false,
-	["currentQuestGivers"] = true,
+	["minimapButton"] = true,
+	["autoTurnin"] = false,
 	["spawnMarkerSize"] = 15,
-	["showFestival"] = false,
+	["zoneMapIcon"] = true,
 	["alwaysShowId"] = false,
 	["nameplateIcon"] = false,
 	["colorBySpawn"] = true,
-	["zoneMapIcon"] = true,
+	["showFestival"] = false,
 	["miniMapIcon"] = true,
-	["autoTurnin"] = false,
-	["minimapButton"] = true,
+	["currentQuestGivers"] = true,
+	["continentIcon"] = false,
 	["questMarkerSize"] = 15,
 }
 CodexHiddenQuests = {
@@ -71,10 +71,10 @@ CodexColors = {
 		0.5411764705882353, -- [2]
 		0.5254901960784314, -- [3]
 	},
-	["雄鹰神殿"] = {
-		0.3176470588235294, -- [1]
-		0.9921568627450981, -- [2]
-		0.5294117647058824, -- [3]
+	["Broken Hill Capture Credit Marker"] = {
+		0.2392156862745098, -- [1]
+		0.611764705882353, -- [2]
+		0.4784313725490196, -- [3]
 	},
 	["吞火者"] = {
 		0.6470588235294118, -- [1]
@@ -86,9 +86,9 @@ CodexColors = {
 		0.3843137254901961, -- [2]
 		0.1647058823529412, -- [3]
 	},
-	["Broken Hill Capture Credit Marker"] = {
-		0.2392156862745098, -- [1]
-		0.611764705882353, -- [2]
-		0.4784313725490196, -- [3]
+	["雄鹰神殿"] = {
+		0.3176470588235294, -- [1]
+		0.9921568627450981, -- [2]
+		0.5294117647058824, -- [3]
 	},
 }

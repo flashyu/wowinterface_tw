@@ -69,7 +69,7 @@ HealBot_Tips: enabled
 LFGBulletinBoard: enabled
 LoonBestInSlot: enabled
 Mapster: enabled
-MBB: enabled
+MBB: disabled
 Myslot: enabled
 Pawn: enabled
 Questie: enabled

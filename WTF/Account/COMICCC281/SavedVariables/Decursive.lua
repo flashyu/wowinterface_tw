@@ -1,7 +1,8 @@
 
 DecursiveDB = {
-	["global"] = {
-		["LastVersionAnnounce"] = 1668096019,
+	["profileKeys"] = {
+		["芈灭 - 祈福"] = "Default",
+		["部落太难 - 祈福"] = "Default",
 	},
 	["class"] = {
 		["DEATHKNIGHT"] = {
@@ -27,9 +28,8 @@ DecursiveDB = {
 			},
 		},
 	},
-	["profileKeys"] = {
-		["芈灭 - 祈福"] = "Default",
-		["部落太难 - 祈福"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1668188637,
 	},
 	["profiles"] = {
 		["Default"] = {

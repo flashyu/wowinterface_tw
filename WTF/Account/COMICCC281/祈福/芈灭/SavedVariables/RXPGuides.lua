@@ -39,12 +39,12 @@ RXPCComms = {
 		["芈灭 - 祈福"] = {
 			["players"] = {
 				["骑风"] = {
-					["class"] = "DRUID",
-					["lastSeen"] = 1845782.344,
-					["xpPercentage"] = 0,
-					["isRxp"] = true,
-					["timePlayed"] = 0,
 					["level"] = 80,
+					["lastSeen"] = 1933360.86,
+					["xpPercentage"] = 0,
+					["class"] = "DRUID",
+					["timePlayed"] = 0,
+					["isRxp"] = true,
 				},
 			},
 		},
@@ -56,7 +56,7 @@ RXPCSettings = {
 	},
 	["profiles"] = {
 		["芈灭 - 祈福"] = {
-			["frameHeight"] = 125,
+			["frameHeight"] = 124.9999847412109,
 			["hardcore"] = false,
 			["xprate"] = 1,
 		},

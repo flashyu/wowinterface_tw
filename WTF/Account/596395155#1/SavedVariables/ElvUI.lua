@@ -14,14 +14,14 @@ ElvDB = {
 		},
 	},
 	["class"] = {
-		["沙尔图拉"] = {
-			["Helloworlds"] = "WARRIOR",
-		},
 		["祈福"] = {
-			["骑风"] = "DRUID",
+			["死哪了"] = "DEATHKNIGHT",
 			["红发男"] = "MAGE",
 			["仓库技师"] = "WARRIOR",
-			["死哪了"] = "DEATHKNIGHT",
+			["骑风"] = "DRUID",
+		},
+		["沙尔图拉"] = {
+			["Helloworlds"] = "WARRIOR",
 		},
 	},
 	["profiles"] = {
@@ -30,22 +30,22 @@ ElvDB = {
 				["reputation"] = {
 					["enable"] = true,
 					["width"] = 8,
-					["height"] = 202,
 					["orientation"] = "VERTICAL",
+					["height"] = 202,
 				},
 			},
 			["general"] = {
 				["valuecolor"] = {
-					["b"] = 0.04,
-					["g"] = 0.49,
 					["r"] = 1,
+					["g"] = 0.49,
+					["b"] = 0.04,
 				},
 			},
 			["chat"] = {
 				["tabSelectorColor"] = {
-					["b"] = 0.04,
-					["g"] = 0.49,
 					["r"] = 1,
+					["g"] = 0.49,
+					["b"] = 0.04,
 				},
 				["panelSnapRightID"] = 4,
 				["panelSnapLeftID"] = 1,
@@ -57,27 +57,27 @@ ElvDB = {
 				["ElvAB_1"] = "BOTTOM,ElvUIParent,BOTTOM,0,98",
 				["ElvAB_2"] = "BOTTOM,ElvUIParent,BOTTOM,0,23",
 				["ElvUF_Raid3Mover"] = "TOPLEFT,UIParent,TOPLEFT,4,-205",
-				["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,272,376",
+				["ElvUF_AssistMover"] = "TOPLEFT,UIParent,TOPLEFT,373,-82",
 				["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,0,61",
 				["ElvAB_5"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-490,22",
 				["VehicleLeaveButton"] = "BOTTOM,UIParent,BOTTOM,0,493",
-				["ReputationBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,417,4",
-				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
-				["VOICECHAT"] = "TOPLEFT,UIParent,TOPLEFT,452,-255",
-				["TotemTrackerMover"] = "TOPLEFT,UIParent,TOPLEFT,582,-33",
+				["LootFrameMover"] = "TOPLEFT,UIParent,TOPLEFT,502,-232",
+				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
 				["ShiftAB"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,418,209",
-				["ElvUF_PetMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,553,301",
+				["TotemTrackerMover"] = "TOPLEFT,UIParent,TOPLEFT,582,-33",
+				["VOICECHAT"] = "TOPLEFT,UIParent,TOPLEFT,452,-255",
+				["ElvUF_Raid2Mover"] = "TOPLEFT,UIParent,TOPLEFT,4,-205",
 				["ElvUF_FocusMover"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-553,273",
-				["ElvUF_PetCastbarMover"] = "BOTTOM,UIParent,BOTTOM,-288,277",
+				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-272,376",
 				["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-554,311",
 				["ElvUF_TankMover"] = "TOPLEFT,UIParent,TOPLEFT,250,-82",
 				["MicrobarMover"] = "TOPLEFT,UIParent,TOPLEFT,462,-4",
-				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-272,376",
-				["ElvUF_Raid2Mover"] = "TOPLEFT,UIParent,TOPLEFT,4,-205",
+				["ElvUF_PetCastbarMover"] = "BOTTOM,UIParent,BOTTOM,-288,277",
+				["ElvUF_PetMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,553,301",
 				["ElvUF_PartyMover"] = "TOPLEFT,UIParent,TOPLEFT,4,-204",
-				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,215",
-				["LootFrameMover"] = "TOPLEFT,UIParent,TOPLEFT,502,-232",
-				["ElvUF_AssistMover"] = "TOPLEFT,UIParent,TOPLEFT,373,-82",
+				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-163",
+				["ReputationBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,417,4",
+				["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,272,376",
 			},
 			["unitframe"] = {
 				["units"] = {
@@ -97,9 +97,9 @@ ElvDB = {
 				["colors"] = {
 					["healthclass"] = true,
 					["auraBarBuff"] = {
-						["b"] = 0.04,
-						["g"] = 0.49,
 						["r"] = 1,
+						["g"] = 0.49,
+						["b"] = 0.04,
 					},
 					["castClassColor"] = true,
 				},
@@ -114,8 +114,8 @@ ElvDB = {
 			},
 			["actionbar"] = {
 				["bar3"] = {
-					["buttonSize"] = 36,
 					["buttons"] = 12,
+					["buttonSize"] = 36,
 					["buttonsPerRow"] = 12,
 				},
 				["flyoutSize"] = 35,
@@ -135,8 +135,8 @@ ElvDB = {
 					["buttonSize"] = 36,
 				},
 				["bar5"] = {
-					["buttonSize"] = 36,
 					["buttons"] = 12,
+					["buttonSize"] = 36,
 				},
 				["lockActionBars"] = false,
 				["keyDown"] = false,
@@ -151,33 +151,14 @@ ElvDB = {
 		},
 	},
 	["gold"] = {
-		["沙尔图拉"] = {
-			["Helloworlds"] = 1481357,
-		},
 		["祈福"] = {
-			["骑风"] = 58178442,
+			["死哪了"] = 2000,
 			["红发男"] = 0,
 			["仓库技师"] = 4301429,
-			["死哪了"] = 2000,
+			["骑风"] = 63152490,
 		},
-	},
-	["serverID"] = {
-		[4778] = {
-			["祈福"] = true,
-		},
-		[4511] = {
-			["沙尔图拉"] = true,
-		},
-	},
-	["faction"] = {
 		["沙尔图拉"] = {
-			["Helloworlds"] = "Horde",
-		},
-		["祈福"] = {
-			["骑风"] = "Alliance",
-			["红发男"] = "Alliance",
-			["仓库技师"] = "Alliance",
-			["死哪了"] = "Alliance",
+			["Helloworlds"] = 1481357,
 		},
 	},
 	["global"] = {
@@ -252,6 +233,25 @@ ElvDB = {
 					},
 				},
 			},
+		},
+	},
+	["faction"] = {
+		["祈福"] = {
+			["死哪了"] = "Alliance",
+			["红发男"] = "Alliance",
+			["仓库技师"] = "Alliance",
+			["骑风"] = "Alliance",
+		},
+		["沙尔图拉"] = {
+			["Helloworlds"] = "Horde",
+		},
+	},
+	["serverID"] = {
+		[4778] = {
+			["祈福"] = true,
+		},
+		[4511] = {
+			["沙尔图拉"] = true,
 		},
 	},
 }
