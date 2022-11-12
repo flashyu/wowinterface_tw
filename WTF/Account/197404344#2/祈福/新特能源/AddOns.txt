@@ -12,3 +12,4 @@ Leatrix_Plus: enabled
 WeakAurasCompanion: enabled
 WeakAurasArchive: enabled
 TidyPlates_ThreatPlates: disabled
+ElvUI_UnitFramePlugin: disabled

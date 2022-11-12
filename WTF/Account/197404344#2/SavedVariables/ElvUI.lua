@@ -20,11 +20,7 @@ ElvDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
-			["convertPages"] = true,
-			["chat"] = {
-				["panelSnapRightID"] = 6,
-				["panelSnapLeftID"] = 1,
-			},
+			["dbConverted"] = 12.99,
 			["unitframe"] = {
 				["units"] = {
 					["party"] = {
@@ -56,17 +52,32 @@ ElvDB = {
 					["buttonsPerRow"] = 12,
 				},
 			},
-			["dbConverted"] = 12.91,
+			["convertPages"] = true,
+			["chat"] = {
+				["panelSnapRightID"] = 6,
+				["panelSnapLeftID"] = 1,
+			},
 		},
 	},
 	["gold"] = {
 		["祈福"] = {
-			["特变电工"] = 5652172,
-			["码农巴菲特"] = 101768408,
-			["新特能源"] = 3831453,
+			["特变电工"] = 231282442,
+			["码农巴菲特"] = 1717276,
+			["新特能源"] = 19860771,
 		},
 	},
 	["global"] = {
+		["ignoreIncompatible"] = true,
+		["nameplates"] = {
+			["filters"] = {
+				["ElvUI_NonTarget"] = {
+				},
+				["ElvUI_Target"] = {
+				},
+				["ElvUI_Boss"] = {
+				},
+			},
+		},
 		["datatexts"] = {
 			["settings"] = {
 				["Currencies"] = {
@@ -78,6 +89,12 @@ ElvDB = {
 							true, -- [4]
 						}, -- [1]
 						[8] = {
+							nil, -- [1]
+							nil, -- [2]
+							nil, -- [3]
+							true, -- [4]
+						},
+						[6] = {
 							nil, -- [1]
 							nil, -- [2]
 							nil, -- [3]
@@ -96,16 +113,6 @@ ElvDB = {
 							true, -- [4]
 						},
 					},
-				},
-			},
-		},
-		["nameplates"] = {
-			["filters"] = {
-				["ElvUI_NonTarget"] = {
-				},
-				["ElvUI_Target"] = {
-				},
-				["ElvUI_Boss"] = {
 				},
 			},
 		},

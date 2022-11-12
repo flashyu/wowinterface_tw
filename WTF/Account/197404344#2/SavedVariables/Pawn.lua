@@ -414,14 +414,14 @@ PawnCommon = {
 		},
 		["\"Classic\":ROGUE"] = {
 			["Color"] = "fff468",
-			["LocalizedName"] = "潜行者: 副手",
+			["ClassID"] = 4,
 			["PerCharacterOptions"] = {
 				["特变电工-祈福"] = {
 					["Visible"] = true,
 				},
 			},
 			["DoNotShow1HUpgrades"] = false,
-			["ClassID"] = 4,
+			["LocalizedName"] = "潜行者: 副手",
 			["DoNotShow2HUpgrades"] = false,
 			["UpgradesFollowSpecialization"] = false,
 			["Provider"] = "Classic",
@@ -490,7 +490,7 @@ PawnCommon = {
 			["SpecID"] = 2,
 		},
 	},
-	["LastVersion"] = 2.0706,
+	["LastVersion"] = 2.0707,
 	["ButtonPosition"] = 2,
 	["ShowLootUpgradeAdvisor"] = true,
 	["ShowQuestUpgradeAdvisor"] = true,

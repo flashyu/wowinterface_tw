@@ -1,6 +1,8 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0706,
+	["LastVersion"] = 2.0707,
+	["LastPlayerFullName"] = "特变电工-祈福",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 40499,
@@ -19,9 +21,9 @@ PawnOptions = {
 		}, -- [3]
 		nil, -- [4]
 		{
-			["ID"] = 39558,
-			["Level"] = 200,
-			["Link"] = "|cffa335ee|Hitem:39558:3252:40003:40088:::::80:::::::::|h[英雄的骨镰胸甲]|h|r",
+			["ID"] = 40539,
+			["Level"] = 226,
+			["Link"] = "|cffa335ee|Hitem:40539:3832:36766::::::80:::::::::|h[寂寞胸甲]|h|r",
 		}, -- [5]
 		{
 			["ID"] = 37194,
@@ -29,9 +31,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:37194::40014::::::80:::::::::|h[钩刺皮质腰带]|h|r",
 		}, -- [6]
 		{
-			["ID"] = 39224,
-			["Level"] = 200,
-			["Link"] = "|cffa335ee|Hitem:39224:3823:::::::80:::::::::|h[分歧护腿]|h|r",
+			["ID"] = 40500,
+			["Level"] = 213,
+			["Link"] = "|cffa335ee|Hitem:40500:3823:36766:39999:::::80:::::::::|h[勇猛的骨镰腿甲]|h|r",
 		}, -- [7]
 		{
 			["ID"] = 39701,
@@ -73,9 +75,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40684::::::::80:::::::::|h[真实之镜]|h|r",
 		}, -- [14]
 		{
-			["ID"] = 39404,
-			["Level"] = 200,
-			["Link"] = "|cffa335ee|Hitem:39404:1099:::::::80:::::::::|h[主宰披风]|h|r",
+			["ID"] = 40403,
+			["Level"] = 226,
+			["Link"] = "|cffa335ee|Hitem:40403:1099:::::::80:::::::::|h[致命仇敌斗篷]|h|r",
 		}, -- [15]
 		{
 			["ID"] = 40386,
@@ -95,8 +97,6 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40265::::::::80:::::::::|h[飞矢之歌]|h|r",
 		}, -- [18]
 	},
-	["LastPlayerFullName"] = "特变电工-祈福",
-	["AutoSelectScales"] = false,
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

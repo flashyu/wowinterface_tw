@@ -22,13 +22,13 @@ _detalhes_database = {
 		},
 		["width"] = 120,
 		["height"] = 18,
-		["framme_locked"] = false,
+		["cooldowns"] = {
+		},
 		["show_conditions"] = {
 			["only_inside_instance"] = true,
 			["only_in_group"] = true,
 		},
-		["cooldowns"] = {
-		},
+		["framme_locked"] = false,
 		["pos"] = {
 		},
 	},
@@ -753,7 +753,7 @@ _detalhes_database = {
 		["Player-4778-05244F19"] = {
 			{
 				136006, -- [1]
-				5, -- [2]
+				0, -- [2]
 				1, -- [3]
 				2, -- [4]
 				1, -- [5]
@@ -771,7 +771,7 @@ _detalhes_database = {
 			}, -- [2]
 			{
 				136065, -- [1]
-				2, -- [2]
+				0, -- [2]
 				3, -- [3]
 				4, -- [4]
 				1, -- [5]
@@ -789,7 +789,7 @@ _detalhes_database = {
 			}, -- [4]
 			{
 				136087, -- [1]
-				3, -- [2]
+				0, -- [2]
 				2, -- [3]
 				1, -- [4]
 				1, -- [5]
@@ -798,7 +798,7 @@ _detalhes_database = {
 			}, -- [5]
 			{
 				135753, -- [1]
-				3, -- [2]
+				0, -- [2]
 				4, -- [3]
 				3, -- [4]
 				1, -- [5]
@@ -807,7 +807,7 @@ _detalhes_database = {
 			}, -- [6]
 			{
 				136045, -- [1]
-				1, -- [2]
+				0, -- [2]
 				5, -- [3]
 				2, -- [4]
 				1, -- [5]
@@ -816,7 +816,7 @@ _detalhes_database = {
 			}, -- [7]
 			{
 				136062, -- [1]
-				3, -- [2]
+				0, -- [2]
 				3, -- [3]
 				2, -- [4]
 				1, -- [5]
@@ -825,7 +825,7 @@ _detalhes_database = {
 			}, -- [8]
 			{
 				136057, -- [1]
-				3, -- [2]
+				0, -- [2]
 				6, -- [3]
 				2, -- [4]
 				1, -- [5]
@@ -834,7 +834,7 @@ _detalhes_database = {
 			}, -- [9]
 			{
 				136075, -- [1]
-				5, -- [2]
+				0, -- [2]
 				4, -- [3]
 				2, -- [4]
 				1, -- [5]
@@ -843,7 +843,7 @@ _detalhes_database = {
 			}, -- [10]
 			{
 				136036, -- [1]
-				1, -- [2]
+				0, -- [2]
 				7, -- [3]
 				2, -- [4]
 				1, -- [5]
@@ -852,7 +852,7 @@ _detalhes_database = {
 			}, -- [11]
 			{
 				132132, -- [1]
-				3, -- [2]
+				0, -- [2]
 				5, -- [3]
 				1, -- [4]
 				1, -- [5]
@@ -861,7 +861,7 @@ _detalhes_database = {
 			}, -- [12]
 			{
 				132113, -- [1]
-				2, -- [2]
+				0, -- [2]
 				6, -- [3]
 				3, -- [4]
 				1, -- [5]
@@ -879,7 +879,7 @@ _detalhes_database = {
 			}, -- [14]
 			{
 				136033, -- [1]
-				3, -- [2]
+				0, -- [2]
 				7, -- [3]
 				4, -- [4]
 				1, -- [5]
@@ -888,7 +888,7 @@ _detalhes_database = {
 			}, -- [15]
 			{
 				132146, -- [1]
-				5, -- [2]
+				0, -- [2]
 				8, -- [3]
 				3, -- [4]
 				1, -- [5]
@@ -897,7 +897,7 @@ _detalhes_database = {
 			}, -- [16]
 			{
 				132129, -- [1]
-				1, -- [2]
+				0, -- [2]
 				9, -- [3]
 				3, -- [4]
 				1, -- [5]
@@ -906,7 +906,7 @@ _detalhes_database = {
 			}, -- [17]
 			{
 				135138, -- [1]
-				2, -- [2]
+				0, -- [2]
 				2, -- [3]
 				2, -- [4]
 				1, -- [5]
@@ -915,7 +915,7 @@ _detalhes_database = {
 			}, -- [18]
 			{
 				236156, -- [1]
-				3, -- [2]
+				0, -- [2]
 				7, -- [3]
 				3, -- [4]
 				1, -- [5]
@@ -933,7 +933,7 @@ _detalhes_database = {
 			}, -- [20]
 			{
 				236170, -- [1]
-				1, -- [2]
+				0, -- [2]
 				9, -- [3]
 				2, -- [4]
 				1, -- [5]
@@ -942,7 +942,7 @@ _detalhes_database = {
 			}, -- [21]
 			{
 				236151, -- [1]
-				3, -- [2]
+				0, -- [2]
 				9, -- [3]
 				1, -- [4]
 				1, -- [5]
@@ -951,7 +951,7 @@ _detalhes_database = {
 			}, -- [22]
 			{
 				236154, -- [1]
-				2, -- [2]
+				0, -- [2]
 				9, -- [3]
 				4, -- [4]
 				1, -- [5]
@@ -960,7 +960,7 @@ _detalhes_database = {
 			}, -- [23]
 			{
 				236168, -- [1]
-				1, -- [2]
+				0, -- [2]
 				11, -- [3]
 				2, -- [4]
 				1, -- [5]
@@ -969,7 +969,7 @@ _detalhes_database = {
 			}, -- [24]
 			{
 				236150, -- [1]
-				3, -- [2]
+				0, -- [2]
 				10, -- [3]
 				2, -- [4]
 				1, -- [5]
@@ -987,7 +987,7 @@ _detalhes_database = {
 			}, -- [26]
 			{
 				136045, -- [1]
-				3, -- [2]
+				0, -- [2]
 				5, -- [3]
 				3, -- [4]
 				1, -- [5]
@@ -1005,7 +1005,7 @@ _detalhes_database = {
 			}, -- [28]
 			{
 				134355, -- [1]
-				0, -- [2]
+				3, -- [2]
 				2, -- [3]
 				3, -- [4]
 				2, -- [5]
@@ -1023,7 +1023,7 @@ _detalhes_database = {
 			}, -- [30]
 			{
 				132190, -- [1]
-				0, -- [2]
+				5, -- [2]
 				1, -- [3]
 				2, -- [4]
 				2, -- [5]
@@ -1032,7 +1032,7 @@ _detalhes_database = {
 			}, -- [31]
 			{
 				132114, -- [1]
-				0, -- [2]
+				2, -- [2]
 				5, -- [3]
 				1, -- [4]
 				2, -- [5]
@@ -1041,7 +1041,7 @@ _detalhes_database = {
 			}, -- [32]
 			{
 				134297, -- [1]
-				0, -- [2]
+				3, -- [2]
 				3, -- [3]
 				3, -- [4]
 				2, -- [5]
@@ -1050,7 +1050,7 @@ _detalhes_database = {
 			}, -- [33]
 			{
 				132089, -- [1]
-				0, -- [2]
+				3, -- [2]
 				2, -- [3]
 				1, -- [4]
 				2, -- [5]
@@ -1059,7 +1059,7 @@ _detalhes_database = {
 			}, -- [34]
 			{
 				132278, -- [1]
-				0, -- [2]
+				2, -- [2]
 				4, -- [3]
 				3, -- [4]
 				2, -- [5]
@@ -1077,7 +1077,7 @@ _detalhes_database = {
 			}, -- [36]
 			{
 				132185, -- [1]
-				0, -- [2]
+				3, -- [2]
 				4, -- [3]
 				2, -- [4]
 				2, -- [5]
@@ -1086,7 +1086,7 @@ _detalhes_database = {
 			}, -- [37]
 			{
 				132183, -- [1]
-				0, -- [2]
+				1, -- [2]
 				5, -- [3]
 				3, -- [4]
 				2, -- [5]
@@ -1095,7 +1095,7 @@ _detalhes_database = {
 			}, -- [38]
 			{
 				132141, -- [1]
-				0, -- [2]
+				2, -- [2]
 				2, -- [3]
 				2, -- [4]
 				2, -- [5]
@@ -1104,7 +1104,7 @@ _detalhes_database = {
 			}, -- [39]
 			{
 				136095, -- [1]
-				0, -- [2]
+				2, -- [2]
 				3, -- [3]
 				1, -- [4]
 				2, -- [5]
@@ -1113,7 +1113,7 @@ _detalhes_database = {
 			}, -- [40]
 			{
 				135879, -- [1]
-				0, -- [2]
+				5, -- [2]
 				6, -- [3]
 				2, -- [4]
 				2, -- [5]
@@ -1122,7 +1122,7 @@ _detalhes_database = {
 			}, -- [41]
 			{
 				136112, -- [1]
-				0, -- [2]
+				1, -- [2]
 				7, -- [3]
 				2, -- [4]
 				2, -- [5]
@@ -1131,7 +1131,7 @@ _detalhes_database = {
 			}, -- [42]
 			{
 				236169, -- [1]
-				0, -- [2]
+				1, -- [2]
 				3, -- [3]
 				2, -- [4]
 				2, -- [5]
@@ -1158,7 +1158,7 @@ _detalhes_database = {
 			}, -- [45]
 			{
 				132126, -- [1]
-				0, -- [2]
+				3, -- [2]
 				6, -- [3]
 				3, -- [4]
 				2, -- [5]
@@ -1176,7 +1176,7 @@ _detalhes_database = {
 			}, -- [47]
 			{
 				132135, -- [1]
-				0, -- [2]
+				1, -- [2]
 				9, -- [3]
 				2, -- [4]
 				2, -- [5]
@@ -1185,7 +1185,7 @@ _detalhes_database = {
 			}, -- [48]
 			{
 				136112, -- [1]
-				0, -- [2]
+				2, -- [2]
 				7, -- [3]
 				3, -- [4]
 				2, -- [5]
@@ -1203,7 +1203,7 @@ _detalhes_database = {
 			}, -- [50]
 			{
 				236164, -- [1]
-				0, -- [2]
+				5, -- [2]
 				10, -- [3]
 				2, -- [4]
 				2, -- [5]
@@ -1230,7 +1230,7 @@ _detalhes_database = {
 			}, -- [53]
 			{
 				236159, -- [1]
-				0, -- [2]
+				3, -- [2]
 				9, -- [3]
 				1, -- [4]
 				2, -- [5]
@@ -1239,7 +1239,7 @@ _detalhes_database = {
 			}, -- [54]
 			{
 				236149, -- [1]
-				0, -- [2]
+				1, -- [2]
 				11, -- [3]
 				2, -- [4]
 				2, -- [5]
@@ -1248,7 +1248,7 @@ _detalhes_database = {
 			}, -- [55]
 			{
 				132117, -- [1]
-				0, -- [2]
+				3, -- [2]
 				8, -- [3]
 				1, -- [4]
 				2, -- [5]
@@ -1257,7 +1257,7 @@ _detalhes_database = {
 			}, -- [56]
 			{
 				132091, -- [1]
-				0, -- [2]
+				3, -- [2]
 				6, -- [3]
 				1, -- [4]
 				2, -- [5]
@@ -1266,7 +1266,7 @@ _detalhes_database = {
 			}, -- [57]
 			{
 				132140, -- [1]
-				0, -- [2]
+				1, -- [2]
 				10, -- [3]
 				3, -- [4]
 				2, -- [5]
@@ -1284,7 +1284,7 @@ _detalhes_database = {
 			}, -- [59]
 			{
 				135881, -- [1]
-				5, -- [2]
+				3, -- [2]
 				1, -- [3]
 				3, -- [4]
 				3, -- [5]
@@ -1302,7 +1302,7 @@ _detalhes_database = {
 			}, -- [61]
 			{
 				136041, -- [1]
-				0, -- [2]
+				5, -- [2]
 				2, -- [3]
 				1, -- [4]
 				3, -- [5]
@@ -1550,13 +1550,13 @@ _detalhes_database = {
 			},
 			["usefocus"] = false,
 			["updatespeed"] = 1,
-			["disable_gouge"] = false,
+			["useclasscolors"] = false,
 			["showamount"] = false,
 			["useplayercolor"] = false,
 			["absolute_mode"] = false,
 			["playSound"] = false,
 			["playSoundFile"] = "Details Threat Warning Volume 3",
-			["useclasscolors"] = false,
+			["disable_gouge"] = false,
 		},
 		["DETAILS_PLUGIN_ENCOUNTER_DETAILS"] = {
 			["enabled"] = true,
@@ -1566,11 +1566,11 @@ _detalhes_database = {
 			["last_section_selected"] = "main",
 			["author"] = "Terciob",
 			["window_scale"] = 1,
-			["hide_on_combat"] = false,
-			["show_icon"] = 5,
-			["opened"] = 0,
 			["encounter_timers_dbm"] = {
 			},
+			["show_icon"] = 5,
+			["opened"] = 0,
+			["hide_on_combat"] = false,
 		},
 		["DETAILS_PLUGIN_STREAM_OVERLAY"] = {
 			["use_square_mode"] = false,
@@ -1581,7 +1581,7 @@ _detalhes_database = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["scale"] = 1,
+			["arrow_anchor_y"] = 0,
 			["main_frame_size"] = {
 				299.9999389648438, -- [1]
 				499.9999084472656, -- [2]
@@ -1591,36 +1591,16 @@ _detalhes_database = {
 				["radius"] = 160,
 				["hide"] = false,
 			},
-			["row_height"] = 20,
+			["main_frame_locked"] = false,
 			["arrow_anchor_x"] = 0,
-			["font_color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["row_color"] = {
+				0.1, -- [1]
+				0.1, -- [2]
+				0.1, -- [3]
+				0.4, -- [4]
 			},
 			["row_texture"] = "Details Serenity",
 			["square_grow_direction"] = "right",
-			["point"] = "CENTER",
-			["main_frame_strata"] = "LOW",
-			["square_amount"] = 5,
-			["enabled"] = false,
-			["arrow_size"] = 10,
-			["use_spark"] = true,
-			["row_spacement"] = 21,
-			["main_frame_color"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.2, -- [4]
-			},
-			["author"] = "Terciob",
-			["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
-			["font_size"] = 10,
-			["y"] = -4.57763671875e-05,
-			["x"] = 0,
-			["font_face"] = "Friz Quadrata TT",
-			["square_size"] = 32,
 			["per_second"] = {
 				["enabled"] = false,
 				["point"] = "CENTER",
@@ -1628,25 +1608,39 @@ _detalhes_database = {
 				["font_shadow"] = true,
 				["y"] = 6.103515625e-05,
 				["x"] = -6.103515625e-05,
-				["size"] = 32,
-				["update_speed"] = 0.05,
 				["attribute_type"] = 1,
+				["update_speed"] = 0.05,
+				["size"] = 32,
 			},
-			["row_color"] = {
-				0.1, -- [1]
-				0.1, -- [2]
-				0.1, -- [3]
-				0.4, -- [4]
+			["author"] = "Terciob",
+			["square_amount"] = 5,
+			["enabled"] = false,
+			["arrow_size"] = 10,
+			["font_size"] = 10,
+			["row_spacement"] = 21,
+			["main_frame_color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.2, -- [4]
 			},
-			["main_frame_locked"] = false,
-			["arrow_anchor_y"] = 0,
+			["main_frame_strata"] = "LOW",
+			["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
+			["y"] = -4.57763671875e-05,
+			["use_spark"] = true,
+			["x"] = 0,
+			["font_face"] = "Friz Quadrata TT",
+			["square_size"] = 32,
+			["point"] = "CENTER",
+			["font_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["row_height"] = 20,
+			["scale"] = 1,
 		},
-	},
-	["last_day"] = "12",
-	["last_instance_time"] = 0,
-	["cached_roles"] = {
-		["Player-4778-052AC4C0"] = "HEALER",
-		["Player-4778-05244F19"] = "DAMAGER",
 	},
 	["mythic_dungeon_currentsaved"] = {
 		["dungeon_name"] = "",
@@ -1659,49 +1653,24 @@ _detalhes_database = {
 		["dungeon_zone_id"] = 0,
 		["previous_boss_killed_at"] = 0,
 	},
-	["local_instances_config"] = {
-		{
-			["modo"] = 2,
-			["sub_attribute"] = 1,
-			["sub_atributo_last"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-				1, -- [5]
-			},
-			["is_open"] = true,
-			["isLocked"] = false,
-			["snap"] = {
-			},
-			["segment"] = 0,
-			["mode"] = 2,
-			["attribute"] = 1,
-			["pos"] = {
-				["normal"] = {
-					["y"] = -28.02923583984375,
-					["x"] = 705.7911376953125,
-					["w"] = 310.0001525878906,
-					["h"] = 157.9999847412109,
-				},
-				["solo"] = {
-					["y"] = 2,
-					["x"] = 1,
-					["w"] = 300,
-					["h"] = 200,
-				},
-			},
-		}, -- [1]
+	["last_day"] = "12",
+	["announce_damagerecord"] = {
+		["enabled"] = true,
+		["channel"] = "SELF",
 	},
-	["ignore_nicktag"] = false,
+	["last_instance_time"] = 0,
+	["announce_firsthit"] = {
+		["enabled"] = true,
+		["channel"] = "SELF",
+	},
+	["force_font_outline"] = "",
 	["combat_id"] = 0,
 	["savedStyles"] = {
 	},
-	["nick_tag_cache"] = {
-		["nextreset"] = 1668965024,
-		["last_version"] = 15,
+	["character_data"] = {
+		["logons"] = 8,
 	},
-	["combat_counter"] = 14,
+	["combat_counter"] = 16,
 	["announce_deaths"] = {
 		["enabled"] = false,
 		["last_hits"] = 1,
@@ -1744,7 +1713,7 @@ _detalhes_database = {
 		["alternate_power"] = {
 		},
 		["combat_counter"] = 1,
-		["spells_cast_timeline"] = {
+		["frags"] = {
 		},
 		["totals"] = {
 			0, -- [1]
@@ -1753,21 +1722,21 @@ _detalhes_database = {
 				0, -- [1]
 				[0] = 0,
 				["alternatepower"] = 0,
-				[3] = 0,
 				[6] = 0,
+				[3] = 0,
 			}, -- [3]
 			{
 				["buff_uptime"] = 0,
 				["ress"] = 0,
-				["cooldowns_defensive"] = 0,
-				["dispell"] = 0,
+				["dead"] = 0,
+				["cc_break"] = 0,
 				["interrupt"] = 0,
 				["debuff_uptime"] = 0,
-				["cc_break"] = 0,
-				["dead"] = 0,
+				["dispell"] = 0,
+				["cooldowns_defensive"] = 0,
 			}, -- [4]
-			["frags_total"] = 0,
 			["voidzone_damage"] = 0,
+			["frags_total"] = 0,
 		},
 		["player_last_events"] = {
 		},
@@ -1777,6 +1746,35 @@ _detalhes_database = {
 		["__call"] = {
 		},
 		["data_inicio"] = 0,
+		["PhaseData"] = {
+			{
+				1, -- [1]
+				1, -- [2]
+			}, -- [1]
+			["damage"] = {
+			},
+			["heal_section"] = {
+			},
+			["heal"] = {
+			},
+			["damage_section"] = {
+			},
+		},
+		["overall_refreshed"] = true,
+		["hasSaved"] = true,
+		["spells_cast_timeline"] = {
+		},
+		["data_fim"] = 0,
+		["cleu_events"] = {
+			["n"] = 1,
+		},
+		["CombatSkillCache"] = {
+		},
+		["cleu_timeline"] = {
+		},
+		["start_time"] = 0,
+		["TimeData"] = {
+		},
 		["totals_grupo"] = {
 			0, -- [1]
 			0, -- [2]
@@ -1784,62 +1782,64 @@ _detalhes_database = {
 				0, -- [1]
 				[0] = 0,
 				["alternatepower"] = 0,
-				[3] = 0,
 				[6] = 0,
+				[3] = 0,
 			}, -- [3]
 			{
 				["buff_uptime"] = 0,
 				["ress"] = 0,
-				["cooldowns_defensive"] = 0,
-				["dispell"] = 0,
+				["dead"] = 0,
+				["cc_break"] = 0,
 				["interrupt"] = 0,
 				["debuff_uptime"] = 0,
-				["cc_break"] = 0,
-				["dead"] = 0,
+				["dispell"] = 0,
+				["cooldowns_defensive"] = 0,
 			}, -- [4]
 		},
-		["overall_refreshed"] = true,
-		["hasSaved"] = true,
-		["frags"] = {
-		},
-		["data_fim"] = 0,
-		["cleu_timeline"] = {
-		},
-		["CombatSkillCache"] = {
-		},
-		["cleu_events"] = {
-			["n"] = 1,
-		},
-		["start_time"] = 0,
-		["TimeData"] = {
-		},
-		["PhaseData"] = {
-			{
+	},
+	["nick_tag_cache"] = {
+		["nextreset"] = 1668965024,
+		["last_version"] = 15,
+	},
+	["ignore_nicktag"] = false,
+	["local_instances_config"] = {
+		{
+			["modo"] = 2,
+			["sub_attribute"] = 1,
+			["sub_atributo_last"] = {
 				1, -- [1]
 				1, -- [2]
-			}, -- [1]
-			["damage_section"] = {
+				1, -- [3]
+				1, -- [4]
+				1, -- [5]
 			},
-			["heal_section"] = {
+			["is_open"] = true,
+			["isLocked"] = false,
+			["snap"] = {
 			},
-			["heal"] = {
+			["segment"] = 0,
+			["mode"] = 2,
+			["attribute"] = 1,
+			["pos"] = {
+				["normal"] = {
+					["y"] = -28.02923583984375,
+					["x"] = 705.7911376953125,
+					["w"] = 310.0001525878906,
+					["h"] = 157.9999847412109,
+				},
+				["solo"] = {
+					["y"] = 2,
+					["x"] = 1,
+					["w"] = 300,
+					["h"] = 200,
+				},
 			},
-			["damage"] = {
-			},
-		},
-	},
-	["character_data"] = {
-		["logons"] = 7,
-	},
-	["force_font_outline"] = "",
-	["announce_firsthit"] = {
-		["enabled"] = true,
-		["channel"] = "SELF",
+		}, -- [1]
 	},
 	["announce_cooldowns"] = {
-		["enabled"] = false,
 		["ignored_cooldowns"] = {
 		},
+		["enabled"] = false,
 		["custom"] = "",
 		["channel"] = "RAID",
 	},
@@ -1847,12 +1847,10 @@ _detalhes_database = {
 		["last_difficulty"] = 15,
 		["last_raid"] = "",
 	},
-	["announce_damagerecord"] = {
-		["enabled"] = true,
-		["channel"] = "SELF",
+	["cached_roles"] = {
+		["Player-4778-052AC4C0"] = "HEALER",
+		["Player-4778-05244F19"] = "DAMAGER",
 	},
 	["cached_specs"] = {
-		["Player-4778-052AC4C0"] = 65,
-		["Player-4778-05244F19"] = 102,
 	},
 }

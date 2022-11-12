@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
+	["session"] = 16,
 	["lastSanitation"] = 3,
-	["session"] = 15,
 	["errors"] = {
 		{
 			["message"] = "...ace\\AddOns\\AdvancedInterfaceOptions\\basicOptions.lua:351: attempt to index field 'CustomVars' (a nil value)",

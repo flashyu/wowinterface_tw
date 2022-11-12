@@ -127,3 +127,4 @@ TidyPlates_ThreatPlates: disabled
 TellMeWhen: disabled
 TellMeWhen_Options: disabled
 ElvUI_UnitFramePlugin: disabled
+!Pig: disabled

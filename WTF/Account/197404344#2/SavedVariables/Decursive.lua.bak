@@ -2,9 +2,21 @@
 DecursiveDB = {
 	["profileKeys"] = {
 		["特变电工 - 祈福"] = "Default",
+		["码农巴菲特 - 祈福"] = "Default",
 		["新特能源 - 祈福"] = "Default",
 	},
 	["class"] = {
+		["DEATHKNIGHT"] = {
+			["CureOrder"] = {
+				-11, -- [1]
+				-15, -- [2]
+				nil, -- [3]
+				-12, -- [4]
+				[8] = -13,
+				[16] = -14,
+				[32] = -16,
+			},
+		},
 		["ROGUE"] = {
 			["CureOrder"] = {
 				-11, -- [1]
@@ -29,7 +41,7 @@ DecursiveDB = {
 		},
 	},
 	["global"] = {
-		["LastVersionAnnounce"] = 1667057984,
+		["LastVersionAnnounce"] = 1668244585,
 	},
 	["profiles"] = {
 		["Default"] = {

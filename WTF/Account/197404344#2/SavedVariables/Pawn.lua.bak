@@ -277,14 +277,14 @@ PawnCommon = {
 		},
 		["\"Classic\":ROGUE"] = {
 			["Color"] = "fff468",
-			["ClassID"] = 4,
+			["LocalizedName"] = "潜行者: 副手",
 			["PerCharacterOptions"] = {
 				["特变电工-祈福"] = {
 					["Visible"] = true,
 				},
 			},
 			["DoNotShow1HUpgrades"] = false,
-			["LocalizedName"] = "潜行者: 副手",
+			["ClassID"] = 4,
 			["DoNotShow2HUpgrades"] = false,
 			["UpgradesFollowSpecialization"] = false,
 			["Provider"] = "Classic",
@@ -323,6 +323,9 @@ PawnCommon = {
 		},
 		["\"Classic\":DEATHKNIGHT3"] = {
 			["PerCharacterOptions"] = {
+				["码农巴菲特-祈福"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "ff4d6b",
 			["LocalizedName"] = "死亡骑士: 邪恶 伤害输出",
@@ -452,6 +455,9 @@ PawnCommon = {
 		},
 		["\"Classic\":DEATHKNIGHT2"] = {
 			["PerCharacterOptions"] = {
+				["码农巴菲特-祈福"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "ff4d6b",
 			["LocalizedName"] = "死亡骑士: 冰霜 坦克",
@@ -466,6 +472,9 @@ PawnCommon = {
 		},
 		["\"Classic\":DEATHKNIGHT1"] = {
 			["PerCharacterOptions"] = {
+				["码农巴菲特-祈福"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "ff4d6b",
 			["LocalizedName"] = "死亡骑士: 鲜血 伤害输出",
@@ -485,6 +494,6 @@ PawnCommon = {
 	["ButtonPosition"] = 2,
 	["ShowLootUpgradeAdvisor"] = true,
 	["ShowQuestUpgradeAdvisor"] = true,
-	["LastVersion"] = 2.0706,
+	["LastVersion"] = 2.0707,
 	["Digits"] = 1,
 }

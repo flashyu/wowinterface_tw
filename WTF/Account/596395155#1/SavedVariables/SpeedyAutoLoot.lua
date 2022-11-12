@@ -1,7 +1,7 @@
 
 SpeedyAutoLootDB = {
 	["global"] = {
-		["enableSound"] = true,
 		["InventoryFullSound"] = 139,
+		["enableSound"] = true,
 	},
 }

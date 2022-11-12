@@ -289,6 +289,8 @@ AutoBarDB = {
 				["PALADIN"] = true,
 				["buttonHeight"] = 36,
 				["rows"] = 1,
+				["scale"] = 1,
+				["dockShiftY"] = 0,
 				["buttonKeys"] = {
 					"AutoBarButtonHearth", -- [1]
 					"AutoBarButtonBandages", -- [2]
@@ -312,8 +314,6 @@ AutoBarDB = {
 					"AutoBarButtonTrinket1", -- [20]
 					"AutoBarButtonTrinket2", -- [21]
 				},
-				["dockShiftY"] = 0,
-				["scale"] = 1,
 				["alignButtons"] = "3",
 				["posX"] = 300,
 				["enabled"] = true,
@@ -343,6 +343,8 @@ AutoBarDB = {
 				["PALADIN"] = true,
 				["buttonHeight"] = 36,
 				["rows"] = 1,
+				["scale"] = 1,
+				["dockShiftY"] = 0,
 				["buttonKeys"] = {
 					"AutoBarButtonSpeed", -- [1]
 					"AutoBarButtonFreeAction", -- [2]
@@ -356,8 +358,6 @@ AutoBarDB = {
 					"AutoBarButtonReputation", -- [10]
 					"AutoBarButtonRaidTarget", -- [11]
 				},
-				["dockShiftY"] = 0,
-				["scale"] = 1,
 				["alignButtons"] = "3",
 				["posX"] = 300,
 				["enabled"] = true,
@@ -403,14 +403,14 @@ AutoBarDB = {
 				["square_popups"] = true,
 			},
 			["AutoBarButtonTrinket2"] = {
-				["barKey"] = "AutoBarClassBarBasic",
+				["enabled"] = true,
 				["targeted"] = 14,
 				["buttonKey"] = "AutoBarButtonTrinket2",
-				["square_popups"] = true,
-				["buttonClass"] = "AutoBarButtonTrinket2",
-				["enabled"] = true,
-				["equipped"] = 14,
 				["defaultButtonIndex"] = 21,
+				["buttonClass"] = "AutoBarButtonTrinket2",
+				["barKey"] = "AutoBarClassBarBasic",
+				["equipped"] = 14,
+				["square_popups"] = true,
 			},
 			["AutoBarButtonDrums"] = {
 				["barKey"] = "AutoBarClassBarBasic",
@@ -429,14 +429,14 @@ AutoBarDB = {
 				["square_popups"] = true,
 			},
 			["AutoBarButtonTrinket1"] = {
-				["barKey"] = "AutoBarClassBarBasic",
+				["enabled"] = true,
 				["targeted"] = 13,
 				["buttonKey"] = "AutoBarButtonTrinket1",
-				["square_popups"] = true,
-				["buttonClass"] = "AutoBarButtonTrinket1",
-				["enabled"] = true,
-				["equipped"] = 13,
 				["defaultButtonIndex"] = 20,
+				["buttonClass"] = "AutoBarButtonTrinket1",
+				["barKey"] = "AutoBarClassBarBasic",
+				["equipped"] = 13,
+				["square_popups"] = true,
 			},
 			["AutoBarButtonCooldownPotionCombat"] = {
 				["barKey"] = "AutoBarClassBarBasic",
@@ -556,14 +556,14 @@ AutoBarDB = {
 				["square_popups"] = true,
 			},
 			["AutoBarButtonFood"] = {
-				["disableConjure"] = false,
+				["enabled"] = true,
 				["include_combo_basic"] = true,
 				["buttonKey"] = "AutoBarButtonFood",
-				["square_popups"] = true,
-				["buttonClass"] = "AutoBarButtonFood",
-				["enabled"] = true,
 				["defaultButtonIndex"] = 8,
+				["buttonClass"] = "AutoBarButtonFood",
+				["disableConjure"] = false,
 				["barKey"] = "AutoBarClassBarBasic",
+				["square_popups"] = true,
 			},
 			["AutoBarButtonCrafting"] = {
 				["barKey"] = "AutoBarClassBarBasic",
@@ -639,14 +639,14 @@ AutoBarDB = {
 				["square_popups"] = true,
 			},
 			["AutoBarButtonMillHerbs"] = {
-				["enabled"] = true,
+				["barKey"] = "AutoBarClassBarExtras",
 				["targeted"] = "Milling",
 				["buttonKey"] = "AutoBarButtonMillHerbs",
-				["square_popups"] = true,
+				["defaultButtonIndex"] = 11,
 				["arrangeOnUse"] = true,
 				["buttonClass"] = "AutoBarButtonMillHerbs",
-				["barKey"] = "AutoBarClassBarExtras",
-				["defaultButtonIndex"] = 11,
+				["enabled"] = true,
+				["square_popups"] = true,
 			},
 			["AutoBarButtonMiscFun"] = {
 				["barKey"] = "AutoBarClassBarExtras",

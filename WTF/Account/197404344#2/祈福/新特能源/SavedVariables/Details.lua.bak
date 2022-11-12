@@ -29,84 +29,84 @@ _detalhes_database = {
 							["nome"] = "新特能源",
 							["spec"] = 258,
 							["grupo"] = true,
-							["buff_uptime_targets"] = {
-							},
+							["classe"] = "PRIEST",
 							["pets"] = {
 							},
+							["buff_uptime_targets"] = {
+							},
 							["buff_uptime"] = 0,
-							["classe"] = "PRIEST",
 							["aID"] = "4778-04F3EDE6",
 							["last_event"] = 1667057981,
 							["buff_uptime_spells"] = {
-								["tipo"] = 9,
 								["_ActorTable"] = {
 									[57940] = {
-										["activedamt"] = 0,
-										["id"] = 57940,
+										["appliedamt"] = 0,
 										["targets"] = {
 										},
+										["activedamt"] = 0,
 										["uptime"] = 0,
-										["appliedamt"] = 0,
+										["id"] = 57940,
 										["refreshamt"] = 0,
 										["actived"] = false,
 										["counter"] = 0,
 									},
 									[23228] = {
-										["activedamt"] = 0,
-										["id"] = 23228,
+										["appliedamt"] = 0,
 										["targets"] = {
 										},
+										["activedamt"] = 0,
 										["uptime"] = 0,
-										["appliedamt"] = 0,
+										["id"] = 23228,
 										["refreshamt"] = 0,
 										["actived"] = false,
 										["counter"] = 0,
 									},
 									[2479] = {
-										["activedamt"] = 0,
-										["id"] = 2479,
+										["appliedamt"] = 0,
 										["targets"] = {
 										},
+										["activedamt"] = 0,
 										["uptime"] = 0,
-										["appliedamt"] = 0,
+										["id"] = 2479,
 										["refreshamt"] = 0,
 										["actived"] = false,
 										["counter"] = 0,
 									},
 									[57822] = {
-										["activedamt"] = 0,
-										["id"] = 57822,
+										["appliedamt"] = 0,
 										["targets"] = {
 										},
+										["activedamt"] = 0,
 										["uptime"] = 0,
-										["appliedamt"] = 0,
+										["id"] = 57822,
 										["refreshamt"] = 0,
 										["actived"] = false,
 										["counter"] = 0,
 									},
 									[15286] = {
-										["activedamt"] = 0,
-										["id"] = 15286,
+										["appliedamt"] = 0,
 										["targets"] = {
 										},
+										["activedamt"] = 0,
 										["uptime"] = 0,
-										["appliedamt"] = 0,
+										["id"] = 15286,
 										["refreshamt"] = 0,
 										["actived"] = false,
 										["counter"] = 0,
 									},
 									[15473] = {
-										["activedamt"] = 0,
-										["id"] = 15473,
+										["appliedamt"] = 0,
 										["targets"] = {
 										},
+										["activedamt"] = 0,
 										["uptime"] = 0,
-										["appliedamt"] = 0,
+										["id"] = 15473,
 										["refreshamt"] = 0,
 										["actived"] = false,
 										["counter"] = 0,
 									},
 								},
+								["tipo"] = 9,
 							},
 							["serial"] = "Player-4778-04F3EDE6",
 							["tipo"] = 4,
@@ -127,27 +127,27 @@ _detalhes_database = {
 				},
 				["alternate_power"] = {
 				},
-				["enemy"] = "未知",
-				["combat_counter"] = 2,
 				["spells_cast_timeline"] = {
 				},
+				["enemy"] = "未知",
+				["combat_counter"] = 2,
 				["totals"] = {
 					0, -- [1]
-					-0.008535999999992328, -- [2]
+					-0.04197499999999233, -- [2]
 					{
 						0, -- [1]
 						[0] = 0,
 						["alternatepower"] = 0,
 						[3] = 0,
-						[6] = 0,
+						[6] = -0.007486000000000104,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
 						["ress"] = 0,
-						["debuff_uptime"] = 0,
 						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
 						["dispell"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
 						["cc_break"] = 0,
 						["dead"] = 0,
 					}, -- [4]
@@ -165,27 +165,25 @@ _detalhes_database = {
 				["end_time"] = 807695.333,
 				["instance_type"] = "none",
 				["overall_added"] = true,
-				["totals_grupo"] = {
-					0, -- [1]
-					0, -- [2]
+				["PhaseData"] = {
 					{
-						0, -- [1]
-						[0] = 0,
-						["alternatepower"] = 0,
-						[3] = 0,
-						[6] = 0,
-					}, -- [3]
-					{
-						["buff_uptime"] = 0,
-						["ress"] = 0,
-						["debuff_uptime"] = 0,
-						["cooldowns_defensive"] = 0,
-						["interrupt"] = 0,
-						["dispell"] = 0,
-						["cc_break"] = 0,
-						["dead"] = 0,
-					}, -- [4]
+						1, -- [1]
+						1, -- [2]
+					}, -- [1]
+					["damage_section"] = {
+					},
+					["heal_section"] = {
+					},
+					["heal"] = {
+						{
+						}, -- [1]
+					},
+					["damage"] = {
+						{
+						}, -- [1]
+					},
 				},
+				["hasSaved"] = true,
 				["frags"] = {
 				},
 				["data_fim"] = "23:39:41",
@@ -199,23 +197,26 @@ _detalhes_database = {
 				["start_time"] = 0,
 				["TimeData"] = {
 				},
-				["PhaseData"] = {
+				["totals_grupo"] = {
+					0, -- [1]
+					0, -- [2]
 					{
-						1, -- [1]
-						1, -- [2]
-					}, -- [1]
-					["heal_section"] = {
-					},
-					["heal"] = {
-						{
-						}, -- [1]
-					},
-					["damage_section"] = {
-					},
-					["damage"] = {
-						{
-						}, -- [1]
-					},
+						0, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[3] = 0,
+						[6] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["cooldowns_defensive"] = 0,
+						["dispell"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["cc_break"] = 0,
+						["dead"] = 0,
+					}, -- [4]
 				},
 			}, -- [1]
 		},
@@ -245,7 +246,7 @@ _detalhes_database = {
 		["pos"] = {
 		},
 	},
-	["last_version"] = "3.4.0 10205",
+	["last_version"] = "3.4.0 10259",
 	["SoloTablesSaved"] = {
 		["Mode"] = 1,
 	},
@@ -1056,7 +1057,7 @@ _detalhes_database = {
 		},
 		["DETAILS_PLUGIN_STREAM_OVERLAY"] = {
 			["use_square_mode"] = false,
-			["is_first_run"] = true,
+			["is_first_run"] = false,
 			["arrow_color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -1073,37 +1074,21 @@ _detalhes_database = {
 				["radius"] = 160,
 				["hide"] = false,
 			},
-			["point"] = "CENTER",
+			["row_height"] = 20,
 			["arrow_anchor_x"] = 0,
-			["y"] = -4.57763671875e-05,
-			["row_texture"] = "Details Serenity",
-			["square_grow_direction"] = "right",
 			["font_color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["row_height"] = 20,
+			["row_texture"] = "Details Serenity",
+			["square_grow_direction"] = "right",
+			["point"] = "CENTER",
+			["main_frame_strata"] = "LOW",
 			["square_amount"] = 5,
 			["enabled"] = false,
 			["arrow_size"] = 10,
-			["use_spark"] = true,
-			["row_spacement"] = 21,
-			["main_frame_color"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.2, -- [4]
-			},
-			["main_frame_strata"] = "LOW",
-			["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
-			["row_color"] = {
-				0.1, -- [1]
-				0.1, -- [2]
-				0.1, -- [3]
-				0.4, -- [4]
-			},
 			["per_second"] = {
 				["enabled"] = false,
 				["point"] = "CENTER",
@@ -1111,20 +1096,51 @@ _detalhes_database = {
 				["font_shadow"] = true,
 				["y"] = 6.103515625e-05,
 				["x"] = -6.103515625e-05,
-				["update_speed"] = 0.05,
 				["size"] = 32,
+				["update_speed"] = 0.05,
 				["attribute_type"] = 1,
 			},
+			["row_spacement"] = 21,
+			["main_frame_color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.2, -- [4]
+			},
+			["author"] = "Terciob",
+			["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
+			["y"] = -4.57763671875e-05,
+			["font_size"] = 10,
 			["x"] = 0,
 			["font_face"] = "Friz Quadrata TT",
 			["square_size"] = 32,
-			["arrow_anchor_y"] = 0,
-			["font_size"] = 10,
+			["row_color"] = {
+				0.1, -- [1]
+				0.1, -- [2]
+				0.1, -- [3]
+				0.4, -- [4]
+			},
+			["use_spark"] = true,
 			["main_frame_locked"] = false,
-			["author"] = "Terciob",
+			["arrow_anchor_y"] = 0,
 		},
 	},
-	["last_day"] = "29",
+	["last_instance_time"] = 0,
+	["mythic_dungeon_currentsaved"] = {
+		["dungeon_name"] = "",
+		["started"] = false,
+		["segment_id"] = 0,
+		["ej_id"] = 0,
+		["started_at"] = 0,
+		["run_id"] = 0,
+		["level"] = 0,
+		["dungeon_zone_id"] = 0,
+		["previous_boss_killed_at"] = 0,
+	},
+	["cached_roles"] = {
+		["Player-4778-04F3EDE6"] = "DAMAGER",
+	},
+	["last_day"] = "12",
 	["local_instances_config"] = {
 		{
 			["modo"] = 2,
@@ -1145,8 +1161,8 @@ _detalhes_database = {
 			["attribute"] = 1,
 			["pos"] = {
 				["normal"] = {
-					["y"] = 6.103515625e-05,
-					["x"] = -0.0001220703125,
+					["y"] = -375.5553283691406,
+					["x"] = 346.6661376953125,
 					["w"] = 310,
 					["h"] = 157.9999847412109,
 				},
@@ -1159,21 +1175,6 @@ _detalhes_database = {
 			},
 		}, -- [1]
 	},
-	["last_instance_time"] = 0,
-	["mythic_dungeon_currentsaved"] = {
-		["dungeon_name"] = "",
-		["started"] = false,
-		["segment_id"] = 0,
-		["ej_id"] = 0,
-		["started_at"] = 0,
-		["run_id"] = 0,
-		["level"] = 0,
-		["dungeon_zone_id"] = 0,
-		["previous_boss_killed_at"] = 0,
-	},
-	["cached_roles"] = {
-		["Player-4778-04F3EDE6"] = "DAMAGER",
-	},
 	["ignore_nicktag"] = false,
 	["combat_id"] = 0,
 	["savedStyles"] = {
@@ -1182,7 +1183,7 @@ _detalhes_database = {
 		["nextreset"] = 1668353958,
 		["last_version"] = 15,
 	},
-	["combat_counter"] = 2,
+	["combat_counter"] = 4,
 	["announce_deaths"] = {
 		["enabled"] = false,
 		["last_hits"] = 1,
@@ -1222,7 +1223,6 @@ _detalhes_database = {
 					["aID"] = "4778-04F3EDE6",
 					["classe"] = "PRIEST",
 					["buff_uptime_spells"] = {
-						["tipo"] = 9,
 						["_ActorTable"] = {
 							[57940] = {
 								["refreshamt"] = 0,
@@ -1285,6 +1285,7 @@ _detalhes_database = {
 								["counter"] = 0,
 							},
 						},
+						["tipo"] = 9,
 					},
 					["serial"] = "Player-4778-04F3EDE6",
 					["tipo"] = 4,
@@ -1300,14 +1301,14 @@ _detalhes_database = {
 		},
 		["raid_roster_indexed"] = {
 		},
+		["spells_cast_timeline"] = {
+		},
 		["tempo_start"] = 807675.091,
-		["last_events_tables"] = {
+		["cleu_timeline"] = {
 		},
 		["alternate_power"] = {
 		},
 		["combat_counter"] = 1,
-		["spells_cast_timeline"] = {
-		},
 		["totals"] = {
 			0, -- [1]
 			0, -- [2]
@@ -1321,10 +1322,10 @@ _detalhes_database = {
 			{
 				["buff_uptime"] = 0,
 				["ress"] = 0,
-				["debuff_uptime"] = 0,
 				["cooldowns_defensive"] = 0,
-				["interrupt"] = 0,
 				["dispell"] = 0,
+				["interrupt"] = 0,
+				["debuff_uptime"] = 0,
 				["cc_break"] = 0,
 				["dead"] = 0,
 			}, -- [4]
@@ -1343,14 +1344,6 @@ _detalhes_database = {
 		["cleu_events"] = {
 			["n"] = 1,
 		},
-		["segments_added"] = {
-			{
-				["elapsed"] = 807695.333,
-				["type"] = 0,
-				["name"] = "未知",
-				["clock"] = 0,
-			}, -- [1]
-		},
 		["totals_grupo"] = {
 			0, -- [1]
 			0, -- [2]
@@ -1364,42 +1357,52 @@ _detalhes_database = {
 			{
 				["buff_uptime"] = 0,
 				["ress"] = 0,
-				["debuff_uptime"] = 0,
 				["cooldowns_defensive"] = 0,
-				["interrupt"] = 0,
 				["dispell"] = 0,
+				["interrupt"] = 0,
+				["debuff_uptime"] = 0,
 				["cc_break"] = 0,
 				["dead"] = 0,
 			}, -- [4]
 		},
+		["overall_refreshed"] = true,
 		["frags"] = {
+		},
+		["hasSaved"] = true,
+		["segments_added"] = {
+			{
+				["elapsed"] = 807695.333,
+				["type"] = 0,
+				["name"] = "未知",
+				["clock"] = 0,
+			}, -- [1]
 		},
 		["data_fim"] = "23:39:41",
 		["overall_enemy_name"] = "未知",
 		["CombatSkillCache"] = {
-		},
-		["cleu_timeline"] = {
-		},
-		["start_time"] = 0,
-		["TimeData"] = {
 		},
 		["PhaseData"] = {
 			{
 				1, -- [1]
 				1, -- [2]
 			}, -- [1]
+			["damage_section"] = {
+			},
 			["heal_section"] = {
 			},
 			["heal"] = {
 			},
-			["damage_section"] = {
-			},
 			["damage"] = {
 			},
 		},
+		["start_time"] = 0,
+		["TimeData"] = {
+		},
+		["last_events_tables"] = {
+		},
 	},
 	["character_data"] = {
-		["logons"] = 1,
+		["logons"] = 3,
 	},
 	["force_font_outline"] = "",
 	["announce_firsthit"] = {

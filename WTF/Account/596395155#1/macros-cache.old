@@ -2,7 +2,8 @@ VER 3 0000000000000005 "cz" "135811"
 /run ResetInstances()
 END
 VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
-/script DecursiveRootTable.Dcr:Println('没有相关技能')
+/stopcasting
+/cast [@mouseover,nomod,exists] 解除诅咒;  [@mouseover,exists,mod:ctrl] 驱毒术; [@mouseover,exists,mod:shift] 解除诅咒
 END
 VER 3 000000000000000D "healbot大迅捷" "INV_MISC_QUESTIONMARK"
 #showtooltip 自然迅捷
@@ -34,6 +35,10 @@ END
 VER 3 0000000000000002 "target宏" "INV_MISC_QUESTIONMARK"
 /target 逆风术士
 /script SetRaidTarget("target",6)
+END
+VER 3 000000000000001F "冲锋" "132183"
+#showtooltip [stance:1]野性冲锋 - 熊;[stance:3]野性冲锋 - 豹
+/cast [stance:1]野性冲锋 - 熊;[stance:3]野性冲锋 - 豹
 END
 VER 3 000000000000000E "变身" "132148"
 #showtooltip 变身
@@ -78,14 +83,22 @@ VER 3 0000000000000013 "星辰坠落" "INV_MISC_QUESTIONMARK"
 /stopcasting
 /cast 星辰坠落
 END
+VER 3 0000000000000020 "晕" "132114"
+#showtooltip [stance:1]猛击;[stance:3]割碎
+/cast  [stance:1]猛击;[stance:3]割碎
+END
 VER 3 0000000000000015 "月火术" "INV_MISC_QUESTIONMARK"
 #showtooltip 月火术
 /cast 月火术
 END
 VER 3 000000000000001C "横扫重殴" "134296"
-/cast 重殴
-/cast 横扫（熊）
-/startattack
+#showtooltip  [stance:1]横扫（熊）;[stance:3]横扫（豹）
+/cast [stance:1]重殴;[stance:3]撕碎
+/cast [stance:1]横扫（熊）;[stance:3]横扫（豹）
+END
+VER 3 0000000000000021 "流血割伤" "132131"
+#showtooltip [stance:1]割伤(等级 3);[stance:3]割裂
+/cast  [stance:1]割伤(等级 3);[stance:3]割裂
 END
 VER 3 000000000000000F "滋养" "INV_MISC_QUESTIONMARK"
 #showtooltip 滋养
@@ -115,6 +128,10 @@ END
 VER 3 0000000000000018 "虫群" "INV_MISC_QUESTIONMARK"
 #showtooltip 虫群
 /cast 虫群
+END
+VER 3 000000000000001E "裂伤" "132135"
+#showtooltip [stance:1]裂伤（熊）;[stance:3]裂伤（豹）
+/cast [stance:1]裂伤（熊）;[stance:3]裂伤（豹）
 END
 VER 3 0000000000000003 "视野宏" "132092"
 /join 大脚世界频道

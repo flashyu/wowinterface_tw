@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0707,
+	["LastPlayerFullName"] = "骑风-祈福",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 40467,
@@ -44,9 +46,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40325::::::::80:::::::::|h[开拓思绪护腕]|h|r",
 		}, -- [9]
 		{
-			["ID"] = 40466,
-			["Level"] = 213,
-			["Link"] = "|cffa335ee|Hitem:40466:3604:39998::::::80:::::::::|h[勇猛的梦游者手套]|h|r",
+			["ID"] = 40541,
+			["Level"] = 226,
+			["Link"] = "|cffa335ee|Hitem:40541:3222:::::::80:::::::::|h[霜冻灵敏护手]|h|r",
 		}, -- [10]
 		{
 			["ID"] = 40080,
@@ -61,10 +63,10 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:37232::::::::80:::::::::|h[叛变国王之戒]|h|r",
 		}, -- [12]
 		{
-			["ID"] = 37660,
-			["Level"] = 200,
+			["ID"] = 40255,
+			["Level"] = 213,
 			["AlsoFitsIn"] = 14,
-			["Link"] = "|cff0070dd|Hitem:37660::::::::80:::::::::|h[熔炉的灰烬]|h|r",
+			["Link"] = "|cffa335ee|Hitem:40255::::::::80:::::::::|h[消逝的诅咒]|h|r",
 		}, -- [13]
 		{
 			["ID"] = 40682,
@@ -88,8 +90,6 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40192::::::::80:::::::::|h[诅咒之脊]|h|r",
 		}, -- [17]
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "骑风-祈福",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {
