@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0707,
+	["LastPlayerFullName"] = "仓库技师-祈福",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		[7] = {
 			["ID"] = 39,
@@ -13,8 +15,6 @@ PawnOptions = {
 			["Link"] = "|cffffffff|Hitem:49778::::::::1:::::::::|h[破损的巨剑]|h|r",
 		},
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "仓库技师-祈福",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

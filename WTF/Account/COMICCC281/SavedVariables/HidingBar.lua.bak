@@ -1,6 +1,6 @@
 
 HidingBarDB = {
-	["tstmp"] = 1668188631,
+	["tstmp"] = 1668353311,
 	["profiles"] = {
 		{
 			["isDefault"] = true,
@@ -14,102 +14,105 @@ HidingBarDB = {
 						["tstmp"] = 1668180088,
 					},
 					["LibDBIcon10_AutoBar"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["LibDBIcon10_HealBot"] = {
-						["tstmp"] = 1668188634,
+						["tstmp"] = 1668353312,
 					},
 					["LibDBIcon10_DBM"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
+					},
+					["LibDBIcon10_Attune_Broker"] = {
+						["tstmp"] = 1668353311,
 					},
 					["LibDBIcon10_BugSack"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["LibDBIcon10_Myslot"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["WIM3MinimapButton"] = {
-						["tstmp"] = 1668184414,
+						["tstmp"] = 1668353311,
 					},
 					["LibDBIcon10_Details"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["LibDBIcon10_Atlas"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["LibDBIcon10_PoisonCharges"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["LibDBIcon10_AtlasLoot"] = {
-						["tstmp"] = 1668188631,
-					},
-					["LibDBIcon10_TradeSkillMaster"] = {
-						["tstmp"] = 1668188631,
-					},
-					["LibDBIcon10_TalentEmu"] = {
-						["tstmp"] = 1668188631,
-					},
-					["LibDBIcon10_LoonBestInSlot"] = {
-						["tstmp"] = 1668188631,
-					},
-					["LibDBIcon10_Leatrix_Plus"] = {
-						["tstmp"] = 1668188631,
-					},
-					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
-						["tstmp"] = 1668188631,
-					},
-					["LibDBIcon10_DetailsStreamer"] = {
-						["tstmp"] = 1668188631,
-					},
-					["LibDBIcon10_WeakAuras"] = {
-						["tstmp"] = 1668188631,
-					},
-					["LibDBIcon10_Questie"] = {
-						["tstmp"] = 1668188632,
-					},
-					["LibDBIcon10_Leatrix_Maps"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["CodexBrowserIcon"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
+					},
+					["LibDBIcon10_LoonBestInSlot"] = {
+						["tstmp"] = 1668353311,
+					},
+					["LibDBIcon10_TalentEmu"] = {
+						["tstmp"] = 1668353311,
+					},
+					["LibDBIcon10_Leatrix_Plus"] = {
+						["tstmp"] = 1668353311,
+					},
+					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
+						["tstmp"] = 1668353311,
+					},
+					["LibDBIcon10_DetailsStreamer"] = {
+						["tstmp"] = 1668353311,
+					},
+					["LibDBIcon10_WeakAuras"] = {
+						["tstmp"] = 1668353311,
+					},
+					["LibDBIcon10_Questie"] = {
+						["tstmp"] = 1668353312,
+					},
+					["LibDBIcon10_Leatrix_Maps"] = {
+						["tstmp"] = 1668353311,
+					},
+					["LibDBIcon10_TradeSkillMaster"] = {
+						["tstmp"] = 1668353311,
 					},
 				},
 				["btnSettings"] = {
 					["AutoBar"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["Atlas"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["TradeSkillMaster"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["DBM"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["Decursive"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["LFGBulletinBoard"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["WeakAuras"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["AtlasLoot"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["TalentEmu"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["PoisonCharges"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["AutoCombatLogger"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 					["HealBot"] = {
-						["tstmp"] = 1668188631,
+						["tstmp"] = 1668353311,
 					},
 				},
 				["grabMinimap"] = true,

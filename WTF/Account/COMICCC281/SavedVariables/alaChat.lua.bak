@@ -45,20 +45,20 @@ alaChatSV = {
 			0, -- [4]
 		},
 		["Direction"] = "RIGHT",
-		["AutoAdjustEditBox"] = true,
+		["YToBorder"] = 0,
 		["FadedAlpha"] = 0.5,
 		["BackdropAlpha"] = 0.25,
 		["FadeOutTime"] = 2,
-		["Backdrop"] = true,
+		["alpha"] = 0.9,
 		["PinInt"] = 2,
 		["FadeOutDelay"] = 1,
-		["YToBorder"] = 0,
+		["AutoAdjustEditBox"] = true,
 		["FadInTime"] = 0.5,
 		["Position"] = "below.editbox",
 		["XToBorder"] = 0,
 		["PinStyle"] = "char",
 		["PinSize"] = 24,
-		["alpha"] = 0.9,
+		["Backdrop"] = true,
 	},
 	["__AppliedDBVersion"] = {
 		["Player-4778-052AC4C0"] = 221020.01,
@@ -135,19 +135,19 @@ alaChatSV = {
 		["AutoAddChannelToDefaultChatFrame"] = false,
 		["UseColor"] = true,
 		["ChannelBlockButton_BLZ"] = true,
-		["_chatblocked"] = {
-		},
+		["RAID_WARNING"] = true,
 		["LOCAL_DEFENSE"] = false,
+		["BF_WORLD"] = true,
 		["RAID"] = true,
-		["LOOK_FOR_GROUP"] = true,
 		["_channelblocked"] = {
+		},
+		["LOOK_FOR_GROUP"] = true,
+		["_chatblocked"] = {
 		},
 		["_bfworldcf"] = {
 			["Player-4778-052AC4C0"] = {
 			},
 		},
-		["RAID_WARNING"] = true,
-		["BF_WORLD"] = true,
 		["UNMANAGEDCHANNEL"] = true,
 	},
 }

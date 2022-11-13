@@ -62,7 +62,7 @@ HealBot_Config = {
 			["Raid 25"] = false,
 		},
 	},
-	["CurrentSpec"] = 1,
+	["CurrentSpec"] = 2,
 	["BuffReset"] = "6.0.0",
 	["EnableHealthy"] = true,
 	["InitWotLKSpells"] = true,

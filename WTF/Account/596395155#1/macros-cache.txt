@@ -86,12 +86,16 @@ VER 3 0000000000000015 "月火术" "INV_MISC_QUESTIONMARK"
 END
 VER 3 000000000000001C "横扫重殴" "134296"
 #showtooltip  [stance:1]横扫（熊）;[stance:3]横扫（豹）
-/cast [stance:1]重殴;[stance:3]撕碎
+/cast [stance:1]重殴;
 /cast [stance:1]横扫（熊）;[stance:3]横扫（豹）
+/startattack
 END
 VER 3 0000000000000021 "流血割伤" "132131"
 #showtooltip [stance:1]割伤(等级 3);[stance:3]割裂
 /cast  [stance:1]割伤(等级 3);[stance:3]割裂
+END
+VER 3 0000000000000022 "测速" "132120"
+/script print(string.format("速度:%d%%",GetUnitSpeed("player") / 7 * 100))
 END
 VER 3 000000000000000F "滋养" "INV_MISC_QUESTIONMARK"
 #showtooltip 滋养

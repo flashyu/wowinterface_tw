@@ -11,13 +11,6 @@ VER 3 000000000000000D "healbot大迅捷" "INV_MISC_QUESTIONMARK"
 /cast 自然迅捷;
 /cast [@hbtarget]治疗之触;
 END
-VER 3 0000000000000008 "move" "132128"
-#showtooltips
-/use [swimming] 水栖形态
-/use [outdoors,flyable] 迅捷飞行形态
-/use [outdoors] 旅行形态
-/use 猎豹形态
-END
 VER 3 0000000000000007 "move2" "132128"
 #showtooltip
 /cast [outdoors,nocombat,flyable,noswimming]迅捷飞行形态
@@ -93,8 +86,9 @@ VER 3 0000000000000015 "月火术" "INV_MISC_QUESTIONMARK"
 END
 VER 3 000000000000001C "横扫重殴" "134296"
 #showtooltip  [stance:1]横扫（熊）;[stance:3]横扫（豹）
-/cast [stance:1]重殴;[stance:3]撕碎
+/cast [stance:1]重殴;
 /cast [stance:1]横扫（熊）;[stance:3]横扫（豹）
+/startattack
 END
 VER 3 0000000000000021 "流血割伤" "132131"
 #showtooltip [stance:1]割伤(等级 3);[stance:3]割裂

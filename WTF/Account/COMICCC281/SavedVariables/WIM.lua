@@ -28,19 +28,19 @@ WIM3_Data = {
 				["onReceive"] = true,
 			},
 			["alwaysOther"] = false,
-			["raid"] = {
-				["keepfocus"] = false,
-				["supress"] = true,
-				["onSend"] = true,
-				["autofocus"] = false,
-				["onReceive"] = true,
-			},
 			["arena"] = {
 				["keepfocus"] = false,
 				["supress"] = false,
 				["onSend"] = false,
 				["autofocus"] = false,
 				["onReceive"] = false,
+			},
+			["raid"] = {
+				["keepfocus"] = false,
+				["supress"] = true,
+				["onSend"] = true,
+				["autofocus"] = false,
+				["onReceive"] = true,
 			},
 			["party"] = {
 				["keepfocus"] = false,
@@ -89,14 +89,14 @@ WIM3_Data = {
 				["onReceive"] = false,
 			},
 			["alwaysOther"] = true,
-			["raid"] = {
+			["arena"] = {
 				["keepfocus"] = false,
 				["supress"] = false,
 				["onSend"] = false,
 				["autofocus"] = false,
 				["onReceive"] = false,
 			},
-			["arena"] = {
+			["raid"] = {
 				["keepfocus"] = false,
 				["supress"] = false,
 				["onSend"] = false,
@@ -205,24 +205,24 @@ WIM3_Data = {
 			["g"] = 1,
 			["r"] = 1,
 		},
-		["BNwispIn"] = {
-			["b"] = 0.6549019607843137,
-			["g"] = 0.4862745098039216,
-			["r"] = 0,
-		},
+		["useSkin"] = true,
 		["historyOut"] = {
 			["b"] = 0.7058823529411764,
 			["g"] = 0.7058823529411764,
 			["r"] = 0.7058823529411764,
 		},
-		["useSkin"] = true,
+		["BNwispIn"] = {
+			["b"] = 0.6549019607843137,
+			["g"] = 0.4862745098039216,
+			["r"] = 0,
+		},
 	},
 	["fontSize"] = 12,
 	["showToolTips"] = true,
 	["minimap"] = {
 		["free_position"] = {
-			["y"] = -120.1099628101464,
-			["x"] = -161.7999861770209,
+			["y"] = -119.9890033406945,
+			["x"] = -161.5500472187982,
 			["point"] = "TOPRIGHT",
 		},
 		["free"] = false,
@@ -327,21 +327,6 @@ WIM3_Data = {
 			},
 		},
 	},
-	["ClickControl"] = {
-		["clickSensitivity"] = 0.2,
-	},
-	["tabs"] = {
-		["sortBy"] = 2,
-		["whispers"] = {
-			["enabled"] = false,
-			["guild"] = false,
-			["friends"] = false,
-		},
-		["chat"] = {
-			["enabled"] = false,
-			["aswhisper"] = false,
-		},
-	},
 	["history"] = {
 		["ageLimit"] = true,
 		["previewCount"] = 25,
@@ -363,6 +348,21 @@ WIM3_Data = {
 			["maxPer"] = true,
 		},
 	},
+	["tabs"] = {
+		["sortBy"] = 2,
+		["whispers"] = {
+			["enabled"] = false,
+			["guild"] = false,
+			["friends"] = false,
+		},
+		["chat"] = {
+			["enabled"] = false,
+			["aswhisper"] = false,
+		},
+	},
+	["ClickControl"] = {
+		["clickSensitivity"] = 0.2,
+	},
 	["skin"] = {
 		["font_outline"] = "",
 		["selected"] = "WIM Classic",
@@ -377,11 +377,11 @@ WIM3_Data = {
 		["mostConvos"] = 0,
 	},
 	["clampToScreen"] = true,
+	["coloredNames"] = true,
 	["winLoc"] = {
 		["left"] = 217,
 		["top"] = 664,
 	},
-	["coloredNames"] = true,
 	["ignoreArrowKeys"] = true,
 	["tabAdvance"] = false,
 	["windowOnTop"] = true,
@@ -458,6 +458,20 @@ WIM3_Filters = {
 }
 WIM3_History = {
 	["祈福"] = {
+		["芈灭"] = {
+			["全球顶级投资家#5874"] = {
+				{
+					["type"] = 1,
+					["time"] = 1668344754,
+					["from"] = "全球顶级投资家#5874",
+					["msg"] = "语音",
+					["inbound"] = true,
+					["convo"] = "全球顶级投资家#5874",
+				}, -- [1]
+				["info"] = {
+				},
+			},
+		},
 		["部落太难"] = {
 			["魂淡德"] = {
 				{

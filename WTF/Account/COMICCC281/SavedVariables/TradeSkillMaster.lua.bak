@@ -50,15 +50,15 @@ TradeSkillMasterDB = {
 			["ilvl"] = 32,
 			["pct"] = 40,
 			["seller"] = 86,
-			["buyout"] = 115,
-			["bidPct"] = 40,
-			["itemBuyout"] = 115,
 			["item"] = 230,
+			["bidPct"] = 40,
 			["stack"] = 40,
-			["bid"] = 115,
-			["posts"] = 40,
-			["icon"] = 24,
+			["buyout"] = 115,
 			["itemBid"] = 115,
+			["bid"] = 115,
+			["itemBuyout"] = 115,
+			["icon"] = 24,
+			["posts"] = 40,
 		},
 		["colHidden"] = {
 			["bid"] = true,
@@ -121,17 +121,17 @@ TradeSkillMasterDB = {
 		["i:37864"] = 1,
 		["i:199522"] = 1,
 		["i:199517"] = 1,
-		["i:43851"] = 1,
 		["i:33452"] = 1,
-		["i:33470"] = 2,
-		["i:33444"] = 1,
 		["i:199511"] = 1,
 		["i:199529"] = 1,
 		["i:199720"] = 1,
 		["i:199521"] = 1,
 		["i:199635"] = 1,
 		["i:199470"] = 1,
+		["i:33444"] = 1,
+		["i:33470"] = 2,
 		["i:17033"] = 5,
+		["i:43851"] = 1,
 	},
 	["g@ @vendoringUIContext@frame"] = {
 		["centerX"] = -200.3199955224991,
@@ -148,17 +148,23 @@ TradeSkillMasterDB = {
 	},
 	["f@Horde - 祈福@userData@craftingCooldownIgnore"] = {
 	},
-	["s@芈灭 - Alliance - 祈福@internalData@goldLogLastUpdate"] = 1668188629,
+	["s@部落太难 - Horde - 祈福@internalData@playerProfessions"] = {
+		["急救"] = {
+			["isSecondary"] = false,
+			["level"] = 270,
+			["maxLevel"] = 300,
+			["skillId"] = -1,
+		},
+	},
 	["s@部落太难 - Horde - 祈福@internalData@money"] = 311826,
-	["g@ @tooltipOptions@enabled"] = true,
+	["g@ @coreOptions@protectAuctionHouse"] = false,
 	["c@芈灭 - 祈福@bankingUIContext@auctioningGroupTree"] = {
 		["collapsed"] = {
 		},
 		["unselected"] = {
 		},
 	},
-	["c@部落太难 - 祈福@internalData@auctionMessages"] = {
-	},
+	["g@ @bankingUIContext@isOpen"] = true,
 	["g@ @internalData@optionalMatTextLookup"] = {
 	},
 	["_lastModifiedVersion"] = {
@@ -278,10 +284,10 @@ TradeSkillMasterDB = {
 		["g@tooltipOptions@detailedDestroyTooltip"] = 10,
 		["g@auctioningOptions@disableInvalidMsg"] = 10,
 		["c@internalData@auctionMessages"] = 10,
-		["f@auctioningOptions@whitelist"] = 10,
-		["g@mainUIContext@ledgerInventoryScrollingTable"] = 69,
 		["f@internalData@guildVaults"] = 10,
-		["g@vendoringUIContext@frame"] = 55,
+		["g@mainUIContext@ledgerInventoryScrollingTable"] = 69,
+		["f@auctioningOptions@whitelist"] = 10,
+		["g@accountingOptions@trackTrades"] = 10,
 		["g@tooltipOptions@enabled"] = 20,
 		["g@craftingUIContext@professionDividedContainer"] = 55,
 		["f@internalData@guildGoldLogLastUpdate"] = 83,
@@ -326,7 +332,7 @@ TradeSkillMasterDB = {
 		["g@userData@savedShoppingSearches"] = 96,
 		["g@appearanceOptions@customColorSet"] = 98,
 		["g@tooltipOptions@inventoryTooltipFormat"] = 10,
-		["g@accountingOptions@trackTrades"] = 10,
+		["g@vendoringUIContext@frame"] = 55,
 		["p@userData@groups"] = 10,
 		["g@coreOptions@groupPriceSource"] = 41,
 		["g@tooltipOptions@transformTooltip"] = 10,
@@ -364,30 +370,19 @@ TradeSkillMasterDB = {
 	},
 	["g@ @mailingUIContext@showDefault"] = false,
 	["g@ @coreOptions@destroyValueSource"] = "dbmarket",
-	["f@Alliance - 祈福@internalData@craftingQueue"] = {
+	["g@ @craftingOptions@ignoreCharacters"] = {
 	},
-	["g@ @auctionUIContext@myAuctionsScrollingTable"] = {
+	["g@ @vendoringUIContext@buybackScrollingTable"] = {
 		["colWidth"] = {
-			["stackSize"] = 30,
-			["buyout"] = 100,
-			["currentBid"] = 100,
-			["group"] = 110,
-			["item"] = 248,
-			["timeLeft"] = 40,
-			["highbidder"] = 110,
+			["qty"] = 40,
+			["item"] = 360,
+			["cost"] = 100,
 		},
 		["colHidden"] = {
 		},
 	},
-	["s@部落太难 - Horde - 祈福@internalData@playerProfessions"] = {
-		["急救"] = {
-			["isSecondary"] = false,
-			["level"] = 270,
-			["maxLevel"] = 300,
-			["skillId"] = -1,
-		},
-	},
-	["g@ @coreOptions@protectAuctionHouse"] = false,
+	["s@芈灭 - Alliance - 祈福@internalData@goldLogLastUpdate"] = 1668353309,
+	["g@ @tooltipOptions@enabled"] = true,
 	["g@ @mainUIContext@operationsSummaryScrollingTable"] = {
 		["colWidth"] = {
 			["items"] = 130,
@@ -398,14 +393,13 @@ TradeSkillMasterDB = {
 		["colHidden"] = {
 		},
 	},
-	["g@ @craftingUIContext@professionDividedContainer"] = {
-		["leftWidth"] = 520,
-	},
+	["g@ @internalData@whatsNewVersion"] = 0,
 	["g@ @tooltipOptions@customPriceTooltips"] = {
 	},
 	["f@Horde - 祈福@internalData@craftingQueue"] = {
 	},
-	["g@ @bankingUIContext@isOpen"] = true,
+	["c@部落太难 - 祈福@internalData@auctionMessages"] = {
+	},
 	["g@ @vendoringUIContext@sellScrollingTable"] = {
 		["colWidth"] = {
 			["potential"] = 100,
@@ -430,7 +424,7 @@ TradeSkillMasterDB = {
 		["colHidden"] = {
 		},
 	},
-	["f@Horde - 祈福@internalData@mailExcessGoldChar"] = "",
+	["s@芈灭 - Alliance - 祈福@internalData@classKey"] = "PALADIN",
 	["f@Horde - 祈福@internalData@guildGoldLogLastUpdate"] = {
 	},
 	["g@ @mainUIContext@ledgerOtherScrollingTable"] = {
@@ -475,7 +469,7 @@ TradeSkillMasterDB = {
 				["maxQty"] = 10,
 				["relationships"] = {
 				},
-				["keepQty"] = 0,
+				["maxQtyEnabled"] = false,
 				["target"] = "",
 				["restockSources"] = {
 					["guild"] = false,
@@ -483,7 +477,7 @@ TradeSkillMasterDB = {
 				},
 				["ignorePlayer"] = {
 				},
-				["maxQtyEnabled"] = false,
+				["keepQty"] = 0,
 			},
 		},
 		["Auctioning"] = {
@@ -574,17 +568,6 @@ TradeSkillMasterDB = {
 				["enableSell"] = true,
 			},
 		},
-		["Sniper"] = {
-			["#Default"] = {
-				["ignoreFactionrealm"] = {
-				},
-				["belowPrice"] = "max(vendorsell, ifgt(DBRegionMarketAvg, 250000g, 0.8, ifgt(DBRegionMarketAvg, 100000g, 0.7, ifgt(DBRegionMarketAvg, 50000g, 0.6, ifgt(DBRegionMarketAvg, 25000g, 0.5, ifgt(DBRegionMarketAvg, 10000g, 0.4, ifgt(DBRegionMarketAvg, 5000g, 0.3, ifgt(DBRegionMarketAvg, 2000g, 0.2, ifgt(DBRegionMarketAvg, 1000g, 0.1, 0.05)))))))) * DBRegionMarketAvg)",
-				["relationships"] = {
-				},
-				["ignorePlayer"] = {
-				},
-			},
-		},
 		["Shopping"] = {
 			["#Default"] = {
 				["ignoreFactionrealm"] = {
@@ -604,8 +587,19 @@ TradeSkillMasterDB = {
 				},
 			},
 		},
+		["Sniper"] = {
+			["#Default"] = {
+				["ignoreFactionrealm"] = {
+				},
+				["belowPrice"] = "max(vendorsell, ifgt(DBRegionMarketAvg, 250000g, 0.8, ifgt(DBRegionMarketAvg, 100000g, 0.7, ifgt(DBRegionMarketAvg, 50000g, 0.6, ifgt(DBRegionMarketAvg, 25000g, 0.5, ifgt(DBRegionMarketAvg, 10000g, 0.4, ifgt(DBRegionMarketAvg, 5000g, 0.3, ifgt(DBRegionMarketAvg, 2000g, 0.2, ifgt(DBRegionMarketAvg, 1000g, 0.1, 0.05)))))))) * DBRegionMarketAvg)",
+				["relationships"] = {
+				},
+				["ignorePlayer"] = {
+				},
+			},
+		},
 	},
-	["g@ @craftingOptions@ignoreCharacters"] = {
+	["f@Alliance - 祈福@internalData@craftingQueue"] = {
 	},
 	["g@ @auctioningOptions@scanCompleteSound"] = "TSM_NO_SOUND",
 	["s@部落太难 - Horde - 祈福@internalData@mailQuantity"] = {
@@ -708,15 +702,15 @@ TradeSkillMasterDB = {
 		["i:4289"] = 50,
 		["i:18567"] = 150000,
 		["i:2324"] = 25,
-		["i:3857"] = 500,
 		["i:28060"] = 8,
+		["i:17032"] = 2000,
 		["i:29451"] = 1600,
 		["i:3466"] = 2000,
 		["i:6532"] = 250,
 		["i:2605"] = 100,
-		["i:8952"] = 800,
+		["i:3857"] = 500,
 		["i:17026"] = 1000,
-		["i:17032"] = 2000,
+		["i:8952"] = 800,
 		["i:17037"] = 1400,
 		["i:2880"] = 100,
 		["i:27854"] = 1120,
@@ -730,15 +724,15 @@ TradeSkillMasterDB = {
 			["ilvl"] = 32,
 			["pct"] = 40,
 			["seller"] = 88,
-			["buyout"] = 115,
-			["bidPct"] = 40,
-			["itemBuyout"] = 115,
 			["item"] = 226,
+			["bidPct"] = 40,
 			["stack"] = 40,
-			["bid"] = 115,
-			["posts"] = 40,
-			["timeLeft"] = 26,
+			["buyout"] = 115,
 			["itemBid"] = 115,
+			["bid"] = 115,
+			["itemBuyout"] = 115,
+			["timeLeft"] = 26,
+			["posts"] = 40,
 		},
 		["colHidden"] = {
 			["bid"] = true,
@@ -765,15 +759,15 @@ TradeSkillMasterDB = {
 		["i:4306"] = 1,
 		["i:1710"] = 1,
 		["i:8932"] = 2,
-		["i:4338"] = 22,
+		["i:25911"] = 1,
 		["i:41751"] = 5,
-		["i:39360"] = 1,
 		["i:39203"] = 1,
+		["i:39360"] = 1,
 		["i:38707"] = 1,
 		["i:39328"] = 33,
-		["i:25911"] = 1,
-		["i:27854"] = 20,
+		["i:4338"] = 22,
 		["i:39361"] = 1,
+		["i:27854"] = 20,
 		["i:6948"] = 1,
 	},
 	["g@ @auctionUIContext@shoppingAuctionScrollingTable"] = {
@@ -781,15 +775,15 @@ TradeSkillMasterDB = {
 			["ilvl"] = 32,
 			["pct"] = 40,
 			["seller"] = 88,
-			["buyout"] = 115,
-			["bidPct"] = 40,
-			["itemBuyout"] = 115,
 			["item"] = 226,
+			["bidPct"] = 40,
 			["stack"] = 40,
-			["bid"] = 115,
-			["posts"] = 40,
-			["timeLeft"] = 26,
+			["buyout"] = 115,
 			["itemBid"] = 115,
+			["bid"] = 115,
+			["itemBuyout"] = 115,
+			["timeLeft"] = 26,
+			["posts"] = 40,
 		},
 		["colHidden"] = {
 			["bid"] = true,
@@ -836,15 +830,7 @@ TradeSkillMasterDB = {
 	["g@ @appearanceOptions@showTotalMoney"] = false,
 	["f@Horde - 祈福@internalData@isCraftFavorite"] = {
 	},
-	["g@ @tooltipOptions@operationTooltips"] = {
-		["Mailing"] = false,
-		["Auctioning"] = false,
-		["Crafting"] = false,
-		["Warehousing"] = false,
-		["Vendoring"] = false,
-		["Shopping"] = false,
-		["Sniper"] = false,
-	},
+	["g@ @debug@chatLoggingEnabled"] = false,
 	["g@ @mainUIContext@ledgerInventoryScrollingTable"] = {
 		["colWidth"] = {
 			["auctionHouse"] = 50,
@@ -885,7 +871,12 @@ TradeSkillMasterDB = {
 		["unselected"] = {
 		},
 	},
-	["g@ @tooltipOptions@tooltipPriceFormat"] = "text",
+	["c@芈灭 - 祈福@auctionUIContext@auctioningGroupTree"] = {
+		["collapsed"] = {
+		},
+		["unselected"] = {
+		},
+	},
 	["c@部落太难 - 祈福@bankingUIContext@mailingGroupTree"] = {
 		["collapsed"] = {
 		},
@@ -981,9 +972,9 @@ TradeSkillMasterDB = {
 	["f@Alliance - 祈福@internalData@expiringAuction"] = {
 	},
 	["g@ @mailingOptions@inboxMessages"] = true,
+	["g@ @shoppingOptions@searchAutoFocus"] = true,
 	["f@Horde - 祈福@internalData@characterGuilds"] = {
 	},
-	["g@ @shoppingOptions@searchAutoFocus"] = true,
 	["s@芈灭 - Alliance - 祈福@internalData@reagentBankQuantity"] = {
 	},
 	["g@ @destroyingOptions@autoShow"] = true,
@@ -1058,12 +1049,20 @@ TradeSkillMasterDB = {
 	},
 	["g@ @coreOptions@globalOperations"] = false,
 	["g@ @shoppingOptions@minDeSearchLvl"] = 1,
-	["g@ @internalData@appMessageId"] = 0,
+	["f@Alliance - 祈福@auctioningOptions@whitelist"] = {
+	},
 	["c@部落太难 - 祈福@internalData@auctionSaleHints"] = {
 	},
 	["r@祈福@internalData@saveTimeBuys"] = "",
 	["g@ @coreOptions@groupPriceSource"] = "dbmarket",
-	["s@芈灭 - Alliance - 祈福@internalData@money"] = 1036699,
+	["g@ @mailingUIContext@frame"] = {
+		["centerX"] = -200.3199955224991,
+		["scale"] = 1,
+		["height"] = 516,
+		["centerY"] = 0.6399999856948853,
+		["page"] = 1,
+		["width"] = 620,
+	},
 	["g@ @taskListUIContext@frame"] = {
 		["topRightY"] = -10,
 		["isOpen"] = true,
@@ -1102,8 +1101,7 @@ TradeSkillMasterDB = {
 		},
 	},
 	["g@ @tooltipOptions@inventoryTooltipFormat"] = "full",
-	["g@ @auctionUIContext@shoppingSelectionDividedContainer"] = {
-		["leftWidth"] = 272,
+	["c@部落太难 - 祈福@internalData@auctionPrices"] = {
 	},
 	["g@ @appearanceOptions@customColorSet"] = {
 		["ACTIVE_BG_ALT"] = "#a0a0a0",
@@ -1120,8 +1118,11 @@ TradeSkillMasterDB = {
 		["width"] = 325,
 	},
 	["g@ @mailingOptions@keepMailSpace"] = 0,
-	["r@祈福@internalData@csvSales"] = "itemString,stackSize,quantity,price,otherPlayer,player,time,source\ni:34652,1,1,10,Merchant,部落太难,1667923631,Vendor\ni:34655,1,1,10,Merchant,部落太难,1667923631,Vendor\ni:34650,1,1,13,Merchant,部落太难,1667923632,Vendor\ni:34649,1,1,6,Merchant,部落太难,1667923633,Vendor\ni:3948,1,1,3092,Merchant,部落太难,1667923633,Vendor\ni:38147,1,1,133,Merchant,部落太难,1667923634,Vendor\ni:34648,1,1,10,Merchant,部落太难,1667923636,Vendor\ni:34657,1,1,575,Merchant,部落太难,1667923637,Vendor\ni:39205,1,3,4,Merchant,部落太难,1667923640,Vendor\ni:34659,1,1,6,Merchant,部落太难,1667923641,Vendor\ni:34658,1,1,133,Merchant,部落太难,1667923642,Vendor\ni:34653,1,1,7,Merchant,部落太难,1667923643,Vendor\ni:34656,1,1,14,Merchant,部落太难,1667923644,Vendor\ni:10060:188,1,1,6668,Merchant,部落太难,1667923645,Vendor\ni:34651,1,1,7,Merchant,部落太难,1667923652,Vendor\ni:10189:785,1,1,11872,Merchant,部落太难,1667923652,Vendor\ni:8753,1,1,5198,Merchant,部落太难,1667923653,Vendor\ni:39353,3,3,389,Merchant,部落太难,1667923654,Vendor\ni:3783,1,1,3048,Merchant,部落太难,1667923656,Vendor",
-	["g@ @auctionUIContext@showDefault"] = false,
+	["p@Default@userData@items"] = {
+	},
+	["g@ @auctionUIContext@shoppingSearchesTabGroup"] = {
+		["pathIndex"] = 1,
+	},
 	["g@ @mailingOptions@sendMessages"] = true,
 	["g@ @craftingUIContext@professionScrollingTable"] = {
 		["colWidth"] = {
@@ -1161,11 +1162,10 @@ TradeSkillMasterDB = {
 		["filters"] = {
 		},
 	},
-	["c@部落太难 - 祈福@internalData@auctionPrices"] = {
+	["g@ @auctionUIContext@shoppingSelectionDividedContainer"] = {
+		["leftWidth"] = 272,
 	},
-	["g@ @auctionUIContext@shoppingSearchesTabGroup"] = {
-		["pathIndex"] = 1,
-	},
+	["g@ @auctionUIContext@showDefault"] = false,
 	["c@部落太难 - 祈福@mainUIContext@groupsManagementGroupTree"] = {
 		["collapsed"] = {
 		},
@@ -1187,34 +1187,25 @@ TradeSkillMasterDB = {
 	},
 	["f@Alliance - 祈福@internalData@guildVaults"] = {
 	},
-	["s@部落太难 - Horde - 祈福@internalData@goldLogLastUpdate"] = 1667923678,
 	["c@芈灭 - 祈福@auctionUIContext@shoppingGroupTree"] = {
 		["collapsed"] = {
 		},
 		["unselected"] = {
 		},
 	},
+	["s@部落太难 - Horde - 祈福@internalData@goldLogLastUpdate"] = 1667923678,
 	["g@ @mailingOptions@resendDelay"] = 1,
 	["f@Alliance - 祈福@internalData@pendingMail"] = {
 		["芈灭"] = {
 		},
 	},
-	["p@Default@userData@items"] = {
-	},
+	["r@祈福@internalData@csvSales"] = "itemString,stackSize,quantity,price,otherPlayer,player,time,source\ni:34652,1,1,10,Merchant,部落太难,1667923631,Vendor\ni:34655,1,1,10,Merchant,部落太难,1667923631,Vendor\ni:34650,1,1,13,Merchant,部落太难,1667923632,Vendor\ni:34649,1,1,6,Merchant,部落太难,1667923633,Vendor\ni:3948,1,1,3092,Merchant,部落太难,1667923633,Vendor\ni:38147,1,1,133,Merchant,部落太难,1667923634,Vendor\ni:34648,1,1,10,Merchant,部落太难,1667923636,Vendor\ni:34657,1,1,575,Merchant,部落太难,1667923637,Vendor\ni:39205,1,3,4,Merchant,部落太难,1667923640,Vendor\ni:34659,1,1,6,Merchant,部落太难,1667923641,Vendor\ni:34658,1,1,133,Merchant,部落太难,1667923642,Vendor\ni:34653,1,1,7,Merchant,部落太难,1667923643,Vendor\ni:34656,1,1,14,Merchant,部落太难,1667923644,Vendor\ni:10060:188,1,1,6668,Merchant,部落太难,1667923645,Vendor\ni:34651,1,1,7,Merchant,部落太难,1667923652,Vendor\ni:10189:785,1,1,11872,Merchant,部落太难,1667923652,Vendor\ni:8753,1,1,5198,Merchant,部落太难,1667923653,Vendor\ni:39353,3,3,389,Merchant,部落太难,1667923654,Vendor\ni:3783,1,1,3048,Merchant,部落太难,1667923656,Vendor",
 	["g@ @bankingUIContext@tab"] = "Warehousing",
 	["g@ @destroyingOptions@includeSoulbound"] = false,
 	["g@ @coreOptions@chatFrame"] = "",
 	["f@Horde - 祈福@internalData@mailExcessGoldLimit"] = 10000000000,
-	["g@ @mailingUIContext@frame"] = {
-		["centerX"] = -200.3199955224991,
-		["scale"] = 1,
-		["height"] = 516,
-		["centerY"] = 0.6399999856948853,
-		["page"] = 1,
-		["width"] = 620,
-	},
-	["f@Alliance - 祈福@auctioningOptions@whitelist"] = {
-	},
+	["s@芈灭 - Alliance - 祈福@internalData@money"] = 1036699,
+	["g@ @internalData@appMessageId"] = 0,
 	["s@芈灭 - Alliance - 祈福@internalData@mailQuantity"] = {
 	},
 	["f@Horde - 祈福@internalData@mailDisenchantablesChar"] = "",
@@ -1236,14 +1227,14 @@ TradeSkillMasterDB = {
 	},
 	["g@ @mainUIContext@ledgerTransactionsScrollingTable"] = {
 		["colWidth"] = {
-			["item"] = 156,
-			["type"] = 50,
 			["time"] = 110,
+			["player"] = 95,
+			["item"] = 156,
 			["total"] = 120,
 			["perItem"] = 120,
-			["stack"] = 55,
 			["auctions"] = 60,
-			["player"] = 95,
+			["stack"] = 55,
+			["type"] = 50,
 		},
 		["colHidden"] = {
 			["total"] = true,
@@ -1283,14 +1274,17 @@ TradeSkillMasterDB = {
 		["radius"] = 80,
 		["hide"] = false,
 	},
-	["c@芈灭 - 祈福@auctionUIContext@auctioningGroupTree"] = {
-		["collapsed"] = {
-		},
-		["unselected"] = {
-		},
-	},
+	["g@ @tooltipOptions@tooltipPriceFormat"] = "text",
 	["f@Horde - 祈福@gatheringContext@crafter"] = "",
-	["g@ @debug@chatLoggingEnabled"] = false,
+	["g@ @tooltipOptions@operationTooltips"] = {
+		["Mailing"] = false,
+		["Auctioning"] = false,
+		["Crafting"] = false,
+		["Warehousing"] = false,
+		["Vendoring"] = false,
+		["Sniper"] = false,
+		["Shopping"] = false,
+	},
 	["c@芈灭 - 祈福@craftingUIContext@groupTree"] = {
 		["collapsed"] = {
 		},
@@ -1328,18 +1322,24 @@ TradeSkillMasterDB = {
 	["r@祈福@internalData@csvIncome"] = "type,amount,otherPlayer,player,time",
 	["g@ @mailingOptions@recentlyMailedList"] = {
 	},
-	["s@芈灭 - Alliance - 祈福@internalData@classKey"] = "PALADIN",
+	["f@Horde - 祈福@internalData@mailExcessGoldChar"] = "",
 	["s@部落太难 - Horde - 祈福@internalData@reagentBankQuantity"] = {
 	},
 	["g@ @mainUIContext@dashboardUnselectedCharacters"] = {
 	},
 	["s@部落太难 - Horde - 祈福@internalData@classKey"] = "DEATHKNIGHT",
-	["g@ @internalData@whatsNewVersion"] = 0,
-	["g@ @vendoringUIContext@buybackScrollingTable"] = {
+	["g@ @craftingUIContext@professionDividedContainer"] = {
+		["leftWidth"] = 520,
+	},
+	["g@ @auctionUIContext@myAuctionsScrollingTable"] = {
 		["colWidth"] = {
-			["qty"] = 40,
-			["item"] = 360,
-			["cost"] = 100,
+			["stackSize"] = 30,
+			["buyout"] = 100,
+			["currentBid"] = 100,
+			["group"] = 110,
+			["item"] = 248,
+			["timeLeft"] = 40,
+			["highbidder"] = 110,
 		},
 		["colHidden"] = {
 		},

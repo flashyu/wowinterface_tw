@@ -10,22 +10,22 @@ CodexConfig = {
 	["minimumDropChance"] = 2,
 	["showLowLevel"] = false,
 	["_tom_waypoint"] = {
-		1944, -- [1]
-		0.399, -- [2]
-		0.484, -- [3]
+		119, -- [1]
+		0.335, -- [2]
+		0.7475, -- [3]
 		["arrivaldistance"] = 15,
 		["callbacks"] = {
 			["distance"] = {
 			},
-			["minimap"] = {
-			},
 			["world"] = {
+			},
+			["minimap"] = {
 			},
 		},
 		["persistent"] = true,
 		["minimap"] = true,
 		["cleardistance"] = 10,
-		["title"] = "The Overlook Capture Credit Marker",
+		["title"] = "唤雷者索乌米特",
 		["from"] = "?",
 		["crazy"] = true,
 		["world"] = true,
