@@ -62,7 +62,7 @@ HealBot_Config = {
 			["Raid 25"] = false,
 		},
 	},
-	["CurrentSpec"] = 2,
+	["CurrentSpec"] = 1,
 	["BuffReset"] = "6.0.0",
 	["EnableHealthy"] = true,
 	["InitWotLKSpells"] = true,
@@ -428,10 +428,10 @@ HealBot_Config_Cures = {
 	["DebuffWatchWhenMounted"] = false,
 	["DebuffWatchInCombat"] = true,
 	["HealBot_Custom_Defuffs_All"] = {
-		["Disease"] = false,
-		["Poison"] = false,
-		["Magic"] = false,
 		["Curse"] = false,
+		["Disease"] = false,
+		["Magic"] = false,
+		["Poison"] = false,
 	},
 	["ShowTimeMaxDuration"] = 31,
 	["IgnoreFastDurDebuffsSecs"] = 2,
@@ -462,25 +462,25 @@ HealBot_Config_Cures = {
 	["IgnoreOnCooldownDebuffs"] = false,
 	["HealBot_CDCWarnRange_Screen"] = 2,
 	["CDCBarColour"] = {
+		["Curse"] = {
+			["B"] = 0.09,
+			["G"] = 0.43,
+			["R"] = 0.83,
+		},
 		["Disease"] = {
 			["B"] = 0.7,
 			["G"] = 0.19,
 			["R"] = 0.55,
-		},
-		["Poison"] = {
-			["B"] = 0.24,
-			["G"] = 0.46,
-			["R"] = 0.12,
 		},
 		["Magic"] = {
 			["B"] = 0.83,
 			["G"] = 0.33,
 			["R"] = 0.26,
 		},
-		["Curse"] = {
-			["B"] = 0.09,
-			["G"] = 0.43,
-			["R"] = 0.83,
+		["Poison"] = {
+			["B"] = 0.24,
+			["G"] = 0.46,
+			["R"] = 0.12,
 		},
 	},
 	["HealBotDebuffPriority"] = {

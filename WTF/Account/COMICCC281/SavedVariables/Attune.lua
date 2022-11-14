@@ -237,7 +237,7 @@ Attune_DB = {
 					["name"] = "诺兹多姆的子嗣",
 				},
 				["529"] = {
-					["earned"] = 200,
+					["earned"] = 530,
 					["name"] = "银色黎明",
 				},
 				["946"] = {
@@ -328,12 +328,12 @@ Attune_DB = {
 				["25462"] = 0,
 				["21027"] = 0,
 				["21108"] = 0,
-				["21104"] = 0,
+				["21138"] = 0,
 				["185687"] = 0,
 				["185686"] = 0,
 				["20383"] = 0,
 				["21107"] = 0,
-				["21138"] = 0,
+				["21104"] = 0,
 				["31241"] = 0,
 				["31722"] = 0,
 				["11464"] = 0,
@@ -342,7 +342,7 @@ Attune_DB = {
 				["24514"] = 0,
 				["17330"] = 0,
 			},
-			["status"] = "None",
+			["achieveMinPoints"] = 20,
 			["done"] = {
 				["118-10"] = 1,
 				["160-10"] = 1,
@@ -366,7 +366,7 @@ Attune_DB = {
 				["5-10"] = 1,
 				["40-10"] = 1,
 			},
-			["achieveMinPoints"] = 20,
+			["status"] = "None",
 			["attuned"] = {
 				["117"] = 100,
 				["116"] = 0,
@@ -427,7 +427,7 @@ Attune_DB = {
 	},
 	["showOtherChat"] = true,
 	["raidShowAlts"] = false,
-	["showDeprecatedAttunes"] = true,
+	["showListAlt"] = false,
 	["announceAttuneCompleted"] = true,
 	["showResponses"] = true,
 	["maxListSize"] = "20",
@@ -455,5 +455,5 @@ Attune_DB = {
 		["hide"] = false,
 	},
 	["showList"] = true,
-	["showListAlt"] = false,
+	["showDeprecatedAttunes"] = true,
 }

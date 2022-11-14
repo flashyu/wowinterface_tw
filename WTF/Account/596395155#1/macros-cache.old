@@ -46,7 +46,7 @@ VER 3 000000000000000C "台风" "INV_MISC_QUESTIONMARK"
 /stopcasting
 END
 VER 3 000000000000001B "团队" "136047"
-/script ConvertToRaid();
+/script InviteUnit("0");ConvertToRaid()
 END
 VER 3 000000000000001D "坐骑" "132242"
 #showtooltip
@@ -93,6 +93,9 @@ END
 VER 3 0000000000000021 "流血割伤" "132131"
 #showtooltip [stance:1]割伤(等级 3);[stance:3]割裂
 /cast  [stance:1]割伤(等级 3);[stance:3]割裂
+END
+VER 3 0000000000000022 "测速" "132120"
+/script print(string.format("速度:%d%%",GetUnitSpeed("player") / 7 * 100))
 END
 VER 3 000000000000000F "滋养" "INV_MISC_QUESTIONMARK"
 #showtooltip 滋养

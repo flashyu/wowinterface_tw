@@ -1,8 +1,8 @@
 
 HealBot_Config = {
 	["MyFriend"] = "x",
-	["Skin_ID"] = -1,
-	["DisableSolo"] = false,
+	["BuffReset"] = "6.0.0",
+	["LastAutoSkinChangeTime"] = 0,
 	["MacroUse10"] = false,
 	["SkinDefault"] = {
 		["Standard"] = {
@@ -55,16 +55,16 @@ HealBot_Config = {
 		},
 	},
 	["DisableHealBot"] = false,
-	["FavGroundMount"] = "军马",
-	["BuffReset"] = "6.0.0",
+	["LastVersionUpdate"] = "10.0.0.4",
+	["Skin_ID"] = -1,
 	["Profile"] = 1,
-	["LastAutoSkinChangeTime"] = 0,
+	["DisableSolo"] = false,
 	["CurrentSpec"] = 1,
 	["LastAutoSkinChangeType"] = "None",
-	["EnableHealthy"] = true,
 	["SkinZoneEnabled"] = {
 	},
-	["LastVersionUpdate"] = "10.0.0.4",
+	["EnableHealthy"] = true,
+	["FavGroundMount"] = "军马",
 	["DisabledNow"] = 0,
 }
 HealBot_Config_Spells = {

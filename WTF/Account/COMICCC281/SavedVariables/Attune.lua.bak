@@ -75,7 +75,7 @@ Attune_DB = {
 					["name"] = "诺兹多姆的子嗣",
 				},
 				["529"] = {
-					["earned"] = 200,
+					["earned"] = 530,
 					["name"] = "银色黎明",
 				},
 				["946"] = {
@@ -111,8 +111,8 @@ Attune_DB = {
 					["name"] = "贫民窟",
 				},
 			},
-			["status"] = "None",
 			["achieveMinPoints"] = 20,
+			["status"] = "None",
 			["done"] = {
 				["118-10"] = 1,
 				["160-10"] = 1,
@@ -190,8 +190,8 @@ Attune_DB = {
 				["21137"] = 0,
 				["25462"] = 0,
 				["21027"] = 0,
-				["21104"] = 0,
 				["21138"] = 0,
+				["21104"] = 0,
 				["21107"] = 0,
 				["20383"] = 0,
 				["185686"] = 0,
@@ -426,8 +426,8 @@ Attune_DB = {
 		},
 	},
 	["showOtherChat"] = true,
-	["showDeprecatedAttunes"] = true,
 	["showListAlt"] = false,
+	["showDeprecatedAttunes"] = true,
 	["announceAttuneCompleted"] = true,
 	["showResponses"] = true,
 	["maxListSize"] = "20",
