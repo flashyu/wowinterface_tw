@@ -6,28 +6,28 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_ITEM_COOLDOWN"] = {
 					["alwaysSticky"] = true,
 				},
-				["NOTIFICATION_LOOT"] = {
-					["disabled"] = true,
+				["NOTIFICATION_COOLDOWN"] = {
+					["alwaysSticky"] = true,
 				},
 				["NOTIFICATION_MONEY"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_COOLDOWN"] = {
-					["alwaysSticky"] = true,
+				["NOTIFICATION_LOOT"] = {
+					["disabled"] = true,
 				},
 			},
 			["enableBlizzardDamage"] = true,
 			["scrollAreas"] = {
 				["Static"] = {
-					["offsetY"] = 18,
 					["direction"] = "Up",
-				},
-				["Incoming"] = {
-					["offsetY"] = -140,
+					["offsetY"] = 18,
 				},
 				["Outgoing"] = {
 					["offsetX"] = 102,
 					["offsetY"] = -141,
+				},
+				["Incoming"] = {
+					["offsetY"] = -140,
 				},
 			},
 			["hideFullOverheals"] = true,
