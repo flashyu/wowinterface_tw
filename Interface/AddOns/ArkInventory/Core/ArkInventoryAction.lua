@@ -26,7 +26,7 @@ function ArkInventory.Action.Vendor.ProcessCheck( name )
 	return true
 end
 
-function ArkInventory.Action.Vendor.Check( i, codex, manual )
+function ArkInventory.Action.Vendor.Check( i, codex, manual, delete )
 	
 	local isMatch = false
 	local vendorPrice = -1
@@ -80,8 +80,28 @@ function ArkInventory.Action.Vendor.Check( i, codex, manual )
 			
 		end
 		
+		
 		if isMatch then
-			vendorPrice = info.vendorprice or vendorPrice
+			
+			vendorPrice = info.vendorprice
+			if vendorPrice == -1 then
+				
+				isMatch = false
+				
+			else
+				
+				if delete then
+					if vendorPrice ~= 0 then
+						isMatch = false
+					end
+				else
+					if vendorPrice < 1 then
+						isMatch = false
+					end
+				end
+				
+			end
+			
 		end
 		
 	end
@@ -90,7 +110,7 @@ function ArkInventory.Action.Vendor.Check( i, codex, manual )
 	
 end
 
-function ArkInventory.Action.Vendor.Iterate( manual )
+function ArkInventory.Action.Vendor.Iterate( manual, delete )
 	
 	local loc_id = ArkInventory.Const.Location.Bag
 	local codex = ArkInventory.GetLocationCodex( loc_id )
@@ -105,17 +125,17 @@ function ArkInventory.Action.Vendor.Iterate( manual )
 	local blizzard_id = bags[bag_id]
 	local numslots = ArkInventory.CrossClient.GetContainerNumSlots( blizzard_id )
 	
-	local _, isJunk, isLocked, itemCount, itemLink, vendorPrice
+	local isMatch, isLocked, itemCount, itemLink, vendorPrice
 	
 	
 	return function( )
 		
-		isJunk = false
+		isMatch = false
 		itemLink = nil
 		itemCount = 0
 		vendorPrice = -1
 		
-		while not isJunk do
+		while not isMatch do
 			
 			if slot_id < numslots then
 				slot_id = slot_id + 1
@@ -125,6 +145,7 @@ function ArkInventory.Action.Vendor.Iterate( manual )
 				numslots = ArkInventory.CrossClient.GetContainerNumSlots( blizzard_id )
 				slot_id = 1
 			else
+				isMatch = nil
 				blizzard_id = nil
 				slot_id = nil
 				itemCount = nil
@@ -139,7 +160,7 @@ function ArkInventory.Action.Vendor.Iterate( manual )
 			itemLink = itemInfo.hyperlink
 			
 			if itemCount and not isLocked and itemLink then
-				isJunk, vendorPrice = ArkInventory.Action.Vendor.Check( player.data.location[loc_id].bag[bag_id].slot[slot_id], codex, manual )
+				isMatch, vendorPrice = ArkInventory.Action.Vendor.Check( player.data.location[loc_id].bag[bag_id].slot[slot_id], codex, manual, delete )
 			end
 			
 		end
@@ -153,56 +174,67 @@ end
 
 local function ActionVendorDestroy( manual )
 	
-	if not manual then return end
+	-- cannot be run threaded or it will fail due to no longer being on the same execution path when it resumes
 	
-	ArkInventory.Global.Action.Vendor.destroyed = 0
+	if not manual then
+		return
+	end
 	
 	if not ArkInventory.db.option.junk.delete then
 		return
 	end
+	
+	-- build the queue
+	local queue = { }
+	for blizzard_id, slot_id, itemLink, itemCount, vendorPrice in ArkInventory.Action.Vendor.Iterate( manual, true ) do
+		table.insert( queue, { blizzard_id, slot_id, itemLink, itemCount, vendorPrice } )
+	end
+	
+	local qsize = ArkInventory.Table.Elements( queue )
+	local runtype = ArkInventory.Localise["AUTOMATIC"]
+	if manual then
+		runtype = ArkInventory.Localise["MANUAL"]
+	end
+	
+	if manual or qsize > 0 then
+		ArkInventory.Output( ArkInventory.Localise["ACTION"], " (", ArkInventory.Localise["DESTROY"], "): ", runtype, " - ", ArkInventory.Localise["START"] )
+	end
+	
+	-- process the queue, well at least the first item in it
+	for _, item in pairs( queue ) do
 		
-	for blizzard_id, slot_id, itemLink, itemCount, vendorPrice in ArkInventory.Action.Vendor.Iterate( manual ) do
-		
-		if vendorPrice == 0 then
-			
-			if ArkInventory.db.option.junk.list then
-				if ArkInventory.Global.Action.Vendor.destroyed == 0 then
-					ArkInventory.Output( string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_LIST_DESTROY_DESC"], itemCount, itemLink ) )
-				end
-			end
-			
-			if not ArkInventory.db.option.junk.test then
-				if ArkInventory.Global.Action.Vendor.destroyed == 0 then
-					
-					if not ArkInventory.db.option.junk.combat and InCombatLockdown( ) then
-						ArkInventory.OutputWarning( ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL_BINDING"], " aborted, you are in combat" )
-						break
-					end
-					
-					ArkInventory.CrossClient.PickupContainerItem( blizzard_id, slot_id )
-					DeleteCursorItem( )
-					-- protected after 9.0.2 so can no longer delete items automatically, using a keybinding instead, but only one item can be destroyed per keypress
-					-- must also run non threaded or it will fail due to no longer being the same execution path that was launched from the keybinding
-				end
-			end
-			
-			ArkInventory.Global.Action.Vendor.destroyed = ArkInventory.Global.Action.Vendor.destroyed + 1
-			
+		if not ArkInventory.db.option.junk.combat and InCombatLockdown( ) then
+			ArkInventory.OutputWarning( ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL"], " aborted, you are in combat" )
+			break
 		end
 		
+		if ArkInventory.db.option.junk.list then
+			ArkInventory.Output( string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_DESTROY_LIST"], item[4], item[3] ) )
+		end
+		
+		if not ArkInventory.db.option.junk.test then
+			ArkInventory.CrossClient.PickupContainerItem( item[1], item[2] )
+			DeleteCursorItem( )
+		end
+		
+		-- can only process one deletion per hardware event so break here
+		break
+		
 	end
 	
-	if ArkInventory.Global.Action.Vendor.destroyed > 1 then
-		ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_LIST_DESTROY_LIMIT"], ArkInventory.Global.Action.Vendor.destroyed - 1 ) )
-	end
-	
-	if ArkInventory.db.option.junk.test then
-		if ArkInventory.Global.Action.Vendor.destroyed > 0 then
-			ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, ArkInventory.Localise["CONFIG_ACTION_VENDOR_TESTMODE_ALERT_DESTROYED"] )
+	if qsize > 0 then
+		if ArkInventory.db.option.junk.test then
+			ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, ArkInventory.Localise["CONFIG_ACTION_VENDOR_DESTROY_TEST"] )
 		end
 	end
 	
-	ArkInventory.Global.Action.Vendor.destroyed = 0
+	if qsize > 1 then
+		ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_DESTROY_MORE"], qsize - 1 ) )
+	end
+	
+	if manual or qsize > 0 then
+		ArkInventory.Output( ArkInventory.Localise["ACTION"], " (", ArkInventory.Localise["DESTROY"], "): ", runtype, " - ", ArkInventory.Localise["COMPLETE"] )
+	end
 	
 end
 
@@ -218,66 +250,65 @@ local function ActionVendorSell_Threaded( thread_id, manual )
 	
 	local limit = ( ArkInventory.db.option.junk.limit and BUYBACK_ITEMS_PER_PAGE ) or 0
 	
-	for blizzard_id, slot_id, itemLink, itemCount, vendorPrice in ArkInventory.Action.Vendor.Iterate( manual ) do
+	-- build the queue
+	local queue = { }
+	for blizzard_id, slot_id, itemLink, itemCount, vendorPrice in ArkInventory.Action.Vendor.Iterate( manual, false ) do
+		table.insert( queue, { blizzard_id, slot_id, itemLink, itemCount, vendorPrice } )
+	end
+	
+	local qsize = ArkInventory.Table.Elements( queue )
+	local runtype = ArkInventory.Localise["AUTOMATIC"]
+	if manual then
+		runtype = ArkInventory.Localise["MANUAL"]
+	end
+	
+	if manual or qsize > 0 then
+		ArkInventory.Output( ArkInventory.Localise["ACTION"], " (", ArkInventory.Localise["VENDOR"], "): ", runtype, " - ", ArkInventory.Localise["START"] )
+	end
+	
+	-- process the queue
+	for _, item in pairs( queue ) do
 		
-		if vendorPrice == 0 then
-			
-			ArkInventory.Global.Action.Vendor.destroyed = ArkInventory.Global.Action.Vendor.destroyed + 1
-			
-		elseif vendorPrice > 0 then
-			
-			ArkInventory.Global.Action.Vendor.sold = ArkInventory.Global.Action.Vendor.sold + 1
-			
-			if limit > 0 and ArkInventory.Global.Action.Vendor.sold > limit then
-				-- limited to buyback page
-				ArkInventory.Global.Action.Vendor.sold = limit
-				ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_NOTIFY_LIMIT"], limit ) )
-				return
-			end
-			
-			if ArkInventory.db.option.junk.list then
-				ArkInventory.Output( string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_LIST_SELL_DESC"], itemCount, itemLink, ArkInventory.MoneyText( itemCount * vendorPrice, true ) ) )
-			end
-			
-			if not ArkInventory.db.option.junk.test then
-				if ArkInventory.Global.Mode.Merchant then
-					
-					if not ArkInventory.db.option.junk.combat and InCombatLockdown( ) then
-						ArkInventory.OutputWarning( ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL_BINDING"], " aborted, you are in combat" )
-						break
-					end
-					
-					-- this will sometimes fail, without any notifcation, so you cant just add up the values as you go
-					-- GetMoney doesnt update in real time so also cannot be used here
-					-- next best thing, record how much money we had beforehand and how much we have at the next PLAYER_MONEY, then output it there
-					UseContainerItem( blizzard_id, slot_id )
-					ArkInventory.ThreadYield( thread_id )
-					
-				end
-			end
-			
+		if not ArkInventory.db.option.junk.combat and InCombatLockdown( ) then
+			ArkInventory.OutputWarning( ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL"], " aborted, you are in combat" )
+			break
 		end
 		
+		ArkInventory.Global.Action.Vendor.sold = ArkInventory.Global.Action.Vendor.sold + 1
+		
+		if limit > 0 and ArkInventory.Global.Action.Vendor.sold > limit then
+			-- limited to buyback page
+			ArkInventory.Global.Action.Vendor.sold = limit
+			ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL_LIMIT_ABORT"], limit ) )
+			break
+		end
+		
+		if ArkInventory.db.option.junk.list then
+			ArkInventory.Output( string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_LIST_SELL_DESC"], item[4], item[3], ArkInventory.MoneyText( item[4] * item[5], true ) ) )
+		end
+		
+		if not ArkInventory.db.option.junk.test then
+			if ArkInventory.Global.Mode.Merchant then
+				ArkInventory.CrossClient.UseContainerItem( item[1], item[2] )
+				ArkInventory.ThreadYield( thread_id )
+			end
+		end
+		
 	end
 	
-	
-	if ArkInventory.db.option.junk.test then
-		if ArkInventory.Global.Action.Vendor.sold > 0 then
-			ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, ArkInventory.Localise["CONFIG_ACTION_VENDOR_TESTMODE_ALERT_SOLD"] )
+	if ArkInventory.Global.Action.Vendor.sold > 0 then
+		if ArkInventory.db.option.junk.test then
+			ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL_TEST"] )
 		end
 	end
 	
-	if not manual then
-		if ArkInventory.Global.Action.Vendor.destroyed > 0 then
-			ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL_CANDESTROY"], ArkInventory.Global.Action.Vendor.destroyed ) )
-		end
+	if manual or qsize > 0 then
+		ArkInventory.Output( ArkInventory.Localise["ACTION"], " (", ArkInventory.Localise["VENDOR"], "): ", runtype, " - ", ArkInventory.Localise["COMPLETE"] )
 	end
 	
-	ArkInventory.Global.Action.Vendor.destroyed = 0
-	
-	
-	
-	--ArkInventory.Output( "tried to sell ", ArkInventory.Global.Action.Vendor.sold, " items" )
+	-- this will sometimes fail, without any notifcation, so you cant just add up the values as you go
+	-- GetMoney doesnt update in real time so also cannot be used here
+	-- next best thing, record how much money we had beforehand and how much we have at the next PLAYER_MONEY, then output it there
 	
 	-- notifcation is at EVENT_ARKINV_PLAYER_MONEY, call it in case it tripped before the final yield came back
 --	ArkInventory:SendMessage( "EVENT_ARKINV_PLAYER_MONEY_BUCKET", "JUNK" )
@@ -293,22 +324,14 @@ function ArkInventory.Action.Vendor.Sell( manual )
 	end
 	
 	if not ArkInventory.Global.Thread.Use then
-		ArkInventory.OutputWarning( ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL_BINDING"], " aborted, as threads are currently disabled." )
+		ArkInventory.OutputWarning( ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL"], " aborted, as threads are currently disabled." )
 		return
 	end
 	
-	if manual then
-		ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, string.format( ArkInventory.Localise["CONFIG_ACTION_TYPE"], ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL_BINDING"], ArkInventory.Localise["MANUAL"] ) )
-	else
-		if ArkInventory.Global.Action.Vendor.running then
-			ArkInventory.OutputWarning( ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL_BINDING"], " is already running, please wait" )
-			return
-		else
-			ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, string.format( ArkInventory.Localise["CONFIG_ACTION_TYPE"], ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL_BINDING"], ArkInventory.Localise["AUTOMATIC"] ) )
-		end
+	if ArkInventory.Global.Action.Vendor.running then
+		ArkInventory.OutputWarning( ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL"], " is already running, please wait" )
+		return
 	end
-	
-	ActionVendorDestroy( manual )
 	
 	ArkInventory.Global.Action.Vendor.sold = 0
 	ArkInventory.Global.Action.Vendor.money = 0
@@ -323,30 +346,51 @@ function ArkInventory.Action.Vendor.Sell( manual )
 	
 	ArkInventory.ThreadStart( thread_id, tf )
 	
+	
 end
 
+function ArkInventory.Action.Vendor.Destroy( manual )
+	
+	if not ArkInventory.Global.Action.Vendor.process then return end
+	
+	if not manual and not ArkInventory.db.option.junk.sell then
+		return
+	end
+	
+	ActionVendorDestroy( manual )
+	
+end
 
 
 function ArkInventory.Action.Mail.Check( i, codex, manual )
 	
-	local isMatch = false
+	local recipient = nil
 	
-	if i and i.h then
+	if codex and i and i.h and i.sb ~= ArkInventory.Const.Bind.Pickup then
 		
 		local info = i.info or ArkInventory.GetObjectInfo( i.h )
-		
 		if info.ready and info.id then
 			
-			if codex then
+			local cat_id = ArkInventory.ItemCategoryGet( i )
+			local cat_type, cat_num = ArkInventory.CategoryIdSplit( cat_id )
+			
+			local action = codex.catset.ca[cat_type][cat_num].action
+			if action.t == ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.MAIL then
 				
-				local cat_id = ArkInventory.ItemCategoryGet( i )
-				local cat_type, cat_num = ArkInventory.CategoryIdSplit( cat_id )
-				if codex.catset.ca[cat_type][cat_num].action.t == ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.MAIL then
-					if codex.catset.ca[cat_type][cat_num].action.w == ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.AUTO then
-						isMatch = true
-					elseif manual and codex.catset.ca[cat_type][cat_num].action.w == ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.MANUAL then
-						isMatch = true
+				if action.w == ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.AUTO then
+					recipient = action.recipient
+				elseif manual and action.w == ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.MANUAL then
+					recipient = action.recipient
+				end
+				
+				if recipient then
+					local me = string.gsub( codex.player.current, "%s+", "" )
+					me = string.lower( me )
+					
+					if recipient == me then
+						recipient = nil
 					end
+					
 				end
 				
 			end
@@ -355,7 +399,7 @@ function ArkInventory.Action.Mail.Check( i, codex, manual )
 		
 	end
 	
-	return isMatch
+	return recipient
 	
 end
 
@@ -374,16 +418,16 @@ function ArkInventory.Action.Mail.Iterate( manual )
 	local blizzard_id = bags[bag_id]
 	local numslots = ArkInventory.CrossClient.GetContainerNumSlots( blizzard_id )
 	
-	local _, isMatch, isLocked, itemCount, itemLink
+	local recipient, isLocked, itemCount, itemLink
 	
 	
 	return function( )
 		
-		isMatch = false
+		recipient = nil
 		itemLink = nil
 		itemCount = 0
 		
-		while not isMatch do
+		while not recipient do
 			
 			if slot_id < numslots then
 				slot_id = slot_id + 1
@@ -393,6 +437,7 @@ function ArkInventory.Action.Mail.Iterate( manual )
 				numslots = ArkInventory.CrossClient.GetContainerNumSlots( blizzard_id )
 				slot_id = 1
 			else
+				recipient = nil
 				blizzard_id = nil
 				slot_id = nil
 				itemCount = nil
@@ -407,50 +452,122 @@ function ArkInventory.Action.Mail.Iterate( manual )
 			itemLink = itemInfo.hyperlink
 			
 			if itemCount and not isLocked and itemLink then
-				isMatch = ArkInventory.Action.Mail.Check( player.data.location[loc_id].bag[bag_id].slot[slot_id], codex, manual )
+				recipient = ArkInventory.Action.Mail.Check( player.data.location[loc_id].bag[bag_id].slot[slot_id], codex, manual )
 			end
 			
 		end
 		
-		--ArkInventory.Output( itemLink, " / ", itemCount )
-		return blizzard_id, slot_id, itemLink, itemCount
+		return recipient, blizzard_id, slot_id, itemLink, itemCount
 		
+	end
+	
+end
+
+local function ActionMailSendBatch( thread_id, recipient, batch )
+	
+	ArkInventory.Global.Action.Mail.status = nil
+	ArkInventory.Output( "sending batch ", batch )
+	SendMail( recipient, "mail action category in arkinventory", "" )
+	
+	--do until true
+	for c = 1, 2000 do
+		ArkInventory.ThreadYield( thread_id )
+		if ArkInventory.Global.Action.Mail.status ~= nil then
+			ArkInventory.Output( "exited wait for send on pass ", c )
+			break
+		end
+	end
+	
+	-- check result of send
+	
+	if ArkInventory.Global.Action.Mail.status == true then
+		ArkInventory.Output( "batch ", batch, " successful" )
+		return true
+	elseif ArkInventory.Global.Action.Mail.status == false then
+		ArkInventory.OutputError( "batch ", batch, " failed to send" )
+	else
+		ArkInventory.OutputError( "send did not succeed, or fail, still in progress??" )
 	end
 	
 end
 
 local function ActionMailSend_Threaded( thread_id, manual )
 	
-	if not ArkInventory.Global.Mode.Mailbox then
-		--ArkInventory.Output( "ABORTED (NOT AT MAILBOX)" )
-		return
+	ArkInventory.Global.Action.Mail.status = nil
+	local batch = 0
+	local index = 0
+	local total = 0
+	local limit = ArkInventory.Global.Action.Mail.limit
+	
+	-- build queue
+	local queue = { }
+	for recipient, blizzard_id, slot_id, itemLink, itemCount in ArkInventory.Action.Mail.Iterate( manual ) do
+		if not queue[recipient] then
+			queue[recipient] = { }
+		end
+		table.insert( queue[recipient], { blizzard_id, slot_id, itemLink, itemCount } )
 	end
 	
-	local count = 0
-	local open = false
-	local redo = false
-	local limit = 12
+	local qsize = ArkInventory.Table.Elements( queue )
+	local runtype = ArkInventory.Localise["AUTOMATIC"]
+	if manual then
+		runtype = ArkInventory.Localise["MANUAL"]
+	end
 	
-	for blizzard_id, slot_id, itemLink, itemCount in ArkInventory.Action.Mail.Iterate( manual ) do
+	if manual or qsize > 0 then
+		ArkInventory.Output( ArkInventory.Localise["ACTION"], " (", ArkInventory.Localise["MAIL"], "): ", runtype, " - ", ArkInventory.Localise["START"] )
+	end
+	
+	-- process queue by recipient
+	for recipient, items in pairs( queue ) do
+		
+		ArkInventory.Output( "recipient: ", recipient )
+		
+		for _, item in pairs( items ) do
+			
+			if ArkInventory.Global.Mode.Mailbox then
+				
+				if index == limit then
+					batch = batch + 1
+					if not ActionMailSendBatch( thread_id, recipient, batch ) then
+						break
+					end
+					index = 0
+				end
+				
+				index = index + 1
+				total = total + 1
+				
+				if index <= limit then
+					
+					PickupContainerItem( item[1], item[2] )
+					ClickSendMailItemButton( )
+					
+					ArkInventory.Output( "attached item ", index, " = ", item[3], " x ", item[4] )
+					
+				end
+				
+			end
+			
+		end
 		
 		if ArkInventory.Global.Mode.Mailbox then
-			
-			-- if not open then create new mail
-			
-			-- if count >= limit then send this batch and redo
-			-- ArkInventory.ThreadYield( thread_id )
-			
-			UseContainerItem( blizzard_id, slot_id )
-			ArkInventory.ThreadYield( thread_id )
-			
+			if index > 0 and index <= limit then
+				batch = batch + 1
+				ActionMailSendBatch( thread_id, recipient, batch )
+				index = 0
+			end
 		end
 		
 	end
 	
-	-- if count > 0 and count < limit then send
-	-- ArkInventory.ThreadYield( thread_id )
+	if total > 0 then
+		ArkInventory.Output( total, " items sent in ", batch, " messages" )
+	end
 	
-	-- if redo then return ActionMailSend_Threaded( thread_id, manual )
+	if manual or qsize > 0 then
+		ArkInventory.Output( ArkInventory.Localise["ACTION"], " (", ArkInventory.Localise["MAIL"], "): ", runtype, " - ", ArkInventory.Localise["COMPLETE"] )
+	end
 	
 end
 
@@ -461,15 +578,9 @@ function ArkInventory.Action.Mail.Send( manual )
 		return
 	end
 	
-	if manual then
-		ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, string.format( ArkInventory.Localise["CONFIG_ACTION_TYPE"], ArkInventory.Localise["CONFIG_ACTION_MAIL_SEND"], ArkInventory.Localise["MANUAL"] ) )
-	else
-		if ArkInventory.Global.Action.Mail.running then
-			ArkInventory.OutputWarning( ArkInventory.Localise["CONFIG_ACTION_MAIL_SEND"], " is already running, please wait" )
-			return
-		else
-			ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, string.format( ArkInventory.Localise["CONFIG_ACTION_TYPE"], ArkInventory.Localise["CONFIG_ACTION_MAIL_SEND"], ArkInventory.Localise["AUTOMATIC"] ) )
-		end
+	if ArkInventory.Global.Action.Mail.running then
+		ArkInventory.OutputWarning( ArkInventory.Localise["CONFIG_ACTION_MAIL_SEND"], " is already running, please wait" )
+		return
 	end
 	
 	local thread_id = ArkInventory.Global.Thread.Format.MailSend
@@ -481,5 +592,22 @@ function ArkInventory.Action.Mail.Send( manual )
 	end
 	
 	ArkInventory.ThreadStart( thread_id, tf )
+	
+end
+
+
+
+function ArkInventory.Action.ManualRun( )
+	
+	if ArkInventory.Global.Mode.Mailbox then
+		ArkInventory.Action.Mail.Send( true )
+	elseif ArkInventory.Global.Mode.Bank then
+		--ArkInventory.Action.Bag.Transfer( true )
+		--ArkInventory.Action.Bank.Transfer( true )
+	elseif ArkInventory.Global.Mode.Merchant then
+		ArkInventory.Action.Vendor.Sell( true )
+	else
+		ArkInventory.Action.Vendor.Destroy( true )
+	end
 	
 end
