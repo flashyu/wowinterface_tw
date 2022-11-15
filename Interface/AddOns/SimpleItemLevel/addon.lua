@@ -21,6 +21,20 @@ end
 
 local LAI = LibStub("LibAppropriateItems-1.0")
 
+ns.defaults = {
+    character = true,
+    inspect = true,
+    bags = true,
+    loot = true,
+    upgrades = true,
+    color = true,
+    tooltip = isClassic,
+    -- Shadowlands has Uncommon, BCC/Classic has Good
+    quality = Enum.ItemQuality.Good or Enum.ItemQuality.Uncommon,
+    equipmentonly = true,
+    pointless = 5,
+}
+
 function ns:ADDON_LOADED(event, addon)
     if hooks[addon] then
         hooks[addon]()
@@ -28,18 +42,10 @@ function ns:ADDON_LOADED(event, addon)
     end
     if addon == myname then
         _G[myname.."DB"] = setmetatable(_G[myname.."DB"] or {}, {
-            __index = {
-                character = true,
-                inspect = true,
-                bags = true,
-                upgrades = true,
-                color = true,
-                tooltip = isClassic,
-                -- Shadowlands has Uncommon, BCC/Classic has Good
-                quality = Enum.ItemQuality.Good or Enum.ItemQuality.Uncommon
-            },
+            __index = ns.defaults,
         })
         db = _G[myname.."DB"]
+        ns.db = db
     end
 end
 ns:RegisterEvent("ADDON_LOADED")
@@ -93,26 +99,34 @@ local function AddUpgradeToButton(button, item, equipLoc, minLevel)
         end
     end)
 end
+local function ShouldShowOnItem(item)
+    local quality = item:GetItemQuality()
+    if quality < db.quality then
+        return false
+    end
+    if not db.equipmentonly then
+        return true
+    end
+    local _, _, _, equipLoc, _, itemClass, itemSubClass = GetItemInfoInstant(item:GetItemID())
+    return (
+        itemClass == Enum.ItemClass.Weapon or
+        itemClass == Enum.ItemClass.Armor or
+        (itemClass == Enum.ItemClass.Gem and itemSubClass == Enum.ItemGemSubclass.Artifactrelic)
+    )
+end
 local function UpdateButtonFromItem(button, item)
     if item:IsItemEmpty() then
         return
     end
     item:ContinueOnItemLoad(function()
+        if not ShouldShowOnItem(item) then return end
         local itemID = item:GetItemID()
         local link = item:GetItemLink()
         local quality = item:GetItemQuality()
-        local minLevel = link and select(5, GetItemInfo(link or itemID))
         local _, _, _, equipLoc, _, itemClass, itemSubClass = GetItemInfoInstant(itemID)
-        if
-            quality >= db.quality and (
-                itemClass == LE_ITEM_CLASS_WEAPON or
-                itemClass == LE_ITEM_CLASS_ARMOR or
-                (itemClass == LE_ITEM_CLASS_GEM and itemSubClass == LE_ITEM_GEM_ARTIFACTRELIC)
-            )
-        then
-            AddLevelToButton(button, item:GetCurrentItemLevel(), quality)
-            AddUpgradeToButton(button, item, equipLoc, minLevel)
-        end
+        local minLevel = link and select(5, GetItemInfo(link or itemID))
+        AddLevelToButton(button, item:GetCurrentItemLevel(), quality)
+        AddUpgradeToButton(button, item, equipLoc, minLevel)
     end)
 end
 local function CleanButton(button)
@@ -210,6 +224,41 @@ hooksecurefunc("BankFrameItemButton_Update", function(button)
     end
 end)
 
+-- Loot
+
+if _G.LootFrame_UpdateButton then
+    -- Classic
+    hooksecurefunc("LootFrame_UpdateButton", function(index)
+        local button = _G["LootButton"..index]
+        if not button then return end
+        CleanButton(button)
+        if not db.loot then return end
+        -- ns.Debug("LootFrame_UpdateButton", button:IsEnabled(), button.slot, button.slot and GetLootSlotLink(button.slot))
+        if button:IsEnabled() and button.slot then
+            local link = GetLootSlotLink(button.slot)
+            if link then
+                UpdateButtonFromItem(button, Item:CreateFromItemLink(link))
+            end
+        end
+    end)
+else
+    -- Dragonflight
+    local function handleSlot(frame)
+        if not frame.Item then return end
+        CleanButton(frame.Item)
+        if not db.loot then return end
+        local data = frame:GetElementData()
+        if not (data and data.slotIndex) then return end
+        local link = GetLootSlotLink(data.slotIndex)
+        if link then
+            UpdateButtonFromItem(frame.Item, Item:CreateFromItemLink(link))
+        end
+    end
+    LootFrame.ScrollBox:RegisterCallback("OnUpdate", function(...)
+        LootFrame.ScrollBox:ForEachFrame(handleSlot)
+    end)
+end
+
 -- Tooltip
 
 local OnTooltipSetItem = function(self)
@@ -222,11 +271,15 @@ local OnTooltipSetItem = function(self)
         self:AddLine(ITEM_LEVEL:format(item:GetCurrentItemLevel()))
     end)
 end
-GameTooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem)
-ItemRefTooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem)
--- This is mostly world quest rewards:
-if GameTooltip.ItemTooltip then
-    GameTooltip.ItemTooltip.Tooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem)
+if _G.TooltipDataProcessor then
+    TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, OnTooltipSetItem)
+else
+    GameTooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem)
+    ItemRefTooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem)
+    -- This is mostly world quest rewards:
+    if GameTooltip.ItemTooltip then
+        GameTooltip.ItemTooltip.Tooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem)
+    end
 end
 
 -- Void Storage
@@ -296,6 +349,14 @@ ns:RegisterAddonHook("Combuctor", function()
     end)
 end)
 
+--LiteBag:
+ns:RegisterAddonHook("LiteBag", function()
+    _G.LiteBag_RegisterHook('LiteBagItemButton_Update', function(frame)
+        local bag = frame:GetParent():GetID()
+        UpdateContainerButton(frame, bag)
+    end)
+end)
+
 -- Quick config:
 
 _G["SLASH_".. myname:upper().."1"] = "/simpleilvl"
@@ -328,12 +389,14 @@ SlashCmdList[myname:upper()] = function(msg)
         ns.Print('bags -', BAGSLOTTEXT, "-", db.bags and YES or NO)
         ns.Print('character -', ORDER_HALL_EQUIPMENT_SLOTS, "-", db.character and YES or NO)
         ns.Print('inspect -', INSPECT, "-", db.inspect and YES or NO)
+        ns.Print('loot -', LOOT, "-", db.loot and YES or NO)
         ns.Print('upgrades - Upgrade arrows in bags', "-", db.upgrades and YES or NO)
         ns.Print('color - Color item level by item quality', "-", db.color and YES or NO)
         if isClassic then
             ns.Print('tooltip - Add the item level to tooltips', "-", db.tooltip and YES or NO)
         end
         ns.Print('quality - Minimum item quality to show for', "-", _G["ITEM_QUALITY" .. db.quality .. "_DESC"])
+        ns.Print('equipmentonly - Only show on equippable items', "-", db.equipmentonly and YES or NO)
         ns.Print("To toggle: /simpleilvl [type]")
         ns.Print("To set a quality: /simpleilvl quality [quality]")
     end
