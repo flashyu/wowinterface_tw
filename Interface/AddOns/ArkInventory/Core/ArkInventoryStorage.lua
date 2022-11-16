@@ -2308,25 +2308,39 @@ function ArkInventory.ScanBag_Threaded( blizzard_id, loc_id, bag_id, thread_id, 
 		
 		local i = bag.slot[slot_id]
 		local itemInfo = ArkInventory.CrossClient.GetContainerItemInfo( blizzard_id, slot_id )
-		local info = ArkInventory.GetObjectInfo( itemInfo.hyperlink )
 		local sb = ArkInventory.Const.Bind.Never
 		
 		if itemInfo.hyperlink then
 			
-			local repairCost, bp_SpeciesID, bp_Level, bp_BreedQuality, bp_MaxHealth, bp_Power, bp_Speed, bp_Name, bp_Link = ArkInventory.ScanTooltipSet( ArkInventory.Global.Tooltip.Scan, loc_id, bag_id, slot_id, itemInfo.hyperlink )
-			--ArkInventory.TooltipSetBagItem( ArkInventory.Global.Tooltip.Scan, blizzard_id, slot_id, itemInfo.hyperlink )
+			local tooltipData = ArkInventory.TooltipDataGet( loc_id, bag_id, slot_id, itemInfo.hyperlink )
 			
-			if bp_SpeciesID and bp_SpeciesID > 0 then
-				itemInfo.hyperlink = bp_Link
-				itemInfo.quality = bp_BreedQuality
+			if tooltipData and tooltipData.battlePetSpeciesID then
+				
+				itemInfo.hyperlink = ArkInventory.BattlepetBaseHyperlink( tooltipData.battlePetSpeciesID, tooltipData.battlePetLevel, tooltipData.battlePetBreedQuality, tooltipData.battlePetMaxHealth, tooltipData.battlePetPower, tooltipData.battlePetSpeed, tooltipData.battlePetName )
+				quality = tooltipData.battlePetBreedQuality
+				
+			else
+				
+				local repairCost, battlePetSpeciesID, battlePetLevel, battlePetBreedQuality, battlePetMaxHealth, battlePetPower, battlePetSpeed, battlePetName, battlePetLink = ArkInventory.ScanTooltipSet( ArkInventory.Global.Tooltip.Scan, loc_id, bag_id, slot_id, itemInfo.hyperlink )
+				
+				if battlePetSpeciesID and battlePetSpeciesID > 0 then
+					
+					itemInfo.hyperlink = battlePetLink
+					quality = battlePetBreedQuality
+					
+				else
+					
+					local info = ArkInventory.GetObjectInfo( itemInfo.hyperlink )
+					if not info.ready or not ArkInventory.TooltipIsReady( ArkInventory.Global.Tooltip.Scan ) then
+						ArkInventory.OutputDebug( "item not ready while scanning [", blizzard_id, ", ", slot_id, "] ", itemInfo.hyperlink )
+						ready = false
+					end
+					
+					sb = helper_ItemBindingStatus( ArkInventory.Global.Tooltip.Scan )
+					
+				end
+				
 			end
-			
-			if not info.ready or not ArkInventory.TooltipIsReady( ArkInventory.Global.Tooltip.Scan ) then
-				--ArkInventory.OutputDebug( "not ready = ", itemInfo.hyperlink )
-				ready = false
-			end
-			
-			sb = helper_ItemBindingStatus( ArkInventory.Global.Tooltip.Scan )
 			
 		else
 			
@@ -2648,27 +2662,37 @@ function ArkInventory.ScanVault_Threaded( loc_id, bag_id, thread_id, rescan )
 		if texture then
 			
 			h = GetGuildBankItemLink( bag_id, slot_id )
-			local info = ArkInventory.GetObjectInfo( h )
 			
-			if not info.ready then
-				ArkInventory.OutputDebug("item not ready while scanning [", blizzard_id, ", ", slot_id, "] ", h )
-				ArkInventory:SendMessage( "EVENT_ARKINV_BAG_RESCAN_BUCKET", blizzard_id )
-			end
+			local tooltipData = ArkInventory.TooltipDataGet( loc_id, bag_id, slot_id, h )
 			
-			local repairCost, bp_SpeciesID, bp_Level, bp_BreedQuality, bp_MaxHealth, bp_Power, bp_Speed, bp_Name, bp_Link = ArkInventory.ScanTooltipSet( ArkInventory.Global.Tooltip.Scan, loc_id, bag_id, slot_id, h )
-			
-			if bp_SpeciesID and bp_SpeciesID > 0 then
-				h = bp_Link
-				quality = bp_BreedQuality
+			if tooltipData and tooltipData.battlePetSpeciesID then
+				
+				h = ArkInventory.BattlepetBaseHyperlink( tooltipData.battlePetSpeciesID, tooltipData.battlePetLevel, tooltipData.battlePetBreedQuality, tooltipData.battlePetMaxHealth, tooltipData.battlePetPower, tooltipData.battlePetSpeed, tooltipData.battlePetName )
+				quality = tooltipData.battlePetBreedQuality
+				
 			else
-				quality = ArkInventory.ObjectInfoQuality( h )
-			end
-			
-			sb = helper_ItemBindingStatus( ArkInventory.Global.Tooltip.Scan )
-			
-			if not info.ready or not ArkInventory.TooltipIsReady( ArkInventory.Global.Tooltip.Scan ) then
-				ArkInventory.OutputDebug( "item not ready while scanning [", blizzard_id, ", ", slot_id, "] ", h )
-				ready = false
+				
+				local repairCost, battlePetSpeciesID, battlePetLevel, battlePetBreedQuality, battlePetMaxHealth, battlePetPower, battlePetSpeed, battlePetName, battlePetLink = ArkInventory.ScanTooltipSet( ArkInventory.Global.Tooltip.Scan, loc_id, bag_id, slot_id, h )
+				
+				if battlePetSpeciesID and battlePetSpeciesID > 0 then
+					
+					h = battlePetLink
+					quality = battlePetBreedQuality
+					
+				else
+					
+					local info = ArkInventory.GetObjectInfo( h )
+					if not info.ready or not ArkInventory.TooltipIsReady( ArkInventory.Global.Tooltip.Scan ) then
+						ArkInventory.OutputDebug( "item not ready while scanning [", blizzard_id, ", ", slot_id, "] ", h )
+						ready = false
+					end
+					
+					quality = ArkInventory.ObjectInfoQuality( h )
+					
+					sb = helper_ItemBindingStatus( ArkInventory.Global.Tooltip.Scan )
+					
+				end
+				
 			end
 			
 		else
@@ -3094,20 +3118,36 @@ function ArkInventory.ScanMailbox_Threaded( blizzard_id, loc_id, bag_id, thread_
 					
 					if h then
 						
-						local repairCost, bp_SpeciesID, bp_Level, bp_BreedQuality, bp_MaxHealth, bp_Power, bp_Speed, bp_Name, bp_Link = ArkInventory.ScanTooltipSet( ArkInventory.Global.Tooltip.Scan, loc_id, bag_id, slot_id, h, i )
+						local tooltipData = ArkInventory.TooltipDataGet( loc_id, index, x, h )
 						
-						if bp_SpeciesID and bp_SpeciesID > 0 then
-							h = bp_Link
-							quality = bp_BreedQuality
+						if tooltipData and tooltipData.battlePetSpeciesID then
+							
+							h = ArkInventory.BattlepetBaseHyperlink( tooltipData.battlePetSpeciesID, tooltipData.battlePetLevel, tooltipData.battlePetBreedQuality, tooltipData.battlePetMaxHealth, tooltipData.battlePetPower, tooltipData.battlePetSpeed, tooltipData.battlePetName )
+							quality = tooltipData.battlePetBreedQuality
+							
 						else
-							quality = ArkInventory.ObjectInfoQuality( h )
-						end
-						
-						sb = helper_ItemBindingStatus( ArkInventory.Global.Tooltip.Scan )
-						
-						if not info.ready or not ArkInventory.TooltipIsReady( ArkInventory.Global.Tooltip.Scan ) then
-							ArkInventory.OutputDebug( "item not ready while scanning [", loc_id, ", ", bag_id, ", ", slot_id, "] [", info.ready, "] ", h )
-							ready = false
+							
+							local repairCost, battlePetSpeciesID, battlePetLevel, battlePetBreedQuality, battlePetMaxHealth, battlePetPower, battlePetSpeed, battlePetName, battlePetLink = ArkInventory.ScanTooltipSet( ArkInventory.Global.Tooltip.Scan, loc_id, index, x, h )
+							
+							if battlePetSpeciesID and battlePetSpeciesID > 0 then
+								
+								h = battlePetLink
+								quality = battlePetBreedQuality
+								
+							else
+								
+								local info = ArkInventory.GetObjectInfo( h )
+								if not info.ready or not ArkInventory.TooltipIsReady( ArkInventory.Global.Tooltip.Scan ) then
+									ArkInventory.OutputDebug( "item not ready while scanning [", blizzard_id, ", ", slot_id, "] ", h )
+									ready = false
+								end
+								
+								quality = ArkInventory.ObjectInfoQuality( h )
+								
+								sb = helper_ItemBindingStatus( ArkInventory.Global.Tooltip.Scan )
+								
+							end
+							
 						end
 						
 						bag.count = bag.count + 1

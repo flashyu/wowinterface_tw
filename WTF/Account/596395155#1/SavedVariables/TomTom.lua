@@ -41,39 +41,6 @@ TomTomWaypointsM = {
 	},
 	["profiles"] = {
 		["骑风 - 祈福"] = {
-			[125] = {
-				["125:481662591.68704:446943765.28117:狡猾的维克斯"] = {
-					125, -- [1]
-					0.4816625916870416, -- [2]
-					0.4469437652811736, -- [3]
-					["arrivaldistance"] = 15,
-					["crazy"] = true,
-					["persistent"] = true,
-					["desc"] = "狡猾的维克斯",
-					["silent"] = true,
-					["cleardistance"] = 10,
-					["title"] = "狡猾的维克斯",
-					["from"] = "Questie",
-					["callbacks"] = {
-						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-					},
-					["minimap"] = true,
-					["world"] = true,
-				},
-			},
 		},
 		["Helloworlds - 沙尔图拉"] = {
 		},

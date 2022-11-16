@@ -3,7 +3,7 @@
 ## Title: ArkInventory [Classic]
 ## Author: Arkayenro - Khaz'goroth
 ## Email: arkayenro at gmail dot com
-## Version: 31004.17
+## Version: 31005.01
 ## X-ReleaseType: Alpha
 ## SavedVariables: ARKINVDB
 

@@ -275,8 +275,24 @@ function ArkInventory.TooltipSetGuildBankItem( tooltip, tab_id, slot_id )
 	
 	tooltip:ClearLines( )
 	
-	local h, repairCost
-	local bp_SpeciesID, bp_Level, bp_BreedQuality, bp_MaxHealth, bp_Power, bp_Speed, bp_Name = tooltip:SetGuildBankItem( tab_id, slot_id )
+	-- the guild bank currently isnt generating a battlepet tooltip for cages so this needs to be duplicated here or youll get tooltips popping up from the scan
+	-- caged battlepets
+	local h = GetGuildBankItemLink( tab_id, slot_id )
+	local osd = ArkInventory.ObjectStringDecode( h )
+	if osd[1] == "battlepet" then
+		--ArkInventory.Output( "vault battletpet ", h )
+		ArkInventory.TooltipCustomBattlepetBuild( tooltip, h )
+		return nil, osd[2], osd[3], osd[4], osd[5], osd[6], osd[7], osd[8], h
+	elseif osd[1] == "item" and osd[2] == ArkInventory.Const.BLIZZARD.GLOBAL.PET.CAGE_ITEMID then
+		--ArkInventory.Output( "vault caged", h )
+		return
+		-- old game version, functions will handle rebuilding to battlepet hyperlink
+	end
+	
+	
+	local repairCost
+	local hasCooldown, bp_SpeciesID, bp_Level, bp_BreedQuality, bp_MaxHealth, bp_Power, bp_Speed, bp_Name = tooltip:SetGuildBankItem( tab_id, slot_id )
+	
 	--ArkInventory.OutputDebug( { tooltip:SetGuildBankItem( tab_id, slot_id ) } )
 	
 	if bp_SpeciesID and bp_SpeciesID > 0 then
@@ -309,22 +325,101 @@ end
 
 function ArkInventory.ScanTooltipSet( tooltip, loc_id, bag_id, slot_id, h, i )
 	
-	-- where possible this will generate an online tooltip, but if that is not possible then an offline tooltip will be generated instead
-	-- only used for scanning and rules tooltips.  do NOT uise with GameTooltip
+		-- where possible this will generate an online tooltip, but if that is not possible then an offline tooltip will be generated instead
+		-- only used for scanning and rules tooltips.  do NOT uise with GameTooltip
+		
+		local tooltip = tooltip or ArkInventory.Global.Tooltip.Scan
+		
+		-- handle caged battlepets - its an item but blizzard will generate a battlepet hyperlink for it instead
+		local osd = ArkInventory.ObjectStringDecode( h )
+		if osd[1] == "battlepet" then
+			--ArkInventory.Output( "scan battletpet = ", h )
+			ArkInventory.TooltipCustomBattlepetBuild( tooltip, h )
+			return nil, osd[2], osd[3], osd[4], osd[5], osd[6], osd[7], osd[8], h
+		elseif osd[1] == "item" and osd[2] == ArkInventory.Const.BLIZZARD.GLOBAL.PET.CAGE_ITEMID then
+			--ArkInventory.Output( "scan caged = ", h )
+			-- old game version, functions will handle rebuilding to battlepet hyperlink
+		end
+		
+		
+		if loc_id then
+			
+			local blizzard_id = ArkInventory.InternalIdToBlizzardBagId( loc_id, bag_id )
+			
+			if loc_id == ArkInventory.Const.Location.Bag then
+				
+				if blizzard_id and slot_id then
+					return ArkInventory.TooltipSetBagItem( tooltip, blizzard_id, slot_id )
+				end
+				
+			elseif loc_id == ArkInventory.Const.Location.Bank and ArkInventory.Global.Mode.Bank then
+				
+				if blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.BANK then
+					
+					local inv_id = BankButtonIDToInvSlotID( slot_id )
+					if inv_id then
+						return ArkInventory.TooltipSetInventoryItem( tooltip, inv_id, h )
+					end
+					
+				elseif blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK then
+					
+					local inv_id = ReagentBankButtonIDToInvSlotID( slot_id )
+					if inv_id then
+						return ArkInventory.TooltipSetInventoryItem( tooltip, inv_id, h )
+					end
+					
+				else
+					
+					if blizzard_id and slot_id then
+						return ArkInventory.TooltipSetBagItem( tooltip, blizzard_id, slot_id, h )
+					end
+					
+				end
+				
+			elseif loc_id == ArkInventory.Const.Location.Vault and ArkInventory.Global.Mode.Vault then
+				
+				if bag_id and slot_id then
+					return ArkInventory.TooltipSetGuildBankItem( tooltip, bag_id, slot_id )
+				end
+				
+			elseif loc_id == ArkInventory.Const.Location.Mailbox and ArkInventory.Global.Mode.Mailbox then
+				
+				if bag_id and slot_id then
+					--ArkInventory.OutputDebug( "[", bag_id, "] [", slot_id, "]" )
+					return ArkInventory.TooltipSetMailboxItem( tooltip, bag_id, slot_id )
+				end
+				
+			elseif loc_id == ArkInventory.Const.Location.Wearing then
+				
+				local inv_id = GetInventorySlotInfo( ArkInventory.Const.InventorySlotName[slot_id] )
+				if inv_id then
+					return ArkInventory.TooltipSetInventoryItem( tooltip, inv_id )
+				end
+				
+			elseif loc_id == ArkInventory.Const.Location.Keyring then
+				
+				local inv_id = KeyRingButtonIDToInvSlotID( slot_id )
+				if inv_id then
+					return ArkInventory.TooltipSetInventoryItem( tooltip, inv_id )
+				end
+				
+			end
+			
+		end
+		
+		if h then
+			-- FIX ME - check the return values for this, make sure battlepet data isnt there
+			ArkInventory.TooltipSetHyperlink( tooltip, h )
+			return
+		end
+		
+end
+
+function ArkInventory.TooltipDataGet( loc_id, bag_id, slot_id, h, i )
 	
-	local tooltip = tooltip or ArkInventory.Global.Tooltip.Scan
+	if not C_TooltipInfo then return end
 	
-	-- caged battlepets
-	local osd = ArkInventory.ObjectStringDecode( h )
-	if osd[1] == "battlepet" then
-		--ArkInventory.Output( "battletpet = ", h )
-		ArkInventory.TooltipCustomBattlepetBuild( tooltip, h )
-		return nil, osd[2], osd[3], osd[4], osd[5], osd[6], osd[7], osd[8], h
-	elseif osd[1] == "item" and osd[2] == ArkInventory.Const.BLIZZARD.GLOBAL.PET.CAGE_ITEMID then
-		--ArkInventory.Output( "caged = ", h )
-		-- old game version, functions will handle rebuilding to battlepet hyperlink
-	end
-	
+	local tooltipData = nil
 	
 	if loc_id then
 		
@@ -333,7 +428,7 @@ function ArkInventory.ScanTooltipSet( tooltip, loc_id, bag_id, slot_id, h, i )
 		if loc_id == ArkInventory.Const.Location.Bag then
 			
 			if blizzard_id and slot_id then
-				return ArkInventory.TooltipSetBagItem( tooltip, blizzard_id, slot_id )
+				tooltipData = C_TooltipInfo.GetBagItem( blizzard_id, slot_id )
 			end
 			
 		elseif loc_id == ArkInventory.Const.Location.Bank and ArkInventory.Global.Mode.Bank then
@@ -342,20 +437,20 @@ function ArkInventory.ScanTooltipSet( tooltip, loc_id, bag_id, slot_id, h, i )
 				
 				local inv_id = BankButtonIDToInvSlotID( slot_id )
 				if inv_id then
-					return ArkInventory.TooltipSetInventoryItem( tooltip, inv_id, h )
+					tooltipData = C_TooltipInfo.GetInventoryItem( "player", inv_id, true )
 				end
 				
 			elseif blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK then
 				
 				local inv_id = ReagentBankButtonIDToInvSlotID( slot_id )
 				if inv_id then
-					return ArkInventory.TooltipSetInventoryItem( tooltip, inv_id, h )
+					tooltipData = C_TooltipInfo.GetInventoryItem( "player", inv_id, true )
 				end
 				
 			else
 				
 				if blizzard_id and slot_id then
-					return ArkInventory.TooltipSetBagItem( tooltip, blizzard_id, slot_id, h )
+					tooltipData = C_TooltipInfo.GetBagItem( blizzard_id, slot_id )
 				end
 				
 			end
@@ -363,39 +458,61 @@ function ArkInventory.ScanTooltipSet( tooltip, loc_id, bag_id, slot_id, h, i )
 		elseif loc_id == ArkInventory.Const.Location.Vault and ArkInventory.Global.Mode.Vault then
 			
 			if bag_id and slot_id then
-				return ArkInventory.TooltipSetGuildBankItem( tooltip, bag_id, slot_id )
+				tooltipData = C_TooltipInfo.GetGuildBankItem( bag_id, slot_id )
 			end
 			
 		elseif loc_id == ArkInventory.Const.Location.Mailbox and ArkInventory.Global.Mode.Mailbox then
 			
-			if i and i.msg_id and i.att_id then
-				--ArkInventory.OutputDebug( "[", i.msg_id, "] [", i.att_id, "]" )
-				return ArkInventory.TooltipSetMailboxItem( tooltip, i.msg_id, i.att_id )
+			if bag_id and slot_id then
+				--ArkInventory.OutputDebug( "[", bag_id, "] [", slot_id, "]" )
+				tooltipData = C_TooltipInfo.GetInboxItem( bag_id, slot_id )
 			end
 			
 		elseif loc_id == ArkInventory.Const.Location.Wearing then
 			
 			local inv_id = GetInventorySlotInfo( ArkInventory.Const.InventorySlotName[slot_id] )
 			if inv_id then
-				return ArkInventory.TooltipSetInventoryItem( tooltip, inv_id )
+				tooltipData = C_TooltipInfo.GetInventoryItem( "player", inv_id, true )
 			end
 			
 		elseif loc_id == ArkInventory.Const.Location.Keyring then
 			
 			local inv_id = KeyRingButtonIDToInvSlotID( slot_id )
 			if inv_id then
-				return ArkInventory.TooltipSetInventoryItem( tooltip, inv_id )
+				tooltipData = C_TooltipInfo.GetInventoryItem( "player", inv_id, true )
+			end
+			
+		elseif loc_id == ArkInventory.Const.Location.Toybox then
+			
+			if i and i.item then
+				tooltipData = C_TooltipInfo.GetToyByItemID( i.item )
+			end
+			
+		elseif loc_id == ArkInventory.Const.Location.Void then
+			
+			if bag_id and slot_id then
+				tooltipData = C_TooltipInfo.GetGuildBankItem( bag_id, slot_id )
 			end
 			
 		end
 		
+	elseif h then
+		
+		tooltipData = C_TooltipInfo.GetHyperlink( h, nil, nil, true )
+		
 	end
 	
-	if h then
-		-- FIX ME - check the return values for this, make sure battlepet data isnt there
-		ArkInventory.TooltipSetHyperlink( tooltip, h )
-		return
+	if tooltipData then
+		
+		TooltipUtil.SurfaceArgs( tooltipData )
+--		for _, line in ipairs( tooltipData.lines ) do
+--			TooltipUtil.SurfaceArgs( line )
+--		end
+		
+		return tooltipData
+		
 	end
+	
 	
 end
 
@@ -1357,10 +1474,19 @@ function ArkInventory.TooltipCanUse( tooltip, start, ignore_known, ignore_level 
 end
 
 function ArkInventory.TooltipIsReady( tooltip )
+	
+	local numlines = ArkInventory.TooltipGetNumLines( tooltip )
+	if numlines == 0 then
+		-- batllepet tooltip conversions generate a zero line tooltip
+		return true
+	end
+	
+	-- normal tooltips will always have at least one line (retrieving item information)
 	local txt = ArkInventory.TooltipGetLine( tooltip, 1, true )
 	if txt and txt ~= "" and txt ~= ArkInventory.Localise["WOW_TOOLTIP_RETRIEVING_ITEM_INFO"] then
 		return true
 	end
+	
 end
 
 
@@ -2776,3 +2902,4 @@ function ArkInventory:EVENT_ARKINV_TOOLTIP_REBUILD_QUEUE_UPDATE_BUCKET( events )
 	end
 	
 end
+

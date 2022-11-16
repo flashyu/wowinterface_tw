@@ -540,7 +540,7 @@ local function ActionMailSend_Threaded( thread_id, manual )
 				
 				if index <= limit then
 					
-					PickupContainerItem( item[1], item[2] )
+					ArkInventory.CrossClient.PickupContainerItem( item[1], item[2] )
 					ClickSendMailItemButton( )
 					
 					ArkInventory.Output( "attached item ", index, " = ", item[3], " x ", item[4] )
