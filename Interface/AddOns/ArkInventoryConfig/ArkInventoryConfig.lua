@@ -7406,6 +7406,23 @@ function ArkInventory.ConfigInternalDesignData( path )
 										ArkInventory.Frame_Main_Generate( nil, ArkInventory.Const.Window.Draw.Refresh )
 									end,
 								},
+								onopen = {
+									order = 200,
+									name = ArkInventory.Localise["CONFIG_SORTING_WHEN_OPEN"],
+									desc = ArkInventory.Localise["CONFIG_DESIGN_ITEM_COOLDOWN_ONOPEN_DESC"],
+									type = "toggle",
+									get = function( info )
+										local id = ConfigGetNodeArg( info, #info - 4 )
+										local style = ArkInventory.ConfigInternalDesignGet( id )
+										return style.slot.cooldown.onopen
+									end,
+									set = function( info, v )
+										local id = ConfigGetNodeArg( info, #info - 4 )
+										local style = ArkInventory.ConfigInternalDesignGet( id )
+										style.slot.cooldown.onopen = v
+										ArkInventory.Frame_Main_Generate( nil, ArkInventory.Const.Window.Draw.Refresh )
+									end,
+								},
 								combat = {
 									order = 300,
 									name = ArkInventory.Localise["CONFIG_DESIGN_ITEM_COOLDOWN_COMBAT"],

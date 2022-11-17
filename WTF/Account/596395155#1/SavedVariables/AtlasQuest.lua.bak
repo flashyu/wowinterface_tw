@@ -13,11 +13,11 @@ AtlasQuest_Options = {
 		["ShownSide"] = "Left",
 		["AtlasAutoShow"] = 1,
 	},
-	["仓库技师"] = {
+	["死哪了"] = {
 		["ShownSide"] = "Left",
 		["AtlasAutoShow"] = 1,
 	},
-	["死哪了"] = {
+	["仓库技师"] = {
 		["ShownSide"] = "Left",
 		["AtlasAutoShow"] = 1,
 	},

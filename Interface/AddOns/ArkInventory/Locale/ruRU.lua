@@ -531,6 +531,7 @@ if not L then return end
 --	L["CONFIG_DESIGN_ITEM_COOLDOWN_NUMBER_DESC"] = ""
 --	L["CONFIG_DESIGN_ITEM_COOLDOWN_COMBAT"] = ""
 --	L["CONFIG_DESIGN_ITEM_COOLDOWN_COMBAT_DESC"] = ""
+--	L["CONFIG_DESIGN_ITEM_COOLDOWN_ONOPEN_DESC"] = ""
 	
 	L["CONFIG_DESIGN_ITEM_BORDER_SHOW_DESC"] = "отображать ли кромку вокруг каждой ячейки"
 --	L["CONFIG_DESIGN_ITEM_BORDER_STYLE_DESC"] = ""
@@ -903,6 +904,7 @@ if not L then return end
 --	L["AZERITE"] = ""
 --	L["COSMETIC"] = ""
 --	L["WHEN"] = ""
+--	L["RECIPIENT"] = ""
 	
 	
 -- libdatabroker

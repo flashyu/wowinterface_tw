@@ -125,8 +125,6 @@ end
 
 function private.OnTooltipSetItem(tooltip)
 	local reg = private.tooltipRegistry[tooltip]
-	-- The new tooltip postcall is triggered for every other non-registered item tooltips
-	-- Gonna need to rewrite our tooltip scanning to the new method to save calls here
 	if not reg then
 		return
 	end

@@ -531,6 +531,7 @@ if not L then return end
 --	L["CONFIG_DESIGN_ITEM_COOLDOWN_NUMBER_DESC"] = ""
 --	L["CONFIG_DESIGN_ITEM_COOLDOWN_COMBAT"] = ""
 --	L["CONFIG_DESIGN_ITEM_COOLDOWN_COMBAT_DESC"] = ""
+--	L["CONFIG_DESIGN_ITEM_COOLDOWN_ONOPEN_DESC"] = ""
 	
 	L["CONFIG_DESIGN_ITEM_BORDER_SHOW_DESC"] = "Montrer une bordure autour des objets"
 	L["CONFIG_DESIGN_ITEM_BORDER_STYLE_DESC"] = "Définir le style de bordure des objets"
@@ -903,6 +904,7 @@ if not L then return end
 --	L["AZERITE"] = ""
 --	L["COSMETIC"] = ""
 --	L["WHEN"] = ""
+--	L["RECIPIENT"] = ""
 	
 	
 -- libdatabroker

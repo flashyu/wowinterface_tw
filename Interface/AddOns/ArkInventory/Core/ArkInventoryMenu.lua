@@ -1889,7 +1889,7 @@ function ArkInventory.MenuItemCategoryAssignOpen( offset, level, value, i, loc_i
 					"value", string.format( "CATEGORY_ACTION_WHEN_%s", cat_id )
 				)
 				
-				local text = "recipient"
+				local text = ArkInventory.Localise["RECIPIENT"]
 				local desc = string.format( "set the recipient to recieve items in %s", cat.fullname )
 				local recipient = catset.action.recipient
 				if not recipient then

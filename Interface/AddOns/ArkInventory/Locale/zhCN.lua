@@ -531,6 +531,7 @@ if not L then return end
 	L["CONFIG_DESIGN_ITEM_COOLDOWN_NUMBER_DESC"] = ""
 	L["CONFIG_DESIGN_ITEM_COOLDOWN_COMBAT"] = "战斗时刷新"
 	L["CONFIG_DESIGN_ITEM_COOLDOWN_COMBAT_DESC"] = "战斗时，或战斗结束时刷新 窗口内物品冷却"
+--	L["CONFIG_DESIGN_ITEM_COOLDOWN_ONOPEN_DESC"] = ""
 	
 	L["CONFIG_DESIGN_ITEM_BORDER_SHOW_DESC"] = "设置物品边框是否显示"
 	L["CONFIG_DESIGN_ITEM_BORDER_STYLE_DESC"] = "设置物品边框的风格"
@@ -903,6 +904,7 @@ if not L then return end
 --	L["AZERITE"] = ""
 --	L["COSMETIC"] = ""
 --	L["WHEN"] = ""
+--	L["RECIPIENT"] = ""
 	
 	
 -- libdatabroker

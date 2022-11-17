@@ -473,6 +473,13 @@ secureToggle:SetPoint("TOPLEFT", IsClassic() and playerGuildTitles or fadeMap, "
 luaErrors:SetPoint("TOPLEFT", secureToggle, "BOTTOMLEFT", 0, -4)
 targetDebuffFilter:SetPoint("TOPLEFT", luaErrors, "BOTTOMLEFT", 0, -4)
 
+-- Retail 10.0.2 moved these functions under the `C_Container` namespace, but Classic still has them as globals
+-- This should support both game versions
+local GetSortBagsRightToLeft = GetSortBagsRightToLeft or C_Container.GetSortBagsRightToLeft
+local SetSortBagsRightToLeft = SetSortBagsRightToLeft or C_Container.SetSortBagsRightToLeft
+local GetInsertItemsLeftToRight = GetInsertItemsLeftToRight or C_Container.GetInsertItemsLeftToRight
+local SetInsertItemsLeftToRight = SetInsertItemsLeftToRight or C_Container.SetInsertItemsLeftToRight
+
 local reverseCleanupBags = GetSortBagsRightToLeft and SetSortBagsRightToLeft and newCheckbox(AIO, 'reverseCleanupBags',
 	function(self)
 		return GetSortBagsRightToLeft()

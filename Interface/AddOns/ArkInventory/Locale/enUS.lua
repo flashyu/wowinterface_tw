@@ -530,7 +530,8 @@ if not L then return end
 	L["CONFIG_DESIGN_ITEM_COOLDOWN_NUMBER"] = COUNTDOWN_FOR_COOLDOWNS_TEXT
 	L["CONFIG_DESIGN_ITEM_COOLDOWN_NUMBER_DESC"] = "Show the remaining cooldown as a number"
 	L["CONFIG_DESIGN_ITEM_COOLDOWN_COMBAT"] = "Refresh in combat"
-	L["CONFIG_DESIGN_ITEM_COOLDOWN_COMBAT_DESC"] = "Refresh the window to show cooldowns while in combat, or wait until combat has ended"
+	L["CONFIG_DESIGN_ITEM_COOLDOWN_COMBAT_DESC"] = "Show cooldowns while in combat, or wait until combat has ended"
+	L["CONFIG_DESIGN_ITEM_COOLDOWN_ONOPEN_DESC"] = "Refresh the window when opened to show any new cooldowns"
 	
 	L["CONFIG_DESIGN_ITEM_BORDER_SHOW_DESC"] = "show borders around items or not"
 	L["CONFIG_DESIGN_ITEM_BORDER_STYLE_DESC"] = "set the border style for items"
@@ -903,6 +904,7 @@ if not L then return end
 	L["AZERITE"] = "Azerite"
 	L["COSMETIC"] = COSMETIC or ITEM_COSMETIC or "Cosmetic"
 	L["WHEN"] = "When"
+	L["RECIPIENT"] = "Recipient"
 	
 	
 -- libdatabroker

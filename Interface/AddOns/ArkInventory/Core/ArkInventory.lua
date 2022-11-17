@@ -1281,7 +1281,8 @@ ArkInventory.Const.DatabaseDefaults.global = {
 						},
 						["cooldown"] = {
 							["show"] = true,
-							["global"] = false,
+							["onopen"] = true,
+--							["global"] = false,
 							["combat"] = true,
 						},
 						["itemlevel"] = {
@@ -2737,7 +2738,6 @@ function ArkInventory.OnInitialize( )
 --		{ "blizzard event name", "arkinventory function name", blizzard_project_id, min_toc, max_toc }
 		
 --		{ "ACTIONBAR_UPDATE_USABLE", "EVENT_ARKINV_ACTIONBAR_UPDATE_USABLE" },
-		{ "ACTIONBAR_UPDATE_COOLDOWN", "EVENT_ARKINV_UPDATE_COOLDOWN" },
 		{ "CVAR_UPDATE", "EVENT_ARKINV_CVAR_UPDATE" },
 --		{ "PLAYER_CONTROL_GAINED", "EVENT_ARKINV_PLAYER_CONTROL_GAINED" },
 --		{ "PLAYER_CONTROL_LOST", "EVENT_ARKINV_PLAYER_CONTROL_LOST" },
@@ -2767,7 +2767,6 @@ function ArkInventory.OnInitialize( )
 --		{ "BAG_NEW_ITEMS_UPDATED", "" },
 --		{ "BAG_SLOT_FLAGS_UPDATED", "EVENT_ARKINV_BAG_UPDATE" },
 		{ "BAG_UPDATE", "EVENT_ARKINV_BAG_UPDATE" },
-		{ "BAG_UPDATE_COOLDOWN", "EVENT_ARKINV_UPDATE_COOLDOWN" },
 --		{ "BAG_UPDATE_DELAYED", "EVENT_ARKINV_BAG_UPDATE_DELAYED" }, -- not overly helpful
 --		{ "ITEM_LOCKED", "EVENT_ARKINV_ITEM_LOCK_CHANGED" },
 --		{ "ITEM_UNLOCKED", "EVENT_ARKINV_ITEM_LOCK_CHANGED" },
@@ -2835,7 +2834,6 @@ function ArkInventory.OnInitialize( )
 		{ "PET_JOURNAL_PET_RESTORED", "EVENT_ARKINV_COLLECTION_PET_UPDATE", ArkInventory.Global.Location[ArkInventory.Const.Location.Pet].proj },
 		{ "PET_JOURNAL_PET_REVOKED", "EVENT_ARKINV_COLLECTION_PET_UPDATE", ArkInventory.Global.Location[ArkInventory.Const.Location.Pet].proj },
 		{ "PET_JOURNAL_PETS_HEALED", "EVENT_ARKINV_COLLECTION_PET_UPDATE", ArkInventory.Global.Location[ArkInventory.Const.Location.Pet].proj },
-		{ "PET_BAR_UPDATE_COOLDOWN", "EVENT_ARKINV_UPDATE_COOLDOWN" },
 		
 		{ "OBLITERUM_FORGE_SHOW", "EVENT_ARKINV_OBLITERUM_ENTER", ArkInventory.Const.ENUM.EXPANSION.LEGION, ArkInventory.Const.ENUM.EXPANSION.SHADOWLANDS },
 		{ "OBLITERUM_FORGE_CLOSE", "EVENT_ARKINV_OBLITERUM_LEAVE", ArkInventory.Const.ENUM.EXPANSION.LEGION, ArkInventory.Const.ENUM.EXPANSION.SHADOWLANDS },
@@ -2890,7 +2888,11 @@ function ArkInventory.OnInitialize( )
 		{ "PLAYER_INTERACTION_MANAGER_FRAME_SHOW", "EVENT_ARKINV_PLAYER_INTERACTION_SHOW", ArkInventory.Const.ENUM.EXPANSION.DRAGONFLIGHT },
 		{ "PLAYER_INTERACTION_MANAGER_FRAME_HIDE", "EVENT_ARKINV_PLAYER_INTERACTION_HIDE", ArkInventory.Const.ENUM.EXPANSION.DRAGONFLIGHT },
 		
-		{ "SPELL_UPDATE_COOLDOWN", "EVENT_ARKINV_UPDATE_COOLDOWN" },
+--		{ "SPELL_UPDATE_COOLDOWN", "EVENT_ARKINV_UPDATE_COOLDOWN" },
+--		{ "ACTIONBAR_UPDATE_COOLDOWN", "EVENT_ARKINV_UPDATE_COOLDOWN" },
+--		{ "BAG_UPDATE_COOLDOWN", "EVENT_ARKINV_UPDATE_COOLDOWN" },
+--		{ "PET_BAR_UPDATE_COOLDOWN", "EVENT_ARKINV_UPDATE_COOLDOWN" },
+
 	}
 	
 end
@@ -4636,6 +4638,14 @@ function ArkInventory.Frame_Main_Show( loc_id, player_id )
 		--ArkInventory.OutputWarning( "Frame_Main_Show - .Recalculate" )
 		ArkInventory.Frame_Main_DrawStatus( loc_id, ArkInventory.Const.Window.Draw.Recalculate )
 	end
+	
+	-- on open refresh so that cooldowns are updated if enabled
+	if codex.style.slot.cooldown.onopen then
+		ArkInventory.Frame_Main_DrawStatus( loc_id, ArkInventory.Const.Window.Draw.Refresh )
+	end
+	
+	
+
 	
 	frame:Show( )
 	

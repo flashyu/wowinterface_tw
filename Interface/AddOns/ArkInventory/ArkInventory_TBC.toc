@@ -3,7 +3,7 @@
 ## Title: ArkInventory [TBC]
 ## Author: Arkayenro - Khaz'goroth
 ## Email: arkayenro at gmail dot com
-## Version: 31005.01
+## Version: 31005.02
 ## X-ReleaseType: Alpha
 ## SavedVariables: ARKINVDB
 
