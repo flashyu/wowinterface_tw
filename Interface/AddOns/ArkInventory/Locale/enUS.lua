@@ -575,14 +575,13 @@ if not L then return end
 	L["CONFIG_ACTION_WHEN_DESC"] = "Set when the action for %s runs to %s"
 	
 	L["CONFIG_ACTION_MANUAL_RUN"] = "Manual Action (Vendor, Mail)"
+	L["CONFIG_ACTION_TESTMODE"] = "Test Mode"
 	
-	L["CONFIG_ACTION_VENDOR_SELL"] = "Sell junk items"
-	L["CONFIG_ACTION_VENDOR_SELL_AUTO"] = "Auto sell"
-	L["CONFIG_ACTION_VENDOR_SELL_AUTO_DESC"] = "Process all junk action items as soon as you open a vendor"
-	L["CONFIG_ACTION_VENDOR_SELL_LIMIT"] = "Limit to Buyback"
-	L["CONFIG_ACTION_VENDOR_SELL_LIMIT_DESC"] = "As a safety precaution stop selling your junk items when the buyback limit (%i) is reached"
-	L["CONFIG_ACTION_VENDOR_SELL_LIMIT_ABORT"] = "Processing aborted due to buyback limit (%s) being reached."
-	L["CONFIG_ACTION_VENDOR_SELL_TEST"] = "Test mode is enabled, no items were actually sold."
+	L["CONFIG_ACTION_VENDOR_SELL"] = "Vendor items"
+	L["CONFIG_ACTION_VENDOR_AUTOMATIC_DESC"] = "Process all junk action items as soon as you open a vendor"
+	L["CONFIG_ACTION_VENDOR_LIMIT"] = "Limit to Buyback"
+	L["CONFIG_ACTION_VENDOR_LIMIT_DESC"] = "As a safety precaution stop selling your junk items when the buyback limit (%i) is reached"
+	L["CONFIG_ACTION_VENDOR_LIMIT_ABORT"] = "Processing aborted due to buyback limit (%s) being reached."
 	L["CONFIG_ACTION_VENDOR_SOLD"] = "Sold your junk items for %s."
 	L["CONFIG_ACTION_VENDOR_SOLD_DESC"] = "Display a notification about how much gold you sold your items for"
 	L["CONFIG_ACTION_VENDOR_QUALITY_CUTOFF_DESC"] = "Only sell/destroy an item if its quality is at or below: %s%s|r"
@@ -597,7 +596,7 @@ if not L then return end
 	L["CONFIG_ACTION_VENDOR_DESTROY_MORE"] = "You have %s more item(s) that can be destroyed."
 	L["CONFIG_ACTION_VENDOR_DESTROY_TEST"] = "Test mode is enabled, no items were actually destroyed."
 	
-	L["CONFIG_ACTION_VENDOR_TESTMODE"] = "Test Mode"
+	L["CONFIG_ACTION_VENDOR_TESTMODE"] = "Test mode is enabled, no items were actually sold."
 	L["CONFIG_ACTION_VENDOR_TESTMODE_DESC"] = "When this option is enabled no items are actually sold or destroyed.\n\nUse with the List option to see what would normally get sold or destroyed."
 	L["CONFIG_ACTION_VENDOR_PROCESSING_DISABLED_DESC"] = "All junk selling options have been disabled due to the %s addon being loaded"
 	L["CONFIG_ACTION_VENDOR_SOULBOUND_ALREADY_KNOWN_DESC"] = "Categorise any soulbound item (typically recipes), that you already know, as junk"
@@ -605,8 +604,13 @@ if not L then return end
 	L["CONFIG_ACTION_VENDOR_SOULBOUND_ITEMLEVEL_DESC"] = "Ignore item level requirement on equipment for junk purposes"
 	
 	L["CONFIG_ACTION_MAIL_SEND"] = "Send items"
-	L["CONFIG_ACTION_MAIL_SEND_AUTO"] = "Auto send"
-	L["CONFIG_ACTION_MAIL_SEND_AUTO_DESC"] = "Process all mail action items as soon as you open a mailbox"
+	L["CONFIG_ACTION_MAIL_AUTOMATIC_DESC"] = "Process all mail action items as soon as you open a mailbox"
+	L["CONFIG_ACTION_MAIL_TESTMODE"] = "Test mode is enabled, no items were actually sent."
+	L["CONFIG_ACTION_MAIL_TESTMODE_DESC"] = "When this option is enabled no items are actually sent.\n\nUse with the List option to see what would normally get sent."
+	L["CONFIG_ACTION_MAIL_QUALITY_CUTOFF_DESC"] = "Only send an item if its quality is at or below: %s%s|r"
+	L["CONFIG_ACTION_MAIL_LIST_DESC"] = "Display a notification for each item that is sent."
+	L["CONFIG_ACTION_MAIL_TIMER_DESC"] = "the number of millseconds (approx) to wait before treating the send as failed"
+	
 	
 	
 -- sorting
@@ -636,8 +640,10 @@ if not L then return end
 	L["CONFIG_SORTING_INCLUDE_LOCATION_DESC"] = "include item equip locations when sorting.\n\nnote: only affects items that can be equipped"
 	L["CONFIG_SORTING_INCLUDE_ITEMTYPE"] = "item type and subtype"
 	L["CONFIG_SORTING_INCLUDE_ITEMTYPE_DESC"] = "include item type and subtype when sorting."
-	L["CONFIG_SORTING_INCLUDE_CATEGORY"] = "item category"
-	L["CONFIG_SORTING_INCLUDE_CATEGORY_DESC"] = "include item category in sorting your inventory"
+	L["CONFIG_SORTING_INCLUDE_CATEGORY"] = "category id"
+	L["CONFIG_SORTING_INCLUDE_CATEGORY_DESC"] = "include category id in sorting your inventory"
+	L["CONFIG_SORTING_INCLUDE_CATNAME"] = "category name"
+	L["CONFIG_SORTING_INCLUDE_CATNAME_DESC"] = "include category name in sorting your inventory"
 	L["CONFIG_SORTING_INCLUDE_ITEMUSELEVEL"] = "item (use) level"
 	L["CONFIG_SORTING_INCLUDE_ITEMUSELEVEL_DESC"] = "include item (use) level when sorting."
 	L["CONFIG_SORTING_INCLUDE_ITEMSTATLEVEL"] = "item (stat) level"

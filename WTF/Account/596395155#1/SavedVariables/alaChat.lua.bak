@@ -8,14 +8,14 @@ alaChatSV = {
 		["ChatHyperlink"] = true,
 		["FontFlag"] = "none",
 		["ArrowHistory"] = false,
+		["HoverHyperlink"] = true,
 		["Font"] = "Fonts\\ARKai_T.ttf",
-		["StickyChannel"] = true,
 		["ColoredPlayerName"] = true,
 		["StickyWhisper"] = true,
 		["StickyBNWhisper"] = true,
 		["ChatFrameToBorder"] = true,
 		["TabChangeChatType"] = false,
-		["HoverHyperlink"] = true,
+		["StickyChannel"] = true,
 	},
 	["highlight"] = {
 		["_TemporaryDisabled"] = false,
@@ -143,13 +143,13 @@ alaChatSV = {
 		["AutoAddChannelToDefaultChatFrame"] = false,
 		["UseColor"] = true,
 		["ChannelBlockButton_BLZ"] = true,
-		["BF_WORLD"] = true,
+		["RAID"] = true,
 		["LOCAL_DEFENSE"] = false,
-		["LOOK_FOR_GROUP"] = true,
 		["RAID_WARNING"] = true,
+		["LOOK_FOR_GROUP"] = true,
 		["_channelblocked"] = {
 		},
-		["RAID"] = true,
+		["BF_WORLD"] = true,
 		["_chatblocked"] = {
 		},
 		["_bfworldcf"] = {

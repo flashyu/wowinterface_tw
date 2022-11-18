@@ -2904,4 +2904,3 @@ function ArkInventory:EVENT_ARKINV_TOOLTIP_REBUILD_QUEUE_UPDATE_BUCKET( events )
 	end
 	
 end
-

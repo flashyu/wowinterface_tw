@@ -2068,6 +2068,34 @@ function ArkInventory.DatabaseUpgradePostLoad( )
 	
 	
 	
+	upgrade_version = 31005.03
+	if ArkInventory.acedb.global.option.version < upgrade_version then
+		
+		ArkInventory.Output( string.format( ArkInventory.Localise["UPGRADE_GLOBAL"], "option", upgrade_version ) )
+		
+		if ArkInventory.acedb.global.option.junk then
+			ArkInventory.acedb.global.option.action.vendor.auto = not not ArkInventory.acedb.global.option.junk.sell
+			ArkInventory.acedb.global.option.action.vendor.combat = not not ArkInventory.acedb.global.option.junk.combat
+			ArkInventory.acedb.global.option.action.vendor.limit = not not ArkInventory.acedb.global.option.junk.limit
+			ArkInventory.acedb.global.option.action.vendor.delete = not not ArkInventory.acedb.global.option.junk.delete
+			ArkInventory.acedb.global.option.action.vendor.notify = not not ArkInventory.acedb.global.option.junk.notify
+			ArkInventory.acedb.global.option.action.vendor.raritycutoff = ArkInventory.acedb.global.option.junk.raritycutoff or ArkInventory.Const.ENUM.ITEMQUALITY.POOR
+			ArkInventory.acedb.global.option.action.vendor.list = not not ArkInventory.acedb.global.option.junk.list
+			ArkInventory.acedb.global.option.action.vendor.test = not not ArkInventory.acedb.global.option.junk.test
+			if ArkInventory.acedb.global.option.junk.soulbound then
+				ArkInventory.acedb.global.option.action.vendor.soulbound.known = not not ArkInventory.acedb.global.option.junk.soulbound.known
+				ArkInventory.acedb.global.option.action.vendor.soulbound.equipment = not not ArkInventory.acedb.global.option.junk.soulbound.equipment
+				ArkInventory.acedb.global.option.action.vendor.soulbound.itemlevel = not not ArkInventory.acedb.global.option.junk.soulbound.itemlevel
+			end
+		end
+		ArkInventory.acedb.global.option.junk = nil
+		
+		
+		ArkInventory.acedb.global.option.version = upgrade_version
+		
+	end
+	
+	
 	if ArkInventory.acedb.global.vendor then
 		ArkInventory.acedb.global.vendor = nil
 	end

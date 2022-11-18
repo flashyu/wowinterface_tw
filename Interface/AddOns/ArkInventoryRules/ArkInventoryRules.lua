@@ -1510,7 +1510,7 @@ function ArkInventoryRules.System.internal_unwearable( wearable, ignore_known, i
 	end
 	
 	
-	-- can this class wear this type of armor
+	-- should this class wear this type of armor
 	if ( not ArkInventory.Const.ClassArmor[ArkInventoryRules.Object.info.itemsubtypeid] ) or ( ArkInventory.Const.ClassArmor[ArkInventoryRules.Object.info.itemsubtypeid] and ArkInventory.Const.ClassArmor[ArkInventoryRules.Object.info.itemsubtypeid][class] ) then
 		if wearable then
 			--ArkInventory.Output( "wearable pass 2: ", ArkInventoryRules.Object.h )

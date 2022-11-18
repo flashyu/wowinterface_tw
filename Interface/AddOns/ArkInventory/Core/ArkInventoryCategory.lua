@@ -738,7 +738,7 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 	ArkInventory.ScanTooltipSet( ArkInventory.Global.Tooltip.Scan, i.loc_id, i.bag_id, i.slot_id, i.h, i )
 	
 	-- if enabled - already known soulbound items are junk (tooltip)
-	if ArkInventory.db.option.junk.soulbound.known then --and not ArkInventory.Global.Location[i.loc_id].isOffline
+	if ArkInventory.db.option.action.vendor.soulbound.known then --and not ArkInventory.Global.Location[i.loc_id].isOffline
 		if ArkInventory.IsBound( i.sb ) then
 			if ArkInventory.TooltipContains( ArkInventory.Global.Tooltip.Scan, ArkInventory.Localise["ALREADY_KNOWN"], false, true, false, ArkInventory.Const.Tooltip.Search.Base ) then
 				--ArkInventory.Output( i.h, " is junk?" )
@@ -879,8 +879,8 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 		elseif i.sb == ArkInventory.Const.Bind.Account then
 			return ArkInventory.CategoryGetSystemID( "SYSTEM_EQUIPMENT_ACCOUNTBOUND" )
 		elseif i.sb == ArkInventory.Const.Bind.Pickup then
-			if ArkInventory.db.option.junk.soulbound.equipment then
-				if not ArkInventory.TooltipCanUse( ArkInventory.Global.Tooltip.Scan, nil, ArkInventory.db.option.junk.soulbound.known, ArkInventory.db.option.junk.soulbound.itemlevel ) then
+			if ArkInventory.db.option.action.vendor.soulbound.equipment then
+				if not ArkInventory.TooltipCanUse( ArkInventory.Global.Tooltip.Scan, nil, ArkInventory.db.option.action.vendor.soulbound.known, ArkInventory.db.option.action.vendor.soulbound.itemlevel ) then
 					--ArkInventory.Output( i.h, " is junk" )
 					return ArkInventory.CategoryGetSystemID( "SYSTEM_JUNK" )
 				end
@@ -1417,7 +1417,7 @@ function ArkInventory.ItemCategoryGetDefaultEmpty( loc_id, bag_id )
 		if clump then
 			return ArkInventory.CategoryGetSystemID( "EMPTY" )
 		else
-			return ArkInventory.CategoryGetSystemID( "EMPTY_REAGENTBANK" )
+			return ArkInventory.CategoryGetSystemID( "EMPTY_REAGENT" )
 		end
 	end
 	

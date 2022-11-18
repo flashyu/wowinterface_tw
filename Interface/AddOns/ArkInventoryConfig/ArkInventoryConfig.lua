@@ -1469,7 +1469,7 @@ function ArkInventory.ConfigInternal( )
 					type = "group",
 					childGroups = "tab",
 					args = {
-						junk = {
+						vendor = {
 							order = 1000,
 							name = ArkInventory.Localise["VENDOR"],
 							type = "group",
@@ -1482,39 +1482,39 @@ function ArkInventory.ConfigInternal( )
 									fontSize = "medium",
 									hidden = ArkInventory.Global.Action.Vendor.process,
 								},
-								autosell = {
+								automatic = {
 									order = 100,
-									name = ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL_AUTO"],
-									desc = ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL_AUTO_DESC"],
+									name = ArkInventory.Localise["AUTOMATIC"],
+									desc = ArkInventory.Localise["CONFIG_ACTION_VENDOR_AUTOMATIC_DESC"],
 									type = "toggle",
 									disabled = not ArkInventory.Global.Action.Vendor.process,
 									get = function( info )
-										return ArkInventory.db.option.junk.sell
+										return ArkInventory.db.option.action.vendor.auto
 									end,
 									set = function( info, v )
-										ArkInventory.db.option.junk.sell = not ArkInventory.db.option.junk.sell
+										ArkInventory.db.option.action.vendor.auto = not ArkInventory.db.option.action.vendor.auto
 									end,
 								},
 								testmode = {
 									order = 200,
-									name = ArkInventory.Localise["CONFIG_ACTION_VENDOR_TESTMODE"],
+									name = ArkInventory.Localise["CONFIG_ACTION_TESTMODE"],
 									desc = ArkInventory.Localise["CONFIG_ACTION_VENDOR_TESTMODE_DESC"],
 									type = "toggle",
 									disabled = function( info )
 										return not ArkInventory.Global.Action.Vendor.process
 									end,
 									get = function( info )
-										return ArkInventory.db.option.junk.test
+										return ArkInventory.db.option.action.vendor.test
 									end,
 									set = function( info, v )
-										ArkInventory.db.option.junk.test = not ArkInventory.db.option.junk.test
+										ArkInventory.db.option.action.vendor.test = not ArkInventory.db.option.action.vendor.test
 									end,
 								},
 								raritycutoff = {
 									order = 300,
 									name = ArkInventory.Localise["CONFIG_DESIGN_ITEM_BORDER_QUALITY_CUTOFF"],
 									desc = function( info )
-										return string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_QUALITY_CUTOFF_DESC"], ( select( 5, ArkInventory.GetItemQualityColor( ArkInventory.db.option.junk.raritycutoff ) ) ), _G[string.format( "ITEM_QUALITY%d_DESC", ArkInventory.db.option.junk.raritycutoff or ArkInventory.Const.ENUM.ITEMQUALITY.POOR )] )
+										return string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_QUALITY_CUTOFF_DESC"], ( select( 5, ArkInventory.GetItemQualityColor( ArkInventory.db.option.action.vendor.raritycutoff ) ) ), _G[string.format( "ITEM_QUALITY%d_DESC", ArkInventory.db.option.action.vendor.raritycutoff or ArkInventory.Const.ENUM.ITEMQUALITY.POOR )] )
 									end,
 									type = "select",
 									disabled = function( info )
@@ -1530,27 +1530,27 @@ function ArkInventory.ConfigInternal( )
 										return t
 									end,
 									get = function( info )
-										return tostring( ArkInventory.db.option.junk.raritycutoff or ArkInventory.Const.ENUM.ITEMQUALITY.POOR )
+										return tostring( ArkInventory.db.option.action.vendor.raritycutoff or ArkInventory.Const.ENUM.ITEMQUALITY.POOR )
 									end,
 									set = function( info, v )
-										ArkInventory.db.option.junk.raritycutoff = tonumber( v )
+										ArkInventory.db.option.action.vendor.raritycutoff = tonumber( v )
 										ArkInventory.ItemCacheClear( )
 										ArkInventory.Frame_Main_Generate( nil, ArkInventory.Const.Window.Draw.Recalculate )
 									end,
 								},
 								limit = {
 									order = 400,
-									name = ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL_LIMIT"],
-									desc = string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL_LIMIT_DESC"], BUYBACK_ITEMS_PER_PAGE ),
+									name = ArkInventory.Localise["CONFIG_ACTION_VENDOR_LIMIT"],
+									desc = string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_LIMIT_DESC"], BUYBACK_ITEMS_PER_PAGE ),
 									type = "toggle",
 									disabled = function( info )
 										return not ArkInventory.Global.Action.Vendor.process
 									end,
 									get = function( info )
-										return ArkInventory.db.option.junk.limit
+										return ArkInventory.db.option.action.vendor.limit
 									end,
 									set = function( info, v )
-										ArkInventory.db.option.junk.limit = not ArkInventory.db.option.junk.limit
+										ArkInventory.db.option.action.vendor.limit = not ArkInventory.db.option.action.vendor.limit
 									end,
 								},
 								combat = {
@@ -1561,10 +1561,10 @@ function ArkInventory.ConfigInternal( )
 									width = "half",
 									disabled = not ArkInventory.Global.Action.Vendor.process,
 									get = function( info )
-										return ArkInventory.db.option.junk.combat
+										return ArkInventory.db.option.action.vendor.combat
 									end,
 									set = function( info, v )
-										ArkInventory.db.option.junk.combat = not ArkInventory.db.option.junk.combat
+										ArkInventory.db.option.action.vendor.combat = not ArkInventory.db.option.action.vendor.combat
 									end,
 								},
 								delete = {
@@ -1577,10 +1577,10 @@ function ArkInventory.ConfigInternal( )
 										return not ArkInventory.Global.Action.Vendor.process
 									end,
 									get = function( info )
-										return ArkInventory.db.option.junk.delete
+										return ArkInventory.db.option.action.vendor.delete
 									end,
 									set = function( info, v )
-										ArkInventory.db.option.junk.delete = not ArkInventory.db.option.junk.delete
+										ArkInventory.db.option.action.vendor.delete = not ArkInventory.db.option.action.vendor.delete
 									end,
 								},
 								notify = {
@@ -1593,10 +1593,10 @@ function ArkInventory.ConfigInternal( )
 										return not ArkInventory.Global.Action.Vendor.process
 									end,
 									get = function( info )
-										return ArkInventory.db.option.junk.notify
+										return ArkInventory.db.option.action.vendor.notify
 									end,
 									set = function( info, v )
-										ArkInventory.db.option.junk.notify = not ArkInventory.db.option.junk.notify
+										ArkInventory.db.option.action.vendor.notify = not ArkInventory.db.option.action.vendor.notify
 									end,
 								},
 								list = {
@@ -1609,10 +1609,10 @@ function ArkInventory.ConfigInternal( )
 										return not ArkInventory.Global.Action.Vendor.process
 									end,
 									get = function( info )
-										return ArkInventory.db.option.junk.list
+										return ArkInventory.db.option.action.vendor.list
 									end,
 									set = function( info, v )
-										ArkInventory.db.option.junk.list = not ArkInventory.db.option.junk.list
+										ArkInventory.db.option.action.vendor.list = not ArkInventory.db.option.action.vendor.list
 									end,
 								},
 								timeout = {
@@ -1651,10 +1651,10 @@ function ArkInventory.ConfigInternal( )
 												return not ArkInventory.Global.Action.Vendor.process
 											end,
 											get = function( info )
-												return ArkInventory.db.option.junk.soulbound.known
+												return ArkInventory.db.option.action.vendor.soulbound.known
 											end,
 											set = function( info, v )
-												ArkInventory.db.option.junk.soulbound.known = not ArkInventory.db.option.junk.soulbound.known
+												ArkInventory.db.option.action.vendor.soulbound.known = not ArkInventory.db.option.action.vendor.soulbound.known
 												ArkInventory.ItemCacheClear( )
 												ArkInventory.Frame_Main_Generate( nil, ArkInventory.Const.Window.Draw.Recalculate )
 											end,
@@ -1668,10 +1668,10 @@ function ArkInventory.ConfigInternal( )
 												return not ArkInventory.Global.Action.Vendor.process
 											end,
 											get = function( info )
-												return ArkInventory.db.option.junk.soulbound.equipment
+												return ArkInventory.db.option.action.vendor.soulbound.equipment
 											end,
 											set = function( info, v )
-												ArkInventory.db.option.junk.soulbound.equipment = not ArkInventory.db.option.junk.soulbound.equipment
+												ArkInventory.db.option.action.vendor.soulbound.equipment = not ArkInventory.db.option.action.vendor.soulbound.equipment
 												ArkInventory.ItemCacheClear( )
 												ArkInventory.Frame_Main_Generate( nil, ArkInventory.Const.Window.Draw.Recalculate )
 											end,
@@ -1682,13 +1682,13 @@ function ArkInventory.ConfigInternal( )
 											desc = ArkInventory.Localise["CONFIG_ACTION_VENDOR_SOULBOUND_ITEMLEVEL_DESC"],
 											type = "toggle",
 											disabled = function( info )
-												return not ArkInventory.Global.Action.Vendor.process or not ArkInventory.db.option.junk.soulbound.equipment
+												return not ArkInventory.Global.Action.Vendor.process or not ArkInventory.db.option.action.vendor.soulbound.equipment
 											end,
 											get = function( info )
-												return ArkInventory.db.option.junk.soulbound.itemlevel
+												return ArkInventory.db.option.action.vendor.soulbound.itemlevel
 											end,
 											set = function( info, v )
-												ArkInventory.db.option.junk.soulbound.itemlevel = not ArkInventory.db.option.junk.soulbound.itemlevel
+												ArkInventory.db.option.action.vendor.soulbound.itemlevel = not ArkInventory.db.option.action.vendor.soulbound.itemlevel
 												ArkInventory.ItemCacheClear( )
 												ArkInventory.Frame_Main_Generate( nil, ArkInventory.Const.Window.Draw.Recalculate )
 											end,
@@ -1701,9 +1701,85 @@ function ArkInventory.ConfigInternal( )
 							order = 1000,
 							name = ArkInventory.Localise["MAIL"],
 							type = "group",
-							hidden = true,
 							args = {
-								
+								automatic = {
+									order = 100,
+									name = ArkInventory.Localise["AUTOMATIC"],
+									desc = ArkInventory.Localise["CONFIG_ACTION_MAIL_AUTOMATIC_DESC"],
+									type = "toggle",
+									get = function( info )
+										return ArkInventory.db.option.action.mail.auto
+									end,
+									set = function( info, v )
+										ArkInventory.db.option.action.mail.auto = not ArkInventory.db.option.action.mail.auto
+									end,
+								},
+								testmode = {
+									order = 200,
+									name = ArkInventory.Localise["CONFIG_ACTION_TESTMODE"],
+									desc = ArkInventory.Localise["CONFIG_ACTION_MAIL_TESTMODE_DESC"],
+									type = "toggle",
+									get = function( info )
+										return ArkInventory.db.option.action.mail.test
+									end,
+									set = function( info, v )
+										ArkInventory.db.option.action.mail.test = not ArkInventory.db.option.action.mail.test
+									end,
+								},
+								raritycutoff = {
+									order = 300,
+									name = ArkInventory.Localise["CONFIG_DESIGN_ITEM_BORDER_QUALITY_CUTOFF"],
+									desc = function( info )
+										return string.format( ArkInventory.Localise["CONFIG_ACTION_MAIL_QUALITY_CUTOFF_DESC"], ( select( 5, ArkInventory.GetItemQualityColor( ArkInventory.db.option.action.mail.raritycutoff ) ) ), _G[string.format( "ITEM_QUALITY%d_DESC", ArkInventory.db.option.action.mail.raritycutoff or ArkInventory.Const.ENUM.ITEMQUALITY.POOR )] )
+									end,
+									type = "select",
+									values = function( )
+										local t = { }
+										for z in pairs( ITEM_QUALITY_COLORS ) do
+											if z >= ArkInventory.Const.ENUM.ITEMQUALITY.POOR then
+												t[tostring( z )] = string.format( "%s%s", select( 5, ArkInventory.GetItemQualityColor( z ) ), _G[string.format( "ITEM_QUALITY%d_DESC", z )] )
+											end
+										end
+										return t
+									end,
+									get = function( info )
+										return tostring( ArkInventory.db.option.action.mail.raritycutoff or ArkInventory.Const.ENUM.ITEMQUALITY.POOR )
+									end,
+									set = function( info, v )
+										ArkInventory.db.option.action.mail.raritycutoff = tonumber( v )
+									end,
+								},
+								list = {
+									order = 800,
+									name = ArkInventory.Localise["LIST"],
+									desc = ArkInventory.Localise["CONFIG_ACTION_MAIL_LIST_DESC"],
+									type = "toggle",
+									width = "half",
+									get = function( info )
+										return ArkInventory.db.option.action.mail.list
+									end,
+									set = function( info, v )
+										ArkInventory.db.option.action.mail.list = not ArkInventory.db.option.action.mail.list
+									end,
+								},
+								timeout = {
+									order = 900,
+									name = ArkInventory.Localise["CONFIG_GENERAL_WORKAROUND_THREAD"],
+									desc = ArkInventory.Localise["CONFIG_ACTION_MAIL_TIMER_DESC"],
+									type = "range",
+									min = 50,
+									max = 2500,
+									step = 50,
+									get = function( info )
+										return ArkInventory.db.option.thread.timeout.mailsend
+									end,
+									set = function( info, v )
+										local v = math.floor( v / 5 ) * 5
+										if v < 50 then v = 50 end
+										if v > 2500 then v = 2500 end
+										ArkInventory.db.option.thread.timeout.mailsend = v
+									end,
+								},
 							},
 						},
 					},

@@ -66,7 +66,7 @@ function ArkInventory.Action.Vendor.Check( i, codex, manual, delete )
 				local cat_id = ArkInventory.ItemCategoryGet( i )
 				local cat_type, cat_num = ArkInventory.CategoryIdSplit( cat_id )
 				local catset = codex.catset.ca[cat_type][cat_num]
-				if i.q <= ArkInventory.db.option.junk.raritycutoff then
+				if i.q <= ArkInventory.db.option.action.vendor.raritycutoff then
 					if catset.action.t == ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.VENDOR then
 						if catset.action.w == ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.AUTO then
 							isMatch = true
@@ -180,7 +180,7 @@ local function ActionVendorDestroy( manual )
 		return
 	end
 	
-	if not ArkInventory.db.option.junk.delete then
+	if not ArkInventory.db.option.action.vendor.delete then
 		return
 	end
 	
@@ -203,16 +203,16 @@ local function ActionVendorDestroy( manual )
 	-- process the queue, well at least the first item in it
 	for _, item in pairs( queue ) do
 		
-		if not ArkInventory.db.option.junk.combat and InCombatLockdown( ) then
+		if not ArkInventory.db.option.action.vendor.combat and InCombatLockdown( ) then
 			ArkInventory.OutputWarning( ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL"], " aborted, you are in combat" )
 			break
 		end
 		
-		if ArkInventory.db.option.junk.list then
+		if ArkInventory.db.option.action.vendor.list then
 			ArkInventory.Output( string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_DESTROY_LIST"], item[4], item[3] ) )
 		end
 		
-		if not ArkInventory.db.option.junk.test then
+		if not ArkInventory.db.option.action.vendor.test then
 			ArkInventory.CrossClient.PickupContainerItem( item[1], item[2] )
 			DeleteCursorItem( )
 		end
@@ -223,7 +223,7 @@ local function ActionVendorDestroy( manual )
 	end
 	
 	if qsize > 0 then
-		if ArkInventory.db.option.junk.test then
+		if ArkInventory.db.option.action.vendor.test then
 			ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, ArkInventory.Localise["CONFIG_ACTION_VENDOR_DESTROY_TEST"] )
 		end
 	end
@@ -248,7 +248,7 @@ local function ActionVendorSell_Threaded( thread_id, manual )
 --	ArkInventory.Output( "start amount ", GetMoney( ) )
 	ArkInventory.Global.Action.Vendor.money = GetMoney( )
 	
-	local limit = ( ArkInventory.db.option.junk.limit and BUYBACK_ITEMS_PER_PAGE ) or 0
+	local limit = ( ArkInventory.db.option.action.vendor.limit and BUYBACK_ITEMS_PER_PAGE ) or 0
 	
 	-- build the queue
 	local queue = { }
@@ -269,7 +269,7 @@ local function ActionVendorSell_Threaded( thread_id, manual )
 	-- process the queue
 	for _, item in pairs( queue ) do
 		
-		if not ArkInventory.db.option.junk.combat and InCombatLockdown( ) then
+		if not ArkInventory.db.option.action.vendor.combat and InCombatLockdown( ) then
 			ArkInventory.OutputWarning( ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL"], " aborted, you are in combat" )
 			break
 		end
@@ -279,15 +279,15 @@ local function ActionVendorSell_Threaded( thread_id, manual )
 		if limit > 0 and ArkInventory.Global.Action.Vendor.sold > limit then
 			-- limited to buyback page
 			ArkInventory.Global.Action.Vendor.sold = limit
-			ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL_LIMIT_ABORT"], limit ) )
+			ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_LIMIT_ABORT"], limit ) )
 			break
 		end
 		
-		if ArkInventory.db.option.junk.list then
+		if ArkInventory.db.option.action.vendor.list then
 			ArkInventory.Output( string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_LIST_SELL_DESC"], item[4], item[3], ArkInventory.MoneyText( item[4] * item[5], true ) ) )
 		end
 		
-		if not ArkInventory.db.option.junk.test then
+		if not ArkInventory.db.option.action.vendor.test then
 			if ArkInventory.Global.Mode.Merchant then
 				ArkInventory.CrossClient.UseContainerItem( item[1], item[2] )
 				ArkInventory.ThreadYield( thread_id )
@@ -297,8 +297,8 @@ local function ActionVendorSell_Threaded( thread_id, manual )
 	end
 	
 	if ArkInventory.Global.Action.Vendor.sold > 0 then
-		if ArkInventory.db.option.junk.test then
-			ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, ArkInventory.Localise["CONFIG_ACTION_VENDOR_SELL_TEST"] )
+		if ArkInventory.db.option.action.vendor.test then
+			ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, ArkInventory.Localise["CONFIG_ACTION_VENDOR_TESTMODE"] )
 		end
 	end
 	
@@ -319,7 +319,7 @@ function ArkInventory.Action.Vendor.Sell( manual )
 	
 	if not ArkInventory.Global.Action.Vendor.process then return end
 	
-	if not manual and not ArkInventory.db.option.junk.sell then
+	if not manual and not ArkInventory.db.option.action.vendor.auto then
 		return
 	end
 	
@@ -353,7 +353,7 @@ function ArkInventory.Action.Vendor.Destroy( manual )
 	
 	if not ArkInventory.Global.Action.Vendor.process then return end
 	
-	if not manual and not ArkInventory.db.option.junk.sell then
+	if not manual and not ArkInventory.db.option.action.vendor.auto then
 		return
 	end
 	
@@ -366,7 +366,7 @@ function ArkInventory.Action.Mail.Check( i, codex, manual )
 	
 	local recipient = nil
 	
-	if codex and i and i.h and i.sb ~= ArkInventory.Const.Bind.Pickup then
+	if codex and i and i.h and i.sb ~= ArkInventory.Const.Bind.Pickup and i.q <= ArkInventory.db.option.action.mail.raritycutoff then
 		
 		local info = i.info or ArkInventory.GetObjectInfo( i.h )
 		if info.ready and info.id then
@@ -465,15 +465,22 @@ end
 
 local function ActionMailSendBatch( thread_id, recipient, batch )
 	
-	ArkInventory.Global.Action.Mail.status = nil
-	ArkInventory.Output( "sending batch ", batch )
-	SendMail( recipient, "mail action category in arkinventory", "" )
+	if ArkInventory.db.option.action.mail.list then
+		ArkInventory.Output( "Sending message #", batch )
+	end
+	
+	if ArkInventory.db.option.action.mail.test then
+		ArkInventory.Global.Action.Mail.status = true
+	else
+		ArkInventory.Global.Action.Mail.status = nil
+		SendMail( recipient, "Mail Action for category in ArkInventory", "" )
+	end
 	
 	--do until true
-	for c = 1, 2000 do
+	for c = 1, ArkInventory.db.option.thread.timeout.mailsend do
 		ArkInventory.ThreadYield( thread_id )
 		if ArkInventory.Global.Action.Mail.status ~= nil then
-			ArkInventory.Output( "exited wait for send on pass ", c )
+			ArkInventory.OutputDebug( "Exited wait for send on pass ", c, " of ", ArkInventory.db.option.action.mail.timeout )
 			break
 		end
 	end
@@ -481,12 +488,23 @@ local function ActionMailSendBatch( thread_id, recipient, batch )
 	-- check result of send
 	
 	if ArkInventory.Global.Action.Mail.status == true then
-		ArkInventory.Output( "batch ", batch, " successful" )
+		
+		if ArkInventory.db.option.action.mail.list then
+			ArkInventory.Output( "Message #", batch, " was successful" )
+		end
+		
 		return true
+		
 	elseif ArkInventory.Global.Action.Mail.status == false then
-		ArkInventory.OutputError( "batch ", batch, " failed to send" )
+		
+		if ArkInventory.db.option.action.mail.list then
+			ArkInventory.OutputError( "Message #", batch, " failed to send" )
+		end
+		
 	else
-		ArkInventory.OutputError( "send did not succeed, or fail, still in progress??" )
+		
+		ArkInventory.OutputError( "Send did not succeed, or fail, still in progress??" )
+		
 	end
 	
 end
@@ -521,7 +539,9 @@ local function ActionMailSend_Threaded( thread_id, manual )
 	-- process queue by recipient
 	for recipient, items in pairs( queue ) do
 		
-		ArkInventory.Output( "recipient: ", recipient )
+		if ArkInventory.db.option.action.mail.list then
+			ArkInventory.Output( ArkInventory.Localise["RECIPIENT"], ": ", recipient )
+		end
 		
 		for _, item in pairs( items ) do
 			
@@ -540,10 +560,14 @@ local function ActionMailSend_Threaded( thread_id, manual )
 				
 				if index <= limit then
 					
-					ArkInventory.CrossClient.PickupContainerItem( item[1], item[2] )
-					ClickSendMailItemButton( )
+					if not ArkInventory.db.option.action.mail.test then
+						ArkInventory.CrossClient.PickupContainerItem( item[1], item[2] )
+						ClickSendMailItemButton( )
+					end
 					
-					ArkInventory.Output( "attached item ", index, " = ", item[3], " x ", item[4] )
+					if ArkInventory.db.option.action.mail.list then
+						ArkInventory.Output( "Attached item ", index, " = ", item[3], " x ", item[4] )
+					end
 					
 				end
 				
@@ -562,7 +586,15 @@ local function ActionMailSend_Threaded( thread_id, manual )
 	end
 	
 	if total > 0 then
-		ArkInventory.Output( total, " items sent in ", batch, " messages" )
+		
+		if ArkInventory.db.option.action.mail.list then
+			ArkInventory.Output( total, " items sent in ", batch, " messages" )
+		end
+		
+		if ArkInventory.db.option.action.mail.test then
+			ArkInventory.Output( LIGHTYELLOW_FONT_COLOR_CODE, ArkInventory.Localise["CONFIG_ACTION_MAIL_TESTMODE"] )
+		end
+		
 	end
 	
 	if manual or qsize > 0 then
@@ -572,6 +604,10 @@ local function ActionMailSend_Threaded( thread_id, manual )
 end
 
 function ArkInventory.Action.Mail.Send( manual )
+	
+	if not manual and not ArkInventory.db.option.action.mail.auto then
+		return
+	end
 	
 	if not ArkInventory.Global.Thread.Use then
 		ArkInventory.OutputWarning( ArkInventory.Localise["CONFIG_ACTION_MAIL_SEND"], " aborted, as threads are currently disabled." )

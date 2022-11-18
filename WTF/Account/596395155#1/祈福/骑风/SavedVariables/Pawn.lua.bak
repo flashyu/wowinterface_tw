@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0708,
+	["LastVersion"] = 2.0709,
 	["ItemLevels"] = {
 		{
 			["ID"] = 40467,
@@ -55,10 +55,10 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40080::::::::80:::::::::|h[遗失的珠宝]|h|r",
 		}, -- [11]
 		{
-			["ID"] = 37232,
-			["Level"] = 200,
+			["ID"] = 40717,
+			["Level"] = 213,
 			["AlsoFitsIn"] = 11,
-			["Link"] = "|cff0070dd|Hitem:37232::::::::80:::::::::|h[叛变国王之戒]|h|r",
+			["Link"] = "|cffa335ee|Hitem:40717::::::::80:::::::::|h[无敌之戒]|h|r",
 		}, -- [12]
 		{
 			["ID"] = 40255,

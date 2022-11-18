@@ -1,342 +1,175 @@
 
 PlaterDB = {
 	["captured_spells"] = {
-		[58793] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "塔尼布隆",
-			["encounterID"] = 742,
+		[39586] = {
+			["source"] = "金队萨满祭司",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 30452,
+			["npcID"] = 32340,
 		},
-		[19659] = {
-			["type"] = "DEBUFF",
-			["source"] = "迦顿男爵",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 12056,
-		},
-		[52474] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "来福",
-			["encounterID"] = 742,
+		[15550] = {
+			["source"] = "长毛猛犸象",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17280,
+			["npcID"] = 24614,
 		},
-		[12549] = {
-			["source"] = "灵鳍神谕者",
+		[33625] = {
+			["source"] = "金队萨满祭司",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28112,
+			["npcID"] = 32340,
 		},
-		[59638] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "镜像",
-			["encounterID"] = 742,
+		[44178] = {
+			["source"] = "金队法师",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 31216,
+			["npcID"] = 32341,
 		},
-		[61248] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "塔尼布隆",
-			["encounterID"] = 742,
+		[14032] = {
+			["source"] = "绿队牧师",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 30452,
+			["npcID"] = 32343,
 		},
-		[47996] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "伊兹克利克",
-			["encounterID"] = 742,
+		[33395] = {
+			["source"] = "水元素",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17252,
+			["npcID"] = 510,
 		},
-		[57567] = {
+		[52969] = {
+			["source"] = "亚鲁乌特",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28121,
+		},
+		[4511] = {
 			["type"] = "BUFF",
 			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 417,
+			["npcID"] = 416,
 		},
-		[61632] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "萨塔里奥",
-			["encounterID"] = 742,
+		[32919] = {
+			["source"] = "强壮的野狼",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28860,
+			["npcID"] = 31233,
 		},
-		[54508] = {
-			["encounterName"] = "萨塔里奥",
-			["type"] = "BUFF",
-			["source"] = "伊兹克利克",
-			["encounterID"] = 742,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[70893] = {
-			["encounterName"] = "萨塔里奥",
-			["type"] = "BUFF",
-			["source"] = "来福",
-			["encounterID"] = 742,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17280,
-		},
-		[60708] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "萨塔里奥暮光雏龙",
-			["encounterID"] = 742,
+		[52862] = {
+			["source"] = "海波恩，雷雨之王",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 31214,
+			["npcID"] = 28999,
 		},
-		[53361] = {
+		[24529] = {
 			["type"] = "BUFF",
-			["source"] = "狂心掠夺者",
+			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 28078,
+			["npcID"] = 32517,
 		},
-		[49807] = {
+		[53517] = {
 			["type"] = "BUFF",
-			["source"] = "狂心掠夺者",
+			["source"] = "战栗图腾",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 28078,
+			["npcID"] = 10359,
 		},
-		[53401] = {
-			["encounterName"] = "萨塔里奥",
+		[57458] = {
 			["type"] = "BUFF",
-			["source"] = "来福",
-			["encounterID"] = 742,
+			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17280,
-		},
-		[54429] = {
-			["source"] = "灵鳍战士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28111,
-		},
-		[18501] = {
-			["type"] = "BUFF",
-			["source"] = "灵鳍战士",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 28111,
-		},
-		[60430] = {
-			["encounterName"] = "萨塔里奥",
-			["type"] = "BUFF",
-			["source"] = "烈焰飓风",
-			["encounterID"] = 742,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 30616,
+			["npcID"] = 32517,
 		},
 		[67835] = {
 			["source"] = "虫洞",
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 35646,
 		},
-		[40062] = {
-			["source"] = "诅咒教派破坏者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28538,
+		[75447] = {
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32517,
 		},
-		[56908] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "萨塔里奥",
-			["encounterID"] = 742,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28860,
-		},
-		[61251] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "维斯匹隆",
-			["encounterID"] = 742,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 30449,
+		[11640] = {
+			["type"] = "BUFF",
+			["source"] = "绿队牧师",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32343,
 		},
 		[15578] = {
 			["source"] = "狂心掠夺者",
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 28078,
 		},
-		[52908] = {
-			["type"] = "BUFF",
-			["source"] = "风险投资公司无赖",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 28124,
-		},
-		[53434] = {
-			["encounterName"] = "萨塔里奥",
-			["type"] = "BUFF",
-			["source"] = "来福",
-			["encounterID"] = 742,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17280,
-		},
-		[35361] = {
-			["type"] = "BUFF",
-			["source"] = "林地行者",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 31228,
-		},
-		[57570] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "塔尼布隆",
-			["encounterID"] = 742,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 30452,
-		},
-		[32851] = {
-			["encounterName"] = "萨塔里奥",
-			["type"] = "BUFF",
-			["source"] = "伊兹克利克",
-			["encounterID"] = 742,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[64495] = {
-			["encounterName"] = "萨塔里奥",
-			["type"] = "BUFF",
-			["source"] = "来福",
-			["encounterID"] = 742,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17280,
-		},
-		[35696] = {
+		[57566] = {
 			["type"] = "BUFF",
 			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
+			["npcID"] = 417,
 		},
-		[57634] = {
-			["encounterName"] = "萨塔里奥",
-			["type"] = "DEBUFF",
-			["source"] = "伊兹克利克",
-			["encounterID"] = 742,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[56909] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "萨塔里奥",
-			["encounterID"] = 742,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28860,
-		},
-		[53403] = {
-			["encounterName"] = "萨塔里奥",
+		[21163] = {
 			["type"] = "BUFF",
-			["source"] = "来福",
-			["encounterID"] = 742,
+			["source"] = "莫高特·深炉",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17280,
+			["npcID"] = 13257,
 		},
-		[57491] = {
-			["encounterName"] = "萨塔里奥",
-			["type"] = "DEBUFF",
-			["source"] = "烈焰飓风",
-			["encounterID"] = 742,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 30616,
+		[15581] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["source"] = "狂热者扎斯",
+			["encounterID"] = 789,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 11348,
 		},
-		[63619] = {
-			["encounterName"] = "萨塔里奥",
+		[29385] = {
 			["type"] = "BUFF",
-			["source"] = "暗影魔",
-			["encounterID"] = 742,
+			["source"] = "绿队圣骑士",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 19668,
+			["npcID"] = 32342,
 		},
-		[57579] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "塔尼布隆",
-			["encounterID"] = 742,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 30452,
-		},
-		[56910] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "萨塔里奥",
-			["encounterID"] = 742,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28860,
-		},
-		[47993] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "伊兹克利克",
-			["encounterID"] = 742,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17252,
-		},
-		[52270] = {
-			["source"] = "狂心猎人",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28079,
-		},
-		[15547] = {
-			["source"] = "狂心猎人",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28079,
-		},
-		[54916] = {
-			["source"] = "灵鳍神谕者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28112,
-		},
-		[60639] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "塔尼布隆",
-			["encounterID"] = 742,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 30452,
-		},
-		[47994] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "伊兹克利克",
-			["encounterID"] = 742,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17252,
-		},
-		[52974] = {
-			["type"] = "DEBUFF",
-			["source"] = "灵鳍战士",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 28111,
-		},
-		[48090] = {
-			["encounterName"] = "萨塔里奥",
+		[22888] = {
 			["type"] = "BUFF",
-			["source"] = "伊兹克利克",
-			["encounterID"] = 742,
+			["source"] = "Major Mattingly",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
+			["npcID"] = 173754,
 		},
-		[61684] = {
-			["encounterName"] = "萨塔里奥",
+		[53480] = {
+			["source"] = "战栗图腾",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 10359,
+		},
+		[52442] = {
 			["type"] = "BUFF",
-			["source"] = "来福",
-			["encounterID"] = 742,
+			["source"] = "阿尔萨斯",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17280,
+			["npcID"] = 26499,
 		},
-		[35706] = {
+		[17201] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["source"] = "狂热者洛卡恩",
+			["encounterID"] = 789,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 11347,
+		},
+		[15090] = {
+			["source"] = "绿队牧师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32343,
+		},
+		[12540] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["source"] = "狂热者扎斯",
+			["encounterID"] = 789,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 11348,
+		},
+		[24192] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["source"] = "高阶祭司塞卡尔",
+			["encounterID"] = 789,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 14509,
+		},
+		[61995] = {
+			["source"] = "米尼格布·魔爆",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32838,
+		},
+		[24453] = {
 			["type"] = "BUFF",
 			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[47468] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "复活的食尸鬼",
-			["encounterID"] = 742,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26125,
-		},
-		[9128] = {
-			["type"] = "BUFF",
-			["source"] = "金队战士",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32322,
-		},
-		[61254] = {
-			["encounterName"] = "萨塔里奥",
-			["type"] = "BUFF",
-			["source"] = "萨塔里奥",
-			["encounterID"] = 742,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 28860,
+			["npcID"] = 33776,
 		},
 		[12544] = {
 			["type"] = "BUFF",
@@ -344,41 +177,475 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 32169,
 		},
-		[1604] = {
-			["encounterName"] = "萨塔里奥",
-			["type"] = "DEBUFF",
-			["source"] = "熔岩烈焰",
-			["encounterID"] = 742,
+		[52399] = {
+			["type"] = "BUFF",
+			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 30643,
+			["npcID"] = 20773,
 		},
-		[57581] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "暮光裂隙",
-			["encounterID"] = 742,
+		[52974] = {
+			["source"] = "灵鳍战士",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 30641,
+			["npcID"] = 28111,
 		},
-		[59637] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "镜像",
-			["encounterID"] = 742,
+		[35706] = {
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17252,
+		},
+		[49807] = {
+			["type"] = "BUFF",
+			["source"] = "狂心掠夺者",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 28078,
+		},
+		[12549] = {
+			["source"] = "灵鳍神谕者",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 31216,
+			["npcID"] = 28112,
+		},
+		[29544] = {
+			["type"] = "DEBUFF",
+			["source"] = "绿队战士",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32321,
 		},
 		[25228] = {
 			["type"] = "BUFF",
-			["source"] = "希瓦",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 1863,
-		},
-		[47995] = {
-			["encounterName"] = "萨塔里奥",
-			["type"] = "DEBUFF",
-			["source"] = "伊兹克利克",
-			["encounterID"] = 742,
+			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 17252,
+		},
+		[19134] = {
+			["source"] = "绿队战士",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32321,
+		},
+		[18501] = {
+			["type"] = "BUFF",
+			["source"] = "灵鳍战士",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 28111,
+		},
+		[47983] = {
+			["type"] = "BUFF",
+			["source"] = "卡菲普",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 416,
+		},
+		[27268] = {
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 416,
+		},
+		[35361] = {
+			["type"] = "BUFF",
+			["source"] = "林地行者",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 31228,
+		},
+		[9128] = {
+			["type"] = "BUFF",
+			["source"] = "绿队战士",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32321,
+		},
+		[24339] = {
+			["type"] = "DEBUFF",
+			["source"] = "拉扎什迅猛龙",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 14821,
+		},
+		[15532] = {
+			["source"] = "绿队法师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32324,
+		},
+		[57475] = {
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32517,
+		},
+		[13704] = {
+			["type"] = "DEBUFF",
+			["source"] = "绿队牧师",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32343,
+		},
+		[20424] = {
+			["source"] = "绿队圣骑士",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32342,
+		},
+		[50502] = {
+			["type"] = "BUFF",
+			["source"] = "蛮藤谷鳄鱼",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 28002,
+		},
+		[3436] = {
+			["type"] = "DEBUFF",
+			["source"] = "亡灵药剂师",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 23760,
+		},
+		[61684] = {
+			["type"] = "BUFF",
+			["source"] = "战栗图腾",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 10359,
+		},
+		[15043] = {
+			["source"] = "金队法师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32341,
+		},
+		[14514] = {
+			["type"] = "BUFF",
+			["source"] = "金队法师",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32341,
+		},
+		[47982] = {
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 416,
+		},
+		[13323] = {
+			["source"] = "金队法师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32341,
+		},
+		[52943] = {
+			["source"] = "亚鲁乌特",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28121,
+		},
+		[9080] = {
+			["source"] = "绿队战士",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32321,
+		},
+		[29386] = {
+			["source"] = "绿队圣骑士",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32342,
+		},
+		[22859] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["source"] = "高阶祭司塞卡尔",
+			["encounterID"] = 789,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 14509,
+		},
+		[13005] = {
+			["source"] = "绿队圣骑士",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32342,
+		},
+		[67834] = {
+			["source"] = "虫洞",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35646,
+		},
+		[20615] = {
+			["type"] = "DEBUFF",
+			["source"] = "绿队战士",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32321,
+		},
+		[61353] = {
+			["source"] = "达格娜·火石",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29476,
+		},
+		[32018] = {
+			["source"] = "风暴亡魂",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28858,
+		},
+		[61375] = {
+			["source"] = "海波恩，雷雨之王",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28999,
+		},
+		[49309] = {
+			["source"] = "金队萨满祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32340,
+		},
+		[24018] = {
+			["type"] = "BUFF",
+			["source"] = "古拉巴什掷斧者",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 11350,
+		},
+		[24020] = {
+			["type"] = "DEBUFF",
+			["source"] = "古拉巴什掷斧者",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 11350,
+		},
+		[57567] = {
+			["type"] = "BUFF",
+			["source"] = "克鲁纳姆",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 417,
+		},
+		[19579] = {
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32517,
+		},
+		[54029] = {
+			["type"] = "DEBUFF",
+			["source"] = "夺日者防御法师",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 29255,
+		},
+		[27577] = {
+			["source"] = "绿队战士",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32321,
+		},
+		[8269] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["type"] = "BUFF",
+			["source"] = "高阶祭司塞卡尔",
+			["encounterID"] = 789,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 14509,
+		},
+		[11974] = {
+			["type"] = "BUFF",
+			["source"] = "绿队牧师",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32343,
+		},
+		[46604] = {
+			["type"] = "BUFF",
+			["source"] = "金队法师",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32341,
+		},
+		[5915] = {
+			["type"] = "BUFF",
+			["source"] = "利欲熏心的潜水员",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 25836,
+		},
+		[23600] = {
+			["type"] = "DEBUFF",
+			["source"] = "绿队战士",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32321,
+		},
+		[32736] = {
+			["type"] = "DEBUFF",
+			["source"] = "绿队战士",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 32321,
+		},
+		[52908] = {
+			["source"] = "风险投资公司无赖",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28124,
+		},
+		[59008] = {
+			["source"] = "强壮的野狼",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 31233,
+		},
+		[48090] = {
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17252,
+		},
+		[12611] = {
+			["source"] = "金队法师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32341,
+		},
+		[44415] = {
+			["source"] = "绿队牧师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32343,
+		},
+		[55087] = {
+			["source"] = "流水之魂",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28862,
+		},
+		[15786] = {
+			["source"] = "金队萨满祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32340,
+		},
+		[6713] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["source"] = "狂热者洛卡恩",
+			["encounterID"] = 789,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 11347,
+		},
+		[24185] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["source"] = "高阶祭司塞卡尔",
+			["encounterID"] = 789,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 14509,
+		},
+		[24187] = {
+			["source"] = "恶刃豹",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28001,
+		},
+		[24189] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["source"] = "高阶祭司塞卡尔",
+			["encounterID"] = 789,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 14509,
+		},
+		[54261] = {
+			["source"] = "金队法师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32341,
+		},
+		[17843] = {
+			["source"] = "绿队牧师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32343,
+		},
+		[21401] = {
+			["source"] = "金队萨满祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32340,
+		},
+		[24208] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["source"] = "狂热者洛卡恩",
+			["encounterID"] = 789,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 11347,
+		},
+		[35696] = {
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17252,
+		},
+		[36589] = {
+			["type"] = "BUFF",
+			["source"] = "强壮的野狼",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 31233,
+		},
+		[23829] = {
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 416,
+		},
+		[53361] = {
+			["type"] = "BUFF",
+			["source"] = "狂心掠夺者",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 28078,
+		},
+		[3439] = {
+			["type"] = "DEBUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 417,
+		},
+		[48287] = {
+			["source"] = "蛮藤谷鳄鱼",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28002,
+		},
+		[61374] = {
+			["source"] = "海波恩，雷雨之王",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28999,
+		},
+		[67837] = {
+			["source"] = "虫洞",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35646,
+		},
+		[52864] = {
+			["source"] = "海波恩，雷雨之王",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28999,
+		},
+		[24183] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["source"] = "高阶祭司塞卡尔",
+			["encounterID"] = 789,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 14509,
+		},
+		[32093] = {
+			["source"] = "帝王眼镜蛇",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28011,
+		},
+		[54916] = {
+			["source"] = "灵鳍神谕者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28112,
+		},
+		[52270] = {
+			["source"] = "狂心猎人",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28079,
+		},
+		[3600] = {
+			["type"] = "DEBUFF",
+			["source"] = "地缚图腾",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 2630,
+		},
+		[57723] = {
+			["type"] = "DEBUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 417,
+		},
+		[1604] = {
+			["type"] = "DEBUFF",
+			["source"] = "灵鳍战士",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 28111,
+		},
+		[54429] = {
+			["source"] = "灵鳍战士",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28111,
+		},
+		[22887] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["source"] = "古拉巴什掷斧者",
+			["encounterID"] = 789,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 11350,
+		},
+		[15547] = {
+			["source"] = "狂心猎人",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28079,
+		},
+		[12470] = {
+			["source"] = "金队萨满祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32340,
 		},
 	},
 	["profiles"] = {
@@ -3916,13 +4183,13 @@ PlaterDB = {
 					["HooksTemp"] = {
 					},
 					["Author"] = "Kastfall-Azralon",
-					["Time"] = 1596791840,
+					["version"] = -1,
 					["Desc"] = "Function Plater.UpdatePlateSize from Plater.lua exported to scritps.",
 					["Hooks"] = {
 						["Nameplate Added"] = "\n\n-- exported function Plater.UpdatePlateSize() from Plater.lua\n--this is for advanced users which wants to reorder the nameplate frame at their desire\n\n\n\nfunction (self, unitId, unitFrame, envTable)\n    \n    --check if there's a type of unit on this nameplate\n    local plateFrame = unitFrame:GetParent()\n    if (not plateFrame.actorType) then\n        return\n    end\n    \n    --get all the frames and cache some variables\n    local ACTORTYPE_ENEMY_PLAYER = \"enemyplayer\"\n    local profile = Plater.db.profile\n    local DB_PLATE_CONFIG = profile.plate_config\n    local isInCombat = Plater.IsInCombat()\n    local actorType = plateFrame.actorType\n    \n    local unitFrame = plateFrame.unitFrame\n    local healthBar = unitFrame.healthBar\n    local castBar = unitFrame.castBar\n    local powerBar = unitFrame.powerBar\n    local buffFrame1 = unitFrame.BuffFrame\n    local buffFrame2 = unitFrame.BuffFrame2\n    \n    --use in combat bars when in pvp\n    if (plateFrame.actorType == ACTORTYPE_ENEMY_PLAYER) then\n        if ((Plater.ZoneInstanceType == \"pvp\" or Plater.ZoneInstanceType == \"arena\") and DB_PLATE_CONFIG.player.pvp_always_incombat) then\n            isInCombat = true\n        end\n    end\n    \n    --get the config for this actor type\n    local plateConfigs = DB_PLATE_CONFIG [actorType]\n    --get the config key based if the player is in combat\n    local castBarConfigKey, healthBarConfigKey, manaConfigKey = Plater.GetHashKey (isInCombat)\n    \n    --get the width and height from what the user set in the options panel\n    local healthBarWidth, healthBarHeight = unitFrame.customHealthBarWidth or plateConfigs [healthBarConfigKey][1], unitFrame.customHealthBarHeight or plateConfigs [healthBarConfigKey][2]\n    local castBarWidth, castBarHeight = unitFrame.customCastBarWidth or plateConfigs [castBarConfigKey][1], unitFrame.customCastBarHeight or plateConfigs [castBarConfigKey][2]\n    local powerBarWidth, powerBarHeight = unitFrame.customPowerBarHeight or plateConfigs [manaConfigKey][1], unitFrame.customPowerBarHeight or plateConfigs [manaConfigKey][2]\n    \n    --calculate the offset for the cast bar, this is done due to the cast bar be anchored to topleft and topright\n    local castBarOffSetX = (healthBarWidth - castBarWidth) / 2\n    local castBarOffSetY = plateConfigs.castbar_offset\n    \n    --calculate offsets for the power bar\n    local powerBarOffSetX = (healthBarWidth - powerBarWidth) / 2\n    local powerBarOffSetY = 0\n    \n    --calculate the size deviation for pets\n    local unitType = Plater.GetUnitType (plateFrame)\n    if (unitType == \"pet\") then\n        healthBarHeight = healthBarHeight * Plater.db.profile.pet_height_scale\n        healthBarWidth = healthBarWidth * Plater.db.profile.pet_width_scale\n        \n    elseif (unitType == \"minus\") then\n        healthBarHeight = healthBarHeight * Plater.db.profile.minor_height_scale\n        healthBarWidth = healthBarWidth * Plater.db.profile.minor_width_scale\n    end\n    \n    --unit frame - is set to be the same size as the plateFrame\n    unitFrame:ClearAllPoints()\n    unitFrame:SetAllPoints()\n    \n    --calculates the health bar anchor points\n    --it will always be placed in the center of the nameplate area (where it accepts mouse clicks) \n    local xOffSet = (plateFrame:GetWidth() - healthBarWidth) / 2\n    local yOffSet = (plateFrame:GetHeight() - healthBarHeight) / 2\n    \n    --set the health bar point\n    healthBar:ClearAllPoints()\n    PixelUtil.SetPoint (healthBar, \"topleft\", unitFrame, \"topleft\", xOffSet + profile.global_offset_x, -yOffSet + profile.global_offset_y)\n    PixelUtil.SetPoint (healthBar, \"bottomright\", unitFrame, \"bottomright\", -xOffSet + profile.global_offset_x, yOffSet + profile.global_offset_y)\n    \n    --set the cast bar point and size\n    castBar:ClearAllPoints()\n    PixelUtil.SetPoint (castBar, \"topleft\", healthBar, \"bottomleft\", castBarOffSetX, castBarOffSetY)\n    PixelUtil.SetPoint (castBar, \"topright\", healthBar, \"bottomright\", -castBarOffSetX, castBarOffSetY)\n    PixelUtil.SetHeight (castBar, castBarHeight)\n    PixelUtil.SetSize (castBar.Icon, castBarHeight, castBarHeight)\n    PixelUtil.SetSize (castBar.BorderShield, castBarHeight * 1.4, castBarHeight * 1.4)\n    \n    --set the power bar point and size\n    powerBar:ClearAllPoints()\n    PixelUtil.SetPoint (powerBar, \"topleft\", healthBar, \"bottomleft\", powerBarOffSetX, powerBarOffSetY)\n    PixelUtil.SetPoint (powerBar, \"topright\", healthBar, \"bottomright\", -powerBarOffSetX, powerBarOffSetY)\n    PixelUtil.SetHeight (powerBar, powerBarHeight)\n    \n    --power bar are hidden by default, show it if there's a custom size for it\n    if (unitFrame.customPowerBarWidth and unitFrame.customPowerBarHeight) then\n        powerBar:SetUnit (unitFrame.unit)\n    end\n    \n    --aura frames\n    local bf1Anchor = Plater.db.profile.aura_frame1_anchor\n    Plater.SetAnchor (buffFrame1, {side = bf1Anchor.side, x = bf1Anchor.x, y = bf1Anchor.y + plateConfigs.buff_frame_y_offset}, unitFrame.healthBar, (Plater.db.profile.aura_grow_direction or 2) == 2)\n    \n    local bf2Anchor = Plater.db.profile.aura_frame2_anchor\n    Plater.SetAnchor (buffFrame2, {side = bf2Anchor.side, x = bf2Anchor.x, y = bf2Anchor.y + plateConfigs.buff_frame_y_offset}, unitFrame.healthBar, (Plater.db.profile.aura2_grow_direction or 2) == 2)\n    \nend\n\n\n",
 					},
-					["version"] = -1,
 					["Name"] = "Reorder Nameplate [Plater]",
+					["Time"] = 1596791840,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -4136,15 +4403,15 @@ PlaterDB = {
 					["HooksTemp"] = {
 					},
 					["Author"] = "Ditador-Azralon",
-					["Time"] = 1597097268,
+					["version"] = -1,
 					["Desc"] = "Move the icon of the spell cast to the left or right side of the nameplate.",
 					["Hooks"] = {
 						["Cast Update"] = "function (self, unitId, unitFrame, envTable)\n    \n    envTable.UpdateIconPosition (unitFrame)\n    self.ThrottleUpdate = -1\n    \nend\n\n\n",
 						["Cast Start"] = "function (self, unitId, unitFrame, envTable)\n    \n    unitFrame.castBar.BorderShield:SetDrawLayer(\"artwork\")\n    envTable.UpdateIconPosition (unitFrame)\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 						["Constructor"] = "function (self, unitId, unitFrame, envTable, modTable)\n    \n    --private:\n    function envTable.UpdateIconPosition (unitFrame)\n        local castBar = unitFrame.castBar\n        local icon = castBar.Icon\n        local noInterruptTexture = castBar.BorderShield\n        \n        if (modTable.config.showIcon) then\n            icon:ClearAllPoints()\n            \n            if (modTable.config.iconOnLeftSide) then\n                if (modTable.config.useFullSize) then\n                    icon:SetPoint (\"topright\", unitFrame.healthBar, \"topleft\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomright\", unitFrame.castBar, \"bottomleft\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                    \n                else\n                    \n                    icon:SetPoint (\"topright\", unitFrame.castBar, \"topleft\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomright\", unitFrame.castBar, \"bottomleft\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                end\n                \n            else\n                if (modTable.config.useFullSize) then\n                    icon:SetPoint (\"topleft\", unitFrame.healthBar, \"topright\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomleft\", unitFrame.castBar, \"bottomright\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                    \n                else\n                    \n                    icon:SetPoint (\"topleft\", unitFrame.castBar, \"topright\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomleft\", unitFrame.castBar, \"bottomright\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                end\n            end\n            \n            icon:SetWidth (icon:GetHeight())\n            icon:Show()\n        else\n            icon:Hide()\n        end\n        \n        if (modTable.config.showTexture and not castBar.canInterrupt) then\n            noInterruptTexture:Show()\n            \n            local texturePath = modTable.config.iconTexturePath\n            texturePath = texturePath:gsub(\"//\", \"/\")\n            texturePath = texturePath:gsub(\"\\\\\", \"/\")\n            \n            noInterruptTexture:SetTexture (texturePath)\n            noInterruptTexture:SetTexCoord (0, 1, 0, 1)\n            \n            if (modTable.config.desaturatedTexture) then\n                noInterruptTexture:SetDesaturated (modTable.config.desaturatedTexture)\n            else\n                noInterruptTexture:SetVertexColor (DetailsFramework:ParseColors (modTable.config.textureColor))\n            end\n            \n            noInterruptTexture:SetSize (modTable.config.textureWidth, castBar:GetHeight() + modTable.config.textureHeightMod)\n            noInterruptTexture:ClearAllPoints()\n            noInterruptTexture:SetPoint (\"center\", castBar, \"left\", modTable.config.texturePosition, 0)\n            noInterruptTexture:SetAlpha (modTable.config.textureAlpha)\n        else\n            noInterruptTexture:Hide()\n        end\n    end\nend",
 					},
-					["version"] = -1,
 					["Name"] = "Cast Bar Icon Settings [P]",
+					["Time"] = 1597097268,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -4374,14 +4641,14 @@ PlaterDB = {
 					["HooksTemp"] = {
 					},
 					["Author"] = "Kastfall-Azralon",
-					["Time"] = 1620377377,
+					["version"] = -1,
 					["Desc"] = "Change the nameplate color if the unit is attacking a specific unit like Monk's Ox Statue or Druid's Treants. You may edit which units it track in the constructor script.",
 					["Hooks"] = {
 						["Initialization"] = "function (modTable)\n    --list of npcs and their colors, can be inserted:\n    --name of the unit\n    --name of the unit in lower case\n    --npcID of the unit\n    \n    --color can be added as:\n    --color names: \"red\", \"yellow\"\n    --color hex: \"#FF0000\", \"#FFFF00\"\n    --color table: {1, 0, 0}, {1, 1, 0}    \n    \n    modTable.changeBarColor = modTable.config.changeBarColor\n    modTable.changeBorderColor = modTable.config.changeBorderColor\n    modTable.resetColors = modTable.config.resetColors\n    \n    modTable.ListOfNpcs = {\n        [61146] = modTable.config.color, --\"olive\", --monk statue npcID\n        [103822] = modTable.config.color, --\"olive\", --druid treant npcID\n        [15352] = modTable.config.color, --\"olive\", --shaman elemental\n        [95072] = modTable.config.color, --\"olive\", --shaman greater earth elemental npcID\n        [61056] = modTable.config.color, --\"olive\", --shaman primal earth elemental npcID\n        \n    }\nend\n\n\n",
 						["Nameplate Updated"] = "function (self, unitId, unitFrame, envTable, modTable)\n    if not unitId then\n        return\n    end\n    --get the GUID of the target of the unit\n    local targetGUID = UnitGUID (unitId .. \"target\")\n    \n    if (targetGUID) then\n        \n        --get the npcID of the target\n        local npcID = Plater.GetNpcIDFromGUID (targetGUID)\n        local unitName = UnitName (unitId .. \"target\")\n        local unitNameLower = string.lower (unitName)\n        \n        --check if the npcID of this unit is in the npc list \n        local color = modTable.ListOfNpcs [npcID] or modTable.ListOfNpcs [unitName] or modTable.ListOfNpcs [unitNameLower]\n        \n        if color then\n            if modTable.changeBarColor then\n                Plater.SetNameplateColor (unitFrame, color)\n            end\n            if modTable.changeBorderColor then\n                Plater.SetBorderColor (unitFrame, color)\n            end\n            unitFrame.attackingSpecificUnitFromMod = true\n        elseif unitFrame.attackingSpecificUnitFromMod and modTable.resetColors then\n            if modTable.changeBorderColor then\n                Plater.SetBorderColor (unitFrame)\n            end\n            if modTable.changeBarColor then\n                Plater.RefreshNameplateColor (unitFrame)\n            end\n            unitFrame.attackingSpecificUnitFromMod = false\n        end\n    end\nend",
 					},
-					["version"] = -1,
 					["Name"] = "Attacking Specific Unit [Plater]",
+					["Time"] = 1620377377,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -4455,7 +4722,7 @@ PlaterDB = {
 					["HooksTemp"] = {
 					},
 					["Author"] = "Izimode-Azralon",
-					["Time"] = 1621935143,
+					["version"] = -1,
 					["Desc"] = "Show combo points above the nameplate for Druid Feral and Rogues.",
 					["Hooks"] = {
 						["Nameplate Created"] = "function (self, unitId, unitFrame, envTable)\n    \n    --run constructor!\n    --constructor is executed only once when any script of the hook runs.\n    \nend\n\n\n",
@@ -4467,8 +4734,8 @@ PlaterDB = {
 						["Player Talent Update"] = "function (self, unitId, unitFrame, envTable)\n    \n    --update the amount of comboo points shown when the player changes talents or specialization\n    envTable.UpdateComboPointAmount()\n    \n    --save the time of the last talent change\n    envTable.LastPlayerTalentUpdate = GetTime()\n    \n    \nend\n\n\n",
 						["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    --settings\n    local anchors = {\n        {\"bottom\", unitFrame.healthBar, \"top\", 0, 24},\n    }\n    \n    local sizes = {\n        width = 12,\n        height = 12,\n        scale = 1,\n    }\n    \n    local textures = {\n        backgroundTexture = [[Interface\\PLAYERFRAME\\ClassOverlayComboPoints]],\n        backgroundTexCoords = {0/128, 21/128, 101/128, 122/128},\n        \n        comboPointTexture = [[Interface\\PLAYERFRAME\\ClassOverlayComboPoints]],\n        comboPointTexCoords = {3/128, 18/128, 81/128, 96/128},\n    }\n    if WOW_PROJECT_ID ~= WOW_PROJECT_MAINLINE then\n        textures = {\n            backgroundTexture = [[Interface\\PLAYERFRAME\\ClassOverlayComboPoints]],\n            backgroundTexCoords = {78/128, 98/128, 21/64, 41/64},\n            \n            comboPointTexture = [[Interface\\PLAYERFRAME\\ClassOverlayComboPoints]],\n            comboPointTexCoords = {100/128, 120/128, 21/64, 41/64},\n        }\n    end\n    \n    local frameLevel = 1000\n    local frameStrata = \"high\"    \n    \n    --private\n    do\n        --store combo points frames on this table\n        envTable.ComboPoints = {}\n        --save when the player changed talents or spec\n        envTable.LastPlayerTalentUpdate = GetTime()\n        --save when this nameplate got a combo point amount and alignment update        \n        \n        --build combo points frame anchor (combo point are anchored to this)\n        if (not unitFrame.PlaterComboPointFrame) then\n            local hostFrame = CreateFrame (\"frame\", nil, unitFrame)\n            hostFrame.ComboPointFramesPool = {}\n            unitFrame.PlaterComboPointFrame = hostFrame\n            envTable.ComboPointFrame = hostFrame\n            envTable.ComboPointFrame:SetScale (sizes.scale)\n            \n            --DetailsFramework:ApplyStandardBackdrop (envTable.ComboPointFrame) --debug anchor size\n            \n            --animations\n            local onPlayShowAnimation = function (animation)\n                --stop the hide animation if it's playing\n                if (animation:GetParent():GetParent().HideAnimation:IsPlaying()) then\n                    animation:GetParent():GetParent().HideAnimation:Stop()\n                end\n                \n                animation:GetParent():Show()\n            end\n            \n            local onPlayHideAnimation = function (animation)\n                --stop the show animation if it's playing\n                if (animation:GetParent():GetParent().ShowAnimation:IsPlaying()) then\n                    animation:GetParent():GetParent().ShowAnimation:Stop()\n                end\n            end        \n            local onStopHideAnimation = function (animation)\n                animation:GetParent():Hide()       \n            end\n            \n            local createAnimations = function (comboPoint)\n                --on show\n                comboPoint.ShowAnimation = Plater:CreateAnimationHub (comboPoint.comboPointTexture, onPlayShowAnimation, nil)\n                Plater:CreateAnimation (comboPoint.ShowAnimation, \"scale\", 1, 0.1, 0, 0, 1, 1)\n                Plater:CreateAnimation (comboPoint.ShowAnimation, \"alpha\", 1, 0.1, .5, 1)\n                Plater:CreateAnimation (comboPoint.ShowAnimation, \"scale\", 2, 0.1, 1.2, 1.2, 1, 1)\n                \n                --on hide\n                comboPoint.HideAnimation = Plater:CreateAnimationHub (comboPoint.comboPointTexture, onPlayHideAnimation, onStopHideAnimation)\n                Plater:CreateAnimation (comboPoint.HideAnimation, \"scale\", 1, 0.1, 1, 1, 0, 0)\n                Plater:CreateAnimation (comboPoint.HideAnimation, \"alpha\", 1, 0.1, 1, 0)\n            end\n            \n            --build combo point frame        \n            for i =1, 10 do \n                local f = CreateFrame (\"frame\", nil, envTable.ComboPointFrame)\n                f:SetSize (sizes.width, sizes.height)\n                tinsert (envTable.ComboPoints, f)\n                tinsert (unitFrame.PlaterComboPointFrame.ComboPointFramesPool, f)\n                \n                local backgroundTexture = f:CreateTexture (nil, \"background\")\n                backgroundTexture:SetTexture (textures.backgroundTexture)\n                backgroundTexture:SetTexCoord (unpack (textures.backgroundTexCoords))\n                backgroundTexture:SetSize (sizes.width, sizes.height)\n                backgroundTexture:SetPoint (\"center\")\n                \n                local comboPointTexture = f:CreateTexture (nil, \"artwork\")\n                comboPointTexture:SetTexture (textures.comboPointTexture)\n                comboPointTexture:SetTexCoord (unpack (textures.comboPointTexCoords))\n                \n                comboPointTexture:SetSize (sizes.width, sizes.height)\n                comboPointTexture:SetPoint (\"center\")\n                comboPointTexture:Hide()            \n                \n                f.IsActive = false\n                \n                f.backgroundTexture = backgroundTexture\n                f.comboPointTexture = comboPointTexture\n                \n                createAnimations (f)\n            end\n            \n        else\n            envTable.ComboPointFrame = unitFrame.PlaterComboPointFrame\n            envTable.ComboPointFrame:SetScale (sizes.scale)\n            envTable.ComboPoints = unitFrame.PlaterComboPointFrame.ComboPointFramesPool\n            \n        end            \n        \n        envTable.ComboPointFrame:SetFrameLevel (frameLevel)\n        envTable.ComboPointFrame:SetFrameStrata (frameStrata)\n        \n        function envTable.UpdateComboPoints()\n            local comboPoints = GetComboPoints(\"player\", \"target\")\n            --UnitPower (\"player\", Enum.PowerType.ComboPoints)\n            \n            for i = 1, envTable.TotalComboPoints do\n                local thisComboPoint = envTable.ComboPoints [i]\n                \n                if (i <= comboPoints ) then\n                    --combo point enabled\n                    if (not thisComboPoint.IsActive) then\n                        thisComboPoint.ShowAnimation:Play()\n                        thisComboPoint.IsActive = true\n                        \n                    end\n                    \n                else\n                    --combo point disabled\n                    if (thisComboPoint.IsActive) then\n                        thisComboPoint.HideAnimation:Play()\n                        thisComboPoint.IsActive = false\n                        \n                    end\n                end\n            end\n            \n            \n        end\n        \n        function envTable.UpdateComboPointAmount()\n            local namePlateWidth = Plater.db.profile.plate_config.enemynpc.health_incombat[1]\n            local comboPoints = UnitPowerMax (\"player\", Enum.PowerType.ComboPoints)\n            local reservedSpace = (namePlateWidth - sizes.width * comboPoints)  / comboPoints \n            \n            --store the total amount of combo points\n            envTable.TotalComboPoints = comboPoints\n            \n            --update anchor frame\n            envTable.ComboPointFrame:SetWidth (namePlateWidth)\n            envTable.ComboPointFrame:SetHeight (20)\n            envTable.ComboPointFrame:ClearAllPoints()\n            for i = 1, #anchors do\n                local anchor = anchors[i]\n                envTable.ComboPointFrame:SetPoint (unpack (anchor))\n            end        \n            \n            --\n            for i = 1, #envTable.ComboPoints do\n                envTable.ComboPoints[i]:Hide()\n                envTable.ComboPoints[i]:ClearAllPoints()\n            end\n            \n            for i = 1, comboPoints do\n                local comboPoint = envTable.ComboPoints[i]\n                if i == 1 then\n                    comboPoint:SetPoint (\"left\", envTable.ComboPointFrame, \"left\", reservedSpace/2, 0)\n                else\n                    comboPoint:SetPoint (\"left\", envTable.ComboPoints[i-1], \"right\", reservedSpace, 0)\n                end\n                \n                comboPoint:Show()\n            end\n            \n            envTable.LastUpdate = GetTime()\n            \n            envTable.UpdateComboPoints()\n        end\n        \n        --initialize\n        envTable.UpdateComboPointAmount()\n        envTable.ComboPointFrame:Hide()\n    end\n    \n    \nend",
 					},
-					["version"] = -1,
 					["Name"] = "Combo Points [Plater]",
+					["Time"] = 1621935143,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -4510,13 +4777,13 @@ PlaterDB = {
 					["HooksTemp"] = {
 					},
 					["Author"] = "Ditador-Azralon",
-					["Time"] = 1608663128,
+					["version"] = -1,
 					["Desc"] = "Reorder buffs and debuffs following the settings set in the constructor.",
 					["Hooks"] = {
 						["Initialization"] = "function (modTable)\n    \n    --ATTENTION: after enabling this mod, you may have to adjust the anchor point at the Buff Settings tab\n    \n    local sortByTime = false\n    local invertSort = false\n    \n    --which auras goes first, assign a value (any number), bigger value goes first\n    local priority = {\n        [\"Vampiric Touch\"] = 50,\n        [\"Shadow Word: Pain\"] = 22,\n        [\"Mind Flay\"] = 5,\n        [\"Pistol Shot\"] = 50,\n        [\"Marked for Death\"] = 99,\n    }\n    \n    -- Sort function - do not touch\n    Plater.db.profile.aura_sort = true\n    \n    \n    function Plater.AuraIconsSortFunction (aura1, aura2)\n        local p1 = priority[aura1.SpellId] or priority[aura1.SpellName] or 1\n        local p2 = priority[aura2.SpellId] or priority[aura2.SpellName] or 1\n        \n        if sortByTime and p1 == p2 then\n            if invertSort then\n                return (aura1.Duration == 0 and 99999999 or aura1.RemainingTime or 0) > (aura2.Duration == 0 and 99999999 or aura2.RemainingTime or 0)\n            else\n                return (aura1.Duration == 0 and 99999999 or aura1.RemainingTime or 0) < (aura2.Duration == 0 and 99999999 or aura2.RemainingTime or 0)\n            end\n        else\n            if invertSort then\n                 return p1 < p2\n            else\n                return p1 > p2\n            end\n        end\n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 					},
-					["version"] = -1,
 					["Name"] = "Aura Reorder [Plater]",
+					["Time"] = 1608663128,
 					["LoadConditions"] = {
 						["talent"] = {
 						},
@@ -4862,14 +5129,14 @@ PlaterDB = {
 				["Dont Have Aura"] = 1,
 				["Players Targetting Amount"] = 4,
 				["Color Automation"] = 1,
-				["Extra Border"] = 2,
+				["Combo Points"] = 6,
 				["Cast Bar Icon Config"] = 2,
 				["Aura Reorder"] = 3,
-				["Hide Neutral Units"] = 1,
+				["Extra Border"] = 2,
 				["Attacking Specific Unit"] = 2,
 				["Target Color"] = 3,
 				["Execute Range"] = 1,
-				["Combo Points"] = 6,
+				["Hide Neutral Units"] = 1,
 			},
 			["aura_y_offset"] = 5,
 		},
@@ -5903,15 +6170,15 @@ PlaterDB = {
 					["Author"] = "Tercioo-Sylvanas",
 					["Temp_UpdateCode"] = "function (self, unitId, unitFrame, envTable)\n    \nend\n\n\n",
 					["Desc"] = "Add the debuff name in the trigger box.",
-					["version"] = -1,
-					["Prio"] = 99,
-					["Name"] = "Aura - Debuff Alert [Plater]",
-					["PlaterCore"] = 1,
 					["SpellIds"] = {
 						337220, -- [1]
 						337253, -- [2]
 						337251, -- [3]
 					},
+					["Prio"] = 99,
+					["version"] = -1,
+					["PlaterCore"] = 1,
+					["Name"] = "Aura - Debuff Alert [Plater]",
 					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    if (scriptTable.config.glowEnabled) then\n        envTable.buffIconGlow:Show()\n    end\n    \n    if (scriptTable.config.dotsEnabled) then\n        envTable.dotAnimation = Plater.PlayDotAnimation(self, 6, scriptTable.config.dotsColor, 6, 3) \n    end\nend\n\n\n",
 					["Options"] = {
 						{
@@ -7602,10 +7869,6 @@ PlaterDB = {
 					["Author"] = "Tecno-Azralon",
 					["Temp_UpdateCode"] = "function (self, unitId, unitFrame, envTable)\n    \n    --swap this to true when it is fixated\n    local isFixated = false\n    \n    --check the debuffs the player has and see if any of these debuffs has been placed by this unit\n    for debuffId = 1, 40 do\n        local name, texture, count, debuffType, duration, expirationTime, caster = UnitDebuff (\"player\", debuffId)\n        \n        --cancel the loop if there's no more debuffs on the player\n        if (not name) then \n            break \n        end\n        \n        --check if the owner of the debuff is this unit\n        if (envTable.FixateDebuffs [name] and caster and UnitIsUnit (caster, unitId)) then\n            --the debuff the player has, has been placed by this unit, set the name above the unit name\n            envTable.FixateTarget:SetText (envTable.TextAboveNameplate)\n            envTable.FixateTarget:Show()\n            Plater.SetNameplateColor (unitFrame,  envTable.NameplateColor)\n            isFixated = true\n            \n            if (not envTable.IsFixated) then\n                envTable.IsFixated = true\n                Plater.FlashNameplateBody (unitFrame, \"fixate\", .2)\n            end\n        end\n        \n    end\n    \n    --check if the nameplate color is changed but isn't fixated any more\n    if (not isFixated and envTable.IsFixated) then\n        --refresh the nameplate color\n        Plater.RefreshNameplateColor (unitFrame)\n        --reset the text\n        envTable.FixateTarget:SetText (\"\")\n        \n        envTable.IsFixated = false\n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 					["Desc"] = "When an enemy places a debuff and starts to chase you. This script changes the nameplate color and place your name above the nameplate as well.",
-					["version"] = -1,
-					["Prio"] = 99,
-					["Name"] = "Fixate On You [Plater]",
-					["PlaterCore"] = 1,
 					["SpellIds"] = {
 						"spawn of g'huun", -- [1]
 						"smuggled crawg", -- [2]
@@ -7617,6 +7880,10 @@ PlaterDB = {
 						"crawler mine", -- [8]
 						"rezan", -- [9]
 					},
+					["Prio"] = 99,
+					["version"] = -1,
+					["PlaterCore"] = 1,
+					["Name"] = "Fixate On You [Plater]",
 					["OnShowCode"] = "function (self, unitId, unitFrame, envTable)\n    \nend\n\n\n",
 					["Options"] = {
 					},
@@ -8885,7 +9152,7 @@ PlaterDB = {
 			},
 			["url"] = "https://wago.io/bA_P64xrv/17",
 			["cast_statusbar_fadein_time"] = 0.019999999552965,
-			["target_shady_enabled"] = false,
+			["indicator_raidmark_scale"] = 0.89999997615814,
 			["aura2_y_offset"] = 26.580001831055,
 			["extra_icon_cooldown_reverse"] = false,
 			["health_cutoff_extra_glow"] = true,
@@ -11054,13 +11321,13 @@ PlaterDB = {
 					"Oficial corsario", -- [1]
 					"Tazavesh, el Mercado Velado", -- [2]
 				},
+				[18667] = {
+					"煽动者布莱卡特", -- [1]
+					"奥金顿：暗影迷宫", -- [2]
+				},
 				[155090] = {
 					"Espiralero anodizado", -- [1]
 					"Operación: Mecalópolis", -- [2]
-				},
-				[10876] = {
-					"亡灵甲虫", -- [1]
-					"斯坦索姆", -- [2]
 				},
 				[18731] = {
 					"赫尔默大使", -- [1]
@@ -11314,9 +11581,9 @@ PlaterDB = {
 					"阿努巴尔原始卫士", -- [1]
 					"艾卓-尼鲁布", -- [2]
 				},
-				[18667] = {
-					"煽动者布莱卡特", -- [1]
-					"奥金顿：暗影迷宫", -- [2]
+				[10876] = {
+					"亡灵甲虫", -- [1]
+					"斯坦索姆", -- [2]
 				},
 				[15975] = {
 					"腐肉织网者", -- [1]
@@ -12012,7 +12279,6 @@ PlaterDB = {
 				["raid"] = true,
 			},
 			["aura_cooldown_edge_texture"] = "Interface\\AddOns\\Plater\\images\\cooldown_edge_1",
-			["extra_icon_height"] = 25,
 			["extra_icon_show_purge"] = true,
 			["transparency_behavior"] = 3,
 			["debuff_show_cc_border"] = {
@@ -12048,7 +12314,7 @@ PlaterDB = {
 				["y"] = 1,
 				["side"] = 1,
 			},
-			["indicator_rare"] = false,
+			["aura_timer_text_font"] = "WEBSY2J",
 			["extra_icon_stack_font"] = "DorisPP",
 			["aura_height"] = 12,
 			["non_targeted_alpha_enabled"] = true,
@@ -12107,7 +12373,7 @@ PlaterDB = {
 				["nameplateOverlapH"] = "0.79750263690948",
 				["nameplatePersonalShowWithTarget"] = "0",
 			},
-			["login_counter"] = 8657,
+			["login_counter"] = 8678,
 			["click_space_friendly"] = {
 				116, -- [1]
 				26, -- [2]
@@ -12469,12 +12735,6 @@ PlaterDB = {
 				},
 			},
 			["indicator_scale"] = 1.3999999761581,
-			["border_color"] = {
-				nil, -- [1]
-				nil, -- [2]
-				nil, -- [3]
-				1, -- [4]
-			},
 			["focus_color"] = {
 				nil, -- [1]
 				nil, -- [2]
@@ -17252,7 +17512,7 @@ PlaterDB = {
 				1, -- [4]
 			},
 			["update_throttle"] = 0.28000000119209,
-			["aura_timer_text_font"] = "WEBSY2J",
+			["indicator_rare"] = false,
 			["aura_show_buffs_personal"] = true,
 			["castbar_icon_show"] = false,
 			["indicator_extra_raidmark"] = false,
@@ -17273,7 +17533,7 @@ PlaterDB = {
 			},
 			["target_shady_alpha"] = 1,
 			["aura_height_personal"] = 21,
-			["health_cutoff_upper"] = false,
+			["target_shady_enabled"] = false,
 			["target_highlight_height"] = 3.230356454849243,
 			["cast_statusbar_spark_alpha"] = 1,
 			["aggro_can_check_notank"] = true,
@@ -17303,7 +17563,12 @@ PlaterDB = {
 				},
 			},
 			["health_animation_time_dilatation"] = 2.6199998855591,
-			["aura_grow_direction"] = 3,
+			["border_color"] = {
+				nil, -- [1]
+				nil, -- [2]
+				nil, -- [3]
+				1, -- [4]
+			},
 			["extra_icon_auras_mine"] = {
 				["Escudo de fuego"] = false,
 			},
@@ -17313,8 +17578,8 @@ PlaterDB = {
 			["range_check_in_range_or_target_alpha"] = 1,
 			["aura_timer_text_size"] = 8,
 			["extra_icon_show_timer"] = false,
-			["number_region_first_run"] = true,
 			["cast_statusbar_fadeout_time"] = 0.49999997019768,
+			["number_region_first_run"] = true,
 			["aura_show_offensive_cd"] = true,
 			["ghost_auras"] = {
 				["auras"] = {
@@ -17733,6 +17998,33 @@ PlaterDB = {
 					["colorStr"] = "fffff467",
 				},
 			},
+			["aura2_grow_direction"] = 1,
+			["cast_statusbar_texture"] = "Melli Dark",
+			["aura_grow_direction"] = 3,
+			["extra_icon_height"] = 25,
+			["range_check_alpha_friendlies"] = 1,
+			["dps"] = {
+				["colors"] = {
+					["solo"] = {
+						0.50196078431373, -- [1]
+						0.50196078431373, -- [2]
+					},
+					["notontank"] = {
+						1, -- [1]
+						0.70980392156863, -- [2]
+						0.80392156862745, -- [3]
+					},
+					["aggro"] = {
+						nil, -- [1]
+						0.14901960784314, -- [2]
+						0.094117647058824, -- [3]
+					},
+					["noaggro"] = {
+						0.37647058823529, -- [1]
+						0.44705882352941, -- [2]
+					},
+				},
+			},
 			["script_auto_imported"] = {
 				["Cast - Important Target [P]"] = 1,
 				["Aura - Buff Alert"] = 13,
@@ -17761,37 +18053,12 @@ PlaterDB = {
 				["Cast - Alert + Timer [P]"] = 2,
 				["Fixate On You"] = 11,
 			},
-			["aura2_grow_direction"] = 1,
-			["cast_statusbar_texture"] = "Melli Dark",
-			["range_check_alpha_friendlies"] = 1,
-			["dps"] = {
-				["colors"] = {
-					["solo"] = {
-						0.50196078431373, -- [1]
-						0.50196078431373, -- [2]
-					},
-					["notontank"] = {
-						1, -- [1]
-						0.70980392156863, -- [2]
-						0.80392156862745, -- [3]
-					},
-					["aggro"] = {
-						nil, -- [1]
-						0.14901960784314, -- [2]
-						0.094117647058824, -- [3]
-					},
-					["noaggro"] = {
-						0.37647058823529, -- [1]
-						0.44705882352941, -- [2]
-					},
-				},
-			},
-			["aura_show_enrage"] = true,
-			["indicator_raidmark_scale"] = 0.89999997615814,
 			["indicator_raidmark_anchor"] = {
 				["x"] = 0,
 				["side"] = 9,
 			},
+			["health_cutoff_upper"] = false,
+			["aura_show_enrage"] = true,
 			["indicator_pet"] = false,
 			["extra_icon_show_purge_border"] = {
 				0.19607843137255, -- [1]
@@ -18367,6 +18634,9 @@ PlaterDB = {
 		[61374] = {
 			["npcID"] = 28999,
 		},
+		[61375] = {
+			["npcID"] = 28999,
+		},
 		[33528] = {
 			["encounterName"] = "黑暗编织者塞斯",
 			["npcID"] = 19204,
@@ -18377,14 +18647,14 @@ PlaterDB = {
 			["encounterID"] = 1903,
 			["npcID"] = 19206,
 		},
-		[61375] = {
-			["npcID"] = 28999,
-		},
 		[17235] = {
 			["npcID"] = 10437,
 		},
 		[11443] = {
 			["npcID"] = 10398,
+		},
+		[18327] = {
+			["npcID"] = 10436,
 		},
 		[34119] = {
 			["npcID"] = 19502,
@@ -18394,8 +18664,8 @@ PlaterDB = {
 			["npcID"] = 31125,
 			["encounterID"] = 772,
 		},
-		[18327] = {
-			["npcID"] = 10436,
+		[15620] = {
+			["npcID"] = 16704,
 		},
 		[54096] = {
 			["encounterName"] = "黑女巫法琳娜",
@@ -18405,8 +18675,8 @@ PlaterDB = {
 		[16868] = {
 			["npcID"] = 10463,
 		},
-		[15620] = {
-			["npcID"] = 16704,
+		[50094] = {
+			["npcID"] = 25715,
 		},
 		[59254] = {
 			["npcID"] = 28368,
@@ -18417,26 +18687,26 @@ PlaterDB = {
 		[11021] = {
 			["npcID"] = 5429,
 		},
-		[50094] = {
-			["npcID"] = 25715,
-		},
 		[37361] = {
 			["npcID"] = 10390,
-		},
-		[17435] = {
-			["npcID"] = 10440,
 		},
 		[8988] = {
 			["npcID"] = 6487,
 		},
-		[16429] = {
-			["npcID"] = 10398,
+		[17435] = {
+			["npcID"] = 10440,
 		},
 		[3606] = {
 			["npcID"] = 2523,
 		},
+		[16429] = {
+			["npcID"] = 10398,
+		},
 		[58667] = {
 			["npcID"] = 33422,
+		},
+		[11642] = {
+			["npcID"] = 8902,
 		},
 		[13608] = {
 			["npcID"] = 24819,
@@ -18446,14 +18716,11 @@ PlaterDB = {
 			["npcID"] = 29120,
 			["encounterID"] = 218,
 		},
-		[11642] = {
-			["npcID"] = 8902,
+		[28301] = {
+			["npcID"] = 16020,
 		},
 		[9532] = {
 			["npcID"] = 25216,
-		},
-		[28301] = {
-			["npcID"] = 16020,
 		},
 		[6063] = {
 			["npcID"] = 4296,
@@ -18477,36 +18744,37 @@ PlaterDB = {
 			["npcID"] = 28859,
 			["encounterID"] = 734,
 		},
+		[9053] = {
+			["npcID"] = 19136,
+		},
 		[33529] = {
 			["encounterName"] = "黑暗编织者塞斯",
 			["npcID"] = 19206,
 			["encounterID"] = 1903,
 		},
-		[9053] = {
-			["npcID"] = 19136,
-		},
 		[49309] = {
 			["npcID"] = 32340,
-		},
-		[16565] = {
-			["npcID"] = 10436,
 		},
 		[50335] = {
 			["npcID"] = 27797,
 		},
+		[16565] = {
+			["npcID"] = 10436,
+		},
 		[57753] = {
 			["npcID"] = 30681,
 		},
-		[27831] = {
-			["encounterName"] = "收割者戈提克",
-			["encounterID"] = 1109,
-			["npcID"] = 16126,
+		[33501] = {
+			["npcID"] = 18848,
+		},
+		[61730] = {
+			["npcID"] = 26705,
 		},
 		[50504] = {
 			["npcID"] = 25721,
 		},
-		[33501] = {
-			["npcID"] = 18848,
+		[12471] = {
+			["npcID"] = 17694,
 		},
 		[50025] = {
 			["npcID"] = 27881,
@@ -18517,26 +18785,26 @@ PlaterDB = {
 		[59255] = {
 			["npcID"] = 28368,
 		},
-		[12471] = {
-			["npcID"] = 17694,
-		},
 		[33796] = {
 			["npcID"] = 16896,
-		},
-		[15241] = {
-			["npcID"] = 8910,
 		},
 		[4962] = {
 			["npcID"] = 10437,
 		},
+		[15241] = {
+			["npcID"] = 8910,
+		},
+		[72898] = {
+			["npcID"] = 37994,
+		},
 		[53824] = {
 			["npcID"] = 23745,
 		},
-		[32129] = {
-			["npcID"] = 18328,
-		},
 		[58948] = {
 			["npcID"] = 30453,
+		},
+		[52969] = {
+			["npcID"] = 28121,
 		},
 		[60916] = {
 			["npcID"] = 32353,
@@ -18544,8 +18812,10 @@ PlaterDB = {
 		[7896] = {
 			["npcID"] = 8920,
 		},
-		[49241] = {
-			["npcID"] = 27542,
+		[57467] = {
+			["encounterName"] = "天启四骑士",
+			["npcID"] = 16064,
+			["encounterID"] = 1121,
 		},
 		[33961] = {
 			["npcID"] = 18318,
@@ -18561,13 +18831,13 @@ PlaterDB = {
 		[20829] = {
 			["npcID"] = 8524,
 		},
+		[15305] = {
+			["encounterName"] = "黑暗编织者塞斯",
+			["encounterID"] = 1903,
+			["npcID"] = 18472,
+		},
 		[9672] = {
 			["npcID"] = 10390,
-		},
-		[57467] = {
-			["encounterName"] = "天启四骑士",
-			["npcID"] = 16064,
-			["encounterID"] = 1121,
 		},
 		[12742] = {
 			["npcID"] = 8910,
@@ -18575,22 +18845,22 @@ PlaterDB = {
 		[32103] = {
 			["npcID"] = 27540,
 		},
-		[31600] = {
-			["npcID"] = 25227,
-		},
-		[28450] = {
-			["npcID"] = 16215,
+		[58537] = {
+			["npcID"] = 30893,
 		},
 		[59305] = {
 			["encounterName"] = "伊米隆国王",
 			["npcID"] = 26861,
 			["encounterID"] = 583,
 		},
+		[28450] = {
+			["npcID"] = 16215,
+		},
 		[30091] = {
 			["npcID"] = 16165,
 		},
-		[48530] = {
-			["npcID"] = 27162,
+		[5884] = {
+			["npcID"] = 8542,
 		},
 		[17843] = {
 			["npcID"] = 32325,
@@ -18598,23 +18868,20 @@ PlaterDB = {
 		[42281] = {
 			["npcID"] = 23694,
 		},
-		[5884] = {
-			["npcID"] = 8542,
+		[13952] = {
+			["npcID"] = 8895,
 		},
 		[31664] = {
 			["npcID"] = 27691,
 		},
-		[13952] = {
-			["npcID"] = 8895,
+		[33974] = {
+			["npcID"] = 18827,
 		},
 		[21971] = {
 			["npcID"] = 29034,
 		},
 		[16869] = {
 			["npcID"] = 10438,
-		},
-		[16367] = {
-			["npcID"] = 27678,
 		},
 		[54021] = {
 			["encounterName"] = "阿努布雷坎",
@@ -18629,13 +18896,13 @@ PlaterDB = {
 			["encounterID"] = 1121,
 			["npcID"] = 16065,
 		},
+		[38238] = {
+			["npcID"] = 19428,
+		},
 		[58793] = {
 			["encounterName"] = "萨塔里奥",
 			["npcID"] = 30452,
 			["encounterID"] = 742,
-		},
-		[30481] = {
-			["npcID"] = 16704,
 		},
 		[22887] = {
 			["encounterName"] = "高阶祭司塞卡尔",
@@ -18661,6 +18928,11 @@ PlaterDB = {
 			["encounterID"] = 1109,
 			["npcID"] = 16060,
 		},
+		[54249] = {
+			["encounterName"] = "Lavanthor",
+			["encounterID"] = 2662,
+			["npcID"] = 29312,
+		},
 		[28294] = {
 			["npcID"] = 16021,
 		},
@@ -18673,11 +18945,6 @@ PlaterDB = {
 		[40062] = {
 			["npcID"] = 28538,
 		},
-		[56908] = {
-			["encounterName"] = "萨塔里奥",
-			["encounterID"] = 742,
-			["npcID"] = 28860,
-		},
 		[59346] = {
 			["npcID"] = 28922,
 		},
@@ -18685,6 +18952,11 @@ PlaterDB = {
 			["encounterName"] = "岩石看守者阿尔卡冯",
 			["encounterID"] = 772,
 			["npcID"] = 31125,
+		},
+		[56908] = {
+			["encounterName"] = "萨塔里奥",
+			["encounterID"] = 742,
+			["npcID"] = 28860,
 		},
 		[7978] = {
 			["npcID"] = 8896,
@@ -18698,30 +18970,25 @@ PlaterDB = {
 		[59081] = {
 			["npcID"] = 26554,
 		},
-		[54249] = {
-			["encounterName"] = "Lavanthor",
-			["encounterID"] = 2662,
-			["npcID"] = 29312,
-		},
 		[61568] = {
 			["npcID"] = 30111,
 		},
-		[15453] = {
-			["npcID"] = 16165,
-		},
 		[11986] = {
 			["npcID"] = 30179,
+		},
+		[15453] = {
+			["npcID"] = 16165,
 		},
 		[56405] = {
 			["encounterName"] = "收割者戈提克",
 			["npcID"] = 16060,
 			["encounterID"] = 1109,
 		},
+		[30481] = {
+			["npcID"] = 16704,
+		},
 		[14443] = {
 			["npcID"] = 8920,
-		},
-		[38238] = {
-			["npcID"] = 19428,
 		},
 		[51806] = {
 			["npcID"] = 26828,
@@ -18729,14 +18996,17 @@ PlaterDB = {
 		[13745] = {
 			["npcID"] = 8913,
 		},
+		[16367] = {
+			["npcID"] = 27678,
+		},
 		[59241] = {
 			["npcID"] = 26670,
 		},
 		[59257] = {
 			["npcID"] = 31009,
 		},
-		[33974] = {
-			["npcID"] = 18827,
+		[48530] = {
+			["npcID"] = 27162,
 		},
 		[15493] = {
 			["npcID"] = 8898,
@@ -18747,19 +19017,17 @@ PlaterDB = {
 		[54722] = {
 			["npcID"] = 16168,
 		},
-		[58537] = {
-			["npcID"] = 30893,
+		[31600] = {
+			["npcID"] = 25227,
 		},
-		[15305] = {
-			["encounterName"] = "黑暗编织者塞斯",
-			["encounterID"] = 1903,
-			["npcID"] = 18472,
+		[49241] = {
+			["npcID"] = 27542,
 		},
 		[60902] = {
 			["npcID"] = 32353,
 		},
-		[52969] = {
-			["npcID"] = 28121,
+		[32129] = {
+			["npcID"] = 18328,
 		},
 		[52758] = {
 			["npcID"] = 28668,
@@ -18772,18 +19040,20 @@ PlaterDB = {
 			["npcID"] = 29120,
 			["encounterID"] = 218,
 		},
-		[72898] = {
-			["npcID"] = 37994,
+		[28785] = {
+			["encounterName"] = "阿努布雷坎",
+			["encounterID"] = 1107,
+			["npcID"] = 15956,
 		},
 		[53333] = {
 			["encounterName"] = "看门者克里克希尔",
 			["npcID"] = 29064,
 			["encounterID"] = 216,
 		},
-		[28785] = {
-			["encounterName"] = "阿努布雷坎",
-			["encounterID"] = 1107,
-			["npcID"] = 15956,
+		[27831] = {
+			["encounterName"] = "收割者戈提克",
+			["encounterID"] = 1109,
+			["npcID"] = 16126,
 		},
 		[24314] = {
 			["encounterName"] = "血领主曼多基尔",

@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0708,
+	["LastVersion"] = 2.0709,
 	["LastPlayerFullName"] = "骑风-祈福",
 	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
@@ -57,10 +57,10 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:40080::::::::80:::::::::|h[遗失的珠宝]|h|r",
 		}, -- [11]
 		{
-			["ID"] = 37232,
-			["Level"] = 200,
+			["ID"] = 40717,
+			["Level"] = 213,
 			["AlsoFitsIn"] = 11,
-			["Link"] = "|cff0070dd|Hitem:37232::::::::80:::::::::|h[叛变国王之戒]|h|r",
+			["Link"] = "|cffa335ee|Hitem:40717::::::::80:::::::::|h[无敌之戒]|h|r",
 		}, -- [12]
 		{
 			["ID"] = 40255,
@@ -80,9 +80,9 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:44005:3859:40026::::::80:::::::::|h[号旗披风]|h|r",
 		}, -- [15]
 		{
-			["ID"] = 40455,
-			["Level"] = 213,
-			["Link"] = "|cffa335ee|Hitem:40455::::::::80:::::::::|h[节制法杖]|h|r",
+			["ID"] = 40388,
+			["Level"] = 226,
+			["Link"] = "|cffa335ee|Hitem:40388::::::::80:::::::::|h[旅途的终结]|h|r",
 		}, -- [16]
 		{
 			["ID"] = 40192,

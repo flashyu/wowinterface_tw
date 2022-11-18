@@ -293,9 +293,9 @@ function ArkInventory:EVENT_ARKINV_PLAYER_MONEY_BUCKET( ... )
 	local event = ...
 	ArkInventory.OutputDebug( "EVENT: ", event )
 	
-	if ArkInventory.Global.Action.Vendor.process and not ArkInventory.Global.Action.Vendor.running and ArkInventory.db.option.junk.sell then
+	if ArkInventory.Global.Action.Vendor.process and not ArkInventory.Global.Action.Vendor.running and ArkInventory.db.option.action.vendor.auto then
 		
-		if ArkInventory.db.option.junk.notify and ( ArkInventory.Global.Action.Vendor.sold > 0 ) then
+		if ArkInventory.db.option.action.vendor.notify and ( ArkInventory.Global.Action.Vendor.sold > 0 ) then
 			
 			--ArkInventory.Output( "end amount ", GetMoney( ) )
 			ArkInventory.Global.Action.Vendor.money = GetMoney( ) - ArkInventory.Global.Action.Vendor.money
@@ -1598,13 +1598,13 @@ end
 
 function ArkInventory:EVENT_ARKINV_PLAYER_INTERACTION_SHOW( ... )
 	local event, arg1 = ...
-	--ArkInventory.Output( "EVENT: ", event, ", ", arg1 )
+	ArkInventory.OutputDebug( "EVENT: ", event, ", ", arg1 )
 	ArkInventory:HookPlayerInteractionShow( arg1 )
 end
 
 function ArkInventory:EVENT_ARKINV_PLAYER_INTERACTION_HIDE( ... )
 	local event, arg1 = ...
-	--ArkInventory.Output( "EVENT: ", event, ", ", arg1 )
+	ArkInventory.OutputDebug( "EVENT: ", event, ", ", arg1 )
 	ArkInventory.HookPlayerInteractionHide( arg1 )
 end
 

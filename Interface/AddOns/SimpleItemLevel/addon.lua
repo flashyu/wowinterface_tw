@@ -136,17 +136,6 @@ end
 
 -- Character frame:
 
-local function GetItemQualityAndLevel(unit, slotID)
-    -- link is more reliably fetched than ID, for whatever reason
-    local itemLink = GetInventoryItemLink(unit, slotID)
-
-    if itemLink ~= nil then
-        local quality = GetInventoryItemQuality(unit, slotID)
-        local level = GetDetailedItemLevelInfo(itemLink)
-
-        return quality, level
-    end
-end
 local function UpdateItemSlotButton(button, unit)
     CleanButton(button)
     local key = unit == "player" and "character" or "inspect"
@@ -156,20 +145,22 @@ local function UpdateItemSlotButton(button, unit)
     local slotID = button:GetID()
 
     if (slotID >= INVSLOT_FIRST_EQUIPPED and slotID <= INVSLOT_LAST_EQUIPPED) then
+        local item
         if unit == "player" then
-            local item = Item:CreateFromEquipmentSlot(slotID)
-            if item:IsItemEmpty() then
-                return
-            end
-            return item:ContinueOnItemLoad(function()
-                AddLevelToButton(button, item:GetCurrentItemLevel(), item:GetItemQuality())
-            end)
+            item = Item:CreateFromEquipmentSlot(slotID)
         else
-            local itemQuality, itemLevel = GetItemQualityAndLevel(unit, slotID)
-            if itemLevel then
-                return AddLevelToButton(button, itemLevel, itemQuality)
+            local itemID = GetInventoryItemID(unit, slotID)
+            local itemLink = GetInventoryItemLink(unit, slotID)
+            if itemLink or itemID then
+                item = itemLink and Item:CreateFromItemLink(itemLink) or Item:CreateFromItemID(itemID)
             end
         end
+        if not item or item:IsItemEmpty() then
+            return
+        end
+        return item:ContinueOnItemLoad(function()
+            AddLevelToButton(button, item:GetCurrentItemLevel(), item:GetItemQuality())
+        end)
     end
     return CleanButton(button)
 end
@@ -177,11 +168,39 @@ hooksecurefunc("PaperDollItemSlotButton_Update", function(button)
     UpdateItemSlotButton(button, "player")
 end)
 
+-- Equipment flyout in character frame
+
+if _G.EquipmentFlyout_DisplayButton then
+    hooksecurefunc("EquipmentFlyout_DisplayButton", function(button, paperDollItemSlot)
+        -- print("EquipmentFlyout_DisplayButton", button, paperDollItemSlot)
+        CleanButton(button)
+        if not db.character then return end
+        local location = button.location
+        if not location then return end
+        if location >= EQUIPMENTFLYOUT_FIRST_SPECIAL_LOCATION then return end
+        local player, bank, bags, voidStorage, slot, bag, tab, voidSlot = EquipmentManager_UnpackLocation(location)
+        local item
+        if bags then
+            item = Item:CreateFromBagAndSlot(bag, slot)
+        elseif not voidStorage then -- player or bank
+            item = Item:CreateFromEquipmentSlot(slot)
+        else
+            local itemID = EquipmentManager_GetItemInfoByLocation(location)
+            if itemID then
+                item = Item:CreateFromItemID(itemID)
+            end
+        end
+        if item then
+            UpdateButtonFromItem(button, item)
+        end
+    end)
+end
+
 -- Inspect frame:
 
 ns:RegisterAddonHook("Blizzard_InspectUI", function()
     hooksecurefunc("InspectPaperDollItemSlotButton_Update", function(button)
-        UpdateItemSlotButton(button, "target")
+        UpdateItemSlotButton(button, InspectFrame.unit or "target")
     end)
 end)
 

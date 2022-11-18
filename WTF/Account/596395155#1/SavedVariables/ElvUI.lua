@@ -81,6 +81,9 @@ ElvDB = {
 			},
 			["unitframe"] = {
 				["units"] = {
+					["tank"] = {
+						["enable"] = false,
+					},
 					["party"] = {
 						["targetsGroup"] = {
 							["disableMouseoverGlow"] = false,
@@ -92,6 +95,17 @@ ElvDB = {
 							["disableMouseoverGlow"] = false,
 							["disableFocusGlow"] = false,
 						},
+					},
+					["raid2"] = {
+						["height"] = 20,
+						["width"] = 60,
+					},
+					["raid1"] = {
+						["height"] = 39,
+						["width"] = 40,
+					},
+					["assist"] = {
+						["enable"] = false,
 					},
 				},
 				["colors"] = {
@@ -155,7 +169,7 @@ ElvDB = {
 			["死哪了"] = 2000,
 			["红发男"] = 0,
 			["仓库技师"] = 4989944,
-			["骑风"] = 230109273,
+			["骑风"] = 187809545,
 		},
 		["沙尔图拉"] = {
 			["Helloworlds"] = 1481357,

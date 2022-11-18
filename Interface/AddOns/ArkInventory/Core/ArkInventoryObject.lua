@@ -104,12 +104,6 @@ local function UpdateObjectInfo( info, thread_id )
 ]]--
 		
 		
-		
-		
-		
-		
-		
-		
 		local key = info.hs
 		if info.class == "keystone" then
 			key = info.osd.id
@@ -124,7 +118,7 @@ local function UpdateObjectInfo( info, thread_id )
 			info.ready = C_Item.IsItemDataCachedByID( key )
 		end
 		
-		ArkInventory.OutputDebug( "attempt #", info.retry )
+		--ArkInventory.Output( "attempt #", info.retry, " ", info.hs )
 		
 		if not info.ready then
 			--ArkInventory.OutputWarning( "data not cached for ", key, ", adding to queue" )

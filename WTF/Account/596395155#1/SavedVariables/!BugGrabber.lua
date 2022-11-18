@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 457,
+	["session"] = 461,
 	["errors"] = {
 		{
 			["message"] = "...ace\\AddOns\\AdvancedInterfaceOptions\\basicOptions.lua:344: attempt to index field 'CustomVars' (a nil value)",
@@ -834,26 +834,40 @@ BugGrabberDB = {
 			["counter"] = 27,
 		}, -- [109]
 		{
-			["message"] = "Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
-			["time"] = "2022/09/24 23:46:51",
-			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
-			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:67: in function <Interface\\AddOns\\GearScoreLite\\GearScoreLite.lua:53>",
-			["session"] = 457,
-			["counter"] = 57,
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI_Libraries' 尝试调用保护功能 'SecureStateDriverManager:SetAttribute()'。",
+			["time"] = "2022/11/18 23:19:47",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetAttribute'\n[string \"@Interface\\FrameXML\\SecureStateDriver.lua\"]:48: in function <Interface\\FrameXML\\SecureStateDriver.lua:47>\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\oUF\\ouf.lua\"]:188: in function `Disable'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:580: in function `Update_AllFrames'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:882: in function `?'\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:117: in function <...ies\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:117>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:27: in function <...ies\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:23>\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:62: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\Ace3\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...UI_Libraries\\Core\\Ace3\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
+			["session"] = 461,
+			["counter"] = 1,
 		}, -- [110]
 		{
-			["message"] = "(null)",
-			["time"] = "2022/09/28 22:01:13",
-			["session"] = 457,
-			["counter"] = 124,
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 尝试调用保护功能 'SecureStateDriverManager:SetAttribute()'。",
+			["time"] = "2022/11/18 23:19:47",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetAttribute'\n[string \"@Interface\\FrameXML\\SecureStateDriver.lua\"]:42: in function `Enable'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:576: in function `Update_AllFrames'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:882: in function `?'\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:117: in function <...ies\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:117>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:27: in function <...ies\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:23>\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:62: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\Ace3\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...UI_Libraries\\Core\\Ace3\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
+			["session"] = 461,
+			["counter"] = 1,
 		}, -- [111]
 		{
 			["message"] = "Interface\\FrameXML\\ChatFrame.lua:1060: bad argument #1 to 'strlower' (string expected, got nil)",
 			["time"] = "2022/11/08 23:22:27",
 			["locals"] = "(*temporary) = nil\n(*temporary) = \"string expected, got nil\"\n",
 			["stack"] = "[string \"=[C]\"]: in function `strlower'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:1060: in function <Interface\\FrameXML\\ChatFrame.lua:1055>",
-			["session"] = 457,
-			["counter"] = 177,
+			["session"] = 461,
+			["counter"] = 195,
 		}, -- [112]
+		{
+			["message"] = "Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
+			["time"] = "2022/09/24 23:46:51",
+			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
+			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:67: in function <Interface\\AddOns\\GearScoreLite\\GearScoreLite.lua:53>",
+			["session"] = 461,
+			["counter"] = 59,
+		}, -- [113]
+		{
+			["message"] = "(null)",
+			["time"] = "2022/09/28 22:01:13",
+			["session"] = 461,
+			["counter"] = 130,
+		}, -- [114]
 	},
 }

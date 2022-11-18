@@ -1124,6 +1124,7 @@ ArkInventory.Const = { -- constants
 		count = true,
 		itemcount = false,
 		category = true,
+		catname = true,
 		location = true,
 		itemuselevel = true,
 		itemstatlevel = true,
@@ -1331,7 +1332,6 @@ ArkInventory.Const.Texture.Action = {
 		[ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.MANUAL] = [[Interface\Icons\INV_Letter_13]],
 	},
 }
-
 
 ArkInventory.Const.ClassArmor = {
 	[ArkInventory.Const.ENUM.ITEMCLASS.ARMOR.CLOTH] = { MAGE = 1, PRIEST = 1, WARLOCK = 1 },

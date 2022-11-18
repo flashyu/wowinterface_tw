@@ -16,18 +16,10 @@ CodexConfig = {
 		["arrivaldistance"] = 15,
 		["callbacks"] = {
 			["distance"] = {
-				[10] = nil --[[ skipped inline function ]],
-				[15] = nil --[[ skipped inline function ]],
 			},
 			["world"] = {
-				["onclick"] = nil --[[ skipped inline function ]],
-				["tooltip_update"] = nil --[[ skipped inline function ]],
-				["tooltip_show"] = nil --[[ skipped inline function ]],
 			},
 			["minimap"] = {
-				["onclick"] = nil --[[ skipped inline function ]],
-				["tooltip_update"] = nil --[[ skipped inline function ]],
-				["tooltip_show"] = nil --[[ skipped inline function ]],
 			},
 		},
 		["persistent"] = true,
@@ -64,15 +56,15 @@ CodexBrowserFavorites = {
 	},
 }
 CodexColors = {
+	["神谕者索乌多乌"] = {
+		0.01176470588235294, -- [1]
+		0.8627450980392157, -- [2]
+		0.196078431372549, -- [3]
+	},
 	["部落篝火"] = {
 		0.7490196078431373, -- [1]
 		0.3843137254901961, -- [2]
 		0.1647058823529412, -- [3]
-	},
-	["维赫亚"] = {
-		0.4745098039215686, -- [1]
-		0.04313725490196078, -- [2]
-		0.1372549019607843, -- [3]
 	},
 	["The Stadium Capture Credit Marker"] = {
 		0.7803921568627451, -- [1]
@@ -99,9 +91,9 @@ CodexColors = {
 		0.611764705882353, -- [2]
 		0.4784313725490196, -- [3]
 	},
-	["神谕者索乌多乌"] = {
-		0.01176470588235294, -- [1]
-		0.8627450980392157, -- [2]
-		0.196078431372549, -- [3]
+	["维赫亚"] = {
+		0.4745098039215686, -- [1]
+		0.04313725490196078, -- [2]
+		0.1372549019607843, -- [3]
 	},
 }

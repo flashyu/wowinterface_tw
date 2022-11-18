@@ -1,3 +1,9 @@
+# 3.10.05 Alpha 3 (18-NOV-2022)
+ - added - category name as a new sort method key.  only applies to custom categories and rules.  system categories will sort by id as they have no name.
+ - added - mail action options - config > general > actions > mail
+ - fixed - keybindings are back in their own section and should not cause any taint.
+ - fixed - empty reagent bank slots should be in the correct category again
+ 
 # 3.10.05 Alpha 2 (17-NOV-2022)
  - updated - config > settings > designs > items > cooldown > on window open.  cooldowns will no longer automatically show.  you will need to enable this option and then they will update when you close/open the window.  triggering off the cooldown events generated too much lag especially in large crowds
  - fixed - issue with mailbox scanning
@@ -12,7 +18,7 @@
  - (dragonflight) currency tokens on the backback no longer have a fixed amount and will keep going until you run out of space, they can get messy
  - Enum.ItemConsumableSubclass is missing the Flask entry and everything after has moved down a value which screws up the category names (have hardcoded a workaround in for the moment)
  - items with an active cooldown dont allow comparison tooltips to generate
- - cooldowns no longer start automatically.  you can close/open the bag to get them to show.  all of the cooldown events ACTIONBAR_UPDATE_COOLDOWN, BAG_UPDATE_COOLDOWN, PET_BAR_UPDATE_COOLDOWN, SPELL_UPDATE_COOLDOWN, appear to trigger off other players as well, but do not provide any indication when the event was triggered by you or them, so cooldowns will trigger window refreshes fairly constantly when you are around large numbers of players.  even limiting it to one update per second generated too much lag, especially in massive groups.
+ - cooldowns no longer start automatically.  you can close/open the bag to get them to show (if you enable that option).  all of the cooldown events ACTIONBAR_UPDATE_COOLDOWN, BAG_UPDATE_COOLDOWN, PET_BAR_UPDATE_COOLDOWN, SPELL_UPDATE_COOLDOWN, appear to trigger off other players as well, but do not provide any indication when the event was triggered by you or them, so cooldowns will trigger window refreshes fairly constantly when you are around large numbers of players.  even limiting it to one update per second generated too much lag, especially in massive groups.
  
 # to do
  - double check all categories show/hide for the right clients

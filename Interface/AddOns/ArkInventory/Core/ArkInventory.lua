@@ -984,7 +984,7 @@ ArkInventory.Config = {
 
 
 -- Binding Variables
-BINDING_HEADER_ARKINV = ArkInventory.Const.Program.Name
+--BINDING_HEADER_ARKINV = ArkInventory.Const.Program.Name
 BINDING_NAME_ARKINV_TOGGLE_BAG = ArkInventory.Localise["BACKPACK"]
 BINDING_NAME_ARKINV_TOGGLE_KEYRING = ArkInventory.Localise["KEYRING"]
 BINDING_NAME_ARKINV_TOGGLE_BANK = ArkInventory.Localise["BANK"]
@@ -2097,19 +2097,28 @@ ArkInventory.Const.DatabaseDefaults.global = {
 		["mount"] = {
 			["correction"] = { }, -- [spell] = mountType
 		},
-		["junk"] = {
-			["sell"] = false,
-			["combat"] = false,
-			["limit"] = true,
-			["delete"] = false,
-			["notify"] = true,
-			["raritycutoff"] = ArkInventory.Const.ENUM.ITEMQUALITY.POOR, -- max quality to sell/destroy
-			["list"] = true,
-			["test"] = true,
-			["soulbound"] = {
-				["known"] = true,
-				["equipment"] = true,
-				["itemlevel"] = true,
+		["action"] = {
+			["vendor"] = {
+				["auto"] = false,
+				["combat"] = false,
+				["limit"] = true,
+				["delete"] = false,
+				["notify"] = true,
+				["raritycutoff"] = ArkInventory.Const.ENUM.ITEMQUALITY.POOR, -- max quality to sell/destroy
+				["list"] = true,
+				["test"] = true,
+				["soulbound"] = {
+					["known"] = true,
+					["equipment"] = true,
+					["itemlevel"] = true,
+				},
+			},
+			["mail"] = {
+				["auto"] = false,
+				["notify"] = true,
+				["raritycutoff"] = ArkInventory.Const.ENUM.ITEMQUALITY.POOR, -- max quality to send
+				["list"] = true,
+				["test"] = true,
 			},
 		},
 		["font"] = {
@@ -2225,6 +2234,7 @@ ArkInventory.Const.DatabaseDefaults.global = {
 				["combat"] = 100, -- 200ms appears to be the actual limit
 				["tooltip"] = 25, -- tooltip generation queue
 				["junksell"] = 75, -- this is a minimum duration timer, not a timeout, must be above 50 (will occasionally fail when that low)
+				["mailsend"] = 2500, -- this is not a timer, its the number of retries
 				["objectdata"] = 25, -- object data retreival queue
 			},
 		},
@@ -2885,8 +2895,8 @@ function ArkInventory.OnInitialize( )
 --		{ "ZONE_CHANGED_INDOORS", "EVENT_ARKINV_ZONE_CHANGED" },
 --		{ "ZONE_CHANGED_NEW_AREA", "EVENT_ARKINV_ZONE_CHANGED" },
 		
-		{ "PLAYER_INTERACTION_MANAGER_FRAME_SHOW", "EVENT_ARKINV_PLAYER_INTERACTION_SHOW", ArkInventory.Const.ENUM.EXPANSION.DRAGONFLIGHT },
-		{ "PLAYER_INTERACTION_MANAGER_FRAME_HIDE", "EVENT_ARKINV_PLAYER_INTERACTION_HIDE", ArkInventory.Const.ENUM.EXPANSION.DRAGONFLIGHT },
+--		{ "PLAYER_INTERACTION_MANAGER_FRAME_SHOW", "EVENT_ARKINV_PLAYER_INTERACTION_SHOW", ArkInventory.Const.ENUM.EXPANSION.DRAGONFLIGHT },
+--		{ "PLAYER_INTERACTION_MANAGER_FRAME_HIDE", "EVENT_ARKINV_PLAYER_INTERACTION_HIDE", ArkInventory.Const.ENUM.EXPANSION.DRAGONFLIGHT },
 		
 --		{ "SPELL_UPDATE_COOLDOWN", "EVENT_ARKINV_UPDATE_COOLDOWN" },
 --		{ "ACTIONBAR_UPDATE_COOLDOWN", "EVENT_ARKINV_UPDATE_COOLDOWN" },
@@ -3188,14 +3198,12 @@ function ArkInventory.ItemSortKeyGenerate( i, bar_id, codex )
 		-- expansion
 		s.expansion = info.expansion or 0
 
-		-- category
-		local cat_id = ArkInventory.ItemCategoryGet( i )
+		-- category id and name
+		local cat_id, cat = ArkInventory.ItemCategoryGet( i )
 		local cat_type, cat_num = ArkInventory.CategoryIdSplit( cat_id )
-		local cat_order = 0
-		if cat_type == ArkInventory.Const.Category.Type.Rule then
-			cat_order = ArkInventory.db.option.category[cat_type].data[cat_num].order
-		end
-		s.category = string.format( "%02i:%04i:%04i", cat_type or 0, cat_order or 0, cat_num or 0 )
+		local cat = ArkInventory.db.option.category[cat_type].data[cat_num]
+		s.category = string.format( "%02i:%04i:%04i", cat_type or 0, cat and cat.order or 0, cat_num or 0 )
+		s.catname = cat and cat.name ~= "" and cat.name or s.category
 		
 		-- id
 		s.id = string.format( "%s:%010i:%02i", info.class or "error", info.id or 0, info.sb or ArkInventory.Const.Bind.Never )
@@ -8656,7 +8664,7 @@ function ArkInventory.Frame_Item_PreClick( frame, button, down )
 					
 					local itemInfo = ArkInventory.CrossClient.GetContainerItemInfo( frame.ARK_Data.blizzard_id, frame.ARK_Data.slot_id )
 					
-					if ArkInventory.Global.Mode.Merchant and itemInfo.hasNoValue and ArkInventory.db.option.junk.delete and i.q <= ArkInventory.db.option.junk.raritycutoff then
+					if ArkInventory.Global.Mode.Merchant and itemInfo.hasNoValue and ArkInventory.db.option.action.vendor.delete and i.q <= ArkInventory.db.option.action.vendor.raritycutoff then
 						
 						-- at a merchant, item has no value, delete is enabled, quality is below cutoff
 						
@@ -9416,7 +9424,7 @@ function ArkInventory.Frame_Item_Update_Instant( loc_id, bag_id, slot_id, lockev
 		C_Timer.After(
 			ArkInventory.db.option.bugfix.itemlock.delay,
 			function( )
-				ArkInventory.Frame_Item_Update_Instant( loc_id, bag_id, slot_id )
+				--ArkInventory.Frame_Item_Update_Instant( loc_id, bag_id, slot_id )
 				--local id = ArkInventory.LocationEncode( loc_id, bag_id, slot_id )
 				--ArkInventory.Output( "lockdelay: ", loc_id, "-", bag_id, "-", slot_id )
 				--ArkInventory:SendMessage( "EVENT_ARKINV_ITEM_UPDATE_BUCKET", id )
