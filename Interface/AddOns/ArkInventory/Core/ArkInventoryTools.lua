@@ -6,11 +6,11 @@ ArkInventory.Tools = { }
 
 
 --[[
--- /dump GetItemClassInfo( ArkInventory.Const.ENUM.ITEMCLASS.ARMOR.PARENT )
--- /dump GetItemSubClassInfo( ArkInventory.Const.ENUM.ITEMCLASS.ARMOR.PARENT, ArkInventory.Const.ENUM.ITEMCLASS.ARMOR.LEATHER )
+-- /dump GetItemClassInfo( ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.PARENT )
+-- /dump GetItemSubClassInfo( ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.PARENT, ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.LEATHER )
 
 for x = 4, 4 do
-	--local x = ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.HERBS
+	--local x = ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.HERBS
 	local n = GetItemClassInfo( x )
 	--if n and n ~= "" then
 		ArkInventory.Output( "----------" )
@@ -41,18 +41,20 @@ end
 
 
 --[[
-local z = "attempts"
+local z = "crafting reagent"
 ArkInventory.Output( "search=", z )
 for k, v in pairs (_G) do
 	if type( k ) == "string" and type( v ) == "string" then
 		--if string.match( string.lower( k ), string.lower( z ) ) then -- found in key
-		if string.match( string.lower( v ), string.lower( z ) ) then -- found in value
-		--if string.lower( v ) == string.lower( z ) then -- exact match with value
+		--if string.match( string.lower( v ), string.lower( z ) ) then -- found in value
+		if string.lower( v ) == string.lower( z ) then -- exact match with value
 			ArkInventory.Output( k, "=", v )
 		end
 	end
 end
 --]]
+--PROFESSIONS_USED_IN_COOKING
+--PROFESSIONS_MODIFIED_CRAFTING_REAGENT_BASIC
 
 function ArkInventory.Tools.dump_enum( value, path, search )
 	if type( value ) == "table" then

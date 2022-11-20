@@ -23,7 +23,7 @@ function ArkInventory.CrossClient.GetFirstBagBankSlotIndex( )
 		-- classic
 		return GetFirstBagBankSlotIndex( )
 	else
-		return ArkInventory.CrossClient.GetContainerNumSlots( ArkInventory.Const.ENUM.BAGINDEX.BANK )
+		return ArkInventory.CrossClient.GetContainerNumSlots( ArkInventory.Const.ENUM.BAG.INDEX.BANK )
 	end
 end
 
@@ -485,7 +485,7 @@ function ArkInventory.CrossClient.GetContainerItemInfo( ... )
 	end
 	
 	info.stackCount = info.stackCount or 1
-	info.quality = info.quality or ArkInventory.Const.ENUM.ITEMQUALITY.POOR
+	info.quality = info.quality or ArkInventory.Const.ENUM.ITEM.QUALITY.POOR
 	
 	return info
 	

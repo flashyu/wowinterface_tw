@@ -587,7 +587,7 @@ ArkInventory.Const.Category = {
 			[317] = {
 				proj = ArkInventory.ClientCheck( ArkInventory.Const.ENUM.EXPANSION.DRAENOR ),
 				id = "EMPTY_REAGENT",
-				text = ArkInventory.Localise["REAGENTBANK"],
+				text = ArkInventory.Localise["CRAFTING_REAGENT"],
 			},
 		},
 		Other = { -- do NOT change the indicies - if you have to then see the DatabaseUpgradePostLoad( ) function to remap it
@@ -816,17 +816,17 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 	end
 	
 	-- quest items (some are grey)
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.QUEST.PARENT or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.System.Quest" ) then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.QUEST.PARENT or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.System.Quest" ) then
 		return ArkInventory.CategoryGetSystemID( "SYSTEM_QUEST" )
 	end
 	
 	-- cosmetic items (tooltip check is further down)
-	if ( info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.ARMOR.PARENT and info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.ARMOR.COSMETIC ) or ArkInventory.CrossClient.IsItemCosmetic( i.h ) or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.System.Equipment.Cosmetic" ) then
+	if ( info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.PARENT and info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.COSMETIC ) or ArkInventory.CrossClient.IsItemCosmetic( i.h ) or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.System.Equipment.Cosmetic" ) then
 		return ArkInventory.CategoryGetSystemID( "SYSTEM_EQUIPMENT_COSMETIC" )
 	end
 	
 	-- misc (pets)
-	if ( info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.MISC.PARENT and info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.MISC.PET ) or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.System.Pet" ) then
+	if ( info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.MISC.PARENT and info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.MISC.PET ) or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.System.Pet" ) then
 		if ArkInventory.IsBound( i.sb ) then
 			return ArkInventory.CategoryGetSystemID( "SYSTEM_PET_COMPANION_BOUND" )
 		else
@@ -835,7 +835,7 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 	end
 	
 	-- battle pet as an item
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.BATTLEPET.PARENT then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.BATTLEPET.PARENT then
 		if ArkInventory.IsBound( i.sb ) then
 			return ArkInventory.CategoryGetSystemID( "SYSTEM_PET_BATTLE_BOUND" )
 		else
@@ -844,7 +844,7 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 	end
 	
 	-- misc (mount)
-	if ( info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.MISC.PARENT and info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.MISC.MOUNT ) or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.System.Mount" ) then
+	if ( info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.MISC.PARENT and info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.MISC.MOUNT ) or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.System.Mount" ) then
 		if ArkInventory.IsBound( i.sb ) then
 			return ArkInventory.CategoryGetSystemID( "SYSTEM_MOUNT_BOUND" )
 		else
@@ -858,22 +858,22 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 	end
 	
 	-- junk
-	if info.q == ArkInventory.Const.ENUM.ITEMQUALITY.POOR or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.System.Junk" ) then
+	if info.q == ArkInventory.Const.ENUM.ITEM.QUALITY.POOR or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.System.Junk" ) then
 		return ArkInventory.CategoryGetSystemID( "SYSTEM_JUNK" )
 	end
 	
 	-- projectiles
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.PROJECTILE.PARENT then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.PROJECTILE.PARENT then
 		return ArkInventory.CategoryGetSystemID( "SYSTEM_PROJECTILE" )
 	end
 	
 	-- bags / containers
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.PARENT then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.PARENT then
 		return ArkInventory.CategoryGetSystemID( "SYSTEM_CONTAINER" )
 	end
 	
 	-- equipable items (tooltip)
-	if info.equiploc ~= "" or info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.WEAPON.PARENT or info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.ARMOR.PARENT or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.Armor Token" ) then
+	if info.equiploc ~= "" or info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.WEAPON.PARENT or info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.PARENT or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.Armor Token" ) then
 		if ArkInventory.TooltipContains( ArkInventory.Global.Tooltip.Scan, ArkInventory.Localise["WOW_TOOLTIP_ITEM_COSMETIC"], false, true, false, ArkInventory.Const.Tooltip.Search.Short ) then
 			return ArkInventory.CategoryGetSystemID( "SYSTEM_EQUIPMENT_COSMETIC" )
 		elseif i.sb == ArkInventory.Const.Bind.Account then
@@ -892,18 +892,18 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 	end
 	
 	-- keys
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.KEY.PARENT or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.System.Key" ) then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.KEY.PARENT or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.System.Key" ) then
 		return ArkInventory.CategoryGetSystemID( "SYSTEM_KEY" )
 	end
 	
 	-- glyphs
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.GLYPH.PARENT then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.GLYPH.PARENT then
 		return ArkInventory.CategoryGetSystemID( "SYSTEM_GLYPH" )
 	end
 	
 	-- gems
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.GEM.PARENT or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.Gems" ) then
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.GEM.ARTIFACTRELIC or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.Gems.Artifact Relic" ) then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.GEM.PARENT or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.Gems" ) then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.GEM.ARTIFACTRELIC or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.Gems.Artifact Relic" ) then
 			return ArkInventory.CategoryGetSystemID( "CONSUMABLE_POWER_SYSTEM_OLD" )
 		elseif ArkInventory.ClientCheck( ArkInventory.Const.ENUM.EXPANSION.TBC ) then
 			return ArkInventory.CategoryGetSystemID( "TRADEGOODS_JEWELCRAFTING" )
@@ -920,7 +920,7 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 	end
 	
 	-- item enhancements
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.ITEM_ENHANCEMENT.PARENT or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.System.Item Enhancement" ) then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.ITEM_ENHANCEMENT.PARENT or ArkInventory.PT_ItemInSets( i.h, "ArkInventory.System.Item Enhancement" ) then
 		return ArkInventory.CategoryGetSystemID( "SYSTEM_ITEM_ENHANCEMENT" )
 	end
 	
@@ -979,53 +979,53 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 	
 	
 	
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONSUMABLE.PARENT and ArkInventory.ClientCheck( ArkInventory.Const.ENUM.EXPANSION.TBC ) then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.CONSUMABLE.PARENT and ArkInventory.ClientCheck( ArkInventory.Const.ENUM.EXPANSION.TBC ) then
 		
 		-- classic has no subcategories
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONSUMABLE.EXPLOSIVES_AND_DEVICES then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.CONSUMABLE.EXPLOSIVES_AND_DEVICES then
 			return ArkInventory.CategoryGetSystemID( "CONSUMABLE_EXPLOSIVES_AND_DEVICES" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONSUMABLE.POTION then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.CONSUMABLE.POTION then
 			return ArkInventory.CategoryGetSystemID( "CONSUMABLE_POTION" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONSUMABLE.ELIXIR then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.CONSUMABLE.ELIXIR then
 			return ArkInventory.CategoryGetSystemID( "CONSUMABLE_ELIXIR" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONSUMABLE.FLASK then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.CONSUMABLE.FLASK then
 			return ArkInventory.CategoryGetSystemID( "CONSUMABLE_FLASK" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONSUMABLE.FOOD_AND_DRINK then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.CONSUMABLE.FOOD_AND_DRINK then
 			return ArkInventory.CategoryGetSystemID( "CONSUMABLE_FOOD_AND_DRINK" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONSUMABLE.BANDAGE then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.CONSUMABLE.BANDAGE then
 			return ArkInventory.CategoryGetSystemID( "CONSUMABLE_BANDAGE" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONSUMABLE.VANTUSRUNE then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.CONSUMABLE.VANTUSRUNE then
 			return ArkInventory.CategoryGetSystemID( "CONSUMABLE_VANTUSRUNE" )
 		end
 		
 	end
 	
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.PARENT and ArkInventory.ClientCheck( ArkInventory.Const.ENUM.EXPANSION.TBC ) then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.PARENT and ArkInventory.ClientCheck( ArkInventory.Const.ENUM.EXPANSION.TBC ) then
 	
 		-- old subcategories still exist but are hidden
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.EXPLOSIVES_AND_DEVICES then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.EXPLOSIVES_AND_DEVICES then
 			return ArkInventory.CategoryGetSystemID( "CONSUMABLE_EXPLOSIVES_AND_DEVICES" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.EXPLOSIVES then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.EXPLOSIVES then
 			return ArkInventory.CategoryGetSystemID( "CONSUMABLE_EXPLOSIVES_AND_DEVICES" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.DEVICES then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.DEVICES then
 			return ArkInventory.CategoryGetSystemID( "CONSUMABLE_EXPLOSIVES_AND_DEVICES" )
 		end
 		
@@ -1136,47 +1136,47 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 		return ArkInventory.CategoryGetSystemID( "TRADEGOODS_COOKING" )
 	end
 	
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.PARENT and ArkInventory.ClientCheck( ArkInventory.Const.ENUM.EXPANSION.TBC ) then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.PARENT and ArkInventory.ClientCheck( ArkInventory.Const.ENUM.EXPANSION.TBC ) then
 		
 		-- classic has no itemsubtypes
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.CLOTH then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.CLOTH then
 			return ArkInventory.CategoryGetSystemID( "TRADEGOODS_CLOTH" )
 		end
 	
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.LEATHER then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.LEATHER then
 			return ArkInventory.CategoryGetSystemID( "TRADEGOODS_LEATHER" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.METAL_AND_STONE then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.METAL_AND_STONE then
 			return ArkInventory.CategoryGetSystemID( "TRADEGOODS_METAL_AND_STONE" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.COOKING then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.COOKING then
 			return ArkInventory.CategoryGetSystemID( "TRADEGOODS_COOKING" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.HERBS then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.HERBS then
 			return ArkInventory.CategoryGetSystemID( "TRADEGOODS_HERBS" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.ENCHANTING then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.ENCHANTING then
 			return ArkInventory.CategoryGetSystemID( "TRADEGOODS_ENCHANTING" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.INSCRIPTION then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.INSCRIPTION then
 			return ArkInventory.CategoryGetSystemID( "TRADEGOODS_INSCRIPTION" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.JEWELCRAFTING then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.JEWELCRAFTING then
 			return ArkInventory.CategoryGetSystemID( "TRADEGOODS_JEWELCRAFTING" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.PARTS then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.PARTS then
 			return ArkInventory.CategoryGetSystemID( "TRADEGOODS_PARTS" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.ELEMENTAL then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.ELEMENTAL then
 			return ArkInventory.CategoryGetSystemID( "TRADEGOODS_ELEMENTAL" )
 		end
 		
@@ -1202,7 +1202,7 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 	
 	
 	-- consumable (tooltip)
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONSUMABLE.PARENT then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.CONSUMABLE.PARENT then
 		
 		-- food
 		if ArkInventory.TooltipContains( ArkInventory.Global.Tooltip.Scan, ArkInventory.Localise["WOW_ITEM_TOOLTIP_FOOD"], false, true, true, ArkInventory.Const.Tooltip.Search.Short ) then
@@ -1235,12 +1235,12 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 	end
 	
 	-- recipe (after professions so only the leftovers are categorised)
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.RECIPE.PARENT then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.RECIPE.PARENT then
 		return ArkInventory.CategoryGetSystemID( "SYSTEM_RECIPE" )
 	end
 	
 	-- reagent
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.REAGENT.PARENT then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.REAGENT.PARENT then
 		return ArkInventory.CategoryGetSystemID( "SYSTEM_REAGENT" )
 	end
 	
@@ -1263,13 +1263,13 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 	end
 	
 	-- misc
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.MISC.PARENT then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.MISC.PARENT then
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.MISC.REAGENT then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.MISC.REAGENT then
 			return ArkInventory.CategoryGetSystemID( "SYSTEM_REAGENT" )
 		end
 		
-		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.MISC.OTHER then
+		if info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.MISC.OTHER then
 			
 			if ArkInventory.TooltipContains( ArkInventory.Global.Tooltip.Scan, ArkInventory.Localise["BATTLEPET"], false, true, false, ArkInventory.Const.Tooltip.Search.Short ) then
 				if ArkInventory.IsBound( i.sb ) then
@@ -1298,7 +1298,7 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 	end
 	
 	-- heirlooms
-	if info.q == ArkInventory.Const.ENUM.ITEMQUALITY.HEIRLOOM then
+	if info.q == ArkInventory.Const.ENUM.ITEM.QUALITY.HEIRLOOM then
 		return ArkInventory.CategoryGetSystemID( "SYSTEM_HEIRLOOM" )
 	end
 	
@@ -1306,15 +1306,15 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 		return ArkInventory.CategoryGetSystemID( "SYSTEM_BOUND" )
 	end
 	
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.TRADEGOODS.PARENT then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.PARENT then
 		return ArkInventory.CategoryGetSystemID( "TRADEGOODS_OTHER" )
 	end
 	
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONSUMABLE.PARENT then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.CONSUMABLE.PARENT then
 		return ArkInventory.CategoryGetSystemID( "CONSUMABLE_OTHER" )
 	end
 	
-	if info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.MISC.PARENT then
+	if info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.MISC.PARENT then
 		return ArkInventory.CategoryGetSystemID( "SYSTEM_MISC" )
 	end
 	

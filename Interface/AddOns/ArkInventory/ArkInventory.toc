@@ -3,8 +3,8 @@
 ## Title: ArkInventory
 ## Author: Arkayenro - Khaz'goroth
 ## Email: arkayenro at gmail dot com
-## Version: 31005.03
-## X-ReleaseType: Alpha
+## Version: 31007.01
+## X-ReleaseType: 
 ## SavedVariables: ARKINVDB
 
 ## Notes: Allows you to view all items from all your characters on the same account, when-ever and where-ever you want.

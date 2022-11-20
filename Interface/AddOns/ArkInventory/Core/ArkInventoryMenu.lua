@@ -67,7 +67,7 @@ local function helper_CategoryIcon( catset )
 	
 	local icon = ""
 	
-	if catset and catset.action.t ~= ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.DISABLED and catset.action.w ~= ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.DISABLED then
+	if catset and catset.action.t ~= ArkInventory.Const.ENUM.ACTION.TYPE.DISABLED and catset.action.w ~= ArkInventory.Const.ENUM.ACTION.WHEN.DISABLED then
 		if ArkInventory.Const.Texture.Action[catset.action.t] then
 			icon = ArkInventory.Const.Texture.Action[catset.action.t][catset.action.w] or icon
 		end
@@ -1847,15 +1847,15 @@ function ArkInventory.MenuItemCategoryAssignOpen( offset, level, value, i, loc_i
 				local colour = GREEN_FONT_COLOR_CODE
 				local state = ArkInventory.Localise["UNKNOWN"]
 				
-				if catset.action.t == ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.DISABLED then
+				if catset.action.t == ArkInventory.Const.ENUM.ACTION.TYPE.DISABLED then
 					colour = GRAY_FONT_COLOR_CODE
 					state = ArkInventory.Localise["DISABLED"]
-				elseif catset.action.t == ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.VENDOR then
+				elseif catset.action.t == ArkInventory.Const.ENUM.ACTION.TYPE.VENDOR then
 					state = ArkInventory.Localise["VENDOR"]
-				elseif catset.action.t == ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.MAIL then
+				elseif catset.action.t == ArkInventory.Const.ENUM.ACTION.TYPE.MAIL then
 					state = ArkInventory.Localise["MAIL"]
-				elseif catset.action.t == ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.BANK then
-					state = ArkInventory.Localise["BANK"]
+				elseif catset.action.t == ArkInventory.Const.ENUM.ACTION.TYPE.MOVE then
+					state = ArkInventory.Localise["MOVE"]
 				end
 				
 				text = string.format( "%s: %s%s", text, colour, state )
@@ -1872,12 +1872,12 @@ function ArkInventory.MenuItemCategoryAssignOpen( offset, level, value, i, loc_i
 				local colour = GREEN_FONT_COLOR_CODE
 				local state = ArkInventory.Localise["UNKNOWN"]
 				
-				if catset.action.w == ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.DISABLED then
+				if catset.action.w == ArkInventory.Const.ENUM.ACTION.WHEN.DISABLED then
 					colour = GRAY_FONT_COLOR_CODE
 					state = ArkInventory.Localise["DISABLED"]
-				elseif catset.action.w == ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.MANUAL then
+				elseif catset.action.w == ArkInventory.Const.ENUM.ACTION.WHEN.MANUAL then
 					state = ArkInventory.Localise["MANUAL"]
-				elseif catset.action.w == ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.AUTO then
+				elseif catset.action.w == ArkInventory.Const.ENUM.ACTION.WHEN.AUTO then
 					state = ArkInventory.Localise["AUTOMATIC"]
 				end
 				
@@ -1902,7 +1902,7 @@ function ArkInventory.MenuItemCategoryAssignOpen( offset, level, value, i, loc_i
 					"text", string.format( "%s: %s", text, recipient ),
 					"tooltipTitle", text,
 					"tooltipText", desc,
-					"hidden", catset.action.t ~= ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.MAIL,
+					"hidden", catset.action.t ~= ArkInventory.Const.ENUM.ACTION.TYPE.MAIL,
 					"hasArrow", true,
 					"value", string.format( "CATEGORY_ACTION_MAIL_%s", cat_id )
 				)
@@ -1934,7 +1934,7 @@ function ArkInventory.MenuItemCategoryAssignOpen( offset, level, value, i, loc_i
 				
 				local text = ArkInventory.Localise["DISABLED"]
 				local desc = string.format( ArkInventory.Localise["CONFIG_ACTION_TYPE_DESC"], cat.fullname, text )
-				local state = ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.DISABLED
+				local state = ArkInventory.Const.ENUM.ACTION.TYPE.DISABLED
 				
 				ArkInventory.Lib.Dewdrop:AddLine(
 					"text", text,
@@ -1949,7 +1949,7 @@ function ArkInventory.MenuItemCategoryAssignOpen( offset, level, value, i, loc_i
 				
 				local text = ArkInventory.Localise["VENDOR"]
 				local desc = string.format( ArkInventory.Localise["CONFIG_ACTION_TYPE_DESC"], cat.fullname, text )
-				local state = ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.VENDOR
+				local state = ArkInventory.Const.ENUM.ACTION.TYPE.VENDOR
 				
 				ArkInventory.Lib.Dewdrop:AddLine(
 					"text", text,
@@ -1964,7 +1964,7 @@ function ArkInventory.MenuItemCategoryAssignOpen( offset, level, value, i, loc_i
 				
 				local text = ArkInventory.Localise["MAIL"]
 				local desc = string.format( ArkInventory.Localise["CONFIG_ACTION_TYPE_DESC"], cat.fullname, text )
-				local state = ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.MAIL
+				local state = ArkInventory.Const.ENUM.ACTION.TYPE.MAIL
 				
 				ArkInventory.Lib.Dewdrop:AddLine(
 					"text", text,
@@ -1977,9 +1977,9 @@ function ArkInventory.MenuItemCategoryAssignOpen( offset, level, value, i, loc_i
 					end
 				)
 				
-				local text = ArkInventory.Localise["BANK"]
+				local text = ArkInventory.Localise["MOVE"]
 				local desc = string.format( ArkInventory.Localise["CONFIG_ACTION_TYPE_DESC"], cat.fullname, text )
-				local state = ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.BANK
+				local state = ArkInventory.Const.ENUM.ACTION.TYPE.MOVE
 				
 				ArkInventory.Lib.Dewdrop:AddLine(
 					"text", text,
@@ -2016,7 +2016,7 @@ function ArkInventory.MenuItemCategoryAssignOpen( offset, level, value, i, loc_i
 				
 				local text = ArkInventory.Localise["DISABLED"]
 				local desc = string.format( ArkInventory.Localise["CONFIG_ACTION_WHEN_DESC"], cat.fullname, text )
-				local state = ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.DISABLED
+				local state = ArkInventory.Const.ENUM.ACTION.WHEN.DISABLED
 				
 				ArkInventory.Lib.Dewdrop:AddLine(
 					"text", text,
@@ -2031,7 +2031,7 @@ function ArkInventory.MenuItemCategoryAssignOpen( offset, level, value, i, loc_i
 				
 				local text = ArkInventory.Localise["MANUAL"]
 				local desc = string.format( ArkInventory.Localise["CONFIG_ACTION_WHEN_DESC"], cat.fullname, text )
-				local state = ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.MANUAL
+				local state = ArkInventory.Const.ENUM.ACTION.WHEN.MANUAL
 				
 				ArkInventory.Lib.Dewdrop:AddLine(
 					"text", text,
@@ -2046,7 +2046,7 @@ function ArkInventory.MenuItemCategoryAssignOpen( offset, level, value, i, loc_i
 				
 				local text = ArkInventory.Localise["AUTOMATIC"]
 				local desc = string.format( ArkInventory.Localise["CONFIG_ACTION_WHEN_DESC"], cat.fullname, text )
-				local state = ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.AUTO
+				local state = ArkInventory.Const.ENUM.ACTION.WHEN.AUTO
 				
 				ArkInventory.Lib.Dewdrop:AddLine(
 					"text", text,
@@ -2133,7 +2133,7 @@ function ArkInventory.MenuItemCategoryAssignOpen( offset, level, value, i, loc_i
 					"text", string.format( "%s: %s", text, recipient ),
 					"tooltipTitle", text,
 					"tooltipText", desc,
-					"hidden", catset.action.t ~= ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.MAIL,
+					"hidden", catset.action.t ~= ArkInventory.Const.ENUM.ACTION.TYPE.MAIL,
 					"hasArrow", true,
 					"hasEditBox", true,
 					"editBoxText", catset.action.recipient or "",
@@ -2175,7 +2175,7 @@ function ArkInventory.MenuBagOpen( frame )
 	local info = ArkInventory.GetObjectInfo( i.h, i )
 	
 	local isEmpty = false
-	if not ( blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.BACKPACK or blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.BANK ) then
+	if not ( blizzard_id == ArkInventory.Const.ENUM.BAG.INDEX.BACKPACK or blizzard_id == ArkInventory.Const.ENUM.BAG.INDEX.BANK ) then
 		if not i or i.h == nil then
 			isEmpty = true
 		end

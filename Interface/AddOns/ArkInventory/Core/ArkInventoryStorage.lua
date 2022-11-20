@@ -336,7 +336,7 @@ function ArkInventory:EVENT_ARKINV_COMBAT_ENTER( ... )
 	
 	ArkInventory.Global.Mode.Combat = true
 	
-	if ArkInventory.db.option.auto.close.combat == ArkInventory.Const.ENUM.BAGAUTOACTION.YES then
+	if ArkInventory.db.option.auto.close.combat == ArkInventory.Const.ENUM.BAG.OPENCLOSE.YES then
 		ArkInventory.Frame_Main_Hide( )
 	end
 	
@@ -527,9 +527,9 @@ function ArkInventory:EVENT_ARKINV_ITEM_LOCK_CHANGED( ... )
 		
 	else
 		
-		if blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.BANK then
+		if blizzard_id == ArkInventory.Const.ENUM.BAG.INDEX.BANK then
 			
-			local count = ArkInventory.CrossClient.GetContainerNumSlots( ArkInventory.Const.ENUM.BAGINDEX.BANK )
+			local count = ArkInventory.CrossClient.GetContainerNumSlots( ArkInventory.Const.ENUM.BAG.INDEX.BANK )
 			
 			if slot_id <= count then
 				
@@ -673,8 +673,8 @@ function ArkInventory:EVENT_ARKINV_BANK_LEAVE_BUCKET( ... )
 	
 	if not ArkInventory:IsEnabled( ) then return end
 	
-	if ArkInventory.db.option.auto.close.bank > ArkInventory.Const.ENUM.BAGAUTOACTION.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-		if ArkInventory.db.option.auto.close.bank == ArkInventory.Const.ENUM.BAGAUTOACTION.ALWAYS or ArkInventory.Global.BagsOpenedBy == "BankFrame" then
+	if ArkInventory.db.option.auto.close.bank > ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
+		if ArkInventory.db.option.auto.close.bank == ArkInventory.Const.ENUM.BAG.OPENCLOSE.ALWAYS or ArkInventory.Global.BagsOpenedBy == "BankFrame" then
 			ArkInventory.Frame_Main_Hide( ArkInventory.Const.Location.Bag )
 		end
 	end
@@ -696,6 +696,7 @@ end
 
 function ArkInventory:EVENT_ARKINV_BANK_LEAVE( ... )
 	local event = ...
+	--ArkInventory.Output( "EVENT: BANK_LEAVE ", event )
 	ArkInventory:SendMessage( "EVENT_ARKINV_BANK_LEAVE_BUCKET", event )
 end
 
@@ -704,10 +705,10 @@ function ArkInventory:EVENT_ARKINV_BANK_UPDATE( ... )
 	local event, arg1 = ...
 	ArkInventory.OutputDebug( "EVENT: ", event, ", ", arg1 )
 	
-	local count = ArkInventory.CrossClient.GetContainerNumSlots( ArkInventory.Const.ENUM.BAGINDEX.BANK )
+	local count = ArkInventory.CrossClient.GetContainerNumSlots( ArkInventory.Const.ENUM.BAG.INDEX.BANK )
 	if arg1 <= count then
 		-- bank item was changed
-		ArkInventory:SendMessage( "EVENT_ARKINV_BAG_UPDATE_BUCKET", ArkInventory.Const.ENUM.BAGINDEX.BANK )
+		ArkInventory:SendMessage( "EVENT_ARKINV_BAG_UPDATE_BUCKET", ArkInventory.Const.ENUM.BAG.INDEX.BANK )
 	else
 		-- bank bag was changed
 		-- warning classic has 24 slots but still indexes the bags from 28, use GetFirstBagBankSlotIndex to find out where to offset from
@@ -744,7 +745,7 @@ function ArkInventory:EVENT_ARKINV_BANK_TAB( ... )
 end
 
 function ArkInventory:EVENT_ARKINV_REAGENTBANK_UPDATE( ... )
-	ArkInventory:SendMessage( "EVENT_ARKINV_BAG_UPDATE_BUCKET", ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK )
+	ArkInventory:SendMessage( "EVENT_ARKINV_BAG_UPDATE_BUCKET", ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK )
 end
 
 function ArkInventory.VaultTabClick( tab_id, mode )
@@ -826,8 +827,8 @@ function ArkInventory:EVENT_ARKINV_VAULT_LEAVE_BUCKET( ... )
 	
 	if not ArkInventory:IsEnabled( ) then return end
 	
-	if ArkInventory.db.option.auto.close.vault > ArkInventory.Const.ENUM.BAGAUTOACTION.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-		if ArkInventory.db.option.auto.close.vault == ArkInventory.Const.ENUM.BAGAUTOACTION.ALWAYS or ArkInventory.Global.BagsOpenedBy == "GuildBankFrame" then
+	if ArkInventory.db.option.auto.close.vault > ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
+		if ArkInventory.db.option.auto.close.vault == ArkInventory.Const.ENUM.BAG.OPENCLOSE.ALWAYS or ArkInventory.Global.BagsOpenedBy == "GuildBankFrame" then
 			ArkInventory.Frame_Main_Hide( ArkInventory.Const.Location.Bag )
 		end
 	end
@@ -1015,8 +1016,8 @@ function ArkInventory:EVENT_ARKINV_VOID_LEAVE( ... )
 	
 	if not ArkInventory:IsEnabled( ) then return end
 	
-	if ArkInventory.db.option.auto.close.void > ArkInventory.Const.ENUM.BAGAUTOACTION.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-		if ArkInventory.db.option.auto.close.void == ArkInventory.Const.ENUM.BAGAUTOACTION.ALWAYS or ArkInventory.Global.BagsOpenedBy == "VoidStorageFrame" then
+	if ArkInventory.db.option.auto.close.void > ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
+		if ArkInventory.db.option.auto.close.void == ArkInventory.Const.ENUM.BAG.OPENCLOSE.ALWAYS or ArkInventory.Global.BagsOpenedBy == "VoidStorageFrame" then
 			ArkInventory.Frame_Main_Hide( ArkInventory.Const.Location.Bag )
 		end
 	end
@@ -1130,8 +1131,8 @@ function ArkInventory:EVENT_ARKINV_MAIL_LEAVE_BUCKET( ... )
 	
 	if not ArkInventory:IsEnabled( ) then return end
 	
-	if ArkInventory.db.option.auto.close.mail > ArkInventory.Const.ENUM.BAGAUTOACTION.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-		if ArkInventory.db.option.auto.close.mail == ArkInventory.Const.ENUM.BAGAUTOACTION.ALWAYS or ArkInventory.Global.BagsOpenedBy == "MailFrame" then
+	if ArkInventory.db.option.auto.close.mail > ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
+		if ArkInventory.db.option.auto.close.mail == ArkInventory.Const.ENUM.BAG.OPENCLOSE.ALWAYS or ArkInventory.Global.BagsOpenedBy == "MailFrame" then
 			ArkInventory.Frame_Main_Hide( ArkInventory.Const.Location.Bag )
 		end
 	end
@@ -1309,8 +1310,8 @@ function ArkInventory:EVENT_ARKINV_TRADE_LEAVE( ... )
 	
 	if not ArkInventory:IsEnabled( ) then return end
 	
-	if ArkInventory.db.option.auto.close.trade > ArkInventory.Const.ENUM.BAGAUTOACTION.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-		if ArkInventory.db.option.auto.close.trade == ArkInventory.Const.ENUM.BAGAUTOACTION.ALWAYS or ArkInventory.Global.BagsOpenedBy == "TradeFrame" then
+	if ArkInventory.db.option.auto.close.trade > ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
+		if ArkInventory.db.option.auto.close.trade == ArkInventory.Const.ENUM.BAG.OPENCLOSE.ALWAYS or ArkInventory.Global.BagsOpenedBy == "TradeFrame" then
 			ArkInventory.Frame_Main_Hide( ArkInventory.Const.Location.Bag )
 		end
 	end
@@ -1355,8 +1356,8 @@ function ArkInventory:EVENT_ARKINV_AUCTION_LEAVE_BUCKET( ... )
 	
 	if not ArkInventory:IsEnabled( ) then return end
 	
-	if ArkInventory.db.option.auto.close.auction > ArkInventory.Const.ENUM.BAGAUTOACTION.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-		if ArkInventory.db.option.auto.close.auction == ArkInventory.Const.ENUM.BAGAUTOACTION.ALWAYS or ArkInventory.Global.BagsOpenedBy == "AuctionHouseFrame" then
+	if ArkInventory.db.option.auto.close.auction > ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
+		if ArkInventory.db.option.auto.close.auction == ArkInventory.Const.ENUM.BAG.OPENCLOSE.ALWAYS or ArkInventory.Global.BagsOpenedBy == "AuctionHouseFrame" then
 			ArkInventory.Frame_Main_Hide( ArkInventory.Const.Location.Bag )
 		end
 	end
@@ -1425,8 +1426,8 @@ function ArkInventory:EVENT_ARKINV_MERCHANT_LEAVE_BUCKET( ... )
 	
 	if not ArkInventory:IsEnabled( ) then return end
 	
-	if ArkInventory.db.option.auto.close.merchant > ArkInventory.Const.ENUM.BAGAUTOACTION.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-		if ArkInventory.db.option.auto.close.merchant == ArkInventory.Const.ENUM.BAGAUTOACTION.ALWAYS or ArkInventory.Global.BagsOpenedBy == "MerchantFrame" then
+	if ArkInventory.db.option.auto.close.merchant > ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
+		if ArkInventory.db.option.auto.close.merchant == ArkInventory.Const.ENUM.BAG.OPENCLOSE.ALWAYS or ArkInventory.Global.BagsOpenedBy == "MerchantFrame" then
 			ArkInventory.Frame_Main_Hide( ArkInventory.Const.Location.Bag )
 		end
 	end
@@ -1456,8 +1457,8 @@ function ArkInventory:EVENT_ARKINV_SCRAP_LEAVE( ... )
 	
 	if not ArkInventory:IsEnabled( ) then return end
 	
-	if ArkInventory.db.option.auto.close.scrap > ArkInventory.Const.ENUM.BAGAUTOACTION.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-		if ArkInventory.db.option.auto.close.scrap == ArkInventory.Const.ENUM.BAGAUTOACTION.ALWAYS or ArkInventory.Global.BagsOpenedBy == "ScrappingMachineFrame" then
+	if ArkInventory.db.option.auto.close.scrap > ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
+		if ArkInventory.db.option.auto.close.scrap == ArkInventory.Const.ENUM.BAG.OPENCLOSE.ALWAYS or ArkInventory.Global.BagsOpenedBy == "ScrappingMachineFrame" then
 			ArkInventory.Frame_Main_Hide( ArkInventory.Const.Location.Bag )
 		end
 	end
@@ -1482,8 +1483,8 @@ function ArkInventory:EVENT_ARKINV_OBLITERUM_LEAVE( ... )
 	
 	if not ArkInventory:IsEnabled( ) then return end
 	
-	if ArkInventory.db.option.auto.close.obliterum > ArkInventory.Const.ENUM.BAGAUTOACTION.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-		if ArkInventory.db.option.auto.close.obliterum == ArkInventory.Const.ENUM.BAGAUTOACTION.ALWAYS or ArkInventory.Global.BagsOpenedBy == "ObliterumForgeFrame" then
+	if ArkInventory.db.option.auto.close.obliterum > ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
+		if ArkInventory.db.option.auto.close.obliterum == ArkInventory.Const.ENUM.BAG.OPENCLOSE.ALWAYS or ArkInventory.Global.BagsOpenedBy == "ObliterumForgeFrame" then
 			ArkInventory.Frame_Main_Hide( ArkInventory.Const.Location.Bag )
 		end
 	end
@@ -1508,8 +1509,8 @@ function ArkInventory:EVENT_ARKINV_TRANSMOG_LEAVE_BUCKET( ... )
 	
 	if not ArkInventory:IsEnabled( ) then return end
 	
-	if ArkInventory.db.option.auto.close.transmog > ArkInventory.Const.ENUM.BAGAUTOACTION.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-		if ArkInventory.db.option.auto.close.transmog == ArkInventory.Const.ENUM.BAGAUTOACTION.ALWAYS or ArkInventory.Global.BagsOpenedBy == "WardrobeFrame" then
+	if ArkInventory.db.option.auto.close.transmog > ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
+		if ArkInventory.db.option.auto.close.transmog == ArkInventory.Const.ENUM.BAG.OPENCLOSE.ALWAYS or ArkInventory.Global.BagsOpenedBy == "WardrobeFrame" then
 			ArkInventory.Frame_Main_Hide( ArkInventory.Const.Location.Bag )
 		end
 	end
@@ -1597,15 +1598,15 @@ function ArkInventory:EVENT_ARKINV_ZONE_CHANGED( ... )
 end
 
 function ArkInventory:EVENT_ARKINV_PLAYER_INTERACTION_SHOW( ... )
-	local event, arg1 = ...
-	ArkInventory.OutputDebug( "EVENT: ", event, ", ", arg1 )
-	ArkInventory:HookPlayerInteractionShow( arg1 )
+	local event, index = ...
+	ArkInventory.OutputDebug( "EVENT: ", event, ", ", index )
+	ArkInventory.HookPlayerInteractionProcess( index, ArkInventory.Const.BLIZZARD.GLOBAL.FRAME.SHOW, event )
 end
 
 function ArkInventory:EVENT_ARKINV_PLAYER_INTERACTION_HIDE( ... )
-	local event, arg1 = ...
-	ArkInventory.OutputDebug( "EVENT: ", event, ", ", arg1 )
-	ArkInventory.HookPlayerInteractionHide( arg1 )
+	local event, index = ...
+	ArkInventory.OutputDebug( "EVENT: ", event, ", ", index )
+	ArkInventory.HookPlayerInteractionProcess( index, ArkInventory.Const.BLIZZARD.GLOBAL.FRAME.HIDE, event )
 end
 
 function ArkInventory.HookCovenantSanctumDepositAnima( )
@@ -1695,13 +1696,13 @@ function ArkInventory.BagType( blizzard_id )
 	
 	assert( blizzard_id ~= nil, "code failure: blizzard_id is nil" )
 	
-	if blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.BACKPACK then
+	if blizzard_id == ArkInventory.Const.ENUM.BAG.INDEX.BACKPACK then
 		return ArkInventory.Const.Slot.Type.Bag
-	elseif blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.KEYRING then
+	elseif blizzard_id == ArkInventory.Const.ENUM.BAG.INDEX.KEYRING then
 		return ArkInventory.Const.Slot.Type.Keyring
-	elseif blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.BANK then
+	elseif blizzard_id == ArkInventory.Const.ENUM.BAG.INDEX.BANK then
 		return ArkInventory.Const.Slot.Type.Bag
-	elseif blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK then
+	elseif blizzard_id == ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK then
 		return ArkInventory.Const.Slot.Type.Reagent
 	end
 	
@@ -1753,35 +1754,35 @@ function ArkInventory.BagType( blizzard_id )
 			
 			--ArkInventory.OutputDebug( "b=[", blizzard_id, "], t=[", t, "], s=[", s, "], h=", h )
 			
-			if t == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.PARENT then
+			if t == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.PARENT then
 				
-				if s == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.BAG then
+				if s == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.BAG then
 					return ArkInventory.Const.Slot.Type.Bag
-				elseif s == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.COOKING then
+				elseif s == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.COOKING then
 					return ArkInventory.Const.Slot.Type.Cooking
-				elseif s == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.ENCHANTING then
+				elseif s == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.ENCHANTING then
 					return ArkInventory.Const.Slot.Type.Enchanting
-				elseif s == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.ENGINEERING then
+				elseif s == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.ENGINEERING then
 					return ArkInventory.Const.Slot.Type.Engineering
-				elseif s == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.JEWELCRAFTING then
+				elseif s == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.JEWELCRAFTING then
 					return ArkInventory.Const.Slot.Type.Jewelcrafting
-				elseif s == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.HERBALISM then
+				elseif s == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.HERBALISM then
 					return ArkInventory.Const.Slot.Type.Herbalism
-				elseif s == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.INSCRIPTION then
+				elseif s == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.INSCRIPTION then
 					return ArkInventory.Const.Slot.Type.Inscription
-				elseif s == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.LEATHERWORKING then
+				elseif s == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.LEATHERWORKING then
 					return ArkInventory.Const.Slot.Type.Leatherworking
-				elseif s == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.MINING then
+				elseif s == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.MINING then
 					return ArkInventory.Const.Slot.Type.Mining
-				elseif s == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.FISHING then
+				elseif s == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.FISHING then
 					return ArkInventory.Const.Slot.Type.Fishing
-				elseif s == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.SOULSHARD then
+				elseif s == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.SOULSHARD then
 					return ArkInventory.Const.Slot.Type.Soulshard
-				elseif s == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.REAGENT then
+				elseif s == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.REAGENT then
 					return ArkInventory.Const.Slot.Type.Reagent
 				end
 				
-			elseif t == ArkInventory.Const.ENUM.ITEMCLASS.QUIVER.PARENT then
+			elseif t == ArkInventory.Const.ENUM.ITEM.TYPE.QUIVER.PARENT then
 				
 				return ArkInventory.Const.Slot.Type.Projectile
 				
@@ -2036,7 +2037,7 @@ function ArkInventory.GetItemTinted( i, codex )
 			
 			ArkInventory.TooltipSetHyperlink( ArkInventory.Global.Tooltip.Scan, i.h )
 			
-			local ignore_known = ( ( i.q or 0 ) == ArkInventory.Const.ENUM.ITEMQUALITY.HEIRLOOM )
+			local ignore_known = ( ( i.q or 0 ) == ArkInventory.Const.ENUM.ITEM.QUALITY.HEIRLOOM )
 			
 			if not ArkInventory.TooltipCanUse( ArkInventory.Global.Tooltip.Scan, nil, ignore_known ) then
 				return true
@@ -2099,7 +2100,7 @@ function ArkInventory.ScanBag_Threaded( blizzard_id, loc_id, bag_id, thread_id, 
 	local texture = nil
 	local status = ArkInventory.Const.Bag.Status.Unknown
 	local h = nil
-	local quality = ArkInventory.Const.ENUM.ITEMQUALITY.POOR
+	local quality = ArkInventory.Const.ENUM.ITEM.QUALITY.POOR
 	
 	if loc_id == ArkInventory.Const.Location.Bag then
 		
@@ -2657,7 +2658,7 @@ function ArkInventory.ScanVault_Threaded( loc_id, bag_id, thread_id, rescan )
 		local texture, count = GetGuildBankItemInfo( bag_id, slot_id )
 		local h = nil
 		local sb = ArkInventory.Const.Bind.Never
-		local quality = ArkInventory.Const.ENUM.ITEMQUALITY.POOR
+		local quality = ArkInventory.Const.ENUM.ITEM.QUALITY.POOR
 		
 		if texture then
 			
@@ -3110,7 +3111,7 @@ function ArkInventory.ScanMailbox_Threaded( blizzard_id, loc_id, bag_id, thread_
 					
 					local h = GetInboxItemLink( index, x )
 					local info = ArkInventory.GetObjectInfo( h )
-					local quality = ArkInventory.Const.ENUM.ITEMQUALITY.POOR
+					local quality = ArkInventory.Const.ENUM.ITEM.QUALITY.POOR
 					local sb = ArkInventory.Const.Bind.Never
 					
 					i.msg_id = index
@@ -3878,7 +3879,7 @@ function ArkInventory.ScanCollectionHeirloom_Threaded( blizzard_id, loc_id, bag_
 			i.h = h
 			i.count = count
 			i.sb = sb
-			i.q = ArkInventory.Const.ENUM.ITEMQUALITY.HEIRLOOM
+			i.q = ArkInventory.Const.ENUM.ITEM.QUALITY.HEIRLOOM
 			i.item = object.item
 			
 			if changed_item then
@@ -4857,14 +4858,14 @@ function ArkInventory.GetItemQualityColor( q )
 	
 	local q = q
 	if type( q ) ~= "number" then
-		q = ArkInventory.Const.ENUM.ITEMQUALITY.UNKNOWN
+		q = ArkInventory.Const.ENUM.ITEM.QUALITY.UNKNOWN
 	end
 	
 	local r, g, b = 0, 0, 0
-	if q == ArkInventory.Const.ENUM.ITEMQUALITY.MISSING then
+	if q == ArkInventory.Const.ENUM.ITEM.QUALITY.MISSING then
 		r = 1
-	elseif q == ArkInventory.Const.ENUM.ITEMQUALITY.UNKNOWN then
-		r, g, b = GetItemQualityColor( ArkInventory.Const.ENUM.ITEMQUALITY.STANDARD )
+	elseif q == ArkInventory.Const.ENUM.ITEM.QUALITY.UNKNOWN then
+		r, g, b = GetItemQualityColor( ArkInventory.Const.ENUM.ITEM.QUALITY.STANDARD )
 	else
 		r, g, b = GetItemQualityColor( q )
 	end

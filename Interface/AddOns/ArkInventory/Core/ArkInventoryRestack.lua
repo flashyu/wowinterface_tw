@@ -54,7 +54,7 @@ local function RestackBagCheck( blizzard_id )
 	local numSlots = ArkInventory.CrossClient.GetContainerNumSlots( blizzard_id )
 	local freeSlots, bagType = ArkInventory.CrossClient.GetContainerNumFreeSlots( blizzard_id )
 	
-	if blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK and not ArkInventory.CrossClient.IsReagentBankUnlocked( ) then
+	if blizzard_id == ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK and not ArkInventory.CrossClient.IsReagentBankUnlocked( ) then
 		-- reagent bank always returns its number of slots even if you havent unlocked it
 		numSlots = 0
 		freeSlots = 0
@@ -315,7 +315,7 @@ local function FindPartialStack( loc_id, cl, cb, bp, cs, id )
 		end
 		
 		
-		if cb == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK then
+		if cb == ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK then
 			
 			-- we were restacking the reagent bank and found nothing there
 			-- need to check the bank for stacks we can take from
@@ -442,7 +442,7 @@ local function FindProfessionItem( loc_id, cl, cb, bp, cs, ct )
 			
 			if ArkInventory.db.option.restack.priority then
 				-- priority is reagent bank
-				--if blizzard_id ~= ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK and ( bt == 0 or bt == ct ) then
+				--if blizzard_id ~= ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK and ( bt == 0 or bt == ct ) then
 				if ( not ArkInventory.Global.BlizzardReagentContainerIDs[blizzard_id] ) and ( bt == 0 or bt == ct ) then
 					-- do not steal from a reagent container
 					-- do not steal from a profession bag unless its for a reagent container
@@ -583,7 +583,7 @@ local function FindCraftingItem( loc_id, cl, cb, bp, cs )
 			
 			if ArkInventory.db.option.restack.priority then
 				-- priority is reagent bank
-				--if blizzard_id ~= ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK and ( bt == 0 or cb == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK ) then
+				--if blizzard_id ~= ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK and ( bt == 0 or cb == ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK ) then
 				if ( not ArkInventory.Global.BlizzardReagentContainerIDs[blizzard_id] ) and ( bt == 0 or ArkInventory.Global.BlizzardReagentContainerIDs[cb] ) then
 					-- do not steal from a reagent container
 					-- do not steal from a profession bag unless its for a reagent container
@@ -984,7 +984,7 @@ local function Consolidate( loc_id )
 				return cl, recheck, false
 			end
 			
-			--if count > 0 and ( blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK or bt ~= 0 ) then
+			--if count > 0 and ( blizzard_id == ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK or bt ~= 0 ) then
 			if count > 0 and ( ArkInventory.Global.BlizzardReagentContainerIDs[blizzard_id] or bt ~= 0 ) then
 				
 				--ArkInventory.Output( "Consolidate ", loc_id, ".", blizzard_id, " ", bt )
@@ -1012,7 +1012,7 @@ local function Consolidate( loc_id )
 			-- fill up reagent bank with crafting items
 			
 			local bag_pos = ArkInventory.Global.Location[loc_id].ReagentBag
-			local blizzard_id = ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK
+			local blizzard_id = ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK
 			
 			if not me.player.data.option[loc_id].bag[bag_pos].restack.ignore then
 				
@@ -1051,7 +1051,7 @@ local function Consolidate( loc_id )
 						return cl, recheck, false
 					end
 					
-					--if bt == 0 and blizzard_id ~= ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK then
+					--if bt == 0 and blizzard_id ~= ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK then
 					if bt == 0 and not ArkInventory.Global.BlizzardReagentContainerIDs[blizzard_id] then
 						
 						local ab, rc = ConsolidateBag( loc_id, blizzard_id, bag_pos )
@@ -1186,7 +1186,7 @@ local function Compact( loc_id )
 				return cl, recheck, false
 			end
 			
-			--if count > 0 and bt == 0 and blizzard_id ~= ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK then
+			--if count > 0 and bt == 0 and blizzard_id ~= ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK then
 			if count > 0 and bt == 0 and not ArkInventory.Global.BlizzardReagentContainerIDs[blizzard_id] then
 				
 				--ArkInventory.Output( "Compact ", loc_id, ".", blizzard_id, " ", bt )

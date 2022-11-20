@@ -355,14 +355,14 @@ function ArkInventory.ScanTooltipSet( tooltip, loc_id, bag_id, slot_id, h, i )
 			elseif loc_id == ArkInventory.Const.Location.Bank and ArkInventory.Global.Mode.Bank then
 				
 				local blizzard_id = ArkInventory.InternalIdToBlizzardBagId( loc_id, bag_id )
-				if blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.BANK then
+				if blizzard_id == ArkInventory.Const.ENUM.BAG.INDEX.BANK then
 					
 					local inv_id = BankButtonIDToInvSlotID( slot_id )
 					if inv_id then
 						return ArkInventory.TooltipSetInventoryItem( tooltip, inv_id, h )
 					end
 					
-				elseif blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK then
+				elseif blizzard_id == ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK then
 					
 					local inv_id = ReagentBankButtonIDToInvSlotID( slot_id )
 					if inv_id then
@@ -435,14 +435,14 @@ function ArkInventory.TooltipDataGet( loc_id, bag_id, slot_id, h, i )
 		elseif loc_id == ArkInventory.Const.Location.Bank and ArkInventory.Global.Mode.Bank then
 			
 			local blizzard_id = ArkInventory.InternalIdToBlizzardBagId( loc_id, bag_id )
-			if blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.BANK then
+			if blizzard_id == ArkInventory.Const.ENUM.BAG.INDEX.BANK then
 				
 				local inv_id = BankButtonIDToInvSlotID( slot_id )
 				if inv_id then
 					tooltipData = C_TooltipInfo.GetInventoryItem( "player", inv_id, true )
 				end
 				
-			elseif blizzard_id == ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK then
+			elseif blizzard_id == ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK then
 				
 				local inv_id = ReagentBankButtonIDToInvSlotID( slot_id )
 				if inv_id then

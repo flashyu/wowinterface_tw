@@ -1,10 +1,13 @@
 # Simple Item Level
 
-## [v21](https://github.com/kemayo/wow-simpleitemlevel/tree/v21) (2022-11-18)
-[Full Changelog](https://github.com/kemayo/wow-simpleitemlevel/compare/v20...v21) [Previous Releases](https://github.com/kemayo/wow-simpleitemlevel/releases)
+## [v22](https://github.com/kemayo/wow-simpleitemlevel/tree/v22) (2022-11-19)
+[Full Changelog](https://github.com/kemayo/wow-simpleitemlevel/compare/v21...v22) [Previous Releases](https://github.com/kemayo/wow-simpleitemlevel/releases)
 
-- Better fallback when inspecting someone whose data hasn't loaded yet  
-    This was only an issue on classic, for some reason.  
-    Fixes #9  
-- Use `InspectFrame.unit` rather than `"target"`  
-- Show on equipment flyout  
+- Expand number of positions  
+    Refs #11  
+- Tweak appearance settings for classic  
+- Make appearance customizable in the interface options  
+    Refs #11  
+- Make the check for the 10.0.0 Settings framework more strict  
+    There's some addon in Classic that's causing errors by setting its own  
+    global Settings, apparently.  

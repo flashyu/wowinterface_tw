@@ -41,37 +41,6 @@ TomTomWaypointsM = {
 	},
 	["profiles"] = {
 		["骑风 - 祈福"] = {
-			[115] = {
-				["115:770415647.92176:498044009.77995:罗尼·威尔斯"] = {
-					115, -- [1]
-					0.7704156479217604, -- [2]
-					0.4980440097799511, -- [3]
-					["arrivaldistance"] = 15,
-					["crazy"] = true,
-					["persistent"] = true,
-					["minimap"] = true,
-					["cleardistance"] = 10,
-					["title"] = "罗尼·威尔斯",
-					["from"] = "Questie",
-					["callbacks"] = {
-						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-					},
-					["world"] = true,
-				},
-			},
 		},
 		["Helloworlds - 沙尔图拉"] = {
 		},

@@ -34,10 +34,10 @@ local objectCorrections = {
 			[ArkInventory.Const.BLIZZARD.FUNCTION.GETITEMINFO.EXPANSION] = ArkInventory.Const.ENUM.EXPANSION.SHADOWLANDS,
 		},
 		[187082] = {
-			[ArkInventory.Const.BLIZZARD.FUNCTION.GETITEMINFO.SUBTYPE] = ArkInventory.Const.ENUM.ITEMCLASS.ARMOR.COSMETIC,
+			[ArkInventory.Const.BLIZZARD.FUNCTION.GETITEMINFO.SUBTYPE] = ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.COSMETIC,
 		},
 		[187083] = {
-			[ArkInventory.Const.BLIZZARD.FUNCTION.GETITEMINFO.SUBTYPE] = ArkInventory.Const.ENUM.ITEMCLASS.ARMOR.COSMETIC,
+			[ArkInventory.Const.BLIZZARD.FUNCTION.GETITEMINFO.SUBTYPE] = ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.COSMETIC,
 		},
 		
 	},
@@ -212,7 +212,7 @@ local function UpdateObjectInfo( info, thread_id )
 					ignore, ignore, stock = ArkInventory.TooltipFind( ArkInventory.Global.Tooltip.Scan, "(%d+)", false, true, true, 0, ArkInventory.Const.Tooltip.Search.Short )
 					stock = ArkInventory.TooltipTextToNumber( stock )
 					
-				elseif info.itemsubtypeid == ArkInventory.Const.ENUM.ITEMCLASS.GEM.ARTIFACTRELIC then
+				elseif info.itemsubtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.GEM.ARTIFACTRELIC then
 					
 					ignore, ignore, ilvl = ArkInventory.TooltipFind( ArkInventory.Global.Tooltip.Scan, ArkInventory.Localise["WOW_TOOLTIP_RELIC_LEVEL"], false, true, true, 0, ArkInventory.Const.Tooltip.Search.Short )
 					ilvl = ArkInventory.TooltipTextToNumber( ilvl )
@@ -295,7 +295,7 @@ local function UpdateObjectInfo( info, thread_id )
 			info.ready = false
 		end
 		info.texture = tmp[ArkInventory.Const.BLIZZARD.FUNCTION.GETSPELLINFO.TEXTURE] or ArkInventory.Const.Texture.Missing
-		info.q = ArkInventory.Const.ENUM.ITEMQUALITY.STANDARD
+		info.q = ArkInventory.Const.ENUM.ITEM.QUALITY.STANDARD
 		
 	elseif info.class == "battlepet" then
 		
@@ -314,7 +314,7 @@ local function UpdateObjectInfo( info, thread_id )
 		end
 		
 		info.ilvl = info.osd.level or 1
-		info.itemtypeid = ArkInventory.Const.ENUM.ITEMCLASS.BATTLEPET.PARENT
+		info.itemtypeid = ArkInventory.Const.ENUM.ITEM.TYPE.BATTLEPET.PARENT
 		
 	elseif info.class == "currency" then
 		
@@ -345,7 +345,7 @@ local function UpdateObjectInfo( info, thread_id )
 		info.ready = true
 		
 		info.texture = ""
-		info.itemtypeid = ArkInventory.Const.ENUM.ITEMCLASS.EMPTY.PARENT
+		info.itemtypeid = ArkInventory.Const.ENUM.ITEM.TYPE.EMPTY.PARENT
 		info.itemsubtypeid = info.osd.slottype
 		
 	end
@@ -810,7 +810,7 @@ function ArkInventory.GetObjectInfo( h, i )
 	info.h = info.osd.h
 	
 	info.name = ArkInventory.Localise["DATA_NOT_READY"]
-	info.q = ArkInventory.Const.ENUM.ITEMQUALITY.UNKNOWN
+	info.q = ArkInventory.Const.ENUM.ITEM.QUALITY.UNKNOWN
 	info.rank = nil
 	info.ilvl_base = -2
 	info.ilvl = -2
@@ -873,7 +873,7 @@ end
 
 function ArkInventory.ObjectInfoQuality( h )
 	local info = ArkInventory.GetObjectInfo( h )
-	return info.q or ArkInventory.Const.ENUM.ITEMQUALITY.UNKNOWN
+	return info.q or ArkInventory.Const.ENUM.ITEM.QUALITY.UNKNOWN
 end
 
 function ArkInventory.ObjectInfoVendorPrice( h )

@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0709,
+	["LastVersion"] = 2.0712,
 	["LastPlayerFullName"] = "骑风-祈福",
 	["AutoSelectScales"] = false,
 	["ItemLevels"] = {

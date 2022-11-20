@@ -162,9 +162,9 @@ HealBot_Config_Spells = {
 		["Alt-ShiftLeft3"] = "C:A",
 		["Left1"] = "S:48451",
 		["Button41"] = "healbot大迅捷",
-		["CtrlRight2"] = "S:2893",
-		["AltLeft2"] = "S:48443",
 		["CtrlRight3"] = "S:48378",
+		["AltLeft2"] = "S:48443",
+		["CtrlRight2"] = "S:2893",
 		["Alt-ShiftLeft"] = "C:A",
 		["Middle4"] = "S:26982",
 		["CtrlLeft3"] = "S:48378",
@@ -257,7 +257,7 @@ HealBot_Config_Buffs = {
 		false, -- [3]
 	},
 	["LongBuffTimer"] = 120,
-	["HealBot_CBWarnRange_Sound"] = 3,
+	["BuffWatchInCombat"] = false,
 	["AutoBuffCastBy"] = 1,
 	["AlwaysShowTimed"] = false,
 	["CBshownHB"] = true,
@@ -390,7 +390,7 @@ HealBot_Config_Buffs = {
 		["33"] = "None",
 		["23"] = "None",
 	},
-	["BuffWatchInCombat"] = false,
+	["HealBot_CBWarnRange_Sound"] = 3,
 	["AutoBuff"] = 2,
 }
 HealBot_Config_Cures = {
@@ -428,10 +428,10 @@ HealBot_Config_Cures = {
 	["DebuffWatchWhenMounted"] = false,
 	["DebuffWatchInCombat"] = true,
 	["HealBot_Custom_Defuffs_All"] = {
-		["Curse"] = false,
 		["Disease"] = false,
-		["Magic"] = false,
 		["Poison"] = false,
+		["Magic"] = false,
+		["Curse"] = false,
 	},
 	["ShowTimeMaxDuration"] = 31,
 	["IgnoreFastDurDebuffsSecs"] = 2,
@@ -462,25 +462,25 @@ HealBot_Config_Cures = {
 	["IgnoreOnCooldownDebuffs"] = false,
 	["IgnoreFriendDebuffs"] = false,
 	["CDCBarColour"] = {
-		["Curse"] = {
-			["R"] = 0.83,
-			["G"] = 0.43,
-			["B"] = 0.09,
-		},
 		["Disease"] = {
 			["R"] = 0.55,
 			["G"] = 0.19,
 			["B"] = 0.7,
+		},
+		["Poison"] = {
+			["R"] = 0.12,
+			["G"] = 0.46,
+			["B"] = 0.24,
 		},
 		["Magic"] = {
 			["R"] = 0.26,
 			["G"] = 0.33,
 			["B"] = 0.83,
 		},
-		["Poison"] = {
-			["R"] = 0.12,
-			["G"] = 0.46,
-			["B"] = 0.24,
+		["Curse"] = {
+			["R"] = 0.83,
+			["G"] = 0.43,
+			["B"] = 0.09,
 		},
 	},
 	["HealBotDebuffPriority"] = {

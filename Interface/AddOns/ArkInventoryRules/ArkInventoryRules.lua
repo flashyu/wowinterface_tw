@@ -450,7 +450,7 @@ function ArkInventoryRules.System.boolean_equip( ... )
 	
 	
 	local e = string.trim( ArkInventoryRules.Object.info.equiploc )
-	if e == "" or ArkInventoryRules.Object.info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.PARENT then return false end
+	if e == "" or ArkInventoryRules.Object.info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.PARENT then return false end
 	
 	
 	local ge = string.trim( _G[e] or e )
@@ -804,7 +804,7 @@ function ArkInventoryRules.System.boolean_itemfamily( ... )
 			
 			error( string.format( ArkInventory.Localise["RULE_FAILED_ARGUMENT_IS_NOT"], fn, ax, ArkInventory.Localise["NUMBER"] ), 0 )
 			
-		elseif ArkInventoryRules.Object.info.itemtypeid ~= ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.PARENT then
+		elseif ArkInventoryRules.Object.info.itemtypeid ~= ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.PARENT then
 			
 			local it = GetItemFamily( ArkInventoryRules.Object.h ) or 0
 			
@@ -901,7 +901,7 @@ function ArkInventoryRules.System.boolean_outfit( ... )
 	end
 	
 	local e = string.trim( ArkInventoryRules.Object.info.equiploc )
-	if e == "" or ArkInventoryRules.Object.info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.PARENT then return false end
+	if e == "" or ArkInventoryRules.Object.info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.PARENT then return false end
 	
 	local fn = "outfit"
 	
@@ -1483,7 +1483,7 @@ function ArkInventoryRules.System.internal_unwearable( wearable, ignore_known, i
 	-- everything past here should be wearable
 	
 	-- anything that isnt armour is wearable
-	if ArkInventoryRules.Object.info.itemtypeid ~= ArkInventory.Const.ENUM.ITEMCLASS.ARMOR.PARENT then
+	if ArkInventoryRules.Object.info.itemtypeid ~= ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.PARENT then
 		if wearable then
 			--ArkInventory.Output( "wearable pass 1: ", ArkInventoryRules.Object.h )
 			return true
@@ -1777,7 +1777,7 @@ function ArkInventoryRules.System.boolean_itemstat( ... )
 	end
 	
 	local e = string.trim( ArkInventoryRules.Object.info.equiploc )
-	if e == "" or ArkInventoryRules.Object.info.itemtypeid == ArkInventory.Const.ENUM.ITEMCLASS.CONTAINER.PARENT then return false end
+	if e == "" or ArkInventoryRules.Object.info.itemtypeid == ArkInventory.Const.ENUM.ITEM.TYPE.CONTAINER.PARENT then return false end
 	
 	local fn = "itemstat"
 	

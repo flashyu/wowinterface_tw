@@ -394,7 +394,7 @@ ArkInventory.Const.Slot.Data = {
 	},
 	[ArkInventory.Const.Slot.Type.Reagent] = {
 		proj = ArkInventory.ClientCheck( ArkInventory.Const.ENUM.EXPANSION.DRAENOR ),
-		name = ArkInventory.Localise["REAGENTBANK"],
+		name = ArkInventory.Localise["CRAFTING_REAGENT"],
 		short = ArkInventory.Localise["STATUS_SHORTNAME_REAGENT"],
 		--texture = [[Interface\Paperdoll\UI-PaperDoll-Slot-Relic]],
 	},
@@ -1239,7 +1239,7 @@ ArkInventory.Const.DatabaseDefaults.global = {
 							["offset"] = nil,
 							["scale"] = 1,
 							["rarity"] = true,
-							["raritycutoff"] = ArkInventory.Const.ENUM.ITEMQUALITY.POOR,
+							["raritycutoff"] = ArkInventory.Const.ENUM.ITEM.QUALITY.POOR,
 							["alpha"] = 0.6,
 							["coloured"] = true,
 							["colour"] = {
@@ -1597,29 +1597,48 @@ ArkInventory.Const.DatabaseDefaults.global = {
 					["system"] = false,
 					["used"] = "N", -- Y(es) | N(o) | D(eleted)
 					["name"] = "",
+					
 					["ca"] = { -- category data
 						["*"] = {
 							["*"] = {
 								["active"] = false,
+								["actions"] = {
+									["*"] = {
+										["w"] = ArkInventory.Const.ENUM.ACTION.WHEN.DISABLED,
+									},
+								},
 								["action"] = {
-									["t"] = ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.DISABLED,
-									["w"] = ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.DISABLED,
+									["t"] = ArkInventory.Const.ENUM.ACTION.TYPE.DISABLED,
+									["w"] = ArkInventory.Const.ENUM.ACTION.WHEN.DISABLED,
 								},
 							},
 						},
 						[ArkInventory.Const.Category.Type.System] = {
 							["*"] = {
 								["active"] = true,
+								["actions"] = {
+									["*"] = {
+										["w"] = ArkInventory.Const.ENUM.ACTION.WHEN.DISABLED,
+									},
+								},
 								["action"] = {
-									["t"] = ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.DISABLED,
-									["w"] = ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.DISABLED,
+									["t"] = ArkInventory.Const.ENUM.ACTION.TYPE.DISABLED,
+									["w"] = ArkInventory.Const.ENUM.ACTION.WHEN.DISABLED,
 								},
 							},
 							[402] = {
 								["active"] = true,
+								["actions"] = {
+									["*"] = {
+										["w"] = ArkInventory.Const.ENUM.ACTION.WHEN.DISABLED,
+									},
+									[9998] = {
+										["w"] = ArkInventory.Const.ENUM.ACTION.WHEN.AUTO,
+									},
+								},
 								["action"] = {
-									["t"] = ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.VENDOR,
-									["w"] = ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.AUTO,
+									["t"] = ArkInventory.Const.ENUM.ACTION.TYPE.VENDOR,
+									["w"] = ArkInventory.Const.ENUM.ACTION.WHEN.AUTO,
 								},
 							},
 						},
@@ -1627,9 +1646,14 @@ ArkInventory.Const.DatabaseDefaults.global = {
 					["ia"] = { -- item data
 						["*"] = { -- item id
 							["assign"] = nil, -- cat_id to assign the item to
+							["actions"] = {
+								["*"] = {
+									["w"] = ArkInventory.Const.ENUM.ACTION.WHEN.DISABLED,
+								},
+							},
 							["action"] = {
-								["t"] = ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.DISABLED,
-								["w"] = ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.DISABLED,
+								["t"] = ArkInventory.Const.ENUM.ACTION.TYPE.DISABLED,
+								["w"] = ArkInventory.Const.ENUM.ACTION.WHEN.DISABLED,
 							},
 						},
 					},
@@ -2104,7 +2128,7 @@ ArkInventory.Const.DatabaseDefaults.global = {
 				["limit"] = true,
 				["delete"] = false,
 				["notify"] = true,
-				["raritycutoff"] = ArkInventory.Const.ENUM.ITEMQUALITY.POOR, -- max quality to sell/destroy
+				["raritycutoff"] = ArkInventory.Const.ENUM.ITEM.QUALITY.POOR, -- max quality to sell/destroy
 				["list"] = true,
 				["test"] = true,
 				["soulbound"] = {
@@ -2116,9 +2140,44 @@ ArkInventory.Const.DatabaseDefaults.global = {
 			["mail"] = {
 				["auto"] = false,
 				["notify"] = true,
-				["raritycutoff"] = ArkInventory.Const.ENUM.ITEMQUALITY.POOR, -- max quality to send
+				["raritycutoff"] = ArkInventory.Const.ENUM.ITEM.QUALITY.POOR, -- max quality to send
 				["list"] = true,
 				["test"] = true,
+			},
+		},
+		["actions"] = {
+			["min"] = 1000,
+			["next"] = 1000,
+			["max"] = 8999,
+			["data"] = {
+				["*"] = {  -- [number]
+					["guid"] = false,
+					["system"] = false,
+					["used"] = "N", -- Y(es) | N(o) | D(eleted)
+					["name"] = "",
+					["order"] = 1000,
+					["act"] = ArkInventory.Const.ENUM.ACTION.TYPE.IGNORE, -- action: ignore, vendor, mail, move
+					["src"] = false, -- source: bag, bank
+					["dst"] = false, -- destination: bag, bank
+--					["bag"] = false, -- destination bag/tab
+					["rec"] = false, -- recipient
+					["inp"] = false, -- only applies to these characters
+					["exp"] = false, -- exclude these characters
+				},
+				[9998] = {
+					["system"] = true,
+					["used"] = "Y", -- Y(es) | N(o) | D(eleted)
+					["name"] = "vendor",
+					["order"] = 1000,
+					["act"] = ArkInventory.Const.ENUM.ACTION.TYPE.VENDOR,
+				},
+				[9999] = {
+					["system"] = true,
+					["used"] = "Y", -- Y(es) | N(o) | D(eleted)
+					["name"] = "ignore",
+					["order"] = 0,
+					["act"] = ArkInventory.Const.ENUM.ACTION.TYPE.IGNORE,
+				},
 			},
 		},
 		["font"] = {
@@ -2522,15 +2581,15 @@ function ArkInventory.OnLoad( )
 	loc_id = ArkInventory.Const.Location.Bag
 	bags = ArkInventory.Global.Location[loc_id].Bags
 	
-	bags[#bags + 1] = ArkInventory.Const.ENUM.BAGINDEX.BACKPACK
+	bags[#bags + 1] = ArkInventory.Const.ENUM.BAG.INDEX.BACKPACK
 	
-	local base = ArkInventory.Const.ENUM.BAGINDEX.BACKPACK
+	local base = ArkInventory.Const.ENUM.BAG.INDEX.BACKPACK
 	for x = base + 1, base + ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS_NORMAL do
 		bags[#bags + 1] = x
 	end
 	
 	-- reagent bag
-	local base = ArkInventory.Const.ENUM.BAGINDEX.BACKPACK + ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS_NORMAL
+	local base = ArkInventory.Const.ENUM.BAG.INDEX.BACKPACK + ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS_NORMAL
 	for x = base + 1, base + ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS_REAGENT do
 		--ArkInventory.Output( "reagent bag ", x )
 		bags[#bags + 1] = x
@@ -2547,7 +2606,7 @@ function ArkInventory.OnLoad( )
 		loc_id = ArkInventory.Const.Location.Keyring
 		bags = ArkInventory.Global.Location[loc_id].Bags
 		
-		bags[#bags + 1] = ArkInventory.Const.ENUM.BAGINDEX.KEYRING
+		bags[#bags + 1] = ArkInventory.Const.ENUM.BAG.INDEX.KEYRING
 		ArkInventory.Global.Location[loc_id].bagCount = #bags
 		
 	end
@@ -2556,7 +2615,7 @@ function ArkInventory.OnLoad( )
 	-- bank
 	loc_id = ArkInventory.Const.Location.Bank
 	bags = ArkInventory.Global.Location[loc_id].Bags
-	bags[#bags + 1] = ArkInventory.Const.ENUM.BAGINDEX.BANK
+	bags[#bags + 1] = ArkInventory.Const.ENUM.BAG.INDEX.BANK
 	local base = ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS
 	for x = base + 1, base + ArkInventory.Const.BLIZZARD.GLOBAL.BANK.NUM_BAGS do
 		bags[#bags + 1] = x
@@ -2564,7 +2623,7 @@ function ArkInventory.OnLoad( )
 	
 	-- reagent bank
 	if ArkInventory.ClientCheck( ArkInventory.Const.ENUM.EXPANSION.DRAENOR ) then
-		local x = ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK
+		local x = ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK
 		bags[#bags + 1] = x
 		ArkInventory.Global.BlizzardReagentContainerIDs[x] = true
 		ArkInventory.Global.Location[loc_id].ReagentBag = #bags
@@ -2895,8 +2954,8 @@ function ArkInventory.OnInitialize( )
 --		{ "ZONE_CHANGED_INDOORS", "EVENT_ARKINV_ZONE_CHANGED" },
 --		{ "ZONE_CHANGED_NEW_AREA", "EVENT_ARKINV_ZONE_CHANGED" },
 		
---		{ "PLAYER_INTERACTION_MANAGER_FRAME_SHOW", "EVENT_ARKINV_PLAYER_INTERACTION_SHOW", ArkInventory.Const.ENUM.EXPANSION.DRAGONFLIGHT },
---		{ "PLAYER_INTERACTION_MANAGER_FRAME_HIDE", "EVENT_ARKINV_PLAYER_INTERACTION_HIDE", ArkInventory.Const.ENUM.EXPANSION.DRAGONFLIGHT },
+		{ "PLAYER_INTERACTION_MANAGER_FRAME_SHOW", "EVENT_ARKINV_PLAYER_INTERACTION_SHOW", ArkInventory.Const.ENUM.EXPANSION.DRAGONFLIGHT },
+		{ "PLAYER_INTERACTION_MANAGER_FRAME_HIDE", "EVENT_ARKINV_PLAYER_INTERACTION_HIDE", ArkInventory.Const.ENUM.EXPANSION.DRAGONFLIGHT },
 		
 --		{ "SPELL_UPDATE_COOLDOWN", "EVENT_ARKINV_UPDATE_COOLDOWN" },
 --		{ "ACTIONBAR_UPDATE_COOLDOWN", "EVENT_ARKINV_UPDATE_COOLDOWN" },
@@ -3655,10 +3714,10 @@ function ArkInventory.PutItemInBank( )
 	
 	if CursorHasItem( ) then
 		
-		for x = 1, ArkInventory.CrossClient.GetContainerNumSlots( ArkInventory.Const.ENUM.BAGINDEX.BANK ) do
-			h = GetContainerItemLink( ArkInventory.Const.ENUM.BAGINDEX.BANK, x )
+		for x = 1, ArkInventory.CrossClient.GetContainerNumSlots( ArkInventory.Const.ENUM.BAG.INDEX.BANK ) do
+			h = GetContainerItemLink( ArkInventory.Const.ENUM.BAG.INDEX.BANK, x )
 			if not h then
-				if not ArkInventory.CrossClient.PickupContainerItem( ArkInventory.Const.ENUM.BAGINDEX.BANK, x ) then
+				if not ArkInventory.CrossClient.PickupContainerItem( ArkInventory.Const.ENUM.BAG.INDEX.BANK, x ) then
 					ClearCursor( )
 				end
 				return
@@ -3678,10 +3737,10 @@ function ArkInventory.PutItemInReagentBank( )
 	
 	if CursorHasItem( ) then
 		
-		for x = 1, ArkInventory.CrossClient.GetContainerNumSlots( ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK ) do
-			h = GetContainerItemLink( ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK, x )
+		for x = 1, ArkInventory.CrossClient.GetContainerNumSlots( ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK ) do
+			h = GetContainerItemLink( ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK, x )
 			if not h then
-				if not ArkInventory.CrossClient.PickupContainerItem( ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK, x ) then
+				if not ArkInventory.CrossClient.PickupContainerItem( ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK, x ) then
 					ClearCursor( )
 				end
 				return
@@ -7602,7 +7661,7 @@ function ArkInventory.Frame_Item_Update_Overlays( frame, codex )
 			elseif codex.style.slot.overlay.conduit.show and ArkInventory.CrossClient.IsConduit( itemIDOrLink ) then
 				
 				if not quality or not BAG_ITEM_QUALITY_COLORS[quality] then
-					quality = Enum.ItemQuality.Common
+					quality = ArkInventory.Const.ENUM.ITEM.QUALITY.COMMON
 				end
 					
 				local color = BAG_ITEM_QUALITY_COLORS[quality]
@@ -8062,8 +8121,8 @@ function ArkInventory.Frame_Item_Update_Border( frame, codex, changer )
 				if i and i.h then
 					
 					if codex.style.slot.border.rarity then
-						if ( i.q or ArkInventory.Const.ENUM.ITEMQUALITY.POOR ) >= ( codex.style.slot.border.raritycutoff or ArkInventory.Const.ENUM.ITEMQUALITY.POOR ) then
-							r, g, b = ArkInventory.GetItemQualityColor( i.q or ArkInventory.Const.ENUM.ITEMQUALITY.POOR )
+						if ( i.q or ArkInventory.Const.ENUM.ITEM.QUALITY.POOR ) >= ( codex.style.slot.border.raritycutoff or ArkInventory.Const.ENUM.ITEM.QUALITY.POOR ) then
+							r, g, b = ArkInventory.GetItemQualityColor( i.q or ArkInventory.Const.ENUM.ITEM.QUALITY.POOR )
 						end
 					end
 					
@@ -8078,7 +8137,7 @@ function ArkInventory.Frame_Item_Update_Border( frame, codex, changer )
 					
 					if changer then
 						
-						r, g, b = ArkInventory.GetItemQualityColor( ArkInventory.Const.ENUM.ITEMQUALITY.ARTIFACT )
+						r, g, b = ArkInventory.GetItemQualityColor( ArkInventory.Const.ENUM.ITEM.QUALITY.ARTIFACT )
 						
 					else
 						
@@ -8648,7 +8707,7 @@ function ArkInventory.Frame_Item_PreClick( frame, button, down )
 					if ArkInventory.Global.Mode.Bank then
 						
 						-- reagent bank is unlocked and has a free slot
-						if ArkInventory.CrossClient.IsReagentBankUnlocked( ) and ArkInventory.CrossClient.GetContainerNumFreeSlots( ArkInventory.Const.ENUM.BAGINDEX.REAGENTBANK ) > 0 then
+						if ArkInventory.CrossClient.IsReagentBankUnlocked( ) and ArkInventory.CrossClient.GetContainerNumFreeSlots( ArkInventory.Const.ENUM.BAG.INDEX.REAGENTBANK ) > 0 then
 							
 							-- its a crafting reagent
 							local info = ArkInventory.GetObjectInfo( i.h )
@@ -8673,8 +8732,8 @@ function ArkInventory.Frame_Item_PreClick( frame, button, down )
 						local cat_type, cat_num = ArkInventory.CategoryIdSplit( cat_id )
 						local catset = codex.catset.ca[cat_type][cat_num]
 						
-						if catset.action.t == ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.VENDOR then
-							if catset.action.w ~= ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.DISABLED then
+						if catset.action.t == ArkInventory.Const.ENUM.ACTION.TYPE.VENDOR then
+							if catset.action.w ~= ArkInventory.Const.ENUM.ACTION.WHEN.DISABLED then
 								--ArkInventory.Output( "PreClick: deleting item" )
 								return DeleteCursorItem( )
 							end
@@ -10345,7 +10404,7 @@ function ArkInventory.Frame_Changer_Slot_OnEnter( frame )
 				-- do nothing
 				
 			else
-		
+				
 				if loc_id == ArkInventory.Const.Location.Bank and bag_id == ArkInventory.Global.Location[loc_id].ReagentBag then
 					
 					GameTooltip:SetText( ArkInventory.Localise["REAGENTBANK"], 1.0, 1.0, 1.0 )
@@ -10688,7 +10747,7 @@ function ArkInventory.HookOpenAllBags( self, ... )
 					end
 				end
 				
-				if ArkInventory.db.option.auto.open.merchant == ArkInventory.Const.ENUM.BAGAUTOACTION.NO and not BackpackAlreadyOpen then
+				if ArkInventory.db.option.auto.open.merchant == ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and not BackpackAlreadyOpen then
 					return
 				end
 				
@@ -10706,7 +10765,7 @@ function ArkInventory.HookOpenAllBags( self, ... )
 			end
 			
 			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-				if ArkInventory.db.option.auto.open.merchant == ArkInventory.Const.ENUM.BAGAUTOACTION.NO and not BackpackAlreadyOpen then
+				if ArkInventory.db.option.auto.open.merchant == ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and not BackpackAlreadyOpen then
 					return
 				end
 			end
@@ -10714,7 +10773,7 @@ function ArkInventory.HookOpenAllBags( self, ... )
 		elseif whoname == "WardrobeFrame" then
 			
 			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-				if ArkInventory.db.option.auto.open.transmog == ArkInventory.Const.ENUM.BAGAUTOACTION.NO and not BackpackAlreadyOpen then
+				if ArkInventory.db.option.auto.open.transmog == ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and not BackpackAlreadyOpen then
 					return
 				end
 			end
@@ -10722,7 +10781,7 @@ function ArkInventory.HookOpenAllBags( self, ... )
 		elseif whoname == "TradeFrame" then
 			
 			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-				if ArkInventory.db.option.auto.open.trade == ArkInventory.Const.ENUM.BAGAUTOACTION.NO and not BackpackAlreadyOpen then
+				if ArkInventory.db.option.auto.open.trade == ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and not BackpackAlreadyOpen then
 					return
 				end
 			end
@@ -10730,7 +10789,7 @@ function ArkInventory.HookOpenAllBags( self, ... )
 		elseif whoname == "AuctionHouseFrame" then
 			
 			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-				if ArkInventory.db.option.auto.open.auction == ArkInventory.Const.ENUM.BAGAUTOACTION.NO and not BackpackAlreadyOpen then
+				if ArkInventory.db.option.auto.open.auction == ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and not BackpackAlreadyOpen then
 					return
 				end
 			end
@@ -10738,7 +10797,7 @@ function ArkInventory.HookOpenAllBags( self, ... )
 		elseif whoname == "GuildBankFrame" then
 			
 			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-				if ArkInventory.db.option.auto.open.vault == ArkInventory.Const.ENUM.BAGAUTOACTION.NO and not BackpackAlreadyOpen then
+				if ArkInventory.db.option.auto.open.vault == ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and not BackpackAlreadyOpen then
 					return
 				end
 			end
@@ -10746,7 +10805,7 @@ function ArkInventory.HookOpenAllBags( self, ... )
 		elseif whoname == "BankFrame" then
 			
 			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-				if ArkInventory.db.option.auto.open.bank == ArkInventory.Const.ENUM.BAGAUTOACTION.NO and not BackpackAlreadyOpen then
+				if ArkInventory.db.option.auto.open.bank == ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and not BackpackAlreadyOpen then
 					return
 				end
 			end
@@ -10758,7 +10817,7 @@ function ArkInventory.HookOpenAllBags( self, ... )
 			ArkInventory.Global.Mode.Bank = true
 			
 			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-				if ArkInventory.db.option.auto.open.bank == ArkInventory.Const.ENUM.BAGAUTOACTION.NO and not BackpackAlreadyOpen then
+				if ArkInventory.db.option.auto.open.bank == ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and not BackpackAlreadyOpen then
 					return
 				end
 			end
@@ -10766,7 +10825,7 @@ function ArkInventory.HookOpenAllBags( self, ... )
 		elseif whoname == "MailFrame" then
 			
 			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-				if ArkInventory.db.option.auto.open.mail == ArkInventory.Const.ENUM.BAGAUTOACTION.NO and not BackpackAlreadyOpen then
+				if ArkInventory.db.option.auto.open.mail == ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and not BackpackAlreadyOpen then
 					return
 				end
 			end
@@ -10774,7 +10833,7 @@ function ArkInventory.HookOpenAllBags( self, ... )
 		elseif whoname == "ScrappingMachineFrame" then
 			
 			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-				if ArkInventory.db.option.auto.open.scrap == ArkInventory.Const.ENUM.BAGAUTOACTION.NO and not BackpackAlreadyOpen then
+				if ArkInventory.db.option.auto.open.scrap == ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and not BackpackAlreadyOpen then
 					return
 				end
 			end
@@ -10782,7 +10841,7 @@ function ArkInventory.HookOpenAllBags( self, ... )
 		elseif whoname == "VoidStorageFrame" then
 			
 			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bag ) then
-				if ArkInventory.db.option.auto.open.void == ArkInventory.Const.ENUM.BAGAUTOACTION.NO and not BackpackAlreadyOpen then
+				if ArkInventory.db.option.auto.open.void == ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO and not BackpackAlreadyOpen then
 					return
 				end
 			end
@@ -11008,82 +11067,93 @@ function ArkInventory.HookToggleAllBags( self, ... )
 end
 
 function ArkInventory.HookPlayerInteractionShow( ... )
-	
-	if ArkInventory:IsEnabled( ) then
-		
-		local self, index = ...
-		local event = "PLAYER_INTERACTION"
-		
-		ArkInventory.OutputDebug( "PlayerInteractionShow( ", index, " )" )
-		
-		if index == Enum.PlayerInteractionType.Banker then
-			ArkInventory:EVENT_ARKINV_BANK_ENTER( event )
-			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bank ) then return end
-		elseif index == Enum.PlayerInteractionType.GuildBanker then
-			ArkInventory:EVENT_ARKINV_VAULT_ENTER( event )
-			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Vault ) then return end
-		elseif index == Enum.PlayerInteractionType.MailInfo then
-			ArkInventory:EVENT_ARKINV_MAIL_ENTER( event )
-		elseif index == Enum.PlayerInteractionType.VoidStorageBanker then
-			ArkInventory:EVENT_ARKINV_VOID_ENTER( event )
-		elseif index == Enum.PlayerInteractionType.Transmogrifier then
-			ArkInventory:EVENT_ARKINV_TRANSMOG_ENTER( event )
-		elseif index == Enum.PlayerInteractionType.Auctioneer then
-			ArkInventory:EVENT_ARKINV_AUCTION_ENTER( event )
-		elseif index == Enum.PlayerInteractionType.TradePartner then
-			ArkInventory:EVENT_ARKINV_TRADE_ENTER( event )
-		elseif index == Enum.PlayerInteractionType.ObliterumForge then
-			ArkInventory:EVENT_ARKINV_OBLITERUM_ENTER( event )
-		elseif index == Enum.PlayerInteractionType.ScrappingMachine then
-			ArkInventory:EVENT_ARKINV_SCRAP_ENTER( event )
-		elseif index == Enum.PlayerInteractionType.Vendor or index == Enum.PlayerInteractionType.Merchant then
-			ArkInventory:EVENT_ARKINV_MERCHANT_ENTER( event )
-		end
-		
-	end
-	
-	
-	return ArkInventory.hooks[PlayerInteractionFrameManager].ShowFrame( ... )
-	
+	local self, index = ...
+	--ArkInventory.Output( "HookPlayerInteractionShow [", index, "]" )
+	ArkInventory.HookPlayerInteractionProcess( index, ArkInventory.Const.BLIZZARD.GLOBAL.FRAME.SHOW )
 end
 
 function ArkInventory.HookPlayerInteractionHide( ... )
+	local self, index = ...
+	--ArkInventory.Output( "HookPlayerInteractionHide [", index, "]" )
+	ArkInventory.HookPlayerInteractionProcess( index, ArkInventory.Const.BLIZZARD.GLOBAL.FRAME.HIDE )
+end
+
+function ArkInventory.HookPlayerInteractionProcess( index, state, event, ... )
 	
 	if ArkInventory:IsEnabled( ) then
 		
-		local self, index = ...
-		local event = "PLAYER_INTERACTION"
+		local e = event or "PLAYER_INTERACTION_HOOK"
+		ArkInventory.OutputDebug( "PlayerInteraction [", index, "] [", state, "] [", e, "]" )
 		
-		ArkInventory.OutputDebug( "PlayerInteractionHide( ", index, " )" )
-		
-		if index == Enum.PlayerInteractionType.Banker then
-			ArkInventory:EVENT_ARKINV_BANK_LEAVE( event )
-			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bank ) then return end
-		elseif index == Enum.PlayerInteractionType.GuildBanker then
-			ArkInventory:EVENT_ARKINV_VAULT_LEAVE( event )
-			if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Vault ) then return end
-		elseif index == Enum.PlayerInteractionType.MailInfo then
-			ArkInventory:EVENT_ARKINV_MAIL_LEAVE( event )
-		elseif index == Enum.PlayerInteractionType.VoidStorageBanker then
-			ArkInventory:EVENT_ARKINV_VOID_LEAVE( event )
-		elseif index == Enum.PlayerInteractionType.Transmogrifier then
-			ArkInventory:EVENT_ARKINV_TRANSMOG_LEAVE( event )
-		elseif index == Enum.PlayerInteractionType.Auctioneer then
-			ArkInventory:EVENT_ARKINV_AUCTION_LEAVE( event )
-		elseif index == Enum.PlayerInteractionType.TradePartner then
-			ArkInventory:EVENT_ARKINV_TRADE_LEAVE( event )
-		elseif index == Enum.PlayerInteractionType.ObliterumForge then
-			ArkInventory:EVENT_ARKINV_OBLITERUM_LEAVE( event )
-		elseif index == Enum.PlayerInteractionType.ScrappingMachine then
-			ArkInventory:EVENT_ARKINV_SCRAP_LEAVE( event )
-		elseif index == Enum.PlayerInteractionType.Vendor or index == Enum.PlayerInteractionType.Merchant then
-			ArkInventory:EVENT_ARKINV_MERCHANT_LEAVE( event )
+		if state == ArkInventory.Const.BLIZZARD.GLOBAL.FRAME.SHOW then
+			
+			if index == Enum.PlayerInteractionType.Banker then
+				ArkInventory:EVENT_ARKINV_BANK_ENTER( e )
+				if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bank ) then return end
+			elseif index == Enum.PlayerInteractionType.GuildBanker then
+				ArkInventory:EVENT_ARKINV_VAULT_ENTER( e )
+				if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Vault ) then return end
+			elseif index == Enum.PlayerInteractionType.MailInfo then
+				ArkInventory:EVENT_ARKINV_MAIL_ENTER( e )
+			elseif index == Enum.PlayerInteractionType.VoidStorageBanker then
+				ArkInventory:EVENT_ARKINV_VOID_ENTER( e )
+			elseif index == Enum.PlayerInteractionType.Transmogrifier then
+				ArkInventory:EVENT_ARKINV_TRANSMOG_ENTER( e )
+			elseif index == Enum.PlayerInteractionType.Auctioneer then
+				ArkInventory:EVENT_ARKINV_AUCTION_ENTER( e )
+			elseif index == Enum.PlayerInteractionType.TradePartner then
+				ArkInventory:EVENT_ARKINV_TRADE_ENTER( e )
+			elseif index == Enum.PlayerInteractionType.ObliterumForge then
+				ArkInventory:EVENT_ARKINV_OBLITERUM_ENTER( e )
+			elseif index == Enum.PlayerInteractionType.ScrappingMachine then
+				ArkInventory:EVENT_ARKINV_SCRAP_ENTER( e )
+			elseif index == Enum.PlayerInteractionType.Vendor or index == Enum.PlayerInteractionType.Merchant then
+				ArkInventory:EVENT_ARKINV_MERCHANT_ENTER( e )
+			end
+			
+			if not event then
+				--ArkInventory.Output( "show frame [", index, "]" )
+				return ArkInventory.hooks[PlayerInteractionFrameManager].ShowFrame( nil, index )
+			end
+			
+		elseif state == ArkInventory.Const.BLIZZARD.GLOBAL.FRAME.HIDE then
+			
+			if index == Enum.PlayerInteractionType.Banker then
+				ArkInventory:EVENT_ARKINV_BANK_LEAVE( e )
+				if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Bank ) then return end
+			elseif index == Enum.PlayerInteractionType.GuildBanker then
+				ArkInventory:EVENT_ARKINV_VAULT_LEAVE( e )
+				if ArkInventory.isLocationControlled( ArkInventory.Const.Location.Vault ) then return end
+			elseif index == Enum.PlayerInteractionType.MailInfo then
+				ArkInventory:EVENT_ARKINV_MAIL_LEAVE( e )
+			elseif index == Enum.PlayerInteractionType.VoidStorageBanker then
+				ArkInventory:EVENT_ARKINV_VOID_LEAVE( e )
+			elseif index == Enum.PlayerInteractionType.Transmogrifier then
+				ArkInventory:EVENT_ARKINV_TRANSMOG_LEAVE( e )
+			elseif index == Enum.PlayerInteractionType.Auctioneer then
+				ArkInventory:EVENT_ARKINV_AUCTION_LEAVE( e )
+			elseif index == Enum.PlayerInteractionType.TradePartner then
+				ArkInventory:EVENT_ARKINV_TRADE_LEAVE( e )
+			elseif index == Enum.PlayerInteractionType.ObliterumForge then
+				ArkInventory:EVENT_ARKINV_OBLITERUM_LEAVE( e )
+			elseif index == Enum.PlayerInteractionType.ScrappingMachine then
+				ArkInventory:EVENT_ARKINV_SCRAP_LEAVE( e )
+			elseif index == Enum.PlayerInteractionType.Vendor or index == Enum.PlayerInteractionType.Merchant then
+				ArkInventory:EVENT_ARKINV_MERCHANT_LEAVE( e )
+			end
+			
+			if not event then
+				--ArkInventory.Output( "hide frame [", index, "]" )
+				return ArkInventory.hooks[PlayerInteractionFrameManager].HideFrame( nil, index )
+			end
+			
+		else
+			
+			ArkInventory.OutputError( "code issue: PlayerInteraction has invalid state [", state, "]" )
+			
 		end
 		
 	end
-	
-	
-	return ArkInventory.hooks[PlayerInteractionFrameManager].HideFrame( ... )
 	
 end
 
@@ -11254,10 +11324,10 @@ function ArkInventory.BlizzardAPIHook( disable, reload )
 		
 		-- bag functions
 		ArkInventory:RawHook( "OpenBag", "HookOpenBag", true )
-		ArkInventory:RawHook( "CloseBag", "HookCloseBag", true )
+--		ArkInventory:RawHook( "CloseBag", "HookCloseBag", true ) -- this will cause taint when in combat now, so dont
 		ArkInventory:RawHook( "ToggleBag", "HookToggleBag", true )
 		ArkInventory:RawHook( "OpenAllBags", "HookOpenAllBags", true )
-		ArkInventory:RawHook( "CloseAllBags", "HookCloseAllBags", true )
+--		ArkInventory:RawHook( "CloseAllBags", "HookCloseAllBags", true ) -- this will cause taint when in combat now, so dont
 		if ToggleAllBags then
 			ArkInventory:RawHook( "ToggleAllBags", "HookToggleAllBags", true )
 		end

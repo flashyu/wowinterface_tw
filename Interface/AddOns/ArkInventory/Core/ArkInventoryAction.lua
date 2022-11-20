@@ -67,10 +67,10 @@ function ArkInventory.Action.Vendor.Check( i, codex, manual, delete )
 				local cat_type, cat_num = ArkInventory.CategoryIdSplit( cat_id )
 				local catset = codex.catset.ca[cat_type][cat_num]
 				if i.q <= ArkInventory.db.option.action.vendor.raritycutoff then
-					if catset.action.t == ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.VENDOR then
-						if catset.action.w == ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.AUTO then
+					if catset.action.t == ArkInventory.Const.ENUM.ACTION.TYPE.VENDOR then
+						if catset.action.w == ArkInventory.Const.ENUM.ACTION.WHEN.AUTO then
 							isMatch = true
-						elseif catset.action.w == ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.MANUAL and manual then
+						elseif catset.action.w == ArkInventory.Const.ENUM.ACTION.WHEN.MANUAL and manual then
 							isMatch = true
 						end
 					end
@@ -375,11 +375,11 @@ function ArkInventory.Action.Mail.Check( i, codex, manual )
 			local cat_type, cat_num = ArkInventory.CategoryIdSplit( cat_id )
 			
 			local action = codex.catset.ca[cat_type][cat_num].action
-			if action.t == ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.MAIL then
+			if action.t == ArkInventory.Const.ENUM.ACTION.TYPE.MAIL then
 				
-				if action.w == ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.AUTO then
+				if action.w == ArkInventory.Const.ENUM.ACTION.WHEN.AUTO then
 					recipient = action.recipient
-				elseif manual and action.w == ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.MANUAL then
+				elseif manual and action.w == ArkInventory.Const.ENUM.ACTION.WHEN.MANUAL then
 					recipient = action.recipient
 				end
 				

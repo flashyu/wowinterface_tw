@@ -1,4 +1,7 @@
-﻿# 3.10.05 (16-NOV-2022)
+﻿# 3.10.06 (19-NOV-2022)
+ - no longer available
+ 
+# 3.10.05 (16-NOV-2022)
  - changed - (retail) toc updated to 100002
  - fixed - issue with bucket events that get renamed
  - fixed - map ids for some old zone mounts

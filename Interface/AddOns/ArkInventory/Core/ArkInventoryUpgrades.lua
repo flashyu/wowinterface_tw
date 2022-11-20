@@ -1811,17 +1811,17 @@ function ArkInventory.DatabaseUpgradePostLoad( )
 		
 		for k, v in pairs( ArkInventory.acedb.global.option.auto.open ) do
 			if v == true then
-				ArkInventory.acedb.global.option.auto.open[k] = ArkInventory.Const.ENUM.BAGAUTOACTION.YES
+				ArkInventory.acedb.global.option.auto.open[k] = ArkInventory.Const.ENUM.BAG.OPENCLOSE.YES
 			elseif v == false then
-				ArkInventory.acedb.global.option.auto.open[k] = ArkInventory.Const.ENUM.BAGAUTOACTION.NO
+				ArkInventory.acedb.global.option.auto.open[k] = ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO
 			end
 		end
 			
 		for k, v in pairs( ArkInventory.acedb.global.option.auto.close ) do
 			if v == true then
-				ArkInventory.acedb.global.option.auto.close[k] = ArkInventory.Const.ENUM.BAGAUTOACTION.YES
+				ArkInventory.acedb.global.option.auto.close[k] = ArkInventory.Const.ENUM.BAG.OPENCLOSE.YES
 			elseif v == false then
-				ArkInventory.acedb.global.option.auto.close[k] = ArkInventory.Const.ENUM.BAGAUTOACTION.NO
+				ArkInventory.acedb.global.option.auto.close[k] = ArkInventory.Const.ENUM.BAG.OPENCLOSE.NO
 			end
 		end
 		
@@ -2047,8 +2047,8 @@ function ArkInventory.DatabaseUpgradePostLoad( )
 					for cat_type, data in pairs( catset.category.junk ) do
 						for cat_id, junk in pairs( data ) do
 							if junk then
-								catset.ca[cat_type][cat_id].action.t = ArkInventory.Const.ENUM.CATEGORY.ACTION.TYPE.VENDOR
-								catset.ca[cat_type][cat_id].action.w = ArkInventory.Const.ENUM.CATEGORY.ACTION.WHEN.AUTO
+								catset.ca[cat_type][cat_id].action.t = ArkInventory.Const.ENUM.ACTION.TYPE.VENDOR
+								catset.ca[cat_type][cat_id].action.w = ArkInventory.Const.ENUM.ACTION.WHEN.AUTO
 							end
 						end
 					end
@@ -2079,7 +2079,7 @@ function ArkInventory.DatabaseUpgradePostLoad( )
 			ArkInventory.acedb.global.option.action.vendor.limit = not not ArkInventory.acedb.global.option.junk.limit
 			ArkInventory.acedb.global.option.action.vendor.delete = not not ArkInventory.acedb.global.option.junk.delete
 			ArkInventory.acedb.global.option.action.vendor.notify = not not ArkInventory.acedb.global.option.junk.notify
-			ArkInventory.acedb.global.option.action.vendor.raritycutoff = ArkInventory.acedb.global.option.junk.raritycutoff or ArkInventory.Const.ENUM.ITEMQUALITY.POOR
+			ArkInventory.acedb.global.option.action.vendor.raritycutoff = ArkInventory.acedb.global.option.junk.raritycutoff or ArkInventory.Const.ENUM.ITEM.QUALITY.POOR
 			ArkInventory.acedb.global.option.action.vendor.list = not not ArkInventory.acedb.global.option.junk.list
 			ArkInventory.acedb.global.option.action.vendor.test = not not ArkInventory.acedb.global.option.junk.test
 			if ArkInventory.acedb.global.option.junk.soulbound then
