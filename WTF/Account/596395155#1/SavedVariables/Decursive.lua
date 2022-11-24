@@ -1,11 +1,8 @@
 
 DecursiveDB = {
-	["profileKeys"] = {
-		["骑风 - 祈福"] = "Default",
-		["Helloworlds - 沙尔图拉"] = "Default",
-		["仓库技师 - 祈福"] = "Default",
-		["红发男 - 祈福"] = "Default",
-		["死哪了 - 祈福"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1669310169,
+		["NewerVersionAlert"] = 1666887927,
 	},
 	["class"] = {
 		["MAGE"] = {
@@ -30,17 +27,6 @@ DecursiveDB = {
 				[32] = -16,
 			},
 		},
-		["DEATHKNIGHT"] = {
-			["CureOrder"] = {
-				-11, -- [1]
-				-15, -- [2]
-				nil, -- [3]
-				-12, -- [4]
-				[8] = -13,
-				[16] = -14,
-				[32] = -16,
-			},
-		},
 		["WARRIOR"] = {
 			["CureOrder"] = {
 				-12, -- [1]
@@ -52,10 +38,24 @@ DecursiveDB = {
 				[32] = -11,
 			},
 		},
+		["DEATHKNIGHT"] = {
+			["CureOrder"] = {
+				-11, -- [1]
+				-15, -- [2]
+				nil, -- [3]
+				-12, -- [4]
+				[8] = -13,
+				[16] = -14,
+				[32] = -16,
+			},
+		},
 	},
-	["global"] = {
-		["LastVersionAnnounce"] = 1669046515,
-		["NewerVersionAlert"] = 1666887927,
+	["profileKeys"] = {
+		["骑风 - 祈福"] = "Default",
+		["Helloworlds - 沙尔图拉"] = "Default",
+		["仓库技师 - 祈福"] = "Default",
+		["红发男 - 祈福"] = "Default",
+		["死哪了 - 祈福"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

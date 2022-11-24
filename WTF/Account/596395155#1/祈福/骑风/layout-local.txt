@@ -27,3 +27,10 @@ X: 136
 Y: -36
 W: 768
 H: 447
+Frame: WIM3_msgFrame1
+FrameLevel: 2
+Anchor: CENTER
+X: -117
+Y: 187
+W: 333
+H: 220

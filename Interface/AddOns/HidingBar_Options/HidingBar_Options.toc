@@ -1,7 +1,7 @@
 ## Interface: 30400
 ## Title: HidingBar Options
 ## Author: sfmict
-## Version: v3.4.6
+## Version: v3.4.7
 ## Notes: HidingBar Options
 ## LoadOnDemand: 1
 ## Dependencies: HidingBar

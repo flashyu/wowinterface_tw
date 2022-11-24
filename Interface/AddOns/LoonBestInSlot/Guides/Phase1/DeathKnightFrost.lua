@@ -54,8 +54,8 @@ LBIS:AddItem(spec, "44659", LBIS.L["Neck"], "Alt") --Pendant of the Dragonsworn
 LBIS:AddItem(spec, "39421", LBIS.L["Neck"], "Alt") --Gem of Imprisoned Vassals
 
 LBIS:AddItem(spec, "40075", LBIS.L["Ring"], "BIS") --Ruthlessness
-LBIS:AddItem(spec, "39401", LBIS.L["Ring"], "BIS") --Circle of Death
-LBIS:AddItem(spec, "43993", LBIS.L["Ring"], "Alt") --Greatring of Collision
+LBIS:AddItem(spec, "43993", LBIS.L["Ring"], "BIS") --Greatring of Collision
+LBIS:AddItem(spec, "39401", LBIS.L["Ring"], "Alt") --Circle of Death
 LBIS:AddItem(spec, "42642", LBIS.L["Ring"], "Alt") --Titanium Impact Band
 LBIS:AddItem(spec, "44935", LBIS.L["Ring"], "Alt") --Ring of the Kirin Tor
 
@@ -66,10 +66,10 @@ LBIS:AddItem(spec, "40684", LBIS.L["Trinket"], "Alt") --Mirror of Truth
 LBIS:AddItem(spec, "39257", LBIS.L["Trinket"], "Alt") --Loatheb's Shadow
 
 LBIS:AddItem(spec, "40189", LBIS.L["Main Hand"], "BIS") --Angry Dread
-LBIS:AddItem(spec, "42208", LBIS.L["Main Hand"], "BIS") --Deadly Gladiator's Cleaver
+LBIS:AddItem(spec, "42208", LBIS.L["Main Hand"], "Alt") --Deadly Gladiator's Cleaver
 LBIS:AddItem(spec, "40407", LBIS.L["Main Hand"], "Alt") --Silent Crusader
 LBIS:AddItem(spec, "40345", LBIS.L["Main Hand"], "Alt") --Broken Promise
 LBIS:AddItem(spec, "39291", LBIS.L["Main Hand"], "Alt") --Torment of the Banished
 
-LBIS:AddItem(spec, "40207", LBIS.L["Relic"], "BIS") --Sigil of Awareness
-LBIS:AddItem(spec, "40715", LBIS.L["Relic"], "Alt") --Sigil of Haunted Dreams
+LBIS:AddItem(spec, "40207", LBIS.L["Ranged/Relic"], "BIS") --Sigil of Awareness
+LBIS:AddItem(spec, "40715", LBIS.L["Ranged/Relic"], "Alt") --Sigil of Haunted Dreams

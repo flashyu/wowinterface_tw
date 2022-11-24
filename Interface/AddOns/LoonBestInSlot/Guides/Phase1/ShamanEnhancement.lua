@@ -50,8 +50,8 @@ LBIS:AddItem(spec, "40260", LBIS.L["Waist"], "BIS") --Belt of the Tortured
 LBIS:AddItem(spec, "40275", LBIS.L["Waist"], "BIS") --Depraved Linked Belt
 LBIS:AddItem(spec, "37407", LBIS.L["Waist"], "Alt") --Sovereign's Belt
 
-LBIS:AddItem(spec, "40635", LBIS.L["Legs"], "BIS") --Legplates of the Lost Protector
 LBIS:AddItem(spec, "40522", LBIS.L["Legs"], "BIS") --Valorous Earthshatter War-Kilt
+LBIS:AddItem(spec, "40635", LBIS.L["Legs"], "BIS") --Legplates of the Lost Protector
 LBIS:AddItem(spec, "39603", LBIS.L["Legs"], "Alt") --Heroes' Earthshatter War-Kilt
 LBIS:AddItem(spec, "40620", LBIS.L["Legs"], "Alt") --Leggings of the Lost Protector
 LBIS:AddItem(spec, "40560", LBIS.L["Legs"], "Alt") --Leggings of the Wanton Spellcaster
@@ -82,6 +82,7 @@ LBIS:AddItem(spec, "39389", LBIS.L["Ring"], "Alt") --Signet of the Malevolent
 LBIS:AddItem(spec, "37642", LBIS.L["Ring"], "Alt") --Hemorrhaging Circle
 LBIS:AddItem(spec, "40586", LBIS.L["Ring"], "Alt") --Band of the Kirin Tor
 
+LBIS:AddItem(spec, "40255", LBIS.L["Trinket"], "BIS") --Dying Curse
 LBIS:AddItem(spec, "40684", LBIS.L["Trinket"], "BIS") --Mirror of Truth
 LBIS:AddItem(spec, "37390", LBIS.L["Trinket"], "BIS") --Meteorite Whetstone
 LBIS:AddItem(spec, "40431", LBIS.L["Trinket"], "Alt") --Fury of the Five Flights
@@ -91,13 +92,15 @@ LBIS:AddItem(spec, "40531", LBIS.L["Trinket"], "Alt") --Mark of Norgannon
 LBIS:AddItem(spec, "39763", LBIS.L["Main Hand"], "BIS") --Wraith Strike
 LBIS:AddItem(spec, "40383", LBIS.L["Main Hand"], "Alt") --Calamity's Grasp
 LBIS:AddItem(spec, "40189", LBIS.L["Main Hand"], "Alt") --Angry Dread
+LBIS:AddItem(spec, "39416", LBIS.L["Main Hand"], "Alt") --Kel'Thuzad's Reach
 LBIS:AddItem(spec, "45085", LBIS.L["Main Hand"], "Alt") --Titansteel Spellblade
 LBIS:AddItem(spec, "40429", LBIS.L["Main Hand"], "Alt") --Crimson Steel
 LBIS:AddItem(spec, "41384", LBIS.L["Main Hand"], "Alt") --Titansteel Guardian
 LBIS:AddItem(spec, "41383", LBIS.L["Main Hand"], "Alt") --Titansteel Bonecrusher
 
 LBIS:AddItem(spec, "39468", LBIS.L["Off Hand"], "BIS") --The Stray
+LBIS:AddItem(spec, "42232", LBIS.L["Off Hand"], "Alt") --Deadly Gladiator's Chopper
 LBIS:AddItem(spec, "40704", LBIS.L["Off Hand"], "Alt") --Pride
 
-LBIS:AddItem(spec, "40322", LBIS.L["Totem"], "BIS") --Totem of Dueling
-LBIS:AddItem(spec, "40708", LBIS.L["Totem"], "Alt") --Totem of the Elemental Plane
+LBIS:AddItem(spec, "40322", LBIS.L["Ranged/Relic"], "BIS") --Totem of Dueling
+LBIS:AddItem(spec, "40708", LBIS.L["Ranged/Relic"], "Alt") --Totem of the Elemental Plane

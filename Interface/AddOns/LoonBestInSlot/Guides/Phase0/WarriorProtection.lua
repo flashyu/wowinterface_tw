@@ -107,19 +107,19 @@ LBIS:AddItem(spec, "44735", LBIS.L["Main Hand"], "Alt") --Crescent of Brooding F
 LBIS:AddItem(spec, "44734", LBIS.L["Main Hand"], "Alt") --Hammer of Quiet Mourning
 LBIS:AddItem(spec, "44745", LBIS.L["Main Hand"], "Alt") --Blade of the Empty Void
 
-LBIS:AddItem(spec, "43085", LBIS.L["Shield"], "BIS") --Royal Crest of Lordaeron
-LBIS:AddItem(spec, "40701", LBIS.L["Shield"], "BIS") --Crygil's Discarded Plate Panel
-LBIS:AddItem(spec, "42508", LBIS.L["Shield"], "BIS Mit") --Titansteel Shield Wall
-LBIS:AddItem(spec, "37162", LBIS.L["Shield"], "Alt") --Bulwark of the Noble Protector
-LBIS:AddItem(spec, "35642", LBIS.L["Shield"], "Alt") --Riot Shield
-LBIS:AddItem(spec, "37107", LBIS.L["Shield"], "Alt") --Leeka's Shield
-LBIS:AddItem(spec, "34185", LBIS.L["Shield"], "Alt") --Sword Breaker's Bulwark
-LBIS:AddItem(spec, "41113", LBIS.L["Shield"], "Alt") --Saronite Bulwark
+LBIS:AddItem(spec, "43085", LBIS.L["Off Hand"], "BIS") --Royal Crest of Lordaeron
+LBIS:AddItem(spec, "40701", LBIS.L["Off Hand"], "BIS") --Crygil's Discarded Plate Panel
+LBIS:AddItem(spec, "42508", LBIS.L["Off Hand"], "BIS Mit") --Titansteel Shield Wall
+LBIS:AddItem(spec, "37162", LBIS.L["Off Hand"], "Alt") --Bulwark of the Noble Protector
+LBIS:AddItem(spec, "35642", LBIS.L["Off Hand"], "Alt") --Riot Shield
+LBIS:AddItem(spec, "37107", LBIS.L["Off Hand"], "Alt") --Leeka's Shield
+LBIS:AddItem(spec, "34185", LBIS.L["Off Hand"], "Alt") --Sword Breaker's Bulwark
+LBIS:AddItem(spec, "41113", LBIS.L["Off Hand"], "Alt") --Saronite Bulwark
 
-LBIS:AddItem(spec, "41168", LBIS.L["Ranged"], "BIS") --Armor Plated Combat Shotgun
-LBIS:AddItem(spec, "44118", LBIS.L["Ranged"], "Alt") --Stolen Vrykul Harpoon
-LBIS:AddItem(spec, "40716", LBIS.L["Ranged"], "Alt") --Lillehoff's Winged Blades
-LBIS:AddItem(spec, "43284", LBIS.L["Ranged"], "Alt") --Amanitar Skullbow
-LBIS:AddItem(spec, "37615", LBIS.L["Ranged"], "Alt") --Titanium Compound Bow
-LBIS:AddItem(spec, "43187", LBIS.L["Ranged"], "Alt Mit") --Weighted Throwing Axe
-LBIS:AddItem(spec, "42863", LBIS.L["Ranged"], "Alt") --Sharpened Hyldnir Harpoon
+LBIS:AddItem(spec, "41168", LBIS.L["Ranged/Relic"], "BIS") --Armor Plated Combat Shotgun
+LBIS:AddItem(spec, "44118", LBIS.L["Ranged/Relic"], "Alt") --Stolen Vrykul Harpoon
+LBIS:AddItem(spec, "40716", LBIS.L["Ranged/Relic"], "Alt") --Lillehoff's Winged Blades
+LBIS:AddItem(spec, "43284", LBIS.L["Ranged/Relic"], "Alt") --Amanitar Skullbow
+LBIS:AddItem(spec, "37615", LBIS.L["Ranged/Relic"], "Alt") --Titanium Compound Bow
+LBIS:AddItem(spec, "43187", LBIS.L["Ranged/Relic"], "Alt Mit") --Weighted Throwing Axe
+LBIS:AddItem(spec, "42863", LBIS.L["Ranged/Relic"], "Alt") --Sharpened Hyldnir Harpoon

@@ -169,12 +169,6 @@ LBIS:AddItem(spec, "34429", LBIS.L["Trinket"], "Alt") --Shifting Naaru Sliver
 LBIS:AddItem(spec, "36972", LBIS.L["Trinket"], "Alt") --Tome of Arcane Phenomena
 LBIS:AddItem(spec, "32483", LBIS.L["Trinket"], "Alt") --The Skull of Gul'dan
 
-LBIS:AddItem(spec, "37360", LBIS.L["Two Hand"], "BIS") --Staff of Draconic Combat
-LBIS:AddItem(spec, "37384", LBIS.L["Two Hand"], "Alt") --Staff of Wayward Principles
-LBIS:AddItem(spec, "37617", LBIS.L["Two Hand"], "Alt") --Staff of Sinister Claws
-LBIS:AddItem(spec, "34337", LBIS.L["Two Hand"], "Alt") --Golden Staff of the Sin'dorei
-LBIS:AddItem(spec, "34182", LBIS.L["Two Hand"], "Alt") --Grand Magister's Staff of Torrents
-
 LBIS:AddItem(spec, "45085", LBIS.L["Main Hand"], "BIS") --Titansteel Spellblade
 LBIS:AddItem(spec, "44173", LBIS.L["Main Hand"], "Alt") --Flameheart Spell Scalpel
 LBIS:AddItem(spec, "37721", LBIS.L["Main Hand"], "Alt") --Cursed Lich Blade
@@ -191,11 +185,17 @@ LBIS:AddItem(spec, "37086", LBIS.L["Off Hand"], "Alt") --Tome of Salramm
 LBIS:AddItem(spec, "37718", LBIS.L["Off Hand"], "Alt") --Temple Crystal Fragment
 LBIS:AddItem(spec, "37889", LBIS.L["Off Hand"], "Alt") --Prison Manifest
 
-LBIS:AddItem(spec, "34348", LBIS.L["Wand"], "BIS") --Wand of Cleansing Light
-LBIS:AddItem(spec, "37238", LBIS.L["Wand"], "BIS") --Rod of the Fallen Monarch
-LBIS:AddItem(spec, "34347", LBIS.L["Wand"], "BIS") --Wand of the Demonsoul
-LBIS:AddItem(spec, "37619", LBIS.L["Wand"], "Alt") --Wand of Ahn'kahet
-LBIS:AddItem(spec, "37177", LBIS.L["Wand"], "Alt") --Wand of the San'layn
-LBIS:AddItem(spec, "36989", LBIS.L["Wand"], "Alt") --Ancient Measuring Rod
-LBIS:AddItem(spec, "37626", LBIS.L["Wand"], "Alt") --Wand of Sseratus
-LBIS:AddItem(spec, "37038", LBIS.L["Wand"], "Alt") --Brazier Igniter
+LBIS:AddItem(spec, "37360", LBIS.L["Two Hand"], "BIS") --Staff of Draconic Combat
+LBIS:AddItem(spec, "37384", LBIS.L["Two Hand"], "Alt") --Staff of Wayward Principles
+LBIS:AddItem(spec, "37617", LBIS.L["Two Hand"], "Alt") --Staff of Sinister Claws
+LBIS:AddItem(spec, "34337", LBIS.L["Two Hand"], "Alt") --Golden Staff of the Sin'dorei
+LBIS:AddItem(spec, "34182", LBIS.L["Two Hand"], "Alt") --Grand Magister's Staff of Torrents
+
+LBIS:AddItem(spec, "34348", LBIS.L["Ranged/Relic"], "BIS") --Wand of Cleansing Light
+LBIS:AddItem(spec, "37238", LBIS.L["Ranged/Relic"], "BIS") --Rod of the Fallen Monarch
+LBIS:AddItem(spec, "34347", LBIS.L["Ranged/Relic"], "BIS") --Wand of the Demonsoul
+LBIS:AddItem(spec, "37619", LBIS.L["Ranged/Relic"], "Alt") --Wand of Ahn'kahet
+LBIS:AddItem(spec, "37177", LBIS.L["Ranged/Relic"], "Alt") --Wand of the San'layn
+LBIS:AddItem(spec, "36989", LBIS.L["Ranged/Relic"], "Alt") --Ancient Measuring Rod
+LBIS:AddItem(spec, "37626", LBIS.L["Ranged/Relic"], "Alt") --Wand of Sseratus
+LBIS:AddItem(spec, "37038", LBIS.L["Ranged/Relic"], "Alt") --Brazier Igniter

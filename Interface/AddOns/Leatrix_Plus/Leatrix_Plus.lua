@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.57 (18th November 2022)
+-- 	Leatrix Plus 3.0.60 (23rd November 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.57"
+	LeaPlusLC["AddonVer"] = "3.0.60"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -34,6 +34,9 @@
 				print(L["LEATRIX PLUS: WRONG VERSION INSTALLED!"])
 			end)
 			return
+		end
+		if gametocversion == 30401 then
+			LeaPlusLC.NewPatch = true
 		end
 	end
 
@@ -1424,83 +1427,157 @@
 
 		do
 
-			-- Function to skip gossip
-			local function SkipGossip()
-				if IsShiftKeyDown() then return end
-				local void, gossipType = GetGossipOptions()
-				if gossipType then
-					-- Completely automate gossip
-					if gossipType == "banker"
-					or gossipType == "taxi"
-					or gossipType == "trainer"
-					or gossipType == "vendor"
-					or gossipType == "battlemaster"
-					or gossipType == "arenamaster"
-					then
-						SelectGossipOption(1)
+			if LeaPlusLC.NewPatch then
+
+				-- Function to skip gossip
+				local function SkipGossip(skipAltKeyRequirement)
+					if not skipAltKeyRequirement and not IsAltKeyDown() then return end
+					local gossipInfoTable = C_GossipInfo.GetOptions()
+					if gossipInfoTable[1] and gossipInfoTable[1].gossipOptionID then
+						C_GossipInfo.SelectOption(gossipInfoTable[1].gossipOptionID)
 					end
-					-- Automate gossip with ALT key
-					if IsAltKeyDown() then
-						if gossipType == "gossip"
+				end
+
+				-- Create gossip event frame
+				local gossipFrame = CreateFrame("FRAME")
+
+				-- Function to setup events
+				local function SetupEvents()
+					if LeaPlusLC["AutomateGossip"] == "On" then
+						gossipFrame:RegisterEvent("GOSSIP_SHOW")
+					else
+						gossipFrame:UnregisterEvent("GOSSIP_SHOW")
+					end
+				end
+
+				-- Setup events when option is clicked and on startup (if option is enabled)
+				LeaPlusCB["AutomateGossip"]:HookScript("OnClick", SetupEvents)
+				if LeaPlusLC["AutomateGossip"] == "On" then SetupEvents() end
+
+				-- Create tables for specific NPC IDs (these are automatically selected with no alt key requirement)
+				local npcTable = {
+
+					-- Stable masters (https://www.wowhead.com/wotlk/npcs?filter=27;1;0)
+					9988, 21518, 15131, 10055, 21517, 11069, 9985, 22469, 19476, 21336, 10060, 16586, 16094, 18250, 16824, 23392, 15722, 9977, 19018, 9987, 19368, 6749, 10058, 22468, 11104, 9986, 13617, 10046, 10048, 10051, 10053, 10054, 17485, 18244, 10045, 24974, 16665, 25037, 16656, 10057, 18984, 9984, 11105, 10056, 16185, 10059, 16764, 11119, 14741, 10085, 10061, 19019, 10052, 10047, 10063, 9979, 17666, 11117, 10049, 17896, 9983, 24905, 9989, 9982, 10050, 9980, 9981, 10062, 9976, 9978, 13616,
+
+					-- Dalaran: Brassbolt Mechawrench (Alliance) and Reginald Arcfire (Horde) (engineer auctioneers)
+					35594, 35607,
+
+				}
+
+				-- Event handler
+				gossipFrame:SetScript("OnEvent", function()
+					-- Special treatment for specific NPCs
+					local npcGuid = UnitGUID("target") or nil
+					if npcGuid and not IsShiftKeyDown() then
+						local void, void, void, void, void, npcID = strsplit("-", npcGuid)
+						if npcID then
+							-- Open rogue doors in Dalaran (Broken Isles) automatically
+							if npcID == "96782"		-- Lucian Trias
+							or npcID == "93188"		-- Mongar
+							or npcID == "97004"		-- "Red" Jack Findle
+							then
+								SkipGossip()
+								return
+							end
+							-- Skip gossip with no alt key requirement
+							if npcID == "132969"	-- Katy Stampwhistle (toy)
+							or npcID == "104201"	-- Katy Stampwhistle (npc)
+							or tContains(npcTable, tonumber(npcID))
+							then
+								SkipGossip(true) 	-- true means skip alt key requirement
+								return
+							end
+						end
+					end
+					-- Process gossip
+					local gossipOptions = C_GossipInfo.GetOptions()
+					if gossipOptions and #gossipOptions == 1 and C_GossipInfo.GetNumAvailableQuests() == 0 and C_GossipInfo.GetNumActiveQuests() == 0 then
+						SkipGossip()
+					end
+				end)
+
+			else
+
+				-- Function to skip gossip
+				local function SkipGossip()
+					if IsShiftKeyDown() then return end
+					local void, gossipType = GetGossipOptions()
+					if gossipType then
+						-- Completely automate gossip
+						if gossipType == "banker"
+						or gossipType == "taxi"
+						or gossipType == "trainer"
+						or gossipType == "vendor"
+						or gossipType == "battlemaster"
+						or gossipType == "arenamaster"
 						then
 							SelectGossipOption(1)
 						end
-					end
-				end
-			end
-
-			-- Create tables for specific NPC IDs
-			local npcTable = {
-
-				-- Stable masters (https://www.wowhead.com/wotlk/npcs?filter=27;1;0)
-				9988, 21518, 15131, 10055, 21517, 11069, 9985, 22469, 19476, 21336, 10060, 16586, 16094, 18250, 16824, 23392, 15722, 9977, 19018, 9987, 19368, 6749, 10058, 22468, 11104, 9986, 13617, 10046, 10048, 10051, 10053, 10054, 17485, 18244, 10045, 24974, 16665, 25037, 16656, 10057, 18984, 9984, 11105, 10056, 16185, 10059, 16764, 11119, 14741, 10085, 10061, 19019, 10052, 10047, 10063, 9979, 17666, 11117, 10049, 17896, 9983, 24905, 9989, 9982, 10050, 9980, 9981, 10062, 9976, 9978, 13616,
-
-				-- Dalaran: Brassbolt Mechawrench (Alliance) and Reginald Arcfire (Horde) (engineer auctioneers)
-				35594, 35607,
-
-			}
-
-			-- Create gossip event frame
-			local gossipFrame = CreateFrame("FRAME")
-
-			-- Function to setup events
-			local function SetupEvents()
-				if LeaPlusLC["AutomateGossip"] == "On" then
-					gossipFrame:RegisterEvent("GOSSIP_SHOW")
-				else
-					gossipFrame:UnregisterEvent("GOSSIP_SHOW")
-				end
-			end
-
-			-- Setup events when option is clicked and on startup (if option is enabled)
-			LeaPlusCB["AutomateGossip"]:HookScript("OnClick", SetupEvents)
-			if LeaPlusLC["AutomateGossip"] == "On" then SetupEvents() end
-
-			-- Event handler
-			gossipFrame:SetScript("OnEvent", function()
-				-- Special treatment for specific NPCs
-				local npcGuid = UnitGUID("target") or nil
-				if npcGuid then
-					local void, void, void, void, void, npcID = strsplit("-", npcGuid)
-					if npcID then
-						if npcID == "9999999999" -- Reserved for future use
-						then
-							SkipGossip()
-							return
-						else
-							-- Skip gossip for specific NPCs
-							if GetNumGossipOptions() == 1 and GetNumGossipAvailableQuests() == 0 and GetNumGossipActiveQuests() == 0 and tContains(npcTable, tonumber(npcID)) and not IsShiftKeyDown() then
+						-- Automate gossip with ALT key
+						if IsAltKeyDown() then
+							if gossipType == "gossip"
+							then
 								SelectGossipOption(1)
 							end
 						end
 					end
 				end
 
-				-- Process gossip
-				if GetNumGossipOptions() == 1 and GetNumGossipAvailableQuests() == 0 and GetNumGossipActiveQuests() == 0 then
-					SkipGossip()
+				-- Create tables for specific NPC IDs
+				local npcTable = {
+
+					-- Stable masters (https://www.wowhead.com/wotlk/npcs?filter=27;1;0)
+					9988, 21518, 15131, 10055, 21517, 11069, 9985, 22469, 19476, 21336, 10060, 16586, 16094, 18250, 16824, 23392, 15722, 9977, 19018, 9987, 19368, 6749, 10058, 22468, 11104, 9986, 13617, 10046, 10048, 10051, 10053, 10054, 17485, 18244, 10045, 24974, 16665, 25037, 16656, 10057, 18984, 9984, 11105, 10056, 16185, 10059, 16764, 11119, 14741, 10085, 10061, 19019, 10052, 10047, 10063, 9979, 17666, 11117, 10049, 17896, 9983, 24905, 9989, 9982, 10050, 9980, 9981, 10062, 9976, 9978, 13616,
+
+					-- Dalaran: Brassbolt Mechawrench (Alliance) and Reginald Arcfire (Horde) (engineer auctioneers)
+					35594, 35607,
+
+				}
+
+				-- Create gossip event frame
+				local gossipFrame = CreateFrame("FRAME")
+
+				-- Function to setup events
+				local function SetupEvents()
+					if LeaPlusLC["AutomateGossip"] == "On" then
+						gossipFrame:RegisterEvent("GOSSIP_SHOW")
+					else
+						gossipFrame:UnregisterEvent("GOSSIP_SHOW")
+					end
 				end
-			end)
+
+				-- Setup events when option is clicked and on startup (if option is enabled)
+				LeaPlusCB["AutomateGossip"]:HookScript("OnClick", SetupEvents)
+				if LeaPlusLC["AutomateGossip"] == "On" then SetupEvents() end
+
+				-- Event handler
+				gossipFrame:SetScript("OnEvent", function()
+					-- Special treatment for specific NPCs
+					local npcGuid = UnitGUID("target") or nil
+					if npcGuid then
+						local void, void, void, void, void, npcID = strsplit("-", npcGuid)
+						if npcID then
+							if npcID == "9999999999" -- Reserved for future use
+							then
+								SkipGossip()
+								return
+							else
+								-- Skip gossip for specific NPCs
+								if GetNumGossipOptions() == 1 and GetNumGossipAvailableQuests() == 0 and GetNumGossipActiveQuests() == 0 and tContains(npcTable, tonumber(npcID)) and not IsShiftKeyDown() then
+									SelectGossipOption(1)
+								end
+							end
+						end
+					end
+
+					-- Process gossip
+					if GetNumGossipOptions() == 1 and GetNumGossipAvailableQuests() == 0 and GetNumGossipActiveQuests() == 0 then
+						SkipGossip()
+					end
+				end)
+
+			end
 
 		end
 
@@ -2110,45 +2187,93 @@
 						-- Don't select quests for blocked NPCs
 						if isNpcBlocked("Select") then return end
 
-						-- Select quests
-						if event == "QUEST_GREETING" then
-							-- Select quest greeting completed quests
-							if LeaPlusLC["AutoQuestCompleted"] == "On" then
-								for i = 1, GetNumActiveQuests() do
-									local title, isComplete = GetActiveTitle(i)
-									if title and isComplete then
-										return SelectActiveQuest(i)
+						if LeaPlusLC.NewPatch then
+
+							if event == "QUEST_GREETING" then
+								-- Select quest greeting completed quests
+								if LeaPlusLC["AutoQuestCompleted"] == "On" then
+									for i = 1, GetNumActiveQuests() do
+										local title, isComplete = GetActiveTitle(i)
+										if title and isComplete then
+											return SelectActiveQuest(i)
+										end
+									end
+								end
+								-- Select quest greeting available quests
+								if LeaPlusLC["AutoQuestAvailable"] == "On" then
+									for i = 1, GetNumAvailableQuests() do
+										local title, isComplete = GetAvailableTitle(i)
+										if title and not isComplete then
+											return SelectAvailableQuest(i)
+										end
+									end
+								end
+							else
+								-- Select gossip completed quests
+								if LeaPlusLC["AutoQuestCompleted"] == "On" then
+									local gossipQuests = C_GossipInfo.GetActiveQuests()
+									for titleIndex, questInfo in ipairs(gossipQuests) do
+										if questInfo.title and questInfo.isComplete then
+											if questInfo.questID then
+												return C_GossipInfo.SelectActiveQuest(questInfo.questID)
+											end
+										end
+									end
+								end
+								-- Select gossip available quests
+								if LeaPlusLC["AutoQuestAvailable"] == "On" then
+									local GossipQuests = C_GossipInfo.GetAvailableQuests()
+									for titleIndex, questInfo in ipairs(GossipQuests) do
+										if questInfo.questID and DoesQuestHaveRequirementsMet(questInfo.questID) then
+											return C_GossipInfo.SelectAvailableQuest(questInfo.questID)
+										end
 									end
 								end
 							end
-							-- Select quest greeting available quests
-							if LeaPlusLC["AutoQuestAvailable"] == "On" then
-								for i = 1, GetNumAvailableQuests() do
-									local title, isComplete = GetAvailableTitle(i)
-									if title and not isComplete then
-										return SelectAvailableQuest(i)
-									end
-								end
-							end
+
 						else
-							-- Select gossip completed quests
-							if LeaPlusLC["AutoQuestCompleted"] == "On" then
-								for i = 1, GetNumGossipActiveQuests() do
-									local title, level, isTrivial, isComplete, isLegendary, isIgnored = select(i * 6 - 5, GetGossipActiveQuests())
-									if title and isComplete then
-										return SelectGossipActiveQuest(i)
+
+							-- Select quests
+							if event == "QUEST_GREETING" then
+								-- Select quest greeting completed quests
+								if LeaPlusLC["AutoQuestCompleted"] == "On" then
+									for i = 1, GetNumActiveQuests() do
+										local title, isComplete = GetActiveTitle(i)
+										if title and isComplete then
+											return SelectActiveQuest(i)
+										end
+									end
+								end
+								-- Select quest greeting available quests
+								if LeaPlusLC["AutoQuestAvailable"] == "On" then
+									for i = 1, GetNumAvailableQuests() do
+										local title, isComplete = GetAvailableTitle(i)
+										if title and not isComplete then
+											return SelectAvailableQuest(i)
+										end
+									end
+								end
+							else
+								-- Select gossip completed quests
+								if LeaPlusLC["AutoQuestCompleted"] == "On" then
+									for i = 1, GetNumGossipActiveQuests() do
+										local title, level, isTrivial, isComplete, isLegendary, isIgnored = select(i * 6 - 5, GetGossipActiveQuests())
+										if title and isComplete then
+											return SelectGossipActiveQuest(i)
+										end
+									end
+								end
+								-- Select gossip available quests
+								if LeaPlusLC["AutoQuestAvailable"] == "On" then
+									for i = 1, GetNumGossipAvailableQuests() do
+										local title, level, isTrivial, isDaily, isRepeatable, isLegendary, isIgnored = select(i * 7 - 6, GetGossipAvailableQuests())
+										if title and DoesQuestHaveRequirementsMet(title) then
+											return SelectGossipAvailableQuest(i)
+										end
 									end
 								end
 							end
-							-- Select gossip available quests
-							if LeaPlusLC["AutoQuestAvailable"] == "On" then
-								for i = 1, GetNumGossipAvailableQuests() do
-									local title, level, isTrivial, isDaily, isRepeatable, isLegendary, isIgnored = select(i * 7 - 6, GetGossipAvailableQuests())
-									if title and DoesQuestHaveRequirementsMet(title) then
-										return SelectGossipAvailableQuest(i)
-									end
-								end
-							end
+
 						end
 					end
 				end
@@ -2193,7 +2318,31 @@
 
 			-- Declarations
 			local IterationCount, totalPrice = 500, 0
-			local SellJunkTicker, mBagID, mBagSlot
+			local SellJunkTicker
+
+			-- Create custom NewTicker function (from Wrath)
+			local function LeaPlusNewTicker(duration, callback, iterations)
+				local ticker = setmetatable({}, TickerMetatable)
+				ticker._remainingIterations = iterations
+				ticker._callback = function()
+					if (not ticker._cancelled) then
+						callback(ticker)
+						--Make sure we weren't cancelled during the callback
+						if (not ticker._cancelled) then
+							if (ticker._remainingIterations) then
+								ticker._remainingIterations = ticker._remainingIterations - 1
+							end
+							if (not ticker._remainingIterations or ticker._remainingIterations > 0) then
+								C_Timer.After(duration, ticker._callback)
+							end
+						end
+					end
+				end
+				C_Timer.After(duration, ticker._callback)
+				return ticker
+			end
+
+
 
 			-- Create configuration panel
 			local SellJunkFrame = LeaPlusLC:CreatePanel("Sell junk automatically", "SellJunkFrame")
@@ -2234,10 +2383,14 @@
 
 			-- Function to stop selling
 			local function StopSelling()
-				if SellJunkTicker then SellJunkTicker:Cancel() end
+				if LeaPlusLC.NewPatch then
+					if SellJunkTicker then SellJunkTicker._cancelled = true; end
+				else
+					if SellJunkTicker then SellJunkTicker:Cancel() end
+				end
 				StartMsg:Hide()
 				SellJunkFrame:UnregisterEvent("ITEM_LOCKED")
-				SellJunkFrame:UnregisterEvent("ITEM_UNLOCKED")
+				SellJunkFrame:UnregisterEvent("UI_ERROR_MESSAGE")
 			end
 
 			-- Create excluded box
@@ -2318,9 +2471,6 @@
 					UpdateWhiteList()
 				end
 			end)
-
-			-- Editbox tooltip
-			local tipPrefix = ""
 
 			-- Function to make tooltip string
 			local function MakeTooltipString()
@@ -2446,48 +2596,92 @@
 				local SoldCount, Rarity, ItemPrice = 0, 0, 0
 				local CurrentItemLink, void
 
-				-- Traverse bags and sell grey items
-				for BagID = 0, 4 do
-					for BagSlot = 1, GetContainerNumSlots(BagID) do
-						CurrentItemLink = GetContainerItemLink(BagID, BagSlot)
-						if CurrentItemLink then
-							void, void, Rarity, void, void, void, void, void, void, void, ItemPrice = GetItemInfo(CurrentItemLink)
-							-- Don't sell whitelisted items
-							local itemID = GetItemInfoFromHyperlink(CurrentItemLink)
-							if itemID and whiteList[itemID] then
-								if Rarity == 0 then
-									-- Junk item to keep
-									Rarity = 3
-									ItemPrice = 0
-								elseif Rarity == 1 then
-									-- White item to sell
-									Rarity = 0
+				if LeaPlusLC.NewPatch then
+
+					-- Traverse bags and sell grey items
+					for BagID = 0, 4 do
+						for BagSlot = 1, C_Container.GetContainerNumSlots(BagID) do
+							CurrentItemLink = C_Container.GetContainerItemLink(BagID, BagSlot)
+							if CurrentItemLink then
+								void, void, Rarity, void, void, void, void, void, void, void, ItemPrice = GetItemInfo(CurrentItemLink)
+								-- Don't sell whitelisted items
+								local itemID = GetItemInfoFromHyperlink(CurrentItemLink)
+								if itemID and whiteList[itemID] then
+									if Rarity == 0 then
+										-- Junk item to keep
+										Rarity = 3
+										ItemPrice = 0
+									elseif Rarity == 1 then
+										-- White item to sell
+										Rarity = 0
+									end
+								end
+								-- Continue
+								local cInfo = C_Container.GetContainerItemInfo(BagID, BagSlot)
+								local itemCount = cInfo.stackCount
+								if Rarity == 0 and ItemPrice ~= 0 then
+									SoldCount = SoldCount + 1
+									if MerchantFrame:IsShown() then
+										-- If merchant frame is open, vendor the item
+										C_Container.UseContainerItem(BagID, BagSlot)
+										-- Perform actions on first iteration
+										if SellJunkTicker._remainingIterations == IterationCount then
+											-- Calculate total price
+											totalPrice = totalPrice + (ItemPrice * itemCount)
+										end
+									else
+										-- If merchant frame is not open, stop selling
+										StopSelling()
+										return
+									end
 								end
 							end
-							-- Continue
-							local void, itemCount = GetContainerItemInfo(BagID, BagSlot)
-							if Rarity == 0 and ItemPrice ~= 0 then
-								SoldCount = SoldCount + 1
-								if MerchantFrame:IsShown() then
-									-- If merchant frame is open, vendor the item
-									UseContainerItem(BagID, BagSlot)
-									-- Perform actions on first iteration
-									if SellJunkTicker._remainingIterations == IterationCount then
-										-- Calculate total price
-										totalPrice = totalPrice + (ItemPrice * itemCount)
-										-- Store first sold bag slot for analysis
-										if SoldCount == 1 then
-											mBagID, mBagSlot = BagID, BagSlot
-										end
+						end
+
+					end
+
+				else
+
+					-- Traverse bags and sell grey items
+					for BagID = 0, 4 do
+						for BagSlot = 1, GetContainerNumSlots(BagID) do
+							CurrentItemLink = GetContainerItemLink(BagID, BagSlot)
+							if CurrentItemLink then
+								void, void, Rarity, void, void, void, void, void, void, void, ItemPrice = GetItemInfo(CurrentItemLink)
+								-- Don't sell whitelisted items
+								local itemID = GetItemInfoFromHyperlink(CurrentItemLink)
+								if itemID and whiteList[itemID] then
+									if Rarity == 0 then
+										-- Junk item to keep
+										Rarity = 3
+										ItemPrice = 0
+									elseif Rarity == 1 then
+										-- White item to sell
+										Rarity = 0
 									end
-								else
-									-- If merchant frame is not open, stop selling
-									StopSelling()
-									return
+								end
+								-- Continue
+								local void, itemCount = GetContainerItemInfo(BagID, BagSlot)
+								if Rarity == 0 and ItemPrice ~= 0 then
+									SoldCount = SoldCount + 1
+									if MerchantFrame:IsShown() then
+										-- If merchant frame is open, vendor the item
+										UseContainerItem(BagID, BagSlot)
+										-- Perform actions on first iteration
+										if SellJunkTicker._remainingIterations == IterationCount then
+											-- Calculate total price
+											totalPrice = totalPrice + (ItemPrice * itemCount)
+										end
+									else
+										-- If merchant frame is not open, stop selling
+										StopSelling()
+										return
+									end
 								end
 							end
 						end
 					end
+
 				end
 
 				-- Stop selling if no items were sold for this iteration or iteration limit was reached
@@ -2518,32 +2712,35 @@
 			-- Event handler
 			SellJunkFrame:SetScript("OnEvent", function(self, event)
 				if event == "MERCHANT_SHOW" then
-					-- Reset variables
-					totalPrice, mBagID, mBagSlot = 0, -1, -1
+					-- Check for vendors that refuse to buy items
+					SellJunkFrame:RegisterEvent("UI_ERROR_MESSAGE")
+					-- Reset variable
+					totalPrice = 0
 					-- Do nothing if shift key is held down
 					if IsShiftKeyDown() then return end
 					-- Cancel existing ticker if present
-					if SellJunkTicker then SellJunkTicker:Cancel() end
+					if LeaPlusLC.NewPatch then
+						if SellJunkTicker then SellJunkTicker._cancelled = true; end
+					else
+						if SellJunkTicker then SellJunkTicker:Cancel() end
+					end
 					-- Sell grey items using ticker (ends when all grey items are sold or iteration count reached)
-					SellJunkTicker = C_Timer.NewTicker(0.2, SellJunkFunc, IterationCount)
+					if LeaPlusLC.NewPatch then
+						SellJunkTicker = LeaPlusNewTicker(0.2, SellJunkFunc, IterationCount)
+					else
+						SellJunkTicker = C_Timer.NewTicker(0.2, SellJunkFunc, IterationCount)
+					end
 					SellJunkFrame:RegisterEvent("ITEM_LOCKED")
-					SellJunkFrame:RegisterEvent("ITEM_UNLOCKED")
 				elseif event == "ITEM_LOCKED" then
 					StartMsg:Show()
 					SellJunkFrame:UnregisterEvent("ITEM_LOCKED")
-				elseif event == "ITEM_UNLOCKED" then
-					SellJunkFrame:UnregisterEvent("ITEM_UNLOCKED")
-					-- Check whether vendor refuses to buy items
-					if mBagID and mBagSlot and mBagID ~= -1 and mBagSlot ~= -1 then
-						local texture, count, locked = GetContainerItemInfo(mBagID, mBagSlot)
-						if count and not locked then
-							-- Item has been unlocked but still not sold so stop selling
-							StopSelling()
-						end
-					end
 				elseif event == "MERCHANT_CLOSED" then
 					-- If merchant frame is closed, stop selling
 					StopSelling()
+				elseif event == "UI_ERROR_MESSAGE" then
+					if arg1 == 46 then
+						StopSelling() -- Vendor refuses to buy items
+					end
 				end
 			end)
 
@@ -2908,9 +3105,17 @@
 
 			-- Function to update the font size
 			local function QuestSizeUpdate()
-				QuestTitleFont:SetFont(QuestFont:GetFont(), LeaPlusLC["LeaPlusQuestFontSize"] + 3, nil)
-				QuestFont:SetFont(QuestFont:GetFont(), LeaPlusLC["LeaPlusQuestFontSize"] + 1, nil)
-				QuestFontNormalSmall:SetFont(QuestFontNormalSmall:GetFont(), LeaPlusLC["LeaPlusQuestFontSize"], nil)
+				if LeaPlusLC.NewPatch then
+					local a, b, c = QuestFont:GetFont()
+					QuestTitleFont:SetFont(a, LeaPlusLC["LeaPlusQuestFontSize"] + 3, c)
+					QuestFont:SetFont(a, LeaPlusLC["LeaPlusQuestFontSize"] + 1, c)
+					local d, e, f = QuestFontNormalSmall:GetFont()
+					QuestFontNormalSmall:SetFont(d, LeaPlusLC["LeaPlusQuestFontSize"], f)
+				else
+					QuestTitleFont:SetFont(QuestFont:GetFont(), LeaPlusLC["LeaPlusQuestFontSize"] + 3, nil)
+					QuestFont:SetFont(QuestFont:GetFont(), LeaPlusLC["LeaPlusQuestFontSize"] + 1, nil)
+					QuestFontNormalSmall:SetFont(QuestFontNormalSmall:GetFont(), LeaPlusLC["LeaPlusQuestFontSize"], nil)
+				end
 			end
 
 			-- Set text size when slider changes and on startup
@@ -2966,9 +3171,18 @@
 
 			-- Function to set the text size
 			local function MailSizeUpdate()
-				local MailFont = QuestFont:GetFont();
-				OpenMailBodyText:SetFont(MailFont, LeaPlusLC["LeaPlusMailFontSize"])
-				MailEditBox:GetEditBox():SetFont(MailFont, LeaPlusLC["LeaPlusMailFontSize"])
+				if LeaPlusLC.NewPatch then
+					local MailFont, void, flags = QuestFont:GetFont()
+					OpenMailBodyText:SetFont("h1", MailFont, LeaPlusLC["LeaPlusMailFontSize"], flags)
+					OpenMailBodyText:SetFont("h2", MailFont, LeaPlusLC["LeaPlusMailFontSize"], flags)
+					OpenMailBodyText:SetFont("h3", MailFont, LeaPlusLC["LeaPlusMailFontSize"], flags)
+					OpenMailBodyText:SetFont("p", MailFont, LeaPlusLC["LeaPlusMailFontSize"], flags)
+					MailEditBox:GetEditBox():SetFont(MailFont, LeaPlusLC["LeaPlusMailFontSize"], flags) -- in DF, this is replaced with SendMailBodyEditBox
+				else
+					local MailFont = QuestFont:GetFont();
+					OpenMailBodyText:SetFont(MailFont, LeaPlusLC["LeaPlusMailFontSize"])
+					MailEditBox:GetEditBox():SetFont(MailFont, LeaPlusLC["LeaPlusMailFontSize"])
+				end
 			end
 
 			-- Set text size after changing slider and on startup
@@ -3023,8 +3237,13 @@
 
 			-- Function to set the text size
 			local function BookSizeUpdate()
-				local BookFont = QuestFont:GetFont()
-				ItemTextFontNormal:SetFont(BookFont, LeaPlusLC["LeaPlusBookFontSize"])
+				if LeaPlusLC.NewPatch then
+					local BookFont, void, flags = QuestFont:GetFont()
+					ItemTextFontNormal:SetFont(BookFont, LeaPlusLC["LeaPlusBookFontSize"], flags)
+				else
+					local BookFont = QuestFont:GetFont()
+					ItemTextFontNormal:SetFont(BookFont, LeaPlusLC["LeaPlusBookFontSize"])
+				end
 			end
 
 			-- Set text size after changing slider and on startup
@@ -3583,24 +3802,27 @@
 			historyFrame:SetScript("OnEvent", function(self, event)
 				if event == "PLAYER_LOGOUT" then
 					local name, realm = UnitFullName("player")
-					LeaPlusDB["ChatHistoryName"] = name .. "-" .. realm
-					LeaPlusDB["ChatHistoryTime"] = GetServerTime()
-					for i = 1, 50 do
-						if i ~= 2 and _G["ChatFrame" .. i] then
-							if FCF_IsChatWindowIndexActive(i) then
-								LeaPlusDB["ChatHistory" .. i] = {}
-								local chtfrm = _G["ChatFrame" .. i]
-								local NumMsg = chtfrm:GetNumMessages()
-								local StartMsg = 1
-								if NumMsg > 128 then StartMsg = NumMsg - 127 end
-								for iMsg = StartMsg, NumMsg do
-									local chatMessage, r, g, b, chatTypeID = chtfrm:GetMessageInfo(iMsg)
-									if chatMessage then
-										if r and g and b then
-											local colorCode = RGBToColorCode(r, g, b)
-											chatMessage = colorCode .. chatMessage
+					if not realm then realm = GetNormalizedRealmName() end
+					if name and realm then
+						LeaPlusDB["ChatHistoryName"] = name .. "-" .. realm
+						LeaPlusDB["ChatHistoryTime"] = GetServerTime()
+						for i = 1, 50 do
+							if i ~= 2 and _G["ChatFrame" .. i] then
+								if FCF_IsChatWindowIndexActive(i) then
+									LeaPlusDB["ChatHistory" .. i] = {}
+									local chtfrm = _G["ChatFrame" .. i]
+									local NumMsg = chtfrm:GetNumMessages()
+									local StartMsg = 1
+									if NumMsg > 128 then StartMsg = NumMsg - 127 end
+									for iMsg = StartMsg, NumMsg do
+										local chatMessage, r, g, b, chatTypeID = chtfrm:GetMessageInfo(iMsg)
+										if chatMessage then
+											if r and g and b then
+												local colorCode = RGBToColorCode(r, g, b)
+												chatMessage = colorCode .. chatMessage
+											end
+											tinsert(LeaPlusDB["ChatHistory" .. i], chatMessage)
 										end
-										tinsert(LeaPlusDB["ChatHistory" .. i], chatMessage)
 									end
 								end
 							end
@@ -3611,62 +3833,65 @@
 
 			-- Restore chat messages on login
 			local name, realm = UnitFullName("player")
-			if LeaPlusDB["ChatHistoryName"] and LeaPlusDB["ChatHistoryTime"] then
-				local timeDiff = GetServerTime() - LeaPlusDB["ChatHistoryTime"]
-				if LeaPlusDB["ChatHistoryName"] == name .. "-" .. realm and timeDiff and timeDiff < 10 then -- reload must be done within 15 seconds
+			if not realm then realm = GetNormalizedRealmName() end
+			if name and realm then
+				if LeaPlusDB["ChatHistoryName"] and LeaPlusDB["ChatHistoryTime"] then
+					local timeDiff = GetServerTime() - LeaPlusDB["ChatHistoryTime"]
+					if LeaPlusDB["ChatHistoryName"] == name .. "-" .. realm and timeDiff and timeDiff < 10 then -- reload must be done within 15 seconds
 
-					-- Store chat messages from current session and clear chat
-					for i = 1, 50 do
-						if i ~= 2 and _G["ChatFrame" .. i] and FCF_IsChatWindowIndexActive(i) then
-							LeaPlusDB["ChatTemp" .. i] = {}
-							local chtfrm = _G["ChatFrame" .. i]
-							local NumMsg = chtfrm:GetNumMessages()
-							for iMsg = 1, NumMsg do
-								local chatMessage, r, g, b, chatTypeID = chtfrm:GetMessageInfo(iMsg)
-								if chatMessage then
-									if r and g and b then
-										local colorCode = RGBToColorCode(r, g, b)
-										chatMessage = colorCode .. chatMessage
+						-- Store chat messages from current session and clear chat
+						for i = 1, 50 do
+							if i ~= 2 and _G["ChatFrame" .. i] and FCF_IsChatWindowIndexActive(i) then
+								LeaPlusDB["ChatTemp" .. i] = {}
+								local chtfrm = _G["ChatFrame" .. i]
+								local NumMsg = chtfrm:GetNumMessages()
+								for iMsg = 1, NumMsg do
+									local chatMessage, r, g, b, chatTypeID = chtfrm:GetMessageInfo(iMsg)
+									if chatMessage then
+										if r and g and b then
+											local colorCode = RGBToColorCode(r, g, b)
+											chatMessage = colorCode .. chatMessage
+										end
+										tinsert(LeaPlusDB["ChatTemp" .. i], chatMessage)
 									end
-									tinsert(LeaPlusDB["ChatTemp" .. i], chatMessage)
 								end
+								chtfrm:Clear()
 							end
-							chtfrm:Clear()
 						end
-					end
 
-					-- Restore chat messages from previous session
-					for i = 1, 50 do
-						if i ~= 2 and _G["ChatFrame" .. i] and LeaPlusDB["ChatHistory" .. i] and FCF_IsChatWindowIndexActive(i) then
-							LeaPlusDB["ChatHistory" .. i .. "Count"] = 0
-							-- Add previous session messages to chat
-							for k = 1, #LeaPlusDB["ChatHistory" .. i] do
-								if LeaPlusDB["ChatHistory" .. i][k] ~= string.match(LeaPlusDB["ChatHistory" .. i][k], "|cffffd800" .. L["Restored"] .. " " .. ".*" .. " " .. L["message"] .. ".*.|r") then
-									_G["ChatFrame" .. i]:AddMessage(LeaPlusDB["ChatHistory" .. i][k])
-									LeaPlusDB["ChatHistory" .. i .. "Count"] = LeaPlusDB["ChatHistory" .. i .. "Count"] + 1
+						-- Restore chat messages from previous session
+						for i = 1, 50 do
+							if i ~= 2 and _G["ChatFrame" .. i] and LeaPlusDB["ChatHistory" .. i] and FCF_IsChatWindowIndexActive(i) then
+								LeaPlusDB["ChatHistory" .. i .. "Count"] = 0
+								-- Add previous session messages to chat
+								for k = 1, #LeaPlusDB["ChatHistory" .. i] do
+									if LeaPlusDB["ChatHistory" .. i][k] ~= string.match(LeaPlusDB["ChatHistory" .. i][k], "|cffffd800" .. L["Restored"] .. " " .. ".*" .. " " .. L["message"] .. ".*.|r") then
+										_G["ChatFrame" .. i]:AddMessage(LeaPlusDB["ChatHistory" .. i][k])
+										LeaPlusDB["ChatHistory" .. i .. "Count"] = LeaPlusDB["ChatHistory" .. i .. "Count"] + 1
+									end
 								end
-							end
-							-- Show how many messages were restored
-							if LeaPlusDB["ChatHistory" .. i .. "Count"] == 1 then
-								_G["ChatFrame" .. i]:AddMessage("|cffffd800" .. L["Restored"] .. " " .. LeaPlusDB["ChatHistory" .. i .. "Count"] .. " " .. L["message from previous session"] .. ".|r")
+								-- Show how many messages were restored
+								if LeaPlusDB["ChatHistory" .. i .. "Count"] == 1 then
+									_G["ChatFrame" .. i]:AddMessage("|cffffd800" .. L["Restored"] .. " " .. LeaPlusDB["ChatHistory" .. i .. "Count"] .. " " .. L["message from previous session"] .. ".|r")
+								else
+									_G["ChatFrame" .. i]:AddMessage("|cffffd800" .. L["Restored"] .. " " .. LeaPlusDB["ChatHistory" .. i .. "Count"] .. " " .. L["messages from previous session"] .. ".|r")
+								end
 							else
-								_G["ChatFrame" .. i]:AddMessage("|cffffd800" .. L["Restored"] .. " " .. LeaPlusDB["ChatHistory" .. i .. "Count"] .. " " .. L["messages from previous session"] .. ".|r")
-							end
-						else
-							-- No messages to restore
-							LeaPlusDB["ChatHistory" .. i] = nil
-						end
-					end
-
-					-- Restore chat messages from this session
-					for i = 1, 50 do
-						if i ~= 2 and _G["ChatFrame" .. i] and LeaPlusDB["ChatTemp" .. i] and FCF_IsChatWindowIndexActive(i) then
-							for k = 1, #LeaPlusDB["ChatTemp" .. i] do
-								_G["ChatFrame" .. i]:AddMessage(LeaPlusDB["ChatTemp" .. i][k])
+								-- No messages to restore
+								LeaPlusDB["ChatHistory" .. i] = nil
 							end
 						end
-					end
 
+						-- Restore chat messages from this session
+						for i = 1, 50 do
+							if i ~= 2 and _G["ChatFrame" .. i] and LeaPlusDB["ChatTemp" .. i] and FCF_IsChatWindowIndexActive(i) then
+								for k = 1, #LeaPlusDB["ChatTemp" .. i] do
+									_G["ChatFrame" .. i]:AddMessage(LeaPlusDB["ChatTemp" .. i][k])
+								end
+							end
+						end
+
+					end
 				end
 			end
 
@@ -5352,7 +5577,12 @@
 			local timeBuffer = 15
 
 			-- Create editbox
-			local editFrame = CreateFrame("ScrollFrame", nil, UIParent, "InputScrollFrameTemplate")
+			local editFrame
+			if LeaPlusLC.NewPatch then
+				editFrame = CreateFrame("ScrollFrame", nil, UIParent, "LeaPlusInputScrollFrameTemplate")
+			else
+				editFrame = CreateFrame("ScrollFrame", nil, UIParent, "InputScrollFrameTemplate")
+			end
 
 			-- Set frame parameters
 			editFrame:ClearAllPoints()
@@ -5376,7 +5606,13 @@
 			editFrame.TopLeftTex:SetTexture(editFrame.TopRightTex:GetTexture()); editFrame.TopLeftTex:SetTexCoord(1, 0, 0, 1)
 
 			-- Create title bar
-			local titleFrame = CreateFrame("ScrollFrame", nil, editFrame, "InputScrollFrameTemplate")
+			local titleFrame
+			if LeaPlusLC.NewPatch then
+				titleFrame = CreateFrame("ScrollFrame", nil, editFrame, "LeaPlusInputScrollFrameTemplate")
+			else
+				titleFrame = CreateFrame("ScrollFrame", nil, editFrame, "InputScrollFrameTemplate")
+			end
+
 			titleFrame:ClearAllPoints()
 			titleFrame:SetPoint("TOP", 0, 32)
 			titleFrame:SetSize(600, 24)
@@ -5418,7 +5654,11 @@
 			editBox:SetTextInsets(4, 4, 4, 4)
 			editBox:SetWidth(editFrame:GetWidth() - 30)
 			editBox:SetSecurityDisablePaste()
-			editBox:SetFont(_G["ChatFrame1"]:GetFont(), 16)
+			if LeaPlusLC.NewPatch then
+				editBox:SetFont(_G["ChatFrame1"]:GetFont())
+			else
+				editBox:SetFont(_G["ChatFrame1"]:GetFont(), 16)
+			end
 
 			local introMsg = L["Leatrix Plus needs to be updated with the flight details.  Press CTRL/C to copy the flight details below then paste them into an email to flight@leatrix.com.  When your report is received, Leatrix Plus will be updated and you will never see this window again for this flight."] .. "|n|n"
 			local startHighlight = string.len(introMsg)
@@ -9687,13 +9927,31 @@
 			-- Function to highlight chat tabs and click to scroll to bottom
 			local function HighlightTabs(chtfrm)
 				-- Set position of bottom button
-				_G[chtfrm .. "ButtonFrameBottomButtonFlash"]:SetTexture("Interface/BUTTONS/GRADBLUE.png")
-				_G[chtfrm .. "ButtonFrameBottomButton"]:ClearAllPoints()
-				_G[chtfrm .. "ButtonFrameBottomButton"]:SetPoint("BOTTOM",_G[chtfrm .. "Tab"],0,-6)
-				_G[chtfrm .. "ButtonFrameBottomButton"]:Show()
-				_G[chtfrm .. "ButtonFrameBottomButtonFlash"]:SetAlpha(0.5)
-				_G[chtfrm .. "ButtonFrameBottomButton"]:SetWidth(_G[chtfrm .. "Tab"]:GetWidth()-10)
-				_G[chtfrm .. "ButtonFrameBottomButton"]:SetHeight(24)
+				if LeaPlusLC.NewPatch then
+
+					-- Hide bottom button
+					_G[chtfrm .. "ButtonFrameBottomButton"]:SetSize(0.1, 0.1) -- Positions it away
+
+					-- Remove click from the bottom button
+					_G[chtfrm .. "ButtonFrameBottomButton"]:SetScript("OnClick", nil)
+
+					-- Remove textures
+					_G[chtfrm .. "ButtonFrameBottomButton"]:SetNormalTexture("")
+					_G[chtfrm .. "ButtonFrameBottomButton"]:SetHighlightTexture("")
+					_G[chtfrm .. "ButtonFrameBottomButton"]:SetPushedTexture("")
+					_G[chtfrm .. "ButtonFrameBottomButton"]:SetDisabledTexture("")
+
+				else
+
+					_G[chtfrm .. "ButtonFrameBottomButtonFlash"]:SetTexture("Interface/BUTTONS/GRADBLUE.png")
+					_G[chtfrm .. "ButtonFrameBottomButton"]:ClearAllPoints()
+					_G[chtfrm .. "ButtonFrameBottomButton"]:SetPoint("BOTTOM",_G[chtfrm .. "Tab"],0,-6)
+					_G[chtfrm .. "ButtonFrameBottomButton"]:Show()
+					_G[chtfrm .. "ButtonFrameBottomButtonFlash"]:SetAlpha(0.5)
+					_G[chtfrm .. "ButtonFrameBottomButton"]:SetWidth(_G[chtfrm .. "Tab"]:GetWidth()-10)
+					_G[chtfrm .. "ButtonFrameBottomButton"]:SetHeight(24)
+
+				end
 
 				-- Resize bottom button according to tab size
 				_G[chtfrm .. "Tab"]:SetScript("OnSizeChanged", function()
@@ -9726,6 +9984,33 @@
 						_G[chtfrm]:ScrollToBottom();
 					end
 				end)
+
+				if LeaPlusLC.NewPatch then
+
+					-- Create new bottom button under tab
+					_G[chtfrm .. "Tab"].newglow = _G[chtfrm .. "Tab"]:CreateTexture(nil, "BACKGROUND")
+					_G[chtfrm .. "Tab"].newglow:ClearAllPoints()
+					_G[chtfrm .. "Tab"].newglow:SetPoint("BOTTOMLEFT", _G[chtfrm .. "Tab"], "BOTTOMLEFT", 0, 0)
+					_G[chtfrm .. "Tab"].newglow:SetTexture("Interface\\ChatFrame\\ChatFrameTab-NewMessage")
+					_G[chtfrm .. "Tab"].newglow:SetWidth(_G[chtfrm .. "Tab"]:GetWidth())
+					_G[chtfrm .. "Tab"].newglow:SetVertexColor(0.6, 0.6, 1, 1)
+					_G[chtfrm .. "Tab"].newglow:Hide()
+
+					-- Show new bottom button when old one glows
+					_G[chtfrm .. "ButtonFrameBottomButtonFlash"]:HookScript("OnShow", function(self,arg1)
+						_G[chtfrm .. "Tab"].newglow:Show()
+					end)
+
+					_G[chtfrm .. "ButtonFrameBottomButtonFlash"]:HookScript("OnHide", function(self,arg1)
+						_G[chtfrm .. "Tab"].newglow:Hide()
+					end)
+
+					-- Match new bottom button size to tab
+					_G[chtfrm .. "Tab"]:HookScript("OnSizeChanged", function()
+						_G[chtfrm .. "Tab"].newglow:SetWidth(_G[chtfrm .. "Tab"]:GetWidth())
+					end)
+
+				end
 
 			end
 
@@ -9766,7 +10051,12 @@
 		if LeaPlusLC["RecentChatWindow"] == "On" and not LeaLockList["RecentChatWindow"] then
 
 			-- Create recent chat frame
-			local editFrame = CreateFrame("ScrollFrame", nil, UIParent, "InputScrollFrameTemplate")
+			local editFrame
+			if LeaPlusLC.NewPatch then
+				editFrame = CreateFrame("ScrollFrame", nil, UIParent, "LeaPlusInputScrollFrameTemplate")
+			else
+				editFrame = CreateFrame("ScrollFrame", nil, UIParent, "InputScrollFrameTemplate")
+			end
 
 			-- Set frame parameters
 			editFrame:ClearAllPoints()
@@ -9790,7 +10080,12 @@
 			editFrame.TopLeftTex:SetTexture(editFrame.TopRightTex:GetTexture()); editFrame.TopLeftTex:SetTexCoord(1, 0, 0, 1)
 
 			-- Create title bar
-			local titleFrame = CreateFrame("ScrollFrame", nil, editFrame, "InputScrollFrameTemplate")
+			local titleFrame
+			if LeaPlusLC.NewPatch then
+				titleFrame = CreateFrame("ScrollFrame", nil, editFrame, "LeaPlusInputScrollFrameTemplate")
+			else
+				titleFrame = CreateFrame("ScrollFrame", nil, editFrame, "InputScrollFrameTemplate")
+			end
 			titleFrame:ClearAllPoints()
 			titleFrame:SetPoint("TOP", 0, 32)
 			titleFrame:SetSize(600, 24)
@@ -9828,8 +10123,10 @@
 
 			-- Drag to resize
 			editFrame:SetResizable(true)
-			editFrame:SetMinResize(600, 170)
-			editFrame:SetMaxResize(600, 560)
+			if not LeaPlusLC.NewPatch then
+				editFrame:SetMinResize(600, 170)
+				editFrame:SetMaxResize(600, 560)
+			end
 
 			titleFrame:HookScript("OnMouseDown", function(self, btn)
 				if btn == "LeftButton" then
@@ -9855,6 +10152,9 @@
 			editBox:SetTextInsets(4, 4, 4, 4)
 			editBox:SetWidth(editFrame:GetWidth() - 30)
 			editBox:SetSecurityDisablePaste()
+			if LeaPlusLC.NewPatch then
+				editBox:SetMaxLetters(0)
+			end
 
 			-- Manage focus
 			editBox:HookScript("OnEditFocusLost", function()
@@ -9909,7 +10209,7 @@
 					local chatMessage, r, g, b, chatTypeID = chtfrm:GetMessageInfo(iMsg)
 					if chatMessage then
 
-						-- Handle Battle.net
+						-- Handle Battle.net messages
 						if string.match(chatMessage, "k:(%d+):(%d+):BN_WHISPER:")
 						or string.match(chatMessage, "k:(%d+):(%d+):BN_INLINE_TOAST_ALERT:")
 						or string.match(chatMessage, "k:(%d+):(%d+):BN_INLINE_TOAST_BROADCAST:")
@@ -15297,8 +15597,10 @@
 	end
 
 	-- Slash command for global function
-	_G.SLASH_Leatrix_Plus1 = "/ltp"
-	_G.SLASH_Leatrix_Plus2 = "/leaplus"
+	if not LeaPlusLC.NewPatch then
+		_G.SLASH_Leatrix_Plus1 = "/ltp"
+		_G.SLASH_Leatrix_Plus2 = "/leaplus"
+	end
 	SlashCmdList["Leatrix_Plus"] = function(self)
 		-- Run slash command function
 		LeaPlusLC:SlashFunc(self)
@@ -15312,6 +15614,16 @@
 	SlashCmdList["LEATRIX_PLUS_RL"] = function()
 		ReloadUI()
 	end
+
+	-- Replacement for broken slash command system
+	if LeaPlusLC.NewPatch then
+		function leaplus(self)
+			LeaPlusLC:SlashFunc(self)
+		end
+	end
+
+	-- To reproduce slash command bug, enter combat, enter an addn related slash command, toggle tracking on a
+	-- quest 4 times then click that quest in the objective tracker.
 
 ----------------------------------------------------------------------
 -- 	L90: Create options panel pages (no content yet)

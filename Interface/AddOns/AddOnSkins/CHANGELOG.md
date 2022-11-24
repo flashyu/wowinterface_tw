@@ -1,8 +1,14 @@
 # AddOnSkins
 
-## [4.60-24-g99448e7](https://github.com/Azilroka/AddOnSkins/tree/99448e7715a3d9fd0240e9dc15c45b75b14cf7e7) (2022-11-21)
-[Full Changelog](https://github.com/Azilroka/AddOnSkins/compare/4.60...99448e7715a3d9fd0240e9dc15c45b75b14cf7e7) [Previous Releases](https://github.com/Azilroka/AddOnSkins/releases)
+## [4.60-27-gca60378](https://github.com/Azilroka/AddOnSkins/tree/ca60378f914681d3ff1baadc48036cf9b04a53f9) (2022-11-23)
+[Full Changelog](https://github.com/Azilroka/AddOnSkins/compare/4.60...ca60378f914681d3ff1baadc48036cf9b04a53f9) [Previous Releases](https://github.com/Azilroka/AddOnSkins/releases)
 
+- Skin update (#93)  
+    * Update Guild\_Roster\_Manager.lua  
+    * Update Guild\_Roster\_Manager.lua  
+- fix outfitter skin of addonskins (#81)  
+- ArkInventory - DF Compatibility (#84)  
+    so hard, much work  
 - This checkbox was removed.  
 - GetBuildInfo is no longer needed  
 - Bump Mainline TOC  
