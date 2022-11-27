@@ -1,5 +1,22 @@
 
 alaChatSV = {
+	["general"] = {
+		["detailedtip"] = true,
+	},
+	["misc"] = {
+		["ArrowKey"] = false,
+		["ChatHyperlink"] = true,
+		["FontFlag"] = "none",
+		["ArrowHistory"] = false,
+		["HoverHyperlink"] = true,
+		["Font"] = "Fonts\\ARKai_T.ttf",
+		["ColoredPlayerName"] = true,
+		["StickyWhisper"] = true,
+		["StickyBNWhisper"] = true,
+		["ChatFrameToBorder"] = true,
+		["TabChangeChatType"] = false,
+		["StickyChannel"] = true,
+	},
 	["highlight"] = {
 		["_TemporaryDisabled"] = false,
 		["color"] = {
@@ -8,49 +25,57 @@ alaChatSV = {
 			0, -- [3]
 			0, -- [4]
 		},
-		["CaseInsensitive"] = true,
-		["ShowMatchedOnly.CHANNEL"] = true,
-		["ShowMatchedOnly.NORMAL"] = false,
+		["ButtonInDock"] = true,
+		["ShowMatchedOnly.SAY-YELL"] = true,
 		["StrSet"] = "",
+		["ShowMatchedOnly.NORMAL"] = false,
 		["PinStyle"] = "char",
 		["KeepShowMatchedOnly"] = false,
 		["ShowMatchedOnly"] = false,
 		["toggle"] = false,
 		["format"] = "#HL#",
-		["ShowMatchedOnly.SAY-YELL"] = true,
-		["ButtonInDock"] = true,
+		["ShowMatchedOnly.CHANNEL"] = true,
+		["CaseInsensitive"] = true,
 	},
-	["misc"] = {
-		["ArrowKey"] = false,
-		["ChatHyperlink"] = true,
-		["FontFlag"] = "none",
-		["ArrowHistory"] = false,
-		["Font"] = "Fonts\\ARKai_T.ttf",
-		["StickyChannel"] = true,
-		["ColoredPlayerName"] = true,
-		["TabChangeChatType"] = false,
-		["ChatFrameToBorder"] = true,
-		["StickyBNWhisper"] = true,
-		["StickyWhisper"] = true,
-		["HoverHyperlink"] = true,
-	},
-	["general"] = {
-		["detailedtip"] = true,
-	},
-	["_GlobalRef"] = {
+	["docker"] = {
+		["BackdropColor"] = {
+			0, -- [1]
+			0, -- [2]
+			0, -- [3]
+			0, -- [4]
+		},
+		["Direction"] = "RIGHT",
+		["YToBorder"] = 0,
+		["FadedAlpha"] = 0.5,
+		["BackdropAlpha"] = 0.25,
+		["FadeOutTime"] = 2,
+		["alpha"] = 0.9,
+		["PinInt"] = 2,
+		["FadeOutDelay"] = 1,
+		["AutoAdjustEditBox"] = true,
+		["FadInTime"] = 0.5,
+		["Position"] = "below.editbox",
+		["XToBorder"] = 0,
+		["PinStyle"] = "char",
+		["PinSize"] = 24,
+		["Backdrop"] = true,
 	},
 	["__AppliedDBVersion"] = {
+		["Player-4778-055D8653"] = 221020.01,
+		["Player-4778-055D84A1"] = 221020.01,
+		["Player-4778-055D84F4"] = 221020.01,
 		["Player-4778-052AC4C0"] = 221020.01,
+		["Player-4778-055D857A"] = 221020.01,
 	},
 	["companion"] = {
 		["PlayerLinkFormat"] = "#INDEX.##NAME##:LEVEL#",
 		["NewMemberNoticeStr"] = "** 新公会成员：Lv#LEVEL# #CLASS# #NAME# **",
-		["ShowLevel"] = true,
+		["WelToGuildDelay"] = true,
 		["NewMemberNotice"] = false,
 		["ShowSubGroup"] = true,
 		["WelToGuildStrSet"] = "欢迎 #NAME# ！",
 		["WelToGuild"] = false,
-		["WelToGuildDelay"] = true,
+		["ShowLevel"] = true,
 	},
 	["chatfilter"] = {
 		["_TemporaryDisabled"] = false,
@@ -60,9 +85,9 @@ alaChatSV = {
 		["PinStyle"] = "char",
 		["RepeatedSentence"] = true,
 		["toggle"] = true,
-		["CaseInsensitive"] = true,
-		["RepInterval"] = 30,
 		["ButtonInDock"] = true,
+		["RepInterval"] = 30,
+		["CaseInsensitive"] = true,
 	},
 	["_GlobalAssign"] = {
 	},
@@ -76,28 +101,7 @@ alaChatSV = {
 			0, -- [3]
 		},
 	},
-	["docker"] = {
-		["BackdropColor"] = {
-			0, -- [1]
-			0, -- [2]
-			0, -- [3]
-			0, -- [4]
-		},
-		["Direction"] = "RIGHT",
-		["alpha"] = 0.9,
-		["FadedAlpha"] = 0.5,
-		["BackdropAlpha"] = 0.25,
-		["FadeOutTime"] = 2,
-		["Backdrop"] = true,
-		["PinInt"] = 2,
-		["FadeOutDelay"] = 1,
-		["AutoAdjustEditBox"] = true,
-		["FadInTime"] = 0.5,
-		["Position"] = "below.editbox",
-		["PinSize"] = 24,
-		["PinStyle"] = "char",
-		["XToBorder"] = 0,
-		["YToBorder"] = 0,
+	["_GlobalRef"] = {
 	},
 	["utils"] = {
 		["DBMPull"] = true,
@@ -130,24 +134,33 @@ alaChatSV = {
 		["WHISPER"] = false,
 		["GENERAL"] = true,
 		["SAY"] = true,
-		["_bfworldcf"] = {
-			["Player-4778-052AC4C0"] = {
-			},
-		},
+		["YELL"] = true,
 		["GUILD"] = true,
-		["_chatblocked"] = {
-		},
-		["RAID"] = true,
+		["AutoAddChannelToDefaultChatFrame"] = false,
+		["UseColor"] = true,
 		["ChannelBlockButton_BLZ"] = true,
-		["LOOK_FOR_GROUP"] = true,
-		["LOCAL_DEFENSE"] = false,
 		["RAID_WARNING"] = true,
+		["LOCAL_DEFENSE"] = false,
 		["BF_WORLD"] = true,
+		["RAID"] = true,
 		["_channelblocked"] = {
 		},
-		["UseColor"] = true,
-		["AutoAddChannelToDefaultChatFrame"] = false,
-		["YELL"] = true,
+		["LOOK_FOR_GROUP"] = true,
+		["_chatblocked"] = {
+		},
+		["_bfworldcf"] = {
+			["Player-4778-055D8653"] = {
+				true, -- [1]
+			},
+			["Player-4778-055D84A1"] = {
+			},
+			["Player-4778-055D84F4"] = {
+			},
+			["Player-4778-052AC4C0"] = {
+			},
+			["Player-4778-055D857A"] = {
+			},
+		},
 		["UNMANAGEDCHANNEL"] = true,
 	},
 }

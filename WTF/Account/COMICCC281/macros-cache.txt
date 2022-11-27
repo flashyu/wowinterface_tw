@@ -1,4 +1,4 @@
 VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
 /stopcasting
-/cast [@mouseover,nomod,exists] 清洁术;  [@mouseover,exists,mod:ctrl] 清洁术; [@mouseover,exists,mod:shift] 清洁术
+/cast [@mouseover,nomod,exists] 被遗忘者的意志;  [@mouseover,exists,mod:ctrl] 被遗忘者的意志; [@mouseover,exists,mod:shift] 被遗忘者的意志
 END

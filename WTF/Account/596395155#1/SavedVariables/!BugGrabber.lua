@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 465,
+	["session"] = 479,
 	["errors"] = {
 		{
 			["message"] = "...ace\\AddOns\\AdvancedInterfaceOptions\\basicOptions.lua:344: attempt to index field 'CustomVars' (a nil value)",
@@ -819,55 +819,79 @@ BugGrabberDB = {
 			["counter"] = 2,
 		}, -- [107]
 		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 尝试调用保护功能 'OverrideActionBarButton4:Show()'。",
-			["time"] = "2022/09/27 23:14:20",
-			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:357: in function `ActionButton_Update'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:694: in function `ActionButton_OnEvent'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:207: in function <Interface\\FrameXML\\ActionButton.lua:204>",
-			["session"] = 457,
-			["counter"] = 27,
-		}, -- [108]
-		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI_Libraries' 尝试调用保护功能 'SecureStateDriverManager:SetAttribute()'。",
 			["time"] = "2022/11/18 23:19:47",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetAttribute'\n[string \"@Interface\\FrameXML\\SecureStateDriver.lua\"]:48: in function <Interface\\FrameXML\\SecureStateDriver.lua:47>\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\oUF\\ouf.lua\"]:188: in function `Disable'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:580: in function `Update_AllFrames'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:882: in function `?'\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:117: in function <...ies\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:117>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:27: in function <...ies\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:23>\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:62: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\Ace3\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...UI_Libraries\\Core\\Ace3\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 461,
 			["counter"] = 1,
-		}, -- [109]
+		}, -- [108]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 尝试调用保护功能 'SecureStateDriverManager:SetAttribute()'。",
 			["time"] = "2022/11/18 23:19:47",
 			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetAttribute'\n[string \"@Interface\\FrameXML\\SecureStateDriver.lua\"]:42: in function `Enable'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:576: in function `Update_AllFrames'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\Modules\\UnitFrames\\UnitFrames.lua\"]:882: in function `?'\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:117: in function <...ies\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:117>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:27: in function <...ies\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:23>\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:62: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\Ace3\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...UI_Libraries\\Core\\Ace3\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
 			["session"] = 461,
 			["counter"] = 1,
+		}, -- [109]
+		{
+			["message"] = "Interface\\FrameXML\\ChatFrame.lua:4312: attempt to index field 'chatFrame' (a nil value)",
+			["time"] = "2022/11/26 01:15:44",
+			["locals"] = "editBox = WIM3_msgFrame1MsgBox {\n 0 = <userdata>\n parentWindow = WIM3_msgFrame1 {\n }\n setText = 0\n textToSet = \"\"\n widgetName = \"msg_box\"\n}\npreviousValue = ChatFrame1EditBox {\n 0 = <userdata>\n autoCompleteParams = <table> {\n }\n autoCompleteSource = <function> defined =[C]:-1\n SetText = <function> defined =[C]:-1\n OnBackdropLoaded = <function> defined @Interface\\SharedXML\\Backdrop.lua:152\n customAutoCompleteFunction = <function> defined @Interface\\FrameXML\\ChatFrame.lua:4126\n font = \"Fonts\\ARKai_T.ttf\"\n GetBackdropColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:390\n BottomLeftCorner = <unnamed> {\n }\n TopLeftCorner = <unnamed> {\n }\n chatStyle = \"classic\"\n language = \"通用语\"\n wimIsShown = <function> defined =[C]:-1\n headerSuffix = ChatFrame1EditBoxHeaderSuffix {\n }\n Center = <unnamed> {\n }\n RightEdge = <unnamed> {\n }\n ApplyBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:294\n IsShown = <function> defined @Interface\\AddOns\\WIM\\Sources\\Hooks.lua:33\n ClearBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:282\n LeftEdge = <unnamed> {\n }\n GetBackdropBorderColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:409\n GetBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:347\n BottomEdge = <unnamed> {\n }\n TopEdge = <unnamed> {\n }\n prompt = ChatFrame1EditBoxPrompt {\n }\n BottomRightCorner = <unnamed> {\n }\n glossTex = true\n SetBorderBlendMode = <function> defined @Interface\\SharedXML\\Backdrop.lua:266\n fontSize = 14\n tabCompleteTableIndex = 1\n TopRightCorner = <unnamed> {\n }\n PixelSnapDisabled = true\n fontStyle = \"NONE\"\n backdropInfo = <table> {\n }\n GetEdgeSize = <function> defined @Interface\\SharedXML\\Backdrop.lua:188\n SetBackdrop = <function> defined @Interface\\SharedXML\\Backdrop.lua:329\n historyIndex = 0\n chatFrame = ChatFrame1 {\n }\n addSpaceToAutoComplete = true\n HasBackdropInfo = <function> defined @Interface\\SharedXML\\Backdrop.lua:278\n historyLines = <table> {\n }\n OnBackdropSizeChanged = <function> defined @Interface\\SharedXML\\Backdrop.lua:182\n wimIsVisible = <function> defined =[C]:-1\n chatLanguage = \"通用语\"\n AddHistoryLine = <function> defined =[C]:-1\n SetupTextureCoordinates = <function> defined @Interface\\SharedXML\\Backdrop.lua:214\n Insert = <function> defined =[C]:-1\n wimHighlightText = <function> defined =[C]:-1\n HighlightText = <function> defined @Interface\\AddOns\\WIM\\Sources\\Hooks.lua:51\n characterCount = <unnamed> {\n }\n template = \"Default\"\n SetBackdropBorderColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:422\n header = ChatFrame1EditBoxHeader {\n }\n addHighlightedText = true\n SetupPieceVisuals = <function> defined @Interface\\SharedXML\\Backdrop.lua:246\n SetBackdropColor = <function> defined @Interface\\SharedXML\\Backdrop.lua:399\n languageID = 7\n IsVisible = <function> defined @Interface\\AddOns\\WIM\\Sources\\Hooks.lua:25\n}\n(*temporary) = <function> defined @Interface\\FrameXML\\FloatingChatFrame.lua:1831\n(*temporary) = nil\n(*temporary) = \"attempt to index field 'chatFrame' (a nil value)\"\nChatEdit_SetDeactivated = <function> defined @Interface\\FrameXML\\ChatFrame.lua:4247\n",
+			["stack"] = "[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4312: in function <Interface\\FrameXML\\ChatFrame.lua:4289>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `ChatEdit_SetLastActiveWindow'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4223: in function <Interface\\FrameXML\\ChatFrame.lua:4212>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `ChatEdit_ActivateChat'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4327: in function <Interface\\FrameXML\\ChatFrame.lua:4324>\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\StaticPopups.lua\"]:46: in function `OnShow'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\StaticPopups.lua\"]:407: in function <Interface\\AddOns\\ElvUI\\Core\\General\\StaticPopups.lua:400>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\StaticPopups.lua\"]:1058: in function `StaticPopup_Show'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\Core.lua\"]:900: in function <Interface\\AddOns\\ElvUI\\Core\\General\\Core.lua:886>",
+			["session"] = 469,
+			["counter"] = 1,
 		}, -- [110]
+		{
+			["message"] = "Interface\\FrameXML\\ChatFrame.lua:4266: attempt to index field '?' (a nil value)",
+			["time"] = "2022/11/26 01:19:39",
+			["locals"] = "editBox = WIM3_msgFrame1MsgBox {\n 0 = <userdata>\n parentWindow = WIM3_msgFrame1 {\n }\n setText = 0\n textToSet = \"\"\n widgetName = \"msg_box\"\n}\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"Language\"\n(*temporary) = \"attempt to index field '?' (a nil value)\"\n",
+			["stack"] = "[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4266: in function <Interface\\FrameXML\\ChatFrame.lua:4247>\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4274: in function <Interface\\FrameXML\\ChatFrame.lua:4269>\n[string \"=[C]\"]: in function `ChatEdit_DeactivateChat'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4219: in function <Interface\\FrameXML\\ChatFrame.lua:4212>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `ChatEdit_ActivateChat'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:3797: in function <Interface\\FrameXML\\ChatFrame.lua:3786>\n[string \"=[C]\"]: in function `ChatFrame_OpenChat'\n[string \"OPENCHAT\"]:1: in function <[string \"OPENCHAT\"]:1>",
+			["session"] = 469,
+			["counter"] = 1,
+		}, -- [111]
+		{
+			["message"] = "Interface\\FrameXML\\ChatFrame.lua:4308: attempt to index field 'chatFrame' (a nil value)",
+			["time"] = "2022/11/26 01:15:44",
+			["locals"] = "editBox = WIM3_msgFrame1MsgBox {\n 0 = <userdata>\n parentWindow = WIM3_msgFrame1 {\n }\n setText = 0\n textToSet = \"\"\n widgetName = \"msg_box\"\n}\npreviousValue = WIM3_msgFrame1MsgBox {\n 0 = <userdata>\n parentWindow = WIM3_msgFrame1 {\n }\n setText = 0\n textToSet = \"\"\n widgetName = \"msg_box\"\n}\n(*temporary) = <function> defined @Interface\\FrameXML\\FloatingChatFrame.lua:1831\n(*temporary) = nil\n(*temporary) = \"attempt to index field 'chatFrame' (a nil value)\"\nChatEdit_SetDeactivated = <function> defined @Interface\\FrameXML\\ChatFrame.lua:4247\n",
+			["stack"] = "[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4308: in function <Interface\\FrameXML\\ChatFrame.lua:4289>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `ChatEdit_SetLastActiveWindow'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4223: in function <Interface\\FrameXML\\ChatFrame.lua:4212>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `ChatEdit_ActivateChat'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:4327: in function <Interface\\FrameXML\\ChatFrame.lua:4324>\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\StaticPopups.lua\"]:70: in function `onTextChanged'\n[string \"@Interface\\AddOns\\ElvUI\\Core\\General\\StaticPopups.lua\"]:678: in function <Interface\\AddOns\\ElvUI\\Core\\General\\StaticPopups.lua:672>",
+			["session"] = 469,
+			["counter"] = 2,
+		}, -- [112]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'ElvUI' 尝试调用保护功能 'OverrideActionBarButton4:Show()'。",
+			["time"] = "2022/09/27 23:14:20",
+			["stack"] = "[string \"@Interface\\AddOns\\!BugGrabber\\BugGrabber.lua\"]:480: in function <Interface\\AddOns\\!BugGrabber\\BugGrabber.lua:480>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:357: in function `ActionButton_Update'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:694: in function `ActionButton_OnEvent'\n[string \"@Interface\\FrameXML\\ActionButton.lua\"]:207: in function <Interface\\FrameXML\\ActionButton.lua:204>",
+			["session"] = 470,
+			["counter"] = 28,
+		}, -- [113]
 		{
 			["message"] = "Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
 			["time"] = "2022/09/24 23:46:51",
 			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
 			["stack"] = "[string \"@Interface\\AddOns\\Blizzard_InspectUI\\Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface\\AddOns\\GearScoreLite\\GearScoreLite-0.1 (based on 3x04y05).lua\"]:67: in function <Interface\\AddOns\\GearScoreLite\\GearScoreLite.lua:53>",
-			["session"] = 461,
-			["counter"] = 59,
-		}, -- [111]
+			["session"] = 473,
+			["counter"] = 60,
+		}, -- [114]
 		{
 			["message"] = "(null)",
 			["time"] = "2022/09/28 22:01:13",
-			["session"] = 461,
-			["counter"] = 130,
-		}, -- [112]
+			["session"] = 473,
+			["counter"] = 133,
+		}, -- [115]
 		{
 			["message"] = "Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua:37: attempt to index global 'db' (a nil value)",
 			["time"] = "2022/09/24 23:47:00",
 			["locals"] = "frame = WIM3_OptionFrameFrame1 {\n ImportCustomObject = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:398\n welcome = WIM3_OptionFrameFrame2 {\n }\n CreateDropDownMenu = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:182\n CreateColorPicker = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:74\n CreateCheckButtonMenu = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:308\n lastObj = WIM3_OptionFrameFrame2 {\n }\n nextOffsetX = 0\n CreateButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:64\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n nextOffSetY = 0\n CreateSlider = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:127\n 0 = <userdata>\n CreateSection = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:353\n CreateText = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:340\n SetFullSize = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:59\n CreateFramedPanel = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:392\n}\n(*temporary) = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:257\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n _Enable = <function> defined =[C]:-1\n UpdateChildren = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:281\n _Disable = <function> defined =[C]:-1\n isCheckButton = true\n children = <table> {\n }\n Disable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:269\n}\n(*temporary) = \"小地图按钮自由移动\"\n(*temporary) = nil\n(*temporary) = <table> {\n enabled = false\n OnDisable = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:400\n RegisterWidget = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:311\n OnEnable = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:382\n Enable = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:307\n OnDisableWIM = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:371\n canDisable = true\n OnEnableWIM = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:360\n dPrint = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:309\n enableByDefault = true\n title = \"MinimapIcon\"\n RegisterEvent = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:306\n db_defaults = <table> {\n }\n resources = <table> {\n }\n hasWidget = false\n Disable = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:308\n}\n(*temporary) = \"enabled\"\n(*temporary) = nil\n(*temporary) = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua:36\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:257\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n _Enable = <function> defined =[C]:-1\n UpdateChildren = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:281\n _Disable = <function> defined =[C]:-1\n isCheckButton = true\n children = <table> {\n }\n Disable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:269\n}\n(*temporary) = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:46\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:257\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n _Enable = <function> defined =[C]:-1\n UpdateChi",
 			["stack"] = "[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua\"]:37: in function `frame'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:190: in function <Interface\\AddOns\\WIM\\Sources\\Options\\Options.lua:184>\n[string \"=[C]\"]: in function `Click'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:281: in function `UpdateSubCategories'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:104: in function <Interface\\AddOns\\WIM\\Sources\\Options\\Options.lua:104>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:327: in function `ShowOptions'\n[string \"@Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\WIM-3.9.6.lua\"]:11: in function <Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\WIM.lua:8>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\AddOnSkins\\Core\\Core.lua\"]:217: in function `CallSkin'\n[string \"@Interface\\AddOns\\AddOnSkins\\Core\\Core.lua\"]:311: in function `?'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:119: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...vUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
-			["session"] = 462,
-			["counter"] = 56,
-		}, -- [113]
+			["session"] = 478,
+			["counter"] = 57,
+		}, -- [116]
 		{
 			["message"] = "Interface\\FrameXML\\ChatFrame.lua:1060: bad argument #1 to 'strlower' (string expected, got nil)",
 			["time"] = "2022/11/08 23:22:27",
 			["locals"] = "(*temporary) = nil\n(*temporary) = \"string expected, got nil\"\n",
 			["stack"] = "[string \"=[C]\"]: in function `strlower'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:1060: in function <Interface\\FrameXML\\ChatFrame.lua:1055>",
-			["session"] = 465,
-			["counter"] = 198,
-		}, -- [114]
+			["session"] = 478,
+			["counter"] = 222,
+		}, -- [117]
 	},
 }

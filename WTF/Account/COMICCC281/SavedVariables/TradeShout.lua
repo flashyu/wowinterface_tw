@@ -7,8 +7,8 @@ TradeShoutOptions = {
 	["Party"] = true,
 	["Whisper"] = true,
 	["relativePoint"] = "BOTTOMRIGHT",
-	["Warning"] = false,
+	["Thank"] = true,
 	["Raid"] = true,
 	["Say"] = false,
-	["Thank"] = true,
+	["Warning"] = false,
 }

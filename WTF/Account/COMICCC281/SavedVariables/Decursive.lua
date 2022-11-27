@@ -1,7 +1,12 @@
 
 DecursiveDB = {
-	["global"] = {
-		["LastVersionAnnounce"] = 1668437219,
+	["profileKeys"] = {
+		["职责一 - 祈福"] = "Default",
+		["部落太难 - 祈福"] = "Default",
+		["芈灭 - 祈福"] = "Default",
+		["职责二 - 祈福"] = "Default",
+		["职责 - 祈福"] = "Default",
+		["职责三 - 祈福"] = "Default",
 	},
 	["class"] = {
 		["DEATHKNIGHT"] = {
@@ -13,6 +18,17 @@ DecursiveDB = {
 				[8] = -13,
 				[16] = -14,
 				[32] = -16,
+			},
+		},
+		["ROGUE"] = {
+			["CureOrder"] = {
+				-12, -- [1]
+				-16, -- [2]
+				nil, -- [3]
+				-13, -- [4]
+				[8] = -14,
+				[16] = -15,
+				[32] = 1,
 			},
 		},
 		["PALADIN"] = {
@@ -27,9 +43,8 @@ DecursiveDB = {
 			},
 		},
 	},
-	["profileKeys"] = {
-		["芈灭 - 祈福"] = "Default",
-		["部落太难 - 祈福"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1668437219,
 	},
 	["profiles"] = {
 		["Default"] = {
