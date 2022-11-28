@@ -164,9 +164,22 @@ Config_daochu.CloseF:SetBackdrop({
 Config_daochu.CloseF:SetBackdropBorderColor(0.6, 0.6, 0.6, 0.8);
 Config_daochu.CloseF:SetSize(28,28);
 Config_daochu.CloseF:SetPoint("BOTTOMRIGHT", Config_daochu, "TOPRIGHT", -6, -7);
-Config_daochu.Close = CreateFrame("Button",nil,Config_daochu, "UIPanelCloseButton");  
-Config_daochu.Close:SetSize(30,30);
-Config_daochu.Close:SetPoint("CENTER", Config_daochu.CloseF, "CENTER", 1, 0);
+Config_daochu.CloseF.Close = CreateFrame("Button",nil, Config_daochu.CloseF);
+Config_daochu.CloseF.Close:SetSize(26,26);
+Config_daochu.CloseF.Close:SetPoint("CENTER", 0,0);
+Config_daochu.CloseF.Close.Tex = Config_daochu.CloseF.Close:CreateTexture();
+Config_daochu.CloseF.Close.Tex:SetTexture("interface/common/voicechat-muted.blp");
+Config_daochu.CloseF.Close.Tex:SetPoint("CENTER");
+Config_daochu.CloseF.Close.Tex:SetSize(14,14);
+Config_daochu.CloseF.Close:SetScript("OnMouseDown", function (self)
+	self.Tex:SetPoint("CENTER",1.5,-1.5);
+end);
+Config_daochu.CloseF.Close:SetScript("OnMouseUp", function (self)
+	self.Tex:SetPoint("CENTER");
+end);
+Config_daochu.CloseF.Close:SetScript("OnClick", function (self)
+	Config_daochu:Hide()
+end);
 --
 Config_daochu.scroll = CreateFrame("ScrollFrame", nil, Config_daochu, "UIPanelScrollFrameTemplate")
 Config_daochu.scroll:SetPoint("TOPLEFT", Config_daochu, "TOPLEFT", 12, -36)

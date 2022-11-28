@@ -1239,7 +1239,6 @@ local function ADD_daibenUI()
 	end)
 	--记时内容===========
 	local function TimeInfo_Update()
-		if not daiben.TimeF:IsShown() then return end
 		local shujudata = PIG_Per.daiben.Timelist
 		local shujudataNum = #shujudata+1
 		for i=1, 5 do
@@ -1288,10 +1287,6 @@ local function ADD_daibenUI()
 			
 		end
 		daiben.TimeF.cishu:SetText(PIG_Per.daiben.shuabenshu);
-	end
-	local function DS_TimeInfo_Update()
-		TimeInfo_Update()
-		C_Timer.After(1,DS_TimeInfo_Update)
 	end
 	------
 	daiben.TimeF.timexian1 = daiben.TimeF:CreateLine()
@@ -1937,6 +1932,14 @@ local function ADD_daibenUI()
 		whileDead = true,
 		hideOnEscape = true,
 	}
+	local function DS_TimeInfo_Update()
+		if PIG_Per.daiben.Open then
+			if daiben.TimeF:IsVisible() then
+				TimeInfo_Update()
+			end
+		end
+		C_Timer.After(1,DS_TimeInfo_Update)
+	end
 	DS_TimeInfo_Update()
 	---
 	function daiben:shoudongbobaoEXP(timedata,duiyuan)

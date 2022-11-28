@@ -8,9 +8,8 @@ local ADD_Checkbutton=addonTable.ADD_Checkbutton
 local function add_RsettingFrame()
 	local Width,Height  = RaidR_UI:GetWidth(), RaidR_UI:GetHeight();
 	local GnName = RaidR_UI.biaoti.title:GetText();
-	--=====================================================================
-	--设置按钮
-	local Rsetting = CreateFrame("Button","Rsetting_UI",RaidR_UI.xiafangF, "TruncatedButtonTemplate"); 
+	--设置按钮=====================================================================
+	local Rsetting = CreateFrame("Button",nil,RaidR_UI.xiafangF, "TruncatedButtonTemplate"); 
 	Rsetting:SetNormalTexture("interface/gossipframe/healergossipicon.blp"); 
 	Rsetting:SetHighlightTexture(130718);
 	Rsetting:SetSize(22,22);
@@ -20,10 +19,15 @@ local function add_RsettingFrame()
 	Rsetting.Down:SetSize(22,22);
 	Rsetting.Down:SetPoint("CENTER");
 	Rsetting.Down:Hide();
+	Rsetting:SetScript("OnMouseDown", function (self)
+		self.Down:Show();
+	end);
+	Rsetting:SetScript("OnMouseUp", function (self)
+		self.Down:Hide()
+	end);
 	--内容页-------------------------
 	local RsettingF=ADD_Frame("RsettingF_UI",Rsetting,Width-40,Height-104,"TOP",RaidR_UI,"TOP",0,-18,true,false,false,false,false,"BG6")
 	RsettingF:SetFrameLevel(RaidR_UI:GetFrameLevel()+40);
-
 	RsettingF.Close = CreateFrame("Button",nil,RsettingF, "UIPanelCloseButton");  
 	RsettingF.Close:SetSize(34,34);
 	RsettingF.Close:SetPoint("TOPRIGHT",RsettingF,"TOPRIGHT",2.4,0);
@@ -37,7 +41,7 @@ local function add_RsettingFrame()
 	RsettingF.biaoti1:SetStartPoint("TOPLEFT",5,-34)
 	RsettingF.biaoti1:SetEndPoint("TOPRIGHT",-3,-34)
 
-	--======================================
+	--===========
 	RsettingF.fubenwai = ADD_Checkbutton(nil,RsettingF,-80,"TOPLEFT",RsettingF,"TOPLEFT",20,-50,"记录副本外","开启后会记录副本外的拾取信息（默认只记录团队副本内掉落）")
 	RsettingF.fubenwai:SetScript("OnClick", function (self)
 		if self:GetChecked() then
@@ -68,36 +72,38 @@ local function add_RsettingFrame()
 	--拾取物品倒计时
 	local function ITEMTimetishi()
 		if PIG["RaidRecord"]["Kaiqi"]=="ON" and PIG["RaidRecord"]["Rsetting"]["jiaoyidaojishi"]=="ON" then
-			if not PIG["RaidRecord"]["instanceName"][1] then return end
-			if PIG["RaidRecord"]["instanceName"][1]<43200 then
-				if #PIG["RaidRecord"]["ItemList"]>0 then
-					for i=1,#PIG["RaidRecord"]["ItemList"],1 do
-						if PIG["RaidRecord"]["ItemList"][i][8]~="无" or PIG["RaidRecord"]["ItemList"][i][9]>0 or PIG["RaidRecord"]["ItemList"][i][14]>0 then--已有成交人/收款/欠款
-							PIG["RaidRecord"]["ItemList"][i][13]=false;
-							addonTable.RaidRecord_UpdateItem(Item_Scroll_UI);
-						else
-							if PIG["RaidRecord"]["ItemList"][i][13] then
-								local yijingguoqu=GetServerTime()-PIG["RaidRecord"]["ItemList"][i][1];
-								if yijingguoqu>7200 then
-									PIG["RaidRecord"]["ItemList"][i][13]=false;	
-									addonTable.RaidRecord_UpdateItem(Item_Scroll_UI);
-								elseif yijingguoqu>6600 then
-									if PIG["RaidRecord"]["ItemList"][i][12] then
-										if UnitIsGroupLeader("player", "LE_PARTY_CATEGORY_HOME") and IsInRaid("LE_PARTY_CATEGORY_HOME") then
-											SendChatMessage("提示：未成交物品"..PIG["RaidRecord"]["ItemList"][i][2].."可交易时间不足10分钟，请确认物品归属(预估时间仅供参考)！","RAID", nil);
-											PIG["RaidRecord"]["ItemList"][i][12]=false;
-											addonTable.RaidRecord_UpdateItem(Item_Scroll_UI);
+			if PIG["RaidRecord"]["instanceName"][1] then
+				if GetServerTime()-PIG["RaidRecord"]["instanceName"][1]<43200 then
+					if #PIG["RaidRecord"]["ItemList"]>0 then
+						for i=1,#PIG["RaidRecord"]["ItemList"],1 do
+							if PIG["RaidRecord"]["ItemList"][i][8]~="无" or PIG["RaidRecord"]["ItemList"][i][9]>0 or PIG["RaidRecord"]["ItemList"][i][14]>0 then--已有成交人/收款/欠款
+								PIG["RaidRecord"]["ItemList"][i][13]=false;
+								addonTable.RaidRecord_UpdateItem(Item_Scroll_UI);
+							else
+								if PIG["RaidRecord"]["ItemList"][i][13] then
+									local yijingguoqu=GetServerTime()-PIG["RaidRecord"]["ItemList"][i][1];
+									if yijingguoqu>7200 then
+										PIG["RaidRecord"]["ItemList"][i][13]=false;	
+										addonTable.RaidRecord_UpdateItem(Item_Scroll_UI);
+									elseif yijingguoqu>6600 then
+										if PIG["RaidRecord"]["ItemList"][i][12] then
+											if UnitIsGroupLeader("player", "LE_PARTY_CATEGORY_HOME") and IsInRaid("LE_PARTY_CATEGORY_HOME") then
+												SendChatMessage("提示：未成交物品"..PIG["RaidRecord"]["ItemList"][i][2].."可交易时间不足10分钟，请确认物品归属(预估时间仅供参考)！","RAID", nil);
+												PIG["RaidRecord"]["ItemList"][i][12]=false;
+												addonTable.RaidRecord_UpdateItem(Item_Scroll_UI);
+											end
 										end
 									end
-								end
-							end	
+								end	
+							end
 						end
 					end
 				end
-			end
-			C_Timer.After(10,ITEMTimetishi);
+			end	
 		end
+		C_Timer.After(3,ITEMTimetishi);
 	end
+	ITEMTimetishi();
 	RsettingF.jiaoyidaojishi = ADD_Checkbutton(nil,RsettingF,-80,"TOPLEFT",RsettingF,"TOPLEFT",260,-100,"交易倒计时通告","启用后，物品可交易时间低于10分钟将会在团队频道提示，预估时间仅供参考")
 	RsettingF.jiaoyidaojishi:SetScript("OnClick", function (self)
 		if self:GetChecked() then
@@ -105,11 +111,9 @@ local function add_RsettingFrame()
 		else
 			PIG["RaidRecord"]["Rsetting"]["jiaoyidaojishi"]="OFF";
 		end
-		ITEMTimetishi();
 	end);
 
-	--==========================================================
-	--交易记录
+	--交易记录==========================================================
 	local jiaoyijiluFFFF = CreateFrame("Frame")
 	-- 注册接收插件广播的交易信息
 	C_ChatInfo.RegisterAddonMessagePrefix('!Pig-jiaoyi')
@@ -172,7 +176,9 @@ local function add_RsettingFrame()
 									PIG["RaidRecord"]["ItemList"][xx][8]=wanjia;
 									addonTable.RaidRecord_UpdateItem(Item_Scroll_UI);
 									C_ChatInfo.SendAddonMessage('!Pig-jiaoyi', zijiitemID..'-'..wanjia..'-'..0, guangbopindao);-- 发送此次交易给其他使用者
-									--SendChatMessage("!Pig:物品"..jiaoyishujuinfo[1][x][1].."已交予"..wanjia,guangbopindao, nil);
+									if PIG["RaidRecord"]["Rsetting"]["jiaoyitonggao"]=="ON" then
+										SendChatMessage("!Pig:物品"..jiaoyishujuinfo[1][x][1].."已交予"..wanjia,guangbopindao, nil);
+									end
 									break
 								end
 							end
@@ -192,7 +198,9 @@ local function add_RsettingFrame()
 								PIG["RaidRecord"]["ItemList"][x][10]=GetServerTime();
 								addonTable.RaidRecord_UpdateItem(Item_Scroll_UI);
 								C_ChatInfo.SendAddonMessage('!Pig-jiaoyi', zijiitemID..'-'..wanjia..'-'..(jiaoyishujuinfo[4]/10000), guangbopindao);-- 发送此次交易给其他使用者
-								--SendChatMessage("!Pig:物品"..jiaoyishujuinfo[1][1][1].."已交予"..wanjia.."，收到"..floor((jiaoyishujuinfo[4]/10000)).."G",guangbopindao, nil);
+								if PIG["RaidRecord"]["Rsetting"]["jiaoyitonggao"]=="ON" then
+									SendChatMessage("!Pig:物品"..jiaoyishujuinfo[1][1][1].."已交予"..wanjia.."，收到"..floor((jiaoyishujuinfo[4]/10000)).."G",guangbopindao, nil);
+								end
 								break
 							end
 						end
@@ -253,6 +261,7 @@ local function add_RsettingFrame()
 			jiaoyijiluFFFF:UnregisterEvent("TRADE_ACCEPT_UPDATE");--当玩家和目标接受按钮的状态更改时触发。
 		end
 	end
+	jiaoyijiluFun();
 	------------
 	RsettingF.jiaoyijilu = ADD_Checkbutton(nil,RsettingF,-80,"TOPLEFT",RsettingF,"TOPLEFT",20,-150,"记录装备交易","开启后,交易拾取目录内的物品将会自动填入收入金额及成交人。一次交易多件商品只会记录成交人需手动输入每件商品收入价\n|cff00ff00（其他已安装本插件的玩家也会收到此次交易信息）|r")
 	RsettingF.jiaoyijilu:SetScript("OnClick", function (self)
@@ -263,7 +272,14 @@ local function add_RsettingFrame()
 		end
 		jiaoyijiluFun()
 	end);
-
+	RsettingF.jiaoyitonggao = ADD_Checkbutton(nil,RsettingF,-80,"TOPLEFT",RsettingF,"TOPLEFT",260,-150,"交易通告","通告交易物品和被交易人")
+	RsettingF.jiaoyitonggao:SetScript("OnClick", function (self)
+		if self:GetChecked() then
+			PIG["RaidRecord"]["Rsetting"]["jiaoyitonggao"]="ON";
+		else
+			PIG["RaidRecord"]["Rsetting"]["jiaoyitonggao"]="OFF";
+		end
+	end);
 	----===================================================
 	RsettingF.CCXXX = RsettingF:CreateLine()
 	RsettingF.CCXXX:SetColorTexture(1,1,1,0.3)
@@ -272,20 +288,28 @@ local function add_RsettingFrame()
 	RsettingF.CCXXX:SetEndPoint("TOPRIGHT",-276,-300)
 	---
 	local waiwaizidonghuifu_fuben = CreateFrame("Frame");
-	RsettingF.zidonghuifuYY = ADD_Checkbutton(nil,RsettingF,-120,"TOPLEFT",RsettingF.CCXXX,"TOPLEFT",20,-10,"自动回复YY频道\124cff00FF00(你必须是队长或团长)\124r","开启后,收到队伍或者团队人员咨询YY频道会自动回复预设内容")
-	RsettingF.zidonghuifuYY:SetScript("OnClick", function (self)
-		if self:GetChecked() then
-			PIG["RaidRecord"]["Rsetting"]["zidonghuifuYY"]="ON";
+	local function zhuceshijianEE()
+		if PIG["RaidRecord"]["Rsetting"]["zidonghuifuYY"]=="ON" then
 			waiwaizidonghuifu_fuben:RegisterEvent("CHAT_MSG_WHISPER") 
 			waiwaizidonghuifu_fuben:RegisterEvent("CHAT_MSG_PARTY");--收到组队信息
 			waiwaizidonghuifu_fuben:RegisterEvent("CHAT_MSG_PARTY_LEADER");
 			waiwaizidonghuifu_fuben:RegisterEvent("CHAT_MSG_RAID");--收到团队信息
 			waiwaizidonghuifu_fuben:RegisterEvent("CHAT_MSG_RAID_LEADER");
 		else
-			PIG["RaidRecord"]["Rsetting"]["zidonghuifuYY"]="OFF";
 			waiwaizidonghuifu_fuben:UnregisterAllEvents();
 		end
+	end
+	zhuceshijianEE()
+	RsettingF.zidonghuifuYY = ADD_Checkbutton(nil,RsettingF,-120,"TOPLEFT",RsettingF.CCXXX,"TOPLEFT",20,-10,"自动回复YY频道\124cff00FF00(你必须是队长或团长)\124r","开启后,收到队伍或者团队人员咨询YY频道会自动回复预设内容")
+	RsettingF.zidonghuifuYY:SetScript("OnClick", function (self)
+		if self:GetChecked() then
+			PIG["RaidRecord"]["Rsetting"]["zidonghuifuYY"]="ON";
+		else
+			PIG["RaidRecord"]["Rsetting"]["zidonghuifuYY"]="OFF";
+		end
+		zhuceshijianEE()
 	end);
+	
 	--触发关键字
 	RsettingF.zidonghuifuYY.biaoti = RsettingF:CreateFontString();
 	RsettingF.zidonghuifuYY.biaoti:SetPoint("TOPLEFT", RsettingF.zidonghuifuYY, "BOTTOMLEFT", 0,-6);
@@ -592,6 +616,9 @@ local function add_RsettingFrame()
 		end
 		zhixingxiufucaizhi()
 	end);
+	if PIG["RaidRecord"]["Rsetting"]["caizhixiufu"]=="ON" then
+		zhixingxiufucaizhi()
+	end
 	---重置配置
 	RsettingF.Default = CreateFrame("Button",nil,RsettingF, "UIPanelButtonTemplate");  
 	RsettingF.Default:SetSize(138,22);
@@ -613,13 +640,8 @@ local function add_RsettingFrame()
 		whileDead = true,
 		hideOnEscape = true,
 	}
-	--显示============================================
-	Rsetting:SetScript("OnMouseDown", function (self)
-		self.Down:Show();
-	end);
-
-	local function shuaxinpeizhi()
-		PIG["RaidRecord"]["Rsetting"]=PIG["RaidRecord"]["Rsetting"] or addonTable.Default["RaidRecord"]["Rsetting"]
+	--============================
+	RsettingF:HookScript("OnShow", function (self)
 		if PIG["RaidRecord"]["Rsetting"]["jiaoyidaojishi"]=="ON" then
 			RsettingF.jiaoyidaojishi:SetChecked(true);
 		end
@@ -635,18 +657,14 @@ local function add_RsettingFrame()
 		if PIG["RaidRecord"]["Rsetting"]["jiaoyijilu"]=="ON" then
 			RsettingF.jiaoyijilu:SetChecked(true);
 		end
+		if PIG["RaidRecord"]["Rsetting"]["jiaoyitonggao"]=="ON" then
+			RsettingF.jiaoyitonggao:SetChecked(true);
+		end
 		if PIG["RaidRecord"]["Rsetting"]["caizhixiufu"]=="ON" then
 			RsettingF.xiufucaizhi:SetChecked(true);
-			zhixingxiufucaizhi()
 		end
-
 		if PIG["RaidRecord"]["Rsetting"]["zidonghuifuYY"]=="ON" then
 			RsettingF.zidonghuifuYY:SetChecked(true);
-			waiwaizidonghuifu_fuben:RegisterEvent("CHAT_MSG_WHISPER") 
-			waiwaizidonghuifu_fuben:RegisterEvent("CHAT_MSG_PARTY");--收到组队信息
-			waiwaizidonghuifu_fuben:RegisterEvent("CHAT_MSG_PARTY_LEADER");
-			waiwaizidonghuifu_fuben:RegisterEvent("CHAT_MSG_RAID");--收到团队信息
-			waiwaizidonghuifu_fuben:RegisterEvent("CHAT_MSG_RAID_LEADER");
 		end
 		local huifuYY_guanjianzineirong="";
 		for i=1,#PIG["RaidRecord"]["Rsetting"]["YYguanjianzi"] do
@@ -658,12 +676,10 @@ local function add_RsettingFrame()
 		end
 		RsettingF.zidonghuifuYY.E:SetText(huifuYY_guanjianzineirong)
 		RsettingF.zidonghuifuYY.NR_E:SetText(PIG["RaidRecord"]["Rsetting"]["YYneirong"])
-		ITEMTimetishi();
-		jiaoyijiluFun();
-
-	end
-	Rsetting:SetScript("OnMouseUp", function (self)
-		self.Down:Hide()
+		gengxinpaichu(RsettingF.Paichu.Scroll);
+	end)
+	---
+	Rsetting:HookScript("OnClick", function (self)
 		History_UI:Hide();
 		fenG_UI:Hide();
 		invite_UI:Hide();
@@ -671,10 +687,7 @@ local function add_RsettingFrame()
 			RsettingF_UI:Hide();
 		else
 			RsettingF_UI:Show();
-			gengxinpaichu(RsettingF.Paichu.Scroll);
 		end
 	end);
-	--
-	shuaxinpeizhi()
 end
 addonTable.ADD_Rsetting = add_RsettingFrame

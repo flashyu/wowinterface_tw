@@ -8,7 +8,7 @@ fuFrame.top = fuFrame:CreateFontString();
 fuFrame.top:SetPoint("TOP",fuFrame,"TOP",0,-18);
 fuFrame.top:SetFont(ChatFontNormal:GetFont(), 15, "OUTLINE");
 fuFrame.top:SetTextColor(1, 0, 0, 1);
-fuFrame.top:SetText("警告：以下为测试性功能，请勿使用。强行使用造成一切后果自负！！！");
+fuFrame.top:SetText("警告：以下为测试性功能，使用造成一切后果自负！！！");
 fuFrame.line = fuFrame:CreateLine()
 fuFrame.line:SetColorTexture(1,1,1,0.3)
 fuFrame.line:SetThickness(1);

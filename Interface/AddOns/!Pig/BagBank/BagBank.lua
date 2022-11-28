@@ -542,7 +542,7 @@ local function zhegnhe_Open()
 	end
 	--------------------------
 	ContainerFrameCombinedBags:HookScript("OnHide",function(self)
-		self.biaoti.shezhi.F:Hide()
+		self.shezhi.F:Hide()
 	end)
 	ContainerFrameCombinedBags.biaoti = CreateFrame("Frame", nil, ContainerFrameCombinedBags)
 	ContainerFrameCombinedBags.biaoti:SetPoint("TOPLEFT", ContainerFrameCombinedBags, "TOPLEFT",58, -1);

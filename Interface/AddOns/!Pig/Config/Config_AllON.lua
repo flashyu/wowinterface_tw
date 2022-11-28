@@ -51,7 +51,6 @@ addonTable.AllNO = {
 		["ItemSell"] = "ON",
 		["ItemLevel"] = "ON",
 		["SpellID"] = "ON",
-		["zhuangbeiLV"]="ON",
 	},
 	["zhegnheBAG"]={
 		["BAGkongyu"]="ON",
@@ -120,7 +119,7 @@ addonTable.AllNO = {
 		["AltEX"] = "ON",
 		["Guolv"] = "OFF",
 		["QuickChat"] = "ON",
-		["wubiankuang"]= "ON",
+		["QuickChat_style"]=1,
 		["QuickChat_maodian"] = 1,
 		["MinMaxB"] = "ON",
 		["RightPlus"] = "ON",
@@ -149,8 +148,8 @@ addonTable.AllNO = {
 		["miyutixing"]="OFF",
 		["jiluinfo"]={
 			["WHISPER"]={["kaiguan"]="ON",["tixing"]="ON",["neirong"]={}},
-			["PARTY"]={["kaiguan"]="OFF",["tixing"]="OFF",["neirong"]={}},
-			["RAID"]={["kaiguan"]="OFF",["tixing"]="OFF",["neirong"]={}},
+			["PARTY"]={["kaiguan"]="ON",["tixing"]="OFF",["neirong"]={}},
+			["RAID"]={["kaiguan"]="ON",["tixing"]="OFF",["neirong"]={}},
 		},
 	},
 	["CombatPlus"] = {
@@ -175,60 +174,15 @@ addonTable.AllNO = {
 		},
 	},
 	["MinimapBpaichu"] = {
-		"MiniMapTrackingFrame", -- [1]
-		"MiniMapMeetingStoneFrame", -- [2]
-		"MiniMapMailFrame", -- [3]
-		"MiniMapBattlefieldFrame", -- [4]
-		"MiniMapWorldMapButton", -- [5]
-		"MiniMapPing", -- [6]
-		"MinimapBackdrop", -- [7]
-		"MinimapZoomIn", -- [8]
-		"MinimapZoomOut", -- [9]
-		"BookOfTracksFrame", -- [10]
-		"GatherNote", -- [11]
-		"FishingExtravaganzaMini", -- [12]
-		"MiniNotePOI", -- [13]
-		"RecipeRadarMinimapIcon", -- [14]
-		"FWGMinimapPOI", -- [15]
-		"CartographerNotesPOI", -- [16]
-		"MBB_MinimapButtonFrame", -- [17]
-		"EnhancedFrameMinimapButton", -- [18]
-		"GFW_TrackMenuFrame", -- [19]
-		"GFW_TrackMenuButton", -- [20]
-		"TDial_TrackingIcon", -- [21]
-		"TDial_TrackButton", -- [22]
-		"MiniMapTracking", -- [23]
-		"GatherMatePin", -- [24]
-		"HandyNotesPin", -- [25]
-		"TimeManagerClockButton", -- [26]
-		"GameTimeFrame", -- [27]
-		"DA_Minimap", -- [28]
-		"ElvConfigToggle", -- [29]
-		"MiniMapInstanceDifficulty", -- [30]
-		"MinimapZoneTextButton", -- [31]
-		"GuildInstanceDifficulty", -- [32]
-		"MiniMapVoiceChatFrame", -- [33]
-		"MiniMapRecordingButton", -- [34]
-		"QueueStatusMinimapButton", -- [35]
-		"GatherArchNote", -- [36]
-		"ZGVMarker", -- [37]
-		"QuestPointerPOI", -- [38]
-		"poiMinimap", -- [39]
-		"MiniMapLFGFrame", -- [40]
-		"PremadeFilter_MinimapButton", -- [41]
-		"QuestieFrame", -- [42]
-		"Guidelime", -- [43]
-		"MiniMapBattlefieldFrame", -- [44]
-		"LibDBIcon10_BugSack", -- [45]
-		"MinimapButton_PigUI", -- [46]
-		"MinimapLayerFrame", -- [46]
-		"NWBNaxxMarkerMini", -- [46]
-		"NWBMini", -- [46]
 	},
 	["FramePlus"] = {
+		["ExtFrame_Talent"] = "ON",
 		["ExtFrame_Zhuanye"] = "ON",
 		["ExtFrame_ZhuanyeQKBUT"]=true,
 		["ExtFrame_Renwu"] = "ON",
+		["CharacterFrame_LV"]="ON",
+		["CharacterFrame_shuxing"]="ON",
+		["CharacterFrame_zhuangbeList"]="ON",
 		["CharacterFrame_Juese"] = "ON",
 		["CharacterFrame_naijiu"] = "ON",
 		["CharacterFrame_ranse"] = "ON",
@@ -399,6 +353,7 @@ addonTable.AllNO = {
 			["fubenwai"] = "OFF",
 			["wurenben"] = "OFF",
 			["jiaoyijilu"] = "ON",
+			["jiaoyitonggao"] = "ON",
 			["zidonghuifuYY"]="OFF",
 			["YYguanjianzi"]={"YY","yy","歪歪"},
 			["YYneirong"]="YY频道:113213,组人不易,请耐心等待",

@@ -64,6 +64,7 @@ AAAAA:SetScript("OnEvent",function(self, event, arg1)
 		addonTable.CombatCycle()
 		-------
 		addonTable.FramePlus_ExtFrame()
+		addonTable.FramePlus_TalentFrame()
 		addonTable.FramePlus_CharacterFrame()
 		addonTable.FramePlus_yidongUI()
 		-------
@@ -104,6 +105,6 @@ AAAAA:SetScript("OnEvent",function(self, event, arg1)
 		addonTable.Sponsorship()
 		addonTable.Rurutia()
 		------------------------------
-		PIG_print("|cff00FFFF载入成功 /pig或小地图按钮设置|r(本插件完全免费,网络购物平台出售皆为|cffFF0000骗子|r)");
+		PIG_print("载入成功 /pig或小地图按钮设置(|cffFF0000本插件完全免费,网络购物平台出售皆为骗子|r)");
     end  
 end)

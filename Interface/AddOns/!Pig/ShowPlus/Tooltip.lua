@@ -21,64 +21,7 @@ fuFrame.wupinxians3:SetPoint("LEFT", fuFrame.wupinxians1, "RIGHT", 0, 0);
 fuFrame.wupinxians3:SetPoint("RIGHT", fuFrame.wupinxians2, "LEFT", 0, 0);
 fuFrame.wupinxians3:SetFontObject(GameFontNormal);
 fuFrame.wupinxians3:SetText("鼠标提示");
---==========================================================
-hooksecurefunc(GameTooltip, "SetBagItem", function(self, bag, slot)
-	if not fuFrame.ItemSell.V then return end
-	if not MerchantFrame:IsVisible() then
-		local _, link = self:GetItem()
-		if link then
-			local itemSellG = select(11, GetItemInfo(link))
-			if itemSellG and itemSellG > 0 then
-				local _, count = GetContainerItemInfo(bag, slot)
-				local count = count or 1
-				self:AddDoubleLine("卖店价:",GetMoneyString(itemSellG*count))
-				self:Show()
-			end
-		end
-	end
-end)
-hooksecurefunc(GameTooltip, "SetQuestItem", function(self, questType, index)
-	if not fuFrame.ItemSell.V then return end
-	local _, link = self:GetItem()
-	if link then
-		local itemSellG = select(11, GetItemInfo(link))
-		if itemSellG and itemSellG > 0 then
-			local _, _, count = GetQuestItemInfo(questType, index)
-			local count = count or 1
-			self:AddDoubleLine("卖店价:",GetMoneyString(itemSellG*count))
-			self:Show()
-		end
-	end
-end)
-hooksecurefunc(GameTooltip, "SetQuestLogItem", function(self,  questType, index)
-	if not fuFrame.ItemSell.V then return end
-	local _, link = self:GetItem()
-	if link then
-		local itemSellG = select(11, GetItemInfo(link))
-		if itemSellG and itemSellG > 0 then
-			local _, _, count = GetQuestLogRewardInfo(index)
-			local count = count or 1
-			self:AddDoubleLine("卖店价:",GetMoneyString(itemSellG*count))
-			self:Show()
-		end
-	end
-end)
-
-fuFrame.ItemSell = ADD_Checkbutton(nil,fuFrame,-100,"TOPLEFT",fuFrame.wupinxians1,"TOPLEFT",20,-20,"显示物品售价","在鼠标提示上显示物品售价")
-if tocversion>39999 then
-    fuFrame.ItemSell:Disable() fuFrame.ItemSell.Text:SetTextColor(0.4, 0.4, 0.4, 1) 
-end
-fuFrame.ItemSell:SetScript("OnClick", function (self)
-	if self:GetChecked() then
-		PIG['ShowPlus']['ItemSell']="ON";
-		fuFrame.ItemSell.V=true
-	else
-		PIG['ShowPlus']['ItemSell']="OFF";
-		fuFrame.ItemSell.V=false
-	end
-end);
-
---------------
+--==============================
 fuFrame.ItemLevel = ADD_Checkbutton(nil,fuFrame,-100,"TOPLEFT",fuFrame.wupinxians1,"TOPLEFT",300,-20,"显示物品ID/版本或LV","在鼠标提示上显示物品ID/版本或LV")
 fuFrame.ItemLevel:SetScript("OnClick", function (self)
 	if self:GetChecked() then
@@ -190,12 +133,6 @@ end)
 
 --加载设置---------------
 addonTable.ShowPlus_Tooltip = function()
-	if PIG['ShowPlus']['ItemSell']=="ON" then
-		fuFrame.ItemSell:SetChecked(true);
-		if fuFrame.ItemSell:IsEnabled() then
-			fuFrame.ItemSell.V=true
-		end
-	end
 	if PIG['ShowPlus']['ItemLevel']=="ON" then
 		fuFrame.ItemLevel:SetChecked(true);
 		fuFrame.ItemLevel.V=true

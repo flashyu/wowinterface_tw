@@ -93,7 +93,7 @@ PlaneFFFFF:SetScript("OnEvent",function(self, event, arg1, arg2, arg3, _, arg5,_
 					if arg2 == shenqingMSG then
 						PIG_InviteUnit(arg5)
 					else
-						SendChatMessage("无法接受申请,你的!Pig版本过低", "WHISPER", nil, arg5);
+						SendChatMessage("无法接受你的位面申请,!Pig版本过低", "WHISPER", nil, arg5);
 					end
 				end
 			end
@@ -116,7 +116,7 @@ local function ADD_Plane_Frame()
 	fuFrame.zijiweimian:SetPoint("TOPLEFT",fuFrame,"TOPLEFT",10,-8);
 	fuFrame.zijiweimian:SetFontObject(ChatFontNormal);
 	fuFrame.zijiweimian:SetTextColor(0,250/255,154/255, 1);
-	fuFrame.zijiweimian:SetText("你的位面ID:");
+	fuFrame.zijiweimian:SetText("你的区域ID:");
 	fuFrame.zijiweimianID = fuFrame:CreateFontString();
 	fuFrame.zijiweimianID:SetPoint("TOPLEFT", fuFrame.zijiweimian, "BOTTOMLEFT", 0, -6);
 	fuFrame.zijiweimianID:SetFontObject(ChatFontNormal);
@@ -329,6 +329,7 @@ local function ADD_Plane_Frame()
 		liebiao.Name.T:SetTextColor(0,250/255,154/255, 1);
 		liebiao.Name:SetScript("OnMouseUp", function(self,button)
 			local name = self.T:GetText()
+			if name=="匿名" then return end
 			local editBox = ChatEdit_ChooseBoxForSend();
 			local hasText = editBox:GetText()
 			if editBox:HasFocus() then
@@ -494,56 +495,47 @@ local function ADD_Plane_Frame()
 					kjframe.Weimian:SetText(weimianID);
 					--
 					kjframe.Name.T:SetText(PIG_WB.JieshouInfo[dangqian][2]);
+					--
 					local weizhi = C_Map.GetMapInfo(MapID).name
 					kjframe.Weizhi:SetText(weizhi);
-					if Open=="Y" and autoinv=="Y" then
-						kjframe.autoinv:SetText("|cff00FF00是|r");
-					else
-						if Open=="Y" and autoinv~="Y" then
-							kjframe.autoinv:SetText("|cffFF0000否|r");
+
+					local function DisableFrame(fujiK,Open,autoinv)
+						fujiK.miyu:Show()
+						fujiK.Weimian:SetTextColor(0,250/255,154/255, 1);
+						fujiK.Name.T:SetTextColor(0,250/255,154/255, 1);
+						fujiK.Weizhi:SetTextColor(0,250/255,154/255, 1);
+						fujiK.autoinv:SetTextColor(0,250/255,154/255, 1);
+						if Open=="Y" then
+							if autoinv=="Y" then
+								fujiK.autoinv:SetText("|cff00FF00是|r")
+							else
+								fujiK.autoinv:SetText("|cffFF0000否|r");
+							end
 						else
-							kjframe.autoinv:SetText("|cff333333勿扰|r");
+							fujiK.miyu:Hide()
+							fujiK.Name.T:SetText("匿名");
+							fujiK.autoinv:SetText("");
+							fujiK.Weimian:SetTextColor(0.5,0.5,0.5, 0.4);
+							fujiK.Name.T:SetTextColor(0.5,0.5,0.5, 0.4);
+							fujiK.Weizhi:SetTextColor(0.5,0.5,0.5, 0.4);
+							fujiK.autoinv:SetTextColor(0.5,0.5,0.5, 0.4);
 						end
 					end
-					---
-					local function DisableFrame(YN)
-						if YN then
-							kjframe.Weimian:SetTextColor(0,250/255,154/255, 1);
-							kjframe.Name.T:SetTextColor(0,250/255,154/255, 1);
-							kjframe.Weizhi:SetTextColor(0,250/255,154/255, 1);
-							kjframe.autoinv:SetTextColor(0,250/255,154/255, 1);
-						else
-							kjframe.Weimian:SetTextColor(1,1,1, 0.4);
-							kjframe.Name.T:SetTextColor(1,1,1, 0.4);
-							kjframe.Weizhi:SetTextColor(1,1,1, 0.4);
-							kjframe.autoinv:SetTextColor(1,1,1, 0.4);
-						end
-					end
+					DisableFrame(kjframe,Open,autoinv)
 					local weimianID_ziji = panduanweimianID(tonumber(PIG_WB.weimianID))
 					if weimianID~="？" and weimianID_ziji~="？" and weimianID==weimianID_ziji then
-						DisableFrame(false)
 						kjframe.miyu:Disable()
 						kjframe.miyu:SetText("同位面");
 					else
-						DisableFrame(true)
 						if PIG_WB.JieshouInfo[dangqian][4] then
 							kjframe.miyu:Disable()
 							kjframe.miyu:SetText("已发送请求");
 						else
 							kjframe.miyu:Enable()
-							if Open=="Y" and autoinv=="Y" then
-								if PIG['PlaneInvite']['zidongjieshou']=="ON" then
-									kjframe.miyu:SetText("请求换位面");
-								else
-									kjframe.miyu:SetText("密语");
-								end
+							if autoinv=="Y" and PIG['PlaneInvite']['zidongjieshou']=="ON" then
+								kjframe.miyu:SetText("请求换位面");
 							else
-								if Open=="Y" and autoinv~="Y" then
-									kjframe.miyu:SetText("密语");
-								else
-									kjframe.miyu:Disable()
-									kjframe.miyu:SetText("勿扰");
-								end
+								kjframe.miyu:SetText("密语");
 							end
 						end
 					end	

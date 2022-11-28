@@ -65,9 +65,6 @@ hooksecurefunc(GameTooltip, "SetQuestLogItem", function(self,  questType, index)
 end)
 
 fuFrame.ItemSell = ADD_Checkbutton(nil,fuFrame,-100,"TOPLEFT",fuFrame.wupinxians1,"TOPLEFT",20,-20,"显示物品售价","在鼠标提示上显示物品售价")
-if tocversion>39999 then
-    fuFrame.ItemSell:Disable() fuFrame.ItemSell.Text:SetTextColor(0.4, 0.4, 0.4, 1) 
-end
 fuFrame.ItemSell:SetScript("OnClick", function (self)
 	if self:GetChecked() then
 		PIG['ShowPlus']['ItemSell']="ON";
@@ -194,9 +191,7 @@ end)
 addonTable.ShowPlus_Tooltip = function()
 	if PIG['ShowPlus']['ItemSell']=="ON" then
 		fuFrame.ItemSell:SetChecked(true);
-		if fuFrame.ItemSell:IsEnabled() then
-			fuFrame.ItemSell.V=true
-		end
+		fuFrame.ItemSell.V=true
 	end
 	if PIG['ShowPlus']['ItemLevel']=="ON" then
 		fuFrame.ItemLevel:SetChecked(true);

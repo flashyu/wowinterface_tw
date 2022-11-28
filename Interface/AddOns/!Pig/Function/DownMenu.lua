@@ -104,7 +104,7 @@ for i=1,UIDROPDOWNMENU_MAXLEVELS do
 		CheckBut:HookScript("OnMouseDown", function (self)
 			local fujilist = self:GetParent()
 			local xialaMenu = fujilist.dropdown
-			if xialaMenu.EasyMenu=="DJEasyMenu" then
+			if xialaMenu.EasyMenu=="DJEasyMenu" or self.notCheckable then
 				self.Text:SetPoint("LEFT", 5, -1);
 			else
 				self.Text:SetPoint("LEFT", 19, -1);
@@ -113,7 +113,7 @@ for i=1,UIDROPDOWNMENU_MAXLEVELS do
 		CheckBut:HookScript("OnMouseUp", function (self)
 			local fujilist = self:GetParent()
 			local xialaMenu = fujilist.dropdown
-			if xialaMenu.EasyMenu=="DJEasyMenu" then
+			if xialaMenu.EasyMenu=="DJEasyMenu" or self.notCheckable then
 				self.Text:SetPoint("LEFT", 4, 0);
 			else
 				self.Text:SetPoint("LEFT", 18, 0);
@@ -255,9 +255,10 @@ local function PIGDownMenu(gnName,SizeWH,fuFrame,Point,EasyMenu)
 		CheckBut.value=info.text
 		CheckBut.arg1=info.arg1
 		CheckBut.arg2=info.arg2
+		CheckBut.notCheckable=info.notCheckable
 		CheckBut.func=info.func or function() end
 		CheckBut:SetChecked(info.checked);
-		if self.EasyMenu=="DJEasyMenu" or self.EasyMenu=="notCheckable" then
+		if self.EasyMenu=="DJEasyMenu" or info.notCheckable then
 			CheckBut.Check:Hide();
 			CheckBut.UnCheck:Hide();
 			CheckBut.Text:SetPoint("LEFT", 4, 0);

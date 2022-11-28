@@ -3,6 +3,7 @@ local gsub = _G.string.gsub
 local find = _G.string.find
 local ADD_Frame=addonTable.ADD_Frame
 local ADD_Checkbutton=addonTable.ADD_Checkbutton
+local PIGDownMenu=addonTable.PIGDownMenu
 --=====分G助手==============================
 local function ADD_fenG()
 	local Width,Height  = RaidR_UI:GetWidth(), RaidR_UI:GetHeight();
@@ -537,6 +538,7 @@ local function ADD_fenG()
 	fenG.guangbo = CreateFrame("Button",nil,fenG, "UIPanelButtonTemplate");  
 	fenG.guangbo:SetSize(116,28);
 	fenG.guangbo:SetPoint("TOPLEFT",fenG,"TOPLEFT",480,-(Height-138));
+	fenG.guangbo:SetText("·发送到");
 	fenG.guangbo.Font=fenG.guangbo:GetFontString()
 	fenG.guangbo.Font:SetFont(ChatFontNormal:GetFont(), 13);
 	fenG.guangbo.Font:SetTextColor(1, 1, 1, 1);
@@ -665,32 +667,25 @@ local function ADD_fenG()
 		SendChatMessage(shourumingxi, RaidR_UI.xuanzhongChat, nil);
 		SendChatMessage("=《!Pig开团助手为你服务》=", RaidR_UI.xuanzhongChat, nil);
 	end);
-	local pindaoName = {"发送到团队","发送到说话","发送到队伍","发送到公会"};
+	local pindaoName = {["RAID"]="|cffFF7F00团队|r",["SAY"]="|cffFFFFFF说话|r",["PARTY"]="|cffAAAAFF队伍|r",["GUILD"]="|cff40FF40公会|r"};
 	local pindaoID = {"RAID","SAY","PARTY","GUILD"};
-	fenG.guangbo_dow = CreateFrame("FRAME", nil, fenG, "UIDropDownMenuTemplate")
-	fenG.guangbo_dow:SetPoint("LEFT",fenG.guangbo,"RIGHT",-72,-3)
-	fenG.guangbo_dow.Left:Hide();
-	fenG.guangbo_dow.Middle:Hide();
-	fenG.guangbo_dow.Right:Hide();
-	UIDropDownMenu_SetWidth(fenG.guangbo_dow, 58)
-	UIDropDownMenu_Initialize(fenG.guangbo_dow, function(self)
-		local info = UIDropDownMenu_CreateInfo()
-		info.func = self.SetValue
-		for ii=1, #pindaoID do
-			info.text, info.arg1, info.checked = pindaoName[ii], pindaoID[ii], pindaoID[ii] == RaidR_UI.xuanzhongChat;
-			UIDropDownMenu_AddButton(info)
-		end
-	end)
-	function fenG.guangbo_dow:SetValue(newValue)
-		RaidR_UI.xuanzhongChat =newValue;
+	fenG.guangbo_dow=PIGDownMenu(nil,{68,24},fenG,{"LEFT",fenG.guangbo,"RIGHT", -50,0})
+	fenG.guangbo_dow:SetBackdrop(nil)
+	function fenG.guangbo_dow:PIGDownMenu_Update_But(self)
+		local info = {}
+		info.func = self.PIGDownMenu_SetValue
 		for i=1,#pindaoID,1 do
-			if newValue==pindaoID[i] then
-				fenG.guangbo:SetText("·"..pindaoName[i]);
-			end
-		end
-		CloseDropDownMenus()
+		    info.text, info.arg1, info.arg2 = pindaoName[pindaoID[i]], pindaoID[i], pindaoID[i]
+		    info.checked = pindaoID[i]==RaidR_UI.xuanzhongChat
+			fenG.guangbo_dow:PIGDownMenu_AddButton(info)
+		end 
 	end
-	fenG.guangbo:SetText("·发送到团队");
+	function fenG.guangbo_dow:PIGDownMenu_SetValue(value,arg1,arg2)
+		fenG.guangbo_dow:PIGDownMenu_SetText(value)
+		RaidR_UI.xuanzhongChat=arg1
+		PIGCloseDropDownMenus()
+	end
+	fenG.guangbo_dow:PIGDownMenu_SetText(pindaoName[RaidR_UI.xuanzhongChat])
 	----==============================================================
 	fenG.liupaibobao = ADD_Checkbutton(nil,fenG,-10,"LEFT",fenG.guangbo,"RIGHT",40,0,"流拍","开启后,发送拍卖结果时会播报流拍物品")
 	fenG.liupaibobao:SetScript("OnClick", function (self)

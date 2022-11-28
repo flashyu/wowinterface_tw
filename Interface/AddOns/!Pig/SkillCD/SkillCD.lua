@@ -102,13 +102,27 @@ local function huoqu_Skill()
 			table.insert(yixueSkill,jinengxinxi)
 		end
 	end
-	for Bagid=0,4,1 do
-		local numberOfSlots = GetContainerNumSlots(Bagid);
-		for i=1,numberOfSlots,1 do
-			for ii=1,#Pig_ItemID,1 do
-				if GetContainerItemID(Bagid, i)==Pig_ItemID[ii][3] then--有物品
-					local Itemxinxi={Pig_ItemID[ii][1],Pig_ItemID[ii][2],Pig_ItemID[ii][3]};
-					table.insert(yixueSkill,Itemxinxi)
+	if tocversion<100000 then
+		for Bagid=0,4,1 do
+			local numberOfSlots = GetContainerNumSlots(Bagid);
+			for i=1,numberOfSlots,1 do
+				for ii=1,#Pig_ItemID,1 do
+					if GetContainerItemID(Bagid, i)==Pig_ItemID[ii][3] then--有物品
+						local Itemxinxi={Pig_ItemID[ii][1],Pig_ItemID[ii][2],Pig_ItemID[ii][3]};
+						table.insert(yixueSkill,Itemxinxi)
+					end
+				end
+			end
+		end
+	else
+		for Bagid=0,4,1 do
+			local numberOfSlots = C_Container.GetContainerNumSlots(Bagid);
+			for i=1,numberOfSlots,1 do
+				for ii=1,#Pig_ItemID,1 do
+					if C_Container.GetContainerItemID(Bagid, i)==Pig_ItemID[ii][3] then--有物品
+						local Itemxinxi={Pig_ItemID[ii][1],Pig_ItemID[ii][2],Pig_ItemID[ii][3]};
+						table.insert(yixueSkill,Itemxinxi)
+					end
 				end
 			end
 		end
@@ -471,14 +485,28 @@ local function Add_Skill_CD()
 							for kk=1,#shujuyuan[k][2],1 do
 								if shujuyuan[k][2][kk][1]==arg3 then
 									local function gengxinSPCD3()
-										for Bagid=0,4,1 do
-											local numberOfSlots = GetContainerNumSlots(Bagid);
-											for sol=1,numberOfSlots,1 do
-												if GetContainerItemID(Bagid, sol)==Pig_ItemID[i][3] then
-													local startTime, duration = GetContainerItemCooldown(Bagid, sol)
-													shujuyuan[k][2][kk][4] =startTime;
-													shujuyuan[k][2][kk][5] =duration;
-													gengxin_Skill(zhuanyeCD.SkillCD.Scroll);
+										if tocversion<100000 then
+											for Bagid=0,4,1 do
+												local numberOfSlots = GetContainerNumSlots(Bagid);
+												for sol=1,numberOfSlots,1 do
+													if GetContainerItemID(Bagid, sol)==Pig_ItemID[i][3] then
+														local startTime, duration = GetContainerItemCooldown(Bagid, sol)
+														shujuyuan[k][2][kk][4] =startTime;
+														shujuyuan[k][2][kk][5] =duration;
+														gengxin_Skill(zhuanyeCD.SkillCD.Scroll);
+													end
+												end
+											end
+										else
+											for Bagid=0,4,1 do
+												local numberOfSlots = C_Container.GetContainerNumSlots(Bagid);
+												for sol=1,numberOfSlots,1 do
+													if C_Container.GetContainerItemID(Bagid, sol)==Pig_ItemID[i][3] then
+														local startTime, duration = C_Container.GetContainerItemCooldown(Bagid, sol)
+														shujuyuan[k][2][kk][4] =startTime;
+														shujuyuan[k][2][kk][5] =duration;
+														gengxin_Skill(zhuanyeCD.SkillCD.Scroll);
+													end
 												end
 											end
 										end

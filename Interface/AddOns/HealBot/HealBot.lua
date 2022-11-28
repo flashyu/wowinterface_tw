@@ -215,6 +215,12 @@ function HealBot_SetResetFlag(mode)
       --HealBot_setCall("HealBot_SetResetFlag")
 end
 
+function HealBot_SetToolTip(tip)
+    if not tip:IsOwned(HealBot) then
+        tip:SetOwner(HealBot, 'ANCHOR_NONE')
+    end
+end
+
 local uzText=""
 function HealBot_UnitZone(button)
     if button.player or UnitIsVisible(button.unit) then
@@ -847,6 +853,10 @@ function HealBot_ManaWatch(guid, state)
     else
         hbManaWatch[guid]=nil
     end
+end
+
+function HealBot_ManaWatchClear()
+    hbManaWatch={}
 end
 
 local hbManaCurrent, hbManaMax, pLowManaDrinkNeed=0,0,false
@@ -1828,6 +1838,14 @@ local HealBot_GetContainerItemID=GetContainerItemID
 if C_Container then
     HealBot_GetContainerNumSlots=C_Container.GetContainerNumSlots or GetContainerNumSlots
     HealBot_GetContainerItemID=C_Container.GetContainerItemID or GetContainerItemID
+end
+
+local function HealBot_NotBagItemPetCage(bag, slot)
+    if HealBot_GetContainerItemID(bag, slot) and HealBot_GetContainerItemID(bag, slot)==82800 then
+        return false
+    else
+        return true
+    end
 end
 
 local function HealBot_ItemIdsInBag(bag)
@@ -2891,6 +2909,12 @@ function HealBot_SetPlayerData()
         HealBot_Data["PALIVE"]=true
     end
     HealBot_Data["PGUID"]=UnitGUID("player")
+    local _, maxHlth=UnitHealth("player")
+    if maxHlth and maxHlth>1 then
+        HealBot_Aux_setInHealAbsorbMax(maxHlth)
+    else
+        HealBot_Timers_Set("LAST", "SetPlayerData", 5)
+    end
 end
 
 function HealBot_OnEvent_AddOnLoaded(addonName, reset)
@@ -2968,6 +2992,7 @@ function HealBot_OnEvent_VariablesLoaded()
 end
 
 function HealBot_VariablesLoaded()
+    HealBot_SetToolTip(HealBot_ScanTooltip)
     if LSM then
         for i = 1, #HealBot_Default_Textures do
             LSM:Register("statusbar", HealBot_Default_Textures[i].name, HealBot_Default_Textures[i].file)
@@ -5022,15 +5047,17 @@ function HealBot_BagScanBuffExtra(bag)
     local itemText=false
     local numSlots=HealBot_GetContainerNumSlots(bag)
     for slot = 1,numSlots do
-        HealBot_ScanTooltip:SetBagItem(bag, slot)
-        itemText=false
-        for j=1, #HEALBOT_STRING_MATCH_EXTRABUFFS do
-            if not itemText then
-                itemText=EnumerateTooltipLines_helper(HEALBOT_STRING_MATCH_EXTRABUFFS[j], HealBot_ScanTooltip:GetRegions())
+        if HealBot_NotBagItemPetCage(bag, slot) then
+            HealBot_ScanTooltip:SetBagItem(bag, slot)
+            itemText=false
+            for j=1, #HEALBOT_STRING_MATCH_EXTRABUFFS do
+                if not itemText then
+                    itemText=EnumerateTooltipLines_helper(HEALBOT_STRING_MATCH_EXTRABUFFS[j], HealBot_ScanTooltip:GetRegions())
+                end
             end
-        end
-        if itemText then
-            HealBot_BuffExtraItems[itemText]=true
+            if itemText then
+                HealBot_BuffExtraItems[itemText]=true
+            end
         end
     end
     if bag<4 then
@@ -5054,10 +5081,12 @@ function HealBot_BagScanManaDrink(bag)
     local itemText=""
     local numSlots=HealBot_GetContainerNumSlots(bag)
     for slot = 1,numSlots do
-        HealBot_ScanTooltip:SetBagItem(bag, slot)
-        itemText=EnumerateTooltipLines_helper(HEALBOT_STRING_MATCH_RESTOREMANA, HealBot_ScanTooltip:GetRegions())
-        if itemText then
-            HealBot_ManaDrinkItems[itemText]=true
+        if HealBot_NotBagItemPetCage(bag, slot) then
+            HealBot_ScanTooltip:SetBagItem(bag, slot)
+            itemText=EnumerateTooltipLines_helper(HEALBOT_STRING_MATCH_RESTOREMANA, HealBot_ScanTooltip:GetRegions())
+            if itemText then
+                HealBot_ManaDrinkItems[itemText]=true
+            end
         end
     end
     if bag<4 then
@@ -5079,10 +5108,12 @@ function HealBot_BagScanWellFed(bag)
     local itemText=""
     local numSlots=HealBot_GetContainerNumSlots(bag)
     for slot = 1,numSlots do
-        HealBot_ScanTooltip:SetBagItem(bag, slot)
-        itemText=EnumerateTooltipLines_helper(HEALBOT_STRING_MATCH_WELLFED, HealBot_ScanTooltip:GetRegions())
-        if itemText then
-            HealBot_WellFedItems[itemText]=true
+        if HealBot_NotBagItemPetCage(bag, slot) then
+            HealBot_ScanTooltip:SetBagItem(bag, slot)
+            itemText=EnumerateTooltipLines_helper(HEALBOT_STRING_MATCH_WELLFED, HealBot_ScanTooltip:GetRegions())
+            if itemText then
+                HealBot_WellFedItems[itemText]=true
+            end
         end
     end
     if bag<4 then

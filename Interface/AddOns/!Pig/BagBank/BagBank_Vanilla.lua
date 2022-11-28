@@ -577,8 +577,9 @@ GameTooltip:HookScript("OnTooltipSetItem", function(self)
 			if renwuWupinshu.Cshuliang>0 or renwuWupinshu.BAGshuliang>0 or renwuWupinshu.BANKshuliang>0 then
 				local tooltipxianshineirong={"","",0}
 				tooltipxianshineirong.argbHex="ffffffff"
-				if tonumber(renwuWupinINFO[k]["ClassN"])>0 then
-					local classInfo = C_CreatureInfo.GetClassInfo(renwuWupinINFO[k]["ClassN"])
+				local zhiyeIDhao = renwuWupinINFO[k]["ClassN"] or 0
+				if tonumber(zhiyeIDhao)>0 then
+					local classInfo = C_CreatureInfo.GetClassInfo(zhiyeIDhao)
 					local _, _, _, argbHex = GetClassColor(classInfo["classFile"]);
 					tooltipxianshineirong.argbHex=argbHex
 				end
@@ -747,7 +748,7 @@ local function zhegnhe_Open()
 
 	BAGheji.Close = CreateFrame("Button",nil,BAGheji, "UIPanelCloseButton");
 	BAGheji.Close:SetSize(32,32);
-	BAGheji.Close:SetPoint("TOPRIGHT",BAGheji,"TOPRIGHT",4,-7);
+	BAGheji.Close:SetPoint("TOPRIGHT",BAGheji,"TOPRIGHT",4,-5);
 	BAGheji.Close:HookScript("OnClick",  function (self)
 		CloseAllBags()
 	end);

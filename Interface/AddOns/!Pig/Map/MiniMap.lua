@@ -50,10 +50,64 @@ local function gengxinMBweizhi(newValue)
 		end
 	end
 end
+local paichulist = {
+	"MiniMapTrackingFrame",
+	"MiniMapMeetingStoneFrame",
+	"MiniMapMailFrame",
+	"MiniMapBattlefieldFrame",
+	"MiniMapWorldMapButton",
+	"MiniMapPing",
+	"MinimapBackdrop",
+	"MinimapZoomIn",
+	"MinimapZoomOut",
+	"BookOfTracksFrame",
+	"GatherNote",
+	"FishingExtravaganzaMini",
+	"MiniNotePOI",
+	"RecipeRadarMinimapIcon",
+	"FWGMinimapPOI",
+	"CartographerNotesPOI",
+	"MBB_MinimapButtonFrame",
+	"EnhancedFrameMinimapButton",
+	"GFW_TrackMenuFrame",
+	"GFW_TrackMenuButton",
+	"TDial_TrackingIcon",
+	"TDial_TrackButton",
+	"MiniMapTracking",
+	"GatherMatePin",
+	"HandyNotesPin",
+	"TimeManagerClockButton",
+	"GameTimeFrame",
+	"DA_Minimap",
+	"ElvConfigToggle",
+	"MiniMapInstanceDifficulty",
+	"MinimapZoneTextButton",
+	"GuildInstanceDifficulty",
+	"MiniMapVoiceChatFrame",
+	"MiniMapRecordingButton",
+	"QueueStatusMinimapButton",
+	"GatherArchNote",
+	"ZGVMarker",
+	"QuestPointerPOI",
+	"poiMinimap",
+	"MiniMapLFGFrame",
+	"PremadeFilter_MinimapButton",
+	"QuestieFrame",
+	"Guidelime",
+	"MiniMapBattlefieldFrame",
+	"LibDBIcon10_BugSack",
+	"MinimapButton_PigUI",
+	"MinimapLayerFrame",
+	"NWBNaxxMarkerMini",
+	"NWBMini",
+	"SexyMapCustomBackdrop",
+	"SexyMapCoordFrame",
+	"SexyMapPingFrame",
+	"SexyMapZoneTextButton",
+}
 local function Other_ShouNaBut()
 	local children = { Minimap:GetChildren() };
 	local NewPaichulist = {}
-	local paichulist = PIG["MinimapBpaichu"];
 	for i=1,10 do
 		table.insert(NewPaichulist,"Spy_MapNoteList_mini"..i)
 	end

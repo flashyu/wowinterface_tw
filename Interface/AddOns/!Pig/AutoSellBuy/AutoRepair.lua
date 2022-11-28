@@ -3,6 +3,7 @@ local _, addonTable = ...;
 local fuFrame=List_R_F_1_1
 local FrameLevel=addonTable.SellBuyFrameLevel
 local ADD_Checkbutton=addonTable.ADD_Checkbutton
+local _, _, _, tocversion = GetBuildInfo()
 --===========================================================
 fuFrame.AutoRepair = ADD_Checkbutton(nil,fuFrame,-80,"TOPLEFT",fuFrame,"TOPLEFT",20,-260,"自动修理", "打开商人界面自动修理身上和背包物品")
 fuFrame.AutoRepair:SetScript("OnClick", function (self)
@@ -13,7 +14,6 @@ fuFrame.AutoRepair:SetScript("OnClick", function (self)
 	end
 end);
 fuFrame.GonghuiRepair = ADD_Checkbutton(nil,fuFrame,-80,"TOPLEFT",fuFrame,"TOPLEFT",300,-260,"优先使用公会资金(>=TBC)", "修理时优先使用公会资金")
-local _, _, _, tocversion = GetBuildInfo()
 if tocversion<20000 then fuFrame.GonghuiRepair:Disable() fuFrame.GonghuiRepair.Text:SetTextColor(0.4, 0.4, 0.4, 1) end
 fuFrame.GonghuiRepair:SetScript("OnClick", function (self)
 	if self:GetChecked() then

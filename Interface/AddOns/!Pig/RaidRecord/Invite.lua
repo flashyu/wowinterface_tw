@@ -187,13 +187,14 @@ local function ADD_Invite()
 	invite.renyuannpeizhiinfo:SetText(" ");
 	--
 	local fubenMoshi ={10,15,20,25,40};
-	invite.renyuannpeizhiinfo_D=PIGDownMenu(nil,{100,24},invite,{"LEFT",invite.renyuannpeizhiinfo,"RIGHT", 0,0},"notCheckable")
+	invite.renyuannpeizhiinfo_D=PIGDownMenu(nil,{100,24},invite,{"LEFT",invite.renyuannpeizhiinfo,"RIGHT", 0,0})
 	invite.renyuannpeizhiinfo_D:PIGDownMenu_SetText("导入预设")
 	function invite.renyuannpeizhiinfo_D:PIGDownMenu_Update_But(self)
 		local info = {}
 		info.func = self.PIGDownMenu_SetValue
 		for i=1,#fubenMoshi,1 do
 		    info.text, info.arg1 = "导入"..fubenMoshi[i].."人预设", fubenMoshi[i]
+		    info.notCheckable = true;
 			invite.renyuannpeizhiinfo_D:PIGDownMenu_AddButton(info)
 		end 
 	end

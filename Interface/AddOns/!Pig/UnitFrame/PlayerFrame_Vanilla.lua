@@ -42,18 +42,18 @@ local function ZishenFrame_Open()
 	end	
 	---------------
 	PlayerFrame.ziji.title1 = PlayerFrame.ziji:CreateFontString();--血量
-	PlayerFrame.ziji.title1:SetPoint("CENTER", PlayerFrame.ziji, "CENTER", 0, 0);
-	PlayerFrame.ziji.title1:SetFontObject(ChatFontNormal);
+	PlayerFrame.ziji.title1:SetPoint("CENTER", PlayerFrame.ziji, "CENTER", 0, 1);
+	PlayerFrame.ziji.title1:SetFont(ChatFontNormal:GetFont(), 16,"OUTLINE")
 	PlayerFrame.ziji.title1:SetTextColor(0,1,0,1);
 
 	PlayerFrame.ziji.title2 = PlayerFrame.ziji:CreateFontString();--血量百分比
 	PlayerFrame.ziji.title2:SetPoint("BOTTOM", PlayerFrame.ziji.title1, "TOP", 0, 0);
-	PlayerFrame.ziji.title2:SetFontObject(ChatFontNormal);--字体
-	PlayerFrame.ziji.title2:SetTextColor(1,0.82,0,1);--字体颜色
+	PlayerFrame.ziji.title2:SetFont(ChatFontNormal:GetFont(), 13,"OUTLINE")
+	PlayerFrame.ziji.title2:SetTextColor(1,0.82,0,1);
 
 	PlayerFrame.ziji.title3 = PlayerFrame.ziji:CreateFontString();--魔法值
 	PlayerFrame.ziji.title3:SetPoint("TOP", PlayerFrame.ziji.title1, "BOTTOM", 0, 0);
-	PlayerFrame.ziji.title3:SetFontObject(ChatFontNormal);--字体
+	PlayerFrame.ziji.title3:SetFont(ChatFontNormal:GetFont(), 13,"OUTLINE")
 	-------------
 	local function shuaxinxueliangziji(self)
 		local HP = UnitHealth("player");	
