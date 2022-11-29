@@ -188,8 +188,7 @@ if not L then return end
 --	L["MENU_BAR"] = ""
 	L["MENU_BAR_TITLE"] = "分组 %1$s 选项"
 	L["MENU_BAR_CATEGORY_DESC"] = "指定 %1$s 到此分组"
-	L["MENU_BAR_CATEGORY_CURRENT"] = "目前使用"
-	L["MENU_BAR_CATEGORY_ASSIGN"] = "可使用类别"
+--	L["MENU_BAR_CATEGORY_LABEL"] = ""
 	L["MENU_BAR_CATEGORY_REMOVE_DESC"] = "自分组 %2$s 中移除 %1$s，并将它放回预设分组" -- 1 is the category name, 2 is the bar number
 	L["MENU_BAR_CATEGORY_HIDDEN_DESC"] = "设定此分组是否为隐藏模式\n\n在隐藏分组内的物品，一般情况下将不会显示"
 --	L["MENU_BAR_CATEGORY_MOVE_START_DESC"] = ""
@@ -404,7 +403,6 @@ if not L then return end
 --	L["CONFIG_CONTROL_MONITOR_DESC"] = "为此角色(%2$s)对 %1$s 数据建立监控."
 	L["CONFIG_CONTROL_SAVE_DESC"] = "记录 %1$s 的数据， 使你可以在使用其他角色 (或离线！？)的时候进行查看."
 	L["CONFIG_CONTROL_NOTIFY_ERASE_DESC"] = "删除 %s 数据时，生成一个通知"
-	L["CONFIG_CONTROL_OVERRIDE"] = "取代系统框架"
 	L["CONFIG_CONTROL_OVERRIDE_DESC"] = "设定是否取代系统内建背包及银行\n\n停用此项功能的话，你只能在按键设定中设定，才能开启 %1$s"
 --	L["CONFIG_CONTROL_SPECIAL_DESC"] = ""
 	L["CONFIG_CONTROL_ANCHOR_LOCK_DESC"] = "锁定 %1$s 窗口到当前移动的位置"
@@ -573,12 +571,14 @@ if not L then return end
 --	L["CONFIG_ACTION_TYPE"] = ""
 --	L["CONFIG_ACTION_TYPE_DESC"] = ""
 --	L["CONFIG_ACTION_WHEN_DESC"] = ""
+--	L["CONFIG_ACTION_ENABLE_DESC"] = ""
 	
 --	L["CONFIG_ACTION_MANUAL_RUN"] = ""
 --	L["CONFIG_ACTION_TESTMODE"] = ""
 	
 --	L["CONFIG_ACTION_VENDOR_SELL"] = ""
 --	L["CONFIG_ACTION_VENDOR_AUTOMATIC_DESC"] = ""
+--	L["CONFIG_ACTION_VENDOR_MANUAL_DESC"] = ""
 --	L["CONFIG_ACTION_VENDOR_LIMIT"] = ""
 --	L["CONFIG_ACTION_VENDOR_LIMIT_DESC"] = ""
 --	L["CONFIG_ACTION_VENDOR_LIMIT_ABORT"] = ""
@@ -599,12 +599,15 @@ if not L then return end
 --	L["CONFIG_ACTION_VENDOR_TESTMODE"] = ""
 --	L["CONFIG_ACTION_VENDOR_TESTMODE_DESC"] = ""
 --	L["CONFIG_ACTION_VENDOR_PROCESSING_DISABLED_DESC"] = ""
+	
 --	L["CONFIG_ACTION_VENDOR_SOULBOUND_ALREADY_KNOWN_DESC"] = ""
 --	L["CONFIG_ACTION_VENDOR_SOULBOUND_EQUIPMENT_DESC"] = ""
 --	L["CONFIG_ACTION_VENDOR_SOULBOUND_ITEMLEVEL_DESC"] = ""
 	
 --	L["CONFIG_ACTION_MAIL_SEND"] = ""
 --	L["CONFIG_ACTION_MAIL_AUTOMATIC_DESC"] = ""
+--	L["CONFIG_ACTION_MAIL_MANUAL_DESC"] = ""
+--	L["CONFIG_ACTION_MAIL_TESTMODE"] = ""
 --	L["CONFIG_ACTION_MAIL_TESTMODE_DESC"] = ""
 --	L["CONFIG_ACTION_MAIL_QUALITY_CUTOFF_DESC"] = ""
 --	L["CONFIG_ACTION_MAIL_LIST_DESC"] = ""
@@ -688,9 +691,8 @@ if not L then return end
 	
 	L["CONFIG_RULE_SHOWDISABLED"] = "显示禁用的规则"
 	L["CONFIG_RULE_SHOWDISABLED_DESC"] = "禁用规则显示开关"
---	L["CONFIG_RULE_WIDTH_DESC"] = ""
---	L["CONFIG_RULE_ROWS"] = ""
---	L["CONFIG_RULE_ROWS_DESC"] = ""
+--	L["CONFIG_LIST_WIDTH_DESC"] = ""
+--	L["CONFIG_LIST_ROWS_DESC"] = ""
 	
 --	L["CONFIG_CATEGORY_CUSTOM"] = ""
 	L["CONFIG_CATEGORY_CUSTOM_PLURAL"] = "自定义分类"
@@ -828,6 +830,7 @@ if not L then return end
 	L["ANCHOR"] = "锚点"
 	L["ANCHOR_TEXT1"] = "设置锚点"
 	L["ANCHOR_TEXT2"] = "将 %1$s 的锚点设置在 %2$s"
+--	L["ANCHOR_TEXT3"] = ""
 	L["BORDER_DESC"] = "边框设置"
 	L["FILE"] = "文件"
 	L["HEIGHT"] = "高"
@@ -845,6 +848,7 @@ if not L then return end
 	L["ASCENDING"] = "升序"
 	L["DESCENDING"] = "降序"
 	L["LOCATION"] = "位置"
+--	L["LOCATIONS"] = ""
 --	L["DHMS"] = "DHMS"
 	L["RANDOM"] = "随机"
 	L["RELOAD"] = "重载"
@@ -909,6 +913,12 @@ if not L then return end
 --	L["COSMETIC"] = ""
 --	L["WHEN"] = ""
 --	L["RECIPIENT"] = ""
+--	L["ACTIONS"] = ""
+--	L["ROWS"] = ""
+--	L["DESTINATION"] = ""
+--	L["ASSIGNED"] = ""
+--	L["ASSIGNABLE"] = ""
+--	L["OVERRIDE"] = ""
 	
 	
 -- libdatabroker

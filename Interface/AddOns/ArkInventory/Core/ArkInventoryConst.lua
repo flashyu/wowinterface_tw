@@ -359,6 +359,308 @@ end
 
 
 
+ArkInventory.ENUM = {
+	ACTION = {
+		WHEN = {
+			DISABLED = 0,
+			MANUAL = 1,
+			AUTO = 2,
+		},
+		TYPE = {
+			IGNORE = 0,
+			VENDOR = 1,
+			MAIL = 2,
+			MOVE = 3,
+		},
+	},
+	ANCHOR = {
+		DEFAULT = 0,
+		BOTTOMRIGHT = 1,
+		BOTTOMLEFT = 2,
+		TOPLEFT = 3,
+		TOPRIGHT = 4,
+		TOP = 5,
+		BOTTOM = 6,
+		LEFT = 7,
+		RIGHT = 8,
+		CENTER = 9,
+	},
+	BAG = {
+		INDEX = {
+			BACKPACK = BACKPACK_CONTAINER or ( Enum.BagIndex and Enum.BagIndex.Backpack ) or 0,
+			BANK = BANK_CONTAINER or ( Enum.BagIndex and Enum.BagIndex.Bank ) or -1,
+			REAGENTBANK = REAGENTBANK_CONTAINER or ( Enum.BagIndex and Enum.BagIndex.Reagentbank ) or -3,
+			REAGENTBAG = ( Enum.BagIndex and Enum.BagIndex.Reagentbag ) or 5,
+			KEYRING = KEYRING_CONTAINER or ( Enum.BagIndex and Enum.BagIndex.Keyring ) or -2
+		},
+		OPENCLOSE = {
+			NO = 0,
+			YES = 1,
+			ALWAYS = 2,
+		},
+	},
+	BATTLEPET = {
+		ENEMY = LE_BATTLE_PET_ENEMY or 2,
+	},
+	BIND = { -- ITEM_BINDx
+		NEVER = 0,
+		USE = 1,
+		EQUIP = 2,
+		PICKUP = 3,
+		ACCOUNT = 4,
+	},
+	BUTTONID = {
+		MainMenu = 0,
+		Close = 1,
+		EditMode = 2,
+		Rules = 3,
+		Search = 4,
+		SwitchCharacter = 5,
+		SwitchLocation = 6,
+		Restack = 7,
+		Changer = 8,
+		Refresh = 9,
+		Actions = 10,
+	},
+	DIRECTION = {
+		HORIZONTAL = 1,
+		VERTICAL = 2,
+	},
+	EXPANSION = {
+		--CURRENT = set elsewhere,
+		DRAGONFLIGHT = LE_EXPANSION_DRAGONFLIGHT or 9,
+		SHADOWLANDS = LE_EXPANSION_SHADOWLANDS or 8,
+		BFA = LE_EXPANSION_BATTLE_FOR_AZEROTH or 7,
+		LEGION = LE_EXPANSION_LEGION or 6,
+		DRAENOR = LE_EXPANSION_WARLORDS_OF_DRAENOR or 5,
+		PANDARIA = LE_EXPANSION_MISTS_OF_PANDARIA or 4,
+		CATACLYSM = LE_EXPANSION_CATACLYSM or 3,
+		WRATH = LE_EXPANSION_WRATH_OF_THE_LICH_KING or 2,
+		TBC = LE_EXPANSION_BURNING_CRUSADE or 1,
+		CLASSIC = LE_EXPANSION_CLASSIC or 0,
+	},
+	ITEM = {
+		QUALITY = {
+			MISSING = -2,
+			UNKNOWN = -1,
+			POOR = ( Enum.ItemQuality and Enum.ItemQuality.Poor ) or LE_ITEM_QUALITY_POOR or 0,
+			STANDARD = ( Enum.ItemQuality and Enum.ItemQuality.Standard ) or LE_ITEM_QUALITY_COMMON or 1,
+			GOOD = ( Enum.ItemQuality and Enum.ItemQuality.Good )or LE_ITEM_QUALITY_UNCOMMON or 2,
+			RARE = ( Enum.ItemQuality and Enum.ItemQuality.Rare ) or LE_ITEM_QUALITY_RARE or 3,
+			EPIC = ( Enum.ItemQuality and Enum.ItemQuality.Epic ) or LE_ITEM_QUALITY_EPIC or 4,
+			LEGENDARY = ( Enum.ItemQuality and Enum.ItemQuality.Legendary ) or LE_ITEM_QUALITY_LEGENDARY or 5,
+			ARTIFACT = ( Enum.ItemQuality and Enum.ItemQuality.Artifact ) or LE_ITEM_QUALITY_ARTIFACT or 6,
+			HEIRLOOM = ( Enum.ItemQuality and Enum.ItemQuality.Heirloom ) or LE_ITEM_QUALITY_HEIRLOOM or 7,
+			WOWTOKEN = ( Enum.ItemQuality and Enum.ItemQuality.WoWToken ) or LE_ITEM_QUALITY_WOWTOKEN or 8,
+		},
+		TYPE = {
+			UNKNOWN = {
+				PARENT = -2,
+			},
+			EMPTY = {
+				PARENT = -1,
+			},
+			CONSUMABLE = {
+				PARENT = LE_ITEM_CLASS_CONSUMABLE or Enum.ItemClass.Consumable or 0,
+				EXPLOSIVES_AND_DEVICES = 0,
+				POTION = Enum.ItemConsumableSubclass.Potion or 1,
+				ELIXIR = Enum.ItemConsumableSubclass.Elixir or 2,
+				FLASK = 3 or Enum.ItemConsumableSubclass.Flask or 3,
+				SCROLL = 4 or Enum.ItemConsumableSubclass.Scroll or 4,
+				FOOD_AND_DRINK = 5 or Enum.ItemConsumableSubclass.Fooddrink or 5,
+				ITEM_ENHANCEMENT = 6 or Enum.ItemConsumableSubclass.Itemenhancement or 6,
+				BANDAGE = 7 or Enum.ItemConsumableSubclass.Bandage or 7,
+				OTHER = 8 or Enum.ItemConsumableSubclass.Other or 8,
+				VANTUSRUNE = 9 or Enum.ItemConsumableSubclass.Vantusrune or 9,
+			},
+			CONTAINER = {
+				PARENT = LE_ITEM_CLASS_CONTAINER or Enum.ItemClass.Container or 1,
+				BAG = 0,
+				SOULSHARD = 1,
+				HERBALISM = 2,
+				ENCHANTING = 3,
+				ENGINEERING = 4,
+				JEWELCRAFTING = 5,
+				MINING = 6,
+				LEATHERWORKING = 7,
+				INSCRIPTION = 8,
+				FISHING = 9,
+				COOKING = 10,
+				REAGENT = 11,
+			},
+			WEAPON = {
+				PARENT = LE_ITEM_CLASS_WEAPON or Enum.ItemClass.Weapon or 2,
+				AXE1H = LE_ITEM_WEAPON_AXE1H or Enum.ItemWeaponSubclass.Axe1H or 0,
+				AXE2H = LE_ITEM_WEAPON_AXE2H or Enum.ItemWeaponSubclass.Axe2H or 1,
+				BOW = LE_ITEM_WEAPON_BOWS or Enum.ItemWeaponSubclass.Bows or 2,
+				GUN = LE_ITEM_WEAPON_GUNS or Enum.ItemWeaponSubclass.Guns or 3,
+				MACE1H = LE_ITEM_WEAPON_MACE1H or Enum.ItemWeaponSubclass.Mace1H or 4,
+				MACE2H = LE_ITEM_WEAPON_MACE2H or Enum.ItemWeaponSubclass.Mace2H or 5,
+				POLEARM = LE_ITEM_WEAPON_POLEARM or Enum.ItemWeaponSubclass.Polearm or 6,
+				SWORD1H = LE_ITEM_WEAPON_SWORD1H or Enum.ItemWeaponSubclass.Sword1H or 7,
+				SWORD2H = LE_ITEM_WEAPON_SWORD2H or Enum.ItemWeaponSubclass.Sword2H or 8,
+				WARGLAIVE = LE_ITEM_WEAPON_WARGLAIVE or Enum.ItemWeaponSubclass.Warglaive or 9,
+				STAFF = LE_ITEM_WEAPON_STAFF or Enum.ItemWeaponSubclass.Staff or 10,
+				EXOTIC1H = LE_ITEM_WEAPON_EXOTIC1H or Enum.ItemWeaponSubclass.Bearclaw or 11,
+				EXOTIC2H = LE_ITEM_WEAPON_EXOTIC2H or Enum.ItemWeaponSubclass.Catclaw or 12,
+				FIST = LE_ITEM_WEAPON_UNARMED or Enum.ItemWeaponSubclass.Unarmed or 13,
+				GENERIC = LE_ITEM_WEAPON_GENERIC or Enum.ItemWeaponSubclass.Generic or 14,
+				DAGGER = LE_ITEM_WEAPON_DAGGER or Enum.ItemWeaponSubclass.Dagger or 15,
+				THROWN = LE_ITEM_WEAPON_THROWN or Enum.ItemWeaponSubclass.Thrown or 16,
+				SPEAR = LE_ITEM_WEAPON_SPEAR or Enum.ItemWeaponSubclass.Obsolete3 or 17,
+				CROSSBOW = LE_ITEM_WEAPON_CROSSBOW or Enum.ItemWeaponSubclass.Crossbow or 18,
+				WAND = LE_ITEM_WEAPON_WAND or Enum.ItemWeaponSubclass.Wand or 19,
+				FISHING = LE_ITEM_WEAPON_FISHINGPOLE or Enum.ItemWeaponSubclass.Fishingpole or 20,
+			},
+			GEM = {
+				PARENT = LE_ITEM_CLASS_GEM or Enum.ItemClass.Gem or 3,
+				INTELLECT = LE_ITEM_GEM_INTELLECT or Enum.ItemGemSubclass.Intellect or 0,
+				AGILITY = LE_ITEM_GEM_AGILITY or Enum.ItemGemSubclass.Agility or 1,
+				STRENGTH = LE_ITEM_GEM_STRENGTH or Enum.ItemGemSubclass.Strength or 2,
+				STAMINA = LE_ITEM_GEM_STAMINA or Enum.ItemGemSubclass.Stamina or 3,
+				SPIRIT = LE_ITEM_GEM_SPIRIT or Enum.ItemGemSubclass.Spirit or 4,
+				CRITICALSTRIKE = LE_ITEM_GEM_CRITICALSTRIKE or Enum.ItemGemSubclass.Criticalstrike or 5,
+				MASTERY = LE_ITEM_GEM_MASTERY or Enum.ItemGemSubclass.Mastery or 6,
+				HASTE = LE_ITEM_GEM_HASTE or Enum.ItemGemSubclass.Haste or 7,
+				VERSATILITY = LE_ITEM_GEM_VERSATILITY or Enum.ItemGemSubclass.Versatility or 8,
+				OTHER = LE_ITEM_GEM_OTHER or Enum.ItemGemSubclass.Other or 9,
+				MULTIPLESTATS = LE_ITEM_GEM_MULTIPLESTATS or Enum.ItemGemSubclass.Multiplestats or 10,
+				ARTIFACTRELIC = LE_ITEM_GEM_ARTIFACTRELIC or Enum.ItemGemSubclass.Artifactrelic or 11,
+			},
+			ARMOR = {
+				PARENT = LE_ITEM_CLASS_ARMOR or Enum.ItemClass.Armor or 4,
+				GENERIC = LE_ITEM_ARMOR_GENERIC or Enum.ItemArmorSubclass.Generic or 0,
+				CLOTH = LE_ITEM_ARMOR_CLOTH or Enum.ItemArmorSubclass.Cloth or 1,
+				LEATHER = LE_ITEM_ARMOR_LEATHER or Enum.ItemArmorSubclass.Leather or 2,
+				MAIL = LE_ITEM_ARMOR_MAIL or Enum.ItemArmorSubclass.Mail or 3,
+				PLATE = LE_ITEM_ARMOR_PLATE or Enum.ItemArmorSubclass.Plate or 4,
+				COSMETIC = LE_ITEM_ARMOR_COSMETIC or Enum.ItemArmorSubclass.Cosmetic or 5,
+				--BUCKLER = LE_ITEM_ARMOR_BUCKLER,
+				SHIELD = LE_ITEM_ARMOR_SHIELD or Enum.ItemArmorSubclass.Shield or 6,
+				LIBRAM = LE_ITEM_ARMOR_LIBRAM or Enum.ItemArmorSubclass.Libram or 7,
+				IDOL = LE_ITEM_ARMOR_IDOL or Enum.ItemArmorSubclass.Idol or 8,
+				TOTEM = LE_ITEM_ARMOR_TOTEM or Enum.ItemArmorSubclass.Totem or 9,
+				SIGIL = LE_ITEM_ARMOR_SIGIL or Enum.ItemArmorSubclass.Sigil or 10,
+				RELIC = LE_ITEM_ARMOR_RELIC or Enum.ItemArmorSubclass.Relic or 11,
+			},
+			REAGENT = {
+				PARENT = LE_ITEM_CLASS_REAGENT or Enum.ItemClass.Reagent or 5,
+				REAGENT = Enum.ItemReagentSubclass.Reagent or 0,
+				KEYSTONE = Enum.ItemReagentSubclass.Keystone or 1,
+			},
+			PROJECTILE = {
+				PARENT = LE_ITEM_CLASS_PROJECTILE or Enum.ItemClass.Projectile or 6,
+				WAND = 0,
+				BOLT = 1,
+				ARROW = 2,
+				BULLET = 3,
+				THROWN = 4,
+			},
+			TRADEGOODS = {
+				PARENT = LE_ITEM_CLASS_TRADEGOODS or Enum.ItemClass.Tradegoods or 7,
+				TRADEGOODS = 0,
+				PARTS = 1,
+				EXPLOSIVES = 2,
+				DEVICES = 3,
+				JEWELCRAFTING = 4,
+				CLOTH = 5,
+				LEATHER = 6,
+				METAL_AND_STONE = 7,
+				COOKING = 8,
+				HERBS = 9,
+				ELEMENTAL = 10,
+				OTHER = 11,
+				ENCHANTING = 12,
+				MATERIALS = 13,
+				ITEM_ENCHANTMENT = 14,
+				WEAPON_ENCHANTMENT = 15,
+				INSCRIPTION = 16,
+				EXPLOSIVES_AND_DEVICES = 17,
+			},
+			ITEM_ENHANCEMENT = {
+				PARENT = LE_ITEM_CLASS_ITEM_ENHANCEMENT or Enum.ItemClass.ItemEnhancement or 8,
+			},
+			RECIPE = {
+				PARENT = LE_ITEM_CLASS_RECIPE or Enum.ItemClass.Recipe or 9,
+				BOOK = LE_ITEM_RECIPE_BOOK or Enum.ItemRecipeSubclass.Book or 0,
+				LEATHERWORKING = LE_ITEM_RECIPE_LEATHERWORKING or Enum.ItemRecipeSubclass.Leatherworking or 1,
+				TAILORING = LE_ITEM_RECIPE_TAILORING or Enum.ItemRecipeSubclass.Tailoring or 2,
+				ENGINEERING = LE_ITEM_RECIPE_ENGINEERING or Enum.ItemRecipeSubclass.Engineering or 3,
+				BLACKSMITHING = LE_ITEM_RECIPE_BLACKSMITHING or Enum.ItemRecipeSubclass.Blacksmithing or 4,
+				COOKING = LE_ITEM_RECIPE_COOKING or Enum.ItemRecipeSubclass.Cooking or 5,
+				ALCHEMY = LE_ITEM_RECIPE_ALCHEMY or Enum.ItemRecipeSubclass.Alchemy or 6,
+				FIRST_AID = LE_ITEM_RECIPE_FIRST_AID or Enum.ItemRecipeSubclass.FirstAid or 7,
+				ENCHANTING = LE_ITEM_RECIPE_ENCHANTING or Enum.ItemRecipeSubclass.Enchanting or 8,
+				FISHING = LE_ITEM_RECIPE_FISHING or Enum.ItemRecipeSubclass.Fishing or 9,
+				JEWELCRAFTING = LE_ITEM_RECIPE_JEWELCRAFTING or Enum.ItemRecipeSubclass.Jewelcrafting or 10,
+				INSCRIPTION = LE_ITEM_RECIPE_INSCRIPTION or Enum.ItemRecipeSubclass.Inscription or 11,
+			},
+			QUIVER = {
+				PARENT = LE_ITEM_CLASS_QUIVER or Enum.ItemClass.Quiver or 11,
+				-- QUIVER = 0,
+				-- BOLT = 1,
+				QUIVER = 2,
+				AMMO = 3,
+			},
+			QUEST = {
+				PARENT = LE_ITEM_CLASS_QUESTITEM or Enum.ItemClass.Questitem or 12,
+				QUEST = 0,
+			},
+			KEY = {
+				PARENT = LE_ITEM_CLASS_KEY or Enum.ItemClass.Key or 13,
+				KEY = 0,
+				LOCKPICK = 1,
+			},
+			MISC = {
+				PARENT = LE_ITEM_CLASS_MISCELLANEOUS or Enum.ItemClass.Miscellaneous or 15,
+				JUNK = LE_ITEM_MISCELLANEOUS_JUNK or Enum.ItemMiscellaneousSubclass.Junk or 0,
+				REAGENT = LE_ITEM_MISCELLANEOUS_REAGENT or Enum.ItemMiscellaneousSubclass.Reagent or 1,
+				PET = LE_ITEM_MISCELLANEOUS_COMPANION_PET or Enum.ItemMiscellaneousSubclass.CompanionPet or 2,
+				HOLIDAY = LE_ITEM_MISCELLANEOUS_HOLIDAY or Enum.ItemMiscellaneousSubclass.Holiday or 3,
+				OTHER = LE_ITEM_MISCELLANEOUS_OTHER or Enum.ItemMiscellaneousSubclass.Other or 4,
+				MOUNT = LE_ITEM_MISCELLANEOUS_MOUNT or Enum.ItemMiscellaneousSubclass.Mount or 5,
+				MOUNT_EQUIPMENT = LE_ITEM_MISCELLANEOUS_MOUNT_EQUIPMENT or Enum.ItemMiscellaneousSubclass.MountEquipment or 6,
+			},
+			GLYPH = {
+				PARENT = LE_ITEM_CLASS_GLYPH or Enum.ItemClass.Glyph or 16,
+			},
+			BATTLEPET = {
+				PARENT = LE_ITEM_CLASS_BATTLEPET or Enum.ItemClass.Battlepet or 17,
+				HUMANOID = 0, -- [163]
+				DRAGONKIN = 1, -- [164]
+				FLYING = 2, -- [165]
+				UNDEAD = 3, -- [166]
+				CRITTER = 4, -- [167]
+				MAGIC = 5, -- [168]
+				ELEMENTAL = 6, -- [169]
+				BEAST = 7, -- [170]
+				AQUATIC = 8, -- [171]
+				MECHANICAL = 9, -- [172]
+			},
+			WOW_TOKEN = {
+				PARENT = ITEM_CLASS_WOW_TOKEN or Enum.ItemClass.WoWToken or 18,
+				WOWTOKEN = 0, -- [174]
+			},
+		},
+	},
+	LIST = {
+		SORTBY = {
+			NAME = 1,
+			NUMBER = 2,
+			ORDER = 3,
+		},
+		SHOW = {
+			ACTIVE = 1,
+			DELETED = 2,
+		},
+	},
+	SORTWHEN = {
+		ALWAYS = 1,
+		ONOPEN = 2,
+		MANUAL = 3,
+	},
+}
+
 
 ArkInventory.Const = { -- constants
 	
@@ -386,8 +688,10 @@ ArkInventory.Const = { -- constants
 			},
 			FONT = {
 				COLOR = {
-					UNUSABLE1 = "fefe1f1f", -- shadowlands
-					UNUSABLE2 = "ffff2020", -- dragonflight
+					UNUSABLE = {
+						["fefe1f1f"] = true, -- shadowlands
+						["ffff2020"] = true, -- dragonflight
+					},
 				},
 			},
 			PROFESSIONRANK = {
@@ -490,288 +794,6 @@ ArkInventory.Const = { -- constants
 		
 	},
 	
-	ENUM = {
-		ACTION = {
-			WHEN = {
-				DISABLED = 0,
-				MANUAL = 1,
-				AUTO = 2,
-			},
-			TYPE = {
-				IGNORE = 0,
-				VENDOR = 1,
-				MAIL = 2,
-				MOVE = 3,
-			},
-		},
-		ANCHOR = {
-			DEFAULT = 0,
-			BOTTOMRIGHT = 1,
-			BOTTOMLEFT = 2,
-			TOPLEFT = 3,
-			TOPRIGHT = 4,
-			TOP = 5,
-			BOTTOM = 6,
-			LEFT = 7,
-			RIGHT = 8,
-			CENTER = 9,
-		},
-		BAG = {
-			INDEX = {
-				BACKPACK = BACKPACK_CONTAINER or ( Enum.BagIndex and Enum.BagIndex.Backpack ) or 0,
-				BANK = BANK_CONTAINER or ( Enum.BagIndex and Enum.BagIndex.Bank ) or -1,
-				REAGENTBANK = REAGENTBANK_CONTAINER or ( Enum.BagIndex and Enum.BagIndex.Reagentbank ) or -3,
-				REAGENTBAG = ( Enum.BagIndex and Enum.BagIndex.Reagentbag ) or 5,
-				KEYRING = KEYRING_CONTAINER or ( Enum.BagIndex and Enum.BagIndex.Keyring ) or -2
-			},
-			OPENCLOSE = {
-				NO = 0,
-				YES = 1,
-				ALWAYS = 2,
-			},
-		},
-		BATTLEPET = {
-			ENEMY = LE_BATTLE_PET_ENEMY or 2,
-		},
-		DIRECTION = {
-			HORIZONTAL = 1,
-			VERTICAL = 2,
-		},
-		EXPANSION = {
-			--CURRENT = set elsewhere,
-			DRAGONFLIGHT = LE_EXPANSION_DRAGONFLIGHT or 9,
-			SHADOWLANDS = LE_EXPANSION_SHADOWLANDS or 8,
-			BFA = LE_EXPANSION_BATTLE_FOR_AZEROTH or 7,
-			LEGION = LE_EXPANSION_LEGION or 6,
-			DRAENOR = LE_EXPANSION_WARLORDS_OF_DRAENOR or 5,
-			PANDARIA = LE_EXPANSION_MISTS_OF_PANDARIA or 4,
-			CATACLYSM = LE_EXPANSION_CATACLYSM or 3,
-			WRATH = LE_EXPANSION_WRATH_OF_THE_LICH_KING or 2,
-			TBC = LE_EXPANSION_BURNING_CRUSADE or 1,
-			CLASSIC = LE_EXPANSION_CLASSIC or 0,
-		},
-		ITEM = {
-			QUALITY = {
-				MISSING = -2,
-				UNKNOWN = -1,
-				POOR = ( Enum.ItemQuality and Enum.ItemQuality.Poor ) or LE_ITEM_QUALITY_POOR or 0,
-				STANDARD = ( Enum.ItemQuality and Enum.ItemQuality.Standard ) or LE_ITEM_QUALITY_COMMON or 1,
-				GOOD = ( Enum.ItemQuality and Enum.ItemQuality.Good )or LE_ITEM_QUALITY_UNCOMMON or 2,
-				RARE = ( Enum.ItemQuality and Enum.ItemQuality.Rare ) or LE_ITEM_QUALITY_RARE or 3,
-				EPIC = ( Enum.ItemQuality and Enum.ItemQuality.Epic ) or LE_ITEM_QUALITY_EPIC or 4,
-				LEGENDARY = ( Enum.ItemQuality and Enum.ItemQuality.Legendary ) or LE_ITEM_QUALITY_LEGENDARY or 5,
-				ARTIFACT = ( Enum.ItemQuality and Enum.ItemQuality.Artifact ) or LE_ITEM_QUALITY_ARTIFACT or 6,
-				HEIRLOOM = ( Enum.ItemQuality and Enum.ItemQuality.Heirloom ) or LE_ITEM_QUALITY_HEIRLOOM or 7,
-				WOWTOKEN = ( Enum.ItemQuality and Enum.ItemQuality.WoWToken ) or LE_ITEM_QUALITY_WOWTOKEN or 8,
-			},
-			TYPE = {
-				UNKNOWN = {
-					PARENT = -2,
-				},
-				EMPTY = {
-					PARENT = -1,
-				},
-				CONSUMABLE = {
-					PARENT = LE_ITEM_CLASS_CONSUMABLE or Enum.ItemClass.Consumable or 0,
-					EXPLOSIVES_AND_DEVICES = 0,
-					POTION = Enum.ItemConsumableSubclass.Potion or 1,
-					ELIXIR = Enum.ItemConsumableSubclass.Elixir or 2,
-					FLASK = 3 or Enum.ItemConsumableSubclass.Flask or 3,
-					SCROLL = 4 or Enum.ItemConsumableSubclass.Scroll or 4,
-					FOOD_AND_DRINK = 5 or Enum.ItemConsumableSubclass.Fooddrink or 5,
-					ITEM_ENHANCEMENT = 6 or Enum.ItemConsumableSubclass.Itemenhancement or 6,
-					BANDAGE = 7 or Enum.ItemConsumableSubclass.Bandage or 7,
-					OTHER = 8 or Enum.ItemConsumableSubclass.Other or 8,
-					VANTUSRUNE = 9 or Enum.ItemConsumableSubclass.Vantusrune or 9,
-				},
-				CONTAINER = {
-					PARENT = LE_ITEM_CLASS_CONTAINER or Enum.ItemClass.Container or 1,
-					BAG = 0,
-					SOULSHARD = 1,
-					HERBALISM = 2,
-					ENCHANTING = 3,
-					ENGINEERING = 4,
-					JEWELCRAFTING = 5,
-					MINING = 6,
-					LEATHERWORKING = 7,
-					INSCRIPTION = 8,
-					FISHING = 9,
-					COOKING = 10,
-					REAGENT = 11,
-				},
-				WEAPON = {
-					PARENT = LE_ITEM_CLASS_WEAPON or Enum.ItemClass.Weapon or 2,
-					AXE1H = LE_ITEM_WEAPON_AXE1H or Enum.ItemWeaponSubclass.Axe1H or 0,
-					AXE2H = LE_ITEM_WEAPON_AXE2H or Enum.ItemWeaponSubclass.Axe2H or 1,
-					BOW = LE_ITEM_WEAPON_BOWS or Enum.ItemWeaponSubclass.Bows or 2,
-					GUN = LE_ITEM_WEAPON_GUNS or Enum.ItemWeaponSubclass.Guns or 3,
-					MACE1H = LE_ITEM_WEAPON_MACE1H or Enum.ItemWeaponSubclass.Mace1H or 4,
-					MACE2H = LE_ITEM_WEAPON_MACE2H or Enum.ItemWeaponSubclass.Mace2H or 5,
-					POLEARM = LE_ITEM_WEAPON_POLEARM or Enum.ItemWeaponSubclass.Polearm or 6,
-					SWORD1H = LE_ITEM_WEAPON_SWORD1H or Enum.ItemWeaponSubclass.Sword1H or 7,
-					SWORD2H = LE_ITEM_WEAPON_SWORD2H or Enum.ItemWeaponSubclass.Sword2H or 8,
-					WARGLAIVE = LE_ITEM_WEAPON_WARGLAIVE or Enum.ItemWeaponSubclass.Warglaive or 9,
-					STAFF = LE_ITEM_WEAPON_STAFF or Enum.ItemWeaponSubclass.Staff or 10,
-					EXOTIC1H = LE_ITEM_WEAPON_EXOTIC1H or Enum.ItemWeaponSubclass.Bearclaw or 11,
-					EXOTIC2H = LE_ITEM_WEAPON_EXOTIC2H or Enum.ItemWeaponSubclass.Catclaw or 12,
-					FIST = LE_ITEM_WEAPON_UNARMED or Enum.ItemWeaponSubclass.Unarmed or 13,
-					GENERIC = LE_ITEM_WEAPON_GENERIC or Enum.ItemWeaponSubclass.Generic or 14,
-					DAGGER = LE_ITEM_WEAPON_DAGGER or Enum.ItemWeaponSubclass.Dagger or 15,
-					THROWN = LE_ITEM_WEAPON_THROWN or Enum.ItemWeaponSubclass.Thrown or 16,
-					SPEAR = LE_ITEM_WEAPON_SPEAR or Enum.ItemWeaponSubclass.Obsolete3 or 17,
-					CROSSBOW = LE_ITEM_WEAPON_CROSSBOW or Enum.ItemWeaponSubclass.Crossbow or 18,
-					WAND = LE_ITEM_WEAPON_WAND or Enum.ItemWeaponSubclass.Wand or 19,
-					FISHING = LE_ITEM_WEAPON_FISHINGPOLE or Enum.ItemWeaponSubclass.Fishingpole or 20,
-				},
-				GEM = {
-					PARENT = LE_ITEM_CLASS_GEM or Enum.ItemClass.Gem or 3,
-					INTELLECT = LE_ITEM_GEM_INTELLECT or Enum.ItemGemSubclass.Intellect or 0,
-					AGILITY = LE_ITEM_GEM_AGILITY or Enum.ItemGemSubclass.Agility or 1,
-					STRENGTH = LE_ITEM_GEM_STRENGTH or Enum.ItemGemSubclass.Strength or 2,
-					STAMINA = LE_ITEM_GEM_STAMINA or Enum.ItemGemSubclass.Stamina or 3,
-					SPIRIT = LE_ITEM_GEM_SPIRIT or Enum.ItemGemSubclass.Spirit or 4,
-					CRITICALSTRIKE = LE_ITEM_GEM_CRITICALSTRIKE or Enum.ItemGemSubclass.Criticalstrike or 5,
-					MASTERY = LE_ITEM_GEM_MASTERY or Enum.ItemGemSubclass.Mastery or 6,
-					HASTE = LE_ITEM_GEM_HASTE or Enum.ItemGemSubclass.Haste or 7,
-					VERSATILITY = LE_ITEM_GEM_VERSATILITY or Enum.ItemGemSubclass.Versatility or 8,
-					OTHER = LE_ITEM_GEM_OTHER or Enum.ItemGemSubclass.Other or 9,
-					MULTIPLESTATS = LE_ITEM_GEM_MULTIPLESTATS or Enum.ItemGemSubclass.Multiplestats or 10,
-					ARTIFACTRELIC = LE_ITEM_GEM_ARTIFACTRELIC or Enum.ItemGemSubclass.Artifactrelic or 11,
-				},
-				ARMOR = {
-					PARENT = LE_ITEM_CLASS_ARMOR or Enum.ItemClass.Armor or 4,
-					GENERIC = LE_ITEM_ARMOR_GENERIC or Enum.ItemArmorSubclass.Generic or 0,
-					CLOTH = LE_ITEM_ARMOR_CLOTH or Enum.ItemArmorSubclass.Cloth or 1,
-					LEATHER = LE_ITEM_ARMOR_LEATHER or Enum.ItemArmorSubclass.Leather or 2,
-					MAIL = LE_ITEM_ARMOR_MAIL or Enum.ItemArmorSubclass.Mail or 3,
-					PLATE = LE_ITEM_ARMOR_PLATE or Enum.ItemArmorSubclass.Plate or 4,
-					COSMETIC = LE_ITEM_ARMOR_COSMETIC or Enum.ItemArmorSubclass.Cosmetic or 5,
-					--BUCKLER = LE_ITEM_ARMOR_BUCKLER,
-					SHIELD = LE_ITEM_ARMOR_SHIELD or Enum.ItemArmorSubclass.Shield or 6,
-					LIBRAM = LE_ITEM_ARMOR_LIBRAM or Enum.ItemArmorSubclass.Libram or 7,
-					IDOL = LE_ITEM_ARMOR_IDOL or Enum.ItemArmorSubclass.Idol or 8,
-					TOTEM = LE_ITEM_ARMOR_TOTEM or Enum.ItemArmorSubclass.Totem or 9,
-					SIGIL = LE_ITEM_ARMOR_SIGIL or Enum.ItemArmorSubclass.Sigil or 10,
-					RELIC = LE_ITEM_ARMOR_RELIC or Enum.ItemArmorSubclass.Relic or 11,
-				},
-				REAGENT = {
-					PARENT = LE_ITEM_CLASS_REAGENT or Enum.ItemClass.Reagent or 5,
-					REAGENT = Enum.ItemReagentSubclass.Reagent or 0,
-					KEYSTONE = Enum.ItemReagentSubclass.Keystone or 1,
-				},
-				PROJECTILE = {
-					PARENT = LE_ITEM_CLASS_PROJECTILE or Enum.ItemClass.Projectile or 6,
-					WAND = 0,
-					BOLT = 1,
-					ARROW = 2,
-					BULLET = 3,
-					THROWN = 4,
-				},
-				TRADEGOODS = {
-					PARENT = LE_ITEM_CLASS_TRADEGOODS or Enum.ItemClass.Tradegoods or 7,
-					TRADEGOODS = 0,
-					PARTS = 1,
-					EXPLOSIVES = 2,
-					DEVICES = 3,
-					JEWELCRAFTING = 4,
-					CLOTH = 5,
-					LEATHER = 6,
-					METAL_AND_STONE = 7,
-					COOKING = 8,
-					HERBS = 9,
-					ELEMENTAL = 10,
-					OTHER = 11,
-					ENCHANTING = 12,
-					MATERIALS = 13,
-					ITEM_ENCHANTMENT = 14,
-					WEAPON_ENCHANTMENT = 15,
-					INSCRIPTION = 16,
-					EXPLOSIVES_AND_DEVICES = 17,
-				},
-				ITEM_ENHANCEMENT = {
-					PARENT = LE_ITEM_CLASS_ITEM_ENHANCEMENT or Enum.ItemClass.ItemEnhancement or 8,
-				},
-				RECIPE = {
-					PARENT = LE_ITEM_CLASS_RECIPE or Enum.ItemClass.Recipe or 9,
-					BOOK = LE_ITEM_RECIPE_BOOK or Enum.ItemRecipeSubclass.Book or 0,
-					LEATHERWORKING = LE_ITEM_RECIPE_LEATHERWORKING or Enum.ItemRecipeSubclass.Leatherworking or 1,
-					TAILORING = LE_ITEM_RECIPE_TAILORING or Enum.ItemRecipeSubclass.Tailoring or 2,
-					ENGINEERING = LE_ITEM_RECIPE_ENGINEERING or Enum.ItemRecipeSubclass.Engineering or 3,
-					BLACKSMITHING = LE_ITEM_RECIPE_BLACKSMITHING or Enum.ItemRecipeSubclass.Blacksmithing or 4,
-					COOKING = LE_ITEM_RECIPE_COOKING or Enum.ItemRecipeSubclass.Cooking or 5,
-					ALCHEMY = LE_ITEM_RECIPE_ALCHEMY or Enum.ItemRecipeSubclass.Alchemy or 6,
-					FIRST_AID = LE_ITEM_RECIPE_FIRST_AID or Enum.ItemRecipeSubclass.FirstAid or 7,
-					ENCHANTING = LE_ITEM_RECIPE_ENCHANTING or Enum.ItemRecipeSubclass.Enchanting or 8,
-					FISHING = LE_ITEM_RECIPE_FISHING or Enum.ItemRecipeSubclass.Fishing or 9,
-					JEWELCRAFTING = LE_ITEM_RECIPE_JEWELCRAFTING or Enum.ItemRecipeSubclass.Jewelcrafting or 10,
-					INSCRIPTION = LE_ITEM_RECIPE_INSCRIPTION or Enum.ItemRecipeSubclass.Inscription or 11,
-				},
-				QUIVER = {
-					PARENT = LE_ITEM_CLASS_QUIVER or Enum.ItemClass.Quiver or 11,
-					-- QUIVER = 0,
-					-- BOLT = 1,
-					QUIVER = 2,
-					AMMO = 3,
-				},
-				QUEST = {
-					PARENT = LE_ITEM_CLASS_QUESTITEM or Enum.ItemClass.Questitem or 12,
-					QUEST = 0,
-				},
-				KEY = {
-					PARENT = LE_ITEM_CLASS_KEY or Enum.ItemClass.Key or 13,
-					KEY = 0,
-					LOCKPICK = 1,
-				},
-				MISC = {
-					PARENT = LE_ITEM_CLASS_MISCELLANEOUS or Enum.ItemClass.Miscellaneous or 15,
-					JUNK = LE_ITEM_MISCELLANEOUS_JUNK or Enum.ItemMiscellaneousSubclass.Junk or 0,
-					REAGENT = LE_ITEM_MISCELLANEOUS_REAGENT or Enum.ItemMiscellaneousSubclass.Reagent or 1,
-					PET = LE_ITEM_MISCELLANEOUS_COMPANION_PET or Enum.ItemMiscellaneousSubclass.CompanionPet or 2,
-					HOLIDAY = LE_ITEM_MISCELLANEOUS_HOLIDAY or Enum.ItemMiscellaneousSubclass.Holiday or 3,
-					OTHER = LE_ITEM_MISCELLANEOUS_OTHER or Enum.ItemMiscellaneousSubclass.Other or 4,
-					MOUNT = LE_ITEM_MISCELLANEOUS_MOUNT or Enum.ItemMiscellaneousSubclass.Mount or 5,
-					MOUNT_EQUIPMENT = LE_ITEM_MISCELLANEOUS_MOUNT_EQUIPMENT or Enum.ItemMiscellaneousSubclass.MountEquipment or 6,
-				},
-				GLYPH = {
-					PARENT = LE_ITEM_CLASS_GLYPH or Enum.ItemClass.Glyph or 16,
-				},
-				BATTLEPET = {
-					PARENT = LE_ITEM_CLASS_BATTLEPET or Enum.ItemClass.Battlepet or 17,
-					HUMANOID = 0, -- [163]
-					DRAGONKIN = 1, -- [164]
-					FLYING = 2, -- [165]
-					UNDEAD = 3, -- [166]
-					CRITTER = 4, -- [167]
-					MAGIC = 5, -- [168]
-					ELEMENTAL = 6, -- [169]
-					BEAST = 7, -- [170]
-					AQUATIC = 8, -- [171]
-					MECHANICAL = 9, -- [172]
-				},
-				WOW_TOKEN = {
-					PARENT = ITEM_CLASS_WOW_TOKEN or Enum.ItemClass.WoWToken or 18,
-					WOWTOKEN = 0, -- [174]
-				},
-			},
-		},
-		LIST = {
-			SORTBY = {
-				NAME = 1,
-				NUMBER = 2,
-				ORDER = 3,
-			},
-			SHOW = {
-				ACTIVE = 1,
-				DELETED = 2,
-			},
-		},
-		SORTWHEN = {
-			ALWAYS = 1,
-			ONOPEN = 2,
-			MANUAL = 3,
-		},
-	},
-	
 	Frame = {
 		Main = {
 			Name = "ARKINV_Frame",
@@ -851,6 +873,7 @@ ArkInventory.Const = { -- constants
 		Heirloom = 15,
 		Reputation = 16,
 		MountEquipment = 17,
+		TradeskillEquipment = 18,
 	},
 	
 	Offset = {
@@ -868,6 +891,7 @@ ArkInventory.Const = { -- constants
 		Heirloom = 1300,
 		Reputation = 1600,
 		MountEquipment = 6100,
+		TradeskillEquipment = 1420,
 	},
 	
 	Bag = {
@@ -929,7 +953,6 @@ ArkInventory.Const = { -- constants
 		},
 		
 		CharacterPaneOrder = {
-			["INVTYPE_NON_EQUIP"] = 0,
 			["INVTYPE_HEAD"] = 1,
 			["INVTYPE_NECK"] = 2,
 			["INVTYPE_SHOULDER"] = 3,
@@ -961,6 +984,8 @@ ArkInventory.Const = { -- constants
 			["INVTYPE_RELIC"] = 20,
 			["INVTYPE_AMMO"] = 20,
 			
+			-- stuff that needs to exist, but not get shown
+			["INVTYPE_NON_EQUIP"] = 0,
 			["INVTYPE_BAG"] = 0,
 			["INVTYPE_QUIVER"] = 0,
 			["INVTYPE_PROFESSION_TOOL"] = 0,
@@ -968,6 +993,8 @@ ArkInventory.Const = { -- constants
 		},
 		
 	},
+	
+	InventorySlotName = { "HeadSlot", "NeckSlot", "ShoulderSlot", "BackSlot", "ChestSlot", "ShirtSlot", "TabardSlot", "WristSlot", "HandsSlot", "WaistSlot", "LegsSlot", "FeetSlot", "Finger0Slot", "Finger1Slot", "Trinket0Slot", "Trinket1Slot", "MainHandSlot", "SecondaryHandSlot" },
 	
 	Window = {
 		
@@ -980,10 +1007,10 @@ ArkInventory.Const = { -- constants
 		Draw = {
 			Init = 0, -- intital state, only exists at load, never set to init
 			Restart = 1, -- rebuild the entire window from scratch
-			Recalculate = 2, -- calculate
-			Resort = 3, -- sort
-			Refresh = 4, -- item changes
-			None = 5, -- nothing
+			Recalculate = 2, -- recalculate the window
+			Resort = 3, -- sort the items in the bars
+			Refresh = 4, -- in-place item updates
+			None = 5, -- do nothing
 		},
 		
 		Title = {
@@ -1120,6 +1147,17 @@ ArkInventory.Const = { -- constants
 		Checked = [[Interface\RAIDFRAME\ReadyCheck-Ready]],
 		atWar = [[Interface\RAIDFRAME\ReadyCheck-Ready]],
 		
+		Action = {
+			[ArkInventory.ENUM.ACTION.TYPE.VENDOR] = {
+				[ArkInventory.ENUM.ACTION.WHEN.AUTO] = [[Interface\Icons\INV_Misc_Coin_02]],
+				[ArkInventory.ENUM.ACTION.WHEN.MANUAL] = [[Interface\Icons\INV_Misc_Coin_04]],
+			},
+			[ArkInventory.ENUM.ACTION.TYPE.MAIL] = {
+				[ArkInventory.ENUM.ACTION.WHEN.AUTO] = [[Interface\Icons\INV_Letter_03]],
+				[ArkInventory.ENUM.ACTION.WHEN.MANUAL] = [[Interface\Icons\INV_Letter_13]],
+			},
+		},
+		
 	},
 	
 	SortKeys = { -- true = keep, false = remove
@@ -1152,31 +1190,29 @@ ArkInventory.Const = { -- constants
 		["u"] = 0x08, -- underwater
 		["x"] = 0x00, -- ignored / unknown
 	},
+	MountTypeID = {
+		[242] = "a", -- flying, swift spectral
+		[247] = "a", -- flying, cloud
+		[248] = "a", -- flying
+		[402] = "a", -- dragonriding
+		
+		[230] = "l", -- land
+		[241] = "l", -- qiraji battletank
+		[269] = "l", -- water surface
+		[284] = "l", -- land, chauffeured
+		[398] = "l", -- land, pterrordax (kuo'fon)
+		[407] = "l", -- otter
+		[408] = "l", -- snail
+		[412] = "l", -- otter
+		
+		[231] = "u", -- underwater (sort of), turtle
+		[232] = "u", -- underwater, vash'jir seahorse
+		[254] = "u", -- underwater
+	},
 	
 	booleantable = { true, false },
 	
 	Realm = { }, -- connected realm array
-	
-	ActionID = {
-		MainMenu = 0,
-		Close = 1,
-		EditMode = 2,
-		Rules = 3,
-		Search = 4,
-		SwitchCharacter = 5,
-		SwitchLocation = 6,
-		Restack = 7,
-		Changer = 8,
-		Refresh = 9,
-	},
-	
-	Bind = { -- ITEM_BINDx
-		Never = 0,
-		Use = 1,
-		Equip = 2,
-		Pickup = 3,
-		Account = 4,
-	},
 	
 	Reputation = {
 		Custom = {
@@ -1321,34 +1357,25 @@ ArkInventory.Const = { -- constants
 	
 	ObjectDataMaxAttempts = 10,
 	
+	ClassArmor = {
+		[ArkInventory.ENUM.ITEM.TYPE.ARMOR.CLOTH] = { MAGE = 1, PRIEST = 1, WARLOCK = 1 },
+		[ArkInventory.ENUM.ITEM.TYPE.ARMOR.LEATHER] = { DRUID = 1, ROGUE = 1, LOWLEVELHUNTER = 1, MONK = 1, DEMONHUNTER = 1 },
+		[ArkInventory.ENUM.ITEM.TYPE.ARMOR.MAIL] = { HUNTER = 1, SHAMAN = 1, EVOKER = 1 },
+		[ArkInventory.ENUM.ITEM.TYPE.ARMOR.PLATE] = { PALADIN = 1, WARRIOR = 1, DEATHKNIGHT = 1 },
+	},
+	
 }
+
 
 ArkInventory.Collection = { }
 ArkInventory.Action = { }
 
-ArkInventory.Const.Texture.Action = {
-	[ArkInventory.Const.ENUM.ACTION.TYPE.VENDOR] = {
-		[ArkInventory.Const.ENUM.ACTION.WHEN.AUTO] = [[Interface\Icons\INV_Misc_Coin_02]],
-		[ArkInventory.Const.ENUM.ACTION.WHEN.MANUAL] = [[Interface\Icons\INV_Misc_Coin_04]],
-	},
-	[ArkInventory.Const.ENUM.ACTION.TYPE.MAIL] = {
-		[ArkInventory.Const.ENUM.ACTION.WHEN.AUTO] = [[Interface\Icons\INV_Letter_03]],
-		[ArkInventory.Const.ENUM.ACTION.WHEN.MANUAL] = [[Interface\Icons\INV_Letter_13]],
-	},
-}
-
-ArkInventory.Const.ClassArmor = {
-	[ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.CLOTH] = { MAGE = 1, PRIEST = 1, WARLOCK = 1 },
-	[ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.LEATHER] = { DRUID = 1, ROGUE = 1, LOWLEVELHUNTER = 1, MONK = 1, DEMONHUNTER = 1 },
-	[ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.MAIL] = { HUNTER = 1, SHAMAN = 1, EVOKER = 1 },
-	[ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.PLATE] = { PALADIN = 1, WARRIOR = 1, DEATHKNIGHT = 1 },
-}
 
 ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS = ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS_NORMAL + ArkInventory.Const.BLIZZARD.GLOBAL.CONTAINER.NUM_BAGS_REAGENT
 
 
 -- populate the min/max toc values, and ids for each expansion
-for k, v in pairs( ArkInventory.Const.ENUM.EXPANSION ) do
+for k, v in pairs( ArkInventory.ENUM.EXPANSION ) do
 	if k ~= "CURRENT" then
 		ArkInventory.Const.BLIZZARD.CLIENT.EXPANSION[v] = {
 			ID = v,

@@ -6,11 +6,11 @@ ArkInventory.Tools = { }
 
 
 --[[
--- /dump GetItemClassInfo( ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.PARENT )
--- /dump GetItemSubClassInfo( ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.PARENT, ArkInventory.Const.ENUM.ITEM.TYPE.ARMOR.LEATHER )
+-- /dump GetItemClassInfo( ArkInventory.ENUM.ITEM.TYPE.ARMOR.PARENT )
+-- /dump GetItemSubClassInfo( ArkInventory.ENUM.ITEM.TYPE.ARMOR.PARENT, ArkInventory.ENUM.ITEM.TYPE.ARMOR.LEATHER )
 
 for x = 4, 4 do
-	--local x = ArkInventory.Const.ENUM.ITEM.TYPE.TRADEGOODS.HERBS
+	--local x = ArkInventory.ENUM.ITEM.TYPE.TRADEGOODS.HERBS
 	local n = GetItemClassInfo( x )
 	--if n and n ~= "" then
 		ArkInventory.Output( "----------" )
@@ -41,7 +41,7 @@ end
 
 
 --[[
-local z = "crafting reagent"
+local z = "destroy"
 ArkInventory.Output( "search=", z )
 for k, v in pairs (_G) do
 	if type( k ) == "string" and type( v ) == "string" then
@@ -53,8 +53,6 @@ for k, v in pairs (_G) do
 	end
 end
 --]]
---PROFESSIONS_USED_IN_COOKING
---PROFESSIONS_MODIFIED_CRAFTING_REAGENT_BASIC
 
 function ArkInventory.Tools.dump_enum( value, path, search )
 	if type( value ) == "table" then

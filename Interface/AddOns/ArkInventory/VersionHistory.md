@@ -1,4 +1,41 @@
-﻿# 3.10.06 (19-NOV-2022)
+﻿# 3.10.09 (24-NOV-2022)
+ - fixed - issue with rule functions wearble/unwearble and cloaks
+ - restored - config > actions (was accidentally hidden)
+ - fixed - issue with config transmog secondary option hiding the wrong sub options
+ - restored - xml for ArkScanTooltipTemplate, OnTooltipAddMoney and OnTooltipCleared re-added both as several hundred individual MoneyFrames were being added to the scan tooltip just on entering the world.  this was the probable cause for the lag and ui crashes.
+ - removed - PLAYER_AVG_ITEM_LEVEL_UPDATE event
+ - removed - rescans should no longger trigger a full window refresh (they already update the items)
+ - added - preloading item info from the bag and bank to make their initial opens are faster.  will not happen if you enter while in combat.  opening the window before this has completed will abort the preload.
+ - added - preloading the bag and bank windows so their initial opens are faster.  will not happen if you enter while in combat.  opening the window before this has completed will abort the preload.
+ - changed - the rules module no longer triggers full window rebuilds on enable (mucks up the preload)
+ - removed - PLAYER_INTERACTION_MANAGER_FRAME_SHOW and PLAYER_INTERACTION_MANAGER_FRAME_HIDE events
+ - removed - event UNIT_INVENTORY_CHANGED
+ - changed - added yielding to every scan to alleviate any potential sources of lag
+ - changed - added extra yielding to the window draw functions
+ - changed - enforced a 25ms yield timer
+ - fixed - edit mode item menu for empty slots should now show the type of slot, not "retrieving item data"
+ - added - icons on the bag, combined bag, bank, and guild bank, frames to swap to ArkInventory control
+ - added - location sub menu to switch window back to blizzard control.
+ - fixed - issue with the conduit overlay when it had no quality set
+ 
+# 3.10.08 (24-NOV-2022)
+ - no longer available
+ 
+# 3.10.07 (19-NOV-2022)
+ - fixed - issue with pressing ESCAPE to close windows (like the map) and getting blocked when in combat
+ - added - category name as a new sort method key.  only applies to custom categories and rules.  system categories will sort by id as they have no name.
+ - added - mail action options - config > general > actions > mail
+ - fixed - keybindings are back in their own section and should not cause any taint.
+ - fixed - empty reagent bank slots should be in the correct category again
+ - fixed - should no longer generate a second frame open causing issues for other mods (like tsm) at the auction house
+ - updated - config > settings > designs > items > cooldown > on window open.  cooldowns will no longer automatically show.  you will need to enable this option and then they will update when you close/open the window.  triggering off the cooldown events generated too much lag especially in large crowds
+ - fixed - issue with mailbox scanning
+ - fixed - battlepet tooltips showing during scanning
+ - fixed - battlepets in the vault
+ - fixed - opening the config before the mount data was ready
+ - fixed - config not opening from 3.10.06
+
+# 3.10.06 (19-NOV-2022)
  - no longer available
  
 # 3.10.05 (16-NOV-2022)

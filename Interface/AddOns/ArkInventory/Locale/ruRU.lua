@@ -188,8 +188,7 @@ if not L then return end
 --	L["MENU_BAR"] = ""
 	L["MENU_BAR_TITLE"] = "Настройки набора %1$s"
 	L["MENU_BAR_CATEGORY_DESC"] = "Закрепить категорию %1$s за этим набором"
-	L["MENU_BAR_CATEGORY_CURRENT"] = "текущее назначение"
-	L["MENU_BAR_CATEGORY_ASSIGN"] = "Возможные Категории"
+--	L["MENU_BAR_CATEGORY_LABEL"] = ""
 	L["MENU_BAR_CATEGORY_REMOVE_DESC"] = "клик для удаления %1$s из набора %2$s и возврата в набор по умолчанию" -- 1 is the category name, 2 is the bar number
 	L["MENU_BAR_CATEGORY_HIDDEN_DESC"] = "клик для назначения данной категории статуса скрытой.\n\nпредметы в скрытых категориях не будут видны в обычном режиме."
 --	L["MENU_BAR_CATEGORY_MOVE_START_DESC"] = ""
@@ -404,7 +403,6 @@ if not L then return end
 	L["CONFIG_CONTROL_MONITOR_DESC"] = "отслеживать ли изменения в данных %1$s?"
 	L["CONFIG_CONTROL_SAVE_DESC"] = "сохранять ли данные %1$s, чтобы они были доступны когда вы играете за другого персонажа?"
 --	L["CONFIG_CONTROL_NOTIFY_ERASE_DESC"] = ""
---	L["CONFIG_CONTROL_OVERRIDE"] = ""
 	L["CONFIG_CONTROL_OVERRIDE_DESC"] = "скрыть стандартный интерфейс %2$s чтобы окно %1$s могло обрабатывать его действия.\n\nОтключение этой опции вернёт функционал стандартного %2$s.\n\nВы всё ещё сможете открыть %1$s %2$s когда эта опция выключена, но только используя специально назначенную клавишу"
 --	L["CONFIG_CONTROL_SPECIAL_DESC"] = ""
 	L["CONFIG_CONTROL_ANCHOR_LOCK_DESC"] = "фиксирует положение окна %1$s"
@@ -573,12 +571,14 @@ if not L then return end
 --	L["CONFIG_ACTION_TYPE"] = ""
 --	L["CONFIG_ACTION_TYPE_DESC"] = ""
 --	L["CONFIG_ACTION_WHEN_DESC"] = ""
+--	L["CONFIG_ACTION_ENABLE_DESC"] = ""
 	
 --	L["CONFIG_ACTION_MANUAL_RUN"] = ""
 --	L["CONFIG_ACTION_TESTMODE"] = ""
 	
 --	L["CONFIG_ACTION_VENDOR_SELL"] = ""
 --	L["CONFIG_ACTION_VENDOR_AUTOMATIC_DESC"] = ""
+--	L["CONFIG_ACTION_VENDOR_MANUAL_DESC"] = ""
 --	L["CONFIG_ACTION_VENDOR_LIMIT"] = ""
 --	L["CONFIG_ACTION_VENDOR_LIMIT_DESC"] = ""
 --	L["CONFIG_ACTION_VENDOR_LIMIT_ABORT"] = ""
@@ -599,12 +599,15 @@ if not L then return end
 --	L["CONFIG_ACTION_VENDOR_TESTMODE"] = ""
 --	L["CONFIG_ACTION_VENDOR_TESTMODE_DESC"] = ""
 --	L["CONFIG_ACTION_VENDOR_PROCESSING_DISABLED_DESC"] = ""
+	
 --	L["CONFIG_ACTION_VENDOR_SOULBOUND_ALREADY_KNOWN_DESC"] = ""
 --	L["CONFIG_ACTION_VENDOR_SOULBOUND_EQUIPMENT_DESC"] = ""
 --	L["CONFIG_ACTION_VENDOR_SOULBOUND_ITEMLEVEL_DESC"] = ""
 	
 --	L["CONFIG_ACTION_MAIL_SEND"] = ""
 --	L["CONFIG_ACTION_MAIL_AUTOMATIC_DESC"] = ""
+--	L["CONFIG_ACTION_MAIL_MANUAL_DESC"] = ""
+--	L["CONFIG_ACTION_MAIL_TESTMODE"] = ""
 --	L["CONFIG_ACTION_MAIL_TESTMODE_DESC"] = ""
 --	L["CONFIG_ACTION_MAIL_QUALITY_CUTOFF_DESC"] = ""
 --	L["CONFIG_ACTION_MAIL_LIST_DESC"] = ""
@@ -688,9 +691,8 @@ if not L then return end
 	
 	L["CONFIG_RULE_SHOWDISABLED"] = "Показывать отключенные правила"
 	L["CONFIG_RULE_SHOWDISABLED_DESC"] = "отображать ли отключенные правила?"
---	L["CONFIG_RULE_WIDTH_DESC"] = ""
---	L["CONFIG_RULE_ROWS"] = ""
---	L["CONFIG_RULE_ROWS_DESC"] = ""
+--	L["CONFIG_LIST_WIDTH_DESC"] = ""
+--	L["CONFIG_LIST_ROWS_DESC"] = ""
 	
 --	L["CONFIG_CATEGORY_CUSTOM"] = ""
 	L["CONFIG_CATEGORY_CUSTOM_PLURAL"] = "Пользовательские категории"
@@ -828,6 +830,7 @@ if not L then return end
 	L["ANCHOR"] = "Якорь"
 	L["ANCHOR_TEXT1"] = "задает якорь (точку закрепления)"
 	L["ANCHOR_TEXT2"] = "прикрепляет %1$s к %2$s"
+--	L["ANCHOR_TEXT3"] = ""
 	L["BORDER_DESC"] = "настройки кромки"
 	L["FILE"] = "Файл"
 	L["HEIGHT"] = "Высота"
@@ -845,6 +848,7 @@ if not L then return end
 --	L["ASCENDING"] = ""
 --	L["DESCENDING"] = ""
 --	L["LOCATION"] = ""
+--	L["LOCATIONS"] = ""
 --	L["DHMS"] = ""
 --	L["RANDOM"] = ""
 	L["RELOAD"] = "Перезагрузить"
@@ -909,6 +913,12 @@ if not L then return end
 --	L["COSMETIC"] = ""
 --	L["WHEN"] = ""
 --	L["RECIPIENT"] = ""
+--	L["ACTIONS"] = ""
+--	L["ROWS"] = ""
+--	L["DESTINATION"] = ""
+--	L["ASSIGNED"] = ""
+--	L["ASSIGNABLE"] = ""
+--	L["OVERRIDE"] = ""
 	
 	
 -- libdatabroker

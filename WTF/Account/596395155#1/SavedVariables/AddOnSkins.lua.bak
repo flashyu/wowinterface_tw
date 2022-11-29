@@ -14,6 +14,4 @@ AddOnSkinsDB = {
 	},
 }
 AddOnSkinsDS = {
-	[4.6] = {
-	},
 }
