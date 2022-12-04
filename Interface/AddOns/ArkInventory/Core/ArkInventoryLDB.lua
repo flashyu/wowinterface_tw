@@ -674,7 +674,7 @@ function ArkInventory.LDB.Mounts.Cleanup( )
 	
 	local me = ArkInventory.GetPlayerCodex( )
 	
-	for mta, mt in pairs( ArkInventory.Const.MountTypes ) do
+	for mta, mt in pairs( ArkInventory.Const.Mount.Types ) do
 		
 		if mta ~= "x" then
 			
@@ -1003,7 +1003,7 @@ function ArkInventory.LDB.Mounts:OnTooltipShow( ... )
 			
 			local me = ArkInventory.GetPlayerCodex( )
 			
-			for mta in pairs( ArkInventory.Const.MountTypes ) do
+			for mta in pairs( ArkInventory.Const.Mount.Types ) do
 				
 				local mode = ArkInventory.Localise[string.upper( string.format( "LDB_MOUNTS_TYPE_%s", mta ) )]
 				local numusable, numtotal = ArkInventory.Collection.Mount.GetCount( mta )
@@ -1086,7 +1086,8 @@ function ArkInventory.LDB.Mounts:OnClick( button, down )
 	
 	if button == "RightButton" then
 		
-		ArkInventory.MenuLDBMountsOpen( self )
+		--ArkInventory.MenuLDBMountsOpen( self )
+		ArkInventory.Frame_Config_Show( "advanced", "ldb", "mounts" )
 		
 	else
 		

@@ -919,6 +919,8 @@ if not L then return end
 --	L["ASSIGNED"] = ""
 --	L["ASSIGNABLE"] = ""
 	L["OVERRIDE"] = "Remplacer"
+--	L["SELECTED"] = ""
+--	L["UNSELECTED"] = ""
 	
 	
 -- libdatabroker
@@ -954,6 +956,7 @@ if not L then return end
 --	L["LDB_MOUNTS_USEFORLAND_DESC"] = ""
 --	L["LDB_MOUNTS_FLYING_DISMOUNT_DESC"] = ""
 --	L["LDB_MOUNTS_FLYING_DISMOUNT_WARNING"] = ""
+--	L["LDB_MOUNTS_FLYING_DRAGONRIDING_DESC"] = ""
 --	L["LDB_MOUNTS_SUMMON"] = ""
 --	L["LDB_MOUNTS_NODATA"] = ""
 --	L["LDB_MOUNTS_TRAVEL_FORM"] = ""

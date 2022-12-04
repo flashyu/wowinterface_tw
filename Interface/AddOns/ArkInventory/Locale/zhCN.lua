@@ -919,6 +919,8 @@ if not L then return end
 --	L["ASSIGNED"] = ""
 --	L["ASSIGNABLE"] = ""
 --	L["OVERRIDE"] = ""
+--	L["SELECTED"] = ""
+--	L["UNSELECTED"] = ""
 	
 	
 -- libdatabroker
@@ -954,6 +956,7 @@ if not L then return end
 --	L["LDB_MOUNTS_USEFORLAND_DESC"] = ""
 	L["LDB_MOUNTS_FLYING_DISMOUNT_DESC"] = "Enabled = 允许取消飞行.\n\nDisabled = 取消飞行时必须着陆"
 	L["LDB_MOUNTS_FLYING_DISMOUNT_WARNING"] = "飞行中，请着陆后选择其他坐骑"
+--	L["LDB_MOUNTS_FLYING_DRAGONRIDING_DESC"] = ""
 	L["LDB_MOUNTS_SUMMON"] = "召唤坐骑"
 	L["LDB_MOUNTS_NODATA"] = "未知/改变"
 --	L["LDB_MOUNTS_TRAVEL_FORM"] = ""

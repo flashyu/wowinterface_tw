@@ -552,6 +552,8 @@ function ArkInventoryRules.System.boolean_quality( ... )
 		error( string.format( ArkInventory.Localise["RULE_FAILED_ARGUMENT_NONE_SPECIFIED"], fn ), 0 )
 	end
 	
+	--ArkInventory.Output( ArkInventoryRules.Object.h, " = ", ArkInventoryRules.Object.q )
+	
 	for ax = 1, ac do
 		
 		local arg = select( ax, ... )
@@ -1701,7 +1703,7 @@ function ArkInventoryRules.System.boolean_mounttype( ... )
 				error( string.format( ArkInventory.Localise["RULE_FAILED_ARGUMENT_IS_NOT"], fn, ax, ArkInventory.Localise["STRING"] ), 0 )
 			end
 			
-			local ex = ArkInventory.Const.MountTypes[string.lower( string.trim( arg ) )]
+			local ex = ArkInventory.Const.Mount.Types[string.lower( string.trim( arg ) )]
 			if ex == md.mt then
 				return true
 			end

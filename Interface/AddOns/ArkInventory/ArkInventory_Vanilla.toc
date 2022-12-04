@@ -3,11 +3,11 @@
 ## Title: ArkInventory [Classic]
 ## Author: Arkayenro - Khaz'goroth
 ## Email: arkayenro at gmail dot com
-## Version: 31010
+## Version: 31011
 ## X-ReleaseType: 
 ## SavedVariables: ARKINVDB
 
-## Notes: Allows you to view all items from all your characters on the same account, when-ever and where-ever you want.
+## Notes: Allows you to view all items from all your characters on the same account, when ever and where ever you want.
 
 ## DefaultState: Enabled
 ## LoadOnDemand: 0

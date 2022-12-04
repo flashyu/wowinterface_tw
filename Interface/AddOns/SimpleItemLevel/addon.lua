@@ -3,6 +3,9 @@ local myfullname = GetAddOnMetadata(myname, "Title")
 local db
 local isClassic = WOW_PROJECT_ID ~= WOW_PROJECT_MAINLINE
 
+local SLOT_MAINHAND = GetInventorySlotInfo("MainHandSlot")
+local SLOT_OFFHAND = GetInventorySlotInfo("SecondaryHandSlot")
+
 function ns.Print(...) print("|cFF33FF99".. myfullname.. "|r:", ...) end
 
 -- events
@@ -21,6 +24,9 @@ end
 
 local LAI = LibStub("LibAppropriateItems-1.0")
 
+ns.upgradeString = CreateAtlasMarkup("poi-door-arrow-up")
+ns.gemString = CreateAtlasMarkup(isClassic and "worldquest-icon-jewelcrafting" or "jailerstower-score-gem-tooltipicon") -- Professions-ChatIcon-Quality-Tier5-Cap
+ns.enchantString = RED_FONT_COLOR:WrapTextInColorCode("E")
 ns.Fonts = {
     HighlightSmall = GameFontHighlightSmall,
     Normal = GameFontNormalOutline,
@@ -52,10 +58,13 @@ ns.defaults = {
     -- Shadowlands has Uncommon, BCC/Classic has Good
     quality = Enum.ItemQuality.Good or Enum.ItemQuality.Uncommon,
     equipmentonly = true,
+    missinggems = true,
+    missingenchants = true,
     -- appearance config
     font = "NumberNormal",
     position = "TOPRIGHT",
     positionup = "TOPLEFT",
+    positionmissing = "LEFT",
 }
 
 function ns:ADDON_LOADED(event, addon)
@@ -81,7 +90,7 @@ local function PrepareItemButton(button)
         overlayFrame:SetFrameLevel(button:GetFrameLevel() + 1)
         button.simpleilvloverlay = overlayFrame
 
-        button.simpleilvl = overlayFrame:CreateFontString('$parentItemLevel', 'OVERLAY')
+        button.simpleilvl = overlayFrame:CreateFontString(nil, "OVERLAY")
         button.simpleilvl:Hide()
 
         button.simpleilvlup = overlayFrame:CreateTexture(nil, "OVERLAY")
@@ -89,6 +98,9 @@ local function PrepareItemButton(button)
         -- MiniMap-PositionArrowUp?
         button.simpleilvlup:SetAtlas("poi-door-arrow-up")
         button.simpleilvlup:Hide()
+
+        button.simpleilvlmissing = overlayFrame:CreateFontString(nil, "OVERLAY")
+        button.simpleilvlmissing:Hide()
 
         ns.frames[button] = overlayFrame
     end
@@ -101,13 +113,26 @@ local function PrepareItemButton(button)
     -- button.simpleilvl:SetJustifyH('RIGHT')
     button.simpleilvlup:ClearAllPoints()
     button.simpleilvlup:SetPoint(db.positionup, unpack(ns.PositionOffsets[db.positionup]))
+
+    button.simpleilvlmissing:ClearAllPoints()
+    button.simpleilvlmissing:SetPoint(db.positionmissing, unpack(ns.PositionOffsets[db.positionmissing]))
+    button.simpleilvlmissing:SetFont([[Fonts\ARIALN.TTF]], 11, "OUTLINE,MONOCHROME")
 end
 ns.PrepareItemButton = PrepareItemButton
+
+local function CleanButton(button)
+    if button.simpleilvl then button.simpleilvl:Hide() end
+    if button.simpleilvlup then button.simpleilvlup:Hide() end
+    if button.simpleilvlmissing then button.simpleilvlmissing:Hide() end
+end
+ns.CleanButton = CleanButton
+
 function ns.RefreshOverlayFrames()
     for button in pairs(ns.frames) do
         PrepareItemButton(button)
     end
 end
+
 local function AddLevelToButton(button, itemLevel, itemQuality)
     if not itemLevel then
         return button.simpleilvl and button.simpleilvl:Hide()
@@ -121,7 +146,22 @@ local function AddUpgradeToButton(button, item, equipLoc, minLevel)
     if not (db.upgrades and LAI:IsAppropriate(item:GetItemID())) then
         return button.simpleilvlup and button.simpleilvlup:Hide()
     end
-    ns.ForEquippedItems(equipLoc, function(equippedItem)
+    if item:GetItemLocation() and item:GetItemLocation():IsEquipmentSlot() then
+        -- This is meant to catch the character frame, to avoid rings/trinkets
+        -- you've already got equipped showing as an upgrade since they're
+        -- higher ilevel than your other ring/trinket
+        return
+    end
+    ns.ForEquippedItems(equipLoc, function(equippedItem, slot)
+        if equippedItem:IsItemEmpty() and slot == SLOT_OFFHAND then
+            local mainhand = GetInventoryItemID("player", SLOT_MAINHAND)
+            if mainhand then
+                local invtype = select(4, GetItemInfoInstant(mainhand))
+                if invtype == "INVTYPE_2HWEAPON" then
+                    return
+                end
+            end
+        end
         if equippedItem:IsItemEmpty() or equippedItem:GetCurrentItemLevel() < item:GetCurrentItemLevel() then
             PrepareItemButton(button)
             button.simpleilvlup:Show()
@@ -132,6 +172,17 @@ local function AddUpgradeToButton(button, item, equipLoc, minLevel)
             end
         end
     end)
+end
+local function AddMissingToButton(button, itemLink)
+    if not itemLink then
+        return button.simpleilvlmissing and button.simpleilvlmissing:Hide()
+    end
+    PrepareItemButton(button)
+    local missingGems = db.missinggems and ns.ItemHasEmptySlots(itemLink)
+    local missingEnchants =  db.missingenchants and ns.ItemIsMissingEnchants(itemLink)
+    -- print(itemLink, missingEnchants, missingGems)
+    button.simpleilvlmissing:SetFormattedText("%s%s", missingGems and ns.gemString or "", missingEnchants and ns.enchantString or "")
+    button.simpleilvlmissing:Show()
 end
 local function ShouldShowOnItem(item)
     local quality = item:GetItemQuality()
@@ -149,26 +200,21 @@ local function ShouldShowOnItem(item)
     )
 end
 local function UpdateButtonFromItem(button, item)
-    if item:IsItemEmpty() then
+    if not item or item:IsItemEmpty() then
         return
     end
     item:ContinueOnItemLoad(function()
         if not ShouldShowOnItem(item) then return end
         local itemID = item:GetItemID()
         local link = item:GetItemLink()
-        local quality = item:GetItemQuality()
         local _, _, _, equipLoc, _, itemClass, itemSubClass = GetItemInfoInstant(itemID)
         local minLevel = link and select(5, GetItemInfo(link or itemID))
-        AddLevelToButton(button, item:GetCurrentItemLevel(), quality)
+        AddLevelToButton(button, item:GetCurrentItemLevel(), item:GetItemQuality())
         AddUpgradeToButton(button, item, equipLoc, minLevel)
+        AddMissingToButton(button, link)
     end)
 end
 ns.UpdateButtonFromItem = UpdateButtonFromItem
-local function CleanButton(button)
-    if button.simpleilvl then button.simpleilvl:Hide() end
-    if button.simpleilvlup then button.simpleilvlup:Hide() end
-end
-ns.CleanButton = CleanButton
 
 -- Character frame:
 
@@ -191,17 +237,17 @@ local function UpdateItemSlotButton(button, unit)
                 item = itemLink and Item:CreateFromItemLink(itemLink) or Item:CreateFromItemID(itemID)
             end
         end
-        if not item or item:IsItemEmpty() then
-            return
-        end
-        return item:ContinueOnItemLoad(function()
-            AddLevelToButton(button, item:GetCurrentItemLevel(), item:GetItemQuality())
-        end)
+        UpdateButtonFromItem(button, item)
     end
-    return CleanButton(button)
 end
 hooksecurefunc("PaperDollItemSlotButton_Update", function(button)
     UpdateItemSlotButton(button, "player")
+end)
+-- and the inspect frame
+ns:RegisterAddonHook("Blizzard_InspectUI", function()
+    hooksecurefunc("InspectPaperDollItemSlotButton_Update", function(button)
+        UpdateItemSlotButton(button, InspectFrame.unit or "target")
+    end)
 end)
 
 -- Equipment flyout in character frame
@@ -231,14 +277,6 @@ if _G.EquipmentFlyout_DisplayButton then
         end
     end)
 end
-
--- Inspect frame:
-
-ns:RegisterAddonHook("Blizzard_InspectUI", function()
-    hooksecurefunc("InspectPaperDollItemSlotButton_Update", function(button)
-        UpdateItemSlotButton(button, InspectFrame.unit or "target")
-    end)
-end)
 
 -- Bags:
 
@@ -365,8 +403,20 @@ ns:RegisterAddonHook("Inventorian", function()
         return (bag < 0 and bag * 100 - slot) or (bag * 100 + slot)
     end
     local function invContainerUpdateSlot(self, bag, slot)
-        if not self.items[ToIndex(bag, slot)] then return end
-        UpdateContainerButton(self.items[ToIndex(bag, slot)], bag, slot)
+        local button = self.items[ToIndex(bag, slot)]
+        if not button then return end
+        if button:IsCached() then
+            local item
+            local icon, count, locked, quality, readable, lootable, link, noValue, itemID, isBound = button:GetInfo()
+            if link then
+                item = Item:CreateFromItemLink(link)
+            elseif itemID then
+                item = Item:CreateFromItemID(itemID)
+            end
+            UpdateButtonFromItem(button, item)
+        else
+            UpdateContainerButton(button, bag, slot)
+        end
     end
     local function hookInventorian()
         hooksecurefunc(inv.bag.itemContainer, "UpdateSlot", invContainerUpdateSlot)
@@ -412,51 +462,6 @@ ns:RegisterAddonHook("LiteBag", function()
     end)
 end)
 
--- Quick config:
-
-_G["SLASH_".. myname:upper().."1"] = "/simpleilvl"
-SlashCmdList[myname:upper()] = function(msg)
-    msg = msg:trim()
-    if msg:match("^quality") then
-        local quality = msg:match("quality (.+)") or ""
-        if quality:match("^%d+$") then
-            quality = tonumber(quality)
-        else
-            quality = quality:lower()
-            for label, value in pairs(Enum.ItemQuality) do
-                if label:lower() == quality then
-                    quality = value
-                end
-            end
-        end
-        if type(quality) ~= "number" then
-            return ns.Print("Invalid item quality provided, should be a name or a number 0-8")
-        end
-        db.quality = quality
-        return ns.Print("quality = ", _G["ITEM_QUALITY" .. db.quality .. "_DESC"])
-    end
-    if db[msg] ~= nil then
-        db[msg] = not db[msg]
-        return ns.Print(msg, '=', db[msg] and YES or NO)
-    end
-    if msg == "" then
-        ns.Print(SHOW_ITEM_LEVEL)
-        ns.Print('bags -', BAGSLOTTEXT, "-", db.bags and YES or NO)
-        ns.Print('character -', ORDER_HALL_EQUIPMENT_SLOTS, "-", db.character and YES or NO)
-        ns.Print('inspect -', INSPECT, "-", db.inspect and YES or NO)
-        ns.Print('loot -', LOOT, "-", db.loot and YES or NO)
-        ns.Print('upgrades - Upgrade arrows in bags', "-", db.upgrades and YES or NO)
-        ns.Print('color - Color item level by item quality', "-", db.color and YES or NO)
-        if isClassic then
-            ns.Print('tooltip - Add the item level to tooltips', "-", db.tooltip and YES or NO)
-        end
-        ns.Print('quality - Minimum item quality to show for', "-", _G["ITEM_QUALITY" .. db.quality .. "_DESC"])
-        ns.Print('equipmentonly - Only show on equippable items', "-", db.equipmentonly and YES or NO)
-        ns.Print("To toggle: /simpleilvl [type]")
-        ns.Print("To set a quality: /simpleilvl quality [quality]")
-    end
-end
-
 -- helper
 
 do
@@ -496,12 +501,76 @@ do
         end
         local item = Item:CreateFromEquipmentSlot(slot)
         if item:IsItemEmpty() then
-            return callback(item)
+            return callback(item, slot)
         end
-        item:ContinueOnItemLoad(function() callback(item) end)
+        item:ContinueOnItemLoad(function() callback(item, slot) end)
     end
     ns.ForEquippedItems = function(equipLoc, callback)
         ForEquippedItem(EquipLocToSlot1[equipLoc], callback)
         ForEquippedItem(EquipLocToSlot2[equipLoc], callback)
+    end
+end
+
+do
+    -- could arguably also do TooltipDataProcessor.AddLinePostCall(Enum.TooltipDataLineType.GemSocket, ...)
+    local t = {}
+    function ns.ItemHasEmptySlots(itemLink)
+        wipe(t)
+        local stats = GetItemStats(itemLink, t)
+        local slots = 0
+        for label, stat in pairs(stats) do
+            if label:match("EMPTY_SOCKET_") then
+                slots = slots + 1
+            end
+        end
+        if slots == 0 then return false end
+        local gem1, gem2, gem3, gem4 = select(4, strsplit(":", itemLink))
+        local gems = (gem1 ~= "" and 1 or 0) + (gem2 ~= "" and 1 or 0) + (gem3 ~= "" and 1 or 0) + (gem4 ~= "" and 1 or 0)
+        return slots > gems
+    end
+    local enchantable = isClassic and {
+        INVTYPE_HEAD = true,
+        INVTYPE_SHOULDER = true,
+        INVTYPE_CHEST = true,
+        INVTYPE_ROBE = true,
+        INVTYPE_LEGS = true,
+        INVTYPE_FEET = true,
+        INVTYPE_WRIST = true,
+        INVTYPE_HAND = true,
+        INVTYPE_FINGER = true,
+        INVTYPE_CLOAK = true,
+        INVTYPE_WEAPON = true,
+        INVTYPE_SHIELD = true,
+        INVTYPE_2HWEAPON = true,
+        INVTYPE_WEAPONMAINHAND = true,
+        INVTYPE_RANGED = true,
+        INVTYPE_RANGEDRIGHT = true,
+        INVTYPE_WEAPONOFFHAND = true,
+        INVTYPE_HOLDABLE = true,
+    } or {
+        -- retail
+        INVTYPE_CHEST = true,
+        INVTYPE_ROBE = true,
+        INVTYPE_FEET = true,
+        INVTYPE_WRIST = true,
+        INVTYPE_HAND = true,
+        INVTYPE_FINGER = true,
+        INVTYPE_CLOAK = true,
+        INVTYPE_WEAPON = true,
+        -- INVTYPE_SHIELD = true, -- ...are there?
+        INVTYPE_2HWEAPON = true,
+        INVTYPE_WEAPONMAINHAND = true,
+        INVTYPE_RANGED = true,
+        INVTYPE_RANGEDRIGHT = true,
+        INVTYPE_WEAPONOFFHAND = true,
+        INVTYPE_HOLDABLE = true,
+    }
+    function ns.ItemIsMissingEnchants(itemLink)
+        if not itemLink then return false end
+        local equipLoc = select(4, GetItemInfoInstant(itemLink))
+        if not enchantable[equipLoc] then return false end
+        local enchantID = select(3, strsplit(":", itemLink))
+        if enchantID == "" then return true end
+        return false
     end
 end

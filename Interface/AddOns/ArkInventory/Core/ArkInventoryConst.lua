@@ -684,13 +684,13 @@ ArkInventory.Const = { -- constants
 		
 		GLOBAL = {
 			TOOLTIP = {
-				UPDATETIMER = 1, --TOOLTIP_UPDATE_TIME = 0.2
+				UPDATETIMER = 1.0, --TOOLTIP_UPDATE_TIME = 0.2
 			},
 			FONT = {
 				COLOR = {
 					UNUSABLE = {
-						["fefe1f1f"] = true, -- shadowlands
 						["ffff2020"] = true, -- dragonflight
+						["fffe1f1f"] = true, -- classic / wrath
 					},
 				},
 			},
@@ -1049,6 +1049,13 @@ ArkInventory.Const = { -- constants
 		CategoryEnabled = [[Interface\RAIDFRAME\ReadyCheck-Ready]],
 		CategoryDisabled = [[Interface\RAIDFRAME\ReadyCheck-NotReady]],
 		
+		UpdateTimerCustom = [[Interface\PLAYERFRAME\Deathknight-Energize-Frost]],
+		
+		List = {
+			Selected = [[Interface\RAIDFRAME\ReadyCheck-Ready]],
+			Ignored = [[Interface\RAIDFRAME\ReadyCheck-NotReady]],
+		},
+		
 		BackgroundDefault = "Solid",
 		
 		BorderDefault = "Blizzard Tooltip",
@@ -1158,6 +1165,9 @@ ArkInventory.Const = { -- constants
 			},
 		},
 		
+		Config = [[Interface\Garrison\Garr_TimerFill-Upgrade]],
+		Blueprint = [[Interface\ICONS\INV_Scroll_05]],
+		
 	},
 	
 	SortKeys = { -- true = keep, false = remove
@@ -1183,31 +1193,44 @@ ArkInventory.Const = { -- constants
 	
 	DatabaseDefaults = { },
 	
-	MountTypes = {
-		["l"] = 0x01, -- land
-		["a"] = 0x02, -- air
---		["s"] = 0x04, -- water surface
-		["u"] = 0x08, -- underwater
-		["x"] = 0x00, -- ignored / unknown
-	},
-	MountTypeID = {
-		[242] = "a", -- flying, swift spectral
-		[247] = "a", -- flying, cloud
-		[248] = "a", -- flying
-		[402] = "a", -- dragonriding
-		
-		[230] = "l", -- land
-		[241] = "l", -- qiraji battletank
-		[269] = "l", -- water surface
-		[284] = "l", -- land, chauffeured
-		[398] = "l", -- land, pterrordax (kuo'fon)
-		[407] = "l", -- otter
-		[408] = "l", -- snail
-		[412] = "l", -- otter
-		
-		[231] = "u", -- underwater (sort of), turtle
-		[232] = "u", -- underwater, vash'jir seahorse
-		[254] = "u", -- underwater
+	Mount = {
+		Types = { -- this value is stored in saved variables, do NOT change
+			["l"] = 0x01, -- land
+			["a"] = 0x02, -- air
+	--		["s"] = 0x04, -- water surface
+			["u"] = 0x08, -- underwater
+			["x"] = 0x00, -- ignored / unknown
+		},
+		TypeID = {
+			[242] = "a", -- flying, swift spectral
+			[247] = "a", -- flying, cloud
+			[248] = "a", -- flying
+			[402] = "a", -- dragonriding
+			
+			[230] = "l", -- land
+			[241] = "l", -- qiraji battletank
+			[269] = "l", -- water surface
+			[284] = "l", -- land, chauffeured
+			[398] = "l", -- land, pterrordax (kuo'fon)
+			[407] = "l", -- otter
+			[408] = "l", -- snail
+			[412] = "l", -- otter
+			
+			[231] = "u", -- underwater (sort of), turtle
+			[232] = "u", -- underwater, vash'jir seahorse
+			[254] = "u", -- underwater
+		},
+		Order = { -- display order purposes, not saved
+			["a"] = 1, -- air
+			["l"] = 2, -- land
+			["u"] = 3, -- underwater
+			["x"] = 4, -- ignored / unknown
+		},
+		Zone = {
+			AhnQiraj = { 247,320 },
+			Vashjir = { 201,204,205 },
+			DragonIsles = { 2112,2022,2023,2024,2025 },
+		},
 	},
 	
 	booleantable = { true, false },
@@ -1364,6 +1387,10 @@ ArkInventory.Const = { -- constants
 		[ArkInventory.ENUM.ITEM.TYPE.ARMOR.PLATE] = { PALADIN = 1, WARRIOR = 1, DEATHKNIGHT = 1 },
 	},
 	
+	UpdateTimer = {
+		Min = 0.01,
+		Max = 60,
+	},
 }
 
 

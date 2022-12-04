@@ -41,7 +41,7 @@ end
 
 
 --[[
-local z = "destroy"
+local z = "ignored"
 ArkInventory.Output( "search=", z )
 for k, v in pairs (_G) do
 	if type( k ) == "string" and type( v ) == "string" then

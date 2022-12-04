@@ -470,6 +470,16 @@ function ArkInventory.CrossClient.ContainerIDToInventoryID( ... )
 	end
 end
 
+function ArkInventory.CrossClient.GetContainerItemLink( ... )
+	
+	if C_Container and C_Container.GetContainerItemLink then
+		return C_Container.GetContainerItemLink( ... )
+	elseif GetContainerItemLink then
+		return GetContainerItemLink( ... )
+	end
+	
+end
+
 function ArkInventory.CrossClient.GetContainerItemInfo( ... )
 	
 	local info = { }

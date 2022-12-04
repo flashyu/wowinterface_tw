@@ -40,17 +40,17 @@ local collection = {
 
 -- /dump C_Map.GetBestMapForUnit( "player" )
 local ZoneRestrictions = {
-	[25953] = { 247,320 }, -- Blue Qiraji Battle Tank
-	[26054] = { 247,320 }, -- Red Qiraji Battle Tank
-	[26055] = { 247,320 }, -- Yellow Qiraji Battle Tank
-	[26056] = { 247,320 }, -- Green Qiraji Battle Tank
+	[25953] = ArkInventory.Const.Mount.Zone.AhnQiraj, -- Blue Qiraji Battle Tank
+	[26054] = ArkInventory.Const.Mount.Zone.AhnQiraj, -- Red Qiraji Battle Tank
+	[26055] = ArkInventory.Const.Mount.Zone.AhnQiraj, -- Yellow Qiraji Battle Tank
+	[26056] = ArkInventory.Const.Mount.Zone.AhnQiraj, -- Green Qiraji Battle Tank
 	
-	[75207] = { 201,204,205 }, -- Vashj'ir Seahorse
+	[75207] = ArkInventory.Const.Mount.Zone.Vashjir, -- Vashj'ir Seahorse
 	
-	[360954] = { 2112,2022,2023,2025 }, -- Highland Drake
-	[368896] = { 2112,2022,2023,2025 }, -- Renewed Proto-Drake
-	[368899] = { 2112,2022,2023,2025 }, -- Windborne Velocidrake
-	[368901] = { 2112,2022,2023,2025 }, -- Cliffside Wylderdrake
+	[360954] = ArkInventory.Const.Mount.Zone.DragonIsles, -- Highland Drake
+	[368896] = ArkInventory.Const.Mount.Zone.DragonIsles, -- Renewed Proto-Drake
+	[368899] = ArkInventory.Const.Mount.Zone.DragonIsles, -- Windborne Velocidrake
+	[368901] = ArkInventory.Const.Mount.Zone.DragonIsles, -- Cliffside Wylderdrake
 	
 --	[294143] = { [85]=1 }, -- X-995 Mechanocat, testing in org
 	
@@ -1211,10 +1211,46 @@ function ArkInventory.Collection.Mount.GetMount( index )
 	end
 end
 
-function ArkInventory.Collection.Mount.GetUsable( mta )
-	if mta then
-		return collection.usable[mta]
+function ArkInventory.Collection.Mount.ZoneCheck( mapid_table )
+	
+	local mapid = C_Map.GetBestMapForUnit( "player" )
+	
+	for _, id in ipairs( mapid_table ) do
+		if mapid == id then
+			return true
+		end
 	end
+end
+
+function ArkInventory.Collection.Mount.GetUsable( mta )
+	
+	if mta then
+		
+		if mta =="a" or mta == "l" then
+			
+			if ArkInventory.Collection.Mount.ZoneCheck( ArkInventory.Const.Mount.Zone.DragonIsles ) then
+				ArkInventory.OutputDebug( "in the dragon isles" )
+				local codex = ArkInventory.GetPlayerCodex( )
+				if codex.player.data.ldb.mounts.dragonriding then
+					ArkInventory.OutputDebug( "dragonriding enabled" )
+					if mta == "a" then
+						mta = "l"
+						ArkInventory.OutputDebug( "swapping land for flying" )
+					elseif mta == "l" then
+						mta = "a"
+						ArkInventory.OutputDebug( "swapping flying for land" )
+					end
+				else
+					ArkInventory.OutputDebug( "dragonriding disabled" )
+				end
+			end
+			
+		end
+		
+		return collection.usable[mta]
+		
+	end
+	
 end
 
 function ArkInventory.Collection.Mount.GetMountBySpell( spellID )
@@ -1361,7 +1397,7 @@ end
 
 function ArkInventory.Collection.Mount.UpdateOwned( )
 	
-	for mta, mt in pairs( ArkInventory.Const.MountTypes ) do
+	for mta, mt in pairs( ArkInventory.Const.Mount.Types ) do
 		if not collection.owned[mta] then
 			collection.owned[mta] = { }
 		else
@@ -1379,7 +1415,7 @@ end
 
 function ArkInventory.Collection.Mount.UpdateUsable( )
 	
-	for mta in pairs( ArkInventory.Const.MountTypes ) do
+	for mta in pairs( ArkInventory.Const.Mount.Types ) do
 		if not collection.usable[mta] then
 			collection.usable[mta] = { }
 		else
@@ -1394,7 +1430,7 @@ function ArkInventory.Collection.Mount.UpdateUsable( )
 	
 	local me = ArkInventory.GetPlayerCodex( )
 	
-	for mta, mt in pairs( ArkInventory.Const.MountTypes ) do
+	for mta, mt in pairs( ArkInventory.Const.Mount.Types ) do
 		
 		for zr = 0, 1 do
 			-- 0 = only select zone specific mounts
@@ -1457,7 +1493,7 @@ function ArkInventory.Collection.Mount.ApplyUserCorrections( )
 				--ArkInventory.Output( "correcting mount ", md.spellID, ": system=", md.mt, ", correction=", correction )
 				md.mt = correction
 				
-				for mta, mt in pairs( ArkInventory.Const.MountTypes ) do
+				for mta, mt in pairs( ArkInventory.Const.Mount.Types ) do
 					if md.mt == mt then
 						md.mta = mta
 						break
@@ -1557,13 +1593,13 @@ local function Scan_Threaded( thread_id )
 			
 			c[i].link = GetSpellLink( spellID )
 			
-			local mta = ( mountTypeID and ArkInventory.Const.MountTypeID[mountTypeID] ) or "x"
+			local mta = ( mountTypeID and ArkInventory.Const.Mount.TypeID[mountTypeID] ) or "x"
 			if mta == "x" then
 				ArkInventory.OutputDebug( "unknown mount type [", mountTypeID, "] for ", name )
 			end
 			
 			c[i].mta = mta
-			c[i].mt = ArkInventory.Const.MountTypes[mta]
+			c[i].mt = ArkInventory.Const.Mount.Types[mta]
 			c[i].mto = c[i].mt -- save original mount type (user corrections can override the other value)
 			
 		end

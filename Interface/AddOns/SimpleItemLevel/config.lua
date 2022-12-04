@@ -172,6 +172,16 @@ do
         PlaySound(checked and SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON or SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF)
         self:SetValue(checked)
     end
+    local function checkboxOnEnter(self)
+        if self.tooltipText then
+            GameTooltip:SetOwner(self, self.tooltipOwnerPoint or "ANCHOR_RIGHT")
+            GameTooltip:SetText(self.tooltipText, nil, nil, nil, nil, true)
+        end
+        if self.tooltipRequirement then
+            GameTooltip:AddLine(self.tooltipRequirement, 1.0, 1.0, 1.0, true)
+            GameTooltip:Show()
+        end
+    end
     function makeCheckbox(parent, key, label, description, callback)
         local frame = CreateFrame("Frame", nil, parent)
         local check = CreateFrame("CheckButton", nil, frame, "InterfaceOptionsCheckButtonTemplate")
@@ -181,6 +191,8 @@ do
         check.SetValue = checkboxSetValue
         check:SetScript('OnShow', checkboxSetChecked)
         check:SetScript("OnClick", checkboxOnClick)
+        check:SetScript("OnEnter", checkboxOnEnter)
+        check:SetScript("OnLeave", GameTooltip_Hide)
         check.tooltipText = label
         check.tooltipRequirement = description
         check:SetPoint("LEFT", frame, "CENTER", -90, 3)
@@ -263,96 +275,139 @@ else
 end
 frame:Hide()
 
-local demo = CreateFrame("Frame", nil, frame)
-if isClassic then
-    demo:SetPoint("TOPLEFT", frame, 0, -8)
-else
-    demo:SetPoint("TOPLEFT", frame)
-end
-demo:SetPoint("RIGHT", frame)
-demo:SetHeight(43)
-
-local demoButtons = {}
-demo:SetScript("OnShow", function()
-    local previousButton
-    for _, itemID in ipairs(isClassic and {19019, 19364, 10328, 11122, 23192, 7997, 14047} or {120978, 186414, 195527, 194065, 197957, 77256, 86079, 44168}) do
-        local button = makeItemButton(demo)
-        if not previousButton then
-            button:SetPoint("TOPLEFT", 112, -2)
-        else
-            button:SetPoint("TOPLEFT", previousButton, "TOPRIGHT", 2, 0)
-        end
-        button:SetItem(itemID)
-        ns.UpdateButtonFromItem(button, Item:CreateFromItemID(itemID))
-        demoButtons[itemID] = button
-        previousButton = button
-    end
-    demo:SetScript("OnShow", nil)
-end)
-
-local function refresh(_, value)
-    ns.RefreshOverlayFrames()
-    for itemID, button in pairs(demoButtons) do
-        ns.CleanButton(button)
-        ns.UpdateButtonFromItem(button, Item:CreateFromItemID(itemID))
-    end
-end
-
-local title = makeTitle(frame, APPEARANCE_LABEL)
--- title:SetPoint("TOPLEFT", frame)
-title:SetPoint("TOPLEFT", demo, "BOTTOMLEFT", 0, -4)
-
-local fonts = {}
-for k,v in pairs(ns.Fonts) do
-    fonts[k] = k
-end
-local font = makeDropdown(frame, "font", "Font", fonts, refresh)
-font:SetPoint("TOPLEFT", title, "BOTTOMLEFT", 0, -4)
-
-local positions = {}
-for k,v in pairs(ns.PositionOffsets) do
-    positions[k] = k
-end
-local position = makeDropdown(frame, "position", "Position of item level", positions, refresh)
-position:SetPoint("TOPLEFT", font, "BOTTOMLEFT", 0, -4)
-local positionup = makeDropdown(frame, "positionup", "Position of upgrade indicator", positions, refresh)
-positionup:SetPoint("TOPLEFT", position, "BOTTOMLEFT", 0, -4)
-
-local checkboxes = {
-    {false, SHOW_ITEM_LEVEL},
-    {"bags", BAGSLOTTEXT},
-    {"character", ORDER_HALL_EQUIPMENT_SLOTS},
-    {"inspect", INSPECT},
-    {"loot", LOOT},
-    {false, DISPLAY_HEADER},
-    {"upgrades", "Upgrade arrows in bags"},
-    {"color", "Color item level by item quality"},
-    {"equipmentonly", "Only show on equippable items"},
-}
-if isClassic then
-    table.insert(checkboxes, {"tooltip", "Add the item level to tooltips"})
-end
-
-local previous = positionup
-for _, data in ipairs(checkboxes) do
-    local control
-    if data[1] then
-        control = makeCheckbox(frame, data[1], data[2], nil, refresh)
+do
+    local demo = CreateFrame("Frame", nil, frame)
+    if isClassic then
+        demo:SetPoint("TOPLEFT", frame, 0, -8)
     else
-        control = makeTitle(frame, data[2])
+        demo:SetPoint("TOPLEFT", frame)
     end
-    control:SetPoint("TOPLEFT", previous, "BOTTOMLEFT", 0, -4)
-    previous = control
+    demo:SetPoint("RIGHT", frame)
+    demo:SetHeight(43)
+
+    local demoButtons = {}
+    demo:SetScript("OnShow", function()
+        local previousButton
+        for _, itemID in ipairs(isClassic and {19019, 19364, 10328, 11122, 23192, 7997, 14047} or {120978, 186414, 195527, 194065, 197957, 77256, 86079, 44168}) do
+            local button = makeItemButton(demo)
+            if not previousButton then
+                button:SetPoint("TOPLEFT", 112, -2)
+            else
+                button:SetPoint("TOPLEFT", previousButton, "TOPRIGHT", 2, 0)
+            end
+            button:SetItem(itemID)
+            ns.UpdateButtonFromItem(button, Item:CreateFromItemID(itemID))
+            demoButtons[itemID] = button
+            previousButton = button
+        end
+        demo:SetScript("OnShow", nil)
+    end)
+
+    local function refresh(_, value)
+        ns.RefreshOverlayFrames()
+        for itemID, button in pairs(demoButtons) do
+            ns.CleanButton(button)
+            ns.UpdateButtonFromItem(button, Item:CreateFromItemID(itemID))
+        end
+    end
+
+    local title = makeTitle(frame, APPEARANCE_LABEL)
+    -- title:SetPoint("TOPLEFT", frame)
+    title:SetPoint("TOPLEFT", demo, "BOTTOMLEFT", 0, -4)
+
+    local fonts = {}
+    for k,v in pairs(ns.Fonts) do
+        fonts[k] = k
+    end
+    local font = makeDropdown(frame, "font", "Font", fonts, refresh)
+    font:SetPoint("TOPLEFT", title, "BOTTOMLEFT", 0, -4)
+
+    local positions = {}
+    for k,v in pairs(ns.PositionOffsets) do
+        positions[k] = k
+    end
+    local position = makeDropdown(frame, "position", "Position of item level", positions, refresh)
+    position:SetPoint("TOPLEFT", font, "BOTTOMLEFT", 0, -4)
+    local positionup = makeDropdown(frame, "positionup", "Position of upgrade indicator", positions, refresh)
+    positionup:SetPoint("TOPLEFT", position, "BOTTOMLEFT", 0, -4)
+    local positionmissing = makeDropdown(frame, "positionmissing", "Position of missing indicator", positions, refresh)
+    positionmissing:SetPoint("TOPLEFT", positionup, "BOTTOMLEFT", 0, -4)
+
+    local checkboxes = {
+        {false, SHOW_ITEM_LEVEL},
+        {"bags", BAGSLOTTEXT},
+        {"character", ORDER_HALL_EQUIPMENT_SLOTS},
+        {"inspect", INSPECT},
+        {"loot", LOOT},
+        {false, DISPLAY_HEADER},
+        {"upgrades", ("Flag upgrade items (%s)"):format(ns.upgradeString)},
+        {"missinggems", ("Flag items missing gems (%s)"):format(ns.gemString)},
+        {"missingenchants", ("Flag items missing enchants (%s)"):format(ns.enchantString)},
+        {"color", "Color item level by item quality"},
+        {"equipmentonly", "Only show on equippable items"},
+    }
+    if isClassic then
+        table.insert(checkboxes, {"tooltip", "Add the item level to tooltips"})
+    end
+
+    local previous = positionmissing
+    for _, data in ipairs(checkboxes) do
+        local control
+        if data[1] then
+            control = makeCheckbox(frame, data[1], data[2], data[3], refresh)
+        else
+            control = makeTitle(frame, data[2])
+        end
+        control:SetPoint("TOPLEFT", previous, "BOTTOMLEFT", 0, -4)
+        previous = control
+    end
+
+    local values = {}
+    for label, value in pairs(Enum.ItemQuality) do
+        values[value] = label
+    end
+    local quality = makeDropdown(frame, "quality", "Minimum item quality to show", values, refresh)
+    quality:SetPoint("TOPLEFT", previous, "BOTTOMLEFT", 0, -4)
+
+    -- local pointless = makeSlider(frame, "pointless", "Pointless slider", 1, 20, 1)
+    -- pointless:SetPoint("TOPLEFT", quality, "BOTTOMLEFT", 0, -4)
+
+    -- Settings.OpenToCategory(myname)
 end
 
-local values = {}
-for label, value in pairs(Enum.ItemQuality) do
-    values[value] = label
+-- Quick config:
+
+_G["SLASH_".. myname:upper().."1"] = "/simpleilvl"
+SlashCmdList[myname:upper()] = function(msg)
+    msg = msg:trim()
+    if msg:match("^quality") then
+        local quality = msg:match("quality (.+)") or ""
+        if quality:match("^%d+$") then
+            quality = tonumber(quality)
+        else
+            quality = quality:lower()
+            for label, value in pairs(Enum.ItemQuality) do
+                if label:lower() == quality then
+                    quality = value
+                end
+            end
+        end
+        if type(quality) ~= "number" then
+            return ns.Print("Invalid item quality provided, should be a name or a number 0-8")
+        end
+        ns.db.quality = quality
+        return ns.Print("quality = ", _G["ITEM_QUALITY" .. ns.db.quality .. "_DESC"])
+    end
+    if ns.db[msg] ~= nil then
+        ns.db[msg] = not ns.db[msg]
+        return ns.Print(msg, '=', ns.db[msg] and YES or NO)
+    end
+    if msg == "" then
+        if InterfaceOptionsFrame_Show then
+            InterfaceOptionsFrame_Show()
+            InterfaceOptionsFrame_OpenToCategory(myname)
+        else
+            Settings.OpenToCategory(myname)
+        end
+    end
 end
-local quality = makeDropdown(frame, "quality", "Minimum item quality to show", values, refresh)
-quality:SetPoint("TOPLEFT", previous, "BOTTOMLEFT", 0, -4)
-
--- local pointless = makeSlider(frame, "pointless", "Pointless slider", 1, 20, 1)
--- pointless:SetPoint("TOPLEFT", quality, "BOTTOMLEFT", 0, -4)
-
--- Settings.OpenToCategory(myname)

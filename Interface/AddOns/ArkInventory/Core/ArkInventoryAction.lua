@@ -33,7 +33,7 @@ function ArkInventory.Action.Vendor.Check( i, codex, manual, delete )
 	
 	if i and i.h then
 		
-		local info = i.info or ArkInventory.GetObjectInfo( i.h )
+		local info = i.info or ArkInventory.GetObjectInfo( i.h, i )
 		
 		if info.ready and info.id then
 			
@@ -66,7 +66,7 @@ function ArkInventory.Action.Vendor.Check( i, codex, manual, delete )
 				local cat_id = ArkInventory.ItemCategoryGet( i )
 				local cat_type, cat_num = ArkInventory.CategoryIdSplit( cat_id )
 				local catset = codex.catset.ca[cat_type][cat_num]
-				if i.q <= ArkInventory.db.option.action.vendor.raritycutoff then
+				if info.q <= ArkInventory.db.option.action.vendor.raritycutoff then
 					if catset.action.t == ArkInventory.ENUM.ACTION.TYPE.VENDOR then
 						if catset.action.w == ArkInventory.ENUM.ACTION.WHEN.AUTO then
 							isMatch = true
@@ -357,8 +357,9 @@ end
 function ArkInventory.Action.Mail.Check( i, codex, manual )
 	
 	local recipient = nil
+	local info = i.info or ArkInventory.GetObjectInfo( i.h, i )
 	
-	if codex and i and i.h and i.sb ~= ArkInventory.ENUM.BIND.PICKUP and i.q <= ArkInventory.db.option.action.mail.raritycutoff then
+	if codex and i and i.h and i.sb ~= ArkInventory.ENUM.BIND.PICKUP and info.q <= ArkInventory.db.option.action.mail.raritycutoff then
 		
 		local info = i.info or ArkInventory.GetObjectInfo( i.h )
 		if info.ready and info.id then

@@ -1603,7 +1603,7 @@ function ArkInventory.DatabaseUpgradePostLoad( )
 		
 		for pid, pd in pairs( ArkInventory.acedb.global.player.data ) do
 			
-			for mta, mt in pairs( ArkInventory.Const.MountTypes ) do
+			for mta in pairs( ArkInventory.Const.Mount.Types ) do
 				
 				if pd.ldb.mounts[mta] then
 					ArkInventory.Output( string.format( ArkInventory.Localise["UPGRADE_GLOBAL"], string.format( "player %s mount", pid ), upgrade_version ) )

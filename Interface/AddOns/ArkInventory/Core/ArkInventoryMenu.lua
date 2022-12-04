@@ -119,6 +119,7 @@ function ArkInventory.MenuMainOpen( frame )
 				ArkInventory.Lib.Dewdrop:AddLine( )
 				
 				ArkInventory.Lib.Dewdrop:AddLine(
+					"icon", ArkInventory.Const.Texture.Config,
 					"text", ArkInventory.Localise["CONFIG"],
 					"closeWhenClicked", true,
 					"func", function( )
@@ -194,7 +195,35 @@ function ArkInventory.MenuMainOpen( frame )
 					end
 				)
 				
-				if ( loc_id == ArkInventory.Const.Location.Mount ) or ( loc_id == ArkInventory.Const.Location.Pet ) or ( loc_id == ArkInventory.Const.Location.Reputation ) then
+				
+				
+				ArkInventory.Lib.Dewdrop:AddLine( )
+				
+				ArkInventory.Lib.Dewdrop:AddLine(
+					"icon", ArkInventory.Const.Texture.Blueprint,
+					"text", string.format( "%s: %s", ArkInventory.Localise["CONFIG_BLUEPRINT"], ArkInventory.Global.Location[loc_id].Name ),
+					"closeWhenClicked", true,
+					"func", function( )
+						local profile = string.format( "%i", codex.profile_id )
+						local location = string.format( "%i", loc_id )
+						ArkInventory.Frame_Config_Show( "general", "myprofiles", profile, "control", location )
+					end
+				)
+				
+				if ArkInventory.Global.Location[ArkInventory.Const.Location.Mount].proj then
+					
+					ArkInventory.Lib.Dewdrop:AddLine(
+						"icon", ArkInventory.Global.Location[ArkInventory.Const.Location.Mount].Texture,
+						"text", string.format( "%s: %s", ArkInventory.Global.Location[ArkInventory.Const.Location.Mount].Name, ArkInventory.Localise["CONFIG"] ),
+						"closeWhenClicked", true,
+						"func", function( )
+							ArkInventory.Frame_Config_Show( "advanced", "ldb", "mounts" )
+						end
+					)
+				end
+				
+				
+				if ( loc_id == ArkInventory.Const.Location.Pet ) or ( loc_id == ArkInventory.Const.Location.Reputation ) then
 					
 					ArkInventory.Lib.Dewdrop:AddLine( )
 					
@@ -1108,7 +1137,7 @@ function ArkInventory.MenuItemOpen( frame )
 	end
 	
 	
-	local ic = select( 5, ArkInventory.GetItemQualityColor( i.q ) )
+	local ic = select( 5, ArkInventory.GetItemQualityColor( info.q ) )
 	local itemname = string.format( "%s%s%s", ic, info.name or "", FONT_COLOR_CODE_CLOSE )
 	
 	local cat0, cat1, cat2 = ArkInventory.ItemCategoryGet( i )
@@ -1441,7 +1470,7 @@ function ArkInventory.MenuItemOpen( frame )
 							
 						elseif info.class == "battlepet" then
 							
-							ArkInventory.Lib.Dewdrop:AddLine( "text", string.format( "%s: %s%s (%s)", QUALITY, LIGHTYELLOW_FONT_COLOR_CODE, i.q, _G[string.format( "ITEM_QUALITY%s_DESC", i.q )] ) )
+							ArkInventory.Lib.Dewdrop:AddLine( "text", string.format( "%s: %s%s (%s)", QUALITY, LIGHTYELLOW_FONT_COLOR_CODE, info.q, _G[string.format( "ITEM_QUALITY%s_DESC", info.q )] ) )
 							
 							ArkInventory.Lib.Dewdrop:AddLine( "text", string.format( "%s: %s%s", ArkInventory.Localise["MENU_ITEM_DEBUG_LVL_ITEM"], LIGHTYELLOW_FONT_COLOR_CODE, info.ilvl ) )
 							
@@ -4411,7 +4440,7 @@ function ArkInventory.MenuLDBMountsEntries( offset, level, value )
 --			"isTitle", true
 --		)
 		
-		for mountType in pairs( ArkInventory.Const.MountTypes ) do
+		for mountType in pairs( ArkInventory.Const.Mount.Types ) do
 			if mountType ~= "x" then
 				
 				local mode = ArkInventory.Localise[string.upper( string.format( "LDB_MOUNTS_TYPE_%s", mountType ) )]
@@ -4430,7 +4459,7 @@ function ArkInventory.MenuLDBMountsEntries( offset, level, value )
 			"text", ArkInventory.Localise["CONFIG"],
 			"closeWhenClicked", true,
 			"func", function( )
-				ArkInventory.Frame_Config_Show( "advanced", "LDB", "mounts" )
+				ArkInventory.Frame_Config_Show( "advanced", "ldb", "mounts" )
 			end
 		)
 		
@@ -4510,6 +4539,7 @@ function ArkInventory.MenuLDBMountsEntries( offset, level, value )
 		if mountType == "a" then
 			
 			ArkInventory.Lib.Dewdrop:AddLine( )
+			
 			ArkInventory.Lib.Dewdrop:AddLine(
 				"text", string.format( ArkInventory.Localise["LDB_MOUNTS_USEFORLAND"], ArkInventory.Localise["LDB_MOUNTS_TYPE_L"] ),
 				"tooltipTitle", string.format( ArkInventory.Localise["LDB_MOUNTS_USEFORLAND"], ArkInventory.Localise["LDB_MOUNTS_TYPE_L"] ),
@@ -4520,28 +4550,6 @@ function ArkInventory.MenuLDBMountsEntries( offset, level, value )
 				end
 			)
 			
-		end
-		
---		if mountType == "s" then
-			
---			ArkInventory.Lib.Dewdrop:AddLine( )
---			ArkInventory.Lib.Dewdrop:AddLine(
---				"text", string.format( ArkInventory.Localise["LDB_MOUNTS_USEFORLAND"], ArkInventory.Localise["LDB_MOUNTS_TYPE_L"] ),
---				"tooltipTitle", string.format( ArkInventory.Localise["LDB_MOUNTS_USEFORLAND"], ArkInventory.Localise["LDB_MOUNTS_TYPE_L"] ),
---				"tooltipText", string.format( ArkInventory.Localise["LDB_MOUNTS_USEFORLAND_DESC"], ArkInventory.Localise["LDB_MOUNTS_TYPE_S"], ArkInventory.Localise["LDB_MOUNTS_TYPE_L"] ),
---				"checked", codex.player.data.ldb.mounts.type.l.usesurface,
---				"func", function( )
---					codex.player.data.ldb.mounts.type.l.usesurface = not codex.player.data.ldb.mounts.type.l.usesurface
---				end
---			)
-			
---		end
-		
-		
-		
-		if mountType == "a" then
-			
-			ArkInventory.Lib.Dewdrop:AddLine( )
 			ArkInventory.Lib.Dewdrop:AddLine(
 				"text", ArkInventory.Localise["LDB_MOUNTS_FLYING_DISMOUNT"],
 				"tooltipTitle", ArkInventory.Localise["LDB_MOUNTS_FLYING_DISMOUNT"],
@@ -4551,6 +4559,18 @@ function ArkInventory.MenuLDBMountsEntries( offset, level, value )
 					codex.player.data.ldb.mounts.type.a.dismount = not codex.player.data.ldb.mounts.type.a.dismount
 				end
 			)
+			
+			if ArkInventory.ClientCheck( ArkInventory.ENUM.EXPANSION.DRAGONFLIGHT ) then
+				ArkInventory.Lib.Dewdrop:AddLine(
+					"text", ArkInventory.Localise["DRAGONRIDING"],
+					"tooltipTitle", ArkInventory.Localise["DRAGONRIDING"],
+					"tooltipText", ArkInventory.Localise["LDB_MOUNTS_FLYING_DRAGONRIDING_DESC"],
+					"checked", codex.player.data.ldb.mounts.dragonriding,
+					"func", function( )
+						codex.player.data.ldb.mounts.dragonriding = not codex.player.data.ldb.mounts.dragonriding
+					end
+				)
+			end
 			
 		end
 		

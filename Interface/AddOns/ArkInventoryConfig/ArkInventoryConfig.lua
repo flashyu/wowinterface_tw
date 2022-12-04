@@ -253,6 +253,7 @@ function ArkInventory.ConfigInternal( )
 			order = 100,
 			name = ArkInventory.Global.Version,
 			type = "description",
+			fontSize = "large"
 		},
 		notes = {
 			cmdHidden = true,
@@ -265,6 +266,7 @@ function ArkInventory.ConfigInternal( )
 				return t or ""
 			end,
 			type = "description",
+			fontSize = "medium"
 		},
 		enabled = {
 			cmdHidden = true,
@@ -1483,6 +1485,7 @@ function ArkInventory.ConfigInternal( )
 									order = 1,
 									name = string.format( ArkInventory.Localise["CONFIG_ACTION_VENDOR_PROCESSING_DISABLED_DESC"], ArkInventory.Global.Action.Vendor.addon or ArkInventory.Localise["UNKNOWN"] ),
 									type = "description",
+									fontSize = "medium",
 									width = "full",
 									fontSize = "medium",
 									hidden = ArkInventory.Global.Action.Vendor.process,
@@ -2647,7 +2650,14 @@ function ArkInventory.ConfigInternal( )
 						},
 					},
 				},
-				--bucket
+				updatetimer = {
+					cmdHidden = true,
+					order = 1000,
+					name = ArkInventory.Localise["CONFIG_GENERAL_BUCKET"],
+					type = "group",
+					childGroups = "tree",
+					args = { },
+				},
 				messages = {
 					cmdHidden = true,
 					order = 1000,
@@ -2700,7 +2710,6 @@ function ArkInventory.ConfigInternal( )
 										ArkInventory.db.option.message.restack[ArkInventory.Const.Location.Vault] = v
 									end,
 								},
-
 							},
 						},
 						translation = {
@@ -2875,6 +2884,7 @@ function ArkInventory.ConfigInternal( )
 									order = 100,
 									name = ArkInventory.Localise["CONFIG_GENERAL_WORKAROUND_FRAMELEVEL_DESC"],
 									type = "description",
+									fontSize = "medium",
 								},
 								enabled = {
 									order = 200,
@@ -2923,6 +2933,7 @@ function ArkInventory.ConfigInternal( )
 									order = 100,
 									name = ArkInventory.Localise["CONFIG_GENERAL_WORKAROUND_ZEROSIZEBAG_DESC"],
 									type = "description",
+									fontSize = "medium",
 								},
 								enabled = {
 									order = 200,
@@ -3855,9 +3866,6 @@ function ArkInventory.ConfigInternal( )
 	
 	ArkInventory.ConfigInternalSortMethod( )
 	
-	ArkInventory.ConfigInternalCategoryRule( )
-	ArkInventory.ConfigInternalCategoryAction( )
-	
 	ArkInventory.ConfigInternalDesign( )
 	
 	ArkInventory.ConfigInternalAccount( )
@@ -3865,12 +3873,16 @@ function ArkInventory.ConfigInternal( )
 	ArkInventory.ConfigInternalProfile( )
 	
 	if not path.args.advanced.args.ldb.args.mounts.disabled then
-		ArkInventory.ConfigInternalLDBMounts( path.args.advanced.args.ldb.args.mounts.args )
+		ArkInventory.ConfigInternalLDBMounts( )
 	end
 	
 	if not path.args.advanced.args.ldb.args.pets.disabled then
 		ArkInventory.ConfigInternalLDBPets( path.args.advanced.args.ldb.args.pets.args )
 	end
+	
+	ArkInventory.ConfigInternalCategoryRule( )
+	ArkInventory.ConfigInternalCategoryAction( )
+	ArkInventory.ConfigInternalUpdateTimer( )
 	
 end
 
@@ -5041,6 +5053,7 @@ function ArkInventory.ConfigInternalCategorysetData( path )
 			order = 1,
 			hidden = true,
 			type = "description",
+			fontSize = "medium",
 			name = function( info )
 				local id = ConfigGetNodeArg( info, #info - 1 )
 				if id ~= config.catset.selected then
@@ -5175,6 +5188,7 @@ function ArkInventory.ConfigInternalCategorysetDataSystemData( path )
 			order = 1,
 			hidden = true,
 			type = "description",
+			fontSize = "medium",
 			name = function( info )
 				local id = ConfigGetNodeArg( info, #info - 1 )
 				if id ~= config.catset.system.selected then
@@ -5366,6 +5380,7 @@ function ArkInventory.ConfigInternalCategoryCustomList( path )
 			order = 1,
 			hidden = true,
 			type = "description",
+			fontSize = "medium",
 			name = function( info )
 				local id = ConfigGetNodeArg( info, #info - 1 )
 				if id ~= config.category.custom.selected then
@@ -7347,8 +7362,8 @@ function ArkInventory.ConfigInternalDesignData( path )
 						layout = {
 							order = 10,
 							name = ArkInventory.Localise["CONFIG_LAYOUT_DESCRIPTION"],
-							fontSize = "medium",
-							type = "description"
+							type = "description",
+							fontSize = "medium"
 						},
 					},
 				},
@@ -7930,8 +7945,8 @@ function ArkInventory.ConfigInternalDesignData( path )
 						layout = {
 							order = 10,
 							name = ArkInventory.Localise["CONFIG_LAYOUT_DESCRIPTION"],
-							fontSize = "medium",
-							type = "description"
+							type = "description",
+							fontSize = "medium"
 						},
 					},
 				},
@@ -9794,9 +9809,9 @@ function ArkInventory.ConfigInternalDesignData( path )
 					args = {
 						layout = {
 							order = 10,
-							type = "description",
 							name = ArkInventory.Localise["CONFIG_LAYOUT_DESCRIPTION"],
-							fontSize = "medium",
+							type = "description",
+							fontSize = "medium"
 						},
 					},
 				},
@@ -10105,7 +10120,8 @@ If you want your profiles to be completely different then you must use a differe
 
 The reason for those Blueprint objects being separate from the profile is so that they can be shared/re-used across multiple profiles without having to re-enter all the data again. You may want the same layout, but with different sorting, or categories, for another character, and this allows you to do that. It saves you a lot of time, and saves me a lot of data storage/memory usage.]],
 					type = "description",
-					width = "full",
+					fontSize = "medium",
+					width = "full"
 				},
 			},
 		},
@@ -10162,6 +10178,17 @@ The reason for those Blueprint objects being separate from the profile is so tha
 function ArkInventory.ConfigInternalProfileControl( path )
 	
 	local args1 = {
+		
+		location = {
+			order = 1,
+			type = "description",
+			fontSize = "large",
+			width = "full",
+			name = function( info )
+				local loc_id = ConfigGetNodeArg( info, #info - 1 )
+				return ArkInventory.Global.Location[loc_id].Name
+			end,
+		},
 		
 		blueprint = {
 			order = 100,
@@ -10230,7 +10257,8 @@ function ArkInventory.ConfigInternalProfileControl( path )
 					order = 201,
 					name = "",
 					type = "description",
-					width = "full",
+					fontSize = "medium",
+					width = "full"
 				},
 				layout = {
 					order = 300,
@@ -10294,7 +10322,8 @@ function ArkInventory.ConfigInternalProfileControl( path )
 					order = 301,
 					name = "",
 					type = "description",
-					width = "full",
+					fontSize = "medium",
+					width = "full"
 				},
 				categoryset = {
 					order = 400,
@@ -11096,7 +11125,9 @@ function ArkInventory.ConfigInternalAccountDataCharacter( path )
 end
 
 
-function ArkInventory.ConfigInternalLDBMounts( path )
+function ArkInventory.ConfigInternalLDBMounts( )
+	
+	local path = ArkInventory.Config.Internal.args.advanced.args.ldb.args.mounts.args
 	
 	local loc_id = ArkInventory.Const.Location.Mount
 	
@@ -11105,6 +11136,7 @@ function ArkInventory.ConfigInternalLDBMounts( path )
 			order = 1,
 			name = string.format( ArkInventory.Localise["LDB_LOCATION_NOT_MONITORED"], ArkInventory.Global.Location[loc_id].Name ),
 			type = "description",
+			fontSize = "medium"
 		}
 		return
 	end
@@ -11114,7 +11146,7 @@ function ArkInventory.ConfigInternalLDBMounts( path )
 	
 	args3["mt"] = {
 		order = 1,
-		name = "mount type",
+		name = ArkInventory.Localise["TYPE"],
 		type = "select",
 		values = function( info )
 			
@@ -11122,7 +11154,7 @@ function ArkInventory.ConfigInternalLDBMounts( path )
 			local md = ArkInventory.Collection.Mount.GetMount( index )
 			
 			local t = { }
-			for mountType, k in pairs( ArkInventory.Const.MountTypes ) do
+			for mountType, k in pairs( ArkInventory.Const.Mount.Types ) do
 				t[k] = ArkInventory.Localise[string.upper( string.format( "LDB_MOUNTS_TYPE_%s", mountType ) )]
 				if md.mto == k then
 					t[k] = string.format( "%s (%s)", t[k], ArkInventory.Localise["DEFAULT"] )
@@ -11158,8 +11190,53 @@ function ArkInventory.ConfigInternalLDBMounts( path )
 			
 		end,
 	}
-	
-	
+	args3["selected"] = {
+		order = 2,
+		type = "select",
+		name = ArkInventory.Localise["STATUS"],
+		values = function( )
+			local t = { ArkInventory.Localise["UNSELECTED"], ArkInventory.Localise["SELECTED"], ArkInventory.Localise["IGNORED"] }
+			return t
+		end,
+		get = function( info )
+			
+			local mountType = ConfigGetNodeArg( info, #info - 3 )
+			
+			local index = ConfigGetNodeArg( info, #info - 2 )
+			local md = ArkInventory.Collection.Mount.GetMount( index )
+			
+			local selected = config.me.player.data.ldb.mounts.type[mountType].selected
+			if selected[md.spellID] == true then
+				return 2
+			elseif selected[md.spellID] == false then
+				return 3
+			else
+				return 1
+			end
+			
+		end,
+		set = function( info, v )
+			
+			local mountType = ConfigGetNodeArg( info, #info - 3 )
+			
+			local index = ConfigGetNodeArg( info, #info - 2 )
+			local md = ArkInventory.Collection.Mount.GetMount( index )
+			
+			local selected = config.me.player.data.ldb.mounts.type[mountType].selected
+			
+			if v ~= selected[md.spellID] then
+				if v == 2 then
+					selected[md.spellID] = true
+				elseif v == 3 then
+					selected[md.spellID] = false
+				else
+					selected[md.spellID] = nil
+				end
+				ArkInventory.ConfigInternalLDBMounts( )
+			end
+			
+		end,
+	}
 	args3["summon"] = {
 		order = 9,
 		type = "execute",
@@ -11174,12 +11251,13 @@ function ArkInventory.ConfigInternalLDBMounts( path )
 	local args2 = { }
 	args2["mountname"] = {
 		order = 1,
-		type = "description",
 		name = function( info ) 
 			local index = ConfigGetNodeArg( info, #info - 1 )
 			local md = ArkInventory.Collection.Mount.GetMount( index )
 			return string.format( "%s (%s)", md.name, md.spellID )
 		end,
+		type = "description",
+		fontSize = "large"
 	}
 	args2["capabilities"] = {
 		order = 10,
@@ -11202,9 +11280,9 @@ function ArkInventory.ConfigInternalLDBMounts( path )
 		end,
 		set = function( info )
 			config.me.player.data.ldb.travelform = not config.me.player.data.ldb.travelform
+			ArkInventory.SetMountMacro( )
 		end,
 	}
-	
 	path["randomise"] = {
 		order = 2,
 		name = ArkInventory.Localise["RANDOM"],
@@ -11218,7 +11296,7 @@ function ArkInventory.ConfigInternalLDBMounts( path )
 		end,
 	}
 	
-	for mountType, k in pairs( ArkInventory.Const.MountTypes ) do
+	for mountType, k in pairs( ArkInventory.Const.Mount.Order ) do
 		
 		path[mountType] = {
 			order = k,
@@ -11238,22 +11316,96 @@ function ArkInventory.ConfigInternalLDBMountsUpdate( path, args2 )
 	
 	--if not ArkInventory.Collection.Mount.IsReady( ) then return end
 	
-	for mountType in pairs( ArkInventory.Const.MountTypes ) do
+	for mountType in pairs( ArkInventory.Const.Mount.Order ) do
 		
 		if not path[mountType].args then
 			path[mountType].args = { }
 		end
 		
+		local selected = config.me.player.data.ldb.mounts.type[mountType].selected
+		
 		if ArkInventory.Collection.Mount.IsReady( ) then
 			
 			local mountList = path[mountType].args
 			
+			mountList["useall"] = {
+				order = 1,
+				name = ArkInventory.Localise["USE_ALL"],
+				desc = string.format( ArkInventory.Localise["LDB_COMPANION_USEALL_DESC"], ArkInventory.Localise["MOUNTS"] ),
+				type = "toggle",
+				hidden = function( info )
+					return mountType == "x"
+				end,
+				get = function( info )
+					return config.me.player.data.ldb.mounts.type[mountType].useall
+				end,
+				set = function( info )
+					config.me.player.data.ldb.mounts.type[mountType].useall = not config.me.player.data.ldb.mounts.type[mountType].useall
+					ArkInventory:SendMessage( "EVENT_ARKINV_LDB_MOUNT_UPDATE_BUCKET" )
+				end,
+			}
+			
+			mountList["useforland"] = {
+				order = 2,
+				name = string.format( ArkInventory.Localise["LDB_MOUNTS_USEFORLAND"], ArkInventory.Localise["LDB_MOUNTS_TYPE_L"] ),
+				desc = string.format( ArkInventory.Localise["LDB_MOUNTS_USEFORLAND_DESC"], ArkInventory.Localise["LDB_MOUNTS_TYPE_A"], ArkInventory.Localise["LDB_MOUNTS_TYPE_L"] ),
+				type = "toggle",
+				width = "double",
+				hidden = function( info )
+					return not ( mountType == "a" )
+				end,
+				get = function( info )
+					return config.me.player.data.ldb.mounts.type.l.useflying
+				end,
+				set = function( info )
+					config.me.player.data.ldb.mounts.type.l.useflying = not config.me.player.data.ldb.mounts.type.l.useflying
+				end,
+			}
+			mountList["dismount"] = {
+				order = 3,
+				name = ArkInventory.Localise["LDB_MOUNTS_FLYING_DISMOUNT"],
+				desc = ArkInventory.Localise["LDB_MOUNTS_FLYING_DISMOUNT_DESC"],
+				type = "toggle",
+				width = "double",
+				hidden = function( info )
+					return not ( mountType == "a" )
+				end,
+				get = function( info )
+					return config.me.player.data.ldb.mounts.type.a.dismount
+				end,
+				set = function( info )
+					config.me.player.data.ldb.mounts.type.a.dismount = not config.me.player.data.ldb.mounts.type.a.dismount
+				end,
+			}
+			mountList["dragonriding"] = {
+				order = 4,
+				name = ArkInventory.Localise["DRAGONRIDING"],
+				desc = ArkInventory.Localise["LDB_MOUNTS_FLYING_DRAGONRIDING_DESC"],
+				type = "toggle",
+				hidden = function( info )
+					return not ( mountType == "a" and ArkInventory.ClientCheck( ArkInventory.ENUM.EXPANSION.DRAGONFLIGHT ) )
+				end,
+				get = function( info )
+					return config.me.player.data.ldb.mounts.dragonriding
+				end,
+				set = function( info )
+					config.me.player.data.ldb.mounts.dragonriding = not config.me.player.data.ldb.mounts.dragonriding
+				end,
+			}
+			
 			for _, md in ArkInventory.Collection.Mount.Iterate( mountType ) do
+				
+				local icon = ""
+				if selected[md.spellID] == true then
+					icon = ArkInventory.Const.Texture.List.Selected
+				elseif selected[md.spellID] == false then
+					icon = ArkInventory.Const.Texture.List.Ignored
+				end
 				
 				local mountKey = tostring( md.index )
 				local ok = false
 				
-				if not ok and md.mt == ArkInventory.Const.MountTypes[mountType] then
+				if not ok and md.mt == ArkInventory.Const.Mount.Types[mountType] then
 					ok = true
 				end
 				
@@ -11266,7 +11418,9 @@ function ArkInventory.ConfigInternalLDBMountsUpdate( path, args2 )
 					if not mountList[mountKey] then
 						--new mount, add it
 						mountList[mountKey] = {
+							order = 1000,
 							type = "group",
+							icon = icon,
 							name = md.name,
 							arg = md.index,
 							args = args2,
@@ -11291,7 +11445,9 @@ function ArkInventory.ConfigInternalLDBMountsUpdate( path, args2 )
 end
 
 
-function ArkInventory.ConfigInternalLDBPets( path )
+function ArkInventory.ConfigInternalLDBPets( )
+	
+	local path = ArkInventory.Config.Internal.args.advanced.args.ldb.args.pets.args
 	
 	path["randomise"] = {
 		order = 2,
@@ -11305,6 +11461,118 @@ function ArkInventory.ConfigInternalLDBPets( path )
 			config.me.player.data.ldb.pets.randomise = not config.me.player.data.ldb.pets.randomise
 		end,
 	}
+	
+end
+
+function ArkInventory.ConfigInternalUpdateTimer( )
+	
+	local path = ArkInventory.Config.Internal.args.advanced.args.updatetimer.args
+	
+	local args1 = {
+		event = {
+			order = 100,
+			name = function( info )
+				local id = ConfigGetNodeArg( info, #info - 1 )
+				return id
+			end,
+			type = "description",
+			fontSize = "medium",
+			width = "full"
+		},
+		current = {
+			order = 200,
+			name = ArkInventory.Localise["CURRENT"],
+			type = "range",
+			min = ArkInventory.Const.UpdateTimer.Min,
+			max = ArkInventory.Const.UpdateTimer.Max,
+			step = 0.01,
+			get = function( info )
+				local id = ConfigGetNodeArg( info, #info - 1 )
+				return ArkInventory.db.option.updatetimer[id].value or ArkInventory.db.option.updatetimer[id].default
+			end,
+			set = function( info, v )
+				
+				local v = math.floor( v * 100 ) / 100
+				if v < ArkInventory.Const.UpdateTimer.Min then v = ArkInventory.Const.UpdateTimer.Min end
+				if v > ArkInventory.Const.UpdateTimer.Max then v = ArkInventory.Const.UpdateTimer.Max end
+				
+				local id = ConfigGetNodeArg( info, #info - 1 )
+				if ArkInventory.db.option.updatetimer[id].value ~= v then
+					
+					if ArkInventory.db.option.updatetimer[id].default == v then
+						ArkInventory.db.option.updatetimer[id].custom = false
+						ArkInventory.db.option.updatetimer[id].value = nil
+					else
+						ArkInventory.db.option.updatetimer[id].custom = true
+						ArkInventory.db.option.updatetimer[id].value = v
+					end
+					
+					ArkInventory.ConfigInternalUpdateTimer( )
+					
+				end
+			end,
+		},
+		default = {
+			order = 9000,
+			name = ArkInventory.Localise["DEFAULT"],
+			desc = "reset back to default value",
+			type = "execute",
+			width = "half",
+			disabled = function( info )
+				local id = ConfigGetNodeArg( info, #info - 1 )
+				return not ArkInventory.db.option.updatetimer[id].custom
+			end,
+			func = function( info )
+				local id = ConfigGetNodeArg( info, #info - 1 )
+				ArkInventory.db.option.updatetimer[id].custom = false
+				ArkInventory.db.option.updatetimer[id].value = nil
+				ArkInventory.ConfigInternalUpdateTimer( )
+			end,
+		},
+		warning = {
+			order = 9999,
+			name = [[
+
+Changes to this value will not apply until after you have reloaded the interface.
+
+There are no descriptions for these events yet, although their name should roughly indicate what they do.  If your value breaks something then come back here and reset it to default.
+
+Typically the lower the value you set the more processing is required as instead of processing two or more events at the same time it could end up processing them individually.
+
+If you have customised the value for an event there will be an icon next to its name so you can easily see which ones have been changed and may need to be reset.
+
+note: if you want to drag the vertical divider over to see more of the name then you will need to, at minimum, click on the drag handle in the bottom right of this window first, then the drag for the divider bar should work.]],
+			type = "description",
+			fontSize = "medium",
+			width = "full"
+		},
+	}
+	
+	
+	for name, timer in pairs( ArkInventory.db.option.updatetimer ) do
+		
+		local id = name
+		local ignore, ignore, n = string.find( name, "^EVENT_ARKINV_(.+)_BUCKET$" )
+		local icon = ""
+		
+		if timer.custom then
+			 icon = ArkInventory.Const.Texture.UpdateTimerCustom
+		end
+		
+		if n then
+			path[name] = {
+				order = 100,
+				icon = icon,
+				name = n,
+				type = "group",
+				childGroups = "tab",
+				arg = id,
+				args = args1,
+			}
+		end
+		
+		
+	end
 	
 end
 

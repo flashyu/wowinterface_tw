@@ -18,22 +18,10 @@ MSBTProfiles_SavedVars = {
 			},
 			["enableBlizzardDamage"] = true,
 			["scrollAreas"] = {
-				["Notification"] = {
-					["offsetX"] = 53,
-					["offsetY"] = 140,
-				},
 				["Static"] = {
 					["direction"] = "Up",
 					["offsetX"] = 137,
 					["offsetY"] = -7,
-				},
-				["Incoming"] = {
-					["direction"] = "Up",
-					["offsetX"] = -258,
-					["behavior"] = "MSBT_NORMAL",
-					["offsetY"] = 132,
-					["animationStyle"] = "Straight",
-					["scrollHeight"] = 190,
 				},
 				["Outgoing"] = {
 					["scrollHeight"] = 180,
@@ -43,6 +31,18 @@ MSBTProfiles_SavedVars = {
 					["offsetY"] = -172,
 					["animationStyle"] = "Straight",
 					["behavior"] = "MSBT_NORMAL",
+				},
+				["Incoming"] = {
+					["direction"] = "Up",
+					["offsetX"] = -258,
+					["behavior"] = "MSBT_NORMAL",
+					["offsetY"] = 132,
+					["animationStyle"] = "Straight",
+					["scrollHeight"] = 190,
+				},
+				["Notification"] = {
+					["offsetX"] = 53,
+					["offsetY"] = 140,
 				},
 			},
 			["hideFullOverheals"] = true,

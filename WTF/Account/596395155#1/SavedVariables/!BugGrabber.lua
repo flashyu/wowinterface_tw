@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 481,
+	["session"] = 489,
 	["errors"] = {
 		{
 			["message"] = "...ace\\AddOns\\AdvancedInterfaceOptions\\basicOptions.lua:344: attempt to index field 'CustomVars' (a nil value)",
@@ -878,20 +878,136 @@ BugGrabberDB = {
 			["counter"] = 133,
 		}, -- [115]
 		{
+			["message"] = "...UI_Libraries\\Core\\Ace3\\AceEvent-3.0\\AceEvent-3.0-4.lua:37: Attempt to unregister unknown event \"WEAR_EQUIPMENT_SET\"",
+			["time"] = "2022/12/02 22:30:45",
+			["stack"] = "[string \"=[C]\"]: in function `UnregisterEvent'\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\Ace3\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:37: in function `OnUnused'\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:195: in function `UnregisterAllEvents'\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\Ace3\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:113: in function <...UI_Libraries\\Core\\Ace3\\AceEvent-3.0\\AceEvent-3.0.lua:112>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\Ace3\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:66: in function <...UI_Libraries\\Core\\Ace3\\AceAddon-3.0\\AceAddon-3.0.lua:61>\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\Ace3\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:565: in function <...UI_Libraries\\Core\\Ace3\\AceAddon-3.0\\AceAddon-3.0.lua:551>\n[string \"=(tail call)\"]: ?\n[string \"@Interface\\AddOns\\ArkInventoryConfig\\ArkInventoryConfig-31010.lua\"]:281: in function <...ace\\AddOns\\ArkInventoryConfig\\ArkInventoryConfig.lua:277>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\AceConfig-3.0-3\\AceConfigDialog-3.0\\AceConfigDialog-3.0-86.lua\"]:45: in function <...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:43>\n[string \"@Interface\\AddOns\\AddOnSkins\\Libs\\Ace3\\AceConfig-3.0-3\\AceConfigDialog-3.0\\AceConfigDialog-3.0-86.lua\"]:836: in function <...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:658>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\Ace3\\AceGUI-3.0\\AceGUI-3.0-41.lua\"]:66: in function <...\\ElvUI_Libraries\\Core\\Ace3\\AceGUI-3.0\\AceGUI-3.0.lua:64>\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\Ace3\\AceGUI-3.0\\AceGUI-3.0-41.lua\"]:300: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\Ace3\\AceGUI-3.0-41\\widgets\\AceGUIWidget-CheckBox.lua\"]:64: in function <...re\\Ace3\\AceGUI-3.0\\widgets\\AceGUIWidget-CheckBox.lua:53>",
+			["session"] = 482,
+			["counter"] = 1,
+		}, -- [116]
+		{
+			["message"] = "...TF\\Account\\596395155#1\\祈福\\骑风\\SavedVariables\\Details_Vanguard.lua:1: unexpected symbol",
+			["time"] = "2022/12/04 16:18:45",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 488,
+			["counter"] = 1,
+		}, -- [117]
+		{
+			["message"] = "WTF\\Account\\596395155#1\\SavedVariables\\Doom_CooldownPulse.lua:1: unexpected symbol",
+			["time"] = "2022/12/04 16:18:45",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 488,
+			["counter"] = 1,
+		}, -- [118]
+		{
+			["message"] = "...\\Account\\596395155#1\\祈福\\骑风\\SavedVariables\\Doom_CooldownPulse.lua:1: unexpected symbol",
+			["time"] = "2022/12/04 16:18:45",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 488,
+			["counter"] = 1,
+		}, -- [119]
+		{
+			["message"] = "WTF\\Account\\596395155#1\\SavedVariables\\GTFO-4.69.2.lua:1: unexpected symbol",
+			["time"] = "2022/12/04 16:18:45",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 488,
+			["counter"] = 1,
+		}, -- [120]
+		{
+			["message"] = "WTF\\Account\\596395155#1\\SavedVariables\\HeyboxPlayerInfo-1.9.7.4.lua:1: unexpected symbol",
+			["time"] = "2022/12/04 16:18:45",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 488,
+			["counter"] = 1,
+		}, -- [121]
+		{
+			["message"] = "...ccount\\596395155#1\\祈福\\骑风\\SavedVariables\\Blizzard_TimeManager.lua:1: unexpected symbol",
+			["time"] = "2022/12/04 16:18:54",
+			["locals"] = "(*temporary) = \"Blizzard_TimeManager\"\n",
+			["stack"] = "[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface_Wrath\\FrameXML\\UIParent.lua\"]:385: in function `UIParentLoadAddOn'\n[string \"@Interface_Wrath\\FrameXML\\UIParent.lua\"]:476: in function `TimeManager_LoadUI'\n[string \"@Interface_Wrath\\FrameXML\\UIParent.lua\"]:787: in function <Interface_Wrath\\FrameXML\\UIParent.lua:756>",
+			["session"] = 488,
+			["counter"] = 1,
+		}, -- [122]
+		{
+			["message"] = "...UI_Libraries\\Core\\Ace3\\AceEvent-3.0\\AceEvent-3.0-4.lua:33: Attempt to register unknown event \"WEAR_EQUIPMENT_SET\"",
+			["time"] = "2022/12/02 22:29:08",
+			["stack"] = "[string \"=[C]\"]: in function `RegisterEvent'\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\Ace3\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:33: in function `OnUsed'\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:140: in function `RegisterEvent'\n[string \"@Interface\\AddOns\\ArkInventory\\Core\\ArkInventory-31010.lua\"]:3120: in function <Interface\\AddOns\\ArkInventory\\Core\\ArkInventory.lua:3050>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\Ace3\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:66: in function <...UI_Libraries\\Core\\Ace3\\AceAddon-3.0\\AceAddon-3.0.lua:61>\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\Ace3\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:523: in function `EnableAddon'\n[string \"@Interface\\AddOns\\ElvUI_Libraries\\Core\\Ace3\\AceAddon-3.0\\AceAddon-3.0-13.lua\"]:626: in function <...UI_Libraries\\Core\\Ace3\\AceAddon-3.0\\AceAddon-3.0.lua:611>",
+			["session"] = 488,
+			["counter"] = 6,
+		}, -- [123]
+		{
 			["message"] = "Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua:37: attempt to index global 'db' (a nil value)",
 			["time"] = "2022/09/24 23:47:00",
 			["locals"] = "frame = WIM3_OptionFrameFrame1 {\n ImportCustomObject = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:398\n welcome = WIM3_OptionFrameFrame2 {\n }\n CreateDropDownMenu = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:182\n CreateColorPicker = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:74\n CreateCheckButtonMenu = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:308\n lastObj = WIM3_OptionFrameFrame2 {\n }\n nextOffsetX = 0\n CreateButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:64\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n nextOffSetY = 0\n CreateSlider = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:127\n 0 = <userdata>\n CreateSection = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:353\n CreateText = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:340\n SetFullSize = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:59\n CreateFramedPanel = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:392\n}\n(*temporary) = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:257\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n _Enable = <function> defined =[C]:-1\n UpdateChildren = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:281\n _Disable = <function> defined =[C]:-1\n isCheckButton = true\n children = <table> {\n }\n Disable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:269\n}\n(*temporary) = \"小地图按钮自由移动\"\n(*temporary) = nil\n(*temporary) = <table> {\n enabled = false\n OnDisable = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:400\n RegisterWidget = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:311\n OnEnable = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:382\n Enable = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:307\n OnDisableWIM = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:371\n canDisable = true\n OnEnableWIM = <function> defined @Interface\\AddOns\\WIM\\Modules\\MinimapIcon.lua:360\n dPrint = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:309\n enableByDefault = true\n title = \"MinimapIcon\"\n RegisterEvent = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:306\n db_defaults = <table> {\n }\n resources = <table> {\n }\n hasWidget = false\n Disable = <function> defined @Interface\\AddOns\\WIM\\WIM.lua:308\n}\n(*temporary) = \"enabled\"\n(*temporary) = nil\n(*temporary) = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua:36\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:257\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n _Enable = <function> defined =[C]:-1\n UpdateChildren = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:281\n _Disable = <function> defined =[C]:-1\n isCheckButton = true\n children = <table> {\n }\n Disable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:269\n}\n(*temporary) = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:46\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:257\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface\\AddOns\\WIM\\Sources\\Options\\OptionsTookKit.lua:220\n _Enable = <function> defined =[C]:-1\n UpdateChi",
 			["stack"] = "[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\CoreOptions.lua\"]:37: in function `frame'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:190: in function <Interface\\AddOns\\WIM\\Sources\\Options\\Options.lua:184>\n[string \"=[C]\"]: in function `Click'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:281: in function `UpdateSubCategories'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:104: in function <Interface\\AddOns\\WIM\\Sources\\Options\\Options.lua:104>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface\\AddOns\\WIM\\Sources\\Options\\Options-设置选项.lua\"]:327: in function `ShowOptions'\n[string \"@Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\WIM-3.9.6.lua\"]:11: in function <Interface\\AddOns\\AddOnSkins\\Skins\\AddOns\\WIM.lua:8>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\AddOnSkins\\Core\\Core.lua\"]:217: in function `CallSkin'\n[string \"@Interface\\AddOns\\AddOnSkins\\Core\\Core.lua\"]:311: in function `?'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:119: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:119>\n[string \"=[C]\"]: ?\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:29: in function <...Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:25>\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\CallbackHandler-1.0\\CallbackHandler-1.0-7.lua\"]:64: in function `Fire'\n[string \"@Interface\\AddOns\\ElvUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0-4.lua\"]:120: in function <...vUI\\Libraries\\Core\\Ace\\AceEvent-3.0\\AceEvent-3.0.lua:119>",
-			["session"] = 478,
-			["counter"] = 57,
-		}, -- [116]
+			["session"] = 488,
+			["counter"] = 59,
+		}, -- [124]
+		{
+			["message"] = "...unt\\596395155#1\\祈福\\骑风\\SavedVariables\\Blizzard_BattlefieldMap.lua:1: unexpected symbol",
+			["time"] = "2022/12/04 16:18:58",
+			["locals"] = "(*temporary) = \"Blizzard_BattlefieldMap\"\n",
+			["stack"] = "[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface_Wrath\\FrameXML\\UIParent.lua\"]:385: in function `UIParentLoadAddOn'\n[string \"UIParentLoadAddOn(\"Blizzard_BattlefieldMap\")\"]:1: in main chunk\n[string \"=[C]\"]: in function `RunScript'\n[string \"@Interface\\AddOns\\Leatrix_Maps\\Leatrix_Maps-3.0.62.lua\"]:64: in function `MainFunc'\n[string \"@Interface\\AddOns\\Leatrix_Maps\\Leatrix_Maps-3.0.62.lua\"]:3638: in function <Interface\\AddOns\\Leatrix_Maps\\Leatrix_Maps.lua:3559>",
+			["session"] = 488,
+			["counter"] = 1,
+		}, -- [125]
+		{
+			["message"] = "...6395155#1\\祈福\\骑风\\SavedVariables\\Blizzard_ClientSavedVariables.lua:1: unexpected symbol",
+			["session"] = 488,
+			["time"] = "2022/12/04 16:19:00",
+			["counter"] = 1,
+		}, -- [126]
+		{
+			["message"] = "WTF\\Account\\596395155#1\\SavedVariables\\AddOnSkins-4.61.lua:1: unexpected symbol",
+			["time"] = "2022/12/04 16:18:41",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 488,
+			["counter"] = 2,
+		}, -- [127]
+		{
+			["message"] = "WTF\\Account\\596395155#1\\SavedVariables\\TradeSkillMaster-v4.12.4.lua:1: unexpected symbol",
+			["time"] = "2022/12/04 16:18:41",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 488,
+			["counter"] = 2,
+		}, -- [128]
+		{
+			["message"] = "WTF\\Account\\596395155#1\\SavedVariables\\AtlasQuest-4.13.03.lua:1: unexpected symbol",
+			["time"] = "2022/12/04 16:18:42",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 488,
+			["counter"] = 2,
+		}, -- [129]
+		{
+			["message"] = "WTF\\Account\\596395155#1\\祈福\\骑风\\SavedVariables\\Attune-308.lua:1: unexpected symbol",
+			["time"] = "2022/12/04 16:18:43",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 488,
+			["counter"] = 2,
+		}, -- [130]
+		{
+			["message"] = "WTF\\Account\\596395155#1\\SavedVariables\\AutoCombatLogger-10.0.3.lua:1: unexpected symbol",
+			["time"] = "2022/12/04 16:18:43",
+			["locals"] = "",
+			["stack"] = "",
+			["session"] = 488,
+			["counter"] = 2,
+		}, -- [131]
 		{
 			["message"] = "Interface\\FrameXML\\ChatFrame.lua:1060: bad argument #1 to 'strlower' (string expected, got nil)",
 			["time"] = "2022/11/08 23:22:27",
 			["locals"] = "(*temporary) = nil\n(*temporary) = \"string expected, got nil\"\n",
 			["stack"] = "[string \"=[C]\"]: in function `strlower'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:1060: in function <Interface\\FrameXML\\ChatFrame.lua:1055>",
-			["session"] = 481,
-			["counter"] = 233,
-		}, -- [117]
+			["session"] = 489,
+			["counter"] = 250,
+		}, -- [132]
 	},
 }

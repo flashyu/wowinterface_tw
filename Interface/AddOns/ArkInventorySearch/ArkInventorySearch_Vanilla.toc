@@ -3,7 +3,7 @@
 ## Title: ArkInventory [Classic] [Search]
 ## Author: Arkayenro - Khaz'goroth
 ## Email: arkayenro at gmail dot com
-## Version: 31010
+## Version: 31011
 
 ## Notes: Search for ArkInventory
 

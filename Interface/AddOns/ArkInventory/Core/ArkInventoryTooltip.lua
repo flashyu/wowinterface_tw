@@ -1063,7 +1063,7 @@ function ArkInventory.TooltipGetLine( tooltip, i )
 		if obj and obj:IsShown( ) then
 			leftText = obj:GetText( )
 			leftTextClean = ArkInventory.TooltipCleanText( leftText )
-			c1 = CreateColor( obj:GetTextColor( ) )
+			leftColor = CreateColor( obj:GetTextColor( ) )
 		end
 		
 		obj = _G[string.format( "%s%s%s", tooltipName, "TextRight", i )]

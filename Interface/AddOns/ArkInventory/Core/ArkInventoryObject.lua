@@ -839,19 +839,30 @@ function ArkInventory.GetObjectInfo( h, i )
 	--ArkInventory.Output( info.ready, " = ", info )
 	
 	if info.class == "copper" then
-		-- do not cache
+		
+		-- do not cache money
+		
 	--elseif info.class == "empty" then
-		-- do not cache
+		
+		-- do not cache empty slots - why not??
 		
 	else
 		
 		if h and h ~= "" then
+			
 			cacheObjectStringStandard[h] = info.osd.hs
 			cacheGetObjectInfo[h] = info
+			
+			if info.ready then
+				ArkInventory.ItemCacheClear( h )
+			end
+			
 		end
+		
 		cacheGetObjectInfo[info.osd.hs] = info
 		cacheGetObjectInfo[info.osd.h1] = info
 		cacheGetObjectInfo[info.osd.h2] = info
+		
 		
 	end
 	

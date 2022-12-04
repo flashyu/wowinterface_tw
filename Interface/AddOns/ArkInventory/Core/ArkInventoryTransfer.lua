@@ -132,7 +132,7 @@ local function FindItem( loc_id, cl, cb, bp, cs, id, ct )
 						
 					else
 						
-						local h = GetContainerItemLink( bag_id, slot_id )
+						local h = ArkInventory.CrossClient.GetContainerItemLink( bag_id, slot_id )
 						
 						if h then
 							
@@ -284,7 +284,7 @@ local function FindPartialStack( loc_id, cl, cb, bp, cs, id )
 							
 							--ArkInventory.Output( "check> ", loc_id, ".", bag_id, ".", slot_id )
 							
-							local h = GetContainerItemLink( bag_id, slot_id )
+							local h = ArkInventory.CrossClient.GetContainerItemLink( bag_id, slot_id )
 							
 							if h then
 								
@@ -379,7 +379,7 @@ local function FindNormalItem( loc_id, cl, cb, bp, cs )
 							
 						else
 							
-							local h = GetContainerItemLink( bag_id, slot_id )
+							local h = ArkInventory.CrossClient.GetContainerItemLink( bag_id, slot_id )
 							
 							if h then
 								--ArkInventory.Output( "found> ", loc_id, ".", bag_id, ".", slot_id )
@@ -478,7 +478,7 @@ local function FindProfessionItem( loc_id, cl, cb, bp, cs, ct )
 							
 						else
 							
-							local h = GetContainerItemLink( bag_id, slot_id )
+							local h = ArkInventory.CrossClient.GetContainerItemLink( bag_id, slot_id )
 							
 							--ArkInventory.Output( "chk> ", h )
 							
@@ -621,7 +621,7 @@ local function FindCraftingItem( loc_id, cl, cb, bp, cs )
 							
 						else
 							
-							local h = GetContainerItemLink( bag_id, slot_id )
+							local h = ArkInventory.CrossClient.GetContainerItemLink( bag_id, slot_id )
 							
 							if h then
 								
@@ -714,7 +714,7 @@ local function StackBags( loc_id )
 						
 						--ArkInventory.Output( "unlocked> ", loc_id, ".", bag_id, ".", slot_id )
 						
-						local h = GetContainerItemLink( bag_id, slot_id )
+						local h = ArkInventory.CrossClient.GetContainerItemLink( bag_id, slot_id )
 						
 						if h then
 							
@@ -816,7 +816,7 @@ local function ConsolidateBag( loc_id, bag_id, bag_pos )
 				
 			else
 				
-				local h = GetContainerItemLink( bag_id, slot_id )
+				local h = ArkInventory.CrossClient.GetContainerItemLink( bag_id, slot_id )
 				
 				if not h then
 				
@@ -1023,7 +1023,7 @@ local function CompactBag( loc_id, bag_id, bag_pos )
 				
 			else
 				
-				local h = GetContainerItemLink( bag_id, slot_id )
+				local h = ArkInventory.CrossClient.GetContainerItemLink( bag_id, slot_id )
 				
 				if not h then
 				

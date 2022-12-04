@@ -1268,6 +1268,13 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 		return ArkInventory.CategoryGetSystemID( "SKILL_ARCHAEOLOGY" )
 	end
 	
+	-- primary professions
+	
+	if ArkInventory.PT_ItemInSets( i.h, "ArkInventory.Skill.Enchanting" ) then
+		return ArkInventory.CategoryGetSystemID( "SKILL_ENCHANTING" )
+	end
+	
+	
 	-- misc
 	if info.itemtypeid == ArkInventory.ENUM.ITEM.TYPE.MISC.PARENT then
 		
@@ -1297,6 +1304,9 @@ function ArkInventory.ItemCategoryGetDefaultActual( i )
 	
 	
 	-- left overs
+	
+	
+	
 	
 	-- crafting reagents (after professions so only the leftovers are categorised)
 	if info.craft then
