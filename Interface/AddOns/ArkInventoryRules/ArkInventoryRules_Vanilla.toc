@@ -4,7 +4,7 @@
 ## Notes: Rules for ArkInventory
 ## Author: Arkayenro
 ## Email: arkayenro at gmail dot com
-## Version: 31011
+## Version: 31012
 
 ## DefaultState: Enabled
 ## LoadOnDemand: 0

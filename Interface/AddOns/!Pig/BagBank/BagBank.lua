@@ -128,12 +128,10 @@ local function zhegnheBANK_Open()
 end
 ----保存离线数据-----
 local function SAVE_lixian_data(bagID, slot,wupinshujuinfo)
-	local itemID = C_Container.GetContainerItemID(bagID, slot)
-	if itemID then
-		local ContainerItemInfo= C_Container.GetContainerItemInfo(bagID, slot)
-		local itemCount = ContainerItemInfo["stackCount"]
-		local itemName,itemLink,itemQuality,itemLevel,itemMinLevel,itemType,itemSubType,itemStackCount,itemEquipLoc,itemTexture,sellPrice,classID = GetItemInfo(itemID);
-		local wupinxinxi={itemID,itemLink,itemCount,itemStackCount,false}
+	local ItemInfo= C_Container.GetContainerItemInfo(bagID, slot)
+	if ItemInfo then
+		local itemStackCount,itemEquipLoc,itemTexture,sellPrice,classID = select(8,GetItemInfo(ItemInfo.hyperlink))
+		local wupinxinxi={ItemInfo.itemID,ItemInfo.hyperlink,ItemInfo.stackCount,itemStackCount,false}
 		if classID==2 or classID==4 then
 			wupinxinxi[5]=true
 		end
@@ -253,6 +251,9 @@ local function Show_lixian_data(frameF,renwu,shuju,meihang,zongshu)
 					end
 				end
 			else
+				if i~=4 and i~=19 then
+					_G[framename.."_zbBuwei_"..i].itemlink:SetText(itemLink)
+				end
 				if PIG['ShowPlus']['zhuangbeiLV']=="ON" then
 					local effectiveILvl = GetDetailedItemLevelInfo(itemLink)
 					if effectiveILvl and effectiveILvl>0 then

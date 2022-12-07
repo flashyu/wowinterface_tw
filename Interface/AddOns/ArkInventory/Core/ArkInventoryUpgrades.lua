@@ -654,7 +654,18 @@ local function helper_UpgradeProfile( profile, profile_name )
 		if profile.option.location then
 			for k, v in pairs( profile.option.location ) do
 				if v.slot and v.slot.new and v.slot.new.cutoff then
+					
+					if not v.slot.override then
+						v.slot.override = { }
+					end
+					
+					if not v.slot.override.new then
+						v.slot.override.new = { }
+					end
+					
 					v.slot.override.new.cutoff = v.slot.new.cutoff * 60
+					v.slot.new.cutoff = nil
+					
 				end
 			end
 		end
@@ -779,18 +790,46 @@ local function helper_UpgradeProfile( profile, profile_name )
 				
 				if id then
 					
+					if not data.assign then
+						data.assign = { }
+					end
+					
 					if profile.option.category then
 						ArkInventory.Table.Merge( profile.option.category, data.assign )
 					end
 					profile.option.category = nil
 					
 					if profile.option.rule then
+						
+						if not data.category then
+							data.category = { }
+						end
+						
+						if not data.category.active then
+							data.category.active = { }
+						end
+						
+						if not data.category.active[ArkInventory.Const.Category.Type.Rule] then
+							data.category.active[ArkInventory.Const.Category.Type.Rule] = { }
+						end
+						
 						ArkInventory.Table.Merge( profile.option.rule, data.category.active[ArkInventory.Const.Category.Type.Rule] )
+						
 					end
 					profile.option.rule = nil
 					
 					for k, v in pairs( ArkInventory.acedb.global.option.category[ArkInventory.Const.Category.Type.Custom].data ) do
 						if v.used ~= "N" then
+							if not data.category then
+								data.category = { }
+							end
+							
+							if not data.category.active then
+								data.category.active = { }
+							end
+							if not data.category.active[ArkInventory.Const.Category.Type.Custom] then
+								data.category.active[ArkInventory.Const.Category.Type.Custom] = { }
+							end
 							data.category.active[ArkInventory.Const.Category.Type.Custom][k] = true
 						end
 					end
@@ -1358,21 +1397,32 @@ function ArkInventory.DatabaseUpgradePostLoad( )
 		
 		for v1, v2 in pairs( ArkInventory.acedb.global.option.catset.data ) do
 			
-			for k, v in pairs( v2.category ) do
-				if type( v ) ~= "table" then
-					v2.category.active[ArkInventory.Const.Category.Type.Rule][k] = v
-					v2.category[k] = nil
+			if v2.category then
+				for k, v in pairs( v2.category ) do
+					if type( v ) ~= "table" then
+						if not v2.category.active then
+							v2.category.active = { }
+						end
+						if not v2.category.active[ArkInventory.Const.Category.Type.Rule] then
+							v2.category.active[ArkInventory.Const.Category.Type.Rule] = { }
+						end
+						v2.category.active[ArkInventory.Const.Category.Type.Rule][k] = v
+						v2.category[k] = nil
+					end
 				end
 			end
 			
 			if v2.rule then
-				
 				for k, v in pairs( v2.rule ) do
+					if not v2.category.active then
+						v2.category.active = { }
+					end
+					if not v2.category.active[ArkInventory.Const.Category.Type.Rule] then
+						v2.category.active[ArkInventory.Const.Category.Type.Rule] = { }
+					end
 					v2.category.active[ArkInventory.Const.Category.Type.Rule][k] = v
 				end
-				
 				v2.rule = nil
-				
 			end
 			
 		end
@@ -1411,14 +1461,17 @@ function ArkInventory.DatabaseUpgradePostLoad( )
 		
 		for k1, v1 in pairs( ArkInventory.acedb.global.option.catset.data ) do
 			
-			for k2, v2 in pairs( v1.assign ) do
-				
-				local v = string.match( k2, "^%d+:(.+)$" )
-				if v then
-					v1.assign[v] = v2
-					v1.assign[k2] = nil
+			if v1.assign then
+				for k2, v2 in pairs( v1.assign ) do
+					local v = string.match( k2, "^%d+:(.+)$" )
+					if v then
+						if not v1.assign then
+							v1.assign = { }
+						end
+						v1.assign[v] = v2
+						v1.assign[k2] = nil
+					end
 				end
-				
 			end
 			
 		end

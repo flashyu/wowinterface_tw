@@ -45,7 +45,7 @@ function ArkInventory.Action.Vendor.Check( i, codex, manual, delete )
 				
 			elseif IsAddOnLoaded( "SellJunk" ) and SellJunk then
 				
-				if ( info.q == 0 and not SellJunk:isException( i.h ) ) or ( info.q ~= 0 and SellJunk:isException( i.h ) ) then
+				if ( info.q == ArkInventory.ENUM.ITEM.QUALITY.POOR and not SellJunk:isException( i.h ) ) or ( info.q ~= ArkInventory.ENUM.ITEM.QUALITY.POOR and SellJunk:isException( i.h ) ) then
 					isMatch = true
 				end
 				

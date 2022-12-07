@@ -184,7 +184,7 @@ end
 
 --左边选项内容
 local Tab_L_List={
-	{"交互增强","聊天增强","战斗辅助","头像增强","显示增强","界面布局","快捷按钮栏","小地图/地图","游戏参数设置","测试功能","露露缇娅","开发工具","配 置","关 于"},
+	{"交互增强","聊天增强","战斗辅助","头像增强","显示增强","界面布局","快捷按钮栏","小地图/地图","游戏设置(CVars)","测试功能","露露缇娅","开发工具","配 置","关 于"},
 	{"背包整合","拍卖增强","额外动作条","快捷跟随","输出提示","技能监控","售卖助手","专业 C D","时空之门","开团助手","带本助手","离开屏保"},
 }
 local List_ButH = 24
@@ -352,9 +352,9 @@ end)
 -- PIG_AddOnPanel.cancel = function (self) SC_ChaChingPanel_CancelOrLoad();  end;
 --子页内容
 local Pigtxt={
-	["BT"]="|cff00ff00本插件为|r|cff00FFFF<猪猪加油|r [服务器:凤凰之神-部落]>|cff00ff00定制插件|r|cffffff00(已公开分享)|r\n|cffFF0000(本插件完全免费,网络购物平台出售的皆为骗子)。|r",	
-	["YY"]="玩家交流\124cff00ff00YY频道113213\124r",
-	["QQ"]="QQ群\124cff00ff0027397148\124r,2群\124cff00ff00117883385\124r",
+	["BT"]="|cff00ff00作者哔哩哔哩账号：|r|cff00FFFFgeligasi|r       |cff00ff00作者抖音账号：|r|cff00ffffgeligasi|r\n\n|cffFF0000(本插件完全免费,网络购物平台出售的皆为骗子)。|r",	
+	["YY"]="|cff00ff00YY频道\124cff00FFFF113213\124r",
+	["QQ"]="|cff00ff00QQ群|r\124cff00FFFF27397148\124r,|cff00ff002群|r\124cff00FFFF117883385\124r",
 }
 addonTable.Pigtxt=Pigtxt
 PIG_AddOnChild.title = PIG_AddOnChild:CreateFontString();

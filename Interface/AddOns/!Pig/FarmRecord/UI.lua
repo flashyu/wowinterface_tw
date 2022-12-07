@@ -142,9 +142,6 @@ local function ADD_daibenUI()
 	daiben.hanhuajiange =10;
 	daiben.hanhuadaojishi =0;
 	----
-	local pindaolist ={{"SAY","YELL","GUILD"},{"综合","寻求组队","大脚世界频道"}};
-	local pindaolist1 ={{"说","大喊","公会"},{"综合","寻求组队","大脚世界频道"}};
-	local suijizifu ={",",".","!",";","，","。","！","；"};
 	daiben.hanren = CreateFrame("Button",nil,daiben, "UIPanelButtonTemplate");  
 	daiben.hanren:SetSize(80,biaotiH-2);
 	daiben.hanren:SetPoint("LEFT",daiben.yesno,"RIGHT",8,0);
@@ -159,26 +156,11 @@ local function ADD_daibenUI()
 			daiben.hanren:SetText("喊话");
 		end
 	end
+	local suijizifu ={",",".","!",";","，","。","！","；"};
 	daiben.hanren.chatpindaoList={}
-	local paichupindaolist ={"悄悄话","战网密语","团队","团队通知","队伍聊天","表情","战场","交易","本地防务","世界防务"};
+	local paichupindaolist ={"交易","本地防务","世界防务","服务"};
 	local function huoqupindaoxulie()
-		local chatpindao = {GetChatWindowMessages(1)}
-		local chatpindaoList = {}
-		for i=1,#chatpindao do
-			local Namechia =_G[chatpindao[i].."_MESSAGE"]
-			if Namechia then
-				daiben.hanren.bushipaichupindao=true
-				for ii=1,#paichupindaolist do
-					if Namechia==paichupindaolist[ii] then
-						daiben.hanren.bushipaichupindao=false
-						break
-					end	
-				end
-				if daiben.hanren.bushipaichupindao then
-					table.insert(chatpindaoList,{Namechia,chatpindao[i],"Y"})
-				end
-			end
-		end
+		local chatpindaoList = {{"说","SAY"},{"大喊","YELL"},{"公会","GUILD"}}
 		local channels = {GetChannelList()}
 		for i = 1, #channels, 3 do
 			local id, name, disabled = channels[i], channels[i+1], channels[i+2]

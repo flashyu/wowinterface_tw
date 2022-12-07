@@ -35,10 +35,14 @@ end
 
 function ArkInventory.CrossClient.GetProfessions( ... )
 	
-	local info = { }
+	local r = { }
+	
 	if GetProfessions then
-		info = { GetProfessions( ... ) }
+		
+		r = { GetProfessions( ... ) }
+		
 	else
+		
 		local good = false
 		local skillnum = 0
 		local header1 = string.lower( ArkInventory.Localise["TRADESKILLS"] )
@@ -69,8 +73,8 @@ function ArkInventory.CrossClient.GetProfessions( ... )
 				
 				if good then
 					skillnum = skillnum + 1
-					--ArkInventory.Output( "info[", skillnum, "] = ", k, " [", name, "]" )
-					info[skillnum] = k
+					--ArkInventory.Output( "r[", skillnum, "] = ", k, " [", name, "]" )
+					r[skillnum] = k
 				end
 				
 			end
@@ -78,25 +82,17 @@ function ArkInventory.CrossClient.GetProfessions( ... )
 		
 	end
 	
-	return info
+	return r
 	
 end
 
 function ArkInventory.CrossClient.GetProfessionInfo( index )
 	
-	local info = { }
+	local r = { }
 	
 	if GetProfessionInfo then
 		
-		local name, texture, rank, maxRank, numSpells, spelloffset, skillLine, rankModifier = GetProfessionInfo( index )
-		info.name = name
-		info.texture = texture
-		info.rank = rank
-		info.rankMax = maxRank
-		info.numSpells = numSpells
-		info.spellOffset = spelloffset
-		info.skillLine = skillLine
-		info.rankModifier = rankModifier
+		r.name, r.texture, r.rank, r.rankMax, r.numSpells, r.spellOffset, r.skillLine, r.rankModifier = GetProfessionInfo( index )
 		
 	elseif GetSkillLineInfo then
 		
@@ -105,21 +101,21 @@ function ArkInventory.CrossClient.GetProfessionInfo( index )
 		for k, v in pairs( ArkInventory.Const.Tradeskill.Data ) do
 			if v.text == name then
 				--ArkInventory.Output( "skill [", index, "] found [", name, "]=[", k, "]" )
-				info.name = name
-				info.texture = ""
-				info.rank = skillRank
-				info.rankMax = skillMaxRank
-				info.numSpells = 0
-				info.spellOffset = 0
-				info.skillLine = k
-				info.rankModifier = 0
+				r.name = name
+				r.texture = ""
+				r.rank = skillRank
+				r.rankMax = skillMaxRank
+				r.numSpells = 0
+				r.spellOffset = 0
+				r.skillLine = k
+				r.rankModifier = 0
 				break
 			end
 		end
 		
 	end
 	
-	return info
+	return r
 	
 end
 
@@ -127,28 +123,19 @@ function ArkInventory.CrossClient.UIGetProfessionInfo( )
 	
 	-- get the profession that the tradeskill window was set for
 	
-	local info = { }
+	local r = { }
 	
 	if C_TradeSkillUI and C_TradeSkillUI.GetChildProfessionInfo then
 		
-		info = C_TradeSkillUI.GetChildProfessionInfo( )
+		r = C_TradeSkillUI.GetChildProfessionInfo( ) or r
 		
 	elseif C_TradeSkillUI and C_TradeSkillUI.GetTradeSkillLine then
 		
-		local tradeSkillID, skillLineName, skillLineRank, skillLineMaxRank, skillLineModifier, parentSkillLineID, parentSkillLineName =  C_TradeSkillUI.GetTradeSkillLine( )
-		info.skillLevel = skillLineRank
-		info.maxSkillLevel = skillLineMaxRank
-		info.professionID = tradeSkillID
-		info.parentProfessionID = parentSkillLineID
-		info.skillModifier = skillLineModifier
-		info.professionName = skillLineName
-		info.parentProfessionName = parentSkillLineName
-		--info.profession = 
-		--info.isPrimaryProfession = 
+		r.professionID, r.professionName, r.skillLevel, r.maxSkillLevel, r.skillModifier, r.parentProfessionID, r.parentProfessionName =  C_TradeSkillUI.GetTradeSkillLine( )
 		
 	end
 	
-	return info
+	return r
 	
 end
 
@@ -172,21 +159,27 @@ end
 
 function ArkInventory.CrossClient.GetContainerItemQuestInfo( i, ... )
 	
-	local info = { }
+	local r = { }
 	
 	if C_Container and C_Container.GetContainerItemQuestInfo then
-		info = C_Container.GetContainerItemQuestInfo( ... )
+		
+		r = C_Container.GetContainerItemQuestInfo( ... ) or r
+		
 	elseif GetContainerItemQuestInfo then
-		info.isQuestItem, info.questID, info.isActive = GetContainerItemQuestInfo( ... )
+		
+		r.isQuestItem, r.questID, r.isActive = GetContainerItemQuestInfo( ... )
+		
 	else
+		
 		if ArkInventory.PT_ItemInSets( i.h, "ArkInventory.System.Quest.Start" ) then
-			info.isQuestItem = true
-			info.questID = true
-			info.isActive = false
+			r.isQuestItem = true
+			r.questID = true
+			r.isActive = false
 		end
+		
 	end
 	
-	return info
+	return r
 	
 end
 
@@ -228,33 +221,19 @@ end
 
 function ArkInventory.CrossClient.GetCurrencyInfo( ... )
 	
-	local info = { }
+	local r = { }
 	
 	if C_CurrencyInfo and C_CurrencyInfo.GetCurrencyInfo then
-		info = C_CurrencyInfo.GetCurrencyInfo( ... )
+		
+		r = C_CurrencyInfo.GetCurrencyInfo( ... ) or r
+		
 	elseif GetCurrencyInfo then
-		local name, quantity, icon, quantityEarnedThisWeek, maxWeeklyQuantity, maxQuantity, discovered, quality = GetCurrencyInfo( ... )
---		info.canEarnPerWeek
---		info.description
---		info.isShowInBackpack
-		info.iconFileID = icon
---		info.isHeader
---		info.isTypeUnused
-		info.discovered = discovered
-		info.quality = quality
-		info.quantityEarnedThisWeek = quantityEarnedThisWeek
---		info.isHeaderExpanded
---		info.isTradeable
---		info.totalEarned
-		info.quantity = quantity
-		info.name = name
-		info.maxWeeklyQuantity = maxWeeklyQuantity
---		info.useTotalEarnedForMaxQty
-		info.maxQuantity = maxQuantity
---		info.trackedQuantity
+		
+		r.name, r.quantity, r.iconFileID, r.quantityEarnedThisWeek, r.maxWeeklyQuantity, r.maxQuantity, r.discovered, r.quality = GetCurrencyInfo( ... )
+		
 	end
 	
-	return info
+	return r
 	
 end
 
@@ -276,51 +255,37 @@ end
 
 function ArkInventory.CrossClient.GetCurrencyListInfo( ... )
 	
+	local r = { }
+	
 	if C_CurrencyInfo and C_CurrencyInfo.GetCurrencyListInfo then
 		
-		return C_CurrencyInfo.GetCurrencyListInfo( ... )
+		r = C_CurrencyInfo.GetCurrencyListInfo( ... ) or r
 		
 	elseif GetCurrencyListInfo then
 		
-		local info = { }
-		local name, isHeader, isHeaderExpanded, isTypeUnused, isShowInBackpack, quantity, iconFileID, maxQuantity, canEarnPerWeek, quantityEarnedThisWeek, unknown, itemID = GetCurrencyListInfo( ... )
-		
-		info.name = name
-		info.isHeader = isHeader
-		info.isHeaderExpanded = isHeaderExpanded
-		info.isTypeUnused = isTypeUnused
-		info.isShowInBackpack = isShowInBackpack
-		info.quantity = quantity
-		info.iconFileID = iconFileID
-		info.maxQuantity = maxQuantity
-		info.canEarnPerWeek = canEarnPerWeek
-		info.quantityEarnedThisWeek = quantityEarnedThisWeek
---		{ Name = "isTradeable", Type = "bool", Nilable = false },
---		{ Name = "quality", Type = "ItemQuality", Nilable = false },
---		{ Name = "maxWeeklyQuantity", Type = "number", Nilable = false },
---		{ Name = "discovered", Type = "bool", Nilable = false },
-		
-		return info
+		r.name, r.isHeader, r.isHeaderExpanded, r.isTypeUnused, r.isShowInBackpack, r.quantity, r.iconFileID, r.maxQuantity, r.canEarnPerWeek, r.quantityEarnedThisWeek, unknown, r.itemID = GetCurrencyListInfo( ... )
 		
 	end
+	
+	return r
 	
 end
 
 function ArkInventory.CrossClient.GetBackpackCurrencyInfo( ... )
 	
-	local info = { }
+	local r = { }
 	
 	if C_CurrencyInfo and C_CurrencyInfo.GetBackpackCurrencyInfo then
-		info = C_CurrencyInfo.GetBackpackCurrencyInfo( ... )
+		
+		r = C_CurrencyInfo.GetBackpackCurrencyInfo( ... ) or r
+		
 	elseif GetBackpackCurrencyInfo then
-		local name, quantity, icon, typesid = GetBackpackCurrencyInfo( ... )
-		info.name = name
-		info.quantity = quantity
-		info.iconFileID = icon
-		info.currencyTypesID = typesid
+		
+		r.name, r.quantity, r.iconFileID, r.currencyTypesID = GetBackpackCurrencyInfo( ... )
+		
 	end
 	
-	return info
+	return r
 	
 end
 
@@ -482,22 +447,22 @@ end
 
 function ArkInventory.CrossClient.GetContainerItemInfo( ... )
 	
-	local info = { }
+	local r = { }
 	
 	if C_Container and C_Container.GetContainerItemInfo then
-		info = C_Container.GetContainerItemInfo( ... )
+		
+		r = C_Container.GetContainerItemInfo( ... ) or r
+		
 	elseif GetContainerItemInfo then
-		info.iconFileID, info.stackCount, info.isLocked, info.quality, info.isReadable, info.hasLoot, info.hyperlink, info.isFiltered, info.hasNoValue, info.itemID, info.isBound = GetContainerItemInfo( ... )
+		
+		r.iconFileID, r.stackCount, r.isLocked, r.quality, r.isReadable, r.hasLoot, r.hyperlink, r.isFiltered, r.hasNoValue, r.itemID, r.isBound = GetContainerItemInfo( ... )
+		
 	end
 	
-	if not info then
-		info = { }
-	end
+	r.stackCount = r.stackCount or 1
+	r.quality = r.quality or ArkInventory.ENUM.ITEM.QUALITY.POOR
 	
-	info.stackCount = info.stackCount or 1
-	info.quality = info.quality or ArkInventory.ENUM.ITEM.QUALITY.POOR
-	
-	return info
+	return r
 	
 end
 

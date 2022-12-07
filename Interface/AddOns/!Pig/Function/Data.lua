@@ -15,6 +15,14 @@ function PIGRotation(self,dushu)
 	local angle = math.rad(dushu)
 	self:SetRotation(angle)
 end
+-- hooksecurefunc("CreateFrame", function(type,name,parent,template)
+-- 	if type=="CheckButton" then
+		--
+-- 	end
+-- end)
+function PIGDisable(self)
+	self:Disable() self.Text:SetTextColor(0.4, 0.4, 0.4, 1) 
+end
 ---
 if tocversion<40000 then
 	PIG_InviteUnit=InviteUnit

@@ -3101,7 +3101,7 @@ function ArkInventory.OnEnable( )
 	-- register bucket events
 	for name, timer in pairs( ArkInventory.db.option.updatetimer ) do
 		if ArkInventory[name] then
-			local value = timer.custom and timer.value or timer.default
+			local value = ( timer.custom and timer.value ) or timer.default
 			ArkInventory.OutputDebug( "RegisterBucketMessage( ", name, ", ", value, " )" )
 			ArkInventory:RegisterBucketMessage( name, value )
 		else
@@ -3359,7 +3359,7 @@ function ArkInventory.ItemSortKeyGenerate( i, bar_id, codex )
 		end
 		
 		-- item quality
-		s.quality = info.q or 0
+		s.quality = info.q or ArkInventory.ENUM.ITEM.QUALITY.POOR
 		
 		-- profession rank/quality
 		s.rank = 0

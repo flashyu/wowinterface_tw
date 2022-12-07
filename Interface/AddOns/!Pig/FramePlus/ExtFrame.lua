@@ -4,130 +4,160 @@ local _, _, _, tocversion = GetBuildInfo()
 local ADD_Checkbutton=addonTable.ADD_Checkbutton
 --任务界面扩展--------------------
 local function RenwuFrame_Open()
-	-- 显示任务等级
-	if QUESTS_DISPLAYED==6 then 
-		local function gengxinLVQR()
+	if tocversion<30000 then
+		if QUESTS_DISPLAYED==6 then 
+			local function gengxinLVQR()-- 显示任务等级
+				local numEntries, numQuests = GetNumQuestLogEntries();
+				if (numEntries == 0) then return end
+				for i = 1, QUESTS_DISPLAYED, 1 do
+					local questIndex = i + FauxScrollFrame_GetOffset(QuestLogListScrollFrame);		
+					if (questIndex <= numEntries) then
+						local questLogTitle = _G["QuestLogTitle"..i.."NormalText"]
+						local questCheck = _G["QuestLogTitle"..i.."Check"]
+						local title, level, _, isHeader = GetQuestLogTitle(questIndex)
+						if isHeader then
+							questLogTitle:SetText(title)
+							QuestLogDummyText:SetText(title)
+						else
+							questLogTitle:SetText(" ["..level.."]"..title)
+							QuestLogDummyText:SetText(" ["..level.."]"..title)
+						end
+						questCheck:SetPoint("LEFT", questLogTitle, "LEFT", QuestLogDummyText:GetWidth()+2, 0);
+					end  
+				end
+			end
+			QuestLogListScrollFrame:HookScript("OnVerticalScroll", function(self, offset)
+			    gengxinLVQR()
+			end)
+			QuestLogFrame:HookScript('OnShow', function()
+				gengxinLVQR()
+			end)
+			local xssdadas = 714
+			UIPanelWindows["QuestLogFrame"].width = xssdadas
+			--缩放任务框架以匹配新纹理
+			QuestLogFrame:SetWidth(xssdadas)
+			QuestLogFrame:SetHeight(487)
+
+			--任务日志标题移到中间
+			QuestLogTitleText:ClearAllPoints();
+			QuestLogTitleText:SetPoint("TOP", QuestLogFrame, "TOP", 0, -18);
+
+			-- 任务详细说明移到右边，并增加高度
+			QuestLogDetailScrollFrame:ClearAllPoints();
+			QuestLogDetailScrollFrame:SetPoint("TOPLEFT", QuestLogListScrollFrame,"TOPRIGHT", 30, 0);
+			QuestLogDetailScrollFrame:SetHeight(335);
+
+			-- 任务目录增加高度
+			QuestLogListScrollFrame:SetHeight(335);
+
+			-- 增加可显示任务目录数
+			local oldQuestsDisplayed = QUESTS_DISPLAYED;
+			QUESTS_DISPLAYED = QUESTS_DISPLAYED + 16;
+			for i = oldQuestsDisplayed + 1, QUESTS_DISPLAYED do
+			    local button = CreateFrame("Button", "QuestLogTitle" .. i, QuestLogFrame, "QuestLogTitleButtonTemplate");
+			    button:SetID(i);
+			    button:Hide();
+			    button:ClearAllPoints();
+			    button:SetPoint("TOPLEFT", _G["QuestLogTitle" .. (i-1)], "BOTTOMLEFT", 0, 1);
+			end
+			for i = 1, QUESTS_DISPLAYED do
+				_G["QuestLogTitle"..i]:HookScript("PostClick", function()
+						local questIndex = i + FauxScrollFrame_GetOffset(QuestLogListScrollFrame);		
+						local _, _, _, isHeader = GetQuestLogTitle(questIndex)
+						if isHeader then
+							C_Timer.After(0.001,gengxinLVQR)
+						else
+				    		gengxinLVQR()
+				    	end
+				end)
+			end
+			QuestLogFrame:HookScript("OnEvent", function(self,event, arg1)
+				gengxinLVQR()
+			end)
+
+			--更换纹理
+			local regions = { QuestLogFrame:GetRegions() }
+			regions[3]:SetTexture("Interface\\QUESTFRAME\\UI-QuestLogDualPane-Left")
+			regions[3]:SetSize(512,512)
+
+			regions[4]:ClearAllPoints()
+			regions[4]:SetPoint("TOPLEFT", regions[3], "TOPRIGHT", 0, 0)
+			regions[4]:SetTexture("Interface\\QUESTFRAME\\UI-QuestLogDualPane-Right")
+			regions[4]:SetSize(256,512)
+
+			regions[5]:Hide()
+			regions[6]:Hide()
+			--调整放弃任务按钮大小位置
+			QuestLogFrameAbandonButton:SetSize(110, 21)
+			QuestLogFrameAbandonButton:SetText(ABANDON_QUEST_ABBREV)
+			QuestLogFrameAbandonButton:ClearAllPoints()
+			QuestLogFrameAbandonButton:SetPoint("BOTTOMLEFT", QuestLogFrame, "BOTTOMLEFT", 17, 54)
+			--调整共享任务按钮大小
+			QuestFramePushQuestButton:SetSize(100, 21)
+			QuestFramePushQuestButton:SetText(SHARE_QUEST_ABBREV)
+			QuestFramePushQuestButton:ClearAllPoints()
+			QuestFramePushQuestButton:SetPoint("LEFT", QuestLogFrameAbandonButton, "RIGHT", -3, 0)
+			-- 增加显示地图按钮
+			local logMapButton = CreateFrame("Button", "logMapButton_UI", QuestLogFrame, "UIPanelButtonTemplate")
+			logMapButton:SetText("显示地图")
+			logMapButton:ClearAllPoints()
+			logMapButton:SetPoint("LEFT", QuestFramePushQuestButton, "RIGHT", -3, 0)
+			logMapButton:SetSize(100, 21)
+			logMapButton:SetScript("OnClick", ToggleWorldMap)
+			-- 调整没有任务文字提示位置
+			QuestLogNoQuestsText:ClearAllPoints();
+			QuestLogNoQuestsText:SetPoint("TOP", QuestLogListScrollFrame, 0, -90);
+			--隐藏没有任务时纹理
+			local txset = { EmptyQuestLogFrame:GetRegions();}
+			txset[1]:Hide();
+			txset[2]:Hide();
+			txset[3]:Hide();
+			txset[4]:Hide();
+		end
+	elseif tocversion<40000 then
+		local function gengxinLVQR()--显示任务等级
 			local numEntries, numQuests = GetNumQuestLogEntries();
 			if (numEntries == 0) then return end
 			for i = 1, QUESTS_DISPLAYED, 1 do
 				local questIndex = i + FauxScrollFrame_GetOffset(QuestLogListScrollFrame);		
 				if (questIndex <= numEntries) then
-					local questLogTitle = _G["QuestLogTitle"..i]
-					local questCheck = _G["QuestLogTitle"..i.."Check"]
+					local questLogbut = _G["QuestLogListScrollFrameButton"..i]
 					local title, level, _, isHeader = GetQuestLogTitle(questIndex)
 					if isHeader then
-						questLogTitle:SetText(title)
-						QuestLogDummyText:SetText(title)
+						questLogbut.normalText:SetText(title)
 					else
-						questLogTitle:SetText(" ["..level.."]"..title)
-						QuestLogDummyText:SetText(" ["..level.."]"..title)
+						questLogbut.normalText:SetText(" ["..level.."]"..title)
+						local TitleWWW =questLogbut.normalText:GetStringWidth()
+						--local TitleWWW =questLogbut.normalText:GetWidth()
+						questLogbut.normalText:SetWidth(TitleWWW+15)				
 					end
-					questCheck:SetPoint("LEFT", questLogTitle, "LEFT", QuestLogDummyText:GetWidth()+24, 0);
+					questLogbut.check:SetPoint("LEFT", questLogbut.normalText, "RIGHT", -14, 0);
 				end  
 			end
 		end
-		QuestLogListScrollFrame:HookScript("OnVerticalScroll", function(self, offset)
+		QuestLogListScrollFrame:HookScript("OnVerticalScroll", function()
 		    gengxinLVQR()
 		end)
-		QuestLogFrame:HookScript('OnShow', function()
-			gengxinLVQR()
-		end)
-		UIPanelWindows["QuestLogFrame"].width = 714
-		--缩放任务框架以匹配新纹理
-		QuestLogFrame:SetWidth(714)
-		QuestLogFrame:SetHeight(487)
-
-		--任务日志标题移到中间
-		QuestLogTitleText:ClearAllPoints();
-		QuestLogTitleText:SetPoint("TOP", QuestLogFrame, "TOP", 0, -18);
-
-		-- 任务详细说明移到右边，并增加高度
-		QuestLogDetailScrollFrame:ClearAllPoints();
-		QuestLogDetailScrollFrame:SetPoint("TOPLEFT", QuestLogListScrollFrame,"TOPRIGHT", 30, 0);
-		QuestLogDetailScrollFrame:SetHeight(335);
-
-		-- 任务目录增加高度
-		QuestLogListScrollFrame:SetHeight(335);
-
-		-- 增加可显示任务目录数
-		local oldQuestsDisplayed = QUESTS_DISPLAYED;
-		QUESTS_DISPLAYED = QUESTS_DISPLAYED + 16;
-		for i = oldQuestsDisplayed + 1, QUESTS_DISPLAYED do
-		    local button = CreateFrame("Button", "QuestLogTitle" .. i, QuestLogFrame, "QuestLogTitleButtonTemplate");
-		    button:SetID(i);
-		    button:Hide();
-		    button:ClearAllPoints();
-		    button:SetPoint("TOPLEFT", getglobal("QuestLogTitle" .. (i-1)), "BOTTOMLEFT", 0, 1);
-		end
 		for i = 1, QUESTS_DISPLAYED do
-			_G["QuestLogTitle"..i]:HookScript("PostClick", function()
-					local questIndex = i + FauxScrollFrame_GetOffset(QuestLogListScrollFrame);		
-					local _, _, _, isHeader = GetQuestLogTitle(questIndex)
-					if isHeader then
-						C_Timer.After(0.001,gengxinLVQR)
-					else
-			    		gengxinLVQR()
-			    	end
+			_G["QuestLogListScrollFrameButton"..i]:HookScript("PostClick", function()
+				local questIndex = i + FauxScrollFrame_GetOffset(QuestLogListScrollFrame);		
+				local _, _, _, isHeader = GetQuestLogTitle(questIndex)
+				if isHeader then
+					C_Timer.After(0.001,gengxinLVQR)
+				else
+		    		gengxinLVQR()
+		    	end
 			end)
 		end
-		QuestLogFrame:HookScript("OnEvent", function(self,event, arg1)
+		QuestLogListScrollFrame:HookScript("OnUpdate", function(self, elapsed)
 			gengxinLVQR()
 		end)
-
-		--更换纹理
-		local regions = { QuestLogFrame:GetRegions() }
-		regions[3]:SetTexture("Interface\\QUESTFRAME\\UI-QuestLogDualPane-Left")
-		regions[3]:SetSize(512,512)
-
-		regions[4]:ClearAllPoints()
-		regions[4]:SetPoint("TOPLEFT", regions[3], "TOPRIGHT", 0, 0)
-		regions[4]:SetTexture("Interface\\QUESTFRAME\\UI-QuestLogDualPane-Right")
-		regions[4]:SetSize(256,512)
-
-		regions[5]:Hide()
-		regions[6]:Hide()
-		--调整放弃任务按钮大小位置
-		QuestLogFrameAbandonButton:SetSize(110, 21)
-		QuestLogFrameAbandonButton:SetText(ABANDON_QUEST_ABBREV)
-		QuestLogFrameAbandonButton:ClearAllPoints()
-		QuestLogFrameAbandonButton:SetPoint("BOTTOMLEFT", QuestLogFrame, "BOTTOMLEFT", 17, 54)
-		--调整共享任务按钮大小
-		QuestFramePushQuestButton:SetSize(100, 21)
-		QuestFramePushQuestButton:SetText(SHARE_QUEST_ABBREV)
-		QuestFramePushQuestButton:ClearAllPoints()
-		QuestFramePushQuestButton:SetPoint("LEFT", QuestLogFrameAbandonButton, "RIGHT", -3, 0)
-		-- 增加显示地图按钮
-		local logMapButton = CreateFrame("Button", "logMapButton_UI", QuestLogFrame, "UIPanelButtonTemplate")
-		logMapButton:SetText("显示地图")
-		logMapButton:ClearAllPoints()
-		logMapButton:SetPoint("LEFT", QuestFramePushQuestButton, "RIGHT", -3, 0)
-		logMapButton:SetSize(100, 21)
-		logMapButton:SetScript("OnClick", ToggleWorldMap)
-		-- 调整没有任务文字提示位置
-		QuestLogNoQuestsText:ClearAllPoints();
-		QuestLogNoQuestsText:SetPoint("TOP", QuestLogListScrollFrame, 0, -90);
-		--隐藏没有任务时纹理
-		local txset = { EmptyQuestLogFrame:GetRegions();}
-		txset[1]:Hide();
-		txset[2]:Hide();
-		txset[3]:Hide();
-		txset[4]:Hide();
+		hooksecurefunc("QuestLog_Update", function()
+			gengxinLVQR()
+		end)
 	end
 end
----------------------
-fuFrame.Renwu=ADD_Checkbutton(nil,fuFrame,-100,"TOPLEFT",fuFrame,"TOPLEFT",20,-20,"任务界面扩展","扩展任务界面为两列；左边任务列表，右边任务详情！")
-if tocversion>90000 then
-	fuFrame.Renwu:Disable() fuFrame.Renwu.Text:SetTextColor(0.4, 0.4, 0.4, 1) 
-end
-fuFrame.Renwu:SetScript("OnClick", function (self)
-	if self:GetChecked() then
-		PIG['FramePlus']['ExtFrame_Renwu']="ON";
-		RenwuFrame_Open();
-	else
-		PIG['FramePlus']['ExtFrame_Renwu']="OFF";
-		Pig_Options_RLtishi_UI:Show()
-	end
-end);
+addonTable.RenwuFrame_Open=RenwuFrame_Open
 --专业界面扩展/////////////////////////////////////////////
 local function TradeSkillFunc()
 	if TRADE_SKILLS_DISPLAYED==8 then			
@@ -386,20 +416,7 @@ local function ZhuanyeFrame_Open()
 		end)
 	end
 end
---
-fuFrame.Zhuanye=ADD_Checkbutton(nil,fuFrame,-60,"TOPLEFT",fuFrame,"TOPLEFT",300,-20,"专业界面扩展","扩展专业技能界面为两列；左边配方列表，右边配方详情")
-if tocversion>90000 then
-	fuFrame.Zhuanye:Disable() fuFrame.Zhuanye.Text:SetTextColor(0.4, 0.4, 0.4, 1) 
-end
-fuFrame.Zhuanye:SetScript("OnClick", function (self)
-	if self:GetChecked() then
-		PIG['FramePlus']['ExtFrame_Zhuanye']="ON";
-		ZhuanyeFrame_Open();
-	else
-		PIG['FramePlus']['ExtFrame_Zhuanye']="OFF";
-		Pig_Options_RLtishi_UI:Show()
-	end
-end);
+addonTable.ZhuanyeFrame_Open=ZhuanyeFrame_Open
 -----------------------
 local Width,Height = 32,32;
 local Skill_List = {'烹饪', '急救', '裁缝', '熔炼', '采矿技能', '工程学', '锻造', '附魔', '制皮', '炼金术',"珠宝加工","铭文","符文熔铸"};
@@ -673,33 +690,4 @@ local function ZhuanyeQKBUT_Open()
 		end
 	end
 end
-
-fuFrame.QuickQH=ADD_Checkbutton(nil,fuFrame,-60,"TOPLEFT",fuFrame,"TOPLEFT",300,-60,"专业快速切换按钮","在专业界面显示便捷切换专业按钮")
-fuFrame.QuickQH:SetScript("OnClick", function (self)
-	if self:GetChecked() then
-		PIG['FramePlus']['ExtFrame_ZhuanyeQKBUT']=true;
-		ZhuanyeQKBUT_Open();
-	else
-		PIG['FramePlus']['ExtFrame_ZhuanyeQKBUT']=false;
-		Pig_Options_RLtishi_UI:Show()
-	end
-end);
---=====================================
-addonTable.FramePlus_ExtFrame = function()
-	if PIG['FramePlus']['ExtFrame_Renwu']=="ON" then
-		fuFrame.Renwu:SetChecked(true);
-		if fuFrame.Renwu:IsEnabled() then
-			RenwuFrame_Open();
-		end
-	end
-	if PIG['FramePlus']['ExtFrame_Zhuanye']=="ON" then
-		fuFrame.Zhuanye:SetChecked(true);
-		if fuFrame.Zhuanye:IsEnabled() then
-			ZhuanyeFrame_Open();
-		end
-	end
-	if PIG['FramePlus']['ExtFrame_ZhuanyeQKBUT'] then
-		fuFrame.QuickQH:SetChecked(true);
-		ZhuanyeQKBUT_Open();
-	end
-end
+addonTable.ZhuanyeQKBUT_Open=ZhuanyeQKBUT_Open

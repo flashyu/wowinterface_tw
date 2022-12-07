@@ -23,6 +23,7 @@ ArkInventory.Lib.PeriodicTable:AddData( "ArkInventory", "1", {
 	
 	["ArkInventory.System.Equipment.Cosmetic"] = "6833,6835,13544,34086,34087,44731,45067,186515",
 	
+	["ArkInventory.System.Pet.Parts.Chip"] = "198082,198357,199219",
 	["ArkInventory.System.Pet.Parts.Lil Abom"] = "186183,186184,186185,186186,186187",
 	["ArkInventory.System.Pet.Parts.Ruby Baubleworm"] = "36812,62072,67410",
 	["ArkInventory.System.Pet.Parts.Topaz Baubleworm"] = "11406,11944,25402",
@@ -31,14 +32,13 @@ ArkInventory.Lib.PeriodicTable:AddData( "ArkInventory", "1", {
 	["ArkInventory.System.Pet.PTBase"] = "m,Misc.Minipet,ArkInventory.Consumable.Pet",
 	
 	["ArkInventory.System.Mount.Parts.Divine Kiss of Ohnahra"] = "191506,201323,201929",
-	
+	["ArkInventory.System.Mount.Parts.Magmammoth Harness"] = "201839,201840",
 	["ArkInventory.System.Mount.Parts.Nilganihmaht.Stoned"] = "186603,186600,186601,186602,186604",
 	["ArkInventory.System.Mount.Parts.Nilganihmaht.Runed"] = "186605",
 	["ArkInventory.System.Mount.Parts.Nilganihmaht.Signet"] = "186606,182329,182326,182327,182328",
 	["ArkInventory.System.Mount.Parts.Nilganihmaht.Silver"] = "186607,186727",
 	["ArkInventory.System.Mount.Parts.Nilganihmaht.Gold"] = "186608",
 	["ArkInventory.System.Mount.Parts.BoundShadehound.Stygia"] = "185617,185618",
-	
 	["ArkInventory.System.Mount.New"] = "86547,174927,187153",
 	["ArkInventory.System.Mount.Other"] = "21213,187054",
 	["ArkInventory.System.Mount.PTBase"] = "m,Misc.Mount",
@@ -422,7 +422,7 @@ ArkInventory.Lib.PeriodicTable:AddData( "ArkInventory", "1", {
 	["ArkInventory.Skill.Cooking.New"] = "86425:CookingSchoolBell,86468:Apron",
 	["ArkInventory.Skill.Cooking.PTBase"] = "m,Tradeskill.Tool.Cooking,ArkInventory.Tradegoods.Cooking",
 	["ArkInventory.Skill.Enchanting.Dragonflight.Knowledge"] = "193901:1,198610:3,198967:1",
-	["ArkInventory.Skill.Enchanting.Dragonflight.Disenchant"] = "200939,200940,200941,200942,200943,200945,	200946,200947",
+	["ArkInventory.Skill.Enchanting.Dragonflight.Disenchant"] = "198800,200939,200940,200941,200942,200943,200945,200946,200947",
 	["ArkInventory.Skill.Enchanting.Zandalari.Iwens Enchanting Rod"] = "168125,168126,168127",
 	["ArkInventory.Skill.Enchanting.New"] = "124444,190336",
 	["ArkInventory.Skill.Enchanting.PTBase"] = "m,Tradeskill.Tool.Enchanting,Tradeskill.Mat.ByProfession.Enchanting,TradeskillResultMats.Reverse.Enchanting",

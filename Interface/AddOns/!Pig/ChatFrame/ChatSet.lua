@@ -18,13 +18,12 @@ local Xpianyi,Ypianyi,chushiY = 14,-36,-10
 --------------
 local QuickChat_maodianID = {1,2};
 local QuickChat_maodianListCN = {"附着于聊天栏上方","附着于聊天栏下方"};
-local QuickChat_maodianList = {{"BOTTOMLEFT","TOPLEFT",0,28},{"TOPLEFT","BOTTOMLEFT",-2,-4}};
 local ChatFrame_QuickChat_Open=addonTable.ChatFrame_QuickChat_Open
 fuFrame.QuickChat = ADD_Checkbutton(nil,fuFrame,-100,"TOPLEFT",fuFrame,"TOPLEFT",Xpianyi,chushiY,"快捷切换频道按钮","在聊天栏增加一排频道快捷切换按钮，可快速切换频道！")
 fuFrame.QuickChat:SetScript("OnClick", function (self)
 	if self:GetChecked() then
 		PIG["ChatFrame"]["QuickChat"]="ON";
-		ChatFrame_QuickChat_Open(QuickChat_maodianList)
+		ChatFrame_QuickChat_Open()
 	else
 		PIG["ChatFrame"]["QuickChat"]="OFF";
 		Pig_Options_RLtishi_UI:Show()
@@ -43,26 +42,7 @@ end
 function fuFrame.QuickChat_maodian:PIGDownMenu_SetValue(value,arg1,arg2)
 	fuFrame.QuickChat_maodian:PIGDownMenu_SetText(value)
 	PIG["ChatFrame"]['QuickChat_maodian']=arg1
-	if QuickChatFFF_UI then
-		QuickChatFFF_UI:ClearAllPoints();
-		QuickChatFFF_UI:SetPoint(QuickChat_maodianList[arg1][1],ChatFrame1,QuickChat_maodianList[arg1][2],QuickChat_maodianList[arg1][3],QuickChat_maodianList[arg1][4]);
-		--下移输入框
-		ChatFrame1EditBox:Show();
-		if arg1==1 then
-			ChatFrame1EditBox:ClearAllPoints();
-			ChatFrame1EditBox:SetPoint("BOTTOMLEFT",ChatFrame1,"TOPLEFT",-5,-0);
-			ChatFrame1EditBox:SetPoint("BOTTOMRIGHT",ChatFrame1,"TOPRIGHT",5,-0);
-			guanjianzi_UI.F:SetPoint("BOTTOMRIGHT",DEFAULT_CHAT_FRAME,"TOPRIGHT",2,56);
-			guanjianzi_UI.F:SetPoint("BOTTOMLEFT",DEFAULT_CHAT_FRAME,"TOPLEFT",-3,56);
-		elseif arg1==2 then
-			ChatFrame1EditBox:ClearAllPoints();
-			ChatFrame1EditBox:SetPoint("TOPLEFT",ChatFrame1,"BOTTOMLEFT",-5,-23);
-			ChatFrame1EditBox:SetPoint("TOPRIGHT",ChatFrame1,"BOTTOMRIGHT",5,-23);
-			guanjianzi_UI.F:SetPoint("BOTTOMRIGHT",DEFAULT_CHAT_FRAME,"TOPRIGHT",2,28);
-			guanjianzi_UI.F:SetPoint("BOTTOMLEFT",DEFAULT_CHAT_FRAME,"TOPLEFT",-3,28);
-		end
-		ChatFrame1EditBox:Hide();
-	end
+	addonTable.Update_QuickChatEditBox(arg1)
 	PIGCloseDropDownMenus()
 end
 ---
@@ -846,7 +826,7 @@ end);
 addonTable.ChatFrame_Set = function()
 	C_Timer.After(2.8, JoinPigChannel);
 	if PIG["ChatFrame"]["QuickChat"]=="ON" then
-		ChatFrame_QuickChat_Open(QuickChat_maodianList)
+		ChatFrame_QuickChat_Open()
 	end
 	if PIG["ChatFrame"]["Guolv"]=="ON" then
 		yuyanguolv:RegisterEvent("ADDON_LOADED") 

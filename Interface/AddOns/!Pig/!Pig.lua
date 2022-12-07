@@ -63,8 +63,7 @@ AAAAA:SetScript("OnEvent",function(self, event, arg1)
 		-------
 		addonTable.CombatCycle()
 		-------
-		addonTable.FramePlus_ExtFrame()
-		addonTable.FramePlus_TalentFrame()
+		addonTable.FramePlus()
 		addonTable.FramePlus_CharacterFrame()
 		addonTable.FramePlus_yidongUI()
 		-------

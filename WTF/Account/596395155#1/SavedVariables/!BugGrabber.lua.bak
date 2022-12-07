@@ -1,6 +1,6 @@
 
 BugGrabberDB = {
-	["session"] = 488,
+	["session"] = 490,
 	["lastSanitation"] = 3,
 	["errors"] = {
 		{
@@ -1006,8 +1006,8 @@ BugGrabberDB = {
 			["time"] = "2022/11/08 23:22:27",
 			["locals"] = "(*temporary) = nil\n(*temporary) = \"string expected, got nil\"\n",
 			["stack"] = "[string \"=[C]\"]: in function `strlower'\n[string \"@Interface\\FrameXML\\ChatFrame.lua\"]:1060: in function <Interface\\FrameXML\\ChatFrame.lua:1055>",
-			["session"] = 488,
-			["counter"] = 246,
+			["session"] = 490,
+			["counter"] = 253,
 		}, -- [132]
 	},
 }

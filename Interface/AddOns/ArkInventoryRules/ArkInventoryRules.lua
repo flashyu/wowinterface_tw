@@ -560,13 +560,13 @@ function ArkInventoryRules.System.boolean_quality( ... )
 		
 		if type( arg ) == "number" then
 			
-			if arg == ArkInventoryRules.Object.q then
+			if arg == ArkInventoryRules.Object.info.q then
 				return true
 			end
 			
 		elseif type( arg ) == "string" then
 			
-			if string.lower( string.trim( arg ) ) == string.lower( _G[string.format( "ITEM_QUALITY%d_DESC", ArkInventoryRules.Object.q )] or "" ) then
+			if string.lower( string.trim( arg ) ) == string.lower( _G[string.format( "ITEM_QUALITY%d_DESC", ArkInventoryRules.Object.info.q )] or "" ) then
 				return true
 			end
 			

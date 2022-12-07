@@ -30,7 +30,7 @@ local function ADD_Frame(UIName,fuFrame,Width,Height,PointZi,Point,PointFu,Point
 			tile = false, tileSize = 0, edgeSize = 18, 
 			insets = { left = 4, right = 4, top = 4, bottom = 4 } });
 		frame:SetBackdropBorderColor(1, 1, 1, 0.4);
-	elseif Backdrop=="BG2" then
+	elseif Backdrop=="BG2" then--有头像背景
 		frame.BG = frame:CreateTexture(nil, "BACKGROUND");
 		frame.BG:SetTexture("interface/framegeneral/ui-background-rock.blp");
 		frame.BG:SetPoint("TOPLEFT", frame, "TOPLEFT",2, -23);
@@ -309,7 +309,7 @@ local function ADD_BagBankBGtex(self,texname)
 	self.TOP = self:CreateTexture(texname.."TOP", "BORDER");
 	self.TOP:SetTexture(374157);
 	self.TOP:SetPoint("TOPLEFT", self.TOPLEFT, "TOPRIGHT",0, -10);
-	self.TOP:SetPoint("BOTTOMRIGHT", self.TOPRIGHT, "BOTTOMLEFT", 0, 4);
+	self.TOP:SetPoint("BOTTOMRIGHT", self.TOPRIGHT, "BOTTOMLEFT", 0, 5);
 	self.TOP:SetTexCoord(0,0.4375,0,0.65625,1.08637285232544,0.4375,1.08637285232544,0.65625);
 	self.BOTTOMLEFT = self:CreateTexture(texname.."BOTTOMLEFT", "BORDER");
 	self.BOTTOMLEFT:SetTexture(374156);

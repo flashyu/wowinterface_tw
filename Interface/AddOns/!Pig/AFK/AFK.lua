@@ -12,13 +12,13 @@ local function Pig_AFK()
 		local WowWidth=GetScreenWidth();
 		local WowHeight=GetScreenHeight();
 		local ModelUI = CreateFrame("PlayerModel", "ModelUI_UI", WorldFrame);
-		ModelUI:SetSize(WowWidth-200,WowHeight-200);
+		ModelUI:SetSize(WowWidth-200,WowHeight-220);
 		ModelUI:SetPoint("CENTER",WorldFrame,"CENTER",0,-50);
 		ModelUI:SetUnit("player")
 		ModelUI:SetCamera(1)
 		--ModelUI:SetScale(0.8);
 		--ModelUI:ClearModel();--清空模型
-		ModelUI:SetPortraitZoom(-0.6);--模型视角远近
+		ModelUI:SetPortraitZoom(-0.5);--模型视角远近
 		--ModelUI:SetPosition(0,0,0);--相对于左下角定位模型Z,X,Y
 		--ModelUI:SetFacing(3.141596)--模型角度
 		--ModelUI:SetAnimation(69);

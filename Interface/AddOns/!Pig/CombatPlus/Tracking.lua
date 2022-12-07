@@ -12,7 +12,7 @@ local function CombatPlus_Zhuizong()
 
 	local Zhuizong = CreateFrame("Frame", "Zhuizong_UI", UIParent);
 	Zhuizong:SetSize(Width,Height);
-	Zhuizong:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -15, 0);
+	Zhuizong:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -24, -24);
 
 	Zhuizong.Border_Se = Zhuizong:CreateTexture(nil, "BORDER");
 	Zhuizong.Border_Se:SetTexture("interface/common/ui-searchbox-icon.blp");

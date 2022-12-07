@@ -7,14 +7,12 @@ BisTooltipDB = {
 	},
 	["char"] = {
 		["骑风 - 祈福"] = {
-			["class_index"] = 2,
 			["highlight_spec"] = {
 				["spec_name"] = "Balance",
 				["key"] = "2:1",
 				["class_name"] = "Druid",
 			},
 			["version"] = 6.1,
-			["phase_index"] = 2,
 			["filter_specs"] = {
 				["Warrior"] = {
 					["Fury"] = true,
@@ -68,8 +66,8 @@ BisTooltipDB = {
 					["Destruction"] = true,
 				},
 			},
+			["data_source"] = "wowtbc",
 			["filter_class_names"] = false,
-			["spec_index"] = 2,
 		},
 		["Helloworlds - 沙尔图拉"] = {
 			["version"] = 6.1,

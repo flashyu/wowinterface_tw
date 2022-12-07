@@ -1018,9 +1018,6 @@ function ArkInventory.ConfigInternalSortMethodPurge( id )
 	data.used = "N"
 	data.name = ""
 	
-	ArkInventory.Table.Clean( v.active )
-	ArkInventory.Table.Clean( v.order )
-	
 	ArkInventory:SendMessage( "EVENT_ARKINV_CONFIG_UPDATE" )
 	
 end
@@ -1159,7 +1156,7 @@ function ArkInventory.ConfigInternalAccountGet( id, default )
 	
 	if not data or data.used ~= "Y" then
 		--ArkInventory.OutputWarning( "design ", id, " requested, status=", data.used, ", returning default instead" )
-		id = 9999
+		id = 999
 		data = ArkInventory.ConfigInternalAccountGet( id )
 	end
 	

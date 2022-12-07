@@ -7,16 +7,14 @@ BisTooltipDB = {
 	},
 	["char"] = {
 		["骑风 - 祈福"] = {
-			["class_index"] = 2,
 			["highlight_spec"] = {
 				["spec_name"] = "Balance",
 				["key"] = "2:1",
 				["class_name"] = "Druid",
 			},
 			["version"] = 6.1,
-			["phase_index"] = 2,
-			["spec_index"] = 2,
 			["filter_class_names"] = false,
+			["data_source"] = "wowtbc",
 			["filter_specs"] = {
 				["Warrior"] = {
 					["Fury"] = true,
