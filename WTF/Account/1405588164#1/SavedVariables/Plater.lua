@@ -8,8 +8,8 @@ PlaterDB = {
 			["npcID"] = 27108,
 		},
 		[75447] = {
-			["type"] = "BUFF",
 			["source"] = "未知目标",
+			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 25482,
 		},
@@ -26,14 +26,14 @@ PlaterDB = {
 			["npcID"] = 25761,
 		},
 		[47975] = {
-			["type"] = "BUFF",
 			["source"] = "受伤的战歌战士",
+			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 27106,
 		},
 		[24529] = {
-			["type"] = "BUFF",
 			["source"] = "未知目标",
+			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 3566,
 		},
@@ -92,14 +92,14 @@ PlaterDB = {
 			["npcID"] = 417,
 		},
 		[46119] = {
-			["type"] = "BUFF",
 			["source"] = "大德鲁伊拉索留斯",
+			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 25809,
 		},
 		[50283] = {
-			["type"] = "DEBUFF",
 			["source"] = "尼鲁巴尔蛛网领主",
+			["type"] = "DEBUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 25294,
 		},
@@ -108,6 +108,12 @@ PlaterDB = {
 			["type"] = "BUFF",
 			["source"] = "未知目标",
 			["npcID"] = 3106,
+		},
+		[58861] = {
+			["isChanneled"] = false,
+			["source"] = "幽灵狼",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29264,
 		},
 		[30223] = {
 			["isChanneled"] = false,
@@ -121,6 +127,18 @@ PlaterDB = {
 			["source"] = "毒尾蝎",
 			["npcID"] = 3127,
 		},
+		[58867] = {
+			["isChanneled"] = false,
+			["source"] = "幽灵狼",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29264,
+		},
+		[45584] = {
+			["type"] = "BUFF",
+			["source"] = "战歌上尉",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 25446,
+		},
 		[45578] = {
 			["isChanneled"] = false,
 			["source"] = "战歌射手",
@@ -128,10 +146,16 @@ PlaterDB = {
 			["npcID"] = 25244,
 		},
 		[45517] = {
-			["type"] = "BUFF",
+			["isChanneled"] = false,
 			["source"] = "战歌要塞战士",
-			["event"] = "SPELL_AURA_APPLIED",
+			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 25414,
+		},
+		[6917] = {
+			["isChanneled"] = false,
+			["source"] = "尼鲁巴尔尸体收割者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 25445,
 		},
 		[6268] = {
 			["isChanneled"] = false,
@@ -139,21 +163,39 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 3123,
 		},
+		[25420] = {
+			["isChanneled"] = false,
+			["source"] = "战歌要塞萨满祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 25421,
+		},
 		[8314] = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["type"] = "BUFF",
 			["source"] = "卡纳尔·菲斯",
 			["npcID"] = 5907,
 		},
+		[15284] = {
+			["isChanneled"] = false,
+			["source"] = "战歌要塞战士",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 25414,
+		},
 		[50380] = {
-			["type"] = "DEBUFF",
 			["source"] = "血孢收割者",
+			["type"] = "DEBUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 25467,
 		},
+		[45528] = {
+			["isChanneled"] = false,
+			["source"] = "战歌要塞萨满祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 25421,
+		},
 		[57566] = {
-			["type"] = "BUFF",
 			["source"] = "未知目标",
+			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 417,
 		},
@@ -162,6 +204,12 @@ PlaterDB = {
 			["source"] = "地缚图腾",
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 2630,
+		},
+		[15499] = {
+			["isChanneled"] = false,
+			["source"] = "战歌要塞萨满祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 25421,
 		},
 		[44256] = {
 			["isChanneled"] = false,
@@ -175,17 +223,11 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 25446,
 		},
-		[45587] = {
+		[45577] = {
 			["isChanneled"] = false,
 			["source"] = "尼鲁巴尔遮天者",
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 25451,
-		},
-		[54052] = {
-			["isChanneled"] = false,
-			["source"] = "克萨诺姆",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 417,
 		},
 		[35706] = {
 			["source"] = "未知目标",
@@ -193,17 +235,29 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 17252,
 		},
+		[54052] = {
+			["isChanneled"] = false,
+			["source"] = "克萨诺姆",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 417,
+		},
+		[57567] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "布希纳姆",
+			["npcID"] = 417,
+		},
 		[45525] = {
-			["type"] = "BUFF",
+			["isChanneled"] = false,
 			["source"] = "战歌要塞法师",
-			["event"] = "SPELL_AURA_APPLIED",
+			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 25420,
 		},
-		[48090] = {
-			["type"] = "BUFF",
-			["source"] = "埃金科拉",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
+		[14034] = {
+			["isChanneled"] = false,
+			["source"] = "战歌要塞法师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 25420,
 		},
 		[1604] = {
 			["event"] = "SPELL_AURA_APPLIED",
@@ -211,11 +265,11 @@ PlaterDB = {
 			["source"] = "毒尾蝎",
 			["npcID"] = 3127,
 		},
-		[14034] = {
-			["isChanneled"] = false,
-			["source"] = "战歌要塞法师",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 25420,
+		[48090] = {
+			["source"] = "埃金科拉",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17252,
 		},
 		[50284] = {
 			["isChanneled"] = false,
@@ -229,11 +283,11 @@ PlaterDB = {
 			["source"] = "索梅巴",
 			["npcID"] = 35008,
 		},
-		[57567] = {
+		[45587] = {
 			["isChanneled"] = false,
+			["source"] = "尼鲁巴尔遮天者",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "布希纳姆",
-			["npcID"] = 417,
+			["npcID"] = 25451,
 		},
 		[57724] = {
 			["source"] = "未知目标",
@@ -241,44 +295,34 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 17252,
 		},
-		[45577] = {
-			["isChanneled"] = false,
-			["source"] = "尼鲁巴尔遮天者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 25451,
-		},
 		[50312] = {
-			["type"] = "BUFF",
 			["source"] = "克尔苏加德",
+			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 25465,
 		},
+		[25748] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "收割者伊斯里克斯",
+			["npcID"] = 25453,
+		},
 	},
 	["captured_casts"] = {
-		[44256] = {
-			["source"] = "战歌上尉",
+		[45577] = {
+			["source"] = "尼鲁巴尔遮天者",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25446,
-		},
-		[14034] = {
-			["source"] = "战歌要塞法师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25420,
-		},
-		[16033] = {
-			["source"] = "受伤的战歌萨满祭司",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27108,
+			["npcID"] = 25451,
 		},
 		[15799] = {
 			["source"] = "战歌上尉",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 25446,
 		},
-		[45577] = {
-			["source"] = "尼鲁巴尔遮天者",
+		[45578] = {
+			["source"] = "战歌射手",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25451,
+			["npcID"] = 25244,
 		},
 		[116] = {
 			["npcID"] = 188027,
@@ -288,10 +332,35 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 25446,
 		},
-		[45578] = {
-			["source"] = "战歌射手",
+		[6917] = {
+			["source"] = "尼鲁巴尔尸体收割者",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25244,
+			["npcID"] = 25445,
+		},
+		[25420] = {
+			["source"] = "战歌要塞萨满祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25421,
+		},
+		[14034] = {
+			["source"] = "战歌要塞法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25420,
+		},
+		[44256] = {
+			["source"] = "战歌上尉",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25446,
+		},
+		[16033] = {
+			["source"] = "受伤的战歌萨满祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27108,
+		},
+		[25748] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "收割者伊斯里克斯",
+			["npcID"] = 25453,
 		},
 	},
 	["profileKeys"] = {
@@ -523,13 +592,13 @@ PlaterDB = {
 				["Auto Set Skull"] = 11,
 				["Cast - Quick Flash"] = 2,
 				["Add - Non Elite Trash [P]"] = 4,
-				["Cast - Stop Casting"] = 4,
+				["Countdown"] = 11,
 				["Add - Explode on Die [P]"] = 1,
-				["Cast - On Going Cast [P]"] = 2,
+				["Cast - Stop Casting"] = 4,
 				["Fixate by Unit Buff [P]"] = 2,
 				["Cast - Frontal Cone"] = 15,
 				["Fixate"] = 11,
-				["Countdown"] = 11,
+				["Cast - On Going Cast [P]"] = 2,
 				["Spiteful Affix"] = 3,
 				["Cast - Very Important"] = 15,
 				["Fixate On You"] = 11,
@@ -539,17 +608,17 @@ PlaterDB = {
 				["Dont Have Aura"] = 1,
 				["Players Targetting Amount"] = 4,
 				["Color Automation"] = 1,
-				["Extra Border"] = 2,
+				["Combo Points"] = 6,
 				["Cast Bar Icon Config"] = 2,
 				["Execute Range"] = 1,
-				["Hide Neutral Units"] = 1,
+				["Extra Border"] = 2,
 				["Attacking Specific Unit"] = 2,
 				["Target Color"] = 3,
 				["Aura Reorder"] = 3,
-				["Combo Points"] = 6,
+				["Hide Neutral Units"] = 1,
 			},
 			["aura2_x_offset"] = 0,
-			["login_counter"] = 7,
+			["login_counter"] = 11,
 			["plate_config"] = {
 				["global_health_height"] = 12,
 				["global_health_width"] = 112,

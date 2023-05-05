@@ -26,7 +26,7 @@ RXPCTrackingData = {
 			["levels"] = {
 				[70] = {
 					["groupExperience"] = 0,
-					["deaths"] = 0,
+					["deaths"] = 1,
 					["mobs"] = {
 						["奥格瑞玛"] = {
 							["xp"] = 2500,
@@ -37,8 +37,8 @@ RXPCTrackingData = {
 							["count"] = 1,
 						},
 						["北风苔原"] = {
-							["xp"] = 12534,
-							["count"] = 7,
+							["xp"] = 29695,
+							["count"] = 22,
 						},
 					},
 					["timestamp"] = {

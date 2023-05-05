@@ -143,7 +143,7 @@ _detalhes_global = {
 	["always_use_profile_name"] = "",
 	["profile_by_spec"] = {
 	},
-	["combat_id_global"] = 6,
+	["combat_id_global"] = 22,
 	["displays_by_spec"] = {
 	},
 	["plugin_window_pos"] = {
@@ -156,14 +156,16 @@ _detalhes_global = {
 	["immersion_unit_special_icons"] = true,
 	["lastUpdateWarning"] = 0,
 	["npcid_pool"] = {
-		[25333] = "死灵侵犯者",
 		[25451] = "尼鲁巴尔遮天者",
-		[3227] = "堕落的血爪锐齿龙",
-		[3123] = "血爪锐齿龙",
-		[24566] = "尼鲁巴尔掠行者",
 		[25294] = "尼鲁巴尔蛛网领主",
-		[24562] = "尼鲁巴尔入侵者",
+		[3123] = "血爪锐齿龙",
+		[25445] = "尼鲁巴尔尸体收割者",
+		[25333] = "死灵侵犯者",
+		[25453] = "收割者伊斯里克斯",
 		[3127] = "毒尾蝎",
+		[3227] = "堕落的血爪锐齿龙",
+		[24562] = "尼鲁巴尔入侵者",
+		[24566] = "尼鲁巴尔掠行者",
 	},
 	["death_recap"] = {
 		["show_segments"] = false,
@@ -173,18 +175,34 @@ _detalhes_global = {
 	},
 	["spell_pool"] = {
 		1, -- [1]
-		[23250] = 1,
-		[25264] = 1,
-		[25231] = 1,
-		[57940] = 1,
-		[12721] = 1,
-		[65156] = 1,
-		[20647] = 1,
-		[46857] = 1,
-		[7922] = 1,
-		[29131] = 1,
+		[45525] = 1,
+		[34428] = 1,
+		[12723] = 1,
+		[12328] = 1,
 		[23602] = 1,
+		[33750] = 7,
+		[25231] = 1,
+		[65156] = 1,
+		[32176] = 7,
+		[2048] = 1,
+		[23250] = 1,
+		[20647] = 1,
+		[2687] = 1,
+		[25208] = 1,
+		[26372] = 7,
+		[25454] = 7,
+		[25501] = 7,
+		[45517] = 1,
+		[63375] = 7,
+		[7922] = 1,
+		[32175] = 7,
 		[30324] = 1,
+		[29131] = 1,
+		[60103] = 7,
+		[25264] = 1,
+		[57940] = 1,
+		[46857] = 1,
+		[12721] = 1,
 	},
 	["shield_spellid_cache"] = {
 	},
@@ -1185,17 +1203,20 @@ _detalhes_global = {
 				"out", -- [1]
 				0.2, -- [2]
 			},
-			["new_window_size"] = {
-				["height"] = 158,
-				["width"] = 310,
+			["window_clamp"] = {
+				-8, -- [1]
+				0, -- [2]
+				21, -- [3]
+				-14, -- [4]
 			},
 			["overall_clear_logout"] = false,
 			["memory_threshold"] = 3,
 			["cloud_capture"] = true,
 			["damage_taken_everything"] = false,
 			["scroll_speed"] = 2,
-			["font_sizes"] = {
-				["menus"] = 10,
+			["new_window_size"] = {
+				["height"] = 158,
+				["width"] = 310,
 			},
 			["chat_tab_embed"] = {
 				["enabled"] = false,
@@ -1345,10 +1366,10 @@ _detalhes_global = {
 					0.61, -- [2]
 					0.43, -- [3]
 				},
-				["ROGUE"] = {
-					1, -- [1]
-					0.96, -- [2]
-					0.41, -- [3]
+				["SHAMAN"] = {
+					0, -- [1]
+					0.44, -- [2]
+					0.87, -- [3]
 				},
 				["MAGE"] = {
 					0.41, -- [1]
@@ -1390,10 +1411,10 @@ _detalhes_global = {
 					0.372, -- [2]
 					0.905, -- [3]
 				},
-				["PALADIN"] = {
-					0.96, -- [1]
-					0.55, -- [2]
-					0.73, -- [3]
+				["ROGUE"] = {
+					1, -- [1]
+					0.96, -- [2]
+					0.41, -- [3]
 				},
 				["UNKNOW"] = {
 					0.2, -- [1]
@@ -1437,10 +1458,10 @@ _detalhes_global = {
 					0.5764, -- [2]
 					0.498, -- [3]
 				},
-				["SHAMAN"] = {
-					0, -- [1]
-					0.44, -- [2]
-					0.87, -- [3]
+				["PALADIN"] = {
+					0.96, -- [1]
+					0.55, -- [2]
+					0.73, -- [3]
 				},
 			},
 			["segments_auto_erase"] = 1,
@@ -1466,14 +1487,11 @@ _detalhes_global = {
 			["total_abbreviation"] = 2,
 			["only_pvp_frags"] = false,
 			["disable_stretch_button"] = false,
-			["window_clamp"] = {
-				-8, -- [1]
-				0, -- [2]
-				21, -- [3]
-				-14, -- [4]
+			["font_sizes"] = {
+				["menus"] = 10,
 			},
-			["deny_score_messages"] = false,
 			["minimum_combat_time"] = 5,
+			["deny_score_messages"] = false,
 			["segments_panic_mode"] = false,
 			["show_arena_role_icon"] = false,
 			["time_type_original"] = 2,
@@ -1679,7 +1697,7 @@ _detalhes_global = {
 	},
 	["class_time_played"] = {
 		[2] = {
-			["WARRIOR"] = 5200.943999999901,
+			["WARRIOR"] = 7786.590999999899,
 		},
 	},
 	["latest_news_saw"] = "3.4.1 10986",
@@ -1732,8 +1750,8 @@ _detalhes_global = {
 	["spell_category_latest_query"] = 0,
 	["tutorial"] = {
 		["unlock_button"] = 0,
-		["main_help_button"] = 6,
-		["logons"] = 6,
+		["main_help_button"] = 10,
+		["logons"] = 10,
 		["version_announce"] = 0,
 		["ctrl_click_close_tutorial"] = false,
 		["alert_frames"] = {
@@ -1886,7 +1904,7 @@ _detalhes_global = {
 	["update_warning_timeout"] = 10,
 	["plater"] = {
 		["realtime_dps_enabled"] = false,
-		["damage_taken_shadow"] = true,
+		["realtime_dps_size"] = 12,
 		["realtime_dps_player_shadow"] = true,
 		["damage_taken_enabled"] = false,
 		["realtime_dps_player_size"] = 12,
@@ -1902,12 +1920,12 @@ _detalhes_global = {
 			["x"] = 0,
 			["side"] = 7,
 		},
+		["damage_taken_shadow"] = true,
 		["damage_taken_anchor"] = {
 			["y"] = 0,
 			["x"] = 0,
 			["side"] = 7,
 		},
-		["realtime_dps_size"] = 12,
 		["damage_taken_color"] = {
 			1, -- [1]
 			1, -- [2]

@@ -17,6 +17,13 @@ ElvDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
+			["databars"] = {
+				["experience"] = {
+					["width"] = 8,
+					["height"] = 273,
+					["orientation"] = "VERTICAL",
+				},
+			},
 			["chat"] = {
 				["panelWidth"] = 450,
 				["panelHeight"] = 250,
@@ -28,12 +35,14 @@ ElvDB = {
 				["ShiftAB"] = "BOTTOM,UIParent,BOTTOM,-254,363",
 				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,332,311",
 				["ElvAB_6"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-4,360",
-				["LootFrameMover"] = "TOPRIGHT,UIParent,TOPRIGHT,-547,-380",
+				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,456,4",
+				["ElvAB_2"] = "BOTTOM,ElvUIParent,BOTTOM,335,98",
+				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,335,349",
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-339,415",
-				["ElvAB_1"] = "BOTTOM,UIParent,BOTTOM,0,181",
+				["LootFrameMover"] = "TOPRIGHT,UIParent,TOPRIGHT,-547,-380",
 				["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,0,139",
 				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-179",
-				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,335,349",
+				["ElvAB_1"] = "BOTTOM,UIParent,BOTTOM,0,181",
 				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,338,415",
 			},
 			["unitframe"] = {
@@ -58,13 +67,16 @@ ElvDB = {
 					["buttonSize"] = 40,
 					["buttons"] = 12,
 				},
+				["bar1"] = {
+					["buttonSize"] = 40,
+				},
 				["microbar"] = {
 					["buttons"] = 10,
 				},
-				["bar6"] = {
+				["bar2"] = {
 					["enabled"] = true,
-					["buttonsPerRow"] = 6,
-					["buttons"] = 6,
+					["buttonsPerRow"] = 4,
+					["buttonSize"] = 40,
 				},
 				["bar5"] = {
 					["enabled"] = false,
@@ -72,8 +84,10 @@ ElvDB = {
 					["buttons"] = 12,
 				},
 				["lockActionBars"] = false,
-				["bar1"] = {
-					["buttonSize"] = 40,
+				["bar6"] = {
+					["enabled"] = true,
+					["buttonsPerRow"] = 6,
+					["buttons"] = 6,
 				},
 			},
 			["convertPages"] = true,
@@ -81,7 +95,15 @@ ElvDB = {
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["狂暴專家"] = 1087227,
+			["狂暴專家"] = 921198,
+		},
+	},
+	["global"] = {
+		["general"] = {
+			["AceGUI"] = {
+				["height"] = 608,
+				["width"] = 800,
+			},
 		},
 	},
 	["faction"] = {

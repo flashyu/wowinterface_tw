@@ -27,9 +27,9 @@ BisTooltipDB = {
 					["Assassination"] = true,
 				},
 				["Mage"] = {
+					["Fire FFB"] = true,
 					["Frost"] = true,
 					["Fire"] = true,
-					["Fire FFB"] = true,
 					["Arcane"] = true,
 				},
 				["Warlock"] = {

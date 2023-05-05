@@ -8,6 +8,3757 @@ _detalhes_database = {
 			{
 				{
 					["tipo"] = 2,
+					["combatId"] = 6,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 1297,
+							["totalabsorbed"] = 0.003208,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "WARRIOR",
+							["total_without_pet"] = 17108.003208,
+							["dps_started"] = false,
+							["total"] = 17108.003208,
+							["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+							["colocacao"] = 1,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["on_hold"] = false,
+							["serial"] = "Player-4487-0051C667",
+							["damage_from"] = {
+								["尼鲁巴尔蛛网领主"] = true,
+								["尼鲁巴尔掠行者"] = true,
+							},
+							["targets"] = {
+								["尼鲁巴尔蛛网领主"] = 8158,
+								["尼鲁巴尔掠行者"] = 8950,
+							},
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["end_time"] = 1683303050,
+							["friendlyfire"] = {
+							},
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["nome"] = "狂暴專家",
+							["spells"] = {
+								["_ActorTable"] = {
+									{
+										["c_amt"] = 4,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 353,
+										["targets"] = {
+											["尼鲁巴尔蛛网领主"] = 2083,
+											["尼鲁巴尔掠行者"] = 3853,
+										},
+										["n_total"] = 4346,
+										["n_min"] = 142,
+										["g_dmg"] = 0,
+										["counter"] = 27,
+										["ChartData"] = {
+											[8] = 805,
+											[32] = 2368,
+											[17] = 1443,
+											[35] = 3047,
+											[5] = 805,
+											[38] = 3396,
+											[20] = 1757,
+											[41] = 3569,
+											[11] = 805,
+											[44] = 4040,
+											[23] = 1757,
+											[47] = 4212,
+											[50] = 4363,
+											[26] = 2203,
+											[53] = 5023,
+											[14] = 959,
+											[56] = 5936,
+											[29] = 2368,
+										},
+										["total"] = 5936,
+										["c_max"] = 590,
+										["r_amt"] = 0,
+										["id"] = 1,
+										["r_dmg"] = 0,
+										["b_dmg"] = 0,
+										["extra"] = {
+										},
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 314,
+										["successful_casted"] = 0,
+										["c_total"] = 1590,
+										["n_amt"] = 20,
+										["spellschool"] = 1,
+										["MISS"] = 3,
+									}, -- [1]
+									[20647] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 971,
+										["targets"] = {
+											["尼鲁巴尔蛛网领主"] = 971,
+											["尼鲁巴尔掠行者"] = 971,
+										},
+										["n_total"] = 1942,
+										["n_min"] = 971,
+										["g_dmg"] = 0,
+										["counter"] = 2,
+										["ChartData"] = {
+											[50] = 971,
+											[44] = 971,
+											[38] = 971,
+											[53] = 971,
+											[47] = 971,
+											[41] = 971,
+											[35] = 971,
+											[56] = 971,
+										},
+										["total"] = 1942,
+										["c_max"] = 0,
+										["id"] = 20647,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 2,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									},
+									[30324] = {
+										["c_amt"] = 2,
+										["b_amt"] = 1,
+										["g_amt"] = 0,
+										["n_max"] = 569,
+										["targets"] = {
+											["尼鲁巴尔蛛网领主"] = 4325,
+											["尼鲁巴尔掠行者"] = 3624,
+										},
+										["n_total"] = 5739,
+										["n_min"] = 472,
+										["g_dmg"] = 0,
+										["counter"] = 15,
+										["ChartData"] = {
+											[8] = 1063,
+											[32] = 5367,
+											[17] = 2688,
+											[35] = 5367,
+											[5] = 1063,
+											[38] = 5839,
+											[20] = 3817,
+											[41] = 6335,
+											[11] = 1063,
+											[44] = 6335,
+											[23] = 3817,
+											[47] = 7380,
+											[50] = 7949,
+											[26] = 3817,
+											[53] = 7949,
+											[14] = 1607,
+											[56] = 7949,
+											[29] = 4859,
+										},
+										["total"] = 7949,
+										["c_max"] = 1129,
+										["r_amt"] = 0,
+										["id"] = 30324,
+										["r_dmg"] = 0,
+										["b_dmg"] = 472,
+										["extra"] = {
+										},
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 1081,
+										["successful_casted"] = 0,
+										["c_total"] = 2210,
+										["n_amt"] = 11,
+										["spellschool"] = 1,
+										["MISS"] = 2,
+									},
+									[25264] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 242,
+										["targets"] = {
+											["尼鲁巴尔蛛网领主"] = 0,
+											["尼鲁巴尔掠行者"] = 242,
+										},
+										["n_total"] = 242,
+										["n_min"] = 242,
+										["g_dmg"] = 0,
+										["counter"] = 2,
+										["ChartData"] = {
+											[35] = 0,
+											[23] = 0,
+											[50] = 242,
+											[14] = 0,
+											[32] = 0,
+											[29] = 0,
+											[17] = 0,
+											[20] = 0,
+											[47] = 242,
+											[38] = 0,
+											[41] = 0,
+											[53] = 242,
+											[11] = 0,
+											[56] = 242,
+											[44] = 242,
+											[26] = 0,
+										},
+										["total"] = 242,
+										["c_max"] = 0,
+										["r_amt"] = 0,
+										["id"] = 25264,
+										["r_dmg"] = 0,
+										["b_dmg"] = 0,
+										["extra"] = {
+										},
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 1,
+										["spellschool"] = 1,
+										["MISS"] = 1,
+									},
+									[12721] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 87,
+										["targets"] = {
+											["尼鲁巴尔蛛网领主"] = 779,
+											["尼鲁巴尔掠行者"] = 260,
+										},
+										["n_total"] = 1039,
+										["n_min"] = 26,
+										["g_dmg"] = 0,
+										["counter"] = 16,
+										["ChartData"] = {
+											[35] = 779,
+											[26] = 779,
+											[23] = 520,
+											[29] = 779,
+											[47] = 779,
+											[38] = 779,
+											[32] = 779,
+											[20] = 260,
+											[41] = 779,
+											[53] = 831,
+											[17] = 104,
+											[50] = 779,
+											[44] = 779,
+											[56] = 970,
+										},
+										["total"] = 1039,
+										["c_max"] = 0,
+										["id"] = 12721,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 16,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									},
+								},
+								["tipo"] = 2,
+							},
+							["grupo"] = true,
+							["tipo"] = 1,
+							["damage_taken"] = 5569.003208,
+							["custom"] = 0,
+							["last_event"] = 1683303049,
+							["last_dps"] = 287.6696744294593,
+							["start_time"] = 1683303050,
+							["delay"] = 0,
+							["aID"] = "4487-0051C667",
+						}, -- [1]
+						{
+							["flag_original"] = 68168,
+							["totalabsorbed"] = 0.002412,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "UNKNOW",
+							["total_without_pet"] = 3319.002412,
+							["dps_started"] = false,
+							["total"] = 3319.002412,
+							["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["on_hold"] = false,
+							["serial"] = "Creature-0-4491-571-7-25294-0000552A39",
+							["damage_from"] = {
+								["狂暴專家"] = true,
+							},
+							["targets"] = {
+								["狂暴專家"] = 3319,
+							},
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["fight_component"] = true,
+							["end_time"] = 1683303050,
+							["friendlyfire"] = {
+							},
+							["monster"] = true,
+							["nome"] = "尼鲁巴尔蛛网领主",
+							["spells"] = {
+								["_ActorTable"] = {
+									{
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 225,
+										["targets"] = {
+											["狂暴專家"] = 1237,
+										},
+										["n_total"] = 1237,
+										["n_min"] = 183,
+										["g_dmg"] = 0,
+										["counter"] = 9,
+										["total"] = 1237,
+										["r_amt"] = 0,
+										["c_max"] = 0,
+										["b_dmg"] = 0,
+										["id"] = 1,
+										["r_dmg"] = 0,
+										["spellschool"] = 1,
+										["extra"] = {
+										},
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 6,
+										["DODGE"] = 2,
+										["MISS"] = 1,
+									}, -- [1]
+									[50284] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 0,
+										["targets"] = {
+										},
+										["n_total"] = 0,
+										["n_min"] = 0,
+										["g_dmg"] = 0,
+										["counter"] = 0,
+										["total"] = 0,
+										["c_max"] = 0,
+										["id"] = 50284,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 2,
+										["c_total"] = 0,
+										["n_amt"] = 0,
+										["a_dmg"] = 0,
+										["extra"] = {
+										},
+									},
+									[50283] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 332,
+										["targets"] = {
+											["狂暴專家"] = 2082,
+										},
+										["n_total"] = 2082,
+										["n_min"] = 276,
+										["g_dmg"] = 0,
+										["counter"] = 7,
+										["total"] = 2082,
+										["c_max"] = 0,
+										["id"] = 50283,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 7,
+										["extra"] = {
+										},
+										["spellschool"] = 8,
+									},
+								},
+								["tipo"] = 2,
+							},
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["tipo"] = 1,
+							["damage_taken"] = 8158.002412,
+							["custom"] = 0,
+							["last_event"] = 1683303024,
+							["last_dps"] = 0,
+							["start_time"] = 1683303050,
+							["delay"] = 0,
+							["aID"] = "25294",
+						}, -- [2]
+						{
+							["flag_original"] = 2632,
+							["totalabsorbed"] = 0.003472,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "UNKNOW",
+							["total_without_pet"] = 2250.003472,
+							["dps_started"] = false,
+							["total"] = 2250.003472,
+							["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["on_hold"] = false,
+							["serial"] = "Creature-0-4491-571-7-24566-0000552445",
+							["damage_from"] = {
+								["狂暴專家"] = true,
+								["战歌射手"] = true,
+								["战歌作战卫士"] = true,
+							},
+							["targets"] = {
+								["狂暴專家"] = 2250,
+							},
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["fight_component"] = true,
+							["end_time"] = 1683303050,
+							["friendlyfire"] = {
+							},
+							["monster"] = true,
+							["nome"] = "尼鲁巴尔掠行者",
+							["spells"] = {
+								["_ActorTable"] = {
+									{
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 228,
+										["targets"] = {
+											["狂暴專家"] = 1774,
+											["战歌射手"] = 0,
+											["战歌作战卫士"] = 0,
+										},
+										["n_total"] = 1774,
+										["b_dmg"] = 0,
+										["n_min"] = 174,
+										["g_dmg"] = 0,
+										["counter"] = 23,
+										["total"] = 1774,
+										["r_amt"] = 0,
+										["c_max"] = 0,
+										["DODGE"] = 7,
+										["id"] = 1,
+										["r_dmg"] = 0,
+										["spellschool"] = 1,
+										["extra"] = {
+										},
+										["a_dmg"] = 0,
+										["PARRY"] = 4,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 9,
+										["MISS"] = 3,
+										["a_amt"] = 0,
+									}, -- [1]
+									[49749] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 476,
+										["targets"] = {
+											["狂暴專家"] = 476,
+										},
+										["n_total"] = 476,
+										["n_min"] = 476,
+										["g_dmg"] = 0,
+										["counter"] = 2,
+										["total"] = 476,
+										["c_max"] = 0,
+										["id"] = 49749,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["PARRY"] = 1,
+										["c_min"] = 0,
+										["successful_casted"] = 2,
+										["c_total"] = 0,
+										["n_amt"] = 1,
+										["extra"] = {
+										},
+										["a_amt"] = 0,
+									},
+								},
+								["tipo"] = 2,
+							},
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["tipo"] = 1,
+							["damage_taken"] = 17476.003472,
+							["custom"] = 0,
+							["last_event"] = 1683303767,
+							["last_dps"] = 0,
+							["start_time"] = 1683303050,
+							["delay"] = 0,
+							["aID"] = "24566",
+						}, -- [3]
+					},
+				}, -- [1]
+				{
+					["tipo"] = 3,
+					["combatId"] = 6,
+					["_ActorTable"] = {
+					},
+				}, -- [2]
+				{
+					["tipo"] = 7,
+					["combatId"] = 6,
+					["_ActorTable"] = {
+						{
+							["received"] = 60.006559,
+							["resource"] = 0.006559,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["targets"] = {
+								["狂暴專家"] = 60,
+							},
+							["pets"] = {
+							},
+							["powertype"] = 1,
+							["classe"] = "WARRIOR",
+							["passiveover"] = 0.006559,
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["alternatepower"] = 0.006559,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["totalover"] = 0.006559,
+							["nome"] = "狂暴專家",
+							["spells"] = {
+								["_ActorTable"] = {
+									[23602] = {
+										["total"] = 60,
+										["id"] = 23602,
+										["totalover"] = 0,
+										["targets"] = {
+											["狂暴專家"] = 60,
+										},
+										["counter"] = 12,
+									},
+								},
+								["tipo"] = 7,
+							},
+							["grupo"] = true,
+							["total"] = 60.006559,
+							["last_event"] = 1683303045,
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["tipo"] = 3,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["flag_original"] = 1297,
+							["serial"] = "Player-4487-0051C667",
+							["aID"] = "4487-0051C667",
+						}, -- [1]
+					},
+				}, -- [3]
+				{
+					["tipo"] = 9,
+					["combatId"] = 6,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 1047,
+							["debuff_uptime_spells"] = {
+								["_ActorTable"] = {
+									[25264] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 0,
+										["id"] = 25264,
+										["uptime"] = 16,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+									[7922] = {
+										["activedamt"] = -1,
+										["id"] = 7922,
+										["targets"] = {
+										},
+										["actived_at"] = 1683302992,
+										["uptime"] = 0,
+										["counter"] = 0,
+										["refreshamt"] = 0,
+										["actived"] = false,
+										["appliedamt"] = 0,
+									},
+									[46857] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 4,
+										["id"] = 46857,
+										["uptime"] = 25,
+										["targets"] = {
+										},
+										["appliedamt"] = 2,
+									},
+									[12721] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 3,
+										["id"] = 12721,
+										["uptime"] = 18,
+										["targets"] = {
+										},
+										["appliedamt"] = 3,
+									},
+								},
+								["tipo"] = 9,
+							},
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "WARRIOR",
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["buff_uptime_spells"] = {
+								["_ActorTable"] = {
+									[65156] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 65156,
+										["uptime"] = 9,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+								},
+								["tipo"] = 9,
+							},
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["debuff_uptime"] = 59,
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["debuff_uptime_targets"] = {
+							},
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["aID"] = "4487-0051C667",
+							["tipo"] = 4,
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["last_event"] = 1683303049,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["nome"] = "狂暴專家",
+							["serial"] = "Player-4487-0051C667",
+							["buff_uptime"] = 9,
+						}, -- [1]
+						{
+							["flag_original"] = 68168,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["aID"] = "25294",
+							["fight_component"] = true,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["nome"] = "尼鲁巴尔蛛网领主",
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["classe"] = "UNKNOW",
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["tipo"] = 4,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["last_event"] = 0,
+							["serial"] = "Creature-0-4491-571-7-25294-0000552A39",
+							["monster"] = true,
+						}, -- [2]
+						{
+							["flag_original"] = 2632,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["aID"] = "24566",
+							["fight_component"] = true,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["nome"] = "尼鲁巴尔掠行者",
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["classe"] = "UNKNOW",
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["tipo"] = 4,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["last_event"] = 0,
+							["serial"] = "Creature-0-4491-571-7-24566-0000552445",
+							["monster"] = true,
+						}, -- [3]
+					},
+				}, -- [4]
+				{
+					["tipo"] = 2,
+					["combatId"] = 6,
+					["_ActorTable"] = {
+					},
+				}, -- [5]
+				["raid_roster"] = {
+					["狂暴專家"] = "Player-4487-0051C667",
+				},
+				["raid_roster_indexed"] = {
+					"狂暴專家", -- [1]
+				},
+				["tempo_start"] = 1683302991,
+				["last_events_tables"] = {
+				},
+				["alternate_power"] = {
+				},
+				["cleu_events"] = {
+					["n"] = 1,
+				},
+				["playing_solo"] = true,
+				["totals"] = {
+					22676.91878400001, -- [1]
+					-0.010531, -- [2]
+					{
+						60, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
+				},
+				["player_last_events"] = {
+				},
+				["frags_need_refresh"] = true,
+				["amountCasts"] = {
+					["尼鲁巴尔掠行者"] = {
+						["刺骨打击"] = 2,
+					},
+					["尼鲁巴尔蛛网领主"] = {
+						["致盲虫群"] = 2,
+					},
+					["狂暴專家"] = {
+						["英勇打击"] = 15,
+						["雷霆一击"] = 2,
+					},
+				},
+				["instance_type"] = "none",
+				["hasSaved"] = true,
+				["data_fim"] = "00:10:51",
+				["hasTimer"] = 59.14500000001863,
+				["cleu_timeline"] = {
+				},
+				["enemy"] = "尼鲁巴尔蛛网领主",
+				["trinketProcs"] = {
+				},
+				["TotalElapsedCombatTime"] = 703888.306,
+				["CombatEndedAt"] = 703888.306,
+				["aura_timeline"] = {
+				},
+				["__call"] = {
+				},
+				["PhaseData"] = {
+					{
+						1, -- [1]
+						1, -- [2]
+					}, -- [1]
+					["damage"] = {
+						{
+							["狂暴專家"] = 17108.003208,
+						}, -- [1]
+					},
+					["heal_section"] = {
+					},
+					["heal"] = {
+						{
+						}, -- [1]
+					},
+					["damage_section"] = {
+					},
+				},
+				["end_time"] = 703888.306,
+				["combat_id"] = 6,
+				["spells_cast_timeline"] = {
+				},
+				["data_inicio"] = "00:09:51",
+				["frags"] = {
+					["尼鲁巴尔蛛网领主"] = 1,
+					["尼鲁巴尔掠行者"] = 1,
+				},
+				["contra"] = "尼鲁巴尔蛛网领主",
+				["totals_grupo"] = {
+					17108, -- [1]
+					0, -- [2]
+					{
+						60, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+				},
+				["overall_added"] = true,
+				["start_time"] = 703828.835,
+				["TimeData"] = {
+				},
+				["combat_counter"] = 13,
+			}, -- [1]
+			{
+				{
+					["tipo"] = 2,
+					["combatId"] = 5,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 1297,
+							["totalabsorbed"] = 0.002765,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "WARRIOR",
+							["total_without_pet"] = 7880.002765,
+							["dps_started"] = false,
+							["total"] = 7880.002765,
+							["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+							["colocacao"] = 1,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["on_hold"] = false,
+							["serial"] = "Player-4487-0051C667",
+							["damage_from"] = {
+								["尼鲁巴尔掠行者"] = true,
+							},
+							["targets"] = {
+								["尼鲁巴尔掠行者"] = 7880,
+							},
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["end_time"] = 1683302972,
+							["friendlyfire"] = {
+							},
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["nome"] = "狂暴專家",
+							["spells"] = {
+								["_ActorTable"] = {
+									{
+										["c_amt"] = 1,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 176,
+										["targets"] = {
+											["尼鲁巴尔掠行者"] = 1457,
+										},
+										["n_total"] = 824,
+										["n_min"] = 152,
+										["g_dmg"] = 0,
+										["counter"] = 6,
+										["ChartData"] = {
+											[8] = 1305,
+											[5] = 1129,
+											[11] = 1457,
+										},
+										["total"] = 1457,
+										["c_max"] = 633,
+										["id"] = 1,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 633,
+										["successful_casted"] = 0,
+										["c_total"] = 633,
+										["n_amt"] = 5,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									}, -- [1]
+									[30324] = {
+										["c_amt"] = 3,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 540,
+										["targets"] = {
+											["尼鲁巴尔掠行者"] = 4508,
+										},
+										["n_total"] = 1040,
+										["n_min"] = 500,
+										["g_dmg"] = 0,
+										["counter"] = 5,
+										["ChartData"] = {
+											[8] = 3366,
+											[5] = 1625,
+											[11] = 4508,
+										},
+										["total"] = 4508,
+										["c_max"] = 1201,
+										["id"] = 30324,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 1125,
+										["successful_casted"] = 0,
+										["c_total"] = 3468,
+										["n_amt"] = 2,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									},
+									[12721] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 96,
+										["targets"] = {
+											["尼鲁巴尔掠行者"] = 927,
+										},
+										["n_total"] = 927,
+										["n_min"] = 52,
+										["g_dmg"] = 0,
+										["counter"] = 11,
+										["ChartData"] = {
+											[8] = 641,
+											[5] = 363,
+											[11] = 927,
+										},
+										["total"] = 927,
+										["c_max"] = 0,
+										["id"] = 12721,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 11,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									},
+									[20647] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 988,
+										["targets"] = {
+											["尼鲁巴尔掠行者"] = 988,
+										},
+										["n_total"] = 988,
+										["n_min"] = 988,
+										["g_dmg"] = 0,
+										["counter"] = 1,
+										["ChartData"] = {
+											[11] = 988,
+										},
+										["total"] = 988,
+										["c_max"] = 0,
+										["id"] = 20647,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 1,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									},
+								},
+								["tipo"] = 2,
+							},
+							["grupo"] = true,
+							["tipo"] = 1,
+							["damage_taken"] = 667.002765,
+							["custom"] = 0,
+							["last_event"] = 1683302970,
+							["last_dps"] = 670.7527038632646,
+							["start_time"] = 1683302972,
+							["delay"] = 0,
+							["aID"] = "4487-0051C667",
+						}, -- [1]
+						{
+							["flag_original"] = 68168,
+							["totalabsorbed"] = 0.005426,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "UNKNOW",
+							["total_without_pet"] = 667.0054259999999,
+							["dps_started"] = false,
+							["total"] = 667.0054259999999,
+							["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["on_hold"] = false,
+							["serial"] = "Creature-0-4491-571-7-24566-0000D5154C",
+							["damage_from"] = {
+								["狂暴專家"] = true,
+							},
+							["targets"] = {
+								["狂暴專家"] = 667,
+							},
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["fight_component"] = true,
+							["end_time"] = 1683302972,
+							["friendlyfire"] = {
+							},
+							["monster"] = true,
+							["nome"] = "尼鲁巴尔掠行者",
+							["spells"] = {
+								["_ActorTable"] = {
+									{
+										["c_amt"] = 1,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 204,
+										["targets"] = {
+											["狂暴專家"] = 667,
+										},
+										["n_total"] = 360,
+										["n_min"] = 156,
+										["g_dmg"] = 0,
+										["counter"] = 5,
+										["total"] = 667,
+										["r_amt"] = 0,
+										["c_max"] = 307,
+										["b_dmg"] = 0,
+										["id"] = 1,
+										["r_dmg"] = 0,
+										["spellschool"] = 1,
+										["extra"] = {
+										},
+										["a_dmg"] = 0,
+										["PARRY"] = 1,
+										["c_min"] = 307,
+										["successful_casted"] = 0,
+										["c_total"] = 307,
+										["n_amt"] = 2,
+										["a_amt"] = 0,
+										["DODGE"] = 1,
+									}, -- [1]
+								},
+								["tipo"] = 2,
+							},
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["tipo"] = 1,
+							["damage_taken"] = 7880.005426,
+							["custom"] = 0,
+							["last_event"] = 1683302968,
+							["last_dps"] = 0,
+							["start_time"] = 1683302972,
+							["delay"] = 0,
+							["aID"] = "24566",
+						}, -- [2]
+					},
+				}, -- [1]
+				{
+					["tipo"] = 3,
+					["combatId"] = 5,
+					["_ActorTable"] = {
+					},
+				}, -- [2]
+				{
+					["tipo"] = 7,
+					["combatId"] = 5,
+					["_ActorTable"] = {
+						{
+							["received"] = 10.005772,
+							["resource"] = 0.005772,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["targets"] = {
+								["狂暴專家"] = 10,
+							},
+							["pets"] = {
+							},
+							["powertype"] = 1,
+							["classe"] = "WARRIOR",
+							["passiveover"] = 0.005772,
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["alternatepower"] = 0.005772,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["totalover"] = 0.005772,
+							["nome"] = "狂暴專家",
+							["spells"] = {
+								["_ActorTable"] = {
+									[23602] = {
+										["total"] = 10,
+										["id"] = 23602,
+										["totalover"] = 0,
+										["targets"] = {
+											["狂暴專家"] = 10,
+										},
+										["counter"] = 2,
+									},
+								},
+								["tipo"] = 7,
+							},
+							["grupo"] = true,
+							["total"] = 10.005772,
+							["last_event"] = 1683302966,
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["tipo"] = 3,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["flag_original"] = 1297,
+							["serial"] = "Player-4487-0051C667",
+							["aID"] = "4487-0051C667",
+						}, -- [1]
+					},
+				}, -- [3]
+				{
+					["tipo"] = 9,
+					["combatId"] = 5,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 1047,
+							["debuff_uptime_spells"] = {
+								["_ActorTable"] = {
+									[7922] = {
+										["activedamt"] = -1,
+										["id"] = 7922,
+										["targets"] = {
+										},
+										["actived_at"] = 1683302959,
+										["uptime"] = 0,
+										["counter"] = 0,
+										["refreshamt"] = 0,
+										["actived"] = false,
+										["appliedamt"] = 0,
+									},
+									[12721] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 3,
+										["id"] = 12721,
+										["uptime"] = 12,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+									[46857] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 3,
+										["id"] = 46857,
+										["uptime"] = 12,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+								},
+								["tipo"] = 9,
+							},
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "WARRIOR",
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["buff_uptime_spells"] = {
+								["_ActorTable"] = {
+									[65156] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 65156,
+										["uptime"] = 9,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+								},
+								["tipo"] = 9,
+							},
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["debuff_uptime"] = 24,
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["debuff_uptime_targets"] = {
+							},
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["aID"] = "4487-0051C667",
+							["tipo"] = 4,
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["last_event"] = 1683302970,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["nome"] = "狂暴專家",
+							["serial"] = "Player-4487-0051C667",
+							["buff_uptime"] = 9,
+						}, -- [1]
+					},
+				}, -- [4]
+				{
+					["tipo"] = 2,
+					["combatId"] = 5,
+					["_ActorTable"] = {
+					},
+				}, -- [5]
+				["raid_roster"] = {
+					["狂暴專家"] = "Player-4487-0051C667",
+				},
+				["raid_roster_indexed"] = {
+					"狂暴專家", -- [1]
+				},
+				["CombatStartedAt"] = 703828.339,
+				["tempo_start"] = 1683302958,
+				["last_events_tables"] = {
+				},
+				["alternate_power"] = {
+				},
+				["cleu_events"] = {
+					["n"] = 1,
+				},
+				["playing_solo"] = true,
+				["totals"] = {
+					8547, -- [1]
+					0, -- [2]
+					{
+						10, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
+				},
+				["player_last_events"] = {
+				},
+				["frags_need_refresh"] = true,
+				["amountCasts"] = {
+					["狂暴專家"] = {
+						["英勇打击"] = 5,
+					},
+				},
+				["instance_type"] = "none",
+				["hasSaved"] = true,
+				["data_fim"] = "00:09:32",
+				["hasTimer"] = 13.02899999998044,
+				["cleu_timeline"] = {
+				},
+				["enemy"] = "尼鲁巴尔掠行者",
+				["trinketProcs"] = {
+				},
+				["TotalElapsedCombatTime"] = 703809.6950000001,
+				["CombatEndedAt"] = 703809.6950000001,
+				["aura_timeline"] = {
+				},
+				["__call"] = {
+				},
+				["PhaseData"] = {
+					{
+						1, -- [1]
+						1, -- [2]
+					}, -- [1]
+					["damage"] = {
+						{
+							["狂暴專家"] = 7880.002765,
+						}, -- [1]
+					},
+					["heal_section"] = {
+					},
+					["heal"] = {
+						{
+						}, -- [1]
+					},
+					["damage_section"] = {
+					},
+				},
+				["end_time"] = 703809.6950000001,
+				["combat_id"] = 5,
+				["spells_cast_timeline"] = {
+				},
+				["data_inicio"] = "00:09:19",
+				["frags"] = {
+					["尼鲁巴尔掠行者"] = 1,
+				},
+				["contra"] = "尼鲁巴尔掠行者",
+				["totals_grupo"] = {
+					7880, -- [1]
+					0, -- [2]
+					{
+						10, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+				},
+				["overall_added"] = true,
+				["start_time"] = 703796.456,
+				["TimeData"] = {
+				},
+				["combat_counter"] = 12,
+			}, -- [2]
+			{
+				{
+					["tipo"] = 2,
+					["combatId"] = 4,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 68168,
+							["totalabsorbed"] = 0.006433,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "UNKNOW",
+							["total_without_pet"] = 1527.006433,
+							["dps_started"] = false,
+							["total"] = 1527.006433,
+							["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["on_hold"] = false,
+							["serial"] = "Creature-0-4491-571-7-24566-00005529EA",
+							["damage_from"] = {
+								["狂暴專家"] = true,
+							},
+							["targets"] = {
+								["狂暴專家"] = 1527,
+							},
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["fight_component"] = true,
+							["end_time"] = 1683302934,
+							["friendlyfire"] = {
+							},
+							["monster"] = true,
+							["nome"] = "尼鲁巴尔掠行者",
+							["spells"] = {
+								["_ActorTable"] = {
+									{
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 199,
+										["targets"] = {
+											["狂暴專家"] = 1527,
+										},
+										["n_total"] = 1527,
+										["n_min"] = 148,
+										["g_dmg"] = 0,
+										["counter"] = 9,
+										["total"] = 1527,
+										["c_max"] = 0,
+										["id"] = 1,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 9,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									}, -- [1]
+									[49749] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 0,
+										["targets"] = {
+											["狂暴專家"] = 0,
+										},
+										["n_total"] = 0,
+										["n_min"] = 0,
+										["g_dmg"] = 0,
+										["counter"] = 1,
+										["total"] = 0,
+										["c_max"] = 0,
+										["id"] = 49749,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 1,
+										["c_total"] = 0,
+										["n_amt"] = 0,
+										["extra"] = {
+										},
+										["DODGE"] = 1,
+									},
+								},
+								["tipo"] = 2,
+							},
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["tipo"] = 1,
+							["damage_taken"] = 7150.006433000001,
+							["custom"] = 0,
+							["last_event"] = 1683302931,
+							["last_dps"] = 0,
+							["start_time"] = 1683302934,
+							["delay"] = 0,
+							["aID"] = "24566",
+						}, -- [1]
+						{
+							["flag_original"] = 1297,
+							["totalabsorbed"] = 0.004715,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "WARRIOR",
+							["total_without_pet"] = 7150.004715,
+							["dps_started"] = false,
+							["total"] = 7150.004715,
+							["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+							["colocacao"] = 1,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["on_hold"] = false,
+							["serial"] = "Player-4487-0051C667",
+							["damage_from"] = {
+								["尼鲁巴尔掠行者"] = true,
+							},
+							["targets"] = {
+								["尼鲁巴尔掠行者"] = 7150,
+							},
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["end_time"] = 1683302934,
+							["friendlyfire"] = {
+							},
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["nome"] = "狂暴專家",
+							["spells"] = {
+								["_ActorTable"] = {
+									{
+										["c_amt"] = 3,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 360,
+										["targets"] = {
+											["尼鲁巴尔掠行者"] = 3122,
+										},
+										["n_total"] = 1812,
+										["n_min"] = 156,
+										["g_dmg"] = 0,
+										["counter"] = 11,
+										["ChartData"] = {
+											[11] = 1794,
+											[17] = 2815,
+											[8] = 1325,
+											[14] = 2129,
+											[5] = 1161,
+										},
+										["total"] = 3122,
+										["c_max"] = 669,
+										["id"] = 1,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 306,
+										["successful_casted"] = 0,
+										["c_total"] = 1310,
+										["n_amt"] = 8,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									}, -- [1]
+									[30324] = {
+										["c_amt"] = 1,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 563,
+										["targets"] = {
+											["尼鲁巴尔掠行者"] = 2844,
+										},
+										["n_total"] = 1630,
+										["n_min"] = 531,
+										["g_dmg"] = 0,
+										["counter"] = 4,
+										["ChartData"] = {
+											[11] = 2281,
+											[17] = 2844,
+											[8] = 2281,
+											[14] = 2844,
+											[5] = 1214,
+										},
+										["total"] = 2844,
+										["c_max"] = 1214,
+										["id"] = 30324,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 1214,
+										["successful_casted"] = 0,
+										["c_total"] = 1214,
+										["n_amt"] = 3,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									},
+									[12721] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 110,
+										["targets"] = {
+											["尼鲁巴尔掠行者"] = 937,
+										},
+										["n_total"] = 937,
+										["n_min"] = 26,
+										["g_dmg"] = 0,
+										["counter"] = 14,
+										["ChartData"] = {
+											[11] = 781,
+											[17] = 911,
+											[8] = 671,
+											[14] = 833,
+											[5] = 342,
+										},
+										["total"] = 937,
+										["c_max"] = 0,
+										["id"] = 12721,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 14,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									},
+									[25264] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 247,
+										["targets"] = {
+											["尼鲁巴尔掠行者"] = 247,
+										},
+										["n_total"] = 247,
+										["n_min"] = 247,
+										["g_dmg"] = 0,
+										["counter"] = 1,
+										["ChartData"] = {
+											[17] = 247,
+										},
+										["total"] = 247,
+										["c_max"] = 0,
+										["id"] = 25264,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 1,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									},
+								},
+								["tipo"] = 2,
+							},
+							["grupo"] = true,
+							["tipo"] = 1,
+							["damage_taken"] = 1527.004715,
+							["custom"] = 0,
+							["last_event"] = 1683302932,
+							["last_dps"] = 375.66356932819,
+							["start_time"] = 1683302934,
+							["delay"] = 0,
+							["aID"] = "4487-0051C667",
+						}, -- [2]
+					},
+				}, -- [1]
+				{
+					["tipo"] = 3,
+					["combatId"] = 4,
+					["_ActorTable"] = {
+					},
+				}, -- [2]
+				{
+					["tipo"] = 7,
+					["combatId"] = 4,
+					["_ActorTable"] = {
+						{
+							["received"] = 10.001255,
+							["resource"] = 0.001255,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["targets"] = {
+								["狂暴專家"] = 10,
+							},
+							["pets"] = {
+							},
+							["powertype"] = 1,
+							["classe"] = "WARRIOR",
+							["passiveover"] = 0.001255,
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["alternatepower"] = 0.001255,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["totalover"] = 0.001255,
+							["nome"] = "狂暴專家",
+							["spells"] = {
+								["_ActorTable"] = {
+									[23602] = {
+										["total"] = 10,
+										["id"] = 23602,
+										["totalover"] = 0,
+										["targets"] = {
+											["狂暴專家"] = 10,
+										},
+										["counter"] = 2,
+									},
+								},
+								["tipo"] = 7,
+							},
+							["grupo"] = true,
+							["total"] = 10.001255,
+							["last_event"] = 1683302919,
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["tipo"] = 3,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["flag_original"] = 1297,
+							["serial"] = "Player-4487-0051C667",
+							["aID"] = "4487-0051C667",
+						}, -- [1]
+					},
+				}, -- [3]
+				{
+					["tipo"] = 9,
+					["combatId"] = 4,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 1297,
+							["debuff_uptime_spells"] = {
+								["_ActorTable"] = {
+									[25264] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 0,
+										["id"] = 25264,
+										["uptime"] = 3,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+									[12721] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 2,
+										["id"] = 12721,
+										["uptime"] = 14,
+										["targets"] = {
+										},
+										["appliedamt"] = 2,
+									},
+									[46857] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 3,
+										["id"] = 46857,
+										["uptime"] = 17,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+								},
+								["tipo"] = 9,
+							},
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "WARRIOR",
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["debuff_uptime"] = 34,
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["debuff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["last_event"] = 1683302932,
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["tipo"] = 4,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["aID"] = "4487-0051C667",
+							["serial"] = "Player-4487-0051C667",
+							["nome"] = "狂暴專家",
+						}, -- [1]
+						{
+							["flag_original"] = 68168,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["aID"] = "24566",
+							["fight_component"] = true,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["nome"] = "尼鲁巴尔掠行者",
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["classe"] = "UNKNOW",
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["tipo"] = 4,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["last_event"] = 0,
+							["serial"] = "Creature-0-4491-571-7-24566-00005529EA",
+							["monster"] = true,
+						}, -- [2]
+					},
+				}, -- [4]
+				{
+					["tipo"] = 2,
+					["combatId"] = 4,
+					["_ActorTable"] = {
+					},
+				}, -- [5]
+				["raid_roster"] = {
+					["狂暴專家"] = "Player-4487-0051C667",
+				},
+				["raid_roster_indexed"] = {
+					"狂暴專家", -- [1]
+				},
+				["CombatStartedAt"] = 703795.442,
+				["tempo_start"] = 1683302913,
+				["last_events_tables"] = {
+				},
+				["alternate_power"] = {
+				},
+				["cleu_events"] = {
+					["n"] = 1,
+				},
+				["playing_solo"] = true,
+				["totals"] = {
+					8677, -- [1]
+					0, -- [2]
+					{
+						10, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
+				},
+				["player_last_events"] = {
+				},
+				["frags_need_refresh"] = true,
+				["amountCasts"] = {
+					["狂暴專家"] = {
+						["英勇打击"] = 4,
+						["雷霆一击"] = 1,
+					},
+					["尼鲁巴尔掠行者"] = {
+						["刺骨打击"] = 1,
+					},
+				},
+				["instance_type"] = "none",
+				["hasSaved"] = true,
+				["data_fim"] = "00:08:54",
+				["hasTimer"] = 20.05499999993481,
+				["cleu_timeline"] = {
+				},
+				["enemy"] = "尼鲁巴尔掠行者",
+				["trinketProcs"] = {
+				},
+				["TotalElapsedCombatTime"] = 703771.557,
+				["CombatEndedAt"] = 703771.557,
+				["aura_timeline"] = {
+				},
+				["__call"] = {
+				},
+				["PhaseData"] = {
+					{
+						1, -- [1]
+						1, -- [2]
+					}, -- [1]
+					["damage"] = {
+						{
+							["狂暴專家"] = 7150.004715,
+						}, -- [1]
+					},
+					["heal_section"] = {
+					},
+					["heal"] = {
+						{
+						}, -- [1]
+					},
+					["damage_section"] = {
+					},
+				},
+				["end_time"] = 703771.557,
+				["combat_id"] = 4,
+				["spells_cast_timeline"] = {
+				},
+				["data_inicio"] = "00:08:33",
+				["frags"] = {
+					["尼鲁巴尔掠行者"] = 1,
+				},
+				["contra"] = "尼鲁巴尔掠行者",
+				["totals_grupo"] = {
+					7150, -- [1]
+					0, -- [2]
+					{
+						10, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+				},
+				["overall_added"] = true,
+				["start_time"] = 703751.0650000001,
+				["TimeData"] = {
+				},
+				["combat_counter"] = 11,
+			}, -- [3]
+			{
+				{
+					["tipo"] = 2,
+					["combatId"] = 3,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 1297,
+							["totalabsorbed"] = 0.008522,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "WARRIOR",
+							["total_without_pet"] = 7985.008522,
+							["dps_started"] = false,
+							["total"] = 7985.008522,
+							["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+							["colocacao"] = 1,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["on_hold"] = false,
+							["serial"] = "Player-4487-0051C667",
+							["damage_from"] = {
+								["尼鲁巴尔蛛网领主"] = true,
+							},
+							["targets"] = {
+								["尼鲁巴尔蛛网领主"] = 7985,
+							},
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["end_time"] = 1683302602,
+							["friendlyfire"] = {
+							},
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["nome"] = "狂暴專家",
+							["spells"] = {
+								["_ActorTable"] = {
+									{
+										["c_amt"] = 3,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 333,
+										["targets"] = {
+											["尼鲁巴尔蛛网领主"] = 3154,
+										},
+										["n_total"] = 1784,
+										["n_min"] = 147,
+										["g_dmg"] = 0,
+										["counter"] = 19,
+										["ChartData"] = {
+											[26] = 1649,
+											[14] = 960,
+											[29] = 1814,
+											[8] = 787,
+											[17] = 1495,
+											[5] = 446,
+											[20] = 1495,
+											[11] = 787,
+											[23] = 1495,
+											[32] = 3154,
+										},
+										["total"] = 3154,
+										["c_max"] = 673,
+										["r_amt"] = 0,
+										["id"] = 1,
+										["r_dmg"] = 0,
+										["b_dmg"] = 0,
+										["extra"] = {
+										},
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 341,
+										["successful_casted"] = 0,
+										["c_total"] = 1370,
+										["n_amt"] = 9,
+										["spellschool"] = 1,
+										["MISS"] = 7,
+									}, -- [1]
+									[30324] = {
+										["c_amt"] = 1,
+										["b_amt"] = 1,
+										["g_amt"] = 0,
+										["n_max"] = 536,
+										["targets"] = {
+											["尼鲁巴尔蛛网领主"] = 3620,
+										},
+										["n_total"] = 2517,
+										["n_min"] = 447,
+										["g_dmg"] = 0,
+										["counter"] = 9,
+										["ChartData"] = {
+											[26] = 3115,
+											[14] = 2173,
+											[29] = 3620,
+											[8] = 534,
+											[17] = 3115,
+											[5] = 0,
+											[20] = 3115,
+											[11] = 1070,
+											[23] = 3115,
+											[32] = 3620,
+										},
+										["total"] = 3620,
+										["c_max"] = 1103,
+										["r_amt"] = 0,
+										["id"] = 30324,
+										["r_dmg"] = 0,
+										["b_dmg"] = 447,
+										["extra"] = {
+										},
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 1103,
+										["successful_casted"] = 0,
+										["c_total"] = 1103,
+										["n_amt"] = 5,
+										["spellschool"] = 1,
+										["MISS"] = 3,
+									},
+									[25264] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 243,
+										["targets"] = {
+											["尼鲁巴尔蛛网领主"] = 485,
+										},
+										["n_total"] = 485,
+										["n_min"] = 242,
+										["g_dmg"] = 0,
+										["counter"] = 4,
+										["ChartData"] = {
+											[26] = 242,
+											[14] = 242,
+											[29] = 242,
+											[8] = 0,
+											[17] = 242,
+											[5] = 0,
+											[20] = 242,
+											[11] = 242,
+											[23] = 242,
+											[32] = 485,
+										},
+										["total"] = 485,
+										["c_max"] = 0,
+										["r_amt"] = 0,
+										["id"] = 25264,
+										["r_dmg"] = 0,
+										["b_dmg"] = 0,
+										["extra"] = {
+										},
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 2,
+										["spellschool"] = 1,
+										["MISS"] = 2,
+									},
+									[12721] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 61,
+										["targets"] = {
+											["尼鲁巴尔蛛网领主"] = 726,
+										},
+										["n_total"] = 726,
+										["n_min"] = 26,
+										["g_dmg"] = 0,
+										["counter"] = 17,
+										["ChartData"] = {
+											[26] = 622,
+											[14] = 225,
+											[29] = 622,
+											[8] = 26,
+											[17] = 406,
+											[20] = 514,
+											[11] = 104,
+											[23] = 622,
+											[32] = 726,
+										},
+										["total"] = 726,
+										["c_max"] = 0,
+										["id"] = 12721,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 17,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									},
+								},
+								["tipo"] = 2,
+							},
+							["grupo"] = true,
+							["tipo"] = 1,
+							["damage_taken"] = 5190.008522,
+							["custom"] = 0,
+							["last_event"] = 1683302602,
+							["last_dps"] = 238.9504899301618,
+							["start_time"] = 1683302602,
+							["delay"] = 0,
+							["aID"] = "4487-0051C667",
+						}, -- [1]
+						{
+							["flag_original"] = 68168,
+							["totalabsorbed"] = 0.006091,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "UNKNOW",
+							["total_without_pet"] = 5190.006091,
+							["dps_started"] = false,
+							["total"] = 5190.006091,
+							["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["on_hold"] = false,
+							["serial"] = "Creature-0-4491-571-7-25294-00005521C9",
+							["damage_from"] = {
+								["狂暴專家"] = true,
+							},
+							["targets"] = {
+								["狂暴專家"] = 5190,
+							},
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["fight_component"] = true,
+							["end_time"] = 1683302602,
+							["friendlyfire"] = {
+							},
+							["monster"] = true,
+							["nome"] = "尼鲁巴尔蛛网领主",
+							["spells"] = {
+								["_ActorTable"] = {
+									{
+										["c_amt"] = 1,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 217,
+										["targets"] = {
+											["狂暴專家"] = 1665,
+										},
+										["n_total"] = 1342,
+										["n_min"] = 163,
+										["g_dmg"] = 0,
+										["counter"] = 10,
+										["total"] = 1665,
+										["c_max"] = 323,
+										["r_amt"] = 0,
+										["id"] = 1,
+										["r_dmg"] = 0,
+										["b_dmg"] = 0,
+										["extra"] = {
+										},
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 323,
+										["successful_casted"] = 0,
+										["c_total"] = 323,
+										["n_amt"] = 7,
+										["spellschool"] = 1,
+										["MISS"] = 2,
+									}, -- [1]
+									[50283] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 334,
+										["targets"] = {
+											["狂暴專家"] = 3525,
+										},
+										["n_total"] = 3525,
+										["n_min"] = 266,
+										["g_dmg"] = 0,
+										["counter"] = 12,
+										["total"] = 3525,
+										["c_max"] = 0,
+										["id"] = 50283,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 12,
+										["extra"] = {
+										},
+										["spellschool"] = 8,
+									},
+									[50284] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 0,
+										["targets"] = {
+										},
+										["n_total"] = 0,
+										["n_min"] = 0,
+										["g_dmg"] = 0,
+										["counter"] = 0,
+										["total"] = 0,
+										["c_max"] = 0,
+										["id"] = 50284,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 2,
+										["c_total"] = 0,
+										["n_amt"] = 0,
+										["a_dmg"] = 0,
+										["extra"] = {
+										},
+									},
+								},
+								["tipo"] = 2,
+							},
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["tipo"] = 1,
+							["damage_taken"] = 7985.006091,
+							["custom"] = 0,
+							["last_event"] = 1683302601,
+							["last_dps"] = 0,
+							["start_time"] = 1683302602,
+							["delay"] = 0,
+							["aID"] = "25294",
+						}, -- [2]
+					},
+				}, -- [1]
+				{
+					["tipo"] = 3,
+					["combatId"] = 3,
+					["_ActorTable"] = {
+					},
+				}, -- [2]
+				{
+					["tipo"] = 7,
+					["combatId"] = 3,
+					["_ActorTable"] = {
+						{
+							["received"] = 6.003238,
+							["resource"] = 0.003238,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["targets"] = {
+								["狂暴專家"] = 6,
+							},
+							["pets"] = {
+							},
+							["powertype"] = 1,
+							["classe"] = "WARRIOR",
+							["passiveover"] = 0.003238,
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["alternatepower"] = 0.003238,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["totalover"] = 0.003238,
+							["nome"] = "狂暴專家",
+							["spells"] = {
+								["_ActorTable"] = {
+									[29131] = {
+										["total"] = 6,
+										["id"] = 29131,
+										["totalover"] = 0,
+										["targets"] = {
+											["狂暴專家"] = 6,
+										},
+										["counter"] = 6,
+									},
+								},
+								["tipo"] = 7,
+							},
+							["grupo"] = true,
+							["total"] = 6.003238,
+							["last_event"] = 1683302574,
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["tipo"] = 3,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["flag_original"] = 1297,
+							["serial"] = "Player-4487-0051C667",
+							["aID"] = "4487-0051C667",
+						}, -- [1]
+					},
+				}, -- [3]
+				{
+					["tipo"] = 9,
+					["combatId"] = 3,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 1047,
+							["debuff_uptime_spells"] = {
+								["_ActorTable"] = {
+									[25264] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 1,
+										["id"] = 25264,
+										["uptime"] = 22,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+									[7922] = {
+										["activedamt"] = -1,
+										["id"] = 7922,
+										["targets"] = {
+										},
+										["actived_at"] = 1683302569,
+										["uptime"] = 0,
+										["counter"] = 0,
+										["refreshamt"] = 0,
+										["actived"] = false,
+										["appliedamt"] = 0,
+									},
+									[46857] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 3,
+										["id"] = 46857,
+										["uptime"] = 25,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+									[12721] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 2,
+										["id"] = 12721,
+										["uptime"] = 19,
+										["targets"] = {
+										},
+										["appliedamt"] = 2,
+									},
+								},
+								["tipo"] = 9,
+							},
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "WARRIOR",
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["buff_uptime_spells"] = {
+								["_ActorTable"] = {
+									[29131] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 29131,
+										["uptime"] = 5,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+									[65156] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 65156,
+										["uptime"] = 9,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+								},
+								["tipo"] = 9,
+							},
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["debuff_uptime"] = 66,
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["debuff_uptime_targets"] = {
+							},
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["aID"] = "4487-0051C667",
+							["tipo"] = 4,
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["last_event"] = 1683302602,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["nome"] = "狂暴專家",
+							["serial"] = "Player-4487-0051C667",
+							["buff_uptime"] = 14,
+						}, -- [1]
+						{
+							["flag_original"] = 68168,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["aID"] = "25294",
+							["fight_component"] = true,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["nome"] = "尼鲁巴尔蛛网领主",
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["classe"] = "UNKNOW",
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["tipo"] = 4,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["last_event"] = 0,
+							["serial"] = "Creature-0-4491-571-7-25294-00005521C9",
+							["monster"] = true,
+						}, -- [2]
+					},
+				}, -- [4]
+				{
+					["tipo"] = 2,
+					["combatId"] = 3,
+					["_ActorTable"] = {
+					},
+				}, -- [5]
+				["raid_roster"] = {
+					["狂暴專家"] = "Player-4487-0051C667",
+				},
+				["raid_roster_indexed"] = {
+					"狂暴專家", -- [1]
+				},
+				["CombatStartedAt"] = 703750.506,
+				["tempo_start"] = 1683302569,
+				["last_events_tables"] = {
+				},
+				["alternate_power"] = {
+				},
+				["cleu_events"] = {
+					["n"] = 1,
+				},
+				["playing_solo"] = true,
+				["totals"] = {
+					13174.98446, -- [1]
+					0, -- [2]
+					{
+						6, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
+				},
+				["player_last_events"] = {
+				},
+				["frags_need_refresh"] = true,
+				["amountCasts"] = {
+					["尼鲁巴尔蛛网领主"] = {
+						["致盲虫群"] = 2,
+					},
+					["狂暴專家"] = {
+						["英勇打击"] = 9,
+						["雷霆一击"] = 4,
+					},
+				},
+				["instance_type"] = "none",
+				["hasSaved"] = true,
+				["data_fim"] = "00:03:23",
+				["hasTimer"] = 33.11499999999069,
+				["cleu_timeline"] = {
+				},
+				["enemy"] = "尼鲁巴尔蛛网领主",
+				["trinketProcs"] = {
+				},
+				["TotalElapsedCombatTime"] = 703440.26,
+				["CombatEndedAt"] = 703440.26,
+				["aura_timeline"] = {
+				},
+				["__call"] = {
+				},
+				["PhaseData"] = {
+					{
+						1, -- [1]
+						1, -- [2]
+					}, -- [1]
+					["damage"] = {
+						{
+							["狂暴專家"] = 7985.008522,
+						}, -- [1]
+					},
+					["heal_section"] = {
+					},
+					["heal"] = {
+						{
+						}, -- [1]
+					},
+					["damage_section"] = {
+					},
+				},
+				["end_time"] = 703440.26,
+				["combat_id"] = 3,
+				["combat_counter"] = 10,
+				["data_inicio"] = "00:02:49",
+				["spells_cast_timeline"] = {
+				},
+				["contra"] = "尼鲁巴尔蛛网领主",
+				["overall_added"] = true,
+				["frags"] = {
+					["尼鲁巴尔蛛网领主"] = 1,
+				},
+				["start_time"] = 703406.843,
+				["TimeData"] = {
+				},
+				["totals_grupo"] = {
+					7985, -- [1]
+					0, -- [2]
+					{
+						6, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+				},
+			}, -- [4]
+			{
+				{
+					["tipo"] = 2,
+					["combatId"] = 2,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 1297,
+							["totalabsorbed"] = 0.001323,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "WARRIOR",
+							["total_without_pet"] = 4084.001323,
+							["dps_started"] = false,
+							["total"] = 4084.001323,
+							["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+							["colocacao"] = 1,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["on_hold"] = false,
+							["serial"] = "Player-4487-0051C667",
+							["damage_from"] = {
+								["尼鲁巴尔蛛网领主"] = true,
+								["尼鲁巴尔掠行者"] = true,
+							},
+							["targets"] = {
+								["尼鲁巴尔蛛网领主"] = 3355,
+								["尼鲁巴尔掠行者"] = 729,
+							},
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["end_time"] = 1683301924,
+							["friendlyfire"] = {
+							},
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["nome"] = "狂暴專家",
+							["spells"] = {
+								["_ActorTable"] = {
+									{
+										["c_amt"] = 1,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 325,
+										["targets"] = {
+											["尼鲁巴尔蛛网领主"] = 1823,
+										},
+										["n_total"] = 1532,
+										["n_min"] = 144,
+										["g_dmg"] = 0,
+										["counter"] = 13,
+										["ChartData"] = {
+											[26] = 1823,
+											[14] = 1823,
+											[29] = 1823,
+											[8] = 1532,
+											[17] = 1823,
+											[5] = 1370,
+											[20] = 1823,
+											[11] = 1823,
+											[23] = 1823,
+										},
+										["total"] = 1823,
+										["c_max"] = 291,
+										["r_amt"] = 0,
+										["id"] = 1,
+										["r_dmg"] = 0,
+										["b_dmg"] = 0,
+										["extra"] = {
+										},
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 291,
+										["successful_casted"] = 0,
+										["c_total"] = 291,
+										["n_amt"] = 7,
+										["spellschool"] = 1,
+										["MISS"] = 5,
+									}, -- [1]
+									[30324] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 533,
+										["targets"] = {
+											["尼鲁巴尔蛛网领主"] = 533,
+										},
+										["n_total"] = 533,
+										["n_min"] = 533,
+										["g_dmg"] = 0,
+										["counter"] = 1,
+										["ChartData"] = {
+											[26] = 533,
+											[14] = 533,
+											[29] = 533,
+											[8] = 533,
+											[17] = 533,
+											[5] = 533,
+											[20] = 533,
+											[11] = 533,
+											[23] = 533,
+										},
+										["total"] = 533,
+										["c_max"] = 0,
+										["id"] = 30324,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 1,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									},
+									[25231] = {
+										["c_amt"] = 0,
+										["b_amt"] = 1,
+										["g_amt"] = 0,
+										["n_max"] = 423,
+										["targets"] = {
+											["尼鲁巴尔蛛网领主"] = 843,
+											["尼鲁巴尔掠行者"] = 729,
+										},
+										["n_total"] = 1572,
+										["n_min"] = 312,
+										["g_dmg"] = 0,
+										["counter"] = 4,
+										["ChartData"] = {
+											[11] = 1572,
+											[17] = 1572,
+											[8] = 840,
+											[20] = 1572,
+											[29] = 1572,
+											[14] = 1572,
+											[23] = 1572,
+											[26] = 1572,
+										},
+										["total"] = 1572,
+										["c_max"] = 0,
+										["id"] = 25231,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 312,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 4,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									},
+									[12721] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 26,
+										["targets"] = {
+											["尼鲁巴尔蛛网领主"] = 156,
+										},
+										["n_total"] = 156,
+										["n_min"] = 26,
+										["g_dmg"] = 0,
+										["counter"] = 6,
+										["ChartData"] = {
+											[11] = 26,
+											[17] = 156,
+											[20] = 156,
+											[29] = 156,
+											[14] = 104,
+											[23] = 156,
+											[26] = 156,
+										},
+										["total"] = 156,
+										["c_max"] = 0,
+										["id"] = 12721,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 6,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									},
+								},
+								["tipo"] = 2,
+							},
+							["grupo"] = true,
+							["tipo"] = 1,
+							["damage_taken"] = 5255.001323,
+							["custom"] = 0,
+							["last_event"] = 1683301919,
+							["last_dps"] = 128.9874715115457,
+							["start_time"] = 1683301924,
+							["delay"] = 0,
+							["aID"] = "4487-0051C667",
+						}, -- [1]
+						{
+							["flag_original"] = 68168,
+							["totalabsorbed"] = 0.00583,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "UNKNOW",
+							["total_without_pet"] = 3324.00583,
+							["dps_started"] = false,
+							["total"] = 3324.00583,
+							["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["on_hold"] = false,
+							["serial"] = "Creature-0-4491-571-7-25294-00005521C9",
+							["damage_from"] = {
+								["狂暴專家"] = true,
+							},
+							["targets"] = {
+								["狂暴專家"] = 3324,
+							},
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["fight_component"] = true,
+							["end_time"] = 1683301924,
+							["friendlyfire"] = {
+							},
+							["monster"] = true,
+							["nome"] = "尼鲁巴尔蛛网领主",
+							["spells"] = {
+								["_ActorTable"] = {
+									{
+										["c_amt"] = 1,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 224,
+										["targets"] = {
+											["狂暴專家"] = 1492,
+										},
+										["n_total"] = 1142,
+										["n_min"] = 171,
+										["g_dmg"] = 0,
+										["counter"] = 10,
+										["total"] = 1492,
+										["r_amt"] = 0,
+										["c_max"] = 350,
+										["b_dmg"] = 0,
+										["id"] = 1,
+										["r_dmg"] = 0,
+										["spellschool"] = 1,
+										["extra"] = {
+										},
+										["a_dmg"] = 0,
+										["PARRY"] = 2,
+										["c_min"] = 350,
+										["successful_casted"] = 0,
+										["c_total"] = 350,
+										["n_amt"] = 6,
+										["a_amt"] = 0,
+										["DODGE"] = 1,
+									}, -- [1]
+									[50284] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 0,
+										["targets"] = {
+										},
+										["n_total"] = 0,
+										["n_min"] = 0,
+										["g_dmg"] = 0,
+										["counter"] = 0,
+										["total"] = 0,
+										["c_max"] = 0,
+										["id"] = 50284,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 1,
+										["c_total"] = 0,
+										["n_amt"] = 0,
+										["a_dmg"] = 0,
+										["extra"] = {
+										},
+									},
+									[50283] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 336,
+										["targets"] = {
+											["狂暴專家"] = 1832,
+										},
+										["n_total"] = 1832,
+										["n_min"] = 276,
+										["g_dmg"] = 0,
+										["counter"] = 6,
+										["total"] = 1832,
+										["c_max"] = 0,
+										["id"] = 50283,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 6,
+										["extra"] = {
+										},
+										["spellschool"] = 8,
+									},
+								},
+								["tipo"] = 2,
+							},
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["tipo"] = 1,
+							["damage_taken"] = 3355.00583,
+							["custom"] = 0,
+							["last_event"] = 1683301919,
+							["last_dps"] = 0,
+							["start_time"] = 1683301924,
+							["delay"] = 0,
+							["aID"] = "25294",
+						}, -- [2]
+						{
+							["flag_original"] = 2632,
+							["totalabsorbed"] = 0.007757,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "UNKNOW",
+							["total_without_pet"] = 2260.007757,
+							["dps_started"] = false,
+							["total"] = 2260.007757,
+							["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["on_hold"] = false,
+							["serial"] = "Creature-0-4491-571-7-24566-0000552445",
+							["damage_from"] = {
+								["战歌荣誉卫士"] = true,
+								["狂暴專家"] = true,
+							},
+							["targets"] = {
+								["战歌荣誉卫士"] = 329,
+								["狂暴專家"] = 1931,
+							},
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["fight_component"] = true,
+							["end_time"] = 1683301924,
+							["friendlyfire"] = {
+							},
+							["monster"] = true,
+							["nome"] = "尼鲁巴尔掠行者",
+							["spells"] = {
+								["_ActorTable"] = {
+									{
+										["c_amt"] = 1,
+										["b_amt"] = 2,
+										["g_amt"] = 0,
+										["n_max"] = 221,
+										["targets"] = {
+											["战歌荣誉卫士"] = 329,
+											["狂暴專家"] = 1421,
+										},
+										["n_total"] = 1300,
+										["n_min"] = 89,
+										["g_dmg"] = 0,
+										["counter"] = 11,
+										["total"] = 1750,
+										["c_max"] = 450,
+										["r_amt"] = 0,
+										["id"] = 1,
+										["r_dmg"] = 0,
+										["b_dmg"] = 183,
+										["extra"] = {
+										},
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 450,
+										["successful_casted"] = 0,
+										["c_total"] = 450,
+										["n_amt"] = 8,
+										["spellschool"] = 1,
+										["DODGE"] = 2,
+									}, -- [1]
+									[49749] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 510,
+										["targets"] = {
+											["狂暴專家"] = 510,
+										},
+										["n_total"] = 510,
+										["n_min"] = 510,
+										["g_dmg"] = 0,
+										["counter"] = 1,
+										["total"] = 510,
+										["c_max"] = 0,
+										["id"] = 49749,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 1,
+										["c_total"] = 0,
+										["n_amt"] = 1,
+										["a_dmg"] = 0,
+										["extra"] = {
+										},
+									},
+								},
+								["tipo"] = 2,
+							},
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["tipo"] = 1,
+							["damage_taken"] = 9086.007757,
+							["custom"] = 0,
+							["last_event"] = 1683302542,
+							["last_dps"] = 0,
+							["start_time"] = 1683301924,
+							["delay"] = 0,
+							["aID"] = "24566",
+						}, -- [3]
+					},
+				}, -- [1]
+				{
+					["tipo"] = 3,
+					["combatId"] = 2,
+					["_ActorTable"] = {
+					},
+				}, -- [2]
+				{
+					["tipo"] = 7,
+					["combatId"] = 2,
+					["_ActorTable"] = {
+						{
+							["received"] = 79.008438,
+							["resource"] = 0.008438,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["targets"] = {
+								["狂暴專家"] = 79,
+							},
+							["pets"] = {
+							},
+							["powertype"] = 1,
+							["classe"] = "WARRIOR",
+							["passiveover"] = 0.008438,
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["alternatepower"] = 0.008438,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["totalover"] = 0.008438,
+							["nome"] = "狂暴專家",
+							["spells"] = {
+								["_ActorTable"] = {
+									[29131] = {
+										["total"] = 14,
+										["id"] = 29131,
+										["totalover"] = 0,
+										["targets"] = {
+											["狂暴專家"] = 14,
+										},
+										["counter"] = 14,
+									},
+									[2687] = {
+										["total"] = 40,
+										["id"] = 2687,
+										["totalover"] = 0,
+										["targets"] = {
+											["狂暴專家"] = 40,
+										},
+										["counter"] = 2,
+									},
+									[23602] = {
+										["total"] = 25,
+										["id"] = 23602,
+										["totalover"] = 0,
+										["targets"] = {
+											["狂暴專家"] = 25,
+										},
+										["counter"] = 5,
+									},
+								},
+								["tipo"] = 7,
+							},
+							["grupo"] = true,
+							["total"] = 79.008438,
+							["last_event"] = 1683302568,
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["tipo"] = 3,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["flag_original"] = 1297,
+							["serial"] = "Player-4487-0051C667",
+							["aID"] = "4487-0051C667",
+						}, -- [1]
+					},
+				}, -- [3]
+				{
+					["tipo"] = 9,
+					["combatId"] = 2,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 1047,
+							["debuff_uptime_spells"] = {
+								["_ActorTable"] = {
+									[46857] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 0,
+										["id"] = 46857,
+										["uptime"] = 16,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+									[12721] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 0,
+										["refreshamt"] = 0,
+										["id"] = 12721,
+										["uptime"] = 6,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+								},
+								["tipo"] = 9,
+							},
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "WARRIOR",
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["buff_uptime_spells"] = {
+								["_ActorTable"] = {
+									[57940] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 57940,
+										["uptime"] = 32,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+								},
+								["tipo"] = 9,
+							},
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["debuff_uptime"] = 22,
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["debuff_uptime_targets"] = {
+							},
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["aID"] = "4487-0051C667",
+							["tipo"] = 4,
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["last_event"] = 1683301924,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["nome"] = "狂暴專家",
+							["serial"] = "Player-4487-0051C667",
+							["buff_uptime"] = 32,
+						}, -- [1]
+						{
+							["flag_original"] = 68168,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["aID"] = "25294",
+							["fight_component"] = true,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["nome"] = "尼鲁巴尔蛛网领主",
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["classe"] = "UNKNOW",
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["tipo"] = 4,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["last_event"] = 0,
+							["serial"] = "Creature-0-4491-571-7-25294-00005521C9",
+							["monster"] = true,
+						}, -- [2]
+						{
+							["flag_original"] = 2632,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["aID"] = "24566",
+							["fight_component"] = true,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["nome"] = "尼鲁巴尔掠行者",
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["classe"] = "UNKNOW",
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["tipo"] = 4,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["last_event"] = 0,
+							["serial"] = "Creature-0-4491-571-7-24566-0000552445",
+							["monster"] = true,
+						}, -- [3]
+					},
+				}, -- [4]
+				{
+					["tipo"] = 2,
+					["combatId"] = 2,
+					["_ActorTable"] = {
+					},
+				}, -- [5]
+				["raid_roster"] = {
+					["狂暴專家"] = "Player-4487-0051C667",
+				},
+				["raid_roster_indexed"] = {
+					"狂暴專家", -- [1]
+				},
+				["CombatStartedAt"] = 703405.915,
+				["tempo_start"] = 1683301892,
+				["last_events_tables"] = {
+				},
+				["alternate_power"] = {
+				},
+				["cleu_events"] = {
+					["n"] = 1,
+				},
+				["playing_solo"] = true,
+				["totals"] = {
+					9667.971308, -- [1]
+					-0.001323, -- [2]
+					{
+						79, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
+				},
+				["player_last_events"] = {
+				},
+				["frags_need_refresh"] = false,
+				["amountCasts"] = {
+					["尼鲁巴尔掠行者"] = {
+						["刺骨打击"] = 1,
+					},
+					["尼鲁巴尔蛛网领主"] = {
+						["致盲虫群"] = 1,
+					},
+					["狂暴專家"] = {
+						["英勇打击"] = 1,
+						["顺劈斩"] = 2,
+					},
+				},
+				["instance_type"] = "none",
+				["hasSaved"] = true,
+				["data_fim"] = "23:52:04",
+				["hasTimer"] = 31.05900000000838,
+				["cleu_timeline"] = {
+				},
+				["enemy"] = "尼鲁巴尔蛛网领主",
+				["trinketProcs"] = {
+				},
+				["TotalElapsedCombatTime"] = 702762.023,
+				["CombatEndedAt"] = 702762.023,
+				["aura_timeline"] = {
+				},
+				["__call"] = {
+				},
+				["PhaseData"] = {
+					{
+						1, -- [1]
+						1, -- [2]
+					}, -- [1]
+					["damage"] = {
+						{
+							["狂暴專家"] = 4084.001323,
+						}, -- [1]
+					},
+					["heal_section"] = {
+					},
+					["heal"] = {
+						{
+						}, -- [1]
+					},
+					["damage_section"] = {
+					},
+				},
+				["end_time"] = 702762.023,
+				["combat_id"] = 2,
+				["spells_cast_timeline"] = {
+				},
+				["data_inicio"] = "23:51:33",
+				["frags"] = {
+				},
+				["contra"] = "尼鲁巴尔蛛网领主",
+				["totals_grupo"] = {
+					4084, -- [1]
+					0, -- [2]
+					{
+						79, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+				},
+				["overall_added"] = true,
+				["start_time"] = 702730.361,
+				["TimeData"] = {
+				},
+				["combat_counter"] = 9,
+			}, -- [5]
+			{
+				{
+					["tipo"] = 2,
+					["combatId"] = 1,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 68168,
+							["totalabsorbed"] = 0.003703,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "UNKNOW",
+							["total_without_pet"] = 1205.003703,
+							["dps_started"] = false,
+							["total"] = 1205.003703,
+							["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["on_hold"] = false,
+							["serial"] = "Creature-0-4491-571-7-24566-0000D5239D",
+							["damage_from"] = {
+								["战歌作战卫士"] = true,
+							},
+							["targets"] = {
+								["狂暴專家"] = 232,
+								["战歌作战卫士"] = 973,
+							},
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["fight_component"] = true,
+							["end_time"] = 1683301849,
+							["friendlyfire"] = {
+							},
+							["monster"] = true,
+							["nome"] = "尼鲁巴尔掠行者",
+							["spells"] = {
+								["_ActorTable"] = {
+									{
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 232,
+										["targets"] = {
+											["狂暴專家"] = 232,
+											["战歌作战卫士"] = 527,
+										},
+										["n_total"] = 759,
+										["n_min"] = 152,
+										["g_dmg"] = 0,
+										["counter"] = 4,
+										["total"] = 759,
+										["c_max"] = 0,
+										["id"] = 1,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 0,
+										["c_total"] = 0,
+										["n_amt"] = 4,
+										["extra"] = {
+										},
+										["spellschool"] = 1,
+									}, -- [1]
+									[49749] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 446,
+										["targets"] = {
+											["战歌作战卫士"] = 446,
+										},
+										["n_total"] = 446,
+										["n_min"] = 446,
+										["g_dmg"] = 0,
+										["counter"] = 1,
+										["total"] = 446,
+										["c_max"] = 0,
+										["id"] = 49749,
+										["r_dmg"] = 0,
+										["r_amt"] = 0,
+										["b_dmg"] = 0,
+										["a_amt"] = 0,
+										["c_min"] = 0,
+										["successful_casted"] = 1,
+										["c_total"] = 0,
+										["n_amt"] = 1,
+										["a_dmg"] = 0,
+										["extra"] = {
+										},
+									},
+								},
+								["tipo"] = 2,
+							},
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["tipo"] = 1,
+							["damage_taken"] = 8398.003703,
+							["custom"] = 0,
+							["last_event"] = 1683301848,
+							["last_dps"] = 0,
+							["start_time"] = 1683301849,
+							["delay"] = 0,
+							["aID"] = "24566",
+						}, -- [1]
+						{
+							["flag_original"] = 1297,
+							["totalabsorbed"] = 0.006342,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "WARRIOR",
+							["total_without_pet"] = 0.006342,
+							["dps_started"] = false,
+							["total"] = 0.006342,
+							["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["on_hold"] = false,
+							["serial"] = "Player-4487-0051C667",
+							["damage_from"] = {
+								["尼鲁巴尔掠行者"] = true,
+							},
+							["targets"] = {
+							},
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["end_time"] = 1683301849,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["aID"] = "4487-0051C667",
+							["nome"] = "狂暴專家",
+							["spells"] = {
+								["_ActorTable"] = {
+								},
+								["tipo"] = 2,
+							},
+							["grupo"] = true,
+							["tipo"] = 1,
+							["damage_taken"] = 232.006342,
+							["custom"] = 0,
+							["last_event"] = 0,
+							["last_dps"] = 0,
+							["start_time"] = 1683301849,
+							["delay"] = 0,
+							["friendlyfire"] = {
+							},
+						}, -- [2]
+					},
+				}, -- [1]
+				{
+					["tipo"] = 3,
+					["combatId"] = 1,
+					["_ActorTable"] = {
+					},
+				}, -- [2]
+				{
+					["tipo"] = 7,
+					["combatId"] = 1,
+					["_ActorTable"] = {
+					},
+				}, -- [3]
+				{
+					["tipo"] = 9,
+					["combatId"] = 1,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 1047,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["classe"] = "WARRIOR",
+							["buff_uptime_spells"] = {
+								["_ActorTable"] = {
+									[57940] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 57940,
+										["uptime"] = 8,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+									[23250] = {
+										["counter"] = 0,
+										["actived"] = false,
+										["activedamt"] = 1,
+										["refreshamt"] = 0,
+										["id"] = 23250,
+										["uptime"] = 8,
+										["targets"] = {
+										},
+										["appliedamt"] = 1,
+									},
+								},
+								["tipo"] = 9,
+							},
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["nome"] = "狂暴專家",
+							["tipo"] = 4,
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["last_event"] = 1683301849,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["aID"] = "4487-0051C667",
+							["serial"] = "Player-4487-0051C667",
+							["buff_uptime"] = 16,
+						}, -- [1]
+						{
+							["flag_original"] = 2632,
+							["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+							["GetSpellContainer"] = nil --[[ skipped inline function ]],
+							["pets"] = {
+							},
+							["aID"] = "24566",
+							["fight_component"] = true,
+							["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+							["nome"] = "尼鲁巴尔掠行者",
+							["GetSpellList"] = nil --[[ skipped inline function ]],
+							["GetPets"] = nil --[[ skipped inline function ]],
+							["classe"] = "UNKNOW",
+							["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+							["tipo"] = 4,
+							["GetTargets"] = nil --[[ skipped inline function ]],
+							["last_event"] = 0,
+							["serial"] = "Creature-0-4491-571-7-24566-0000D5239D",
+							["monster"] = true,
+						}, -- [2]
+					},
+				}, -- [4]
+				{
+					["tipo"] = 2,
+					["combatId"] = 1,
+					["_ActorTable"] = {
+					},
+				}, -- [5]
+				["raid_roster"] = {
+					["狂暴專家"] = "Player-4487-0051C667",
+				},
+				["raid_roster_indexed"] = {
+					"狂暴專家", -- [1]
+				},
+				["CombatStartedAt"] = 702729.677,
+				["tempo_start"] = 1683301841,
+				["last_events_tables"] = {
+				},
+				["alternate_power"] = {
+				},
+				["cleu_events"] = {
+					["n"] = 1,
+				},
+				["playing_solo"] = true,
+				["totals"] = {
+					1204.996740000001, -- [1]
+					-0.005216, -- [2]
+					{
+						0, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+					["voidzone_damage"] = 0,
+					["frags_total"] = 0,
+				},
+				["player_last_events"] = {
+				},
+				["frags_need_refresh"] = true,
+				["amountCasts"] = {
+					["尼鲁巴尔掠行者"] = {
+						["刺骨打击"] = 1,
+					},
+				},
+				["instance_type"] = "none",
+				["hasSaved"] = true,
+				["data_fim"] = "23:50:49",
+				["hasTimer"] = 7.018999999971129,
+				["cleu_timeline"] = {
+				},
+				["enemy"] = "尼鲁巴尔掠行者",
+				["trinketProcs"] = {
+				},
+				["TotalElapsedCombatTime"] = 702686.6510000001,
+				["CombatEndedAt"] = 702686.6510000001,
+				["aura_timeline"] = {
+				},
+				["__call"] = {
+				},
+				["PhaseData"] = {
+					{
+						1, -- [1]
+						1, -- [2]
+					}, -- [1]
+					["damage"] = {
+						{
+							["狂暴專家"] = 0.006342,
+						}, -- [1]
+					},
+					["heal_section"] = {
+					},
+					["heal"] = {
+						{
+						}, -- [1]
+					},
+					["damage_section"] = {
+					},
+				},
+				["end_time"] = 702686.6510000001,
+				["combat_id"] = 1,
+				["combat_counter"] = 8,
+				["data_inicio"] = "23:50:41",
+				["spells_cast_timeline"] = {
+				},
+				["contra"] = "尼鲁巴尔掠行者",
+				["overall_added"] = true,
+				["frags"] = {
+					["尼鲁巴尔掠行者"] = 1,
+				},
+				["start_time"] = 702679.089,
+				["TimeData"] = {
+				},
+				["totals_grupo"] = {
+					0, -- [1]
+					0, -- [2]
+					{
+						0, -- [1]
+						[0] = 0,
+						["alternatepower"] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["dead"] = 0,
+						["cc_break"] = 0,
+						["interrupt"] = 0,
+						["debuff_uptime"] = 0,
+						["dispell"] = 0,
+						["cooldowns_defensive"] = 0,
+					}, -- [4]
+				},
+			}, -- [6]
+			{
+				{
+					["tipo"] = 2,
 					["_ActorTable"] = {
 						{
 							["flag_original"] = 1297,
@@ -35,26 +3786,27 @@ _detalhes_database = {
 							["raid_targets"] = {
 							},
 							["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+							["GetSpellList"] = nil --[[ skipped inline function ]],
 							["GetPets"] = nil --[[ skipped inline function ]],
-							["grupo"] = true,
+							["end_time"] = 1683301841,
+							["GetTargets"] = nil --[[ skipped inline function ]],
 							["friendlyfire"] = {
 							},
-							["aID"] = "4487-0051C667",
 							["nome"] = "狂暴專家",
 							["spells"] = {
-								["tipo"] = 2,
 								["_ActorTable"] = {
 								},
+								["tipo"] = 2,
 							},
-							["GetSpellList"] = nil --[[ skipped inline function ]],
-							["GetTargets"] = nil --[[ skipped inline function ]],
+							["grupo"] = true,
+							["last_event"] = 0,
 							["last_dps"] = 0,
 							["custom"] = 0,
-							["last_event"] = 0,
-							["damage_taken"] = 126.001218,
-							["start_time"] = 0,
-							["delay"] = 0,
 							["tipo"] = 1,
+							["damage_taken"] = 3074.001218,
+							["start_time"] = 1683301841,
+							["delay"] = 0,
+							["aID"] = "4487-0051C667",
 						}, -- [1]
 					},
 				}, -- [1]
@@ -82,26 +3834,23 @@ _detalhes_database = {
 				},
 				["raid_roster_indexed"] = {
 				},
-				["combat_counter"] = 2,
+				["CombatStartedAt"] = 702676.978,
 				["overall_added"] = true,
 				["last_events_tables"] = {
 				},
 				["alternate_power"] = {
 				},
-				["spells_cast_timeline"] = {
-				},
 				["enemy"] = "未知",
-				["trinketProcs"] = {
-				},
+				["combat_counter"] = 2,
 				["totals"] = {
-					-0.1238380000822161, -- [1]
+					-0.3387500000771979, -- [1]
 					-0.0246339999991997, -- [2]
 					{
 						0, -- [1]
-						[0] = -0.01379200000610581,
+						[0] = -0.0389860000061617,
 						["alternatepower"] = 0,
 						[3] = 0,
-						[6] = 0,
+						[6] = -0.007688999999999169,
 					}, -- [3]
 					{
 						["buff_uptime"] = 0,
@@ -137,13 +3886,36 @@ _detalhes_database = {
 						["dead"] = 0,
 					}, -- [4]
 				},
+				["trinketProcs"] = {
+				},
 				["frags_need_refresh"] = false,
 				["aura_timeline"] = {
 				},
 				["__call"] = {
 				},
-				["data_inicio"] = 0,
+				["PhaseData"] = {
+					{
+						1, -- [1]
+						1, -- [2]
+					}, -- [1]
+					["damage_section"] = {
+					},
+					["heal_section"] = {
+					},
+					["heal"] = {
+						{
+						}, -- [1]
+					},
+					["damage"] = {
+						{
+						}, -- [1]
+					},
+				},
 				["amountCasts"] = {
+				},
+				["tempo_start"] = 698790.587,
+				["instance_type"] = "none",
+				["cleu_timeline"] = {
 				},
 				["player_last_events"] = {
 					["狂暴專家"] = {
@@ -184,18 +3956,88 @@ _detalhes_database = {
 							-1, -- [10]
 						}, -- [3]
 						{
+							true, -- [1]
+							3, -- [2]
+							508, -- [3]
+							1683300979.625, -- [4]
+							6784, -- [5]
+							"环境伤害 (坠落)", -- [6]
+							nil, -- [7]
+							3, -- [8]
+							false, -- [9]
+							-1, -- [10]
 						}, -- [4]
 						{
+							true, -- [1]
+							3, -- [2]
+							569, -- [3]
+							1683301411.424, -- [4]
+							6784, -- [5]
+							"环境伤害 (坠落)", -- [6]
+							nil, -- [7]
+							3, -- [8]
+							false, -- [9]
+							-1, -- [10]
 						}, -- [5]
 						{
+							true, -- [1]
+							6, -- [2]
+							14, -- [3]
+							1683301432.473, -- [4]
+							6784, -- [5]
+							"环境伤害 (火烧)", -- [6]
+							nil, -- [7]
+							3, -- [8]
+							false, -- [9]
+							-1, -- [10]
 						}, -- [6]
 						{
+							true, -- [1]
+							6, -- [2]
+							11, -- [3]
+							1683301436.07, -- [4]
+							6784, -- [5]
+							"环境伤害 (火烧)", -- [6]
+							nil, -- [7]
+							3, -- [8]
+							false, -- [9]
+							-1, -- [10]
 						}, -- [7]
 						{
+							true, -- [1]
+							3, -- [2]
+							924, -- [3]
+							1683301546.303, -- [4]
+							6784, -- [5]
+							"环境伤害 (坠落)", -- [6]
+							nil, -- [7]
+							3, -- [8]
+							false, -- [9]
+							-1, -- [10]
 						}, -- [8]
 						{
+							true, -- [1]
+							3, -- [2]
+							505, -- [3]
+							1683301799.118, -- [4]
+							6784, -- [5]
+							"环境伤害 (坠落)", -- [6]
+							nil, -- [7]
+							3, -- [8]
+							false, -- [9]
+							-1, -- [10]
 						}, -- [9]
 						{
+							true, -- [1]
+							3, -- [2]
+							417, -- [3]
+							1683301804.97, -- [4]
+							6467, -- [5]
+							"环境伤害 (坠落)", -- [6]
+							nil, -- [7]
+							3, -- [8]
+							false, -- [9]
+							-1, -- [10]
 						}, -- [10]
 						{
 						}, -- [11]
@@ -241,43 +4083,24 @@ _detalhes_database = {
 						}, -- [31]
 						{
 						}, -- [32]
-						["n"] = 4,
+						["n"] = 11,
 					},
-				},
-				["instance_type"] = "none",
-				["PhaseData"] = {
-					{
-						1, -- [1]
-						1, -- [2]
-					}, -- [1]
-					["damage_section"] = {
-					},
-					["heal_section"] = {
-					},
-					["heal"] = {
-						{
-						}, -- [1]
-					},
-					["damage"] = {
-						{
-						}, -- [1]
-					},
-				},
-				["cleu_timeline"] = {
 				},
 				["hasSaved"] = true,
-				["frags"] = {
+				["spells_cast_timeline"] = {
 				},
 				["data_fim"] = "22:46:07",
+				["data_inicio"] = 0,
+				["end_time"] = 698803.7660000001,
 				["cleu_events"] = {
 					["n"] = 1,
 				},
-				["end_time"] = 698803.7660000001,
 				["start_time"] = 0,
 				["TimeData"] = {
 				},
-				["tempo_start"] = 698790.587,
-			}, -- [1]
+				["frags"] = {
+				},
+			}, -- [7]
 		},
 	},
 	["ocd_tracker"] = {
@@ -309,10 +4132,10 @@ _detalhes_database = {
 			["defensive-personal"] = false,
 		},
 		["width"] = 120,
+		["height"] = 18,
 		["framme_locked"] = false,
 		["cooldowns"] = {
 		},
-		["height"] = 18,
 		["show_conditions"] = {
 			["only_inside_instance"] = true,
 			["only_in_group"] = true,
@@ -363,7 +4186,7 @@ _detalhes_database = {
 			["pos"] = {
 				["normal"] = {
 					["y"] = 483.3338623046875,
-					["x"] = -888.3326873779297,
+					["x"] = -897.2215576171875,
 					["w"] = 310,
 					["h"] = 157.9999847412109,
 				},
@@ -1199,21 +5022,22 @@ _detalhes_database = {
 		["merge_gemstones_1007"] = false,
 		["inverse_deathlog_mplus"] = false,
 	},
-	["announce_firsthit"] = {
-		["enabled"] = true,
-		["channel"] = "SELF",
-	},
+	["combat_counter"] = 16,
 	["mythic_plus_log"] = {
 	},
-	["SoloTablesSaved"] = {
-		["Mode"] = 1,
+	["data_harvested_for_charts"] = {
 	},
 	["cached_roles"] = {
 		["Player-4487-0051C667"] = "DAMAGER",
 	},
-	["ignore_nicktag"] = false,
-	["combat_counter"] = 6,
 	["on_death_menu"] = false,
+	["nick_tag_cache"] = {
+		["nextreset"] = 1684593956,
+		["last_version"] = 15,
+	},
+	["SoloTablesSaved"] = {
+		["Mode"] = 1,
+	},
 	["plugin_database"] = {
 		["DETAILS_PLUGIN_TINY_THREAT"] = {
 			["enabled"] = true,
@@ -1284,7 +5108,7 @@ _detalhes_database = {
 			["square_amount"] = 5,
 			["enabled"] = false,
 			["arrow_size"] = 10,
-			["font_size"] = 10,
+			["y"] = -0.0001220703125,
 			["row_spacement"] = 21,
 			["main_frame_color"] = {
 				0, -- [1]
@@ -1299,6 +5123,7 @@ _detalhes_database = {
 				0.4, -- [4]
 			},
 			["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
+			["use_spark"] = true,
 			["per_second"] = {
 				["enabled"] = false,
 				["point"] = "CENTER",
@@ -1310,11 +5135,10 @@ _detalhes_database = {
 				["update_speed"] = 0.05,
 				["attribute_type"] = 1,
 			},
-			["use_spark"] = true,
 			["x"] = 0,
 			["font_face"] = "Friz Quadrata TT",
 			["square_size"] = 32,
-			["y"] = -0.0001220703125,
+			["font_size"] = 10,
 			["author"] = "Terciob",
 			["main_frame_locked"] = false,
 			["main_frame_size"] = {
@@ -1324,12 +5148,12 @@ _detalhes_database = {
 		},
 	},
 	["last_instance_time"] = 0,
-	["combat_id"] = 0,
+	["combat_id"] = 6,
 	["savedStyles"] = {
 	},
-	["last_day"] = "05",
+	["last_day"] = "06",
 	["character_data"] = {
-		["logons"] = 5,
+		["logons"] = 9,
 	},
 	["announce_deaths"] = {
 		["enabled"] = false,
@@ -1341,6 +5165,482 @@ _detalhes_database = {
 		{
 			["tipo"] = 2,
 			["_ActorTable"] = {
+				{
+					["flag_original"] = 1297,
+					["totalabsorbed"] = 0.027894,
+					["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+					["GetSpellContainer"] = nil --[[ skipped inline function ]],
+					["pets"] = {
+					},
+					["classe"] = "WARRIOR",
+					["total_without_pet"] = 44207.027894,
+					["dps_started"] = false,
+					["total"] = 44207.027894,
+					["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+					["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+					["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+					["on_hold"] = false,
+					["serial"] = "Player-4487-0051C667",
+					["damage_from"] = {
+						["尼鲁巴尔蛛网领主"] = true,
+						["尼鲁巴尔掠行者"] = true,
+					},
+					["targets"] = {
+						["尼鲁巴尔蛛网领主"] = 19498,
+						["尼鲁巴尔掠行者"] = 24709,
+					},
+					["friendlyfire_total"] = 0,
+					["raid_targets"] = {
+					},
+					["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+					["GetSpellList"] = nil --[[ skipped inline function ]],
+					["GetPets"] = nil --[[ skipped inline function ]],
+					["end_time"] = 1683300341,
+					["GetTargets"] = nil --[[ skipped inline function ]],
+					["aID"] = "4487-0051C667",
+					["nome"] = "狂暴專家",
+					["spells"] = {
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 12,
+								["b_amt"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 360,
+								["targets"] = {
+									["尼鲁巴尔蛛网领主"] = 7060,
+									["尼鲁巴尔掠行者"] = 8432,
+								},
+								["n_total"] = 10298,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 76,
+								["total"] = 15492,
+								["c_max"] = 673,
+								["r_amt"] = 0,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["b_dmg"] = 0,
+								["extra"] = {
+								},
+								["a_dmg"] = 0,
+								["a_amt"] = 0,
+								["c_min"] = 0,
+								["successful_casted"] = 0,
+								["c_total"] = 5194,
+								["n_amt"] = 49,
+								["spellschool"] = 1,
+								["MISS"] = 15,
+							}, -- [1]
+							[12721] = {
+								["c_amt"] = 0,
+								["b_amt"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 110,
+								["targets"] = {
+									["尼鲁巴尔蛛网领主"] = 1661,
+									["尼鲁巴尔掠行者"] = 2124,
+								},
+								["n_total"] = 3785,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 64,
+								["total"] = 3785,
+								["c_max"] = 0,
+								["id"] = 12721,
+								["r_dmg"] = 0,
+								["r_amt"] = 0,
+								["b_dmg"] = 0,
+								["a_dmg"] = 0,
+								["a_amt"] = 0,
+								["c_min"] = 0,
+								["successful_casted"] = 0,
+								["c_total"] = 0,
+								["n_amt"] = 64,
+								["extra"] = {
+								},
+								["spellschool"] = 1,
+							},
+							[25264] = {
+								["c_amt"] = 0,
+								["b_amt"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 247,
+								["targets"] = {
+									["尼鲁巴尔蛛网领主"] = 485,
+									["尼鲁巴尔掠行者"] = 489,
+								},
+								["n_total"] = 974,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 7,
+								["total"] = 974,
+								["c_max"] = 0,
+								["r_amt"] = 0,
+								["id"] = 25264,
+								["r_dmg"] = 0,
+								["b_dmg"] = 0,
+								["extra"] = {
+								},
+								["a_dmg"] = 0,
+								["a_amt"] = 0,
+								["c_min"] = 0,
+								["successful_casted"] = 0,
+								["c_total"] = 0,
+								["n_amt"] = 4,
+								["spellschool"] = 1,
+								["MISS"] = 3,
+							},
+							[25231] = {
+								["c_amt"] = 0,
+								["b_amt"] = 1,
+								["g_amt"] = 0,
+								["n_max"] = 423,
+								["targets"] = {
+									["尼鲁巴尔蛛网领主"] = 843,
+									["尼鲁巴尔掠行者"] = 729,
+								},
+								["n_total"] = 1572,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 4,
+								["total"] = 1572,
+								["c_max"] = 0,
+								["id"] = 25231,
+								["r_dmg"] = 0,
+								["r_amt"] = 0,
+								["b_dmg"] = 312,
+								["a_dmg"] = 0,
+								["a_amt"] = 0,
+								["c_min"] = 0,
+								["successful_casted"] = 0,
+								["c_total"] = 0,
+								["n_amt"] = 4,
+								["extra"] = {
+								},
+								["spellschool"] = 1,
+							},
+							[20647] = {
+								["c_amt"] = 0,
+								["b_amt"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 988,
+								["targets"] = {
+									["尼鲁巴尔蛛网领主"] = 971,
+									["尼鲁巴尔掠行者"] = 1959,
+								},
+								["n_total"] = 2930,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 3,
+								["total"] = 2930,
+								["c_max"] = 0,
+								["id"] = 20647,
+								["r_dmg"] = 0,
+								["r_amt"] = 0,
+								["b_dmg"] = 0,
+								["a_dmg"] = 0,
+								["a_amt"] = 0,
+								["c_min"] = 0,
+								["successful_casted"] = 0,
+								["c_total"] = 0,
+								["n_amt"] = 3,
+								["extra"] = {
+								},
+								["spellschool"] = 1,
+							},
+							[30324] = {
+								["c_amt"] = 7,
+								["b_amt"] = 2,
+								["g_amt"] = 0,
+								["n_max"] = 569,
+								["targets"] = {
+									["尼鲁巴尔蛛网领主"] = 8478,
+									["尼鲁巴尔掠行者"] = 10976,
+								},
+								["n_total"] = 11459,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 34,
+								["total"] = 19454,
+								["c_max"] = 1214,
+								["r_amt"] = 0,
+								["id"] = 30324,
+								["r_dmg"] = 0,
+								["b_dmg"] = 919,
+								["extra"] = {
+								},
+								["a_dmg"] = 0,
+								["a_amt"] = 0,
+								["c_min"] = 0,
+								["successful_casted"] = 0,
+								["c_total"] = 7995,
+								["n_amt"] = 22,
+								["spellschool"] = 1,
+								["MISS"] = 5,
+							},
+						},
+						["tipo"] = 2,
+					},
+					["grupo"] = true,
+					["tipo"] = 1,
+					["damage_taken"] = 18440.027894,
+					["custom"] = 0,
+					["last_event"] = 0,
+					["last_dps"] = 0,
+					["start_time"] = 1683300338,
+					["delay"] = 0,
+					["friendlyfire"] = {
+					},
+				}, -- [1]
+				{
+					["flag_original"] = 68168,
+					["totalabsorbed"] = 0.028217,
+					["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+					["GetSpellContainer"] = nil --[[ skipped inline function ]],
+					["pets"] = {
+					},
+					["classe"] = "UNKNOW",
+					["total_without_pet"] = 7580.028216999999,
+					["dps_started"] = false,
+					["total"] = 7580.028216999999,
+					["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+					["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+					["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+					["on_hold"] = false,
+					["serial"] = "Creature-0-4491-571-7-24566-0000D5239D",
+					["damage_from"] = {
+						["战歌作战卫士"] = true,
+						["狂暴專家"] = true,
+					},
+					["targets"] = {
+						["狂暴專家"] = 6607,
+						["战歌荣誉卫士"] = 0,
+						["战歌作战卫士"] = 973,
+					},
+					["GetTargets"] = nil --[[ skipped inline function ]],
+					["friendlyfire_total"] = 0,
+					["raid_targets"] = {
+					},
+					["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+					["GetPets"] = nil --[[ skipped inline function ]],
+					["fight_component"] = true,
+					["end_time"] = 1683301849,
+					["friendlyfire"] = {
+					},
+					["monster"] = true,
+					["nome"] = "尼鲁巴尔掠行者",
+					["spells"] = {
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 2,
+								["b_amt"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 232,
+								["targets"] = {
+									["狂暴專家"] = 5621,
+									["战歌荣誉卫士"] = 0,
+									["战歌作战卫士"] = 527,
+								},
+								["n_total"] = 5391,
+								["b_dmg"] = 0,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 45,
+								["total"] = 6148,
+								["r_amt"] = 0,
+								["c_max"] = 450,
+								["DODGE"] = 10,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["spellschool"] = 1,
+								["extra"] = {
+								},
+								["a_dmg"] = 0,
+								["PARRY"] = 2,
+								["c_min"] = 0,
+								["successful_casted"] = 0,
+								["c_total"] = 757,
+								["n_amt"] = 29,
+								["a_amt"] = 0,
+								["MISS"] = 2,
+							}, -- [1]
+							[49749] = {
+								["c_amt"] = 0,
+								["b_amt"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 510,
+								["targets"] = {
+									["战歌作战卫士"] = 446,
+									["狂暴專家"] = 986,
+								},
+								["n_total"] = 1432,
+								["n_min"] = 0,
+								["a_amt"] = 0,
+								["counter"] = 5,
+								["total"] = 1432,
+								["c_max"] = 0,
+								["r_amt"] = 0,
+								["id"] = 49749,
+								["r_dmg"] = 0,
+								["b_dmg"] = 0,
+								["extra"] = {
+								},
+								["a_dmg"] = 0,
+								["PARRY"] = 1,
+								["c_min"] = 0,
+								["successful_casted"] = 5,
+								["c_total"] = 0,
+								["n_amt"] = 3,
+								["g_dmg"] = 0,
+								["DODGE"] = 1,
+							},
+						},
+						["tipo"] = 2,
+					},
+					["GetSpellList"] = nil --[[ skipped inline function ]],
+					["tipo"] = 1,
+					["damage_taken"] = 33107.028217,
+					["custom"] = 0,
+					["last_event"] = 0,
+					["last_dps"] = 0,
+					["start_time"] = 1683301846,
+					["delay"] = 0,
+					["aID"] = "24566",
+				}, -- [2]
+				{
+					["flag_original"] = 68168,
+					["totalabsorbed"] = 0.016652,
+					["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+					["GetSpellContainer"] = nil --[[ skipped inline function ]],
+					["pets"] = {
+					},
+					["classe"] = "UNKNOW",
+					["total_without_pet"] = 11833.016652,
+					["dps_started"] = false,
+					["total"] = 11833.016652,
+					["BuildSpellDetails"] = nil --[[ skipped inline function ]],
+					["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+					["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+					["on_hold"] = false,
+					["serial"] = "Creature-0-4491-571-7-25294-00005521C9",
+					["damage_from"] = {
+						["狂暴專家"] = true,
+					},
+					["targets"] = {
+						["狂暴專家"] = 11833,
+					},
+					["GetTargets"] = nil --[[ skipped inline function ]],
+					["friendlyfire_total"] = 0,
+					["raid_targets"] = {
+					},
+					["BuildSpellDamageDoneDetails"] = nil --[[ skipped inline function ]],
+					["GetPets"] = nil --[[ skipped inline function ]],
+					["fight_component"] = true,
+					["end_time"] = 1683301924,
+					["friendlyfire"] = {
+					},
+					["monster"] = true,
+					["nome"] = "尼鲁巴尔蛛网领主",
+					["spells"] = {
+						["_ActorTable"] = {
+							{
+								["c_amt"] = 2,
+								["b_amt"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 225,
+								["targets"] = {
+									["狂暴專家"] = 4394,
+								},
+								["n_total"] = 3721,
+								["b_dmg"] = 0,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 29,
+								["total"] = 4394,
+								["r_amt"] = 0,
+								["c_max"] = 350,
+								["DODGE"] = 3,
+								["id"] = 1,
+								["r_dmg"] = 0,
+								["spellschool"] = 1,
+								["extra"] = {
+								},
+								["a_dmg"] = 0,
+								["PARRY"] = 2,
+								["c_min"] = 0,
+								["successful_casted"] = 0,
+								["c_total"] = 673,
+								["n_amt"] = 19,
+								["a_amt"] = 0,
+								["MISS"] = 3,
+							}, -- [1]
+							[50284] = {
+								["c_amt"] = 0,
+								["b_amt"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 0,
+								["targets"] = {
+								},
+								["n_total"] = 0,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 0,
+								["total"] = 0,
+								["c_max"] = 0,
+								["id"] = 50284,
+								["r_dmg"] = 0,
+								["r_amt"] = 0,
+								["b_dmg"] = 0,
+								["a_amt"] = 0,
+								["c_min"] = 0,
+								["successful_casted"] = 5,
+								["c_total"] = 0,
+								["n_amt"] = 0,
+								["a_dmg"] = 0,
+								["extra"] = {
+								},
+							},
+							[50283] = {
+								["c_amt"] = 0,
+								["b_amt"] = 0,
+								["g_amt"] = 0,
+								["n_max"] = 336,
+								["targets"] = {
+									["狂暴專家"] = 7439,
+								},
+								["n_total"] = 7439,
+								["n_min"] = 0,
+								["g_dmg"] = 0,
+								["counter"] = 25,
+								["total"] = 7439,
+								["c_max"] = 0,
+								["id"] = 50283,
+								["r_dmg"] = 0,
+								["r_amt"] = 0,
+								["b_dmg"] = 0,
+								["a_dmg"] = 0,
+								["a_amt"] = 0,
+								["c_min"] = 0,
+								["successful_casted"] = 0,
+								["c_total"] = 0,
+								["n_amt"] = 25,
+								["extra"] = {
+								},
+								["spellschool"] = 8,
+							},
+						},
+						["tipo"] = 2,
+					},
+					["GetSpellList"] = nil --[[ skipped inline function ]],
+					["tipo"] = 1,
+					["damage_taken"] = 19498.016652,
+					["custom"] = 0,
+					["last_event"] = 0,
+					["last_dps"] = 0,
+					["start_time"] = 1683301921,
+					["delay"] = 0,
+					["aID"] = "25294",
+				}, -- [3]
 			},
 		}, -- [1]
 		{
@@ -1351,11 +5651,228 @@ _detalhes_database = {
 		{
 			["tipo"] = 7,
 			["_ActorTable"] = {
+				{
+					["flag_original"] = 1297,
+					["resource"] = 0.107808,
+					["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+					["GetSpellContainer"] = nil --[[ skipped inline function ]],
+					["targets"] = {
+						["狂暴專家"] = 0,
+					},
+					["pets"] = {
+					},
+					["powertype"] = 1,
+					["aID"] = "4487-0051C667",
+					["totalover"] = 0.00676,
+					["GetSpellList"] = nil --[[ skipped inline function ]],
+					["GetPets"] = nil --[[ skipped inline function ]],
+					["total"] = 111.032022,
+					["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+					["classe"] = "WARRIOR",
+					["nome"] = "狂暴專家",
+					["spells"] = {
+						["_ActorTable"] = {
+							[29131] = {
+								["total"] = 6,
+								["id"] = 29131,
+								["totalover"] = 0,
+								["targets"] = {
+									["狂暴專家"] = 0,
+								},
+								["counter"] = 6,
+							},
+							[23602] = {
+								["total"] = 105,
+								["id"] = 23602,
+								["totalover"] = 0,
+								["targets"] = {
+									["狂暴專家"] = 0,
+								},
+								["counter"] = 21,
+							},
+							[2687] = {
+								["total"] = 0,
+								["id"] = 2687,
+								["totalover"] = 0,
+								["targets"] = {
+									["狂暴專家"] = 0,
+								},
+								["counter"] = 0,
+							},
+						},
+						["tipo"] = 7,
+					},
+					["grupo"] = true,
+					["alternatepower"] = 0.032022,
+					["tipo"] = 3,
+					["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+					["last_event"] = 0,
+					["GetTargets"] = nil --[[ skipped inline function ]],
+					["passiveover"] = 0.00676,
+					["serial"] = "Player-4487-0051C667",
+					["received"] = 111.032022,
+				}, -- [1]
 			},
 		}, -- [3]
 		{
 			["tipo"] = 9,
 			["_ActorTable"] = {
+				{
+					["flag_original"] = 1047,
+					["debuff_uptime_spells"] = {
+						["_ActorTable"] = {
+							[25264] = {
+								["counter"] = 0,
+								["activedamt"] = 0,
+								["appliedamt"] = 3,
+								["id"] = 25264,
+								["uptime"] = 41,
+								["targets"] = {
+								},
+								["refreshamt"] = 1,
+							},
+							[7922] = {
+								["counter"] = 0,
+								["appliedamt"] = 0,
+								["activedamt"] = -3,
+								["actived_at"] = 5049908520,
+								["id"] = 7922,
+								["uptime"] = 0,
+								["targets"] = {
+								},
+								["refreshamt"] = 0,
+							},
+							[12721] = {
+								["counter"] = 0,
+								["activedamt"] = 0,
+								["appliedamt"] = 9,
+								["id"] = 12721,
+								["uptime"] = 69,
+								["targets"] = {
+								},
+								["refreshamt"] = 10,
+							},
+							[46857] = {
+								["counter"] = 0,
+								["activedamt"] = 0,
+								["appliedamt"] = 6,
+								["id"] = 46857,
+								["uptime"] = 95,
+								["targets"] = {
+								},
+								["refreshamt"] = 13,
+							},
+						},
+						["tipo"] = 9,
+					},
+					["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+					["GetSpellContainer"] = nil --[[ skipped inline function ]],
+					["buff_uptime"] = 80,
+					["aID"] = "4487-0051C667",
+					["pets"] = {
+					},
+					["buff_uptime_spells"] = {
+						["_ActorTable"] = {
+							[65156] = {
+								["counter"] = 0,
+								["activedamt"] = 3,
+								["appliedamt"] = 3,
+								["id"] = 65156,
+								["uptime"] = 27,
+								["targets"] = {
+								},
+								["refreshamt"] = 0,
+							},
+							[23250] = {
+								["counter"] = 0,
+								["activedamt"] = 1,
+								["appliedamt"] = 1,
+								["id"] = 23250,
+								["uptime"] = 8,
+								["targets"] = {
+								},
+								["refreshamt"] = 0,
+							},
+							[29131] = {
+								["counter"] = 0,
+								["activedamt"] = 1,
+								["appliedamt"] = 1,
+								["id"] = 29131,
+								["uptime"] = 5,
+								["targets"] = {
+								},
+								["refreshamt"] = 0,
+							},
+							[57940] = {
+								["counter"] = 0,
+								["activedamt"] = 2,
+								["appliedamt"] = 2,
+								["id"] = 57940,
+								["uptime"] = 40,
+								["targets"] = {
+								},
+								["refreshamt"] = 0,
+							},
+						},
+						["tipo"] = 9,
+					},
+					["GetPets"] = nil --[[ skipped inline function ]],
+					["debuff_uptime"] = 205,
+					["GetSpellList"] = nil --[[ skipped inline function ]],
+					["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+					["debuff_uptime_targets"] = {
+					},
+					["grupo"] = true,
+					["buff_uptime_targets"] = {
+					},
+					["tipo"] = 4,
+					["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+					["last_event"] = 0,
+					["GetTargets"] = nil --[[ skipped inline function ]],
+					["nome"] = "狂暴專家",
+					["serial"] = "Player-4487-0051C667",
+					["classe"] = "WARRIOR",
+				}, -- [1]
+				{
+					["flag_original"] = 2632,
+					["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+					["GetSpellContainer"] = nil --[[ skipped inline function ]],
+					["pets"] = {
+					},
+					["aID"] = "24566",
+					["fight_component"] = true,
+					["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+					["nome"] = "尼鲁巴尔掠行者",
+					["GetSpellList"] = nil --[[ skipped inline function ]],
+					["classe"] = "UNKNOW",
+					["tipo"] = 4,
+					["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+					["last_event"] = 0,
+					["GetTargets"] = nil --[[ skipped inline function ]],
+					["monster"] = true,
+					["serial"] = "Creature-0-4491-571-7-24566-0000D5239D",
+					["GetPets"] = nil --[[ skipped inline function ]],
+				}, -- [2]
+				{
+					["flag_original"] = 68168,
+					["BuildSpellTargetFromSpellTable"] = nil --[[ skipped inline function ]],
+					["GetSpellContainer"] = nil --[[ skipped inline function ]],
+					["pets"] = {
+					},
+					["aID"] = "25294",
+					["fight_component"] = true,
+					["BuildSpellTargetFromBreakdownSpellData"] = nil --[[ skipped inline function ]],
+					["nome"] = "尼鲁巴尔蛛网领主",
+					["GetSpellList"] = nil --[[ skipped inline function ]],
+					["classe"] = "UNKNOW",
+					["tipo"] = 4,
+					["GetSpellTableFromContainer"] = nil --[[ skipped inline function ]],
+					["last_event"] = 0,
+					["GetTargets"] = nil --[[ skipped inline function ]],
+					["monster"] = true,
+					["serial"] = "Creature-0-4491-571-7-25294-00005521C9",
+					["GetPets"] = nil --[[ skipped inline function ]],
+				}, -- [3]
 			},
 		}, -- [4]
 		{
@@ -1374,13 +5891,12 @@ _detalhes_database = {
 		},
 		["trinketProcs"] = {
 		},
-		["__call"] = {
-		},
+		["data_inicio"] = "23:50:41",
 		["totals"] = {
-			0, -- [1]
-			0, -- [2]
+			63620.064892, -- [1]
+			-0.008899, -- [2]
 			{
-				0, -- [1]
+				111.025262, -- [1]
 				[0] = 0,
 				["alternatepower"] = 0,
 				[3] = 0,
@@ -1406,18 +5922,32 @@ _detalhes_database = {
 		["frags_need_refresh"] = false,
 		["aura_timeline"] = {
 		},
+		["__call"] = {
+		},
+		["PhaseData"] = {
+			{
+				1, -- [1]
+				1, -- [2]
+			}, -- [1]
+			["damage_section"] = {
+			},
+			["heal_section"] = {
+			},
+			["heal"] = {
+			},
+			["damage"] = {
+			},
+		},
+		["end_time"] = 703888.306,
 		["overall_refreshed"] = true,
-		["data_inicio"] = 0,
-		["end_time"] = 698803.7660000001,
-		["combat_counter"] = 1,
 		["cleu_events"] = {
 			["n"] = 1,
 		},
 		["totals_grupo"] = {
-			0, -- [1]
+			44207.026875, -- [1]
 			0, -- [2]
 			{
-				0, -- [1]
+				111.025262, -- [1]
 				[0] = 0,
 				["alternatepower"] = 0,
 				[3] = 0,
@@ -1434,47 +5964,69 @@ _detalhes_database = {
 				["dead"] = 0,
 			}, -- [4]
 		},
+		["frags"] = {
+		},
+		["hasSaved"] = true,
 		["segments_added"] = {
+			{
+				["elapsed"] = 59.47100000001956,
+				["type"] = 0,
+				["name"] = "尼鲁巴尔蛛网领主",
+				["clock"] = "00:09:51",
+			}, -- [1]
+			{
+				["elapsed"] = 13.23900000005961,
+				["type"] = 0,
+				["name"] = "尼鲁巴尔掠行者",
+				["clock"] = "00:09:19",
+			}, -- [2]
+			{
+				["elapsed"] = 20.49199999996927,
+				["type"] = 0,
+				["name"] = "尼鲁巴尔掠行者",
+				["clock"] = "00:08:33",
+			}, -- [3]
+			{
+				["elapsed"] = 33.41700000001583,
+				["type"] = 0,
+				["name"] = "尼鲁巴尔蛛网领主",
+				["clock"] = "00:02:49",
+			}, -- [4]
+			{
+				["elapsed"] = 31.66200000001118,
+				["type"] = 0,
+				["name"] = "尼鲁巴尔蛛网领主",
+				["clock"] = "23:51:33",
+			}, -- [5]
+			{
+				["elapsed"] = 7.562000000034459,
+				["type"] = 0,
+				["name"] = "尼鲁巴尔掠行者",
+				["clock"] = "23:50:41",
+			}, -- [6]
 			{
 				["elapsed"] = 698803.7660000001,
 				["type"] = 0,
 				["name"] = "未知",
 				["clock"] = 0,
-			}, -- [1]
+			}, -- [7]
 		},
-		["hasSaved"] = true,
-		["spells_cast_timeline"] = {
-		},
-		["data_fim"] = "22:46:07",
-		["overall_enemy_name"] = "未知",
-		["PhaseData"] = {
-			{
-				1, -- [1]
-				1, -- [2]
-			}, -- [1]
-			["damage_section"] = {
-			},
-			["heal_section"] = {
-			},
-			["heal"] = {
-			},
-			["damage"] = {
-			},
-		},
+		["data_fim"] = "00:10:51",
+		["overall_enemy_name"] = "-- x -- x --",
 		["amountCasts"] = {
 		},
-		["start_time"] = 0,
+		["combat_counter"] = 1,
+		["start_time"] = 703722.4629999999,
 		["TimeData"] = {
 		},
-		["frags"] = {
+		["spells_cast_timeline"] = {
 		},
 	},
 	["last_realversion"] = 151,
-	["nick_tag_cache"] = {
-		["nextreset"] = 1684593956,
-		["last_version"] = 15,
-	},
-	["data_harvested_for_charts"] = {
+	["ignore_nicktag"] = false,
+	["announce_firsthit"] = {
+		["enabled"] = true,
+		["channel"] = "SELF",
 	},
 	["announce_cooldowns"] = {
 		["enabled"] = false,
@@ -1492,5 +6044,7 @@ _detalhes_database = {
 		["channel"] = "SELF",
 	},
 	["cached_specs"] = {
+		["Player-4487-004D9328"] = 263,
+		["Player-4487-0051C667"] = 71,
 	},
 }

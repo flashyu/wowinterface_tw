@@ -1,14 +1,17 @@
 
 RXPCData = {
 	["completedWaypoints"] = {
-		[3] = {
-			[612027523] = true,
+		[12] = {
+			[1764252786] = true,
 		},
 	},
-	["currentStep"] = 3,
+	["currentStep"] = 12,
 	["currentGuideName"] = "70.5-71.5 北风苔原抢夺开始",
 	["stepSkip"] = {
-		[2] = true,
+		true, -- [1]
+		true, -- [2]
+		[8] = true,
+		[6] = true,
 	},
 	["flightPaths"] = {
 	},
@@ -33,6 +36,10 @@ RXPCTrackingData = {
 							["xp"] = 1250,
 							["count"] = 1,
 						},
+						["北风苔原"] = {
+							["xp"] = 12534,
+							["count"] = 7,
+						},
 					},
 					["timestamp"] = {
 					},
@@ -43,6 +50,10 @@ RXPCTrackingData = {
 						},
 						["杜隆塔尔"] = {
 							[70737] = 1250,
+						},
+						["北风苔原"] = {
+							[11585] = 2000,
+							[11596] = 2000,
 						},
 					},
 				},
@@ -65,9 +76,9 @@ RXPCSettings = {
 	},
 	["profiles"] = {
 		["狂暴專家 - 伊弗斯"] = {
-			["frameHeight"] = 344.9999084472656,
 			["hardcore"] = false,
 			["guideFontSize"] = 12,
+			["frameHeight"] = 344.9999084472656,
 		},
 	},
 }

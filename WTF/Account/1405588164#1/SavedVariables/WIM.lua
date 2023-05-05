@@ -145,9 +145,9 @@ WIM3_Data = {
 			["custom_sml"] = "Chat Blip",
 			["say_sml"] = "Chat Blip",
 			["raid_sml"] = "Chat Blip",
+			["raidleader_sml"] = "Chat Blip",
 			["officer_sml"] = "Chat Blip",
 			["guild_sml"] = "Chat Blip",
-			["raidleader_sml"] = "Chat Blip",
 			["battlegroundleader_sml"] = "Chat Blip",
 			["battleground_sml"] = "Chat Blip",
 		},
@@ -397,6 +397,7 @@ WIM3_Cache = {
 		["狂暴專家"] = {
 			["friendList"] = {
 				["|Kq1|k"] = 2,
+				["|Kq2|k"] = 2,
 			},
 		},
 	},
@@ -438,6 +439,46 @@ WIM3_Filters = {
 	}, -- [3]
 }
 WIM3_History = {
+	["伊弗斯"] = {
+		["狂暴專家"] = {
+			["疾風#4455"] = {
+				{
+					["type"] = 1,
+					["time"] = 1683305325,
+					["from"] = "疾風#4455",
+					["msg"] = "司机了",
+					["inbound"] = true,
+					["convo"] = "疾風#4455",
+				}, -- [1]
+				{
+					["type"] = 1,
+					["time"] = 1683305328,
+					["from"] = "疾風#4455",
+					["msg"] = "蓝屏了",
+					["inbound"] = true,
+					["convo"] = "疾風#4455",
+				}, -- [2]
+				{
+					["type"] = 1,
+					["time"] = 1683305328,
+					["from"] = "疾風#4455",
+					["msg"] = "我擦",
+					["inbound"] = true,
+					["convo"] = "疾風#4455",
+				}, -- [3]
+				{
+					["type"] = 1,
+					["time"] = 1683305331,
+					["from"] = "狂暴專家",
+					["msg"] = "擦",
+					["inbound"] = false,
+					["convo"] = "疾風#4455",
+				}, -- [4]
+				["info"] = {
+				},
+			},
+		},
+	},
 }
 WIM3_ChatFilters = {
 }
