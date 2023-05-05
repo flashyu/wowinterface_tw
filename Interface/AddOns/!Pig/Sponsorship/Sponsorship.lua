@@ -84,7 +84,7 @@ for i=1,12 do
 			_G["pigunlock"..xx]:Hide()
 		end
 		PIG.Sponsorship.open=true
-		PlaySoundFile(1067169, "Master")	
+		PlaySoundFile(565431, "Master")	
 		fuFrame.F:SetPoint("TOPLEFT",fuFrame,"TOPLEFT",0,-TOPHIGHT);
 		fuFrame.F:SetPoint("BOTTOMRIGHT",fuFrame,"BOTTOMRIGHT",0,0);
 	end);
@@ -117,31 +117,10 @@ fuFrame.zidongLOOTqueren:SetScript("OnClick", function (self)
 		fuFrame:UnregisterEvent("LOOT_BIND_CONFIRM")
 	end
 end);
-local TalentFrame_Open=addonTable.TalentFrame_Open
-fuFrame.TalentFrame=ADD_Checkbutton(nil,fuFrame,-60,"TOPLEFT",fuFrame,"TOPLEFT",20,-100,"天赋面板扩展","")
-if tocversion<30000 then
-	fuFrame.TalentFrame.tooltip= "在一页显示三系天赋";
-elseif tocversion<40000 then
-	fuFrame.TalentFrame.tooltip= "在一页显示三系天赋和雕文";
-else
-	PIGDisable(fuFrame.TalentFrame)
-end
-fuFrame.TalentFrame:SetScript("OnClick", function (self)
-	if self:GetChecked() then
-		PIG["Sponsorship"]["ExtFrame_Talent"]="ON";
-		TalentFrame_Open()
-	else
-		PIG["Sponsorship"]["ExtFrame_Talent"]="OFF";
-		Pig_Options_RLtishi_UI:Show()
-	end
-end);
 --===============================
 fuFrame:SetScript("OnShow", function (self)
 	if PIG["Sponsorship"]["AutoLOOTqwueren"] then
 		fuFrame.zidongLOOTqueren:SetChecked(true);
-	end
-	if PIG["Sponsorship"]["ExtFrame_Talent"]=="ON" then
-		fuFrame.TalentFrame:SetChecked(true);
 	end
 end);
 addonTable.Sponsorship = function()
@@ -149,8 +128,5 @@ addonTable.Sponsorship = function()
 	if PIG["Sponsorship"]["AutoLOOTqwueren"] then
 		fuFrame:RegisterEvent("LOOT_BIND_CONFIRM")
 		fuFrame.zidongLOOTqueren:SetChecked(true);
-	end
-	if PIG["Sponsorship"]["ExtFrame_Talent"]=="ON" then
-		TalentFrame_Open()
 	end
 end

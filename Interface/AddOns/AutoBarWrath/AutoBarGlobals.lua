@@ -8,7 +8,13 @@ local _, AB = ... -- Pulls back the Addon-Local Variables and store them locally
 
 local print, select, ipairs, tostring, pairs, tonumber, string = print, select, ipairs, tostring, pairs, tonumber, string
 
-AutoBar = MMGHACKAceLibrary("AceAddon-2.0"):new("AceDB-2.0");
+---@diagnostic disable-next-line: assign-type-mismatch
+AB.LibKeyBound = LibStub("LibKeyBound-1.0")	---@type LibKeyBound
+
+---@diagnostic disable-next-line: assign-type-mismatch
+AB.LibStickyFrames = LibStub("LibStickyFrames-2.0") ---@type LibStickyFrames
+
+AutoBar = {}
 AutoBar.warning_log = {}
 
 -- All global code with be a child of this table.
@@ -41,7 +47,20 @@ AutoBarGlobalDataObject = {
 	is_bcc_wow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC),
 	is_wrath_wow = (WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC),
 
+	default_button_width = 36,
+	default_button_height = 36,
+
 }
+
+local ver_string = GetBuildInfo()
+local api_version_temp = strsplittable(".", ver_string)
+AutoBarGlobalDataObject.API_VERSION = tonumber(api_version_temp[1])
+AutoBarGlobalDataObject.API_SUBVERSION = tonumber(api_version_temp[2])
+
+if(AutoBarGlobalDataObject.API_VERSION >= 10) then	-- Dragonflight+
+	AutoBarGlobalDataObject.default_button_width = 45
+	AutoBarGlobalDataObject.default_button_height = 45
+end
 
 
 -- List of [spellName] = <GetSpellInfo Name>
@@ -49,7 +68,7 @@ AutoBarGlobalDataObject.spell_name_list = {}
 -- List of [spellName] = <GetSpellInfo Icon>
 AutoBarGlobalDataObject.spell_icon_list = {}
 
-AutoBarGlobalDataObject.set_mana_users = AutoBarGlobalCodeSpace.MakeSet{"DRUID", "HUNTER", "MAGE", "MONK", "PRIEST", "PALADIN", "SHAMAN", "WARLOCK"}
+AutoBarGlobalDataObject.set_mana_users = AutoBarGlobalCodeSpace.MakeSet{"DRUID", "EVOKER", "HUNTER", "MAGE", "MONK", "PRIEST", "PALADIN", "SHAMAN", "WARLOCK"}
 
 function AutoBarGlobalCodeSpace.ClassUsesMana(p_class_name)
 
@@ -73,15 +92,15 @@ end
 
 AutoBarGlobalDataObject.TickScheduler =
 {
-
-	UpdateCategoriesID = 1,
-	UpdateSpellsID = 2,
-	UpdateObjectsID = 3,
-	UpdateItemsID = 4,
-	UpdateAttributesID = 5,
-	UpdateActiveID = 6,
-	UpdateButtonsID = 7,
-	UpdateCompleteID = 8,
+	ResetSearch = 1,
+	UpdateCategoriesID = 2,
+	UpdateSpellsID = 3,
+	UpdateObjectsID = 4,
+	UpdateItemsID = 5,
+	UpdateAttributesID = 6,
+	UpdateActiveID = 7,
+	UpdateButtonsID = 8,
+	UpdateCompleteID = 9,
 
 	BehaveTicker = 1,	-- Called by the ticker, so you may return the next step to be run rather than doing it immediately
 
@@ -113,6 +132,13 @@ function AB.Dump(o, p_max_depth)
 	end
 end
 
+function AB.NVL(p_1, p_2)
+	if(p_1 ~= nil) then
+		return p_1
+	end
+
+	return p_2
+end
 
 local function table_pack(...)
   return { n = select("#", ...), ... }
@@ -143,12 +169,12 @@ function AutoBarGlobalCodeSpace.ToyGUID(p_toy_id)
 	return guid;
 end
 
-function AutoBarGlobalCodeSpace.BPetGUID(p_bpet_id)
+--[[ function AutoBarGlobalCodeSpace.BPetGUID(p_bpet_id)
 
 	local guid = "bpet:" .. p_bpet_id;
 
 	return guid;
-end
+end ]]
 
 local macro_text_guid_index = 0;
 function AutoBarGlobalCodeSpace.MacroTextGUID(_p_macro_text)	--TODO: We're not using the text?
@@ -163,6 +189,10 @@ end
 
 function AutoBarGlobalCodeSpace.GetIconForToyID(p_toy_id)
 	local item_id = tonumber(p_toy_id)
+
+	if(not item_id) then
+		return nil
+	end
 
 	local _, _, texture =  C_ToyBox.GetToyInfo(item_id)
 
@@ -189,18 +219,18 @@ function AutoBarGlobalCodeSpace.GetValidatedName(p_name)
 end
 
 
-local usable_items_override_set = AutoBarGlobalCodeSpace.MakeSet{
-122484,	--Blackrock foundry spoils
-71715,	--A Treatise on Strategy
-113258,  --Blingtron 5000 Gift package
-132892,  --Blingtron 6000 Gift package
+-- local usable_items_override_set = AutoBarGlobalCodeSpace.MakeSet{
+-- 122484,	--Blackrock foundry spoils
+-- 71715,	--A Treatise on Strategy
+-- 113258,  --Blingtron 5000 Gift package
+-- 132892,  --Blingtron 6000 Gift package
 
-150924, -- Greater Tribute of the Broken Isles
+-- 150924, -- Greater Tribute of the Broken Isles
 
-118529, -- Cache of Highmaul Treasures
-}
+-- 118529, -- Cache of Highmaul Treasures
+-- }
 
-local is_usable_item_cache = {}
+--local is_usable_item_cache = {}
 
 function AutoBarGlobalCodeSpace.IsUsableItem(p_item_id)
 
@@ -217,9 +247,17 @@ function AutoBarGlobalCodeSpace.IsUsableItem(p_item_id)
 --	return is_usable_item_cache[p_item_id], not_enough_mana;
 end
 
+function AB.ClearNormalTexture(p_frame)
+	if (p_frame.ClearNormalTexture) then
+		p_frame:ClearNormalTexture()
+	else
+		p_frame:SetNormalTexture(nil)
+	end
+end
 
---/run AutoBarGlobalCodeSpace.FrameInsp(ActionButton3)
-function AutoBarGlobalCodeSpace.FrameInsp(p_frame) --AutoBarButtonExplosiveFrame
+
+--/run AutoBarGlobalCodeSpace.FrameInsp(AutoBarButtonExplosiveFrame)
+function AutoBarGlobalCodeSpace.FrameInsp(p_frame)
 
 	local frame = p_frame
 
@@ -281,8 +319,8 @@ function AutoBarGlobalCodeSpace.GetSpellIconByNameFast(p_spell_name)
 
 end
 
-local prof = AutoBarGlobalDataObject.profile
 function AutoBarGlobalCodeSpace.AddProfileData(p_name, p_time)
+	local prof = AutoBarGlobalDataObject.profile
 
 	if(prof[p_name] == nil) then
 		prof[p_name] = {}
@@ -359,12 +397,12 @@ local event_name_colour = "|cFFFFFF7F"
 
 function AutoBarGlobalCodeSpace.LogEvent(p_event_name, p_arg1)
 	local memory
-	if (AutoBar.db.account.logMemory) then
+	if (AutoBarDB2.settings.log_memory) then
 		UpdateAddOnMemoryUsage()
 		memory = GetAddOnMemoryUsage("AutoBar")
 		print(p_event_name, "memory" , memory)
 	end
-	if (AutoBar.db.account.logEvents) then
+	if (AutoBarDB2.settings.log_events) then
 		if (p_arg1) then
 			memory = memory or ""
 			print(event_name_colour .. p_event_name .. "|r", "arg1" , p_arg1, "time:", GetTime(), memory)
@@ -374,16 +412,18 @@ function AutoBarGlobalCodeSpace.LogEvent(p_event_name, p_arg1)
 	end
 end
 
+
+---@param p_event_name string
 function AutoBarGlobalCodeSpace.LogEventStart(p_event_name)
 	local memory
 
-	if (AutoBar.db.account.logMemory) then
+	if (AutoBarDB2.settings.log_memory) then
 		UpdateAddOnMemoryUsage()
 		memory = GetAddOnMemoryUsage("AutoBar")
 		logMemory[p_event_name] = memory
 	end
 
-	if (AutoBar.db.account.performance) then
+	if (AutoBarDB2.settings.performance) then
 		if (logItems[p_event_name]) then
 			--print(p_event_name, "restarted before previous completion")
 		else
@@ -392,28 +432,29 @@ function AutoBarGlobalCodeSpace.LogEventStart(p_event_name)
 		end
 	end
 
-	if (AutoBar.db.account.logEvents) then
+	if (AutoBarDB2.settings.log_events) then
 			memory = memory or ""
 			print(event_name_colour .. p_event_name .. "|r", "time:", debugprofilestop(), memory)
 	end
 end
 
-function AutoBarGlobalCodeSpace.LogEventEnd(p_event_name, p_arg1)	--ToDo: There can actually be multiple args
-	if (AutoBar.db.account.performance) then
+function AutoBarGlobalCodeSpace.LogEventEnd(p_event_name, ...)
+	if (AutoBarDB2.settings.performance) then
 		if (logItems[p_event_name]) then
 			local elapsed = debugprofilestop() - logItems[p_event_name]
 			-- if (p_event_name == "SPELLS_CHANGED") then
 			-- 	print(p_event_name, p_arg1, elapsed, "=", debugprofilestop(), " - ", logItems[p_event_name])
 			-- end
-			if (elapsed > AutoBarDB2.performance_threshold) then
-				print(event_name_colour .. p_event_name .. "|r", (p_arg1 or ""), "time:", elapsed)
+			if (elapsed > AutoBarDB2.settings.performance_threshold) then
+				local args = {...}
+				print(event_name_colour .. p_event_name .. "|r", (args or ""), "time:", elapsed)
 			end
 		--else
 			--print(p_event_name, "restarted before previous completion")
 			logItems[p_event_name] = nil
 		end
 	end
-	if (AutoBar.db.account.logMemory) then
+	if (AutoBarDB2.settings.log_memory) then
 		UpdateAddOnMemoryUsage()
 		local memory = GetAddOnMemoryUsage("AutoBar")
 		local deltaMemory = memory - (logMemory[p_event_name] or 0)
@@ -430,6 +471,11 @@ function AutoBarGlobalCodeSpace.GetCategoryItemDB(p_category_key, p_item_index)
 	return AutoBarDB2.custom_categories[p_category_key].items[p_item_index]
 end
 
+-- Support multiple APi versions
+AB.GetContainerNumSlots = GetContainerNumSlots or C_Container.GetContainerNumSlots
+AB.GetContainerItemID = GetContainerItemID or C_Container.GetContainerItemID
+AB.GetContainerItemLink = GetContainerItemLink or C_Container.GetContainerItemLink
+
 
 
 if (AutoBarGlobalDataObject.is_mainline_wow) then
@@ -439,16 +485,57 @@ if (AutoBarGlobalDataObject.is_mainline_wow) then
 --
 -------------------------------------------------------------------
 
+AutoBarGlobalDataObject.player_has_toy_cache = {}
+AutoBarGlobalDataObject.is_toy_usable_cache = {}
+AutoBarGlobalDataObject.mount_data_cache_by_id = {}
+
+
+
+
+	function AutoBarGlobalCodeSpace.GetMountInfoByID(p_id)
+		local mdc = AutoBarGlobalDataObject.mount_data_cache_by_id
+		if(mdc[p_id] == nil) then
+			local name, spell_id, icon, _active, _usable, _src, is_favourite, _faction_specific, _faction, _is_hidden, is_collected, _mount_id =
+						 C_MountJournal.GetMountInfoByID(p_id)
+			local data = {}
+			data.name = name
+			data.spell_id = spell_id
+			data.icon = icon
+			data.is_favourite = is_favourite
+			data.is_collected = is_collected
+
+			mdc[p_id] = data;
+		end
+		return mdc[p_id]
+	end
+
 	--This should query a global guid registry and then the specific ones if not found.
-	function AutoBarGlobalCodeSpace.InfoFromGUID(p_guid)
-		return AutoBarSearch.macro_text[p_guid] or AutoBarSearch.toys[p_guid];
+	function AutoBarGlobalCodeSpace.InfoFromGUID(p_guid)	---@diagnostic disable-line: duplicate-set-field
+		return AutoBarSearch.registered_macro_text[p_guid] or AutoBarSearch.registered_toys[p_guid];
 	end
 
-	function AutoBarGlobalCodeSpace.PlayerHasToy(p_item_id)
-		return PlayerHasToy(p_item_id);
+	--Once we get a non-nil result, that's what we'll use for the rest of the session
+	--TODO: We could invalidate this cache if we get this item_id show up in a TOY_UPDATE
+	function AutoBarGlobalCodeSpace.PlayerHasToy(p_item_id)	---@diagnostic disable-line: duplicate-set-field
+		local phtc = AutoBarGlobalDataObject.player_has_toy_cache
+		if(phtc[p_item_id] == nil) then
+			phtc[p_item_id] = PlayerHasToy(p_item_id);
+		end
+		return phtc[p_item_id]
 	end
 
-	function AutoBarGlobalCodeSpace.GetSpellLink(p_spell, p_rank)
+
+	--Once we get a non-nil result, that's what we'll use for the rest of the session
+	function AutoBarGlobalCodeSpace.IsToyUsable(p_item_id)
+		local ituc = AutoBarGlobalDataObject.is_toy_usable_cache
+		if(ituc[p_item_id] == nil) then
+			ituc[p_item_id] = C_ToyBox.IsToyUsable(p_item_id);
+		end
+		return ituc[p_item_id]
+	end
+
+
+	function AutoBarGlobalCodeSpace.GetSpellLink(p_spell, p_rank)	---@diagnostic disable-line: duplicate-set-field
 		local spell = GetSpellLink(p_spell, p_rank)
 
 		if spell == "" then
@@ -467,15 +554,15 @@ if (AutoBarGlobalDataObject.is_mainline_wow) then
 
 else --(AutoBarGlobalDataObject.is_vanilla_wow or AutoBarGlobalDataObject.is_bcc_wow) then
 
-	function AutoBarGlobalCodeSpace.InfoFromGUID(p_guid)
-		return AutoBarSearch.macro_text[p_guid];
+	function AutoBarGlobalCodeSpace.InfoFromGUID(p_guid)	---@diagnostic disable-line: duplicate-set-field
+		return AutoBarSearch.registered_macro_text[p_guid];
 	end
 
-	function AutoBarGlobalCodeSpace.PlayerHasToy(_p_item_id)
+	function AutoBarGlobalCodeSpace.PlayerHasToy(_p_item_id)	---@diagnostic disable-line: duplicate-set-field
 		return false;
 	end
 
-	function AutoBarGlobalCodeSpace.GetSpellLink(p_spell, p_rank)
+	function AutoBarGlobalCodeSpace.GetSpellLink(p_spell, p_rank)	---@diagnostic disable-line: duplicate-set-field
 		local spell_link
 
 		if(type(p_spell) == "string") then

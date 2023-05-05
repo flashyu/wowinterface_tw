@@ -4,8 +4,9 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local _, TSM = ...
+local TSM = select(2, ...) ---@type TSM
 local Buy = TSM.UI.VendoringUI:NewPackage("Buy")
+local Environment = TSM.Include("Environment")
 local L = TSM.Include("Locale").GetTable()
 local Money = TSM.Include("Util.Money")
 local String = TSM.Include("Util.String")
@@ -16,6 +17,7 @@ local ItemString = TSM.Include("Util.ItemString")
 local ItemInfo = TSM.Include("Service.ItemInfo")
 local Settings = TSM.Include("Service.Settings")
 local UIElements = TSM.Include("UI.UIElements")
+local UIUtils = TSM.Include("UI.UIUtils")
 local private = {
 	settings = nil,
 	query = nil,
@@ -51,7 +53,7 @@ end
 -- ============================================================================
 
 function private.GetFrame()
-	TSM.UI.AnalyticsRecordPathChange("vendoring", "buy")
+	UIUtils.AnalyticsRecordPathChange("vendoring", "buy")
 	private.filterText = ""
 	if not private.query then
 		private.query = TSM.Vendoring.Buy.CreateMerchantQuery()
@@ -62,7 +64,7 @@ function private.GetFrame()
 	private.query:ResetOrderBy()
 	private.query:OrderBy("name", true)
 
-	local altCost = not TSM.IsWowClassic() and GetMerchantCurrencies()
+	local altCost = Environment.IsRetail() and GetMerchantCurrencies()
 	local frame = UIElements.New("Frame", "buy")
 		:SetLayout("VERTICAL")
 		:AddChild(UIElements.New("Frame", "filters")
@@ -134,7 +136,7 @@ function private.GetFrame()
 			:SetQuery(private.query)
 			:SetScript("OnRowClick", private.RowOnClick)
 		)
-		:AddChild(TSM.UI.Views.Line.NewHorizontal("line"))
+		:AddChild(UIElements.New("HorizontalLine", "line"))
 		:AddChild(UIElements.New("Frame", "footer")
 			:SetLayout("HORIZONTAL")
 			:SetHeight(40)
@@ -147,7 +149,7 @@ function private.GetFrame()
 				:SetPadding(4)
 				:AddChild(TSM.UI.Views.PlayerGoldText.New("text"))
 			)
-			:AddChild(TSM.UI.Views.Line.NewVertical("line")
+			:AddChild(UIElements.New("VerticalLine", "line")
 				:SetHeight(22)
 				:SetMargin(0, 8, 0, 0)
 			)
@@ -177,7 +179,7 @@ end
 
 function private.GetItemText(row)
 	local itemString, numAvailable = row:GetFields("itemString", "numAvailable")
-	local itemName = TSM.UI.GetColoredItemName(itemString) or "?"
+	local itemName = UIUtils.GetDisplayItemName(itemString) or "?"
 	if numAvailable == -1 then
 		return itemName
 	elseif numAvailable > 0 then
@@ -307,7 +309,7 @@ function private.RowOnClick(scrollingTable, row, mouseButton)
 				:AddChild(UIElements.New("Text", "name")
 					:SetHeight(36)
 					:SetFont("ITEM_BODY1")
-					:SetText(TSM.UI.GetColoredItemName(itemString))
+					:SetText(UIUtils.GetDisplayItemName(itemString))
 				)
 			)
 			:AddChild(UIElements.New("Frame", "qty")
@@ -460,7 +462,7 @@ function private.GetItemAltCostText(row, quantity)
 			local texture = nil
 			if costItemString then
 				texture = ItemInfo.GetTexture(costItemString)
-			elseif not TSM.IsWowVanillaClassic() and strmatch(costItemLink, "currency:") then
+			elseif not Environment.IsVanillaClassic() and strmatch(costItemLink, "currency:") then
 				texture = C_CurrencyInfo.GetCurrencyInfoFromLink(costItemLink).iconFileID
 			else
 				error(format("Unknown item cost (%d, %d, %s)", index, costNum, tostring(costItemLink)))
@@ -484,7 +486,7 @@ end
 
 function private.GetCurrencyText()
 	local name, amount, texturePath = "", nil, nil
-	if not TSM.IsWowClassic() then
+	if Environment.IsRetail() then
 		local firstCurrency = GetMerchantCurrencies()
 		if firstCurrency then
 			local info = C_CurrencyInfo.GetCurrencyInfo(firstCurrency)

@@ -12,13 +12,18 @@ local class_options_to_class = {}
 
 local spec_options = {}
 local spec_options_to_spec = {}
-local phases = { "PR", "T7"--[[, "T8", "T9", "10"]] }
 local spec_frame = nil
 local items = {}
 local spells = {}
 local main_frame = nil
 
-local function createItemFrame(item_id, size)
+local classDropdown = nil
+local specDropdown = nil
+local phaseDropDown = nil
+
+local checkmarks = {}
+
+local function createItemFrame(item_id, size, with_checkmark)
     if item_id < 0 then
         local f = AceGUI:Create("Label")
         return f
@@ -29,14 +34,24 @@ local function createItemFrame(item_id, size)
 
     if (items[item_id]:GetItemID()) then
         items[item_id]:ContinueOnItemLoad(function()
+            local ilink = items[item_id]:GetItemLink()
             item_frame:SetImage(items[item_id]:GetItemIcon())
+            if with_checkmark == true then
+                local checkMark = item_frame.frame:CreateTexture(nil, "OVERLAY")
+                checkMark:SetWidth(32)
+                checkMark:SetHeight(32)
+                checkMark:SetPoint("CENTER", 6, -8)
+                checkMark:SetTexture("Interface\\AddOns\\Bistooltip\\checkmark-16.tga")
+                table.insert(checkmarks, checkMark)
+            end
+
             item_frame:SetCallback("OnClick", function(button)
-                SetItemRef(items[item_id]:GetItemLink(), items[item_id]:GetItemLink(), "LeftButton");
+                SetItemRef(ilink, ilink, "LeftButton");
             end)
             item_frame:SetCallback("OnEnter", function(widget)
                 GameTooltip:SetOwner(item_frame.frame)
                 GameTooltip:SetPoint("TOPRIGHT", item_frame.frame, "TOPRIGHT", 220, -13);
-                GameTooltip:SetHyperlink(items[item_id]:GetItemLink())
+                GameTooltip:SetHyperlink(ilink)
             end)
             item_frame:SetCallback("OnLeave", function(widget)
                 GameTooltip:Hide()
@@ -115,18 +130,22 @@ end
 local function drawItemSlot(slot)
     local f = AceGUI:Create("Label")
     f:SetText(slot.slot_name)
-    f:SetFont("Fonts\\FRIZQT__.TTF", 14)
+    f:SetFont("Fonts\\FRIZQT__.TTF", 14, "")
     spec_frame:AddChild(f)
     spec_frame:AddChild(createEnhancementsFrame(slot.enhs))
     for i, item_id in ipairs(slot) do
-        spec_frame:AddChild(createItemFrame(item_id, 40))
+        if item_id ~= nil and Bistooltip_char_equipment[item_id] ~= nil then
+            spec_frame:AddChild(createItemFrame(item_id, 40, true))
+        else
+            spec_frame:AddChild(createItemFrame(item_id, 40))
+        end
     end
 end
 
 local function drawTableHeader(frame)
     local f = AceGUI:Create("Label")
     f:SetText("Slot")
-    f:SetFont("Fonts\\FRIZQT__.TTF", 14)
+    f:SetFont("Fonts\\FRIZQT__.TTF", 14, "")
     local color = 0.6
     f:SetColor(color, color, color)
     frame:AddChild(f)
@@ -145,7 +164,15 @@ local function saveData()
     BistooltipAddon.db.char.phase_index = phase_index
 end
 
+local function clearCheckMarks()
+    for key, value in ipairs(checkmarks) do
+        value:SetTexture(nil)
+    end
+    checkmarks = {}
+end
+
 local function drawSpecData()
+    clearCheckMarks()
     saveData()
     items = {}
     spells = {}
@@ -191,7 +218,7 @@ local function loadData()
         spec = spec_options_to_spec[spec_options[spec_index]]
     end
     if phase_index then
-        phase = phases[phase_index]
+        phase = Bistooltip_phases[phase_index]
     end
 end
 
@@ -207,14 +234,14 @@ local function drawDropdowns()
     })
     main_frame:AddChild(dropDownGroup)
 
-    local classDropdown = AceGUI:Create("Dropdown")
-    local specDropdown = AceGUI:Create("Dropdown")
-    local phaseDropDown = AceGUI:Create("Dropdown")
+    classDropdown = AceGUI:Create("Dropdown")
+    specDropdown = AceGUI:Create("Dropdown")
+    phaseDropDown = AceGUI:Create("Dropdown")
     specDropdown:SetDisabled(true)
 
     phaseDropDown:SetCallback("OnValueChanged", function(_, _, key)
         phase_index = key
-        phase = phases[key]
+        phase = Bistooltip_phases[key]
         drawSpecData()
     end)
 
@@ -238,7 +265,7 @@ local function drawDropdowns()
     end)
 
     classDropdown:SetList(class_options)
-    phaseDropDown:SetList(phases)
+    phaseDropDown:SetList(Bistooltip_phases)
 
     dropDownGroup:AddChild(classDropdown)
     dropDownGroup:AddChild(specDropdown)
@@ -281,15 +308,49 @@ local function createSpecFrame()
     spec_frame = frame
 end
 
+function BistooltipAddon:reloadData()
+    buildClassDict()
+    class_index = BistooltipAddon.db.char.class_index
+    spec_index = BistooltipAddon.db.char.spec_index
+    phase_index = BistooltipAddon.db.char.phase_index
+
+    class = class_options_to_class[class_options[class_index]].name
+    buildSpecsDict(class_index)
+    spec = spec_options_to_spec[spec_options[spec_index]]
+    phase = Bistooltip_phases[phase_index]
+
+    if main_frame then
+        phaseDropDown:SetList(Bistooltip_phases)
+        classDropdown:SetList(class_options)
+        specDropdown:SetList(spec_options)
+
+        classDropdown:SetValue(class_index)
+        specDropdown:SetValue(spec_index)
+        phaseDropDown:SetValue(phase_index)
+
+        drawSpecData()
+        main_frame:SetStatusText(Bistooltip_source_to_url[BistooltipAddon.db.char["data_source"]])
+    end
+end
+
 function BistooltipAddon:createMainFrame()
     if main_frame then
-        AceGUI:Release(main_frame)
+        BistooltipAddon:closeMainFrame()
         return
     end
     main_frame = AceGUI:Create("Frame")
     main_frame:SetWidth(450)
-    main_frame.frame:SetMinResize(420,300)
+    main_frame.frame:SetResizeBounds(450, 300)
+
+    --main_frame.frame:SetScript("OnKeyDown", function(self, key)
+    --    if key == "ESCAPE" then
+    --        BistooltipAddon:closeMainFrame()
+    --    end
+    --end)
+    --main_frame.frame:SetPropagateKeyboardInput(false)
+
     main_frame:SetCallback("OnClose", function(widget)
+        clearCheckMarks()
         spec_frame = nil
         items = {}
         spells = {}
@@ -307,10 +368,12 @@ end
 function BistooltipAddon:closeMainFrame()
     if main_frame then
         AceGUI:Release(main_frame)
+        classDropdown = nil
+        specDropdown = nil
+        phaseDropDown = nil
         return
     end
 end
-
 
 function BistooltipAddon:initBislists()
     buildClassDict()

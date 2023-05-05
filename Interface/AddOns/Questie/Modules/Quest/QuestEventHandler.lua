@@ -1,9 +1,13 @@
 ---@class QuestEventHandler
 local QuestEventHandler = QuestieLoader:CreateModule("QuestEventHandler")
+---@class QuestEventHandlerPrivate
 local _QuestEventHandler = QuestEventHandler.private
-local _QuestLogUpdateQueue = {} -- Helper module
-local questLogUpdateQueue = {} -- The actual queue
 
+local _QuestLogUpdateQueue = {} -- Helper module
+local questLogUpdateQueue = {}  -- The actual queue
+
+---@type QuestEventHandlerPrivate
+QuestEventHandler.private = QuestEventHandler.private or {}
 ---@type QuestLogCache
 local QuestLogCache = QuestieLoader:ImportModule("QuestLogCache")
 ---@type QuestieQuest
@@ -20,6 +24,10 @@ local QuestieDB = QuestieLoader:ImportModule("QuestieDB")
 local QuestieAnnounce = QuestieLoader:ImportModule("QuestieAnnounce")
 ---@type IsleOfQuelDanas
 local IsleOfQuelDanas = QuestieLoader:ImportModule("IsleOfQuelDanas")
+---@type QuestieCombatQueue
+local QuestieCombatQueue = QuestieLoader:ImportModule("QuestieCombatQueue")
+---@type QuestieTracker
+local QuestieTracker = QuestieLoader:ImportModule("QuestieTracker")
 
 local tableRemove = table.remove
 
@@ -77,18 +85,21 @@ end
 function _QuestEventHandler:QuestAccepted(questLogIndex, questId)
     Questie:Debug(Questie.DEBUG_DEVELOP, "[Quest Event] QUEST_ACCEPTED", questLogIndex, questId)
 
-    if questLog[questId] and questLog[questId].timer then
-        -- We had a QUEST_REMOVED event which started this timer and now it was accepted again.
-        -- So the quest was abandoned before, because QUEST_TURNED_IN would have run before QUEST_ACCEPTED.
-        questLog[questId].timer:Cancel()
-        questLog[questId].timer = nil
-        _QuestEventHandler:MarkQuestAsAbandoned(questId)
-    end
+    -- Prevents duplicate quest entries in the tracker while in combat
+    QuestieCombatQueue:Queue(function()
+        if questLog[questId] and questLog[questId].timer then
+            -- We had a QUEST_REMOVED event which started this timer and now it was accepted again.
+            -- So the quest was abandoned before, because QUEST_TURNED_IN would have run before QUEST_ACCEPTED.
+            questLog[questId].timer:Cancel()
+            questLog[questId].timer = nil
+            _QuestEventHandler:MarkQuestAsAbandoned(questId)
+        end
 
-    questLog[questId] = {}
-    skipNextUQLCEvent = true
-    QuestieLib:CacheItemNames(questId)
-    _QuestEventHandler:HandleQuestAccepted(questId)
+        questLog[questId] = {}
+        skipNextUQLCEvent = true
+        QuestieLib:CacheItemNames(questId)
+        _QuestEventHandler:HandleQuestAccepted(questId)
+    end)
 end
 
 ---@param questId number
@@ -168,6 +179,9 @@ function _QuestEventHandler:QuestRemoved(questId)
         questLog[questId] = {}
     end
 
+    -- The party members don't care whether a quest was turned in or abandoned, so we can just broadcast here
+    Questie:SendMessage("QC_ID_BROADCAST_QUEST_REMOVE", questId)
+
     -- QUEST_TURNED_IN was called before QUEST_REMOVED --> quest was turned in
     if questLog[questId].state == QUEST_LOG_STATES.QUEST_TURNED_IN then
         Questie:Debug(Questie.DEBUG_SPAM, "Quest:", questId, "was turned in before. Nothing do to.")
@@ -217,6 +231,12 @@ function _QuestEventHandler:QuestLogUpdate()
         doFullQuestLogScan = false
         -- Function call updates doFullQuestLogScan. Order matters.
         _QuestEventHandler:UpdateAllQuests()
+    end
+
+    if Questie.db.global.alwaysShowTracker and GetNumQuestLogEntries() == 0 then
+        QuestieCombatQueue:Queue(function()
+            QuestieTracker:Update()
+        end)
     end
 end
 
@@ -284,6 +304,11 @@ function _QuestEventHandler:UpdateAllQuests()
             QuestieNameplate:UpdateNameplate()
             QuestieQuest:UpdateQuest(questId)
         end
+        QuestieCombatQueue:Queue(function()
+            C_Timer.After(2.0, function()
+                QuestieTracker:Update()
+            end)
+        end)
     else
         Questie:Debug(Questie.DEBUG_SPAM, "Nothing to update")
     end
@@ -303,6 +328,7 @@ function _QuestEventHandler:BankFrameClosed()
     if lastTimeBankFrameClosedEvent ~= now then
         lastTimeBankFrameClosedEvent = now
         _QuestEventHandler:UpdateAllQuests()
+        QuestieTracker:Update()
     end
 end
 

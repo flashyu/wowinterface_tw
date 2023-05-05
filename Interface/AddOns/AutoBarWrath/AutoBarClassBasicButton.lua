@@ -7,8 +7,6 @@
 -- http://muffinmangames.com
 --
 
--- GLOBALS: GameTooltip, GetCVar, GameTooltip_SetDefaultAnchor, GetScreenWidth, SecureHandlerWrapScript, GetSpellInfo, GetMacroInfo, GetItemCooldown
--- GLOBALS: GetSpellCooldown, CooldownFrame_Set, GetItemCount, GetSpellCount, IsUsableSpell
 
 local AutoBar = AutoBar
 local ABGCode = AutoBarGlobalCodeSpace
@@ -72,7 +70,7 @@ function AutoBar.Class.BasicButton.TooltipShow(button)
 		if (tonumber(spell_name)) then
 			GameTooltip:SetSpellByID(spell_name);
 		else
-			local spell_info = AutoBarSearch.spells[spell_name]
+			local spell_info = AutoBarSearch.GetRegisteredSpellInfo(spell_name)
 			GameTooltip:SetSpellByID(spell_info.spell_id);
 		end
 		button.UpdateTooltip = AutoBar.Class.BasicButton.TooltipShow
@@ -122,7 +120,7 @@ end
 
 -- Apply tooltipType to the Button
 function AutoBar.Class.BasicButton:TooltipApply(button)
-	if (AutoBar.db.account.showTooltip) then
+	if (AutoBarDB2.settings.show_tooltip) then
 		if (not button.TooltipShow) then
 			button.TooltipShow = AutoBar.Class.BasicButton.TooltipShow
 --			SecureHandlerWrapScript(button, "OnEnter", button, [[ control:CallMethod("TooltipShow", self) ]])
@@ -255,13 +253,13 @@ function AutoBar.Class.BasicButton.prototype:UpdateCooldown()
 	if (itemType == "item") then
 		local item_id = self.frame:GetAttribute("itemId")
 		if (item_id) then
-			start, duration, enabled = GetItemCooldown(item_id)
+			start, duration, enabled = C_Container.GetItemCooldown(item_id)
 		end
 	elseif (itemType == "toy") then
 		local item_guid = self.frame:GetAttribute("AutoBarGUID")
 		local item_data = ABGCode.InfoFromGUID(item_guid)
 		if (item_data) then
-			start, duration, enabled = GetItemCooldown(item_data.item_id)
+			start, duration, enabled = C_Container.GetItemCooldown(item_data.item_id)
 		end
 --	elseif (itemType == "macro") then --ToDo some day
 --			local macroText = self.frame:GetAttribute("macrotext")
@@ -282,7 +280,7 @@ end
 -- Set count based on the type and type2 settings
 function AutoBar.Class.BasicButton.prototype:UpdateCount()
 	local frame = self.frame
-	if (AutoBar.db.account.showCount) then
+	if (AutoBarDB2.settings.show_count) then
 		frame.count:Show()
 		local count1 = 0
 		local count2 = 0
@@ -347,7 +345,7 @@ function AutoBar.Class.BasicButton.prototype:UpdateUsable()
 			isUsable, notEnoughMana = ABGCode.IsUsableItem(itemId)
 			if (isUsable) then
 				-- Single use in combat potion hack
-				local _, _, enabled = GetItemCooldown(itemId)
+				local _, _, enabled = C_Container.GetItemCooldown(itemId)
 				if (not enabled) then
 					isUsable = false
 				end
@@ -363,12 +361,12 @@ function AutoBar.Class.BasicButton.prototype:UpdateUsable()
 			return
 		end
 
-		local oor = AutoBar.db.account.outOfRange or "none"
+		local oor = AutoBarDB2.settings.outOfRange or "none"
 		if (isUsable and (not frame.outOfRange or not (oor ~= "none"))) then
 			frame.icon:SetVertexColor(1.0, 1.0, 1.0)
 			frame.hotKey:SetVertexColor(1.0, 1.0, 1.0)
 		elseif ((oor ~= "none") and frame.outOfRange) then
-print("AutoBar.Class.BasicButton.prototype:UpdateUsable", oor)
+			print("AutoBar.Class.BasicButton.prototype:UpdateUsable", oor)
 			if (oor == "button") then
 				frame.icon:SetVertexColor(0.8, 0.1, 0.1)
 				frame.hotKey:SetVertexColor(1.0, 1.0, 1.0)

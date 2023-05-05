@@ -6,6 +6,7 @@
 
 local TSM = select(2, ...) ---@type TSM
 local BagTracking = TSM.Init("Service.BagTracking") ---@class Service.BagTracking
+local Environment = TSM.Include("Environment")
 local Container = TSM.Include("Util.Container")
 local Database = TSM.Include("Util.Database")
 local Delay = TSM.Include("Util.Delay")
@@ -42,6 +43,7 @@ local private = {
 	callbackQuery = nil, -- luacheck: ignore 1004 - just stored for GC reasons
 	callbacks = {},
 	bagUpdateTimer = nil,
+	bagUpdateDelayedTimer = nil,
 	bankSlotUpdateTimer = nil,
 	reagentBankSlotUpdateTimer = nil,
 	bagTrackingTimer = nil,
@@ -61,7 +63,7 @@ do
 	for i = firstBankBag, lastBankBag do
 		BANK_BAG_SLOTS[i] = true
 	end
-	if not TSM.IsWowClassic() then
+	if Environment.HasFeature(Environment.FEATURES.REAGENT_BANK) then
 		BANK_BAG_SLOTS[REAGENTBANK_CONTAINER] = true
 	end
 end
@@ -74,10 +76,16 @@ end
 
 BagTracking:OnSettingsLoad(function()
 	Event.Register("BAG_UPDATE", private.BagUpdateHandler)
-	Event.Register("BAG_UPDATE_DELAYED", private.BagUpdateDelayedHandler)
+	if Environment.IsWrathClassic() or Environment.IsRetail() then
+		-- In Wrath 3.4.1 and in Retail 10.0.5, BAG_UPDATE_DELAYED doesnt fire for non-backpack slots, so emulate it
+		private.bagUpdateDelayedTimer = Delay.CreateTimer("BAG_TRACKING_BAG_UPDATE_DELAYED", private.BagUpdateDelayedHandler)
+		Event.Register("BAG_UPDATE", function() private.bagUpdateDelayedTimer:RunForFrames(0) end)
+	else
+		Event.Register("BAG_UPDATE_DELAYED", private.BagUpdateDelayedHandler)
+	end
 	DefaultUI.RegisterBankVisibleCallback(private.BankVisible, true)
 	Event.Register("PLAYERBANKSLOTS_CHANGED", private.BankSlotChangedHandler)
-	if not TSM.IsWowClassic() then
+	if Environment.HasFeature(Environment.FEATURES.REAGENT_BANK) then
 		Event.Register("PLAYERREAGENTBANKSLOTS_CHANGED", private.ReagentBankSlotChangedHandler)
 	end
 	private.slotDB = Database.NewSchema("BAG_TRACKING_SLOTS")
@@ -160,7 +168,7 @@ BagTracking:OnGameDataLoad(function()
 			private.quantityDB:DeleteRow(row)
 		else
 			local updated = false
-			if not TSM.IsWowClassic() and oldTotalBankQuantity > 0 then
+			if Environment.IsRetail() and oldTotalBankQuantity > 0 then
 				-- Update commodity quantities using GetItemCount()
 				local levelItemString = row:GetField("levelItemString")
 				if levelItemString == ItemString.GetBaseFast(levelItemString) and ItemInfo.IsCommodity(levelItemString) then
@@ -353,6 +361,14 @@ function BagTracking.GetTotalQuantity(itemString)
 	return bagQuantity + bankQuantity + reagentBankQuantity
 end
 
+function BagTracking.GetCraftingMatQuantity(itemString)
+	if Environment.IsRetail() then
+		return BagTracking.GetTotalQuantity(itemString)
+	else
+		return BagTracking.GetBagQuantity(itemString)
+	end
+end
+
 
 
 -- ============================================================================
@@ -388,7 +404,7 @@ function private.BankVisible()
 	for bag = firstBankBag, lastBankBag do
 		private.BagUpdateHandler(nil, bag)
 	end
-	if not TSM.IsWowClassic() and IsReagentBankUnlocked() then
+	if Environment.HasFeature(Environment.FEATURES.REAGENT_BANK) and IsReagentBankUnlocked() then
 		for slot = 1, Container.GetNumSlots(REAGENTBANK_CONTAINER) do
 			private.ReagentBankSlotChangedHandler(nil, slot)
 		end
@@ -548,12 +564,12 @@ end
 -- ============================================================================
 
 function private.IsAuctionableQueryFilter(row)
-	if TSM.IsWowClassic() then
-		return not TooltipScanning.HasUsedCharges(row:GetFields("bag", "slot"))
-	else
+	if Environment.HasFeature(Environment.FEATURES.C_AUCTION_HOUSE) then
 		private.itemLocation:Clear()
 		private.itemLocation:SetBagAndSlot(row:GetFields("bag", "slot"))
-		return C_AuctionHouse.IsSellItemValid(private.itemLocation, false)
+		return private.itemLocation:IsValid() and C_AuctionHouse.IsSellItemValid(private.itemLocation, false)
+	else
+		return not TooltipScanning.HasUsedCharges(row:GetFields("bag", "slot"))
 	end
 end
 

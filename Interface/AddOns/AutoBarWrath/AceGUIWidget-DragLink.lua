@@ -28,8 +28,8 @@ do
 	local function PickupItem(link)
 		local name = GetItemInfo(link)
 		for bag = 0, 4 do
-			for slot = 1, GetContainerNumSlots(bag) do
-				local slotlink = GetContainerItemLink(bag, slot)
+			for slot = 1, AB.GetContainerNumSlots(bag) do
+				local slotlink = AB.GetContainerItemLink(bag, slot)
 				if (slotlink) then
 					local slotname = GetItemInfo(slotlink)
 					if slotname == name then

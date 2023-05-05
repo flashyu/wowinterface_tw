@@ -15,9 +15,12 @@ local GetSpellBookItemInfo = GetSpellBookItemInfo
 local GetTempShapeshiftBarIndex = GetTempShapeshiftBarIndex
 local GetVehicleBarIndex = GetVehicleBarIndex
 local HasOverrideActionBar = HasOverrideActionBar
+local HideUIPanel = HideUIPanel
 local hooksecurefunc = hooksecurefunc
 local InClickBindingMode = InClickBindingMode
 local InCombatLockdown = InCombatLockdown
+local IsItemAction = IsItemAction
+local IsMounted = IsMounted
 local IsPossessBarVisible = IsPossessBarVisible
 local PetDismiss = PetDismiss
 local RegisterStateDriver = RegisterStateDriver
@@ -45,13 +48,16 @@ local NUM_ACTIONBAR_BUTTONS = NUM_ACTIONBAR_BUTTONS
 local COOLDOWN_TYPE_LOSS_OF_CONTROL = COOLDOWN_TYPE_LOSS_OF_CONTROL
 local CLICK_BINDING_NOT_AVAILABLE = CLICK_BINDING_NOT_AVAILABLE
 
+local C_ActionBar_GetProfessionQuality = C_ActionBar and C_ActionBar.GetProfessionQuality
 local C_PetBattles_IsInBattle = C_PetBattles and C_PetBattles.IsInBattle
 local ClearPetActionHighlightMarks = ClearPetActionHighlightMarks or PetActionBar.ClearPetActionHighlightMarks
+local ActionBarController_UpdateAllSpellHighlights = ActionBarController_UpdateAllSpellHighlights
 
 local LAB = E.Libs.LAB
 local LSM = E.Libs.LSM
 local Masque = E.Masque
-local MasqueGroup = Masque and Masque:Group('ElvUI', 'ActionBars')
+local FlyoutMasqueGroup = Masque and Masque:Group('ElvUI', 'ActionBar Flyouts')
+local VehicleMasqueGroup = Masque and Masque:Group('ElvUI', 'ActionBar Leave Vehicle')
 
 local buttonDefaults = {
 	hideElements = {},
@@ -63,6 +69,7 @@ local buttonDefaults = {
 	},
 }
 
+AB.WasDragonflying = 0
 AB.RegisterCooldown = E.RegisterCooldown
 AB.handledBars = {} --List of all bars
 AB.handledbuttons = {} --List of all buttons that have been modified.
@@ -83,8 +90,9 @@ AB.barDefaults = {
 }
 
 do
-	local fullConditions = (E.Retail or E.Wrath) and format('[overridebar] %d; [vehicleui][possessbar] %d;', GetOverrideBarIndex(), GetVehicleBarIndex()) or ''
-	AB.barDefaults.bar1.conditions = fullConditions..format('[bonusbar:5] 11; [shapeshift] %d; [bar:2] 2; [bar:3] 3; [bar:4] 4; [bar:5] 5; [bar:6] 6;', GetTempShapeshiftBarIndex())
+	-- https://github.com/Gethe/wow-ui-source/blob/6eca162dbca161e850b735bd5b08039f96caf2df/Interface/FrameXML/OverrideActionBar.lua#L136
+	local fullConditions = (E.Retail or E.Wrath) and format('[vehicleui][possessbar] %d; [overridebar] %d;', GetVehicleBarIndex(), GetOverrideBarIndex()) or ''
+	AB.barDefaults.bar1.conditions = fullConditions..format('[shapeshift] %d; [bar:2] 2; [bar:3] 3; [bar:4] 4; [bar:5] 5; [bar:6] 6; [bonusbar:5] 11;', GetTempShapeshiftBarIndex())
 end
 
 AB.customExitButton = {
@@ -195,6 +203,7 @@ function AB:TrimIcon(button, masque)
 
 	local left, right, top, bottom = unpack(button.db and button.db.customCoords or E.TexCoords)
 	local changeRatio = button.db and not button.db.keepSizeRatio
+
 	if changeRatio then
 		local width, height = button:GetSize()
 		local ratio = width / height
@@ -289,11 +298,15 @@ function AB:PositionAndSizeBar(barName)
 		end
 
 		AB:HandleButton(bar, button, i, lastButton, lastColumnButton)
-		AB:StyleButton(button, nil, MasqueGroup and E.private.actionbar.masque.actionbars)
+		AB:StyleButton(button, nil, bar.MasqueGroup and E.private.actionbar.masque.actionbars)
 	end
 
 	AB:HandleBackdropMultiplier(bar, backdropSpacing, buttonSpacing, db.widthMult, db.heightMult, anchorUp, anchorLeft, horizontal, lastShownButton, anchorRowButton)
 	AB:HandleBackdropMover(bar, backdropSpacing)
+
+	if Masque and E.private.actionbar.masque.actionbars then
+		AB:UpdateMasque(bar)
+	end
 
 	-- paging needs to be updated even if the bar is disabled
 	local defaults = AB.barDefaults[barName]
@@ -315,26 +328,21 @@ function AB:PositionAndSizeBar(barName)
 	end
 
 	E:SetMoverSnapOffset('ElvAB_'..bar.id, db.buttonSpacing * 0.5)
-
-	if MasqueGroup and E.private.actionbar.masque.actionbars then
-		MasqueGroup:ReSkin()
-
-		-- masque retrims them all so we have to too
-		for btn in pairs(AB.handledbuttons) do
-			AB:TrimIcon(btn, true)
-		end
-	end
 end
 
 function AB:CreateBar(id)
-	local bar = CreateFrame('Frame', 'ElvUI_Bar'..id, E.UIParent, 'SecureHandlerStateTemplate')
+	local barName = 'ElvUI_Bar'..id
+	local bar = CreateFrame('Frame', barName, E.UIParent, 'SecureHandlerStateTemplate')
 	if not E.Retail then
 		SecureHandlerSetFrameRef(bar, 'MainMenuBarArtFrame', _G.MainMenuBarArtFrame)
 	end
 
-	AB.handledBars['bar'..id] = bar
+	bar.MasqueGroup = Masque and Masque:Group('ElvUI', format('ActionBar %d', id))
 
-	local defaults = AB.barDefaults['bar'..id]
+	local barKey = 'bar'..id
+	AB.handledBars[barKey] = bar
+
+	local defaults = AB.barDefaults[barKey]
 	local point, anchor, attachTo, x, y = strsplit(',', defaults.position)
 	bar:Point(point, anchor, attachTo, x, y)
 	bar.id = id
@@ -347,7 +355,7 @@ function AB:CreateBar(id)
 	AB:HookScript(bar, 'OnLeave', 'Bar_OnLeave')
 
 	for i = 1, 12 do
-		local button = LAB:CreateButton(i, format(bar:GetName()..'Button%d', i), bar, nil)
+		local button = LAB:CreateButton(i, format('%sButton%d', barName, i), bar)
 		button:SetState(0, 'action', i)
 
 		button.AuraCooldown.targetAura = true
@@ -361,14 +369,20 @@ function AB:CreateBar(id)
 			button:SetState(GetVehicleBarIndex(), 'custom', AB.customExitButton)
 		end
 
+		if E.Retail then
+			button.ProfessionQualityOverlayFrame = CreateFrame('Frame', nil, button, 'ActionButtonProfessionOverlayTemplate')
+		end
+
 		button.MasqueSkinned = true -- skip LAB styling (we handle it and masque as well)
-		if MasqueGroup and E.private.actionbar.masque.actionbars then
-			button:AddToMasque(MasqueGroup)
+
+		if Masque and E.private.actionbar.masque.actionbars then
+			button:AddToMasque(bar.MasqueGroup)
 		end
 
 		AB:HookScript(button, 'OnEnter', 'Button_OnEnter')
 		AB:HookScript(button, 'OnLeave', 'Button_OnLeave')
 
+		button.parentName = barName
 		bar.buttons[i] = button
 	end
 
@@ -452,9 +466,11 @@ function AB:CreateVehicleLeave()
 	-- taints because of EditModeManager, in UpdateBottomActionBarPositions
 	button:SetScript('OnShow', nil)
 	button:SetScript('OnHide', nil)
+	button:KillEditMode()
 
-	if MasqueGroup and E.private.actionbar.masque.actionbars then
+	if Masque and E.private.actionbar.masque.actionbars then
 		button:StyleButton(true, true, true)
+		VehicleMasqueGroup:AddButton(button)
 	else
 		button:CreateBackdrop(nil, true)
 		button:GetNormalTexture():SetTexCoord(0.140625 + .08, 0.859375 - .06, 0.140625 + .08, 0.859375 - .08)
@@ -485,6 +501,10 @@ function AB:UpdateVehicleLeave()
 	_G.MainMenuBarVehicleLeaveButton:SetFrameStrata(db.strata)
 	_G.MainMenuBarVehicleLeaveButton:SetFrameLevel(db.level)
 	_G.VehicleLeaveButtonHolder:Size(db.size)
+
+	if Masque and E.private.actionbar.masque.actionbars then
+		AB:UpdateMasque(nil, VehicleMasqueGroup)
+	end
 end
 
 function AB:ReassignBindings(event)
@@ -543,7 +563,7 @@ do
 			E.db.actionbar['bar'..i][option] = value
 		end
 
-		if E.Retail then
+		if not E.Classic then
 			for i = 13, 15 do
 				E.db.actionbar['bar'..i][option] = value
 			end
@@ -584,6 +604,10 @@ function AB:UpdateButtonSettings(specific)
 
 			for _, button in ipairs(bar.buttons) do
 				AB:StyleFlyout(button)
+
+				if button.ProfessionQualityOverlayFrame then
+					AB:ConfigureProfessionQuality(button)
+				end
 			end
 		end
 	end
@@ -651,9 +675,9 @@ function AB:StyleButton(button, noBackdrop, useMasque, ignoreNormal)
 	if border and not button.useMasque then border:Kill() end
 	if action then action:SetAlpha(0) end
 	if slotbg then slotbg:Hide() end
-	if mask and not button.useMasque then mask:Hide() end
+	if mask and not useMasque then mask:Hide() end
 
-	if not button.noBackdrop and not button.useMasque then
+	if not noBackdrop and not useMasque then
 		button:SetTemplate(AB.db.transparent and 'Transparent', true)
 	end
 
@@ -668,7 +692,10 @@ function AB:StyleButton(button, noBackdrop, useMasque, ignoreNormal)
 		end
 	end
 
-	if not useMasque then
+	if useMasque then -- note: trim handled after masque messes with it
+		button:StyleButton(true, true, true)
+	else
+		button:StyleButton()
 		AB:TrimIcon(button)
 		icon:SetInside()
 	end
@@ -697,11 +724,46 @@ function AB:StyleButton(button, noBackdrop, useMasque, ignoreNormal)
 
 	AB:FixKeybindText(button)
 
-	if not button.useMasque then
-		button:StyleButton()
-	else
-		button:StyleButton(true, true, true)
+	if button.ProfessionQualityOverlayFrame then
+		AB:UpdateProfessionQuality(button)
 	end
+end
+
+function AB:UpdateMasque(bar, masqueGroup)
+	local masque = (bar and bar.MasqueGroup) or masqueGroup
+	masque:ReSkin()
+
+	if bar and bar.buttons then -- masque retrims them all so we have to too
+		for _, btn in next, bar.buttons do
+			AB:TrimIcon(btn, true)
+		end
+	end
+end
+
+function AB:ConfigureProfessionQuality(button)
+	local db = button.db and button.db.professionQuality
+	if db then
+		button.ProfessionQualityOverlayFrame:ClearAllPoints()
+		button.ProfessionQualityOverlayFrame:Point(db.point, db.xOffset, db.yOffset)
+		button.ProfessionQualityOverlayFrame:SetAlpha(db.alpha)
+		button.ProfessionQualityOverlayFrame:SetScale(db.scale)
+	end
+end
+
+function AB:UpdateProfessionQuality(button)
+	local db, atlas = button.db and button.db.professionQuality
+	local enable = db and db.enable
+	if enable then
+		local action = button._state_type == 'action' and button._state_action
+		local quality = action and IsItemAction(action) and C_ActionBar_GetProfessionQuality(action)
+		atlas = quality and format('Professions-Icon-Quality-Tier%d', quality)
+
+		if atlas then
+			button.ProfessionQualityOverlayFrame.Texture:SetAtlas(atlas, true)
+		end
+	end
+
+	button.ProfessionQualityOverlayFrame:SetShown(enable and not not atlas)
 end
 
 function AB:ColorSwipeTexture(cooldown)
@@ -800,28 +862,28 @@ function AB:BlizzardOptionsPanel_OnEvent()
 	_G.InterfaceOptionsActionBarsPanelRight:SetScript('OnEnter', nil)
 end
 
-function AB:FadeParent_OnEvent()
-	if UnitCastingInfo('player') or UnitChannelInfo('player') or UnitExists('target') or UnitExists('focus') or UnitExists('vehicle')
-	or UnitAffectingCombat('player') or (UnitHealth('player') ~= UnitHealthMax('player')) or E.Retail and (IsPossessBarVisible() or HasOverrideActionBar()) then
-		self.mouseLock = true
-		E:UIFrameFadeIn(self, 0.2, self:GetAlpha(), 1)
-		AB:FadeBlings(1)
+function AB:FadeParent_OnEvent(event, _, _, arg3)
+	if event == 'UNIT_SPELLCAST_SUCCEEDED' then
+		if not AB.WasDragonflying then -- this gets spammed on init login
+			AB.WasDragonflying = E.MountDragons[arg3] and arg3
+		end
 	else
-		self.mouseLock = false
-		local a = 1 - (AB.db.globalFadeAlpha or 0)
-		E:UIFrameFadeOut(self, 0.2, self:GetAlpha(), a)
-		AB:FadeBlings(a)
-	end
-end
+		if UnitCastingInfo('player') or UnitChannelInfo('player') or UnitExists('target') or UnitExists('focus')
+		or UnitExists('vehicle') or UnitAffectingCombat('player') or (UnitHealth('player') ~= UnitHealthMax('player'))
+		or E.Retail and (IsPossessBarVisible() or HasOverrideActionBar() or (IsMounted() and (event == 'UPDATE_OVERRIDE_ACTIONBAR' and AB.WasDragonflying == 0 and E:IsDragonRiding() or event == 'PLAYER_MOUNT_DISPLAY_CHANGED' and AB.WasDragonflying))) then
+			self.mouseLock = true
+			E:UIFrameFadeIn(self, 0.2, self:GetAlpha(), 1)
+			AB:FadeBlings(1)
+		else
+			self.mouseLock = false
+			local a = 1 - (AB.db.globalFadeAlpha or 0)
+			E:UIFrameFadeOut(self, 0.2, self:GetAlpha(), a)
+			AB:FadeBlings(a)
+		end
 
-function AB:IconIntroTracker_Toggle()
-	local IconIntroTracker = _G.IconIntroTracker
-	if AB.db.addNewSpells then
-		IconIntroTracker:RegisterEvent('SPELL_PUSHED_TO_ACTIONBAR')
-		UnregisterStateDriver(IconIntroTracker, 'visibility')
-	else
-		IconIntroTracker:UnregisterAllEvents()
-		RegisterStateDriver(IconIntroTracker, 'visibility', 'hide')
+		if event ~= 'UNIT_HEALTH' and (event ~= 'UNIT_SPELLCAST_STOP' or arg3 ~= AB.WasDragonflying) then
+			AB.WasDragonflying = nil
+		end
 	end
 end
 
@@ -876,9 +938,6 @@ function AB:SpellBookTooltipOnUpdate(elapsed)
 end
 
 function AB:SpellButtonOnEnter(_, tt)
-	-- copied from SpellBookFrame to remove:
-	--- ActionBarController_UpdateAll, PetActionHighlightMarks, and BarHighlightMarks
-
 	-- TT:MODIFIER_STATE_CHANGED uses this function to safely update the spellbook tooltip when the actionbar module is disabled
 	if not tt then tt = SpellBookTooltip end
 
@@ -922,6 +981,10 @@ function AB:SpellButtonOnEnter(_, tt)
 		tt:SetScript('OnUpdate', (needsUpdate and AB.SpellBookTooltipOnUpdate) or nil)
 	end
 
+	if ActionBarController_UpdateAllSpellHighlights then
+		ActionBarController_UpdateAllSpellHighlights()
+	end
+
 	tt:Show()
 end
 
@@ -935,6 +998,10 @@ function AB:SpellButtonOnLeave()
 	ClearOnBarHighlightMarks()
 	ClearPetActionHighlightMarks()
 
+	if ActionBarController_UpdateAllSpellHighlights then
+		ActionBarController_UpdateAllSpellHighlights()
+	end
+
 	SpellBookTooltip:Hide()
 	SpellBookTooltip:SetScript('OnUpdate', nil)
 end
@@ -946,7 +1013,7 @@ function AB:ButtonEventsRegisterFrame(added)
 		local wasAdded = frame == added
 		if not added or wasAdded then
 			if not strmatch(frame:GetName(), 'ExtraActionButton%d') then
-				_G.ActionBarButtonEventsFrame.frames[index] = nil
+				frames[index] = nil
 			end
 
 			if wasAdded then
@@ -998,12 +1065,16 @@ do
 		_G.UIPARENT_MANAGED_FRAME_POSITIONS.MultiCastActionBarFrame = nil
 	end
 
+	local settingsHider = CreateFrame('Frame')
+	settingsHider:SetScript('OnEvent', function(frame, event)
+		HideUIPanel(_G.SettingsPanel)
+		frame:UnregisterEvent(event)
+	end)
+
 	function AB:DisableBlizzard()
 		for name in next, untaint do
 			if not E.Retail then
 				_G.UIPARENT_MANAGED_FRAME_POSITIONS[name] = nil
-			elseif name == 'PetActionBar' then -- this fixes the pet bar getting replaced by EditMode
-				_G.PetActionBar.UpdateGridLayout = E.noop
 			end
 
 			local frame = _G[name]
@@ -1013,14 +1084,13 @@ do
 
 				if not E.Retail then
 					AB:SetNoopsi(frame)
+				elseif name == 'PetActionBar' then -- EditMode messes with it, be specific otherwise bags taint
+					frame.UpdateVisibility = E.noop
 				end
 			end
 		end
 
 		AB:FixSpellBookTaint()
-
-		-- MainMenuBar:ClearAllPoints taint during combat
-		_G.MainMenuBar.SetPositionForStatusBars = E.noop
 
 		-- Spellbook open in combat taint, only happens sometimes
 		_G.MultiActionBar_HideAllGrids = E.noop
@@ -1036,19 +1106,29 @@ do
 		_G.ActionBarButtonEventsFrame:RegisterEvent('ACTIONBAR_UPDATE_COOLDOWN') -- needed for cooldowns of them both
 
 		if E.Retail then
-			_G.StatusTrackingBarManager:UnregisterAllEvents()
+			_G.StatusTrackingBarManager:Kill()
 			_G.ActionBarController:RegisterEvent('SETTINGS_LOADED') -- this is needed for page controller to spawn properly
 			_G.ActionBarController:RegisterEvent('UPDATE_EXTRA_ACTIONBAR') -- this is needed to let the ExtraActionBar show
+
+			-- take encounter bar out of edit mode
+			_G.EncounterBar:KillEditMode()
 
 			-- lets only keep ExtraActionButtons in here
 			hooksecurefunc(_G.ActionBarButtonEventsFrame, 'RegisterFrame', AB.ButtonEventsRegisterFrame)
 			AB.ButtonEventsRegisterFrame()
 
-			AB:IconIntroTracker_Toggle() --Enable/disable functionality to automatically put spells on the actionbar.
+			-- crop the new spells being added to the actionbars
 			_G.IconIntroTracker:HookScript('OnEvent', AB.IconIntroTracker_Skin)
 
-			-- fix keybind error, this actually just prevents reopen of the GameMenu
-			_G.SettingsPanel.TransitionBackOpeningPanel = _G.HideUIPanel
+			-- dont reopen game menu and fix settings panel not being able to close during combat
+			_G.SettingsPanel.TransitionBackOpeningPanel = function(frame)
+				if InCombatLockdown() then
+					settingsHider:RegisterEvent('PLAYER_REGEN_ENABLED')
+					frame:SetScale(0.00001)
+				else
+					HideUIPanel(frame)
+				end
+			end
 
 			-- change the text of the remove paging
 			hooksecurefunc(_G.SettingsPanel.Container.SettingsList.ScrollBox, 'Update', function(frame)
@@ -1084,13 +1164,13 @@ do
 			_G.InterfaceOptionsActionBarsPanelStackRightBarsText:Hide() -- hides the !
 			_G.InterfaceOptionsActionBarsPanelRightTwoText:SetTextColor(1,1,1) -- no yellow
 			_G.InterfaceOptionsActionBarsPanelRightTwoText.SetTextColor = E.noop -- i said no yellow
-			_G.InterfaceOptionsActionBarsPanelAlwaysShowActionBars:SetScale(0.0001)
+			_G.InterfaceOptionsActionBarsPanelAlwaysShowActionBars:SetScale(0.00001)
 			_G.InterfaceOptionsActionBarsPanelAlwaysShowActionBars:SetAlpha(0)
-			_G.InterfaceOptionsActionBarsPanelPickupActionKeyDropDownButton:SetScale(0.0001)
+			_G.InterfaceOptionsActionBarsPanelPickupActionKeyDropDownButton:SetScale(0.00001)
 			_G.InterfaceOptionsActionBarsPanelPickupActionKeyDropDownButton:SetAlpha(0)
-			_G.InterfaceOptionsActionBarsPanelPickupActionKeyDropDown:SetScale(0.0001)
+			_G.InterfaceOptionsActionBarsPanelPickupActionKeyDropDown:SetScale(0.00001)
 			_G.InterfaceOptionsActionBarsPanelPickupActionKeyDropDown:SetAlpha(0)
-			_G.InterfaceOptionsActionBarsPanelLockActionBars:SetScale(0.0001)
+			_G.InterfaceOptionsActionBarsPanelLockActionBars:SetScale(0.00001)
 			_G.InterfaceOptionsActionBarsPanelLockActionBars:SetAlpha(0)
 
 			_G.InterfaceOptionsCombatPanelAutoSelfCast:Hide()
@@ -1316,6 +1396,7 @@ function AB:FixKeybindText(button)
 		text = gsub(text, 'INSERT', L["KEY_INSERT"])
 		text = gsub(text, 'HOME', L["KEY_HOME"])
 		text = gsub(text, 'DELETE', L["KEY_DELETE"])
+		text = gsub(text, 'NDIVIDE', L["KEY_NDIVIDE"])
 		text = gsub(text, 'NMULTIPLY', L["KEY_NMULTIPLY"])
 		text = gsub(text, 'NMINUS', L["KEY_NMINUS"])
 		text = gsub(text, 'NPLUS', L["KEY_NPLUS"])
@@ -1386,7 +1467,7 @@ end
 
 function AB:SetupFlyoutButton(button)
 	if not AB.handledbuttons[button] then
-		AB:StyleButton(button, nil, MasqueGroup and E.private.actionbar.masque.actionbars)
+		AB:StyleButton(button, nil, FlyoutMasqueGroup and E.private.actionbar.masque.actionbars)
 		button:HookScript('OnEnter', AB.FlyoutButton_OnEnter)
 		button:HookScript('OnLeave', AB.FlyoutButton_OnLeave)
 	end
@@ -1395,9 +1476,9 @@ function AB:SetupFlyoutButton(button)
 		button:Size(AB.db.flyoutSize)
 	end
 
-	if MasqueGroup and E.private.actionbar.masque.actionbars then
-		MasqueGroup:RemoveButton(button) --Remove first to fix issue with backdrops appearing at the wrong flyout menu
-		MasqueGroup:AddButton(button)
+	if FlyoutMasqueGroup and E.private.actionbar.masque.actionbars then
+		FlyoutMasqueGroup:RemoveButton(button) --Remove first to fix issue with backdrops appearing at the wrong flyout menu
+		FlyoutMasqueGroup:AddButton(button)
 	end
 end
 
@@ -1556,6 +1637,10 @@ function AB:LAB_ButtonUpdate(button)
 		local border = (AB.db.equippedItem and button:IsEquipped() and AB.db.equippedItemColor) or E.db.general.bordercolor
 		button:SetBackdropBorderColor(border.r, border.g, border.b)
 	end
+
+	if button.ProfessionQualityOverlayFrame then
+		AB:UpdateProfessionQuality(button)
+	end
 end
 
 function AB:LAB_CooldownDone(button)
@@ -1590,12 +1675,20 @@ end
 function AB:Initialize()
 	AB.db = E.db.actionbar
 
+	_G.BINDING_HEADER_ELVUI = E.title
+
+	for _, barNumber in pairs({2, 7, 8, 9, 10}) do
+		for slot = 1, 12 do
+			_G[format('BINDING_NAME_ELVUIBAR%dBUTTON%d', barNumber, slot)] = format('ActionBar %d Button %d', barNumber, slot)
+		end
+	end
+
 	if not E.private.actionbar.enable then return end
 	AB.Initialized = true
 
 	LAB.RegisterCallback(AB, 'OnButtonUpdate', AB.LAB_ButtonUpdate)
 	LAB.RegisterCallback(AB, 'OnButtonCreated', AB.LAB_ButtonCreated)
-	LAB.RegisterCallback(AB, 'OnFlyoutCreated', AB.LAB_FlyoutCreated)
+	LAB.RegisterCallback(AB, 'OnFlyoutButtonCreated', AB.LAB_FlyoutCreated)
 	LAB.RegisterCallback(AB, 'OnFlyoutSpells', AB.LAB_FlyoutSpells)
 	LAB.RegisterCallback(AB, 'OnFlyoutUpdate', AB.LAB_FlyoutUpdate)
 	LAB.RegisterCallback(AB, 'OnChargeCreated', AB.LAB_ChargeCreated)
@@ -1620,6 +1713,8 @@ function AB:Initialize()
 	if E.Retail then
 		AB.fadeParent:RegisterUnitEvent('UNIT_SPELLCAST_EMPOWER_START', 'player')
 		AB.fadeParent:RegisterUnitEvent('UNIT_SPELLCAST_EMPOWER_STOP', 'player')
+		AB.fadeParent:RegisterUnitEvent('UNIT_SPELLCAST_SUCCEEDED', 'player')
+		AB.fadeParent:RegisterEvent('PLAYER_MOUNT_DISPLAY_CHANGED')
 		AB.fadeParent:RegisterEvent('UPDATE_OVERRIDE_ACTIONBAR')
 		AB.fadeParent:RegisterEvent('UPDATE_POSSESS_BAR')
 	end
@@ -1639,7 +1734,7 @@ function AB:Initialize()
 		AB:CreateBar(i)
 	end
 
-	if E.Retail then
+	if not E.Classic then
 		for i = 13, 15 do
 			AB:CreateBar(i)
 		end
@@ -1682,8 +1777,8 @@ function AB:Initialize()
 	end
 
 	-- We handle actionbar lock for regular bars, but the lock on PetBar needs to be handled by WoW so make some necessary updates
-	SetCVar('lockActionBars', (AB.db.lockActionBars == true and 1 or 0))
-	_G.LOCK_ACTIONBAR = (AB.db.lockActionBars == true and '1' or '0') -- Keep an eye on this, in case it taints
+	SetCVar('lockActionBars', (AB.db.lockActionBars and 1 or 0))
+	_G.LOCK_ACTIONBAR = (AB.db.lockActionBars and '1' or '0') -- Keep an eye on this, in case it taints
 
 	if E.Retail then
 		hooksecurefunc(_G.SpellFlyout, 'Show', AB.UpdateFlyoutButtons)

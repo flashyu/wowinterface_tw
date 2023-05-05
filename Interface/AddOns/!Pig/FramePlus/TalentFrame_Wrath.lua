@@ -303,8 +303,15 @@ local function TalentFrame_ADD()
 		local unspentPoints = talentPoints - GetGroupPreviewTalentPointsSpent(TalentFrame.pet, TalentFrame.talentGroup);
 		PlayerTalentFrame.shengyuV:SetText(unspentPoints);
 	end)
-	hooksecurefunc("PlayerTalentFrame_ShowGlyphFrame", function(TalentFrame)
+	
+	hooksecurefunc("PlayerTalentFrame_ShowGlyphFrame", function()
 		if not GlyphFrame.big then
+			if ElvUI then
+				GlyphFrame:HookScript('OnShow', function()
+					PlayerTalentFrameTitleText:Show()
+					PlayerTalentFrameScrollFrame:Show()
+				end)
+			end
 			GlyphFrame:ClearAllPoints();
 			GlyphFrame:SetPoint("TOPLEFT",PlayerTalentFrame3ScrollFrame,"TOPRIGHT",0,0);
 			GlyphFrame:SetPoint("BOTTOMRIGHT",PlayerTalentFrame,"BOTTOMRIGHT",-33,0);
@@ -357,6 +364,25 @@ local function TalentFrame_ADD()
 		TalentFrame_Update_Pig(3)
 		for i=1,MAX_TALENT_TABS+1 do
 			_G["PlayerTalentFrameTab"..i]:Hide()
+		end
+		PlayerTalentFramePointsBar:Hide();
+		PlayerTalentFramePreviewBarFiller:Hide();
+		PlayerTalentFramePreviewBarButtonBorder:Hide();
+		PlayerTalentFrameLearnButton:SetText("学习模拟结果");
+		PlayerTalentFrameLearnButton:SetWidth(120)
+		PlayerTalentFrameLearnButton:ClearAllPoints();
+		PlayerTalentFrameLearnButton:SetPoint("TOPLEFT",PlayerTalentFrame,"TOPLEFT",690,-40);
+		PlayerTalentFrameResetButton:SetText("重置模拟");
+		PlayerTalentFrameResetButton:ClearAllPoints();
+		PlayerTalentFrameResetButton:SetPoint("TOPLEFT",PlayerTalentFrame,"TOPLEFT",560,-40);
+		PlayerTalentFrameCloseButton:SetPoint("CENTER",PlayerTalentFrame,"TOPRIGHT",-44,-25);
+		PlayerTalentFrameStatusFrame:SetPoint("TOPLEFT",PlayerTalentFrame,"TOPLEFT",73,-40);
+		PlayerTalentFrameActivateButton:SetPoint("TOP",PlayerTalentFrame,"TOP",-273,-40);
+		if ElvUI then
+			PlayerTalentFrame.backdrop:SetPoint("TOPLEFT",PlayerTalentFrame,"TOPLEFT",0,0);
+			PlayerTalentFrame.backdrop:SetPoint("BOTTOMRIGHT",PlayerTalentFrame,"BOTTOMRIGHT",0,0);
+			PlayerTalentFrameRoleButton:ClearAllPoints();
+			PlayerTalentFrameRoleButton:SetPoint("TOPRIGHT",PlayerTalentFrame,"TOPRIGHT",-30,-34);
 		end
 	end
 
@@ -435,20 +461,6 @@ local function TalentFrame_ADD()
 	PlayerTalentFrameTopRight:Hide()
 	PlayerTalentFrameBottomLeft:Hide()
 	PlayerTalentFrameBottomRight:Hide()
-
-	PlayerTalentFramePointsBar:Hide();
-	PlayerTalentFramePreviewBarFiller:Hide();
-	PlayerTalentFramePreviewBarButtonBorder:Hide();
-	PlayerTalentFrameLearnButton:SetText("学习模拟结果");
-	PlayerTalentFrameLearnButton:SetWidth(120)
-	PlayerTalentFrameLearnButton:ClearAllPoints();
-	PlayerTalentFrameLearnButton:SetPoint("TOPLEFT",PlayerTalentFrame,"TOPLEFT",690,-40);
-	PlayerTalentFrameResetButton:SetText("重置模拟");
-	PlayerTalentFrameResetButton:ClearAllPoints();
-	PlayerTalentFrameResetButton:SetPoint("TOPLEFT",PlayerTalentFrame,"TOPLEFT",560,-40);
-	PlayerTalentFrameCloseButton:SetPoint("CENTER",PlayerTalentFrame,"TOPRIGHT",-44,-25);
-	PlayerTalentFrameStatusFrame:SetPoint("TOPLEFT",PlayerTalentFrame,"TOPLEFT",73,-40);
-	PlayerTalentFrameActivateButton:SetPoint("TOP",PlayerTalentFrame,"TOP",-273,-40);
 
 	PlayerTalentFrame.shengyu = PlayerTalentFrame:CreateFontString();
 	PlayerTalentFrame.shengyu:SetPoint("TOP",PlayerTalentFrame,"TOP",-80,-44);
@@ -587,7 +599,6 @@ local function TalentFrame_ADD()
 end
 
 local function TalentFrame_Open()
-	if not PIG.Sponsorship.open then return end
 	if IsAddOnLoaded("Blizzard_TalentUI") then
 		TalentFrame_ADD()
 	else

@@ -8,7 +8,7 @@
 -- A dropdown element allows the user to select from a dialog list. It is a subclass of the @{BaseDropdown} class.
 -- @classmod MultiselectionDropdown
 
-local _, TSM = ...
+local TSM = select(2, ...) ---@type TSM
 local L = TSM.Include("Locale").GetTable()
 local Table = TSM.Include("Util.Table")
 local Theme = TSM.Include("Util.Theme")
@@ -232,7 +232,7 @@ function MultiselectionDropdown._AddDialogChildren(self, frame)
 		)
 		:AddChild(UIElements.New("Spacer", "spacer"))
 	)
-	frame:AddChild(TSM.UI.Views.Line.NewHorizontal("line")
+	frame:AddChild(UIElements.New("HorizontalLine", "line")
 		:SetColor("ACTIVE_BG_ALT")
 	)
 	frame:AddChild(UIElements.New("DropdownList", "list")

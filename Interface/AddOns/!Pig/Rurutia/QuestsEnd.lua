@@ -2,12 +2,17 @@ local addonName, addonTable = ...;
 local fuFrame=List_R_F_1_11.F
 local _, _, _, tocversion = GetBuildInfo()
 local ADD_Checkbutton=addonTable.ADD_Checkbutton
-local PIGDownMenu=addonTable.PIGDownMenu
+local Create=addonTable.Create
+local PIGDownMenu=Create.PIGDownMenu
 --任务完成
 local AudioList = {
 	{"升级音效",567431},
 	{"就位音效",567478},
-	{"露露语音","Interface/AddOns/"..addonName.."_Rurutia/media/ogg/1.ogg"},
+	{"露露语音1","Interface/AddOns/"..addonName.."_Rurutia/media/ogg/1.ogg"},
+	{"露露语音2","Interface/AddOns/"..addonName.."_Rurutia/media/ogg/2.ogg"},
+	{"露露语音3","Interface/AddOns/"..addonName.."_Rurutia/media/ogg/3.ogg"},
+	{"露露语音4","Interface/AddOns/"..addonName.."_Rurutia/media/ogg/4.ogg"},
+	{"露露语音5","Interface/AddOns/"..addonName.."_Rurutia/media/ogg/5.ogg"},
 }
 
 local QuestsEndFrameUI = CreateFrame("Frame");

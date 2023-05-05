@@ -4,10 +4,11 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local _, TSM = ...
+local TSM = select(2, ...) ---@type TSM
 local Crafting = TSM.MainUI.Operations:NewPackage("Crafting")
 local L = TSM.Include("Locale").GetTable()
 local UIElements = TSM.Include("UI.UIElements")
+local UIUtils = TSM.Include("UI.UIUtils")
 local private = {
 	currentOperationName = nil,
 }
@@ -38,7 +39,7 @@ end
 -- ============================================================================
 
 function private.GetCraftingOperationSettings(operationName)
-	TSM.UI.AnalyticsRecordPathChange("main", "operations", "crafting")
+	UIUtils.AnalyticsRecordPathChange("main", "operations", "crafting")
 	private.currentOperationName = operationName
 	local operation = TSM.Operations.GetSettings("Crafting", private.currentOperationName)
 	local frame = UIElements.New("ScrollFrame", "settings")

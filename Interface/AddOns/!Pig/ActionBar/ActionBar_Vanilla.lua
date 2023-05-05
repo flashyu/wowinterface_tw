@@ -2,7 +2,8 @@ local addonName, addonTable = ...;
 -------
 local fuFrame = List_R_F_2_3
 local _, _, _, tocversion = GetBuildInfo()
-local PIGDownMenu=addonTable.PIGDownMenu
+local Create=addonTable.Create
+local PIGDownMenu=Create.PIGDownMenu
 --=======================================
 local anniugeshu,anniujiange=12,6;
 local zongshu =4;
@@ -249,21 +250,27 @@ local function ADD_ActionBar(index)
 			piganniu:SetAttribute("action", ActionID)
 		end
 		---
-		piganniu:RegisterForDrag("LeftButton", "RightButton");
 		local UseKeyDown =GetCVar("ActionButtonUseKeyDown")
 		if UseKeyDown=="0" then
 			piganniu:RegisterForClicks("AnyUp");
 		elseif UseKeyDown=="1" then
-			SetBinding("CTRL-SHIFT-ALT-Q", "CLICK $parent_But"..id..":Button31")
-			piganniu:RegisterForClicks("AnyUp", "Button31Down")
-			piganniu:SetAttribute("type31", "")
-			piganniu:WrapScript(piganniu, "OnClick", [=[
-			    -- self, button, down
-			    if (button == "Button31" and down) then
-			        return "LeftButton"
-			    end
-			]=])
+			piganniu:RegisterForClicks("AnyDown")
 		end
+		-- piganniu:RegisterForDrag("LeftButton", "RightButton");
+		-- local UseKeyDown =GetCVar("ActionButtonUseKeyDown")
+		-- if UseKeyDown=="0" then
+		-- 	piganniu:RegisterForClicks("AnyUp");
+		-- elseif UseKeyDown=="1" then
+		-- 	SetBinding("CTRL-SHIFT-ALT-Q", "CLICK $parent_But"..id..":Button31")
+		-- 	piganniu:RegisterForClicks("AnyUp", "Button31Down")
+		-- 	piganniu:SetAttribute("type31", "")
+		-- 	piganniu:WrapScript(piganniu, "OnClick", [=[
+		-- 	    -- self, button, down
+		-- 	    if (button == "Button31" and down) then
+		-- 	        return "LeftButton"
+		-- 	    end
+		-- 	]=])
+		-- end
 	 	--
 		loadingButInfo(piganniu,"PigAction")
 		---

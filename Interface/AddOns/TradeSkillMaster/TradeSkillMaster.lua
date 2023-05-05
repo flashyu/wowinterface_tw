@@ -4,9 +4,8 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
--- This is the main TSM file that holds the majority of the APIs that modules will use.
-
-local _, TSM = ...
+local TSM = select(2, ...) ---@type TSM
+local Environment = TSM.Include("Environment")
 local Log = TSM.Include("Util.Log")
 local Analytics = TSM.Include("Util.Analytics")
 local Math = TSM.Include("Util.Math")
@@ -29,11 +28,12 @@ local L = TSM.Include("Locale").GetTable()
 local private = {
 	settings = nil,
 	itemInfoPublisher = nil,  --luacheck: ignore 1004 - just stored for GC reasons
+	oribosExchangeTemp = {},
 }
-local LOGOUT_TIME_WARNING_THRESHOLD_MS = 20
+local LOGOUT_TIME_WARNING_THRESHOLD = 0.02
 do
 	-- show a message if we were updated
-	if GetAddOnMetadata("TradeSkillMaster", "Version") ~= "v4.12.6" then
+	if GetAddOnMetadata("TradeSkillMaster", "Version") ~= "v4.12.36" then
 		Wow.ShowBasicMessage("TSM was just updated and may not work properly until you restart WoW.")
 	end
 end
@@ -137,25 +137,14 @@ function TSM.OnInitialize()
 		CustomPrice.RegisterSource("External", "AtrValue", L["Auctionator - Auction Value"], Atr_GetAuctionBuyout, true)
 	end
 
-	-- TheUndermineJournal and BootyBayGazette price sources
-	if Wow.IsAddonEnabled("TheUndermineJournal") and TUJMarketInfo then
-		local function GetTUJPrice(itemLink, arg)
-			local data = TUJMarketInfo(itemLink)
+	-- OribosExchange price sources
+	if Wow.IsAddonEnabled("OribosExchange") and OEMarketInfo then
+		local function GetOEPrice(itemLink, arg)
+			local data = OEMarketInfo(itemLink, private.oribosExchangeTemp)
 			return data and data[arg] or nil
 		end
-		CustomPrice.RegisterSource("External", "TUJRecent", L["TUJ 3-Day Price"], GetTUJPrice, true, "recent")
-		CustomPrice.RegisterSource("External", "TUJMarket", L["TUJ 14-Day Price"], GetTUJPrice, true, "market")
-		CustomPrice.RegisterSource("External", "TUJGlobalMean", L["TUJ Global Mean"], GetTUJPrice, true, "globalMean")
-		CustomPrice.RegisterSource("External", "TUJGlobalMedian", L["TUJ Global Median"], GetTUJPrice, true, "globalMedian")
-	elseif Wow.IsAddonEnabled("BootyBayGazette") and TUJMarketInfo then
-		local function GetBBGPrice(itemLink, arg)
-			local data = TUJMarketInfo(itemLink)
-			return data and data[arg] or nil
-		end
-		CustomPrice.RegisterSource("External", "BBGRecent", L["BBG 3-Day Price"], GetBBGPrice, true, "recent")
-		CustomPrice.RegisterSource("External", "BBGMarket", L["BBG 14-Day Price"], GetBBGPrice, true, "market")
-		CustomPrice.RegisterSource("External", "BBGGlobalMean", L["BBG Global Mean"], GetBBGPrice, true, "globalMean")
-		CustomPrice.RegisterSource("External", "BBGGlobalMedian", L["BBG Global Median"], GetBBGPrice, true, "globalMedian")
+		CustomPrice.RegisterSource("External", "OERealm", L["Oribos Exchange Realm Price"], GetOEPrice, true, "market")
+		CustomPrice.RegisterSource("External", "OERegion", L["Oribos Exchange Region Price"], GetOEPrice, true, "region")
 	end
 
 	-- AHDB price sources
@@ -228,7 +217,7 @@ function TSM.OnInitialize()
 		OnTooltipShow = function(tooltip)
 			local cs = Theme.GetColor("INDICATOR_ALT"):GetTextColorPrefix()
 			local ce = "|r"
-			tooltip:AddLine("TradeSkillMaster " .. TSM.GetVersion())
+			tooltip:AddLine("TradeSkillMaster "..Environment.GetVersion())
 			tooltip:AddLine(format(L["%sLeft-Click%s to open the main window"], cs, ce))
 			tooltip:AddLine(format(L["%sDrag%s to move this button"], cs, ce))
 		end,
@@ -236,7 +225,7 @@ function TSM.OnInitialize()
 	LibDBIcon:Register("TradeSkillMaster", dataObj, private.settings.minimapIcon)
 
 	-- cache battle pet names
-	if not TSM.IsWowClassic() then
+	if Environment.HasFeature(Environment.FEATURES.BATTLE_PETS) then
 		for i = 1, C_PetJournal.GetNumPets() do
 			C_PetJournal.GetPetInfoByIndex(i)
 		end
@@ -315,11 +304,11 @@ end
 function TSM.OnDisable()
 	local originalProfile = TSM.db:GetCurrentProfile()
 	-- erroring here would cause the profile to be reset, so use pcall
-	local startTime = debugprofilestop()
+	local startTime = GetTimePreciseSec()
 	local success, errMsg = pcall(private.SaveAppData)
-	local timeTaken = debugprofilestop() - startTime
-	if timeTaken > LOGOUT_TIME_WARNING_THRESHOLD_MS then
-		Log.Warn("private.SaveAppData took %0.2fms", timeTaken)
+	local timeTaken = GetTimePreciseSec() - startTime
+	if timeTaken > LOGOUT_TIME_WARNING_THRESHOLD then
+		Log.Warn("private.SaveAppData took %0.5fs", timeTaken)
 	end
 	if not success then
 		Log.Err("private.SaveAppData hit an error: %s", tostring(errMsg))
@@ -398,6 +387,8 @@ function private.DebugSlashCommandHandler(arg)
 		end
 	elseif arg == "db" then
 		TSM.UI.DBViewer.Toggle()
+	elseif arg == "sb" or arg == "story" or arg == "storyboard" then
+		TSM.UI.StoryBoard.Toggle()
 	elseif arg == "logout" then
 		TSM.AddonTestLogout()
 	elseif arg == "clearitemdb" then
@@ -415,7 +406,7 @@ end
 
 function private.PrintVersions()
 	Log.PrintUser(L["TSM Version Info:"])
-	Log.PrintUserRaw("TradeSkillMaster "..Log.ColorUserAccentText(TSM.GetVersion()))
+	Log.PrintUserRaw("TradeSkillMaster "..Log.ColorUserAccentText(Environment.GetVersion()))
 	local appHelperVersion = GetAddOnMetadata("TradeSkillMaster_AppHelper", "Version")
 	if appHelperVersion then
 		-- use strmatch so that our sed command doesn't replace this string

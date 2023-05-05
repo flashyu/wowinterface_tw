@@ -1,7 +1,5 @@
-## v4.12.6 Changes
+## v4.12.36 Changes
 
-* [Retail] Updated bonusIds tracked by TSM
-* [Retail] Fixed error when running Vendor search
-* [Retail] Updated the max level slider value in the Advanced Item Search dialog
+* [Retail] Updated list of bonus IDs for 10.1
 
 [Known Issues](https://support.tradeskillmaster.com/en_US/known_issues)

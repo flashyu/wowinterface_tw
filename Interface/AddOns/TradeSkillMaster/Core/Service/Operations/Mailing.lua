@@ -4,7 +4,7 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local _, TSM = ...
+local TSM = select(2, ...) ---@type TSM
 local Mailing = TSM.Operations:NewPackage("Mailing")
 local L = TSM.Include("Locale").GetTable()
 local Wow = TSM.Include("Util.Wow")
@@ -62,11 +62,10 @@ function Mailing.TargetShortfallGetNumToBags(itemString, numHave)
 	return totalNumToSend
 end
 
-function Mailing.GetNumToSend(itemString, numAvailable)
+function Mailing.GetNumToSend(itemString, operationSettings, numAvailable)
 	if numAvailable <= 0 then
 		return 0
 	end
-	local operationSettings = private.GetOperationSettings(itemString)
 	local numToSend = 0
 	local isTargetPlayer = PlayerInfo.IsPlayer(operationSettings.target)
 	if operationSettings.maxQtyEnabled then
@@ -105,15 +104,6 @@ function private.GetOperationInfo(operationSettings)
 	else
 		return format(L["Mailing all to %s."], operationSettings.target)
 	end
-end
-
-function private.GetOperationSettings(itemString)
-	itemString = TSM.Groups.TranslateItemString(itemString)
-	local operationName, operationSettings = TSM.Operations.GetFirstOperationByItem("Mailing", itemString)
-	if not operationName then
-		return
-	end
-	return operationSettings
 end
 
 function private.GetTargetQuantity(player, itemString, sources)

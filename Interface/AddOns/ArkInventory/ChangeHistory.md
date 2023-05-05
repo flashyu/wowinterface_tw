@@ -1,6 +1,6 @@
-# 3.10.12 (05-DEC-2022)
- - fixed - rule function quality( )
- - fixed - upgrade code
+# 3.10.15 (12-FEB-2023)
+ - changed - (retail) toc updated to 100005
+ - removed - event for WEAR_EQUIPMENT_SET
  
 # known issues
  - (dragonflight) reagentbank slots are no longer readable unless the bank is open

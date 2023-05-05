@@ -4,11 +4,12 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local _, TSM = ...
+local TSM = select(2, ...) ---@type TSM
 local Shopping = TSM.MainUI.Settings:NewPackage("Shopping")
 local L = TSM.Include("Locale").GetTable()
 local Sound = TSM.Include("Util.Sound")
 local UIElements = TSM.Include("UI.UIElements")
+local UIUtils = TSM.Include("UI.UIUtils")
 local private = {
 	sounds = {},
 	soundkeys = {},
@@ -36,7 +37,7 @@ end
 -- ============================================================================
 
 function private.GetShoppingSettingsFrame()
-	TSM.UI.AnalyticsRecordPathChange("main", "settings", "shopping")
+	UIUtils.AnalyticsRecordPathChange("main", "settings", "shopping")
 	return UIElements.New("ScrollFrame", "shoppingSettings")
 		:SetPadding(8, 8, 8, 0)
 		:AddChild(TSM.MainUI.Settings.CreateExpandableSection("Shopping", "general", L["General Options"], L["Some general Browse/Sniper options are below."])

@@ -1,9 +1,9 @@
 local mod	= DBM:NewMod("Valithria", "DBM-Icecrown", 4)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision("20221201192451")
+mod:SetRevision("20230414072734")
 mod:SetCreatureID(36789)
-mod:SetEncounterID(1098)
+mod:SetEncounterID(mod:IsClassic() and 854 or 1098)
 mod:SetModelID(30318)
 mod:SetUsedIcons(8)
 mod.onlyHighest = true--Instructs DBM health tracking to literally only store highest value seen during fight, even if it drops below that

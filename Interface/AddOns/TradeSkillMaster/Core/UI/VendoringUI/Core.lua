@@ -6,6 +6,7 @@
 
 local TSM = select(2, ...) ---@type TSM
 local VendoringUI = TSM.UI:NewPackage("VendoringUI")
+local Environment = TSM.Include("Environment")
 local L = TSM.Include("Locale").GetTable()
 local Delay = TSM.Include("Util.Delay")
 local FSM = TSM.Include("Util.FSM")
@@ -13,6 +14,7 @@ local Event = TSM.Include("Util.Event")
 local DefaultUI = TSM.Include("Service.DefaultUI")
 local Settings = TSM.Include("Service.Settings")
 local UIElements = TSM.Include("UI.UIElements")
+local UIUtils = TSM.Include("UI.UIUtils")
 local private = {
 	settings = nil,
 	topLevelPages = {},
@@ -57,7 +59,7 @@ end
 -- ============================================================================
 
 function private.CreateMainFrame()
-	TSM.UI.AnalyticsRecordPathChange("vendoring")
+	UIUtils.AnalyticsRecordPathChange("vendoring")
 	local frame = UIElements.New("LargeApplicationFrame", "base")
 		:SetParent(UIParent)
 		:SetSettingsContext(private.settings, "frame")
@@ -80,7 +82,7 @@ end
 -- ============================================================================
 
 function private.BaseFrameOnHide()
-	TSM.UI.AnalyticsRecordClose("vendoring")
+	UIUtils.AnalyticsRecordClose("vendoring")
 	private.fsm:ProcessEvent("EV_FRAME_HIDE")
 end
 
@@ -140,10 +142,10 @@ function private.FSMCreate()
 			:SetOnEnter(function(context, isIgnored)
 				if not private.defaultUISwitchBtn then
 					private.defaultUISwitchBtn = UIElements.New("ActionButton", "switchBtn")
-						:SetSize(60, TSM.IsWowClassic() and 16 or 15)
+						:SetSize(60, Environment.IsRetail() and 15 or 16)
 						:SetFont("BODY_BODY3_MEDIUM")
-						:AddAnchor("TOPRIGHT", TSM.IsWowClassic() and -26 or -27, TSM.IsWowClassic() and -3 or -4)
-						:SetRelativeLevel(TSM.IsWowClassic() and 3 or 600)
+						:AddAnchor("TOPRIGHT", Environment.IsRetail() and -27 or -26, Environment.IsRetail() and -4 or -3)
+						:SetRelativeLevel(Environment.IsRetail() and 600 or 3)
 						:DisableClickCooldown()
 						:SetText(L["TSM4"])
 						:SetScript("OnClick", private.SwitchBtnOnClick)
@@ -182,7 +184,7 @@ function private.FSMCreate()
 				context.frame:Show()
 				context.frame:GetElement("titleFrame.switchBtn"):Show()
 				context.frame:Draw()
-				if not TSM.IsWowClassic() then
+				if Environment.IsRetail() then
 					Event.Register("CURRENCY_DISPLAY_UPDATE", CurrencyUpdate)
 				end
 				private.isVisible = true
@@ -195,7 +197,7 @@ function private.FSMCreate()
 				else
 					MerchantFrame:SetPoint("TOPLEFT", UIParent, "TOPLEFT", 16, -116)
 				end
-				if not TSM.IsWowClassic() then
+				if Environment.IsRetail() then
 					Event.Unregister("CURRENCY_DISPLAY_UPDATE", CurrencyUpdate)
 				end
 				private.isVisible = false

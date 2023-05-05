@@ -4,12 +4,8 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
---- AuctionScrollingTable UI Element Class.
--- An auction scrolling table displays a scrollable list of auctions with a fixed set of columns. It operations on
--- auction records returned by the scanning code. It is a subclass of the @{ScrollingTable} class.
--- @classmod AuctionScrollingTable
-
-local _, TSM = ...
+local TSM = select(2, ...) ---@type TSM
+local Environment = TSM.Include("Environment")
 local L = TSM.Include("Locale").GetTable()
 local Math = TSM.Include("Util.Math")
 local Money = TSM.Include("Util.Money")
@@ -20,6 +16,7 @@ local TextureAtlas = TSM.Include("Util.TextureAtlas")
 local ScriptWrapper = TSM.Include("Util.ScriptWrapper")
 local ItemInfo = TSM.Include("Service.ItemInfo")
 local PlayerInfo = TSM.Include("Service.PlayerInfo")
+local UIUtils = TSM.Include("UI.UIUtils")
 local AuctionScrollingTable = TSM.Include("LibTSMClass").DefineClass("AuctionScrollingTable", TSM.UI.ScrollingTable)
 local UIElements = TSM.Include("UI.UIElements")
 UIElements.Register(AuctionScrollingTable)
@@ -109,7 +106,7 @@ function AuctionScrollingTable.Acquire(self)
 			:SetJustifyH("RIGHT")
 			:SetTextFunction(private.GetItemLevelCellText)
 			:Commit()
-	if not TSM.IsWowClassic() then
+	if Environment.IsRetail() then
 		self:GetScrollingTableInfo()
 			:NewColumn("qty")
 				:SetTitle(L["Qty"])
@@ -152,7 +149,7 @@ function AuctionScrollingTable.Acquire(self)
 			:SetTextFunction(private.GetItemBidCellText)
 			:Commit()
 		:NewColumn("bid")
-			:SetTitle(TSM.IsWowClassic() and L["Bid (stack)"] or L["Bid (total)"])
+			:SetTitle(Environment.HasFeature(Environment.FEATURES.AH_STACKS) and L["Bid (stack)"] or L["Bid (total)"])
 			:SetFont("TABLE_TABLE1")
 			:SetJustifyH("RIGHT")
 			:SetTextFunction(private.GetBidCellText)
@@ -164,7 +161,7 @@ function AuctionScrollingTable.Acquire(self)
 			:SetTextFunction(private.GetItemBuyoutCellText)
 			:Commit()
 		:NewColumn("buyout")
-			:SetTitle(TSM.IsWowClassic() and L["Buyout (stack)"] or L["Buyout (total)"])
+			:SetTitle(Environment.HasFeature(Environment.FEATURES.AH_STACKS) and L["Buyout (stack)"] or L["Buyout (total)"])
 			:SetFont("TABLE_TABLE1")
 			:SetJustifyH("RIGHT")
 			:SetTextFunction(private.GetBuyoutCellText)
@@ -742,12 +739,12 @@ function private.GetItemCellText(self, subRow)
 		local itemString = subRow:GetItemString()
 		subRow = self._firstSubRowByItem[baseItemString]
 		if not subRow then
-			return TSM.UI.GetColoredItemName(itemString or baseItemString, 0)
+			return UIUtils.GetDisplayItemName(itemString or baseItemString, 0)
 		end
 	end
 	local itemLink = subRow:GetLinks()
 	-- TODO: use theme constant for indented tint pct
-	return TSM.UI.GetColoredItemName(itemLink, isIndented and -20 or 0)
+	return UIUtils.GetDisplayItemName(itemLink, isIndented and -20 or 0)
 end
 
 function private.GetItemLevelCellText(self, subRow)
@@ -802,7 +799,7 @@ function private.GetTimeLeftCellText(self, subRow)
 		end
 	end
 	local timeLeft = subRow:GetListingInfo()
-	return TSM.UI.GetTimeLeftString(timeLeft)
+	return UIUtils.GetTimeLeftString(timeLeft)
 end
 
 function private.GetSellerCellText(self, subRow)

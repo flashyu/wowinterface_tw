@@ -12,13 +12,13 @@ do
 end
 
 function M.container_item(bag, slot)
-	local link = GetContainerItemLink(bag, slot)
+	local link = C_Container.GetContainerItemLink(bag, slot)
     if link then
         local item_id, suffix_id, unique_id, enchant_id = parse_link(link)
         local item_info = item(item_id, suffix_id, unique_id, enchant_id)
         if item_info then -- TODO apparently this can be undefined
-            local texture, count, locked, quality, readable, lootable = GetContainerItemInfo(bag, slot) -- TODO quality not working?
-            local durability, max_durability = GetContainerItemDurability(bag, slot)
+            local containerInfo = C_Container.GetContainerItemInfo(bag, slot) -- TODO quality not working?
+            local durability, max_durability = C_Container.GetContainerItemDurability(bag, slot)
             local tooltip = tooltip('bag', bag, slot)
             local max_charges = max_item_charges(item_id)
             local charges = max_charges and item_charges(tooltip)
@@ -36,14 +36,14 @@ function M.container_item(bag, slot)
                 item_key = item_id .. ':' .. suffix_id,
 
                 name = item_info.name,
-                texture = texture,
+                texture = containerInfo.iconFileID,
                 level = item_info.level,
                 quality = item_info.quality,
                 max_stack = item_info.max_stack,
 
-                count = count,
-                locked = locked,
-                readable = readable,
+                count = containerInfo.stackCount,
+                locked = containerInfo.isLocked,
+                readable = containerInfo.isReadable,
                 auctionable = auctionable,
 
                 tooltip = tooltip,
@@ -173,6 +173,8 @@ function M.auctionable(tooltip, quality)
             and status ~= ITEM_BIND_ON_PICKUP
             and status ~= ITEM_BIND_QUEST
             and status ~= ITEM_SOULBOUND
+            and status ~= ITEM_BIND_TO_ACCOUNT
+            and status ~= ITEM_HEROIC
             and (not tooltip_match(ITEM_CONJURED, tooltip) or tooltip_find(ITEM_MIN_LEVEL, tooltip) > 1)
 end
 
@@ -240,6 +242,21 @@ do
         -- deflector
         [4376] = 5,
         [4386] = 5,
+
+        -- drums
+        [39972] = 50,
+        [29529] = 50,
+        [49633] = 50,
+        [29532] = 50,
+        [29531] = 50,
+        [29530] = 50,
+        [49634] = 50,
+        [29528] = 50,
+        [185848] = 50,
+        [185849] = 50,
+        [185850] = 50,
+        [185851] = 50,
+        [185852] = 50,
 
 		-- ... TODO
 	}
@@ -317,8 +334,8 @@ end
 function M.inventory()
 	local bag, slot = 0, 0
 	return function()
-		if slot >= GetContainerNumSlots(bag) then
-			repeat bag = bag + 1 until GetContainerNumSlots(bag) > 0 or bag > 4
+		if slot >= C_Container.GetContainerNumSlots(bag) then
+			repeat bag = bag + 1 until C_Container.GetContainerNumSlots(bag) > 0 or bag > 4
 			slot = 1
 		else
 			slot = slot + 1

@@ -17,8 +17,6 @@ Description: Dynamic 24 button bar automatically adds potions, water, food and o
 local ADDON_NAME, AB = ... -- Pulls back the Addon-Local Variables and store them locally.
 
 local _G = _G
-local LibKeyBound = LibStub("LibKeyBound-1.0")
-local LibStickyFrames = LibStub("LibStickyFrames-2.0")
 local Masque = LibStub("Masque", true)
 local AceCfgDlg = LibStub("AceConfigDialog-3.0")
 local _
@@ -147,13 +145,13 @@ AutoBar.frame:SetScript("OnEvent",
 			return
 		end
 
-		if(AutoBar.db.account.throttle_event_limit > 0) then
+		if(AutoBarDB2.settings.throttle_event_limit > 0) then
 			local timer_name = event .. "_last_tick"
 			local now = GetTime()
 			AutoBar[timer_name] = AutoBar[timer_name] or 0
 
-			if ((now - AutoBar[timer_name]) < AutoBar.db.account.throttle_event_limit) then
-				if (AutoBar.db.account.log_throttled_events) then print ("Skipping " .. event .. "(" .. AutoBar[timer_name] .. ", " .. now .. ")", ...) end
+			if ((now - AutoBar[timer_name]) < AutoBarDB2.settings.throttle_event_limit) then
+				if (AutoBarDB2.settings.log_throttled_events) then print (" AutoBar Skipping " .. event .. "(" .. AutoBar[timer_name] .. ", " .. now .. ")", ...) end
 				return
 			end
 			AutoBar[timer_name] = now
@@ -234,9 +232,8 @@ function AutoBar:InitializeZero()
 	AutoBar.currentPlayer = UnitName("player") .. " - " .. GetRealmName();
 	_, AutoBar.CLASS = UnitClass("player")
 	AutoBar.NiceClass = string.sub(AutoBar.CLASS, 1, 1) .. string.lower(string.sub(AutoBar.CLASS, 2))
-	AutoBar.CLASSPROFILE = "_" .. AutoBar.CLASS;
 
-	AutoBar:RegisterDB("AutoBarDB", nil, "class")
+	AutoBar.version = GetAddOnMetadata(ADDON_NAME, "Version")
 
 	AutoBar.InitializeDB()
 	AutoBar:InitializeOptions()
@@ -249,16 +246,16 @@ function AutoBar:InitializeZero()
 
 	AutoBar.frame:RegisterEvent("BAG_UPDATE")
 	AutoBar.frame:RegisterEvent("BAG_UPDATE_DELAYED")
+	AutoBar.frame:RegisterEvent("PLAYER_EQUIPMENT_CHANGED")
 	AutoBar.frame:RegisterEvent("LEARNED_SPELL_IN_TAB")
 	AutoBar.frame:RegisterUnitEvent("UNIT_SPELLCAST_SUCCEEDED", "player")
 
-	if(AutoBar.db.account.handle_spell_changed) then
+	if(AutoBarDB2.settings.handle_spell_changed) then
 		AutoBar.frame:RegisterEvent("SPELLS_CHANGED")
 	end
 	AutoBar.frame:RegisterEvent("ACTIONBAR_UPDATE_USABLE")
 
 	if (ABGData.is_mainline_wow) then
-		AutoBar.frame:RegisterEvent("PET_BATTLE_CLOSE")
 		AutoBar.frame:RegisterEvent("COMPANION_LEARNED")
 		AutoBar.frame:RegisterEvent("QUEST_ACCEPTED")
 		AutoBar.frame:RegisterEvent("QUEST_LOG_UPDATE")
@@ -279,15 +276,15 @@ function AutoBar:InitializeZero()
 	AutoBar.frame:RegisterEvent("UPDATE_BATTLEFIELD_STATUS")
 	AutoBar.frame:RegisterEvent("GET_ITEM_INFO_RECEIVED")
 
-	LibKeyBound.RegisterCallback(self, "LIBKEYBOUND_ENABLED")
-	LibKeyBound.RegisterCallback(self, "LIBKEYBOUND_DISABLED")
-	LibKeyBound.RegisterCallback(self, "LIBKEYBOUND_MODE_COLOR_CHANGED")
+	AB.LibKeyBound.RegisterCallback(self, "LIBKEYBOUND_ENABLED")
+	AB.LibKeyBound.RegisterCallback(self, "LIBKEYBOUND_DISABLED")
+	AB.LibKeyBound.RegisterCallback(self, "LIBKEYBOUND_MODE_COLOR_CHANGED")
 
-	LibStickyFrames.RegisterCallback(self, "OnSetGroup")
-	LibStickyFrames.RegisterCallback(self, "OnClick")
---	LibStickyFrames.RegisterCallback(self, "OnStartFrameMoving")
-	LibStickyFrames.RegisterCallback(self, "OnStopFrameMoving")
-	LibStickyFrames.RegisterCallback(self, "OnStickToFrame")
+	AB.LibStickyFrames.RegisterCallback(self, "OnSetGroup")
+	AB.LibStickyFrames.RegisterCallback(self, "OnClick")
+	--	AB.LibStickyFrames.RegisterCallback(self, "OnStartFrameMoving")
+	AB.LibStickyFrames.RegisterCallback(self, "OnStopFrameMoving")
+	AB.LibStickyFrames.RegisterCallback(self, "OnStickToFrame")
 end
 
 
@@ -380,28 +377,14 @@ if (ABGData.is_mainline_wow) then
 		ABGCode.LogEventEnd("COMPANION_LEARNED")
 	end
 
-	function ABGCode.events.PET_BATTLE_CLOSE(p_arg1)
-		ABGCode.LogEventStart("PET_BATTLE_CLOSE")
-		-- AutoBar.in_pet_battle = false
-		ABGCode.LogEventEnd("PET_BATTLE_CLOSE", p_arg1)
-	end
 
 	function ABGCode.events.TOYS_UPDATED(p_item_id, p_new)
 		ABGCode.LogEventStart("TOYS_UPDATED")
 
-		if(p_item_id ~= nil or p_new ~= nil) then
-			local need_update = false;
+		if(false) then ABGCode.LogWarning("|nTOYS_UPDATED", p_item_id, p_new); end
 
-			AutoBarSearch.dirtyBags.toybox = true
-			local button = AutoBar.buttonList["AutoBarButtonToyBox"]
-			if (button) then
-				need_update = button:Refresh(button.parentBar, button.buttonDB, true)
-			end
-
-			if(need_update) then
-				ABGCS.ABScheduleUpdate(tick.UpdateCategoriesID);
-			end
-
+		if(p_item_id == nil or p_new == true) then
+			ABGCode.ABScheduleUpdate(tick.ResetSearch)
 		end
 
 		ABGCode.LogEventEnd("TOYS_UPDATED", p_item_id, p_new)
@@ -412,7 +395,11 @@ end
 
 
 function ABGCode.events.PLAYER_ENTERING_WORLD()
---print("   PLAYER_ENTERING_WORLD")
+	ABGCode.LogWarning("* PLAYER_ENTERING_WORLD")
+
+--UIParentLoadAddOn("Blizzard_DebugTools")
+--UIParentLoadAddOn("Blizzard_EventTrace")
+
 
 	if (not AutoBar.initialized) then
 		AutoBar:InitializeZero();
@@ -435,7 +422,7 @@ function ABGCode.events.PLAYER_ENTERING_WORLD()
 	end
 
 
-	if(AutoBar.db.account.hack_PetActionBarFrame) then
+	if(AutoBarDB2.settings.hack_PetActionBarFrame) then
 		PetActionBarFrame:EnableMouse(false);
 	end
 
@@ -452,13 +439,14 @@ function ABGCode.events.PLAYER_LEAVING_WORLD()
 end
 
 
-function ABGCode.events.BAG_UPDATE(arg1)
+function ABGCode.events.BAG_UPDATE(p_bag_idx)
 	ABGCode.LogEventStart("BAG_UPDATE")
-	if (AutoBar.inWorld and arg1 <= NUM_BAG_SLOTS) then
-		AutoBarSearch.dirtyBags[arg1] = true
+
+	if (AutoBar.inWorld and p_bag_idx <= NUM_BAG_SLOTS) then
+		AutoBarSearch:MarkBagDirty(p_bag_idx)
 	end
 
-	ABGCode.LogEventEnd("BAG_UPDATE", arg1)
+	ABGCode.LogEventEnd("BAG_UPDATE", p_bag_idx)
 
 end
 
@@ -476,6 +464,20 @@ function ABGCode.events.BAG_UPDATE_DELAYED()
 	ABGCode.LogEventEnd("BAG_UPDATE_DELAYED")
 
 end
+
+
+function ABGCode.events.PLAYER_EQUIPMENT_CHANGED()
+	ABGCode.LogEventStart("PLAYER_EQUIPMENT_CHANGED")
+
+	AutoBarSearch:MarkInventoryDirty()
+
+	ABGCS.ABScheduleUpdate(tick.UpdateItemsID)
+
+	ABGCode.LogEventEnd("PLAYER_EQUIPMENT_CHANGED")
+
+end
+
+
 
 function ABGCode.events.BAG_UPDATE_COOLDOWN(p_arg1)
 	ABGCode.LogEventStart("BAG_UPDATE_COOLDOWN")
@@ -555,7 +557,7 @@ end
 function ABGCode.events.SPELLS_CHANGED(p_arg1)
 	ABGCode.LogEventStart("SPELLS_CHANGED")
 
-	if(AutoBar.db.account.handle_spell_changed) then
+	if(AutoBarDB2.settings.handle_spell_changed) then
 		ABGCS.ABScheduleUpdate(tick.UpdateSpellsID)
 	end
 
@@ -586,16 +588,16 @@ function ABGCode.events.PLAYER_REGEN_DISABLED(p_arg1)
 
 	AutoBar.inCombat = true
 	if (InCombatLockdown()) then
-		print("PLAYER_REGEN_DISABLED called while InCombatLockdown")
+		print("AutoBar PLAYER_REGEN_DISABLED called while InCombatLockdown")
 	end
 
 	if (AutoBar.moveButtonsMode) then
 		AutoBar:MoveButtonsModeOff()
-		LibKeyBound:Deactivate()
+		AB.LibKeyBound:Deactivate()
 	end
 
 	if (AutoBar.keyBoundMode) then
-		LibKeyBound:Deactivate()
+		AB.LibKeyBound:Deactivate()
 	end
 
 	ABGCS.UpdateActive()
@@ -729,10 +731,10 @@ function AutoBar.Initialize()
 	if (Masque and not AutoBar.MasqueGroup) then
 		local group = Masque:Group("AutoBar")
 		AutoBar.MasqueGroup = group
-		group.SkinID = AutoBar.db.account.SkinID or "Blizzard"
-		group.Gloss = AutoBar.db.account.Gloss
-		group.Backdrop = AutoBar.db.account.Backdrop
-		group.Colors = AutoBar.db.account.Colors or {}
+		group.SkinID = AutoBarDB2.skin.SkinID or "Blizzard"
+		group.Gloss = AutoBarDB2.skin.Gloss
+		group.Backdrop = AutoBarDB2.skin.Backdrop
+		group.Colors = AutoBarDB2.skin.Colors or {}
 	end
 
 	ABGCode.InitializeAllCategories()
@@ -774,7 +776,7 @@ end
 
 function AutoBar:MoveBarModeToggle()
 --print("AutoBar:MoveBarModeToggle")
-	if (LibStickyFrames:GetGroup()) then
+	if (AB.LibStickyFrames:GetGroup()) then
 		AutoBar:MoveBarModeOff()
 	else
 		AutoBar:MoveBarModeOn()
@@ -782,14 +784,14 @@ function AutoBar:MoveBarModeToggle()
 end
 
 function AutoBar:MoveBarModeOff()
-	LibStickyFrames:SetGroup(nil)
+	AB.LibStickyFrames:SetGroup(nil)
 	AutoBar.stickyMode = false
 end
 
 function AutoBar:MoveBarModeOn()
-	LibKeyBound:Deactivate()
+	AB.LibKeyBound:Deactivate()
 	AutoBar:MoveButtonsModeOff()
-	LibStickyFrames:SetGroup(true)
+	AB.LibStickyFrames:SetGroup(true)
 	AutoBar.stickyMode = true
 end
 
@@ -800,7 +802,7 @@ function AutoBar.OnSetGroup(group)
 		AutoBar.stickyMode = true
 	elseif (type(group) == "table") then
 		for _, bar in pairs(AutoBar.barList) do
-			if (bar.sharedLayoutDB.enabled and LibStickyFrames:InFrameGroup(bar.frame, group)) then
+			if (bar.sharedLayoutDB.enabled and AB.LibStickyFrames:InFrameGroup(bar.frame, group)) then
 				AutoBar.stickyMode = true
 				break
 			end
@@ -859,7 +861,7 @@ end
 
 function AutoBar:MoveButtonsModeOn()
 	AutoBar:MoveBarModeOff()
-	LibKeyBound:Deactivate()
+	AB.LibKeyBound:Deactivate()
 	AutoBar.moveButtonsMode = true
 	for _, bar in pairs(self.barList) do
 		if (bar.sharedLayoutDB.enabled) then
@@ -912,10 +914,10 @@ function AutoBar:SetDraggingObject(fromObject)
 end
 
 
---/dump AutoBar.db.account.barList["AutoBarClassBarBasic"].buttonKeys[16]
+--/dump AutoBarDB2.account.barList["AutoBarClassBarBasic"].buttonKeys[16]
 --/dump AutoBar.moveButtonsMode
---/script AutoBar.db.account.logEvents = true
---/script AutoBar.db.account.logEvents = nil
+--/script AutoBarDB2.settings.log_events = true
+--/script AutoBarDB2.settings.log_events = false
 --/script LibStub("LibKeyBound-1.0"):SetColorKeyBoundMode(0.75, 1, 0, 0.5)
 --/script DEFAULT_CHAT_FRAME:AddMessage("" .. tostring())
 --/print GetMouseFocus():GetName()
@@ -933,7 +935,7 @@ end
 function AutoBar:StupidLog(p_text)
 
 	if (StupidLogEnabled) then
-		AutoBar.db.account.stupidlog = AutoBar.db.account.stupidlog .. p_text
+		AutoBarDB2.stupidlog = AutoBarDB2.stupidlog .. p_text
 	end
 
 end
@@ -1054,7 +1056,7 @@ end
 
 
 function AutoBar:ABSchedulerTick()
- --if (tick.ScheduledUpdate ~= tick.UpdateCompleteID) then print("AutoBar:ABSchedulerTick", "ScheduledUpdate:", ABGData.TickScheduler.ScheduledUpdate); end;
+ 	--if (tick.ScheduledUpdate ~= tick.UpdateCompleteID) then print("AutoBar:ABSchedulerTick", "ScheduledUpdate:", ABGData.TickScheduler.ScheduledUpdate); end;
 	C_Timer.After(ABSchedulerTickLength, AutoBar.ABSchedulerTick)
 
 	--If we're in combat, catch it on the next tick so we don't cause a hitch in gameplay
@@ -1066,7 +1068,9 @@ function AutoBar:ABSchedulerTick()
 		return;
 	end
 
-	if(tick.ScheduledUpdate == tick.UpdateCategoriesID) then
+	if(tick.ScheduledUpdate == tick.ResetSearch) then
+		tick.ScheduledUpdate = ABGCS.ResetSearch(tick.BehaveTicker);
+	elseif(tick.ScheduledUpdate == tick.UpdateCategoriesID) then
 		tick.ScheduledUpdate = ABGCS.UpdateCategories(tick.BehaveTicker);
 	elseif(tick.ScheduledUpdate == tick.UpdateSpellsID) then
 		tick.ScheduledUpdate = ABGCS.UpdateSpells(tick.BehaveTicker);
@@ -1092,6 +1096,28 @@ function AutoBar:ABSchedulerTick()
 
 end
 
+function ABGCode.ResetSearch(p_behaviour)
+	ABGCode.LogEventStart("ResetSearch")
+
+	local ret = tick.ResetSearch
+	if (not InCombatLockdown()) then
+		AutoBarSearch:Reset()
+
+		AutoBar:BarButtonChanged()
+
+		ABGCS:UpdateCategories();	--We don't pass the behaviour flag along since we want calls to ResetSearch to complete immediately
+
+		ret = tick.UpdateCompleteID
+	end
+
+	ABGCode.LogEventEnd("ResetSearch", p_behaviour)
+
+	return ret;
+end
+
+
+
+
 function ABGCode.UpdateCategories(p_behaviour)
 	ABGCode.LogEventStart("UpdateCategories")
 
@@ -1102,7 +1128,7 @@ function ABGCode.UpdateCategories(p_behaviour)
 		for _index, stickyFrame in pairs(tick.OtherStickyFrames) do
 			if (_G[stickyFrame]) then
 				--print("     ABGCS:UpdateCategories " .. tostring(_index) .. "  " .. tostring(stickyFrame))
-				LibStickyFrames:RegisterFrame(_G[stickyFrame])
+				AB.LibStickyFrames:RegisterFrame(_G[stickyFrame])
 			else
 				delete = false
 			end
@@ -1128,8 +1154,8 @@ end
 function ABGCS.UpdateSpells(p_behaviour)
 	ABGCode.LogEventStart("ABGCS:UpdateSpells")
 
-	AutoBarSearch.stuff:ScanSpells()
-	AutoBarSearch.stuff:ScanMacros()
+	AutoBarSearch:ScanRegisteredSpells()
+	AutoBarSearch:ScanRegisteredMacros()
 	ABGCode.RefreshCategories()
 
 	local ret = tick.UpdateObjectsID;
@@ -1149,24 +1175,26 @@ function ABGCS.UpdateObjects(p_behaviour)
 	local barLayoutDBList = AutoBar.barLayoutDBList
 	local bar
 	for barKey, barDB in pairs(barLayoutDBList) do
-		if (barDB.enabled and barDB[AutoBar.CLASS]) then
---print("UpdateObjects barKey " .. tostring(barKey) .. " AutoBar.CLASS " .. tostring(AutoBar.CLASS) .. " barDB[AutoBar.CLASS] " .. tostring(barDB[AutoBar.CLASS]))
+		local matches_class = (barDB["allowed_class"] == "*") or (barDB["allowed_class"] == AutoBar.CLASS)
+		--print("UpdateObjects", barKey, barDB["allowed_class"] .. " == " .. AutoBar.CLASS, matches_class)
+		if (barDB.enabled and matches_class) then
+			--print("UpdateObjects barKey " .. tostring(barKey) .. " AutoBar.CLASS " .. tostring(AutoBar.CLASS) .. " barDB[AutoBar.CLASS] " .. tostring(barDB[AutoBar.CLASS]))
 			if (AutoBar.barList[barKey]) then
 				AutoBar.barList[barKey]:UpdateObjects()
 			else
 				AutoBar.barList[barKey] = AutoBar.Class.Bar:new(barKey)
---print("UpdateObjects barKey " .. tostring(barKey) .. " Name " .. tostring(AutoBar.barList[barKey].barName))
+				--print("     UpdateObjects barKey " .. tostring(barKey) .. " Name " .. tostring(AutoBar.barList[barKey].barName))
 			end
 			bar = AutoBar.barList[barKey]
-			LibStickyFrames:SetFrameEnabled(bar.frame, true)
-			LibStickyFrames:SetFrameHidden(bar.frame, bar.sharedLayoutDB.hide)
-			LibStickyFrames:SetFrameText(bar.frame, bar.barName)
+			AB.LibStickyFrames:SetFrameEnabled(bar.frame, true)
+			AB.LibStickyFrames:SetFrameHidden(bar.frame, bar.sharedLayoutDB.hide)
+			AB.LibStickyFrames:SetFrameText(bar.frame, bar.barName)
 		elseif (AutoBar.barList[barKey]) then
---print("UpdateObjects barKey " .. tostring(barKey) .. " Hide " .. tostring(AutoBar.barList[barKey].barName))
+			--print("UpdateObjects barKey " .. tostring(barKey) .. " Hide " .. tostring(AutoBar.barList[barKey].barName))
 			bar = AutoBar.barList[barKey]
 			bar.frame:Hide()
-			LibStickyFrames:SetFrameEnabled(bar.frame)
-			LibStickyFrames:SetFrameText(bar.frame, bar.barName)
+			AB.LibStickyFrames:SetFrameEnabled(bar.frame)
+			AB.LibStickyFrames:SetFrameText(bar.frame, bar.barName)
 		end
 	end
 

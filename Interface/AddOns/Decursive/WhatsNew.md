@@ -1,5 +1,42 @@
-Decursive 2.7.8.12
-==================
+Decursive 2.7.9.1
+=================
+
+
+Decursive 2.7.9.1 (2023-04-02)
+------------------------------
+
+- TOC Updates
+
+- WotLK:Fix GetItemCooldown() Lua error
+
+- WoW 10.1.0 (PTR): Fix GetAddOnMetadata Lua error
+
+
+**New Way to support Decursive:** If you are an [ADA/Cardano](https://cardano.org) holder you can
+delegate your stake to my pool: [anfra.io](https://anfra.io)
+
+
+Decursive 2.7.9 (2023-02-25)
+----------------------------
+
+- Add support for by-specialization-profiles thanks to libDualSpec-1.0.
+
+- Keep specific curing order for each class specialization (instead of just for each class).
+
+- Add an option to hide Decursive's MUFs in raids.
+
+- Decursive text anchor can be moved again.
+
+- Do not report errors thrown in libraries embedded by Decursive on systems using '/' as directory separator.
+
+
+Decursive 2.7.8.13 (2022-12-13)
+-------------------------------
+
+- Cauterizing Flame is no longer considered better than Expunge.
+
+- Update CallBackHandler library to revision 8
+
 
 Decursive 2.7.8.12 (2022-11-28)
 -------------------------------
@@ -11,11 +48,6 @@ Decursive 2.7.8.12 (2022-11-28)
 - WotLK: Added "Mutating Injection" to the "harmful debuff" list instead of the ignore list.
   You'll hear a sound and a warning will be displayed whenever your mouse cursor
   enters within a MUF with the Mutating Injection debuff.
-
-
-
-**New Way to support Decursive:** If you are an [ADA/Cardano](https://cardano.org) holder you can
-delegate your stake to my pool: [anfra.io](https://anfra.io)
 
 
 Decursive 2.7.8.11 (2022-10-27)

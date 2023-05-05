@@ -38,7 +38,7 @@ local QuickChat_biaoqingName = {
 };
 addonTable.QuickChat_biaoqingName=QuickChat_biaoqingName
 ---更新按钮的屏蔽状态
-local zijianpindaoMAX = 8
+local zijianpindaoMAX = 5
 local function Update_ChatBut_icon()
 	if PIG['ChatFrame']['QuickChat']=="ON" then
 		local chaozhaopindao = {
@@ -203,7 +203,6 @@ local function ADD_chatbut(fuF,pdtype,name,chatID,Color)
 	return chatbut
 end
 ---下移输入框=======	
---/run print(DEFAULT_CHAT_FRAME:GetName())
 --GetCVar("chatStyle")=="im"/"classic"
 local function Update_QuickChatEditBox(arg1)
 	local arg1=arg1 or PIG['ChatFrame']['QuickChat_maodian']
@@ -226,8 +225,8 @@ local function Update_QuickChatEditBox(arg1)
 			for i=1,NUM_CHAT_WINDOWS do
 				local fujichat = _G["ChatFrame"..i]
 				fujichat.editBox:ClearAllPoints();
-				fujichat.editBox:SetPoint("TOPLEFT",fujichat,"BOTTOMLEFT",-5,23);
-				fujichat.editBox:SetPoint("TOPRIGHT",fujichat,"BOTTOMRIGHT",5,23);
+				fujichat.editBox:SetPoint("TOPLEFT",fujichat,"BOTTOMLEFT",-5,-23);
+				fujichat.editBox:SetPoint("TOPRIGHT",fujichat,"BOTTOMRIGHT",5,-23);
 			end
 		end	
 	end

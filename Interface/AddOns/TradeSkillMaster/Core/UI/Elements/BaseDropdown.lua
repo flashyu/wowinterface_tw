@@ -9,7 +9,7 @@
 -- @{MultiselectionDropdown} classes. It is a subclass of the @{Text} class.
 -- @classmod BaseDropdown
 
-local _, TSM = ...
+local TSM = select(2, ...) ---@type TSM
 local Rectangle = TSM.Include("UI.Rectangle")
 local Color = TSM.Include("Util.Color")
 local Theme = TSM.Include("Util.Theme")
@@ -102,6 +102,13 @@ function BaseDropdown.SetItems(self, items, itemKeys)
 	for i, item in ipairs(items) do
 		self:AddItem(item, itemKeys and itemKeys[i])
 	end
+	return self
+end
+
+--- Clears all set items.
+function BaseDropdown.ClearItems(self)
+	wipe(self._items)
+	wipe(self._itemKeyLookup)
 	return self
 end
 

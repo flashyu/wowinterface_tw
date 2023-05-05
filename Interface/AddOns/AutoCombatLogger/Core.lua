@@ -26,7 +26,7 @@ end
 addon.range = range
 
 addon.addonTitle = _G.GetAddOnMetadata(ADDON_NAME,"Title")
-addon.addonVersion = cleanupVersion("10.0.3")
+addon.addonVersion = cleanupVersion("10.0.5")
 
 local function versionInRange(version, start, finish)
 	if _G.type(version) ~= "number" then return false end

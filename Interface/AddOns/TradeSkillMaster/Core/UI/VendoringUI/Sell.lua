@@ -4,7 +4,7 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local _, TSM = ...
+local TSM = select(2, ...) ---@type TSM
 local Sell = TSM.UI.VendoringUI:NewPackage("Sell")
 local L = TSM.Include("Locale").GetTable()
 local Money = TSM.Include("Util.Money")
@@ -14,6 +14,7 @@ local Theme = TSM.Include("Util.Theme")
 local ItemInfo = TSM.Include("Service.ItemInfo")
 local Settings = TSM.Include("Service.Settings")
 local UIElements = TSM.Include("UI.UIElements")
+local UIUtils = TSM.Include("UI.UIUtils")
 local private = {
 	settings = nil,
 	filterText = "",
@@ -39,7 +40,7 @@ end
 -- ============================================================================
 
 function private.GetFrame()
-	TSM.UI.AnalyticsRecordPathChange("vendoring", "sell")
+	UIUtils.AnalyticsRecordPathChange("vendoring", "sell")
 	private.filterText = ""
 	if private.query then
 		TSM.Vendoring.Sell.ResetBagsQuery(private.query)
@@ -118,7 +119,7 @@ function private.GetFrame()
 			:SetQuery(private.query)
 			:SetScript("OnRowClick", private.RowOnClick)
 		)
-		:AddChild(TSM.UI.Views.Line.NewHorizontal("line"))
+		:AddChild(UIElements.New("HorizontalLine", "line"))
 		:AddChild(UIElements.New("Frame", "footer")
 			:SetLayout("HORIZONTAL")
 			:SetHeight(40)
@@ -144,7 +145,7 @@ function private.GetFrame()
 end
 
 function private.GetItemText(itemString)
-	return TSM.UI.GetColoredItemName(itemString) or "?"
+	return UIUtils.GetDisplayItemName(itemString) or "?"
 end
 
 function private.GetPotentialSellText(value)

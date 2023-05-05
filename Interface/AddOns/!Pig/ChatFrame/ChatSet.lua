@@ -4,7 +4,8 @@ local gsub = _G.string.gsub
 local match = _G.string.match --查找是否包含
 local _, _, _, tocversion = GetBuildInfo()
 local ADD_Checkbutton=addonTable.ADD_Checkbutton
-local PIGDownMenu=addonTable.PIGDownMenu
+local Create=addonTable.Create
+local PIGDownMenu=Create.PIGDownMenu
 -------------------------------------------
 fuFrame.Scroll = CreateFrame("ScrollFrame",nil,fuFrame, "UIPanelScrollFrameTemplate");  
 fuFrame.Scroll:SetPoint("TOPLEFT",fuFrame,"TOPLEFT",6,-6);
@@ -71,11 +72,13 @@ fuFrame.xian0:SetEndPoint("TOPRIGHT",0,-48)
 --（关闭语言过滤器）
 --/console SET portal "TW"    /console SET profanityFilter "0" 
 local yuyanguolv = CreateFrame("FRAME")
-yuyanguolv:SetScript("OnEvent", function(self) --（关闭语言过滤器）
+yuyanguolv:SetScript("OnEvent", function(self,event) --（关闭语言过滤器）
 	if PIG["ChatFrame"]["Guolv"]=="ON" then
-		if GetCVar("portal") == "CN" then
-			ConsoleExec("portal TW") 
-			SetCVar("profanityFilter", "0") 
+		if GetLocale() == "zhCN" then
+			if GetCVar("portal") == "CN" then
+				ConsoleExec("portal TW") 
+				SetCVar("profanityFilter", "0")
+			end
 		end
 		self:UnregisterEvent("ADDON_LOADED")
 		if tocversion>90000 then
@@ -93,6 +96,13 @@ yuyanguolv:SetScript("OnEvent", function(self) --（关闭语言过滤器）
 				return bnetIDAccount, accountName, battleTag, isBattleTagPresence, characterName, bnetIDGameAccount, client, isOnline, lastOnline, isAFK, isDND, messageText, noteText, isRIDFriend, messageTime, canSoR, isReferAFriend, canSummonFriend;
 			end
 		end
+		local ADD_Button=addonTable.ADD_Button
+		local guanbiguolvqi=ADD_Button("无法访问点这里然后重新登录游戏",nil,HelpFrame,280,20,"TOPRIGHT", HelpFrame, "TOPRIGHT", -50, -0.4)
+		guanbiguolvqi:SetScript("OnClick", function (self)
+			PIG["ChatFrame"]["Guolv"]="OFF"
+			self:SetText("请退出游戏重新登录")
+			self:Disable()
+		end);
 	end 
 end)
 ---------------------
@@ -312,24 +322,22 @@ fuFrame.xian1:SetStartPoint("TOPLEFT",0,-172)
 fuFrame.xian1:SetEndPoint("TOPRIGHT",0,-172)
 ----鼠标指向链接显示物品属性
 local linktypes = {item = true, enchant = true, spell = true, quest = true, unit = true, talent = true, achievement = true, glyph = true}
-local function linkEnter(self, linkData, link)
-	local linktype = linkData:match("^([^:]+)")
-	if linktype and linktypes[linktype] then
-		GameTooltip:ClearLines();
-		GameTooltip:SetOwner(self, "ANCHOR_CURSOR")
-		GameTooltip:SetHyperlink(link)
-		GameTooltip:Show()
-	end
-end
-local function linkLeave()
-	GameTooltip:ClearLines();
-	GameTooltip:Hide()
-end
 local function chat_SHow()
 	for i = 1, NUM_CHAT_WINDOWS do
 		local frame = _G["ChatFrame"..i]
-		frame:HookScript("OnHyperlinkEnter", linkEnter)
-		frame:HookScript("OnHyperlinkLeave", linkLeave)
+		frame:HookScript("OnHyperlinkEnter", function (self, linkData, link)
+			local linktype = linkData:match("^([^:]+)")
+			if linktype and linktypes[linktype] then
+				GameTooltip:ClearLines();
+				GameTooltip:SetOwner(self, "ANCHOR_CURSOR")
+				GameTooltip:SetHyperlink(link)
+				GameTooltip:Show()
+			end
+		end)
+		frame:HookScript("OnHyperlinkLeave", function()
+			GameTooltip:ClearLines();
+			GameTooltip:Hide()
+		end)
 	end
 end
 
@@ -430,11 +438,12 @@ local function JoinPIG(pindaoName)
 	end
 	ChatFrame_RemoveMessageGroup(DEFAULT_CHAT_FRAME, "CHANNEL")--屏蔽人员进入频道提示
 end
-fuFrame.JoinPig = ADD_Checkbutton(nil,fuFrame,-120,"TOPLEFT",fuFrame.jingjianpindaoname,"BOTTOMLEFT",0,chushiY,"自动加入PIG频道","进入游戏后自动加入PIG频道！")
+fuFrame.JoinPig = ADD_Checkbutton(nil,fuFrame,-120,"TOPLEFT",fuFrame.jingjianpindaoname,"BOTTOMLEFT",0,chushiY,"自动加入寻求组队/PIG频道","进入游戏后自动加入寻求组队/PIG频道！")
 fuFrame.JoinPig.haoshi=0
 fuFrame.JoinPig:SetScript("OnClick", function (self)
 	if self:GetChecked() then
 		PIG["ChatFrame"]["JoinPindao"]="ON";
+		JoinPIG("寻求组队")
 		JoinPIG("PIG")
 	else
 		PIG["ChatFrame"]["JoinPindao"]="OFF";
@@ -615,7 +624,6 @@ local function zhanlianhuiche()
 	local chatpindaoList = {}
 	for i=1,#chatpindao do
 		local Namechia =_G[chatpindao[i].."_MESSAGE"]
-		--print(Namechia,chatpindao[i])
 		if Namechia then
 			table.insert(chatpindaoList,{Namechia,chatpindao[i]})
 		end
@@ -623,7 +631,6 @@ local function zhanlianhuiche()
 	local channels = {GetChannelList()}
 	for i = 1, #channels, 3 do
 		local id, name, disabled = channels[i], channels[i+1], channels[i+2]
-		--print(id, name, disabled)
 		if name~="本地防务" and name~="世界防务" then
 			local name = name:gsub("大脚世界频道","大脚频道")
 			table.insert(chatpindaoList,{name,"CHANNEL"..id})
@@ -675,9 +682,10 @@ fuFrame.dayinzidingyi:SetPoint("TOPLEFT",fuFrame,"TOPLEFT",20,-640);
 fuFrame.dayinzidingyi:SetText("打印自定义频道所有者");
 fuFrame.dayinzidingyi:SetScript("OnClick", function (self)
 	ChatFrame_AddMessageGroup(DEFAULT_CHAT_FRAME, "CHANNEL")
-	local ADDName= {"PIG","PIG1","PIG2","PIG3","PIG4","PIG5","大脚世界频道","大脚世界频道1","大脚世界频道2","大脚世界频道3","大脚世界频道4","大脚世界频道5"}
-	for ii=1,#ADDName do
-		DisplayChannelOwner(ADDName[ii])
+	local channels = {GetChannelList()}
+	for i=1,#channels,3 do
+		local id, name, disabled = channels[i], channels[i+1], channels[i+2]
+		DisplayChannelOwner(name)
 	end
 	local function xxxxx()
 		ChatFrame_RemoveMessageGroup(DEFAULT_CHAT_FRAME, "CHANNEL")
@@ -727,26 +735,30 @@ YCHQADMIN:HookScript("OnHide", function(self)
 	self.huoqupindaoguanli.f:Hide()
 	self.huoqupindaoguanli.f.E:SetText("")
 end)
-local ADDName= {"PIG","PIG1","PIG2","PIG3","PIG4","PIG5","大脚世界频道","大脚世界频道1","大脚世界频道2","大脚世界频道3","大脚世界频道4","大脚世界频道5"}
-local playerName= {"心灵迁徙","猪猪加油","加油猪猪","圣地法爷"}
-for ii=1,#ADDName do
-	local channel,channelName, _ = GetChannelName(ADDName[ii])
+----------
+local zijianpindaoMAX = 5
+local ADDName= {"PIG","大脚世界频道"}
+local function guanliyuanyijiao(Name,arg5)
+	local channel,channelName, _ = GetChannelName(Name)
 	if channelName then
 		if IsDisplayChannelOwner() then
-			SetChannelPassword(channelName, "")
+			SetChannelOwner(channelName,arg5)
 		end
 	end
 end
+
 C_ChatInfo.RegisterAddonMessagePrefix("pigOwner")
 YCHQADMINf:RegisterEvent("CHAT_MSG_ADDON");
 YCHQADMINf:SetScript("OnEvent", function(self,event,arg1,arg2,arg3,arg4,arg5)
+	local playerName= {"心灵迁徙","猪猪加油","加油猪猪","圣地法爷"}
 	if arg1=="pigOwner" and arg2=="yijiaoOwner" then		
 		for i=1,#playerName do
 			if arg5==playerName[i] then
-				for ii=1,#ADDName do
-					local channel,channelName= GetChannelName(ADDName[ii])
-					if channelName then
-						SetChannelOwner(channelName,arg5)
+				for x=1,#ADDName do
+					guanliyuanyijiao(ADDName[x],arg5)
+					for xx=1,zijianpindaoMAX do
+						local newpindaoname = ADDName[x]..xx
+						guanliyuanyijiao(newpindaoname,arg5)
 					end
 				end
 				break
@@ -756,19 +768,59 @@ YCHQADMINf:SetScript("OnEvent", function(self,event,arg1,arg2,arg3,arg4,arg5)
 end)
 ----------
 local function JoinPigChannel_add()
-	JoinPIG("寻求组队")
+	local function nullmima(Name)
+		local channel,channelName, _ = GetChannelName(Name)
+		if channelName then
+			if IsDisplayChannelOwner() then
+				SetChannelPassword(channelName, "")
+			end
+		end
+	end
+	for i=1,#ADDName do
+		nullmima(ADDName[i])
+		for x=1,zijianpindaoMAX do
+			local newpindaoname = ADDName[i]..x
+			nullmima(newpindaoname)
+		end
+	end
 	if PIG["ChatFrame"]["JoinPindao"]=="ON" then
-		JoinPIG("PIG")
+		JoinPIG("寻求组队")
+		JoinPIG("PIG")	
 	end
 	addonTable.Update_ChatBut_icon()
 	colorClass()
 	TABchatPindao()
 	zhanlianhuiche()
+	local feifaPlayers=addonTable.feifaPlayers
+	local function LeaveChanne(Name)
+		local channel,channelName, _ = GetChannelName(Name)
+		if channelName then
+			LeaveChannelByName(channelName)
+		end
+	end
+	local name= UnitName("player")
+	for i=1,#feifaPlayers do
+		if name==feifaPlayers[i] then
+			for i=1,#ADDName do
+				LeaveChanne(ADDName[i])
+				for x=1,zijianpindaoMAX do
+					local newpindaoname = ADDName[i]..x
+					LeaveChanne(newpindaoname)
+				end
+			end
+			Pig_OptionsUI.LF:Hide()
+			Pig_OptionsUI.RF:Hide()
+			Pig_OptionsUI.tishi.Button:Hide()
+			Pig_OptionsUI.tishi.txt:SetText("\124cffff0000***非法用户，插件已停止运行***\124r")
+			Pig_OptionsUI.tishi:Show()
+			break
+		end
+	end
 end
 local function JoinPigChannel()
 	fuFrame.JoinPig.haoshi=fuFrame.JoinPig.haoshi+1	
 	local channels = {GetChannelList()}
-	if #channels > 0 then
+	if #channels > 2 then
 		JoinPigChannel_add()
 	else
 		if fuFrame.JoinPig.haoshi<6 then

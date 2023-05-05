@@ -8,6 +8,86 @@ function Plater.GetChangelogTable()
 	if (not Plater.ChangeLogTable) then
 		Plater.ChangeLogTable = {
 		
+			{1683096614,  "Bug Fix", "May 3rd, 2023", "Blizzard allows changing nameplate distance again in retail -> nameplateMaxDistance 0-60y.", "cont1nuity"},
+			{1683096614,  "Bug Fix", "May 3rd, 2023", "Apply workaround for player nameplates not showing until blizzard fixes this.", "cont1nuity"},
+			{1683096614,  "Bug Fix", "April 28th, 2023", "Fix channeled casts not appearing on the cast colors tab under some conditions.", "cont1nuity"},
+			{1683096614,  "Backend Change", "April 27th, 2023", "Some code cleanup in auras.", "cont1nuity"},
+			{1683096614,  "Backend Change", "April 26th, 2023", "Changing default and value range for nameplate movement speed settings.", "cont1nuity"},
+			{1683096614,  "New Feature", "April 25th, 2023", "Adding support to show DBM timer bars as BossMod Icon on the nameplate.", "cont1nuity"},
+			{1683096614,  "Bug Fix", "April 23rd, 2023", "Fixing a minor error on the Wago Imports tab while importing mods/scripts.", "cont1nuity"},
+			{1683096614,  "Bug Fix", "April 22nd, 2023", "Hopefully fixing hunter feight death nameplates.", "cont1nuity"},
+			{1683096614,  "Backend Change", "April 20th, 2023", "Adding option to not automatically update plater internal scripts.", "Terciob"},
+			
+			{1681318363,  "Bug Fix", "April 19th, 2023", "Fixing an error with tooltip scanning rework.", "cont1nuity"},
+			{1681318363,  "Bug Fix", "April 17th, 2023", "Fixing Aura Icon sizes not updating properly with Ghost Auras set to a different size.", "cont1nuity"},
+			{1681318363,  "Bug Fix", "April 15th, 2023", "Fixing the search tab being broken.", "cont1nuity"},
+			{1681318363,  "Bug Fix", "April 15th, 2023", "Some locale fixes.", "cont1nuity"},
+			{1681318363,  "Backend Change", "March 28th, 2023", "Implementing on the fly locale change for Plater options.", "Terciob"},
+			{1681318363,  "Bug Fix", "March 20th, 2023", "Fixing y-offset for target arrow indicators.", "cont1nuity"},
+			
+			{1678652930,  "Bug Fix", "March 19th, 2023", "Fixing and error on quest recognition rework.", "cont1nuity"},
+			{1678652930,  "Bug Fix", "March 18th, 2023", "Fixing and error for hiding blizzard healthbars.", "cont1nuity"},
+			{1678652930,  "Bug Fix", "March 14th, 2023", "Fixing some errors about unit flag changes when units are entering/leaving combat or change being attackable or not.", "cont1nuity"},
+			{1678652930,  "Bug Fix", "March 12th, 2023", "Fixing some default values for 'hide blizzard healthbars' on the different WoW versions.", "cont1nuity"},
+			
+			{1678135936,  "Bug Fix", "March 6th, 2023", "Fixing some issues unit hostility changes beeing too lax.", "cont1nuity"},
+			{1678135936,  "Backend Change", "March 6th, 2023", "Switching towards new tooltip API for retail instead of tooltip scanning.", "cont1nuity"},
+			{1678135936,  "Backend Change", "March 5th, 2023", "Trying to hide default blizzard namepalte cast bar as well in classic.", "cont1nuity"},
+			{1678135936,  "Bug Fix", "March 4th, 2023", "Fixing some issues around mod/script options not updating properly under some conditions.", "cont1nuity"},
+			{1678135936,  "Bug Fix", "March 2nd, 2023", "Fixing Monk execute detection for Improved Touch of Death talent.", "cont1nuity"},
+			{1678135936,  "Bug Fix", "March 2nd, 2023", "Adding missing default range check ranges for Evoker.", "cont1nuity"},
+			{1678135936,  "Bug Fix", "March 1st, 2023", "Changing blizzard nameplate font override default to something that actually exists in Plater by default.", "cont1nuity"},
+			{1678135936,  "Bug Fix", "February 28th, 2023", "Fixing Ghost Auras icon sizing settings not applying properly.", "cont1nuity"},
+			
+			{1677610567,  "New Feature", "February 28th, 2023", "Adding options to change default blizzard nameplate name fonts.", "cont1nuity"},
+			{1677610567,  "New Feature", "February 28th, 2023", "Adding option to change target overlay color.", "cont1nuity"},
+			{1677610567,  "New Feature", "February 23rd, 2023", "Adding combat auto toggle options for friendly and enemy nameplates, as well as enemy auto toggle options.", "cont1nuity"},
+			{1677610567,  "Bug Fix", "February 21st, 2023", "Fix Combo Points not updating properly for Druids switching stances in retail.", "cont1nuity"},
+			{1677610567,  "Backend Change", "February 20th, 2023", "Change handling of units switching between attackable and not attackable, potentially fixing some issues around this.", "cont1nuity"},
+			{1677610567,  "Backend Change", "February 12th, 2023", "Adding Explosives to be always in combat.", "cont1nuity"},
+			{1677610567,  "Backend Change", "February 12th, 2023", "Friendly NPC quest indicator icon is now tied to the option to show quest indicators.", "cont1nuity"},
+			{1677610567,  "Bug Fix", "February 9th, 2023", "Fix mod option values not being updated properly when renaming or deleting options.", "cont1nuity"},
+			
+			{1674723541,  "Bug Fix", "February 3rd, 2023", "Fix 'Hide Blizzard Healthbars' functionality for classic-era.", "cont1nuity"},
+			{1674723541,  "Backend Change", "February 3rd, 2023", "More detailed performance analysis.", "cont1nuity"},
+			{1674723541,  "Backend Change", "February 3rd, 2023", "Properly throttling cast updates to increase performance.", "cont1nuity"},
+			
+			{1674723541,  "Backend Change", "January 27th, 2023", "Extend 'Hide Blizzard Healthbars' functionality for classic.", "cont1nuity"},
+			{1674723541,  "Backend Change", "January 26th, 2023", "Bring back 'Hide Blizzard Healthbars' functionality for retail.", "cont1nuity"},
+			{1674723541,  "Bug Fix", "January 26th, 2023", "Fixing a bug with wago update data in the options menu.", "cont1nuity"},
+			
+			{1674631327,  "Backend Change", "January 19th, 2023", "Try syncing cast update and nameplate update ticks for mods/scripts.", "cont1nuity"},
+			{1674631327,  "Backend Change", "January 19th, 2023", "TOC update for WotlK.", "cont1nuity"},
+			{1674631327,  "Bug Fix", "January 18th, 2023", "Multiple Script bug fixes.", "Terciob"},
+			{1674631327,  "Bug Fix", "January 13th, 2023", "Fixing an issue with blizzard nameplates updating and changing sizes.", "cont1nuity"},
+			{1674631327,  "Bug Fix", "January 11th, 2023", "Fixing Cast Color tab issues when default scripts are removed.", "cont1nuity"},
+			
+			{1673301078,  "Bug Fix", "January 7th, 2023", "Fixing spec icon indicators for evoker.", "cont1nuity"},
+			{1673301078,  "Bug Fix", "January 3rd, 2023", "More fixes for invisible nameplates.", "cont1nuity"},
+			{1673301078,  "Bug Fix", "January 2nd, 2023", "Better hide blizzard resources on the personal bar if necessary.", "cont1nuity"},
+			{1673301078,  "Bug Fix", "January 1st, 2023", "Fixing aura tracking lists not working properly after importing profiles.", "cont1nuity"},
+			{1673301078,  "Bug Fix", "December 31st, 2022", "Multiple Script bug fixes.", "Terciob"},
+			{1673301078,  "Backend Change", "December 31st, 2022", "Adding more 'forced in combat' units for Dragonflight dungeon boss adds.", "cont1nuity"},
+			{1673301078,  "Backend Change", "December 25th, 2022", "Adding additional arrow target indicators.", "cont1nuity"},
+			
+			{1672167745,  "New Feature", "December 27th, 2022", "Added 'Send to Raid' button on Npc and Cast customization tab.", "Terciob"},
+			{1672167745,  "Bug Fix", "December 26th, 2022", "Fixing charged Combo Points not updating properly in some cases.", "cont1nuity"},
+			{1672167745,  "Bug Fix", "December 26th, 2022", "Fixing cast color/sounds not working after profile import.", "cont1nuity"},
+			{1672167745,  "Backend Change", "December 25th, 2022", "Better search results on NPC Colors and Names.", "Terciob"},
+			
+			{1671749018,  "Bug Fix", "December 22nd, 2022", "Fixing Evoker Essence resource points.", "cont1nuity"},
+			
+			{1671439834,  "Bug Fix", "December 17th, 2022", "Fixing more cases of invisible nameplates on some spawned or hostility changed units.", "cont1nuity"},
+			
+			{1671232346,  "Bug Fix", "December 17th, 2022", "Multiple Script bug fixes.", "Terciob"},
+			{1671232346,  "Bug Fix", "December 17th, 2022", "Hopefully fixing invisible nameplates on some spawned units.", "cont1nuity"},
+			{1671232346,  "Bug Fix", "December 13th, 2022", "Hiding blizzard buffs on personal bar.", "cont1nuity"},
+			{1671232346,  "Bug Fix", "December 13th, 2022", "Fixing cast timer being behind cast name.", "cont1nuity"},
+			{1671232346,  "Bug Fix", "December 13th, 2022", "Fixing taint issues with widgets by reusing blizzards WidgetContainer.", "cont1nuity"},
+			{1671232346,  "Bug Fix", "December 12th, 2022", "Fixing issues with LibRangeCheck by switching to other version.", "cont1nuity"},
+			{1671232346,  "Bug Fix", "December 11th, 2022", "Adding support for 'Arcane Bombardment' execute.", "D. Potvin"},
+			{1671232346,  "Bug Fix", "December 10th, 2022", "Fixing channeled spells not appearing on Cast Colors tab.", "cont1nuity"},
+			
 			{1669577376,  "Bug Fix", "December 1st, 2022", "Fixing an error when setting cast bar colors.", "cont1nuity"},
 			{1669577376,  "Bug Fix", "November 28th, 2022", "Fixing aura integration in Masque.", "cont1nuity"},
 			{1669577376,  "Bug Fix", "November 28th, 2022", "Fixing aura tooltip not updating properly.", "cont1nuity"},

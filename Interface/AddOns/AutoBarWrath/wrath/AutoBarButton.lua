@@ -16,7 +16,6 @@ local ABGData = AutoBarGlobalDataObject
 local spellIconList = ABGData.spell_icon_list
 
 local AceOO = MMGHACKAceLibrary("AceOO-2.0")
---local LibKeyBound = LibStub("LibKeyBound-1.0")
 local L = AutoBarGlobalDataObject.locale
 
 local reverse_sort_func = function( a,b ) return a > b end
@@ -53,10 +52,10 @@ function AutoBarButtonMount.prototype:init(parentBar, buttonDB)
 	AutoBarButtonMount.super.prototype.init(self, parentBar, buttonDB)
 --print("AutoBarButtonMount.prototype:init");
 
-	local buttonData = AutoBar.db.char.buttonDataList[buttonDB.buttonKey]
+	local buttonData = AutoBar.char.buttonDataList[buttonDB.buttonKey]
 	if (not buttonData) then
 		buttonData = {}
-		AutoBar.db.char.buttonDataList[buttonDB.buttonKey] = buttonData
+		AutoBar.char.buttonDataList[buttonDB.buttonKey] = buttonData
 	end
 
 	if(buttonDB.mount_show_qiraji == nil) then buttonDB.mount_show_qiraji = false end
@@ -119,8 +118,8 @@ function AutoBarButtonMount.prototype:Refresh(parentBar, buttonDB, updateMount)
 			if not spell_name then print("AutoBar Error: Missing spell name for", spell_id, name); end
 			spellIconList[spell_name] = icon
 			AutoBarSearch:RegisterSpell(spell_name, spell_id, true)
-			local spellInfo = AutoBarSearch.spells[spell_name]
-			spellInfo.spellLink = "spell:" .. spell_id
+			local spellInfo = AutoBarSearch.GetRegisteredSpellInfo(spell_name)
+			spellInfo.spell_link = "spell:" .. spell_id		--TODO: This shouldn't be necessary. Test to see if RegisterSpell isn't giving a good link
 			category.castList[# category.castList + 1] = spell_name
 
 		end

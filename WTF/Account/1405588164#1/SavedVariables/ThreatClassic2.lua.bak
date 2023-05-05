@@ -1,0 +1,22 @@
+
+ThreatClassic2DB = {
+	["profileKeys"] = {
+		["狂暴專家 - 伊弗斯"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["frame"] = {
+				["position"] = {
+					nil, -- [1]
+					nil, -- [2]
+					nil, -- [3]
+					378.3332824707031, -- [4]
+					-46.11111068725586, -- [5]
+				},
+			},
+			["bar"] = {
+				["count"] = 8,
+			},
+		},
+	},
+}

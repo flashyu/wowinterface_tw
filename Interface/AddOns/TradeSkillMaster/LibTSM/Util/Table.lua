@@ -11,13 +11,8 @@ local private = {
 	sortValueLookup = nil,
 	sortValueReverse = false,
 	sortValueUnstable = false,
-	iterContext = { arg = {}, index = {}, helperFunc = {}, cleanupFunc = {} },
 	diffTemp = {},
 }
-setmetatable(private.iterContext.arg, { __mode = "k" })
-setmetatable(private.iterContext.index, { __mode = "k" })
-setmetatable(private.iterContext.helperFunc, { __mode = "k" })
-setmetatable(private.iterContext.cleanupFunc, { __mode = "k" })
 local READ_ONLY_TABLE_MT = {
 	__index = function(_, key) error(format("Key (%s) does not exist in read-only table", tostring(key)), 2) end,
 	__newindex = function(_, key) error(format("Writing (%s) to read-only table", tostring(key)), 2) end,
@@ -394,22 +389,6 @@ function Table.RotateRight(tbl, amount, startIndex, endIndex)
 	private.ReverseTable(tbl, startIndex + amount, endIndex)
 end
 
----Removes a range of indexes from a table.
----@param tbl table The table to remove from
----@param startIndex number The first index to remove
----@param endIndex number The last index to remove
-function Table.RemoveRange(tbl, startIndex, endIndex)
-	local numToRemove = endIndex - startIndex + 1
-	if numToRemove == 0 then
-		return
-	end
-	assert(numToRemove > 0)
-	Table.RotateRight(tbl, -numToRemove, startIndex)
-	for i = #tbl, #tbl - (numToRemove - 1), -1 do
-		tbl[i] = nil
-	end
-end
-
 ---Inserts fill values into the table.
 ---@param tbl table The table to insert into
 ---@param startIndex number The index to insert at
@@ -423,7 +402,7 @@ function Table.InsertFill(tbl, startIndex, numValues, fillValue)
 	Table.RotateRight(tbl, numValues, startIndex)
 end
 
----Reverses a table.
+---Reverses a table in place.
 ---@param tbl table The table to reverse
 function Table.Reverse(tbl)
 	private.ReverseTable(tbl, 1, #tbl)
@@ -503,6 +482,28 @@ function Table.GetDiffOrdered(old, new, inserted, removed)
 	return true
 end
 
+---Iterates over a table with a stride.
+---
+---**NOTE:** This iterator must be run to completion and not be interrupted (i.e. with a `break` or `return`).
+---@param tbl table The table to iterate over.
+---@param numFields number The number of fields to unpack with each iteration
+---@return fun(): number, ... @An iterator with fields: `index, {numFields...}`
+function Table.StrideIterator(tbl, numFields)
+	assert(numFields >= 1 and #tbl % numFields == 0)
+	tbl.__iterNumFields = numFields
+	return private.StrideIteratorHelper, tbl, 1 - numFields
+end
+
+---Inserts multiple values into the table.
+---@param tbl table The table to insert into
+---@param ... any Values to insert
+function Table.InsertMultiple(tbl, ...)
+	local numExisting = #tbl
+	for i = 1, select("#", ...) do
+		tbl[numExisting + i] = select(i, ...)
+	end
+end
+
 
 
 -- ============================================================================
@@ -550,4 +551,18 @@ function private.DiffHandleValue(value)
 	end
 	private.diffTemp[value] = true
 	return true
+end
+
+function private.StrideIteratorHelper(tbl, index)
+	local numFields = tbl.__iterNumFields
+	index = index + numFields
+	if index > #tbl then
+		tbl.__iterNumFields = nil
+		return
+	end
+	if numFields == 1 then
+		return index, tbl[index]
+	else
+		return index, unpack(tbl, index, index + numFields - 1)
+	end
 end

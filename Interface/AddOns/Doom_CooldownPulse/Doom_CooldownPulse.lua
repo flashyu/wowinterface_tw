@@ -1,5 +1,5 @@
-local fadeInTime, fadeOutTime, maxAlpha, animScale, iconSize, holdTime, showSpellName, ignoredSpells, invertIgnored
-local cooldowns, animating, watching = { }, { }, { }
+local fadeInTime, fadeOutTime, maxAlpha, animScale, iconSize, holdTime, showSpellName, ignoredSpells, invertIgnored, remainingCooldownWhenNotified
+local cooldowns, animating, watching, itemSpells = { }, { }, { }, { }
 local GetTime = GetTime
 
 local defaultSettings = {
@@ -12,7 +12,8 @@ local defaultSettings = {
     petOverlay = {1,1,1},
     showSpellName = nil,
     x = UIParent:GetWidth()*UIParent:GetEffectiveScale()/2,
-    y = UIParent:GetHeight()*UIParent:GetEffectiveScale()/2
+    y = UIParent:GetHeight()*UIParent:GetEffectiveScale()/2,
+    remainingCooldownWhenNotified = 0
 }
 
 local defaultSettingsPerCharacter = {
@@ -94,6 +95,7 @@ local function RefreshLocals()
     holdTime = DCP_Saved.holdTime
     showSpellName = DCP_Saved.showSpellName
     invertIgnored = DCP_SavedPerCharacter.invertIgnored
+    remainingCooldownWhenNotified = DCP_Saved.remainingCooldownWhenNotified
 
     ignoredSpells = { }
     for _,v in ipairs({strsplit(",",DCP_SavedPerCharacter.ignoredSpells)}) do
@@ -122,6 +124,26 @@ local function InitializeSavedVariables()
     MergeTable(DCP_SavedPerCharacter, defaultSettingsPerCharacter)
 end
 
+local function TrackItemSpell(itemID)
+    local _, spellID = GetItemSpell(itemID)
+    if (spellID) then
+        itemSpells[spellID] = itemID
+        return true
+    else
+        return false
+    end
+end
+
+local function IsAnimatingCooldownByName(name)
+    for i, details in pairs(animating) do
+        if details[3] == name then
+            return true
+        end
+    end
+
+    return false
+end
+
 --------------------------
 -- Cooldown / Animation --
 --------------------------
@@ -130,7 +152,7 @@ local runtimer = 0
 local function OnUpdate(_,update)
     elapsed = elapsed + update
     if (elapsed > 0.05) then
-        for i,v in pairs(watching) do
+        for id, v in pairs(watching) do
             if (GetTime() >= v[1] + 0.5) then
                 local getCooldownDetails
                 if (v[2] == "spell") then
@@ -146,9 +168,9 @@ local function OnUpdate(_,update)
                     end)
                 elseif (v[2] == "item") then
                     getCooldownDetails = memoize(function()
-                        local start, duration, enabled = GetItemCooldown(i)
+                        local start, duration, enabled = C_Container.GetItemCooldown(id)
                         return {
-                            name = GetItemInfo(i),
+                            name = GetItemInfo(id),
                             texture = v[3],
                             start = start,
                             duration = duration,
@@ -171,25 +193,31 @@ local function OnUpdate(_,update)
                 end
 
                 local cooldown = getCooldownDetails()
-                if ((ignoredSpells[cooldown.name] ~= nil) ~= invertIgnored) then
-                    watching[i] = nil
+                if ((ignoredSpells[cooldown.name] ~= nil or ignoredSpells[tostring(id)] ~= nil) ~= invertIgnored) then
+                    watching[id] = nil
                 else
                     if (cooldown.enabled ~= 0) then
                         if (cooldown.duration and cooldown.duration > 2.0 and cooldown.texture) then
-                            cooldowns[i] = getCooldownDetails
+                            cooldowns[id] = getCooldownDetails
                         end
                     end
                     if (not (cooldown.enabled == 0 and v[2] == "spell")) then
-                        watching[i] = nil
+                        watching[id] = nil
                     end
                 end
             end
         end
         for i,getCooldownDetails in pairs(cooldowns) do
             local cooldown = getCooldownDetails()
-            local remaining = cooldown.duration-(GetTime()-cooldown.start)
-            if (remaining <= 0) then
-                tinsert(animating, {cooldown.texture,cooldown.isPet,cooldown.name})
+            if cooldown.start then
+                local remaining = cooldown.duration-(GetTime()-cooldown.start)
+                if (remaining <= remainingCooldownWhenNotified) then
+                    if not IsAnimatingCooldownByName(cooldown.name) then
+                        tinsert(animating, {cooldown.texture,cooldown.isPet,cooldown.name})
+                    end
+                    cooldowns[i] = nil
+                end
+            else
                 cooldowns[i] = nil
             end
         end
@@ -253,7 +281,15 @@ DCP:RegisterEvent("SPELL_UPDATE_COOLDOWN")
 
 function DCP:UNIT_SPELLCAST_SUCCEEDED(unit,lineID,spellID)
     if (unit == "player") then
-        watching[spellID] = {GetTime(),"spell",spellID}
+        local itemID = itemSpells[spellID]
+        if (itemID) then
+            local texture = select(10, GetItemInfo(itemID))
+            watching[itemID] = {GetTime(),"item",texture}
+            itemSpells[spellID] = nil
+        else
+            watching[spellID] = {GetTime(),"spell",spellID}
+        end
+
         if (not self:IsMouseEnabled()) then
             self:SetScript("OnUpdate", OnUpdate)
         end
@@ -267,7 +303,7 @@ function DCP:COMBAT_LOG_EVENT_UNFILTERED()
         if (bit.band(sourceFlags,COMBATLOG_OBJECT_TYPE_PET) == COMBATLOG_OBJECT_TYPE_PET and bit.band(sourceFlags,COMBATLOG_OBJECT_AFFILIATION_MINE) == COMBATLOG_OBJECT_AFFILIATION_MINE) then
             local name = GetSpellInfo(spellID)
             local index = GetPetActionIndexByName(name)
-            if (index and not select(7,GetPetActionInfo(index))) then
+            if (index and not select(6,GetPetActionInfo(index))) then
                 watching[spellID] = {GetTime(),"pet",index}
             elseif (not index and spellID) then
                 watching[spellID] = {GetTime(),"spell",spellID}
@@ -292,9 +328,19 @@ function DCP:PLAYER_ENTERING_WORLD()
 end
 DCP:RegisterEvent("PLAYER_ENTERING_WORLD")
 
+function DCP:PLAYER_SPECIALIZATION_CHANGED(unit)
+    if (unit == "player") then
+        wipe(cooldowns)
+        wipe(watching)
+    end
+end
+if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+    DCP:RegisterEvent("PLAYER_SPECIALIZATION_CHANGED")
+end
+
 hooksecurefunc("UseAction", function(slot)
     local actionType,itemID = GetActionInfo(slot)
-    if (actionType == "item") then
+    if (actionType == "item" and not TrackItemSpell(itemID)) then
         local texture = GetActionTexture(slot)
         watching[itemID] = {GetTime(),"item",texture}
     end
@@ -302,14 +348,15 @@ end)
 
 hooksecurefunc("UseInventoryItem", function(slot)
     local itemID = GetInventoryItemID("player", slot);
-    if (itemID) then
+    if (itemID and not TrackItemSpell(itemID)) then
         local texture = GetInventoryItemTexture("player", slot)
         watching[itemID] = {GetTime(),"item",texture}
     end
 end)
-hooksecurefunc("UseContainerItem", function(bag,slot)
-    local itemID = GetContainerItemID(bag, slot)
-    if (itemID) then
+
+hooksecurefunc(C_Container, "UseContainerItem", function(bag,slot)
+    local itemID = C_Container.GetContainerItemID(bag, slot)
+    if (itemID and not TrackItemSpell(itemID)) then
         local texture = select(10, GetItemInfo(itemID))
         watching[itemID] = {GetTime(),"item",texture}
     end
@@ -332,6 +379,7 @@ function DCP:CreateOptionsFrame()
         { text = "Max Opacity", value = "maxAlpha", min = 0, max = 1, step = 0.1 },
         { text = "Max Opacity Hold Time", value = "holdTime", min = 0, max = 1.5, step = 0.1 },
         { text = "Animation Scaling", value = "animScale", min = 0, max = 2, step = 0.1 },
+        { text = "Show Before Available Time", value = "remainingCooldownWhenNotified", min = 0, max = 3, step = 0.1 },
     }
 
     local buttons = {
@@ -384,8 +432,8 @@ function DCP:CreateOptionsFrame()
       tile=1, tileSize=32, edgeSize=32,
       insets={left=11, right=12, top=12, bottom=11}
     })
-    optionsframe:SetWidth(220)
-    optionsframe:SetHeight(540)
+    optionsframe:SetWidth(230)
+    optionsframe:SetHeight(610)
     optionsframe:SetPoint("CENTER",UIParent)
     optionsframe:EnableMouse(true)
     optionsframe:SetMovable(true)
@@ -409,7 +457,7 @@ function DCP:CreateOptionsFrame()
     for i,v in pairs(sliders) do
         local slider = CreateFrame("slider", "DCP_OptionsFrameSlider"..i, optionsframe, "OptionsSliderTemplate")
         if (i == 1) then
-            slider:SetPoint("TOP",optionsframe,"TOP",0,-40)
+            slider:SetPoint("TOP",optionsframe,"TOP",0,-50)
         else
             slider:SetPoint("TOP",getglobal("DCP_OptionsFrameSlider"..(i-1)),"BOTTOM",0,-35)
         end
@@ -421,14 +469,18 @@ function DCP:CreateOptionsFrame()
         getglobal("DCP_OptionsFrameSlider"..i.."High"):SetText(v.max)
         slider:SetMinMaxValues(v.min,v.max)
         slider:SetValueStep(v.step)
+        slider:SetObeyStepOnDrag(true)
         slider:SetValue(DCP_Saved[v.value])
         slider:SetScript("OnValueChanged",function()
-            local val=slider:GetValue() DCP_Saved[v.value]=val
-            valuetext:SetText(format("%.1f",val))
+            local value = slider:GetValue()
+            DCP_Saved[v.value] = value
+            RefreshLocals()
+            valuetext:SetText(format("%.1f", value))
             if (DCP:IsMouseEnabled()) then
                 DCP:SetWidth(DCP_Saved.iconSize)
                 DCP:SetHeight(DCP_Saved.iconSize)
-            end end)
+            end
+        end)
     end
 
     local pettext = optionsframe:CreateFontString(nil,"ARTWORK","GameFontNormalSmall")
@@ -461,7 +513,7 @@ function DCP:CreateOptionsFrame()
     spellnametext:SetPoint("TOPLEFT",pettext,"BOTTOMLEFT",0,-18)
     spellnametext:SetText("Show spell name:")
 
-    local spellnamecbt = CreateFrame("CheckButton","DCP_OptionsFrameSpellNameCheckButton",optionsframe,"OptionsCheckButtonTemplate")
+    local spellnamecbt = CreateFrame("CheckButton","DCP_OptionsFrameSpellNameCheckButton",optionsframe,"UICheckButtonTemplate")
     spellnamecbt:SetPoint("LEFT",spellnametext,"RIGHT",6,0)
     spellnamecbt:SetChecked(DCP_Saved.showSpellName)
     spellnamecbt:SetScript("OnClick", function(self)
@@ -519,7 +571,7 @@ function DCP:CreateOptionsFrame()
         local button = CreateFrame("Button", "DCP_OptionsFrameButton"..i, optionsframe, "UIPanelButtonTemplate")
         button:SetHeight(24)
         button:SetWidth(75)
-        button:SetPoint("BOTTOM", optionsframe, "BOTTOM", ((i%2==0 and -1) or 1)*45, ceil(i/2)*15 + (ceil(i/2)-1)*15)
+        button:SetPoint("BOTTOM", optionsframe, "BOTTOM", ((i%2==0 and -1) or 1)*45, 10 + ceil(i/2)*15 + (ceil(i/2)-1)*15)
         button:SetText(v.text)
         button:SetScript("OnClick", function(self) PlaySound(852) v.func(self) end)
     end

@@ -1,9 +1,8 @@
 local addonName, addonTable = ...;
 local gsub = _G.string.gsub
-local sub = _G.string.sub 
-local find = _G.string.find
+local PIGBagBank={}
 ----------------------------------------------
-local function qiyongzidongzhengli()
+function PIGBagBank.qiyongzidongzhengli()
 	local _G, _M = getfenv(0), {}
 	setfenv(1, setmetatable(_M, {__index=_G}))
 
@@ -12,7 +11,7 @@ local function qiyongzidongzhengli()
 	BAG_CONTAINERS = {0, 1, 2, 3, 4}
 	BANK_BAG_CONTAINERS = {-1, 5, 6, 7, 8, 9, 10, 11}
 
-	function _G.SortBagsPIG()
+	function PIGBagBank.SortBags()
 		CONTAINERS = {unpack(BAG_CONTAINERS)}
 		for i = #CONTAINERS, 1, -1 do
 			if GetBagSlotFlag(i - 1, LE_BAG_FILTER_FLAG_IGNORE_CLEANUP) then
@@ -22,7 +21,7 @@ local function qiyongzidongzhengli()
 		Start()
 	end
 
-	function _G.SortBankBagsPIG()
+	function PIGBagBank.SortBankBags()
 		CONTAINERS = {unpack(BANK_BAG_CONTAINERS)}
 		for i = #CONTAINERS, 1, -1 do
 			if GetBankBagSlotFlag(i - 1, LE_BAG_FILTER_FLAG_IGNORE_CLEANUP) then
@@ -550,4 +549,4 @@ local function qiyongzidongzhengli()
 		end
 	end
 end
-addonTable.qiyongzidongzhengli=qiyongzidongzhengli
+addonTable.PIGBagBank=PIGBagBank

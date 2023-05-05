@@ -6,7 +6,7 @@
 -- http://muffinmangames.com
 --
 
---local _, AB = ... -- Pulls back the Addon-Local Variables and store them locally.
+local _, AB = ... -- Pulls back the Addon-Local Variables and store them locally.
 
 local AutoBar = AutoBar
 local AutoBarSearch = AutoBarSearch  --TODO: This shouldn't be a global at all
@@ -16,7 +16,6 @@ local ABGData = AutoBarGlobalDataObject
 local spellIconList = ABGData.spell_icon_list
 
 local AceOO = MMGHACKAceLibrary("AceOO-2.0")
---local LibKeyBound = LibStub("LibKeyBound-1.0")
 local L = AutoBarGlobalDataObject.locale
 
 
@@ -271,10 +270,10 @@ local function UpdateHandlers(frame)
 		end
 	end
 
-	local buttonData = AutoBar.db.char.buttonDataList[buttonKey]
+	local buttonData = AutoBar.char.buttonDataList[buttonKey]
 	if (not buttonData) then
 		buttonData = {}
-		AutoBar.db.char.buttonDataList[buttonKey] = buttonData
+		AutoBar.char.buttonDataList[buttonKey] = buttonData
 	end
 
 	buttonData.arrangeOnUse = itemId
@@ -339,7 +338,7 @@ function AutoBarButton.prototype:SetupPopups(nItems)
 		if (nSplits > 1) then
 			splitLength = math.ceil(nItems / nSplits)
 		end
-end
+	end
 
 
 	--if (self.buttonDB.max_popup_height) then
@@ -354,8 +353,6 @@ end
 	end
 
 	local buttonItems = AutoBarSearch.items:GetList(buttonKey)
-	local buttonWidth = layoutDB.buttonWidth
-	local buttonHeight = layoutDB.buttonHeight
 	local relativePoint = popupHeader
 	for popupButtonIndex = popupIndexStart, nItems, 1 do
 		local popupButton = AutoBar.Class.PopupButton:GetPopupButton(self, popupButtonIndex, popupHeader, popupKeyHandler)
@@ -374,8 +371,8 @@ end
 
 		-- Attach to edge of previous popupButtonFrame or the popupHeader
 		popupButtonFrame:ClearAllPoints()
-		popupButtonFrame:SetHeight(buttonHeight)
-		popupButtonFrame:SetWidth(buttonWidth)
+		popupButtonFrame:SetHeight(ABGData.default_button_height)
+        popupButtonFrame:SetWidth(ABGData.default_button_width)
 		popupButtonFrame:Raise()
 		popupButtonFrame:SetScale(1)
 		if (relativePoint == popupHeader) then
@@ -416,8 +413,8 @@ end
 
 	popupHeader:ClearAllPoints()
 --- ToDo: fix for orientation
---			popupHeader:SetWidth(buttonWidth + paddingX * 2)
---			popupHeader:SetHeight((buttonHeight + paddingY) * (nItems - 1) + paddingY)
+--			popupHeader:SetWidth(ABGData.default_button_width + paddingX * 2)
+--			popupHeader:SetHeight((ABGData.default_button_height + paddingY) * (nItems - 1) + paddingY)
 	popupHeader:SetWidth(2)
 	popupHeader:SetHeight(2)
 	popupHeader:SetScale(1)
@@ -452,7 +449,7 @@ function AutoBarButton.prototype:GetHierarchicalSetting(setting)
 	if (db[setting] ~= nil) then
 		return db[setting]
 	end
-	db = AutoBar.db.account
+	db = AutoBarDB2.account
 	if (db[setting] ~= nil) then
 		return db[setting]
 	end
@@ -563,7 +560,7 @@ function AutoBarButton.prototype:SetupButton()
 			local wrapped = frame.UpdateIcon
 			-- Trigger Updating on the Anchor Button
 			if (wrapped and (not arrangeOnUse)) then
-				local _header, preBody, postBody = popupHeader:UnwrapScript(frame, "OnAttributeChanged")  --ToDo: Remove this?
+				local _header, _preBody, _postBody = popupHeader:UnwrapScript(frame, "OnAttributeChanged")  --ToDo: Remove this?
 			elseif ((not wrapped) and arrangeOnUse) then
 				frame.UpdateIcon = UpdateIcon	-- Update Icon
 				frame.UpdateHandlers = UpdateHandlers	-- Update Handlers: Tooltip
@@ -581,8 +578,8 @@ function AutoBarButton.prototype:SetupButton()
 			popupHeader:Hide()
 		end
 
-		--if (buttonKey == "AutoBarButtonCharge") then print("move_mode",AutoBar.moveButtonsMode, "showEmpty", AutoBar.db.account.showEmptyButtons, "Alwaysshow", self.buttonDB.alwaysShow, "enabled", self.buttonDB.enabled ) end;
-		if ((AutoBar.moveButtonsMode or AutoBar.db.account.showEmptyButtons or self.buttonDB.alwaysShow) and self.buttonDB.enabled) then
+		--if (buttonKey == "AutoBarButtonCharge") then print("move_mode",AutoBar.moveButtonsMode, "showEmpty", AutoBarDB2.settings.show_empty_buttons, "Alwaysshow", self.buttonDB.alwaysShow, "enabled", self.buttonDB.enabled ) end;
+		if ((AutoBar.moveButtonsMode or AutoBarDB2.settings.show_empty_buttons or self.buttonDB.alwaysShow) and self.buttonDB.enabled) then
 			frame:Show()
 			--if (buttonKey == "AutoBarButtonCharge") then print("Showing Frame", "self[1]", self[1]); end;
 			if (self[1]) then
@@ -659,7 +656,7 @@ function AutoBarButton.prototype:SetupAttributes(button, bag, slot, spell, macro
 
 	local targeted, castSpell, itemsRightClick
 	local buttonDB = self.buttonDB	-- Use base button info for popups as well
-	local selfCastRightClick = AutoBar.db.account.selfCastRightClick
+	local selfCastRightClick = AutoBarDB2.settings.self_cast_right_click
 
 	-- Set up special conditions from Category attributes
 	local categoryInfo = AutoBarCategoryList[category]
@@ -754,7 +751,7 @@ function AutoBarButton.prototype:SetupAttributes(button, bag, slot, spell, macro
 		-- The matched spell to cast on RightClick
 		if (itemsRightClick and itemsRightClick[itemId]) then
 			castSpell = itemsRightClick[itemId]
-			selfCastRightClick = nil
+			selfCastRightClick = false
 --AutoBar:Print("AutoBarButton.prototype:SetupAttributes category " .. category .. " castSpell " .. tostring(castSpell))
 		end
 		-- Special spell to cast on RightClick
@@ -778,7 +775,7 @@ function AutoBarButton.prototype:SetupAttributes(button, bag, slot, spell, macro
 			-- Tooltip
 			frame:SetAttribute("itemLink", itemLink)
 		elseif (bag and slot) then
-			local itemLink = GetContainerItemLink(bag, slot)
+			local itemLink = AB.GetContainerItemLink(bag, slot)
 			frame:SetAttribute("itemLink", itemLink)
 ---			if (buttonDB.shuffle) then
 ---				itemLink = bag .. " " .. slot
@@ -805,7 +802,7 @@ function AutoBarButton.prototype:SetupAttributes(button, bag, slot, spell, macro
 			frame:SetAttribute("AutoBarGUID", p_info_data.guid)
 			button.macroActive = true
 		elseif (macroId) then
-			local macroInfo = AutoBarSearch.macros[macroId]
+			local macroInfo = AutoBarSearch.registered_macros[macroId]
 			frame:SetAttribute("type", "macro")
 			frame:SetAttribute("macroId", macroId)
 			if (macroInfo.macroIndex) then
@@ -828,9 +825,9 @@ function AutoBarButton.prototype:SetupAttributes(button, bag, slot, spell, macro
 			frame:SetAttribute("spell", spell)
 
 			-- Tooltip
-			local spellInfo = AutoBarSearch.spells[spell]
-			if (spellInfo and spellInfo.spellLink) then
-				frame:SetAttribute("itemLink", spellInfo.spellLink)
+			local spellInfo = AutoBarSearch.GetRegisteredSpellInfo(spell)
+			if (spellInfo and spellInfo.spell_link) then
+				frame:SetAttribute("itemLink", spellInfo.spell_link)
 			end
 		elseif (castSpell) then
 			-- Set castSpell as default if nothing else is available
@@ -839,9 +836,9 @@ function AutoBarButton.prototype:SetupAttributes(button, bag, slot, spell, macro
 			frame:SetAttribute("spell", castSpell)
 
 			-- Tooltip
-			local spellInfo = AutoBarSearch.spells[castSpell].spellLink
-			if (spellInfo.spellLink) then
-				frame:SetAttribute("itemLink", spellInfo.spellLink)
+			local spellInfo = AutoBarSearch.GetRegisteredSpellInfo(castSpell)
+			if (spellInfo and spellInfo.spell_link) then
+				frame:SetAttribute("itemLink", spellInfo.spell_link)
 			end
 		else
 			frame:SetAttribute("type", nil)
@@ -873,14 +870,14 @@ end
 --
 
 --function AutoBarButton:SetTooltip(button)
---AutoBar:Print("SetTooltip " .. tostring(self.needsTooltip) .. " button " .. tostring(button) .. " button " .. tostring(button) .. " showTooltip " .. tostring(AutoBar.db.account.showTooltip) .. " self.needsTooltip " .. tostring(self.needsTooltip))
+--AutoBar:Print("SetTooltip " .. tostring(self.needsTooltip) .. " button " .. tostring(button) .. " button " .. tostring(button) .. " showTooltip " .. tostring(AutoBarDB2.settings.show_tooltip) .. " self.needsTooltip " .. tostring(self.needsTooltip))
 --	local isAutoBarButton = self.class and self.class.buttonDB
 --
 --	if (isAutoBarButton and self.GetHotkey) then
 --		LibKeyBound:Set(self)
 --	end
---	local noTooltip = not (AutoBar.db.account.showTooltip and self.needsTooltip or AutoBar.moveButtonsMode)
---	noTooltip = noTooltip or (InCombatLockdown() and not AutoBar.db.account.showTooltipCombat) or (button == "OnLeave")
+--	local noTooltip = not (AutoBarDB2.settings.show_tooltip and self.needsTooltip or AutoBar.moveButtonsMode)
+--	noTooltip = noTooltip or (InCombatLockdown() and not AutoBarDB2.settings.show_tooltip_in_combat) or (button == "OnLeave")
 --	if (noTooltip) then
 --		self.updateTooltip = nil
 --		GameTooltip:Hide()
@@ -928,7 +925,7 @@ end
 --				end
 --			end
 --			self.updateTooltip = TOOLTIP_UPDATE_TIME
---			if (AutoBar.db.account.showTooltipExtended) then
+--			if (AAutoBarDB2.settings.showTooltipExtended) then
 --				print("GameTooltip_ShowCompareItem")
 --				GameTooltip_ShowCompareItem()
 --			end
@@ -937,8 +934,8 @@ end
 --			local spellName = self:GetAttribute("spell")
 --
 --			if (spellName) then
---				local spellInfo = AutoBarSearch.spells[spellName]
---				GameTooltip:SetSpellBookItem(spellInfo.spellId, spellInfo.spellTab)
+--				local spellInfo = AutoBarSearch.GetRegisteredSpellInfo(spellName)
+--				GameTooltip:SetSpellBookItem(spellInfo.spell_id, spellInfo.spellTab)
 --			end
 --			self.updateTooltip = TOOLTIP_UPDATE_TIME
 --		end
@@ -1186,10 +1183,10 @@ function AutoBarButtonClassBuff.prototype:init(parentBar, buttonDB)
 end
 
 function AutoBarButtonClassBuff.prototype:SetupAttributes(button, bag, slot, spell, macroId, p_type_id, p_info_data, itemId, itemData)
-	local selfCastRightClick = AutoBar.db.account.selfCastRightClick
-	AutoBar.db.account.selfCastRightClick = nil
+	local selfCastRightClick = AutoBarDB2.settings.self_cast_right_click
+	AutoBarDB2.settings.self_cast_right_click = nil
 	AutoBarButtonClassBuff.super.prototype.SetupAttributes(self, button, bag, slot, spell, macroId, p_type_id, p_info_data, itemId, itemData)
-	AutoBar.db.account.selfCastRightClick = selfCastRightClick
+	AutoBarDB2.settings.self_cast_right_click = selfCastRightClick
 end
 
 local AutoBarButtonClassPets2 = AceOO.Class(AutoBarButton)
@@ -1499,6 +1496,8 @@ function AutoBarButtonFishing.prototype:init(parentBar, buttonDB)
 	self:AddCategory("Muffin.Skill.Fishing.Pole")
 	self:AddCategory("Muffin.Skill.Fishing.Rare Fish")
 	if (ABGData.is_mainline_wow) then
+		AutoBarCategoryList["Muffin.Toys.Fishing"].only_favourites = false
+
 		self:AddCategory("Muffin.Toys.Fishing")
 	end
 
@@ -1700,9 +1699,11 @@ function AutoBarButtonHearth.prototype:init(parentBar, buttonDB)
 
 	if (ABGData.is_mainline_wow) then
 		AutoBarCategoryList["Muffin.Toys.Hearth"].only_favourites = buttonDB.only_favourite_hearth
+		AutoBarCategoryList["Muffin.Toys.Portal"].only_favourites = false
 
 		self:AddCategory("Muffin.Toys.Hearth")
 		self:AddCategory("Muffin.Toys.Portal")
+
 
 		if(buttonDB.hearth_include_challenge_portals) then
 			self:AddCategory("Spell.ChallengePortals")
@@ -1972,7 +1973,7 @@ function AutoBarButtonTotemAir.prototype:UpdateCooldown()
 
 		if (start and duration and enabled and start > 0 and duration > 0) then
 			self.frame.cooldown:Show() -- ToDo: necessary?
-			CooldownFrame_Set(self.frame.cooldown, start, duration, enabled)
+			CooldownFrame_Set(self.frame.cooldown, start, duration, 1)
 		else
 			CooldownFrame_Set(self.frame.cooldown, 0, 0, 0)
 		end
@@ -2191,8 +2192,8 @@ AutoBar.Class["AutoBarButtonWater"] = AutoBarButtonWater
 function AutoBarButtonWater.prototype:init(parentBar, buttonDB)
 	AutoBarButtonWater.super.prototype.init(self, parentBar, buttonDB)
 
-	if (AutoBar.CLASS == "MAGE" and not buttonDB.disableConjure) then
-		self:AddCategory("Spell.Mage.Conjure Water")
+	if (AutoBar.CLASS == "MAGE" and not buttonDB.disableConjure and not ABGData.is_mainline_wow) then
+			self:AddCategory("Spell.Mage.Conjure Water")
 	end
 
 	if (ABGCode.ClassUsesMana(AutoBar.CLASS)) then
@@ -2400,10 +2401,12 @@ elseif (ABGData.is_mainline_wow) then
 		self:AddCategory("Muffin.Battle Pet Items.Bandages")
 		self:AddCategory("Muffin.Battle Pet Items.Pet Treat")
 
+		AutoBarCategoryList["Muffin.Toys.Pet Battle"].only_favourites = false
 		self:AddCategory("Muffin.Toys.Pet Battle")
 		self:AddCategory("Spell.Pet Battle")
 
 		if(buttonDB.show_ornamental == true) then
+			AutoBarCategoryList["Muffin.Toys.Companion Pet.Ornamental"].only_favourites = false
 			self:AddCategory("Muffin.Toys.Companion Pet.Ornamental")
 		end
 
@@ -2412,7 +2415,7 @@ elseif (ABGData.is_mainline_wow) then
 	function AutoBarButtonBattlePetItems.prototype:AddOptions(optionList, passValue)
 		self:SetOptionBoolean(optionList, passValue, "show_ornamental", L["Muffin.Toys.Pet Battle_ShowOrnamental"])
 	end
-
+--[[
 	-------------------------- AutoBarButtonToyBox ---------------------
 	local AutoBarButtonToyBox = AceOO.Class(AutoBarButton)
 	AutoBar.Class["AutoBarButtonToyBox"] = AutoBarButtonToyBox
@@ -2428,8 +2431,8 @@ elseif (ABGData.is_mainline_wow) then
 		end
 		self:AddCategory("Toys.ToyBox")
 
-		if (not AutoBar.db.char.buttonDataList[buttonDB.buttonKey]) then
-			AutoBar.db.char.buttonDataList[buttonDB.buttonKey] = {}
+		if (not AutoBar.char.buttonDataList[buttonDB.buttonKey]) then
+			AutoBar.char.buttonDataList[buttonDB.buttonKey] = {}
 		end
 
 		if(buttonDB.toybox_only_show_favourites == nil) then buttonDB.toybox_only_show_favourites = false end
@@ -2506,7 +2509,7 @@ elseif (ABGData.is_mainline_wow) then
 	function AutoBarButtonToyBox.prototype:AddOptions(optionList, passValue)
 		self:SetOptionBoolean(optionList, passValue, "toybox_only_show_favourites", L["ToyBoxOnlyFavourites"])
 	end
-
+ ]]
 	-------------------------- AutoBarButtonMount ---------------------
 
 	local AutoBarButtonMount = AceOO.Class(AutoBarButton)
@@ -2516,10 +2519,10 @@ elseif (ABGData.is_mainline_wow) then
 		AutoBarButtonMount.super.prototype.init(self, parentBar, buttonDB)
 	--print("AutoBarButtonMount.prototype:init");
 
-		local buttonData = AutoBar.db.char.buttonDataList[buttonDB.buttonKey]
+		local buttonData = AutoBar.char.buttonDataList[buttonDB.buttonKey]
 		if (not buttonData) then
 			buttonData = {}
-			AutoBar.db.char.buttonDataList[buttonDB.buttonKey] = buttonData
+			AutoBar.char.buttonDataList[buttonDB.buttonKey] = buttonData
 		end
 
 		if(buttonDB.mount_show_qiraji == nil) then buttonDB.mount_show_qiraji = false end
@@ -2570,8 +2573,9 @@ elseif (ABGData.is_mainline_wow) then
 		C_MountJournal.SetCollectedFilterSetting(LE_MOUNT_JOURNAL_FILTER_NOT_COLLECTED, false);
 		C_MountJournal.SetCollectedFilterSetting(LE_MOUNT_JOURNAL_FILTER_UNUSABLE, false);
 
-		local num_mounts = C_MountJournal.GetNumDisplayedMounts();
-		local needs_update = (num_mounts ~= AutoBar.last_mount_count) or buttonDB.is_dirty
+		local mount_ids = C_MountJournal.GetMountIDs()
+		local num_mounts = #mount_ids
+		local needs_update = (num_mounts > AutoBar.last_mount_count) or buttonDB.is_dirty
 
 	--print("NumMounts:" .. num_mounts .. " UpdateMount:" .. tostring(updateMount) .. "  Last Count:" .. AutoBar.last_mount_count, "Dirty:", buttonDB.is_dirty, "NeedsUpdate:", needs_update)
 	--print(debugstack(1, 3, 3));
@@ -2586,25 +2590,29 @@ elseif (ABGData.is_mainline_wow) then
 
 			thisIsSpam = category.initialized --or (# category.castList ~= count)
 
-			for idx = 0, num_mounts do
-				local name, spell_id, icon, _active, _usable, _src, is_favourite, _faction_specific, _faction, _is_hidden, is_collected, _mount_id = C_MountJournal.GetDisplayedMountInfo(idx)
-				local user_selected = (is_favourite and buttonDB.mount_show_favourites) or (not is_favourite and buttonDB.mount_show_nonfavourites)
-				local qiraji_filtered = (not buttonDB.mount_show_qiraji and ABGData.QirajiMounts[spell_id]) or false;
+			for _k, id in ipairs(mount_ids) do
+				local mount_data = ABGCode.GetMountInfoByID(id)
+				--local name, spell_id, icon, _active, _usable, _src, is_favourite, _faction_specific, _faction, _is_hidden, is_collected, _mount_id = C_MountJournal.GetDisplayedMountInfo(idx)
+				local user_selected = (mount_data.is_favourite and buttonDB.mount_show_favourites) or (not mount_data.is_favourite and buttonDB.mount_show_nonfavourites)
+				local qiraji_filtered = (not buttonDB.mount_show_qiraji and ABGData.QirajiMounts[mount_data.spell_id]) or false;
 	--if (name == "Emerald Raptor" or name=="Albino Drake" or name == "Creeping Carpet" or name == "Dreadsteed" ) then
 	--if (is_collected and is_hidden ) then
 	--	print(string.format("%5s  %5s  Usable:%5s", mount_id, spell_id, tostring(usable)), name)
 	--	print("   FacSpecific:",faction_specific, "Faction:", faction, "Hidden:", is_hidden, "Collected:", is_collected)
 	--	print("   ", AutoBar.player_faction_name, faction_id, "==", faction, "=>", faction_ok)
 	--end;
-				if (is_collected and user_selected and not qiraji_filtered) then
-					local spell_name = GetSpellInfo(spell_id)
+				if (mount_data.is_collected and user_selected and not qiraji_filtered) then
+					local spell_name = GetSpellInfo(mount_data.spell_id)
 					--print("Name:", name, "SpellName:", spell_name, "SpellID:", spell_id, "Usable:", usable);
-					if not spell_name then print("AutoBar Error: Missing spell name for", spell_id, name); end
-					spellIconList[spell_name] = icon
-					AutoBarSearch:RegisterSpell(spell_name, spell_id, true)
-					local spellInfo = AutoBarSearch.spells[spell_name]
-					spellInfo.spellLink = "spell:" .. spell_id
-					category.castList[# category.castList + 1] = spell_name
+					if not spell_name then
+						--print("AutoBar Error: Missing spell name for", spell_id, name);
+					else
+						spellIconList[spell_name] = mount_data.icon
+						AutoBarSearch:RegisterSpell(spell_name, mount_data.spell_id, true)
+						local spellInfo = AutoBarSearch.GetRegisteredSpellInfo(spell_name)
+						spellInfo.spell_link = "spell:" .. mount_data.spell_id
+						category.castList[# category.castList + 1] = spell_name
+					end
 				end
 
 			end
@@ -2725,8 +2733,8 @@ elseif (ABGData.is_mainline_wow) then
 	--			spellName = GetSpellInfo(spellID)
 	--			spellIconList[spellName] = icon
 	--			AutoBarSearch:RegisterSpell(spellName, spellID, true)
-	--			local spellInfo = AutoBarSearch.spells[spellName]
-	--			spellInfo.spellLink = "spell:" .. spellID
+	--			local spellInfo = AutoBarSearch.GetRegisteredSpellInfo(spellName)
+	--			spellInfo.spell_link = "spell:" .. spellID
 	--			category.castList[index] = spellName
 			end
 		end

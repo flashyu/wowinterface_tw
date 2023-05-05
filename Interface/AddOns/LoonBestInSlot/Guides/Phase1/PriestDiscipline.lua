@@ -2,21 +2,17 @@ local spec = LBIS:RegisterSpec(LBIS.L["Priest"], LBIS.L["Discipline"], "1")
 
 LBIS:AddItem(spec, "40562", LBIS.L["Head"], "BIS") --Hood of Rationality
 LBIS:AddItem(spec, "40456", LBIS.L["Head"], "BIS") --Valorous Circlet of Faith
-LBIS:AddItem(spec, "40631", LBIS.L["Head"], "BIS") --Crown of the Lost Conqueror
 LBIS:AddItem(spec, "40287", LBIS.L["Head"], "BIS") --Cowl of Vanity
 LBIS:AddItem(spec, "43995", LBIS.L["Head"], "Alt") --Enamored Cowl
 LBIS:AddItem(spec, "40447", LBIS.L["Head"], "Alt") --Valorous Crown of Faith
 LBIS:AddItem(spec, "40339", LBIS.L["Head"], "Alt") --Gothik's Cowl
 LBIS:AddItem(spec, "39521", LBIS.L["Head"], "Alt") --Heroes' Circlet of Faith
-LBIS:AddItem(spec, "40616", LBIS.L["Head"], "Alt") --Helm of the Lost Conqueror
 
 LBIS:AddItem(spec, "40555", LBIS.L["Shoulder"], "BIS") --Mantle of Dissemination
 LBIS:AddItem(spec, "40450", LBIS.L["Shoulder"], "BIS") --Valorous Shoulderpads of Faith
-LBIS:AddItem(spec, "40637", LBIS.L["Shoulder"], "BIS") --Mantle of the Lost Conqueror
 LBIS:AddItem(spec, "40289", LBIS.L["Shoulder"], "BIS") --Sympathetic Amice
 LBIS:AddItem(spec, "40351", LBIS.L["Shoulder"], "Alt") --Mantle of the Fatigued Sage
 LBIS:AddItem(spec, "39518", LBIS.L["Shoulder"], "Alt") --Heroes' Shoulderpads of Faith
-LBIS:AddItem(spec, "40622", LBIS.L["Shoulder"], "Alt") --Spaulders of the Lost Conqueror
 LBIS:AddItem(spec, "40459", LBIS.L["Shoulder"], "Alt") --Valorous Mantle of Faith
 LBIS:AddItem(spec, "39719", LBIS.L["Shoulder"], "Alt") --Mantle of the Locusts
 LBIS:AddItem(spec, "39310", LBIS.L["Shoulder"], "Alt") --Mantle of the Extensive Mind
@@ -35,11 +31,9 @@ LBIS:AddItem(spec, "42065", LBIS.L["Back"], "Alt") --Deadly Gladiator's Cloak of
 LBIS:AddItem(spec, "40194", LBIS.L["Chest"], "BIS") --Blanketing Robes of Snow
 LBIS:AddItem(spec, "40381", LBIS.L["Chest"], "BIS") --Sympathy
 LBIS:AddItem(spec, "40449", LBIS.L["Chest"], "BIS") --Valorous Robe of Faith
-LBIS:AddItem(spec, "40625", LBIS.L["Chest"], "BIS") --Breastplate of the Lost Conqueror
 LBIS:AddItem(spec, "40602", LBIS.L["Chest"], "Alt") --Robes of Mutation
 LBIS:AddItem(spec, "44002", LBIS.L["Chest"], "Alt") --The Sanctum's Flowing Vestments
 LBIS:AddItem(spec, "39515", LBIS.L["Chest"], "Alt") --Heroes' Robe of Faith
-LBIS:AddItem(spec, "40610", LBIS.L["Chest"], "Alt") --Chestguard of the Lost Conqueror
 
 LBIS:AddItem(spec, "44008", LBIS.L["Wrist"], "BIS") --Unsullied Cuffs
 LBIS:AddItem(spec, "40338", LBIS.L["Wrist"], "Alt") --Bindings of Yearning
@@ -49,11 +43,9 @@ LBIS:AddItem(spec, "39731", LBIS.L["Wrist"], "Alt") --Punctilious Bindings
 
 LBIS:AddItem(spec, "40303", LBIS.L["Hands"], "BIS") --Wraps of the Persecuted
 LBIS:AddItem(spec, "40445", LBIS.L["Hands"], "BIS") --Valorous Gloves of Faith
-LBIS:AddItem(spec, "40628", LBIS.L["Hands"], "BIS") --Gauntlets of the Lost Conqueror
 LBIS:AddItem(spec, "40454", LBIS.L["Hands"], "BIS") --Valorous Handwraps of Faith
 LBIS:AddItem(spec, "39733", LBIS.L["Hands"], "Alt") --Gloves of Token Respect
 LBIS:AddItem(spec, "37172", LBIS.L["Hands"], "Alt") --Gloves of Glistening Runes
-LBIS:AddItem(spec, "40613", LBIS.L["Hands"], "Alt") --Gloves of the Lost Conqueror
 LBIS:AddItem(spec, "39519", LBIS.L["Hands"], "Alt") --Heroes' Gloves of Faith
 
 LBIS:AddItem(spec, "40561", LBIS.L["Waist"], "BIS") --Leash of Heedless Magic
@@ -67,12 +59,10 @@ LBIS:AddItem(spec, "40696", LBIS.L["Waist"], "Alt") --Plush Sash of Guzbah
 
 LBIS:AddItem(spec, "40398", LBIS.L["Legs"], "BIS") --Leggings of Mortal Arrogance
 LBIS:AddItem(spec, "40448", LBIS.L["Legs"], "Alt") --Valorous Leggings of Faith
-LBIS:AddItem(spec, "40634", LBIS.L["Legs"], "Alt") --Legplates of the Lost Conqueror
 LBIS:AddItem(spec, "40457", LBIS.L["Legs"], "Alt") --Valorous Pants of Faith
 LBIS:AddItem(spec, "40060", LBIS.L["Legs"], "Alt") --Distorted Limbs
 LBIS:AddItem(spec, "39517", LBIS.L["Legs"], "Alt") --Heroes' Leggings of Faith
 LBIS:AddItem(spec, "39528", LBIS.L["Legs"], "Alt") --Heroes' Pants of Faith
-LBIS:AddItem(spec, "40619", LBIS.L["Legs"], "Alt") --Leggings of the Lost Conqueror
 LBIS:AddItem(spec, "39309", LBIS.L["Legs"], "Alt") --Leggings of the Instructor
 LBIS:AddItem(spec, "39408", LBIS.L["Legs"], "Alt") --Leggings of Sapphiron
 LBIS:AddItem(spec, "37189", LBIS.L["Legs"], "Alt") --Breeches of the Caller
@@ -113,7 +103,10 @@ LBIS:AddItem(spec, "42132", LBIS.L["Trinket"], "Alt") --Battlemaster's Bravery
 LBIS:AddItem(spec, "42988", LBIS.L["Trinket"], "Alt") --Darkmoon Card: Illusion
 LBIS:AddItem(spec, "37835", LBIS.L["Trinket"], "Alt") --Je'Tze's Bell
 LBIS:AddItem(spec, "40258", LBIS.L["Trinket"], "Alt") --Forethought Talisman
+LBIS:AddItem(spec, "40685", LBIS.L["Trinket"], "Alt") --The Egg of Mortal Essence
+LBIS:AddItem(spec, "37660", LBIS.L["Trinket"], "Alt") --Forge Ember
 LBIS:AddItem(spec, "40382", LBIS.L["Trinket"], "Alt") --Soul of the Dead
+LBIS:AddItem(spec, "37657", LBIS.L["Trinket"], "Alt") --Spark of Life
 
 LBIS:AddItem(spec, "40395", LBIS.L["Main Hand"], "BIS") --Torch of Holy Fire
 LBIS:AddItem(spec, "40488", LBIS.L["Main Hand"], "Alt") --Ice Spire Scepter
@@ -127,19 +120,20 @@ LBIS:AddItem(spec, "37169", LBIS.L["Main Hand"], "Alt") --War Mace of Unrequited
 LBIS:AddItem(spec, "41384", LBIS.L["Main Hand"], "Alt") --Titansteel Guardian
 LBIS:AddItem(spec, "39281", LBIS.L["Main Hand"], "Alt") --Infection Repulser
 
-LBIS:AddItem(spec, "39766", LBIS.L["Off Hand"], "BIS") --Matriarch's Spawn
 LBIS:AddItem(spec, "40350", LBIS.L["Off Hand"], "BIS") --Urn of Lost Memories
+LBIS:AddItem(spec, "39766", LBIS.L["Off Hand"], "BIS") --Matriarch's Spawn
 LBIS:AddItem(spec, "40192", LBIS.L["Off Hand"], "BIS") --Accursed Spine
 LBIS:AddItem(spec, "44210", LBIS.L["Off Hand"], "Alt") --Faces of Doom
 LBIS:AddItem(spec, "39311", LBIS.L["Off Hand"], "Alt") --Scepter of Murmuring Spirits
 LBIS:AddItem(spec, "40699", LBIS.L["Off Hand"], "Alt") --Handbook of Obscure Remedies
 
 LBIS:AddItem(spec, "40245", LBIS.L["Ranged/Relic"], "BIS") --Fading Glow
-LBIS:AddItem(spec, "34348", LBIS.L["Ranged/Relic"], "BIS") --Wand of Cleansing Light
-LBIS:AddItem(spec, "34347", LBIS.L["Ranged/Relic"], "BIS") --Wand of the Demonsoul
+LBIS:AddItem(spec, "40284", LBIS.L["Ranged/Relic"], "BIS") --Plague Igniter
+LBIS:AddItem(spec, "40335", LBIS.L["Ranged/Relic"], "BIS") --Touch of Horror
 LBIS:AddItem(spec, "39426", LBIS.L["Ranged/Relic"], "Alt") --Wand of the Archlich
-LBIS:AddItem(spec, "40335", LBIS.L["Ranged/Relic"], "Alt") --Touch of Horror
-LBIS:AddItem(spec, "40284", LBIS.L["Ranged/Relic"], "Alt") --Plague Igniter
+LBIS:AddItem(spec, "34348", LBIS.L["Ranged/Relic"], "Alt") --Wand of Cleansing Light
+LBIS:AddItem(spec, "34347", LBIS.L["Ranged/Relic"], "Alt") --Wand of the Demonsoul
 LBIS:AddItem(spec, "39712", LBIS.L["Ranged/Relic"], "Alt") --Gemmed Wand of the Nerubians
 LBIS:AddItem(spec, "39473", LBIS.L["Ranged/Relic"], "Alt") --Contortion
 LBIS:AddItem(spec, "37238", LBIS.L["Ranged/Relic"], "Alt") --Rod of the Fallen Monarch
+LBIS:AddItem(spec, "37619", LBIS.L["Ranged/Relic"], "Alt") --Wand of Ahn'kahet

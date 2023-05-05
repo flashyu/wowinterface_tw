@@ -4,9 +4,35 @@ local find = _G.string.find
 local fuFrame=List_R_F_2_1
 local ADD_Frame=addonTable.ADD_Frame
 local ADD_Checkbutton=addonTable.ADD_Checkbutton
-local PIGDownMenu=addonTable.PIGDownMenu
+local Create=addonTable.Create
+local PIGDownMenu=Create.PIGDownMenu
 local _, _, _, tocversion = GetBuildInfo()
+-----------------
+local ContainerIDToInventoryID = ContainerIDToInventoryID or (C_Container and C_Container.ContainerIDToInventoryID)
+local GetContainerItemInfo=GetContainerItemInfo or (C_Container and C_Container.GetContainerItemInfo)
+local GetContainerItemID = GetContainerItemID or (C_Container and C_Container.GetContainerItemID)
+local GetContainerItemLink = GetContainerItemLink or (C_Container and C_Container.GetContainerItemLink)
+local GetContainerNumFreeSlots = GetContainerNumFreeSlots or (C_Container and C_Container.GetContainerNumFreeSlots)
+local GetContainerNumSlots = GetContainerNumSlots or (C_Container and C_Container.GetContainerNumSlots)
+local PickupContainerItem = PickupContainerItem or (C_Container and C_Container.PickupContainerItem)
+local SplitContainerItem = SplitContainerItem or (C_Container and C_Container.SplitContainerItem)
+local SortBags = SortBags or (C_Container and C_Container.SortBags)
+local SortBankBags = SortBankBags or (C_Container and C_Container.SortBankBags)
+local SortReagentBankBags = SortReagentBankBags or (C_Container and C_Container.SortReagentBankBags)
+local SetItemSearch = SetItemSearch or (C_Container and C_Container.SetItemSearch)
+local GetBagSlotFlag = GetBagSlotFlag or (C_Container and C_Container.GetBagSlotFlag)
+local SetBagSlotFlag = SetBagSlotFlag or (C_Container and C_Container.SetBagSlotFlag)
+local GetBankBagSlotFlag = GetBankBagSlotFlag or (C_Container and C_Container.GetBankBagSlotFlag)
+local SetBankBagSlotFlag = SetBankBagSlotFlag or (C_Container and C_Container.SetBankBagSlotFlag)
+local GetBackpackAutosortDisabled = GetBackpackAutosortDisabled or (C_Container and C_Container.GetBackpackAutosortDisabled)
+local GetBankAutosortDisabled = GetBankAutosortDisabled or (C_Container and C_Container.GetBankAutosortDisabled)
+local GetContainerItemCooldown = GetContainerItemCooldown or (C_Container and C_Container.GetContainerItemCooldown)
+local SetBackpackAutosortDisabled = SetBackpackAutosortDisabled or (C_Container and C_Container.SetBackpackAutosortDisabled)
+local SetInsertItemsLeftToRight = SetInsertItemsLeftToRight or (C_Container and C_Container.SetInsertItemsLeftToRight)
+local GetInsertItemsLeftToRight = GetInsertItemsLeftToRight or (C_Container and C_Container.GetInsertItemsLeftToRight)
+local UseContainerItem = UseContainerItem or (C_Container and C_Container.UseContainerItem)
 --==========================================
+local PIGBagBank=addonTable.PIGBagBank
 local yinhangmorengezishu={}
 if tocversion<20000 then
 	yinhangmorengezishu={24,6}
@@ -290,6 +316,7 @@ local function SAVE_lixian_data(bagID, slot,wupinshujuinfo)
 	end
 end
 local function SAVE_C()
+	if InCombatLockdown() then return end
 	local wupinshujuinfo = {}
 	for inv = 1, 19 do
 		local wupinxinxi={nil,nil,1}--1物品ID/2itemLink/3数量
@@ -304,6 +331,7 @@ local function SAVE_C()
 	PIG["zhegnheBAG"]["lixian"][PIG_renwuming]["C"] = wupinshujuinfo
 end
 local function SAVE_BAG()
+	if InCombatLockdown() then return end
 	local wupinshujuinfo = {}
 	for f=1,#bagID do
 		for ff=1,GetContainerNumSlots(bagID[f]) do
@@ -313,7 +341,8 @@ local function SAVE_BAG()
 	PIG["zhegnheBAG"]["lixian"][PIG_renwuming]["BAG"] = wupinshujuinfo
 	PIG["zhegnheBAG"]["lixian"][PIG_renwuming]["G"] = GetMoney();
 end
-local function SAVE_bank()
+local function SAVE_BANK()
+	if InCombatLockdown() then return end
 	if BankFrame:IsShown() then
 		local wupinshujuinfo = {}
 		for f=1,#bankID do
@@ -966,13 +995,13 @@ local function zhegnhe_Open()
 		info.func = self.PIGDownMenu_SetValue
 		for i=1,#BAGsuofangbili,1 do
 		    info.text, info.arg1 = BAGsuofangbili[i], BAGsuofangbili[i]
-		    info.checked = BAGsuofangbili[i]==PIG["zhegnheBAG"]["BAGsuofangshu_suofang"]
+		    info.checked = BAGsuofangbili[i]==PIG["zhegnheBAG"]["BAGsuofangBili"]
 			BAGheji.biaoti.shezhi.F.suofang:PIGDownMenu_AddButton(info)
-		end 
+		end
 	end
 	function BAGheji.biaoti.shezhi.F.suofang:PIGDownMenu_SetValue(value,arg1,arg2)
 		BAGheji.biaoti.shezhi.F.suofang:PIGDownMenu_SetText(value)
-		PIG["zhegnheBAG"]["BAGsuofangshu_suofang"] = arg1;
+		PIG["zhegnheBAG"]["BAGsuofangBili"] = arg1;
 		bagID.suofang = arg1;
 		BAGheji_UI:SetScale(arg1)
 		PIGCloseDropDownMenus()
@@ -1055,7 +1084,7 @@ local function zhegnhe_Open()
 
 	BAGheji.AutoSort:SetScript("OnClick",  function (self)
 		PlaySoundFile(567463, "Master")
-		SortBagsPIG()
+		PIGBagBank.SortBags()
 	end);
 	--分类设置
 	for vb=1,13 do
@@ -1114,7 +1143,11 @@ local function zhegnhe_Open()
 	BAGheji.fenlei:SetScript("OnClick",  function (self)
 		if BAGheji.fenlei.show then
 			BAGheji.fenlei.show=false
-			self.Tex:SetRotation(0, 0.4, 0.5)
+			if tocversion<20000 then
+				self.Tex:SetRotation(0, 0.4, 0.5)
+			else
+				self.Tex:SetRotation(0, {x=0.4, y=0.5})
+			end
 			for vb=1,#bagID do
 				local Fid=IsBagOpen(bagID[vb])
 				if Fid then
@@ -1123,7 +1156,11 @@ local function zhegnhe_Open()
 			end
 		else
 			BAGheji.fenlei.show=true
-			self.Tex:SetRotation(-3.1415926, 0.4, 0.5)
+			if tocversion<20000 then
+				self.Tex:SetRotation(-3.1415926, 0.4, 0.5)
+			else
+				self.Tex:SetRotation(-3.1415926, {x=0.4, y=0.5})
+			end
 			local bagicon={
 				133633,
 				CharacterBag0SlotIconTexture:GetTexture(),
@@ -1257,7 +1294,7 @@ local function zhegnhe_Open()
 	end);
 	BankFrame.AutoSort:SetScript("OnClick",  function (self)
 		PlaySoundFile(567463, "Master")
-		SortBankBagsPIG()
+		PIGBagBank.SortBankBags()
 	end);
 	--分类设置
 	BankSlotsFrame.fenlei = CreateFrame("Button",nil,BankSlotsFrame, "TruncatedButtonTemplate");
@@ -1282,7 +1319,11 @@ local function zhegnhe_Open()
 	BankSlotsFrame.fenlei:SetScript("OnClick",  function (self)
 		if BankSlotsFrame.fenlei.show then
 			BankSlotsFrame.fenlei.show=false
-			self.Tex:SetRotation(0, 0.4, 0.5)
+			if tocversion<20000 then
+				self.Tex:SetRotation(0, 0.4, 0.5)
+			else
+				self.Tex:SetRotation(0, {x=0.4, y=0.5})
+			end
 			for vb=2,#bankID do
 				local Fid=IsBagOpen(bankID[vb])
 				if Fid then
@@ -1291,7 +1332,11 @@ local function zhegnhe_Open()
 			end
 		else
 			BankSlotsFrame.fenlei.show=true
-			self.Tex:SetRotation(-3.1415926, 0.4, 0.5)
+			if tocversion<20000 then
+				self.Tex:SetRotation(-3.1415926, 0.4, 0.5)
+			else
+				self.Tex:SetRotation(-3.1415926, {x=0.4, y=0.5})
+			end
 			for vb=2,#bankID do
 				local Fid=IsBagOpen(bankID[vb])
 				if Fid then
@@ -1304,7 +1349,11 @@ local function zhegnhe_Open()
 	end);
 	BankSlotsFrame:HookScript("OnHide", function(self)
 		self.fenlei.show=false
-		self.fenlei.Tex:SetRotation(0, 0.4, 0.5)
+		if tocversion<20000 then
+			BankSlotsFrame.fenlei.Tex:SetRotation(0, 0.4, 0.5)
+		else
+			BankSlotsFrame.fenlei.Tex:SetRotation(0, {x=0.4, y=0.5})
+		end
 	end);
 	---
 	ADD_BagBankBGtex(BankFrame,"pig_BankFrame_")
@@ -1395,7 +1444,7 @@ local function zhegnhe_Open()
 				shuaxinyinhangMOREN(arg1)
 			end
 			if PIG["zhegnheBAG"]["wupinRanse"] then shuaxinyinhangMOREN_ranse(arg1) end
-			C_Timer.After(0.4,SAVE_bank)
+			C_Timer.After(0.4,SAVE_BANK)
 		end
 		if event=="BAG_UPDATE_DELAYED" then
 			if lixianBank_UI:IsShown() then
@@ -1416,7 +1465,7 @@ local function zhegnhe_Open()
 					shuaxinyinhangMOREN_ranse(i) 
 				end
 			end
-			C_Timer.After(0.4,SAVE_bank)
+			C_Timer.After(0.4,SAVE_BANK)
 		end
 	end)
 	---------------------
@@ -1468,16 +1517,18 @@ local function zhegnhe_Open()
 		end
 		if event=="BAG_UPDATE" then
 			if arg1>=0 and arg1<5 then
+				if ContainerFrame1Item1:IsVisible() then
+					if PIG["zhegnheBAG"]["wupinLV"] then Bag_Item_lv(nil, nil, arg1) end
+					if PIG["zhegnheBAG"]["wupinRanse"] then Bag_Item_Ranse(nil, nil, arg1) end
+					if PIG["zhegnheBAG"]["JunkShow"] then Bag_Item_Junk(nil, nil, arg1) end
+				end
 				C_Timer.After(0.4,SAVE_BAG)
-				if PIG["zhegnheBAG"]["wupinLV"] then Bag_Item_lv(nil, nil, arg1) end
-				if PIG["zhegnheBAG"]["wupinRanse"] then Bag_Item_Ranse(nil, nil, arg1) end
-				if PIG["zhegnheBAG"]["JunkShow"] then Bag_Item_Junk(nil, nil, arg1) end
 			end
 			if BankFrame:IsShown() then
 				if arg1>4 then
 					if PIG["zhegnheBAG"]["wupinLV"] then Bag_Item_lv(nil, nil, arg1) end
 					if PIG["zhegnheBAG"]["wupinRanse"] then Bag_Item_Ranse(nil, nil, arg1) end
-					C_Timer.After(0.4,SAVE_bank)
+					C_Timer.After(0.4,SAVE_BANK)
 				end
 			end
 		end
@@ -1610,7 +1661,11 @@ local function zhegnhe_Open()
 	hooksecurefunc('CloseBackpack', function()
 		BAGheji:Hide()
 		BAGheji.fenlei.show=false
-		BAGheji.fenlei.Tex:SetRotation(0, 0.4, 0.5)
+		if tocversion<20000 then
+			BAGheji.fenlei.Tex:SetRotation(0, 0.4, 0.5)
+		else
+			BAGheji.fenlei.Tex:SetRotation(0, {x=0.4, y=0.5})
+		end
 	end);
 	UIParent:HookScript("OnHide", function(self)
 		BAGheji:Hide()
@@ -1620,12 +1675,12 @@ local function zhegnhe_Open()
 	end)
 end
 --==========================================================
-fuFrame.beibaozhenghe = ADD_Checkbutton(nil,fuFrame,-50,"TOPLEFT",fuFrame,"TOPLEFT",20,-20,"启用背包/银行整合","整合背包/银行为一个大包裹")
+fuFrame.beibaozhenghe = ADD_Checkbutton(nil,fuFrame,-120,"TOPLEFT",fuFrame,"TOPLEFT",20,-20,"启用背包/银行整合","整合背包/银行为一个大包裹")
 fuFrame.beibaozhenghe:SetScript("OnClick", function (self)
 	if self:GetChecked() then
 		PIG["zhegnheBAG"]["Open"]="ON";
 		zhegnhe_Open()
-		addonTable.qiyongzidongzhengli()
+		PIGBagBank.qiyongzidongzhengli()
 	else
 		PIG["zhegnheBAG"]["Open"]="OFF";
 		Pig_Options_RLtishi_UI:Show()
@@ -1635,29 +1690,22 @@ end);
 -------------
 --背包剩余
 local function gengxinbeibaoshengyugeshu()
-	MainMenuBarBackpackButton.zongkongyu = 0
-	if tocversion<20000 then
-		for bag=BACKPACK_CONTAINER, NUM_BAG_SLOTS do 
-			local numberOfFreeSlots=GetContainerNumFreeSlots(bag);
-			MainMenuBarBackpackButton.zongkongyu=MainMenuBarBackpackButton.zongkongyu+numberOfFreeSlots
-		end
-		MainMenuBarBackpackButton.Count:SetText(MainMenuBarBackpackButton.zongkongyu); 
-	else
-		local zongkongyu = MainMenuBarBackpackButton.Count:GetText() or "99"
-		local zongkongyu = zongkongyu:gsub("%(","")
-		local zongkongyu = zongkongyu:gsub("%)","")
-		MainMenuBarBackpackButton.zongkongyu=tonumber(zongkongyu)
-	end
-	if MainMenuBarBackpackButton.zongkongyu<10 then
+	if MainMenuBarBackpackButton.freeSlots<10 then
 		MainMenuBarBackpackButton.Count:SetTextColor(1, 0, 0, 1);
 	else
 		MainMenuBarBackpackButton.Count:SetTextColor(0, 1, 0, 1);
 	end
 end
 local function bigfontziti()
-	MainMenuBarBackpackButton.Count:SetFont(ChatFontNormal:GetFont(), 18, "OUTLINE");
-	MainMenuBarBackpackButton.Count:Show();
-	gengxinbeibaoshengyugeshu()
+	if PIG["zhegnheBAG"]['BAGkongyu']=="ON" then
+		SetCVar("displayFreeBagSlots", "1")
+		MainMenuBarBackpackButton.Count:Show()
+		MainMenuBarBackpackButton.Count:SetFont(ChatFontNormal:GetFont(), 18, "OUTLINE");
+		gengxinbeibaoshengyugeshu()
+	else
+		SetCVar("displayFreeBagSlots", "0")
+		MainMenuBarBackpackButton.Count:Hide()
+	end
 end
 MainMenuBarBackpackButton:HookScript("OnEvent", function(self,event,arg1)
 	if PIG["zhegnheBAG"]['BAGkongyu']=="ON" then
@@ -1670,21 +1718,21 @@ MainMenuBarBackpackButton:HookScript("OnEvent", function(self,event,arg1)
 	end
 end);
 ----
-fuFrame.BAGkongyu = ADD_Checkbutton(nil,fuFrame,-50,"TOPLEFT",fuFrame,"TOPLEFT",20,-80,"","")
-if tocversion<20000 then
-	fuFrame.BAGkongyu.Text:SetText("显示背包剩余空间");
-	fuFrame.BAGkongyu.tooltip = "在背包上显示背包的总剩余空间";
-else
-	fuFrame.BAGkongyu.Text:SetText("增大系统背包剩余空间数字");
-	fuFrame.BAGkongyu.tooltip = "增大系统的背包剩余空间数字(大于等于10显示绿色,小于10显示红色)\n|cff00FF00TBC以后的版本系统已自带背包剩余空间显示，请在ESC菜单-界面-显示内打开|r";
-end
+fuFrame.BAGkongyu = ADD_Checkbutton(nil,fuFrame,-120,"TOPLEFT",fuFrame,"TOPLEFT",20,-80,"显示背包剩余空间","在行囊显示背包剩余空间(大于等于10显示绿色,小于10显示红色)")
 fuFrame.BAGkongyu:SetScript("OnClick", function (self)
 	if self:GetChecked() then
 		PIG["zhegnheBAG"]['BAGkongyu']="ON";
-		bigfontziti()
 	else
 		PIG["zhegnheBAG"]['BAGkongyu']="OFF";
-		Pig_Options_RLtishi_UI:Show()
+	end
+	bigfontziti()	
+end);
+fuFrame:HookScript("OnShow", function(self)
+	if PIG["zhegnheBAG"]["Open"]=="ON" then
+		fuFrame.beibaozhenghe:SetChecked(true)
+	end
+	if PIG["zhegnheBAG"]['BAGkongyu']=="ON" then
+		fuFrame.BAGkongyu:SetChecked(true);
 	end
 end);
 --加载设置---------------
@@ -1692,14 +1740,9 @@ addonTable.BagBank = function()
 	local Pname = UnitFullName("player");
 	PIG_renwuming=Pname.."-"..GetRealmName()
 	if PIG["zhegnheBAG"]["Open"]=="ON" then
-		fuFrame.beibaozhenghe:SetChecked(true)
 		bagID.meihang=PIG["zhegnheBAG"]["BAGmeihangshu"] or bagID.meihang
-		bagID.suofang=PIG["zhegnheBAG"]["BAGsuofangshu_suofang"] or bagID.suofang
+		bagID.suofang=PIG["zhegnheBAG"]["BAGsuofangBili"] or bagID.suofang
 		zhegnhe_Open()
-		addonTable.qiyongzidongzhengli()
-	end
-	if PIG["zhegnheBAG"]['BAGkongyu']=="ON" then
-		fuFrame.BAGkongyu:SetChecked(true);
-		bigfontziti()
+		PIGBagBank.qiyongzidongzhengli()
 	end
 end

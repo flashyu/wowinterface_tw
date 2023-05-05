@@ -44,8 +44,20 @@ local function SkinNavBarButtons(self)
 	end
 end
 
+local function ClearSetTexture(texture, tex)
+	if tex ~= nil then
+		texture:SetTexture()
+	end
+end
+
 function S:BlizzardMiscFrames()
 	if not (E.private.skins.blizzard.enable and E.private.skins.blizzard.misc) then return end
+
+	local compartment = _G.AddonCompartmentFrame
+	if compartment then
+		compartment:StripTextures()
+		compartment:SetTemplate('Transparent')
+	end
 
 	for _, frame in next, { _G.AutoCompleteBox, _G.QueueStatusFrame } do
 		frame:StripTextures()
@@ -69,9 +81,9 @@ function S:BlizzardMiscFrames()
 	_G.ReadyCheckFrameText:Point('TOP', 0, -15)
 
 	-- Bug fix, don't show it if player is initiator
-	ReadyCheckFrame:HookScript('OnShow', function(self)
-		if self.initiator and UnitIsUnit('player', self.initiator) then
-			self:Hide()
+	ReadyCheckFrame:HookScript('OnShow', function(frame)
+		if frame.initiator and UnitIsUnit('player', frame.initiator) then
+			frame:Hide()
 		end
 	end)
 
@@ -255,10 +267,7 @@ function S:BlizzardMiscFrames()
 		local normTex = itemFrame:GetNormalTexture()
 		if normTex then
 			normTex:SetTexture()
-
-			hooksecurefunc(normTex, 'SetTexture', function(s, tex)
-				if tex ~= nil then s:SetTexture() end
-			end)
+			hooksecurefunc(normTex, 'SetTexture', ClearSetTexture)
 		end
 	end
 

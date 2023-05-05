@@ -11,15 +11,16 @@
 -- GLOBALS: SetCursor, ClearCursor, GetBindingKey, SetBinding, GetBindingText, SetOverrideBindingClick, InCombatLockdown, GameTooltip
 -- GLOBALS: RegisterStateDriver, CreateFrame, GetContainerItemInfo, GetItemCount, PickupContainerItem, IsConsumableItem, GetSpellTabInfo, GetSpellBookItemName
 -- GLOBALS: PickupItem, PickupSpellBookItem, PickupAction, PickupMacro, ItemHasRange, IsItemInRange, SpellHasRange, IsSpellInRange
+local _ADDON_NAME, AB = ... -- Pulls back the Addon-Local Variables and store them locally.
 
 local AutoBar = AutoBar
 local ABGCode = AutoBarGlobalCodeSpace
+local ABGData = AutoBarGlobalDataObject
 
 
 local AceOO = MMGHACKAceLibrary("AceOO-2.0")
 local L = AutoBarGlobalDataObject.locale
 local Masque = LibStub("Masque", true)
-local LibKeyBound = LibStub("LibKeyBound-1.0")
 local _
 local _G = _G
 
@@ -142,7 +143,7 @@ end
 function AutoBar.Class.Button:GetHotkey()
 	local frame = self
 	local key1 = GetBindingKey(frame.class.buttonName .. "_X")
-	local key = LibKeyBound:ToShortKey(key1)
+	local key = AB.LibKeyBound:ToShortKey(key1)
 --AutoBar:Print("AutoBar.Class.Button.prototype:GetHotkey key1 " .. tostring(key1) .. " -> " .. tostring(key))-- .. " buttonName " .. tostring(frame.class.buttonName))
 	return key
 end
@@ -234,11 +235,11 @@ end
 
 local function funcOnEnter(self)
 	if (self.GetHotkey and AutoBar.keyBoundMode) then
-		LibKeyBound:Set(self)
+		AB.LibKeyBound:Set(self)
 	end
 
-	local noTooltip = not (AutoBar.db.account.showTooltip and self.needsTooltip or AutoBar.moveButtonsMode)
-	noTooltip = noTooltip or (InCombatLockdown() and not AutoBar.db.account.showTooltipCombat)
+	local noTooltip = not (AutoBarDB2.settings.show_tooltip and self.needsTooltip or AutoBar.moveButtonsMode)
+	noTooltip = noTooltip or (InCombatLockdown() and not AutoBarDB2.settings.show_tooltip_in_combat)
 	if (noTooltip) then
 		self.UpdateTooltip = nil
 		GameTooltip:Hide()
@@ -256,17 +257,16 @@ function AutoBar.Class.Button.prototype:CreateButtonFrame()
 	local frame = CreateFrame("Button", name, self.parentBar.frame, "ActionButtonTemplate, SecureActionButtonTemplate, SecureHandlerBaseTemplate")
 	self.frame = frame
 
-	local buttonWidth = self.parentBar.buttonWidth or 36
-	local buttonHeight = self.parentBar.buttonHeight or 36
 	frame:ClearAllPoints()
-	frame:SetWidth(buttonWidth)
-	frame:SetHeight(buttonHeight)
+	frame:SetWidth(ABGData.default_button_width)
+	frame:SetHeight(ABGData.default_button_height)
 
 	-- Support selfcast and focuscast
 	frame:SetAttribute("checkselfcast", true)
 	frame:SetAttribute("checkfocuscast", true)
 
 	frame.class = self
+	frame:SetMouseClickEnabled()
 	frame:RegisterForClicks("AnyUp")
 	frame:RegisterForDrag("LeftButton", "RightButton")
 
@@ -336,10 +336,10 @@ end
 -- Return true if successful
 -- Return nil if not
 function AutoBar.Class.Button:ShuffleItem(itemId, targetBag, targetSlot, isNewItem)
-	local _, itemCount, locked = GetContainerItemInfo(targetBag, targetSlot)
+	local _, itemCount, _locked = GetContainerItemInfo(targetBag, targetSlot)
 	local totalCount = GetItemCount(itemId)
 	if (not itemCount and totalCount > 0) then
-		AutoBarSearch.stuff:ScanCombat()
+		AutoBarSearch:ScanBagsInCombat()
 	end
 
 --	if (isNewItem) then
@@ -464,7 +464,7 @@ function AutoBar.Class.Button.prototype:GetIconTexture()
 				borderColor = borderMoveDisabled
 			end
 		end
-	elseif ((AutoBar.db.account.showEmptyButtons or self.buttonDB.alwaysShow) and not texture) then
+	elseif ((AutoBarDB2.settings.show_empty_buttons or self.buttonDB.alwaysShow) and not texture) then
 		if (category and AutoBarCategoryList[category]) then
 			texture = AutoBarCategoryList[category].texture
 		end
@@ -538,7 +538,7 @@ function AutoBar.Class.Button.prototype:UpdateButton()
 end
 
 function AutoBar.Class.Button.prototype:UpdateHotkeys()
-	if (AutoBar.db.account.showHotkey) then
+	if (AutoBarDB2.settings.show_hotkey) then
 		self.frame.hotKey:Show()
 	else
 		self.frame.hotKey:Hide()
@@ -550,10 +550,10 @@ function AutoBar.Class.Button.prototype:UpdateHotkeys()
 	if (buttonBinding) then
 		key = GetBindingKey(buttonBinding)
 	else
-		key = LibKeyBound.Binder:GetBindings(frame)
+		key = AB.LibKeyBound.Binder:GetBindings(frame)
 	end
 	if (key) then
-		frame.hotKey:SetText(LibKeyBound:ToShortKey(GetBindingText(key, "KEY_", 1)))
+		frame.hotKey:SetText(AB.LibKeyBound:ToShortKey(GetBindingText(key, "KEY_", 1)))
 	else
 		frame.hotKey:SetText("")
 	end
@@ -576,7 +576,7 @@ end
 -- Set count for the button and popups if any
 function AutoBar.Class.Button.prototype:UpdateCount()
 	AutoBar.Class.Button.super.prototype.UpdateCount(self)
-	if (AutoBar.db.account.showCount) then
+	if (AutoBarDB2.settings.show_count) then
 		local popupHeader = self.frame.popupHeader
 		if (popupHeader) then
 			for _, popupButton in pairs(popupHeader.popupButtonList) do
@@ -598,7 +598,7 @@ function AutoBar.Class.Button.prototype:UpdateUsable()
 				popupButton:UpdateUsable()
 			end
 		end
-	elseif (category and (AutoBar.moveButtonsMode or AutoBar.db.account.showEmptyButtons or self.buttonDB.alwaysShow)) then
+	elseif (category and (AutoBar.moveButtonsMode or AutoBarDB2.settings.show_empty_buttons or self.buttonDB.alwaysShow)) then
 		self.frame.icon:SetVertexColor(0.4, 0.4, 0.4, 1)
 	end
 end
@@ -616,7 +616,7 @@ function AutoBar.Class.Button.prototype:IsActive()
 	if (not self.buttonDB.enabled) then
 		return false
 	end
-	if (AutoBar.db.account.showEmptyButtons or AutoBar.moveButtonsMode or self.buttonDB.alwaysShow or AutoBar.keyBoundMode) then
+	if (AutoBarDB2.settings.show_empty_buttons or AutoBar.moveButtonsMode or self.buttonDB.alwaysShow or AutoBar.keyBoundMode) then
 		return true
 	end
 	local itemType = self.frame:GetAttribute("type")
@@ -757,7 +757,7 @@ function AutoBar.Class.Button.prototype:OnUpdate(elapsed)
 
 	if (frame.outOfRange ~= (inRange == 0)) then
 		frame.outOfRange = not frame.outOfRange
-print(frame:GetName(), frame.outOfRange)
+		print(frame:GetName(), frame.outOfRange)
 		self:UpdateUsable()
 	end
 
@@ -912,15 +912,15 @@ end
 function AutoBar.Class.Button:NameExists(newName)
 	local newKey = AutoBar.Class.Button:GetCustomKey(newName)
 
-	if (AutoBar.db.account.buttonList[newKey]) then
+	if (AutoBarDB2.account.buttonList[newKey]) then
 		return true
 	end
-	for _, classDB in pairs (AutoBarDB.classes) do
+	for _, classDB in pairs (AutoBarDB2.classes) do
 		if (classDB.buttonList[newKey]) then
 			return true
 		end
 	end
-	for _, charDB in pairs (AutoBarDB.chars) do
+	for _, charDB in pairs (AutoBarDB2.chars) do
 		if (charDB.buttonList[newKey]) then
 			return true
 		end
@@ -932,11 +932,12 @@ end
 -- Return a unique name and buttonKey to use
 function AutoBar.Class.Button:GetNewName(baseName)
 	local newName, newKey
+	local key_seed = 0
 	while true do
-		newName = baseName .. AutoBar.db.account.keySeed
+		newName = baseName .. key_seed
 		newKey = AutoBar.Class.Button:GetCustomKey(newName)
 
-		AutoBar.db.account.keySeed = AutoBar.db.account.keySeed + 1
+		key_seed = key_seed + 1
 		if (not AutoBar.Class.Button:NameExists(newName)) then
 			break
 		end
@@ -945,20 +946,20 @@ function AutoBar.Class.Button:GetNewName(baseName)
 end
 
 function AutoBar.Class.Button:Delete(buttonKey)
-	AutoBar.db.account.buttonList[buttonKey] = nil
-	for _, classDB in pairs (AutoBarDB.classes) do
+	AutoBarDB2.account.buttonList[buttonKey] = nil
+	for _, classDB in pairs (AutoBarDB2.classes) do
 		classDB.buttonList[buttonKey] = nil
 	end
-	for _, charDB in pairs (AutoBarDB.chars) do
+	for _, charDB in pairs (AutoBarDB2.chars) do
 		charDB.buttonList[buttonKey] = nil
 	end
 
 	-- Delete ButtonKeys on Bars
-	AutoBar.Class.Bar:DeleteButtonKey(AutoBar.db.account.barList, buttonKey)
-	for _, classDB in pairs (AutoBarDB.classes) do
+	AutoBar.Class.Bar:DeleteButtonKey(AutoBarDB2.account.barList, buttonKey)
+	for _, classDB in pairs (AutoBarDB2.classes) do
 		AutoBar.Class.Bar:DeleteButtonKey(classDB.barList, buttonKey)
 	end
-	for _, charDB in pairs (AutoBarDB.chars) do
+	for _, charDB in pairs (AutoBarDB2.chars) do
 		AutoBar.Class.Bar:DeleteButtonKey(charDB.barList, buttonKey)
 	end
 
@@ -979,11 +980,11 @@ end
 
 function AutoBar.Class.Button:RenameCategory(oldKey, newKey)
 	-- Change all db instances
-	AutoBar.Class.Button:RenameCategoryKey(AutoBar.db.account.buttonList, oldKey, newKey)
-	for _, classDB in pairs (AutoBarDB.classes) do
+	AutoBar.Class.Button:RenameCategoryKey(AutoBarDB2.account.buttonList, oldKey, newKey)
+	for _, classDB in pairs (AutoBarDB2.classes) do
 		AutoBar.Class.Button:RenameCategoryKey(classDB.buttonList, oldKey, newKey)
 	end
-	for _, charDB in pairs (AutoBarDB.chars) do
+	for _, charDB in pairs (AutoBarDB2.chars) do
 		AutoBar.Class.Button:RenameCategoryKey(charDB.buttonList, oldKey, newKey)
 	end
 end
@@ -1004,11 +1005,11 @@ function AutoBar.Class.Button:Rename(oldKey, newName)
 	local newKey = AutoBar.Class.Button:GetCustomKey(newName)
 
 	-- Change all db instances
-	AutoBar.Class.Button:RenameKey(AutoBar.db.account.buttonList, oldKey, newKey, newName)
-	for _, classDB in pairs (AutoBarDB.classes) do
+	AutoBar.Class.Button:RenameKey(AutoBarDB2.account.buttonList, oldKey, newKey, newName)
+	for _, classDB in pairs (AutoBarDB2.classes) do
 		AutoBar.Class.Button:RenameKey(classDB.buttonList, oldKey, newKey, newName)
 	end
-	for _, charDB in pairs (AutoBarDB.chars) do
+	for _, charDB in pairs (AutoBarDB2.chars) do
 		AutoBar.Class.Button:RenameKey(charDB.buttonList, oldKey, newKey, newName)
 	end
 
@@ -1023,28 +1024,28 @@ function AutoBar.Class.Button:Rename(oldKey, newName)
 	end
 
 	-- Change ButtonKeys on Bars
-	AutoBar.Class.Bar:RenameButtonKey(AutoBar.db.account.barList, oldKey, newKey)
-	for _, classDB in pairs (AutoBarDB.classes) do
+	AutoBar.Class.Bar:RenameButtonKey(AutoBarDB2.account.barList, oldKey, newKey)
+	for _, classDB in pairs (AutoBarDB2.classes) do
 		AutoBar.Class.Bar:RenameButtonKey(classDB.barList, oldKey, newKey)
 	end
-	for _, charDB in pairs (AutoBarDB.chars) do
+	for _, charDB in pairs (AutoBarDB2.chars) do
 		AutoBar.Class.Bar:RenameButtonKey(charDB.barList, oldKey, newKey)
 	end
 end
 
-local buttonVersion = 1
+
 function AutoBar.Class.Button:OptionsInitialize()
-	if (not AutoBar.db.account.buttonList) then
-		AutoBar.db.account.buttonList = {}
+	if (not AutoBarDB2.account.buttonList) then
+		AutoBarDB2.account.buttonList = {}
 	end
-	if (not AutoBar.db.class.buttonList) then
-		AutoBar.db.class.buttonList = {}
+	if (not AutoBar.class.buttonList) then
+		AutoBar.class.buttonList = {}
 	end
-	if (not AutoBar.db.char.buttonList) then
-		AutoBar.db.char.buttonList = {}
+	if (not AutoBar.char.buttonList) then
+		AutoBar.char.buttonList = {}
 	end
-	if (not AutoBar.db.char.buttonDataList) then
-		AutoBar.db.char.buttonDataList = {}
+	if (not AutoBar.char.buttonDataList) then
+		AutoBar.char.buttonDataList = {}
 	end
 end
 
@@ -1057,9 +1058,9 @@ local function ResetCustomButtons(buttonListDB)
 end
 
 function AutoBar.Class.Button:OptionsReset()
-	ResetCustomButtons(AutoBar.db.account.buttonList)
-	ResetCustomButtons(AutoBar.db.class.buttonList)
-	ResetCustomButtons(AutoBar.db.char.buttonList)
+	ResetCustomButtons(AutoBarDB2.account.buttonList)
+	ResetCustomButtons(AutoBar.class.buttonList)
+	ResetCustomButtons(AutoBar.char.buttonList)
 end
 
 function AutoBar.Class.Button:OptionsUpgrade()

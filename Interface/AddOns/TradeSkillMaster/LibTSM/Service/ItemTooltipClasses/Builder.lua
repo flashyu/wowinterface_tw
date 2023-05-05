@@ -4,8 +4,8 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local _, TSM = ...
-local Builder = TSM.Init("Service.ItemTooltipClasses.Builder")
+local TSM = select(2, ...) ---@type TSM
+local Builder = TSM.Init("Service.ItemTooltipClasses.Builder") ---@class Service.ItemTooltipClasses.Builder
 local L = TSM.Include("Locale").GetTable()
 local TempTable = TSM.Include("Util.TempTable")
 local Math = TSM.Include("Util.Math")
@@ -124,8 +124,13 @@ end
 function TooltipBuilder.AddSubItemValueLine(self, itemString, value, multiplier, matRate, minAmount, maxAmount)
 	local name = ItemInfo.GetName(itemString)
 	local color = ItemInfo.GetQualityColor(itemString)
+	local craftedQuality = ItemInfo.GetCraftedQuality(itemString)
 	if not name or not color then
 		return
+	end
+	local craftedQualityIcon = craftedQuality and Professions.GetChatIconMarkupForQuality(craftedQuality, true)
+	if craftedQualityIcon then
+		name = name..craftedQualityIcon
 	end
 	multiplier = Math.Round(multiplier * self._quantity, 0.001)
 	matRate = matRate and matRate * 100

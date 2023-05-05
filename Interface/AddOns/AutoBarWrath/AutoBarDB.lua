@@ -36,9 +36,9 @@
 -- Bar:
 --  AutoBar.barLayoutDBList
 --  AutoBar.barList
---  AutoBar.db.account.barList[buttonKey]		-- common
---  AutoBar.db.class.barList[buttonKey]		-- class
---  AutoBar.db.char.barList[buttonKey]		-- char
+--  AutoBarDB2.account.barList[buttonKey]		-- common
+--  AutoBar.class.barList[buttonKey]		-- class
+--  AutoBar.char.barList[buttonKey]		-- char
 --  Bars contain a list of their Buttons
 --  Also, resetting a Bar replaces all buttons defaulting to it.
 --	Buttons can be reordered within the Bar
@@ -51,6 +51,7 @@
 --	Bar & Button visual settings are inherited AutoBar -> Bar -> Button
 --  Plugin Buttons / Bars
 
+local _, AB = ... -- Pulls back the Addon-Local Variables and store them locally.
 
 local AutoBar = AutoBar
 local ABGCode = AutoBarGlobalCodeSpace
@@ -59,11 +60,14 @@ local L = ABGData.locale
 
 local CLASS_COLUMN_DEFAULT = 10
 
+local CURRENT_DB_VERSION = 1
+
 
 local CLASS_BAR_MAP = {
 	DEATHKNIGHT = "AutoBarClassBarDeathKnight",
 	DEMONHUNTER = "AutoBarClassBarDemonHunter",
 	DRUID = "AutoBarClassBarDruid",
+	EVOKER = "AutoBarClassBarEvoker",
 	HUNTER = "AutoBarClassBarHunter",
 	MAGE = "AutoBarClassBarMage",
 	MONK = "AutoBarClassBarMonk",
@@ -78,7 +82,7 @@ local CLASS_BAR_MAP = {
 local BASIC_BUTTON_DATA = {
 	{button_name = "AutoBarButtonHearth", barKey = "AutoBarClassBarBasic", additional_args = {
 		hearth_include_ancient_dalaran = false,
-		only_favourite_hearth = false,
+		only_favourite_hearth = true,
 		hearth_include_challenge_portals = true,
 	} },
 	{button_name = "AutoBarButtonBandages", barKey = "AutoBarClassBarBasic"},
@@ -145,6 +149,10 @@ local CLASS_BUTTON_MAP = {
 		{button_name = "AutoBarButtonShields", },
 		{button_name = "AutoBarButtonInterrupt", },
 		{button_name = "AutoBarButtonER", },
+	},
+	EVOKER =
+	{
+
 	},
 	HUNTER =
 	{
@@ -247,7 +255,7 @@ local changed_category_key_dict = {
 }
 local function verify_db()
 	-- Temporary, implement buttonKey field
-	for buttonKey, buttonDB in pairs(AutoBar.db.char.buttonList) do
+	for buttonKey, buttonDB in pairs(AutoBar.char.buttonList) do
 		buttonDB.buttonKey = buttonKey
 		if (buttonDB.buttonClass ~= "AutoBarButtonCustom") then
 			buttonDB.name = nil
@@ -259,7 +267,7 @@ local function verify_db()
 			end
 		end
 	end
-	for buttonKey, buttonDB in pairs(AutoBar.db.class.buttonList) do
+	for buttonKey, buttonDB in pairs(AutoBar.class.buttonList) do
 		buttonDB.buttonKey = buttonKey
 		if (buttonDB.buttonClass ~= "AutoBarButtonCustom") then
 			buttonDB.name = nil
@@ -271,7 +279,7 @@ local function verify_db()
 			end
 		end
 	end
-	for buttonKey, buttonDB in pairs(AutoBar.db.account.buttonList) do
+	for buttonKey, buttonDB in pairs(AutoBarDB2.account.buttonList) do
 		buttonDB.buttonKey = buttonKey
 		if (buttonDB.buttonClass ~= "AutoBarButtonCustom") then
 			buttonDB.name = nil
@@ -285,16 +293,162 @@ local function verify_db()
 	end
 end
 
+
+local function migrate_db_from_ace2()
+
+	if (not (AutoBarDB and AutoBarDB.account)) then
+		return
+	end
+
+	AutoBarDB2.account = AutoBarDB2.account or {}
+	AutoBarDB2.account.barList = AutoBarDB2.account.barList or {}
+
+	AutoBarDB2.custom_categories = AutoBarDB2.custom_categories or AutoBarDB.account.customCategories
+	AutoBarDB.account.customCategories = nil
+
+	AutoBarDB2.settings = AutoBarDB2.settings or {}
+	AutoBarDB2.ldb_icon = AutoBarDB2.ldb_icon or AutoBarDB.account.ldbIcon
+
+	AutoBarDB.account.ldbIcon = nil
+	AutoBarDB.account.stupidlog = nil
+	AutoBarDB.account.keySeed = nil
+	AutoBarDB.account.dbVersion = nil
+
+	AutoBarDB2.classes = AutoBarDB2.classes or AutoBarDB.classes
+	AutoBarDB2.chars = AutoBarDB2.chars or AutoBarDB.chars
+
+	local setting_migration = {
+		{"custom_categories", "customCategories"},
+		{"show_empty_buttons", "showEmptyButtons"},
+		{"show_tooltip", "showTooltip"},
+		{"show_tooltip_in_combat", "showTooltipCombat"},
+		{"handle_spell_changed", "handle_spell_changed"},
+		{"log_events", "logEvents"},
+		{"log_memory", "logMemory"},
+		{"show_count", "showCount"},
+		{"show_hotkey", "showHotkey"},
+		{"self_cast_right_click", "selfCastRightClick"},
+		{"hack_PetActionBarFrame", "hack_PetActionBarFrame"},
+		{"fade_out", "fadeOut"},
+		{"clamp_bars_to_screen", "clampedToScreen"},
+
+	}
+
+	for _i, data in ipairs(setting_migration) do
+		local l, r = data[1], data[2]
+		AutoBarDB2.settings[l] = AB.NVL(AutoBarDB2.settings[l], AutoBarDB.account[r])
+		AutoBarDB.account[r] = nil
+	end
+
+	if (not AutoBarDB2.skin) then
+		AutoBarDB2.skin = {
+			["SkinID"] = AutoBarDB.account.SkinID,
+			["Gloss"] = AutoBarDB.account.Gloss,
+			["Backdrop"] = AutoBarDB.account.Backdrop,
+			["Colors"] = AutoBarDB.account.Colors,
+		}
+		AutoBarDB.account.SkinID = nil
+		AutoBarDB.account.Gloss = nil
+		AutoBarDB.account.Backdrop = nil
+		AutoBarDB.account.Colors = nil
+	end
+
+	-- Erase the per-class entries (MONK = true, MAGE = true, etc) and replace with the single "allowed_class"
+	for _key, bar in pairs(AutoBarDB2.account.barList) do
+		for class_name in pairs(CLASS_BAR_MAP) do
+			bar[class_name] = nil
+		end
+		bar.allowed_class = bar.allowed_class or "*"
+
+	end
+
+	-- Move account-level bar and button lists from DB to DB2
+	if (AutoBarDB.account.barList) then
+		AutoBarDB2.account.barList = AutoBarDB.account.barList
+		AutoBarDB.account.barList = nil
+	end
+	if(AutoBarDB.account.buttonList) then
+		AutoBarDB2.account.buttonList = AutoBarDB.account.buttonList
+		AutoBarDB.account.buttonList = nil
+	end
+
+	AutoBarDB.whatsnew_version = nil
+
+	--Clean up various bits of failed migration
+	AutoBarDB2.account.selfCastRightClick = nil
+	AutoBarDB2.account.clampedToScreen = nil
+	for class_name in pairs(CLASS_BAR_MAP) do
+		AutoBarDB2.chars[class_name] = nil	-- Class data had been copied into the character table
+	end
+
+	for key in pairs(AutoBarDB2.classes) do
+		if(CLASS_BAR_MAP[key] == nil) then
+			print("Removing from classes:", key)
+			AutoBarDB2.classes[key] = nil
+		end
+
+	end
+end
+
+local function upgrade_db_version()
+	-- If we move to a version 2 database, then the upgrade logic would go here
+
+	AutoBarDB2.db_version = CURRENT_DB_VERSION
+
+end
+
+
+
 function AutoBar.InitializeDB()
 	AutoBar.classBar = CLASS_BAR_MAP[AutoBar.CLASS]
 
 	AutoBarDB2 = AutoBarDB2 or {}
-	AutoBarDB2.custom_categories = AutoBarDB2.custom_categories or AutoBar.db.account.customCategories or {}
-	AutoBarDB2.whatsnew_version = AutoBarDB2.whatsnew_version or AutoBarDB.whatsnew_version
-	AutoBarDB2.performance_threshold = AutoBarDB2.performance_threshold or 100
-	if (AutoBarDB2.performance_threshold < 20) then AutoBarDB2.performance_threshold = 100; end;
 
-	AutoBar:UpgradeVersion()
+
+	migrate_db_from_ace2()
+
+	upgrade_db_version()
+
+	-- TODO: Move to AutoBar:InitializeDefaults() change to data
+	AutoBarDB2.account = AutoBarDB2.account or {}
+
+	AutoBarDB2.classes = AutoBarDB2.classes or {}
+	AutoBarDB2.classes[AutoBar.CLASS] = AutoBarDB2.classes[AutoBar.CLASS] or {["barList"] = {}, ["buttonList"] = {}}
+	AutoBar.class = AutoBarDB2.classes[AutoBar.CLASS]
+
+	AutoBarDB2.chars = AutoBarDB2.chars or {}
+	AutoBarDB2.chars[AutoBar.currentPlayer] = AutoBarDB2.chars[AutoBar.currentPlayer] or {["barList"] = {}, ["buttonList"] = {}, ["buttonDataList"] = {}}
+	AutoBar.char = AutoBarDB2.chars[AutoBar.currentPlayer]
+
+
+	AutoBarDB2.custom_categories = AutoBarDB2.custom_categories or {}
+
+	AutoBarDB2.skin = AutoBarDB2.skin or {}
+
+	AutoBarDB2.settings = AutoBarDB2.settings or {}
+	local settings = AutoBarDB2.settings
+	settings.show_empty_buttons = AB.NVL(settings.show_empty_buttons, false)
+	settings.show_tooltip = AB.NVL(settings.show_tooltip, true)
+	settings.show_tooltip_in_combat = AB.NVL(settings.show_tooltip_in_combat, true)
+	settings.handle_spell_changed = AB.NVL(settings.handle_spell_changed, true)
+	settings.show_count = AB.NVL(settings.show_count, true)
+	settings.show_hotkey = AB.NVL(settings.show_hotkey, true)
+	settings.hack_PetActionBarFrame = AB.NVL(settings.hack_PetActionBarFrame, false)
+	settings.fade_out = AB.NVL(settings.fade_out, false)
+	settings.clamp_bars_to_screen = AB.NVL(settings.clamp_bars_to_screen, true)
+	settings.self_cast_right_click = AB.NVL(settings.self_cast_right_click, true)
+	settings.log_throttled_events = AB.NVL(settings.log_throttled_events, false)
+	settings.throttle_event_limit = settings.throttle_event_limit or 0
+	settings.log_events = AB.NVL(settings.log_events, false)
+	settings.log_memory = AB.NVL(settings.log_memory, false)
+	settings.performance = AB.NVL(settings.performance, false)
+	settings.performance_threshold = settings.performance_threshold or 100
+	if (settings.performance_threshold < 20) then settings.performance_threshold = 100; end;
+
+	AutoBarDB2.whatsnew_version = AutoBarDB2.whatsnew_version or ""
+
+	AutoBarDB2.ldb_icon = AutoBarDB2.ldb_icon or {}
+
 	AutoBar:InitializeDefaults()
 
 	-- ToDo: Temporary, implement buttonKey field.  Remove sometime after beta.
@@ -336,7 +490,7 @@ end
 
 -- Character specific data for a particular Button
 -- For instance, the arrangeOnUse item.
-
+-- TODO: This doesn't need to be a function
 local function get_bar_default_settings()
 
 	local settings =
@@ -346,8 +500,6 @@ local function get_bar_default_settings()
 		columns = 16,
 		alignButtons = "3",
 		alpha = 1,
-		buttonWidth = 36,
-		buttonHeight = 36,
 		docking = nil,
 		dockShiftX = 0,
 		dockShiftY = 0,
@@ -360,18 +512,7 @@ local function get_bar_default_settings()
 		showOnModifier = nil,
 		posX = 300,
 		posY = 200,
-		DEATHKNIGHT = true,
-		DEMONHUNTER = true,
-		DRUID = true,
-		HUNTER = true,
-		MAGE = true,
-		MONK = true,
-		PALADIN = true,
-		PRIEST = true,
-		ROGUE = true,
-		SHAMAN = true,
-		WARLOCK = true,
-		WARRIOR = true,
+		allowed_class = "*",
 		buttonKeys = {},
 	}
 
@@ -393,8 +534,6 @@ local function get_class_bar_default_settings(p_class_name)
 		columns = CLASS_COLUMN_DEFAULT,
 		alignButtons = "3",
 		alpha = 1,
-		buttonWidth = 36,
-		buttonHeight = 36,
 		docking = nil,
 		dockShiftX = 0,
 		dockShiftY = 0,
@@ -407,46 +546,15 @@ local function get_class_bar_default_settings(p_class_name)
 		showOnModifier = nil,
 		posX = 300,
 		posY = 280,
+		allowed_class = p_class_name,
 		buttonKeys = {},
 	}
-
-	settings[p_class_name] = true
 
 	return settings
 
 end
 
 function AutoBar:InitializeDefaults()
-	if (not self.defaults) then
-		self.defaults = {
-			name = "Spambelly",
-			guiName = "Spambelly",
-			alignButtons = "3",
-			frameLocked = false,
-			showCount = true,
-			showHotkey = true,
-			showTooltip = true,
-			showMacrotext = true,
-			performance = false,
-			log_throttled_events = false,
-			throttle_event_limit = 0.0,
-			handle_spell_changed = true,
-			hack_PetActionBarFrame = true,
-			selfCastRightClick = true,
-			showEmptyButtons = false,
-			style = "Dreamlayout",
-			barList = {},
-		}
-	end
-	if(self.defaults.handle_spell_changed == nil) then
-		self.defaults.handle_spell_changed = true
-	end
-	if(self.defaults.hack_PetActionBarFrame == nil) then
-		self.defaults.hack_PetActionBarFrame = true
-	end
-
-
-	self:RegisterDefaults('account', self.defaults)
 
 	AutoBar.Class.Bar:OptionsInitialize()
 	AutoBar.Class.Bar:OptionsUpgrade()
@@ -454,21 +562,17 @@ function AutoBar:InitializeDefaults()
 	AutoBar.Class.Button:OptionsInitialize()
 	AutoBar.Class.Button:OptionsUpgrade()
 
-	AutoBar.db.account.stupidlog = ""
+	AutoBarDB2.stupidlog = ""
 
-	-- Simply ascend by 1 so each session produces non-conflicting keys.
-	if (not AutoBar.db.account.keySeed) then
-		AutoBar.db.account.keySeed = 1
-	end
 
-	if (not AutoBar.db.account.barList["AutoBarClassBarBasic"]) then
-		AutoBar.db.account.barList["AutoBarClassBarBasic"] = get_bar_default_settings();
+	if (not AutoBarDB2.account.barList["AutoBarClassBarBasic"]) then
+		AutoBarDB2.account.barList["AutoBarClassBarBasic"] = get_bar_default_settings();
 	end
-	if (not AutoBar.db.account.barList["AutoBarClassBarExtras"]) then
-		AutoBar.db.account.barList["AutoBarClassBarExtras"] = get_bar_default_settings();
-		AutoBar.db.account.barList["AutoBarClassBarExtras"].columns = 9
-		AutoBar.db.account.barList["AutoBarClassBarExtras"].posX = 300
-		AutoBar.db.account.barList["AutoBarClassBarExtras"].posY = 360
+	if (not AutoBarDB2.account.barList["AutoBarClassBarExtras"]) then
+		AutoBarDB2.account.barList["AutoBarClassBarExtras"] = get_bar_default_settings();
+		AutoBarDB2.account.barList["AutoBarClassBarExtras"].columns = 9
+		AutoBarDB2.account.barList["AutoBarClassBarExtras"].posX = 300
+		AutoBarDB2.account.barList["AutoBarClassBarExtras"].posY = 360
 	end
 
 --#region ClassBar
@@ -477,19 +581,19 @@ function AutoBar:InitializeDefaults()
 	--
 
 	local class_bar_name = CLASS_BAR_MAP[AutoBar.CLASS]
-	if (not AutoBar.db.class.barList[class_bar_name]) then
-		AutoBar.db.class.barList[class_bar_name] = get_class_bar_default_settings(AutoBar.CLASS)
+	if (not AutoBar.class.barList[class_bar_name]) then
+		AutoBar.class.barList[class_bar_name] = get_class_bar_default_settings(AutoBar.CLASS)
 	end
 
 	local my_class_buttons = CLASS_BUTTON_MAP[AutoBar.CLASS] or {}
-	local my_class_button_list = AutoBar.db.class.buttonList
+	local my_class_button_list = AutoBar.class.buttonList
 
 	create_buttons_from_template(my_class_buttons, my_class_button_list, class_bar_name)
 
 --#endregion ClassBar
 
 --#region Basic Bar
-	local account_button_list = AutoBar.db.account.buttonList
+	local account_button_list = AutoBarDB2.account.buttonList
 	local basic_bar_name = "AutoBarClassBarBasic"
 
 	create_buttons_from_template(BASIC_BUTTON_DATA, account_button_list, basic_bar_name)
@@ -512,8 +616,8 @@ function AutoBar:InitializeDefaults()
 	-- 	end
 	-- end
 
-	if (not AutoBar.db.account.buttonList["AutoBarButtonSpeed"]) then
-		AutoBar.db.account.buttonList["AutoBarButtonSpeed"] = {
+	if (not AutoBarDB2.account.buttonList["AutoBarButtonSpeed"]) then
+		AutoBarDB2.account.buttonList["AutoBarButtonSpeed"] = {
 			buttonKey = "AutoBarButtonSpeed",
 			buttonClass = "AutoBarButtonSpeed",
 			barKey = "AutoBarClassBarExtras",
@@ -521,8 +625,8 @@ function AutoBar:InitializeDefaults()
 			enabled = true,
 		}
 	end
-	if (not AutoBar.db.account.buttonList["AutoBarButtonFreeAction"]) then
-		AutoBar.db.account.buttonList["AutoBarButtonFreeAction"] = {
+	if (not AutoBarDB2.account.buttonList["AutoBarButtonFreeAction"]) then
+		AutoBarDB2.account.buttonList["AutoBarButtonFreeAction"] = {
 			buttonKey = "AutoBarButtonFreeAction",
 			buttonClass = "AutoBarButtonFreeAction",
 			barKey = "AutoBarClassBarExtras",
@@ -530,8 +634,8 @@ function AutoBar:InitializeDefaults()
 			enabled = true,
 		}
 	end
-	if (not AutoBar.db.account.buttonList["AutoBarButtonExplosive"]) then
-		AutoBar.db.account.buttonList["AutoBarButtonExplosive"] = {
+	if (not AutoBarDB2.account.buttonList["AutoBarButtonExplosive"]) then
+		AutoBarDB2.account.buttonList["AutoBarButtonExplosive"] = {
 			buttonKey = "AutoBarButtonExplosive",
 			buttonClass = "AutoBarButtonExplosive",
 			barKey = "AutoBarClassBarExtras",
@@ -539,8 +643,8 @@ function AutoBar:InitializeDefaults()
 			enabled = true,
 		}
 	end
-	if (not AutoBar.db.account.buttonList["AutoBarButtonFishing"]) then
-		AutoBar.db.account.buttonList["AutoBarButtonFishing"] = {
+	if (not AutoBarDB2.account.buttonList["AutoBarButtonFishing"]) then
+		AutoBarDB2.account.buttonList["AutoBarButtonFishing"] = {
 			buttonKey = "AutoBarButtonFishing",
 			buttonClass = "AutoBarButtonFishing",
 			barKey = "AutoBarClassBarExtras",
@@ -548,8 +652,8 @@ function AutoBar:InitializeDefaults()
 			enabled = true,
 		}
 	end
-	if (not AutoBar.db.account.buttonList["AutoBarButtonBattleStandards"]) then
-		AutoBar.db.account.buttonList["AutoBarButtonBattleStandards"] = {
+	if (not AutoBarDB2.account.buttonList["AutoBarButtonBattleStandards"]) then
+		AutoBarDB2.account.buttonList["AutoBarButtonBattleStandards"] = {
 			buttonKey = "AutoBarButtonBattleStandards",
 			buttonClass = "AutoBarButtonBattleStandards",
 			barKey = "AutoBarClassBarExtras",
@@ -557,8 +661,8 @@ function AutoBar:InitializeDefaults()
 			enabled = true,
 		}
 	end
-	if (not AutoBar.db.account.buttonList["AutoBarButtonOpenable"]) then
-		AutoBar.db.account.buttonList["AutoBarButtonOpenable"] = {
+	if (not AutoBarDB2.account.buttonList["AutoBarButtonOpenable"]) then
+		AutoBarDB2.account.buttonList["AutoBarButtonOpenable"] = {
 			buttonKey = "AutoBarButtonOpenable",
 			buttonClass = "AutoBarButtonOpenable",
 			barKey = "AutoBarClassBarExtras",
@@ -567,8 +671,8 @@ function AutoBar:InitializeDefaults()
 			drag = true,
 		}
 	end
-	if (not AutoBar.db.account.buttonList["AutoBarButtonMiscFun"]) then
-		AutoBar.db.account.buttonList["AutoBarButtonMiscFun"] = {
+	if (not AutoBarDB2.account.buttonList["AutoBarButtonMiscFun"]) then
+		AutoBarDB2.account.buttonList["AutoBarButtonMiscFun"] = {
 			buttonKey = "AutoBarButtonMiscFun",
 			buttonClass = "AutoBarButtonMiscFun",
 			barKey = "AutoBarClassBarExtras",
@@ -584,8 +688,8 @@ function AutoBar:InitializeDefaults()
 
 	if (LE_EXPANSION_WRATH_OF_THE_LICH_KING and LE_EXPANSION_LEVEL_CURRENT >= LE_EXPANSION_WRATH_OF_THE_LICH_KING) then
 
-		if (not AutoBar.db.account.buttonList["AutoBarButtonMillHerbs"]) then
-			AutoBar.db.account.buttonList["AutoBarButtonMillHerbs"] = {
+		if (not AutoBarDB2.account.buttonList["AutoBarButtonMillHerbs"]) then
+			AutoBarDB2.account.buttonList["AutoBarButtonMillHerbs"] = {
 				buttonKey = "AutoBarButtonMillHerbs",
 				buttonClass = "AutoBarButtonMillHerbs",
 				barKey = "AutoBarClassBarExtras",
@@ -602,8 +706,8 @@ function AutoBar:InitializeDefaults()
 
 	if (ABGData.is_mainline_wow) then	--ToDo: These should be changed to use LE_EXPANSION_* for forward compatibility
 
-		if (not AutoBar.db.account.buttonList["AutoBarButtonArchaeology"]) then
-			AutoBar.db.account.buttonList["AutoBarButtonArchaeology"] = {
+		if (not AutoBarDB2.account.buttonList["AutoBarButtonArchaeology"]) then
+			AutoBarDB2.account.buttonList["AutoBarButtonArchaeology"] = {
 				buttonKey = "AutoBarButtonArchaeology",
 				buttonClass = "AutoBarButtonArchaeology",
 				barKey = "AutoBarClassBarExtras",
@@ -612,8 +716,8 @@ function AutoBar:InitializeDefaults()
 			}
 		end
 
-		if (not AutoBar.db.account.buttonList["AutoBarButtonPets"]) then
-			AutoBar.db.account.buttonList["AutoBarButtonPets"] = {
+		if (not AutoBarDB2.account.buttonList["AutoBarButtonPets"]) then
+			AutoBarDB2.account.buttonList["AutoBarButtonPets"] = {
 				buttonKey = "AutoBarButtonPets",
 				buttonClass = "AutoBarButtonPets",
 				barKey = "AutoBarClassBarExtras",
@@ -623,8 +727,8 @@ function AutoBar:InitializeDefaults()
 			}
 		end
 
-		if (not AutoBar.db.account.buttonList["AutoBarButtonGuildSpell"]) then
-			AutoBar.db.account.buttonList["AutoBarButtonGuildSpell"] = {
+		if (not AutoBarDB2.account.buttonList["AutoBarButtonGuildSpell"]) then
+			AutoBarDB2.account.buttonList["AutoBarButtonGuildSpell"] = {
 				buttonKey = "AutoBarButtonGuildSpell",
 				buttonClass = "AutoBarButtonGuildSpell",
 				barKey = "AutoBarClassBarExtras",
@@ -634,8 +738,8 @@ function AutoBar:InitializeDefaults()
 			}
 		end
 
-		if (not AutoBar.db.account.buttonList["AutoBarButtonSunsongRanch"]) then
-			AutoBar.db.account.buttonList["AutoBarButtonSunsongRanch"] = {
+		if (not AutoBarDB2.account.buttonList["AutoBarButtonSunsongRanch"]) then
+			AutoBarDB2.account.buttonList["AutoBarButtonSunsongRanch"] = {
 				buttonKey = "AutoBarButtonSunsongRanch",
 				buttonClass = "AutoBarButtonSunsongRanch",
 				barKey = "AutoBarClassBarExtras",
@@ -645,8 +749,8 @@ function AutoBar:InitializeDefaults()
 			}
 		end
 
-		if (not AutoBar.db.account.buttonList["AutoBarButtonGarrison"]) then
-			AutoBar.db.account.buttonList["AutoBarButtonGarrison"] = {
+		if (not AutoBarDB2.account.buttonList["AutoBarButtonGarrison"]) then
+			AutoBarDB2.account.buttonList["AutoBarButtonGarrison"] = {
 				buttonKey = "AutoBarButtonGarrison",
 				buttonClass = "AutoBarButtonGarrison",
 				barKey = "AutoBarClassBarExtras",
@@ -656,8 +760,8 @@ function AutoBar:InitializeDefaults()
 			}
 		end
 
-		if (not AutoBar.db.account.buttonList["AutoBarButtonOrderHallTroop"]) then
-			AutoBar.db.account.buttonList["AutoBarButtonOrderHallTroop"] = {
+		if (not AutoBarDB2.account.buttonList["AutoBarButtonOrderHallTroop"]) then
+			AutoBarDB2.account.buttonList["AutoBarButtonOrderHallTroop"] = {
 				buttonKey = "AutoBarButtonOrderHallTroop",
 				buttonClass = "AutoBarButtonOrderHallTroop",
 				barKey = "AutoBarClassBarExtras",
@@ -667,8 +771,8 @@ function AutoBar:InitializeDefaults()
 			}
 		end
 
-		if (not AutoBar.db.account.buttonList["AutoBarButtonOrderHallResource"]) then
-			AutoBar.db.account.buttonList["AutoBarButtonOrderHallResource"] = {
+		if (not AutoBarDB2.account.buttonList["AutoBarButtonOrderHallResource"]) then
+			AutoBarDB2.account.buttonList["AutoBarButtonOrderHallResource"] = {
 				buttonKey = "AutoBarButtonOrderHallResource",
 				buttonClass = "AutoBarButtonOrderHallResource",
 				barKey = "AutoBarClassBarExtras",
@@ -678,8 +782,8 @@ function AutoBar:InitializeDefaults()
 			}
 		end
 
-		if (not AutoBar.db.account.buttonList["AutoBarButtonBattlePetItems"]) then
-			AutoBar.db.account.buttonList["AutoBarButtonBattlePetItems"] = {
+		if (not AutoBarDB2.account.buttonList["AutoBarButtonBattlePetItems"]) then
+			AutoBarDB2.account.buttonList["AutoBarButtonBattlePetItems"] = {
 				buttonKey = "AutoBarButtonBattlePetItems",
 				buttonClass = "AutoBarButtonBattlePetItems",
 				barKey = "AutoBarClassBarExtras",
@@ -689,22 +793,22 @@ function AutoBar:InitializeDefaults()
 			}
 		end
 
-		if (not AutoBar.db.account.buttonList["AutoBarButtonToyBox"]) then
-			AutoBar.db.account.buttonList["AutoBarButtonToyBox"] = {
-				buttonKey = "AutoBarButtonToyBox",
-				buttonClass = "AutoBarButtonToyBox",
-				barKey = "AutoBarClassBarExtras",
-				defaultButtonIndex = "*",
-				enabled = false,
-				arrangeOnUse = true,
-				toybox_only_show_favourites = false,
-			}
-		end
+		-- if (not AutoBarDB2.account.buttonList["AutoBarButtonToyBox"]) then
+		-- 	AutoBarDB2.account.buttonList["AutoBarButtonToyBox"] = {
+		-- 		buttonKey = "AutoBarButtonToyBox",
+		-- 		buttonClass = "AutoBarButtonToyBox",
+		-- 		barKey = "AutoBarClassBarExtras",
+		-- 		defaultButtonIndex = "*",
+		-- 		enabled = false,
+		-- 		arrangeOnUse = true,
+		-- 		toybox_only_show_favourites = true,
+		-- 	}
+		-- end
 	end
 --#endregion XpacButtons
 
-	if (not AutoBar.db.account.buttonList["AutoBarButtonRaidTarget"]) then
-		AutoBar.db.account.buttonList["AutoBarButtonRaidTarget"] = {
+	if (not AutoBarDB2.account.buttonList["AutoBarButtonRaidTarget"]) then
+		AutoBarDB2.account.buttonList["AutoBarButtonRaidTarget"] = {
 			buttonKey = "AutoBarButtonRaidTarget",
 			buttonClass = "AutoBarButtonRaidTarget",
 			barKey = "AutoBarClassBarExtras",
@@ -714,8 +818,8 @@ function AutoBar:InitializeDefaults()
 		}
 	end
 
-	if (not AutoBar.db.account.buttonList["AutoBarButtonMount"]) then
-		AutoBar.db.account.buttonList["AutoBarButtonMount"] = {
+	if (not AutoBarDB2.account.buttonList["AutoBarButtonMount"]) then
+		AutoBarDB2.account.buttonList["AutoBarButtonMount"] = {
 			buttonKey = "AutoBarButtonMount",
 			buttonClass = "AutoBarButtonMount",
 			barKey = "AutoBarClassBarExtras",
@@ -731,8 +835,8 @@ function AutoBar:InitializeDefaults()
 		}
 	end
 
-	if (not AutoBar.db.account.buttonList["AutoBarButtonReputation"]) then
-		AutoBar.db.account.buttonList["AutoBarButtonReputation"] = {
+	if (not AutoBarDB2.account.buttonList["AutoBarButtonReputation"]) then
+		AutoBarDB2.account.buttonList["AutoBarButtonReputation"] = {
 			buttonKey = "AutoBarButtonReputation",
 			buttonClass = "AutoBarButtonReputation",
 			barKey = "AutoBarClassBarExtras",
@@ -743,8 +847,8 @@ function AutoBar:InitializeDefaults()
 	end
 
 
-	if (not AutoBar.db.class.buttonList["AutoBarButtonShields"]) then
-		AutoBar.db.class.buttonList["AutoBarButtonShields"] = {
+	if (not AutoBar.class.buttonList["AutoBarButtonShields"]) then
+		AutoBar.class.buttonList["AutoBarButtonShields"] = {
 			buttonKey = "AutoBarButtonShields",
 			buttonClass = "AutoBarButtonShields",
 			barKey = AutoBar.classBar,
@@ -755,8 +859,8 @@ function AutoBar:InitializeDefaults()
 	end
 
 	if (AutoBar.CLASS ~= "MONK") then
-		if (not AutoBar.db.class.buttonList["AutoBarButtonER"]) then
-			AutoBar.db.class.buttonList["AutoBarButtonER"] = {
+		if (not AutoBar.class.buttonList["AutoBarButtonER"]) then
+			AutoBar.class.buttonList["AutoBarButtonER"] = {
 				buttonKey = "AutoBarButtonER",
 				buttonClass = "AutoBarButtonER",
 				barKey = AutoBar.classBar,
@@ -767,8 +871,8 @@ function AutoBar:InitializeDefaults()
 		end
 	end
 
-	if (not AutoBar.db.class.buttonList["AutoBarButtonInterrupt"]) then
-		AutoBar.db.class.buttonList["AutoBarButtonInterrupt"] = {
+	if (not AutoBar.class.buttonList["AutoBarButtonInterrupt"]) then
+		AutoBar.class.buttonList["AutoBarButtonInterrupt"] = {
 			buttonKey = "AutoBarButtonInterrupt",
 			buttonClass = "AutoBarButtonInterrupt",
 			barKey = AutoBar.classBar,
@@ -779,7 +883,7 @@ function AutoBar:InitializeDefaults()
 	end
 
 
---#endregion XpacButtons
+
 
 	--classic-only: "AutoBarButtonTrack",
 	local deprecated_buttons
@@ -807,7 +911,7 @@ function AutoBar:InitializeDefaults()
 			"AutoBarButtonTrack", "AutoBarButtonCooldownPotionHealth", "AutoBarButtonCooldownStoneHealth",
 			"AutoBarButtonCooldownStoneMana", "AutoBarButtonAquatic",
 			"AutoBarButtonMana", "AutoBarButtonCooldownPotionMana",
-			"AutoBarButtonCooldownDrums",
+			"AutoBarButtonCooldownDrums", "AutoBarButtonToyBox",
 		}
 	else
 		deprecated_buttons = {
@@ -816,37 +920,37 @@ function AutoBar:InitializeDefaults()
 	end
 
 	for _, dep in ipairs(deprecated_buttons) do
-		if (AutoBar.db.account.buttonList[dep]) then
-			AutoBar.db.account.buttonList[dep] = nil
+		if (AutoBarDB2.account.buttonList[dep]) then
+			AutoBarDB2.account.buttonList[dep] = nil
 		end
-		if (AutoBar.db.class.buttonList[dep]) then
-			AutoBar.db.class.buttonList[dep] = nil
+		if (AutoBar.class.buttonList[dep]) then
+			AutoBar.class.buttonList[dep] = nil
 		end
-		if (AutoBar.db.char.buttonList[dep]) then
-			AutoBar.db.char.buttonList[dep] = nil
+		if (AutoBar.char.buttonList[dep]) then
+			AutoBar.char.buttonList[dep] = nil
 		end
 
 	end
 
-	if(AutoBar.CLASS == "WARLOCK" and AutoBar.db.class.buttonList["AutoBarButtonInterrupt"]) then
-		AutoBar.db.class.buttonList["AutoBarButtonInterrupt"] = nil
+	if(AutoBar.CLASS == "WARLOCK" and AutoBar.class.buttonList["AutoBarButtonInterrupt"]) then
+		AutoBar.class.buttonList["AutoBarButtonInterrupt"] = nil
 	end
 
 	if (ABGData.is_mainline_wow) then
 
-		if(AutoBar.CLASS == "ROGUE" and AutoBar.db.class.buttonList["AutoBarButtonTrap"]) then
-			AutoBar.db.class.buttonList["AutoBarButtonTrap"] = nil
+		if(AutoBar.CLASS == "ROGUE" and AutoBar.class.buttonList["AutoBarButtonTrap"]) then
+			AutoBar.class.buttonList["AutoBarButtonTrap"] = nil
 		end
 		if(AutoBar.CLASS == "DRUID" ) then
-			AutoBar.db.class.buttonList["AutoBarButtonClassPet"] = nil
-			AutoBar.db.class.buttonList["AutoBarButtonStance"] = nil
+			AutoBar.class.buttonList["AutoBarButtonClassPet"] = nil
+			AutoBar.class.buttonList["AutoBarButtonStance"] = nil
 		end
 	end
 
 
 -- save as sample to remove buttons per class
---	if(AutoBar.CLASS == "xx" and AutoBar.db.class.buttonList["AutoBarButtonInterrupt"]) then
---		AutoBar.db.class.buttonList["AutoBarButtonInterrupt"] = nil
+--	if(AutoBar.CLASS == "xx" and AutoBar.class.buttonList["AutoBarButtonInterrupt"]) then
+--		AutoBar.class.buttonList["AutoBarButtonInterrupt"] = nil
 --	end
 
 end
@@ -858,13 +962,13 @@ function AutoBar:RefreshButtonDBList()
 	for buttonKey, _buttonDB in pairs(buttonDBList) do
 		buttonDBList[buttonKey] = nil
 	end
-	for buttonKey, _buttonDB in pairs(AutoBar.db.char.buttonList) do
+	for buttonKey, _buttonDB in pairs(AutoBar.char.buttonList) do
 		buttonDBList[buttonKey] = AutoBar:GetButtonDB(buttonKey)
 	end
-	for buttonKey, _buttonDB in pairs(AutoBar.db.class.buttonList) do
+	for buttonKey, _buttonDB in pairs(AutoBar.class.buttonList) do
 		buttonDBList[buttonKey] = AutoBar:GetButtonDB(buttonKey)
 	end
-	for buttonKey, _buttonDB in pairs(AutoBar.db.account.buttonList) do
+	for buttonKey, _buttonDB in pairs(AutoBarDB2.account.buttonList) do
 		buttonDBList[buttonKey] = AutoBar:GetButtonDB(buttonKey)
 	end
 end
@@ -901,17 +1005,17 @@ function AutoBar:RefreshBarDBLists()
 	wipe(barButtonsDBList)
 	wipe(barLayoutDBList)
 	wipe(barPositionDBList)
-	for barKey, _bar_db in pairs(AutoBar.db.char.barList) do
+	for barKey, _bar_db in pairs(AutoBar.char.barList) do
 		barButtonsDBList[barKey] = AutoBar:GetSharedBarDB(barKey, "sharedButtons")
 		barLayoutDBList[barKey] = AutoBar:GetSharedBarDB(barKey, "sharedLayout")
 		barPositionDBList[barKey] = AutoBar:GetSharedBarDB(barKey, "sharedLocation")
 	end
-	for barKey, _bar_db in pairs(AutoBar.db.class.barList) do
+	for barKey, _bar_db in pairs(AutoBar.class.barList) do
 		barButtonsDBList[barKey] = AutoBar:GetSharedBarDB(barKey, "sharedButtons")
 		barLayoutDBList[barKey] = AutoBar:GetSharedBarDB(barKey, "sharedLayout")
 		barPositionDBList[barKey] = AutoBar:GetSharedBarDB(barKey, "sharedLocation")
 	end
-	for barKey, _bar_db in pairs(AutoBar.db.account.barList) do
+	for barKey, _bar_db in pairs(AutoBarDB2.account.barList) do
 		barButtonsDBList[barKey] = AutoBar:GetSharedBarDB(barKey, "sharedButtons")
 		barLayoutDBList[barKey] = AutoBar:GetSharedBarDB(barKey, "sharedLayout")
 		barPositionDBList[barKey] = AutoBar:GetSharedBarDB(barKey, "sharedLocation")
@@ -1158,7 +1262,6 @@ function AutoBar:PopulateBars()
 end
 
 -- Upgrade from old DB versions
-local dbVersion = 2
 local renameButtonList
 local renameBarList
 
@@ -1197,63 +1300,7 @@ function AutoBar:UpgradeLevel(levelDB)
 end
 
 function AutoBar:UpgradeVersion()
-	if (not AutoBar.db.account.dbVersion) then
-		AutoBar.db.account.customBarList = nil
-		AutoBar.db.account.bars = nil
-		if (AutoBarDB.classes) then
-			for classKey, classDB in pairs (AutoBarDB.classes) do
-				if (classDB.bars) then
-					classDB.bars = nil
-					if (not classDB.barList and not classDB.buttonList) then
-						AutoBarDB.classes[classKey] = nil
-					end
-				end
-			end
-		end
-		if (AutoBarDB.chars) then
-			for charKey, charDB in pairs (AutoBarDB.chars) do
-				if (charDB.bars) then
-					charDB.bars = nil
-					if (not charDB.barList and not charDB.buttonList) then
-						AutoBarDB.chars[charKey] = nil
-					end
-				end
-			end
-		end
-		AutoBarDB.currentProfile = nil
-		AutoBarDB.profiles = nil
-		AutoBar.db.account.dbVersion = 1
-	end
-	if (AutoBar.db.account.dbVersion < dbVersion) then
-		if (not renameButtonList) then
-			renameButtonList = {}
-		end
-		wipe(renameButtonList)
-		if (not renameBarList) then
-			renameBarList = {}
-		end
-		wipe(renameBarList)
 
-		AutoBar:UpgradeLevel(AutoBarDB.account)
-		if (AutoBarDB.classes) then
-			for _, classDB in pairs (AutoBarDB.classes) do
-				AutoBar:UpgradeLevel(classDB)
-			end
-		end
-		if (AutoBarDB.chars) then
-			for _, charDB in pairs (AutoBarDB.chars) do
-				AutoBar:UpgradeLevel(charDB)
-			end
-		end
-
-		for oldKey, newName in pairs(renameButtonList) do
-			AutoBar.Class.Button:Rename(oldKey, newName)
-		end
-		for oldKey, newName in pairs(renameBarList) do
-			AutoBar.Class.Bar:Rename(oldKey, newName)
-		end
---		AutoBar.db.account.dbVersion = 2
-	end
 end
 
 

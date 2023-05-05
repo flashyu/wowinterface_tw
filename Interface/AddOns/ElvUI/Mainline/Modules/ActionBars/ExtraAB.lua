@@ -160,9 +160,11 @@ function AB:SetupExtraButton()
 
 	ExtraActionBarHolder = CreateFrame('Frame', nil, E.UIParent)
 	ExtraActionBarHolder:Point('BOTTOM', E.UIParent, 'BOTTOM', -150, 300)
+	E.FrameLocks[ExtraActionBarHolder] = true
 
 	ZoneAbilityHolder = CreateFrame('Frame', nil, E.UIParent)
 	ZoneAbilityHolder:Point('BOTTOM', E.UIParent, 'BOTTOM', 150, 300)
+	E.FrameLocks[ZoneAbilityHolder] = true
 
 	ZoneAbilityFrame.SpellButtonContainer.holder = ZoneAbilityHolder
 	ZoneAbilityFrame.SpellButtonContainer:HookScript('OnEnter', AB.ExtraButtons_OnEnter)
@@ -170,6 +172,8 @@ function AB:SetupExtraButton()
 
 	-- try to shutdown the container movement and taints
 	ExtraAbilityContainer.SetSize = E.noop
+	ExtraAbilityContainer.SetPoint = E.noop
+	ExtraAbilityContainer:KillEditMode()
 
 	AB:ExtraButtons_Reparent()
 

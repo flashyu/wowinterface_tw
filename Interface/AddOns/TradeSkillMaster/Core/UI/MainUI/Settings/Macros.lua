@@ -4,19 +4,21 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local _, TSM = ...
+local TSM = select(2, ...) ---@type TSM
 local Macros = TSM.MainUI.Settings:NewPackage("Macros")
+local Environment = TSM.Include("Environment")
 local L = TSM.Include("Locale").GetTable()
 local TempTable = TSM.Include("Util.TempTable")
 local Vararg = TSM.Include("Util.Vararg")
 local Log = TSM.Include("Util.Log")
 local Theme = TSM.Include("Util.Theme")
 local UIElements = TSM.Include("UI.UIElements")
+local UIUtils = TSM.Include("UI.UIUtils")
 local private = {}
 local MACRO_NAME = "TSMMacro"
-local MACRO_ICON = TSM.IsWowClassic() and "INV_Misc_Flower_01" or "Achievement_Faction_GoldenLotus"
+local MACRO_ICON = Environment.IsRetail() and "Achievement_Faction_GoldenLotus" or "INV_Misc_Flower_01"
 local BINDING_NAME = "MACRO "..MACRO_NAME
-local buttonEvent = not TSM.IsWowClassic() and (GetCVarBool("ActionButtonUseKeyDown") and "1" or "0") or nil
+local buttonEvent = Environment.IsRetail() and (GetCVarBool("ActionButtonUseKeyDown") and "1" or "0") or nil
 local BUTTON_INFO = {
 	["row1.myauctionsCheckbox"] = {name = "TSMCancelAuctionBtn"},
 	["row1.auctioningCheckbox"] = {name = "TSMAuctioningBtn"},
@@ -24,7 +26,7 @@ local BUTTON_INFO = {
 	["row2.bidBuyConfirmBtn"] = {name = "TSMBidBuyConfirmBtn"},
 	["row3.sniperCheckbox"] = {name = "TSMSniperBtn"},
 	["row3.craftingCheckbox"] = {name = "TSMCraftingBtn"},
-	["row4.destroyingCheckbox"] = {name = "TSMDestroyBtn", button = not TSM.IsWowClassic() and "LeftButton "..buttonEvent or nil},
+	["row4.destroyingCheckbox"] = {name = "TSMDestroyBtn", button = Environment.IsRetail() and "LeftButton "..buttonEvent or nil},
 	["row4.vendoringCheckbox"] = {name = "TSMVendoringSellAllButton"},
 }
 local CHARACTER_BINDING_SET = 2
@@ -47,7 +49,7 @@ end
 -- ============================================================================
 
 function private.GetMacrosSettingsFrame()
-	TSM.UI.AnalyticsRecordPathChange("main", "settings", "macros")
+	UIUtils.AnalyticsRecordPathChange("main", "settings", "macros")
 	local body = GetMacroBody(MACRO_NAME) or ""
 	local upEnabled, downEnabled, altEnabled, ctrlEnabled, shiftEnabled = false, false, false, false, false
 	for _, binding in Vararg.Iterator(GetBindingKey(BINDING_NAME)) do

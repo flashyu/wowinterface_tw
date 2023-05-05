@@ -78,6 +78,7 @@ function UF:Construct_PartyFrames()
 
 	self.Fader = UF:Construct_Fader()
 	self.Cutaway = UF:Construct_Cutaway(self)
+	self.PrivateAuras = UF:Construct_PrivateAuras(self)
 
 	return self
 end
@@ -154,12 +155,12 @@ function UF:Update_PartyFrames(frame, db)
 		frame:Size(db.width, db.height)
 
 		if not InCombatLockdown() then
-			if db.enable then
-				frame:Enable()
+			local enabled = db.enable
+			frame:SetEnabled(enabled)
+
+			if enabled then
 				frame:ClearAllPoints()
 				frame:Point(E.InversePoints[db.anchorPoint], frame.originalParent, db.anchorPoint, db.xOffset, db.yOffset)
-			else
-				frame:Disable()
 			end
 		end
 
@@ -177,8 +178,8 @@ function UF:Update_PartyFrames(frame, db)
 
 		UF:EnableDisable_Auras(frame)
 		UF:Configure_AllAuras(frame)
-		UF:Configure_HealthBar(frame)
 		UF:Configure_InfoPanel(frame)
+		UF:Configure_HealthBar(frame)
 		UF:Configure_PhaseIcon(frame)
 		UF:Configure_Power(frame)
 		UF:Configure_Portrait(frame)
@@ -206,6 +207,7 @@ function UF:Update_PartyFrames(frame, db)
 	UF:Configure_Threat(frame)
 	UF:Configure_Fader(frame)
 	UF:Configure_Cutaway(frame)
+	UF:Configure_PrivateAuras(frame)
 	UF:Configure_AuraHighlight(frame)
 
 	UF:HandleRegisterClicks(frame)

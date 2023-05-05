@@ -398,7 +398,6 @@ local function TalentFrame_ADD()
 end
 
 local function TalentFrame_Open()
-	if not PIG.Sponsorship.open then return end
 	if IsAddOnLoaded("Blizzard_TalentUI") then
 		TalentFrame_ADD()
 	else

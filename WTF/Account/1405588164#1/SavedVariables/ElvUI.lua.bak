@@ -1,0 +1,91 @@
+
+ElvDB = {
+	["profileKeys"] = {
+		["狂暴專家 - 伊弗斯"] = "Default",
+	},
+	["DisabledAddOns"] = {
+	},
+	["serverID"] = {
+		[4487] = {
+			["伊弗斯"] = true,
+		},
+	},
+	["class"] = {
+		["伊弗斯"] = {
+			["狂暴專家"] = "WARRIOR",
+		},
+	},
+	["profiles"] = {
+		["Default"] = {
+			["chat"] = {
+				["panelSnapLeftID"] = 1,
+			},
+			["dbConverted"] = 13.31,
+			["movers"] = {
+				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,301,414",
+				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,302,311",
+				["ElvUF_PlayerMover"] = "BOTTOM,UIParent,BOTTOM,-269,414",
+				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,309,349",
+			},
+			["unitframe"] = {
+				["units"] = {
+					["party"] = {
+						["targetsGroup"] = {
+							["disableMouseoverGlow"] = false,
+							["disableFocusGlow"] = false,
+							["disableTargetGlow"] = false,
+						},
+						["petsGroup"] = {
+							["disableTargetGlow"] = false,
+							["disableMouseoverGlow"] = false,
+							["disableFocusGlow"] = false,
+						},
+					},
+				},
+			},
+			["actionbar"] = {
+				["microbar"] = {
+					["buttons"] = 10,
+				},
+				["bar6"] = {
+					["enabled"] = true,
+					["buttonsPerRow"] = 6,
+					["buttons"] = 6,
+				},
+				["bar5"] = {
+					["enabled"] = false,
+					["buttonsPerRow"] = 12,
+					["buttons"] = 12,
+				},
+			},
+			["convertPages"] = true,
+		},
+	},
+	["gold"] = {
+		["伊弗斯"] = {
+			["狂暴專家"] = 1083408,
+		},
+	},
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["faction"] = {
+		["伊弗斯"] = {
+			["狂暴專家"] = "Horde",
+		},
+	},
+}
+ElvPrivateDB = {
+	["profileKeys"] = {
+		["狂暴專家 - 伊弗斯"] = "狂暴專家 - 伊弗斯",
+	},
+	["profiles"] = {
+		["狂暴專家 - 伊弗斯"] = {
+			["nameplates"] = {
+				["enable"] = false,
+			},
+			["install_complete"] = 13.31,
+		},
+	},
+}

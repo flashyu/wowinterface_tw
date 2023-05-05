@@ -8,7 +8,7 @@ local btnSettingsMeta = {__index = function(self, key)
 	self[key] = {tstmp = 0}
 	return self[key]
 end}
-local createdButtonsByName, btnSettings, noGMEFrames = {}, {}, {}
+local createdButtonsByName, btnSettings, noEventFrames = {}, {}, {}
 hb.ldbiPrefix = "LibDBIcon10_"
 hb.matchName = hb.ldbiPrefix..addon.."%d+$"
 hb.createdButtons, hb.minimapButtons, hb.mixedButtons = {}, {}, {}
@@ -22,7 +22,7 @@ local media = LibStub("LibSharedMedia-3.0")
 local MSQ = LibStub("Masque", true)
 
 
-local ignoreFrameList = {
+local ignoreFrameNameList = {
 	["GameTimeFrame"] = true,
 	["HelpOpenWebTicketButton"] = true,
 	["MinimapBackdrop"] = true,
@@ -35,6 +35,8 @@ local ignoreFrameList = {
 	["MiniMapLFGFrame"] = true,
 }
 
+local ignoreFrameList = {}
+
 local ignoreFrameNamePattern = {
 	"^GatherMatePin%d+$",
 	"^TTMinimapButton%d+$",
@@ -44,7 +46,7 @@ local ignoreFrameNamePattern = {
 local function void() end
 
 local function enter(btn, _, eventFrame)
-	local bar = btn:GetParent()
+	local bar = hb.GetParent(btn)
 	if not bar:IsShown() then return end
 	bar.isMouse = true
 	bar:enter()
@@ -55,7 +57,7 @@ local function enter(btn, _, eventFrame)
 end
 
 local function leave(btn)
-	local bar = btn:GetParent()
+	local bar = hb.GetParent(btn)
 	if bar:IsShown() then
 		bar.isMouse = false
 		bar:leave()
@@ -79,23 +81,11 @@ end
 
 
 if MSQ then
-	hb.MSQ_Button = MSQ:Group(addon, L["DataBroker Buttons"], "DataBroker")
-	hb.MSQ_Button:SetCallback(function()
-		for btn in pairs(hb.MSQ_Button.Buttons) do
-			hb:MSQ_CoordUpdate(btn)
-		end
-		for _, bar in ipairs(hb.bars) do
-			bar:enter()
-			bar:leave(math.max(1.5, bar.config.hideDelay))
-		end
-	end)
-
-
-	local defTexture = MSQ:GetSkin("Default (Classic)").Normal.Texture
+	local _, defSkin = MSQ:GetDefaultSkin()
+	local defNormal = defSkin.Normal
 	hb.MSQ_Button_Data = {}
-	hb.MSQ_MButton = MSQ:Group(addon, L["Minimap Buttons"], "MinimapButtons")
-	hb.MSQ_MButton:SetCallback(function()
-		for btn in pairs(hb.MSQ_MButton.Buttons) do
+	hb.MSQ_UpdateGroupBtns = function(self)
+		for btn in pairs(self.Buttons) do
 			hb:MSQ_Button_Update(btn)
 			hb:MSQ_CoordUpdate(btn)
 		end
@@ -103,20 +93,25 @@ if MSQ then
 			bar:enter()
 			bar:leave(math.max(1.5, bar.config.hideDelay))
 		end
+	end
+
+
+	hb.MSQ_Button = MSQ:Group(addon, L["DataBroker Buttons"], "DataBroker")
+	hb.MSQ_Button:RegisterCallback(function(self)
+		for btn in pairs(self.Buttons) do
+			hb:MSQ_CoordUpdate(btn)
+		end
+		for _, bar in ipairs(hb.bars) do
+			bar:enter()
+			bar:leave(math.max(1.5, bar.config.hideDelay))
+		end
 	end)
 
+	hb.MSQ_MButton = MSQ:Group(addon, L["Minimap Buttons"], "MinimapButtons")
+	hb.MSQ_MButton:RegisterCallback(hb.MSQ_UpdateGroupBtns)
 
 	hb.MSQ_CGButton = MSQ:Group(addon, L["Manually Grabbed Buttons"], "CGButtons")
-	hb.MSQ_CGButton:SetCallback(function()
-		for btn in pairs(hb.MSQ_CGButton.Buttons) do
-			hb:MSQ_Button_Update(btn)
-			hb:MSQ_CoordUpdate(btn)
-		end
-		for _, bar in ipairs(hb.bars) do
-			bar:enter()
-			bar:leave(math.max(1.5, bar.config.hideDelay))
-		end
-	end)
+	hb.MSQ_CGButton:RegisterCallback(hb.MSQ_UpdateGroupBtns)
 
 
 	local prevCoord, curCoord, MSQ_Coord = {}, {}, {}
@@ -209,18 +204,22 @@ if MSQ then
 						end
 					end
 					data._Normal.SetAtlas = function(_, atlas)
-						local skin = MSQ:GetSkin(data._Group.db.SkinID).Normal
-						if atlas == skin.Atlas then
-							data._isMSQCoord = true
-							data._isMSQColor = true
-						else
-							data._Icon:SetAtlas(atlas)
+						if atlas then
+							if atlas == defNormal.Atlas
+							or atlas == MSQ:GetSkin(data._Group.db.SkinID).Normal.Atlas
+							then
+								data._isMSQCoord = true
+								data._isMSQColor = true
+							else
+								data._Icon:SetAtlas(atlas)
+							end
 						end
 					end
 					data._Normal.SetTexture = function(_, texture)
 						if texture then
-							local skin = MSQ:GetSkin(data._Group.db.SkinID).Normal
-							if texture == skin.Texture or texture == defTexture then
+							if texture == defNormal.Texture
+							or texture == MSQ:GetSkin(data._Group.db.SkinID).Normal.Texture
+							then
 								data._isMSQCoord = true
 								data._isMSQColor = true
 							else
@@ -375,6 +374,15 @@ function hb:ADDON_LOADED(addonName)
 		self:UnregisterEvent("ADDON_LOADED")
 		self.ADDON_LOADED = nil
 
+		-- local function addToIgnoreFrameList(name)
+		-- 	local frame = self:getFrameFromPath(name)
+		-- 	if frame then
+		-- 		ignoreFrameList[frame] = true
+		-- 	else
+		-- 		print(addon..":", name, "not found")
+		-- 	end
+		-- end
+
 		HidingBarDBChar = HidingBarDBChar or {}
 		self.charDB = HidingBarDBChar
 		HidingBarDB = HidingBarDB or {}
@@ -420,7 +428,7 @@ function hb:ADDON_LOADED(addonName)
 		end
 
 		C_Timer.After(0, function()
-			self:setProfile()
+			xpcall(self.setProfile, geterrorhandler(), self)
 			self.cb:Fire("INIT")
 			self.init = nil
 		end)
@@ -446,7 +454,7 @@ function hb:checkProfile(profile)
 	[1] - is disabled
 	[2] - order
 	[3] - parent bar name
-	[4] - is cliped button
+	[4] - is clipped button
 	[5] - auto show/hide
 	]]
 
@@ -743,6 +751,11 @@ function hb:updateBars()
 end
 
 
+function hb:getBtnName(btn)
+	return self.GetName(btn) or self.btnParams[btn].name
+end
+
+
 function hb:setBtnSettings(btn)
 	local btnData = self.pConfig.btnSettings[btn.name]
 	btnData.tstmp = time()
@@ -752,7 +765,7 @@ end
 
 
 function hb:setMBtnSettings(btn)
-	local name = btn:GetName()
+	local name = self:getBtnName(btn)
 	if name then
 		local btnData = self.pConfig.mbtnSettings[name]
 		btnData.tstmp = time()
@@ -892,9 +905,25 @@ function hb:grabMButtons()
 end
 
 
+function hb:getFrameFromPath(path)
+	local pNames = {("."):split(path)}
+	if #pNames > 1 then
+		local frame = _G[pNames[1]]
+		for i = 2, #pNames do
+			if type(frame) == "table" then
+				frame = frame[pNames[i]]
+			else
+				return
+			end
+		end
+		return frame
+	end
+end
+
+
 function hb:grabDefButtons()
 	-- CALENDAR BUTTON
-	if self:ignoreCheck("GameTimeFrame") and not self.btnParams[GameTimeFrame] then
+	if GameTimeFrame and self:ignoreCheck("GameTimeFrame") and not self.btnParams[GameTimeFrame] then
 		local GameTimeFrame = GameTimeFrame
 		local text = GameTimeFrame:GetFontString()
 		text:SetPoint("CENTER", 0, -1)
@@ -934,7 +963,7 @@ function hb:grabDefButtons()
 	end
 
 	-- TRACKING BUTTON
-	if self:ignoreCheck("MiniMapTracking") and not self.btnParams[MiniMapTracking] then
+	if MiniMapTracking and self:ignoreCheck("MiniMapTracking") and not self.btnParams[MiniMapTracking] then
 		local MiniMapTracking = MiniMapTracking
 		local MiniMapTrackingButton = MiniMapTrackingButton
 		local icon = MiniMapTrackingIcon
@@ -985,7 +1014,7 @@ function hb:grabDefButtons()
 	end
 
 	-- MINIMAP LFG FRAME
-	if self:ignoreCheck("MiniMapLFGFrame") and not self.btnParams[MiniMapLFGFrame] then
+	if MiniMapLFGFrame and self:ignoreCheck("MiniMapLFGFrame") and not self.btnParams[MiniMapLFGFrame] then
 		local LFGFrame = MiniMapLFGFrame
 		LFGFrame.icon = MiniMapLFGFrameIconTexture
 		LFGFrame.icon:SetTexCoord(0, .125, 0, .25)
@@ -1022,7 +1051,7 @@ function hb:grabDefButtons()
 	end
 
 	-- MAIL
-	if self:ignoreCheck("MiniMapMailFrame") and not self.btnParams[MiniMapMailFrame] then
+	if MiniMapMailFrame and self:ignoreCheck("MiniMapMailFrame") and not self.btnParams[MiniMapMailFrame] then
 		local btnData = rawget(self.pConfig.mbtnSettings, "HidingBarAddonMail")
 		if btnData then
 			self.pConfig.mbtnSettings["MiniMapMailFrame"] = btnData
@@ -1046,7 +1075,7 @@ function hb:grabDefButtons()
 	end
 
 	-- ZOOM IN & ZOOM OUT
-	for _, zoom in ipairs({MinimapZoomIn, MinimapZoomOut}) do
+	for _, zoom in pairs({MinimapZoomIn, MinimapZoomOut}) do
 		local name = zoom:GetName()
 		if self:ignoreCheck(name) and not self.btnParams[zoom] then
 			self:setHooks(zoom)
@@ -1098,7 +1127,7 @@ function hb:grabDefButtons()
 	end
 
 	-- WORLD MAP BUTTON
-	if self:ignoreCheck("MiniMapWorldMapButton") and not self.btnParams[MiniMapWorldMapButton] then
+	if MiniMapWorldMapButton and self:ignoreCheck("MiniMapWorldMapButton") and not self.btnParams[MiniMapWorldMapButton] then
 		local mapButton = MiniMapWorldMapButton
 		self:setHooks(mapButton)
 		local p = self:setParams(mapButton, function(p, mapButton)
@@ -1148,7 +1177,7 @@ function hb:isBarParent(button, bar)
 end
 
 
-function hb:grabOwnButton(button, force)
+function hb:grabOwnButton(button, force, MSQ_Group)
 	if button.isGrabbed or not (button.bar.config.barTypePosition == 2 and button.bar.config.omb.canGrabbed or force) then return end
 	local btnData = self.pConfig.mbtnSettings[button:GetName()]
 	local bar, stop = self.barByName[btnData[3]], true
@@ -1170,7 +1199,7 @@ function hb:grabOwnButton(button, force)
 	end
 	if stop then return end
 
-	if self:addMButton(button, true) then
+	if self:addMButton(button, true, MSQ_Group) then
 		button.isGrabbed = true
 		if not force then
 			self:setMBtnSettings(button)
@@ -1183,18 +1212,21 @@ end
 
 
 function hb:addCustomGrabButton(name)
-	local button = _G[name]
+	local button = _G[name] or self:getFrameFromPath(name)
+
 	if type(button) ~= "table" or type(button[0]) ~= "userdata" or self.btnParams[button] or self.IsProtected(button) then return end
 	local oType = self.GetObjectType(button)
 	if oType ~= "Button" and oType ~= "Frame" and oType ~= "CheckButton" then return end
+
 	if name:match(self.matchName) then
-		if self:grabOwnButton(button, true) then
+		if self:grabOwnButton(button, true, self.MSQ_CGButton) then
 			self.manuallyButtons[button] = true
-			return true
+			return button
 		end
 	elseif self:addMButton(button, true, self.MSQ_CGButton) then
 		self.manuallyButtons[button] = true
-		return true
+		self.btnParams[button].name = name
+		return button
 	end
 end
 
@@ -1204,7 +1236,7 @@ function hb:ldbi_add(_, button, name)
 		self:setMBtnSettings(button)
 		self:setBtnParent(button)
 		self:sort()
-		button:GetParent():setButtonSize()
+		self.GetParent(button):setButtonSize()
 		self.cb:Fire("MBUTTON_ADDED", button)
 	end
 end
@@ -1222,7 +1254,7 @@ end
 
 function hb:addMButton(button, force, MSQ_Group)
 	local name = self.GetName(button)
-	if not ignoreFrameList[name] and self:ignoreCheck(name) or force then
+	if not ignoreFrameNameList[name] and not ignoreFrameList[button] and self:ignoreCheck(name) or force then
 		if self.HasScript(button, "OnClick") and self.GetScript(button, "OnClick")
 		or self.HasScript(button, "OnMouseUp") and self.GetScript(button, "OnMouseUp")
 		or self.HasScript(button, "OnMouseDown") and self.GetScript(button, "OnMouseDown")
@@ -1290,7 +1322,8 @@ function hb:removeMButton(button, update)
 	self:unsetHooks(button)
 	self:restoreParams(button)
 
-	if self.GetName(button):match(self.matchName) then
+	local name = self.GetName(button)
+	if name and name:match(self.matchName) then
 		button.isGrabbed = nil
 		button.SetPoint = setOMBPoint
 		button.bar:setOMBSize()
@@ -1329,7 +1362,7 @@ do
 		-- [1] - is disabled
 		-- [5] - auto show/hide
 		if btnData and btnData[5] and not btnData[1] then
-			btn:GetParent():applyLayout()
+			hb.GetParent(btn):applyLayout()
 		end
 	end
 
@@ -1416,11 +1449,11 @@ end
 
 
 function hb:setParams(btn, cb)
-	self.btnParams[btn] = {
+	local p = {
 		points = {},
 		frames = {},
 	}
-	local p = self.btnParams[btn]
+	self.btnParams[btn] = p
 	p.callback = cb
 	p.isShown = self.IsShown(btn)
 	p.parent = self.GetParent(btn)
@@ -1441,9 +1474,12 @@ function hb:setParams(btn, cb)
 	local function OnLeave() leave(btn) end
 
 	local function setMouseEvents(frame)
+		p.frames[frame] = true
+		noEventFrames[frame] = btn
+
 		if self.IsMouseMotionEnabled(frame) or self.IsMouseClickEnabled(frame) then
-			p.frames[frame] = {}
-			local fParams = p.frames[frame]
+			local fParams = {}
+			p.frames[frame] = fParams
 
 			fParams.insets = {self.GetHitRectInsets(frame)}
 			self.SetHitRectInsets(frame, 0, 0, 0, 0)
@@ -1457,9 +1493,8 @@ function hb:setParams(btn, cb)
 				fParams.OnLeave = self.GetScript(frame, "OnLeave")
 				self.HookScript(frame, "OnLeave", OnLeave)
 			end
-
-			noGMEFrames[frame] = btn
 		end
+
 		for _, fchild in ipairs({self.GetChildren(frame)}) do
 			setMouseEvents(fchild)
 		end
@@ -1494,11 +1529,13 @@ function hb:restoreParams(btn)
 		self.SetPoint(btn, unpack(p.points[i]))
 	end
 
-	for frame, param in pairs(p.frames) do
-		self.SetHitRectInsets(frame, unpack(param.insets))
-		if self.HasScript(frame, "OnEnter") then self.SetScript(frame, "OnEnter", param.OnEnter) end
-		if self.HasScript(frame, "OnLeave") then self.SetScript(frame, "OnLeave", param.OnLeave) end
-		noGMEFrames[frame] = nil
+	for frame, params in pairs(p.frames) do
+		noEventFrames[frame] = nil
+		if type(params) == "table" then
+			self.SetHitRectInsets(frame, unpack(params.insets))
+			if self.HasScript(frame, "OnEnter") then self.SetScript(frame, "OnEnter", params.OnEnter) end
+			if self.HasScript(frame, "OnLeave") then self.SetScript(frame, "OnLeave", params.OnLeave) end
+		end
 	end
 
 	if p.callback then p:callback(btn) end
@@ -1520,7 +1557,7 @@ function hb:sort()
 		if o1 and not o2 or o1 and o2 and o1 < o2 then return true
 		elseif o1 ~= o2 then return false end
 
-		local n1, n2 = a:GetName(), b:GetName()
+		local n1, n2 = self:getBtnName(a), self:getBtnName(b)
 		return n1 and not n2
 			or n1 and n2 and n1 < n2
 	end
@@ -1631,10 +1668,7 @@ function hidingBarMixin:initOwnMinimapButton()
 	if MSQ then
 		if not hb.MSQ_OMB then
 			hb.MSQ_OMB = MSQ:Group(addon, L["Own Minimap Button"], "OMB")
-			hb.MSQ_OMB:SetCallback(function()
-				hb:MSQ_Button_Update(self.omb)
-				hb:MSQ_CoordUpdate(self.omb)
-			end)
+			hb.MSQ_OMB:RegisterCallback(hb.MSQ_UpdateGroupBtns)
 		end
 		hb:setMButtonRegions(self.omb, nil, hb.MSQ_OMB)
 	end
@@ -1723,7 +1757,6 @@ function hidingBarMixin:updateTooltipPosition(eventFrame)
 		tooltip = LibDBIconTooltip:IsShown() and LibDBIconTooltip or GameTooltip:IsShown() and GameTooltip
 
 		if not tooltip or tooltip:IsObjectType("GameTooltip") and tooltip:IsOwned(UIParent) then
-			if not eventFrame then return end
 			local lqtip = LibStub("LibQTip-1.0", true)
 			if not lqtip then return end
 			tooltip = nil
@@ -2014,12 +2047,12 @@ function hidingBarMixin:setButtonSize(size)
 	if size then self.config.buttonSize = size end
 
 	for _, btn in ipairs(hb.createdButtons) do
-		if btn:GetParent() == self then
+		if self.GetParent(btn) == self then
 			btn:SetScale(self.config.buttonSize / btn:GetWidth())
 		end
 	end
 	for _, btn in ipairs(hb.minimapButtons) do
-		if btn:GetParent() == self then
+		if self.GetParent(btn) == self then
 			local width, height = btn:GetSize()
 			local maxSize = width > height and width or height
 			self.SetScale(btn, self.config.buttonSize / maxSize)
@@ -2076,7 +2109,7 @@ function hidingBarMixin:applyLayout()
 	local i, maxButtons, line = 0
 	if self.config.mbtnPosition == 2 then
 		for _, btn in ipairs(hb.mixedButtons) do
-			if btn:GetParent() == self and btn:IsShown() then
+			if self.GetParent(btn) == self and btn:IsShown() then
 				i = i + 1
 				self:setPointBtn(btn, i, orientation)
 			end
@@ -2085,7 +2118,7 @@ function hidingBarMixin:applyLayout()
 		line = math.ceil(i / self.config.size)
 	else
 		for _, btn in ipairs(hb.createdButtons) do
-			if btn:GetParent() == self and btn:IsShown() then
+			if self.GetParent(btn) == self and btn:IsShown() then
 				i = i + 1
 				self:setPointBtn(btn, i, orientation)
 			end
@@ -2094,7 +2127,7 @@ function hidingBarMixin:applyLayout()
 		local orderDelta = followed and i or math.ceil(i / self.config.size) * self.config.size
 		local j = 0
 		for _, btn in ipairs(hb.minimapButtons) do
-			if btn:GetParent() == self and btn:IsShown() then
+			if self.GetParent(btn) == self and btn:IsShown() then
 				j = j + 1
 				self:setPointBtn(btn, j + orderDelta, orientation)
 			end
@@ -2516,14 +2549,35 @@ function hidingBarMixin:enter(force)
 end
 
 
+function hidingBarMixin:isFocusParent()
+	local frame = GetMouseFocus()
+	while frame do
+		if noEventFrames[frame] then
+			return self.GetParent(noEventFrames[frame]) == self
+		end
+		for i = 1, self.GetNumPoints(frame) do
+			local _, rFrame = self.GetPoint(frame, i)
+			if noEventFrames[rFrame] then
+				return self.GetParent(noEventFrames[rFrame]) == self
+			end
+		end
+		frame = self.GetParent(frame)
+	end
+end
+
+
 function hidingBarMixin:hideBar(elapsed)
-	self.timer = self.timer - elapsed
-	if self.timer <= 0 then
-		self:Hide()
-		self:updateDragBarPosition()
-		self:SetScript("OnUpdate", nil)
-		if self.config.fade and self.drag:IsShown() then
-			frameFade(self.drag, 1.5, self.config.fadeOpacity)
+	if self:isFocusParent() then
+		self.timer = self.config.hideDelay
+	else
+		self.timer = self.timer - elapsed
+		if self.timer <= 0 then
+			self:Hide()
+			self:updateDragBarPosition()
+			self:SetScript("OnUpdate", nil)
+			if self.config.fade and self.drag:IsShown() then
+				frameFade(self.drag, 1.5, self.config.fadeOpacity)
+			end
 		end
 	end
 end
@@ -2678,23 +2732,12 @@ local function bar_OnLeave(self)
 end
 
 
-local function isNoGMEParent(bar)
-	local frame = GetMouseFocus()
-	while frame do
-		if noGMEFrames[frame] then
-			return noGMEFrames[frame]:GetParent() == bar
-		end
-		frame = frame:GetParent()
-	end
-end
-
-
 local function bar_OnEvent(self, event, button)
 	if (button == "LeftButton" or button == "RightButton")
 	and not (self.isMouse
 		or self.drag:IsShown() and self.drag:IsMouseOver()
 		or self.omb and self.omb:IsShown() and self.omb:IsMouseOver()
-		or isNoGMEParent(self))
+		or self:isFocusParent())
 	then
 		self:Hide()
 		self:updateDragBarPosition()
@@ -2834,3 +2877,12 @@ setmetatable(hb.bars, {__index = function(self, key)
 	self[key] = bar
 	return bar
 end})
+
+
+-------------------------------------------
+-- OPTIONS BUTTON
+-------------------------------------------
+hb:addButton(addon, {
+	icon = "Interface/AddOns/HidingBar/media/icon",
+	OnClick = function() config:openConfig() end,
+})

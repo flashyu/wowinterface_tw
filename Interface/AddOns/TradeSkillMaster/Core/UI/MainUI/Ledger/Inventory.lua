@@ -4,7 +4,7 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local _, TSM = ...
+local TSM = select(2, ...) ---@type TSM
 local Inventory = TSM.MainUI.Ledger:NewPackage("Inventory")
 local L = TSM.Include("Locale").GetTable()
 local TempTable = TSM.Include("Util.TempTable")
@@ -20,6 +20,7 @@ local MailTracking = TSM.Include("Service.MailTracking")
 local AltTracking = TSM.Include("Service.AltTracking")
 local Settings = TSM.Include("Service.Settings")
 local UIElements = TSM.Include("UI.UIElements")
+local UIUtils = TSM.Include("UI.UIUtils")
 local private = {
 	settings = nil,
 	db = nil,
@@ -69,7 +70,7 @@ end
 -- ============================================================================
 
 function private.DrawInventoryPage()
-	TSM.UI.AnalyticsRecordPathChange("main", "ledger", "inventory")
+	UIUtils.AnalyticsRecordPathChange("main", "ledger", "inventory")
 	local items = TempTable.Acquire()
 	local bagQuantityLookup = TempTable.Acquire()
 	local bankQuantityLookup = TempTable.Acquire()
@@ -188,7 +189,7 @@ function private.DrawInventoryPage()
 						:SetTitle(L["Item"])
 						:SetFont("ITEM_BODY3")
 						:SetJustifyH("LEFT")
-						:SetTextInfo("levelItemString", TSM.UI.GetColoredItemName)
+						:SetTextInfo("levelItemString", UIUtils.GetDisplayItemName)
 						:SetTooltipInfo("levelItemString")
 						:SetSortInfo("name")
 						:DisableHiding()

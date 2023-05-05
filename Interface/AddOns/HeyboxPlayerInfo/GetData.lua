@@ -216,7 +216,7 @@ function HeyboxApi.GetSkillRelated(SAVED)
     for i = 1, 3 do
         local PvpTalent = {}
         local tmp = C_SpecializationInfo.GetPvpTalentSlotInfo(i)
-        if tmp ~= nil then 
+        if tmp ~= nil and tmp.selectedTalentID ~= nil then 
             local talentID, name, icon, selected, available, spellID, unlocked, row, column, known, grantedByAura = GetPvpTalentInfoByID(tmp.selectedTalentID)
             if spellID ~= nil then 
                 table.insert(SAVED["SkillRelated"], {

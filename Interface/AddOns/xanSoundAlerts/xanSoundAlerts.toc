@@ -1,8 +1,8 @@
-## Interface: 30400
+## Interface: 30401
 ## Title: xanSoundAlerts
 ## Notes: Plays a sound when your health or mana is low.
 ## Author: Xruptor
-## Version: 2.9
+## Version: 3.0
 ## X-Curse-Project-ID: 299032
 ## X-WoWI-ID: 24732
 ## X-Wago-ID: RaN0Q96j

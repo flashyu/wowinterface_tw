@@ -1,18 +1,14 @@
 local spec = LBIS:RegisterSpec(LBIS.L["Druid"], LBIS.L["Balance"], "1")
 
 LBIS:AddItem(spec, "40467", LBIS.L["Head"], "BIS") --Valorous Dreamwalker Cover
-LBIS:AddItem(spec, "40633", LBIS.L["Head"], "BIS") --Crown of the Lost Vanquisher
 LBIS:AddItem(spec, "39545", LBIS.L["Head"], "Alt") --Heroes' Dreamwalker Cover
-LBIS:AddItem(spec, "40618", LBIS.L["Head"], "Alt") --Helm of the Lost Vanquisher
 LBIS:AddItem(spec, "40339", LBIS.L["Head"], "Alt") --Gothik's Cowl
 LBIS:AddItem(spec, "44007", LBIS.L["Head"], "Alt") --Headpiece of Reconciliation
 LBIS:AddItem(spec, "40562", LBIS.L["Head"], "Alt") --Hood of Rationality
 LBIS:AddItem(spec, "40287", LBIS.L["Head"], "Alt") --Cowl of Vanity
 
 LBIS:AddItem(spec, "40470", LBIS.L["Shoulder"], "BIS") --Valorous Dreamwalker Mantle
-LBIS:AddItem(spec, "40639", LBIS.L["Shoulder"], "BIS") --Mantle of the Lost Vanquisher
 LBIS:AddItem(spec, "39548", LBIS.L["Shoulder"], "Alt") --Heroes' Dreamwalker Mantle
-LBIS:AddItem(spec, "40624", LBIS.L["Shoulder"], "Alt") --Spaulders of the Lost Vanquisher
 LBIS:AddItem(spec, "40286", LBIS.L["Shoulder"], "Alt") --Mantle of the Corrupted
 LBIS:AddItem(spec, "40351", LBIS.L["Shoulder"], "Alt") --Mantle of the Fatigued Sage
 LBIS:AddItem(spec, "40439", LBIS.L["Shoulder"], "Alt") --Mantle of the Eternal Sentinel
@@ -24,9 +20,7 @@ LBIS:AddItem(spec, "41610", LBIS.L["Back"], "Alt") --Deathchill Cloak
 LBIS:AddItem(spec, "40723", LBIS.L["Back"], "Alt") --Disguise of the Kumiho
 
 LBIS:AddItem(spec, "40469", LBIS.L["Chest"], "BIS") --Valorous Dreamwalker Vestments
-LBIS:AddItem(spec, "40627", LBIS.L["Chest"], "BIS") --Breastplate of the Lost Vanquisher
 LBIS:AddItem(spec, "39547", LBIS.L["Chest"], "Alt") --Heroes' Dreamwalker Vestments
-LBIS:AddItem(spec, "40612", LBIS.L["Chest"], "Alt") --Chestguard of the Lost Vanquisher
 LBIS:AddItem(spec, "40526", LBIS.L["Chest"], "Alt") --Gown of the Spell-Weaver
 LBIS:AddItem(spec, "40234", LBIS.L["Chest"], "Alt") --Heigan's Putrid Vestments
 LBIS:AddItem(spec, "44002", LBIS.L["Chest"], "Alt") --The Sanctum's Flowing Vestments
@@ -40,25 +34,24 @@ LBIS:AddItem(spec, "40741", LBIS.L["Wrist"], "Alt") --Cuffs of the Shadow Ascend
 LBIS:AddItem(spec, "39731", LBIS.L["Wrist"], "Alt") --Punctilious Bindings
 
 LBIS:AddItem(spec, "40466", LBIS.L["Hands"], "BIS") --Valorous Dreamwalker Gloves
-LBIS:AddItem(spec, "40630", LBIS.L["Hands"], "BIS") --Gauntlets of the Lost Vanquisher
 LBIS:AddItem(spec, "40238", LBIS.L["Hands"], "Alt") --Gloves of the Dancing Bear
 LBIS:AddItem(spec, "39544", LBIS.L["Hands"], "Alt") --Heroes' Dreamwalker Gloves
-LBIS:AddItem(spec, "40615", LBIS.L["Hands"], "Alt") --Gloves of the Lost Vanquisher
 LBIS:AddItem(spec, "40380", LBIS.L["Hands"], "Alt") --Gloves of Grandeur
 LBIS:AddItem(spec, "39733", LBIS.L["Hands"], "Alt") --Gloves of Token Respect
 LBIS:AddItem(spec, "40197", LBIS.L["Hands"], "Alt") --Gloves of the Fallen Wizard
+LBIS:AddItem(spec, "42113", LBIS.L["Hands"], "Alt") --Spellweave Gloves
+LBIS:AddItem(spec, "42111", LBIS.L["Hands"], "Alt") --Ebonweave Gloves
 
 LBIS:AddItem(spec, "40561", LBIS.L["Waist"], "BIS") --Leash of Heedless Magic
 LBIS:AddItem(spec, "40301", LBIS.L["Waist"], "Alt") --Cincture of Polarity
 LBIS:AddItem(spec, "39735", LBIS.L["Waist"], "Alt") --Belt of False Dignity
 LBIS:AddItem(spec, "40696", LBIS.L["Waist"], "Alt") --Plush Sash of Guzbah
+LBIS:AddItem(spec, "37408", LBIS.L["Waist"], "Alt") --Girdle of Bane
 LBIS:AddItem(spec, "40341", LBIS.L["Waist"], "Alt") --Shackled Cinch
 
 LBIS:AddItem(spec, "40560", LBIS.L["Legs"], "BIS") --Leggings of the Wanton Spellcaster
 LBIS:AddItem(spec, "40398", LBIS.L["Legs"], "BIS") --Leggings of Mortal Arrogance
 LBIS:AddItem(spec, "40468", LBIS.L["Legs"], "Alt") --Valorous Dreamwalker Trousers
-LBIS:AddItem(spec, "40636", LBIS.L["Legs"], "Alt") --Legplates of the Lost Vanquisher
-LBIS:AddItem(spec, "40621", LBIS.L["Legs"], "Alt") --Leggings of the Lost Vanquisher
 LBIS:AddItem(spec, "39546", LBIS.L["Legs"], "Alt") --Heroes' Dreamwalker Trousers
 LBIS:AddItem(spec, "40379", LBIS.L["Legs"], "Alt") --Legguards of the Boneyard
 LBIS:AddItem(spec, "39720", LBIS.L["Legs"], "Alt") --Leggings of Atrophy
@@ -82,6 +75,7 @@ LBIS:AddItem(spec, "40378", LBIS.L["Neck"], "Alt") --Ceaseless Pity
 LBIS:AddItem(spec, "40399", LBIS.L["Ring"], "BIS") --Signet of Manifested Pain
 LBIS:AddItem(spec, "40080", LBIS.L["Ring"], "BIS") --Lost Jewel
 LBIS:AddItem(spec, "40719", LBIS.L["Ring"], "BIS") --Band of Channeled Magic
+LBIS:AddItem(spec, "42644", LBIS.L["Ring"], "Alt") --Titanium Spellshock Ring
 LBIS:AddItem(spec, "39389", LBIS.L["Ring"], "Alt") --Signet of the Malevolent
 LBIS:AddItem(spec, "40375", LBIS.L["Ring"], "Alt") --Ring of Decaying Beauty
 LBIS:AddItem(spec, "40433", LBIS.L["Ring"], "Alt") --Wyrmrest Band
@@ -95,7 +89,13 @@ LBIS:AddItem(spec, "40432", LBIS.L["Trinket"], "BIS") --Illustration of the Drag
 LBIS:AddItem(spec, "39229", LBIS.L["Trinket"], "Alt") --Embrace of the Spider
 LBIS:AddItem(spec, "40373", LBIS.L["Trinket"], "Alt") --Extract of Necromantic Power
 LBIS:AddItem(spec, "37873", LBIS.L["Trinket"], "Alt") --Mark of the War Prisoner
+LBIS:AddItem(spec, "42395", LBIS.L["Trinket"], "Alt") --Figurine - Twilight Serpent
 LBIS:AddItem(spec, "49076", LBIS.L["Trinket"], "Alt") --Mithril Pocketwatch
+LBIS:AddItem(spec, "37835", LBIS.L["Trinket"], "Alt") --Je'Tze's Bell
+LBIS:AddItem(spec, "42988", LBIS.L["Trinket"], "Alt") --Darkmoon Card: Illusion
+LBIS:AddItem(spec, "37660", LBIS.L["Trinket"], "Alt") --Forge Ember
+LBIS:AddItem(spec, "44322", LBIS.L["Trinket"], "Alt") --Mercurial Alchemist Stone
+LBIS:AddItem(spec, "36972", LBIS.L["Trinket"], "Alt") --Tome of Arcane Phenomena
 
 LBIS:AddItem(spec, "40395", LBIS.L["Main Hand"], "BIS") --Torch of Holy Fire
 LBIS:AddItem(spec, "40408", LBIS.L["Main Hand"], "Alt") --Haunting Call
@@ -119,3 +119,6 @@ LBIS:AddItem(spec, "40455", LBIS.L["Two Hand"], "Alt") --Staff of Restraint
 
 LBIS:AddItem(spec, "40321", LBIS.L["Ranged/Relic"], "BIS") --Idol of the Shooting Star
 LBIS:AddItem(spec, "40712", LBIS.L["Ranged/Relic"], "Alt") --Idol of Steadfast Renewal
+LBIS:AddItem(spec, "32387", LBIS.L["Ranged/Relic"], "Alt") --Idol of the Raven Goddess
+LBIS:AddItem(spec, "27518", LBIS.L["Ranged/Relic"], "Alt") --Ivory Idol of the Moongoddess
+LBIS:AddItem(spec, "38360", LBIS.L["Ranged/Relic"], "Alt") --Idol of Arcane Terror

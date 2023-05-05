@@ -3,17 +3,18 @@ local gsub = _G.string.gsub
 local find = _G.string.find
 local fuFrame=List_R_F_1_12
 local ADD_Checkbutton=addonTable.ADD_Checkbutton
-local ADD_Button=addonTable.ADD_Button
-local PIGDownMenu=addonTable.PIGDownMenu
+local Create=addonTable.Create
+local PIGDownMenu=Create.PIGDownMenu
+local PIGButton = Create.PIGButton
 --///////////////////////////////////////////
-fuFrame.NPCID = ADD_Button("获取目标GUID",nil,fuFrame,114,24,"TOPLEFT",fuFrame,"TOPLEFT",20,-20)
+fuFrame.NPCID = PIGButton("获取目标GUID",nil,fuFrame,{114,24},{"TOPLEFT",fuFrame,"TOPLEFT",20,-20})
 fuFrame.NPCID:SetScript("OnClick", function (self)
 	print(UnitGUID("target"))
 end);
 --==================================================
 --启用CPU监控
 SetCVar("scriptProfile", 0)--默认设置关闭
-fuFrame.CPU_OPEN = ADD_Button("开启CPU监控",nil,fuFrame,110,24,"TOPLEFT",fuFrame,"TOPLEFT",20,-80)
+fuFrame.CPU_OPEN = PIGButton("开启CPU监控",nil,fuFrame,{110,24},{"TOPLEFT",fuFrame,"TOPLEFT",20,-80})
 fuFrame.CPU_OPEN:SetScript("OnClick", function (self)
 	if self:GetText()=="关闭CPU监控" then
 		SetCVar("scriptProfile", 0)
@@ -23,7 +24,7 @@ fuFrame.CPU_OPEN:SetScript("OnClick", function (self)
 		fuFrame.CPU_OPEN:SetText("关闭CPU监控");
 	end
 end);
-fuFrame.CPU_OPEN.DAYIN = ADD_Button("打印数据到聊天框",nil,fuFrame.CPU_OPEN,150,24,"TOPLEFT",fuFrame.CPU_OPEN,"TOPLEFT",160,0)
+fuFrame.CPU_OPEN.DAYIN = PIGButton("打印数据到聊天框",nil,fuFrame.CPU_OPEN,{150,24},{"TOPLEFT",fuFrame.CPU_OPEN,"TOPLEFT",160,0})
 fuFrame.CPU_OPEN.DAYIN:SetScript("OnClick", function (self)
 	if GetCVarInfo("scriptProfile")=="1" then
 		UpdateAddOnMemoryUsage()
@@ -43,16 +44,16 @@ fuFrame.CPU_OPEN.DAYIN:SetScript("OnClick", function (self)
 		end
 	end
 end);
-fuFrame.CPU_OPEN.CZ = ADD_Button("重置数据",nil,fuFrame.CPU_OPEN,80,24,"TOPLEFT",fuFrame.CPU_OPEN,"TOPLEFT",380,0)
+fuFrame.CPU_OPEN.CZ = PIGButton("重置数据",nil,fuFrame.CPU_OPEN,{80,24},{"TOPLEFT",fuFrame.CPU_OPEN,"TOPLEFT",380,0})
 fuFrame.CPU_OPEN.CZ:SetScript("OnClick", function (self)
 	ResetCPUUsage()
 end);
 
 --------------------------------
-fuFrame.errorUI = ADD_Button("错误报告",nil,fuFrame,120,24,"TOPLEFT",fuFrame,"TOPLEFT",20,-180)
+fuFrame.errorUI = PIGButton("错误报告",nil,fuFrame,{120,24},{"TOPLEFT",fuFrame,"TOPLEFT",20,-180})
 fuFrame.errorUI:SetScript("OnClick", function (self)
 	Pig_OptionsUI:Hide()
-	Bugshouji_UI:Show()
+	Bugcollect_UI:Show()
 end);
 --
 fuFrame.tishi = fuFrame:CreateFontString();
@@ -71,7 +72,7 @@ fuFrame.tishiCK:SetScript("OnClick", function (self)
 end);
 ---------
 local CVarsList = {
-	{"打开系统LUA错误提示","scriptErrors","1","0","打开系统的LUA错误提示功能，对插件不了解请勿开启！！！",false},
+	{"打开系统LUA错误提示","scriptErrors","1","0","打开系统的LUA错误提示功能，非调试插件情况下请不要开启",false},
 }
 for i=1,#CVarsList do
 	local miaodian = {fuFrame,20,-290}
@@ -125,7 +126,7 @@ fuFrame:SetScript("OnShow", function()
 end);
 ---创建常用3宏
 local hongNameList = {["RL"]={"/Reload",132096},["FST"]={"/fstack",132089},["EVE"]={"/eventtrace",132092}}
-fuFrame.New_hong = ADD_Button("创建FWR",nil,fuFrame,100,24,"LEFT",fuFrame.taintLog,"RIGHT",20,0)
+fuFrame.New_hong = PIGButton("创建FWR",nil,fuFrame,{100,24},{"LEFT",fuFrame.taintLog,"RIGHT",20,0})
 fuFrame.New_hong:SetScript("OnClick", function ()
 	for k,v in pairs(hongNameList) do
 		local macroSlot = GetMacroIndexByName(k)

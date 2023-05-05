@@ -267,7 +267,7 @@ if IS_WOW_PROJECT_CLASSIC_ERA and LCD then
 end
 
 local function CreatePlaterNamePlateAuraTooltip()
-	local tooltip = CreateFrame("GameTooltip", "PlaterNamePlateAuraTooltip", parent or UIParent, "GameTooltipTemplate")
+	local tooltip = CreateFrame("GameTooltip", "PlaterNamePlateAuraTooltip", UIParent, "GameTooltipTemplate")
 	
 	tooltip.ApplyOwnBackdrop = function(self)
 		self:SetBackdrop ({edgeFile = [[Interface\Buttons\WHITE8X8]], edgeSize = 1, bgFile = [[Interface\Buttons\WHITE8X8]], tileSize = 0, tile = false, tileEdge = true})
@@ -376,7 +376,7 @@ local ValidateAuraForUpdate = function (unit, aura)
 			end
 		end
 		
-		if SPECIAL_AURAS_AUTO_ADDED [name] or SPECIAL_AURAS_AUTO_ADDED [spellId] or  SPECIAL_AURAS_USER_LIST[name] or SPECIAL_AURAS_USER_LIST[spellId] or (auraData.sourceUnit == "player" and (SPECIAL_AURAS_USER_LIST_MINE[name] or SPECIAL_AURAS_USER_LIST_MINE[spellId])) then
+		if SPECIAL_AURAS_AUTO_ADDED [name] or SPECIAL_AURAS_AUTO_ADDED [spellId] or  SPECIAL_AURAS_USER_LIST[name] or SPECIAL_AURAS_USER_LIST[spellId] or (aura.sourceUnit == "player" and (SPECIAL_AURAS_USER_LIST_MINE[name] or SPECIAL_AURAS_USER_LIST_MINE[spellId])) then
 			--or DB_SHOW_PURGE_IN_EXTRA_ICONS or DB_SHOW_ENRAGE_IN_EXTRA_ICONS or DB_SHOW_MAGIC_IN_EXTRA_ICONS
 			--include buff special at all times
 			needsUpdate = true
@@ -536,15 +536,12 @@ UpdateUnitAuraCacheData = function (unit, updatedAuras)
 	end
 	
 	for _, auraInstanceID in ipairs(updatedAuras.updatedAuraInstanceIDs or {}) do
-		local needsUpdate = ValidateAuraForUpdate(unit, aura)
-		if needsUpdate then
-			if unitCacheData.debuffs[auraInstanceID] ~= nil then
-				unitCacheData.debuffs[auraInstanceID].requriresUpdate = true
-				unitCacheData.debuffsChanged = true
-			elseif unitCacheData.buffs[auraInstanceID] ~= nil then
-				unitCacheData.buffs[auraInstanceID].requriresUpdate = true
-				unitCacheData.buffsChanged = true
-			end
+		if unitCacheData.debuffs[auraInstanceID] ~= nil then
+			unitCacheData.debuffs[auraInstanceID].requriresUpdate = true
+			unitCacheData.debuffsChanged = true
+		elseif unitCacheData.buffs[auraInstanceID] ~= nil then
+			unitCacheData.buffs[auraInstanceID].requriresUpdate = true
+			unitCacheData.buffsChanged = true
 		end
 	end
 	
@@ -587,9 +584,9 @@ local function getUnitAuras(unit, filter)
 			local tmpBuffs = {}
 			for auraInstanceID, aura in pairs (unitCacheData.buffs) do
 				if aura.requriresUpdate then
-					tmpDebuffs[auraInstanceID] = C_UnitAuras.GetAuraDataByAuraInstanceID(unit, auraInstanceID)
+					tmpBuffs[auraInstanceID] = C_UnitAuras.GetAuraDataByAuraInstanceID(unit, auraInstanceID)
 				else
-					tmpDebuffs[auraInstanceID] = aura
+					tmpBuffs[auraInstanceID] = aura
 				end
 			end
 			unitCacheData.buffs = tmpBuffs
@@ -846,6 +843,7 @@ end
 							auraIconFrame.InUse = true --don't play animation
 							Plater.AddAura(buffFrame, auraIconFrame, -1, spellName.."_player_ghost", spellIcon, 1, "DEBUFF", 0, 0, "player", false, false, spellId, false, false, false, false, "DEBUFF", 1)
 							auraIconFrame:EnableMouse (false) --don't use tooltips, as there is no real aura
+							auraIconFrame.IsGhostAura = true
 							Plater.Auras.GhostAuras.ApplyAppearance(auraIconFrame, spellName.."_player_ghost", spellIcon, spellId)
 							nameplateGhostAuraCache[spellName.."_player_ghost"] = true --this is shown as ghost aura
 						end
@@ -1129,11 +1127,23 @@ end
 		newIcon.Border = newIcon:CreateTexture (nil, "background")
 		newIcon.Border:SetAllPoints()
 		newIcon.Border:SetColorTexture (0, 0, 0)
-		
+
+		newIcon.BorderMask = newIcon:CreateMaskTexture(nil, "artwork")
+		newIcon.BorderMask:SetAllPoints()
+		newIcon.BorderMask:SetTexture([[Interface/addons/plater/masks/rounded_square_32x32]])
+		newIcon.Border:AddMaskTexture(newIcon.BorderMask)
+		newIcon.BorderMask:Hide()
+
 		newIcon.Icon = newIcon:CreateTexture (nil, "BORDER")
 		newIcon.Icon:SetSize (18, 12)
 		newIcon.Icon:SetPoint ("center")
 		newIcon.Icon:SetTexCoord (.05, .95, .1, .6)
+
+		newIcon.IconMask = newIcon:CreateMaskTexture(nil, "artwork")
+		newIcon.IconMask:SetAllPoints()
+		newIcon.IconMask:SetTexture([[Interface/addons/plater/masks/rounded_square_32x32]])
+		newIcon.Icon:AddMaskTexture(newIcon.IconMask)
+		newIcon.IconMask:Hide()
 		
 		newIcon.Cooldown = CreateFrame ("cooldown", "$parentCooldown", newIcon, "CooldownFrameTemplate, BackdropTemplate")
 		newIcon.Cooldown:SetPoint ("center", 0, -1)
@@ -1141,16 +1151,28 @@ end
 		newIcon.Cooldown:EnableMouse (false)
 		newIcon.Cooldown:SetHideCountdownNumbers (true)
 		newIcon.Cooldown:Hide()
-		
+
+		--tested to change the texture used in the semi-transparent black overlay which get "cutted" by the edge texture
+		--newIcon.Cooldown.SwipeTexture = newIcon.Cooldown:CreateTexture(nil, "artwork")
+		--newIcon.Cooldown.SwipeTexture:SetAllPoints()
+		--newIcon.Cooldown.SwipeTexture:SetColorTexture(0, 0, 0, 0.3)
+		--newIcon.Cooldown:SetSwipeTexture([[Interface/addons/plater/masks/rounded_square_32x32]], 0, 0, 1, 1)
+		--newIcon.Cooldown:SetEdgeTexture([[Interface/addons/plater/masks/rounded_square_32x32]], 0, 0, 1, 1)
+		--newIcon.CooldownMask = newIcon.Cooldown:CreateMaskTexture(nil, "artwork")
+		--newIcon.CooldownMask:SetAllPoints()
+		--newIcon.CooldownMask:SetTexture([[Interface/addons/plater/masks/rounded_square_32x32]])
+		--newIcon.Cooldown.SwipeTexture:AddMaskTexture(newIcon.CooldownMask)
+		--newIcon.CooldownMask:Hide()
+
 		newIcon.Cooldown.noCooldownCount = Plater.db.profile.disable_omnicc_on_auras
-		
+
 		--newIcon.Cooldown:SetSwipeColor (0, 0, 0) --not working
 		--newIcon.Cooldown:SetDrawSwipe (false)
 		--newIcon.Cooldown:SetSwipeTexture ("Interface\\Garrison\\Garr_TimerFill")
 		--newIcon.Cooldown:SetEdgeTexture ("Interface\\Cooldown\\edge-LoC");
 		--newIcon.Cooldown:SetReverse (true)
 		--newIcon.Cooldown:SetCooldownUNIX (startTime, buildDuration);
-		
+
 		newIcon.CountFrame = CreateFrame ("frame", "$parentCountFrame", newIcon, BackdropTemplateMixin and "BackdropTemplate")
 		newIcon.CountFrame:SetAllPoints()
 		newIcon.CountFrame:EnableMouse (false)
@@ -1339,7 +1361,7 @@ end
 	--update the aura icon, this icon is getted with GetAuraIcon -
 	--dispelName is the UnitAura return value for the auraType ("" is enrage, nil/"none" for unspecified and "Disease", "Poison", "Curse", "Magic" for other types. -Continuity/Ariani
 	--self is .BuffFrame or .BuffFrame2
-	function Plater.AddAura (self, auraIconFrame, i, spellName, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, isBuff, isShowAll, isDebuff, isPersonal, dispelName, applications, modRate) --~addaura ãddaura
+	function Plater.AddAura (self, auraIconFrame, i, spellName, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, isBuff, isShowAll, isDebuff, isPersonal, dispelName, modRate) --~addaura ãddaura
 		auraIconFrame:SetID (i)
 		auraIconFrame.auraInstanceID = i
 		local curBuffFrame = self.Name == "Secondary" and 2 or 1
@@ -1449,7 +1471,7 @@ end
 		--when the size is changed in the options it doesnt change the IsPersonal flag
 		--when it changes the isPersonal flag it change locally without increasing the refresh ID
 		--> update the icon size depending on where it is shown
-		if (auraIconFrame.IsPersonal ~= isPersonal or auraIconFrame.BuffFrame ~= curBuffFrame) then
+		if (auraIconFrame.IsPersonal ~= isPersonal or auraIconFrame.BuffFrame ~= curBuffFrame or auraIconFrame.IsGhostAura) then
 			if (isPersonal) then
 				local auraWidth = profile.aura_width_personal
 				local auraHeight = profile.aura_height_personal
@@ -1472,6 +1494,7 @@ end
 			Plater.UpdateIconAspecRatio (auraIconFrame)
 		end
 		auraIconFrame.IsPersonal = isPersonal
+		auraIconFrame.IsGhostAura = false
 		auraIconFrame.BuffFrame = self.Name == "Secondary" and 2 or 1
 
 		if (applications > 1) then
@@ -1720,6 +1743,7 @@ end
 		--spellId, borderColor, startTime, duration, forceTexture, descText
 		--calling SetIcon make the ExtraIconFrame call show() on it self
 		local iconFrame = self.ExtraIconFrame:SetIcon (spellId, borderColor, expirationTime - duration, duration, false, sourceUnitName and {text = sourceUnitName, text_color = sourceUnitClass} or false, applications, debuffType, sourceUnit, isStealable, spellName, isBuff, modRate)
+		iconFrame.Texture:SetDesaturated(false) -- ensure this
 
 		-- tooltip info
 		if id and id > 0 then
@@ -1837,7 +1861,7 @@ end
 					--verify is this aura is in the table passed
 					if (aurasToCheck [name] or aurasToCheck [spellId]) then
 						local auraIconFrame, buffFrame = Plater.GetAuraIcon (self, true)
-						Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, false, false, isPersonal, dispelName, applications, timeMod)
+						Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, false, false, isPersonal, dispelName, timeMod)
 					end
 					
 					--> check if is a special aura
@@ -1881,7 +1905,7 @@ end
 					if (sourceUnit and (aurasToCheck [name] or aurasToCheck [spellId]) and (UnitIsUnit (sourceUnit, "player") or UnitIsUnit (sourceUnit, "pet"))) then
 					--if (aurasToCheck [name]) then
 						local auraIconFrame, buffFrame = Plater.GetAuraIcon (self)
-						Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, false, false, false, isPersonal, dispelName, applications, timeMod)
+						Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, false, false, false, isPersonal, dispelName, timeMod)
 					end
 					
 					--> check if is a special aura
@@ -2010,7 +2034,7 @@ end
 				if (can_show_this_debuff) then
 					--get the icon to be used by this aura
 					local auraIconFrame, buffFrame = Plater.GetAuraIcon (self)
-					Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, false, nil, nil, nil, dispelName, applications, timeMod)
+					Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, false, nil, nil, nil, dispelName, timeMod)
 				end
 			end
 		end
@@ -2044,7 +2068,7 @@ end
 					if (Plater.DebugAuras) then
 						if (duration and duration < 60) then
 							local auraIconFrame, buffFrame = Plater.GetAuraIcon (self, true)
-							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, applications, timeMod)
+							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, timeMod)
 						end
 					end
 					
@@ -2058,7 +2082,7 @@ end
 						--> important aura
 						if (DB_AURA_SHOW_IMPORTANT and (nameplateShowAll or isBossAura)) then
 							local auraIconFrame, buffFrame = Plater.GetAuraIcon (self, true)
-							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, true, nil, nil, dispelName, applications, timeMod)
+							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, true, nil, nil, dispelName, timeMod)
 						
 						--> is dispellable or can be steal
 						elseif (DB_AURA_SHOW_DISPELLABLE and isStealable) then
@@ -2068,42 +2092,42 @@ end
 								--show infinite as well and option to enable this separately (continuity, july 2022)
 								if (duration == 0 or duration < 120) then
 									local auraIconFrame, buffFrame = Plater.GetAuraIcon (self, true)
-									Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, applications, timeMod)
+									Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, timeMod)
 								end
 							else
 								local auraIconFrame, buffFrame = Plater.GetAuraIcon (self, true)
-								Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, applications, timeMod)
+								Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, timeMod)
 							end
 							
 						--> is enrage
 						elseif (DB_AURA_SHOW_ENRAGE and dispelName == AURA_TYPE_ENRAGE) then
 							local auraIconFrame, buffFrame = Plater.GetAuraIcon (self, true)
-							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, applications, timeMod)
+							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, timeMod)
 						
 						--> is magic
 						elseif (DB_AURA_SHOW_MAGIC and dispelName == AURA_TYPE_MAGIC) then
 							local auraIconFrame, buffFrame = Plater.GetAuraIcon (self, true)
-							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, applications, timeMod)
+							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, timeMod)
 						
 						--> is casted by the player
 						elseif (DB_AURA_SHOW_BYPLAYER and sourceUnit and UnitIsUnit (sourceUnit, "player")) then
 							local auraIconFrame, buffFrame = Plater.GetAuraIcon (self, true)
-							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, applications, timeMod)
+							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, timeMod)
 							
 						--> is casted by other players
 						elseif (DB_AURA_SHOW_BYOTHERPLAYERS and isFromPlayerOrPlayerPet and sourceUnit and not UnitIsUnit (sourceUnit, "player")) then
 							local auraIconFrame, buffFrame = Plater.GetAuraIcon (self, true)
-							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, applications, timeMod)
+							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, timeMod)
 							
 						--> is casted by the unit it self
 						elseif (DB_AURA_SHOW_BYUNIT and sourceUnit and UnitIsUnit (sourceUnit, unit) and not isFromPlayerOrPlayerPet) then
 							local auraIconFrame, buffFrame = Plater.GetAuraIcon (self, true)
-							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, applications, timeMod)
+							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, timeMod)
 						
 						--> user added this buff to track in the buff tracking tab
 						elseif (AUTO_TRACKING_EXTRA_BUFFS [name] or AUTO_TRACKING_EXTRA_BUFFS [spellId]) then
 							local auraIconFrame, buffFrame = Plater.GetAuraIcon (self, true)
-							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, applications, timeMod)
+							Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, nil, nil, nil, dispelName, timeMod)
 							
 						end
 					end
@@ -2203,7 +2227,7 @@ end
 					
 				if (not DB_DEBUFF_BANNED [name] and not DB_DEBUFF_BANNED [spellId]) then
 					local auraIconFrame, buffFrame = Plater.GetAuraIcon (self)
-					Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, false, false, true, true, dispelName, applications, timeMod)
+					Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, false, false, true, true, dispelName, timeMod)
 					
 					--> check for special auras auto added by setting like 'show crowd control' or 'show dispellable'
 					--> SPECIAL_AURAS_AUTO_ADDED has a list of crowd control not do not have a list of dispellable, so check if isStealable
@@ -2244,7 +2268,7 @@ end
 				--> only show buffs casted by the player it self and less than 1 minute in duration
 				if ((not DB_BUFF_BANNED [name] and not DB_BUFF_BANNED [spellId]) and (noBuffDurationLimitation or (duration and (duration > 0 and duration < 60)) and (sourceUnit and UnitIsUnit (sourceUnit, "player")))) then
 					local auraIconFrame, buffFrame = Plater.GetAuraIcon (self, true)
-					Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, false, false, true, dispelName, applications, timeMod)
+					Plater.AddAura (buffFrame, auraIconFrame, id, name, icon, applications, auraType, duration, expirationTime, sourceUnit, isStealable, nameplateShowPersonal, spellId, true, false, false, true, dispelName, timeMod)
 
 				end
 				
@@ -2301,9 +2325,9 @@ end
 								end
 								
 								if (not UnitIsUnit (plateFrame.unitFrame [MEMBER_UNITID], "player")) then
-									Plater.AddAura (buffFrame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "DEBUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", false, false, auraTable.SpellID, nil, nil, nil, nil, auraTable.Type, 1080, 1)
+									Plater.AddAura (buffFrame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "DEBUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", false, false, auraTable.SpellID, nil, nil, nil, nil, auraTable.Type, 1)
 								else
-									Plater.AddAura (buffFrame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "DEBUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", false, false, auraTable.SpellID, false, false, true, true, auraTable.Type, 1080, 1)
+									Plater.AddAura (buffFrame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "DEBUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", false, false, auraTable.SpellID, false, false, true, true, auraTable.Type, 1)
 								end
 								
 								unitAuraCache[auraTable.SpellName] = true
@@ -2321,9 +2345,9 @@ end
 								end
 								
 								if (not UnitIsUnit (plateFrame.unitFrame [MEMBER_UNITID], "player")) then
-									Plater.AddAura (buffFrame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "DEBUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", true, false, auraTable.SpellID, true, nil, nil, nil, auraTable.Type, 1080, 1)
+									Plater.AddAura (buffFrame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "DEBUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", true, false, auraTable.SpellID, true, nil, nil, nil, auraTable.Type, 1)
 								else
-									Plater.AddAura (buffFrame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "DEBUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", true, false, auraTable.SpellID, false, false, false, true, auraTable.Type, 1080, 1)
+									Plater.AddAura (buffFrame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "DEBUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", true, false, auraTable.SpellID, false, false, false, true, auraTable.Type, 1)
 								end
 								
 								unitAuraCache[auraTable.SpellName] = true
@@ -2354,9 +2378,9 @@ end
 								end
 								
 								if (not UnitIsUnit (plateFrame.unitFrame [MEMBER_UNITID], "player")) then
-									Plater.AddAura (buffFrame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "DEBUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", false, false, auraTable.SpellID, nil, nil, nil, nil, auraTable.Type, 1080, 1)
+									Plater.AddAura (buffFrame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "DEBUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", false, false, auraTable.SpellID, nil, nil, nil, nil, auraTable.Type, 1)
 								else
-									Plater.AddAura (buffFrame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "DEBUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", false, false, auraTable.SpellID, false, false, true, true, auraTable.Type, 1080, 1)
+									Plater.AddAura (buffFrame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "DEBUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", false, false, auraTable.SpellID, false, false, true, true, auraTable.Type, 1)
 								end
 								
 								unitAuraCache[auraTable.SpellName] = true
@@ -2373,9 +2397,9 @@ end
 								end
 								
 								if (not UnitIsUnit (plateFrame.unitFrame [MEMBER_UNITID], "player")) then
-									Plater.AddAura (frame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "BUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", true, false, auraTable.SpellID, true, nil, nil, nil, auraTable.Type, 1080, 1)
+									Plater.AddAura (frame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "BUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", true, false, auraTable.SpellID, true, nil, nil, nil, auraTable.Type, 1)
 								else
-									Plater.AddAura (frame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "BUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", true, false, auraTable.SpellID, true, false, false, false, auraTable.Type, 1080, 1)
+									Plater.AddAura (frame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "BUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", true, false, auraTable.SpellID, true, false, false, false, auraTable.Type, 1)
 									--Plater.AddAura (frame, auraIconFrame, index, auraTable.SpellName, auraTable.SpellTexture, auraTable.Count, "BUFF", auraTable.Duration, auraTable.ApplyTime+auraTable.Duration, "player", true, false, auraTable.SpellID, false, false, false, true, auraTable.Type)
 								end
 								
@@ -2590,7 +2614,8 @@ end
 			wipe(AUTO_TRACKING_EXTRA_DEBUFFS)
 
 			for spellId, flag in pairs (extraBuffsToTrack) do
-				local spellName = GetSpellInfo (tonumber(spellId) or spellId)
+				spellId = tonumber(spellId) or spellId --ensure either actual number or name of the spell
+				local spellName = GetSpellInfo (spellId)
 				if (spellName) then
 					if flag then
 						AUTO_TRACKING_EXTRA_BUFFS [spellName] = true
@@ -2601,7 +2626,8 @@ end
 			end
 
 			for spellId, flag in pairs (extraDebuffsToTrack) do
-				local spellName = GetSpellInfo (tonumber(spellId) or spellId)
+				spellId = tonumber(spellId) or spellId --ensure either actual number or name of the spell
+				local spellName = GetSpellInfo (spellId)
 				if (spellName) then
 					if flag then
 						AUTO_TRACKING_EXTRA_DEBUFFS [spellName] = true
@@ -2654,7 +2680,8 @@ end
 			end
 
 			for spellId, state in pairs (profile.aura_tracker.buff_banned) do
-				local spellName = GetSpellInfo (tonumber(spellId) or spellId)
+				spellId = tonumber(spellId) or spellId --ensure either actual number or name of the spell
+				local spellName = GetSpellInfo (spellId)
 				if (spellName) then
 					if state then
 						DB_BUFF_BANNED [spellName] = true
@@ -2665,7 +2692,8 @@ end
 			end
 
 			for spellId, state in pairs (profile.aura_tracker.debuff_banned) do
-				local spellName = GetSpellInfo (tonumber(spellId) or spellId)
+				spellId = tonumber(spellId) or spellId --ensure either actual number or name of the spell
+				local spellName = GetSpellInfo (spellId)
 				if (spellName) then
 					if state then
 						DB_DEBUFF_BANNED [spellName] = true

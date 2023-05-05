@@ -1,7 +1,8 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-	local _detalhes = _G._detalhes
+	local _detalhes = _G.Details
 	local Loc = LibStub("AceLocale-3.0"):GetLocale ( "Details" )
+	local addonName, Details222 = ...
 	local _
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -336,8 +337,7 @@
 		return playername, playerclass, deathtime, deathcombattime, deathtimestring, playermaxhealth, deathevents, lastcooldown
 	end
 
-	--get the fractional number representing the alphabetical letter
-	function _detalhes:GetOrderNumber(who_name)
+	function Details:GetOrderNumber() --who_name
 		--local name = upper (who_name .. "zz")
 		--local byte1 = abs(_string_byte (name, 2)-91)/1000000
 		--return byte1 + abs(_string_byte (name, 1)-91)/10000
@@ -518,6 +518,7 @@
 			local left,num,right = _string_match (n,'^([^%d]*%d)(%d*)(.-)$')
 			return left..(num:reverse():gsub('(%d%d%d)','%1,'):reverse())..right
 		end
+		
 		function _detalhes:comma_value_raw (n)
 			local left,num,right = string.match(n,'^([^%d]*%d)(%d*)(.-)$')
 			return left..(num:reverse():gsub('(%d%d%d)','%1,'):reverse())..right
@@ -676,6 +677,15 @@
 	function _detalhes:GetCurrentToKFunction()
 		return _detalhes.ToKFunctions [_detalhes.ps_abbreviation]
 	end
+
+	--alias
+	---transfor an integer into a string separating thousands with a comma
+	---@param number number
+	---@return string
+	function Details:CommaValue(number)
+		return Details:comma_value(number)
+	end
+
 
 ------------------------------------------------------------------------------------------------------------
 --numerical system
@@ -1124,24 +1134,21 @@ end
 				return true
 
 			elseif (IsInRaid()) then
+				local unitIdCache = Details222.UnitIdCache.Raid
 				for i = 1, GetNumGroupMembers(), 1 do
-					if (UnitAffectingCombat("raid"..i)) then
+					if (UnitAffectingCombat(unitIdCache[i])) then
 						return true
 					end
 				end
 
 			elseif (IsInGroup()) then
+				local unitIdCache = Details222.UnitIdCache.Party
 				for i = 1, GetNumGroupMembers()-1, 1 do
-					if (UnitAffectingCombat("party"..i)) then
+					if (UnitAffectingCombat(unitIdCache[i])) then
 						return true
 					end
 				end
 			end
-
-		--mythic dungeon always in combat
-		if (_detalhes.MythicPlus.Started and _detalhes.mythic_plus.always_in_combat) then
-			return true
-		end
 
 		--coach feature
 		if (not Details.Coach.Server.IsEnabled()) then
@@ -1150,7 +1157,7 @@ end
 			end
 		end
 
-		_detalhes:SairDoCombate()
+		Details:SairDoCombate()
 	end
 
 	function _detalhes:FindGUIDFromName (name)

@@ -4,7 +4,7 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local _, TSM = ...
+local TSM = select(2, ...) ---@type TSM
 local Resale = TSM.MainUI.Ledger.Revenue:NewPackage("Resale")
 local L = TSM.Include("Locale").GetTable()
 local Table = TSM.Include("Util.Table")
@@ -13,6 +13,7 @@ local Theme = TSM.Include("Util.Theme")
 local ItemInfo = TSM.Include("Service.ItemInfo")
 local Settings = TSM.Include("Service.Settings")
 local UIElements = TSM.Include("UI.UIElements")
+local UIUtils = TSM.Include("UI.UIUtils")
 local SECONDS_PER_DAY = 24 * 60 * 60
 local private = {
 	settings = nil,
@@ -32,7 +33,7 @@ do
 	for _, key in ipairs(TYPE_KEYS) do
 		private.typeFilter[key] = true
 	end
-	for i = 1, 4 do
+	for i = 0, 5 do
 		tinsert(private.rarityList, _G[format("ITEM_QUALITY%d_DESC", i)])
 		private.rarityFilter[i] = true
 	end
@@ -59,7 +60,7 @@ end
 -- ============================================================================
 
 function private.DrawResalePage()
-	TSM.UI.AnalyticsRecordPathChange("main", "ledger", "revenue", "resale")
+	UIUtils.AnalyticsRecordPathChange("main", "ledger", "revenue", "resale")
 	wipe(private.characters)
 	TSM.Accounting.Transactions.GetCharacters(private.characters)
 	for _, character in ipairs(private.characters) do
@@ -138,7 +139,7 @@ function private.DrawResalePage()
 					:SetTitle(L["Item"])
 					:SetFont("ITEM_BODY3")
 					:SetJustifyH("LEFT")
-					:SetTextInfo("itemString", TSM.UI.GetColoredItemName)
+					:SetTextInfo("itemString", UIUtils.GetDisplayItemName)
 					:SetSortInfo("name")
 					:SetTooltipInfo("itemString")
 					:DisableHiding()
@@ -196,7 +197,7 @@ function private.DrawResalePage()
 			:SetQuery(private.summaryQuery)
 			:SetScript("OnRowClick", private.TableSelectionChanged)
 		)
-		:AddChild(TSM.UI.Views.Line.NewHorizontal("line"))
+		:AddChild(UIElements.New("HorizontalLine", "line"))
 		:AddChild(UIElements.New("Frame", "footer")
 			:SetLayout("HORIZONTAL")
 			:SetHeight(40)
@@ -207,7 +208,7 @@ function private.DrawResalePage()
 				:SetFont("BODY_BODY2_MEDIUM")
 				:SetText(format(L["%s Items Resold"], Theme.GetColor("INDICATOR"):ColorText(FormatLargeNumber(numItems))))
 			)
-			:AddChild(TSM.UI.Views.Line.NewVertical("line")
+			:AddChild(UIElements.New("VerticalLine", "line")
 				:SetMargin(4, 8, 0, 0)
 			)
 			:AddChild(UIElements.New("Text", "profit")

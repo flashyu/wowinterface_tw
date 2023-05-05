@@ -1,6 +1,6 @@
 local LibExtraTip = LibStub:GetLibrary("LibExtraTip-1");
 local eventFrame = CreateFrame("Frame", nil, UIParent)
-local phasesString = "PR/T7"--[["PR/T7/T8/T9/T10"]]
+Bistooltip_phases_string = ""
 
 local function specHighlighted(class_name, spec_name)
     return (BistooltipAddon.db.char.highlight_spec.spec_name == spec_name
@@ -86,7 +86,7 @@ local function OnGameTooltipSetItem(tooltip)
     local specs_count = #item
     item = getFilteredItem(item)
     if (#item > 0) then
-        LibExtraTip:AddDoubleLine(tooltip, "Spec name", phasesString, 1, 1, 0, 1, 1, 0, false)
+        LibExtraTip:AddDoubleLine(tooltip, "Spec name", Bistooltip_phases_string, 1, 1, 0, 1, 1, 0, false)
     end
     local previous_class = nil
     for ki, spec in ipairs(item) do
@@ -104,6 +104,14 @@ local function OnGameTooltipSetItem(tooltip)
                 end
                 printSpecLine(tooltip, slot, class_name, spec_name)
             end
+        end
+    end
+    if #item > 0 and Bistooltip_char_equipment[itemId] ~= nil then
+        LibExtraTip:AddLine(tooltip, " ", 1, 1, 0, false)
+        if Bistooltip_char_equipment[itemId] == 2 then
+            LibExtraTip:AddLine(tooltip, "You have this item equipped", 0.074, 0.964, 0.129, false)
+        else
+            LibExtraTip:AddLine(tooltip, "You have this item in your inventory", 0.074, 0.964, 0.129, false)
         end
     end
     if not (#item == specs_count) then

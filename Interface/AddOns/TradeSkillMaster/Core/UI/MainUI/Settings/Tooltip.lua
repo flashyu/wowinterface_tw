@@ -4,7 +4,7 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local _, TSM = ...
+local TSM = select(2, ...) ---@type TSM
 local Tooltip = TSM.MainUI.Settings:NewPackage("Tooltip")
 local L = TSM.Include("Locale").GetTable()
 local Money = TSM.Include("Util.Money")
@@ -12,6 +12,7 @@ local Table = TSM.Include("Util.Table")
 local TempTable = TSM.Include("Util.TempTable")
 local CustomPrice = TSM.Include("Service.CustomPrice")
 local UIElements = TSM.Include("UI.UIElements")
+local UIUtils = TSM.Include("UI.UIUtils")
 local private = {
 	operationModules = {},
 	operationModuleNames = {},
@@ -112,7 +113,7 @@ end
 -- ============================================================================
 
 function private.GetTooltipSettingsFrame()
-	TSM.UI.AnalyticsRecordPathChange("main", "settings", "tooltips", "main")
+	UIUtils.AnalyticsRecordPathChange("main", "settings", "tooltips", "main")
 	wipe(private.operationModules)
 	wipe(private.operationModuleNames)
 	for _, moduleName in TSM.Operations.ModuleIterator() do

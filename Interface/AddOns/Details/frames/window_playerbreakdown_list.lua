@@ -30,7 +30,7 @@
 	}
 
 	function breakdownWindowPlayerList.CreatePlayerListFrame()
-		local f = _G.DetailsPlayerDetailsWindow
+		local f = _G.DetailsBreakdownWindow
 
 		local refreshPlayerList = function(self, data, offset, totalLines)
 			--update the scroll
@@ -57,8 +57,8 @@
 		end
 
 		local lineOnClick = function(self)
-			if (self.playerObject ~= Details:GetPlayerObjectFromBreakdownWindow()) then
-				Details:OpenPlayerBreakdown(Details:GetActiveWindowFromBreakdownWindow(), self.playerObject)
+			if (self.playerObject ~= Details:GetActorObjectFromBreakdownWindow()) then
+				Details:OpenBreakdownWindow(Details:GetActiveWindowFromBreakdownWindow(), self.playerObject)
 				f.playerScrollBox:Refresh()
 			end
 		end
@@ -80,7 +80,7 @@
 		end
 
 		local updatePlayerLine = function(self, topResult, encounterId, difficultyId) --~update
-			local playerSelected = Details:GetPlayerObjectFromBreakdownWindow()
+			local playerSelected = Details:GetActorObjectFromBreakdownWindow()
 			if (playerSelected and playerSelected == self.playerObject) then
 				self:SetBackdropColor(unpack(scrollbox_line_backdrop_color_selected))
 				self.isSelected = true
@@ -311,9 +311,7 @@
 		detailsFramework:ApplyStandardBackdrop(f.Header)
 		f.Header.__background:SetColorTexture(.60, .60, .60)
 
-		--print(f.Header:GetSize())
-
-		local playerSelectionLabel = detailsFramework:CreateLabel(playerScroll, "click to select a player", 14)
+		local playerSelectionLabel = detailsFramework:CreateLabel(playerScroll, "Click to select a player", 14)
 		playerSelectionLabel:SetPoint("bottom", playerScroll, "bottom", 0, 7)
 
 		--create the scrollbox lines

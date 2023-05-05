@@ -1,11 +1,14 @@
 local _, addonTable = ...;
+local _, _, _, tocversion = GetBuildInfo()
 local gsub = _G.string.gsub 
 local find = _G.string.find
 local match = _G.string.match
-local sub = _G.string.sub 
-local hang_Height,hang_NUM  = 34, 12;
-local PIGDownMenu=addonTable.PIGDownMenu
+local sub = _G.string.sub
+--
+local Create=addonTable.Create
+local PIGDownMenu=Create.PIGDownMenu
 --------------------------------------------
+local hang_Height,hang_NUM  = 34, 12;
 local function ADD_Item()
 	local fuFrame = TablistFrame_1_UI
 	local Width,Height  = fuFrame:GetWidth(), fuFrame:GetHeight();
@@ -138,6 +141,7 @@ local function ADD_Item()
 	fuFrame.lineT:SetEndPoint("TOPRIGHT",-4,-28)
 	--//////物品显示目录//////////////////////////////////////////////
 	local function UpdateItem(self)
+		if not fuFrame:IsVisible() then return end
 		for line = 1, hang_NUM do
 			local ifufame = _G["Item_hang_"..line.."_UI"]
 			ifufame:Hide();
@@ -449,7 +453,6 @@ local function ADD_Item()
 		Item_hang.Shiquzhe:SetPoint("LEFT", Item_hang, "LEFT", 320,1);
 		Item_hang.Shiquzhe:SetFont(ChatFontNormal:GetFont(), 13.4, "OUTLINE");
 		---------
-
 		Item_hang.chengjiao = CreateFrame("Frame", nil, Item_hang);
 		Item_hang.chengjiao:SetSize(70, hang_Height);
 		Item_hang.chengjiao:SetPoint("LEFT", Item_hang, "LEFT", 420,0);
@@ -519,7 +522,7 @@ local function ADD_Item()
 			UpdateItem(Item_Scroll_UI);
 		end);
 
-		-----欠款-----
+		---欠款-----
 		Item_hang.Qiankuan = CreateFrame("Frame", nil, Item_hang);
 		Item_hang.Qiankuan:SetSize(70, hang_Height);
 		Item_hang.Qiankuan:SetPoint("LEFT", Item_hang, "LEFT", 510,0);
@@ -803,7 +806,6 @@ local function ADD_Item()
 			local fengeshux=tishi_UI.nr.chaif.Slider:GetValue()
 			if hejishuju[bianjiIDX][3]>1 then
 				hejishuju[bianjiIDX][3]=hejishuju[bianjiIDX][3]-fengeshux
-				--1时间/2物品/3数量/4拾取人/5品质/6icon/7已拍卖/8成交人/9成交价/10成交时间/11ID/12交易倒计时/13通报结束/14欠款
 				local item1=hejishuju[bianjiIDX][1]
 				local item2=hejishuju[bianjiIDX][2]
 				local item4=hejishuju[bianjiIDX][4]
@@ -1260,25 +1262,44 @@ local function ADD_Item()
 			zhixingtianjia(itemLink,LOOT_itemNO,shiquname,itemQuality,itemTexture,itemID)
 		end
 	end
-	local function shiqushijian(arg1,arg5)
-		if arg1:match("获得了")~=nil then
-			AddItem(arg1,arg5);
-		end
-	end
 	---注册事件
+	local function geshihuazifu(text)
+		local text = text:gsub("%%","")
+		local text = text:gsub("s","")
+		local text = text:gsub("x","")
+		local text = text:gsub("d","")
+		local text = text:gsub("。","")
+		local text = text:gsub(": ","")
+		local text = text:gsub("：","")
+		local text = text:gsub("%.","")
+		local text = text:gsub("。","")
+		return text
+	end			
+	local bendiT_1 = LOOT_ITEM_SELF--自身单个物品
+	local bendiT_2 = LOOT_ITEM_SELF_MULTIPLE--自身叠加物品
+	local bendiT_3 = LOOT_ITEM--他人单个物品
+	local bendiT_4 = LOOT_ITEM_MULTIPLE--他人叠加物品
+	local bendiT_1 = geshihuazifu(bendiT_1)
+	local bendiT_2 = geshihuazifu(bendiT_2)
+	local bendiT_3 = geshihuazifu(bendiT_3)
+	local bendiT_4 = geshihuazifu(bendiT_4)
 	fuFrame:RegisterEvent("CHAT_MSG_LOOT");
-	fuFrame:SetScript("OnEvent",function (self,event,arg1,arg2,arg3,arg4,arg5)
+	fuFrame:SetScript("OnEvent",function (self,event,arg1,arg2,arg3,arg4,arg5)	
+		if tocversion>100000 then
+			if not arg1:match(BATTLE_PET_LOOT_RECEIVED) then return end
+		else
+			if not arg1:match(bendiT_1) and not arg1:match(bendiT_2) and not arg1:match(bendiT_3) and not arg1:match(bendiT_4) then return end
+		end
 		local inInstance, instanceType = IsInInstance()
-		if arg1:match("战利品") then return end
 		if instanceType=="raid" then
-			shiqushijian(arg1,arg5)
+			AddItem(arg1,arg5)
 		elseif instanceType=="party" then
 			if PIG["RaidRecord"]["Rsetting"]["wurenben"]=="ON" then
-				shiqushijian(arg1,arg5)
+				AddItem(arg1,arg5)
 			end
 		elseif instanceType=="none" then
 			if PIG["RaidRecord"]["Rsetting"]["fubenwai"]=="ON" then
-				shiqushijian(arg1,arg5)
+				AddItem(arg1,arg5)
 			end
 		end
 	end);

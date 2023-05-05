@@ -6,6 +6,7 @@
 
 local TSM = select(2, ...) ---@type TSM
 local MailingUI = TSM.UI:NewPackage("MailingUI")
+local Environment = TSM.Include("Environment")
 local L = TSM.Include("Locale").GetTable()
 local Delay = TSM.Include("Util.Delay")
 local FSM = TSM.Include("Util.FSM")
@@ -13,6 +14,7 @@ local ScriptWrapper = TSM.Include("Util.ScriptWrapper")
 local Settings = TSM.Include("Service.Settings")
 local DefaultUI = TSM.Include("Service.DefaultUI")
 local UIElements = TSM.Include("UI.UIElements")
+local UIUtils = TSM.Include("UI.UIUtils")
 local private = {
 	settings = nil,
 	topLevelPages = {},
@@ -61,7 +63,7 @@ end
 -- ============================================================================
 
 function private.CreateMainFrame()
-	TSM.UI.AnalyticsRecordPathChange("mailing")
+	UIUtils.AnalyticsRecordPathChange("mailing")
 	-- Always show the Inbox first
 	private.settings.frame.page = 1
 	local frame = UIElements.New("LargeApplicationFrame", "base")
@@ -88,7 +90,7 @@ end
 -- ============================================================================
 
 function private.BaseFrameOnHide()
-	TSM.UI.AnalyticsRecordClose("mailing")
+	UIUtils.AnalyticsRecordClose("mailing")
 	private.fsm:ProcessEvent("EV_FRAME_HIDE")
 end
 
@@ -152,18 +154,18 @@ function private.FSMCreate()
 		)
 		:AddState(FSM.NewState("ST_DEFAULT_OPEN")
 			:SetOnEnter(function(context, isIgnored)
-				if TSM.IsWowClassic() then
-					MailFrame_OnEvent(MailFrame, "MAIL_SHOW")
-				else
+				if Environment.IsRetail() then
 					ShowUIPanel(MailFrame)
+				else
+					MailFrame_OnEvent(MailFrame, "MAIL_SHOW")
 				end
 
 				if not private.defaultUISwitchBtn then
 					private.defaultUISwitchBtn = UIElements.New("ActionButton", "switchBtn")
-						:SetSize(60, TSM.IsWowClassic() and 16 or 15)
+						:SetSize(60, Environment.IsRetail() and 15 or 16)
 						:SetFont("BODY_BODY3")
-						:AddAnchor("TOPRIGHT", TSM.IsWowClassic() and -26 or -27, TSM.IsWowClassic() and -3 or -4)
-						:SetRelativeLevel(TSM.IsWowClassic() and 3 or 600)
+						:AddAnchor("TOPRIGHT", Environment.IsRetail() and -27 or -26, Environment.IsRetail() and -4 or -3)
+						:SetRelativeLevel(Environment.IsRetail() and 600 or 3)
 						:DisableClickCooldown()
 						:SetText(L["TSM4"])
 						:SetScript("OnClick", private.SwitchBtnOnClick)
@@ -195,7 +197,7 @@ function private.FSMCreate()
 		)
 		:AddState(FSM.NewState("ST_FRAME_OPEN")
 			:SetOnEnter(function(context)
-				if TSM.IsWowClassic() then
+				if not Environment.IsRetail() then
 					OpenAllBags()
 				end
 				CheckInbox()
@@ -226,7 +228,7 @@ function private.FSMCreate()
 				return "ST_CLOSED"
 			end)
 			:AddEvent("EV_MAIL_SHOW", function(context)
-				if TSM.IsWowClassic() then
+				if not Environment.IsRetail() then
 					OpenAllBags()
 				end
 				CheckInbox()

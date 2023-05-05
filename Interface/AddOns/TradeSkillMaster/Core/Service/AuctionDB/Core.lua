@@ -48,11 +48,6 @@ function AuctionDB.OnEnable()
 	end
 	if realmHistorical then
 		local loadedData, updateTime = private.LoadAppData(realmHistorical)
-		-- TODO: Remove this after Muffin fixes it and daily scripts run again
-		if loadedData.fieldLookup.historicalValue then
-			loadedData.fieldLookup.historical = loadedData.fieldLookup.historicalValue
-			loadedData.fieldLookup.historicalValue = nil
-		end
 		for field in pairs(loadedData.fieldLookup) do
 			assert(not private.realmData[field])
 			private.realmData[field] = loadedData
@@ -77,7 +72,6 @@ function AuctionDB.OnEnable()
 				private.realmData[field] = loadedData
 			end
 		end
-		private.realmUpdateTime = max(private.realmUpdateTime or 0, updateTime)
 		Log.Info("Loaded region commodity (%s)", SecondsToTime(time() - updateTime).." ago")
 	end
 	if regionStat then
@@ -91,11 +85,6 @@ function AuctionDB.OnEnable()
 	end
 	if regionHistorical then
 		local loadedData, updateTime = private.LoadAppData(regionHistorical)
-		-- TODO: Remove this after Muffin fixes it and daily scripts run again
-		if loadedData.fieldLookup.historicalValue then
-			loadedData.fieldLookup.regionHistorical = loadedData.fieldLookup.historicalValue
-			loadedData.fieldLookup.historicalValue = nil
-		end
 		for field in pairs(loadedData.fieldLookup) do
 			assert(not private.regionData[field])
 			private.regionData[field] = loadedData

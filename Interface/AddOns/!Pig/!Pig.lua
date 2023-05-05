@@ -1,10 +1,9 @@
--------------<猪猪加油定制插件>---562314------------
---================================================
+----<本插件初始为猪猪加油定制插件,后已公开分享>---562314----
 local addonName, addonTable = ...;
---=======ReloadUI重载命令注册为/RL=====
+--
 SLASH_RELOAD1 = '/rl'
-SlashCmdList.RELOAD = ReloadUI
---------
+SlashCmdList["RELOAD"] = ReloadUI
+--
 SLASH_PIG1 = "/pig"
 SLASH_PIG2 = "/Pig"
 SLASH_PIG3 = "/PIG"
@@ -12,29 +11,16 @@ SlashCmdList["PIG"] = function()
 	Pig_OptionsUI:Show();
 end
 --================================================
-local AAAAA = CreateFrame("Frame")        
-AAAAA:RegisterEvent("ADDON_LOADED")
-AAAAA:SetScript("OnEvent",function(self, event, arg1)
-	if arg1 == addonName then
-		local feifaPlayers=addonTable.feifaPlayers
-		local name= UnitName("player")
-		for i=1,#feifaPlayers do
-			if name==feifaPlayers[i] then
-				local function tuichuPIGpindao()
-					LeaveChannelByName("PIG")
-				end
-				C_Timer.After(2,tuichuPIGpindao)
-				C_Timer.After(4,tuichuPIGpindao)
-				C_Timer.After(6,tuichuPIGpindao)
-				C_Timer.After(8,tuichuPIGpindao)
-				C_Timer.After(10,tuichuPIGpindao)
-				Pig_OptionsUI.RF:Hide()
-				print("|cffFF0000"..arg1.."：非法玩家，插件已停止加载！|r");
-				return
-			end
-		end
-		addonTable.Config_Default()
-		------------------
+local PIGUI = CreateFrame("Frame")        
+PIGUI:RegisterEvent("ADDON_LOADED")
+PIGUI:RegisterEvent("PLAYER_LOGIN");
+PIGUI:SetScript("OnEvent",function(self, event, arg1)
+	if event=="ADDON_LOADED" and arg1 == addonName then
+		self:UnregisterEvent("ADDON_LOADED")
+		addonTable.Config_Default()	
+	end
+	if event=="PLAYER_LOGIN" then
+		--print(event,ElvUI)
 		addonTable.Map_MiniMap()
 		addonTable.Map_WorldMap()
 		addonTable.PigCVars()
@@ -88,7 +74,7 @@ AAAAA:SetScript("OnEvent",function(self, event, arg1)
 		--专业副本CD
 		addonTable.Skill_FuBen()
 		--时空之门
-		addonTable.PlaneInvite()
+		addonTable.Invite()
 		--开团助手
 		addonTable.RaidRecord()
 		--带本助手
@@ -99,10 +85,12 @@ AAAAA:SetScript("OnEvent",function(self, event, arg1)
 		addonTable.PIGRaidFrame()
 		-----
 		addonTable.QuickButtonUpdate()
-		addonTable.Map_ShouNaBut()
 		--
 		addonTable.Sponsorship()
+		--
 		addonTable.Rurutia()
+		--收纳按钮
+		addonTable.Map_ShouNaBut()
 		------------------------------
 		PIG_print("载入成功 /pig或小地图按钮设置(|cffFF0000本插件完全免费,网络购物平台出售皆为骗子|r)");
     end  

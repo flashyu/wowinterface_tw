@@ -20,19 +20,19 @@ local GetContainerNumFreeSlots = GetContainerNumFreeSlots or C_Container.GetCont
 local LOOT_SLOT_ITEM = LOOT_SLOT_ITEM or Enum.LootSlotType.Item
 
 function AutoLoot:ProcessLootItem(itemLink, itemQuantity)
-  local itemStackSize, _, _, _, itemClassID = select(8, GetItemInfo(itemLink));
+  local itemStackSize, _, _, _, itemClassID, _, _, _, _, isCraftingReagent = select(8, GetItemInfo(itemLink));
   local itemFamily = GetItemFamily(itemLink);
 
   for i = BACKPACK_CONTAINER, NUM_TOTAL_EQUIPPED_BAG_SLOTS or NUM_BAG_SLOTS do
     local free, bagFamily = GetContainerNumFreeSlots(i);
     if i == 5 then
-      if free > 0 and itemClassID == Enum.ItemClass.Tradegoods then
+      if isCraftingReagent and free > 0 then
         return true;
       end
       break;
     end
-    if (not bagFamily or bagFamily == 0) or (itemFamily and bit.band(itemFamily, bagFamily) > 0) then
-      if free > 0 then
+    if free > 0 then
+      if not bagFamily or bagFamily == 0 or (itemFamily and bit.band(itemFamily, bagFamily) > 0) then
         return true;
       end
     end
@@ -129,7 +129,7 @@ function AutoLoot:OnLootClosed()
 end
 
 function AutoLoot:OnErrorMessage(...)
-  if tContains(({ERR_INV_FULL,ERR_ITEM_MAX_COUNT}), select(2,...)) then
+  if tContains(({ERR_INV_FULL,ERR_ITEM_MAX_COUNT,ERR_LOOT_ROLL_PENDING}), select(2,...)) then
     if internal.isLooting and internal.isHidden then
       self:ShowLootFrame(true);
       self:PlayInventoryFullSound();

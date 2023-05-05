@@ -6,9 +6,11 @@
 
 local TSM = select(2, ...) ---@type TSM
 local Auctioning = TSM.MainUI.Operations:NewPackage("Auctioning")
+local Environment = TSM.Include("Environment")
 local L = TSM.Include("Locale").GetTable()
 local String = TSM.Include("Util.String")
 local UIElements = TSM.Include("UI.UIElements")
+local UIUtils = TSM.Include("UI.UIUtils")
 local private = {
 	currentOperationName = nil,
 	currentTab = nil,
@@ -55,7 +57,7 @@ local PRICE_VALIDATE_CONTEXT = {
 function Auctioning.OnInitialize()
 	-- Set min and max values
 	POST_CAP_VALIDATE_CONTEXT.minValue, POST_CAP_VALIDATE_CONTEXT.maxValue = TSM.Operations.Auctioning.GetMinMaxValues("postCap")
-	if TSM.IsWowClassic() then
+	if Environment.HasFeature(Environment.FEATURES.AH_STACKS) then
 		STACK_SIZE_VALIDATE_CONTEXT.minValue, STACK_SIZE_VALIDATE_CONTEXT.maxValue = TSM.Operations.Auctioning.GetMinMaxValues("stackSize")
 	end
 	KEEP_QUANTITY_VALIDATE_CONTEXT.minValue, KEEP_QUANTITY_VALIDATE_CONTEXT.maxValue = TSM.Operations.Auctioning.GetMinMaxValues("keepQuantity")
@@ -70,7 +72,7 @@ end
 -- ============================================================================
 
 function private.GetAuctioningOperationSettings(operationName)
-	TSM.UI.AnalyticsRecordPathChange("main", "operations", "auctioning")
+	UIUtils.AnalyticsRecordPathChange("main", "operations", "auctioning")
 	private.currentOperationName = operationName
 	private.currentTab = private.currentTab or L["Details"]
 	return UIElements.New("TabGroup", "tabs")
@@ -83,7 +85,7 @@ function private.GetAuctioningOperationSettings(operationName)
 end
 
 function private.GetDetailsSettings()
-	TSM.UI.AnalyticsRecordPathChange("main", "operations", "auctioning", "details")
+	UIUtils.AnalyticsRecordPathChange("main", "operations", "auctioning", "details")
 	local operation = TSM.Operations.GetSettings("Auctioning", private.currentOperationName)
 	return UIElements.New("ScrollFrame", "settings")
 		:SetPadding(8, 8, 8, 0)
@@ -111,13 +113,13 @@ function private.GetDetailsSettings()
 end
 
 function private.AddMaxStackSizeSetting(frame)
-	if TSM.IsWowClassic() then
+	if Environment.HasFeature(Environment.FEATURES.AH_STACKS) then
 		frame:AddChild(private.CreateToggleLine("matchStackSize", L["Match stack size"]))
 	end
 end
 
 function private.GetPostingSettings()
-	TSM.UI.AnalyticsRecordPathChange("main", "operations", "auctioning", "posting")
+	UIUtils.AnalyticsRecordPathChange("main", "operations", "auctioning", "posting")
 	local operation = TSM.Operations.GetSettings("Auctioning", private.currentOperationName)
 	return UIElements.New("ScrollFrame", "settings")
 		:SetPadding(8, 8, 8, 0)
@@ -198,7 +200,7 @@ function private.GetPostingSettings()
 end
 
 function private.AddStackSizeSettings(frame)
-	if not TSM.IsWowClassic() then
+	if not Environment.HasFeature(Environment.FEATURES.AH_STACKS) then
 		return
 	end
 	frame:AddChild(TSM.MainUI.Operations.CreateLinkedPriceInput("stackSize", L["Stack size"], STACK_SIZE_VALIDATE_CONTEXT)
@@ -208,7 +210,7 @@ function private.AddStackSizeSettings(frame)
 end
 
 function private.GetCancelingSettings()
-	TSM.UI.AnalyticsRecordPathChange("main", "operations", "auctioning", "canceling")
+	UIUtils.AnalyticsRecordPathChange("main", "operations", "auctioning", "canceling")
 	return UIElements.New("ScrollFrame", "settings")
 		:SetPadding(8, 8, 8, 0)
 		:AddChild(TSM.MainUI.Operations.CreateExpandableSection("Auctioning", "priceSettings", L["Canceling Options"], L["Adjust the settings below to set how groups attached to this operation will be cancelled."])
@@ -232,7 +234,7 @@ function private.GetAuctioningSettings(self, button)
 end
 
 function private.AddBlacklistPlayers(frame)
-	if not TSM.IsWowClassic() then
+	if Environment.IsRetail() then
 		return
 	end
 	frame:AddChild(TSM.MainUI.Operations.CreateLinkedSettingLine("blacklist", L["Blacklisted players"])

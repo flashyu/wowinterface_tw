@@ -8,12 +8,14 @@ local fuFrame=List_R_F_2_11
 local _, _, _, tocversion = GetBuildInfo()
 --===============================
 local ADD_Frame=addonTable.ADD_Frame
-local ADD_Modbutton=addonTable.ADD_Modbutton
-local PIGDownMenu=addonTable.PIGDownMenu
+local Create = addonTable.Create
+local PIGModbutton=Create.PIGModbutton
+local Create=addonTable.Create
+local PIGDownMenu=Create.PIGDownMenu
 local ADD_Checkbutton=addonTable.ADD_Checkbutton
 local GnName,GnUI = "带本助手","daiben_UI";
 local FrameLevel=1
-local Options_Daibenzhushou = ADD_Modbutton(GnName,GnUI,FrameLevel,6)
+local Options_Daibenzhushou = PIGModbutton(GnName,GnUI,FrameLevel,6)
 ---------------------------------------
 local Width,DHeight,biaotiH=350,28,26;
 local JZ_Height,TIME_Height=164,140;

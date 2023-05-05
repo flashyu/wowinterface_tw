@@ -48,7 +48,24 @@ fuFrame.QuickQH:SetScript("OnClick", function (self)
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
-
+local TalentFrame_Open=addonTable.TalentFrame_Open
+fuFrame.TalentFrame=ADD_Checkbutton(nil,fuFrame,-60,"TOPLEFT",fuFrame,"TOPLEFT",20,-100,"天赋面板扩展","")
+if tocversion<30000 then
+	fuFrame.TalentFrame.tooltip= "在一页显示三系天赋";
+elseif tocversion<40000 then
+	fuFrame.TalentFrame.tooltip= "在一页显示三系天赋和雕文";
+else
+	PIGDisable(fuFrame.TalentFrame)
+end
+fuFrame.TalentFrame:SetScript("OnClick", function (self)
+	if self:GetChecked() then
+		PIG["FramePlus"]["ExtFrame_Talent"]="ON";
+		TalentFrame_Open()
+	else
+		PIG["FramePlus"]["ExtFrame_Talent"]="OFF";
+		Pig_Options_RLtishi_UI:Show()
+	end
+end);
 --=====================================
 fuFrame:HookScript("OnShow", function (self)
 	if PIG["FramePlus"]["ExtFrame_Renwu"]=="ON" then
@@ -59,6 +76,9 @@ fuFrame:HookScript("OnShow", function (self)
 	end
 	if PIG["FramePlus"]["ExtFrame_ZhuanyeQKBUT"] then
 		fuFrame.QuickQH:SetChecked(true);
+	end
+	if PIG["FramePlus"]["ExtFrame_Talent"]=="ON" then
+		fuFrame.TalentFrame:SetChecked(true);
 	end
 end);
 addonTable.FramePlus = function()
@@ -74,5 +94,8 @@ addonTable.FramePlus = function()
 	end
 	if PIG["FramePlus"]["ExtFrame_ZhuanyeQKBUT"] then
 		ZhuanyeQKBUT_Open();
+	end
+	if PIG["FramePlus"]["ExtFrame_Talent"]=="ON" then
+		TalentFrame_Open()
 	end
 end
