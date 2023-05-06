@@ -1,8 +1,20 @@
 
 DecursiveDB = {
+	["global"] = {
+		["LastVersionAnnounce"] = 1683384770,
+	},
 	["class"] = {
 		["WARRIOR"] = {
 			["CureOrder-1"] = {
+				-11, -- [1]
+				-15, -- [2]
+				nil, -- [3]
+				-12, -- [4]
+				[8] = -13,
+				[16] = -14,
+				[32] = -16,
+			},
+			["CureOrder-2"] = {
 				-11, -- [1]
 				-15, -- [2]
 				nil, -- [3]

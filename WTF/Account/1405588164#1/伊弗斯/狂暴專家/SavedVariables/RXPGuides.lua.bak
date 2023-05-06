@@ -1,11 +1,10 @@
 
 RXPCData = {
 	["completedWaypoints"] = {
-		[12] = {
-			[1764252786] = true,
+		[13] = {
 		},
 	},
-	["currentStep"] = 12,
+	["currentStep"] = 13,
 	["currentGuideName"] = "70.5-71.5 北风苔原抢夺开始",
 	["stepSkip"] = {
 		true, -- [1]
@@ -25,8 +24,8 @@ RXPCTrackingData = {
 		["狂暴專家 - 伊弗斯"] = {
 			["levels"] = {
 				[70] = {
-					["groupExperience"] = 0,
-					["deaths"] = 0,
+					["groupExperience"] = 1724,
+					["deaths"] = 5,
 					["mobs"] = {
 						["奥格瑞玛"] = {
 							["xp"] = 2500,
@@ -37,8 +36,8 @@ RXPCTrackingData = {
 							["count"] = 1,
 						},
 						["北风苔原"] = {
-							["xp"] = 12534,
-							["count"] = 7,
+							["xp"] = 172157,
+							["count"] = 91,
 						},
 					},
 					["timestamp"] = {
@@ -52,6 +51,7 @@ RXPCTrackingData = {
 							[70737] = 1250,
 						},
 						["北风苔原"] = {
+							[11598] = 20100,
 							[11585] = 2000,
 							[11596] = 2000,
 						},
@@ -67,6 +67,13 @@ RXPCComms = {
 	},
 	["profiles"] = {
 		["狂暴專家 - 伊弗斯"] = {
+			["players"] = {
+				["邁克爾假死"] = {
+					["timePlayed"] = 0,
+					["class"] = "HUNTER",
+					["xp"] = 1724,
+				},
+			},
 		},
 	},
 }

@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 10,
 	["lastSanitation"] = 3,
+	["session"] = 15,
 	["errors"] = {
 		{
 			["message"] = "Interface/AddOns/GTFO/GTFO.lua:2079: attempt to index a nil value",
@@ -20,27 +20,19 @@ BugGrabberDB = {
 			["counter"] = 3,
 		}, -- [2]
 		{
-			["message"] = "Interface/AddOns/WIM/Sources/Options/CoreOptions.lua:37: attempt to index global 'db' (a nil value)",
-			["time"] = "2023/05/06 00:16:54",
-			["locals"] = "frame = WIM3_OptionFrameFrame1 {\n ImportCustomObject = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:401\n welcome = WIM3_OptionFrameFrame2 {\n }\n CreateDropDownMenu = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:184\n CreateColorPicker = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:76\n CreateCheckButtonMenu = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:311\n lastObj = WIM3_OptionFrameFrame2 {\n }\n nextOffsetX = 0\n CreateButton = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:66\n CreateCheckButton = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:223\n nextOffSetY = 0\n CreateSlider = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:129\n 0 = <userdata>\n CreateSection = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:356\n CreateText = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:343\n SetFullSize = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:61\n CreateFramedPanel = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:395\n}\n(*temporary) = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:223\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:260\n Text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:223\n UpdateChildren = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:284\n _Enable = <function> defined =[C]:-1\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n isCheckButton = true\n _Disable = <function> defined =[C]:-1\n children = <table> {\n }\n Disable = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:272\n}\n(*temporary) = \"小地图按钮自由移动\"\n(*temporary) = nil\n(*temporary) = <table> {\n enabled = false\n OnDisable = <function> defined @Interface/AddOns/WIM/Modules/MinimapIcon.lua:412\n RegisterWidget = <function> defined @Interface/AddOns/WIM/WIM.lua:313\n OnEnable = <function> defined @Interface/AddOns/WIM/Modules/MinimapIcon.lua:394\n Enable = <function> defined @Interface/AddOns/WIM/WIM.lua:309\n OnDisableWIM = <function> defined @Interface/AddOns/WIM/Modules/MinimapIcon.lua:383\n canDisable = true\n OnEnableWIM = <function> defined @Interface/AddOns/WIM/Modules/MinimapIcon.lua:372\n dPrint = <function> defined @Interface/AddOns/WIM/WIM.lua:311\n enableByDefault = true\n title = \"MinimapIcon\"\n RegisterEvent = <function> defined @Interface/AddOns/WIM/WIM.lua:308\n db_defaults = <table> {\n }\n resources = <table> {\n }\n hasWidget = false\n Disable = <function> defined @Interface/AddOns/WIM/WIM.lua:310\n}\n(*temporary) = \"enabled\"\n(*temporary) = nil\n(*temporary) = <function> defined @Interface/AddOns/WIM/Sources/Options/CoreOptions.lua:36\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:260\n Text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:223\n UpdateChildren = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:284\n _Enable = <function> defined =[C]:-1\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n isCheckButton = true\n _Disable = <function> defined =[C]:-1\n children = <table> {\n }\n Disable = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:272\n}\n(*temporary) = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:48\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:260\n Text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Inte",
-			["stack"] = "[string \"@Interface/AddOns/WIM/Sources/Options/CoreOptions.lua\"]:37: in function `frame'\n[string \"@Interface/AddOns/WIM/Sources/Options/Options.lua\"]:194: in function <Interface/AddOns/WIM/Sources/Options/Options.lua:188>\n[string \"=[C]\"]: in function `Click'\n[string \"@Interface/AddOns/WIM/Sources/Options/Options.lua\"]:289: in function `UpdateSubCategories'\n[string \"@Interface/AddOns/WIM/Sources/Options/Options.lua\"]:104: in function <Interface/AddOns/WIM/Sources/Options/Options.lua:104>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface/AddOns/WIM/Sources/Options/Options.lua\"]:335: in function `ShowOptions'\n[string \"@Interface/AddOns/AddOnSkins/Skins/AddOns/WIM.lua\"]:11: in function <Interface/AddOns/AddOnSkins/Skins/AddOns/WIM.lua:8>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/AddOnSkins/Core/Core.lua\"]:216: in function `CallSkin'\n[string \"@Interface/AddOns/AddOnSkins/Core/Core.lua\"]:310: in function `?'\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/CallbackHandler-1.0-8/CallbackHandler-1.0.lua\"]:109: in function <...ies/Core/CallbackHandler-1.0/CallbackHandler-1.0.lua:109>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/CallbackHandler-1.0-8/CallbackHandler-1.0.lua\"]:19: in function <...ies/Core/CallbackHandler-1.0/CallbackHandler-1.0.lua:15>\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/CallbackHandler-1.0-8/CallbackHandler-1.0.lua\"]:54: in function `Fire'\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceEvent-3.0-4/AceEvent-3.0.lua\"]:120: in function <...UI_Libraries/Core/Ace3/AceEvent-3.0/AceEvent-3.0.lua:119>",
-			["session"] = 7,
-			["counter"] = 1,
-		}, -- [3]
-		{
 			["message"] = "bad argument #5 to '?' (Usage: self:SetVertexColor(color [, a]))",
 			["time"] = "2023/05/06 00:16:38",
 			["locals"] = "(*temporary) = \"bad argument #5 to '?' (Usage: self:SetVertexColor(color [, a]))\"\n",
 			["stack"] = "[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `SetVertexColor'\n[string \"@Interface/SharedXML/Backdrop.lua\"]:430: in function `SetBackdropBorderColor'\n[string \"@Interface/AddOns/ClassicCodex/ui.lua\"]:100: in function `CreateBackdrop'\n[string \"@Interface/AddOns/ClassicCodex/browser.lua\"]:749: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface/AddOns/ClassicCodex-loader/loader.lua\"]:11: in function `tryLoad'\n[string \"@Interface/AddOns/ClassicCodex-loader/loader.lua\"]:33: in main chunk",
 			["session"] = 8,
 			["counter"] = 2,
-		}, -- [4]
+		}, -- [3]
 		{
 			["message"] = "Interface/AddOns/ClassicCodex/browser.lua:1 (null)",
-			["session"] = 8,
 			["time"] = "2023/05/06 00:16:55",
+			["session"] = 8,
 			["counter"] = 4,
-		}, -- [5]
+		}, -- [4]
 		{
 			["message"] = "bad argument #3 to '?' (Usage: local texture = self:CreateTexture([name, drawLayer, templateName, subLevel]))",
 			["time"] = "2023/05/06 00:16:55",
@@ -48,7 +40,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `CreateTexture'\n[string \"@Interface/AddOns/ClassicCodex/map.lua\"]:487: in function `CreateMapMarker'\n[string \"@Interface/AddOns/ClassicCodex/map.lua\"]:748: in function `UpdateNodes'\n[string \"@Interface/AddOns/ClassicCodex/quest.lua\"]:186: in function <Interface/AddOns/ClassicCodex/quest.lua:168>",
 			["session"] = 8,
 			["counter"] = 1916,
-		}, -- [6]
+		}, -- [5]
 		{
 			["message"] = "...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3307: attempt to call field 'Disable' (a nil value)",
 			["time"] = "2023/05/06 00:21:54",
@@ -56,7 +48,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3307: in function `SetOptionUserDisabled'\n[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua\"]:825: in function `clickHandler'\n[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsControls.lua\"]:613: in function <Interface/AddOns/MSBTOptions/MSBTOptionsControls.lua:608>",
 			["session"] = 9,
 			["counter"] = 1,
-		}, -- [7]
+		}, -- [6]
 		{
 			["message"] = "Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua:2854: attempt to call field 'UpdateRegisteredEvents' (a nil value)",
 			["time"] = "2023/05/06 00:22:13",
@@ -64,7 +56,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua\"]:2854: in function `clickHandler'\n[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsControls.lua\"]:613: in function <Interface/AddOns/MSBTOptions/MSBTOptionsControls.lua:608>",
 			["session"] = 9,
 			["counter"] = 2,
-		}, -- [8]
+		}, -- [7]
 		{
 			["message"] = "Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua:655: attempt to index field 'savedMedia' (a nil value)",
 			["time"] = "2023/05/06 00:22:16",
@@ -72,7 +64,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua\"]:655: in function <Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua:648>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsMain.lua\"]:130: in function `clickHandler'\n[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsControls.lua\"]:157: in function <Interface/AddOns/MSBTOptions/MSBTOptionsControls.lua:151>",
 			["session"] = 9,
 			["counter"] = 2,
-		}, -- [9]
+		}, -- [8]
 		{
 			["message"] = "Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua:1098: attempt to index field 'savedVariables' (a nil value)",
 			["time"] = "2023/05/06 00:21:50",
@@ -80,42 +72,50 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua\"]:1098: in function <Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua:813>\n[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua\"]:1114: in function <Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua:1113>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsMain.lua\"]:303: in function <Interface/AddOns/MSBTOptions/MSBTOptionsMain.lua:156>\n[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsMain.lua\"]:315: in function `ShowMainFrame'\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3137: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3122>\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3616: in function `?'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4933: in function <Interface/FrameXML/ChatFrame.lua:4879>\n[string \"=[C]\"]: in function `ChatEdit_ParseText'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4596: in function `ChatEdit_SendText'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4632: in function <Interface/FrameXML/ChatFrame.lua:4628>\n[string \"=[C]\"]: in function `ChatEdit_OnEnterPressed'\n[string \"*ChatFrame.xml:121_OnEnterPressed\"]:1: in function <[string \"*ChatFrame.xml:121_OnEnterPressed\"]:1>",
 			["session"] = 9,
 			["counter"] = 2,
+		}, -- [9]
+		{
+			["message"] = "Interface/AddOns/WIM/Sources/Options/CoreOptions.lua:37: attempt to index global 'db' (a nil value)",
+			["time"] = "2023/05/06 00:16:54",
+			["locals"] = "frame = WIM3_OptionFrameFrame1 {\n ImportCustomObject = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:401\n welcome = WIM3_OptionFrameFrame2 {\n }\n CreateDropDownMenu = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:184\n CreateColorPicker = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:76\n CreateCheckButtonMenu = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:311\n lastObj = WIM3_OptionFrameFrame2 {\n }\n nextOffsetX = 0\n CreateButton = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:66\n CreateCheckButton = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:223\n nextOffSetY = 0\n CreateSlider = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:129\n 0 = <userdata>\n CreateSection = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:356\n CreateText = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:343\n SetFullSize = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:61\n CreateFramedPanel = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:395\n}\n(*temporary) = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:223\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:260\n Text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:223\n UpdateChildren = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:284\n _Enable = <function> defined =[C]:-1\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n isCheckButton = true\n _Disable = <function> defined =[C]:-1\n children = <table> {\n }\n Disable = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:272\n}\n(*temporary) = \"小地图按钮自由移动\"\n(*temporary) = nil\n(*temporary) = <table> {\n enabled = false\n OnDisable = <function> defined @Interface/AddOns/WIM/Modules/MinimapIcon.lua:412\n RegisterWidget = <function> defined @Interface/AddOns/WIM/WIM.lua:313\n OnEnable = <function> defined @Interface/AddOns/WIM/Modules/MinimapIcon.lua:394\n Enable = <function> defined @Interface/AddOns/WIM/WIM.lua:309\n OnDisableWIM = <function> defined @Interface/AddOns/WIM/Modules/MinimapIcon.lua:383\n canDisable = true\n OnEnableWIM = <function> defined @Interface/AddOns/WIM/Modules/MinimapIcon.lua:372\n dPrint = <function> defined @Interface/AddOns/WIM/WIM.lua:311\n enableByDefault = true\n title = \"MinimapIcon\"\n RegisterEvent = <function> defined @Interface/AddOns/WIM/WIM.lua:308\n db_defaults = <table> {\n }\n resources = <table> {\n }\n hasWidget = false\n Disable = <function> defined @Interface/AddOns/WIM/WIM.lua:310\n}\n(*temporary) = \"enabled\"\n(*temporary) = nil\n(*temporary) = <function> defined @Interface/AddOns/WIM/Sources/Options/CoreOptions.lua:36\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:260\n Text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:223\n UpdateChildren = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:284\n _Enable = <function> defined =[C]:-1\n text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n isCheckButton = true\n _Disable = <function> defined =[C]:-1\n children = <table> {\n }\n Disable = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:272\n}\n(*temporary) = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:48\n(*temporary) = WIM3_OptionFrameFrame2CheckButton2 {\n 0 = <userdata>\n Enable = <function> defined @Interface/AddOns/WIM/Sources/Options/OptionsTookKit.lua:260\n Text = WIM3_OptionFrameFrame2CheckButton2Text {\n }\n CreateCheckButton = <function> defined @Inte",
+			["stack"] = "[string \"@Interface/AddOns/WIM/Sources/Options/CoreOptions.lua\"]:37: in function `frame'\n[string \"@Interface/AddOns/WIM/Sources/Options/Options.lua\"]:194: in function <Interface/AddOns/WIM/Sources/Options/Options.lua:188>\n[string \"=[C]\"]: in function `Click'\n[string \"@Interface/AddOns/WIM/Sources/Options/Options.lua\"]:289: in function `UpdateSubCategories'\n[string \"@Interface/AddOns/WIM/Sources/Options/Options.lua\"]:104: in function <Interface/AddOns/WIM/Sources/Options/Options.lua:104>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface/AddOns/WIM/Sources/Options/Options.lua\"]:335: in function `ShowOptions'\n[string \"@Interface/AddOns/AddOnSkins/Skins/AddOns/WIM.lua\"]:11: in function <Interface/AddOns/AddOnSkins/Skins/AddOns/WIM.lua:8>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/AddOnSkins/Core/Core.lua\"]:216: in function `CallSkin'\n[string \"@Interface/AddOns/AddOnSkins/Core/Core.lua\"]:310: in function `?'\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/CallbackHandler-1.0-8/CallbackHandler-1.0.lua\"]:109: in function <...ies/Core/CallbackHandler-1.0/CallbackHandler-1.0.lua:109>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/CallbackHandler-1.0-8/CallbackHandler-1.0.lua\"]:19: in function <...ies/Core/CallbackHandler-1.0/CallbackHandler-1.0.lua:15>\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/CallbackHandler-1.0-8/CallbackHandler-1.0.lua\"]:54: in function `Fire'\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceEvent-3.0-4/AceEvent-3.0.lua\"]:120: in function <...UI_Libraries/Core/Ace3/AceEvent-3.0/AceEvent-3.0.lua:119>",
+			["session"] = 14,
+			["counter"] = 4,
 		}, -- [10]
 		{
 			["message"] = "...face/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:476: hooksecurefunc(): UseContainerItem is not a function",
 			["time"] = "2023/05/06 00:16:43",
 			["locals"] = "",
 			["stack"] = "[string \"=[C]\"]: in function `hooksecurefunc'\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua\"]:476: in main chunk",
-			["session"] = 10,
-			["counter"] = 4,
+			["session"] = 15,
+			["counter"] = 9,
 		}, -- [11]
 		{
 			["message"] = "...rface/AddOns/MikScrollingBattleText/MSBTTriggers.lua:477: attempt to call field 'UpdateRegisteredEvents' (a nil value)",
 			["time"] = "2023/05/06 00:16:43",
 			["locals"] = "(*temporary) = nil\n(*temporary) = \"attempt to call field 'UpdateRegisteredEvents' (a nil value)\"\neventFrame = Frame {\n 0 = <userdata>\n}\nEraseTable = <function> defined @Interface/AddOns/MikScrollingBattleText/MikSBT.lua:99\nlistenEvents = <table> {\n}\ncategorizedTriggers = <table> {\n}\ntriggerExceptions = <table> {\n}\nMSBTProfiles = <table> {\n DeleteProfile = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3455\n IsModDisabled = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3325\n masterProfile = <table> {\n }\n CopyProfile = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3440\n SetOptionUserDisabled = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3301\n SetOption = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3186\n currentProfile = <table> {\n }\n SelectProfile = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3410\n ResetProfile = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3476\n}\nCategorizeTrigger = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTTriggers.lua:252\n",
 			["stack"] = "[string \"@Interface/AddOns/MikScrollingBattleText/MSBTTriggers.lua\"]:477: in function `UpdateTriggers'\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3432: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3410>\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3549: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3507>\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3692: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3678>",
-			["session"] = 10,
-			["counter"] = 4,
+			["session"] = 15,
+			["counter"] = 9,
 		}, -- [12]
 		{
 			["message"] = "...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3317: attempt to call field 'Enable' (a nil value)",
 			["time"] = "2023/05/06 00:16:56",
 			["locals"] = "isDisabled = nil\n(*temporary) = nil\n(*temporary) = \"attempt to call field 'Enable' (a nil value)\"\nsavedVariables = <table> {\n profiles = <table> {\n }\n}\n",
 			["stack"] = "[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3317: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3301>\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3703: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3678>",
-			["session"] = 10,
-			["counter"] = 6,
+			["session"] = 15,
+			["counter"] = 11,
 		}, -- [13]
 		{
 			["message"] = "Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
-			["session"] = 10,
 			["time"] = "2023/05/06 00:16:55",
-			["counter"] = 4,
+			["session"] = 15,
+			["counter"] = 9,
 		}, -- [14]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
-			["session"] = 10,
 			["time"] = "2023/05/06 00:16:55",
-			["counter"] = 4,
+			["session"] = 15,
+			["counter"] = 9,
 		}, -- [15]
 	},
 }

@@ -2,15 +2,10 @@ VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
 /script DecursiveRootTable.Dcr:Println('没有相关技能')
 END
 VER 3 0000000000000002 "RXPTargeting" "Ability_eyeoftheowl"
-//RestedXP 指南 狮心-北美刘嘉玲 汉化版 - current step has no configured targets
+/targetexact 折磨者迦莫斯拉
+/cleartarget [dead]
 END
 VER 3 0000000000000004 "坐骑" "132112"
 /use 茶色驭风者
 /use 迅捷棕狼
-END
-VER 3 0000000000000003 "英勇宏" "132282"
-#showtooltip 英勇打击
-/cast !英勇打击
-/cast 乘胜追击
-/startattack
 END

@@ -1,5 +1,8 @@
 
 DecursiveDB = {
+	["profileKeys"] = {
+		["狂暴專家 - 伊弗斯"] = "Default",
+	},
 	["class"] = {
 		["WARRIOR"] = {
 			["CureOrder-1"] = {
@@ -11,10 +14,19 @@ DecursiveDB = {
 				[16] = -14,
 				[32] = -16,
 			},
+			["CureOrder-2"] = {
+				-11, -- [1]
+				-15, -- [2]
+				nil, -- [3]
+				-12, -- [4]
+				[8] = -13,
+				[16] = -14,
+				[32] = -16,
+			},
 		},
 	},
-	["profileKeys"] = {
-		["狂暴專家 - 伊弗斯"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1683384770,
 	},
 	["profiles"] = {
 		["Default"] = {

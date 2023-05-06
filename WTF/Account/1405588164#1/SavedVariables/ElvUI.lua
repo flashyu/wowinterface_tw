@@ -19,8 +19,8 @@ ElvDB = {
 		["Default"] = {
 			["databars"] = {
 				["experience"] = {
-					["width"] = 8,
 					["height"] = 273,
+					["width"] = 8,
 					["orientation"] = "VERTICAL",
 				},
 			},
@@ -35,15 +35,15 @@ ElvDB = {
 				["ShiftAB"] = "BOTTOM,UIParent,BOTTOM,-254,363",
 				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,332,311",
 				["ElvAB_6"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-4,360",
-				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,456,4",
-				["ElvAB_2"] = "BOTTOM,ElvUIParent,BOTTOM,335,98",
-				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,335,349",
+				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,338,415",
+				["ElvAB_1"] = "BOTTOM,UIParent,BOTTOM,0,181",
+				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-179",
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-339,415",
 				["LootFrameMover"] = "TOPRIGHT,UIParent,TOPRIGHT,-547,-380",
 				["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,0,139",
-				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-179",
-				["ElvAB_1"] = "BOTTOM,UIParent,BOTTOM,0,181",
-				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,338,415",
+				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,456,4",
+				["ElvAB_2"] = "BOTTOM,ElvUIParent,BOTTOM,335,98",
+				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,335,349",
 			},
 			["unitframe"] = {
 				["units"] = {
@@ -64,11 +64,16 @@ ElvDB = {
 			["actionbar"] = {
 				["bar3"] = {
 					["buttonsPerRow"] = 12,
-					["buttonSize"] = 40,
 					["buttons"] = 12,
+					["buttonSize"] = 40,
 				},
 				["bar1"] = {
 					["buttonSize"] = 40,
+				},
+				["bar6"] = {
+					["enabled"] = true,
+					["buttonsPerRow"] = 6,
+					["buttons"] = 6,
 				},
 				["microbar"] = {
 					["buttons"] = 10,
@@ -84,18 +89,22 @@ ElvDB = {
 					["buttons"] = 12,
 				},
 				["lockActionBars"] = false,
-				["bar6"] = {
-					["enabled"] = true,
-					["buttonsPerRow"] = 6,
-					["buttons"] = 6,
-				},
 			},
 			["convertPages"] = true,
 		},
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["狂暴專家"] = 921198,
+			["狂暴專家"] = 86516800,
+		},
+	},
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["faction"] = {
+		["伊弗斯"] = {
+			["狂暴專家"] = "Horde",
 		},
 	},
 	["global"] = {
@@ -104,15 +113,6 @@ ElvDB = {
 				["height"] = 608,
 				["width"] = 800,
 			},
-		},
-	},
-	["faction"] = {
-		["伊弗斯"] = {
-			["狂暴專家"] = "Horde",
-		},
-	},
-	["namespaces"] = {
-		["LibDualSpec-1.0"] = {
 		},
 	},
 }
