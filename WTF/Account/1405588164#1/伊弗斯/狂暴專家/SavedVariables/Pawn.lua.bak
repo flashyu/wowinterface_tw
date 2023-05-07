@@ -1,13 +1,11 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.08,
-	["LastPlayerFullName"] = "狂暴專家-伊弗斯",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
-			["ID"] = 199503,
-			["Level"] = 125,
-			["Link"] = "|cff1eff00|Hitem:199503::::::::70:::::::::|h[群集护面]|h|r",
+			["ID"] = 37480,
+			["Level"] = 138,
+			["Link"] = "|cff1eff00|Hitem:37480::::::::70:::::::::|h[巨石头盔]|h|r",
 		}, -- [1]
 		{
 			["ID"] = 199520,
@@ -26,9 +24,9 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:199505::::::::70:::::::::|h[群集胸铠]|h|r",
 		}, -- [5]
 		{
-			["ID"] = 199508,
-			["Level"] = 125,
-			["Link"] = "|cff1eff00|Hitem:199508::::::::70:::::::::|h[群集板甲腰带]|h|r",
+			["ID"] = 37509,
+			["Level"] = 138,
+			["Link"] = "|cff1eff00|Hitem:37509::::::::70:::::::::|h[沸腾腰带]|h|r",
 		}, -- [6]
 		{
 			["ID"] = 199509,
@@ -41,9 +39,9 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:199510::::::::70:::::::::|h[群集板甲护胫]|h|r",
 		}, -- [8]
 		{
-			["ID"] = 199506,
-			["Level"] = 125,
-			["Link"] = "|cff1eff00|Hitem:199506::::::::70:::::::::|h[群集板甲护臂]|h|r",
+			["ID"] = 37514,
+			["Level"] = 138,
+			["Link"] = "|cff1eff00|Hitem:37514::::::::70:::::::::|h[解开的镣铐]|h|r",
 		}, -- [9]
 		{
 			["ID"] = 199507,
@@ -68,30 +66,36 @@ PawnOptions = {
 			["AlsoFitsIn"] = 14,
 			["Link"] = "|cff1eff00|Hitem:199527::::::::70:::::::::|h[群集突击之石]|h|r",
 		}, -- [13]
-		nil, -- [14]
+		{
+			["ID"] = 199527,
+			["Level"] = 125,
+			["AlsoFitsIn"] = 13,
+			["Link"] = "|cff1eff00|Hitem:199527::::::::71:::::::::|h[群集突击之石]|h|r",
+		}, -- [14]
 		{
 			["ID"] = 199525,
 			["Level"] = 125,
 			["Link"] = "|cff1eff00|Hitem:199525::::::::70:::::::::|h[群集斗篷]|h|r",
 		}, -- [15]
 		{
-			["ID"] = 199716,
-			["Level"] = 125,
+			["ID"] = 37032,
+			["Level"] = 138,
 			["AlsoFitsIn"] = 17,
-			["Link"] = "|cff1eff00|Hitem:199716::::::::70:::::::::|h[群集之剑]|h|r",
+			["Link"] = "|cff1eff00|Hitem:37032::::::::70:::::::::|h[海象人之斧]|h|r",
 		}, -- [16]
 		{
-			["ID"] = 199724,
-			["Level"] = 125,
-			["AlsoFitsIn"] = 16,
-			["Link"] = "|cff1eff00|Hitem:199724::::::::70:::::::::|h[群集护卫者]|h|r",
+			["ID"] = 37521,
+			["Level"] = 138,
+			["Link"] = "|cff1eff00|Hitem:37521::::::::70:::::::::|h[冰寒方盾]|h|r",
 		}, -- [17]
 		{
-			["ID"] = 199714,
-			["Level"] = 125,
-			["Link"] = "|cff1eff00|Hitem:199714::::::::70:::::::::|h[群集之弓]|h|r",
+			["ID"] = 36882,
+			["Level"] = 138,
+			["Link"] = "|cff1eff00|Hitem:36882::::::::70:::::::::|h[战歌长弓]|h|r",
 		}, -- [18]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "狂暴專家-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

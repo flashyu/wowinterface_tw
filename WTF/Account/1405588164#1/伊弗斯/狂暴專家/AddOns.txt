@@ -38,7 +38,7 @@ ClassicCodex-db-zhTW: disabled
 ClassicCodex-db-enUS: disabled
 ClassicCodex-db-esES: disabled
 ClassicCodex-db-koKR: disabled
-Decursive: enabled
+Decursive: disabled
 Details: enabled
 Details_Compare2: enabled
 Details_EncounterDetails: enabled
@@ -60,8 +60,8 @@ Leatrix_Maps: enabled
 Leatrix_Plus: enabled
 LFGBulletinBoard: enabled
 LoonBestInSlot: enabled
-MikScrollingBattleText: enabled
-MSBTOptions: enabled
+MikScrollingBattleText: disabled
+MSBTOptions: disabled
 Myslot: enabled
 Pawn: enabled
 Plater: enabled

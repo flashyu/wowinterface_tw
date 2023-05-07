@@ -1,0 +1,36 @@
+VER 3 0000000001000003 "复仇" "134400"
+#showtooltip 复仇
+/cast 复仇
+/startattack
+END
+VER 3 0000000001000005 "盾击" "134400"
+#showtooltip 盾击
+/cast 盾击
+/startattack
+END
+VER 3 0000000001000004 "盾牌格挡" "134400"
+#showtooltip 盾牌格挡
+/cast 盾牌格挡
+/startattack
+END
+VER 3 0000000001000001 "盾牌猛击" "134951"
+#showtooltip 盾牌猛击
+/cast 盾牌猛击
+/startattack
+END
+VER 3 0000000001000002 "英勇打击" "134400"
+#showtooltip 英勇打击
+/cast !英勇打击
+/cast 乘胜追击
+/startattack
+END
+VER 3 0000000001000006 "震荡猛击" "134400"
+#showtooltip 震荡猛击
+/cast 震荡猛击
+/startattack
+END
+VER 3 0000000001000007 "顺劈斩" "134400"
+#showtooltip 顺劈斩
+/cast 顺劈斩
+/startattack
+END

@@ -199,11 +199,11 @@ TalentEmuSV = {
 		["minimapPos"] = 185,
 	},
 	["var"] = {
+		["Player-4487-0051C667"] = "!T3297122LTKI122Ul28qCJn15::EbyZ8JTKI122o3::::EmUa85MAG!G32226++++++n+9:yDC:11u+-:k=C:C1u+-:l=C:D1u+9:EEC:I1u+-:m=C:=1u+!E320+^+Dhk:871:9+Uhk:871:9+Ehk:871:9+^+Fhk:871:9+5-9:871:9+Jhk:871:9+Khk:871:9+--9:871:9+Hhk:871:9+Xhk:871:9+Hkk:871:9+ehk:871:9+bhk:871:9+Zhk:871:9+c29:871:9+F-9:871:9+G09:871:9+^",
 		["savedTalent"] = {
 			["房展练级- 武器28 狂怒 0 |cff7fbfff防护33|r"] = "!T329E111JTKI122o3::::EmUa85MAG",
 			["|cffc79c6e战士|r- |cff7fbfff武器38|r 狂怒 8 防护15"] = "!T329E111LTKI122Ul28qCJn15::EbyZ8",
 		},
-		["Player-4487-0051C667"] = "!T3296122LTKI122Ul28qCJn15::EbyZ8JTKI122o3::::EmUa85MAG!G32226++++++n+9:yDC:11u+-:k=C:C1u+-:l=C:D1u+9:pDC:E1u+-:m=C:=1u+!E320+^+Dhk:861:9+Uhk:861:9+Ehk:861:9+^+Fhk:861:9+Ihk:861:9+Jhk:861:9+Khk:861:9+Ghk:861:9+Hhk:861:9+Xhk:861:9+Hkk:861:9+ehk:861:9+bhk:861:9+Zhk:861:9+Ykk:861:9+bkk:861:9+Wkk:861:9+^",
 	},
 	["_version"] = 220811,
 	["_GlobalAssign"] = {

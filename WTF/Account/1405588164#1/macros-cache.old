@@ -8,9 +8,3 @@ VER 3 0000000000000004 "坐骑" "132112"
 /use 茶色驭风者
 /use 迅捷棕狼
 END
-VER 3 0000000000000003 "英勇宏" "132282"
-#showtooltip 英勇打击
-/cast !英勇打击
-/cast 乘胜追击
-/startattack
-END
