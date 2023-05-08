@@ -1,8 +1,9 @@
 ## Interface: 30401
 ## Title: |cff00fe00TradeSkillMaster|r
+## IconTexture: Interface\Addons\TradeSkillMaster\Media\Logo
 ## Notes: Auction house and gold making addon.
 ## Author: TradeSkillMaster Team
-## Version: v4.12.36
+## Version: v4.12.37
 ## SavedVariables: TradeSkillMasterDB, TSMItemInfoDB
 ## OptionalDeps: ArkInventory, Auc-Advanced, Auctionator, TheUndermineJournal, BootyBayGazette, AuctionDB
 ## X-Embeds: Ace3, LibDataBroker-1.1, LibDBIcon-1.0, LibRealmInfo, LibDeflate, LibSerialize, LibAHTab
@@ -111,6 +112,8 @@ LibTSM\Util\FSM.lua
 LibTSM\Util\Event.lua
 LibTSM\Util\CustomStringClasses\Types.lua
 LibTSM\Util\CustomStringClasses\Tokenizer.lua
+LibTSM\Util\CustomStringClasses\Optimizer.lua
+LibTSM\Util\CustomStringClasses\AST.lua
 LibTSM\Util\CustomString.lua
 
 # LibTSM service files

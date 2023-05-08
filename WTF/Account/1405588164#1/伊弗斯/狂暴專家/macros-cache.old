@@ -1,12 +1,12 @@
 VER 3 0000000001000003 "复仇" "134400"
 #showtooltip 复仇
-/cast 复仇
 /startattack
+/cast 复仇
 END
 VER 3 0000000001000005 "盾击" "134400"
 #showtooltip 盾击
-/cast 盾击
 /startattack
+/cast 盾击
 END
 VER 3 0000000001000004 "盾牌格挡" "134400"
 #showtooltip 盾牌格挡

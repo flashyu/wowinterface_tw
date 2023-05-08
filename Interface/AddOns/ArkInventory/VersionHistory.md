@@ -1,4 +1,8 @@
-﻿# 3.10.14 (20-JAN-2023)
+﻿# 3.10.15 (12-FEB-2023)
+ - changed - (retail) toc updated to 100007
+ - removed - event for WEAR_EQUIPMENT_SET
+ 
+# 3.10.14 (20-JAN-2023)
  - fixed - rule function `itemstat( )`
  - fixed - (wrath) default bank and vault windows opening due to `PlayerInteractionFrameManager` being added to wrath
  - changed - (wrath) toc updated to 30401

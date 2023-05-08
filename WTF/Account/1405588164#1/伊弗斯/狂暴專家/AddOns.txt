@@ -21,7 +21,7 @@ AutoCombatLogger: enabled
 AutoBarWrath: enabled
 aux-addon: enabled
 BattleInfo: enabled
-Bistooltip: enabled
+Bistooltip: disabled
 !BugGrabber: enabled
 BugSack: enabled
 ClassicCodex: disabled

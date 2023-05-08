@@ -1,7 +1,7 @@
 # Hekili
 
-## [v3.4.1-1.8.6](https://github.com/Hekili/hekili/tree/v3.4.1-1.8.6) (2023-05-04)
-[Full Changelog](https://github.com/Hekili/hekili/compare/v3.4.1-1.8.5...v3.4.1-1.8.6) [Previous Releases](https://github.com/Hekili/hekili/releases)
+## [v3.4.1-1.8.7](https://github.com/Hekili/hekili/tree/v3.4.1-1.8.7) (2023-05-04)
+[Full Changelog](https://github.com/Hekili/hekili/compare/v3.4.1-1.8.5...v3.4.1-1.8.7) [Previous Releases](https://github.com/Hekili/hekili/releases)
 
 - Merge pull request #2570 from stephenjang/wrath  
     (Wrath) Rogue: Fix maintain expose armor setting toggle  

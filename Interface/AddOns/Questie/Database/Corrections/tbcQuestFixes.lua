@@ -2212,6 +2212,7 @@ function QuestieTBCQuestFixes:Load()
         [10942] = {
             [questKeys.questLevel] = -1,
             [questKeys.zoneOrSort] = sortKeys.SPECIAL,
+            [questKeys.finishedBy] = {{22817}}, -- removed Draenei Orphan as turn in NPC
         },
         [10943] = {
             [questKeys.questLevel] = -1,
@@ -2232,6 +2233,7 @@ function QuestieTBCQuestFixes:Load()
             [questKeys.triggerEnd] = {"Dornaa taken to the Ring of Observance", {[zoneIDs.TEROKKAR_FOREST]={{39.71,64.6}}}},
             [questKeys.zoneOrSort] = sortKeys.SPECIAL,
             [questKeys.requiredRaces] = raceIDs.ALL_ALLIANCE,
+            [questKeys.preQuestSingle] = {10943},
         },
         [10951] = {
             [questKeys.questLevel] = -1,
@@ -2245,6 +2247,7 @@ function QuestieTBCQuestFixes:Load()
             [questKeys.triggerEnd] = {"Dornaa taken to the Dark Portal", {[zoneIDs.HELLFIRE_PENINSULA]={{88.26,50.32}}}},
             [questKeys.zoneOrSort] = sortKeys.SPECIAL,
             [questKeys.requiredRaces] = raceIDs.ALL_ALLIANCE,
+            [questKeys.preQuestSingle] = {10943},
         },
         [10953] = {
             [questKeys.questLevel] = -1,
@@ -2258,6 +2261,7 @@ function QuestieTBCQuestFixes:Load()
             [questKeys.triggerEnd] = {"Dornaa taken to Aeris Landing", {[zoneIDs.NAGRAND]={{31.47,57.45}}}},
             [questKeys.zoneOrSort] = sortKeys.SPECIAL,
             [questKeys.requiredRaces] = raceIDs.ALL_ALLIANCE,
+            [questKeys.preQuestSingle] = {10943},
         },
         [10956] = {
             [questKeys.questLevel] = -1,
@@ -2288,8 +2292,9 @@ function QuestieTBCQuestFixes:Load()
         [10966] = {
             [questKeys.questLevel] = -1,
             [questKeys.zoneOrSort] = sortKeys.SPECIAL,
-            [questKeys.preQuestGroup] = {10945,10951,10953},
             [questKeys.requiredRaces] = raceIDs.ALL_ALLIANCE,
+            [questKeys.preQuestGroup] = {},
+            [questKeys.preQuestSingle] = {10968},
         },
         [10967] = {
             [questKeys.questLevel] = -1,
@@ -2303,6 +2308,7 @@ function QuestieTBCQuestFixes:Load()
             [questKeys.zoneOrSort] = sortKeys.SPECIAL,
             [questKeys.requiredRaces] = raceIDs.ALL_ALLIANCE,
             [questKeys.preQuestGroup] = {10956,10962},
+            [questKeys.preQuestSingle] = {},
         },
         [10974] = {
             [questKeys.requiredMinRep] = {933,21000},

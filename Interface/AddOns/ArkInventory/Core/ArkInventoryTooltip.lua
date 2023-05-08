@@ -537,24 +537,27 @@ function ArkInventory.TooltipSet( tooltip, loc_id, bag_id, slot_id, h, i )
 		
 	end
 	
-	
-	if DragonFlightTooltips then
+	if tooltipInfo then
 		
-		TooltipUtil.SurfaceArgs( tooltipInfo )
-		tooltipInfo.args = nil
-		
-		if tooltipInfo.lines then
-			for k, line in ipairs( tooltipInfo.lines ) do
-				TooltipUtil.SurfaceArgs( line )
-				line.args = nil
+		if DragonFlightTooltips then
+			
+			TooltipUtil.SurfaceArgs( tooltipInfo )
+			tooltipInfo.args = nil
+			
+			if tooltipInfo.lines then
+				for k, line in ipairs( tooltipInfo.lines ) do
+					TooltipUtil.SurfaceArgs( line )
+					line.args = nil
+				end
 			end
+			
 		end
 		
-	end
-	
-	if tooltipInfo.battlePetSpeciesID and tooltipInfo.battlePetSpeciesID > 0 then
-		tooltipInfo.hyperlink = tooltipInfo.hyperlink or ArkInventory.BattlepetBaseHyperlink( tooltipInfo.battlePetSpeciesID, tooltipInfo.battlePetLevel, tooltipInfo.battlePetBreedQuality, tooltipInfo.battlePetMaxHealth, tooltipInfo.battlePetPower, tooltipInfo.battlePetSpeed, tooltipInfo.battlePetName )
-		ArkInventory.TooltipCustomBattlepetBuild( tooltip, tooltipInfo.hyperlink )
+		if tooltipInfo.battlePetSpeciesID and tooltipInfo.battlePetSpeciesID > 0 then
+			tooltipInfo.hyperlink = tooltipInfo.hyperlink or ArkInventory.BattlepetBaseHyperlink( tooltipInfo.battlePetSpeciesID, tooltipInfo.battlePetLevel, tooltipInfo.battlePetBreedQuality, tooltipInfo.battlePetMaxHealth, tooltipInfo.battlePetPower, tooltipInfo.battlePetSpeed, tooltipInfo.battlePetName )
+			ArkInventory.TooltipCustomBattlepetBuild( tooltip, tooltipInfo.hyperlink )
+		end
+		
 	end
 	
 	tooltipSource.ARKTTD.info = tooltipInfo

@@ -6,14 +6,14 @@ PIG = {
 		["Openlist"] = {
 		},
 		["AddBut"] = "ON",
-		["SellPlus"] = "OFF",
+		["AutoRepair_GUILD"] = "OFF",
 		["diuqitishi"] = "OFF",
 		["Kaiqi"] = "ON",
 		["zidongKaiqi"] = "OFF",
 		["AutoSell_Open"] = "OFF",
 		["AutoSell_List"] = {
 		},
-		["AutoRepair_GUILD"] = "OFF",
+		["SellPlus"] = "OFF",
 	},
 	["daiben"] = {
 		["Point"] = {
@@ -286,193 +286,13 @@ PIG = {
 				},
 			},
 			["wutiaojianjINV"] = "OFF",
-			["kaituanName"] = "[Pig]开团助手测试喊话....",
 			["YYhao"] = 113213,
-			["shijianjiange"] = 300,
-			["linshiInfo"] = {
-			},
+			["kaituanName"] = "[Pig]开团助手测试喊话....",
 			["hanhuapindao"] = {
 			},
-			["dangqianpeizhi"] = 0,
-			["BL"] = {
-				["10人配置"] = {
-					{
-						1, -- [1]
-						1, -- [2]
-						0, -- [3]
-						0, -- [4]
-						0, -- [5]
-					}, -- [1]
-					{
-						1, -- [1]
-						0, -- [2]
-						1, -- [3]
-						0, -- [4]
-					}, -- [2]
-					{
-						0, -- [1]
-						2, -- [2]
-						1, -- [3]
-						2, -- [4]
-						1, -- [5]
-						0, -- [6]
-						0, -- [7]
-						0, -- [8]
-						0, -- [9]
-					}, -- [3]
-				},
-				["20人配置"] = {
-					{
-						2, -- [1]
-						0, -- [2]
-						0, -- [3]
-						0, -- [4]
-						0, -- [5]
-					}, -- [1]
-					{
-						2, -- [1]
-						1, -- [2]
-						1, -- [3]
-						0, -- [4]
-					}, -- [2]
-					{
-						4, -- [1]
-						2, -- [2]
-						3, -- [3]
-						3, -- [4]
-						2, -- [5]
-						0, -- [6]
-						0, -- [7]
-						0, -- [8]
-						0, -- [9]
-					}, -- [3]
-				},
-				["40人配置"] = {
-					{
-						4, -- [1]
-						0, -- [2]
-						0, -- [3]
-						0, -- [4]
-						0, -- [5]
-					}, -- [1]
-					{
-						4, -- [1]
-						2, -- [2]
-						3, -- [3]
-						0, -- [4]
-					}, -- [2]
-					{
-						8, -- [1]
-						4, -- [2]
-						6, -- [3]
-						6, -- [4]
-						3, -- [5]
-						0, -- [6]
-						0, -- [7]
-						0, -- [8]
-						0, -- [9]
-					}, -- [3]
-				},
-				["25人配置"] = {
-					{
-						2, -- [1]
-						1, -- [2]
-						0, -- [3]
-						0, -- [4]
-						0, -- [5]
-					}, -- [1]
-					{
-						2, -- [1]
-						2, -- [2]
-						2, -- [3]
-						0, -- [4]
-					}, -- [2]
-					{
-						1, -- [1]
-						5, -- [2]
-						2, -- [3]
-						3, -- [4]
-						4, -- [5]
-						1, -- [6]
-						0, -- [7]
-						0, -- [8]
-						0, -- [9]
-					}, -- [3]
-				},
-				["15人配置"] = {
-					{
-						2, -- [1]
-						0, -- [2]
-						0, -- [3]
-						0, -- [4]
-						0, -- [5]
-					}, -- [1]
-					{
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						0, -- [4]
-					}, -- [2]
-					{
-						2, -- [1]
-						2, -- [2]
-						2, -- [3]
-						2, -- [4]
-						2, -- [5]
-						0, -- [6]
-						0, -- [7]
-						0, -- [8]
-						0, -- [9]
-					}, -- [3]
-				},
-			},
 			["jinzuZhiling"] = "888",
-			["PlayersInfo"] = {
-			},
-			["dangqianrenshu"] = {
-				{
-					0, -- [1]
-					0, -- [2]
-					0, -- [3]
-					0, -- [4]
-					0, -- [5]
-					0, -- [6]
-					0, -- [7]
-					0, -- [8]
-					0, -- [9]
-					0, -- [10]
-					0, -- [11]
-					0, -- [12]
-				}, -- [1]
-				{
-					0, -- [1]
-					0, -- [2]
-					0, -- [3]
-					0, -- [4]
-					0, -- [5]
-					0, -- [6]
-					0, -- [7]
-					0, -- [8]
-					0, -- [9]
-					0, -- [10]
-					0, -- [11]
-					0, -- [12]
-				}, -- [2]
-				{
-					0, -- [1]
-					0, -- [2]
-					0, -- [3]
-					0, -- [4]
-					0, -- [5]
-					0, -- [6]
-					0, -- [7]
-					0, -- [8]
-					0, -- [9]
-					0, -- [10]
-					0, -- [11]
-					0, -- [12]
-				}, -- [3]
-			},
+			["shijianjiange"] = 300,
+			["dangqianpeizhi"] = 0,
 			["LMBL"] = {
 				["10人配置"] = {
 					{
@@ -695,12 +515,192 @@ PIG = {
 					}, -- [3]
 				},
 			},
+			["PlayersInfo"] = {
+			},
+			["linshiInfo"] = {
+			},
+			["BL"] = {
+				["10人配置"] = {
+					{
+						1, -- [1]
+						1, -- [2]
+						0, -- [3]
+						0, -- [4]
+						0, -- [5]
+					}, -- [1]
+					{
+						1, -- [1]
+						0, -- [2]
+						1, -- [3]
+						0, -- [4]
+					}, -- [2]
+					{
+						0, -- [1]
+						2, -- [2]
+						1, -- [3]
+						2, -- [4]
+						1, -- [5]
+						0, -- [6]
+						0, -- [7]
+						0, -- [8]
+						0, -- [9]
+					}, -- [3]
+				},
+				["20人配置"] = {
+					{
+						2, -- [1]
+						0, -- [2]
+						0, -- [3]
+						0, -- [4]
+						0, -- [5]
+					}, -- [1]
+					{
+						2, -- [1]
+						1, -- [2]
+						1, -- [3]
+						0, -- [4]
+					}, -- [2]
+					{
+						4, -- [1]
+						2, -- [2]
+						3, -- [3]
+						3, -- [4]
+						2, -- [5]
+						0, -- [6]
+						0, -- [7]
+						0, -- [8]
+						0, -- [9]
+					}, -- [3]
+				},
+				["40人配置"] = {
+					{
+						4, -- [1]
+						0, -- [2]
+						0, -- [3]
+						0, -- [4]
+						0, -- [5]
+					}, -- [1]
+					{
+						4, -- [1]
+						2, -- [2]
+						3, -- [3]
+						0, -- [4]
+					}, -- [2]
+					{
+						8, -- [1]
+						4, -- [2]
+						6, -- [3]
+						6, -- [4]
+						3, -- [5]
+						0, -- [6]
+						0, -- [7]
+						0, -- [8]
+						0, -- [9]
+					}, -- [3]
+				},
+				["25人配置"] = {
+					{
+						2, -- [1]
+						1, -- [2]
+						0, -- [3]
+						0, -- [4]
+						0, -- [5]
+					}, -- [1]
+					{
+						2, -- [1]
+						2, -- [2]
+						2, -- [3]
+						0, -- [4]
+					}, -- [2]
+					{
+						1, -- [1]
+						5, -- [2]
+						2, -- [3]
+						3, -- [4]
+						4, -- [5]
+						1, -- [6]
+						0, -- [7]
+						0, -- [8]
+						0, -- [9]
+					}, -- [3]
+				},
+				["15人配置"] = {
+					{
+						2, -- [1]
+						0, -- [2]
+						0, -- [3]
+						0, -- [4]
+						0, -- [5]
+					}, -- [1]
+					{
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						0, -- [4]
+					}, -- [2]
+					{
+						2, -- [1]
+						2, -- [2]
+						2, -- [3]
+						2, -- [4]
+						2, -- [5]
+						0, -- [6]
+						0, -- [7]
+						0, -- [8]
+						0, -- [9]
+					}, -- [3]
+				},
+			},
+			["dangqianrenshu"] = {
+				{
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+				}, -- [1]
+				{
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+				}, -- [2]
+				{
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+				}, -- [3]
+			},
 		},
 		["ItemList_Paichu"] = {
 		},
 		["pinzhimoren"] = 3,
 		["AddBut"] = "ON",
-		["History"] = {
+		["ItemList"] = {
 		},
 		["buzhu"] = {
 			["tanke"] = {
@@ -708,11 +708,8 @@ PIG = {
 			["zhiliao"] = {
 			},
 		},
-		["ItemList"] = {
+		["History"] = {
 		},
-		["instanceName"] = {
-		},
-		["Kaiqi"] = "OFF",
 		["Rsetting"] = {
 			["jiaoyijilu"] = "ON",
 			["YYguanjianzi"] = {
@@ -731,6 +728,7 @@ PIG = {
 			["bobaomingxi"] = "ON",
 			["fubenwai"] = "OFF",
 		},
+		["Kaiqi"] = "OFF",
 		["Raidinfo"] = {
 			{
 			}, -- [1]
@@ -748,6 +746,40 @@ PIG = {
 			}, -- [7]
 			{
 			}, -- [8]
+		},
+		["instanceName"] = {
+		},
+		["jiangli"] = {
+			{
+				"治疗第一", -- [1]
+				150, -- [2]
+				"无", -- [3]
+			}, -- [1]
+			{
+				"治疗第二", -- [1]
+				100, -- [2]
+				"无", -- [3]
+			}, -- [2]
+			{
+				"治疗第三", -- [1]
+				80, -- [2]
+				"无", -- [3]
+			}, -- [3]
+			{
+				"DPS第一", -- [1]
+				150, -- [2]
+				"无", -- [3]
+			}, -- [4]
+			{
+				"DPS第二", -- [1]
+				100, -- [2]
+				"无", -- [3]
+			}, -- [5]
+			{
+				"DPS第三", -- [1]
+				80, -- [2]
+				"无", -- [3]
+			}, -- [6]
 		},
 		["fakuan"] = {
 			{
@@ -799,83 +831,25 @@ PIG = {
 				"无", -- [4]
 			}, -- [8]
 		},
-		["jiangli"] = {
-			{
-				"治疗第一", -- [1]
-				150, -- [2]
-				"无", -- [3]
-			}, -- [1]
-			{
-				"治疗第二", -- [1]
-				100, -- [2]
-				"无", -- [3]
-			}, -- [2]
-			{
-				"治疗第三", -- [1]
-				80, -- [2]
-				"无", -- [3]
-			}, -- [3]
-			{
-				"DPS第一", -- [1]
-				150, -- [2]
-				"无", -- [3]
-			}, -- [4]
-			{
-				"DPS第二", -- [1]
-				100, -- [2]
-				"无", -- [3]
-			}, -- [5]
-			{
-				"DPS第三", -- [1]
-				80, -- [2]
-				"无", -- [3]
-			}, -- [6]
-		},
 	},
 	["CVars"] = {
 		["cameraDistanceMaxZoomFactor"] = "OFF",
 	},
-	["SkillFBCD"] = {
-		["SkillCD"] = {
-			{
-				{
-					"狂暴專家", -- [1]
-					"伊弗斯", -- [2]
-					{
-						0.78, -- [1]
-						0.61, -- [2]
-						0.43, -- [3]
-					}, -- [3]
-					"juese", -- [4]
-				}, -- [1]
-				{
-				}, -- [2]
-			}, -- [1]
-		},
-		["FubenCD"] = {
-			{
-				{
-					"狂暴專家", -- [1]
-					"伊弗斯", -- [2]
-					{
-						0.78, -- [1]
-						0.61, -- [2]
-						0.43, -- [3]
-					}, -- [3]
-					"juese", -- [4]
-				}, -- [1]
-				{
-					["cunzaiYN"] = false,
-				}, -- [2]
-			}, -- [1]
-		},
-		["Open"] = "ON",
-		["AddBut"] = "ON",
+	["QuickFollow"] = {
+		["Jiuwei"] = false,
+		["QuickBut"] = true,
+		["Duizhang"] = true,
+		["Yijiao"] = false,
+		["Name"] = "猪猪加油",
+		["Kaishi"] = "1",
+		["Tishi"] = false,
+		["Jieshu"] = "2",
+		["Qiangli"] = false,
 	},
 	["AHPlus"] = {
-		["AHtooltip"] = true,
-		["Time"] = 48,
 		["Open"] = false,
+		["Time"] = 48,
+		["AHtooltip"] = true,
 		["Tokens"] = {
 			{
 				1683298338, -- [1]
@@ -900,14 +874,46 @@ PIG = {
 		},
 		["Coll"] = {
 		},
-		["DaojiTime"] = 0,
 		["Data"] = {
 		},
+		["DaojiTime"] = 0,
 	},
-	["ShowPlus"] = {
-		["ItemSell"] = "OFF",
-		["ItemLevel"] = "OFF",
-		["SpellID"] = "OFF",
+	["SkillFBCD"] = {
+		["Open"] = "ON",
+		["FubenCD"] = {
+			{
+				{
+					"狂暴專家", -- [1]
+					"伊弗斯", -- [2]
+					{
+						0.78, -- [1]
+						0.61, -- [2]
+						0.43, -- [3]
+					}, -- [3]
+					"juese", -- [4]
+				}, -- [1]
+				{
+					["cunzaiYN"] = false,
+				}, -- [2]
+			}, -- [1]
+		},
+		["AddBut"] = "ON",
+		["SkillCD"] = {
+			{
+				{
+					"狂暴專家", -- [1]
+					"伊弗斯", -- [2]
+					{
+						0.78, -- [1]
+						0.61, -- [2]
+						0.43, -- [3]
+					}, -- [3]
+					"juese", -- [4]
+				}, -- [1]
+				{
+				}, -- [2]
+			}, -- [1]
+		},
 	},
 	["QuickButton"] = {
 		["bili"] = 0.8,
@@ -923,16 +929,10 @@ PIG = {
 		["AutoEquip"] = true,
 		["suoding"] = false,
 	},
-	["QuickFollow"] = {
-		["Jiuwei"] = false,
-		["QuickBut"] = true,
-		["Duizhang"] = true,
-		["Yijiao"] = false,
-		["Name"] = "猪猪加油",
-		["Kaishi"] = "1",
-		["Tishi"] = false,
-		["Jieshu"] = "2",
-		["Qiangli"] = false,
+	["ShowPlus"] = {
+		["ItemSell"] = "OFF",
+		["ItemLevel"] = "OFF",
+		["SpellID"] = "OFF",
 	},
 	["RaidFrame"] = {
 		["xiufu"] = "OFF",
@@ -1005,7 +1005,6 @@ PIG = {
 		},
 		["Open"] = "OFF",
 		["SortBagsRightToLeft"] = false,
-		["SortBag_Config"] = true,
 		["hulueBANK"] = {
 			false, -- [1]
 			false, -- [2]
@@ -1016,6 +1015,7 @@ PIG = {
 			false, -- [7]
 			false, -- [8]
 		},
+		["SortBag_Config"] = true,
 		["JianjieMOD"] = false,
 		["qitajinbi"] = true,
 		["BAGmeihangshu_retail"] = 10,
@@ -1050,82 +1050,33 @@ PIG = {
 		["ErrorTishi"] = false,
 		["ErrorInfo"] = {
 			{
-				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1683390728, -- [2]
-				"", -- [3]
-				"null", -- [4]
-				1, -- [5]
-			}, -- [1]
-			{
-				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1683390728, -- [2]
-				"", -- [3]
-				"null", -- [4]
-				1, -- [5]
-			}, -- [2]
-			{
-				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1683461682, -- [2]
-				"", -- [3]
-				"null", -- [4]
-				1, -- [5]
-			}, -- [3]
-			{
-				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1683461682, -- [2]
-				"", -- [3]
-				"null", -- [4]
-				1, -- [5]
-			}, -- [4]
-			{
-				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
-				1683462535, -- [2]
-				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
-				"null", -- [4]
-				382, -- [5]
-			}, -- [5]
-			{
-				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1683462694, -- [2]
-				"", -- [3]
-				"null", -- [4]
-				1, -- [5]
-			}, -- [6]
-			{
-				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1683462694, -- [2]
-				"", -- [3]
-				"null", -- [4]
-				1, -- [5]
-			}, -- [7]
-			{
-				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1683464094, -- [2]
-				"", -- [3]
-				"null", -- [4]
-				1, -- [5]
-			}, -- [8]
-			{
-				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1683464094, -- [2]
-				"", -- [3]
-				"null", -- [4]
-				1, -- [5]
-			}, -- [9]
-			{
 				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
 				1683470668, -- [2]
 				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
 				"null", -- [4]
 				2336, -- [5]
-			}, -- [10]
+			}, -- [1]
 			{
 				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
 				1683476374, -- [2]
 				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
 				"null", -- [4]
 				356, -- [5]
-			}, -- [11]
+			}, -- [2]
+			{
+				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
+				1683553398, -- [2]
+				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
+				"null", -- [4]
+				12, -- [5]
+			}, -- [3]
+			{
+				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
+				1683565909, -- [2]
+				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
+				"null", -- [4]
+				1258, -- [5]
+			}, -- [4]
 		},
 	},
 	["FastDiuqi"] = {

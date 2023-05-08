@@ -1,11 +1,25 @@
+VER 3 0000000001000008 "冲锋拦截" "134400"
+#showtooltip [nocombat]冲锋;[combat]拦截
+/dismount [mounted]
+/cast [nocombat,nostance:1] 战斗姿态;[combat,nostance:3] 狂暴姿态;
+/cast [nocombat,stance:1]冲锋;[combat,stance:3] 拦截;
+/startattack
+END
 VER 3 0000000001000003 "复仇" "134400"
 #showtooltip 复仇
 /startattack
 /cast 复仇
 END
+VER 3 0000000001000009 "爆发" "134400"
+#showtooltip 血性狂怒
+/use 13
+/use 14
+/cast 血性狂怒
+END
 VER 3 0000000001000005 "盾击" "134400"
 #showtooltip 盾击
 /startattack
+/cast [nostance:2] 防御姿态;
 /cast 盾击
 END
 VER 3 0000000001000004 "盾牌格挡" "134400"

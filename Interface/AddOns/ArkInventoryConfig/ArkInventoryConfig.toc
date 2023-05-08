@@ -1,11 +1,11 @@
-## Interface: 100005
+## Interface: 100100
 
 ## Title: ArkInventory [Configuration]
+## Notes: Configuration options for ArkInventory
 ## Author: Arkayenro - Khaz'goroth
 ## Email: arkayenro at gmail dot com
-## Version: 31015
-
-## Notes: Configuration options for ArkInventory
+## Version: 31016
+## X-ReleaseType: 
 
 ## DefaultState: Enabled
 ## LoadOnDemand: 1

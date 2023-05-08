@@ -5,8 +5,12 @@ AddOnSkinsDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
+			["WIM"] = false,
 		},
 	},
 }
 AddOnSkinsDS = {
+	[4.64] = {
+		["WIM"] = true,
+	},
 }
