@@ -5,8 +5,8 @@ PIG = {
 		["AutoRepair"] = "OFF",
 		["Openlist"] = {
 		},
-		["AutoRepair_GUILD"] = "OFF",
 		["SellPlus"] = "OFF",
+		["AutoRepair_GUILD"] = "OFF",
 		["diuqitishi"] = "OFF",
 		["Kaiqi"] = "ON",
 		["AutoSell_Open"] = "OFF",
@@ -107,24 +107,24 @@ PIG = {
 		["ErrorInfo"] = {
 			{
 				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
-				1683470668, -- [2]
+				1683565909, -- [2]
 				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
 				"null", -- [4]
-				2336, -- [5]
+				1258, -- [5]
 			}, -- [1]
 			{
 				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
-				1683476374, -- [2]
-				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
+				1683644767, -- [2]
+				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:450: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
 				"null", -- [4]
-				356, -- [5]
+				15130, -- [5]
 			}, -- [2]
 			{
 				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
-				1683553398, -- [2]
-				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
+				1683649490, -- [2]
+				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:457: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
 				"null", -- [4]
-				12, -- [5]
+				17588, -- [5]
 			}, -- [3]
 		},
 	},
@@ -506,7 +506,7 @@ PIG = {
 					}, -- [3]
 				},
 			},
-			["kaituanName"] = "[Pig]开团助手测试喊话....",
+			["YYhao"] = 113213,
 			["dangqianrenshu"] = {
 				{
 					0, -- [1]
@@ -553,7 +553,8 @@ PIG = {
 			},
 			["PlayersInfo"] = {
 			},
-			["shijianjiange"] = 300,
+			["hanhuapindao"] = {
+			},
 			["dangqianpeizhi"] = 0,
 			["BL"] = {
 				["10人配置"] = {
@@ -690,46 +691,13 @@ PIG = {
 			["linshiInfo"] = {
 			},
 			["jinzuZhiling"] = "888",
-			["hanhuapindao"] = {
-			},
-			["YYhao"] = 113213,
+			["shijianjiange"] = 300,
+			["kaituanName"] = "[Pig]开团助手测试喊话....",
 		},
 		["ItemList_Paichu"] = {
 		},
 		["pinzhimoren"] = 3,
 		["AddBut"] = "ON",
-		["jiangli"] = {
-			{
-				"治疗第一", -- [1]
-				150, -- [2]
-				"无", -- [3]
-			}, -- [1]
-			{
-				"治疗第二", -- [1]
-				100, -- [2]
-				"无", -- [3]
-			}, -- [2]
-			{
-				"治疗第三", -- [1]
-				80, -- [2]
-				"无", -- [3]
-			}, -- [3]
-			{
-				"DPS第一", -- [1]
-				150, -- [2]
-				"无", -- [3]
-			}, -- [4]
-			{
-				"DPS第二", -- [1]
-				100, -- [2]
-				"无", -- [3]
-			}, -- [5]
-			{
-				"DPS第三", -- [1]
-				80, -- [2]
-				"无", -- [3]
-			}, -- [6]
-		},
 		["fakuan"] = {
 			{
 				"包地板", -- [1]
@@ -780,7 +748,39 @@ PIG = {
 				"无", -- [4]
 			}, -- [8]
 		},
-		["History"] = {
+		["jiangli"] = {
+			{
+				"治疗第一", -- [1]
+				150, -- [2]
+				"无", -- [3]
+			}, -- [1]
+			{
+				"治疗第二", -- [1]
+				100, -- [2]
+				"无", -- [3]
+			}, -- [2]
+			{
+				"治疗第三", -- [1]
+				80, -- [2]
+				"无", -- [3]
+			}, -- [3]
+			{
+				"DPS第一", -- [1]
+				150, -- [2]
+				"无", -- [3]
+			}, -- [4]
+			{
+				"DPS第二", -- [1]
+				100, -- [2]
+				"无", -- [3]
+			}, -- [5]
+			{
+				"DPS第三", -- [1]
+				80, -- [2]
+				"无", -- [3]
+			}, -- [6]
+		},
+		["ItemList"] = {
 		},
 		["Raidinfo"] = {
 			{
@@ -827,7 +827,7 @@ PIG = {
 			["zhiliao"] = {
 			},
 		},
-		["ItemList"] = {
+		["History"] = {
 		},
 	},
 	["CVars"] = {
@@ -839,10 +839,10 @@ PIG = {
 		["SpellID"] = "OFF",
 	},
 	["AHPlus"] = {
+		["DaojiTime"] = 0,
+		["Time"] = 48,
 		["Data"] = {
 		},
-		["Time"] = 48,
-		["DaojiTime"] = 0,
 		["Tokens"] = {
 			{
 				1683298338, -- [1]
@@ -864,11 +864,15 @@ PIG = {
 				1683475872, -- [1]
 				149600000, -- [2]
 			}, -- [5]
+			{
+				1683645122, -- [1]
+				168580000, -- [2]
+			}, -- [6]
 		},
 		["Coll"] = {
 		},
-		["AHtooltip"] = true,
 		["Open"] = false,
+		["AHtooltip"] = true,
 	},
 	["QuickFollow"] = {
 		["Jiuwei"] = false,
@@ -1004,10 +1008,6 @@ PIG = {
 		["Open"] = "OFF",
 		["SortBagsRightToLeft"] = false,
 		["BAGsuofangBili"] = 1,
-		["SortBag_Config"] = true,
-		["JianjieMOD"] = false,
-		["qitajinbi"] = true,
-		["BAGmeihangshu_retail"] = 10,
 		["hulueBANK"] = {
 			false, -- [1]
 			false, -- [2]
@@ -1018,6 +1018,10 @@ PIG = {
 			false, -- [7]
 			false, -- [8]
 		},
+		["JianjieMOD"] = false,
+		["qitajinbi"] = true,
+		["BAGmeihangshu_retail"] = 10,
+		["SortBag_Config"] = true,
 	},
 	["AKF"] = {
 		["Open"] = false,

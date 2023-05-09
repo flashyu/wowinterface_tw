@@ -6,14 +6,14 @@ PIG = {
 		["Openlist"] = {
 		},
 		["AddBut"] = "ON",
-		["AutoRepair_GUILD"] = "OFF",
+		["SellPlus"] = "OFF",
 		["diuqitishi"] = "OFF",
 		["Kaiqi"] = "ON",
 		["zidongKaiqi"] = "OFF",
 		["AutoSell_Open"] = "OFF",
 		["AutoSell_List"] = {
 		},
-		["SellPlus"] = "OFF",
+		["AutoRepair_GUILD"] = "OFF",
 	},
 	["daiben"] = {
 		["Point"] = {
@@ -286,12 +286,12 @@ PIG = {
 				},
 			},
 			["wutiaojianjINV"] = "OFF",
-			["YYhao"] = 113213,
 			["kaituanName"] = "[Pig]开团助手测试喊话....",
+			["YYhao"] = 113213,
+			["shijianjiange"] = 300,
+			["jinzuZhiling"] = "888",
 			["hanhuapindao"] = {
 			},
-			["jinzuZhiling"] = "888",
-			["shijianjiange"] = 300,
 			["dangqianpeizhi"] = 0,
 			["LMBL"] = {
 				["10人配置"] = {
@@ -700,7 +700,7 @@ PIG = {
 		},
 		["pinzhimoren"] = 3,
 		["AddBut"] = "ON",
-		["ItemList"] = {
+		["History"] = {
 		},
 		["buzhu"] = {
 			["tanke"] = {
@@ -708,7 +708,7 @@ PIG = {
 			["zhiliao"] = {
 			},
 		},
-		["History"] = {
+		["ItemList"] = {
 		},
 		["Rsetting"] = {
 			["jiaoyijilu"] = "ON",
@@ -748,38 +748,6 @@ PIG = {
 			}, -- [8]
 		},
 		["instanceName"] = {
-		},
-		["jiangli"] = {
-			{
-				"治疗第一", -- [1]
-				150, -- [2]
-				"无", -- [3]
-			}, -- [1]
-			{
-				"治疗第二", -- [1]
-				100, -- [2]
-				"无", -- [3]
-			}, -- [2]
-			{
-				"治疗第三", -- [1]
-				80, -- [2]
-				"无", -- [3]
-			}, -- [3]
-			{
-				"DPS第一", -- [1]
-				150, -- [2]
-				"无", -- [3]
-			}, -- [4]
-			{
-				"DPS第二", -- [1]
-				100, -- [2]
-				"无", -- [3]
-			}, -- [5]
-			{
-				"DPS第三", -- [1]
-				80, -- [2]
-				"无", -- [3]
-			}, -- [6]
 		},
 		["fakuan"] = {
 			{
@@ -831,6 +799,38 @@ PIG = {
 				"无", -- [4]
 			}, -- [8]
 		},
+		["jiangli"] = {
+			{
+				"治疗第一", -- [1]
+				150, -- [2]
+				"无", -- [3]
+			}, -- [1]
+			{
+				"治疗第二", -- [1]
+				100, -- [2]
+				"无", -- [3]
+			}, -- [2]
+			{
+				"治疗第三", -- [1]
+				80, -- [2]
+				"无", -- [3]
+			}, -- [3]
+			{
+				"DPS第一", -- [1]
+				150, -- [2]
+				"无", -- [3]
+			}, -- [4]
+			{
+				"DPS第二", -- [1]
+				100, -- [2]
+				"无", -- [3]
+			}, -- [5]
+			{
+				"DPS第三", -- [1]
+				80, -- [2]
+				"无", -- [3]
+			}, -- [6]
+		},
 	},
 	["CVars"] = {
 		["cameraDistanceMaxZoomFactor"] = "OFF",
@@ -847,9 +847,9 @@ PIG = {
 		["Qiangli"] = false,
 	},
 	["AHPlus"] = {
-		["Open"] = false,
-		["Time"] = 48,
 		["AHtooltip"] = true,
+		["Time"] = 48,
+		["Open"] = false,
 		["Tokens"] = {
 			{
 				1683298338, -- [1]
@@ -871,12 +871,16 @@ PIG = {
 				1683475872, -- [1]
 				149600000, -- [2]
 			}, -- [5]
+			{
+				1683645122, -- [1]
+				168580000, -- [2]
+			}, -- [6]
 		},
 		["Coll"] = {
 		},
+		["DaojiTime"] = 0,
 		["Data"] = {
 		},
-		["DaojiTime"] = 0,
 	},
 	["SkillFBCD"] = {
 		["Open"] = "ON",
@@ -1005,6 +1009,7 @@ PIG = {
 		},
 		["Open"] = "OFF",
 		["SortBagsRightToLeft"] = false,
+		["SortBag_Config"] = true,
 		["hulueBANK"] = {
 			false, -- [1]
 			false, -- [2]
@@ -1015,7 +1020,6 @@ PIG = {
 			false, -- [7]
 			false, -- [8]
 		},
-		["SortBag_Config"] = true,
 		["JianjieMOD"] = false,
 		["qitajinbi"] = true,
 		["BAGmeihangshu_retail"] = 10,
@@ -1051,32 +1055,25 @@ PIG = {
 		["ErrorInfo"] = {
 			{
 				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
-				1683470668, -- [2]
-				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
-				"null", -- [4]
-				2336, -- [5]
-			}, -- [1]
-			{
-				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
-				1683476374, -- [2]
-				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
-				"null", -- [4]
-				356, -- [5]
-			}, -- [2]
-			{
-				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
-				1683553398, -- [2]
-				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
-				"null", -- [4]
-				12, -- [5]
-			}, -- [3]
-			{
-				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
 				1683565909, -- [2]
 				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
 				"null", -- [4]
 				1258, -- [5]
-			}, -- [4]
+			}, -- [1]
+			{
+				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
+				1683644767, -- [2]
+				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:450: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
+				"null", -- [4]
+				15130, -- [5]
+			}, -- [2]
+			{
+				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
+				1683649490, -- [2]
+				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:457: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
+				"null", -- [4]
+				17588, -- [5]
+			}, -- [3]
 		},
 	},
 	["FastDiuqi"] = {
