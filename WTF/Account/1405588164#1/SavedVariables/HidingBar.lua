@@ -1,6 +1,6 @@
 
 HidingBarDB = {
-	["tstmp"] = 1683652068,
+	["tstmp"] = 1683737773,
 	["profiles"] = {
 		{
 			["isDefault"] = true,
@@ -8,120 +8,123 @@ HidingBarDB = {
 				["addFromDataBroker"] = true,
 				["mbtnSettings"] = {
 					["LibDBIcon10_RXPGuides"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["LibDBIcon10_BisTooltipIcon"] = {
 						["tstmp"] = 1683553301,
 					},
 					["LibDBIcon10_AutoBar"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["LibDBIcon10_HealBot"] = {
-						["tstmp"] = 1683298036,
+						["tstmp"] = 1683731864,
 					},
 					["LibDBIcon10_DBM"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["LibDBIcon10_Attune_Broker"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
+					},
+					["LibDBIcon10_Decursive"] = {
+						["tstmp"] = 1683737773,
 					},
 					["LibDBIcon10_BugSack"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["LibDBIcon10_Myslot"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["WIM3MinimapButton"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683734935,
 					},
 					["LibDBIcon10_Details"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["LibDBIcon10_Leatrix_Plus"] = {
-						["tstmp"] = 1683652068,
-					},
-					["LibDBIcon10_Leatrix_Maps"] = {
-						["tstmp"] = 1683652068,
-					},
-					["LibDBIcon10_Atlas"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["LibDBIcon10_Plater"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
-					["LibDBIcon10_AtlasLoot"] = {
-						["tstmp"] = 1683652068,
+					["LibDBIcon10_Atlas"] = {
+						["tstmp"] = 1683737773,
+					},
+					["LibDBIcon10_WeakAuras"] = {
+						["tstmp"] = 1683737773,
+					},
+					["LibDBIcon10_Leatrix_Maps"] = {
+						["tstmp"] = 1683737773,
 					},
 					["LibDBIcon10_TradeSkillMaster"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["LibDBIcon10_HidingBar1"] = {
 						["tstmp"] = 0,
 					},
 					["LibDBIcon10_LoonBestInSlot"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
-					["LibDBIcon10_WeakAuras"] = {
-						["tstmp"] = 1683652068,
+					["LibDBIcon10_AtlasLoot"] = {
+						["tstmp"] = 1683737773,
 					},
 					["LibDBIcon10_TalentEmu"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["LibDBIcon10_DetailsStreamer"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["LibDBIcon10_Questie"] = {
-						["tstmp"] = 1683652069,
+						["tstmp"] = 1683737774,
 					},
 					["CodexBrowserIcon"] = {
 						["tstmp"] = 1683303583,
 					},
 					["LibDBIcon10_Hekili"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 				},
 				["btnSettings"] = {
 					["AutoBar"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["Atlas"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["TradeSkillMaster"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["HidingBar"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["DBM"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["Decursive"] = {
-						["tstmp"] = 1683464095,
+						["tstmp"] = 1683737773,
 					},
 					["WeakAuras"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["LFGBulletinBoard"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["AtlasLoot"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["TalentEmu"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["BisTooltipIcon"] = {
 						["tstmp"] = 1683553301,
 					},
 					["AutoCombatLogger"] = {
-						["tstmp"] = 1683652068,
+						["tstmp"] = 1683737773,
 					},
 					["HealBot"] = {
-						["tstmp"] = 1683298035,
+						["tstmp"] = 1683731855,
 					},
 				},
 				["grabMinimap"] = true,

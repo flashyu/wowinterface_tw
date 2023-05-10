@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 29,
+	["session"] = 41,
 	["errors"] = {
 		{
 			["message"] = "Interface/AddOns/GTFO/GTFO.lua:2079: attempt to index a nil value",
@@ -145,8 +145,8 @@ BugGrabberDB = {
 			["message"] = "[ADDON_ACTION_FORBIDDEN] 插件 'RXPGuides' 尝试调用保护功能 'TargetUnit()'。",
 			["time"] = "2023/05/07 20:27:19",
 			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>",
-			["session"] = 27,
-			["counter"] = 7,
+			["session"] = 41,
+			["counter"] = 10,
 		}, -- [19]
 	},
 }

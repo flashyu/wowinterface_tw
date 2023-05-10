@@ -4,7 +4,10 @@ END
 VER 3 0000000000000005 "gj" "132092"
 END
 VER 3 0000000000000002 "RXPTargeting" "Ability_eyeoftheowl"
-/targetexact 魔法上尉艾米·马林
+/targetexact 司法官亚麦
+/targetexact 工程师布尔克
+/targetexact 首席抄写员巴里加
+/targetexact 亡灵卫兵斯克尼德
 /cleartarget [dead]
 END
 VER 3 0000000000000004 "坐骑" "132112"

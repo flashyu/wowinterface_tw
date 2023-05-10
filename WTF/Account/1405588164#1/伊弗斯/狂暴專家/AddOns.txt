@@ -38,7 +38,7 @@ ClassicCodex-db-zhTW: disabled
 ClassicCodex-db-enUS: disabled
 ClassicCodex-db-esES: disabled
 ClassicCodex-db-koKR: disabled
-Decursive: disabled
+Decursive: enabled
 Details: enabled
 Details_Compare2: enabled
 Details_EncounterDetails: enabled
@@ -141,3 +141,5 @@ ElvUI_BuffHighlight: disabled
 WunderUI: disabled
 kExtraBossFrames: disabled
 WeakAurasCompanion: enabled
+Hekili: enabled
+RXPGuides: enabled
