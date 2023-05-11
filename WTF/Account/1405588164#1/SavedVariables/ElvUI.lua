@@ -24,6 +24,9 @@ ElvDB = {
 					["orientation"] = "VERTICAL",
 				},
 			},
+			["general"] = {
+				["autoRepair"] = "PLAYER",
+			},
 			["bags"] = {
 				["vendorGrays"] = {
 					["enable"] = true,
@@ -46,13 +49,13 @@ ElvDB = {
 				["ShiftAB"] = "BOTTOM,UIParent,BOTTOM,-254,363",
 				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,332,311",
 				["ElvAB_6"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-4,360",
-				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,335,349",
-				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-339,415",
-				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,456,4",
-				["ElvUF_PartyMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,308",
-				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-179",
-				["ElvUF_Raid2Mover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,485",
 				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,338,415",
+				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-339,415",
+				["ElvUF_Raid2Mover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,485",
+				["ElvUF_PartyMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,308",
+				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,456,4",
+				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-179",
+				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,335,349",
 			},
 			["unitframe"] = {
 				["units"] = {
@@ -73,8 +76,8 @@ ElvDB = {
 			["actionbar"] = {
 				["bar3"] = {
 					["buttonsPerRow"] = 12,
-					["buttonSize"] = 40,
 					["buttons"] = 12,
+					["buttonSize"] = 40,
 				},
 				["bar1"] = {
 					["buttonSize"] = 40,
@@ -106,15 +109,11 @@ ElvDB = {
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["狂暴專家"] = 1094996063,
+			["狂暴專家"] = 97516938,
 		},
 	},
-	["global"] = {
-		["general"] = {
-			["AceGUI"] = {
-				["height"] = 700,
-				["width"] = 1250,
-			},
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
 		},
 	},
 	["faction"] = {
@@ -122,8 +121,12 @@ ElvDB = {
 			["狂暴專家"] = "Horde",
 		},
 	},
-	["namespaces"] = {
-		["LibDualSpec-1.0"] = {
+	["global"] = {
+		["general"] = {
+			["AceGUI"] = {
+				["height"] = 668.33,
+				["width"] = 1046.11,
+			},
 		},
 	},
 }

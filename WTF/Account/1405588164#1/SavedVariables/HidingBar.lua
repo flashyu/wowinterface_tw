@@ -1,6 +1,6 @@
 
 HidingBarDB = {
-	["tstmp"] = 1683737773,
+	["tstmp"] = 1683815484,
 	["profiles"] = {
 		{
 			["isDefault"] = true,
@@ -8,120 +8,123 @@ HidingBarDB = {
 				["addFromDataBroker"] = true,
 				["mbtnSettings"] = {
 					["LibDBIcon10_RXPGuides"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["LibDBIcon10_BisTooltipIcon"] = {
 						["tstmp"] = 1683553301,
 					},
 					["LibDBIcon10_AutoBar"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["LibDBIcon10_HealBot"] = {
 						["tstmp"] = 1683731864,
 					},
 					["LibDBIcon10_DBM"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["LibDBIcon10_Attune_Broker"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
-					["LibDBIcon10_Decursive"] = {
-						["tstmp"] = 1683737773,
+					["LibDBIcon10_AutoCombatLogger"] = {
+						["tstmp"] = 1683815484,
+					},
+					["LibDBIcon10_Hekili"] = {
+						["tstmp"] = 1683815484,
 					},
 					["LibDBIcon10_BugSack"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["LibDBIcon10_Myslot"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["WIM3MinimapButton"] = {
-						["tstmp"] = 1683734935,
+						["tstmp"] = 1683815484,
 					},
 					["LibDBIcon10_Details"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
-					["LibDBIcon10_Leatrix_Plus"] = {
-						["tstmp"] = 1683737773,
+					["CodexBrowserIcon"] = {
+						["tstmp"] = 1683303583,
 					},
-					["LibDBIcon10_Plater"] = {
-						["tstmp"] = 1683737773,
+					["LibDBIcon10_Questie"] = {
+						["tstmp"] = 1683815485,
 					},
 					["LibDBIcon10_Atlas"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
-					["LibDBIcon10_WeakAuras"] = {
-						["tstmp"] = 1683737773,
+					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
+						["tstmp"] = 1683815484,
 					},
 					["LibDBIcon10_Leatrix_Maps"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["LibDBIcon10_TradeSkillMaster"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["LibDBIcon10_HidingBar1"] = {
 						["tstmp"] = 0,
 					},
 					["LibDBIcon10_LoonBestInSlot"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["LibDBIcon10_AtlasLoot"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["LibDBIcon10_TalentEmu"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["LibDBIcon10_DetailsStreamer"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
-					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
-						["tstmp"] = 1683737773,
+					["LibDBIcon10_WeakAuras"] = {
+						["tstmp"] = 1683815484,
 					},
-					["LibDBIcon10_Questie"] = {
-						["tstmp"] = 1683737774,
+					["LibDBIcon10_Plater"] = {
+						["tstmp"] = 1683815484,
 					},
-					["CodexBrowserIcon"] = {
-						["tstmp"] = 1683303583,
+					["LibDBIcon10_Leatrix_Plus"] = {
+						["tstmp"] = 1683815484,
 					},
-					["LibDBIcon10_Hekili"] = {
-						["tstmp"] = 1683737773,
+					["LibDBIcon10_Decursive"] = {
+						["tstmp"] = 1683815484,
 					},
 				},
 				["btnSettings"] = {
 					["AutoBar"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["Atlas"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["TradeSkillMaster"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["HidingBar"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["DBM"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["Decursive"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
-					["WeakAuras"] = {
-						["tstmp"] = 1683737773,
+					["AutoCombatLogger"] = {
+						["tstmp"] = 1683815484,
 					},
 					["LFGBulletinBoard"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["AtlasLoot"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["TalentEmu"] = {
-						["tstmp"] = 1683737773,
+						["tstmp"] = 1683815484,
 					},
 					["BisTooltipIcon"] = {
 						["tstmp"] = 1683553301,
 					},
-					["AutoCombatLogger"] = {
-						["tstmp"] = 1683737773,
+					["WeakAuras"] = {
+						["tstmp"] = 1683815484,
 					},
 					["HealBot"] = {
 						["tstmp"] = 1683731855,
@@ -129,10 +132,10 @@ HidingBarDB = {
 				},
 				["grabMinimap"] = true,
 				["grabMinimapAfterN"] = 1,
-				["customGrabList"] = {
-				},
 				["ombGrabQueue"] = {
 					1, -- [1]
+				},
+				["customGrabList"] = {
 				},
 				["ignoreMBtn"] = {
 				},
@@ -186,29 +189,29 @@ HidingBarDB = {
 						["gapSize"] = 0,
 						["interceptTooltip"] = false,
 						["buttonDirection"] = {
-							["V"] = 0,
 							["H"] = 0,
+							["V"] = 0,
 						},
 						["borderOffset"] = 4,
 						["omb"] = {
 							["minimapPos"] = 215.2108018333512,
-							["size"] = 31,
+							["hide"] = false,
 							["distanceToBar"] = 0,
 							["lock"] = true,
 							["anchor"] = "right",
 							["barDisplacement"] = 0,
 							["canGrabbed"] = true,
-							["hide"] = false,
+							["size"] = 31,
 						},
 						["buttonSize"] = 31,
 						["frameStrata"] = 2,
 						["lineBorderSize"] = 2,
-						["barOffset"] = 2,
+						["lock"] = true,
 						["fadeOpacity"] = 0.2,
 						["orientation"] = 0,
-						["hideHandler"] = 2,
 						["borderSize"] = 16,
-						["lock"] = true,
+						["hideHandler"] = 2,
+						["barOffset"] = 2,
 					},
 					["name"] = "框架 1",
 				}, -- [1]
