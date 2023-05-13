@@ -24,6 +24,9 @@ ElvDB = {
 					["orientation"] = "VERTICAL",
 				},
 			},
+			["general"] = {
+				["autoRepair"] = "PLAYER",
+			},
 			["bags"] = {
 				["vendorGrays"] = {
 					["enable"] = true,
@@ -106,14 +109,28 @@ ElvDB = {
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["狂暴專家"] = 1094996063,
+			["狂暴專家"] = 98473665,
 		},
 	},
 	["global"] = {
 		["general"] = {
 			["AceGUI"] = {
-				["height"] = 700,
-				["width"] = 1250,
+				["height"] = 668.33,
+				["width"] = 1046.11,
+			},
+		},
+		["datatexts"] = {
+			["settings"] = {
+				["Currencies"] = {
+					["tooltipData"] = {
+						{
+							nil, -- [1]
+							nil, -- [2]
+							nil, -- [3]
+							true, -- [4]
+						}, -- [1]
+					},
+				},
 			},
 		},
 	},

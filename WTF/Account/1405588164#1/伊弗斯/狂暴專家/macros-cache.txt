@@ -1,3 +1,9 @@
+VER 3 000000000100000A "VuhDoDCShieldData" "Ability_Repair"
+R1PM1SR1IR2PM[x]2MR2EM2EM3MR3PM4PM4RM4WT4PM5RM5EM5RM5RM5RM6LR6RM6MR6RM6IR7RM7RM7LR7RM8RM8RM8RM8RM8MR[x][x][x][x][x][x][x]2WM[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]0__[x][x][x][x][x][x]0__[x][x][x][x][x][x][x][x][x][x][x][x][x][x]
+END
+VER 3 000000000100000B "VuhDoDCShieldNames" "Ability_Repair"
+N方小园熬夜白迷糊女柠檬养[x]蝦仁拉蝦仁拉臉叔晚冰禾丶仲夏亲爱的Dsa阿利斯有一点繁荣小Dgj他如果等过年Xua殺生丸王憐花麻子Tqw小小呆那我走Jiw学欣艺为什么練度嘻哈二澄澄阿苏伟苏欲火焚[x][x][x][x][x][x][x]狂暴專[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]祖瑞尔[x][x][x][x][x][x]佐尔提[x][x][x][x][x][x][x][x][x][x][x][x][x][x]
+END
 VER 3 0000000001000008 "冲锋拦截" "134400"
 #showtooltip [nocombat]冲锋;[combat]拦截
 /dismount [mounted]

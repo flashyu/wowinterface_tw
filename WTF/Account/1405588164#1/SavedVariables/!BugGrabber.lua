@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 43,
+	["session"] = 51,
 	["errors"] = {
 		{
 			["message"] = "Interface/AddOns/GTFO/GTFO.lua:2079: attempt to index a nil value",
@@ -165,19 +165,19 @@ BugGrabberDB = {
 			["counter"] = 2,
 		}, -- [21]
 		{
-			["message"] = "[ADDON_ACTION_FORBIDDEN] 插件 'RXPGuides' 尝试调用保护功能 'TargetUnit()'。",
-			["time"] = "2023/05/07 20:27:19",
-			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>",
-			["session"] = 43,
-			["counter"] = 12,
-		}, -- [22]
-		{
 			["message"] = "Invalid quest item in SetQuestLogItem(\"type\", index [, questID])",
 			["time"] = "2023/05/12 00:18:54",
 			["locals"] = "(*temporary) = GameTooltip {\n 0 = <userdata>\n SetScript = <function> defined =[C]:-1\n SetText = <function> defined =[C]:-1\n GetBackdropColor = <function> defined @Interface/SharedXML/SharedTooltipTemplates.lua:191\n SetHyperlink = <function> defined =[C]:-1\n SetTradeSkillItem = <function> defined =[C]:-1\n _owner = QuestieFrame133 {\n }\n SetVoidDepositItem = <function> defined =[C]:-1\n SetVoidWithdrawalItem = <function> defined =[C]:-1\n questOrder = <table> {\n }\n SetSocketGem = <function> defined =[C]:-1\n ARKTTD = <table> {\n }\n SetLootCurrency = <function> defined =[C]:-1\n SetLootItem = <function> defined =[C]:-1\n FadeOut = <function> defined =[C]:-1\n numMoneyFrames = 2\n SetRecipeReagentItem = <function> defined =[C]:-1\n SetBuybackItem = <function> defined =[C]:-1\n SetMerchantItem = <function> defined =[C]:-1\n SetMerchantCostItem = <function> defined =[C]:-1\n BottomOverlay = Texture {\n }\n SetSpellByID = <function> defined =[C]:-1\n NineSlice = Frame {\n }\n SetInventoryItem = <function> defined =[C]:-1\n SetLootRollItem = <function> defined =[C]:-1\n SetAuctionSellItem = <function> defined =[C]:-1\n SetBagItem = <function> defined =[C]:-1\n SetAction = <function> defined =[C]:-1\n SetBackdropColor = <function> defined @Interface/SharedXML/SharedTooltipTemplates.lua:187\n SetAuctionItem = <function> defined =[C]:-1\n SetSpellBookItem = <function> defined =[C]:-1\n SetCurrencyToken = <function> defined =[C]:-1\n SetGuildBankItem = <function> defined =[C]:-1\n hasMoney = 1\n SetBackdropBorderColor = <function> defined @Interface/SharedXML/SharedTooltipTemplates.lua:195\n Hide = <function> defined =[C]:-1\n SetCraftItem = <function> defined =[C]:-1\n ClearLines = <function> defined =[C]:-1\n TopOverlay = Texture {\n }\n GetBackdropBorderColor = <function> defined @Interface/SharedXML/SharedTooltipTemplates.lua:199\n npcOrder = <table> {\n }\n SetUnitDebuff = <function> defined =[C]:-1\n SetItemByID = <function> defined =[C]:-1\n SetQuestItem = <function> defined =[C]:-1\n SetBorderBlendMode = <function> defined @Interface/SharedXML/SharedTooltipTemplates.lua:203\n SetTrainerService = <function> defined =[C]:-1\n miniMapIcon = false\n SetInboxItem = <function> defined =[C]:-1\n layoutType = \"TooltipDefaultLayout\"\n shoppingTooltips = <table> {\n }\n manualOrder = <table> {\n }\n SetQuestLogItem = <function> defined =[C]:-1\n SetBackpackToken = <function> defined =[C]:-1\n SetTradeTargetItem = <function> defined =[C]:-1\n SetTradePlayerItem = <function> defined =[C]:-1\n comparing = false\n SetSendMailItem = <function> defined =[C]:-1\n SetCurrencyTokenByID = <function> defined =[C]:-1\n SetExistingSocketGem = <function> defined =[C]:-1\n SetQuestCurrency = <function> defined =[C]:-1\n TooltipBackdropOnLoad = <function> defined @Interface/SharedXML/SharedTooltipTemplates.lua:172\n SetQuestLogSpecialItem = <function> defined =[C]:-1\n SetUnitAura = <function> defined =[C]:-1\n SetVoidItem = <function> defined =[C]:-1\n StatusBar = GameTooltipStatusBar {\n }\n SetCraftSpell = <function> defined =[C]:-1\n needsReset = false\n SetUnitBuff = <function> defined =[C]:-1\n updateTooltip = 0.200000\n SetQuestLogCurrency = <function> defined =[C]:-1\n SetRecipeResultItem = <function> defined =[C]:-1\n}\n(*temporary) = \"choice\"\n(*temporary) = 1\n",
 			["stack"] = "[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/TradeSkillMaster/LibTSM/Service/ItemTooltipClasses/Wrapper.lua\"]:106: in function <...Master/LibTSM/Service/ItemTooltipClasses/Wrapper.lua:104>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `SetQuestLogItem'\n[string \"@Interface_Wrath/FrameXML/QuestInfo.lua\"]:1017: in function `UpdateTooltip'\n[string \"@Interface/FrameXML/GameTooltip.lua\"]:444: in function <Interface/FrameXML/GameTooltip.lua:423>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?",
 			["session"] = 43,
 			["counter"] = 28,
+		}, -- [22]
+		{
+			["message"] = "[ADDON_ACTION_FORBIDDEN] 插件 'RXPGuides' 尝试调用保护功能 'TargetUnit()'。",
+			["time"] = "2023/05/07 20:27:19",
+			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>",
+			["session"] = 51,
+			["counter"] = 14,
 		}, -- [23]
 	},
 }

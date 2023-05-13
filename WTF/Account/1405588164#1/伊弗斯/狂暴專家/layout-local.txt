@@ -1,4 +1,11 @@
 Version: 1
+Frame: HekiliDisplayInterrupts
+FrameLevel: 10
+Anchor: CENTER
+X: -462
+Y: 119
+W: 52
+H: 52
 Frame: RXPG_ARROW
 FrameLevel: 1
 Anchor: CENTER
@@ -9,15 +16,15 @@ H: 32
 Frame: QuickButtonUI
 FrameLevel: 1
 Anchor: BOTTOMRIGHT
-X: -237
-Y: 351
+X: -195
+Y: 348
 W: 372
 H: 36
 Frame: RXPFrame
 FrameLevel: 1
 Anchor: LEFT
-X: 0
-Y: -58
+X: 2
+Y: 20
 W: 400
 H: 320
 Frame: ColorPickerFrame
@@ -40,4 +47,4 @@ Anchor: RIGHT
 X: -367
 Y: -167
 W: 87
-H: 68
+H: 40

@@ -15,7 +15,17 @@ BatteInfoSettings = {
 }
 BatteInfoStat = {
 	{
+		[19489] = {
+			["win"] = 1,
+			["total"] = 5,
+		},
+		["win"] = 4,
 		["start"] = 1683297955,
+		[19490] = {
+			["win"] = 3,
+			["total"] = 4,
+		},
+		["total"] = 9,
 	}, -- [1]
 	{
 		["start"] = 1683297955,

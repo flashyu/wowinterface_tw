@@ -111,46 +111,25 @@ PIG = {
 		["ErrorInfo"] = {
 			{
 				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
-				1683730203, -- [2]
-				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:457: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
-				"null", -- [4]
-				6053, -- [5]
-			}, -- [1]
-			{
-				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
-				1683734799, -- [2]
-				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
-				"null", -- [4]
-				13417, -- [5]
-			}, -- [2]
-			{
-				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
-				1683737742, -- [2]
-				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:450: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
-				"null", -- [4]
-				9893, -- [5]
-			}, -- [3]
-			{
-				"[ADDON_ACTION_BLOCKED] 插件< ElvUI >尝试调用保护功能< UNKNOWN() >", -- [1]
-				1683737774, -- [2]
-				"[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `SetCVar'\n[string \"@Interface/SharedXML/ClassicCvarUtil.lua\"]:7: in function <Interface/SharedXML/ClassicCvarUtil.lua:3>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `SetCVar'\n[string \"@Interface/FrameXML/InterfaceOptionsFrame.lua\"]:361: in function `InterfaceOptionsFrame_LoadUVars'\n[string \"@Interface/FrameXML/InterfaceOptionsFrame.lua\"]:385: in function <Interface/FrameXML/InterfaceOptionsFrame.lua:383>\n", -- [3]
-				"null", -- [4]
-				1, -- [5]
-			}, -- [4]
-			{
-				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
-				1683741219, -- [2]
-				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:457: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
-				"null", -- [4]
-				16038, -- [5]
-			}, -- [5]
-			{
-				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
 				1683822606, -- [2]
 				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:457: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
 				"null", -- [4]
 				18360, -- [5]
-			}, -- [6]
+			}, -- [1]
+			{
+				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
+				1683907665, -- [2]
+				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:457: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
+				"null", -- [4]
+				10005, -- [5]
+			}, -- [2]
+			{
+				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
+				1683915420, -- [2]
+				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:450: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
+				"null", -- [4]
+				14063, -- [5]
+			}, -- [3]
 		},
 	},
 	["Map"] = {
@@ -309,51 +288,6 @@ PIG = {
 				},
 			},
 			["wutiaojianjINV"] = "OFF",
-			["dangqianrenshu"] = {
-				{
-					0, -- [1]
-					0, -- [2]
-					0, -- [3]
-					0, -- [4]
-					0, -- [5]
-					0, -- [6]
-					0, -- [7]
-					0, -- [8]
-					0, -- [9]
-					0, -- [10]
-					0, -- [11]
-					0, -- [12]
-				}, -- [1]
-				{
-					0, -- [1]
-					0, -- [2]
-					0, -- [3]
-					0, -- [4]
-					0, -- [5]
-					0, -- [6]
-					0, -- [7]
-					0, -- [8]
-					0, -- [9]
-					0, -- [10]
-					0, -- [11]
-					0, -- [12]
-				}, -- [2]
-				{
-					0, -- [1]
-					0, -- [2]
-					0, -- [3]
-					0, -- [4]
-					0, -- [5]
-					0, -- [6]
-					0, -- [7]
-					0, -- [8]
-					0, -- [9]
-					0, -- [10]
-					0, -- [11]
-					0, -- [12]
-				}, -- [3]
-			},
-			["kaituanName"] = "[Pig]开团助手测试喊话....",
 			["BL"] = {
 				["10人配置"] = {
 					{
@@ -486,10 +420,7 @@ PIG = {
 					}, -- [3]
 				},
 			},
-			["linshiInfo"] = {
-			},
-			["shijianjiange"] = 300,
-			["dangqianpeizhi"] = 0,
+			["kaituanName"] = "[Pig]开团助手测试喊话....",
 			["LMBL"] = {
 				["10人配置"] = {
 					{
@@ -713,7 +644,55 @@ PIG = {
 				},
 			},
 			["jinzuZhiling"] = "888",
+			["shijianjiange"] = 300,
+			["dangqianpeizhi"] = 0,
+			["dangqianrenshu"] = {
+				{
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+				}, -- [1]
+				{
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+				}, -- [2]
+				{
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+				}, -- [3]
+			},
 			["PlayersInfo"] = {
+			},
+			["linshiInfo"] = {
 			},
 			["hanhuapindao"] = {
 			},
@@ -807,9 +786,6 @@ PIG = {
 		},
 		["History"] = {
 		},
-		["instanceName"] = {
-		},
-		["Kaiqi"] = "OFF",
 		["Rsetting"] = {
 			["jiaoyijilu"] = "ON",
 			["YYguanjianzi"] = {
@@ -828,6 +804,7 @@ PIG = {
 			["bobaomingxi"] = "ON",
 			["jiaoyidaojishi"] = "ON",
 		},
+		["Kaiqi"] = "OFF",
 		["Raidinfo"] = {
 			{
 			}, -- [1]
@@ -846,6 +823,8 @@ PIG = {
 			{
 			}, -- [8]
 		},
+		["instanceName"] = {
+		},
 		["buzhu"] = {
 			["tanke"] = {
 			},
@@ -858,42 +837,16 @@ PIG = {
 	["CVars"] = {
 		["cameraDistanceMaxZoomFactor"] = "OFF",
 	},
-	["SkillFBCD"] = {
-		["SkillCD"] = {
-			{
-				{
-					"狂暴專家", -- [1]
-					"伊弗斯", -- [2]
-					{
-						0.78, -- [1]
-						0.61, -- [2]
-						0.43, -- [3]
-					}, -- [3]
-					"juese", -- [4]
-				}, -- [1]
-				{
-				}, -- [2]
-			}, -- [1]
-		},
-		["FubenCD"] = {
-			{
-				{
-					"狂暴專家", -- [1]
-					"伊弗斯", -- [2]
-					{
-						0.78, -- [1]
-						0.61, -- [2]
-						0.43, -- [3]
-					}, -- [3]
-					"juese", -- [4]
-				}, -- [1]
-				{
-					["cunzaiYN"] = false,
-				}, -- [2]
-			}, -- [1]
-		},
-		["Open"] = "ON",
-		["AddBut"] = "ON",
+	["QuickFollow"] = {
+		["Jiuwei"] = false,
+		["QuickBut"] = true,
+		["Duizhang"] = true,
+		["Yijiao"] = false,
+		["Name"] = "猪猪加油",
+		["Qiangli"] = false,
+		["Tishi"] = false,
+		["Jieshu"] = "2",
+		["Kaishi"] = "1",
 	},
 	["AHPlus"] = {
 		["Data"] = {
@@ -941,16 +894,52 @@ PIG = {
 				1683737769, -- [1]
 				155720000, -- [2]
 			}, -- [10]
+			{
+				1683892003, -- [1]
+				153860000, -- [2]
+			}, -- [11]
 		},
 		["Coll"] = {
 		},
 		["AHtooltip"] = true,
 		["Open"] = false,
 	},
-	["ShowPlus"] = {
-		["ItemLevel"] = "OFF",
-		["ItemSell"] = "OFF",
-		["SpellID"] = "OFF",
+	["SkillFBCD"] = {
+		["Open"] = "ON",
+		["FubenCD"] = {
+			{
+				{
+					"狂暴專家", -- [1]
+					"伊弗斯", -- [2]
+					{
+						0.78, -- [1]
+						0.61, -- [2]
+						0.43, -- [3]
+					}, -- [3]
+					"juese", -- [4]
+				}, -- [1]
+				{
+					["cunzaiYN"] = false,
+				}, -- [2]
+			}, -- [1]
+		},
+		["AddBut"] = "ON",
+		["SkillCD"] = {
+			{
+				{
+					"狂暴專家", -- [1]
+					"伊弗斯", -- [2]
+					{
+						0.78, -- [1]
+						0.61, -- [2]
+						0.43, -- [3]
+					}, -- [3]
+					"juese", -- [4]
+				}, -- [1]
+				{
+				}, -- [2]
+			}, -- [1]
+		},
 	},
 	["QuickButton"] = {
 		["bili"] = 0.8,
@@ -966,16 +955,10 @@ PIG = {
 		["Open"] = true,
 		["suoding"] = false,
 	},
-	["QuickFollow"] = {
-		["Jiuwei"] = false,
-		["QuickBut"] = true,
-		["Duizhang"] = true,
-		["Yijiao"] = false,
-		["Name"] = "猪猪加油",
-		["Qiangli"] = false,
-		["Tishi"] = false,
-		["Jieshu"] = "2",
-		["Kaishi"] = "1",
+	["ShowPlus"] = {
+		["ItemLevel"] = "OFF",
+		["ItemSell"] = "OFF",
+		["SpellID"] = "OFF",
 	},
 	["RaidFrame"] = {
 		["xiufu"] = "OFF",

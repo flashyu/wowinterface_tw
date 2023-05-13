@@ -4,13 +4,14 @@ END
 VER 3 0000000000000005 "gj" "132092"
 END
 VER 3 0000000000000002 "RXPTargeting" "Ability_eyeoftheowl"
-/targetexact 司法官亚麦
-/targetexact 工程师布尔克
-/targetexact 首席抄写员巴里加
-/targetexact 亡灵卫兵斯克尼德
+/targetexact 小萨鲁法尔
 /cleartarget [dead]
 END
 VER 3 0000000000000004 "坐骑" "132112"
 /use 茶色驭风者
 /use 迅捷棕狼
+END
+VER 3 0000000000000006 "跟随" "134400"
+/target 臉叔
+/follow
 END

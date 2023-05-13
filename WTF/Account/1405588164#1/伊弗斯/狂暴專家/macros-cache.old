@@ -1,3 +1,9 @@
+VER 3 000000000100000A "VuhDoDCShieldData" "Ability_Repair"
+P1EM[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]1WM[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]
+END
+VER 3 000000000100000B "VuhDoDCShieldNames" "Ability_Repair"
+N臉叔[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]狂暴專[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]
+END
 VER 3 0000000001000008 "冲锋拦截" "134400"
 #showtooltip [nocombat]冲锋;[combat]拦截
 /dismount [mounted]
@@ -45,6 +51,6 @@ VER 3 0000000001000006 "震荡猛击" "134400"
 END
 VER 3 0000000001000007 "顺劈斩" "134400"
 #showtooltip 顺劈斩
-/cast 顺劈斩
+/cast !顺劈斩
 /startattack
 END

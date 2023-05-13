@@ -130,6 +130,14 @@ PIG_Per = {
 		},
 		["ShowSpellOpen"] = "OFF",
 		["Kaiqi"] = "OFF",
+		["AddBut"] = "ON",
+		["Open"] = {
+			"OFF", -- [1]
+			"OFF", -- [2]
+			"OFF", -- [3]
+			"OFF", -- [4]
+			"OFF", -- [5]
+		},
 		["Spell_list"] = {
 			{
 			}, -- [1]
@@ -141,14 +149,6 @@ PIG_Per = {
 			}, -- [4]
 			{
 			}, -- [5]
-		},
-		["AddBut"] = "ON",
-		["Open"] = {
-			"OFF", -- [1]
-			"OFF", -- [2]
-			"OFF", -- [3]
-			"OFF", -- [4]
-			"OFF", -- [5]
 		},
 	},
 	["CombatCycle"] = {
