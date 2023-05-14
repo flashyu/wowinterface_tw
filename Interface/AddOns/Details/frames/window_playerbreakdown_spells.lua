@@ -1,4 +1,6 @@
 
+--note: do maintenance on spelltable.ChartData
+
 local addonName, Details222 = ...
 local breakdownWindow = Details.BreakdownWindow
 local Loc = LibStub("AceLocale-3.0"):GetLocale ( "Details" )
@@ -32,8 +34,6 @@ local spellBlockContainerSettings = {
 	amount = 6, --amount of block the container have
 	lineAmount = 3, --amount of line each block have
 }
-
-local spellBreakdownSettings = {}
 
 local CONST_BAR_HEIGHT = 20
 local CONST_SPELLSCROLL_LINEHEIGHT = 20
@@ -190,7 +190,7 @@ local spellContainerColumnData = {
 	{name = "target", width = 22, label = "", align = "left", enabled = true, offset = columnOffset},
 	{name = "rank", label = "#", width = 16, align = "center", enabled = true, offset = 6, dataType = "number"},
 	{name = "expand", label = "^", width = 16, align = "left", enabled = true, offset = -4}, --maybe -3
-	{name = "name", label = "spell name", width = 246, align = "left", enabled = true, offset = columnOffset},
+	{name = "name", label = "spell name", width = 231, align = "left", enabled = true, offset = columnOffset},
 	{name = "amount", label = "total", key = "total", selected = true, width = 50, align = "left", enabled = true, canSort = true, sortKey = "total", dataType = "number", order = "DESC", offset = columnOffset},
 	{name = "persecond", label = "ps", key = "total", width = 50, align = "left", enabled = false, canSort = true, sortKey = "ps", offset = columnOffset, order = "DESC", dataType = "number"},
 	{name = "percent", label = "%", key = "total", width = 50, align = "left", enabled = true, canSort = true, offset = columnOffset, order = "DESC", dataType = "number"},
@@ -199,16 +199,16 @@ local spellContainerColumnData = {
 	{name = "hits", label = "hits", key = "counter", width = 40, align = "left", enabled = false, canSort = true, offset = columnOffset, order = "DESC", dataType = "number"},
 	{name = "castavg", label = "cast avg", key = "castavg", width = 50, align = "left", enabled = false, canSort = true, offset = columnOffset, order = "DESC", dataType = "number"},
 	{name = "uptime", label = "uptime", key = "uptime", width = 45, align = "left", enabled = false, canSort = true, offset = columnOffset, order = "DESC", dataType = "number"},
-	{name = "overheal", label = "overheal", key = "overheal", width = 55, align = "left", enabled = false, canSort = true, order = "DESC", dataType = "number", attribute = DETAILS_ATTRIBUTE_HEAL, offset = columnOffset},
+	{name = "overheal", label = "overheal", key = "overheal", width = 70, align = "left", enabled = true, canSort = true, order = "DESC", dataType = "number", attribute = DETAILS_ATTRIBUTE_HEAL, offset = columnOffset},
 	{name = "absorbed", label = "absorbed", key = "healabsorbed", width = 55, align = "left", enabled = false, canSort = true, order = "DESC", dataType = "number", attribute = DETAILS_ATTRIBUTE_HEAL, offset = columnOffset},
 }
 
 local targetContainerColumnData = {
 	{name = "icon", width = 22, label = "", align = "left", enabled = true, offset = columnOffset},
 	{name = "rank", label = "#", width = 20, align = "left", enabled = true, offset = columnOffset},
-	{name = "name", label = "name", width = 200, align = "left", enabled = true, offset = columnOffset},
+	{name = "name", label = "name", width = 185, align = "left", enabled = true, offset = columnOffset},
 	{name = "amount", label = "total", key = "total", selected = true, width = 50, align = "left", enabled = true, canSort = true, sortKey = "total", dataType = "number", order = "DESC", offset = columnOffset},
-	{name = "overheal", label = "overheal", key = "overheal", width = 50, align = "left", enabled = true, canSort = true, sortKey = "total", dataType = "number", order = "DESC", offset = columnOffset, attribute = DETAILS_ATTRIBUTE_HEAL},
+	{name = "overheal", label = "overheal", key = "overheal", width = 70, align = "left", enabled = true, canSort = true, sortKey = "total", dataType = "number", order = "DESC", offset = columnOffset, attribute = DETAILS_ATTRIBUTE_HEAL},
 	{name = "percent", label = "%", key = "total", width = 50, align = "left", enabled = true, canSort = true, offset = columnOffset, order = "DESC", dataType = "number"},
 }
 
@@ -297,6 +297,14 @@ local onColumnHeaderClickCallback = function(headerFrame, columnHeader)
 
 	local scrollFrame = spellsTab.GetScrollFrameByContainerType(containerType)
 	scrollFrame:Refresh()
+
+	local instance = spellsTab.GetInstance()
+	instance:RefreshWindow(true)
+end
+
+local onAnyColumnHeaderClickCallback = function()
+	local instance = spellsTab.GetInstance()
+	instance:RefreshWindow(true)
 end
 
 ---copy settings from the ColumnInfo table which doesn't exists in the details profile
@@ -524,8 +532,6 @@ end
 ---@param tabButton button
 ---@param tabFrame breakdownspellstab
 function spellsTab.OnCreateTabCallback(tabButton, tabFrame) --~init
-	spellBreakdownSettings = Details.breakdown_spell_tab
-
 	spellsTab.TabFrame = tabFrame
 
 	--initialize the allowed headers for generic data container
@@ -631,10 +637,11 @@ local onEnterSpellBar = function(spellBar, motion) --parei aqui: precisa por nom
 			GameCooltip:AddLine(Loc ["ABILITY_ID"] .. ": " .. spellBar.spellId)
 			GameCooltip:Show()
 
-			local t = combatObject:GetActor(1, actorName).spells._ActorTable[spellId]
+			---@type spelltable
+			local thisSpellTable = combatObject:GetActor(mainAttribute, actorName).spells._ActorTable[spellId]
 
 			local textToEditor = ""
-			for key, value in pairs(t) do
+			for key, value in pairs(thisSpellTable) do
 				if (type(value) ~= "function" and type(value) ~= "table") then
 					textToEditor = textToEditor .. key .. " = " .. tostring(value) .. "\n"
 				end
@@ -716,7 +723,7 @@ local onEnterSpellBar = function(spellBar, motion) --parei aqui: precisa por nom
 
 			local percent = normalHitsAmt / math.max(totalHits, 0.0001) * 100
 			normalHitsBlock:SetValue(percent)
-			normalHitsBlock.sparkTexture:SetPoint("left", normalHitsBlock, "left", percent / 100 * normalHitsBlock:GetWidth() + spellBreakdownSettings.blockspell_spark_offset, 0)
+			normalHitsBlock.sparkTexture:SetPoint("left", normalHitsBlock, "left", percent / 100 * normalHitsBlock:GetWidth() + Details.breakdown_spell_tab.blockspell_spark_offset, 0)
 
 			local blockLine1, blockLine2, blockLine3 = normalHitsBlock:GetLines()
 			blockLine1.leftText:SetText(Loc ["STRING_NORMAL_HITS"])
@@ -744,7 +751,7 @@ local onEnterSpellBar = function(spellBar, motion) --parei aqui: precisa por nom
 
 			local percent = criticalHitsAmt / math.max(totalHits, 0.0001) * 100
 			critHitsBlock:SetValue(percent)
-			critHitsBlock.sparkTexture:SetPoint("left", critHitsBlock, "left", percent / 100 * critHitsBlock:GetWidth() + spellBreakdownSettings.blockspell_spark_offset, 0)
+			critHitsBlock.sparkTexture:SetPoint("left", critHitsBlock, "left", percent / 100 * critHitsBlock:GetWidth() + Details.breakdown_spell_tab.blockspell_spark_offset, 0)
 
 			local blockLine1, blockLine2, blockLine3 = critHitsBlock:GetLines()
 			blockLine1.leftText:SetText(Loc ["STRING_CRITICAL_HITS"])
@@ -780,7 +787,7 @@ local onEnterSpellBar = function(spellBar, motion) --parei aqui: precisa por nom
 
 			local percent = overheal / (overheal + spellTable.total) * 100
 			overhealBlock:SetValue(percent)
-			overhealBlock.sparkTexture:SetPoint("left", overhealBlock, "left", percent / 100 * overhealBlock:GetWidth() + spellBreakdownSettings.blockspell_spark_offset, 0)
+			overhealBlock.sparkTexture:SetPoint("left", overhealBlock, "left", percent / 100 * overhealBlock:GetWidth() + Details.breakdown_spell_tab.blockspell_spark_offset, 0)
 
 			overhealBlock:SetColor(1, 0, 0, 0.4)
 
@@ -998,21 +1005,23 @@ local spellBlockContainerMixin = {
 			spellBlock:SetPoint("topleft", self, "topleft", 1, (blockHeight * (i - 1) - i) * -1 - (i*2) + ((i-1) * padding))
 			spellBlock:SetPoint("topright", self, "topright", 1, (blockHeight * (i - 1) - i) * -1 - (i*2) + ((i-1) * padding))
 
-			spellBlock.sparkTexture:SetSize(spellBreakdownSettings.blockspell_spark_width, blockHeight)
-			spellBlock.sparkTexture:SetShown(spellBreakdownSettings.blockspell_spark_show)
-			spellBlock.sparkTexture:SetVertexColor(unpack(spellBreakdownSettings.blockspell_spark_color))
+			spellBlock.sparkTexture:SetSize(Details.breakdown_spell_tab.blockspell_spark_width, blockHeight)
+			spellBlock.sparkTexture:SetShown(Details.breakdown_spell_tab.blockspell_spark_show)
+			spellBlock.sparkTexture:SetVertexColor(unpack(Details.breakdown_spell_tab.blockspell_spark_color))
 			spellBlock.reportButton:SetPoint("bottomright", spellBlock.overlay, "bottomright", -2, 2)
 			spellBlock.gradientTexture:SetHeight(blockHeight)
 
 			spellBlock:SetBackdropBorderColor(unpack(borderColor)) --border color
 			spellBlock.statusBarTexture:SetVertexColor(unpack(Details.breakdown_spell_tab.blockspell_color)) --bar color
 
+			local lineHeight = blockHeight * 0.2687
+
 			--update the lines
 			local previousLine
 			for o = 1, spellBlockContainerSettings.lineAmount do
 				---@type breakdownspellblockline
 				local line = spellBlock.Lines[o]
-				line:SetSize(width - 2, spellBreakdownSettings.blockspellline_height)
+				line:SetSize(width - 2, lineHeight)
 				if (previousLine) then
 					line:SetPoint("topleft", previousLine, "bottomleft", 0, -2)
 				else
@@ -1310,8 +1319,13 @@ local updateTargetBar = function(targetBar, index, combatObject, scrollFrame, he
 			targetBar:AddFrameToHeaderAlignment(text)
 			textIndex = textIndex + 1
 
-		elseif (header.name == "overheal") then
-			text:SetText(Details:Format(bkTargetData.overheal or 0))
+		elseif (header.name == "overheal" and bkTargetData.overheal) then
+			if (bkTargetData.overheal > 0) then
+				local totalHeal = bkTargetData.overheal + value
+				text:SetText(string.format("%.1f", bkTargetData.overheal / totalHeal * 100) .. "%")
+			else
+				text:SetText("0%")
+			end
 			targetBar:AddFrameToHeaderAlignment(text)
 			textIndex = textIndex + 1
 
@@ -1534,7 +1548,8 @@ local refreshGenericFunc = function(scrollFrame, scrollData, offset, totalLines)
 				---@type fontstring
 				local fontString = genericBar.InLineTexts[textIndex]
 				genericBar:AddFrameToHeaderAlignment(fontString)
-				fontString:SetText(dataTable.name)
+				local nameWithoutRealm = DF:RemoveRealmName(dataTable.name)
+				fontString:SetText(nameWithoutRealm or dataTable.name)
 				textIndex = textIndex + 1
 			end
 
@@ -1693,7 +1708,9 @@ function spellsTab.CreatePhasesContainer(tabFrame) --~phase ~createphasecontaine
 
 	---@type breakdowntargetscrollframe not sure is this is correct
 	local phaseScrollFrame = DF:CreateScrollBox(container, "$parentPhaseScroll", refreshPhaseFunc, {}, width, height, defaultAmountOfLines, CONST_SPELLSCROLL_LINEHEIGHT)
+	dededebug = 1
 	DF:ReskinSlider(phaseScrollFrame)
+	dededebug = nil
 	phaseScrollFrame:SetBackdrop({})
 	phaseScrollFrame:SetAllPoints()
 
@@ -1717,64 +1734,76 @@ function spellsTab.CreatePhasesContainer(tabFrame) --~phase ~createphasecontaine
 
 		local mainAttribute = instanceObject:GetDisplay()
 
-	   local data = {
+	   	local data = {
 		   --playerObject = playerObject,
 		   --attribute = attribute,
 		   --combatObject = combatObject,
 		   combatTime = combatObject:GetCombatTime(),
-	   }
+	   	}
 
-	   local playerPhases = {}
-	   local totalDamage = 0
-	   local phaseElapsed = {}
+	   	local playerPhases = {}
+	   	local totalDamage = 0
+	   	local phaseElapsed = {}
 
-	   --local bossInfo = combatObject:GetBossInfo()
-	   local phasesInfo = combatObject:GetPhases()
+	   	local phasesInfo = combatObject:GetPhases()
 
-	   if (phasesInfo) then --bossInfo and
-		   if (#phasesInfo >= 1) then
-			   --get phase elapsed time
-			   for i = 1, #phasesInfo do
-				   local thisPhase = phasesInfo[i]
-				   local phaseName = thisPhase[1]
-				   local startTime = thisPhase[2]
+		if (not phasesInfo) then
+			spellsTab.PhaseContainerFrame:Hide()
+			return
+		end
 
-				   local nextPhase = phasesInfo[i + 1]
-				   if (nextPhase) then
-					   --if there's a next phase, use it's start time as end time to calcule elapsed time
-					   local endTime = nextPhase[2]
-					   local elapsedTime = endTime - startTime
-					   phaseElapsed[phaseName] = (phaseElapsed[phaseName] or 0) + elapsedTime
-				   else
-					   --if there's no next phase, use the combat end time as end time to calcule elapsed time
-					   local endTime = combatObject:GetCombatTime()
-					   local elapsedTime = endTime - startTime
-					   phaseElapsed[phaseName] = (phaseElapsed[phaseName] or 0) + elapsedTime
-				   end
-			   end
+		if (#phasesInfo == 1) then
+		   --if there's only one phase, then there's no need to show phases
+		   spellsTab.PhaseContainerFrame:Hide()
+		   return
+	   	else
+		   spellsTab.PhaseContainerFrame:Show()
+	   	end
 
-			   --get damage info
-			   local dataTable = mainAttribute == 1 and phasesInfo.damage or phasesInfo.heal
-			   for phaseName, playersTable in pairs(dataTable) do --each phase
-				   local allPlayers = {} --all players for this phase
-				   for playerName, amount in pairs(playersTable) do
-					   tinsert(allPlayers, {playerName, amount})
-					   totalDamage = totalDamage + amount
-				   end
-				   table.sort(allPlayers, function(a, b) return a[2] > b[2] end)
+		if (#phasesInfo >= 1) then
+			--get phase elapsed time
+			for i = 1, #phasesInfo do
+				local thisPhase = phasesInfo[i]
+				local phaseName = thisPhase[1]
+				local startTime = thisPhase[2]
 
-				   local myRank = 0
-				   for i = 1, #allPlayers do
-					   if (allPlayers[i][1] == actorName) then
-						   myRank = i
-						   break
-					   end
-				   end
+				local nextPhase = phasesInfo[i + 1]
+				if (nextPhase) then
+					--if there's a next phase, use it's start time as end time to calcule elapsed time
+					local endTime = nextPhase[2]
+					local elapsedTime = endTime - startTime
+					phaseElapsed[phaseName] = (phaseElapsed[phaseName] or 0) + elapsedTime
+				else
+					--if there's no next phase, use the combat end time as end time to calcule elapsed time
+					local endTime = combatObject:GetCombatTime()
+					local elapsedTime = endTime - startTime
+					phaseElapsed[phaseName] = (phaseElapsed[phaseName] or 0) + elapsedTime
+				end
+			end
 
-				   tinsert(playerPhases, {phaseName, playersTable[actorName] or 0, myRank, (playersTable [actorName] or 0) / totalDamage * 100})
-			   end
-		   end
-	   end
+			--get damage info
+			local dataTable = mainAttribute == 1 and phasesInfo.damage or phasesInfo.heal
+			for phaseName, playersTable in pairs(dataTable) do --each phase
+				local allPlayers = {} --all players for this phase
+				for playerName, amount in pairs(playersTable) do
+					tinsert(allPlayers, {playerName, amount})
+					totalDamage = totalDamage + amount
+				end
+				table.sort(allPlayers, function(a, b)
+					return a[2] > b[2]
+				end)
+
+				local myRank = 0
+				for i = 1, #allPlayers do
+					if (allPlayers[i][1] == actorName) then
+						myRank = i
+						break
+					end
+				end
+
+				tinsert(playerPhases, {phaseName, playersTable[actorName] or 0, myRank, (playersTable[actorName] or 0) / totalDamage * 100})
+			end
+		end
 
 	   table.sort(playerPhases, function(a, b) return a[1] < b[1] end)
 
@@ -1803,6 +1832,8 @@ function spellsTab.CreatePhasesContainer(tabFrame) --~phase ~createphasecontaine
 		reziser_width = 2,
 		reziser_color = {.5, .5, .5, 0.7},
 		reziser_max_width = 246,
+
+		header_click_callback = onAnyColumnHeaderClickCallback,
 
 		header_backdrop_color = {0.1, 0.1, 0.1, 0.4},
 		text_color = {1, 1, 1, 0.823},
@@ -2013,6 +2044,8 @@ function spellsTab.CreateGenericContainer(tabFrame) --~create ~generic ~createge
 		reziser_color = {.5, .5, .5, 0.7},
 		reziser_max_width = 246,
 
+		header_click_callback = onAnyColumnHeaderClickCallback,
+
 		header_backdrop_color = {0.1, 0.1, 0.1, 0.4},
 		text_color = {1, 1, 1, 0.823},
 	}
@@ -2144,6 +2177,8 @@ function spellsTab.CreateTargetContainer(tabFrame) --~create ~target ~createtarg
 		reziser_color = {.5, .5, .5, 0.7},
 		reziser_max_width = 246,
 
+		header_click_callback = onAnyColumnHeaderClickCallback,
+
 		header_backdrop_color = {0.1, 0.1, 0.1, 0.4},
 		text_color = {1, 1, 1, 0.823},
 	}
@@ -2162,7 +2197,7 @@ function spellsTab.CreateTargetContainer(tabFrame) --~create ~target ~createtarg
 		targetScrollFrame:CreateLine(spellsTab.CreateTargetBar)
 	end
 
-	tabFrame.targets = tabFrame:CreateFontString(nil, "overlay", "QuestFont_Large")
+	tabFrame.targets = targetScrollFrame:CreateFontString(nil, "overlay", "QuestFont_Large")
 	tabFrame.targets:SetPoint("bottomleft", container, "topleft", 2, 2)
 	tabFrame.targets:SetText(Loc ["STRING_TARGETS"] .. ":")
 
@@ -2434,8 +2469,13 @@ local updateSpellBar = function(spellBar, index, actorName, combatObject, scroll
 			spellBar:AddFrameToHeaderAlignment(text)
 			textIndex = textIndex + 1
 
-		elseif (header.name == "overheal") then
-			text:SetText(Details:Format(spellTable.overheal or 0))
+		elseif (header.name == "overheal" and spellTable.overheal) then
+			if (spellTable.overheal > 0) then
+				local totalHeal = spellTable.overheal + value
+				text:SetText(Details:ToK2(spellTable.overheal) .. " (" .. math.floor(spellTable.overheal / totalHeal * 100) .. "%)")
+			else
+				text:SetText("0%")
+			end
 			spellBar:AddFrameToHeaderAlignment(text)
 			textIndex = textIndex + 1
 

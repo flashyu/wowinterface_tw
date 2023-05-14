@@ -4,7 +4,7 @@ END
 VER 3 0000000000000005 "gj" "132092"
 END
 VER 3 0000000000000002 "RXPTargeting" "Ability_eyeoftheowl"
-/targetexact 小萨鲁法尔
+/targetexact 撕裂者萨兰纳克斯
 /cleartarget [dead]
 END
 VER 3 0000000000000004 "坐骑" "132112"

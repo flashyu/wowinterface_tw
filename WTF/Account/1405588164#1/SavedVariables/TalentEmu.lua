@@ -199,9 +199,9 @@ TalentEmuSV = {
 		["minimapPos"] = 185,
 	},
 	["var"] = {
-		["Player-4487-0051C667"] = "!T329=122LTKI122Ul28qCJn15::EbyZ8KTKI1220VD7:::EmUa85lLG!G32226++++++n+9:yDC:11u+-:k=C:C1u+-:l=C:D1u+9:EEC:I1u+-:m=C:=1u+!E320+^+CH9:8=1:9+OG9:8=1:9+B-9:8=1:9+rQ4:8=1:9+Fhk:8=1:9+5-9:8=1:9+RH9:8=1:9+BO9:8=1:9+TH9:8=1:9+aH9:8=1:9+fJ9:8=1:9+SF9:8=1:9+p-9:8=1:9+bhk:8=1:9+629:8=1:9+c29:8=1:9+F-9:8=1:9+G09:8=1:9+^",
+		["Player-4487-0051C667"] = "!T329D122LTKI122Ul28qCJn15::EbyZ8OTKI122Ul28kSQa:::EmUa85cUG!G32226++++++n+9:yDC:11u+-:k=C:C1u+-:l=C:D1u+9:EEC:I1u+-:m=C:=1u+!E320+^+VC9:8D1:9+OG9:8D1:9+B-9:8D1:9+rQ4:8D1:9+di-:8D1:9+FH9:8D1:9+ER-:8D1:9+zj-:8D1:9+TH9:8D1:9+0S-:8D1:9+fJ9:8D1:9+Ki-:8D1:9+yg-:8D1:9+0H9:8D1:9+629:8D1:9+fI9:8D1:9+F-9:8D1:9+jR-:8D1:9+IW-:8D1:9",
 		["savedTalent"] = {
-			["|cffc79c6e战士|r- 武器30 狂怒 0 |cff7fbfff防护33|r"] = "!T329E111KTKI122UA2::::EmUa85MAG",
+			["|cffc79c6e战士|r- |cff7fbfff武器37|r 狂怒 2 防护32"] = "!T329E111OTKI122Ul28kqsA1::EmUa85cUG",
 		},
 	},
 	["_version"] = 220811,

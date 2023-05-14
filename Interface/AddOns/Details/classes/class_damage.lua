@@ -1803,31 +1803,30 @@ function damageClass:RefreshWindow(instancia, combatObject, forcar, exportar, re
 		local index = 0
 
 		for fragName, fragAmount in pairs(frags) do
-
-			index = index + 1
-
 			local fragged_actor = showing._NameIndexTable [fragName] --get index
-			local actor_classe
 			if (fragged_actor) then
 				fragged_actor = showing._ActorTable [fragged_actor] --get object
-				actor_classe = fragged_actor.classe
-			end
+				if (fragged_actor) then
+					index = index + 1
+					local actor_classe = fragged_actor.classe
 
-			if (fragged_actor and fragged_actor.monster) then
-				actor_classe = "ENEMY"
-			elseif (not actor_classe) then
-				actor_classe = "UNGROUPPLAYER"
-			end
+					if (fragged_actor and fragged_actor.monster) then
+						actor_classe = "ENEMY"
+					elseif (not actor_classe) then
+						actor_classe = "UNGROUPPLAYER"
+					end
 
-			if (ntable [index]) then
-				ntable [index] [1] = fragName
-				ntable [index] [2] = fragAmount
-				ntable [index] [3] = actor_classe
-			else
-				ntable [index] = {fragName, fragAmount, actor_classe}
-			end
+					if (ntable [index]) then
+						ntable [index] [1] = fragName
+						ntable [index] [2] = fragAmount
+						ntable [index] [3] = actor_classe
+					else
+						ntable [index] = {fragName, fragAmount, actor_classe}
+					end
 
-			frags_total_kills = frags_total_kills + fragAmount
+					frags_total_kills = frags_total_kills + fragAmount
+				end
+			end
 		end
 
 		local tsize = #ntable
@@ -3591,6 +3590,13 @@ local ENEMIES_format_name = function(player) if (player == 0) then return false 
 local ENEMIES_format_amount = function(amount) if (amount <= 0) then return false end return Details:ToK(amount) .. " (" .. format("%.1f", amount / tooltip_temp_table.damage_total * 100) .. "%)" end
 
 function damageClass:ReportEnemyDamageTaken (actor, instance, ShiftKeyDown, ControlKeyDown, fromFrags)
+
+	--can open the breakdown window now
+
+
+
+	if (true) then return end
+
 	if (ShiftKeyDown) then
 		local inimigo = actor.nome
 		local custom_name = inimigo .. " -" .. Loc ["STRING_CUSTOM_ENEMY_DT"]
@@ -3639,6 +3645,9 @@ local FRAGS_format_name = function(player_name) return Details:GetOnlyName(playe
 local FRAGS_format_amount = function(amount) return Details:ToK(amount) .. " (" .. format("%.1f", amount / frags_tooltip_table.damage_total * 100) .. "%)" end
 
 function damageClass:ReportSingleFragsLine (frag, instance, ShiftKeyDown, ControlKeyDown)
+	if (not frags_tooltip_table) then --some cases a friendly object is getting threat as neutral, example is Druid's Efflorescense
+		return
+	end
 
 	if (ShiftKeyDown) then
 		return damageClass:ReportEnemyDamageTaken (frag, instance, ShiftKeyDown, ControlKeyDown, true)
@@ -4077,7 +4086,49 @@ end
 
 
 ------ Friendly Fire
-function damageClass:MontaInfoFriendlyFire()
+local friendlyFireHeadersAllowed = {icon = true, name = true, rank = true, amount = true, persecond = true, percent = true}
+function damageClass:MontaInfoFriendlyFire() --~friendlyfire ~friendly ~ff
+	---@type actordamage
+	local actorObject = self
+	---@type instance
+	local instance = info.instancia
+	---@type combat
+	local combatObject = instance:GetCombat()
+	---@type string
+	local actorName = actorObject:Name()
+
+	---@type number
+	local friendlyFireTotal = actorObject.friendlyfire_total
+	---@type table<string, friendlyfiretable>
+	local damagedPlayers = actorObject.friendlyfire --players which got hit by this actor
+	---@type actorcontainer
+	local damageContainer = combatObject:GetContainer(class_type)
+
+	local resultTable = {}
+
+	for targetName, friendlyFireTable in pairs(damagedPlayers) do
+		local amountOfFriendlyFire = friendlyFireTable.total
+		if (amountOfFriendlyFire > 0) then
+			local targetActorObject = damageContainer:GetActor(targetName)
+			if (targetActorObject) then
+				---@type texturetable
+				local iconTable = Details:GetActorIcon(targetActorObject)
+
+				---@type {name: string, amount: number, icon: texturetable}
+				local ffTable = {name = targetName, total = amountOfFriendlyFire, icon = iconTable}
+
+				resultTable[#resultTable+1] = ffTable
+			end
+		end
+	end
+
+	resultTable.totalValue = friendlyFireTotal
+	resultTable.combatTime = combatObject:GetCombatTime()
+	resultTable.headersAllowed = friendlyFireHeadersAllowed
+
+	Details222.BreakdownWindow.SendGenericData(resultTable, actorObject, combatObject, instance)
+
+	if true then return end
 
 	local instancia = info.instancia
 	local combat = instancia:GetShowingCombat()
@@ -4263,7 +4314,7 @@ function damageClass:MontaInfoDamageTaken()
 
 	Details222.BreakdownWindow.SendGenericData(resultTable, actorObject, combatObject, instance)
 
-	if 1 then return end
+	if true then return end
 
 	local barras = info.barras1
 	local meus_agressores = {}
@@ -4310,50 +4361,6 @@ function damageClass:MontaInfoDamageTaken()
 		local formated_value = SelectedToKFunction(_, _math_floor(tabela[2]))
 		self:UpdadeInfoBar(barra, index, tabela[1], tabela[1], tabela[2], formated_value, max_, tabela[3], "Interface\\AddOns\\Details\\images\\classes_small_alpha", true, texCoords, nil, tabela[4])
 	end
-
-
-	--[=[
-	---@type number, spelltable
-		for spellId, spellTable in pairs(actorSpells) do
-			spellTable.ChartData = nil
-
-			---@type string
-			local spellName = _GetSpellInfo(spellId)
-			if (spellName) then
-				---@type number in which index the spell with the same name was stored
-				local index = alreadyAdded[spellName]
-				if (index) then
-					---@type spelltableadv
-					local bkSpellData = breakdownSpellDataList[index]
-
-					bkSpellData.spellTables[#bkSpellData.spellTables+1] = spellTable
-
-					---@type bknesteddata
-					local nestedData = {spellId = spellId, spellTable = spellTable, petName = "", value = 0}
-					bkSpellData.nestedData[#bkSpellData.nestedData+1] = nestedData
-					bkSpellData.bCanExpand = true
-				else
-					---@type spelltableadv
-					local bkSpellData = {
-						id = spellId,
-						spellschool = spellTable.spellschool,
-						bIsExpanded = Details222.BreakdownWindow.IsSpellExpanded(spellId),
-						bCanExpand = false,
-
-						spellTables = {spellTable},
-						nestedData = {{spellId = spellId, spellTable = spellTable, petName = "", value = 0}},
-					}
-
-					detailsFramework:Mixin(bkSpellData, Details.SpellTableMixin)
-					breakdownSpellDataList[#breakdownSpellDataList+1] = bkSpellData
-					alreadyAdded[spellName] = #breakdownSpellDataList
-				end
-			end
-		end
-
-	--]=]
-
-
 end
 
 --[[exported]] function Details:UpdadeInfoBar(row, index, spellId, name, value, formattedValue, max, percent, icon, detalhes, texCoords, spellSchool, class)
@@ -4601,7 +4608,7 @@ function damageClass:MontaInfoDamageDone() --I guess this fills the list of spel
 
 	---@type number, spelltable
 	for spellId, spellTable in pairs(actorSpells) do
-		spellTable.ChartData = nil
+		spellTable.ChartData = nil --~ChartData
 
 		---@type string
 		local spellName = _GetSpellInfo(spellId)
@@ -5253,7 +5260,7 @@ end
 ---@param spellId number
 ---@param elapsedTime number
 ---@param actorName string
----@param spellTable spelltable
+---@param spellTable spelltableadv
 ---@param trinketData trinketdata
 ---@param combatObject combat
 function damageClass:BuildSpellDetails(spellBar, spellBlockContainer, blockIndex, summaryBlock, spellId, elapsedTime, actorName, spellTable, trinketData, combatObject)
@@ -5408,6 +5415,51 @@ function damageClass:BuildSpellDetails(spellBar, spellBlockContainer, blockIndex
 		local critTempoPercent = critAveragePercent * tempo / 100
 		blockLine3.rightText:SetText(Loc ["STRING_DPS"] .. ": " .. Details:CommaValue(spellTable.c_total / critTempoPercent))
 	end
+
+	--missing hits
+	local semiDodgeAmount = spellTable.g_amt + spellTable.b_amt --glancing and blocking
+	local fullDodgeAmount = spellTable["DODGE"] or 0
+	local parryAmount = spellTable["PARRY"] or 0
+	local missedHitsAmount = spellTable["MISS"] or 0
+
+	local hitErrorsAmount = parryAmount + fullDodgeAmount + missedHitsAmount
+
+	if (semiDodgeAmount > 0 or hitErrorsAmount > 0) then
+		---@type breakdownspellblock
+		local defensesBlock = spellBlockContainer:GetBlock(blockIndex)
+		defensesBlock:Show()
+		blockIndex = blockIndex + 1
+
+		local percent = (semiDodgeAmount + hitErrorsAmount) / spellTable.counter * 100
+		defensesBlock:SetValue(percent)
+		defensesBlock.sparkTexture:SetPoint("left", defensesBlock, "left", percent / 100 * defensesBlock:GetWidth() + Details.breakdown_spell_tab.blockspell_spark_offset, 0)
+
+		local blockLine1, blockLine2, blockLine3 = defensesBlock:GetLines()
+		blockLine1.leftText:SetText(Loc ["STRING_DEFENSES"])
+		blockLine1.rightText:SetText((semiDodgeAmount + hitErrorsAmount) .. " / " .. format("%.1f", percent) .. "%")
+
+		if (missedHitsAmount > 0) then
+			blockLine2.leftText:SetText("Miss" .. ": " .. missedHitsAmount)
+		end
+		if (parryAmount > 0) then
+			blockLine2.centerText:SetText(Loc ["STRING_PARRY"] .. ": " .. parryAmount)
+		end
+		if (fullDodgeAmount > 0) then
+			blockLine2.rightText:SetText(Loc ["STRING_DODGE"] .. ": " .. fullDodgeAmount)
+		end
+		if (spellTable.b_amt > 0) then
+			blockLine3.leftText:SetText(Loc ["STRING_BLOCKED"] .. ": " .. spellTable.b_amt)
+		end
+		if (spellTable.g_amt > 0) then
+			blockLine3.rightText:SetText(Loc ["STRING_GLANCING"] .. ": " .. spellTable.g_amt)
+		end
+	end
+
+--[=[ percent
+	Loc ["STRING_GLANCING"] .. ": " .. math.floor(spellTable.g_amt / spellTable.counter * 100) .. "%"
+	Loc ["STRING_BLOCKED"] .. ": " .. math.floor(spellTable.b_amt / spellTable.counter * 100) .. "%"
+--]=]
+
 
 	if (trinketData[spellId]) then
 		---@type trinketdata

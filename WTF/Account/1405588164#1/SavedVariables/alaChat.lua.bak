@@ -142,17 +142,18 @@ alaChatSV = {
 		["AutoAddChannelToDefaultChatFrame"] = false,
 		["UseColor"] = true,
 		["ChannelBlockButton_BLZ"] = true,
-		["LOOK_FOR_GROUP"] = true,
-		["LOCAL_DEFENSE"] = false,
 		["RAID"] = true,
-		["BF_WORLD"] = true,
+		["LOCAL_DEFENSE"] = false,
+		["RAID_WARNING"] = true,
+		["LOOK_FOR_GROUP"] = true,
 		["_channelblocked"] = {
 		},
-		["RAID_WARNING"] = true,
+		["BF_WORLD"] = true,
 		["_chatblocked"] = {
 		},
 		["_bfworldcf"] = {
 			["Player-4487-0051C667"] = {
+				true, -- [1]
 			},
 		},
 		["UNMANAGEDCHANNEL"] = true,

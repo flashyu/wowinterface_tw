@@ -14,7 +14,7 @@ AutoBarDB2 = {
 					["rows"] = 1,
 					["dockShiftY"] = 0,
 					["alignButtons"] = "3",
-					["posX"] = 359.1884685340119,
+					["posX"] = 522.9152617494328,
 					["hide"] = false,
 					["enabled"] = true,
 					["columns"] = 10,
@@ -27,7 +27,7 @@ AutoBarDB2 = {
 						"AutoBarButtonStance", -- [5]
 						"AutoBarButtonClassBuff", -- [6]
 					},
-					["posY"] = 15.4986642043591,
+					["posY"] = 14.53282194079111,
 					["allowed_class"] = "WARRIOR",
 					["popupDirection"] = "1",
 					["padding"] = 0,
@@ -90,6 +90,9 @@ AutoBarDB2 = {
 	["chars"] = {
 		["狂暴專家 - 伊弗斯"] = {
 			["buttonDataList"] = {
+				["AutoBarButtonRaidTarget"] = {
+					["arrangeOnUse"] = "macrotext:2",
+				},
 				["AutoBarButtonMount"] = {
 				},
 			},
@@ -128,15 +131,11 @@ AutoBarDB2 = {
 			["AutoBarClassBarBasic"] = {
 				["popupDirection"] = "1",
 				["fadeOut"] = false,
-				["scale"] = 1,
-				["rows"] = 1,
-				["dockShiftY"] = 0,
-				["alignButtons"] = "3",
-				["posX"] = 617.1163924563734,
-				["hide"] = false,
-				["enabled"] = true,
 				["columns"] = 16,
 				["alpha"] = 1,
+				["scale"] = 1,
+				["rows"] = 1,
+				["frameStrata"] = "LOW",
 				["buttonKeys"] = {
 					"AutoBarButtonHearth", -- [1]
 					"AutoBarButtonBandages", -- [2]
@@ -160,11 +159,14 @@ AutoBarDB2 = {
 					"AutoBarButtonTrinket1", -- [20]
 					"AutoBarButtonTrinket2", -- [21]
 				},
+				["dockShiftY"] = 0,
 				["allowed_class"] = "*",
+				["alignButtons"] = "3",
+				["posX"] = 617.1163924563734,
 				["posY"] = 160.7250452356402,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
-				["frameStrata"] = "LOW",
+				["enabled"] = true,
 			},
 			["AutoBarClassBarExtras"] = {
 				["popupDirection"] = "1",

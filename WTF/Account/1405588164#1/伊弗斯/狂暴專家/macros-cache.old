@@ -1,9 +1,3 @@
-VER 3 000000000100000A "VuhDoDCShieldData" "Ability_Repair"
-P1EM[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]1WM[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]
-END
-VER 3 000000000100000B "VuhDoDCShieldNames" "Ability_Repair"
-N臉叔[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]狂暴專[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]
-END
 VER 3 0000000001000008 "冲锋拦截" "134400"
 #showtooltip [nocombat]冲锋;[combat]拦截
 /dismount [mounted]
@@ -15,6 +9,15 @@ VER 3 0000000001000003 "复仇" "134400"
 #showtooltip 复仇
 /startattack
 /cast 复仇
+END
+VER 3 000000000100000C "怒气" "132277"
+/use 血性狂暴
+/use 狂暴之怒
+END
+VER 3 000000000100000D "横扫攻击" "132306"
+#showtooltip 横扫攻击
+/cast 横扫攻击
+/startattack
 END
 VER 3 0000000001000009 "爆发" "134400"
 #showtooltip 血性狂怒

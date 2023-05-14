@@ -2,6 +2,7 @@
 RXPData = {
 	["trainGenericSpells"] = true,
 	["gameVersion"] = 30401,
+	["cache"] = "劍南春#3540",
 }
 RXPDB = {
 	["profileKeys"] = {

@@ -111,7 +111,8 @@ function Details:OpenBreakdownWindow(instanceObject, actorObject, bFromAttribute
 			Details:CloseBreakdownWindow()
 			return
 		end
-		return Details.row_singleclick_overwrite[mainAttribute][subAttribute](_, actorObject, instanceObject, bIsShiftKeyDown, bIsControlKeyDown)
+		Details.row_singleclick_overwrite[mainAttribute][subAttribute](_, actorObject, instanceObject, bIsShiftKeyDown, bIsControlKeyDown)
+		return
 	end
 
 	if (instanceObject:GetMode() == DETAILS_MODE_RAID) then
@@ -507,6 +508,7 @@ function Details:CreateBreakdownWindow()
 	breakdownWindow:EnableMouse(true)
 	breakdownWindow:SetResizable(true)
 	breakdownWindow:SetMovable(true)
+	breakdownWindow:SetClampedToScreen(true)
 
 	--make the window movable
 	if (not breakdownWindow.registeredLibWindow) then

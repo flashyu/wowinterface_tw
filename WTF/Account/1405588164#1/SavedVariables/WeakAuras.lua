@@ -146,7 +146,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "KaVqf4KCgep",
 			["color"] = {
 				1, -- [1]
@@ -280,14 +280,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Shield Slam",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -339,7 +339,7 @@ WeakAurasSaved = {
 			["yOffset"] = 363.0111389160156,
 			["anchorPoint"] = "BOTTOM",
 			["source"] = "import",
-			["rotation"] = 0,
+			["stagger"] = 0,
 			["fullCircle"] = true,
 			["rowSpace"] = 1,
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
@@ -370,14 +370,11 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["columnSpace"] = 1,
-			["internalVersion"] = 65,
+			["radius"] = 200,
 			["arcLength"] = 360,
 			["useLimit"] = false,
 			["align"] = "CENTER",
 			["growOn"] = "changed",
-			["radius"] = 200,
-			["desc"] = "Made by Luxthos - twitch.tv/luxthos",
-			["stagger"] = 0,
 			["animation"] = {
 				["start"] = {
 					["easeStrength"] = 3,
@@ -397,6 +394,10 @@ WeakAurasSaved = {
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
+			},
+			["desc"] = "Made by Luxthos - twitch.tv/luxthos",
+			["rotation"] = 0,
+			["authorOptions"] = {
 			},
 			["version"] = 26,
 			["subRegions"] = {
@@ -469,8 +470,7 @@ WeakAurasSaved = {
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["authorOptions"] = {
-			},
+			["internalVersion"] = 65,
 		},
 		["Bloodrage"] = {
 			["iconSource"] = -1,
@@ -615,7 +615,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "xiJLrXG4kuz",
 			["color"] = {
 				1, -- [1]
@@ -703,14 +703,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Bloodrage",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -879,9 +879,8 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "qoCvpEKminH",
-			["icon"] = true,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -903,22 +902,27 @@ WeakAurasSaved = {
 					["easeType"] = "none",
 				},
 			},
+			["icon"] = true,
 			["regionType"] = "icon",
 			["cooldown"] = true,
-			["authorOptions"] = {
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
 			["parent"] = "Dynamic Effects - Warrior",
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Blood Craze",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = false,
@@ -946,11 +950,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["authorOptions"] = {
 			},
 		},
 		["Last Stand - Warrior"] = {
@@ -1092,7 +1092,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "q)u3M63Jqgd",
 			["color"] = {
 				1, -- [1]
@@ -1180,14 +1180,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Last Stand - Warrior",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -1341,7 +1341,7 @@ WeakAurasSaved = {
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
 					["type"] = "subtext",
-					["text_anchorYOffset"] = -4,
+					["text_shadowYOffset"] = 0,
 					["text_color"] = {
 						1, -- [1]
 						0.88627450980392, -- [2]
@@ -1350,7 +1350,7 @@ WeakAurasSaved = {
 					},
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_shadowYOffset"] = 0,
+					["text_anchorYOffset"] = -4,
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
@@ -1401,7 +1401,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "trHNMw(XjBN",
 			["color"] = {
 				1, -- [1]
@@ -1525,14 +1525,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Sweeping Strikes",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -1712,7 +1712,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "BahRxduMOeC",
 			["color"] = {
 				1, -- [1]
@@ -1800,14 +1800,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Berserker Rage",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -1951,21 +1951,21 @@ WeakAurasSaved = {
 			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Resources - Warrior",
-			["config"] = {
-			},
+			["uid"] = "3ajFDDFJ8YO",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["authorOptions"] = {
+			["selfPoint"] = "CENTER",
+			["config"] = {
 			},
 			["borderInset"] = 1,
-			["uid"] = "3ajFDDFJ8YO",
-			["parent"] = "Luxthos - Warrior",
+			["authorOptions"] = {
+			},
 			["conditions"] = {
 			},
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["selfPoint"] = "CENTER",
+			["parent"] = "Luxthos - Warrior",
 		},
 		["Overpower"] = {
 			["iconSource"] = 0,
@@ -2158,7 +2158,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "g53e5Ws0P3L",
 			["color"] = {
 				1, -- [1]
@@ -2298,14 +2298,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Overpower",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -2463,7 +2463,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "aj4qcmT9Qr6",
 			["color"] = {
 				1, -- [1]
@@ -2498,14 +2498,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Heroic Strike",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -2656,162 +2656,8 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-					["custom"] = "local local_env = aura_env\nlocal CLASS = local_env.id:gsub(\"General Options %- \", \"\")\nlocal_env.CLASS = CLASS\n\nLWA = LWA or {}\nLWA[CLASS] = LWA[CLASS] or {}\n\nlocal LWA = LWA[CLASS]\n\nLWA.config = nil\nLWA.configs = LWA.configs or {}\nLWA.configs[\"general\"] = local_env.config\n\nLWA.CLASS = CLASS\nLWA.MAX_WIDTH = 405\nLWA.RESOURCES_HEIGHT = 0\n\nlocal CLASS_GROUP = \"Luxthos - \" .. CLASS\nlocal CLASS_OPTIONS = \"Class Options - \" .. CLASS\nlocal CORE_GROUP = \"Core - \" .. CLASS\nlocal RESOURCES_GROUP = \"Resources - \" .. CLASS\nlocal DYNAMIC_EFFECTS_GROUP = \"Dynamic Effects - \" .. CLASS\nlocal DYNAMIC_SPELLS_GROUP = \"Dynamic Spells - \" .. CLASS\nlocal LEFT_SIDE_GROUP = \"Left Side - \" .. CLASS\nlocal RIGHT_SIDE_GROUP = \"Right Side - \" .. CLASS\nlocal MAINTENANCE_GROUP = \"Maintenance - \" .. CLASS\nlocal CAST_BAR = \"Cast Bar - \" .. CLASS\n\nlocal_env.parent = CLASS_GROUP\nlocal nbCore = 8\nlocal resources\n\nlocal function tclone(t1)\n    local t = {}\n    \n    if t1 then\n        for k, v in pairs(t1) do\n            if \"table\" == type(v) then\n                v = tclone(v)\n            end\n            \n            if \"string\" == type(k) then\n                t[k] = v\n            else\n                tinsert(t, v)\n            end\n        end\n    end\n    \n    return t\nend\n\nlocal function tmerge(...)\n    local ts = {...}\n    local t = tclone(ts[1])\n    local t2\n    \n    for i = 2, #ts do\n        t2 = ts[i] or {}\n        \n        for k, v in pairs(t2) do\n            if \"table\" == type(v) then\n                v = tclone(v)\n                \n                if t[k] and #t[k] == 0 then\n                    t[k] = tmerge(t[k], v)\n                else\n                    t[k] = v\n                end\n            else\n                t[k] = v\n            end\n        end\n    end\n    \n    return t\nend\n\nlocal function SetRegionSize(r, w, h)\n    r:SetRegionWidth(w)\n    r:SetRegionHeight(h)\nend\n\nlocal function ResizeAnchorFrame()\n    local config = LWA.GetConfig()\n    local h = 0\n    local cr = WeakAuras.GetRegion(CORE_GROUP)\n    \n    if cr and cr:IsVisible() then\n        h = cr:GetHeight()\n        \n        if config.primary.resources_position == 1 then -- Above\n            h = h + config.primary.spacing + LWA.RESOURCES_HEIGHT\n        end\n    end\n    \n    if 1 == h % 2 then\n        h = h + 1\n    end\n    \n    SetRegionSize(local_env.region, LWA.MAX_WIDTH, max(1, h, config.primary.height + config.primary.spacing + LWA.RESOURCES_HEIGHT))\n    \n    local g = WeakAuras.GetRegion(g)\n    \n    if g then\n        g:PositionChildren()\n        \n        if 0 == #g.sortedChildren then\n            g:SetHeight(configs[i].height)\n            g.currentHeight = configs[i].height\n        end\n    end\nend\n\nfunction LWA.GetConfig(grp, force)\n    local default = {\n        style = {\n            border_size = 0,\n            border_color = { [1] = 0, [2] = 0, [3] = 0, [4] = 1 },\n            apply_border = true,\n            zoom = 30,\n        },\n        primary = {\n            nb = 8,\n            width = 48,\n            height = 48,\n            spacing = 0,\n            resources_position = 2, -- Below\n        },\n        secondary = {\n            width = 38,\n            height = 38,\n            spacing = 0,\n        },\n        dynamic = {\n            width = 38,\n            height = 38,\n            spacing = 0,\n            margin = 10,\n        },\n        side = {\n            width = 36,\n            height = 36,\n            spacing = 0,\n            margin = 3,\n            grow_horizontal = 0,\n        },\n        maintenance = {\n            width = 36,\n            height = 36,\n            spacing = 0,\n            margin = 10,\n        },\n        ooc_alpha = {\n            alpha = 1,\n            ignore_enemy = true,\n            ignore_friendly = true,\n        },\n        resources = {\n            health_bar = {\n                format = 1\n            },\n            mana_bar = {\n                format = 1\n            }\n        },\n    }\n    \n    if force or not LWA.config or WeakAuras.IsOptionsOpen() then\n        LWA.config = tmerge(\n            default,\n            LWA.configs[\"general\"],\n            LWA.configs[\"class\"] or {}\n        )\n    end\n    \n    if grp then\n        return LWA.config[grp] or {}\n    end\n    \n    return LWA.config\nend\n\nlocal throttledInitHandler = nil\nlocal initLastRun = 0\n\nfunction LWA.ThrottledInit()\n    if throttledInitHandler then return end\n    \n    local currentTime = time()\n    \n    if WeakAuras.IsImporting() then\n        throttledInitHandler = C_Timer.NewTimer(2, LWA.ThrottledInit)\n        \n    elseif initLastRun <= currentTime - 0.2 then\n        throttledInitHandler = C_Timer.NewTimer(0.05, LWA.Init)\n    else\n        throttledInitHandler = C_Timer.NewTimer(max(0.05, currentTime - initLastRun), LWA.Init)\n    end\nend\n\nfunction LWA.Init()\n    if WeakAuras.IsImporting() then return end\n    \n    initLastRun = time()\n    \n    local config = LWA.GetConfig(nil, true)\n    local isOptionsOpen = WeakAuras.IsOptionsOpen()\n    local zoom = config.style.zoom / 100\n    \n    if throttledInitHandler then\n        throttledInitHandler:Cancel()\n        throttledInitHandler = nil\n    end\n    \n    if not local_env.parentFrame then\n        local_env.parentFrame = WeakAuras.GetRegion(CLASS_GROUP)\n    end\n    \n    if local_env.parentFrame and not local_env.parentFrame.SetRealScale then\n        local_env.parentFrame.SetRealScale = local_env.parentFrame.SetScale\n        \n        local_env.parentFrame.SetScale = function(self, scale)\n            local_env.parentFrame:SetRealScale(scale)\n            local castBar = WeakAuras.GetRegion(CAST_BAR)\n            \n            if castBar then\n                castBar:SetScale(scale)\n            end\n        end\n    end\n    \n    if isOptionsOpen then\n        nbCore = config.primary.nb\n    else\n        nbCore = max(4, min(nbCore, config.primary.nb))\n    end\n    \n    LWA.MAX_WIDTH = nbCore * (config.primary.width + config.primary.spacing) - config.primary.spacing\n    \n    local function InitIcons(group, c, selfPoint)\n        local grpRegion = WeakAuras.GetRegion(group)\n        \n        if not grpRegion then return end\n        \n        local i, isAbilities = 0, CORE_GROUP == group\n        \n        for childId, regions in pairs(grpRegion.controlledChildren) do\n            local region = regions[\"\"] and regions[\"\"].regionData.region\n            \n            i = i + 1\n            \n            if region then\n                region:SetAnchor(selfPoint, region.relativeTo, region.relativePoint)\n                \n                if region.SetZoom then\n                    region:SetZoom(min(1, zoom + (region.extraZoom or 0)))\n                else\n                    print(\"LWA Issue: \" .. CLASS .. \" > \" .. group .. \" > \" .. childId)\n                end\n                \n                if isAbilities and i > nbCore then\n                    SetRegionSize(region, config.secondary.width, config.secondary.height)\n                else\n                    SetRegionSize(region, c.width, c.height)\n                end\n                \n                LWA.UpdateBorder(region)\n            end\n        end\n        \n        if isAbilities then\n            grpRegion:PositionChildren()\n            \n            if not isOptionsOpen then\n                nbCore = max(4, min(#grpRegion.sortedChildren, config.primary.nb))\n                \n                LWA.MAX_WIDTH = nbCore * (config.primary.width + config.primary.spacing) - config.primary.spacing\n            end\n            \n            local_env.region:SetRegionWidth(LWA.MAX_WIDTH)\n        end\n    end\n    \n    InitIcons(CORE_GROUP, config.primary, \"TOP\")\n    InitIcons(LEFT_SIDE_GROUP, config.side, \"TOPRIGHT\")\n    InitIcons(RIGHT_SIDE_GROUP, config.side, \"TOPLEFT\")\n    InitIcons(MAINTENANCE_GROUP, config.maintenance, \"TOP\")\n    InitIcons(DYNAMIC_EFFECTS_GROUP, config.dynamic, \"BOTTOMLEFT\")\n    InitIcons(DYNAMIC_SPELLS_GROUP, config.dynamic, \"BOTTOMRIGHT\")\n    \n    LWA.UpdateResources()\n    \n    for i, g in ipairs({ DYNAMIC_EFFECTS_GROUP, DYNAMIC_SPELLS_GROUP, LEFT_SIDE_GROUP, RIGHT_SIDE_GROUP }) do\n        g = WeakAuras.GetRegion(g)\n        \n        if g then\n            g:PositionChildren()\n        end\n    end\nend\n\nhooksecurefunc(\"SetUIVisibility\", function(isVisible)\n        if isVisible and LWA.ThrottledInit then\n            LWA.ThrottledInit()\n        end\nend)\n\nfunction LWA.UpdateResources()\n    if WeakAuras.IsImporting() then return end\n    \n    local config = LWA.GetConfig()\n    \n    local totalHeight, nb = 0, 0\n    local h1 = config.primary.height\n    local s1 = config.primary.spacing\n    local y = 0\n    local grpRegion = WeakAuras.GetRegion(RESOURCES_GROUP)\n    \n    if not resources then\n        local grpData = WeakAuras.GetData(RESOURCES_GROUP)\n        \n        resources = grpData and grpData.controlledChildren\n    end\n    \n    if grpRegion and resources and #resources > 0 then\n        if config.primary.resources_position == 2 then -- Below\n            y = h1 + s1\n        end\n        \n        grpRegion:SetOffset(0, -y)\n        \n        local isOptionsOpen = WeakAuras.IsOptionsOpen()\n        \n        local resData, resRegion, isVisible, regionType\n        local w, h = 0, 0\n        \n        local function InitResource(region, index, nb)\n            if not region then return end\n            \n            index = max(1, index or 1)\n            nb = max(1, nb or 1)\n            \n            w, h = LWA.MAX_WIDTH, 20\n            \n            if nb > 1 then\n                local s = config.primary.spacing\n                \n                w = (w + s) / nb - s\n            end\n            \n            local cg = region.configGroup\n            \n            if cg and config.resources[cg] then\n                h = config.resources[cg].height or 20\n            end\n            \n            SetRegionSize(region, w, h)\n            region.bar:Update()\n            LWA.UpdateBorder(region, true)\n            LWA.UpdateBar({ region = region }, index, nb)\n            \n            if region.bar.spark then\n                region.bar.spark:SetHeight(max(15, Round(h * 2)))\n            end\n        end\n        \n        y = 0\n        \n        for _, resId in ipairs(resources) do\n            resRegion = WeakAuras.GetRegion(resId)\n            \n            if resRegion then\n                isVisible = isOptionsOpen or resRegion:IsVisible()\n                regionType = resRegion.regionType\n                h = 0\n                \n                if \"aurabar\" == regionType then\n                    InitResource(resRegion)\n                    \n                elseif \"dynamicgroup\" == regionType then\n                    local nbChild = 0\n                    local childRegions = {}\n                    \n                    for _, region in pairs(resRegion.controlledChildren) do\n                        if region and region[\"\"] then\n                            nbChild = nbChild + 1\n                            \n                            childRegions[region[\"\"].regionData.dataIndex] = region[\"\"].regionData.region\n                        end\n                    end\n                    \n                    if not isOptionsOpen and childRegions[1] then\n                        isVisible = childRegions[1]:IsVisible()\n                    end\n                    \n                    for i, region in ipairs(childRegions) do\n                        InitResource(region, i, nbChild)\n                        \n                        region:SetYOffset(-y)\n                    end\n                end\n                \n                if isVisible then\n                    nb = nb + 1\n                    \n                    if isVisible then\n                        if \"dynamicgroup\" == regionType then\n                            resRegion:PositionChildren()\n                        else\n                            resRegion:SetOffset(0, -y)\n                        end\n                    end\n                    \n                    totalHeight = totalHeight + h\n                    y = y + h + s1\n                end\n            end\n        end\n        \n        LWA.RESOURCES_HEIGHT = totalHeight + max(nb - 1, 0) * config.primary.spacing\n    end\n    \n    grpRegion = WeakAuras.GetRegion(CORE_GROUP)\n    \n    if grpRegion then\n        grpRegion:DoPositionChildren()\n    end\n    \n    ResizeAnchorFrame()\n    \n    local castBar = WeakAuras.GetRegion(CAST_BAR)\n    \n    if castBar then\n        castBar:SetParent(UIParent)\n        \n        if local_env.parentFrame then\n            castBar:SetScale(local_env.parentFrame:GetScale())\n        end\n    end\n    \n    grpRegion = WeakAuras.GetRegion(MAINTENANCE_GROUP)\n    \n    if grpRegion then\n        grpRegion:DoPositionChildren()\n    end\n    \n    C_Timer.After(0.1, ResizeAnchorFrame)\nend\n\nfunction LWA.GrowCore(newPositions, activeRegions)\n    local nb = #activeRegions\n    \n    if nb <= 0 then\n        C_Timer.After(0.125, ResizeAnchorFrame)\n        \n        return\n    end\n    \n    local config = LWA.GetConfig()\n    \n    local w1 = config.primary.width\n    local h1 = config.primary.height\n    local s1 = config.primary.spacing\n    \n    \n    local maxCore = min(nb, config.primary.nb)\n    local x, y\n    local xOffset = ((maxCore - 1) * (w1 + s1) / 2)\n    local yOffset = 0\n    \n    if not WeakAuras.IsOptionsOpen() then\n        nbCore = max(4, maxCore)\n        \n        LWA.MAX_WIDTH = nbCore * (w1 + s1) - s1\n        \n        ResizeAnchorFrame()\n    end\n    \n    if config.primary.resources_position == 1 then  -- Above\n        yOffset = LWA.RESOURCES_HEIGHT + s1\n    end\n    \n    for i, regionData in ipairs(activeRegions) do\n        x = (i - 1) * (w1 + s1) - xOffset\n        y = -yOffset\n        \n        SetRegionSize(regionData.region, w1, h1)\n        \n        newPositions[i] = { x, y }\n        \n        if i == maxCore then break end\n    end\n    \n    local maxSecondary = nb - maxCore\n    \n    if maxSecondary > 0 then\n        local w2 = config.secondary.width\n        local h2 = config.secondary.height\n        local s2 = config.secondary.spacing\n        \n        local nbPerRow = math.floor((LWA.MAX_WIDTH + s2) / (w2 + s2)) or 1\n        local yOffset = yOffset + h1 - h2 + max(s1, s2) - s2\n        local i2, m\n        \n        if config.primary.resources_position == 2 then -- Below\n            yOffset = yOffset + LWA.RESOURCES_HEIGHT + s1\n        end\n        \n        for i, regionData in ipairs(activeRegions) do\n            if i > maxCore then\n                i2 = i - maxCore\n                m = (i2 % nbPerRow)\n                \n                if m == 1 then\n                    xOffset = (min(maxSecondary - i + maxCore, nbPerRow - 1)) * (w2 + s2) / 2\n                    yOffset = yOffset + h2 + s2\n                end\n                \n                if m == 0 then\n                    m = nbPerRow\n                end\n                \n                x = (m - 1) * (w2 + s2) - xOffset\n                y = -yOffset\n                \n                SetRegionSize(regionData.region, w2, h2)\n                \n                newPositions[i] = { x, y }\n            end\n        end\n    end\n    \n    C_Timer.After(0.125, ResizeAnchorFrame)\nend\n\nfunction LWA.GrowDynamicEffects(newPositions, activeRegions)\n    local nb = #activeRegions\n    \n    if nb <= 0 then return end\n    \n    local config = LWA.GetConfig()\n    \n    local w = config.dynamic.width\n    local h = config.dynamic.height\n    local s1 = config.primary.spacing\n    local s2 = config.dynamic.spacing\n    \n    local xOffset = 0\n    local yOffset = config.dynamic.margin + max(s1, s2) - s2 - h\n    local nbPerRow, m = math.floor(((LWA.MAX_WIDTH / 2) + s2) / (w + s2)) or 1\n    \n    for i, regionData in ipairs(activeRegions) do\n        m = (i % nbPerRow)\n        \n        if m == 1 then\n            xOffset = 0\n            yOffset = yOffset + h + s2\n        end\n        \n        if m == 0 then\n            m = nbPerRow\n        end\n        \n        newPositions[i] = { xOffset, yOffset }\n        \n        xOffset = xOffset + w + s2\n    end\nend\n\nfunction LWA.GrowDynamicSpells(newPositions, activeRegions)\n    local nb = #activeRegions\n    \n    if nb <= 0 then return end\n    \n    local config = LWA.GetConfig()\n    \n    local w = config.dynamic.width\n    local h = config.dynamic.height\n    local s1 = config.primary.spacing\n    local s2 = config.dynamic.spacing\n    \n    local xOffset = 0\n    local yOffset = config.dynamic.margin + max(s1, s2) - s2 - h\n    local nbPerRow, m = math.floor(((LWA.MAX_WIDTH / 2) + s2) / (w + s2)) or 1\n    \n    for i, regionData in ipairs(activeRegions) do\n        m = (i % nbPerRow)\n        \n        if m == 1 then\n            xOffset = 0\n            yOffset = yOffset + h + s2\n        end\n        \n        if m == 0 then\n            m = nbPerRow\n        end\n        \n        newPositions[i] = { -xOffset, yOffset }\n        \n        xOffset = xOffset + w + s2\n    end\nend\n\nfunction LWA.GrowLeftSide(newPositions, activeRegions)\n    local nb = #activeRegions\n    \n    if nb <= 0 then return end\n    \n    local config = LWA.GetConfig()\n    \n    local w1 = config.primary.width\n    local h1 = config.primary.height\n    local s1 = config.primary.spacing\n    \n    local w2 = config.side.width\n    local h2 = config.side.height\n    local s2 = config.side.spacing\n    \n    local x, y\n    local xOffset = config.side.margin + max(s1, s2)\n    local yOffset = 0\n    \n    for i, regionData in ipairs(activeRegions) do\n        x = -xOffset\n        y = -yOffset\n        \n        newPositions[i] = { x, y }\n        \n        if config.side.grow_horizontal then\n            xOffset = xOffset + w2 + s2\n        else\n            yOffset = yOffset + h2 + s2\n        end\n    end\nend\n\nfunction LWA.GrowRightSide(newPositions, activeRegions)\n    local nb = #activeRegions\n    \n    if nb <= 0 then return end\n    \n    local config = LWA.GetConfig()\n    \n    local w1 = config.primary.width\n    local h1 = config.primary.height\n    local s1 = config.primary.spacing\n    \n    local w2 = config.side.width\n    local h2 = config.side.height\n    local s2 = config.side.spacing\n    \n    local x, y\n    local xOffset = config.side.margin + max(s1, s2)\n    local yOffset = 0\n    \n    for i, regionData in ipairs(activeRegions) do\n        x = xOffset\n        y = -yOffset\n        \n        newPositions[i] = { x, y }\n        \n        if config.side.grow_horizontal then\n            xOffset = xOffset + w2 + s2\n        else\n            yOffset = yOffset + h2 + s2\n        end\n    end\nend\n\nfunction LWA.GrowMaintenance(newPositions, activeRegions)\n    local nb = #activeRegions\n    \n    if nb <= 0 then return end\n    \n    local config = LWA.GetConfig()\n    \n    local maxCore = min(nb, config.primary.nb)\n    \n    local w1 = config.primary.width\n    local h1 = config.primary.height\n    local s1 = config.primary.spacing\n    \n    local w2 = config.maintenance.width\n    local h2 = config.maintenance.height\n    local s2 = config.maintenance.spacing\n    \n    local x, y\n    local xOffset = (maxCore - 1) * (w1 + s1) / 2\n    local yOffset = config.maintenance.margin + max(s1, s2) - s2 - h2\n    \n    local nbPerRow = math.floor((LWA.MAX_WIDTH + s2) / (w2 + s2)) or 1\n    local m\n    \n    for i, regionData in ipairs(activeRegions) do\n        m = (i % nbPerRow)\n        \n        if m == 1 then\n            xOffset = (min(nb - i, nbPerRow - 1)) * (w2 + s2) / 2\n            yOffset = yOffset + h2 + s2\n        end\n        \n        if m == 0 then\n            m = nbPerRow\n        end\n        \n        x = (m - 1) * (w2 + s2) - xOffset\n        y = -yOffset\n        \n        newPositions[i] = { x, y }\n    end\nend\n\nfunction LWA.UpdateBorder(region, isBar)\n    if #region.subRegions > 0 then\n        local config, size, r, g, b, a = LWA.GetConfig(), 0\n        \n        if not isBar or (isBar and config.style.apply_border) then\n            size = config.style.border_size\n            r, g, b, a = unpack(config.style.border_color)\n        end\n        \n        for _, border in ipairs(region.subRegions) do\n            if \"subborder\" == border.type then\n                border:SetVisible(size > 0)\n                \n                if size > 0 then\n                    local bd = border:GetBackdrop()\n                    bd.edgeSize = size\n                    border:SetBackdrop(bd)\n                    border:SetBorderColor(r, g, b, a)\n                end\n            end\n        end\n    end\nend\n\nlocal function MixRGB(c1, c2, pos)\n    pos = 1 - (pos or 0.5)\n    \n    return {\n        (c1[1] * pos) + (c2[1] * (1 - pos)),\n        (c1[2] * pos) + (c2[2] * (1 - pos)),\n        (c1[3] * pos) + (c2[3] * (1 - pos)),\n        (c1[4] * pos) + (c2[4] * (1 - pos))\n    }\nend\n\nfunction LWA.UpdateBar(aura, i, nb)\n    local config = LWA.GetConfig(\"resources\")\n    local e = aura or aura_env\n    local region = e.region\n    local cg = region.configGroup\n    \n    if not (region and cg and config[cg]) then return end\n    \n    cg = config[cg]\n    \n    local cs = region.colorState or \"\"\n    \n    if cs ~= \"\" then\n        cs = cs .. \"_\"\n    end\n    \n    i = (i or region.index or 1) - (region.colorOffset or 0)\n    nb = min(region.colorMax or 99, nb or 1)\n    \n    local c1, c2 = cg[cs .. \"color1\"], cg[cs .. \"color2\"]\n    local bar = region.bar\n    \n    if c1 and c2 then\n        if cg[cs .. \"gradient\"] and cg[cs .. \"gradient\"] < 3 then\n            if nb > 1 and 1 == cg[cs .. \"gradient\"] then\n                local cc1, cc2 = c1, c2\n                \n                if i > 1 then\n                    c1 = MixRGB(cc1, cc2, (i - 1) / nb)\n                end\n                \n                c2 = MixRGB(cc1, cc2, i / nb)\n            end\n            \n            local orientation = \"HORIZONTAL\"\n            \n            if 2 == cg[cs .. \"gradient\"] then\n                orientation = \"VERTICAL\"\n                \n                local tmp = c1\n                c1 = c2\n                c2 = tmp\n            end\n            \n            bar.fg:SetGradient(orientation, CreateColor(unpack(c1)), CreateColor(unpack(c2)))\n        else\n            bar:SetForegroundColor(unpack(c1))\n        end\n        \n        if region.ot then\n            region.ot:SetColorTexture(unpack(c2))\n        end\n    end\nend\n\nfunction LWA.GrowDynamicResource(newPositions, activeRegions)\n    local nb = #activeRegions\n    \n    if nb <= 0 then return end\n    \n    local config = LWA.GetConfig()\n    \n    local s = config.primary.spacing\n    \n    local w, h = (LWA.MAX_WIDTH + s) / nb\n    local x, xOffset = 0, (LWA.MAX_WIDTH - w + s) / 2\n    \n    for i, regionData in ipairs(activeRegions) do\n        x = (i - 1) * w - xOffset\n        \n        regionData.region:SetRegionWidth(w - s)\n        LWA.UpdateBar({ region = regionData.region }, i, nb)\n        regionData.region.bar:Update()\n        \n        newPositions[i] = { x, 0 }\n    end\nend\n\nlocal function round(num, decimals)\n    local mult = 10^(decimals or 0)\n    \n    return Round(num * mult) / mult\nend\n\nlocal barFormats = {\n    \"value\",\n    \"kvalue\",\n    \"value (percent%)\",\n    \"kvalue (percent%)\",\n    \"percent%\",\n}\n\nfunction LWA.UpdateBarText(value, percent, format)\n    local text = barFormats[format] or \"value\"\n    \n    text = text:gsub(\"percent\", round(percent, 0))\n    \n    if 2 == format or 4 == format then\n        local rem = math.fmod(value, 1000) or 0\n        \n        if rem >= 950 then\n            rem = 0\n        end\n        \n        text = text:gsub(\"kvalue\", FormatLargeNumber(Round((value - rem) / 1000)) .. \".\" .. Round(rem / 100) .. \"K\"):gsub(\"%.0K\", \"K\"):gsub(\"%.\", DECIMAL_SEPERATOR)\n    else\n        text = text:gsub(\"value\", value)\n    end\n    \n    return text\nend",
-					["do_custom"] = true,
-				},
-			},
-			["uid"] = "BCw(hWr(SYH",
-			["desc"] = "Made by Luxthos - twitch.tv/luxthos",
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
-			["regionType"] = "icon",
-			["cooldown"] = false,
-			["conditions"] = {
-			},
-			["color"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0, -- [4]
-			},
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["anchorFrameType"] = "SCREEN",
-			["alpha"] = 0,
-			["cooldownTextDisabled"] = false,
-			["semver"] = "2.0.24",
-			["tocversion"] = 30401,
-			["id"] = "General Options - Warrior",
-			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 405,
-			["zoom"] = 0,
-			["config"] = {
-				["ooc_alpha"] = {
-					["ignore_enemy"] = true,
-					["alpha"] = 1,
-					["ignore_friendly"] = true,
-				},
-				["side"] = {
-					["grow_horizontal"] = false,
-					["spacing"] = 3,
-					["height"] = 36,
-					["margin"] = 3,
-					["width"] = 36,
-				},
-				["style"] = {
-					["apply_border"] = true,
-					["border_size"] = 0,
-					["zoom"] = 30,
-					["border_color"] = {
-						0, -- [1]
-						0, -- [2]
-						0, -- [3]
-						1, -- [4]
-					},
-				},
-				["dynamic"] = {
-					["height"] = 34,
-					["spacing"] = 3,
-					["margin"] = 10,
-					["width"] = 34,
-				},
-				["resources"] = {
-					["cast_bar"] = {
-						["color2"] = {
-							0.77647058823529, -- [1]
-							0.1843137254902, -- [2]
-							0.1843137254902, -- [3]
-							1, -- [4]
-						},
-						["unint_gradient"] = 1,
-						["unint_color2"] = {
-							0.70980392156863, -- [1]
-							0.70980392156863, -- [2]
-							0.70980392156863, -- [3]
-							1, -- [4]
-						},
-						["height"] = 20,
-						["gradient"] = 1,
-						["unint_color1"] = {
-							0.52549019607843, -- [1]
-							0.52549019607843, -- [2]
-							0.52549019607843, -- [3]
-							0.90000000596046, -- [4]
-						},
-						["color1"] = {
-							0.52941176470588, -- [1]
-							0.090196078431373, -- [2]
-							0.090196078431373, -- [3]
-							1, -- [4]
-						},
-					},
-					["health_bar"] = {
-						["color2"] = {
-							0.5843137254902, -- [1]
-							0.90588235294118, -- [2]
-							0.52156862745098, -- [3]
-							1, -- [4]
-						},
-						["height"] = 20,
-						["format"] = 1,
-						["gradient"] = 1,
-						["color1"] = {
-							0.34509803921569, -- [1]
-							0.64313725490196, -- [2]
-							0.28235294117647, -- [3]
-							1, -- [4]
-						},
-					},
-				},
-				["primary"] = {
-					["spacing"] = 3,
-					["height"] = 48,
-					["resources_position"] = 2,
-					["nb"] = 8,
-					["width"] = 48,
-				},
-				["maintenance"] = {
-					["height"] = 36,
-					["spacing"] = 3,
-					["margin"] = 10,
-					["width"] = 36,
-				},
-				["secondary"] = {
-					["height"] = 32,
-					["width"] = 32,
-					["spacing"] = 3,
-				},
-			},
-			["inverse"] = false,
-			["parent"] = "Luxthos - Warrior",
-			["displayIcon"] = 134520,
-			["information"] = {
-				["forceEvents"] = true,
-			},
+			["uid"] = "BCw(hWr(SYH",
 			["authorOptions"] = {
 				{
 					["useName"] = true,
@@ -3718,6 +3564,160 @@ WeakAurasSaved = {
 					["width"] = 2,
 				}, -- [13]
 			},
+			["color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0, -- [4]
+			},
+			["regionType"] = "icon",
+			["cooldown"] = false,
+			["conditions"] = {
+			},
+			["animation"] = {
+				["start"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+					["custom"] = "local local_env = aura_env\nlocal CLASS = local_env.id:gsub(\"General Options %- \", \"\")\nlocal_env.CLASS = CLASS\n\nLWA = LWA or {}\nLWA[CLASS] = LWA[CLASS] or {}\n\nlocal LWA = LWA[CLASS]\n\nLWA.config = nil\nLWA.configs = LWA.configs or {}\nLWA.configs[\"general\"] = local_env.config\n\nLWA.CLASS = CLASS\nLWA.MAX_WIDTH = 405\nLWA.RESOURCES_HEIGHT = 0\n\nlocal CLASS_GROUP = \"Luxthos - \" .. CLASS\nlocal CLASS_OPTIONS = \"Class Options - \" .. CLASS\nlocal CORE_GROUP = \"Core - \" .. CLASS\nlocal RESOURCES_GROUP = \"Resources - \" .. CLASS\nlocal DYNAMIC_EFFECTS_GROUP = \"Dynamic Effects - \" .. CLASS\nlocal DYNAMIC_SPELLS_GROUP = \"Dynamic Spells - \" .. CLASS\nlocal LEFT_SIDE_GROUP = \"Left Side - \" .. CLASS\nlocal RIGHT_SIDE_GROUP = \"Right Side - \" .. CLASS\nlocal MAINTENANCE_GROUP = \"Maintenance - \" .. CLASS\nlocal CAST_BAR = \"Cast Bar - \" .. CLASS\n\nlocal_env.parent = CLASS_GROUP\nlocal nbCore = 8\nlocal resources\n\nlocal function tclone(t1)\n    local t = {}\n    \n    if t1 then\n        for k, v in pairs(t1) do\n            if \"table\" == type(v) then\n                v = tclone(v)\n            end\n            \n            if \"string\" == type(k) then\n                t[k] = v\n            else\n                tinsert(t, v)\n            end\n        end\n    end\n    \n    return t\nend\n\nlocal function tmerge(...)\n    local ts = {...}\n    local t = tclone(ts[1])\n    local t2\n    \n    for i = 2, #ts do\n        t2 = ts[i] or {}\n        \n        for k, v in pairs(t2) do\n            if \"table\" == type(v) then\n                v = tclone(v)\n                \n                if t[k] and #t[k] == 0 then\n                    t[k] = tmerge(t[k], v)\n                else\n                    t[k] = v\n                end\n            else\n                t[k] = v\n            end\n        end\n    end\n    \n    return t\nend\n\nlocal function SetRegionSize(r, w, h)\n    r:SetRegionWidth(w)\n    r:SetRegionHeight(h)\nend\n\nlocal function ResizeAnchorFrame()\n    local config = LWA.GetConfig()\n    local h = 0\n    local cr = WeakAuras.GetRegion(CORE_GROUP)\n    \n    if cr and cr:IsVisible() then\n        h = cr:GetHeight()\n        \n        if config.primary.resources_position == 1 then -- Above\n            h = h + config.primary.spacing + LWA.RESOURCES_HEIGHT\n        end\n    end\n    \n    if 1 == h % 2 then\n        h = h + 1\n    end\n    \n    SetRegionSize(local_env.region, LWA.MAX_WIDTH, max(1, h, config.primary.height + config.primary.spacing + LWA.RESOURCES_HEIGHT))\n    \n    local g = WeakAuras.GetRegion(g)\n    \n    if g then\n        g:PositionChildren()\n        \n        if 0 == #g.sortedChildren then\n            g:SetHeight(configs[i].height)\n            g.currentHeight = configs[i].height\n        end\n    end\nend\n\nfunction LWA.GetConfig(grp, force)\n    local default = {\n        style = {\n            border_size = 0,\n            border_color = { [1] = 0, [2] = 0, [3] = 0, [4] = 1 },\n            apply_border = true,\n            zoom = 30,\n        },\n        primary = {\n            nb = 8,\n            width = 48,\n            height = 48,\n            spacing = 0,\n            resources_position = 2, -- Below\n        },\n        secondary = {\n            width = 38,\n            height = 38,\n            spacing = 0,\n        },\n        dynamic = {\n            width = 38,\n            height = 38,\n            spacing = 0,\n            margin = 10,\n        },\n        side = {\n            width = 36,\n            height = 36,\n            spacing = 0,\n            margin = 3,\n            grow_horizontal = 0,\n        },\n        maintenance = {\n            width = 36,\n            height = 36,\n            spacing = 0,\n            margin = 10,\n        },\n        ooc_alpha = {\n            alpha = 1,\n            ignore_enemy = true,\n            ignore_friendly = true,\n        },\n        resources = {\n            health_bar = {\n                format = 1\n            },\n            mana_bar = {\n                format = 1\n            }\n        },\n    }\n    \n    if force or not LWA.config or WeakAuras.IsOptionsOpen() then\n        LWA.config = tmerge(\n            default,\n            LWA.configs[\"general\"],\n            LWA.configs[\"class\"] or {}\n        )\n    end\n    \n    if grp then\n        return LWA.config[grp] or {}\n    end\n    \n    return LWA.config\nend\n\nlocal throttledInitHandler = nil\nlocal initLastRun = 0\n\nfunction LWA.ThrottledInit()\n    if throttledInitHandler then return end\n    \n    local currentTime = time()\n    \n    if WeakAuras.IsImporting() then\n        throttledInitHandler = C_Timer.NewTimer(2, LWA.ThrottledInit)\n        \n    elseif initLastRun <= currentTime - 0.2 then\n        throttledInitHandler = C_Timer.NewTimer(0.05, LWA.Init)\n    else\n        throttledInitHandler = C_Timer.NewTimer(max(0.05, currentTime - initLastRun), LWA.Init)\n    end\nend\n\nfunction LWA.Init()\n    if WeakAuras.IsImporting() then return end\n    \n    initLastRun = time()\n    \n    local config = LWA.GetConfig(nil, true)\n    local isOptionsOpen = WeakAuras.IsOptionsOpen()\n    local zoom = config.style.zoom / 100\n    \n    if throttledInitHandler then\n        throttledInitHandler:Cancel()\n        throttledInitHandler = nil\n    end\n    \n    if not local_env.parentFrame then\n        local_env.parentFrame = WeakAuras.GetRegion(CLASS_GROUP)\n    end\n    \n    if local_env.parentFrame and not local_env.parentFrame.SetRealScale then\n        local_env.parentFrame.SetRealScale = local_env.parentFrame.SetScale\n        \n        local_env.parentFrame.SetScale = function(self, scale)\n            local_env.parentFrame:SetRealScale(scale)\n            local castBar = WeakAuras.GetRegion(CAST_BAR)\n            \n            if castBar then\n                castBar:SetScale(scale)\n            end\n        end\n    end\n    \n    if isOptionsOpen then\n        nbCore = config.primary.nb\n    else\n        nbCore = max(4, min(nbCore, config.primary.nb))\n    end\n    \n    LWA.MAX_WIDTH = nbCore * (config.primary.width + config.primary.spacing) - config.primary.spacing\n    \n    local function InitIcons(group, c, selfPoint)\n        local grpRegion = WeakAuras.GetRegion(group)\n        \n        if not grpRegion then return end\n        \n        local i, isAbilities = 0, CORE_GROUP == group\n        \n        for childId, regions in pairs(grpRegion.controlledChildren) do\n            local region = regions[\"\"] and regions[\"\"].regionData.region\n            \n            i = i + 1\n            \n            if region then\n                region:SetAnchor(selfPoint, region.relativeTo, region.relativePoint)\n                \n                if region.SetZoom then\n                    region:SetZoom(min(1, zoom + (region.extraZoom or 0)))\n                else\n                    print(\"LWA Issue: \" .. CLASS .. \" > \" .. group .. \" > \" .. childId)\n                end\n                \n                if isAbilities and i > nbCore then\n                    SetRegionSize(region, config.secondary.width, config.secondary.height)\n                else\n                    SetRegionSize(region, c.width, c.height)\n                end\n                \n                LWA.UpdateBorder(region)\n            end\n        end\n        \n        if isAbilities then\n            grpRegion:PositionChildren()\n            \n            if not isOptionsOpen then\n                nbCore = max(4, min(#grpRegion.sortedChildren, config.primary.nb))\n                \n                LWA.MAX_WIDTH = nbCore * (config.primary.width + config.primary.spacing) - config.primary.spacing\n            end\n            \n            local_env.region:SetRegionWidth(LWA.MAX_WIDTH)\n        end\n    end\n    \n    InitIcons(CORE_GROUP, config.primary, \"TOP\")\n    InitIcons(LEFT_SIDE_GROUP, config.side, \"TOPRIGHT\")\n    InitIcons(RIGHT_SIDE_GROUP, config.side, \"TOPLEFT\")\n    InitIcons(MAINTENANCE_GROUP, config.maintenance, \"TOP\")\n    InitIcons(DYNAMIC_EFFECTS_GROUP, config.dynamic, \"BOTTOMLEFT\")\n    InitIcons(DYNAMIC_SPELLS_GROUP, config.dynamic, \"BOTTOMRIGHT\")\n    \n    LWA.UpdateResources()\n    \n    for i, g in ipairs({ DYNAMIC_EFFECTS_GROUP, DYNAMIC_SPELLS_GROUP, LEFT_SIDE_GROUP, RIGHT_SIDE_GROUP }) do\n        g = WeakAuras.GetRegion(g)\n        \n        if g then\n            g:PositionChildren()\n        end\n    end\nend\n\nhooksecurefunc(\"SetUIVisibility\", function(isVisible)\n        if isVisible and LWA.ThrottledInit then\n            LWA.ThrottledInit()\n        end\nend)\n\nfunction LWA.UpdateResources()\n    if WeakAuras.IsImporting() then return end\n    \n    local config = LWA.GetConfig()\n    \n    local totalHeight, nb = 0, 0\n    local h1 = config.primary.height\n    local s1 = config.primary.spacing\n    local y = 0\n    local grpRegion = WeakAuras.GetRegion(RESOURCES_GROUP)\n    \n    if not resources then\n        local grpData = WeakAuras.GetData(RESOURCES_GROUP)\n        \n        resources = grpData and grpData.controlledChildren\n    end\n    \n    if grpRegion and resources and #resources > 0 then\n        if config.primary.resources_position == 2 then -- Below\n            y = h1 + s1\n        end\n        \n        grpRegion:SetOffset(0, -y)\n        \n        local isOptionsOpen = WeakAuras.IsOptionsOpen()\n        \n        local resData, resRegion, isVisible, regionType\n        local w, h = 0, 0\n        \n        local function InitResource(region, index, nb)\n            if not region then return end\n            \n            index = max(1, index or 1)\n            nb = max(1, nb or 1)\n            \n            w, h = LWA.MAX_WIDTH, 20\n            \n            if nb > 1 then\n                local s = config.primary.spacing\n                \n                w = (w + s) / nb - s\n            end\n            \n            local cg = region.configGroup\n            \n            if cg and config.resources[cg] then\n                h = config.resources[cg].height or 20\n            end\n            \n            SetRegionSize(region, w, h)\n            region.bar:Update()\n            LWA.UpdateBorder(region, true)\n            LWA.UpdateBar({ region = region }, index, nb)\n            \n            if region.bar.spark then\n                region.bar.spark:SetHeight(max(15, Round(h * 2)))\n            end\n        end\n        \n        y = 0\n        \n        for _, resId in ipairs(resources) do\n            resRegion = WeakAuras.GetRegion(resId)\n            \n            if resRegion then\n                isVisible = isOptionsOpen or resRegion:IsVisible()\n                regionType = resRegion.regionType\n                h = 0\n                \n                if \"aurabar\" == regionType then\n                    InitResource(resRegion)\n                    \n                elseif \"dynamicgroup\" == regionType then\n                    local nbChild = 0\n                    local childRegions = {}\n                    \n                    for _, region in pairs(resRegion.controlledChildren) do\n                        if region and region[\"\"] then\n                            nbChild = nbChild + 1\n                            \n                            childRegions[region[\"\"].regionData.dataIndex] = region[\"\"].regionData.region\n                        end\n                    end\n                    \n                    if not isOptionsOpen and childRegions[1] then\n                        isVisible = childRegions[1]:IsVisible()\n                    end\n                    \n                    for i, region in ipairs(childRegions) do\n                        InitResource(region, i, nbChild)\n                        \n                        region:SetYOffset(-y)\n                    end\n                end\n                \n                if isVisible then\n                    nb = nb + 1\n                    \n                    if isVisible then\n                        if \"dynamicgroup\" == regionType then\n                            resRegion:PositionChildren()\n                        else\n                            resRegion:SetOffset(0, -y)\n                        end\n                    end\n                    \n                    totalHeight = totalHeight + h\n                    y = y + h + s1\n                end\n            end\n        end\n        \n        LWA.RESOURCES_HEIGHT = totalHeight + max(nb - 1, 0) * config.primary.spacing\n    end\n    \n    grpRegion = WeakAuras.GetRegion(CORE_GROUP)\n    \n    if grpRegion then\n        grpRegion:DoPositionChildren()\n    end\n    \n    ResizeAnchorFrame()\n    \n    local castBar = WeakAuras.GetRegion(CAST_BAR)\n    \n    if castBar then\n        castBar:SetParent(UIParent)\n        \n        if local_env.parentFrame then\n            castBar:SetScale(local_env.parentFrame:GetScale())\n        end\n    end\n    \n    grpRegion = WeakAuras.GetRegion(MAINTENANCE_GROUP)\n    \n    if grpRegion then\n        grpRegion:DoPositionChildren()\n    end\n    \n    C_Timer.After(0.1, ResizeAnchorFrame)\nend\n\nfunction LWA.GrowCore(newPositions, activeRegions)\n    local nb = #activeRegions\n    \n    if nb <= 0 then\n        C_Timer.After(0.125, ResizeAnchorFrame)\n        \n        return\n    end\n    \n    local config = LWA.GetConfig()\n    \n    local w1 = config.primary.width\n    local h1 = config.primary.height\n    local s1 = config.primary.spacing\n    \n    \n    local maxCore = min(nb, config.primary.nb)\n    local x, y\n    local xOffset = ((maxCore - 1) * (w1 + s1) / 2)\n    local yOffset = 0\n    \n    if not WeakAuras.IsOptionsOpen() then\n        nbCore = max(4, maxCore)\n        \n        LWA.MAX_WIDTH = nbCore * (w1 + s1) - s1\n        \n        ResizeAnchorFrame()\n    end\n    \n    if config.primary.resources_position == 1 then  -- Above\n        yOffset = LWA.RESOURCES_HEIGHT + s1\n    end\n    \n    for i, regionData in ipairs(activeRegions) do\n        x = (i - 1) * (w1 + s1) - xOffset\n        y = -yOffset\n        \n        SetRegionSize(regionData.region, w1, h1)\n        \n        newPositions[i] = { x, y }\n        \n        if i == maxCore then break end\n    end\n    \n    local maxSecondary = nb - maxCore\n    \n    if maxSecondary > 0 then\n        local w2 = config.secondary.width\n        local h2 = config.secondary.height\n        local s2 = config.secondary.spacing\n        \n        local nbPerRow = math.floor((LWA.MAX_WIDTH + s2) / (w2 + s2)) or 1\n        local yOffset = yOffset + h1 - h2 + max(s1, s2) - s2\n        local i2, m\n        \n        if config.primary.resources_position == 2 then -- Below\n            yOffset = yOffset + LWA.RESOURCES_HEIGHT + s1\n        end\n        \n        for i, regionData in ipairs(activeRegions) do\n            if i > maxCore then\n                i2 = i - maxCore\n                m = (i2 % nbPerRow)\n                \n                if m == 1 then\n                    xOffset = (min(maxSecondary - i + maxCore, nbPerRow - 1)) * (w2 + s2) / 2\n                    yOffset = yOffset + h2 + s2\n                end\n                \n                if m == 0 then\n                    m = nbPerRow\n                end\n                \n                x = (m - 1) * (w2 + s2) - xOffset\n                y = -yOffset\n                \n                SetRegionSize(regionData.region, w2, h2)\n                \n                newPositions[i] = { x, y }\n            end\n        end\n    end\n    \n    C_Timer.After(0.125, ResizeAnchorFrame)\nend\n\nfunction LWA.GrowDynamicEffects(newPositions, activeRegions)\n    local nb = #activeRegions\n    \n    if nb <= 0 then return end\n    \n    local config = LWA.GetConfig()\n    \n    local w = config.dynamic.width\n    local h = config.dynamic.height\n    local s1 = config.primary.spacing\n    local s2 = config.dynamic.spacing\n    \n    local xOffset = 0\n    local yOffset = config.dynamic.margin + max(s1, s2) - s2 - h\n    local nbPerRow, m = math.floor(((LWA.MAX_WIDTH / 2) + s2) / (w + s2)) or 1\n    \n    for i, regionData in ipairs(activeRegions) do\n        m = (i % nbPerRow)\n        \n        if m == 1 then\n            xOffset = 0\n            yOffset = yOffset + h + s2\n        end\n        \n        if m == 0 then\n            m = nbPerRow\n        end\n        \n        newPositions[i] = { xOffset, yOffset }\n        \n        xOffset = xOffset + w + s2\n    end\nend\n\nfunction LWA.GrowDynamicSpells(newPositions, activeRegions)\n    local nb = #activeRegions\n    \n    if nb <= 0 then return end\n    \n    local config = LWA.GetConfig()\n    \n    local w = config.dynamic.width\n    local h = config.dynamic.height\n    local s1 = config.primary.spacing\n    local s2 = config.dynamic.spacing\n    \n    local xOffset = 0\n    local yOffset = config.dynamic.margin + max(s1, s2) - s2 - h\n    local nbPerRow, m = math.floor(((LWA.MAX_WIDTH / 2) + s2) / (w + s2)) or 1\n    \n    for i, regionData in ipairs(activeRegions) do\n        m = (i % nbPerRow)\n        \n        if m == 1 then\n            xOffset = 0\n            yOffset = yOffset + h + s2\n        end\n        \n        if m == 0 then\n            m = nbPerRow\n        end\n        \n        newPositions[i] = { -xOffset, yOffset }\n        \n        xOffset = xOffset + w + s2\n    end\nend\n\nfunction LWA.GrowLeftSide(newPositions, activeRegions)\n    local nb = #activeRegions\n    \n    if nb <= 0 then return end\n    \n    local config = LWA.GetConfig()\n    \n    local w1 = config.primary.width\n    local h1 = config.primary.height\n    local s1 = config.primary.spacing\n    \n    local w2 = config.side.width\n    local h2 = config.side.height\n    local s2 = config.side.spacing\n    \n    local x, y\n    local xOffset = config.side.margin + max(s1, s2)\n    local yOffset = 0\n    \n    for i, regionData in ipairs(activeRegions) do\n        x = -xOffset\n        y = -yOffset\n        \n        newPositions[i] = { x, y }\n        \n        if config.side.grow_horizontal then\n            xOffset = xOffset + w2 + s2\n        else\n            yOffset = yOffset + h2 + s2\n        end\n    end\nend\n\nfunction LWA.GrowRightSide(newPositions, activeRegions)\n    local nb = #activeRegions\n    \n    if nb <= 0 then return end\n    \n    local config = LWA.GetConfig()\n    \n    local w1 = config.primary.width\n    local h1 = config.primary.height\n    local s1 = config.primary.spacing\n    \n    local w2 = config.side.width\n    local h2 = config.side.height\n    local s2 = config.side.spacing\n    \n    local x, y\n    local xOffset = config.side.margin + max(s1, s2)\n    local yOffset = 0\n    \n    for i, regionData in ipairs(activeRegions) do\n        x = xOffset\n        y = -yOffset\n        \n        newPositions[i] = { x, y }\n        \n        if config.side.grow_horizontal then\n            xOffset = xOffset + w2 + s2\n        else\n            yOffset = yOffset + h2 + s2\n        end\n    end\nend\n\nfunction LWA.GrowMaintenance(newPositions, activeRegions)\n    local nb = #activeRegions\n    \n    if nb <= 0 then return end\n    \n    local config = LWA.GetConfig()\n    \n    local maxCore = min(nb, config.primary.nb)\n    \n    local w1 = config.primary.width\n    local h1 = config.primary.height\n    local s1 = config.primary.spacing\n    \n    local w2 = config.maintenance.width\n    local h2 = config.maintenance.height\n    local s2 = config.maintenance.spacing\n    \n    local x, y\n    local xOffset = (maxCore - 1) * (w1 + s1) / 2\n    local yOffset = config.maintenance.margin + max(s1, s2) - s2 - h2\n    \n    local nbPerRow = math.floor((LWA.MAX_WIDTH + s2) / (w2 + s2)) or 1\n    local m\n    \n    for i, regionData in ipairs(activeRegions) do\n        m = (i % nbPerRow)\n        \n        if m == 1 then\n            xOffset = (min(nb - i, nbPerRow - 1)) * (w2 + s2) / 2\n            yOffset = yOffset + h2 + s2\n        end\n        \n        if m == 0 then\n            m = nbPerRow\n        end\n        \n        x = (m - 1) * (w2 + s2) - xOffset\n        y = -yOffset\n        \n        newPositions[i] = { x, y }\n    end\nend\n\nfunction LWA.UpdateBorder(region, isBar)\n    if #region.subRegions > 0 then\n        local config, size, r, g, b, a = LWA.GetConfig(), 0\n        \n        if not isBar or (isBar and config.style.apply_border) then\n            size = config.style.border_size\n            r, g, b, a = unpack(config.style.border_color)\n        end\n        \n        for _, border in ipairs(region.subRegions) do\n            if \"subborder\" == border.type then\n                border:SetVisible(size > 0)\n                \n                if size > 0 then\n                    local bd = border:GetBackdrop()\n                    bd.edgeSize = size\n                    border:SetBackdrop(bd)\n                    border:SetBorderColor(r, g, b, a)\n                end\n            end\n        end\n    end\nend\n\nlocal function MixRGB(c1, c2, pos)\n    pos = 1 - (pos or 0.5)\n    \n    return {\n        (c1[1] * pos) + (c2[1] * (1 - pos)),\n        (c1[2] * pos) + (c2[2] * (1 - pos)),\n        (c1[3] * pos) + (c2[3] * (1 - pos)),\n        (c1[4] * pos) + (c2[4] * (1 - pos))\n    }\nend\n\nfunction LWA.UpdateBar(aura, i, nb)\n    local config = LWA.GetConfig(\"resources\")\n    local e = aura or aura_env\n    local region = e.region\n    local cg = region.configGroup\n    \n    if not (region and cg and config[cg]) then return end\n    \n    cg = config[cg]\n    \n    local cs = region.colorState or \"\"\n    \n    if cs ~= \"\" then\n        cs = cs .. \"_\"\n    end\n    \n    i = (i or region.index or 1) - (region.colorOffset or 0)\n    nb = min(region.colorMax or 99, nb or 1)\n    \n    local c1, c2 = cg[cs .. \"color1\"], cg[cs .. \"color2\"]\n    local bar = region.bar\n    \n    if c1 and c2 then\n        if cg[cs .. \"gradient\"] and cg[cs .. \"gradient\"] < 3 then\n            if nb > 1 and 1 == cg[cs .. \"gradient\"] then\n                local cc1, cc2 = c1, c2\n                \n                if i > 1 then\n                    c1 = MixRGB(cc1, cc2, (i - 1) / nb)\n                end\n                \n                c2 = MixRGB(cc1, cc2, i / nb)\n            end\n            \n            local orientation = \"HORIZONTAL\"\n            \n            if 2 == cg[cs .. \"gradient\"] then\n                orientation = \"VERTICAL\"\n                \n                local tmp = c1\n                c1 = c2\n                c2 = tmp\n            end\n            \n            bar.fg:SetGradient(orientation, CreateColor(unpack(c1)), CreateColor(unpack(c2)))\n        else\n            bar:SetForegroundColor(unpack(c1))\n        end\n        \n        if region.ot then\n            region.ot:SetColorTexture(unpack(c2))\n        end\n    end\nend\n\nfunction LWA.GrowDynamicResource(newPositions, activeRegions)\n    local nb = #activeRegions\n    \n    if nb <= 0 then return end\n    \n    local config = LWA.GetConfig()\n    \n    local s = config.primary.spacing\n    \n    local w, h = (LWA.MAX_WIDTH + s) / nb\n    local x, xOffset = 0, (LWA.MAX_WIDTH - w + s) / 2\n    \n    for i, regionData in ipairs(activeRegions) do\n        x = (i - 1) * w - xOffset\n        \n        regionData.region:SetRegionWidth(w - s)\n        LWA.UpdateBar({ region = regionData.region }, i, nb)\n        regionData.region.bar:Update()\n        \n        newPositions[i] = { x, 0 }\n    end\nend\n\nlocal function round(num, decimals)\n    local mult = 10^(decimals or 0)\n    \n    return Round(num * mult) / mult\nend\n\nlocal barFormats = {\n    \"value\",\n    \"kvalue\",\n    \"value (percent%)\",\n    \"kvalue (percent%)\",\n    \"percent%\",\n}\n\nfunction LWA.UpdateBarText(value, percent, format)\n    local text = barFormats[format] or \"value\"\n    \n    text = text:gsub(\"percent\", round(percent, 0))\n    \n    if 2 == format or 4 == format then\n        local rem = math.fmod(value, 1000) or 0\n        \n        if rem >= 950 then\n            rem = 0\n        end\n        \n        text = text:gsub(\"kvalue\", FormatLargeNumber(Round((value - rem) / 1000)) .. \".\" .. Round(rem / 100) .. \"K\"):gsub(\"%.0K\", \"K\"):gsub(\"%.\", DECIMAL_SEPERATOR)\n    else\n        text = text:gsub(\"value\", value)\n    end\n    \n    return text\nend",
+					["do_custom"] = true,
+				},
+			},
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 0,
+			["zoom"] = 0,
+			["semver"] = "2.0.24",
+			["tocversion"] = 30401,
+			["id"] = "General Options - Warrior",
+			["frameStrata"] = 1,
+			["useCooldownModRate"] = true,
+			["width"] = 405,
+			["cooldownTextDisabled"] = false,
+			["config"] = {
+				["maintenance"] = {
+					["height"] = 36,
+					["spacing"] = 3,
+					["margin"] = 10,
+					["width"] = 36,
+				},
+				["style"] = {
+					["apply_border"] = true,
+					["border_size"] = 0,
+					["zoom"] = 30,
+					["border_color"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				},
+				["side"] = {
+					["grow_horizontal"] = false,
+					["spacing"] = 3,
+					["height"] = 36,
+					["margin"] = 3,
+					["width"] = 36,
+				},
+				["dynamic"] = {
+					["height"] = 34,
+					["spacing"] = 3,
+					["margin"] = 10,
+					["width"] = 34,
+				},
+				["resources"] = {
+					["cast_bar"] = {
+						["color2"] = {
+							0.77647058823529, -- [1]
+							0.1843137254902, -- [2]
+							0.1843137254902, -- [3]
+							1, -- [4]
+						},
+						["unint_gradient"] = 1,
+						["unint_color2"] = {
+							0.70980392156863, -- [1]
+							0.70980392156863, -- [2]
+							0.70980392156863, -- [3]
+							1, -- [4]
+						},
+						["height"] = 20,
+						["gradient"] = 1,
+						["unint_color1"] = {
+							0.52549019607843, -- [1]
+							0.52549019607843, -- [2]
+							0.52549019607843, -- [3]
+							0.90000000596046, -- [4]
+						},
+						["color1"] = {
+							0.52941176470588, -- [1]
+							0.090196078431373, -- [2]
+							0.090196078431373, -- [3]
+							1, -- [4]
+						},
+					},
+					["health_bar"] = {
+						["color2"] = {
+							0.5843137254902, -- [1]
+							0.90588235294118, -- [2]
+							0.52156862745098, -- [3]
+							1, -- [4]
+						},
+						["height"] = 20,
+						["format"] = 1,
+						["gradient"] = 1,
+						["color1"] = {
+							0.34509803921569, -- [1]
+							0.64313725490196, -- [2]
+							0.28235294117647, -- [3]
+							1, -- [4]
+						},
+					},
+				},
+				["primary"] = {
+					["spacing"] = 3,
+					["height"] = 48,
+					["resources_position"] = 2,
+					["nb"] = 8,
+					["width"] = 48,
+				},
+				["ooc_alpha"] = {
+					["ignore_enemy"] = true,
+					["alpha"] = 1,
+					["ignore_friendly"] = true,
+				},
+				["secondary"] = {
+					["height"] = 32,
+					["width"] = 32,
+					["spacing"] = 3,
+				},
+			},
+			["inverse"] = false,
+			["parent"] = "Luxthos - Warrior",
+			["displayIcon"] = 134520,
+			["information"] = {
+				["forceEvents"] = true,
+			},
+			["desc"] = "Made by Luxthos - twitch.tv/luxthos",
 		},
 		["Revenge"] = {
 			["iconSource"] = 0,
@@ -3873,7 +3873,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "g0YSRW7FEYT",
 			["color"] = {
 				1, -- [1]
@@ -3996,14 +3996,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Revenge",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = false,
@@ -4227,9 +4227,8 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "xsfVJcdfNaR",
-			["icon"] = true,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -4251,22 +4250,27 @@ WeakAurasSaved = {
 					["easeType"] = "none",
 				},
 			},
+			["icon"] = true,
 			["regionType"] = "icon",
 			["cooldown"] = true,
-			["authorOptions"] = {
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
 			["parent"] = "Dynamic Effects - Warrior",
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Heightened Reflexes",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = false,
@@ -4294,11 +4298,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["authorOptions"] = {
 			},
 		},
 		["Heroic Fury"] = {
@@ -4422,7 +4422,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "oS3FD4cbz3K",
 			["color"] = {
 				1, -- [1]
@@ -4482,14 +4482,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Heroic Fury",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -4732,9 +4732,8 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "jilihLUmXk7",
-			["icon"] = true,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -4756,22 +4755,27 @@ WeakAurasSaved = {
 					["easeType"] = "none",
 				},
 			},
+			["icon"] = true,
 			["regionType"] = "icon",
 			["cooldown"] = true,
-			["authorOptions"] = {
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
 			["parent"] = "Dynamic Effects - Warrior",
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Blood Drinker",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = false,
@@ -4799,11 +4803,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["authorOptions"] = {
 			},
 		},
 		["Disarm"] = {
@@ -4946,7 +4946,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "5oSU0la1zLU",
 			["color"] = {
 				1, -- [1]
@@ -5034,14 +5034,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Disarm",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -5266,9 +5266,8 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "kNFonCXyVi3",
-			["icon"] = true,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -5290,22 +5289,27 @@ WeakAurasSaved = {
 					["easeType"] = "none",
 				},
 			},
+			["icon"] = true,
 			["regionType"] = "icon",
 			["cooldown"] = true,
-			["authorOptions"] = {
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
 			["parent"] = "Dynamic Effects - Warrior",
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Spirits of the Lost",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = false,
@@ -5333,11 +5337,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["authorOptions"] = {
 			},
 		},
 		["Class Options - Warrior"] = {
@@ -5408,85 +5408,8 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-				["init"] = {
-					["custom"] = "aura_env.CLASS = aura_env.id:gsub(\"Class Options %- \", \"\")\n\nLWA = LWA or {}\nLWA[aura_env.CLASS] = LWA[aura_env.CLASS] or {}\n\nlocal LWA = LWA[aura_env.CLASS]\n\nLWA.configs = LWA.configs or {}\nLWA.configs[\"class\"] = aura_env.config\n\n",
-					["do_custom"] = true,
-				},
-			},
-			["uid"] = "Sitz2ri3mP3",
-			["desc"] = "Made by Luxthos - twitch.tv/luxthos",
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
-			["regionType"] = "icon",
-			["cooldown"] = false,
-			["conditions"] = {
-			},
-			["color"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0, -- [4]
-			},
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
-			["anchorFrameType"] = "SCREEN",
-			["alpha"] = 0,
-			["cooldownTextDisabled"] = false,
-			["semver"] = "2.0.24",
-			["tocversion"] = 30401,
-			["id"] = "Class Options - Warrior",
-			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 1,
-			["zoom"] = 0,
-			["config"] = {
-				["resources"] = {
-					["rage_bar"] = {
-						["height"] = 20,
-						["gradient"] = 1,
-						["color2"] = {
-							0.90980392156863, -- [1]
-							0.26666666666667, -- [2]
-							0.12156862745098, -- [3]
-							1, -- [4]
-						},
-						["color1"] = {
-							0.69019607843137, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-				},
-			},
-			["inverse"] = false,
-			["parent"] = "Luxthos - Warrior",
-			["displayIcon"] = 134520,
-			["information"] = {
-				["forceEvents"] = true,
-			},
+			["uid"] = "Sitz2ri3mP3",
 			["authorOptions"] = {
 				{
 					["subOptions"] = {
@@ -5603,6 +5526,83 @@ WeakAurasSaved = {
 					["size"] = 10,
 				}, -- [1]
 			},
+			["color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0, -- [4]
+			},
+			["regionType"] = "icon",
+			["cooldown"] = false,
+			["conditions"] = {
+			},
+			["animation"] = {
+				["start"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+				["init"] = {
+					["custom"] = "aura_env.CLASS = aura_env.id:gsub(\"Class Options %- \", \"\")\n\nLWA = LWA or {}\nLWA[aura_env.CLASS] = LWA[aura_env.CLASS] or {}\n\nlocal LWA = LWA[aura_env.CLASS]\n\nLWA.configs = LWA.configs or {}\nLWA.configs[\"class\"] = aura_env.config\n\n",
+					["do_custom"] = true,
+				},
+			},
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 0,
+			["zoom"] = 0,
+			["semver"] = "2.0.24",
+			["tocversion"] = 30401,
+			["id"] = "Class Options - Warrior",
+			["frameStrata"] = 1,
+			["useCooldownModRate"] = true,
+			["width"] = 1,
+			["cooldownTextDisabled"] = false,
+			["config"] = {
+				["resources"] = {
+					["rage_bar"] = {
+						["height"] = 20,
+						["gradient"] = 1,
+						["color2"] = {
+							0.90980392156863, -- [1]
+							0.26666666666667, -- [2]
+							0.12156862745098, -- [3]
+							1, -- [4]
+						},
+						["color1"] = {
+							0.69019607843137, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+				},
+			},
+			["inverse"] = false,
+			["parent"] = "Luxthos - Warrior",
+			["displayIcon"] = 134520,
+			["information"] = {
+				["forceEvents"] = true,
+			},
+			["desc"] = "Made by Luxthos - twitch.tv/luxthos",
 		},
 		["Thunder Clap"] = {
 			["iconSource"] = -1,
@@ -5768,7 +5768,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "Kl5Bah0uxb8",
 			["color"] = {
 				1, -- [1]
@@ -5862,14 +5862,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Thunder Clap",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -6061,7 +6061,7 @@ WeakAurasSaved = {
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
 					["type"] = "subtext",
-					["text_anchorYOffset"] = -4,
+					["text_shadowYOffset"] = 0,
 					["text_color"] = {
 						1, -- [1]
 						0.88627450980392, -- [2]
@@ -6070,7 +6070,7 @@ WeakAurasSaved = {
 					},
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_shadowYOffset"] = 0,
+					["text_anchorYOffset"] = -4,
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
@@ -6123,7 +6123,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "4Kkrq2XIyNO",
 			["color"] = {
 				1, -- [1]
@@ -6223,14 +6223,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Shield Block",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = false,
@@ -6363,7 +6363,7 @@ WeakAurasSaved = {
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
 					["type"] = "subtext",
-					["text_anchorYOffset"] = -4,
+					["text_shadowYOffset"] = 0,
 					["text_color"] = {
 						1, -- [1]
 						0.88627450980392, -- [2]
@@ -6372,7 +6372,7 @@ WeakAurasSaved = {
 					},
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_shadowYOffset"] = 0,
+					["text_anchorYOffset"] = -4,
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
@@ -6431,8 +6431,6 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["zoom"] = 0.3,
-			["cooldownEdge"] = true,
-			["regionType"] = "icon",
 			["actions"] = {
 				["start"] = {
 				},
@@ -6441,20 +6439,27 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["regionType"] = "icon",
+			["cooldownEdge"] = true,
 			["cooldown"] = true,
-			["xOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorOptions"] = {
 			},
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["width"] = 48,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Taste for Blood",
 			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["uid"] = "HHxja9)iApt",
 			["inverse"] = false,
 			["animation"] = {
@@ -6501,12 +6506,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 0,
 		},
 		["Execute - Protection"] = {
 			["iconSource"] = -1,
@@ -6661,7 +6661,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "JMEKPo5kQjp",
 			["color"] = {
 				1, -- [1]
@@ -6696,14 +6696,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Execute - Protection",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -6885,7 +6885,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "3IT5hBScIRE",
 			["color"] = {
 				1, -- [1]
@@ -6973,14 +6973,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Spell Reflection",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -7164,10 +7164,10 @@ WeakAurasSaved = {
 					["text_shadowYOffset"] = -1,
 					["text_text_format_1.percentpower_format"] = "none",
 					["text_wordWrap"] = "WordWrap",
-					["text_fontType"] = "OUTLINE",
+					["text_visible"] = true,
 					["text_anchorPoint"] = "INNER_CENTER",
 					["anchorYOffset"] = 0,
-					["text_visible"] = true,
+					["text_fontType"] = "OUTLINE",
 					["text_fontSize"] = 14,
 					["anchorXOffset"] = 0,
 					["text_text_format_p_format"] = "timed",
@@ -7251,9 +7251,9 @@ WeakAurasSaved = {
 			["tocversion"] = 30401,
 			["id"] = "Rage Bar - Warrior",
 			["overlayclip"] = true,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["uid"] = "ab1jdvDdBQK",
 			["inverse"] = false,
 			["zoom"] = 0,
@@ -7363,7 +7363,7 @@ WeakAurasSaved = {
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
 					["type"] = "subtext",
-					["text_anchorYOffset"] = -4,
+					["text_shadowYOffset"] = 0,
 					["text_color"] = {
 						1, -- [1]
 						0.88627450980392, -- [2]
@@ -7372,7 +7372,7 @@ WeakAurasSaved = {
 					},
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_shadowYOffset"] = 0,
+					["text_anchorYOffset"] = -4,
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
@@ -7431,8 +7431,6 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["zoom"] = 0.3,
-			["cooldownEdge"] = true,
-			["regionType"] = "icon",
 			["actions"] = {
 				["start"] = {
 				},
@@ -7441,20 +7439,27 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["regionType"] = "icon",
+			["cooldownEdge"] = true,
 			["cooldown"] = true,
-			["xOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorOptions"] = {
 			},
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["width"] = 48,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Sunder Armor",
 			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["uid"] = "Vhmmf)bRUaX",
 			["inverse"] = false,
 			["animation"] = {
@@ -7501,12 +7506,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 0,
 		},
 		["Shield Block - Arms & Fury"] = {
 			["iconSource"] = -1,
@@ -7684,7 +7684,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "SjwMB1JnYwe",
 			["color"] = {
 				1, -- [1]
@@ -7758,14 +7758,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Shield Block - Arms & Fury",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -7942,8 +7942,6 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["zoom"] = 0.3,
-			["cooldownEdge"] = false,
-			["regionType"] = "icon",
 			["actions"] = {
 				["start"] = {
 				},
@@ -7952,20 +7950,27 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["regionType"] = "icon",
+			["cooldownEdge"] = false,
 			["cooldown"] = true,
-			["xOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorOptions"] = {
 			},
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["width"] = 48,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Taunt",
 			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["uid"] = "F4tE2vess5P",
 			["inverse"] = true,
 			["animation"] = {
@@ -8068,12 +8073,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 0,
 		},
 		["Core - Warrior"] = {
 			["grow"] = "CUSTOM",
@@ -8156,9 +8156,13 @@ WeakAurasSaved = {
 			["selfPoint"] = "TOP",
 			["align"] = "CENTER",
 			["growOn"] = "changed",
-			["internalVersion"] = 65,
+			["gridType"] = "RD",
 			["desc"] = "Made by Luxthos - twitch.tv/luxthos",
+			["stagger"] = 0,
 			["rotation"] = 0,
+			["version"] = 26,
+			["subRegions"] = {
+			},
 			["animation"] = {
 				["start"] = {
 					["easeStrength"] = 3,
@@ -8179,11 +8183,7 @@ WeakAurasSaved = {
 					["easeType"] = "none",
 				},
 			},
-			["version"] = 26,
-			["subRegions"] = {
-			},
 			["useLimit"] = false,
-			["gridType"] = "RD",
 			["load"] = {
 				["size"] = {
 					["multi"] = {
@@ -8219,8 +8219,9 @@ WeakAurasSaved = {
 			["regionType"] = "dynamicgroup",
 			["borderSize"] = 2,
 			["limit"] = 5,
+			["config"] = {
+			},
 			["uid"] = "Tf4Uyq6J2N)",
-			["borderInset"] = 1,
 			["constantFactor"] = "RADIUS",
 			["rowSpace"] = 1,
 			["borderOffset"] = 4,
@@ -8231,8 +8232,7 @@ WeakAurasSaved = {
 			["gridWidth"] = 5,
 			["anchorFrameType"] = "SCREEN",
 			["sort"] = "none",
-			["config"] = {
-			},
+			["borderInset"] = 1,
 			["sortHybridTable"] = {
 				["Shockwave"] = false,
 				["Intimidating Shout"] = false,
@@ -8272,7 +8272,7 @@ WeakAurasSaved = {
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["stagger"] = 0,
+			["internalVersion"] = 65,
 		},
 		["Slam"] = {
 			["iconSource"] = -1,
@@ -8390,7 +8390,7 @@ WeakAurasSaved = {
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
 					["type"] = "subtext",
-					["text_anchorYOffset"] = -4,
+					["text_shadowYOffset"] = 0,
 					["text_color"] = {
 						1, -- [1]
 						0.88627450980392, -- [2]
@@ -8399,7 +8399,7 @@ WeakAurasSaved = {
 					},
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_shadowYOffset"] = 0,
+					["text_anchorYOffset"] = -4,
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
@@ -8453,7 +8453,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "Cn)ZggyNEcJ",
 			["color"] = {
 				1, -- [1]
@@ -8600,14 +8600,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Slam",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -8790,7 +8790,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "r9Lz933VczK",
 			["color"] = {
 				1, -- [1]
@@ -8884,14 +8884,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Whirlwind",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -9040,20 +9040,20 @@ WeakAurasSaved = {
 			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Luxthos - Warrior",
-			["borderInset"] = 1,
+			["uid"] = "3Wjkd16DKJN",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["groupIcon"] = "interface/icons/classicon_warrior.blp",
+			["selfPoint"] = "CENTER",
+			["borderInset"] = 1,
 			["config"] = {
 			},
-			["uid"] = "3Wjkd16DKJN",
-			["xOffset"] = 0,
+			["groupIcon"] = "interface/icons/classicon_warrior.blp",
 			["conditions"] = {
 			},
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["selfPoint"] = "CENTER",
+			["xOffset"] = 0,
 		},
 		["Mortal Strike"] = {
 			["iconSource"] = -1,
@@ -9175,7 +9175,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "jorwyGynA((",
 			["color"] = {
 				1, -- [1]
@@ -9279,14 +9279,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Mortal Strike",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -9543,7 +9543,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "sfd9VguzQ1l",
 			["color"] = {
 				1, -- [1]
@@ -9739,14 +9739,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Revenge - Improved Overpower",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = false,
@@ -9923,7 +9923,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "qUUsC5B8WFQ",
 			["color"] = {
 				1, -- [1]
@@ -10011,14 +10011,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Death Wish",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -10194,8 +10194,6 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["zoom"] = 0.3,
-			["cooldownEdge"] = false,
-			["regionType"] = "icon",
 			["actions"] = {
 				["start"] = {
 				},
@@ -10204,20 +10202,27 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["regionType"] = "icon",
+			["cooldownEdge"] = false,
 			["cooldown"] = true,
-			["xOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorOptions"] = {
 			},
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["width"] = 48,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Challenging Shout",
 			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["uid"] = "NVqHUObi1gU",
 			["inverse"] = false,
 			["animation"] = {
@@ -10317,12 +10322,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 0,
 		},
 		["Health Bar - Warrior"] = {
 			["overlays"] = {
@@ -10552,11 +10552,16 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["id"] = "Health Bar - Warrior",
 			["width"] = 405,
+			["id"] = "Health Bar - Warrior",
+			["anchorFrameType"] = "SCREEN",
 			["inverse"] = false,
-			["uid"] = "67(x027oheH",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.30000001192093, -- [4]
+			},
 			["orientation"] = "HORIZONTAL",
 			["conditions"] = {
 			},
@@ -10564,12 +10569,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["backgroundColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.30000001192093, -- [4]
-			},
+			["uid"] = "67(x027oheH",
 		},
 		["Shield Bash"] = {
 			["iconSource"] = -1,
@@ -10709,7 +10709,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "zFLY)16VXo7",
 			["color"] = {
 				1, -- [1]
@@ -10769,14 +10769,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Shield Bash",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -10941,8 +10941,6 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["zoom"] = 0.3,
-			["cooldownEdge"] = true,
-			["regionType"] = "icon",
 			["actions"] = {
 				["start"] = {
 				},
@@ -10951,20 +10949,27 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["regionType"] = "icon",
+			["cooldownEdge"] = true,
 			["cooldown"] = true,
-			["xOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorOptions"] = {
 			},
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["width"] = 48,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Demoralizing Shout",
 			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["uid"] = "QM85Lg7oW(e",
 			["inverse"] = false,
 			["animation"] = {
@@ -11011,12 +11016,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 0,
 		},
 		["Wrecking Crew"] = {
 			["iconSource"] = -1,
@@ -11144,8 +11144,6 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["zoom"] = 0.3,
-			["cooldownEdge"] = true,
-			["regionType"] = "icon",
 			["actions"] = {
 				["start"] = {
 				},
@@ -11154,20 +11152,27 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["regionType"] = "icon",
+			["cooldownEdge"] = true,
 			["cooldown"] = true,
-			["xOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorOptions"] = {
 			},
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["width"] = 48,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Wrecking Crew",
 			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["uid"] = "HC2JnnppfXQ",
 			["inverse"] = false,
 			["animation"] = {
@@ -11214,12 +11219,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 0,
 		},
 		["Bladestorm"] = {
 			["iconSource"] = -1,
@@ -11361,7 +11361,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "dh(y0ZVA2KQ",
 			["color"] = {
 				1, -- [1]
@@ -11485,14 +11485,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Bladestorm",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -11570,7 +11570,7 @@ WeakAurasSaved = {
 						["genericShowOn"] = "showOnCooldown",
 						["subeventPrefix"] = "SPELL",
 						["useExactSpellId"] = true,
-						["custom_hide"] = "timed",
+						["debuffType"] = "HELPFUL",
 						["use_track"] = true,
 						["type"] = "spell",
 						["subeventSuffix"] = "_CAST_START",
@@ -11592,7 +11592,7 @@ WeakAurasSaved = {
 							"Cold Heart", -- [1]
 						},
 						["spellCount_operator"] = "<",
-						["debuffType"] = "HELPFUL",
+						["custom_hide"] = "timed",
 					},
 					["untrigger"] = {
 					},
@@ -11678,7 +11678,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "k2qbDDmKoqS",
 			["color"] = {
 				1, -- [1]
@@ -11713,14 +11713,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Victory Rush",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -11899,7 +11899,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "Ay(OyltsgPT",
 			["color"] = {
 				1, -- [1]
@@ -11987,14 +11987,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Intimidating Shout",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -12171,7 +12171,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "7PXlsEfw6om",
 			["color"] = {
 				1, -- [1]
@@ -12258,14 +12258,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Concussion Blow",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -12423,7 +12423,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "akmKyfy3m6F",
 			["color"] = {
 				1, -- [1]
@@ -12458,14 +12458,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Cleave",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -12640,7 +12640,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "5w8xf3qLS42",
 			["color"] = {
 				1, -- [1]
@@ -12688,14 +12688,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Execute",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -12859,8 +12859,6 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["zoom"] = 0.3,
-			["cooldownEdge"] = true,
-			["regionType"] = "icon",
 			["actions"] = {
 				["start"] = {
 				},
@@ -12869,20 +12867,27 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["regionType"] = "icon",
+			["cooldownEdge"] = true,
 			["cooldown"] = true,
-			["xOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorOptions"] = {
 			},
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["width"] = 48,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Juggernaut",
 			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["uid"] = "wzCbEXjznsi",
 			["inverse"] = false,
 			["animation"] = {
@@ -12929,12 +12934,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 0,
 		},
 		["Dynamic Effects - Warrior"] = {
 			["arcLength"] = 360,
@@ -12954,12 +12954,25 @@ WeakAurasSaved = {
 			},
 			["borderBackdrop"] = "Blizzard Tooltip",
 			["wagoID"] = "0AFdqklgD",
-			["parent"] = "Luxthos - Warrior",
+			["xOffset"] = -6.103515625e-05,
 			["preferToUpdate"] = false,
 			["yOffset"] = 0,
-			["anchorPoint"] = "TOPLEFT",
+			["sortHybridTable"] = {
+				["Enrage"] = false,
+				["Demoralizing Shout"] = false,
+				["Juggernaut"] = false,
+				["Spirits of the Lost"] = false,
+				["Blood Drinker"] = false,
+				["Heightened Reflexes"] = false,
+				["Second Wind"] = false,
+				["Sudden Death"] = false,
+				["Blood Craze"] = false,
+				["Sunder Armor"] = true,
+				["Wrecking Crew"] = false,
+				["Taste for Blood"] = false,
+			},
 			["grow"] = "CUSTOM",
-			["xOffset"] = -6.103515625e-05,
+			["parent"] = "Luxthos - Warrior",
 			["fullCircle"] = true,
 			["space"] = 2,
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
@@ -12992,23 +13005,29 @@ WeakAurasSaved = {
 			["columnSpace"] = 1,
 			["radius"] = 200,
 			["borderInset"] = 1,
-			["useLimit"] = false,
+			["animation"] = {
+				["start"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 			["align"] = "CENTER",
 			["growOn"] = "changed",
-			["sortHybridTable"] = {
-				["Enrage"] = false,
-				["Demoralizing Shout"] = false,
-				["Juggernaut"] = false,
-				["Spirits of the Lost"] = false,
-				["Blood Drinker"] = false,
-				["Heightened Reflexes"] = false,
-				["Second Wind"] = false,
-				["Sudden Death"] = false,
-				["Blood Craze"] = false,
-				["Sunder Armor"] = true,
-				["Wrecking Crew"] = false,
-				["Taste for Blood"] = false,
-			},
+			["anchorPoint"] = "TOPLEFT",
 			["desc"] = "Made by Luxthos - twitch.tv/luxthos",
 			["rotation"] = 0,
 			["authorOptions"] = {
@@ -13048,7 +13067,7 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["anchorFrameParent"] = false,
+			["hybridSortMode"] = "descending",
 			["source"] = "import",
 			["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Warrior\"] or {}\n\n    if LWA and LWA.GrowDynamicEffects then\n        LWA.GrowDynamicEffects(newPositions, activeRegions)\n    end\nend",
 			["scale"] = 1,
@@ -13061,7 +13080,7 @@ WeakAurasSaved = {
 			["selfPoint"] = "BOTTOMLEFT",
 			["gridType"] = "RD",
 			["stagger"] = 0,
-			["hybridSortMode"] = "descending",
+			["anchorFrameParent"] = false,
 			["constantFactor"] = "RADIUS",
 			["animate"] = false,
 			["borderOffset"] = 4,
@@ -13072,36 +13091,17 @@ WeakAurasSaved = {
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SELECTFRAME",
 			["borderSize"] = 2,
-			["config"] = {
-			},
+			["uid"] = "KJPKnQCFb5S",
 			["sort"] = "none",
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
+			["useLimit"] = false,
 			["gridWidth"] = 5,
 			["conditions"] = {
 			},
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["uid"] = "KJPKnQCFb5S",
+			["config"] = {
+			},
 		},
 		["Heroic Throw"] = {
 			["iconSource"] = -1,
@@ -13223,7 +13223,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "kuneNjHqZNV",
 			["color"] = {
 				1, -- [1]
@@ -13254,14 +13254,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Heroic Throw",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -13420,7 +13420,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "z26pPgVxv4m",
 			["color"] = {
 				1, -- [1]
@@ -13524,14 +13524,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Bloodthirst",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -13708,7 +13708,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "OWXnbwHviSi",
 			["color"] = {
 				1, -- [1]
@@ -13768,14 +13768,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Pummel",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -13908,7 +13908,7 @@ WeakAurasSaved = {
 					["text_justify"] = "CENTER",
 					["rotateText"] = "NONE",
 					["type"] = "subtext",
-					["text_anchorYOffset"] = -4,
+					["text_shadowYOffset"] = 0,
 					["text_color"] = {
 						1, -- [1]
 						0.88627450980392, -- [2]
@@ -13917,7 +13917,7 @@ WeakAurasSaved = {
 					},
 					["text_font"] = "Friz Quadrata TT",
 					["text_text_format_p_time_dynamic_threshold"] = 60,
-					["text_shadowYOffset"] = 0,
+					["text_anchorYOffset"] = -4,
 					["text_shadowColor"] = {
 						0, -- [1]
 						0, -- [2]
@@ -13976,8 +13976,6 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["zoom"] = 0.3,
-			["cooldownEdge"] = true,
-			["regionType"] = "icon",
 			["actions"] = {
 				["start"] = {
 				},
@@ -13986,20 +13984,27 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["regionType"] = "icon",
+			["cooldownEdge"] = true,
 			["cooldown"] = true,
-			["xOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorOptions"] = {
 			},
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["width"] = 48,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Sudden Death",
 			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["uid"] = "(qW275kvUcL",
 			["inverse"] = false,
 			["animation"] = {
@@ -14046,139 +14051,49 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 0,
 		},
-		["Commanding Shout"] = {
+		["Shattering Throw"] = {
 			["iconSource"] = -1,
 			["wagoID"] = "0AFdqklgD",
-			["parent"] = "Maintenance - Warrior",
+			["xOffset"] = 0,
 			["preferToUpdate"] = false,
 			["yOffset"] = 0,
 			["anchorPoint"] = "CENTER",
 			["cooldownSwipe"] = true,
-			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
+			["cooldownEdge"] = false,
 			["icon"] = true,
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["itemName"] = 6265,
-						["use_count"] = false,
-						["auranames"] = {
-							"469", -- [1]
-						},
-						["matchesShowOn"] = "showOnActive",
-						["unit"] = "player",
-						["unitExists"] = true,
-						["debuffType"] = "HELPFUL",
-						["type"] = "aura2",
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Item Count",
-						["unevent"] = "auto",
+						["track"] = "auto",
+						["use_matchedRune"] = false,
+						["duration"] = "1",
+						["genericShowOn"] = "showAlways",
 						["names"] = {
 						},
+						["use_showgcd"] = false,
+						["debuffType"] = "HELPFUL",
+						["type"] = "spell",
+						["subeventSuffix"] = "_CAST_START",
+						["event"] = "Cooldown Progress (Spell)",
+						["unit"] = "player",
+						["realSpellName"] = "碎裂投掷",
+						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["duration"] = "1",
-						["useName"] = true,
-						["use_itemName"] = true,
-						["use_unit"] = true,
+						["unevent"] = "auto",
 						["subeventPrefix"] = "SPELL",
+						["use_genericShowOn"] = true,
+						["use_track"] = true,
+						["spellName"] = 64382,
 					},
 					["untrigger"] = {
+						["genericShowOn"] = "showAlways",
 					},
 				}, -- [1]
-				{
-					["trigger"] = {
-						["itemName"] = 6265,
-						["use_count"] = false,
-						["auranames"] = {
-							"469", -- [1]
-						},
-						["duration"] = "1",
-						["unit"] = "player",
-						["unitExists"] = true,
-						["debuffType"] = "HELPFUL",
-						["type"] = "aura2",
-						["subeventSuffix"] = "_CAST_START",
-						["unevent"] = "auto",
-						["use_itemName"] = true,
-						["event"] = "Item Count",
-						["use_unit"] = true,
-						["useName"] = true,
-						["subeventPrefix"] = "SPELL",
-						["spellIds"] = {
-						},
-						["rem"] = "30",
-						["remOperator"] = "<=",
-						["matchesShowOn"] = "showOnActive",
-						["names"] = {
-						},
-						["useRem"] = true,
-					},
-					["untrigger"] = {
-					},
-				}, -- [2]
-				{
-					["trigger"] = {
-						["itemName"] = 6265,
-						["use_count"] = false,
-						["auranames"] = {
-							"469", -- [1]
-						},
-						["matchesShowOn"] = "showOnMissing",
-						["unit"] = "player",
-						["unitExists"] = true,
-						["debuffType"] = "HELPFUL",
-						["type"] = "aura2",
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Item Count",
-						["unevent"] = "auto",
-						["names"] = {
-						},
-						["spellIds"] = {
-						},
-						["duration"] = "1",
-						["useName"] = true,
-						["use_itemName"] = true,
-						["use_unit"] = true,
-						["subeventPrefix"] = "SPELL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [3]
-				{
-					["trigger"] = {
-						["use_resting"] = true,
-						["use_incombat"] = false,
-						["debuffType"] = "HELPFUL",
-						["type"] = "unit",
-						["unit"] = "player",
-						["event"] = "Conditions",
-						["use_unit"] = true,
-					},
-					["untrigger"] = {
-					},
-				}, -- [4]
-				{
-					["trigger"] = {
-						["type"] = "custom",
-						["custom"] = "function()\n    if LWA and LWA.Init then\n        LWA.Init()\n    end\nend",
-						["custom_type"] = "event",
-						["debuffType"] = "HELPFUL",
-						["events"] = "OPTIONS",
-						["unit"] = "player",
-						["custom_hide"] = "custom",
-					},
-					["untrigger"] = {
-					},
-				}, -- [5]
-				["disjunctive"] = "custom",
-				["customTriggerLogic"] = "function(t)\n    if t[4] then -- If in Rested Area\n        return false\n    end\n\n    local behavior = aura_env.config.maintenance.commanding_shout.behavior\n\n    if behavior == 1 then -- Show if Applied\n        return t[1]\n    elseif behavior == 2 then -- Show if Missing\n        return t[2] or t[3]\n    else -- Always Show\n        return true\n    end\nend",
+				["disjunctive"] = "any",
+				["customTriggerLogic"] = "",
 				["activeTriggerMode"] = -10,
 			},
 			["internalVersion"] = 65,
@@ -14203,11 +14118,34 @@ WeakAurasSaved = {
 					["border_edge"] = "Square Full White",
 					["border_offset"] = 0,
 				}, -- [2]
+				{
+					["glowFrequency"] = 0.25,
+					["type"] = "subglow",
+					["glowXOffset"] = 0,
+					["glowType"] = "buttonOverlay",
+					["glowLength"] = 10,
+					["glowYOffset"] = 0,
+					["glowColor"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["useGlowColor"] = false,
+					["glowScale"] = 1,
+					["glowThickness"] = 1,
+					["glow"] = false,
+					["glowLines"] = 8,
+					["glowBorder"] = false,
+				}, -- [3]
 			},
 			["height"] = 48,
 			["load"] = {
-				["use_class"] = true,
-				["use_spellknown"] = true,
+				["use_petbattle"] = false,
+				["class_and_spec"] = {
+					["multi"] = {
+					},
+				},
 				["talent"] = {
 					["multi"] = {
 					},
@@ -14217,27 +14155,96 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["zoneIds"] = "",
+				["use_class"] = true,
+				["use_spellknown"] = true,
+				["use_never"] = false,
+				["use_spec"] = true,
 				["spec"] = {
+					["single"] = 2,
 					["multi"] = {
+						[3] = true,
 					},
 				},
-				["spellknown"] = 469,
+				["use_exact_spellknown"] = false,
+				["spellknown"] = 64382,
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
 			["source"] = "import",
-			["config"] = {
-				["maintenance"] = {
-					["commanding_shout"] = {
-						["behavior"] = 1,
-					},
-				},
+			["auto"] = true,
+			["uid"] = "FpZ020R4WqR",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
-			["zoom"] = 0.3,
-			["cooldownEdge"] = true,
+			["authorOptions"] = {
+			},
 			["regionType"] = "icon",
+			["cooldown"] = true,
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "onCooldown",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = false,
+							["property"] = "sub.3.glow",
+						}, -- [1]
+						{
+							["value"] = "buttonOverlay",
+							["property"] = "sub.3.glowType",
+						}, -- [2]
+					},
+				}, -- [1]
+				{
+					["check"] = {
+						["trigger"] = -1,
+						["variable"] = "incombat",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["property"] = "sub.3.glow",
+						}, -- [1]
+					},
+				}, -- [2]
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "onCooldown",
+						["value"] = 1,
+					},
+					["changes"] = {
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [1]
+					},
+				}, -- [3]
+			},
+			["parent"] = "Core - Warrior",
+			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
+			["anchorFrameType"] = "SCREEN",
+			["alpha"] = 1,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
+			["tocversion"] = 30401,
+			["id"] = "Shattering Throw",
+			["frameStrata"] = 1,
+			["useCooldownModRate"] = true,
+			["width"] = 48,
+			["cooldownTextDisabled"] = false,
+			["config"] = {
+			},
+			["inverse"] = true,
 			["actions"] = {
 				["start"] = {
 				},
@@ -14246,82 +14253,11 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
-			["cooldown"] = true,
-			["xOffset"] = 0,
-			["authorOptions"] = {
-				{
-					["subOptions"] = {
-						{
-							["useName"] = true,
-							["type"] = "header",
-							["text"] = "Behavior",
-							["noMerge"] = false,
-							["width"] = 1,
-						}, -- [1]
-						{
-							["subOptions"] = {
-								{
-									["text"] = "Commanding Shout",
-									["type"] = "description",
-									["fontSize"] = "large",
-									["width"] = 1,
-								}, -- [1]
-								{
-									["type"] = "select",
-									["default"] = 1,
-									["values"] = {
-										"Show if Applied", -- [1]
-										"Show if Missing", -- [2]
-										"Always Show", -- [3]
-									},
-									["name"] = "Behavior",
-									["useDesc"] = false,
-									["key"] = "behavior",
-									["width"] = 1,
-								}, -- [2]
-							},
-							["hideReorder"] = true,
-							["useDesc"] = false,
-							["nameSource"] = 0,
-							["name"] = "Commanding Shout",
-							["width"] = 1,
-							["useCollapse"] = false,
-							["noMerge"] = false,
-							["collapse"] = false,
-							["type"] = "group",
-							["limitType"] = "none",
-							["groupType"] = "simple",
-							["key"] = "commanding_shout",
-							["size"] = 10,
-						}, -- [2]
-					},
-					["hideReorder"] = true,
-					["useDesc"] = false,
-					["nameSource"] = 0,
-					["name"] = "Maintenance Icons",
-					["width"] = 1,
-					["useCollapse"] = true,
-					["noMerge"] = false,
-					["collapse"] = true,
-					["type"] = "group",
-					["limitType"] = "none",
-					["groupType"] = "simple",
-					["key"] = "maintenance",
-					["size"] = 10,
-				}, -- [1]
+			["displayIcon"] = "",
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
 			},
-			["semver"] = "2.0.24",
-			["width"] = 48,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30401,
-			["id"] = "Commanding Shout",
-			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
-			["useCooldownModRate"] = true,
-			["uid"] = "oQm)emUNMz1",
-			["inverse"] = false,
 			["animation"] = {
 				["start"] = {
 					["easeStrength"] = 3,
@@ -14341,40 +14277,6 @@ WeakAurasSaved = {
 					["duration_type"] = "seconds",
 					["easeType"] = "none",
 				},
-			},
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "show",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = {
-								1, -- [1]
-								1, -- [2]
-								1, -- [3]
-								0.5, -- [4]
-							},
-							["property"] = "color",
-						}, -- [1]
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [2]
-					},
-				}, -- [1]
-			},
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
-			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
 			},
 		},
 		["Right Side - Warrior"] = {
@@ -14389,28 +14291,9 @@ WeakAurasSaved = {
 			["sortHybridTable"] = {
 			},
 			["limit"] = 5,
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
+			["selfPoint"] = "TOPLEFT",
 			["fullCircle"] = true,
-			["rowSpace"] = 1,
+			["space"] = 2,
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["actions"] = {
 				["start"] = {
@@ -14440,14 +14323,38 @@ WeakAurasSaved = {
 			},
 			["columnSpace"] = 1,
 			["internalVersion"] = 65,
-			["space"] = 2,
-			["useLimit"] = false,
+			["gridType"] = "RD",
+			["animation"] = {
+				["start"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 			["align"] = "CENTER",
 			["growOn"] = "changed",
-			["gridType"] = "RD",
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
 			["desc"] = "Made by Luxthos - twitch.tv/luxthos",
 			["stagger"] = 0,
-			["selfPoint"] = "TOPLEFT",
+			["useLimit"] = false,
 			["version"] = 26,
 			["subRegions"] = {
 			},
@@ -14511,12 +14418,7 @@ WeakAurasSaved = {
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["borderColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
+			["rowSpace"] = 1,
 		},
 		["Retaliation"] = {
 			["iconSource"] = -1,
@@ -14660,7 +14562,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "aUmdacFzAFh",
 			["color"] = {
 				1, -- [1]
@@ -14748,14 +14650,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Retaliation",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -14935,8 +14837,6 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["zoom"] = 0.3,
-			["cooldownEdge"] = false,
-			["regionType"] = "icon",
 			["actions"] = {
 				["start"] = {
 				},
@@ -14945,20 +14845,27 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["regionType"] = "icon",
+			["cooldownEdge"] = false,
 			["cooldown"] = true,
-			["xOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorOptions"] = {
 			},
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["width"] = 48,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Mocking Blow",
 			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["uid"] = "W3y4Xg8MZoq",
 			["inverse"] = false,
 			["animation"] = {
@@ -15058,12 +14965,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 0,
 		},
 		["Recklessness"] = {
 			["iconSource"] = -1,
@@ -15207,7 +15109,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "MIqTQoXF1)(",
 			["color"] = {
 				1, -- [1]
@@ -15295,14 +15197,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Recklessness",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -15498,7 +15400,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "reLhqLjY(W0",
 			["color"] = {
 				1, -- [1]
@@ -15595,14 +15497,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Rend",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = false,
@@ -15768,8 +15670,6 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["zoom"] = 0.3,
-			["cooldownEdge"] = true,
-			["regionType"] = "icon",
 			["actions"] = {
 				["start"] = {
 				},
@@ -15778,20 +15678,27 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["regionType"] = "icon",
+			["cooldownEdge"] = true,
 			["cooldown"] = true,
-			["xOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorOptions"] = {
 			},
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["width"] = 48,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Second Wind",
 			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["uid"] = "m1w95TauGcp",
 			["inverse"] = false,
 			["animation"] = {
@@ -15838,12 +15745,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 0,
 		},
 		["Dynamic Spells - Warrior"] = {
 			["grow"] = "CUSTOM",
@@ -15915,7 +15817,7 @@ WeakAurasSaved = {
 				}, -- [1]
 			},
 			["columnSpace"] = 1,
-			["radius"] = 200,
+			["internalVersion"] = 65,
 			["xOffset"] = -6.103515625e-05,
 			["selfPoint"] = "BOTTOMRIGHT",
 			["align"] = "CENTER",
@@ -15952,7 +15854,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["internalVersion"] = 65,
+			["radius"] = 200,
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -16025,28 +15927,9 @@ WeakAurasSaved = {
 			["sortHybridTable"] = {
 			},
 			["limit"] = 5,
-			["animation"] = {
-				["start"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["main"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-				["finish"] = {
-					["easeStrength"] = 3,
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["easeType"] = "none",
-				},
-			},
+			["selfPoint"] = "TOPRIGHT",
 			["fullCircle"] = true,
-			["rowSpace"] = 1,
+			["space"] = 2,
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["actions"] = {
 				["start"] = {
@@ -16076,14 +15959,38 @@ WeakAurasSaved = {
 			},
 			["columnSpace"] = 1,
 			["internalVersion"] = 65,
-			["space"] = 2,
-			["useLimit"] = false,
+			["gridType"] = "RD",
+			["animation"] = {
+				["start"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["main"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+				["finish"] = {
+					["easeStrength"] = 3,
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["easeType"] = "none",
+				},
+			},
 			["align"] = "CENTER",
 			["growOn"] = "changed",
-			["gridType"] = "RD",
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
 			["desc"] = "Made by Luxthos - twitch.tv/luxthos",
 			["stagger"] = 0,
-			["selfPoint"] = "TOPRIGHT",
+			["useLimit"] = false,
 			["version"] = 26,
 			["subRegions"] = {
 			},
@@ -16147,12 +16054,7 @@ WeakAurasSaved = {
 			["information"] = {
 				["forceEvents"] = true,
 			},
-			["borderColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
+			["rowSpace"] = 1,
 		},
 		["Shield Wall"] = {
 			["iconSource"] = -1,
@@ -16296,7 +16198,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "3fpdJ228IHI",
 			["color"] = {
 				1, -- [1]
@@ -16384,14 +16286,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Shield Wall",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -16556,8 +16458,6 @@ WeakAurasSaved = {
 			["config"] = {
 			},
 			["zoom"] = 0.3,
-			["cooldownEdge"] = true,
-			["regionType"] = "icon",
 			["actions"] = {
 				["start"] = {
 				},
@@ -16566,20 +16466,27 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["regionType"] = "icon",
+			["cooldownEdge"] = true,
 			["cooldown"] = true,
-			["xOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorOptions"] = {
 			},
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["width"] = 48,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Enrage",
 			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["uid"] = "EJVKauSI43x",
 			["inverse"] = false,
 			["animation"] = {
@@ -16626,12 +16533,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 0,
 		},
 		["Intercept"] = {
 			["iconSource"] = -1,
@@ -16754,7 +16656,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "IrJvJEjICg3",
 			["color"] = {
 				1, -- [1]
@@ -16785,14 +16687,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Intercept",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -16952,7 +16854,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "M9AYtbvxp10",
 			["color"] = {
 				1, -- [1]
@@ -16983,14 +16885,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Intervene",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -17168,7 +17070,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "rAsZIXe3CU0",
 			["color"] = {
 				1, -- [1]
@@ -17255,14 +17157,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Shockwave",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -17421,7 +17323,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "iU5n4F43)vV",
 			["color"] = {
 				1, -- [1]
@@ -17452,14 +17354,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Charge",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -17640,7 +17542,7 @@ WeakAurasSaved = {
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["uid"] = "ADj4jdjqzQ)",
 			["color"] = {
 				1, -- [1]
@@ -17731,14 +17633,14 @@ WeakAurasSaved = {
 			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["anchorFrameType"] = "SCREEN",
 			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["zoom"] = 0.3,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Enraged Regeneration",
 			["frameStrata"] = 1,
 			["useCooldownModRate"] = true,
 			["width"] = 48,
-			["zoom"] = 0.3,
+			["cooldownTextDisabled"] = false,
 			["config"] = {
 			},
 			["inverse"] = true,
@@ -17776,47 +17678,132 @@ WeakAurasSaved = {
 				},
 			},
 		},
-		["Shattering Throw"] = {
+		["Commanding Shout"] = {
 			["iconSource"] = -1,
 			["wagoID"] = "0AFdqklgD",
-			["xOffset"] = 0,
+			["parent"] = "Maintenance - Warrior",
 			["preferToUpdate"] = false,
 			["yOffset"] = 0,
 			["anchorPoint"] = "CENTER",
 			["cooldownSwipe"] = true,
-			["cooldownEdge"] = false,
+			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
 			["icon"] = true,
 			["triggers"] = {
 				{
 					["trigger"] = {
-						["track"] = "auto",
-						["use_matchedRune"] = false,
-						["duration"] = "1",
-						["genericShowOn"] = "showAlways",
+						["itemName"] = 6265,
+						["use_count"] = false,
+						["auranames"] = {
+							"469", -- [1]
+						},
+						["matchesShowOn"] = "showOnActive",
+						["unit"] = "player",
+						["unitExists"] = true,
+						["debuffType"] = "HELPFUL",
+						["type"] = "aura2",
+						["subeventSuffix"] = "_CAST_START",
+						["event"] = "Item Count",
+						["unevent"] = "auto",
 						["names"] = {
 						},
-						["use_showgcd"] = false,
-						["debuffType"] = "HELPFUL",
-						["type"] = "spell",
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Cooldown Progress (Spell)",
-						["unit"] = "player",
-						["realSpellName"] = "碎裂投掷",
-						["use_spellName"] = true,
 						["spellIds"] = {
 						},
-						["unevent"] = "auto",
+						["duration"] = "1",
+						["useName"] = true,
+						["use_itemName"] = true,
+						["use_unit"] = true,
 						["subeventPrefix"] = "SPELL",
-						["use_genericShowOn"] = true,
-						["use_track"] = true,
-						["spellName"] = 64382,
 					},
 					["untrigger"] = {
-						["genericShowOn"] = "showAlways",
 					},
 				}, -- [1]
-				["disjunctive"] = "any",
-				["customTriggerLogic"] = "",
+				{
+					["trigger"] = {
+						["itemName"] = 6265,
+						["use_count"] = false,
+						["auranames"] = {
+							"469", -- [1]
+						},
+						["duration"] = "1",
+						["unit"] = "player",
+						["unitExists"] = true,
+						["debuffType"] = "HELPFUL",
+						["type"] = "aura2",
+						["subeventSuffix"] = "_CAST_START",
+						["unevent"] = "auto",
+						["event"] = "Item Count",
+						["use_itemName"] = true,
+						["use_unit"] = true,
+						["useName"] = true,
+						["subeventPrefix"] = "SPELL",
+						["spellIds"] = {
+						},
+						["rem"] = "30",
+						["remOperator"] = "<=",
+						["matchesShowOn"] = "showOnActive",
+						["names"] = {
+						},
+						["useRem"] = true,
+					},
+					["untrigger"] = {
+					},
+				}, -- [2]
+				{
+					["trigger"] = {
+						["itemName"] = 6265,
+						["use_count"] = false,
+						["auranames"] = {
+							"469", -- [1]
+						},
+						["matchesShowOn"] = "showOnMissing",
+						["unit"] = "player",
+						["unitExists"] = true,
+						["debuffType"] = "HELPFUL",
+						["type"] = "aura2",
+						["subeventSuffix"] = "_CAST_START",
+						["event"] = "Item Count",
+						["unevent"] = "auto",
+						["names"] = {
+						},
+						["spellIds"] = {
+						},
+						["duration"] = "1",
+						["useName"] = true,
+						["use_itemName"] = true,
+						["use_unit"] = true,
+						["subeventPrefix"] = "SPELL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [3]
+				{
+					["trigger"] = {
+						["use_resting"] = true,
+						["use_incombat"] = false,
+						["debuffType"] = "HELPFUL",
+						["type"] = "unit",
+						["unit"] = "player",
+						["event"] = "Conditions",
+						["use_unit"] = true,
+					},
+					["untrigger"] = {
+					},
+				}, -- [4]
+				{
+					["trigger"] = {
+						["type"] = "custom",
+						["custom"] = "function()\n    if LWA and LWA.Init then\n        LWA.Init()\n    end\nend",
+						["custom_type"] = "event",
+						["debuffType"] = "HELPFUL",
+						["events"] = "OPTIONS",
+						["unit"] = "player",
+						["custom_hide"] = "custom",
+					},
+					["untrigger"] = {
+					},
+				}, -- [5]
+				["disjunctive"] = "custom",
+				["customTriggerLogic"] = "function(t)\n    if t[4] then -- If in Rested Area\n        return false\n    end\n\n    local behavior = aura_env.config.maintenance.commanding_shout.behavior\n\n    if behavior == 1 then -- Show if Applied\n        return t[1]\n    elseif behavior == 2 then -- Show if Missing\n        return t[2] or t[3]\n    else -- Always Show\n        return true\n    end\nend",
 				["activeTriggerMode"] = -10,
 			},
 			["internalVersion"] = 65,
@@ -17841,34 +17828,11 @@ WeakAurasSaved = {
 					["border_edge"] = "Square Full White",
 					["border_offset"] = 0,
 				}, -- [2]
-				{
-					["glowFrequency"] = 0.25,
-					["type"] = "subglow",
-					["glowXOffset"] = 0,
-					["glowType"] = "buttonOverlay",
-					["glowLength"] = 10,
-					["glowYOffset"] = 0,
-					["glowColor"] = {
-						1, -- [1]
-						1, -- [2]
-						1, -- [3]
-						1, -- [4]
-					},
-					["useGlowColor"] = false,
-					["glowScale"] = 1,
-					["glowThickness"] = 1,
-					["glow"] = false,
-					["glowLines"] = 8,
-					["glowBorder"] = false,
-				}, -- [3]
 			},
 			["height"] = 48,
 			["load"] = {
-				["use_petbattle"] = false,
-				["class_and_spec"] = {
-					["multi"] = {
-					},
-				},
+				["use_class"] = true,
+				["use_spellknown"] = true,
 				["talent"] = {
 					["multi"] = {
 					},
@@ -17878,96 +17842,25 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["zoneIds"] = "",
-				["use_class"] = true,
-				["use_spellknown"] = true,
-				["use_never"] = false,
-				["use_spec"] = true,
 				["spec"] = {
-					["single"] = 2,
 					["multi"] = {
-						[3] = true,
 					},
 				},
-				["use_exact_spellknown"] = false,
-				["spellknown"] = 64382,
+				["spellknown"] = 469,
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
 			["source"] = "import",
-			["semver"] = "2.0.24",
-			["uid"] = "FpZ020R4WqR",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["authorOptions"] = {
-			},
-			["regionType"] = "icon",
-			["cooldown"] = true,
-			["conditions"] = {
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "onCooldown",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["value"] = false,
-							["property"] = "sub.3.glow",
-						}, -- [1]
-						{
-							["value"] = "buttonOverlay",
-							["property"] = "sub.3.glowType",
-						}, -- [2]
-					},
-				}, -- [1]
-				{
-					["check"] = {
-						["trigger"] = -1,
-						["variable"] = "incombat",
-						["value"] = 0,
-					},
-					["changes"] = {
-						{
-							["property"] = "sub.3.glow",
-						}, -- [1]
-					},
-				}, -- [2]
-				{
-					["check"] = {
-						["trigger"] = 1,
-						["variable"] = "onCooldown",
-						["value"] = 1,
-					},
-					["changes"] = {
-						{
-							["value"] = true,
-							["property"] = "desaturate",
-						}, -- [1]
-					},
-				}, -- [3]
-			},
-			["parent"] = "Core - Warrior",
-			["url"] = "https://wago.io/LuxthosWarriorWrath/26",
-			["anchorFrameType"] = "SCREEN",
-			["alpha"] = 1,
-			["cooldownTextDisabled"] = false,
-			["auto"] = true,
-			["tocversion"] = 30401,
-			["id"] = "Shattering Throw",
-			["frameStrata"] = 1,
-			["useCooldownModRate"] = true,
-			["width"] = 48,
-			["zoom"] = 0.3,
 			["config"] = {
+				["maintenance"] = {
+					["commanding_shout"] = {
+						["behavior"] = 1,
+					},
+				},
 			},
-			["inverse"] = true,
+			["zoom"] = 0.3,
 			["actions"] = {
 				["start"] = {
 				},
@@ -17976,11 +17869,89 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
-			["displayIcon"] = "",
-			["information"] = {
-				["forceEvents"] = true,
-				["ignoreOptionsEventErrors"] = true,
+			["regionType"] = "icon",
+			["cooldownEdge"] = true,
+			["cooldown"] = true,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
+			["authorOptions"] = {
+				{
+					["subOptions"] = {
+						{
+							["useName"] = true,
+							["type"] = "header",
+							["text"] = "Behavior",
+							["noMerge"] = false,
+							["width"] = 1,
+						}, -- [1]
+						{
+							["subOptions"] = {
+								{
+									["text"] = "Commanding Shout",
+									["type"] = "description",
+									["fontSize"] = "large",
+									["width"] = 1,
+								}, -- [1]
+								{
+									["type"] = "select",
+									["default"] = 1,
+									["values"] = {
+										"Show if Applied", -- [1]
+										"Show if Missing", -- [2]
+										"Always Show", -- [3]
+									},
+									["name"] = "Behavior",
+									["useDesc"] = false,
+									["key"] = "behavior",
+									["width"] = 1,
+								}, -- [2]
+							},
+							["hideReorder"] = true,
+							["useDesc"] = false,
+							["nameSource"] = 0,
+							["name"] = "Commanding Shout",
+							["width"] = 1,
+							["useCollapse"] = false,
+							["noMerge"] = false,
+							["collapse"] = false,
+							["type"] = "group",
+							["limitType"] = "none",
+							["groupType"] = "simple",
+							["key"] = "commanding_shout",
+							["size"] = 10,
+						}, -- [2]
+					},
+					["hideReorder"] = true,
+					["useDesc"] = false,
+					["nameSource"] = 0,
+					["name"] = "Maintenance Icons",
+					["width"] = 1,
+					["useCollapse"] = true,
+					["noMerge"] = false,
+					["collapse"] = true,
+					["type"] = "group",
+					["limitType"] = "none",
+					["groupType"] = "simple",
+					["key"] = "maintenance",
+					["size"] = 10,
+				}, -- [1]
+			},
+			["auto"] = true,
+			["width"] = 48,
+			["cooldownTextDisabled"] = false,
+			["semver"] = "2.0.24",
+			["tocversion"] = 30401,
+			["id"] = "Commanding Shout",
+			["alpha"] = 1,
+			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
+			["uid"] = "oQm)emUNMz1",
+			["inverse"] = false,
 			["animation"] = {
 				["start"] = {
 					["easeStrength"] = 3,
@@ -18001,6 +17972,35 @@ WeakAurasSaved = {
 					["easeType"] = "none",
 				},
 			},
+			["conditions"] = {
+				{
+					["check"] = {
+						["trigger"] = 1,
+						["variable"] = "show",
+						["value"] = 0,
+					},
+					["changes"] = {
+						{
+							["value"] = {
+								1, -- [1]
+								1, -- [2]
+								1, -- [3]
+								0.5, -- [4]
+							},
+							["property"] = "color",
+						}, -- [1]
+						{
+							["value"] = true,
+							["property"] = "desaturate",
+						}, -- [2]
+					},
+				}, -- [1]
+			},
+			["information"] = {
+				["forceEvents"] = true,
+				["ignoreOptionsEventErrors"] = true,
+			},
+			["xOffset"] = 0,
 		},
 		["Battle Shout"] = {
 			["iconSource"] = -1,
@@ -18059,8 +18059,8 @@ WeakAurasSaved = {
 						["type"] = "aura2",
 						["subeventSuffix"] = "_CAST_START",
 						["unevent"] = "auto",
-						["use_itemName"] = true,
 						["event"] = "Item Count",
+						["use_itemName"] = true,
 						["use_unit"] = true,
 						["useName"] = true,
 						["subeventPrefix"] = "SPELL",
@@ -18197,8 +18197,6 @@ WeakAurasSaved = {
 				},
 			},
 			["zoom"] = 0.3,
-			["cooldownEdge"] = true,
-			["regionType"] = "icon",
 			["actions"] = {
 				["start"] = {
 				},
@@ -18207,8 +18205,15 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["regionType"] = "icon",
+			["cooldownEdge"] = true,
 			["cooldown"] = true,
-			["xOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorOptions"] = {
 				{
 					["subOptions"] = {
@@ -18271,16 +18276,16 @@ WeakAurasSaved = {
 					["size"] = 10,
 				}, -- [1]
 			},
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["width"] = 48,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Battle Shout",
 			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["uid"] = "Ha4PorRbcMs",
 			["inverse"] = false,
 			["animation"] = {
@@ -18331,12 +18336,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 0,
 		},
 		["Vigilance"] = {
 			["iconSource"] = -1,
@@ -18548,8 +18548,6 @@ WeakAurasSaved = {
 				},
 			},
 			["zoom"] = 0.3,
-			["cooldownEdge"] = true,
-			["regionType"] = "icon",
 			["actions"] = {
 				["start"] = {
 				},
@@ -18558,8 +18556,15 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
+			["regionType"] = "icon",
+			["cooldownEdge"] = true,
 			["cooldown"] = true,
-			["xOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["authorOptions"] = {
 				{
 					["subOptions"] = {
@@ -18622,16 +18627,16 @@ WeakAurasSaved = {
 					["size"] = 10,
 				}, -- [1]
 			},
-			["semver"] = "2.0.24",
+			["auto"] = true,
 			["width"] = 48,
 			["cooldownTextDisabled"] = false,
-			["auto"] = true,
+			["semver"] = "2.0.24",
 			["tocversion"] = 30401,
 			["id"] = "Vigilance",
 			["alpha"] = 1,
-			["frameStrata"] = 1,
-			["anchorFrameType"] = "SCREEN",
 			["useCooldownModRate"] = true,
+			["anchorFrameType"] = "SCREEN",
+			["frameStrata"] = 1,
 			["uid"] = "Z)oTVUAU2Pg",
 			["inverse"] = false,
 			["animation"] = {
@@ -18682,12 +18687,7 @@ WeakAurasSaved = {
 				["forceEvents"] = true,
 				["ignoreOptionsEventErrors"] = true,
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 0,
 		},
 		["Cast Bar - Warrior"] = {
 			["overlays"] = {
@@ -18921,10 +18921,10 @@ WeakAurasSaved = {
 						1, -- [4]
 					},
 					["text_wordWrap"] = "WordWrap",
-					["text_fontType"] = "OUTLINE",
+					["text_visible"] = true,
 					["text_anchorPoint"] = "INNER_RIGHT",
 					["anchorYOffset"] = 0,
-					["text_visible"] = true,
+					["text_fontType"] = "OUTLINE",
 					["text_fontSize"] = 13,
 					["anchorXOffset"] = 0,
 					["text_text_format_p_time_format"] = 0,
@@ -18990,11 +18990,11 @@ WeakAurasSaved = {
 			["uid"] = "16owf5Fa4Oo",
 			["semver"] = "2.0.24",
 			["icon"] = false,
-			["id"] = "Cast Bar - Warrior",
+			["sparkHidden"] = "NEVER",
 			["anchorFrameType"] = "SCREEN",
 			["frameStrata"] = 1,
 			["width"] = 405,
-			["sparkHidden"] = "NEVER",
+			["id"] = "Cast Bar - Warrior",
 			["zoom"] = 0.3,
 			["inverse"] = false,
 			["config"] = {
