@@ -199,10 +199,10 @@ TalentEmuSV = {
 		["minimapPos"] = 185,
 	},
 	["var"] = {
-		["Player-4487-0051C667"] = "!T329D122LTKI122Ul28qCJn15::EbyZ8OTKI122Ul28kSQa:::EmUa85cUG!G32226++++++n+9:yDC:11u+-:k=C:C1u+-:l=C:D1u+9:EEC:I1u+-:m=C:=1u+!E320+^+VC9:8D1:9+OG9:8D1:9+B-9:8D1:9+rQ4:8D1:9+di-:8D1:9+FH9:8D1:9+ER-:8D1:9+zj-:8D1:9+TH9:8D1:9+0S-:8D1:9+fJ9:8D1:9+Ki-:8D1:9+yg-:8D1:9+0H9:8D1:9+629:8D1:9+fI9:8D1:9+F-9:8D1:9+jR-:8D1:9+IW-:8D1:9",
 		["savedTalent"] = {
 			["|cffc79c6e战士|r- |cff7fbfff武器37|r 狂怒 2 防护32"] = "!T329E111OTKI122Ul28kqsA1::EmUa85cUG",
 		},
+		["Player-4487-0051C667"] = "!T329E1210OTKI122Ul28kqsA1::EmUa85cUG!G32216++++++n+9:yDC:11u+-:k=C:C1u+-:l=C:D1u+9:EEC:I1u+-:m=C:=1u+!E320+^+VC9:8E1:9+6D=:8E1:9+B-9:8E1:9+rQ4:8E1:9+di-:8E1:9+FH9:8E1:9+ER-:8E1:9+G4=:8E1:9+TH9:8E1:9+4I=:8E1:9+fJ9:8E1:9+uC=:8E1:9+yg-:8E1:9+0H9:8E1:9+629:8E1:9+4R1:8E1:9+F-9:8E1:9+iA=:8E1:9+IW-:8E1:9",
 	},
 	["_version"] = 220811,
 	["_GlobalAssign"] = {

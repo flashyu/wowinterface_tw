@@ -63,23 +63,23 @@ PIG_Per = {
 			false, -- [2]
 		},
 		["shuabenshu"] = 0,
-		["FBneiYN"] = false,
-		["YijingCZ"] = false,
-		["autohuifu_danjia"] = true,
+		["Shouru"] = 0,
+		["autohuifu_inv"] = true,
+		["hanhuaMSG"] = "[Pig]带本助手喊话测试....",
 		["Over_Time"] = 0,
 		["CZ_yueyuci"] = true,
 		["AddBut"] = true,
-		["SDdanjia"] = false,
-		["shoudongMOD"] = false,
-		["Namelist"] = {
-		},
+		["CZ_expSw"] = true,
 		["LV_danjia"] = {
 		},
-		["CZ_expSw"] = true,
+		["Namelist"] = {
+		},
+		["shoudongMOD"] = false,
+		["SDdanjia"] = false,
 		["CZ_jiuwei"] = true,
-		["hanhuaMSG"] = "[Pig]带本助手喊话测试....",
-		["autohuifu_inv"] = true,
-		["Shouru"] = 0,
+		["autohuifu_danjia"] = true,
+		["YijingCZ"] = false,
+		["FBneiYN"] = false,
 	},
 	["Rurutia"] = {
 	},
@@ -93,9 +93,9 @@ PIG_Per = {
 		["beidongOpen"] = false,
 	},
 	["ChatFrame"] = {
-		["RollList"] = {
-		},
 		["Keyword"] = {
+		},
+		["RollList"] = {
 		},
 		["Blacklist"] = {
 		},
@@ -155,8 +155,8 @@ PIG_Per = {
 		["jiange"] = 4,
 		["SpellList"] = {
 		},
-		["suoding"] = false,
-		["Open"] = false,
 		["Size"] = 35,
+		["Open"] = false,
+		["suoding"] = false,
 	},
 }

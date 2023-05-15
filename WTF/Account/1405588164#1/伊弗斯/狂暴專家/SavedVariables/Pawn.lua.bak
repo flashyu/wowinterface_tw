@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0801,
-	["LastPlayerFullName"] = "狂暴專家-伊弗斯",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 37793,
@@ -21,9 +19,9 @@ PawnOptions = {
 		}, -- [3]
 		nil, -- [4]
 		{
-			["ID"] = 38107,
-			["Level"] = 146,
-			["Link"] = "|cff1eff00|Hitem:38107::::::::72:::::::::|h[石路胸甲]|h|r",
+			["ID"] = 43945,
+			["Level"] = 174,
+			["Link"] = "|cff1eff00|Hitem:43945::::::::79:::::::::|h[黑色拱顶胸铠]|h|r",
 		}, -- [5]
 		{
 			["ID"] = 38097,
@@ -51,28 +49,28 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:42880::::::::77:::::::::|h[艾丝崔的骑术手套]|h|r",
 		}, -- [10]
 		{
-			["ID"] = 37982,
-			["Level"] = 146,
+			["ID"] = 43926,
+			["Level"] = 174,
 			["AlsoFitsIn"] = 12,
-			["Link"] = "|cff1eff00|Hitem:37982::::::::72:::::::::|h[微光齿环]|h|r",
+			["Link"] = "|cff1eff00|Hitem:43926::::::::78:::::::::|h[斯利文男爵的徽记之戒]|h|r",
 		}, -- [11]
 		{
-			["ID"] = 37982,
-			["Level"] = 146,
+			["ID"] = 43926,
+			["Level"] = 174,
 			["AlsoFitsIn"] = 11,
-			["Link"] = "|cff1eff00|Hitem:37982::::::::73:::::::::|h[微光齿环]|h|r",
+			["Link"] = "|cff1eff00|Hitem:43926::::::::79:::::::::|h[斯利文男爵的徽记之戒]|h|r",
 		}, -- [12]
 		{
-			["ID"] = 38080,
-			["Level"] = 146,
+			["ID"] = 43838,
+			["Level"] = 174,
 			["AlsoFitsIn"] = 14,
-			["Link"] = "|cff1eff00|Hitem:38080::::::::76:::::::::|h[自动武器镀膜器]|h|r",
+			["Link"] = "|cff1eff00|Hitem:43838::::::::79:::::::::|h[恐惧小盒]|h|r",
 		}, -- [13]
 		{
-			["ID"] = 38080,
-			["Level"] = 146,
+			["ID"] = 43838,
+			["Level"] = 174,
 			["AlsoFitsIn"] = 13,
-			["Link"] = "|cff1eff00|Hitem:38080::::::::77:::::::::|h[自动武器镀膜器]|h|r",
+			["Link"] = "|cff1eff00|Hitem:43838::::::::80:::::::::|h[恐惧小盒]|h|r",
 		}, -- [14]
 		{
 			["ID"] = 37383,
@@ -97,6 +95,8 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:42822::::::::77:::::::::|h[K3猛兽防御设备]|h|r",
 		}, -- [18]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "狂暴專家-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

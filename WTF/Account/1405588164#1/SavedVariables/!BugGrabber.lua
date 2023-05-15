@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
+	["session"] = 66,
 	["lastSanitation"] = 3,
-	["session"] = 57,
 	["errors"] = {
 		{
 			["message"] = "Interface/AddOns/GTFO/GTFO.lua:2079: attempt to index a nil value",
@@ -29,8 +29,8 @@ BugGrabberDB = {
 		}, -- [3]
 		{
 			["message"] = "Interface/AddOns/ClassicCodex/browser.lua:1 (null)",
-			["time"] = "2023/05/06 00:16:55",
 			["session"] = 8,
+			["time"] = "2023/05/06 00:16:55",
 			["counter"] = 4,
 		}, -- [4]
 		{
@@ -115,14 +115,14 @@ BugGrabberDB = {
 		}, -- [14]
 		{
 			["message"] = "Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
-			["time"] = "2023/05/06 00:16:55",
 			["session"] = 18,
+			["time"] = "2023/05/06 00:16:55",
 			["counter"] = 12,
 		}, -- [15]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
-			["time"] = "2023/05/06 00:16:55",
 			["session"] = 18,
+			["time"] = "2023/05/06 00:16:55",
 			["counter"] = 12,
 		}, -- [16]
 		{
@@ -201,5 +201,13 @@ BugGrabberDB = {
 			["session"] = 57,
 			["counter"] = 10,
 		}, -- [26]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'TradeSkillMaster' 尝试调用保护功能 'EquipPendingItem()'。",
+			["time"] = "2023/05/15 23:42:23",
+			["locals"] = "Skipped (In Encounter)",
+			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `EquipPendingItem'\n[string \"@Interface/FrameXML/StaticPopup.lua\"]:1943: in function `OnAccept'\n[string \"@Interface/FrameXML/StaticPopup.lua\"]:5235: in function `StaticPopup_OnClick'\n[string \"*StaticPopup.xml:24_OnClick\"]:1: in function <[string \"*StaticPopup.xml:24_OnClick\"]:1>",
+			["session"] = 66,
+			["counter"] = 1,
+		}, -- [27]
 	},
 }
