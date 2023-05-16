@@ -1,8 +1,6 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0801,
-	["LastPlayerFullName"] = "狂暴專家-伊弗斯",
-	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 37793,
@@ -96,6 +94,8 @@ PawnOptions = {
 			["Link"] = "|cffa335ee|Hitem:45870::::::::80:::::::::|h[磁化弹药发射器]|h|r",
 		}, -- [18]
 	},
+	["AutoSelectScales"] = false,
+	["LastPlayerFullName"] = "狂暴專家-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

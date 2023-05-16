@@ -5,6 +5,11 @@ AtlasDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
+			["options"] = {
+				["dropdowns"] = {
+					["module"] = 3,
+				},
+			},
 		},
 	},
 }

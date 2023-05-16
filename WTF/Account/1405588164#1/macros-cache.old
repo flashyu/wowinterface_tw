@@ -4,8 +4,7 @@ END
 VER 3 0000000000000005 "gj" "132092"
 END
 VER 3 0000000000000002 "RXPTargeting" "Ability_eyeoftheowl"
-/targetexact 撕裂者萨兰纳克斯
-/cleartarget [dead]
+//RestedXP 指南 狮心-北美刘嘉玲 汉化版 - current step has no configured targets
 END
 VER 3 0000000000000004 "坐骑" "132112"
 /use 茶色驭风者

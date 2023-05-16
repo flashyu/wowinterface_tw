@@ -5,15 +5,15 @@ PIG = {
 		["AutoRepair"] = "OFF",
 		["Openlist"] = {
 		},
-		["SellPlus"] = "OFF",
+		["AddBut"] = "ON",
 		["AutoRepair_GUILD"] = "OFF",
 		["diuqitishi"] = "OFF",
 		["Kaiqi"] = "ON",
-		["AutoSell_Open"] = "OFF",
 		["zidongKaiqi"] = "OFF",
+		["AutoSell_Open"] = "OFF",
 		["AutoSell_List"] = {
 		},
-		["AddBut"] = "ON",
+		["SellPlus"] = "OFF",
 	},
 	["daiben"] = {
 		["Point"] = {
@@ -71,9 +71,9 @@ PIG = {
 				}, -- [5]
 			},
 		},
-		["zidongjieshou"] = "OFF",
-		["AddBut"] = "ON",
 		["Kaiqi"] = "ON",
+		["AddBut"] = "ON",
+		["zidongjieshou"] = "OFF",
 	},
 	["ChatFrame"] = {
 		["Jianyin"] = "OFF",
@@ -89,7 +89,8 @@ PIG = {
 		["Keyword"] = {
 		},
 		["QuickChat"] = "OFF",
-		["FontSize_value"] = 12,
+		["TABqiehuanList"] = {
+		},
 		["jingjian"] = "OFF",
 		["JoinPindao"] = "ON",
 		["Bianju"] = "OFF",
@@ -105,26 +106,41 @@ PIG = {
 		["MinMaxB"] = "OFF",
 		["Guolv"] = "OFF",
 		["FFShow"] = "OFF",
-		["TABqiehuanList"] = {
-		},
+		["FontSize_value"] = 12,
 		["chatZhanlian"] = {
 		},
 	},
 	["Sponsorship"] = {
 	},
-	["FastDiuqi"] = {
-	},
-	["Error"] = {
-		["ErrorTishi"] = false,
-		["ErrorInfo"] = {
-			{
-				"[ADDON_ACTION_FORBIDDEN] 插件< RXPGuides >尝试调用保护功能< TargetUnit() >", -- [1]
-				1684076324, -- [2]
-				"[string \"@Interface/AddOns/RXPGuides/Targeting.lua\"]:445: in function <Interface/AddOns/RXPGuides/Targeting.lua:434>\n", -- [3]
-				"null", -- [4]
-				2094, -- [5]
-			}, -- [1]
+	["UnitFrame"] = {
+		["PartyMemberFrame"] = {
+			["Plus"] = false,
 		},
+		["PlayerFrame"] = {
+			["HPFF"] = false,
+			["Plus"] = false,
+			["youyi"] = false,
+		},
+		["TargetFrame"] = {
+			["Yisu"] = false,
+			["Plus"] = false,
+			["ToToToT"] = false,
+		},
+	},
+	["FramePlus"] = {
+		["ExtFrame_Talent"] = "OFF",
+		["yidongUI"] = "OFF",
+		["ExtFrame_Renwu"] = "OFF",
+		["CharacterFrame_LV"] = "OFF",
+		["CharacterFrame_Juese"] = "OFF",
+		["CharacterFrame_shuxing"] = "OFF",
+		["Cailiao"] = "OFF",
+		["ExtFrame_Zhuanye"] = "OFF",
+		["BuffTime"] = "OFF",
+		["CharacterFrame_zhuangbeList"] = "OFF",
+		["ExtFrame_ZhuanyeQKBUT"] = false,
+		["CharacterFrame_ranse"] = "OFF",
+		["CharacterFrame_naijiu"] = "OFF",
 	},
 	["Map"] = {
 		["MinimapPos"] = -13.62698465698976,
@@ -132,15 +148,15 @@ PIG = {
 		["MinimapShouNa_BS"] = false,
 		["WorldMapLV"] = true,
 		["MinimapBut"] = true,
-		["WorldMapNPC"] = true,
+		["WorldMapWind"] = true,
 		["MinimapShouNa_hang"] = 5,
-		["WorldMapFuben"] = true,
+		["WorldMapBili"] = 0.8,
 		["WorldMapPlus"] = false,
 		["MinimapShouNa"] = false,
 		["WorldMapSkill"] = true,
 		["WorldMapXY"] = true,
-		["WorldMapBili"] = 0.8,
-		["WorldMapWind"] = true,
+		["WorldMapFuben"] = true,
+		["WorldMapNPC"] = true,
 	},
 	["RaidRecord"] = {
 		["buzhuG"] = {
@@ -282,6 +298,61 @@ PIG = {
 				},
 			},
 			["wutiaojianjINV"] = "OFF",
+			["YYhao"] = 113213,
+			["kaituanName"] = "[Pig]开团助手测试喊话....",
+			["hanhuapindao"] = {
+			},
+			["PlayersInfo"] = {
+			},
+			["shijianjiange"] = 300,
+			["dangqianpeizhi"] = 0,
+			["dangqianrenshu"] = {
+				{
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+				}, -- [1]
+				{
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+				}, -- [2]
+				{
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+				}, -- [3]
+			},
+			["linshiInfo"] = {
+			},
+			["jinzuZhiling"] = "888",
 			["LMBL"] = {
 				["10人配置"] = {
 					{
@@ -504,56 +575,6 @@ PIG = {
 					}, -- [3]
 				},
 			},
-			["YYhao"] = 113213,
-			["dangqianrenshu"] = {
-				{
-					0, -- [1]
-					0, -- [2]
-					0, -- [3]
-					0, -- [4]
-					0, -- [5]
-					0, -- [6]
-					0, -- [7]
-					0, -- [8]
-					0, -- [9]
-					0, -- [10]
-					0, -- [11]
-					0, -- [12]
-				}, -- [1]
-				{
-					0, -- [1]
-					0, -- [2]
-					0, -- [3]
-					0, -- [4]
-					0, -- [5]
-					0, -- [6]
-					0, -- [7]
-					0, -- [8]
-					0, -- [9]
-					0, -- [10]
-					0, -- [11]
-					0, -- [12]
-				}, -- [2]
-				{
-					0, -- [1]
-					0, -- [2]
-					0, -- [3]
-					0, -- [4]
-					0, -- [5]
-					0, -- [6]
-					0, -- [7]
-					0, -- [8]
-					0, -- [9]
-					0, -- [10]
-					0, -- [11]
-					0, -- [12]
-				}, -- [3]
-			},
-			["PlayersInfo"] = {
-			},
-			["hanhuapindao"] = {
-			},
-			["dangqianpeizhi"] = 0,
 			["BL"] = {
 				["10人配置"] = {
 					{
@@ -686,16 +707,92 @@ PIG = {
 					}, -- [3]
 				},
 			},
-			["linshiInfo"] = {
-			},
-			["jinzuZhiling"] = "888",
-			["shijianjiange"] = 300,
-			["kaituanName"] = "[Pig]开团助手测试喊话....",
 		},
 		["ItemList_Paichu"] = {
 		},
 		["pinzhimoren"] = 3,
 		["AddBut"] = "ON",
+		["ItemList"] = {
+		},
+		["buzhu"] = {
+			["tanke"] = {
+			},
+			["zhiliao"] = {
+			},
+		},
+		["History"] = {
+		},
+		["Raidinfo"] = {
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+			{
+			}, -- [3]
+			{
+			}, -- [4]
+			{
+			}, -- [5]
+			{
+			}, -- [6]
+			{
+			}, -- [7]
+			{
+			}, -- [8]
+		},
+		["Kaiqi"] = "OFF",
+		["instanceName"] = {
+		},
+		["Rsetting"] = {
+			["jiaoyijilu"] = "ON",
+			["YYguanjianzi"] = {
+				"YY", -- [1]
+				"yy", -- [2]
+				"歪歪", -- [3]
+			},
+			["shoudongloot"] = "ON",
+			["YYneirong"] = "YY频道:113213,组人不易,请耐心等待",
+			["jiaoyidaojishi"] = "ON",
+			["liupaibobao"] = "ON",
+			["wurenben"] = "OFF",
+			["jiaoyitonggao"] = "ON",
+			["caizhixiufu"] = "OFF",
+			["zidonghuifuYY"] = "OFF",
+			["bobaomingxi"] = "ON",
+			["fubenwai"] = "OFF",
+		},
+		["jiangli"] = {
+			{
+				"治疗第一", -- [1]
+				150, -- [2]
+				"无", -- [3]
+			}, -- [1]
+			{
+				"治疗第二", -- [1]
+				100, -- [2]
+				"无", -- [3]
+			}, -- [2]
+			{
+				"治疗第三", -- [1]
+				80, -- [2]
+				"无", -- [3]
+			}, -- [3]
+			{
+				"DPS第一", -- [1]
+				150, -- [2]
+				"无", -- [3]
+			}, -- [4]
+			{
+				"DPS第二", -- [1]
+				100, -- [2]
+				"无", -- [3]
+			}, -- [5]
+			{
+				"DPS第三", -- [1]
+				80, -- [2]
+				"无", -- [3]
+			}, -- [6]
+		},
 		["fakuan"] = {
 			{
 				"包地板", -- [1]
@@ -746,101 +843,19 @@ PIG = {
 				"无", -- [4]
 			}, -- [8]
 		},
-		["jiangli"] = {
-			{
-				"治疗第一", -- [1]
-				150, -- [2]
-				"无", -- [3]
-			}, -- [1]
-			{
-				"治疗第二", -- [1]
-				100, -- [2]
-				"无", -- [3]
-			}, -- [2]
-			{
-				"治疗第三", -- [1]
-				80, -- [2]
-				"无", -- [3]
-			}, -- [3]
-			{
-				"DPS第一", -- [1]
-				150, -- [2]
-				"无", -- [3]
-			}, -- [4]
-			{
-				"DPS第二", -- [1]
-				100, -- [2]
-				"无", -- [3]
-			}, -- [5]
-			{
-				"DPS第三", -- [1]
-				80, -- [2]
-				"无", -- [3]
-			}, -- [6]
-		},
-		["ItemList"] = {
-		},
-		["Raidinfo"] = {
-			{
-			}, -- [1]
-			{
-			}, -- [2]
-			{
-			}, -- [3]
-			{
-			}, -- [4]
-			{
-			}, -- [5]
-			{
-			}, -- [6]
-			{
-			}, -- [7]
-			{
-			}, -- [8]
-		},
-		["Kaiqi"] = "OFF",
-		["instanceName"] = {
-		},
-		["Rsetting"] = {
-			["jiaoyijilu"] = "ON",
-			["YYguanjianzi"] = {
-				"YY", -- [1]
-				"yy", -- [2]
-				"歪歪", -- [3]
-			},
-			["shoudongloot"] = "ON",
-			["YYneirong"] = "YY频道:113213,组人不易,请耐心等待",
-			["fubenwai"] = "OFF",
-			["liupaibobao"] = "ON",
-			["wurenben"] = "OFF",
-			["jiaoyitonggao"] = "ON",
-			["caizhixiufu"] = "OFF",
-			["zidonghuifuYY"] = "OFF",
-			["bobaomingxi"] = "ON",
-			["jiaoyidaojishi"] = "ON",
-		},
-		["buzhu"] = {
-			["tanke"] = {
-			},
-			["zhiliao"] = {
-			},
-		},
-		["History"] = {
-		},
 	},
 	["CVars"] = {
 		["cameraDistanceMaxZoomFactor"] = "OFF",
 	},
 	["ShowPlus"] = {
-		["ItemLevel"] = "OFF",
 		["ItemSell"] = "OFF",
+		["ItemLevel"] = "OFF",
 		["SpellID"] = "OFF",
 	},
 	["AHPlus"] = {
-		["DaojiTime"] = 0,
+		["Open"] = false,
 		["Time"] = 48,
-		["Data"] = {
-		},
+		["AHtooltip"] = true,
 		["Tokens"] = {
 			{
 				1683298338, -- [1]
@@ -906,11 +921,24 @@ PIG = {
 				1684150457, -- [1]
 				169350000, -- [2]
 			}, -- [16]
+			{
+				1684222515, -- [1]
+				189260000, -- [2]
+			}, -- [17]
+			{
+				1684236066, -- [1]
+				174110000, -- [2]
+			}, -- [18]
+			{
+				1684250677, -- [1]
+				172800000, -- [2]
+			}, -- [19]
 		},
 		["Coll"] = {
 		},
-		["Open"] = false,
-		["AHtooltip"] = true,
+		["Data"] = {
+		},
+		["DaojiTime"] = 0,
 	},
 	["QuickFollow"] = {
 		["Jiuwei"] = false,
@@ -918,10 +946,10 @@ PIG = {
 		["Duizhang"] = true,
 		["Yijiao"] = false,
 		["Name"] = "猪猪加油",
-		["Qiangli"] = false,
+		["Kaishi"] = "1",
 		["Tishi"] = false,
 		["Jieshu"] = "2",
-		["Kaishi"] = "1",
+		["Qiangli"] = false,
 	},
 	["QuickButton"] = {
 		["bili"] = 0.8,
@@ -933,8 +961,8 @@ PIG = {
 			200, -- [4]
 		},
 		["Lushi"] = true,
-		["AutoEquip"] = true,
 		["Open"] = true,
+		["AutoEquip"] = true,
 		["suoding"] = false,
 	},
 	["SkillFBCD"] = {
@@ -952,6 +980,16 @@ PIG = {
 					"juese", -- [4]
 				}, -- [1]
 				{
+					{
+						"奥杜尔", -- [1]
+						300636.73, -- [2]
+						112993, -- [3]
+					}, -- [1]
+					{
+						"奥杜尔", -- [1]
+						300636.73, -- [2]
+						112993, -- [3]
+					}, -- [2]
 					["cunzaiYN"] = false,
 				}, -- [2]
 			}, -- [1]
@@ -977,37 +1015,12 @@ PIG = {
 	["RaidFrame"] = {
 		["xiufu"] = "OFF",
 	},
-	["PigUI"] = {
-		["ChatFrame_Loot_Width_value"] = 350,
-		["ChatFrame_Loot_Width"] = "OFF",
-		["ChatFrame_Height_value"] = 180,
-		["ActionBar"] = "OFF",
-		["Hide_shijiu"] = "OFF",
-		["ChatFrame_Point_X"] = 35,
-		["ChatFrame_Point_Y"] = 80,
-		["Hide_ActionBG"] = "OFF",
-		["xianshiNeirong"] = "OFF",
-		["ChatFrame_Loot"] = "OFF",
-		["ChatFrame_Loot_Point_X"] = 26,
-		["ChatFrame_Loot_Point"] = "OFF",
-		["ChatFrame_Loot_Height"] = "OFF",
-		["ActionBar_bili_value"] = 0.8,
-		["ChatFrame_Loot_Height_value"] = 180,
-		["MenuBag"] = false,
-		["ChatFrame_Loot_Point_Y"] = 8,
-		["ActionBar_bili"] = "OFF",
-		["MenuBag_bili_value"] = 0.9,
-		["ChatFrame_Height"] = "OFF",
-		["ChatFrame_Point"] = "OFF",
-		["ChatFrame_Width_value"] = 350,
-		["ChatFrame_Width"] = "OFF",
-	},
 	["Chatjilu"] = {
 		["tianshu"] = 7,
 		["jiluinfo"] = {
-			["PARTY"] = {
+			["WHISPER"] = {
 				["kaiguan"] = "ON",
-				["tixing"] = "OFF",
+				["tixing"] = "ON",
 				["neirong"] = {
 				},
 			},
@@ -1017,13 +1030,38 @@ PIG = {
 				["neirong"] = {
 				},
 			},
-			["WHISPER"] = {
+			["PARTY"] = {
 				["kaiguan"] = "ON",
-				["tixing"] = "ON",
+				["tixing"] = "OFF",
 				["neirong"] = {
 				},
 			},
 		},
+	},
+	["PigUI"] = {
+		["ChatFrame_Loot_Width_value"] = 350,
+		["ChatFrame_Loot_Width"] = "OFF",
+		["ChatFrame_Height_value"] = 180,
+		["ActionBar"] = "OFF",
+		["Hide_shijiu"] = "OFF",
+		["ChatFrame_Point_X"] = 35,
+		["ChatFrame_Point_Y"] = 80,
+		["Hide_ActionBG"] = "OFF",
+		["ChatFrame_Width"] = "OFF",
+		["ChatFrame_Width_value"] = 350,
+		["ChatFrame_Point"] = "OFF",
+		["ChatFrame_Loot_Point"] = "OFF",
+		["ActionBar_bili_value"] = 0.8,
+		["ChatFrame_Loot_Height"] = "OFF",
+		["MenuBag_bili_value"] = 0.9,
+		["MenuBag"] = false,
+		["ActionBar_bili"] = "OFF",
+		["ChatFrame_Loot_Point_Y"] = 8,
+		["ChatFrame_Loot_Height_value"] = 180,
+		["ChatFrame_Height"] = "OFF",
+		["ChatFrame_Loot_Point_X"] = 26,
+		["ChatFrame_Loot"] = "OFF",
+		["xianshiNeirong"] = "OFF",
 	},
 	["zhegnheBAG"] = {
 		["hulueBAG"] = {
@@ -1045,7 +1083,6 @@ PIG = {
 		},
 		["Open"] = "OFF",
 		["SortBagsRightToLeft"] = false,
-		["BAGsuofangBili"] = 1,
 		["hulueBANK"] = {
 			false, -- [1]
 			false, -- [2]
@@ -1056,10 +1093,11 @@ PIG = {
 			false, -- [7]
 			false, -- [8]
 		},
+		["SortBag_Config"] = true,
 		["JianjieMOD"] = false,
 		["qitajinbi"] = true,
 		["BAGmeihangshu_retail"] = 10,
-		["SortBag_Config"] = true,
+		["BAGsuofangBili"] = 1,
 	},
 	["AKF"] = {
 		["Open"] = false,
@@ -1072,7 +1110,7 @@ PIG = {
 		["ActionBar_Ranse"] = "OFF",
 		["Xpianyi"] = 0,
 		["PetTishi"] = "OFF",
-		["Ypianyi"] = 0,
+		["ziyuantiao"] = false,
 		["ActionBar_AutoFanye"] = "OFF",
 		["Showshuzhi"] = true,
 		["Biaoji"] = {
@@ -1082,38 +1120,29 @@ PIG = {
 		},
 		["Zhuizong"] = "OFF",
 		["CombatTime"] = false,
-		["suofangbili"] = 1,
 		["zhandouHide"] = true,
-		["ziyuantiao"] = false,
+		["suofangbili"] = 1,
+		["Ypianyi"] = 0,
 	},
-	["FramePlus"] = {
-		["ExtFrame_Talent"] = "OFF",
-		["yidongUI"] = "OFF",
-		["ExtFrame_Renwu"] = "OFF",
-		["CharacterFrame_LV"] = "OFF",
-		["CharacterFrame_Juese"] = "OFF",
-		["CharacterFrame_ranse"] = "OFF",
-		["Cailiao"] = "OFF",
-		["ExtFrame_Zhuanye"] = "OFF",
-		["BuffTime"] = "OFF",
-		["CharacterFrame_zhuangbeList"] = "OFF",
-		["ExtFrame_ZhuanyeQKBUT"] = false,
-		["CharacterFrame_shuxing"] = "OFF",
-		["CharacterFrame_naijiu"] = "OFF",
+	["Error"] = {
+		["ErrorTishi"] = false,
+		["ErrorInfo"] = {
+			{
+				"[ADDON_ACTION_BLOCKED] 插件< TradeSkillMaster >尝试调用保护功能< EquipPendingItem() >", -- [1]
+				1684165343, -- [2]
+				"[string \"@Interface/FrameXML/StaticPopup.lua\"]:1943: in function `OnAccept'\n[string \"@Interface/FrameXML/StaticPopup.lua\"]:5235: in function `StaticPopup_OnClick'\n[string \"*StaticPopup.xml:24_OnClick\"]:1: in function <[string \"*StaticPopup.xml:24_OnClick\"]:1>\n", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [1]
+			{
+				"Interface/AddOns/Blizzard_InspectUI/Localization.lua:1 (null)", -- [1]
+				1684245027, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				2, -- [5]
+			}, -- [2]
+		},
 	},
-	["UnitFrame"] = {
-		["PartyMemberFrame"] = {
-			["Plus"] = false,
-		},
-		["TargetFrame"] = {
-			["Yisu"] = false,
-			["Plus"] = false,
-			["ToToToT"] = false,
-		},
-		["PlayerFrame"] = {
-			["HPFF"] = false,
-			["Plus"] = false,
-			["youyi"] = false,
-		},
+	["FastDiuqi"] = {
 	},
 }

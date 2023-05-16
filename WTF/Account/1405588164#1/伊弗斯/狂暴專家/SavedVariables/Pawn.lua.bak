@@ -1,6 +1,8 @@
 
 PawnOptions = {
 	["LastVersion"] = 2.0801,
+	["LastPlayerFullName"] = "狂暴專家-伊弗斯",
+	["AutoSelectScales"] = false,
 	["ItemLevels"] = {
 		{
 			["ID"] = 37793,
@@ -8,9 +10,9 @@ PawnOptions = {
 			["Link"] = "|cff0070dd|Hitem:37793::::::::77:::::::::|h[永恒恐惧头盔]|h|r",
 		}, -- [1]
 		{
-			["ID"] = 38042,
-			["Level"] = 146,
-			["Link"] = "|cff1eff00|Hitem:38042::::::::72:::::::::|h[天灾食尸鬼项圈]|h|r",
+			["ID"] = 46022,
+			["Level"] = 225,
+			["Link"] = "|cffa335ee|Hitem:46022::::::::80:::::::::|h[千喉坠饰]|h|r",
 		}, -- [2]
 		{
 			["ID"] = 38092,
@@ -34,9 +36,9 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:42832::::::::78:::::::::|h[冷血腿铠]|h|r",
 		}, -- [7]
 		{
-			["ID"] = 42833,
-			["Level"] = 174,
-			["Link"] = "|cff1eff00|Hitem:42833::::::::77:::::::::|h[断腭者]|h|r",
+			["ID"] = 45330,
+			["Level"] = 225,
+			["Link"] = "|cffa335ee|Hitem:45330::::::::80:::::::::|h[钢铁热情胫甲]|h|r",
 		}, -- [8]
 		{
 			["ID"] = 38111,
@@ -44,15 +46,15 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:38111::::::::75:::::::::|h[斩龙护腕]|h|r",
 		}, -- [9]
 		{
-			["ID"] = 42880,
-			["Level"] = 174,
-			["Link"] = "|cff1eff00|Hitem:42880::::::::77:::::::::|h[艾丝崔的骑术手套]|h|r",
+			["ID"] = 46340,
+			["Level"] = 225,
+			["Link"] = "|cffa335ee|Hitem:46340::::::::80:::::::::|h[强硬护手]|h|r",
 		}, -- [10]
 		{
-			["ID"] = 43926,
-			["Level"] = 174,
+			["ID"] = 46010,
+			["Level"] = 225,
 			["AlsoFitsIn"] = 12,
-			["Link"] = "|cff1eff00|Hitem:43926::::::::78:::::::::|h[斯利文男爵的徽记之戒]|h|r",
+			["Link"] = "|cffa335ee|Hitem:46010::::::::80:::::::::|h[暗石之戒]|h|r",
 		}, -- [11]
 		{
 			["ID"] = 43926,
@@ -78,10 +80,9 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:37383::::::::72:::::::::|h[焦热鳞片斗篷]|h|r",
 		}, -- [15]
 		{
-			["ID"] = 38196,
-			["Level"] = 146,
-			["AlsoFitsIn"] = 17,
-			["Link"] = "|cff1eff00|Hitem:38196::::::::72:::::::::|h[血污重斧]|h|r",
+			["ID"] = 46067,
+			["Level"] = 245,
+			["Link"] = "|cffa335ee|Hitem:46067::::::::80:::::::::|h[毁灭低语之锤]|h|r",
 		}, -- [16]
 		{
 			["ID"] = 38187,
@@ -90,13 +91,11 @@ PawnOptions = {
 			["Link"] = "|cff1eff00|Hitem:38187::::::::76:::::::::|h[反应战斧]|h|r",
 		}, -- [17]
 		{
-			["ID"] = 42822,
-			["Level"] = 174,
-			["Link"] = "|cff1eff00|Hitem:42822::::::::77:::::::::|h[K3猛兽防御设备]|h|r",
+			["ID"] = 45870,
+			["Level"] = 245,
+			["Link"] = "|cffa335ee|Hitem:45870::::::::80:::::::::|h[磁化弹药发射器]|h|r",
 		}, -- [18]
 	},
-	["AutoSelectScales"] = false,
-	["LastPlayerFullName"] = "狂暴專家-伊弗斯",
 }
 PawnMrRobotScaleProviderOptions = nil
 PawnClassicScaleProviderOptions = {

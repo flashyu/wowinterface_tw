@@ -1,6 +1,5 @@
 VER 3 0000000001000008 "冲锋拦截" "134400"
 #showtooltip [nocombat]冲锋;[combat]拦截
-/dismount [mounted]
 /cast [nocombat,nostance:1] 战斗姿态;[combat,nostance:3] 狂暴姿态;
 /cast [nocombat,stance:1]冲锋;[combat,stance:3] 拦截;
 /startattack

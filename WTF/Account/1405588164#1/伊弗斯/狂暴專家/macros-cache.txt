@@ -3,6 +3,13 @@ VER 3 0000000001000008 "冲锋拦截" "134400"
 /cast [nocombat,nostance:1] 战斗姿态;[combat,nostance:3] 狂暴姿态;
 /cast [nocombat,stance:1]冲锋;[combat,stance:3] 拦截;
 /startattack
+/case 乘胜追击
+END
+VER 3 000000000100000E "嗜血" "134400"
+#showtooltip 嗜血
+/cast 嗜血
+/startattack
+/cast 乘胜追击
 END
 VER 3 0000000001000003 "复仇" "134400"
 #showtooltip 复仇
@@ -13,16 +20,49 @@ VER 3 000000000100000C "怒气" "132277"
 /use 血性狂暴
 /use 狂暴之怒
 END
+VER 3 0000000001000011 "拳击" "134400"
+#showtooltip 拳击
+/cast 拳击
+/startattack
+/cast 乘胜追击
+END
+VER 3 0000000001000010 "斩杀" "134400"
+#showtooltip 斩杀
+/cast 斩杀
+/startattack
+/cast 乘胜追击
+END
+VER 3 0000000001000013 "断筋" "134400"
+#showtooltip 断筋
+/cast 断筋
+/startattack
+/cast 乘胜追击
+END
+VER 3 0000000001000012 "旋风斩" "134400"
+#showtooltip 旋风斩
+/cast 旋风斩
+/startattack
+/cast 乘胜追击
+END
 VER 3 000000000100000D "横扫攻击" "132306"
 #showtooltip 横扫攻击
 /cast 横扫攻击
 /startattack
+/cast 乘胜追击
 END
 VER 3 0000000001000009 "爆发" "134400"
 #showtooltip 血性狂怒
 /use 13
 /use 14
 /cast 血性狂怒
+/cast 死亡之愿
+/cast 鲁莽
+END
+VER 3 000000000100000F "猛击" "134400"
+#showtooltip 猛击
+/cast 猛击
+/startattack
+/cast 乘胜追击
 END
 VER 3 0000000001000005 "盾击" "134400"
 #showtooltip 盾击
@@ -43,16 +83,18 @@ END
 VER 3 0000000001000002 "英勇打击" "134400"
 #showtooltip 英勇打击
 /cast !英勇打击
-/cast 乘胜追击
 /startattack
+/case 乘胜追击
 END
 VER 3 0000000001000006 "震荡猛击" "134400"
 #showtooltip 震荡猛击
 /cast 震荡猛击
 /startattack
+/case 乘胜追击
 END
 VER 3 0000000001000007 "顺劈斩" "134400"
 #showtooltip 顺劈斩
 /cast !顺劈斩
 /startattack
+/case 乘胜追击
 END
