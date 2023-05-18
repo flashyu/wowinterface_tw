@@ -2,15 +2,50 @@ VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
 /script DecursiveRootTable.Dcr:Println('没有相关技能')
 END
 VER 3 0000000000000005 "gj" "132092"
+/script UploadSettings();
 END
 VER 3 0000000000000002 "RXPTargeting" "Ability_eyeoftheowl"
 //RestedXP 指南 狮心-北美刘嘉玲 汉化版 - current step has no configured targets
+END
+VER 3 0000000000000007 "保命" "135966"
+/use 邪能治疗石
+/use 符文治疗药水
 END
 VER 3 0000000000000004 "坐骑" "132112"
 /use 茶色驭风者
 /use 迅捷棕狼
 END
+VER 3 0000000000000008 "开团" "134400"
+/click [@party1,noexists]PlayerFrame RightButton
+/click [@party1,noexists]DropDownList1Button20
+/run ConvertToRaid()
+/stopmacro [group]
+/邀请 开团
+END
+VER 3 000000000000000C "开怪" "132222"
+#showtooltip 射击
+/cast 英勇投掷
+/cast 射击
+END
+VER 3 0000000000000009 "毁灭打击" "134400"
+#showtooltip 毁灭打击
+/startattack
+/cast 毁灭打击
+/cast 乘胜追击
+END
 VER 3 0000000000000006 "跟随" "134400"
 /target 臉叔
 /follow
+END
+VER 3 000000000000000A "震荡波宏" "134400"
+#showtooltip 震荡波
+/startattack
+/cast 震荡波
+/cast 乘胜追击
+END
+VER 3 000000000000000B "震荡猛击" "134400"
+#showtooltip 震荡猛击
+/startattack
+/cast 震荡猛击
+/cast 乘胜追击
 END

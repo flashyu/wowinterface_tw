@@ -1,4 +1,4 @@
-!Pig: enabled
+!Pig: disabled
 AdvancedInterfaceOptions: enabled
 ArkInventory: enabled
 ArkInventoryConfig: enabled
@@ -38,7 +38,7 @@ ClassicCodex-db-zhTW: disabled
 ClassicCodex-db-enUS: disabled
 ClassicCodex-db-esES: disabled
 ClassicCodex-db-koKR: disabled
-Decursive: enabled
+Decursive: disabled
 Details: enabled
 Details_Compare2: enabled
 Details_EncounterDetails: enabled
@@ -59,7 +59,7 @@ HidingBar_Options: enabled
 Leatrix_Maps: enabled
 Leatrix_Plus: enabled
 LFGBulletinBoard: enabled
-LoonBestInSlot: enabled
+LoonBestInSlot: disabled
 MikScrollingBattleText: disabled
 MSBTOptions: disabled
 Myslot: enabled
@@ -68,7 +68,7 @@ Plater: enabled
 Questie: enabled
 SafeQueue: enabled
 SimpleItemLevel: enabled
-TacoTip: enabled
+TacoTip: disabled
 TargetNameplateIndicator: enabled
 ThreatClassic2: enabled
 TomTom: enabled
@@ -81,7 +81,7 @@ WeakAurasOptions: enabled
 WeakAurasTemplates: enabled
 WIM: enabled
 xanSoundAlerts: enabled
-TradeSkillMaster: enabled
+TradeSkillMaster: disabled
 AddOnSkins: enabled
 ElvUI_Libraries: enabled
 ElvUI_OptionsUI: enabled
@@ -122,7 +122,7 @@ DBM-TheEye: enabled
 DBM-BlackTemple: enabled
 DBM-BWL: enabled
 DBM-VPTaotao: enabled
-HeyboxPlayerInfo: enabled
+HeyboxPlayerInfo: disabled
 ArkInventoryRules_Example: enabled
 alaTalentEmu: enabled
 ElvUI_AuraBarsMovers: disabled

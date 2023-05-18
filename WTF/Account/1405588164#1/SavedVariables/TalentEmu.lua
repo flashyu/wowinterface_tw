@@ -199,11 +199,11 @@ TalentEmuSV = {
 		["minimapPos"] = 185,
 	},
 	["var"] = {
-		["Player-4487-0051C667"] = "!T329E121LPoBoA:08Jn11fIt-9R674p7OTKI122Ul28kqsA1::EmUa85cUG!G32216++++++n+9:yDC:11u+-:k=C:C1u+-:l=C:D1u+9:EEC:I1u+-:m=C:=1u+!E320+^+VC9:8E1:9+6D=:8E1:9+B-9:8E1:9+rQ4:8E1:9+di-:8E1:9+FH9:8E1:9+ER-:8E1:9+G4=:8E1:9+TH9:8E1:9+4I=:8E1:9+uC=:8E1:9+fJ9:8E1:9+yg-:8E1:9+0H9:8E1:9+629:8E1:9+nD=:8E1:9+F-9:8E1:9+iA=:13w:7E1:9+IW-:8E1:9",
 		["savedTalent"] = {
 			["|cffc79c6e战士|r- |cff7fbfff武器37|r 狂怒 2 防护32"] = "!T329E111OTKI122Ul28kqsA1::EmUa85cUG",
 			["|cffc79c6e战士|r- 武器18 |cff7fbfff狂怒51|r 防护 2"] = "!T329E111LPoBoA:08Jn11fIt-9R674p7",
 		},
+		["Player-4487-0051C667"] = "!T329E121LPoBoA:08Jn11fIt-9R674p7PS::0cd09Sxs::UO4a85-XG:DpV1!G3221w+9:2EC:G1u+-:k=C:C1u+-:4dE:81u+9:yDC:11u+-:j=C:01u+9:pDC:E1uw+9:VRD:C1u+-:4dE:81u+-:l=C:D1u+9:7EC:A1u+-:m=C:=1u+9:8EC:21u!E320+^+VC9:8E1:9+6D=:8E1:9+5F=:1Uv:1wk9:6E1:9+rQ4:8E1:9+Pt9:8E1:9+Dh9:2Bl9:6E1:9+6F=:2Bl9:1Al9:5E1:9+G4=:1Ks:7E1:9+Ih9:8E1:9+q5=:1Is:7E1:9+uC=:8E1:9+=m9:8E1:9+fT-:8E1:9+0p9:8E1:9+uo9:8E1:9+nD=:8E1:9+0r9:8E1:9+iA=:13w:7E1:9+HW-:8E1:9",
 	},
 	["_version"] = 220811,
 	["_GlobalAssign"] = {

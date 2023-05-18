@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
+	["session"] = 98,
 	["lastSanitation"] = 3,
-	["session"] = 81,
 	["errors"] = {
 		{
 			["message"] = "Interface/AddOns/GTFO/GTFO.lua:2079: attempt to index a nil value",
@@ -29,8 +29,8 @@ BugGrabberDB = {
 		}, -- [3]
 		{
 			["message"] = "Interface/AddOns/ClassicCodex/browser.lua:1 (null)",
-			["time"] = "2023/05/06 00:16:55",
 			["session"] = 8,
+			["time"] = "2023/05/06 00:16:55",
 			["counter"] = 4,
 		}, -- [4]
 		{
@@ -115,14 +115,14 @@ BugGrabberDB = {
 		}, -- [14]
 		{
 			["message"] = "Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
-			["time"] = "2023/05/06 00:16:55",
 			["session"] = 18,
+			["time"] = "2023/05/06 00:16:55",
 			["counter"] = 12,
 		}, -- [15]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
-			["time"] = "2023/05/06 00:16:55",
 			["session"] = 18,
+			["time"] = "2023/05/06 00:16:55",
 			["counter"] = 12,
 		}, -- [16]
 		{
@@ -219,9 +219,24 @@ BugGrabberDB = {
 		}, -- [28]
 		{
 			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:1 (null)",
-			["session"] = 81,
 			["time"] = "2023/05/16 21:50:27",
+			["session"] = 81,
 			["counter"] = 4,
 		}, -- [29]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'LFGBulletinBoard' 尝试调用保护功能 'Search()'。",
+			["time"] = "2023/05/18 23:12:55",
+			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `Search'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGBrowse.lua\"]:226: in function `LFGBrowse_DoSearch'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGBrowse.lua\"]:179: in function `SearchActiveEntry'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGParentFrame.lua\"]:92: in function `LFGParentFrame_SearchActiveEntry'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGListing.lua\"]:69: in function <...s/Blizzard_LookingForGroupUI/Blizzard_LFGListing.lua:51>",
+			["session"] = 95,
+			["counter"] = 1,
+		}, -- [30]
+		{
+			["message"] = "[string \"UploadSettings();\"]:1: attempt to call global 'UploadSettings' (a nil value)",
+			["time"] = "2023/05/19 00:10:36",
+			["locals"] = "(*temporary) = nil\n(*temporary) = \"attempt to call global 'UploadSettings' (a nil value)\"\n",
+			["stack"] = "[string \"UploadSettings();\"]:1: in main chunk\n[string \"=[C]\"]: in function `RunScript'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:2205: in function `?'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4933: in function <Interface/FrameXML/ChatFrame.lua:4879>\n[string \"=[C]\"]: in function `ChatEdit_ParseText'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4596: in function `ChatEdit_SendText'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:2986: in function <Interface/FrameXML/ChatFrame.lua:2979>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `UseAction'\n[string \"@Interface/FrameXML/SecureTemplates.lua\"]:343: in function `handler'\n[string \"@Interface/FrameXML/SecureTemplates.lua\"]:625: in function <Interface/FrameXML/SecureTemplates.lua:569>\n[string \"=[C]\"]: ?\n[string \"@Interface/FrameXML/SecureHandlers.lua\"]:266: in function <Interface/FrameXML/SecureHandlers.lua:263>\n[string \"=[C]\"]: ?\n[string \"@Interface/FrameXML/SecureHandlers.lua\"]:296: in function <Interface/FrameXML/SecureHandlers.lua:279>\n[string \"=(tail call)\"]: ?",
+			["session"] = 98,
+			["counter"] = 4,
+		}, -- [31]
 	},
 }

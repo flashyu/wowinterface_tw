@@ -15,10 +15,17 @@ VER 3 0000000001000003 "复仇" "134400"
 #showtooltip 复仇
 /startattack
 /cast 复仇
+/cast 乘胜追击
 END
 VER 3 000000000100000C "怒气" "132277"
 /use 血性狂暴
 /use 狂暴之怒
+END
+VER 3 0000000001000014 "打断" "132269"
+#showtooltip  [stance:2] 盾击;[stance:3] 拳击
+/cast [stance:2] 盾击;[stance:3] 拳击
+/startattack
+/case 乘胜追击
 END
 VER 3 0000000001000011 "拳击" "134400"
 #showtooltip 拳击
@@ -52,11 +59,11 @@ VER 3 000000000100000D "横扫攻击" "132306"
 END
 VER 3 0000000001000009 "爆发" "134400"
 #showtooltip 血性狂怒
+/use 10
 /use 13
 /use 14
 /cast 血性狂怒
 /cast 死亡之愿
-/cast 鲁莽
 END
 VER 3 000000000100000F "猛击" "134400"
 #showtooltip 猛击
@@ -69,16 +76,19 @@ VER 3 0000000001000005 "盾击" "134400"
 /startattack
 /cast [nostance:2] 防御姿态;
 /cast 盾击
+/case 乘胜追击
 END
 VER 3 0000000001000004 "盾牌格挡" "134400"
 #showtooltip 盾牌格挡
 /cast 盾牌格挡
 /startattack
+/case 乘胜追击
 END
 VER 3 0000000001000001 "盾牌猛击" "134951"
 #showtooltip 盾牌猛击
 /cast 盾牌猛击
 /startattack
+/case 乘胜追击
 END
 VER 3 0000000001000002 "英勇打击" "134400"
 #showtooltip 英勇打击

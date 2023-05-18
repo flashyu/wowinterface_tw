@@ -51,14 +51,14 @@ ElvDB = {
 				["ShiftAB"] = "BOTTOM,UIParent,BOTTOM,-254,363",
 				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,332,311",
 				["ElvAB_6"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-4,360",
-				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,338,415",
-				["ElvUF_Raid2Mover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,485",
-				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-339,415",
-				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,456,4",
-				["ElvUF_PartyMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,308",
-				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-179",
-				["VOICECHAT"] = "TOPLEFT,UIParent,TOPLEFT,155,-263",
 				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,335,349",
+				["VOICECHAT"] = "TOPLEFT,UIParent,TOPLEFT,155,-263",
+				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-339,415",
+				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-179",
+				["ElvUF_PartyMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,308",
+				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,456,4",
+				["ElvUF_Raid2Mover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,485",
+				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,338,415",
 			},
 			["unitframe"] = {
 				["units"] = {
@@ -79,8 +79,8 @@ ElvDB = {
 			["actionbar"] = {
 				["bar3"] = {
 					["buttonsPerRow"] = 12,
-					["buttons"] = 12,
 					["buttonSize"] = 40,
+					["buttons"] = 12,
 				},
 				["bar1"] = {
 					["buttonSize"] = 40,
@@ -112,23 +112,14 @@ ElvDB = {
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["狂暴專家"] = 1831868096,
-		},
-	},
-	["namespaces"] = {
-		["LibDualSpec-1.0"] = {
-		},
-	},
-	["faction"] = {
-		["伊弗斯"] = {
-			["狂暴專家"] = "Horde",
+			["狂暴專家"] = 1579487397,
 		},
 	},
 	["global"] = {
 		["general"] = {
 			["AceGUI"] = {
-				["height"] = 668.33,
-				["width"] = 1046.11,
+				["height"] = 700,
+				["width"] = 1250,
 			},
 		},
 		["datatexts"] = {
@@ -141,7 +132,20 @@ ElvDB = {
 							nil, -- [3]
 							true, -- [4]
 						}, -- [1]
-						[3] = {
+						nil, -- [2]
+						{
+							nil, -- [1]
+							nil, -- [2]
+							nil, -- [3]
+							true, -- [4]
+						}, -- [3]
+						{
+							nil, -- [1]
+							nil, -- [2]
+							nil, -- [3]
+							true, -- [4]
+						}, -- [4]
+						[6] = {
 							nil, -- [1]
 							nil, -- [2]
 							nil, -- [3]
@@ -150,6 +154,15 @@ ElvDB = {
 					},
 				},
 			},
+		},
+	},
+	["faction"] = {
+		["伊弗斯"] = {
+			["狂暴專家"] = "Horde",
+		},
+	},
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
 		},
 	},
 }
