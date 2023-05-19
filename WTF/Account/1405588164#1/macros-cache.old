@@ -12,7 +12,7 @@ VER 3 0000000000000007 "保命" "135966"
 /use 符文治疗药水
 END
 VER 3 0000000000000004 "坐骑" "132112"
-/use 茶色驭风者
+/use 迅捷紫色驭风者
 /use 迅捷棕狼
 END
 VER 3 0000000000000008 "开团" "134400"
@@ -27,11 +27,20 @@ VER 3 000000000000000C "开怪" "132222"
 /cast 英勇投掷
 /cast 射击
 END
+VER 3 000000000000000E "战神冲锋" "132365"
+#showtooltip [nocombat]冲锋;[combat]拦截
+/cast [nocombat]冲锋;[combat] 拦截;
+/startattack
+/case 乘胜追击
+END
 VER 3 0000000000000009 "毁灭打击" "134400"
 #showtooltip 毁灭打击
 /startattack
 /cast 毁灭打击
 /cast 乘胜追击
+END
+VER 3 000000000000000D "火箭靴" "135788"
+/use 8
 END
 VER 3 0000000000000006 "跟随" "134400"
 /target 臉叔

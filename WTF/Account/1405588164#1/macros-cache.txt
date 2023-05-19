@@ -15,7 +15,7 @@ VER 3 0000000000000004 "坐骑" "132112"
 /use 迅捷紫色驭风者
 /use 迅捷棕狼
 END
-VER 3 0000000000000008 "开团" "134400"
+VER 3 0000000000000008 "开团" "135994"
 /click [@party1,noexists]PlayerFrame RightButton
 /click [@party1,noexists]DropDownList1Button20
 /run ConvertToRaid()

@@ -96,7 +96,7 @@ AutoBarDB2 = {
 				["enabled"] = true,
 				["scale"] = 1,
 				["rows"] = 1,
-				["alpha"] = 1,
+				["frameStrata"] = "LOW",
 				["alignButtons"] = "3",
 				["dockShiftY"] = 0,
 				["posX"] = 617.1163924563734,
@@ -127,7 +127,7 @@ AutoBarDB2 = {
 				["posY"] = 160.7250452356402,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
-				["frameStrata"] = "LOW",
+				["alpha"] = 1,
 			},
 			["AutoBarClassBarExtras"] = {
 				["popupDirection"] = "1",

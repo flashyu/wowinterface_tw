@@ -18,6 +18,11 @@ ElvDB = {
 	["profiles"] = {
 		["Default"] = {
 			["databars"] = {
+				["reputation"] = {
+					["enable"] = true,
+					["width"] = 7,
+					["height"] = 273,
+				},
 				["experience"] = {
 					["height"] = 273,
 					["width"] = 8,
@@ -51,12 +56,13 @@ ElvDB = {
 				["ShiftAB"] = "BOTTOM,UIParent,BOTTOM,-254,363",
 				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,332,311",
 				["ElvAB_6"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-4,360",
+				["ReputationBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,454,4",
 				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,335,349",
 				["VOICECHAT"] = "TOPLEFT,UIParent,TOPLEFT,155,-263",
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-339,415",
 				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-179",
 				["ElvUF_PartyMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,308",
-				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,456,4",
+				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,417,301",
 				["ElvUF_Raid2Mover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,485",
 				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,338,415",
 			},
@@ -112,7 +118,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["狂暴專家"] = 1579487397,
+			["狂暴專家"] = 1580740572,
 		},
 	},
 	["global"] = {

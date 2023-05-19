@@ -62,7 +62,7 @@ BisTooltipDB = {
 			},
 			["phase_index"] = 3,
 			["data_source"] = "wowtbc",
-			["spec_index"] = 3,
+			["spec_index"] = 2,
 		},
 	},
 }

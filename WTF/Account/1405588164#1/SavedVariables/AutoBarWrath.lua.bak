@@ -132,10 +132,10 @@ AutoBarDB2 = {
 				["popupDirection"] = "1",
 				["fadeOut"] = false,
 				["columns"] = 16,
-				["alpha"] = 1,
+				["frameStrata"] = "LOW",
 				["scale"] = 1,
 				["rows"] = 1,
-				["frameStrata"] = "LOW",
+				["alpha"] = 1,
 				["buttonKeys"] = {
 					"AutoBarButtonHearth", -- [1]
 					"AutoBarButtonBandages", -- [2]
