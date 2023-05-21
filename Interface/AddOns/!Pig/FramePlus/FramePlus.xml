@@ -1,6 +1,11 @@
 <Ui>
-	<Script file="ExtFrame.lua" />
-	<Script file="CharacterFrame.lua" />
-	<Script file="TalentFrame.lua" />
 	<Script file="Options.lua" />
+	<Script file="BuffTime.lua" />
+	<Script file="Tracking.lua" />
+	<Script file="QuestFrame.lua" />
+	<Script file="SkillFrame.lua" />
+	<Include file="TalentFrame\TalentFrame.xml" />
+	<Script file="CharacterFrame.lua" />
+	<Script file="WowUIMove.lua" />
+	<Script file="Tooltip.lua" />
 </Ui>

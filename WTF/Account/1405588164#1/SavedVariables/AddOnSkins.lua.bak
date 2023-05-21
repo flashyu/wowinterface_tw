@@ -5,6 +5,7 @@ AddOnSkinsDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
+			["ArkInventory"] = false,
 		},
 	},
 }

@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 99,
+	["session"] = 123,
 	["errors"] = {
 		{
 			["message"] = "Interface/AddOns/GTFO/GTFO.lua:2079: attempt to index a nil value",
@@ -210,26 +210,12 @@ BugGrabberDB = {
 			["counter"] = 1,
 		}, -- [27]
 		{
-			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
-			["time"] = "2023/05/16 21:50:27",
-			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
-			["stack"] = "[string \"@Interface/AddOns/Blizzard_InspectUI/Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:385: in function `UIParentLoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:428: in function `InspectFrame_LoadUI'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:733: in function `InspectUnit'\n[string \"@Interface/FrameXML/UnitPopupSharedButtonMixins.lua\"]:200: in function `OnClick'\n[string \"@Interface/FrameXML/UnitPopupShared.lua\"]:148: in function `func'\n[string \"@Interface/FrameXML/UIDropDownMenu.lua\"]:956: in function `UIDropDownMenuButton_OnClick'\n[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1: in function <[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1>",
-			["session"] = 81,
-			["counter"] = 2,
-		}, -- [28]
-		{
-			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:1 (null)",
-			["session"] = 81,
-			["time"] = "2023/05/16 21:50:27",
-			["counter"] = 4,
-		}, -- [29]
-		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'LFGBulletinBoard' 尝试调用保护功能 'Search()'。",
 			["time"] = "2023/05/18 23:12:55",
 			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `Search'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGBrowse.lua\"]:226: in function `LFGBrowse_DoSearch'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGBrowse.lua\"]:179: in function `SearchActiveEntry'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGParentFrame.lua\"]:92: in function `LFGParentFrame_SearchActiveEntry'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGListing.lua\"]:69: in function <...s/Blizzard_LookingForGroupUI/Blizzard_LFGListing.lua:51>",
 			["session"] = 95,
 			["counter"] = 1,
-		}, -- [30]
+		}, -- [28]
 		{
 			["message"] = "[string \"UploadSettings();\"]:1: attempt to call global 'UploadSettings' (a nil value)",
 			["time"] = "2023/05/19 00:10:36",
@@ -237,6 +223,44 @@ BugGrabberDB = {
 			["stack"] = "[string \"UploadSettings();\"]:1: in main chunk\n[string \"=[C]\"]: in function `RunScript'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:2205: in function `?'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4933: in function <Interface/FrameXML/ChatFrame.lua:4879>\n[string \"=[C]\"]: in function `ChatEdit_ParseText'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4596: in function `ChatEdit_SendText'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:2986: in function <Interface/FrameXML/ChatFrame.lua:2979>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `UseAction'\n[string \"@Interface/FrameXML/SecureTemplates.lua\"]:343: in function `handler'\n[string \"@Interface/FrameXML/SecureTemplates.lua\"]:625: in function <Interface/FrameXML/SecureTemplates.lua:569>\n[string \"=[C]\"]: ?\n[string \"@Interface/FrameXML/SecureHandlers.lua\"]:266: in function <Interface/FrameXML/SecureHandlers.lua:263>\n[string \"=[C]\"]: ?\n[string \"@Interface/FrameXML/SecureHandlers.lua\"]:296: in function <Interface/FrameXML/SecureHandlers.lua:279>\n[string \"=(tail call)\"]: ?",
 			["session"] = 98,
 			["counter"] = 4,
+		}, -- [29]
+		{
+			["message"] = "C_Timer.NewTicker requires a non-negative duration",
+			["time"] = "2023/05/20 23:49:12",
+			["locals"] = "(*temporary) = Frame {\n overlays = <table> {\n }\n iconSource = -1\n AnchorSubRegion = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:753\n xOffset = -130.300000\n desaturateIcon = false\n Expand = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:844\n yOffset = -223.990000\n anchorPoint = \"CENTER\"\n SoundRepeatStop = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:156\n subRegionEvents = <table> {\n }\n GetColor = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1057\n UpdateMinMax = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1266\n 0 = <userdata>\n icon = Texture {\n }\n SetOffset = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:280\n icon_color = <table> {\n }\n enableGradient = false\n SetOrientation = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:894\n Scale = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1370\n SetBarColor2 = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1031\n iconFrame = Frame {\n }\n SendChat = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:228\n SetInverse = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:878\n state = <table> {\n }\n UpdateFrameTick = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:393\n SetRegionHeight = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:839\n toShow = true\n gradientOrientation = \"HORIZONTAL\"\n SetTime = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:860\n scalex = 1\n bar = Frame {\n }\n SetSparkHeight = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:829\n OptionsClosed = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:688\n UpdateIcon = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:952\n states = <table> {\n }\n Color = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1043\n cloneId = \"\"\n Update = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1312\n PixelSnapDisabled = true\n regionType = \"aurabar\"\n smoothProgress = true\n GetRegionAlpha = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:349\n relativePoint = \"CENTER\"\n triggerProvidesTimer = true\n iconVisible = false\n SoundPlay = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:210\n SetIcon = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:937\n GetMinMax = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1307\n zoom = 0\n SetIconColor = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:815\n overlayclip = true\n color_b = 0.431373\n scaley = 1\n alpha = 1\n color_r = 0.780392\n SetXOffset = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:289\n flipX = false\n Collapse = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:822\n ClickToPick = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:693\n RealClearAllPoints = <function> defined =[C]:-1\n displayIcon = 132340\n SetRegionWidth = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:835\n RunCode = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:235\n TimerTick = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1142\n FrameTick = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:401\n values = <table> {\n }\n GetYOffset = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:301\n SetOverlayColor = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:968\n SetAnimAlpha = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:353\n SetYOffsetRelative = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:318\n currentMin = 0\n effectiveO",
+			["stack"] = "[string \"=[C]\"]: in function `GetScript'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua\"]:381: in function `UpdateTimerTick'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua\"]:368: in function `SetTriggerProvidesTimer'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4383: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4348>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4517: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:818: in function `ScanEventsInternal'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:764: in function `ScanEvents'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:165: in function `Fire'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:463: in function `?'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:552: in function <[string \"return function() local MAJOR, MINOR = \"Lib...\"]:548>",
+			["session"] = 116,
+			["counter"] = 3,
+		}, -- [30]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'WeakAuras' 尝试调用保护功能 'Frame:SetPoint()'。",
+			["time"] = "2023/05/21 19:30:43",
+			["locals"] = "Skipped (In Encounter)",
+			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:54: in function `SetAnchorPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1311: in function `DoPositionChildrenPerFrame'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1432: in function `DoPositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1289: in function `PositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1270: in function `SortUpdatedChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1064: in function `RunDelayedActions'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1055: in function `Resume'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4392: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4348>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4517: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:1834: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:1826>\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:2195: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:2188>",
+			["session"] = 116,
+			["counter"] = 1,
 		}, -- [31]
+		{
+			["message"] = "WeakAurasOptions:IsVisible(): C_Timer.NewTicker requires a non-negative duration",
+			["time"] = "2023/05/21 20:46:06",
+			["locals"] = "Skipped (In Encounter)",
+			["stack"] = "[string \"=[C]\"]: in function `IsVisible'\n[string \"@Interface/AddOns/WeakAurasOptions/WeakAurasOptions.lua\"]:623: in function `IsOptionsOpen'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4327: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4324>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4452: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:818: in function `ScanEventsInternal'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:764: in function `ScanEvents'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:165: in function `Fire'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:463: in function `?'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:552: in function <[string \"return function() local MAJOR, MINOR = \"Lib...\"]:548>",
+			["session"] = 116,
+			["counter"] = 1,
+		}, -- [32]
+		{
+			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
+			["time"] = "2023/05/16 21:50:27",
+			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
+			["stack"] = "[string \"@Interface/AddOns/Blizzard_InspectUI/Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:385: in function `UIParentLoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:428: in function `InspectFrame_LoadUI'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:733: in function `InspectUnit'\n[string \"@Interface/FrameXML/UnitPopupSharedButtonMixins.lua\"]:200: in function `OnClick'\n[string \"@Interface/FrameXML/UnitPopupShared.lua\"]:148: in function `func'\n[string \"@Interface/FrameXML/UIDropDownMenu.lua\"]:956: in function `UIDropDownMenuButton_OnClick'\n[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1: in function <[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1>",
+			["session"] = 122,
+			["counter"] = 8,
+		}, -- [33]
+		{
+			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:1 (null)",
+			["session"] = 122,
+			["time"] = "2023/05/16 21:50:27",
+			["counter"] = 16,
+		}, -- [34]
 	},
 }

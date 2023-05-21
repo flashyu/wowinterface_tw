@@ -1,6 +1,6 @@
 <Ui>
 	<Script file="UI.lua" />
-	<Script file="Item.lua" />
+<!-- 	<Script file="Item.lua" />
 	<Script file="Buzhu.lua" />
 	<Script file="Fakuan.lua" />
 	<Script file="Jiangli.lua" />
@@ -8,5 +8,5 @@
 	<Script file="Rsetting.lua" />
 	<Script file="FenG.lua" />
 	<Script file="Invite.lua" />
-	<Script file="History.lua" />
+	<Script file="History.lua" /> -->
 </Ui>

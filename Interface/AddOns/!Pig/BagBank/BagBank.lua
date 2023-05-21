@@ -1,25 +1,28 @@
 local addonName, addonTable = ...;
-local gsub = _G.string.gsub 
 local find = _G.string.find
-local sub = _G.string.sub  --截取
-local fuFrame=List_R_F_2_1
-local ADD_Frame=addonTable.ADD_Frame
-local ADD_Checkbutton=addonTable.ADD_Checkbutton
 local Create=addonTable.Create
+local PIGFrame=Create.PIGFrame
+local PIGButton=Create.PIGButton
 local PIGDownMenu=Create.PIGDownMenu
---==========================================
+local PIGFontString=Create.PIGFontString
+local CharacterFrame=Create.CharacterFrame
+local BagBankFrame=Create.BagBankFrame
+-- --==========================================
+local BagBankfun=addonTable.BagBankfun
 local yinhangmorengezishu={28,7}
-yinhangmorengezishu.banknum=yinhangmorengezishu[1]+yinhangmorengezishu[2]*36
 ----==============
-local QualityColor=addonTable.QualityColor
+local InvSlot=addonTable.Data.InvSlot
 local bagID = {0,1,2,3,4,5}
 bagID.meihang=10
 bagID.suofang=1
+bagID.lixianNum=164
 local bankID = {-1,6,7,8,9,10,11,12}
-bankID.meihang=16
+bankID.meihang=18
 bankID.suofang=1
+bankID.lixianNum=yinhangmorengezishu[1]+yinhangmorengezishu[2]*36
 local zhengliIcon="interface/containerframe/bags.blp"	
 local BagdangeW=ContainerFrame1Item1:GetWidth()+5
+local PIG_renwuming
 ---------------------
 local qishihang=math.ceil(yinhangmorengezishu[1]/bankID.meihang)--行数
 local qishikongyu=qishihang*bankID.meihang-yinhangmorengezishu[1]--空余
@@ -128,7 +131,7 @@ local function zhegnheBANK_Open()
 	BankFrame:SetWidth(BagdangeW*bankID.meihang+66)
 end
 ----保存离线数据-----
-local function SAVE_lixian_data(bagID, slot,wupinshujuinfo)
+local function SAVE_ItemInfo(bagID, slot,wupinshujuinfo)
 	local ItemInfo= C_Container.GetContainerItemInfo(bagID, slot)
 	if ItemInfo then
 		local itemStackCount,itemEquipLoc,itemTexture,sellPrice,classID = select(8,GetItemInfo(ItemInfo.hyperlink))
@@ -152,18 +155,18 @@ local function SAVE_C()
 		end	
 		table.insert(wupinshujuinfo, wupinxinxi);
 	end
-	PIG['zhegnheBAG']["lixian"][PIG_renwuming]["C"] = wupinshujuinfo
+	PIG["BagBank"]["lixian"][PIG_renwuming]["C"] = wupinshujuinfo
 end
 local function SAVE_BAG()
 	if InCombatLockdown() then return end
 	local wupinshujuinfo = {}
 	for f=1,#bagID do
 		for ff=1,C_Container.GetContainerNumSlots(bagID[f]) do
-			SAVE_lixian_data(bagID[f], ff,wupinshujuinfo)
+			SAVE_ItemInfo(bagID[f], ff,wupinshujuinfo)
 		end
 	end
-	PIG['zhegnheBAG']["lixian"][PIG_renwuming]["BAG"] = wupinshujuinfo
-	PIG['zhegnheBAG']["lixian"][PIG_renwuming]["G"] = GetMoney();
+	PIG["BagBank"]["lixian"][PIG_renwuming]["BAG"] = wupinshujuinfo
+	PIG["BagBank"]["lixian"][PIG_renwuming]["G"] = GetMoney();
 end
 local function SAVE_BANK()
 	if InCombatLockdown() then return end
@@ -171,124 +174,167 @@ local function SAVE_BANK()
 	for f=1,#bankID do
 		if f==1 then
 			for ff=1,yinhangmorengezishu[1] do
-				SAVE_lixian_data(bankID[f], ff,wupinshujuinfo)
+				SAVE_ItemInfo(bankID[f], ff,wupinshujuinfo)
 			end
 		else
 			for ff=1,C_Container.GetContainerNumSlots(bankID[f]) do
-				SAVE_lixian_data(bankID[f], ff,wupinshujuinfo)
+				SAVE_ItemInfo(bankID[f], ff,wupinshujuinfo)
 			end
 		end
 	end
-	PIG['zhegnheBAG']["lixian"][PIG_renwuming]["BANK"] = wupinshujuinfo
+	PIG["BagBank"]["lixian"][PIG_renwuming]["BANK"] = wupinshujuinfo
 end
 --离线显示
-local function Show_lixian_data(frameF,renwu,shuju,meihang,zongshu)
+local function Show_lixian_data(frameF,renwu,shuju,meihang,lixianNum)
+	local framename=frameF:GetName()
 	if shuju=="BANK" then
-		frameF.Portrait_TEX:SetTexture(130899)
-		frameF.biaoti.t:SetText(renwu..' 的银行');
+		_G[framename.."TitleText"]:SetText(renwu.." 的银行");
+		if not ElvUI and not NDui then SetPortraitToTexture(frameF.portrait, 130899) end
 	elseif shuju=="BAG" then
-		frameF.biaoti.t:SetText(renwu.." 的背包");
+		_G[framename.."TitleText"]:SetText(renwu.." 的背包");
 	elseif shuju=="C" then
-		frameF.biaoti.t:SetText(renwu);
+		_G[framename.."TitleText"]:SetText(renwu);
 		local zhiye,zhongzu,Lv = strsplit("~", meihang);
 		local zhiye,zhongzu,Lv = tonumber(zhiye),tonumber(zhongzu),tonumber(Lv)
 		if zhiye>0 and zhongzu>0 and Lv>0 then
 			local classInfo = C_CreatureInfo.GetClassInfo(zhiye)
 			local raceInfo = C_CreatureInfo.GetRaceInfo(zhongzu)
-			frameF.biaoti.t1:SetText("等级"..Lv.." "..raceInfo["raceName"].." "..classInfo["className"]);
+			frameF.biaoti:SetText("等级"..Lv.." "..raceInfo["raceName"].." "..classInfo["className"]);
 		else
-			frameF.biaoti.t1:SetText("等级/种族/职业未更新");
+			frameF.biaoti:SetText("等级/种族/职业未更新");
 		end
 	end
-	local framename=frameF:GetName()
-	if PIG['zhegnheBAG']["wupinLV"] then
+	local zongshu=#PIG["BagBank"]["lixian"][renwu][shuju]
+	if shuju=="C" then
 		for i=1,zongshu do
-			local frameX=_G[framename.."_wupin_item_"..i]
-			frameX:Hide();
-			frameX.LV:SetText()
+			local frameX = _G[framename.."_item_"..i]
+			if frameX then
+				frameX.LV:SetText("")
+				local invSlotId,SlotTexture = GetInventorySlotInfo(InvSlot["Name"][i][1])
+				frameX.icon:SetTexture(SlotTexture)
+				local zbBuwei=_G[framename.."_zbBuwei_"..i]
+				if zbBuwei then
+					zbBuwei.itembuwei:SetTextColor(0.5, 0.5, 0.5,0.8);
+					zbBuwei.itembuweiF:SetBackdropBorderColor(0.5, 0.5, 0.5,0.5)
+				end
+			end
 		end
-	end
-	local zongshu=#PIG['zhegnheBAG']["lixian"][renwu][shuju]
-	for i=1,zongshu do
-		local frameX=_G[framename.."_wupin_item_"..i]
-		frameX:Show();
-		local itemLink = PIG['zhegnheBAG']["lixian"][renwu][shuju][i][2]
-		if itemLink then
-			local icon = GetItemIcon(itemLink)
-			frameX:SetNormalTexture(icon)
-			frameX:SetScript("OnEnter", function (self)
-				GameTooltip:ClearLines();
-				GameTooltip:SetOwner(self, "ANCHOR_CURSOR");
-				GameTooltip:SetHyperlink(itemLink)
-				GameTooltip:Show();
-			end);
-			frameX:SetScript("OnLeave", function ()
-				GameTooltip:ClearLines();
-				GameTooltip:Hide() 
-			end);
-			frameX:SetScript("OnMouseUp", function ()
-				if IsShiftKeyDown() then
-					local editBox = ChatEdit_ChooseBoxForSend();
-					local hasText = editBox:GetText()..itemLink
-					if editBox:HasFocus() then
-						editBox:SetText(hasText);
-					else
-						ChatEdit_ActivateChat(editBox)
-						editBox:SetText(hasText);
+		for i=1,zongshu do
+			local frameX = _G[framename.."_item_"..i]
+			if frameX then
+				frameX.LV:SetText("")
+				local invSlotId,SlotTexture = GetInventorySlotInfo(InvSlot["Name"][i][1])
+				frameX.icon:SetTexture(SlotTexture)
+				local zbBuwei=_G[framename.."_zbBuwei_"..i]
+				if zbBuwei then
+					zbBuwei.itembuwei:SetTextColor(0.5, 0.5, 0.5,0.8);
+					zbBuwei.itembuweiF:SetBackdropBorderColor(0.5, 0.5, 0.5,0.5)
+				end
+				local itemLink = PIG["BagBank"]["lixian"][renwu][shuju][i][2]
+				if itemLink then
+					SetItemButtonTexture(frameX, GetItemIcon(itemLink))
+					if PIG["FramePlus"]["Character_ItemLevel"] then
+						local effectiveILvl = GetDetailedItemLevelInfo(itemLink)
+						if effectiveILvl and effectiveILvl>0 then
+							frameX.LV:SetText(effectiveILvl)
+							local quality = C_Item.GetItemQualityByID(itemLink)
+							local r, g, b, hex = GetItemQualityColor(quality)
+							frameX.LV:SetTextColor(r, g, b, 1);
+						end
+					end
+					if zbBuwei then
+						zbBuwei.itemlink:SetText(itemLink)
+						zbBuwei.itembuwei:SetTextColor(0, 1, 1, 0.8);
+						zbBuwei.itembuweiF:SetBackdropBorderColor(0, 1, 1, 0.5)
 					end
 				end
-			end);
-			if shuju~="C" then
-				local MaxCount = PIG['zhegnheBAG']["lixian"][renwu][shuju][i][4]
-				if MaxCount>1 then
-					frameX.shuliang:SetText(PIG['zhegnheBAG']["lixian"][renwu][shuju][i][3])
+				frameX:SetScript("OnEnter", function (self)
+					GameTooltip:ClearLines();
+					GameTooltip:SetOwner(self, "ANCHOR_CURSOR");
+					if itemLink then
+						GameTooltip:SetHyperlink(itemLink)
+					else
+						GameTooltip:SetHyperlink("")
+					end
+					GameTooltip:Show();
+				end);
+				frameX:SetScript("OnLeave", function ()
+					GameTooltip:ClearLines();
+					GameTooltip:Hide() 
+				end);
+			end
+		end
+	else
+		local BagdangeW=BagdangeW-6
+		local www = (meihang-1)*(BagdangeW+4)+BagdangeW
+		frameF:SetWidth(www+13)
+		--排序格式化
+		for i=1,lixianNum do
+			local frameX = _G[framename.."_item_"..i]
+			if i>1 then
+				local yushu=math.fmod((i-1),meihang)	
+				frameX:ClearAllPoints();
+				if yushu==0 then
+					frameX:SetPoint("TOPLEFT", _G[framename.."_item_"..(i-meihang)], "BOTTOMLEFT", 0, -4);
+				else
+					frameX:SetPoint("LEFT", _G[framename.."_item_"..(i-1)], "RIGHT", 4, 0);
 				end
-				if PIG['zhegnheBAG']["wupinLV"] then
-					local ShowLV = PIG['zhegnheBAG']["lixian"][renwu][shuju][i][5]
+			end
+			frameX:Hide();
+			frameX.LV:SetText("")
+		end
+		local hhh = (math.ceil(zongshu/meihang)-1)*(BagdangeW+4)+BagdangeW
+		frameF:SetHeight(hhh+66)
+		for i=1,zongshu do
+			local frameX=_G[framename.."_item_"..i]
+			frameX:Show();
+			local itemLink = PIG["BagBank"]["lixian"][renwu][shuju][i][2]
+			if itemLink then
+				local icon = GetItemIcon(itemLink)
+				frameX.icon:SetTexture(icon)
+				frameX:SetScript("OnEnter", function (self)
+					GameTooltip:ClearLines();
+					GameTooltip:SetOwner(self, "ANCHOR_CURSOR");
+					GameTooltip:SetHyperlink(itemLink)
+					GameTooltip:Show();
+				end);
+				frameX:SetScript("OnLeave", function ()
+					GameTooltip:ClearLines();
+					GameTooltip:Hide() 
+				end);
+				frameX:SetScript("OnMouseUp", function ()
+					if IsShiftKeyDown() then
+						local editBox = ChatEdit_ChooseBoxForSend();
+						local hasText = editBox:GetText()..itemLink
+						if editBox:HasFocus() then
+							editBox:SetText(hasText);
+						else
+							ChatEdit_ActivateChat(editBox)
+							editBox:SetText(hasText);
+						end
+					end
+				end)
+				local MaxCount = PIG["BagBank"]["lixian"][renwu][shuju][i][4]
+				if MaxCount>1 then
+					frameX.shuliang:SetText(PIG["BagBank"]["lixian"][renwu][shuju][i][3])
+				end
+				if PIG["BagBank"]["wupinLV"] then
+					local ShowLV = PIG["BagBank"]["lixian"][renwu][shuju][i][5]
 					if ShowLV then
 						local effectiveILvl = GetDetailedItemLevelInfo(itemLink)	
 						if effectiveILvl and effectiveILvl>0 then
 							frameX.LV:SetText(effectiveILvl)
-							local itemQuality = C_Item.GetItemQualityByID(itemLink)
-							frameX.LV:SetTextColor(QualityColor[itemQuality][1],QualityColor[itemQuality][2],QualityColor[itemQuality][3], 1);
+							local quality = C_Item.GetItemQualityByID(itemLink)
+							local r, g, b, hex = GetItemQualityColor(quality)
+							frameX.LV:SetTextColor(r, g, b, 1);
 						end
 					end
-				end
-			else
-				if i~=4 and i~=19 then
-					_G[framename.."_zbBuwei_"..i].itemlink:SetText(itemLink)
-				end
-				if PIG['ShowPlus']['zhuangbeiLV']=="ON" then
-					local effectiveILvl = GetDetailedItemLevelInfo(itemLink)
-					if effectiveILvl and effectiveILvl>0 then
-						frameX.LV:SetText(effectiveILvl)
-						local itemQuality = C_Item.GetItemQualityByID(itemLink)
-						frameX.LV:SetTextColor(QualityColor[itemQuality][1],QualityColor[itemQuality][2],QualityColor[itemQuality][3], 1);
-					end
-				end
-			end
-		end
-	end
-	if shuju~="C" then
-		local zongkuandu=meihang*BagdangeW+32
-		frameF.hhhh=math.ceil(zongshu/meihang)*(BagdangeW)+102
-		frameF:SetSize(zongkuandu,frameF.hhhh)
-		if shuju=="BAG" then
-			for gg=2,164 do
-				local yushu=math.fmod((gg-1),meihang)
-				local framegg = _G["lixianBAG_UI_wupin_item_"..gg]
-				framegg:ClearAllPoints();
-				if yushu==0 then
-					framegg:SetPoint("TOPLEFT", _G["lixianBAG_UI_wupin_item_"..(gg-meihang)], "BOTTOMLEFT", 0, -4);
-				else
-					framegg:SetPoint("LEFT", _G["lixianBAG_UI_wupin_item_"..(gg-1)], "RIGHT", 4, 0);
 				end
 			end
 		end
 	end
 	frameF:Show()
 end
-
 --刷新背包LV----------------
 local function Bag_Item_lv_Update(framef, id, slot)
 	framef.ZLV:SetText();
@@ -299,7 +345,8 @@ local function Bag_Item_lv_Update(framef, id, slot)
 			if classID==2 or classID==4 then
 				local effectiveILvl = GetDetailedItemLevelInfo(itemLink)
 				framef.ZLV:SetText(effectiveILvl);
-				framef.ZLV:SetTextColor(QualityColor[itemQuality][1],QualityColor[itemQuality][2],QualityColor[itemQuality][3], 1);
+				local r, g, b, hex = GetItemQualityColor(itemQuality)
+				framef.ZLV:SetTextColor(r, g, b, 1);
 			end
 		end
 	end
@@ -336,7 +383,7 @@ local function shuaxinyinhangMOREN(arg1)
 	local framef=_G["BankFrameItem"..arg1];
 	Bag_Item_lv_Update(framef, -1, arg1)
 end
---银行默认格子染色==================================
+--银行默认格子染色
 local function Bag_Item_Ranse_Update(framef,id,slot)
 	framef.ranse:Hide()
 	local itemLink = C_Container.GetContainerItemLink(id, slot)
@@ -385,13 +432,13 @@ local function Bag_Item_Ranse(frame, size, id)
 end
 --其他角色数量
 TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(tooltip, data)
-	if not PIG['zhegnheBAG']["qitashulaing"] then return end
+	if not PIG["BagBank"]["qitashulaing"] then return end
 	if tooltip == GameTooltip then
 		local itemID = data["id"]
 		if itemID then	
 			if itemID==6948 then return end
 			local renwuWupinshu={}
-			local renwuWupinINFO=PIG['zhegnheBAG']["lixian"]
+			local renwuWupinINFO=PIG["BagBank"]["lixian"]
 			for k,v in pairs(renwuWupinINFO) do
 				local Czongshu=#renwuWupinINFO[k]["C"]
 				renwuWupinshu.Cshuliang=0
@@ -475,475 +522,333 @@ TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(tool
 		end
 	end
 end)
-
---===========================================
+--=====================
 local XWidth, XHeight =CharacterHeadSlot:GetWidth(),CharacterHeadSlot:GetHeight()
---------
-local function zhegnhe_Open()
-	if ContainerFrameCombinedBags.biaoti then return end
-	if PIG['zhegnheBAG']["wupinLV"] then
-		--背包
-		for bagui = 1, 13 do
-			for slot = 1, 36 do
-				local famrr=_G["ContainerFrame"..bagui.."Item"..slot]
-				if famrr.ZLV then return end
-				famrr.ZLV = famrr:CreateFontString();
-				famrr.ZLV:SetPoint("TOPRIGHT", famrr, "TOPRIGHT", -1, -1);
-				famrr.ZLV:SetFont(ChatFontNormal:GetFont(), 15, "OUTLINE");
-				famrr.ZLV:SetDrawLayer("OVERLAY", 7)
-			end
-		end
-		--银行默认格子
-		for i = 1, yinhangmorengezishu[1] do
-			local famrr=_G["BankFrameItem"..i]
+function BagBankfun.Zhenghe(Rneirong,tabbut)
+	if not PIG["BagBank"]["Zhenghe"] or ContainerFrameCombinedBags.lixianBut then return end
+	if PIG["BagBank"]["Zhenghe"] and GetCVar("combinedBags")=="0" then
+		SetCVar("combinedBags",1)
+	end
+	if ContainerFrameCombinedBags:IsShown() then CloseAllBags() end
+	local wanjia, realm = UnitFullName("player")
+	local realm=realm or GetRealmName()
+	PIG_renwuming = wanjia.."-"..realm
+	bagID.meihang=PIG["BagBank"]["BAGmeihangshu_retail"] or bagID.meihang
+	bagID.suofang=PIG["BagBank"]["BAGsuofangBili"] or bagID.suofang
+	--背包
+	for bagui = 1, 13 do
+		for slot = 1, 36 do
+			local famrr=_G["ContainerFrame"..bagui.."Item"..slot]
 			if famrr.ZLV then return end
-			famrr.ZLV = famrr:CreateFontString();
-			famrr.ZLV:SetPoint("TOPRIGHT", famrr, "TOPRIGHT", -1, -1);
-			famrr.ZLV:SetFont(ChatFontNormal:GetFont(), 15, "OUTLINE");
+			famrr.ZLV = PIGFontString(famrr,{"TOPRIGHT", famrr, "TOPRIGHT", -1, -1},nil,nil,15)
 			famrr.ZLV:SetDrawLayer("OVERLAY", 7)
 		end
 	end
-	if PIG['zhegnheBAG']["wupinRanse"] then
-		--背包
-		for bagui = 1, 13 do
-				for slot = 1, 36 do
-					local famrr=_G["ContainerFrame"..bagui.."Item"..slot]
-					if famrr.ranse then return end
-				    famrr.ranse = famrr:CreateTexture(nil, 'OVERLAY');
-				    famrr.ranse:SetTexture("Interface\\Buttons\\UI-ActionButton-Border");
-				    famrr.ranse:SetBlendMode('ADD');
-				    famrr.ranse:SetSize(XWidth*1.8, XHeight*1.8);
-				    famrr.ranse:SetPoint('CENTER', famrr, 'CENTER', 0, 0);
-				    famrr.ranse:Hide()
-				end
-		end
-		--银行默认格子
-		for i = 1, yinhangmorengezishu[1] do
-			local famrr=_G["BankFrameItem"..i]
+	--银行默认格子
+	for i = 1, yinhangmorengezishu[1] do
+		local famrr=_G["BankFrameItem"..i]
+		if famrr.ZLV then return end
+		famrr.ZLV = PIGFontString(famrr,{"TOPRIGHT", famrr, "TOPRIGHT", -1, -1},nil,nil,15)
+		famrr.ZLV:SetDrawLayer("OVERLAY", 7)
+	end
+	--背包
+	for bagui = 1, 13 do
+		for slot = 1, 36 do
+			local famrr=_G["ContainerFrame"..bagui.."Item"..slot]
 			if famrr.ranse then return end
-		    famrr.ranse = famrr:CreateTexture(nil, 'OVERLAY');
+		    famrr.ranse = famrr:CreateTexture(nil, "OVERLAY");
 		    famrr.ranse:SetTexture("Interface\\Buttons\\UI-ActionButton-Border");
-		    famrr.ranse:SetBlendMode('ADD');
+		    famrr.ranse:SetBlendMode("ADD");
 		    famrr.ranse:SetSize(XWidth*1.8, XHeight*1.8);
-		    famrr.ranse:SetPoint('CENTER', famrr, 'CENTER', 0, 0);
+		    famrr.ranse:SetPoint("CENTER", famrr, "CENTER", 0, 0);
 		    famrr.ranse:Hide()
 		end
 	end
-	if PIG['zhegnheBAG']["JunkShow"] then
-		for f=1,#bagID do
-			local baogeshu=C_Container.GetContainerNumSlots(bagID[f])
-			for slot=1,baogeshu do
-				local framef = _G["ContainerFrame"..(bagID[f]+1).."Item"..slot]
-				function framef:UpdateJunkItem(quality, noValue)
+	--银行默认格子
+	for i = 1, yinhangmorengezishu[1] do
+		local famrr=_G["BankFrameItem"..i]
+		if famrr.ranse then return end
+	    famrr.ranse = famrr:CreateTexture(nil, "OVERLAY")
+	    famrr.ranse:SetTexture("Interface\\Buttons\\UI-ActionButton-Border");
+	    famrr.ranse:SetBlendMode("ADD");
+	    famrr.ranse:SetSize(XWidth*1.8, XHeight*1.8);
+	    famrr.ranse:SetPoint("CENTER", famrr, "CENTER", 0, 0);
+	    famrr.ranse:Hide()
+	end
+	if PIG["BagBank"]["JunkShow"] then
+		for f=1,13 do
+			for ff=1,36 do
+				local framef = _G["ContainerFrame"..f.."Item"..ff]
+				hooksecurefunc(framef, "UpdateJunkItem", function(self,quality, noValue)	
 					self.JunkIcon:Hide();
-					local itemLocation = ItemLocation:CreateFromBagAndSlot(self:GetBagID(), self:GetID());
-					if C_Item.DoesItemExist(itemLocation) then
-						local isJunk = quality == Enum.ItemQuality.Poor and not noValue;
-						self.JunkIcon:SetShown(isJunk);
+					if quality and quality==0 then
+						self.JunkIcon:Show();
 					end
-				end
+				end)
 			end
 		end
 	end
 	--------------------------
-	ContainerFrameCombinedBags:HookScript("OnHide",function(self)
-		self.shezhi.F:Hide()
+	--系统整合背包
+	hooksecurefunc("ContainerFrame_GenerateFrame", function(frame, size, id)
+		frame:SetScale(PIG["BagBank"]["BAGsuofangBili"])
+	end)	
+	ContainerFrameCombinedBags:RegisterForDrag("LeftButton")
+	ContainerFrameCombinedBags:SetMovable(true)
+	ContainerFrameCombinedBags:SetClampedToScreen(true)
+	ContainerFrameCombinedBags:SetScript("OnDragStart",function(self)
+	    self:StartMoving();
+	    self:SetUserPlaced(false)
 	end)
-	ContainerFrameCombinedBags.biaoti = CreateFrame("Frame", nil, ContainerFrameCombinedBags)
-	ContainerFrameCombinedBags.biaoti:SetPoint("TOPLEFT", ContainerFrameCombinedBags, "TOPLEFT",58, -1);
-	ContainerFrameCombinedBags.biaoti:SetPoint("TOPRIGHT", ContainerFrameCombinedBags, "TOPRIGHT",-26, -1);
-	ContainerFrameCombinedBags.biaoti:SetHeight(20);
-	ContainerFrameCombinedBags.biaoti:EnableMouse(true)
-	ContainerFrameCombinedBags.biaoti:RegisterForDrag("LeftButton")
-	ContainerFrameCombinedBags.biaoti:SetScript("OnDragStart",function()
-	    ContainerFrameCombinedBags:StartMoving();
-	    ContainerFrameCombinedBags:SetUserPlaced(false)
+	ContainerFrameCombinedBags:SetScript("OnDragStop",function(self)
+	    self:StopMovingOrSizing()
+	    self:SetUserPlaced(false)
 	end)
-	ContainerFrameCombinedBags.biaoti:SetScript("OnDragStop",function()
-	    ContainerFrameCombinedBags:StopMovingOrSizing()
-	    ContainerFrameCombinedBags:SetUserPlaced(false)
-	end)
-	hooksecurefunc(ContainerFrameCombinedBags, "SetSearchBoxPoint", function(self)
+
+	hooksecurefunc(ContainerFrameCombinedBags, "SetSearchBoxPoint", function()
 		BagItemSearchBox:SetWidth(180);
-		BagItemSearchBox:SetPoint("TOPLEFT",ContainerFrameCombinedBags,"TOPLEFT",160,-37);
+		BagItemSearchBox:SetPoint("TOPLEFT",ContainerFrameCombinedBags,"TOPLEFT",180,-37);
 	end)
-
-	ContainerFrameCombinedBags.lixianBUT = CreateFrame("Frame",nil,ContainerFrameCombinedBags);
-	ContainerFrameCombinedBags.lixianBUT:SetSize(32,32);
-	ContainerFrameCombinedBags.lixianBUT:SetPoint("TOPLEFT",ContainerFrameCombinedBags,"TOPLEFT",36,-30);
-
-	ContainerFrameCombinedBags.lixianBUT.Border = ContainerFrameCombinedBags.lixianBUT:CreateTexture(nil, "OVERLAY");
-	ContainerFrameCombinedBags.lixianBUT.Border:SetTexture("Interface/Minimap/MiniMap-TrackingBorder");
-	ContainerFrameCombinedBags.lixianBUT.Border:SetSize(52,52);
-	ContainerFrameCombinedBags.lixianBUT.Border:SetPoint("TOPLEFT", 0, 0);
-
-	ContainerFrameCombinedBags.lixianBUT.Tex = ContainerFrameCombinedBags.lixianBUT:CreateTexture()
-	ContainerFrameCombinedBags.lixianBUT.Tex:SetTexture(130899);
-	ContainerFrameCombinedBags.lixianBUT.Tex:SetAllPoints(ContainerFrameCombinedBags.lixianBUT)
-
-	ContainerFrameCombinedBags.lixianBUT.xiala=PIGDownMenu(nil,{wwgg,hhgg},ContainerFrameCombinedBags.lixianBUT,{"TOPLEFT",ContainerFrameCombinedBags.lixianBUT, "CENTER", 0,-4},"DJEasyMenu")
-	ContainerFrameCombinedBags.lixianBUT.xiala.Button:SetHighlightTexture("Interface/Minimap/UI-Minimap-ZoomButton-Highlight");
-	ContainerFrameCombinedBags.lixianBUT.xiala.Button:HookScript("OnClick",  function (self,button)
-		if button=="LeftButton" then
-			if BankFrame:IsShown() then return end
-			PlaySoundFile(567463, "Master")
-			if lixianBank_UI:IsShown() then
-				lixianBank_UI:Hide()
-			else
-				Show_lixian_data(lixianBank_UI,PIG_renwuming,"BANK",bankID.meihang,yinhangmorengezishu.banknum)
-			end
+	--
+	local function ADD_lixianSet()
+		local fujiBagFrame = ContainerFrameCombinedBags
+		if ElvUI then fujiBagFrame = ElvUI_ContainerFrame end
+		if NDui and NDuiDB["Bags"]["Enable"] then fujiBagFrame = NDui_BackpackBag end
+		if NDui and NDuiDB["Bags"]["Enable"] then
+			fujiBagFrame.lixianBut = PIGFrame(fujiBagFrame)
+			fujiBagFrame.lixianBut:PIGSetBackdrop()
+			fujiBagFrame.lixianBut:SetSize(22,22);	
+			fujiBagFrame.lixianBut:SetPoint("TOPLEFT",fujiBagFrame,"TOPLEFT",170,-5)
+		elseif ElvUI then
+			fujiBagFrame.lixianBut = PIGFrame(fujiBagFrame)
+			fujiBagFrame.lixianBut:PIGSetBackdrop()
+			fujiBagFrame.lixianBut:SetSize(22,22);	
+			fujiBagFrame.lixianBut:SetPoint("TOPLEFT",fujiBagFrame,"TOPLEFT",170,-5)
+		else
+			fujiBagFrame.lixianBut = CreateFrame("Frame",nil,fujiBagFrame);
+			fujiBagFrame.lixianBut:SetSize(32,32);	
+			fujiBagFrame.lixianBut:SetPoint("TOPLEFT",fujiBagFrame,"TOPLEFT",50,-30)
+			fujiBagFrame.lixianBut.Border = fujiBagFrame.lixianBut:CreateTexture(nil, "OVERLAY");
+			fujiBagFrame.lixianBut.Border:SetTexture("Interface/Minimap/MiniMap-TrackingBorder");
+			fujiBagFrame.lixianBut.Border:SetSize(52,52);
+			fujiBagFrame.lixianBut.Border:SetPoint("TOPLEFT", 0, 0)
 		end
-	end)
-	function ContainerFrameCombinedBags.lixianBUT.xiala:PIGDownMenu_Update_But(self, level, menuList)
-		local danxuanerjiList = {}
-		local KucunName={["C"]="已装备物品",["BAG"]="背包物品",["BANK"]="银行物品"}
-		for k,v in pairs(PIG["zhegnheBAG"]["lixian"]) do	
-			local xiajicaidan={}
-			for kk,vv in pairs(KucunName) do
-				table.insert(xiajicaidan,{vv,kk,k,v["ClassN"].."~"..v["Race"].."~"..v["Lv"]})
-			end
-			if k~=PIG_renwuming then
-				ContainerFrameCombinedBags.lixiancunzaiwupin=true
-				table.insert(danxuanerjiList,{k,xiajicaidan})
-			end
-	    end
-	    local info = {}
-	    if ContainerFrameCombinedBags.lixiancunzaiwupin then
-			if (level or 1) == 1 then
-				for i=1,#danxuanerjiList,1 do
-				    info.text= danxuanerjiList[i][1]
-				    info.menuList, info.hasArrow = danxuanerjiList[i][2], true
-				    ContainerFrameCombinedBags.lixianBUT.xiala:PIGDownMenu_AddButton(info)
+		fujiBagFrame.lixianBut.Tex = fujiBagFrame.lixianBut:CreateTexture()
+		fujiBagFrame.lixianBut.Tex:SetTexture(132050);
+		fujiBagFrame.lixianBut.Tex:SetSize(18,18);
+		fujiBagFrame.lixianBut.Tex:SetPoint("CENTER",-1,1);
+
+		fujiBagFrame.lixianBut.xiala=PIGDownMenu(fujiBagFrame.lixianBut,{"TOPLEFT",fujiBagFrame.lixianBut, "CENTER", 0,-4},{wwgg,hhgg},"DJEasyMenu")
+		if NDui and NDuiDB["Bags"]["Enable"] then
+			fujiBagFrame.lixianBut.xiala.Button:SetHighlightTexture("Interface/Buttons/ButtonHilight-Square")
+		else
+			fujiBagFrame.lixianBut.xiala.Button:SetHighlightTexture("Interface/Minimap/UI-Minimap-ZoomButton-Highlight")
+		end
+		fujiBagFrame.lixianBut.xiala.Button:SetScript("OnMouseDown", function (self)
+			fujiBagFrame.lixianBut.Tex:SetPoint("CENTER",-2,0);
+		end);
+		fujiBagFrame.lixianBut.xiala.Button:SetScript("OnMouseUp", function (self)
+			fujiBagFrame.lixianBut.Tex:SetPoint("CENTER",-1,1);
+		end);
+		fujiBagFrame.lixianBut.xiala.Button:SetScript("OnEnter", function (self)
+			GameTooltip:ClearLines();
+			GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT",0,0);
+			GameTooltip:AddLine("左键-|cff00FFff打开离线银行|r\n右键-|cff00FFff查看其他角色离线物品|r")
+			GameTooltip:Show();
+		end);
+		fujiBagFrame.lixianBut.xiala.Button:SetScript("OnLeave", function ()
+			GameTooltip:ClearLines();
+			GameTooltip:Hide() 
+		end);
+		fujiBagFrame.lixianBut.xiala.Button:HookScript("OnClick",  function (self,button)
+			if button=="LeftButton" then
+				if BankFrame:IsShown() then return end
+				PlaySoundFile(567463, "Master")
+				if lixianBank_UI:IsShown() then
+					lixianBank_UI:Hide()
+				else
+					Show_lixian_data(lixianBank_UI,PIG_renwuming,"BANK",bankID.meihang,bankID.lixianNum)
 				end
+			end
+		end)
+		function fujiBagFrame.lixianBut.xiala:PIGDownMenu_Update_But(self, level, menuList)
+			local danxuanerjiList = {}
+			local KucunName={["C"]="已装备物品",["BAG"]="背包物品",["BANK"]="银行物品"}
+			for k,v in pairs(PIG["BagBank"]["lixian"]) do	
+				local xiajicaidan={}
+				for kk,vv in pairs(KucunName) do
+					table.insert(xiajicaidan,{vv,kk,k,v["ClassN"].."~"..v["Race"].."~"..v["Lv"]})
+				end
+				if k~=PIG_renwuming then
+					fujiBagFrame.lixiancunzaiwupin=true
+					table.insert(danxuanerjiList,{k,xiajicaidan})
+				end
+		    end
+		    local info = {}
+		    if fujiBagFrame.lixiancunzaiwupin then
+				if (level or 1) == 1 then
+					for i=1,#danxuanerjiList,1 do
+					    info.text= danxuanerjiList[i][1]
+					    info.menuList, info.hasArrow = danxuanerjiList[i][2], true
+					    fujiBagFrame.lixianBut.xiala:PIGDownMenu_AddButton(info)
+					end
+				else
+					local listFrame = _G["PIGDownList"..level];
+					for x=1,#menuList,1 do
+						info.text = menuList[x][1]
+						if menuList[x][2]=="BANK" then
+							info.func = function()
+								Show_lixian_data(lixianBank_UI,menuList[x][3],"BANK",bankID.meihang,bankID.lixianNum)
+								PIGCloseDropDownMenus()
+							end
+						elseif menuList[x][2]=="C" then
+							info.func = function()
+								Show_lixian_data(lixianC_UI,menuList[x][3],"C",menuList[x][4],19)
+								PIGCloseDropDownMenus()
+							end
+						elseif menuList[x][2]=="BAG" then
+							info.func = function()
+								Show_lixian_data(lixianBag_UI,menuList[x][3],"BAG",bagID.meihang,bagID.lixianNum)
+								PIGCloseDropDownMenus()
+							end
+						end
+						fujiBagFrame.lixianBut.xiala:PIGDownMenu_AddButton(info,level)
+					end
+				end
+		    else
+		    	info.text= "登录一次其他角色可离线查看" 
+		    	info.func = function()
+					PIGCloseDropDownMenus()
+				end
+				fujiBagFrame.lixianBut.xiala:PIGDownMenu_AddButton(info)	
+		    end 
+		end
+
+		--设置按钮
+		if NDui and NDuiDB["Bags"]["Enable"] then
+			fujiBagFrame.shezhi = PIGButton(fujiBagFrame,{"TOPLEFT",fujiBagFrame,"TOPLEFT",210,-5},{22,22})
+		elseif ElvUI then
+			fujiBagFrame.shezhi = PIGButton(fujiBagFrame,{"TOPLEFT",fujiBagFrame,"TOPLEFT",210,-5},{22,22})
+		else
+			fujiBagFrame.shezhi = CreateFrame("Button",nil,fujiBagFrame);
+			fujiBagFrame.shezhi:SetHighlightTexture("Interface/Minimap/UI-Minimap-ZoomButton-Highlight");
+			fujiBagFrame.shezhi:SetSize(32,32);
+			fujiBagFrame.shezhi:SetPoint("TOPLEFT",fujiBagFrame,"TOPLEFT",110,-30);
+			fujiBagFrame.shezhi:RegisterForClicks("LeftButtonUp","RightButtonUp")
+
+			fujiBagFrame.shezhi.Border = fujiBagFrame.shezhi:CreateTexture(nil, "OVERLAY");
+			fujiBagFrame.shezhi.Border:SetTexture("Interface/Minimap/MiniMap-TrackingBorder");
+			fujiBagFrame.shezhi.Border:SetSize(52,52);
+			fujiBagFrame.shezhi.Border:SetPoint("TOPLEFT", 0, 0);
+		end
+		fujiBagFrame.shezhi.Tex = fujiBagFrame.shezhi:CreateTexture(nil,"OVERLAY");
+		fujiBagFrame.shezhi.Tex:SetTexture("interface/gossipframe/healergossipicon.blp");
+		fujiBagFrame.shezhi.Tex:SetPoint("CENTER", 0, 0);
+		fujiBagFrame.shezhi.Tex:SetSize(18,18);
+		fujiBagFrame.shezhi:SetScript("OnMouseDown", function (self)
+			self.Tex:SetPoint("CENTER",-1,-1);
+		end);
+		fujiBagFrame.shezhi:SetScript("OnMouseUp", function (self)
+			self.Tex:SetPoint("CENTER");
+		end);
+		fujiBagFrame.shezhi:SetScript("OnClick", function (self)
+			if Pig_OptionsUI:IsShown() then
+				Pig_OptionsUI:Hide()
 			else
-				local listFrame = _G["PIGDownList"..level];
-				for x=1,#menuList,1 do
-					info.text = menuList[x][1]
-					if menuList[x][2]=="BANK" then
-						info.func = function()
-							Show_lixian_data(lixianBank_UI,menuList[x][3],"BANK",bankID.meihang,yinhangmorengezishu.banknum)
-							PIGCloseDropDownMenus()
-						end
-					elseif menuList[x][2]=="C" then
-						info.func = function()
-							Show_lixian_data(lixianC_UI,menuList[x][3],"C",menuList[x][4],19)
-							PIGCloseDropDownMenus()
-						end
-					elseif menuList[x][2]=="BAG" then
-						info.func = function()
-							Show_lixian_data(lixianBAG_UI,menuList[x][3],"BAG",bagID.meihang,164)
-							PIGCloseDropDownMenus()
+				Pig_OptionsUI:Show()
+				Create.Show_TabBut(Rneirong,tabbut)
+			end
+		end)
+		--其他角色金币	
+		local function ADDshowEV(fameFF)
+			fameFF:SetScript("OnEnter", function (self)
+				GameTooltip:ClearLines();
+				GameTooltip:SetOwner(self, "ANCHOR_CURSOR",0,0);
+				
+				local lixianheji = PIG["BagBank"]["lixian"]
+				local lixianhejiNAMEG = {}
+				lixianhejiNAMEG.ZIJIg=GetMoney();
+				for k,v in pairs(lixianheji) do
+					if k~=PIG_renwuming then
+						if v["G"] and v["G"]>0 then
+							table.insert(lixianhejiNAMEG,{k,v["G"],v["ClassN"]})
+							lixianhejiNAMEG.ZIJIg=lixianhejiNAMEG.ZIJIg+v["G"]
 						end
 					end
-					ContainerFrameCombinedBags.lixianBUT.xiala:PIGDownMenu_AddButton(info,level)
+				end
+				GameTooltip:AddLine("总计："..GetCoinTextureString(lixianhejiNAMEG.ZIJIg))
+				for n=1,#lixianhejiNAMEG do
+					local rPerc, gPerc, bPerc, argbHex = GetClassColor(lixianhejiNAMEG[n][3]);
+					local argbHex=argbHex or "ffffffff"
+					GameTooltip:AddLine("\124c"..argbHex..lixianhejiNAMEG[n][1].."\124r："..GetCoinTextureString(lixianhejiNAMEG[n][2]))
+				end
+				GameTooltip:Show();
+			end);
+			fameFF:SetScript("OnLeave", function ()
+				GameTooltip:ClearLines();
+				GameTooltip:Hide() 
+			end);
+		end
+		if NDui and NDuiDB["Bags"]["Enable"] then
+			ADDshowEV(fujiBagFrame.shezhi)
+		elseif ElvUI then
+			ADDshowEV(fujiBagFrame.shezhi)
+		else
+			ADDshowEV(fujiBagFrame.MoneyFrame)
+			local monheji = {fujiBagFrame.MoneyFrame:GetChildren()}
+			for i=1,#monheji do
+				if monheji[i]~=ContainerFrame1MoneyFrameTrialErrorButton then
+					ADDshowEV(monheji[i])
 				end
 			end
-	    else
-	    	info.text= "登录一次其他角色可离线查看" 
-	    	info.func = function()
-				PIGCloseDropDownMenus()
-			end
-			ContainerFrameCombinedBags.lixianBUT.xiala:PIGDownMenu_AddButton(info)	
-	    end 
-	end
-
-	--设置按钮
-	ContainerFrameCombinedBags.shezhi = CreateFrame("Button",nil,ContainerFrameCombinedBags);
-	ContainerFrameCombinedBags.shezhi:SetHighlightTexture("Interface/Minimap/UI-Minimap-ZoomButton-Highlight");
-	ContainerFrameCombinedBags.shezhi:SetSize(32,32);
-	ContainerFrameCombinedBags.shezhi:SetPoint("TOPLEFT",ContainerFrameCombinedBags,"TOPLEFT",90,-30);
-	ContainerFrameCombinedBags.shezhi:SetScript("OnMouseDown", function (self)
-		self.Tex:SetPoint("CENTER",-1,-1);
-	end);
-	ContainerFrameCombinedBags.shezhi:SetScript("OnMouseUp", function (self)
-		self.Tex:SetPoint("CENTER");
-	end);
-	ContainerFrameCombinedBags.shezhi:SetScript("OnClick", function (self)
-		if self.F:IsShown() then
-			self.F:Hide()
-		else
-			self.F:Show()
 		end
-	end);
-
-	ContainerFrameCombinedBags.shezhi.Border = ContainerFrameCombinedBags.shezhi:CreateTexture(nil, "OVERLAY");
-	ContainerFrameCombinedBags.shezhi.Border:SetTexture("Interface/Minimap/MiniMap-TrackingBorder");
-	ContainerFrameCombinedBags.shezhi.Border:SetSize(52,52);
-	ContainerFrameCombinedBags.shezhi.Border:SetPoint("TOPLEFT", 0, 0);
-
-	ContainerFrameCombinedBags.shezhi.Tex = ContainerFrameCombinedBags.shezhi:CreateTexture(nil,"OVERLAY");
-	ContainerFrameCombinedBags.shezhi.Tex:SetTexture("interface/gossipframe/healergossipicon.blp");
-	ContainerFrameCombinedBags.shezhi.Tex:SetPoint("CENTER", 1, 0);
-	ContainerFrameCombinedBags.shezhi.Tex:SetSize(18,18);
-	local caihemeihang =10
-	local BAG_shezhi = {
-		{"交易时打开背包","jiaoyiOpen",false},
-		{"拍卖时打开背包","AHOpen",false},
-		{"垃圾物品提示","JunkShow",true},
-		{"显示装备等级","wupinLV",true},
-		{"装备品质染色","wupinRanse",true},
-		{"显示其他角色数量","qitashulaing",false},
-		{"显示其他角色金币","qitajinbi",true},
-		{"反向整理",C_Container.GetSortBagsRightToLeft(),false},
-		{"战利品放入左边包",C_Container.GetInsertItemsLeftToRight(),false},
-	}
-	ContainerFrameCombinedBags.shezhi.F = CreateFrame("Frame", nil, ContainerFrameCombinedBags.shezhi,"BackdropTemplate");
-	ContainerFrameCombinedBags.shezhi.F:SetBackdrop( { bgFile = "Interface/DialogFrame/UI-DialogBox-Background",
-	edgeFile = "Interface/Tooltips/UI-Tooltip-Border", edgeSize = 8,insets = { left = 1, right = 1, top = 1, bottom = 1 }} );
-	ContainerFrameCombinedBags.shezhi.F:SetBackdropBorderColor(1, 1, 1, 0.6);
-	if #BAG_shezhi>caihemeihang then
-		ContainerFrameCombinedBags.shezhi.F:SetSize(400,caihemeihang*36+70);
-	else
-		ContainerFrameCombinedBags.shezhi.F:SetSize(260,#BAG_shezhi*36+70);
 	end
-	ContainerFrameCombinedBags.shezhi.F:SetPoint("CENTER",UIParent,"CENTER",0,0);
-	ContainerFrameCombinedBags.shezhi.F:Hide()
-	ContainerFrameCombinedBags.shezhi.F:SetIgnoreParentScale(true)
-	ContainerFrameCombinedBags.shezhi.F:SetFrameStrata("HIGH")
-	ContainerFrameCombinedBags.shezhi.F.COS = CreateFrame("Button",nil,ContainerFrameCombinedBags.shezhi.F,"UIPanelCloseButton");
-	ContainerFrameCombinedBags.shezhi.F.COS:SetSize(28,28);
-	ContainerFrameCombinedBags.shezhi.F.COS:SetPoint("TOPRIGHT",ContainerFrameCombinedBags.shezhi.F,"TOPRIGHT",0,0);
-	hooksecurefunc("TradeFrame_OnShow", function(self)
-		if PIG['zhegnheBAG']["jiaoyiOpen"] then
+	local fujiBagFramejiazaishu= 0
+	local function BAGjiazaifou()
+		if NDui and NDuiDB["Bags"]["Enable"] or ElvUI then
+			if NDui_BackpackBag or ElvUI_ContainerFrame then
+				ADD_lixianSet()
+			else
+				if fujiBagFramejiazaishu<6 then
+					C_Timer.After(1,BAGjiazaifou)
+					fujiBagFramejiazaishu=fujiBagFramejiazaishu+1
+				end
+			end
+		else
+			ADD_lixianSet()
+		end
+	end
+	BAGjiazaifou()
+	--交易打开
+	hooksecurefunc("TradeFrame_OnShow", function()
+		if PIG["BagBank"]["jiaoyiOpen"] then
 			if(UnitExists("NPC"))then
 				OpenAllBags()
 			end
 		end
-	end);
-	for i=1,#BAG_shezhi do
-		ContainerFrameCombinedBags.shezhi.F.CKB = CreateFrame("CheckButton","BAG_shezhi_CKB_"..i, ContainerFrameCombinedBags.shezhi.F, "ChatConfigCheckButtonTemplate");
-		ContainerFrameCombinedBags.shezhi.F.CKB:SetSize(28,28);
-		ContainerFrameCombinedBags.shezhi.F.CKB:SetHitRectInsets(0,-100,0,0);
-		ContainerFrameCombinedBags.shezhi.F.CKB.Text:SetText(BAG_shezhi[i][1]);
-		ContainerFrameCombinedBags.shezhi.F.CKB.tooltip = "勾选将开启"..BAG_shezhi[i][1];
-		if BAG_shezhi[i][1] then
-			ContainerFrameCombinedBags.shezhi.F.CKB.CZUI = CreateFrame("Button",nil,ContainerFrameCombinedBags.shezhi.F.CKB, "UIPanelButtonTemplate");
-			ContainerFrameCombinedBags.shezhi.F.CKB.CZUI:SetSize(70,22);
-			ContainerFrameCombinedBags.shezhi.F.CKB.CZUI:SetPoint("LEFT",ContainerFrameCombinedBags.shezhi.F.CKB.Text,"RIGHT",4,0);
-			ContainerFrameCombinedBags.shezhi.F.CKB.CZUI:SetText("重载UI");
-			ContainerFrameCombinedBags.shezhi.F.CKB.CZUI:Hide();
-			ContainerFrameCombinedBags.shezhi.F.CKB.CZUI:SetScript("OnClick", function(self, button)
-				ReloadUI()
-			end)
-		end
-		if i==1 then
-			ContainerFrameCombinedBags.shezhi.F.CKB:SetPoint("TOPLEFT", ContainerFrameCombinedBags.shezhi.F, "TOPLEFT", 10, -10);
-		elseif i==caihemeihang+1 then
-			ContainerFrameCombinedBags.shezhi.F.CKB:SetPoint("LEFT", BAG_shezhi_CKB_1, "RIGHT", 150, 0);
-		else
-			ContainerFrameCombinedBags.shezhi.F.CKB:SetPoint("TOPLEFT", _G["BAG_shezhi_CKB_"..(i-1)], "BOTTOMLEFT", 0, -8);
-		end
-
-		ContainerFrameCombinedBags.shezhi.F.CKB:SetScript("OnClick", function (self)
-			if self:GetChecked() then
-				if BAG_shezhi[i][1]=="反向整理" then
-					SetSortBagsRightToLeft(false)
-				else
-					PIG["zhegnheBAG"][BAG_shezhi[i][2]]=true
-				end
-				if BAG_shezhi[i][3] then
-					self.CZUI:Show();
-				end
-			else
-				if BAG_shezhi[i][1]=="反向整理" then
-					SetSortBagsRightToLeft(true)
-				else
-					PIG["zhegnheBAG"][BAG_shezhi[i][2]]=false
-				end
-				if BAG_shezhi[i][3] then
-					self.CZUI:Show();
+	end)
+	--银行打开时关闭背包不关闭银行的背包
+	hooksecurefunc("ToggleAllBags", function()
+		if PIG["BagBank"]["Zhenghe"] then
+			if BankFrame:IsShown() then
+				for i = NUM_TOTAL_BAG_FRAMES + 1, NUM_CONTAINER_FRAMES do
+					OpenBag(i)
 				end
 			end
-		end);
-	end
-	--每行格数
-	function ContainerFrameCombinedBags:GetColumns()
-		if self:IsCombinedBagContainer() then
-			return bagID.meihang;
-		else
-			return 4;
 		end
-	end
-	ContainerFrameCombinedBags.shezhi.F.hangNUMTXT = ContainerFrameCombinedBags.shezhi.F:CreateFontString();
-	ContainerFrameCombinedBags.shezhi.F.hangNUMTXT:SetPoint("BOTTOMLEFT",ContainerFrameCombinedBags.shezhi.F,"BOTTOMLEFT",10,50);
-	ContainerFrameCombinedBags.shezhi.F.hangNUMTXT:SetFontObject(GameFontNormal);
-	ContainerFrameCombinedBags.shezhi.F.hangNUMTXT:SetText("每行格数");
-	local BagmeihangN = {8,10,12,14,16};
-	ContainerFrameCombinedBags.shezhi.F.hangNUM=PIGDownMenu(nil,{60,24},ContainerFrameCombinedBags.shezhi.F,{"LEFT",ContainerFrameCombinedBags.shezhi.F.hangNUMTXT,"RIGHT",0,0})
-	function ContainerFrameCombinedBags.shezhi.F.hangNUM:PIGDownMenu_Update_But(self)
-		local info = {}
-		info.func = self.PIGDownMenu_SetValue
-		for i=1,#BagmeihangN,1 do
-		    info.text, info.arg1 = BagmeihangN[i], BagmeihangN[i]
-		    info.checked = BagmeihangN[i]==PIG['zhegnheBAG']["BAGmeihangshu_retail"]
-			ContainerFrameCombinedBags.shezhi.F.hangNUM:PIGDownMenu_AddButton(info)
-		end 
-	end
-	function ContainerFrameCombinedBags.shezhi.F.hangNUM:PIGDownMenu_SetValue(value,arg1,arg2)
-		ContainerFrameCombinedBags.shezhi.F.hangNUM:PIGDownMenu_SetText(value)
-		PIG['zhegnheBAG']["BAGmeihangshu_retail"] = arg1;
-		bagID.meihang = arg1;
-		CloseAllBags()
-		OpenAllBags()
-		PIGCloseDropDownMenus()
-	end
-	--缩放
-	ContainerFrameCombinedBags.shezhi.F.suofangTXT = ContainerFrameCombinedBags.shezhi.F:CreateFontString();
-	ContainerFrameCombinedBags.shezhi.F.suofangTXT:SetPoint("TOPLEFT",ContainerFrameCombinedBags.shezhi.F.hangNUMTXT,"BOTTOMLEFT",0,-14);
-	ContainerFrameCombinedBags.shezhi.F.suofangTXT:SetFontObject(GameFontNormal);
-	ContainerFrameCombinedBags.shezhi.F.suofangTXT:SetText("缩放比例");
-	local BAGsuofangbili = {0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4};
-	ContainerFrameCombinedBags.shezhi.F.suofang=PIGDownMenu(nil,{60,24},ContainerFrameCombinedBags.shezhi.F,{"LEFT",ContainerFrameCombinedBags.shezhi.F.suofangTXT,"RIGHT",0,0})
-	function ContainerFrameCombinedBags.shezhi.F.suofang:PIGDownMenu_Update_But(self)
-		local info = {}
-		info.func = self.PIGDownMenu_SetValue
-		for i=1,#BAGsuofangbili,1 do
-		    info.text, info.arg1 = BAGsuofangbili[i], BAGsuofangbili[i]
-		    info.checked = BAGsuofangbili[i]==PIG["zhegnheBAG"]["BAGsuofangBili"]
-			ContainerFrameCombinedBags.shezhi.F.suofang:PIGDownMenu_AddButton(info)
-		end 
-	end
-	function ContainerFrameCombinedBags.shezhi.F.suofang:PIGDownMenu_SetValue(value,arg1,arg2)
-		ContainerFrameCombinedBags.shezhi.F.suofang:PIGDownMenu_SetText(value)
-		PIG["zhegnheBAG"]["BAGsuofangBili"] = arg1;
-		bagID.suofang = arg1;
-		ContainerFrameCombinedBags:SetScale(arg1)
-		PIGCloseDropDownMenus()
-	end
-
-	ContainerFrameCombinedBags.shezhi.F.CZpeizhi = CreateFrame("Button",nil,ContainerFrameCombinedBags.shezhi.F, "UIPanelButtonTemplate");
-	ContainerFrameCombinedBags.shezhi.F.CZpeizhi:SetSize(60,20);
-	ContainerFrameCombinedBags.shezhi.F.CZpeizhi:SetPoint("BOTTOMRIGHT",ContainerFrameCombinedBags.shezhi.F,"BOTTOMRIGHT",-4,4);
-	ContainerFrameCombinedBags.shezhi.F.CZpeizhi:SetText("重置");
-	ContainerFrameCombinedBags.shezhi.F.CZpeizhi:SetScript("OnClick", function(self, button)
-		StaticPopup_Show ("HUIFU_DEFAULT_BEIBAOZHENGHE");
 	end)
-	StaticPopupDialogs["HUIFU_DEFAULT_BEIBAOZHENGHE"] = {
-		text = "此操作将\124cffff0000重置\124r背包/银行整合所有配置，\n需重载界面。确定重置?",
-		button1 = "确定",
-		button2 = "取消",
-		OnAccept = function()
-			PIG['zhegnheBAG']=addonTable.Default['zhegnheBAG']
-			PIG['zhegnheBAG']["Open"]="ON"
-			PIG['zhegnheBAG']["SortBag_Config"]=true
-			ReloadUI()
-		end,
-		timeout = 0,
-		whileDead = true,
-		hideOnEscape = true,
-	}
-	ContainerFrameCombinedBags.shezhi.F:SetScript("OnShow", function(self)
-		for i=1,#BAG_shezhi do
-			if BAG_shezhi[i][1]=="反向整理" then
-				if not C_Container.GetSortBagsRightToLeft() then _G["BAG_shezhi_CKB_"..i]:SetChecked(true) end
-			else
-				if PIG["zhegnheBAG"][BAG_shezhi[i][2]] then _G["BAG_shezhi_CKB_"..i]:SetChecked(true) end
-			end
-		end
-		ContainerFrameCombinedBags.shezhi.F.hangNUM:PIGDownMenu_SetText(bagID.meihang)
-		ContainerFrameCombinedBags.shezhi.F.suofang:PIGDownMenu_SetText(bagID.suofang)
-	end)
-
-	--离线背包================================
-	local ADD_BagBankBGtex=addonTable.ADD_BagBankBGtex
-	local lixianBAG=ADD_Frame("lixianBAG_UI",UIParent,400,200,"CENTER",UIParent,"CENTER",-200,200,true,false,true,true,true)
-	lixianBAG:SetFrameLevel(110)
-	lixianBAG:SetUserPlaced(false)
-	ADD_BagBankBGtex(lixianBAG,"lixianBAG_")
-
-	lixianBAG.Portrait_BG = lixianBAG:CreateTexture(nil, "BORDER");
-	lixianBAG.Portrait_BG:SetTexture("interface/buttons/iconborder-glowring.blp");
-	lixianBAG.Portrait_BG:SetSize(56,56);
-	lixianBAG.Portrait_BG:SetPoint("TOPLEFT",lixianBAG,"TOPLEFT",10,-6);
-	lixianBAG.Portrait_BG:SetDrawLayer("BORDER", -2)
-	lixianBAG.Portrait_BGmask = lixianBAG:CreateMaskTexture()
-	lixianBAG.Portrait_BGmask:SetAllPoints(lixianBAG.Portrait_BG)
-	lixianBAG.Portrait_BGmask:SetTexture("Interface/CHARACTERFRAME/TempPortraitAlphaMask", "CLAMPTOBLACKADDITIVE", "CLAMPTOBLACKADDITIVE")
-	lixianBAG.Portrait_BG:AddMaskTexture(lixianBAG.Portrait_BGmask)
-	lixianBAG.Portrait_TEX = lixianBAG:CreateTexture(nil, "BORDER");
-	lixianBAG.Portrait_TEX:SetTexture(130899)
-	lixianBAG.Portrait_TEX:SetDrawLayer("BORDER", -1)
-	lixianBAG.Portrait_TEX:SetAllPoints(lixianBAG.Portrait_BG)
-	------
-	lixianBAG.biaoti = CreateFrame("Frame", nil, lixianBAG)
-	lixianBAG.biaoti:SetPoint("TOPLEFT", lixianBAG, "TOPLEFT",58, -1);
-	lixianBAG.biaoti:SetPoint("TOPRIGHT", lixianBAG, "TOPRIGHT",-26, -1);
-	lixianBAG.biaoti:SetHeight(20);
-	lixianBAG.biaoti:EnableMouse(true)
-	lixianBAG.biaoti:RegisterForDrag("LeftButton")
-	lixianBAG.biaoti:SetScript("OnDragStart",function()
-	    lixianBAG:StartMoving();
-	    lixianBAG:SetUserPlaced(false)
-	end)
-	lixianBAG.biaoti:SetScript("OnDragStop",function()
-	    lixianBAG:StopMovingOrSizing()
-	    lixianBAG:SetUserPlaced(false)
-	end)
-	lixianBAG.biaoti.t = lixianBAG:CreateFontString();
-	lixianBAG.biaoti.t:SetPoint("CENTER", lixianBAG.topbg, "CENTER", 4, 0);
-	lixianBAG.biaoti.t:SetFontObject(GameFontNormal);
-
-	lixianBAG.Close = CreateFrame("Button",nil,lixianBAG, "UIPanelCloseButton");
-	lixianBAG.Close:SetSize(24,24);
-	lixianBAG.Close:SetPoint("TOPRIGHT",lixianBAG,"TOPRIGHT",0,-10);
-
-	lixianBAG.wupin = CreateFrame("Frame", nil, lixianBAG,"BackdropTemplate")
-	lixianBAG.wupin:SetBackdrop( { bgFile = "interface/framegeneral/ui-background-marble.blp" });
-	lixianBAG.wupin:SetPoint("TOPLEFT", lixianBAG, "TOPLEFT",20, -66);
-	lixianBAG.wupin:SetPoint("BOTTOMRIGHT", lixianBAG, "BOTTOMRIGHT", -10, 29);
-	lixianBAG.wupin:EnableMouse(true)
-	for i=1,164 do
-		lixianBAG.wupin.item = CreateFrame("Button", "lixianBAG_UI_wupin_item_"..i, lixianBAG.wupin, "SecureActionButtonTemplate");
-		lixianBAG.wupin.item:SetHighlightTexture(130718);
-		lixianBAG.wupin.item:SetSize(BagdangeW-4,BagdangeW-4);
-		if i==1 then
-			lixianBAG.wupin.item:SetPoint("TOPLEFT",lixianBAG.wupin,"TOPLEFT",4,-4);
-		else
-			local yushu=math.fmod((i-1),bagID.meihang)
-			if yushu==0 then
-				lixianBAG.wupin.item:SetPoint("TOPLEFT", _G["lixianBAG_UI_wupin_item_"..(i-bagID.meihang)], "BOTTOMLEFT", 0, -4);
-			else
-				lixianBAG.wupin.item:SetPoint("LEFT", _G["lixianBAG_UI_wupin_item_"..(i-1)], "RIGHT", 4, 0);
-			end
-		end
-		lixianBAG.wupin.item:Hide();
-		lixianBAG.wupin.item.LV = lixianBAG.wupin.item:CreateFontString();
-		lixianBAG.wupin.item.LV:SetPoint("TOPRIGHT", lixianBAG.wupin.item, "TOPRIGHT", 0,-1);
-		lixianBAG.wupin.item.LV:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-		lixianBAG.wupin.item.shuliang = lixianBAG.wupin.item:CreateFontString();
-		lixianBAG.wupin.item.shuliang:SetPoint("BOTTOMRIGHT", lixianBAG.wupin.item, "BOTTOMRIGHT", -4,2);
-		lixianBAG.wupin.item.shuliang:SetFontObject(TextStatusBarText);
-	end
-	--已装备物品================================
-	local CzhuangbeiName = "lixianC_UI"
-	local lixianC=ADD_Frame(CzhuangbeiName,UIParent,360,444,"CENTER",UIParent,"CENTER",-100, 100,true,false,true,true,true)
-	lixianC:SetUserPlaced(false)
-	lixianC:SetFrameLevel(130)
-	local ADD_CharacterFrame=addonTable.ADD_CharacterFrame
-	ADD_CharacterFrame(lixianC,CzhuangbeiName,360)
-
-	---银行===============================
-	BankSlotsFrame:HookScript("OnHide", function(self)
-		self.fenlei.show=false
-		PIGRotation(self.fenlei.Tex, -90)
-	end);
-	---系统银行可移动
-	BankFrame.biaoti = CreateFrame("Frame", nil, BankFrame)
-	BankFrame.biaoti:SetPoint("TOPLEFT", BankFrame, "TOPLEFT",58, -1);
-	BankFrame.biaoti:SetPoint("TOPRIGHT", BankFrame, "TOPRIGHT",-26, -1);
-	BankFrame.biaoti:SetHeight(20);
-	BankFrame.biaoti:EnableMouse(true)
-	BankFrame.biaoti:RegisterForDrag("LeftButton")
+	---系统银行===============================
+	---可移动
+	BankFrame:RegisterForDrag("LeftButton")
 	BankFrame:SetMovable(true)
-	BankFrame:SetUserPlaced(false)
 	BankFrame:SetClampedToScreen(true)
-	BankFrame.biaoti:SetScript("OnDragStart",function()
-	    BankFrame:StartMoving();
-	    BankFrame:SetUserPlaced(false)
+	BankFrame:SetScript("OnDragStart",function(self)
+	    self:StartMoving();
+	    self:SetUserPlaced(false)
 	end)
-	BankFrame.biaoti:SetScript("OnDragStop",function()
-	    BankFrame:StopMovingOrSizing()
-	    BankFrame:SetUserPlaced(false)
+	BankFrame:SetScript("OnDragStop",function(self)
+	    self:StopMovingOrSizing()
+	    self:SetUserPlaced(false)
 	end)
 	--分类设置
 	for vb=7,13 do
@@ -989,7 +894,7 @@ local function zhegnhe_Open()
 	BankSlotsFrame.fenlei:SetPoint("TOPRIGHT",BankSlotsFrame,"TOPRIGHT",-20,-28);
 	BankSlotsFrame.fenlei.Tex = BankSlotsFrame.fenlei:CreateTexture(nil, "BORDER");
 	BankSlotsFrame.fenlei.Tex:SetTexture("interface/chatframe/chatframeexpandarrow.blp");
-	PIGRotation(BankSlotsFrame.fenlei.Tex,-90)
+	BankSlotsFrame.fenlei.Tex:SetRotation(math.rad(-90))
 	BankSlotsFrame.fenlei.Tex:SetSize(18,18);
 	BankSlotsFrame.fenlei.Tex:SetPoint("CENTER",BankSlotsFrame.fenlei,"CENTER",2,0);
 	BankSlotsFrame.fenlei:SetScript("OnMouseDown", function (self)
@@ -1002,7 +907,7 @@ local function zhegnhe_Open()
 	BankSlotsFrame.fenlei:SetScript("OnClick",  function (self)
 		if BankSlotsFrame.fenlei.show then
 			BankSlotsFrame.fenlei.show=false
-			PIGRotation(self.Tex, -90)
+			self.Tex:SetRotation(math.rad(-90))
 			for vb=2,#bankID do
 				local containerFrame, containerShowing = ContainerFrameUtil_GetShownFrameForID(bankID[vb]);
 				if containerFrame then
@@ -1012,7 +917,7 @@ local function zhegnhe_Open()
 			end
 		else
 			BankSlotsFrame.fenlei.show=true
-			PIGRotation(self.Tex, 90)
+			self.Tex:SetRotation(math.rad(90))
 			local bagicon={BankSlotsFrame.Bag1.icon:GetTexture(),BankSlotsFrame.Bag2.icon:GetTexture(),BankSlotsFrame.Bag3.icon:GetTexture(),
 			BankSlotsFrame.Bag4.icon:GetTexture(),BankSlotsFrame.Bag5.icon:GetTexture(),BankSlotsFrame.Bag6.icon:GetTexture(),BankSlotsFrame.Bag7.icon:GetTexture()}
 			for vb=2,#bankID do
@@ -1031,86 +936,42 @@ local function zhegnhe_Open()
 			end
 		end
 	end);
-	---离线银行
-	local lixianBank=ADD_Frame("lixianBank_UI",UIParent,bankID.meihang*BagdangeW+16,210,"CENTER",UIParent,"CENTER",-300, 200,true,false,true,true,true)
-	lixianBank:SetUserPlaced(false)
-	lixianBank:SetFrameLevel(120)
-	lixianBank.Close = CreateFrame("Button",nil,lixianBank, "UIPanelCloseButton");
-	lixianBank.Close:SetSize(24,24);
-	lixianBank.Close:SetPoint("TOPRIGHT",lixianBank,"TOPRIGHT",0,-10);
-	ADD_BagBankBGtex(lixianBank,"pig_lixianBank_")
+	BankSlotsFrame:HookScript("OnHide", function(self)
+		self.fenlei.show=false
+		self.fenlei.Tex:SetRotation(math.rad(-90))
+	end);
+	--离线背包---------
+	local data = {
+		["BagdangeW"]=BagdangeW-6,
+		["meihang"]=bagID.meihang,
+		["suofang"]=bagID.suofang,
+		["lixianNum"]=bagID.lixianNum
+	}
+	local lixianBag=BagBankFrame(UIParent,{"CENTER",UIParent,"CENTER",-200,200},"lixianBag_UI",data,110)
 
-	lixianBank.Portrait_BG = lixianBank:CreateTexture(nil, "BORDER");
-	lixianBank.Portrait_BG:SetTexture("interface/buttons/iconborder-glowring.blp");
-	lixianBank.Portrait_BG:SetSize(55,55);
-	lixianBank.Portrait_BG:SetPoint("TOPLEFT",lixianBank,"TOPLEFT",12,-6);
-	lixianBank.Portrait_BG:SetDrawLayer("BORDER", -2)
-	lixianBank.Portrait_BGmask = lixianBank:CreateMaskTexture()
-	lixianBank.Portrait_BGmask:SetAllPoints(lixianBank.Portrait_BG)
-	lixianBank.Portrait_BGmask:SetTexture("Interface/CHARACTERFRAME/TempPortraitAlphaMask", "CLAMPTOBLACKADDITIVE", "CLAMPTOBLACKADDITIVE")
-	lixianBank.Portrait_BG:AddMaskTexture(lixianBank.Portrait_BGmask)
-	lixianBank.Portrait_TEX = lixianBank:CreateTexture(nil, "BORDER");
-	lixianBank.Portrait_TEX:SetAllPoints(lixianBank.Portrait_BG)
-	lixianBank.Portrait_TEX:SetDrawLayer("BORDER", -1)
+	--离线银行------------
+	local data = {
+		["BagdangeW"]=BagdangeW-6,
+		["meihang"]=bankID.meihang,
+		["suofang"]=bankID.suofang,
+		["lixianNum"]=bankID.lixianNum
+	}
+	local lixianBank=BagBankFrame(UIParent,{"CENTER",UIParent,"CENTER",-300, 200},"lixianBank_UI",data,120)
 
-	lixianBank.biaoti = CreateFrame("Frame", nil, lixianBank)
-	lixianBank.biaoti:SetPoint("TOPLEFT", lixianBank, "TOPLEFT",68, -12);
-	lixianBank.biaoti:SetPoint("TOPRIGHT", lixianBank, "TOPRIGHT",-22, -12);
-	lixianBank.biaoti:SetHeight(20);
-	lixianBank.biaoti:EnableMouse(true)
-	lixianBank.biaoti:RegisterForDrag("LeftButton")
-	lixianBank.biaoti.t = lixianBank.biaoti:CreateFontString();
-	lixianBank.biaoti.t:SetPoint("CENTER", lixianBank.biaoti, "CENTER", 8, -1);
-	lixianBank.biaoti.t:SetFontObject(GameFontNormal);
-	lixianBank.biaoti.t:SetText('银行');
-	lixianBank.biaoti:SetScript("OnDragStart",function()
-	    lixianBank:StartMoving();
-	    lixianBank:SetUserPlaced(false)
-	end)
-	lixianBank.biaoti:SetScript("OnDragStop",function()
-	    lixianBank:StopMovingOrSizing()
-	    lixianBank:SetUserPlaced(false)
-	end)
-	--
-	lixianBank.wupin = CreateFrame("Frame", nil, lixianBank,"BackdropTemplate")
-	lixianBank.wupin:SetBackdrop( { bgFile = "interface/framegeneral/ui-background-marble.blp" });
-	lixianBank.wupin:SetPoint("TOPLEFT", lixianBank, "TOPLEFT",20, -68);
-	lixianBank.wupin:SetPoint("BOTTOMRIGHT", lixianBank, "BOTTOMRIGHT", -8, 30);
-	lixianBank.wupin:EnableMouse(true)
-	for i=1,yinhangmorengezishu.banknum do
-		lixianBank.wupin.item = CreateFrame("Button", "lixianBank_UI_wupin_item_"..i, lixianBank.wupin, "SecureActionButtonTemplate");
-		lixianBank.wupin.item:SetHighlightTexture(130718);
-		lixianBank.wupin.item:SetSize(BagdangeW-2,BagdangeW-2);
-		if i==1 then
-			lixianBank.wupin.item:SetPoint("TOPLEFT",lixianBank.wupin,"TOPLEFT",4,-2);
-		else
-			local yushu=math.fmod((i-1),bankID.meihang)
-			if yushu==0 then
-				lixianBank.wupin.item:SetPoint("TOPLEFT", _G["lixianBank_UI_wupin_item_"..(i-bankID.meihang)], "BOTTOMLEFT", 0, -4);
-			else
-				lixianBank.wupin.item:SetPoint("LEFT", _G["lixianBank_UI_wupin_item_"..(i-1)], "RIGHT", 4, 0);
-			end
-		end
-		lixianBank.wupin.item:Hide();
-		if PIG['zhegnheBAG']["wupinLV"] then
-			lixianBank.wupin.item.LV = lixianBank.wupin.item:CreateFontString();
-			lixianBank.wupin.item.LV:SetPoint("TOPRIGHT", lixianBank.wupin.item, "TOPRIGHT", 0,-1);
-			lixianBank.wupin.item.LV:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-		end
-		lixianBank.wupin.item.shuliang = lixianBank.wupin.item:CreateFontString();
-		lixianBank.wupin.item.shuliang:SetPoint("BOTTOMRIGHT", lixianBank.wupin.item, "BOTTOMRIGHT", -4,2);
-		lixianBank.wupin.item.shuliang:SetFontObject(TextStatusBarText);
-	end
+	---离线已装备物品------------
+	local lixianC=Create.CharacterFrame(UIParent,{"CENTER",UIParent,"CENTER",-100, 173},"lixianC_UI",130)
 	---------------
-	--BankFrame:RegisterEvent("BAG_UPDATE_DELAYED")
-	BankFrame:RegisterEvent("PLAYER_INTERACTION_MANAGER_FRAME_SHOW")
-	BankFrame:HookScript("OnEvent", function (self,event,arg1)
+	local BankshijianFrame = CreateFrame("Frame")
+	--BankshijianFrame:RegisterEvent("BAG_UPDATE_DELAYED")
+	BankshijianFrame:RegisterEvent("BANKFRAME_OPENED")
+	BankshijianFrame:RegisterEvent("PLAYERBANKSLOTS_CHANGED")
+	BankshijianFrame:HookScript("OnEvent", function (self,event,arg1)
 		if event=="PLAYERBANKSLOTS_CHANGED" then
 			C_Timer.After(0.4,SAVE_BANK)
-			if PIG['zhegnheBAG']["wupinLV"] then
+			if PIG["BagBank"]["wupinLV"] then
 				shuaxinyinhangMOREN(arg1)
 			end
-			if PIG['zhegnheBAG']["wupinRanse"] then shuaxinyinhangMOREN_ranse(arg1) end
+			if PIG["BagBank"]["wupinRanse"] then shuaxinyinhangMOREN_ranse(arg1) end
 		end
 		if event=="BAG_UPDATE_DELAYED" then
 			if BankSlotsFrame:IsShown() then
@@ -1123,18 +984,18 @@ local function zhegnhe_Open()
 				-- end
 			end
 		end
-		if event=="PLAYER_INTERACTION_MANAGER_FRAME_SHOW" then
+		if event=="BANKFRAME_OPENED" then
 			zhegnheBANK_Open()
 			for i=2,#bankID do
 				OpenBag(bankID[i])
 			end
 			C_Timer.After(0.4,SAVE_BANK)
-			if PIG['zhegnheBAG']["wupinLV"] then
+			if PIG["BagBank"]["wupinLV"] then
 				for i=1,yinhangmorengezishu[1] do
 					shuaxinyinhangMOREN(i)
 				end
 			end
-			if PIG['zhegnheBAG']["wupinRanse"] then
+			if PIG["BagBank"]["wupinRanse"] then
 				for i=1,yinhangmorengezishu[1] do
 					shuaxinyinhangMOREN_ranse(i) 
 				end
@@ -1152,13 +1013,13 @@ local function zhegnhe_Open()
 			CloseBag(bankID[i])
 		end
 	end)
-	------
+	-- ------
 	hooksecurefunc("ContainerFrame_GenerateFrame", function(frame, size, id)
 		if id>=bankID[2] then
 			shuaxinBANKweizhi(frame, size, id)
 		end
-		if PIG['zhegnheBAG']["wupinLV"] then Bag_Item_lv(frame, size, id) end
-		if PIG['zhegnheBAG']["wupinRanse"] then Bag_Item_Ranse(frame, size, id) end
+		if PIG["BagBank"]["wupinLV"] then Bag_Item_lv(frame, size, id) end
+		if PIG["BagBank"]["wupinRanse"] then Bag_Item_Ranse(frame, size, id) end
 	end)
 	---
 	local PIGCombinedBags = CreateFrame("Frame")
@@ -1168,10 +1029,10 @@ local function zhegnhe_Open()
 	PIGCombinedBags:HookScript("OnEvent", function(self,event,arg1)
 		if event=="PLAYER_ENTERING_WORLD" then
 			local dangqianjusexinxi={["ClassN"]=0,["Race"]=0,["Lv"]=0,["G"]=0,["C"]={},["BAG"]={},["BANK"]={}}
-			for k,v in pairs(PIG["zhegnheBAG"]["lixian"]) do
+			for k,v in pairs(PIG["BagBank"]["lixian"]) do
 				for kk,vv in pairs(dangqianjusexinxi) do
-					if PIG["zhegnheBAG"]["lixian"][k][kk]==nil then
-						PIG["zhegnheBAG"]["lixian"][k][kk]=vv
+					if PIG["BagBank"]["lixian"][k][kk]==nil then
+						PIG["BagBank"]["lixian"][k][kk]=vv
 					end
 				end
 			end
@@ -1179,17 +1040,17 @@ local function zhegnhe_Open()
 			local raceName, raceFile, raceID = UnitRace("player")
 			local level = UnitLevel("player")
 			if PIG_renwuming then
-				if PIG["zhegnheBAG"]["lixian"][PIG_renwuming]==nil then
-					PIG["zhegnheBAG"]["lixian"][PIG_renwuming]=dangqianjusexinxi
+				if PIG["BagBank"]["lixian"][PIG_renwuming]==nil then
+					PIG["BagBank"]["lixian"][PIG_renwuming]=dangqianjusexinxi
 				end
-				PIG["zhegnheBAG"]["lixian"][PIG_renwuming]["ClassN"]=classId
-				PIG["zhegnheBAG"]["lixian"][PIG_renwuming]["Race"]=raceID
-				PIG["zhegnheBAG"]["lixian"][PIG_renwuming]["Lv"]=level
+				PIG["BagBank"]["lixian"][PIG_renwuming]["ClassN"]=classId
+				PIG["BagBank"]["lixian"][PIG_renwuming]["Race"]=raceID
+				PIG["BagBank"]["lixian"][PIG_renwuming]["Lv"]=level
 			end
 		end
 		if event=="AUCTION_HOUSE_SHOW" then
-			if PIG['zhegnheBAG']["AHOpen"] then
-				if(UnitExists("NPC"))then
+			if PIG["BagBank"]["AHOpen"] then
+				if (UnitExists("NPC")) then
 					OpenAllBags()
 				end
 			end
@@ -1201,15 +1062,15 @@ local function zhegnhe_Open()
 			if arg1>=bagID[1] and arg1<=bagID[#bagID] then
 				C_Timer.After(0.5,SAVE_BAG)
 				if ContainerFrame1Item1:IsVisible() then
-					if PIG['zhegnheBAG']["wupinLV"] then Bag_Item_lv(nil, nil, arg1) end
-					if PIG['zhegnheBAG']["wupinRanse"] then Bag_Item_Ranse(nil, nil, arg1) end
+					if PIG["BagBank"]["wupinLV"] then Bag_Item_lv(nil, nil, arg1) end
+					if PIG["BagBank"]["wupinRanse"] then Bag_Item_Ranse(nil, nil, arg1) end
 				end
 			end
 			if BankFrame:IsShown() then
 				if arg1>=bankID[2] then
 					C_Timer.After(0.5,SAVE_BANK)
-					if PIG['zhegnheBAG']["wupinLV"] then Bag_Item_lv(nil, nil, arg1) end
-					if PIG['zhegnheBAG']["wupinRanse"] then Bag_Item_Ranse(nil, nil, arg1) end
+					if PIG["BagBank"]["wupinLV"] then Bag_Item_lv(nil, nil, arg1) end
+					if PIG["BagBank"]["wupinRanse"] then Bag_Item_Ranse(nil, nil, arg1) end
 				end
 			end
 		end
@@ -1219,86 +1080,4 @@ local function zhegnhe_Open()
 		PIGCombinedBags:RegisterEvent("BAG_UPDATE")
 	end
 	C_Timer.After(8,zhixingbaocunCMD)
-end
---==========================================================
-fuFrame.combinedBags=ADD_Checkbutton(nil,fuFrame,-80,"TOPLEFT",fuFrame,"TOPLEFT",20,-20,"启用背包整合(系统功能)","启用系统的背包整合功能")
-fuFrame.combinedBags:SetScript("OnClick", function (self)
-	if self:GetChecked() then
-		SetCVar("combinedBags",1)
-	else
-		SetCVar("combinedBags",0)
-	end
-end);
-fuFrame.beibaozhenghe=ADD_Checkbutton(nil,fuFrame,-80,"TOPLEFT",fuFrame,"TOPLEFT",20,-60,"启用银行整合","整合银行包裹到一个界面")
-fuFrame.beibaozhenghe:SetScript("OnClick", function (self)
-	if self:GetChecked() then
-		PIG['zhegnheBAG']["Open"]="ON";
-		zhegnhe_Open()
-	else
-		PIG['zhegnheBAG']["Open"]="OFF";
-		Pig_Options_RLtishi_UI:Show()
-	end
-end);
---背包剩余-------------
-local function gengxinbeibaoshengyugeshu()
-	if MainMenuBarBackpackButton.freeSlots<10 then
-		MainMenuBarBackpackButton.Count:SetTextColor(1, 0, 0, 1);
-	else
-		MainMenuBarBackpackButton.Count:SetTextColor(0, 1, 0, 1);
-	end
-end
-local function bigfontziti()
-	if PIG["zhegnheBAG"]['BAGkongyu']=="ON" then
-		SetCVar("displayFreeBagSlots", "1")
-		MainMenuBarBackpackButton.Count:Show()
-		MainMenuBarBackpackButton.Count:SetFont(ChatFontNormal:GetFont(), 18, "OUTLINE");
-		gengxinbeibaoshengyugeshu()
-	else
-		SetCVar("displayFreeBagSlots", "0")
-		MainMenuBarBackpackButton.Count:Hide()
-	end
-end
-----
-MainMenuBarBackpackButton:HookScript("OnEvent", function(self,event,arg1)
-	if PIG['zhegnheBAG']['BAGkongyu']=="ON" then
-		if event=="PLAYER_ENTERING_WORLD" then
-			bigfontziti()
-		end
-		if event=="BAG_UPDATE" then
-			gengxinbeibaoshengyugeshu()
-		end
-	end
-end);
-----
-fuFrame.BAGkongyu=ADD_Checkbutton(nil,fuFrame,-80,"TOPLEFT",fuFrame,"TOPLEFT",20,-100,"显示背包剩余空间","在行囊显示背包剩余空间(大于等于10显示绿色,小于10显示红色)")
-fuFrame.BAGkongyu:SetScript("OnClick", function (self)
-	if self:GetChecked() then
-		PIG['zhegnheBAG']['BAGkongyu']="ON";	
-	else
-		PIG['zhegnheBAG']['BAGkongyu']="OFF";
-	end
-	bigfontziti()
-end);
-fuFrame:HookScript("OnShow", function(self)
-	if GetCVar("combinedBags")=="1" then
-		fuFrame.combinedBags:SetChecked(true)
-	end
-	if PIG['zhegnheBAG']["Open"]=="ON" then
-		fuFrame.beibaozhenghe:SetChecked(true)
-	end
-	--
-	if PIG['zhegnheBAG']['BAGkongyu']=="ON" then
-		fuFrame.BAGkongyu:SetChecked(true);
-	end
-end);
---加载设置---------------
-addonTable.BagBank = function()
-	local Pname = UnitFullName("player");
-	local _, englishClass= UnitClass("player");
-	PIG_renwuming=Pname.."-"..GetRealmName()
-	if PIG['zhegnheBAG']["Open"]=="ON" then
-		bagID.meihang=PIG['zhegnheBAG']["BAGmeihangshu_retail"] or bagID.meihang
-		bagID.suofang=PIG['zhegnheBAG']["BAGsuofangBili"] or bagID.suofang
-		zhegnhe_Open()
-	end
 end

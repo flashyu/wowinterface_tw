@@ -1,4 +1,7 @@
 <Ui>
+	<Script file="Options.lua" />
 	<Script file="Function.lua" />
-	<Script file="ActionBar.lua" />
+	<Script file="QuickBut.lua" />
+	<Script file="QuickBut_Equip.lua" />
+	<Script file="PigAction.lua" />	
 </Ui>

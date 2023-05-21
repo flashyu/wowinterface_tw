@@ -1,147 +1,201 @@
 ﻿local _, addonTable = ...;
-local fuFrame=List_R_F_1_3
+local L=addonTable.locale
 local _, _, _, tocversion = GetBuildInfo()
-local ADD_Checkbutton=addonTable.ADD_Checkbutton
+--
+local Create=addonTable.Create
+local PIGFrame=Create.PIGFrame
+local PIGLine=Create.PIGLine
+local PIGButton = Create.PIGButton
+local PIGDownMenu=Create.PIGDownMenu
+local PIGSlider = Create.PIGSlider
+local PIGCheckbutton=Create.PIGCheckbutton
+local PIGCheckbutton_R=Create.PIGCheckbutton_R
+local PIGOptionsList=Create.PIGOptionsList
+local PIGOptionsList_RF=Create.PIGOptionsList_RF
+local PIGOptionsList_R=Create.PIGOptionsList_R
+local PIGFontString=Create.PIGFontString
+local PIGFontStringBG=Create.PIGFontStringBG
+--
+local CombatPlusfun=addonTable.CombatPlusfun
+-- /click CompactRaidFrameManagerDisplayFrameLeaderOptionsRaidWorldMarkerButton
+-- /click DropDownList1Button5
+-- 光标宏是
+-- /wm 1-8
+
+-- 清除是
+-- /cwm 1-8
+
+-- 清除全部
+-- /cwm 0
+
+-- 鼠标指向技能是
+-- /cast [@cursor] 照明弹
+
 ----快速标记按钮------
-local biaojiW=20;
-local biaojiH=20;
-local beijing = {bgFile = "Interface\\Tooltips\\UI-Tooltip-Background"}
-local beijing_yidong = {
-	bgFile = "Interface/DialogFrame/UI-DialogBox-Background", edgeFile = "Interface/Tooltips/UI-Tooltip-Border", tile = true, tileSize = 0, edgeSize = 6,insets = { left = 0, right = 0, top = 0, bottom = 0 }
-}
+local biaojiW=22
 local biaoji_icon = "interface\\targetingframe\\ui-raidtargetingicons"
-local biaoji_iconID = {
+local iconIdCoord = {
 	{0.75,1,0.25,0.5},{0.5,0.75,0.25,0.5},{0.25,0.5,0.25,0.5},
 	{0,0.25,0.25,0.5},{0.75,1,0,0.25},{0.5,0.75,0,0.25},
-	{0.25,0.5,0,0.25},{0,0.25,0,0.25}
+	{0.25,0.5,0,0.25},{0,0.25,0,0.25},{0.75,1,0.75,1}
 }
-
-local function Mubiaokuaisubiaoji_Open()
-	if mubiaobiaoji_UI then return end
-	mubiaobiaoji = CreateFrame("Frame", "mubiaobiaoji_UI", TargetFrame,"BackdropTemplate")
-	mubiaobiaoji:SetBackdrop(beijing)
-	mubiaobiaoji:SetBackdropColor(0.1,0.1,0.1,0.5)
-	mubiaobiaoji:SetSize((biaojiW+3)*8+3,biaojiH+2)
-	local wzinfo = PIG.CombatPlus.Biaoji.Point
-	if wzinfo then
-		mubiaobiaoji:SetPoint(wzinfo[1],UIParent,wzinfo[2],wzinfo[3], wzinfo[4]);
+local tuNum=#iconIdCoord
+local biaojiweizhi={"TOP", UIParent, "TOP", 0, -30}
+local PIGbiaoji = PIGFrame(UIParent,biaojiweizhi,{(biaojiW+3)*tuNum+5,biaojiW+4},"PIGbiaoji_UI")
+PIGbiaoji:Hide()
+local function SetBGHide()
+	if PIG["CombatPlus"]["Biaoji"]["BGHide"] then
+		PIGbiaoji:SetBackdropColor(0, 0, 0, 0);
+		PIGbiaoji:SetBackdropBorderColor(0, 0, 0, 0);
 	else
-		mubiaobiaoji:SetPoint("TOPLEFT", TargetFrame, "TOPRIGHT", -10, -10);
+		local BackdropColor=Create.BackdropColor
+		local BackdropBorderColor=Create.BackdropBorderColor
+		PIGbiaoji:SetBackdropColor(BackdropColor[1], BackdropColor[2], BackdropColor[3], BackdropColor[4]);
+		PIGbiaoji:SetBackdropBorderColor(BackdropBorderColor[1], BackdropBorderColor[2], BackdropBorderColor[3], BackdropBorderColor[4]);
 	end
-	mubiaobiaoji:SetMovable(true)
-	mubiaobiaoji:SetClampedToScreen(true)
-	if tocversion>40000 then mubiaobiaoji:SetFrameLevel(505) end
-	mubiaobiaoji.yidong = CreateFrame("Frame", nil, mubiaobiaoji,"BackdropTemplate")
-	mubiaobiaoji.yidong:SetBackdrop(beijing_yidong)
-	mubiaobiaoji.yidong:SetBackdropBorderColor(0, 1, 1, 0.8);
-	mubiaobiaoji.yidong:SetSize(8,biaojiH+2)
-	mubiaobiaoji.yidong:SetPoint("RIGHT", mubiaobiaoji, "LEFT", 0, 0);
-	mubiaobiaoji.yidong:EnableMouse(true)
-	mubiaobiaoji.yidong:RegisterForDrag("LeftButton")
-	mubiaobiaoji.yidong:SetScript("OnDragStart",function()
-		mubiaobiaoji:StartMoving()
-	end)
-	mubiaobiaoji.yidong:SetScript("OnDragStop",function()
-		mubiaobiaoji:StopMovingOrSizing()
-		local point, relativeTo, relativePoint, xOfs, yOfs = mubiaobiaoji:GetPoint()
-		PIG.CombatPlus.Biaoji.Point={point, relativePoint, xOfs, yOfs};
-	end)
-	for i=1,#biaoji_iconID do
-		mubiaobiaoji.list = CreateFrame("Button", "mubiaobiaoji_list"..i, mubiaobiaoji)
-		mubiaobiaoji.list:SetSize(biaojiW,biaojiH)
-		if i==1 then
-			mubiaobiaoji.list:SetPoint("LEFT", mubiaobiaoji, "LEFT",3,0)
-		else
-			mubiaobiaoji.list:SetPoint("LEFT", _G["mubiaobiaoji_list"..(i-1)], "RIGHT",3,0)
+end
+local function SetLock()
+	local ziframe = {PIGbiaoji:GetChildren()}
+	if PIG["CombatPlus"]["Biaoji"]["Lock"] then
+		PIGbiaoji:RegisterForDrag("")
+		for i=1,#ziframe do
+			ziframe[i]:RegisterForDrag("")
 		end
-		mubiaobiaoji.list:SetNormalTexture(biaoji_icon)
-		mubiaobiaoji.list:GetNormalTexture():SetTexCoord(biaoji_iconID[i][1],biaoji_iconID[i][2],biaoji_iconID[i][3],biaoji_iconID[i][4])
-		mubiaobiaoji.list:EnableMouse(true)
-		mubiaobiaoji.list:SetScript("OnClick", function(self) SetRaidTargetIcon("target", 9-i) end)
+	else
+		PIGbiaoji:RegisterForDrag("LeftButton")
+		for i=1,#ziframe do
+			ziframe[i]:RegisterForDrag("LeftButton")
+		end
 	end
+end
+local function SetAutoShow()
+	if PIG["CombatPlus"]["Biaoji"]["AutoShow"] then
+		PIGbiaoji:RegisterEvent("PLAYER_TARGET_CHANGED")
+	else
+		PIGbiaoji:UnregisterEvent("PLAYER_TARGET_CHANGED")
+	end
+end
+function CombatPlusfun.biaoji()
+	if not PIG["CombatPlus"]["Biaoji"]["Open"] then return end
+	if PIGbiaoji.yizairu then return end
+	PIGbiaoji:Show()
+	PIGbiaoji:PIGSetBackdrop()
+	PIGbiaoji:PIGSetMovable()
+	for i=1,tuNum do
+		local listbut = CreateFrame("Button", nil, PIGbiaoji)
+		listbut:SetScript("OnDragStart",function(self)
+			PIGbiaoji:StartMoving()
+		end)
+		listbut:SetScript("OnDragStop",function(self)
+			PIGbiaoji:StopMovingOrSizing()
+		end)
+		listbut:SetHighlightTexture("Interface/Buttons/ButtonHilight-Square")
+		if i==tuNum then
+			listbut:SetSize(biaojiW-2,biaojiW-2)
+			listbut:SetPoint("LEFT", PIGbiaoji, "LEFT",i*(biaojiW+3)-biaojiW+4,0)
+			listbut:SetNormalTexture(131158)
+			listbut:GetNormalTexture():SetTexCoord(0.49,0.75,0,1);
+		else
+			listbut:SetSize(biaojiW,biaojiW)
+			listbut:SetPoint("LEFT", PIGbiaoji, "LEFT",i*(biaojiW+3)-biaojiW,0)
+			listbut:SetNormalTexture(biaoji_icon)
+			listbut:GetNormalTexture():SetTexCoord(iconIdCoord[i][1],iconIdCoord[i][2],iconIdCoord[i][3],iconIdCoord[i][4])
+		end
+		listbut:SetScript("OnClick", function(self) 
+			--SetRaidTargetIcon("target", tuNum-i) 
+			SetRaidTarget("target", tuNum-i)
+		end)
+	end
+	PIGbiaoji:SetScale(PIG["CombatPlus"]["Biaoji"]["Scale"])
+	SetLock()
+	SetBGHide()
+	SetAutoShow()
 	--
-	mubiaobiaoji:SetScript("OnEvent", function(self,event)
+	PIGbiaoji:SetScript("OnEvent", function(self,event)
 		if CanBeRaidTarget("target") then
 			if IsInRaid("LE_PARTY_CATEGORY_HOME") then
 				local isLeader = UnitIsGroupLeader("player");
 				if isLeader or UnitIsGroupAssistant("player") then
-					mubiaobiaoji:Show()
+					PIGbiaoji:Show()
 				else
-					mubiaobiaoji:Hide()
+					PIGbiaoji:Hide()
 				end
 			else
-				mubiaobiaoji:Show()
+				PIGbiaoji:Show()
 			end
 		end
 	end);
+	PIGbiaoji.yizairu=true
 end
-----------------------------
-fuFrame.Biaojiline = fuFrame:CreateLine()
-fuFrame.Biaojiline:SetColorTexture(1,1,1,0.2)
-fuFrame.Biaojiline:SetThickness(1);
-fuFrame.Biaojiline:SetStartPoint("TOPLEFT",3,-340)
-fuFrame.Biaojiline:SetEndPoint("TOPRIGHT",-3,-340)
+--------------------------
+local CombatPlusF,CombatPlustabbut =PIGOptionsList_R(CombatPlusfun.RTabFrame,L["COMBAT_TABNAME1"],90)
+CombatPlusF:Show()
+CombatPlustabbut:Selected()
 
-fuFrame.Biaoji = ADD_Checkbutton(nil,fuFrame,-100,"TOPLEFT",fuFrame.Biaojiline,"TOPLEFT",17,-10,"快速标记按钮","在屏幕上显示快速标记按钮")
-
-fuFrame.BiaojiYD =ADD_Checkbutton(nil,fuFrame,-80,"LEFT",fuFrame.Biaoji,"RIGHT",150,0,"锁定位置","锁定快速标记按钮位置，使其无法移动")
-fuFrame.BiaojiYD:SetScript("OnClick", function (self)
+CombatPlusF.Open = PIGCheckbutton_R(CombatPlusF,{"启用标记按钮","在屏幕上显示快速标记按钮"})
+CombatPlusF.Open:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG.CombatPlus.Biaoji.Yidong=true;
-		mubiaobiaoji.yidong:Hide()
+		CombatPlusfun.biaoji()
+		CombatPlusF.SetF:Show()
+		PIG["CombatPlus"]["Biaoji"]["Open"]=true;
 	else
-		PIG.CombatPlus.Biaoji.Yidong=false;
-		mubiaobiaoji.yidong:Show()
-	end
-end);
-fuFrame.AUTOSHOW= ADD_Checkbutton(nil,fuFrame,-80,"LEFT",fuFrame.BiaojiYD,"RIGHT",150,0,"智能显示/隐藏","当你没有标记权限时隐藏快捷标记按钮")
-fuFrame.AUTOSHOW:SetScript("OnClick", function (self)
-	if self:GetChecked() then
-		PIG.CombatPlus.Biaoji.AutoShow=true;
-		mubiaobiaoji_UI:RegisterEvent("PLAYER_TARGET_CHANGED");
-	else
-		PIG.CombatPlus.Biaoji.AutoShow=false;
-		mubiaobiaoji_UI:UnregisterEvent("PLAYER_TARGET_CHANGED");
-	end
-end);
----
-fuFrame.Biaoji:SetScript("OnClick", function (self)
-	if self:GetChecked() then
-		PIG.CombatPlus.Biaoji.Open=true;
-		fuFrame.BiaojiYD:Enable();
-		fuFrame.AUTOSHOW:Enable();
-		Mubiaokuaisubiaoji_Open();
-	else
-		PIG.CombatPlus.Biaoji.Open=false;
-		fuFrame.BiaojiYD:Disable();
-		fuFrame.AUTOSHOW:Disable();
+		PIG["CombatPlus"]["Biaoji"]["Open"]=false;
+		CombatPlusF.SetF:Hide()
 		Pig_Options_RLtishi_UI:Show()
 	end
-end);
+end)
 ---
-fuFrame:HookScript("OnShow", function (self)
-	if PIG.CombatPlus.Biaoji.Open then
-		fuFrame.Biaoji:SetChecked(true);
-	end
-	if PIG.CombatPlus.Biaoji.Yidong then
-		fuFrame.BiaojiYD:SetChecked(true);
-	end
-	if PIG.CombatPlus.Biaoji.AutoShow then
-		fuFrame.AUTOSHOW:SetChecked(true); 
-	end
-end);
---=====================================
-addonTable.CombatPlus_Biaoji = function()
-	if PIG.CombatPlus.Biaoji.Open then
-		Mubiaokuaisubiaoji_Open();
-		if PIG.CombatPlus.Biaoji.Yidong then
-			mubiaobiaoji.yidong:Hide()
-		end
-		if PIG.CombatPlus.Biaoji.AutoShow then
-			mubiaobiaoji_UI:RegisterEvent("PLAYER_TARGET_CHANGED");
-		end
+local CombatLine1=PIGLine(CombatPlusF,"TOP",-70)
+CombatPlusF.SetF = PIGFrame(CombatPlusF,{"TOPLEFT", CombatLine1, "BOTTOMLEFT", 0, 0})
+CombatPlusF.SetF:SetPoint("BOTTOMRIGHT",CombatPlusF,"BOTTOMRIGHT",0,0);
+
+CombatPlusF.SetF.Lock =PIGCheckbutton_R(CombatPlusF.SetF,{"锁定位置","锁定快速标记按钮位置，使其无法移动"})
+CombatPlusF.SetF.Lock:SetScript("OnClick", function (self)
+	if self:GetChecked() then
+		PIG["CombatPlus"]["Biaoji"]["Lock"]=true;
 	else
-		fuFrame.BiaojiYD:Disable();
-		fuFrame.AUTOSHOW:Disable();
+		PIG["CombatPlus"]["Biaoji"]["Lock"]=false;
 	end
-end
+	SetLock()
+end);
+CombatPlusF.SetF.Lock.CZBUT = PIGButton(CombatPlusF.SetF.Lock,{"LEFT",CombatPlusF.SetF.Lock,"RIGHT",100,0},{80,24},"重置位置")
+CombatPlusF.SetF.Lock.CZBUT:SetScript("OnClick", function ()
+	PIGbiaoji:ClearAllPoints();
+	PIGbiaoji:SetPoint(biaojiweizhi[1],biaojiweizhi[2],biaojiweizhi[3],biaojiweizhi[4],biaojiweizhi[5]);
+end)
+CombatPlusF.SetF.BGHide= PIGCheckbutton_R(CombatPlusF.SetF,{"隐藏背景","隐藏标记按钮背景"})
+CombatPlusF.SetF.BGHide:SetScript("OnClick", function (self)
+	if self:GetChecked() then
+		PIG["CombatPlus"]["Biaoji"]["BGHide"]=true;
+	else
+		PIG["CombatPlus"]["Biaoji"]["BGHide"]=false;
+	end
+	SetBGHide()
+end);
+CombatPlusF.SetF.AutoShow= PIGCheckbutton_R(CombatPlusF.SetF,{"智能显示/隐藏","当你没有标记权限时隐藏标记按钮"})
+CombatPlusF.SetF.AutoShow:SetScript("OnClick", function (self)
+	if self:GetChecked() then
+		PIG["CombatPlus"]["Biaoji"]["AutoShow"]=true;
+	else
+		PIG["CombatPlus"]["Biaoji"]["AutoShow"]=false;
+	end
+	SetAutoShow()
+end);
+
+local xiayiinfo = {0.6,2,0.1}
+CombatPlusF.SetF.Slider = PIGSlider(CombatPlusF.SetF,{"TOPLEFT",CombatPlusF.SetF,"TOPLEFT",70,-160},{100,14},xiayiinfo)
+CombatPlusF.SetF.Slider.T = PIGFontString(CombatPlusF.SetF.Slider,{"RIGHT",CombatPlusF.SetF.Slider,"LEFT",-10,0},"缩放")
+CombatPlusF.SetF.Slider:SetScript("OnValueChanged", function(self)
+	local Value = (floor(self:GetValue()*10+0.5))/10
+	PIG["CombatPlus"]["Biaoji"]["Scale"]=Value;
+	self.Text:SetText(Value);
+	PIGbiaoji_UI:SetScale(Value)
+end)
+--
+CombatPlusF:HookScript("OnShow", function (self)
+	self.Open:SetChecked(PIG["CombatPlus"]["Biaoji"]["Open"]);
+	self.SetF.Lock:SetChecked(PIG["CombatPlus"]["Biaoji"]["Lock"]);
+	self.SetF.BGHide:SetChecked(PIG["CombatPlus"]["Biaoji"]["BGHide"]);
+	self.SetF.AutoShow:SetChecked(PIG["CombatPlus"]["Biaoji"]["AutoShow"]);
+	self.SetF.Slider:SetValue(PIG["CombatPlus"]["Biaoji"]["Scale"]);
+end);

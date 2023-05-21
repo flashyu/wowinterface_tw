@@ -1,8 +1,8 @@
 local addonName, addonTable = ...;
 local gsub = _G.string.gsub
-local PIGBagBank={}
 ----------------------------------------------
-function PIGBagBank.qiyongzidongzhengli()
+local BagBankfun=addonTable.BagBankfun
+function BagBankfun.qiyongzidongzhengli()
 	local _G, _M = getfenv(0), {}
 	setfenv(1, setmetatable(_M, {__index=_G}))
 
@@ -11,7 +11,7 @@ function PIGBagBank.qiyongzidongzhengli()
 	BAG_CONTAINERS = {0, 1, 2, 3, 4}
 	BANK_BAG_CONTAINERS = {-1, 5, 6, 7, 8, 9, 10, 11}
 
-	function PIGBagBank.SortBags()
+	function BagBankfun.SortBags()
 		CONTAINERS = {unpack(BAG_CONTAINERS)}
 		for i = #CONTAINERS, 1, -1 do
 			if C_Container.GetBagSlotFlag(CONTAINERS[i], LE_BAG_FILTER_FLAG_IGNORE_CLEANUP) then
@@ -21,7 +21,7 @@ function PIGBagBank.qiyongzidongzhengli()
 		Start()
 	end
 
-	function PIGBagBank.SortBankBags()
+	function BagBankfun.SortBankBags()
 		CONTAINERS = {unpack(BANK_BAG_CONTAINERS)}
 		for i = #CONTAINERS, 1, -1 do
 			if C_Container.GetBagSlotFlag(CONTAINERS[i], LE_BAG_FILTER_FLAG_IGNORE_CLEANUP) then
@@ -32,18 +32,18 @@ function PIGBagBank.qiyongzidongzhengli()
 	end
 
 	function _G.GetSortBagsRightToLeft(enabled)
-		return PIG['zhegnheBAG']["SortBag_Config"]
+		return PIG['BagBank']["SortBag_Config"]
 	end
 
 	function _G.SetSortBagsRightToLeft(enabled)
 		--_G.SortBagsRightToLeft = enabled and 1 or nil
 		if enabled==nil then
-			PIG['zhegnheBAG']["SortBag_Config"] = true
+			PIG['BagBank']["SortBag_Config"] = true
 		else
 			if enabled then
-				PIG['zhegnheBAG']["SortBag_Config"] = true
+				PIG['BagBank']["SortBag_Config"] = true
 			else
-				PIG['zhegnheBAG']["SortBag_Config"] = false
+				PIG['BagBank']["SortBag_Config"] = false
 			end
 		end
 	end
@@ -358,7 +358,7 @@ function PIGBagBank.qiyongzidongzhengli()
 		local counts
 
 		local function insert(t, v)
-			if PIG['zhegnheBAG']["SortBag_Config"] then
+			if PIG['BagBank']["SortBag_Config"] then
 				tinsert(t, v)
 			else
 				tinsert(t, 1, v)
@@ -368,7 +368,7 @@ function PIGBagBank.qiyongzidongzhengli()
 		local function assign(slot, item)
 			if counts[item] > 0 then
 				local count
-				if PIG['zhegnheBAG']["SortBag_Config"] and mod(counts[item], itemStacks[item]) ~= 0 then
+				if PIG['BagBank']["SortBag_Config"] and mod(counts[item], itemStacks[item]) ~= 0 then
 					count = mod(counts[item], itemStacks[item])
 				else
 					count = min(counts[item], itemStacks[item])
@@ -519,7 +519,7 @@ function PIGBagBank.qiyongzidongzhengli()
 			tinsert(sortKey, -quality)
 			tinsert(sortKey, itemName)
 			tinsert(sortKey, itemID)
-			tinsert(sortKey, (PIG['zhegnheBAG']["SortBag_Config"] and 1 or -1) * charges)
+			tinsert(sortKey, (PIG['BagBank']["SortBag_Config"] and 1 or -1) * charges)
 			tinsert(sortKey, suffixID)
 			tinsert(sortKey, enchantID)
 			tinsert(sortKey, uniqueID)
@@ -540,4 +540,3 @@ function PIGBagBank.qiyongzidongzhengli()
 		end
 	end
 end
-addonTable.PIGBagBank=PIGBagBank

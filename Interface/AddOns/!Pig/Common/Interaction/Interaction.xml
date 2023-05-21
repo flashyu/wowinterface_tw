@@ -1,0 +1,8 @@
+<Ui>
+	<Script file="Options.lua" />
+	<Script file="AutoDialogue.lua" />
+	<Script file="AutoDown.lua" />
+	<Script file="AutoRepair.lua" />
+	<Script file="RightPlus.lua" />
+	<Script file="FastLoot.lua" />
+</Ui>

@@ -202,7 +202,7 @@ local function ADD_Invite()
 	function invite.renyuannpeizhiinfo_D:PIGDownMenu_SetValue(value,arg1,arg2)
 		PIG["RaidRecord"]["Invite"]["dangqianrenshu"]=invite.morenrenshu[arg1]
 		PIG["RaidRecord"]["Invite"]["dangqianpeizhi"]=arg1;
-		print("|cff00FFFF!Pig:|r|cffFFFF00已导入|r"..arg1.."|cffFFFF00人预设配置！|r");
+		PIG_PIG_print("已导入|cffFFFFFF"..arg1.."|r人预设配置");
 		UpdatePlayersINFO();
 		PIGCloseDropDownMenus()
 	end
@@ -378,7 +378,7 @@ local function ADD_Invite()
 				if global<120 then
 					StaticPopup_Show ("CHUANGJIANHONGPIG");
 				else
-					print("|cff00FFFF!Pig:|r|cffFFFF00你的宏数量已达最大值120，请删除一些再尝试。|r");
+					PIG_print(L["LIB_MACROERR"]);
 				end
 			end
 		else
@@ -485,7 +485,7 @@ local function ADD_Invite()
 				addonTable.RaidRecord_Invite_yaoqing=false;
 				zuduizhushouXXX_UI:UnregisterEvent("CHAT_MSG_WHISPER");
 				zuduizhushouXXX_UI:UnregisterEvent("CHAT_MSG_SYSTEM");
-				print("|cff00FFFF!Pig:|r|cffFFFF00自动邀请已关闭，你必须是队长/团长/助理！|r");
+				PIG_print("自动邀请已关闭，你必须是队长/团长/助理");
 			end
 		end
 		local yizuzongrenshuXxx=tonumber(invite.yizuzongrenshuX_V:GetText());
@@ -495,7 +495,7 @@ local function ADD_Invite()
 			addonTable.RaidRecord_Invite_yaoqing=false;
 			zuduizhushouXXX_UI:UnregisterEvent("CHAT_MSG_WHISPER");
 			zuduizhushouXXX_UI:UnregisterEvent("CHAT_MSG_SYSTEM");
-			print("|cff00FFFF!Pig:|r|cffFFFF00已达目标人数，自动邀请已关闭。|r");
+			PIG_print("已达目标人数，自动邀请已关闭");
 		end
 		if addonTable.RaidRecord_Invite_yaoqing==true then
 			if invite_UI:IsShown() then
@@ -534,12 +534,12 @@ local function ADD_Invite()
 			local isTrue = UnitIsGroupAssistant("player", "LE_PARTY_CATEGORY_HOME");
 			if isLeader~=true and isTrue~=true  then
 				addonTable.RaidRecord_Invite_hanhua=false;
-				print("|cff00FFFF!Pig:|r|cffFFFF00自动喊话已停止，你必须是队长/团长/助理！|r");
+				PIG_print("自动喊话已停止，你必须是队长/团长/助理");
 			end
 		end
 		if tonumber(invite.yizuzongrenshuX_V:GetText())>=tonumber(invite.mubiaozongrenshuX_V:GetText()) then
 			addonTable.RaidRecord_Invite_hanhua=false;
-			print("|cff00FFFF!Pig:|r|cffFFFF00已达目标人数，自动喊话已停止。|r");
+			PIG_print("已达目标人数，自动喊话已停止");
 		end
 		if addonTable.RaidRecord_Invite_hanhua==true then
 			if invite_UI:IsShown() then
@@ -627,7 +627,7 @@ local function ADD_Invite()
 	invite.zidongyaoqingBUT.Tex:SetSize(23,23);
 	invite.zidongyaoqingBUT:SetScript("OnClick", function (self)
 		if addonTable.daiben_Invite_yaoqing then
-			print("|cff00FFFF!Pig:|r|cffFFFF00带本助手自动回复邀请处于开启状态，请先关闭带本助手的自动回复。|r");
+			PIG_print("带本助手自动回复邀请处于开启状态，请先关闭带本助手的自动回复");
 		else
 			if addonTable.RaidRecord_Invite_yaoqing==true then
 				addonTable.RaidRecord_Invite_yaoqing=false
@@ -688,7 +688,7 @@ local function ADD_Invite()
 		if self:GetNumber()<300 then
 			self:SetText(300)
 			PIG["RaidRecord"]["Invite"]["shijianjiange"]=self:GetNumber();
-			print("|cff00FFFF!Pig:|r|cffFFFF00不能小于300秒。|r");
+			PIG_print("不能小于300秒");
 		else
 			PIG["RaidRecord"]["Invite"]["shijianjiange"]=self:GetNumber();
 		end

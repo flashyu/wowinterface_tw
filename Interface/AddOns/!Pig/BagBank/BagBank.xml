@@ -1,3 +1,4 @@
 <Ui>
+	<Script file="Options.lua" />
 	<Script file="BagBank.lua" />
 </Ui>

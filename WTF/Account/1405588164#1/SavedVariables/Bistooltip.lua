@@ -6,6 +6,11 @@ BisTooltipDB = {
 	["char"] = {
 		["狂暴專家 - 伊弗斯"] = {
 			["class_index"] = 9,
+			["highlight_spec"] = {
+				["spec_name"] = "Fury",
+				["key"] = "9:2",
+				["class_name"] = "Warrior",
+			},
 			["version"] = 6.1,
 			["filter_specs"] = {
 				["Warrior"] = {
@@ -14,29 +19,29 @@ BisTooltipDB = {
 					["Protection"] = true,
 				},
 				["Paladin"] = {
-					["Protection"] = true,
-					["Holy"] = true,
+					["Protection"] = false,
+					["Holy"] = false,
 					["Retribution"] = true,
 				},
 				["Shaman"] = {
 					["Enhancement"] = true,
-					["Elemental"] = true,
-					["Restoration"] = true,
+					["Elemental"] = false,
+					["Restoration"] = false,
 				},
 				["Rogue"] = {
 					["Combat"] = true,
 					["Assassination"] = true,
 				},
 				["Mage"] = {
-					["Arcane"] = true,
-					["Frost"] = true,
-					["Fire"] = true,
-					["Fire FFB"] = true,
+					["Arcane"] = false,
+					["Frost"] = false,
+					["Fire"] = false,
+					["Fire FFB"] = false,
 				},
 				["Warlock"] = {
-					["Demonology"] = true,
+					["Demonology"] = false,
 					["Affliction"] = true,
-					["Destruction"] = true,
+					["Destruction"] = false,
 				},
 				["Death knight"] = {
 					["Unholy"] = true,
@@ -49,14 +54,14 @@ BisTooltipDB = {
 					["Survival"] = true,
 				},
 				["Priest"] = {
-					["Discipline"] = true,
-					["Holy"] = true,
+					["Discipline"] = false,
+					["Holy"] = false,
 					["Shadow"] = true,
 				},
 				["Druid"] = {
 					["Feral dps"] = true,
-					["Balance"] = true,
-					["Restoration"] = true,
+					["Balance"] = false,
+					["Restoration"] = false,
 					["Feral tank"] = true,
 				},
 			},

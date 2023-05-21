@@ -1,6 +1,6 @@
 
 HidingBarDB = {
-	["tstmp"] = 1684512495,
+	["tstmp"] = 1684687959,
 	["profiles"] = {
 		{
 			["isDefault"] = true,
@@ -8,55 +8,55 @@ HidingBarDB = {
 				["addFromDataBroker"] = true,
 				["mbtnSettings"] = {
 					["LibDBIcon10_RXPGuides"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684601798,
 					},
 					["LibDBIcon10_BisTooltipIcon"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_AutoBar"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_HealBot"] = {
 						["tstmp"] = 1683731864,
 					},
 					["LibDBIcon10_DBM"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_Attune_Broker"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_Hekili"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684605178,
 					},
 					["LibDBIcon10_AutoCombatLogger"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_BugSack"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_Myslot"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["WIM3MinimapButton"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_Details"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_Questie"] = {
-						["tstmp"] = 1684512496,
+						["tstmp"] = 1684687959,
 					},
 					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_Atlas"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["CodexBrowserIcon"] = {
 						["tstmp"] = 1683303583,
 					},
 					["LibDBIcon10_Leatrix_Maps"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_TradeSkillMaster"] = {
 						["tstmp"] = 1684417286,
@@ -68,22 +68,22 @@ HidingBarDB = {
 						["tstmp"] = 1684426755,
 					},
 					["LibDBIcon10_AtlasLoot"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_TalentEmu"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_DetailsStreamer"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_WeakAuras"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_Plater"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_Leatrix_Plus"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LibDBIcon10_Decursive"] = {
 						["tstmp"] = 1684417286,
@@ -91,40 +91,40 @@ HidingBarDB = {
 				},
 				["btnSettings"] = {
 					["AutoBar"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["Atlas"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["TradeSkillMaster"] = {
 						["tstmp"] = 1684417286,
 					},
 					["HidingBar"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["DBM"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["Decursive"] = {
 						["tstmp"] = 1684417286,
 					},
 					["AutoCombatLogger"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["LFGBulletinBoard"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["AtlasLoot"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["TalentEmu"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["BisTooltipIcon"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["WeakAuras"] = {
-						["tstmp"] = 1684512495,
+						["tstmp"] = 1684687959,
 					},
 					["HealBot"] = {
 						["tstmp"] = 1683731855,
@@ -176,7 +176,7 @@ HidingBarDB = {
 						["mbtnPosition"] = 2,
 						["lineBorderEdge"] = false,
 						["lineBorderOffset"] = 1,
-						["showHandler"] = 2,
+						["showHandler"] = 0,
 						["expand"] = 2,
 						["borderEdge"] = false,
 						["bgColor"] = {

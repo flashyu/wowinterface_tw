@@ -1,0 +1,10 @@
+<Ui>
+	<Script file="Options.lua" />
+	<Script file="TradePlus.lua" />
+	<Script file="SkillFBCD.lua" />
+	<Include file="AHPlus\AHPlus.xml" />
+	<Include file="AutoSellBuy\AutoSellBuy.xml" />
+	<Include file="Interaction\Interaction.xml" />
+	<Include file="AutoFollow\AutoFollow.xml" />
+	<Include file="Other\Other.xml" />
+</Ui>

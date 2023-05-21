@@ -1163,7 +1163,7 @@ local function ADD_Item()
 	RaidR_UI.xiafangF.pinzhiguolv:SetPoint("TOPLEFT",RaidR_UI.xiafangF,"TOPLEFT",Width/3*2-22,-48);
 	RaidR_UI.xiafangF.pinzhiguolv:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
 	RaidR_UI.xiafangF.pinzhiguolv:SetText("\124cff00FF00最低记录品质：\124r");
-
+	addonTable.Quality=Quality
 	local pinzhiName,pinzhiV = {"普通","\124cff1eff00优秀\124r","\124cff0070dd精良\124r","\124cffa335ee史诗\124r","\124cffff8000传说\124r","\124cffe6cc80神器\124r"},{1,2,3,4,5,6};
 	RaidR_UI.xiafangF.D=PIGDownMenu(nil,{80,24},RaidR_UI.xiafangF,{"LEFT",RaidR_UI.xiafangF.pinzhiguolv,"RIGHT", 0,0})
 	function RaidR_UI.xiafangF.D:PIGDownMenu_Update_But(self)
@@ -1284,12 +1284,8 @@ local function ADD_Item()
 	local bendiT_3 = geshihuazifu(bendiT_3)
 	local bendiT_4 = geshihuazifu(bendiT_4)
 	fuFrame:RegisterEvent("CHAT_MSG_LOOT");
-	fuFrame:SetScript("OnEvent",function (self,event,arg1,arg2,arg3,arg4,arg5)	
-		if tocversion>100000 then
-			if not arg1:match(BATTLE_PET_LOOT_RECEIVED) then return end
-		else
-			if not arg1:match(bendiT_1) and not arg1:match(bendiT_2) and not arg1:match(bendiT_3) and not arg1:match(bendiT_4) then return end
-		end
+	fuFrame:SetScript("OnEvent",function (self,event,arg1,arg2,arg3,arg4,arg5)
+		if not arg1:match(bendiT_1) and not arg1:match(bendiT_2) and not arg1:match(bendiT_3) and not arg1:match(bendiT_4) then return end
 		local inInstance, instanceType = IsInInstance()
 		if instanceType=="raid" then
 			AddItem(arg1,arg5)

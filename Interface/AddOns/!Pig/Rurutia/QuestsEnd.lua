@@ -1,9 +1,6 @@
 local addonName, addonTable = ...;
-local fuFrame=List_R_F_1_11.F
 local _, _, _, tocversion = GetBuildInfo()
-local ADD_Checkbutton=addonTable.ADD_Checkbutton
-local Create=addonTable.Create
-local PIGDownMenu=Create.PIGDownMenu
+local Rurutiafun=addonTable.Rurutiafun
 --任务完成
 local AudioList = {
 	{"升级音效",567431},
@@ -14,7 +11,7 @@ local AudioList = {
 	{"露露语音4","Interface/AddOns/"..addonName.."_Rurutia/media/ogg/4.ogg"},
 	{"露露语音5","Interface/AddOns/"..addonName.."_Rurutia/media/ogg/5.ogg"},
 }
-
+Rurutiafun.AudioList=AudioList
 local QuestsEndFrameUI = CreateFrame("Frame");
 QuestsEndFrameUI.wanchengqingkuang={}
 QuestsEndFrameUI.chucijiazai=false
@@ -75,72 +72,20 @@ local function zhucewshijian()
 	QuestsEndFrameUI:RegisterEvent("QUEST_LOG_UPDATE")
 	QuestsEndFrameUI:RegisterEvent("UNIT_QUEST_LOG_CHANGED")
 end
-local function QuestsEnd_Open()
-	QuestsEndFrameUI:RegisterEvent("PLAYER_ENTERING_WORLD")
-	QuestsEndFrameUI:SetScript("OnEvent", function(self,event,arg1,arg2,arg3)
-		--print(event,arg1,arg2,arg3)
-		if event=="PLAYER_ENTERING_WORLD" then
-			C_Timer.After(6,zhucewshijian)
-		else
-			huoqurenwuzhuangtai()
-		end
-	end)
-end
-fuFrame.QuestsEnd =ADD_Checkbutton(nil,fuFrame,-100,"TOPLEFT",fuFrame,"TOPLEFT",20,-80,"任务完成提示音","任务完成提示音")
-fuFrame.QuestsEnd:SetScript("OnClick", function (self)
-	if self:GetChecked() then
-		PIG["Rurutia"]["QuestsEnd"]="ON";	
+QuestsEndFrameUI:SetScript("OnEvent", function(self,event,arg1,arg2,arg3)
+	if event=="PLAYER_ENTERING_WORLD" then
+		C_Timer.After(6,zhucewshijian)
 	else
-		PIG["Rurutia"]["QuestsEnd"]="OFF";
+		huoqurenwuzhuangtai()
 	end
-	QuestsEnd_Open()
-end);
-fuFrame.QuestsEnd.xiala=PIGDownMenu(nil,{120,24},fuFrame.QuestsEnd,{"LEFT",fuFrame.QuestsEnd.Text, "RIGHT", 4,0})
-function fuFrame.QuestsEnd.xiala:PIGDownMenu_Update_But(self)
-	local info = {}
-	info.func = self.PIGDownMenu_SetValue
-	for i=1,#AudioList,1 do
-	    info.text, info.arg1 = AudioList[i][1], i
-	    info.checked = i==PIG["Rurutia"]["QuestsEndAudio"]
-		fuFrame.QuestsEnd.xiala:PIGDownMenu_AddButton(info)
-	end 
-end
-function fuFrame.QuestsEnd.xiala:PIGDownMenu_SetValue(value,arg1)
-	fuFrame.QuestsEnd.xiala:PIGDownMenu_SetText(value)
-	PIG["Rurutia"]["QuestsEndAudio"]=arg1
-	PIGCloseDropDownMenus()
-end
-
-fuFrame.QuestsEnd.PlayBut = CreateFrame("Button",nil,fuFrame.QuestsEnd);
-fuFrame.QuestsEnd.PlayBut:SetNormalTexture("interface/buttons/ui-spellbookicon-nextpage-up.blp")
-fuFrame.QuestsEnd.PlayBut:SetPushedTexture("interface/buttons/ui-spellbookicon-nextpage-down.blp")
-fuFrame.QuestsEnd.PlayBut:SetDisabledTexture("interface/buttons/ui-spellbookicon-nextpage-disabled.blp")
-fuFrame.QuestsEnd.PlayBut:SetHighlightTexture("interface/buttons/ui-common-mousehilight.blp");--高亮纹理
-fuFrame.QuestsEnd.PlayBut:SetSize(28,28);
-fuFrame.QuestsEnd.PlayBut:SetPoint("LEFT",fuFrame.QuestsEnd.xiala,"RIGHT",8,0);
-fuFrame.QuestsEnd.PlayBut:SetScript("OnClick", function()
-	PlaySoundFile(AudioList[PIG["Rurutia"]["QuestsEndAudio"]][2], "Master")
 end)
-fuFrame.weijiancedao = fuFrame:CreateFontString();
-fuFrame.weijiancedao:SetPoint("LEFT", fuFrame.QuestsEnd.PlayBut, "RIGHT", 6, 0);
-fuFrame.weijiancedao:SetFont(ChatFontNormal:GetFont(), 14,"OUTLINE")
-fuFrame.weijiancedao:SetTextColor(1, 1, 0, 1);
-fuFrame.weijiancedao:SetText("没有检测到露露扩展包");
-
---打开选项页面时===============
-fuFrame:HookScript("OnShow", function (self)
-	fuFrame.QuestsEnd.xiala:PIGDownMenu_SetText(AudioList[PIG["Rurutia"]["QuestsEndAudio"]][1])
-	if PIG["Rurutia"]["QuestsEnd"]=="ON" then
-		fuFrame.QuestsEnd :SetChecked(true);
-	end
-	local name, title, notes, loadable = GetAddOnInfo(addonName.."_Rurutia")
-	if loadable then
-		fuFrame.weijiancedao:Hide()	
-	end
-end);
---进入游戏时加载
-addonTable.Rurutia_QuestsEnd = function()
- 	if PIG["Rurutia"]["QuestsEnd"]=="ON" then
-		QuestsEnd_Open()
+function Rurutiafun.QuestsEnd_Open(Check)
+	if PIG["Rurutia"]["QuestsEnd"] then
+		QuestsEndFrameUI:RegisterEvent("PLAYER_ENTERING_WORLD")
+		if Check=="Check" then
+			zhucewshijian()
+		end
+	else
+		QuestsEndFrameUI:UnregisterAllEvents()
 	end
 end

@@ -1,0 +1,6 @@
+<Ui>
+	<Script file="Default.lua" />
+	<Script file="Default_AllON.lua" />
+	<Script file="Default_AllOFF.lua" />
+	<Script file="Default_PIG.lua" />
+</Ui>

@@ -1,11 +1,13 @@
-@Terciob:
-- Updates to Plater default scripts for season 2.
-- Details Framework updates.
-
 @kitsunekyo:
 - Add addon compartment support
 
+@Terciob:
+- Fixed 'Ultra Important Cast' script showing red color for interruptible casts.
+- Updates to Plater default scripts for season 2.
+- Details Framework updates.
+
 @cont1nuity:
+- Support new evoker spec.
 - Move addon compartment support to LibDBIcon.
 - Additional work on DBM Boss-Mod-Icon-Bars.
 - Do not print usage info by default.

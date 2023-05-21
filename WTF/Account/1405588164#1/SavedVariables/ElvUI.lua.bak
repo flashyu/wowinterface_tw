@@ -18,6 +18,11 @@ ElvDB = {
 	["profiles"] = {
 		["Default"] = {
 			["databars"] = {
+				["reputation"] = {
+					["enable"] = true,
+					["width"] = 7,
+					["height"] = 273,
+				},
 				["experience"] = {
 					["height"] = 273,
 					["width"] = 8,
@@ -29,6 +34,9 @@ ElvDB = {
 				["autoRepair"] = "PLAYER",
 			},
 			["bags"] = {
+				["shownBags"] = {
+					["bag-2"] = false,
+				},
 				["vendorGrays"] = {
 					["enable"] = true,
 				},
@@ -53,11 +61,12 @@ ElvDB = {
 				["ElvAB_6"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-4,360",
 				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,338,415",
 				["ElvUF_Raid2Mover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,485",
+				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,417,301",
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-339,415",
-				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,456,4",
+				["VOICECHAT"] = "TOPLEFT,UIParent,TOPLEFT,155,-263",
 				["ElvUF_PartyMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,308",
 				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-179",
-				["VOICECHAT"] = "TOPLEFT,UIParent,TOPLEFT,155,-263",
+				["ReputationBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,454,4",
 				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,335,349",
 			},
 			["unitframe"] = {
@@ -112,7 +121,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["狂暴專家"] = 1579487397,
+			["狂暴專家"] = 1568985836,
 		},
 	},
 	["namespaces"] = {
@@ -154,12 +163,19 @@ ElvDB = {
 							nil, -- [3]
 							true, -- [4]
 						}, -- [4]
-						[6] = {
+						nil, -- [5]
+						{
 							nil, -- [1]
 							nil, -- [2]
 							nil, -- [3]
 							true, -- [4]
-						},
+						}, -- [6]
+						{
+							nil, -- [1]
+							nil, -- [2]
+							nil, -- [3]
+							true, -- [4]
+						}, -- [7]
 					},
 				},
 			},
@@ -177,6 +193,11 @@ ElvPrivateDB = {
 			},
 			["nameplates"] = {
 				["enable"] = false,
+			},
+			["skins"] = {
+				["blizzard"] = {
+					["tooltip"] = false,
+				},
 			},
 			["install_complete"] = 13.31,
 		},

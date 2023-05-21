@@ -1,0 +1,10 @@
+<Ui>
+	<Script file="Fun.lua" />
+	<Script file="Data.lua" />
+	<Script file="Frame.lua" />
+	<Script file="Button.lua" />
+	<Script file="FontString.lua" />
+	<Script file="BlizzardUI.lua" />
+	<Script file="DownMenu.lua" />
+	<Script file="QuickBut.lua" />
+</Ui>

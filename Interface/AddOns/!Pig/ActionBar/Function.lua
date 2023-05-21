@@ -1,8 +1,62 @@
 local addonName, addonTable = ...;
 local _, _, _, tocversion = GetBuildInfo()
 -------
+local ActionBarfun=addonTable.ActionBarfun
+local GetItemCooldown=C_Container and C_Container.GetItemCooldown or GetItemCooldown
+----------
 local suijizuoqi = [=[/run C_MountJournal.SummonByID(0)]=]
-local function Update_Attribute(self)
+local function UseKeyDownUP(fuji)
+	--fuji:EnableKeyboard(true)
+	local UseKeyDown =GetCVar("ActionButtonUseKeyDown")
+	if UseKeyDown=="0" then
+		fuji:RegisterForClicks("AnyUp");
+	elseif UseKeyDown=="1" then
+		fuji:RegisterForClicks("AnyDown")
+		-- SetBinding("CTRL-SHIFT-ALT-Q", "CLICK fuji:Button31")
+		-- fuji:RegisterForClicks("AnyUp", "Button31Down")
+		-- fuji:SetAttribute("type31", "")
+		-- fuji:WrapScript(fuji, "OnClick", [=[
+		--     -- fuji, button, down
+		--     if (button == "Button31" and down) then
+		--         return "LeftButton"
+		--     end
+		-- ]=])
+	end
+	--local newbutton, message = preBody(self, button, down)
+	-- SecureHandlerWrapScript(fuji, "OnClick", fuji, function(self, button, down)
+	-- 	-- body
+	-- end)
+	-- function preBody(self, button, down)
+	-- 	--'print(self, button, down)'
+	-- end
+	-- postBody(self, message, button, down)
+	-- newbutton, message = preBody(self, button, down)
+	
+	-- SecureHandlerWrapScript(fuji,"OnClick",fuji,[=[
+	-- 	print(self, button, down,xxx)
+	-- 	--self:Hide()
+	-- 	return 
+	-- ]=])
+
+	--postBody(self, message, button, down)
+	-- fuji:SetAttribute("_onclick", [=[
+	-- 	print(self, button, down)
+	-- 	self:Hide()
+	-- 	--return 
+	-- ]=])
+end
+function ActionBarfun.PIGUseKeyDown(fuji)
+	UseKeyDownUP(fuji)
+	fuji:RegisterEvent("CVAR_UPDATE");
+	fuji:HookScript("OnEvent", function(self,event,arg1)
+		if event=="CVAR_UPDATE" then
+			if arg1=="ActionButtonUseKeyDown" then
+				UseKeyDownUP(self)
+			end
+		end
+	end)
+end
+function ActionBarfun.Update_Attribute(self)
 	local Type=self.Type
 	if Type then
 		self:SetAttribute("type", Type)	
@@ -30,13 +84,12 @@ local function Update_Attribute(self)
 		self.icon:Hide();
 	end
 end
-addonTable.Update_Attribute=Update_Attribute
 --更新Icon状态
 local function Update_spell_Icon(SimID)
 	local isTrue = SpellIsSelfBuff(SimID)
 	if isTrue then
 		if tocversion>90000 then
-			local name, icon, count, dispelType, duration, expirationTime, source, isStealable, nameplateShowPersonal,spellId= GetPlayerAuraBySpellID(SimID)
+			local name, icon, count, dispelType, duration, expirationTime, source, isStealable, nameplateShowPersonal,spellId= C_UnitAuras.GetPlayerAuraBySpellID(SimID)
 			if spellId then
 				if duration==0 then
 					return 136116
@@ -60,8 +113,7 @@ local function Update_spell_Icon(SimID)
 	local icon = GetSpellTexture(SimID)
 	return icon
 end
-addonTable.Update_spell_Icon=Update_spell_Icon
-local function Update_Icon(self)
+function ActionBarfun.Update_Icon(self)
 	local Type=self.Type
 	if Type then
 		local SimID=self.SimID
@@ -85,8 +137,7 @@ local function Update_Icon(self)
 		self.icon:Hide();
 	end
 end
-addonTable.Update_Icon=Update_Icon
-local function Update_Cooldown(self)
+function ActionBarfun.Update_Cooldown(self)
 	local Type=self.Type
 	if Type then
 		local SimID=self.SimID
@@ -125,8 +176,7 @@ local function Update_Cooldown(self)
 		end
 	end
 end
-addonTable.Update_Cooldown=Update_Cooldown
-local function Update_Count(self)
+function ActionBarfun.Update_Count(self)
 	local Type=self.Type
 	if Type then
 		self.Name:SetText();
@@ -189,8 +239,7 @@ local function Update_Count(self)
 		end
 	end
 end
-addonTable.Update_Count=Update_Count
-local function Update_bukeyong(self)
+function ActionBarfun.Update_bukeyong(self)
 	local Type=self.Type
 	if Type then
 		local SimID=self.SimID
@@ -212,7 +261,7 @@ local function Update_bukeyong(self)
 			end
 		elseif Type=="macro" then
 			local Name, Icon, Body = GetMacroInfo(SimID);
-			local TrimBody = strtrim(Body or '');
+			local TrimBody = strtrim(Body or "");
 			if TrimBody=="" then
 				self.icon:SetVertexColor(0.5, 0.5, 0.5);
 				return
@@ -260,9 +309,8 @@ local function Update_bukeyong(self)
 		self.icon:SetVertexColor(1, 1, 1);
 	end
 end
-addonTable.Update_bukeyong=Update_bukeyong
 --更新使用状态
-local function Update_State(self)
+function ActionBarfun.Update_State(self)
 	local Type=self.Type
 	if Type then
 		local SimID=self.SimID
@@ -325,8 +373,7 @@ local function Update_State(self)
 	end
 	self:SetChecked(false)
 end
-addonTable.Update_State=Update_State
-local function Update_PostClick(self)
+function ActionBarfun.Update_PostClick(self)
 	local Type=self.Type
 	if Type then
 		local SimID=self.SimID
@@ -339,7 +386,7 @@ local function Update_PostClick(self)
 			if not usable then self:SetChecked(false) end
 		elseif Type=="macro" then
 			local Name, Icon, Body = GetMacroInfo(SimID);
-			local TrimBody = strtrim(Body or '');
+			local TrimBody = strtrim(Body or "");
 			if TrimBody=="" then
 				self:SetChecked(false)
 			end
@@ -355,31 +402,30 @@ local function Update_PostClick(self)
 		self:SetChecked(false)
 	end
 end
-addonTable.Update_PostClick=Update_PostClick
 --初始加载
-local function loadingButInfo(self,dataY)
-	local butInfo = PIG_Per[dataY]['ActionInfo'][self.action]
+function ActionBarfun.loadingButInfo(self,dataY)
+	self:RegisterForDrag("LeftButton")
+	local butInfo = PIG_Per[dataY]["ActionInfo"][self.action]
 	if butInfo then
 		self.Type=butInfo[1]
 		self.SimID=butInfo[2]
 		self.SimID_3=butInfo[3]
-		Update_Attribute(self)
-		Update_Icon(self)
-		Update_Cooldown(self)
-		Update_Count(self)
-		Update_bukeyong(self)
-		Update_State(self)
+		ActionBarfun.Update_Attribute(self)
+		ActionBarfun.Update_Icon(self)
+		ActionBarfun.Update_Cooldown(self)
+		ActionBarfun.Update_Count(self)
+		ActionBarfun.Update_bukeyong(self)
+		ActionBarfun.Update_State(self)
 	else
-		if dataY=="QuickButton" then return end
+		if dataY=="QuickBut" then return end
 		local Showvalue = GetCVarInfo("alwaysShowActionBars")
 		if Showvalue=="0" then
 			self:Hide()
 		end
 	end
 end
-addonTable.loadingButInfo=loadingButInfo
 --鼠标悬浮
-local function OnEnter_Spell(Type,SimID)
+function ActionBarfun.OnEnter_Spell(Type,SimID)
 	if IsSpellKnown(SimID) then
 		for i = 1, GetNumSpellTabs() do
 			local _, _, offset, numSlots = GetSpellTabInfo(i)
@@ -438,8 +484,9 @@ local function OnEnter_Spell(Type,SimID)
 		GameTooltip:Show();
 	end
 end
-addonTable.OnEnter_Spell=OnEnter_Spell
-local function OnEnter_Item(Type,SimID)
+local GetContainerNumSlots = C_Container and C_Container.GetContainerNumSlots or GetContainerNumSlots
+local GetContainerItemLink = C_Container and C_Container.GetContainerItemLink or GetContainerItemLink
+function ActionBarfun.OnEnter_Item(Type,SimID)
 	for Bagid=0,4,1 do
 		local numberOfSlots = GetContainerNumSlots(Bagid);
 		for caowei=1,numberOfSlots,1 do
@@ -453,17 +500,14 @@ local function OnEnter_Item(Type,SimID)
 	GameTooltip:SetHyperlink(Type..":"..SimID)
 	GameTooltip:Show();
 end
-addonTable.OnEnter_Item=OnEnter_Item
-local function OnEnter_Companion(Type,SimID,spellID)
+function ActionBarfun.OnEnter_Companion(Type,SimID,spellID)
 	GameTooltip:SetHyperlink("spell:"..spellID)
 	GameTooltip:Show();
 end
-addonTable.OnEnter_Companion=OnEnter_Companion
-
 ---处理光标
 local function Cursor_Loot(self,oldType,dataY)
 	self.Type=nil
-	PIG_Per[dataY]['ActionInfo'][self.action]=nil
+	PIG_Per[dataY]["ActionInfo"][self.action]=nil
 	--self.icon:SetTexture();
 	self.Count:SetText()
 	self.Name:SetText()
@@ -505,35 +549,35 @@ local function Cursor_FZ(self,NewType,canshu1,canshu2,canshu3,dataY)
 	self.Type=NewType
 	if NewType=="spell" then
 		self.SimID=canshu3
-		PIG_Per[dataY]['ActionInfo'][self.action]={NewType,canshu3}
+		PIG_Per[dataY]["ActionInfo"][self.action]={NewType,canshu3}
 	elseif NewType=="item" then
 		self.SimID=canshu2
-		PIG_Per[dataY]['ActionInfo'][self.action]={NewType,canshu2}
+		PIG_Per[dataY]["ActionInfo"][self.action]={NewType,canshu2}
 	elseif NewType=="macro" then
 		self.SimID=canshu1
 		local name, icon, body = GetMacroInfo(canshu1)
-		PIG_Per[dataY]['ActionInfo'][self.action]={NewType,canshu1,name,body}
+		PIG_Per[dataY]["ActionInfo"][self.action]={NewType,canshu1,name,body}
 	elseif NewType=="companion" then
 		local creatureID, creatureName, creatureSpellID, icon, issummoned, mountType = GetCompanionInfo(canshu2, canshu1)
 		self.SimID=creatureName
 		self.SimID_3=creatureSpellID
-		PIG_Per[dataY]['ActionInfo'][self.action]={NewType,creatureName,creatureSpellID}
+		PIG_Per[dataY]["ActionInfo"][self.action]={NewType,creatureName,creatureSpellID}
 	elseif NewType=="mount" then
 		if canshu1==268435455 then
 			self.SimID=268435455
 	    	self.SimID_3=150544
-			PIG_Per[dataY]['ActionInfo'][self.action]={NewType,268435455,150544}
+			PIG_Per[dataY]["ActionInfo"][self.action]={NewType,268435455,150544}
 		else
 			local name, spellID, icon, isActive, isUsable, sourceType, isFavorite, isFactionSpecific, faction, shouldHideOnChar, isCollected, mountID= C_MountJournal.GetMountInfoByID(canshu1)
 	    	self.SimID=name
 	    	self.SimID_3=spellID
-			PIG_Per[dataY]['ActionInfo'][self.action]={NewType,name,spellID}
+			PIG_Per[dataY]["ActionInfo"][self.action]={NewType,name,spellID}
 		end
 	end
 	if InCombatLockdown() then return end
 	self:Show()
 end
-local function Cursor_Fun(self,Script,dataY)
+function ActionBarfun.Cursor_Fun(self,Script,dataY)
 	local oldType= self.Type
 	local NewType, canshu1, canshu2, canshu3= GetCursorInfo()
 	--print(NewType, canshu1, canshu2, canshu3)
@@ -600,36 +644,35 @@ local function Cursor_Fun(self,Script,dataY)
 		end
 	end
 end
-addonTable.Cursor_Fun=Cursor_Fun
 ---
 local function IncBetween(Val, Low, High)
 	return Val >= Low and Val <= High;
 end
-local function Update_Macro(self,PigMacroDeleted,PigMacroCount,dataY)
+function ActionBarfun.Update_Macro(self,PigMacroDeleted,PigMacroCount,dataY)
 	if InCombatLockdown() then
 		self:RegisterEvent("PLAYER_REGEN_ENABLED");
 	 	return PigMacroDeleted,PigMacroCount 
 	end
-	local OldInfo =PIG_Per[dataY]['ActionInfo'][self.action]
+	local OldInfo =PIG_Per[dataY]["ActionInfo"][self.action]
 	local OldIndex =OldInfo[2]
 	local OldName =OldInfo[3]
 	local OldBody = OldInfo[4]
 
-	local TrimBody = strtrim(OldBody or '');--去除空格
+	local TrimBody = strtrim(OldBody or "");--去除空格
 	local AccMacros, CharMacros = GetNumMacros();
 	local BodyIndex = 0;
 	--未变
 	local Name, Icon, Body = GetMacroInfo(OldIndex);
-	if (TrimBody == strtrim(Body or '') and OldName == Name) then
+	if (TrimBody == strtrim(Body or "") and OldName == Name) then
 		self.icon:SetTexture(Icon);
 		return PigMacroDeleted,PigMacroCount
 	end
 	--删除重新定位
 	if (IncBetween(OldIndex - 1, 1, AccMacros) or IncBetween(OldIndex - 1, MAX_ACCOUNT_MACROS + 1, MAX_ACCOUNT_MACROS + CharMacros)) then
 		local Name, Icon, Body = GetMacroInfo(OldIndex - 1);
-		if (TrimBody == strtrim(Body or '') and OldName == Name) then
-			PIG_Per[dataY]['ActionInfo'][self.action][1]="macro"
-			PIG_Per[dataY]['ActionInfo'][self.action][2]=OldIndex-1
+		if (TrimBody == strtrim(Body or "") and OldName == Name) then
+			PIG_Per[dataY]["ActionInfo"][self.action][1]="macro"
+			PIG_Per[dataY]["ActionInfo"][self.action][2]=OldIndex-1
 			self.Type="macro"
 			self.SimID=OldIndex-1
 			self.icon:SetTexture(Icon);
@@ -641,9 +684,9 @@ local function Update_Macro(self,PigMacroDeleted,PigMacroCount,dataY)
 	--增加重新定位
 	if (IncBetween(OldIndex + 1, 1, AccMacros) or IncBetween(OldIndex + 1, MAX_ACCOUNT_MACROS + 1, MAX_ACCOUNT_MACROS + CharMacros)) then
 		local Name, Icon, Body = GetMacroInfo(OldIndex + 1);
-		if (TrimBody == strtrim(Body or '') and OldName == Name) then
-			PIG_Per[dataY]['ActionInfo'][self.action][1]="macro"
-			PIG_Per[dataY]['ActionInfo'][self.action][2]=OldIndex+1
+		if (TrimBody == strtrim(Body or "") and OldName == Name) then
+			PIG_Per[dataY]["ActionInfo"][self.action][1]="macro"
+			PIG_Per[dataY]["ActionInfo"][self.action][2]=OldIndex+1
 			self.Type="macro"
 			self.SimID=OldIndex+1
 			self.icon:SetTexture(Icon);
@@ -655,10 +698,10 @@ local function Update_Macro(self,PigMacroDeleted,PigMacroCount,dataY)
 	--其他宏改名后搜索相同宏位置
 	for i = 1, AccMacros do
 		local Name, Icon, Body = GetMacroInfo(i);
-		local Body = strtrim(Body or '');
+		local Body = strtrim(Body or "");
 		if (TrimBody == Body and OldName == Name) then
-			PIG_Per[dataY]['ActionInfo'][self.action][1]="macro"
-			PIG_Per[dataY]['ActionInfo'][self.action][2]=i
+			PIG_Per[dataY]["ActionInfo"][self.action][1]="macro"
+			PIG_Per[dataY]["ActionInfo"][self.action][2]=i
 			self.Type="macro"
 			self.SimID=i
 			self.icon:SetTexture(Icon);	
@@ -675,10 +718,10 @@ local function Update_Macro(self,PigMacroDeleted,PigMacroCount,dataY)
 	--搜索角色宏
 	for i = MAX_ACCOUNT_MACROS + 1, MAX_ACCOUNT_MACROS + CharMacros do
 		local Name, Icon, Body = GetMacroInfo(i);
-		local Body = strtrim(Body or '');
+		local Body = strtrim(Body or "");
 		if (TrimBody == Body and OldName == Name) then
-			PIG_Per[dataY]['ActionInfo'][self.action][1]="macro"
-			PIG_Per[dataY]['ActionInfo'][self.action][2]=i
+			PIG_Per[dataY]["ActionInfo"][self.action][1]="macro"
+			PIG_Per[dataY]["ActionInfo"][self.action][2]=i
 			self.Type="macro"
 			self.SimID=i
 			self.icon:SetTexture(Icon);	
@@ -694,11 +737,11 @@ local function Update_Macro(self,PigMacroDeleted,PigMacroCount,dataY)
 	if PigMacroDeleted==false then
 		--有相同body
 		if (BodyIndex ~= 0) then 
-			PIG_Per[dataY]['ActionInfo'][self.action][2]=BodyIndex
+			PIG_Per[dataY]["ActionInfo"][self.action][2]=BodyIndex
 			self.Type="macro"
 			self.SimID=BodyIndex
 			local Name, Icon, Body = GetMacroInfo(BodyIndex);
-			PIG_Per[dataY]['ActionInfo'][self.action][3]=Name
+			PIG_Per[dataY]["ActionInfo"][self.action][3]=Name
 			self.icon:SetTexture(Icon);	
 			self.Name:SetText(Name);
 			self:SetAttribute("macro", BodyIndex);
@@ -707,14 +750,14 @@ local function Update_Macro(self,PigMacroDeleted,PigMacroCount,dataY)
 		--有相同Name
 		local Name, Icon, Body = GetMacroInfo(OldIndex);
 		if (OldName == Name) then
-			PIG_Per[dataY]['ActionInfo'][self.action][4]=Body
+			PIG_Per[dataY]["ActionInfo"][self.action][4]=Body
 			self.icon:SetTexture(Icon);
 			return PigMacroDeleted,PigMacroCount
 		end
 	end
 	--有删除
 	if PigMacroDeleted==true then
-		PIG_Per[dataY]['ActionInfo'][self.action]=nil
+		PIG_Per[dataY]["ActionInfo"][self.action]=nil
 		self.Type=nil
 		self.icon:SetTexture();
 		self.Count:SetText();
@@ -732,4 +775,4 @@ local function Update_Macro(self,PigMacroDeleted,PigMacroCount,dataY)
 	end
 	return PigMacroDeleted,PigMacroCount
 end
-addonTable.Update_Macro=Update_Macro
+addonTable.ActionBarfun=ActionBarfun

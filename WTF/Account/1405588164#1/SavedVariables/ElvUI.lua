@@ -34,6 +34,9 @@ ElvDB = {
 				["autoRepair"] = "PLAYER",
 			},
 			["bags"] = {
+				["shownBags"] = {
+					["bag-2"] = false,
+				},
 				["vendorGrays"] = {
 					["enable"] = true,
 				},
@@ -56,11 +59,11 @@ ElvDB = {
 				["ShiftAB"] = "BOTTOM,UIParent,BOTTOM,-254,363",
 				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,332,311",
 				["ElvAB_6"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-4,360",
-				["ReputationBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,454,4",
 				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,335,349",
-				["VOICECHAT"] = "TOPLEFT,UIParent,TOPLEFT,155,-263",
-				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-339,415",
+				["ReputationBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,454,4",
 				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-179",
+				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-339,415",
+				["VOICECHAT"] = "TOPLEFT,UIParent,TOPLEFT,155,-263",
 				["ElvUF_PartyMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,308",
 				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,417,301",
 				["ElvUF_Raid2Mover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,485",
@@ -118,7 +121,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["狂暴專家"] = 1580740572,
+			["狂暴專家"] = 1568985836,
 		},
 	},
 	["global"] = {
@@ -151,12 +154,19 @@ ElvDB = {
 							nil, -- [3]
 							true, -- [4]
 						}, -- [4]
-						[6] = {
+						nil, -- [5]
+						{
 							nil, -- [1]
 							nil, -- [2]
 							nil, -- [3]
 							true, -- [4]
-						},
+						}, -- [6]
+						{
+							nil, -- [1]
+							nil, -- [2]
+							nil, -- [3]
+							true, -- [4]
+						}, -- [7]
 					},
 				},
 			},
@@ -183,6 +193,11 @@ ElvPrivateDB = {
 			},
 			["nameplates"] = {
 				["enable"] = false,
+			},
+			["skins"] = {
+				["blizzard"] = {
+					["tooltip"] = false,
+				},
 			},
 			["install_complete"] = 13.31,
 		},

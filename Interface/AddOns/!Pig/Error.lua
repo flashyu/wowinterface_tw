@@ -6,7 +6,7 @@ local bencierrinfo={}
 local WWW,HHH = 600,380
 local biaotiW = 25
 local Backdropinfo={bgFile = "interface/chatframe/chatframebackground.blp",
-	edgeFile = "Interface/AddOns/!Pig/Pigs/Pig_Border.blp", edgeSize = 6,}
+	edgeFile = "Interface/AddOns/!Pig/libs/Pig_Border.blp", edgeSize = 6.6,}
 local function PIGSetBackdrop(self,but)
 	self:SetBackdrop(Backdropinfo)
 	if but then
@@ -52,7 +52,7 @@ local function ADD_Button(Text,UIName,fuF,WH,Point)
 	end)
 	But.Text = But:CreateFontString();
 	But.Text:SetPoint("CENTER", 0, 0);
-	But.Text:SetFont(ChatFontNormal:GetFont(), 13)
+	But.Text:SetFontObject(ChatFontNormal);
 	But.Text:SetTextColor(1, 0.843, 0, 1);
 	But.Text:SetText(Text);
 	return But
@@ -92,7 +92,7 @@ local function ADD_TabBut(Text,UIName,fuF,WH,Point,id)
 	end);
 	But.Text = But:CreateFontString();
 	But.Text:SetPoint("CENTER", 0, 0);
-	But.Text:SetFont(ChatFontNormal:GetFont(), 13)
+	But.Text:SetFontObject(ChatFontNormal);
 	But.Text:SetTextColor(1, 0.843, 0, 1);
 	But.Text:SetText(Text);
 	function But:selected()
@@ -153,11 +153,12 @@ Bugcollect.Close:SetScript("OnClick", function (self)
 end);
 
 Bugcollect.Time = Bugcollect.Moving:CreateFontString();
-Bugcollect.Time:SetPoint("TOPLEFT",Bugcollect,"TOPLEFT",10,-5);
-Bugcollect.Time:SetFontObject(GameFontNormal);
+Bugcollect.Time:SetPoint("TOPLEFT",Bugcollect,"TOPLEFT",10,-6);
+Bugcollect.Time:SetFontObject(ChatFontNormal);
+Bugcollect.Time:SetTextColor(1,0.843,0)
 Bugcollect.biaoti = Bugcollect.Moving:CreateFontString();
 Bugcollect.biaoti:SetPoint("TOP",Bugcollect,"TOP",0,-6);
-Bugcollect.biaoti:SetFont(ChatFontNormal:GetFont(), 14)
+Bugcollect.biaoti:SetFontObject(ChatFontNormal);
 Bugcollect.biaoti:SetTextColor(1,0.843,0)
 ---显示区域
 Bugcollect.NR = CreateFrame("Frame", nil, Bugcollect,"BackdropTemplate");
@@ -172,15 +173,14 @@ Bugcollect.NR.scroll:SetPoint("TOPLEFT", Bugcollect.NR, "TOPLEFT", 6, -2)
 Bugcollect.NR.scroll:SetPoint("BOTTOMRIGHT", Bugcollect.NR, "BOTTOMRIGHT", -24, 6)
 
 Bugcollect.NR.textArea = CreateFrame("EditBox", nil, Bugcollect.NR.scroll)
+Bugcollect.NR.textArea:SetWidth(WWW-30)
+Bugcollect.NR.textArea:SetFontObject(GameFontNormal)
 Bugcollect.NR.textArea:SetTextColor(0.9, 0.9, 0.9, 1)
 Bugcollect.NR.textArea:SetAutoFocus(false)
 Bugcollect.NR.textArea:SetMultiLine(true)
-Bugcollect.NR.textArea:SetFontObject(GameFontHighlightSmall)
 Bugcollect.NR.textArea:SetMaxLetters(99999)
 Bugcollect.NR.textArea:EnableMouse(true)
 Bugcollect.NR.textArea:SetScript("OnEscapePressed", Bugcollect.NR.textArea.ClearFocus)
-Bugcollect.NR.textArea:SetWidth(WWW-30)
-
 Bugcollect.NR.scroll:SetScrollChild(Bugcollect.NR.textArea)
 --------------
 Bugcollect.prevZ = ADD_Button("《 ",nil,Bugcollect,{30,20},{"BOTTOMLEFT",Bugcollect,"BOTTOMLEFT",10,3})
@@ -320,13 +320,13 @@ end)
 ----错误处理FUN
 local function errottishi()
 	if Bugcollect.yijiazai then
-		if PIG["Error"]["ErrorTishi"] and MinimapButton_PigUI then
+		if PIG["Error"] and PIG["Error"]["ErrorTishi"] and MinimapButton_PigUI then
 			MinimapButton_PigUI.error:Show();
 		end
 	end
 end
 local function errotFUN(msg)
-	--print(msg)
+	print(msg)
 	local stack = debugstack(3) or "null"
 	local logrizhi = debuglocals(3) or "null"
 	local time = GetServerTime()
@@ -373,7 +373,6 @@ Bugcollect:RegisterEvent("PLAYER_LOGOUT");
 Bugcollect:RegisterEvent("ADDON_LOADED")
 Bugcollect:SetScript("OnEvent", function(self,event,arg1,arg2)
 	if event=="ADDON_LOADED" then
-		--if event=="ADDON_LOADED" and arg1==addonName then
 		C_Timer.After(3,del_ErrorInfo)
 		Bugcollect:UnregisterEvent("ADDON_LOADED")
 	elseif event=="PLAYER_LOGIN" then

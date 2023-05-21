@@ -68,7 +68,7 @@ Plater: enabled
 Questie: enabled
 SafeQueue: enabled
 SimpleItemLevel: enabled
-TacoTip: disabled
+TacoTip: enabled
 TargetNameplateIndicator: enabled
 ThreatClassic2: enabled
 TomTom: enabled
@@ -141,5 +141,5 @@ ElvUI_BuffHighlight: disabled
 WunderUI: disabled
 kExtraBossFrames: disabled
 WeakAurasCompanion: enabled
-Hekili: enabled
-RXPGuides: enabled
+Hekili: disabled
+RXPGuides: disabled
