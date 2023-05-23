@@ -1,5 +1,5 @@
 
 SimpleItemLevelDB = {
-	["scaleup"] = 1,
 	["scalebound"] = 1,
+	["scaleup"] = 1,
 }

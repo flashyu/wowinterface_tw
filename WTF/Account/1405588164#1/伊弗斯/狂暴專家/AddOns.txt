@@ -51,9 +51,9 @@ Doom_CooldownPulse: enabled
 GTFO: enabled
 HealBot: disabled
 HealBot_Data: disabled
-HealBot_ExtraSkins: disabled
-HealBot_Options: disabled
-HealBot_Tips: disabled
+HealBot_ExtraSkins: enabled
+HealBot_Options: enabled
+HealBot_Tips: enabled
 HidingBar: enabled
 HidingBar_Options: enabled
 Leatrix_Maps: enabled
@@ -63,7 +63,7 @@ LoonBestInSlot: disabled
 MikScrollingBattleText: disabled
 MSBTOptions: disabled
 Myslot: enabled
-Pawn: enabled
+Pawn: disabled
 Plater: enabled
 Questie: enabled
 SafeQueue: enabled
@@ -142,4 +142,4 @@ WunderUI: disabled
 kExtraBossFrames: disabled
 WeakAurasCompanion: enabled
 Hekili: disabled
-RXPGuides: disabled
+RXPGuides: enabled
