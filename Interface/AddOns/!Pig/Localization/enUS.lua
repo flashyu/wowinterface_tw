@@ -1,6 +1,8 @@
 local addonName, addonTable = ...;
 local L =addonTable.locale
 if GetLocale() == "enUS" then
+L["ADDON_NAME"] = "geligasi";
+--error
 L["ERROR_CLEAR"] = "clear";
 L["ERROR_PREVIOUS"] = "previous";
 L["ERROR_NEXT"] = "next";

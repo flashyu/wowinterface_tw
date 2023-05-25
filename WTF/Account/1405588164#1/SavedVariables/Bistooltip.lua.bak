@@ -15,8 +15,8 @@ BisTooltipDB = {
 			["filter_specs"] = {
 				["Warrior"] = {
 					["Fury"] = true,
-					["Arms"] = true,
 					["Protection"] = true,
+					["Arms"] = true,
 				},
 				["Paladin"] = {
 					["Protection"] = false,
@@ -33,10 +33,10 @@ BisTooltipDB = {
 					["Assassination"] = true,
 				},
 				["Mage"] = {
-					["Arcane"] = false,
+					["Fire FFB"] = false,
 					["Frost"] = false,
 					["Fire"] = false,
-					["Fire FFB"] = false,
+					["Arcane"] = false,
 				},
 				["Warlock"] = {
 					["Demonology"] = false,
@@ -50,24 +50,24 @@ BisTooltipDB = {
 				},
 				["Hunter"] = {
 					["Marksmanship"] = true,
-					["Beast mastery"] = true,
 					["Survival"] = true,
+					["Beast mastery"] = true,
+				},
+				["Druid"] = {
+					["Restoration"] = false,
+					["Balance"] = false,
+					["Feral dps"] = true,
+					["Feral tank"] = true,
 				},
 				["Priest"] = {
 					["Discipline"] = false,
-					["Holy"] = false,
 					["Shadow"] = true,
-				},
-				["Druid"] = {
-					["Feral dps"] = true,
-					["Balance"] = false,
-					["Restoration"] = false,
-					["Feral tank"] = true,
+					["Holy"] = false,
 				},
 			},
-			["phase_index"] = 3,
-			["data_source"] = "wowtbc",
 			["spec_index"] = 2,
+			["data_source"] = "wowtbc",
+			["phase_index"] = 3,
 		},
 	},
 }

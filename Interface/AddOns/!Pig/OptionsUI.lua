@@ -53,11 +53,10 @@ Pig_Options.L.top:SetHeight(50)
 Pig_Options.L.top:SetPoint("TOPLEFT", Pig_Options.L, "TOPLEFT", 2, -2)
 Pig_Options.L.top:SetPoint("TOPRIGHT", Pig_Options.L, "TOPRIGHT", 0, 0)
 Pig_Options.L.top:PIGSetMovable(Pig_Options)
-Pig_Options.L.top.title = PIGFontString(Pig_Options.L.top,{"LEFT", Pig_Options.L.top, "LEFT", 18, 6},"!Pig",nil, 36)
+Pig_Options.L.top.title = PIGFontString(Pig_Options.L.top,{"LEFT", Pig_Options.L.top, "LEFT", 13, 6},"!Pig",nil, 36)
 Pig_Options.L.top.title:SetTextColor(1, 69/255, 0, 1)
-Pig_Options.L.top.title1 =PIGFontString(Pig_Options.L.top,{"BOTTOMLEFT", Pig_Options.L.top.title, "BOTTOMRIGHT", 20, 0},"geligasi",nil, 16)
+Pig_Options.L.top.title1 =PIGFontString(Pig_Options.L.top,{"BOTTOMLEFT", Pig_Options.L.top.title, "BOTTOMRIGHT", 10, 0},L["ADDON_NAME"],nil, 16)
 Pig_Options.L.top.title1:SetTextColor(0, 1, 1, 1)
-Pig_Options.L.top.title1:SetText("geligasi");
 --菜单
 Pig_Options.L.F = PIGFrame(Pig_Options.L)
 Pig_Options.L.F:PIGSetBackdrop()

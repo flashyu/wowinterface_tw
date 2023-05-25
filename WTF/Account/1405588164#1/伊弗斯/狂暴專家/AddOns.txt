@@ -51,9 +51,9 @@ Doom_CooldownPulse: enabled
 GTFO: enabled
 HealBot: disabled
 HealBot_Data: disabled
-HealBot_ExtraSkins: enabled
-HealBot_Options: enabled
-HealBot_Tips: enabled
+HealBot_ExtraSkins: disabled
+HealBot_Options: disabled
+HealBot_Tips: disabled
 HidingBar: enabled
 HidingBar_Options: enabled
 Leatrix_Maps: enabled
@@ -142,4 +142,4 @@ WunderUI: disabled
 kExtraBossFrames: disabled
 WeakAurasCompanion: enabled
 Hekili: disabled
-RXPGuides: enabled
+RXPGuides: disabled

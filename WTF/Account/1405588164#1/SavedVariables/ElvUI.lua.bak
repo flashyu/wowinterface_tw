@@ -59,15 +59,15 @@ ElvDB = {
 				["ShiftAB"] = "BOTTOM,UIParent,BOTTOM,-254,363",
 				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,332,311",
 				["ElvAB_6"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-4,360",
-				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,335,349",
-				["ReputationBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,454,4",
-				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-179",
+				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,338,415",
+				["ElvUF_Raid2Mover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,485",
+				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,417,301",
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-339,415",
 				["VOICECHAT"] = "TOPLEFT,UIParent,TOPLEFT,155,-263",
 				["ElvUF_PartyMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,308",
-				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,417,301",
-				["ElvUF_Raid2Mover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,485",
-				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,338,415",
+				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-179",
+				["ReputationBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,454,4",
+				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,335,349",
 			},
 			["unitframe"] = {
 				["units"] = {
@@ -88,8 +88,8 @@ ElvDB = {
 			["actionbar"] = {
 				["bar3"] = {
 					["buttonsPerRow"] = 12,
-					["buttonSize"] = 40,
 					["buttons"] = 12,
+					["buttonSize"] = 40,
 				},
 				["bar1"] = {
 					["buttonSize"] = 40,
@@ -121,7 +121,16 @@ ElvDB = {
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["狂暴專家"] = 1572723251,
+			["狂暴專家"] = 1575612751,
+		},
+	},
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["faction"] = {
+		["伊弗斯"] = {
+			["狂暴專家"] = "Horde",
 		},
 	},
 	["global"] = {
@@ -172,15 +181,6 @@ ElvDB = {
 			},
 		},
 	},
-	["faction"] = {
-		["伊弗斯"] = {
-			["狂暴專家"] = "Horde",
-		},
-	},
-	["namespaces"] = {
-		["LibDualSpec-1.0"] = {
-		},
-	},
 }
 ElvPrivateDB = {
 	["profileKeys"] = {
@@ -191,13 +191,13 @@ ElvPrivateDB = {
 			["bags"] = {
 				["enable"] = false,
 			},
-			["nameplates"] = {
-				["enable"] = false,
-			},
 			["skins"] = {
 				["blizzard"] = {
 					["tooltip"] = false,
 				},
+			},
+			["nameplates"] = {
+				["enable"] = false,
 			},
 			["install_complete"] = 13.31,
 		},

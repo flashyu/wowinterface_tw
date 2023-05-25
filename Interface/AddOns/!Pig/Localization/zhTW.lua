@@ -1,6 +1,8 @@
 local addonName, addonTable = ...;
 local L=addonTable.locale
 if GetLocale() == "zhTW" then
+L["ADDON_NAME"] = "豬豬加油";
+--error
 L["ERROR_CLEAR"] = "清空";
 L["ERROR_PREVIOUS"] = "上一條";
 L["ERROR_NEXT"] = "下一條";
