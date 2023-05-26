@@ -2,6 +2,7 @@
 AtlasLootClassicDB = {
 	["profileKeys"] = {
 		["狂暴專家 - 伊弗斯"] = "狂暴專家 - 伊弗斯",
+		["上山打鸟 - 伊弗斯"] = "上山打鸟 - 伊弗斯",
 	},
 	["global"] = {
 		["__addonrevision"] = 3010002,
@@ -188,12 +189,14 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"Ulduar", -- [2]
-					5, -- [3]
-					9, -- [4]
+					"TheShatteredHalls", -- [2]
+					4, -- [3]
+					1, -- [4]
 					0, -- [5]
 				},
 			},
+		},
+		["上山打鸟 - 伊弗斯"] = {
 		},
 	},
 }

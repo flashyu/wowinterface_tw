@@ -326,7 +326,7 @@ local function errottishi()
 	end
 end
 local function errotFUN(msg)
-	print(msg)
+	--print(msg)
 	local stack = debugstack(3) or "null"
 	local logrizhi = debuglocals(3) or "null"
 	local time = GetServerTime()

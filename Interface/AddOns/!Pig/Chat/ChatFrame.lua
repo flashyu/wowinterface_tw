@@ -169,7 +169,7 @@ fuFrame.zhuF.Point:SetScript("OnClick", function (self)
 	Zhu_Width_Height_XY()
 	SetValueText()
 end);
-local xiayiinfo = {35,500,1}
+local xiayiinfo = {35,floor(GetScreenWidth()),1}
 fuFrame.zhuF.Point.Slider_X = PIGSlider(fuFrame.zhuF,{"LEFT",fuFrame.zhuF.Point.Text,"RIGHT",8,0},{100,14},xiayiinfo)
 fuFrame.zhuF.Point.Slider_X:SetScript("OnMouseWheel", function(self, arg1)
 	if self:IsEnabled() then
@@ -187,7 +187,7 @@ fuFrame.zhuF.Point.Slider_X:SetScript("OnValueChanged", function(self)
 	PIG["Chat"]["Frame"]["Point_X"]=valxxx;
 	SetPointXY()
 end)
-local xiayiinfo = {0,500,1}
+local xiayiinfo = {0,floor(GetScreenHeight()),1}
 fuFrame.zhuF.Point.Slider_Y = PIGSlider(fuFrame.zhuF,{"LEFT",fuFrame.zhuF.Point.Slider_X,"RIGHT",48,0},{100,14},xiayiinfo)
 fuFrame.zhuF.Point.Slider_Y:SetScript("OnMouseWheel", function(self, arg1)
 	if self:IsEnabled() then
@@ -446,7 +446,7 @@ fuFrame.LOOTF.Point:SetScript("OnClick", function (self)
 	LOOT_Width_Heigh_Point_XY()
 	LOOT_SetValueText()
 end);
-local xiayiinfo = {26,500,1}
+local xiayiinfo = {26,floor(GetScreenWidth()),1}
 fuFrame.LOOTF.Point.Slider_X = PIGSlider(fuFrame.LOOTF,{"LEFT",fuFrame.LOOTF.Point.Text,"RIGHT",6,0},{100,14},xiayiinfo)
 fuFrame.LOOTF.Point.Slider_X:SetScript("OnMouseWheel", function(self, arg1)
 	local sliderMin, sliderMax = self:GetMinMaxValues()
@@ -476,7 +476,7 @@ fuFrame.LOOTF.Point.Slider_X:SetScript("OnValueChanged", function(self)
 	PIG["Chat"]["Frame"]["Loot_Point_X"]=valxxx;
 	Loot_Point_XY()
 end)
-local xiayiinfo = {8,500,1}
+local xiayiinfo = {8,floor(GetScreenHeight()),1}
 fuFrame.LOOTF.Point.Slider_Y = PIGSlider(fuFrame.LOOTF,{"LEFT",fuFrame.LOOTF.Point.Slider_X,"RIGHT",48,0},{100,14},xiayiinfo)
 fuFrame.LOOTF.Point.Slider_Y:SetScript("OnMouseWheel", function(self, arg1)
 		local sliderMin, sliderMax = self:GetMinMaxValues()

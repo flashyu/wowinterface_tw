@@ -15,19 +15,27 @@ local PIGOptionsList_RF=Create.PIGOptionsList_RF
 local PIGOptionsList_R=Create.PIGOptionsList_R
 local PIGFontString=Create.PIGFontString
 local PIGFontStringBG=Create.PIGFontStringBG
+local PIGModCheckbutton=Create.PIGModCheckbutton
+local PIGQuickBut=Create.PIGQuickBut
+local PIGModbutton=Create.PIGModbutton
 ---
-
-local fuFrame = PIGOptionsList(L["RaidR_TABNAME"],"EXT")
--- local ADD_Frame=addonTable.ADD_Frame
--- local Create = addonTable.Create
--- local PIGModbutton=Create.PIGModbutton
--- local GnName,GnUI = "开团助手","RaidR_UI";
--- local FrameLevel=50
--- local Options_Kaituanzhushou = PIGModbutton(GnName,GnUI,FrameLevel,5)
+local RaidRFun=addonTable.RaidRFun
+local Width,Height,hang_Height,hang_NUM  = 820, 570, 34, 13;
+--父框架
+function RaidRFun.RaidRecord()
+	if not PIG["RaidRecord"]["Open"] then return end
+	if _G[GnUI] then return end
+	local GnName,GnUI,GnIcon,FrameLevel = RaidRFun.GnName,RaidRFun.GnUI,RaidRFun.GnIcon
+	local ModBut = PIGModbutton(GnName,GnIcon,GnUI,FrameLevel,3)
+	local RaidR=PIGFrame(UIParent,{"CENTER",UIParent,"CENTER",0,20},{Width, Height},GnUI,true)
+	RaidR:PIGSetBackdrop()
+	RaidR:PIGClose()
+	RaidR:PIGSetMovable()
+end
 -- ----------------------------------------------------
 -- local function ADD_RaidR_UI()
 -- 	if RaidR_UI then return end
--- 	local Width,Height,hang_Height,hang_NUM  = 820, 570, 34, 13;
+-- 	
 -- 	local RaidR=ADD_Frame(GnUI,UIParent,Width, Height,"CENTER",UIParent,"CENTER",0,20,true,false,false,true,true,"BG5")
 -- 	RaidR:SetClampedToScreen(true)
 -- 	RaidR:SetMovable(true)
@@ -442,40 +450,7 @@ local fuFrame = PIGOptionsList(L["RaidR_TABNAME"],"EXT")
 -- 	--
 -- 	addonTable.RaidInfo_Update_BUT()--冻结按钮
 -- end
--- --================================
--- local ADD_ModCheckbutton =addonTable.ADD_ModCheckbutton
--- local Tooltip = "方便开团记录信息工具，包括副本掉落记录，便捷物品拍卖，分G助手，组队助手"
--- local Cfanwei,xulieID = -80, 4
--- local OptionsModF_RaidRecord = ADD_ModCheckbutton(GnName,Tooltip,fuFrame,Cfanwei,xulieID)
--- ---
--- local ADD_QuickButton=addonTable.ADD_QuickButton
--- local function ADD_QuickButton_RaidRecord()
--- 	local ckbut = OptionsModF_RaidRecord.ADD
--- 	if PIG["RaidRecord"]["AddBut"]=="ON" then
--- 		ckbut:SetChecked(true);
--- 	end
--- 	if PIG['QuickButton']['Open'] and PIG["RaidRecord"]["Kaiqi"]=="ON" then
--- 		ckbut:Enable();
--- 	else
--- 		ckbut:Disable();
--- 	end
--- 	if PIG['QuickButton']['Open'] and PIG["RaidRecord"]["Kaiqi"]=="ON" and PIG["RaidRecord"]["AddBut"]=="ON" then
--- 		local QkBut = "QkBut_RaidRecord"
--- 		if _G[QkBut] then return end
--- 		local Icon=133742
--- 		local Tooltip = "点击-|cff00FFFF打开"..GnName.."|r"
--- 		local QkBut=ADD_QuickButton(QkBut,Tooltip,Icon)
--- 		QkBut:SetScript("OnClick", function(self,button)
--- 			if _G[GnUI]:IsShown() then
--- 				_G[GnUI]:Hide();
--- 			else
--- 				_G[GnUI]:SetFrameLevel(FrameLevel)
--- 				_G[GnUI]:Show();
--- 			end
--- 		end);
--- 	end
--- end
--- addonTable.ADD_QuickButton_RaidRecord=ADD_QuickButton_RaidRecord
+
 -- ---
 -- OptionsModF_RaidRecord:SetScript("OnClick", function (self)
 -- 	if self:GetChecked() then
@@ -498,11 +473,3 @@ local fuFrame = PIGOptionsList(L["RaidR_TABNAME"],"EXT")
 -- 		PIG["RaidRecord"]["AddBut"]="OFF";
 -- 	end
 -- end);
--- ----------------
--- addonTable.RaidRecord = function()
--- 	if PIG["RaidRecord"]["Kaiqi"]=="ON" then
--- 		OptionsModF_RaidRecord:SetChecked(true);
--- 		Options_Kaituanzhushou:Enable();
--- 		ADD_RaidR_UI()
--- 	end
--- end

@@ -1,9 +1,20 @@
 
 DecursiveDB = {
-	["profileKeys"] = {
-		["狂暴專家 - 伊弗斯"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1684257540,
 	},
 	["class"] = {
+		["HUNTER"] = {
+			["CureOrder-1"] = {
+				-11, -- [1]
+				-15, -- [2]
+				nil, -- [3]
+				-12, -- [4]
+				[8] = -13,
+				[16] = -14,
+				[32] = -16,
+			},
+		},
 		["WARRIOR"] = {
 			["CureOrder-1"] = {
 				-11, -- [1]
@@ -25,8 +36,9 @@ DecursiveDB = {
 			},
 		},
 	},
-	["global"] = {
-		["LastVersionAnnounce"] = 1684257540,
+	["profileKeys"] = {
+		["上山打鸟 - 伊弗斯"] = "Default",
+		["狂暴專家 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

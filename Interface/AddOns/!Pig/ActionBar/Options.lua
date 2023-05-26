@@ -113,12 +113,24 @@ local function ActionBar_PetTishi()
 	if classId==3 or  classId==9 then
 		local chaofengjinengName
 		if classId==3 then
-		 	chaofengjinengName="低吼"
+			if GetLocale() == "zhTW" then
+				chaofengjinengName="低吼"
+			else
+				chaofengjinengName="低吼"
+			end
 		elseif classId==9 then
 			if tocversion<80000 then
-				chaofengjinengName="受难"
+				if GetLocale() == "zhTW" then
+					chaofengjinengName="受難"
+				else
+					chaofengjinengName="受难"
+				end
 			else
-				chaofengjinengName="胁迫气场"
+				if GetLocale() == "zhTW" then
+					chaofengjinengName="脅迫氣場"
+				else
+					chaofengjinengName="胁迫气场"
+				end
 			end
 		end
 
@@ -164,7 +176,7 @@ local function ActionBar_PetTishi()
 			end
 			for ii=4, 7 do
 				local name, subtext, texture, isToken, isActive, autoCastAllowed, autoCastEnabled = GetPetActionInfo(ii);
-				if name=="低吼" then
+				if name==chaofengjinengName then
 					PETchaofengtishi:SetPoint("BOTTOM", _G["PetActionButton"..ii], "TOP", 0, 0);
 				end
 			end
@@ -269,33 +281,29 @@ if tocversion<100000 then
 		Pig_MultiBar_Update()
 
 		local function StanceBar_Update(self)
-			--if self:IsShown() then
-				if SHOW_MULTI_ACTIONBAR_1 or SHOW_MULTI_ACTIONBAR_2 or SHOW_MULTI_ACTIONBAR_3 or SHOW_MULTI_ACTIONBAR_4 then		
-					if SHOW_MULTI_ACTIONBAR_4 and SHOW_MULTI_ACTIONBAR_3 and SHOW_MULTI_ACTIONBAR_1 then
-						if not self:IsUserPlaced() then
-							if InCombatLockdown() then
-								self:RegisterEvent("PLAYER_REGEN_ENABLED");
-								PIG_print("部分移动会在战斗结束后执行")
-							else
-								local point, relativeTo, relativePoint, xOfs, yOfs = self:GetPoint()
-								self:SetMovable(true)
-								self:ClearAllPoints();
-								self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", xOfs, yOfs+42)
-								self:SetUserPlaced(true)
-							end 
-						end
+			if SHOW_MULTI_ACTIONBAR_4 and SHOW_MULTI_ACTIONBAR_3 then
+				if not self:IsUserPlaced() then
+					if InCombatLockdown() then
+						self:RegisterEvent("PLAYER_REGEN_ENABLED");
+						PIG_print("部分移动会在战斗结束后执行")
 					else
+						local point, relativeTo, relativePoint, xOfs, yOfs = self:GetPoint()
 						self:SetMovable(true)
-						self:SetUserPlaced(false)
-						self:SetMovable(false)
-					end
+						self:ClearAllPoints();
+						self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", xOfs, yOfs+42)
+						self:SetUserPlaced(true)
+					end 
 				end
-			--end
+			else
+				self:SetMovable(true)
+				self:SetUserPlaced(false)
+				self:SetMovable(false)
+			end
 		end
 		StanceBar_Update(StanceBarFrame)
 		StanceBarFrame:HookScript("OnEvent", function (self,event)
 			if event=="PLAYER_REGEN_ENABLED" then
-				if SHOW_MULTI_ACTIONBAR_4 and SHOW_MULTI_ACTIONBAR_3 and SHOW_MULTI_ACTIONBAR_1 then
+				if SHOW_MULTI_ACTIONBAR_4 and SHOW_MULTI_ACTIONBAR_3 then
 					if not self:IsUserPlaced() then
 						local point, relativeTo, relativePoint, xOfs, yOfs = self:GetPoint()
 						self:SetMovable(true)
@@ -307,69 +315,95 @@ if tocversion<100000 then
 				self:UnregisterEvent("PLAYER_REGEN_ENABLED");
 			end
 		end);
-		
-		local function PetBar_Update(self)
-			--if self:IsShown() then
-				if InCombatLockdown() then return end
-				if SHOW_MULTI_ACTIONBAR_1 or SHOW_MULTI_ACTIONBAR_2 or SHOW_MULTI_ACTIONBAR_3 or SHOW_MULTI_ACTIONBAR_4 then
-					local showXP,showRep = GetExpWatched()
+
+		local function MultiCastBar_Update(self)
+			if SHOW_MULTI_ACTIONBAR_4 and SHOW_MULTI_ACTIONBAR_3 then
+				if InCombatLockdown() then
+					self:RegisterEvent("PLAYER_REGEN_ENABLED");
+					PIG_print("部分移动会在战斗结束后执行")
+				else
 					self:SetMovable(true)
 					self:ClearAllPoints();
-					if SHOW_MULTI_ACTIONBAR_4 and SHOW_MULTI_ACTIONBAR_3 and SHOW_MULTI_ACTIONBAR_1 then
-						if showXP and showRep then
-							self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 188)
-							--self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 96)
-						elseif showXP or showRep then
-							self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 180)
-							--self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 86)
-						else
-							self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 172)
-							--self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 84)
-						end	
-					else
-						if SHOW_MULTI_ACTIONBAR_1 then
-							if showXP and showRep then
-								self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 148)
-								--self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 54)
-							elseif showXP or showRep then
-								self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 140)
-								--self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 45)
-							else
-								self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 132)
-								--self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 42)
-							end
-						else
-							if showXP and showRep then
-								self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 104)
-								--self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 12)
-							elseif showXP or showRep then
-								self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 96)
-								--self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 4)
-							else
-								self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 88)
-								--self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 0)
-							end
-						end
-					end
+					self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", MULTICASTACTIONBAR_XPOS, MULTICASTACTIONBAR_YPOS+42)
+					self:SetUserPlaced(true)
+				end 
+			else
+				self:SetMovable(true)
+				self:SetUserPlaced(false)
+				self:SetMovable(false)
+			end
+		end
+		MultiCastBar_Update(MultiCastActionBarFrame)
+		MultiCastActionBarFrame:HookScript("OnEvent", function (self,event)
+			if event=="PLAYER_REGEN_ENABLED" then
+				if SHOW_MULTI_ACTIONBAR_4 and SHOW_MULTI_ACTIONBAR_3 then
+					self:SetMovable(true)
+					self:ClearAllPoints();
+					self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", MULTICASTACTIONBAR_XPOS, MULTICASTACTIONBAR_YPOS+42)
 					self:SetUserPlaced(true)
 				end
-			--end
+				self:UnregisterEvent("PLAYER_REGEN_ENABLED");
+			end
+		end);
+
+
+		local function PetBar_Update(self)
+			if InCombatLockdown() then return end
+			if SHOW_MULTI_ACTIONBAR_1 or SHOW_MULTI_ACTIONBAR_2 or SHOW_MULTI_ACTIONBAR_3 or SHOW_MULTI_ACTIONBAR_4 then
+				local showXP,showRep = GetExpWatched()
+				self:SetMovable(true)
+				self:ClearAllPoints();
+				if SHOW_MULTI_ACTIONBAR_4 and SHOW_MULTI_ACTIONBAR_3 and SHOW_MULTI_ACTIONBAR_1 then
+					if showXP and showRep then
+						--self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 188)
+						self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 96)
+					elseif showXP or showRep then
+						--self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 180)
+						self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 86)
+					else
+						--self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 172)
+						self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 84)
+					end	
+				-- else
+					-- if SHOW_MULTI_ACTIONBAR_1 then
+						-- if showXP and showRep then
+							-- --self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 148)
+							-- self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 54)
+						-- elseif showXP or showRep then
+							-- --self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 140)
+							-- self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 45)
+						-- else
+							-- --self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 132)
+							-- self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 42)
+						-- end
+					-- else
+						-- if showXP and showRep then
+							-- --self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 104)
+							-- self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 12)
+						-- elseif showXP or showRep then
+							-- --self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 96)
+							-- self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 4)
+						-- else
+							-- --self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 88)
+							-- self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 0)
+						-- end
+					-- end
+				end
+				self:SetUserPlaced(true)
+			end
 		end
+		PetBar_Update(PetActionBarFrame)
 		hooksecurefunc("MainMenuBar_UpdateExperienceBars",function(newLevel)
 			StanceBar_Update(StanceBarFrame)
 			PetBar_Update(PetActionBarFrame)
+			MultiCastBar_Update(MultiCastActionBarFrame)
 		end);
 		hooksecurefunc("MultiActionBar_Update",function()	
 			Pig_MultiBar_Update()
 			StanceBar_Update(StanceBarFrame)
 			PetBar_Update(PetActionBarFrame)
+			MultiCastBar_Update(MultiCastActionBarFrame)
 		end);
-		-- hooksecurefunc("UIParent_ManageFramePositions",function()
-
-		-- end);
-		-- hooksecurefunc("UIParent_UpdateTopFramePositions",function()
-
-		-- end);
 	end
 	ActionF.BarRight=PIGCheckbutton(ActionF,{"TOPLEFT",ActionF.botline,"TOPLEFT",300,-20},{"移动右边动作条到下方","移动右边竖向动作条到下方动作条之上"})
 	ActionF.BarRight:SetScript("OnClick", function (self)

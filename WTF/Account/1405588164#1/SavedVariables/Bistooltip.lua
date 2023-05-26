@@ -2,6 +2,7 @@
 BisTooltipDB = {
 	["profileKeys"] = {
 		["狂暴專家 - 伊弗斯"] = "Default",
+		["上山打鸟 - 伊弗斯"] = "Default",
 	},
 	["char"] = {
 		["狂暴專家 - 伊弗斯"] = {
@@ -68,6 +69,10 @@ BisTooltipDB = {
 			["phase_index"] = 3,
 			["data_source"] = "wowtbc",
 			["spec_index"] = 2,
+		},
+		["上山打鸟 - 伊弗斯"] = {
+			["version"] = 6.1,
+			["data_source"] = "wowtbc",
 		},
 	},
 }

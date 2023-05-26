@@ -199,18 +199,6 @@ function QuickButUI:BGbroadcast()
 				hanhuaTimejiange=GetTime(); direnshuliangpig=direnshuliangpig+1; SendChatMessage( GetMinimapZoneText().."有"..direnshuliangpig.."个敌人来袭，请求支援！", "instance_chat"); 
 			end
 		end);
-		BGanniu:RegisterEvent("CHAT_MSG_SAY")
-		BGanniu:RegisterEvent("PLAYER_ENTERING_WORLD");
-		BGanniu:RegisterEvent("ZONE_CHANGED_NEW_AREA");
-		BGanniu:SetScript("OnEvent", function (self,event,arg1)
-			local inInstance, instanceType =IsInInstance()
-			if inInstance and instanceType=="pvp" then
-				self.HideF=nil
-			else
-				self.HideF=true
-			end
-			self:ShowHide(GnUI)
-		end);
 	end
 end
 --炉石专业按钮----

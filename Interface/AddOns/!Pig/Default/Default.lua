@@ -256,6 +256,10 @@ addonTable.Default = {
 		["AutoCombatLog"]= false,
 		["AutoCombatLogTJ"]= 3,
 	},
+	["RaidRecord"] = {
+		["Open"] = false,
+		["AddBut"] = true,
+	},
 };
 addonTable.Default_Per = {
 	["AutoSellBuy"] = {

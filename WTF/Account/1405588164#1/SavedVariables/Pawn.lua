@@ -136,6 +136,9 @@ PawnCommon = {
 		},
 		["\"Classic\":HUNTER2"] = {
 			["PerCharacterOptions"] = {
+				["上山打鸟-伊弗斯"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "abd473",
 			["LocalizedName"] = "猎人: 射击",
@@ -237,6 +240,9 @@ PawnCommon = {
 		},
 		["\"Classic\":HUNTER3"] = {
 			["PerCharacterOptions"] = {
+				["上山打鸟-伊弗斯"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "abd473",
 			["LocalizedName"] = "猎人: 生存",
@@ -251,6 +257,9 @@ PawnCommon = {
 		},
 		["\"Classic\":HUNTER1"] = {
 			["PerCharacterOptions"] = {
+				["上山打鸟-伊弗斯"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "abd473",
 			["LocalizedName"] = "猎人: 野兽控制",

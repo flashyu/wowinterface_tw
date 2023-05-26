@@ -2,6 +2,7 @@
 ElvDB = {
 	["profileKeys"] = {
 		["狂暴專家 - 伊弗斯"] = "Default",
+		["上山打鸟 - 伊弗斯"] = "Default",
 	},
 	["DisabledAddOns"] = {
 	},
@@ -13,6 +14,7 @@ ElvDB = {
 	["class"] = {
 		["伊弗斯"] = {
 			["狂暴專家"] = "WARRIOR",
+			["上山打鸟"] = "HUNTER",
 		},
 	},
 	["profiles"] = {
@@ -121,16 +123,11 @@ ElvDB = {
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["狂暴專家"] = 1574915935,
+			["狂暴專家"] = 1528963198,
+			["上山打鸟"] = 49056561,
 		},
 	},
 	["global"] = {
-		["general"] = {
-			["AceGUI"] = {
-				["height"] = 700,
-				["width"] = 1250,
-			},
-		},
 		["datatexts"] = {
 			["settings"] = {
 				["Currencies"] = {
@@ -171,10 +168,17 @@ ElvDB = {
 				},
 			},
 		},
+		["general"] = {
+			["AceGUI"] = {
+				["height"] = 700,
+				["width"] = 1250,
+			},
+		},
 	},
 	["faction"] = {
 		["伊弗斯"] = {
 			["狂暴專家"] = "Horde",
+			["上山打鸟"] = "Horde",
 		},
 	},
 	["namespaces"] = {
@@ -185,6 +189,7 @@ ElvDB = {
 ElvPrivateDB = {
 	["profileKeys"] = {
 		["狂暴專家 - 伊弗斯"] = "狂暴專家 - 伊弗斯",
+		["上山打鸟 - 伊弗斯"] = "上山打鸟 - 伊弗斯",
 	},
 	["profiles"] = {
 		["狂暴專家 - 伊弗斯"] = {
@@ -200,6 +205,12 @@ ElvPrivateDB = {
 				["enable"] = false,
 			},
 			["install_complete"] = 13.31,
+		},
+		["上山打鸟 - 伊弗斯"] = {
+			["nameplates"] = {
+				["enable"] = false,
+			},
+			["install_complete"] = 13.32,
 		},
 	},
 }

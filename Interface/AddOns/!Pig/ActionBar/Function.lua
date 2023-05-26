@@ -22,28 +22,6 @@ local function UseKeyDownUP(fuji)
 		--     end
 		-- ]=])
 	end
-	--local newbutton, message = preBody(self, button, down)
-	-- SecureHandlerWrapScript(fuji, "OnClick", fuji, function(self, button, down)
-	-- 	-- body
-	-- end)
-	-- function preBody(self, button, down)
-	-- 	--'print(self, button, down)'
-	-- end
-	-- postBody(self, message, button, down)
-	-- newbutton, message = preBody(self, button, down)
-	
-	-- SecureHandlerWrapScript(fuji,"OnClick",fuji,[=[
-	-- 	print(self, button, down,xxx)
-	-- 	--self:Hide()
-	-- 	return 
-	-- ]=])
-
-	--postBody(self, message, button, down)
-	-- fuji:SetAttribute("_onclick", [=[
-	-- 	print(self, button, down)
-	-- 	self:Hide()
-	-- 	--return 
-	-- ]=])
 end
 function ActionBarfun.PIGUseKeyDown(fuji)
 	UseKeyDownUP(fuji)
@@ -150,8 +128,7 @@ function ActionBarfun.Update_Cooldown(self)
 		elseif Type=="item" then
 			local ItemID = GetItemInfoInstant(SimID)
 			local start, duration, enabled = GetItemCooldown(ItemID)
-			if enabled==0 then
-			else
+			if enabled~=0 and start and duration then
 				self.cooldown:SetCooldown(start, duration);
 			end
 		elseif Type=="macro" then

@@ -47,6 +47,15 @@ function FramePlusfun.BuffTime()
 			Buff_OnUpdate(auraButton, timeLeft)
 			Debuff_OnUpdate(auraButton, timeLeft)
 		end);
+		hooksecurefunc("AuraButton_Update",function(buttonName, index, filter)
+			local name,_,_,_,_,expirationTime = UnitAura("player",index, filter)
+			if name then
+				local buffName = buttonName..index;
+				local buff = _G[buffName];
+				buff.duration:SetFormattedText("|cff00ff00N/A|r");
+			    buff.duration:Show()
+			end
+		end);
 	else
 		local auras={BuffFrame.AuraContainer:GetChildren()}
 		for i=1,#auras do

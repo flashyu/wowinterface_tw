@@ -117,8 +117,9 @@ function Create.PIGModbutton(GnTooltip,GnIcon,GnUI,FrameLevel,ID)
 	return But
 end
 --创建选项按钮
-function Create.PIGModCheckbutton(fuF,text,Point,UIName)
+function Create.PIGModCheckbutton(fuF,text,Point,dandu)
 	local Line = Create.PIGLine(fuF,"TOP",Point[5])
+	if dandu then Line:Hide() end
 	local But = Create.PIGCheckbutton(fuF,nil,text)
 	But:SetPoint("TOPLEFT",Line,"TOPLEFT",20,-10)
 	local text1 = {"添加<"..text[1]..">到功能动作条","添加<"..text[1]..">到功能动作条，以便快速打开。\n|cff00FF00注意：此功能需先在动作条菜单打开功能动作条功能|r"}

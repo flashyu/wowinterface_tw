@@ -1,6 +1,6 @@
 
 HEYBOX_SAVED_PLAYER_INFOS = {
-	["狂暴專家-伊弗斯"] = {
-		["class"] = "WARRIOR",
+	["上山打鸟-伊弗斯"] = {
+		["class"] = "HUNTER",
 	},
 }

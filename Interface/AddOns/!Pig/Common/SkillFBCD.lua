@@ -242,7 +242,7 @@ local function huoqu_Fuben()
 	if numInstances>0 then
 		for id = 1, numInstances, 1 do				
 			local name, id, reset, difficulty, locked, extended, instanceIDMostSig, isRaid, maxPlayers, difficultyName, numEncounters, encounterProgress = GetSavedInstanceInfo(id)
-			table.insert(fubenCDinfo,{name,GetTime(),reset})
+			table.insert(fubenCDinfo,{name.."["..difficultyName.."]",GetTime(),reset})
 		end
 	end
 	fubenCDinfo.cunzaiYN = true

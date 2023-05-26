@@ -30,14 +30,12 @@ PIGUI:SetScript("OnEvent",function(self, event, arg1)
 		addonTable.UnitFrame()
 		addonTable.BagBank()
 		addonTable.CombatPlus()
-		--
-		-- addonTable.CombatCycle()
 		-- --技能监控
 		-- addonTable.Spell_CD_JK()
 		-- --时空之门
 		-- addonTable.Invite()
 		-- --开团助手
-		-- addonTable.RaidRecord()
+		addonTable.RaidRecord()
 		-- --带本助手
 		-- addonTable.daiben()
 		-- ---

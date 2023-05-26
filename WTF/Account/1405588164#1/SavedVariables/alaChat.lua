@@ -68,6 +68,7 @@ alaChatSV = {
 		["YToBorder"] = 0,
 	},
 	["__AppliedDBVersion"] = {
+		["Player-4487-005CB746"] = 221020.01,
 		["Player-4487-0051C667"] = 221020.01,
 	},
 	["companion"] = {
@@ -142,16 +143,18 @@ alaChatSV = {
 		["AutoAddChannelToDefaultChatFrame"] = false,
 		["UseColor"] = true,
 		["ChannelBlockButton_BLZ"] = true,
-		["RAID"] = true,
+		["BF_WORLD"] = true,
 		["LOCAL_DEFENSE"] = false,
-		["RAID_WARNING"] = true,
 		["LOOK_FOR_GROUP"] = true,
+		["RAID_WARNING"] = true,
 		["_channelblocked"] = {
 		},
-		["BF_WORLD"] = true,
+		["RAID"] = true,
 		["_chatblocked"] = {
 		},
 		["_bfworldcf"] = {
+			["Player-4487-005CB746"] = {
+			},
 			["Player-4487-0051C667"] = {
 				true, -- [1]
 			},

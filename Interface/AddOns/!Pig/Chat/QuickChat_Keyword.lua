@@ -708,71 +708,75 @@ function QuickChatfun.QuickBut_Keyword()
 	local jingjianTXT=QuickChatfun.jingjianTXT
 	local chongfufayanduibi={}--过滤重复发言临时
 	--PIG["Chat"]["xxxxxx"]={}
-	local chatID = ChatFrame1--只提取聊天框架1
-	local msninfo = chatID.AddMessage
-	local zijiname = UnitName("player")
-	chatID.AddMessage = function(frame, text, ...)
-		--table.insert(PIG["Chat"]["xxxxxx"],text);
-		local ChannelYes=text:find("|Hchannel:channel:", 1)	--是公共频道消息
-		if ChannelYes then
-			local ChatKeyqishiweizhi,ChatKeyjieshuweizhi
-			if PIG["Chat"]["ShowZb"] then
-				ChatKeyqishiweizhi,ChatKeyjieshuweizhi=text:find("|t|h： ", 1)--频道类型后缀位置
-			else
-				ChatKeyqishiweizhi,ChatKeyjieshuweizhi=text:find("]|h： ", 1)--频道类型后缀位置
-			end			 
-			if ChatKeyqishiweizhi and ChatKeyjieshuweizhi then
-				local fayanName=text:sub(1,ChatKeyqishiweizhi-1)--截取发言人
-				local zijifayan=fayanName:find(zijiname, 1)
-				if PIG["Chat"]["guolvzishen"] then
-					if zijifayan then return msninfo(frame, text, ...) end
-				end
-				local newText=text:sub(ChatKeyjieshuweizhi+1, -1)--截取发言内容
-				local newText =del_biaoqing(newText)
-				local newText =del_link(newText)
-				if not zijifayan and PIG["Chat"]["guolvchongfu"] then--过滤非自身重复发言
-					local duibiText=del_biaodian(newText)
-					for i=#chongfufayanduibi,1,-1 do
-						if (GetServerTime()-chongfufayanduibi[i][1])>60 then
-							table.remove(chongfufayanduibi,i)
+	for i = 1, NUM_CHAT_WINDOWS do
+		if ( i ~= 2 ) then
+			local chatID = _G["ChatFrame"..i]
+			local msninfo = chatID.AddMessage
+			local zijiname = UnitName("player")
+			chatID.AddMessage = function(frame, text, ...)
+				--table.insert(PIG["Chat"]["xxxxxx"],text);
+				local ChannelYes=text:find("|Hchannel:channel:", 1)	--是公共频道消息
+				if ChannelYes then
+					local ChatKeyqishiweizhi,ChatKeyjieshuweizhi
+					-- if PIG["Chat"]["ShowZb"] then
+					-- 	ChatKeyqishiweizhi,ChatKeyjieshuweizhi=text:find("|t|h： ", 1)--频道类型后缀位置
+					-- else
+						ChatKeyqishiweizhi,ChatKeyjieshuweizhi=text:find("]|h： ", 1)--频道类型后缀位置
+					--end
+					if ChatKeyqishiweizhi and ChatKeyjieshuweizhi then
+						local fayanName=text:sub(1,ChatKeyqishiweizhi-1)--截取发言人
+						local zijifayan=fayanName:find(zijiname, 1)
+						if PIG["Chat"]["guolvzishen"] then
+							if zijifayan then return msninfo(frame, text, ...) end
 						end
-					end
-					for i=1,#chongfufayanduibi do
-						if chongfufayanduibi[i][2]==duibiText then
-							return false
+						local newText=text:sub(ChatKeyjieshuweizhi+1, -1)--截取发言内容
+						local newText =del_biaoqing(newText)
+						local newText =del_link(newText)
+						if not zijifayan and PIG["Chat"]["guolvchongfu"] then--过滤非自身重复发言
+							local duibiText=del_biaodian(newText)
+							for i=#chongfufayanduibi,1,-1 do
+								if (GetServerTime()-chongfufayanduibi[i][1])>60 then
+									table.remove(chongfufayanduibi,i)
+								end
+							end
+							for i=1,#chongfufayanduibi do
+								if chongfufayanduibi[i][2]==duibiText then
+									return false
+								end
+							end
+							table.insert(chongfufayanduibi,{GetServerTime(),duibiText})
 						end
-					end
-					table.insert(chongfufayanduibi,{GetServerTime(),duibiText})
-				end
-				--屏蔽黑名单
-				if BlackTxt(newText) then
-					if PIG["Chat"]["xitongjihuoB"] then
-						return
-					else
-						return msninfo(frame, text, ...)
-					end
-				end
-				--提取
-				if #Chatlist_W>0 then
-					for x=1,#Chatlist_W do
-						fuFrame.Keyword.ALLcunzai=true;	
-						for xx=1,#Chatlist_W[x] do
-							local cunzaiguanjianzi=newText:find(Chatlist_W[x][xx], 1)
-							if not cunzaiguanjianzi then
-								fuFrame.Keyword.ALLcunzai = false
-								break
+						--屏蔽黑名单
+						if BlackTxt(newText) then
+							if PIG["Chat"]["xitongjihuoB"] then
+								return
+							else
+								return msninfo(frame, text, ...)
 							end
 						end
-						if fuFrame.Keyword.ALLcunzai then						
-							local text=jingjianTXT(text)
-							fuFrame.Keyword.F:AddMessage(text, ...);
-							guanjianziMGStishi()
-							break
+						--提取
+						if #Chatlist_W>0 then
+							for x=1,#Chatlist_W do
+								fuFrame.Keyword.ALLcunzai=true;	
+								for xx=1,#Chatlist_W[x] do
+									local cunzaiguanjianzi=newText:find(Chatlist_W[x][xx], 1)
+									if not cunzaiguanjianzi then
+										fuFrame.Keyword.ALLcunzai = false
+										break
+									end
+								end
+								if fuFrame.Keyword.ALLcunzai then						
+									local text=jingjianTXT(text)
+									fuFrame.Keyword.F:AddMessage(text, ...);
+									guanjianziMGStishi()
+									break
+								end
+							end
 						end
 					end
 				end
+				return msninfo(frame, text, ...)
 			end
 		end
-		return msninfo(frame, text, ...)
 	end
 end

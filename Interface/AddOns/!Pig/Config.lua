@@ -8,30 +8,44 @@ local PIGOptionsList=Create.PIGOptionsList
 local PIGFontString=Create.PIGFontString
 
 --载入默认配置-------
-local function Config_Default_geshihua(bendi,moren)
+local function Config_Default()
+	local moren=addonTable.Default;
+	PIG = PIG or moren;
 	for k,v in pairs(moren) do
-		if bendi[k]==nil then
-			bendi[k] = moren[k]
+		if PIG[k]==nil then
+			PIG[k] = moren[k]
 		end
-		if type(v)=="table" then
-			if type(bendi[k])~="table" then
-				bendi[k] = moren[k]
+		if PIG[k]=="OFF" then 
+			PIG[k]=false
+		elseif PIG[k]=="ON" then 
+			PIG[k]=true
+		elseif type(v)=="table" then
+			if type(PIG[k])~="table" then
+				PIG[k] = moren[k]
 			end
 			for kk,vv in pairs(v) do
-				if bendi[k][kk]==nil then
-					bendi[k][kk] = moren[k][kk]
+				if PIG[k][kk]==nil then
+					PIG[k][kk] = moren[k][kk]
 				end
-				if type(vv)=="table" then
-					if type(bendi[k][kk])~="table" then
-						bendi[k][kk] = moren[k][kk]
+				if PIG[k][kk]=="OFF" then 
+					PIG[k][kk]=false
+				elseif PIG[k][kk]=="ON" then 
+					PIG[k][kk]=true
+				elseif type(vv)=="table" then
+					if type(PIG[k][kk])~="table" then
+						PIG[k][kk] = moren[k][kk]
 					end
 					for kkk,vvv in pairs(vv) do
-						if bendi[k][kk][kkk]==nil then
-							bendi[k][kk][kkk] = moren[k][kk][kkk]
+						if PIG[k][kk][kkk]==nil then
+							PIG[k][kk][kkk] = moren[k][kk][kkk]
 						end
-						if type(vvv)=="table" then
-							if type(bendi[k][kk][kkk])~="table" then
-								bendi[k][kk][kkk] = moren[k][kk][kkk]
+						if PIG[k][kk][kkk]=="OFF" then 
+							PIG[k][kk][kkk]=false
+						elseif PIG[k][kk][kkk]=="ON" then 
+							PIG[k][kk][kkk]=true
+						elseif type(vvv)=="table" then
+							if type(PIG[k][kk][kkk])~="table" then
+								PIG[k][kk][kkk] = moren[k][kk][kkk]
 							end
 						end
 					end
@@ -39,62 +53,50 @@ local function Config_Default_geshihua(bendi,moren)
 			end
 		end
 	end
-end
-local function Config_Default()
-	PIG = PIG or addonTable.Default;
-	PIG_Per = PIG_Per or addonTable.Default_Per;
-	Config_Default_geshihua(PIG,addonTable.Default)
-	Config_Default_geshihua(PIG_Per,addonTable.Default_Per)
-	-- for k,v in pairs(addonTable.Default) do
-	-- 	if PIG[k]==nil then
-	-- 		PIG[k] = addonTable.Default[k]
-	-- 	end
-	-- 	if type(v)=="table" then
-	-- 		if type(PIG[k])~="table" then
-	-- 			PIG[k] = addonTable.Default[k]
-	-- 		end
-	-- 		for kk,vv in pairs(v) do
-	-- 			if PIG[k][kk]==nil then
-	-- 				PIG[k][kk] = addonTable.Default[k][kk]
-	-- 			end
-	-- 			if type(vv)=="table" then
-	-- 				if type(PIG[k][kk])~="table" then
-	-- 					PIG[k][kk] = addonTable.Default[k][kk]
-	-- 				end
-	-- 				for kkk,vvv in pairs(vv) do
-	-- 					if PIG[k][kk][kkk]==nil then
-	-- 						PIG[k][kk][kkk] = addonTable.Default[k][kk][kkk]
-	-- 					end
-	-- 					if type(vvv)=="table" then
-	-- 						if type(PIG[k][kk][kkk])~="table" then
-	-- 							PIG[k][kk][kkk] = addonTable.Default[k][kk][kkk]
-	-- 						end
-	-- 					end
-	-- 				end
-	-- 			end
-	-- 		end
-	-- 	end
-	-- end
-	-- PIG_Per = PIG_Per or addonTable.Default_Per;
-	-- for k,v in pairs(addonTable.Default_Per) do
-	-- 	if PIG_Per[k]==nil then
-	-- 		PIG_Per[k] = addonTable.Default_Per[k]
-	-- 	end
-	-- 	if type(v)=="table" then
-	-- 		for kk,vv in pairs(v) do
-	-- 			if PIG_Per[k][kk]==nil then
-	-- 				PIG_Per[k][kk] = addonTable.Default_Per[k][kk]
-	-- 			end
-	-- 			if type(kk)~="number" and type(vv)=="table" then
-	-- 				for kkk,vvv in pairs(vv) do
-	-- 					if PIG_Per[k][kk][kkk]==nil then
-	-- 						PIG_Per[k][kk][kkk] =addonTable.Default_Per[k][kk][kkk]
-	-- 					end
-	-- 				end
-	-- 			end
-	-- 		end
-	-- 	end
-	-- end
+	local moren_Per=addonTable.Default_Per;
+	PIG_Per = PIG_Per or moren_Per;
+	for k,v in pairs(moren_Per) do
+		if PIG_Per[k]==nil then
+			PIG_Per[k] = moren_Per[k]
+		end
+		if PIG_Per[k]=="OFF" then 
+			PIG_Per[k]=false
+		elseif PIG_Per[k]=="ON" then 
+			PIG_Per[k]=true
+		elseif type(v)=="table" then
+			if type(PIG_Per[k])~="table" then
+				PIG_Per[k] = moren_Per[k]
+			end
+			for kk,vv in pairs(v) do
+				if PIG_Per[k][kk]==nil then
+					PIG_Per[k][kk] = moren_Per[k][kk]
+				end
+				if PIG_Per[k][kk]=="OFF" then 
+					PIG_Per[k][kk]=false
+				elseif PIG_Per[k][kk]=="ON" then 
+					PIG_Per[k][kk]=true
+				elseif type(vv)=="table" then
+					if type(PIG_Per[k][kk])~="table" then
+						PIG_Per[k][kk] = moren_Per[k][kk]
+					end
+					for kkk,vvv in pairs(vv) do
+						if PIG_Per[k][kk][kkk]==nil then
+							PIG_Per[k][kk][kkk] = moren_Per[k][kk][kkk]
+						end
+						if PIG_Per[k][kk][kkk]=="OFF" then 
+							PIG_Per[k][kk][kkk]=false
+						elseif PIG_Per[k][kk][kkk]=="ON" then 
+							PIG_Per[k][kk][kkk]=true
+						elseif type(vvv)=="table" then
+							if type(PIG_Per[k][kk][kkk])~="table" then
+								PIG_Per[k][kk][kkk] = moren_Per[k][kk][kkk]
+							end
+						end
+					end
+				end
+			end
+		end
+	end
 end
 addonTable.Config_Default=Config_Default
 --------------

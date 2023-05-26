@@ -5,6 +5,144 @@ AutoBarDB2 = {
 	["ldb_icon"] = {
 	},
 	["classes"] = {
+		["HUNTER"] = {
+			["barList"] = {
+				["AutoBarClassBarHunter"] = {
+					["share"] = "2",
+					["fadeOut"] = false,
+					["scale"] = 1,
+					["rows"] = 1,
+					["dockShiftY"] = 0,
+					["alignButtons"] = "3",
+					["posX"] = 300,
+					["hide"] = false,
+					["enabled"] = true,
+					["columns"] = 10,
+					["alpha"] = 1,
+					["frameStrata"] = "LOW",
+					["posY"] = 280,
+					["allowed_class"] = "HUNTER",
+					["popupDirection"] = "1",
+					["padding"] = 0,
+					["dockShiftX"] = 0,
+					["buttonKeys"] = {
+						"AutoBarButtonAspect", -- [1]
+						"AutoBarButtonCharge", -- [2]
+						"AutoBarButtonFoodPet", -- [3]
+						"AutoBarButtonTrap", -- [4]
+						"AutoBarButtonStealth", -- [5]
+						"AutoBarButtonDebuff", -- [6]
+						"AutoBarButtonClassPet", -- [7]
+						"AutoBarButtonClassPets2", -- [8]
+						"AutoBarButtonClassPets3", -- [9]
+						"AutoBarButtonER", -- [10]
+						"AutoBarButtonShields", -- [11]
+						"AutoBarButtonInterrupt", -- [12]
+					},
+				},
+			},
+			["buttonList"] = {
+				["AutoBarButtonAspect"] = {
+					["barKey"] = "AutoBarClassBarHunter",
+					["buttonClass"] = "AutoBarButtonAspect",
+					["defaultButtonIndex"] = 1,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonAspect",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonStealth"] = {
+					["barKey"] = "AutoBarClassBarHunter",
+					["buttonClass"] = "AutoBarButtonStealth",
+					["defaultButtonIndex"] = 5,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonStealth",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonFoodPet"] = {
+					["barKey"] = "AutoBarClassBarHunter",
+					["buttonClass"] = "AutoBarButtonFoodPet",
+					["defaultButtonIndex"] = 3,
+					["rightClickTargetsPet"] = true,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonFoodPet",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonTrap"] = {
+					["barKey"] = "AutoBarClassBarHunter",
+					["buttonClass"] = "AutoBarButtonTrap",
+					["defaultButtonIndex"] = 4,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonTrap",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonDebuff"] = {
+					["barKey"] = "AutoBarClassBarHunter",
+					["buttonClass"] = "AutoBarButtonDebuff",
+					["defaultButtonIndex"] = 6,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonDebuff",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonClassPet"] = {
+					["barKey"] = "AutoBarClassBarHunter",
+					["buttonClass"] = "AutoBarButtonClassPet",
+					["defaultButtonIndex"] = 7,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonClassPet",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonCharge"] = {
+					["barKey"] = "AutoBarClassBarHunter",
+					["buttonClass"] = "AutoBarButtonCharge",
+					["defaultButtonIndex"] = 2,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonCharge",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonInterrupt"] = {
+					["barKey"] = "AutoBarClassBarHunter",
+					["buttonClass"] = "AutoBarButtonInterrupt",
+					["defaultButtonIndex"] = "*",
+					["arrangeOnUse"] = true,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonInterrupt",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonClassPets3"] = {
+					["barKey"] = "AutoBarClassBarHunter",
+					["buttonClass"] = "AutoBarButtonClassPets3",
+					["defaultButtonIndex"] = 9,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonClassPets3",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonER"] = {
+					["barKey"] = "AutoBarClassBarHunter",
+					["buttonClass"] = "AutoBarButtonER",
+					["defaultButtonIndex"] = 10,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonER",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonClassPets2"] = {
+					["barKey"] = "AutoBarClassBarHunter",
+					["buttonClass"] = "AutoBarButtonClassPets2",
+					["defaultButtonIndex"] = 8,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonClassPets2",
+					["square_popups"] = true,
+				},
+				["AutoBarButtonShields"] = {
+					["barKey"] = "AutoBarClassBarHunter",
+					["buttonClass"] = "AutoBarButtonShields",
+					["defaultButtonIndex"] = "*",
+					["arrangeOnUse"] = true,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonShields",
+					["square_popups"] = true,
+				},
+			},
+		},
 		["WARRIOR"] = {
 			["barList"] = {
 				["AutoBarClassBarWarrior"] = {
@@ -475,6 +613,16 @@ AutoBarDB2 = {
 				},
 				["AutoBarButtonRaidTarget"] = {
 					["arrangeOnUse"] = "macrotext:2",
+				},
+			},
+			["barList"] = {
+			},
+			["buttonList"] = {
+			},
+		},
+		["上山打鸟 - 伊弗斯"] = {
+			["buttonDataList"] = {
+				["AutoBarButtonMount"] = {
 				},
 			},
 			["barList"] = {

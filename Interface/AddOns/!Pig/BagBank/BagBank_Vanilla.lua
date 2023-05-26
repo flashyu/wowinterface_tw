@@ -756,7 +756,6 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 			["lixianNum"]="zhengheBAG",
 		}
 		local BAGheji=BagBankFrame(UIParent,{"CENTER",UIParent,"CENTER",420,-10},"BAGheji_UI",data)
-		BAGheji = BAGheji
 		BAGheji:SetToplevel(true)
 		BAGheji:HookScript("OnHide",function(self)
 			CloseBag(0);CloseBag(1);CloseBag(2);CloseBag(3);CloseBag(4);

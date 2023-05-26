@@ -1,7 +1,8 @@
 # xanSoundAlerts
 
-## [v3.0](https://github.com/Xruptor/xanSoundAlerts/tree/v3.0) (2023-01-25)
-[Full Changelog](https://github.com/Xruptor/xanSoundAlerts/compare/v2.9...v3.0) [Previous Releases](https://github.com/Xruptor/xanSoundAlerts/releases)
+## [v3.1](https://github.com/Xruptor/xanSoundAlerts/tree/v3.1) (2023-05-26)
+[Full Changelog](https://github.com/Xruptor/xanSoundAlerts/compare/v3.0...v3.1) [Previous Releases](https://github.com/Xruptor/xanSoundAlerts/releases)
 
--   
-    TOC Update  
+- TOC Update & Small Fix  
+    * TOC Version Update  
+    * Fixed an error in regards to the settings panel.  

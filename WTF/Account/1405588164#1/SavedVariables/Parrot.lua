@@ -2,43 +2,20 @@
 ParrotDB = {
 	["profileKeys"] = {
 		["狂暴專家 - 伊弗斯"] = "Default",
+		["上山打鸟 - 伊弗斯"] = "Default",
 	},
 	["namespaces"] = {
 		["CombatEvents"] = {
 			["profiles"] = {
 				["Default"] = {
 					["Notification"] = {
+						["Enemy debuff gains"] = {
+							["disabled"] = true,
+						},
 						["Power gain"] = {
 							["disabled"] = true,
 						},
 						["Pet debuff gains"] = {
-							["disabled"] = true,
-						},
-						["Debuff fades"] = {
-							["disabled"] = true,
-						},
-						["Pet buff gains"] = {
-							["disabled"] = true,
-						},
-						["Enemy debuff fades"] = {
-							["disabled"] = true,
-						},
-						["Enemy buff gains"] = {
-							["disabled"] = true,
-						},
-						["Combo points full"] = {
-							["disabled"] = true,
-						},
-						["Debuff gains"] = {
-							["disabled"] = true,
-						},
-						["Reputation gains"] = {
-							["disabled"] = true,
-						},
-						["Buff stack gains"] = {
-							["disabled"] = true,
-						},
-						["Loot items"] = {
 							["disabled"] = true,
 						},
 						["Item buff fades"] = {
@@ -53,16 +30,28 @@ ParrotDB = {
 						["Pet debuff fades"] = {
 							["disabled"] = true,
 						},
+						["Pet buff fades"] = {
+							["disabled"] = true,
+						},
 						["Power loss"] = {
 							["disabled"] = true,
 						},
 						["Buff gains"] = {
 							["disabled"] = true,
 						},
-						["Enemy debuff gains"] = {
+						["Debuff fades"] = {
 							["disabled"] = true,
 						},
-						["Loot money"] = {
+						["Loot items"] = {
+							["disabled"] = true,
+						},
+						["Target buff gains"] = {
+							["disabled"] = true,
+						},
+						["Reputation losses"] = {
+							["disabled"] = true,
+						},
+						["Pet buff gains"] = {
 							["disabled"] = true,
 						},
 						["Target buff stack gains"] = {
@@ -71,19 +60,31 @@ ParrotDB = {
 						["Skill cooldown finish"] = {
 							["disabled"] = true,
 						},
+						["Enemy buff gains"] = {
+							["disabled"] = true,
+						},
+						["Combo points full"] = {
+							["disabled"] = true,
+						},
+						["Debuff gains"] = {
+							["disabled"] = true,
+						},
 						["Buff fades"] = {
 							["disabled"] = true,
 						},
-						["Reputation losses"] = {
+						["Reputation gains"] = {
 							["disabled"] = true,
 						},
-						["Pet buff fades"] = {
+						["Enemy debuff fades"] = {
+							["disabled"] = true,
+						},
+						["Loot money"] = {
+							["disabled"] = true,
+						},
+						["Buff stack gains"] = {
 							["disabled"] = true,
 						},
 						["Enemy buff fades"] = {
-							["disabled"] = true,
-						},
-						["Target buff gains"] = {
 							["disabled"] = true,
 						},
 						["Debuff stack gains"] = {

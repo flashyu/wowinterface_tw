@@ -132,11 +132,6 @@ function QuickBut:GengxinWidth()
 		local butW = nr:GetHeight()
 		local Children1 = {nr:GetChildren()};
 		local geshu1 = #Children1
-		for i=1,geshu1 do
-			if Children1[i].HideF then
-				geshu1=geshu1-1
-			end
-		end
 		local NewWidth = butW*geshu1-2
 		self:SetWidth(NewWidth+self.yidong:GetWidth())
 		if geshu1>0 then self:Show() end
@@ -153,7 +148,7 @@ function QuickBut:Add()
 	self:AutoSellBuy()
 	-- self:ADD_QuickBut_SpellJK()
 	-- self:ADD_QuickBut_Invite()
-	-- self:ADD_QuickBut_RaidRecord()
+	self:RaidRecord()
 	-- self:ADD_QuickBut_daiben()
 	self:Pig_AFK()
 	self:GengxinWidth()

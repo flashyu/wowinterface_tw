@@ -7,6 +7,7 @@ RXPData = {
 RXPDB = {
 	["profileKeys"] = {
 		["狂暴專家 - 伊弗斯"] = "global",
+		["上山打鸟 - 伊弗斯"] = "global",
 	},
 	["profiles"] = {
 		["global"] = {

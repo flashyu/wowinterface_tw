@@ -276,7 +276,10 @@ function QuickButUI:AutoEquip()
 				end
 			else
 				local kaiqiq=GetCVar("equipmentManager")
-				if kaiqiq=="0" then PIG_print("请先打开系统的装备管理功能") return end
+				if kaiqiq=="0" then
+					--PIG_print("请先打开系统的装备管理功能") return
+					SetCVar("equipmentManager","1")
+				end
 				if AutoEquipList:IsShown() then
 					AutoEquipList:Hide()
 				else

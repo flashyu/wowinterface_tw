@@ -694,7 +694,7 @@ ChatF.SetFrame.ycBut:HookScript("OnHide", function(self)
 	self.f.E:SetText("")
 end)
 local zijianpindaoMAX = 5
-local ADDName= {"PIG","大脚世界频道"}
+local ADDName= {"PIG"}
 local function guanliyuanyijiao(Name,arg5)
 	local channel,channelName, _ = GetChannelName(Name)
 	if channelName then
