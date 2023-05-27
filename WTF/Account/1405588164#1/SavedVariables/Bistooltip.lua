@@ -67,7 +67,7 @@ BisTooltipDB = {
 				},
 			},
 			["phase_index"] = 3,
-			["data_source"] = "wowtbc",
+			["data_source"] = "wh",
 			["spec_index"] = 2,
 		},
 		["上山打鸟 - 伊弗斯"] = {

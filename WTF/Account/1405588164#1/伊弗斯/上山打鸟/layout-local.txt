@@ -4,7 +4,7 @@ FrameLevel: 1
 Anchor: BOTTOM
 X: 200
 Y: 200
-W: 219
+W: 245
 H: 26
 Frame: PIGCombatTime_UI
 FrameLevel: 1

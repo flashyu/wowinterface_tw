@@ -1,7 +1,8 @@
 
 DecursiveDB = {
-	["global"] = {
-		["LastVersionAnnounce"] = 1684257540,
+	["profileKeys"] = {
+		["狂暴專家 - 伊弗斯"] = "Default",
+		["上山打鸟 - 伊弗斯"] = "Default",
 	},
 	["class"] = {
 		["HUNTER"] = {
@@ -36,9 +37,8 @@ DecursiveDB = {
 			},
 		},
 	},
-	["profileKeys"] = {
-		["上山打鸟 - 伊弗斯"] = "Default",
-		["狂暴專家 - 伊弗斯"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1685203641,
 	},
 	["profiles"] = {
 		["Default"] = {

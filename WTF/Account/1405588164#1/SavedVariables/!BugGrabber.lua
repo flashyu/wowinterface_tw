@@ -1,6 +1,6 @@
 
 BugGrabberDB = {
-	["session"] = 172,
+	["session"] = 208,
 	["lastSanitation"] = 3,
 	["errors"] = {
 		{
@@ -158,28 +158,13 @@ BugGrabberDB = {
 			["counter"] = 1,
 		}, -- [20]
 		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'LFGBulletinBoard' 尝试调用保护功能 'Search()'。",
-			["time"] = "2023/05/18 23:12:55",
-			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `Search'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGBrowse.lua\"]:226: in function `LFGBrowse_DoSearch'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGBrowse.lua\"]:179: in function `SearchActiveEntry'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGParentFrame.lua\"]:92: in function `LFGParentFrame_SearchActiveEntry'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGListing.lua\"]:69: in function <...s/Blizzard_LookingForGroupUI/Blizzard_LFGListing.lua:51>",
-			["session"] = 95,
-			["counter"] = 1,
-		}, -- [21]
-		{
 			["message"] = "[string \"UploadSettings();\"]:1: attempt to call global 'UploadSettings' (a nil value)",
 			["time"] = "2023/05/19 00:10:36",
 			["locals"] = "(*temporary) = nil\n(*temporary) = \"attempt to call global 'UploadSettings' (a nil value)\"\n",
 			["stack"] = "[string \"UploadSettings();\"]:1: in main chunk\n[string \"=[C]\"]: in function `RunScript'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:2205: in function `?'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4933: in function <Interface/FrameXML/ChatFrame.lua:4879>\n[string \"=[C]\"]: in function `ChatEdit_ParseText'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4596: in function `ChatEdit_SendText'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:2986: in function <Interface/FrameXML/ChatFrame.lua:2979>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `UseAction'\n[string \"@Interface/FrameXML/SecureTemplates.lua\"]:343: in function `handler'\n[string \"@Interface/FrameXML/SecureTemplates.lua\"]:625: in function <Interface/FrameXML/SecureTemplates.lua:569>\n[string \"=[C]\"]: ?\n[string \"@Interface/FrameXML/SecureHandlers.lua\"]:266: in function <Interface/FrameXML/SecureHandlers.lua:263>\n[string \"=[C]\"]: ?\n[string \"@Interface/FrameXML/SecureHandlers.lua\"]:296: in function <Interface/FrameXML/SecureHandlers.lua:279>\n[string \"=(tail call)\"]: ?",
 			["session"] = 98,
 			["counter"] = 4,
-		}, -- [22]
-		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'WeakAuras' 尝试调用保护功能 'Frame:SetPoint()'。",
-			["time"] = "2023/05/21 19:30:43",
-			["locals"] = "Skipped (In Encounter)",
-			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:54: in function `SetAnchorPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1311: in function `DoPositionChildrenPerFrame'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1432: in function `DoPositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1289: in function `PositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1270: in function `SortUpdatedChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1064: in function `RunDelayedActions'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1055: in function `Resume'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4392: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4348>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4517: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:1834: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:1826>\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:2195: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:2188>",
-			["session"] = 116,
-			["counter"] = 1,
-		}, -- [23]
+		}, -- [21]
 		{
 			["message"] = "Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua:655: attempt to index field 'savedMedia' (a nil value)",
 			["time"] = "2023/05/06 00:22:16",
@@ -187,7 +172,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua\"]:655: in function <Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua:648>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsMain.lua\"]:130: in function `clickHandler'\n[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsControls.lua\"]:157: in function <Interface/AddOns/MSBTOptions/MSBTOptionsControls.lua:151>",
 			["session"] = 128,
 			["counter"] = 3,
-		}, -- [24]
+		}, -- [22]
 		{
 			["message"] = "Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua:1098: attempt to index field 'savedVariables' (a nil value)",
 			["time"] = "2023/05/06 00:21:50",
@@ -195,7 +180,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua\"]:1098: in function <Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua:813>\n[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua\"]:1114: in function <Interface/AddOns/MSBTOptions/MSBTOptionsTabs.lua:1113>\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsMain.lua\"]:303: in function <Interface/AddOns/MSBTOptions/MSBTOptionsMain.lua:156>\n[string \"@Interface/AddOns/MSBTOptions/MSBTOptionsMain.lua\"]:315: in function `ShowMainFrame'\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3137: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3122>\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3616: in function `?'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4933: in function <Interface/FrameXML/ChatFrame.lua:4879>\n[string \"=[C]\"]: in function `ChatEdit_ParseText'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4596: in function `ChatEdit_SendText'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4632: in function <Interface/FrameXML/ChatFrame.lua:4628>\n[string \"=[C]\"]: in function `ChatEdit_OnEnterPressed'\n[string \"*ChatFrame.xml:121_OnEnterPressed\"]:1: in function <[string \"*ChatFrame.xml:121_OnEnterPressed\"]:1>",
 			["session"] = 128,
 			["counter"] = 4,
-		}, -- [25]
+		}, -- [23]
 		{
 			["message"] = "StaticPopup1:IsShown(): C_Timer.NewTicker requires a non-negative duration",
 			["time"] = "2023/05/24 00:59:23",
@@ -203,15 +188,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: in function `IsShown'\n[string \"@Interface/FrameXML/StaticPopup.lua\"]:4966: in function <Interface/FrameXML/StaticPopup.lua:4963>\n[string \"@Interface/AddOns/ElvUI/Core/Modules/Misc/Loot.lua\"]:213: in function `?'\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/CallbackHandler-1.0-8/CallbackHandler-1.0.lua\"]:109: in function <...ies/Core/CallbackHandler-1.0/CallbackHandler-1.0.lua:109>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/CallbackHandler-1.0-8/CallbackHandler-1.0.lua\"]:19: in function <...ies/Core/CallbackHandler-1.0/CallbackHandler-1.0.lua:15>\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/CallbackHandler-1.0-8/CallbackHandler-1.0.lua\"]:54: in function `Fire'\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceEvent-3.0-4/AceEvent-3.0.lua\"]:120: in function <...UI_Libraries/Core/Ace3/AceEvent-3.0/AceEvent-3.0.lua:119>",
 			["session"] = 135,
 			["counter"] = 1,
-		}, -- [26]
-		{
-			["message"] = "WeakAurasOptions:IsVisible(): C_Timer.NewTicker requires a non-negative duration",
-			["time"] = "2023/05/21 20:46:06",
-			["locals"] = "Skipped (In Encounter)",
-			["stack"] = "[string \"=[C]\"]: in function `IsVisible'\n[string \"@Interface/AddOns/WeakAurasOptions/WeakAurasOptions.lua\"]:623: in function `IsOptionsOpen'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4327: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4324>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4452: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:818: in function `ScanEventsInternal'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:764: in function `ScanEvents'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:165: in function `Fire'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:463: in function `?'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:552: in function <[string \"return function() local MAJOR, MINOR = \"Lib...\"]:548>",
-			["session"] = 144,
-			["counter"] = 8,
-		}, -- [27]
+		}, -- [24]
 		{
 			["message"] = "...e/AddOns/TradeSkillMaster/Core/UI/AuctionUI/Core.lua:251: assertion failed!",
 			["time"] = "2023/05/26 23:58:14",
@@ -219,7 +196,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: in function `assert'\n[string \"@Interface/AddOns/TradeSkillMaster/Core/UI/AuctionUI/Core.lua\"]:251: in function `callback'\n[string \"@Interface/AddOns/TradeSkillMaster/LibTSM/Service/DefaultUI.lua\"]:148: in function `HandleEvent'\n[string \"@Interface/AddOns/TradeSkillMaster/LibTSM/Service/DefaultUI.lua\"]:43: in function `callback'\n[string \"@Interface/AddOns/TradeSkillMaster/LibTSM/Util/Event.lua\"]:132: in function `ProcessEvent'\n[string \"@Interface/AddOns/TradeSkillMaster/LibTSM/Util/Event.lua\"]:150: in function <...erface/AddOns/TradeSkillMaster/LibTSM/Util/Event.lua:141>\n[string \"=[C]\"]: in function `CloseAuctionHouse'\n[string \"@Interface/AddOns/aux-addon/frame.lua\"]:29: in function <Interface/AddOns/aux-addon/frame.lua:29>\n[string \"=[C]\"]: in function `Hide'\n[string \"@Interface/AddOns/aux-addon/aux-addon.lua\"]:207: in function `?'\n[string \"@Interface/AddOns/aux-addon/aux-addon.lua\"]:40: in function <Interface/AddOns/aux-addon/aux-addon.lua:28>",
 			["session"] = 169,
 			["counter"] = 1,
-		}, -- [28]
+		}, -- [25]
 		{
 			["message"] = "...erface/AddOns/TradeSkillMaster/LibTSM/Util/Event.lua:146: assertion failed!",
 			["time"] = "2023/05/26 23:58:34",
@@ -227,7 +204,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: in function `assert'\n[string \"@Interface/AddOns/TradeSkillMaster/LibTSM/Util/Event.lua\"]:146: in function <...erface/AddOns/TradeSkillMaster/LibTSM/Util/Event.lua:141>",
 			["session"] = 169,
 			["counter"] = 10,
-		}, -- [29]
+		}, -- [26]
 		{
 			["message"] = "...Master/LibTSM/Service/ItemTooltipClasses/Builder.lua:240: assertion failed!",
 			["time"] = "2023/05/26 23:58:43",
@@ -235,7 +212,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: in function `assert'\n[string \"@Interface/AddOns/TradeSkillMaster/LibTSM/Service/ItemTooltipClasses/Builder.lua\"]:240: in function <...Master/LibTSM/Service/ItemTooltipClasses/Builder.lua:239>\n[string \"@Interface/AddOns/TradeSkillMaster/External/LibTSMClass-2/LibTSMClass.lua\"]:332: in function `_IsEmpty'\n[string \"@Interface/AddOns/TradeSkillMaster/LibTSM/Service/ItemTooltipClasses/Wrapper.lua\"]:212: in function `SetTooltipItem'\n[string \"@Interface/AddOns/TradeSkillMaster/LibTSM/Service/ItemTooltipClasses/Wrapper.lua\"]:152: in function <...Master/LibTSM/Service/ItemTooltipClasses/Wrapper.lua:122>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/Bistooltip/lib/LibExtraTip/LibExtraTip.lua\"]:482: in function <...ce/AddOns/Bistooltip/lib/LibExtraTip/LibExtraTip.lua:476>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n...\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/TradeSkillMaster/LibTSM/Service/ItemTooltipClasses/Wrapper.lua\"]:106: in function <...Master/LibTSM/Service/ItemTooltipClasses/Wrapper.lua:104>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/Bistooltip/lib/LibExtraTip/LibExtraTip.lua\"]:408: in function <...ce/AddOns/Bistooltip/lib/LibExtraTip/LibExtraTip.lua:402>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `SetInboxItem'\n[string \"@Interface/FrameXML/MailFrame.lua\"]:314: in function `InboxFrameItem_OnEnter'\n[string \"*MailFrame.xml:152_OnUpdate\"]:2: in function <[string \"*MailFrame.xml:152_OnUpdate\"]:1>",
 			["session"] = 169,
 			["counter"] = 9,
-		}, -- [30]
+		}, -- [27]
 		{
 			["message"] = "...ce/AddOns/TradeSkillMaster/LibTSM/Util/TempTable.lua:51: Could not acquire temp table",
 			["time"] = "2023/05/26 23:58:34",
@@ -243,72 +220,95 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: in function `error'\n[string \"@Interface/AddOns/TradeSkillMaster/LibTSM/Util/TempTable.lua\"]:51: in function `Acquire'\n[string \"@Interface/AddOns/TradeSkillMaster/LibTSM/Util/Event.lua\"]:142: in function <...erface/AddOns/TradeSkillMaster/LibTSM/Util/Event.lua:141>",
 			["session"] = 169,
 			["counter"] = 24,
-		}, -- [31]
-		{
-			["message"] = "...face/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:476: hooksecurefunc(): UseContainerItem is not a function",
-			["time"] = "2023/05/06 00:16:43",
-			["locals"] = "",
-			["stack"] = "[string \"=[C]\"]: in function `hooksecurefunc'\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua\"]:476: in main chunk",
-			["session"] = 170,
-			["counter"] = 18,
-		}, -- [32]
-		{
-			["message"] = "...rface/AddOns/MikScrollingBattleText/MSBTTriggers.lua:477: attempt to call field 'UpdateRegisteredEvents' (a nil value)",
-			["time"] = "2023/05/06 00:16:43",
-			["locals"] = "(*temporary) = nil\n(*temporary) = \"attempt to call field 'UpdateRegisteredEvents' (a nil value)\"\neventFrame = Frame {\n 0 = <userdata>\n}\nEraseTable = <function> defined @Interface/AddOns/MikScrollingBattleText/MikSBT.lua:99\nlistenEvents = <table> {\n}\ncategorizedTriggers = <table> {\n}\ntriggerExceptions = <table> {\n}\nMSBTProfiles = <table> {\n DeleteProfile = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3455\n IsModDisabled = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3325\n masterProfile = <table> {\n }\n CopyProfile = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3440\n SetOptionUserDisabled = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3301\n SetOption = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3186\n currentProfile = <table> {\n }\n SelectProfile = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3410\n ResetProfile = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3476\n}\nCategorizeTrigger = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTTriggers.lua:252\n",
-			["stack"] = "[string \"@Interface/AddOns/MikScrollingBattleText/MSBTTriggers.lua\"]:477: in function `UpdateTriggers'\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3432: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3410>\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3549: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3507>\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3692: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3678>",
-			["session"] = 170,
-			["counter"] = 18,
-		}, -- [33]
-		{
-			["message"] = "...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3317: attempt to call field 'Enable' (a nil value)",
-			["time"] = "2023/05/06 00:16:56",
-			["locals"] = "isDisabled = nil\n(*temporary) = nil\n(*temporary) = \"attempt to call field 'Enable' (a nil value)\"\nsavedVariables = <table> {\n profiles = <table> {\n }\n}\n",
-			["stack"] = "[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3317: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3301>\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3703: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3678>",
-			["session"] = 170,
-			["counter"] = 20,
-		}, -- [34]
-		{
-			["message"] = "Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
-			["session"] = 170,
-			["time"] = "2023/05/06 00:16:55",
-			["counter"] = 18,
-		}, -- [35]
-		{
-			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
-			["session"] = 170,
-			["time"] = "2023/05/06 00:16:55",
-			["counter"] = 18,
-		}, -- [36]
-		{
-			["message"] = "C_Timer.NewTicker requires a non-negative duration",
-			["time"] = "2023/05/20 23:49:12",
-			["locals"] = "(*temporary) = Frame {\n overlays = <table> {\n }\n iconSource = -1\n AnchorSubRegion = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:753\n xOffset = -130.300000\n desaturateIcon = false\n Expand = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:844\n yOffset = -223.990000\n anchorPoint = \"CENTER\"\n SoundRepeatStop = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:156\n subRegionEvents = <table> {\n }\n GetColor = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1057\n UpdateMinMax = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1266\n 0 = <userdata>\n icon = Texture {\n }\n SetOffset = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:280\n icon_color = <table> {\n }\n enableGradient = false\n SetOrientation = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:894\n Scale = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1370\n SetBarColor2 = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1031\n iconFrame = Frame {\n }\n SendChat = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:228\n SetInverse = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:878\n state = <table> {\n }\n UpdateFrameTick = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:393\n SetRegionHeight = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:839\n toShow = true\n gradientOrientation = \"HORIZONTAL\"\n SetTime = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:860\n scalex = 1\n bar = Frame {\n }\n SetSparkHeight = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:829\n OptionsClosed = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:688\n UpdateIcon = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:952\n states = <table> {\n }\n Color = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1043\n cloneId = \"\"\n Update = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1312\n PixelSnapDisabled = true\n regionType = \"aurabar\"\n smoothProgress = true\n GetRegionAlpha = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:349\n relativePoint = \"CENTER\"\n triggerProvidesTimer = true\n iconVisible = false\n SoundPlay = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:210\n SetIcon = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:937\n GetMinMax = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1307\n zoom = 0\n SetIconColor = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:815\n overlayclip = true\n color_b = 0.431373\n scaley = 1\n alpha = 1\n color_r = 0.780392\n SetXOffset = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:289\n flipX = false\n Collapse = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:822\n ClickToPick = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:693\n RealClearAllPoints = <function> defined =[C]:-1\n displayIcon = 132340\n SetRegionWidth = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:835\n RunCode = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:235\n TimerTick = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1142\n FrameTick = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:401\n values = <table> {\n }\n GetYOffset = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:301\n SetOverlayColor = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:968\n SetAnimAlpha = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:353\n SetYOffsetRelative = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:318\n currentMin = 0\n effectiveO",
-			["stack"] = "[string \"=[C]\"]: in function `GetScript'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua\"]:381: in function `UpdateTimerTick'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua\"]:368: in function `SetTriggerProvidesTimer'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4383: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4348>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4517: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:818: in function `ScanEventsInternal'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:764: in function `ScanEvents'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:165: in function `Fire'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:463: in function `?'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:552: in function <[string \"return function() local MAJOR, MINOR = \"Lib...\"]:548>",
-			["session"] = 171,
-			["counter"] = 5,
-		}, -- [37]
-		{
-			["message"] = "Elv_ABFade:GetAlpha(): C_Timer.NewTicker requires a non-negative duration",
-			["time"] = "2023/05/25 00:06:05",
-			["locals"] = "(*temporary) = Elv_ABFade {\n 0 = <userdata>\n fadeInfo = <table> {\n }\n FadeObject = <table> {\n }\n mouseLock = true\n}\n",
-			["stack"] = "[string \"=[C]\"]: in function `GetAlpha'\n[string \"@Interface/AddOns/ElvUI/Core/Modules/ActionBars/ActionBars.lua\"]:875: in function <.../AddOns/ElvUI/Core/Modules/ActionBars/ActionBars.lua:865>",
-			["session"] = 172,
-			["counter"] = 3,
-		}, -- [38]
+		}, -- [28]
 		{
 			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
 			["time"] = "2023/05/16 21:50:27",
 			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
 			["stack"] = "[string \"@Interface/AddOns/Blizzard_InspectUI/Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:385: in function `UIParentLoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:428: in function `InspectFrame_LoadUI'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:733: in function `InspectUnit'\n[string \"@Interface/FrameXML/UnitPopupSharedButtonMixins.lua\"]:200: in function `OnClick'\n[string \"@Interface/FrameXML/UnitPopupShared.lua\"]:148: in function `func'\n[string \"@Interface/FrameXML/UIDropDownMenu.lua\"]:956: in function `UIDropDownMenuButton_OnClick'\n[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1: in function <[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1>",
-			["session"] = 172,
-			["counter"] = 13,
-		}, -- [39]
+			["session"] = 175,
+			["counter"] = 14,
+		}, -- [29]
 		{
 			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:1 (null)",
 			["time"] = "2023/05/16 21:50:27",
-			["session"] = 172,
-			["counter"] = 26,
+			["session"] = 175,
+			["counter"] = 28,
+		}, -- [30]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'LFGBulletinBoard' 尝试调用保护功能 'Search()'。",
+			["time"] = "2023/05/18 23:12:55",
+			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `Search'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGBrowse.lua\"]:226: in function `LFGBrowse_DoSearch'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGBrowse.lua\"]:179: in function `SearchActiveEntry'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGParentFrame.lua\"]:92: in function `LFGParentFrame_SearchActiveEntry'\n[string \"@Interface/AddOns/Blizzard_LookingForGroupUI/Blizzard_LFGListing.lua\"]:69: in function <...s/Blizzard_LookingForGroupUI/Blizzard_LFGListing.lua:51>",
+			["session"] = 175,
+			["counter"] = 2,
+		}, -- [31]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'WeakAuras' 尝试调用保护功能 'Frame:SetPoint()'。",
+			["time"] = "2023/05/21 19:30:43",
+			["locals"] = "Skipped (In Encounter)",
+			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:54: in function `SetAnchorPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1311: in function `DoPositionChildrenPerFrame'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1432: in function `DoPositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1289: in function `PositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1270: in function `SortUpdatedChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1064: in function `RunDelayedActions'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1055: in function `Resume'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4392: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4348>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4517: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:1834: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:1826>\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:2195: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:2188>",
+			["session"] = 182,
+			["counter"] = 3,
+		}, -- [32]
+		{
+			["message"] = "WeakAurasOptions:IsVisible(): C_Timer.NewTicker requires a non-negative duration",
+			["time"] = "2023/05/21 20:46:06",
+			["locals"] = "Skipped (In Encounter)",
+			["stack"] = "[string \"=[C]\"]: in function `IsVisible'\n[string \"@Interface/AddOns/WeakAurasOptions/WeakAurasOptions.lua\"]:623: in function `IsOptionsOpen'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4327: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4324>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4452: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:818: in function `ScanEventsInternal'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:764: in function `ScanEvents'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:165: in function `Fire'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:463: in function `?'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:552: in function <[string \"return function() local MAJOR, MINOR = \"Lib...\"]:548>",
+			["session"] = 190,
+			["counter"] = 9,
+		}, -- [33]
+		{
+			["message"] = "C_Timer.NewTicker requires a non-negative duration",
+			["time"] = "2023/05/20 23:49:12",
+			["locals"] = "(*temporary) = Frame {\n overlays = <table> {\n }\n iconSource = -1\n AnchorSubRegion = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:753\n xOffset = -130.300000\n desaturateIcon = false\n Expand = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:844\n yOffset = -223.990000\n anchorPoint = \"CENTER\"\n SoundRepeatStop = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:156\n subRegionEvents = <table> {\n }\n GetColor = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1057\n UpdateMinMax = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1266\n 0 = <userdata>\n icon = Texture {\n }\n SetOffset = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:280\n icon_color = <table> {\n }\n enableGradient = false\n SetOrientation = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:894\n Scale = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1370\n SetBarColor2 = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1031\n iconFrame = Frame {\n }\n SendChat = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:228\n SetInverse = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:878\n state = <table> {\n }\n UpdateFrameTick = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:393\n SetRegionHeight = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:839\n toShow = true\n gradientOrientation = \"HORIZONTAL\"\n SetTime = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:860\n scalex = 1\n bar = Frame {\n }\n SetSparkHeight = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:829\n OptionsClosed = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:688\n UpdateIcon = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:952\n states = <table> {\n }\n Color = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1043\n cloneId = \"\"\n Update = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1312\n PixelSnapDisabled = true\n regionType = \"aurabar\"\n smoothProgress = true\n GetRegionAlpha = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:349\n relativePoint = \"CENTER\"\n triggerProvidesTimer = true\n iconVisible = false\n SoundPlay = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:210\n SetIcon = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:937\n GetMinMax = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1307\n zoom = 0\n SetIconColor = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:815\n overlayclip = true\n color_b = 0.431373\n scaley = 1\n alpha = 1\n color_r = 0.780392\n SetXOffset = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:289\n flipX = false\n Collapse = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:822\n ClickToPick = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:693\n RealClearAllPoints = <function> defined =[C]:-1\n displayIcon = 132340\n SetRegionWidth = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:835\n RunCode = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:235\n TimerTick = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:1142\n FrameTick = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:401\n values = <table> {\n }\n GetYOffset = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:301\n SetOverlayColor = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/AuraBar.lua:968\n SetAnimAlpha = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:353\n SetYOffsetRelative = <function> defined @Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua:318\n currentMin = 0\n effectiveO",
+			["stack"] = "[string \"=[C]\"]: in function `GetScript'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua\"]:381: in function `UpdateTimerTick'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua\"]:368: in function `SetTriggerProvidesTimer'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4383: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4348>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4517: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:818: in function `ScanEventsInternal'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:764: in function `ScanEvents'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:165: in function `Fire'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:463: in function `?'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:552: in function <[string \"return function() local MAJOR, MINOR = \"Lib...\"]:548>",
+			["session"] = 196,
+			["counter"] = 6,
+		}, -- [34]
+		{
+			["message"] = "Elv_ABFade:GetAlpha(): C_Timer.NewTicker requires a non-negative duration",
+			["time"] = "2023/05/25 00:06:05",
+			["locals"] = "(*temporary) = Elv_ABFade {\n 0 = <userdata>\n fadeInfo = <table> {\n }\n FadeObject = <table> {\n }\n mouseLock = true\n}\n",
+			["stack"] = "[string \"=[C]\"]: in function `GetAlpha'\n[string \"@Interface/AddOns/ElvUI/Core/Modules/ActionBars/ActionBars.lua\"]:875: in function <.../AddOns/ElvUI/Core/Modules/ActionBars/ActionBars.lua:865>",
+			["session"] = 202,
+			["counter"] = 5,
+		}, -- [35]
+		{
+			["message"] = "...face/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:476: hooksecurefunc(): UseContainerItem is not a function",
+			["time"] = "2023/05/06 00:16:43",
+			["locals"] = "",
+			["stack"] = "[string \"=[C]\"]: in function `hooksecurefunc'\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua\"]:476: in main chunk",
+			["session"] = 207,
+			["counter"] = 33,
+		}, -- [36]
+		{
+			["message"] = "...rface/AddOns/MikScrollingBattleText/MSBTTriggers.lua:477: attempt to call field 'UpdateRegisteredEvents' (a nil value)",
+			["time"] = "2023/05/06 00:16:43",
+			["locals"] = "(*temporary) = nil\n(*temporary) = \"attempt to call field 'UpdateRegisteredEvents' (a nil value)\"\neventFrame = Frame {\n 0 = <userdata>\n}\nEraseTable = <function> defined @Interface/AddOns/MikScrollingBattleText/MikSBT.lua:99\nlistenEvents = <table> {\n}\ncategorizedTriggers = <table> {\n}\ntriggerExceptions = <table> {\n}\nMSBTProfiles = <table> {\n DeleteProfile = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3455\n IsModDisabled = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3325\n masterProfile = <table> {\n }\n CopyProfile = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3440\n SetOptionUserDisabled = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3301\n SetOption = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3186\n currentProfile = <table> {\n }\n SelectProfile = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3410\n ResetProfile = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3476\n}\nCategorizeTrigger = <function> defined @Interface/AddOns/MikScrollingBattleText/MSBTTriggers.lua:252\n",
+			["stack"] = "[string \"@Interface/AddOns/MikScrollingBattleText/MSBTTriggers.lua\"]:477: in function `UpdateTriggers'\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3432: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3410>\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3549: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3507>\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3692: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3678>",
+			["session"] = 207,
+			["counter"] = 33,
+		}, -- [37]
+		{
+			["message"] = "...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3317: attempt to call field 'Enable' (a nil value)",
+			["time"] = "2023/05/06 00:16:56",
+			["locals"] = "isDisabled = nil\n(*temporary) = nil\n(*temporary) = \"attempt to call field 'Enable' (a nil value)\"\nsavedVariables = <table> {\n profiles = <table> {\n }\n}\n",
+			["stack"] = "[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3317: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3301>\n[string \"@Interface/AddOns/MikScrollingBattleText/MSBTProfiles.lua\"]:3703: in function <...rface/AddOns/MikScrollingBattleText/MSBTProfiles.lua:3678>",
+			["session"] = 207,
+			["counter"] = 35,
+		}, -- [38]
+		{
+			["message"] = "Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
+			["session"] = 207,
+			["time"] = "2023/05/06 00:16:55",
+			["counter"] = 33,
+		}, -- [39]
+		{
+			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
+			["session"] = 207,
+			["time"] = "2023/05/06 00:16:55",
+			["counter"] = 33,
 		}, -- [40]
 	},
 }

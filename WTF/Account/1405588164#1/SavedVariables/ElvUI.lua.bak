@@ -101,7 +101,7 @@ ElvDB = {
 					["buttons"] = 6,
 				},
 				["microbar"] = {
-					["buttons"] = 10,
+					["buttons"] = 9,
 				},
 				["bar2"] = {
 					["enabled"] = true,
@@ -123,8 +123,8 @@ ElvDB = {
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["上山打鸟"] = 49056561,
-			["狂暴專家"] = 1528220960,
+			["上山打鸟"] = 48503975,
+			["狂暴專家"] = 1360969682,
 		},
 	},
 	["namespaces"] = {
@@ -199,13 +199,13 @@ ElvPrivateDB = {
 			["install_complete"] = 13.32,
 		},
 		["狂暴專家 - 伊弗斯"] = {
-			["bags"] = {
-				["enable"] = false,
-			},
 			["skins"] = {
 				["blizzard"] = {
 					["tooltip"] = false,
 				},
+			},
+			["bags"] = {
+				["enable"] = false,
 			},
 			["nameplates"] = {
 				["enable"] = false,

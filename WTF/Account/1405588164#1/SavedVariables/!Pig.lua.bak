@@ -10,20 +10,14 @@ PIG = {
 			200, -- [4]
 		},
 		["Lock"] = false,
-		["BGbroadcast"] = true,
-		["Open"] = true,
-		["AutoEquip"] = true,
 		["Lushi"] = true,
+		["AutoEquip"] = true,
+		["Open"] = true,
+		["BGbroadcast"] = true,
 	},
 	["UnitFrame"] = {
 		["PartyMemberFrame"] = {
 			["Plus"] = false,
-		},
-		["PlayerFrame"] = {
-			["HPFF"] = false,
-			["Loot"] = true,
-			["Plus"] = false,
-			["youyi"] = false,
 		},
 		["TargetFrame"] = {
 			["Yisu"] = false,
@@ -32,13 +26,19 @@ PIG = {
 			["ToToToT"] = false,
 			["Chouhen"] = true,
 		},
+		["PlayerFrame"] = {
+			["HPFF"] = false,
+			["Loot"] = true,
+			["Plus"] = false,
+			["youyi"] = false,
+		},
 	},
 	["Rurutia"] = {
 		["QuestsEndAudio"] = 1,
-		["FastFocus"] = "OFF",
+		["FastFocus"] = false,
 		["FastFocusKEY"] = "shift",
-		["QuestsEnd"] = "OFF",
-		["FastClearFocus"] = "OFF",
+		["QuestsEnd"] = false,
+		["FastClearFocus"] = false,
 	},
 	["MinimapBpaichu"] = {
 	},
@@ -59,7 +59,9 @@ PIG = {
 		["JoinPindao"] = true,
 		["FontSize_value"] = 12,
 		["ShowZb"] = true,
-		["TABqiehuanList"] = {
+		["Keyword"] = {
+			["上山打鸟-伊弗斯"] = {
+			},
 		},
 		["guolvchongfu"] = false,
 		["TABqiehuanOpen"] = true,
@@ -79,7 +81,7 @@ PIG = {
 			["Bianju"] = true,
 			["Point"] = false,
 			["Point_Y"] = 80,
-			["Loot_Width_value"] = 350,
+			["Loot_Height_value"] = 180,
 			["Loot_Width"] = false,
 			["ShowChannel"] = true,
 			["Loot_Point_Y"] = 8,
@@ -89,12 +91,10 @@ PIG = {
 			["Height_value"] = 180,
 			["Height"] = false,
 			["Point_X"] = 35,
-			["Loot_Height_value"] = 180,
+			["Loot_Width_value"] = 350,
 			["Loot_Point_X"] = 26,
 		},
-		["Keyword"] = {
-			["上山打鸟-伊弗斯"] = {
-			},
+		["TABqiehuanList"] = {
 		},
 		["chatZhanlian"] = {
 		},
@@ -115,8 +115,7 @@ PIG = {
 		["Keyword"] = {
 		},
 		["QuickChat"] = "OFF",
-		["TABqiehuanList"] = {
-		},
+		["FontSize_value"] = 12,
 		["jingjian"] = "OFF",
 		["JoinPindao"] = "ON",
 		["Bianju"] = "OFF",
@@ -132,7 +131,8 @@ PIG = {
 		["MinMaxB"] = "OFF",
 		["Guolv"] = "OFF",
 		["FFShow"] = "OFF",
-		["FontSize_value"] = 12,
+		["TABqiehuanList"] = {
+		},
 		["chatZhanlian"] = {
 		},
 	},
@@ -142,9 +142,10 @@ PIG = {
 		["Open"] = true,
 	},
 	["AHPlus"] = {
-		["AHtooltip"] = true,
-		["Open"] = false,
 		["Time"] = 48,
+		["Data"] = {
+		},
+		["yajingbiao"] = true,
 		["DaojiTime"] = 0,
 		["Tokens"] = {
 			{
@@ -230,9 +231,8 @@ PIG = {
 		},
 		["Coll"] = {
 		},
-		["Data"] = {
-		},
-		["yajingbiao"] = true,
+		["Open"] = false,
+		["AHtooltip"] = true,
 	},
 	["QuickButton"] = {
 		["bili"] = 0.8,
@@ -244,12 +244,12 @@ PIG = {
 			200, -- [4]
 		},
 		["Lushi"] = true,
-		["Open"] = true,
 		["AutoEquip"] = true,
+		["Open"] = true,
 		["suoding"] = false,
 	},
 	["SkillFBCD"] = {
-		["AddBut"] = "ON",
+		["AddBut"] = true,
 		["FubenCD"] = {
 			{
 				{
@@ -312,7 +312,7 @@ PIG = {
 				}, -- [2]
 			}, -- [2]
 		},
-		["Open"] = "ON",
+		["Open"] = true,
 	},
 	["RaidFrame"] = {
 		["xiufu"] = "OFF",
@@ -337,7 +337,7 @@ PIG = {
 		},
 		["Open"] = "OFF",
 		["SortBagsRightToLeft"] = false,
-		["SortBag_Config"] = true,
+		["BAGsuofangBili"] = 1,
 		["hulueBANK"] = {
 			false, -- [1]
 			false, -- [2]
@@ -351,76 +351,216 @@ PIG = {
 		["JianjieMOD"] = false,
 		["qitajinbi"] = true,
 		["BAGmeihangshu_retail"] = 10,
-		["BAGsuofangBili"] = 1,
+		["SortBag_Config"] = true,
 	},
 	["Error"] = {
 		["ErrorTishi"] = false,
 		["ErrorInfo"] = {
 			{
 				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1685115662, -- [2]
+				1685183647, -- [2]
 				"", -- [3]
 				"null", -- [4]
 				1, -- [5]
 			}, -- [1]
 			{
 				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1685115662, -- [2]
+				1685183647, -- [2]
 				"", -- [3]
 				"null", -- [4]
 				1, -- [5]
 			}, -- [2]
 			{
 				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1685115682, -- [2]
+				1685185750, -- [2]
 				"", -- [3]
 				"null", -- [4]
 				1, -- [5]
 			}, -- [3]
 			{
 				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1685115682, -- [2]
+				1685185750, -- [2]
 				"", -- [3]
 				"null", -- [4]
 				1, -- [5]
 			}, -- [4]
 			{
 				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1685115706, -- [2]
+				1685193646, -- [2]
 				"", -- [3]
 				"null", -- [4]
 				1, -- [5]
 			}, -- [5]
 			{
 				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1685115706, -- [2]
+				1685193646, -- [2]
 				"", -- [3]
 				"null", -- [4]
 				1, -- [5]
 			}, -- [6]
 			{
 				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1685116611, -- [2]
+				1685193793, -- [2]
 				"", -- [3]
 				"null", -- [4]
 				1, -- [5]
 			}, -- [7]
 			{
 				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
-				1685116611, -- [2]
+				1685193793, -- [2]
 				"", -- [3]
 				"null", -- [4]
 				1, -- [5]
 			}, -- [8]
+			{
+				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685195563, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [9]
+			{
+				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685195563, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [10]
+			{
+				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685196454, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [11]
+			{
+				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685196454, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [12]
+			{
+				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685197423, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [13]
+			{
+				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685197423, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [14]
+			{
+				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685198494, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [15]
+			{
+				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685198494, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [16]
+			{
+				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685199320, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [17]
+			{
+				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685199320, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [18]
+			{
+				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685200274, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [19]
+			{
+				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685200274, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [20]
+			{
+				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685201413, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [21]
+			{
+				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685201413, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [22]
+			{
+				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685202132, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [23]
+			{
+				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685202132, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [24]
+			{
+				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685202881, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [25]
+			{
+				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685202881, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [26]
+			{
+				"Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685203635, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [27]
+			{
+				"Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)", -- [1]
+				1685203635, -- [2]
+				"", -- [3]
+				"null", -- [4]
+				1, -- [5]
+			}, -- [28]
 		},
 	},
 	["Other"] = {
 		["ErrorsHide"] = false,
-		["PigLoad"] = false,
 		["AFK"] = {
 			["Open"] = false,
 			["QuickBut"] = true,
 		},
+		["PigLoad"] = false,
 	},
 	["PigUI"] = {
 		["ChatFrame_Loot_Width_value"] = 350,
@@ -431,21 +571,21 @@ PIG = {
 		["ChatFrame_Point_X"] = 35,
 		["ChatFrame_Point_Y"] = 80,
 		["Hide_ActionBG"] = "OFF",
-		["ChatFrame_Width"] = "OFF",
-		["ChatFrame_Width_value"] = 350,
-		["ChatFrame_Point"] = "OFF",
-		["ChatFrame_Loot_Point"] = "OFF",
-		["ActionBar_bili_value"] = 0.8,
-		["ChatFrame_Loot_Height"] = "OFF",
-		["MenuBag_bili_value"] = 0.9,
-		["MenuBag"] = false,
-		["ActionBar_bili"] = "OFF",
-		["ChatFrame_Loot_Point_Y"] = 8,
-		["ChatFrame_Loot_Height_value"] = 180,
-		["ChatFrame_Height"] = "OFF",
-		["ChatFrame_Loot_Point_X"] = 26,
-		["ChatFrame_Loot"] = "OFF",
 		["xianshiNeirong"] = "OFF",
+		["ChatFrame_Loot"] = "OFF",
+		["ChatFrame_Loot_Point_X"] = 26,
+		["ChatFrame_Loot_Point"] = "OFF",
+		["ChatFrame_Loot_Height"] = "OFF",
+		["ActionBar_bili_value"] = 0.8,
+		["ChatFrame_Loot_Height_value"] = 180,
+		["MenuBag"] = false,
+		["ChatFrame_Loot_Point_Y"] = 8,
+		["ActionBar_bili"] = "OFF",
+		["MenuBag_bili_value"] = 0.9,
+		["ChatFrame_Height"] = "OFF",
+		["ChatFrame_Point"] = "OFF",
+		["ChatFrame_Width_value"] = 350,
+		["ChatFrame_Width"] = "OFF",
 	},
 	["CVars"] = {
 		["AutoCombatLogTJ"] = 3,
@@ -458,26 +598,26 @@ PIG = {
 		["Cailiao"] = true,
 		["ActionBar_bili"] = false,
 		["Ranse"] = true,
-		["AutoFanye"] = false,
-		["HideShijiu"] = false,
 		["PetTishi"] = true,
+		["HideShijiu"] = false,
 		["ActionBar_bili_value"] = 1,
+		["AutoFanye"] = false,
 	},
 	["Interaction"] = {
-		["AutoDialogue"] = "OFF",
-		["AutoJierenwu"] = "OFF",
+		["AutoDialogue"] = false,
 		["RightPlus"] = true,
+		["AutoJierenwu"] = false,
 		["SpellLinkPlus"] = "OFF",
 		["AutoRepair"] = true,
 		["jiaoyizengqiang"] = false,
-		["AutoFuhuo"] = "OFF",
-		["AutoRepair_GUILD"] = true,
-		["AutoDown"] = "OFF",
 		["xiayijuli"] = 0,
-		["AutoJyaoqing"] = "OFF",
+		["AutoRepair_GUILD"] = true,
+		["AutoDown"] = false,
+		["AutoFuhuo"] = false,
+		["AutoJyaoqing"] = false,
 		["QuestLinkPlus"] = "OFF",
-		["AutoJiaorenwu"] = "OFF",
-		["Autoloot"] = "OFF",
+		["AutoJiaorenwu"] = false,
+		["Autoloot"] = false,
 	},
 	["PlaneInvite"] = {
 		["WeimianList"] = {
@@ -504,16 +644,16 @@ PIG = {
 				}, -- [5]
 			},
 		},
-		["Kaiqi"] = "ON",
-		["AddBut"] = "ON",
 		["zidongjieshou"] = "OFF",
+		["AddBut"] = "ON",
+		["Kaiqi"] = "ON",
 	},
 	["Chatjilu"] = {
 		["tianshu"] = 7,
 		["jiluinfo"] = {
-			["WHISPER"] = {
+			["PARTY"] = {
 				["kaiguan"] = "ON",
-				["tixing"] = "ON",
+				["tixing"] = "OFF",
 				["neirong"] = {
 				},
 			},
@@ -523,9 +663,9 @@ PIG = {
 				["neirong"] = {
 				},
 			},
-			["PARTY"] = {
+			["WHISPER"] = {
 				["kaiguan"] = "ON",
-				["tixing"] = "OFF",
+				["tixing"] = "ON",
 				["neirong"] = {
 				},
 			},
@@ -534,22 +674,72 @@ PIG = {
 	["Map"] = {
 		["MinimapPos"] = -13.62698465698976,
 		["WorldMapMiwu"] = true,
-		["WorldMapWind"] = true,
+		["WorldMapNPC"] = true,
 		["MinimapShouNa_BS"] = false,
 		["WorldMapLV"] = true,
 		["MinimapBpaichu"] = {
 		},
-		["WorldMapBili"] = 0.8,
+		["MinimapBut"] = true,
 		["MinimapShouNa_hang"] = 5,
-		["WorldMapXY"] = true,
+		["WorldMapFuben"] = true,
 		["WorldMapPlus"] = false,
 		["MinimapShouNa"] = false,
 		["WorldMapSkill"] = true,
-		["WorldMapFuben"] = true,
-		["MinimapBut"] = true,
-		["WorldMapNPC"] = true,
+		["WorldMapXY"] = true,
+		["WorldMapBili"] = 0.8,
+		["WorldMapWind"] = true,
 	},
 	["RaidRecord"] = {
+		["fakuan"] = {
+			{
+				"包地板", -- [1]
+				0, -- [2]
+				0, -- [3]
+				"无", -- [4]
+			}, -- [1]
+			{
+				"指挥失误", -- [1]
+				0, -- [2]
+				0, -- [3]
+				"无", -- [4]
+			}, -- [2]
+			{
+				"ADD罚款1", -- [1]
+				0, -- [2]
+				0, -- [3]
+				"无", -- [4]
+			}, -- [3]
+			{
+				"ADD罚款2", -- [1]
+				0, -- [2]
+				0, -- [3]
+				"无", -- [4]
+			}, -- [4]
+			{
+				"ADD罚款3", -- [1]
+				0, -- [2]
+				0, -- [3]
+				"无", -- [4]
+			}, -- [5]
+			{
+				"跑位失误罚款1", -- [1]
+				0, -- [2]
+				0, -- [3]
+				"无", -- [4]
+			}, -- [6]
+			{
+				"跑位失误罚款2", -- [1]
+				0, -- [2]
+				0, -- [3]
+				"无", -- [4]
+			}, -- [7]
+			{
+				"跑位失误罚款3", -- [1]
+				0, -- [2]
+				0, -- [3]
+				"无", -- [4]
+			}, -- [8]
+		},
 		["buzhuG"] = {
 			100, -- [1]
 			100, -- [2]
@@ -689,61 +879,6 @@ PIG = {
 				},
 			},
 			["wutiaojianjINV"] = "OFF",
-			["kaituanName"] = "[Pig]开团助手测试喊话....",
-			["YYhao"] = 113213,
-			["shijianjiange"] = 300,
-			["PlayersInfo"] = {
-			},
-			["hanhuapindao"] = {
-			},
-			["dangqianpeizhi"] = 0,
-			["dangqianrenshu"] = {
-				{
-					0, -- [1]
-					0, -- [2]
-					0, -- [3]
-					0, -- [4]
-					0, -- [5]
-					0, -- [6]
-					0, -- [7]
-					0, -- [8]
-					0, -- [9]
-					0, -- [10]
-					0, -- [11]
-					0, -- [12]
-				}, -- [1]
-				{
-					0, -- [1]
-					0, -- [2]
-					0, -- [3]
-					0, -- [4]
-					0, -- [5]
-					0, -- [6]
-					0, -- [7]
-					0, -- [8]
-					0, -- [9]
-					0, -- [10]
-					0, -- [11]
-					0, -- [12]
-				}, -- [2]
-				{
-					0, -- [1]
-					0, -- [2]
-					0, -- [3]
-					0, -- [4]
-					0, -- [5]
-					0, -- [6]
-					0, -- [7]
-					0, -- [8]
-					0, -- [9]
-					0, -- [10]
-					0, -- [11]
-					0, -- [12]
-				}, -- [3]
-			},
-			["linshiInfo"] = {
-			},
-			["jinzuZhiling"] = "888",
 			["LMBL"] = {
 				["10人配置"] = {
 					{
@@ -966,6 +1101,56 @@ PIG = {
 					}, -- [3]
 				},
 			},
+			["YYhao"] = 113213,
+			["dangqianrenshu"] = {
+				{
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+				}, -- [1]
+				{
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+				}, -- [2]
+				{
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+				}, -- [3]
+			},
+			["PlayersInfo"] = {
+			},
+			["hanhuapindao"] = {
+			},
+			["dangqianpeizhi"] = 0,
 			["BL"] = {
 				["10人配置"] = {
 					{
@@ -1098,110 +1283,16 @@ PIG = {
 					}, -- [3]
 				},
 			},
+			["linshiInfo"] = {
+			},
+			["jinzuZhiling"] = "888",
+			["shijianjiange"] = 300,
+			["kaituanName"] = "[Pig]开团助手测试喊话....",
 		},
 		["ItemList_Paichu"] = {
 		},
 		["pinzhimoren"] = 3,
-		["AddBut"] = "ON",
-		["History"] = {
-		},
-		["buzhu"] = {
-			["tanke"] = {
-			},
-			["zhiliao"] = {
-			},
-		},
-		["ItemList"] = {
-		},
-		["Raidinfo"] = {
-			{
-			}, -- [1]
-			{
-			}, -- [2]
-			{
-			}, -- [3]
-			{
-			}, -- [4]
-			{
-			}, -- [5]
-			{
-			}, -- [6]
-			{
-			}, -- [7]
-			{
-			}, -- [8]
-		},
-		["Kaiqi"] = "OFF",
-		["instanceName"] = {
-		},
-		["Rsetting"] = {
-			["jiaoyijilu"] = "ON",
-			["YYguanjianzi"] = {
-				"YY", -- [1]
-				"yy", -- [2]
-				"歪歪", -- [3]
-			},
-			["shoudongloot"] = "ON",
-			["YYneirong"] = "YY频道:113213,组人不易,请耐心等待",
-			["jiaoyidaojishi"] = "ON",
-			["liupaibobao"] = "ON",
-			["wurenben"] = "OFF",
-			["jiaoyitonggao"] = "ON",
-			["caizhixiufu"] = "OFF",
-			["zidonghuifuYY"] = "OFF",
-			["bobaomingxi"] = "ON",
-			["fubenwai"] = "OFF",
-		},
-		["fakuan"] = {
-			{
-				"包地板", -- [1]
-				0, -- [2]
-				0, -- [3]
-				"无", -- [4]
-			}, -- [1]
-			{
-				"指挥失误", -- [1]
-				0, -- [2]
-				0, -- [3]
-				"无", -- [4]
-			}, -- [2]
-			{
-				"ADD罚款1", -- [1]
-				0, -- [2]
-				0, -- [3]
-				"无", -- [4]
-			}, -- [3]
-			{
-				"ADD罚款2", -- [1]
-				0, -- [2]
-				0, -- [3]
-				"无", -- [4]
-			}, -- [4]
-			{
-				"ADD罚款3", -- [1]
-				0, -- [2]
-				0, -- [3]
-				"无", -- [4]
-			}, -- [5]
-			{
-				"跑位失误罚款1", -- [1]
-				0, -- [2]
-				0, -- [3]
-				"无", -- [4]
-			}, -- [6]
-			{
-				"跑位失误罚款2", -- [1]
-				0, -- [2]
-				0, -- [3]
-				"无", -- [4]
-			}, -- [7]
-			{
-				"跑位失误罚款3", -- [1]
-				0, -- [2]
-				0, -- [3]
-				"无", -- [4]
-			}, -- [8]
-		},
+		["Open"] = false,
 		["jiangli"] = {
 			{
 				"治疗第一", -- [1]
@@ -1234,10 +1325,60 @@ PIG = {
 				"无", -- [3]
 			}, -- [6]
 		},
+		["Raidinfo"] = {
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+			{
+			}, -- [3]
+			{
+			}, -- [4]
+			{
+			}, -- [5]
+			{
+			}, -- [6]
+			{
+			}, -- [7]
+			{
+			}, -- [8]
+		},
+		["ItemList"] = {
+		},
+		["Rsetting"] = {
+			["jiaoyijilu"] = "ON",
+			["YYguanjianzi"] = {
+				"YY", -- [1]
+				"yy", -- [2]
+				"歪歪", -- [3]
+			},
+			["shoudongloot"] = "ON",
+			["YYneirong"] = "YY频道:113213,组人不易,请耐心等待",
+			["fubenwai"] = "OFF",
+			["liupaibobao"] = "ON",
+			["wurenben"] = "OFF",
+			["jiaoyitonggao"] = "ON",
+			["caizhixiufu"] = "OFF",
+			["zidonghuifuYY"] = "OFF",
+			["bobaomingxi"] = "ON",
+			["jiaoyidaojishi"] = "ON",
+		},
+		["Kaiqi"] = "OFF",
+		["instanceName"] = {
+		},
+		["History"] = {
+		},
+		["buzhu"] = {
+			["tanke"] = {
+			},
+			["zhiliao"] = {
+			},
+		},
+		["AddBut"] = true,
 	},
 	["Tooltip"] = {
-		["ItemSell"] = true,
 		["ItemLevel"] = true,
+		["ItemSell"] = true,
 		["SpellID"] = true,
 	},
 	["QuickFollow"] = {
@@ -1246,15 +1387,43 @@ PIG = {
 		["Duizhang"] = true,
 		["Yijiao"] = false,
 		["Name"] = "猪猪加油",
-		["Kaishi"] = "1",
+		["Qiangli"] = false,
 		["Tishi"] = false,
 		["Jieshu"] = "2",
-		["Qiangli"] = false,
+		["Kaishi"] = "1",
 	},
-	["ShowPlus"] = {
-		["ItemSell"] = "OFF",
-		["ItemLevel"] = "OFF",
-		["SpellID"] = "OFF",
+	["AutoSellBuy"] = {
+		["AutoSell"] = "OFF",
+		["Open_List"] = {
+		},
+		["Buy_Tishi"] = true,
+		["AutoRepair"] = "OFF",
+		["Sell_But"] = true,
+		["AutoRepair_GUILD"] = "OFF",
+		["Kaiqi"] = "ON",
+		["zidongKaiqi"] = "OFF",
+		["Diuqi_Tishi"] = false,
+		["Fen_QkBut"] = false,
+		["Sell_List"] = {
+		},
+		["Fen_List"] = {
+		},
+		["Diuqi_List"] = {
+		},
+		["Buy_Open"] = true,
+		["Sell_Open"] = true,
+		["diuqitishi"] = "OFF",
+		["Openlist"] = {
+		},
+		["Buy_But"] = true,
+		["SellPlus"] = "OFF",
+		["Open_QkBut"] = false,
+		["Open"] = true,
+		["AddBut"] = true,
+		["Sell_Tishi"] = true,
+		["AutoSell_List"] = {
+		},
+		["AutoSell_Open"] = "OFF",
 	},
 	["daiben"] = {
 		["Point"] = {
@@ -1282,7 +1451,6 @@ PIG = {
 		["wupinRanse"] = true,
 		["wupinLV"] = true,
 		["BagKongyu"] = true,
-		["qitajinbi"] = true,
 		["lixian"] = {
 			["上山打鸟-伊弗斯"] = {
 				["Race"] = 2,
@@ -1392,34 +1560,36 @@ PIG = {
 						false, -- [5]
 					}, -- [1]
 					{
-						22574, -- [1]
-						"|cffffffff|Hitem:22574::::::::1:::::::::|h[火焰微粒]|h|r", -- [2]
-						6, -- [3]
-						10, -- [4]
+						45984, -- [1]
+						"|cffffffff|Hitem:45984::::::::1:::::::::|h[不寻常的指南针]|h|r", -- [2]
+						1, -- [3]
+						1, -- [4]
 						false, -- [5]
 					}, -- [2]
-					{
-						22445, -- [1]
-						"|cffffffff|Hitem:22445::::::::1:::::::::|h[奥法之尘]|h|r", -- [2]
-						1, -- [3]
-						20, -- [4]
-						false, -- [5]
-					}, -- [3]
 					{
 						2512, -- [1]
 						"|cffffffff|Hitem:2512::::::::1:::::::::|h[劣质箭]|h|r", -- [2]
 						200, -- [3]
 						1000, -- [4]
 						false, -- [5]
-					}, -- [4]
+					}, -- [3]
 				},
 				["ClassN"] = 3,
 				["Lv"] = 1,
-				["G"] = 49056651,
+				["G"] = 48503975,
 				["BANK"] = {
 				},
 			},
 		},
+		["BAGsuofangBili"] = 1,
+		["SortBagsRightToLeft"] = false,
+		["BANKmeihangshu"] = 16,
+		["BANKsuofangBili"] = 1,
+		["BANKmeihangshu_retail"] = 18,
+		["Zhenghe"] = true,
+		["SortBag_Config"] = false,
+		["JianjieMOD"] = false,
+		["BAGmeihangshu_retail"] = 10,
 		["hulueBANK"] = {
 			false, -- [1]
 			false, -- [2]
@@ -1430,38 +1600,30 @@ PIG = {
 			false, -- [7]
 			false, -- [8]
 		},
-		["BANKmeihangshu"] = 16,
-		["SortBagsRightToLeft"] = false,
-		["BAGmeihangshu_retail"] = 10,
-		["Zhenghe"] = true,
-		["SortBag_Config"] = false,
-		["JianjieMOD"] = false,
-		["BANKmeihangshu_retail"] = 18,
-		["BANKsuofangBili"] = 1,
-		["BAGsuofangBili"] = 1,
+		["qitajinbi"] = true,
 	},
 	["AKF"] = {
 		["Open"] = false,
 		["QuickButton"] = true,
 	},
 	["CombatPlus"] = {
-		["Beijing"] = 3,
+		["Miaobian"] = "OUTLINE",
 		["ziyuantiao"] = false,
 		["BGtongbao"] = "OFF",
-		["Miaobian"] = "OUTLINE",
+		["suofangbili"] = 1,
 		["ActionBar_Ranse"] = "OFF",
 		["Xpianyi"] = 0,
 		["PetTishi"] = "OFF",
-		["zhandouHide"] = true,
+		["Ypianyi"] = 0,
 		["ActionBar_AutoFanye"] = "OFF",
 		["Showshuzhi"] = true,
 		["Biaoji"] = {
 			["BGHide"] = true,
 			["Lock"] = false,
 			["Scale"] = 1,
-			["Yidong"] = false,
-			["Open"] = false,
 			["AutoShow"] = false,
+			["Open"] = false,
+			["Yidong"] = false,
 		},
 		["Zhuizong"] = "OFF",
 		["CombatTime"] = {
@@ -1479,16 +1641,16 @@ PIG = {
 			["Open"] = true,
 			["Fuziyuan"] = true,
 		},
-		["Ypianyi"] = 0,
-		["suofangbili"] = 1,
+		["zhandouHide"] = true,
+		["Beijing"] = 3,
 	},
 	["FramePlus"] = {
 		["Character_ItemLevel"] = true,
-		["yidongUI"] = "OFF",
+		["yidongUI"] = false,
 		["CharacterFrame_zhuangbeList"] = "OFF",
 		["Skill"] = true,
 		["Character_ItemList"] = true,
-		["CharacterFrame_ranse"] = "OFF",
+		["ExtFrame_Renwu"] = "OFF",
 		["Character_Mingzhong"] = true,
 		["Quest"] = true,
 		["CharacterFrame_naijiu"] = "OFF",
@@ -1496,50 +1658,22 @@ PIG = {
 		["ExtFrame_Zhuanye"] = "OFF",
 		["CharacterFrame_LV"] = "OFF",
 		["Talent"] = true,
-		["ExtFrame_ZhuanyeQKBUT"] = false,
+		["Character_xiuliG"] = true,
 		["CharacterFrame_shuxing"] = "OFF",
 		["Character_naijiu"] = true,
 		["ExtFrame_Talent"] = "OFF",
-		["BuffTime"] = "OFF",
+		["Zhuizong"] = true,
 		["Cailiao"] = "OFF",
 		["Skill_QKbut"] = true,
-		["Zhuizong"] = true,
+		["BuffTime"] = false,
 		["Character_Shuxing"] = true,
-		["Character_xiuliG"] = true,
+		["ExtFrame_ZhuanyeQKBUT"] = false,
 		["CharacterFrame_Juese"] = "OFF",
-		["ExtFrame_Renwu"] = "OFF",
+		["CharacterFrame_ranse"] = "OFF",
 	},
-	["AutoSellBuy"] = {
-		["AutoSell"] = "OFF",
-		["Open_List"] = {
-		},
-		["Buy_Tishi"] = true,
-		["AutoRepair"] = "OFF",
-		["Sell_But"] = true,
-		["AutoRepair_GUILD"] = "OFF",
-		["Kaiqi"] = "ON",
-		["zidongKaiqi"] = "OFF",
-		["AutoSell_Open"] = "OFF",
-		["Fen_QkBut"] = false,
-		["Sell_List"] = {
-		},
-		["Fen_List"] = {
-		},
-		["Diuqi_List"] = {
-		},
-		["Sell_Tishi"] = true,
-		["AddBut"] = "ON",
-		["diuqitishi"] = "OFF",
-		["Openlist"] = {
-		},
-		["Open"] = true,
-		["SellPlus"] = "OFF",
-		["Open_QkBut"] = false,
-		["Buy_But"] = true,
-		["Sell_Open"] = true,
-		["Buy_Open"] = true,
-		["AutoSell_List"] = {
-		},
-		["Diuqi_Tishi"] = false,
+	["ShowPlus"] = {
+		["ItemLevel"] = "OFF",
+		["ItemSell"] = "OFF",
+		["SpellID"] = "OFF",
 	},
 }
