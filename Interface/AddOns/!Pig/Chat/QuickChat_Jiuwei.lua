@@ -6,9 +6,9 @@ function QuickChatfun.QuickBut_jiuwei()
 	local fuWidth = fuFrame.Width
 	local Width,Height = fuWidth,fuWidth
 	local ziframe = {fuFrame:GetChildren()}
-	if PIG["Chat"]["QuickChat_style"]==1 then
+	if PIGA["Chat"]["QuickChat_style"]==1 then
 		fuFrame.jiuweidaojishi = CreateFrame("Button",nil,fuFrame, "TruncatedButtonTemplate"); 
-	elseif PIG["Chat"]["QuickChat_style"]==2 then
+	elseif PIGA["Chat"]["QuickChat_style"]==2 then
 		fuFrame.jiuweidaojishi = CreateFrame("Button",nil,fuFrame, "UIMenuButtonStretchTemplate"); 
 	end
 	fuFrame.jiuweidaojishi:SetSize(Width,Height);

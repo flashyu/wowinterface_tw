@@ -9,12 +9,18 @@ local PIGModbutton=Create.PIGModbutton
 local PIGModCheckbutton=Create.PIGModCheckbutton
 local PIGQuickBut=Create.PIGQuickBut
 local PIGFontString=Create.PIGFontString
+local PIGCloseBut=Create.PIGCloseBut
 --
+local GetContainerNumSlots = C_Container and C_Container.GetContainerNumSlots or GetContainerNumSlots
+local GetContainerItemID = C_Container and C_Container.GetContainerItemID or GetContainerItemID
+local GetContainerItemCooldown = C_Container and C_Container.GetContainerItemCooldown or GetContainerItemCooldown
+
 local CommonFun=addonTable.CommonFun
 --=================================
 local GnName,GnUI,GnIcon,FrameLevel = "专业/副本CD","SkillFBCD_UI",133735,10
 local GnTooltip = "点击-|cff00FFFF打开"..GnName.."监控|r"
 --------------
+local PIG_renwuming
 local Pig_SkillID={}
 local Pig_ItemID={}
 local zhuanyeIcon={136249,136240,134071,237171}--裁缝/炼金/珠宝加工/铭文
@@ -59,9 +65,13 @@ elseif tocversion<40000 then
 	zhuanyejinengshuaxinshijian="TRADE_SKILL_UPDATE"
 	Pig_SkillID={
 		--裁缝
-
+		{56005,zhuanyeIcon[1],"spell"},
 		--炼金
 		{60893,zhuanyeIcon[2],"spell"},
+		{66663,zhuanyeIcon[2],"spell"},
+		{66662,zhuanyeIcon[2],"spell"},
+		{66658,zhuanyeIcon[2],"spell"},
+		{66664,zhuanyeIcon[2],"spell"},
 		--珠宝加工
 		{47280,zhuanyeIcon[3],"spell"},
 		{62242,zhuanyeIcon[3],"spell"},
@@ -96,11 +106,9 @@ local function disp_time(time)
 end
 --获取当前所学专业数据
 local function huoqu_Skill()
-	local fullName,Fullrealm = UnitFullName("player")
-	if not Fullrealm then Fullrealm = GetRealmName() end
 	local className, classFilename = UnitClass("player");
 	local rPerc, gPerc, bPerc, argbHex = GetClassColor(classFilename);
-	local renwuxinxi={fullName,Fullrealm,{rPerc, gPerc, bPerc},"juese"};
+	local renwuxinxi={PIG_renwuming,{rPerc, gPerc, bPerc},"juese"};
 	----
 	local yixueSkill={};
 	for i=1,#Pig_SkillID do
@@ -109,35 +117,21 @@ local function huoqu_Skill()
 			table.insert(yixueSkill,jinengxinxi)
 		end
 	end
-	if tocversion<30000 then
-		for Bagid=0,4,1 do
-			local numberOfSlots = GetContainerNumSlots(Bagid);
-			for i=1,numberOfSlots,1 do
-				for ii=1,#Pig_ItemID,1 do
-					if GetContainerItemID(Bagid, i)==Pig_ItemID[ii][3] then--有物品
-						local Itemxinxi={Pig_ItemID[ii][1],Pig_ItemID[ii][2],Pig_ItemID[ii][3]};
-						table.insert(yixueSkill,Itemxinxi)
-					end
-				end
-			end
-		end
-	else
-		for Bagid=0,4,1 do
-			local numberOfSlots = C_Container.GetContainerNumSlots(Bagid);
-			for i=1,numberOfSlots,1 do
-				for ii=1,#Pig_ItemID,1 do
-					if C_Container.GetContainerItemID(Bagid, i)==Pig_ItemID[ii][3] then--有物品
-						local Itemxinxi={Pig_ItemID[ii][1],Pig_ItemID[ii][2],Pig_ItemID[ii][3]};
-						table.insert(yixueSkill,Itemxinxi)
-					end
+	for Bagid=0,4,1 do
+		local numberOfSlots = GetContainerNumSlots(Bagid);
+		for i=1,numberOfSlots,1 do
+			for ii=1,#Pig_ItemID,1 do
+				if GetContainerItemID(Bagid, i)==Pig_ItemID[ii][3] then--有物品
+					local Itemxinxi={Pig_ItemID[ii][1],Pig_ItemID[ii][2],Pig_ItemID[ii][3]};
+					table.insert(yixueSkill,Itemxinxi)
 				end
 			end
 		end
 	end
 	-----
-	local shujuyaun = PIG["SkillFBCD"]["SkillCD"]
+	local shujuyaun = PIGA["SkillFBCD"]["SkillCD"]
 	for i=1,#shujuyaun,1 do
-		if shujuyaun[i][1][1]..shujuyaun[i][1][2]==fullName..Fullrealm then
+		if shujuyaun[i][1][1]==PIG_renwuming then
 			return
 		end
 	end
@@ -147,19 +141,14 @@ end
 ----
 local hang_Height,hang_NUM  = 20, 18;
 local function gengxin_Skill(self)
+	if not _G[GnUI]:IsShown() then return end
 	for x = 1, hang_NUM do
 		_G["SK_list_"..x]:Hide();
-		_G["SK_list_"..x].del:Hide();
-		_G["SK_list_"..x].kong:SetWidth(18);
-		_G["SK_list_"..x].Tex:SetWidth(16);
-		_G["SK_list_"..x].Tex:SetTexture();
-    	_G["SK_list_"..x].name:SetText();
-    	_G["SK_list_"..x].time:SetText();
     end
    	local ItemsSpell={};
-   	local shujuyaun = PIG["SkillFBCD"]["SkillCD"]
+   	local shujuyaun = PIGA["SkillFBCD"]["SkillCD"]
    	for i=1,#shujuyaun,1 do
-   		local renwu={shujuyaun[i][1][1].."-"..shujuyaun[i][1][2],shujuyaun[i][1][4],shujuyaun[i][1][3]}
+   		local renwu={shujuyaun[i][1][1],shujuyaun[i][1][3],shujuyaun[i][1][2]}
    		table.insert(ItemsSpell,renwu)
    		for ii=1,#shujuyaun[i][2] do
 			table.insert(ItemsSpell,shujuyaun[i][2][ii])
@@ -177,12 +166,16 @@ local function gengxin_Skill(self)
 				if ItemsSpell[dangqian][2]=="juese" then
 					fujik.del:Show();
 					fujik.del:SetID(dangqian);
-					fujik.kong:SetWidth(0.2);
-					fujik.Tex:SetWidth(0.2);		
+					fujik.del:SetWidth(hang_Height);
+					fujik.Tex:SetWidth(0.02);		
 					fujik.name:SetText(ItemsSpell[dangqian][1]);
 					fujik.name:SetTextColor(ItemsSpell[dangqian][3][1], ItemsSpell[dangqian][3][2], ItemsSpell[dangqian][3][3], 1);
 					fujik.time:SetText();
 				else
+					fujik.del:Hide();
+					fujik.del:SetWidth(hang_Height+10);
+					fujik.Tex:SetWidth(hang_Height);
+					fujik.name:SetTextColor(1, 1, 1, 1);
 					if ItemsSpell[dangqian][3]=="spell" then
 						fujik.Tex:SetTexture(ItemsSpell[dangqian][2]);
 						local Name= GetSpellInfo(ItemsSpell[dangqian][1])
@@ -232,23 +225,21 @@ end
 
 --获取副本CD===============================
 local function huoqu_Fuben()
-	local fullName,Fullrealm = UnitFullName("player")
-	if not Fullrealm then Fullrealm = GetRealmName() end
 	local className, classFilename = UnitClass("player");
 	local rPerc, gPerc, bPerc, argbHex = GetClassColor(classFilename);
-	local renwuxinxi={fullName,Fullrealm,{rPerc, gPerc, bPerc},"juese"};
+	local renwuxinxi={PIG_renwuming,{rPerc, gPerc, bPerc},"juese"};
 	local fubenCDinfo={};
 	local numInstances = GetNumSavedInstances();
 	if numInstances>0 then
 		for id = 1, numInstances, 1 do				
 			local name, id, reset, difficulty, locked, extended, instanceIDMostSig, isRaid, maxPlayers, difficultyName, numEncounters, encounterProgress = GetSavedInstanceInfo(id)
-			table.insert(fubenCDinfo,{name.."["..difficultyName.."]",GetTime(),reset})
+			table.insert(fubenCDinfo,{name.."\124cff66FF11["..difficultyName.."]\124r",GetTime(),reset})
 		end
 	end
 	fubenCDinfo.cunzaiYN = true
-	local shujuyaun = PIG["SkillFBCD"]["FubenCD"]
+	local shujuyaun = PIGA["SkillFBCD"]["FubenCD"]
 	for id=1,#shujuyaun,1 do
-		if shujuyaun[id][1][1]..shujuyaun[id][1][2]==fullName..Fullrealm then
+		if shujuyaun[id][1][1]==PIG_renwuming then
 			shujuyaun[id][2]=fubenCDinfo;
 			fubenCDinfo.cunzaiYN = false
 			break
@@ -261,16 +252,14 @@ local function huoqu_Fuben()
 end
 ----
 local function gengxin_Fuben(self)
+	if not _G[GnUI]:IsShown() then return end
 	for id = 1, hang_NUM, 1 do
 		_G["fubenCD_list_"..id]:Hide();
-		_G["fubenCD_list_"..id].kong:SetWidth(14);
-		_G["fubenCD_list_"..id].del:Hide();	
-		_G["fubenCD_list_"..id].name:SetText();
 	end
    	local cdmulu={};
-   	local shujuyaun = PIG["SkillFBCD"]["FubenCD"]
+   	local shujuyaun = PIGA["SkillFBCD"]["FubenCD"]
    	for i=1,#shujuyaun,1 do
-   		local renwu={shujuyaun[i][1][1].."-"..shujuyaun[i][1][2],shujuyaun[i][1][4],shujuyaun[i][1][3]}
+   		local renwu={shujuyaun[i][1][1],shujuyaun[i][1][3],shujuyaun[i][1][2]}
    		table.insert(cdmulu,renwu)
    		for ii=1,#shujuyaun[i][2] do
 			table.insert(cdmulu,shujuyaun[i][2][ii])
@@ -283,20 +272,24 @@ local function gengxin_Fuben(self)
 	    for id = 1, hang_NUM do
 			local dangqian = id+offset;
 			if cdmulu[dangqian] then
-				_G["fubenCD_list_"..id]:Show();
+				local fujik = _G["fubenCD_list_"..id]
+				fujik:Show();
 				if cdmulu[dangqian][2]=="juese" then
-					_G["fubenCD_list_"..id].del:Show();
-					_G["fubenCD_list_"..id].kong:SetWidth(0.2);
-					_G["fubenCD_list_"..id].name:SetText(cdmulu[dangqian][1]);
-					_G["fubenCD_list_"..id].name:SetTextColor(cdmulu[dangqian][3][1], cdmulu[dangqian][3][2], cdmulu[dangqian][3][3], 1);
+					fujik.del:Show();
+					fujik.del:SetWidth(hang_Height);
+					fujik.name:SetText(cdmulu[dangqian][1]);
+					fujik.name:SetTextColor(cdmulu[dangqian][3][1], cdmulu[dangqian][3][2], cdmulu[dangqian][3][3], 1);
 				else
+					fujik.del:Hide();
+					fujik.del:SetWidth(hang_Height+10);
+					fujik.name:SetTextColor(1, 1, 1, 1);
 					local shengyu=cdmulu[dangqian][2]+cdmulu[dangqian][3]-GetTime();
 					if shengyu>0 then
 						local txt=cdmulu[dangqian][1].." "..disp_time(shengyu)
-						_G["fubenCD_list_"..id].name:SetText(txt);
+						fujik.name:SetText(txt);
 					else
 						local txt=cdmulu[dangqian][1].."|cFF00FF00 新CD！|r";
-						_G["fubenCD_list_"..id].name:SetText(txt);
+						fujik.name:SetText(txt);
 					end
 				end
 			end
@@ -305,8 +298,11 @@ local function gengxin_Fuben(self)
 end
 --创建监控面板===================================================
 local function Add_Skill_CD()
-	if not PIG["SkillFBCD"]["Open"] then return end
-	if _G[GnUI] then return end	
+	if not PIGA["SkillFBCD"]["Open"] then return end
+	if _G[GnUI] then return end
+	local wanjia, realm = UnitFullName("player")
+	local realm=realm or GetRealmName()
+	PIG_renwuming = wanjia.."-"..realm
 	local ModBut = PIGModbutton(GnName,GnIcon,GnUI,FrameLevel,1)
 	--显示框架
 	local Width,Height = 650,460;
@@ -326,9 +322,9 @@ local function Add_Skill_CD()
 		button1 = "确定",
 		button2 = "取消",
 		OnAccept = function()
-			PIG.SkillFBCD.SkillCD={}
-			PIG.SkillFBCD.FubenCD={}
-			PIG.SkillFBCD.Open=true;
+			PIGA["SkillFBCD"]["SkillCD"]={}
+			PIGA["SkillFBCD"]["FubenCD"]={}
+			PIGA["SkillFBCD"]["Open"]=true;
 			ReloadUI()
 		end,
 		timeout = 0,
@@ -362,37 +358,23 @@ local function Add_Skill_CD()
 		else
 			SK_list:SetPoint("TOPLEFT", _G["SK_list_"..(id-1)], "BOTTOMLEFT", 0, -1);
 		end
-		SK_list.del = CreateFrame("Button",nil,SK_list, "TruncatedButtonTemplate");
-		SK_list.del:SetSize(hang_Height-4,hang_Height-4);
-		SK_list.del:SetPoint("LEFT", SK_list, "LEFT", 0,0);
-		SK_list.del.Tex = SK_list.del:CreateTexture(nil, "BORDER");
-		SK_list.del.Tex:SetTexture("interface/common/voicechat-muted.blp");
-		SK_list.del.Tex:SetPoint("CENTER");
-		SK_list.del.Tex:SetSize(hang_Height-6,hang_Height-6)
-		SK_list.del:SetScript("OnMouseDown", function (self)
-			self.Tex:SetPoint("CENTER",-1,-1);
-		end);
-		SK_list.del:SetScript("OnMouseUp", function (self)
-			self.Tex:SetPoint("CENTER");
-		end);
+		SK_list.del=PIGCloseBut(SK_list,{"LEFT", SK_list, "LEFT", 0,0},{hang_Height,hang_Height})
 		SK_list.del:SetScript("OnClick", function (self)
 			local wanjianame = self:GetParent().name:GetText()
-			local shujuyuan = PIG["SkillFBCD"]["SkillCD"]
+			local shujuyuan = PIGA["SkillFBCD"]["SkillCD"]
 			for i=1,#shujuyuan,1 do
-				if shujuyuan[i][1][1].."-"..shujuyuan[i][1][2]==wanjianame then
+				if shujuyuan[i][1][1]==wanjianame then
 					table.remove(shujuyuan,i);
 					gengxin_Skill(zhuanyeCD.SkillCD.Scroll);
 					break
 				end
 			end
 		end);
-		SK_list.kong = CreateFrame("Frame", nil, SK_list);
-		SK_list.kong:SetSize(18,hang_Height);
-		SK_list.kong:SetPoint("LEFT", SK_list.del, "RIGHT", 0, 0);
 		SK_list.Tex = SK_list:CreateTexture(nil, "BORDER");
-		SK_list.Tex:SetSize(16,16);
-		SK_list.Tex:SetPoint("LEFT", SK_list.kong, "RIGHT", 0, 0);			
+		SK_list.Tex:SetSize(hang_Height,hang_Height);
+		SK_list.Tex:SetPoint("LEFT", SK_list.del, "RIGHT", 0, 0);			
 		SK_list.name = PIGFontString(SK_list,{"LEFT", SK_list.Tex, "RIGHT", 0, 0})
+		SK_list.name:SetTextColor(1, 1, 1);
 		SK_list.time = PIGFontString(SK_list,{"LEFT", SK_list.name, "RIGHT", 0, 0})
 	end
 	--副本CD列表===================================================
@@ -414,42 +396,26 @@ local function Add_Skill_CD()
 		else
 			fubenCD_list:SetPoint("TOPLEFT", _G["fubenCD_list_"..id-1], "BOTTOMLEFT", 0, -1);
 		end
-		fubenCD_list.del = CreateFrame("Button",nil,fubenCD_list, "TruncatedButtonTemplate");
-		fubenCD_list.del:SetSize(hang_Height-4,hang_Height-4);
-		fubenCD_list.del:SetPoint("LEFT", fubenCD_list, "LEFT", 0,0);
-		fubenCD_list.del.Tex = fubenCD_list.del:CreateTexture(nil, "BORDER");
-		fubenCD_list.del.Tex:SetTexture("interface/common/voicechat-muted.blp");
-		fubenCD_list.del.Tex:SetPoint("CENTER");
-		fubenCD_list.del.Tex:SetSize(hang_Height-6,hang_Height-6)
-		fubenCD_list.del:SetScript("OnMouseDown", function (self)
-			self.Tex:SetPoint("CENTER",-1,-1);
-		end);
-		fubenCD_list.del:SetScript("OnMouseUp", function (self)
-			self.Tex:SetPoint("CENTER");
-		end);
+		fubenCD_list.del=PIGCloseBut(fubenCD_list,{"LEFT", fubenCD_list, "LEFT", 0,0},{hang_Height,hang_Height})
 		fubenCD_list.del:SetScript("OnClick", function (self)
 			local wanjianame = self:GetParent().name:GetText()
-			local shujuyuan = PIG["SkillFBCD"]["FubenCD"]
+			local shujuyuan = PIGA["SkillFBCD"]["FubenCD"]
 			for i=1,#shujuyuan,1 do
-				if shujuyuan[i][1][1].."-"..shujuyuan[i][1][2]==wanjianame then
+				if shujuyuan[i][1][1]==wanjianame then
 					table.remove(shujuyuan,i);
 					gengxin_Fuben(zhuanyeCD.fubenCD.Scroll);
 					break
 				end
 			end
 		end);
-		fubenCD_list.kong = CreateFrame("Frame", nil, fubenCD_list);
-		fubenCD_list.kong:SetSize(18,hang_Height);
-		fubenCD_list.kong:SetPoint("LEFT", fubenCD_list.del, "RIGHT", 0, 0);
-		fubenCD_list.name = PIGFontString(fubenCD_list,{"LEFT", fubenCD_list.kong, "RIGHT", 0, 0})
+		fubenCD_list.name = PIGFontString(fubenCD_list,{"LEFT", fubenCD_list.del, "RIGHT", 0, 0})
+		fubenCD_list.name:SetTextColor(1, 1, 1);
 	end
 	---更新专业CD
 	local function zhixingdakaigengxin()
-		local fullName,Fullrealm = UnitFullName("player")
-		if not Fullrealm then Fullrealm = GetRealmName() end
-		local shujuyuan = PIG["SkillFBCD"]["SkillCD"]
+		local shujuyuan = PIGA["SkillFBCD"]["SkillCD"]
 		for x=1,#shujuyuan,1 do
-			if shujuyuan[x][1][1]..shujuyuan[x][1][2]==fullName..Fullrealm then
+			if shujuyuan[x][1][1]==PIG_renwuming then
 				for xx=1,#shujuyuan[x][2] do
 					local chazhaoName= GetSpellInfo(shujuyuan[x][2][xx][1])
 					for j=1,GetNumTradeSkills() do
@@ -472,21 +438,19 @@ local function Add_Skill_CD()
 		end
 	end
 	--注册CD监测事件
-	_G[GnUI]:RegisterUnitEvent("UNIT_SPELLCAST_SUCCEEDED","player");              
-	_G[GnUI]:RegisterEvent("UPDATE_INSTANCE_INFO");
-	_G[GnUI]:RegisterEvent(zhuanyejinengshuaxinshijian)
-	_G[GnUI]:SetScript("OnEvent", function(self,event,arg1,_,arg3)
+	zhuanyeCD:RegisterUnitEvent("UNIT_SPELLCAST_SUCCEEDED","player");              
+	zhuanyeCD:RegisterEvent("UPDATE_INSTANCE_INFO");
+	zhuanyeCD:RegisterEvent(zhuanyejinengshuaxinshijian)
+	zhuanyeCD:SetScript("OnEvent", function(self,event,arg1,_,arg3)
 		if event==zhuanyejinengshuaxinshijian then
 			zhixingdakaigengxin()
 		end
 		if event=="UNIT_SPELLCAST_SUCCEEDED" then
-			local fullName,Fullrealm = UnitFullName("player")
-			if not Fullrealm then Fullrealm = GetRealmName() end
 			for s=1,#Pig_SkillID,1 do
 				if arg3==Pig_SkillID[s][1] then
-					local shujuyuan = PIG["SkillFBCD"]["SkillCD"]
+					local shujuyuan = PIGA["SkillFBCD"]["SkillCD"]
 					for k=1,#shujuyuan,1 do
-						if shujuyuan[k][1][1]..shujuyuan[k][1][2]==fullName..Fullrealm then
+						if shujuyuan[k][1][1]==PIG_renwuming then
 							for kk=1,#shujuyuan[k][2],1 do
 								if shujuyuan[k][2][kk][1]==arg3 then
 									local function gengxinSPCD1()
@@ -494,24 +458,27 @@ local function Add_Skill_CD()
 										shujuyuan[k][2][kk][4] =start;
 										shujuyuan[k][2][kk][5] =duration;
 										gengxin_Skill(zhuanyeCD.SkillCD.Scroll);
+										return
 									end
-									C_Timer.After(1, gengxinSPCD1);								
+									C_Timer.After(1, gengxinSPCD1);
+									return						
 								end
 							end
+							return
 						end
-					end		
+					end
+					return		
 				end
 			end
 			---
 			for i=1,#Pig_ItemID,1 do
 				if arg3==Pig_ItemID[i][1] then
-					local shujuyuan = PIG["SkillFBCD"]["SkillCD"]
+					local shujuyuan = PIGA["SkillFBCD"]["SkillCD"]
 					for k=1,#shujuyuan,1 do
-						if shujuyuan[k][1][1]..shujuyuan[k][1][2]==fullName..Fullrealm then
+						if shujuyuan[k][1][1]==PIG_renwuming then
 							for kk=1,#shujuyuan[k][2],1 do
 								if shujuyuan[k][2][kk][1]==arg3 then
 									local function gengxinSPCD3()
-										if tocversion<100000 then
 											for Bagid=0,4,1 do
 												local numberOfSlots = GetContainerNumSlots(Bagid);
 												for sol=1,numberOfSlots,1 do
@@ -520,28 +487,19 @@ local function Add_Skill_CD()
 														shujuyuan[k][2][kk][4] =startTime;
 														shujuyuan[k][2][kk][5] =duration;
 														gengxin_Skill(zhuanyeCD.SkillCD.Scroll);
+														return
 													end
 												end
 											end
-										else
-											for Bagid=0,4,1 do
-												local numberOfSlots = C_Container.GetContainerNumSlots(Bagid);
-												for sol=1,numberOfSlots,1 do
-													if C_Container.GetContainerItemID(Bagid, sol)==Pig_ItemID[i][3] then
-														local startTime, duration = C_Container.GetContainerItemCooldown(Bagid, sol)
-														shujuyuan[k][2][kk][4] =startTime;
-														shujuyuan[k][2][kk][5] =duration;
-														gengxin_Skill(zhuanyeCD.SkillCD.Scroll);
-													end
-												end
-											end
-										end
 									end
 									C_Timer.After(1, gengxinSPCD3);
+									return
 								end
 							end
+							return
 						end
 					end
+					return
 				end
 			end
 		end
@@ -551,7 +509,7 @@ local function Add_Skill_CD()
 		end
 	end)
 	--点击后显示/隐藏
-	_G[GnUI]:HookScript("OnShow", function ()
+	zhuanyeCD:HookScript("OnShow", function ()
 		RequestRaidInfo()
 		huoqu_Skill()
 		gengxin_Skill(zhuanyeCD.SkillCD.Scroll);
@@ -559,7 +517,7 @@ local function Add_Skill_CD()
 end
 --===============================
 CommonFun.SkillFBCD = function()
-	if PIG["SkillFBCD"]["Open"] then
+	if PIGA["SkillFBCD"]["Open"] then
 		Add_Skill_CD()
 		C_Timer.After(6, huoqu_Skill)
 	end
@@ -569,18 +527,18 @@ local Tooltip = "创建一个监控所有角色"..GnName.."界面！";
 local Checkbut = PIGModCheckbutton(CommonFun.CommonF,{GnName,Tooltip},{"TOP",CommonFun.CommonF,"TOP",0,-100})
 Checkbut:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["SkillFBCD"]["Open"]=true;
+		PIGA["SkillFBCD"]["Open"]=true;
 		CommonFun.SkillFBCD()
 		huoqu_Skill()
 	else
-		PIG["SkillFBCD"]["Open"]=false;
+		PIGA["SkillFBCD"]["Open"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 	QuickButUI.SkillFBCD()
 end);
 
 function QuickButUI.SkillFBCD()	
-	if PIG["QuickBut"]["Open"] and PIG["SkillFBCD"]["Open"] and PIG["SkillFBCD"]["AddBut"] then
+	if PIGA["QuickBut"]["Open"] and PIGA["SkillFBCD"]["Open"] and PIGA["SkillFBCD"]["AddBut"] then
 		local QkButUI = "QkBut_Skill"
 		if _G[QkButUI] then return end	
 		local QkBut=PIGQuickBut(QkButUI,GnTooltip,GnIcon,GnUI,FrameLevel)
@@ -588,7 +546,7 @@ function QuickButUI.SkillFBCD()
 		local function xianshitishi()
 			if not InCombatLockdown() then
 				local youlengquewancCD=false;
-				local shujuyaun = PIG["SkillFBCD"]["SkillCD"]
+				local shujuyaun = PIGA["SkillFBCD"]["SkillCD"]
 				for i=1,#shujuyaun,1 do
 					if #shujuyaun[i][2]>0 then
 						for ii=1,#shujuyaun[i][2],1 do
@@ -620,14 +578,14 @@ function QuickButUI.SkillFBCD()
 end
 Checkbut.QKBut:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["SkillFBCD"]["AddBut"]=true
+		PIGA["SkillFBCD"]["AddBut"]=true
 		QuickButUI.SkillFBCD()
 	else
-		PIG["SkillFBCD"]["AddBut"]=false
+		PIGA["SkillFBCD"]["AddBut"]=false
 		Pig_Options_RLtishi_UI:Show();
 	end
 end);
 Checkbut:HookScript("OnShow", function (self)
-	self:SetChecked(PIG["SkillFBCD"]["Open"])
-	self.QKBut:SetChecked(PIG["SkillFBCD"]["AddBut"])
+	self:SetChecked(PIGA["SkillFBCD"]["Open"])
+	self.QKBut:SetChecked(PIGA["SkillFBCD"]["AddBut"])
 end);

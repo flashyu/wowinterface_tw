@@ -25,7 +25,7 @@ local function huoqurenwuzhuangtai()
 				--print(isComplete)
 				if isComplete==1 then	
 					if not QuestsEndFrameUI.wanchengqingkuang[questID] and QuestsEndFrameUI.chucijiazai then
-						PlaySoundFile(AudioList[PIG["Rurutia"]["QuestsEndAudio"]][2], "Master")	
+						PlaySoundFile(AudioList[PIGA["Rurutia"]["QuestsEndAudio"]][2], "Master")	
 					end
 				else
 					yiwancheng = false
@@ -55,7 +55,7 @@ local function huoqurenwuzhuangtai()
 					end
 					if yiwancheng then
 						if not QuestsEndFrameUI.wanchengqingkuang[info.questID] and QuestsEndFrameUI.chucijiazai then
-							PlaySoundFile(AudioList[PIG["Rurutia"]["QuestsEndAudio"]][2], "Master")	
+							PlaySoundFile(AudioList[PIGA["Rurutia"]["QuestsEndAudio"]][2], "Master")	
 						end		
 					end
 					QuestsEndFrameUI.wanchengqingkuang[info.questID]=yiwancheng
@@ -80,7 +80,7 @@ QuestsEndFrameUI:SetScript("OnEvent", function(self,event,arg1,arg2,arg3)
 	end
 end)
 function Rurutiafun.QuestsEnd_Open(Check)
-	if PIG["Rurutia"]["QuestsEnd"] then
+	if PIGA["Rurutia"]["QuestsEnd"] then
 		QuestsEndFrameUI:RegisterEvent("PLAYER_ENTERING_WORLD")
 		if Check=="Check" then
 			zhucewshijian()

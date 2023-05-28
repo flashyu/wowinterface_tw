@@ -396,7 +396,7 @@ local function TalentFrame_ADD()
 end
 if tocversion<20000 then
 	function FramePlusfun.Talent()
-		if not PIG["FramePlus"]["Talent"] then return end
+		if not PIGA["FramePlus"]["Talent"] then return end
 		if IsAddOnLoaded("Blizzard_TalentUI") then
 			TalentFrame_ADD()
 		else

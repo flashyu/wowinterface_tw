@@ -18,7 +18,7 @@ local AutoFollowF =PIGOptionsList_R(CommonFun.RTabFrame,L["COMMON_TABNAME3"],90)
 
 ---创建快捷按钮
 function QuickButUI:AutoFollow()	
-	if PIG["QuickBut"]["Open"] and PIG["QuickFollow"]["QuickBut"] then
+	if PIGA["QuickBut"]["Open"] and PIGA["QuickFollow"]["QuickBut"] then
 		if Gensui_Z_UI then return end
 		local nr = QuickButUI.nr
 		local butW = nr:GetHeight()
@@ -63,12 +63,12 @@ function QuickButUI:AutoFollow()
 		gensuiB:HookScript("OnClick", function (self)
 			if self:GetChecked() then
 				AutoFollowF.gensuiF.B_Open:SetChecked(true)
-				PIG_Per["QuickFollow"]["beidongOpen"]=true
+				PIG_PerA["QuickFollow"]["beidongOpen"]=true
 			else
 				AutoFollowF.gensuiF.B_Open:SetChecked(false)
-				PIG_Per["QuickFollow"]["beidongOpen"]=false
+				PIG_PerA["QuickFollow"]["beidongOpen"]=false
 			end
-			CommonFun.Gensui_B(PIG_Per["QuickFollow"]["beidongOpen"],AutoFollowF)
+			CommonFun.Gensui_B(PIG_PerA["QuickFollow"]["beidongOpen"],AutoFollowF)
 		end);
 
 		----
@@ -88,27 +88,27 @@ function QuickButUI:AutoFollow()
 			if botton=="LeftButton" then
 				if IsInGroup() then
 					if IsInRaid() then
-						SendChatMessage(PIG["QuickFollow"]["Kaishi"], "RAID", nil);
+						SendChatMessage(PIGA["QuickFollow"]["Kaishi"], "RAID", nil);
 					else
-						SendChatMessage(PIG["QuickFollow"]["Kaishi"], "PARTY", nil);
+						SendChatMessage(PIGA["QuickFollow"]["Kaishi"], "PARTY", nil);
 					end
 				end
 			else
 				if IsInGroup() then
 					if IsInRaid() then
-						SendChatMessage(PIG["QuickFollow"]["Jieshu"], "RAID", nil);
+						SendChatMessage(PIGA["QuickFollow"]["Jieshu"], "RAID", nil);
 					else
-						SendChatMessage(PIG["QuickFollow"]["Jieshu"], "PARTY", nil);
+						SendChatMessage(PIGA["QuickFollow"]["Jieshu"], "PARTY", nil);
 					end
 				end
 			end
 		end);
 		QuickButUI:GengxinWidth()
 		--
-		if PIG_Per["QuickFollow"]["beidongOpen"] then
+		if PIG_PerA["QuickFollow"]["beidongOpen"] then
 			Gensui_B_UI:SetChecked(true) Gensui_B_CMD_UI:Disable() 
 			C_Timer.After(3,function()
-				CommonFun.Gensui_B(PIG_Per["QuickFollow"]["beidongOpen"],AutoFollowF)
+				CommonFun.Gensui_B(PIG_PerA["QuickFollow"]["beidongOpen"],AutoFollowF)
 			end)
 		end
 	end
@@ -117,10 +117,10 @@ end
 AutoFollowF.QuickBut=PIGCheckbutton(AutoFollowF,{"TOPLEFT",AutoFollowF,"TOPLEFT",20,-20},{"添加<跟随开关>到功能动作条","在功能动作条显示跟随开关按钮\n|cff00FF00注意：此功能需先打开功能动作条功能|r"})
 AutoFollowF.QuickBut:HookScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["QuickFollow"]["QuickBut"]=true;
+		PIGA["QuickFollow"]["QuickBut"]=true;
 		QuickButUI.AutoFollow()
 	else
-		PIG["QuickFollow"]["QuickBut"]=false;
+		PIGA["QuickFollow"]["QuickBut"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
@@ -128,26 +128,26 @@ end);
 AutoFollowF.gensuijiuwei=PIGCheckbutton(AutoFollowF,{"TOPLEFT",AutoFollowF,"TOPLEFT",20,-60},{"跟随时自动就位","开启后，跟随时将自动确认就位确认"})
 AutoFollowF.gensuijiuwei:HookScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["QuickFollow"]["Jiuwei"]=true;
+		PIGA["QuickFollow"]["Jiuwei"]=true;
 	else
-		PIG["QuickFollow"]["Jiuwei"]=false;
+		PIGA["QuickFollow"]["Jiuwei"]=false;
 	end
 end);
 AutoFollowF.yijiaoduizhang=PIGCheckbutton(AutoFollowF,{"TOPLEFT",AutoFollowF,"TOPLEFT",300,-60},{"跟随时自动移交队长/团长","开启后，跟随时收到密语内容为[队长]/[团长]，将自动移交队长/团长给对方"})
 AutoFollowF.yijiaoduizhang:HookScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["QuickFollow"]["Yijiao"]=true;
+		PIGA["QuickFollow"]["Yijiao"]=true;
 	else
-		PIG["QuickFollow"]["Yijiao"]=false;
+		PIGA["QuickFollow"]["Yijiao"]=false;
 	end
 end);
 --提示
 AutoFollowF.GensuiTishi=PIGCheckbutton(AutoFollowF,{"TOPLEFT",AutoFollowF,"TOPLEFT",300,-20},{"开始和停止跟随提示","开启后，开始和停止跟随会在队伍/私聊频道提示"})
 AutoFollowF.GensuiTishi:HookScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["QuickFollow"]["Tishi"]=true;
+		PIGA["QuickFollow"]["Tishi"]=true;
 	else
-		PIG["QuickFollow"]["Tishi"]=false;
+		PIGA["QuickFollow"]["Tishi"]=false;
 	end
 end);
 if tocversion>20000 then
@@ -168,11 +168,11 @@ end
 local function ESCbianji_E(Frame1,Frame2,data1,data2)
 	Frame1:ClearFocus();Frame2:Hide();
 	Frame1:SetTextColor(200/255, 200/255, 200/255, 0.8);
-	Frame1:SetText(PIG[data1][data2]);
+	Frame1:SetText(PIGA[data1][data2]);
 end
 --save
 local function baocunbianji_E(Frame1,Frame2,data1,data2)
-	PIG[data1][data2]=Frame1:GetText()
+	PIGA[data1][data2]=Frame1:GetText()
 	Frame1:ClearFocus()
 	Frame1:SetTextColor(200/255, 200/255, 200/255, 0.8);
 	Frame2:Hide();
@@ -202,20 +202,20 @@ else
 end
 AutoFollowF.gensuiF.B_Open:HookScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG_Per["QuickFollow"]["beidongOpen"]=true
+		PIG_PerA["QuickFollow"]["beidongOpen"]=true
 		if Gensui_B_UI then Gensui_B_UI:SetChecked(true) end
 	else
-		PIG_Per["QuickFollow"]["beidongOpen"]=false
+		PIG_PerA["QuickFollow"]["beidongOpen"]=false
 		if Gensui_B_UI then Gensui_B_UI:SetChecked(false) end
 	end
-	CommonFun.Gensui_B(PIG_Per["QuickFollow"]["beidongOpen"],AutoFollowF)
+	CommonFun.Gensui_B(PIG_PerA["QuickFollow"]["beidongOpen"],AutoFollowF)
 end)
 AutoFollowF.gensuiF.ST_B_Duizhang=PIGCheckbutton(AutoFollowF.gensuiF,{"TOPLEFT",AutoFollowF.gensuiF,"TOPLEFT",300,-40},{"只接受队长指令","只接受来自队长的指令"})
 AutoFollowF.gensuiF.ST_B_Duizhang:HookScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["QuickFollow"]["Duizhang"]=true;
+		PIGA["QuickFollow"]["Duizhang"]=true;
 	else
-		PIG["QuickFollow"]["Duizhang"]=false;
+		PIGA["QuickFollow"]["Duizhang"]=false;
 	end
 end);
 --开始指令
@@ -282,9 +282,9 @@ if tocversion<20000 then
 	AutoFollowF.gensuiF.qianglimoshi=PIGCheckbutton(AutoFollowF.gensuiF,{"TOPLEFT",AutoFollowF.gensuiF,"TOPLEFT",20,-120},{"强力模式","开启后，在未收到停止指令前不会停止跟随"})
 	AutoFollowF.gensuiF.qianglimoshi:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["QuickFollow"]["Qiangli"]=true;
+			PIGA["QuickFollow"]["Qiangli"]=true;
 		else
-			PIG["QuickFollow"]["Qiangli"]=false;
+			PIGA["QuickFollow"]["Qiangli"]=false;
 		end
 	end);
 else
@@ -368,12 +368,12 @@ AutoFollowF.gensuiFZ:HookScript("OnHide", function(self)
 end);
 --=============================
 AutoFollowF:HookScript("OnShow", function(self)
-	self.QuickBut:SetChecked(PIG["QuickFollow"]["QuickBut"])
-	self.gensuiFZ.ST_Z_E:SetText(PIG["QuickFollow"]["Name"]);
-	self.gensuiF.ST_B_E:SetText(PIG["QuickFollow"]["Kaishi"]);
-	self.gensuiF.ST_B_E_E:SetText(PIG["QuickFollow"]["Jieshu"]);
-	self.gensuiF.ST_B_Duizhang:SetChecked(PIG["QuickFollow"]["Duizhang"]);
-	self.GensuiTishi:SetChecked(PIG["QuickFollow"]["Tishi"]);
-	self.gensuijiuwei:SetChecked(PIG["QuickFollow"]["Jiuwei"]);
-	self.yijiaoduizhang:SetChecked(PIG["QuickFollow"]["Yijiao"]);
+	self.QuickBut:SetChecked(PIGA["QuickFollow"]["QuickBut"])
+	self.gensuiFZ.ST_Z_E:SetText(PIGA["QuickFollow"]["Name"]);
+	self.gensuiF.ST_B_E:SetText(PIGA["QuickFollow"]["Kaishi"]);
+	self.gensuiF.ST_B_E_E:SetText(PIGA["QuickFollow"]["Jieshu"]);
+	self.gensuiF.ST_B_Duizhang:SetChecked(PIGA["QuickFollow"]["Duizhang"]);
+	self.GensuiTishi:SetChecked(PIGA["QuickFollow"]["Tishi"]);
+	self.gensuijiuwei:SetChecked(PIGA["QuickFollow"]["Jiuwei"]);
+	self.yijiaoduizhang:SetChecked(PIGA["QuickFollow"]["Yijiao"]);
 end)

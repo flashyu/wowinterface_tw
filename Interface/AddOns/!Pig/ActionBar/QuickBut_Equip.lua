@@ -43,19 +43,19 @@ local AutoEquip_tooltip = {
 QuickButF.ModF.AutoEquip=PIGCheckbutton_R(QuickButF.ModF,AutoEquip_tooltip,true)
 QuickButF.ModF.AutoEquip:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["QuickBut"]["AutoEquip"]=true;
+		PIGA["QuickBut"]["AutoEquip"]=true;
 		QuickButUI:AutoEquip()
 	else
-		PIG["QuickBut"]["AutoEquip"]=false;
+		PIGA["QuickBut"]["AutoEquip"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end)
 --
 QuickButF.ModF:HookScript("OnShow", function(self)
-	self.AutoEquip:SetChecked(PIG["QuickBut"]["AutoEquip"])
+	self.AutoEquip:SetChecked(PIGA["QuickBut"]["AutoEquip"])
 end)
 function QuickButUI:AutoEquip()
-	if not PIG["QuickBut"]["Open"] or not PIG["QuickBut"]["AutoEquip"] then return end
+	if not PIGA["QuickBut"]["Open"] or not PIGA["QuickBut"]["AutoEquip"] then return end
 	local GnUI = "QkBut_AutoEquip"
 	if _G[GnUI] then return end
 	local FrameOnUpdate = CreateFrame("Frame");
@@ -144,7 +144,7 @@ function QuickButUI:AutoEquip()
 			if button=="LeftButton" then
 				if tocversion<30000 then
 					if InCombatLockdown() then return end
-					local wupinshujuinfo =PIG_Per['QuickBut']['AutoEquipList'][i]
+					local wupinshujuinfo =PIG_PerA['QuickBut']['AutoEquipList'][i]
 					if wupinshujuinfo then
 						FrameOnUpdate.hejilist={}
 						for gg=1,#wupinshujuinfo do
@@ -224,7 +224,7 @@ function QuickButUI:AutoEquip()
 						local itemLink = GetInventoryItemLink("player", zhuangbeixilieID[inv][1])
 						table.insert(wupinshujuinfo, {zhuangbeixilieID[inv][1],itemLink});
 					end
-					PIG_Per['QuickBut']['AutoEquipList'][i] = wupinshujuinfo
+					PIG_PerA['QuickBut']['AutoEquipList'][i] = wupinshujuinfo
 					PIG_print("当前装备已保存到"..i.."号配装");
 				else
 					--C_EquipmentSet.UnassignEquipmentSetSpec(i-1)

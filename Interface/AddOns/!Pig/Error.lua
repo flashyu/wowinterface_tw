@@ -129,7 +129,7 @@ Bugcollect.Moving:SetScript("OnDragStop",function()
 end)
 Bugcollect.Moving.qingkong = ADD_Button(L["ERROR_CLEAR"],nil,Bugcollect.Moving,{60,20},{"TOPRIGHT",Bugcollect.Moving,"TOPRIGHT",-80,-2.8})
 Bugcollect.Moving.qingkong:SetScript("OnClick", function (self)
-	PIG["Error"]["ErrorInfo"]={}
+	PIGA["Error"]["ErrorInfo"]={}
 	bencierrinfo={}
 	Bugcollect:qingkongERR()
 end);
@@ -210,7 +210,7 @@ local function xianshixinxi(id)
 			shujuyuan.ly=bencierrinfo
 			shujuyuan.num=#shujuyuan.ly
 		elseif BugcollectTAB_2.Show then
-			shujuyuan.ly=PIG["Error"]["ErrorInfo"]
+			shujuyuan.ly=PIGA["Error"]["ErrorInfo"]
 			shujuyuan.num=#shujuyuan.ly
 		end
 		if shujuyuan.num==0 then return end
@@ -259,7 +259,7 @@ local function kaishiShow()
 		local tablenum = #bencierrinfo
 		xianshixinxi(tablenum)
 	elseif BugcollectTAB_2.Show then
-		local tablenum = #PIG["Error"]["ErrorInfo"]
+		local tablenum = #PIGA["Error"]["ErrorInfo"]
 		xianshixinxi(tablenum)
 	end
 end
@@ -307,7 +307,7 @@ Bugcollect.nextZ:SetScript("OnClick", function(self, button)
 			if x==1 then
 				xianshixinxi(#bencierrinfo)
 			elseif x==2 then
-				xianshixinxi(#PIG["Error"]["ErrorInfo"])
+				xianshixinxi(#PIGA["Error"]["ErrorInfo"])
 			end
 		end
 	end
@@ -320,7 +320,7 @@ end)
 ----错误处理FUN
 local function errottishi()
 	if Bugcollect.yijiazai then
-		if PIG["Error"] and PIG["Error"]["ErrorTishi"] and MinimapButton_PigUI then
+		if PIGA["Error"] and PIGA["Error"]["ErrorTishi"] and MinimapButton_PigUI then
 			MinimapButton_PigUI.error:Show();
 		end
 	end
@@ -349,11 +349,11 @@ Pig_seterrorhandler(errotFUN);
 function seterrorhandler() end
 --========================================================
 local function del_ErrorInfo()			
-	PIG["Error"]=PIG["Error"] or addonTable.Default["Error"]
-	if #PIG["Error"]["ErrorInfo"]>0 then
-		for i=#PIG["Error"]["ErrorInfo"],1,-1 do
-			if (GetServerTime()-PIG["Error"]["ErrorInfo"][i][2])>86400 then
-				table.remove(PIG["Error"]["ErrorInfo"],i)
+	PIGA["Error"]=PIGA["Error"] or addonTable.Default["Error"]
+	if #PIGA["Error"]["ErrorInfo"]>0 then
+		for i=#PIGA["Error"]["ErrorInfo"],1,-1 do
+			if (GetServerTime()-PIGA["Error"]["ErrorInfo"][i][2])>86400 then
+				table.remove(PIGA["Error"]["ErrorInfo"],i)
 			end
 		end
 	end
@@ -380,7 +380,7 @@ Bugcollect:SetScript("OnEvent", function(self,event,arg1,arg2)
 	elseif event=="PLAYER_LOGOUT" then
 		local hejishu=#bencierrinfo
 		for i=1,hejishu do
-			table.insert(PIG["Error"]["ErrorInfo"], bencierrinfo[i]);
+			table.insert(PIGA["Error"]["ErrorInfo"], bencierrinfo[i]);
 		end
 	elseif event=="ADDON_ACTION_FORBIDDEN" or event=="ADDON_ACTION_BLOCKED" then
 		local msg = "["..event.."] "..L["ERROR_ADDON"].."< "..arg1.." >"..L["ERROR_ERROR1"].."< "..arg2.." >"

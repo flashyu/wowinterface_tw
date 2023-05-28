@@ -32,11 +32,11 @@ MiniMapF.Minimap_but:SetScript("OnClick", function (self)
 	if self:GetChecked() then
 		MiniMapF.Minimap_but_SN:Enable();
 		MiniMapF.Minimap_but_BS:Enable();
-		PIG.Map.MinimapBut=true;
+		PIGA["Map"]["MinimapBut"]=true;
 		Mapfun.ADD_MinimapBut()
 		Mapfun.ShouNaMiniBut()
 	else
-		PIG.Map.MinimapBut=false;
+		PIGA["Map"]["MinimapBut"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end)
@@ -44,16 +44,16 @@ end)
 MiniMapF.Minimap_but_BS = PIGCheckbutton_R(MiniMapF,{L["MAP_NIMIBUT_BS"],L["MAP_NIMIBUT_BSTIPS"]},true)
 MiniMapF.Minimap_but_BS:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG.Map.MinimapShouNa_BS=true;
+		PIGA["Map"]["MinimapShouNa_BS"]=true;
 		MinimapButton_PigUI:SetParent(Minimap)
 		MinimapButton_PigUI:SetFrameStrata("MEDIUM")
-		if PIG.Map.MinimapShouNa then
+		if PIGA["Map"]["MinimapShouNa"] then
 			MiniMapF.Minimap_but_SN:SetChecked(false)
-			PIG.Map.MinimapShouNa=false
+			PIGA["Map"]["MinimapShouNa"]=false
 			Pig_Options_RLtishi_UI:Show()
 		end
 	else
-		PIG.Map.MinimapShouNa_BS=false;
+		PIGA["Map"]["MinimapShouNa_BS"]=false;
 		MinimapButton_PigUI:SetParent(UIParent)
 	end
 end);
@@ -62,11 +62,11 @@ MiniMapF.Minimap_but_SN = PIGCheckbutton_R(MiniMapF,{L["MAP_NIMIBUT_SN"],L["MAP_
 MiniMapF.Minimap_but_SN:SetScript("OnClick", function (self)
 	if self:GetChecked() then
 		MiniMapF.Minimap_but_BS:SetChecked(false)
-		PIG.Map.MinimapShouNa_BS=false
-		PIG.Map.MinimapShouNa=true;
+		PIGA["Map"]["MinimapShouNa_BS"]=false
+		PIGA["Map"]["MinimapShouNa"]=true;
 		Mapfun.ShouNaMiniBut()
 	else
-		PIG.Map.MinimapShouNa=false;
+		PIGA["Map"]["MinimapShouNa"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
@@ -78,13 +78,13 @@ function MiniMapF.Minimap_but_SN.Smeihangshu:PIGDownMenu_Update_But(self)
 	info.func = self.PIGDownMenu_SetValue
 	for i=1,#meihangshuxiala,1 do
 	    info.text, info.arg1 = meihangshuxiala[i].."个", meihangshuxiala[i]
-	    info.checked = meihangshuxiala[i]==PIG["Map"]["MinimapShouNa_hang"]
+	    info.checked = meihangshuxiala[i]==PIGA["Map"]["MinimapShouNa_hang"]
 		MiniMapF.Minimap_but_SN.Smeihangshu:PIGDownMenu_AddButton(info)
 	end 
 end
 function MiniMapF.Minimap_but_SN.Smeihangshu:PIGDownMenu_SetValue(value,arg1,arg2)
 	MiniMapF.Minimap_but_SN.Smeihangshu:PIGDownMenu_SetText(L["MAP_NIMIBUT_HANGNUM"]..value)
-	PIG["Map"]["MinimapShouNa_hang"]=arg1
+	PIGA["Map"]["MinimapShouNa_hang"]=arg1
 	Mapfun.ShouNaMiniBut()
 	PIGCloseDropDownMenus()
 end
@@ -103,7 +103,7 @@ local function gengxinMiniPaichu(self)
 	for id = 1, hang_NUM do
 		_G["MiniMapbuf_SN"..id]:Hide()
     end
-	local data = PIG["Map"]["MinimapBpaichu"]
+	local data = PIGA["Map"]["MinimapBpaichu"]
 	FauxScrollFrame_Update(self, #data, hang_NUM, hang_Height);
 	local offset = FauxScrollFrame_GetOffset(self);
     for id = 1, hang_NUM do
@@ -161,7 +161,7 @@ MiniMapF.MinimapButF.DELF:Hide();
 MiniMapF.MinimapButF.DELF.text1=PIGFontString(MiniMapF.MinimapButF.DELF,{"TOP", MiniMapF.MinimapButF.DELF, "TOP", 0,-28},L["MAP_NIMIBUT_DELTIPS"])
 MiniMapF.MinimapButF.DELF.YES = PIGButton(MiniMapF.MinimapButF.DELF,{"TOP",MiniMapF.MinimapButF.DELF,"TOP",-50,-70},{60,24},L["LIB_ENT"])
 MiniMapF.MinimapButF.DELF.YES:SetScript("OnClick", function ()
-	table.remove(PIG["Map"]["MinimapBpaichu"], MiniMapF.MinimapButF.DELF.hangID);
+	table.remove(PIGA["Map"]["MinimapBpaichu"], MiniMapF.MinimapButF.DELF.hangID);
 	gengxinMiniPaichu(MiniMapF.MinimapButF.Scroll);
 	MiniMapF.MinimapButF.DELF:Hide();
 end);
@@ -208,13 +208,13 @@ MiniMapF.MinimapButF.ADDFrame.YES:SetScript("OnClick", function ()
 	if delIDHAPxx=="" or delIDHAPxx==" " then
 		MiniMapF.MinimapButF.ADDFrame.err:SetText(L["MAP_NIMIBUT_ADDERR1"]);	
 	else
-		for h=1,#PIG["Map"]["MinimapBpaichu"] do
-			if delIDHAPxx==PIG["Map"]["MinimapBpaichu"][h] then
+		for h=1,#PIGA["Map"]["MinimapBpaichu"] do
+			if delIDHAPxx==PIGA["Map"]["MinimapBpaichu"][h] then
 				MiniMapF.MinimapButF.ADDFrame.err:SetText(L["MAP_NIMIBUT_ADDERR2"]);
 				return
 			end
 		end
-		table.insert(PIG["Map"]["MinimapBpaichu"], delIDHAPxx);
+		table.insert(PIGA["Map"]["MinimapBpaichu"], delIDHAPxx);
 		gengxinMiniPaichu(MiniMapF.MinimapButF.Scroll);
 		MiniMapF.MinimapButF.ADDFrame:Hide();
 	end
@@ -226,14 +226,14 @@ end);
 ----
 MiniMapF:HookScript("OnShow", function (self)
 	gengxinMiniPaichu(MiniMapF.MinimapButF.Scroll);
-	self.Minimap_but_SN.Smeihangshu:PIGDownMenu_SetText(L["MAP_NIMIBUT_HANGNUM"]..PIG["Map"]["MinimapShouNa_hang"].."个")
-	if PIG.Map.MinimapBut then
+	self.Minimap_but_SN.Smeihangshu:PIGDownMenu_SetText(L["MAP_NIMIBUT_HANGNUM"]..PIGA["Map"]["MinimapShouNa_hang"].."个")
+	if PIGA["Map"]["MinimapBut"] then
 		self.Minimap_but:SetChecked(true);
 	end
-	if PIG.Map.MinimapShouNa then
+	if PIGA["Map"]["MinimapShouNa"] then
 		self.Minimap_but_SN:SetChecked(true);
 	end
-	if PIG.Map.MinimapShouNa_BS then
+	if PIGA["Map"]["MinimapShouNa_BS"] then
 		self.Minimap_but_BS:SetChecked(true);
 	end
 end);
@@ -243,10 +243,10 @@ local WorldMapF =PIGOptionsList_R(RTabFrame,L["MAP_TABNAME2"],90)
 WorldMapF.WorldMapXY = PIGCheckbutton_R(WorldMapF,{L["MAP_WORDXY"],L["MAP_WORDXYTIPS"]},true)
 WorldMapF.WorldMapXY:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG.Map.WorldMapXY=true;
+		PIGA["Map"]["WorldMapXY"]=true;
 		Mapfun.WorldMap_XY()
 	else
-		PIG.Map.WorldMapXY=false;
+		PIGA["Map"]["WorldMapXY"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
@@ -254,51 +254,51 @@ if tocversion<100000 then
 	WorldMapF.WorldMapWind = PIGCheckbutton_R(WorldMapF,{L["MAP_WORDWIND"],L["MAP_WORDWINDTIPS"]},true)
 	WorldMapF.WorldMapWind:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG.Map.WorldMapWind=true;
+			PIGA["Map"]["WorldMapWind"]=true;
 			Mapfun.WorldMap_Wind()
 		else
-			PIG.Map.WorldMapWind=false;
+			PIGA["Map"]["WorldMapWind"]=false;
 			Pig_Options_RLtishi_UI:Show()
 		end
 	end);
 	WorldMapF.WorldMapLV = PIGCheckbutton_R(WorldMapF,{L["MAP_WORDLV"],L["MAP_WORDLVTIPS"]},true)
 	WorldMapF.WorldMapLV:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG.Map.WorldMapLV=true;
+			PIGA["Map"]["WorldMapLV"]=true;
 			Mapfun.WorldMap_LVSkill()
 		else
-			PIG.Map.WorldMapLV=false;
+			PIGA["Map"]["WorldMapLV"]=false;
 			Pig_Options_RLtishi_UI:Show()
 		end
 	end);
 	WorldMapF.WorldMapSkill = PIGCheckbutton_R(WorldMapF,{L["MAP_WORDSKILL"],L["MAP_WORDSKILLTIPS"]},true)
 	WorldMapF.WorldMapSkill:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG.Map.WorldMapSkill=true;
+			PIGA["Map"]["WorldMapSkill"]=true;
 			Mapfun.WorldMap_LVSkill()
 		else
-			PIG.Map.WorldMapSkill=false;
+			PIGA["Map"]["WorldMapSkill"]=false;
 			Pig_Options_RLtishi_UI:Show()
 		end
 	end);
 	WorldMapF.WorldMapMiwu = PIGCheckbutton_R(WorldMapF,{L["MAP_WORDMIWU"],L["MAP_WORDMIWUTIPS"]},true)
 	WorldMapF.WorldMapMiwu:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG.Map.WorldMapMiwu=true;
+			PIGA["Map"]["WorldMapMiwu"]=true;
 			Mapfun.WorldMap_Miwu()
 		else
-			PIG.Map.WorldMapMiwu=false;
+			PIGA["Map"]["WorldMapMiwu"]=false;
 			Pig_Options_RLtishi_UI:Show()
 		end
 	end);
 end
 WorldMapF:HookScript("OnShow", function (self)
-	WorldMapF.WorldMapXY:SetChecked(PIG.Map.WorldMapXY)
+	WorldMapF.WorldMapXY:SetChecked(PIGA["Map"]["WorldMapXY"])
 	if tocversion<100000 then
-		WorldMapF.WorldMapWind:SetChecked(PIG.Map.WorldMapWind)
-		WorldMapF.WorldMapLV:SetChecked(PIG.Map.WorldMapLV)
-		WorldMapF.WorldMapSkill:SetChecked(PIG.Map.WorldMapSkill)
-		WorldMapF.WorldMapMiwu:SetChecked(PIG.Map.WorldMapMiwu)
+		WorldMapF.WorldMapWind:SetChecked(PIGA["Map"]["WorldMapWind"])
+		WorldMapF.WorldMapLV:SetChecked(PIGA["Map"]["WorldMapLV"])
+		WorldMapF.WorldMapSkill:SetChecked(PIGA["Map"]["WorldMapSkill"])
+		WorldMapF.WorldMapMiwu:SetChecked(PIGA["Map"]["WorldMapMiwu"])
 	end
 end);
 --==================================

@@ -1,8 +1,8 @@
 
 TargetNameplateIndicatorDB = {
 	["profileKeys"] = {
-		["上山打鸟 - 伊弗斯"] = "Default",
 		["狂暴專家 - 伊弗斯"] = "Default",
+		["上山打鸟 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -12,9 +12,9 @@ TargetNameplateIndicatorDB = {
 					["texture"] = "Interface\\AddOns\\TargetNameplateIndicator\\Textures\\NeonRedArrow",
 				},
 				["hostile"] = {
-					["yOffset"] = -5,
-					["height"] = 25,
 					["width"] = 25,
+					["height"] = 25,
+					["yOffset"] = -5,
 					["texture"] = "Interface\\AddOns\\TargetNameplateIndicator\\Textures\\NeonRedArrow",
 				},
 				["friendly"] = {
@@ -26,8 +26,8 @@ TargetNameplateIndicatorDB = {
 			},
 			["focus"] = {
 				["hostile"] = {
-					["yOffset"] = 0,
 					["width"] = 30,
+					["yOffset"] = 0,
 					["height"] = 30,
 				},
 			},

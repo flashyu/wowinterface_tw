@@ -27,28 +27,30 @@ local UINameList_AddOn={
 	{"InspectFrame","Blizzard_InspectUI",},--观察
 }
 local function Moving(Frame,MovingUI)
-	local MovingUI = MovingUI or Frame
-	MovingUI:EnableMouse(true)
-	MovingUI:SetMovable(true)
- 	MovingUI:SetClampedToScreen(true)
- 	Frame:RegisterForDrag("LeftButton")
-    Frame:SetScript("OnDragStart",function()
-        MovingUI:StartMoving();
-    end)
-    Frame:SetScript("OnDragStop",function()
-        MovingUI:StopMovingOrSizing()
-    end)
+	if Frame then
+		local MovingUI = MovingUI or Frame
+		MovingUI:EnableMouse(true)
+		MovingUI:SetMovable(true)
+	 	MovingUI:SetClampedToScreen(true)
+	 	Frame:RegisterForDrag("LeftButton")
+	    Frame:SetScript("OnDragStart",function()
+	        MovingUI:StartMoving();
+	    end)
+	    Frame:SetScript("OnDragStop",function()
+	        MovingUI:StopMovingOrSizing()
+	    end)
+	end
 end
 --
 function FramePlusfun.yidongUI()
-	if not PIG['FramePlus']['yidongUI'] then return end
+	if not PIGA['FramePlus']['yidongUI'] then return end
 	for k,v in pairs(UINameList) do
 		Moving(v)
 	end
 	for k,v in pairs(UINameList_AddOn) do
 		if IsAddOnLoaded(v[2]) then
 			if AchievementFrame and v[1]==AchievementFrame:GetName() then
-				Moving(AchievementFrame.Header,_G[v[1]])
+				Moving(AchievementFrameHeader,_G[v[1]])
 			else
 		        Moving(_G[v[1]],_G[v[1]])
 		    end
@@ -65,7 +67,7 @@ function FramePlusfun.yidongUI()
 					    label:SetPoint('RIGHT', checkBox, 'RIGHT', 160, 1);
 					end
 	                if AchievementFrame and v[1]==AchievementFrame:GetName() then
-						Moving(AchievementFrame.Header,_G[v[1]])
+						Moving(AchievementFrameHeader,_G[v[1]])
 					else
 				        Moving(_G[v[1]],_G[v[1]])
 				    end

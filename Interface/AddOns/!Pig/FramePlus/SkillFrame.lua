@@ -179,7 +179,7 @@ local function ADD_Craft_QK()
 	end);
 end
 function FramePlusfun.Skill_QKbut()
-	if not PIG["FramePlus"]["Skill_QKbut"] then return end
+	if not PIGA["FramePlus"]["Skill_QKbut"] then return end
 	if NDui then return end
 	if tocversion<100000 then
 		if IsAddOnLoaded("Blizzard_TradeSkillUI") then
@@ -552,7 +552,7 @@ local function CraftFunc()
 	end
 end
 function FramePlusfun.Skill()
-	if not PIG["FramePlus"]["Skill"] then return end
+	if not PIGA["FramePlus"]["Skill"] then return end
 	if NDui then return end
 	if IsAddOnLoaded("Blizzard_TradeSkillUI") then
 		TradeSkillFunc()

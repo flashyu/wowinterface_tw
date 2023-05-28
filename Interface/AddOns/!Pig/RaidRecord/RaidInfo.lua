@@ -148,7 +148,7 @@ local function ADD_RaidInfo()
 				if #renyuanifoHC[x]>0 then
 					for xx=1,#renyuanifoHC[x] do
 								--检索组队信息里人员职责
-								local zuduiinfo = PIG["RaidRecord"]["Invite"]["linshiInfo"]
+								local zuduiinfo = PIGA["RaidRecord"]["Invite"]["linshiInfo"]
 								for v=#zuduiinfo,1, -1 do
 									if renyuanifoHC[x][xx][4]==zuduiinfo[v][1] then
 										if zuduiinfo[v][2]=="坦克补助" or zuduiinfo[v][2]=="治疗补助" then
@@ -158,7 +158,7 @@ local function ADD_RaidInfo()
 									end
 								end
 								--检索OLD
-								local tuanduiinfo = PIG["RaidRecord"]["Raidinfo"]
+								local tuanduiinfo = PIGA["RaidRecord"]["Raidinfo"]
 								for i=1,8 do
 									if #tuanduiinfo[i]>0 then
 										for ii=1,#tuanduiinfo[i] do
@@ -176,7 +176,7 @@ local function ADD_RaidInfo()
 					end
 				end
 			end
-			PIG["RaidRecord"]["Raidinfo"]=renyuanifoHC;
+			PIGA["RaidRecord"]["Raidinfo"]=renyuanifoHC;
 		end
 	end
 	--刷新显示
@@ -196,7 +196,7 @@ local function ADD_RaidInfo()
 					_G["DuiwuF_P_"..i.."_"..ii].fenGbili_2:Hide();
 				end
 			end
-			local shujuyuan = PIG["RaidRecord"]["Raidinfo"]
+			local shujuyuan = PIGA["RaidRecord"]["Raidinfo"]
 			for i=1, #shujuyuan do
 				if #shujuyuan[i]>0 then
 					for ii=1, #shujuyuan[i] do
@@ -250,14 +250,14 @@ local function ADD_RaidInfo()
 		else
 			huoquRaidInfo_UI:Disable();
 		end
-		if PIG["RaidRecord"]["Dongjie"]=="OFF" then
+		if PIGA["RaidRecord"]["Dongjie"]=="OFF" then
 			fuFrame:UnregisterEvent("CHAT_MSG_WHISPER"); 
 			huoquRaidInfo_UI:SetText('冻结人员信息');
 			RaidR_UI.xiafangF.DongjieTishi:Hide();--冻结提示
 			fuFrame.shuaxinINFO:Hide();--人员分组获取按钮
 			fenG_BUT_UI:Disable();
 			zudui_but_UI:Enable();	
-		elseif PIG["RaidRecord"]["Dongjie"]=="ON" then
+		elseif PIGA["RaidRecord"]["Dongjie"]=="ON" then
 			fuFrame:RegisterEvent("CHAT_MSG_WHISPER");
 			huoquRaidInfo_UI:SetText('更新冻结信息');		
 			RaidR_UI.xiafangF.DongjieTishi:Show();
@@ -348,7 +348,7 @@ local function ADD_RaidInfo()
 	end)
 	--菜单函数
 	local function ClickMenuFUN(menuN,nameser)
-		local shujuyuan = PIG["RaidRecord"]["Raidinfo"]
+		local shujuyuan = PIGA["RaidRecord"]["Raidinfo"]
 		for i=1, #shujuyuan do
 			if #shujuyuan[i]>0 then
 				for ii=1, #shujuyuan[i] do
@@ -569,7 +569,7 @@ local function ADD_RaidInfo()
 		button1 = "确定",
 		button2 = "取消",
 		OnAccept = function()
-			PIG["RaidRecord"]["Dongjie"] = "OFF";
+			PIGA["RaidRecord"]["Dongjie"] = "OFF";
 			UpdateRiadInfo();
 			UpdateShow()
 			Update_BUT()
@@ -611,7 +611,7 @@ local function ADD_RaidInfo()
 		button1 = "确定",
 		button2 = "取消",
 		OnAccept = function()
-			PIG["RaidRecord"]["Dongjie"] = "ON";
+			PIGA["RaidRecord"]["Dongjie"] = "ON";
 			addonTable.RaidRecord_Invite_yaoqing=false;
 			addonTable.RaidRecord_Invite_hanhua=false;
 			UpdateRiadInfo();
@@ -641,7 +641,7 @@ local function ADD_RaidInfo()
 		button1 = "确定",
 		button2 = "取消",
 		OnAccept = function()
-			PIG["RaidRecord"]["Dongjie"] = "ON";
+			PIGA["RaidRecord"]["Dongjie"] = "ON";
 			addonTable.RaidRecord_Invite_yaoqing=false;
 			addonTable.RaidRecord_Invite_hanhua=false;
 			Update_BUT()
@@ -670,7 +670,7 @@ local function ADD_RaidInfo()
 	fuFrame:HookScript("OnEvent",function(self, event,arg1,_,_,_,arg5)
 		if event=="GROUP_ROSTER_UPDATE" then
 			Update_BUT()
-			if PIG["RaidRecord"]["Dongjie"] == "OFF" then
+			if PIGA["RaidRecord"]["Dongjie"] == "OFF" then
 				UpdateRiadInfo()
 				if fuFrame:IsShown() then UpdateShow() end
 				addonTable.RaidRecord_UpdateChengjiaorenxuanze()
@@ -686,14 +686,14 @@ local function ADD_RaidInfo()
 				local xinshui=arg1:find("薪水", 1)
 				if gongzi or xinshui then
 					for x=1,8 do
-						for xx=1,#PIG["RaidRecord"]["Raidinfo"][x] do
-							if #PIG["RaidRecord"]["Raidinfo"][x][xx]>0 then
-								if arg5 == PIG["RaidRecord"]["Raidinfo"][x][xx][4] then
-									if PIG["RaidRecord"]["Raidinfo"][x][xx][9]==0 then
-										PIG["RaidRecord"]["Raidinfo"][x][xx][9]=1;
+						for xx=1,#PIGA["RaidRecord"]["Raidinfo"][x] do
+							if #PIGA["RaidRecord"]["Raidinfo"][x][xx]>0 then
+								if arg5 == PIGA["RaidRecord"]["Raidinfo"][x][xx][4] then
+									if PIGA["RaidRecord"]["Raidinfo"][x][xx][9]==0 then
+										PIGA["RaidRecord"]["Raidinfo"][x][xx][9]=1;
 										SendChatMessage("已登记，工资将通过邮件送达,请注意查收！", "WHISPER", nil, arg5);
 										addonTable.RaidRecord_jisuanfenGData()--更新分G界面
-									elseif PIG["RaidRecord"]["Raidinfo"][x][xx][9]==1 then
+									elseif PIGA["RaidRecord"]["Raidinfo"][x][xx][9]==1 then
 										SendChatMessage("你已登记，请勿重复发送！", "WHISPER", nil, arg5);
 									end
 								end
@@ -705,7 +705,7 @@ local function ADD_RaidInfo()
 		end
 	end)
 	----------------------------------------------------------
-	if PIG["RaidRecord"]["Kaiqi"]=="ON" then
+	if PIGA["RaidRecord"]["Kaiqi"]=="ON" then
 		local englishFaction, _ = UnitFactionGroup("player")
 		if englishFaction=="Alliance" then
 			fuFrame.All.Tex:SetTexCoord(0,0.5,0,1);

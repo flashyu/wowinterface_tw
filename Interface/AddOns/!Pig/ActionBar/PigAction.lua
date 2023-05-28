@@ -112,7 +112,7 @@ local pailieweizhi={
 };
 local function PailieFun(index,id)
 	for x=1,#pailieID do
-		if PIG_Per["PigAction"]["Pailie"][index] == pailieID[x] then
+		if PIG_PerA["PigAction"]["Pailie"][index] == pailieID[x] then
 			_G[barName..index.."_But"..id]:ClearAllPoints();
 			_G[barName..index.."_But"..id]:SetPoint(pailieweizhi[x][id-1][1],_G[barName..index.."_But"..(id-pailieweizhi[x][id-1][5])],pailieweizhi[x][id-1][2],pailieweizhi[x][id-1][3],pailieweizhi[x][id-1][4])
 		end
@@ -163,15 +163,15 @@ local function ADD_ActionBar(index)
 	if Pig_bar.yidong then return end
 	-- Pig_bar:SetAttribute("type", "actionbar");
 	-- Pig_bar:SetAttribute("actionbar", index+100);
-	if PIG['ActionBar']['ActionBar_bili'] then
-		Pig_bar:SetScale(PIG['ActionBar']['ActionBar_bili_value']);
+	if PIGA['ActionBar']['ActionBar_bili'] then
+		Pig_bar:SetScale(PIGA['ActionBar']['ActionBar_bili_value']);
 	end
 	Pig_bar.yidong = PIGFrame(Pig_bar)
 	Pig_bar.yidong:PIGSetBackdrop()
 	Pig_bar.yidong:SetAllPoints(Pig_bar)
 	Pig_bar.yidong:EnableMouse(true)
 	Pig_bar.yidong:RegisterForDrag("LeftButton")
-	if PIG_Per["PigAction"]["Lock"][index] then Pig_bar.yidong:Hide() end
+	if PIG_PerA["PigAction"]["Lock"][index] then Pig_bar.yidong:Hide() end
 	Pig_bar.yidong.title = PIGFontString(Pig_bar.yidong,nil,index,nil,11)
 	Pig_bar.yidong.title:SetAllPoints(Pig_bar.yidong)
 	Pig_bar.yidong.title:SetTextColor(0.6, 0.6, 0.6, 1)
@@ -204,7 +204,7 @@ local function ADD_ActionBar(index)
 					_G["RightC_"..index.."_"..q]:SetChecked(false);
 				end
 				self:SetChecked(true);
-				PIG_Per["PigAction"]["Pailie"][index]=pailieID[b]
+				PIG_PerA["PigAction"]["Pailie"][index]=pailieID[b]
 				for id=2,anniugeshu do
 					PailieFun(self:GetID(),id)
 				end
@@ -225,7 +225,7 @@ local function ADD_ActionBar(index)
 				end
 				self.RightC:Show()
 				for l=1,#pailieID do
-					if PIG_Per["PigAction"]["Pailie"][index] == pailieID[l] then
+					if PIG_PerA["PigAction"]["Pailie"][index] == pailieID[l] then
 						_G["RightC_"..index.."_"..l]:SetChecked(true);
 					end
 				end
@@ -324,7 +324,7 @@ local function ADD_ActionBar(index)
 			GameTooltip:ClearLines();
 			GameTooltip:SetOwner(self, "ANCHOR_NONE");
 			GameTooltip:SetPoint("BOTTOMRIGHT",UIParent,"BOTTOMRIGHT",-100,140);
-			local butInfo = PIG_Per['PigAction']['ActionInfo'][self.action]
+			local butInfo = PIG_PerA['PigAction']['ActionInfo'][self.action]
 			if butInfo then
 				local Type=self.Type
 				if Type then
@@ -360,7 +360,7 @@ local function ADD_ActionBar(index)
 			GameTooltip:Hide() 
 		end);
 		--------------------
-		ActionBarfun.ShowHideEvent(piganniu,PIG_Per['PigAction']['ShowTJ'][index])
+		ActionBarfun.ShowHideEvent(piganniu,PIG_PerA['PigAction']['ShowTJ'][index])
 		piganniu:SetAttribute("_onstate-combatYN","if newstate == 'show' then self:Show(); else self:Hide(); end")
 
 		-- piganniu:RegisterEvent("ACTIONBAR_PAGE_CHANGED");
@@ -468,7 +468,7 @@ end
 function ActionBarfun.Pig_Action()
 	if tocversion<100000 then
 		for index=1,zongshu do
-			if PIG_Per["PigAction"]["Open"][index] then
+			if PIG_PerA["PigAction"]["Open"][index] then
 				ADD_ActionBar(index)
 			end
 		end
@@ -520,22 +520,22 @@ if tocversion<100000 then
 		end
 		kaiqiewaidongzuotiao:SetScript("OnClick", function (self)
 			if self:GetChecked() then
-				PIG_Per["PigAction"]["Open"][index]=true
+				PIG_PerA["PigAction"]["Open"][index]=true
 				ActionBarfun.Pig_Action()
 			else
-				PIG_Per["PigAction"]["Open"][index]=false
+				PIG_PerA["PigAction"]["Open"][index]=false
 				Pig_Options_RLtishi_UI:Show()
 			end
 		end);
 		kaiqiewaidongzuotiao.Lockdongzuotiao = PIGCheckbutton(kaiqiewaidongzuotiao, {"TOPLEFT",kaiqiewaidongzuotiao,"BOTTOMLEFT",30,0},{"锁定位置","锁定"..index.."号动作条位置，并隐藏拖拽按钮"});
 		kaiqiewaidongzuotiao.Lockdongzuotiao:SetScript("OnClick", function (self)
 			if self:GetChecked() then
-				PIG_Per["PigAction"]["Lock"][index]=true
+				PIG_PerA["PigAction"]["Lock"][index]=true
 			else
-				PIG_Per["PigAction"]["Lock"][index]=false
+				PIG_PerA["PigAction"]["Lock"][index]=false
 			end
 			if _G[barName..index] then
-				if PIG_Per["PigAction"]["Lock"][index] then
+				if PIG_PerA["PigAction"]["Lock"][index] then
 					_G[barName..index].yidong:Hide()
 				else
 					_G[barName..index].yidong:Show()
@@ -548,7 +548,7 @@ if tocversion<100000 then
 			info.func = self.PIGDownMenu_SetValue
 			for i=1,#Showtiaojian,1 do
 			    info.text, info.arg1 = Showtiaojian[i], i
-			    info.checked = i==PIG_Per["PigAction"]["ShowTJ"][index]
+			    info.checked = i==PIG_PerA["PigAction"]["ShowTJ"][index]
 				kaiqiewaidongzuotiao.ShowHide:PIGDownMenu_AddButton(info)
 			end 
 		end
@@ -558,8 +558,8 @@ if tocversion<100000 then
 				return 
 			end
 			kaiqiewaidongzuotiao.ShowHide:PIGDownMenu_SetText(value)
-			PIG_Per["PigAction"]["ShowTJ"][index] = arg1;
-			if PIG_Per["PigAction"]["Open"][index] then
+			PIG_PerA["PigAction"]["ShowTJ"][index] = arg1;
+			if PIG_PerA["PigAction"]["Open"][index] then
 				for id=1,anniugeshu do
 					ActionBarfun.ShowHideEvent(_G[barName..index.."_But"..id],arg1)
 				end
@@ -584,7 +584,7 @@ if tocversion<100000 then
 		button1 = "确定",
 		button2 = "取消",
 		OnAccept = function()
-			PIG_Per["PigAction"] = addonTable.Default_Per["PigAction"];
+			PIG_PerA["PigAction"] = addonTable.Default_Per["PigAction"];
 			Pig_Options_RLtishi_UI:Show()
 		end,
 		timeout = 0,
@@ -594,9 +594,9 @@ if tocversion<100000 then
 	Action_plusF:HookScript("OnShow", function(self)
 		for index=1,zongshu do
 			local ckfame=_G["kaiqiewaidongzuotiao"..index]
-			ckfame:SetChecked(PIG_Per["PigAction"]["Open"][index])
-			ckfame.Lockdongzuotiao:SetChecked(PIG_Per["PigAction"]["Lock"][index])
-			ckfame.ShowHide:PIGDownMenu_SetText(Showtiaojian[PIG_Per["PigAction"]["ShowTJ"][index]])
+			ckfame:SetChecked(PIG_PerA["PigAction"]["Open"][index])
+			ckfame.Lockdongzuotiao:SetChecked(PIG_PerA["PigAction"]["Lock"][index])
+			ckfame.ShowHide:PIGDownMenu_SetText(Showtiaojian[PIG_PerA["PigAction"]["ShowTJ"][index]])
 		end
 	end)
 end

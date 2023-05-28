@@ -19,9 +19,9 @@ CommonFun.Interaction={}
 InteractionF.AutoDialogue = PIGCheckbutton_R(InteractionF,{"自动对话","当NPC只有一个对话选项时自动激活选项"})
 InteractionF.AutoDialogue:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Interaction"]["AutoDialogue"]=true;			
+		PIGA["Interaction"]["AutoDialogue"]=true;			
 	else
-		PIG["Interaction"]["AutoDialogue"]=false;
+		PIGA["Interaction"]["AutoDialogue"]=false;
 	end
 	CommonFun.Interaction.zidongduihua()
 end);
@@ -29,9 +29,9 @@ end);
 InteractionF.AutoDown = PIGCheckbutton_R(InteractionF,{"自动下马/站立","与NPC或物体交互时自动下马/站立"})
 InteractionF.AutoDown:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Interaction"]["AutoDown"]=true;			
+		PIGA["Interaction"]["AutoDown"]=true;			
 	else
-		PIG["Interaction"]["AutoDown"]=false;
+		PIGA["Interaction"]["AutoDown"]=false;
 	end
 	CommonFun.Interaction.AutoDown()
 end);
@@ -39,9 +39,9 @@ end);
 InteractionF.AutoJierenwu = PIGCheckbutton_R(InteractionF,{"自动接任务","和NPC对话时自动接任务"})
 InteractionF.AutoJierenwu:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Interaction"]["AutoJierenwu"]=true;
+		PIGA["Interaction"]["AutoJierenwu"]=true;
 	else
-		PIG["Interaction"]["AutoJierenwu"]=false;
+		PIGA["Interaction"]["AutoJierenwu"]=false;
 	end
 	CommonFun.Interaction.zidongduihua()
 end);
@@ -49,18 +49,18 @@ end);
 InteractionF.AutoJiaorenwu = PIGCheckbutton_R(InteractionF,{"自动交任务","和NPC对话时自动交任务"})
 InteractionF.AutoJiaorenwu:SetScript("OnClick", function ()
 	if InteractionF.AutoJiaorenwu:GetChecked() then
-		PIG["Interaction"]["AutoJiaorenwu"]=true;
+		PIGA["Interaction"]["AutoJiaorenwu"]=true;
 	else
-		PIG["Interaction"]["AutoJiaorenwu"]=false;
+		PIGA["Interaction"]["AutoJiaorenwu"]=false;
 	end
 	CommonFun.Interaction.zidongduihua()
 end);
 InteractionF.zidongjieshouyaoqing = PIGCheckbutton_R(InteractionF,{"自动接受组队邀请","自动接受组队邀请"})
 InteractionF.zidongjieshouyaoqing:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Interaction"]["AutoJyaoqing"]=true;
+		PIGA["Interaction"]["AutoJyaoqing"]=true;
 	else
-		PIG["Interaction"]["AutoJyaoqing"]=false;
+		PIGA["Interaction"]["AutoJyaoqing"]=false;
 	end
 	CommonFun.Interaction.YaoqingFuhuo()
 end);
@@ -68,9 +68,9 @@ end);
 InteractionF.zidongFuhuo = PIGCheckbutton_R(InteractionF,{"自动接受复活","自动接受复活"})
 InteractionF.zidongFuhuo:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Interaction"]["AutoFuhuo"]=true;
+		PIGA["Interaction"]["AutoFuhuo"]=true;
 	else
-		PIG["Interaction"]["AutoFuhuo"]=false;
+		PIGA["Interaction"]["AutoFuhuo"]=false;
 	end
 	CommonFun.Interaction.YaoqingFuhuo()
 end);
@@ -78,10 +78,10 @@ if tocversion<80000 then
 	InteractionF.AutolootCK = PIGCheckbutton_R(InteractionF,{"快速拾取","加快拾取速度(在队长分配不起作用)"})
 	InteractionF.AutolootCK:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["Interaction"]["Autoloot"]=true;
+			PIGA["Interaction"]["Autoloot"]=true;
 			CommonFun.Interaction.FastLoot()
 		else
-			PIG["Interaction"]["Autoloot"]=false;
+			PIGA["Interaction"]["Autoloot"]=false;
 			Pig_Options_RLtishi_UI:Show()
 		end
 	end)
@@ -91,18 +91,18 @@ local AutoRepairline = PIGLine(InteractionF,"TOP",-300)
 InteractionF.AutoRepair = PIGCheckbutton(InteractionF,{"TOPLEFT",AutoRepairline,"TOPLEFT",20,-16},{"自动修理", "与修理商人对话时自动修理身上和背包物品"})
 InteractionF.AutoRepair:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Interaction"]["AutoRepair"]=true;
+		PIGA["Interaction"]["AutoRepair"]=true;
 	else
-		PIG["Interaction"]["AutoRepair"]=false;
+		PIGA["Interaction"]["AutoRepair"]=false;
 	end
 end);
 if tocversion>19999 then
 	InteractionF.GonghuiRepair = PIGCheckbutton(InteractionF,{"LEFT",InteractionF.AutoRepair,"RIGHT",200,0},{"优先使用公会资金", "修理时优先使用公会资金"})
 	InteractionF.GonghuiRepair:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["Interaction"]["AutoRepair_GUILD"]=true;
+			PIGA["Interaction"]["AutoRepair_GUILD"]=true;
 		else
-			PIG["Interaction"]["AutoRepair_GUILD"]=false;
+			PIGA["Interaction"]["AutoRepair_GUILD"]=false;
 		end
 	end);
 end
@@ -111,11 +111,11 @@ local RightPlusline = PIGLine(InteractionF,"TOP",-400)
 InteractionF.RightPlus = PIGCheckbutton(InteractionF,{"TOPLEFT",RightPlusline,"TOPLEFT",20,-18},{"右键增强","增强交互时右键功能，例如点击聊天栏玩家名/查询页玩家名"})
 InteractionF.RightPlus:SetScript("OnClick", function (self)
     if self:GetChecked() then
-        PIG["Interaction"]["RightPlus"]=true;
+        PIGA["Interaction"]["RightPlus"]=true;
         InteractionFun.RightPlus()
-        InteractionF.xiayiSlider:SetValue(PIG["Interaction"]["xiayijuli"]);
+        InteractionF.xiayiSlider:SetValue(PIGA["Interaction"]["xiayijuli"]);
     else
-        PIG["Interaction"]["RightPlus"]=false;
+        PIGA["Interaction"]["RightPlus"]=false;
         Pig_Options_RLtishi_UI:Show()
     end
 end);
@@ -126,29 +126,29 @@ InteractionF.xiayiSlider = PIGSlider(InteractionF,{"LEFT",InteractionF.xiayiTxt,
 InteractionF.xiayiSlider:SetScript("OnValueChanged", function(self)
 	local val = self:GetValue()
 	self.Text:SetText(val);
-	PIG["Interaction"]["xiayijuli"]=val
+	PIGA["Interaction"]["xiayijuli"]=val
 	if Pig_RightFUI then
 		Pig_RightFUI:SetPoint("TOPLEFT",DropDownList1,"TOPRIGHT",0,-val)
 	end
 end)
 --
 InteractionF:HookScript("OnShow", function(self)
-	self.AutoDialogue:SetChecked(PIG["Interaction"]["AutoDialogue"]);
-	self.AutoDown:SetChecked(PIG['Interaction']['AutoDown']);
-	self.AutoJierenwu:SetChecked(PIG["Interaction"]["AutoJierenwu"]);
-	self.AutoJiaorenwu:SetChecked(PIG["Interaction"]["AutoJiaorenwu"]);
-	self.zidongjieshouyaoqing:SetChecked(PIG["Interaction"]["AutoJyaoqing"]);
-	self.zidongFuhuo:SetChecked(PIG["Interaction"]["AutoFuhuo"]);
-	self.AutoRepair:SetChecked(PIG["Interaction"]["AutoRepair"]);
+	self.AutoDialogue:SetChecked(PIGA["Interaction"]["AutoDialogue"]);
+	self.AutoDown:SetChecked(PIGA['Interaction']['AutoDown']);
+	self.AutoJierenwu:SetChecked(PIGA["Interaction"]["AutoJierenwu"]);
+	self.AutoJiaorenwu:SetChecked(PIGA["Interaction"]["AutoJiaorenwu"]);
+	self.zidongjieshouyaoqing:SetChecked(PIGA["Interaction"]["AutoJyaoqing"]);
+	self.zidongFuhuo:SetChecked(PIGA["Interaction"]["AutoFuhuo"]);
+	self.AutoRepair:SetChecked(PIGA["Interaction"]["AutoRepair"]);
 	if tocversion<80000 then
-		self.AutolootCK:SetChecked(PIG["Interaction"]["Autoloot"]);
+		self.AutolootCK:SetChecked(PIGA["Interaction"]["Autoloot"]);
 	end
 	if tocversion>19999 then
-		self.GonghuiRepair:SetChecked(PIG["Interaction"]["AutoRepair_GUILD"]);
+		self.GonghuiRepair:SetChecked(PIGA["Interaction"]["AutoRepair_GUILD"]);
 	end
-	self.RightPlus:SetChecked(PIG["Interaction"]["RightPlus"])
-	self.xiayiSlider.Text:SetText(PIG["Interaction"]["xiayijuli"]);
-	if PIG["Interaction"]["RightPlus"] then
-		self.xiayiSlider:SetValue(PIG["Interaction"]["xiayijuli"]);
+	self.RightPlus:SetChecked(PIGA["Interaction"]["RightPlus"])
+	self.xiayiSlider.Text:SetText(PIGA["Interaction"]["xiayijuli"]);
+	if PIGA["Interaction"]["RightPlus"] then
+		self.xiayiSlider:SetValue(PIGA["Interaction"]["xiayijuli"]);
 	end
 end)

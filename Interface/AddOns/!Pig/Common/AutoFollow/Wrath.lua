@@ -8,18 +8,18 @@ local Macro_FollowName = CommonFun.Macro_FollowName
 local function kaishiMsg()
 	if IsInGroup() then
 		if IsInRaid() then
-			SendChatMessage('[!Pig] 开始接收指令,发送 '..PIG["QuickFollow"]["Jieshu"]..' 停止接收', "RAID", nil);
+			SendChatMessage('[!Pig] 开始接收指令,发送 '..PIGA["QuickFollow"]["Jieshu"]..' 停止接收', "RAID", nil);
 		else
-			SendChatMessage('[!Pig] 开始接收指令,发送 '..PIG["QuickFollow"]["Jieshu"]..' 停止接收', "PARTY", nil);
+			SendChatMessage('[!Pig] 开始接收指令,发送 '..PIGA["QuickFollow"]["Jieshu"]..' 停止接收', "PARTY", nil);
 		end
 	end
 end
 local function jieshuMsg()
 	if IsInGroup() then
 		if IsInRaid() then
-			SendChatMessage('[!Pig] 停止接收指令,发送 '..PIG["QuickFollow"]["Kaishi"]..' 开始接收', "RAID", nil);
+			SendChatMessage('[!Pig] 停止接收指令,发送 '..PIGA["QuickFollow"]["Kaishi"]..' 开始接收', "RAID", nil);
 		else
-			SendChatMessage('[!Pig] 停止接收指令,发送 '..PIG["QuickFollow"]["Kaishi"]..' 开始接收', "PARTY", nil);
+			SendChatMessage('[!Pig] 停止接收指令,发送 '..PIGA["QuickFollow"]["Kaishi"]..' 开始接收', "PARTY", nil);
 		end
 	end
 end
@@ -30,7 +30,7 @@ local function Gensui_B_Wrath(Booleans,AutoFollowF)
 		if Gensui_B_UI then Gensui_B_UI:SetChecked(false) end
 		AutoFollowF.gensuiF.B_Open:SetChecked(false);
 		PIG_print("没有检测到跟随宏")
-		PIG_Per["QuickFollow"]["beidongOpen"]=false
+		PIG_PerA["QuickFollow"]["beidongOpen"]=false
 		return
 	end
 	if Booleans then
@@ -46,7 +46,7 @@ local function Gensui_B_Wrath(Booleans,AutoFollowF)
 		AutoFollowF.gensuiF:RegisterEvent("CHAT_MSG_WHISPER");--当收到其他玩家的耳语时触发
 		gensuiB_UI_tishi:Show()
 		if Gensui_B_CMD_UI then Gensui_B_CMD_UI:Disable() end
-		if PIG["QuickFollow"]["Yijiao"] and IsInGroup() then
+		if PIGA["QuickFollow"]["Yijiao"] and IsInGroup() then
 			SendChatMessage('[!Pig] 已开启自动移交队长,收到密语内容为“队长”将自动移交队长', "PARTY", nil);
 		end
 		kaishiMsg()
@@ -68,11 +68,11 @@ local function Gensui_B_Wrath(Booleans,AutoFollowF)
 	end
 	AutoFollowF.gensuiF:HookScript("OnEvent",function (self,event,arg1,_,_,_,arg5)
 		if event=="READY_CHECK" then
-			if PIG["QuickFollow"]["Jiuwei"] then
+			if PIGA["QuickFollow"]["Jiuwei"] then
 				ConfirmReadyCheck(true)--自动就位
 			end
 		elseif event=="AUTOFOLLOW_BEGIN" then
-			if PIG["QuickFollow"]["Tishi"] then
+			if PIGA["QuickFollow"]["Tishi"] then
 				if IsInGroup() then
 					if IsInRaid() then
 						SendChatMessage("[!Pig] 开始跟随玩家《"..arg1.."》", "RAID", nil);
@@ -82,7 +82,7 @@ local function Gensui_B_Wrath(Booleans,AutoFollowF)
 				end
 			end	
 		elseif event=="AUTOFOLLOW_END" then
-			if PIG["QuickFollow"]["Tishi"] then
+			if PIGA["QuickFollow"]["Tishi"] then
 				if IsInGroup() then
 					if IsInRaid() then
 						SendChatMessage("[!Pig] 已停止跟随", "RAID", nil);
@@ -95,7 +95,7 @@ local function Gensui_B_Wrath(Booleans,AutoFollowF)
 			local feizidonghuifu=arg1:find("[!Pig]", 1)
 			if feizidonghuifu then return end
 			if event=="CHAT_MSG_WHISPER" then
-				if PIG["QuickFollow"]["Yijiao"] then
+				if PIGA["QuickFollow"]["Yijiao"] then
 					if UnitIsGroupLeader("player") then
 						if arg1:match("队长") or arg1:match("团长") then		
 							PromoteToLeader(arg5)--自动交接队长
@@ -104,7 +104,7 @@ local function Gensui_B_Wrath(Booleans,AutoFollowF)
 				end
 			end
 			--
-			if arg1 ~= PIG["QuickFollow"]["Kaishi"] and arg1 ~= PIG["QuickFollow"]["Jieshu"] then
+			if arg1 ~= PIGA["QuickFollow"]["Kaishi"] and arg1 ~= PIGA["QuickFollow"]["Jieshu"] then
 				return 
 			end
 			if InCombatLockdown() then PIG_print("战斗中无法更新跟随目标") return end
@@ -117,15 +117,15 @@ local function Gensui_B_Wrath(Booleans,AutoFollowF)
 				return 
 			end
 			local macroSlot = GetMacroIndexByName(Macro_FollowName)
-			if arg1 == PIG["QuickFollow"]["Kaishi"] then
-				if PIG["QuickFollow"]["Duizhang"] then
+			if arg1 == PIGA["QuickFollow"]["Kaishi"] then
+				if PIGA["QuickFollow"]["Duizhang"] then
 					if UnitIsGroupLeader(wanjiamingpp,"LE_PARTY_CATEGORY_HOME") then
 						EditMacro(macroSlot, nil, nil, "/follow "..wanjiamingpp)
 					end
 				else
 					EditMacro(macroSlot, nil, nil, "/follow "..wanjiamingpp)
 				end
-			elseif arg1 == PIG["QuickFollow"]["Jieshu"] then
+			elseif arg1 == PIGA["QuickFollow"]["Jieshu"] then
 				EditMacro(macroSlot, nil, nil, "/follow player")
 			end
 		end

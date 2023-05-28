@@ -82,12 +82,12 @@ local function shuaxinBAGweizhi(frame, size, id)
 		_G[name.."MoneyFrame"]:ClearAllPoints();
 		_G[name.."MoneyFrame"]:SetPoint("RIGHT", BAGheji_UI.moneyframe, "RIGHT", 4, -1);
 		_G[name.."MoneyFrame"]:SetParent(BAGheji_UI);
-		if PIG["BagBank"]["qitajinbi"] then
+		if PIGA["BagBank"]["qitajinbi"] then
 			local function ADDshowEV(fameFF)
 					fameFF:SetScript("OnEnter", function (self)
 						GameTooltip:ClearLines();
 						GameTooltip:SetOwner(self, "ANCHOR_CURSOR",0,0);
-						local lixianheji = PIG["BagBank"]["lixian"]
+						local lixianheji = PIGA["BagBank"]["lixian"]
 						local lixianhejiNAMEG = {}
 						lixianhejiNAMEG.ZIJIg=GetMoney();
 						for k,v in pairs(lixianheji) do
@@ -327,7 +327,7 @@ local function SAVE_C()
 		end	
 		table.insert(wupinshujuinfo, wupinxinxi);
 	end
-	PIG["BagBank"]["lixian"][PIG_renwuming]["C"] = wupinshujuinfo
+	PIGA["BagBank"]["lixian"][PIG_renwuming]["C"] = wupinshujuinfo
 end
 local function SAVE_BAG()
 	if InCombatLockdown() then return end
@@ -337,8 +337,8 @@ local function SAVE_BAG()
 			SAVE_lixian_data(bagID[f], ff,wupinshujuinfo)
 		end
 	end
-	PIG["BagBank"]["lixian"][PIG_renwuming]["BAG"] = wupinshujuinfo
-	PIG["BagBank"]["lixian"][PIG_renwuming]["G"] = GetMoney();
+	PIGA["BagBank"]["lixian"][PIG_renwuming]["BAG"] = wupinshujuinfo
+	PIGA["BagBank"]["lixian"][PIG_renwuming]["G"] = GetMoney();
 end
 local function SAVE_BANK()
 	if InCombatLockdown() then return end
@@ -354,7 +354,7 @@ local function SAVE_BANK()
 				SAVE_lixian_data(bankID[f], ff,wupinshujuinfo)
 			end
 		end
-		PIG["BagBank"]["lixian"][PIG_renwuming]["BANK"] = wupinshujuinfo
+		PIGA["BagBank"]["lixian"][PIG_renwuming]["BANK"] = wupinshujuinfo
 	end
 end
 --离线显示
@@ -377,7 +377,7 @@ local function Show_lixian_data(frameF,renwu,shuju,meihang,zongshu)
 		end
 	end
 	local framename=frameF:GetName()
-	local zongshu=#PIG["BagBank"]["lixian"][renwu][shuju]
+	local zongshu=#PIGA["BagBank"]["lixian"][renwu][shuju]
 	if shuju=="C" then
 		for i=1,zongshu do
 			local frameX = _G[framename.."_item_"..i]
@@ -403,10 +403,10 @@ local function Show_lixian_data(frameF,renwu,shuju,meihang,zongshu)
 					zbBuwei.itembuwei:SetTextColor(0.5, 0.5, 0.5,0.8);
 					zbBuwei.itembuweiF:SetBackdropBorderColor(0.5, 0.5, 0.5,0.5)
 				end
-				local itemLink = PIG["BagBank"]["lixian"][renwu][shuju][i][2]
+				local itemLink = PIGA["BagBank"]["lixian"][renwu][shuju][i][2]
 				if itemLink then
 					SetItemButtonTexture(frameX, GetItemIcon(itemLink))
-					if PIG["FramePlus"]["Character_ItemLevel"] then
+					if PIGA["FramePlus"]["Character_ItemLevel"] then
 						local effectiveILvl = GetDetailedItemLevelInfo(itemLink)
 						if effectiveILvl and effectiveILvl>0 then
 							frameX.LV:SetText(effectiveILvl)
@@ -457,7 +457,7 @@ local function Show_lixian_data(frameF,renwu,shuju,meihang,zongshu)
 		for i=1,zongshu do
 			local frameX=_G[framename.."_item_"..i]
 			frameX:Show();
-			local itemLink = PIG["BagBank"]["lixian"][renwu][shuju][i][2]
+			local itemLink = PIGA["BagBank"]["lixian"][renwu][shuju][i][2]
 			if itemLink then
 				local icon = GetItemIcon(itemLink)
 				frameX.icon:SetTexture(icon)
@@ -483,12 +483,12 @@ local function Show_lixian_data(frameF,renwu,shuju,meihang,zongshu)
 						end
 					end
 				end)
-				local MaxCount = PIG["BagBank"]["lixian"][renwu][shuju][i][4]
+				local MaxCount = PIGA["BagBank"]["lixian"][renwu][shuju][i][4]
 				if MaxCount>1 then
-					frameX.shuliang:SetText(PIG["BagBank"]["lixian"][renwu][shuju][i][3])
+					frameX.shuliang:SetText(PIGA["BagBank"]["lixian"][renwu][shuju][i][3])
 				end
-				if PIG["BagBank"]["wupinLV"] then
-					local ShowLV = PIG["BagBank"]["lixian"][renwu][shuju][i][5]
+				if PIGA["BagBank"]["wupinLV"] then
+					local ShowLV = PIGA["BagBank"]["lixian"][renwu][shuju][i][5]
 					if ShowLV then
 						local effectiveILvl = GetDetailedItemLevelInfo(itemLink)	
 						if effectiveILvl and effectiveILvl>0 then
@@ -587,13 +587,13 @@ local function Bag_Item_Ranse(frame, size, id)
 end
 --其他角色数量
 GameTooltip:HookScript("OnTooltipSetItem", function(self)
-	if not PIG["BagBank"]["qitashulaing"] then return end
+	if not PIGA["BagBank"]["qitashulaing"] then return end
 	local _, link = self:GetItem()
 	if link then
 		local itemID = GetItemInfoInstant(link)
 		if itemID==6948 then return end
 		local renwuWupinshu={}
-		local renwuWupinINFO=PIG["BagBank"]["lixian"]
+		local renwuWupinINFO=PIGA["BagBank"]["lixian"]
 		for k,v in pairs(renwuWupinINFO) do
 			local Czongshu=#renwuWupinINFO[k]["C"]
 			renwuWupinshu.Cshuliang=0
@@ -683,7 +683,7 @@ local XWidth, XHeight =CharacterHeadSlot:GetWidth(),CharacterHeadSlot:GetHeight(
 local ADD_BagBankBGtex=addonTable.ADD_BagBankBGtex
 --------
 function BagBankfun.Zhenghe(Rneirong,tabbut)
-	if not PIG["BagBank"]["Zhenghe"] or BAGheji_UI then return end
+	if not PIGA["BagBank"]["Zhenghe"] or BAGheji_UI then return end
 	BagBankfun.qiyongzidongzhengli()
 	local wanjia, realm = UnitFullName("player")
 	local realm=realm or GetRealmName()
@@ -731,7 +731,7 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 		    famrr.ranse:Hide()
 		end
 		hooksecurefunc("ContainerFrame_Update", function(frame)
-			if not PIG["BagBank"]["JunkShow"] then return end
+			if not PIGA["BagBank"]["JunkShow"] then return end
 			local id = frame:GetID();
 			local name = frame:GetName();
 			for i=1, frame.size, 1 do
@@ -751,8 +751,8 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 		end)
 		local data = {
 			["BagdangeW"]=BagdangeW,
-			["meihang"]=PIG["BagBank"]["BAGmeihangshu"],
-			["suofang"]=PIG["BagBank"]["BAGsuofangBili"],
+			["meihang"]=PIGA["BagBank"]["BAGmeihangshu"],
+			["suofang"]=PIGA["BagBank"]["BAGsuofangBili"],
 			["lixianNum"]="zhengheBAG",
 		}
 		local BAGheji=BagBankFrame(UIParent,{"CENTER",UIParent,"CENTER",420,-10},"BAGheji_UI",data)
@@ -971,8 +971,8 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 			if id>4 and id<12 then
 				shuaxinBANKweizhi(frame, size, id)
 			end
-			if PIG["BagBank"]["wupinLV"] then Bag_Item_lv(frame, size, id) end
-			if PIG["BagBank"]["wupinRanse"] then Bag_Item_Ranse(frame, size, id) end
+			if PIGA["BagBank"]["wupinLV"] then Bag_Item_lv(frame, size, id) end
+			if PIGA["BagBank"]["wupinRanse"] then Bag_Item_Ranse(frame, size, id) end
 		end)
 		local Old_ToggleBackpack=ToggleBackpack
 		ToggleBackpack= function() --背包按键打开
@@ -1039,8 +1039,8 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 		else
 			fujiBagFrame=BAGheji_UI
 		end
-		fujiBagFrame.meihang=PIG["BagBank"]["BAGmeihangshu"]
-		fujiBagFrame.suofang=PIG["BagBank"]["BAGsuofangBili"]
+		fujiBagFrame.meihang=PIGA["BagBank"]["BAGmeihangshu"]
+		fujiBagFrame.suofang=PIGA["BagBank"]["BAGsuofangBili"]
 		fujiBagFrame.lixianBut.Tex = fujiBagFrame.lixianBut:CreateTexture()
 		fujiBagFrame.lixianBut.Tex:SetTexture(132050);
 		fujiBagFrame.lixianBut.Tex:SetSize(18,18);
@@ -1088,7 +1088,7 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 		function fujiBagFrame.lixianBut.xiala:PIGDownMenu_Update_But(self, level, menuList)
 			local danxuanerjiList = {}
 			local KucunName={["C"]="已装备物品",["BAG"]="背包物品",["BANK"]="银行物品"}
-			for k,v in pairs(PIG["BagBank"]["lixian"]) do	
+			for k,v in pairs(PIGA["BagBank"]["lixian"]) do	
 				local xiajicaidan={}
 				for kk,vv in pairs(KucunName) do
 					table.insert(xiajicaidan,{vv,kk,k,v["ClassN"].."~"..v["Race"].."~"..v["Lv"]})
@@ -1158,7 +1158,7 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 				GameTooltip:ClearLines();
 				GameTooltip:SetOwner(self, "ANCHOR_CURSOR",0,0);
 				
-				local lixianheji = PIG["BagBank"]["lixian"]
+				local lixianheji = PIGA["BagBank"]["lixian"]
 				local lixianhejiNAMEG = {}
 				lixianhejiNAMEG.ZIJIg=GetMoney();
 				for k,v in pairs(lixianheji) do
@@ -1215,7 +1215,7 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 	C_Timer.After(1,BAGjiazaifou)
 	--交易打开
 	hooksecurefunc("TradeFrame_OnShow", function(self)
-		if PIG["BagBank"]["jiaoyiOpen"] then
+		if PIGA["BagBank"]["jiaoyiOpen"] then
 			if(UnitExists("NPC"))then
 				OpenAllBags()
 			end
@@ -1231,10 +1231,10 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 	BAG_EventFrame:HookScript("OnEvent", function(self,event,arg1)
 		if event=="PLAYER_ENTERING_WORLD" then
 			local dangqianjusexinxi={["ClassN"]=0,["Race"]=0,["Lv"]=0,["G"]=0,["C"]={},["BAG"]={},["BANK"]={}}
-			for k,v in pairs(PIG["BagBank"]["lixian"]) do
+			for k,v in pairs(PIGA["BagBank"]["lixian"]) do
 				for kk,vv in pairs(dangqianjusexinxi) do
-					if PIG["BagBank"]["lixian"][k][kk]==nil then
-						PIG["BagBank"]["lixian"][k][kk]=vv
+					if PIGA["BagBank"]["lixian"][k][kk]==nil then
+						PIGA["BagBank"]["lixian"][k][kk]=vv
 					end
 				end
 			end
@@ -1242,16 +1242,16 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 			local raceName, raceFile, raceID = UnitRace("player")
 			local level = UnitLevel("player")
 			if PIG_renwuming then
-				if PIG["BagBank"]["lixian"][PIG_renwuming]==nil then
-					PIG["BagBank"]["lixian"][PIG_renwuming]=dangqianjusexinxi
+				if PIGA["BagBank"]["lixian"][PIG_renwuming]==nil then
+					PIGA["BagBank"]["lixian"][PIG_renwuming]=dangqianjusexinxi
 				end
-				PIG["BagBank"]["lixian"][PIG_renwuming]["ClassN"]=classId
-				PIG["BagBank"]["lixian"][PIG_renwuming]["Race"]=raceID
-				PIG["BagBank"]["lixian"][PIG_renwuming]["Lv"]=level
+				PIGA["BagBank"]["lixian"][PIG_renwuming]["ClassN"]=classId
+				PIGA["BagBank"]["lixian"][PIG_renwuming]["Race"]=raceID
+				PIGA["BagBank"]["lixian"][PIG_renwuming]["Lv"]=level
 			end
 		end
 		if event=="AUCTION_HOUSE_SHOW" then
-			if PIG["BagBank"]["AHOpen"] then
+			if PIGA["BagBank"]["AHOpen"] then
 				if(UnitExists("NPC"))then
 					OpenAllBags()
 				end
@@ -1274,15 +1274,15 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 		if event=="BAG_UPDATE" then
 			if arg1>=0 and arg1<5 then
 				if ContainerFrame1Item1:IsVisible() then
-					if PIG["BagBank"]["wupinLV"] then Bag_Item_lv(nil, nil, arg1) end
-					if PIG["BagBank"]["wupinRanse"] then Bag_Item_Ranse(nil, nil, arg1) end
+					if PIGA["BagBank"]["wupinLV"] then Bag_Item_lv(nil, nil, arg1) end
+					if PIGA["BagBank"]["wupinRanse"] then Bag_Item_Ranse(nil, nil, arg1) end
 				end
 				C_Timer.After(0.4,SAVE_BAG)
 			end
 			if BankFrame:IsShown() then
 				if arg1>4 then
-					if PIG["BagBank"]["wupinLV"] then Bag_Item_lv(nil, nil, arg1) end
-					if PIG["BagBank"]["wupinRanse"] then Bag_Item_Ranse(nil, nil, arg1) end
+					if PIGA["BagBank"]["wupinLV"] then Bag_Item_lv(nil, nil, arg1) end
+					if PIGA["BagBank"]["wupinRanse"] then Bag_Item_Ranse(nil, nil, arg1) end
 					C_Timer.After(0.4,SAVE_BANK)
 				end
 			end
@@ -1295,8 +1295,8 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 	C_Timer.After(8,zhixingbaocunCMD)
 
 	---系统银行处理===========
-	BankFrame.meihang=PIG["BagBank"]["BANKmeihangshu"]
-	BankFrame.suofang=PIG["BagBank"]["BANKsuofangBili"]
+	BankFrame.meihang=PIGA["BagBank"]["BANKmeihangshu"]
+	BankFrame.suofang=PIGA["BagBank"]["BANKsuofangBili"]
 	BankFrame.AutoSort = CreateFrame("Button",nil,BankFrame, "TruncatedButtonTemplate");
 	BankFrame.AutoSort:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square");
 	BankFrame.AutoSort:SetSize(24,24);
@@ -1379,8 +1379,8 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 	--离线背包---------
 	local data = {
 		["BagdangeW"]=BagdangeW-6,
-		["meihang"]=PIG["BagBank"]["BAGmeihangshu"],
-		["suofang"]=PIG["BagBank"]["BAGsuofangBili"],
+		["meihang"]=PIGA["BagBank"]["BAGmeihangshu"],
+		["suofang"]=PIGA["BagBank"]["BAGsuofangBili"],
 		["lixianNum"]=BaglixianNum
 	}
 	local lixianBag=BagBankFrame(UIParent,{"CENTER",UIParent,"CENTER",-200,200},"lixianBag_UI",data,110)
@@ -1411,10 +1411,10 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 	Bank_EventFrame:RegisterEvent("PLAYERBANKSLOTS_CHANGED")
 	Bank_EventFrame:HookScript("OnEvent", function (self,event,arg1)
 		if event=="PLAYERBANKSLOTS_CHANGED" then
-			if PIG["BagBank"]["wupinLV"] then
+			if PIGA["BagBank"]["wupinLV"] then
 				shuaxinyinhangMOREN(arg1)
 			end
-			if PIG["BagBank"]["wupinRanse"] then shuaxinyinhangMOREN_ranse(arg1) end
+			if PIGA["BagBank"]["wupinRanse"] then shuaxinyinhangMOREN_ranse(arg1) end
 			C_Timer.After(0.4,SAVE_BANK)
 		end
 		if event=="BAG_UPDATE_DELAYED" then
@@ -1425,12 +1425,12 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 		if event=="BANKFRAME_OPENED" then
 			zhegnheBANK_Open()
 			OpenBag(5);OpenBag(6);OpenBag(7);OpenBag(8);OpenBag(9);OpenBag(10);OpenBag(11);	
-			if PIG["BagBank"]["wupinLV"] then
+			if PIGA["BagBank"]["wupinLV"] then
 				for i=1,yinhangmorengezishu[1] do
 					shuaxinyinhangMOREN(i)
 				end
 			end
-			if PIG["BagBank"]["wupinRanse"] then
+			if PIGA["BagBank"]["wupinRanse"] then
 				for i=1,yinhangmorengezishu[1] do
 					shuaxinyinhangMOREN_ranse(i) 
 				end

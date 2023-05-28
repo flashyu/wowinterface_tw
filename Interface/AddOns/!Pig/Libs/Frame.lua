@@ -57,13 +57,6 @@ function Create.PIGLine(Parent,Point,Y,HLR,Color,UIName)
 		frameX:SetPoint("TOP",Parent,"TOP",Y,HLR[2]);
 		frameX:SetPoint("BOTTOM",Parent,"BOTTOM",Y,HLR[3]);
 	end
-	-- local frameX = Parent:CreateLine()
-	-- frameX:SetColorTexture(Color[1], Color[2], Color[3], Color[4])
-	-- frameX:SetThickness(HLR[1]);
-	-- if Point=="TOP" then
-	-- 	frameX:SetStartPoint("TOPLEFT",HLR[2],Y)
-	-- 	frameX:SetEndPoint("TOPRIGHT",HLR[3],Y)
-	-- end
 	return frameX
 end
 function Create.PIGFrame(Parent,Point,WH,UIName,ESCOFF)

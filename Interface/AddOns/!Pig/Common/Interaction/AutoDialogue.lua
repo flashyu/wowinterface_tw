@@ -5,7 +5,7 @@ local InteractionFun=addonTable.CommonFun.Interaction
 ----自动对话
 local function duorenwuduihua()
 	--交任务
-	if PIG['Interaction']['AutoJiaorenwu'] then
+	if PIGA['Interaction']['AutoJiaorenwu'] then
 		if tocversion<30000 then
 			local activeQuestCount = GetNumActiveQuests();
 			local gossipActiveQuestCount = GetNumGossipActiveQuests();
@@ -39,7 +39,7 @@ local function duorenwuduihua()
 		end
 	end
 	--接任务
-	if PIG['Interaction']['AutoJierenwu'] then
+	if PIGA['Interaction']['AutoJierenwu'] then
 		if tocversion<30000 then
 			local availableQuestCount = GetNumAvailableQuests();
 			local gossipAvailableQuestCount = GetNumGossipAvailableQuests();
@@ -76,20 +76,20 @@ local function Eventduihua(self,event)
 	--print(event)
 	--接
 	if event=="QUEST_DETAIL" then
-		if PIG['Interaction']['AutoJierenwu'] then
+		if PIGA['Interaction']['AutoJierenwu'] then
 			AcceptQuest()
 		end
 	end
 	--交
 	if event=="QUEST_PROGRESS" then
-		if PIG['Interaction']['AutoJiaorenwu'] then
+		if PIGA['Interaction']['AutoJiaorenwu'] then
 			if (IsQuestCompletable()) then
 				CompleteQuest();
 			end
 		end
 	end
 	if event=="QUEST_COMPLETE" then
-		if PIG['Interaction']['AutoJiaorenwu'] then
+		if PIGA['Interaction']['AutoJiaorenwu'] then
 			if GetNumQuestChoices() <= 1 then
 				GetQuestReward(1);
 			end
@@ -108,7 +108,7 @@ local function Eventduihua(self,event)
 			if zongjirenwu>0 then
 				duorenwuduihua()
 			else
-				if PIG['Interaction']['AutoDialogue'] then
+				if PIGA['Interaction']['AutoDialogue'] then
 					local numOptions = GetNumGossipOptions() --NPC对话选项
 					if numOptions==1 then
 						SelectGossipOption(1)
@@ -122,7 +122,7 @@ local function Eventduihua(self,event)
 			if zongjirenwu>0 then
 				duorenwuduihua()
 			else
-				if PIG['Interaction']['AutoDialogue'] then
+				if PIGA['Interaction']['AutoDialogue'] then
 					local options = C_GossipInfo.GetOptions() --NPC对话选项
 					local zongjirenwu=#options
 					if zongjirenwu==1 then
@@ -136,7 +136,7 @@ end
 local zidongduihuaFFF = CreateFrame("Frame")
 zidongduihuaFFF:SetScript("OnEvent", Eventduihua)
 function CommonFun.Interaction.zidongduihua()
-	if PIG['Interaction']['AutoDialogue'] or PIG['Interaction']['AutoJierenwu'] or PIG['Interaction']['AutoJiaorenwu'] then
+	if PIGA['Interaction']['AutoDialogue'] or PIGA['Interaction']['AutoJierenwu'] or PIGA['Interaction']['AutoJiaorenwu'] then
 		zidongduihuaFFF:RegisterEvent("GOSSIP_SHOW")
 		zidongduihuaFFF:RegisterEvent("QUEST_DETAIL")--显示任务详情时
 		zidongduihuaFFF:RegisterEvent("QUEST_FINISHED")--任务框架更改
@@ -165,12 +165,12 @@ zidongjieshouzuduiyaoqingFFF:SetScript("OnEvent", function(self, event, arg1, ar
 	end
 end)
 function CommonFun.Interaction.YaoqingFuhuo()
-	if PIG['Interaction']['AutoJyaoqing'] then
+	if PIGA['Interaction']['AutoJyaoqing'] then
 		zidongjieshouzuduiyaoqingFFF:RegisterEvent("PARTY_INVITE_REQUEST")
 	else
 		zidongjieshouzuduiyaoqingFFF:UnregisterEvent("PARTY_INVITE_REQUEST")
 	end
-	if PIG['Interaction']['AutoFuhuo'] then
+	if PIGA['Interaction']['AutoFuhuo'] then
 		zidongjieshouzuduiyaoqingFFF:RegisterEvent("RESURRECT_REQUEST")
 	else
 		zidongjieshouzuduiyaoqingFFF:UnregisterEvent("RESURRECT_REQUEST")

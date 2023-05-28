@@ -67,9 +67,9 @@ local function ADD_jiangli()
 		fuFrame.bobaobut.Tex:SetPoint("CENTER",4,0);
 	end);
 	fuFrame.bobaobut:SetScript("OnClick", function()
-		for b=1,#PIG["RaidRecord"]["jiangli"] do
-			if PIG["RaidRecord"]["jiangli"][b][3]~="无" then
-				SendChatMessage("["..PIG["RaidRecord"]["jiangli"][b][1].."]-"..PIG["RaidRecord"]["jiangli"][b][3].."-支出："..PIG["RaidRecord"]["jiangli"][b][2].."G", RaidR_UI.xuanzhongChat, nil);
+		for b=1,#PIGA["RaidRecord"]["jiangli"] do
+			if PIGA["RaidRecord"]["jiangli"][b][3]~="无" then
+				SendChatMessage("["..PIGA["RaidRecord"]["jiangli"][b][1].."]-"..PIGA["RaidRecord"]["jiangli"][b][3].."-支出："..PIGA["RaidRecord"]["jiangli"][b][2].."G", RaidR_UI.xuanzhongChat, nil);
 			end
 		end
 	end)
@@ -93,26 +93,26 @@ local function ADD_jiangli()
 			_G["jiangli_hang_"..id.."_UI"].shouyiren.V:SetText();
 			_G["jiangli_hang_"..id.."_UI"].del:Hide();
 	    end
-		if #PIG["RaidRecord"]["jiangli"]>0 then
-		    local ItemsNum = #PIG["RaidRecord"]["jiangli"];
+		if #PIGA["RaidRecord"]["jiangli"]>0 then
+		    local ItemsNum = #PIGA["RaidRecord"]["jiangli"];
 		    FauxScrollFrame_Update(self, ItemsNum, hang_NUM, hang_Height);
 		    local offset = FauxScrollFrame_GetOffset(self);
 			for id = 1, hang_NUM do
 				local dangqian = id+offset;
-				if PIG["RaidRecord"]["jiangli"][dangqian] then
+				if PIGA["RaidRecord"]["jiangli"][dangqian] then
 					_G["jiangli_hang_"..id.."_UI"]:Show();
 					if dangqian<4 then
-						_G["jiangli_hang_"..id.."_UI"].shiyou:SetText(PIG["RaidRecord"]["jiangli"][dangqian][1]);
+						_G["jiangli_hang_"..id.."_UI"].shiyou:SetText(PIGA["RaidRecord"]["jiangli"][dangqian][1]);
 					elseif dangqian<7 then	
-			    		_G["jiangli_hang_"..id.."_UI"].shiyou:SetText("|cff00FA9A"..PIG["RaidRecord"]["jiangli"][dangqian][1].."|r");
+			    		_G["jiangli_hang_"..id.."_UI"].shiyou:SetText("|cff00FA9A"..PIGA["RaidRecord"]["jiangli"][dangqian][1].."|r");
 			    	else
-			    		_G["jiangli_hang_"..id.."_UI"].shiyou:SetText(PIG["RaidRecord"]["jiangli"][dangqian][1]);
+			    		_G["jiangli_hang_"..id.."_UI"].shiyou:SetText(PIGA["RaidRecord"]["jiangli"][dangqian][1]);
 			    	end
-			  		_G["jiangli_hang_"..id.."_UI"].shouru.G:SetText(PIG["RaidRecord"]["jiangli"][dangqian][2]);
+			  		_G["jiangli_hang_"..id.."_UI"].shouru.G:SetText(PIGA["RaidRecord"]["jiangli"][dangqian][2]);
 			    	_G["jiangli_hang_"..id.."_UI"].shouru.bianji:SetID(dangqian);
 			    	_G["jiangli_hang_"..id.."_UI"].shouru.E:SetID(dangqian);
 		    		_G["jiangli_hang_"..id.."_UI"].shouru.baocun:SetID(dangqian);
-					_G["jiangli_hang_"..id.."_UI"].shouyiren.V:SetText(PIG["RaidRecord"]["jiangli"][dangqian][3]);
+					_G["jiangli_hang_"..id.."_UI"].shouyiren.V:SetText(PIGA["RaidRecord"]["jiangli"][dangqian][3]);
 					_G["jiangli_hang_"..id.."_UI"].shouyiren:SetID(dangqian);
 			    	_G["jiangli_hang_"..id.."_UI"].del:SetID(dangqian);
 					_G["jiangli_hang_"..id.."_UI"].del:Show();
@@ -133,18 +133,18 @@ local function ADD_jiangli()
 				end
 		    end
 			for p=1,8 do
-				if #PIG["RaidRecord"]["Raidinfo"][p]>0 then
-					for pp=1,#PIG["RaidRecord"]["Raidinfo"][p] do
-					   	if PIG["RaidRecord"]["Raidinfo"][p][pp][4]~=nil then
+				if #PIGA["RaidRecord"]["Raidinfo"][p]>0 then
+					for pp=1,#PIGA["RaidRecord"]["Raidinfo"][p] do
+					   	if PIGA["RaidRecord"]["Raidinfo"][p][pp][4]~=nil then
 					   		_G["shouyirenXZP_"..p.."_"..pp]:Show();
-					   		_G["shouyirenXZP_Name_"..p.."_"..pp]:SetText(PIG["RaidRecord"]["Raidinfo"][p][pp][4]);
-					   		local _, _, _, wanjiaName = PIG["RaidRecord"]["Raidinfo"][p][pp][4]:find("((.+)-)");
+					   		_G["shouyirenXZP_Name_"..p.."_"..pp]:SetText(PIGA["RaidRecord"]["Raidinfo"][p][pp][4]);
+					   		local _, _, _, wanjiaName = PIGA["RaidRecord"]["Raidinfo"][p][pp][4]:find("((.+)-)");
 							if wanjiaName then
 								_G["shouyirenXZP_Name_XS_"..p.."_"..pp]:SetText(wanjiaName);
 							else
-								_G["shouyirenXZP_Name_XS_"..p.."_"..pp]:SetText(PIG["RaidRecord"]["Raidinfo"][p][pp][4]);
+								_G["shouyirenXZP_Name_XS_"..p.."_"..pp]:SetText(PIGA["RaidRecord"]["Raidinfo"][p][pp][4]);
 							end
-							_G["shouyirenXZP_Name_XS_"..p.."_"..pp]:SetTextColor(PIG["RaidRecord"]["Raidinfo"][p][pp][2][1],PIG["RaidRecord"]["Raidinfo"][p][pp][2][2],PIG["RaidRecord"]["Raidinfo"][p][pp][2][3], 1);
+							_G["shouyirenXZP_Name_XS_"..p.."_"..pp]:SetTextColor(PIGA["RaidRecord"]["Raidinfo"][p][pp][2][1],PIGA["RaidRecord"]["Raidinfo"][p][pp][2][2],PIGA["RaidRecord"]["Raidinfo"][p][pp][2][3], 1);
 					   	end
 					end
 				end
@@ -204,7 +204,7 @@ local function ADD_jiangli()
 			fujiFrame.baocun:Hide()
 	 		local NWEdanjiaV=self:GetNumber();
 	 		fujiFrame.G:SetText(NWEdanjiaV);
-			PIG["RaidRecord"]["jiangli"][self:GetID()][2]=NWEdanjiaV;
+			PIGA["RaidRecord"]["jiangli"][self:GetID()][2]=NWEdanjiaV;
 			Updatejiangli(jiangli_Scroll_UI)
 		end);
 		jiangli_hang.shouru.E:SetScript("OnEditFocusLost", function(self)
@@ -237,7 +237,7 @@ local function ADD_jiangli()
 			fujiFrame.G:Hide()
 			fujiFrame.E:Show()
 			fujiFrame.baocun:Show()
-			fujiFrame.E:SetText(PIG["RaidRecord"]["jiangli"][self:GetID()][2])
+			fujiFrame.E:SetText(PIGA["RaidRecord"]["jiangli"][self:GetID()][2])
 		end);
 		jiangli_hang.shouru.baocun = CreateFrame("Button",nil,jiangli_hang.shouru, "UIPanelButtonTemplate");
 		jiangli_hang.shouru.baocun:SetSize(hang_Height,hang_Height-10);
@@ -254,7 +254,7 @@ local function ADD_jiangli()
 			self:Hide()
 	 		local NWEdanjiaV=fujiFrame.E:GetNumber();
 	 		fujiFrame.G:SetText(NWEdanjiaV);
-			PIG["RaidRecord"]["jiangli"][self:GetID()][2]=NWEdanjiaV;
+			PIGA["RaidRecord"]["jiangli"][self:GetID()][2]=NWEdanjiaV;
 			Updatejiangli(jiangli_Scroll_UI)
 		end);
 
@@ -277,7 +277,7 @@ local function ADD_jiangli()
 				xuanzeshouyiren_UI:Hide();
 			else
 				xuanzeshouyiren_UI:Show();
-				xuanzeshouyiren_UI.T2:SetText(PIG["RaidRecord"]["jiangli"][self:GetID()][1])
+				xuanzeshouyiren_UI.T2:SetText(PIGA["RaidRecord"]["jiangli"][self:GetID()][1])
 				xuanzeshouyiren_UI.T4:SetText(self:GetID())
 				Updatejianglixuanze();
 			end
@@ -297,7 +297,7 @@ local function ADD_jiangli()
 			self.Tex:SetPoint("CENTER");
 		end);
 		jiangli_hang.del:SetScript("OnClick", function (self)
-			table.remove(PIG["RaidRecord"]["jiangli"],self:GetID());
+			table.remove(PIGA["RaidRecord"]["jiangli"],self:GetID());
 			Updatejiangli(jiangli_Scroll_UI)
 		end);
 	end
@@ -377,14 +377,14 @@ local function ADD_jiangli()
 		if x==nil then
 			fuFrame.Add.F.F.err:SetText("\124cffffff00添加失败：事件不能为空或过短！\124r");
 		else
-			for i=1,#PIG["RaidRecord"]["jiangli"] do
-				if xxx==PIG["RaidRecord"]["jiangli"][i][1] then
+			for i=1,#PIGA["RaidRecord"]["jiangli"] do
+				if xxx==PIGA["RaidRecord"]["jiangli"][i][1] then
 					fuFrame.Add.F.F.err:SetText("\124cffffff00添加失败：已存在同名事件！\124r");
 					return
 				end
 			end
 			local qitashouruinfo={xxx,qitashouruG,"无"};
-			table.insert(PIG["RaidRecord"]["jiangli"],qitashouruinfo);
+			table.insert(PIGA["RaidRecord"]["jiangli"],qitashouruinfo);
 			fuFrame.Add.F:Hide();
 			Updatejiangli(jiangli_Scroll_UI)
 		end
@@ -436,7 +436,7 @@ local function ADD_jiangli()
 	xuanzeshouyiren.qingchu:SetPoint("TOPLEFT",xuanzeshouyiren,"TOPLEFT",300,-4);
 	xuanzeshouyiren.qingchu:SetText("清除收益人");
 	xuanzeshouyiren.qingchu:SetScript("OnClick", function ()
-		PIG["RaidRecord"]["jiangli"][tonumber(xuanzeshouyiren.T4:GetText())][3]="无";
+		PIGA["RaidRecord"]["jiangli"][tonumber(xuanzeshouyiren.T4:GetText())][3]="无";
 		Updatejiangli(jiangli_Scroll_UI)
 		xuanzeshouyiren_UI:Hide()
 	end);
@@ -494,7 +494,7 @@ local function ADD_jiangli()
 			end);
 			_G["shouyirenXZP_"..p.."_"..pp]:SetScript("OnMouseUp", function (self,button)
 				_G["shouyirenXZP_Name_XS_"..p.."_"..pp]:SetPoint("CENTER",self,"CENTER",0,1);
-				PIG["RaidRecord"]["jiangli"][tonumber(xuanzeshouyiren.T4:GetText())][3]=_G["shouyirenXZP_Name_"..p.."_"..pp]:GetText();
+				PIGA["RaidRecord"]["jiangli"][tonumber(xuanzeshouyiren.T4:GetText())][3]=_G["shouyirenXZP_Name_"..p.."_"..pp]:GetText();
 				Updatejiangli(jiangli_Scroll_UI)
 				xuanzeshouyiren_UI:Hide()
 			end);

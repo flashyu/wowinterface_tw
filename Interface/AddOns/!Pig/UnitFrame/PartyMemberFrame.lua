@@ -76,7 +76,7 @@ end
 ----创建扩展信息框架
 local duiyouFrameReg = CreateFrame("Frame");
 function UnitFramefun.Duiyou()
-	if PIG["UnitFrame"]["PartyMemberFrame"]["Plus"] then
+	if PIGA["UnitFrame"]["PartyMemberFrame"]["Plus"] then
 		for id = 1, MAX_PARTY_MEMBERS, 1 do
 			local Party=_G["PartyMemberFrame"..id] or PartyFrame and PartyFrame["MemberFrame"..id]
 			----队友职业图标

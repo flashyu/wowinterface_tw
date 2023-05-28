@@ -5,7 +5,7 @@ local PIGDownMenu=Create.PIGDownMenu
 local FramePlusfun=addonTable.FramePlusfun
 -----------------------------------
 function FramePlusfun.Zhuizong()
-	if not PIG["FramePlus"]["Zhuizong"] then return end
+	if not PIGA["FramePlus"]["Zhuizong"] then return end
 	if Zhuizong_UI then return end
 	local Width,Height = 33,33;
 	local Zhuizong = CreateFrame("Frame", "Zhuizong_UI", UIParent);

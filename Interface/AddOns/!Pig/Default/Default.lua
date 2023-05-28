@@ -259,6 +259,22 @@ addonTable.Default = {
 	["RaidRecord"] = {
 		["Open"] = false,
 		["AddBut"] = true,
+		["Rsetting"] ={
+			["bobaomingxi"] = true,
+			["liupaibobao"] = true,
+			["caizhixiufu"] = false,
+			["jiaoyidaojishi"] = true,
+			["shoudongloot"] = true,
+			["fubenwai"] = false,
+			["wurenben"] = false,
+			["jiaoyijilu"] = true,
+			["jiaoyitonggao"] = true,
+			["zidonghuifuYY"]=false,
+			["YYguanjianzi"]={"YY","yy","歪歪"},
+			["YYneirong"]="YY频道:113213,组人不易,请耐心等待",
+			["PaichuList"]={},
+		},
+		["instanceName"]={},
 	},
 };
 addonTable.Default_Per = {

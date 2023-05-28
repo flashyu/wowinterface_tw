@@ -71,9 +71,9 @@ local function ADD_fakuan()
 		fuFrame.bobaobut.Tex:SetPoint("CENTER",4,0);
 	end);
 	fuFrame.bobaobut:SetScript("OnClick", function()
-		for j=1,#PIG["RaidRecord"]["fakuan"] do
-			if PIG["RaidRecord"]["fakuan"][j][4]~="无" then
-				SendChatMessage("["..PIG["RaidRecord"]["fakuan"][j][1].."]-"..PIG["RaidRecord"]["fakuan"][j][4].."-收入："..PIG["RaidRecord"]["fakuan"][j][2]+PIG["RaidRecord"]["fakuan"][j][3].."G", RaidR_UI.xuanzhongChat, nil);
+		for j=1,#PIGA["RaidRecord"]["fakuan"] do
+			if PIGA["RaidRecord"]["fakuan"][j][4]~="无" then
+				SendChatMessage("["..PIGA["RaidRecord"]["fakuan"][j][1].."]-"..PIGA["RaidRecord"]["fakuan"][j][4].."-收入："..PIGA["RaidRecord"]["fakuan"][j][2]+PIGA["RaidRecord"]["fakuan"][j][3].."G", RaidR_UI.xuanzhongChat, nil);
 			end
 		end
 	end)
@@ -102,36 +102,36 @@ local function ADD_fakuan()
 			_G["fakuan_hang_"..id.."_UI"].chuziren.V:SetText();
 			_G["fakuan_hang_"..id.."_UI"].del:Hide();
 	    end
-		if #PIG["RaidRecord"]["fakuan"]>0 then
-		    local ItemsNum = #PIG["RaidRecord"]["fakuan"];
+		if #PIGA["RaidRecord"]["fakuan"]>0 then
+		    local ItemsNum = #PIGA["RaidRecord"]["fakuan"];
 		    FauxScrollFrame_Update(self, ItemsNum, hang_NUM, hang_Height);
 		    local offset = FauxScrollFrame_GetOffset(self);
 			for id = 1, hang_NUM do
 				local dangqian = id+offset;
-				if PIG["RaidRecord"]["fakuan"][dangqian] then
+				if PIGA["RaidRecord"]["fakuan"][dangqian] then
 					_G["fakuan_hang_"..id.."_UI"]:Show();
 					if dangqian==1 then
-						_G["fakuan_hang_"..id.."_UI"].shiyou:SetText(PIG["RaidRecord"]["fakuan"][dangqian][1]);
+						_G["fakuan_hang_"..id.."_UI"].shiyou:SetText(PIGA["RaidRecord"]["fakuan"][dangqian][1]);
 					elseif dangqian==2 then	
-			    		_G["fakuan_hang_"..id.."_UI"].shiyou:SetText("|cff00FA9A"..PIG["RaidRecord"]["fakuan"][dangqian][1].."|r");
+			    		_G["fakuan_hang_"..id.."_UI"].shiyou:SetText("|cff00FA9A"..PIGA["RaidRecord"]["fakuan"][dangqian][1].."|r");
 			    	elseif dangqian<6 then
-			    		_G["fakuan_hang_"..id.."_UI"].shiyou:SetText(PIG["RaidRecord"]["fakuan"][dangqian][1]);
+			    		_G["fakuan_hang_"..id.."_UI"].shiyou:SetText(PIGA["RaidRecord"]["fakuan"][dangqian][1]);
 			    	elseif dangqian<9 then
-			    		_G["fakuan_hang_"..id.."_UI"].shiyou:SetText("|cff00FA9A"..PIG["RaidRecord"]["fakuan"][dangqian][1].."|r");
+			    		_G["fakuan_hang_"..id.."_UI"].shiyou:SetText("|cff00FA9A"..PIGA["RaidRecord"]["fakuan"][dangqian][1].."|r");
 			    	else
-			    		_G["fakuan_hang_"..id.."_UI"].shiyou:SetText(PIG["RaidRecord"]["fakuan"][dangqian][1]);
+			    		_G["fakuan_hang_"..id.."_UI"].shiyou:SetText(PIGA["RaidRecord"]["fakuan"][dangqian][1]);
 			    	end
-			    	_G["fakuan_hang_"..id.."_UI"].shouru.G:SetText(PIG["RaidRecord"]["fakuan"][dangqian][2]);
+			    	_G["fakuan_hang_"..id.."_UI"].shouru.G:SetText(PIGA["RaidRecord"]["fakuan"][dangqian][2]);
 					_G["fakuan_hang_"..id.."_UI"].shouru.E:SetID(dangqian);
 					_G["fakuan_hang_"..id.."_UI"].shouru.bianji:SetID(dangqian);
 					_G["fakuan_hang_"..id.."_UI"].shouru.baocun:SetID(dangqian);
 
-			    	_G["fakuan_hang_"..id.."_UI"].qiankuan.G:SetText(PIG["RaidRecord"]["fakuan"][dangqian][3]);
+			    	_G["fakuan_hang_"..id.."_UI"].qiankuan.G:SetText(PIGA["RaidRecord"]["fakuan"][dangqian][3]);
 					_G["fakuan_hang_"..id.."_UI"].qiankuan.E:SetID(dangqian);
 					_G["fakuan_hang_"..id.."_UI"].qiankuan.bianji:SetID(dangqian);
 					_G["fakuan_hang_"..id.."_UI"].qiankuan.baocun:SetID(dangqian);
 
-					_G["fakuan_hang_"..id.."_UI"].chuziren.V:SetText(PIG["RaidRecord"]["fakuan"][dangqian][4]);
+					_G["fakuan_hang_"..id.."_UI"].chuziren.V:SetText(PIGA["RaidRecord"]["fakuan"][dangqian][4]);
 					_G["fakuan_hang_"..id.."_UI"].chuziren:SetID(dangqian);
 			    	_G["fakuan_hang_"..id.."_UI"].del:SetID(dangqian);
 					_G["fakuan_hang_"..id.."_UI"].del:Show();
@@ -152,18 +152,18 @@ local function ADD_fakuan()
 				end
 		    end
 			for p=1,8 do
-				if #PIG["RaidRecord"]["Raidinfo"][p]>0 then
-					for pp=1,#PIG["RaidRecord"]["Raidinfo"][p] do
-					   	if PIG["RaidRecord"]["Raidinfo"][p][pp][4]~=nil then
+				if #PIGA["RaidRecord"]["Raidinfo"][p]>0 then
+					for pp=1,#PIGA["RaidRecord"]["Raidinfo"][p] do
+					   	if PIGA["RaidRecord"]["Raidinfo"][p][pp][4]~=nil then
 					   		_G["chuzirenXZP_"..p.."_"..pp]:Show();
-							_G["chuzirenXZP_"..p.."_"..pp].Name:SetText(PIG["RaidRecord"]["Raidinfo"][p][pp][4]);
-							local _, _, _, wanjiaName = PIG["RaidRecord"]["Raidinfo"][p][pp][4]:find("((.+)-)");
+							_G["chuzirenXZP_"..p.."_"..pp].Name:SetText(PIGA["RaidRecord"]["Raidinfo"][p][pp][4]);
+							local _, _, _, wanjiaName = PIGA["RaidRecord"]["Raidinfo"][p][pp][4]:find("((.+)-)");
 							if wanjiaName then
 								_G["chuzirenXZP_"..p.."_"..pp].Name_XS:SetText(wanjiaName);
 							else
-								_G["chuzirenXZP_"..p.."_"..pp].Name_XS:SetText(PIG["RaidRecord"]["Raidinfo"][p][pp][4]);
+								_G["chuzirenXZP_"..p.."_"..pp].Name_XS:SetText(PIGA["RaidRecord"]["Raidinfo"][p][pp][4]);
 							end
-							_G["chuzirenXZP_"..p.."_"..pp].Name_XS:SetTextColor(PIG["RaidRecord"]["Raidinfo"][p][pp][2][1],PIG["RaidRecord"]["Raidinfo"][p][pp][2][2],PIG["RaidRecord"]["Raidinfo"][p][pp][2][3], 1);
+							_G["chuzirenXZP_"..p.."_"..pp].Name_XS:SetTextColor(PIGA["RaidRecord"]["Raidinfo"][p][pp][2][1],PIGA["RaidRecord"]["Raidinfo"][p][pp][2][2],PIGA["RaidRecord"]["Raidinfo"][p][pp][2][3], 1);
 					   	end
 					end
 				end
@@ -224,7 +224,7 @@ local function ADD_fakuan()
 			fujiFrame.baocun:Hide()
 	 		local NWEdanjiaV=self:GetNumber();
 	 		fujiFrame.G:SetText(NWEdanjiaV);
-			PIG["RaidRecord"]["fakuan"][self:GetID()][2]=NWEdanjiaV;
+			PIGA["RaidRecord"]["fakuan"][self:GetID()][2]=NWEdanjiaV;
 			UpdateFakuan(fakuan_Scroll_UI)
 		end);
 		fakuan_hang.shouru.E:SetScript("OnEditFocusLost", function(self)
@@ -258,7 +258,7 @@ local function ADD_fakuan()
 			fujiFrame.G:Hide()
 			fujiFrame.E:Show()
 			fujiFrame.baocun:Show()
-			fujiFrame.E:SetText(PIG["RaidRecord"]["fakuan"][self:GetID()][2])
+			fujiFrame.E:SetText(PIGA["RaidRecord"]["fakuan"][self:GetID()][2])
 		end);
 		fakuan_hang.shouru.baocun = CreateFrame("Button",nil,fakuan_hang.shouru, "UIPanelButtonTemplate");
 		fakuan_hang.shouru.baocun:SetSize(hang_Height,hang_Height-10);
@@ -275,7 +275,7 @@ local function ADD_fakuan()
 			self:Hide()
 	 		local NWEdanjiaV=fujiFrame.E:GetNumber();
 	 		fujiFrame.G:SetText(NWEdanjiaV);
-			PIG["RaidRecord"]["fakuan"][self:GetID()][2]=NWEdanjiaV;
+			PIGA["RaidRecord"]["fakuan"][self:GetID()][2]=NWEdanjiaV;
 			UpdateFakuan(fakuan_Scroll_UI)
 		end);
 		-----欠款-----
@@ -302,7 +302,7 @@ local function ADD_fakuan()
 			fujiFrame.baocun:Hide()
 	 		local NWEdanjiaV=self:GetNumber();
 	 		fujiFrame.G:SetText(NWEdanjiaV);
-			PIG["RaidRecord"]["fakuan"][self:GetID()][3]=NWEdanjiaV;
+			PIGA["RaidRecord"]["fakuan"][self:GetID()][3]=NWEdanjiaV;
 			UpdateFakuan(fakuan_Scroll_UI)
 		end);
 		fakuan_hang.qiankuan.E:SetScript("OnEditFocusLost", function(self)
@@ -336,7 +336,7 @@ local function ADD_fakuan()
 			fujiFrame.G:Hide()
 			fujiFrame.E:Show()
 			fujiFrame.baocun:Show()
-			fujiFrame.E:SetText(PIG["RaidRecord"]["fakuan"][self:GetID()][3])
+			fujiFrame.E:SetText(PIGA["RaidRecord"]["fakuan"][self:GetID()][3])
 		end);
 		fakuan_hang.qiankuan.baocun = CreateFrame("Button",nil,fakuan_hang.qiankuan, "UIPanelButtonTemplate");
 		fakuan_hang.qiankuan.baocun:SetSize(hang_Height,hang_Height-10);
@@ -353,7 +353,7 @@ local function ADD_fakuan()
 			self:Hide()
 	 		local NWEdanjiaV=fujiFrame.E:GetNumber();
 	 		fujiFrame.G:SetText(NWEdanjiaV);
-			PIG["RaidRecord"]["fakuan"][self:GetID()][3]=NWEdanjiaV;
+			PIGA["RaidRecord"]["fakuan"][self:GetID()][3]=NWEdanjiaV;
 			UpdateFakuan(fakuan_Scroll_UI)
 		end);
 
@@ -375,7 +375,7 @@ local function ADD_fakuan()
 				xuanzechuziren_UI:Hide();
 			else
 				xuanzechuziren_UI:Show();
-				xuanzechuziren_UI.T2:SetText(PIG["RaidRecord"]["fakuan"][self:GetID()][1])
+				xuanzechuziren_UI.T2:SetText(PIGA["RaidRecord"]["fakuan"][self:GetID()][1])
 				xuanzechuziren_UI.T4:SetText(self:GetID())
 				Updatefakuanxuanze();
 			end
@@ -395,7 +395,7 @@ local function ADD_fakuan()
 			self.Tex:SetPoint("CENTER");
 		end);
 		fakuan_hang.del:SetScript("OnClick", function (self)
-			table.remove(PIG["RaidRecord"]["fakuan"],self:GetID());
+			table.remove(PIGA["RaidRecord"]["fakuan"],self:GetID());
 			UpdateFakuan(fakuan_Scroll_UI)
 		end);
 	end
@@ -474,14 +474,14 @@ local function ADD_fakuan()
 		if x==nil then
 			fuFrame.Add.F.F.err:SetText("\124cffffff00添加失败：事件不能为空或过短！\124r");	
 		else
-			for i=1,#PIG["RaidRecord"]["fakuan"] do
-				if xxx==PIG["RaidRecord"]["fakuan"][i][1] then
+			for i=1,#PIGA["RaidRecord"]["fakuan"] do
+				if xxx==PIGA["RaidRecord"]["fakuan"][i][1] then
 					fuFrame.Add.F.F.err:SetText("\124cffffff00添加失败：已存在同名事件！\124r");
 					return
 				end
 			end
 			local qitashouruinfo={xxx,qitashouruG,0,"无"};
-			table.insert(PIG["RaidRecord"]["fakuan"],qitashouruinfo);
+			table.insert(PIGA["RaidRecord"]["fakuan"],qitashouruinfo);
 			fuFrame.Add.F:Hide();
 			UpdateFakuan(fakuan_Scroll_UI)
 		end
@@ -533,7 +533,7 @@ local function ADD_fakuan()
 	xuanzechuziren.qingchu:SetPoint("TOPLEFT",xuanzechuziren,"TOPLEFT",300,-4);
 	xuanzechuziren.qingchu:SetText("清除出资人");
 	xuanzechuziren.qingchu:SetScript("OnClick", function ()
-		PIG["RaidRecord"]["fakuan"][tonumber(xuanzechuziren.T4:GetText())][4]="无";
+		PIGA["RaidRecord"]["fakuan"][tonumber(xuanzechuziren.T4:GetText())][4]="无";
 		UpdateFakuan(fakuan_Scroll_UI)
 		xuanzechuziren_UI:Hide()
 	end);
@@ -591,7 +591,7 @@ local function ADD_fakuan()
 			end);
 			chuzirenXZP:SetScript("OnMouseUp", function (self,button)
 				self.Name_XS:SetPoint("CENTER",self,"CENTER",0,1);
-				PIG["RaidRecord"]["fakuan"][tonumber(xuanzechuziren.T4:GetText())][4]=self.Name:GetText();
+				PIGA["RaidRecord"]["fakuan"][tonumber(xuanzechuziren.T4:GetText())][4]=self.Name:GetText();
 				UpdateFakuan(fakuan_Scroll_UI)
 				xuanzechuziren_UI:Hide()
 			end);

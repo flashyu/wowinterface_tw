@@ -30,52 +30,52 @@ zishentabbut:Selected()
 zishenF.Plus=PIGCheckbutton_R(zishenF,{"耐久/移速","在系统默认头像上增加耐久/移速提示！"})
 zishenF.Plus:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["UnitFrame"]["PlayerFrame"]["Plus"]=true;
+		PIGA["UnitFrame"]["PlayerFrame"]["Plus"]=true;
 		UnitFramefun.Zishen()
 	else
-		PIG["UnitFrame"]["PlayerFrame"]["Plus"]=false;
+		PIGA["UnitFrame"]["PlayerFrame"]["Plus"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
 zishenF.Loot=PIGCheckbutton_R(zishenF,{"拾取方式","在系统默认头像上增加拾取方式提示！"})
 zishenF.Loot:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["UnitFrame"]["PlayerFrame"]["Loot"]=true;
+		PIGA["UnitFrame"]["PlayerFrame"]["Loot"]=true;
 		UnitFramefun.Zishen()
 	else
-		PIG["UnitFrame"]["PlayerFrame"]["Loot"]=false;
+		PIGA["UnitFrame"]["PlayerFrame"]["Loot"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
 zishenF.HPFF=PIGCheckbutton_R(zishenF,{"额外血量框架","在自身头像右侧显示额外血量框架.\n额外血量框架可能会和目标头像框架重叠，开启此选项后可能会右移目标头像"})
 zishenF.HPFF:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["UnitFrame"]["PlayerFrame"]["HPFF"]=true;
+		PIGA["UnitFrame"]["PlayerFrame"]["HPFF"]=true;
 		UnitFramefun.Zishen()
 	else
-		PIG["UnitFrame"]["PlayerFrame"]["HPFF"]=false;
+		PIGA["UnitFrame"]["PlayerFrame"]["HPFF"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
 zishenF:HookScript("OnShow", function(self)
-	self.Plus:SetChecked(PIG["UnitFrame"]["PlayerFrame"]["Plus"])
-	self.Loot:SetChecked(PIG["UnitFrame"]["PlayerFrame"]["Loot"])
-	self.HPFF:SetChecked(PIG["UnitFrame"]["PlayerFrame"]["HPFF"])
+	self.Plus:SetChecked(PIGA["UnitFrame"]["PlayerFrame"]["Plus"])
+	self.Loot:SetChecked(PIGA["UnitFrame"]["PlayerFrame"]["Loot"])
+	self.HPFF:SetChecked(PIGA["UnitFrame"]["PlayerFrame"]["HPFF"])
 end)
 ----------------------
 local duiyouF =PIGOptionsList_R(RTabFrame,L["UNIT_TABNAME2"],90)
 duiyouF.Plus=PIGCheckbutton_R(duiyouF,{"队友头像增强","增强队友头像，显示额外血量框架，常驻显示队友BUFF，显示队友目标等！\r|cff00FFFF小提示：|r\r队友职业图标可以点击，左击观察/右击交易。"})
 duiyouF.Plus:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["UnitFrame"]["PartyMemberFrame"]["Plus"]=true;
+		PIGA["UnitFrame"]["PartyMemberFrame"]["Plus"]=true;
 		UnitFramefun.Duiyou()
 	else
-		PIG["UnitFrame"]["PartyMemberFrame"]["Plus"]=false;
+		PIGA["UnitFrame"]["PartyMemberFrame"]["Plus"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
 duiyouF:HookScript("OnShow", function(self)
-	self.Plus:SetChecked(PIG["UnitFrame"]["PartyMemberFrame"]["Plus"])
+	self.Plus:SetChecked(PIGA["UnitFrame"]["PartyMemberFrame"]["Plus"])
 end)
 -------------------
 local mubiaoF =PIGOptionsList_R(RTabFrame,L["UNIT_TABNAME3"],90)
@@ -86,10 +86,10 @@ end
 mubiaoF.Plus=PIGCheckbutton_R(mubiaoF,mubiaoF.PlusText)
 mubiaoF.Plus:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["UnitFrame"]["TargetFrame"]["Plus"]=true;
+		PIGA["UnitFrame"]["TargetFrame"]["Plus"]=true;
 		UnitFramefun.Mubiao()
 	else
-		PIG["UnitFrame"]["TargetFrame"]["Plus"]=false;
+		PIGA["UnitFrame"]["TargetFrame"]["Plus"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
@@ -97,10 +97,10 @@ if tocversion<40000 then
 	mubiaoF.Chouhen=PIGCheckbutton_R(mubiaoF,{"仇恨值/仇恨高亮/仇恨目录","显示目标的仇恨值/仇恨高亮/仇恨目录"})
 	mubiaoF.Chouhen:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["UnitFrame"]["TargetFrame"]["Chouhen"]=true;
+			PIGA["UnitFrame"]["TargetFrame"]["Chouhen"]=true;
 			UnitFramefun.Mubiao()
 		else
-			PIG["UnitFrame"]["TargetFrame"]["Chouhen"]=false;
+			PIGA["UnitFrame"]["TargetFrame"]["Chouhen"]=false;
 			Pig_Options_RLtishi_UI:Show()
 		end
 	end);
@@ -108,20 +108,20 @@ end
 mubiaoF.ToToToT=PIGCheckbutton_R(mubiaoF,{"显示目标的目标的目标","显示目标的目标的目标（注意：请先打开系统的目标的目标）"})
 mubiaoF.ToToToT:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["UnitFrame"]["TargetFrame"]["ToToToT"]=true;
+		PIGA["UnitFrame"]["TargetFrame"]["ToToToT"]=true;
 		UnitFramefun.Mubiao()
 	else
-		PIG["UnitFrame"]["TargetFrame"]["ToToToT"]=false;
+		PIGA["UnitFrame"]["TargetFrame"]["ToToToT"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
 mubiaoF.Yisu=PIGCheckbutton_R(mubiaoF,{"显示移动速度","显示目标移动速度"})
 mubiaoF.Yisu:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["UnitFrame"]["TargetFrame"]["Yisu"]=true;
+		PIGA["UnitFrame"]["TargetFrame"]["Yisu"]=true;
 		UnitFramefun.Mubiao()
 	else
-		PIG["UnitFrame"]["TargetFrame"]["Yisu"]=false;
+		PIGA["UnitFrame"]["TargetFrame"]["Yisu"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
@@ -137,21 +137,21 @@ end
 mubiaoF.BigDebuff=PIGCheckbutton_R(mubiaoF,{"增大自身释放的DEBUFF","增大自身释放的DEBUFF图标"})
 mubiaoF.BigDebuff:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["UnitFrame"]["TargetFrame"]["BigDebuff"]=true;
+		PIGA["UnitFrame"]["TargetFrame"]["BigDebuff"]=true;
 		BigDebuff()
 	else
-		PIG["UnitFrame"]["TargetFrame"]["BigDebuff"]=false;
+		PIGA["UnitFrame"]["TargetFrame"]["BigDebuff"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
 mubiaoF:HookScript("OnShow", function(self)
-	self.Plus:SetChecked(PIG["UnitFrame"]["TargetFrame"]["Plus"])
+	self.Plus:SetChecked(PIGA["UnitFrame"]["TargetFrame"]["Plus"])
 	if tocversion<40000 then
-		self.Chouhen:SetChecked(PIG["UnitFrame"]["TargetFrame"]["Chouhen"])
+		self.Chouhen:SetChecked(PIGA["UnitFrame"]["TargetFrame"]["Chouhen"])
 	end
-	self.ToToToT:SetChecked(PIG["UnitFrame"]["TargetFrame"]["ToToToT"])
-	self.Yisu:SetChecked(PIG["UnitFrame"]["TargetFrame"]["Yisu"])
-	self.BigDebuff:SetChecked(PIG["UnitFrame"]["TargetFrame"]["BigDebuff"])
+	self.ToToToT:SetChecked(PIGA["UnitFrame"]["TargetFrame"]["ToToToT"])
+	self.Yisu:SetChecked(PIGA["UnitFrame"]["TargetFrame"]["Yisu"])
+	self.BigDebuff:SetChecked(PIGA["UnitFrame"]["TargetFrame"]["BigDebuff"])
 end)
 --==================================
 addonTable.UnitFrame = function()

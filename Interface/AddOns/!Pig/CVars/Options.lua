@@ -118,12 +118,12 @@ for i=1,#CVarsList1 do
 		if self:GetChecked() then
 			SetCVar(CVarsList1[i][2], CVarsList1[i][3])
 			if CVarsList1[i][2]==chaoyuanshijuVVV[1] then
-				PIG["CVars"]["MaxZoom"]=true
+				PIGA["CVars"]["MaxZoom"]=true
 			end
 		else
 			SetCVar(CVarsList1[i][2], CVarsList1[i][4])
 			if CVarsList1[i][2]==chaoyuanshijuVVV[1] then
-				PIG["CVars"]["MaxZoom"]=false
+				PIGA["CVars"]["MaxZoom"]=false
 			end
 		end
 		if CVarsList1[i][6] then
@@ -319,19 +319,19 @@ for i=1,#gaojiList do
 end
 ------
 local function AutoCombatLog()
-	if PIG["CVars"]["AutoCombatLog"] then
-		if PIG["CVars"]["AutoCombatLogTJ"]==1 then
+	if PIGA["CVars"]["AutoCombatLog"] then
+		if PIGA["CVars"]["AutoCombatLogTJ"]==1 then
 			SetCVar("advancedCombatLogging", "1")
 			return
 		else	
 			local inInstance, instanceType = IsInInstance()
 			if instanceType=="raid" then
-				if PIG["CVars"]["AutoCombatLogTJ"]==3 then
+				if PIGA["CVars"]["AutoCombatLogTJ"]==3 then
 					SetCVar("advancedCombatLogging", "1")
 					return
 				end
 			elseif instanceType=="party" then
-				if PIG["CVars"]["AutoCombatLogTJ"]==2 then
+				if PIGA["CVars"]["AutoCombatLogTJ"]==2 then
 					SetCVar("advancedCombatLogging", "1")
 					return
 				end
@@ -363,9 +363,9 @@ local function gengxinONOFF()
 end
 CombatLog:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["CVars"]["AutoCombatLog"]=true
+		PIGA["CVars"]["AutoCombatLog"]=true
 	else
-		PIG["CVars"]["AutoCombatLog"]=false
+		PIGA["CVars"]["AutoCombatLog"]=false
 	end
 	AutoCombatLog()
 	gengxinONOFF()
@@ -380,31 +380,31 @@ function CombatLog.Opentj:PIGDownMenu_Update_But(self)
 	info.func = self.PIGDownMenu_SetValue
 	for i=1,#Opentiaojian,1 do
 	    info.text, info.arg1 = Opentiaojian[i], i
-	    info.checked = i==PIG["CVars"]["AutoCombatLogTJ"]
+	    info.checked = i==PIGA["CVars"]["AutoCombatLogTJ"]
 		CombatLog.Opentj:PIGDownMenu_AddButton(info)
 	end 
 end
 function CombatLog.Opentj:PIGDownMenu_SetValue(value,arg1,arg2)
 	CombatLog.Opentj:PIGDownMenu_SetText(value)
-	PIG["CVars"]["AutoCombatLogTJ"]=arg1
+	PIGA["CVars"]["AutoCombatLogTJ"]=arg1
 	PIGCloseDropDownMenus()
 	AutoCombatLog()
 end
 CombatLog:HookScript("OnShow", function (self)
 	gengxinONOFF()
-	if PIG["CVars"]["AutoCombatLog"] then
+	if PIGA["CVars"]["AutoCombatLog"] then
 		self:SetChecked(true);
 	else
 		self:SetChecked(false);
 	end
-	self.Opentj:PIGDownMenu_SetText(Opentiaojian[PIG["CVars"]["AutoCombatLogTJ"]])
+	self.Opentj:PIGDownMenu_SetText(Opentiaojian[PIGA["CVars"]["AutoCombatLogTJ"]])
 end);
 --==================================
 addonTable.CVars = function()
 	local function chaoyuanshijujihuo()
 		SetCVar(chaoyuanshijuVVV[1], chaoyuanshijuVVV[2])
 	end
-	if PIG["CVars"]["MaxZoom"] then
+	if PIGA["CVars"]["MaxZoom"] then
 		C_Timer.After(3, chaoyuanshijujihuo)
 	end
 	AutoCombatLog()

@@ -6,7 +6,7 @@ local PIGFontString=Create.PIGFontString
 local UnitFramefun=addonTable.UnitFramefun
 -------------
 local function HpMp_Update()
-	if not PIG["UnitFrame"]["PlayerFrame"]["HPFF"] then return end
+	if not PIGA["UnitFrame"]["PlayerFrame"]["HPFF"] then return end
 	local HP = UnitHealth("player");	
 	local HPmax = UnitHealthMax("player");
 	PlayerFrame.ziji.HP:SetText(HP..'/'..HPmax);
@@ -18,7 +18,7 @@ local function HpMp_Update()
 	PlayerFrame.ziji.MP:SetText(MP..'/'..MPmax);
 end
 local function HpMp_Update_W()
-	if not PIG["UnitFrame"]["PlayerFrame"]["HPFF"] then return end
+	if not PIGA["UnitFrame"]["PlayerFrame"]["HPFF"] then return end
 	if UnitHealthMax("player")>99999 or UnitPowerMax("player")>99999 then
 		PlayerFrame.ziji:SetWidth(120);
 	elseif UnitHealthMax("player")>9999 or UnitPowerMax("player")>9999 then
@@ -76,7 +76,7 @@ local function HideHPMPTT()
 end
 ------
 local function Naijiu_Update()
-	if not PIG["UnitFrame"]["PlayerFrame"]["Plus"] then return end
+	if not PIGA["UnitFrame"]["PlayerFrame"]["Plus"] then return end
 	local zhuangbeinaijiuhezhi={0,0};
 	for id = 1, 19, 1 do
 		local current, maximum = GetInventoryItemDurability(id);
@@ -104,7 +104,7 @@ local function Naijiu_Update()
 	end
 end
 local function Loot_Update()
-	if not PIG["UnitFrame"]["PlayerFrame"]["Loot"] then return end
+	if not PIGA["UnitFrame"]["PlayerFrame"]["Loot"] then return end
 	if tocversion<40000 then
 		local lootmethod, _, _ = GetLootMethod();
 		if IsInGroup() then 
@@ -143,7 +143,7 @@ local function Loot_Update()
 end
 ---		
 function UnitFramefun.Zishen()
-	if PIG["UnitFrame"]["PlayerFrame"]["Plus"] and not PlayerFrame.ICON then
+	if PIGA["UnitFrame"]["PlayerFrame"]["Plus"] and not PlayerFrame.ICON then
 		--角色耐久
 		PlayerFrame.ICON = PlayerFrame:CreateTexture(nil, "OVERLAY");
 		PlayerFrame.ICON:SetTexture("interface/minimap/tracking/repair.blp");
@@ -167,7 +167,7 @@ function UnitFramefun.Zishen()
 		end)
 	end
 
-	if PIG["UnitFrame"]["PlayerFrame"]["Loot"] and not PlayerFrame.lootF then
+	if PIGA["UnitFrame"]["PlayerFrame"]["Loot"] and not PlayerFrame.lootF then
 		--拾取方式
 		PlayerFrame.lootF = CreateFrame("Button", nil, PlayerFrame);
 		PlayerFrame.lootF:SetSize(25,80);
@@ -215,7 +215,7 @@ function UnitFramefun.Zishen()
 			end
 		end);
 	end
-	if PIG["UnitFrame"]["PlayerFrame"]["HPFF"] and not PlayerFrame.ziji then
+	if PIGA["UnitFrame"]["PlayerFrame"]["HPFF"] and not PlayerFrame.ziji then
 		--人物血量蓝量信息
 		PlayerFrame.ziji = CreateFrame("Frame", nil, PlayerFrame,"BackdropTemplate");
 		PlayerFrame.ziji:SetBackdrop({bgFile = "Interface/DialogFrame/UI-DialogBox-Background", edgeFile = "Interface/Tooltips/UI-Tooltip-Border", 

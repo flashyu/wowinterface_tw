@@ -15,6 +15,7 @@ local PIGOptionsList_RF=Create.PIGOptionsList_RF
 local PIGOptionsList_R=Create.PIGOptionsList_R
 local PIGFontString=Create.PIGFontString
 local PIGFontStringBG=Create.PIGFontStringBG
+local PIGEnter=Create.PIGEnter
 ---
 local ActionBarfun={}
 addonTable.ActionBarfun=ActionBarfun
@@ -62,10 +63,10 @@ end
 ActionF.Ranse=PIGCheckbutton_R(ActionF,{"技能范围着色","根据技能范围染色动作条按键颜色"})
 ActionF.Ranse:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["ActionBar"]["Ranse"]=true;
+		PIGA["ActionBar"]["Ranse"]=true;
 		ActionBar_Ranse()
 	else
-		PIG["ActionBar"]["Ranse"]=false;
+		PIGA["ActionBar"]["Ranse"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
@@ -97,10 +98,10 @@ if tocversion<20000 then
 	ActionF.Cailiao=PIGCheckbutton_R(ActionF,{"显示施法材料数量","在动作条上显示需要施法材料技能材料数量"})
 	ActionF.Cailiao:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["ActionBar"]["Cailiao"]=true;
+			PIGA["ActionBar"]["Cailiao"]=true;
 			ActionBarfun.ActionBar_Cailiao()
 		else
-			PIG["ActionBar"]["Cailiao"]=false;
+			PIGA["ActionBar"]["Cailiao"]=false;
 			Pig_Options_RLtishi_UI:Show()
 		end
 	end)
@@ -111,25 +112,27 @@ local function ActionBar_PetTishi()
 	local _, classId = UnitClassBase("player");
 	--职业编号1战士/2圣骑士/3猎人/4盗贼/5牧师/6死亡骑士/7萨满祭司/8法师/9术士/10武僧/11德鲁伊/12恶魔猎手
 	if classId==3 or  classId==9 then
-		local chaofengjinengName
+		local chaofengjinengName={}
 		if classId==3 then
 			if GetLocale() == "zhTW" then
-				chaofengjinengName="低吼"
-			else
-				chaofengjinengName="低吼"
+				table.insert(chaofengjinengName,"低吼")
+			elseif GetLocale() == "zhCN" then
+				table.insert(chaofengjinengName,"低吼")
 			end
 		elseif classId==9 then
 			if tocversion<80000 then
 				if GetLocale() == "zhTW" then
-					chaofengjinengName="受難"
-				else
-					chaofengjinengName="受难"
+					table.insert(chaofengjinengName,"受難")
+					table.insert(chaofengjinengName,"痛楚")
+				elseif GetLocale() == "zhCN" then
+					table.insert(chaofengjinengName,"受难")
+					table.insert(chaofengjinengName,"痛楚")
 				end
 			else
 				if GetLocale() == "zhTW" then
-					chaofengjinengName="脅迫氣場"
-				else
-					chaofengjinengName="胁迫气场"
+					table.insert(chaofengjinengName,"脅迫氣場")
+				elseif GetLocale() == "zhCN" then
+					table.insert(chaofengjinengName,"胁迫气场")
 				end
 			end
 		end
@@ -144,69 +147,54 @@ local function ActionBar_PetTishi()
 		PETchaofengtishi.Icon:SetPoint("CENTER");
 		PETchaofengtishi:Hide()
 		-----------
+		local tishibiaoti,tishineirong="|cff00FFFF"..L["ADDON_NAME"].."提示：","";
 		local function PetTishizhhixing()
-			local inInstance = IsInInstance();
-			local tishibiaoti,tishineirong="|cff00FFFF猪猪加油提示：","";
-			local hasPetSpells, _ = HasPetSpells()
-			if hasPetSpells then
-				for i=1, hasPetSpells do
-					local spellName = GetSpellBookItemName(i, BOOKTYPE_PET)
-			 		yizhaodaoPETspell=false
-					if spellName==chaofengjinengName then
-						yizhaodaoPETspell=true 
-						local autocastable, autostate = GetSpellAutocast(i, BOOKTYPE_PET)
-						if inInstance then
-							if autostate then
-								tishineirong="|cffFFFF00副本内开启宠物嘲讽可能干扰坦克仇恨！|r";
-								PETchaofengtishi:Show()
+			local hasUI, isHunterPet = HasPetUI()
+			if hasUI then
+				for x=4, 7 do
+					for xx=1,#chaofengjinengName do
+						local name, subtext, texture, isToken, isActive, autoCastAllowed, autoCastEnabled = GetPetActionInfo(x);
+						if name==chaofengjinengName[xx] then
+							local inInstance = IsInInstance();
+							if inInstance then
+								if autoCastAllowed then
+									PETchaofengtishi:Show()
+									PETchaofengtishi:SetPoint("BOTTOM", _G["PetActionButton"..x], "TOP", 0, 0);
+									PIGEnter(PETchaofengtishi,tishibiaoti,"|cffFFFF00副本内开启宠物嘲讽可能干扰坦克仇恨！|r")
+								else
+									PETchaofengtishi:Hide()
+								end
 							else
-								PETchaofengtishi:Hide()
+								if autoCastAllowed then
+									PETchaofengtishi:Hide()
+								else
+									PETchaofengtishi:Show()
+									PETchaofengtishi:SetPoint("BOTTOM", _G["PetActionButton"..x], "TOP", 0, 0);
+									PIGEnter(PETchaofengtishi,tishibiaoti,"|cffFFFF00野外关闭宠物嘲讽可能造成宠物仇恨匮乏！|r")
+								end
 							end
-						else
-							if autostate then
-								PETchaofengtishi:Hide()
-							else
-								PETchaofengtishi:Show()
-								tishineirong="|cffFFFF00野外关闭宠物嘲讽可能造成宠物仇恨匮乏！|r";
-							end
+							return
 						end
-						break
 					end
 				end
 			end
-			for ii=4, 7 do
-				local name, subtext, texture, isToken, isActive, autoCastAllowed, autoCastEnabled = GetPetActionInfo(ii);
-				if name==chaofengjinengName then
-					PETchaofengtishi:SetPoint("BOTTOM", _G["PetActionButton"..ii], "TOP", 0, 0);
-				end
-			end
-			PETchaofengtishi:SetScript("OnEnter", function ()
-				GameTooltip:ClearLines();
-				GameTooltip:SetOwner(PETchaofengtishi, "ANCHOR_TOPLEFT",2,4);
-				GameTooltip:AddLine(tishibiaoti)
-				GameTooltip:AddLine(tishineirong)
-				GameTooltip:Show();
-			end);
-			PETchaofengtishi:SetScript("OnLeave", function ()
-				GameTooltip:ClearLines();
-				GameTooltip:Hide() 
-			end);
 		end
+		PetTishizhhixing()
 		----------
 		local PETchaofeng= CreateFrame("Frame");
 		PETchaofeng:RegisterEvent("PET_BAR_UPDATE")
 		PETchaofeng:SetScript("OnEvent",PetTishizhhixing)
-		PetTishizhhixing()
+		
 	end
 end
 local Pettooltip = "宠物动作条嘲讽技能上方增加一个提示按钮，副本内提示关闭宠物嘲讽/副本外提示开启！\r|cffFFff00（只对有宠物职业生效）|r";
 ActionF.PetTishi=PIGCheckbutton_R(ActionF,{"宠物动作条嘲讽提示",Pettooltip})
 ActionF.PetTishi:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["ActionBar"]["PetTishi"]=true;
+		PIGA["ActionBar"]["PetTishi"]=true;
 		ActionBar_PetTishi()
 	else
-		PIG["ActionBar"]["PetTishi"]=false;
+		PIGA["ActionBar"]["PetTishi"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end)
@@ -216,7 +204,7 @@ zidongfanyeFFFF:HookScript("OnEvent", function()
 	ChangeActionBarPage(1);
 end)
 local function ActionBar_AutoFanye()
-	if PIG["ActionBar"]["AutoFanye"] then
+	if PIGA["ActionBar"]["AutoFanye"] then
 		zidongfanyeFFFF:RegisterEvent("PLAYER_REGEN_DISABLED");
 	else
 		zidongfanyeFFFF:UnregisterEvent("PLAYER_REGEN_DISABLED");
@@ -225,16 +213,16 @@ end
 ActionF.AutoFanye=PIGCheckbutton_R(ActionF,{"进战斗时切换1动作栏","进入战斗后自动切换到1号动作栏"})
 ActionF.AutoFanye:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["ActionBar"]["AutoFanye"]=true;
+		PIGA["ActionBar"]["AutoFanye"]=true;
 	else
-		PIG["ActionBar"]["AutoFanye"]=false;
+		PIGA["ActionBar"]["AutoFanye"]=false;
 	end
 	ActionBar_AutoFanye()
 end)
 ActionF.botline = PIGLine(ActionF,"TOP",-354)
 if tocversion<100000 then
 	function ActionBarfun.ActionBar_HideShijiu()
-		if PIG["ActionBar"]["HideShijiu"] then
+		if PIGA["ActionBar"]["HideShijiu"] then
 			MainMenuBarRightEndCap:Hide();--隐藏右侧鹰标 
 			MainMenuBarLeftEndCap:Hide();--隐藏左侧鹰标 
 		else
@@ -245,9 +233,9 @@ if tocversion<100000 then
 	ActionF.HideShijiu=PIGCheckbutton(ActionF,{"TOPLEFT",ActionF.botline,"TOPLEFT",20,-20},{"隐藏狮鹫图标","隐藏动作条两边的狮鹫图标"})
 	ActionF.HideShijiu:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["ActionBar"]["HideShijiu"]=true;
+			PIGA["ActionBar"]["HideShijiu"]=true;
 		else
-			PIG["ActionBar"]["HideShijiu"]=false;
+			PIGA["ActionBar"]["HideShijiu"]=false;
 		end
 		ActionBarfun.ActionBar_HideShijiu()
 	end)
@@ -266,7 +254,7 @@ if tocversion<100000 then
 		end
 	end
 	function ActionBarfun.Pig_BarRight()
-		if not PIG["ActionBar"]["BarRight"] then return end
+		if not PIGA["ActionBar"]["BarRight"] then return end
 		local function Pig_MultiBar_Update()
 			if not InCombatLockdown() then
 				for i=1, 12 do
@@ -279,20 +267,23 @@ if tocversion<100000 then
 			end
 		end
 		Pig_MultiBar_Update()
-
+		--姿态条
+		local function StanceBar_Point(self)
+			if InCombatLockdown() then
+				self:RegisterEvent("PLAYER_REGEN_ENABLED");
+			else
+				local point, relativeTo, relativePoint, xOfs, yOfs = self:GetPoint()
+				self:SetMovable(true)
+				self:ClearAllPoints();
+				self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", xOfs, yOfs+42)
+				self:SetUserPlaced(true)
+				self:UnregisterEvent("PLAYER_REGEN_ENABLED");
+			end 
+		end
 		local function StanceBar_Update(self)
 			if SHOW_MULTI_ACTIONBAR_4 and SHOW_MULTI_ACTIONBAR_3 then
 				if not self:IsUserPlaced() then
-					if InCombatLockdown() then
-						self:RegisterEvent("PLAYER_REGEN_ENABLED");
-						PIG_print("部分移动会在战斗结束后执行")
-					else
-						local point, relativeTo, relativePoint, xOfs, yOfs = self:GetPoint()
-						self:SetMovable(true)
-						self:ClearAllPoints();
-						self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", xOfs, yOfs+42)
-						self:SetUserPlaced(true)
-					end 
+					StanceBar_Point(self) 
 				end
 			else
 				self:SetMovable(true)
@@ -305,131 +296,123 @@ if tocversion<100000 then
 			if event=="PLAYER_REGEN_ENABLED" then
 				if SHOW_MULTI_ACTIONBAR_4 and SHOW_MULTI_ACTIONBAR_3 then
 					if not self:IsUserPlaced() then
-						local point, relativeTo, relativePoint, xOfs, yOfs = self:GetPoint()
-						self:SetMovable(true)
-						self:ClearAllPoints();
-						self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", xOfs, yOfs+42)
-						self:SetUserPlaced(true)
+						StanceBar_Point(self)
 					end
 				end
-				self:UnregisterEvent("PLAYER_REGEN_ENABLED");
 			end
 		end);
-
+		---图腾条
+		local function MultiCastBar_Point(self)
+			if InCombatLockdown() then
+				self:RegisterEvent("PLAYER_REGEN_ENABLED");
+			else
+				self:SetMovable(true)
+				self:ClearAllPoints();
+				self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", MULTICASTACTIONBAR_XPOS, MULTICASTACTIONBAR_YPOS+42)
+				self:SetUserPlaced(true)
+				self:UnregisterEvent("PLAYER_REGEN_ENABLED");
+			end 
+		end
 		local function MultiCastBar_Update(self)
 			if SHOW_MULTI_ACTIONBAR_4 and SHOW_MULTI_ACTIONBAR_3 then
-				if InCombatLockdown() then
-					self:RegisterEvent("PLAYER_REGEN_ENABLED");
-					PIG_print("部分移动会在战斗结束后执行")
-				else
-					self:SetMovable(true)
-					self:ClearAllPoints();
-					self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", MULTICASTACTIONBAR_XPOS, MULTICASTACTIONBAR_YPOS+42)
-					self:SetUserPlaced(true)
-				end 
+				MultiCastBar_Point(self)
 			else
 				self:SetMovable(true)
 				self:SetUserPlaced(false)
 				self:SetMovable(false)
 			end
 		end
-		MultiCastBar_Update(MultiCastActionBarFrame)
+		local function jiazaiMultiCast()
+			MultiCastBar_Update(MultiCastActionBarFrame)
+		end
 		MultiCastActionBarFrame:HookScript("OnEvent", function (self,event)
+			if event=="PLAYER_ENTERING_WORLD" then
+				C_Timer.After(0.4,jiazaiMultiCast)
+				C_Timer.After(1,jiazaiMultiCast)
+				C_Timer.After(2,jiazaiMultiCast)
+				C_Timer.After(5,jiazaiMultiCast)
+			end
 			if event=="PLAYER_REGEN_ENABLED" then
-				if SHOW_MULTI_ACTIONBAR_4 and SHOW_MULTI_ACTIONBAR_3 then
-					self:SetMovable(true)
-					self:ClearAllPoints();
-					self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", MULTICASTACTIONBAR_XPOS, MULTICASTACTIONBAR_YPOS+42)
-					self:SetUserPlaced(true)
-				end
-				self:UnregisterEvent("PLAYER_REGEN_ENABLED");
+				MultiCastBar_Update(self)
 			end
 		end);
-
-
+		--宠物动作条
 		local function PetBar_Update(self)
-			if InCombatLockdown() then return end
-			if SHOW_MULTI_ACTIONBAR_1 or SHOW_MULTI_ACTIONBAR_2 or SHOW_MULTI_ACTIONBAR_3 or SHOW_MULTI_ACTIONBAR_4 then
-				local showXP,showRep = GetExpWatched()
-				self:SetMovable(true)
-				self:ClearAllPoints();
-				if SHOW_MULTI_ACTIONBAR_4 and SHOW_MULTI_ACTIONBAR_3 and SHOW_MULTI_ACTIONBAR_1 then
+			if InCombatLockdown() then
+				PetActionBarFrame:RegisterEvent("PLAYER_REGEN_ENABLED");
+			else
+				if SHOW_MULTI_ACTIONBAR_3 and SHOW_MULTI_ACTIONBAR_4 then
+					local showXP,showRep = GetExpWatched()
+					--self:SetMovable(true)
+					self:ClearAllPoints();
+					local PIG_PETACTIONBAR_XPOS = PETACTIONBAR_XPOS
+					if StanceBarFrame:IsShown() then
+						PIG_PETACTIONBAR_XPOS = 340
+					end
 					if showXP and showRep then
-						--self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 188)
-						self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 96)
+						self:SetPoint("BOTTOMLEFT", MainMenuBar,"TOPLEFT", PIG_PETACTIONBAR_XPOS, 96)
+						--self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PIG_PETACTIONBAR_XPOS, 96)
 					elseif showXP or showRep then
-						--self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 180)
-						self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 86)
+						self:SetPoint("BOTTOMLEFT", MainMenuBar,"TOPLEFT", PIG_PETACTIONBAR_XPOS, 88)
+						--self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PIG_PETACTIONBAR_XPOS, 86)
 					else
-						--self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 172)
-						self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 84)
+						self:SetPoint("BOTTOMLEFT", MainMenuBar,"TOPLEFT", PIG_PETACTIONBAR_XPOS, 82)
+						--self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PIG_PETACTIONBAR_XPOS, 84)
 					end	
-				-- else
-					-- if SHOW_MULTI_ACTIONBAR_1 then
-						-- if showXP and showRep then
-							-- --self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 148)
-							-- self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 54)
-						-- elseif showXP or showRep then
-							-- --self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 140)
-							-- self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 45)
-						-- else
-							-- --self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 132)
-							-- self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 42)
-						-- end
-					-- else
-						-- if showXP and showRep then
-							-- --self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 104)
-							-- self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 12)
-						-- elseif showXP or showRep then
-							-- --self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 96)
-							-- self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 4)
-						-- else
-							-- --self:SetPoint("TOPLEFT", self:GetParent(),"BOTTOMLEFT", PETACTIONBAR_XPOS, 88)
-							-- self:SetPoint("BOTTOMLEFT", self:GetParent(),"TOPLEFT", PETACTIONBAR_XPOS, 0)
-						-- end
-					-- end
+					--self:SetUserPlaced(true)
+				else
+					self:ClearAllPoints();
+					self:SetPoint("BOTTOMLEFT", self:GetParent(),"BOTTOMLEFT", 36, 2)
 				end
-				self:SetUserPlaced(true)
+				PetActionBarFrame:UnregisterEvent("PLAYER_REGEN_ENABLED");
 			end
 		end
-		PetBar_Update(PetActionBarFrame)
+		--PetBar_Update(PetActionBarFrame)
+		PetBar_Update(PetActionButton1)
+		PetActionBarFrame:HookScript("OnEvent", function (self,event)
+			if event=="PLAYER_REGEN_ENABLED" then
+				PetBar_Update(PetActionButton1)
+			end
+		end);
 		hooksecurefunc("MainMenuBar_UpdateExperienceBars",function(newLevel)
 			StanceBar_Update(StanceBarFrame)
-			PetBar_Update(PetActionBarFrame)
+			--PetBar_Update(PetActionBarFrame)
+			PetBar_Update(PetActionButton1)
 			MultiCastBar_Update(MultiCastActionBarFrame)
 		end);
 		hooksecurefunc("MultiActionBar_Update",function()	
 			Pig_MultiBar_Update()
 			StanceBar_Update(StanceBarFrame)
-			PetBar_Update(PetActionBarFrame)
+			--PetBar_Update(PetActionBarFrame)
+			PetBar_Update(PetActionButton1)
 			MultiCastBar_Update(MultiCastActionBarFrame)
 		end);
 	end
 	ActionF.BarRight=PIGCheckbutton(ActionF,{"TOPLEFT",ActionF.botline,"TOPLEFT",300,-20},{"移动右边动作条到下方","移动右边竖向动作条到下方动作条之上"})
 	ActionF.BarRight:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["ActionBar"]["BarRight"]=true
+			PIGA["ActionBar"]["BarRight"]=true
 			ActionBarfun.Pig_BarRight()
 		else
-			PIG["ActionBar"]["BarRight"]=false
+			PIGA["ActionBar"]["BarRight"]=false
 			Pig_Options_RLtishi_UI:Show()
 		end
 	end)
 	--主动作条缩放比例
 	function ActionBarfun.ActionBar_bili()
-		if PIG["ActionBar"]["ActionBar_bili"] then
-			MainMenuBar:SetScale(PIG["ActionBar"]["ActionBar_bili_value"]);
-			VerticalMultiBarsContainer:SetScale(PIG["ActionBar"]["ActionBar_bili_value"]);
+		if PIGA["ActionBar"]["ActionBar_bili"] then
+			MainMenuBar:SetScale(PIGA["ActionBar"]["ActionBar_bili_value"]);
+			VerticalMultiBarsContainer:SetScale(PIGA["ActionBar"]["ActionBar_bili_value"]);
 			for i=1, 12 do
-				_G["MultiBarLeftButton"..i]:SetScale(PIG["ActionBar"]["ActionBar_bili_value"])
-				--_G["MultiBarRightButton"..i]:SetScale(PIG["ActionBar"]["ActionBar_bili_value"])
+				_G["MultiBarLeftButton"..i]:SetScale(PIGA["ActionBar"]["ActionBar_bili_value"])
+				--_G["MultiBarRightButton"..i]:SetScale(PIGA["ActionBar"]["ActionBar_bili_value"])
 			end
 		end
 	end
 	function ActionBarfun.ActionBar_bili_OP()
-		ActionF.ActionBar_bili.Slider:SetValue(PIG["ActionBar"]["ActionBar_bili_value"]);
-		ActionF.ActionBar_bili.Slider.Text:SetText(PIG["ActionBar"]["ActionBar_bili_value"]);
-		if PIG["ActionBar"]["ActionBar_bili"] then
+		ActionF.ActionBar_bili.Slider:SetValue(PIGA["ActionBar"]["ActionBar_bili_value"]);
+		ActionF.ActionBar_bili.Slider.Text:SetText(PIGA["ActionBar"]["ActionBar_bili_value"]);
+		if PIGA["ActionBar"]["ActionBar_bili"] then
 			ActionF.ActionBar_bili:SetChecked(true);
 			ActionF.ActionBar_bili.Slider:Enable();
 			ActionF.ActionBar_bili.Slider.Low:SetTextColor(1, 1, 1, 1);
@@ -446,9 +429,9 @@ if tocversion<100000 then
 	ActionF.ActionBar_bili = PIGCheckbutton(ActionF,{"TOPLEFT",ActionF.botline,"TOPLEFT",20,-60},{"缩放动作条","启用缩放动作条,注意此设置和系统高级里面的UI缩放不同，只调整动作条比例"})
 	ActionF.ActionBar_bili:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["ActionBar"]["ActionBar_bili"]=true	
+			PIGA["ActionBar"]["ActionBar_bili"]=true	
 		else
-			PIG["ActionBar"]["ActionBar_bili"]=false
+			PIGA["ActionBar"]["ActionBar_bili"]=false
 			Pig_Options_RLtishi_UI:Show()
 		end
 		ActionBarfun.ActionBar_bili_OP()
@@ -460,27 +443,27 @@ if tocversion<100000 then
 	ActionF.ActionBar_bili.Slider:SetScript('OnValueChanged', function(self)
 		local Newval = floor(self:GetValue()*10+0.5)
 		local Newval = Newval/10
-		PIG["ActionBar"]["ActionBar_bili_value"]=Newval;	
+		PIGA["ActionBar"]["ActionBar_bili_value"]=Newval;	
 		ActionBarfun.ActionBar_bili_OP()
 		ActionBarfun.ActionBar_bili()
 	end)
 end
 ---=======
 ActionF:HookScript("OnShow", function(self)
-	self.Ranse:SetChecked(PIG["ActionBar"]["Ranse"])
+	self.Ranse:SetChecked(PIGA["ActionBar"]["Ranse"])
 	if GetCVar("countdownForCooldowns")=="1" then
 		self.Cooldowns:SetChecked(true)
 	else
 		self.Cooldowns:SetChecked(false)
 	end
 	if tocversion<20000 then
-		self.Cailiao:SetChecked(PIG["ActionBar"]["Cailiao"])
+		self.Cailiao:SetChecked(PIGA["ActionBar"]["Cailiao"])
 	end
-	self.PetTishi:SetChecked(PIG["ActionBar"]["PetTishi"])
-	self.AutoFanye:SetChecked(PIG["ActionBar"]["AutoFanye"])
+	self.PetTishi:SetChecked(PIGA["ActionBar"]["PetTishi"])
+	self.AutoFanye:SetChecked(PIGA["ActionBar"]["AutoFanye"])
 	if tocversion<100000 then
-		self.HideShijiu:SetChecked(PIG["ActionBar"]["HideShijiu"])
-		self.BarRight:SetChecked(PIG["ActionBar"]["BarRight"])
+		self.HideShijiu:SetChecked(PIGA["ActionBar"]["HideShijiu"])
+		self.BarRight:SetChecked(PIGA["ActionBar"]["BarRight"])
 		ActionBarfun.ActionBar_bili_OP()
 	end
 end)
@@ -495,7 +478,7 @@ addonTable.ActionBar = function()
 	if tocversion<100000 then
 		ActionBarfun.ActionBar_HideShijiu()
 		ActionBarfun.Pig_BarRight()
-		ActionF.ActionBar_bili.Slider:SetValue(PIG["ActionBar"]["ActionBar_bili_value"])
+		ActionF.ActionBar_bili.Slider:SetValue(PIGA["ActionBar"]["ActionBar_bili_value"])
 	end
 	ActionBarfun.Pig_Action()
 end

@@ -3,7 +3,7 @@ local _, _, _, tocversion = GetBuildInfo()
 local FramePlusfun=addonTable.FramePlusfun
 --任务界面扩展--------------------
 function FramePlusfun.Quest()
-	if not PIG["FramePlus"]["Quest"] then return end
+	if not PIGA["FramePlus"]["Quest"] then return end
 	if NDui then return end
 	if tocversion<40000 then
 		local function gengxinLVQR()--显示任务等级

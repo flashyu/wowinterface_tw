@@ -21,11 +21,11 @@ end
 function QuickButUI.FastFen() end
 function CommonFun.FastFen()
 	local fujiF,fujiTabBut=PIGOptionsList_R(AutoSellBuy_UI.F,"分",60,"Left")
-	CommonFun.ADDScroll(fujiF,"分解","Fen",18,PIG["AutoSellBuy"]["Fen_List"],{false,"AutoSellBuy","Fen_List"})
+	CommonFun.ADDScroll(fujiF,"分解","Fen",18,PIGA["AutoSellBuy"]["Fen_List"],{false,"AutoSellBuy","Fen_List"})
 	---
 	local QkButUI = "QkBut_FastFen"
 	function QuickButUI.FastFen()
-		if PIG["QuickBut"]["Open"] and PIG["AutoSellBuy"]["Open"] and PIG["AutoSellBuy"]["Fen_QkBut"] then
+		if PIGA["QuickBut"]["Open"] and PIGA["AutoSellBuy"]["Open"] and PIGA["AutoSellBuy"]["Fen_QkBut"] then
 			if _G[QkButUI] then return end
 			local QuickTooltip = "左击-|cff00FFFF分解指定物品|r\n右击-|cff00FFFF打开"..CommonFun.GnName.."|r"
 			local QkBut=PIGQuickBut(QkButUI,QuickTooltip,CommonFun.buticon,nil,CommonFun.FrameLevel,"SecureActionButtonTemplate")
@@ -40,7 +40,7 @@ function CommonFun.FastFen()
 						PIG_print("请在脱战后使用")
 					else
 						self:SetAttribute("macrotext", " ")
-						local shujuy =PIG["AutoSellBuy"]["Fen_List"]
+						local shujuy =PIGA["AutoSellBuy"]["Fen_List"]
 						if #shujuy>0 then
 							for bag=0,4 do			
 								local xx=GetContainerNumSlots(bag)
@@ -77,11 +77,11 @@ function CommonFun.FastFen()
 	fujiF.QkBut = PIGCheckbutton(fujiF,{"TOPLEFT",fujiF,"TOPLEFT",10,-6},{"添加到功能动作条", "在功能动作条增加一个快捷使用按钮"})
 	fujiF.QkBut:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["AutoSellBuy"]["Fen_QkBut"]=true;
+			PIGA["AutoSellBuy"]["Fen_QkBut"]=true;
 			QuickButUI.FastFen()
 			self.RL:Hide()
 		else
-			PIG["AutoSellBuy"]["Fen_QkBut"]=false;
+			PIGA["AutoSellBuy"]["Fen_QkBut"]=false;
 			self.RL:Show()
 		end
 	end);
@@ -90,7 +90,7 @@ function CommonFun.FastFen()
 	fujiF.QkBut.RL:SetScript("OnClick", function (self)
 		ReloadUI()
 	end)
-	if PIG["AutoSellBuy"]["Fen_QkBut"] then
+	if PIGA["AutoSellBuy"]["Fen_QkBut"] then
 		fujiF.QkBut:SetChecked(true)
 	end
 

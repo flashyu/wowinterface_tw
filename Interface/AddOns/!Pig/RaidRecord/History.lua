@@ -39,7 +39,7 @@ local function ADD_History()
 			_G["History_list_"..i].name:SetTextColor(1, 215/255, 0, 1);
 			_G["History_list_"..i].time:SetTextColor(0, 1, 154/255, 1);
 	    end
-	    local shujuyuan = PIG["RaidRecord"]["History"]
+	    local shujuyuan = PIGA["RaidRecord"]["History"]
 		if #shujuyuan>0 then
 			History.qingkong:Enable();
 		    local ItemsNum = #shujuyuan;
@@ -101,7 +101,7 @@ local function ADD_History()
 		if History.xuanzhongID>0 then
 			History.neirong.Del:Enable();
 			local Hzonghang={};
-			local shujuyuan=PIG["RaidRecord"]["History"];
+			local shujuyuan=PIGA["RaidRecord"]["History"];
 			for a=1,#shujuyuan[History.xuanzhongID][2] do
 				local list1=shujuyuan[History.xuanzhongID][2][a][1];
 				local list2=shujuyuan[History.xuanzhongID][2][a][2];
@@ -310,10 +310,10 @@ local function ADD_History()
 	History.neirong.Del:Disable();
 	History.neirong.Del:SetScript("OnClick", function ()
 		if History.xuanzhongID>0 then
-			table.remove (PIG["RaidRecord"]["History"], History.xuanzhongID);
+			table.remove (PIGA["RaidRecord"]["History"], History.xuanzhongID);
 			History.xuanzhongID=History.xuanzhongID-1;
 			if History.xuanzhongID==0 then 
-				if #PIG["RaidRecord"]["History"]~=0 then
+				if #PIGA["RaidRecord"]["History"]~=0 then
 					History.xuanzhongID=1;
 				end
 			end
@@ -327,7 +327,7 @@ local function ADD_History()
 		button1 = "确定",
 		button2 = "取消",
 		OnAccept = function()
-			PIG["RaidRecord"]["History"]={};
+			PIGA["RaidRecord"]["History"]={};
 			History.xuanzhongID=0;
 			gengxinHistory(History.list.Scroll);
 			gengxinHistory_neirong(History.neirong.Scroll);

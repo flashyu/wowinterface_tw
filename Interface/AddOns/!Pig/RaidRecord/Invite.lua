@@ -64,7 +64,7 @@ local function ADD_Invite()
 			end
 		end
 		-------------
-		local shujuY = PIG["RaidRecord"]["Raidinfo"]
+		local shujuY = PIGA["RaidRecord"]["Raidinfo"]
 		for i=1, 8 do
 			if #shujuY[i]>0 then
 				for ii=1, #shujuY[i] do
@@ -79,7 +79,7 @@ local function ADD_Invite()
 			end
 		end
 		-------
-		local INVshujuY = PIG["RaidRecord"]["Invite"]["dangqianrenshu"]
+		local INVshujuY = PIGA["RaidRecord"]["Invite"]["dangqianrenshu"]
 		shishirenshu.ALL=0
 		for i=1,#invite.TND do
 			invite.renshu={0,0};
@@ -152,7 +152,7 @@ local function ADD_Invite()
 				self:ClearFocus() 
 			end);
 			zhizeF.mubiao_E:SetScript("OnEditFocusLost", function(self)
-				PIG["RaidRecord"]["Invite"]["dangqianrenshu"][xulie][id]=self:GetNumber();
+				PIGA["RaidRecord"]["Invite"]["dangqianrenshu"][xulie][id]=self:GetNumber();
 				UpdatePlayersINFO()
 			end);
 			zhizeF.yizu = zhizeF:CreateFontString(Fname.."_yizu_"..id);
@@ -200,8 +200,8 @@ local function ADD_Invite()
 		end 
 	end
 	function invite.renyuannpeizhiinfo_D:PIGDownMenu_SetValue(value,arg1,arg2)
-		PIG["RaidRecord"]["Invite"]["dangqianrenshu"]=invite.morenrenshu[arg1]
-		PIG["RaidRecord"]["Invite"]["dangqianpeizhi"]=arg1;
+		PIGA["RaidRecord"]["Invite"]["dangqianrenshu"]=invite.morenrenshu[arg1]
+		PIGA["RaidRecord"]["Invite"]["dangqianpeizhi"]=arg1;
 		PIG_PIG_print("已导入|cffFFFFFF"..arg1.."|r人预设配置");
 		UpdatePlayersINFO();
 		PIGCloseDropDownMenus()
@@ -243,16 +243,16 @@ local function ADD_Invite()
 		self:ClearFocus() 
 	end);
 	invite.jinzuzhiling_E:SetScript("OnEditFocusLost", function(self)
-		PIG["RaidRecord"]["Invite"]["jinzuZhiling"]=self:GetText();
+		PIGA["RaidRecord"]["Invite"]["jinzuZhiling"]=self:GetText();
 	end);
 	--无限制邀请
 	local INV_wuxianzhiyaoqingtooltip = "收到邀请指令后不再判断职业职责，将直接邀请进组|cff00FF00(注意人数限制功能依然生效，到达人数后将自动停止邀请)|r。";
 	invite.INV_wuxianzhiyaoqing = ADD_Checkbutton(nil,invite,-10,"LEFT",invite.jinzuzhiling_E,"RIGHT",8,-1,"无限制",INV_wuxianzhiyaoqingtooltip)
 	invite.INV_wuxianzhiyaoqing:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["RaidRecord"]["Invite"]["wutiaojianjINV"]="ON";
+			PIGA["RaidRecord"]["Invite"]["wutiaojianjINV"]="ON";
 		else
-			PIG["RaidRecord"]["Invite"]["wutiaojianjINV"]="OFF";
+			PIGA["RaidRecord"]["Invite"]["wutiaojianjINV"]="OFF";
 		end
 	end);
 	---开团喊话
@@ -308,7 +308,7 @@ local function ADD_Invite()
 		info.func = self.PIGDownMenu_SetValue
 		for i=1,#chatpindaoList,1 do
 		    info.text, info.arg1 = chatpindaoList[i][1], chatpindaoList[i][2]
-		    info.checked = PIG["RaidRecord"]["Invite"]["hanhuapindao"][chatpindaoList[i][1]]
+		    info.checked = PIGA["RaidRecord"]["Invite"]["hanhuapindao"][chatpindaoList[i][1]]
 		    info.isNotRadio=true
 			invite.hanhuaxuanzexiala:PIGDownMenu_AddButton(info)
 		end 
@@ -319,7 +319,7 @@ local function ADD_Invite()
 		local chatpindaoList =invite.hanhuaxuanzexiala.chatpindaoList
 		local yijiarupindaolist ={};
 		for i=1,#chatpindaoList do
-			if PIG["RaidRecord"]["Invite"]["hanhuapindao"][chatpindaoList[i][1]] then
+			if PIGA["RaidRecord"]["Invite"]["hanhuapindao"][chatpindaoList[i][1]] then
 				table.insert(yijiarupindaolist,chatpindaoList[i][2]);
 			end
 		end
@@ -341,7 +341,7 @@ local function ADD_Invite()
 		end
 	end
 	function invite.hanhuaxuanzexiala:PIGDownMenu_SetValue(value,arg1,arg2,checked)
-		PIG["RaidRecord"]["Invite"]["hanhuapindao"][value]=checked
+		PIGA["RaidRecord"]["Invite"]["hanhuapindao"][value]=checked
 		local macroSlot = GetMacroIndexByName("!Pig")
 		if macroSlot>0 then
 			NEWhanhuahong()
@@ -350,7 +350,7 @@ local function ADD_Invite()
 	end
 	--
 	invite.kaituanhanhua_E:SetScript("OnEditFocusLost", function(self)
-		PIG["RaidRecord"]["Invite"]["kaituanName"]=self:GetText();
+		PIGA["RaidRecord"]["Invite"]["kaituanName"]=self:GetText();
 		local macroSlot = GetMacroIndexByName("!Pig")
 		if macroSlot>0 then
 			NEWhanhuahong()
@@ -569,7 +569,7 @@ local function ADD_Invite()
 		local channel1 = {GetChannelList()};
 		for i=1,#channel1 do
 			for ii=1,#pindaolist[2] do
-				if PIG["RaidRecord"]["Invite"]["hanhuapindao"][2][ii] ==true then
+				if PIGA["RaidRecord"]["Invite"]["hanhuapindao"][2][ii] ==true then
 					if channel1[i]==pindaolist[2][ii] then
 						table.insert(yijiarupindaolist,channel1[i-1]);
 					end
@@ -595,7 +595,7 @@ local function ADD_Invite()
 				C_Timer.After(1.0,zidonghanhuahanshu)
 				C_Timer.After(1.1,zidonghanhuahanshu)
 				for s=1,#pindaolist[1] do
-					if PIG["RaidRecord"]["Invite"]["hanhuapindao"][1][s] ==true then
+					if PIGA["RaidRecord"]["Invite"]["hanhuapindao"][1][s] ==true then
 						if pindaolist[1][s]=="GUILD" then
 							local hanhuaneirong="";
 							hanhuaneirong=hanhuaneirong..invite.kaituanhanhua_E:GetText();
@@ -608,7 +608,7 @@ local function ADD_Invite()
 						end
 					end
 				end
-				C_Timer.After(PIG["RaidRecord"]["Invite"]["shijianjiange"],zidonghanhuahanshu_Open) 
+				C_Timer.After(PIGA["RaidRecord"]["Invite"]["shijianjiange"],zidonghanhuahanshu_Open) 
 			end
 		end
 	end
@@ -687,10 +687,10 @@ local function ADD_Invite()
 	invite.hanhuajiange_E:SetScript("OnEditFocusLost", function(self)
 		if self:GetNumber()<300 then
 			self:SetText(300)
-			PIG["RaidRecord"]["Invite"]["shijianjiange"]=self:GetNumber();
+			PIGA["RaidRecord"]["Invite"]["shijianjiange"]=self:GetNumber();
 			PIG_print("不能小于300秒");
 		else
-			PIG["RaidRecord"]["Invite"]["shijianjiange"]=self:GetNumber();
+			PIGA["RaidRecord"]["Invite"]["shijianjiange"]=self:GetNumber();
 		end
 	end);
 	invite.hanhuajiange = invite:CreateFontString();
@@ -734,7 +734,7 @@ local function ADD_Invite()
 			end
 			invite.yijiesuo=true
 			invite.hanhuakaishi:SetPoint("TOPRIGHT",invite,"TOPRIGHT",-10,-392);
-			invite.hanhuajiange_E:SetText(PIG["RaidRecord"]["Invite"]["shijianjiange"]);
+			invite.hanhuajiange_E:SetText(PIGA["RaidRecord"]["Invite"]["shijianjiange"]);
 		end);
 	end
 	--===================================
@@ -743,8 +743,8 @@ local function ADD_Invite()
 	local zuduizhushouXXX = CreateFrame("Frame","zuduizhushouXXX_UI");
 	zuduizhushouXXX:RegisterEvent("GROUP_ROSTER_UPDATE")
 	zuduizhushouXXX:HookScript("OnEvent",function(self, event,arg1,_,_,_,arg5,_,_,_,_,_,_,arg12)
-		if PIG["RaidRecord"]["Kaiqi"]=="ON" then
-			if PIG["RaidRecord"]["Dongjie"]=="OFF" then
+		if PIGA["RaidRecord"]["Kaiqi"]=="ON" then
+			if PIGA["RaidRecord"]["Dongjie"]=="OFF" then
 				if event=="GROUP_ROSTER_UPDATE" then
 					C_Timer.After(1,UpdatePlayersINFO)
 				end
@@ -853,9 +853,9 @@ local function ADD_Invite()
 					end
 				end
 				--执行邀请
-				local cunzaiguanjianzi=arg1:find(PIG["RaidRecord"]["Invite"]["jinzuZhiling"], 1)
+				local cunzaiguanjianzi=arg1:find(PIGA["RaidRecord"]["Invite"]["jinzuZhiling"], 1)
 				if cunzaiguanjianzi then
-					if PIG["RaidRecord"]["Invite"]["wutiaojianjINV"]=="ON" then
+					if PIGA["RaidRecord"]["Invite"]["wutiaojianjINV"]=="ON" then
 						local numGroupMembers = GetNumGroupMembers("LE_PARTY_CATEGORY_HOME")
 						if numGroupMembers==5 and not IsInRaid("LE_PARTY_CATEGORY_HOME") then
 							ConvertToRaid() 
@@ -874,12 +874,12 @@ local function ADD_Invite()
 	--==========================================
 	invite.hanhuakaishi:SetPoint("TOPRIGHT",invite,"TOPRIGHT",99990,-99999);
 	invite:SetScript("OnShow", function ()
-		if PIG["RaidRecord"]["Invite"]["wutiaojianjINV"]=="ON" then
+		if PIGA["RaidRecord"]["Invite"]["wutiaojianjINV"]=="ON" then
 			invite.INV_wuxianzhiyaoqing:SetChecked(true);
 		end
-		invite.kaituanhanhua_E:SetText(PIG["RaidRecord"]["Invite"]["kaituanName"]);
-		invite.jinzuzhiling_E:SetText(PIG["RaidRecord"]["Invite"]["jinzuZhiling"]);
-		invite.hanhuajiange_E:SetText(PIG["RaidRecord"]["Invite"]["shijianjiange"]);
+		invite.kaituanhanhua_E:SetText(PIGA["RaidRecord"]["Invite"]["kaituanName"]);
+		invite.jinzuzhiling_E:SetText(PIGA["RaidRecord"]["Invite"]["jinzuZhiling"]);
+		invite.hanhuajiange_E:SetText(PIGA["RaidRecord"]["Invite"]["shijianjiange"]);
 		UpdatePlayersINFO();
 	end)
 	------
@@ -896,7 +896,7 @@ local function ADD_Invite()
 
 	--==========================================
 	local _, _, _, tocversion = GetBuildInfo()
-	if PIG["RaidRecord"]["Kaiqi"]=="ON" then
+	if PIGA["RaidRecord"]["Kaiqi"]=="ON" then
 		invite.clName={}
 		invite.morenrenshu={}
 		if tocversion<20000 then

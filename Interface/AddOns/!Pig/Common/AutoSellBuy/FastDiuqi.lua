@@ -24,9 +24,9 @@ function CommonFun.FastDiuqi()
 	local fujiF,fujiTabBut=PIGOptionsList_R(AutoSellBuy_UI.F,"丢",60,"Left")
 	fujiF:Show()
 	fujiTabBut:Selected()
-	CommonFun.ADDScroll(fujiF,"丢弃","Diuqi",17,PIG["AutoSellBuy"]["Diuqi_List"],{false,"AutoSellBuy","Diuqi_List"})
+	CommonFun.ADDScroll(fujiF,"丢弃","Diuqi",17,PIGA["AutoSellBuy"]["Diuqi_List"],{false,"AutoSellBuy","Diuqi_List"})
 	function QuickButUI:AutoSellBuy()	
-		if PIG["QuickBut"]["Open"] and PIG["AutoSellBuy"]["Open"] and PIG["AutoSellBuy"]["AddBut"] then
+		if PIGA["QuickBut"]["Open"] and PIGA["AutoSellBuy"]["Open"] and PIGA["AutoSellBuy"]["AddBut"] then
 			local QkButUI = "QkBut_AutoSellBuy"
 			if _G[QkButUI] then return end
 			local QuickTooltip = "左击-|cff00FFFF丢弃指定物品|r\n右击-|cff00FFFF打开"..CommonFun.GnName.."|r"
@@ -50,11 +50,11 @@ function CommonFun.FastDiuqi()
 	local zidongkaishidiuqiFFF = CreateFrame("Frame");
 	zidongkaishidiuqiFFF:RegisterEvent("BAG_UPDATE");
 	zidongkaishidiuqiFFF:SetScript("OnEvent", function(self,event,arg1)
-		if PIG["AutoSellBuy"]["Diuqi_Tishi"] and QkBut_AutoSellBuy then
+		if PIGA["AutoSellBuy"]["Diuqi_Tishi"] and QkBut_AutoSellBuy then
 			local bnum=GetContainerNumSlots(arg1)
 			for l=1,bnum do
-				for kk=1,#PIG["AutoSellBuy"]["Diuqi_List"] do
-					if GetContainerItemID(arg1,l)==PIG["AutoSellBuy"]["Diuqi_List"][kk][1] then
+				for kk=1,#PIGA["AutoSellBuy"]["Diuqi_List"] do
+					if GetContainerItemID(arg1,l)==PIGA["AutoSellBuy"]["Diuqi_List"][kk][1] then
 						QkBut_AutoSellBuy.Height:Show()
 						break
 					end
@@ -66,9 +66,9 @@ function CommonFun.FastDiuqi()
 	fujiF.tishidiuqi = PIGCheckbutton(fujiF,{"TOPLEFT",fujiF,"TOPLEFT",20,-10},{"提示丢弃", "有可丢弃物品将会在功能动作条按钮提示"})
 	fujiF.tishidiuqi:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["AutoSellBuy"]["Diuqi_Tishi"]=true;
+			PIGA["AutoSellBuy"]["Diuqi_Tishi"]=true;
 		else
-			PIG["AutoSellBuy"]["Diuqi_Tishi"]=false;
+			PIGA["AutoSellBuy"]["Diuqi_Tishi"]=false;
 		end
 	end);
 	---
@@ -94,7 +94,7 @@ function CommonFun.FastDiuqi()
 		Pig_DelItem()
 	end)
 	-----
-	if PIG["AutoSellBuy"]["Diuqi_Tishi"] then
+	if PIGA["AutoSellBuy"]["Diuqi_Tishi"] then
 		fujiF.tishidiuqi:SetChecked(true);
 	end
 end
@@ -103,12 +103,12 @@ function Pig_DelItem()
 	if QkBut_AutoSellBuy then
 		QkBut_AutoSellBuy.Height:Hide();
 	end
-	if #PIG["AutoSellBuy"]["Diuqi_List"]>0 then
+	if #PIGA["AutoSellBuy"]["Diuqi_List"]>0 then
 		for i=0,4 do
 			local xx=GetContainerNumSlots(i) 
 			for j=1,xx do
-				for k=1,#PIG["AutoSellBuy"]["Diuqi_List"] do
-					if GetContainerItemID(i,j)==PIG["AutoSellBuy"]["Diuqi_List"][k][1] then
+				for k=1,#PIGA["AutoSellBuy"]["Diuqi_List"] do
+					if GetContainerItemID(i,j)==PIGA["AutoSellBuy"]["Diuqi_List"][k][1] then
 						PickupContainerItem(i,j);
 						DeleteCursorItem(i,j);
 					end

@@ -23,13 +23,13 @@ PIGUI:SetScript("OnEvent",function(self, event, arg1)
 		--print(event,ElvUI,NDui)
 		addonTable.Map()
 		addonTable.CVars()
+		addonTable.CombatPlus()
 		addonTable.Common()
 		addonTable.Chat()
 		addonTable.ActionBar()
 		addonTable.FramePlus()
 		addonTable.UnitFrame()
 		addonTable.BagBank()
-		addonTable.CombatPlus()
 		-- --技能监控
 		-- addonTable.Spell_CD_JK()
 		-- --时空之门
@@ -44,7 +44,7 @@ PIGUI:SetScript("OnEvent",function(self, event, arg1)
 		addonTable.Rurutia()
 		QuickButUI:Add()
 		------------------------------
-		if not PIG["Interaction"]["PigLoad"] then
+		if not PIGA["Interaction"]["PigLoad"] then
 			PIG_print(L["ABOUT_LOAD"]..","..L["ABOUT_REMINDER"])
 		end
     end  

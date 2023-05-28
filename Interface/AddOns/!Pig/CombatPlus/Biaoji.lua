@@ -44,7 +44,7 @@ local biaojiweizhi={"TOP", UIParent, "TOP", 0, -30}
 local PIGbiaoji = PIGFrame(UIParent,biaojiweizhi,{(biaojiW+3)*tuNum+5,biaojiW+4},"PIGbiaoji_UI")
 PIGbiaoji:Hide()
 local function SetBGHide()
-	if PIG["CombatPlus"]["Biaoji"]["BGHide"] then
+	if PIGA["CombatPlus"]["Biaoji"]["BGHide"] then
 		PIGbiaoji:SetBackdropColor(0, 0, 0, 0);
 		PIGbiaoji:SetBackdropBorderColor(0, 0, 0, 0);
 	else
@@ -56,7 +56,7 @@ local function SetBGHide()
 end
 local function SetLock()
 	local ziframe = {PIGbiaoji:GetChildren()}
-	if PIG["CombatPlus"]["Biaoji"]["Lock"] then
+	if PIGA["CombatPlus"]["Biaoji"]["Lock"] then
 		PIGbiaoji:RegisterForDrag("")
 		for i=1,#ziframe do
 			ziframe[i]:RegisterForDrag("")
@@ -69,14 +69,14 @@ local function SetLock()
 	end
 end
 local function SetAutoShow()
-	if PIG["CombatPlus"]["Biaoji"]["AutoShow"] then
+	if PIGA["CombatPlus"]["Biaoji"]["AutoShow"] then
 		PIGbiaoji:RegisterEvent("PLAYER_TARGET_CHANGED")
 	else
 		PIGbiaoji:UnregisterEvent("PLAYER_TARGET_CHANGED")
 	end
 end
 function CombatPlusfun.biaoji()
-	if not PIG["CombatPlus"]["Biaoji"]["Open"] then return end
+	if not PIGA["CombatPlus"]["Biaoji"]["Open"] then return end
 	if PIGbiaoji.yizairu then return end
 	PIGbiaoji:Show()
 	PIGbiaoji:PIGSetBackdrop()
@@ -106,7 +106,7 @@ function CombatPlusfun.biaoji()
 			SetRaidTarget("target", tuNum-i)
 		end)
 	end
-	PIGbiaoji:SetScale(PIG["CombatPlus"]["Biaoji"]["Scale"])
+	PIGbiaoji:SetScale(PIGA["CombatPlus"]["Biaoji"]["Scale"])
 	SetLock()
 	SetBGHide()
 	SetAutoShow()
@@ -137,9 +137,9 @@ CombatPlusF.Open:SetScript("OnClick", function (self)
 	if self:GetChecked() then
 		CombatPlusfun.biaoji()
 		CombatPlusF.SetF:Show()
-		PIG["CombatPlus"]["Biaoji"]["Open"]=true;
+		PIGA["CombatPlus"]["Biaoji"]["Open"]=true;
 	else
-		PIG["CombatPlus"]["Biaoji"]["Open"]=false;
+		PIGA["CombatPlus"]["Biaoji"]["Open"]=false;
 		CombatPlusF.SetF:Hide()
 		Pig_Options_RLtishi_UI:Show()
 	end
@@ -152,9 +152,9 @@ CombatPlusF.SetF:SetPoint("BOTTOMRIGHT",CombatPlusF,"BOTTOMRIGHT",0,0);
 CombatPlusF.SetF.Lock =PIGCheckbutton_R(CombatPlusF.SetF,{"锁定位置","锁定快速标记按钮位置，使其无法移动"})
 CombatPlusF.SetF.Lock:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["CombatPlus"]["Biaoji"]["Lock"]=true;
+		PIGA["CombatPlus"]["Biaoji"]["Lock"]=true;
 	else
-		PIG["CombatPlus"]["Biaoji"]["Lock"]=false;
+		PIGA["CombatPlus"]["Biaoji"]["Lock"]=false;
 	end
 	SetLock()
 end);
@@ -166,18 +166,18 @@ end)
 CombatPlusF.SetF.BGHide= PIGCheckbutton_R(CombatPlusF.SetF,{"隐藏背景","隐藏标记按钮背景"})
 CombatPlusF.SetF.BGHide:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["CombatPlus"]["Biaoji"]["BGHide"]=true;
+		PIGA["CombatPlus"]["Biaoji"]["BGHide"]=true;
 	else
-		PIG["CombatPlus"]["Biaoji"]["BGHide"]=false;
+		PIGA["CombatPlus"]["Biaoji"]["BGHide"]=false;
 	end
 	SetBGHide()
 end);
 CombatPlusF.SetF.AutoShow= PIGCheckbutton_R(CombatPlusF.SetF,{"智能显示/隐藏","当你没有标记权限时隐藏标记按钮"})
 CombatPlusF.SetF.AutoShow:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["CombatPlus"]["Biaoji"]["AutoShow"]=true;
+		PIGA["CombatPlus"]["Biaoji"]["AutoShow"]=true;
 	else
-		PIG["CombatPlus"]["Biaoji"]["AutoShow"]=false;
+		PIGA["CombatPlus"]["Biaoji"]["AutoShow"]=false;
 	end
 	SetAutoShow()
 end);
@@ -187,15 +187,15 @@ CombatPlusF.SetF.Slider = PIGSlider(CombatPlusF.SetF,{"TOPLEFT",CombatPlusF.SetF
 CombatPlusF.SetF.Slider.T = PIGFontString(CombatPlusF.SetF.Slider,{"RIGHT",CombatPlusF.SetF.Slider,"LEFT",-10,0},"缩放")
 CombatPlusF.SetF.Slider:SetScript("OnValueChanged", function(self)
 	local Value = (floor(self:GetValue()*10+0.5))/10
-	PIG["CombatPlus"]["Biaoji"]["Scale"]=Value;
+	PIGA["CombatPlus"]["Biaoji"]["Scale"]=Value;
 	self.Text:SetText(Value);
 	PIGbiaoji_UI:SetScale(Value)
 end)
 --
 CombatPlusF:HookScript("OnShow", function (self)
-	self.Open:SetChecked(PIG["CombatPlus"]["Biaoji"]["Open"]);
-	self.SetF.Lock:SetChecked(PIG["CombatPlus"]["Biaoji"]["Lock"]);
-	self.SetF.BGHide:SetChecked(PIG["CombatPlus"]["Biaoji"]["BGHide"]);
-	self.SetF.AutoShow:SetChecked(PIG["CombatPlus"]["Biaoji"]["AutoShow"]);
-	self.SetF.Slider:SetValue(PIG["CombatPlus"]["Biaoji"]["Scale"]);
+	self.Open:SetChecked(PIGA["CombatPlus"]["Biaoji"]["Open"]);
+	self.SetF.Lock:SetChecked(PIGA["CombatPlus"]["Biaoji"]["Lock"]);
+	self.SetF.BGHide:SetChecked(PIGA["CombatPlus"]["Biaoji"]["BGHide"]);
+	self.SetF.AutoShow:SetChecked(PIGA["CombatPlus"]["Biaoji"]["AutoShow"]);
+	self.SetF.Slider:SetValue(PIGA["CombatPlus"]["Biaoji"]["Scale"]);
 end);

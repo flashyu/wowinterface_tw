@@ -8,7 +8,7 @@ local banbendata = {
 }
 if tocversion<100000 then
 	GameTooltip:HookScript("OnTooltipSetItem", function(self)
-		if not PIG["Tooltip"]["ItemLevel"] then return end
+		if not PIGA["Tooltip"]["ItemLevel"] then return end
 		local _, link = self:GetItem()
 		if link then
 			local itemID = GetItemInfoInstant(link)
@@ -30,7 +30,7 @@ if tocversion<100000 then
 	end)
 	--处理聊天框技能
 	GameTooltip:HookScript("OnTooltipSetSpell", function(self)
-		if not PIG["Tooltip"]["SpellID"] then return end
+		if not PIGA["Tooltip"]["SpellID"] then return end
 		local _,spellId = self:GetSpell()
 		if spellId then
 			self:AddDoubleLine("SpellID:",spellId)
@@ -39,7 +39,7 @@ if tocversion<100000 then
 	end)
 else------
 	TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(tooltip, data)
-		if not PIG["Tooltip"]["ItemLevel"] then return end
+		if not PIGA["Tooltip"]["ItemLevel"] then return end
 		if tooltip == GameTooltip then
 			local ItemID = data["id"]
 			if ItemID then	
@@ -52,7 +52,7 @@ else------
 	end)
 	--处理聊天框技能
 	TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Spell, function(self)
-		if not PIG["Tooltip"]["SpellID"] then return end
+		if not PIGA["Tooltip"]["SpellID"] then return end
 		local _,spellId = self:GetSpell()
 		if spellId then
 			self:AddDoubleLine("SpellID:",spellId)
@@ -62,7 +62,7 @@ else------
 end
 hooksecurefunc(GameTooltip, "SetBagItem", function(self, bag, slot)
 	if tocversion<20000 then
-		if not PIG["Tooltip"]["ItemSell"] then return end
+		if not PIGA["Tooltip"]["ItemSell"] then return end
 		if not MerchantFrame:IsVisible() then
 			local _, link = self:GetItem()
 			if link then
@@ -78,7 +78,7 @@ hooksecurefunc(GameTooltip, "SetBagItem", function(self, bag, slot)
 	end
 end)
 hooksecurefunc(GameTooltip, "SetQuestItem", function(self, questType, index)
-	if not PIG["Tooltip"]["ItemSell"] then return end
+	if not PIGA["Tooltip"]["ItemSell"] then return end
 	local _, link = self:GetItem()
 	if link then
 		local itemSellG = select(11, GetItemInfo(link))
@@ -91,7 +91,7 @@ hooksecurefunc(GameTooltip, "SetQuestItem", function(self, questType, index)
 	end
 end)
 hooksecurefunc(GameTooltip, "SetQuestLogItem", function(self,  questType, index)
-	if not PIG["Tooltip"]["ItemSell"] then return end
+	if not PIGA["Tooltip"]["ItemSell"] then return end
 	local _, link = self:GetItem()
 	if link then
 		local itemSellG = select(11, GetItemInfo(link))
@@ -104,7 +104,7 @@ hooksecurefunc(GameTooltip, "SetQuestLogItem", function(self,  questType, index)
 	end
 end)
 -- hooksecurefunc(GameTooltip, "SetUnitBuff", function(self, unit, index, filter)
--- 	if not PIG["Tooltip"]["SpellID"] then return end
+-- 	if not PIGA["Tooltip"]["SpellID"] then return end
 -- 	local _, icon, count, debuffType, duration, expires, caster,_,_,spellId = UnitBuff(unit, index, filter) 
 --     if spellId then
 --     	if caster then
@@ -120,7 +120,7 @@ end)
 --     end
 -- end)
 -- hooksecurefunc(GameTooltip, "SetUnitDebuff", function(self, unit, index, filter)
--- 	if not PIG["Tooltip"]["SpellID"] then return end
+-- 	if not PIGA["Tooltip"]["SpellID"] then return end
 -- 	local _, icon, count, debuffType, duration, expires, caster,_,_,spellId = UnitDebuff(unit, index, filter) 
 --     if spellId then
 --     	if caster then
@@ -136,7 +136,7 @@ end)
 --     end
 -- end)
 hooksecurefunc(GameTooltip, "SetUnitAura", function(self, unit, index, filter)
-	if not PIG["Tooltip"]["SpellID"] then return end
+	if not PIGA["Tooltip"]["SpellID"] then return end
 	local _, icon, count, debuffType, duration, expires, caster,_,_,spellId = UnitAura(unit, index, filter) 
     if spellId then
     	if caster then
@@ -153,7 +153,7 @@ hooksecurefunc(GameTooltip, "SetUnitAura", function(self, unit, index, filter)
 end)
 --处理聊天框物品
 hooksecurefunc("SetItemRef", function(link, text, button, chatFrame)
-	if not PIG["Tooltip"]["SpellID"] then return end
+	if not PIGA["Tooltip"]["SpellID"] then return end
 	if link:find("^spell:") then
 		local id = link:gsub(":0","")
 		local id = id:gsub("spell:","")

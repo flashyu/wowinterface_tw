@@ -41,7 +41,7 @@ local function Debuff_OnUpdate(self,timeLeft)
 	end
 end
 function FramePlusfun.BuffTime()
-	if not PIG["FramePlus"]["BuffTime"] then return end
+	if not PIGA["FramePlus"]["BuffTime"] then return end
 	if tocversion<100000 then
 		hooksecurefunc("AuraButton_UpdateDuration", function(auraButton, timeLeft)
 			Buff_OnUpdate(auraButton, timeLeft)

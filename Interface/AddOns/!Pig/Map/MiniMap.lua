@@ -67,7 +67,7 @@ local paichulist = {
 }
 local ShouNaButHeji={};
 local function gengxinMBweizhi(newValue)
-	local meipaishu=newValue or PIG.Map.MinimapShouNa_hang;--每排按钮数
+	local meipaishu=newValue or PIGA["Map"]["MinimapShouNa_hang"];--每排按钮数
 	MinimapButton_PigUI.Snf:SetSize(meipaishu*35+30, math.ceil(#ShouNaButHeji/meipaishu)*35+30)
 	for i=1, #ShouNaButHeji,1 do
 		_G[ShouNaButHeji[i]]:SetParent(MinimapButton_PigUI.Snf)
@@ -120,7 +120,7 @@ local function Map_MiniButSN()
 	for i=1,#paichulist do
 		table.insert(NewPaichulist,paichulist[i])
 	end
-	local data = PIG["Map"]["MinimapBpaichu"]
+	local data = PIGA["Map"]["MinimapBpaichu"]
 	for i=1,#data do
 		table.insert(NewPaichulist,data[i])
 	end
@@ -142,7 +142,7 @@ local function Map_MiniButSN()
 	gengxinMBweizhi(newValue)
 end
 function Mapfun.ShouNaMiniBut()
-	if PIG["Map"]["MinimapBut"] and PIG["Map"]["MinimapShouNa"] then
+	if PIGA["Map"]["MinimapBut"] and PIGA["Map"]["MinimapShouNa"] then
 		Map_MiniButSN();
 		C_Timer.After(3, Map_MiniButSN);
 		C_Timer.After(8, Map_MiniButSN);
@@ -152,10 +152,10 @@ end
 --小地图按钮--==============================
 local www,hhh = 33,33
 function Mapfun.ADD_MinimapBut()
-	if PIG["Map"]["MinimapBut"] then
+	if PIGA["Map"]["MinimapBut"] then
 		if not MinimapButton_PigUI then
 			local fujikname = UIParent
-			if NDui or PIG["Map"]["MinimapShouNa_BS"] then
+			if NDui or PIGA["Map"]["MinimapShouNa_BS"] then
 				fujikname = Minimap
 			end
 			local MinimapButton_Pig = CreateFrame("Button","MinimapButton_PigUI",fujikname); 
@@ -215,12 +215,12 @@ function Mapfun.ADD_MinimapBut()
 				local pianyi =MinimapButton_Pig.pianyi
 				MinimapButton_Pig:ClearAllPoints();
 				MinimapButton_Pig:SetPoint("TOPLEFT",Minimap,"TOPLEFT",pianyi-2-(banjing*cos(weizhiXY)),(banjing*sin(weizhiXY))-pianyi)
-				PIG["Map"]["MinimapPos"]=weizhiXY
+				PIGA["Map"]["MinimapPos"]=weizhiXY
 			end
 			local function YDButtonP_ElvUI(xpos,ypos)
 				MinimapButton_Pig:ClearAllPoints();	
 				MinimapButton_Pig:SetPoint("TOPLEFT",Minimap,"TOPLEFT",xpos,ypos)
-				PIG["Map"]["MinimapPos_ElvUI"]={xpos,ypos}
+				PIGA["Map"]["MinimapPos_ElvUI"]={xpos,ypos}
 			end
 			local function YDButtonP_OnUpdate()	
 				local banjing = MinimapButton_Pig.banjing
@@ -273,7 +273,7 @@ function Mapfun.ADD_MinimapBut()
 								Pig_OptionsUI:Show();
 							end 
 						else
-							if PIG["Map"]["MinimapShouNa"] then
+							if PIGA["Map"]["MinimapShouNa"] then
 								MinimapButton_Pig.Snf.tishi:Hide();
 								if MinimapButton_Pig.Snf:IsShown() then	
 									MinimapButton_Pig.Snf:Hide();
@@ -358,15 +358,15 @@ function Mapfun.ADD_MinimapBut()
 						MinimapButton_Pig:SetSize(www-10,hhh-10);
 						MinimapButton_Pig.Icon:SetSize(www-10,hhh-10);	
 						if tocversion<20000 then
-							PIG["Map"]["MinimapPos_ElvUI"]=PIG["Map"]["MinimapPos_ElvUI"] or {32.63,-152}
+							PIGA["Map"]["MinimapPos_ElvUI"]=PIGA["Map"]["MinimapPos_ElvUI"] or {32.63,-152}
 						elseif tocversion<40000 then
-							PIG["Map"]["MinimapPos_ElvUI"]=PIG["Map"]["MinimapPos_ElvUI"] or {32.63,-197.76}
+							PIGA["Map"]["MinimapPos_ElvUI"]=PIGA["Map"]["MinimapPos_ElvUI"] or {32.63,-197.76}
 						else
-							PIG["Map"]["MinimapPos_ElvUI"]=PIG["Map"]["MinimapPos_ElvUI"] or {32.63,-152}
+							PIGA["Map"]["MinimapPos_ElvUI"]=PIGA["Map"]["MinimapPos_ElvUI"] or {32.63,-152}
 						end
 						local banjing = Minimap:GetWidth()
 						MinimapButton_Pig.banjing=banjing
-						YDButtonP_ElvUI(PIG["Map"]["MinimapPos_ElvUI"][1],PIG["Map"]["MinimapPos_ElvUI"][2])
+						YDButtonP_ElvUI(PIGA["Map"]["MinimapPos_ElvUI"][1],PIGA["Map"]["MinimapPos_ElvUI"][2])
 					end
 				else
 					zhucetuodong()
@@ -377,7 +377,7 @@ function Mapfun.ADD_MinimapBut()
 					end
 					local banjing = Minimap:GetWidth()*0.5+8
 					MinimapButton_Pig.banjing=banjing
-					YDButtonP(PIG["Map"]["MinimapPos"]);
+					YDButtonP(PIGA["Map"]["MinimapPos"]);
 				end
 			end
 			MinimapButton_Pig_Point()

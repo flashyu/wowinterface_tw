@@ -7,7 +7,7 @@ local CommonFun=addonTable.CommonFun.Other
 local GnUI = "AFK_UI"
 function CommonFun.Pig_AFK()
 	local morenzhuansu=GetCVar("cameraYawMoveSpeed")
-	if not PIG["Other"]["AFK"]["Open"] or _G[GnUI] then return end
+	if not PIGA["Other"]["AFK"]["Open"] or _G[GnUI] then return end
 	local WowWidth=GetScreenWidth();
 	local WowHeight=GetScreenHeight();
 	local AFKUI = CreateFrame("Frame",GnUI, WorldFrame,"BackdropTemplate");
@@ -131,7 +131,7 @@ function CommonFun.Pig_AFK()
 end
 ----
 function QuickButUI.Pig_AFK()	
-	if PIG["QuickBut"]["Open"] and PIG["Other"]["AFK"]["Open"] and PIG["Other"]["AFK"]["QuickBut"] then
+	if PIGA["QuickBut"]["Open"] and PIGA["Other"]["AFK"]["Open"] and PIGA["Other"]["AFK"]["QuickBut"] then
 		local GnUI = "AFK_QKBUT"
 		if _G[GnUI] then return end
 		local Icon=132802

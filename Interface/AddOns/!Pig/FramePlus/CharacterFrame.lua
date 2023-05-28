@@ -8,7 +8,7 @@ local FramePlusfun=addonTable.FramePlusfun
 local InvSlot=addonTable.Data.InvSlot
 --============================================
 function FramePlusfun.Character_xiuliG()--修理费用
-	if not PIG["FramePlus"]["Character_xiuliG"] then return end
+	if not PIGA["FramePlus"]["Character_xiuliG"] then return end
 	if PaperDollFrame.xiuli then return end
 	PaperDollFrame.xiuli = CreateFrame("Frame",nil,PaperDollFrame);  
 	PaperDollFrame.xiuli:SetSize(110,20);
@@ -107,7 +107,7 @@ local function Update_ItemList_V(fjik,duixiang,tiaozui)
 	tiaozui.ZBLsit:SetWidth(newmaxWWWW)
 end
 local function Update_Data()--刷新自身
-	if PIG["FramePlus"]["Character_naijiu"] then
+	if PIGA["FramePlus"]["Character_naijiu"] then
 		for inv = 1, #InvSlot["ID"] do
 			if InvSlot["Name"][InvSlot["ID"][inv]][4] then
 				local Frameu=_G["Character"..InvSlot["Name"][InvSlot["ID"][inv]][3].."Slot"].naijiuV
@@ -131,7 +131,7 @@ local function Update_Data()--刷新自身
 			end
 		end
 	end
-	if PIG["FramePlus"]["Character_ItemLevel"] then
+	if PIGA["FramePlus"]["Character_ItemLevel"] then
 		for inv = 1, #InvSlot["ID"] do
 			if InvSlot["ID"][inv]~=0 and InvSlot["ID"][inv]~=4 and InvSlot["ID"][inv]~=19 then
 				local framef=_G["Character"..InvSlot["Name"][InvSlot["ID"][inv]][3].."Slot"]
@@ -139,19 +139,19 @@ local function Update_Data()--刷新自身
 			end
 		end
 	end
-	if PIG["FramePlus"]["Character_ItemColor"] then
+	if PIGA["FramePlus"]["Character_ItemColor"] then
 		for inv = 1, #InvSlot["ID"] do
 			local framef=_G["Character"..InvSlot["Name"][InvSlot["ID"][inv]][3].."Slot"]
 			Update_ranse_V(framef,"player",InvSlot["ID"][inv])
 		end
 	end
-	if PIG["FramePlus"]["Character_ItemList"] then
+	if PIGA["FramePlus"]["Character_ItemList"] then
 		Update_ItemList_V("CZBLsit","player",PaperDollFrame)
 	end
 end
 
 local function Update_Data_Inspect()--刷新观察对象
-	if PIG["FramePlus"]["Character_ItemLevel"] then
+	if PIGA["FramePlus"]["Character_ItemLevel"] then
 		for inv = 1, #InvSlot["ID"] do
 			if InvSlot["ID"][inv]~=0 and InvSlot["ID"][inv]~=4 and InvSlot["ID"][inv]~=19 then
 				local framef=_G["Inspect"..InvSlot["Name"][InvSlot["ID"][inv]][3].."Slot"]
@@ -159,7 +159,7 @@ local function Update_Data_Inspect()--刷新观察对象
 			end
 		end
 	end
-	if PIG["FramePlus"]["Character_ItemColor"] then
+	if PIGA["FramePlus"]["Character_ItemColor"] then
 		for inv = 1, #InvSlot["ID"] do
 			local framef=_G["Inspect"..InvSlot["Name"][InvSlot["ID"][inv]][3].."Slot"]
 			if framef then
@@ -167,7 +167,7 @@ local function Update_Data_Inspect()--刷新观察对象
 			end
 		end
 	end
-	if PIG["FramePlus"]["Character_ItemList"] then
+	if PIGA["FramePlus"]["Character_ItemList"] then
 		Update_ItemList_V("CZBLsitInspect","target",InspectPaperDollFrame)
 	end
 end
@@ -231,7 +231,7 @@ end
 ---观察染色
 if not InspectTalentFrameSpentPoints then InspectTalentFrameSpentPoints = CreateFrame("Frame") end
 local function ADD_Inspect()
-	if PIG["FramePlus"]["Character_ItemLevel"] then
+	if PIGA["FramePlus"]["Character_ItemLevel"] then
 		for inv = 1, #InvSlot["ID"] do
 			local framef=_G["Inspect"..InvSlot["Name"][InvSlot["ID"][inv]][3].."Slot"]
 			if not framef.ZLV then
@@ -240,7 +240,7 @@ local function ADD_Inspect()
 			end
 		end
 	end 
-	if PIG["FramePlus"]["Character_ItemColor"] then
+	if PIGA["FramePlus"]["Character_ItemColor"] then
 		for inv = 1, #InvSlot["ID"] do
 			local framef=_G["Inspect"..InvSlot["Name"][InvSlot["ID"][inv]][3].."Slot"]
 			if not framef.ranse then
@@ -253,14 +253,14 @@ local function ADD_Inspect()
 			end
 		end
 	end
-	if PIG["FramePlus"]["Character_ItemList"] then
+	if PIGA["FramePlus"]["Character_ItemList"] then
 		add_ItemListFF(InspectPaperDollFrame,"CZBLsitInspect")
 	end
 	PaperDollFrame:UnregisterEvent("ADDON_LOADED");
 	C_Timer.After(0.4,Update_Data_Inspect)
 end
 function FramePlusfun.Character_ADD()
-	if PIG["FramePlus"]["Character_naijiu"] then
+	if PIGA["FramePlus"]["Character_naijiu"] then
 		for inv = 1, #InvSlot["ID"] do
 			local framef=_G["Character"..InvSlot["Name"][InvSlot["ID"][inv]][3].."Slot"]
 			if not framef.naijiuV then
@@ -269,7 +269,7 @@ function FramePlusfun.Character_ADD()
 			end
 		end
 	end
-	if PIG["FramePlus"]["Character_ItemLevel"] then
+	if PIGA["FramePlus"]["Character_ItemLevel"] then
 		for inv = 1, #InvSlot["ID"] do
 			local framef=_G["Character"..InvSlot["Name"][InvSlot["ID"][inv]][3].."Slot"]
 			if not framef.ZLV then
@@ -278,7 +278,7 @@ function FramePlusfun.Character_ADD()
 			end
 		end
 	end
-	if PIG["FramePlus"]["Character_ItemColor"] then
+	if PIGA["FramePlus"]["Character_ItemColor"] then
 		for inv = 1, #InvSlot["ID"] do
 			local framef=_G["Character"..InvSlot["Name"][InvSlot["ID"][inv]][3].."Slot"]
 			if not framef.ranse then
@@ -295,14 +295,14 @@ function FramePlusfun.Character_ADD()
 			   end
 		end
 	end
-	if PIG["FramePlus"]["Character_ItemList"] then
+	if PIGA["FramePlus"]["Character_ItemList"] then
 		add_ItemListFF(PaperDollFrame,"CZBLsit")
 	end
 	------
 	if IsAddOnLoaded("Blizzard_InspectUI") then
 		ADD_Inspect()
 	else
-		if PIG["FramePlus"]["Character_ItemLevel"] or PIG["FramePlus"]["Character_ItemColor"] or PIG["FramePlus"]["Character_ItemList"] then
+		if PIGA["FramePlus"]["Character_ItemLevel"] or PIGA["FramePlus"]["Character_ItemColor"] or PIGA["FramePlus"]["Character_ItemList"] then
 			PaperDollFrame:RegisterEvent("ADDON_LOADED")
 			PaperDollFrame:RegisterEvent("INSPECT_READY");
 		end
@@ -334,7 +334,7 @@ end);
 
 ---命中说明
 function FramePlusfun.Character_Mingzhong()
-	if not PIG["FramePlus"]["Character_Mingzhong"] then return end
+	if not PIGA["FramePlus"]["Character_Mingzhong"] then return end
 	if PaperDollFrame.MingZhong then return end
 	--物理
 	PaperDollFrame.MingZhong = CreateFrame("Button",nil,PaperDollFrame, "UIPanelInfoButton");  
@@ -441,7 +441,7 @@ local function ADD_FontString(fuji,Text,zihao,Point,Color)
 	return faxx
 end
 function FramePlusfun.Character_Shuxing()
-	if not PIG["FramePlus"]["Character_Shuxing"] then return end
+	if not PIGA["FramePlus"]["Character_Shuxing"] then return end
 	if PaperDollFrame.shuxing then return end
 	UIPanelWindows["CharacterFrame"].width = 504
 	PaperDollFrame.shuxing = PIGFrame(PaperDollFrame);

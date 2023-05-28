@@ -21,7 +21,7 @@ local PIGFontStringBG=Create.PIGFontStringBG
 local PIGCloseBut=Create.PIGCloseBut
 --===============================
 local QuickChatfun=addonTable.QuickChatfun
-local dangqianwanjianame
+local PIG_renwuming
 local function fengeguanjianzi(str,delimiter)---分割字符
     local dLen = string.len(delimiter)
     local newDeli = ""
@@ -49,7 +49,7 @@ local Chatlist_W = {}
 local Chatlist_B = {}
 local function geshihua_txt(laiyuan)--格式化字符
 	local NEWtxtlist={}
-	local txtlist=PIG["Chat"][laiyuan][dangqianwanjianame]
+	local txtlist=PIGA["Chat"][laiyuan][PIG_renwuming]
 	for x=1,#txtlist do
 		local txtlist_hang={}
 		for xx=1,#txtlist[x] do
@@ -71,7 +71,7 @@ local function geshihua_txt(laiyuan)--格式化字符
 		end
 		table.insert(NEWtxtlist, txtlist_hang);
 	end
-	PIG["Chat"][laiyuan][dangqianwanjianame]=NEWtxtlist
+	PIGA["Chat"][laiyuan][PIG_renwuming]=NEWtxtlist
 	if laiyuan=="Keyword" then
 		Chatlist_W=NEWtxtlist
 	elseif laiyuan=="Blacklist" then
@@ -84,7 +84,7 @@ local function Save_KeyValue(fuji,leixing,Scroll)
 	if value~="" then
 		local value = value:gsub("，", ",")
 		local guanjianzilist = fengeguanjianzi(value, ",")
-		table.insert(PIG["Chat"][leixing][dangqianwanjianame],guanjianzilist)
+		table.insert(PIGA["Chat"][leixing][PIG_renwuming],guanjianzilist)
 		geshihua_txt(leixing)
 		Scroll.gengxin_list(Scroll)
 	end
@@ -97,16 +97,16 @@ end
 function QuickChatfun.QuickBut_Keyword()
 	local wanjia, realm = UnitFullName("player")
 	local realm=realm or GetRealmName()
-	dangqianwanjianame = wanjia.."-"..realm
-	if not PIG["Chat"]["Keyword"][dangqianwanjianame] then PIG["Chat"]["Keyword"][dangqianwanjianame]={} end
-	if not PIG["Chat"]["Blacklist"][dangqianwanjianame] then PIG["Chat"]["Blacklist"][dangqianwanjianame]={} end
+	PIG_renwuming = wanjia.."-"..realm
+	if not PIGA["Chat"]["Keyword"][PIG_renwuming] then PIGA["Chat"]["Keyword"][PIG_renwuming]={} end
+	if not PIGA["Chat"]["Blacklist"][PIG_renwuming] then PIGA["Chat"]["Blacklist"][PIG_renwuming]={} end
 	local fuFrame=QuickChatFFF_UI
 	local fuWidth = fuFrame.Width
 	local Width,Height = fuWidth,fuWidth
 	local ziframe = {fuFrame:GetChildren()}
-	if PIG["Chat"]["QuickChat_style"]==1 then
+	if PIGA["Chat"]["QuickChat_style"]==1 then
 		fuFrame.Keyword = CreateFrame("Button",nil,fuFrame); 
-	elseif PIG["Chat"]["QuickChat_style"]==2 then
+	elseif PIGA["Chat"]["QuickChat_style"]==2 then
 		fuFrame.Keyword = CreateFrame("Button",nil,fuFrame, "UIMenuButtonStretchTemplate"); 
 	end
 	fuFrame.Keyword:SetSize(Width,Height);
@@ -158,25 +158,25 @@ function QuickChatfun.QuickBut_Keyword()
 	--fuFrame.Keyword.F:SetToplevel(true)--单击子项时框架是否应自行升起
    	--fuFrame.Keyword.F:EnableMouseWheel(false)-- 禁用鼠标滚动
 	fuFrame.Keyword.F:SetHyperlinksEnabled(true)--可点击
-	if PIG["Chat"]["FontSize"] then
-		FCF_SetChatWindowFontSize(nil, ChatFrame99, PIG["Chat"]["FontSize_value"])
+	if PIGA["Chat"]["FontSize"] then
+		FCF_SetChatWindowFontSize(nil, ChatFrame99, PIGA["Chat"]["FontSize_value"])
 	end
 
 	fuFrame.Keyword.F.Background = fuFrame.Keyword.F:CreateTexture(nil, "BACKGROUND");
 	fuFrame.Keyword.F.Background:SetTexture("Interface/ChatFrame/ChatFrameBackground");
 	fuFrame.Keyword.F.Background:SetPoint("TOPLEFT",ChatFrame99,"TOPLEFT",0,0);
 	fuFrame.Keyword.F.Background:SetPoint("BOTTOMRIGHT",ChatFrame99,"BOTTOMRIGHT",23,0);
-	if PIG["Chat"]["KeywordFShow"] then
+	if PIGA["Chat"]["KeywordFShow"] then
 		fuFrame.Keyword.F:Show();
 	else
 		fuFrame.Keyword.F:Hide();
 	end
 	fuFrame.Keyword.F:HookScript("OnShow", function(self)
-		PIG["Chat"]["KeywordFShow"]=true
+		PIGA["Chat"]["KeywordFShow"]=true
 		fuFrame.Keyword.youNEWxiaoxinlai=false;
 	end);
 	fuFrame.Keyword.F:HookScript("OnHide", function(self)
-		PIG["Chat"]["KeywordFShow"]=false
+		PIGA["Chat"]["KeywordFShow"]=false
 	end);
 	fuFrame.Keyword.F:SetScript("OnMouseWheel", function(self, delta)
 		if delta == 1 then
@@ -256,26 +256,26 @@ function QuickChatfun.QuickBut_Keyword()
 	fuFrame.Keyword.F.shezhi.F.xitongjihuoB = PIGCheckbutton(fuFrame.Keyword.F.shezhi.F,{"TOPLEFT",fuFrame.Keyword.F.shezhi.F,"TOPLEFT",10,-10},{"过滤系统聊天框黑名单","开起后黑名单也会对系统聊天框生效，否则只对提取聊天框生效"})
 	fuFrame.Keyword.F.shezhi.F.xitongjihuoB:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["Chat"]["xitongjihuoB"]=true
+			PIGA["Chat"]["xitongjihuoB"]=true
 		else
-			PIG["Chat"]["xitongjihuoB"]=false
+			PIGA["Chat"]["xitongjihuoB"]=false
 		end
 	end);
 	fuFrame.Keyword.F.shezhi.F.guolvzishen = PIGCheckbutton(fuFrame.Keyword.F.shezhi.F,{"TOPLEFT",fuFrame.Keyword.F.shezhi.F,"TOPLEFT",10,-50},{"不显示自身发言","不显示自身发言"})
 	fuFrame.Keyword.F.shezhi.F.guolvzishen:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["Chat"]["guolvzishen"]=true
+			PIGA["Chat"]["guolvzishen"]=true
 		else
-			PIG["Chat"]["guolvzishen"]=false
+			PIGA["Chat"]["guolvzishen"]=false
 		end
 	end);
 	--
 	fuFrame.Keyword.F.shezhi.F.guolvchongfu = PIGCheckbutton(fuFrame.Keyword.F.shezhi.F,{"LEFT",fuFrame.Keyword.F.shezhi.F.guolvzishen,"RIGHT",150,0},{"过滤重复发言","过滤1分钟之内的重复发言(此功能也会对系统聊天栏生效)"})
 	fuFrame.Keyword.F.shezhi.F.guolvchongfu:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["Chat"]["guolvchongfu"]=true
+			PIGA["Chat"]["guolvchongfu"]=true
 		else
-			PIG["Chat"]["guolvchongfu"]=false
+			PIGA["Chat"]["guolvchongfu"]=false
 		end
 	end);
 	--高度
@@ -285,9 +285,9 @@ function QuickChatfun.QuickBut_Keyword()
 		local val = self:GetValue()
 		self.Text:SetText(val);
 		fuFrame.Keyword.F:SetHeight(val)
-		PIG["Chat"]["gaoduH"]=val
+		PIGA["Chat"]["gaoduH"]=val
 	end)
-	fuFrame.Keyword.F.shezhi.F.GaoduHSlider:SetValue(PIG["Chat"]["gaoduH"]);
+	fuFrame.Keyword.F.shezhi.F.GaoduHSlider:SetValue(PIGA["Chat"]["gaoduH"]);
 	--颜色透明度
 	if tocversion<80000 then
 		local xiayiinfo = {0,1,0.1}
@@ -298,12 +298,12 @@ function QuickChatfun.QuickBut_Keyword()
 			local Hval = Hval*10+0.5
 			local Hval = floor(Hval)*0.1
 			self.Text:SetText(Hval);
-			PIG["Chat"]["BgColor"][4]=Hval;
-			fuFrame.Keyword.F.Background:SetVertexColor(unpack(PIG["Chat"]["BgColor"]))
+			PIGA["Chat"]["BgColor"][4]=Hval;
+			fuFrame.Keyword.F.Background:SetVertexColor(unpack(PIGA["Chat"]["BgColor"]))
 		end)
-		fuFrame.Keyword.F.shezhi.F.Color:SetValue(PIG["Chat"]["BgColor"][4]);
+		fuFrame.Keyword.F.shezhi.F.Color:SetValue(PIGA["Chat"]["BgColor"][4]);
 	else
-		local newR, newG, newB, newA = unpack(PIG["Chat"]["BgColor"])
+		local newR, newG, newB, newA = unpack(PIGA["Chat"]["BgColor"])
 		fuFrame.Keyword.F.Background:SetVertexColor(newR, newG, newB, newA)
 		local function SETColorCallback(restore)
 			local newR, newG, newB, newA;
@@ -314,7 +314,7 @@ function QuickChatfun.QuickBut_Keyword()
 			end
 			fuFrame.Keyword.F.Background:SetVertexColor(newR, newG, newB, newA)
 			fuFrame.Keyword.F.shezhi.F.Color.Color:SetVertexColor(newR, newG, newB, newA)
-			PIG["Chat"]["BgColor"]={newR, newG, newB, newA}
+			PIGA["Chat"]["BgColor"]={newR, newG, newB, newA}
 		end
 		fuFrame.Keyword.F.shezhi.F.Color = CreateFrame("Button", nil, fuFrame.Keyword.F.shezhi.F, "ColorSwatchTemplate")
 		fuFrame.Keyword.F.shezhi.F.Color:SetPoint("TOPLEFT",fuFrame.Keyword.F.shezhi.F,"TOPLEFT",260,-100);
@@ -331,9 +331,9 @@ function QuickChatfun.QuickBut_Keyword()
 		end);
 	end
 	fuFrame.Keyword.F.shezhi.F:HookScript("OnShow", function (self)	
-		fuFrame.Keyword.F.shezhi.F.guolvzishen:SetChecked(PIG["Chat"]["guolvzishen"])
-		fuFrame.Keyword.F.shezhi.F.xitongjihuoB:SetChecked(PIG["Chat"]["xitongjihuoB"])
-		fuFrame.Keyword.F.shezhi.F.guolvchongfu:SetChecked(PIG["Chat"]["guolvchongfu"])
+		fuFrame.Keyword.F.shezhi.F.guolvzishen:SetChecked(PIGA["Chat"]["guolvzishen"])
+		fuFrame.Keyword.F.shezhi.F.xitongjihuoB:SetChecked(PIGA["Chat"]["xitongjihuoB"])
+		fuFrame.Keyword.F.shezhi.F.guolvchongfu:SetChecked(PIGA["Chat"]["guolvchongfu"])
 	end)
 	--编辑关键字/黑名单================================
 	fuFrame.Keyword.F.Keyword = CreateFrame("Button",nil,fuFrame.Keyword.F);
@@ -384,11 +384,11 @@ function QuickChatfun.QuickBut_Keyword()
 	fuFrame.Keyword.F.Keyword.F.L.daoru:SetScale(0.9)
 	fuFrame.Keyword.F.Keyword.F.L.daoru:PIGDownMenu_SetText("导入其他角色")
 	function fuFrame.Keyword.F.Keyword.F.L.daoru:PIGDownMenu_Update_But(self)
-		local jueseListLL = PIG["Chat"]["Keyword"];
+		local jueseListLL = PIGA["Chat"]["Keyword"];
 		local info = {}
 		info.func = self.PIGDownMenu_SetValue
 		for k,v in pairs(jueseListLL) do
-			if k~=dangqianwanjianame then
+			if k~=PIG_renwuming then
 				info.text, info.arg1 = "导入["..k.."]("..#v..")", k
 				info.notCheckable = true;
 				fuFrame.Keyword.F.Keyword.F.L.daoru:PIGDownMenu_AddButton(info)
@@ -397,10 +397,10 @@ function QuickChatfun.QuickBut_Keyword()
 	end
 	function fuFrame.Keyword.F.Keyword.F.L.daoru:PIGDownMenu_SetValue(value,arg1,arg2)
 		local info = {}
-		for xx=1,#PIG["Chat"]["Keyword"][arg1] do
-			table.insert(info, PIG["Chat"]["Keyword"][arg1][xx])
+		for xx=1,#PIGA["Chat"]["Keyword"][arg1] do
+			table.insert(info, PIGA["Chat"]["Keyword"][arg1][xx])
 		end
-		PIG["Chat"]["Keyword"][dangqianwanjianame] = info
+		PIGA["Chat"]["Keyword"][PIG_renwuming] = info
 		fuFrame.Keyword.F.Keyword.F.L.WList.Scroll.gengxin_list(fuFrame.Keyword.F.Keyword.F.L.WList.Scroll)
 		PIGCloseDropDownMenus()
 	end
@@ -465,23 +465,23 @@ function QuickChatfun.QuickBut_Keyword()
 		for id = 1, hang_NUM, 1 do	
 			_G["KeyWList_"..id]:Hide();
 		end
-		local ItemsNum = #PIG["Chat"]["Keyword"][dangqianwanjianame];
+		local ItemsNum = #PIGA["Chat"]["Keyword"][PIG_renwuming];
 		if ItemsNum>0 then
 		    FauxScrollFrame_Update(self, ItemsNum, hang_NUM, hang_H);
 		    local offset = FauxScrollFrame_GetOffset(self);
 			for id = 1, hang_NUM do
 				local dangqian = id+offset;
-				if PIG["Chat"]["Keyword"][dangqianwanjianame][dangqian] then
+				if PIGA["Chat"]["Keyword"][PIG_renwuming][dangqian] then
 					local fujik = _G["KeyWList_"..id]
 					fujik:Show();
 					fujik.del:SetID(dangqian);
 					local guanjianzineironglianji = ""
-					for xx=1,#PIG["Chat"]["Keyword"][dangqianwanjianame][dangqian] do
-						if PIG["Chat"]["Keyword"][dangqianwanjianame][dangqian][xx] then
-							if xx==#PIG["Chat"]["Keyword"][dangqianwanjianame][dangqian] then
-								guanjianzineironglianji=guanjianzineironglianji..PIG["Chat"]["Keyword"][dangqianwanjianame][dangqian][xx]
+					for xx=1,#PIGA["Chat"]["Keyword"][PIG_renwuming][dangqian] do
+						if PIGA["Chat"]["Keyword"][PIG_renwuming][dangqian][xx] then
+							if xx==#PIGA["Chat"]["Keyword"][PIG_renwuming][dangqian] then
+								guanjianzineironglianji=guanjianzineironglianji..PIGA["Chat"]["Keyword"][PIG_renwuming][dangqian][xx]
 							else
-								guanjianzineironglianji=guanjianzineironglianji..PIG["Chat"]["Keyword"][dangqianwanjianame][dangqian][xx]..","
+								guanjianzineironglianji=guanjianzineironglianji..PIGA["Chat"]["Keyword"][PIG_renwuming][dangqian][xx]..","
 							end
 						end
 					end
@@ -502,7 +502,7 @@ function QuickChatfun.QuickBut_Keyword()
 		PIGLine(ListBut,"TOP",0,{1,1,-20},{0.5, 0.5, 0.5, 0.2})
 		ListBut.del =PIGCloseBut(ListBut,{"LEFT", ListBut, "LEFT", 0,0})
 		ListBut.del:SetScript("OnClick", function (self)
-			table.remove(PIG["Chat"]["Keyword"][dangqianwanjianame], self:GetID());
+			table.remove(PIGA["Chat"]["Keyword"][PIG_renwuming], self:GetID());
 			fuFrame.Keyword.F.Keyword.F.L.WList.Scroll.gengxin_list(fuFrame.Keyword.F.Keyword.F.L.WList.Scroll)
 		end);	
 		ListBut.txt = PIGFontString(ListBut,{"LEFT", ListBut.del, "RIGHT", 4, 0});
@@ -523,11 +523,11 @@ function QuickChatfun.QuickBut_Keyword()
 	fuFrame.Keyword.F.Keyword.F.R.daoru_B:SetScale(0.9)
 	fuFrame.Keyword.F.Keyword.F.R.daoru_B:PIGDownMenu_SetText("导入其他角色")
 	function fuFrame.Keyword.F.Keyword.F.R.daoru_B:PIGDownMenu_Update_But(self)
-		local jueseListxx = PIG["Chat"]["Blacklist"];
+		local jueseListxx = PIGA["Chat"]["Blacklist"];
 		local info = {}
 		info.func = self.PIGDownMenu_SetValue
 		for k,v in pairs(jueseListxx) do
-			if k~=dangqianwanjianame then
+			if k~=PIG_renwuming then
 				info.text, info.arg1 = "导入["..k.."]("..#v..")", k
 				info.notCheckable = true;
 				fuFrame.Keyword.F.Keyword.F.R.daoru_B:PIGDownMenu_AddButton(info)
@@ -536,10 +536,10 @@ function QuickChatfun.QuickBut_Keyword()
 	end
 	function fuFrame.Keyword.F.Keyword.F.R.daoru_B:PIGDownMenu_SetValue(value,arg1,arg2)
 		local info = {}
-		for xx=1,#PIG["Chat"]["Blacklist"][arg1] do
-			table.insert(info, PIG["Chat"]["Blacklist"][arg1][xx])
+		for xx=1,#PIGA["Chat"]["Blacklist"][arg1] do
+			table.insert(info, PIGA["Chat"]["Blacklist"][arg1][xx])
 		end
-		PIG["Chat"]["Blacklist"][dangqianwanjianame] = info
+		PIGA["Chat"]["Blacklist"][PIG_renwuming] = info
 		fuFrame.Keyword.F.Keyword.F.R.BList.Scroll.gengxin_list(fuFrame.Keyword.F.Keyword.F.R.BList.Scroll)
 		PIGCloseDropDownMenus()
 	end
@@ -591,7 +591,7 @@ function QuickChatfun.QuickBut_Keyword()
 		for id = 1, hang_NUM, 1 do	
 			_G["KeyBList_"..id]:Hide();
 		end
-		local shujuyuan = PIG["Chat"]["Blacklist"][dangqianwanjianame];
+		local shujuyuan = PIGA["Chat"]["Blacklist"][PIG_renwuming];
 		local ItemsNum = #shujuyuan
 		if ItemsNum>0 then
 		    FauxScrollFrame_Update(self, ItemsNum, hang_NUM, ButtonH);
@@ -629,7 +629,7 @@ function QuickChatfun.QuickBut_Keyword()
 		PIGLine(ListBut,"TOP",0,{1,1,-20},{0.5, 0.5, 0.5, 0.2})
 		ListBut.del =PIGCloseBut(ListBut,{"LEFT", ListBut, "LEFT", 0,0})
 		ListBut.del:SetScript("OnClick", function (self)
-			table.remove(PIG["Chat"]["Blacklist"][dangqianwanjianame], self:GetID());
+			table.remove(PIGA["Chat"]["Blacklist"][PIG_renwuming], self:GetID());
 			fuFrame.Keyword.F.Keyword.F.R.BList.Scroll.gengxin_list(fuFrame.Keyword.F.Keyword.F.R.BList.Scroll)
 		end);	
 		ListBut.txt = PIGFontString(ListBut,{"LEFT", ListBut.del, "RIGHT", 4, 0});
@@ -707,18 +707,18 @@ function QuickChatfun.QuickBut_Keyword()
 	end
 	local jingjianTXT=QuickChatfun.jingjianTXT
 	local chongfufayanduibi={}--过滤重复发言临时
-	--PIG["Chat"]["xxxxxx"]={}
+	--PIGA["Chat"]["xxxxxx"]={}
 	for i = 1, NUM_CHAT_WINDOWS do
 		if ( i ~= 2 ) then
 			local chatID = _G["ChatFrame"..i]
 			local msninfo = chatID.AddMessage
 			local zijiname = UnitName("player")
 			chatID.AddMessage = function(frame, text, ...)
-				--table.insert(PIG["Chat"]["xxxxxx"],text);
+				--table.insert(PIGA["Chat"]["xxxxxx"],text);
 				local ChannelYes=text:find("|Hchannel:channel:", 1)	--是公共频道消息
 				if ChannelYes then
 					local ChatKeyqishiweizhi,ChatKeyjieshuweizhi
-					-- if PIG["Chat"]["ShowZb"] then
+					-- if PIGA["Chat"]["ShowZb"] then
 					-- 	ChatKeyqishiweizhi,ChatKeyjieshuweizhi=text:find("|t|h： ", 1)--频道类型后缀位置
 					-- else
 						ChatKeyqishiweizhi,ChatKeyjieshuweizhi=text:find("]|h： ", 1)--频道类型后缀位置
@@ -726,13 +726,13 @@ function QuickChatfun.QuickBut_Keyword()
 					if ChatKeyqishiweizhi and ChatKeyjieshuweizhi then
 						local fayanName=text:sub(1,ChatKeyqishiweizhi-1)--截取发言人
 						local zijifayan=fayanName:find(zijiname, 1)
-						if PIG["Chat"]["guolvzishen"] then
+						if PIGA["Chat"]["guolvzishen"] then
 							if zijifayan then return msninfo(frame, text, ...) end
 						end
 						local newText=text:sub(ChatKeyjieshuweizhi+1, -1)--截取发言内容
 						local newText =del_biaoqing(newText)
 						local newText =del_link(newText)
-						if not zijifayan and PIG["Chat"]["guolvchongfu"] then--过滤非自身重复发言
+						if not zijifayan and PIGA["Chat"]["guolvchongfu"] then--过滤非自身重复发言
 							local duibiText=del_biaodian(newText)
 							for i=#chongfufayanduibi,1,-1 do
 								if (GetServerTime()-chongfufayanduibi[i][1])>60 then
@@ -748,7 +748,7 @@ function QuickChatfun.QuickBut_Keyword()
 						end
 						--屏蔽黑名单
 						if BlackTxt(newText) then
-							if PIG["Chat"]["xitongjihuoB"] then
+							if PIGA["Chat"]["xitongjihuoB"] then
 								return
 							else
 								return msninfo(frame, text, ...)

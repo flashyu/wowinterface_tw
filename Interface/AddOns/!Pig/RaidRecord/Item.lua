@@ -5,8 +5,27 @@ local find = _G.string.find
 local match = _G.string.match
 local sub = _G.string.sub
 --
-local Create=addonTable.Create
-local PIGDownMenu=Create.PIGDownMenu
+local Create = addonTable.Create
+local PIGFrame=Create.PIGFrame
+local PIGButton = Create.PIGButton
+local PIGLine=Create.PIGLine
+local PIGCloseBut=Create.PIGCloseBut
+local PIGModbutton=Create.PIGModbutton
+local PIGCheckbutton=Create.PIGCheckbutton
+local PIGModCheckbutton=Create.PIGModCheckbutton
+local PIGOptionsList_RF=Create.PIGOptionsList_RF
+local PIGOptionsList_R=Create.PIGOptionsList_R
+local PIGQuickBut=Create.PIGQuickBut
+local Show_TabBut_R=Create.Show_TabBut_R
+---
+local RaidRFun=addonTable.RaidRFun
+
+function RaidRFun.RaidRecord_Item()
+	local GnName,GnUI,GnIcon,FrameLevel = RaidRFun.GnName,RaidRFun.GnUI,RaidRFun.GnIcon
+	local fujiF,fujiTabBut=PIGOptionsList_R(_G[GnUI].F,"拾取记录",80)
+	fujiF:Show()
+	fujiTabBut:Selected()
+end
 --------------------------------------------
 local hang_Height,hang_NUM  = 34, 12;
 local function ADD_Item()
@@ -96,7 +115,7 @@ local function ADD_Item()
 	end);
 	fuFrame.bobaoItem:SetScript("OnClick", function()
 		local xuanzhongName =RaidR_UI.xuanzhongChat
-		local ItemS = PIG["RaidRecord"]["ItemList"];
+		local ItemS = PIGA["RaidRecord"]["ItemList"];
 		local ItemsNum = #ItemS;
 	    if ItemsNum>0 then
 	    	local ItemsNum_bobaoNR = {};
@@ -166,7 +185,7 @@ local function ADD_Item()
 
 			ifufame.ChengjiaoRen.T:SetText(" 无");
 	    end
-		local ItemS = PIG["RaidRecord"]["ItemList"];
+		local ItemS = PIGA["RaidRecord"]["ItemList"];
 		local ItemsNum = #ItemS;
 		local ItemsNum_GL = {};
 	    if ItemsNum>0 then
@@ -347,7 +366,7 @@ local function ADD_Item()
 				end
 		    end
 			for p=1,8 do
-				local plist = PIG["RaidRecord"]["Raidinfo"][p]
+				local plist = PIGA["RaidRecord"]["Raidinfo"][p]
 				if #plist>0 then
 					for pp=1,#plist do
 					   	if plist[pp][4]~=nil then
@@ -409,9 +428,9 @@ local function ADD_Item()
 		Item_hang.paimai:SetScript("OnClick", function (self)
 			Paimai_UI.nr.bianjiID:SetText(self:GetID())
 			Paimai_UI:Show();
-			Paimai_UI.nr.item_icon:SetTexture(PIG["RaidRecord"]["ItemList"][self:GetID()][6]);
-			Paimai_UI.nr.item_link:SetText(PIG["RaidRecord"]["ItemList"][self:GetID()][2]);
-			Paimai_UI.nr.item_NO:SetText(PIG["RaidRecord"]["ItemList"][self:GetID()][3]);
+			Paimai_UI.nr.item_icon:SetTexture(PIGA["RaidRecord"]["ItemList"][self:GetID()][6]);
+			Paimai_UI.nr.item_link:SetText(PIGA["RaidRecord"]["ItemList"][self:GetID()][2]);
+			Paimai_UI.nr.item_NO:SetText(PIGA["RaidRecord"]["ItemList"][self:GetID()][3]);
 		end);
 
 		Item_hang.item = CreateFrame("Frame", nil, Item_hang);
@@ -472,7 +491,7 @@ local function ADD_Item()
 	 		local NWEdanjiaV=self:GetNumber();
 	 		local NewSELF=self:GetParent()
 	 		NewSELF.G:SetText(NWEdanjiaV);
-			PIG["RaidRecord"]["ItemList"][self:GetID()][9]=NWEdanjiaV;
+			PIGA["RaidRecord"]["ItemList"][self:GetID()][9]=NWEdanjiaV;
 			UpdateItem(Item_Scroll_UI);
 		end);
 		Item_hang.chengjiao.E:SetScript("OnEditFocusLost", function(self)
@@ -506,7 +525,7 @@ local function ADD_Item()
 			NewSELF.bianji:Hide();
 			NewSELF.baocun:Show();
 			NewSELF.E:Show();
-	 		NewSELF.E:SetText(PIG["RaidRecord"]["ItemList"][self:GetID()][9]);
+	 		NewSELF.E:SetText(PIGA["RaidRecord"]["ItemList"][self:GetID()][9]);
 		end);
 		Item_hang.chengjiao.baocun = CreateFrame("Button",nil,Item_hang.chengjiao, "UIPanelButtonTemplate");
 		Item_hang.chengjiao.baocun:SetSize(hang_Height,hang_Height-10);
@@ -518,7 +537,7 @@ local function ADD_Item()
 		Item_hang.chengjiao.baocun:SetScript("OnClick", function (self)
 	 		local NWEdanjiaV=_G["Item_hang_"..id.."_UI"].chengjiao.E:GetNumber();
 	 		_G["Item_hang_"..id.."_UI"].chengjiao.G:SetText(NWEdanjiaV);
-			PIG["RaidRecord"]["ItemList"][self:GetID()][9]=NWEdanjiaV;
+			PIGA["RaidRecord"]["ItemList"][self:GetID()][9]=NWEdanjiaV;
 			UpdateItem(Item_Scroll_UI);
 		end);
 
@@ -542,7 +561,7 @@ local function ADD_Item()
 			local NWEdanjiaV=self:GetNumber();
 	 		local NewSELF=self:GetParent()
 	 		NewSELF.G:SetText(NWEdanjiaV);
-			PIG["RaidRecord"]["ItemList"][self:GetID()][14]=NWEdanjiaV;
+			PIGA["RaidRecord"]["ItemList"][self:GetID()][14]=NWEdanjiaV;
 			UpdateItem(Item_Scroll_UI);
 		end);
 		Item_hang.Qiankuan.E:SetScript("OnEditFocusLost", function(self)
@@ -576,7 +595,7 @@ local function ADD_Item()
 			NewSELF.bianji:Hide();
 			NewSELF.baocun:Show();
 			NewSELF.E:Show();
-	 		NewSELF.E:SetText(PIG["RaidRecord"]["ItemList"][self:GetID()][14]);
+	 		NewSELF.E:SetText(PIGA["RaidRecord"]["ItemList"][self:GetID()][14]);
 		end);
 		Item_hang.Qiankuan.baocun = CreateFrame("Button",nil,Item_hang.Qiankuan, "UIPanelButtonTemplate");
 		Item_hang.Qiankuan.baocun:SetSize(hang_Height,hang_Height-10);
@@ -588,7 +607,7 @@ local function ADD_Item()
 		Item_hang.Qiankuan.baocun:SetScript("OnClick", function (self)
 			local NWEdanjiaV=_G["Item_hang_"..id.."_UI"].Qiankuan.E:GetNumber();
 	 		_G["Item_hang_"..id.."_UI"].Qiankuan.G:SetText(NWEdanjiaV);
-			PIG["RaidRecord"]["ItemList"][self:GetID()][14]=NWEdanjiaV;
+			PIGA["RaidRecord"]["ItemList"][self:GetID()][14]=NWEdanjiaV;
 			UpdateItem(Item_Scroll_UI);
 		end);
 
@@ -638,7 +657,7 @@ local function ADD_Item()
 			tishi_UI.nr.del:Show()
 			tishi_UI.nr.bianjiID:SetText(self:GetID());
 			tishi_UI.nr.bianjiN:SetText("del");
-			tishi_UI.nr.del.T1:SetText(PIG["RaidRecord"]["ItemList"][self:GetID()][2].."\n");	
+			tishi_UI.nr.del.T1:SetText(PIGA["RaidRecord"]["ItemList"][self:GetID()][2].."\n");	
 		end);
 	end
 	--=成交人选择==================
@@ -677,7 +696,7 @@ local function ADD_Item()
 	xuanzeChengjiaoren.qingchu:SetPoint("TOPLEFT",xuanzeChengjiaoren,"TOPLEFT",300,-4);
 	xuanzeChengjiaoren.qingchu:SetText("清除成交人");
 	xuanzeChengjiaoren.qingchu:SetScript("OnClick", function ()
-		PIG["RaidRecord"]["ItemList"][tonumber(xuanzeChengjiaoren.T4:GetText())][8]="无";
+		PIGA["RaidRecord"]["ItemList"][tonumber(xuanzeChengjiaoren.T4:GetText())][8]="无";
 		UpdateItem(Item_Scroll_UI);
 		xuanzeChengjiaoren_UI:Hide()
 	end);
@@ -735,7 +754,7 @@ local function ADD_Item()
 			end);
 			chengjiaoren.player:SetScript("OnMouseUp", function (self)
 				self.Name_XS:SetPoint("CENTER",self,"CENTER",0,1);
-				PIG["RaidRecord"]["ItemList"][tonumber(xuanzeChengjiaoren.T4:GetText())][8]=self.Name:GetText();
+				PIGA["RaidRecord"]["ItemList"][tonumber(xuanzeChengjiaoren.T4:GetText())][8]=self.Name:GetText();
 				UpdateItem(Item_Scroll_UI);
 				xuanzeChengjiaoren_UI:Hide()
 			end);
@@ -764,12 +783,12 @@ local function ADD_Item()
 	tishiUI.nr.YES:SetText("确定");
 	tishiUI.nr.YES:SetScript("OnClick", function()
 		local bianjiIDX=tonumber(tishi_UI.nr.bianjiID:GetText());
-		local hejishuju = PIG["RaidRecord"]["ItemList"]
+		local hejishuju = PIGA["RaidRecord"]["ItemList"]
 		local bianjileixing=tishi_UI.nr.bianjiN:GetText()
 		if bianjileixing=="del" then
 			table.remove(hejishuju,bianjiIDX);
 		elseif bianjileixing=="hei" then
-			local paichumulu = PIG["RaidRecord"]["ItemList_Paichu"]
+			local paichumulu = PIGA["RaidRecord"]["ItemList_Paichu"]
 			for i=1,#paichumulu do
 				if bianjiIDX==paichumulu[i] then
 					print("|cff00FFFF!Pig:|r|cffffFF00物品已在目录内！|r");
@@ -1110,7 +1129,7 @@ local function ADD_Item()
 	Paimai.nr.YES:SetText("开始拍卖");
 	Paimai.nr.YES:SetScript("OnClick", function (self)
 		local wupinhang =tonumber(Paimai.nr.bianjiID:GetText());
-		local wupin =PIG["RaidRecord"]["ItemList"][wupinhang]
+		local wupin =PIGA["RaidRecord"]["ItemList"][wupinhang]
 		if Paimai.nr.YES:GetText()=="开始拍卖" then
 			Paimai.nr.daojishi:Enable();
 			Paimai.nr.daojishi_RL:Show();
@@ -1129,7 +1148,7 @@ local function ADD_Item()
 			Paimai.nr.YES:SetText("开始拍卖");
 			Paimai.nr.T5:SetText();
 			SendChatMessage(wupin[2].."拍卖已结束。", RaidR_UI.xuanzhongChat, nil);
-			PIG["RaidRecord"]["ItemList"][wupinhang][7]=1;--记录拍卖成功
+			PIGA["RaidRecord"]["ItemList"][wupinhang][7]=1;--记录拍卖成功
 			UpdateItem(Item_Scroll);
 			Paimai.nr.daojishi_RL:Hide();
 			Paimai:Hide();
@@ -1146,7 +1165,7 @@ local function ADD_Item()
 	Paimai.nr.qiangzhijieshu:SetScript("OnClick", function ()
 		if Paimai.nr.YES:GetText()~="开始拍卖" then
 			local wupinhang =tonumber(Paimai.nr.bianjiID:GetText());
-			local wupin =PIG["RaidRecord"]["ItemList"][wupinhang]
+			local wupin =PIGA["RaidRecord"]["ItemList"][wupinhang]
 			SendChatMessage(wupin[2].."拍卖非正常终止。", RaidR_UI.xuanzhongChat, nil);
 		end
 		Paimai.nr.YES:SetText("开始拍卖");
@@ -1171,13 +1190,13 @@ local function ADD_Item()
 		info.func = self.PIGDownMenu_SetValue
 		for i=1,#pinzhiName,1 do
 		    info.text, info.arg1 = pinzhiName[i], i
-		    info.checked = i==PIG["RaidRecord"]["pinzhimoren"]
+		    info.checked = i==PIGA["RaidRecord"]["pinzhimoren"]
 			RaidR_UI.xiafangF.D:PIGDownMenu_AddButton(info)
 		end 
 	end
 	function RaidR_UI.xiafangF.D:PIGDownMenu_SetValue(value,arg1,arg2)
 		RaidR_UI.xiafangF.D:PIGDownMenu_SetText(value)
-		PIG["RaidRecord"]["pinzhimoren"]=arg1
+		PIGA["RaidRecord"]["pinzhimoren"]=arg1
 		PIGCloseDropDownMenus()
 	end
 	--======================================================
@@ -1198,7 +1217,7 @@ local function ADD_Item()
 			true,--13通报已结束
 			0,--14欠款
 		};
-		table.insert(PIG["RaidRecord"]["ItemList"],iteminfo);
+		table.insert(PIGA["RaidRecord"]["ItemList"],iteminfo);
 		UpdateItem(Item_Scroll_UI);
 	end
 	--手动添加物品
@@ -1206,14 +1225,14 @@ local function ADD_Item()
 		if RaidR_UI:IsShown() then
 			local aShiftKeyIsDown = IsShiftKeyDown();
 			if aShiftKeyIsDown and fuFrame:IsShown() then
-				if PIG["RaidRecord"]["Rsetting"]["shoudongloot"]=="ON" then
+				if PIGA["RaidRecord"]["Rsetting"]["shoudongloot"]=="ON" then
 					local shiwupin = link:match("item");
 					if shiwupin then
 						local itemID = GetItemInfoInstant(link);
-						if #PIG["RaidRecord"]["ItemList"]==0 then
+						if #PIGA["RaidRecord"]["ItemList"]==0 then
 							local diname = GetRealZoneText();
-							PIG["RaidRecord"]["instanceName"][1]=GetServerTime();
-							PIG["RaidRecord"]["instanceName"][2]=diname;
+							PIGA["RaidRecord"]["instanceName"][1]=GetServerTime();
+							PIGA["RaidRecord"]["instanceName"][2]=diname;
 						end
 						
 						local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount,
@@ -1232,13 +1251,13 @@ local function ADD_Item()
 	--=====================================================
 	--拾取记录添加到数组
 	local function AddItem(MSGINFO,shiquname)
-		if #PIG["RaidRecord"]["ItemList"]==0 then
-			PIG["RaidRecord"]["instanceName"][1]=GetServerTime();
-			PIG["RaidRecord"]["instanceName"][2]=GetRealZoneText();
+		if #PIGA["RaidRecord"]["ItemList"]==0 then
+			PIGA["RaidRecord"]["instanceName"][1]=GetServerTime();
+			PIGA["RaidRecord"]["instanceName"][2]=GetRealZoneText();
 		end
 		local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount,
 		itemEquipLoc, itemTexture, sellPrice, classID, subclassID, bindType, expacID, setID, isCraftingReagent=GetItemInfo(MSGINFO);
-		if itemQuality>=PIG["RaidRecord"]["pinzhimoren"] then
+		if itemQuality>=PIGA["RaidRecord"]["pinzhimoren"] then
 			local itemID = GetItemInfoInstant(MSGINFO);
 			local LOOT_itemNO = 1;
 			local Nkaishi=MSGINFO:find("x",1)
@@ -1254,8 +1273,8 @@ local function ADD_Item()
 				end
 			end
 			--过滤排除目录物品
-			for id=1,#PIG["RaidRecord"]["ItemList_Paichu"] do 
-				if itemID==PIG["RaidRecord"]["ItemList_Paichu"][id] then
+			for id=1,#PIGA["RaidRecord"]["ItemList_Paichu"] do 
+				if itemID==PIGA["RaidRecord"]["ItemList_Paichu"][id] then
 					return;
 				end
 			end
@@ -1290,19 +1309,18 @@ local function ADD_Item()
 		if instanceType=="raid" then
 			AddItem(arg1,arg5)
 		elseif instanceType=="party" then
-			if PIG["RaidRecord"]["Rsetting"]["wurenben"]=="ON" then
+			if PIGA["RaidRecord"]["Rsetting"]["wurenben"]=="ON" then
 				AddItem(arg1,arg5)
 			end
 		elseif instanceType=="none" then
-			if PIG["RaidRecord"]["Rsetting"]["fubenwai"]=="ON" then
+			if PIGA["RaidRecord"]["Rsetting"]["fubenwai"]=="ON" then
 				AddItem(arg1,arg5)
 			end
 		end
 	end);
 	fuFrame:HookScript("OnShow", function ()
 		fuFrame.ShowGuolv:PIGDownMenu_SetText(guolvlist_dangqianmoshi)
-		RaidR_UI.xiafangF.D:PIGDownMenu_SetText(pinzhiName[PIG["RaidRecord"]["pinzhimoren"]])
+		RaidR_UI.xiafangF.D:PIGDownMenu_SetText(pinzhiName[PIGA["RaidRecord"]["pinzhimoren"]])
 		UpdateItem(Item_Scroll_UI);
 	end)
 end
-addonTable.ADD_Item = ADD_Item;

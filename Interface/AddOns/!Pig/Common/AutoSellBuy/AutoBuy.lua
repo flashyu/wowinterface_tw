@@ -19,7 +19,7 @@ local CommonFun=addonTable.CommonFun
 function CommonFun.AutoBuy()
 	local fujiF,fujiTabBut=PIGOptionsList_R(AutoSellBuy_UI.F,"购",60,"Left")
 	local Width = fujiF:GetWidth()-20;
-	CommonFun.ADDScroll(fujiF,"购买","Buy",17,PIG_Per["AutoSellBuy"]["Buy_List"],{true,"AutoSellBuy","Buy_List"})
+	CommonFun.ADDScroll(fujiF,"购买","Buy",17,PIG_PerA["AutoSellBuy"]["Buy_List"],{true,"AutoSellBuy","Buy_List"})
 	--------------
 	local function goumaihanshu(i, ii,xuyaogoumaishu,dataY)
 		if xuyaogoumaishu>dataY[i][5] then
@@ -63,7 +63,7 @@ function CommonFun.AutoBuy()
 	---------------------------------
 	local function Buy_item()
 		if ( MerchantFrame:IsVisible() and MerchantFrame.selectedTab == 1 ) then
-			local dataY = PIG_Per["AutoSellBuy"]["Buy_List"]
+			local dataY = PIG_PerA["AutoSellBuy"]["Buy_List"]
 			for i=1,#dataY do
 				BUGINFO_itemCount=0
 				local goumaiItem=dataY[i][1]
@@ -78,19 +78,19 @@ function CommonFun.AutoBuy()
 							local NPCshuliang = select(5, GetMerchantItemInfo(ii))
 							if NPCshuliang==(-1) then
 								goumaihanshu(i,ii,shijigoumai,dataY)
-								if PIG["AutoSellBuy"]["Buy_Tishi"] then
-									print("|cFF00ffff!Pig|r |cFF00ff00执行自动补货:|r "..PIG_Per["AutoSellBuy"]["Buy_List"][i][2].." |cFF00ff00补货数量:|r"..shijigoumai);
+								if PIGA["AutoSellBuy"]["Buy_Tishi"] then
+									print("|cFF00ffff!Pig|r |cFF00ff00执行自动补货:|r "..PIG_PerA["AutoSellBuy"]["Buy_List"][i][2].." |cFF00ff00补货数量:|r"..shijigoumai);
 								end
 							else
 								if shijigoumai>NPCshuliang then
 									BuyMerchantItem(ii,NPCshuliang)
-									if PIG["AutoSellBuy"]["Buy_Tishi"] then
-										print("|cFF00ffff!Pig|r |cFF00ff00商家物品限购:|r "..PIG_Per["AutoSellBuy"]["Buy_List"][i][2].." |cFF00ff00抢购数量:|r"..NPCshuliang);
+									if PIGA["AutoSellBuy"]["Buy_Tishi"] then
+										print("|cFF00ffff!Pig|r |cFF00ff00商家物品限购:|r "..PIG_PerA["AutoSellBuy"]["Buy_List"][i][2].." |cFF00ff00抢购数量:|r"..NPCshuliang);
 									end
 								else
 									goumaihanshu(i,ii,shijigoumai,dataY)
-									if PIG["AutoSellBuy"]["Buy_Tishi"] then
-										print("|cFF00ffff!Pig|r |cFF00ff00执行自动补货:|r "..PIG_Per["AutoSellBuy"]["Buy_List"][i][2].." |cFF00ff00补货数量:|r"..shijigoumai);
+									if PIGA["AutoSellBuy"]["Buy_Tishi"] then
+										print("|cFF00ffff!Pig|r |cFF00ff00执行自动补货:|r "..PIG_PerA["AutoSellBuy"]["Buy_List"][i][2].." |cFF00ff00补货数量:|r"..shijigoumai);
 									end
 								end
 							end	
@@ -111,20 +111,20 @@ function CommonFun.AutoBuy()
 	fujiF.Buy_Open = PIGCheckbutton(fujiF,{"TOPLEFT",fujiF,"TOPLEFT",20,-10},{"自动购买下方列表物品|cffFFFF00(角色独享)|r", "打开商人界面自动购买下方列表物品"})
 	fujiF.Buy_Open:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["AutoSellBuy"]["Buy_Open"]=true;
+			PIGA["AutoSellBuy"]["Buy_Open"]=true;
 			Buy_Open()
 		else
-			PIG["AutoSellBuy"]["Buy_Open"]=false;
+			PIGA["AutoSellBuy"]["Buy_Open"]=false;
 		end
 	end);
-	if PIG["AutoSellBuy"]["Buy_Open"] then
+	if PIGA["AutoSellBuy"]["Buy_Open"] then
 		fujiF.Buy_Open:SetChecked(true)
 		Buy_Open()
 	end
 	--
 	local function Buy_But_Open()
 		if MerchantFrame.Buy then
-			if PIG["AutoSellBuy"]["Buy_But"] then
+			if PIGA["AutoSellBuy"]["Buy_But"] then
 				MerchantFrame.Buy:Show()
 			else
 				MerchantFrame.Buy:Hide()
@@ -152,13 +152,13 @@ function CommonFun.AutoBuy()
 	fujiF.Buy_But = PIGCheckbutton(fujiF,{"TOPLEFT",fujiF,"TOPLEFT",20,-44},{"购买按钮", "在商人界面增加一个购买按钮(可以点击购买下方列表内的物品)"})
 	fujiF.Buy_But:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["AutoSellBuy"]["Buy_But"]=true;	
+			PIGA["AutoSellBuy"]["Buy_But"]=true;	
 		else
-			PIG["AutoSellBuy"]["Buy_But"]=false;
+			PIGA["AutoSellBuy"]["Buy_But"]=false;
 		end
 		Buy_But_Open();	
 	end);
-	if PIG["AutoSellBuy"]["Buy_But"] then
+	if PIGA["AutoSellBuy"]["Buy_But"] then
 		fujiF.Buy_But:SetChecked(true);
 		Buy_But_Open();
 	end
@@ -166,10 +166,10 @@ function CommonFun.AutoBuy()
 	fujiF.Buy_Tishi = PIGCheckbutton(fujiF,{"TOPLEFT",fujiF,"TOPLEFT",140,-44},{"聊天栏购买记录", "在聊天栏显示购买记录"})
 	fujiF.Buy_Tishi:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["AutoSellBuy"]["Buy_Tishi"]=true;
+			PIGA["AutoSellBuy"]["Buy_Tishi"]=true;
 		else
-			PIG["AutoSellBuy"]["Buy_Tishi"]=false;
+			PIGA["AutoSellBuy"]["Buy_Tishi"]=false;
 		end
 	end);
-	fujiF.Buy_Tishi:SetChecked(PIG["AutoSellBuy"]["Buy_Tishi"])
+	fujiF.Buy_Tishi:SetChecked(PIGA["AutoSellBuy"]["Buy_Tishi"])
 end

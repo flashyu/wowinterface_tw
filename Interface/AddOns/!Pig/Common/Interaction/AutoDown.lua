@@ -26,7 +26,7 @@ zidongxiama:SetScript("OnEvent", function(self,event,key,state)
 end)
 --------------------
 InteractionFun.AutoDown = function()
-	if PIG['Interaction']['AutoDown'] then
+	if PIGA['Interaction']['AutoDown'] then
 		zidongxiama:RegisterEvent("UI_ERROR_MESSAGE")
 	else
 		zidongxiama:UnregisterEvent("UI_ERROR_MESSAGE")

@@ -19,7 +19,7 @@ local CommonFun=addonTable.CommonFun
 function CommonFun.AutoSell()
 	local fujiF,fujiTabBut=PIGOptionsList_R(AutoSellBuy_UI.F,"卖",60,"Left")
 	local Width = fujiF:GetWidth()-20;
-	CommonFun.ADDScroll(fujiF,"卖出","Sell",17,PIG["AutoSellBuy"]["Sell_List"],{false,"AutoSellBuy","Sell_List"})
+	CommonFun.ADDScroll(fujiF,"卖出","Sell",17,PIGA["AutoSellBuy"]["Sell_List"],{false,"AutoSellBuy","Sell_List"})
 	local function shoumailaji()
 		if ( MerchantFrame:IsVisible() and MerchantFrame.selectedTab == 1 ) then
 			fujiF.shoumaiG = 0;
@@ -36,17 +36,17 @@ function CommonFun.AutoSell()
 											local name, link, rarity, level, minLevel, itemtype, subType, stackCount, equipLoc, icon, sellPrice = GetItemInfo(itemID);
 											fujiF.shoumaiG = sellPrice*itemCount+fujiF.shoumaiG;
 											UseContainerItem(bag, slot);
-											if PIG["AutoSellBuy"]["Sell_Tishi"] then print("|cFF7FFFAA出售|r: " ..link) end
+											if PIGA["AutoSellBuy"]["Sell_Tishi"] then print("|cFF7FFFAA出售|r: " ..link) end
 											fujiF.shoumaiShuliang = fujiF.shoumaiShuliang+1
 										end
 									end
 								--非灰
-									for i=1,#PIG["AutoSellBuy"]["Sell_List"] do
-										if itemLink==PIG["AutoSellBuy"]["Sell_List"][i][2] then
+									for i=1,#PIGA["AutoSellBuy"]["Sell_List"] do
+										if itemLink==PIGA["AutoSellBuy"]["Sell_List"][i][2] then
 											local name, link, rarity, level, minLevel, itemtype, subType, stackCount, equipLoc, icon, sellPrice = GetItemInfo(itemID);
 											fujiF.shoumaiG = sellPrice*itemCount+fujiF.shoumaiG;
 											UseContainerItem(bag, slot);
-											if PIG["AutoSellBuy"]["Sell_Tishi"] then print("|cFF7FFFAA出售|r: " ..link) end
+											if PIGA["AutoSellBuy"]["Sell_Tishi"] then print("|cFF7FFFAA出售|r: " ..link) end
 											fujiF.shoumaiShuliang = fujiF.shoumaiShuliang+1
 										end
 									end
@@ -66,17 +66,17 @@ function CommonFun.AutoSell()
 											local name, link, rarity, level, minLevel, itemtype, subType, stackCount, equipLoc, icon, sellPrice = GetItemInfo(ItemInfo.hyperlink);
 											fujiF.shoumaiG = sellPrice*ItemInfo.stackCount+fujiF.shoumaiG;
 											C_Container.UseContainerItem(bag, slot);
-											if PIG["AutoSellBuy"]["Sell_Tishi"] then print("|cFF7FFFAA出售|r: " ..link) end
+											if PIGA["AutoSellBuy"]["Sell_Tishi"] then print("|cFF7FFFAA出售|r: " ..link) end
 											fujiF.shoumaiShuliang = fujiF.shoumaiShuliang+1
 										end
 									end
 								--非灰
-									for i=1,#PIG["AutoSellBuy"]["Sell_List"] do
-										if ItemInfo.hyperlink==PIG["AutoSellBuy"]["Sell_List"][i][2] then
+									for i=1,#PIGA["AutoSellBuy"]["Sell_List"] do
+										if ItemInfo.hyperlink==PIGA["AutoSellBuy"]["Sell_List"][i][2] then
 											local name, link, rarity, level, minLevel, itemtype, subType, stackCount, equipLoc, icon, sellPrice = GetItemInfo(ItemInfo.hyperlink);
 											fujiF.shoumaiG = sellPrice*ItemInfo.stackCount+fujiF.shoumaiG;
 											C_Container.UseContainerItem(bag, slot);
-											if PIG["AutoSellBuy"]["Sell_Tishi"] then print("|cFF7FFFAA出售|r: " ..link) end
+											if PIGA["AutoSellBuy"]["Sell_Tishi"] then print("|cFF7FFFAA出售|r: " ..link) end
 											fujiF.shoumaiShuliang = fujiF.shoumaiShuliang+1
 										end
 									end
@@ -86,7 +86,7 @@ function CommonFun.AutoSell()
 				end
 			end
 			if fujiF.shoumaiG > 0 then
-				if PIG["AutoSellBuy"]["Sell_Tishi"] then
+				if PIGA["AutoSellBuy"]["Sell_Tishi"] then
 					print("|cFF00ffff!Pig|r|cFF7FFFAA本次售卖获得:|r " .. GetCoinTextureString(fujiF.shoumaiG));
 				end
 			end
@@ -106,20 +106,20 @@ function CommonFun.AutoSell()
 	fujiF.Sell_Open = PIGCheckbutton(fujiF,{"TOPLEFT",fujiF,"TOPLEFT",20,-10},{"自动卖垃圾和下方列表物品", "打开商人界面自动售卖垃圾(灰色)物品和下方列表内的物品"})
 	fujiF.Sell_Open:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["AutoSellBuy"]["Sell_Open"]=true;
+			PIGA["AutoSellBuy"]["Sell_Open"]=true;
 			Sell_Open()
 		else
-			PIG["AutoSellBuy"]["Sell_Open"]=false;
+			PIGA["AutoSellBuy"]["Sell_Open"]=false;
 		end
 	end);
-	if PIG["AutoSellBuy"]["Sell_Open"] then
+	if PIGA["AutoSellBuy"]["Sell_Open"] then
 		fujiF.Sell_Open:SetChecked(true)
 		Sell_Open()
 	end
 	---出售按钮
 	local function Sell_But_Open()
 		if MerchantFrame.Sell then
-			if PIG["AutoSellBuy"]["Sell_But"] then
+			if PIGA["AutoSellBuy"]["Sell_But"] then
 				MerchantFrame.Sell:Show()
 			else
 				MerchantFrame.Sell:Hide()
@@ -147,13 +147,13 @@ function CommonFun.AutoSell()
 	fujiF.Sell_But = PIGCheckbutton(fujiF,{"TOPLEFT",fujiF,"TOPLEFT",20,-44},{"出售按钮", "在商人界面增加一个卖东西按钮(可以点击卖出灰色物品和下方列表内的物品)"})
 	fujiF.Sell_But:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["AutoSellBuy"]["Sell_But"]=true;	
+			PIGA["AutoSellBuy"]["Sell_But"]=true;	
 		else
-			PIG["AutoSellBuy"]["Sell_But"]=false;
+			PIGA["AutoSellBuy"]["Sell_But"]=false;
 		end
 		Sell_But_Open();	
 	end);
-	if PIG["AutoSellBuy"]["Sell_But"] then
+	if PIGA["AutoSellBuy"]["Sell_But"] then
 		fujiF.Sell_But:SetChecked(true);
 		Sell_But_Open();
 	end
@@ -161,10 +161,10 @@ function CommonFun.AutoSell()
 	fujiF.Sell_Tishi = PIGCheckbutton(fujiF,{"TOPLEFT",fujiF,"TOPLEFT",140,-44},{"聊天栏卖出记录", "在聊天栏显示卖出记录"})
 	fujiF.Sell_Tishi:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["AutoSellBuy"]["Sell_Tishi"]=true;
+			PIGA["AutoSellBuy"]["Sell_Tishi"]=true;
 		else
-			PIG["AutoSellBuy"]["Sell_Tishi"]=false;
+			PIGA["AutoSellBuy"]["Sell_Tishi"]=false;
 		end
 	end);
-	fujiF.Sell_Tishi:SetChecked(PIG["AutoSellBuy"]["Sell_Tishi"])
+	fujiF.Sell_Tishi:SetChecked(PIGA["AutoSellBuy"]["Sell_Tishi"])
 end

@@ -1487,14 +1487,14 @@ local function Update_zhuangbei(index,invData)
 					zbBuwei.itemlink:SetText(itemLink)
 					zbBuwei.itembuwei:SetTextColor(0, 1, 1, 0.8);
 					zbBuwei.itembuweiF:SetBackdropBorderColor(0, 1, 1, 0.5)
-					if PIG["FramePlus"]["Character_ItemLevel"] then
+					if PIGA["FramePlus"]["Character_ItemLevel"] then
 						if itemLevel and itemLevel>0 then
 							invFff.LV:SetText(itemLevel)
 							local r, g, b, hex = GetItemQualityColor(itemQuality)
 							invFff.LV:SetTextColor(r, g, b, 1);
 						end
 					end
-					if PIG["FramePlus"]["Character_ItemColor"] then
+					if PIGA["FramePlus"]["Character_ItemColor"] then
 					    if itemQuality and itemQuality>1 then
 					        local r, g, b = GetItemQualityColor(itemQuality);
 					        invFff.ranse:SetVertexColor(r, g, b);
@@ -1702,12 +1702,12 @@ local function Show_RightF(listName)
 end
 --------------------
 function CommonFun.Interaction.RightPlus()
-	if not PIG["Interaction"]['RightPlus'] then return end
+	if not PIGA["Interaction"]['RightPlus'] then return end
 	if Pig_RightFUI then return end
 	local beijingico=DropDownList1MenuBackdrop.NineSlice.Center:GetTexture()
 	local beijing1,beijing2,beijing3,beijing4=DropDownList1MenuBackdrop.NineSlice.Center:GetVertexColor()
 	local Biankuang1,Biankuang2,Biankuang3,Biankuang4=DropDownList1MenuBackdrop:GetBackdropBorderColor()
-	local PigRightF=PIGFrame(UIParent,{"TOPLEFT",DropDownList1,"TOPRIGHT",0,-PIG["Interaction"]["xiayijuli"]},{caidanW,caidanH*zongHang+16},"Pig_RightFUI")
+	local PigRightF=PIGFrame(UIParent,{"TOPLEFT",DropDownList1,"TOPRIGHT",0,-PIGA["Interaction"]["xiayijuli"]},{caidanW,caidanH*zongHang+16},"Pig_RightFUI")
 	PigRightF:SetFrameStrata("FULLSCREEN_DIALOG")
 	PigRightF:Hide();
 	if ElvUI or NDui then
@@ -2056,7 +2056,7 @@ yuanchangchakanFFF:SetScript("OnEvent",function(self, event, arg1, arg2, _, _, a
 				
 			end
 		else
-			if PIG["Interaction"]['RightPlus'] then
+			if PIGA["Interaction"]['RightPlus'] then
 				yuanchengC_UI.fanhuiYN=true
 				ShowMubiao_ZBTF(arg2)
 			end

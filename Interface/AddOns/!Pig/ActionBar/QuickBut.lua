@@ -29,17 +29,17 @@ ActionBarfun.QuickButF=QuickButF
 QuickButF.Open=PIGCheckbutton_R(QuickButF,{"功能动作条","在屏幕上创建一条功能动作条，以便快捷使用某些功能。\n你可以自定义需要显示的按钮"})
 QuickButF.Open:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["QuickBut"]["Open"]=true;
+		PIGA["QuickBut"]["Open"]=true;
 		QuickButUI:Open()
 	else
-		PIG["QuickBut"]["Open"]=false;
+		PIGA["QuickBut"]["Open"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end)
 --
 local function QuickButFLock()
 	if QuickButUI.yidong then
-		if PIG["QuickBut"]["Lock"] then
+		if PIGA["QuickBut"]["Lock"] then
 			QuickButUI.yidong:Hide()
 		else
 			QuickButUI.yidong:Show()
@@ -49,9 +49,9 @@ end
 QuickButF.Lock=PIGCheckbutton(QuickButF,{"LEFT",QuickButF.Open,"RIGHT",130,0},{"锁定位置","锁定功能动作条位置，使其无法移动"})
 QuickButF.Lock:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["QuickBut"]["Lock"]=true
+		PIGA["QuickBut"]["Lock"]=true
 	else
-		PIG["QuickBut"]["Lock"]=false;
+		PIGA["QuickBut"]["Lock"]=false;
 	end
 	QuickButFLock()
 end)
@@ -64,26 +64,26 @@ QuickButF.suofang:SetScript("OnValueChanged", function(self)
 	local Hval = Hval*10+0.5
 	local Hval = floor(Hval)*0.1
 	self.Text:SetText(Hval);
-	PIG["QuickBut"]["bili"]=Hval;
+	PIGA["QuickBut"]["bili"]=Hval;
 	QuickButUI:SetScale(Hval);
 end)
 --
 QuickButF.CZBUT = PIGButton(QuickButF,{"TOPRIGHT",QuickButF,"TOPRIGHT",-10,-20},{80,24},"重置位置")
 QuickButF.CZBUT:SetScript("OnClick", function ()
-	PIG["QuickBut"]["Point"]=addonTable.Default["QuickBut"]["Point"];
+	PIGA["QuickBut"]["Point"]=addonTable.Default["QuickBut"]["Point"];
 	if QuickButUI then
 		QuickButUI:ClearAllPoints();
 		if tocversion<100000 then
-			QuickButUI:SetPoint(PIG["QuickBut"]["Point"][1],UIParent,PIG["QuickBut"]["Point"][2],PIG["QuickBut"]["Point"][3],PIG["QuickBut"]["Point"][4]);
+			QuickButUI:SetPoint(PIGA["QuickBut"]["Point"][1],UIParent,PIGA["QuickBut"]["Point"][2],PIGA["QuickBut"]["Point"][3],PIGA["QuickBut"]["Point"][4]);
 		else
-			QuickButUI:SetPoint(PIG["QuickBut"]["Point"][1],UIParent,PIG["QuickBut"]["Point"][2],PIG["QuickBut"]["Point"][3]-200,PIG["QuickBut"]["Point"][4]+90);
+			QuickButUI:SetPoint(PIGA["QuickBut"]["Point"][1],UIParent,PIGA["QuickBut"]["Point"][2],PIGA["QuickBut"]["Point"][3]-200,PIGA["QuickBut"]["Point"][4]+90);
 		end
 	end
 end)
 QuickButF:HookScript("OnShow", function(self)
-	self.Open:SetChecked(PIG["QuickBut"]["Open"])
-	self.Lock:SetChecked(PIG["QuickBut"]["Lock"])
-	self.suofang:SetValue(PIG["QuickBut"]["bili"]);
+	self.Open:SetChecked(PIGA["QuickBut"]["Open"])
+	self.Lock:SetChecked(PIGA["QuickBut"]["Lock"])
+	self.suofang:SetValue(PIGA["QuickBut"]["bili"]);
 end)
 --
 QuickButF.Modline = PIGLine(QuickButF,"TOP",-66)
@@ -94,10 +94,10 @@ local BGbroadcast_tooltip = {"添加<战况广播按钮>到功能动作条","添
 QuickButF.ModF.BGbroadcast=PIGCheckbutton_R(QuickButF.ModF,BGbroadcast_tooltip,true)
 QuickButF.ModF.BGbroadcast:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["QuickBut"]["BGbroadcast"]=true;
+		PIGA["QuickBut"]["BGbroadcast"]=true;
 		QuickButUI:BGbroadcast()
 	else
-		PIG["QuickBut"]["BGbroadcast"]=false;
+		PIGA["QuickBut"]["BGbroadcast"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end)
@@ -105,10 +105,10 @@ local Lushi_tooltip = {"添加<炉石/专业按钮>到功能动作条","启动�
 QuickButF.ModF.Lushi=PIGCheckbutton_R(QuickButF.ModF,Lushi_tooltip,true)
 QuickButF.ModF.Lushi:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["QuickBut"]["Lushi"]=true;
+		PIGA["QuickBut"]["Lushi"]=true;
 		QuickButUI:Lushi()
 	else
-		PIG["QuickBut"]["Lushi"]=false;
+		PIGA["QuickBut"]["Lushi"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end)
@@ -119,28 +119,28 @@ local Spell_tooltip = {
 QuickButF.ModF.Spell=PIGCheckbutton_R(QuickButF.ModF,Spell_tooltip,true)
 QuickButF.ModF.Spell:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["QuickBut"]["Spell"]=true;
+		PIGA["QuickBut"]["Spell"]=true;
 		QuickButUI:Spell()
 	else
-		PIG["QuickBut"]["Spell"]=false;
+		PIGA["QuickBut"]["Spell"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end)
 QuickButF.ModF:HookScript("OnShow", function(self)
-	self.Lushi:SetChecked(PIG["QuickBut"]["Lushi"])
-	self.Spell:SetChecked(PIG["QuickBut"]["Spell"])
-	self.BGbroadcast:SetChecked(PIG["QuickBut"]["BGbroadcast"])
+	self.Lushi:SetChecked(PIGA["QuickBut"]["Lushi"])
+	self.Spell:SetChecked(PIGA["QuickBut"]["Spell"])
+	self.BGbroadcast:SetChecked(PIGA["QuickBut"]["BGbroadcast"])
 end)
 ---
 function QuickButUI:Open()
-	if not PIG["QuickBut"]["Open"] or self.yidong then
+	if not PIGA["QuickBut"]["Open"] or self.yidong then
 		return
 	end
-	self:SetScale(PIG["QuickBut"]["bili"]);
+	self:SetScale(PIGA["QuickBut"]["bili"]);
 	self.yidong=PIGFrame(self,{"TOPLEFT",self,"TOPLEFT",0,0})
 	self.yidong:SetPoint("BOTTOMLEFT", self, "BOTTOMLEFT", 0, 0);
 	self.yidong:SetWidth(13);
-	if PIG["QuickBut"]["Lock"] then
+	if PIGA["QuickBut"]["Lock"] then
 		self.yidong:Hide()
 	end
 	self.yidong:PIGSetBackdrop()
@@ -177,7 +177,7 @@ function QuickButUI:Open()
 end
 --战场通告
 function QuickButUI:BGbroadcast()
-	if PIG["QuickBut"]["Open"] and PIG["QuickBut"]["BGbroadcast"] then
+	if PIGA["QuickBut"]["Open"] and PIGA["QuickBut"]["BGbroadcast"] then
 		local GnUI = "BGbroadcast_UI"
 		if _G[GnUI] then return end
 		local GnIcon="interface/battlefieldframe/battleground-alliance.blp"
@@ -203,7 +203,7 @@ function QuickButUI:BGbroadcast()
 end
 --炉石专业按钮----
 function QuickButUI:Lushi()
-	if PIG["QuickBut"]["Open"] and PIG["QuickBut"]["Lushi"] then
+	if PIGA["QuickBut"]["Open"] and PIGA["QuickBut"]["Lushi"] then
 		local GnUI = "General_UI"
 		if _G[GnUI] then return end
 		local Icon=134414
@@ -303,7 +303,7 @@ function QuickButUI:Spell()
 	local PigMacroEventCount_QK =0;
 	local PigMacroDeleted_QK = false;
 	local PigMacroCount_QK=0
-	if PIG["QuickBut"]["Open"] and PIG["QuickBut"]["Spell"] then
+	if PIGA["QuickBut"]["Open"] and PIGA["QuickBut"]["Spell"] then
 		local GnUI = "Zhushou_UI"
 		if _G[GnUI] then return end
 		local ActionBarfun=addonTable.ActionBarfun
@@ -340,7 +340,7 @@ function QuickButUI:Spell()
 		Zhushou_List:SetBackdropColor(Create.BackdropColor[1], Create.BackdropColor[2], Create.BackdropColor[3], Create.BackdropColor[4]);
 		Zhushou_List:SetBackdropBorderColor(Create.BackdropBorderColor[1], Create.BackdropBorderColor[2], Create.BackdropBorderColor[3], Create.BackdropBorderColor[4]);
 		Zhushou_List:SetSize((butW+6)*kuanNum+6,(butW+6)*gaoNum+6);
-		Zhushou_List:SetScale(PIG["QuickBut"]["bili"]);
+		Zhushou_List:SetScale(PIGA["QuickBut"]["bili"]);
 		Zhushou_List:Hide();
 		Zhushou_List:SetFrameLevel(33)
 		Zhushou_List:SetScale(0.8)
@@ -468,7 +468,7 @@ function QuickButUI:Spell()
 				GameTooltip:ClearLines();
 				GameTooltip:SetOwner(self, "ANCHOR_NONE");
 				GameTooltip:SetPoint("BOTTOMRIGHT",UIParent,"BOTTOMRIGHT",-100,140);
-				local butInfo = PIG_Per["QuickBut"]["ActionInfo"][self.action]
+				local butInfo = PIG_PerA["QuickBut"]["ActionInfo"][self.action]
 				if butInfo then
 					local Type=self.Type
 					if Type then

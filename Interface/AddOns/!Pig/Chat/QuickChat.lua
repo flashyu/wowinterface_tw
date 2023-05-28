@@ -42,7 +42,7 @@ QuickChatfun.biaoqing = {
 local function TihuanBiaoqing(self,event,arg1,...)
 	for i=1,#QuickChatfun.biaoqing do
 		if arg1:find(QuickChatfun.biaoqing[i][1]) then
-			--arg1 = arg1:gsub(QuickChatfun.biaoqing[i][1], "\124T" .. QuickChatfun.biaoqing[i][2] .. ":" ..(PIG["Chat"]["FontSize_value"]+2) .. "\124t");
+			--arg1 = arg1:gsub(QuickChatfun.biaoqing[i][1], "\124T" .. QuickChatfun.biaoqing[i][2] .. ":" ..(PIGA["Chat"]["FontSize_value"]+2) .. "\124t");
 			arg1 = arg1:gsub(QuickChatfun.biaoqing[i][1], "|T"..QuickChatfun.biaoqing[i][2]..":16|t");
 		end
 	end
@@ -53,9 +53,9 @@ local Width,Height,jiangejuli,hangshu = 25,25,0,10;
 local ChatpindaoMAX = 5
 local function ADD_chatbut(fuF,pdtype,name,chatID,Color)
 	local PIGTemplate
-	if PIG["Chat"]["QuickChat_style"]==1 then
+	if PIGA["Chat"]["QuickChat_style"]==1 then
 		PIGTemplate="TruncatedButtonTemplate"
-	elseif PIG["Chat"]["QuickChat_style"]==2 then
+	elseif PIGA["Chat"]["QuickChat_style"]==2 then
 		PIGTemplate="UIMenuButtonStretchTemplate"
 	end
 	local ziframe = {fuF:GetChildren()}
@@ -208,7 +208,7 @@ function QuickChatfun.Update_ChatBut_icon()
 end
 ---下移输入框=======	
 function QuickChatfun.Update_QuickChatPoint(arg1)
-	local arg1=arg1 or PIG["Chat"]["QuickChat_maodian"]
+	local arg1=arg1 or PIGA["Chat"]["QuickChat_maodian"]
 	if QuickChatFFF_UI then
 		QuickChatFFF_UI:ClearAllPoints();	
 		if arg1==1 then	
@@ -414,7 +414,7 @@ function QuickChatfun.Open()
 		QuickChatfun.QuickBut_Keyword()
 		QuickChatfun.QuickBut_Roll()
 		QuickChatfun.QuickBut_jiuwei()
-		QuickChatfun.Update_QuickChatPoint(PIG["Chat"]["QuickChat_maodian"])
+		QuickChatfun.Update_QuickChatPoint(PIGA["Chat"]["QuickChat_maodian"])
 		C_Timer.After(3,QuickChatfun.Update_ChatBut_icon)
 		C_Timer.After(5,QuickChatfun.Update_ChatBut_icon)
 	end

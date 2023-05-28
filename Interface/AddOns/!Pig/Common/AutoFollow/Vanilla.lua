@@ -6,10 +6,10 @@ local CommonFun=addonTable.CommonFun
 ---主动跟随函数
 function CommonFun.Gensui_Z()
 	if botton=="LeftButton" then
-		if PIG["QuickFollow"]["Name"]~=nil and PIG["QuickFollow"]["Name"]~="" then
-			local isRecognized = IsRecognizedName(PIG["QuickFollow"]["Name"], AUTOCOMPLETE_FLAG_ONLINE, AUTOCOMPLETE_FLAG_NONE)
+		if PIGA["QuickFollow"]["Name"]~=nil and PIGA["QuickFollow"]["Name"]~="" then
+			local isRecognized = IsRecognizedName(PIGA["QuickFollow"]["Name"], AUTOCOMPLETE_FLAG_ONLINE, AUTOCOMPLETE_FLAG_NONE)
 			if isRecognized then
-				FollowUnit(PIG["QuickFollow"]["Name"]);
+				FollowUnit(PIGA["QuickFollow"]["Name"]);
 			end
 		end
 	else
@@ -67,9 +67,9 @@ end
 local function kaishiMsg()
 	if IsInGroup() then
 		if IsInRaid() then
-			SendChatMessage('[!Pig] 已开启被动跟随,收到指令 '..PIG["QuickFollow"]["Kaishi"]..' 跟随；收到 '..PIG["QuickFollow"]["Jieshu"]..' 停止', "RAID", nil);
+			SendChatMessage('[!Pig] 已开启被动跟随,收到指令 '..PIGA["QuickFollow"]["Kaishi"]..' 跟随；收到 '..PIGA["QuickFollow"]["Jieshu"]..' 停止', "RAID", nil);
 		else
-			SendChatMessage('[!Pig] 已开启被动跟随,收到指令 '..PIG["QuickFollow"]["Kaishi"]..' 跟随；收到 '..PIG["QuickFollow"]["Jieshu"]..' 停止', "PARTY", nil);
+			SendChatMessage('[!Pig] 已开启被动跟随,收到指令 '..PIGA["QuickFollow"]["Kaishi"]..' 跟随；收到 '..PIGA["QuickFollow"]["Jieshu"]..' 停止', "PARTY", nil);
 		end
 	end
 end
@@ -96,7 +96,7 @@ local function Gensui_B_Vanilla(Booleans,AutoFollowF)
 		AutoFollowF.gensuiF:RegisterEvent("CHAT_MSG_WHISPER");--当收到其他玩家的耳语时触发
 		gensuiB_UI_tishi:Show()
 		if Gensui_B_CMD_UI then Gensui_B_CMD_UI:Disable() end
-		if PIG["QuickFollow"]["Yijiao"] and IsInGroup() then
+		if PIGA["QuickFollow"]["Yijiao"] and IsInGroup() then
 			SendChatMessage('[!Pig] 已开启自动移交队长,收到密语内容为“队长”将自动移交队长', "PARTY", nil);
 		end
 		kaishiMsg()
@@ -118,11 +118,11 @@ local function Gensui_B_Vanilla(Booleans,AutoFollowF)
 	end
 	AutoFollowF.gensuiF:SetScript("OnEvent",function (self,event,arg1,_,_,_,arg5)
 		if event=="READY_CHECK" then
-			if PIG["QuickFollow"]["Jiuwei"] then
+			if PIGA["QuickFollow"]["Jiuwei"] then
 				ConfirmReadyCheck(true)--自动就位
 			end
 		elseif event=="AUTOFOLLOW_BEGIN" then
-			if PIG["QuickFollow"]["Tishi"] then
+			if PIGA["QuickFollow"]["Tishi"] then
 				if IsInGroup() then
 					if IsInRaid() then
 						SendChatMessage("[!Pig] 开始跟随玩家《"..arg1.."》", "RAID", nil);
@@ -132,7 +132,7 @@ local function Gensui_B_Vanilla(Booleans,AutoFollowF)
 				end
 			end	
 		elseif event=="AUTOFOLLOW_END" then
-			if PIG["QuickFollow"]["Tishi"] then
+			if PIGA["QuickFollow"]["Tishi"] then
 				if IsInGroup() then
 					if IsInRaid() then
 						SendChatMessage("[!Pig] 已停止跟随", "RAID", nil);
@@ -145,7 +145,7 @@ local function Gensui_B_Vanilla(Booleans,AutoFollowF)
 			local feizidonghuifu=arg1:find("[!Pig]", 1)
 			if feizidonghuifu then return end
 			if event=="CHAT_MSG_WHISPER" then
-				if PIG["QuickFollow"]["Yijiao"] then
+				if PIGA["QuickFollow"]["Yijiao"] then
 					if UnitIsGroupLeader("player") then
 						if arg1:match("队长") or arg1:match("团长") then		
 							PromoteToLeader(arg5)--自动交接队长
@@ -154,7 +154,7 @@ local function Gensui_B_Vanilla(Booleans,AutoFollowF)
 				end
 			end
 			--
-			if arg1 ~= PIG["QuickFollow"]["Kaishi"] and arg1 ~= PIG["QuickFollow"]["Jieshu"] then
+			if arg1 ~= PIGA["QuickFollow"]["Kaishi"] and arg1 ~= PIGA["QuickFollow"]["Jieshu"] then
 				return 
 			end
 			if InCombatLockdown() then PIG_print("战斗中无法更新跟随目标") return end
@@ -168,39 +168,39 @@ local function Gensui_B_Vanilla(Booleans,AutoFollowF)
 			end
 			local function zhixinggensuiCMD()
 				if zhixingzBDensui then zhixingzBDensui:Cancel() end
-				if PIG["QuickFollow"]["Qiangli"] then
+				if PIGA["QuickFollow"]["Qiangli"] then
 					zhixingzBDensui=C_Timer.NewTicker(0.5, Classes_Gensui_Z_shuaxin)
 				else
 					FollowUnit(wanjiamingpp);
 				end
-				if PIG["QuickFollow"]["Tishi"] then
+				if PIGA["QuickFollow"]["Tishi"] then
 					if event == "CHAT_MSG_RAID" or event == "CHAT_MSG_RAID_LEADER" then
-						SendChatMessage("[!Pig] 开始跟随《"..wanjiamingpp.."》，发送"..PIG["QuickFollow"]["Jieshu"].."停止跟随!", "RAID", nil);
+						SendChatMessage("[!Pig] 开始跟随《"..wanjiamingpp.."》，发送"..PIGA["QuickFollow"]["Jieshu"].."停止跟随!", "RAID", nil);
 					elseif event == "CHAT_MSG_PARTY" or event == "CHAT_MSG_PARTY_LEADER"then 
-						SendChatMessage("[!Pig] 开始跟随《"..wanjiamingpp.."》，发送"..PIG["QuickFollow"]["Jieshu"].."停止跟随!", "PARTY", nil);
+						SendChatMessage("[!Pig] 开始跟随《"..wanjiamingpp.."》，发送"..PIGA["QuickFollow"]["Jieshu"].."停止跟随!", "PARTY", nil);
 					elseif event == "CHAT_MSG_WHISPER" then
-						SendChatMessage("[!Pig] 我已开始跟随你，发送"..PIG["QuickFollow"]["Jieshu"].."停止跟随！", "WHISPER", nil, wanjiamingpp)
+						SendChatMessage("[!Pig] 我已开始跟随你，发送"..PIGA["QuickFollow"]["Jieshu"].."停止跟随！", "WHISPER", nil, wanjiamingpp)
 					end
 				end
 			end
-			if arg1 == PIG["QuickFollow"]["Kaishi"] then
-				if PIG["QuickFollow"]["Duizhang"] then
+			if arg1 == PIGA["QuickFollow"]["Kaishi"] then
+				if PIGA["QuickFollow"]["Duizhang"] then
 					if UnitIsGroupLeader(wanjiamingpp,"LE_PARTY_CATEGORY_HOME") then
 						zhixinggensuiCMD()
 					end
 				else
 					zhixinggensuiCMD()
 				end
-			elseif arg1 == PIG["QuickFollow"]["Jieshu"] then
+			elseif arg1 == PIGA["QuickFollow"]["Jieshu"] then
 				if zhixingzBDensui then zhixingzBDensui:Cancel() end
 				FollowUnit("player");
-				if PIG["QuickFollow"]["Tishi"] then		
+				if PIGA["QuickFollow"]["Tishi"] then		
 					if event == "CHAT_MSG_RAID" or event == "CHAT_MSG_RAID_LEADER" then
-						SendChatMessage("[!Pig] 停止跟随《"..wanjiamingpp.."》，发送"..PIG["QuickFollow"]["Kaishi"].."再次跟随", "RAID", nil);
+						SendChatMessage("[!Pig] 停止跟随《"..wanjiamingpp.."》，发送"..PIGA["QuickFollow"]["Kaishi"].."再次跟随", "RAID", nil);
 					elseif event == "CHAT_MSG_PARTY" or event == "CHAT_MSG_PARTY_LEADER"then 
-						SendChatMessage("[!Pig] 停止跟随《"..wanjiamingpp.."》，发送"..PIG["QuickFollow"]["Kaishi"].."再次跟随", "PARTY", nil);
+						SendChatMessage("[!Pig] 停止跟随《"..wanjiamingpp.."》，发送"..PIGA["QuickFollow"]["Kaishi"].."再次跟随", "PARTY", nil);
 					elseif event == "CHAT_MSG_WHISPER" then
-						SendChatMessage("[!Pig] 已停止跟随你，发送"..PIG["QuickFollow"]["Kaishi"].."再次跟随！", "WHISPER", nil, wanjiamingpp);
+						SendChatMessage("[!Pig] 已停止跟随你，发送"..PIGA["QuickFollow"]["Kaishi"].."再次跟随！", "WHISPER", nil, wanjiamingpp);
 					end
 				end		
 			end

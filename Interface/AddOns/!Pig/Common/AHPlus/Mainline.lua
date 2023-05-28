@@ -4,9 +4,9 @@ local PIGButton=Create.PIGButton
 local CommonFun=addonTable.CommonFun
 ----------------------------------
 function CommonFun.AHPlus_Mainline()
-	if not PIG["AHPlus"]["Open"] or AuctionHouseFrame.History then return end
+	if not PIGA["AHPlus"]["Open"] or AuctionHouseFrame.History then return end
 	local FWQrealm = GetRealmName()
-	PIG.AHPlus.Data[FWQrealm]=PIG.AHPlus.Data[FWQrealm] or {}
+	PIGA["AHPlus"]["Data"][FWQrealm]=PIGA["AHPlus"]["Data"][FWQrealm] or {}
 	---缓存
 	AuctionHouseFrame.History = PIGButton(AuctionHouseFrame,{"TOPRIGHT",AuctionHouseFrame,"TOPRIGHT",-100,-3},{120,17},"缓存价格");
 	AuctionHouseFrame.History:SetFrameLevel(510)
@@ -51,7 +51,7 @@ function CommonFun.AHPlus_Mainline()
 
 	local AHlinshiInfoList = {}
 	local function Save_Data()
-		local shujuyuan = PIG.AHPlus.Data[FWQrealm]
+		local shujuyuan = PIGA["AHPlus"]["Data"][FWQrealm]
 		for _,v in pairs(shujuyuan) do
 			v[2]=false
 		end
@@ -59,16 +59,16 @@ function CommonFun.AHPlus_Mainline()
 			--print(AHlinshiInfoList[i][1])
 			local nameID=AHlinshiInfoList[i][17]
 			local xianzaidanjia = AHlinshiInfoList[i][10]/AHlinshiInfoList[i][3]
-	   		if PIG.AHPlus.Data[FWQrealm][nameID] then
-	   			if PIG.AHPlus.Data[FWQrealm][nameID][2] then
-	   				if xianzaidanjia>0 and xianzaidanjia<PIG.AHPlus.Data[FWQrealm][nameID][1] then
-	   					PIG.AHPlus.Data[FWQrealm][nameID][1]=xianzaidanjia
+	   		if PIGA["AHPlus"]["Data"][FWQrealm][nameID] then
+	   			if PIGA["AHPlus"]["Data"][FWQrealm][nameID][2] then
+	   				if xianzaidanjia>0 and xianzaidanjia<PIGA["AHPlus"]["Data"][FWQrealm][nameID][1] then
+	   					PIGA["AHPlus"]["Data"][FWQrealm][nameID][1]=xianzaidanjia
 	   				end
 	   			else
-	   				PIG.AHPlus.Data[FWQrealm][nameID]={xianzaidanjia,true,GetServerTime()}
+	   				PIGA["AHPlus"]["Data"][FWQrealm][nameID]={xianzaidanjia,true,GetServerTime()}
 	   			end
 	   		else
-	   			PIG.AHPlus.Data[FWQrealm][nameID]={xianzaidanjia,true,GetServerTime()}
+	   			PIGA["AHPlus"]["Data"][FWQrealm][nameID]={xianzaidanjia,true,GetServerTime()}
 	   		end
 		end
 		--
@@ -126,7 +126,7 @@ function CommonFun.AHPlus_Mainline()
 		end
 	end)
 	AuctionHouseFrame.History:HookScript("OnUpdate", function(self)
-		local daojishitt = 900-(GetServerTime()-PIG["AHPlus"]["DaojiTime"])
+		local daojishitt = 900-(GetServerTime()-PIGA["AHPlus"]["DaojiTime"])
 		if daojishitt<0 then
 			self:Enable()
 			self:SetText("缓存价格");
@@ -142,7 +142,7 @@ function CommonFun.AHPlus_Mainline()
 		HCUI.jindu.edg.t:SetText("正在扫描数据...");
 		HCUI.jindu.tex:SetWidth(0)
 		C_AuctionHouse.ReplicateItems()
-		PIG["AHPlus"]["DaojiTime"]=GetServerTime()
+		PIGA["AHPlus"]["DaojiTime"]=GetServerTime()
 		huancunjiaqian:Show()
 		huancunjiaqian.SMend=false
 	end)
@@ -161,7 +161,7 @@ function CommonFun.AHPlus_Mainline()
 		huizhangG:SetJustifyH("LEFT");
 	end
 	local function Update_huizhangG()
-		local lishihuizhangG = PIG["AHPlus"]["Tokens"]
+		local lishihuizhangG = PIGA["AHPlus"]["Tokens"]
 		local SHUJUNUM = #lishihuizhangG
 		local shujukaishiid = 0
 		if SHUJUNUM>33 then
@@ -189,7 +189,7 @@ function CommonFun.AHPlus_Mainline()
 	end)
 	---
 	TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(tooltip, data)
-		if PIG["AHPlus"]["Open"] and PIG["AHPlus"]["AHtooltip"] then
+		if PIGA["AHPlus"]["Open"] and PIGA["AHPlus"]["AHtooltip"] then
 			if tooltip == GameTooltip then	
 				local ItemID = data["id"]
 				if ItemID then
@@ -197,10 +197,10 @@ function CommonFun.AHPlus_Mainline()
 					--print(bubangding)
 					if bubangding~=1 and bubangding~=4 then
 						local FWQrealm = GetRealmName()
-						if PIG.AHPlus.Data[FWQrealm] and PIG.AHPlus.Data[FWQrealm][ItemID] then
-							local jiluTime = PIG.AHPlus.Data[FWQrealm][ItemID][3] or 1660000000
+						if PIGA["AHPlus"]["Data"][FWQrealm] and PIGA["AHPlus"]["Data"][FWQrealm][ItemID] then
+							local jiluTime = PIGA["AHPlus"]["Data"][FWQrealm][ItemID][3] or 1660000000
 							local jiluTime = date("%m-%d %H:%M",jiluTime)
-							tooltip:AddDoubleLine("拍卖单价("..jiluTime.."):",GetMoneyString(PIG.AHPlus.Data[FWQrealm][ItemID][1]))
+							tooltip:AddDoubleLine("拍卖单价("..jiluTime.."):",GetMoneyString(PIGA["AHPlus"]["Data"][FWQrealm][ItemID][1]))
 						else
 							tooltip:AddDoubleLine("拍卖单价(尚未缓存):","--")
 						end

@@ -5,7 +5,7 @@ local PIGFontString=Create.PIGFontString
 -- ---------------------------------
 local UnitFramefun=addonTable.UnitFramefun
 function UnitFramefun.Mubiao()
-	if PIG["UnitFrame"]["TargetFrame"]["Plus"] and not UFP_Targetzhiyetubiao then
+	if PIGA["UnitFrame"]["TargetFrame"]["Plus"] and not UFP_Targetzhiyetubiao then
 		if tocversion<20000 then
 			--目标血量
 			hooksecurefunc("TargetFrame_CheckClassification",function(self,lock)--银鹰标志
@@ -246,7 +246,7 @@ function UnitFramefun.Mubiao()
 		end)
 	 end
 	-----目标的目标的目标
-	if PIG["UnitFrame"]["TargetFrame"]["ToToToT"] and not TargetFrameToT_ToT then	
+	if PIGA["UnitFrame"]["TargetFrame"]["ToToToT"] and not TargetFrameToT_ToT then	
 		SetCVar("showTargetOfTarget","1")
 		local unitMubiao = "targettargettarget"
 		local fuF=TargetFrameToT
@@ -396,7 +396,7 @@ function UnitFramefun.Mubiao()
 		end
 	end
 	--
-	if PIG["UnitFrame"]["TargetFrame"]["Yisu"] and not TargetFrame.yisuF then
+	if PIGA["UnitFrame"]["TargetFrame"]["Yisu"] and not TargetFrame.yisuF then
 		TargetFrame.yisuF=CreateFrame("Frame",nil,TargetFrame);
 		TargetFrame.yisuF:SetSize(49,18);
 		if tocversion>90000 then

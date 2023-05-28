@@ -27,10 +27,10 @@ local RurutiafunF=fuFrame.F
 RurutiafunF.FastFocus = PIGCheckbutton_R(RurutiafunF,{"快速设置焦点","按后方设置的快捷键后点击头像快速设置焦点"})
 RurutiafunF.FastFocus:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Rurutia"]["FastFocus"]=true;
+		PIGA["Rurutia"]["FastFocus"]=true;
 		Rurutiafun.FastFocus_Open()
 	else
-		PIG["Rurutia"]["FastFocus"]=false;
+		PIGA["Rurutia"]["FastFocus"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
@@ -41,24 +41,24 @@ function RurutiafunF.FastFocus.xiala:PIGDownMenu_Update_But(self)
 	local SetKeyList = Rurutiafun.SetKeyList
 	for i=1,#SetKeyList,1 do
 	    info.text, info.arg1, info.arg2 = SetKeyList[i][1], SetKeyList[i][2]
-	    info.checked = SetKeyList[i][2]==PIG["Rurutia"]["FastFocusKEY"]
+	    info.checked = SetKeyList[i][2]==PIGA["Rurutia"]["FastFocusKEY"]
 		RurutiafunF.FastFocus.xiala:PIGDownMenu_AddButton(info)
 	end 
 end
 function RurutiafunF.FastFocus.xiala:PIGDownMenu_SetValue(value,arg1)
 	if InCombatLockdown() then PIG_print("战斗中无法更改按键") return end
 	RurutiafunF.FastFocus.xiala:PIGDownMenu_SetText(value)
-	PIG["Rurutia"]["FastFocusKEY"]=arg1
+	PIGA["Rurutia"]["FastFocusKEY"]=arg1
 	Rurutiafun.FastFocus_Open()
 	PIGCloseDropDownMenus()
 end
 RurutiafunF.FastClearFocus =PIGCheckbutton_R(RurutiafunF,{"快速清除焦点","在焦点头像点击已设置焦点快捷键可快速清除焦点"})
 RurutiafunF.FastClearFocus:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Rurutia"]["FastClearFocus"]=true;
+		PIGA["Rurutia"]["FastClearFocus"]=true;
 		Rurutiafun.FastClearFocus_Open()
 	else
-		PIG["Rurutia"]["FastClearFocus"]=false;
+		PIGA["Rurutia"]["FastClearFocus"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
@@ -67,9 +67,9 @@ end);
 RurutiafunF.QuestsEnd =PIGCheckbutton_R(RurutiafunF,{"任务完成提示音","任务完成提示音"})
 RurutiafunF.QuestsEnd:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Rurutia"]["QuestsEnd"]=true;	
+		PIGA["Rurutia"]["QuestsEnd"]=true;	
 	else
-		PIG["Rurutia"]["QuestsEnd"]=false;
+		PIGA["Rurutia"]["QuestsEnd"]=false;
 	end
 	Rurutiafun.QuestsEnd_Open("Check")
 end);
@@ -79,13 +79,13 @@ function RurutiafunF.QuestsEnd.xiala:PIGDownMenu_Update_But(self)
 	info.func = self.PIGDownMenu_SetValue
 	for i=1,#Rurutiafun.AudioList,1 do
 	    info.text, info.arg1 = Rurutiafun.AudioList[i][1], i
-	    info.checked = i==PIG["Rurutia"]["QuestsEndAudio"]
+	    info.checked = i==PIGA["Rurutia"]["QuestsEndAudio"]
 		RurutiafunF.QuestsEnd.xiala:PIGDownMenu_AddButton(info)
 	end 
 end
 function RurutiafunF.QuestsEnd.xiala:PIGDownMenu_SetValue(value,arg1)
 	RurutiafunF.QuestsEnd.xiala:PIGDownMenu_SetText(value)
-	PIG["Rurutia"]["QuestsEndAudio"]=arg1
+	PIGA["Rurutia"]["QuestsEndAudio"]=arg1
 	PIGCloseDropDownMenus()
 end
 
@@ -97,16 +97,16 @@ RurutiafunF.QuestsEnd.PlayBut:SetHighlightTexture("interface/buttons/ui-common-m
 RurutiafunF.QuestsEnd.PlayBut:SetSize(28,28);
 RurutiafunF.QuestsEnd.PlayBut:SetPoint("LEFT",RurutiafunF.QuestsEnd.xiala,"RIGHT",8,0);
 RurutiafunF.QuestsEnd.PlayBut:SetScript("OnClick", function()
-	PlaySoundFile(Rurutiafun.AudioList[PIG["Rurutia"]["QuestsEndAudio"]][2], "Master")
+	PlaySoundFile(Rurutiafun.AudioList[PIGA["Rurutia"]["QuestsEndAudio"]][2], "Master")
 end)
 RurutiafunF.weijiancedao=PIGFontString(RurutiafunF,{"LEFT", RurutiafunF.QuestsEnd.PlayBut, "RIGHT", 6, 0},"没有检测到露露扩展包")
 RurutiafunF.weijiancedao:SetTextColor(1, 1, 0, 1);
 
 --打开选项页面时========
 RurutiafunF:HookScript("OnShow", function (self)
-	RurutiafunF.FastFocus.xiala:PIGDownMenu_SetText(Rurutiafun.SetKeyListName[PIG["Rurutia"]["FastFocusKEY"]])
-	RurutiafunF.FastFocus:SetChecked(PIG["Rurutia"]["FastFocus"]);
-	RurutiafunF.FastClearFocus:SetChecked(PIG["Rurutia"]["FastClearFocus"]);
+	RurutiafunF.FastFocus.xiala:PIGDownMenu_SetText(Rurutiafun.SetKeyListName[PIGA["Rurutia"]["FastFocusKEY"]])
+	RurutiafunF.FastFocus:SetChecked(PIGA["Rurutia"]["FastFocus"]);
+	RurutiafunF.FastClearFocus:SetChecked(PIGA["Rurutia"]["FastClearFocus"]);
 	local rrName = addonName.."_Rurutia"
 	if IsAddOnLoaded(rrName) then
 		local name, title, notes, loadable = GetAddOnInfo(rrName)
@@ -119,21 +119,21 @@ RurutiafunF:HookScript("OnShow", function (self)
 	   		fuji.LuluVer = PIGFontString(fuji,{"LEFT", ziframe[#ziframe], "RIGHT", 0, 0},VerTXT)
 		end
     end
-	if PIG["Rurutia"]["QuestsEnd"] then
+	if PIGA["Rurutia"]["QuestsEnd"] then
 		RurutiafunF.QuestsEnd :SetChecked(true);
 	end
-	RurutiafunF.QuestsEnd.xiala:PIGDownMenu_SetText(Rurutiafun.AudioList[PIG["Rurutia"]["QuestsEndAudio"]][1])
+	RurutiafunF.QuestsEnd.xiala:PIGDownMenu_SetText(Rurutiafun.AudioList[PIGA["Rurutia"]["QuestsEndAudio"]][1])
 end);
 
 --进入游戏时加载
 addonTable.Rurutia = function()
-	if PIG["Rurutia"]["FastFocus"] then
+	if PIGA["Rurutia"]["FastFocus"] then
 		Rurutiafun.FastFocus_Open()
 	end
-	if PIG["Rurutia"]["FastClearFocus"] then
+	if PIGA["Rurutia"]["FastClearFocus"] then
 		Rurutiafun.FastClearFocus_Open()
 	end
-	if PIG["Rurutia"]["QuestsEnd"] then
+	if PIGA["Rurutia"]["QuestsEnd"] then
 		Rurutiafun.QuestsEnd_Open()
 	end
 end

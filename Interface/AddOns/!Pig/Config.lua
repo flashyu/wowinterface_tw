@@ -10,42 +10,42 @@ local PIGFontString=Create.PIGFontString
 --载入默认配置-------
 local function Config_Default()
 	local moren=addonTable.Default;
-	PIG = PIG or moren;
+	PIGA = PIGA or moren;
 	for k,v in pairs(moren) do
-		if PIG[k]==nil then
-			PIG[k] = moren[k]
+		if PIGA[k]==nil then
+			PIGA[k] = moren[k]
 		end
-		if PIG[k]=="OFF" then 
-			PIG[k]=false
-		elseif PIG[k]=="ON" then 
-			PIG[k]=true
+		if PIGA[k]=="OFF" then 
+			PIGA[k]=false
+		elseif PIGA[k]=="ON" then 
+			PIGA[k]=true
 		elseif type(v)=="table" then
-			if type(PIG[k])~="table" then
-				PIG[k] = moren[k]
+			if type(PIGA[k])~="table" then
+				PIGA[k] = moren[k]
 			end
 			for kk,vv in pairs(v) do
-				if PIG[k][kk]==nil then
-					PIG[k][kk] = moren[k][kk]
+				if PIGA[k][kk]==nil then
+					PIGA[k][kk] = moren[k][kk]
 				end
-				if PIG[k][kk]=="OFF" then 
-					PIG[k][kk]=false
-				elseif PIG[k][kk]=="ON" then 
-					PIG[k][kk]=true
+				if PIGA[k][kk]=="OFF" then 
+					PIGA[k][kk]=false
+				elseif PIGA[k][kk]=="ON" then 
+					PIGA[k][kk]=true
 				elseif type(vv)=="table" then
-					if type(PIG[k][kk])~="table" then
-						PIG[k][kk] = moren[k][kk]
+					if type(PIGA[k][kk])~="table" then
+						PIGA[k][kk] = moren[k][kk]
 					end
 					for kkk,vvv in pairs(vv) do
-						if PIG[k][kk][kkk]==nil then
-							PIG[k][kk][kkk] = moren[k][kk][kkk]
+						if PIGA[k][kk][kkk]==nil then
+							PIGA[k][kk][kkk] = moren[k][kk][kkk]
 						end
-						if PIG[k][kk][kkk]=="OFF" then 
-							PIG[k][kk][kkk]=false
-						elseif PIG[k][kk][kkk]=="ON" then 
-							PIG[k][kk][kkk]=true
+						if PIGA[k][kk][kkk]=="OFF" then 
+							PIGA[k][kk][kkk]=false
+						elseif PIGA[k][kk][kkk]=="ON" then 
+							PIGA[k][kk][kkk]=true
 						elseif type(vvv)=="table" then
-							if type(PIG[k][kk][kkk])~="table" then
-								PIG[k][kk][kkk] = moren[k][kk][kkk]
+							if type(PIGA[k][kk][kkk])~="table" then
+								PIGA[k][kk][kkk] = moren[k][kk][kkk]
 							end
 						end
 					end
@@ -54,42 +54,42 @@ local function Config_Default()
 		end
 	end
 	local moren_Per=addonTable.Default_Per;
-	PIG_Per = PIG_Per or moren_Per;
+	PIG_PerA = PIG_PerA or moren_Per;
 	for k,v in pairs(moren_Per) do
-		if PIG_Per[k]==nil then
-			PIG_Per[k] = moren_Per[k]
+		if PIG_PerA[k]==nil then
+			PIG_PerA[k] = moren_Per[k]
 		end
-		if PIG_Per[k]=="OFF" then 
-			PIG_Per[k]=false
-		elseif PIG_Per[k]=="ON" then 
-			PIG_Per[k]=true
+		if PIG_PerA[k]=="OFF" then 
+			PIG_PerA[k]=false
+		elseif PIG_PerA[k]=="ON" then 
+			PIG_PerA[k]=true
 		elseif type(v)=="table" then
-			if type(PIG_Per[k])~="table" then
-				PIG_Per[k] = moren_Per[k]
+			if type(PIG_PerA[k])~="table" then
+				PIG_PerA[k] = moren_Per[k]
 			end
 			for kk,vv in pairs(v) do
-				if PIG_Per[k][kk]==nil then
-					PIG_Per[k][kk] = moren_Per[k][kk]
+				if PIG_PerA[k][kk]==nil then
+					PIG_PerA[k][kk] = moren_Per[k][kk]
 				end
-				if PIG_Per[k][kk]=="OFF" then 
-					PIG_Per[k][kk]=false
-				elseif PIG_Per[k][kk]=="ON" then 
-					PIG_Per[k][kk]=true
+				if PIG_PerA[k][kk]=="OFF" then 
+					PIG_PerA[k][kk]=false
+				elseif PIG_PerA[k][kk]=="ON" then 
+					PIG_PerA[k][kk]=true
 				elseif type(vv)=="table" then
-					if type(PIG_Per[k][kk])~="table" then
-						PIG_Per[k][kk] = moren_Per[k][kk]
+					if type(PIG_PerA[k][kk])~="table" then
+						PIG_PerA[k][kk] = moren_Per[k][kk]
 					end
 					for kkk,vvv in pairs(vv) do
-						if PIG_Per[k][kk][kkk]==nil then
-							PIG_Per[k][kk][kkk] = moren_Per[k][kk][kkk]
+						if PIG_PerA[k][kk][kkk]==nil then
+							PIG_PerA[k][kk][kkk] = moren_Per[k][kk][kkk]
 						end
-						if PIG_Per[k][kk][kkk]=="OFF" then 
-							PIG_Per[k][kk][kkk]=false
-						elseif PIG_Per[k][kk][kkk]=="ON" then 
-							PIG_Per[k][kk][kkk]=true
+						if PIG_PerA[k][kk][kkk]=="OFF" then 
+							PIG_PerA[k][kk][kkk]=false
+						elseif PIG_PerA[k][kk][kkk]=="ON" then 
+							PIG_PerA[k][kk][kkk]=true
 						elseif type(vvv)=="table" then
-							if type(PIG_Per[k][kk][kkk])~="table" then
-								PIG_Per[k][kk][kkk] = moren_Per[k][kk][kkk]
+							if type(PIG_PerA[k][kk][kkk])~="table" then
+								PIG_PerA[k][kk][kkk] = moren_Per[k][kk][kkk]
 							end
 						end
 					end
@@ -132,8 +132,8 @@ for id=1,#Config_ID do
 		button1 = L["LIB_YES"],
 		button2 = L["LIB_NO"],
 		OnAccept = function()
-			PIG = addonTable[Config_ID[id]];
-			PIG_Per = addonTable[Config_ID[id].."_Per"];
+			PIGA = addonTable[Config_ID[id]];
+			PIG_PerA = addonTable[Config_ID[id].."_Per"];
 			Pig_Options_RLtishi_UI:Show()
 		end,
 		timeout = 0,
@@ -405,23 +405,23 @@ Config_Transfer.daoruBut:SetScript("OnClick", function(self, button)
 		local jueseYN, xininfo1, xininfo2, xininfo3, xininfo4 = peizhiInfo[1],peizhiInfo[2],peizhiInfo[3],peizhiInfo[4],peizhiInfo[5];
 		if jueseYN then
 			if xininfo4 then
-				PIG_Per[xininfo1][xininfo2][xininfo3][xininfo4]=dataff
+				PIG_PerA[xininfo1][xininfo2][xininfo3][xininfo4]=dataff
 			elseif xininfo3 then
-				PIG_Per[xininfo1][xininfo2][xininfo3]=dataff
+				PIG_PerA[xininfo1][xininfo2][xininfo3]=dataff
 			elseif xininfo2 then
-				PIG_Per[xininfo1][xininfo2]=dataff
+				PIG_PerA[xininfo1][xininfo2]=dataff
 			elseif xininfo1 then
-				PIG_Per[xininfo1]=dataff
+				PIG_PerA[xininfo1]=dataff
 			end
 		else
 			if xininfo4 then
-				PIG[xininfo1][xininfo2][xininfo3][xininfo4]=dataff
+				PIGA[xininfo1][xininfo2][xininfo3][xininfo4]=dataff
 			elseif xininfo3 then
-				PIG[xininfo1][xininfo2][xininfo3]=dataff
+				PIGA[xininfo1][xininfo2][xininfo3]=dataff
 			elseif xininfo2 then
-				PIG[xininfo1][xininfo2]=dataff
+				PIGA[xininfo1][xininfo2]=dataff
 			elseif xininfo1 then
-				PIG[xininfo1]=dataff
+				PIGA[xininfo1]=dataff
 			end
 		end
 		ReloadUI()

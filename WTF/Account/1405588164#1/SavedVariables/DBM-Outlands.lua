@@ -1,6 +1,12 @@
 
 DBMOutlands_AllSavedVars = {
 	["狂暴專家-伊弗斯"] = {
+		["Quest"] = {
+			[2] = {
+				["Enabled"] = true,
+				["Timers"] = true,
+			},
+		},
 		["talent2"] = "WARRIOR2",
 		["Kazzak"] = {
 			[2] = {
@@ -14,16 +20,16 @@ DBMOutlands_AllSavedVars = {
 				["Timer32964activeCVoice"] = 0,
 				["Timer32964cdTColor"] = 3,
 				["Timer32960targetCVoice"] = 0,
-				["Timer32964activeTColor"] = 0,
+				["Timer32960targetTColor"] = 3,
 				["Timer32964active"] = true,
 				["announce32964spell"] = true,
 				["Enabled"] = true,
 				["Timer32960target"] = true,
 				["SpecWarn21063dispel2SWSound"] = 1,
-				["announceother21063target"] = true,
 				["Timer32964cdCVoice"] = 0,
+				["announceother21063target"] = true,
 				["SpecWarn32960you"] = true,
-				["Timer32960targetTColor"] = 3,
+				["Timer32964activeTColor"] = 0,
 			},
 		},
 		["Doomwalker"] = {
@@ -33,20 +39,14 @@ DBMOutlands_AllSavedVars = {
 				["Timer32686cdCVoice"] = 0,
 				["Timer32637cdCVoice"] = 0,
 				["Timer32686cdTColor"] = 2,
-				["Timer32637cdTColor"] = 3,
-				["announce32637spell"] = true,
-				["Timer32637cd"] = true,
-				["RangeFrame"] = true,
-				["Timer32686active"] = true,
-				["Timer32686activeTColor"] = 2,
-				["Timer32686cd"] = true,
 				["Timer32686activeCVoice"] = 0,
-			},
-		},
-		["Quest"] = {
-			[2] = {
-				["Enabled"] = true,
-				["Timers"] = true,
+				["announce32637spell"] = true,
+				["Timer32686cd"] = true,
+				["RangeFrame"] = true,
+				["Timer32686activeTColor"] = 2,
+				["Timer32686active"] = true,
+				["Timer32637cd"] = true,
+				["Timer32637cdTColor"] = 3,
 			},
 		},
 	},

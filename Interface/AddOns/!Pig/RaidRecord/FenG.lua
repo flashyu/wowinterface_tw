@@ -40,53 +40,53 @@ local function ADD_fenG()
 		local zongrenshu,shuangbeirenshu,banrenshu,bufenrenshu=0,0,0,0;
 		local buzhurenshu_T,buzhurenshu_N,buzhurenshu_LR=0,0,0;
 		for x=1,8 do
-			for xx=1,#PIG["RaidRecord"]["Raidinfo"][x] do
-				if #PIG["RaidRecord"]["Raidinfo"][x][xx]>0 then
+			for xx=1,#PIGA["RaidRecord"]["Raidinfo"][x] do
+				if #PIGA["RaidRecord"]["Raidinfo"][x][xx]>0 then
 					zongrenshu=zongrenshu+1;
 					_G["duiwuF_UI_"..x].tongzhi:Show();
 					_G["duiwu_"..x.."_"..xx]:Show();
-					local _, _, _, wanjiaName = PIG["RaidRecord"]["Raidinfo"][x][xx][4]:find("((.+)-)");
+					local _, _, _, wanjiaName = PIGA["RaidRecord"]["Raidinfo"][x][xx][4]:find("((.+)-)");
 					if wanjiaName then
 						_G["duiwu_"..x.."_"..xx].Players.name:SetText(wanjiaName);
 					else
-						_G["duiwu_"..x.."_"..xx].Players.name:SetText(PIG["RaidRecord"]["Raidinfo"][x][xx][4]);
+						_G["duiwu_"..x.."_"..xx].Players.name:SetText(PIGA["RaidRecord"]["Raidinfo"][x][xx][4]);
 					end
 					_G["duiwu_"..x.."_"..xx].Players:SetWidth(_G["duiwu_"..x.."_"..xx].Players.name:GetWidth())
-					_G["duiwu_"..x.."_"..xx].Players.name:SetTextColor(PIG["RaidRecord"]["Raidinfo"][x][xx][2][1],PIG["RaidRecord"]["Raidinfo"][x][xx][2][2],PIG["RaidRecord"]["Raidinfo"][x][xx][2][3], 1);
-					if PIG["RaidRecord"]["Raidinfo"][x][xx][5]=="坦克补助" then
+					_G["duiwu_"..x.."_"..xx].Players.name:SetTextColor(PIGA["RaidRecord"]["Raidinfo"][x][xx][2][1],PIGA["RaidRecord"]["Raidinfo"][x][xx][2][2],PIGA["RaidRecord"]["Raidinfo"][x][xx][2][3], 1);
+					if PIGA["RaidRecord"]["Raidinfo"][x][xx][5]=="坦克补助" then
 						buzhurenshu_T=buzhurenshu_T+1;
 						_G["duiwu_"..x.."_"..xx].buzhu:SetTexCoord(zhizeIcon[1][1],zhizeIcon[1][2],zhizeIcon[1][3],zhizeIcon[1][4]);
 						_G["duiwu_"..x.."_"..xx].buzhu:SetWidth(duiwu_Height-8);
-					elseif PIG["RaidRecord"]["Raidinfo"][x][xx][5]=="治疗补助" then
+					elseif PIGA["RaidRecord"]["Raidinfo"][x][xx][5]=="治疗补助" then
 						buzhurenshu_N=buzhurenshu_N+1;
 						_G["duiwu_"..x.."_"..xx].buzhu:SetTexCoord(zhizeIcon[2][1],zhizeIcon[2][2],zhizeIcon[2][3],zhizeIcon[2][4]);
 						_G["duiwu_"..x.."_"..xx].buzhu:SetWidth(duiwu_Height-8);
-					elseif PIG["RaidRecord"]["Raidinfo"][x][xx][5]=="其他补助" then
+					elseif PIGA["RaidRecord"]["Raidinfo"][x][xx][5]=="其他补助" then
 						buzhurenshu_LR=buzhurenshu_LR+1;
 						_G["duiwu_"..x.."_"..xx].buzhu:SetTexCoord(zhizeIcon[3][1],zhizeIcon[3][2],zhizeIcon[3][3],zhizeIcon[3][4]);
 						_G["duiwu_"..x.."_"..xx].buzhu:SetWidth(duiwu_Height-8);
 					end
-					if PIG["RaidRecord"]["Raidinfo"][x][xx][7]==2 then
+					if PIGA["RaidRecord"]["Raidinfo"][x][xx][7]==2 then
 						shuangbeirenshu=shuangbeirenshu+1;
 						_G["duiwu_"..x.."_"..xx].fenGbili:SetTexCoord(0,1,0,1);
 						_G["duiwu_"..x.."_"..xx].fenGbili:SetTexture(fenGbiliIcon[1]);
 						_G["duiwu_"..x.."_"..xx].fenGbili:SetWidth(duiwu_Height-8);
-					elseif PIG["RaidRecord"]["Raidinfo"][x][xx][7]==0.5 then
+					elseif PIGA["RaidRecord"]["Raidinfo"][x][xx][7]==0.5 then
 						banrenshu=banrenshu+1;
 						_G["duiwu_"..x.."_"..xx].fenGbili:SetTexture(fenGbiliIcon[2]);
 						_G["duiwu_"..x.."_"..xx].fenGbili:SetTexCoord(fenGbiliIconCaiqie[2][1],fenGbiliIconCaiqie[2][2],fenGbiliIconCaiqie[2][3],fenGbiliIconCaiqie[2][4]);
 						_G["duiwu_"..x.."_"..xx].fenGbili:SetWidth(duiwu_Height-8);
-					elseif PIG["RaidRecord"]["Raidinfo"][x][xx][7]==0 then
+					elseif PIGA["RaidRecord"]["Raidinfo"][x][xx][7]==0 then
 						bufenrenshu=bufenrenshu+1;
 						_G["duiwu_"..x.."_"..xx].fenGbili:SetTexture(fenGbiliIcon[3]);
 						_G["duiwu_"..x.."_"..xx].fenGbili:SetTexCoord(fenGbiliIconCaiqie[3][1],fenGbiliIconCaiqie[3][2],fenGbiliIconCaiqie[3][3],fenGbiliIconCaiqie[3][4]);
 						_G["duiwu_"..x.."_"..xx].fenGbili:SetWidth(duiwu_Height-10);
 					end
 					--邮寄图标
-					if PIG["RaidRecord"]["Raidinfo"][x][xx][9]==1 then--需邮寄
-						if PIG["RaidRecord"]["Raidinfo"][x][xx][10]==0 then
+					if PIGA["RaidRecord"]["Raidinfo"][x][xx][9]==1 then--需邮寄
+						if PIGA["RaidRecord"]["Raidinfo"][x][xx][10]==0 then
 							_G["duiwu_"..x.."_"..xx].mail.Tex:SetTexture("interface/cursor/mail.blp");
-						elseif PIG["RaidRecord"]["Raidinfo"][x][xx][10]==1 then
+						elseif PIGA["RaidRecord"]["Raidinfo"][x][xx][10]==1 then
 							_G["duiwu_"..x.."_"..xx].mail.Tex:SetTexture("interface/cursor/unablemail.blp");
 						end
 						_G["duiwu_"..x.."_"..xx].mail:SetWidth(duiwu_Height-8);
@@ -135,61 +135,61 @@ local function ADD_fenG()
 		--个人分G数和队伍需交易数
 		for x=1,8 do
 			local duiwufenGshu=0;
-			for xx=1,#PIG["RaidRecord"]["Raidinfo"][x] do
+			for xx=1,#PIGA["RaidRecord"]["Raidinfo"][x] do
 				local gerenfenGshu=0;
-				if #PIG["RaidRecord"]["Raidinfo"][x][xx]>0 then	
-					if PIG["RaidRecord"]["Raidinfo"][x][xx][5]=="坦克补助" or PIG["RaidRecord"]["Raidinfo"][x][xx][5]=="治疗补助" or PIG["RaidRecord"]["Raidinfo"][x][xx][5]=="其他补助" then
-						gerenfenGshu=gerenfenGshu+PIG["RaidRecord"]["Raidinfo"][x][xx][6];
-						if PIG["RaidRecord"]["Raidinfo"][x][xx][9]==0 then--不需邮寄
-							duiwufenGshu=duiwufenGshu+PIG["RaidRecord"]["Raidinfo"][x][xx][6];
+				if #PIGA["RaidRecord"]["Raidinfo"][x][xx]>0 then	
+					if PIGA["RaidRecord"]["Raidinfo"][x][xx][5]=="坦克补助" or PIGA["RaidRecord"]["Raidinfo"][x][xx][5]=="治疗补助" or PIGA["RaidRecord"]["Raidinfo"][x][xx][5]=="其他补助" then
+						gerenfenGshu=gerenfenGshu+PIGA["RaidRecord"]["Raidinfo"][x][xx][6];
+						if PIGA["RaidRecord"]["Raidinfo"][x][xx][9]==0 then--不需邮寄
+							duiwufenGshu=duiwufenGshu+PIGA["RaidRecord"]["Raidinfo"][x][xx][6];
 						end
 					end
-					for q=1,#PIG["RaidRecord"]["jiangli"] do
-						if PIG["RaidRecord"]["jiangli"][q][3]~="无" then
-							if PIG["RaidRecord"]["jiangli"][q][3]==PIG["RaidRecord"]["Raidinfo"][x][xx][4] then
-								gerenfenGshu=gerenfenGshu+PIG["RaidRecord"]["jiangli"][q][2];
-								if PIG["RaidRecord"]["Raidinfo"][x][xx][9]==0 then--不需邮寄
-									duiwufenGshu=duiwufenGshu+PIG["RaidRecord"]["jiangli"][q][2];
+					for q=1,#PIGA["RaidRecord"]["jiangli"] do
+						if PIGA["RaidRecord"]["jiangli"][q][3]~="无" then
+							if PIGA["RaidRecord"]["jiangli"][q][3]==PIGA["RaidRecord"]["Raidinfo"][x][xx][4] then
+								gerenfenGshu=gerenfenGshu+PIGA["RaidRecord"]["jiangli"][q][2];
+								if PIGA["RaidRecord"]["Raidinfo"][x][xx][9]==0 then--不需邮寄
+									duiwufenGshu=duiwufenGshu+PIGA["RaidRecord"]["jiangli"][q][2];
 								end
 							end
 						end
 					end
-					for q=1,#PIG["RaidRecord"]["fakuan"] do
-						if PIG["RaidRecord"]["fakuan"][q][4]~="无" then
-							if PIG["RaidRecord"]["fakuan"][q][4]==PIG["RaidRecord"]["Raidinfo"][x][xx][4] then
-								gerenfenGshu=gerenfenGshu-PIG["RaidRecord"]["fakuan"][q][3];
-								if PIG["RaidRecord"]["Raidinfo"][x][xx][9]==0 then--不需邮寄
-									duiwufenGshu=duiwufenGshu-PIG["RaidRecord"]["fakuan"][q][3];
+					for q=1,#PIGA["RaidRecord"]["fakuan"] do
+						if PIGA["RaidRecord"]["fakuan"][q][4]~="无" then
+							if PIGA["RaidRecord"]["fakuan"][q][4]==PIGA["RaidRecord"]["Raidinfo"][x][xx][4] then
+								gerenfenGshu=gerenfenGshu-PIGA["RaidRecord"]["fakuan"][q][3];
+								if PIGA["RaidRecord"]["Raidinfo"][x][xx][9]==0 then--不需邮寄
+									duiwufenGshu=duiwufenGshu-PIGA["RaidRecord"]["fakuan"][q][3];
 								end
 							end
 						end
 					end
-					if PIG["RaidRecord"]["Raidinfo"][x][xx][7]==2 then
+					if PIGA["RaidRecord"]["Raidinfo"][x][xx][7]==2 then
 						local shuangfenshu=tonumber(fenG.renjunshouru_1_V:GetText());
 						gerenfenGshu=gerenfenGshu+shuangfenshu;
-						PIG["RaidRecord"]["Raidinfo"][x][xx][8]=shuangfenshu;
-						if PIG["RaidRecord"]["Raidinfo"][x][xx][9]==0 then--不需邮寄
+						PIGA["RaidRecord"]["Raidinfo"][x][xx][8]=shuangfenshu;
+						if PIGA["RaidRecord"]["Raidinfo"][x][xx][9]==0 then--不需邮寄
 							duiwufenGshu=duiwufenGshu+shuangfenshu;
 						end
-					elseif PIG["RaidRecord"]["Raidinfo"][x][xx][7]==0.5 then
+					elseif PIGA["RaidRecord"]["Raidinfo"][x][xx][7]==0.5 then
 						local bangongfenshu=tonumber(fenG.renjunshouru_2_V:GetText());
 						gerenfenGshu=gerenfenGshu+bangongfenshu
-						PIG["RaidRecord"]["Raidinfo"][x][xx][8]=bangongfenshu;
-						if PIG["RaidRecord"]["Raidinfo"][x][xx][9]==0 then--不需邮寄
+						PIGA["RaidRecord"]["Raidinfo"][x][xx][8]=bangongfenshu;
+						if PIGA["RaidRecord"]["Raidinfo"][x][xx][9]==0 then--不需邮寄
 							duiwufenGshu=duiwufenGshu+bangongfenshu;
 						end
-					elseif PIG["RaidRecord"]["Raidinfo"][x][xx][7]==1 then
+					elseif PIGA["RaidRecord"]["Raidinfo"][x][xx][7]==1 then
 						local zhengchangfenshu=tonumber(fenG.renjunshouru_V:GetText());
 						gerenfenGshu=gerenfenGshu+zhengchangfenshu;
-						PIG["RaidRecord"]["Raidinfo"][x][xx][8]=zhengchangfenshu;
-						if PIG["RaidRecord"]["Raidinfo"][x][xx][9]==0 then--不需邮寄
+						PIGA["RaidRecord"]["Raidinfo"][x][xx][8]=zhengchangfenshu;
+						if PIGA["RaidRecord"]["Raidinfo"][x][xx][9]==0 then--不需邮寄
 							duiwufenGshu=duiwufenGshu+zhengchangfenshu;
 						end
 					end
 					_G["duiwu_"..x.."_"..xx].Players.G:SetText(gerenfenGshu)
 				end
 			end
-			if #PIG["RaidRecord"]["Raidinfo"][x]>0 then
+			if #PIGA["RaidRecord"]["Raidinfo"][x]>0 then
 				_G["duiwuF_UI_"..x].G_V:SetText(duiwufenGshu)
 			end
 		end
@@ -259,8 +259,8 @@ local function ADD_fenG()
 						SendChatMessage(MSGFENGXINXI, fayanpindaoName, nil);
 						--明细
 						local msnfenG="明细: ";
-						for xx=1,#PIG["RaidRecord"]["Raidinfo"][butID] do
-							if #PIG["RaidRecord"]["Raidinfo"][butID][xx]>0 then
+						for xx=1,#PIGA["RaidRecord"]["Raidinfo"][butID] do
+							if #PIGA["RaidRecord"]["Raidinfo"][butID][xx]>0 then
 								msnfenG=msnfenG.._G["duiwu_"..butID.."_"..xx].Players.name:GetText()..":".._G["duiwu_"..butID.."_"..xx].Players.G:GetText().."，";	
 							end	
 						end
@@ -330,7 +330,7 @@ local function ADD_fenG()
 				if ( MailFrame:IsVisible() and MailFrame.selectedTab == 2 ) then
 					local mail_Name=self.name:GetText();
 					SendMailNameEditBox:SetText(mail_Name);
-					SendMailSubjectEditBox:SetText(date("%Y-%m-%d",PIG["RaidRecord"]["instanceName"][1]).." "..PIG["RaidRecord"]["instanceName"][2]);
+					SendMailSubjectEditBox:SetText(date("%Y-%m-%d",PIGA["RaidRecord"]["instanceName"][1]).." "..PIGA["RaidRecord"]["instanceName"][2]);
 					SendMailMoneyGold:SetText(0);
 				else
 					print("|cff00FFFF!Pig:|r|cffFFFF00请先打开邮箱发件页面！|r");
@@ -364,9 +364,9 @@ local function ADD_fenG()
 					local mail_Name=self:GetParent().Players.name:GetText()
 					local mail_Name_G=self:GetParent().Players.G:GetText()
 					SendMailNameEditBox:SetText(mail_Name);
-					SendMailSubjectEditBox:SetText(date("%Y-%m-%d",PIG["RaidRecord"]["instanceName"][1]).." "..PIG["RaidRecord"]["instanceName"][2]);
+					SendMailSubjectEditBox:SetText(date("%Y-%m-%d",PIGA["RaidRecord"]["instanceName"][1]).." "..PIGA["RaidRecord"]["instanceName"][2]);
 					SendMailMoneyGold:SetText(mail_Name_G);
-					PIG["RaidRecord"]["Raidinfo"][p][xx][10]=1;
+					PIGA["RaidRecord"]["Raidinfo"][p][xx][10]=1;
 					self.Tex:SetTexture("interface/cursor/unablemail.blp");
 				else
 					print("|cff00FFFF!Pig:|r|cffFFFF00请先打开邮箱发件页面！|r");
@@ -557,7 +557,7 @@ local function ADD_fenG()
 	fenG.guangbo:SetScript("OnClick", function ()
 		local liupaichupin={};
 		SendChatMessage("========收支明细========", RaidR_UI.xuanzhongChat, nil);
-		local ItemSLsit = PIG["RaidRecord"]["ItemList"];
+		local ItemSLsit = PIGA["RaidRecord"]["ItemList"];
 		for id=1,#ItemSLsit do
 			if ItemSLsit[id][9]>0 or ItemSLsit[id][14]>0 then
 				if ItemSLsit[id][14]>0 then
@@ -566,13 +566,13 @@ local function ADD_fenG()
 					SendChatMessage(ItemSLsit[id][2].."x"..ItemSLsit[id][3].." 收入："..ItemSLsit[id][9].."G(买方<"..ItemSLsit[id][8]..">)", RaidR_UI.xuanzhongChat, nil);
 				end
 			else
-				if PIG["RaidRecord"]["Rsetting"]["liupaibobao"]=="ON" then
+				if PIGA["RaidRecord"]["Rsetting"]["liupaibobao"]=="ON" then
 					table.insert(liupaichupin,ItemSLsit[id][2]);
 				end
 			end
 		end
 		if #liupaichupin>0 then
-			if PIG["RaidRecord"]["Rsetting"]["liupaibobao"]=="ON" then
+			if PIGA["RaidRecord"]["Rsetting"]["liupaibobao"]=="ON" then
 				SendChatMessage("以下为流拍物品：", RaidR_UI.xuanzhongChat, nil);
 				--流派每行物品数
 				local LPnum = 3
@@ -599,36 +599,36 @@ local function ADD_fenG()
 			end
 		end
 		--补助
-		if PIG["RaidRecord"]["Rsetting"]["bobaomingxi"]=="ON" then
-			for x=1,#PIG["RaidRecord"]["Raidinfo"] do
-				for xx=1,#PIG["RaidRecord"]["Raidinfo"][x] do
-					if PIG["RaidRecord"]["Raidinfo"][x][xx][5]=="坦克补助" then
-						SendChatMessage("["..PIG["RaidRecord"]["Raidinfo"][x][xx][5].."]-"..PIG["RaidRecord"]["Raidinfo"][x][xx][4].."-支出："..PIG["RaidRecord"]["Raidinfo"][x][xx][6].."G", RaidR_UI.xuanzhongChat, nil);
+		if PIGA["RaidRecord"]["Rsetting"]["bobaomingxi"]=="ON" then
+			for x=1,#PIGA["RaidRecord"]["Raidinfo"] do
+				for xx=1,#PIGA["RaidRecord"]["Raidinfo"][x] do
+					if PIGA["RaidRecord"]["Raidinfo"][x][xx][5]=="坦克补助" then
+						SendChatMessage("["..PIGA["RaidRecord"]["Raidinfo"][x][xx][5].."]-"..PIGA["RaidRecord"]["Raidinfo"][x][xx][4].."-支出："..PIGA["RaidRecord"]["Raidinfo"][x][xx][6].."G", RaidR_UI.xuanzhongChat, nil);
 					end
 				end
 			end
-			for x=1,#PIG["RaidRecord"]["Raidinfo"] do
-				for xx=1,#PIG["RaidRecord"]["Raidinfo"][x] do
-					if PIG["RaidRecord"]["Raidinfo"][x][xx][5]=="治疗补助" then
-						SendChatMessage("["..PIG["RaidRecord"]["Raidinfo"][x][xx][5].."]-"..PIG["RaidRecord"]["Raidinfo"][x][xx][4].."-支出："..PIG["RaidRecord"]["Raidinfo"][x][xx][6].."G", RaidR_UI.xuanzhongChat, nil);
+			for x=1,#PIGA["RaidRecord"]["Raidinfo"] do
+				for xx=1,#PIGA["RaidRecord"]["Raidinfo"][x] do
+					if PIGA["RaidRecord"]["Raidinfo"][x][xx][5]=="治疗补助" then
+						SendChatMessage("["..PIGA["RaidRecord"]["Raidinfo"][x][xx][5].."]-"..PIGA["RaidRecord"]["Raidinfo"][x][xx][4].."-支出："..PIGA["RaidRecord"]["Raidinfo"][x][xx][6].."G", RaidR_UI.xuanzhongChat, nil);
 					end
 				end
 			end
-			for x=1,#PIG["RaidRecord"]["Raidinfo"] do
-				for xx=1,#PIG["RaidRecord"]["Raidinfo"][x] do
-					if PIG["RaidRecord"]["Raidinfo"][x][xx][5]=="其他补助" then
-						SendChatMessage("["..PIG["RaidRecord"]["Raidinfo"][x][xx][5].."]-"..PIG["RaidRecord"]["Raidinfo"][x][xx][4].."-支出："..PIG["RaidRecord"]["Raidinfo"][x][xx][6].."G", RaidR_UI.xuanzhongChat, nil);
+			for x=1,#PIGA["RaidRecord"]["Raidinfo"] do
+				for xx=1,#PIGA["RaidRecord"]["Raidinfo"][x] do
+					if PIGA["RaidRecord"]["Raidinfo"][x][xx][5]=="其他补助" then
+						SendChatMessage("["..PIGA["RaidRecord"]["Raidinfo"][x][xx][5].."]-"..PIGA["RaidRecord"]["Raidinfo"][x][xx][4].."-支出："..PIGA["RaidRecord"]["Raidinfo"][x][xx][6].."G", RaidR_UI.xuanzhongChat, nil);
 					end
 				end
 			end
-			for j=1,#PIG["RaidRecord"]["fakuan"] do
-				if PIG["RaidRecord"]["fakuan"][j][4]~="无" then
-					SendChatMessage("["..PIG["RaidRecord"]["fakuan"][j][1].."]-"..PIG["RaidRecord"]["fakuan"][j][4].."-收入："..PIG["RaidRecord"]["fakuan"][j][2]+PIG["RaidRecord"]["fakuan"][j][3].."G", RaidR_UI.xuanzhongChat, nil);
+			for j=1,#PIGA["RaidRecord"]["fakuan"] do
+				if PIGA["RaidRecord"]["fakuan"][j][4]~="无" then
+					SendChatMessage("["..PIGA["RaidRecord"]["fakuan"][j][1].."]-"..PIGA["RaidRecord"]["fakuan"][j][4].."-收入："..PIGA["RaidRecord"]["fakuan"][j][2]+PIGA["RaidRecord"]["fakuan"][j][3].."G", RaidR_UI.xuanzhongChat, nil);
 				end
 			end
-			for b=1,#PIG["RaidRecord"]["jiangli"] do
-				if PIG["RaidRecord"]["jiangli"][b][3]~="无" then
-					SendChatMessage("["..PIG["RaidRecord"]["jiangli"][b][1].."]-"..PIG["RaidRecord"]["jiangli"][b][3].."-支出："..PIG["RaidRecord"]["jiangli"][b][2].."G", RaidR_UI.xuanzhongChat, nil);
+			for b=1,#PIGA["RaidRecord"]["jiangli"] do
+				if PIGA["RaidRecord"]["jiangli"][b][3]~="无" then
+					SendChatMessage("["..PIGA["RaidRecord"]["jiangli"][b][1].."]-"..PIGA["RaidRecord"]["jiangli"][b][3].."-支出："..PIGA["RaidRecord"]["jiangli"][b][2].."G", RaidR_UI.xuanzhongChat, nil);
 				end
 			end
 		end
@@ -691,24 +691,24 @@ local function ADD_fenG()
 	fenG.liupaibobao = ADD_Checkbutton(nil,fenG,-10,"LEFT",fenG.guangbo,"RIGHT",40,0,"流拍","开启后,发送拍卖结果时会播报流拍物品")
 	fenG.liupaibobao:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["RaidRecord"]["Rsetting"]["liupaibobao"]="ON";
+			PIGA["RaidRecord"]["Rsetting"]["liupaibobao"]="ON";
 		else
-			PIG["RaidRecord"]["Rsetting"]["liupaibobao"]="OFF";
+			PIGA["RaidRecord"]["Rsetting"]["liupaibobao"]="OFF";
 		end
 	end);
 	--
 	fenG.bobaomingxi = ADD_Checkbutton(nil,fenG,-10,"LEFT",fenG.liupaibobao,"RIGHT",50,0,"明细","开启后,发送拍卖结果时会播报补助/罚款/奖励明细")
 	fenG.bobaomingxi:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["RaidRecord"]["Rsetting"]["bobaomingxi"]="ON";
+			PIGA["RaidRecord"]["Rsetting"]["bobaomingxi"]="ON";
 		else
-			PIG["RaidRecord"]["Rsetting"]["bobaomingxi"]="OFF";
+			PIGA["RaidRecord"]["Rsetting"]["bobaomingxi"]="OFF";
 		end
 	end);
-	if PIG["RaidRecord"]["Rsetting"]["liupaibobao"]=="ON" then
+	if PIGA["RaidRecord"]["Rsetting"]["liupaibobao"]=="ON" then
 		fenG.liupaibobao:SetChecked(true);
 	end
-	if PIG["RaidRecord"]["Rsetting"]["bobaomingxi"]=="ON" then
+	if PIGA["RaidRecord"]["Rsetting"]["bobaomingxi"]=="ON" then
 		fenG.bobaomingxi:SetChecked(true);
 	end
 	-----------

@@ -18,7 +18,7 @@ local function MouseXY()
 	return cx, cy
 end
 function Mapfun.WorldMap_XY()
-	if not PIG["Map"]["WorldMapXY"] then return end
+	if not PIGA["Map"]["WorldMapXY"] then return end
 	WorldMapFrame.zuobiaoX = PIGFontString(WorldMapFrame,{"BOTTOM", WorldMapFrame, "BOTTOM", -200, 10},"玩家 X:","OUTLINE")
 	WorldMapFrame.zuobiaoX:SetTextColor(0, 1, 0, 1);
 	WorldMapFrame.zuobiaoXV = PIGFontString(WorldMapFrame,{"LEFT", WorldMapFrame.zuobiaoX, "RIGHT", 0, 0},"","OUTLINE")
@@ -59,7 +59,7 @@ function Mapfun.WorldMap_XY()
 end
 ----
 function Mapfun.WorldMap_Wind()
-	if not PIG["Map"]["WorldMapWind"] then return end
+	if not PIGA["Map"]["WorldMapWind"] then return end
 	UIPanelWindows["WorldMapFrame"] = nil
 	table.insert(UISpecialFrames, "WorldMapFrame")
 	WorldMapFrame.IsMaximized = function() return false end
@@ -99,7 +99,7 @@ function Mapfun.WorldMap_Wind()
 end
 ---
 function Mapfun.WorldMap_LVSkill()
-	if not PIG["Map"]["WorldMapLV"] and not PIG["Map"]["WorldMapSkill"] then return end
+	if not PIGA["Map"]["WorldMapLV"] and not PIGA["Map"]["WorldMapSkill"] then return end
 	local floor = math.floor
 	local format = string.format
 	local zoneData=addonTable.Mapfun.zoneData
@@ -146,10 +146,10 @@ function Mapfun.WorldMap_LVSkill()
 						elseif (playerLevel > playerMaxLevel) then
 							colorbb="|cff00FF00"
 						end
-						if PIG.Map.WorldMapLV then
+						if PIGA["Map"]["WorldMapLV"] then
 							name = name..colorbb.." ("..playerMinLevel.."-"..playerMaxLevel..")|r"
 						end
-						if PIG.Map.WorldMapSkill then
+						if PIGA["Map"]["WorldMapSkill"] then
 							if playerminFish then
 								name = name.."\n渔点|cff00FFFF("..playerminFish..")|r"
 							end
@@ -173,7 +173,7 @@ function Mapfun.WorldMap_LVSkill()
 end
 ---战争迷雾
 function Mapfun.WorldMap_Miwu()
-	if not PIG["Map"]["WorldMapMiwu"] then return end
+	if not PIGA["Map"]["WorldMapMiwu"] then return end
 	local Reveal=addonTable.Mapfun.Reveal
 	local overlayTextures = {}
 

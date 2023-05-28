@@ -23,11 +23,11 @@ local BagBankF,BagBankFTabBut = PIGOptionsList(L["BAGBANK_TABNAME"],"TOP")
 BagBankF.Zhenghe = PIGCheckbutton_R(BagBankF,{"启用背包/银行整合","整合背包/银行包裹到一个界面"})
 BagBankF.Zhenghe:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["BagBank"]["Zhenghe"]=true
+		PIGA["BagBank"]["Zhenghe"]=true
 		BagBankF.SetListF:Show()
 		BagBankfun.Zhenghe()		
 	else
-		PIG["BagBank"]["Zhenghe"]=false
+		PIGA["BagBank"]["Zhenghe"]=false
 		BagBankF.SetListF:Hide()
 		Pig_Options_RLtishi_UI:Show()
 	end	
@@ -41,7 +41,7 @@ local function gengxinbeibaoshengyugeshu()
 	end
 end
 local function BagKongyu()
-	if PIG["BagBank"]["BagKongyu"] then
+	if PIGA["BagBank"]["BagKongyu"] then
 		SetCVar("displayFreeBagSlots", "1")
 		MainMenuBarBackpackButton.Count:Show()
 		MainMenuBarBackpackButton.Count:SetTextScale(18/14);
@@ -53,7 +53,7 @@ local function BagKongyu()
 end
 ----
 MainMenuBarBackpackButton:HookScript("OnEvent", function(self,event,arg1)
-	if PIG["BagBank"]["BagKongyu"] then
+	if PIGA["BagBank"]["BagKongyu"] then
 		if event=="PLAYER_ENTERING_WORLD" then
 			BagKongyu()
 		end
@@ -65,9 +65,9 @@ end)
 BagBankF.BagKongyu = PIGCheckbutton_R(BagBankF,{"显示背包剩余空间","在行囊显示背包剩余空间(大于等于10显示绿色,小于10显示红色)"})
 BagBankF.BagKongyu:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["BagBank"]["BagKongyu"]=true;			
+		PIGA["BagBank"]["BagKongyu"]=true;			
 	else
-		PIG["BagBank"]["BagKongyu"]=false;
+		PIGA["BagBank"]["BagKongyu"]=false;
 	end
 	BagKongyu()
 end)
@@ -100,27 +100,27 @@ for i=1,#BAG_SetList do
 		if self:GetChecked() then
 			if BAG_SetList[i][1]=="反向整理" then
 				if tocversion<50000 then
-					PIG["BagBank"]["SortBag_Config"]=false
+					PIGA["BagBank"]["SortBag_Config"]=false
 				else
 					SetSortBagsRightToLeft(false)
 				end
 			elseif BAG_SetList[i][1]=="战利品放入左边包" then
 				SetInsertItemsLeftToRight(true)
 			else
-				PIG["BagBank"][BAG_SetList[i][2]]=true
+				PIGA["BagBank"][BAG_SetList[i][2]]=true
 				CloseAllBags()OpenAllBags()
 			end		
 		else
 			if BAG_SetList[i][1]=="反向整理" then
 				if tocversion<50000 then
-					PIG["BagBank"]["SortBag_Config"]=true
+					PIGA["BagBank"]["SortBag_Config"]=true
 				else
 					SetSortBagsRightToLeft(true)
 				end
 			elseif BAG_SetList[i][1]=="战利品放入左边包" then
 				SetInsertItemsLeftToRight(false)
 			else
-				PIG["BagBank"][BAG_SetList[i][2]]=false
+				PIGA["BagBank"][BAG_SetList[i][2]]=false
 			end
 			if BAG_SetList[i][3] then
 				Pig_Options_RLtishi_UI:Show()
@@ -132,7 +132,7 @@ end
 if tocversion>100000 then
 	function ContainerFrameCombinedBags:GetColumns()
 		if self:IsCombinedBagContainer() then
-			return PIG["BagBank"]["BAGmeihangshu_retail"]
+			return PIGA["BagBank"]["BAGmeihangshu_retail"]
 		else
 			return 4;
 		end
@@ -147,9 +147,9 @@ function BagBankF.SetListF.hangNUM:PIGDownMenu_Update_But(self)
 	for i=1,#BagmeihangN,1 do
 	    info.text, info.arg1 = BagmeihangN[i], BagmeihangN[i]
 	    if tocversion<100000 then
-	   		info.checked = BagmeihangN[i]==PIG["BagBank"]["BAGmeihangshu"]
+	   		info.checked = BagmeihangN[i]==PIGA["BagBank"]["BAGmeihangshu"]
 	   	else
-			info.checked = BagmeihangN[i]==PIG["BagBank"]["BAGmeihangshu_retail"]
+			info.checked = BagmeihangN[i]==PIGA["BagBank"]["BAGmeihangshu_retail"]
 	   	end
 		BagBankF.SetListF.hangNUM:PIGDownMenu_AddButton(info)
 	end 
@@ -158,9 +158,9 @@ function BagBankF.SetListF.hangNUM:PIGDownMenu_SetValue(value,arg1,arg2)
 	BagBankF.SetListF.hangNUM:PIGDownMenu_SetText(value)
 	if tocversion<100000 then
 		BAGheji_UI.meihang=arg1
-		PIG["BagBank"]["BAGmeihangshu"] = arg1;
+		PIGA["BagBank"]["BAGmeihangshu"] = arg1;
 	else
-		PIG["BagBank"]["BAGmeihangshu_retail"] = arg1;
+		PIGA["BagBank"]["BAGmeihangshu_retail"] = arg1;
 	end
 	CloseAllBags()
 	OpenAllBags()
@@ -175,13 +175,13 @@ function BagBankF.SetListF.suofang:PIGDownMenu_Update_But(self)
 	info.func = self.PIGDownMenu_SetValue
 	for i=1,#BAGsuofangbili,1 do
 	    info.text, info.arg1 = BAGsuofangbili[i], BAGsuofangbili[i]
-	    info.checked = BAGsuofangbili[i]==PIG["BagBank"]["BAGsuofangBili"]
+	    info.checked = BAGsuofangbili[i]==PIGA["BagBank"]["BAGsuofangBili"]
 		BagBankF.SetListF.suofang:PIGDownMenu_AddButton(info)
 	end 
 end
 function BagBankF.SetListF.suofang:PIGDownMenu_SetValue(value,arg1,arg2)
 	BagBankF.SetListF.suofang:PIGDownMenu_SetText(value)
-	PIG["BagBank"]["BAGsuofangBili"] = arg1;
+	PIGA["BagBank"]["BAGsuofangBili"] = arg1;
 	if tocversion<100000 then
 		BAGheji_UI.suofang=arg1
 	else
@@ -201,9 +201,9 @@ StaticPopupDialogs["HUIFU_DEFAULT_BEIBAOZHENGHE"] = {
 	button1 = "确定",
 	button2 = "取消",
 	OnAccept = function()
-		PIG["BagBank"]=addonTable.Default["BagBank"]
-		PIG["BagBank"]["Zhenghe"]=true
-		PIG["BagBank"]["SortBag_Config"]=true
+		PIGA["BagBank"]=addonTable.Default["BagBank"]
+		PIGA["BagBank"]["Zhenghe"]=true
+		PIGA["BagBank"]["SortBag_Config"]=true
 		ReloadUI()
 	end,
 	timeout = 0,
@@ -211,30 +211,30 @@ StaticPopupDialogs["HUIFU_DEFAULT_BEIBAOZHENGHE"] = {
 	hideOnEscape = true,
 }
 BagBankF:HookScript("OnShow", function(self)
-	self.Zhenghe:SetChecked(PIG["BagBank"]["Zhenghe"])
-	if PIG["BagBank"]["Zhenghe"] then
+	self.Zhenghe:SetChecked(PIGA["BagBank"]["Zhenghe"])
+	if PIGA["BagBank"]["Zhenghe"] then
 		BagBankF.SetListF:Show()
 	else
 		BagBankF.SetListF:Hide()
 	end
-	self.BagKongyu:SetChecked(PIG["BagBank"]["BagKongyu"])
+	self.BagKongyu:SetChecked(PIGA["BagBank"]["BagKongyu"])
 	for i=1,#BAG_SetList do
 		if BAG_SetList[i][1]=="反向整理" then
 			if tocversion<50000 then
-				_G["BAG_SetList"..i]:SetChecked(not PIG["BagBank"][BAG_SetList[i][2]])
+				_G["BAG_SetList"..i]:SetChecked(not PIGA["BagBank"][BAG_SetList[i][2]])
 			else
 				_G["BAG_SetList"..i]:SetChecked(not GetSortBagsRightToLeft())
 			end
 		else
-			_G["BAG_SetList"..i]:SetChecked(PIG["BagBank"][BAG_SetList[i][2]])
+			_G["BAG_SetList"..i]:SetChecked(PIGA["BagBank"][BAG_SetList[i][2]])
 		end
 	end
 	if tocversion<100000 then
-		BagBankF.SetListF.hangNUM:PIGDownMenu_SetText(PIG["BagBank"]["BAGmeihangshu"])
+		BagBankF.SetListF.hangNUM:PIGDownMenu_SetText(PIGA["BagBank"]["BAGmeihangshu"])
 	else
-		BagBankF.SetListF.hangNUM:PIGDownMenu_SetText(PIG["BagBank"]["BAGmeihangshu_retail"])
+		BagBankF.SetListF.hangNUM:PIGDownMenu_SetText(PIGA["BagBank"]["BAGmeihangshu_retail"])
 	end
-	BagBankF.SetListF.suofang:PIGDownMenu_SetText(PIG["BagBank"]["BAGsuofangBili"])
+	BagBankF.SetListF.suofang:PIGDownMenu_SetText(PIGA["BagBank"]["BAGsuofangBili"])
 end)
 --==================================
 addonTable.BagBank = function()

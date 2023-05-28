@@ -23,32 +23,32 @@ local Tooltip = "开启"..GnName..",包含一键丢弃/自动卖出/自动购买
 local Checkbut = PIGModCheckbutton(CommonFun.CommonF,{GnName,Tooltip},{"TOP",CommonFun.CommonF,"TOP",0,-200})
 Checkbut:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["AutoSellBuy"]["Open"]=true;
+		PIGA["AutoSellBuy"]["Open"]=true;
 		CommonFun.AutoSellBuy()
 	else
-		PIG["AutoSellBuy"]["Open"]=false;
+		PIGA["AutoSellBuy"]["Open"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 	QuickButUI.AutoSellBuy()
 end);
 Checkbut.QKBut:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["AutoSellBuy"]["AddBut"]=true
+		PIGA["AutoSellBuy"]["AddBut"]=true
 		QuickButUI.AutoSellBuy()
 	else
-		PIG["AutoSellBuy"]["AddBut"]=false
+		PIGA["AutoSellBuy"]["AddBut"]=false
 		Pig_Options_RLtishi_UI:Show();
 	end
 end);
 Checkbut:HookScript("OnShow", function (self)
-	self:SetChecked(PIG["AutoSellBuy"]["Open"])
-	self.QKBut:SetChecked(PIG["AutoSellBuy"]["AddBut"])
+	self:SetChecked(PIGA["AutoSellBuy"]["Open"])
+	self.QKBut:SetChecked(PIGA["AutoSellBuy"]["AddBut"])
 end);
 ------------------------------------------------
 local Width,Height,biaotiH  = 300, 550, 21;
 --父框架
 function CommonFun.AutoSellBuy()
-	if not PIG["AutoSellBuy"]["Open"] then return end
+	if not PIGA["AutoSellBuy"]["Open"] then return end
 	if _G[GnUI] then return end	
 	local ModBut = PIGModbutton(GnName,GnIcon,GnUI,FrameLevel,1)
 

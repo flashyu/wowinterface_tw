@@ -11,19 +11,19 @@ local CommonF=CommonFun.CommonF
 CommonF.TradePlus = PIGCheckbutton_R(CommonF,{"交易界面提示","在交易界面显示对方职业和等级"})
 CommonF.TradePlus:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["TradePlus"]["Open"]=true;
+		PIGA["TradePlus"]["Open"]=true;
 		CommonFun.jiaoyi()
 	else
-		PIG["TradePlus"]["Open"]=false;
+		PIGA["TradePlus"]["Open"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
 ---------------
 CommonF:HookScript("OnShow", function(self)
-	self.TradePlus:SetChecked(PIG["TradePlus"]["Open"])
+	self.TradePlus:SetChecked(PIGA["TradePlus"]["Open"])
 end)
 function CommonFun.jiaoyi()
-	if not PIG["TradePlus"]["Open"] then return end
+	if not PIGA["TradePlus"]["Open"] then return end
 	if TradeFrame.zhiye then return end
 	local www,hhh=28,28
 	TradeFrame.zhiye = CreateFrame("Button", nil, TradeFrame);

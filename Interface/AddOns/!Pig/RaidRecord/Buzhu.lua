@@ -62,7 +62,7 @@ local function ADD_buzhu()
 		local NewbuzhuV=self:GetNumber();
 		fuFrame.T_text2_V:SetText(NewbuzhuV);
 		fuFrame.T_text2_V:Show();
-		PIG["RaidRecord"]["buzhuG"][1]=NewbuzhuV;
+		PIGA["RaidRecord"]["buzhuG"][1]=NewbuzhuV;
 	end);
 	fuFrame.T_E:SetScript("OnEditFocusLost", function()
 		fuFrame.T_text2_V:Show();
@@ -89,7 +89,7 @@ local function ADD_buzhu()
 		fuFrame.T_B:Hide();
 		fuFrame.T_E:Show();
 		fuFrame.T_Q:Show();
-		fuFrame.T_E:SetText(PIG["RaidRecord"]["buzhuG"][1]);
+		fuFrame.T_E:SetText(PIGA["RaidRecord"]["buzhuG"][1]);
 	end);
 	fuFrame.T_Q = CreateFrame("Button","fuFrame.T_Q",fuFrame, "UIPanelButtonTemplate");
 	fuFrame.T_Q:SetSize(35,24);
@@ -105,7 +105,7 @@ local function ADD_buzhu()
 		local NewbuzhuV=fuFrame.T_E:GetNumber();
 		fuFrame.T_text2_V:SetText(NewbuzhuV);
 		fuFrame.T_text2_V:Show();
-		PIG["RaidRecord"]["buzhuG"][1]=NewbuzhuV;
+		PIGA["RaidRecord"]["buzhuG"][1]=NewbuzhuV;
 	end);
 	------------
 	fuFrame.T_List = CreateFrame("Frame", nil, fuFrame);
@@ -119,7 +119,7 @@ local function ADD_buzhu()
 	----------------
 	local zhizeIcon = {{0.01,0.26,0.26,0.51},{0.27,0.52,0,0.25},{0.01,0.26,0,0.25}}
 	local function Updatebuzhu_T(self)
-		fuFrame.T_text2_V:SetText(PIG["RaidRecord"]["buzhuG"][1]);
+		fuFrame.T_text2_V:SetText(PIGA["RaidRecord"]["buzhuG"][1]);
 		for i = 1, hang_NUM do
 			fuFrame.T_text1_1:SetText(0);
 			_G["buzhu_T_hang_"..i]:Hide();
@@ -128,10 +128,10 @@ local function ADD_buzhu()
 	    end
 	    local Trenyuan={};
 	    for i=1, 8 do
-	    	if #PIG["RaidRecord"]["Raidinfo"][i]>0 then
-				for ii=1, #PIG["RaidRecord"]["Raidinfo"][i] do
-					if PIG["RaidRecord"]["Raidinfo"][i][ii][5]=="坦克补助" or PIG["RaidRecord"]["Raidinfo"][i][ii][5]=="其他补助" then
-						table.insert(Trenyuan,PIG["RaidRecord"]["Raidinfo"][i][ii]);
+	    	if #PIGA["RaidRecord"]["Raidinfo"][i]>0 then
+				for ii=1, #PIGA["RaidRecord"]["Raidinfo"][i] do
+					if PIGA["RaidRecord"]["Raidinfo"][i][ii][5]=="坦克补助" or PIGA["RaidRecord"]["Raidinfo"][i][ii][5]=="其他补助" then
+						table.insert(Trenyuan,PIGA["RaidRecord"]["Raidinfo"][i][ii]);
 					end
 				end
 			end
@@ -172,10 +172,10 @@ local function ADD_buzhu()
 	buttonFont:SetFont(ChatFontNormal:GetFont(), 11);
 	fuFrame.T_piliang:SetScript("OnClick", function ()
 		for i=1, 8 do
-			if #PIG["RaidRecord"]["Raidinfo"][i]>0 then
-				for ii=1, #PIG["RaidRecord"]["Raidinfo"][i] do
-					if PIG["RaidRecord"]["Raidinfo"][i][ii][5]=="坦克补助" or PIG["RaidRecord"]["Raidinfo"][i][ii][5]=="其他补助" then
-						PIG["RaidRecord"]["Raidinfo"][i][ii][6]=PIG["RaidRecord"]["buzhuG"][1];
+			if #PIGA["RaidRecord"]["Raidinfo"][i]>0 then
+				for ii=1, #PIGA["RaidRecord"]["Raidinfo"][i] do
+					if PIGA["RaidRecord"]["Raidinfo"][i][ii][5]=="坦克补助" or PIGA["RaidRecord"]["Raidinfo"][i][ii][5]=="其他补助" then
+						PIGA["RaidRecord"]["Raidinfo"][i][ii][6]=PIGA["RaidRecord"]["buzhuG"][1];
 					end
 				end
 			end
@@ -211,17 +211,17 @@ local function ADD_buzhu()
 		self.Tex:SetPoint("CENTER",4,0);
 	end);
 	fuFrame.bobaobuzhu_T:SetScript("OnClick", function()
-		for x=1,#PIG["RaidRecord"]["Raidinfo"] do
-			for xx=1,#PIG["RaidRecord"]["Raidinfo"][x] do
-				if PIG["RaidRecord"]["Raidinfo"][x][xx][5]=="坦克补助" then
-					SendChatMessage("["..PIG["RaidRecord"]["Raidinfo"][x][xx][5].."]-"..PIG["RaidRecord"]["Raidinfo"][x][xx][4].."-支出："..PIG["RaidRecord"]["Raidinfo"][x][xx][6].."G", RaidR_UI.xuanzhongChat, nil);
+		for x=1,#PIGA["RaidRecord"]["Raidinfo"] do
+			for xx=1,#PIGA["RaidRecord"]["Raidinfo"][x] do
+				if PIGA["RaidRecord"]["Raidinfo"][x][xx][5]=="坦克补助" then
+					SendChatMessage("["..PIGA["RaidRecord"]["Raidinfo"][x][xx][5].."]-"..PIGA["RaidRecord"]["Raidinfo"][x][xx][4].."-支出："..PIGA["RaidRecord"]["Raidinfo"][x][xx][6].."G", RaidR_UI.xuanzhongChat, nil);
 				end
 			end
 		end
-		for x=1,#PIG["RaidRecord"]["Raidinfo"] do
-			for xx=1,#PIG["RaidRecord"]["Raidinfo"][x] do
-				if PIG["RaidRecord"]["Raidinfo"][x][xx][5]=="其他补助" then
-					SendChatMessage("["..PIG["RaidRecord"]["Raidinfo"][x][xx][5].."]-"..PIG["RaidRecord"]["Raidinfo"][x][xx][4].."-支出："..PIG["RaidRecord"]["Raidinfo"][x][xx][6].."G", RaidR_UI.xuanzhongChat, nil);
+		for x=1,#PIGA["RaidRecord"]["Raidinfo"] do
+			for xx=1,#PIGA["RaidRecord"]["Raidinfo"][x] do
+				if PIGA["RaidRecord"]["Raidinfo"][x][xx][5]=="其他补助" then
+					SendChatMessage("["..PIGA["RaidRecord"]["Raidinfo"][x][xx][5].."]-"..PIGA["RaidRecord"]["Raidinfo"][x][xx][4].."-支出："..PIGA["RaidRecord"]["Raidinfo"][x][xx][6].."G", RaidR_UI.xuanzhongChat, nil);
 				end
 			end
 		end
@@ -279,10 +279,10 @@ local function ADD_buzhu()
 	 		local shangjiFF=shangjiF:GetParent()
 	 		local bianjiName=shangjiFF.name:GetText();
 	 		for i=1, 8 do
-				if #PIG["RaidRecord"]["Raidinfo"][i]>0 then
-					for ii=1, #PIG["RaidRecord"]["Raidinfo"][i] do
-						if PIG["RaidRecord"]["Raidinfo"][i][ii][4]==bianjiName then
-							PIG["RaidRecord"]["Raidinfo"][i][ii][6]=Newbuzhu_T;
+				if #PIGA["RaidRecord"]["Raidinfo"][i]>0 then
+					for ii=1, #PIGA["RaidRecord"]["Raidinfo"][i] do
+						if PIGA["RaidRecord"]["Raidinfo"][i][ii][4]==bianjiName then
+							PIGA["RaidRecord"]["Raidinfo"][i][ii][6]=Newbuzhu_T;
 						end
 					end
 				end
@@ -339,10 +339,10 @@ local function ADD_buzhu()
 	 		local shangjiFF=shangjiF:GetParent()
 	 		local bianjiName=shangjiFF.name:GetText();
 	 		for i=1, 8 do
-				if #PIG["RaidRecord"]["Raidinfo"][i]>0 then
-					for ii=1, #PIG["RaidRecord"]["Raidinfo"][i] do
-						if PIG["RaidRecord"]["Raidinfo"][i][ii][4]==bianjiName then
-							PIG["RaidRecord"]["Raidinfo"][i][ii][6]=Newbuzhu_T;
+				if #PIGA["RaidRecord"]["Raidinfo"][i]>0 then
+					for ii=1, #PIGA["RaidRecord"]["Raidinfo"][i] do
+						if PIGA["RaidRecord"]["Raidinfo"][i][ii][4]==bianjiName then
+							PIGA["RaidRecord"]["Raidinfo"][i][ii][6]=Newbuzhu_T;
 						end
 					end
 				end
@@ -403,7 +403,7 @@ local function ADD_buzhu()
 		local NewbuzhuV=fuFrame.N_E:GetNumber();
 		fuFrame.N_text2_V:SetText(NewbuzhuV);
 		fuFrame.N_text2_V:Show();
-		PIG["RaidRecord"]["buzhuG"][2]=NewbuzhuV;
+		PIGA["RaidRecord"]["buzhuG"][2]=NewbuzhuV;
 	end);
 	fuFrame.N_E:SetScript("OnEditFocusLost", function(self)
 		fuFrame.N_text2_V:Show();
@@ -430,7 +430,7 @@ local function ADD_buzhu()
 		fuFrame.N_B:Hide();
 		fuFrame.N_E:Show();
 		fuFrame.N_Q:Show();
-		fuFrame.N_E:SetText(PIG["RaidRecord"]["buzhuG"][2]);
+		fuFrame.N_E:SetText(PIGA["RaidRecord"]["buzhuG"][2]);
 	end);
 	fuFrame.N_Q = CreateFrame("Button","fuFrame.N_Q",fuFrame, "UIPanelButtonTemplate");
 	fuFrame.N_Q:SetSize(35,24);
@@ -446,7 +446,7 @@ local function ADD_buzhu()
 		local NewbuzhuV=fuFrame.N_E:GetNumber();
 		fuFrame.N_text2_V:SetText(NewbuzhuV);
 		fuFrame.N_text2_V:Show();
-		PIG["RaidRecord"]["buzhuG"][2]=NewbuzhuV;
+		PIGA["RaidRecord"]["buzhuG"][2]=NewbuzhuV;
 	end);
 	---------------
 	fuFrame.N_List = CreateFrame("Frame",nil, fuFrame);
@@ -459,7 +459,7 @@ local function ADD_buzhu()
 	fuFrame.N_List.line_N:SetEndPoint("TOPRIGHT",-2,-4)
 	----------------
 	local function Updatebuzhu_N(self)
-		fuFrame.N_text2_V:SetText(PIG["RaidRecord"]["buzhuG"][2]);
+		fuFrame.N_text2_V:SetText(PIGA["RaidRecord"]["buzhuG"][2]);
 		for i = 1, hang_NUM do
 			fuFrame.N_text1_1:SetText(0);
 			_G["buzhu_N_hang_"..i]:Hide();
@@ -468,10 +468,10 @@ local function ADD_buzhu()
 	    end
 	    local Nrenyuan={};
 	    for i=1, 8 do
-	    	if #PIG["RaidRecord"]["Raidinfo"][i]>0 then
-				for ii=1, #PIG["RaidRecord"]["Raidinfo"][i] do
-					if PIG["RaidRecord"]["Raidinfo"][i][ii][5]=="治疗补助" then
-						table.insert(Nrenyuan,PIG["RaidRecord"]["Raidinfo"][i][ii]);
+	    	if #PIGA["RaidRecord"]["Raidinfo"][i]>0 then
+				for ii=1, #PIGA["RaidRecord"]["Raidinfo"][i] do
+					if PIGA["RaidRecord"]["Raidinfo"][i][ii][5]=="治疗补助" then
+						table.insert(Nrenyuan,PIGA["RaidRecord"]["Raidinfo"][i][ii]);
 					end
 				end
 			end
@@ -511,10 +511,10 @@ local function ADD_buzhu()
 	buttonFont:SetFont(ChatFontNormal:GetFont(), 11);
 	fuFrame.N_piliang:SetScript("OnClick", function ()
 		for i=1, 8 do
-			if #PIG["RaidRecord"]["Raidinfo"][i]>0 then
-				for ii=1, #PIG["RaidRecord"]["Raidinfo"][i] do
-					if PIG["RaidRecord"]["Raidinfo"][i][ii][5]=="治疗补助" then
-						PIG["RaidRecord"]["Raidinfo"][i][ii][6]=PIG["RaidRecord"]["buzhuG"][2];
+			if #PIGA["RaidRecord"]["Raidinfo"][i]>0 then
+				for ii=1, #PIGA["RaidRecord"]["Raidinfo"][i] do
+					if PIGA["RaidRecord"]["Raidinfo"][i][ii][5]=="治疗补助" then
+						PIGA["RaidRecord"]["Raidinfo"][i][ii][6]=PIGA["RaidRecord"]["buzhuG"][2];
 					end
 				end
 			end
@@ -551,10 +551,10 @@ local function ADD_buzhu()
 		fuFrame.bobaobuzhu_N.Tex:SetPoint("CENTER",4,0);
 	end);
 	fuFrame.bobaobuzhu_N:SetScript("OnClick", function()
-		for x=1,#PIG["RaidRecord"]["Raidinfo"] do
-			for xx=1,#PIG["RaidRecord"]["Raidinfo"][x] do
-				if PIG["RaidRecord"]["Raidinfo"][x][xx][5]=="治疗补助" then
-					SendChatMessage("["..PIG["RaidRecord"]["Raidinfo"][x][xx][5].."]-"..PIG["RaidRecord"]["Raidinfo"][x][xx][4].."-支出："..PIG["RaidRecord"]["Raidinfo"][x][xx][6].."G", RaidR_UI.xuanzhongChat, nil);
+		for x=1,#PIGA["RaidRecord"]["Raidinfo"] do
+			for xx=1,#PIGA["RaidRecord"]["Raidinfo"][x] do
+				if PIGA["RaidRecord"]["Raidinfo"][x][xx][5]=="治疗补助" then
+					SendChatMessage("["..PIGA["RaidRecord"]["Raidinfo"][x][xx][5].."]-"..PIGA["RaidRecord"]["Raidinfo"][x][xx][4].."-支出："..PIGA["RaidRecord"]["Raidinfo"][x][xx][6].."G", RaidR_UI.xuanzhongChat, nil);
 				end
 			end
 		end
@@ -612,10 +612,10 @@ local function ADD_buzhu()
 	 		local shangjiFF=shangjiF:GetParent()
 			local bianjiName=shangjiFF.name:GetText();
 	 		for i=1, 8 do
-				if #PIG["RaidRecord"]["Raidinfo"][i]>0 then
-					for ii=1, #PIG["RaidRecord"]["Raidinfo"][i] do
-						if PIG["RaidRecord"]["Raidinfo"][i][ii][4]==bianjiName then
-							PIG["RaidRecord"]["Raidinfo"][i][ii][6]=Newbuzhu_N;
+				if #PIGA["RaidRecord"]["Raidinfo"][i]>0 then
+					for ii=1, #PIGA["RaidRecord"]["Raidinfo"][i] do
+						if PIGA["RaidRecord"]["Raidinfo"][i][ii][4]==bianjiName then
+							PIGA["RaidRecord"]["Raidinfo"][i][ii][6]=Newbuzhu_N;
 						end
 					end
 				end
@@ -672,10 +672,10 @@ local function ADD_buzhu()
 	 		local shangjiFF=shangjiF:GetParent()
 			local bianjiName=shangjiFF.name:GetText();
 	 		for i=1, 8 do
-				if #PIG["RaidRecord"]["Raidinfo"][i]>0 then
-					for ii=1, #PIG["RaidRecord"]["Raidinfo"][i] do
-						if PIG["RaidRecord"]["Raidinfo"][i][ii][4]==bianjiName then
-							PIG["RaidRecord"]["Raidinfo"][i][ii][6]=Newbuzhu_N;
+				if #PIGA["RaidRecord"]["Raidinfo"][i]>0 then
+					for ii=1, #PIGA["RaidRecord"]["Raidinfo"][i] do
+						if PIGA["RaidRecord"]["Raidinfo"][i][ii][4]==bianjiName then
+							PIGA["RaidRecord"]["Raidinfo"][i][ii][6]=Newbuzhu_N;
 						end
 					end
 				end

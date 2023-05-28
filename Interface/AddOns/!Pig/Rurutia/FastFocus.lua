@@ -106,7 +106,7 @@ local UnitFrame = {
 	ElvUF_Raid40Group8UnitButton5,
 }
 local function zhixingshezhiFocus(Frame)
-	local gonegnengKEY = PIG["Rurutia"]["FastFocusKEY"].."-type1"
+	local gonegnengKEY = PIGA["Rurutia"]["FastFocusKEY"].."-type1"
 	Frame:SetAttribute(gonegnengKEY,"macro")
 	Frame:SetAttribute("macrotext","/focus mouseover")
 end
@@ -129,7 +129,7 @@ Rurutiafun.SetKeyListName = {
 
 --清除
 function Rurutiafun.FastClearFocus_Open()
-	local gonegnengKEY = PIG["Rurutia"]["FastFocusKEY"].."-type1"
+	local gonegnengKEY = PIGA["Rurutia"]["FastFocusKEY"].."-type1"
 	FocusFrame:SetAttribute(gonegnengKEY,"macro")
 	FocusFrame:SetAttribute("macrotext","/clearfocus")
 end

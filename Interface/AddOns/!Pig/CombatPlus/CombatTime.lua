@@ -75,31 +75,31 @@ local function CZ_weizhi()
 	Update_Time(0)
 end
 local function SetBGHide()
-	if PIG["CombatPlus"]["CombatTime"]["Beijing"]==1 then
+	if PIGA["CombatPlus"]["CombatTime"]["Beijing"]==1 then
 		PIGCombatTime.bg:Show()
 		PIGCombatTime:SetBackdropColor(0, 0, 0, 0);
 		PIGCombatTime:SetBackdropBorderColor(0, 0, 0, 0);
-	elseif PIG["CombatPlus"]["CombatTime"]["Beijing"]==2 then
+	elseif PIGA["CombatPlus"]["CombatTime"]["Beijing"]==2 then
 		PIGCombatTime.bg:Hide()
 		local BackdropColor=Create.BackdropColor
 		local BackdropBorderColor=Create.BackdropBorderColor
 		PIGCombatTime:SetBackdropColor(BackdropColor[1], BackdropColor[2], BackdropColor[3], BackdropColor[4]);
 		PIGCombatTime:SetBackdropBorderColor(BackdropBorderColor[1], BackdropBorderColor[2], BackdropBorderColor[3], BackdropBorderColor[4]);
-	elseif PIG["CombatPlus"]["CombatTime"]["Beijing"]==3 then
+	elseif PIGA["CombatPlus"]["CombatTime"]["Beijing"]==3 then
 		PIGCombatTime.bg:Hide()
 		PIGCombatTime:SetBackdropColor(0, 0, 0, 0);
 		PIGCombatTime:SetBackdropBorderColor(0, 0, 0, 0);
 	end
 end
 local function SetLock()
-	if PIG["CombatPlus"]["CombatTime"]["Lock"] then
+	if PIGA["CombatPlus"]["CombatTime"]["Lock"] then
 		PIGCombatTime:RegisterForDrag("")
 	else
 		PIGCombatTime:RegisterForDrag("LeftButton")
 	end
 end
 function CombatPlusfun.CombatTime()
-	if not PIG["CombatPlus"]["CombatTime"]["Open"] then return end
+	if not PIGA["CombatPlus"]["CombatTime"]["Open"] then return end
 	if PIGCombatTime.yizairu then return end
 	PIGCombatTime:SetFrameStrata("LOW")
 	PIGCombatTime:Show()
@@ -111,17 +111,17 @@ function CombatPlusfun.CombatTime()
 	PIGCombatTime.bg:SetPoint("TOPLEFT",PIGCombatTime,"TOPLEFT",-8,4);
 	PIGCombatTime.bg:SetPoint("BOTTOMRIGHT",PIGCombatTime,"BOTTOMRIGHT",8,-4);
 	PIGCombatTime.bg:SetAlpha(0.6);
-	PIGCombatTime:SetScale(PIG["CombatPlus"]["CombatTime"]["Scale"])
+	PIGCombatTime:SetScale(PIGA["CombatPlus"]["CombatTime"]["Scale"])
 	SetBGHide()
 	SetLock()
 	PIGCombatTime.line = PIGLine(PIGCombatTime,"C")
 	PIGCombatTime.line:SetAlpha(0.3)
 	PIGCombatTime.line:Hide()
 
-	PIGCombatTime.T0 = PIGFontString(PIGCombatTime,{"RIGHT",PIGCombatTime,"CENTER",-8,0},"00:00",PIG["CombatPlus"]["CombatTime"]["Miaobian"],16)
+	PIGCombatTime.T0 = PIGFontString(PIGCombatTime,{"RIGHT",PIGCombatTime,"CENTER",-8,0},"00:00",PIGA["CombatPlus"]["CombatTime"]["Miaobian"],16)
 	PIGCombatTime.T0:SetTextColor(0, 1, 0, 0.8);
 	PIGCombatTime.T0:Hide()
-	PIGCombatTime.T1 = PIGFontString(PIGCombatTime,{"RIGHT",PIGCombatTime,"CENTER",-8,0},"00:00",PIG["CombatPlus"]["CombatTime"]["Miaobian"],16)
+	PIGCombatTime.T1 = PIGFontString(PIGCombatTime,{"RIGHT",PIGCombatTime,"CENTER",-8,0},"00:00",PIGA["CombatPlus"]["CombatTime"]["Miaobian"],16)
 	PIGCombatTime.T1:SetTextColor(0, 1, 0, 0.8);
 	PIGEnter(PIGCombatTime,"左键拖动,右键重置计时")
 
@@ -174,9 +174,9 @@ CombatPlusF.Open:SetScript("OnClick", function (self)
 	if self:GetChecked() then
 		CombatPlusfun.CombatTime()
 		CombatPlusF.SetF:Show()
-		PIG["CombatPlus"]["CombatTime"]["Open"]=true;
+		PIGA["CombatPlus"]["CombatTime"]["Open"]=true;
 	else
-		PIG["CombatPlus"]["CombatTime"]["Open"]=false;
+		PIGA["CombatPlus"]["CombatTime"]["Open"]=false;
 		CombatPlusF.SetF:Hide()
 		Pig_Options_RLtishi_UI:Show()
 	end
@@ -189,9 +189,9 @@ CombatPlusF.SetF:SetPoint("BOTTOMRIGHT",CombatPlusF,"BOTTOMRIGHT",0,0);
 CombatPlusF.SetF.Lock =PIGCheckbutton_R(CombatPlusF.SetF,{"锁定位置","锁定战斗时间位置，使其无法移动"})
 CombatPlusF.SetF.Lock:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["CombatPlus"]["CombatTime"]["Lock"]=true;
+		PIGA["CombatPlus"]["CombatTime"]["Lock"]=true;
 	else
-		PIG["CombatPlus"]["CombatTime"]["Lock"]=false;
+		PIGA["CombatPlus"]["CombatTime"]["Lock"]=false;
 	end
 	SetLock()
 end);
@@ -208,13 +208,13 @@ function CombatPlusF.SetF.Miaobian:PIGDownMenu_Update_But(self)
 	info.func = self.PIGDownMenu_SetValue
 	for i=1,#FontMiaobiaoList,1 do
 	    info.text, info.arg1 = FontMiaobiaoList[i], FontMiaobiaoList[i]
-	    info.checked = FontMiaobiaoList[i]==PIG["CombatPlus"]["CombatTime"]["Miaobian"]
+	    info.checked = FontMiaobiaoList[i]==PIGA["CombatPlus"]["CombatTime"]["Miaobian"]
 		CombatPlusF.SetF.Miaobian:PIGDownMenu_AddButton(info)
 	end 
 end
 function CombatPlusF.SetF.Miaobian:PIGDownMenu_SetValue(value,arg1,arg2)
 	CombatPlusF.SetF.Miaobian:PIGDownMenu_SetText(value)
-	PIG["CombatPlus"]["CombatTime"]["Miaobian"]=arg1
+	PIGA["CombatPlus"]["CombatTime"]["Miaobian"]=arg1
 	local ziti,zihao = PIGCombatTime.T0:GetFont()
 	PIGCombatTime.T0:SetFont(ziti,zihao, arg1)
 	PIGCombatTime.T1:SetFont(ziti,zihao, arg1)
@@ -229,13 +229,13 @@ function CombatPlusF.SetF.Beijing:PIGDownMenu_Update_But(self)
 	info.func = self.PIGDownMenu_SetValue
 	for i=1,#BGList,1 do
 	    info.text, info.arg1 = BGList[i], i
-	    info.checked = i==PIG["CombatPlus"]["CombatTime"]["Beijing"]
+	    info.checked = i==PIGA["CombatPlus"]["CombatTime"]["Beijing"]
 		CombatPlusF.SetF.Beijing:PIGDownMenu_AddButton(info)
 	end 
 end
 function CombatPlusF.SetF.Beijing:PIGDownMenu_SetValue(value,arg1,arg2)
 	CombatPlusF.SetF.Beijing:PIGDownMenu_SetText(value)
-	PIG["CombatPlus"]["CombatTime"]["Beijing"]=arg1
+	PIGA["CombatPlus"]["CombatTime"]["Beijing"]=arg1
 	SetBGHide()
 	PIGCloseDropDownMenus()
 end
@@ -244,15 +244,15 @@ CombatPlusF.SetF.Slider = PIGSlider(CombatPlusF.SetF,{"TOPLEFT",CombatPlusF.SetF
 CombatPlusF.SetF.Slider.T = PIGFontString(CombatPlusF.SetF.Slider,{"RIGHT",CombatPlusF.SetF.Slider,"LEFT",-10,0},"缩放")
 CombatPlusF.SetF.Slider:SetScript("OnValueChanged", function(self)
 	local Value = (floor(self:GetValue()*10+0.5))/10
-	PIG["CombatPlus"]["CombatTime"]["Scale"]=Value;
+	PIGA["CombatPlus"]["CombatTime"]["Scale"]=Value;
 	self.Text:SetText(Value);
 	PIGCombatTime:SetScale(Value)
 end)
 --
 CombatPlusF:HookScript("OnShow", function (self)
-	self.Open:SetChecked(PIG["CombatPlus"]["CombatTime"]["Open"]);
-	self.SetF.Lock:SetChecked(PIG["CombatPlus"]["CombatTime"]["Lock"]);
-	self.SetF.Miaobian:PIGDownMenu_SetText(PIG["CombatPlus"]["CombatTime"]["Miaobian"])
-	self.SetF.Beijing:PIGDownMenu_SetText(BGList[PIG["CombatPlus"]["CombatTime"]["Beijing"]])
-	self.SetF.Slider:SetValue(PIG["CombatPlus"]["CombatTime"]["Scale"]);
+	self.Open:SetChecked(PIGA["CombatPlus"]["CombatTime"]["Open"]);
+	self.SetF.Lock:SetChecked(PIGA["CombatPlus"]["CombatTime"]["Lock"]);
+	self.SetF.Miaobian:PIGDownMenu_SetText(PIGA["CombatPlus"]["CombatTime"]["Miaobian"])
+	self.SetF.Beijing:PIGDownMenu_SetText(BGList[PIGA["CombatPlus"]["CombatTime"]["Beijing"]])
+	self.SetF.Slider:SetValue(PIGA["CombatPlus"]["CombatTime"]["Scale"]);
 end);

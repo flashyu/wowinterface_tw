@@ -50,8 +50,8 @@ Version_tishi:RegisterEvent("CHAT_MSG_ADDON");
 Version_tishi:RegisterEvent("PLAYER_LOGIN");            
 Version_tishi:SetScript("OnEvent",function(self, event, arg1, arg2, arg3, arg4, arg5)
 	if event=="PLAYER_LOGIN" then
-		if PIG["NEW_Version"] then
-			if PIG["NEW_Version"]>benji_banbenhaoV then
+		if PIGA["NEW_Version"] then
+			if PIGA["NEW_Version"]>benji_banbenhaoV then
 				self.yiyouzuixin=true;
 				PIG_print(L["ABOUT_UPDATETIPS"])
 			end
@@ -86,7 +86,7 @@ Version_tishi:SetScript("OnEvent",function(self, event, arg1, arg2, arg3, arg4, 
 						if NewBanben>benji_banbenhaoV then
 							self.yiyouzuixin=true;
 							PIG_print(L["ABOUT_UPDATETIPS"])
-							PIG["NEW_Version"]=NewBanben					
+							PIGA["NEW_Version"]=NewBanben					
 						end	
 					end
 				end

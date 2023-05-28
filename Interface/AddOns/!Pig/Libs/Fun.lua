@@ -52,8 +52,8 @@ end
 --获取所带副本级别单价文本
 function Fun.Get_LvDanjiaTxt(MsgNr)
 	local MsgNr = ""
-	local fbName=PIG_Per.daiben.fubenName
-	local danjiaList=PIG_Per.daiben.LV_danjia[fbName]
+	local fbName=PIG_PerA["daiben"]["fubenName"]
+	local danjiaList=PIG_PerA["daiben"]["LV_danjia"][fbName]
 	for id = 1, 4, 1 do
 		local kaishiLV =danjiaList[id][1]
 		local jieshuLV =danjiaList[id][2]

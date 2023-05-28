@@ -1,8 +1,8 @@
 <Ui>
 	<Script file="Options.lua" />
 	<Script file="UI.lua" />
-<!-- 	<Script file="Item.lua" />
-	<Script file="Buzhu.lua" />
+	<Script file="Item.lua" />
+<!-- 	<Script file="Buzhu.lua" />
 	<Script file="Fakuan.lua" />
 	<Script file="Jiangli.lua" />
 	<Script file="RaidInfo.lua" />

@@ -17,10 +17,10 @@ local buticon=136058
 function QuickButUI.FastOpen() end
 function CommonFun.FastOpen()
 	local fujiF,fujiTabBut=PIGOptionsList_R(AutoSellBuy_UI.F,"开",60,"Left")
-	CommonFun.ADDScroll(fujiF,"开启","Open",18,PIG["AutoSellBuy"]["Open_List"],{false,"AutoSellBuy","Open_List"})
+	CommonFun.ADDScroll(fujiF,"开启","Open",18,PIGA["AutoSellBuy"]["Open_List"],{false,"AutoSellBuy","Open_List"})
 	---
 	function QuickButUI.FastOpen()
-		if PIG["QuickBut"]["Open"] and PIG["AutoSellBuy"]["Open"] and PIG["AutoSellBuy"]["Open_QkBut"] then
+		if PIGA["QuickBut"]["Open"] and PIGA["AutoSellBuy"]["Open"] and PIGA["AutoSellBuy"]["Open_QkBut"] then
 			local QkButUI = "QkBut_FastOpen"
 			if _G[QkButUI] then return end
 			local QuickTooltip = "左击-|cff00FFFF开启指定物品|r\n右击-|cff00FFFF打开"..CommonFun.GnName.."|r"
@@ -31,16 +31,18 @@ function CommonFun.FastOpen()
 					if InCombatLockdown() then
 						PIG_print("请在脱战后使用")
 					else
-						local shujuy =PIG["AutoSellBuy"]["Open_List"]
+						local shujuy =PIGA["AutoSellBuy"]["Open_List"]
 						if #shujuy>0 then
 							for bag=0,4 do			
-								local xx=GetContainerNumSlots(bag)
-								for k=1,xx do	
+								local bganum=GetContainerNumSlots(bag)
+								for k=1,bganum do	
 									local itemLink = GetContainerItemLink(bag, k);
-									for i=1,#shujuy do
-										if itemLink==shujuy[i][2] then		
-											self:SetAttribute("item", itemLink)
-											return
+									if itemLink then
+										for i=1,#shujuy do
+											if itemLink==shujuy[i][2] then
+												self:SetAttribute("item", itemLink)
+												return
+											end
 										end
 									end
 								end
@@ -67,11 +69,11 @@ function CommonFun.FastOpen()
 	fujiF.QkBut = PIGCheckbutton(fujiF,{"TOPLEFT",fujiF,"TOPLEFT",10,-6},{"添加到功能动作条", "在功能动作条增加一个快捷使用按钮"})
 	fujiF.QkBut:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["AutoSellBuy"]["Open_QkBut"]=true;
+			PIGA["AutoSellBuy"]["Open_QkBut"]=true;
 			QuickButUI.FastOpen()
 			self.RL:Hide()
 		else
-			PIG["AutoSellBuy"]["Open_QkBut"]=false;
+			PIGA["AutoSellBuy"]["Open_QkBut"]=false;
 			self.RL:Show()
 		end
 	end);
@@ -80,7 +82,7 @@ function CommonFun.FastOpen()
 	fujiF.QkBut.RL:SetScript("OnClick", function (self)
 		ReloadUI()
 	end)
-	if PIG["AutoSellBuy"]["Open_QkBut"] then
+	if PIGA["AutoSellBuy"]["Open_QkBut"] then
 		fujiF.QkBut:SetChecked(true)
 	end
 	--

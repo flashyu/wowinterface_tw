@@ -31,10 +31,10 @@ FramePlustabbut:Selected()
 FramePlusF.BuffTime = PIGCheckbutton_R(FramePlusF,{"精确BUFF时间","精确显示自身BUFF/DEBUFF时间"})
 FramePlusF.BuffTime:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["FramePlus"]["BuffTime"]=true;
+		PIGA["FramePlus"]["BuffTime"]=true;
 		FramePlusfun.BuffTime()
 	else
-		PIG["FramePlus"]["BuffTime"]=false
+		PIGA["FramePlus"]["BuffTime"]=false
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
@@ -42,10 +42,10 @@ end);
 FramePlusF.Skill_QKbut = PIGCheckbutton_R(FramePlusF,{"专业面板快速切换按钮","在专业界面显示便捷切换专业按钮"})
 FramePlusF.Skill_QKbut:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["FramePlus"]["Skill_QKbut"]=true;
+		PIGA["FramePlus"]["Skill_QKbut"]=true;
 		FramePlusfun.Skill_QKbut()
 	else
-		PIG["FramePlus"]["Skill_QKbut"]=false
+		PIGA["FramePlus"]["Skill_QKbut"]=false
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
@@ -59,10 +59,10 @@ if tocversion<100000 then
 	end
 	FramePlusF.Quest:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["FramePlus"]["Quest"]=true;
+			PIGA["FramePlus"]["Quest"]=true;
 			FramePlusfun.Quest()
 		else
-			PIG["FramePlus"]["Quest"]=false
+			PIGA["FramePlus"]["Quest"]=false
 			Pig_Options_RLtishi_UI:Show()
 		end
 	end);
@@ -70,10 +70,10 @@ if tocversion<100000 then
 	FramePlusF.Skill = PIGCheckbutton_R(FramePlusF,{"专业界面扩展","扩展专业技能界面为两列；左边配方列表，右边配方详情"})
 	FramePlusF.Skill:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["FramePlus"]["Skill"]=true;
+			PIGA["FramePlus"]["Skill"]=true;
 			FramePlusfun.Skill()
 		else
-			PIG["FramePlus"]["Skill"]=false
+			PIGA["FramePlus"]["Skill"]=false
 			Pig_Options_RLtishi_UI:Show()
 		end
 	end)
@@ -86,10 +86,10 @@ if tocversion<100000 then
 	end
 	FramePlusF.Talent:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["FramePlus"]["Talent"]=true;
+			PIGA["FramePlus"]["Talent"]=true;
 			FramePlusfun.Talent()
 		else
-			PIG["FramePlus"]["Talent"]=false
+			PIGA["FramePlus"]["Talent"]=false
 			Pig_Options_RLtishi_UI:Show()
 		end
 	end)
@@ -98,10 +98,10 @@ if tocversion<100000 then
 		FramePlusF.Zhuizong = PIGCheckbutton_R(FramePlusF,{"整合追踪技能",tooltip})
 		FramePlusF.Zhuizong:SetScript("OnClick", function (self)
 			if self:GetChecked() then
-				PIG["FramePlus"]["Zhuizong"]=true
+				PIGA["FramePlus"]["Zhuizong"]=true
 				FramePlusfun.Zhuizong()
 			else
-				PIG["FramePlus"]["Zhuizong"]=false
+				PIGA["FramePlus"]["Zhuizong"]=false
 				Pig_Options_RLtishi_UI:Show()
 			end
 		end)
@@ -111,10 +111,10 @@ end
 FramePlusF.yidongUI = PIGCheckbutton_R(FramePlusF,{"解锁系统界面","解锁系统的角色/法术书/天赋/任务/好友/专业/附魔界面，使其可以自由移动"})
 FramePlusF.yidongUI:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["FramePlus"]["yidongUI"]=true;
+		PIGA["FramePlus"]["yidongUI"]=true;
 		FramePlusfun.yidongUI()
 	else
-		PIG["FramePlus"]["yidongUI"]=false
+		PIGA["FramePlus"]["yidongUI"]=false
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
@@ -128,50 +128,50 @@ CharacterFFF.biaoti = PIGFontString(CharacterFFF,{"TOPLEFT", Characterline, "BOT
 CharacterFFF.Character_xiuliG = PIGCheckbutton_R(CharacterFFF,{"显示修理费","角色面板显示修理费用"})
 CharacterFFF.Character_xiuliG:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["FramePlus"]["Character_xiuliG"]=true;
+		PIGA["FramePlus"]["Character_xiuliG"]=true;
 		FramePlusfun.Character_xiuliG()
 	else
-		PIG["FramePlus"]["Character_xiuliG"]=false
+		PIGA["FramePlus"]["Character_xiuliG"]=false
 		Pig_Options_RLtishi_UI:Show()
 	end
 end)
 CharacterFFF.Character_naijiu = PIGCheckbutton_R(CharacterFFF,{"显示装备耐久","角色面板显示装备耐久剩余值"})
 CharacterFFF.Character_naijiu:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["FramePlus"]["Character_naijiu"]=true;
+		PIGA["FramePlus"]["Character_naijiu"]=true;
 		FramePlusfun.Character_ADD()
 	else
-		PIG["FramePlus"]["Character_naijiu"]=false
+		PIGA["FramePlus"]["Character_naijiu"]=false
 		Pig_Options_RLtishi_UI:Show()
 	end
 end)
 CharacterFFF.Character_ItemLevel = PIGCheckbutton_R(CharacterFFF,{"显示装等","显示装备等级，背包银行物品需要显示装等请在背包内设置"})
 CharacterFFF.Character_ItemLevel:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["FramePlus"]["Character_ItemLevel"]=true
+		PIGA["FramePlus"]["Character_ItemLevel"]=true
 		FramePlusfun.Character_ADD()
 	else
-		PIG["FramePlus"]["Character_ItemLevel"]=false
+		PIGA["FramePlus"]["Character_ItemLevel"]=false
 		Pig_Options_RLtishi_UI:Show()
 	end
 end)
 CharacterFFF.Character_ItemColor = PIGCheckbutton_R(CharacterFFF,{"根据品质染色装备边框","根据品质染色装备边框"})
 CharacterFFF.Character_ItemColor:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["FramePlus"]["Character_ItemColor"]=true
+		PIGA["FramePlus"]["Character_ItemColor"]=true
 		FramePlusfun.Character_ADD()
 	else
-		PIG["FramePlus"]["Character_ItemColor"]=false
+		PIGA["FramePlus"]["Character_ItemColor"]=false
 		Pig_Options_RLtishi_UI:Show()
 	end
 end)
 CharacterFFF.Character_ItemList = PIGCheckbutton_R(CharacterFFF,{"显示装备列表","在角色信息界面右侧显示装备列表"})
 CharacterFFF.Character_ItemList:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["FramePlus"]["Character_ItemList"]=true
+		PIGA["FramePlus"]["Character_ItemList"]=true
 		FramePlusfun.Character_ADD()
 	else
-		PIG["FramePlus"]["Character_ItemList"]=false
+		PIGA["FramePlus"]["Character_ItemList"]=false
 		Pig_Options_RLtishi_UI:Show()
 	end
 end)
@@ -179,10 +179,10 @@ if tocversion<40000 then
 	CharacterFFF.Character_Mingzhong = PIGCheckbutton_R(CharacterFFF,{"显示命中说明","角色信息面板显示命中说明"})
 	CharacterFFF.Character_Mingzhong:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["FramePlus"]["Character_Mingzhong"]=true
+			PIGA["FramePlus"]["Character_Mingzhong"]=true
 			FramePlusfun.Character_Mingzhong()
 		else
-			PIG["FramePlus"]["Character_Mingzhong"]=false
+			PIGA["FramePlus"]["Character_Mingzhong"]=false
 			Pig_Options_RLtishi_UI:Show()
 		end
 	end)
@@ -191,35 +191,35 @@ if tocversion<20000 then
 	CharacterFFF.Character_Shuxing = PIGCheckbutton_R(CharacterFFF,{"显示人物属性","角色面板显示人物属性"})
 	CharacterFFF.Character_Shuxing:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["FramePlus"]["Character_Shuxing"]=true
+			PIGA["FramePlus"]["Character_Shuxing"]=true
 			FramePlusfun.Character_Shuxing()
 		else
-			PIG["FramePlus"]["Character_Shuxing"]=false
+			PIGA["FramePlus"]["Character_Shuxing"]=false
 			Pig_Options_RLtishi_UI:Show()
 		end
 	end)
 end
 FramePlusF:HookScript("OnShow", function(self)
-	self.BuffTime:SetChecked(PIG["FramePlus"]["BuffTime"])
-	self.Skill_QKbut:SetChecked(PIG["FramePlus"]["Skill_QKbut"])
+	self.BuffTime:SetChecked(PIGA["FramePlus"]["BuffTime"])
+	self.Skill_QKbut:SetChecked(PIGA["FramePlus"]["Skill_QKbut"])
 	if tocversion<100000 then
-		self.Quest:SetChecked(PIG["FramePlus"]["Quest"])
-		self.Skill:SetChecked(PIG["FramePlus"]["Skill"])
-		self.Talent:SetChecked(PIG["FramePlus"]["Talent"])
+		self.Quest:SetChecked(PIGA["FramePlus"]["Quest"])
+		self.Skill:SetChecked(PIGA["FramePlus"]["Skill"])
+		self.Talent:SetChecked(PIGA["FramePlus"]["Talent"])
 	end
-	self.yidongUI:SetChecked(PIG["FramePlus"]["yidongUI"])
+	self.yidongUI:SetChecked(PIGA["FramePlus"]["yidongUI"])
 	
-	CharacterFFF.Character_xiuliG:SetChecked(PIG["FramePlus"]["Character_xiuliG"])
-	CharacterFFF.Character_naijiu:SetChecked(PIG["FramePlus"]["Character_naijiu"])
-	CharacterFFF.Character_ItemLevel:SetChecked(PIG["FramePlus"]["Character_ItemLevel"])
-	CharacterFFF.Character_ItemColor:SetChecked(PIG["FramePlus"]["Character_ItemColor"])
-	CharacterFFF.Character_ItemList:SetChecked(PIG["FramePlus"]["Character_ItemList"])
+	CharacterFFF.Character_xiuliG:SetChecked(PIGA["FramePlus"]["Character_xiuliG"])
+	CharacterFFF.Character_naijiu:SetChecked(PIGA["FramePlus"]["Character_naijiu"])
+	CharacterFFF.Character_ItemLevel:SetChecked(PIGA["FramePlus"]["Character_ItemLevel"])
+	CharacterFFF.Character_ItemColor:SetChecked(PIGA["FramePlus"]["Character_ItemColor"])
+	CharacterFFF.Character_ItemList:SetChecked(PIGA["FramePlus"]["Character_ItemList"])
 	if tocversion<40000 then
-		CharacterFFF.Character_Mingzhong:SetChecked(PIG["FramePlus"]["Character_Mingzhong"])
+		CharacterFFF.Character_Mingzhong:SetChecked(PIGA["FramePlus"]["Character_Mingzhong"])
 	end
 	if tocversion<20000 then
-		CharacterFFF.Character_Shuxing:SetChecked(PIG["FramePlus"]["Character_Shuxing"])
-		self.Zhuizong:SetChecked(PIG["FramePlus"]["Zhuizong"])
+		CharacterFFF.Character_Shuxing:SetChecked(PIGA["FramePlus"]["Character_Shuxing"])
+		self.Zhuizong:SetChecked(PIGA["FramePlus"]["Zhuizong"])
 	end
 end)
 --
@@ -231,35 +231,35 @@ end
 TooltipF.ItemLevel = PIGCheckbutton_R(TooltipF,ItemLeveltishi)
 TooltipF.ItemLevel:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Tooltip"]["ItemLevel"]=true;			
+		PIGA["Tooltip"]["ItemLevel"]=true;			
 	else
-		PIG["Tooltip"]["ItemLevel"]=false;
+		PIGA["Tooltip"]["ItemLevel"]=false;
 	end
 end);
 
 TooltipF.SpellID = PIGCheckbutton_R(TooltipF,{"显示技能ID/BUFF来源","在鼠标提示上显示技能ID/BUFF来源"})
 TooltipF.SpellID:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Tooltip"]["SpellID"]=true;			
+		PIGA["Tooltip"]["SpellID"]=true;			
 	else
-		PIG["Tooltip"]["SpellID"]=false;
+		PIGA["Tooltip"]["SpellID"]=false;
 	end
 end);
 if tocversion<20000 then
 	TooltipF.ItemSell = PIGCheckbutton_R(TooltipF,{"显示物品售价","在鼠标提示上显示物品售价"})
 	TooltipF.ItemSell:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["Tooltip"]["ItemSell"]=true;			
+			PIGA["Tooltip"]["ItemSell"]=true;			
 		else
-			PIG["Tooltip"]["ItemSell"]=false;
+			PIGA["Tooltip"]["ItemSell"]=false;
 		end
 	end);
 end
 TooltipF:HookScript("OnShow", function(self)
-	self.ItemLevel:SetChecked(PIG["Tooltip"]["ItemLevel"])
-	self.SpellID:SetChecked(PIG["Tooltip"]["SpellID"])
+	self.ItemLevel:SetChecked(PIGA["Tooltip"]["ItemLevel"])
+	self.SpellID:SetChecked(PIGA["Tooltip"]["SpellID"])
 	if tocversion<20000 then
-		self.ItemSell:SetChecked(PIG["Tooltip"]["ItemSell"])
+		self.ItemSell:SetChecked(PIGA["Tooltip"]["ItemSell"])
 	end
 end)
 --==================================

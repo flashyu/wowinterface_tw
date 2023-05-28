@@ -17,7 +17,7 @@ local function MouseXY()
 	return cx, cy
 end
 function Mapfun.WorldMap_XY()
-	if not PIG["Map"]["WorldMapXY"] then return end
+	if not PIGA["Map"]["WorldMapXY"] then return end
 	local zuobiaoXYFFF = CreateFrame("Frame", nil, WorldMapScrollChild,"BackdropTemplate");
 	zuobiaoXYFFF:SetSize(600,32);
 	zuobiaoXYFFF:SetPoint("BOTTOM",WorldMapScrollChild,"BOTTOM",0,0);

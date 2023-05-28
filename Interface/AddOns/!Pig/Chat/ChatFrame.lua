@@ -20,7 +20,7 @@ local fuFrame =PIGOptionsList_R(QuickChatfun.RTabFrame,L["CHAT_TABNAME4"],110)
 --=========================================================
 --聊天窗口可以移动到屏幕边缘
 local function Bianju()
-	if PIG["Chat"]["Frame"]["Bianju"] then
+	if PIGA["Chat"]["Frame"]["Bianju"] then
 		for i = 1, NUM_CHAT_WINDOWS do 
 			_G["ChatFrame"..i]:SetClampRectInsets(-35, 0, 0, 0) --可拖动至紧贴屏幕边缘 
 		end
@@ -29,15 +29,15 @@ end
 fuFrame.Bianju = PIGCheckbutton_R(fuFrame,{L["CHAT_BIANJU"],L["CHAT_BIANJUTIPS"]})
 fuFrame.Bianju:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Chat"]["Frame"]["Bianju"]=true;
+		PIGA["Chat"]["Frame"]["Bianju"]=true;
 		Bianju()
 	else
-		PIG["Chat"]["Frame"]["Bianju"]=false;
+		PIGA["Chat"]["Frame"]["Bianju"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 end);
 fuFrame:HookScript("OnShow", function (self)
-	self.Bianju:SetChecked(PIG["Chat"]["Frame"]["Bianju"])
+	self.Bianju:SetChecked(PIGA["Chat"]["Frame"]["Bianju"])
 end);
 --========================================
 fuFrame.zhuF = PIGFrame(fuFrame,{"TOP", fuFrame, "TOP", 0, -70},{fuFrame:GetWidth()-20, 140})
@@ -58,36 +58,36 @@ local function Enable_Disable(self,Booleans)
 	end
 end
 local function Zhu_Width_Height_XY()
-	fuFrame.zhuF.Width:SetChecked(PIG["Chat"]["Frame"]["Width"]);
-	fuFrame.zhuF.Height:SetChecked(PIG["Chat"]["Frame"]["Height"]);
-	fuFrame.zhuF.Point:SetChecked(PIG["Chat"]["Frame"]["Point"]);
-	Enable_Disable(fuFrame.zhuF.Width.Slider,PIG["Chat"]["Frame"]["Width"])
-	Enable_Disable(fuFrame.zhuF.Height.Slider,PIG["Chat"]["Frame"]["Height"])
-	Enable_Disable(fuFrame.zhuF.Point.Slider_X,PIG["Chat"]["Frame"]["Point"])
-	Enable_Disable(fuFrame.zhuF.Point.Slider_Y,PIG["Chat"]["Frame"]["Point"])
+	fuFrame.zhuF.Width:SetChecked(PIGA["Chat"]["Frame"]["Width"]);
+	fuFrame.zhuF.Height:SetChecked(PIGA["Chat"]["Frame"]["Height"]);
+	fuFrame.zhuF.Point:SetChecked(PIGA["Chat"]["Frame"]["Point"]);
+	Enable_Disable(fuFrame.zhuF.Width.Slider,PIGA["Chat"]["Frame"]["Width"])
+	Enable_Disable(fuFrame.zhuF.Height.Slider,PIGA["Chat"]["Frame"]["Height"])
+	Enable_Disable(fuFrame.zhuF.Point.Slider_X,PIGA["Chat"]["Frame"]["Point"])
+	Enable_Disable(fuFrame.zhuF.Point.Slider_Y,PIGA["Chat"]["Frame"]["Point"])
 end
 local function SetValueText()
-	if PIG["Chat"]["Frame"]["Width"] then
-		fuFrame.zhuF.Width.Slider:SetValue(PIG["Chat"]["Frame"]["Width_value"]);
-		fuFrame.zhuF.Width.Slider.Text:SetText(PIG["Chat"]["Frame"]["Width_value"]);
+	if PIGA["Chat"]["Frame"]["Width"] then
+		fuFrame.zhuF.Width.Slider:SetValue(PIGA["Chat"]["Frame"]["Width_value"]);
+		fuFrame.zhuF.Width.Slider.Text:SetText(PIGA["Chat"]["Frame"]["Width_value"]);
 	end
-	if PIG["Chat"]["Frame"]["Height"] then
-		fuFrame.zhuF.Height.Slider:SetValue(PIG["Chat"]["Frame"]["Height_value"]);
-		fuFrame.zhuF.Height.Slider.Text:SetText(PIG["Chat"]["Frame"]["Height_value"]);
+	if PIGA["Chat"]["Frame"]["Height"] then
+		fuFrame.zhuF.Height.Slider:SetValue(PIGA["Chat"]["Frame"]["Height_value"]);
+		fuFrame.zhuF.Height.Slider.Text:SetText(PIGA["Chat"]["Frame"]["Height_value"]);
 	end
-	if PIG["Chat"]["Frame"]["Point"] then
-		fuFrame.zhuF.Point.Slider_X:SetValue(PIG["Chat"]["Frame"]["Point_X"]);
-		fuFrame.zhuF.Point.Slider_X.Text:SetText("X:"..PIG["Chat"]["Frame"]["Point_X"]);
-		fuFrame.zhuF.Point.Slider_Y:SetValue(PIG["Chat"]["Frame"]["Point_Y"]);
-		fuFrame.zhuF.Point.Slider_Y.Text:SetText("Y:"..PIG["Chat"]["Frame"]["Point_Y"]);
+	if PIGA["Chat"]["Frame"]["Point"] then
+		fuFrame.zhuF.Point.Slider_X:SetValue(PIGA["Chat"]["Frame"]["Point_X"]);
+		fuFrame.zhuF.Point.Slider_X.Text:SetText("X:"..PIGA["Chat"]["Frame"]["Point_X"]);
+		fuFrame.zhuF.Point.Slider_Y:SetValue(PIGA["Chat"]["Frame"]["Point_Y"]);
+		fuFrame.zhuF.Point.Slider_Y.Text:SetText("Y:"..PIGA["Chat"]["Frame"]["Point_Y"]);
 	end
 end
 fuFrame.zhuF.Width = PIGCheckbutton(fuFrame.zhuF,{"TOPLEFT",fuFrame.zhuF,"TOPLEFT",10,-30},{L["CHAT_ZHUCHATFW"],L["CHAT_ZHUCHATFWTIPS"]})
 fuFrame.zhuF.Width:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Chat"]["Frame"]["Width"]=true
+		PIGA["Chat"]["Frame"]["Width"]=true
 	else
-		PIG["Chat"]["Frame"]["Width"]=false
+		PIGA["Chat"]["Frame"]["Width"]=false
 		Pig_Options_RLtishi_UI:Show()
 	end
 	Zhu_Width_Height_XY()
@@ -108,16 +108,16 @@ fuFrame.zhuF.Width.Slider:SetScript("OnMouseWheel", function(self, arg1)
 end)
 fuFrame.zhuF.Width.Slider:SetScript("OnValueChanged", function(self)
 	local valxxx = self:GetValue()
-	PIG["Chat"]["Frame"]["Width_value"]=valxxx;
-	ChatFrame1:SetWidth(PIG["Chat"]["Frame"]["Width_value"]);
+	PIGA["Chat"]["Frame"]["Width_value"]=valxxx;
+	ChatFrame1:SetWidth(PIGA["Chat"]["Frame"]["Width_value"]);
 end)
 --设置主聊天窗口高度
 fuFrame.zhuF.Height = PIGCheckbutton(fuFrame.zhuF,{"LEFT",fuFrame.zhuF.Width.Slider,"RIGHT",100,0},{L["CHAT_ZHUCHATFH"],L["CHAT_ZHUCHATFHTIPS"]})
 fuFrame.zhuF.Height:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Chat"]["Frame"]["Height"]=true;
+		PIGA["Chat"]["Frame"]["Height"]=true;
 	else
-		PIG["Chat"]["Frame"]["Height"]=false;
+		PIGA["Chat"]["Frame"]["Height"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 	Zhu_Width_Height_XY()
@@ -139,12 +139,12 @@ fuFrame.zhuF.Height.Slider:SetScript("OnMouseWheel", function(self, arg1)
 end)
 fuFrame.zhuF.Height.Slider:SetScript("OnValueChanged", function(self)
 	local valxxx = self:GetValue()
-	PIG["Chat"]["Frame"]["Height_value"]=valxxx;
-	ChatFrame1:SetHeight(PIG["Chat"]["Frame"]["Height_value"]);
+	PIGA["Chat"]["Frame"]["Height_value"]=valxxx;
+	ChatFrame1:SetHeight(PIGA["Chat"]["Frame"]["Height_value"]);
 end)
 --主聊天窗口X位置=======================
 local function SetPointXY()
-	local XXX,YYY = PIG["Chat"]["Frame"]["Point_X"],PIG["Chat"]["Frame"]["Point_Y"]
+	local XXX,YYY = PIGA["Chat"]["Frame"]["Point_X"],PIGA["Chat"]["Frame"]["Point_Y"]
 	fuFrame.zhuF.Point.Slider_X.Text:SetText("X:"..XXX);
 	fuFrame.zhuF.Point.Slider_X:SetValue(XXX);
 	fuFrame.zhuF.Point.Slider_Y.Text:SetText("Y:"..YYY);
@@ -161,9 +161,9 @@ end
 fuFrame.zhuF.Point = PIGCheckbutton(fuFrame.zhuF,{"TOPLEFT",fuFrame.zhuF.Width,"BOTTOMLEFT",0,-20},{L["CHAT_ZHUCHATFXY"],L["CHAT_ZHUCHATFXYTIPS"]})
 fuFrame.zhuF.Point:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Chat"]["Frame"]["Point"]=true;
+		PIGA["Chat"]["Frame"]["Point"]=true;
 	else
-		PIG["Chat"]["Frame"]["Point"]=false;
+		PIGA["Chat"]["Frame"]["Point"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 	Zhu_Width_Height_XY()
@@ -184,7 +184,7 @@ fuFrame.zhuF.Point.Slider_X:SetScript("OnMouseWheel", function(self, arg1)
 end)
 fuFrame.zhuF.Point.Slider_X:SetScript("OnValueChanged", function(self)
 	local valxxx = self:GetValue()
-	PIG["Chat"]["Frame"]["Point_X"]=valxxx;
+	PIGA["Chat"]["Frame"]["Point_X"]=valxxx;
 	SetPointXY()
 end)
 local xiayiinfo = {0,floor(GetScreenHeight()),1}
@@ -202,7 +202,7 @@ fuFrame.zhuF.Point.Slider_Y:SetScript("OnMouseWheel", function(self, arg1)
 end)
 fuFrame.zhuF.Point.Slider_Y:SetScript("OnValueChanged", function(self)
 	local valxxx = self:GetValue()
-	PIG["Chat"]["Frame"]["Point_Y"]=valxxx;
+	PIGA["Chat"]["Frame"]["Point_Y"]=valxxx;
 	SetPointXY()
 end)
 ----
@@ -226,7 +226,7 @@ fuFrame.LOOTF.add = PIGButton(fuFrame.LOOTF,{"TOPLEFT",fuFrame.LOOTF,"TOPLEFT",4
 --重设窗口显示内容
 local function ShowChannelFun()
 	--综合
-	if fuFrame.Chatloot and PIG["Chat"]["Frame"]["ShowChannel"] then
+	if fuFrame.Chatloot and PIGA["Chat"]["Frame"]["ShowChannel"] then
 		local chatGroup1 = { "SYSTEM", "CHANNEL", "SAY", "EMOTE", "YELL", "WHISPER", "PARTY", "PARTY_LEADER", "RAID", "RAID_LEADER", "RAID_WARNING", "INSTANCE_CHAT", "INSTANCE_CHAT_LEADER", "GUILD", "OFFICER", "MONSTER_SAY", "MONSTER_YELL", "MONSTER_EMOTE", "MONSTER_WHISPER", "MONSTER_BOSS_EMOTE", "MONSTER_BOSS_WHISPER", "ERRORS", "AFK", "DND", "IGNORED", "BG_HORDE", "BG_ALLIANCE", "BG_NEUTRAL", "ACHIEVEMENT", "GUILD_ACHIEVEMENT", "BN_WHISPER", "BN_INLINE_TOAST_ALERT","TARGETICONS" }
 		ChatFrame_RemoveAllMessageGroups(DEFAULT_CHAT_FRAME)
 		for _, v in ipairs(chatGroup1) do
@@ -257,9 +257,9 @@ local tishims = {L["CHAT_LOOTFNRSET"],L["CHAT_LOOTFNRSETTIPS"]}
 fuFrame.LOOTF.ShowChannel = PIGCheckbutton(fuFrame.LOOTF,{"LEFT",fuFrame.LOOTF.add,"RIGHT",60,-2},tishims)
 fuFrame.LOOTF.ShowChannel:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Chat"]["Frame"]["ShowChannel"]=true;
+		PIGA["Chat"]["Frame"]["ShowChannel"]=true;
 	else
-		PIG["Chat"]["Frame"]["ShowChannel"]=false;
+		PIGA["Chat"]["Frame"]["ShowChannel"]=false;
 	end
 	ShowChannelFun()
 end);
@@ -342,19 +342,19 @@ local function LOOT_SetValueText()
 	LOOT_cunzai()
 	if fuFrame.Chatloot then
 		ShowChannelFun()
-		if PIG["Chat"]["Frame"]["Loot_Width"] then
-			fuFrame.LOOTF.Width.Slider.Text:SetText(PIG["Chat"]["Frame"]["Loot_Width_value"]);
-			fuFrame.LOOTF.Width.Slider:SetValue(PIG["Chat"]["Frame"]["Loot_Width_value"]);
+		if PIGA["Chat"]["Frame"]["Loot_Width"] then
+			fuFrame.LOOTF.Width.Slider.Text:SetText(PIGA["Chat"]["Frame"]["Loot_Width_value"]);
+			fuFrame.LOOTF.Width.Slider:SetValue(PIGA["Chat"]["Frame"]["Loot_Width_value"]);
 		end
-		if PIG["Chat"]["Frame"]["Loot_Height"] then
-			fuFrame.LOOTF.Height.Slider.Text:SetText(PIG["Chat"]["Frame"]["Loot_Height_value"]);
-			fuFrame.LOOTF.Height.Slider:SetValue(PIG["Chat"]["Frame"]["Loot_Height_value"]);
+		if PIGA["Chat"]["Frame"]["Loot_Height"] then
+			fuFrame.LOOTF.Height.Slider.Text:SetText(PIGA["Chat"]["Frame"]["Loot_Height_value"]);
+			fuFrame.LOOTF.Height.Slider:SetValue(PIGA["Chat"]["Frame"]["Loot_Height_value"]);
 		end
-		if PIG["Chat"]["Frame"]["Loot_Point"] then
-			fuFrame.LOOTF.Point.Slider_X.Text:SetText("X:"..PIG["Chat"]["Frame"]["Loot_Point_X"]);
-			fuFrame.LOOTF.Point.Slider_X:SetValue(PIG["Chat"]["Frame"]["Loot_Point_X"]);
-			fuFrame.LOOTF.Point.Slider_Y.Text:SetText("Y:"..PIG["Chat"]["Frame"]["Loot_Point_Y"]);
-			fuFrame.LOOTF.Point.Slider_Y:SetValue(PIG["Chat"]["Frame"]["Loot_Point_Y"]);
+		if PIGA["Chat"]["Frame"]["Loot_Point"] then
+			fuFrame.LOOTF.Point.Slider_X.Text:SetText("X:"..PIGA["Chat"]["Frame"]["Loot_Point_X"]);
+			fuFrame.LOOTF.Point.Slider_X:SetValue(PIGA["Chat"]["Frame"]["Loot_Point_X"]);
+			fuFrame.LOOTF.Point.Slider_Y.Text:SetText("Y:"..PIGA["Chat"]["Frame"]["Loot_Point_Y"]);
+			fuFrame.LOOTF.Point.Slider_Y:SetValue(PIGA["Chat"]["Frame"]["Loot_Point_Y"]);
 		end
 	else
 		if fuFrame.ChatlootNum<10 then
@@ -366,9 +366,9 @@ end
 fuFrame.LOOTF.Width = PIGCheckbutton(fuFrame.LOOTF,{"TOPLEFT",fuFrame.LOOTF,"TOPLEFT",10,-44},{L["CHAT_LOOTFW"],L["CHAT_LOOTFWTIPS"]})
 fuFrame.LOOTF.Width:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Chat"]["Frame"]["Loot_Width"]=true;	
+		PIGA["Chat"]["Frame"]["Loot_Width"]=true;	
 	else
-		PIG["Chat"]["Frame"]["Loot_Width"]=false;
+		PIGA["Chat"]["Frame"]["Loot_Width"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 	LOOT_Width_Heigh_Point_XY()
@@ -389,13 +389,13 @@ fuFrame.LOOTF.Width.Slider:SetScript("OnMouseWheel", function(self, arg1)
 end)
 fuFrame.LOOTF.Width.Slider:SetScript("OnValueChanged", function(self)
 	local valxxx = self:GetValue()
-	PIG["Chat"]["Frame"]["Loot_Width_value"]=valxxx;
+	PIGA["Chat"]["Frame"]["Loot_Width_value"]=valxxx;
 	if fuFrame.Chatloot then
-		if PIG["Chat"]["Frame"]["Loot_Width_value"]<50 then
+		if PIGA["Chat"]["Frame"]["Loot_Width_value"]<50 then
 			_G["ChatFrame"..fuFrame.ChatlootID]:SetClampRectInsets(-35, 0, 0, 0) --可拖动至紧贴屏幕边缘 
 		end
 		FCF_UnDockFrame(_G["ChatFrame"..fuFrame.ChatlootID]);
-		_G["ChatFrame"..fuFrame.ChatlootID]:SetWidth(PIG["Chat"]["Frame"]["Loot_Width_value"]);
+		_G["ChatFrame"..fuFrame.ChatlootID]:SetWidth(PIGA["Chat"]["Frame"]["Loot_Width_value"]);
 		FCF_UpdateButtonSide(_G["ChatFrame"..fuFrame.ChatlootID]);
 	end
 end)
@@ -403,9 +403,9 @@ end)
 fuFrame.LOOTF.Height = PIGCheckbutton(fuFrame.LOOTF,{"LEFT",fuFrame.LOOTF.Width.Slider,"RIGHT",100,0},{L["CHAT_LOOTFH"],L["CHAT_LOOTFHTIPS"]})
 fuFrame.LOOTF.Height:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Chat"]["Frame"]["Loot_Height"]=true;
+		PIGA["Chat"]["Frame"]["Loot_Height"]=true;
 	else
-		PIG["Chat"]["Frame"]["Loot_Height"]=false;
+		PIGA["Chat"]["Frame"]["Loot_Height"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 	LOOT_Width_Heigh_Point_XY()
@@ -427,10 +427,10 @@ fuFrame.LOOTF.Height.Slider:SetScript("OnMouseWheel", function(self, arg1)
 end)
 fuFrame.LOOTF.Height.Slider:SetScript("OnValueChanged", function(self)
 	local Hval = self:GetValue()
-	PIG["Chat"]["Frame"]["Loot_Height_value"]=Hval;
+	PIGA["Chat"]["Frame"]["Loot_Height_value"]=Hval;
 	if fuFrame.Chatloot then
 		FCF_UnDockFrame(_G["ChatFrame"..fuFrame.ChatlootID]);
-		_G["ChatFrame"..fuFrame.ChatlootID]:SetHeight(PIG["Chat"]["Frame"]["Loot_Height_value"]);
+		_G["ChatFrame"..fuFrame.ChatlootID]:SetHeight(PIGA["Chat"]["Frame"]["Loot_Height_value"]);
 		FCF_UpdateButtonSide(_G["ChatFrame"..fuFrame.ChatlootID]);
 	end
 end)
@@ -438,9 +438,9 @@ end)
 fuFrame.LOOTF.Point = PIGCheckbutton(fuFrame.LOOTF,{"TOPLEFT",fuFrame.LOOTF.Width,"BOTTOMLEFT",0,-20},{L["CHAT_LOOTFXY"],L["CHAT_LOOTFXYTIPS"]})
 fuFrame.LOOTF.Point:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Chat"]["Frame"]["Loot_Point"]=true;
+		PIGA["Chat"]["Frame"]["Loot_Point"]=true;
 	else
-		PIG["Chat"]["Frame"]["Loot_Point"]=false;
+		PIGA["Chat"]["Frame"]["Loot_Point"]=false;
 		Pig_Options_RLtishi_UI:Show()
 	end
 	LOOT_Width_Heigh_Point_XY()
@@ -460,12 +460,12 @@ end)
 local function Loot_Point_XY()
 	if fuFrame.Chatloot then
 		local fghh = _G["ChatFrame"..fuFrame.ChatlootID]
-		if PIG["Chat"]["Frame"]["Loot_Point_Y"]<50 then
+		if PIGA["Chat"]["Frame"]["Loot_Point_Y"]<50 then
 			fghh:SetClampRectInsets(-35, 0, 0, 0) --可拖动至紧贴屏幕边缘 
 		end
 		FCF_UnDockFrame(fghh);
 		fghh:ClearAllPoints();
-		fghh:SetPoint("BOTTOMRIGHT",UIParent,"BOTTOMRIGHT",-PIG["Chat"]["Frame"]["Loot_Point_X"],PIG["Chat"]["Frame"]["Loot_Point_Y"]);
+		fghh:SetPoint("BOTTOMRIGHT",UIParent,"BOTTOMRIGHT",-PIGA["Chat"]["Frame"]["Loot_Point_X"],PIGA["Chat"]["Frame"]["Loot_Point_Y"]);
 		_G["ChatFrame"..fuFrame.ChatlootID.."Tab"]:ClearAllPoints();
 		_G["ChatFrame"..fuFrame.ChatlootID.."Tab"]:SetPoint("BOTTOMLEFT", _G["ChatFrame"..fuFrame.ChatlootID.."Background"], "TOPLEFT", 2, 0);
 		FCF_UpdateButtonSide(fghh);--刷新按钮位置
@@ -473,7 +473,7 @@ local function Loot_Point_XY()
 end
 fuFrame.LOOTF.Point.Slider_X:SetScript("OnValueChanged", function(self)
 	local valxxx = self:GetValue()
-	PIG["Chat"]["Frame"]["Loot_Point_X"]=valxxx;
+	PIGA["Chat"]["Frame"]["Loot_Point_X"]=valxxx;
 	Loot_Point_XY()
 end)
 local xiayiinfo = {8,floor(GetScreenHeight()),1}
@@ -489,7 +489,7 @@ fuFrame.LOOTF.Point.Slider_Y:SetScript("OnMouseWheel", function(self, arg1)
 end)
 fuFrame.LOOTF.Point.Slider_Y:SetScript("OnValueChanged", function(self)
 	local valxxx = self:GetValue()
-	PIG["Chat"]["Frame"]["Loot_Point_Y"]=valxxx;
+	PIGA["Chat"]["Frame"]["Loot_Point_Y"]=valxxx;
 	Loot_Point_XY()
 end)
 --创建拾取聊天窗口
@@ -503,7 +503,7 @@ local function LootFame_ADD()
 	local chfff = _G["ChatFrame"..nEWid]
 	FCF_UnDockFrame(chfff);
 	chfff:ClearAllPoints();
-	chfff:SetPoint("BOTTOMRIGHT",UIParent,"BOTTOMRIGHT",-PIG["Chat"]["Frame"]["Loot_Point_X"],PIG["Chat"]["Frame"]["Loot_Point_Y"]);
+	chfff:SetPoint("BOTTOMRIGHT",UIParent,"BOTTOMRIGHT",-PIGA["Chat"]["Frame"]["Loot_Point_X"],PIGA["Chat"]["Frame"]["Loot_Point_Y"]);
 	_G["ChatFrame"..nEWid.."Tab"]:ClearAllPoints();
 	_G["ChatFrame"..nEWid.."Tab"]:SetPoint("BOTTOMLEFT", _G["ChatFrame"..nEWid.."Background"], "TOPLEFT", 2, 0);
 	FCF_UpdateButtonSide(chfff);--刷新按钮位置
@@ -516,10 +516,10 @@ end)
 ----
 fuFrame.LOOTF:SetScript("OnShow", function(self)
 	LOOT_Width_Heigh_Point_XY()
-	fuFrame.LOOTF.ShowChannel:SetChecked(PIG["Chat"]["Frame"]["ShowChannel"])
-	fuFrame.LOOTF.Width:SetChecked(PIG["Chat"]["Frame"]["Loot_Width"]);
-	fuFrame.LOOTF.Height:SetChecked(PIG["Chat"]["Frame"]["Loot_Height"]);
-	fuFrame.LOOTF.Point:SetChecked(PIG["Chat"]["Frame"]["Loot_Point"]);
+	fuFrame.LOOTF.ShowChannel:SetChecked(PIGA["Chat"]["Frame"]["ShowChannel"])
+	fuFrame.LOOTF.Width:SetChecked(PIGA["Chat"]["Frame"]["Loot_Width"]);
+	fuFrame.LOOTF.Height:SetChecked(PIGA["Chat"]["Frame"]["Loot_Height"]);
+	fuFrame.LOOTF.Point:SetChecked(PIGA["Chat"]["Frame"]["Loot_Point"]);
 end)
 ---重置聊天设置
 fuFrame.ReChatBut = PIGButton(fuFrame,{"BOTTOMLEFT",fuFrame,"BOTTOMLEFT",14,14},{120,24},L["CHAT_RECHATBUT"]);

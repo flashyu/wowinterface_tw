@@ -10,28 +10,28 @@ local CommonFun=addonTable.CommonFun
 function CommonFun.huoquhuizhangjiageG()
 	local marketPrice = C_WowTokenPublic.GetCurrentMarketPrice();
 	if marketPrice and marketPrice>0 then
-		local hzlishiGG = PIG.AHPlus.Tokens
+		local hzlishiGG = PIGA["AHPlus"]["Tokens"]
 		local hzlishiGGNum = #hzlishiGG
 		if hzlishiGGNum>0 then
 			if hzlishiGGNum>50 then
 				local kaishiwb = hzlishiGGNum-50
 				for i=kaishiwb,1,-1 do
-					table.remove(PIG.AHPlus.Tokens,i)
+					table.remove(PIGA["AHPlus"]["Tokens"],i)
 				end
 			end
-			local OldmarketPrice = PIG.AHPlus.Tokens[#PIG.AHPlus.Tokens][2] or 0
+			local OldmarketPrice = PIGA["AHPlus"]["Tokens"][#PIGA["AHPlus"]["Tokens"]][2] or 0
 			if OldmarketPrice~=marketPrice then
-				table.insert(PIG.AHPlus.Tokens,{GetServerTime(),marketPrice})
+				table.insert(PIGA["AHPlus"]["Tokens"],{GetServerTime(),marketPrice})
 			end
 		else
-			table.insert(PIG.AHPlus.Tokens,{GetServerTime(),marketPrice})
+			table.insert(PIGA["AHPlus"]["Tokens"],{GetServerTime(),marketPrice})
 		end
 	end
 end
 ----------------------------------
 local AuctionFramejiazai = CreateFrame("FRAME")
 AuctionFramejiazai:SetScript("OnEvent", function(self, event, arg1)
-	if PIG["AHPlus"]["Open"] then
+	if PIGA["AHPlus"]["Open"] then
 		if arg1 == "Blizzard_AuctionHouseUI" or arg1 == "Blizzard_AuctionUI" then
 			if tocversion<80000 then
 				CommonFun.AHPlus_Vanilla()
@@ -46,7 +46,7 @@ AuctionFramejiazai:SetScript("OnEvent", function(self, event, arg1)
 end)
 ------------
 function CommonFun.AHPlus()
-	if PIG["AHPlus"]["Open"] then
+	if PIGA["AHPlus"]["Open"] then
 		CommonFun.huoquhuizhangjiageG()
 		if IsAddOnLoaded("Blizzard_AuctionHouseUI") or IsAddOnLoaded("Blizzard_AuctionUI") then
 			if tocversion<80000 then
@@ -69,11 +69,11 @@ end
 CommonF.AHOpen =PIGCheckbutton(CommonF,{"TOPLEFT",AHPlusline,"TOPLEFT",20,-20},{"拍卖增强",tooltipAHOpen})
 CommonF.AHOpen:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["AHPlus"]["Open"]=true;
+		PIGA["AHPlus"]["Open"]=true;
 		CommonF.AHtooltip:Enable()
 		CommonFun.AHPlus()
 	else
-		PIG["AHPlus"]["Open"]=false;
+		PIGA["AHPlus"]["Open"]=false;
 		Pig_Options_RLtishi_UI:Show()
 		CommonF.AHtooltip:Disable()
 	end
@@ -81,9 +81,9 @@ end);
 CommonF.AHtooltip =PIGCheckbutton(CommonF,{"LEFT",CommonF.AHOpen,"RIGHT",180,0},{"鼠标提示拍卖价钱","鼠标提示拍卖价钱"})
 CommonF.AHtooltip:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["AHPlus"]["AHtooltip"]=true;
+		PIGA["AHPlus"]["AHtooltip"]=true;
 	else
-		PIG["AHPlus"]["AHtooltip"]=false;
+		PIGA["AHPlus"]["AHtooltip"]=false;
 	end
 end);
 ---
@@ -96,8 +96,8 @@ StaticPopupDialogs["CZAHZENGQIANGINFO"] = {
 	button1 = "确定",
 	button2 = "取消",
 	OnAccept = function()
-		PIG["AHPlus"]=addonTable.Default.AHPlus
-		PIG["AHPlus"]["Open"]=true
+		PIGA["AHPlus"]=addonTable.Default.AHPlus
+		PIGA["AHPlus"]["Open"]=true
 		ReloadUI()
 	end,
 	timeout = 0,
@@ -105,7 +105,7 @@ StaticPopupDialogs["CZAHZENGQIANGINFO"] = {
 	hideOnEscape = true,
 }
 CommonF:HookScript("OnShow", function(self)
-	self.AHOpen:SetChecked(PIG["AHPlus"]["Open"])
-	if not PIG["AHPlus"]["Open"] then CommonF.AHtooltip:Disable() end
-	self.AHtooltip:SetChecked(PIG["AHPlus"]["AHtooltip"])
+	self.AHOpen:SetChecked(PIGA["AHPlus"]["Open"])
+	if not PIGA["AHPlus"]["Open"] then CommonF.AHtooltip:Disable() end
+	self.AHtooltip:SetChecked(PIGA["AHPlus"]["AHtooltip"])
 end)

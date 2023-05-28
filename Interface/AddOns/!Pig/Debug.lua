@@ -204,9 +204,9 @@ fuFrame.tishi:SetTextColor(1, 1, 0, 1);
 fuFrame.tishiCK=PIGCheckbutton(fuFrame,{"LEFT",fuFrame.tishi,"RIGHT", 10, 0},{L["DEBUG_ERRORCHECK"],L["DEBUG_ERRORTOOLTIP"]})
 fuFrame.tishiCK:SetScript("OnClick", function (self)
 	if self:GetChecked() then
-		PIG["Error"]["ErrorTishi"] = true
+		PIGA["Error"]["ErrorTishi"] = true
 	else
-		PIG["Error"]["ErrorTishi"] = false
+		PIGA["Error"]["ErrorTishi"] = false
 	end
 end);
 ---------
@@ -250,7 +250,7 @@ fuFrame:SetScript("OnShow", function()
 	if GetCVar("scriptErrors")=="1" then
 		fuFrame.ErrCB:SetChecked(true)
 	end
-	fuFrame.tishiCK:SetChecked(PIG["Error"]["ErrorTishi"])
+	fuFrame.tishiCK:SetChecked(PIGA["Error"]["ErrorTishi"])
 	fuFrame.taintLog:PIGDownMenu_SetText(taintlistmenu[GetCVar("taintLog")])
 end);
 ---创建常用3宏

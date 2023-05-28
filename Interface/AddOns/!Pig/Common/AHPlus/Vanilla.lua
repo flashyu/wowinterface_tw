@@ -51,11 +51,11 @@ local function jiantoufangxiang(self,sorted)
 	self.paixu:Show()
 end
 function CommonFun.AHPlus_Vanilla()
-	if not PIG["AHPlus"]["Open"] or AuctionFrameBrowse.piglist then return end
+	if not PIGA["AHPlus"]["Open"] or AuctionFrameBrowse.piglist then return end
 	local OLD_QueryAuctionItems = QueryAuctionItems	
 	QueryAuctionItems = function(...)
 		local text, minLevel, maxLevel, page, usable, rarity, allxiazai, exactMatch, filterData =...
-		if PIG["AHPlus"].exactMatch or AuctionFrame.maichuxunjia then
+		if PIGA["AHPlus"].exactMatch or AuctionFrame.maichuxunjia then
 			local exactMatch = true
 			return OLD_QueryAuctionItems(text, minLevel, maxLevel, page, usable, rarity, allxiazai, exactMatch, filterData)
 		else
@@ -67,12 +67,12 @@ function CommonFun.AHPlus_Vanilla()
 	AuctionFrameBrowse.exact.Text:SetTextColor(0, 1, 0, 0.8);
 	AuctionFrameBrowse.exact:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["AHPlus"].exactMatch=true
+			PIGA["AHPlus"].exactMatch=true
 		else
-			PIG["AHPlus"].exactMatch=false
+			PIGA["AHPlus"].exactMatch=false
 		end
 	end);
-	if PIG["AHPlus"].exactMatch then
+	if PIGA["AHPlus"].exactMatch then
 		AuctionFrameBrowse.exact:SetChecked(true)
 	else
 		AuctionFrameBrowse.exact:SetChecked(false)
@@ -89,7 +89,7 @@ function CommonFun.AHPlus_Vanilla()
 		AuctionFrameBrowse.page=0
 	end
 	local FWQrealm = GetRealmName()
-	PIG["AHPlus"]["Data"][FWQrealm]=PIG["AHPlus"]["Data"][FWQrealm] or {}
+	PIGA["AHPlus"]["Data"][FWQrealm]=PIGA["AHPlus"]["Data"][FWQrealm] or {}
 	--调整原版UI
 	local function SetBlizzardUI(tmV)
 		local suoxiaozhi = 34
@@ -139,6 +139,8 @@ function CommonFun.AHPlus_Vanilla()
 		BrowseNextPageButton:Show();
 		BrowseBidPrice:ClearAllPoints();
 		BrowseBidPrice:SetPoint("LEFT",BrowseNextPageButton,"RIGHT",40,0);
+		BrowseBuyoutPrice:ClearAllPoints();
+		BrowseBuyoutPrice:SetPoint("TOPRIGHT",BrowseBuyoutButton,"BOTTOMRIGHT",8,-4);
 		if BrowseResetButton then
 			BrowseResetButton:ClearAllPoints();
 			BrowseResetButton:SetPoint("LEFT",BrowseNameText,"RIGHT",4,0);
@@ -312,8 +314,11 @@ function CommonFun.AHPlus_Vanilla()
 								BrowseBuyoutButton:Enable();
 								AuctionFrame.buyoutPrice = buyoutPrice;
 							end
+							MoneyFrame_Update(BrowseBuyoutPrice, buyoutPrice);
+							BrowseBuyoutPrice:Show();
 						else
 							AuctionFrame.buyoutPrice = nil;
+							BrowseBuyoutPrice:Hide();
 						end
 						---竞拍
 						if ( bidAmount == 0 ) then
@@ -349,9 +354,9 @@ function CommonFun.AHPlus_Vanilla()
 					Update_GGG(listFGV.yikoudanjia,buyoutPrice/count)
 					listFGV.zhangdie:SetText("-");
 					listFGV.zhangdie:SetTextColor(1, 1, 1, 1);
-					if PIG["AHPlus"]["Data"][FWQrealm][name] then
-						if buyoutPrice>0 and PIG["AHPlus"]["Data"][FWQrealm][name][1]>0 then
-							local baifenbi = ((buyoutPrice/count)/PIG["AHPlus"]["Data"][FWQrealm][name][1])*100+0.5
+					if PIGA["AHPlus"]["Data"][FWQrealm][name] then
+						if buyoutPrice>0 and PIGA["AHPlus"]["Data"][FWQrealm][name][1]>0 then
+							local baifenbi = ((buyoutPrice/count)/PIGA["AHPlus"]["Data"][FWQrealm][name][1])*100+0.5
 							local baifenbi = floor(baifenbi)
 							listFGV.zhangdie:SetText(baifenbi.."%");
 							if baifenbi<100 then
@@ -429,14 +434,14 @@ function CommonFun.AHPlus_Vanilla()
 						DressUpItemLink(Itemlink)
 					end
 				else
-					local hejiinfo = PIG["AHPlus"]["Coll"]
+					local hejiinfo = PIGA["AHPlus"]["Coll"]
 					for kk=1,#hejiinfo do
 						if hejiinfo[kk][1]==name then
 							print("|cff00FFFF!Pig:|r<"..name..">|cffFFFF00已存在|r")
 							return
 						end
 					end
-					table.insert(PIG["AHPlus"]["Coll"],{name,fujiF.itemicon.tex:GetTexture(),fujiF.itemlink.quality})
+					table.insert(PIGA["AHPlus"]["Coll"],{name,fujiF.itemicon.tex:GetTexture(),fujiF.itemlink.quality})
 					listF:Gengxinlistcoll()
 				end
 			end);
@@ -596,7 +601,7 @@ function CommonFun.AHPlus_Vanilla()
 	local AHlinshiInfoListNum=0
 	local AHlinshiInfoListID=0
 	local function Save_Data()
-		local shujuyuan = PIG["AHPlus"]["Data"][FWQrealm]
+		local shujuyuan = PIGA["AHPlus"]["Data"][FWQrealm]
 		for _,v in pairs(shujuyuan) do
 			v[2]=false
 		end
@@ -604,16 +609,16 @@ function CommonFun.AHPlus_Vanilla()
 			local name=AHlinshiInfoList[i][1]
 			local xianzaidanjia = AHlinshiInfoList[i][3]/AHlinshiInfoList[i][2]
 			if xianzaidanjia>0 then
-		   		if PIG["AHPlus"]["Data"][FWQrealm][name] then
-		   			if PIG["AHPlus"]["Data"][FWQrealm][name][2] then
-		   				if xianzaidanjia<PIG["AHPlus"]["Data"][FWQrealm][name][1] then
-		   					PIG["AHPlus"]["Data"][FWQrealm][name][1]=xianzaidanjia
+		   		if PIGA["AHPlus"]["Data"][FWQrealm][name] then
+		   			if PIGA["AHPlus"]["Data"][FWQrealm][name][2] then
+		   				if xianzaidanjia<PIGA["AHPlus"]["Data"][FWQrealm][name][1] then
+		   					PIGA["AHPlus"]["Data"][FWQrealm][name][1]=xianzaidanjia
 		   				end
 		   			else
-		   				PIG["AHPlus"]["Data"][FWQrealm][name]={xianzaidanjia,true,GetServerTime()}
+		   				PIGA["AHPlus"]["Data"][FWQrealm][name]={xianzaidanjia,true,GetServerTime()}
 		   			end
 		   		else
-		   			PIG["AHPlus"]["Data"][FWQrealm][name]={xianzaidanjia,true,GetServerTime()}
+		   			PIGA["AHPlus"]["Data"][FWQrealm][name]={xianzaidanjia,true,GetServerTime()}
 		   		end
 		   	end
 		end
@@ -716,7 +721,7 @@ function CommonFun.AHPlus_Vanilla()
 		huizhangG:SetJustifyH("LEFT");
 	end
 	local function Update_huizhangG()
-		local lishihuizhangG = PIG["AHPlus"].Tokens
+		local lishihuizhangG = PIGA["AHPlus"].Tokens
 		local SHUJUNUM = #lishihuizhangG
 		local shujukaishiid = 0
 		if SHUJUNUM>33 then
@@ -777,7 +782,7 @@ function CommonFun.AHPlus_Vanilla()
 		huancunjiaqian:Hide()
 	end)
 	--收藏夹----------------------------
-	PIG["AHPlus"]["Coll"] = PIG["AHPlus"]["Coll"] or addonTable.Default.AHPlus["Coll"]
+	PIGA["AHPlus"]["Coll"] = PIGA["AHPlus"]["Coll"] or addonTable.Default.AHPlus["Coll"]
 	local collW,collY = 24,24
 	AuctionFrameBrowse.coll = CreateFrame("Button",nil,AuctionFrameBrowse);
 	local coll=AuctionFrameBrowse.coll
@@ -838,7 +843,7 @@ function CommonFun.AHPlus_Vanilla()
 			local listFGV = _G["colllistitem_"..i]
 	    	listFGV:Hide()
 	    end
-	    local datainfo=PIG["AHPlus"]["Coll"]
+	    local datainfo=PIGA["AHPlus"]["Coll"]
 		local zongshuNum=#datainfo
 		if zongshuNum>0 then
 			FauxScrollFrame_Update(self, zongshuNum, collhang_NUM, hang_Height);
@@ -903,11 +908,11 @@ function CommonFun.AHPlus_Vanilla()
 		colllistitem:SetScript("OnClick", function (self,button)
 			local caozuoID = self:GetID()
 			if button=="LeftButton" then
-				local datakey=PIG["AHPlus"]["Coll"][caozuoID][1]
+				local datakey=PIGA["AHPlus"]["Coll"][caozuoID][1]
 				BrowseName:SetText(datakey)
 				AuctionFrameBrowse_Search()
 			else
-				table.remove(PIG["AHPlus"]["Coll"],caozuoID)
+				table.remove(PIGA["AHPlus"]["Coll"],caozuoID)
 				gengxinlistcoll(coll.list.Scroll)
 			end
 		end);
@@ -1049,7 +1054,7 @@ function CommonFun.AHPlus_Vanilla()
 			local priceType =UIDropDownMenu_GetSelectedValue(PriceDropDown) or 2
 			if priceType == 1  then
 				if owner~=wanjiaN then
-					if PIG["AHPlus"]["yajingbiao"] then
+					if PIGA["AHPlus"]["yajingbiao"] then
 						MoneyInputFrame_SetCopper(StartPrice, BiddanjiaGG-1);
 					else
 						MoneyInputFrame_SetCopper(StartPrice, buyoutdanjiaGG-1);
@@ -1064,7 +1069,7 @@ function CommonFun.AHPlus_Vanilla()
 				local ZBiddanjiaGG = meizushu*BiddanjiaGG
 				local ZbuyoutdanjiaGG = meizushu*buyoutdanjiaGG
 				if owner~=wanjiaN then
-					if PIG["AHPlus"]["yajingbiao"] then
+					if PIGA["AHPlus"]["yajingbiao"] then
 						MoneyInputFrame_SetCopper(StartPrice, ZBiddanjiaGG-1);
 					else
 						MoneyInputFrame_SetCopper(StartPrice, ZbuyoutdanjiaGG-1);
@@ -1102,12 +1107,12 @@ function CommonFun.AHPlus_Vanilla()
 	AuctionFrameAuctions.yajingbiao.Text:SetTextColor(0, 1, 0, 0.8);
 	AuctionFrameAuctions.yajingbiao:SetScript("OnClick", function (self)
 		if self:GetChecked() then
-			PIG["AHPlus"]["yajingbiao"]=true
+			PIGA["AHPlus"]["yajingbiao"]=true
 		else
-			PIG["AHPlus"]["yajingbiao"]=false
+			PIGA["AHPlus"]["yajingbiao"]=false
 		end
 	end);
-	if PIG["AHPlus"]["yajingbiao"] then
+	if PIGA["AHPlus"]["yajingbiao"] then
 		AuctionFrameAuctions.yajingbiao:SetChecked(true)
 	end
 	AuctionFrameAuctions.Showcankao = CreateFrame("Button",nil,AuctionFrameAuctions, "UIPanelButtonTemplate");
@@ -1169,16 +1174,15 @@ function CommonFun.AHPlus_Vanilla()
 	end)
 	------------
 	GameTooltip:HookScript("OnTooltipSetItem", function(self)
-		if PIG["AHPlus"]["Open"] and PIG["AHPlus"]["AHtooltip"] then
+		if PIGA["AHPlus"]["Open"] and PIGA["AHPlus"]["AHtooltip"] then
 			local name, link = self:GetItem()
 			if link then
 				local  bindType = select(14, GetItemInfo(link))
 				if bindType~=1 then
-					local FWQrealm = GetRealmName()
-					if PIG["AHPlus"]["Data"][FWQrealm] and PIG["AHPlus"]["Data"][FWQrealm][name] then
-						local jiluTime = PIG["AHPlus"]["Data"][FWQrealm][name][3] or 1660000000
+					if PIGA["AHPlus"]["Data"][FWQrealm] and PIGA["AHPlus"]["Data"][FWQrealm][name] then
+						local jiluTime = PIGA["AHPlus"]["Data"][FWQrealm][name][3] or 1660000000
 						local jiluTime = date("%m-%d %H:%M",jiluTime)
-						self:AddDoubleLine("拍卖单价("..jiluTime.."):",GetMoneyString(PIG["AHPlus"]["Data"][FWQrealm][name][1]))
+						self:AddDoubleLine("拍卖单价("..jiluTime.."):",GetMoneyString(PIGA["AHPlus"]["Data"][FWQrealm][name][1]))
 					else
 						self:AddDoubleLine("拍卖单价(尚未缓存):","--")
 					end
