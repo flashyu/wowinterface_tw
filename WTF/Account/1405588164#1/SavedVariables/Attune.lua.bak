@@ -4,9 +4,8 @@ Attune_DB = {
 	["raidShowMains"] = true,
 	["toons"] = {
 		["喵呜可逗了-伊弗斯"] = {
-			["done"] = {
-			},
-			["gender"] = "male",
+			["class"] = "DEATHKNIGHT",
+			["owner"] = 0,
 			["guild"] = "祈福家园",
 			["next"] = {
 				["10-549"] = 1,
@@ -218,16 +217,7 @@ Attune_DB = {
 				["200-2"] = 1,
 				["300-141"] = 1,
 			},
-			["class"] = "DEATHKNIGHT",
-			["owner"] = 0,
-			["role"] = "None",
-			["version"] = "311",
-			["survey"] = 1683958829,
-			["race"] = "Troll",
-			["name"] = "喵呜可逗了",
-			["faction"] = "Horde",
-			["status"] = "None",
-			["level"] = "80",
+			["gender"] = "male",
 			["attuned"] = {
 				["117"] = 100,
 				["116"] = 0,
@@ -274,6 +264,16 @@ Attune_DB = {
 				["30"] = 0,
 				["220"] = 100,
 				["120"] = 0,
+			},
+			["role"] = "None",
+			["version"] = "311",
+			["survey"] = 1683958829,
+			["race"] = "Troll",
+			["name"] = "喵呜可逗了",
+			["faction"] = "Horde",
+			["status"] = "None",
+			["level"] = "80",
+			["done"] = {
 			},
 			["officer"] = "0",
 		},

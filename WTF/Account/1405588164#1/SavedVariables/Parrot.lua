@@ -44,6 +44,9 @@ ParrotDB = {
 						["Pet debuff fades"] = {
 							["disabled"] = true,
 						},
+						["Reputation losses"] = {
+							["disabled"] = true,
+						},
 						["Buff gains"] = {
 							["disabled"] = true,
 						},
@@ -62,19 +65,16 @@ ParrotDB = {
 						["Loot money"] = {
 							["disabled"] = true,
 						},
-						["Target buff gains"] = {
+						["Enemy debuff fades"] = {
 							["disabled"] = true,
 						},
 						["Pet buff gains"] = {
 							["disabled"] = true,
 						},
-						["Enemy debuff fades"] = {
+						["Target buff stack gains"] = {
 							["disabled"] = true,
 						},
 						["Skill cooldown finish"] = {
-							["disabled"] = true,
-						},
-						["Reputation losses"] = {
 							["disabled"] = true,
 						},
 						["Combo points full"] = {
@@ -92,7 +92,7 @@ ParrotDB = {
 						["Enemy buff gains"] = {
 							["disabled"] = true,
 						},
-						["Target buff stack gains"] = {
+						["Target buff gains"] = {
 							["disabled"] = true,
 						},
 						["Buff stack gains"] = {
