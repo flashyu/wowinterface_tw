@@ -1,5 +1,5 @@
 
-PIG_Per = {
+PIG_PerA = {
 	["PigAction"] = {
 		["Lock"] = {
 			false, -- [1]

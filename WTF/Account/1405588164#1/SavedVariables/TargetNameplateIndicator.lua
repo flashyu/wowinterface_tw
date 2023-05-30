@@ -12,10 +12,10 @@ TargetNameplateIndicatorDB = {
 					["texture"] = "Interface\\AddOns\\TargetNameplateIndicator\\Textures\\NeonRedArrow",
 				},
 				["hostile"] = {
-					["width"] = 25,
 					["height"] = 25,
-					["yOffset"] = -5,
 					["texture"] = "Interface\\AddOns\\TargetNameplateIndicator\\Textures\\NeonRedArrow",
+					["yOffset"] = -5,
+					["width"] = 25,
 				},
 				["friendly"] = {
 					["enable"] = false,
@@ -26,9 +26,9 @@ TargetNameplateIndicatorDB = {
 			},
 			["focus"] = {
 				["hostile"] = {
-					["width"] = 30,
-					["yOffset"] = 0,
 					["height"] = 30,
+					["yOffset"] = 0,
+					["width"] = 30,
 				},
 			},
 		},
