@@ -7,6 +7,9 @@ END
 VER 3 0000000000000002 "RXPTargeting" "Ability_eyeoftheowl"
 //RestedXP 指南 狮心-北美刘嘉玲 汉化版 - current step has no configured targets
 END
+VER 3 0000000000000011 "target" "132353"
+/target 弗雷斯特恩
+END
 VER 3 0000000000000007 "保命" "135966"
 /use 邪能治疗石
 /use 极效治疗石
@@ -14,8 +17,8 @@ VER 3 0000000000000007 "保命" "135966"
 /use 符文治疗注射器
 END
 VER 3 0000000000000004 "坐骑" "132112"
-/use 迅捷紫色驭风者
 /use 青铜幼龙
+/use 迅捷紫色驭风者
 /use 黑色作战科多兽
 END
 VER 3 0000000000000008 "开团" "135994"
@@ -54,6 +57,14 @@ VER 3 0000000000000009 "毁灭打击" "134400"
 END
 VER 3 000000000000000D "火箭靴" "135788"
 /use 8
+END
+VER 3 0000000000000012 "爆发" "135726"
+#showtooltip 血性狂怒
+/use 10
+/use 13
+/use 14
+/cast 血性狂怒
+/cast 死亡之愿
 END
 VER 3 0000000000000006 "跟随" "134400"
 /target 臉叔

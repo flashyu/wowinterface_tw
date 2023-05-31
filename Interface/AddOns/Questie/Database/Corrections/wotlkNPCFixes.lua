@@ -23,7 +23,7 @@ function QuestieWotlkNpcFixes:Load()
             [npcKeys.spawns] = {[zoneIDs.ORGRIMMAR] = {{47,53.6}}},
         },
         [3190] = {
-            [npcKeys.spawns] = {[zoneIDs.DUROTAR] = {{41.6,18.6}}},
+            [npcKeys.spawns] = {[zoneIDs.DUROTAR] = {{42.1,15.0}}},
         },
         [3996] = {
             [npcKeys.spawns] = {[zoneIDs.ASHENVALE] = {{35.77,49.1}}},
@@ -312,6 +312,10 @@ function QuestieWotlkNpcFixes:Load()
             [npcKeys.friendlyToFaction] = "H",
             [npcKeys.factionID] = 1064,
         },
+        [26105] = {
+            [npcKeys.spawns] = {[zoneIDs.THE_NEXUS] = {{-1,-1}}},
+            [npcKeys.zoneID] = zoneIDs.THE_NEXUS,
+        },
         [26156] = { --"Wartook Iceborn"
             [npcKeys.friendlyToFaction] = "H",
             [npcKeys.factionID] = 1064,
@@ -402,6 +406,10 @@ function QuestieWotlkNpcFixes:Load()
         [26790] = { --"Taunka'le Longrunner"
             [npcKeys.friendlyToFaction] = "H",
             [npcKeys.factionID] = 1064,
+        },
+        [26792] = {
+            [npcKeys.spawns] = {[zoneIDs.THE_NEXUS] = {{-1,-1}}},
+            [npcKeys.zoneID] = zoneIDs.THE_NEXUS,
         },
         [26810] = { --"Roanauk Icemist", "High Chieftain of the Taunka"
             [npcKeys.friendlyToFaction] = "H",

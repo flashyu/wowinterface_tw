@@ -669,6 +669,9 @@ function QuestieWotlkQuestFixes:Load()
             [questKeys.objectives] = {{{25814,"Gnome soul captured"},},nil,nil,nil,},
             [questKeys.preQuestSingle] = {11895},
         },
+        [11905] = {
+            [questKeys.extraObjectives] = {{{[zoneIDs.THE_NEXUS]={{64.9,21.6}}}, Questie.ICON_TYPE_EVENT, l10n("Use Interdimensional Refabricator")}},
+        },
         [11906] = {
             [questKeys.preQuestSingle] = {11895},
         },
@@ -694,6 +697,9 @@ function QuestieWotlkQuestFixes:Load()
         },
         [11938] = {
             [questKeys.objectives] = {nil,nil,nil,nil,{{{25378,25383,25386,25387,25393,25609},25378,"En'kilah Casualty"}}},
+        },
+        [11940] = {
+            [questKeys.objectives] = {{{26127,"Captured Nexus Drake"},},nil,nil,nil,},
         },
         [11945] = {
             [questKeys.reputationReward] = {{1073,500}},

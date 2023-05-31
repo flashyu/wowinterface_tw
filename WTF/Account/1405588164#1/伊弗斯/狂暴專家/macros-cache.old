@@ -29,9 +29,11 @@ VER 3 0000000001000014 "打断" "132269"
 END
 VER 3 0000000001000011 "拳击" "134400"
 #showtooltip 拳击
-/cast 拳击
+/cast [target=focus,exists] 拳击;拳击
 /startattack
-/cast 乘胜追击
+/cast 乘胜追击    
+            
+            
 END
 VER 3 0000000001000010 "斩杀" "134400"
 #showtooltip 斩杀
