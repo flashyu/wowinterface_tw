@@ -70,7 +70,7 @@ LFGBulletinBoard: disabled
 MikScrollingBattleText: disabled
 MSBTOptions: disabled
 Myslot: disabled
-Parrot: disabled
+Parrot: enabled
 Plater: disabled
 Questie: disabled
 SafeQueue: disabled
@@ -87,9 +87,9 @@ WeakAurasOptions: disabled
 WeakAurasTemplates: disabled
 WIM: disabled
 xanSoundAlerts: disabled
-GSE: disabled
-GSE_GUI: disabled
-GSE_LDB: disabled
+GSE: enabled
+GSE_GUI: enabled
+GSE_LDB: enabled
 AddOnSkins: disabled
 ElvUI_Libraries: disabled
 ElvUI_OptionsUI: disabled
@@ -104,8 +104,8 @@ DBM-StatusBarTimers: disabled
 DBM-GUI: disabled
 DBM-CountPack-Overwatch: disabled
 DBM-Outlands: disabled
-DBM-Raids-BC: disabled
-DBM-Raids-WoTLK: disabled
+DBM-Raids-BC: enabled
+DBM-Raids-WoTLK: enabled
 DBM-VPVEM: disabled
 DBM-WorldEvents: disabled
 DBM-Azeroth: disabled

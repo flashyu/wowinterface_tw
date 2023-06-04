@@ -1,0 +1,94 @@
+
+ElvDB = {
+	["profileKeys"] = {
+		["康樂股長 - 伊弗斯"] = "Default",
+	},
+	["DisabledAddOns"] = {
+	},
+	["serverID"] = {
+		[4487] = {
+			["伊弗斯"] = true,
+		},
+	},
+	["class"] = {
+		["伊弗斯"] = {
+			["康樂股長"] = "DRUID",
+		},
+	},
+	["profiles"] = {
+		["Default"] = {
+			["chat"] = {
+				["panelSnapLeftID"] = 1,
+				["panelSnapRightID"] = 4,
+			},
+			["dbConverted"] = 13.32,
+			["unitframe"] = {
+				["units"] = {
+					["party"] = {
+						["targetsGroup"] = {
+							["disableFocusGlow"] = false,
+							["disableTargetGlow"] = false,
+							["disableMouseoverGlow"] = false,
+						},
+						["petsGroup"] = {
+							["disableFocusGlow"] = false,
+							["disableTargetGlow"] = false,
+							["disableMouseoverGlow"] = false,
+						},
+					},
+				},
+			},
+			["actionbar"] = {
+				["microbar"] = {
+					["buttons"] = 10,
+				},
+				["bar5"] = {
+					["enabled"] = false,
+					["buttonsPerRow"] = 12,
+					["buttons"] = 12,
+				},
+				["bar6"] = {
+					["enabled"] = true,
+					["buttonsPerRow"] = 6,
+					["buttons"] = 6,
+				},
+			},
+			["convertPages"] = true,
+		},
+	},
+	["gold"] = {
+		["伊弗斯"] = {
+			["康樂股長"] = 945430253,
+		},
+	},
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["faction"] = {
+		["伊弗斯"] = {
+			["康樂股長"] = "Horde",
+		},
+	},
+	["global"] = {
+		["nameplates"] = {
+			["filters"] = {
+				["ElvUI_NonTarget"] = {
+				},
+				["ElvUI_Target"] = {
+				},
+				["ElvUI_Boss"] = {
+				},
+			},
+		},
+	},
+}
+ElvPrivateDB = {
+	["profileKeys"] = {
+		["康樂股長 - 伊弗斯"] = "康樂股長 - 伊弗斯",
+	},
+	["profiles"] = {
+		["康樂股長 - 伊弗斯"] = {
+		},
+	},
+}

@@ -49,7 +49,7 @@ ElvDB = {
 				["panelHeight"] = 250,
 				["panelSnapLeftID"] = 1,
 			},
-			["dbConverted"] = 13.32,
+			["dbConverted"] = 13.33,
 			["movers"] = {
 				["TopCenterContainerMover"] = "TOP,UIParent,TOP,0,-48",
 				["ElvUF_Raid1Mover"] = "TOPLEFT,UIParent,TOPLEFT,4,-366",
@@ -123,7 +123,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["狂暴專家"] = 1202529641,
+			["狂暴專家"] = 1258764772,
 			["上山打鸟"] = 48503975,
 		},
 	},

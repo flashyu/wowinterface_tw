@@ -1,7 +1,7 @@
 
 DBMZG_SavedStats = {
 	["Bloodlord"] = {
-		["normalPulls"] = 2,
+		["normalPulls"] = 3,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
 		["mythicKills"] = 0,
@@ -58,7 +58,7 @@ DBMZG_SavedStats = {
 		["challengePulls"] = 0,
 	},
 	["Thekal"] = {
-		["normalPulls"] = 6,
+		["normalPulls"] = 8,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
 		["mythicKills"] = 0,
@@ -66,10 +66,10 @@ DBMZG_SavedStats = {
 		["heroic25Pulls"] = 0,
 		["lfr25Pulls"] = 0,
 		["normal25Pulls"] = 0,
-		["normalLastTime"] = 125.7870000000112,
-		["normalKills"] = 3,
+		["normalLastTime"] = 109.2209999999031,
+		["normalKills"] = 5,
+		["normalBestTime"] = 109.2209999999031,
 		["heroic25Kills"] = 0,
-		["normalBestTime"] = 125.7870000000112,
 		["timewalkerPulls"] = 0,
 		["heroicKills"] = 0,
 		["heroicPulls"] = 0,
