@@ -276,6 +276,7 @@ local function ADD_ActionBar(index)
 			Update_Icon(self)
 			Update_Cooldown(self)
 			Update_Count(self)
+			Update_bukeyong(self)
 		end);
 		----
 		piganniu:HookScript("OnDragStart", function (self)
@@ -318,6 +319,7 @@ local function ADD_ActionBar(index)
 			Update_Icon(self)
 			Update_Cooldown(self)
 			Update_Count(self)
+			Update_bukeyong(self)
 		end);
 		----
 		piganniu:SetScript("OnEnter", function (self)
@@ -332,7 +334,7 @@ local function ADD_ActionBar(index)
 					if Type=="spell" then
 						OnEnter_Spell(Type,SimID)
 					elseif Type=="item" then
-						OnEnter_Item(Type,SimID)
+						OnEnter_Item(Type,SimID,butInfo[3])
 					elseif Type=="companion" then
 						OnEnter_Companion(Type,SimID,butInfo[3])
 					elseif Type=="mount" then
@@ -344,7 +346,7 @@ local function ADD_ActionBar(index)
 						else
 							local ItemName, ItemLink = GetMacroItem(SimID);
 							if ItemName then
-								OnEnter_Item(Type,ItemLink)
+								OnEnter_Item(Type,ItemLink,butInfo[3])
 							else
 								local name, icon, body, isLocal = GetMacroInfo(SimID)
 								GameTooltip:SetText(name,1, 1, 1, 1)

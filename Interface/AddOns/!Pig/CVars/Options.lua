@@ -100,7 +100,7 @@ local CVarsList1 = {
 	---
 	{"显示BUFF持续时间","buffDurations","1","0","显示BUFF持续时间",true},
 	{"超远视距(变焦系数)",chaoyuanshijuVVV[1],chaoyuanshijuVVV[2],GetCVarDefault(chaoyuanshijuVVV[1]),"开启后视野可以拉的更远, 正式服在<选项→图形→镜头视野范围>也可以设置距离",false},
-	{"按下按键时施法","ActionButtonUseKeyDown","1","0","开启后在你按下按键时候就会触发施法，正常是在抬起按键才触发，这样能略微增加你的施法速度",false},
+	{"按下按键时施法","ActionButtonUseKeyDown","1","0","开启后在你按下按键时候就会触发施法，正常是在抬起按键才触发，这样能略微增加你的施法速度",true},
 	{"屏幕泛光","ffxGlow","1","0","开启后屏幕会微微泛光，觉得晃眼或者刺眼情况下你可能需要关闭此效果",false},
 	{"死亡特效","ffxDeath","1","0","开启后死亡时屏幕是黑白，关闭后是彩色",false},
 	{"新版TAB","TargetNearestUseNew","1","0","使用7.2版后的TAB选取目标功能,战斗中不会Tab到战斗外目标,不会Tab到你的角色或镜头看不到的目标。\n关闭后将启用旧版的选取最近目标。",false},

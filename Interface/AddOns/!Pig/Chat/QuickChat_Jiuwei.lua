@@ -29,7 +29,7 @@ function QuickChatfun.QuickBut_jiuwei()
 	fuFrame.jiuweidaojishi:SetScript("OnEnter", function (self)	
 		GameTooltip:ClearLines();
 		GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT",0,0);
-		GameTooltip:SetText("|cff00FFff左键-|r|cffFFFF00就位确认\n|cff00FFff右键-|r|cffFFFF00开怪倒计时|r");
+		GameTooltip:SetText("|cff00FFff左键-|r|cffFFFF00就位确认\n|cff00FFff右键-|r|cffFFFF00开怪倒数|r");
 		GameTooltip:Show();
 		GameTooltip:FadeOut()
 	end);
@@ -39,37 +39,32 @@ function QuickChatfun.QuickBut_jiuwei()
 	end);
 	fuFrame.kaiguaidaojishi=5
 	local function daojishikaiguai()
-		local IsInRaid=IsInRaid();
-		if IsInRaid then
+		if IsInRaid() then
 			if fuFrame.kaiguaidaojishi==0 then
+				
 				SendChatMessage("***开始攻击***", "RAID_WARNING", nil);
 			else
-				SendChatMessage("***开怪倒计时："..fuFrame.kaiguaidaojishi.."***", "RAID_WARNING", nil);
+				SendChatMessage("***开怪倒计时："..fuFrame.kaiguaidaojishi.." ***", "RAID_WARNING", nil);
 			end
-		else
+		elseif IsInGroup() then
 			if fuFrame.kaiguaidaojishi==0 then
 				SendChatMessage("***开始攻击***", "PARTY", nil);
 			else
-				SendChatMessage("***开怪倒计时："..fuFrame.kaiguaidaojishi.."***", "PARTY", nil);
+				SendChatMessage("***开怪倒计时："..fuFrame.kaiguaidaojishi.." ***", "PARTY", nil);
 			end
 		end
-		if fuFrame.kaiguaidaojishi>0 then
-			fuFrame.kaiguaidaojishi=fuFrame.kaiguaidaojishi-1
-			C_Timer.After(1,daojishikaiguai)
-		else
-			fuFrame.kaiguaidaojishi=5
-		end
+		fuFrame.kaiguaidaojishi=fuFrame.kaiguaidaojishi-1
 	end
 	fuFrame.jiuweidaojishi:SetScript("OnClick", function(self, event)
 		if event=="LeftButton" then
 			DoReadyCheck()
 		else
-			local inGroup = IsInGroup();
-			if inGroup then
-				if fuFrame.kaiguaidaojishi==5 then
-					daojishikaiguai()
-				end
+			--C_PartyInfo.DoCountdown(5)
+			if self.daoshuTicker  then
+				self.daoshuTicker:Cancel()
 			end
+			fuFrame.kaiguaidaojishi=5
+			self.daoshuTicker = C_Timer.NewTicker(1, daojishikaiguai, 6)
 		end
 	end);
 end

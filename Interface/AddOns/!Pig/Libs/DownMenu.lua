@@ -159,7 +159,7 @@ for i=1,UIDROPDOWNMENU_MAXLEVELS do
 				end
 				self:SetChecked(true);
 			end
-			self.func(self.value,self.value,self.arg1,self.arg2,self.checked)
+			self.func(PIGDownList1.dropdown,self.value,self.arg1,self.arg2,self.checked)
 		end);
 	end
 end

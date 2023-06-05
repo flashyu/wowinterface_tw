@@ -14,8 +14,8 @@ local function BackdropSet(self)
 	self:SetBackdropColor(BGColor[1],BGColor[2],BGColor[3],BGColor[4]);
 	self:SetBackdropBorderColor(BorderColor[1], BorderColor[2], BorderColor[3], BorderColor[4]);
 end
-function Create.PIGButton(fuF,Point,WH,Text,UIName)
-	local But = CreateFrame("Button", UIName, fuF,"BackdropTemplate");
+function Create.PIGButton(fuF,Point,WH,Text,UIName,id)
+	local But = CreateFrame("Button", UIName, fuF,"BackdropTemplate",id);
 	But:RegisterForClicks("LeftButtonUp","RightButtonUp")
 	BackdropSet(But)
 	if WH then
@@ -277,13 +277,13 @@ function Create.PIGOptionsList(GnName,weizhi)
 	return Rneirong,TabBut
 end
 --右边子菜单
-function Create.PIGOptionsList_RF(fuF,DownY,Mode)
+function Create.PIGOptionsList_RF(fuF,DownY,Mode,bianjuV)
 	local TabF = Create.PIGFrame(fuF)
 	TabF:PIGSetBackdrop()
-	local bianjuV = 6
-	if Mode=="Left" then bianjuV = 0 end
-	TabF:SetPoint("TOPLEFT", fuF, "TOPLEFT", bianjuV, -DownY)
-	TabF:SetPoint("BOTTOMRIGHT", fuF, "BOTTOMRIGHT", -bianjuV, bianjuV)
+	local bianjuV = bianjuV or {6,6,6}
+	if Mode=="Left" then bianjuV = {0,0,0} end
+	TabF:SetPoint("TOPLEFT", fuF, "TOPLEFT", bianjuV[1], -DownY)
+	TabF:SetPoint("BOTTOMRIGHT", fuF, "BOTTOMRIGHT", -bianjuV[2], bianjuV[3])
 	TabF.Top = Create.PIGFrame(TabF)
 	if Mode=="Left" then
 		TabF.Top:SetWidth(30)

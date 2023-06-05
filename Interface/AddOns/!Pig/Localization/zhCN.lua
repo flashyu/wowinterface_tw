@@ -12,6 +12,7 @@ L["ERROR_OLD"] = "之前错误";
 L["ERROR_ADDON"] = "插件";
 L["ERROR_ERROR1"] = "尝试调用保护功能";
 L["ERROR_ERROR2"] = "宏尝试调用保护功能";
+L["ERROR_EXTEND_NULL"] = "没有检测到【%s】模块";
 --lib
 L["LIB_MOD_OFF"] = "尚未启用，请在模块内启用";
 L["LIB_PARTY"] = "地下城";
@@ -108,6 +109,8 @@ L["CHAT_TABNAME1"] = "常用";
 L["CHAT_QUKBUT"] = "快捷切换频道按钮";
 L["CHAT_QUKBUTTIPS"]="在聊天栏增加一排频道快捷切换按钮，可快速切换频道"
 L["CHAT_QUKBUTNAME"] = {"说","喊","队","会","团","通","战","综","组","P","世"};
+L["CHAT_BENDIFANGWU"] = "本地防务";
+L["CHAT_WORLDFANGWU"] = "世界防务";
 L["CHAT_QUKBUT_UP"] = "附着于聊天栏上方";
 L["CHAT_QUKBUT_DOWN"] = "附着于聊天栏下方";
 L["CHAT_QUKBUT_STYLE"]= "样式";
@@ -162,6 +165,9 @@ L["CHAT_LOOTFNRSETTIPS"]="启用独立拾取窗口后，建议打开此选项。
 L["CHAT_LOOTFADDERR1"]="创建失败！当前屏幕分辨率过小";
 L["CHAT_LOOTFADDERR2"]="创建失败！系统允许做大聊天窗口数：10，当前："..FCF_GetNumActiveChatFrames();
 L["CHAT_RECHATBUT"]= "重置聊天"..L["OPTUI_SET"];
+L["CHAT_TABNAME5"] = "频道顺序";
+L["CHAT_TABNAME5_XULIE"] = "序列";
+L["CHAT_TABNAME6"] = "频道过滤";
 --动作条
 L["ACTION_TABNAME"] = "动作条";
 L["ACTION_TABNAME1"] = "常规";

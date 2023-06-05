@@ -18,6 +18,7 @@ local PIGOptionsList_RF=Create.PIGOptionsList_RF
 local PIGOptionsList_R=Create.PIGOptionsList_R
 local PIGFontString=Create.PIGFontString
 local PIGFontStringBG=Create.PIGFontStringBG
+local PIGCloseBut=Create.PIGCloseBut
 ------
 local QuickChatfun = {}
 addonTable.QuickChatfun=QuickChatfun
@@ -32,7 +33,6 @@ local ChatF,Chattabbut =PIGOptionsList_R(RTabFrame,L["CHAT_TABNAME1"],70)
 ChatF:Show()
 Chattabbut:Selected()
 -------------------------------------------
-local INVName=LOOK_FOR_GROUP
 local QuickChat_maodianID = {1,2};
 local QuickChat_maodianListCN = {L["CHAT_QUKBUT_UP"],L["CHAT_QUKBUT_DOWN"]};
 local ChatFrame_QuickChat_Open=addonTable.ChatFrame_QuickChat_Open
@@ -109,11 +109,9 @@ end
 local function ChatFrame_MinMaxB_Open()
 	local fff = ChatFrame1
 	if fff.MinB then return end
-	fff.MinB = PIGButton(UIParent,{"RIGHT",fff.Background,"RIGHT",-2,0},{22,22}); 
-	fff.MinB:SetText("-");
+	fff.MinB = PIGButton(UIParent,{"RIGHT",fff.Background,"RIGHT",-2,0},{22,22},"-"); 
 	-----
-	fff.MaxB = PIGButton(UIParent,{"BOTTOM",fff.MinB,"TOP",0,3},{22,22}); 
-	fff.MaxB:SetText("+");
+	fff.MaxB = PIGButton(UIParent,{"BOTTOM",fff.MinB,"TOP",0,3},{22,22},"+"); 
 	MaxMinBUT_icon()
 	fff.MinB:SetScript("OnClick", function(self)
 		local _,fontSize = GetChatWindowInfo(1);
@@ -355,11 +353,11 @@ if GetLocale() == "zhTW" then
 end
 local function jingjianTXT(text)
 	local text=text:gsub("|h%[(%d+)%. 大脚世界频道%]|h", "|h%[%1%. 世%]|h")
-	local text=text:gsub("|h%[(%d+)%. "..ALLM[1][1].."%]|h", "|h%[%1%."..ALLM[1][2].."%]|h")
-	local text=text:gsub("|h%[(%d+)%. "..ALLM[2][1].."%]|h", "|h%[%1%."..ALLM[2][2].."%]|h")
-	local text=text:gsub("|h%[(%d+)%. "..ALLM[3][1].."%]|h", "|h%[%1%."..ALLM[3][2].."%]|h")
+	local text=text:gsub("|h%[(%d+)%. "..ALLM[1][1].."%]|h", "|h%[%1%."..ALLM[1][2].."%]|h")--交易城镇
+	local text=text:gsub("|h%[(%d+)%. "..ALLM[2][1].."%]|h", "|h%[%1%."..ALLM[2][2].."%]|h")--服务交易
+	local text=text:gsub("|h%[(%d+)%. "..ALLM[3][1].."%]|h", "|h%[%1%."..ALLM[3][2].."%]|h")--新手
 	local text=text:gsub("|h%[(%d+)%. "..GENERAL.."(.-)%]|h", "|h%[%1%."..JJM8.."%]|h")--综合
-	local text=text:gsub("|h%[(%d+)%. "..INVName.."%]|h", "|h%[%1%."..JJM9.."%]|h")--组队
+	local text=text:gsub("|h%[(%d+)%. "..LOOK_FOR_GROUP.."%]|h", "|h%[%1%."..JJM9.."%]|h")--组队
 	
 	local text=text:gsub("|h%["..SPELL_TARGET_TYPE11_DESC.."%]|h", "|h%["..JJM3.."%]|h")--隊伍
 	local text=text:gsub("|h%["..GUILD.."%]|h", "|h%["..JJM4.."%]|h")--公會
@@ -400,9 +398,14 @@ local function JoinPIG(pindaoName)
 		ChatFrame_AddChannel(DEFAULT_CHAT_FRAME, pindaoName)--订购一个聊天框以显示先前加入的聊天频道
 	end
 	ChatFrame_RemoveMessageGroup(DEFAULT_CHAT_FRAME, "CHANNEL")--屏蔽人员进入频道提示
+	if GetLocale() == "zhTW" then
+		LeaveChannelByName("寻求组队")
+	elseif GetLocale() == "zhCN" then
+		LeaveChannelByName("尋求組隊")
+	end
 end
 local function JoinPIGALL(pindaoName)
-	JoinPIG(INVName)
+	JoinPIG(LOOK_FOR_GROUP)
 	JoinPIG("PIG")
 end
 ChatF.SetFrame.JoinPig = PIGCheckbutton_R(ChatF.SetFrame,{L["CHAT_JOINPIG"],L["CHAT_JOINPIGTIPS"]})
@@ -564,7 +567,7 @@ local function TABchatPindao()
 	local channels = {GetChannelList()}
 	for i = 1, #channels, 3 do
 		local id, name, disabled = channels[i], channels[i+1], channels[i+2]
-		if name~="本地防务" and name~="世界防务" and name~="本地防務" and name~="世界防務" then
+		if name~=L["CHAT_BENDIFANGWU"] and name~=L["CHAT_WORLDFANGWU"] then
 			table.insert(chatpindaoList,{name,"CHANNEL"..id})
 		end
 	end
@@ -623,7 +626,7 @@ local function zhanlianhuiche()
 	local channels = {GetChannelList()}
 	for i = 1, #channels, 3 do
 		local id, name, disabled = channels[i], channels[i+1], channels[i+2]
-		if name~="本地防务" and name~="世界防务" and name~="本地防務" and name~="世界防務" then
+		if name~=L["CHAT_BENDIFANGWU"] and name~=L["CHAT_WORLDFANGWU"] then
 			table.insert(chatpindaoList,{name,"CHANNEL"..id})
 		end
 	end
@@ -723,7 +726,93 @@ YchuoquGlfff:SetScript("OnEvent", function(self,event,arg1,arg2,arg3,arg4,arg5)
 		end
 	end
 end)
-----------
+---调整频道顺序
+local Channel_ListF =PIGOptionsList_R(RTabFrame,L["CHAT_TABNAME5"],90)
+Channel_ListF.maxnum=10
+local function Channel_shunxu()
+	local datax = PIGA["Chat"]["Channel_List"]
+	for k,v in pairs(datax) do
+		local channelID = GetChannelName(v)
+		if channelID>0 then
+			if k~=channelID then
+				C_ChatInfo.SwapChatChannelsByChannelIndex(channelID, k)
+			end
+		end
+	end
+end
+---
+local function panduanjiangeYN()
+	Channel_ListF.errnum=nil
+	Channel_ListF.error:Hide()
+	for bb=Channel_ListF.maxnum,1,-1 do
+		local zhiv = _G["Channel_List"..bb]:PIGDownMenu_GetText()
+		if Channel_ListF.errnum=="kong" then
+			if zhiv then
+				Channel_ListF.error:Show()
+				return
+			end
+		end
+		if Channel_ListF.errnum=="end" then
+			if zhiv==nil then
+				Channel_ListF.errnum="kong"
+			end
+		end
+		if zhiv then
+			Channel_ListF.errnum="end"
+		end
+	end
+	Channel_shunxu()
+end
+for v=1,Channel_ListF.maxnum do
+	local xulie =PIGDownMenu(Channel_ListF,{"TOPLEFT",Channel_ListF,"TOPLEFT",80,(-30*v)},{200,nil},nil,"Channel_List"..v)
+	xulie.name = PIGFontString(xulie,{"RIGHT",xulie,"LEFT",-2,0},L["CHAT_TABNAME5_XULIE"]..v);
+	function xulie:PIGDownMenu_Update_But(self)
+		local info = {}
+		info.func = self.PIGDownMenu_SetValue
+		for i=1,#Channel_ListF.pindaoList,1 do
+		    info.text, info.arg1 = Channel_ListF.pindaoList[i][2],v
+		    info.checked=Channel_ListF.pindaoList[i][2] == PIGA["Chat"]["Channel_List"][v]
+			self:PIGDownMenu_AddButton(info)
+		end 
+	end
+	function xulie:PIGDownMenu_SetValue(value,arg1)
+		local peiz = PIGA["Chat"]["Channel_List"]
+		for k,v in pairs(peiz) do
+			if k~=arg1 and v==value then
+				peiz[k]=nil
+				_G["Channel_List"..k]:PIGDownMenu_SetText("")
+			end
+		end
+		
+		self:PIGDownMenu_SetText(value)
+		peiz[arg1]=value
+		PIGCloseDropDownMenus()
+		panduanjiangeYN()
+	end
+	xulie.x = PIGCloseBut(xulie,{"LEFT",xulie,"RIGHT",2,0})
+	xulie.x:HookScript("OnClick", function (self)
+		PIGA["Chat"]["Channel_List"][v]=nil
+		_G["Channel_List"..v]:PIGDownMenu_SetText("")
+		panduanjiangeYN()
+	end)
+end
+Channel_ListF.error = PIGFontString(Channel_ListF,{"TOPLEFT",Channel_ListF,"TOPLEFT",320,-50},"序号请连续设置\n不要留有空白间隔",nil,26);
+Channel_ListF.error:SetTextColor(1, 0, 0, 1)
+Channel_ListF.error:Hide()
+Channel_ListF:HookScript("OnShow", function (self)
+	self.pindaoList={}
+	local channels = {GetChannelList()}
+	for i = 1, #channels, 3 do
+		local id, name, disabled = channels[i], channels[i+1], channels[i+2]
+		table.insert(self.pindaoList,{id, name})
+	end
+	for i=1,#self.pindaoList do
+		_G["Channel_List"..self.pindaoList[i][1]]:PIGDownMenu_SetText(self.pindaoList[i][2])
+	end
+end)
+---
+--local ChatGuolvF =PIGOptionsList_R(RTabFrame,L["CHAT_TABNAME6"],90)
+-------
 local function JoinPigChannel_add()
 	local function nullmima(Name)
 		local channel,channelName, _ = GetChannelName(Name)
@@ -743,10 +832,7 @@ local function JoinPigChannel_add()
 	if PIGA["Chat"]["JoinPindao"] then
 		JoinPIGALL()
 	end
-	--调整频道顺序
-	-- if id ~= 1 then
- --        C_ChatInfo.SwapChatChannelsByChannelIndex(id, 1)
- --    end
+	panduanjiangeYN()
 	ChatClassColor()
 	TABchatPindao()
 	zhanlianhuiche()
@@ -792,8 +878,6 @@ local function JoinPigChannel()
 		end
 	end
 end
----
---local ChatGuolvF =PIGOptionsList_R(RTabFrame,"聊天过滤",90)
 -----
 ChatF:HookScript("OnShow", function (self)
 	self.QuickChat:SetChecked(PIGA["Chat"]["QuickChat"])

@@ -6,6 +6,15 @@ local sub = _G.string.sub
 local find = _G.string.find
 ------------
 local QuickChatfun=addonTable.QuickChatfun
+local worldname="大脚世界频道"
+--local locale1 = GetAvailableLocales()
+local locale1 = GetLocale()
+if locale1 == "zhTW" then
+	--worldname="世界"
+elseif locale1 == "enUS" then
+	worldname="WORLD"
+end
+
 --/////聊天快捷按钮--------
 QuickChatfun.biaoqing = {
 	{"{rt1}","INTERFACE\\TARGETINGFRAME\\UI-RAIDTARGETINGICON_1"}, {"{rt2}","INTERFACE\\TARGETINGFRAME\\UI-RAIDTARGETINGICON_2"}, 
@@ -125,7 +134,7 @@ local function ADD_chatbut(fuF,pdtype,name,chatID,Color)
 			chatbut:SetScript("OnClick", function(self, event)
 				self.channel,self.channelName= GetChannelName(chatID)
 				if not self.channelName then
-					if chatID=="大脚世界频道" or chatID=="PIG" then
+					if chatID==worldname or chatID=="PIG" then
 						for i=1,ChatpindaoMAX do
 							self.channel,self.channelName= GetChannelName(chatID..i)
 							if self.channelName then
@@ -181,9 +190,7 @@ function QuickChatfun.Update_ChatBut_icon()
 			{QuickChatFFF_UI.CHANNEL_2.X,LOOK_FOR_GROUP},
 			{QuickChatFFF_UI.CHANNEL_3.X,"PIG"},
 		}
-		if GetLocale() == "zhCN" then
-			table.insert(chaozhaopindao,{QuickChatFFF_UI.CHANNEL_4.X,"大脚世界频道"})
-		end
+		table.insert(chaozhaopindao,{QuickChatFFF_UI.CHANNEL_4.X,worldname})
 		for i=1,#chaozhaopindao do
 			chaozhaopindao[i][1]:Show();
 		end
@@ -193,7 +200,7 @@ function QuickChatfun.Update_ChatBut_icon()
 				if chaozhaopindao[i][2]==Showchatmulu[ii] then
 					chaozhaopindao[i][1]:Hide();
 				end
-				if chaozhaopindao[i][2]=="PIG" or chaozhaopindao[i][2]=="大脚世界频道" then
+				if chaozhaopindao[i][2]=="PIG" or chaozhaopindao[i][2]==worldname then
 					for x=1,ChatpindaoMAX do
 						local newpindaoname = chaozhaopindao[i][2]..x
 						if Showchatmulu[ii]==newpindaoname then
@@ -406,9 +413,7 @@ function QuickChatfun.Open()
 		QuickChatFFF.CHANNEL_1 = ADD_chatbut(QuickChatFFF,"CHANNEL",L["CHAT_QUKBUTNAME"][8],GENERAL,{0.888, 0.668, 0.668})
 		QuickChatFFF.CHANNEL_2 = ADD_chatbut(QuickChatFFF,"CHANNEL",L["CHAT_QUKBUTNAME"][9],LOOK_FOR_GROUP,{0.888, 0.668, 0.668})
 		QuickChatFFF.CHANNEL_3 = ADD_chatbut(QuickChatFFF,"CHANNEL",L["CHAT_QUKBUTNAME"][10],"PIG",{102/255,1,204/255})
-		if GetLocale() == "zhCN" then
-			QuickChatFFF.CHANNEL_4 = ADD_chatbut(QuickChatFFF,"CHANNEL",L["CHAT_QUKBUTNAME"][11],"大脚世界频道",{0.888, 0.668, 0.668})
-		end
+		QuickChatFFF.CHANNEL_4 = ADD_chatbut(QuickChatFFF,"CHANNEL",L["CHAT_QUKBUTNAME"][11],worldname,{0.888, 0.668, 0.668})
 		--
 		QuickChatfun.QuickBut_Jilu()
 		QuickChatfun.QuickBut_Keyword()

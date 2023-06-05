@@ -100,6 +100,7 @@ addonTable.Default = {
 		["KeywordFShow"]=false,
 		["Keyword"]={},
 		["Blacklist"]={},
+		["Channel_List"]={},
 		["Frame"] = {
 			["Bianju"] = true,
 			["Width"] = false,
@@ -260,6 +261,7 @@ addonTable.Default = {
 		["Open"] = false,
 		["AddBut"] = true,
 		["Rsetting"] ={
+			["autofen"]=false,
 			["bobaomingxi"] = true,
 			["liupaibobao"] = true,
 			["caizhixiufu"] = false,
@@ -275,6 +277,29 @@ addonTable.Default = {
 			["PaichuList"]={},
 		},
 		["instanceName"]={},
+		["LootQuality"]=3,
+		["ItemList"]={},
+		["Raidinfo"] = {{},{},{},{},{},{},{},{}},
+		["Dongjie"] = false,
+		["jiangli"]={
+			{HEALS.."第一",0,"无",false},
+			{HEALS.."第二",0,"无",false},
+			{HEALS.."第三",0,"无",false},
+			{DAMAGE.."第一",0,"无",false},
+			{DAMAGE.."第二",0,"无",false},
+			{DAMAGE.."第三",0,"无",false},
+		},
+		["fakuan"]={
+			{"包地板出价",0,"无"},
+			{"指挥失误罚款",0,"无"},
+			{"跑位失误罚款1",0,"无"},
+			{"跑位失误罚款2",0,"无"},
+			{"跑位失误罚款3",0,"无"},
+			{"ADD罚款1",0,"无"},
+			{"ADD罚款2",0,"无"},
+			{"ADD罚款3",0,"无"},
+		},
+		["History"]={},
 	},
 };
 addonTable.Default_Per = {

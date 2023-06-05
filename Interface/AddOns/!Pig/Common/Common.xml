@@ -1,5 +1,6 @@
 <Ui>
 	<Script file="Options.lua" />
+	<Script file="RaidRecord_Auc.lua" />
 	<Script file="TradePlus.lua" />
 	<Script file="SkillFBCD.lua" />
 	<Include file="AHPlus\AHPlus.xml" />

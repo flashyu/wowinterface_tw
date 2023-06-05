@@ -6,22 +6,26 @@ local GetItemCooldown=C_Container and C_Container.GetItemCooldown or GetItemCool
 ----------
 local suijizuoqi = [=[/run C_MountJournal.SummonByID(0)]=]
 local function UseKeyDownUP(fuji)
-	--fuji:EnableKeyboard(true)
-	local UseKeyDown =GetCVar("ActionButtonUseKeyDown")
-	if UseKeyDown=="0" then
+	if tocversion<100000 then
 		fuji:RegisterForClicks("AnyUp");
-	elseif UseKeyDown=="1" then
-		fuji:RegisterForClicks("AnyDown")
-		-- SetBinding("CTRL-SHIFT-ALT-Q", "CLICK fuji:Button31")
-		-- fuji:RegisterForClicks("AnyUp", "Button31Down")
-		-- fuji:SetAttribute("type31", "")
-		-- fuji:WrapScript(fuji, "OnClick", [=[
-		--     -- fuji, button, down
-		--     if (button == "Button31" and down) then
-		--         return "LeftButton"
-		--     end
-		-- ]=])
+	else
+		local UseKeyDown =GetCVar("ActionButtonUseKeyDown")
+		if UseKeyDown=="0" then
+			fuji:RegisterForClicks("AnyUp");
+		elseif UseKeyDown=="1" then
+			fuji:RegisterForClicks("AnyDown")
+		end
 	end
+	-- SetBinding("CTRL-SHIFT-ALT-Q", "CLICK fuji:Button31")
+	-- fuji:RegisterForClicks("AnyUp", "Button31Down")
+	-- fuji:SetAttribute("type31", "")
+	-- fuji:WrapScript(fuji, "OnClick", [=[
+	-- 	print(button, down)
+	--     -- fuji, button, down
+	--     if (button == "Button31" and down) then
+	--         return "LeftButton"
+	--     end
+	-- ]=])
 end
 function ActionBarfun.PIGUseKeyDown(fuji)
 	UseKeyDownUP(fuji)
@@ -171,15 +175,15 @@ function ActionBarfun.Update_Count(self)
 				self.Count:SetText()
 		    end
 		elseif Type=="item" then
-			local _,dalei,xiaolei = GetItemInfoInstant(SimID)
+			--local _,dalei,xiaolei = GetItemInfoInstant(SimID)
 			local Ccount = GetItemCount(SimID, false, true) or GetItemCount(SimID)
-			if dalei=="消耗品" then
+			--if dalei=="消耗品" then
 				if Ccount>0 then
 					self.Count:SetText(Ccount);
 				else
 					self.Count:SetText("|cffff0000"..Ccount.."|r");
 				end
-			end
+			--end
 		elseif Type=="macro" then
 			local name, icon, body, isLocal = GetMacroInfo(SimID)
 			self.Name:SetText(name);
@@ -231,11 +235,16 @@ function ActionBarfun.Update_bukeyong(self)
 				return 
 			end
 		elseif Type=="item" then
-			local usable, noMana = IsUsableItem(SimID)
-			if not usable then 
+			local Ccount = GetItemCount(SimID, false, true) or GetItemCount(SimID)
+			if Ccount==0 then
 				self.icon:SetVertexColor(0.5, 0.5, 0.5);
 				return
 			end
+			-- local usable, noMana = IsUsableItem(SimID)
+			-- if not usable then 
+			-- 	self.icon:SetVertexColor(0.5, 0.5, 0.5);
+			-- 	return
+			-- end
 		elseif Type=="macro" then
 			local Name, Icon, Body = GetMacroInfo(SimID);
 			local TrimBody = strtrim(Body or "");
@@ -463,7 +472,7 @@ function ActionBarfun.OnEnter_Spell(Type,SimID)
 end
 local GetContainerNumSlots = C_Container and C_Container.GetContainerNumSlots or GetContainerNumSlots
 local GetContainerItemLink = C_Container and C_Container.GetContainerItemLink or GetContainerItemLink
-function ActionBarfun.OnEnter_Item(Type,SimID)
+function ActionBarfun.OnEnter_Item(Type,SimID,ItemID)
 	for Bagid=0,4,1 do
 		local numberOfSlots = GetContainerNumSlots(Bagid);
 		for caowei=1,numberOfSlots,1 do
@@ -474,8 +483,10 @@ function ActionBarfun.OnEnter_Item(Type,SimID)
 			end
 		end
 	end
-	GameTooltip:SetHyperlink(Type..":"..SimID)
-	GameTooltip:Show();
+	if ItemID then
+		GameTooltip:SetHyperlink(Type..":"..ItemID)
+		GameTooltip:Show();
+	end
 end
 function ActionBarfun.OnEnter_Companion(Type,SimID,spellID)
 	GameTooltip:SetHyperlink("spell:"..spellID)
@@ -529,7 +540,8 @@ local function Cursor_FZ(self,NewType,canshu1,canshu2,canshu3,dataY)
 		PIG_PerA[dataY]["ActionInfo"][self.action]={NewType,canshu3}
 	elseif NewType=="item" then
 		self.SimID=canshu2
-		PIG_PerA[dataY]["ActionInfo"][self.action]={NewType,canshu2}
+		self.ItemID=canshu1
+		PIG_PerA[dataY]["ActionInfo"][self.action]={NewType,canshu2,canshu1}
 	elseif NewType=="macro" then
 		self.SimID=canshu1
 		local name, icon, body = GetMacroInfo(canshu1)

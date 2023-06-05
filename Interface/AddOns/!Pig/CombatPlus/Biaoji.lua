@@ -42,6 +42,7 @@ local iconIdCoord = {
 local tuNum=#iconIdCoord
 local biaojiweizhi={"TOP", UIParent, "TOP", 0, -30}
 local PIGbiaoji = PIGFrame(UIParent,biaojiweizhi,{(biaojiW+3)*tuNum+5,biaojiW+4},"PIGbiaoji_UI")
+PIGbiaoji:PIGSetMovable()
 PIGbiaoji:Hide()
 local function SetBGHide()
 	if PIGA["CombatPlus"]["Biaoji"]["BGHide"] then
@@ -80,7 +81,6 @@ function CombatPlusfun.biaoji()
 	if PIGbiaoji.yizairu then return end
 	PIGbiaoji:Show()
 	PIGbiaoji:PIGSetBackdrop()
-	PIGbiaoji:PIGSetMovable()
 	for i=1,tuNum do
 		local listbut = CreateFrame("Button", nil, PIGbiaoji)
 		listbut:SetScript("OnDragStart",function(self)
@@ -91,10 +91,9 @@ function CombatPlusfun.biaoji()
 		end)
 		listbut:SetHighlightTexture("Interface/Buttons/ButtonHilight-Square")
 		if i==tuNum then
-			listbut:SetSize(biaojiW-2,biaojiW-2)
+			listbut:SetSize(biaojiW,biaojiW)
 			listbut:SetPoint("LEFT", PIGbiaoji, "LEFT",i*(biaojiW+3)-biaojiW+4,0)
-			listbut:SetNormalTexture(131158)
-			listbut:GetNormalTexture():SetTexCoord(0.49,0.75,0,1);
+			listbut:SetNormalTexture("Interface/Buttons/UI-GroupLoot-Pass-Up")
 		else
 			listbut:SetSize(biaojiW,biaojiW)
 			listbut:SetPoint("LEFT", PIGbiaoji, "LEFT",i*(biaojiW+3)-biaojiW,0)

@@ -42,7 +42,7 @@ local function huoqukeyongPIG(chname)
 end
 local benji_banbenhaoV=benjibanbenhao:gsub("%.","0");
 local benji_banbenhaoV=tonumber(benji_banbenhaoV);
-local biaotou="!Pig-OPTUI_VERSION";
+local biaotou="!Pig_Version";
 local banbengengxin="NewVersion";
 C_ChatInfo.RegisterAddonMessagePrefix(biaotou)
 local Version_tishi = CreateFrame("Frame")

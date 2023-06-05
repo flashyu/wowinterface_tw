@@ -32,6 +32,7 @@ ActionF:Show()
 Actiontabbut:Selected()
 --------
 local function ActionBar_Ranse()
+	if not PIGA["ActionBar"]["Ranse"] then return end
 	if tocversion<40000 then
 		hooksecurefunc("ActionButton_OnUpdate", function(self, elapsed)
 			if self.rangeTimer == TOOLTIP_UPDATE_TIME and self.action then
@@ -80,26 +81,26 @@ ActionF.Cooldowns:SetScript("OnClick", function (self)
 end);
 
 if tocversion<20000 then
-	local function UpdateCount(actionButton)
-	    local text = actionButton.Count
-	    local action = actionButton.action
-	    if IsConsumableAction(action) then
-	        local xxxx = GetActionCount(action)
-	        if xxxx>0 then
-	            text:SetText(xxxx)
-	        else
-	            text:SetText("|cffff0000"..xxxx.."|r")
-	        end
-	    end
-	end
-	function ActionBarfun.ActionBar_Cailiao()
-	    hooksecurefunc("ActionButton_UpdateCount", UpdateCount)
+	local function ActionBar_Cailiao()
+		if not PIGA["ActionBar"]["Cailiao"] then return end
+	    hooksecurefunc("ActionButton_UpdateCount", function(actionButton)
+		    local text = actionButton.Count
+		    local action = actionButton.action
+		    if IsConsumableAction(action) then
+		        local xxxx = GetActionCount(action)
+		        if xxxx>0 then
+		            text:SetText(xxxx)
+		        else
+		            text:SetText("|cffff0000"..xxxx.."|r")
+		        end
+		    end
+		end)
 	end
 	ActionF.Cailiao=PIGCheckbutton_R(ActionF,{"显示施法材料数量","在动作条上显示需要施法材料技能材料数量"})
 	ActionF.Cailiao:SetScript("OnClick", function (self)
 		if self:GetChecked() then
 			PIGA["ActionBar"]["Cailiao"]=true;
-			ActionBarfun.ActionBar_Cailiao()
+			ActionBar_Cailiao()
 		else
 			PIGA["ActionBar"]["Cailiao"]=false;
 			Pig_Options_RLtishi_UI:Show()
@@ -108,6 +109,7 @@ if tocversion<20000 then
 end
 ---
 local function ActionBar_PetTishi()
+	if not PIGA["ActionBar"]["PetTishi"] then return end
 	if PETchaofengtishiUI then return end
 	local _, classId = UnitClassBase("player");
 	--职业编号1战士/2圣骑士/3猎人/4盗贼/5牧师/6死亡骑士/7萨满祭司/8法师/9术士/10武僧/11德鲁伊/12恶魔猎手
@@ -220,16 +222,16 @@ ActionF.AutoFanye:SetScript("OnClick", function (self)
 	ActionBar_AutoFanye()
 end)
 ActionF.botline = PIGLine(ActionF,"TOP",-354)
-if tocversion<100000 then
-	function ActionBarfun.ActionBar_HideShijiu()
-		if PIGA["ActionBar"]["HideShijiu"] then
-			MainMenuBarRightEndCap:Hide();--隐藏右侧鹰标 
-			MainMenuBarLeftEndCap:Hide();--隐藏左侧鹰标 
-		else
-			MainMenuBarRightEndCap:Show();
-			MainMenuBarLeftEndCap:Show();
-		end
+local function ActionBar_HideShijiu()
+	if PIGA["ActionBar"]["HideShijiu"] then
+		MainMenuBarRightEndCap:Hide();--隐藏右侧鹰标 
+		MainMenuBarLeftEndCap:Hide();--隐藏左侧鹰标 
+	else
+		MainMenuBarRightEndCap:Show();
+		MainMenuBarLeftEndCap:Show();
 	end
+end
+if tocversion<100000 then
 	ActionF.HideShijiu=PIGCheckbutton(ActionF,{"TOPLEFT",ActionF.botline,"TOPLEFT",20,-20},{"隐藏狮鹫图标","隐藏动作条两边的狮鹫图标"})
 	ActionF.HideShijiu:SetScript("OnClick", function (self)
 		if self:GetChecked() then
@@ -237,7 +239,7 @@ if tocversion<100000 then
 		else
 			PIGA["ActionBar"]["HideShijiu"]=false;
 		end
-		ActionBarfun.ActionBar_HideShijiu()
+		ActionBar_HideShijiu()
 	end)
 	--移动右边动作条
 	if not IsXPUserDisabled then
@@ -322,6 +324,7 @@ if tocversion<100000 then
 				self:SetMovable(false)
 			end
 		end
+		MultiCastBar_Update(MultiCastActionBarFrame)
 		local function jiazaiMultiCast()
 			MultiCastBar_Update(MultiCastActionBarFrame)
 		end
@@ -471,12 +474,12 @@ end)
 addonTable.ActionBar = function()
 	ActionBar_Ranse()
 	if tocversion<20000 then
-		ActionBarfun.ActionBar_Cailiao()
+		ActionBar_Cailiao()
 	end
 	ActionBar_PetTishi()
 	ActionBar_AutoFanye()
 	if tocversion<100000 then
-		ActionBarfun.ActionBar_HideShijiu()
+		ActionBar_HideShijiu()
 		ActionBarfun.Pig_BarRight()
 		ActionF.ActionBar_bili.Slider:SetValue(PIGA["ActionBar"]["ActionBar_bili_value"])
 	end

@@ -174,7 +174,7 @@ Bugcollect.NR.scroll:SetPoint("BOTTOMRIGHT", Bugcollect.NR, "BOTTOMRIGHT", -24, 
 
 Bugcollect.NR.textArea = CreateFrame("EditBox", nil, Bugcollect.NR.scroll)
 Bugcollect.NR.textArea:SetWidth(WWW-30)
-Bugcollect.NR.textArea:SetFontObject(GameFontNormal)
+Bugcollect.NR.textArea:SetFont("Fonts\\ARHei.ttf", 14, "OUTLINE")
 Bugcollect.NR.textArea:SetTextColor(0.9, 0.9, 0.9, 1)
 Bugcollect.NR.textArea:SetAutoFocus(false)
 Bugcollect.NR.textArea:SetMultiLine(true)
@@ -223,10 +223,13 @@ local function xianshixinxi(id)
 		Bugcollect.Time:SetText(time);
 		Bugcollect.biaoti:SetText(id.."/"..shujuyuan.num);
 		if cuowushu>1 then
-			Bugcollect.NR.textArea:SetText(cuowushu.."× "..msg.."\n"..stack.."\n"..logrizhi)
+			Bugcollect.NR.textArea:SetText(cuowushu.."× "..msg.."\r")
 		else
-			Bugcollect.NR.textArea:SetText(msg.."\n"..stack.."\n"..logrizhi)
+			Bugcollect.NR.textArea:SetText(msg.."\r")
 		end
+		Bugcollect.NR.textArea:Insert(stack.."\r");
+		Bugcollect.NR.textArea:Insert(logrizhi);
+
 		Bugcollect.prev.id=id
 		Bugcollect.next.id=id
 		if shujuyuan.num>1 then

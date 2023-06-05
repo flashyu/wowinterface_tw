@@ -22,6 +22,7 @@ local CombatPlusfun=addonTable.CombatPlusfun
 local WWW,HHH = 60,24
 local CombatTimeweizhi={"TOP", UIParent, "TOP", 0, -70}
 local PIGCombatTime = PIGFrame(UIParent,CombatTimeweizhi,{WWW,HHH},"PIGCombatTime_UI")
+PIGCombatTime:PIGSetMovable()
 PIGCombatTime:Hide()
 PIGCombatTime.zongjishi = 0
 PIGCombatTime.dangqian = 0
@@ -103,7 +104,6 @@ function CombatPlusfun.CombatTime()
 	if PIGCombatTime.yizairu then return end
 	PIGCombatTime:SetFrameStrata("LOW")
 	PIGCombatTime:Show()
-	PIGCombatTime:PIGSetMovable()
 	PIGCombatTime:PIGSetBackdrop()
 	PIGCombatTime.bg = PIGCombatTime:CreateTexture(nil, "BORDER");
 	PIGCombatTime.bg:SetTexture("interface/helpframe/cs_helptextures.blp");--	interface/helpframe/helpbuttons.blp

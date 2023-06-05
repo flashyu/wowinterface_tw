@@ -106,7 +106,6 @@ end
 local function Loot_Update()
 	if not PIGA["UnitFrame"]["PlayerFrame"]["Loot"] then return end
 	if tocversion<40000 then
-		local lootmethod, _, _ = GetLootMethod();
 		if IsInGroup() then 
 			local lootmethod, _, _ = GetLootMethod();
 			if lootmethod=="freeforall" then 

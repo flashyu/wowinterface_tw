@@ -2,7 +2,7 @@
 GTFOData = {
 	["TestMode"] = false,
 	["Active"] = true,
-	["EnableVibration"] = false,
+	["UnmuteMode"] = false,
 	["TrivialDamagePercent"] = 2,
 	["SoundOverrides"] = {
 		"", -- [1]
@@ -17,12 +17,12 @@ GTFOData = {
 		true, -- [4]
 	},
 	["DataCode"] = "4",
-	["SoundChannel"] = "Master",
+	["EnableVibration"] = false,
 	["Volume"] = 3,
 	["IgnoreOptions"] = {
 		["Fatigue"] = false,
 		["Lava"] = false,
 	},
-	["UnmuteMode"] = false,
+	["SoundChannel"] = "Master",
 	["TrivialMode"] = false,
 }

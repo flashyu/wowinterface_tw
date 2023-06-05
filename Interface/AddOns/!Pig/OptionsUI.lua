@@ -137,6 +137,7 @@ function QuickBut:GengxinWidth()
 		if geshu1>0 then self:Show() end
 	end
 end
+function QuickBut:RaidRecord() end
 function QuickBut:Add()
 	self:Open()
 	self:AutoFollow()

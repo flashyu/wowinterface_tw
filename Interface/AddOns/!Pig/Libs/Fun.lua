@@ -17,6 +17,22 @@ end
 function PIGDisable(self)
 	self:Disable() self.Text:SetTextColor(0.4, 0.4, 0.4, 1) 
 end
+function PIGSendChatRaidParty(txt)
+	--SendChatMessage(txt, "SAY");--测试
+	if IsInRaid() then
+		SendChatMessage(txt, "RAID");
+	elseif IsInGroup() then
+		SendChatMessage(txt, "PARTY");
+	end
+end
+function PIGSendAddonMessage(biaotou,txt)
+	--C_ChatInfo.SendAddonMessage(biaotou,txt,"SAY");--测试
+	if IsInRaid() then
+		C_ChatInfo.SendAddonMessage(biaotou,txt,"RAID")
+	elseif IsInGroup() then
+		C_ChatInfo.SendAddonMessage(biaotou,txt,"PARTY")
+	end
+end
 --根据等级计算单价
 function Fun.Get_LvDanjia(lv,fbName,danjiaList)
 	if fbName~="无" then

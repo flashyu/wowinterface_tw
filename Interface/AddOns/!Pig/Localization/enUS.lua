@@ -12,6 +12,7 @@ L["ERROR_OLD"] = "old";
 L["ERROR_ADDON"] = "addon";
 L["ERROR_ERROR1"] = "Try to invoke the protection function";
 L["ERROR_ERROR2"] = "The macro attempts to invoke the protection function";
+L["ERROR_EXTEND_NULL"] = "No 【%s】 module detected";
 ---lib
 L["LIB_MOD_OFF"] = "Not enabled, please enable it in the Modules";
 L["LIB_PARTY"] = "party";

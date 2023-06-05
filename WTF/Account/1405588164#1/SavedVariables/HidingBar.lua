@@ -1,6 +1,6 @@
 
 HidingBarDB = {
-	["tstmp"] = 1685894546,
+	["tstmp"] = 1685983802,
 	["profiles"] = {
 		{
 			["isDefault"] = true,
@@ -11,58 +11,58 @@ HidingBarDB = {
 						["tstmp"] = 1685116610,
 					},
 					["LibDBIcon10_BisTooltipIcon"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["LibDBIcon10_Decursive"] = {
 						["tstmp"] = 1685459075,
 					},
 					["LibDBIcon10_AutoBar"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["LibDBIcon10_HealBot"] = {
 						["tstmp"] = 1685116612,
 					},
 					["LibDBIcon10_DBM"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["LibDBIcon10_Attune_Broker"] = {
-						["tstmp"] = 1685894546,
-					},
-					["LibDBIcon10_Leatrix_Plus"] = {
-						["tstmp"] = 1685894546,
-					},
-					["LibDBIcon10_Plater"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["LibDBIcon10_BugSack"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
+					},
+					["LibDBIcon10_Plater"] = {
+						["tstmp"] = 1685983802,
+					},
+					["LibDBIcon10_Leatrix_Plus"] = {
+						["tstmp"] = 1685983802,
 					},
 					["LibDBIcon10_Myslot"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["WIM3MinimapButton"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["LibDBIcon10_Details"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["LibDBIcon10_WeakAuras"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
-					["LibDBIcon10_AtlasLoot"] = {
-						["tstmp"] = 1685894546,
+					["LibDBIcon10_GSE GnomeSequencer-增强"] = {
+						["tstmp"] = 1685983802,
 					},
 					["LibDBIcon10_Atlas"] = {
-						["tstmp"] = 1685894546,
-					},
-					["CodexBrowserIcon"] = {
-						["tstmp"] = 1683303583,
-					},
-					["LibDBIcon10_Leatrix_Maps"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["LibDBIcon10_TradeSkillMaster"] = {
 						["tstmp"] = 1685116610,
+					},
+					["LibDBIcon10_Leatrix_Maps"] = {
+						["tstmp"] = 1685983802,
+					},
+					["CodexBrowserIcon"] = {
+						["tstmp"] = 1683303583,
 					},
 					["LibDBIcon10_HidingBar1"] = {
 						["tstmp"] = 0,
@@ -71,22 +71,22 @@ HidingBarDB = {
 						["tstmp"] = 1684426755,
 					},
 					["LibDBIcon10_TalentEmu"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
-					["LibDBIcon10_GSE GnomeSequencer-增强"] = {
-						["tstmp"] = 1685894546,
+					["LibDBIcon10_AtlasLoot"] = {
+						["tstmp"] = 1685983802,
 					},
 					["LibDBIcon10_DetailsStreamer"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["LibDBIcon10_Questie"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["LibDBIcon10_AutoCombatLogger"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["LibDBIcon10_Hekili"] = {
 						["tstmp"] = 1685116610,
@@ -94,43 +94,43 @@ HidingBarDB = {
 				},
 				["btnSettings"] = {
 					["AutoBar"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["Atlas"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["HidingBar"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["TradeSkillMaster"] = {
 						["tstmp"] = 1685116610,
 					},
 					["WeakAuras"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["DBM"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["Decursive"] = {
 						["tstmp"] = 1685459075,
 					},
 					["BisTooltipIcon"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["TalentEmu"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["AtlasLoot"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["LFGBulletinBoard"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["Parrot"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["AutoCombatLogger"] = {
-						["tstmp"] = 1685894546,
+						["tstmp"] = 1685983802,
 					},
 					["HealBot"] = {
 						["tstmp"] = 1685116610,

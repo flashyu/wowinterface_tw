@@ -119,13 +119,16 @@ function Create.PIGFrame(Parent,Point,WH,UIName,ESCOFF)
 	end
 	return frameX
 end
-function Create.PIGEnter(Parent,text,text1)
+function Create.PIGEnter(Parent,text,text1,text2)
 	Parent:SetScript("OnEnter", function(self)
 		GameTooltip:ClearLines();
 		GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT",0,0);
 		GameTooltip:AddLine(text)
 		if text1 then
 			GameTooltip:AddLine(text1)
+		end
+		if text2 then
+			GameTooltip:AddLine(text2)
 		end
 		GameTooltip:Show();
 	end);

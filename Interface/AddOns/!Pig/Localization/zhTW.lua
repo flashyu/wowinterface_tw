@@ -12,6 +12,7 @@ L["ERROR_OLD"] = "之前錯誤";
 L["ERROR_ADDON"] = "插件";
 L["ERROR_ERROR1"] = "嚐試調用保護功能";
 L["ERROR_ERROR2"] = "宏嚐試調用保護功能";
+L["ERROR_EXTEND_NULL"] = "沒有檢測到【%s】模塊";
 --lib
 L["LIB_MOD_OFF"] = "尚未啟用，請在模塊內啟用";
 L["LIB_PARTY"] = "地下城";
@@ -108,6 +109,8 @@ L["CHAT_TABNAME1"] = "常用";
 L["CHAT_QUKBUT"] = "快捷切換頻道按鈕";
 L["CHAT_QUKBUTTIPS"]="在聊天欄增加一排頻道快捷切換按鈕，可快速切換頻道"
 L["CHAT_QUKBUTNAME"] = {"說","喊","隊","會","團","通","戰","綜","組","P","世"};
+L["CHAT_BENDIFANGWU"] = "本地防務";
+L["CHAT_WORLDFANGWU"] = "世界防務";
 L["CHAT_QUKBUT_UP"] = "敷著於聊天欄上方";
 L["CHAT_QUKBUT_DOWN"] = "敷著於聊天欄下方";
 L["CHAT_QUKBUT_STYLE"]= "樣式";
@@ -162,6 +165,9 @@ L["CHAT_LOOTFNRSETTIPS"]="啟用獨立拾取窗口後，建議打開此選項。
 L["CHAT_LOOTFADDERR1"]="創建失敗，當前屏幕分辨率過小";
 L["CHAT_LOOTFADDERR2"]="創建失敗，系統允許最大聊天窗口數：10，當前："..FCF_GetNumActiveChatFrames();
 L["CHAT_RECHATBUT"]= "重置聊天"..L["OPTUI_SET"];
+L["CHAT_TABNAME5"] = "頻道順序";
+L["CHAT_TABNAME5_XULIE"] = "序列";
+L["CHAT_TABNAME6"] = "頻道過濾";
 --动作条
 L["ACTION_TABNAME"] = "動作條";
 L["ACTION_TABNAME1"] = "常規";

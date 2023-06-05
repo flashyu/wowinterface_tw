@@ -190,13 +190,18 @@ function QuickButUI:BGbroadcast()
 		local Tooltip = "左击-|cff00FFFF通报当前位置来犯人,(来几人就点几次)\r|r右击-|cff00FFFF报告位置安全|r"
 		local BGanniu=PIGQuickBut(GnUI,Tooltip,GnIcon)
 		BGanniu:SetScript("OnClick", function (self, event)
-			if event=="RightButton" then
-				SendChatMessage( GetMinimapZoneText().."已安全，机动人员请机动支援！", "instance_chat") 
+			local inInstance, instanceType = IsInInstance();
+			if inInstance and instanceType=="pvp" then
+				if event=="RightButton" then
+					SendChatMessage( GetMinimapZoneText().."已安全，机动人员请机动支援！", "instance_chat") 
+				else
+					if not direnshuliangpig or not hanhuaTimejiange or GetTime()-hanhuaTimejiange>10 then
+						direnshuliangpig=0;
+					end;
+					hanhuaTimejiange=GetTime(); direnshuliangpig=direnshuliangpig+1; SendChatMessage( GetMinimapZoneText().."有"..direnshuliangpig.."个敌人来袭，请求支援！", "instance_chat"); 
+				end
 			else
-				if not direnshuliangpig or not hanhuaTimejiange or GetTime()-hanhuaTimejiange>10 then
-					direnshuliangpig=0;
-				end;
-				hanhuaTimejiange=GetTime(); direnshuliangpig=direnshuliangpig+1; SendChatMessage( GetMinimapZoneText().."有"..direnshuliangpig.."个敌人来袭，请求支援！", "instance_chat"); 
+				PIG_print("请在战场内使用")
 			end
 		end);
 	end
