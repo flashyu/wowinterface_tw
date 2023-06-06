@@ -67,18 +67,18 @@ end
 local function kaishiMsg()
 	if IsInGroup() then
 		if IsInRaid() then
-			SendChatMessage('[!Pig] 已开启被动跟随,收到指令 '..PIGA["QuickFollow"]["Kaishi"]..' 跟随；收到 '..PIGA["QuickFollow"]["Jieshu"]..' 停止', "RAID", nil);
+			SendChatMessage("[!Pig] 已开启被动跟随,收到指令 "..PIGA["QuickFollow"]["Kaishi"].." 跟随；收到 "..PIGA["QuickFollow"]["Jieshu"].." 停止", "RAID", nil);
 		else
-			SendChatMessage('[!Pig] 已开启被动跟随,收到指令 '..PIGA["QuickFollow"]["Kaishi"]..' 跟随；收到 '..PIGA["QuickFollow"]["Jieshu"]..' 停止', "PARTY", nil);
+			SendChatMessage("[!Pig] 已开启被动跟随,收到指令 "..PIGA["QuickFollow"]["Kaishi"].." 跟随；收到 "..PIGA["QuickFollow"]["Jieshu"].." 停止", "PARTY", nil);
 		end
 	end
 end
 local function jieshuMsg()
 	if IsInGroup() then
 		if IsInRaid() then
-			SendChatMessage('[!Pig] 已关闭被动跟随', "RAID", nil);
+			SendChatMessage("[!Pig] 已关闭被动跟随", "RAID", nil);
 		else
-			SendChatMessage('[!Pig] 已关闭被动跟随', "PARTY", nil);
+			SendChatMessage("[!Pig] 已关闭被动跟随", "PARTY", nil);
 		end
 	end
 end
@@ -97,7 +97,7 @@ local function Gensui_B_Vanilla(Booleans,AutoFollowF)
 		gensuiB_UI_tishi:Show()
 		if Gensui_B_CMD_UI then Gensui_B_CMD_UI:Disable() end
 		if PIGA["QuickFollow"]["Yijiao"] and IsInGroup() then
-			SendChatMessage('[!Pig] 已开启自动移交队长,收到密语内容为“队长”将自动移交队长', "PARTY", nil);
+			SendChatMessage("[!Pig] 已开启自动移交队长,收到"..SLASH_TEXTTOSPEECH_WHISPER.."内容为“队长”将自动移交队长", "PARTY", nil);
 		end
 		kaishiMsg()
 	else

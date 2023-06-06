@@ -246,7 +246,7 @@ end
 function Create.PIGOptionsList(GnName,weizhi)
 	local PigUI=Pig_OptionsUI
 	local fuUI=PigUI.L.F.ListTOP
-	local tabbutWW = fuUI:GetWidth()-4
+	local tabbutWW = fuUI:GetWidth()-6.8
 	if weizhi=="EXT" then
 		fuUI=PigUI.L.F.ListEXT
 	elseif weizhi=="BOT" then

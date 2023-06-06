@@ -2,6 +2,7 @@ local addonName, addonTable = ...;
 local L =addonTable.locale
 if GetLocale() == "enUS" then
 L["ADDON_NAME"] = "geligasi";
+L["ADDON_AUTHOR"]="Contact Author";
 --error
 L["ERROR_CLEAR"] = "clear";
 L["ERROR_PREVIOUS"] = "previous";
@@ -86,13 +87,13 @@ L["CONFIG_DEFAULT"] = "Default "..L["CONFIG_TABNAME"];
 L["CONFIG_DEFAULTTIPS"] = "Enable common functions";
 L["CONFIG_ALLON"] = "Open all";
 L["CONFIG_ALLONTIPS"] = "Enable all functions. Disable unnecessary functions";
-L["CONFIG_ALLOFF"] = "Debug config";
+L["CONFIG_ALLOFF"] = "Debug "..L["CONFIG_TABNAME"];
 L["CONFIG_ALLOFFTIPS"] = "This configuration disables all functions by default,\nFor debugging addons";
-L["CONFIG_DIY"] = "DIYCONFIG";
-L["CONFIG_DIYTXT"]="Contact the author to customize your private configuration";
-L["CONFIG_DIYTIPS"] = L["CONFIG_DIYTXT"]..",To load your Settings anywhere with one click";
+L["CONFIG_DIY"] = "Personal"..L["CONFIG_TABNAME"]
+L["CONFIG_DIYTIPS"] = L["CONFIG_DIY"]..",To load your Settings anywhere with one click";
 L["CONFIG_LOADTIPS"] = "This action |cff00ff00loads|r the Settings for |cff00ff00<%s>|r. The saved data will be |cffff0000cleared|r. Load or not?";
 L["CONFIG_ERRTIPS"] = "1、If you run into problems, load the addon default configuration here.\n|cffFFff002、If the problem is still unresolved,\nPlease submit questions via the feedback on the about.|r";
+L["CONFIG_DAORU"] = "Import";
 L["CONFIG_IMPORT"] = "Enter the string you want to import below and click the Import button";
 L["CONFIG_DERIVE"] = "Copy the bottom string and paste it to where you want to import it";
 L["CONFIG_DERIVERL"] = "Import and reload";

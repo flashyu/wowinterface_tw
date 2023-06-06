@@ -176,10 +176,10 @@ ChatF.ShowZb:SetScript("OnClick", function (self)
 	end
 end);
 -------
-local line1= PIGLine(ChatF,"TOP",-150)
+local line1= PIGLine(ChatF,"TOP",-140)
 ChatF.SetFrame=PIGFrame(ChatF)
 ChatF.SetFrame:SetPoint("TOPLEFT",line1,"BOTTOMLEFT",0,0);
-ChatF.SetFrame:SetPoint("BOTTOMRIGHT",ChatF,"BOTTOMRIGHT",0,0);
+ChatF.SetFrame:SetPoint("BOTTOMRIGHT",ChatF,"BOTTOMRIGHT",0,50);
 --（关闭语言过滤器）
 local function guanbiGuolv()
 	if not PIGA["Chat"]["Guolv"] then return end
@@ -398,11 +398,7 @@ local function JoinPIG(pindaoName)
 		ChatFrame_AddChannel(DEFAULT_CHAT_FRAME, pindaoName)--订购一个聊天框以显示先前加入的聊天频道
 	end
 	ChatFrame_RemoveMessageGroup(DEFAULT_CHAT_FRAME, "CHANNEL")--屏蔽人员进入频道提示
-	if GetLocale() == "zhTW" then
-		LeaveChannelByName("寻求组队")
-	elseif GetLocale() == "zhCN" then
-		LeaveChannelByName("尋求組隊")
-	end
+
 end
 local function JoinPIGALL(pindaoName)
 	JoinPIG(LOOK_FOR_GROUP)
@@ -445,9 +441,51 @@ function ChatF.SetFrame.FontSize.Down:PIGDownMenu_SetValue(value,arg1,arg2)
 	ChatFrame_WINDOWS_Size(arg1)
 	PIGCloseDropDownMenus()
 end
-----
-ChatF.SetFrame.dayinzidingyi = PIGButton(ChatF.SetFrame, {"BOTTOMLEFT",ChatF.SetFrame,"BOTTOMLEFT",20,20},{180,24},L["CHAT_DAYINZIDINGYI"]); 
-ChatF.SetFrame.dayinzidingyi:SetScript("OnClick", function (self)
+--导入其他角色聊天设置
+local function SavedangqianSet()--保存当前设置
+	-- local wanjia, realm = UnitFullName("player")
+	-- local realm=realm or GetRealmName() or "null"
+	-- local PIG_renwuming = wanjia.."-"..realm
+	-- local dangqianChatSET={}
+	-- --for id=1,MAX_WOW_CHAT_CHANNELS do
+	-- for id=1,3 do
+	-- 	local name, fontSize, r, g, b, alpha, shown, locked, docked, uninteractable = GetChatWindowInfo(id);
+	-- 	--local name, __ = GetChatWindowInfo(id);
+	-- 	print(name, fontSize, r, g, b, alpha, shown, locked, docked, uninteractable)
+	-- 	local type1 = {GetChatWindowMessages(id)}
+	-- 	for i=1,#type1 do
+	-- 		print(type1[i])
+	-- 	end
+	-- 	print("++=====")
+	-- 	local name1 = {GetChatWindowChannels(id)}
+	-- 	for i=1,#name1 do
+	-- 		print(name1[i])
+	-- 	end
+	-- end
+
+	-- PIGA["Chat"]["ChatSetSave"][PIG_renwuming]=dangqianChatSET
+end
+-- ChatF.daoruqitaSet =PIGDownMenu(ChatF,{"BOTTOMLEFT",ChatF,"BOTTOMLEFT",20,14},{200,nil})
+-- function ChatF.daoruqitaSet:PIGDownMenu_Update_But(self)
+-- 	local Setinfo =PIGA["Chat"]["ChatSetSave"]
+-- 	local info = {}
+-- 	info.func = self.PIGDownMenu_SetValue
+-- 	for k,v in pairs(Setinfo) do
+-- 		print(k,v)
+-- 		info.text, info.arg1 = L["CONFIG_DAORU"].."<"..k..">"..L["CONFIG_TABNAME"],v
+-- 		self:PIGDownMenu_AddButton(info)
+-- 	end
+-- end
+-- function ChatF.daoruqitaSet:PIGDownMenu_SetValue(value,arg1)
+-- 	print(value,arg1)	
+-- 	PIGA["Chat"]["ChatSetSave"][PIG_renwuming]=arg1
+-- 	PIGCloseDropDownMenus()
+-- end
+-- ChatF.daoruqitaSet:PIGDownMenu_SetText(L["CHAT_DAORUQITASET"])
+
+----打印自定义
+ChatF.dayinzidingyi = PIGButton(ChatF, {"BOTTOMLEFT",ChatF,"BOTTOMLEFT",320,14},{180,24},L["CHAT_DAYINZIDINGYI"]); 
+ChatF.dayinzidingyi:SetScript("OnClick", function (self)
 	ChatFrame_AddMessageGroup(DEFAULT_CHAT_FRAME, "CHANNEL")
 	local channels = {GetChannelList()}
 	for i=1,#channels,3 do
@@ -459,7 +497,8 @@ ChatF.SetFrame.dayinzidingyi:SetScript("OnClick", function (self)
 	end
 	C_Timer.After(1,xxxxx)
 end);
--------------
+--=========================================
+---TAB切换
 local MeihangNum,MeihangJG = 3,150
 local TABchatF =PIGOptionsList_R(RTabFrame,L["CHAT_TABNAME2"],110)
 local TABchatName = L["CHAT_TABNAME2TIPS"]
@@ -729,7 +768,7 @@ end)
 ---调整频道顺序
 local Channel_ListF =PIGOptionsList_R(RTabFrame,L["CHAT_TABNAME5"],90)
 Channel_ListF.maxnum=10
-local function Channel_shunxu()
+local function Set_ChannelID()
 	local datax = PIGA["Chat"]["Channel_List"]
 	for k,v in pairs(datax) do
 		local channelID = GetChannelName(v)
@@ -741,27 +780,35 @@ local function Channel_shunxu()
 	end
 end
 ---
-local function panduanjiangeYN()
+local function panduanjiangeYN(arg1)
+	local peiz = PIGA["Chat"]["Channel_List"]
+	if arg1 then
+		local bianjilan = _G["Channel_List"..arg1]:PIGDownMenu_GetText()
+		for bb=1,Channel_ListF.maxnum do
+			if bb~=arg1 then
+				local zhiv = _G["Channel_List"..bb]:PIGDownMenu_GetText()
+				if bianjilan==zhiv then
+					peiz[bb]=nil
+					_G["Channel_List"..bb]:PIGDownMenu_SetText("")
+				end
+			end
+		end
+	end
 	Channel_ListF.errnum=nil
 	Channel_ListF.error:Hide()
 	for bb=Channel_ListF.maxnum,1,-1 do
 		local zhiv = _G["Channel_List"..bb]:PIGDownMenu_GetText()
-		if Channel_ListF.errnum=="kong" then
-			if zhiv then
-				Channel_ListF.error:Show()
-				return
-			end
-		end
 		if Channel_ListF.errnum=="end" then
 			if zhiv==nil then
-				Channel_ListF.errnum="kong"
+				Channel_ListF.error:Show()
+				return
 			end
 		end
 		if zhiv then
 			Channel_ListF.errnum="end"
 		end
 	end
-	Channel_shunxu()
+	Set_ChannelID()
 end
 for v=1,Channel_ListF.maxnum do
 	local xulie =PIGDownMenu(Channel_ListF,{"TOPLEFT",Channel_ListF,"TOPLEFT",80,(-30*v)},{200,nil},nil,"Channel_List"..v)
@@ -775,19 +822,11 @@ for v=1,Channel_ListF.maxnum do
 			self:PIGDownMenu_AddButton(info)
 		end 
 	end
-	function xulie:PIGDownMenu_SetValue(value,arg1)
-		local peiz = PIGA["Chat"]["Channel_List"]
-		for k,v in pairs(peiz) do
-			if k~=arg1 and v==value then
-				peiz[k]=nil
-				_G["Channel_List"..k]:PIGDownMenu_SetText("")
-			end
-		end
-		
+	function xulie:PIGDownMenu_SetValue(value,arg1)	
 		self:PIGDownMenu_SetText(value)
-		peiz[arg1]=value
+		PIGA["Chat"]["Channel_List"][arg1]=value
 		PIGCloseDropDownMenus()
-		panduanjiangeYN()
+		panduanjiangeYN(arg1)
 	end
 	xulie.x = PIGCloseBut(xulie,{"LEFT",xulie,"RIGHT",2,0})
 	xulie.x:HookScript("OnClick", function (self)
@@ -796,11 +835,14 @@ for v=1,Channel_ListF.maxnum do
 		panduanjiangeYN()
 	end)
 end
-Channel_ListF.error = PIGFontString(Channel_ListF,{"TOPLEFT",Channel_ListF,"TOPLEFT",320,-50},"序号请连续设置\n不要留有空白间隔",nil,26);
+Channel_ListF.error = PIGFontString(Channel_ListF,{"TOPLEFT",Channel_ListF,"TOPLEFT",320,-50},"当前序号不连续\n设置将不会被保存",nil,26);
 Channel_ListF.error:SetTextColor(1, 0, 0, 1)
 Channel_ListF.error:Hide()
 Channel_ListF:HookScript("OnShow", function (self)
 	self.pindaoList={}
+	for bb=1,Channel_ListF.maxnum do
+		_G["Channel_List"..bb]:PIGDownMenu_SetText("")
+	end
 	local channels = {GetChannelList()}
 	for i = 1, #channels, 3 do
 		local id, name, disabled = channels[i], channels[i+1], channels[i+2]
@@ -809,6 +851,7 @@ Channel_ListF:HookScript("OnShow", function (self)
 	for i=1,#self.pindaoList do
 		_G["Channel_List"..self.pindaoList[i][1]]:PIGDownMenu_SetText(self.pindaoList[i][2])
 	end
+	panduanjiangeYN()
 end)
 ---
 --local ChatGuolvF =PIGOptionsList_R(RTabFrame,L["CHAT_TABNAME6"],90)
@@ -836,6 +879,7 @@ local function JoinPigChannel_add()
 	ChatClassColor()
 	TABchatPindao()
 	zhanlianhuiche()
+	SavedangqianSet()
 	local feifaPlayers={
 		"嘟叫兽","姬神秀","安静的局八盖","Forever","小亚雯","天启丨残雪","乄秃灬兄","祺灬莹",
 		"睿瑞睿睿","张三风","批批勒马脲杯","迷光","二丶黑","达瓦达瓦是是",

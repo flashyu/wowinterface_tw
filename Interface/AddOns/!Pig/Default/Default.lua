@@ -76,6 +76,7 @@ addonTable.Default = {
 		},
 	},
 	["Chat"] = {
+		["ChatSetSave"]={},
 		["ShowZb"]=true,
 		["LinkShow"]=false,
 		["Jianyin"] = false,
@@ -164,6 +165,7 @@ addonTable.Default = {
 		["wupinLV"]=true,
 		["JunkShow"]=true,
 		["BAGmeihangshu"]=8,
+		["BAGmeihangshu_WLK"]=10,
 		["BAGmeihangshu_retail"]=10,
 		["BAGsuofangBili"]=1,
 		["BANKmeihangshu"]=16,

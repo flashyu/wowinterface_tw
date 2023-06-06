@@ -8,18 +8,18 @@ local Macro_FollowName = CommonFun.Macro_FollowName
 local function kaishiMsg()
 	if IsInGroup() then
 		if IsInRaid() then
-			SendChatMessage('[!Pig] 开始接收指令,发送 '..PIGA["QuickFollow"]["Jieshu"]..' 停止接收', "RAID", nil);
+			SendChatMessage("[!Pig] 开始接收指令,发送 "..PIGA["QuickFollow"]["Jieshu"].." 停止接收", "RAID", nil);
 		else
-			SendChatMessage('[!Pig] 开始接收指令,发送 '..PIGA["QuickFollow"]["Jieshu"]..' 停止接收', "PARTY", nil);
+			SendChatMessage("[!Pig] 开始接收指令,发送 "..PIGA["QuickFollow"]["Jieshu"].." 停止接收", "PARTY", nil);
 		end
 	end
 end
 local function jieshuMsg()
 	if IsInGroup() then
 		if IsInRaid() then
-			SendChatMessage('[!Pig] 停止接收指令,发送 '..PIGA["QuickFollow"]["Kaishi"]..' 开始接收', "RAID", nil);
+			SendChatMessage("[!Pig] 停止接收指令,发送 "..PIGA["QuickFollow"]["Kaishi"].." 开始接收", "RAID", nil);
 		else
-			SendChatMessage('[!Pig] 停止接收指令,发送 '..PIGA["QuickFollow"]["Kaishi"]..' 开始接收', "PARTY", nil);
+			SendChatMessage("[!Pig] 停止接收指令,发送 "..PIGA["QuickFollow"]["Kaishi"].." 开始接收", "PARTY", nil);
 		end
 	end
 end
@@ -47,7 +47,7 @@ local function Gensui_B_Wrath(Booleans,AutoFollowF)
 		gensuiB_UI_tishi:Show()
 		if Gensui_B_CMD_UI then Gensui_B_CMD_UI:Disable() end
 		if PIGA["QuickFollow"]["Yijiao"] and IsInGroup() then
-			SendChatMessage('[!Pig] 已开启自动移交队长,收到密语内容为“队长”将自动移交队长', "PARTY", nil);
+			SendChatMessage("[!Pig] 已开启自动移交队长,收到"..SLASH_TEXTTOSPEECH_WHISPER.."内容为“队长”将自动移交队长", "PARTY", nil);
 		end
 		kaishiMsg()
 	else

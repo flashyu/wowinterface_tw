@@ -162,7 +162,11 @@ PIGEnter(RaidR_AucF.nr.chujiabut.tishi,"重要提示：","|cffFF0000请及早出
 RaidR_AucF.nr.chujiabut:SetScript("OnClick",function(self)
 	local chujiajiaV=RaidR_AucF.nr.chujiaV:GetNumber()
 	local chujiajianxie=zhuanhuanjiaxie(RaidR_AucF.nr.chujiaV:GetText())
-	PIGSendChatRaidParty("出价:"..chujiajiaV.." ("..chujiajianxie..")")
+	if chujiajiaV<10000 then
+		PIGSendChatRaidParty("出价:"..chujiajiaV)
+	else
+		PIGSendChatRaidParty("出价:"..chujiajiaV.." ("..chujiajianxie..")")
+	end
 	PIGSendAddonMessage(biaotou,auc_chujia.."&"..chujiajiaV)
 end)
 RaidR_AucF.Min = CreateFrame("Button",nil,RaidR_AucF, "TruncatedButtonTemplate"); 

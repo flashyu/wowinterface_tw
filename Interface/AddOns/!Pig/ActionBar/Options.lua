@@ -81,7 +81,7 @@ ActionF.Cooldowns:SetScript("OnClick", function (self)
 end);
 
 if tocversion<20000 then
-	local function ActionBar_Cailiao()
+	function ActionBarfun.ActionBar_Cailiao()
 		if not PIGA["ActionBar"]["Cailiao"] then return end
 	    hooksecurefunc("ActionButton_UpdateCount", function(actionButton)
 		    local text = actionButton.Count
@@ -100,7 +100,7 @@ if tocversion<20000 then
 	ActionF.Cailiao:SetScript("OnClick", function (self)
 		if self:GetChecked() then
 			PIGA["ActionBar"]["Cailiao"]=true;
-			ActionBar_Cailiao()
+			ActionBarfun.ActionBar_Cailiao()
 		else
 			PIGA["ActionBar"]["Cailiao"]=false;
 			Pig_Options_RLtishi_UI:Show()
@@ -113,29 +113,22 @@ local function ActionBar_PetTishi()
 	if PETchaofengtishiUI then return end
 	local _, classId = UnitClassBase("player");
 	--职业编号1战士/2圣骑士/3猎人/4盗贼/5牧师/6死亡骑士/7萨满祭司/8法师/9术士/10武僧/11德鲁伊/12恶魔猎手
-	if classId==3 or  classId==9 then
+	if classId==3 or classId==9 then
 		local chaofengjinengName={}
 		if classId==3 then
-			if GetLocale() == "zhTW" then
-				table.insert(chaofengjinengName,"低吼")
-			elseif GetLocale() == "zhCN" then
-				table.insert(chaofengjinengName,"低吼")
-			end
+			local spname= GetSpellInfo(2649)
+			table.insert(chaofengjinengName,spname)
 		elseif classId==9 then
 			if tocversion<80000 then
-				if GetLocale() == "zhTW" then
-					table.insert(chaofengjinengName,"受難")
-					table.insert(chaofengjinengName,"痛楚")
-				elseif GetLocale() == "zhCN" then
-					table.insert(chaofengjinengName,"受难")
-					table.insert(chaofengjinengName,"痛楚")
-				end
+				local spname= GetSpellInfo(3716)
+				local spname1= GetSpellInfo(33698)
+				local spname2= GetSpellInfo(17735)
+				table.insert(chaofengjinengName,spname)
+				table.insert(chaofengjinengName,spname1)
+				table.insert(chaofengjinengName,spname2)
 			else
-				if GetLocale() == "zhTW" then
-					table.insert(chaofengjinengName,"脅迫氣場")
-				elseif GetLocale() == "zhCN" then
-					table.insert(chaofengjinengName,"胁迫气场")
-				end
+				local spname= GetSpellInfo(3716)
+				table.insert(chaofengjinengName,spname)
 			end
 		end
 
@@ -221,6 +214,29 @@ ActionF.AutoFanye:SetScript("OnClick", function (self)
 	end
 	ActionBar_AutoFanye()
 end)
+local function xiufuShowAction()
+	if PIGA["ActionBar"]["xiufuShowAction"] then
+		local Showvalue = GetCVarInfo("alwaysShowActionBars")
+		if Showvalue=="0" then
+			SetCVar("alwaysShowActionBars", "1")
+			SetCVar("alwaysShowActionBars", "0")
+		elseif Showvalue=="1" then
+			SetCVar("alwaysShowActionBars", "0")
+			SetCVar("alwaysShowActionBars", "1")
+		end
+	end
+end
+ActionF.xiufuShowAction=PIGCheckbutton_R(ActionF,{"修复系统显示动作条BUG","修复系统设置当总是显示动作条关闭时，偶尔系统还是会显示空白动作条的问题"})
+ActionF.xiufuShowAction:SetScript("OnClick", function (self)
+	if self:GetChecked() then
+		PIGA["ActionBar"]["xiufuShowAction"]=true;
+	else
+		PIGA["ActionBar"]["xiufuShowAction"]=false;
+	end
+	xiufuShowAction()
+end)
+
+----下方===============
 ActionF.botline = PIGLine(ActionF,"TOP",-354)
 local function ActionBar_HideShijiu()
 	if PIGA["ActionBar"]["HideShijiu"] then
@@ -474,8 +490,9 @@ end)
 addonTable.ActionBar = function()
 	ActionBar_Ranse()
 	if tocversion<20000 then
-		ActionBar_Cailiao()
+		ActionBarfun.ActionBar_Cailiao()
 	end
+	xiufuShowAction()
 	ActionBar_PetTishi()
 	ActionBar_AutoFanye()
 	if tocversion<100000 then

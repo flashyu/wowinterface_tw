@@ -116,6 +116,28 @@ Pig_Options.tishi.Button:SetScript("OnClick", function ()
 	ReloadUI();
 end);
 
+Pig_Options.lianxizuozhe=PIGFrame(Pig_Options,{"CENTER",Pig_Options,"CENTER",80,20},{300,300})
+Pig_Options.lianxizuozhe:PIGSetBackdrop(1)
+Pig_Options.lianxizuozhe:PIGClose()
+Pig_Options.lianxizuozhe:Hide()
+Pig_Options.lianxizuozhe:SetFrameLevel(20)
+PIGFontString(Pig_Options.lianxizuozhe,{"TOP", Pig_Options.lianxizuozhe, "TOP", 0, -10},L["ADDON_AUTHOR"])
+Pig_Options.lianxizuozhe.wx = Pig_Options.lianxizuozhe:CreateTexture()
+Pig_Options.lianxizuozhe.wx:SetTexture("Interface\\AddOns\\"..addonName.."\\Libs\\wx.blp");
+Pig_Options.lianxizuozhe.wx:SetSize(240,240);
+Pig_Options.lianxizuozhe.wx:SetPoint("CENTER", 0, 0);
+Pig_Options:HookScript("OnHide", function (self)
+	self.lianxizuozhe:Hide()
+end)
+function Pig_Options:ShowAuthor()
+	local zuozheF = self.lianxizuozhe
+	if zuozheF:IsShown() then
+		zuozheF:Hide()
+	else
+		zuozheF:Show()
+	end
+end
+
 --功能动作条
 Pig_Options.qiege=16
 local _, _, _, tocversion = GetBuildInfo()

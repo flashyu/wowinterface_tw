@@ -132,7 +132,7 @@ end
 if tocversion>100000 then
 	function ContainerFrameCombinedBags:GetColumns()
 		if self:IsCombinedBagContainer() then
-			return PIGA["BagBank"]["BAGmeihangshu_retail"]
+			return self.meihang
 		else
 			return 4;
 		end
@@ -146,20 +146,21 @@ function BagBankF.SetListF.hangNUM:PIGDownMenu_Update_But(self)
 	info.func = self.PIGDownMenu_SetValue
 	for i=1,#BagmeihangN,1 do
 	    info.text, info.arg1 = BagmeihangN[i], BagmeihangN[i]
-	    if tocversion<100000 then
-	   		info.checked = BagmeihangN[i]==PIGA["BagBank"]["BAGmeihangshu"]
-	   	else
-			info.checked = BagmeihangN[i]==PIGA["BagBank"]["BAGmeihangshu_retail"]
-	   	end
+		if tocversion<100000 then
+			info.checked = BagmeihangN[i]==ContainerFrame1.meihang
+		else
+			info.checked = BagmeihangN[i]==ContainerFrameCombinedBags.suofang
+		end
 		BagBankF.SetListF.hangNUM:PIGDownMenu_AddButton(info)
 	end 
 end
 function BagBankF.SetListF.hangNUM:PIGDownMenu_SetValue(value,arg1,arg2)
 	BagBankF.SetListF.hangNUM:PIGDownMenu_SetText(value)
 	if tocversion<100000 then
-		BAGheji_UI.meihang=arg1
+		ContainerFrame1.meihang=arg1
 		PIGA["BagBank"]["BAGmeihangshu"] = arg1;
 	else
+		ContainerFrameCombinedBags.meihang=arg1
 		PIGA["BagBank"]["BAGmeihangshu_retail"] = arg1;
 	end
 	CloseAllBags()
@@ -183,9 +184,9 @@ function BagBankF.SetListF.suofang:PIGDownMenu_SetValue(value,arg1,arg2)
 	BagBankF.SetListF.suofang:PIGDownMenu_SetText(value)
 	PIGA["BagBank"]["BAGsuofangBili"] = arg1;
 	if tocversion<100000 then
-		BAGheji_UI.suofang=arg1
+		ContainerFrame1.suofang=arg1
 	else
-		ContainerFrameCombinedBags:SetScale(arg1)
+		ContainerFrameCombinedBags.suofang=arg1
 	end
 	CloseAllBags()
 	OpenAllBags()
@@ -230,11 +231,12 @@ BagBankF:HookScript("OnShow", function(self)
 		end
 	end
 	if tocversion<100000 then
-		BagBankF.SetListF.hangNUM:PIGDownMenu_SetText(PIGA["BagBank"]["BAGmeihangshu"])
+		BagBankF.SetListF.hangNUM:PIGDownMenu_SetText(ContainerFrame1.meihang)
+		BagBankF.SetListF.suofang:PIGDownMenu_SetText(ContainerFrame1.suofang)
 	else
-		BagBankF.SetListF.hangNUM:PIGDownMenu_SetText(PIGA["BagBank"]["BAGmeihangshu_retail"])
+		BagBankF.SetListF.hangNUM:PIGDownMenu_SetText(ContainerFrameCombinedBags.suofang)
+		BagBankF.SetListF.suofang:PIGDownMenu_SetText(ContainerFrameCombinedBags.suofang)
 	end
-	BagBankF.SetListF.suofang:PIGDownMenu_SetText(PIGA["BagBank"]["BAGsuofangBili"])
 end)
 --==================================
 addonTable.BagBank = function()

@@ -2,6 +2,7 @@ local addonName, addonTable = ...;
 local L=addonTable.locale
 if GetLocale() == "zhTW" then
 L["ADDON_NAME"] = "豬豬加油";
+L["ADDON_AUTHOR"]="聯繫作者";
 --error
 L["ERROR_CLEAR"] = "清空";
 L["ERROR_PREVIOUS"] = "上一條";
@@ -88,11 +89,11 @@ L["CONFIG_ALLON"] = "全部開啟";
 L["CONFIG_ALLONTIPS"] = "開啟所有功能，不需要的功能請自行關閉";
 L["CONFIG_ALLOFF"] = "調試配寘";
 L["CONFIG_ALLOFFTIPS"] = "此配寘默認關閉所有功能，供調試挿件使用";
-L["CONFIG_DIY"] = "定制配置";
-L["CONFIG_DIYTXT"]="聯繫作者定制你的私人配置";
-L["CONFIG_DIYTIPS"] = L["CONFIG_DIYTXT"].."，在任何地方一鍵載入你的設置";
+L["CONFIG_DIY"] = "個人配置";
+L["CONFIG_DIYTIPS"] = "保存你的Pig"..L["CONFIG_DIY"].."，在任何地方一鍵載入你的設置";
 L["CONFIG_LOADTIPS"] = "此操作將|cff00ff00載入|r\n|cff00ff00<%s>|r的設定。\n已保存的數據將被|cffff0000清空|r。\n是否載入?";
 L["CONFIG_ERRTIPS"] = "1、如遇到問題，請在此載入挿件默認配寘。\n|cffFFff002、如問題仍未解决請通過關於內的迴響管道提交問題。|r";
+L["CONFIG_DAORU"] = "導入";
 L["CONFIG_IMPORT"] = "請在下方輸入要導入的字串，並點擊導入按鈕";
 L["CONFIG_DERIVE"] = "請複製下方字串，粘貼到需要導入位置";
 L["CONFIG_DERIVERL"] = "導入並重載";
@@ -105,7 +106,7 @@ L["COMMON_TABNAME3"] = "智能跟隨";
 L["COMMON_TABNAME4"] = "其他";
 --Chat
 L["CHAT_TABNAME"] = "聊天";
-L["CHAT_TABNAME1"] = "常用";
+L["CHAT_TABNAME1"] = L["COMMON_TABNAME"];
 L["CHAT_QUKBUT"] = "快捷切換頻道按鈕";
 L["CHAT_QUKBUTTIPS"]="在聊天欄增加一排頻道快捷切換按鈕，可快速切換頻道"
 L["CHAT_QUKBUTNAME"] = {"說","喊","隊","會","團","通","戰","綜","組","P","世"};
@@ -130,8 +131,9 @@ L["CHAT_JINGJIANTIPS"]= L["CHAT_JINGJIAN"].."例：["..LOOK_FOR_GROUP.."]→[組
 L["CHAT_JOINPIG"]= "自動加入"..LOOK_FOR_GROUP.."/PIG頻道"
 L["CHAT_JOINPIGTIPS"]= "進入遊戲後自動加入"..LOOK_FOR_GROUP.."/PIG頻道";
 L["CHAT_FONTSIZE"]= "自動設置聊天框字體:"
-L["CHAT_FONTSIZETIPS"]= "開啟後將在每次登陸時恢復聊天框字體大小為設定值，如果需要自定義單獨聊天框字體請關閉此功能"
-L["CHAT_DAYINZIDINGYI"]= "打印自定義頻道所有者"
+L["CHAT_FONTSIZETIPS"]= "開啟後將在每次登陸時恢復聊天框字體大小為設定值，如果需要自定義單獨聊天框字體請關閉此功能";
+L["CHAT_DAORUQITASET"]= "導入其他角色聊天設置";
+L["CHAT_DAYINZIDINGYI"]= "打印自定義頻道所有者";
 L["CHAT_TABNAME2"] = "TAB切換頻道";
 L["CHAT_TABNAME2TIPS"] = L["CHAT_TABNAME2"].."|cff00ff00(激活輸入框時會在下方選中頻道之間切換)|r"
 L["CHAT_BN_WHISPER"] = "戰網密語"
@@ -170,7 +172,7 @@ L["CHAT_TABNAME5_XULIE"] = "序列";
 L["CHAT_TABNAME6"] = "頻道過濾";
 --动作条
 L["ACTION_TABNAME"] = "動作條";
-L["ACTION_TABNAME1"] = "常規";
+L["ACTION_TABNAME1"] = L["COMMON_TABNAME"];
 L["ACTION_TABNAME2"] = "功能動作條";
 L["ACTION_TABNAME3"] = "額外動作條";
 --背包
@@ -221,7 +223,7 @@ L["MAP_WORDMIWU"] = "去除戰爭迷霧";
 L["MAP_WORDMIWUTIPS"] = "去除世界地圖的戰爭迷霧";
 --Cvar
 L["CVAR_TABNAME"] = "遊戲設定(CVar)";
-L["CVAR_TABNAME1"] = "常規";
+L["CVAR_TABNAME1"] = L["COMMON_TABNAME"];
 L["CVAR_TABNAME2"] = "姓名版";
 L["CVAR_TABNAME3"] = "自身高亮";
 L["CVAR_TABNAME4"] = "高級";

@@ -20,9 +20,11 @@ local PIGFontStringBG=Create.PIGFontStringBG
 local PIGCloseBut=Create.PIGCloseBut
 -----------------------------------------
 local QuickChatfun=addonTable.QuickChatfun
+---
 function QuickChatfun.QuickBut_Jilu()
 	local miyuP={}
-	miyuP.zijirealm = GetRealmName()
+	local wanjia, realm = UnitFullName("player")
+	miyuP.zijirealm=realm or GetRealmName()
 	local jilupindaoID={"PARTY","RAID"};
 	local baocuntianshu=PIGA["Chatjilu"]["tianshu"];
 	for i=1,#jilupindaoID do
@@ -501,7 +503,7 @@ function QuickChatfun.QuickBut_Jilu()
 	miyijiluF:PIGSetBackdrop()
 	miyijiluF:PIGSetMovable()
 	miyijiluF:PIGClose()
-	miyijiluF.biaoti=PIGFontString(miyijiluF,{"TOP", miyijiluF, "TOP", 0, -4},"密语记录")
+	miyijiluF.biaoti=PIGFontString(miyijiluF,{"TOP", miyijiluF, "TOP", 0, -4},SLASH_TEXTTOSPEECH_WHISPER.."记录")
 	miyijiluF.biaoti:SetTextColor(1, 0.843, 0, 1);
 	PIGLine(miyijiluF,"TOP",-20)
 
@@ -534,7 +536,7 @@ function QuickChatfun.QuickBut_Jilu()
 	miyijiluF.shezhiF.biaoti=PIGFontString(miyijiluF.shezhiF,{"TOP", miyijiluF.shezhiF, "TOP", 0, -4},"设置")
 	PIGLine(miyijiluF.shezhiF,"TOP",-20)
 
-	miyijiluF.shezhiF.tixing = PIGCheckbutton(miyijiluF.shezhiF,{"TOPLEFT", miyijiluF.shezhiF, "TOPLEFT", 10,-30},{"新密语提醒","收到密语时频道切换按钮里面的图标会闪动"})
+	miyijiluF.shezhiF.tixing = PIGCheckbutton(miyijiluF.shezhiF,{"TOPLEFT", miyijiluF.shezhiF, "TOPLEFT", 10,-30},{"新"..SLASH_TEXTTOSPEECH_WHISPER.."提醒","收到"..SLASH_TEXTTOSPEECH_WHISPER.."时频道切换按钮里面的图标会闪动"})
 	miyijiluF.shezhiF.tixing:SetScript("OnClick", function (self)
 		if self:GetChecked() then
 			PIGA["Chatjilu"]["jiluinfo"]["WHISPER"]["tixing"]=true 
@@ -683,7 +685,7 @@ function QuickChatfun.QuickBut_Jilu()
 		end
 	end
 	StaticPopupDialogs["CHONGZHI_MIYUJILU"] = {
-		text = "此操作将\124cffff0000重置\124r密语记录配置，并清空所有已保存数据。\n确定重置?",
+		text = "此操作将\124cffff0000重置\124r"..SLASH_TEXTTOSPEECH_WHISPER.."记录配置，并清空所有已保存数据。\n确定重置?",
 		button1 = "确定",
 		button2 = "取消",
 		OnAccept = function()
@@ -1002,7 +1004,7 @@ function QuickChatfun.QuickBut_Jilu()
 	fuFrame.ChatJilu:SetScript("OnEnter", function (self)	
 		GameTooltip:ClearLines();
 		GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT",0,0);
-		GameTooltip:SetText("|cff00FFff左键-|r|cffFFFF00私聊记录\n|cff00FFff右键-|r|cffFFFF00队伍团队记录|r");
+		GameTooltip:SetText("|cff00FFff左键-|r|cffFFFF00"..SLASH_TEXTTOSPEECH_WHISPER.."记录\n|cff00FFff右键-|r|cffFFFF00队伍团队记录|r");
 		GameTooltip:Show();
 		GameTooltip:FadeOut()
 	end);

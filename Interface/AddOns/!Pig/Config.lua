@@ -141,27 +141,12 @@ for id=1,#Config_ID do
 		hideOnEscape = true,
 	}
 end
-local DIYDefault = add_Configbut(L["CONFIG_DIY"],nil,L["CONFIG_DIYTIPS"])
-DIYDefault:SetPoint("TOPLEFT",fuFrame,"TOPLEFT",20,-220);
-DIYDefault:SetScript("OnClick", function (self)
-	if self.F:IsShown() then
-		self.F:Hide()
-	else
-		self.F:Show()
-	end
+fuFrame.DIYDefault = add_Configbut(L["CONFIG_DIY"],nil,L["CONFIG_DIYTIPS"])
+fuFrame.DIYDefault:SetPoint("TOPLEFT",fuFrame,"TOPLEFT",20,-220);
+fuFrame.DIYDefault:SetScript("OnClick", function (self)
+	Pig_OptionsUI:ShowAuthor()
 end);
-DIYDefault.F=PIGFrame(DIYDefault,{"LEFT",DIYDefault,"RIGHT",4,0},{300,300})
-DIYDefault.F:PIGSetBackdrop(1)
-DIYDefault.F:PIGClose()
-DIYDefault.F:Hide()
-PIGFontString(DIYDefault.F,{"TOP", DIYDefault.F, "TOP", 0, -10},L["CONFIG_DIYTXT"])
-DIYDefault.F.wx = DIYDefault.F:CreateTexture()
-DIYDefault.F.wx:SetTexture("Interface\\AddOns\\"..addonName.."\\Default\\wx.blp");
-DIYDefault.F.wx:SetSize(240,240);
-DIYDefault.F.wx:SetPoint("CENTER", 0, 0);
-fuFrame:HookScript("OnHide", function (self)
-	DIYDefault.F:Hide()
-end)
+
 ---提示-----------------------------------
 fuFrame.tishi = PIGFontString(fuFrame,{"TOPLEFT", fuFrame, "TOPLEFT", 20, -300},L["LIB_TIPS"])
 fuFrame.tishi:SetTextColor(1, 1, 0, 1);

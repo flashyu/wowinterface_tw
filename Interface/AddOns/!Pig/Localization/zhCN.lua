@@ -2,6 +2,7 @@ local addonName, addonTable = ...;
 local L ={}
 --if GetLocale() == "zhCN" then
 L["ADDON_NAME"] = "猪猪加油";
+L["ADDON_AUTHOR"]="联系作者";
 --error
 L["ERROR_CLEAR"] = "清空";
 L["ERROR_PREVIOUS"] = "上一条";
@@ -88,11 +89,11 @@ L["CONFIG_ALLON"] = "全部开启";
 L["CONFIG_ALLONTIPS"] = "开启所有功能，不需要的功能请自行关闭";
 L["CONFIG_ALLOFF"] = "调试配置";
 L["CONFIG_ALLOFFTIPS"] = "此配置默认关闭所有功能，供调试插件使用";
-L["CONFIG_DIY"] = "定制配置";
-L["CONFIG_DIYTXT"]="联系作者定制你的私人配置";
-L["CONFIG_DIYTIPS"] = L["CONFIG_DIYTXT"].."，在任何地方一键载入你的设置";
+L["CONFIG_DIY"] = "个人配置";
+L["CONFIG_DIYTIPS"] = "保存你的Pig"..L["CONFIG_DIY"].."，在任何地方一键载入你的Pig设置";
 L["CONFIG_LOADTIPS"] = "此操作将|cff00ff00载入|r\n|cff00ff00<%s>|r的设置。\n已保存的数据将被|cffff0000清空|r。\n是否载入?";
 L["CONFIG_ERRTIPS"] = "1、如遇到问题，请在此载入插件默认配置。\n|cffFFff002、如问题仍未解决请通过关于内的反馈方式提交问题。|r";
+L["CONFIG_DAORU"] = "导入";
 L["CONFIG_IMPORT"] = "请在下方输入要导入的字符串，并点击导入按钮";
 L["CONFIG_DERIVE"] = "请复制下方字符串，粘贴到需要导入位置";
 L["CONFIG_DERIVERL"] = "导入并重载";
@@ -105,7 +106,7 @@ L["COMMON_TABNAME3"] = "智能跟随";
 L["COMMON_TABNAME4"] = "其他";
 --Chat
 L["CHAT_TABNAME"] = "聊天";
-L["CHAT_TABNAME1"] = "常用";
+L["CHAT_TABNAME1"] = L["COMMON_TABNAME"];
 L["CHAT_QUKBUT"] = "快捷切换频道按钮";
 L["CHAT_QUKBUTTIPS"]="在聊天栏增加一排频道快捷切换按钮，可快速切换频道"
 L["CHAT_QUKBUTNAME"] = {"说","喊","队","会","团","通","战","综","组","P","世"};
@@ -131,10 +132,11 @@ L["CHAT_JOINPIG"]= "自动加入"..LOOK_FOR_GROUP.."/PIG频道"
 L["CHAT_JOINPIGTIPS"]= "进入游戏后自动加入"..LOOK_FOR_GROUP.."/PIG频道";
 L["CHAT_FONTSIZE"]= "自动设置聊天框字体:"
 L["CHAT_FONTSIZETIPS"]= "开启后将在每次登录时恢复聊天框字体大小为设置值，如果想自定义单独聊天框窗字体大小请关闭此选项。"
-L["CHAT_DAYINZIDINGYI"]= "打印自定义频道所有者"
+L["CHAT_DAORUQITASET"]= "导入其他角色聊天设置";
+L["CHAT_DAYINZIDINGYI"]= "打印自定义频道所有者";
 L["CHAT_TABNAME2"] = "TAB切换频道";
-L["CHAT_TABNAME2TIPS"] = L["CHAT_TABNAME2"].."|cff00ff00(激活输入框时会在下方选中的频道之间切换)|r"
-L["CHAT_BN_WHISPER"] = "战网密语"
+L["CHAT_TABNAME2TIPS"] = L["CHAT_TABNAME2"].."|cff00ff00(激活输入框时会在下方选中的频道之间切换)|r";
+L["CHAT_BN_WHISPER"] = "战网"..SLASH_TEXTTOSPEECH_WHISPER
 L["CHAT_TABCKBTIPS"] ="勾选以后TAB键将可以切换到【%s】频道"
 L["CHAT_TABNAME3"] = "频道粘连";
 L["CHAT_TABNAME3TIPS"] ="粘连回车|cff00ff00(取消粘连回车的频道，发言后回车不会返回此频道)|r";
@@ -170,7 +172,7 @@ L["CHAT_TABNAME5_XULIE"] = "序列";
 L["CHAT_TABNAME6"] = "频道过滤";
 --动作条
 L["ACTION_TABNAME"] = "动作条";
-L["ACTION_TABNAME1"] = "常规";
+L["ACTION_TABNAME1"] = L["COMMON_TABNAME"];
 L["ACTION_TABNAME2"] = "功能动作条";
 L["ACTION_TABNAME3"] = "额外动作条";
 --背包
@@ -221,7 +223,7 @@ L["MAP_WORDMIWU"] = "去除战争迷雾";
 L["MAP_WORDMIWUTIPS"] = "去除地图战争迷雾";
 --Cvar
 L["CVAR_TABNAME"] = "游戏设置(CVar)";
-L["CVAR_TABNAME1"] = "常规";
+L["CVAR_TABNAME1"] = L["COMMON_TABNAME"];
 L["CVAR_TABNAME2"] = "姓名版";
 L["CVAR_TABNAME3"] = "自身高亮";
 L["CVAR_TABNAME4"] = "高级";

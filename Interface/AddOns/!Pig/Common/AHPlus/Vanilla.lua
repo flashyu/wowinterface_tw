@@ -137,10 +137,14 @@ function CommonFun.AHPlus_Vanilla()
 		BrowseNextPageButton:SetPoint("LEFT",BrowsePrevPageButton,"RIGHT",120,0);
 		BrowseNextPageButton:SetScale(0.88);
 		BrowseNextPageButton:Show();
-		BrowseBidPrice:ClearAllPoints();
-		BrowseBidPrice:SetPoint("LEFT",BrowseNextPageButton,"RIGHT",40,0);
-		BrowseBuyoutPrice:ClearAllPoints();
-		BrowseBuyoutPrice:SetPoint("TOPRIGHT",BrowseBuyoutButton,"BOTTOMRIGHT",8,-4);
+		if BrowseBidPrice then
+			BrowseBidPrice:ClearAllPoints();
+			BrowseBidPrice:SetPoint("LEFT",BrowseNextPageButton,"RIGHT",40,0);
+		end
+		if BrowseBuyoutPrice then
+			BrowseBuyoutPrice:ClearAllPoints();
+			BrowseBuyoutPrice:SetPoint("TOPRIGHT",BrowseBuyoutButton,"BOTTOMRIGHT",8,-4);
+		end
 		if BrowseResetButton then
 			BrowseResetButton:ClearAllPoints();
 			BrowseResetButton:SetPoint("LEFT",BrowseNameText,"RIGHT",4,0);
@@ -314,11 +318,15 @@ function CommonFun.AHPlus_Vanilla()
 								BrowseBuyoutButton:Enable();
 								AuctionFrame.buyoutPrice = buyoutPrice;
 							end
-							MoneyFrame_Update(BrowseBuyoutPrice, buyoutPrice);
-							BrowseBuyoutPrice:Show();
+							if BrowseBuyoutPrice then
+								MoneyFrame_Update(BrowseBuyoutPrice, buyoutPrice);
+								BrowseBuyoutPrice:Show();
+							end
 						else
 							AuctionFrame.buyoutPrice = nil;
-							BrowseBuyoutPrice:Hide();
+							if BrowseBuyoutPrice then
+								BrowseBuyoutPrice:Hide();
+							end
 						end
 						---竞拍
 						if ( bidAmount == 0 ) then

@@ -133,7 +133,7 @@ AutoFollowF.gensuijiuwei:HookScript("OnClick", function (self)
 		PIGA["QuickFollow"]["Jiuwei"]=false;
 	end
 end);
-AutoFollowF.yijiaoduizhang=PIGCheckbutton(AutoFollowF,{"TOPLEFT",AutoFollowF,"TOPLEFT",300,-60},{"跟随时自动移交队长/团长","开启后，跟随时收到密语内容为[队长]/[团长]，将自动移交队长/团长给对方"})
+AutoFollowF.yijiaoduizhang=PIGCheckbutton(AutoFollowF,{"TOPLEFT",AutoFollowF,"TOPLEFT",300,-60},{"跟随时自动移交队长/团长","开启后，跟随时收到"..SLASH_TEXTTOSPEECH_WHISPER.."内容为[队长]/[团长]，将自动移交队长/团长给对方"})
 AutoFollowF.yijiaoduizhang:HookScript("OnClick", function (self)
 	if self:GetChecked() then
 		PIGA["QuickFollow"]["Yijiao"]=true;
@@ -142,7 +142,7 @@ AutoFollowF.yijiaoduizhang:HookScript("OnClick", function (self)
 	end
 end);
 --提示
-AutoFollowF.GensuiTishi=PIGCheckbutton(AutoFollowF,{"TOPLEFT",AutoFollowF,"TOPLEFT",300,-20},{"开始和停止跟随提示","开启后，开始和停止跟随会在队伍/私聊频道提示"})
+AutoFollowF.GensuiTishi=PIGCheckbutton(AutoFollowF,{"TOPLEFT",AutoFollowF,"TOPLEFT",300,-20},{"开始和停止跟随提示","开启后，开始和停止跟随会在队伍频道/"..SLASH_TEXTTOSPEECH_WHISPER.."提示"})
 AutoFollowF.GensuiTishi:HookScript("OnClick", function (self)
 	if self:GetChecked() then
 		PIGA["QuickFollow"]["Tishi"]=true;
@@ -184,16 +184,16 @@ gensuiB_tishi:SetPoint("CENTER", UIParent, "CENTER", 0, 50);
 gensuiB_tishi:Hide();
 gensuiB_tishi.t = PIGFontString(gensuiB_tishi,{"CENTER", gensuiB_tishi, "CENTER", 0, 0},nil,"OUTLINE",40)
 if tocversion<20000 then
-	gensuiB_tishi.t:SetText('|cffffFF00被动|r|cff00D7FF跟随中...|r');
+	gensuiB_tishi.t:SetText("|cffffFF00被动|r|cff00D7FF跟随中...|r");
 else
-	gensuiB_tishi.t:SetText('|cffffFF00接收|r|cff00D7FF指令中...|r');
+	gensuiB_tishi.t:SetText("|cffffFF00接收|r|cff00D7FF指令中...|r");
 end
 
 AutoFollowF.gensuiF.ST_B_t = PIGFontString(AutoFollowF.gensuiF,{"TOPLEFT", AutoFollowF.gensuiF, "TOPLEFT", 10, -10})
 if tocversion<20000 then
-	AutoFollowF.gensuiF.ST_B_t:SetText('|cff00FFFF被动跟随设置|r(收到队友指定发言或密语将自动跟随对方)');
+	AutoFollowF.gensuiF.ST_B_t:SetText("|cff00FFFF被动跟随设置|r(收到队友指定发言或"..SLASH_TEXTTOSPEECH_WHISPER.."将自动跟随对方)");
 else
-	AutoFollowF.gensuiF.ST_B_t:SetText('|cff00FFFF跟随宏|r(根据队友发言指令切换宏命令内的跟随目标)');
+	AutoFollowF.gensuiF.ST_B_t:SetText("|cff00FFFF跟随宏|r(根据队友发言指令切换宏命令内的跟随目标)");
 end
 if tocversion<20000 then
 	AutoFollowF.gensuiF.B_Open=PIGCheckbutton(AutoFollowF.gensuiF,{"TOPLEFT",AutoFollowF.gensuiF,"TOPLEFT",20,-40},{"开启被动跟随","收到队友指定指令将自动跟随对方"})
@@ -220,7 +220,7 @@ AutoFollowF.gensuiF.ST_B_Duizhang:HookScript("OnClick", function (self)
 end);
 --开始指令
 AutoFollowF.gensuiF.ST_B_E_t = PIGFontString(AutoFollowF.gensuiF,{"TOPLEFT", AutoFollowF.gensuiF.B_Open, "BOTTOMLEFT", 6, -15},"开始指令")
-AutoFollowF.gensuiF.ST_B_E = CreateFrame('EditBox', nil, AutoFollowF.gensuiF,"InputBoxInstructionsTemplate");
+AutoFollowF.gensuiF.ST_B_E = CreateFrame("EditBox", nil, AutoFollowF.gensuiF,"InputBoxInstructionsTemplate");
 AutoFollowF.gensuiF.ST_B_E:SetSize(100,30);
 AutoFollowF.gensuiF.ST_B_E:SetPoint("LEFT",AutoFollowF.gensuiF.ST_B_E_t,"RIGHT",10,0);
 AutoFollowF.gensuiF.ST_B_E:SetFontObject(ChatFontNormal);
@@ -247,7 +247,7 @@ AutoFollowF.gensuiF.ST_B_E_b:HookScript("OnClick", function (self)
 end);
 --结束指令
 AutoFollowF.gensuiF.ST_B_E_t_E = PIGFontString(AutoFollowF.gensuiF,{"LEFT", AutoFollowF.gensuiF.ST_B_E_t, "RIGHT", 170, 0},"停止指令")
-AutoFollowF.gensuiF.ST_B_E_E = CreateFrame('EditBox', nil, AutoFollowF.gensuiF,"InputBoxInstructionsTemplate");
+AutoFollowF.gensuiF.ST_B_E_E = CreateFrame("EditBox", nil, AutoFollowF.gensuiF,"InputBoxInstructionsTemplate");
 AutoFollowF.gensuiF.ST_B_E_E:SetSize(100,30);
 AutoFollowF.gensuiF.ST_B_E_E:SetPoint("LEFT",AutoFollowF.gensuiF.ST_B_E_t_E,"RIGHT",10,0);
 AutoFollowF.gensuiF.ST_B_E_E:SetFontObject(ChatFontNormal);
@@ -330,7 +330,7 @@ gensuiZ_tishi:SetSize(200,50);
 gensuiZ_tishi:SetPoint("CENTER", UIParent, "CENTER", 0, 50);
 gensuiZ_tishi:Hide();
 gensuiZ_tishi.t = PIGFontString(gensuiZ_tishi,{"CENTER", gensuiZ_tishi, "CENTER", 0, 0},nil,nil,40)
-gensuiZ_tishi.t:SetText('|cff00FF00主动|r|cff00D7FF跟随中...|r');
+gensuiZ_tishi.t:SetText("|cff00FF00主动|r|cff00D7FF跟随中...|r");
 
 AutoFollowF.gensuiFZ = PIGFrame(AutoFollowF,{"TOP", AutoFollowF, "TOP", 0, -330},{AutoFollowF:GetWidth()-40, 120})
 AutoFollowF.gensuiFZ:PIGSetBackdrop()
@@ -338,7 +338,7 @@ AutoFollowF.gensuiFZ:PIGSetBackdrop()
 AutoFollowF.gensuiFZ.ST_Z_t = PIGFontString(AutoFollowF.gensuiFZ,{"TOPLEFT", AutoFollowF.gensuiFZ, "TOPLEFT", 15, -15},"|cff00FFFF主动跟随设置|r")
 
 AutoFollowF.gensuiFZ.ST_Z_t.ST_Z_E_t = PIGFontString(AutoFollowF.gensuiFZ,{"TOPLEFT", AutoFollowF.gensuiFZ.ST_Z_t, "BOTTOMLEFT", 4, -20},"自定义跟随角色：")
-AutoFollowF.gensuiFZ.ST_Z_E = CreateFrame('EditBox', nil, AutoFollowF.gensuiFZ,"InputBoxInstructionsTemplate");
+AutoFollowF.gensuiFZ.ST_Z_E = CreateFrame("EditBox", nil, AutoFollowF.gensuiFZ,"InputBoxInstructionsTemplate");
 AutoFollowF.gensuiFZ.ST_Z_E:SetSize(150,30);
 AutoFollowF.gensuiFZ.ST_Z_E:SetPoint("LEFT",AutoFollowF.gensuiFZ.ST_Z_t.ST_Z_E_t,"RIGHT",10,0);
 AutoFollowF.gensuiFZ.ST_Z_E:SetFontObject(ChatFontNormal);

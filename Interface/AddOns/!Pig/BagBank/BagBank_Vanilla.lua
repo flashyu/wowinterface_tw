@@ -12,21 +12,23 @@ local PIGDownMenu=Create.PIGDownMenu
 local PIGFontString=Create.PIGFontString
 local CharacterFrame=Create.CharacterFrame
 local BagBankFrame=Create.BagBankFrame
---==========================================
+--=========================================
 local InvSlot=addonTable.Data.InvSlot
 local BagBankfun=addonTable.BagBankfun
-local yinhangmorengezishu={}
-if tocversion<20000 then
-	yinhangmorengezishu={24,6}
-else
-	yinhangmorengezishu={28,7}
-end
-yinhangmorengezishu.banknum=yinhangmorengezishu[1]+yinhangmorengezishu[2]*36
-local BaglixianNum=164
-local BanklixianNum=yinhangmorengezishu[1]+yinhangmorengezishu[2]*36
-----==============
+----
 local bagID = {0,1,2,3,4}
+ContainerFrame1.meihang=10
+ContainerFrame1.suofang=1
+ContainerFrame1.lixianNum=164
 local bankID = {-1,5,6,7,8,9,10,11}
+local yinhangmorengezishu={28,7}
+if tocversion<20000 then
+	yinhangmorengezishu[1]=24
+	yinhangmorengezishu[1]=6
+end
+BankFrame.lixianNum=yinhangmorengezishu[1]+yinhangmorengezishu[2]*36
+BankFrame.meihang=16
+BankFrame.suofang=1
 local zhengliIcon="interface/containerframe/bags.blp"	
 local BagdangeW=ContainerFrame1Item1:GetWidth()+5
 local PIG_renwuming
@@ -56,8 +58,8 @@ local function shuaxinKEYweizhi(frame)
 	frame:SetPoint("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -560, 300);
 end
 local function Update_BAGFrame_WidthHeight(new_hangshu)
-	BAGheji_UI:SetScale(BAGheji_UI.suofang);
-	BAGheji_UI:SetWidth(BagdangeW*BAGheji_UI.meihang+28)
+	BAGheji_UI:SetScale(ContainerFrame1.suofang);
+	BAGheji_UI:SetWidth(BagdangeW*ContainerFrame1.meihang+28)
 	if new_hangshu then
 		BAGheji_UI:SetHeight(BagdangeW*new_hangshu+102);
 	end
@@ -122,7 +124,7 @@ local function shuaxinBAGweizhi(frame, size, id)
 	else
 		_G[name.."MoneyFrame"]:Hide()
 	end
-	local function jisuanzongshu(id)
+	local function jisuanBAGzongshu(id)
 		BAGheji_UI.zongshu=0
 		if id>0 then	
 			local qianzhibag = id
@@ -133,20 +135,20 @@ local function shuaxinBAGweizhi(frame, size, id)
 		end
 		return BAGheji_UI.zongshu
 	end
-	local function jisuankonmgyu(id,zongshu)
+	local function jisuanBAGkonmgyu(id,zongshu)
 		BAGheji_UI.hangShu,BAGheji_UI.kongyu=0,0
 		if id>0 then
-			BAGheji_UI.hangShu=math.ceil(zongshu/BAGheji_UI.meihang)
-			BAGheji_UI.kongyu=BAGheji_UI.hangShu*BAGheji_UI.meihang-zongshu
+			BAGheji_UI.hangShu=math.ceil(zongshu/ContainerFrame1.meihang)
+			BAGheji_UI.kongyu=BAGheji_UI.hangShu*ContainerFrame1.meihang-zongshu
 		end
 		return BAGheji_UI.hangShu,BAGheji_UI.kongyu
 	end
 
-	local shang_allshu=jisuanzongshu(id)
-	local shang_hang,shang_yushu=jisuankonmgyu(id,shang_allshu)
+	local shang_allshu=jisuanBAGzongshu(id)
+	local shang_hang,shang_yushu=jisuanBAGkonmgyu(id,shang_allshu)
 	local NEWsize=size-shang_yushu
-	local hangShu=math.ceil(NEWsize/BAGheji_UI.meihang)
-	local new_kongyu,new_hangshu=hangShu*BAGheji_UI.meihang-NEWsize,hangShu+shang_hang
+	local hangShu=math.ceil(NEWsize/ContainerFrame1.meihang)
+	local new_kongyu,new_hangshu=hangShu*ContainerFrame1.meihang-NEWsize,hangShu+shang_hang
 	for slot=1,size do
 		local itemF = _G[name.."Item"..slot]
 		itemF:ClearAllPoints();
@@ -155,10 +157,10 @@ local function shuaxinBAGweizhi(frame, size, id)
 			_G[name.."PortraitButton"]:ClearAllPoints();
 			_G[name.."PortraitButton"]:SetPoint("TOPLEFT", BAGheji_UI, "TOPRIGHT", 0, -(42*id)-60);
 		else
-			local yushu=math.fmod((slot+new_kongyu-1),BAGheji_UI.meihang)
+			local yushu=math.fmod((slot+new_kongyu-1),ContainerFrame1.meihang)
 			local itemFshang = _G[name.."Item"..(slot-1)]
 			if yushu==0 then
-				itemF:SetPoint("BOTTOMLEFT", itemFshang, "TOPLEFT", (BAGheji_UI.meihang-1)*BagdangeW, 5);
+				itemF:SetPoint("BOTTOMLEFT", itemFshang, "TOPLEFT", (ContainerFrame1.meihang-1)*BagdangeW, 5);
 			else
 				itemF:SetPoint("RIGHT", itemFshang, "LEFT", -5, 0);
 			end
@@ -171,6 +173,8 @@ local function Update_BankFrame_Height(hangallgao)
 	BankFrame:SetWidth(BagdangeW*BankFrame.meihang+36)
 	BankFrame:SetHeight(hangallgao+106);
 end
+local qishihang=math.ceil(yinhangmorengezishu[1]/BankFrame.meihang)--行数
+local qishikongyu=qishihang*BankFrame.meihang-yinhangmorengezishu[1]--空余
 local function shuaxinBANKweizhi(frame, size, id)
 	frame.PortraitButton:Hide();
 	frame.Portrait:Hide();
@@ -186,7 +190,7 @@ local function shuaxinBANKweizhi(frame, size, id)
 	frame:SetHeight(0);
 	frame:SetToplevel(false)
 	frame:SetParent(BankSlotsFrame);
-	local function jisuanzongshu(id)
+	local function jisuanBANKzongshu(id)
 		if id==5 then
 			return yinhangmorengezishu[1]
 		else
@@ -199,7 +203,7 @@ local function shuaxinBANKweizhi(frame, size, id)
 			return yinhangmorengezishu.zongshu
 		end
 	end
-	local function jisuankonmgyu(id,zongshu)
+	local function jisuanBANKkonmgyu(id,zongshu)
 		if id==5 then
 			return qishihang,qishikongyu
 		else
@@ -209,8 +213,8 @@ local function shuaxinBANKweizhi(frame, size, id)
 		end
 	end
 
-	local shang_allshu=jisuanzongshu(id)
-	local shang_hang,shang_yushu=jisuankonmgyu(id,shang_allshu)
+	local shang_allshu=jisuanBANKzongshu(id)
+	local shang_hang,shang_yushu=jisuanBANKkonmgyu(id,shang_allshu)
 	local NEWsize=size-shang_yushu
 	local hangShu=math.ceil(NEWsize/BankFrame.meihang)
 	local new_kongyu,new_hangshu=hangShu*BankFrame.meihang-NEWsize,hangShu+shang_hang
@@ -439,7 +443,7 @@ local function Show_lixian_data(frameF,renwu,shuju,meihang,zongshu)
 		local BagdangeW=BagdangeW-6
 		frameF:SetWidth(meihang*BagdangeW+23)
 		--排序格式化
-		for i=1,BaglixianNum do
+		for i=1,ContainerFrame1.lixianNum do
 			local frameX = _G[framename.."_item_"..i]
 			if i>1 then
 				local yushu=math.fmod((i-1),meihang)	
@@ -688,6 +692,15 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 	local wanjia, realm = UnitFullName("player")
 	local realm=realm or GetRealmName()
 	PIG_renwuming = wanjia.."-"..realm
+	ContainerFrame1.suofang = PIGA["BagBank"]["BAGsuofangBili"]
+	BankFrame.suofang=PIGA["BagBank"]["BANKsuofangBili"]
+	if tocversion<20000 then
+		ContainerFrame1.meihang=PIGA["BagBank"]["BAGmeihangshu"]
+		BankFrame.meihang=PIGA["BagBank"]["BANKmeihangshu"]
+	else
+		ContainerFrame1.meihang=PIGA["BagBank"]["BAGmeihangshu_WLK"]
+		BankFrame.meihang=PIGA["BagBank"]["BANKmeihangshu"]
+	end
 	--
 	if not NDui and not ElvUI then
 		--背包
@@ -751,8 +764,8 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 		end)
 		local data = {
 			["BagdangeW"]=BagdangeW,
-			["meihang"]=PIGA["BagBank"]["BAGmeihangshu"],
-			["suofang"]=PIGA["BagBank"]["BAGsuofangBili"],
+			["meihang"]=ContainerFrame1.meihang,
+			["suofang"]=ContainerFrame1.suofang,
 			["lixianNum"]="zhengheBAG",
 		}
 		local BAGheji=BagBankFrame(UIParent,{"CENTER",UIParent,"CENTER",420,-10},"BAGheji_UI",data)
@@ -770,7 +783,7 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 		local wwc,hhc = 28,28
 		BAGheji.lixianBut = CreateFrame("Frame",nil,BAGheji);
 		BAGheji.lixianBut:SetSize(wwc,hhc);	
-		BAGheji.lixianBut:SetPoint("TOPLEFT",BAGheji,"TOPLEFT",256,-36)
+		BAGheji.lixianBut:SetPoint("TOPRIGHT",BAGheji,"TOPRIGHT",-80,-36)
 		BAGheji.lixianBut.Border = BAGheji.lixianBut:CreateTexture(nil, "OVERLAY");
 		BAGheji.lixianBut.Border:SetTexture("Interface/Minimap/MiniMap-TrackingBorder");
 		BAGheji.lixianBut.Border:SetSize(wwc*1.7,hhc*1.7);
@@ -778,7 +791,7 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 		BAGheji.shezhi = CreateFrame("Button",nil,BAGheji);
 		BAGheji.shezhi:SetHighlightTexture("Interface/Minimap/UI-Minimap-ZoomButton-Highlight");
 		BAGheji.shezhi:SetSize(wwc,hhc);
-		BAGheji.shezhi:SetPoint("TOPLEFT",BAGheji,"TOPLEFT",296,-36);
+		BAGheji.shezhi:SetPoint("TOPRIGHT",BAGheji,"TOPRIGHT",-40,-36);
 		BAGheji.shezhi:RegisterForClicks("LeftButtonUp","RightButtonUp")
 
 		BAGheji.shezhi.Border = BAGheji.shezhi:CreateTexture(nil, "OVERLAY");
@@ -1039,8 +1052,6 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 		else
 			fujiBagFrame=BAGheji_UI
 		end
-		fujiBagFrame.meihang=PIGA["BagBank"]["BAGmeihangshu"]
-		fujiBagFrame.suofang=PIGA["BagBank"]["BAGsuofangBili"]
 		fujiBagFrame.lixianBut.Tex = fujiBagFrame.lixianBut:CreateTexture()
 		fujiBagFrame.lixianBut.Tex:SetTexture(132050);
 		fujiBagFrame.lixianBut.Tex:SetSize(18,18);
@@ -1081,7 +1092,7 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 				if lixianBank_UI:IsShown() then
 					lixianBank_UI:Hide()
 				else
-					Show_lixian_data(lixianBank_UI,PIG_renwuming,"BANK",BankFrame.meihang,BanklixianNum)
+					Show_lixian_data(lixianBank_UI,PIG_renwuming,"BANK",BankFrame.meihang,BankFrame.lixianNum)
 				end
 			end
 		end)
@@ -1112,7 +1123,7 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 						info.text = menuList[x][1]
 						if menuList[x][2]=="BANK" then
 							info.func = function()
-								Show_lixian_data(lixianBank_UI,menuList[x][3],"BANK",BankFrame.meihang,BanklixianNum)
+								Show_lixian_data(lixianBank_UI,menuList[x][3],"BANK",BankFrame.meihang,BankFrame.lixianNum)
 								PIGCloseDropDownMenus()
 							end
 						elseif menuList[x][2]=="C" then
@@ -1122,7 +1133,7 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 							end
 						elseif menuList[x][2]=="BAG" then
 							info.func = function()
-								Show_lixian_data(lixianBag_UI,menuList[x][3],"BAG",fujiBagFrame.meihang,BaglixianNum)
+								Show_lixian_data(lixianBag_UI,menuList[x][3],"BAG",ContainerFrame1.meihang,ContainerFrame1.lixianNum)
 								PIGCloseDropDownMenus()
 							end
 						end
@@ -1295,8 +1306,6 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 	C_Timer.After(8,zhixingbaocunCMD)
 
 	---系统银行处理===========
-	BankFrame.meihang=PIGA["BagBank"]["BANKmeihangshu"]
-	BankFrame.suofang=PIGA["BagBank"]["BANKsuofangBili"]
 	BankFrame.AutoSort = CreateFrame("Button",nil,BankFrame, "TruncatedButtonTemplate");
 	BankFrame.AutoSort:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square");
 	BankFrame.AutoSort:SetSize(24,24);
@@ -1379,9 +1388,9 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 	--离线背包---------
 	local data = {
 		["BagdangeW"]=BagdangeW-6,
-		["meihang"]=PIGA["BagBank"]["BAGmeihangshu"],
-		["suofang"]=PIGA["BagBank"]["BAGsuofangBili"],
-		["lixianNum"]=BaglixianNum
+		["meihang"]=ContainerFrame1.meihang,
+		["suofang"]=ContainerFrame1.meihang,
+		["lixianNum"]=ContainerFrame1.lixianNum
 	}
 	local lixianBag=BagBankFrame(UIParent,{"CENTER",UIParent,"CENTER",-200,200},"lixianBag_UI",data,110)
 	lixianBag.biaoti = PIGFontString(lixianBag,{"TOP", lixianBag, "TOP",10, -14})
@@ -1390,7 +1399,7 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 		["BagdangeW"]=BagdangeW-6,
 		["meihang"]=BankFrame.meihang,
 		["suofang"]=BankFrame.suofang,
-		["lixianNum"]=BanklixianNum
+		["lixianNum"]=BankFrame.lixianNum
 	}
 	local lixianBank=BagBankFrame(UIParent,{"CENTER",UIParent,"CENTER",-300, 200},"lixianBank_UI",data,120)
 	lixianBank.biaoti = PIGFontString(lixianBank,{"TOP", lixianBank, "TOP",10, -14})
