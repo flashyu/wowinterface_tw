@@ -25,9 +25,9 @@ VER 3 0000000001000003 "复仇" "134400"
 /cast 复仇
 /cast 乘胜追击
 END
-VER 3 000000000100000C "怒气" "132277"
-/use 血性狂暴
-/use 狂暴之怒
+VER 3 000000000100000C "怒气" "134400"
+#showtooltip [mod:alt]狂暴之怒;血性狂暴
+/cast [mod:alt]狂暴之怒;血性狂暴
 END
 VER 3 0000000001000014 "打断" "132269"
 #showtooltip  [stance:2] 盾击;[stance:3] 拳击

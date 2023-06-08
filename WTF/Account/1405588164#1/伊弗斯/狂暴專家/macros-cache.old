@@ -1,9 +1,17 @@
+VER 3 0000000001000017 "OH-FURY" "132324"
+#showtooltip
+/click [button:1] OH-FURY LeftButton t; OH-FURY
+END
 VER 3 0000000001000008 "冲锋拦截" "134400"
 #showtooltip [nocombat]冲锋;[combat]拦截
 /cast [nocombat,nostance:1] 战斗姿态;[combat,nostance:3] 狂暴姿态;
 /cast [nocombat,stance:1]冲锋;[combat,stance:3] 拦截;
 /startattack
 /case 乘胜追击
+END
+VER 3 0000000001000015 "卡英勇" "311430"
+#showtooltip
+/click [button:1] 卡英勇 LeftButton t; 卡英勇
 END
 VER 3 000000000100000E "嗜血" "134400"
 #showtooltip 嗜血
@@ -59,14 +67,6 @@ VER 3 000000000100000D "横扫攻击" "132306"
 /startattack
 /cast 乘胜追击
 END
-VER 3 0000000001000009 "爆发" "134400"
-#showtooltip 血性狂怒
-/use 10
-/use 13
-/use 14
-/cast 血性狂怒
-/cast 死亡之愿
-END
 VER 3 000000000100000F "猛击" "134400"
 #showtooltip 猛击
 /cast 猛击
@@ -95,12 +95,6 @@ END
 VER 3 0000000001000002 "英勇打击" "134400"
 #showtooltip 英勇打击
 /cast !英勇打击
-/startattack
-/case 乘胜追击
-END
-VER 3 0000000001000006 "震荡猛击" "134400"
-#showtooltip 震荡猛击
-/cast 震荡猛击
 /startattack
 /case 乘胜追击
 END

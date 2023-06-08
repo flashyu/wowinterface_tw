@@ -4,6 +4,14 @@ END
 VER 3 0000000000000002 "RXPTargeting" "Ability_eyeoftheowl"
 //RestedXP 指南 狮心-北美刘嘉玲 汉化版 - current step has no configured targets
 END
+VER 3 0000000000000013 "一键盾墙" "134400"
+#showtooltip 盾墙
+/cast [stance:2,equipped:盾牌]盾墙; [stance:1/3]防御姿态
+/stopcasting
+/stopmacro [equipped:盾牌]
+/equipslot 17 奥尔加隆的壁垒
+        
+END
 VER 3 0000000000000007 "保命" "135966"
 /use 邪能治疗石
 /use 极效治疗石
@@ -67,6 +75,10 @@ END
 VER 3 0000000000000006 "跟随" "134400"
 /target 臉叔
 /follow
+END
+VER 3 0000000000000014 "通用热力工程炸药" "133035"
+#showtooltip 通用热力工程炸药
+/use [@target] 魔铁炸弹
 END
 VER 3 000000000000000A "震荡波宏" "134400"
 #showtooltip 震荡波

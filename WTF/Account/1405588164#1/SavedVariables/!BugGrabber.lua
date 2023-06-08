@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 275,
+	["session"] = 281,
 	["errors"] = {
 		{
 			["message"] = "Interface/AddOns/GTFO/GTFO.lua:2079: attempt to index a nil value",
@@ -325,14 +325,22 @@ BugGrabberDB = {
 			["time"] = "2023/05/16 21:50:27",
 			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
 			["stack"] = "[string \"@Interface/AddOns/Blizzard_InspectUI/Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:385: in function `UIParentLoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:428: in function `InspectFrame_LoadUI'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:733: in function `InspectUnit'\n[string \"@Interface/FrameXML/UnitPopupSharedButtonMixins.lua\"]:200: in function `OnClick'\n[string \"@Interface/FrameXML/UnitPopupShared.lua\"]:148: in function `func'\n[string \"@Interface/FrameXML/UIDropDownMenu.lua\"]:956: in function `UIDropDownMenuButton_OnClick'\n[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1: in function <[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1>",
-			["session"] = 274,
-			["counter"] = 20,
+			["session"] = 277,
+			["counter"] = 21,
 		}, -- [42]
 		{
 			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:1 (null)",
-			["session"] = 274,
+			["session"] = 277,
 			["time"] = "2023/05/16 21:50:27",
-			["counter"] = 40,
+			["counter"] = 42,
 		}, -- [43]
+		{
+			["message"] = "Interface/AddOns/aux-addon/tabs/search/core.lua:35: attempt to index a nil value",
+			["time"] = "2023/06/09 00:42:57",
+			["locals"] = "item_id = 0\n(*temporary) = <function> defined @Interface/AddOns/aux-addon/tabs/search/core.lua:59\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = nil\n(*temporary) = 0\n(*temporary) = \"attempt to index a nil value\"\ninfo = <table> {\n}\n",
+			["stack"] = "[string \"@Interface/AddOns/aux-addon/tabs/search/core.lua\"]:35: in function `USE_ITEM'\n[string \"@Interface/AddOns/aux-addon/core/shortcut.lua\"]:8: in function <Interface/AddOns/aux-addon/core/shortcut.lua:6>\n[string \"=[C]\"]: in function `HandleModifiedItemClick'\n[string \"*Blizzard_TradeSkillUI.xml:18_OnClick\"]:2: in function <[string \"*Blizzard_TradeSkillUI.xml:18_OnClick\"]:1>",
+			["session"] = 281,
+			["counter"] = 1,
+		}, -- [44]
 	},
 }
