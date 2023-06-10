@@ -65,7 +65,7 @@ MSBTOptions: disabled
 Myslot: enabled
 Pawn: disabled
 Plater: enabled
-Questie: enabled
+Questie: disabled
 SafeQueue: enabled
 SimpleItemLevel: enabled
 TacoTip: enabled
@@ -149,3 +149,4 @@ GSE_GUI: enabled
 GSE_LDB: enabled
 DBM-Raids-BC: enabled
 DBM-Raids-WoTLK: enabled
+DBM-VPYike: disabled

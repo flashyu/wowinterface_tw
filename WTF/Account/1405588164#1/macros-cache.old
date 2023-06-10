@@ -72,9 +72,17 @@ END
 VER 3 0000000000000005 "目标" "132092"
 /target 金鳞蜥蜴
 END
+VER 3 0000000000000015 "萨隆邪铁炸弹" "237295"
+#showtooltip 萨隆邪铁炸弹
+/use [@target] 萨隆邪铁炸弹
+END
 VER 3 0000000000000006 "跟随" "134400"
 /target 臉叔
 /follow
+END
+VER 3 0000000000000014 "通用热力工程炸药" "133035"
+#showtooltip 通用热力工程炸药
+/use [@target] 通用热力工程炸药
 END
 VER 3 000000000000000A "震荡波宏" "134400"
 #showtooltip 震荡波
