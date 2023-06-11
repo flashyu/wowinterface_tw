@@ -32,6 +32,8 @@ END
 VER 3 0000000001000014 "打断" "132269"
 #showtooltip  [stance:2] 盾击;[stance:3] 拳击
 /cast [stance:3,target=focus,exists] 拳击; [stance:3] 拳击; [stance:2,target=focus,exists] 盾击; [stance:2]盾击
+/startattack
+/case 乘胜追击
 END
 VER 3 0000000001000011 "拳击" "134400"
 #showtooltip 拳击
@@ -64,19 +66,6 @@ VER 3 000000000100000D "横扫攻击" "132306"
 /cast 横扫攻击
 /startattack
 /cast 乘胜追击
-END
-VER 3 000000000100000F "猛击" "134400"
-#showtooltip 猛击
-/cast 猛击
-/startattack
-/cast 乘胜追击
-END
-VER 3 0000000001000005 "盾击" "134400"
-#showtooltip 盾击
-/startattack
-/cast [nostance:2] 防御姿态;
-/cast 盾击
-/case 乘胜追击
 END
 VER 3 0000000001000004 "盾牌格挡" "134400"
 #showtooltip 盾牌格挡

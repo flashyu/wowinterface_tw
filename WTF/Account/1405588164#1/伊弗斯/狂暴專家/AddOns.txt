@@ -121,7 +121,7 @@ DBM-VoA: enabled
 DBM-TheEye: enabled
 DBM-BlackTemple: enabled
 DBM-BWL: enabled
-DBM-VPTaotao: enabled
+DBM-VPTaotao: disabled
 HeyboxPlayerInfo: disabled
 ArkInventoryRules_Example: enabled
 alaTalentEmu: enabled
@@ -149,7 +149,7 @@ GSE_GUI: enabled
 GSE_LDB: enabled
 DBM-Raids-BC: enabled
 DBM-Raids-WoTLK: enabled
-DBM-VPYike: disabled
+DBM-VPYike: enabled
 Ace3: enabled
 CallbackHandler-1.0: enabled
 HereBeDragons: enabled
@@ -224,3 +224,7 @@ ElvUI_Config: enabled
 LibDeflate: enabled
 LibSerialize: enabled
 LibSpecialization: enabled
+RangeDisplay: disabled
+RangeDisplay_Options: disabled
+BlizzMove: enabled
+BlizzMove_Debug: enabled

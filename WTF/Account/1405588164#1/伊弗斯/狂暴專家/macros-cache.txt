@@ -85,6 +85,12 @@ VER 3 0000000001000002 "英勇打击" "134400"
 /startattack
 /case 乘胜追击
 END
+VER 3 0000000001000018 "重击" "132340"
+#showtooltip 猛击
+/cast 猛击
+/startattack
+/cast 乘胜追击    
+END
 VER 3 0000000001000007 "顺劈斩" "134400"
 #showtooltip 顺劈斩
 /cast !顺劈斩

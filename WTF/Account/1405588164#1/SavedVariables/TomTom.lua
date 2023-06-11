@@ -1,8 +1,8 @@
 
 TomTomDB = {
 	["profileKeys"] = {
-		["上山打鸟 - 伊弗斯"] = "Default",
 		["狂暴專家 - 伊弗斯"] = "Default",
+		["上山打鸟 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -30,13 +30,13 @@ TomTomDB = {
 TomTomWaypoints = nil
 TomTomWaypointsM = {
 	["profileKeys"] = {
-		["上山打鸟 - 伊弗斯"] = "上山打鸟 - 伊弗斯",
 		["狂暴專家 - 伊弗斯"] = "狂暴專家 - 伊弗斯",
+		["上山打鸟 - 伊弗斯"] = "上山打鸟 - 伊弗斯",
 	},
 	["profiles"] = {
-		["上山打鸟 - 伊弗斯"] = {
-		},
 		["狂暴專家 - 伊弗斯"] = {
+		},
+		["上山打鸟 - 伊弗斯"] = {
 		},
 	},
 }
