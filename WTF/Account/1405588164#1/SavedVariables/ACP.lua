@@ -177,6 +177,7 @@ ACP_Data = {
 			"DBM-Party-Vanilla", -- [83]
 			"DBM-Party-BC", -- [84]
 			"DBM-VPTaotao", -- [85]
+			"SharedMedia_Causese", -- [86]
 		},
 		[25] = {
 			"AdvancedInterfaceOptions", -- [1]
@@ -270,6 +271,7 @@ ACP_Data = {
 		["Blizzard Addons"] = true,
 		["GSE"] = true,
 		["ElvUI"] = true,
+		["SharedMedia"] = true,
 		["Leatrix"] = true,
 		["Doom"] = true,
 		["AtlasLootClassic"] = true,

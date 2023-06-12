@@ -121,7 +121,7 @@ DBM-VoA: enabled
 DBM-TheEye: enabled
 DBM-BlackTemple: enabled
 DBM-BWL: enabled
-DBM-VPTaotao: disabled
+DBM-VPTaotao: enabled
 HeyboxPlayerInfo: disabled
 ArkInventoryRules_Example: enabled
 alaTalentEmu: enabled
@@ -228,3 +228,4 @@ RangeDisplay: disabled
 RangeDisplay_Options: disabled
 BlizzMove: enabled
 BlizzMove_Debug: enabled
+SharedMedia_Causese: enabled
