@@ -2,7 +2,6 @@
 ACP_Data = {
 	["sorter"] = "按名称分组",
 	["NoRecurse"] = false,
-	["NoChildren"] = true,
 	["AddonSet"] = {
 		{
 			"AdvancedInterfaceOptions", -- [1]
@@ -265,6 +264,7 @@ ACP_Data = {
 			"DBM-VPTaotao", -- [83]
 		},
 	},
+	["NoChildren"] = true,
 	["collapsed"] = {
 		["HidingBar"] = true,
 		["ArkInventoryRules"] = true,
@@ -272,11 +272,11 @@ ACP_Data = {
 		["GSE"] = true,
 		["ElvUI"] = true,
 		["SharedMedia"] = true,
-		["Leatrix"] = true,
-		["Doom"] = true,
 		["AtlasLootClassic"] = true,
-		["Details"] = true,
+		["Doom"] = true,
 		["WeakAuras"] = true,
+		["Details"] = true,
+		["Leatrix"] = true,
 		["HealBot"] = true,
 	},
 	["ProtectedAddons"] = {
