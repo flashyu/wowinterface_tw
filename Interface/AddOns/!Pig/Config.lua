@@ -141,9 +141,9 @@ for id=1,#Config_ID do
 		hideOnEscape = true,
 	}
 end
-fuFrame.DIYDefault = add_Configbut(L["CONFIG_DIY"],nil,L["CONFIG_DIYTIPS"])
-fuFrame.DIYDefault:SetPoint("TOPLEFT",fuFrame,"TOPLEFT",20,-220);
-fuFrame.DIYDefault:SetScript("OnClick", function (self)
+fuFrame.ShowAuthor = add_Configbut(L["CONFIG_DIY"],nil,L["CONFIG_DIYTIPS"])
+fuFrame.ShowAuthor:SetPoint("TOPLEFT",fuFrame,"TOPLEFT",20,-220);
+fuFrame.ShowAuthor:SetScript("OnClick", function (self)
 	Pig_OptionsUI:ShowAuthor()
 end);
 

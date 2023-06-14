@@ -101,13 +101,13 @@ AutoBarDB2 = {
 					["buttonKey"] = "AutoBarButtonInterrupt",
 					["defaultButtonIndex"] = "*",
 				},
-				["AutoBarButtonTrap"] = {
+				["AutoBarButtonCharge"] = {
 					["barKey"] = "AutoBarClassBarHunter",
-					["buttonClass"] = "AutoBarButtonTrap",
+					["buttonClass"] = "AutoBarButtonCharge",
 					["square_popups"] = true,
 					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonTrap",
-					["defaultButtonIndex"] = 4,
+					["buttonKey"] = "AutoBarButtonCharge",
+					["defaultButtonIndex"] = 2,
 				},
 				["AutoBarButtonClassPets3"] = {
 					["barKey"] = "AutoBarClassBarHunter",
@@ -133,13 +133,13 @@ AutoBarDB2 = {
 					["buttonKey"] = "AutoBarButtonClassPets2",
 					["defaultButtonIndex"] = 8,
 				},
-				["AutoBarButtonCharge"] = {
+				["AutoBarButtonTrap"] = {
 					["barKey"] = "AutoBarClassBarHunter",
-					["buttonClass"] = "AutoBarButtonCharge",
+					["buttonClass"] = "AutoBarButtonTrap",
 					["square_popups"] = true,
 					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonCharge",
-					["defaultButtonIndex"] = 2,
+					["buttonKey"] = "AutoBarButtonTrap",
+					["defaultButtonIndex"] = 4,
 				},
 			},
 		},
@@ -238,10 +238,13 @@ AutoBarDB2 = {
 		},
 		["狂暴專家 - 伊弗斯"] = {
 			["buttonDataList"] = {
-				["AutoBarButtonRaidTarget"] = {
-					["arrangeOnUse"] = "macrotext:8",
+				["AutoBarButtonQuest"] = {
+					["arrangeOnUse"] = 39747,
 				},
 				["AutoBarButtonMount"] = {
+				},
+				["AutoBarButtonRaidTarget"] = {
+					["arrangeOnUse"] = "macrotext:8",
 				},
 			},
 			["barList"] = {
@@ -280,10 +283,10 @@ AutoBarDB2 = {
 				["popupDirection"] = "1",
 				["fadeOut"] = false,
 				["columns"] = 16,
-				["alpha"] = 1,
+				["frameStrata"] = "LOW",
 				["scale"] = 1,
 				["rows"] = 1,
-				["frameStrata"] = "LOW",
+				["alpha"] = 1,
 				["buttonKeys"] = {
 					"AutoBarButtonHearth", -- [1]
 					"AutoBarButtonBandages", -- [2]
@@ -588,6 +591,7 @@ AutoBarDB2 = {
 				["barKey"] = "AutoBarClassBarBasic",
 				["buttonClass"] = "AutoBarButtonQuest",
 				["square_popups"] = true,
+				["arrangeOnUse"] = true,
 				["enabled"] = true,
 				["buttonKey"] = "AutoBarButtonQuest",
 				["defaultButtonIndex"] = 19,

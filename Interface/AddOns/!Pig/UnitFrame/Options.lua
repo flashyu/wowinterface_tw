@@ -126,13 +126,26 @@ mubiaoF.Yisu:SetScript("OnClick", function (self)
 	end
 end);
 local function BigDebuff()
-	hooksecurefunc("TargetFrame_UpdateDebuffAnchor", function(_, buff)
-		local auraInstanceID = buff.auraInstanceID
-		local UnitP = C_UnitAuras.GetAuraDataByAuraInstanceID("target", auraInstanceID)
-		if UnitP["sourceUnit"] == "player" then
-			buff:SetSize(30,30)
+	if PIGA["UnitFrame"]["TargetFrame"]["BigDebuff"] then
+		if tocversion<100000 then
+			TargetFrameToT:SetPoint("BOTTOMRIGHT", TargetFrame, "BOTTOMRIGHT", -4, -12);
+			hooksecurefunc("TargetFrame_UpdateDebuffAnchor", function(self, debuffName, index)
+				local buff = _G[debuffName..index];
+				local _, _, _, _, _, _, caster = UnitDebuff(self.unit, index)
+				if caster == "player" then
+					buff:SetSize(30,30)
+				end
+			end)
+		else
+			hooksecurefunc("TargetFrame_UpdateDebuffAnchor", function(_, buff)
+				local auraInstanceID = buff.auraInstanceID
+				local UnitP = C_UnitAuras.GetAuraDataByAuraInstanceID("target", auraInstanceID)
+				if UnitP["sourceUnit"] == "player" then
+					buff:SetSize(30,30)
+				end
+			end)
 		end
-	end)
+	end
 end
 mubiaoF.BigDebuff=PIGCheckbutton_R(mubiaoF,{"增大自身释放的DEBUFF","增大自身释放的DEBUFF图标"})
 mubiaoF.BigDebuff:SetScript("OnClick", function (self)
@@ -158,4 +171,5 @@ addonTable.UnitFrame = function()
 	UnitFramefun.Zishen()
 	UnitFramefun.Duiyou()
 	UnitFramefun.Mubiao()
+	BigDebuff()
 end

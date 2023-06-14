@@ -24,7 +24,7 @@ local bankID = {-1,5,6,7,8,9,10,11}
 local yinhangmorengezishu={28,7}
 if tocversion<20000 then
 	yinhangmorengezishu[1]=24
-	yinhangmorengezishu[1]=6
+	yinhangmorengezishu[2]=6
 end
 BankFrame.lixianNum=yinhangmorengezishu[1]+yinhangmorengezishu[2]*36
 BankFrame.meihang=16
@@ -257,6 +257,7 @@ local function zhegnheBANK_Open()
 		BKregions1[i]:Hide()
 	end
 	for i=1,yinhangmorengezishu[2] do
+		print(i)
 		BankSlotsFrame["Bag"..i]:SetScale(0.76);
 		BankSlotsFrame["Bag"..i]:ClearAllPoints();
 		if i==1 then
@@ -708,7 +709,7 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 			for slot = 1, 36 do
 				local famrr=_G["ContainerFrame"..bagui.."Item"..slot]
 				if famrr.ZLV then return end
-				famrr.ZLV = PIGFontString(famrr,{"TOPRIGHT", famrr, "TOPRIGHT", -1, -1},nil,nil,15)
+				famrr.ZLV = PIGFontString(famrr,{"TOPRIGHT", famrr, "TOPRIGHT", -1, -1},nil,"OUTLINE",15)
 				famrr.ZLV:SetDrawLayer("OVERLAY", 7)
 			end
 		end
@@ -716,7 +717,7 @@ function BagBankfun.Zhenghe(Rneirong,tabbut)
 		for i = 1, yinhangmorengezishu[1] do
 			local famrr=_G["BankFrameItem"..i]
 			if famrr.ZLV then return end
-			famrr.ZLV = PIGFontString(famrr,{"TOPRIGHT", famrr, "TOPRIGHT", -1, -1},nil,nil,15)
+			famrr.ZLV = PIGFontString(famrr,{"TOPRIGHT", famrr, "TOPRIGHT", -1, -1},nil,"OUTLINE",15)
 			famrr.ZLV:SetDrawLayer("OVERLAY", 7)
 		end
 		--背包

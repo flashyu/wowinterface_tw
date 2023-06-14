@@ -171,7 +171,7 @@ DBMRaidsVanilla_SavedStats = {
 		["heroicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Jeklik"] = {
+	["Ossirian"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -209,7 +209,7 @@ DBMRaidsVanilla_SavedStats = {
 		["heroicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Ossirian"] = {
+	["Jeklik"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -247,7 +247,7 @@ DBMRaidsVanilla_SavedStats = {
 		["heroicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Bloodlord"] = {
+	["Gehennas"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -266,7 +266,7 @@ DBMRaidsVanilla_SavedStats = {
 		["heroicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Majordomo"] = {
+	["Broodlord"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -304,7 +304,7 @@ DBMRaidsVanilla_SavedStats = {
 		["heroicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Ayamiss"] = {
+	["Skeram"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -380,7 +380,7 @@ DBMRaidsVanilla_SavedStats = {
 		["heroicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Skeram"] = {
+	["Ayamiss"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -696,13 +696,13 @@ DBMRaidsVanilla_SavedStats = {
 		["normalLastTime"] = 145.7709999999497,
 		["normalKills"] = 2,
 		["mythicPulls"] = 0,
-		["normalBestTime"] = 145.7709999999497,
+		["heroic25Kills"] = 0,
 		["heroicKills"] = 0,
 		["timewalkerPulls"] = 0,
 		["normal25Kills"] = 0,
 		["heroicPulls"] = 0,
 		["timewalkerKills"] = 0,
-		["heroic25Kills"] = 0,
+		["normalBestTime"] = 145.7709999999497,
 		["challengePulls"] = 0,
 	},
 	["TwinEmpsAQ"] = {
@@ -838,8 +838,8 @@ DBMRaidsVanilla_SavedStats = {
 		["heroicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Gehennas"] = {
-		["normalPulls"] = 0,
+	["Bloodlord"] = {
+		["normalPulls"] = 2,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
 		["mythicKills"] = 0,
@@ -876,7 +876,7 @@ DBMRaidsVanilla_SavedStats = {
 		["heroicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Broodlord"] = {
+	["Majordomo"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,

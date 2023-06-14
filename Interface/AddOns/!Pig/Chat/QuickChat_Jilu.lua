@@ -326,7 +326,7 @@ function QuickChatfun.QuickBut_Jilu()
 		liaotianneirong.Scroll.ScrollToBottomButton:SetHighlightTexture("interface/buttons/ui-common-mousehilight.blp");
 		liaotianneirong.Scroll.ScrollToBottomButton:SetPushedTexture("interface/chatframe/ui-chaticon-scrollend-down.blp")
 		liaotianneirong.Scroll.ScrollToBottomButton:SetSize(butWWW,butHHH);
-		liaotianneirong.Scroll.ScrollToBottomButton:SetPoint("BOTTOMLEFT",liaotianneirong.Scroll,"BOTTOMRIGHT",0,4);
+		liaotianneirong.Scroll.ScrollToBottomButton:SetPoint("BOTTOMLEFT",liaotianneirong.Scroll,"BOTTOMRIGHT",-2,4);
 		liaotianneirong.Scroll.ScrollToBottomButton.hilight = liaotianneirong.Scroll.ScrollToBottomButton:CreateTexture(nil,"OVERLAY");
 		liaotianneirong.Scroll.ScrollToBottomButton.hilight:SetTexture("interface/chatframe/ui-chaticon-blinkhilight.blp");
 		liaotianneirong.Scroll.ScrollToBottomButton.hilight:SetSize(butWWW,butHHH);
@@ -337,7 +337,7 @@ function QuickChatfun.QuickBut_Jilu()
 		liaotianneirong.Scroll.down:SetHighlightTexture("interface/buttons/ui-common-mousehilight.blp");
 		liaotianneirong.Scroll.down:SetPushedTexture("interface/chatframe/ui-chaticon-scrolldown-down.blp")
 		liaotianneirong.Scroll.down:SetSize(butWWW,butHHH);
-		liaotianneirong.Scroll.down:SetPoint("BOTTOM",liaotianneirong.Scroll.ScrollToBottomButton,"TOP",-2,6);
+		liaotianneirong.Scroll.down:SetPoint("BOTTOM",liaotianneirong.Scroll.ScrollToBottomButton,"TOP",0,6);
 		liaotianneirong.Scroll.up = CreateFrame("Button",nil,liaotianneirong.Scroll, "TruncatedButtonTemplate");
 		liaotianneirong.Scroll.up:SetNormalTexture("interface/chatframe/ui-chaticon-scrollup-up.blp")
 		liaotianneirong.Scroll.up:SetHighlightTexture("interface/buttons/ui-common-mousehilight.blp");

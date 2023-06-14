@@ -55,14 +55,6 @@ function Create.PIGQuickBut(QkButUI,Tooltip,Icon,GnUI,FrameLevel,Template)
 			end
 		end)
 	end
-	function But:ShowHide(GnUI)
-		if self.HideF then
-			self:SetWidth(0.001)
-		else
-			self:SetWidth(butW-1)
-		end
-		fuji:GengxinWidth()
-	end
 	return But
 end
 --创建侧面功能按钮

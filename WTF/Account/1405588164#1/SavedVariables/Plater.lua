@@ -1,688 +1,85 @@
 
 PlaterDB = {
 	["captured_spells"] = {
-		[58827] = {
-			["encounterName"] = "塑血者沙尔拉姆",
-			["source"] = "塑血者沙尔拉姆",
-			["npcID"] = 26530,
+		[24408] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
 			["isChanneled"] = false,
+			["encounterID"] = 787,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 294,
-		},
-		[52711] = {
-			["encounterName"] = "塑血者沙尔拉姆",
-			["type"] = "DEBUFF",
-			["source"] = "塑血者沙尔拉姆",
-			["npcID"] = 26530,
-			["event"] = "SPELL_AURA_APPLIED",
-			["encounterID"] = 294,
-		},
-		[48639] = {
-			["encounterName"] = "残忍的斯卡迪",
-			["source"] = "伊米亚战士",
-			["encounterID"] = 581,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26690,
-		},
-		[52743] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "猩猩猎手格利基克",
-			["npcID"] = 28214,
-		},
-		[4511] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 416,
-		},
-		[48703] = {
-			["source"] = "掠龙狂热者",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 26553,
-		},
-		[61558] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "通灵大师",
-			["npcID"] = 27732,
-		},
-		[64145] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "重压触须",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33966,
-		},
-		[20615] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "绿队战士",
-			["npcID"] = 32321,
-		},
-		[75593] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "灵魂兽",
-			["npcID"] = 32517,
-		},
-		[59083] = {
-			["isChanneled"] = false,
-			["source"] = "掠龙先知",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26554,
-		},
-		[57566] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "未知目标",
-			["npcID"] = 417,
-		},
-		[54053] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "哈恩摩恩",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 417,
-		},
-		[34699] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "时间看守者",
-			["npcID"] = 19918,
-		},
-		[59243] = {
-			["isChanneled"] = false,
-			["source"] = "伊米亚猎血者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26670,
-		},
-		[52185] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "残忍的阿图里斯",
-			["npcID"] = 28659,
-		},
-		[52712] = {
-			["encounterName"] = "塑血者沙尔拉姆",
-			["type"] = "BUFF",
-			["source"] = "塑血者沙尔拉姆",
-			["npcID"] = 26530,
-			["event"] = "SPELL_AURA_APPLIED",
-			["encounterID"] = 294,
-		},
-		[54261] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队法师",
-			["npcID"] = 32341,
-		},
-		[52744] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "猩猩猎手格利基克",
-			["npcID"] = 28214,
-		},
-		[49758] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "硬皮冲锋者",
-			["npcID"] = 28096,
-		},
-		[54916] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "灵鳍神谕者",
-			["npcID"] = 28112,
-		},
-		[63619] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "暗影魔",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 19668,
-		},
-		[22907] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "狂心追猎者",
-			["npcID"] = 28077,
-		},
-		[64162] = {
-			["encounterName"] = "尤格-萨隆",
-			["type"] = "DEBUFF",
-			["source"] = "不朽守护者",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 33988,
+			["npcID"] = 11382,
 		},
 		[57567] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "哈恩摩恩",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 417,
 		},
-		[20424] = {
-			["isChanneled"] = false,
-			["source"] = "绿队圣骑士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32342,
-		},
 		[35706] = {
-			["encounterName"] = "尤格-萨隆",
 			["type"] = "BUFF",
-			["source"] = "克林索克",
+			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 17252,
 		},
-		[59244] = {
-			["isChanneled"] = false,
-			["source"] = "伊米亚猎血者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26670,
-		},
-		[52633] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "永恒恶龙",
-			["npcID"] = 28340,
-		},
-		[63891] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33134,
-		},
-		[58813] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "永恒恶龙",
-			["npcID"] = 28340,
-		},
-		[56785] = {
-			["isChanneled"] = false,
-			["source"] = "天灾巨人",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26555,
-		},
-		[58845] = {
-			["encounterName"] = "塑血者沙尔拉姆",
-			["source"] = "塑血者沙尔拉姆",
-			["npcID"] = 26530,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 294,
-		},
-		[3600] = {
-			["type"] = "DEBUFF",
-			["source"] = "地缚图腾",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 2630,
-		},
-		[52761] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "鳄鱼人猎手瑟匹克",
-			["npcID"] = 28668,
-		},
-		[52873] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "鳄鱼人猎手瑟匹克",
-			["npcID"] = 28216,
-		},
-		[25710] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "洛丹伦步兵",
-			["npcID"] = 27745,
-		},
-		[64163] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "尤格-萨隆",
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33288,
-		},
-		[52442] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "阿尔萨斯",
-			["npcID"] = 26499,
-		},
-		[52969] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "亚鲁乌特",
-			["npcID"] = 28121,
-		},
-		[51963] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "黑锋石像鬼",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 27829,
-		},
 		[6713] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
+			["type"] = "DEBUFF",
 			["source"] = "绿队战士",
+			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 32321,
-		},
-		[33663] = {
-			["encounterName"] = "玛尔加尼斯",
-			["source"] = "土元素图腾",
-			["npcID"] = 15430,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 296,
 		},
 		[67837] = {
 			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "虫洞",
+			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 35646,
 		},
-		[58782] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "墓穴猎手",
-			["npcID"] = 28199,
-		},
-		[61353] = {
+		[16856] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
 			["isChanneled"] = false,
+			["encounterID"] = 787,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "贾尔·冰须",
-			["npcID"] = 32710,
-		},
-		[58830] = {
-			["encounterName"] = "时光领主埃博克",
-			["source"] = "时光领主埃博克",
-			["npcID"] = 26532,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 295,
-		},
-		[32018] = {
-			["isChanneled"] = false,
-			["source"] = "风暴亡魂",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28858,
-		},
-		[15530] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "残忍的阿图里斯",
-			["npcID"] = 28659,
-		},
-		[57984] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "强力火元素",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 15438,
-		},
-		[15043] = {
-			["isChanneled"] = false,
-			["source"] = "金队法师",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32341,
-		},
-		[15578] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "狂心掠夺者",
-			["npcID"] = 28078,
-		},
-		[52491] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "地穴恶魔",
-			["npcID"] = 27734,
+			["npcID"] = 11382,
 		},
 		[24529] = {
-			["event"] = "SPELL_AURA_APPLIED",
 			["type"] = "BUFF",
 			["source"] = "未知目标",
-			["npcID"] = 38453,
-		},
-		[59246] = {
-			["encounterName"] = "残忍的斯卡迪",
-			["source"] = "伊米亚巫医",
-			["encounterID"] = 581,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26691,
-		},
-		[49106] = {
-			["isChanneled"] = false,
-			["source"] = "伊米亚狂战士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26696,
-		},
-		[31747] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "劫掠者瑟菲克斯",
-			["npcID"] = 28083,
-		},
-		[49170] = {
-			["isChanneled"] = false,
-			["source"] = "伊米亚黑暗萨满祭司",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26694,
-		},
-		[18501] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "灵鳍战士",
-			["npcID"] = 28111,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 6500,
 		},
 		[57458] = {
-			["source"] = "未知目标",
 			["type"] = "BUFF",
+			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 6500,
 		},
-		[14145] = {
+		[24314] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
 			["isChanneled"] = false,
+			["encounterID"] = 787,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "侍僧",
-			["npcID"] = 27731,
-		},
-		[19579] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 6500,
-		},
-		[54951] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "狂心持矛者",
-			["npcID"] = 28080,
-		},
-		[60588] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "永恒腐蚀者",
-			["npcID"] = 32273,
-		},
-		[63830] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33134,
-		},
-		[59247] = {
-			["encounterName"] = "残忍的斯卡迪",
-			["source"] = "伊米亚巫医",
-			["encounterID"] = 581,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26691,
-		},
-		[61834] = {
-			["source"] = "米尼格布·魔爆",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32838,
-		},
-		[63894] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "尤格-萨隆",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33288,
-		},
-		[49091] = {
-			["encounterName"] = "残忍的斯卡迪",
-			["source"] = "伊米亚标枪手",
-			["encounterID"] = 581,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26692,
-		},
-		[58816] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "永恒密探",
-			["npcID"] = 27744,
-		},
-		[54792] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "残忍的阿图里斯",
-			["npcID"] = 28659,
-		},
-		[32851] = {
-			["encounterName"] = "尤格-萨隆",
-			["type"] = "BUFF",
-			["source"] = "克林索克",
-			["encounterID"] = 756,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[15786] = {
-			["isChanneled"] = false,
-			["source"] = "金队萨满祭司",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32340,
-		},
-		[52317] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "洛丹伦步兵",
-			["npcID"] = 27745,
+			["npcID"] = 11382,
 		},
 		[57475] = {
-			["source"] = "未知目标",
 			["type"] = "BUFF",
+			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 6500,
 		},
 		[29544] = {
-			["event"] = "SPELL_AURA_APPLIED",
+			["encounterName"] = "血领主曼多基尔",
 			["type"] = "DEBUFF",
-			["source"] = "绿队战士",
-			["npcID"] = 32321,
-		},
-		[52972] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "莫乌德",
-			["npcID"] = 28122,
-		},
-		[1604] = {
+			["source"] = "血领主曼多基尔",
+			["encounterID"] = 787,
 			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "洛丹伦步兵",
-			["npcID"] = 27745,
+			["npcID"] = 11382,
 		},
-		[54617] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "狂心清除者",
-			["npcID"] = 28081,
-		},
-		[13323] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队法师",
-			["npcID"] = 32341,
-		},
-		[49092] = {
-			["encounterName"] = "残忍的斯卡迪",
-			["source"] = "伊米亚标枪手",
-			["encounterID"] = 581,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26692,
-		},
-		[58817] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "永恒密探",
-			["npcID"] = 28341,
-		},
-		[58849] = {
-			["encounterName"] = "玛尔加尼斯",
-			["source"] = "玛尔加尼斯",
-			["npcID"] = 26533,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 296,
-		},
-		[49172] = {
-			["source"] = "伊米亚黑暗萨满祭司",
+		[52909] = {
 			["type"] = "BUFF",
+			["source"] = "图书馆员盖伦",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 26694,
-		},
-		[52270] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "狂心猎人",
-			["npcID"] = 28079,
-		},
-		[61995] = {
-			["isChanneled"] = false,
-			["source"] = "米尼格布·魔爆",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32838,
-		},
-		[61548] = {
-			["isChanneled"] = false,
-			["source"] = "伊米亚狂战士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26696,
-		},
-		[54921] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "雾语神谕者",
-			["npcID"] = 28110,
-		},
-		[48294] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "伊米隆国王",
-			["encounterID"] = 583,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26861,
-		},
-		[24187] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "恶刃豹",
-			["npcID"] = 28001,
-		},
-		[60590] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "永恒腐蚀者",
-			["npcID"] = 32273,
-		},
-		[36589] = {
-			["isChanneled"] = false,
-			["source"] = "强壮的野狼",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 31233,
-		},
-		[65301] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33134,
-		},
-		[24259] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "诺哈法姆",
-			["npcID"] = 417,
-		},
-		[29385] = {
-			["isChanneled"] = false,
-			["source"] = "绿队圣骑士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32342,
-		},
-		[75446] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "未知目标",
-			["npcID"] = 38453,
-		},
-		[58770] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "黑暗通灵师",
-			["npcID"] = 28200,
-		},
-		[58850] = {
-			["encounterName"] = "玛尔加尼斯",
-			["source"] = "玛尔加尼斯",
-			["npcID"] = 26533,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 296,
-		},
-		[52766] = {
-			["encounterName"] = "时光领主埃博克",
-			["source"] = "时光领主埃博克",
-			["npcID"] = 26532,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 295,
-		},
-		[397342] = {
-			["encounterName"] = "时光领主埃博克",
-			["source"] = "时光领主埃博克",
-			["npcID"] = 26532,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 295,
-		},
-		[8385] = {
-			["source"] = "普拉特·白云",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 5905,
-		},
-		[61549] = {
-			["source"] = "伊米亚狂战士",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 26696,
-		},
-		[11974] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队牧师",
-			["npcID"] = 32343,
-		},
-		[64152] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "腐蚀触须",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33985,
+			["npcID"] = 25291,
 		},
 		[21401] = {
 			["isChanneled"] = false,
@@ -690,576 +87,91 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 32340,
 		},
-		[52974] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "莫乌德",
-			["npcID"] = 28122,
-		},
-		[54028] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "银色盟约防御法师",
-			["npcID"] = 29254,
-		},
-		[64775] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33134,
-		},
 		[35696] = {
-			["encounterName"] = "尤格-萨隆",
 			["type"] = "BUFF",
-			["source"] = "克林索克",
+			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 17252,
-		},
-		[44415] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队牧师",
-			["npcID"] = 32343,
-		},
-		[35760] = {
-			["source"] = "大型泥沼龙虾人",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17817,
-		},
-		[54188] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "猩猩猎手格利基克",
-			["npcID"] = 28214,
-		},
-		[59330] = {
-			["encounterName"] = "残忍的斯卡迪",
-			["source"] = "残忍的斯卡迪",
-			["encounterID"] = 581,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26693,
 		},
 		[35361] = {
-			["isChanneled"] = false,
+			["type"] = "BUFF",
 			["source"] = "林地行者",
-			["event"] = "SPELL_CAST_SUCCESS",
+			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 31228,
 		},
-		[55817] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "未知目标",
-			["npcID"] = 17252,
-		},
-		[52895] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "鳄鱼人猎手瑟匹克",
-			["npcID"] = 28216,
-		},
-		[64153] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "腐蚀触须",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33985,
-		},
-		[63147] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33134,
-		},
-		[56520] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "被解救的北伐军战士",
-			["npcID"] = 30274,
-		},
-		[54508] = {
-			["encounterName"] = "尤格-萨隆",
-			["type"] = "BUFF",
-			["source"] = "克林索克",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[54029] = {
-			["source"] = "夺日者防御法师",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29255,
-		},
-		[55067] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "弗蕾亚的仆从",
-			["npcID"] = 29036,
-		},
 		[9080] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队战士",
-			["npcID"] = 32322,
-		},
-		[63802] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33134,
-		},
-		[29386] = {
-			["isChanneled"] = false,
-			["source"] = "绿队圣骑士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32342,
-		},
-		[47993] = {
-			["isChanneled"] = false,
-			["source"] = "沙古里尔",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17252,
-		},
-		[15244] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "侍僧",
-			["npcID"] = 27731,
-		},
-		[59331] = {
-			["encounterName"] = "残忍的斯卡迪",
-			["source"] = "残忍的斯卡迪",
-			["encounterID"] = 581,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26693,
-		},
-		[58852] = {
-			["encounterName"] = "玛尔加尼斯",
-			["source"] = "玛尔加尼斯",
-			["npcID"] = 26533,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 296,
-		},
-		[9128] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
+			["type"] = "DEBUFF",
 			["source"] = "绿队战士",
+			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 32321,
 		},
-		[64010] = {
-			["encounterName"] = "尤格-萨隆",
+		[9128] = {
 			["type"] = "BUFF",
-			["source"] = "死誓狂热者",
-			["encounterID"] = 756,
+			["source"] = "绿队战士",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 33567,
-		},
-		[17234] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "侍僧",
-			["npcID"] = 27731,
-		},
-		[32093] = {
-			["isChanneled"] = false,
-			["source"] = "帝王眼镜蛇",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28011,
-		},
-		[54429] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "灵鳍战士",
-			["npcID"] = 28111,
-		},
-		[42724] = {
-			["isChanneled"] = false,
-			["source"] = "掠龙死亡猎手",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26550,
-		},
-		[50533] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "雾语战士",
-			["npcID"] = 28109,
-		},
-		[47994] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "克林索克",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17252,
-		},
-		[59252] = {
-			["isChanneled"] = false,
-			["source"] = "伊米亚黑暗萨满祭司",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26694,
-		},
-		[59300] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "伊米隆国王",
-			["encounterID"] = 583,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26861,
+			["npcID"] = 32321,
 		},
 		[48090] = {
-			["encounterName"] = "尤格-萨隆",
 			["type"] = "BUFF",
-			["source"] = "克林索克",
-			["encounterID"] = 756,
+			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 17252,
-		},
-		[48697] = {
-			["isChanneled"] = false,
-			["source"] = "天灾巨人",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26555,
-		},
-		[64059] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "尤格-萨隆的大脑",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33890,
-		},
-		[46190] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "侍僧",
-			["npcID"] = 27731,
 		},
 		[44178] = {
 			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "金队法师",
+			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 32341,
 		},
-		[64171] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "托里姆",
+		[24317] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "奥根",
 			["isChanneled"] = false,
+			["encounterID"] = 787,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33413,
+			["npcID"] = 14988,
 		},
-		[65209] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "尤格-萨隆的卫士",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33136,
-		},
-		[52977] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "莫乌德",
-			["npcID"] = 28122,
-		},
-		[62702] = {
-			["encounterName"] = "尤格-萨隆",
-			["type"] = "BUFF",
-			["source"] = "托里姆",
-			["encounterID"] = 756,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 33413,
-		},
-		[8314] = {
-			["source"] = "卡纳尔·菲斯",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 5907,
-		},
-		[47468] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "死尸捣碎者",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26125,
-		},
-		[47995] = {
-			["source"] = "沙古里尔",
+		[35859] = {
 			["type"] = "DEBUFF",
+			["source"] = "虚空雾气",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
+			["npcID"] = 21002,
 		},
-		[48011] = {
+		[3391] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "奥根",
 			["isChanneled"] = false,
+			["encounterID"] = 787,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "诺哈法姆",
-			["npcID"] = 417,
+			["npcID"] = 14988,
 		},
-		[58758] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "狼吞虎咽的食尸鬼",
-			["npcID"] = 28249,
-		},
-		[58822] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "阿尔萨斯",
-			["npcID"] = 26499,
-		},
-		[54287] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "雌性硬皮猩猩",
-			["npcID"] = 28213,
-		},
-		[60451] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "时光守护者",
-			["npcID"] = 32281,
-		},
-		[15532] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队法师",
-			["npcID"] = 32341,
-		},
-		[63038] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "尤格-萨隆的卫士",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33136,
-		},
-		[53361] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "狂心掠夺者",
-			["npcID"] = 28078,
-		},
-		[13005] = {
-			["isChanneled"] = false,
-			["source"] = "绿队圣骑士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32342,
-		},
-		[24453] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "灵儿",
-			["npcID"] = 3619,
-		},
-		[52451] = {
-			["encounterName"] = "塑血者沙尔拉姆",
-			["source"] = "塑血者沙尔拉姆",
-			["npcID"] = 26530,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 294,
-		},
-		[59110] = {
-			["isChanneled"] = false,
-			["source"] = "斑点雄鹿",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 31236,
-		},
-		[59637] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "镜像",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 31216,
-		},
-		[398145] = {
-			["source"] = "沙古里尔",
+		[33625] = {
 			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[47996] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "克林索克",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17252,
-		},
-		[59254] = {
-			["isChanneled"] = false,
-			["source"] = "伊米亚通灵师",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28368,
-		},
-		[58823] = {
-			["encounterName"] = "肉钩",
-			["source"] = "肉钩",
-			["npcID"] = 26529,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 293,
-		},
-		[52723] = {
-			["encounterName"] = "玛尔加尼斯",
-			["source"] = "玛尔加尼斯",
-			["npcID"] = 26533,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 296,
-		},
-		[64013] = {
-			["encounterName"] = "尤格-萨隆",
-			["type"] = "BUFF",
-			["source"] = "装甲",
-			["encounterID"] = 756,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 33433,
-		},
-		[64157] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "腐蚀触须",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33985,
-		},
-		[64173] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "尤格-萨隆的大脑",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33890,
-		},
-		[59079] = {
-			["isChanneled"] = false,
-			["source"] = "掠龙死亡猎手",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26550,
-		},
-		[59638] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "镜像",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 31216,
-		},
-		[19647] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "诺哈法姆",
-			["npcID"] = 417,
-		},
-		[55087] = {
-			["isChanneled"] = false,
-			["source"] = "流水之魂",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28862,
-		},
-		[59239] = {
-			["isChanneled"] = false,
-			["source"] = "伊米亚野蛮者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26669,
-		},
-		[59255] = {
-			["isChanneled"] = false,
-			["source"] = "伊米亚通灵师",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28368,
-		},
-		[34232] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "高等精灵魔法祭司",
-			["npcID"] = 27747,
-		},
-		[13704] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队牧师",
-			["npcID"] = 32343,
-		},
-		[24829] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "奥术师伊塔纳斯",
-			["npcID"] = 15296,
-		},
-		[58808] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "缝补构造体",
-			["npcID"] = 27736,
-		},
-		[58824] = {
-			["encounterName"] = "肉钩",
-			["source"] = "肉钩",
-			["npcID"] = 26529,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 293,
-		},
-		[52708] = {
-			["encounterName"] = "塑血者沙尔拉姆",
-			["source"] = "塑血者沙尔拉姆",
-			["npcID"] = 26530,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 294,
-		},
-		[50502] = {
-			["isChanneled"] = false,
-			["source"] = "蛮藤谷鳄鱼",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 28002,
-		},
-		[57688] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "重压触须",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33966,
-		},
-		[50306] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "损毁的天灾怪",
-			["npcID"] = 28101,
-		},
-		[51750] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "伊米隆国王",
-			["encounterID"] = 583,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26861,
-		},
-		[34392] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "蓝玉虫巢巨蜂",
-			["npcID"] = 28086,
-		},
-		[39586] = {
-			["isChanneled"] = false,
 			["source"] = "金队萨满祭司",
-			["event"] = "SPELL_CAST_SUCCESS",
+			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 32340,
+		},
+		[24318] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
+			["isChanneled"] = false,
+			["encounterID"] = 787,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 11382,
+		},
+		[13736] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
+			["isChanneled"] = false,
+			["encounterID"] = 787,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 11382,
+		},
+		[25228] = {
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17252,
 		},
 		[49309] = {
 			["isChanneled"] = false,
@@ -1267,581 +179,69 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 32340,
 		},
-		[48640] = {
-			["encounterName"] = "残忍的斯卡迪",
-			["source"] = "伊米亚战士",
-			["encounterID"] = 581,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26690,
-		},
-		[59322] = {
-			["encounterName"] = "残忍的斯卡迪",
-			["source"] = "残忍的斯卡迪",
-			["encounterID"] = 581,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26693,
-		},
-		[20812] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "黑暗通灵师",
-			["npcID"] = 28200,
-		},
-		[52496] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "地穴恶魔",
-			["npcID"] = 27734,
-		},
-		[64465] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "尤格-萨隆",
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33288,
-		},
-		[63134] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33134,
-		},
-		[67838] = {
-			["isChanneled"] = false,
-			["source"] = "虫洞",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 35646,
-		},
-		[54177] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "鳄鱼人猎手瑟匹克",
-			["npcID"] = 28216,
-		},
-		[392731] = {
-			["source"] = "无脑的仆从",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 26536,
-		},
-		[59237] = {
-			["isChanneled"] = false,
-			["source"] = "伊米亚野蛮者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26669,
-		},
-		[17843] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队牧师",
-			["npcID"] = 32343,
-		},
-		[51469] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "萨满祭司维克伊克",
-			["npcID"] = 28315,
-		},
-		[25228] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[64167] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "夸张的徽记",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33990,
-		},
-		[67836] = {
-			["isChanneled"] = false,
-			["source"] = "虫洞",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 35646,
-		},
-		[36213] = {
-			["encounterName"] = "玛尔加尼斯",
-			["source"] = "强力土元素",
-			["npcID"] = 15352,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 296,
-		},
-		[47982] = {
-			["isChanneled"] = false,
-			["source"] = "卡塔尔",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 416,
-		},
-		[65719] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "尤格-萨隆的卫士",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33136,
-		},
-		[57723] = {
-			["source"] = "未知目标",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 26125,
-		},
-		[64189] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "尤格-萨隆",
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33288,
-		},
-		[57689] = {
-			["encounterName"] = "尤格-萨隆",
-			["type"] = "BUFF",
-			["source"] = "重压触须",
-			["encounterID"] = 756,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 33966,
-		},
-		[59304] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "伊米隆国王",
-			["encounterID"] = 583,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26861,
-		},
-		[59320] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "灵魂之泉",
-			["encounterID"] = 583,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 27339,
-		},
-		[58825] = {
-			["encounterName"] = "塑血者沙尔拉姆",
-			["source"] = "塑血者沙尔拉姆",
-			["npcID"] = 26530,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 294,
-		},
-		[58841] = {
-			["encounterName"] = "肉钩",
-			["source"] = "肉钩",
-			["npcID"] = 26529,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 293,
-		},
-		[24332] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "匹奇",
-			["npcID"] = 28097,
-		},
-		[19134] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队战士",
-			["npcID"] = 32321,
-		},
 		[23600] = {
 			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "绿队战士",
+			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 32321,
 		},
-		[64160] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "不朽守护者",
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33988,
-		},
-		[58921] = {
-			["source"] = "卡玛洛斯神父",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 31279,
-		},
 		[12544] = {
-			["source"] = "魔导师索迪耶尔",
 			["type"] = "BUFF",
+			["source"] = "魔导师索迪耶尔",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 32170,
 		},
-		[48287] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "哈尔卡兰之魂",
-			["npcID"] = 29018,
-		},
-		[64156] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "腐蚀触须",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33985,
-		},
-		[52772] = {
-			["encounterName"] = "时光领主埃博克",
-			["source"] = "时光领主埃博克",
-			["npcID"] = 26532,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["encounterID"] = 295,
-		},
-		[46604] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队法师",
-			["npcID"] = 32341,
-		},
-		[52611] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "通灵大师",
-			["npcID"] = 27732,
-		},
-		[58820] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "永恒猎人",
-			["npcID"] = 28340,
-		},
-		[53432] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "狂心追猎者",
-			["npcID"] = 28077,
-		},
-		[12470] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "强力火元素",
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 15438,
-		},
-		[59081] = {
-			["isChanneled"] = false,
-			["source"] = "掠龙先知",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26554,
-		},
-		[49807] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "狂心掠夺者",
-			["npcID"] = 28078,
-		},
-		[67834] = {
-			["isChanneled"] = false,
-			["source"] = "虫洞",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 35646,
-		},
-		[50420] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "狂心暴怒者",
-			["npcID"] = 28076,
-		},
-		[52636] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "永恒猎人",
-			["npcID"] = 27743,
-		},
-		[49026] = {
-			["isChanneled"] = false,
-			["source"] = "嗜血的苔原狼",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26672,
-		},
-		[58875] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "幽灵狼",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29264,
-		},
-		[59305] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "伊米隆国王",
-			["encounterID"] = 583,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26861,
-		},
-		[67835] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "虫洞",
-			["npcID"] = 35646,
-		},
-		[47481] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "骨髓之面",
-			["npcID"] = 26125,
-		},
-		[59241] = {
-			["isChanneled"] = false,
-			["source"] = "伊米亚猎血者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26670,
-		},
 		[57724] = {
-			["encounterName"] = "尤格-萨隆",
 			["type"] = "DEBUFF",
-			["source"] = "树人",
-			["encounterID"] = 756,
+			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 1964,
+			["npcID"] = 29452,
 		},
-		[58762] = {
-			["event"] = "SPELL_AURA_APPLIED",
+		[23840] = {
 			["type"] = "BUFF",
-			["source"] = "狼吞虎咽的食尸鬼",
-			["npcID"] = 28249,
-		},
-		[55066] = {
+			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "弗蕾亚的仆从",
-			["npcID"] = 29036,
-		},
-		[54195] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "蓝蜂猎手达伊克",
-			["npcID"] = 28215,
-		},
-		[58810] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "胆汁傀儡",
-			["npcID"] = 28201,
-		},
-		[38204] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "自由的先知",
-			["npcID"] = 33422,
-		},
-		[49029] = {
-			["source"] = "沙古里尔",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[54770] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "骨镰劫掠者",
-			["npcID"] = 28108,
+			["npcID"] = 417,
 		},
 		[14514] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
+			["type"] = "BUFF",
 			["source"] = "金队法师",
+			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 32341,
-		},
-		[52758] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "鳄鱼人猎手瑟匹克",
-			["npcID"] = 28216,
 		},
 		[12611] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
+			["type"] = "DEBUFF",
 			["source"] = "金队法师",
+			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 32341,
 		},
-		[48702] = {
+		[24407] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
 			["isChanneled"] = false,
-			["source"] = "掠龙狂热者",
+			["encounterID"] = 787,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26553,
-		},
-		[48292] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "伊米隆国王",
-			["encounterID"] = 583,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26861,
-		},
-		[63042] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "尤格-萨隆的卫士",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33136,
-		},
-		[52878] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "雾语神谕者",
-			["npcID"] = 28110,
-		},
-		[52461] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "暴怒的食尸鬼",
-			["npcID"] = 27729,
-		},
-		[394608] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "复活的僵尸",
-			["npcID"] = 27737,
-		},
-		[52886] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "鳄鱼人猎手瑟匹克",
-			["npcID"] = 28216,
-		},
-		[64144] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "腐蚀触须",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33985,
-		},
-		[63138] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 33134,
-		},
-		[14032] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队牧师",
-			["npcID"] = 32343,
-		},
-		[59082] = {
-			["isChanneled"] = false,
-			["source"] = "掠龙先知",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26554,
-		},
-		[52889] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "鳄鱼人猎手瑟匹克",
-			["npcID"] = 28216,
-		},
-		[52182] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "亚鲁乌特",
-			["npcID"] = 28667,
+			["npcID"] = 11382,
 		},
 		[32736] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队战士",
-			["npcID"] = 32322,
-		},
-		[52943] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "亚鲁乌特",
-			["npcID"] = 28121,
-		},
-		[16100] = {
-			["isChanneled"] = false,
-			["source"] = "奈辛瓦里狩猎卫兵",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 30737,
-		},
-		[27577] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
+			["type"] = "DEBUFF",
 			["source"] = "绿队战士",
+			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 32321,
 		},
+		[15589] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
+			["isChanneled"] = false,
+			["encounterID"] = 787,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 11382,
+		},
 		[75447] = {
-			["source"] = "未知目标",
 			["type"] = "BUFF",
+			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 6500,
-		},
-		[32982] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "火元素图腾",
-			["encounterID"] = 756,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 15439,
-		},
-		[6533] = {
-			["isChanneled"] = false,
-			["source"] = "奈辛瓦里狩猎卫兵",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 30737,
-		},
-		[48291] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "伊米隆国王",
-			["encounterID"] = 583,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26861,
-		},
-		[52944] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "亚鲁乌特",
-			["npcID"] = 28121,
-		},
-		[11831] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "残忍的阿图里斯",
-			["npcID"] = 28659,
-		},
-		[21787] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "埃萨之魂",
-			["npcID"] = 29033,
-		},
-		[15547] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "狂心猎人",
-			["npcID"] = 28079,
-		},
-		[58811] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "侍僧",
-			["npcID"] = 27731,
-		},
-		[12549] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "灵鳍神谕者",
-			["npcID"] = 28112,
 		},
 	},
 	["captured_casts"] = {
@@ -3669,13 +2069,6 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 26841,
 		},
-		[54369] = {
-			["encounterName"] = "祖拉玛特",
-			["source"] = "湮灭者祖拉玛特",
-			["npcID"] = 29314,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 2663,
-		},
 		[52889] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "鳄鱼人猎手瑟匹克",
@@ -3691,6 +2084,11 @@ PlaterDB = {
 			["source"] = "蓝蜂猎手达伊克",
 			["npcID"] = 28215,
 		},
+		[20821] = {
+			["source"] = "睡梦雏龙",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 741,
+		},
 		[61338] = {
 			["encounterName"] = "谢沃兹",
 			["source"] = "谢沃兹",
@@ -3698,15 +2096,17 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 29266,
 		},
-		[7979] = {
+		[28280] = {
 			["event"] = "SPELL_CAST_START",
-			["source"] = "风险投资公司修理工",
-			["npcID"] = 677,
+			["source"] = "格罗布鲁斯",
+			["npcID"] = 15931,
 		},
-		[20821] = {
-			["source"] = "睡梦雏龙",
+		[54369] = {
+			["encounterName"] = "祖拉玛特",
+			["source"] = "湮灭者祖拉玛特",
+			["npcID"] = 29314,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 741,
+			["encounterID"] = 2663,
 		},
 		[17434] = {
 			["source"] = "瑞文戴尔男爵",
@@ -3720,10 +2120,10 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["encounterID"] = 754,
 		},
-		[28280] = {
+		[7979] = {
 			["event"] = "SPELL_CAST_START",
-			["source"] = "格罗布鲁斯",
-			["npcID"] = 15931,
+			["source"] = "风险投资公司修理工",
+			["npcID"] = 677,
 		},
 		[64599] = {
 			["encounterName"] = "观察者奥尔加隆",
@@ -3965,11 +2365,6 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 28546,
 		},
-		[17435] = {
-			["source"] = "瑞文戴尔男爵",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10440,
-		},
 		[9672] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "蓝玉巫师",
@@ -3987,17 +2382,24 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 26735,
 		},
-		[48616] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "燃烧深渊通灵侍僧",
-			["npcID"] = 27356,
-		},
 		[64678] = {
 			["encounterName"] = "欧尔莉亚",
 			["source"] = "欧尔莉亚",
 			["encounterID"] = 750,
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33515,
+		},
+		[48616] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "燃烧深渊通灵侍僧",
+			["npcID"] = 27356,
+		},
+		[62935] = {
+			["encounterName"] = "弗蕾亚",
+			["source"] = "古代水之精魂",
+			["encounterID"] = 753,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33202,
 		},
 		[17195] = {
 			["source"] = "被束缚的火元素",
@@ -4028,12 +2430,12 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 27972,
 		},
-		[62935] = {
-			["encounterName"] = "弗蕾亚",
-			["source"] = "古代水之精魂",
-			["encounterID"] = 753,
+		[57088] = {
+			["encounterName"] = "埃曼尼塔",
+			["source"] = "埃曼尼塔",
+			["encounterID"] = 1989,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33202,
+			["npcID"] = 30258,
 		},
 		[59102] = {
 			["source"] = "安卡哈爆法者",
@@ -4050,22 +2452,20 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 1551,
 		},
-		[57088] = {
-			["encounterName"] = "埃曼尼塔",
-			["source"] = "埃曼尼塔",
-			["encounterID"] = 1989,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30258,
-		},
 		[41440] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "“犀牛之王”尼达尔",
 			["npcID"] = 25801,
 		},
-		[11443] = {
-			["source"] = "图萨丁暗影法师",
+		[22907] = {
+			["source"] = "联盟游侠",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10398,
+			["npcID"] = 26802,
+		},
+		[50183] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "“银月”哈瑞",
+			["npcID"] = 24539,
 		},
 		[51500] = {
 			["event"] = "SPELL_CAST_START",
@@ -4079,15 +2479,15 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33139,
 		},
-		[22907] = {
-			["source"] = "联盟游侠",
+		[64652] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26802,
+			["source"] = "霍迪尔的勇士",
+			["npcID"] = 34133,
 		},
-		[50183] = {
+		[17435] = {
+			["source"] = "瑞文戴尔男爵",
 			["event"] = "SPELL_CAST_START",
-			["source"] = "“银月”哈瑞",
-			["npcID"] = 24539,
+			["npcID"] = 10440,
 		},
 		[64537] = {
 			["encounterName"] = "米米尔隆",
@@ -4103,11 +2503,6 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["encounterID"] = 754,
 		},
-		[64652] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "霍迪尔的勇士",
-			["npcID"] = 34133,
-		},
 		[62324] = {
 			["encounterName"] = "烈焰巨兽",
 			["source"] = "被修复的攻城车",
@@ -4121,6 +2516,11 @@ PlaterDB = {
 			["encounterID"] = 752,
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 32878,
+		},
+		[55633] = {
+			["source"] = "达卡莱魔像",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29832,
 		},
 		[50375] = {
 			["source"] = "蒸汽狂怒者",
@@ -4147,10 +2547,10 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 34197,
 		},
-		[45580] = {
-			["source"] = "犸格莫斯火焰图腾",
+		[33417] = {
+			["source"] = "暴风城法师",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25444,
+			["npcID"] = 18949,
 		},
 		[64607] = {
 			["encounterName"] = "观察者奥尔加隆",
@@ -4164,15 +2564,15 @@ PlaterDB = {
 			["source"] = "影怒者西诺克",
 			["npcID"] = 26771,
 		},
-		[12466] = {
-			["source"] = "精锐法师猎手",
+		[45580] = {
+			["source"] = "犸格莫斯火焰图腾",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30665,
+			["npcID"] = 25444,
 		},
-		[55633] = {
-			["source"] = "达卡莱魔像",
+		[61558] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29832,
+			["source"] = "通灵大师",
+			["npcID"] = 27732,
 		},
 		[30990] = {
 			["encounterName"] = "血卫士伯鲁恩",
@@ -4191,17 +2591,17 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 26762,
 		},
-		[61558] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "通灵大师",
-			["npcID"] = 27732,
-		},
 		[60030] = {
 			["encounterName"] = "耶戈达·觅影者",
 			["source"] = "耶戈达·觅影者",
 			["encounterID"] = 214,
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 29310,
+		},
+		[12466] = {
+			["source"] = "精锐法师猎手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30665,
 		},
 		[32093] = {
 			["event"] = "SPELL_CAST_START",
@@ -4336,12 +2736,10 @@ PlaterDB = {
 			["source"] = "高等精灵魔法祭司",
 			["npcID"] = 27747,
 		},
-		[59839] = {
-			["encounterName"] = "斯拉德兰",
-			["source"] = "斯拉德兰",
-			["encounterID"] = 383,
+		[38356] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29304,
+			["source"] = "天灾邪能兽",
+			["npcID"] = 31528,
 		},
 		[9613] = {
 			["source"] = "恩其拉通灵师",
@@ -4447,10 +2845,10 @@ PlaterDB = {
 			["source"] = "布莉塔",
 			["npcID"] = 30484,
 		},
-		[51240] = {
-			["source"] = "复活的达卡莱死亡骑士",
+		[16429] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26830,
+			["source"] = "图萨丁暗影法师",
+			["npcID"] = 10398,
 		},
 		[58701] = {
 			["event"] = "SPELL_CAST_START",
@@ -4489,11 +2887,6 @@ PlaterDB = {
 			["source"] = "收割者伊斯里克斯",
 			["npcID"] = 25453,
 		},
-		[36631] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "魔枢雏龙",
-			["npcID"] = 26127,
-		},
 		[62662] = {
 			["encounterName"] = "维扎克斯将军",
 			["source"] = "维扎克斯将军",
@@ -4501,20 +2894,27 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33271,
 		},
-		[50348] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "龙眠征服者",
-			["npcID"] = 27996,
-		},
 		[12058] = {
 			["source"] = "战歌上尉",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 25446,
 		},
+		[50348] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "龙眠征服者",
+			["npcID"] = 27996,
+		},
 		[49317] = {
 			["source"] = "碧蓝幼龙",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 27682,
+		},
+		[62938] = {
+			["encounterName"] = "弗蕾亚",
+			["source"] = "风暴鞭笞者",
+			["npcID"] = 32919,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 753,
 		},
 		[58817] = {
 			["event"] = "SPELL_CAST_START",
@@ -4528,19 +2928,17 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["encounterID"] = 296,
 		},
-		[64156] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "腐蚀触须",
-			["encounterID"] = 756,
+		[62328] = {
+			["encounterName"] = "托里姆",
+			["source"] = "黑暗符文唤魔师",
+			["encounterID"] = 752,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33985,
+			["npcID"] = 32878,
 		},
-		[62938] = {
-			["encounterName"] = "弗蕾亚",
-			["source"] = "风暴鞭笞者",
-			["npcID"] = 32919,
+		[59006] = {
+			["source"] = "达卡莱萨满祭司",
 			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 753,
+			["npcID"] = 26639,
 		},
 		[20793] = {
 			["source"] = "血孢点火者",
@@ -4569,17 +2967,17 @@ PlaterDB = {
 			["source"] = "背叛的卫兵",
 			["npcID"] = 31532,
 		},
-		[59006] = {
-			["source"] = "达卡莱萨满祭司",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26639,
-		},
 		[57091] = {
 			["encounterName"] = "克莉斯塔萨",
 			["source"] = "克莉斯塔萨",
 			["encounterID"] = 526,
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 26723,
+		},
+		[36631] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "魔枢雏龙",
+			["npcID"] = 26127,
 		},
 		[59169] = {
 			["source"] = "被束缚的气元素",
@@ -4620,11 +3018,6 @@ PlaterDB = {
 			["source"] = "魔眼",
 			["npcID"] = 29747,
 		},
-		[50538] = {
-			["source"] = "蒸汽鳄鱼人",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25687,
-		},
 		[15799] = {
 			["source"] = "战歌上尉",
 			["event"] = "SPELL_CAST_START",
@@ -4641,6 +3034,13 @@ PlaterDB = {
 			["source"] = "伊米亚元素师",
 			["npcID"] = 31267,
 		},
+		[59856] = {
+			["encounterName"] = "召唤者诺沃斯",
+			["source"] = "召唤者诺沃斯",
+			["encounterID"] = 371,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26631,
+		},
 		[59521] = {
 			["encounterName"] = "艾库隆",
 			["source"] = "艾库隆",
@@ -4653,32 +3053,20 @@ PlaterDB = {
 			["source"] = "背叛的恐惧魔王",
 			["npcID"] = 31531,
 		},
-		[59856] = {
-			["encounterName"] = "召唤者诺沃斯",
-			["source"] = "召唤者诺沃斯",
-			["encounterID"] = 371,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26631,
-		},
-		[27267] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "阿巴塔尔",
-			["npcID"] = 416,
-		},
 		[60923] = {
 			["source"] = "阿尔卡冯守卫者",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 32353,
 		},
+		[59617] = {
+			["source"] = "掠龙符文法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 23960,
+		},
 		[62344] = {
 			["source"] = "石树长老",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 32914,
-		},
-		[50506] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "魔缚古树",
-			["npcID"] = 25707,
 		},
 		[59745] = {
 			["encounterName"] = "祖拉玛特",
@@ -4686,6 +3074,16 @@ PlaterDB = {
 			["npcID"] = 29314,
 			["event"] = "SPELL_CAST_START",
 			["encounterID"] = 2663,
+		},
+		[50506] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "魔缚古树",
+			["npcID"] = 25707,
+		},
+		[50538] = {
+			["source"] = "蒸汽鳄鱼人",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25687,
 		},
 		[6358] = {
 			["source"] = "埃勒利亚娜",
@@ -4740,12 +3138,12 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33196,
 		},
-		[63134] = {
+		[64157] = {
 			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
+			["source"] = "腐蚀触须",
 			["encounterID"] = 756,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33134,
+			["npcID"] = 33985,
 		},
 		[64189] = {
 			["encounterName"] = "尤格-萨隆",
@@ -4889,12 +3287,12 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33525,
 		},
-		[64157] = {
+		[63134] = {
 			["encounterName"] = "尤格-萨隆",
-			["source"] = "腐蚀触须",
+			["source"] = "萨拉",
 			["encounterID"] = 756,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33985,
+			["npcID"] = 33134,
 		},
 		[38391] = {
 			["event"] = "SPELL_CAST_START",
@@ -4937,10 +3335,10 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["encounterID"] = 753,
 		},
-		[59617] = {
-			["source"] = "掠龙符文法师",
+		[27267] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 23960,
+			["source"] = "阿巴塔尔",
+			["npcID"] = 416,
 		},
 		[52969] = {
 			["event"] = "SPELL_CAST_START",
@@ -4999,12 +3397,12 @@ PlaterDB = {
 			["source"] = "风暴之子瓦杜兰",
 			["npcID"] = 29368,
 		},
-		[62328] = {
-			["encounterName"] = "托里姆",
-			["source"] = "黑暗符文唤魔师",
-			["encounterID"] = 752,
+		[64156] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "腐蚀触须",
+			["encounterID"] = 756,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32878,
+			["npcID"] = 33985,
 		},
 		[63551] = {
 			["source"] = "生命的卫士",
@@ -5057,17 +3455,17 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 32878,
 		},
+		[51240] = {
+			["source"] = "复活的达卡莱死亡骑士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26830,
+		},
 		[62597] = {
 			["encounterName"] = "托里姆",
 			["source"] = "西芙",
 			["encounterID"] = 752,
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33196,
-		},
-		[16429] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "图萨丁暗影法师",
-			["npcID"] = 10398,
 		},
 		[63147] = {
 			["encounterName"] = "尤格-萨隆",
@@ -5108,15 +3506,17 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 26731,
 		},
+		[59839] = {
+			["encounterName"] = "斯拉德兰",
+			["source"] = "斯拉德兰",
+			["encounterID"] = 383,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29304,
+		},
 		[59435] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "瓦里玛萨斯",
 			["npcID"] = 31565,
-		},
-		[38356] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "天灾邪能兽",
-			["npcID"] = 31528,
 		},
 		[58053] = {
 			["event"] = "SPELL_CAST_START",
@@ -5176,15 +3576,15 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 29312,
 		},
+		[11443] = {
+			["source"] = "图萨丁暗影法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10398,
+		},
 		[58700] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "灼热图腾 VIII",
 			["npcID"] = 31162,
-		},
-		[33417] = {
-			["source"] = "暴风城法师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 18949,
 		},
 		[62529] = {
 			["encounterName"] = "托里姆",
@@ -11501,9 +9901,9 @@ PlaterDB = {
 					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
-				[26627] = {
-					"水晶处理者", -- [1]
-					"达克萨隆要塞", -- [2]
+				[17420] = {
+					"碎手蛮兵", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[33136] = {
@@ -11646,14 +10046,14 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[30176] = {
-					"安卡哈守护者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-					"zhCN", -- [3]
-				},
 				[29153] = {
 					"重生的白骨", -- [1]
 					"艾卓-尼鲁布", -- [2]
+					"zhCN", -- [3]
+				},
+				[33722] = {
+					"雷暴锻铸守护者", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[33754] = {
@@ -11826,9 +10226,9 @@ PlaterDB = {
 					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[29713] = {
-					"斯拉德兰蟒蛇", -- [1]
-					"古达克", -- [2]
+				[33819] = {
+					"暮光冰法师", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[30963] = {
@@ -11866,9 +10266,9 @@ PlaterDB = {
 					"闪电大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[11348] = {
-					"狂热者扎斯", -- [1]
-					"祖尔格拉布", -- [2]
+				[33052] = {
+					"有生命的星座", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[11356] = {
@@ -11921,9 +10321,9 @@ PlaterDB = {
 					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[27971] = {
-					"冷酷的构造体", -- [1]
-					"岩石大厅", -- [2]
+				[10413] = {
+					"地穴兽", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[33985] = {
@@ -11931,9 +10331,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[10413] = {
-					"地穴兽", -- [1]
-					"斯坦索姆", -- [2]
+				[27971] = {
+					"冷酷的构造体", -- [1]
+					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[10437] = {
@@ -11946,9 +10346,9 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[33052] = {
-					"有生命的星座", -- [1]
-					"奥杜尔", -- [2]
+				[11348] = {
+					"狂热者扎斯", -- [1]
+					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
 				[10461] = {
@@ -11971,9 +10371,9 @@ PlaterDB = {
 					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[33819] = {
-					"暮光冰法师", -- [1]
-					"奥杜尔", -- [2]
+				[29713] = {
+					"斯拉德兰蟒蛇", -- [1]
+					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
 				[31216] = {
@@ -12081,9 +10481,9 @@ PlaterDB = {
 					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[33722] = {
-					"雷暴锻铸守护者", -- [1]
-					"奥杜尔", -- [2]
+				[30176] = {
+					"安卡哈守护者", -- [1]
+					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
 				[28368] = {
@@ -12176,9 +10576,9 @@ PlaterDB = {
 					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[17420] = {
-					"碎手蛮兵", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
+				[26627] = {
+					"水晶处理者", -- [1]
+					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
 				[30249] = {
@@ -12411,12 +10811,12 @@ PlaterDB = {
 					["Desc"] = "Player an animation when the cast start. Start a timer when the cast finishes. Set the time in the options.",
 					["NpcNames"] = {
 					},
-					["Name"] = "Cast - Alert + Timer [P]",
 					["SpellIds"] = {
 						350421, -- [1]
 						355787, -- [2]
 						348513, -- [3]
 					},
+					["Name"] = "Cast - Alert + Timer [P]",
 					["PlaterCore"] = 1,
 					["version"] = -1,
 					["Options"] = {
@@ -12577,9 +10977,9 @@ PlaterDB = {
 						"197697", -- [1]
 						"59544", -- [2]
 					},
-					["Name"] = "Add - Health Markers [P]",
 					["SpellIds"] = {
 					},
+					["Name"] = "Add - Health Markers [P]",
 					["PlaterCore"] = 1,
 					["version"] = -1,
 					["Options"] = {
@@ -12714,13 +11114,13 @@ PlaterDB = {
 				["Auto Set Skull"] = 11,
 				["Cast - Quick Flash"] = 2,
 				["Add - Non Elite Trash [P]"] = 4,
-				["Cast - Stop Casting"] = 4,
-				["Add - Explode on Die [P]"] = 1,
 				["Cast - On Going Cast [P]"] = 2,
+				["Add - Explode on Die [P]"] = 1,
+				["Countdown"] = 11,
 				["Fixate by Unit Buff [P]"] = 2,
 				["Cast - Frontal Cone"] = 15,
 				["Fixate"] = 11,
-				["Countdown"] = 11,
+				["Cast - Stop Casting"] = 4,
 				["Spiteful Affix"] = 3,
 				["Cast - Very Important"] = 15,
 				["Fixate On You"] = 11,
@@ -12730,14 +11130,14 @@ PlaterDB = {
 				["Dont Have Aura"] = 1,
 				["Players Targetting Amount"] = 4,
 				["Color Automation"] = 1,
-				["Extra Border"] = 2,
+				["Hide Neutral Units"] = 1,
 				["Cast Bar Icon Config"] = 2,
 				["Execute Range"] = 1,
-				["Hide Neutral Units"] = 1,
+				["Combo Points"] = 6,
 				["Attacking Specific Unit"] = 2,
 				["Target Color"] = 3,
 				["Aura Reorder"] = 3,
-				["Combo Points"] = 6,
+				["Extra Border"] = 2,
 			},
 			["aura2_x_offset"] = 0,
 			["saved_cvars"] = {
@@ -12751,7 +11151,7 @@ PlaterDB = {
 				["nameplateShowFriends"] = "0",
 				["nameplateRemovalAnimation"] = "1",
 			},
-			["login_counter"] = 892,
+			["login_counter"] = 898,
 			["plate_config"] = {
 				["global_health_height"] = 12,
 				["global_health_width"] = 112,
@@ -13555,25 +11955,25 @@ PlaterLanguage = {
 }
 PlaterLogs = {
 	["_general_logs"] = {
-		"2023-06-14 00:26:18 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [1]
-		"2023-06-12 23:45:34 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [2]
-		"2023-06-12 23:08:40 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [3]
-		"2023-06-12 23:02:54 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [4]
-		"2023-06-12 00:06:52 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [5]
-		"2023-06-11 22:43:54 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [6]
-		"2023-06-11 19:32:19 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [7]
-		"2023-06-11 17:35:19 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [8]
-		"2023-06-11 16:47:12 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [9]
-		"2023-06-11 15:44:54 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [10]
-		"2023-06-11 15:44:08 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [11]
-		"2023-06-11 15:41:33 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [12]
-		"2023-06-11 15:10:18 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [13]
-		"2023-06-11 15:05:55 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [14]
-		"2023-06-11 15:05:24 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [15]
-		"2023-06-11 15:02:10 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [16]
-		"2023-06-11 15:01:24 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [17]
-		"2023-06-11 15:00:58 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [18]
-		"2023-06-11 14:58:22 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [19]
+		"2023-06-15 00:02:26 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [1]
+		"2023-06-14 23:58:12 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [2]
+		"2023-06-14 00:26:18 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [3]
+		"2023-06-12 23:45:34 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [4]
+		"2023-06-12 23:08:40 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [5]
+		"2023-06-12 23:02:54 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [6]
+		"2023-06-12 00:06:52 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [7]
+		"2023-06-11 22:43:54 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [8]
+		"2023-06-11 19:32:19 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [9]
+		"2023-06-11 17:35:19 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [10]
+		"2023-06-11 16:47:12 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [11]
+		"2023-06-11 15:44:54 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [12]
+		"2023-06-11 15:44:08 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [13]
+		"2023-06-11 15:41:33 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [14]
+		"2023-06-11 15:10:18 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [15]
+		"2023-06-11 15:05:55 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [16]
+		"2023-06-11 15:05:24 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [17]
+		"2023-06-11 15:02:10 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [18]
+		"2023-06-11 15:01:24 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [19]
 	},
 	["_error_logs"] = {
 	},

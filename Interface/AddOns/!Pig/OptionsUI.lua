@@ -28,11 +28,11 @@ PIG_AddOnPanel.Openshezhi:SetScript("OnClick", function ()
 	HideUIPanel(GameMenuFrame);
 	Pig_OptionsUI:Show();
 end)
-PIGLine(PIG_AddOnPanel,"TOP",-60,{1.5,0,0},{0.4, 0.4, 0.4, 0.8})
-Create.About_Update(PIG_AddOnPanel,-120)
+PIGLine(PIG_AddOnPanel,"TOP",-60,{2,4,-4})
+Create.About_Update(PIG_AddOnPanel,-120,"Panel")
 --子页内容
-PIGLine(PIG_AddOnChild,"TOP",-46,{1.5,0,0},{0.4, 0.4, 0.4, 0.8})
-Create.About_Thanks(PIG_AddOnChild,-20)
+PIGLine(PIG_AddOnChild,"TOP",-60,{2,4,-4})
+Create.About_Thanks(PIG_AddOnChild,-40)
 -- PIG_AddOnPanel.okay = function (self) SC_ChaChingPanel_Close(); end;
 -- PIG_AddOnPanel.cancel = function (self) SC_ChaChingPanel_CancelOrLoad();  end;
 ---------------

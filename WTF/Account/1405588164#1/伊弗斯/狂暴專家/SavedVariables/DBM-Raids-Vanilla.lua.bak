@@ -171,7 +171,7 @@ DBMRaidsVanilla_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Ragnaros-Classic"] = {
+	["Broodlord"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -209,7 +209,7 @@ DBMRaidsVanilla_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Ossirian"] = {
+	["Jeklik"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -247,7 +247,7 @@ DBMRaidsVanilla_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Majordomo"] = {
+	["Ragnaros-Classic"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -266,7 +266,7 @@ DBMRaidsVanilla_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Broodlord"] = {
+	["Majordomo"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -304,7 +304,7 @@ DBMRaidsVanilla_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Geddon"] = {
+	["Gehennas"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -380,7 +380,7 @@ DBMRaidsVanilla_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Skeram"] = {
+	["Ayamiss"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -437,7 +437,7 @@ DBMRaidsVanilla_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Gehennas"] = {
+	["Vaelastrasz"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -456,7 +456,7 @@ DBMRaidsVanilla_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Vaelastrasz"] = {
+	["Geddon"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -513,7 +513,7 @@ DBMRaidsVanilla_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["MCTrash"] = {
+	["Rajaxx"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -551,7 +551,7 @@ DBMRaidsVanilla_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Rajaxx"] = {
+	["Viscidus"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -589,7 +589,7 @@ DBMRaidsVanilla_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Viscidus"] = {
+	["MCTrash"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -685,7 +685,7 @@ DBMRaidsVanilla_SavedStats = {
 		["challengePulls"] = 0,
 	},
 	["Thekal"] = {
-		["normalPulls"] = 1,
+		["normalPulls"] = 2,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
 		["mythicKills"] = 0,
@@ -693,10 +693,10 @@ DBMRaidsVanilla_SavedStats = {
 		["heroic25Pulls"] = 0,
 		["lfr25Pulls"] = 0,
 		["normal25Pulls"] = 0,
-		["normalBestTime"] = 145.80799999999,
-		["normalKills"] = 1,
-		["normalLastTime"] = 145.80799999999,
+		["normalLastTime"] = 145.7709999999497,
+		["normalKills"] = 2,
 		["heroic25Kills"] = 0,
+		["normalBestTime"] = 145.7709999999497,
 		["timewalkerPulls"] = 0,
 		["heroicKills"] = 0,
 		["heroicPulls"] = 0,
@@ -838,7 +838,7 @@ DBMRaidsVanilla_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Ayamiss"] = {
+	["Skeram"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -876,7 +876,7 @@ DBMRaidsVanilla_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["Jeklik"] = {
+	["Ossirian"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,

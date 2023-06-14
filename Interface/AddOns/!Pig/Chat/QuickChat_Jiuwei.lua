@@ -16,10 +16,9 @@ function QuickChatfun.QuickBut_jiuwei()
 	fuFrame.jiuweidaojishi:SetPoint("LEFT",fuFrame,"LEFT",#ziframe*Width,0);
 	fuFrame.jiuweidaojishi:RegisterForClicks("LeftButtonUp", "RightButtonUp");
 	fuFrame.jiuweidaojishi.Tex = fuFrame.jiuweidaojishi:CreateTexture(nil);
-	--fuFrame.jiuweidaojishi.Tex:SetTexture("interface/pvpframe/icon-combat.blp");
 	fuFrame.jiuweidaojishi.Tex:SetTexture("interface/pvpframe/icons/prestige-icon-3.blp")
-	fuFrame.jiuweidaojishi.Tex:SetPoint("CENTER",fuFrame.jiuweidaojishi,"CENTER",1,0);
 	fuFrame.jiuweidaojishi.Tex:SetSize(Width-2,Height-5);
+	fuFrame.jiuweidaojishi.Tex:SetPoint("CENTER",fuFrame.jiuweidaojishi,"CENTER",0.6,0);
 	fuFrame.jiuweidaojishi:SetScript("OnMouseDown", function (self)
 		self.Tex:SetPoint("CENTER",2,-1);
 	end);

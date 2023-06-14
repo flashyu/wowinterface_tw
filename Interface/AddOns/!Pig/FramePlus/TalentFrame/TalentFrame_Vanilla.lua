@@ -1,5 +1,8 @@
 local _, addonTable = ...;
 local _, _, _, tocversion = GetBuildInfo()
+local Create=addonTable.Create
+local PIGCheckbutton=Create.PIGCheckbutton
+local PIGFontString=Create.PIGFontString
 local FramePlusfun=addonTable.FramePlusfun
 ----------------
 local gundongWW,gundongHH,ScrollPY,ScaleZhi = 290, 480, -90, 0.76

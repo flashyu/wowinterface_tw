@@ -7,6 +7,45 @@ local PIGCheckbutton_R=Create.PIGCheckbutton_R
 local PIGFontString=Create.PIGFontString
 local CommonFun=addonTable.CommonFun
 -------
+TradeFrame.PIGinfo={
+	["duixiang"]="",
+	["TargetItem"]={nil,nil,nil,nil,nil,nil},
+	["TargetMoney"]=0,
+	["PlayerItem"]={nil,nil,nil,nil,nil,nil},
+	["PlayerMoney"]=0,
+}
+-- TradeFrame:RegisterEvent("UI_INFO_MESSAGE");--交易信息
+-- TradeFrame:RegisterEvent("TRADE_MONEY_CHANGED");--交易窗口的货币值更改时触发。
+-- TradeFrame:RegisterEvent("TRADE_PLAYER_ITEM_CHANGED");
+-- TradeFrame:RegisterEvent("TRADE_TARGET_ITEM_CHANGED");
+-- TradeFrame:RegisterEvent("TRADE_SHOW");
+-- TradeFrame:RegisterEvent("TRADE_CLOSED");
+-- TradeFrame:RegisterEvent("TRADE_REQUEST_CANCEL");--取消交易尝试时触发。
+-- TradeFrame:RegisterEvent("PLAYER_TRADE_MONEY");--当玩家进行交易时被触发
+-- TradeFrame:RegisterEvent("TRADE_ACCEPT_UPDATE");--当玩家和目标接受按钮的状态更改时触发。
+TradeFrame:HookScript("OnEvent",function (self,event,arg1,arg2,arg3,arg4,arg5)
+	if event=="TRADE_SHOW" or event=="TRADE_PLAYER_ITEM_CHANGED" or event=="TRADE_TARGET_ITEM_CHANGED" or event=="TRADE_MONEY_CHANGED" then
+		self.PIGinfo.duixiang=TradeFrameRecipientNameText:GetText();
+		self.PIGinfo.TargetMoney=GetTargetTradeMoney();
+		self.PIGinfo.PlayerMoney=GetPlayerTradeMoney();
+		for i=1, MAX_TRADE_ITEMS, 1 do
+			local TargetItemlink=GetTradeTargetItemLink(i)
+			if TargetItemlink then
+				local name, texture, numItems, quality, enchantment, canLoseTransmog, isBound = GetTradeTargetItemInfo(i);
+				self.PIGinfo.TargetItem[i]={TargetItemlink,numItems}
+			else
+				self.PIGinfo.TargetItem[i]=nil
+			end
+			local PlayerItemLink=GetTradePlayerItemLink(i)
+			if PlayerItemLink then
+				local name, texture, numItems, quality, enchantment, canLoseTransmog, isBound = GetTradePlayerItemInfo(i);
+				self.PIGinfo.PlayerItem[i]={PlayerItemLink,numItems}
+			else
+				self.PIGinfo.PlayerItem[i]=nil
+			end 
+		end
+	end
+end)
 local CommonF=CommonFun.CommonF
 CommonF.TradePlus = PIGCheckbutton_R(CommonF,{"交易界面提示","在交易界面显示对方职业和等级"})
 CommonF.TradePlus:SetScript("OnClick", function (self)

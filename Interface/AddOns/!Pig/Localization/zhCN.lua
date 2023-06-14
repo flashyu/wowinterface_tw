@@ -63,22 +63,22 @@ L["ABOUT_REMINDER"]="|cffFF0000*本插件完全免费，网络购物平台出售
 L["ABOUT_URL"]="https://www.curseforge.com/wow/addons/pig"
 L["ABOUT_UPDATEADD"]="更新网址: "
 L["ABOUT_MAIL"]="|cffffff00愿意提供本地语言支持请发送邮件:|r xdfxjf1004@hotmail.com"
-L["ABOUT_BILI"]="|cff00ff00作者哔哩哔哩账号：|r|cff00FFFFgeligasi|r       |cff00ff00作者抖音账号：|r|cff00ffffgeligasi|r"
+L["ABOUT_BILI"]="|cff00ff00插件使用教程|r|cffFF00FF哔哩哔哩/抖音|r搜|cff00ffffgeligasi|r"
 L["ABOUT_YY"]="|cff00ff00YY频道|cff00FFFF113213|r"
-L["ABOUT_QQ"]="|cff00ff00QQ群|r|cff00FFFF27397148|r, |cff00ff002群|r|cff00FFFF117883385|r"
+L["ABOUT_QQ"]="|cff00ff00QQ群|r|cff00FFFF27397148|r |cff00ff002群|r|cff00FFFF117883385|r"
 L["ABOUT_THANKS"]="特别鸣谢"
 L["ABOUT_THANKS_TXT"]={
 	["C60"]={
 		"经典旧世:",
-		"|cff00FFFF剑与远征|r [服务器:艾隆纳亚-联盟]\n|cff00FFFF强悍的恋恋鱼|r [服务器:辛洛斯-联盟]",
+		--"|cff00FFFF剑与远征|r [服务器:艾隆纳亚-联盟]\n|cff00FFFF强悍的恋恋鱼|r [服务器:辛洛斯-联盟]",
 	},
 	["WLK"]={
 		"巫妖王之怒:",
-		"|cff00FFFF心灵迁徙|r [服务器:碧空之歌-部落]\n|cff00FFFF圣地法爷|r [服务器:碧空之歌-部落]\n|cff00FFFF哈老五|r [服务器:碧空之歌-部落]\n|cff00FFFF宁先生|r [服务器:哈霍兰-联盟]\n|cff00FFFF窟髅玩火|r [服务器:帕奇维克-部落]",
+		--"|cff00FFFF心灵迁徙|r [服务器:碧空之歌-部落]\n|cff00FFFF圣地法爷|r [服务器:碧空之歌-部落]\n|cff00FFFF哈老五|r [服务器:碧空之歌-部落]\n|cff00FFFF宁先生|r [服务器:哈霍兰-联盟]\n|cff00FFFF窟髅玩火|r [服务器:帕奇维克-部落]",
 	},
 	["RETAIL"]={
 		"正式服",
-		"|cff00FFFF心灵霜降|r [服务器:凤凰之神-部落]",
+		--"|cff00FFFF心灵霜降|r [服务器:凤凰之神-部落]",
 	},
 }
 --Config
@@ -231,7 +231,7 @@ L["CVAR_TABNAME4"] = "高级";
 L["RaidR_TABNAME"] = "开团助手";
 
 --Invite
-L["INVITE_NAME"] = "时空之门";
+L["INVITE_TABNAME"] = "时空之门";
 L["INVITE_LEISURE"] = "候车";
 L["INVITE_CHEDUI"] = "车队";
 L["INVITE_PLANE"] = "位面";

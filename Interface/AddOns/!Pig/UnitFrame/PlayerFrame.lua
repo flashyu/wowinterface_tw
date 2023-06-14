@@ -245,7 +245,10 @@ function UnitFramefun.Zishen()
 				C_Timer.After(0.1,zhixingyidongP)
 			end
 		end
-		zhixingyidongP()
+		if not NDui and not ElvUI then
+			zhixingyidongP()
+		end
+		
 		----移动目标头像框架位置(防止遮挡玩家自己头像扩展栏)
 		-- local UFPosition = CreateFrame("Frame");
 		-- UFPosition:SetScript("OnEvent", function (event, arg1)

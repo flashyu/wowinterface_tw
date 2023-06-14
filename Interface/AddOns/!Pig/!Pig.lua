@@ -30,17 +30,15 @@ PIGUI:SetScript("OnEvent",function(self, event, arg1)
 		addonTable.FramePlus()
 		addonTable.UnitFrame()
 		addonTable.BagBank()
-		-- --技能监控
+		--技能监控
 		-- addonTable.Spell_CD_JK()
-		-- --时空之门
+		--时空之门
 		-- addonTable.Invite()
-		-- --开团助手
+		--开团助手
 		addonTable.RaidRecord()
-		-- --带本助手
+		--带本助手
 		-- addonTable.daiben()
-		-- ---
-		-- addonTable.Sponsorship()
-		-- --
+		--
 		addonTable.Rurutia()
 		QuickButUI:Add()
 		------------------------------

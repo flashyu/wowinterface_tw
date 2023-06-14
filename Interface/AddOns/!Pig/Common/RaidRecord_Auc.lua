@@ -25,7 +25,9 @@ RaidR_AucF:Hide()
 RaidR_AucF.nr=PIGFrame(RaidR_AucF,{"TOPRIGHT",RaidR_AucF,"TOPRIGHT",0,0},{300, 220})
 RaidR_AucF.nr:PIGSetBackdrop(0.8)
 RaidR_AucF.nr:PIGSetMovable(RaidR_AucF)
-RaidR_AucF.nr.biaoti = PIGFontString(RaidR_AucF.nr,{"TOP", RaidR_AucF.nr, "TOP", 0,-2},"正在拍卖");
+RaidR_AucF.nr.aucplayer = PIGFontString(RaidR_AucF.nr,{"TOP", RaidR_AucF.nr, "TOP", -40,-4});
+RaidR_AucF.nr.aucplayer:SetTextColor(1, 0, 1, 1)
+RaidR_AucF.nr.biaoti = PIGFontString(RaidR_AucF.nr,{"LEFT", RaidR_AucF.nr.aucplayer, "RIGHT", 0,0},"正在拍卖");
 RaidR_AucF.nr.aucitem1 = PIGFontString(RaidR_AucF.nr,{"TOP", RaidR_AucF.nr, "TOP", 0,-30},nil,nil,18);
 RaidR_AucF.nr.aucitem2 = PIGFontString(RaidR_AucF.nr,{"TOP", RaidR_AucF.nr, "TOP", 0,-60});
 RaidR_AucF.nr.aucitem2:SetTextColor(1, 1, 1, 1)
@@ -204,20 +206,23 @@ local function tishishanshuo()
 		end
 	end
 end
+local function HidepaimaiUI()
+	RaidR_AucF.nr:Hide();
+	RaidR_AucF.Min.Height:Show()
+	RaidR_AucF.Min:SetNormalTexture("interface/chatframe/ui-chaticon-maximize-up.blp");
+	RaidR_AucF.Min:SetPushedTexture("interface/chatframe/ui-chaticon-maximize-down.blp")
+	if not RaidR_AucF.Min.ShowHide then
+		RaidR_AucF.Min.ShowHide=true
+		tishishanshuo()
+	end
+end
 RaidR_AucF:SetScript("OnShow", function(self)
 	tishishanshuo()
 	C_Timer.After(300,function() self:Hide() end)
 end);
 RaidR_AucF.Min:SetScript("OnClick", function (self)
 	if RaidR_AucF.nr:IsShown() then
-		RaidR_AucF.nr:Hide();
-		self.Height:Show()
-		RaidR_AucF.Min:SetNormalTexture("interface/chatframe/ui-chaticon-maximize-up.blp");
-		RaidR_AucF.Min:SetPushedTexture("interface/chatframe/ui-chaticon-maximize-down.blp")
-		if not RaidR_AucF.Min.ShowHide then
-			RaidR_AucF.Min.ShowHide=true
-			tishishanshuo()
-		end
+		HidepaimaiUI()
 	else
 		RaidR_AucF.nr:Show();
 		self.Height:Hide()
@@ -226,6 +231,11 @@ RaidR_AucF.Min:SetScript("OnClick", function (self)
 		RaidR_AucF.Min.ShowHide=false
 	end	
 end);
+RaidR_AucF.nr.p = PIGButton(RaidR_AucF.nr,{"BOTTOMLEFT", RaidR_AucF.nr, "BOTTOMLEFT", 20,18},{24,24},"P");
+RaidR_AucF.nr.p:SetScript("OnClick",function(self)
+	PIGSendChatRaidParty("出价: P")
+	HidepaimaiUI()
+end)
 ---
 C_ChatInfo.RegisterAddonMessagePrefix(biaotou)
 RaidR_AucF:RegisterEvent("CHAT_MSG_ADDON");
@@ -241,6 +251,7 @@ RaidR_AucF:SetScript("OnEvent",function(self, event, arg1, arg2, arg3, arg4, arg
 			RaidR_AucF.nr.chujiaV:SetText(neirong+RaidR_AucF.nr.danci)
 		elseif kaishijieshu==auc_start then--拍卖开始
 			self:Show()
+			RaidR_AucF.nr.aucplayer:SetText(arg5)
 			local itemlink,num,qipai,jiajia = strsplit("#", neirong);
 			RaidR_AucF.nr.aucitem1:SetText(itemlink.."×"..num)
 			RaidR_AucF.nr.aucitem2:SetText("起拍价:|cff00FFFF"..qipai.."|r\n最低加价:|cff00FFFF"..jiajia.."|r")

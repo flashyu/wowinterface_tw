@@ -28,7 +28,7 @@ if tocversion<100000 then
 			end
 		end
 	end)
-	--处理聊天框技能
+	--处理技能
 	GameTooltip:HookScript("OnTooltipSetSpell", function(self)
 		if not PIGA["Tooltip"]["SpellID"] then return end
 		local _,spellId = self:GetSpell()
@@ -38,25 +38,37 @@ if tocversion<100000 then
 		end
 	end)
 else------
-	TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(tooltip, data)
+	TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(self, data)
 		if not PIGA["Tooltip"]["ItemLevel"] then return end
-		if tooltip == GameTooltip then
-			local ItemID = data["id"]
-			if ItemID then	
-		    	local expacID = select(15, GetItemInfo(ItemID))
-		    	if expacID then
-		    		tooltip:AddDoubleLine("物品ID:"..ItemID,banbendata[expacID])
-		    	end
-			end
+		local ItemID = data["id"]
+		if ItemID then	
+	    	local itemStackCount,_, _, _, _, _, _, expacID = select(8, GetItemInfo(ItemID))
+	    	if expacID then
+	    		if itemStackCount>1 then
+	    			self:AddDoubleLine("物品ID:"..ItemID.."堆叠"..itemStackCount,banbendata[expacID])
+	    		else
+					self:AddDoubleLine("物品ID:"..ItemID,banbendata[expacID])
+	    		end
+	    	end
 		end
 	end)
-	--处理聊天框技能
+	--处理技能
 	TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Spell, function(self)
 		if not PIGA["Tooltip"]["SpellID"] then return end
 		local _,spellId = self:GetSpell()
 		if spellId then
 			self:AddDoubleLine("SpellID:",spellId)
 			self:Show()
+		end
+	end)
+	TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.PetAction,  function(self)
+		local displayedName = _G[self:GetName().."TextLeft"..1]:GetText()
+		if displayedName then
+	   		local _,_,_,_,_,_,spellId = GetSpellInfo(displayedName)
+	   		if spellId then
+		   		self:AddDoubleLine("SpellID:",spellId)
+				self:Show()
+			end
 		end
 	end)
 end

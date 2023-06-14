@@ -3,6 +3,7 @@ local L=addonTable.locale
 local Create = addonTable.Create
 local PIGFrame=Create.PIGFrame
 local PIGLine=Create.PIGLine
+local PIGButton = Create.PIGButton
 local FontUrl=Create.FontUrl
 local PIGSetFont=Create.PIGSetFont
 -------------------
@@ -29,7 +30,7 @@ function Create.PIGFontStringBG(fuF,Point,Text,WH,Zihao,UIName)
 end
 
 --======================
-function Create.About_Update(self,YY)
+function Create.About_Update(self,YY,Panel)
 	self.Reminder = Create.PIGFontString(self,{"TOP",self,"TOP",0,YY},L["ABOUT_REMINDER"],nil,16)
 
 	self.UpdateURL = CreateFrame("EditBox", nil, self, "InputBoxInstructionsTemplate");
@@ -48,6 +49,12 @@ function Create.About_Update(self,YY)
 	self.Mail = Create.PIGFontString(self,{"TOP",self.UpdateURL,"BOTTOM",-20,-20},L["ABOUT_MAIL"],nil,16)
 
 	self.Bili = Create.PIGFontString(self,{"TOP",self.Mail,"BOTTOM",0,-20},L["ABOUT_BILI"].."\n\n"..L["ABOUT_QQ"].."  "..L["ABOUT_YY"],nil,16)
+   if Panel~="Panel" then
+		self.ShowAuthor = PIGButton(self,{"TOP",self.Mail,"BOTTOM",0,-80},{100,24},L["ADDON_AUTHOR"])
+		self.ShowAuthor:SetScript("OnClick", function (self)
+			Pig_OptionsUI:ShowAuthor()
+		end);
+	end
 end
 function Create.About_Thanks(self,YY)
 	self.tks = Create.PIGFontString(self,{"TOP",self,"TOP",0,YY},L["ABOUT_THANKS"],nil,16)

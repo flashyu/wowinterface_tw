@@ -122,23 +122,28 @@ local function ActionBar_PetTishi()
 			if tocversion<80000 then
 				local spname= GetSpellInfo(3716)
 				local spname1= GetSpellInfo(33698)
-				local spname2= GetSpellInfo(17735)
+				--local spname2= GetSpellInfo(17735)
 				table.insert(chaofengjinengName,spname)
 				table.insert(chaofengjinengName,spname1)
-				table.insert(chaofengjinengName,spname2)
+				--table.insert(chaofengjinengName,spname2)
 			else
-				local spname= GetSpellInfo(3716)
+				local spname= GetSpellInfo(112042)
 				table.insert(chaofengjinengName,spname)
 			end
 		end
 
 		local Width,Height = 30,30;
 		local PETchaofengtishi = CreateFrame("Frame", "PETchaofengtishiUI", PetActionBarFrame);
-		PETchaofengtishi:SetSize(Width,Height);
 		PETchaofengtishi:SetPoint("BOTTOM", PetActionBarFrame, "TOP", 0, 10);
+		PETchaofengtishi:SetSize(Width,Height);
 		PETchaofengtishi.Icon = PETchaofengtishi:CreateTexture(nil, "ARTWORK");
 		PETchaofengtishi.Icon:SetTexture("interface/common/help-i.blp");
-		PETchaofengtishi.Icon:SetSize(Width*1.6,Height*1.6);
+		if tocversion<80000 then
+			PETchaofengtishi.Icon:SetSize(Width*1.6,Height*1.6);
+		else
+			PETchaofengtishi.Icon:SetSize(Width*1.2,Height*1.2);
+		end
+		--
 		PETchaofengtishi.Icon:SetPoint("CENTER");
 		PETchaofengtishi:Hide()
 		-----------
@@ -148,11 +153,11 @@ local function ActionBar_PetTishi()
 			if hasUI then
 				for x=4, 7 do
 					for xx=1,#chaofengjinengName do
-						local name, subtext, texture, isToken, isActive, autoCastAllowed, autoCastEnabled = GetPetActionInfo(x);
+						local name, texture, isToken, isActive, autoCastAllowed, autoCastEnabled = GetPetActionInfo(x);
 						if name==chaofengjinengName[xx] then
 							local inInstance = IsInInstance();
 							if inInstance then
-								if autoCastAllowed then
+								if autoCastEnabled or texture==136222 then
 									PETchaofengtishi:Show()
 									PETchaofengtishi:SetPoint("BOTTOM", _G["PetActionButton"..x], "TOP", 0, 0);
 									PIGEnter(PETchaofengtishi,tishibiaoti,"|cffFFFF00副本内开启宠物嘲讽可能干扰坦克仇恨！|r")
@@ -160,12 +165,12 @@ local function ActionBar_PetTishi()
 									PETchaofengtishi:Hide()
 								end
 							else
-								if autoCastAllowed then
-									PETchaofengtishi:Hide()
-								else
+								if not autoCastEnabled and texture==236295 then
 									PETchaofengtishi:Show()
 									PETchaofengtishi:SetPoint("BOTTOM", _G["PetActionButton"..x], "TOP", 0, 0);
 									PIGEnter(PETchaofengtishi,tishibiaoti,"|cffFFFF00野外关闭宠物嘲讽可能造成宠物仇恨匮乏！|r")
+								else
+									PETchaofengtishi:Hide()
 								end
 							end
 							return
@@ -174,10 +179,11 @@ local function ActionBar_PetTishi()
 				end
 			end
 		end
-		PetTishizhhixing()
+		C_Timer.After(4,PetTishizhhixing)
 		----------
 		local PETchaofeng= CreateFrame("Frame");
 		PETchaofeng:RegisterEvent("PET_BAR_UPDATE")
+		PETchaofeng:RegisterUnitEvent("UNIT_AURA","pet");
 		PETchaofeng:SetScript("OnEvent",PetTishizhhixing)
 		
 	end
@@ -485,6 +491,7 @@ ActionF:HookScript("OnShow", function(self)
 		self.BarRight:SetChecked(PIGA["ActionBar"]["BarRight"])
 		ActionBarfun.ActionBar_bili_OP()
 	end
+	ActionF.xiufuShowAction:SetChecked(PIGA["ActionBar"]["xiufuShowAction"])		
 end)
 ----------------
 addonTable.ActionBar = function()

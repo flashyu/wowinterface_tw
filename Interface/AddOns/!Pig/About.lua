@@ -13,29 +13,16 @@ Pig_OptionsUI.R.top.Ver.PigVer = PIGFontString(Pig_OptionsUI.R.top.Ver,{"LEFT", 
 local fuFrame = PIGOptionsList(L["ABOUT_TABNAME"])
 ------
 Create.About_Update(fuFrame,-10)
-PIGLine(fuFrame,"TOP",-190,{1.1,0,0})
-Create.About_Thanks(fuFrame,-200)
+PIGLine(fuFrame,"TOP",-230,{1.1,0,0})
+Create.About_Thanks(fuFrame,-240)
 
 --Update
-local function huoqubianhao(Name)
-	local channel,channelName= GetChannelName(Name)
-	if channelName then
-		return channel
-	else
-		return 0
-	end
-end
 local function huoqukeyongPIG(chname)
-	local cunzaihao = huoqubianhao(chname)
-	if cunzaihao>0 then
-		return cunzaihao
-	else
-		for x=1,5 do
-			local newpindaoname = chname..x
-			local cunzaihao = huoqubianhao(newpindaoname)
-			if cunzaihao>0 then
-				return cunzaihao
-			end
+	local channels = {GetChannelList()}
+	for i = 1, #channels, 3 do
+		local id, name, disabled = channels[i], channels[i+1], channels[i+2]
+		if name==chname then
+			return id
 		end
 	end
 	return 0
@@ -60,7 +47,7 @@ Version_tishi:SetScript("OnEvent",function(self, event, arg1, arg2, arg3, arg4, 
 			if tocversion>100000 then
 				self.PIGID=huoqukeyongPIG("PIG")
 				if self.PIGID>0 then
-					C_ChatInfo.SendAddonMessage(biaotou,banbengengxin,"CHANNEL",self.PIGID)
+					C_ChatInfo.SendAddonMessage(biaotou,banbengengxin,"CHANNEL"..self.PIGID)
 				end
 			else
 				C_ChatInfo.SendAddonMessage(biaotou,banbengengxin,"SAY")
