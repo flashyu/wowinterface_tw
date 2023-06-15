@@ -1,24 +1,7 @@
 
 alaChatSV = {
-	["highlight"] = {
-		["_TemporaryDisabled"] = false,
-		["color"] = {
-			0, -- [1]
-			1, -- [2]
-			0, -- [3]
-			0, -- [4]
-		},
-		["CaseInsensitive"] = true,
-		["ShowMatchedOnly.CHANNEL"] = true,
-		["ShowMatchedOnly.NORMAL"] = false,
-		["StrSet"] = "",
-		["PinStyle"] = "char",
-		["KeepShowMatchedOnly"] = false,
-		["ShowMatchedOnly"] = false,
-		["toggle"] = false,
-		["format"] = "#HL#",
-		["ShowMatchedOnly.SAY-YELL"] = true,
-		["ButtonInDock"] = true,
+	["general"] = {
+		["detailedtip"] = true,
 	},
 	["misc"] = {
 		["ArrowKey"] = false,
@@ -28,54 +11,31 @@ alaChatSV = {
 		["HoverHyperlink"] = true,
 		["Font"] = "Fonts\\ARKai_T.ttf",
 		["ColoredPlayerName"] = true,
-		["TabChangeChatType"] = false,
-		["ChatFrameToBorder"] = true,
-		["StickyBNWhisper"] = true,
 		["StickyWhisper"] = true,
+		["StickyBNWhisper"] = true,
+		["ChatFrameToBorder"] = true,
+		["TabChangeChatType"] = false,
 		["StickyChannel"] = true,
 	},
-	["general"] = {
-		["detailedtip"] = true,
-	},
-	["_GlobalRef"] = {
-	},
-	["__AppliedDBVersion"] = {
-		["Player-4487-005CB746"] = 221020.01,
-		["Player-4487-0051C667"] = 221020.01,
-	},
-	["companion"] = {
-		["PlayerLinkFormat"] = "#INDEX.##NAME##:LEVEL#",
-		["NewMemberNoticeStr"] = "** 新公会成员：Lv#LEVEL# #CLASS# #NAME# **",
-		["ShowLevel"] = true,
-		["NewMemberNotice"] = false,
-		["ShowSubGroup"] = true,
-		["WelToGuildStrSet"] = "欢迎 #NAME# ！",
-		["WelToGuild"] = false,
-		["WelToGuildDelay"] = true,
-	},
-	["chatfilter"] = {
+	["highlight"] = {
 		["_TemporaryDisabled"] = false,
-		["NameSet"] = "#加基森\n#冬泉谷\n#玛拉顿\n#斯坦索姆\n#航空\n#航班\n#飞机\n#专机\n#直达\n#直飞\n",
-		["Rep"] = true,
-		["StrSet"] = "HclubTicket:\n航空\n航班\n专机\n直达\n直飞\n安全便捷\n收米\n出米\n托管\n公众号\n大米\n",
-		["PinStyle"] = "char",
-		["RepeatedSentence"] = true,
-		["toggle"] = true,
-		["CaseInsensitive"] = true,
-		["RepInterval"] = 30,
-		["ButtonInDock"] = true,
-	},
-	["_GlobalAssign"] = {
-	},
-	["__version"] = 221020.01,
-	["copy"] = {
-		["toggle"] = true,
-		["format"] = "none",
 		["color"] = {
-			1, -- [1]
-			0.5, -- [2]
+			0, -- [1]
+			1, -- [2]
 			0, -- [3]
+			0, -- [4]
 		},
+		["ButtonInDock"] = true,
+		["ShowMatchedOnly.SAY-YELL"] = true,
+		["StrSet"] = "",
+		["ShowMatchedOnly.NORMAL"] = false,
+		["PinStyle"] = "char",
+		["KeepShowMatchedOnly"] = false,
+		["ShowMatchedOnly"] = false,
+		["toggle"] = false,
+		["format"] = "#HL#",
+		["ShowMatchedOnly.CHANNEL"] = true,
+		["CaseInsensitive"] = true,
 	},
 	["docker"] = {
 		["BackdropColor"] = {
@@ -104,8 +64,48 @@ alaChatSV = {
 		["AutoAdjustEditBox"] = true,
 		["FadInTime"] = 0.5,
 		["Position"] = "manual",
-		["YToBorder"] = 0,
 		["Backdrop"] = true,
+		["YToBorder"] = 0,
+	},
+	["__AppliedDBVersion"] = {
+		["Player-4487-005CB746"] = 221020.01,
+		["Player-4487-0051C667"] = 221020.01,
+	},
+	["companion"] = {
+		["PlayerLinkFormat"] = "#INDEX.##NAME##:LEVEL#",
+		["NewMemberNoticeStr"] = "** 新公会成员：Lv#LEVEL# #CLASS# #NAME# **",
+		["WelToGuildDelay"] = true,
+		["NewMemberNotice"] = false,
+		["ShowSubGroup"] = true,
+		["WelToGuildStrSet"] = "欢迎 #NAME# ！",
+		["WelToGuild"] = false,
+		["ShowLevel"] = true,
+	},
+	["chatfilter"] = {
+		["_TemporaryDisabled"] = false,
+		["NameSet"] = "#加基森\n#冬泉谷\n#玛拉顿\n#斯坦索姆\n#航空\n#航班\n#飞机\n#专机\n#直达\n#直飞\n",
+		["Rep"] = true,
+		["StrSet"] = "HclubTicket:\n航空\n航班\n专机\n直达\n直飞\n安全便捷\n收米\n出米\n托管\n公众号\n大米\n",
+		["PinStyle"] = "char",
+		["RepeatedSentence"] = true,
+		["toggle"] = true,
+		["ButtonInDock"] = true,
+		["RepInterval"] = 30,
+		["CaseInsensitive"] = true,
+	},
+	["_GlobalAssign"] = {
+	},
+	["__version"] = 221020.01,
+	["copy"] = {
+		["toggle"] = true,
+		["format"] = "none",
+		["color"] = {
+			1, -- [1]
+			0.5, -- [2]
+			0, -- [3]
+		},
+	},
+	["_GlobalRef"] = {
 	},
 	["utils"] = {
 		["DBMPull"] = true,
@@ -138,6 +138,20 @@ alaChatSV = {
 		["WHISPER"] = false,
 		["GENERAL"] = true,
 		["SAY"] = true,
+		["YELL"] = true,
+		["GUILD"] = true,
+		["AutoAddChannelToDefaultChatFrame"] = false,
+		["UseColor"] = true,
+		["ChannelBlockButton_BLZ"] = true,
+		["LOOK_FOR_GROUP"] = true,
+		["LOCAL_DEFENSE"] = false,
+		["RAID"] = true,
+		["BF_WORLD"] = true,
+		["_channelblocked"] = {
+		},
+		["RAID_WARNING"] = true,
+		["_chatblocked"] = {
+		},
 		["_bfworldcf"] = {
 			["Player-4487-005CB746"] = {
 			},
@@ -145,20 +159,6 @@ alaChatSV = {
 				true, -- [1]
 			},
 		},
-		["GUILD"] = true,
-		["_chatblocked"] = {
-		},
-		["LOOK_FOR_GROUP"] = true,
-		["ChannelBlockButton_BLZ"] = true,
-		["BF_WORLD"] = true,
-		["LOCAL_DEFENSE"] = false,
-		["RAID"] = true,
-		["RAID_WARNING"] = true,
-		["_channelblocked"] = {
-		},
-		["UseColor"] = true,
-		["AutoAddChannelToDefaultChatFrame"] = false,
-		["YELL"] = true,
 		["UNMANAGEDCHANNEL"] = true,
 	},
 }

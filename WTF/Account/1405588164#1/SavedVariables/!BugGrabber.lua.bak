@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
+	["session"] = 322,
 	["lastSanitation"] = 3,
-	["session"] = 319,
 	["errors"] = {
 		{
 			["message"] = "Interface/AddOns/GTFO/GTFO.lua:2079: attempt to index a nil value",
@@ -29,8 +29,8 @@ BugGrabberDB = {
 		}, -- [3]
 		{
 			["message"] = "Interface/AddOns/ClassicCodex/browser.lua:1 (null)",
-			["time"] = "2023/05/06 00:16:55",
 			["session"] = 8,
+			["time"] = "2023/05/06 00:16:55",
 			["counter"] = 4,
 		}, -- [4]
 		{
@@ -263,14 +263,14 @@ BugGrabberDB = {
 		}, -- [33]
 		{
 			["message"] = "Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
-			["time"] = "2023/05/06 00:16:55",
 			["session"] = 231,
+			["time"] = "2023/05/06 00:16:55",
 			["counter"] = 35,
 		}, -- [34]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
-			["time"] = "2023/05/06 00:16:55",
 			["session"] = 231,
+			["time"] = "2023/05/06 00:16:55",
 			["counter"] = 35,
 		}, -- [35]
 		{
@@ -297,35 +297,13 @@ BugGrabberDB = {
 			["counter"] = 1,
 		}, -- [38]
 		{
-			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
-			["time"] = "2023/05/16 21:50:27",
-			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
-			["stack"] = "[string \"@Interface/AddOns/Blizzard_InspectUI/Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:385: in function `UIParentLoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:428: in function `InspectFrame_LoadUI'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:733: in function `InspectUnit'\n[string \"@Interface/FrameXML/UnitPopupSharedButtonMixins.lua\"]:200: in function `OnClick'\n[string \"@Interface/FrameXML/UnitPopupShared.lua\"]:148: in function `func'\n[string \"@Interface/FrameXML/UIDropDownMenu.lua\"]:956: in function `UIDropDownMenuButton_OnClick'\n[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1: in function <[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1>",
-			["session"] = 293,
-			["counter"] = 23,
-		}, -- [39]
-		{
-			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:1 (null)",
-			["session"] = 293,
-			["time"] = "2023/05/16 21:50:27",
-			["counter"] = 46,
-		}, -- [40]
-		{
-			["message"] = "Elv_ABFade:GetAlpha(): C_Timer.NewTicker requires a non-negative duration",
-			["time"] = "2023/05/25 00:06:05",
-			["locals"] = "(*temporary) = Elv_ABFade {\n 0 = <userdata>\n fadeInfo = <table> {\n }\n FadeObject = <table> {\n }\n mouseLock = true\n}\n",
-			["stack"] = "[string \"=[C]\"]: in function `GetAlpha'\n[string \"@Interface/AddOns/ElvUI/Core/Modules/ActionBars/ActionBars.lua\"]:875: in function <.../AddOns/ElvUI/Core/Modules/ActionBars/ActionBars.lua:865>",
-			["session"] = 310,
-			["counter"] = 8,
-		}, -- [41]
-		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 '*** ForceTaint_Strong ***' 尝试调用保护功能 'ConsumeButton_MDF_UnitA_Alternative:SetAttribute()'。",
 			["time"] = "2023/06/11 18:36:47",
 			["locals"] = "Skipped (In Encounter)",
 			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetAttribute'\n[string \"return function() -- This WA is used to Init the Borders at a single location.\"]:109: in function `fnSetupSecuredFrame'\n[string \"return -- Secure Frame ! - Do not add anything that could change the frame - that could cause errors in combat\"]:11: in function <[string \"return -- Secure Frame ! - Do not add anyth...\"]:2>\n[string \"=[C]\"]: in function `xpcall'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:661: in function <Interface/AddOns/WeakAuras/GenericTrigger.lua:563>\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:810: in function `ScanEventsInternal'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:764: in function `ScanEvents'\n[string \"return function() -- This WA is used to Init the Borders at a single location.\"]:123: in function `fnInit'\n[string \"return function(sEvent, ...)\"]:3: in function <[string \"return function(sEvent, ...)\"]:1>\n[string \"=[C]\"]: in function `xpcall'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:661: in function <Interface/AddOns/WeakAuras/GenericTrigger.lua:563>\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:948: in function `ScanWithFakeEvent'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:1291: in function `LoadDisplays'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:1901: in function `LoadDisplays'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:1685: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:1530>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:1728: in function `ScanForLoads'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:1796: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:1794>",
 			["session"] = 311,
 			["counter"] = 1,
-		}, -- [42]
+		}, -- [39]
 		{
 			["message"] = "C_Timer.NewTicker requires a non-negative duration",
 			["time"] = "2023/05/20 23:49:12",
@@ -333,7 +311,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: in function `GetScript'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua\"]:381: in function `UpdateTimerTick'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/RegionPrototype.lua\"]:368: in function `SetTriggerProvidesTimer'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4383: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4348>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4517: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:818: in function `ScanEventsInternal'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:764: in function `ScanEvents'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:165: in function `Fire'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:463: in function `?'\n[string \"return function() local MAJOR, MINOR = \"LibClassicSwingTimerAPI\", 3\"]:552: in function <[string \"return function() local MAJOR, MINOR = \"Lib...\"]:548>",
 			["session"] = 312,
 			["counter"] = 17,
-		}, -- [43]
+		}, -- [40]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 '*** ForceTaint_Strong ***' 尝试调用保护功能 'ConsumeButton_MDF_UnitB_Alternative:SetAttribute()'。",
 			["time"] = "2023/06/04 21:42:35",
@@ -341,21 +319,51 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetAttribute'\n[string \"return function() -- This WA is used to Init the Borders at a single location.\"]:109: in function `fnSetupSecuredFrame'\n[string \"return -- Secure Frame ! - Do not add anything that could change the frame - that could cause errors in combat\"]:11: in function <[string \"return -- Secure Frame ! - Do not add anyth...\"]:2>\n[string \"=[C]\"]: in function `xpcall'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:661: in function <Interface/AddOns/WeakAuras/GenericTrigger.lua:563>\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:810: in function `ScanEventsInternal'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:764: in function `ScanEvents'\n[string \"return function() -- This WA is used to Init the Borders at a single location.\"]:123: in function `fnInit'\n[string \"return function(sEvent, ...)\"]:3: in function <[string \"return function(sEvent, ...)\"]:1>\n[string \"=[C]\"]: in function `xpcall'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:661: in function <Interface/AddOns/WeakAuras/GenericTrigger.lua:563>\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:948: in function `ScanWithFakeEvent'\n[string \"@Interface/AddOns/WeakAuras/GenericTrigger.lua\"]:1291: in function `LoadDisplays'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:1901: in function `LoadDisplays'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:1685: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:1530>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:1728: in function `ScanForLoads'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:1796: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:1794>",
 			["session"] = 312,
 			["counter"] = 2,
-		}, -- [44]
-		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'WeakAuras' 尝试调用保护功能 'Frame:SetPoint()'。",
-			["time"] = "2023/05/21 19:30:43",
-			["locals"] = "Skipped (In Encounter)",
-			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:54: in function `SetAnchorPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1311: in function `DoPositionChildrenPerFrame'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1432: in function `DoPositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1289: in function `PositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1270: in function `SortUpdatedChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1064: in function `RunDelayedActions'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1055: in function `Resume'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4392: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4348>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4517: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:1834: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:1826>\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:2195: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:2188>",
-			["session"] = 316,
-			["counter"] = 20,
-		}, -- [45]
+		}, -- [41]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'DBM-Core' 尝试调用保护功能 'UseEquipmentSet()'。",
 			["time"] = "2023/06/14 00:32:14",
 			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `UseEquipmentSet'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:2365: in function `?'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4933: in function <Interface/FrameXML/ChatFrame.lua:4879>\n[string \"=[C]\"]: in function `ChatEdit_ParseText'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4596: in function `ChatEdit_SendText'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:2986: in function <Interface/FrameXML/ChatFrame.lua:2979>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `UseAction'\n[string \"@Interface/FrameXML/SecureTemplates.lua\"]:343: in function `handler'\n[string \"@Interface/FrameXML/SecureTemplates.lua\"]:625: in function <Interface/FrameXML/SecureTemplates.lua:569>\n[string \"=[C]\"]: ?\n[string \"@Interface/FrameXML/SecureHandlers.lua\"]:266: in function <Interface/FrameXML/SecureHandlers.lua:263>\n[string \"=[C]\"]: ?\n[string \"@Interface/FrameXML/SecureHandlers.lua\"]:296: in function <Interface/FrameXML/SecureHandlers.lua:279>\n[string \"=(tail call)\"]: ?",
 			["session"] = 318,
 			["counter"] = 1,
+		}, -- [42]
+		{
+			["message"] = "...erface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:746: attempt to get length of a nil value",
+			["time"] = "2023/06/15 22:29:36",
+			["locals"] = "self = <table> {\n autoBlacklist = <table> {\n }\n ShouldShowQuestNotes = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:347\n AcceptQuest = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:370\n HideQuest = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:359\n ToggleNotes = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:100\n PopulateQuestLogInfo = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:1274\n AbandonedQuest = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:493\n SmoothReset = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:240\n PopulateObjectiveNotes = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:1235\n availableQuests = <table> {\n }\n _resetNeedsAvailables = false\n UnhideQuest = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:364\n GetAllQuestIdsNoObjectives = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:669\n DrawDailyQuest = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:1636\n GetAllQuestIds = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:634\n PopulateObjective = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:866\n CompleteQuest = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:469\n AddFinisher = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:718\n ResetAutoblacklistCategory = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:91\n UpdateObjectiveNotes = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:694\n CalculateAndDrawAvailableQuestsIterative = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:1625\n UpdateQuest = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:535\n Initialize = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:82\n GetAllLeaderBoardDetails = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:1369\n SetObjectivesDirty = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:624\n ClearAllNotes = <function> defined @Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:199\n private = <table> {\n }\n}\nquest = <table> {\n WasComplete = true\n startedBy = <table> {\n }\n IsTrivial = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:677\n questFlags = 136\n level = 68\n requiredSpell = 0\n nextQuestInChain = 10283\n IsRepeatable = false\n requiredClasses = 0\n questLevel = 68\n Id = 10282\n specialFlags = 0\n parentQuest = 0\n name = \"往日的希尔斯布莱德\"\n IsComplete = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:672\n requiredLevel = 66\n objectives = <table> {\n }\n requiredSpecialization = 0\n Description = <table> {\n }\n reputationReward = <table> {\n }\n requiredRaces = 0\n ObjectiveData = <table> {\n }\n trackTimedQuest = false\n sourceItemId = 0\n Zone = 1941\n LocalizedName = \"往日的希尔斯布莱德\"\n Finisher = <table> {\n }\n objectivesText = <table> {\n }\n SpecialObjectives = <table> {\n }\n finishedBy = <table> {\n }\n zoneOrSort = 1941\n Starts = <table> {\n }\n preQuestSingle = <table> {\n }\n Objectives = <table> {\n }\n}\nquestId = 10282\nfinisher = <table> {\n spawns = <table> {\n }\n type = \"monster\"\n minLevel = 70\n friendlyToFaction = \"AH\"\n id = 18723\n questEnds = <table> {\n }\n friendly = true\n factionID = 35\n name = \"伊洛希恩\"\n minLevelHealth = 6986\n maxLevel = 70\n maxLevelHealth = 6986\n npcFlags = 3\n questStarts = <table> {\n }\n zoneID = 2367\n rank = 1\n}\nkey = \"m_18723\"\n(*temporary) = nil\n(*temporary) = <table> {\n lastGametooltipCount = 19\n lookupKeyByQuestId = <table> {\n }\n lastGametooltipType = \"item\"\n lookupByKey = <table> {\n }\n lastFrameName = \"GameTooltip\"\n GetTooltip = <function> defined @Interface/AddOns/Questie/Modules/Tooltips/Tooltip.lua:162\n RemoveQuest = <function> defi",
+			["stack"] = "[string \"@Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua\"]:746: in function `AddFinisher'\n[string \"@Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua\"]:1245: in function `PopulateObjectiveNotes'\n[string \"@Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua\"]:656: in function `GetAllQuestIds'\n[string \"@Interface/AddOns/Questie/Modules/Quest/QuestEventHandler.lua\"]:508: in function <...e/AddOns/Questie/Modules/Quest/QuestEventHandler.lua:507>",
+			["session"] = 321,
+			["counter"] = 7,
+		}, -- [43]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'WeakAuras' 尝试调用保护功能 'Frame:SetPoint()'。",
+			["time"] = "2023/05/21 19:30:43",
+			["locals"] = "Skipped (In Encounter)",
+			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:54: in function `SetAnchorPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1311: in function `DoPositionChildrenPerFrame'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1432: in function `DoPositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1289: in function `PositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1270: in function `SortUpdatedChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1064: in function `RunDelayedActions'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1055: in function `Resume'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4392: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4348>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4517: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:1834: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:1826>\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:2195: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:2188>",
+			["session"] = 322,
+			["counter"] = 21,
+		}, -- [44]
+		{
+			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
+			["time"] = "2023/05/16 21:50:27",
+			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
+			["stack"] = "[string \"@Interface/AddOns/Blizzard_InspectUI/Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:385: in function `UIParentLoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:428: in function `InspectFrame_LoadUI'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:733: in function `InspectUnit'\n[string \"@Interface/FrameXML/UnitPopupSharedButtonMixins.lua\"]:200: in function `OnClick'\n[string \"@Interface/FrameXML/UnitPopupShared.lua\"]:148: in function `func'\n[string \"@Interface/FrameXML/UIDropDownMenu.lua\"]:956: in function `UIDropDownMenuButton_OnClick'\n[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1: in function <[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1>",
+			["session"] = 322,
+			["counter"] = 24,
+		}, -- [45]
+		{
+			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:1 (null)",
+			["time"] = "2023/05/16 21:50:27",
+			["session"] = 322,
+			["counter"] = 48,
 		}, -- [46]
+		{
+			["message"] = "Elv_ABFade:GetAlpha(): C_Timer.NewTicker requires a non-negative duration",
+			["time"] = "2023/05/25 00:06:05",
+			["locals"] = "(*temporary) = Elv_ABFade {\n 0 = <userdata>\n fadeInfo = <table> {\n }\n FadeObject = <table> {\n }\n mouseLock = true\n}\n",
+			["stack"] = "[string \"=[C]\"]: in function `GetAlpha'\n[string \"@Interface/AddOns/ElvUI/Core/Modules/ActionBars/ActionBars.lua\"]:875: in function <.../AddOns/ElvUI/Core/Modules/ActionBars/ActionBars.lua:865>",
+			["session"] = 322,
+			["counter"] = 9,
+		}, -- [47]
 	},
 }
