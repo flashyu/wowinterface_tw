@@ -239,7 +239,7 @@ AutoBarDB2 = {
 		["狂暴專家 - 伊弗斯"] = {
 			["buttonDataList"] = {
 				["AutoBarButtonQuest"] = {
-					["arrangeOnUse"] = 39747,
+					["arrangeOnUse"] = 39598,
 				},
 				["AutoBarButtonMount"] = {
 				},

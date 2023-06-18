@@ -70,6 +70,9 @@ local function printClassName(tooltip, class_name)
 end
 
 local function OnGameTooltipSetItem(tooltip)
+    if BistooltipAddon.db.char.tooltip_with_ctrl and not IsControlKeyDown() then
+        return
+    end
     local _, link = tooltip:GetItem();
 
     if link == nil then
@@ -87,6 +90,8 @@ local function OnGameTooltipSetItem(tooltip)
     item = getFilteredItem(item)
     if (#item > 0) then
         LibExtraTip:AddDoubleLine(tooltip, "Spec name", Bistooltip_phases_string, 1, 1, 0, 1, 1, 0, false)
+    else
+        return
     end
     local previous_class = nil
     for ki, spec in ipairs(item) do
@@ -94,16 +99,13 @@ local function OnGameTooltipSetItem(tooltip)
         local spec_name = spec.spec_name
         local slots = spec.slots
         for ks, slot in ipairs(slots) do
-            local spec_filtered = specFiltered(class_name, spec_name)
-            if not spec_filtered then
-                if (not classNamesFiltered()) then
-                    if not (previous_class == class_name) then
-                        printClassName(tooltip, class_name)
-                        previous_class = class_name
-                    end
+            if (not classNamesFiltered()) then
+                if not (previous_class == class_name) then
+                    printClassName(tooltip, class_name)
+                    previous_class = class_name
                 end
-                printSpecLine(tooltip, slot, class_name, spec_name)
             end
+            printSpecLine(tooltip, slot, class_name, spec_name)
         end
     end
     if #item > 0 and Bistooltip_char_equipment[itemId] ~= nil then

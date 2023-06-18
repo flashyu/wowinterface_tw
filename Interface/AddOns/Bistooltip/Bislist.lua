@@ -23,10 +23,17 @@ local phaseDropDown = nil
 
 local checkmarks = {}
 
+local isHorde = UnitFactionGroup("player") == "Horde"
+
 local function createItemFrame(item_id, size, with_checkmark)
     if item_id < 0 then
         local f = AceGUI:Create("Label")
         return f
+    end
+    if isHorde == true then
+        if Bistooltip_horde_to_ali[item_id] ~= nil then
+            item_id = Bistooltip_horde_to_ali[item_id]
+        end
     end
     local item_frame = AceGUI:Create("Icon")
     item_frame:SetImageSize(size, size)

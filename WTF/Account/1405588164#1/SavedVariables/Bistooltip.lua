@@ -11,12 +11,15 @@ BisTooltipDB = {
 		},
 		["狂暴專家 - 伊弗斯"] = {
 			["class_index"] = 9,
+			["spec_index"] = 2,
 			["highlight_spec"] = {
 				["spec_name"] = "Fury",
 				["key"] = "9:2",
 				["class_name"] = "Warrior",
 			},
+			["phase_index"] = 3,
 			["version"] = 6.1,
+			["data_source"] = "wh",
 			["filter_specs"] = {
 				["Warrior"] = {
 					["Fury"] = true,
@@ -70,9 +73,6 @@ BisTooltipDB = {
 					["Holy"] = false,
 				},
 			},
-			["spec_index"] = 3,
-			["data_source"] = "wh",
-			["phase_index"] = 3,
 		},
 	},
 }

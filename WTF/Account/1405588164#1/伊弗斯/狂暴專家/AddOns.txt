@@ -65,7 +65,7 @@ MSBTOptions: disabled
 Myslot: enabled
 Pawn: enabled
 Plater: enabled
-Questie: disabled
+Questie: enabled
 SafeQueue: enabled
 SimpleItemLevel: enabled
 TacoTip: enabled
@@ -228,4 +228,4 @@ RangeDisplay: disabled
 RangeDisplay_Options: disabled
 BlizzMove: enabled
 BlizzMove_Debug: enabled
-SharedMedia_Causese: disabled
+SharedMedia_Causese: enabled

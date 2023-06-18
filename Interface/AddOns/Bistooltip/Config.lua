@@ -23,7 +23,8 @@ local db_defaults = {
         filter_specs = {},
         highlight_spec = {},
         data_source = Nil,
-        minimap_icon = true
+        minimap_icon = true,
+        tooltip_with_ctrl = false
     }
 }
 
@@ -52,8 +53,8 @@ local configTable = {
             end
         },
         filter_class_names = {
-            name = "Filter class names",
-            order = 0,
+            name = "Hide class names",
+            order = 1,
             desc = "Removes class name separators from item tooltips",
             type = "toggle",
             set = function(info, val)
@@ -63,9 +64,22 @@ local configTable = {
                 return BistooltipAddon.db.char.filter_class_names
             end
         },
+        tooltip_with_ctrl = {
+            name = "Show item tooltips with Ctrl",
+            order = 2,
+            desc = "Show item tooltips only when holding Ctrl key",
+            type = "toggle",
+            width = "double",
+            set = function(info, val)
+                BistooltipAddon.db.char.tooltip_with_ctrl = val
+            end,
+            get = function(info)
+                return BistooltipAddon.db.char.tooltip_with_ctrl
+            end
+        },
         data_source = {
             name = "Data source",
-            order = 1,
+            order = 3,
             desc = "Changes bis data source",
             type = "select",
             style = "dropdown",
@@ -80,8 +94,8 @@ local configTable = {
             end
         },
         filter_specs = {
-            name = "Filter specs",
-            order = 2,
+            name = "Hide specs",
+            order = 4,
             desc = "Removes unselected specs from item tooltips",
             type = "multiselect",
             values = nil,
@@ -110,7 +124,7 @@ local configTable = {
         },
         highlight_spec = {
             name = "Highlight spec",
-            order = 3,
+            order = 5,
             desc = "Highlights selected spec in item tooltips",
             type = "multiselect",
             values = nil,
@@ -201,7 +215,7 @@ local function migrateAddonDB()
         BistooltipAddon.db.char.phase_index = 1
     end
     if BistooltipAddon.db.char["data_source"] == Nil then
-        BistooltipAddon.db.char.data_source = sources.wowtbc
+        BistooltipAddon.db.char.data_source = sources.wh
         openSourceSelectDialog()
     end
 end
