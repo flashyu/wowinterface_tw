@@ -1,4 +1,5 @@
 local addonName, addonTable = ...;
+local _, _, _, tocversion = GetBuildInfo()
 local _G = _G
 local CreateFrame = CreateFrame
 ---------
@@ -30,15 +31,15 @@ end
 -- Create.Backdropinfo={bgFile = "interface/chatframe/chatframebackground.blp",
 -- 	edgeFile = "Interface/Buttons/WHITE8X8", edgeSize = 1,}
 Create.Backdropinfo={bgFile = "interface/chatframe/chatframebackground.blp",
-	edgeFile = "Interface/AddOns/!Pig/Libs/Pig_Border.blp", edgeSize = 8,}
+	edgeFile = "Interface/AddOns/"..addonName.."/Libs/Pig_Border.blp", edgeSize = 8,}
 Create.BackdropColor={0.08, 0.08, 0.08, 0.5}
 Create.BackdropBorderColor={0, 0, 0, 1}
 function Create.PIGLine(Parent,Point,Y,HLR,Color,UIName)
 	local Y = Y or 0
-	local HLR = HLR or {0.9,0,0}
+	local HLR = HLR or {1.1,0,0}
 	local Color = Color or Create.BackdropBorderColor
 	local frameX = Parent:CreateTexture(UIName, "BORDER");
-	frameX:SetTexture("interface/optionsframe/ui-optionsframe-spacer.blp");
+	frameX:SetTexture("Interface/AddOns/"..addonName.."/Libs/line.blp");
 	frameX:SetColorTexture(Color[1], Color[2], Color[3], Color[4])
 	frameX:SetHeight(HLR[1]);
 	if Point=="TOP" then
@@ -48,6 +49,11 @@ function Create.PIGLine(Parent,Point,Y,HLR,Color,UIName)
 		frameX:SetPoint("BOTTOMLEFT",Parent,"BOTTOMLEFT",HLR[2],Y);
 		frameX:SetPoint("BOTTOMRIGHT",Parent,"BOTTOMRIGHT",HLR[3],Y);
 	elseif Point=="L" then
+		-- if tocversion<20000 then
+		-- 	frameX:SetRotation(math.rad(90), 0.5, 0.5)
+		-- else
+		-- 	frameX:SetRotation(math.rad(90), {x=0.5, y=0.5})
+		-- end
 		frameX:SetPoint("TOPLEFT",Parent,"TOPLEFT",Y,HLR[2]);
 		frameX:SetPoint("BOTTOMLEFT",Parent,"BOTTOMLEFT",Y,HLR[3]);
 	elseif Point=="R" then

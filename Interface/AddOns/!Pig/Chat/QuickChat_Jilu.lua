@@ -1,4 +1,5 @@
 local addonName, addonTable = ...;
+local L=addonTable.locale
 local gsub = _G.string.gsub 
 local find = _G.string.find
 local _, _, _, tocversion = GetBuildInfo()
@@ -68,19 +69,19 @@ function QuickChatfun.QuickBut_Jilu()
 	end
 	--------------
 	local fuFrame=QuickChatFFF_UI
-	--密语/团队聊天记录
+	--队伍/团队聊天记录
 	local ChatWidth,ChatHeight=220,260;
 	local ChatjiluMianban=PIGFrame(UIParent,{"CENTER",UIParent,"CENTER",0,80},{ChatWidth*4,ChatHeight*2},"ChatjiluMianban_UI",true)
 	ChatjiluMianban:PIGSetBackdrop()
 	ChatjiluMianban:PIGSetMovable()
 	ChatjiluMianban:PIGClose()
-	ChatjiluMianban.biaoti=PIGFontString(ChatjiluMianban,{"TOP", ChatjiluMianban, "TOP", 0, -4},"聊天记录")
+	ChatjiluMianban.biaoti=PIGFontString(ChatjiluMianban,{"TOP", ChatjiluMianban, "TOP", 0, -4},L["CHAT_TABNAME"]..L["CHAT_JILU"])
 	PIGLine(ChatjiluMianban,"TOP",-20)
 
 	--记录频道选择
-	ChatjiluMianban.jilupindaotxt=PIGFontString(ChatjiluMianban,{"TOPLEFT", ChatjiluMianban, "TOPLEFT", 340,-40},"记录频道:")
+	ChatjiluMianban.jilupindaotxt=PIGFontString(ChatjiluMianban,{"TOPLEFT", ChatjiluMianban, "TOPLEFT", 340,-40},L["CHAT_JILU"]..CHANNEL..":")
 	local huoquliaotianjiluFFF = CreateFrame("Frame");
-	local jilupindaoName={"队伍","团队"};
+	local jilupindaoName={CHAT_MSG_PARTY,CHAT_MSG_RAID};
 	local jilupindaoNameC={"AAAAFF","FF7F00"};
 	local jilupindaoEvent={{"CHAT_MSG_PARTY","CHAT_MSG_PARTY_LEADER"},{"CHAT_MSG_RAID","CHAT_MSG_RAID_LEADER","CHAT_MSG_RAID_WARNING"}};
 	for j=1,#jilupindaoName do
@@ -94,7 +95,7 @@ function QuickChatfun.QuickBut_Jilu()
 			pindaoxuanzeC:SetPoint("LEFT",_G["pindaoxuanzeC_"..(j-1).."_UI"],"RIGHT",40,0);
 		end
 		_G["pindaoxuanzeC_"..j.."_UIText"]:SetText("\124cff"..jilupindaoNameC[j]..jilupindaoName[j].."\124r");
-		pindaoxuanzeC.tooltip = "记录"..jilupindaoName[j].."频道聊天信息";
+		pindaoxuanzeC.tooltip = L["CHAT_JILU"]..jilupindaoName[j]..CHANNEL..L["CHAT_TABNAME"];
 		pindaoxuanzeC:SetScript("OnClick", function (self)
 			if self:GetChecked() then
 				PIGA["Chatjilu"]["jiluinfo"][jilupindaoID[j]]["kaiguan"]=true;
@@ -110,10 +111,10 @@ function QuickChatfun.QuickBut_Jilu()
 		end);
 	end
 	--保存天数
-	ChatjiluMianban.baocuntianchu=PIGFontString(ChatjiluMianban,{"TOPLEFT",ChatjiluMianban,"TOPLEFT",600,-38},"保存时间")
+	ChatjiluMianban.baocuntianchu=PIGFontString(ChatjiluMianban,{"TOPLEFT",ChatjiluMianban,"TOPLEFT",600,-38},SAVE..TIME_LABEL)
 	--
 	local baocuntianshulist ={7,31,180,365};
-	local baocuntianshulistN ={[7]="一周",[31]="一月",[180]="半年",[365]="一年"};
+	local baocuntianshulistN ={[7]=L["CHAT_JILUTIME"][1],[31]=L["CHAT_JILUTIME"][2],[180]=L["CHAT_JILUTIME"][3],[365]=L["CHAT_JILUTIME"][4]};
 	ChatjiluMianban.tianshuxiala=PIGDownMenu(ChatjiluMianban,{"LEFT",ChatjiluMianban.baocuntianchu,"RIGHT", 0,0},{70,24})
 	ChatjiluMianban.tianshuxiala:SetFrameLevel(ChatjiluMianban.tianshuxiala:GetFrameLevel()+5)
 	function ChatjiluMianban.tianshuxiala:PIGDownMenu_Update_But(self)
@@ -131,14 +132,14 @@ function QuickChatfun.QuickBut_Jilu()
 		PIGCloseDropDownMenus()
 	end
 
-	ChatjiluMianban.qingkong = PIGButton(ChatjiluMianban,{"TOPRIGHT",ChatjiluMianban,"TOPRIGHT",-10,-34},{90,22},"清空记录");
+	ChatjiluMianban.qingkong = PIGButton(ChatjiluMianban,{"TOPRIGHT",ChatjiluMianban,"TOPRIGHT",-10,-34},{90,22},L["ERROR_CLEAR"]..L["CHAT_JILU"]);
 	ChatjiluMianban.qingkong:SetFrameLevel(ChatjiluMianban.qingkong:GetFrameLevel()+5)
 	ChatjiluMianban.qingkong:SetScript("OnClick", function (self)
 		StaticPopup_Show ("QINGKONGLIAOTIANJILU");
 	end);
 	---
 	ChatjiluMianban.nr=PIGOptionsList_RF(ChatjiluMianban,70)
-	ChatjiluMianban.nr.tishiliulan = PIGFontString(ChatjiluMianban.nr,{"CENTER",ChatjiluMianban.nr,"CENTER",0,0},"点击上方频道标签浏览聊天记录");
+	ChatjiluMianban.nr.tishiliulan = PIGFontString(ChatjiluMianban.nr,{"CENTER",ChatjiluMianban.nr,"CENTER",0,0},L["CHAT_JILUTISHI"]);
 	-------
 	ChatjiluMianban:HookScript("OnShow", function (self)
 		ChatjiluMianban.tianshuxiala:PIGDownMenu_SetText(baocuntianshulistN[PIGA["Chatjilu"]["tianshu"]])
@@ -148,9 +149,9 @@ function QuickChatfun.QuickBut_Jilu()
 	end);
 	---
 	StaticPopupDialogs["QINGKONGLIAOTIANJILU"] = {
-		text = "确定要清空所有保存聊天记录吗？",
-		button1 = "确定",
-		button2 = "取消",
+		text = string.format(L["CHAT_JILUTDEL"],CHAT_MSG_PARTY..CHAT_MSG_RAID),
+		button1 = L["LIB_ENT"],
+		button2 = L["LIB_CEL"],
 		OnAccept = function()
 			for i=1,#jilupindaoID do
 				PIGA["Chatjilu"]["jiluinfo"][jilupindaoID[i]]["neirong"]={}
@@ -236,15 +237,15 @@ function QuickChatfun.QuickBut_Jilu()
 					end
 					local textCHATINFO="";
 					if Event=="CHAT_MSG_PARTY_LEADER" then
-						textCHATINFO=info2.."|Hchannel:PARTY|h|cff89D2FF[队长]|r|h |Hplayer:"..info3..":000:PARTY:|h|cff89D2FF[|r|c"..info5..info3.."|r|cff89D2FF]|h："..info4_jiluxiaoxineirong.."|r";
+						textCHATINFO=info2.."|Hchannel:PARTY|h|cff89D2FF["..CHAT_MSG_PARTY_LEADER.."]|r|h |Hplayer:"..info3..":000:PARTY:|h|cff89D2FF[|r|c"..info5..info3.."|r|cff89D2FF]|h："..info4_jiluxiaoxineirong.."|r";
 					elseif Event=="CHAT_MSG_PARTY" then							
-						textCHATINFO=info2.."|Hchannel:PARTY|h|cffAAAAFF[小队]|r|h |Hplayer:"..info3..":000:PARTY:|h|cffAAAAFF[|r|c"..info5..info3.."|r|cffAAAAFF]|h："..info4_jiluxiaoxineirong.."\124r";
+						textCHATINFO=info2.."|Hchannel:PARTY|h|cffAAAAFF["..CHAT_MSG_PARTY.."]|r|h |Hplayer:"..info3..":000:PARTY:|h|cffAAAAFF[|r|c"..info5..info3.."|r|cffAAAAFF]|h："..info4_jiluxiaoxineirong.."\124r";
 					elseif Event=="CHAT_MSG_RAID_LEADER" then							
-						textCHATINFO=info2.."|Hchannel:RAID|h\124cffFF4809[团队领袖]\124r|h |Hplayer:"..info3..":000:RAID:|h\124cffFF4809[\124r|c"..info5..info3.."|r\124cffFF4809]|h："..info4_jiluxiaoxineirong.."\124r";
+						textCHATINFO=info2.."|Hchannel:RAID|h\124cffFF4809["..CHAT_MSG_RAID_LEADER.."]\124r|h |Hplayer:"..info3..":000:RAID:|h\124cffFF4809[\124r|c"..info5..info3.."|r\124cffFF4809]|h："..info4_jiluxiaoxineirong.."\124r";
 					elseif Event=="CHAT_MSG_RAID" then
-						textCHATINFO=info2.."|Hchannel:RAID|h\124cffFF7F00[团队]\124r|h |Hplayer:"..info3..":000:RAID:|h\124cffFF7F00[\124r|c"..info5..info3.."|r\124cffFF7F00]|h："..info4_jiluxiaoxineirong.."\124r";						
+						textCHATINFO=info2.."|Hchannel:RAID|h\124cffFF7F00["..CHAT_MSG_RAID.."]\124r|h |Hplayer:"..info3..":000:RAID:|h\124cffFF7F00[\124r|c"..info5..info3.."|r\124cffFF7F00]|h："..info4_jiluxiaoxineirong.."\124r";						
 					elseif Event=="CHAT_MSG_RAID_WARNING" then	
-						textCHATINFO=info2.."\124cffFF4800[团队通知]\124r |Hplayer:"..info3..":000:RAID:|h\124cffFF4800[\124r|c"..info5..info3.."|r\124cffFF4800]|h："..info4_jiluxiaoxineirong.."\124r";
+						textCHATINFO=info2.."\124cffFF4800["..CHAT_MSG_RAID_WARNING.."]\124r |Hplayer:"..info3..":000:RAID:|h\124cffFF4800[\124r|c"..info5..info3.."|r\124cffFF4800]|h："..info4_jiluxiaoxineirong.."\124r";
 					end
 					_G["CHatjilu_liaotianneirong_Scroll"..id.."_UI"]:Show()
 					_G["CHatjilu_liaotianneirong_Scroll"..id.."_UI"]:AddMessage(textCHATINFO, nil, nil, nil, nil, true);	
@@ -503,7 +504,7 @@ function QuickChatfun.QuickBut_Jilu()
 	miyijiluF:PIGSetBackdrop()
 	miyijiluF:PIGSetMovable()
 	miyijiluF:PIGClose()
-	miyijiluF.biaoti=PIGFontString(miyijiluF,{"TOP", miyijiluF, "TOP", 0, -4},SLASH_TEXTTOSPEECH_WHISPER.."记录")
+	miyijiluF.biaoti=PIGFontString(miyijiluF,{"TOP", miyijiluF, "TOP", 0, -4},L["CHAT_WHISPER"]..L["CHAT_JILU"])
 	miyijiluF.biaoti:SetTextColor(1, 0.843, 0, 1);
 	PIGLine(miyijiluF,"TOP",-20)
 
@@ -533,10 +534,10 @@ function QuickChatfun.QuickBut_Jilu()
 	miyijiluF.shezhiF:PIGSetBackdrop()
 	miyijiluF.shezhiF:PIGClose()
 	miyijiluF.shezhiF:Hide()
-	miyijiluF.shezhiF.biaoti=PIGFontString(miyijiluF.shezhiF,{"TOP", miyijiluF.shezhiF, "TOP", 0, -4},"设置")
+	miyijiluF.shezhiF.biaoti=PIGFontString(miyijiluF.shezhiF,{"TOP", miyijiluF.shezhiF, "TOP", 0, -4},L["OPTUI_SET"])
 	PIGLine(miyijiluF.shezhiF,"TOP",-20)
 
-	miyijiluF.shezhiF.tixing = PIGCheckbutton(miyijiluF.shezhiF,{"TOPLEFT", miyijiluF.shezhiF, "TOPLEFT", 10,-30},{"新"..SLASH_TEXTTOSPEECH_WHISPER.."提醒","收到"..SLASH_TEXTTOSPEECH_WHISPER.."时频道切换按钮里面的图标会闪动"})
+	miyijiluF.shezhiF.tixing = PIGCheckbutton(miyijiluF.shezhiF,{"TOPLEFT", miyijiluF.shezhiF, "TOPLEFT", 10,-30},{L["CHAT_WHISPERTIXING"],L["CHAT_WHISPERTIXINGTOP"]})
 	miyijiluF.shezhiF.tixing:SetScript("OnClick", function (self)
 		if self:GetChecked() then
 			PIGA["Chatjilu"]["jiluinfo"]["WHISPER"]["tixing"]=true 
@@ -545,35 +546,35 @@ function QuickChatfun.QuickBut_Jilu()
 		end
 	end)
 	---重置密语记录
-	miyijiluF.shezhiF.MIYUJILU = PIGFontString(miyijiluF.shezhiF,{"BOTTOMLEFT",miyijiluF.shezhiF,"BOTTOMLEFT",10,10},"出问题点");
-	miyijiluF.shezhiF.MIYUJILUBUT = PIGButton(miyijiluF.shezhiF, {"LEFT",miyijiluF.shezhiF.MIYUJILU,"RIGHT",4,0},{76,20},"清空重置");  
+	miyijiluF.shezhiF.MIYUJILUBUT = PIGButton(miyijiluF.shezhiF, {"BOTTOMLEFT",miyijiluF.shezhiF,"BOTTOMLEFT",30,10},{76,20},L["ERROR_CLEAR"]..L["CHAT_JILU"]);  
 	miyijiluF.shezhiF.MIYUJILUBUT:SetScript("OnClick", function ()
 		StaticPopup_Show("CHONGZHI_MIYUJILU");
 	end);
 	--右键功能
+	local listName={INVITE..GROUPS,STATUS_TEXT_TARGET..INFO,ADD_FRIEND,INVITE..GUILD,CALENDAR_COPY_EVENT..NAME,VIEW..EQUIPSET_EQUIP,CANCEL}
 	local FasongYCqingqiu=addonTable.FasongYCqingqiu
 	local function RGongNeng(menuName,name)
 		local fullnameX = name
-		if menuName=="邀请组队" then
+		if menuName==listName[1] then
 			InviteUnit(fullnameX)
-		elseif menuName=="目标信息" then
+		elseif menuName==listName[2] then
 			C_FriendList.SendWho(fullnameX)
-		elseif menuName=="添加好友" then
+		elseif menuName==listName[3] then
 			C_FriendList.AddFriend(fullnameX)
-		elseif menuName=="邀请入会" then
+		elseif menuName==listName[4] then
 			GuildInvite(fullnameX)
-		elseif menuName=="复制名字" then
+		elseif menuName==listName[5] then
 			local editBoxXX
 			editBoxXX = ChatEdit_ChooseBoxForSend()
 	        local hasText = (editBoxXX:GetText() ~= "")
 	        ChatEdit_ActivateChat(editBoxXX)
 			editBoxXX:Insert(fullnameX)
 	        if (not hasText) then editBoxXX:HighlightText() end
-		elseif menuName=="查看装备" then
+		elseif menuName==listName[6] then
 			FasongYCqingqiu(fullnameX)
 		end
 	end
-	local listName={"邀请组队","目标信息","添加好友","邀请入会","复制名字","查看装备","取消"}
+	
 	local caidanW,caidanH=106,20
 
 	local beijingico=DropDownList1MenuBackdrop.NineSlice.Center:GetTexture()
@@ -616,6 +617,7 @@ function QuickChatfun.QuickBut_Jilu()
 			RGNTAB:SetPoint("TOPLEFT", _G["RGNTAB_"..(i-1)], "BOTTOMLEFT", 0, 0);
 		end
 		RGNTAB.Title = PIGFontString(RGNTAB,{"LEFT", RGNTAB, "LEFT", 6, 0},listName[i]);
+		RGNTAB.Title:SetTextColor(1, 1, 1, 1)
 		RGNTAB.highlight1 = RGNTAB:CreateTexture(nil, "BORDER");
 		RGNTAB.highlight1:SetTexture("interface/buttons/ui-listbox-highlight.blp");
 		RGNTAB.highlight1:SetPoint("CENTER", RGNTAB, "CENTER", -3,0);
@@ -685,9 +687,9 @@ function QuickChatfun.QuickBut_Jilu()
 		end
 	end
 	StaticPopupDialogs["CHONGZHI_MIYUJILU"] = {
-		text = "此操作将\124cffff0000重置\124r"..SLASH_TEXTTOSPEECH_WHISPER.."记录配置，并清空所有已保存数据。\n确定重置?",
-		button1 = "确定",
-		button2 = "取消",
+		text = string.format(L["CHAT_JILUTDEL"],L["CHAT_WHISPER"]),
+		button1 = L["LIB_ENT"],
+		button2 = L["LIB_CEL"],
 		OnAccept = function()
 			PIGA["Chatjilu"]["jiluinfo"]["WHISPER"]["neirong"] = addonTable.Default["Chatjilu"]["jiluinfo"]["WHISPER"]["neirong"];
 			gengxinhang(miyijiluF.F.Scroll)
@@ -733,7 +735,7 @@ function QuickChatfun.QuickBut_Jilu()
 			
 			
 			local rPerc, gPerc, bPerc, argbHex = GetClassColor(shuju[1][idxx][2]);
-			miyijiluF.nr.text:SetText("与 |c"..argbHex..Aname.."|r 聊天记录");
+			miyijiluF.nr.text:SetText("|c"..argbHex..Aname.."|r "..L["CHAT_WHISPER"]..L["CHAT_JILU"]);
 			
 
 			local name1,name2 = strsplit("-", Aname);
@@ -761,9 +763,11 @@ function QuickChatfun.QuickBut_Jilu()
 				local info4_jiluxiaoxineirong =nering[ix][3];
 				local textCHATINFO="";
 				if Event=="CHAT_MSG_WHISPER_INFORM" then
-					textCHATINFO=info2.."\124cffFF80FF发送给|Hplayer:"..name1..":000:WHISPER:"..name1.."|h[\124r|c"..argbHex..name1.."|r\124cffFF80FF]|h："..info4_jiluxiaoxineirong.."\124r";						
+					local xinxi_1 = string.format(CHAT_WHISPER_INFORM_GET,"|Hplayer:"..name1..":000:WHISPER:"..name1.."|h[|c"..argbHex..name1.."|r]|h")
+					textCHATINFO=info2.."\124cffFF80FF"..xinxi_1..info4_jiluxiaoxineirong.."\124r";						
 				elseif Event=="CHAT_MSG_WHISPER" then
-					textCHATINFO=info2.."|Hplayer:"..name1..":000:WHISPER:"..name1.."|h\124cffFF80FF[\124r|c"..argbHex..name1.."|r\124cffFF80FF]|h悄悄地说："..info4_jiluxiaoxineirong.."\124r";
+					local xinxi_2 = string.format(CHAT_WHISPER_GET,"[|c"..argbHex..name1.."|r]|h")
+					textCHATINFO=info2.."\124cffFF80FF|Hplayer:"..name1..":000:WHISPER:"..name1.."|h"..xinxi_2..info4_jiluxiaoxineirong.."\124r";
 				end
 				miyijiluF.nr.Scroll:Show()
 				miyijiluF.nr.Scroll:AddMessage(textCHATINFO, nil, nil, nil, nil, true);
@@ -1004,7 +1008,7 @@ function QuickChatfun.QuickBut_Jilu()
 	fuFrame.ChatJilu:SetScript("OnEnter", function (self)	
 		GameTooltip:ClearLines();
 		GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT",0,0);
-		GameTooltip:SetText("|cff00FFff左键-|r|cffFFFF00"..SLASH_TEXTTOSPEECH_WHISPER.."记录\n|cff00FFff右键-|r|cffFFFF00队伍团队记录|r");
+		GameTooltip:SetText("|cff00FFff"..L["LIB_LEFTCLICK"].."-|r|cffFFFF00"..L["CHAT_WHISPER"]..L["CHAT_JILU"].."\n|cff00FFff"..L["LIB_RIGHTCLICK"].."-|r|cffFFFF00"..CHAT_MSG_PARTY..CHAT_MSG_RAID..L["CHAT_JILU"].."|r");
 		GameTooltip:Show();
 		GameTooltip:FadeOut()
 	end);

@@ -1653,26 +1653,30 @@ local function FasongYCqingqiu(fullnameX)
 	end
 end
 addonTable.FasongYCqingqiu=FasongYCqingqiu
-
-local function ClickGongNeng(menuName)
+---
+local function ClickGongNeng(menuName,PigRightF)
 	local wanjiaName = {}
 	--local unitX = UIDROPDOWNMENU_INIT_MENU.unit
 	local nameX = UIDROPDOWNMENU_INIT_MENU.name
 	wanjiaName.name=nameX
 	local serverX = UIDROPDOWNMENU_INIT_MENU.server
-	if serverX and GetRealmName()~=serverX then
-		wanjiaName.name = nameX.."-"..serverX
-	end
-	if menuName=="目标信息" then
+	--if tocversion<90000 then
+		if serverX and GetRealmName()~=serverX then
+			wanjiaName.name = nameX.."-"..serverX
+		end
+	--else
+		--wanjiaName.name = nameX.."-"..serverX
+	--end
+	if menuName==PigRightF.listName[1] then
 		C_FriendList.SendWho('n-'..'"'..wanjiaName.name..'"')
 	end
-	if menuName=="添加好友" then
+	if menuName==PigRightF.listName[2] then
 		C_FriendList.AddFriend(wanjiaName.name)
 	end
-	if menuName=="邀请入会" then
+	if menuName==PigRightF.listName[3] then
 		GuildInvite(wanjiaName.name)
 	end
-	if menuName=="复制名字" then
+	if menuName==PigRightF.listName[4] then
 		local editBoxXX
 		editBoxXX = ChatEdit_ChooseBoxForSend()
         local hasText = (editBoxXX:GetText() ~= "")
@@ -1680,7 +1684,7 @@ local function ClickGongNeng(menuName)
 		editBoxXX:Insert(wanjiaName.name)
         if (not hasText) then editBoxXX:HighlightText() end
 	end
-	if menuName=="查看装备" then
+	if menuName==PigRightF.listName[5] then
 		FasongYCqingqiu(wanjiaName.name)
 	end
 	Pig_RightFUI:Hide()
@@ -1759,10 +1763,9 @@ function CommonFun.Interaction.RightPlus()
 			end
 		end); 
 	end
-	---
-	PigRightF.listName={"目标信息","添加好友","邀请入会","复制名字","查看装备"}
-	PigRightF.listName2={"邀请入会","复制名字","查看装备"}
 	------
+	PigRightF.listName={STATUS_TEXT_TARGET..INFO,ADD_FRIEND,INVITE..GUILD,CALENDAR_COPY_EVENT..NAME,VIEW..EQUIPSET_EQUIP}
+	PigRightF.listName2={INVITE..GUILD,CALENDAR_COPY_EVENT..NAME,VIEW..EQUIPSET_EQUIP}
 	for i=1,zongHang do
 		PigRightF.TAB = CreateFrame("Button", "RightF_TAB_"..i, PigRightF);
 		PigRightF.TAB:SetSize(caidanW-8,caidanH);
@@ -1794,7 +1797,7 @@ function CommonFun.Interaction.RightPlus()
 			self.Title:SetPoint("LEFT", self, "LEFT", 6, 0);
 		end);
 		PigRightF.TAB:SetScript("OnClick", function(self)
-			ClickGongNeng(self.Title:GetText())
+			ClickGongNeng(self.Title:GetText(),PigRightF)
 		end);
 	end
 	hooksecurefunc("UnitPopup_ShowMenu", function(dropdownMenu, which, unit, name, userData)

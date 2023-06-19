@@ -142,7 +142,7 @@ local function Map_MiniButSN()
 	gengxinMBweizhi(newValue)
 end
 function Mapfun.ShouNaMiniBut()
-	if PIGA["Map"]["MinimapBut"] and PIGA["Map"]["MinimapShouNa"] then
+	if PIGA["Map"]["MinimapBut"] and PIGA["Map"]["MinimapShouNa"] and not NDui then
 		Map_MiniButSN();
 		C_Timer.After(3, Map_MiniButSN);
 		C_Timer.After(8, Map_MiniButSN);

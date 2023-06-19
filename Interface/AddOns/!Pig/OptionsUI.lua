@@ -178,9 +178,20 @@ function QuickBut:Add()
 end
 -- local ButtoSDn = PIGButton(UIParent,{"CENTER",UIParent,"CENTER",4,0},{76,25},"ASDADA")
 -- ButtoSDn:SetScript("OnClick", function ()
--- 	print(COMBAT_LOG)
--- 	print(RESET_ALL_WINDOWS)
--- 	print(LFG_TITLE)
--- 	print(LOOK_FOR_GROUP)
--- 	print(C_LFGList.HasActiveEntryInfo())
+-- 	local Skill_List = {"基础营火","烹饪用火","分解","选矿","采集草药","挖矿"};
+-- 	local Skill_List_yiyou = {};
+-- 	for i=1,1000000 do
+-- 		local duyaoname = GetSpellInfo(i)
+-- 		if duyaoname then
+-- 			--print(duyaoname,i)
+-- 			for ix=1,#Skill_List do
+-- 				if not Skill_List_yiyou[ix] then
+-- 					if duyaoname==Skill_List[ix] then
+-- 						print(duyaoname,i)
+-- 						Skill_List_yiyou[ix]={duyaoname,i}
+-- 					end
+-- 				end
+-- 			end
+-- 		end
+-- 	end
 -- end);

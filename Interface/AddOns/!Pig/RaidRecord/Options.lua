@@ -100,39 +100,46 @@ fuFrame.SetListF:SetPoint("BOTTOMRIGHT",fuFrame,"BOTTOMRIGHT",0,0);
 local bufenpei = {45039,45896,50274}
 local autofenffff = CreateFrame("Frame")
 autofenffff:SetScript("OnEvent",function(self,event,arg1,_,_,_,arg5)
-		local isLeader = UnitIsGroupLeader("player");
-		if isLeader then
-			local lootmethod= GetLootMethod();
-			if lootmethod=="master" then 
-				for x = 1, GetNumLootItems() do
-					local link = GetLootSlotLink(x)
-					if link then
-						local itemID = GetItemInfoInstant(link)
-						if itemID then
-							for ix=1,#bufenpei do	
-								if itemID ~= bufenpei[ix] then
-										---
-										local lootIcon, lootName, lootQuantity, currencyID, lootQuality, locked, isQuestItem, questID, isActive = GetLootSlotInfo(x)
-										if not isQuestItem and lootQuality>=GetLootThreshold() then
-											for ci = 1, GetNumGroupMembers() do	
-												local zjinameX = UnitName("player")
-												local candidate = GetMasterLootCandidate(x, ci)
-												if candidate == zjinameX then
-													GiveMasterLoot(x, ci);
-													PIGSendChatRaidParty("!Pig:拾取物品"..link.."×"..lootQuantity)
-													break
-												end
-											end
-										end
-										----
-									break
+	--是队长团长
+	-- local isLeader = UnitIsGroupLeader("player");
+	-- if not isLeader then return end
+	local lootmethod, masterlooterPartyID, masterlooterRaidID= GetLootMethod();
+	if lootmethod=="master" and masterlooterPartyID==0 then
+		local zjinameX = UnitName("player")
+		local lootNum = GetNumLootItems()
+		local MSGyifasong = {}
+		for x=1,lootNum do
+			MSGyifasong[x]=false
+		end
+		for x = 1, lootNum do
+			local link = GetLootSlotLink(x)
+			if link then
+				local itemID = GetItemInfoInstant(link)
+				if itemID then
+					for ix=1,#bufenpei do	
+						if itemID == bufenpei[ix] then
+							return
+						end
+					end
+					---
+					local lootIcon, lootName, lootQuantity, currencyID, lootQuality, locked, isQuestItem, questID, isActive = GetLootSlotInfo(x)
+					if not isQuestItem and lootQuality>=GetLootThreshold() then
+						for ci = 1, GetNumGroupMembers() do
+							local candidate = GetMasterLootCandidate(x, ci)
+							if candidate == zjinameX then
+								GiveMasterLoot(x, ci);
+								if not MSGyifasong[x] then
+									PIGSendChatRaidParty("!Pig:拾取"..link.."×"..lootQuantity)
+									MSGyifasong[x]=true
 								end
+								break
 							end
 						end
 					end
 				end
 			end
 		end
+	end
 end)
 local function autofenEvent()
 	if PIGA["RaidRecord"]["Rsetting"]["autofen"] then
@@ -198,11 +205,11 @@ PIGTradeFrame:HookScript("OnEvent",function (self,event,arg1,arg2,arg3,arg4,arg5
 	if event=="CHAT_MSG_ADDON" and arg1 == biaotouT then
 		local nameziji = UnitName("player")
 		if arg5==nameziji then return end
-		local ItemLink, wanjiaName,jiaoyiG = strsplit("&", arg2);
-		if ItemLink or wanjiaName or jiaoyiG then
+		local itemID_P, wanjiaName,jiaoyiG = strsplit("&", arg2);
+		if itemID_P and wanjiaName and jiaoyiG then
 			local RRItemList = PIGA["RaidRecord"]["ItemList"]		  
 			for x=1,#RRItemList do
-				if ItemLink==RRItemList[x][2] then
+				if itemID_P==RRItemList[x][11] then
 					if RRItemList[x][8]=="N/A" and RRItemList[x][9]==0 then
 						RRItemList[x][8]=wanjiaName;
 						RRItemList[x][9]=tonumber(jiaoyiG);
@@ -227,32 +234,37 @@ PIGTradeFrame:HookScript("OnEvent",function (self,event,arg1,arg2,arg3,arg4,arg5
 		jiaoyiwupin["PlayerMoney"]=TradeFrame.PIGinfo.PlayerMoney*0.0001
 		for i=1,#TradeFrame.PIGinfo.TargetItem do
 			if TradeFrame.PIGinfo.TargetItem[i] then
+				--print(TradeFrame.PIGinfo.TargetItem[i])
 				table.insert(jiaoyiwupin["TargetItem"],TradeFrame.PIGinfo.TargetItem[i])
 			end
 		end
 		for i=1,#TradeFrame.PIGinfo.PlayerItem do
 			if TradeFrame.PIGinfo.PlayerItem[i] then
+				--print(TradeFrame.PIGinfo.PlayerItem[i])
 				table.insert(jiaoyiwupin["PlayerItem"],TradeFrame.PIGinfo.PlayerItem[i])
 			end
 		end
 		
 		local wupinNum = #jiaoyiwupin["PlayerItem"]
-		--jiaoyiwupin["TargetMoney"]=666
+		jiaoyiwupin["TargetMoney"]=666
 		if wupinNum>0 and jiaoyiwupin["TargetMoney"]>0 then--有物品交出和金币收入
 			local RRItemList = PIGA["RaidRecord"]["ItemList"]
 			for p=1,wupinNum do
 				local itemLink_P = jiaoyiwupin["PlayerItem"][p][1]
 				local pingjunfenG = jiaoyiwupin["TargetMoney"]/wupinNum;
 				for x=1,#RRItemList do
-					if itemLink_P==RRItemList[x][2] then
+					-- print(string.gsub(itemLink_P,"|","||"))
+					-- print(string.gsub(RRItemList[x][2],"|","||"))
+					local itemID_P = GetItemInfoInstant(itemLink_P) 
+					if itemID_P==RRItemList[x][11] then
 						if RRItemList[x][8]=="N/A" and RRItemList[x][9]==0 then
 							RRItemList[x][8]=jiaoyiwupin["duixiang"];
 							RRItemList[x][9]=pingjunfenG;
 							RRItemList[x][10]=GetServerTime();
 							_G[GnUI].Update_Item();
-							PIGSendAddonMessage(biaotouT,itemLink_P.."&"..jiaoyiwupin["duixiang"].."&"..pingjunfenG)
+							PIGSendAddonMessage(biaotouT,itemID_P.."&"..jiaoyiwupin["duixiang"].."&"..pingjunfenG)
 							if PIGA["RaidRecord"]["Rsetting"]["jiaoyitonggao"] then
-								PIGSendChatRaidParty("!Pig:"..itemLink_P.."已交予"..jiaoyiwupin["duixiang"].."，收到"..pingjunfenG.."G")
+								PIGSendChatRaidParty("!Pig:"..itemID_P.."已交予"..jiaoyiwupin["duixiang"].."，收到"..pingjunfenG.."G")
 							end
 							break
 						end

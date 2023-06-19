@@ -25,6 +25,8 @@ L["LIB_NO"] = "no";
 L["LIB_ENT"] = "confirm";
 L["LIB_CEL"] = "cancel";
 L["LIB_TIPS"] = "Tips";
+L["LIB_LEFTCLICK"] = "Left-Click";
+L["LIB_RIGHTCLICK"] = "Right-Click";
 --OptionsUI
 L["OPTUI_SET"] = "Setting";
 L["OPTUI_RLUI"] = "ReloadUI";

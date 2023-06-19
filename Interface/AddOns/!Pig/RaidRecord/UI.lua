@@ -35,6 +35,8 @@ local zhizeIcon = {{0.01,0.26,0.26,0.51},{0.27,0.52,0,0.25},{0.27,0.52,0.25,0.5}
 RaidRFun.zhizeIcon=zhizeIcon
 local LeftmenuV={"T","N","D"}
 RaidRFun.LeftmenuV=LeftmenuV
+local buzhuzhize = {TANK,HEALS,DAMAGE}
+RaidRFun.buzhuzhize=buzhuzhize
 RaidRFun.fenGbiliIcon = {
 		"interface/cursor/thumbsup.blp",
 		"interface/cursor/fishingcursor.blp",
@@ -284,9 +286,9 @@ function RaidRFun.RaidRecord()
 			if UnitIsGroupLeader("player") then
 				local fullName = UnitFullName("player")
 				if IsInRaid() then
-					SendChatMessage("人员信息已记录,退组/离线/不影响分G，需邮寄工资请"..SLASH_TEXTTOSPEECH_WHISPER.."【"..fullName.."】:邮寄工资", "RAID_WARNING", nil);
+					SendChatMessage("人员信息已记录,退组/离线/不影响分G，需邮寄工资请"..L["CHAT_WHISPER"].."【"..fullName.."】:邮寄工资", "RAID_WARNING", nil);
 				elseif IsInGroup() then
-					SendChatMessage("人员信息已记录,退组/离线/不影响分G，需邮寄工资请"..SLASH_TEXTTOSPEECH_WHISPER.."【"..fullName.."】:邮寄工资", "PARTY", nil);
+					SendChatMessage("人员信息已记录,退组/离线/不影响分G，需邮寄工资请"..L["CHAT_WHISPER"].."【"..fullName.."】:邮寄工资", "PARTY", nil);
 				end
 			end
 		end,
@@ -336,8 +338,7 @@ function RaidRFun.RaidRecord()
 		end
 		RaidR.Update_FenG_NOdongjie()
 	end
-	---------
-	RaidR.xiafangF.shezhiline = PIGLine(RaidR.xiafangF,"L",691)
+
 	--分G计算方式提示
 	RaidR.xiafangF.tuanduiguize = CreateFrame("Button", nil, RaidR.xiafangF);
 	RaidR.xiafangF.tuanduiguize:SetHighlightTexture("interface/buttons/ui-common-mousehilight.blp");
@@ -491,13 +492,15 @@ function RaidRFun.RaidRecord()
 			Create.Show_TabBut(RaidRFun.fuFrame,RaidRFun.fuFrameBut)
 		end
 	end);
+	---------
+	RaidR.xiafangF.shezhiline = PIGLine(RaidR.xiafangF,"L",690.5)
 	---
 	RaidR.xiafangF.NEW_jilu = PIGButton(RaidR.xiafangF,{"TOPLEFT",RaidR.xiafangF.shezhiline,"TOPRIGHT",6,-2},{74,21},"新的记录");  
 	RaidR.xiafangF.NEW_jilu:SetScript("OnClick", function ()
 		StaticPopup_Show("NEW_WUPIN_LIST","");
 	end);
 	RaidR.xiafangF.HistoryBut = PIGButton(RaidR.xiafangF,{"TOPLEFT",RaidR.xiafangF.NEW_jilu,"BOTTOMLEFT",0,-4},{74,21},"历史记录"); 
-	RaidR.xiafangF.HistoryBut:Disable() 
+	--RaidR.xiafangF.HistoryBut:Disable() 
 	RaidR.xiafangF.HistoryBut:SetScript("OnClick", function ()
 		RaidR.ShowHideHistory()
 	end);
@@ -508,7 +511,8 @@ function RaidRFun.RaidRecord()
 	RaidRFun.RaidRecord_RaidInfo()
 	RaidRFun.RaidRecord_fenG()
 	RaidRFun.RaidRecord_History();
-
+	--
+	RaidR:Update_DongjieBUT()
 	--新的记录==================================
 	function RaidR.Show_dangqianName()
 		if dangqianName_UI:IsShown() then
@@ -522,27 +526,28 @@ function RaidRFun.RaidRecord()
 		if #ItemListData>0 then
 			local Old_Data = {}
 			--存储标题
-			Old_Data.Biaoti={PIGA["RaidRecord"]["instanceName"]}
+			Old_Data.Biaoti =PIGCopyTable(PIGA["RaidRecord"]["instanceName"])
 			--存储物品数据
-			Old_Data.ItemList={PIGA["RaidRecord"]["ItemList"]}
+			Old_Data.ItemList =PIGCopyTable(PIGA["RaidRecord"]["ItemList"])
 			--存储人员补助数据
-			Old_Data.Players={PIGA["RaidRecord"]["Raidinfo"]}
+			Old_Data.Players =PIGCopyTable(PIGA["RaidRecord"]["Raidinfo"])
 			--存储奖励数据
 			local jiangliH={};
-			for q=1,#PIGA["RaidRecord"]["jiangli"] do
-				if PIGA["RaidRecord"]["jiangli"][q][3]~="N/A" then
-					table.insert(jiangliH,PIGA["RaidRecord"]["jiangli"][q]);
+			local jiangliH = PIGCopyTable(PIGA["RaidRecord"]["jiangli"])
+			for q=#jiangliH,1,-1 do
+				if jiangliH[q][3]=="N/A" then
+					table.remove(jiangliH,q);
 				end
 			end
-			Old_Data.Jiangli={jiangliH}
+			Old_Data.Jiangli=jiangliH
 			--存储罚款数据
-			local fakuanH={};
-			for q=1,#PIGA["RaidRecord"]["fakuan"] do
-				if PIGA["RaidRecord"]["fakuan"][q][3]~="N/A" then
-					table.insert(fakuanH,PIGA["RaidRecord"]["fakuan"][q]);
+			local fakuanH = PIGCopyTable(PIGA["RaidRecord"]["fakuan"])
+			for q=#fakuanH,1,-1 do
+				if fakuanH[q][3]=="N/A" then
+					table.remove(fakuanH,q);
 				end
 			end
-			Old_Data.Fakuan={fakuanH}
+			Old_Data.Fakuan=fakuanH
 
 			table.insert(PIGA["RaidRecord"]["History"],Old_Data);
 
@@ -552,11 +557,12 @@ function RaidRFun.RaidRecord()
 			for j=1,#PIGA["RaidRecord"]["fakuan"] do
 				PIGA["RaidRecord"]["fakuan"][j][2]=0;
 				PIGA["RaidRecord"]["fakuan"][j][3]="N/A";
+				PIGA["RaidRecord"]["fakuan"][j][4]=0;
 			end
 			for j=1,#PIGA["RaidRecord"]["jiangli"] do
 				PIGA["RaidRecord"]["jiangli"][j][2]=0;
 				PIGA["RaidRecord"]["jiangli"][j][3]="N/A";
-				PIGA["RaidRecord"]["jiangli"][j][4]=0;
+				PIGA["RaidRecord"]["jiangli"][j][4]=false;
 			end
 			--记录新数据
 			PIGA["RaidRecord"]["Dongjie"] = false;--关闭快照状态
@@ -569,7 +575,7 @@ function RaidRFun.RaidRecord()
 			RaidR.Update_Buzhu_QITA()
 			RaidR.Update_Fakuan()
 			RaidR.Update_FenG()
-			--RaidR.Update_History()
+			RaidR.Update_History()
 		end
 	end
 	StaticPopupDialogs["NEW_WUPIN_LIST"] = {
@@ -614,6 +620,13 @@ function RaidRFun.RaidRecord()
 	end
 	RaidR:RegisterEvent("PLAYER_ENTERING_WORLD");
 	RaidR:SetScript("OnEvent",function (self,event)
+		local lishiDATA = PIGA["RaidRecord"]["History"]
+		local lishiNum = #lishiDATA
+		if lishiNum>0 then
+			for i=(lishiNum-30),1,-1 do
+				table.remove(lishiDATA,i)
+			end
+		end
 		local inInstance, instanceType = IsInInstance()
 		if instanceType=="raid" then
 			panduanNewfuben()

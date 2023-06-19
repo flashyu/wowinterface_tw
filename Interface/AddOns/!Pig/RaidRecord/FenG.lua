@@ -196,14 +196,18 @@ function RaidRFun.RaidRecord_fenG()
 					print("|cff00FFFF!Pig:|r|cffFFFF00请先打开邮箱发件页面！|r");
 				end
 			end);
-			player.fenGV = PIGFontString(player,{"RIGHT",player.Name,"RIGHT",0,0},0,"OUTLINE");
+			player.fenG = CreateFrame("Frame", nil, player);
+			player.fenG:SetSize(10,duiwu_Height);
+			player.fenG:SetPoint("RIGHT",player.Name,"RIGHT",0,0);
+			player.fenG:SetFrameLevel(FrameLevel+20)
+			player.fenGV = PIGFontString(player.fenG,{"RIGHT",player.fenG,"RIGHT",0,0},0,"OUTLINE");
 			player.fenGV:Hide();
 		end
 	end
 
 	fujiF.nr.yedibuF = PIGLine(fujiF.nr,"BOT",80)
 	--分G人数设置
-	fujiF.nr.rensh_ALL = PIGFontString(fujiF.nr,{"TOPLEFT",fujiF.nr.yedibuF,"BOTTOMLEFT",10,-10},"\124cff00FF00总人数：\124r", "OUTLINE");
+	fujiF.nr.rensh_ALL = PIGFontString(fujiF.nr,{"TOPLEFT",fujiF.nr.yedibuF,"BOTTOMLEFT",10,-10},"\124cff00FF00总人数:\124r", "OUTLINE");
 	fujiF.nr.rensh_ALL_V = PIGFontString(fujiF.nr,{"LEFT",fujiF.nr.rensh_ALL,"RIGHT",0,0},0, "OUTLINE",15);
 	fujiF.nr.rensh_ALL_V:SetTextColor(1, 1, 1, 1);
 
@@ -261,19 +265,19 @@ function RaidRFun.RaidRecord_fenG()
 	--=========================
 	fujiF.nr.yedibuF2 = PIGLine(fujiF.nr,"BOT",46)
 	--人均
-	fujiF.nr.shouru0 = PIGFontString(fujiF.nr,{"TOPLEFT",fujiF.nr.yedibuF2,"BOTTOMLEFT",10,-16},"\124cffFFFF00人均/G：\124r", "OUTLINE");
+	fujiF.nr.shouru0 = PIGFontString(fujiF.nr,{"TOPLEFT",fujiF.nr.yedibuF2,"BOTTOMLEFT",10,-16},"\124cffFFFF00人均/G:\124r", "OUTLINE");
 	fujiF.nr.shouru0_V = PIGFontString(fujiF.nr,{"LEFT",fujiF.nr.shouru0,"RIGHT",0,0},0, "OUTLINE",15);
 	fujiF.nr.shouru0_V:SetTextColor(1, 1, 1, 1);
 	--人均
-	fujiF.nr.shouru1 = PIGFontString(fujiF.nr,{"LEFT",fujiF.nr.shouru0,"RIGHT",62,0},"\124cffFFFF00全工/G：\124r", "OUTLINE");
+	fujiF.nr.shouru1 = PIGFontString(fujiF.nr,{"LEFT",fujiF.nr.shouru0,"RIGHT",62,0},"\124cffFFFF00全工/G:\124r", "OUTLINE");
 	fujiF.nr.shouru1_V = PIGFontString(fujiF.nr,{"LEFT",fujiF.nr.shouru1,"RIGHT",0,0},0, "OUTLINE",15);
 	fujiF.nr.shouru1_V:SetTextColor(1, 1, 1, 1);
 
-	fujiF.nr.shouru2 = PIGFontString(fujiF.nr,{"LEFT",fujiF.nr.shouru1,"RIGHT",62,0},"\124cffFFFF00双工/G：\124r", "OUTLINE");
+	fujiF.nr.shouru2 = PIGFontString(fujiF.nr,{"LEFT",fujiF.nr.shouru1,"RIGHT",62,0},"\124cffFFFF00双工/G:\124r", "OUTLINE");
 	fujiF.nr.shouru2_V = PIGFontString(fujiF.nr,{"LEFT",fujiF.nr.shouru2,"RIGHT",0,0},0, "OUTLINE",15);
 	fujiF.nr.shouru2_V:SetTextColor(1, 1, 1, 1);
 
-	fujiF.nr.shouru3 = PIGFontString(fujiF.nr,{"LEFT",fujiF.nr.shouru2,"RIGHT",62,0},"\124cffFFFF00半工/G：\124r", "OUTLINE");
+	fujiF.nr.shouru3 = PIGFontString(fujiF.nr,{"LEFT",fujiF.nr.shouru2,"RIGHT",62,0},"\124cffFFFF00半工/G:\124r", "OUTLINE");
 	fujiF.nr.shouru3_V = PIGFontString(fujiF.nr,{"LEFT",fujiF.nr.shouru3,"RIGHT",0,0},0, "OUTLINE",15);
 	fujiF.nr.shouru3_V:SetTextColor(1, 1, 1, 1);
 	---广播分配信息=================================
@@ -313,9 +317,9 @@ function RaidRFun.RaidRecord_fenG()
 		for id=1,#ItemSLsit do
 			if ItemSLsit[id][9]>0 or ItemSLsit[id][14]>0 then
 				if ItemSLsit[id][14]>0 then
-					SendChatMessage(ItemSLsit[id][2].."x"..ItemSLsit[id][3].." 收入："..ItemSLsit[id][9]+ItemSLsit[id][14].."G(买方<"..ItemSLsit[id][8]..">尚欠"..ItemSLsit[id][14]..")", fujiF.nr.guangbo_dow.moren);
+					SendChatMessage(ItemSLsit[id][2].."x"..ItemSLsit[id][3].." 收入:"..ItemSLsit[id][9]+ItemSLsit[id][14].."G(买方<"..ItemSLsit[id][8]..">尚欠"..ItemSLsit[id][14]..")", fujiF.nr.guangbo_dow.moren);
 				else
-					SendChatMessage(ItemSLsit[id][2].."x"..ItemSLsit[id][3].." 收入："..ItemSLsit[id][9].."G(买方<"..ItemSLsit[id][8]..">)", fujiF.nr.guangbo_dow.moren);
+					SendChatMessage(ItemSLsit[id][2].."x"..ItemSLsit[id][3].." 收入:"..ItemSLsit[id][9].."G(买方<"..ItemSLsit[id][8]..">)", fujiF.nr.guangbo_dow.moren);
 				end
 			else
 				if PIGA["RaidRecord"]["Rsetting"]["liupaibobao"] then
@@ -324,7 +328,7 @@ function RaidRFun.RaidRecord_fenG()
 			end
 		end
 		if #liupaichupin>0 then
-			SendChatMessage("以下为流拍物品：", fujiF.nr.guangbo_dow.moren);
+			SendChatMessage("以下为流拍物品:", fujiF.nr.guangbo_dow.moren);
 			local LPnum = 3--流派每行物品数
 			for l=1,math.ceil(#liupaichupin/LPnum) do
 				if l==1 then

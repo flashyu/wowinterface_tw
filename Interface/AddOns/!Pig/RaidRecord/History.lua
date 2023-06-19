@@ -24,9 +24,11 @@ local RaidRFun=addonTable.RaidRFun
 -------
 function RaidRFun.RaidRecord_History()
 	local GnName,GnUI,GnIcon,FrameLevel = RaidRFun.GnName,RaidRFun.GnUI,RaidRFun.GnIcon,RaidRFun.FrameLevel
+	local LeftmenuV=RaidRFun.LeftmenuV
+	local buzhuzhize=RaidRFun.buzhuzhize
 	local RaidR=_G[GnUI]
-	local History=PIGFrame(RaidR,{"TOPLEFT",RaidR,"TOPLEFT",6,-21},nil,"History_UI")
-	History:SetPoint("BOTTOMRIGHT",RaidR,"BOTTOMRIGHT",-6,48);
+	local History=PIGFrame(RaidR,{"TOPLEFT",RaidR,"TOPLEFT",6,-26},nil,"History_UI")
+	History:SetPoint("BOTTOMRIGHT",RaidR,"BOTTOMRIGHT",-6,52);
 	History:PIGSetBackdrop(1)
 	History:PIGClose()
 	History:SetFrameLevel(FrameLevel+33)
@@ -38,348 +40,444 @@ function RaidRFun.RaidRecord_History()
 			History:Show()
 		end
 	end
-end
-local ADD_Frame=addonTable.ADD_Frame
-local hang_Height,hang_NUM  = 30, 12;
-local function ADD_History()
-	local Width,Height  = RaidR_UI:GetWidth(), RaidR_UI:GetHeight();
-	-------------------
-	--打开按钮
-	RaidR_UI.xiafangF.History = CreateFrame("Button",nil,RaidR_UI.xiafangF, "UIPanelButtonTemplate"); 
-	RaidR_UI.xiafangF.History:SetSize(80,28);
-	RaidR_UI.xiafangF.History:SetPoint("TOPLEFT",RaidR_UI.xiafangF.lian1,"TOPLEFT",210,-6);
-	RaidR_UI.xiafangF.History:SetText("历史记录");
-	----
-	local History=ADD_Frame("History_UI",RaidR_UI,Width-22,Height-100,"TOP",RaidR_UI,"TOP",0,-18,true,false,false,false,false,"BG6")
-	History:SetFrameLevel(RaidR_UI:GetFrameLevel()+20);
-
-	History.Close = CreateFrame("Button",nil,History, "UIPanelCloseButton");  
-	History.Close:SetSize(34,34);
-	History.Close:SetPoint("TOPRIGHT",History,"TOPRIGHT",2.4,3);
-	----
-	History.list = CreateFrame("Frame", nil, History,"BackdropTemplate");
-	History.list:SetBackdrop({edgeFile = "interface/glues/common/textpanel-border.blp", edgeSize = 18,});
-	History.list:SetBackdropBorderColor(1, 1, 1, 0.6);
-	History.list:SetSize(Width*0.24,Height-136);
-	History.list:SetPoint("TOPLEFT",History,"TOPLEFT",10,-28);
-	History.list.biaoti = History.list:CreateFontString();
-	History.list.biaoti:SetPoint("BOTTOM",History.list,"TOP",0,2);
-	History.list.biaoti:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	History.list.biaoti:SetText("\124cffFFFF00活动目录\124r");
-	--目录滚动
+	-------------
 	History.xuanzhongID=0;
-	local function gengxinHistory(self)
-		History.list.Highlight:Hide()
-		History.qingkong:Disable();
-		for i = 1, hang_NUM do
-			_G["History_list_"..i]:Hide();
-			_G["History_list_"..i].name:SetText();
-			_G["History_list_"..i].time:SetText();
-			_G["History_list_"..i].name:SetTextColor(1, 215/255, 0, 1);
-			_G["History_list_"..i].time:SetTextColor(0, 1, 154/255, 1);
-	    end
-	    local shujuyuan = PIGA["RaidRecord"]["History"]
-		if #shujuyuan>0 then
-			History.qingkong:Enable();
-		    local ItemsNum = #shujuyuan;
-		    FauxScrollFrame_Update(self, ItemsNum, hang_NUM, hang_Height);
-		    local offset = FauxScrollFrame_GetOffset(self);
-			for i = 1, hang_NUM do
-				local dangqian = (ItemsNum+1)-i-offset;
-				if shujuyuan[dangqian] then
-					local fameX = _G["History_list_"..i]
-					fameX:Show();
-					fameX.ID=dangqian
-					fameX.NO:SetText(dangqian);
-					fameX.name:SetText(shujuyuan[dangqian][1][2]);
-					fameX.time:SetText(date("%Y-%m-%d %H:%M",shujuyuan[dangqian][1][1]));
-					if History.xuanzhongID>0 then
-						if History.xuanzhongID==dangqian then
-							History.list.Highlight:Show()
-							History.list.Highlight:SetAllPoints(fameX)
-							fameX.name:SetTextColor(1, 1, 1, 1);
-							fameX.time:SetTextColor(30/255, 144/255, 1, 1);
-						end
-					end
-				end
-		    end
-		end
-	end
-	addonTable.RaidRecord_History =gengxinHistory;
-	---
-	RaidR_UI.xiafangF.History:SetScript("OnClick", function ()
-		fenG_UI:Hide();
-		RsettingF_UI:Hide();
-		invite_UI:Hide();
-		if History_UI:IsShown() then
-			History_UI:Hide();
-		else
-			History_UI:Show();
-			gengxinHistory(History.list.Scroll);
-		end
-	end);
-	--内容滚动
-	local hang_neirong_Height,hang_neirong_NUM  = 24, 15;
-	local function gengxinHistory_neirong(self)
-		for i = 1, hang_neirong_NUM do
-			local fameX = _G["History_neirong_"..i]
-			fameX:Hide()
-			fameX.tx1:SetText();
-			fameX.tx1:SetText();
-			fameX.tx2:SetText();
-			fameX.tx3:SetText();
-		end
-		History.neirong.Down1_V:SetText();
-		History.neirong.Down2_V:SetText();
-		History.neirong.Down3_V:SetText();
-		History.neirong.Down4_V:SetText();
-		History.neirong.Down5_V:SetText();
-		History.neirong.Down6_V:SetText();
-		History.neirong.Down7_V:SetText();
-		History.neirong.Del:Disable();
-		if History.xuanzhongID>0 then
-			History.neirong.Del:Enable();
-			local Hzonghang={};
-			local shujuyuan=PIGA["RaidRecord"]["History"];
-			for a=1,#shujuyuan[History.xuanzhongID][2] do
-				local list1=shujuyuan[History.xuanzhongID][2][a][1];
-				local list2=shujuyuan[History.xuanzhongID][2][a][2];
-				local list3=shujuyuan[History.xuanzhongID][2][a][3];
-				local list={list1,list2,list3};
-				table.insert(Hzonghang,list);
-			end
-			for b=1,#shujuyuan[History.xuanzhongID][3] do
-				local list1=shujuyuan[History.xuanzhongID][3][b][1];
-				local list2=shujuyuan[History.xuanzhongID][3][b][2];
-				local list3=shujuyuan[History.xuanzhongID][3][b][3];
-				local list={list1,list2,list3};
-				table.insert(Hzonghang,list);
-			end
-			for c=1,#shujuyuan[History.xuanzhongID][4] do
-				local list1=shujuyuan[History.xuanzhongID][4][c][1];
-				local list2=shujuyuan[History.xuanzhongID][4][c][2];
-				local list3=shujuyuan[History.xuanzhongID][4][c][3];
-				local list={list1,list2,list3};
-				table.insert(Hzonghang,list);
-			end
-			for d=1,#shujuyuan[History.xuanzhongID][5] do
-				local list1=shujuyuan[History.xuanzhongID][5][d][1];
-				local list2=shujuyuan[History.xuanzhongID][5][d][2];
-				local list3=shujuyuan[History.xuanzhongID][5][d][3];
-				local list={list1,list2,list3};
-				table.insert(Hzonghang,list);
-			end
-
-			local ItemsNum = #Hzonghang;
-		    FauxScrollFrame_Update(self, ItemsNum, hang_neirong_NUM, hang_neirong_Height);
-		    local offset = FauxScrollFrame_GetOffset(self);
-
-			for i = 1, hang_neirong_NUM do
-				local ii = i+offset;
-				if Hzonghang[ii] then
-					local fameX = _G["History_neirong_"..i]
-					fameX:Show()
-					fameX.tx1:SetText(Hzonghang[ii][1]);
-					fameX.tx2:SetText(Hzonghang[ii][2].."\124cffFFFF00 G\124r");
-					fameX.tx3:SetText(Hzonghang[ii][3]);
-				end
-			end
-			--
-			History.neirong.Down1_V:SetText(shujuyuan[History.xuanzhongID][6][1]);
-			History.neirong.Down2_V:SetText(shujuyuan[History.xuanzhongID][6][2]);
-			History.neirong.Down3_V:SetText(shujuyuan[History.xuanzhongID][6][3]);
-			History.neirong.Down4_V:SetText(shujuyuan[History.xuanzhongID][6][4]);
-			History.neirong.Down5_V:SetText(shujuyuan[History.xuanzhongID][6][5]);
-			History.neirong.Down6_V:SetText(shujuyuan[History.xuanzhongID][6][6]);
-			History.neirong.Down7_V:SetText(shujuyuan[History.xuanzhongID][6][7]);
-		end
-	end
-	--创建可滚动区域
-	History.list.Scroll = CreateFrame("ScrollFrame",nil,History.list, "FauxScrollFrameTemplate");  
-	History.list.Scroll:SetPoint("TOPLEFT",History.list,"TOPLEFT",0,-3);
-	History.list.Scroll:SetPoint("BOTTOMRIGHT",History.list,"BOTTOMRIGHT",-26,5);
-	History.list.Scroll:SetScript("OnVerticalScroll", function(self, offset)
-	    FauxScrollFrame_OnVerticalScroll(self, offset, hang_Height, gengxinHistory)
-	end)
-	History.list.Highlight = History.list:CreateTexture(nil, "BORDER");
-	History.list.Highlight:SetTexture("interface/buttons/ui-listbox-highlight.blp");
-	History.list.Highlight:Hide()
-	for id = 1, hang_NUM do
-		local mululist= CreateFrame("Frame", "History_list_"..id, History.list.Scroll:GetParent());
-		mululist:SetSize(History.list:GetWidth()-30, hang_Height);
-		if id==1 then
-			mululist:SetPoint("TOP",History.list.Scroll,"TOP",5,0);
-		else
-			mululist:SetPoint("TOP",_G["History_list_"..(id-1)],"BOTTOM",0,-6);
-		end
-		mululist:SetScript("OnMouseUp", function (self)
-			History.list.Highlight:SetAllPoints(self)
-			History.list.Highlight:Show()
-			for k = 1, hang_NUM do
-				_G["History_list_"..k].name:SetTextColor(1, 215/255, 0, 1);
-				_G["History_list_"..k].time:SetTextColor(0, 1, 154/255, 1);
-			end
-			self.name:SetTextColor(1, 1, 1, 1);
-			self.time:SetTextColor(30/255, 144/255, 1, 1);
-			History.xuanzhongID=tonumber(self.ID);
-			gengxinHistory_neirong(History.neirong.Scroll);
-		end)
-		mululist.line = mululist:CreateLine()
-		mululist.line:SetColorTexture(1,1,1,0.2)
-		mululist.line:SetThickness(1);
-		mululist.line:SetStartPoint("BOTTOMLEFT",0,-3)
-		mululist.line:SetEndPoint("BOTTOMRIGHT",0,-3)
-		-----
-		mululist.name = mululist:CreateFontString();
-		mululist.name:SetPoint("TOPLEFT",mululist,"TOPLEFT",30,-1.4);
-		mululist.name:SetFont(ChatFontNormal:GetFont(), 13, "OUTLINE");
-		mululist.name:SetTextColor(1, 215/255, 0, 1);
-		mululist.time = mululist:CreateFontString();
-		mululist.time:SetPoint("TOPLEFT",mululist.name,"BOTTOMLEFT",1,-1);
-		mululist.time:SetFont(ChatFontNormal:GetFont(), 13, "OUTLINE");
-		mululist.time:SetTextColor(0, 1, 154/255, 1);
-		mululist.NO = mululist:CreateFontString();
-		mululist.NO:SetPoint("RIGHT",mululist.name,"LEFT",0,-6);
-		mululist.NO:SetFont(ChatFontNormal:GetFont(), 16, "OUTLINE");
-		mululist.NO:SetTextColor(1, 1, 1, 0.3);
-	end
-	-----活动详情-----------
-	History.neirong = CreateFrame("Frame", nil, History,"BackdropTemplate");
-	History.neirong:SetBackdrop({edgeFile = "interface/glues/common/textpanel-border.blp", edgeSize = 18,});
-	History.neirong:SetBackdropBorderColor(1, 1, 1, 0.6);
-	History.neirong:SetSize(Width*0.7,Height-136);
-	History.neirong:SetPoint("TOPRIGHT",History,"TOPRIGHT",-10,-28);
-	History.neirong.biaoti = History.neirong:CreateFontString();
-	History.neirong.biaoti:SetPoint("BOTTOM",History.neirong,"TOP",0,2);
-	History.neirong.biaoti:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	History.neirong.biaoti:SetText("\124cffFFFF00活动详情\124r");
-	------
-	--创建可滚动区域
-	History.neirong.Scroll = CreateFrame("ScrollFrame",nil,History.neirong, "FauxScrollFrameTemplate");  
-	History.neirong.Scroll:SetPoint("TOPLEFT",History.neirong,"TOPLEFT",0,-4);
-	History.neirong.Scroll:SetPoint("BOTTOMRIGHT",History.neirong,"BOTTOMRIGHT",-26,68);
-	History.neirong.Scroll:SetScript("OnVerticalScroll", function(self, offset)
-	    FauxScrollFrame_OnVerticalScroll(self, offset, hang_neirong_Height, gengxinHistory_neirong)
-	end)
-	for id = 1, hang_neirong_NUM do
-		local neirong= CreateFrame("Frame", "History_neirong_"..id, History.neirong.Scroll:GetParent());
-		neirong:SetSize(History.neirong:GetWidth()-26, hang_neirong_Height);
-		if id==1 then
-			neirong:SetPoint("TOP",History.neirong.Scroll,"TOP",5,0);
-		else
-			neirong:SetPoint("TOP",_G["History_neirong_"..(id-1)],"BOTTOM",0,0);
-		end
-		neirong:Hide()
-		neirong.line = neirong:CreateLine()
-		neirong.line:SetColorTexture(1,1,1,0.2)
-		neirong.line:SetThickness(1);
-		neirong.line:SetStartPoint("BOTTOMLEFT",0,0)
-		neirong.line:SetEndPoint("BOTTOMRIGHT",0,0)
-		-- -----
-		neirong.tx1 = neirong:CreateFontString();
-		neirong.tx1:SetPoint("LEFT",neirong,"LEFT",10,0);
-		neirong.tx1:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-		neirong.tx2 = neirong:CreateFontString();
-		neirong.tx2:SetPoint("LEFT",neirong,"LEFT",280,0);
-		neirong.tx2:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-		neirong.tx3 = neirong:CreateFontString();
-		neirong.tx3:SetPoint("LEFT",neirong,"LEFT",380,0);
-		neirong.tx3:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	end
-	History.neirong.line1 = History.neirong:CreateLine()
-	History.neirong.line1:SetColorTexture(1,1,1,0.3)
-	History.neirong.line1:SetThickness(1.4);
-	History.neirong.line1:SetStartPoint("LEFT",4,-150)
-	History.neirong.line1:SetEndPoint("RIGHT",-3,-150)
-	--汇总
-	History.neirong.Down1 = History.neirong:CreateFontString();
-	History.neirong.Down1:SetPoint("TOPLEFT",History.neirong.line1,"TOPLEFT",6,-10);
-	History.neirong.Down1:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	History.neirong.Down1:SetText("\124cffFFFF00物品收入/G：\124r");
-	History.neirong.Down1_V = History.neirong:CreateFontString();
-	History.neirong.Down1_V:SetPoint("LEFT",History.neirong.Down1,"RIGHT",0,0);
-	History.neirong.Down1_V:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	History.neirong.Down2 = History.neirong:CreateFontString();
-	History.neirong.Down2:SetPoint("LEFT",History.neirong.Down1,"RIGHT",47,0);
-	History.neirong.Down2:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	History.neirong.Down2:SetText("\124cffFFFF00补助支出/G：\124r");
-	History.neirong.Down2_V = History.neirong:CreateFontString();
-	History.neirong.Down2_V:SetPoint("LEFT",History.neirong.Down2,"RIGHT",0,0);
-	History.neirong.Down2_V:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	History.neirong.Down3 = History.neirong:CreateFontString();
-	History.neirong.Down3:SetPoint("LEFT",History.neirong.Down2,"RIGHT",47,0);
-	History.neirong.Down3:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	History.neirong.Down3:SetText("\124cffFFFF00其他收入/G：\124r");
-	History.neirong.Down3_V = History.neirong:CreateFontString();
-	History.neirong.Down3_V:SetPoint("LEFT",History.neirong.Down3,"RIGHT",0,0);
-	History.neirong.Down3_V:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	History.neirong.Down4 = History.neirong:CreateFontString();
-	History.neirong.Down4:SetPoint("LEFT",History.neirong.Down3,"RIGHT",47,0);
-	History.neirong.Down4:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	History.neirong.Down4:SetText("\124cffFFFF00奖励支出/G：\124r");
-	History.neirong.Down4_V = History.neirong:CreateFontString();
-	History.neirong.Down4_V:SetPoint("LEFT",History.neirong.Down4,"RIGHT",0,0);
-	History.neirong.Down4_V:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	History.neirong.Down5 = History.neirong:CreateFontString();
-	History.neirong.Down5:SetPoint("TOPLEFT",History.neirong.Down1,"BOTTOMLEFT",0,-15);
-	History.neirong.Down5:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	History.neirong.Down5:SetText("\124cffFFFF00总收入/G：\124r");
-	History.neirong.Down5_V = History.neirong:CreateFontString();
-	History.neirong.Down5_V:SetPoint("LEFT",History.neirong.Down5,"RIGHT",0,0);
-	History.neirong.Down5_V:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	History.neirong.Down6 = History.neirong:CreateFontString();
-	History.neirong.Down6:SetPoint("LEFT",History.neirong.Down5,"RIGHT",54,0);
-	History.neirong.Down6:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	History.neirong.Down6:SetText("\124cffFFFF00净收入/G：\124r");
-	History.neirong.Down6_V = History.neirong:CreateFontString();
-	History.neirong.Down6_V:SetPoint("LEFT",History.neirong.Down6,"RIGHT",0,0);
-	History.neirong.Down6_V:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	History.neirong.Down7 = History.neirong:CreateFontString();
-	History.neirong.Down7:SetPoint("LEFT",History.neirong.Down6,"RIGHT",54,0);
-	History.neirong.Down7:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-	History.neirong.Down7:SetText("\124cffFFFF00人均/G：\124r");
-	History.neirong.Down7_V = History.neirong:CreateFontString();
-	History.neirong.Down7_V:SetPoint("LEFT",History.neirong.Down7,"RIGHT",0,0);
-	History.neirong.Down7_V:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
-
-	History.neirong.Del = CreateFrame("Button",nil,History.neirong, "UIPanelButtonTemplate");  
-	History.neirong.Del:SetSize(120,24);
-	History.neirong.Del:SetPoint("LEFT",History.neirong.Down7,"RIGHT",68,-2);
-	History.neirong.Del:SetText("删除本条记录");
-	History.neirong.Del:Disable();
-	History.neirong.Del:SetScript("OnClick", function ()
-		if History.xuanzhongID>0 then
-			table.remove (PIGA["RaidRecord"]["History"], History.xuanzhongID);
-			History.xuanzhongID=History.xuanzhongID-1;
-			if History.xuanzhongID==0 then 
-				if #PIGA["RaidRecord"]["History"]~=0 then
-					History.xuanzhongID=1;
-				end
-			end
-			gengxinHistory(History.list.Scroll);
-			gengxinHistory_neirong(History.neirong.Scroll);
-		end
-	end);
+	local hang_Height,hang_NUM  = 30.8, 15;
+	History.list=PIGFrame(History,{"TOPLEFT",History,"TOPLEFT",6,-20})
+	History.list:SetPoint("BOTTOMRIGHT",History,"BOTTOMLEFT",200,6);
+	History.list:PIGSetBackdrop(1)
+	History.list.biaoti = PIGFontString(History.list,{"BOTTOM",History.list,"TOP",-20,2},"\124cffFFFF00历史活动目录\124r","OUTLINE");
 	--删除历史记录
 	StaticPopupDialogs["DEL_HISTORY"] = {
-		text = "确定\124cffff0000清空\124r\n所有历史记录吗?",
+		text = "确定\124cffff0000清空\124r\n开团助手所有历史记录吗?",
 		button1 = "确定",
 		button2 = "取消",
 		OnAccept = function()
 			PIGA["RaidRecord"]["History"]={};
 			History.xuanzhongID=0;
-			gengxinHistory(History.list.Scroll);
-			gengxinHistory_neirong(History.neirong.Scroll);
+			RaidR.Update_History()
 		end,
 		timeout = 0,
 		whileDead = true,
 		hideOnEscape = true,
 	}
-	History.qingkong = CreateFrame("Button",nil,History, "UIPanelButtonTemplate");  
-	History.qingkong:SetSize(116,24);
-	History.qingkong:SetPoint("TOPRIGHT",History,"TOPRIGHT",-40,-4);
-	History.qingkong:SetText("清空所有记录");
+	History.qingkong = PIGButton(History,{"LEFT",History.list.biaoti,"RIGHT",4,0},{40,20},"清空"); 
+	History.qingkong:SetScale(0.88)
 	History.qingkong:SetScript("OnClick", function ()
 		StaticPopup_Show ("DEL_HISTORY");
 	end);
+	--目录
+	History.list.Scroll = CreateFrame("ScrollFrame",nil,History.list, "FauxScrollFrameTemplate");  
+	History.list.Scroll:SetPoint("TOPLEFT",History.list,"TOPLEFT",0,-2);
+	History.list.Scroll:SetPoint("BOTTOMRIGHT",History.list,"BOTTOMRIGHT",-25,2);
+	History.list.Scroll:SetScript("OnVerticalScroll", function(self, offset)
+	    FauxScrollFrame_OnVerticalScroll(self, offset, hang_Height, RaidR.Update_History)
+	end)
+
+	local list_WW = History.list:GetWidth()
+	for id = 1, hang_NUM do
+		local mululist = CreateFrame("Button","History_list_"..id,History.list, "TruncatedButtonTemplate");
+		mululist:SetSize(list_WW-22, hang_Height);
+		if id==1 then
+			mululist:SetPoint("TOP",History.list.Scroll,"TOP",2,0);
+		else
+			mululist:SetPoint("TOP",_G["History_list_"..(id-1)],"BOTTOM",0,0);
+		end
+		if id~=hang_NUM then PIGLine(mululist,"BOT",nil,nil,{0.3,0.3,0.3,0.3}) end
+		mululist.highlight = mululist:CreateTexture();
+		mululist.highlight:SetTexture("interface/buttons/ui-listbox-highlight2.blp");
+		mululist.highlight:SetBlendMode("ADD")
+		mululist.highlight:SetPoint("LEFT", mululist, "LEFT", 2,0);
+		mululist.highlight:SetSize(list_WW-6,hang_Height);
+		mululist.highlight:SetAlpha(0.4);
+		mululist.highlight:Hide();
+		mululist.xuanzhong = mululist:CreateTexture();
+		mululist.xuanzhong:SetTexture("interface/buttons/ui-listbox-highlight.blp");
+		mululist.xuanzhong:SetPoint("LEFT", mululist, "LEFT", 2,0);
+		mululist.xuanzhong:SetSize(list_WW-6,hang_Height);
+		mululist.xuanzhong:SetAlpha(0.9);
+		mululist.xuanzhong:Hide();
+		mululist:SetScript("OnEnter", function (self)
+			if not self.xuanzhong:IsShown() then
+				self.highlight:Show();
+			end
+		end);
+		mululist:SetScript("OnLeave", function (self)
+			self.highlight:Hide();
+		end);
+		-- -----
+		mululist.NO = PIGFontString(mululist,{"LEFT",mululist,"LEFT",4,0},"","OUTLINE",16);
+		mululist.NO:SetTextColor(1, 1, 1, 0.5);
+		mululist.name = PIGFontString(mululist,{"LEFT",mululist,"LEFT",26,7},"","OUTLINE",13);
+		mululist.name:SetTextColor(1, 0.843, 0, 1);
+		mululist.name:SetSize(list_WW-25,hang_Height*0.5);
+		mululist.name:SetJustifyH("LEFT")
+		mululist.time = PIGFontString(mululist,{"LEFT",mululist,"LEFT",26,-7},"","OUTLINE",13);
+		mululist.time:SetTextColor(0, 1, 0.6, 1);
+
+		mululist:SetScript("OnMouseDown", function (self)
+			self.NO:SetPoint("LEFT",self,"LEFT",5.5,-1.5);
+		end);
+		mululist:SetScript("OnMouseUp", function (self)
+			self.NO:SetPoint("LEFT",self,"LEFT",4,0);
+		end);
+		mululist:SetScript("OnClick", function (self)
+			History.xuanzhongID=self:GetID();
+			RaidR.Update_History()
+		end);
+	end
+	History.list:SetScript("OnShow", function (self)
+		RaidR.Update_History()
+	end);
+	----
+	function RaidR.Update_History()
+		if not History:IsShown() then return end
+		self=History.list.Scroll
+		History.qingkong:Disable();
+		History.nr:Hide()
+		for i = 1, hang_NUM do
+			_G["History_list_"..i]:Hide();
+		end
+		local shujuyuan = PIGA["RaidRecord"]["History"]
+		local ItemsNum = #shujuyuan;
+		if ItemsNum>0 then
+			History.qingkong:Enable();
+			FauxScrollFrame_Update(self, ItemsNum, hang_NUM, hang_Height);
+			local offset = FauxScrollFrame_GetOffset(self);
+			for i = 1, hang_NUM do
+				local dangqian = (ItemsNum+1)-i-offset;
+				if shujuyuan[dangqian] then
+					local fameX = _G["History_list_"..i]
+					fameX:Show();
+					fameX:SetID(dangqian)
+					fameX.NO:SetText(dangqian);
+					local biaotixinxi=shujuyuan[dangqian].Biaoti
+					fameX.name:SetText(biaotixinxi[2]..biaotixinxi[3]);
+					fameX.time:SetText(date("%Y-%m-%d %H:%M",biaotixinxi[1]));
+					if History.xuanzhongID==dangqian then
+						fameX.xuanzhong:Show()
+						fameX.name:SetTextColor(1, 1, 1, 1);
+						fameX.time:SetTextColor(0.117647, 0.5647, 1, 1);
+					else
+						fameX.xuanzhong:Hide()
+						fameX.name:SetTextColor(1, 0.843, 0, 1);
+						fameX.time:SetTextColor(0, 1, 0.6, 1);
+					end
+				end
+			end
+			History.nrgengxin_heji()
+		end
+	end
+	-----活动详情-----------
+	local nr_hang_Height,nr_hang_Num = 22.9,17
+	History.nr=PIGFrame(History,{"TOPLEFT",History.list,"TOPRIGHT",6,0})
+	History.nr:SetPoint("BOTTOMRIGHT",History,"BOTTOMRIGHT",-6,6);
+	History.nr:PIGSetBackdrop(1)
+	History.nr.biaoti = PIGFontString(History.nr,{"BOTTOM",History.nr,"TOP",0,2},"\124cffFFFF00活动内容\124r","OUTLINE");
+	History.F=PIGOptionsList_RF(History.nr,26,nil,{6,6,46})
+	local itemF,itemTabBut=PIGOptionsList_R(History.F,"拾取记录",80)
+	itemF:Show()
+	itemTabBut:Selected()
+	------
+	local function add_TABScroll(fujif,tabname)
+		fujif.Scroll = CreateFrame("ScrollFrame",nil,fujif, "FauxScrollFrameTemplate");  
+		fujif.Scroll:SetPoint("TOPLEFT",fujif,"TOPLEFT",0,-2);
+		fujif.Scroll:SetPoint("BOTTOMRIGHT",fujif,"BOTTOMRIGHT",-25,2);
+		fujif.Scroll:SetScript("OnVerticalScroll", function(self, offset)
+		    FauxScrollFrame_OnVerticalScroll(self, offset, nr_hang_Height, fujif.gengxinList)
+		end)
+		for id = 1, nr_hang_Num do
+			local nrhang= CreateFrame("Frame", "History_nr_"..tabname..id, fujif.Scroll:GetParent());
+			nrhang:SetSize(fujif:GetWidth()-22, nr_hang_Height);
+			if id==1 then
+				nrhang:SetPoint("TOP",fujif.Scroll,"TOP",3,0);
+			else
+				nrhang:SetPoint("TOP",_G["History_nr_"..tabname..(id-1)],"BOTTOM",0,0);
+			end
+			if id~=nr_hang_Num then PIGLine(nrhang,"BOT",nil,nil,{0.3,0.3,0.3,0.3}) end
+			--
+			nrhang.tx1 = PIGFontString(nrhang,{"LEFT",nrhang,"LEFT",10,0},"","OUTLINE");
+			if tabname=="Jiangli" or tabname=="Fakuan" then
+				nrhang.tx1:SetTextColor(0, 1, 1, 1);
+			end
+			nrhang.tx2 = PIGFontString(nrhang,{"RIGHT",nrhang,"RIGHT",-220,0},"","OUTLINE");
+			nrhang.tx2:SetTextColor(1, 1, 1, 1);
+			nrhang.tx3 = PIGFontString(nrhang,{"LEFT",nrhang,"LEFT",380,0},"","OUTLINE");
+		end
+		fujif:SetScript("OnShow", function (self)
+			self.gengxinList()
+		end)
+		function fujif.gengxinList()
+			self=fujif.Scroll
+			for i = 1, nr_hang_Num do
+				_G["History_nr_"..tabname..i]:Hide()
+			end
+			if History.xuanzhongID>0 then
+				local shujuyuan = PIGCopyTable(PIGA["RaidRecord"]["History"][History.xuanzhongID][tabname])
+				if tabname=="Jiangli" then
+					local infoData = PIGA["RaidRecord"]["History"][History.xuanzhongID].Players
+					for p=1,8 do
+						for pp=1,#infoData[p] do
+							local gerenData = infoData[p][pp]
+							for g=1,#LeftmenuV do
+								if gerenData[4]==LeftmenuV[g] then
+									if gerenData[5] then
+										local bili = gerenData[6]*0.01
+										local biliG = zongshouru*bili
+										table.insert(shujuyuan,{buzhuzhize[g].."补助",biliG,gerenData[1]})
+									else
+										table.insert(shujuyuan,{buzhuzhize[g].."补助",gerenData[6],gerenData[1]})
+									end
+								end
+							end
+						end
+					end
+				end
+				local ItemsNum = #shujuyuan;
+			    FauxScrollFrame_Update(self, ItemsNum, nr_hang_Num, nr_hang_Height);
+			    local offset = FauxScrollFrame_GetOffset(self);
+				for i = 1, nr_hang_Num do
+					local dangqian = i+offset;
+					if shujuyuan[dangqian] then
+						local fameX = _G["History_nr_"..tabname..i]
+						fameX:Show()
+						if tabname=="ItemList" then
+							fameX.tx1:SetText(shujuyuan[dangqian][2]);
+							fameX.tx2:SetText(shujuyuan[dangqian][9].."\124cffFFFF00 G\124r");
+							fameX.tx3:SetText(shujuyuan[dangqian][8]);
+						elseif tabname=="Jiangli" then
+							fameX.tx1:SetText(shujuyuan[dangqian][1]);
+							fameX.tx2:SetText(shujuyuan[dangqian][2].."\124cffFFFF00 G\124r");
+							fameX.tx3:SetText(shujuyuan[dangqian][3]);
+						elseif tabname=="Fakuan" then
+							fameX.tx1:SetText(shujuyuan[dangqian][1]);
+							fameX.tx2:SetText(shujuyuan[dangqian][2].."\124cffFFFF00 G\124r");
+							fameX.tx3:SetText(shujuyuan[dangqian][3]);
+						end
+					end
+				end
+			end
+		end
+	end
+	add_TABScroll(itemF,"ItemList")
+	----
+	local buzhuF=PIGOptionsList_R(History.F,"补助/奖励",80)
+	add_TABScroll(buzhuF,"Jiangli")
+	----
+	local fakuanF=PIGOptionsList_R(History.F,"罚款/其他",80)
+	add_TABScroll(fakuanF,"Fakuan")
+	----
+	local renyaunF=PIGOptionsList_R(History.F,"人员信息",80)
+	local duiwuW,duiwuH = 130,28;
+	local jiangeW,jiangeH,juesejiangeH = 13,0,6;
+	for p=1,8 do
+		local duiwuF = CreateFrame("Frame", "History_PlayerList_"..p, renyaunF);
+		duiwuF:SetSize(duiwuW,duiwuH*5+juesejiangeH*4);
+		if p==1 then
+			duiwuF:SetPoint("TOPLEFT",renyaunF,"TOPLEFT",12,-18);
+		end
+		if p>1 and p<5 then
+			duiwuF:SetPoint("LEFT",_G["History_PlayerList_"..(p-1)],"RIGHT",jiangeW,jiangeH);
+		end
+		if p==5 then
+			duiwuF:SetPoint("TOP",_G["History_PlayerList_1"],"BOTTOM",0,-24);
+		end
+		if p>5 then
+			duiwuF:SetPoint("LEFT",_G["History_PlayerList_"..(p-1)],"RIGHT",jiangeW,jiangeH);
+		end
+		for pp=1,5 do
+			local playerF = PIGButton(duiwuF,nil,{duiwuW,duiwuH},nil,"History_PlayerList_"..p.."_"..pp);
+			PIGSetFont(playerF.Text,14,"OUTLINE")
+			if pp==1 then
+				playerF:SetPoint("TOP",duiwuF,"TOP",0,0);
+			else
+				playerF:SetPoint("TOP",_G["History_PlayerList_"..p.."_"..(pp-1)],"BOTTOM",0,-juesejiangeH);
+			end
+		end
+	end
+	function renyaunF.gengxinList()
+		for p=1,8 do
+			for pp=1,5 do
+				local pff = _G["History_PlayerList_"..p.."_"..pp]
+				pff:Hide();
+				pff:SetText("N/A");
+			end
+	    end
+	    local shujuyuan = PIGA["RaidRecord"]["History"][History.xuanzhongID].Players
+		local ItemsNum = #shujuyuan;
+		for p=1,ItemsNum do
+			for pp=1,#shujuyuan[p] do
+				if shujuyuan[p][pp] then
+			   		local pff = _G["History_PlayerList_"..p.."_"..pp]
+			   		pff:Show();
+			   		local wanjianame=shujuyuan[p][pp][1]
+			   		local wanjiaName, fuwiqiName = strsplit("-", wanjianame);
+			   		if fuwiqiName then
+						pff:SetText(wanjiaName.."(*)");
+					else
+						pff:SetText(wanjiaName);
+					end
+					local color = RAID_CLASS_COLORS[shujuyuan[p][pp][2]]
+					pff.Text:SetTextColor(color.r, color.g, color.b,1);
+			   	end
+			end
+		end
+	end
+	renyaunF:SetScript("OnShow", function (self)
+		self.gengxinList()
+	end)
+	--汇总
+	History.nr.heji_1 = PIGFontString(History.nr,{"TOPLEFT",History.F,"BOTTOMLEFT",2,-5},"\124cffFFFF00物品收入/G：\124r","OUTLINE");
+	History.nr.heji_1V = PIGFontString(History.nr,{"LEFT",History.nr.heji_1,"RIGHT",0,0},0,"OUTLINE");
+	History.nr.heji_1V:SetTextColor(1, 1, 1, 1);
+	History.nr.heji_2 = PIGFontString(History.nr,{"TOPLEFT",History.nr.heji_1,"BOTTOMLEFT",0,-5},"\124cffFFFF00罚款收入/G：\124r","OUTLINE");
+	History.nr.heji_2V = PIGFontString(History.nr,{"LEFT",History.nr.heji_2,"RIGHT",0,0},0,"OUTLINE");
+	History.nr.heji_2V:SetTextColor(1, 1, 1, 1);
+
+	History.nr.heji_3 = PIGFontString(History.nr,{"TOPLEFT",History.F,"BOTTOMLEFT",150,-5},"\124cffFFFF00补助支出/G：\124r","OUTLINE");
+	History.nr.heji_3V = PIGFontString(History.nr,{"LEFT",History.nr.heji_3,"RIGHT",0,0},0,"OUTLINE");
+	History.nr.heji_3V:SetTextColor(1, 1, 1, 1);
+	History.nr.heji_4 = PIGFontString(History.nr,{"TOPLEFT",History.nr.heji_3,"BOTTOMLEFT",0,-5},"\124cffFFFF00奖励支出/G：\124r","OUTLINE");
+	History.nr.heji_4V = PIGFontString(History.nr,{"LEFT",History.nr.heji_4,"RIGHT",0,0},0,"OUTLINE");
+	History.nr.heji_4V:SetTextColor(1, 1, 1, 1);
+
+	History.nr.heji_5 = PIGFontString(History.nr,{"TOPLEFT",History.F,"BOTTOMLEFT",300,-5},"\124cffFFFF00总收入/G：\124r","OUTLINE");
+	History.nr.heji_5V = PIGFontString(History.nr,{"LEFT",History.nr.heji_5,"RIGHT",0,0},0,"OUTLINE");
+	History.nr.heji_5V:SetTextColor(1, 1, 1, 1);
+	History.nr.heji_6 = PIGFontString(History.nr,{"TOPLEFT",History.nr.heji_5,"BOTTOMLEFT",0,-5},"\124cffFFFF00净收入/G：\124r","OUTLINE");
+	History.nr.heji_6V = PIGFontString(History.nr,{"LEFT",History.nr.heji_6,"RIGHT",0,0},0,"OUTLINE");
+	History.nr.heji_6V:SetTextColor(1, 1, 1, 1);
+
+	History.nr.heji_7 = PIGFontString(History.nr,{"TOPLEFT",History.F,"BOTTOMLEFT",450,-5},"\124cffFFFF00人均/G：\124r","OUTLINE");
+	History.nr.heji_7V = PIGFontString(History.nr,{"LEFT",History.nr.heji_7,"RIGHT",0,0},0,"OUTLINE");
+	History.nr.heji_7V:SetTextColor(1, 1, 1, 1);
+
+	History.nr.Del = PIGButton(History.nr,{"TOPLEFT",History.nr.heji_7,"BOTTOMLEFT",0,-4},{50,20},"删除"); 
+	History.nr.Del:SetScript("OnClick", function (self)
+		if History.xuanzhongID>0 then
+			StaticPopup_Show ("DEL_HISTORYBENCI");
+		end
+	end);
+	StaticPopupDialogs["DEL_HISTORYBENCI"] = {
+		text = "删除此历史记录吗？\n",
+		button1 = "确定",
+		button2 = "取消",
+		OnAccept = function()
+			table.remove(PIGA["RaidRecord"]["History"], History.xuanzhongID);
+			History.xuanzhongID=0
+			RaidR.Update_History()
+		end,
+		timeout = 0,
+		whileDead = true,
+		hideOnEscape = true,
+	}
+	History.nr.tiqu = PIGButton(History.nr,{"LEFT",History.nr.Del,"RIGHT",20,0},{50,20},"提取"); 
+	History.nr.tiqu:SetScript("OnClick", function (self)
+		if History.xuanzhongID>0 then
+			StaticPopup_Show ("TIQU_HISTORYINFO");
+		end
+	end);
+	StaticPopupDialogs["TIQU_HISTORYINFO"] = {
+		text = "提取此历史记录到当前吗？\n\n\124cffff0000当前已有记录将会被覆盖\124r\n\124cffff0000已提取的历史记录将会被删除\124r",
+		button1 = "确定",
+		button2 = "取消",
+		OnAccept = function()
+			local Old_Data = PIGA["RaidRecord"]["History"][History.xuanzhongID];
+			PIGA["RaidRecord"]["instanceName"] =PIGCopyTable(Old_Data.Biaoti)
+			PIGA["RaidRecord"]["ItemList"] =PIGCopyTable(Old_Data.ItemList)
+			PIGA["RaidRecord"]["Raidinfo"] =PIGCopyTable(Old_Data.Players)
+			PIGA["RaidRecord"]["jiangli"] =PIGCopyTable(Old_Data.Jiangli)
+			PIGA["RaidRecord"]["fakuan"] =PIGCopyTable(Old_Data.Fakuan)
+			PIGA["RaidRecord"]["Dongjie"] = true;
+			table.remove(PIGA["RaidRecord"]["History"], History.xuanzhongID);
+			History.xuanzhongID=0
+			RaidR.Show_dangqianName()
+			RaidR:Update_DongjieBUT()
+			RaidR.Update_Item()
+			RaidR.Update_Buzhu_TND()
+			RaidR.Update_Buzhu_QITA()
+			RaidR.Update_Fakuan()
+			RaidR.Update_FenG()
+			RaidR.Update_History()
+		end,
+		timeout = 0,
+		whileDead = true,
+		hideOnEscape = true,
+	}
+	local function HistoryUpdateGinfo()
+		local Old_Data = PIGA["RaidRecord"]["History"][History.xuanzhongID];
+		--物品收入
+		local Wupin_shouru=0;
+		local dataX = Old_Data.ItemList
+		for xx = 1, #dataX do
+			Wupin_shouru=Wupin_shouru+dataX[xx][9]+dataX[xx][14];
+		end
+		History.nr.heji_1V:SetText(Wupin_shouru);
+		--罚款+其他收入
+		local fakuan_shouru=0;
+		local dataX = Old_Data.Fakuan
+		for xx = 1, #dataX do
+			if dataX[xx][3]~="N/A" then
+				fakuan_shouru=fakuan_shouru+dataX[xx][2]+dataX[xx][4];
+			end
+		end
+		History.nr.heji_2V:SetText(fakuan_shouru);
+		--总收入
+		local Zshouru=Wupin_shouru+fakuan_shouru;
+		History.nr.heji_5V:SetText(Zshouru);
+		--补助支出
+		local Buzhu_shouru=0;
+		local dataX = Old_Data.Players
+		for p=1,#dataX do
+			for pp=1,#dataX[p] do
+				if dataX[p][pp][4] then
+					if dataX[p][pp][5] then--百分比补助
+						Buzhu_shouru=Buzhu_shouru+Zshouru*(dataX[p][pp][6]*0.01);
+					else
+						Buzhu_shouru=Buzhu_shouru+dataX[p][pp][6];
+					end
+				end
+			end
+		end
+		History.nr.heji_3V:SetText(Buzhu_shouru);
+		--奖励支出
+		local jiangli_shouru=0;
+		local dataX = Old_Data.Jiangli
+		for xx = 1, #dataX do
+			if dataX[xx][3]~="N/A" then
+				if dataX[xx][4] then--百分比补助
+					jiangli_shouru=jiangli_shouru+Zshouru*(dataX[xx][2]*0.01);
+				else
+					jiangli_shouru=jiangli_shouru+dataX[xx][2]
+				end
+			end
+		end
+		History.nr.heji_4V:SetText(jiangli_shouru);
+		---
+		local Jshouru=Zshouru-Buzhu_shouru-jiangli_shouru;
+		History.nr.heji_6V:SetText(Jshouru);
+		--人数
+		local infoData = Old_Data.Players
+		local Historyrenyuanxinxi= 0
+		for p=1,8 do
+			local duinum = #infoData[p]
+			if duinum>0 then
+				Historyrenyuanxinxi=Historyrenyuanxinxi+duinum
+			end
+		end
+		if Historyrenyuanxinxi>0 then
+			History.nr.heji_7V:SetText(Jshouru/Historyrenyuanxinxi);
+		else
+			History.nr.heji_7V:SetText(0);
+		end
+	end
+	function History.nrgengxin_heji()
+		if History.xuanzhongID>0 then
+			History.nr:Show()
+			HistoryUpdateGinfo()
+		else
+			History.nr:Hide()
+		end
+
+	end
 end

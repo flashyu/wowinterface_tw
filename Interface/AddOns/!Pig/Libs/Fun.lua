@@ -2,6 +2,21 @@ local addonName, addonTable = ...;
 local _, _, _, tocversion = GetBuildInfo()
 local Fun = {}
 -------------
+function PIGCopyTable(OldTable)
+	local function PIGCopyfun(old,new)
+		for k,v in pairs(old) do
+	    	if type(v)=="table" then
+	    		new[k]={}
+	    		PIGCopyfun(v,new[k])
+	    	else
+	    		new[k]=v
+	    	end
+	    end
+	end
+    local NewTable = {}
+    PIGCopyfun(OldTable,NewTable)
+    return NewTable
+end
 function table.removekey(table, key)
     local element = table[key]
     table[key] = nil

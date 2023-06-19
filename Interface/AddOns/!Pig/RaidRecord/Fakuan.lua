@@ -132,6 +132,19 @@ function RaidRFun.RaidRecord_Fakuan()
 		fuji.err:SetText("");
 	end);
 	------
+	local function shiqujiaodian(self,bianji)
+		if bianji then
+			self.V:Hide();
+			self.B:Hide();
+			self.Q:Show();
+			self.E:Show();
+		else
+			self.V:Show();
+			self.B:Show();
+			self.Q:Hide();
+			self.E:Hide();
+		end
+	end
 	fujiF.fakuan.TOPline = PIGLine(fujiF.fakuan,"TOP",-lineTOP)
 	fujiF.fakuan.Scroll = CreateFrame("ScrollFrame",nil,fujiF.fakuan, "FauxScrollFrameTemplate");  
 	fujiF.fakuan.Scroll:SetPoint("TOPLEFT",fujiF.fakuan.TOPline,"BOTTOMLEFT",0,-1);
@@ -159,9 +172,11 @@ function RaidRFun.RaidRecord_Fakuan()
 				fameX.G.E:SetID(dangqian);
 				fameX.G.Q:SetID(dangqian);
 				fameX.G.V:SetText(dataX[dangqian][2])
+				shiqujiaodian(fameX.G)
 				fameX.QKG.E:SetID(dangqian);
 				fameX.QKG.Q:SetID(dangqian);
 				fameX.QKG.V:SetText(dataX[dangqian][4])
+				shiqujiaodian(fameX.QKG)
 				fameX.JiangliRen:SetID(dangqian);
 				local AllName = dataX[dangqian][3]
 				if AllName=="N/A" then
@@ -213,26 +228,13 @@ function RaidRFun.RaidRecord_Fakuan()
 		hang.G.E:SetPoint("RIGHT", hang.G, "RIGHT", 0,0);
 		PIGSetFont(hang.G.E,14,"OUTLINE")
 		hang.G.E:SetMaxLetters(6)
-		hang.G.E:Hide()
+		hang.G.E:SetNumeric(true)
 		hang.G.E:SetScript("OnEscapePressed", function(self) 
-			self:ClearFocus() 
+			shiqujiaodian(self:GetParent())
 		end);
 		hang.G.E:SetScript("OnEnterPressed", function(self)
-			local shangjiF=self:GetParent()
-			shangjiF.E:Hide();
-			shangjiF.Q:Hide();
-			shangjiF.V:Show();
-			shangjiF.B:Show();
-	 		local dataX = PIGA["RaidRecord"]["fakuan"][self:GetID()]
-	 		dataX[2]=self:GetNumber()
+	 		PIGA["RaidRecord"]["fakuan"][self:GetID()][2]=self:GetNumber()
 			RaidR.Update_Fakuan()
-		end);
-		hang.G.E:SetScript("OnEditFocusLost", function(self)
-			local shangjiF=self:GetParent()
-			shangjiF.V:Show();
-			shangjiF.B:Show();
-			shangjiF.E:Hide();
-			shangjiF.Q:Hide()
 		end);
 		hang.G.B = CreateFrame("Button",nil,hang.G, "TruncatedButtonTemplate");
 		hang.G.B:SetHighlightTexture("interface/buttons/ui-common-mousehilight.blp");
@@ -249,14 +251,12 @@ function RaidRFun.RaidRecord_Fakuan()
 			self.Texture:SetPoint("CENTER");
 		end);
 		hang.G.B:SetScript("OnClick", function (self)
-			for xx=1,hang_NUM do
-				_G["fakuan_hang_"..id].G.E:ClearFocus() 
+			for qq=1,hang_NUM do
+				shiqujiaodian(_G["fakuan_hang_"..qq].G)
+				shiqujiaodian(_G["fakuan_hang_"..qq].QKG)
 			end
 			local shangjiF=self:GetParent()
-			shangjiF.V:Hide();
-			shangjiF.B:Hide();
-			shangjiF.E:Show();
-			shangjiF.Q:Show();
+			shiqujiaodian(shangjiF,true)
 			shangjiF.E:SetText(shangjiF.V:GetText());
 		end);
 		hang.G.Q = PIGButton(hang.G, {"LEFT", hang.G, "RIGHT", 1,0},{36,20},"确定");
@@ -264,12 +264,7 @@ function RaidRFun.RaidRecord_Fakuan()
 		hang.G.Q:Hide();
 		hang.G.Q:SetScript("OnClick", function (self)
 			local shangjiF=self:GetParent()
-			shangjiF.E:Hide();
-			shangjiF.Q:Hide();
-			shangjiF.V:Show();
-			shangjiF.B:Show();
-	 		local dataX = PIGA["RaidRecord"]["fakuan"][self:GetID()]
-	 		dataX[2]=shangjiF.E:GetNumber()
+	 		PIGA["RaidRecord"]["fakuan"][self:GetID()][2]=shangjiF.E:GetNumber()
 			RaidR.Update_Fakuan()
 		end);
 		--欠款
@@ -285,26 +280,13 @@ function RaidRFun.RaidRecord_Fakuan()
 		hang.QKG.E:SetPoint("RIGHT", hang.QKG, "RIGHT", 0,0);
 		PIGSetFont(hang.QKG.E,14,"OUTLINE")
 		hang.QKG.E:SetMaxLetters(6)
-		hang.QKG.E:Hide()
+		hang.QKG.E:SetNumeric(true)
 		hang.QKG.E:SetScript("OnEscapePressed", function(self) 
-			self:ClearFocus() 
+			shiqujiaodian(self:GetParent())
 		end);
 		hang.QKG.E:SetScript("OnEnterPressed", function(self)
-			local shangjiF=self:GetParent()
-			shangjiF.E:Hide();
-			shangjiF.Q:Hide();
-			shangjiF.V:Show();
-			shangjiF.B:Show();
-	 		local dataX = PIGA["RaidRecord"]["fakuan"][self:GetID()]
-	 		dataX[4]=self:GetNumber()
+	 		PIGA["RaidRecord"]["fakuan"][self:GetID()][4]=self:GetNumber()
 			RaidR.Update_Fakuan()
-		end);
-		hang.QKG.E:SetScript("OnEditFocusLost", function(self)
-			local shangjiF=self:GetParent()
-			shangjiF.V:Show();
-			shangjiF.B:Show();
-			shangjiF.E:Hide();
-			shangjiF.Q:Hide()
 		end);
 		hang.QKG.B = CreateFrame("Button",nil,hang.QKG, "TruncatedButtonTemplate");
 		hang.QKG.B:SetHighlightTexture("interface/buttons/ui-common-mousehilight.blp");
@@ -321,14 +303,12 @@ function RaidRFun.RaidRecord_Fakuan()
 			self.Texture:SetPoint("CENTER");
 		end);
 		hang.QKG.B:SetScript("OnClick", function (self)
-			for xx=1,hang_NUM do
-				_G["fakuan_hang_"..id].G.E:ClearFocus() 
+			for qq=1,hang_NUM do
+				shiqujiaodian(_G["fakuan_hang_"..qq].G)
+				shiqujiaodian(_G["fakuan_hang_"..qq].QKG)
 			end
 			local shangjiF=self:GetParent()
-			shangjiF.V:Hide();
-			shangjiF.B:Hide();
-			shangjiF.E:Show();
-			shangjiF.Q:Show();
+			shiqujiaodian(shangjiF,true)
 			shangjiF.E:SetText(shangjiF.V:GetText());
 		end);
 		hang.QKG.Q = PIGButton(hang.QKG, {"LEFT", hang.QKG, "RIGHT", 1,0},{36,20},"确定");
@@ -336,19 +316,15 @@ function RaidRFun.RaidRecord_Fakuan()
 		hang.QKG.Q:Hide();
 		hang.QKG.Q:SetScript("OnClick", function (self)
 			local shangjiF=self:GetParent()
-			shangjiF.E:Hide();
-			shangjiF.Q:Hide();
-			shangjiF.V:Show();
-			shangjiF.B:Show();
-	 		local dataX = PIGA["RaidRecord"]["fakuan"][self:GetID()]
-	 		dataX[4]=shangjiF.E:GetNumber()
+	 		PIGA["RaidRecord"]["fakuan"][self:GetID()][4]=shangjiF.E:GetNumber()
 			RaidR.Update_Fakuan()
 		end);
 		hang.JiangliRen = CreateFrame("Button", nil, hang, "TruncatedButtonTemplate");
 		hang.JiangliRen:SetHighlightTexture("interface/paperdollinfoframe/ui-character-tab-highlight.blp");
-		hang.JiangliRen:SetSize(110,hang_Height);
+		hang.JiangliRen:SetSize(118,hang_Height);
 		hang.JiangliRen:SetPoint("LEFT", hang, "LEFT", fakuanbiaoti[4][2]-20,0);
 		PIGSetFont(hang.JiangliRen.Text,14,"OUTLINE")
+		hang.JiangliRen.Text:SetJustifyH("LEFT")
 		hang.JiangliRen.Text:SetTextColor(0,1,0, 1);
 		hang.JiangliRen:SetScript("OnClick", function (self)
 			if RaidR.PlayerList:IsShown() then

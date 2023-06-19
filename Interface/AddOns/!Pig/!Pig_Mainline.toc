@@ -10,7 +10,7 @@
 ## AddonCompartmentFuncOnEnter: PIGCompartmentEnter
 ## AddonCompartmentFuncOnLeave: PIGCompartmentLeave
 ## Author: geligasi
-## Version: 6.0.7
+## Version: 6.0.9
 ## SavedVariables: PIGA
 ## SavedVariablesPerCharacter: PIG_PerA
 Localization\Localization.xml

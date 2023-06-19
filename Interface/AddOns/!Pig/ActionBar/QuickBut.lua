@@ -252,8 +252,7 @@ function QuickButUI:Lushi()
 			General:SetAttribute("item", lushiName);
 			gengxinlushiCD()
 			local Skill_List = addonTable.FramePlusfun.Skill_List
-			local Skill_List = addonTable.FramePlusfun.Skill_List
-			if tocversion>90000 then
+			if tocversion>80000 then
 				for x=1, #Skill_List do
 					for _, i in pairs{GetProfessions()} do
 						local offset, numSlots = select(3, GetSpellTabInfo(i))

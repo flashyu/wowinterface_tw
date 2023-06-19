@@ -32,8 +32,7 @@ function RaidRFun.RaidRecord_Buzhu()
 	fujiF.line = PIGLine(fujiF,"C",-3)
 	local zhizeIcon=RaidRFun.zhizeIcon
 	local LeftmenuV=RaidRFun.LeftmenuV
-	local buzhuzhize = {TANK,HEALS,DAMAGE}
-	RaidRFun.buzhuzhize=buzhuzhize
+	local buzhuzhize = RaidRFun.buzhuzhize
 	local buzhuName = buzhuzhize[1].."/"..buzhuzhize[2].."/"..buzhuzhize[3]
 	local guolvlist = {{"全部","all"},{buzhuzhize[1],LeftmenuV[1]},{buzhuzhize[2],LeftmenuV[2]},{buzhuzhize[3],LeftmenuV[3]}} 
 	fujiF.buzhu_TND = PIGFrame(fujiF,{"TOPLEFT",fujiF,"TOPLEFT",0,0});  
@@ -103,6 +102,19 @@ function RaidRFun.RaidRecord_Buzhu()
 	fujiF.buzhu_TND.hejiV = PIGFontString(fujiF.buzhu_TND,{"LEFT", buzhu_TND_biaoti_1, "RIGHT", 4,0},0);
 	fujiF.buzhu_TND.hejiV:SetTextColor(1, 1, 1, 1)
 
+	local function shiqujiaodian(self,bianji)
+		if bianji then
+			self.V:Hide();
+			self.B:Hide();
+			self.Q:Show();
+			self.E:Show();
+		else
+			self.V:Show();
+			self.B:Show();
+			self.Q:Hide();
+			self.E:Hide();
+		end
+	end
 	fujiF.buzhu_TND.TOPline = PIGLine(fujiF.buzhu_TND,"TOP",-lineTOP)
 	fujiF.buzhu_TND.Scroll = CreateFrame("ScrollFrame",nil,fujiF.buzhu_TND, "FauxScrollFrameTemplate");  
 	fujiF.buzhu_TND.Scroll:SetPoint("TOPLEFT",fujiF.buzhu_TND.TOPline,"BOTTOMLEFT",0,-1);
@@ -174,6 +186,7 @@ function RaidRFun.RaidRecord_Buzhu()
 					fameX.fenGleixing:SetText("固定值")
 					fameX.fenGleixing.Text:SetTextColor(0, 1, 0, 1);
 				end
+				shiqujiaodian(fameX.G)
 				fameX.G.V:SetText(buzhutiquxinxi[dangqian][6]);
 			end
 		end
@@ -231,16 +244,12 @@ function RaidRFun.RaidRecord_Buzhu()
 		hang.G.E:SetPoint("RIGHT", hang.G, "RIGHT", 0,0);
 		PIGSetFont(hang.G.E,14,"OUTLINE")
 		hang.G.E:SetMaxLetters(6)
-		hang.G.E:Hide()
+		hang.G.E:SetNumeric(true)
 		hang.G.E:SetScript("OnEscapePressed", function(self) 
-			self:ClearFocus() 
+			shiqujiaodian(self:GetParent())
 		end);
 		hang.G.E:SetScript("OnEnterPressed", function(self)
 			local shangjiF=self:GetParent()
-			shangjiF.E:Hide();
-			shangjiF.Q:Hide();
-			shangjiF.V:Show();
-			shangjiF.B:Show();
 	 		local BuzhuNewV=self:GetNumber();
 	 		shangjiF.V:SetText(BuzhuNewV);
 	 		local shangjiFF=shangjiF:GetParent()
@@ -254,13 +263,6 @@ function RaidRFun.RaidRecord_Buzhu()
 				end
 			end
 			RaidR.Update_Buzhu_TND()
-		end);
-		hang.G.E:SetScript("OnEditFocusLost", function(self)
-			local shangjiF=self:GetParent()
-			shangjiF.V:Show();
-			shangjiF.B:Show();
-			shangjiF.E:Hide();
-			shangjiF.Q:Hide()
 		end);
 		hang.G.B = CreateFrame("Button",nil,hang.G, "TruncatedButtonTemplate");
 		hang.G.B:SetHighlightTexture("interface/buttons/ui-common-mousehilight.blp");
@@ -278,13 +280,10 @@ function RaidRFun.RaidRecord_Buzhu()
 		end);
 		hang.G.B:SetScript("OnClick", function (self)
 			for xx=1,hang_NUM do
-				_G["BZbuzhuhang_"..id].G.E:ClearFocus() 
+				shiqujiaodian(_G["BZbuzhuhang_"..xx].G)
 			end
 			local shangjiF=self:GetParent()
-			shangjiF.V:Hide();
-			shangjiF.B:Hide();
-			shangjiF.E:Show();
-			shangjiF.Q:Show();
+			shiqujiaodian(shangjiF,true)
 			shangjiF.E:SetText(shangjiF.V:GetText());
 		end);
 		hang.G.Q = PIGButton(hang.G, {"LEFT", hang.G, "RIGHT", 1,0},{36,20},"确定");
@@ -292,10 +291,6 @@ function RaidRFun.RaidRecord_Buzhu()
 		hang.G.Q:Hide();
 		hang.G.Q:SetScript("OnClick", function (self)
 			local shangjiF=self:GetParent()
-			shangjiF.E:Hide();
-			shangjiF.Q:Hide();
-			shangjiF.V:Show();
-			shangjiF.B:Show();
 	 		local BuzhuNewV=shangjiF.E:GetNumber();
 	 		shangjiF.V:SetText(BuzhuNewV);
 	 		local shangjiFF=shangjiF:GetParent()
@@ -544,6 +539,7 @@ function RaidRFun.RaidRecord_Buzhu()
 					fameX.fenGleixing:SetText("固定值")
 					fameX.fenGleixing.Text:SetTextColor(0, 1, 0, 1);
 				end
+				shiqujiaodian(fameX.G)
 				fameX.G.E:SetID(dangqian);
 				fameX.G.Q:SetID(dangqian);
 				fameX.G.V:SetText(dataX[dangqian][2])
@@ -613,26 +609,13 @@ function RaidRFun.RaidRecord_Buzhu()
 		hang.G.E:SetPoint("RIGHT", hang.G, "RIGHT", 0,0);
 		PIGSetFont(hang.G.E,14,"OUTLINE")
 		hang.G.E:SetMaxLetters(6)
-		hang.G.E:Hide()
+		hang.G.E:SetNumeric(true)
 		hang.G.E:SetScript("OnEscapePressed", function(self) 
-			self:ClearFocus() 
+			shiqujiaodian(self:GetParent())
 		end);
 		hang.G.E:SetScript("OnEnterPressed", function(self)
-			local shangjiF=self:GetParent()
-			shangjiF.E:Hide();
-			shangjiF.Q:Hide();
-			shangjiF.V:Show();
-			shangjiF.B:Show();
-	 		local dataX = PIGA["RaidRecord"]["jiangli"][self:GetID()]
-	 		dataX[2]=self:GetNumber()
+	 		PIGA["RaidRecord"]["jiangli"][self:GetID()][2]=self:GetNumber()
 			RaidR.Update_Buzhu_QITA()
-		end);
-		hang.G.E:SetScript("OnEditFocusLost", function(self)
-			local shangjiF=self:GetParent()
-			shangjiF.V:Show();
-			shangjiF.B:Show();
-			shangjiF.E:Hide();
-			shangjiF.Q:Hide()
 		end);
 		hang.G.B = CreateFrame("Button",nil,hang.G, "TruncatedButtonTemplate");
 		hang.G.B:SetHighlightTexture("interface/buttons/ui-common-mousehilight.blp");
@@ -650,13 +633,10 @@ function RaidRFun.RaidRecord_Buzhu()
 		end);
 		hang.G.B:SetScript("OnClick", function (self)
 			for xx=1,hang_NUM do
-				_G["QTfakuanhang_"..id].G.E:ClearFocus() 
+				shiqujiaodian(_G["QTfakuanhang_"..xx].G)
 			end
 			local shangjiF=self:GetParent()
-			shangjiF.V:Hide();
-			shangjiF.B:Hide();
-			shangjiF.E:Show();
-			shangjiF.Q:Show();
+			shiqujiaodian(shangjiF,true)
 			shangjiF.E:SetText(shangjiF.V:GetText());
 		end);
 		hang.G.Q = PIGButton(hang.G, {"LEFT", hang.G, "RIGHT", 1,0},{36,20},"确定");
@@ -664,19 +644,15 @@ function RaidRFun.RaidRecord_Buzhu()
 		hang.G.Q:Hide();
 		hang.G.Q:SetScript("OnClick", function (self)
 			local shangjiF=self:GetParent()
-			shangjiF.E:Hide();
-			shangjiF.Q:Hide();
-			shangjiF.V:Show();
-			shangjiF.B:Show();
-	 		local dataX = PIGA["RaidRecord"]["jiangli"][self:GetID()]
-	 		dataX[2]=shangjiF.E:GetNumber()
+	 		PIGA["RaidRecord"]["jiangli"][self:GetID()][2]=shangjiF.E:GetNumber()
 			RaidR.Update_Buzhu_QITA()
 		end);
 		hang.JiangliRen = CreateFrame("Button", nil, hang, "TruncatedButtonTemplate");
 		hang.JiangliRen:SetHighlightTexture("interface/paperdollinfoframe/ui-character-tab-highlight.blp");
-		hang.JiangliRen:SetSize(110,hang_Height);
-		hang.JiangliRen:SetPoint("RIGHT", hang, "RIGHT", 0,0);
+		hang.JiangliRen:SetSize(118,hang_Height);
+		hang.JiangliRen:SetPoint("RIGHT", hang, "RIGHT", 6,0);
 		PIGSetFont(hang.JiangliRen.Text,14,"OUTLINE")
+		hang.JiangliRen.Text:SetJustifyH("LEFT")
 		hang.JiangliRen.Text:SetTextColor(0,1,0, 1);
 		hang.JiangliRen:SetScript("OnClick", function (self)
 			if RaidR.PlayerList:IsShown() then

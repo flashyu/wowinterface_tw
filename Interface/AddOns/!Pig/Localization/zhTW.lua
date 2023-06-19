@@ -22,9 +22,11 @@ L["LIB_FREE"] = "免費;";
 L["LIB_MACROERR"] = "你的宏數量已達最大值120，請删除一些再嘗試";
 L["LIB_YES"] = "是";
 L["LIB_NO"] = "否";
-L["LIB_ENT"] = "確定";
-L["LIB_CEL"] = "取消";
+L["LIB_ENT"] = OKAY;
+L["LIB_CEL"] = CANCEL;
 L["LIB_TIPS"] = "提示：";
+L["LIB_LEFTCLICK"] = "左鍵";
+L["LIB_RIGHTCLICK"] = "右鍵";
 --OptionsUI
 L["OPTUI_SET"] = "設定";
 L["OPTUI_RLUI"] = "重載UI";
@@ -106,6 +108,13 @@ L["COMMON_TABNAME3"] = "智能跟隨";
 L["COMMON_TABNAME4"] = "其他";
 --Chat
 L["CHAT_TABNAME"] = "聊天";
+L["CHAT_WHISPER"] = "密語";
+L["CHAT_JILU"] = "記錄";
+L["CHAT_JILUTIME"]={"一周","一月","半年","一年"}
+L["CHAT_JILUTISHI"]="點擊上方頻道標籤瀏覽聊天記錄";
+L["CHAT_JILUTDEL"]="確定要清空%s聊天記錄嗎？";
+L["CHAT_WHISPERTIXING"]="新"..L["CHAT_WHISPER"].."提醒"
+L["CHAT_WHISPERTIXINGTOP"]="收到"..L["CHAT_WHISPER"].."時頻道切換按鈕裡面圖標會閃動"
 L["CHAT_TABNAME1"] = L["COMMON_TABNAME"];
 L["CHAT_QUKBUT"] = "快捷切換頻道按鈕";
 L["CHAT_QUKBUTTIPS"]="在聊天欄增加一排頻道快捷切換按鈕，可快速切換頻道"

@@ -161,6 +161,19 @@ function RaidRFun.RaidRecord_Item()
 	fujiF.biaotiline = PIGLine(fujiF,"TOP",-lineTOP)
 	fujiF.yedibuF = PIGLine(fujiF,"BOT",lineTOP)
 	--物品显示目录======
+	local function shiqujiaodian(self,bianji)
+		if bianji then
+			self.G:Hide();
+			self.bianji:Hide();
+			self.baocun:Show();
+			self.E:Show();
+		else
+			self.G:Show();
+			self.bianji:Show();
+			self.baocun:Hide();
+			self.E:Hide();
+		end
+	end
 	function RaidR.Update_Item()
 		local gundongF = fujiF.ItemNR.Scroll
 		if not fujiF:IsVisible() then return end
@@ -226,17 +239,13 @@ function RaidRFun.RaidRecord_Item()
 					Itemf.chengjiao.bianji:SetID(LOOT_dangqian);
 					Itemf.chengjiao.baocun:SetID(LOOT_dangqian);
 					Itemf.chengjiao.G:SetText(dangqianItem[9]);
-					Itemf.chengjiao.E:Hide();
-					Itemf.chengjiao.bianji:Show();
-					Itemf.chengjiao.baocun:Hide();
+					shiqujiaodian(Itemf.chengjiao)
 
 					Itemf.Qiankuan.E:SetID(LOOT_dangqian);
 					Itemf.Qiankuan.bianji:SetID(LOOT_dangqian);
 					Itemf.Qiankuan.baocun:SetID(LOOT_dangqian);
 					Itemf.Qiankuan.G:SetText(dangqianItem[14]);
-					Itemf.Qiankuan.E:Hide();
-					Itemf.Qiankuan.bianji:Show();
-					Itemf.Qiankuan.baocun:Hide();
+					shiqujiaodian(Itemf.Qiankuan)
 
 					Itemf.ChengjiaoRen:SetID(LOOT_dangqian);
 					local AllName = dangqianItem[8]
@@ -252,11 +261,8 @@ function RaidRFun.RaidRecord_Item()
 					end
 					-- local color = RAID_CLASS_COLORS[zhiyecc]
 					-- Itemf.ChengjiaoRen:SetTextColor(color.r, color.g, color.b,1);
-					
 					Itemf.del:SetID(LOOT_dangqian);
-
 					Itemf.time:SetText("\124cff00ffFF"..LOOT_dangqian.."\124r  "..date("%m-%d %H:%M",dangqianItem[1]));
-					--Itemf.time:Show()
 				end
 			end
 		end
@@ -392,21 +398,12 @@ function RaidRFun.RaidRecord_Item()
 		hang.chengjiao.E:SetNumeric(true)
 		--hang.chengjiao.E:SetAutoFocus(false)
 		hang.chengjiao.E:SetScript("OnEscapePressed", function(self) 
-			self:ClearFocus() 
+			shiqujiaodian(self:GetParent())
 		end);
-		hang.chengjiao.E:SetScript("OnEnterPressed", function(self) 
+		hang.chengjiao.E:SetScript("OnEnterPressed", function(self)
 	 		local NWEdanjiaV=self:GetNumber();
-	 		local NewSELF=self:GetParent()
-	 		NewSELF.G:SetText(NWEdanjiaV);
 			PIGA["RaidRecord"]["ItemList"][self:GetID()][9]=NWEdanjiaV;
 			RaidR.Update_Item();
-		end);
-		hang.chengjiao.E:SetScript("OnEditFocusLost", function(self)
-			local NewSELF=self:GetParent()
-			NewSELF.G:Show();
-			NewSELF.bianji:Show();
-			NewSELF.baocun:Hide();
-			self:Hide();
 		end);
 		hang.chengjiao.bianji = CreateFrame("Button",nil,hang.chengjiao, "TruncatedButtonTemplate");
 		hang.chengjiao.bianji:SetHighlightTexture("interface/buttons/ui-common-mousehilight.blp");
@@ -425,21 +422,18 @@ function RaidRFun.RaidRecord_Item()
 		hang.chengjiao.bianji:SetScript("OnClick", function (self)
 			local NewSELF=self:GetParent()
 			for qq=1,hang_NUM do
-				_G["RaidRItem_"..qq].chengjiao.E:ClearFocus();
-				_G["RaidRItem_"..qq].Qiankuan.E:ClearFocus()
+				shiqujiaodian(_G["RaidRItem_"..qq].chengjiao)
+				shiqujiaodian(_G["RaidRItem_"..qq].Qiankuan)
 			end
-			NewSELF.G:Hide();
-			NewSELF.bianji:Hide();
-			NewSELF.baocun:Show();
-			NewSELF.E:Show();
+			shiqujiaodian(NewSELF,true)
 	 		NewSELF.E:SetText(PIGA["RaidRecord"]["ItemList"][self:GetID()][9]);
 		end);
 		hang.chengjiao.baocun = PIGButton(hang.chengjiao,{"LEFT", hang.chengjiao, "RIGHT", 2,0},{hang_Height,hang_Height-12},"保存");
 		hang.chengjiao.baocun:Hide();
 		hang.chengjiao.baocun:SetScale(0.88)
 		hang.chengjiao.baocun:SetScript("OnClick", function (self)
-	 		local NWEdanjiaV=_G["RaidRItem_"..id].chengjiao.E:GetNumber();
-	 		_G["RaidRItem_"..id].chengjiao.G:SetText(NWEdanjiaV);
+			local NewSELF=self:GetParent()
+	 		local NWEdanjiaV=NewSELF.E:GetNumber();
 			PIGA["RaidRecord"]["ItemList"][self:GetID()][9]=NWEdanjiaV;
 			RaidR.Update_Item();
 		end);
@@ -458,21 +452,11 @@ function RaidRFun.RaidRecord_Item()
 		hang.Qiankuan.E:SetNumeric(true)
 		--hang.Qiankuan.E:SetAutoFocus(false)
 		hang.Qiankuan.E:SetScript("OnEscapePressed", function(self) 
-			self:ClearFocus() 
+			shiqujiaodian(self:GetParent())
 		end);
 		hang.Qiankuan.E:SetScript("OnEnterPressed", function(self) 
-			local NWEdanjiaV=self:GetNumber();
-	 		local NewSELF=self:GetParent()
-	 		NewSELF.G:SetText(NWEdanjiaV);
-			PIGA["RaidRecord"]["ItemList"][self:GetID()][14]=NWEdanjiaV;
+			PIGA["RaidRecord"]["ItemList"][self:GetID()][14]=self:GetNumber();
 			RaidR.Update_Item();
-		end);
-		hang.Qiankuan.E:SetScript("OnEditFocusLost", function(self)
-			local NewSELF=self:GetParent()
-			NewSELF.G:Show();
-			NewSELF.bianji:Show();
-			NewSELF.baocun:Hide();
-			self:Hide();
 		end);
 		hang.Qiankuan.bianji = CreateFrame("Button",nil,hang.Qiankuan, "TruncatedButtonTemplate");
 		hang.Qiankuan.bianji:SetHighlightTexture("interface/buttons/ui-common-mousehilight.blp");
@@ -491,30 +475,28 @@ function RaidRFun.RaidRecord_Item()
 		hang.Qiankuan.bianji:SetScript("OnClick", function (self)
 			local NewSELF=self:GetParent()
 			for qq=1,hang_NUM do
-				_G["RaidRItem_"..qq].chengjiao.E:ClearFocus();
-				_G["RaidRItem_"..qq].Qiankuan.E:ClearFocus()
+				shiqujiaodian(_G["RaidRItem_"..qq].chengjiao)
+				shiqujiaodian(_G["RaidRItem_"..qq].Qiankuan)
 			end
-			NewSELF.G:Hide();
-			NewSELF.bianji:Hide();
-			NewSELF.baocun:Show();
-			NewSELF.E:Show();
+			shiqujiaodian(NewSELF,true)
 	 		NewSELF.E:SetText(PIGA["RaidRecord"]["ItemList"][self:GetID()][14]);
 		end);
 		hang.Qiankuan.baocun = PIGButton(hang.Qiankuan,{"LEFT", hang.Qiankuan, "RIGHT", 2,0},{hang_Height,hang_Height-12},"保存");
 		hang.Qiankuan.baocun:Hide();
 		hang.Qiankuan.baocun:SetScale(0.88)
 		hang.Qiankuan.baocun:SetScript("OnClick", function (self)
-			local NWEdanjiaV=_G["RaidRItem_"..id].Qiankuan.E:GetNumber();
-	 		_G["RaidRItem_"..id].Qiankuan.G:SetText(NWEdanjiaV);
+			local NewSELF=self:GetParent()
+			local NWEdanjiaV=NewSELF.E:GetNumber();
 			PIGA["RaidRecord"]["ItemList"][self:GetID()][14]=NWEdanjiaV;
 			RaidR.Update_Item();
 		end);
 
 		hang.ChengjiaoRen = CreateFrame("Button", nil, hang, "TruncatedButtonTemplate");
 		hang.ChengjiaoRen:SetHighlightTexture("interface/paperdollinfoframe/ui-character-tab-highlight.blp");
-		hang.ChengjiaoRen:SetSize(110,hang_Height);
+		hang.ChengjiaoRen:SetSize(118,hang_Height);
 		hang.ChengjiaoRen:SetPoint("LEFT", hang, "LEFT", biaotiList[5][2]-6,0);
 		PIGSetFont(hang.ChengjiaoRen.Text,14,"OUTLINE")
+		hang.ChengjiaoRen.Text:SetJustifyH("LEFT")
 		hang.ChengjiaoRen.Text:SetTextColor(0,1,0, 1);
 		hang.ChengjiaoRen:SetScript("OnClick", function (self)
 			if RaidR.PlayerList:IsShown() then

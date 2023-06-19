@@ -97,7 +97,7 @@ local function Gensui_B_Vanilla(Booleans,AutoFollowF)
 		gensuiB_UI_tishi:Show()
 		if Gensui_B_CMD_UI then Gensui_B_CMD_UI:Disable() end
 		if PIGA["QuickFollow"]["Yijiao"] and IsInGroup() then
-			SendChatMessage("[!Pig] 已开启自动移交队长,收到"..SLASH_TEXTTOSPEECH_WHISPER.."内容为“队长”将自动移交队长", "PARTY", nil);
+			SendChatMessage("[!Pig] 已开启自动移交队长,收到"..L["CHAT_WHISPER"].."内容为“队长”将自动移交队长", "PARTY", nil);
 		end
 		kaishiMsg()
 	else

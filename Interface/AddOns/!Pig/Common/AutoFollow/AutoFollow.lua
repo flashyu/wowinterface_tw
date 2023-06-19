@@ -133,7 +133,7 @@ AutoFollowF.gensuijiuwei:HookScript("OnClick", function (self)
 		PIGA["QuickFollow"]["Jiuwei"]=false;
 	end
 end);
-AutoFollowF.yijiaoduizhang=PIGCheckbutton(AutoFollowF,{"TOPLEFT",AutoFollowF,"TOPLEFT",300,-60},{"跟随时自动移交队长/团长","开启后，跟随时收到"..SLASH_TEXTTOSPEECH_WHISPER.."内容为[队长]/[团长]，将自动移交队长/团长给对方"})
+AutoFollowF.yijiaoduizhang=PIGCheckbutton(AutoFollowF,{"TOPLEFT",AutoFollowF,"TOPLEFT",300,-60},{"跟随时自动移交队长/团长","开启后，跟随时收到"..L["CHAT_WHISPER"].."内容为[队长]/[团长]，将自动移交队长/团长给对方"})
 AutoFollowF.yijiaoduizhang:HookScript("OnClick", function (self)
 	if self:GetChecked() then
 		PIGA["QuickFollow"]["Yijiao"]=true;
@@ -142,7 +142,7 @@ AutoFollowF.yijiaoduizhang:HookScript("OnClick", function (self)
 	end
 end);
 --提示
-AutoFollowF.GensuiTishi=PIGCheckbutton(AutoFollowF,{"TOPLEFT",AutoFollowF,"TOPLEFT",300,-20},{"开始和停止跟随提示","开启后，开始和停止跟随会在队伍频道/"..SLASH_TEXTTOSPEECH_WHISPER.."提示"})
+AutoFollowF.GensuiTishi=PIGCheckbutton(AutoFollowF,{"TOPLEFT",AutoFollowF,"TOPLEFT",300,-20},{"开始和停止跟随提示","开启后，开始和停止跟随会在队伍频道/"..L["CHAT_WHISPER"].."提示"})
 AutoFollowF.GensuiTishi:HookScript("OnClick", function (self)
 	if self:GetChecked() then
 		PIGA["QuickFollow"]["Tishi"]=true;
@@ -191,7 +191,7 @@ end
 
 AutoFollowF.gensuiF.ST_B_t = PIGFontString(AutoFollowF.gensuiF,{"TOPLEFT", AutoFollowF.gensuiF, "TOPLEFT", 10, -10})
 if tocversion<20000 then
-	AutoFollowF.gensuiF.ST_B_t:SetText("|cff00FFFF被动跟随设置|r(收到队友指定发言或"..SLASH_TEXTTOSPEECH_WHISPER.."将自动跟随对方)");
+	AutoFollowF.gensuiF.ST_B_t:SetText("|cff00FFFF被动跟随设置|r(收到队友指定发言或"..L["CHAT_WHISPER"].."将自动跟随对方)");
 else
 	AutoFollowF.gensuiF.ST_B_t:SetText("|cff00FFFF跟随宏|r(根据队友发言指令切换宏命令内的跟随目标)");
 end

@@ -6,31 +6,68 @@ local Update_State=ActionBarfun.Update_State
 -----------------------
 local butW = ActionButton1:GetWidth()
 local Width,Height = butW,butW;
-local Skill_List = {"烹饪", "急救", "裁缝", "熔炼", "采矿技能","采矿日志","草药学日志", "工程学", "锻造", "附魔", "制皮", "炼金术","珠宝加工","铭文","符文熔铸"};
+--
+local CS_Skill_List = {
+	746,--急救
+	2018,--锻造
+	2108,--制皮
+	2259,--炼金术
+	2550,--烹饪
+	2656,--采矿日志
+	3908,--裁缝
+	4036,--工程学
+	7411,--附魔
+	25229,--珠宝加工
+	45357,--铭文
+	53428,--符文熔铸
+	61422,--熔炼
+	193290,--草药学日志
+};
+if tocversion<30000 then
+	table.insert(CS_Skill_List,2842)--毒药
+end
+local CS_Skill_List_1 = {
+	818,--"基础营火/烹饪用火",
+	13262,--"分解",
+	31252,--"选矿",
+	2366,--"采集草药",
+};
+if tocversion<80000 then
+	table.insert(CS_Skill_List,2575)--采矿
+else
+	table.insert(CS_Skill_List_1,2575)--采矿
+end
+local Skill_List={}
+for i=1,#CS_Skill_List do
+	local Skillname= GetSpellInfo(CS_Skill_List[i])
+	if Skillname then
+		table.insert(Skill_List,Skillname)
+	end
+end
+local Skill_List_1 = {}
+for i=1,#CS_Skill_List_1 do
+	local Skillname= GetSpellInfo(CS_Skill_List_1[i])
+	if Skillname then
+		table.insert(Skill_List_1,Skillname)
+	end
+end
 FramePlusfun.Skill_List=Skill_List
-local Skill_List_1 = {"基础营火","烹饪用火","分解","选矿"};
-local Skill_jichuID={
-	["急救"]=129,["锻造"]=164,["制皮"]=165,["炼金术"]=171,["草药学"]=182,["草药学日志"]=182,
-	["烹饪"]=185,["采矿"]=186,["采矿技能"]=186,["采矿日志"]=2656,["裁缝"]=197,["工程学"]=202,["附魔"]=333,
-	["钓鱼"]=356,["剥皮"]=393,["珠宝加工"]=755,["铭文"]=773,["考古学"]=794,
-}
 local Skill_List_NEW = {{},{}};
 local function huoqu_Skill_ID()
 	if #Skill_List_NEW[1]>0 then return end
-	if tocversion>90000 then
+	if tocversion>80000 then
 		for _, i in pairs{GetProfessions()} do
 			local offset, numSlots = select(3, GetSpellTabInfo(i))
 			for j = offset+1, offset+numSlots do
 				local spellName, xxsx, spellID=GetSpellBookItemName(j, BOOKTYPE_SPELL)
-				--print(spellName,spellID)
 				for x=1, #Skill_List do
 					if spellName==Skill_List[x] then
-						table.insert(Skill_List_NEW[1],{spellID,Skill_jichuID[spellName]})
+						table.insert(Skill_List_NEW[1],{spellID,spellName})
 					end
 				end
 				for x=1, #Skill_List_1 do
 					if spellName==Skill_List_1[x] then
-						table.insert(Skill_List_NEW[2],{spellID,Skill_jichuID[spellName]})
+						table.insert(Skill_List_NEW[2],{spellID,spellName})
 					end
 				end
 			end
@@ -41,12 +78,12 @@ local function huoqu_Skill_ID()
 			local spellName, _ ,spellID=GetSpellBookItemName(j, BOOKTYPE_SPELL)
 			for x=1, #Skill_List do
 				if spellName==Skill_List[x] then
-					table.insert(Skill_List_NEW[1],{spellID,Skill_jichuID[spellName]})
+					table.insert(Skill_List_NEW[1],{spellID,spellName})
 				end
 			end
 			for x=1, #Skill_List_1 do
 				if spellName==Skill_List_1[x] then
-					table.insert(Skill_List_NEW[2],{spellID,Skill_jichuID[spellName]})
+					table.insert(Skill_List_NEW[2],{spellID,spellName})
 				end
 			end
 		end
