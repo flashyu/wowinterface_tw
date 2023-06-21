@@ -1,0 +1,56 @@
+
+HandyNotes_NPCsClassicDB = {
+	["char"] = {
+		["狂暴專家 - 伊弗斯"] = {
+			["learned"] = {
+				["棘齿城，贫瘠之地"] = true,
+				["瓦罗莫克，艾萨拉"] = true,
+				["奥格瑞玛，杜隆塔尔"] = true,
+				["泥链镇，尘泥沼泽"] = true,
+				["烈日石居，石爪山"] = true,
+				["加基森，塔纳利斯"] = true,
+				["雷霆崖，莫高雷"] = true,
+				["塞纳里奥要塞，希利苏斯"] = true,
+				["血毒河，费伍德森林"] = true,
+				["陶拉祖营地，贫瘠之地"] = true,
+				["马绍尔营地，安戈洛环形山"] = true,
+				["碎木岗哨，灰谷"] = true,
+				["永望镇，冬泉谷"] = true,
+				["十字路口，贫瘠之地"] = true,
+				["翡翠圣地，费伍德森林"] = true,
+				["蕨墙村，尘泥沼泽"] = true,
+				["莫沙彻营地，菲拉斯"] = true,
+				["月光林地"] = true,
+				["佐拉姆加前哨站，灰谷"] = true,
+				["葬影村，凄凉之地"] = true,
+				["乱风岗 ，千针石林"] = true,
+			},
+		},
+	},
+	["namespaces"] = {
+		["AltRecipes"] = {
+		},
+	},
+	["profileKeys"] = {
+		["狂暴專家 - 伊弗斯"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["showMisc"] = false,
+			["showAuctioneers"] = false,
+			["showReagentVendors"] = false,
+			["showPoisonVendors"] = false,
+			["showWeaponMasters"] = false,
+			["showSpiritHealers"] = false,
+			["showBattlemasters"] = false,
+			["mapButton"] = false,
+			["showMailboxes"] = false,
+			["showProfessions"] = "NONE",
+			["showBankers"] = false,
+			["showClassTrainers"] = "NONE",
+			["showGuildMasters"] = false,
+			["showInnkeepers"] = false,
+			["showMountTrainers"] = false,
+		},
+	},
+}

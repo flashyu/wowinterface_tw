@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
 	["lastSanitation"] = 3,
-	["session"] = 327,
+	["session"] = 337,
 	["errors"] = {
 		{
 			["message"] = "Interface/AddOns/GTFO/GTFO.lua:2079: attempt to index a nil value",
@@ -328,27 +328,19 @@ BugGrabberDB = {
 			["counter"] = 1,
 		}, -- [42]
 		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'WeakAuras' 尝试调用保护功能 'Frame:SetPoint()'。",
-			["time"] = "2023/05/21 19:30:43",
-			["locals"] = "Skipped (In Encounter)",
-			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:54: in function `SetAnchorPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1311: in function `DoPositionChildrenPerFrame'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1432: in function `DoPositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1289: in function `PositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1270: in function `SortUpdatedChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1064: in function `RunDelayedActions'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1055: in function `Resume'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4392: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4348>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4517: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:1834: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:1826>\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:2195: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:2188>",
-			["session"] = 322,
-			["counter"] = 21,
-		}, -- [43]
-		{
 			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
 			["time"] = "2023/05/16 21:50:27",
 			["locals"] = "(*temporary) = nil\n(*temporary) = nil\n(*temporary) = 1\n(*temporary) = 3\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = InspectFrameTab3Text {\n 0 = <userdata>\n}\n(*temporary) = \"CENTER\"\n(*temporary) = \"InspectFrameTab3\"\n(*temporary) = \"CENTER\"\n(*temporary) = 0\n(*temporary) = 5\n(*temporary) = \"attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)\"\n",
 			["stack"] = "[string \"@Interface/AddOns/Blizzard_InspectUI/Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:385: in function `UIParentLoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:428: in function `InspectFrame_LoadUI'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:733: in function `InspectUnit'\n[string \"@Interface/FrameXML/UnitPopupSharedButtonMixins.lua\"]:200: in function `OnClick'\n[string \"@Interface/FrameXML/UnitPopupShared.lua\"]:148: in function `func'\n[string \"@Interface/FrameXML/UIDropDownMenu.lua\"]:956: in function `UIDropDownMenuButton_OnClick'\n[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1: in function <[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1>",
 			["session"] = 322,
 			["counter"] = 24,
-		}, -- [44]
+		}, -- [43]
 		{
 			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:1 (null)",
 			["session"] = 322,
 			["time"] = "2023/05/16 21:50:27",
 			["counter"] = 48,
-		}, -- [45]
+		}, -- [44]
 		{
 			["message"] = "Elv_ABFade:GetAlpha(): C_Timer.NewTicker requires a non-negative duration",
 			["time"] = "2023/05/25 00:06:05",
@@ -356,7 +348,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: in function `GetAlpha'\n[string \"@Interface/AddOns/ElvUI/Core/Modules/ActionBars/ActionBars.lua\"]:875: in function <.../AddOns/ElvUI/Core/Modules/ActionBars/ActionBars.lua:865>",
 			["session"] = 322,
 			["counter"] = 9,
-		}, -- [46]
+		}, -- [45]
 		{
 			["message"] = "...erface/AddOns/Questie/Modules/Quest/QuestieQuest.lua:746: attempt to get length of a nil value",
 			["time"] = "2023/06/15 22:29:36",
@@ -364,6 +356,62 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua\"]:746: in function `AddFinisher'\n[string \"@Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua\"]:1245: in function `PopulateObjectiveNotes'\n[string \"@Interface/AddOns/Questie/Modules/Quest/QuestieQuest.lua\"]:656: in function `GetAllQuestIds'\n[string \"@Interface/AddOns/Questie/Modules/Quest/QuestEventHandler.lua\"]:508: in function <...e/AddOns/Questie/Modules/Quest/QuestEventHandler.lua:507>",
 			["session"] = 327,
 			["counter"] = 10,
+		}, -- [46]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'WeakAuras' 尝试调用保护功能 'Frame:SetPoint()'。",
+			["time"] = "2023/05/21 19:30:43",
+			["locals"] = "Skipped (In Encounter)",
+			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:54: in function `SetAnchorPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1311: in function `DoPositionChildrenPerFrame'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1432: in function `DoPositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1289: in function `PositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1270: in function `SortUpdatedChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1064: in function `RunDelayedActions'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1055: in function `Resume'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4392: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4348>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4517: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:1834: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:1826>\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:2195: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:2188>",
+			["session"] = 328,
+			["counter"] = 22,
 		}, -- [47]
+		{
+			["message"] = "Interface/AddOns/Questie/Database/QuestieDB.lua:323: attempt to call field 'QueryQuestSingle' (a nil value)",
+			["time"] = "2023/06/21 21:46:05",
+			["locals"] = "questId = 13115\n(*temporary) = nil\n(*temporary) = 13115\n(*temporary) = \"specialFlags\"\n(*temporary) = \"attempt to call field 'QueryQuestSingle' (a nil value)\"\nQuestieDB = <table> {\n GetZoneOrSortForClass = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:366\n waypointPresets = <table> {\n }\n npcKeys = <table> {\n }\n questDataOverrides = <table> {\n }\n itemDataOverrides = <table> {\n }\n raceKeys = <table> {\n }\n IsPreQuestGroupFulfilled = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:458\n questKeys = <table> {\n }\n sortKeys = <table> {\n }\n npcCompilerTypes = <table> {\n }\n questFlags = <table> {\n }\n fakeTbcItemStartId = 60000\n _itemAdapterQueryOrder = <table> {\n }\n npcData = <table> {\n }\n IsRepeatable = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:322\n classKeys = <table> {\n }\n objectDataOverrides = <table> {\n }\n _npcAdapterQueryOrder = <table> {\n }\n itemCompilerOrder = <table> {\n }\n questData = <table> {\n }\n itemCompilerTypes = <table> {\n }\n itemClasses = <table> {\n }\n IsActiveEventQuest = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:385\n itemKeysReversed = <table> {\n }\n npcFlags = <table> {\n }\n Initialize = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:166\n npcCompilerOrder = <table> {\n }\n factionTemplate = <table> {\n }\n itemData = <table> {\n }\n _objectAdapterQueryOrder = <table> {\n }\n objectCompilerOrder = <table> {\n }\n IsParentQuestActive = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:445\n objectCompilerTypes = <table> {\n }\n objectKeys = <table> {\n }\n questCompilerTypes = <table> {\n }\n objectKeysReversed = <table> {\n }\n _questAdapterQueryOrder = <table> {\n }\n IsLevelRequirementsFulfilled = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:410\n questCompilerOrder = <table> {\n }\n IsPvPQuest = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:351\n questKeysReversed = <table> {\n }\n IsPreQuestSingleFulfilled = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:487\n private = <table> {\n }\n IsDungeonQuest = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:337\n GetQuestsByZoneId = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:1065\n itemKeys = <table> {\n }\n IsDoable = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:515\n GetQuestIDFromName = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:1154\n objectData = <table> {\n }\n GetQuestTagInfo = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:374\n _CreatureLevelCache = <table> {\n }\n GetCreatureLevels = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:971\n GetNPC = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:1014\n GetItem = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:263\n IsComplete = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:659\n GetObject = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:235\n IsExclusiveQuestInQuestLogOrComplete = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:392\n IsDailyQuest = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:329\n npcKeysReversed = <table> {\n }\n IsRaidQuest = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:344\n npcDataOverrides = <table> {\n }\n GetQuest = <function> defined @Interface/AddOns/Questie/Database/QuestieDB.lua:699\n}\n",
+			["stack"] = "[string \"@Interface/AddOns/Questie/Database/QuestieDB.lua\"]:323: in function `IsRepeatable'\n[string \"@Interface/AddOns/Questie/Modules/Quest/QuestgiverFrame.lua\"]:46: in function <...ace/AddOns/Questie/Modules/Quest/QuestgiverFrame.lua:19>\n[string \"@Interface/AddOns/Questie/Modules/Quest/QuestgiverFrame.lua\"]:155: in function `Setup'\n[string \"@Interface/FrameXML/GossipFrameShared.lua\"]:97: in function `initializer'\n[string \"@Interface/SharedXML/Scroll/ScrollBoxListView.lua\"]:287: in function `InvokeInitializers'\n[string \"@Interface/SharedXML/Scroll/ScrollBox.lua\"]:665: in function `Update'\n[string \"@Interface/SharedXML/Scroll/ScrollBox.lua\"]:163: in function `FullUpdateInternal'\n[string \"@Interface/SharedXML/Scroll/ScrollBox.lua\"]:639: in function `FullUpdateInternal'\n[string \"@Interface/SharedXML/Scroll/ScrollBox.lua\"]:117: in function `FullUpdate'\n[string \"@Interface/SharedXML/Scroll/ScrollBox.lua\"]:613: in function <Interface/SharedXML/Scroll/ScrollBox.lua:612>\n[string \"=[C]\"]: ?\n[string \"@Interface/SharedXML/CallbackRegistry.lua\"]:143: in function <Interface/SharedXML/CallbackRegistry.lua:142>\n[string \"=[C]\"]: ?\n[string \"@Interface/SharedXML/CallbackRegistry.lua\"]:146: in function `TriggerEvent'\n[string \"@Interface/SharedXML/Scroll/ScrollBoxListView.lua\"]:229: in function `SignalDataChangeEvent'\n[string \"@Interface/SharedXML/Scroll/ScrollBoxListView.lua\"]:209: in function `SetDataProvider'\n[string \"@Interface/SharedXML/Scroll/ScrollBox.lua\"]:597: in function `SetDataProvider'\n[string \"@Interface/FrameXML/GossipFrameShared.lua\"]:245: in function `Update'\n[string \"@Interface/FrameXML/GossipFrame.lua\"]:15: in function <Interface/FrameXML/GossipFrame.lua:11>",
+			["session"] = 329,
+			["counter"] = 1,
+		}, -- [48]
+		{
+			["message"] = "Interface/AddOns/DBM-Core/DBM-Core.lua:9336: attempt to index field 'announceType' (a nil value)",
+			["time"] = "2023/06/21 22:26:02",
+			["locals"] = "self = <table> {\n hasVoice = 2\n option = \"specWarnAttack\"\n text = \"埃霍恩拥有易伤 - 现在攻击!\"\n flash = 1\n combinedcount = 0\n mod = <table> {\n }\n voiceOptionId = \"VoicespecWarnAttack\"\n combinedtext = <table> {\n }\n sound = true\n}\nargTable = <table> {\n}\nannounceCount = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index field 'announceType' (a nil value)\"\nmoving = nil\nframe = DBMSpecialWarning {\n 0 = <userdata>\n}\nDBM = <table> {\n SelectGossip = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2789\n GetUnitIdFromCID = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2714\n CHAT_MSG_ADDON_LOGGED = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:4576\n StopLogging = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:5841\n FindScenarioIDs = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6840\n GetNumGuildPlayersInZone = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2455\n VibrateController = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6806\n FindDungeonMapIDs = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6832\n GetUnitIdFromGUID = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2536\n CopyProfile = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:1942\n CHAT_MSG_MONSTER_EMOTE = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:4933\n CHAT_MSG_WHISPER = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6567\n SendPVPTimers = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6365\n DeleteProfile = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:1959\n DungeonMusic = <table> {\n }\n ShowUpdateReminder = <function> defined @Interface/AddOns/DBM-Core/modules/UpdateReminder.lua:76\n GetRaidRoster = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2491\n PLAYER_REGEN_DISABLED = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:4698\n FireEvent = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:1850\n CreateModLocalization = <function> defined @Interface/AddOns/DBM-Core/modules/objects/Localization.lua:89\n SCENARIO_COMPLETED = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:3452\n IsEnabled = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6653\n GetMyPlayerInfo = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2559\n ADDON_LOADED = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:1532\n IconNumToTexture = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6821\n BattleMusic = <table> {\n }\n INSTANCE_GROUP_SIZE_CHANGED = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2426\n AddDefeatSound = <function> defined @Interface/AddOns/DBM-Core/modules/Sounds.lua:117\n SortByMeleeRoster = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:7680\n GetBossUnitId = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2696\n lastAntiSpamFLASH = 169199.750000\n AddDefaultOptions = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2812\n UPDATE_MOUSEOVER_UNIT = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:3782\n InfoFrame = <table> {\n }\n SendCombatInfo = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6387\n FilterRaidBossEmote = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:1367\n RequestTimers = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6262\n CINEMATIC_START = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6875\n VoiceVersions = <table> {\n }\n Voices = <table> {\n }\n AddOns = <table> {\n }\n Options = <table> {\n }\n UPDATE_BATTLEFIELD_STATUS = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:3430\n GetModLocalization = <function> defined @Interface/AddOns/DBM-Core/modules/objects/Localization.lua:106\n CheckNearby = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua",
+			["stack"] = "[string \"@Interface/AddOns/DBM-Core/DBM-Core.lua\"]:9336: in function `Show'\n[string \"@Interface/AddOns/DBM-WorldEvents/Holidays/Ahune.lua\"]:42: in function `handler'\n[string \"@Interface/AddOns/DBM-Core/DBM-Core.lua\"]:1037: in function <Interface/AddOns/DBM-Core/DBM-Core.lua:1024>\n[string \"=(tail call)\"]: ?\n[string \"@Interface/AddOns/DBM-Core/DBM-Core.lua\"]:1037: in function <Interface/AddOns/DBM-Core/DBM-Core.lua:1024>",
+			["session"] = 332,
+			["counter"] = 5,
+		}, -- [49]
+		{
+			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Couldn't open Interface/AddOns/HandyNotes_FlightMasters (Classic)/HandyNotes_FlightMasters (Classic)-Wrath.toc",
+			["session"] = 334,
+			["time"] = "2023/06/22 00:32:06",
+			["counter"] = 1,
+		}, -- [50]
+		{
+			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface_Wrath\\FrameXML\\Bindings.xml:1 Couldn't open Interface/AddOns/HandyNotes_FlightMasters (Classic)/HandyNotes_FlightMasters (Classic)-Wrath.toc",
+			["session"] = 334,
+			["time"] = "2023/06/22 00:32:06",
+			["counter"] = 1,
+		}, -- [51]
+		{
+			["message"] = "Interface/AddOns/HidingBar/Config.lua:40: attempt to index global 'Settings' (a nil value)",
+			["time"] = "2023/06/21 21:45:47",
+			["locals"] = "addon = \"HidingBar\"\nL = <table> {\n About = \"关于\"\n Right = \"Right\"\n Both direction = \"双向\"\n ADD_IGNORE_MBTN_QUESTION = \"你确定要将 %s 加入忽略列表吗?\"\n Right top = \"Right top\"\n sec. = \"秒\"\n Ignore list = \"忽略列表\"\n Distance between buttons = \"按钮间距\"\n Bottom = \"Bottom\"\n Line Border Size = \"|cff%sLine|r Border Size\"\n Grab default buttons on minimap = \"抓取小地图上的默认按钮\"\n If a suitable bar exists then the button will be grabbed = \"存在合适的框架时，按钮位置可拖动。\"\n Allways = \"一直\"\n Position of minimap buttons = \"小地图按钮位置\"\n Timer or clicking on a free place = \"Timer or clicking on a free place\"\n Fade out bar = \"Fade out bar\"\n Number of buttons = \"按钮数量\"\n Top right = \"Top right\"\n BUTTON_TOOLTIP = \"|cffffd200左键|r点击启用或禁用按钮，长按拖动位置。\n|cffffd200右键|r点击打开菜单。\"\n Manually Grabbed Buttons = \"手动抓取按钮\"\n Followed = \"已跟随\"\n Are you sure you want to delete profile %s? = \"你确定要删除配置文件 %s 吗？\"\n Intercept the position of tooltips = \"拦截提示的位置\"\n Point to button = \"按钮提示\"\n Left bottom = \"Left bottom\"\n Timer = \"Timer\"\n Horizontal = \"水平\"\n ADD_CUSTOM_GRAB_BTN_QUESTION = \"你确定要将 %s 加入抓取列表吗？\"\n Bar = \"框架\"\n Opacity = \"透明度\"\n Buttons Size = \"按钮尺寸\"\n Vertical = \"垂直\"\n Try to grab after = \"之后尝试抓取\"\n Add bar = \"新建框架\"\n Click = \"点击\"\n Hover = \"悬浮\"\n Strata of panel = \"面板层级\"\n Lock the bar's location = \"锁定框架位置\"\n Move to = \"移动到\"\n A profile with the same name exists. = \"存在同名的配置文件。\"\n A bar with the same name exists. = \"已存在同名的框架。\"\n A new line = \"新一行\"\n Auto show/hide = \"Auto show/hide\"\n TEXTURES_HELP_TOOLTIP = \"Some textures are added from other addons, so they may be missing if the addon is missing.\"\n Hover or Click = \"悬浮或点击\"\n Show to left = \"显示在左侧\"\n Delay to show = \"延迟显示\"\n Direction of buttons = \"按钮排列方向\"\n Add to ignore list = \"添加到忽略列表\"\n REMOVE_CUSTOM_GRAB_BTN_QUESTION = \"你确定从抓取列表中删除 %s 吗？\"\n Border Offset = \"Border Offset\"\n Prevents button elements from going over the edges. = \"防止按钮超出边框。\"\n Options of adding buttons = \"抓取按钮选项\"\n Clip button = \"裁切按钮\"\n Allow the button to control its own visibility = \"Allow the button to control its own visibility.\"\n Profile = \"配置\"\n DataBroker Buttons = \"DataBroker按钮\"\n Left to right = \"从左到右\"\n Show to up = \"显示在上方\"\n Are you sure you want to delete bar %s? = \"你确定要删除框架 %s 吗？\"\n Distance from button to bar = \"Distance from button to bar\"\n Bar like a minimap button = \"框架类似小地图按钮\"\n Grab addon buttons on minimap = \"抓取小地图上的插件按钮\"\n Own Minimap Button = \"系统小地图按钮\"\n Bar position = \"条位置\"\n Source: = \"来源：\"\n IGNORE_DESCRIPTION = \"您可以指定名称的一部分.\n\n例如, |cffffd200HidingBar|r将会忽略:\n|cffffd200HidingBar1|r\n|cffffd200HidingBar2|r\n|cffffd200HidingBar3|r\n...\"\n Top = \"Top\"\n Border Size = \"Border Size\"\n Line Border Offset = \"|cff%sLine|r Border Offset\"\n Hiding to up = \"隐藏到上方\"\n Bar offset relative to the button = \"Bar offset relative to the button\"\n Line width = \"边框粗细\"\n Line Border = \"Line Border\"\n Copy current = \"复制当前配置\"\n Bar attached to the side = \"框架侧边吸附\"\n Bottom right = \"Bottom right\"\n Clicking on a free place = \"Clicking on a free place\"\n author = \"作者\"\n Add buttons of any data type = \"Add buttons of any data type\"\n Right bottom = \"Right bottom\"\n Add buttons from DataBroker = \"从DataBroker添加按钮\"\n Hiding to left = \"隐藏到左侧\"\n Localization Translators: = \"本地化翻译者:\"\n Left top = \"Left top\"\n Manually added = \"手动添加\"\n Fade out line = \"透明度 |cff%s 框架边框|r\"\n Left = \"Left\"\n Show to down = \"显示在下方\"\n Hide by = \"Hide by\"\n %s Configuration = \"%s 配置\"\n Buttons = \"按钮\"\n Mixed = \"混",
+			["stack"] = "[string \"@Interface/AddOns/HidingBar/Config.lua\"]:40: in main chunk",
+			["session"] = 337,
+			["counter"] = 9,
+		}, -- [52]
+		{
+			["message"] = "Interface/AddOns/HidingBar/Config.lua:1 (null)",
+			["time"] = "2023/06/21 21:46:00",
+			["session"] = 337,
+			["counter"] = 9,
+		}, -- [53]
+		{
+			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/HidingBar/Config.lua:1 (null)",
+			["time"] = "2023/06/21 21:46:00",
+			["session"] = 337,
+			["counter"] = 9,
+		}, -- [54]
 	},
 }

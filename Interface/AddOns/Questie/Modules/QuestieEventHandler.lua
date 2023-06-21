@@ -368,6 +368,23 @@ function _EventHandler:ModifierStateChanged(key, down)
 
     if Questie.db.global.trackerLocked then
         if QuestieTracker.started then
+            -- This is a safety catch for race conditions to prevent the Tracker Sizer
+            -- from becoming stuck to the mouse pointer when the player releases the
+            -- CTRL key first before releasing the Left Mouse Button.
+            if (key == "LCTRL" or key == "RCTRL") and down == 0 then
+                if IsMouseButtonDown("LeftButton") then
+                    -- Tracker is being sized
+                    if TrackerBaseFrame.isSizing ~= false and TrackerBaseFrame.isMoving ~= true then
+                        TrackerBaseFrame.OnResizeStop(self, "LeftButton")
+                        return
+                    end
+                    -- Tracker is being moved
+                    if TrackerBaseFrame.isMoving ~= false and TrackerBaseFrame.isSizing ~= true then
+                        TrackerBaseFrame.OnDragStop(self, "LeftButton")
+                        return
+                    end
+                end
+            end
             QuestieCombatQueue:Queue(function()
                 TrackerBaseFrame:Update()
                 TrackerQuestFrame:Update()

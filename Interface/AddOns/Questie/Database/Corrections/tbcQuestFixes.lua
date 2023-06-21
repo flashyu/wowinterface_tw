@@ -179,11 +179,11 @@ function QuestieTBCQuestFixes:Load()
             [questKeys.startedBy] = {{4456},nil,nil},
             [questKeys.zoneOrSort] = zoneIDs.DARKSHORE,
         },
+        [1220] = {
+            [questKeys.startedBy] = {{23951}},
+        },
         [1437] = {
             [questKeys.triggerEnd] = {"Find and search Tyranis and Dalinda Malem's wagon", {[zoneIDs.DESOLACE]={{56.52,17.84}}}},
-        },
-        [1448] = {
-            [questKeys.triggerEnd] = {"Search for the Temple of Atal'Hakkar", {[zoneIDs.SWAMP_OF_SORROWS]={{64.67,48.82},{64.36,56.12},{64.09,51.95},{69.6,44.18},{73.97,46.36}}}},
         },
         [1468] = {
             [questKeys.questLevel] = -1,
@@ -271,6 +271,9 @@ function QuestieTBCQuestFixes:Load()
         },
         [2841] = {
             [questKeys.childQuests] = {},
+        },
+        [2861] = {
+            [questKeys.startedBy] = {{4568,5144,5497,5885,16651,17514}}
         },
         [2842] = {
             [questKeys.requiredLevel] = 20,
@@ -2664,13 +2667,14 @@ function QuestieTBCQuestFixes:Load()
             },
         },
         [11146] = {
-            [questKeys.objectives] = {{{4351,"Raptors Captured"}},nil,nil,nil},
+            [questKeys.objectives] = {nil,nil,nil,nil,{{{4351,4352},4351,"Raptors Captured"}}},
         },
         [11152] = {
             [questKeys.extraObjectives] = {{nil, Questie.ICON_TYPE_EVENT, l10n("Lay the Wreath at the Hyal Family Monument"), 0, {{"object", 186322}}}},
         },
         [11159] = {
             [questKeys.preQuestSingle] = {11161},
+            [questKeys.extraObjectives] = {{nil, Questie.ICON_TYPE_EVENT, l10n("Redeem Remains"), 0, {{"object", 186332}}}},
         },
         [11162] = {
             [questKeys.extraObjectives] = {{nil, Questie.ICON_TYPE_EVENT, l10n("Plant the Stonemaul Banner"), 0, {{"object", 186336}}}},
@@ -2695,7 +2699,7 @@ function QuestieTBCQuestFixes:Load()
             [questKeys.startedBy] = {{23863},nil,{33102,},},
         },
         [11180] = {
-            [questKeys.extraObjectives] = {{nil, Questie.ICON_TYPE_SLAY, l10n("Information Gathered"), 0, {{"monster", 23554},{"monster", 23555}}}},
+            [questKeys.objectives] = {nil,nil,nil,nil,{{{23554,23555,23861},23861,"Information Gathered"}}},
         },
         [11183] = {
             [questKeys.extraObjectives] = {{{[zoneIDs.DUSTWALLOW_MARSH]={{55.2,26.6}}}, Questie.ICON_TYPE_EVENT, l10n("Plant the torch at the end of the dock")}},
@@ -2707,13 +2711,13 @@ function QuestieTBCQuestFixes:Load()
             [questKeys.startedBy] = {{23881},nil,nil},
         },
         [11198] = {
-            [questKeys.triggerEnd] = {"Defend Theramore Docks from Tethyr", {[zoneIDs.DUSTWALLOW_MARSH]={{70.01,51.88}}}},
+            [questKeys.objectives] = {{{23899,"Defend Theramore Docks from Tethyr"}}},
         },
         [11208] = {
             [questKeys.exclusiveTo] = {11158},
         },
         [11209] = {
-            [questKeys.extraObjectives] = {{{[zoneIDs.DUSTWALLOW_MARSH]={{57,62}}}, Questie.ICON_TYPE_EVENT, l10n("Smear the Fish Paste on yourself and swim to the ship wreck")}},
+            [questKeys.extraObjectives] = {{{[zoneIDs.DUSTWALLOW_MARSH]={{56.38,62.42}}}, Questie.ICON_TYPE_EVENT, l10n("Smear the Fish Paste on yourself and swim to the ship wreck")}},
         },
         [11211] = {
             [questKeys.exclusiveTo] = {11158,11214,11215},

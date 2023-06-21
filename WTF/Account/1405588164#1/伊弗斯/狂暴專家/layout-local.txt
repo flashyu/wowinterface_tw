@@ -27,13 +27,6 @@ X: -176
 Y: 43
 W: 920
 H: 600
-Frame: GroupBulletinBoardFrame
-FrameLevel: 1
-Anchor: CENTER
-X: 141
-Y: 62
-W: 800
-H: 501
 Frame: aux_frame
 FrameLevel: 1
 Anchor: TOP
@@ -41,3 +34,10 @@ X: -169
 Y: -48
 W: 768
 H: 447
+Frame: GroupBulletinBoardFrame
+FrameLevel: 1
+Anchor: CENTER
+X: 141
+Y: 62
+W: 800
+H: 501

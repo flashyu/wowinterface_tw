@@ -1,16 +1,34 @@
-lightweight tag 54ad586f61e778b6433f6a1ef69c1d7c035de989 v3.2.3
-Author:	GitHub <noreply@github.com>
-Date:	Sat Feb 11 12:14:34 2023 +0100
+lightweight tag c765b5dad883deaabba6b9a4fe764a617c6add09 v3.2.4
+Author:	Simon Hirsig <simon.hirsig@gmail.com>
+Date:	Wed Jun 21 09:08:45 2023 +0200
 
-commit c0cfda3a5697ff195044123cc144d8aa3f2c63be
+commit c765b5dad883deaabba6b9a4fe764a617c6add09
 Author: Simon Hirsig <simon.hirsig@gmail.com>
-Date:   Sat Feb 11 11:29:18 2023 +0100
+Date:   Wed Jun 21 09:08:17 2023 +0200
 
-    interface version update
+    interface version bump
 
-commit c0cfda3a5697ff195044123cc144d8aa3f2c63be
-Author: Simon Hirsig <simon.hirsig@gmail.com>
-Date:   Sat Feb 11 11:29:18 2023 +0100
+commit 44a99a2aa20413a1233e4eb7b41eb6ee62b2b11c
+Author: Artur <Artur91425@gmail.com>
+Date:   Sat Apr 22 13:23:38 2023 +0300
 
-    interface version update
+    add missing non-disenchantable item
+
+commit 640e4d479b69ee5b4c84e40b1b5957f58fcc4cdc
+Author: Artur <Artur91425@gmail.com>
+Date:   Sat Apr 22 13:21:31 2023 +0300
+
+    fix auction time for post filter 'left'
+
+commit 44a99a2aa20413a1233e4eb7b41eb6ee62b2b11c
+Author: Artur <Artur91425@gmail.com>
+Date:   Sat Apr 22 13:23:38 2023 +0300
+
+    add missing non-disenchantable item
+
+commit 640e4d479b69ee5b4c84e40b1b5957f58fcc4cdc
+Author: Artur <Artur91425@gmail.com>
+Date:   Sat Apr 22 13:21:31 2023 +0300
+
+    fix auction time for post filter 'left'
 

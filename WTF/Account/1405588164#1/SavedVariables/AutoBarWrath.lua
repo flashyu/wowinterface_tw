@@ -67,12 +67,12 @@ AutoBarDB2 = {
 					["buttonKey"] = "AutoBarButtonFoodPet",
 					["square_popups"] = true,
 				},
-				["AutoBarButtonTrap"] = {
+				["AutoBarButtonCharge"] = {
 					["barKey"] = "AutoBarClassBarHunter",
-					["buttonClass"] = "AutoBarButtonTrap",
-					["defaultButtonIndex"] = 4,
+					["buttonClass"] = "AutoBarButtonCharge",
+					["defaultButtonIndex"] = 2,
 					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonTrap",
+					["buttonKey"] = "AutoBarButtonCharge",
 					["square_popups"] = true,
 				},
 				["AutoBarButtonDebuff"] = {
@@ -91,12 +91,12 @@ AutoBarDB2 = {
 					["buttonKey"] = "AutoBarButtonClassPet",
 					["square_popups"] = true,
 				},
-				["AutoBarButtonCharge"] = {
+				["AutoBarButtonTrap"] = {
 					["barKey"] = "AutoBarClassBarHunter",
-					["buttonClass"] = "AutoBarButtonCharge",
-					["defaultButtonIndex"] = 2,
+					["buttonClass"] = "AutoBarButtonTrap",
+					["defaultButtonIndex"] = 4,
 					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonCharge",
+					["buttonKey"] = "AutoBarButtonTrap",
 					["square_popups"] = true,
 				},
 				["AutoBarButtonInterrupt"] = {
@@ -234,7 +234,7 @@ AutoBarDB2 = {
 				["enabled"] = true,
 				["scale"] = 1,
 				["rows"] = 1,
-				["frameStrata"] = "LOW",
+				["alpha"] = 1,
 				["alignButtons"] = "3",
 				["dockShiftY"] = 0,
 				["posX"] = 617.1163924563734,
@@ -265,7 +265,7 @@ AutoBarDB2 = {
 				["posY"] = 160.7250452356402,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
-				["alpha"] = 1,
+				["frameStrata"] = "LOW",
 			},
 			["AutoBarClassBarExtras"] = {
 				["popupDirection"] = "1",
@@ -611,7 +611,7 @@ AutoBarDB2 = {
 		["狂暴專家 - 伊弗斯"] = {
 			["buttonDataList"] = {
 				["AutoBarButtonQuest"] = {
-					["arrangeOnUse"] = 39598,
+					["arrangeOnUse"] = 34833,
 				},
 				["AutoBarButtonMount"] = {
 				},

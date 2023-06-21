@@ -1,6 +1,6 @@
 
 HidingBarDB = {
-	["tstmp"] = 1687095161,
+	["tstmp"] = 1687365880,
 	["profiles"] = {
 		{
 			["isDefault"] = true,
@@ -11,58 +11,61 @@ HidingBarDB = {
 						["tstmp"] = 1685116610,
 					},
 					["LibDBIcon10_BisTooltipIcon"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
 					["LibDBIcon10_Hekili"] = {
 						["tstmp"] = 1685116610,
 					},
-					["LibDBIcon10_AutoBar"] = {
-						["tstmp"] = 1687095161,
-					},
 					["LibDBIcon10_HealBot"] = {
 						["tstmp"] = 1685116612,
 					},
-					["LibDBIcon10_DBM"] = {
-						["tstmp"] = 1687095161,
-					},
-					["LibDBIcon10_Attune_Broker"] = {
-						["tstmp"] = 1687095161,
+					["LibDBIcon10_AutoBar"] = {
+						["tstmp"] = 1687365880,
 					},
 					["LibDBIcon10_AutoCombatLogger"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
+					},
+					["LibDBIcon10_DBM"] = {
+						["tstmp"] = 1687365880,
+					},
+					["LibDBIcon10_Attune_Broker"] = {
+						["tstmp"] = 1687365880,
 					},
 					["LibDBIcon10_Questie"] = {
-						["tstmp"] = 1687095162,
-					},
-					["LibDBIcon10_BugSack"] = {
-						["tstmp"] = 1687095161,
-					},
-					["LibDBIcon10_Myslot"] = {
-						["tstmp"] = 1687095161,
-					},
-					["WIM3MinimapButton"] = {
-						["tstmp"] = 1687095161,
-					},
-					["LibDBIcon10_Details"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
 					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
+					},
+					["LibDBIcon10_Leatrix_Plus"] = {
+						["tstmp"] = 1687365880,
+					},
+					["LibDBIcon10_Myslot"] = {
+						["tstmp"] = 1687365880,
+					},
+					["WIM3MinimapButton"] = {
+						["tstmp"] = 1687365880,
+					},
+					["LibDBIcon10_Details"] = {
+						["tstmp"] = 1687365880,
+					},
+					["LibDBIcon10_HandyNotes_NPCs"] = {
+						["tstmp"] = 1687365880,
 					},
 					["LibDBIcon10_Leatrix_Maps"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
 					["LibDBIcon10_Atlas"] = {
 						["tstmp"] = 1686422258,
 					},
-					["LibDBIcon10_AtlasLoot"] = {
-						["tstmp"] = 1687095161,
-					},
 					["LibDBIcon10_GSE GnomeSequencer-增强"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
-					["LibDBIcon10_TradeSkillMaster"] = {
-						["tstmp"] = 1686466940,
+					["LibDBIcon10_AtlasLoot"] = {
+						["tstmp"] = 1687365880,
+					},
+					["CodexBrowserIcon"] = {
+						["tstmp"] = 1683303583,
 					},
 					["LibDBIcon10_HidingBar1"] = {
 						["tstmp"] = 0,
@@ -71,22 +74,22 @@ HidingBarDB = {
 						["tstmp"] = 1684426755,
 					},
 					["LibDBIcon10_TalentEmu"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
-					["CodexBrowserIcon"] = {
-						["tstmp"] = 1683303583,
+					["LibDBIcon10_TradeSkillMaster"] = {
+						["tstmp"] = 1686466940,
 					},
 					["LibDBIcon10_DetailsStreamer"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
 					["LibDBIcon10_WeakAuras"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
 					["LibDBIcon10_Plater"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
-					["LibDBIcon10_Leatrix_Plus"] = {
-						["tstmp"] = 1687095161,
+					["LibDBIcon10_BugSack"] = {
+						["tstmp"] = 1687365880,
 					},
 					["LibDBIcon10_Decursive"] = {
 						["tstmp"] = 1685459075,
@@ -94,7 +97,7 @@ HidingBarDB = {
 				},
 				["btnSettings"] = {
 					["AutoBar"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
 					["Atlas"] = {
 						["tstmp"] = 1686422258,
@@ -103,37 +106,40 @@ HidingBarDB = {
 						["tstmp"] = 1686469304,
 					},
 					["AutoCombatLogger"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
+					},
+					["Parrot"] = {
+						["tstmp"] = 1687365880,
 					},
 					["TradeSkillMaster"] = {
 						["tstmp"] = 1686466940,
 					},
-					["Parrot"] = {
-						["tstmp"] = 1687095161,
+					["HandyNotes_NPCs"] = {
+						["tstmp"] = 1687365880,
 					},
 					["DBM"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
 					["Decursive"] = {
 						["tstmp"] = 1685459075,
 					},
 					["HidingBar"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
 					["LFGBulletinBoard"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
 					["AtlasLoot"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
 					["TalentEmu"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
 					["BisTooltipIcon"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
 					["WeakAuras"] = {
-						["tstmp"] = 1687095161,
+						["tstmp"] = 1687365880,
 					},
 					["HealBot"] = {
 						["tstmp"] = 1685116610,

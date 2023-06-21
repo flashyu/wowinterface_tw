@@ -365,8 +365,13 @@ function QuestieQuestFixes:Load()
         [731] = {
             [questKeys.triggerEnd] = {"Escort Prospector Remtravel", {[zoneIDs.DARKSHORE]={{35.67,84.03}}}},
         },
+        [735] = {
+            [questKeys.requiredSourceItems] = {4639},
+            [questKeys.extraObjectives] = {{nil, Questie.ICON_TYPE_EVENT, l10n("Summon Dagun the Ravenous using an Enchanted Sea Kelp"), 2, {{"object", 2871}}}},
+        },
         [736] = {
             [questKeys.requiredSourceItems] = {4639},
+            [questKeys.extraObjectives] = {{nil, Questie.ICON_TYPE_EVENT, l10n("Summon Dagun the Ravenous using an Enchanted Sea Kelp"), 2, {{"object", 2871}}}},
         },
         [738] = {
             [questKeys.preQuestSingle] = {}, -- #1289
@@ -765,6 +770,12 @@ function QuestieQuestFixes:Load()
         [1368] = {
             [questKeys.extraObjectives] = {{nil, Questie.ICON_TYPE_SLAY, l10n("Slay Magram centaur to increase your reputation with the Gelkis Clan"), 0, {{"monster", 4643},{"monster", 4645},{"monster", 4662},{"monster", 5601},{"monster", 4638},{"monster", 4641},{"monster", 6068},{"monster", 4640},{"monster", 4639},{"monster", 4642},{"monster", 4644}}}},
         },
+        [1380] = {
+            [questKeys.extraObjectives] = {{nil, Questie.ICON_TYPE_EVENT, l10n("Use the War Horn Mouthpiece to summon Khan Hratha"), 0, {{"object", 138497}}}},
+        },
+        [1381] = {
+            [questKeys.extraObjectives] = {{nil, Questie.ICON_TYPE_EVENT, l10n("Use the War Horn Mouthpiece to summon Khan Hratha"), 0, {{"object", 138497}}}},
+        },
         [1388] = {
             [questKeys.preQuestSingle] = {1383},
         },
@@ -807,6 +818,9 @@ function QuestieQuestFixes:Load()
         },
         [1447] = {
             [questKeys.objectives] = {{{4961,"Defeat Dashel Stonefist"}}},
+        },
+        [1448] = {
+            [questKeys.triggerEnd] = {"Search for the Temple of Atal'Hakkar", {[zoneIDs.SWAMP_OF_SORROWS]={{70.2,45.2},{66.6,48.1},{73.6,48.1},{64.9,53.3},{75.4,53.3},{66.6,58.4},{73.6,58.4},{70.2,60.5}}}},
         },
         [1470] = {
             [questKeys.exclusiveTo] = {1485}, -- #999
@@ -1070,6 +1084,9 @@ function QuestieQuestFixes:Load()
         [2218] = {
             [questKeys.exclusiveTo] = {}, -- #1466
         },
+        [2240]  = {
+            [questKeys.triggerEnd] = { "Explore the Hidden Chamber", {[zoneIDs.BADLANDS]={{35.22,10.32}}}},
+        },
         [2241] = {
             [questKeys.exclusiveTo] = {}, -- #1466
         },
@@ -1081,7 +1098,7 @@ function QuestieQuestFixes:Load()
             [questKeys.exclusiveTo] = {2281}, -- #1825
         },
         [2278] = {
-            [questKeys.triggerEnd] = {"Learn what lore that the stone watcher has to offer", {[zoneIDs.BADLANDS]={{35.21,10.33}}}},
+            [questKeys.objectives] = {{{7172,"Learn what lore that the stone watcher has to offer"}}},
         },
         [2281] = {
             [questKeys.exclusiveTo] = {2299}, -- #1817
@@ -2020,6 +2037,9 @@ function QuestieQuestFixes:Load()
                 [zoneIDs.THE_BARRENS]={{41.96,60.81}}},
             },
         },
+        [6027] = {
+            [questKeys.extraObjectives] = {{nil, Questie.ICON_TYPE_OBJECT, l10n("Summon Lord Kragaru"), 0, {{"object", 400060}}}},
+        },
         [6061] = {
             [questKeys.objectives] = {{{2956, nil}}},
             [questKeys.questFlags] = 0,
@@ -2124,7 +2144,10 @@ function QuestieQuestFixes:Load()
             [questKeys.specialFlags] = 0,
         },
         [6132] = {
-            [questKeys.triggerEnd] = {"Melizza Brimbuzzle escorted to safety", {[zoneIDs.DESOLACE]={{38.64,60.86}}}},
+            [questKeys.triggerEnd] = {"Melizza Brimbuzzle escorted to safety", {[zoneIDs.DESOLACE]={{40.15,61.58}}}},
+        },
+        [6134] = {
+            [questKeys.extraObjectives] = {{{[zoneIDs.DESOLACE]={{63.71,91.9}}}, Questie.ICON_TYPE_EVENT, l10n("Place the Crate of Ghost Magnets"),}},
         },
         [6136] = {
             [questKeys.preQuestSingle] = {6133}, -- #1572
@@ -2305,6 +2328,9 @@ function QuestieQuestFixes:Load()
         },
         [7062] = {
             [questKeys.startedBy] = {{1365},nil,nil},
+        },
+        [7067] = {
+            [questKeys.requiredSourceItems] = {17757,17761,17762,17763,17764,17765},
         },
         [7068] = {
             [questKeys.requiredLevel] = 39,
@@ -3283,7 +3309,7 @@ function QuestieQuestFixes:Load()
             [questKeys.requiredRaces] = raceIDs.ALL_ALLIANCE,
         },
         [9051] = {
-            [questKeys.triggerEnd] = {"Devilsaur stabbed with barb", {[zoneIDs.UN_GORO_CRATER]={{64.32,59.45},{67.98,58.07},{53.82,63.08},{57.99,73.93},{73.87,38.34}}}},
+            [questKeys.objectives] = {nil,nil,nil,nil,{{{6498,6499,6500},6498,"Devilsaur stabbed with barb"}}},
         },
         [9034] = {
             [questKeys.specialFlags] = 1,
