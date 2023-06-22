@@ -1,0 +1,95 @@
+
+ElvDB = {
+	["profileKeys"] = {
+		["特變電工 - 伊弗斯"] = "Default",
+	},
+	["DisabledAddOns"] = {
+	},
+	["serverID"] = {
+		[4487] = {
+			["伊弗斯"] = true,
+		},
+	},
+	["class"] = {
+		["伊弗斯"] = {
+			["特變電工"] = "WARRIOR",
+		},
+	},
+	["profiles"] = {
+		["Default"] = {
+			["chat"] = {
+				["panelSnapLeftID"] = 1,
+				["panelSnapRightID"] = 4,
+			},
+			["dbConverted"] = 13.33,
+			["unitframe"] = {
+				["units"] = {
+					["party"] = {
+						["targetsGroup"] = {
+							["disableFocusGlow"] = false,
+							["disableTargetGlow"] = false,
+							["disableMouseoverGlow"] = false,
+						},
+						["petsGroup"] = {
+							["disableFocusGlow"] = false,
+							["disableTargetGlow"] = false,
+							["disableMouseoverGlow"] = false,
+						},
+					},
+				},
+			},
+			["actionbar"] = {
+				["microbar"] = {
+					["buttons"] = 10,
+				},
+				["bar5"] = {
+					["enabled"] = false,
+					["buttonsPerRow"] = 12,
+					["buttons"] = 12,
+				},
+				["bar6"] = {
+					["enabled"] = true,
+					["buttonsPerRow"] = 6,
+					["buttons"] = 6,
+				},
+			},
+			["convertPages"] = true,
+		},
+	},
+	["gold"] = {
+		["伊弗斯"] = {
+			["特變電工"] = 459527736,
+		},
+	},
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["faction"] = {
+		["伊弗斯"] = {
+			["特變電工"] = "Horde",
+		},
+	},
+	["global"] = {
+		["nameplates"] = {
+			["filters"] = {
+				["ElvUI_NonTarget"] = {
+				},
+				["ElvUI_Target"] = {
+				},
+				["ElvUI_Boss"] = {
+				},
+			},
+		},
+	},
+}
+ElvPrivateDB = {
+	["profileKeys"] = {
+		["特變電工 - 伊弗斯"] = "特變電工 - 伊弗斯",
+	},
+	["profiles"] = {
+		["特變電工 - 伊弗斯"] = {
+			["install_complete"] = 13.33,
+		},
+	},
+}

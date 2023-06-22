@@ -106,7 +106,6 @@ L["INVITE_LEISURE"] = "waiting";
 L["INVITE_CHEDUI"] = "team";
 L["INVITE_PLANE"] = "layer";
 L["INVITE_RECEIVEDATA"] = "Receiving data...";
-L["INVITE_WARNING"] = "***Do not use it on servers outside mainland China***";
 L["INVITE_LFG_JOIN"] = "Join PIGCHANNEL";
 L["INVITE_LFG_LEAVE"] = "Already joined PIGCHANNEL";
 end

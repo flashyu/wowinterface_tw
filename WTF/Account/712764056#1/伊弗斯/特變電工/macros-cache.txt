@@ -1,0 +1,90 @@
+VER 3 0000000001000019 "AOe" "INV_MISC_QUESTIONMARK"
+#showtooltip 复仇
+/cast [nostance:2] 防御姿态
+/cast [combat,stance:2] 血性狂暴
+/cast [stance:2] 顺劈斩
+/cast [stance:2,equipped:盾牌] 盾牌格挡
+/startattack
+END
+VER 3 0000000001000001 "target" "132090"
+/target 卡莱恩
+/script SetRaidTarget("target",8)
+END
+VER 3 0000000001000002 "吐口水" "132100"
+/耳光
+END
+VER 3 000000000100000D "嗜血" "136012"
+/startattack
+/cast 嗜血
+END
+VER 3 0000000001000004 "坐騎" "132231"
+/cast 迅捷红色驭风者
+/cast 阿曼尼战熊
+END
+VER 3 000000000100001A "复仇单体" "INV_MISC_QUESTIONMARK"
+#showtooltip 英勇打击
+/cast [nostance:2]防御姿态
+/cast 复仇
+/cast !英勇打击
+END
+VER 3 0000000001000003 "拉怪" "132148"
+/startattack
+/cast !英勇打击
+/cast 毁灭打击
+END
+VER 3 0000000001000007 "挫敗" "132269"
+/startattack
+/cast 挫敗
+END
+VER 3 0000000001000008 "换武器" "132281"
+/cast [help] 警戒;[target=targettarget,help] 警戒
+END
+VER 3 000000000100000E "援護" "132365"
+/cast  防御姿态
+/cast 援护
+END
+VER 3 0000000001000015 "斬殺" "INV_MISC_QUESTIONMARK"
+#showtooltip 斩杀
+/cast 斩杀
+/cast !英勇打击
+/startattack
+END
+VER 3 0000000001000018 "爆发" "135567"
+/施放 死亡之愿
+/施放 血性狂怒(种族特长)
+/use 速度药水
+/use 征服者的突围护手
+END
+VER 3 0000000001000017 "爆發" "INV_MISC_QUESTIONMARK"
+/施放 死亡之愿
+/施放 血性狂怒(种族特长)
+/use 征服者的突围护手
+END
+VER 3 000000000100000B "盾反宏" "132361"
+/cast [stance:1/3] 防御姿态
+/equip 艾沃尔的巨魔剑
+/equip 废墟之颅
+/cast 法术反射
+END
+VER 3 0000000001000006 "致死" "134400"
+#showtooltip 拳击
+/cast [target=focus] 拳击
+/cast 拳击
+END
+VER 3 0000000001000010 "英勇打击" "134400"
+#showtooltip 英勇打击
+/cast !英勇打击
+/cast 乘胜追击
+/startattack
+END
+VER 3 0000000001000016 "英勇打擊" "INV_MISC_QUESTIONMARK"
+#showtooltip 拳击
+/cast [nostance:3] 狂暴姿态
+/cast 拳击
+END
+VER 3 0000000001000014 "順劈斬" "INV_MISC_QUESTIONMARK"
+#showtooltip 顺劈斩
+/cast 顺劈斩
+/cast 乘胜追击
+/startattack
+END

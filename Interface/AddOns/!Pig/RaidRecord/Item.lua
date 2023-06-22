@@ -967,7 +967,7 @@ function RaidRFun.RaidRecord_Item()
 		local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount,
 		itemEquipLoc, itemTexture, sellPrice, classID, subclassID, bindType, expacID, setID, isCraftingReagent=GetItemInfo(MSGINFO);
 		if itemQuality>=PIGA["RaidRecord"]["LootQuality"] then
-			local itemID = GetItemInfoInstant(MSGINFO);
+			local itemID = GetItemInfoInstant(itemLink);
 			local LOOT_itemNO = 1;
 			local Nkaishi=MSGINFO:find("x",1)
 			if Nkaishi then

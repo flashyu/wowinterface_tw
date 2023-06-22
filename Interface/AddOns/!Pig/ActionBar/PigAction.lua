@@ -556,7 +556,7 @@ if tocversion<100000 then
 		end
 		function kaiqiewaidongzuotiao.ShowHide:PIGDownMenu_SetValue(value,arg1,arg2)
 			if InCombatLockdown()  then 
-				print("|cff00FFFF!Pig:|r|cffFFFF00请在脱战后改变隐藏条件。|r");
+				PIG_print("请在脱战后改变隐藏条件");
 				return 
 			end
 			kaiqiewaidongzuotiao.ShowHide:PIGDownMenu_SetText(value)

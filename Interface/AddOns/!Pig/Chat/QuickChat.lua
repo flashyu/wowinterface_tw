@@ -5,6 +5,7 @@ local gsub = _G.string.gsub
 local sub = _G.string.sub
 local find = _G.string.find
 ------------
+local GetPIGID=addonTable.Fun.GetPIGID
 local QuickChatfun=addonTable.QuickChatfun
 local worldname="大脚世界频道"
 --local locale1 = GetAvailableLocales()
@@ -59,7 +60,7 @@ local function TihuanBiaoqing(self,event,arg1,...)
 end
 -------------
 local Width,Height,jiangejuli,hangshu = 25,25,0,10;
-local ChatpindaoMAX = 5
+local ChatpindaoMAX = addonTable.Fun.ChatpindaoMAX
 local function ADD_chatbut(fuF,pdtype,name,chatID,Color)
 	local PIGTemplate
 	if PIGA["Chat"]["QuickChat_style"]==1 then
@@ -132,50 +133,39 @@ local function ADD_chatbut(fuF,pdtype,name,chatID,Color)
 			chatbut.X:SetPoint("CENTER",0,0);
 			chatbut.X:Hide()
 			chatbut:SetScript("OnClick", function(self, event)
-				self.channel,self.channelName= GetChannelName(chatID)
-				if not self.channelName then
-					if chatID==worldname or chatID=="PIG" then
-						for i=1,ChatpindaoMAX do
-							self.channel,self.channelName= GetChannelName(chatID..i)
-							if self.channelName then
-								break
-							end
-						end
-					end
-				end
-				local channel,channelName = self.channel,self.channelName
+				local pindaoID = GetPIGID(chatID)
 				--local chatFrame = SELECTED_DOCK_FRAME--当前选择聊天框架
 				if event=="LeftButton" then
-					if not channelName then
+					if pindaoID==0 then
 						JoinPermanentChannel(chatID, nil, DEFAULT_CHAT_FRAME:GetID(), 1);
 						ChatFrame_AddChannel(DEFAULT_CHAT_FRAME, chatID)--订购一个聊天框以显示先前加入的聊天频道
 						ChatFrame_RemoveMessageGroup(DEFAULT_CHAT_FRAME, "CHANNEL")--屏蔽人员进入频道提示
 						PIG_print("已加入"..chatID.."频道，右键屏蔽频道消息");
 					else
-						ChatFrame_AddChannel(DEFAULT_CHAT_FRAME, channelName)
+						ChatFrame_AddChannel(DEFAULT_CHAT_FRAME, chatID)
 						local editBox = ChatEdit_ChooseBoxForSend();
 						local hasText = editBox:GetText()
 						if editBox:HasFocus() then
-							editBox:SetText("/"..channel.." " ..hasText);
+							editBox:SetText("/"..pindaoID.." " ..hasText);
 						else
 							ChatEdit_ActivateChat(editBox)
-							editBox:SetText("/"..channel.." " ..hasText);
+							editBox:SetText("/"..pindaoID.." " ..hasText);
 						end
 					end
 					chatbut.X:Hide();
 				else
 					local pindaomulu = {GetChatWindowChannels(1)}
 					for i=1,#pindaomulu do
-						if pindaomulu[i]==channelName then
-							ChatFrame_RemoveChannel(DEFAULT_CHAT_FRAME, channelName);
+						if pindaomulu[i]==chatID then
+							ChatFrame_RemoveChannel(DEFAULT_CHAT_FRAME, chatID);
 							self.X:Show();
-							PIG_print("已屏蔽"..channelName.."频道消息");
+							PIG_print("已屏蔽"..chatID.."频道消息");
 							return
 						end
 					end
-					ChatFrame_AddChannel(DEFAULT_CHAT_FRAME, channelName)
+					ChatFrame_AddChannel(DEFAULT_CHAT_FRAME, chatID)
 					self.X:Hide();
-					PIG_print("已解除"..channelName.."频道消息屏蔽");
+					PIG_print("已解除"..chatID.."频道消息屏蔽");
 				end
 			end);
 		end
@@ -199,6 +189,7 @@ function QuickChatfun.Update_ChatBut_icon()
 			for ii=1,#Showchatmulu do
 				if chaozhaopindao[i][2]==Showchatmulu[ii] then
 					chaozhaopindao[i][1]:Hide();
+					break
 				end
 				if chaozhaopindao[i][2]=="PIG" or chaozhaopindao[i][2]==worldname then
 					for x=1,ChatpindaoMAX do

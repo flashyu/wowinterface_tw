@@ -36,7 +36,7 @@ Create.BackdropColor={0.08, 0.08, 0.08, 0.5}
 Create.BackdropBorderColor={0, 0, 0, 1}
 function Create.PIGLine(Parent,Point,Y,HLR,Color,UIName)
 	local Y = Y or 0
-	local HLR = HLR or {1.1,0,0}
+	local HLR = HLR or {1,0,0}
 	local Color = Color or Create.BackdropBorderColor
 	local frameX = Parent:CreateTexture(UIName, "BORDER");
 	frameX:SetTexture("Interface/AddOns/"..addonName.."/Libs/line.blp");

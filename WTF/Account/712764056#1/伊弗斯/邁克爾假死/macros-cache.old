@@ -1,0 +1,59 @@
+VER 3 0000000001000022 "1" "134072"
+/castsequence 蝰蛇守护,龙鹰守护
+END
+VER 3 0000000001000024 "1" "135421"
+END
+VER 3 000000000100001F "target" "135769"
+/target 乌
+/script SetRaidTarget("target",8)
+END
+VER 3 0000000001000025 "乱射" "134400"
+/castsequence [@Cursor,nochanneling:乱射] 乱射
+END
+VER 3 000000000100001C "坐騎" "132150"
+/cast 塞纳里奥作战角鹰兽
+/cast 霜狼嗥叫者
+END
+VER 3 000000000100001E "守护" "INV_MISC_QUESTIONMARK"
+/castsequence 龙鹰守护,猎豹守护
+END
+VER 3 0000000001000021 "爆发" "INV_MISC_QUESTIONMARK"
+/cast 狂暴(种族特长)
+/cast 急速射击
+/use 菲斯克的怀表
+/cast 野性呼唤
+END
+VER 3 0000000001000023 "爆发2" "134400"
+#showtooltip 急速射击
+/cast 急速射击
+/cast 野性呼唤
+/施放 血性狂怒
+/use 征服者的天灾追猎者护手
+/施放 准备就绪
+END
+VER 3 000000000100000E "爆發" "136048"
+#showtooltip 急速射击
+/use 速度药水
+/cast 急速射击
+/cast 野性呼唤
+/施放 血性狂怒
+/use 征服者的天灾追猎者护手
+/施放 准备就绪
+END
+VER 3 000000000100001B "稳固" "INV_MISC_QUESTIONMARK"
+/castsequence reset=3 穩固射擊, 自動射擊
+/castrandom [target=pettarget,exists] 擊殺命令, 攻擊
+END
+VER 3 000000000100001D "自动攻击" "INV_MISC_QUESTIONMARK"
+/castsequence reset=6 猛禽一击
+/castrandom 猫鼬撕咬
+/施放 猛禽一击
+/petattack
+END
+VER 3 0000000001000026 "荷槍實彈" "134400"
+/castsequence reset=2,target 爆炸射击, 爆炸射击(等级 3)
+END
+VER 3 0000000001000020 "误导宠物" "INV_MISC_QUESTIONMARK"
+#showtooltips 误导
+/cast [target=focus,exists][target=pet][] 误导
+END

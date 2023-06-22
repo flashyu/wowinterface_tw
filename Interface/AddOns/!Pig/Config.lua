@@ -194,7 +194,7 @@ Config_Transfer.NR.scroll:SetScrollChild(Config_Transfer.NR.textArea)
 
 ---以下部分来自ALA大神告诉的AEC3代码
 local strbyte, strchar, gsub, gmatch, format = string.byte, string.char, string.gsub, string.gmatch, string.format
-local assert, error, pcall = assert, function(msg) print("|cffFFFF00!Pig:|r|cffFF0000"..msg.."|r") end, pcall
+local assert, error, pcall = assert, function(msg) PIG_print("|cffFF0000"..msg.."|r") end, pcall
 local type, tostring, tonumber = type, tostring, tonumber
 local pairs, select, frexp = pairs, select, math.frexp
 local tconcat = table.concat

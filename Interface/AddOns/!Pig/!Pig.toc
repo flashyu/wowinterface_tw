@@ -10,7 +10,7 @@
 ## AddonCompartmentFuncOnEnter: PIGCompartmentEnter
 ## AddonCompartmentFuncOnLeave: PIGCompartmentLeave
 ## Author: geligasi
-## Version: 6.0.9
+## Version: 6.1.0
 ## SavedVariables: PIGA
 ## SavedVariablesPerCharacter: PIG_PerA
 Localization\Localization.xml
@@ -29,6 +29,7 @@ Map\Map.xml
 CVars\CVars.xml
 Config.lua
 About.lua
+Invite\Invite.xml
 RaidRecord\RaidRecord.xml
 Rurutia\Rurutia.xml
 Debug.lua

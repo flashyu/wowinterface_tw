@@ -79,18 +79,18 @@ function CommonFun.AutoBuy()
 							if NPCshuliang==(-1) then
 								goumaihanshu(i,ii,shijigoumai,dataY)
 								if PIGA["AutoSellBuy"]["Buy_Tishi"] then
-									print("|cFF00ffff!Pig|r |cFF00ff00执行自动补货:|r "..PIG_PerA["AutoSellBuy"]["Buy_List"][i][2].." |cFF00ff00补货数量:|r"..shijigoumai);
+									PIG_print("|cFF00ff00执行自动补货:|r "..PIG_PerA["AutoSellBuy"]["Buy_List"][i][2].." |cFF00ff00补货数量:|r"..shijigoumai);
 								end
 							else
 								if shijigoumai>NPCshuliang then
 									BuyMerchantItem(ii,NPCshuliang)
 									if PIGA["AutoSellBuy"]["Buy_Tishi"] then
-										print("|cFF00ffff!Pig|r |cFF00ff00商家物品限购:|r "..PIG_PerA["AutoSellBuy"]["Buy_List"][i][2].." |cFF00ff00抢购数量:|r"..NPCshuliang);
+										PIG_print("|cFF00ff00商家物品限购:|r "..PIG_PerA["AutoSellBuy"]["Buy_List"][i][2].." |cFF00ff00抢购数量:|r"..NPCshuliang);
 									end
 								else
 									goumaihanshu(i,ii,shijigoumai,dataY)
 									if PIGA["AutoSellBuy"]["Buy_Tishi"] then
-										print("|cFF00ffff!Pig|r |cFF00ff00执行自动补货:|r "..PIG_PerA["AutoSellBuy"]["Buy_List"][i][2].." |cFF00ff00补货数量:|r"..shijigoumai);
+										PIG_print("|cFF00ff00执行自动补货:|r "..PIG_PerA["AutoSellBuy"]["Buy_List"][i][2].." |cFF00ff00补货数量:|r"..shijigoumai);
 									end
 								end
 							end	

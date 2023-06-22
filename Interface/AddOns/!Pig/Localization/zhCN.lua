@@ -245,7 +245,6 @@ L["INVITE_LEISURE"] = "候车";
 L["INVITE_CHEDUI"] = "车队";
 L["INVITE_PLANE"] = "位面";
 L["INVITE_RECEIVEDATA"] = "正在接收数据...";
-L["INVITE_WARNING"] = "***请勿在非中国大陆服务器使用***";
 L["INVITE_LFG_JOIN"] = "加入PIG频道";
 L["INVITE_LFG_LEAVE"] = "已加入PIG频道"
 -- 

@@ -257,7 +257,6 @@ local function zhegnheBANK_Open()
 		BKregions1[i]:Hide()
 	end
 	for i=1,yinhangmorengezishu[2] do
-		print(i)
 		BankSlotsFrame["Bag"..i]:SetScale(0.76);
 		BankSlotsFrame["Bag"..i]:ClearAllPoints();
 		if i==1 then

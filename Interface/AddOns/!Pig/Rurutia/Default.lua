@@ -4,7 +4,7 @@ addonTable.Default.Rurutia = {
 	["FastFocus"]=false,
 	["FastFocusKEY"]="shift",
 	["FastClearFocus"]=false,
-	["QuestsEnd"]=false,
+	["QuestsEnd"]=true,
 	["QuestsEndAudio"]=1,
 };
 --默认配置-针对角色

@@ -190,8 +190,8 @@ Activa esta opción si quieres que el temporizador esté oculto, o cuando utilic
 	L["Anchor"] = "Anclaje"
 	L["Anchor Point"] = "Punto de Anclaje"
 	L["Anchored To"] = "anclado a"
-	L["and"] = "y"
 	L["And "] = "y"
+	L["and"] = "y"
 	L["and aligned left"] = "y alineado a la izquierda"
 	L["and aligned right"] = "y alineado a la derecha"
 	L["and rotated left"] = "y girado a la izquierda"
@@ -298,8 +298,8 @@ Off Screen]=] ] = "El aura está fuera de la pantalla"
 	L["Collapse all non-loaded displays"] = "Plegar todas las auras no cargadas"
 	L["Collapse all pending Import"] = "Contraer todas las importaciones pendientes"
 	L["Collapsible Group"] = "Grupo contraíble"
-	L["Color"] = "Color"
 	L["color"] = "color"
+	L["Color"] = "Color"
 	L["Column Height"] = "Altura de columna"
 	L["Column Space"] = "Espacio de columna"
 	L["Columns"] = "Columnas"
@@ -1200,9 +1200,9 @@ It might not work correctly with your version!]=]
 	--[[Translation missing --]]
 	L["Use Texture"] = "Use Texture"
 	--[[Translation missing --]]
-	L["Used in auras:"] = "Used in auras:"
-	--[[Translation missing --]]
 	L["Used in Auras:"] = "Used in Auras:"
+	--[[Translation missing --]]
+	L["Used in auras:"] = "Used in auras:"
 	--[[Translation missing --]]
 	L["Uses Texture Coordinates to rotate the texture."] = "Uses Texture Coordinates to rotate the texture."
 	--[[Translation missing --]]

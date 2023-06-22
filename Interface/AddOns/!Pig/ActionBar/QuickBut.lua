@@ -383,7 +383,7 @@ function QuickButUI:Spell()
 						end
 					end
 				else
-					print("\124cff00FFFF!Pig：\124cffffFF00未安装Recount/Details！\124r");
+					PIG_print("未安装Recount/Details");
 				end
 			end
 		end)

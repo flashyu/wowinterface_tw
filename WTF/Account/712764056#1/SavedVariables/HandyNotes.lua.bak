@@ -1,0 +1,19 @@
+
+HandyNotesDB = {
+	["profileKeys"] = {
+		["特變電工 - 伊弗斯"] = "特變電工 - 伊弗斯",
+	},
+	["profiles"] = {
+		["特變電工 - 伊弗斯"] = {
+		},
+	},
+}
+HandyNotes_HandyNotesDB = {
+	["profileKeys"] = {
+		["特變電工 - 伊弗斯"] = "特變電工 - 伊弗斯",
+	},
+	["profiles"] = {
+		["特變電工 - 伊弗斯"] = {
+		},
+	},
+}

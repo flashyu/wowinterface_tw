@@ -16,7 +16,7 @@ local PIGFontString=Create.PIGFontString
 local GetContainerNumSlots=C_Container and C_Container.GetContainerNumSlots or GetContainerNumSlots
 local CommonFun=addonTable.CommonFun
 ---
-local GnName,GnUI,GnIcon,FrameLevel = "售卖助手","AutoSellBuy_UI",134409,30
+local GnName,GnUI,GnIcon,FrameLevel = "售卖助手","AutoSellBuy_UI",134409,20
 CommonFun.FrameLevel=FrameLevel
 CommonFun.GnName=GnName
 local Tooltip = "开启"..GnName..",包含一键丢弃/自动卖出/自动购买/自动开箱盒蚌/使用物品";

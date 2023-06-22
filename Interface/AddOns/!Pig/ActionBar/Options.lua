@@ -346,21 +346,23 @@ if tocversion<100000 then
 				self:SetMovable(false)
 			end
 		end
-		MultiCastBar_Update(MultiCastActionBarFrame)
-		local function jiazaiMultiCast()
+		if MultiCastActionBarFrame then
 			MultiCastBar_Update(MultiCastActionBarFrame)
+			local function jiazaiMultiCast()
+				MultiCastBar_Update(MultiCastActionBarFrame)
+			end
+			MultiCastActionBarFrame:HookScript("OnEvent", function (self,event)
+				if event=="PLAYER_ENTERING_WORLD" then
+					C_Timer.After(0.4,jiazaiMultiCast)
+					C_Timer.After(1,jiazaiMultiCast)
+					C_Timer.After(2,jiazaiMultiCast)
+					C_Timer.After(5,jiazaiMultiCast)
+				end
+				if event=="PLAYER_REGEN_ENABLED" then
+					MultiCastBar_Update(self)
+				end
+			end);
 		end
-		MultiCastActionBarFrame:HookScript("OnEvent", function (self,event)
-			if event=="PLAYER_ENTERING_WORLD" then
-				C_Timer.After(0.4,jiazaiMultiCast)
-				C_Timer.After(1,jiazaiMultiCast)
-				C_Timer.After(2,jiazaiMultiCast)
-				C_Timer.After(5,jiazaiMultiCast)
-			end
-			if event=="PLAYER_REGEN_ENABLED" then
-				MultiCastBar_Update(self)
-			end
-		end);
 		--宠物动作条
 		local function PetBar_Update(self)
 			if InCombatLockdown() then

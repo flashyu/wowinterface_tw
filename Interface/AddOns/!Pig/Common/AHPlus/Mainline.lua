@@ -56,7 +56,6 @@ function CommonFun.AHPlus_Mainline()
 			v[2]=false
 		end
 		for i=1,#AHlinshiInfoList do
-			--print(AHlinshiInfoList[i][1])
 			local nameID=AHlinshiInfoList[i][17]
 			local xianzaidanjia = AHlinshiInfoList[i][10]/AHlinshiInfoList[i][3]
 	   		if PIGA["AHPlus"]["Data"][FWQrealm][nameID] then
@@ -194,7 +193,6 @@ function CommonFun.AHPlus_Mainline()
 				local ItemID = data["id"]
 				if ItemID then
 					local  bubangding = select(14, GetItemInfo(ItemID))--非绑定
-					--print(bubangding)
 					if bubangding~=1 and bubangding~=4 then
 						local FWQrealm = GetRealmName()
 						if PIGA["AHPlus"]["Data"][FWQrealm] and PIGA["AHPlus"]["Data"][FWQrealm][ItemID] then

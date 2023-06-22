@@ -1,0 +1,204 @@
+
+QuestieConfig = {
+	["char"] = {
+		["特變電工 - 伊弗斯"] = {
+			["hideUnexploredMapIcons"] = false,
+			["enableQuestFrameIcons"] = true,
+			["minLevelFilter"] = 0,
+			["showDungeonQuests"] = true,
+			["complete"] = {
+			},
+			["autoaccept"] = false,
+			["ldbDisplayText"] = "Questie",
+			["autocomplete"] = false,
+			["objectiveCompleteSoundChoiceName"] = "ObjectiveDefault",
+			["enabled"] = true,
+			["manualMinLevelOffset"] = false,
+			["isTrackerExpanded"] = true,
+			["soundOnObjectiveComplete"] = false,
+			["objectiveProgressSoundChoiceName"] = "ObjectiveProgress",
+			["soundOnObjectiveProgress"] = false,
+			["questAnnounceAbandoned"] = false,
+			["journey"] = {
+			},
+			["lowlevel"] = false,
+			["showAQWarEffortQuests"] = false,
+			["lastDailySetDate"] = "",
+			["lastDailyRequestResetTime"] = 0,
+			["autoModifier"] = "shift",
+			["questAnnounceChannel"] = "party",
+			["hiddenDailies"] = {
+				["cooking"] = {
+				},
+				["hc"] = {
+				},
+				["nhc"] = {
+				},
+				["fishing"] = {
+				},
+				["pvp"] = {
+				},
+			},
+			["hidden"] = {
+			},
+			["questAnnounceObjectives"] = true,
+			["absoluteLevelOffset"] = false,
+			["questAnnounceItems"] = true,
+			["questAnnounceCompleted"] = false,
+			["questAnnounceAccepted"] = false,
+			["searchType"] = 1,
+			["hideUntrackedQuestsMapIcons"] = false,
+			["trackerEnabled"] = true,
+			["showRepeatableQuests"] = true,
+			["showEventQuests"] = true,
+			["questAnnounceLocally"] = false,
+			["acceptTrivial"] = false,
+			["showPvPQuests"] = true,
+			["showQuestsInNpcTooltip"] = true,
+			["maxLevelFilter"] = 7,
+			["soundOnQuestComplete"] = false,
+			["showRaidQuests"] = true,
+			["questCompleteSoundChoiceName"] = "QuestDefault",
+		},
+	},
+	["global"] = {
+		["trackerHeaderEnabled"] = true,
+		["iconLimit"] = 200,
+		["enableObjectives"] = true,
+		["trackerbindSetTomTom"] = "ctrlleft",
+		["alwaysGlowMinimap"] = false,
+		["hideTrackerInDungeons"] = true,
+		["DBMHUDZoom"] = 100,
+		["questObjectiveColors"] = false,
+		["trackerShowCompleteQuests"] = true,
+		["eventScale"] = 1.35,
+		["dbmHUDRadius"] = 3,
+		["trackerFontObjective"] = "Friz Quadrata TT",
+		["currentHeaderEnabledSetting"] = true,
+		["trackerColorObjectives"] = "white",
+		["enableIconLimit"] = false,
+		["trackerbindUntrack"] = "shiftleft",
+		["showBlizzardQuestTimer"] = false,
+		["mapCoordinatesEnabled"] = true,
+		["trackerFontZone"] = "Friz Quadrata TT",
+		["sizerHidden"] = false,
+		["isleOfQuelDanasPhase"] = 1,
+		["bugWorkarounds"] = true,
+		["questieShutUp"] = false,
+		["availableScale"] = 1.2,
+		["isIsleOfQuelDanasPhaseReminderDisabled"] = false,
+		["trackerQuestPadding"] = 4,
+		["trackerFontOutline"] = "None",
+		["globalScale"] = 0.6,
+		["enableAvailable"] = true,
+		["alwaysGlowMap"] = true,
+		["trackerFontSizeZone"] = 12,
+		["currentBorderEnabled"] = false,
+		["monsterScale"] = 1,
+		["fadeOverPlayerLevel"] = 0.5,
+		["globalMigrationSteps"] = {
+			true, -- [1]
+			true, -- [2]
+			true, -- [3]
+			true, -- [4]
+			true, -- [5]
+			true, -- [6]
+			true, -- [7]
+			true, -- [8]
+			true, -- [9]
+			true, -- [10]
+			true, -- [11]
+			true, -- [12]
+			true, -- [13]
+			true, -- [14]
+			true, -- [15]
+			true, -- [16]
+			true, -- [17]
+			true, -- [18]
+			true, -- [19]
+			true, -- [20]
+			true, -- [21]
+			true, -- [22]
+			true, -- [23]
+		},
+		["migrationVersion"] = {
+			["特變電工伊弗斯"] = 23,
+		},
+		["questieTLoc"] = "char",
+		["trackerBackdropAlpha"] = 1,
+		["debugEnabled"] = false,
+		["nameplateTargetFrameY"] = 25,
+		["dbmHUDShowLoot"] = false,
+		["debugLevel"] = 0,
+		["globalMiniMapScale"] = 0.7,
+		["nameplateScale"] = 1,
+		["nameplateTargetFrameX"] = -30,
+		["trackerBorderEnabled"] = false,
+		["clusterLevelHotzone"] = 50,
+		["dbmHUDEnable"] = false,
+		["dbmHUDShowAlert"] = true,
+		["nameplateEnabled"] = true,
+		["trackerFadeQuestItemButtons"] = false,
+		["minimapCoordinatesEnabled"] = false,
+		["fadeOverPlayer"] = true,
+		["nameplateTargetFrameScale"] = 1.7,
+		["questieLocale"] = "enUS",
+		["dbmHUDShowSlay"] = false,
+		["trackerBackdropEnabled"] = false,
+		["questieLocaleDiff"] = false,
+		["iconFadeLevel"] = 0.3,
+		["questMinimapObjectiveColors"] = false,
+		["trackerFontSizeHeader"] = 12,
+		["nameplateX"] = -17,
+		["hideCompletedQuestObjectives"] = false,
+		["enableTurnins"] = true,
+		["trackerBackdropFader"] = false,
+		["trackerFontSizeObjective"] = 10,
+		["mapShowHideEnabled"] = true,
+		["trackerFontQuest"] = "Friz Quadrata TT",
+		["enableMiniMapIcons"] = true,
+		["enableTooltips"] = true,
+		["objectScale"] = 1,
+		["enableMapIcons"] = true,
+		["trackerbindOpenQuestLog"] = "left",
+		["dbmHUDShowQuest"] = true,
+		["fadeOverPlayerDistance"] = 5,
+		["showQuestXpAtMaxLevel"] = true,
+		["currentBackdropEnabled"] = false,
+		["trackerFontSizeQuest"] = 10,
+		["nameplateY"] = -7,
+		["dbmHUDShowInteract"] = true,
+		["listAchievementsFirst"] = false,
+		["hideTrackerInCombat"] = false,
+		["stickyDurabilityFrame"] = false,
+		["globalTrackerLocation"] = true,
+		["trackerShowQuestLevel"] = true,
+		["hideCompletedAchieveObjectives"] = true,
+		["autoMoveHeader"] = true,
+		["trackerHeightRatio"] = 0.5,
+		["debugEnabledPrint"] = false,
+		["enableTooltipsQuestLevel"] = true,
+		["lootScale"] = 1,
+		["collapseCompletedQuests"] = false,
+		["trackerFadeMinMaxButtons"] = false,
+		["trackerSortObjectives"] = "byZone",
+		["autoTrackQuests"] = true,
+		["DBMHUDRefresh"] = 0.03,
+		["fadeLevel"] = 20,
+		["trackerFontHeader"] = "Friz Quadrata TT",
+		["trackerSetpoint"] = "TOPLEFT",
+		["trackerLocked"] = true,
+		["stickyVoiceOverFrame"] = false,
+		["alwaysShowTracker"] = false,
+		["mapCoordinatePrecision"] = 1,
+		["nameplateTargetFrameEnabled"] = true,
+		["currentBackdropFader"] = false,
+	},
+	["profileKeys"] = {
+		["特變電工 - 伊弗斯"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

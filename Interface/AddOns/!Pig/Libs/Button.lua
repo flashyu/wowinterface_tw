@@ -289,6 +289,10 @@ function Create.PIGOptionsList_RF(fuF,DownY,Mode,bianjuV)
 		TabF.Top:SetWidth(30)
 		TabF.Top:SetPoint("TOPRIGHT", TabF, "TOPLEFT", 0, 0)
 		TabF.Top:SetPoint("BOTTOMLEFT", TabF, "BOTTOMLEFT", -30, 0)
+	elseif Mode=="Bot" then
+		TabF.Top:SetHeight(30)
+		TabF.Top:SetPoint("TOPLEFT", TabF, "BOTTOMLEFT", 0, 0)
+		TabF.Top:SetPoint("TOPRIGHT", TabF, "BOTTOMRIGHT", 0, -30)
 	else
 		TabF.Top:SetHeight(30)
 		TabF.Top:SetPoint("BOTTOMLEFT", TabF, "TOPLEFT", 0, 0)
@@ -325,6 +329,12 @@ function Create.PIGOptionsList_R(fuF,tabname,W,Mode)
 			fuF.Top.tabbut:SetPoint("TOPRIGHT", fuF.Top, "TOPRIGHT", 1, -10);
 		else
 			fuF.Top.tabbut:SetPoint("TOP", ziframe[#ziframe], "BOTTOM", 0, -10);
+		end
+	elseif Mode=="Bot" then
+		if #ziframe==0 then
+			fuF.Top.tabbut:SetPoint("TOPLEFT", fuF.Top, "TOPLEFT", 10, 1);
+		else
+			fuF.Top.tabbut:SetPoint("LEFT", ziframe[#ziframe], "RIGHT", 10, 0);
 		end
 	else
 		if #ziframe==0 then

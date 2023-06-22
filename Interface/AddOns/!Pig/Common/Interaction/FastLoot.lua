@@ -268,7 +268,15 @@ end
 CommonFun.Interaction.FastLoot = function()
     if tocversion<80000 then 
         if PIGA['Interaction']['Autoloot'] then
-            PIG_AutoLoot:OnInit();
+            if IsInGroup() then 
+                local lootmethod= GetLootMethod();
+                if lootmethod~="master" then 
+                    PIG_AutoLoot:OnInit();
+                end
+            else
+                PIG_AutoLoot:OnInit();
+            end
+            
             --SetCVar("autoLootRate", "0")
             --LootF:RegisterEvent("LOOT_READY")
         else

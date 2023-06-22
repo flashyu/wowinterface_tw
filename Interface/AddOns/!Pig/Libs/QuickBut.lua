@@ -55,6 +55,7 @@ function Create.PIGQuickBut(QkButUI,Tooltip,Icon,GnUI,FrameLevel,Template)
 			end
 		end)
 	end
+	fuji:GengxinWidth()
 	return But
 end
 --创建侧面功能按钮

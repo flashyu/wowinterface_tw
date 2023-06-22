@@ -2,6 +2,32 @@ local addonName, addonTable = ...;
 local _, _, _, tocversion = GetBuildInfo()
 local Fun = {}
 -------------
+local ChatpindaoMAX = 5
+Fun.ChatpindaoMAX=ChatpindaoMAX
+local function huoqubianhao(Name)
+	local channel,channelName= GetChannelName(Name)
+	if channelName then
+		return channel
+	else
+		return 0
+	end
+end
+function Fun.GetPIGID(chname)
+	local chname = chname or "PIG"
+	local cunzaihao = huoqubianhao(chname)
+	if cunzaihao>0 then
+		return cunzaihao
+	else
+		for x=1,ChatpindaoMAX do
+			local newpindaoname = chname..x
+			local cunzaihao = huoqubianhao(newpindaoname)
+			if cunzaihao>0 then
+				return cunzaihao
+			end
+		end
+	end
+	return 0
+end
 function PIGCopyTable(OldTable)
 	local function PIGCopyfun(old,new)
 		for k,v in pairs(old) do

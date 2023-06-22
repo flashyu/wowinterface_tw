@@ -87,7 +87,7 @@ function CommonFun.AutoSell()
 			end
 			if fujiF.shoumaiG > 0 then
 				if PIGA["AutoSellBuy"]["Sell_Tishi"] then
-					print("|cFF00ffff!Pig|r|cFF7FFFAA本次售卖获得:|r " .. GetCoinTextureString(fujiF.shoumaiG));
+					PIG_print("|cFF7FFFAA本次售卖获得:|r " .. GetCoinTextureString(fujiF.shoumaiG));
 				end
 			end
 			if fujiF.shoumaiShuliang>=12 then 

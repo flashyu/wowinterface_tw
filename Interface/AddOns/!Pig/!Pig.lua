@@ -33,7 +33,7 @@ PIGUI:SetScript("OnEvent",function(self, event, arg1)
 		--技能监控
 		-- addonTable.Spell_CD_JK()
 		--时空之门
-		-- addonTable.Invite()
+		addonTable.Invite()
 		--开团助手
 		addonTable.RaidRecord()
 		--带本助手

@@ -67,9 +67,9 @@ end
 ---重置配置
 fuFrame.Default = PIGButton(fuFrame,{"TOPRIGHT",fuFrame,"TOPRIGHT",-20,-20},{60,22},"重置");  
 fuFrame.Default:SetScript("OnClick", function ()
-	StaticPopup_Show ("HUIFU_DEFAULT_FUBEN");
+	StaticPopup_Show ("HUIFU_RAIDRECORD_INFO");
 end);
-StaticPopupDialogs["HUIFU_DEFAULT_FUBEN"] = {
+StaticPopupDialogs["HUIFU_RAIDRECORD_INFO"] = {
 	text = "此操作将\124cffff0000重置\124r"..GnName.."所有配置，需重载界面。\n确定重置?",
 	button1 = "确定",
 	button2 = "取消",
@@ -102,37 +102,42 @@ local autofenffff = CreateFrame("Frame")
 autofenffff:SetScript("OnEvent",function(self,event,arg1,_,_,_,arg5)
 	--是队长团长
 	-- local isLeader = UnitIsGroupLeader("player");
-	-- if not isLeader then return end
-	local lootmethod, masterlooterPartyID, masterlooterRaidID= GetLootMethod();
-	if lootmethod=="master" and masterlooterPartyID==0 then
-		local zjinameX = UnitName("player")
-		local lootNum = GetNumLootItems()
-		local MSGyifasong = {}
-		for x=1,lootNum do
-			MSGyifasong[x]=false
-		end
-		for x = 1, lootNum do
-			local link = GetLootSlotLink(x)
-			if link then
-				local itemID = GetItemInfoInstant(link)
-				if itemID then
-					for ix=1,#bufenpei do	
-						if itemID == bufenpei[ix] then
-							return
-						end
-					end
-					---
-					local lootIcon, lootName, lootQuantity, currencyID, lootQuality, locked, isQuestItem, questID, isActive = GetLootSlotInfo(x)
-					if not isQuestItem and lootQuality>=GetLootThreshold() then
-						for ci = 1, GetNumGroupMembers() do
-							local candidate = GetMasterLootCandidate(x, ci)
-							if candidate == zjinameX then
-								GiveMasterLoot(x, ci);
-								if not MSGyifasong[x] then
-									PIGSendChatRaidParty("!Pig:拾取"..link.."×"..lootQuantity)
-									MSGyifasong[x]=true
-								end
+	if IsInGroup() then
+		local lootmethod, masterlooterPartyID, masterlooterRaidID= GetLootMethod();
+		if lootmethod=="master" and masterlooterPartyID==0 then
+			local zjinameX = UnitName("player")
+			local lootNum = GetNumLootItems()
+			local MSGyifasong = {}
+			for x=1,lootNum do
+				MSGyifasong[x]=false
+			end
+			for x = 1, lootNum do
+				local link = GetLootSlotLink(x)
+				if link then
+					local itemID = GetItemInfoInstant(link)
+					if itemID then
+						self.bufenpei=true
+						for ix=1,#bufenpei do	
+							if itemID == bufenpei[ix] then
+								self.bufenpei=false
 								break
+							end
+						end
+						---
+						if self.bufenpei then
+							local lootIcon, lootName, lootQuantity, currencyID, lootQuality, locked, isQuestItem, questID, isActive = GetLootSlotInfo(x)
+							if not isQuestItem and lootQuality>=GetLootThreshold() then
+								for ci = 1, GetNumGroupMembers() do
+									local candidate = GetMasterLootCandidate(x, ci)
+									if candidate == zjinameX then
+										GiveMasterLoot(x, ci);
+										if not MSGyifasong[x] then
+											PIGSendChatRaidParty("!Pig:拾取"..link.."×"..lootQuantity)
+											MSGyifasong[x]=true
+										end
+										break
+									end
+								end
 							end
 						end
 					end
@@ -222,6 +227,7 @@ PIGTradeFrame:HookScript("OnEvent",function (self,event,arg1,arg2,arg3,arg4,arg5
 		end
 	end
 	if event=="UI_INFO_MESSAGE" and arg1==242 then
+	--if event=="UI_INFO_MESSAGE" then
 		local jiaoyiwupin = {
 			["duixiang"]="",
 			["TargetItem"]={},
@@ -234,19 +240,17 @@ PIGTradeFrame:HookScript("OnEvent",function (self,event,arg1,arg2,arg3,arg4,arg5
 		jiaoyiwupin["PlayerMoney"]=TradeFrame.PIGinfo.PlayerMoney*0.0001
 		for i=1,#TradeFrame.PIGinfo.TargetItem do
 			if TradeFrame.PIGinfo.TargetItem[i] then
-				--print(TradeFrame.PIGinfo.TargetItem[i])
 				table.insert(jiaoyiwupin["TargetItem"],TradeFrame.PIGinfo.TargetItem[i])
 			end
 		end
 		for i=1,#TradeFrame.PIGinfo.PlayerItem do
 			if TradeFrame.PIGinfo.PlayerItem[i] then
-				--print(TradeFrame.PIGinfo.PlayerItem[i])
 				table.insert(jiaoyiwupin["PlayerItem"],TradeFrame.PIGinfo.PlayerItem[i])
 			end
 		end
 		
 		local wupinNum = #jiaoyiwupin["PlayerItem"]
-		jiaoyiwupin["TargetMoney"]=666
+		--jiaoyiwupin["TargetMoney"]=666
 		if wupinNum>0 and jiaoyiwupin["TargetMoney"]>0 then--有物品交出和金币收入
 			local RRItemList = PIGA["RaidRecord"]["ItemList"]
 			for p=1,wupinNum do

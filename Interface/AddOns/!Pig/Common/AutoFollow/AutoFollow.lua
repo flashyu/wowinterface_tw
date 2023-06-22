@@ -48,7 +48,7 @@ function QuickButUI:AutoFollow()
 		--被动
 		local gensuiB = CreateFrame("CheckButton", "Gensui_B_UI", nr, "ChatConfigCheckButtonTemplate");
 		gensuiB:SetSize(butW,butW);
-		gensuiB:SetPoint("LEFT",gensuiZ,"RIGHT",0,-4);
+		gensuiB:SetPoint("LEFT",gensuiZ,"RIGHT",3,-4);
 		gensuiB:SetHitRectInsets(0,0,0,0);
 		gensuiB.Text:ClearAllPoints();
 		gensuiB.Text:SetTextColor(1, 1, 0, 0.8);
@@ -72,7 +72,7 @@ function QuickButUI:AutoFollow()
 		end);
 
 		----
-		local gensuiCMD  = PIGButton(nr,{"LEFT",gensuiB,"RIGHT",2,4},{butW-5,butW-5},"令","Gensui_B_CMD_UI");
+		local gensuiCMD  = PIGButton(nr,{"LEFT",gensuiB,"RIGHT",3,4},{butW-5,butW-5},"令","Gensui_B_CMD_UI");
 		gensuiCMD:RegisterForClicks("LeftButtonUp","RightButtonUp")
 		gensuiCMD:HookScript("OnEnter", function (self)
 			GameTooltip:ClearLines();

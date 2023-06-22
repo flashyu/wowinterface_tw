@@ -35,37 +35,6 @@ TomTomWaypointsM = {
 	},
 	["profiles"] = {
 		["狂暴專家 - 伊弗斯"] = {
-			[1442] = {
-				["1442:582000000:516000000:维尼克斯\n风险投资公司商人"] = {
-					1442, -- [1]
-					0.582, -- [2]
-					0.516, -- [3]
-					["arrivaldistance"] = 15,
-					["callbacks"] = {
-						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-					},
-					["persistent"] = true,
-					["minimap"] = true,
-					["cleardistance"] = 10,
-					["title"] = "维尼克斯\n风险投资公司商人",
-					["from"] = "?",
-					["crazy"] = true,
-					["world"] = true,
-				},
-			},
 			[1439] = {
 				["1439:386030525.2709:435314342.91409:TomTom 路径点"] = {
 					1439, -- [1]
@@ -74,7 +43,8 @@ TomTomWaypointsM = {
 					["arrivaldistance"] = 15,
 					["crazy"] = true,
 					["persistent"] = true,
-					["minimap"] = true,
+					["desc"] = "TomTom 路径点",
+					["silent"] = true,
 					["cleardistance"] = 10,
 					["title"] = "TomTom 路径点",
 					["from"] = "TomTom/wm",
@@ -94,6 +64,7 @@ TomTomWaypointsM = {
 							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 					},
+					["minimap"] = true,
 					["world"] = true,
 				},
 			},

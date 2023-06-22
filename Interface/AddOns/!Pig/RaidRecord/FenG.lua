@@ -161,7 +161,7 @@ function RaidRFun.RaidRecord_fenG()
 				if ( MailFrame:IsVisible() and MailFrame.selectedTab == 2 ) then
 					SendMailInfo(player.AllName,0)
 				else
-					print("|cff00FFFF!Pig:|r|cffFFFF00请先打开邮箱发件页面！|r");
+					PIG_print("请先打开邮箱发件页面");
 				end
 			end);
 			-------------
@@ -193,7 +193,7 @@ function RaidRFun.RaidRecord_fenG()
 					PIGA["RaidRecord"]["Raidinfo"][p][pp][8]=1;
 					RaidR.Update_FenG()
 				else
-					print("|cff00FFFF!Pig:|r|cffFFFF00请先打开邮箱发件页面！|r");
+					PIG_print("请先打开邮箱发件页面");
 				end
 			end);
 			player.fenG = CreateFrame("Frame", nil, player);

@@ -735,7 +735,7 @@ ChatF.SetFrame.ycBut:HookScript("OnHide", function(self)
 	self.f:Hide()
 	self.f.E:SetText("")
 end)
-local zijianpindaoMAX = 5
+local ChatpindaoMAX = addonTable.Fun.ChatpindaoMAX
 local ADDName= {"PIG"}
 local function guanliyuanyijiao(Name,arg5)
 	local channel,channelName, _ = GetChannelName(Name)
@@ -755,7 +755,7 @@ YchuoquGlfff:SetScript("OnEvent", function(self,event,arg1,arg2,arg3,arg4,arg5)
 			if arg5==playerName[i] then
 				for x=1,#ADDName do
 					guanliyuanyijiao(ADDName[x],arg5)
-					for xx=1,zijianpindaoMAX do
+					for xx=1,ChatpindaoMAX do
 						local newpindaoname = ADDName[x]..xx
 						guanliyuanyijiao(newpindaoname,arg5)
 					end
@@ -867,7 +867,7 @@ local function JoinPigChannel_add()
 	end
 	for i=1,#ADDName do
 		nullmima(ADDName[i])
-		for x=1,zijianpindaoMAX do
+		for x=1,ChatpindaoMAX do
 			local newpindaoname = ADDName[i]..x
 			nullmima(newpindaoname)
 		end
@@ -895,7 +895,7 @@ local function JoinPigChannel_add()
 		if name==feifaPlayers[i] then
 			for i=1,#ADDName do
 				LeaveChanne(ADDName[i])
-				for x=1,zijianpindaoMAX do
+				for x=1,ChatpindaoMAX do
 					local newpindaoname = ADDName[i]..x
 					LeaveChanne(newpindaoname)
 				end

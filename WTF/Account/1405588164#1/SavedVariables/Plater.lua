@@ -1,29 +1,79 @@
 
 PlaterDB = {
 	["captured_spells"] = {
-		[55709] = {
+		[58827] = {
+			["encounterName"] = "塑血者沙尔拉姆",
+			["source"] = "塑血者沙尔拉姆",
+			["npcID"] = 26530,
 			["isChanneled"] = false,
-			["source"] = "狼",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17669,
+			["encounterID"] = 294,
 		},
-		[45525] = {
-			["source"] = "战歌要塞法师",
+		[52711] = {
+			["encounterName"] = "塑血者沙尔拉姆",
+			["type"] = "DEBUFF",
+			["source"] = "塑血者沙尔拉姆",
+			["npcID"] = 26530,
+			["event"] = "SPELL_AURA_APPLIED",
+			["encounterID"] = 294,
+		},
+		[58875] = {
+			["isChanneled"] = false,
+			["source"] = "幽灵狼",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29264,
+		},
+		[4511] = {
+			["source"] = "未知目标",
 			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 25420,
+			["npcID"] = 416,
 		},
-		[19647] = {
+		[61462] = {
 			["isChanneled"] = false,
-			["source"] = "德罗图恩",
+			["source"] = "冰霜使者",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 417,
+			["npcID"] = 30286,
 		},
-		[36640] = {
-			["source"] = "迁跃畸变体",
+		[414277] = {
+			["encounterName"] = "总冠军",
+			["type"] = "DEBUFF",
+			["source"] = "暗夜精灵观众",
+			["encounterID"] = 334,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 34871,
+		},
+		[53334] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "阿努巴尔通灵师",
+			["encounterID"] = 217,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29064,
+		},
+		[61558] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "通灵大师",
+			["npcID"] = 27732,
+		},
+		[58508] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "传送门守卫者",
+			["npcID"] = 30660,
+		},
+		[61590] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "传送门看护者",
+			["npcID"] = 30893,
+		},
+		[75593] = {
+			["source"] = "未知目标",
 			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 18865,
+			["npcID"] = 3100,
 		},
 		[57566] = {
 			["source"] = "未知目标",
@@ -31,157 +81,53 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 417,
 		},
-		[52474] = {
-			["isChanneled"] = false,
-			["source"] = "狼",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17669,
-		},
-		[3600] = {
-			["isChanneled"] = false,
-			["source"] = "地缚图腾",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 2630,
-		},
-		[75447] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29358,
-		},
-		[58921] = {
-			["source"] = "卡玛洛斯神父",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32800,
-		},
-		[32943] = {
-			["source"] = "黑风追迹者",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 23219,
-		},
-		[24317] = {
-			["encounterName"] = "血领主曼多基尔",
-			["source"] = "奥根",
-			["encounterID"] = 787,
+		[66044] = {
+			["encounterName"] = "总冠军",
+			["source"] = "安布罗斯·雷钉",
+			["encounterID"] = 334,
 			["isChanneled"] = false,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 14988,
-		},
-		[32736] = {
-			["isChanneled"] = false,
-			["source"] = "金队战士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32322,
-		},
-		[8242] = {
-			["isChanneled"] = false,
-			["source"] = "燃刃执行者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11323,
-		},
-		[30991] = {
-			["source"] = "巨魔屋顶巡逻兵",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 23090,
-		},
-		[23600] = {
-			["isChanneled"] = false,
-			["source"] = "绿队战士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32321,
-		},
-		[57567] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 417,
-		},
-		[12611] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队法师",
-			["npcID"] = 32341,
-		},
-		[59886] = {
-			["source"] = "法師",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 3619,
+			["npcID"] = 34702,
 		},
 		[54053] = {
 			["isChanneled"] = false,
-			["source"] = "德罗图恩",
 			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "扎恩弗",
 			["npcID"] = 417,
 		},
-		[34944] = {
+		[66619] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "奥尔加隆的回忆",
+			["encounterID"] = 338,
 			["isChanneled"] = false,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "盘牙医师",
-			["npcID"] = 21126,
+			["npcID"] = 35052,
 		},
-		[6713] = {
+		[67194] = {
 			["isChanneled"] = false,
-			["source"] = "绿队战士",
+			["source"] = "银色女祭司",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32321,
+			["npcID"] = 35307,
 		},
-		[34984] = {
-			["isChanneled"] = false,
-			["source"] = "盘牙鳐",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 21128,
-		},
-		[75593] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
+		[394608] = {
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 30164,
-		},
-		[32609] = {
-			["source"] = "联盟战地斥候",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 18581,
-		},
-		[24453] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 15651,
-		},
-		[21401] = {
-			["source"] = "金队萨满祭司",
 			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32340,
+			["source"] = "复活的僵尸",
+			["npcID"] = 27737,
 		},
-		[17843] = {
+		[8599] = {
 			["isChanneled"] = false,
-			["source"] = "绿队牧师",
+			["source"] = "血顶萨满祭司",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32343,
+			["npcID"] = 697,
 		},
-		[19134] = {
-			["isChanneled"] = false,
-			["source"] = "绿队战士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32321,
-		},
-		[46826] = {
-			["isChanneled"] = false,
-			["source"] = "纳格兰护焰者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 25937,
-		},
-		[54508] = {
-			["source"] = "未知目标",
+		[52712] = {
+			["encounterName"] = "塑血者沙尔拉姆",
 			["type"] = "BUFF",
+			["source"] = "塑血者沙尔拉姆",
+			["npcID"] = 26530,
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
+			["encounterID"] = 294,
 		},
 		[54261] = {
 			["isChanneled"] = false,
@@ -189,37 +135,47 @@ PlaterDB = {
 			["source"] = "金队法师",
 			["npcID"] = 32341,
 		},
-		[35917] = {
-			["source"] = "日怒星术师",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 19643,
+		[67546] = {
+			["encounterName"] = "总冠军",
+			["source"] = "雅克布·奥勒留斯元帅",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34705,
 		},
-		[24529] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29358,
+		[66045] = {
+			["encounterName"] = "总冠军",
+			["source"] = "安布罗斯·雷钉",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34702,
 		},
-		[8016] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "笨拙的食肉者",
-			["npcID"] = 16322,
+		[59419] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "哈多诺克斯",
+			["encounterID"] = 217,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28921,
 		},
-		[70893] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29452,
+		[66620] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "奥尔加隆的回忆",
+			["encounterID"] = 338,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35052,
 		},
-		[47982] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 416,
+		[59978] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "传令官沃拉兹",
+			["encounterID"] = 215,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29311,
 		},
-		[24314] = {
+		[24408] = {
 			["encounterName"] = "血领主曼多基尔",
 			["source"] = "血领主曼多基尔",
 			["encounterID"] = 787,
@@ -227,177 +183,297 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 11382,
 		},
-		[24318] = {
-			["encounterName"] = "血领主曼多基尔",
-			["source"] = "血领主曼多基尔",
-			["encounterID"] = 787,
+		[49806] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "阿努巴尔战士",
+			["encounterID"] = 217,
 			["isChanneled"] = false,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11382,
+			["npcID"] = 28732,
 		},
-		[6754] = {
+		[67834] = {
 			["isChanneled"] = false,
-			["source"] = "盘牙监工",
+			["source"] = "虫洞",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17959,
+			["npcID"] = 35646,
 		},
-		[53401] = {
-			["isChanneled"] = false,
-			["source"] = "不高不兴",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29358,
-		},
-		[23836] = {
-			["source"] = "卡尔利亚娜",
+		[55970] = {
+			["encounterName"] = "塔达拉姆王子",
 			["type"] = "BUFF",
+			["source"] = "塔达拉姆王子",
+			["encounterID"] = 213,
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 1863,
+			["npcID"] = 29308,
 		},
-		[23840] = {
-			["source"] = "未知目标",
+		[65918] = {
+			["encounterName"] = "总冠军",
 			["type"] = "BUFF",
+			["source"] = "娅琳·永歌的坐骑",
+			["encounterID"] = 334,
 			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 34658,
+		},
+		[57567] = {
+			["isChanneled"] = false,
+			["source"] = "苏弗姆",
+			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 417,
 		},
-		[23844] = {
-			["type"] = "BUFF",
-			["source"] = "未知目标",
+		[6136] = {
+			["type"] = "DEBUFF",
+			["source"] = "典狱官斯迪尔基斯",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 1860,
+			["npcID"] = 9041,
 		},
-		[33806] = {
+		[7160] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
+			["encounterID"] = 787,
 			["isChanneled"] = false,
-			["source"] = "蛮锤斥候",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 19384,
+			["npcID"] = 11382,
 		},
-		[12470] = {
+		[7162] = {
 			["isChanneled"] = false,
-			["source"] = "金队萨满祭司",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32340,
+			["source"] = "马拉奇修士",
+			["npcID"] = 5661,
 		},
-		[15532] = {
+		[643] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "工头邦德斯",
+			["npcID"] = 2305,
+		},
+		[35706] = {
+			["source"] = "未知目标",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17252,
+		},
+		[12795] = {
 			["isChanneled"] = false,
-			["source"] = "绿队法师",
+			["source"] = "狂怒傀儡",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32324,
+			["npcID"] = 8906,
 		},
-		[14514] = {
+		[68282] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "银色战斗座狼",
+			["npcID"] = 36558,
+		},
+		[52633] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "永恒恶龙",
+			["npcID"] = 28340,
+		},
+		[56737] = {
+			["isChanneled"] = false,
+			["source"] = "碾骨者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30284,
+		},
+		[58813] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "永恒恶龙",
+			["npcID"] = 28340,
+		},
+		[57807] = {
+			["encounterName"] = "传令官沃拉兹",
+			["type"] = "DEBUFF",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 30624,
+		},
+		[13338] = {
+			["isChanneled"] = false,
+			["source"] = "暮光黑暗法师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30319,
+		},
+		[3600] = {
+			["isChanneled"] = false,
+			["source"] = "地缚图腾",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 2630,
+		},
+		[59420] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "哈多诺克斯",
+			["encounterID"] = 217,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28921,
+		},
+		[41056] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "碧蓝上尉",
+			["npcID"] = 30666,
+		},
+		[59468] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "拉文索尔",
+			["npcID"] = 29312,
+		},
+		[67229] = {
+			["isChanneled"] = false,
+			["source"] = "银色女祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35307,
+		},
+		[25710] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "洛丹伦步兵",
+			["npcID"] = 27745,
+		},
+		[58526] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "传送门守卫者",
+			["npcID"] = 30892,
+		},
+		[52442] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "阿尔萨斯",
+			["npcID"] = 26499,
+		},
+		[51963] = {
+			["encounterName"] = "肉钩",
+			["source"] = "黑锋石像鬼",
+			["npcID"] = 27829,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 293,
+		},
+		[6713] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "金队战士",
+			["npcID"] = 32322,
+		},
+		[33663] = {
+			["isChanneled"] = false,
+			["source"] = "土元素图腾",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 15430,
+		},
+		[59245] = {
+			["isChanneled"] = false,
+			["source"] = "碧蓝束缚者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 31007,
+		},
+		[67837] = {
+			["isChanneled"] = false,
+			["source"] = "虫洞",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35646,
+		},
+		[58782] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "DEBUFF",
+			["source"] = "墓穴猎手",
+			["npcID"] = 28199,
+		},
+		[61353] = {
+			["isChanneled"] = false,
+			["source"] = "女猎手库拉",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32711,
+		},
+		[58830] = {
+			["encounterName"] = "时光领主埃博克",
+			["source"] = "时光领主埃博克",
+			["npcID"] = 26532,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 295,
+		},
+		[59357] = {
+			["encounterName"] = "看门者克里克希尔",
+			["source"] = "阿努巴尔暗影法师",
+			["encounterID"] = 216,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28733,
+		},
+		[66081] = {
+			["encounterName"] = "总冠军",
+			["source"] = "娅琳·永歌",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34657,
+		},
+		[41057] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "碧蓝上尉",
+			["npcID"] = 30666,
+		},
+		[59469] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "拉文索尔",
+			["npcID"] = 29312,
+		},
+		[59485] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "谢沃兹",
+			["npcID"] = 29266,
+		},
+		[57457] = {
+			["source"] = "未知目标",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 1087,
+		},
+		[57984] = {
+			["encounterName"] = "肉钩",
+			["source"] = "强力火元素",
+			["npcID"] = 15438,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 293,
+		},
+		[15043] = {
 			["isChanneled"] = false,
 			["event"] = "SPELL_CAST_SUCCESS",
 			["source"] = "金队法师",
 			["npcID"] = 32341,
 		},
-		[3391] = {
-			["encounterName"] = "血领主曼多基尔",
-			["source"] = "奥根",
-			["encounterID"] = 787,
+		[61593] = {
 			["isChanneled"] = false,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 14988,
+			["source"] = "传送门看护者",
+			["npcID"] = 30695,
 		},
-		[11974] = {
+		[59102] = {
 			["isChanneled"] = false,
-			["source"] = "绿队牧师",
+			["source"] = "安卡哈爆法者",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32343,
+			["npcID"] = 30278,
 		},
-		[32060] = {
+		[52491] = {
 			["isChanneled"] = false,
-			["source"] = "蛮沼猎人",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 18113,
+			["source"] = "地穴恶魔",
+			["npcID"] = 27734,
 		},
-		[22888] = {
-			["source"] = "Overlord Runthak",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 173758,
-		},
-		[14032] = {
+		[60204] = {
 			["isChanneled"] = false,
-			["source"] = "绿队牧师",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32343,
-		},
-		[13787] = {
-			["source"] = "碎手术士",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 19411,
-		},
-		[57458] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29358,
-		},
-		[7805] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 416,
-		},
-		[57984] = {
-			["isChanneled"] = false,
-			["source"] = "强力火元素",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 15438,
-		},
-		[31271] = {
-			["isChanneled"] = false,
-			["source"] = "带刺的螃蟹",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17217,
-		},
-		[36576] = {
-			["isChanneled"] = false,
-			["source"] = "岩肤劫掠者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 20210,
-		},
-		[31808] = {
-			["source"] = "埃西恩",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17900,
-		},
-		[19030] = {
-			["isChanneled"] = false,
-			["source"] = "恐怖图腾博学者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 7726,
-		},
-		[53434] = {
-			["isChanneled"] = false,
-			["source"] = "狼",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17669,
-		},
-		[20540] = {
-			["source"] = "灰谷先驱者",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 12856,
-		},
-		[12024] = {
-			["isChanneled"] = false,
-			["source"] = "水手希克尔·远途",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 25053,
-		},
-		[11771] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 416,
-		},
-		[35361] = {
-			["isChanneled"] = false,
-			["source"] = "林地行者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 31228,
+			["source"] = "碧蓝巫术师",
+			["npcID"] = 30667,
 		},
 		[16856] = {
 			["encounterName"] = "血领主曼多基尔",
@@ -407,89 +483,219 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 11382,
 		},
-		[55909] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "召唤者斯卡提斯",
-			["npcID"] = 40446,
-		},
-		[16609] = {
-			["isChanneled"] = false,
-			["source"] = "萨尔的使者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 10719,
-		},
-		[16145] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "盘牙勇士",
-			["npcID"] = 17957,
-		},
-		[32851] = {
-			["source"] = "札瑞克歌辛",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[12550] = {
-			["isChanneled"] = false,
-			["source"] = "蛮沼秘法师",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 18114,
-		},
-		[27047] = {
-			["isChanneled"] = false,
-			["source"] = "螃蟹",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 23929,
-		},
-		[64495] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "顯郎仔",
-			["npcID"] = 18476,
-		},
-		[35696] = {
+		[24529] = {
 			["source"] = "未知目标",
 			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
+			["npcID"] = 3100,
 		},
-		[13323] = {
+		[12544] = {
 			["isChanneled"] = false,
-			["source"] = "绿队法师",
+			["source"] = "月怒白头狼人",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32324,
+			["npcID"] = 1769,
 		},
-		[67837] = {
+		[56707] = {
 			["isChanneled"] = false,
-			["source"] = "虫洞",
+			["source"] = "天灾漫步者",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 35646,
+			["npcID"] = 30283,
 		},
-		[7165] = {
-			["source"] = "污林巨熊怪",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 3749,
-		},
-		[33425] = {
+		[61338] = {
 			["isChanneled"] = false,
-			["source"] = "库雷尼斗士",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 19141,
+			["source"] = "谢沃兹",
+			["npcID"] = 29266,
 		},
-		[48011] = {
-			["isChanneled"] = false,
-			["source"] = "特拉芬",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 417,
-		},
-		[33951] = {
-			["source"] = "噬骨变异者",
+		[16145] = {
+			["source"] = "盘牙勇士",
 			["type"] = "DEBUFF",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 16876,
+			["npcID"] = 17957,
+		},
+		[59358] = {
+			["encounterName"] = "看门者克里克希尔",
+			["source"] = "阿努巴尔暗影法师",
+			["encounterID"] = 216,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28733,
+		},
+		[59374] = {
+			["encounterName"] = "塞安妮苟萨",
+			["source"] = "塞安妮苟萨",
+			["npcID"] = 31134,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 545,
+		},
+		[53801] = {
+			["isChanneled"] = false,
+			["source"] = "阿努巴尔碾压者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28922,
+		},
+		[59470] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "DEBUFF",
+			["source"] = "拉文索尔",
+			["npcID"] = 29312,
+		},
+		[67233] = {
+			["isChanneled"] = false,
+			["source"] = "银色僧侣",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35305,
+		},
+		[57458] = {
+			["source"] = "未知目标",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17447,
+		},
+		[14145] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "侍僧",
+			["npcID"] = 27731,
+		},
+		[19579] = {
+			["source"] = "未知目标",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 5828,
+		},
+		[53418] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "哈多诺克斯",
+			["encounterID"] = 217,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28921,
+		},
+		[60588] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "永恒腐蚀者",
+			["npcID"] = 32273,
+		},
+		[27268] = {
+			["source"] = "未知目标",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 416,
+		},
+		[59103] = {
+			["isChanneled"] = false,
+			["source"] = "安卡哈爆法者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30278,
+		},
+		[388123] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "小岩",
+			["npcID"] = 194870,
+		},
+		[56580] = {
+			["source"] = "深渊爬行者",
+			["type"] = "DEBUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 30279,
+		},
+		[52540] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "阿努巴尔散兵",
+			["encounterID"] = 217,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28734,
+		},
+		[16609] = {
+			["source"] = "萨尔",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 4949,
+		},
+		[67745] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
+		},
+		[52636] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "永恒猎人",
+			["npcID"] = 27743,
+		},
+		[24314] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
+			["encounterID"] = 787,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 11382,
+		},
+		[58816] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "永恒密探",
+			["npcID"] = 27744,
+		},
+		[59343] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "阿努巴尔勇士",
+			["encounterID"] = 217,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29062,
+		},
+		[58848] = {
+			["encounterName"] = "时光领主埃博克",
+			["source"] = "时光领主埃博克",
+			["npcID"] = 26532,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 295,
+		},
+		[32851] = {
+			["source"] = "布里克利克",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17252,
+		},
+		[15786] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "金队萨满祭司",
+			["npcID"] = 32340,
+		},
+		[52317] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "洛丹伦步兵",
+			["npcID"] = 27745,
+		},
+		[67235] = {
+			["isChanneled"] = false,
+			["source"] = "银色僧侣",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35305,
+		},
+		[388129] = {
+			["source"] = "小岩",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 194870,
+		},
+		[57475] = {
+			["source"] = "未知目标",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17447,
 		},
 		[29544] = {
 			["encounterName"] = "血领主曼多基尔",
@@ -499,55 +705,99 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 11382,
 		},
-		[47482] = {
+		[414702] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "镜像",
+			["npcID"] = 205999,
+		},
+		[52461] = {
 			["isChanneled"] = false,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "砂石破坏者",
-			["npcID"] = 26125,
+			["source"] = "暴怒的食尸鬼",
+			["npcID"] = 27729,
 		},
-		[35760] = {
+		[60158] = {
 			["isChanneled"] = false,
-			["source"] = "大型泥沼龙虾人",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17817,
+			["source"] = "碧蓝袭击者",
+			["npcID"] = 30668,
 		},
-		[32942] = {
-			["source"] = "黑风追迹者",
-			["type"] = "BUFF",
+		[1604] = {
+			["source"] = "野蛮的枭兽",
+			["type"] = "DEBUFF",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 23219,
+			["npcID"] = 2929,
 		},
-		[20791] = {
+		[32714] = {
 			["isChanneled"] = false,
-			["source"] = "燃刃术士",
+			["source"] = "安卡哈切碎者",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11324,
+			["npcID"] = 30277,
 		},
-		[67838] = {
+		[59248] = {
 			["isChanneled"] = false,
-			["source"] = "虫洞",
+			["source"] = "碧蓝束缚者",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 35646,
+			["npcID"] = 31007,
 		},
-		[6307] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 416,
+		[58817] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "永恒密探",
+			["npcID"] = 27744,
 		},
-		[23829] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 416,
+		[59344] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "阿努巴尔勇士",
+			["encounterID"] = 217,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29062,
 		},
-		[53403] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29452,
+		[59360] = {
+			["encounterName"] = "阿努巴拉克",
+			["source"] = "阿努巴尔制毒师",
+			["encounterID"] = 218,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29217,
 		},
-		[58511] = {
+		[5915] = {
+			["isChanneled"] = false,
+			["source"] = "利欲熏心的潜水员",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 25836,
+		},
+		[67716] = {
+			["encounterName"] = "总冠军",
+			["source"] = "雅克布·奥勒留斯元帅",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34705,
+		},
+		[67237] = {
+			["isChanneled"] = false,
+			["source"] = "银色圣光支配者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35309,
+		},
+		[60015] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30624,
+		},
+		[8269] = {
+			["isChanneled"] = false,
+			["source"] = "格里兹尔",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 9028,
+		},
+		[58514] = {
 			["source"] = "奥格瑞玛步兵",
 			["type"] = "DEBUFF",
 			["event"] = "SPELL_AURA_APPLIED",
@@ -559,171 +809,1213 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 25291,
 		},
-		[46542] = {
+		[60590] = {
 			["isChanneled"] = false,
-			["source"] = "埃霍恩的冰雹战士",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 25755,
+			["source"] = "永恒腐蚀者",
+			["npcID"] = 32273,
 		},
-		[19514] = {
+		[36589] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "强壮的野狼",
+			["npcID"] = 31233,
+		},
+		[56646] = {
+			["isChanneled"] = false,
+			["source"] = "安卡哈看守者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 31104,
+		},
+		[29385] = {
+			["event"] = "SPELL_AURA_APPLIED",
 			["type"] = "BUFF",
-			["source"] = "灰尘风暴",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 11744,
+			["source"] = "绿队圣骑士",
+			["npcID"] = 32342,
 		},
-		[11831] = {
+		[67749] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "复生的嘉伦·誓日",
+			["encounterID"] = 340,
 			["isChanneled"] = false,
-			["source"] = "召唤者斯卡提斯",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 40446,
+			["npcID"] = 35545,
 		},
-		[8599] = {
-			["isChanneled"] = false,
-			["source"] = "被激怒的碾压者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 18062,
-		},
-		[33805] = {
-			["isChanneled"] = false,
-			["source"] = "蛮锤斥候",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 19384,
-		},
-		[16172] = {
-			["isChanneled"] = false,
-			["source"] = "盘牙监工",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17959,
-		},
-		[64695] = {
-			["source"] = "地缚图腾",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 2630,
-		},
-		[6920] = {
-			["isChanneled"] = false,
-			["source"] = "野棘潜伏者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 3821,
-		},
-		[52471] = {
-			["isChanneled"] = false,
-			["source"] = "螃蟹",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 23929,
-		},
-		[31807] = {
-			["source"] = "克勒斯",
+		[75446] = {
+			["source"] = "未知目标",
 			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17901,
+			["npcID"] = 2635,
 		},
-		[24408] = {
-			["encounterName"] = "血领主曼多基尔",
-			["source"] = "血领主曼多基尔",
-			["encounterID"] = 787,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11382,
-		},
-		[33625] = {
-			["source"] = "金队萨满祭司",
-			["type"] = "DEBUFF",
+		[22766] = {
+			["source"] = "辛迪加路霸",
+			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32340,
+			["npcID"] = 2586,
 		},
-		[61685] = {
-			["isChanneled"] = false,
-			["source"] = "螃蟹",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 23929,
-		},
-		[24407] = {
-			["encounterName"] = "血领主曼多基尔",
-			["source"] = "血领主曼多基尔",
-			["encounterID"] = 787,
+		[58770] = {
 			["isChanneled"] = false,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11382,
+			["source"] = "黑暗通灵师",
+			["npcID"] = 28200,
 		},
-		[31551] = {
+		[58291] = {
 			["isChanneled"] = false,
-			["source"] = "泥沼龙虾人",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17816,
+			["source"] = "碧蓝破坏者",
+			["npcID"] = 31079,
 		},
-		[53547] = {
+		[15507] = {
 			["isChanneled"] = false,
-			["source"] = "螃蟹",
+			["source"] = "傀儡统帅阿格曼奇",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 23929,
+			["npcID"] = 8983,
 		},
-		[12544] = {
-			["isChanneled"] = false,
-			["source"] = "魔导师索迪耶尔",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32170,
-		},
-		[32908] = {
-			["isChanneled"] = false,
-			["source"] = "基斯鸦巢恐怖卫士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 18452,
-		},
-		[39796] = {
-			["source"] = "石爪图腾 X",
-			["type"] = "DEBUFF",
+		[23836] = {
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 31122,
+			["type"] = "BUFF",
+			["source"] = "海尔尼斯",
+			["npcID"] = 1863,
 		},
-		[32924] = {
+		[66536] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "银色神官帕尔崔丝",
+			["encounterID"] = 338,
 			["isChanneled"] = false,
-			["source"] = "斯克提斯裂风者",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 18453,
+			["npcID"] = 34928,
 		},
-		[38067] = {
+		[52766] = {
+			["encounterName"] = "时光领主埃博克",
+			["source"] = "时光领主埃博克",
+			["npcID"] = 26532,
 			["isChanneled"] = false,
-			["source"] = "Air Force Alarm Bot (Alliance)",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 2614,
+			["encounterID"] = 295,
+		},
+		[397342] = {
+			["encounterName"] = "时光领主埃博克",
+			["source"] = "时光领主埃博克",
+			["npcID"] = 26532,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 295,
+		},
+		[67718] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
+		},
+		[75447] = {
+			["source"] = "未知目标",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 5828,
+		},
+		[11974] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "绿队牧师",
+			["npcID"] = 32343,
+		},
+		[17289] = {
+			["isChanneled"] = false,
+			["source"] = "塔达拉姆之眼",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30285,
+		},
+		[24453] = {
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 38453,
+		},
+		[59106] = {
+			["isChanneled"] = false,
+			["source"] = "安卡哈织网者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30276,
+		},
+		[15575] = {
+			["isChanneled"] = false,
+			["source"] = "怒锤傀儡",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 8907,
+		},
+		[66537] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "银色神官帕尔崔丝",
+			["encounterID"] = 338,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34928,
+		},
+		[15061] = {
+			["type"] = "BUFF",
+			["source"] = "安格弗将军",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 9033,
+		},
+		[8258] = {
+			["isChanneled"] = false,
+			["source"] = "弗诺斯·达克维尔",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 9056,
+		},
+		[67289] = {
+			["isChanneled"] = false,
+			["source"] = "银色女祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35307,
+		},
+		[35696] = {
+			["source"] = "未知目标",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17252,
+		},
+		[67719] = {
+			["encounterName"] = "黑骑士",
+			["type"] = "DEBUFF",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 35451,
 		},
 		[44415] = {
 			["isChanneled"] = false,
-			["source"] = "绿队牧师",
 			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "绿队牧师",
 			["npcID"] = 32343,
 		},
-		[47993] = {
+		[63900] = {
 			["isChanneled"] = false,
-			["source"] = "埃金菲林",
+			["source"] = "鱷魚",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 1151,
+		},
+		[14920] = {
+			["isChanneled"] = false,
+			["source"] = "鱷魚",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 1151,
+		},
+		[15619] = {
+			["isChanneled"] = false,
+			["source"] = "厄炉工匠",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 8897,
+		},
+		[17260] = {
+			["isChanneled"] = false,
+			["source"] = "鱷魚",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 1151,
+		},
+		[66889] = {
+			["encounterName"] = "银色勇士",
+			["type"] = "BUFF",
+			["source"] = "纯洁者耶德瑞克",
+			["encounterID"] = 338,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 35119,
+		},
+		[15550] = {
+			["isChanneled"] = false,
+			["source"] = "长毛猛犸象",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24614,
+		},
+		[59346] = {
+			["isChanneled"] = false,
+			["source"] = "阿努巴尔碾压者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28922,
+		},
+		[8996] = {
+			["isChanneled"] = false,
+			["source"] = "黑铁火枪手",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 6523,
+		},
+		[35361] = {
+			["isChanneled"] = false,
+			["source"] = "林地行者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 31228,
+		},
+		[55817] = {
+			["source"] = "未知目标",
+			["type"] = "DEBUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17252,
+		},
+		[7164] = {
+			["type"] = "BUFF",
+			["source"] = "希尔斯布莱德矿工",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 2269,
+		},
+		[67838] = {
+			["isChanneled"] = false,
+			["source"] = "虫洞",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35646,
+		},
+		[66538] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "银色神官帕尔崔丝",
+			["encounterID"] = 338,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34928,
+		},
+		[58811] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "侍僧",
+			["npcID"] = 27731,
+		},
+		[28747] = {
+			["encounterName"] = "看门者克里克希尔",
+			["source"] = "看门者克里克希尔",
+			["encounterID"] = 216,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28684,
+		},
+		[51681] = {
+			["isChanneled"] = false,
+			["source"] = "阿努巴尔蛛魔领主",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 26605,
+		},
+		[60017] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30622,
+		},
+		[36176] = {
+			["isChanneled"] = false,
+			["source"] = "银色女祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35307,
+		},
+		[58516] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "传送门守卫者",
+			["npcID"] = 30892,
+		},
+		[32982] = {
+			["isChanneled"] = false,
+			["source"] = "火元素图腾",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 15439,
+		},
+		[65868] = {
+			["encounterName"] = "总冠军",
+			["source"] = "娅琳·永歌",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34657,
+		},
+		[56520] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "被解救的北伐军战士",
+			["npcID"] = 30274,
+		},
+		[62709] = {
+			["isChanneled"] = false,
+			["source"] = "近战目标",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 33229,
+		},
+		[59107] = {
+			["isChanneled"] = false,
+			["source"] = "碾骨者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30284,
+		},
+		[67529] = {
+			["encounterName"] = "总冠军",
+			["source"] = "克罗索斯",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34701,
+		},
+		[52496] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "地穴恶魔",
+			["npcID"] = 27734,
+		},
+		[19134] = {
+			["isChanneled"] = false,
+			["source"] = "碾骨者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30284,
+		},
+		[16587] = {
+			["isChanneled"] = false,
+			["source"] = "邪恶导师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 8548,
+		},
+		[56632] = {
+			["isChanneled"] = false,
+			["source"] = "安卡哈织网者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30276,
+		},
+		[61594] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "传送门看护者",
+			["npcID"] = 30695,
+		},
+		[66043] = {
+			["encounterName"] = "总冠军",
+			["source"] = "安布罗斯·雷钉",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34702,
+		},
+		[47482] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "蛆虫碾压者",
+			["npcID"] = 26125,
+		},
+		[67868] = {
+			["encounterName"] = "总冠军",
+			["type"] = "DEBUFF",
+			["source"] = "娅琳·永歌的坐骑",
+			["encounterID"] = 334,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 34658,
+		},
+		[54138] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "谢沃兹",
+			["npcID"] = 29266,
+		},
+		[59283] = {
+			["encounterName"] = "塞安妮苟萨",
+			["source"] = "塞安妮苟萨",
+			["npcID"] = 31134,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 545,
+		},
+		[66083] = {
+			["encounterName"] = "总冠军",
+			["source"] = "娅琳·永歌",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34657,
+		},
+		[15244] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "侍僧",
+			["npcID"] = 27731,
+		},
+		[58820] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "永恒猎人",
+			["npcID"] = 28340,
+		},
+		[23829] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["npcID"] = 416,
+		},
+		[59363] = {
+			["encounterName"] = "看门者克里克希尔",
+			["source"] = "轻快的感染者",
+			["encounterID"] = 216,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28736,
+		},
+		[9128] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "金队战士",
+			["npcID"] = 32322,
+		},
+		[9080] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "金队战士",
+			["npcID"] = 32322,
+		},
+		[67594] = {
+			["encounterName"] = "总冠军",
+			["type"] = "DEBUFF",
+			["source"] = "拉娜·硬锤",
+			["encounterID"] = 334,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 34703,
+		},
+		[67778] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
+		},
+		[17234] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "侍僧",
+			["npcID"] = 27731,
+		},
+		[52719] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "碧蓝袭击者",
+			["npcID"] = 30668,
+		},
+		[59986] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30622,
+		},
+		[15288] = {
+			["isChanneled"] = false,
+			["source"] = "暮光使者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 8913,
+		},
+		[60018] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30624,
+		},
+		[61567] = {
+			["isChanneled"] = false,
+			["source"] = "暮光膜拜者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30111,
+		},
+		[67774] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "复生的嘉伦·誓日",
+			["encounterID"] = 340,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35545,
+		},
+		[66940] = {
+			["encounterName"] = "银色勇士",
+			["type"] = "DEBUFF",
+			["source"] = "纯洁者耶德瑞克",
+			["encounterID"] = 338,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 35119,
+		},
+		[42746] = {
+			["isChanneled"] = false,
+			["source"] = "安卡哈看守者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 31104,
+		},
+		[67722] = {
+			["encounterName"] = "黑骑士",
+			["type"] = "DEBUFF",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 35451,
+		},
+		[59359] = {
+			["encounterName"] = "阿努巴拉克",
+			["source"] = "阿努巴尔制毒师",
+			["encounterID"] = 218,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29217,
+		},
+		[13787] = {
+			["source"] = "普拉格",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 9499,
+		},
+		[413978] = {
+			["encounterName"] = "银色勇士",
+			["type"] = "DEBUFF",
+			["source"] = "银色北伐军观众",
+			["encounterID"] = 338,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 34974,
+		},
+		[38264] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "镜像",
+			["npcID"] = 205998,
+		},
+		[66863] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "纯洁者耶德瑞克",
+			["encounterID"] = 338,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35119,
+		},
+		[7165] = {
+			["source"] = "纳迦探险者",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 1907,
+		},
+		[34942] = {
+			["isChanneled"] = false,
+			["source"] = "银色女祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35307,
+		},
+		[67255] = {
+			["isChanneled"] = false,
+			["source"] = "银色僧侣",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35305,
+		},
+		[6660] = {
+			["isChanneled"] = false,
+			["source"] = "塞尔萨玛巡山人",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 8055,
+		},
+		[47994] = {
+			["isChanneled"] = false,
+			["source"] = "布里克利克",
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 17252,
 		},
-		[39586] = {
+		[66798] = {
 			["isChanneled"] = false,
-			["source"] = "金队萨满祭司",
+			["source"] = "黑骑士",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32340,
+			["npcID"] = 35451,
 		},
-		[51963] = {
-			["isChanneled"] = false,
-			["source"] = "黑锋石像鬼",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 27829,
-		},
-		[15284] = {
+		[66680] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "银色神官帕尔崔丝",
+			["encounterID"] = 338,
 			["isChanneled"] = false,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "盘牙勇士",
-			["npcID"] = 17957,
+			["npcID"] = 34928,
 		},
-		[24259] = {
-			["source"] = "德罗图恩",
-			["type"] = "DEBUFF",
+		[9004] = {
+			["isChanneled"] = false,
+			["source"] = "阿什兰·暗石",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 1073,
+		},
+		[59433] = {
+			["encounterName"] = "阿努巴拉克",
+			["source"] = "阿努巴拉克",
+			["encounterID"] = 218,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29120,
+		},
+		[61461] = {
+			["isChanneled"] = false,
+			["source"] = "冰霜使者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30286,
+		},
+		[48090] = {
+			["source"] = "未知目标",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17252,
+		},
+		[59348] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "阿努巴尔地穴魔",
+			["encounterID"] = 217,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29097,
+		},
+		[59364] = {
+			["encounterName"] = "看门者克里克希尔",
+			["source"] = "看守者希尔希克",
+			["encounterID"] = 216,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28731,
+		},
+		[57482] = {
+			["source"] = "未知目标",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 1087,
+		},
+		[67542] = {
+			["encounterName"] = "总冠军",
+			["source"] = "雅克布·奥勒留斯元帅",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34705,
+		},
+		[23840] = {
+			["source"] = "未知目标",
+			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 417,
+		},
+		[59262] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "传送门守卫者",
+			["npcID"] = 30892,
+		},
+		[13589] = {
+			["isChanneled"] = false,
+			["source"] = "铁怒监军",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 8889,
+		},
+		[67725] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
+		},
+		[67724] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
+		},
+		[60003] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30624,
+		},
+		[55931] = {
+			["encounterName"] = "塔达拉姆王子",
+			["source"] = "塔达拉姆王子",
+			["encounterID"] = 213,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29308,
+		},
+		[61568] = {
+			["isChanneled"] = false,
+			["source"] = "暮光膜拜者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30111,
+		},
+		[67706] = {
+			["encounterName"] = "总冠军",
+			["source"] = "拉娜·硬锤",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34703,
+		},
+		[66862] = {
+			["encounterName"] = "银色勇士",
+			["type"] = "DEBUFF",
+			["source"] = "纯洁者耶德瑞克",
+			["encounterID"] = 338,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 35119,
+		},
+		[24317] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "奥根",
+			["encounterID"] = 787,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 14988,
+		},
+		[68340] = {
+			["encounterName"] = "总冠军",
+			["source"] = "娅琳·永歌",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34657,
+		},
+		[57724] = {
+			["source"] = "未知目标",
+			["type"] = "DEBUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17252,
+		},
+		[59109] = {
+			["isChanneled"] = false,
+			["source"] = "深渊爬行者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30279,
+		},
+		[21163] = {
+			["source"] = "铁匠雷格萨",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 13176,
+		},
+		[53520] = {
+			["encounterName"] = "阿努巴拉克",
+			["source"] = "阿努巴拉克",
+			["encounterID"] = 218,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29120,
+		},
+		[30991] = {
+			["source"] = "巨魔屋顶巡逻兵",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 23090,
+		},
+		[29363] = {
+			["source"] = "吸血迷雾蝠",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 16354,
+		},
+		[60004] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30624,
+		},
+		[58694] = {
+			["encounterName"] = "塞安妮苟萨",
+			["source"] = "塞安妮苟萨",
+			["npcID"] = 31134,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 545,
+		},
+		[47468] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "蛆虫碾压者",
+			["npcID"] = 26125,
+		},
+		[47995] = {
+			["encounterName"] = "哈多诺克斯",
+			["type"] = "DEBUFF",
+			["source"] = "尼尔科瑞尔",
+			["encounterID"] = 217,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17252,
+		},
+		[12470] = {
+			["encounterName"] = "肉钩",
+			["source"] = "强力火元素",
+			["npcID"] = 15438,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 293,
+		},
+		[58758] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "狼吞虎咽的食尸鬼",
+			["npcID"] = 28249,
+		},
+		[66085] = {
+			["encounterName"] = "总冠军",
+			["type"] = "BUFF",
+			["source"] = "娅琳·永歌",
+			["encounterID"] = 334,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 34657,
+		},
+		[15496] = {
+			["isChanneled"] = false,
+			["source"] = "碧蓝入侵者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 31008,
+		},
+		[53185] = {
+			["isChanneled"] = false,
+			["source"] = "哈多诺克斯",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28921,
+		},
+		[58822] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "阿尔萨斯",
+			["npcID"] = 26499,
+		},
+		[59349] = {
+			["encounterName"] = "阿努巴拉克",
+			["source"] = "阿努巴尔突袭者",
+			["encounterID"] = 218,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29213,
+		},
+		[59365] = {
+			["encounterName"] = "看门者克里克希尔",
+			["source"] = "看守者纳尔伊",
+			["encounterID"] = 216,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28729,
+		},
+		[67534] = {
+			["encounterName"] = "总冠军",
+			["source"] = "克罗索斯",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34701,
+		},
+		[67530] = {
+			["encounterName"] = "总冠军",
+			["source"] = "克罗索斯",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34701,
+		},
+		[67709] = {
+			["encounterName"] = "总冠军",
+			["source"] = "拉娜·硬锤",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34703,
+		},
+		[60451] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "时光守护者",
+			["npcID"] = 32281,
+		},
+		[20812] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "黑暗通灵师",
+			["npcID"] = 28200,
+		},
+		[14514] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "金队法师",
+			["npcID"] = 32341,
+		},
+		[67710] = {
+			["encounterName"] = "总冠军",
+			["type"] = "DEBUFF",
+			["source"] = "拉娜·硬锤",
+			["encounterID"] = 334,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 34703,
+		},
+		[67247] = {
+			["isChanneled"] = false,
+			["source"] = "银色圣光支配者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35309,
+		},
+		[62575] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "银色战斗座狼",
+			["npcID"] = 36558,
+		},
+		[67541] = {
+			["encounterName"] = "总冠军",
+			["source"] = "雅克布·奥勒留斯元帅",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34705,
+		},
+		[55964] = {
+			["encounterName"] = "塔达拉姆王子",
+			["source"] = "塔达拉姆王子",
+			["encounterID"] = 213,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29308,
+		},
+		[413091] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "镜像",
+			["npcID"] = 205999,
+		},
+		[63661] = {
+			["source"] = "夺日者陆行鸟",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 33844,
+		},
+		[68284] = {
+			["encounterName"] = "总冠军",
+			["type"] = "BUFF",
+			["source"] = "银色战斗座狼",
+			["encounterID"] = 334,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 36558,
+		},
+		[52451] = {
+			["encounterName"] = "塑血者沙尔拉姆",
+			["source"] = "塑血者沙尔拉姆",
+			["npcID"] = 26530,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 294,
+		},
+		[3391] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "奥根",
+			["encounterID"] = 787,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 14988,
+		},
+		[59637] = {
+			["encounterName"] = "总冠军",
+			["source"] = "镜像",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 31216,
+		},
+		[68301] = {
+			["encounterName"] = "总冠军",
+			["source"] = "拉娜·硬锤",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34703,
+		},
+		[68504] = {
+			["encounterName"] = "总冠军",
+			["source"] = "拉娜·硬锤",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34703,
+		},
+		[7804] = {
+			["source"] = "未知目标",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 416,
+		},
+		[61563] = {
+			["isChanneled"] = false,
+			["source"] = "暮光黑暗法师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30319,
+		},
+		[59483] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "谢沃兹",
+			["npcID"] = 29266,
+		},
+		[60848] = {
+			["isChanneled"] = false,
+			["source"] = "被遗忘的无面者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30414,
+		},
+		[47996] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "尼尔科瑞尔",
+			["encounterID"] = 217,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 17252,
+		},
+		[52611] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "通灵大师",
+			["npcID"] = 27732,
+		},
+		[67823] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
+		},
+		[15620] = {
+			["isChanneled"] = false,
+			["source"] = "铁怒军官",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 8895,
+		},
+		[66865] = {
+			["isChanneled"] = false,
+			["source"] = "纯洁者耶德瑞克",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35119,
+		},
+		[60851] = {
+			["isChanneled"] = false,
+			["source"] = "被遗忘的无面者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30414,
+		},
+		[58823] = {
+			["encounterName"] = "肉钩",
+			["source"] = "肉钩",
+			["npcID"] = 26529,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 293,
+		},
+		[59350] = {
+			["encounterName"] = "阿努巴拉克",
+			["source"] = "阿努巴尔守护者",
+			["encounterID"] = 218,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29216,
+		},
+		[52723] = {
+			["encounterName"] = "玛尔加尼斯",
+			["source"] = "玛尔加尼斯",
+			["npcID"] = 26533,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 296,
+		},
+		[61570] = {
+			["isChanneled"] = false,
+			["source"] = "暮光传道者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30179,
+		},
+		[66546] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "银色神官帕尔崔丝",
+			["encounterID"] = 338,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34928,
+		},
+		[9009] = {
+			["isChanneled"] = false,
+			["source"] = "阿什兰·暗石",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 1073,
+		},
+		[59430] = {
+			["encounterName"] = "阿努巴拉克",
+			["source"] = "阿努巴拉克",
+			["encounterID"] = 218,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29120,
+		},
+		[59446] = {
+			["encounterName"] = "阿努巴拉克",
+			["source"] = "阿努巴拉克",
+			["encounterID"] = 218,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29120,
+		},
+		[60016] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30625,
+		},
+		[59987] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30625,
+		},
+		[66515] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "银色神官帕尔崔丝",
+			["encounterID"] = 338,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34928,
+		},
+		[63619] = {
+			["encounterName"] = "时光领主埃博克",
+			["source"] = "暗影魔",
+			["npcID"] = 19668,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 295,
+		},
+		[58504] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "传送门守卫者",
+			["npcID"] = 30660,
+		},
+		[8995] = {
+			["isChanneled"] = false,
+			["source"] = "黑铁火枪手",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 6523,
+		},
+		[413097] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "镜像",
+			["npcID"] = 205997,
+		},
+		[13864] = {
+			["isChanneled"] = false,
+			["source"] = "铁怒医师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 8894,
 		},
 		[25228] = {
 			["source"] = "未知目标",
@@ -731,209 +2023,149 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 17252,
 		},
-		[7870] = {
-			["isChanneled"] = false,
-			["source"] = "卡尔利亚娜",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 1863,
-		},
-		[9080] = {
-			["isChanneled"] = false,
-			["source"] = "金队战士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32322,
-		},
-		[18100] = {
-			["source"] = "玛提克·托塞多雷",
+		[19615] = {
 			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 16577,
-		},
-		[36589] = {
-			["isChanneled"] = false,
-			["source"] = "强壮的野狼",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 31233,
-		},
-		[27268] = {
-			["isChanneled"] = false,
-			["source"] = "沃尔菲普",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 416,
-		},
-		[57475] = {
 			["source"] = "未知目标",
-			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29358,
+			["npcID"] = 1151,
 		},
-		[11640] = {
+		[59111] = {
 			["isChanneled"] = false,
-			["source"] = "绿队牧师",
+			["source"] = "塔达拉姆之眼",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32343,
-		},
-		[63900] = {
-			["isChanneled"] = false,
-			["source"] = "螃蟹",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 23929,
-		},
-		[56520] = {
-			["source"] = "被解救的北伐军战士",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 30274,
-		},
-		[15981] = {
-			["isChanneled"] = false,
-			["source"] = "林地行者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 31228,
-		},
-		[4511] = {
-			["isChanneled"] = false,
-			["source"] = "阿巴托格",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 416,
+			["npcID"] = 30285,
 		},
 		[59638] = {
-			["isChanneled"] = false,
+			["encounterName"] = "总冠军",
 			["source"] = "镜像",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 31216,
 		},
-		[52472] = {
+		[66547] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "银色神官帕尔崔丝",
+			["encounterID"] = 338,
 			["isChanneled"] = false,
-			["source"] = "豹",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 3619,
+			["npcID"] = 34928,
 		},
-		[8160] = {
+		[58470] = {
 			["isChanneled"] = false,
-			["source"] = "污林萨满祭司",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 3748,
+			["source"] = "碧蓝追猎者",
+			["npcID"] = 32191,
 		},
-		[2676] = {
+		[52532] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "阿努巴尔战士",
+			["encounterID"] = 217,
 			["isChanneled"] = false,
-			["source"] = "埃霍恩的冰雹战士",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 25755,
+			["npcID"] = 28732,
+		},
+		[61562] = {
+			["isChanneled"] = false,
+			["source"] = "暮光黑暗法师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30319,
+		},
+		[58841] = {
+			["encounterName"] = "肉钩",
+			["source"] = "肉钩",
+			["npcID"] = 26529,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 293,
+		},
+		[67729] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "复生的嘉伦·誓日",
+			["encounterID"] = 340,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35545,
+		},
+		[67761] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
+		},
+		[24318] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
+			["encounterID"] = 787,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 11382,
+		},
+		[56716] = {
+			["isChanneled"] = false,
+			["source"] = "冰霜使者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30286,
 		},
 		[13704] = {
 			["isChanneled"] = false,
-			["source"] = "绿队牧师",
 			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "绿队牧师",
 			["npcID"] = 32343,
 		},
-		[12170] = {
-			["isChanneled"] = false,
-			["source"] = "泰雷多尔卫兵",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 18922,
-		},
-		[47994] = {
-			["isChanneled"] = false,
-			["source"] = "索乌库里尔",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17252,
-		},
-		[15234] = {
+		[66867] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "纯洁者耶德瑞克",
+			["encounterID"] = 338,
 			["isChanneled"] = false,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "盘牙魔法师",
-			["npcID"] = 17961,
+			["npcID"] = 35119,
 		},
-		[49309] = {
+		[58808] = {
 			["isChanneled"] = false,
-			["source"] = "金队萨满祭司",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32340,
+			["source"] = "缝补构造体",
+			["npcID"] = 27736,
 		},
-		[35706] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[22766] = {
-			["source"] = "山脊捕猎者",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 20714,
-		},
-		[15497] = {
+		[58824] = {
+			["encounterName"] = "肉钩",
+			["source"] = "肉钩",
+			["npcID"] = 26529,
 			["isChanneled"] = false,
-			["source"] = "荒土奴隶",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17963,
+			["encounterID"] = 293,
 		},
-		[61995] = {
+		[52708] = {
+			["encounterName"] = "塑血者沙尔拉姆",
+			["source"] = "塑血者沙尔拉姆",
+			["npcID"] = 26530,
 			["isChanneled"] = false,
-			["source"] = "米尼格布·魔爆",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32838,
+			["encounterID"] = 294,
 		},
-		[47468] = {
+		[59367] = {
+			["encounterName"] = "看门者克里克希尔",
+			["source"] = "看门者克里克希尔",
+			["encounterID"] = 216,
 			["isChanneled"] = false,
-			["source"] = "复活的食尸鬼",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 26125,
+			["npcID"] = 28684,
 		},
-		[31707] = {
+		[62960] = {
 			["isChanneled"] = false,
-			["source"] = "水元素",
+			["source"] = "夺日者陆行鸟",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 510,
+			["npcID"] = 33844,
 		},
-		[45954] = {
+		[58850] = {
+			["encounterName"] = "玛尔加尼斯",
+			["source"] = "玛尔加尼斯",
+			["npcID"] = 26533,
 			["isChanneled"] = false,
-			["source"] = "埃霍恩",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 25740,
-		},
-		[34086] = {
-			["isChanneled"] = false,
-			["source"] = "痛苦魔女",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 19408,
-		},
-		[12169] = {
-			["isChanneled"] = false,
-			["source"] = "泰雷多尔卫兵",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 18922,
-		},
-		[35778] = {
-			["isChanneled"] = false,
-			["source"] = "日怒魔导师",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 18855,
-		},
-		[46835] = {
-			["source"] = "Ribbon Pole Debug Target",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17066,
-		},
-		[57724] = {
-			["source"] = "未知目标",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29358,
-		},
-		[9128] = {
-			["isChanneled"] = false,
-			["source"] = "金队战士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32322,
-		},
-		[47986] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 1860,
+			["encounterID"] = 296,
 		},
 		[13736] = {
 			["encounterName"] = "血领主曼多基尔",
@@ -943,47 +2175,527 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 11382,
 		},
-		[13738] = {
-			["isChanneled"] = false,
-			["source"] = "荒土工人",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 17964,
-		},
-		[61684] = {
-			["isChanneled"] = false,
-			["source"] = "呆丸狼",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 20058,
-		},
-		[57723] = {
-			["source"] = "未知目标",
+		[59431] = {
+			["encounterName"] = "阿努巴拉克",
 			["type"] = "DEBUFF",
+			["source"] = "阿努巴拉克",
+			["encounterID"] = 218,
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
+			["npcID"] = 29120,
 		},
-		[48090] = {
+		[61591] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "传送门看护者",
+			["npcID"] = 30893,
+		},
+		[59974] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "传令官沃拉兹",
+			["encounterID"] = 215,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29311,
+		},
+		[57912] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "防御系统",
+			["npcID"] = 30837,
+		},
+		[67251] = {
+			["isChanneled"] = false,
+			["source"] = "银色僧侣",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35305,
+		},
+		[15254] = {
+			["isChanneled"] = false,
+			["source"] = "破坏者奥科索尔",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 9030,
+		},
+		[57483] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["npcID"] = 33776,
+		},
+		[58534] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "传送门看护者",
+			["npcID"] = 30695,
+		},
+		[58537] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "传送门看护者",
+			["npcID"] = 30893,
+		},
+		[46190] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "侍僧",
+			["npcID"] = 27731,
+		},
+		[47982] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "未知目标",
+			["npcID"] = 416,
+		},
+		[59362] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "阿努巴尔织网者",
+			["encounterID"] = 217,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29335,
+		},
+		[32736] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "金队战士",
+			["npcID"] = 32322,
+		},
+		[17843] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "绿队牧师",
+			["npcID"] = 32343,
+		},
+		[15284] = {
+			["isChanneled"] = false,
+			["source"] = "银色圣光支配者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35309,
+		},
+		[54508] = {
 			["source"] = "未知目标",
 			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 17252,
 		},
-		[15786] = {
+		[61463] = {
 			["isChanneled"] = false,
-			["source"] = "金队萨满祭司",
+			["source"] = "塔达拉姆之眼",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32340,
+			["npcID"] = 30285,
 		},
-		[47996] = {
+		[60019] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
 			["isChanneled"] = false,
-			["source"] = "索乌库里尔",
 			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30624,
+		},
+		[36213] = {
+			["encounterName"] = "玛尔加尼斯",
+			["source"] = "强力土元素",
+			["npcID"] = 15352,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 296,
+		},
+		[32199] = {
+			["source"] = "斥候尼丝蒂娜",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 29778,
+		},
+		[52086] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "阿努巴尔织网者",
+			["encounterID"] = 217,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29335,
+		},
+		[59256] = {
+			["isChanneled"] = false,
+			["source"] = "碧蓝入侵者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 31008,
+		},
+		[25603] = {
+			["isChanneled"] = false,
+			["source"] = "碧蓝破法者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 31009,
+		},
+		[15532] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "金队法师",
+			["npcID"] = 32341,
+		},
+		[13748] = {
+			["isChanneled"] = false,
+			["source"] = "暮光使者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 8913,
+		},
+		[58762] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "狼吞虎咽的食尸鬼",
+			["npcID"] = 28249,
+		},
+		[52772] = {
+			["encounterName"] = "时光领主埃博克",
+			["source"] = "时光领主埃博克",
+			["npcID"] = 26532,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 295,
+		},
+		[59352] = {
+			["isChanneled"] = false,
+			["source"] = "阿努巴尔原始卫士",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29128,
+		},
+		[59108] = {
+			["isChanneled"] = false,
+			["source"] = "深渊爬行者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30279,
+		},
+		[34232] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "高等精灵魔法祭司",
+			["npcID"] = 27747,
+		},
+		[23600] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "金队战士",
+			["npcID"] = 32322,
+		},
+		[61460] = {
+			["source"] = "天灾漫步者",
+			["type"] = "DEBUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 30283,
+		},
+		[58921] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "卡玛洛斯神父",
+			["npcID"] = 31279,
+		},
+		[53177] = {
+			["isChanneled"] = false,
+			["source"] = "哈多诺克斯",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28921,
+		},
+		[59975] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "传令官沃拉兹",
+			["encounterID"] = 215,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29311,
+		},
+		[54249] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "拉文索尔",
+			["npcID"] = 29312,
+		},
+		[58849] = {
+			["encounterName"] = "玛尔加尼斯",
+			["source"] = "玛尔加尼斯",
+			["npcID"] = 26533,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 296,
+		},
+		[1742] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "可乐老师不要啊",
+			["npcID"] = 31747,
+		},
+		[59354] = {
+			["isChanneled"] = false,
+			["source"] = "阿努巴尔原始卫士",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29128,
+		},
+		[7978] = {
+			["isChanneled"] = false,
+			["source"] = "暗炉农夫",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 8896,
+		},
+		[13900] = {
+			["isChanneled"] = false,
+			["source"] = "伊森迪奥斯",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 9017,
+		},
+		[8788] = {
+			["source"] = "血顶萨满祭司",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 697,
+		},
+		[8997] = {
+			["isChanneled"] = false,
+			["source"] = "黑铁火枪手",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 6523,
+		},
+		[58469] = {
+			["isChanneled"] = false,
+			["source"] = "碧蓝法师杀手",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 31010,
+		},
+		[52470] = {
+			["encounterName"] = "看门者克里克希尔",
+			["source"] = "看守者加什拉",
+			["encounterID"] = 216,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28730,
+		},
+		[61684] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "可乐老师不要啊",
+			["npcID"] = 31747,
+		},
+		[20823] = {
+			["isChanneled"] = false,
+			["source"] = "血帆法师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 1562,
+		},
+		[34322] = {
+			["isChanneled"] = false,
+			["source"] = "被遗忘的无面者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30414,
+		},
+		[56643] = {
+			["isChanneled"] = false,
+			["source"] = "安卡哈看守者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 31104,
+		},
+		[22888] = {
+			["source"] = "Overlord Runthak",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 173758,
+		},
+		[67701] = {
+			["encounterName"] = "总冠军",
+			["source"] = "拉娜·硬锤",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34703,
+		},
+		[58852] = {
+			["encounterName"] = "玛尔加尼斯",
+			["source"] = "玛尔加尼斯",
+			["npcID"] = 26533,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 296,
+		},
+		[52087] = {
+			["encounterName"] = "看门者克里克希尔",
+			["type"] = "DEBUFF",
+			["source"] = "尼尔科瑞尔",
+			["encounterID"] = 216,
+			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 17252,
 		},
-		[46604] = {
+		[59257] = {
 			["isChanneled"] = false,
-			["source"] = "绿队法师",
+			["source"] = "碧蓝破法者",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32324,
+			["npcID"] = 31009,
+		},
+		[28902] = {
+			["isChanneled"] = false,
+			["source"] = "暮光传道者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30179,
+		},
+		[61459] = {
+			["isChanneled"] = false,
+			["source"] = "天灾漫步者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30283,
+		},
+		[67528] = {
+			["encounterName"] = "总冠军",
+			["source"] = "克罗索斯",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34701,
+		},
+		[58810] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "胆汁傀儡",
+			["npcID"] = 28201,
+		},
+		[66935] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "纯洁者耶德瑞克",
+			["encounterID"] = 338,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35119,
+		},
+		[23832] = {
+			["isChanneled"] = false,
+			["source"] = "未知目标",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 417,
+		},
+		[59369] = {
+			["encounterName"] = "塞安妮苟萨",
+			["source"] = "塞安妮苟萨",
+			["npcID"] = 31134,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 545,
+		},
+		[64495] = {
+			["source"] = "未知目标",
+			["type"] = "BUFF",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 30164,
+		},
+		[66552] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "奥尔加隆的回忆",
+			["encounterID"] = 338,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35052,
+		},
+		[59417] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "哈多诺克斯",
+			["encounterID"] = 217,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28921,
+		},
+		[63010] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "铁炉堡勇士",
+			["npcID"] = 35329,
+		},
+		[53434] = {
+			["isChanneled"] = false,
+			["source"] = "OO",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29452,
+		},
+		[53333] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "阿努巴尔通灵师",
+			["encounterID"] = 217,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29064,
+		},
+		[24407] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
+			["encounterID"] = 787,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 11382,
+		},
+		[57453] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["npcID"] = 33776,
+		},
+		[59513] = {
+			["encounterName"] = "塔达拉姆王子",
+			["source"] = "塔达拉姆王子",
+			["encounterID"] = 213,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29308,
+		},
+		[11976] = {
+			["isChanneled"] = false,
+			["source"] = "黑铁巡逻兵",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 8637,
+		},
+		[55968] = {
+			["encounterName"] = "塔达拉姆王子",
+			["source"] = "塔达拉姆王子",
+			["encounterID"] = 213,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 29308,
+		},
+		[57791] = {
+			["encounterName"] = "传令官沃拉兹",
+			["type"] = "BUFF",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 30622,
+		},
+		[14032] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "绿队牧师",
+			["npcID"] = 32343,
+		},
+		[60205] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "碧蓝巫术师",
+			["npcID"] = 30667,
+		},
+		[68501] = {
+			["event"] = "SPELL_AURA_APPLIED",
+			["type"] = "BUFF",
+			["source"] = "银色战斗座狼",
+			["npcID"] = 36558,
+		},
+		[59114] = {
+			["isChanneled"] = false,
+			["source"] = "恶鬼劫掠者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 30287,
+		},
+		[68054] = {
+			["isChanneled"] = false,
+			["source"] = "基维斯",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35642,
+		},
+		[66042] = {
+			["encounterName"] = "总冠军",
+			["source"] = "安布罗斯·雷钉",
+			["encounterID"] = 334,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34702,
 		},
 		[15589] = {
 			["encounterName"] = "血领主曼多基尔",
@@ -993,151 +2705,77 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 11382,
 		},
-		[57565] = {
+		[67751] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
+		},
+		[67808] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
+		},
+		[35704] = {
 			["source"] = "未知目标",
 			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 417,
-		},
-		[1604] = {
-			["source"] = "金队牧师",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32325,
-		},
-		[17139] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "盘牙医师",
-			["npcID"] = 21126,
-		},
-		[18266] = {
-			["isChanneled"] = false,
-			["source"] = "燃刃信徒",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11322,
-		},
-		[59637] = {
-			["isChanneled"] = false,
-			["source"] = "镜像",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 31216,
-		},
-		[34655] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "毒蛇",
-			["npcID"] = 19921,
-		},
-		[12746] = {
-			["isChanneled"] = false,
-			["source"] = "燃刃术士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11324,
-		},
-		[15043] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队法师",
-			["npcID"] = 32341,
-		},
-		[27577] = {
-			["isChanneled"] = false,
-			["source"] = "绿队战士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32321,
-		},
-		[46406] = {
-			["isChanneled"] = false,
-			["source"] = "埃霍恩的寒浪战士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 25756,
-		},
-		[19579] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 521,
-		},
-		[18070] = {
-			["isChanneled"] = false,
-			["source"] = "钻土虫",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11320,
-		},
-		[7160] = {
-			["encounterName"] = "血领主曼多基尔",
-			["source"] = "血领主曼多基尔",
-			["encounterID"] = 787,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11382,
-		},
-		[63619] = {
-			["isChanneled"] = false,
-			["source"] = "暗影魔",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 19668,
-		},
-		[20615] = {
-			["source"] = "绿队战士",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 32321,
-		},
-		[47995] = {
-			["source"] = "索乌库里尔",
-			["type"] = "DEBUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 17252,
 		},
-		[53148] = {
-			["source"] = "螃蟹",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 23929,
-		},
-		[54131] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17669,
-		},
-		[58519] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "步兵科尔夫",
-			["npcID"] = 12797,
-		},
-		[32982] = {
+		[59347] = {
 			["isChanneled"] = false,
-			["source"] = "火元素图腾",
+			["source"] = "阿努巴尔地穴魔",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 15439,
+			["npcID"] = 29118,
 		},
-		[36213] = {
+		[59474] = {
 			["isChanneled"] = false,
-			["source"] = "强力土元素",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 15352,
+			["source"] = "灵体之球",
+			["npcID"] = 32582,
 		},
-		[59008] = {
+		[56728] = {
 			["isChanneled"] = false,
-			["source"] = "强壮的野狼",
+			["source"] = "塔达拉姆之眼",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 31233,
+			["npcID"] = 30285,
 		},
-		[75446] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 14123,
+		[54164] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "灵体之球",
+			["npcID"] = 29271,
 		},
-		[58514] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "步兵科尔夫",
-			["npcID"] = 12797,
+		[59281] = {
+			["encounterName"] = "塞安妮苟萨",
+			["source"] = "塞安妮苟萨",
+			["npcID"] = 31134,
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["encounterID"] = 545,
+		},
+		[34941] = {
+			["isChanneled"] = false,
+			["source"] = "银色女祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35307,
+		},
+		[8078] = {
+			["isChanneled"] = false,
+			["source"] = "铁炉堡守卫",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 5595,
+		},
+		[67836] = {
+			["isChanneled"] = false,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["source"] = "虫洞",
+			["npcID"] = 35646,
 		},
 	},
 	["captured_casts"] = {
@@ -1596,6 +3234,11 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 32946,
 		},
+		[35234] = {
+			["source"] = "沼泽掘泥者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 18137,
+		},
 		[58827] = {
 			["encounterName"] = "塑血者沙尔拉姆",
 			["source"] = "塑血者沙尔拉姆",
@@ -1712,6 +3355,13 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 34184,
 		},
+		[67529] = {
+			["encounterName"] = "总冠军",
+			["source"] = "克罗索斯",
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34701,
+		},
 		[50740] = {
 			["source"] = "先锋军黑鸦祭司",
 			["event"] = "SPELL_CAST_START",
@@ -1791,6 +3441,18 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 34135,
 		},
+		[65868] = {
+			["encounterName"] = "总冠军",
+			["source"] = "娅琳·永歌",
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34657,
+		},
+		[13900] = {
+			["source"] = "伊森迪奥斯",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 9017,
+		},
 		[62793] = {
 			["encounterName"] = "霍迪尔",
 			["source"] = "托尔·灰云",
@@ -1804,6 +3466,13 @@ PlaterDB = {
 			["encounterID"] = 569,
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 27979,
+		},
+		[54801] = {
+			["encounterName"] = "达卡莱巨像",
+			["source"] = "达卡莱元素",
+			["npcID"] = 29573,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 385,
 		},
 		[51764] = {
 			["source"] = "龙骨荒野法师猎手",
@@ -1831,6 +3500,11 @@ PlaterDB = {
 			["source"] = "咆哮的漩涡",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 28547,
+		},
+		[413091] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "镜像",
+			["npcID"] = 205999,
 		},
 		[49111] = {
 			["source"] = "碧蓝巨龙",
@@ -1963,6 +3637,11 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 32886,
 		},
+		[20816] = {
+			["source"] = "黑铁暗法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 2577,
+		},
 		[60046] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "希尔瓦娜斯·风行者",
@@ -2003,6 +3682,11 @@ PlaterDB = {
 			["npcID"] = 29271,
 			["event"] = "SPELL_CAST_START",
 			["encounterID"] = 2661,
+		},
+		[15611] = {
+			["source"] = "洞穴雷霆蜥蜴",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 8928,
 		},
 		[49113] = {
 			["source"] = "龙眠神殿幼龙",
@@ -2053,6 +3737,13 @@ PlaterDB = {
 			["source"] = "邪恶通灵师",
 			["npcID"] = 31155,
 		},
+		[67729] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "复生的嘉伦·誓日",
+			["encounterID"] = 340,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35545,
+		},
 		[25420] = {
 			["source"] = "战歌要塞萨满祭司",
 			["event"] = "SPELL_CAST_START",
@@ -2074,6 +3765,11 @@ PlaterDB = {
 			["source"] = "被束缚的气元素",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 30418,
+		},
+		[33641] = {
+			["source"] = "先驱者加斯提努斯",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 18966,
 		},
 		[61326] = {
 			["source"] = "碧蓝缚鳞者",
@@ -2308,6 +4004,18 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 24071,
 		},
+		[67289] = {
+			["source"] = "银色女祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35307,
+		},
+		[68504] = {
+			["encounterName"] = "总冠军",
+			["source"] = "拉娜·硬锤",
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34703,
+		},
 		[17174] = {
 			["source"] = "被遗忘的火枪手",
 			["event"] = "SPELL_CAST_START",
@@ -2371,6 +4079,11 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "击碎者提瓦克斯",
 			["npcID"] = 26770,
+		},
+		[7978] = {
+			["source"] = "暗炉农夫",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 8896,
 		},
 		[63760] = {
 			["source"] = "暮光追随者",
@@ -2443,6 +4156,11 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 32946,
 		},
+		[8995] = {
+			["source"] = "黑铁火枪手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 6523,
+		},
 		[64688] = {
 			["encounterName"] = "欧尔莉亚",
 			["source"] = "欧尔莉亚",
@@ -2461,6 +4179,11 @@ PlaterDB = {
 			["source"] = "安卡哈织网者",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 30276,
+		},
+		[67229] = {
+			["source"] = "银色女祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35307,
 		},
 		[64944] = {
 			["source"] = "大厅监督者",
@@ -2595,6 +4318,11 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33134,
 		},
+		[55643] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "废墟居民",
+			["npcID"] = 29920,
+		},
 		[57753] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "黑岩烈焰法师",
@@ -2613,6 +4341,13 @@ PlaterDB = {
 			["encounterID"] = 748,
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 32927,
+		},
+		[67745] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35451,
 		},
 		[55931] = {
 			["encounterName"] = "塔达拉姆王子",
@@ -2702,6 +4437,18 @@ PlaterDB = {
 			["source"] = "哈卡祭司",
 			["npcID"] = 11830,
 		},
+		[11969] = {
+			["source"] = "血顶萨满祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 697,
+		},
+		[55101] = {
+			["encounterName"] = "莫拉比",
+			["source"] = "莫拉比",
+			["npcID"] = 29305,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 387,
+		},
 		[63317] = {
 			["encounterName"] = "锋鳞",
 			["source"] = "锋鳞",
@@ -2719,10 +4466,25 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 26692,
 		},
+		[15575] = {
+			["source"] = "怒锤傀儡",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 8907,
+		},
+		[15241] = {
+			["source"] = "炽热火焰卫士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 8910,
+		},
 		[63541] = {
 			["source"] = "雷暴锻铸守护者",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33722,
+		},
+		[9004] = {
+			["source"] = "阿什兰·暗石",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 1073,
 		},
 		[32330] = {
 			["source"] = "暗网隐藏者",
@@ -2739,10 +4501,46 @@ PlaterDB = {
 			["source"] = "被驯服的冰虫",
 			["npcID"] = 30301,
 		},
+		[12470] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "强力火元素",
+			["npcID"] = 15438,
+		},
+		[67546] = {
+			["encounterName"] = "总冠军",
+			["source"] = "雅克布·奥勒留斯元帅",
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34705,
+		},
+		[36176] = {
+			["source"] = "银色女祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35307,
+		},
 		[46406] = {
 			["source"] = "埃霍恩的寒浪战士",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 25756,
+		},
+		[23102] = {
+			["source"] = "暗影拱顶白骨卫士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30312,
+		},
+		[67528] = {
+			["encounterName"] = "总冠军",
+			["source"] = "克罗索斯",
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34701,
+		},
+		[67534] = {
+			["encounterName"] = "总冠军",
+			["source"] = "克罗索斯",
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34701,
 		},
 		[61879] = {
 			["encounterName"] = "钢铁议会",
@@ -2756,12 +4554,26 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 26605,
 		},
+		[60015] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30624,
+		},
 		[64021] = {
 			["encounterName"] = "锋鳞",
 			["source"] = "锋鳞",
 			["encounterID"] = 746,
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33186,
+		},
+		[59986] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30622,
 		},
 		[54878] = {
 			["encounterName"] = "达卡莱巨像",
@@ -2770,10 +4582,49 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 29573,
 		},
+		[64678] = {
+			["encounterName"] = "欧尔莉亚",
+			["source"] = "欧尔莉亚",
+			["encounterID"] = 750,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33515,
+		},
+		[54195] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "蓝蜂猎手达伊克",
+			["npcID"] = 28215,
+		},
+		[15254] = {
+			["source"] = "破坏者奥科索尔",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 9030,
+		},
+		[8996] = {
+			["source"] = "黑铁火枪手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 6523,
+		},
+		[33642] = {
+			["source"] = "米尔格隆·高山",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 18969,
+		},
+		[33805] = {
+			["source"] = "蛮锤斥候",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 19384,
+		},
 		[49987] = {
 			["source"] = "防御坦克66D型",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 25758,
+		},
+		[59281] = {
+			["encounterName"] = "塞安妮苟萨",
+			["source"] = "塞安妮苟萨",
+			["encounterID"] = 545,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 31134,
 		},
 		[46982] = {
 			["event"] = "SPELL_CAST_START",
@@ -2790,6 +4641,28 @@ PlaterDB = {
 			["source"] = "杉达拉猎人之魂",
 			["npcID"] = 30864,
 		},
+		[52761] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "鳄鱼人猎手瑟匹克",
+			["npcID"] = 28668,
+		},
+		[59514] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "希尔瓦娜斯·风行者",
+			["npcID"] = 31651,
+		},
+		[52886] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "鳄鱼人猎手瑟匹克",
+			["npcID"] = 28216,
+		},
+		[59368] = {
+			["encounterName"] = "看门者克里克希尔",
+			["source"] = "看门者克里克希尔",
+			["npcID"] = 28684,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 216,
+		},
 		[61528] = {
 			["source"] = "闪电构造体",
 			["event"] = "SPELL_CAST_START",
@@ -2802,10 +4675,32 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33196,
 		},
+		[52889] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "鳄鱼人猎手瑟匹克",
+			["npcID"] = 28216,
+		},
+		[47425] = {
+			["source"] = "复活的冰霜巨龙",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26841,
+		},
 		[50403] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "废土挖掘者",
 			["npcID"] = 28005,
+		},
+		[16565] = {
+			["source"] = "安娜丝塔丽男爵夫人",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10436,
+		},
+		[66536] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "银色神官帕尔崔丝",
+			["encounterID"] = 338,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34928,
 		},
 		[59706] = {
 			["encounterName"] = "掠夺者因格瓦尔",
@@ -2826,6 +4721,18 @@ PlaterDB = {
 			["source"] = "掠龙灵魂师",
 			["npcID"] = 28410,
 		},
+		[31554] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "盘牙卫士",
+			["npcID"] = 17958,
+		},
+		[65279] = {
+			["encounterName"] = "风暴看守者埃玛尔隆",
+			["source"] = "风暴看守者埃玛尔隆",
+			["encounterID"] = 774,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33993,
+		},
 		[6728] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "雪盲唤风者",
@@ -2841,15 +4748,42 @@ PlaterDB = {
 			["source"] = "灵语者斯纳尔芬",
 			["npcID"] = 25339,
 		},
+		[15234] = {
+			["source"] = "盘牙海妖",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 17801,
+		},
 		[37488] = {
 			["source"] = "魔法禁锢的恐惧卫士",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 21908,
 		},
+		[51203] = {
+			["source"] = "钻雪虫",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26360,
+		},
+		[59259] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "坚钢狂暴者",
+			["npcID"] = 28579,
+		},
+		[48294] = {
+			["encounterName"] = "伊米隆国王",
+			["source"] = "伊米隆国王",
+			["encounterID"] = 583,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26861,
+		},
 		[55007] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "雷铸追击者",
 			["npcID"] = 29696,
+		},
+		[61515] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "坚钢唤天者",
+			["npcID"] = 28580,
 		},
 		[65301] = {
 			["encounterName"] = "尤格-萨隆",
@@ -2857,6 +4791,13 @@ PlaterDB = {
 			["npcID"] = 33134,
 			["event"] = "SPELL_CAST_START",
 			["encounterID"] = 756,
+		},
+		[59994] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30624,
 		},
 		[7799] = {
 			["source"] = "匹普尼克",
@@ -2875,30 +4816,41 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 29266,
 		},
-		[33805] = {
-			["source"] = "蛮锤斥候",
+		[59469] = {
+			["encounterName"] = "拉文索尔",
+			["source"] = "拉文索尔",
+			["encounterID"] = 2662,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 19384,
+			["npcID"] = 29312,
 		},
-		[51203] = {
-			["source"] = "钻雪虫",
+		[45577] = {
+			["source"] = "尼鲁巴尔遮天者",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26360,
+			["npcID"] = 25451,
+		},
+		[66537] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "银色神官帕尔崔丝",
+			["encounterID"] = 338,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34928,
 		},
 		[33844] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "自由的古树",
 			["npcID"] = 30861,
 		},
-		[15497] = {
-			["source"] = "荒土奴隶",
+		[56272] = {
+			["encounterName"] = "玛里苟斯",
+			["source"] = "玛里苟斯",
+			["npcID"] = 28859,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 17963,
+			["encounterID"] = 734,
 		},
-		[52761] = {
+		[16869] = {
+			["source"] = "苍白的玛勒基",
 			["event"] = "SPELL_CAST_START",
-			["source"] = "鳄鱼人猎手瑟匹克",
-			["npcID"] = 28668,
+			["npcID"] = 10438,
 		},
 		[59515] = {
 			["event"] = "SPELL_CAST_START",
@@ -2910,12 +4862,10 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 25216,
 		},
-		[48294] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "伊米隆国王",
-			["encounterID"] = 583,
+		[184] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26861,
+			["source"] = "风险投资公司地质学家",
+			["npcID"] = 1096,
 		},
 		[62680] = {
 			["encounterName"] = "掌炉者伊格尼斯",
@@ -2941,10 +4891,10 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33293,
 		},
-		[15530] = {
+		[20821] = {
+			["source"] = "睡梦雏龙",
 			["event"] = "SPELL_CAST_START",
-			["source"] = "残忍的阿图里斯",
-			["npcID"] = 28659,
+			["npcID"] = 741,
 		},
 		[51587] = {
 			["source"] = "掠龙灵魂师",
@@ -2968,15 +4918,17 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 10390,
 		},
-		[45577] = {
-			["source"] = "尼鲁巴尔遮天者",
+		[66538] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "银色神官帕尔崔丝",
+			["encounterID"] = 338,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25451,
+			["npcID"] = 34928,
 		},
-		[60954] = {
+		[31516] = {
 			["event"] = "SPELL_CAST_START",
-			["source"] = "布莉塔",
-			["npcID"] = 30484,
+			["source"] = "影月侍僧",
+			["npcID"] = 16594,
 		},
 		[51779] = {
 			["event"] = "SPELL_CAST_START",
@@ -2995,45 +4947,47 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 26627,
 		},
-		[52886] = {
+		[8800] = {
 			["event"] = "SPELL_CAST_START",
-			["source"] = "鳄鱼人猎手瑟匹克",
-			["npcID"] = 28216,
+			["source"] = "风险投资公司露天矿工",
+			["npcID"] = 674,
 		},
-		[52889] = {
+		[31601] = {
 			["event"] = "SPELL_CAST_START",
-			["source"] = "鳄鱼人猎手瑟匹克",
-			["npcID"] = 28216,
+			["source"] = "地穴爬行者",
+			["npcID"] = 10412,
 		},
 		[17290] = {
 			["source"] = "法师猎手军官",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 26727,
 		},
-		[52758] = {
+		[51500] = {
 			["event"] = "SPELL_CAST_START",
-			["source"] = "鳄鱼人猎手瑟匹克",
-			["npcID"] = 28216,
+			["source"] = "冒烟的恶鬼",
+			["npcID"] = 27363,
 		},
-		[31554] = {
+		[30633] = {
+			["source"] = "晶化保卫者",
 			["event"] = "SPELL_CAST_START",
-			["source"] = "盘牙卫士",
-			["npcID"] = 17958,
+			["npcID"] = 26792,
 		},
-		[54195] = {
+		[7979] = {
 			["event"] = "SPELL_CAST_START",
-			["source"] = "蓝蜂猎手达伊克",
-			["npcID"] = 28215,
+			["source"] = "风险投资公司修理工",
+			["npcID"] = 677,
 		},
-		[20821] = {
-			["source"] = "睡梦雏龙",
+		[16868] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 741,
+			["source"] = "尖叫的女妖",
+			["npcID"] = 10463,
 		},
-		[15234] = {
-			["source"] = "盘牙海妖",
+		[53333] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "阿努巴尔通灵师",
+			["encounterID"] = 217,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 17801,
+			["npcID"] = 29064,
 		},
 		[61338] = {
 			["encounterName"] = "谢沃兹",
@@ -3042,17 +4996,17 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 29266,
 		},
-		[59259] = {
+		[16587] = {
+			["source"] = "邪恶导师",
 			["event"] = "SPELL_CAST_START",
-			["source"] = "坚钢狂暴者",
-			["npcID"] = 28579,
+			["npcID"] = 8548,
 		},
-		[59994] = {
-			["encounterName"] = "传令官沃拉兹",
-			["source"] = "扭曲之容",
-			["encounterID"] = 215,
+		[64607] = {
+			["encounterName"] = "观察者奥尔加隆",
+			["source"] = "有生命的星座",
+			["encounterID"] = 757,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30624,
+			["npcID"] = 33052,
 		},
 		[17434] = {
 			["source"] = "瑞文戴尔男爵",
@@ -3066,17 +5020,19 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["encounterID"] = 754,
 		},
-		[7979] = {
+		[62321] = {
+			["encounterName"] = "托里姆",
+			["source"] = "黑暗符文唤魔师",
+			["encounterID"] = 752,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "风险投资公司修理工",
-			["npcID"] = 677,
+			["npcID"] = 32878,
 		},
-		[64599] = {
-			["encounterName"] = "观察者奥尔加隆",
-			["source"] = "有生命的星座",
-			["npcID"] = 33052,
+		[54369] = {
+			["encounterName"] = "祖拉玛特",
+			["source"] = "湮灭者祖拉玛特",
+			["npcID"] = 29314,
 			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 757,
+			["encounterID"] = 2663,
 		},
 		[61562] = {
 			["source"] = "暮光黑暗法师",
@@ -3109,12 +5065,12 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33453,
 		},
-		[59469] = {
-			["encounterName"] = "拉文索尔",
-			["source"] = "拉文索尔",
-			["encounterID"] = 2662,
+		[61909] = {
+			["encounterName"] = "霍迪尔",
+			["source"] = "维莎·织焰",
+			["encounterID"] = 751,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29312,
+			["npcID"] = 32946,
 		},
 		[59708] = {
 			["encounterName"] = "掠夺者因格瓦尔",
@@ -3135,34 +5091,30 @@ PlaterDB = {
 			["source"] = "通灵大师",
 			["npcID"] = 27732,
 		},
-		[59281] = {
-			["encounterName"] = "塞安妮苟萨",
-			["source"] = "塞安妮苟萨",
-			["encounterID"] = 545,
+		[59183] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31134,
+			["source"] = "自由的火焰风暴",
+			["npcID"] = 28584,
 		},
-		[16869] = {
-			["source"] = "苍白的玛勒基",
+		[16866] = {
+			["source"] = "泼毒者",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10438,
+			["npcID"] = 10417,
 		},
-		[184] = {
+		[58973] = {
 			["event"] = "SPELL_CAST_START",
-			["source"] = "风险投资公司地质学家",
-			["npcID"] = 1096,
+			["source"] = "达卡莱猎神者",
+			["npcID"] = 29820,
 		},
 		[45578] = {
 			["source"] = "战歌射手",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 25244,
 		},
-		[59368] = {
-			["encounterName"] = "看门者克里克希尔",
-			["source"] = "看门者克里克希尔",
-			["npcID"] = 28684,
+		[19816] = {
+			["source"] = "卡加尼舒",
 			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 216,
+			["npcID"] = 25427,
 		},
 		[20791] = {
 			["source"] = "燃刃术士",
@@ -3181,128 +5133,10 @@ PlaterDB = {
 			["source"] = "风险投资公司修理工",
 			["npcID"] = 677,
 		},
-		[19816] = {
-			["source"] = "卡加尼舒",
+		[4962] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25427,
-		},
-		[16866] = {
-			["source"] = "泼毒者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10417,
-		},
-		[31601] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "地穴爬行者",
-			["npcID"] = 10412,
-		},
-		[11986] = {
-			["source"] = "飘雪林地萨满祭司",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26201,
-		},
-		[13323] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "金队法师",
-			["npcID"] = 32341,
-		},
-		[16868] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "尖叫的女妖",
-			["npcID"] = 10463,
-		},
-		[65279] = {
-			["encounterName"] = "风暴看守者埃玛尔隆",
-			["source"] = "风暴看守者埃玛尔隆",
-			["encounterID"] = 774,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33993,
-		},
-		[16997] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "石翼尖啸者",
-			["npcID"] = 10409,
-		},
-		[61339] = {
-			["encounterName"] = "谢沃兹",
-			["source"] = "谢沃兹",
-			["npcID"] = 29266,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 2661,
-		},
-		[30633] = {
-			["source"] = "晶化保卫者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26792,
-		},
-		[59357] = {
-			["encounterName"] = "看门者克里克希尔",
-			["source"] = "阿努巴尔暗影法师",
-			["encounterID"] = 216,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28733,
-		},
-		[38446] = {
-			["source"] = "影月暗法师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 22081,
-		},
-		[64536] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "VX-001",
-			["npcID"] = 33651,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 754,
-		},
-		[57407] = {
-			["encounterName"] = "玛里苟斯",
-			["source"] = "玛里苟斯",
-			["npcID"] = 28859,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 734,
-		},
-		[30600] = {
-			["encounterName"] = "战争使者沃姆罗格",
-			["source"] = "战争使者沃姆罗格",
-			["npcID"] = 16809,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 1937,
-		},
-		[59517] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "萨尔",
-			["npcID"] = 31650,
-		},
-		[61515] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "坚钢唤天者",
-			["npcID"] = 28580,
-		},
-		[64696] = {
-			["encounterName"] = "锋鳞",
-			["source"] = "黑暗符文哨兵",
-			["encounterID"] = 746,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33453,
-		},
-		[61909] = {
-			["encounterName"] = "霍迪尔",
-			["source"] = "维莎·织焰",
-			["encounterID"] = 751,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32946,
-		},
-		[52770] = {
-			["encounterName"] = "艾欧纳尔",
-			["source"] = "艾欧纳尔",
-			["encounterID"] = 559,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28546,
-		},
-		[9672] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "蓝玉巫师",
-			["npcID"] = 25316,
+			["source"] = "遗忘深渊高阶祭司",
+			["npcID"] = 30543,
 		},
 		[47731] = {
 			["encounterName"] = "大魔导师泰蕾丝塔",
@@ -3316,12 +5150,22 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 26735,
 		},
-		[64678] = {
-			["encounterName"] = "欧尔莉亚",
-			["source"] = "欧尔莉亚",
-			["encounterID"] = 750,
+		[11986] = {
+			["source"] = "飘雪林地萨满祭司",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33515,
+			["npcID"] = 26201,
+		},
+		[31664] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "狂乱的石像鬼",
+			["npcID"] = 27691,
+		},
+		[57407] = {
+			["encounterName"] = "玛里苟斯",
+			["source"] = "玛里苟斯",
+			["npcID"] = 28859,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 734,
 		},
 		[62935] = {
 			["encounterName"] = "弗蕾亚",
@@ -3330,20 +5174,124 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33202,
 		},
+		[59108] = {
+			["source"] = "深渊爬行者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30279,
+		},
+		[61339] = {
+			["encounterName"] = "谢沃兹",
+			["source"] = "谢沃兹",
+			["npcID"] = 29266,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 2661,
+		},
+		[31600] = {
+			["source"] = "恩其拉地穴魔",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25386,
+		},
+		[59357] = {
+			["encounterName"] = "看门者克里克希尔",
+			["source"] = "阿努巴尔暗影法师",
+			["encounterID"] = 216,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28733,
+		},
+		[63666] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "巨兽二型",
+			["encounterID"] = 754,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34071,
+		},
+		[64536] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "VX-001",
+			["npcID"] = 33651,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 754,
+		},
+		[8997] = {
+			["source"] = "黑铁火枪手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 6523,
+		},
 		[41440] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "“犀牛之王”尼达尔",
 			["npcID"] = 25801,
+		},
+		[59517] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "萨尔",
+			["npcID"] = 31650,
+		},
+		[60003] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30624,
+		},
+		[64696] = {
+			["encounterName"] = "锋鳞",
+			["source"] = "黑暗符文哨兵",
+			["encounterID"] = 746,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33453,
+		},
+		[51787] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "因度雷秘法师",
+			["npcID"] = 26336,
+		},
+		[22937] = {
+			["source"] = "拉扎尔",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 11497,
+		},
+		[9053] = {
+			["source"] = "暗炉农夫",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 8896,
+		},
+		[46608] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "巴琳达·斯通赫尔斯",
+			["npcID"] = 11949,
+		},
+		[23381] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "牦牛人风怒者",
+			["npcID"] = 27571,
+		},
+		[62932] = {
+			["source"] = "石树长老",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32914,
+		},
+		[57088] = {
+			["encounterName"] = "埃曼尼塔",
+			["source"] = "埃曼尼塔",
+			["encounterID"] = 1989,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30258,
+		},
+		[33417] = {
+			["source"] = "暴风城法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 18949,
 		},
 		[48616] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "燃烧深渊通灵侍僧",
 			["npcID"] = 27356,
 		},
-		[22907] = {
-			["source"] = "联盟游侠",
+		[58700] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26802,
+			["source"] = "灼热图腾 VIII",
+			["npcID"] = 31162,
 		},
 		[17195] = {
 			["source"] = "被束缚的火元素",
@@ -3364,83 +5312,47 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 30625,
 		},
-		[23381] = {
+		[66798] = {
+			["source"] = "黑骑士",
 			["event"] = "SPELL_CAST_START",
-			["source"] = "牦牛人风怒者",
-			["npcID"] = 27571,
+			["npcID"] = 35451,
 		},
 		[59038] = {
 			["source"] = "闪电构造体",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 27972,
 		},
-		[51500] = {
+		[30600] = {
+			["encounterName"] = "战争使者沃姆罗格",
+			["source"] = "战争使者沃姆罗格",
+			["npcID"] = 16809,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "冒烟的恶鬼",
-			["npcID"] = 27363,
+			["encounterID"] = 1937,
 		},
 		[59102] = {
 			["source"] = "安卡哈爆法者",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 30278,
 		},
-		[57088] = {
-			["encounterName"] = "埃曼尼塔",
-			["source"] = "埃曼尼塔",
-			["encounterID"] = 1989,
+		[63226] = {
+			["source"] = "生命的卫士",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30258,
+			["npcID"] = 33528,
 		},
 		[5106] = {
 			["source"] = "铁腭蜥蜴",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 1551,
 		},
-		[63226] = {
-			["source"] = "生命的卫士",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33528,
-		},
-		[22937] = {
-			["source"] = "拉扎尔",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 11497,
-		},
-		[62324] = {
-			["encounterName"] = "烈焰巨兽",
-			["source"] = "被修复的攻城车",
-			["encounterID"] = 744,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33109,
-		},
-		[12470] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "强力火元素",
-			["npcID"] = 15438,
-		},
-		[62395] = {
-			["encounterName"] = "烈焰巨兽",
-			["source"] = "烈焰巨兽炮台",
-			["encounterID"] = 744,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33139,
-		},
-		[17435] = {
-			["source"] = "瑞文戴尔男爵",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10440,
-		},
 		[50183] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "“银月”哈瑞",
 			["npcID"] = 24539,
 		},
-		[64537] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "VX-001",
-			["npcID"] = 33651,
+		[46772] = {
 			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 754,
+			["source"] = "克莉斯塔萨",
+			["npcID"] = 26206,
 		},
 		[65648] = {
 			["encounterName"] = "米米尔隆",
@@ -3449,24 +5361,54 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["encounterID"] = 754,
 		},
-		[64607] = {
-			["encounterName"] = "观察者奥尔加隆",
-			["source"] = "有生命的星座",
-			["encounterID"] = 757,
+		[61558] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33052,
+			["source"] = "通灵大师",
+			["npcID"] = 27732,
 		},
-		[62321] = {
-			["encounterName"] = "托里姆",
-			["source"] = "黑暗符文唤魔师",
-			["encounterID"] = 752,
+		[62395] = {
+			["encounterName"] = "烈焰巨兽",
+			["source"] = "烈焰巨兽炮台",
+			["encounterID"] = 744,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32878,
+			["npcID"] = 33139,
+		},
+		[50348] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "龙眠征服者",
+			["npcID"] = 27996,
+		},
+		[17435] = {
+			["source"] = "瑞文戴尔男爵",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10440,
+		},
+		[64537] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "VX-001",
+			["npcID"] = 33651,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 754,
+		},
+		[48201] = {
+			["source"] = "药剂师薇吉·莱文",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27248,
+		},
+		[64825] = {
+			["source"] = "大厅监督者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34197,
 		},
 		[55633] = {
 			["source"] = "达卡莱魔像",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 29832,
+		},
+		[50405] = {
+			["source"] = "腐烂的风暴巨人",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27270,
 		},
 		[50375] = {
 			["source"] = "蒸汽狂怒者",
@@ -3488,37 +5430,39 @@ PlaterDB = {
 			["source"] = "黑暗符文巨人",
 			["npcID"] = 27969,
 		},
-		[64825] = {
-			["source"] = "大厅监督者",
+		[63802] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "萨拉",
+			["encounterID"] = 756,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34197,
+			["npcID"] = 33134,
 		},
-		[61558] = {
+		[67247] = {
+			["source"] = "银色圣光支配者",
 			["event"] = "SPELL_CAST_START",
-			["source"] = "通灵大师",
-			["npcID"] = 27732,
+			["npcID"] = 35309,
 		},
-		[50405] = {
-			["source"] = "腐烂的风暴巨人",
+		[15228] = {
+			["source"] = "白须地占师",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27270,
+			["npcID"] = 11604,
 		},
 		[51622] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "影怒者西诺克",
 			["npcID"] = 26771,
 		},
-		[45580] = {
-			["source"] = "犸格莫斯火焰图腾",
+		[59395] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25444,
+			["source"] = "背叛的卫兵",
+			["npcID"] = 31532,
 		},
-		[60030] = {
-			["encounterName"] = "耶戈达·觅影者",
-			["source"] = "耶戈达·觅影者",
-			["encounterID"] = 214,
+		[59016] = {
+			["encounterName"] = "召唤者诺沃斯",
+			["source"] = "复活的暗影法师",
+			["encounterID"] = 371,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29310,
+			["npcID"] = 27600,
 		},
 		[30990] = {
 			["encounterName"] = "血卫士伯鲁恩",
@@ -3537,10 +5481,10 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 26762,
 		},
-		[11443] = {
-			["source"] = "图萨丁暗影法师",
+		[17883] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10398,
+			["source"] = "盘牙观察者",
+			["npcID"] = 17938,
 		},
 		[12466] = {
 			["source"] = "精锐法师猎手",
@@ -3552,10 +5496,12 @@ PlaterDB = {
 			["source"] = "帝王眼镜蛇",
 			["npcID"] = 28011,
 		},
-		[32173] = {
+		[62662] = {
+			["encounterName"] = "维扎克斯将军",
+			["source"] = "维扎克斯将军",
+			["encounterID"] = 755,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "盘牙魔法师",
-			["npcID"] = 17961,
+			["npcID"] = 33271,
 		},
 		[48873] = {
 			["encounterName"] = "暴龙之王爵德",
@@ -3574,10 +5520,10 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 28826,
 		},
-		[33624] = {
-			["source"] = "暴风城法师",
+		[32173] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 18949,
+			["source"] = "盘牙魔法师",
+			["npcID"] = 17961,
 		},
 		[29120] = {
 			["source"] = "荣耀堡弓箭手",
@@ -3589,15 +5535,15 @@ PlaterDB = {
 			["source"] = "巴琳达·斯通赫尔斯",
 			["npcID"] = 11949,
 		},
-		[31664] = {
+		[59435] = {
 			["event"] = "SPELL_CAST_START",
-			["source"] = "狂乱的石像鬼",
-			["npcID"] = 27691,
+			["source"] = "瓦里玛萨斯",
+			["npcID"] = 31565,
 		},
-		[56860] = {
-			["source"] = "法师猎手新兵",
+		[33624] = {
+			["source"] = "暴风城法师",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26728,
+			["npcID"] = 18949,
 		},
 		[59359] = {
 			["encounterName"] = "阿努巴拉克",
@@ -3611,12 +5557,12 @@ PlaterDB = {
 			["source"] = "龙眠神殿防御者",
 			["npcID"] = 27629,
 		},
-		[59016] = {
-			["encounterName"] = "召唤者诺沃斯",
-			["source"] = "复活的暗影法师",
-			["encounterID"] = 371,
+		[59963] = {
+			["encounterName"] = "先知萨隆亚",
+			["source"] = "先知萨隆亚",
+			["encounterID"] = 375,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27600,
+			["npcID"] = 26632,
 		},
 		[64570] = {
 			["encounterName"] = "米米尔隆",
@@ -3625,55 +5571,47 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33432,
 		},
-		[59108] = {
-			["source"] = "深渊爬行者",
+		[59347] = {
+			["source"] = "阿努巴尔地穴魔",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30279,
+			["npcID"] = 29097,
 		},
 		[59519] = {
 			["source"] = "萨尔",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 31650,
 		},
-		[31600] = {
-			["source"] = "恩其拉地穴魔",
+		[62324] = {
+			["encounterName"] = "烈焰巨兽",
+			["source"] = "被修复的攻城车",
+			["encounterID"] = 744,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25386,
+			["npcID"] = 33109,
 		},
-		[48201] = {
-			["source"] = "药剂师薇吉·莱文",
+		[37624] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27248,
+			["source"] = "背叛的恐惧魔王",
+			["npcID"] = 31531,
 		},
-		[15228] = {
-			["source"] = "白须地占师",
+		[56504] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 11604,
+			["source"] = "被驯服的冰虫",
+			["npcID"] = 30301,
 		},
-		[59347] = {
-			["source"] = "阿努巴尔地穴魔",
+		[49712] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29097,
+			["source"] = "布莉塔",
+			["npcID"] = 30484,
 		},
-		[51787] = {
+		[56402] = {
+			["source"] = "冰鬃雪人",
 			["event"] = "SPELL_CAST_START",
-			["source"] = "因度雷秘法师",
-			["npcID"] = 26336,
+			["npcID"] = 29875,
 		},
 		[50504] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "奥术浮蛇",
 			["npcID"] = 25721,
-		},
-		[59435] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "瓦里玛萨斯",
-			["npcID"] = 31565,
-		},
-		[46608] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "巴琳达·斯通赫尔斯",
-			["npcID"] = 11949,
 		},
 		[34232] = {
 			["event"] = "SPELL_CAST_START",
@@ -3687,24 +5625,32 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 29304,
 		},
+		[55715] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "土灵精英",
+			["npcID"] = 29980,
+		},
+		[38356] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "天灾邪能兽",
+			["npcID"] = 31528,
+		},
 		[9613] = {
 			["source"] = "恩其拉通灵师",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 25378,
 		},
-		[59963] = {
-			["encounterName"] = "先知萨隆亚",
-			["source"] = "先知萨隆亚",
-			["encounterID"] = 375,
+		[57665] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26632,
+			["source"] = "恐怖之水",
+			["npcID"] = 30645,
 		},
-		[63802] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["encounterID"] = 756,
+		[66552] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "奥尔加隆的回忆",
+			["encounterID"] = 338,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33134,
+			["npcID"] = 35052,
 		},
 		[64059] = {
 			["encounterName"] = "尤格-萨隆",
@@ -3740,39 +5686,38 @@ PlaterDB = {
 		[116] = {
 			["npcID"] = 188027,
 		},
-		[56402] = {
-			["source"] = "冰鬃雪人",
+		[59246] = {
+			["encounterName"] = "残忍的斯卡迪",
+			["source"] = "伊米亚巫医",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29875,
+			["npcID"] = 26691,
 		},
-		[42669] = {
-			["encounterName"] = "掠夺者因格瓦尔",
-			["source"] = "劫掠者因格瓦尔",
-			["encounterID"] = 575,
+		[12058] = {
+			["source"] = "战歌上尉",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 23954,
+			["npcID"] = 25446,
 		},
-		[56504] = {
+		[62859] = {
+			["encounterName"] = "弗蕾亚",
+			["source"] = "弗蕾亚",
+			["encounterID"] = 753,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "被驯服的冰虫",
-			["npcID"] = 30301,
+			["npcID"] = 32906,
 		},
-		[63891] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["encounterID"] = 756,
+		[6358] = {
+			["source"] = "埃勒利亚娜",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33134,
+			["npcID"] = 1863,
 		},
 		[46988] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "巴琳达·斯通赫尔斯",
 			["npcID"] = 11949,
 		},
-		[49712] = {
+		[61353] = {
 			["event"] = "SPELL_CAST_START",
-			["source"] = "布莉塔",
-			["npcID"] = 30484,
+			["source"] = "女猎手库拉",
+			["npcID"] = 32711,
 		},
 		[64443] = {
 			["encounterName"] = "观察者奥尔加隆",
@@ -3781,44 +5726,46 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["encounterID"] = 757,
 		},
-		[62327] = {
+		[62597] = {
 			["encounterName"] = "托里姆",
-			["source"] = "黑暗符文唤魔师",
+			["source"] = "西芙",
 			["encounterID"] = 752,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32878,
+			["npcID"] = 33196,
 		},
-		[51877] = {
-			["source"] = "冷风女巫",
+		[58701] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26577,
+			["source"] = "灼热图腾 IX",
+			["npcID"] = 31164,
 		},
-		[51240] = {
-			["source"] = "复活的达卡莱死亡骑士",
+		[16429] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26830,
+			["source"] = "图萨丁暗影法师",
+			["npcID"] = 10398,
 		},
-		[57665] = {
+		[63631] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "巨兽二型",
+			["encounterID"] = 754,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "恐怖之水",
-			["npcID"] = 30645,
+			["npcID"] = 33432,
 		},
 		[60511] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "吉安娜·普罗德摩尔",
 			["npcID"] = 31418,
 		},
-		[50348] = {
+		[20297] = {
 			["event"] = "SPELL_CAST_START",
-			["source"] = "龙眠征服者",
-			["npcID"] = 27996,
+			["source"] = "霜颅大法师",
+			["npcID"] = 31813,
 		},
-		[62662] = {
-			["encounterName"] = "维扎克斯将军",
-			["source"] = "维扎克斯将军",
-			["encounterID"] = 755,
+		[66867] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "纯洁者耶德瑞克",
+			["encounterID"] = 338,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33271,
+			["npcID"] = 35119,
 		},
 		[62653] = {
 			["encounterName"] = "弗蕾亚",
@@ -3837,34 +5784,34 @@ PlaterDB = {
 			["source"] = "收割者伊斯里克斯",
 			["npcID"] = 25453,
 		},
-		[62859] = {
-			["encounterName"] = "弗蕾亚",
-			["source"] = "弗蕾亚",
-			["encounterID"] = 753,
+		[66935] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "纯洁者耶德瑞克",
+			["encounterID"] = 338,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32906,
+			["npcID"] = 35119,
 		},
-		[49317] = {
-			["source"] = "碧蓝幼龙",
+		[56837] = {
+			["source"] = "法师猎手军官",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27682,
+			["npcID"] = 26727,
 		},
-		[12058] = {
+		[59616] = {
+			["source"] = "掠龙符文法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 23960,
+		},
+		[15799] = {
 			["source"] = "战歌上尉",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 25446,
 		},
-		[59395] = {
+		[59009] = {
+			["encounterName"] = "托尔戈",
+			["source"] = "复活的达卡莱蝙蝠骑兵",
+			["encounterID"] = 369,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "背叛的卫兵",
-			["npcID"] = 31532,
-		},
-		[62328] = {
-			["encounterName"] = "托里姆",
-			["source"] = "黑暗符文唤魔师",
-			["encounterID"] = 752,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32878,
+			["npcID"] = 26638,
 		},
 		[58817] = {
 			["event"] = "SPELL_CAST_START",
@@ -3878,17 +5825,17 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["encounterID"] = 296,
 		},
-		[59006] = {
-			["source"] = "达卡莱萨满祭司",
+		[62872] = {
+			["encounterName"] = "弗蕾亚",
+			["source"] = "弗蕾亚",
+			["npcID"] = 32906,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26639,
+			["encounterID"] = 753,
 		},
-		[64156] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "腐蚀触须",
-			["encounterID"] = 756,
+		[22887] = {
+			["source"] = "古拉巴什掷斧者",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33985,
+			["npcID"] = 11350,
 		},
 		[20793] = {
 			["source"] = "血孢点火者",
@@ -3900,44 +5847,46 @@ PlaterDB = {
 			["source"] = "达莉亚",
 			["npcID"] = 27680,
 		},
-		[59009] = {
-			["encounterName"] = "托尔戈",
-			["source"] = "复活的达卡莱蝙蝠骑兵",
-			["encounterID"] = 369,
+		[20825] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26638,
+			["source"] = "骷髅侍僧",
+			["npcID"] = 1789,
 		},
-		[22887] = {
-			["source"] = "古拉巴什掷斧者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 11350,
-		},
-		[20297] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "霜颅大法师",
-			["npcID"] = 31813,
-		},
-		[64153] = {
+		[64156] = {
 			["encounterName"] = "尤格-萨隆",
 			["source"] = "腐蚀触须",
 			["encounterID"] = 756,
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33985,
 		},
-		[36631] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "魔枢雏龙",
-			["npcID"] = 26127,
-		},
 		[59169] = {
 			["source"] = "被束缚的气元素",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 30418,
 		},
-		[52080] = {
-			["source"] = "裂骨者",
+		[36631] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27006,
+			["source"] = "魔枢雏龙",
+			["npcID"] = 26127,
+		},
+		[57091] = {
+			["encounterName"] = "克莉斯塔萨",
+			["source"] = "克莉斯塔萨",
+			["encounterID"] = 526,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26723,
+		},
+		[55077] = {
+			["source"] = "野蛮的座狼",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29735,
+		},
+		[62488] = {
+			["encounterName"] = "掌炉者伊格尼斯",
+			["source"] = "掌炉者伊格尼斯",
+			["encounterID"] = 745,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33118,
 		},
 		[64348] = {
 			["encounterName"] = "米米尔隆",
@@ -3951,43 +5900,42 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 32886,
 		},
-		[15799] = {
-			["source"] = "战歌上尉",
+		[15547] = {
+			["source"] = "被遗忘的火枪手",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25446,
+			["npcID"] = 27225,
 		},
-		[59246] = {
-			["encounterName"] = "残忍的斯卡迪",
-			["source"] = "伊米亚巫医",
+		[22334] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26691,
+			["source"] = "天灾攻城锻造师",
+			["npcID"] = 27410,
 		},
 		[55269] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "魔眼",
 			["npcID"] = 29747,
 		},
-		[37624] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "背叛的恐惧魔王",
-			["npcID"] = 31531,
-		},
-		[61897] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "伊米亚元素师",
-			["npcID"] = 31267,
-		},
-		[59856] = {
-			["encounterName"] = "召唤者诺沃斯",
-			["source"] = "召唤者诺沃斯",
-			["encounterID"] = 371,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26631,
-		},
 		[60923] = {
 			["source"] = "阿尔卡冯守卫者",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 32353,
+		},
+		[60667] = {
+			["source"] = "霜巢天爪龙",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 31137,
+		},
+		[57061] = {
+			["encounterName"] = "埃曼尼塔",
+			["source"] = "有毒的蘑菇",
+			["encounterID"] = 1989,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30435,
+		},
+		[62344] = {
+			["source"] = "石树长老",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32914,
 		},
 		[59521] = {
 			["encounterName"] = "艾库隆",
@@ -3996,25 +5944,27 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["encounterID"] = 2660,
 		},
-		[62344] = {
-			["source"] = "石树长老",
+		[59617] = {
+			["source"] = "掠龙符文法师",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32914,
+			["npcID"] = 23960,
+		},
+		[64157] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "腐蚀触须",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33985,
 		},
 		[27267] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "阿巴塔尔",
 			["npcID"] = 416,
 		},
-		[59617] = {
-			["source"] = "掠龙符文法师",
+		[64654] = {
+			["source"] = "寒冬滚石",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 23960,
-		},
-		[15547] = {
-			["source"] = "被遗忘的火枪手",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27225,
+			["npcID"] = 34135,
 		},
 		[59745] = {
 			["encounterName"] = "祖拉玛特",
@@ -4033,17 +5983,19 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 25687,
 		},
-		[6358] = {
-			["source"] = "埃勒利亚娜",
+		[63038] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "尤格-萨隆的卫士",
+			["encounterID"] = 756,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 1863,
+			["npcID"] = 33136,
 		},
-		[22686] = {
-			["encounterName"] = "暴龙之王爵德",
-			["source"] = "暴龙之王爵德",
-			["encounterID"] = 373,
+		[64152] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "腐蚀触须",
+			["encounterID"] = 756,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27483,
+			["npcID"] = 33985,
 		},
 		[15232] = {
 			["source"] = "图萨丁暗影法师",
@@ -4057,34 +6009,34 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["encounterID"] = 296,
 		},
-		[57061] = {
-			["encounterName"] = "埃曼尼塔",
-			["source"] = "有毒的蘑菇",
-			["encounterID"] = 1989,
+		[51806] = {
+			["source"] = "魔导师凯尔多努斯",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30435,
+			["npcID"] = 26828,
 		},
-		[63038] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "尤格-萨隆的卫士",
-			["encounterID"] = 756,
+		[54137] = {
+			["encounterName"] = "谢沃兹",
+			["source"] = "谢沃兹",
+			["npcID"] = 29266,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33136,
+			["encounterID"] = 2661,
 		},
 		[65084] = {
 			["source"] = "XB-488清理机器人",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 34273,
 		},
+		[63479] = {
+			["encounterName"] = "钢铁议会",
+			["source"] = "唤雷者布隆迪尔",
+			["encounterID"] = 748,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32857,
+		},
 		[63242] = {
 			["source"] = "红木树人",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33525,
-		},
-		[51901] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "翡翠鞭笞者",
-			["npcID"] = 27254,
 		},
 		[63134] = {
 			["encounterName"] = "尤格-萨隆",
@@ -4100,29 +6052,31 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33288,
 		},
-		[64654] = {
-			["source"] = "寒冬滚石",
+		[62601] = {
+			["encounterName"] = "托里姆",
+			["source"] = "西芙",
+			["encounterID"] = 752,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34135,
+			["npcID"] = 33196,
 		},
-		[54137] = {
-			["encounterName"] = "谢沃兹",
-			["source"] = "谢沃兹",
-			["npcID"] = 29266,
+		[59965] = {
+			["encounterName"] = "先知萨隆亚",
+			["source"] = "先知萨隆亚",
+			["encounterID"] = 375,
 			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 2661,
+			["npcID"] = 26632,
 		},
-		[64152] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "腐蚀触须",
-			["encounterID"] = 756,
+		[61513] = {
+			["source"] = "冷酷的构造体",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33985,
+			["npcID"] = 27971,
 		},
-		[22334] = {
+		[59807] = {
+			["encounterName"] = "托尔戈",
+			["source"] = "托尔戈",
+			["encounterID"] = 369,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "天灾攻城锻造师",
-			["npcID"] = 27410,
+			["npcID"] = 26630,
 		},
 		[47981] = {
 			["encounterName"] = "塑树者奥莫洛克",
@@ -4136,12 +6090,12 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 32886,
 		},
-		[59855] = {
-			["encounterName"] = "召唤者诺沃斯",
-			["source"] = "召唤者诺沃斯",
-			["encounterID"] = 371,
+		[54850] = {
+			["encounterName"] = "达卡莱巨像",
+			["source"] = "达卡莱巨像",
+			["encounterID"] = 385,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26631,
+			["npcID"] = 29307,
 		},
 		[64215] = {
 			["encounterName"] = "风暴看守者埃玛尔隆",
@@ -4157,27 +6111,29 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 29335,
 		},
-		[50832] = {
+		[59855] = {
+			["encounterName"] = "召唤者诺沃斯",
+			["source"] = "召唤者诺沃斯",
+			["encounterID"] = 371,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "炮兵队长泽尔哈特",
-			["npcID"] = 27235,
+			["npcID"] = 26631,
 		},
-		[61513] = {
-			["source"] = "冷酷的构造体",
+		[59856] = {
+			["encounterName"] = "召唤者诺沃斯",
+			["source"] = "召唤者诺沃斯",
+			["encounterID"] = 371,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27971,
+			["npcID"] = 26631,
 		},
 		[10277] = {
 			["source"] = "暗矛掷斧者",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 18970,
 		},
-		[59807] = {
-			["encounterName"] = "托尔戈",
-			["source"] = "托尔戈",
-			["encounterID"] = 369,
+		[50832] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26630,
+			["source"] = "炮兵队长泽尔哈特",
+			["npcID"] = 27235,
 		},
 		[61568] = {
 			["source"] = "暮光膜拜者",
@@ -4196,68 +6152,66 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 26626,
 		},
-		[59616] = {
-			["source"] = "掠龙符文法师",
+		[57408] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 23960,
+			["source"] = "希弗列尔达风暴之女",
+			["npcID"] = 29323,
 		},
-		[51806] = {
-			["source"] = "魔导师凯尔多努斯",
+		[52080] = {
+			["source"] = "裂骨者",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26828,
+			["npcID"] = 27006,
 		},
-		[59965] = {
-			["encounterName"] = "先知萨隆亚",
-			["source"] = "先知萨隆亚",
-			["encounterID"] = 375,
+		[51901] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26632,
+			["source"] = "翡翠鞭笞者",
+			["npcID"] = 27254,
 		},
-		[64157] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "腐蚀触须",
-			["encounterID"] = 756,
+		[51240] = {
+			["source"] = "复活的达卡莱死亡骑士",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33985,
-		},
-		[63479] = {
-			["encounterName"] = "钢铁议会",
-			["source"] = "唤雷者布隆迪尔",
-			["encounterID"] = 748,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32857,
-		},
-		[44433] = {
-			["source"] = "斯卡特·弗洛斯普",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 24784,
-		},
-		[62601] = {
-			["encounterName"] = "托里姆",
-			["source"] = "西芙",
-			["encounterID"] = 752,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33196,
+			["npcID"] = 26830,
 		},
 		[46824] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "克莉斯塔萨",
 			["npcID"] = 26206,
 		},
-		[38391] = {
+		[44433] = {
+			["source"] = "斯卡特·弗洛斯普",
 			["event"] = "SPELL_CAST_START",
-			["source"] = "瘤皮",
-			["npcID"] = 30003,
-		},
-		[56837] = {
-			["source"] = "法师猎手军官",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26727,
+			["npcID"] = 24784,
 		},
 		[56862] = {
 			["source"] = "被束缚的水元素",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 30419,
+		},
+		[59842] = {
+			["encounterName"] = "斯拉德兰",
+			["source"] = "斯拉德兰",
+			["npcID"] = 29304,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 383,
+		},
+		[38391] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "瘤皮",
+			["npcID"] = 30003,
+		},
+		[55814] = {
+			["encounterName"] = "凶残的伊克",
+			["source"] = "凶残的伊克",
+			["npcID"] = 29932,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 1988,
+		},
+		[62327] = {
+			["encounterName"] = "托里姆",
+			["source"] = "黑暗符文唤魔师",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32878,
 		},
 		[62016] = {
 			["encounterName"] = "托里姆",
@@ -4271,41 +6225,39 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 25378,
 		},
-		[62872] = {
-			["encounterName"] = "弗蕾亚",
-			["source"] = "弗蕾亚",
-			["npcID"] = 32906,
+		[51877] = {
+			["source"] = "冷风女巫",
 			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 753,
+			["npcID"] = 26577,
 		},
-		[55077] = {
-			["source"] = "野蛮的座狼",
+		[11443] = {
+			["source"] = "图萨丁暗影法师",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29735,
+			["npcID"] = 10398,
 		},
-		[60667] = {
-			["source"] = "霜巢天爪龙",
+		[62328] = {
+			["encounterName"] = "托里姆",
+			["source"] = "黑暗符文唤魔师",
+			["encounterID"] = 752,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31137,
+			["npcID"] = 32878,
 		},
 		[52969] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "亚鲁乌特",
 			["npcID"] = 28121,
 		},
-		[54850] = {
-			["encounterName"] = "达卡莱巨像",
-			["source"] = "达卡莱巨像",
-			["encounterID"] = 385,
+		[61897] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29307,
+			["source"] = "伊米亚元素师",
+			["npcID"] = 31267,
 		},
-		[62488] = {
-			["encounterName"] = "掌炉者伊格尼斯",
-			["source"] = "掌炉者伊格尼斯",
-			["encounterID"] = 745,
+		[64153] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "腐蚀触须",
+			["encounterID"] = 756,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33118,
+			["npcID"] = 33985,
 		},
 		[63689] = {
 			["encounterName"] = "米米尔隆",
@@ -4314,17 +6266,17 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33670,
 		},
-		[57091] = {
-			["encounterName"] = "克莉斯塔萨",
-			["source"] = "克莉斯塔萨",
-			["encounterID"] = 526,
+		[59006] = {
+			["source"] = "达卡莱萨满祭司",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26723,
+			["npcID"] = 26639,
 		},
-		[57408] = {
+		[62938] = {
+			["encounterName"] = "弗蕾亚",
+			["source"] = "风暴鞭笞者",
+			["npcID"] = 32919,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "希弗列尔达风暴之女",
-			["npcID"] = 29323,
+			["encounterID"] = 753,
 		},
 		[50092] = {
 			["event"] = "SPELL_CAST_START",
@@ -4337,34 +6289,32 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 26693,
 		},
-		[62938] = {
-			["encounterName"] = "弗蕾亚",
-			["source"] = "风暴鞭笞者",
-			["npcID"] = 32919,
+		[45580] = {
+			["source"] = "犸格莫斯火焰图腾",
 			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 753,
+			["npcID"] = 25444,
 		},
 		[56326] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "风暴之子瓦杜兰",
 			["npcID"] = 29368,
 		},
-		[61353] = {
+		[60030] = {
+			["encounterName"] = "耶戈达·觅影者",
+			["source"] = "耶戈达·觅影者",
+			["encounterID"] = 214,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "女猎手库拉",
-			["npcID"] = 32711,
+			["npcID"] = 29310,
 		},
 		[63551] = {
 			["source"] = "生命的卫士",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33528,
 		},
-		[63631] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "巨兽二型",
-			["encounterID"] = 754,
+		[61965] = {
+			["source"] = "黑暗符文助手",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33432,
+			["npcID"] = 32886,
 		},
 		[57477] = {
 			["event"] = "SPELL_CAST_START",
@@ -4376,32 +6326,38 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 13359,
 		},
-		[61965] = {
-			["source"] = "黑暗符文助手",
+		[56934] = {
+			["encounterName"] = "大魔导师泰蕾丝塔",
+			["source"] = "大魔导师泰蕾丝塔",
+			["encounterID"] = 520,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32886,
+			["npcID"] = 26731,
 		},
-		[16429] = {
+		[63891] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "萨拉",
+			["encounterID"] = 756,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "图萨丁暗影法师",
-			["npcID"] = 10398,
+			["npcID"] = 33134,
 		},
-		[58701] = {
+		[66042] = {
+			["encounterName"] = "总冠军",
+			["source"] = "安布罗斯·雷钉",
+			["encounterID"] = 334,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "灼热图腾 IX",
-			["npcID"] = 31164,
+			["npcID"] = 34702,
 		},
 		[63775] = {
 			["source"] = "暮光炎术师",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33820,
 		},
-		[62597] = {
-			["encounterName"] = "托里姆",
-			["source"] = "西芙",
-			["encounterID"] = 752,
+		[42669] = {
+			["encounterName"] = "掠夺者因格瓦尔",
+			["source"] = "劫掠者因格瓦尔",
+			["encounterID"] = 575,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33196,
+			["npcID"] = 23954,
 		},
 		[63147] = {
 			["encounterName"] = "尤格-萨隆",
@@ -4410,47 +6366,52 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33134,
 		},
-		[23102] = {
-			["source"] = "暗影拱顶白骨卫士",
+		[56860] = {
+			["source"] = "法师猎手新兵",
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30312,
+			["npcID"] = 26728,
 		},
-		[55715] = {
+		[22907] = {
+			["source"] = "联盟游侠",
 			["event"] = "SPELL_CAST_START",
-			["source"] = "土灵精英",
-			["npcID"] = 29980,
+			["npcID"] = 26802,
 		},
 		[12675] = {
 			["source"] = "红衣魔术师",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 10419,
 		},
-		[62932] = {
-			["source"] = "石树长老",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32914,
-		},
 		[30481] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "碎手狙击者",
 			["npcID"] = 16704,
 		},
-		[38356] = {
+		[55815] = {
+			["encounterName"] = "凶残的伊克",
+			["source"] = "凶残的伊克",
+			["npcID"] = 29932,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "天灾邪能兽",
-			["npcID"] = 31528,
+			["encounterID"] = 1988,
+		},
+		[9672] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "蓝玉巫师",
+			["npcID"] = 25316,
 		},
 		[58948] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "黑岩圣殿卫士",
 			["npcID"] = 30453,
 		},
-		[56934] = {
-			["encounterName"] = "大魔导师泰蕾丝塔",
-			["source"] = "大魔导师泰蕾丝塔",
-			["encounterID"] = 520,
+		[58980] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26731,
+			["source"] = "达卡莱医师",
+			["npcID"] = 29826,
+		},
+		[59252] = {
+			["source"] = "伊米亚黑暗萨满祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26694,
 		},
 		[60936] = {
 			["encounterName"] = "玛里苟斯",
@@ -4458,11 +6419,6 @@ PlaterDB = {
 			["npcID"] = 28859,
 			["event"] = "SPELL_CAST_START",
 			["encounterID"] = 734,
-		},
-		[59252] = {
-			["source"] = "伊米亚黑暗萨满祭司",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26694,
 		},
 		[58053] = {
 			["event"] = "SPELL_CAST_START",
@@ -4476,10 +6432,12 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 27483,
 		},
-		[59514] = {
+		[66043] = {
+			["encounterName"] = "总冠军",
+			["source"] = "安布罗斯·雷钉",
+			["encounterID"] = 334,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "希尔瓦娜斯·风行者",
-			["npcID"] = 31651,
+			["npcID"] = 34702,
 		},
 		[7162] = {
 			["source"] = "马拉奇修士",
@@ -4520,15 +6478,19 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 29312,
 		},
-		[58700] = {
+		[52770] = {
+			["encounterName"] = "艾欧纳尔",
+			["source"] = "艾欧纳尔",
+			["encounterID"] = 559,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "灼热图腾 VIII",
-			["npcID"] = 31162,
+			["npcID"] = 28546,
 		},
-		[33417] = {
-			["source"] = "暴风城法师",
+		[66619] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "奥尔加隆的回忆",
+			["encounterID"] = 338,
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 18949,
+			["npcID"] = 35052,
 		},
 		[62529] = {
 			["encounterName"] = "托里姆",
@@ -4552,15 +6514,17 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33237,
 		},
-		[46772] = {
+		[64599] = {
+			["encounterName"] = "观察者奥尔加隆",
+			["source"] = "有生命的星座",
+			["npcID"] = 33052,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "克莉斯塔萨",
-			["npcID"] = 26206,
+			["encounterID"] = 757,
 		},
-		[64652] = {
+		[38446] = {
+			["source"] = "影月暗法师",
 			["event"] = "SPELL_CAST_START",
-			["source"] = "霍迪尔的勇士",
-			["npcID"] = 34133,
+			["npcID"] = 22081,
 		},
 		[64767] = {
 			["source"] = "托里姆",
@@ -4572,12 +6536,10 @@ PlaterDB = {
 			["source"] = "冰原徒工",
 			["npcID"] = 26705,
 		},
-		[63666] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "巨兽二型",
-			["encounterID"] = 754,
+		[64652] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34071,
+			["source"] = "霍迪尔的勇士",
+			["npcID"] = 34133,
 		},
 		[59182] = {
 			["event"] = "SPELL_CAST_START",
@@ -4594,15 +6556,15 @@ PlaterDB = {
 			["source"] = "起泡的腐泥怪",
 			["npcID"] = 16901,
 		},
-		[4962] = {
+		[60954] = {
 			["event"] = "SPELL_CAST_START",
-			["source"] = "遗忘深渊高阶祭司",
-			["npcID"] = 30543,
+			["source"] = "布莉塔",
+			["npcID"] = 30484,
 		},
-		[31516] = {
+		[49317] = {
+			["source"] = "碧蓝幼龙",
 			["event"] = "SPELL_CAST_START",
-			["source"] = "影月侍僧",
-			["npcID"] = 16594,
+			["npcID"] = 27682,
 		},
 		[31730] = {
 			["event"] = "SPELL_CAST_START",
@@ -4633,32 +6595,32 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 26636,
 		},
-		[59183] = {
+		[16997] = {
 			["event"] = "SPELL_CAST_START",
-			["source"] = "自由的火焰风暴",
-			["npcID"] = 28584,
-		},
-		[53333] = {
-			["encounterName"] = "哈多诺克斯",
-			["source"] = "阿努巴尔通灵师",
-			["encounterID"] = 217,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29064,
+			["source"] = "石翼尖啸者",
+			["npcID"] = 10409,
 		},
 		[59346] = {
 			["event"] = "SPELL_CAST_START",
 			["source"] = "阿努巴尔碾压者",
 			["npcID"] = 28922,
 		},
+		[67751] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35451,
+		},
 		[14034] = {
 			["source"] = "战歌要塞法师",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 25420,
 		},
-		[16565] = {
-			["source"] = "安娜丝塔丽男爵夫人",
+		[13323] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10436,
+			["source"] = "金队法师",
+			["npcID"] = 32341,
 		},
 		[62274] = {
 			["encounterName"] = "钢铁议会",
@@ -4674,10 +6636,10 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33651,
 		},
-		[8800] = {
+		[52758] = {
 			["event"] = "SPELL_CAST_START",
-			["source"] = "风险投资公司露天矿工",
-			["npcID"] = 674,
+			["source"] = "鳄鱼人猎手瑟匹克",
+			["npcID"] = 28216,
 		},
 		[50094] = {
 			["source"] = "冰冷元素",
@@ -4705,24 +6667,20 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 32927,
 		},
-		[56272] = {
-			["encounterName"] = "玛里苟斯",
-			["source"] = "玛里苟斯",
-			["npcID"] = 28859,
+		[59255] = {
+			["source"] = "伊米亚通灵师",
 			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 734,
+			["npcID"] = 28368,
 		},
 		[58438] = {
 			["source"] = "自由的欺诈者",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 30856,
 		},
-		[54369] = {
-			["encounterName"] = "祖拉玛特",
-			["source"] = "湮灭者祖拉玛特",
-			["npcID"] = 29314,
+		[34984] = {
 			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 2663,
+			["source"] = "盘牙鳐",
+			["npcID"] = 21128,
 		},
 		[54102] = {
 			["encounterName"] = "谢沃兹",
@@ -4762,25 +6720,25 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 33453,
 		},
-		[47425] = {
-			["source"] = "复活的冰霜巨龙",
+		[15530] = {
 			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26841,
+			["source"] = "残忍的阿图里斯",
+			["npcID"] = 28659,
 		},
 		[43413] = {
 			["source"] = "飘雪林地狼獾人",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 26198,
 		},
-		[59255] = {
-			["source"] = "伊米亚通灵师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28368,
-		},
 		[45046] = {
 			["source"] = "艾瑞达巫师",
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 25033,
+		},
+		[15497] = {
+			["source"] = "荒土奴隶",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 17963,
 		},
 		[61923] = {
 			["encounterName"] = "霍迪尔",
@@ -4789,10 +6747,12 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_START",
 			["npcID"] = 32948,
 		},
-		[34984] = {
+		[22686] = {
+			["encounterName"] = "暴龙之王爵德",
+			["source"] = "暴龙之王爵德",
+			["encounterID"] = 373,
 			["event"] = "SPELL_CAST_START",
-			["source"] = "盘牙鳐",
-			["npcID"] = 21128,
+			["npcID"] = 27483,
 		},
 	},
 	["profileKeys"] = {
@@ -9007,14 +10967,44 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
+				[35328] = {
+					"暴风城冠军", -- [1]
+					"冠军的试炼", -- [2]
+					"zhCN", -- [3]
+				},
 				[28965] = {
 					"泰坦神铁轰鸣者", -- [1]
 					"闪电大厅", -- [2]
 					"zhCN", -- [3]
 				},
+				[8896] = {
+					"暗炉农夫", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[8904] = {
+					"暗炉议员", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
 				[30084] = {
 					"能量火花", -- [1]
 					"永恒之眼", -- [2]
+					"zhCN", -- [3]
+				},
+				[8920] = {
+					"武器技师", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[8928] = {
+					"洞穴雷霆蜥蜴", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[34657] = {
+					"娅琳·永歌", -- [1]
+					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[30164] = {
@@ -9037,9 +11027,24 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
+				[9024] = {
+					"控火师罗格雷恩", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[9056] = {
+					"弗诺斯·达克维尔", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
 				[30452] = {
 					"塔尼布隆", -- [1]
 					"黑曜石圣殿", -- [2]
+					"zhCN", -- [3]
+				},
+				[35329] = {
+					"铁炉堡勇士", -- [1]
+					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[27431] = {
@@ -9252,6 +11257,11 @@ PlaterDB = {
 					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
+				[35332] = {
+					"达纳苏斯勇士", -- [1]
+					"冠军的试炼", -- [2]
+					"zhCN", -- [3]
+				},
 				[33350] = {
 					"米米尔隆", -- [1]
 					"奥杜尔", -- [2]
@@ -9262,6 +11272,16 @@ PlaterDB = {
 					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
+				[8889] = {
+					"铁怒监军", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[8897] = {
+					"厄炉工匠", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
 				[15043] = {
 					"祖利安鳄鱼", -- [1]
 					"祖尔格拉布", -- [2]
@@ -9270,6 +11290,11 @@ PlaterDB = {
 				[29063] = {
 					"阿努巴尔地穴魔", -- [1]
 					"艾卓-尼鲁布", -- [2]
+					"zhCN", -- [3]
+				},
+				[8921] = {
+					"血犬", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
 				[33670] = {
@@ -9300,6 +11325,21 @@ PlaterDB = {
 				[29271] = {
 					"灵体之球", -- [1]
 					"紫罗兰监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[9025] = {
+					"洛考尔", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[9033] = {
+					"安格弗将军", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[9041] = {
+					"典狱官斯迪尔基斯", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
 				[34086] = {
@@ -9562,6 +11602,31 @@ PlaterDB = {
 					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
+				[8890] = {
+					"铁怒狱卒", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[8898] = {
+					"铁怒队长", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[8906] = {
+					"狂怒傀儡", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[8914] = {
+					"暮光保镖", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[8922] = {
+					"巨型血犬", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
 				[29097] = {
 					"阿努巴尔地穴魔", -- [1]
 					"艾卓-尼鲁布", -- [2]
@@ -9747,6 +11812,11 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
+				[35307] = {
+					"银色女祭司", -- [1]
+					"冠军的试炼", -- [2]
+					"zhCN", -- [3]
+				},
 				[33293] = {
 					"XT-002拆解者", -- [1]
 					"奥杜尔", -- [2]
@@ -9812,6 +11882,11 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
+				[35052] = {
+					"未知目标", -- [1]
+					"冠军的试炼", -- [2]
+					"zhCN", -- [3]
+				},
 				[29834] = {
 					"达卡莱狂鱼", -- [1]
 					"古达克", -- [2]
@@ -9837,6 +11912,16 @@ PlaterDB = {
 					"闪电大厅", -- [2]
 					"zhCN", -- [3]
 				},
+				[8891] = {
+					"铁怒卫士", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[8899] = {
+					"厄炉龙骑兵", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
 				[29051] = {
 					"阿努巴尔地穴魔", -- [1]
 					"艾卓-尼鲁布", -- [2]
@@ -9845,6 +11930,11 @@ PlaterDB = {
 				[16807] = {
 					"高阶术士奈瑟库斯", -- [1]
 					"地狱火堡垒：破碎大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[34701] = {
+					"克罗索斯", -- [1]
+					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[24080] = {
@@ -9875,6 +11965,11 @@ PlaterDB = {
 				[34190] = {
 					"硬化铁魔像", -- [1]
 					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[35309] = {
+					"银色圣光支配者", -- [1]
+					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[6112] = {
@@ -9985,6 +12080,11 @@ PlaterDB = {
 				[16808] = {
 					"酋长卡加斯·刃拳", -- [1]
 					"地狱火堡垒：破碎大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[34703] = {
+					"拉娜·硬锤", -- [1]
+					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[17959] = {
@@ -10102,6 +12202,11 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
+				[29932] = {
+					"凶残的伊克", -- [1]
+					"古达克", -- [2]
+					"zhCN", -- [3]
+				},
 				[28925] = {
 					"阿努巴尔通灵师", -- [1]
 					"艾卓-尼鲁布", -- [2]
@@ -10117,6 +12222,16 @@ PlaterDB = {
 					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
+				[8892] = {
+					"铁怒步兵", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[8900] = {
+					"厄炉魔匠", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
 				[23954] = {
 					"劫掠者因格瓦尔", -- [1]
 					"乌特加德城堡", -- [2]
@@ -10130,6 +12245,11 @@ PlaterDB = {
 				[29117] = {
 					"阿努巴尔勇士", -- [1]
 					"艾卓-尼鲁布", -- [2]
+					"zhCN", -- [3]
+				},
+				[34705] = {
+					"雅克布·奥勒留斯元帅", -- [1]
+					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[24082] = {
@@ -10152,6 +12272,11 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
+				[9028] = {
+					"格里兹尔", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
 				[29309] = {
 					"纳多克斯长老", -- [1]
 					"安卡赫特：古代王国", -- [2]
@@ -10162,9 +12287,59 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[33651] = {
-					"VX-001", -- [1]
-					"奥杜尔", -- [2]
+				[8983] = {
+					"傀儡统帅阿格曼奇", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[8907] = {
+					"怒锤傀儡", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[18179] = {
+					"未知目标", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
+					"zhCN", -- [3]
+				},
+				[9027] = {
+					"修行者高罗什", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[10417] = {
+					"泼毒者", -- [1]
+					"斯坦索姆", -- [2]
+					"zhCN", -- [3]
+				},
+				[34928] = {
+					"银色神官帕尔崔丝", -- [1]
+					"冠军的试炼", -- [2]
+					"zhCN", -- [3]
+				},
+				[34702] = {
+					"安布罗斯·雷钉", -- [1]
+					"冠军的试炼", -- [2]
+					"zhCN", -- [3]
+				},
+				[35331] = {
+					"诺莫瑞根勇士", -- [1]
+					"冠军的试炼", -- [2]
+					"zhCN", -- [3]
+				},
+				[35590] = {
+					"未知目标", -- [1]
+					"冠军的试炼", -- [2]
+					"zhCN", -- [3]
+				},
+				[1663] = {
+					"迪克斯特·瓦德", -- [1]
+					"暴风城监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[205958] = {
+					"僵尸恐魔", -- [1]
+					"净化斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[30668] = {
@@ -10177,9 +12352,24 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
+				[29395] = {
+					"埃雷克姆卫兵", -- [1]
+					"紫罗兰监狱", -- [2]
+					"zhCN", -- [3]
+				},
 				[26624] = {
 					"肮脏的喷毒者", -- [1]
 					"达克萨隆要塞", -- [2]
+					"zhCN", -- [3]
+				},
+				[35119] = {
+					"纯洁者耶德瑞克", -- [1]
+					"冠军的试炼", -- [2]
+					"zhCN", -- [3]
+				},
+				[35311] = {
+					"未知目标", -- [1]
+					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[26672] = {
@@ -10202,6 +12392,11 @@ PlaterDB = {
 					"净化斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
+				[35305] = {
+					"银色僧侣", -- [1]
+					"冠军的试炼", -- [2]
+					"zhCN", -- [3]
+				},
 				[34035] = {
 					"未知目标", -- [1]
 					"奥杜尔", -- [2]
@@ -10212,9 +12407,19 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
+				[35330] = {
+					"埃索达勇士", -- [1]
+					"冠军的试炼", -- [2]
+					"zhCN", -- [3]
+				},
 				[26800] = {
 					"联盟狂战士", -- [1]
 					"魔枢", -- [2]
+					"zhCN", -- [3]
+				},
+				[24200] = {
+					"建筑师斯卡瓦尔德", -- [1]
+					"乌特加德城堡", -- [2]
 					"zhCN", -- [3]
 				},
 				[28878] = {
@@ -10242,6 +12447,11 @@ PlaterDB = {
 					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
+				[8905] = {
+					"战斗傀儡", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
 				[26928] = {
 					"未知目标", -- [1]
 					"魔枢", -- [2]
@@ -10255,6 +12465,11 @@ PlaterDB = {
 				[27983] = {
 					"未知目标", -- [1]
 					"岩石大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[15989] = {
+					"萨菲隆", -- [1]
+					"纳克萨玛斯", -- [2]
 					"zhCN", -- [3]
 				},
 				[10435] = {
@@ -10272,9 +12487,39 @@ PlaterDB = {
 					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
+				[8913] = {
+					"暮光使者", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[29832] = {
+					"达卡莱魔像", -- [1]
+					"古达克", -- [2]
+					"zhCN", -- [3]
+				},
 				[29118] = {
 					"阿努巴尔地穴魔", -- [1]
 					"艾卓-尼鲁布", -- [2]
+					"zhCN", -- [3]
+				},
+				[28826] = {
+					"雷怒亡魂", -- [1]
+					"闪电大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[16441] = {
+					"寒冰皇冠卫士", -- [1]
+					"纳克萨玛斯", -- [2]
+					"zhCN", -- [3]
+				},
+				[29335] = {
+					"阿努巴尔织网者", -- [1]
+					"艾卓-尼鲁布", -- [2]
+					"zhCN", -- [3]
+				},
+				[1696] = {
+					"可怕的塔格尔", -- [1]
+					"暴风城监狱", -- [2]
 					"zhCN", -- [3]
 				},
 				[24083] = {
@@ -10287,6 +12532,11 @@ PlaterDB = {
 					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
+				[9042] = {
+					"维雷克", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
 				[32885] = {
 					"被俘虏的雇佣兵", -- [1]
 					"奥杜尔", -- [2]
@@ -10297,14 +12547,39 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
+				[1706] = {
+					"迪菲亚囚徒", -- [1]
+					"暴风城监狱", -- [2]
+					"zhCN", -- [3]
+				},
 				[34004] = {
 					"未知目标", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[29310] = {
-					"耶戈达·觅影者", -- [1]
-					"安卡赫特：古代王国", -- [2]
+				[1708] = {
+					"未知目标", -- [1]
+					"暴风城监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[23561] = {
+					"冰冻废土的士兵", -- [1]
+					"纳克萨玛斯", -- [2]
+					"zhCN", -- [3]
+				},
+				[8916] = {
+					"竞技场观众", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[1711] = {
+					"迪菲亚罪犯", -- [1]
+					"暴风城监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[11322] = {
+					"燃刃信徒", -- [1]
+					"怒焰裂谷", -- [2]
 					"zhCN", -- [3]
 				},
 				[34196] = {
@@ -10312,9 +12587,54 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
+				[11319] = {
+					"怒焰萨满祭司", -- [1]
+					"怒焰裂谷", -- [2]
+					"zhCN", -- [3]
+				},
 				[33237] = {
 					"奥杜尔巨像", -- [1]
 					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[1716] = {
+					"巴基尔·斯瑞德", -- [1]
+					"暴风城监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[1717] = {
+					"哈姆霍克", -- [1]
+					"暴风城监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[1666] = {
+					"卡姆·深怒", -- [1]
+					"暴风城监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[1715] = {
+					"迪菲亚叛军", -- [1]
+					"暴风城监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[11517] = {
+					"奥格弗林特", -- [1]
+					"怒焰裂谷", -- [2]
+					"zhCN", -- [3]
+				},
+				[1707] = {
+					"迪菲亚俘虏", -- [1]
+					"暴风城监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[2630] = {
+					"地缚图腾", -- [1]
+					"纳克萨玛斯", -- [2]
+					"zhCN", -- [3]
+				},
+				[26529] = {
+					"肉钩", -- [1]
+					"净化斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[33525] = {
@@ -10322,9 +12642,19 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[26529] = {
-					"肉钩", -- [1]
-					"净化斯坦索姆", -- [2]
+				[27979] = {
+					"铸铁穴居人", -- [1]
+					"岩石大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[30621] = {
+					"艾丨米", -- [1]
+					"安卡赫特：古代王国", -- [2]
+					"zhCN", -- [3]
+				},
+				[30962] = {
+					"未知目标", -- [1]
+					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
 				[29630] = {
@@ -10335,6 +12665,16 @@ PlaterDB = {
 				[27600] = {
 					"复活的暗影法师", -- [1]
 					"达克萨隆要塞", -- [2]
+					"zhCN", -- [3]
+				},
+				[17940] = {
+					"盘牙技师", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
+					"zhCN", -- [3]
+				},
+				[5913] = {
+					"战栗图腾", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[26625] = {
@@ -10352,9 +12692,14 @@ PlaterDB = {
 					"纳克萨玛斯", -- [2]
 					"zhCN", -- [3]
 				},
-				[5913] = {
-					"战栗图腾", -- [1]
-					"奥杜尔", -- [2]
+				[25755] = {
+					"未知目标", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
+					"zhCN", -- [3]
+				},
+				[28735] = {
+					"未知目标", -- [1]
+					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
 				[29774] = {
@@ -10377,8 +12722,13 @@ PlaterDB = {
 					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
-				[34069] = {
-					"熔火巨人", -- [1]
+				[29838] = {
+					"达卡莱犀牛", -- [1]
+					"古达克", -- [2]
+					"zhCN", -- [3]
+				},
+				[34269] = {
+					"XR-949回收机器人", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
@@ -10402,6 +12752,21 @@ PlaterDB = {
 					"纳克萨玛斯", -- [2]
 					"zhCN", -- [3]
 				},
+				[33214] = {
+					"机械空运器304-A", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[29316] = {
+					"摩拉格", -- [1]
+					"紫罗兰监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[11365] = {
+					"祖利安雌猎虎", -- [1]
+					"祖尔格拉布", -- [2]
+					"zhCN", -- [3]
+				},
 				[29982] = {
 					"达卡莱掠夺者", -- [1]
 					"古达克", -- [2]
@@ -10412,19 +12777,24 @@ PlaterDB = {
 					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
+				[33118] = {
+					"掌炉者伊格尼斯", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
 				[27984] = {
 					"未知目标", -- [1]
 					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[25865] = {
-					"冰冻核心", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[8893] = {
+					"铁怒士兵", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
-				[25756] = {
-					"未知目标", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[8901] = {
+					"铁怒预备兵", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
 				[33526] = {
@@ -10442,9 +12812,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[25755] = {
-					"未知目标", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[8933] = {
+					"洞穴爬行者", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
 				[29119] = {
@@ -10452,19 +12822,19 @@ PlaterDB = {
 					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
-				[25740] = {
-					"埃霍恩", -- [1]
+				[17942] = {
+					"夸格米拉", -- [1]
 					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
-				[29395] = {
-					"埃雷克姆卫兵", -- [1]
-					"紫罗兰监狱", -- [2]
+				[17721] = {
+					"盘牙工程师", -- [1]
+					"盘牙湖泊：蒸汽地窟", -- [2]
 					"zhCN", -- [3]
 				},
-				[11322] = {
-					"燃刃信徒", -- [1]
-					"怒焰裂谷", -- [2]
+				[25740] = {
+					"埃霍恩", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[15111] = {
@@ -10482,14 +12852,14 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[11517] = {
-					"奥格弗林特", -- [1]
-					"怒焰裂谷", -- [2]
+				[32926] = {
+					"未知目标", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[11319] = {
-					"怒焰萨满祭司", -- [1]
-					"怒焰裂谷", -- [2]
+				[26693] = {
+					"残忍的斯卡迪", -- [1]
+					"乌特加德之巅", -- [2]
 					"zhCN", -- [3]
 				},
 				[32919] = {
@@ -10497,14 +12867,14 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[27979] = {
-					"铸铁穴居人", -- [1]
-					"岩石大厅", -- [2]
+				[17802] = {
+					"盘牙战士", -- [1]
+					"盘牙湖泊：蒸汽地窟", -- [2]
 					"zhCN", -- [3]
 				},
-				[24200] = {
-					"建筑师斯卡瓦尔德", -- [1]
-					"乌特加德城堡", -- [2]
+				[8909] = {
+					"火焰卫士", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
 				[29311] = {
@@ -10512,14 +12882,14 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[28735] = {
-					"未知目标", -- [1]
-					"艾卓-尼鲁布", -- [2]
+				[21127] = {
+					"盘牙狂暴者", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
-				[17721] = {
-					"盘牙工程师", -- [1]
-					"盘牙湖泊：蒸汽地窟", -- [2]
+				[11320] = {
+					"钻土虫", -- [1]
+					"怒焰裂谷", -- [2]
 					"zhCN", -- [3]
 				},
 				[34134] = {
@@ -10527,9 +12897,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[17801] = {
-					"盘牙海妖", -- [1]
-					"盘牙湖泊：蒸汽地窟", -- [2]
+				[17961] = {
+					"盘牙魔法师", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[30414] = {
@@ -10542,9 +12912,9 @@ PlaterDB = {
 					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[14532] = {
-					"拉扎什毒血蜘蛛", -- [1]
-					"祖尔格拉布", -- [2]
+				[18176] = {
+					"未知目标", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[33271] = {
@@ -10552,24 +12922,24 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[17802] = {
-					"盘牙战士", -- [1]
-					"盘牙湖泊：蒸汽地窟", -- [2]
-					"zhCN", -- [3]
-				},
-				[30962] = {
+				[32786] = {
 					"未知目标", -- [1]
-					"紫罗兰监狱", -- [2]
+					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[31174] = {
-					"自然抗性图腾 VI", -- [1]
+				[32906] = {
+					"弗蕾亚", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[15989] = {
-					"萨菲隆", -- [1]
-					"纳克萨玛斯", -- [2]
+				[17801] = {
+					"盘牙海妖", -- [1]
+					"盘牙湖泊：蒸汽地窟", -- [2]
+					"zhCN", -- [3]
+				},
+				[26533] = {
+					"玛尔加尼斯", -- [1]
+					"净化斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[33431] = {
@@ -10582,9 +12952,9 @@ PlaterDB = {
 					"地狱火堡垒：城墙", -- [2]
 					"zhCN", -- [3]
 				},
-				[11320] = {
-					"钻土虫", -- [1]
-					"怒焰裂谷", -- [2]
+				[17962] = {
+					"盘牙背叛者", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[33527] = {
@@ -10592,8 +12962,8 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[10536] = {
-					"未知目标", -- [1]
+				[10558] = {
+					"弗雷斯特恩", -- [1]
 					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
@@ -10602,9 +12972,9 @@ PlaterDB = {
 					"净化斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[32786] = {
-					"未知目标", -- [1]
-					"达克萨隆要塞", -- [2]
+				[17958] = {
+					"盘牙卫士", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[30654] = {
@@ -10612,19 +12982,19 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[18176] = {
-					"未知目标", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[14532] = {
+					"拉扎什毒血蜘蛛", -- [1]
+					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
-				[21126] = {
-					"盘牙医师", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[31174] = {
+					"自然抗性图腾 VI", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[17941] = {
-					"背叛者门努", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[35451] = {
+					"黑骑士", -- [1]
+					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[26626] = {
@@ -10632,9 +13002,9 @@ PlaterDB = {
 					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[11323] = {
-					"燃刃执行者", -- [1]
-					"怒焰裂谷", -- [2]
+				[10536] = {
+					"未知目标", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[16428] = {
@@ -10662,9 +13032,9 @@ PlaterDB = {
 					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
-				[8477] = {
-					"骷髅仆从", -- [1]
-					"斯坦索姆", -- [2]
+				[27753] = {
+					"达卡莱入侵者", -- [1]
+					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
 				[11339] = {
@@ -10702,24 +13072,9 @@ PlaterDB = {
 					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
-				[17962] = {
-					"盘牙背叛者", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
-					"zhCN", -- [3]
-				},
-				[33890] = {
-					"尤格-萨隆的大脑", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[17958] = {
-					"盘牙卫士", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
-					"zhCN", -- [3]
-				},
-				[27969] = {
-					"黑暗符文巨人", -- [1]
-					"岩石大厅", -- [2]
+				[8477] = {
+					"骷髅仆从", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[16700] = {
@@ -10727,9 +13082,24 @@ PlaterDB = {
 					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
+				[10420] = {
+					"红衣新兵", -- [1]
+					"斯坦索姆", -- [2]
+					"zhCN", -- [3]
+				},
 				[10412] = {
 					"地穴爬行者", -- [1]
 					"斯坦索姆", -- [2]
+					"zhCN", -- [3]
+				},
+				[26930] = {
+					"未知目标", -- [1]
+					"魔枢", -- [2]
+					"zhCN", -- [3]
+				},
+				[27969] = {
+					"黑暗符文巨人", -- [1]
+					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[33432] = {
@@ -10737,9 +13107,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[24079] = {
-					"掠龙铸造大师", -- [1]
-					"乌特加德城堡", -- [2]
+				[26796] = {
+					"指挥官斯托比德", -- [1]
+					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
 				[10436] = {
@@ -10752,9 +13122,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[10419] = {
-					"红衣魔术师", -- [1]
-					"斯坦索姆", -- [2]
+				[34191] = {
+					"废料", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[31134] = {
@@ -10762,9 +13132,9 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[17957] = {
-					"盘牙勇士", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[26918] = {
+					"混乱裂隙", -- [1]
+					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
 				[29120] = {
@@ -10772,13 +13142,13 @@ PlaterDB = {
 					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
-				[34191] = {
-					"废料", -- [1]
+				[32934] = {
+					"右臂", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[34269] = {
-					"XR-949回收机器人", -- [1]
+				[34057] = {
+					"未知目标", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
@@ -10807,8 +13177,8 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[33214] = {
-					"机械空运器304-A", -- [1]
+				[1964] = {
+					"树人", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
@@ -10817,9 +13187,9 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[29312] = {
-					"拉文索尔", -- [1]
-					"紫罗兰监狱", -- [2]
+				[10409] = {
+					"石翼尖啸者", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[30319] = {
@@ -10827,59 +13197,24 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[21128] = {
-					"盘牙鳐", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[29312] = {
+					"拉文索尔", -- [1]
+					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[32878] = {
-					"黑暗符文唤魔师", -- [1]
+				[33806] = {
+					"未知目标", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[33118] = {
-					"掌炉者伊格尼斯", -- [1]
-					"奥杜尔", -- [2]
+				[28368] = {
+					"伊米亚通灵师", -- [1]
+					"乌特加德之巅", -- [2]
 					"zhCN", -- [3]
 				},
 				[33113] = {
 					"烈焰巨兽", -- [1]
 					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[34057] = {
-					"未知目标", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[17816] = {
-					"泥沼龙虾人", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
-					"zhCN", -- [3]
-				},
-				[30665] = {
-					"精锐法师猎手", -- [1]
-					"紫罗兰监狱", -- [2]
-					"zhCN", -- [3]
-				},
-				[17963] = {
-					"荒土奴隶", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
-					"zhCN", -- [3]
-				},
-				[10409] = {
-					"石翼尖啸者", -- [1]
-					"斯坦索姆", -- [2]
-					"zhCN", -- [3]
-				},
-				[32926] = {
-					"未知目标", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[30284] = {
-					"碾骨者", -- [1]
-					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
 				[17960] = {
@@ -10892,24 +13227,19 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[33433] = {
-					"装甲", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
 				[29315] = {
 					"埃雷克姆", -- [1]
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[27598] = {
-					"恶臭的巨魔尸体", -- [1]
-					"达克萨隆要塞", -- [2]
+				[33168] = {
+					"强化钢铁根须", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[11831] = {
-					"哈卡巫医", -- [1]
-					"祖尔格拉布", -- [2]
+				[34198] = {
+					"铁矮人修理工", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[26805] = {
@@ -10917,19 +13247,9 @@ PlaterDB = {
 					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
-				[30623] = {
-					"戀雨星夜", -- [1]
-					"安卡赫特：古代王国", -- [2]
-					"zhCN", -- [3]
-				},
-				[17083] = {
-					"邪兽人转化者", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-					"zhCN", -- [3]
-				},
-				[17356] = {
-					"蠕动的软泥怪", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
+				[17963] = {
+					"荒土奴隶", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[10384] = {
@@ -10942,9 +13262,49 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[29680] = {
-					"斯拉德兰毒蛇", -- [1]
-					"古达克", -- [2]
+				[33433] = {
+					"装甲", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[27598] = {
+					"恶臭的巨魔尸体", -- [1]
+					"达克萨隆要塞", -- [2]
+					"zhCN", -- [3]
+				},
+				[33136] = {
+					"尤格-萨隆的卫士", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[33715] = {
+					"未知目标", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[30892] = {
+					"传送门守卫者", -- [1]
+					"紫罗兰监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[30623] = {
+					"戀雨星夜", -- [1]
+					"安卡赫特：古代王国", -- [2]
+					"zhCN", -- [3]
+				},
+				[26929] = {
+					"未知目标", -- [1]
+					"魔枢", -- [2]
+					"zhCN", -- [3]
+				},
+				[17356] = {
+					"蠕动的软泥怪", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[26536] = {
+					"无脑的仆从", -- [1]
+					"乌特加德之巅", -- [2]
 					"zhCN", -- [3]
 				},
 				[26627] = {
@@ -10952,9 +13312,19 @@ PlaterDB = {
 					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[26533] = {
-					"玛尔加尼斯", -- [1]
-					"净化斯坦索姆", -- [2]
+				[29680] = {
+					"斯拉德兰毒蛇", -- [1]
+					"古达克", -- [2]
+					"zhCN", -- [3]
+				},
+				[17420] = {
+					"碎手蛮兵", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[10413] = {
+					"地穴兽", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[16429] = {
@@ -10972,9 +13342,9 @@ PlaterDB = {
 					"乌特加德之巅", -- [2]
 					"zhCN", -- [3]
 				},
-				[33136] = {
-					"尤格-萨隆的卫士", -- [1]
-					"奥杜尔", -- [2]
+				[30277] = {
+					"安卡哈切碎者", -- [1]
+					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
 				[26723] = {
@@ -10982,14 +13352,14 @@ PlaterDB = {
 					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
-				[29306] = {
-					"迦尔达拉", -- [1]
-					"古达克", -- [2]
+				[10390] = {
+					"骷髅守护者", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[26929] = {
-					"未知目标", -- [1]
-					"魔枢", -- [2]
+				[10464] = {
+					"哀嚎的女妖", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[11859] = {
@@ -10997,9 +13367,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[32918] = {
-					"未知目标", -- [1]
-					"奥杜尔", -- [2]
+				[17462] = {
+					"碎手狂热者", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[34137] = {
@@ -11007,14 +13377,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[33344] = {
-					"XM-024击打者", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[10390] = {
-					"骷髅守护者", -- [1]
-					"斯坦索姆", -- [2]
+				[16594] = {
+					"影月侍僧", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[10876] = {
@@ -11022,18 +13387,23 @@ PlaterDB = {
 					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[17669] = {
-					"疯狂的军犬", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
+				[29920] = {
+					"废墟居民", -- [1]
+					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
-				[30277] = {
-					"安卡哈切碎者", -- [1]
-					"安卡赫特：古代王国", -- [2]
+				[33088] = {
+					"未知目标", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[34135] = {
-					"寒冬滚石", -- [1]
+				[27597] = {
+					"笨重的尸体", -- [1]
+					"达克萨隆要塞", -- [2]
+					"zhCN", -- [3]
+				},
+				[32913] = {
+					"铁枝长老", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
@@ -11042,9 +13412,9 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[26824] = {
-					"未知目标", -- [1]
-					"达克萨隆要塞", -- [2]
+				[17669] = {
+					"疯狂的军犬", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[27970] = {
@@ -11052,49 +13422,24 @@ PlaterDB = {
 					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[26918] = {
-					"混乱裂隙", -- [1]
-					"魔枢", -- [2]
+				[11348] = {
+					"狂热者扎斯", -- [1]
+					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
-				[17462] = {
-					"碎手狂热者", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
+				[8894] = {
+					"铁怒医师", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
-				[26536] = {
-					"无脑的仆从", -- [1]
-					"乌特加德之巅", -- [2]
+				[8902] = {
+					"暗炉平民", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
-				[26731] = {
-					"大魔导师泰蕾丝塔", -- [1]
-					"魔枢", -- [2]
-					"zhCN", -- [3]
-				},
-				[29838] = {
-					"达卡莱犀牛", -- [1]
-					"古达克", -- [2]
-					"zhCN", -- [3]
-				},
-				[30892] = {
-					"传送门守卫者", -- [1]
-					"紫罗兰监狱", -- [2]
-					"zhCN", -- [3]
-				},
-				[29335] = {
-					"阿努巴尔织网者", -- [1]
-					"艾卓-尼鲁布", -- [2]
-					"zhCN", -- [3]
-				},
-				[31167] = {
-					"熔岩图腾 VII", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[1964] = {
-					"树人", -- [1]
-					"奥杜尔", -- [2]
+				[8910] = {
+					"炽热火焰卫士", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
 				[30176] = {
@@ -11102,33 +13447,23 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[33754] = {
-					"黑暗符文咆哮者", -- [1]
+				[8926] = {
+					"深渊钉刺者", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[34034] = {
+					"未知目标", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[32913] = {
-					"铁枝长老", -- [1]
+				[31167] = {
+					"熔岩图腾 VII", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[33818] = {
-					"暮光追随者", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[17964] = {
-					"荒土工人", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
-					"zhCN", -- [3]
-				},
-				[11830] = {
-					"哈卡祭司", -- [1]
-					"祖尔格拉布", -- [2]
-					"zhCN", -- [3]
-				},
-				[33121] = {
-					"铁铸像", -- [1]
+				[33722] = {
+					"雷暴锻铸守护者", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
@@ -11137,23 +13472,18 @@ PlaterDB = {
 					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
-				[32955] = {
-					"坍缩星", -- [1]
+				[33754] = {
+					"黑暗符文咆哮者", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[17465] = {
-					"碎手百夫长", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
+				[17964] = {
+					"荒土工人", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
-				[29313] = {
-					"艾库隆", -- [1]
-					"紫罗兰监狱", -- [2]
-					"zhCN", -- [3]
-				},
-				[29264] = {
-					"幽灵狼", -- [1]
+				[33818] = {
+					"暮光追随者", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
@@ -11162,34 +13492,9 @@ PlaterDB = {
 					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
-				[30286] = {
-					"冰霜使者", -- [1]
-					"安卡赫特：古代王国", -- [2]
-					"zhCN", -- [3]
-				},
-				[16523] = {
-					"碎手蛮兵", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-					"zhCN", -- [3]
-				},
-				[30416] = {
-					"被束缚的火元素", -- [1]
-					"安卡赫特：古代王国", -- [2]
-					"zhCN", -- [3]
-				},
-				[34234] = {
-					"符文熔铸斥候", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
 				[30245] = {
 					"魔枢领主", -- [1]
 					"永恒之眼", -- [2]
-					"zhCN", -- [3]
-				},
-				[30893] = {
-					"未知目标", -- [1]
-					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
 				[33346] = {
@@ -11197,79 +13502,24 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[31129] = {
-					"大地之力图腾 VIII", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[11347] = {
-					"狂热者洛卡恩", -- [1]
-					"祖尔格拉布", -- [2]
-					"zhCN", -- [3]
-				},
-				[17623] = {
-					"狂暴卫兵", -- [1]
+				[17465] = {
+					"碎手百夫长", -- [1]
 					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[32882] = {
-					"冰虫巨兽", -- [1]
+				[32955] = {
+					"坍缩星", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[28730] = {
-					"看守者加什拉", -- [1]
-					"艾卓-尼鲁布", -- [2]
+				[9030] = {
+					"破坏者奥科索尔", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
-				[15068] = {
-					"祖利安守护者", -- [1]
-					"祖尔格拉布", -- [2]
-					"zhCN", -- [3]
-				},
-				[28546] = {
-					"艾欧纳尔", -- [1]
-					"闪电大厅", -- [2]
-					"zhCN", -- [3]
-				},
-				[30624] = {
-					"Jennifers", -- [1]
-					"安卡赫特：古代王国", -- [2]
-					"zhCN", -- [3]
-				},
-				[28578] = {
-					"坚钢掠夺者", -- [1]
-					"闪电大厅", -- [2]
-					"zhCN", -- [3]
-				},
-				[10413] = {
-					"地穴兽", -- [1]
-					"斯坦索姆", -- [2]
-					"zhCN", -- [3]
-				},
-				[17357] = {
-					"蠕动的小软泥怪", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-					"zhCN", -- [3]
-				},
-				[17670] = {
-					"碎手驯犬者", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-					"zhCN", -- [3]
-				},
-				[29713] = {
-					"斯拉德兰蟒蛇", -- [1]
-					"古达克", -- [2]
-					"zhCN", -- [3]
-				},
-				[33755] = {
-					"黑暗符文破坏者", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[26628] = {
-					"达卡莱镰爪龙", -- [1]
-					"达克萨隆要塞", -- [2]
+				[29313] = {
+					"艾库隆", -- [1]
+					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
 				[33819] = {
@@ -11282,9 +13532,129 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
+				[28838] = {
+					"泰坦神铁先锋", -- [1]
+					"闪电大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[32882] = {
+					"冰虫巨兽", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[30416] = {
+					"被束缚的火元素", -- [1]
+					"安卡赫特：古代王国", -- [2]
+					"zhCN", -- [3]
+				},
+				[34234] = {
+					"符文熔铸斥候", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[17671] = {
+					"碎手勇士", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[26782] = {
+					"晶化守护者", -- [1]
+					"魔枢", -- [2]
+					"zhCN", -- [3]
+				},
+				[28961] = {
+					"泰坦神铁碎岩者", -- [1]
+					"闪电大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[30624] = {
+					"Jennifers", -- [1]
+					"安卡赫特：古代王国", -- [2]
+					"zhCN", -- [3]
+				},
+				[11347] = {
+					"狂热者洛卡恩", -- [1]
+					"祖尔格拉布", -- [2]
+					"zhCN", -- [3]
+				},
 				[30625] = {
 					"清衫", -- [1]
 					"安卡赫特：古代王国", -- [2]
+					"zhCN", -- [3]
+				},
+				[31129] = {
+					"大地之力图腾 VIII", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[30111] = {
+					"暮光膜拜者", -- [1]
+					"安卡赫特：古代王国", -- [2]
+					"zhCN", -- [3]
+				},
+				[35545] = {
+					"未知目标", -- [1]
+					"冠军的试炼", -- [2]
+					"zhCN", -- [3]
+				},
+				[28546] = {
+					"艾欧纳尔", -- [1]
+					"闪电大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[11830] = {
+					"哈卡祭司", -- [1]
+					"祖尔格拉布", -- [2]
+					"zhCN", -- [3]
+				},
+				[28578] = {
+					"坚钢掠夺者", -- [1]
+					"闪电大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[26532] = {
+					"时光领主埃博克", -- [1]
+					"净化斯坦索姆", -- [2]
+					"zhCN", -- [3]
+				},
+				[17357] = {
+					"蠕动的小软泥怪", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[30893] = {
+					"未知目标", -- [1]
+					"紫罗兰监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[17670] = {
+					"碎手驯犬者", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[33755] = {
+					"黑暗符文破坏者", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[26628] = {
+					"达卡莱镰爪龙", -- [1]
+					"达克萨隆要塞", -- [2]
+					"zhCN", -- [3]
+				},
+				[29713] = {
+					"斯拉德兰蟒蛇", -- [1]
+					"古达克", -- [2]
+					"zhCN", -- [3]
+				},
+				[33985] = {
+					"未知目标", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[15068] = {
+					"祖利安守护者", -- [1]
+					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
 				[26692] = {
@@ -11302,14 +13672,14 @@ PlaterDB = {
 					"怒焰裂谷", -- [2]
 					"zhCN", -- [3]
 				},
-				[29832] = {
-					"达卡莱魔像", -- [1]
-					"古达克", -- [2]
+				[32930] = {
+					"科隆加恩", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[11348] = {
-					"狂热者扎斯", -- [1]
-					"祖尔格拉布", -- [2]
+				[28730] = {
+					"看守者加什拉", -- [1]
+					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
 				[33052] = {
@@ -11322,9 +13692,9 @@ PlaterDB = {
 					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
-				[28961] = {
-					"泰坦神铁碎岩者", -- [1]
-					"闪电大厅", -- [2]
+				[17623] = {
+					"狂暴卫兵", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[11372] = {
@@ -11332,14 +13702,14 @@ PlaterDB = {
 					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
-				[30111] = {
-					"暮光膜拜者", -- [1]
+				[30286] = {
+					"冰霜使者", -- [1]
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[26782] = {
-					"晶化守护者", -- [1]
-					"魔枢", -- [2]
+				[29264] = {
+					"幽灵狼", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[34267] = {
@@ -11372,14 +13742,14 @@ PlaterDB = {
 					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[26532] = {
-					"时光领主埃博克", -- [1]
-					"净化斯坦索姆", -- [2]
+				[16523] = {
+					"碎手蛮兵", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[33985] = {
-					"未知目标", -- [1]
-					"奥杜尔", -- [2]
+				[26731] = {
+					"大魔导师泰蕾丝塔", -- [1]
+					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
 				[10437] = {
@@ -11392,9 +13762,9 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[28838] = {
-					"泰坦神铁先锋", -- [1]
-					"闪电大厅", -- [2]
+				[16507] = {
+					"碎手斥候", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[10461] = {
@@ -11402,9 +13772,9 @@ PlaterDB = {
 					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[17671] = {
-					"碎手勇士", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
+				[34135] = {
+					"寒冬滚石", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[32191] = {
@@ -11412,14 +13782,14 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[32930] = {
-					"科隆加恩", -- [1]
+				[33344] = {
+					"XM-024击打者", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[26638] = {
-					"复活的达卡莱蝙蝠骑兵", -- [1]
-					"达克萨隆要塞", -- [2]
+				[32918] = {
+					"未知目标", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[31216] = {
@@ -11437,9 +13807,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[16594] = {
-					"影月侍僧", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
+				[11831] = {
+					"哈卡巫医", -- [1]
+					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
 				[198706] = {
@@ -11447,9 +13817,9 @@ PlaterDB = {
 					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
-				[10464] = {
-					"哀嚎的女妖", -- [1]
-					"斯坦索姆", -- [2]
+				[32886] = {
+					"黑暗符文助手", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[29266] = {
@@ -11457,14 +13827,14 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[34034] = {
-					"未知目标", -- [1]
-					"奥杜尔", -- [2]
+				[17622] = {
+					"神射手卫士", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[28826] = {
-					"雷怒亡魂", -- [1]
-					"闪电大厅", -- [2]
+				[21128] = {
+					"盘牙鳐", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[29314] = {
@@ -11472,14 +13842,14 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[33722] = {
-					"雷暴锻铸守护者", -- [1]
-					"奥杜尔", -- [2]
+				[28736] = {
+					"轻快的感染者", -- [1]
+					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
-				[33715] = {
+				[10516] = {
 					"未知目标", -- [1]
-					"奥杜尔", -- [2]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[30385] = {
@@ -11487,19 +13857,19 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[32886] = {
-					"黑暗符文助手", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[17622] = {
-					"神射手卫士", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-					"zhCN", -- [3]
-				},
-				[27597] = {
-					"笨重的尸体", -- [1]
+				[26824] = {
+					"未知目标", -- [1]
 					"达克萨隆要塞", -- [2]
+					"zhCN", -- [3]
+				},
+				[18177] = {
+					"未知目标", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
+					"zhCN", -- [3]
+				},
+				[33134] = {
+					"萨拉", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[30449] = {
@@ -11512,34 +13882,14 @@ PlaterDB = {
 					"乌特加德城堡", -- [2]
 					"zhCN", -- [3]
 				},
-				[33168] = {
-					"强化钢铁根须", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[16507] = {
-					"碎手斥候", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
-					"zhCN", -- [3]
-				},
-				[28736] = {
-					"轻快的感染者", -- [1]
-					"艾卓-尼鲁布", -- [2]
-					"zhCN", -- [3]
-				},
 				[27909] = {
 					"暗网受害者", -- [1]
 					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[28368] = {
-					"伊米亚通灵师", -- [1]
-					"乌特加德之巅", -- [2]
-					"zhCN", -- [3]
-				},
-				[33806] = {
-					"未知目标", -- [1]
-					"奥杜尔", -- [2]
+				[24079] = {
+					"掠龙铸造大师", -- [1]
+					"乌特加德城堡", -- [2]
 					"zhCN", -- [3]
 				},
 				[10406] = {
@@ -11547,29 +13897,29 @@ PlaterDB = {
 					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[28547] = {
-					"咆哮的漩涡", -- [1]
-					"闪电大厅", -- [2]
+				[205997] = {
+					"未知目标", -- [1]
+					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[32934] = {
-					"右臂", -- [1]
-					"奥杜尔", -- [2]
+				[29306] = {
+					"迦尔达拉", -- [1]
+					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
-				[28579] = {
-					"坚钢狂暴者", -- [1]
-					"闪电大厅", -- [2]
+				[11323] = {
+					"燃刃执行者", -- [1]
+					"怒焰裂谷", -- [2]
 					"zhCN", -- [3]
 				},
-				[17420] = {
-					"碎手蛮兵", -- [1]
+				[17083] = {
+					"邪兽人转化者", -- [1]
 					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[33088] = {
-					"未知目标", -- [1]
-					"奥杜尔", -- [2]
+				[28547] = {
+					"咆哮的漩涡", -- [1]
+					"闪电大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[27985] = {
@@ -11577,19 +13927,24 @@ PlaterDB = {
 					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[32906] = {
-					"弗蕾亚", -- [1]
+				[28579] = {
+					"坚钢狂暴者", -- [1]
+					"闪电大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[33890] = {
+					"尤格-萨隆的大脑", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[10420] = {
-					"红衣新兵", -- [1]
-					"斯坦索姆", -- [2]
+				[205998] = {
+					"未知目标", -- [1]
+					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[27753] = {
-					"达卡莱入侵者", -- [1]
-					"达克萨隆要塞", -- [2]
+				[17941] = {
+					"背叛者门努", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[10418] = {
@@ -11602,24 +13957,9 @@ PlaterDB = {
 					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
-				[10516] = {
-					"未知目标", -- [1]
-					"斯坦索姆", -- [2]
-					"zhCN", -- [3]
-				},
-				[26693] = {
-					"残忍的斯卡迪", -- [1]
-					"乌特加德之巅", -- [2]
-					"zhCN", -- [3]
-				},
-				[27732] = {
-					"通灵大师", -- [1]
-					"净化斯坦索姆", -- [2]
-					"zhCN", -- [3]
-				},
-				[33134] = {
-					"萨拉", -- [1]
-					"奥杜尔", -- [2]
+				[30284] = {
+					"碾骨者", -- [1]
+					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
 				[10414] = {
@@ -11627,14 +13967,44 @@ PlaterDB = {
 					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[30249] = {
-					"永恒子嗣", -- [1]
-					"永恒之眼", -- [2]
+				[17816] = {
+					"泥沼龙虾人", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
+					"zhCN", -- [3]
+				},
+				[21126] = {
+					"盘牙医师", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
+					"zhCN", -- [3]
+				},
+				[205999] = {
+					"未知目标", -- [1]
+					"紫罗兰监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[27732] = {
+					"通灵大师", -- [1]
+					"净化斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[10398] = {
 					"图萨丁暗影法师", -- [1]
 					"斯坦索姆", -- [2]
+					"zhCN", -- [3]
+				},
+				[32878] = {
+					"黑暗符文唤魔师", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[29826] = {
+					"达卡莱医师", -- [1]
+					"古达克", -- [2]
+					"zhCN", -- [3]
+				},
+				[27963] = {
+					"黑暗符文施法者", -- [1]
+					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[28835] = {
@@ -11647,13 +14017,13 @@ PlaterDB = {
 					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
-				[26796] = {
-					"指挥官斯托比德", -- [1]
-					"魔枢", -- [2]
+				[17957] = {
+					"盘牙勇士", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
-				[10558] = {
-					"弗雷斯特恩", -- [1]
+				[10419] = {
+					"红衣魔术师", -- [1]
 					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
@@ -11667,8 +14037,8 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[34198] = {
-					"铁矮人修理工", -- [1]
+				[34069] = {
+					"熔火巨人", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
@@ -11682,9 +14052,9 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[10417] = {
-					"泼毒者", -- [1]
-					"斯坦索姆", -- [2]
+				[23562] = {
+					"势不可挡的憎恶", -- [1]
+					"纳克萨玛斯", -- [2]
 					"zhCN", -- [3]
 				},
 				[27972] = {
@@ -11692,24 +14062,24 @@ PlaterDB = {
 					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[26930] = {
-					"未知目标", -- [1]
-					"魔枢", -- [2]
+				[25865] = {
+					"冰冻核心", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
-				[27963] = {
-					"黑暗符文施法者", -- [1]
-					"岩石大厅", -- [2]
+				[8895] = {
+					"铁怒军官", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
-				[11365] = {
-					"祖利安雌猎虎", -- [1]
-					"祖尔格拉布", -- [2]
+				[9017] = {
+					"伊森迪奥斯", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
-				[33824] = {
-					"暮光影刃", -- [1]
-					"奥杜尔", -- [2]
+				[8911] = {
+					"火焰驱逐者", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
 				[23960] = {
@@ -11727,9 +14097,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[18177] = {
-					"未知目标", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[8912] = {
+					"暮光之锤拷问者", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
 				[31185] = {
@@ -11742,9 +14112,9 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[17961] = {
-					"盘牙魔法师", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[29310] = {
+					"耶戈达·觅影者", -- [1]
+					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
 				[31233] = {
@@ -11757,9 +14127,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[21127] = {
-					"盘牙狂暴者", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[26638] = {
+					"复活的达卡莱蝙蝠骑兵", -- [1]
+					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
 				[30258] = {
@@ -11767,9 +14137,9 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[17940] = {
-					"盘牙技师", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[9319] = {
+					"驯犬者格雷布玛尔", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
 				[32927] = {
@@ -11777,9 +14147,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[18179] = {
-					"未知目标", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[33121] = {
+					"铁铸像", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[34014] = {
@@ -11792,14 +14162,14 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[17942] = {
-					"夸格米拉", -- [1]
+				[25756] = {
+					"未知目标", -- [1]
 					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
-				[29316] = {
-					"摩拉格", -- [1]
-					"紫罗兰监狱", -- [2]
+				[33824] = {
+					"暮光影刃", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[28340] = {
@@ -11807,8 +14177,8 @@ PlaterDB = {
 					"净化斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[23561] = {
-					"冰冻废土的士兵", -- [1]
+				[23563] = {
+					"织魂者", -- [1]
 					"纳克萨玛斯", -- [2]
 					"zhCN", -- [3]
 				},
@@ -11817,24 +14187,24 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[23562] = {
-					"势不可挡的憎恶", -- [1]
-					"纳克萨玛斯", -- [2]
+				[33651] = {
+					"VX-001", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[2630] = {
-					"地缚图腾", -- [1]
-					"纳克萨玛斯", -- [2]
+				[29637] = {
+					"狡猾的蛇", -- [1]
+					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
-				[16441] = {
-					"寒冰皇冠卫士", -- [1]
-					"纳克萨玛斯", -- [2]
+				[30665] = {
+					"精锐法师猎手", -- [1]
+					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[23563] = {
-					"织魂者", -- [1]
-					"纳克萨玛斯", -- [2]
+				[30249] = {
+					"永恒子嗣", -- [1]
+					"永恒之眼", -- [2]
 					"zhCN", -- [3]
 				},
 			},
@@ -11857,12 +14227,12 @@ PlaterDB = {
 					["Desc"] = "Player an animation when the cast start. Start a timer when the cast finishes. Set the time in the options.",
 					["NpcNames"] = {
 					},
-					["Name"] = "Cast - Alert + Timer [P]",
 					["SpellIds"] = {
 						350421, -- [1]
 						355787, -- [2]
 						348513, -- [3]
 					},
+					["Name"] = "Cast - Alert + Timer [P]",
 					["PlaterCore"] = 1,
 					["version"] = -1,
 					["Options"] = {
@@ -12023,9 +14393,9 @@ PlaterDB = {
 						"197697", -- [1]
 						"59544", -- [2]
 					},
-					["Name"] = "Add - Health Markers [P]",
 					["SpellIds"] = {
 					},
+					["Name"] = "Add - Health Markers [P]",
 					["PlaterCore"] = 1,
 					["version"] = -1,
 					["Options"] = {
@@ -12160,13 +14530,13 @@ PlaterDB = {
 				["Auto Set Skull"] = 11,
 				["Cast - Quick Flash"] = 2,
 				["Add - Non Elite Trash [P]"] = 4,
-				["Cast - On Going Cast [P]"] = 2,
+				["Cast - Stop Casting"] = 4,
 				["Add - Explode on Die [P]"] = 1,
-				["Countdown"] = 11,
+				["Cast - On Going Cast [P]"] = 2,
 				["Fixate by Unit Buff [P]"] = 2,
 				["Cast - Frontal Cone"] = 15,
 				["Fixate"] = 11,
-				["Cast - Stop Casting"] = 4,
+				["Countdown"] = 11,
 				["Spiteful Affix"] = 3,
 				["Cast - Very Important"] = 15,
 				["Fixate On You"] = 11,
@@ -12176,14 +14546,14 @@ PlaterDB = {
 				["Dont Have Aura"] = 1,
 				["Players Targetting Amount"] = 4,
 				["Color Automation"] = 1,
-				["Hide Neutral Units"] = 1,
+				["Extra Border"] = 2,
 				["Cast Bar Icon Config"] = 2,
 				["Execute Range"] = 1,
-				["Combo Points"] = 6,
+				["Hide Neutral Units"] = 1,
 				["Attacking Specific Unit"] = 2,
 				["Target Color"] = 3,
 				["Aura Reorder"] = 3,
-				["Extra Border"] = 2,
+				["Combo Points"] = 6,
 			},
 			["aura2_x_offset"] = 0,
 			["saved_cvars"] = {
@@ -12197,7 +14567,7 @@ PlaterDB = {
 				["nameplateShowFriends"] = "0",
 				["nameplateRemovalAnimation"] = "1",
 			},
-			["login_counter"] = 974,
+			["login_counter"] = 1063,
 			["plate_config"] = {
 				["global_health_height"] = 12,
 				["global_health_width"] = 112,
@@ -13001,25 +15371,25 @@ PlaterLanguage = {
 }
 PlaterLogs = {
 	["_general_logs"] = {
-		"2023-06-22 00:45:15 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [1]
-		"2023-06-22 00:44:31 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [2]
-		"2023-06-22 00:41:38 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [3]
-		"2023-06-22 00:36:20 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [4]
-		"2023-06-22 00:31:58 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [5]
-		"2023-06-22 00:20:58 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [6]
-		"2023-06-21 22:40:40 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [7]
-		"2023-06-21 22:28:57 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [8]
-		"2023-06-21 21:49:52 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [9]
-		"2023-06-21 21:45:48 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [10]
-		"2023-06-19 23:27:02 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [11]
-		"2023-06-18 21:32:29 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [12]
-		"2023-06-16 20:41:07 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [13]
-		"2023-06-16 20:08:45 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [14]
-		"2023-06-16 18:23:49 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [15]
-		"2023-06-16 00:26:59 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [16]
-		"2023-06-15 22:42:36 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [17]
-		"2023-06-15 21:41:43 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [18]
-		"2023-06-15 00:02:26 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [19]
+		"2023-06-23 00:25:23 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.2 | zhCN | 狂暴專家", -- [1]
+		"2023-06-23 00:21:38 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.2 | zhCN | 狂暴專家", -- [2]
+		"2023-06-22 23:13:07 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.2 | zhCN | 狂暴專家", -- [3]
+		"2023-06-22 22:27:33 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.2 | zhCN | 狂暴專家", -- [4]
+		"2023-06-22 20:40:25 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.2 | zhCN | 狂暴專家", -- [5]
+		"2023-06-22 19:36:29 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.2 | zhCN | 狂暴專家", -- [6]
+		"2023-06-22 14:59:57 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.2 | zhCN | 狂暴專家", -- [7]
+		"2023-06-22 14:41:54 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.2 | zhCN | 狂暴專家", -- [8]
+		"2023-06-22 14:09:59 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.2 | zhCN | 狂暴專家", -- [9]
+		"2023-06-22 11:16:48 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.2 | zhCN | 狂暴專家", -- [10]
+		"2023-06-22 00:45:15 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [11]
+		"2023-06-22 00:44:31 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [12]
+		"2023-06-22 00:41:38 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [13]
+		"2023-06-22 00:36:20 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [14]
+		"2023-06-22 00:31:58 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [15]
+		"2023-06-22 00:20:58 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [16]
+		"2023-06-21 22:40:40 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [17]
+		"2023-06-21 22:28:57 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [18]
+		"2023-06-21 21:49:52 | INIT | Plater-v560.4-Wrath | Framework v434 | 3.4.1 | zhCN | 狂暴專家", -- [19]
 	},
 	["_error_logs"] = {
 	},

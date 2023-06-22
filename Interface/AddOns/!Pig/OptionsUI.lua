@@ -154,12 +154,12 @@ function QuickBut:GengxinWidth()
 		local butW = nr:GetHeight()
 		local Children1 = {nr:GetChildren()};
 		local geshu1 = #Children1
-		local NewWidth = butW*geshu1-2
-		self:SetWidth(NewWidth+self.yidong:GetWidth())
-		if geshu1>0 then self:Show() end
+		if geshu1>0 then self:Show()
+			local NewWidth = butW*geshu1-2+2
+			self:SetWidth(NewWidth+self.yidong:GetWidth())
+		end
 	end
 end
-function QuickBut:RaidRecord() end
 function QuickBut:Add()
 	self:Open()
 	self:AutoFollow()
@@ -169,8 +169,8 @@ function QuickBut:Add()
 	self:AutoEquip()
 	self:SkillFBCD()
 	self:AutoSellBuy()
+	self:Invite()
 	-- self:ADD_QuickBut_SpellJK()
-	-- self:ADD_QuickBut_Invite()
 	self:RaidRecord()
 	-- self:ADD_QuickBut_daiben()
 	self:Pig_AFK()

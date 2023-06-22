@@ -445,7 +445,7 @@ function CommonFun.AHPlus_Vanilla()
 					local hejiinfo = PIGA["AHPlus"]["Coll"]
 					for kk=1,#hejiinfo do
 						if hejiinfo[kk][1]==name then
-							print("|cff00FFFF!Pig:|r<"..name..">|cffFFFF00已存在|r")
+							PIG_print("<"..name..">|cffFFFF00已存在")
 							return
 						end
 					end
