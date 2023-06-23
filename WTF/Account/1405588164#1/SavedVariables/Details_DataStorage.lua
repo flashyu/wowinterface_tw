@@ -1,16 +1,16 @@
 
 DetailsDataStorage = {
-	["saved_encounters"] = {
+	[16] = {
 	},
 	[15] = {
 	},
 	["VERSION"] = 5,
-	["Data"] = {
+	["mythic_plus"] = {
 	},
 	[14] = {
 	},
-	["mythic_plus"] = {
+	["saved_encounters"] = {
 	},
-	[16] = {
+	["Data"] = {
 	},
 }

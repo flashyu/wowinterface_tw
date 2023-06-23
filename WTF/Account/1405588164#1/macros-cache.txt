@@ -9,7 +9,7 @@ VER 3 0000000000000013 "一键盾墙" "134400"
 /cast [stance:2,equipped:盾牌]盾墙; [nostance:2]防御姿态
 /stopcasting
 /stopmacro [equipped:盾牌]
-/equipslot 17 英雄的屈服
+/equipslot 17 北地屏障
         
 END
 VER 3 0000000000000007 "保命" "135966"
