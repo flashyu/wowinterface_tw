@@ -101,13 +101,13 @@ AutoBarDB2 = {
 					["buttonKey"] = "AutoBarButtonInterrupt",
 					["defaultButtonIndex"] = "*",
 				},
-				["AutoBarButtonTrap"] = {
+				["AutoBarButtonCharge"] = {
 					["barKey"] = "AutoBarClassBarHunter",
-					["buttonClass"] = "AutoBarButtonTrap",
+					["buttonClass"] = "AutoBarButtonCharge",
 					["square_popups"] = true,
 					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonTrap",
-					["defaultButtonIndex"] = 4,
+					["buttonKey"] = "AutoBarButtonCharge",
+					["defaultButtonIndex"] = 2,
 				},
 				["AutoBarButtonClassPets3"] = {
 					["barKey"] = "AutoBarClassBarHunter",
@@ -133,13 +133,13 @@ AutoBarDB2 = {
 					["buttonKey"] = "AutoBarButtonClassPets2",
 					["defaultButtonIndex"] = 8,
 				},
-				["AutoBarButtonCharge"] = {
+				["AutoBarButtonTrap"] = {
 					["barKey"] = "AutoBarClassBarHunter",
-					["buttonClass"] = "AutoBarButtonCharge",
+					["buttonClass"] = "AutoBarButtonTrap",
 					["square_popups"] = true,
 					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonCharge",
-					["defaultButtonIndex"] = 2,
+					["buttonKey"] = "AutoBarButtonTrap",
+					["defaultButtonIndex"] = 4,
 				},
 			},
 		},
@@ -239,7 +239,7 @@ AutoBarDB2 = {
 		["狂暴專家 - 伊弗斯"] = {
 			["buttonDataList"] = {
 				["AutoBarButtonQuest"] = {
-					["arrangeOnUse"] = 34833,
+					["arrangeOnUse"] = 45083,
 				},
 				["AutoBarButtonMount"] = {
 				},
@@ -285,11 +285,14 @@ AutoBarDB2 = {
 			["AutoBarClassBarBasic"] = {
 				["popupDirection"] = "1",
 				["fadeOut"] = false,
+				["posY"] = 164.309742421141,
 				["columns"] = 16,
-				["alpha"] = 1,
 				["scale"] = 1,
 				["rows"] = 1,
 				["frameStrata"] = "LOW",
+				["alignButtons"] = "3",
+				["dockShiftY"] = 0,
+				["allowed_class"] = "*",
 				["buttonKeys"] = {
 					"AutoBarButtonHearth", -- [1]
 					"AutoBarButtonBandages", -- [2]
@@ -313,11 +316,8 @@ AutoBarDB2 = {
 					"AutoBarButtonTrinket1", -- [20]
 					"AutoBarButtonTrinket2", -- [21]
 				},
-				["dockShiftY"] = 0,
-				["allowed_class"] = "*",
-				["alignButtons"] = "3",
-				["posX"] = 617.1163924563734,
-				["posY"] = 160.7250452356402,
+				["posX"] = 549.2998705346909,
+				["alpha"] = 1,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
 				["enabled"] = true,

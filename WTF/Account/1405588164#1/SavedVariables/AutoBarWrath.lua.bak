@@ -67,12 +67,12 @@ AutoBarDB2 = {
 					["buttonKey"] = "AutoBarButtonFoodPet",
 					["square_popups"] = true,
 				},
-				["AutoBarButtonTrap"] = {
+				["AutoBarButtonCharge"] = {
 					["barKey"] = "AutoBarClassBarHunter",
-					["buttonClass"] = "AutoBarButtonTrap",
-					["defaultButtonIndex"] = 4,
+					["buttonClass"] = "AutoBarButtonCharge",
+					["defaultButtonIndex"] = 2,
 					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonTrap",
+					["buttonKey"] = "AutoBarButtonCharge",
 					["square_popups"] = true,
 				},
 				["AutoBarButtonDebuff"] = {
@@ -91,12 +91,12 @@ AutoBarDB2 = {
 					["buttonKey"] = "AutoBarButtonClassPet",
 					["square_popups"] = true,
 				},
-				["AutoBarButtonCharge"] = {
+				["AutoBarButtonTrap"] = {
 					["barKey"] = "AutoBarClassBarHunter",
-					["buttonClass"] = "AutoBarButtonCharge",
-					["defaultButtonIndex"] = 2,
+					["buttonClass"] = "AutoBarButtonTrap",
+					["defaultButtonIndex"] = 4,
 					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonCharge",
+					["buttonKey"] = "AutoBarButtonTrap",
 					["square_popups"] = true,
 				},
 				["AutoBarButtonInterrupt"] = {
@@ -230,14 +230,11 @@ AutoBarDB2 = {
 			["AutoBarClassBarBasic"] = {
 				["popupDirection"] = "1",
 				["fadeOut"] = false,
-				["columns"] = 16,
+				["posY"] = 164.309742421141,
 				["enabled"] = true,
 				["scale"] = 1,
 				["rows"] = 1,
 				["frameStrata"] = "LOW",
-				["alignButtons"] = "3",
-				["dockShiftY"] = 0,
-				["posX"] = 617.1163924563734,
 				["buttonKeys"] = {
 					"AutoBarButtonHearth", -- [1]
 					"AutoBarButtonBandages", -- [2]
@@ -261,11 +258,14 @@ AutoBarDB2 = {
 					"AutoBarButtonTrinket1", -- [20]
 					"AutoBarButtonTrinket2", -- [21]
 				},
+				["dockShiftY"] = 0,
+				["posX"] = 549.2998705346909,
+				["alignButtons"] = "3",
 				["allowed_class"] = "*",
-				["posY"] = 160.7250452356402,
+				["alpha"] = 1,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
-				["alpha"] = 1,
+				["columns"] = 16,
 			},
 			["AutoBarClassBarExtras"] = {
 				["popupDirection"] = "1",
@@ -611,7 +611,7 @@ AutoBarDB2 = {
 		["狂暴專家 - 伊弗斯"] = {
 			["buttonDataList"] = {
 				["AutoBarButtonQuest"] = {
-					["arrangeOnUse"] = 34833,
+					["arrangeOnUse"] = 45083,
 				},
 				["AutoBarButtonMount"] = {
 				},
