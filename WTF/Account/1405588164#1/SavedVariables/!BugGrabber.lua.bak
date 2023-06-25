@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
-	["session"] = 362,
 	["lastSanitation"] = 3,
+	["session"] = 363,
 	["errors"] = {
 		{
 			["message"] = "Interface/AddOns/GTFO/GTFO.lua:2079: attempt to index a nil value",
@@ -29,8 +29,8 @@ BugGrabberDB = {
 		}, -- [3]
 		{
 			["message"] = "Interface/AddOns/ClassicCodex/browser.lua:1 (null)",
-			["session"] = 8,
 			["time"] = "2023/05/06 00:16:55",
+			["session"] = 8,
 			["counter"] = 4,
 		}, -- [4]
 		{
@@ -255,14 +255,14 @@ BugGrabberDB = {
 		}, -- [32]
 		{
 			["message"] = "Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
-			["session"] = 231,
 			["time"] = "2023/05/06 00:16:55",
+			["session"] = 231,
 			["counter"] = 35,
 		}, -- [33]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
-			["session"] = 231,
 			["time"] = "2023/05/06 00:16:55",
+			["session"] = 231,
 			["counter"] = 35,
 		}, -- [34]
 		{
@@ -314,14 +314,14 @@ BugGrabberDB = {
 		}, -- [40]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Couldn't open Interface/AddOns/HandyNotes_FlightMasters (Classic)/HandyNotes_FlightMasters (Classic)-Wrath.toc",
-			["time"] = "2023/06/22 00:32:06",
 			["session"] = 334,
+			["time"] = "2023/06/22 00:32:06",
 			["counter"] = 1,
 		}, -- [41]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface_Wrath\\FrameXML\\Bindings.xml:1 Couldn't open Interface/AddOns/HandyNotes_FlightMasters (Classic)/HandyNotes_FlightMasters (Classic)-Wrath.toc",
-			["time"] = "2023/06/22 00:32:06",
 			["session"] = 334,
+			["time"] = "2023/06/22 00:32:06",
 			["counter"] = 1,
 		}, -- [42]
 		{
@@ -334,14 +334,14 @@ BugGrabberDB = {
 		}, -- [43]
 		{
 			["message"] = "Interface/AddOns/HidingBar/Config.lua:1 (null)",
-			["session"] = 338,
 			["time"] = "2023/06/21 21:46:00",
+			["session"] = 338,
 			["counter"] = 10,
 		}, -- [44]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/HidingBar/Config.lua:1 (null)",
-			["session"] = 338,
 			["time"] = "2023/06/21 21:46:00",
+			["session"] = 338,
 			["counter"] = 10,
 		}, -- [45]
 		{
@@ -441,8 +441,8 @@ BugGrabberDB = {
 		}, -- [57]
 		{
 			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:1 (null)",
-			["time"] = "2023/05/16 21:50:27",
 			["session"] = 359,
+			["time"] = "2023/05/16 21:50:27",
 			["counter"] = 60,
 		}, -- [58]
 		{
@@ -482,16 +482,16 @@ BugGrabberDB = {
 			["time"] = "2023/06/21 22:26:02",
 			["locals"] = "self = <table> {\n hasVoice = 2\n option = \"specWarnAttack\"\n text = \"埃霍恩拥有易伤 - 现在攻击!\"\n flash = 1\n combinedcount = 0\n mod = <table> {\n }\n voiceOptionId = \"VoicespecWarnAttack\"\n combinedtext = <table> {\n }\n sound = true\n}\nargTable = <table> {\n}\nannounceCount = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index field 'announceType' (a nil value)\"\nmoving = nil\nframe = DBMSpecialWarning {\n 0 = <userdata>\n}\nDBM = <table> {\n SelectGossip = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2789\n GetUnitIdFromCID = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2714\n CHAT_MSG_ADDON_LOGGED = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:4576\n StopLogging = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:5841\n FindScenarioIDs = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6840\n GetNumGuildPlayersInZone = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2455\n VibrateController = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6806\n FindDungeonMapIDs = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6832\n GetUnitIdFromGUID = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2536\n CopyProfile = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:1942\n CHAT_MSG_MONSTER_EMOTE = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:4933\n CHAT_MSG_WHISPER = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6567\n SendPVPTimers = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6365\n DeleteProfile = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:1959\n DungeonMusic = <table> {\n }\n ShowUpdateReminder = <function> defined @Interface/AddOns/DBM-Core/modules/UpdateReminder.lua:76\n GetRaidRoster = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2491\n PLAYER_REGEN_DISABLED = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:4698\n FireEvent = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:1850\n CreateModLocalization = <function> defined @Interface/AddOns/DBM-Core/modules/objects/Localization.lua:89\n SCENARIO_COMPLETED = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:3452\n IsEnabled = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6653\n GetMyPlayerInfo = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2559\n ADDON_LOADED = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:1532\n IconNumToTexture = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6821\n BattleMusic = <table> {\n }\n INSTANCE_GROUP_SIZE_CHANGED = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2426\n AddDefeatSound = <function> defined @Interface/AddOns/DBM-Core/modules/Sounds.lua:117\n SortByMeleeRoster = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:7680\n GetBossUnitId = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2696\n lastAntiSpamFLASH = 169199.750000\n AddDefaultOptions = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:2812\n UPDATE_MOUSEOVER_UNIT = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:3782\n InfoFrame = <table> {\n }\n SendCombatInfo = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6387\n FilterRaidBossEmote = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:1367\n RequestTimers = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6262\n CINEMATIC_START = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:6875\n VoiceVersions = <table> {\n }\n Voices = <table> {\n }\n AddOns = <table> {\n }\n Options = <table> {\n }\n UPDATE_BATTLEFIELD_STATUS = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua:3430\n GetModLocalization = <function> defined @Interface/AddOns/DBM-Core/modules/objects/Localization.lua:106\n CheckNearby = <function> defined @Interface/AddOns/DBM-Core/DBM-Core.lua",
 			["stack"] = "[string \"@Interface/AddOns/DBM-Core/DBM-Core.lua\"]:9336: in function `Show'\n[string \"@Interface/AddOns/DBM-WorldEvents/Holidays/Ahune.lua\"]:42: in function `handler'\n[string \"@Interface/AddOns/DBM-Core/DBM-Core.lua\"]:1037: in function <Interface/AddOns/DBM-Core/DBM-Core.lua:1024>\n[string \"=(tail call)\"]: ?\n[string \"@Interface/AddOns/DBM-Core/DBM-Core.lua\"]:1037: in function <Interface/AddOns/DBM-Core/DBM-Core.lua:1024>",
-			["session"] = 361,
-			["counter"] = 55,
+			["session"] = 363,
+			["counter"] = 58,
 		}, -- [63]
 		{
 			["message"] = "Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:3317: attempt to index local 'color' (a nil value)",
 			["time"] = "2023/06/22 13:18:53",
 			["locals"] = "self = <table> {\n OnHyperlinkLeave = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1559\n modules = <table> {\n }\n CancelTimer = <function> defined @Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceTimer-3.0/AceTimer-3.0.lua:147\n UpdateEditboxFont = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:739\n SecureHook = <function> defined @Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceHook-3.0/AceHook-3.0.lua:335\n TabOnLeave = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1037\n BNGetFriendInfo = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:212\n IsUndocked = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1270\n ChatEdit_PleaseRetaint = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:673\n SocialQueueIsLeader = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:2777\n ToggleChatButton = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1251\n ScrollToBottom = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1413\n OnHyperlinkEnter = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1548\n CHAT_MSG_YELL = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:2453\n AddPluginMessageFilter = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1662\n ResnapDock = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1306\n IsEnabled = <function> defined @Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceAddon-3.0/AceAddon-3.0.lua:447\n HandleShortChannels = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1597\n BNGetGameAccountInfo = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:225\n StyleOverflowButton = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:2333\n HookSecured = true\n CreateChatVoicePanel = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:3119\n CheckLFGRoles = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:2753\n RegisterMessage = <function> defined @Interface/AddOns/ElvUI_Libraries/Core/CallbackHandler-1.0/CallbackHandler-1.0.lua:80\n UnregisterMessage = <function> defined @Interface/AddOns/ElvUI_Libraries/Core/CallbackHandler-1.0/CallbackHandler-1.0.lua:143\n CopyButtonOnEnter = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:580\n GuidCache = <table> {\n }\n UpdateChatTabs = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1245\n db = <table> {\n }\n ChatFrame_ReplaceIconAndGroupExpressions = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1698\n ChatEdit_DeactivateChat = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1110\n SetEnabledState = <function> defined @Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceAddon-3.0/AceAddon-3.0.lua:420\n Hook = <function> defined @Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceHook-3.0/AceHook-3.0.lua:273\n PostChatClose = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:2618\n SnappingChanged = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1294\n GetPluginIcon = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1653\n ResetVoicePanelAlpha = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:3113\n VoiceOverlay = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:3392\n ThrottleSound = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:2461\n NewModule = <function> defined @Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceAddon-3.0/AceAddon-3.0.lua:231\n ClearSnapping = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1287\n ChatEdit_PleaseUntaint = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:680\n GetLines = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:969\n Initialized = true\n FindURL = <function> defined @Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:1428\n BuildCopyChatFr",
 			["stack"] = "[string \"@Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua\"]:3317: in function <Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:3285>\n[string \"=(tail call)\"]: ?\n[string \"=[C]\"]: in function `FCFTab_UpdateColors'\n[string \"@Interface/FrameXML/FloatingChatFrame.lua\"]:2114: in function `FCFDock_UpdateTabs'\n[string \"@Interface/FrameXML/FloatingChatFrame.lua\"]:1498: in function <Interface/FrameXML/FloatingChatFrame.lua:1497>\n[string \"@Interface_Wrath/AddOns/Blizzard_CombatLog/Blizzard_CombatLog.lua\"]:3402: in function `FCF_DockUpdate'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:2702: in function `UIParentManageFramePositions'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:1958: in function <Interface_Wrath/FrameXML/UIParent.lua:1945>\n[string \"=[C]\"]: in function `SetAttribute'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:2709: in function <Interface_Wrath/FrameXML/UIParent.lua:2707>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `UIParent_ManageFramePositions'\n[string \"@Interface/FrameXML/BuffFrame.lua\"]:379: in function `BuffFrame_UpdateAllBuffAnchors'\n[string \"@Interface/FrameXML/BuffFrame.lua\"]:120: in function `BuffFrame_Update'\n[string \"@Interface/FrameXML/SettingDefinitions/InterfaceOverrides.lua\"]:75: in function <...e/FrameXML/SettingDefinitions/InterfaceOverrides.lua:74>\n[string \"=[C]\"]: ?\n[string \"@Interface/SharedXML/CallbackRegistry.lua\"]:178: in function <Interface/SharedXML/CallbackRegistry.lua:177>\n[string \"=[C]\"]: ?\n[string \"@Interface/SharedXML/CallbackRegistry.lua\"]:181: in function `TriggerEvent'\n[string \"@Interface/SharedXML/CvarUtil.lua\"]:114: in function <Interface/SharedXML/CvarUtil.lua:106>",
-			["session"] = 361,
-			["counter"] = 10,
+			["session"] = 363,
+			["counter"] = 11,
 		}, -- [64]
 	},
 }

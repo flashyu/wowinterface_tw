@@ -2950,7 +2950,9 @@ function HealBot_Update_Skins()
         HealBot_luVars["ResetGlobalOld"]=true
         HealBot_Options_SetDefaults(true)
     else
-        HealBot_Skins_Check(Healbot_Config_Skins.Current_Skin)
+        for x in pairs (Healbot_Config_Skins.Skins) do
+            HealBot_Skins_Check(Healbot_Config_Skins.Skins[x])
+        end
         if HealBot_Globals.LastVersionSkinUpdate~=HealBot_Global_Version() then
             if not HealBot_luVars["UpdateMsg"] then
                 HealBot_luVars["UpdateMsg"]=true
