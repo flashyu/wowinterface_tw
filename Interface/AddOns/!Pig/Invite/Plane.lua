@@ -229,12 +229,13 @@ function InviteFun.Plane()
 				local editBox = ChatEdit_ChooseBoxForSend();
 				local hasText = editBox:GetText()
 				if editBox:HasFocus() then
-					editBox:SetText("/WHISPER " ..wjName.." ".. hasText);
+					editBox:SetText("/WHISPER " ..wjName.." "..hasText.."方便的话组我换个位面，谢谢");
 				else
 					ChatEdit_ActivateChat(editBox)
-					editBox:SetText("/WHISPER " ..wjName.." ".. hasText);
+					editBox:SetText("/WHISPER " ..wjName.." "..hasText.."方便的话组我换个位面，谢谢");
 				end
 			elseif self:GetText()=="请求换位面" then
+				SendChatMessage("方便的话组我换个位面，谢谢", "WHISPER", nil, wjName);
 				C_ChatInfo.SendAddonMessage(biaotou,shenqingMSG,"WHISPER",wjName)
 			end
 			fujiF.JieshouInfoList[self:GetID()][4]=true

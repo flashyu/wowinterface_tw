@@ -149,7 +149,7 @@ function BagBankF.SetListF.hangNUM:PIGDownMenu_Update_But(self)
 		if tocversion<100000 then
 			info.checked = BagmeihangN[i]==ContainerFrame1.meihang
 		else
-			info.checked = BagmeihangN[i]==ContainerFrameCombinedBags.suofang
+			info.checked = BagmeihangN[i]==ContainerFrameCombinedBags.meihang
 		end
 		BagBankF.SetListF.hangNUM:PIGDownMenu_AddButton(info)
 	end 
@@ -234,7 +234,7 @@ BagBankF:HookScript("OnShow", function(self)
 		BagBankF.SetListF.hangNUM:PIGDownMenu_SetText(ContainerFrame1.meihang)
 		BagBankF.SetListF.suofang:PIGDownMenu_SetText(ContainerFrame1.suofang)
 	else
-		BagBankF.SetListF.hangNUM:PIGDownMenu_SetText(ContainerFrameCombinedBags.suofang)
+		BagBankF.SetListF.hangNUM:PIGDownMenu_SetText(ContainerFrameCombinedBags.meihang)
 		BagBankF.SetListF.suofang:PIGDownMenu_SetText(ContainerFrameCombinedBags.suofang)
 	end
 end)

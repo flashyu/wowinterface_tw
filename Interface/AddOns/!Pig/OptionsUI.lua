@@ -178,20 +178,14 @@ function QuickBut:Add()
 end
 -- local ButtoSDn = PIGButton(UIParent,{"CENTER",UIParent,"CENTER",4,0},{76,25},"ASDADA")
 -- ButtoSDn:SetScript("OnClick", function ()
--- 	local Skill_List = {"基础营火","烹饪用火","分解","选矿","采集草药","挖矿"};
--- 	local Skill_List_yiyou = {};
--- 	for i=1,1000000 do
--- 		local duyaoname = GetSpellInfo(i)
--- 		if duyaoname then
--- 			--print(duyaoname,i)
--- 			for ix=1,#Skill_List do
--- 				if not Skill_List_yiyou[ix] then
--- 					if duyaoname==Skill_List[ix] then
--- 						print(duyaoname,i)
--- 						Skill_List_yiyou[ix]={duyaoname,i}
--- 					end
--- 				end
--- 			end
+-- 	PIGA["shujuyuan"]={}
+-- 	for i=1,GetNumClasses() do
+-- 		local className, classFile, classID = GetClassInfo(i)
+-- 		if classFile then
+-- 			-- local tank, heal, dps = UnitGetAvailableRoles("player")
+-- 			-- print(tank, heal, dps)
+-- 			PIGA["shujuyuan"][classFile]={"TANK", "HEALER", "DAMAGER"}
+-- 			--table.insert(PIGA["shujuyuan"],{classFile,{"TANK", "HEALER", "DAMAGER"}})
 -- 		end
 -- 	end
 -- end);

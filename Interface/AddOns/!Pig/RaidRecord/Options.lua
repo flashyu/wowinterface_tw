@@ -214,7 +214,8 @@ PIGTradeFrame:HookScript("OnEvent",function (self,event,arg1,arg2,arg3,arg4,arg5
 		if itemID_P and wanjiaName and jiaoyiG then
 			local RRItemList = PIGA["RaidRecord"]["ItemList"]		  
 			for x=1,#RRItemList do
-				if itemID_P==RRItemList[x][11] then
+				--if tonumber(itemID_P)==RRItemList[x][2] then
+				if itemID_P==RRItemList[x][2] then
 					if RRItemList[x][8]=="N/A" and RRItemList[x][9]==0 then
 						RRItemList[x][8]=wanjiaName;
 						RRItemList[x][9]=tonumber(jiaoyiG);
@@ -226,49 +227,41 @@ PIGTradeFrame:HookScript("OnEvent",function (self,event,arg1,arg2,arg3,arg4,arg5
 			end
 		end
 	end
-	if event=="UI_INFO_MESSAGE" and arg1==242 then
-	--if event=="UI_INFO_MESSAGE" then
-		local jiaoyiwupin = {
-			["duixiang"]="",
-			["TargetItem"]={},
-			["TargetMoney"]=0,
-			["PlayerItem"]={},
-			["PlayerMoney"]=0,	
-		}
-		jiaoyiwupin["duixiang"]=TradeFrame.PIGinfo.duixiang
-		jiaoyiwupin["TargetMoney"]=TradeFrame.PIGinfo.TargetMoney*0.0001
-		jiaoyiwupin["PlayerMoney"]=TradeFrame.PIGinfo.PlayerMoney*0.0001
-		for i=1,#TradeFrame.PIGinfo.TargetItem do
-			if TradeFrame.PIGinfo.TargetItem[i] then
-				table.insert(jiaoyiwupin["TargetItem"],TradeFrame.PIGinfo.TargetItem[i])
+
+	if event=="UI_INFO_MESSAGE" and arg2==ERR_TRADE_COMPLETE then
+		self.PIG_TargetItem={}
+		self.PIG_PlayerItem={}
+		local PIG_TargetName=TradeFrame.PIG_TargetName
+		local PIG_TargetMoney=TradeFrame.PIG_TargetMoney*0.0001
+		local PIG_PlayerMoney=TradeFrame.PIG_PlayerMoney*0.0001
+		for i=1,#TradeFrame.PIG_TargetItem do
+			if TradeFrame.PIG_TargetItem[i] then
+				table.insert(self.PIG_TargetItem,TradeFrame.PIG_TargetItem[i])
 			end
 		end
-		for i=1,#TradeFrame.PIGinfo.PlayerItem do
-			if TradeFrame.PIGinfo.PlayerItem[i] then
-				table.insert(jiaoyiwupin["PlayerItem"],TradeFrame.PIGinfo.PlayerItem[i])
+		for i=1,#TradeFrame.PIG_PlayerItem do
+			if TradeFrame.PIG_PlayerItem[i] then
+				table.insert(self.PIG_PlayerItem,TradeFrame.PIG_PlayerItem[i])
 			end
 		end
-		
-		local wupinNum = #jiaoyiwupin["PlayerItem"]
-		--jiaoyiwupin["TargetMoney"]=666
-		if wupinNum>0 and jiaoyiwupin["TargetMoney"]>0 then--有物品交出和金币收入
+		local wupinNum = #self.PIG_PlayerItem
+		if wupinNum>0 and PIG_TargetMoney>0 then--有物品交出和金币收入
 			local RRItemList = PIGA["RaidRecord"]["ItemList"]
 			for p=1,wupinNum do
-				local itemLink_P = jiaoyiwupin["PlayerItem"][p][1]
-				local pingjunfenG = jiaoyiwupin["TargetMoney"]/wupinNum;
+				local itemLink_P = self.PIG_PlayerItem[p][1]
+				local pingjunfenG = PIG_TargetMoney/wupinNum;
 				for x=1,#RRItemList do
-					-- print(string.gsub(itemLink_P,"|","||"))
-					-- print(string.gsub(RRItemList[x][2],"|","||"))
-					local itemID_P = GetItemInfoInstant(itemLink_P) 
-					if itemID_P==RRItemList[x][11] then
+					--local itemID_P = GetItemInfoInstant(itemLink_P) 
+					--if itemID_P==RRItemList[x][11] then
+					if itemLink_P==RRItemList[x][2] then
 						if RRItemList[x][8]=="N/A" and RRItemList[x][9]==0 then
-							RRItemList[x][8]=jiaoyiwupin["duixiang"];
+							RRItemList[x][8]=PIG_TargetName;
 							RRItemList[x][9]=pingjunfenG;
 							RRItemList[x][10]=GetServerTime();
 							_G[GnUI].Update_Item();
-							PIGSendAddonMessage(biaotouT,itemID_P.."&"..jiaoyiwupin["duixiang"].."&"..pingjunfenG)
+							PIGSendAddonMessage(biaotouT,itemLink_P.."&"..PIG_TargetName.."&"..pingjunfenG)
 							if PIGA["RaidRecord"]["Rsetting"]["jiaoyitonggao"] then
-								PIGSendChatRaidParty("!Pig:"..itemID_P.."已交予"..jiaoyiwupin["duixiang"].."，收到"..pingjunfenG.."G")
+								PIGSendChatRaidParty("!Pig:"..itemLink_P.."已交予"..PIG_TargetName.."，收到"..pingjunfenG.."G")
 							end
 							break
 						end
@@ -286,13 +279,13 @@ PIGTradeFrame:HookScript("OnEvent",function (self,event,arg1,arg2,arg3,arg4,arg5
 			C_Timer.After(0.8,function()
 				_G[GnUI].shiqulinshiStop=nil
 			end)
-		elseif wupinNum==0 and jiaoyiwupin["TargetMoney"]>0 then--只有金币收入补交物品拍卖欠款
+		elseif wupinNum==0 and PIG_TargetMoney>0 then--只有金币收入补交物品拍卖欠款
 			local RRItemList = PIGA["RaidRecord"]["ItemList"]
 			for x=1,#RRItemList do
-				if RRItemList[x][8]==jiaoyiwupin["duixiang"] then
+				if RRItemList[x][8]==PIG_TargetName then
 					if RRItemList[x][14]>0 then
-						RRItemList[x][14]=RRItemList[x][14]-jiaoyiwupin["TargetMoney"]
-						RRItemList[x][9]=RRItemList[x][9]+jiaoyiwupin["TargetMoney"]
+						RRItemList[x][14]=RRItemList[x][14]-PIG_TargetMoney
+						RRItemList[x][9]=RRItemList[x][9]+PIG_TargetMoney
 						_G[GnUI].Update_Item();
 						break
 					end

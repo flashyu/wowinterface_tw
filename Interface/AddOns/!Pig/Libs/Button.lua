@@ -14,8 +14,9 @@ local function BackdropSet(self)
 	self:SetBackdropColor(BGColor[1],BGColor[2],BGColor[3],BGColor[4]);
 	self:SetBackdropBorderColor(BorderColor[1], BorderColor[2], BorderColor[3], BorderColor[4]);
 end
-function Create.PIGButton(fuF,Point,WH,Text,UIName,id)
-	local But = CreateFrame("Button", UIName, fuF,"BackdropTemplate",id);
+function Create.PIGButton(fuF,Point,WH,Text,UIName,id,TemplateP)
+	local TemplateP = TemplateP or "BackdropTemplate,"
+	local But = CreateFrame("Button", UIName, fuF,TemplateP,id);
 	But:RegisterForClicks("LeftButtonUp","RightButtonUp")
 	BackdropSet(But)
 	if WH then
@@ -221,7 +222,7 @@ function Create.PIGCheckbutton_R(fuF,text,vertical,lienum,Vjiange,WH,UIName)
 	return Checkbutton
 end
 --左边主菜单
-function Create.Show_TabBut(Rneirong,tabbut)
+function Create.Show_TabBut(Rneirong,tabbut)---选择主菜单
 	local PigUI=Pig_OptionsUI
 	local ListTOP = {PigUI.L.F.ListTOP:GetChildren()}
 	for x=1, #ListTOP, 1 do
@@ -303,7 +304,7 @@ function Create.PIGOptionsList_RF(fuF,DownY,Mode,bianjuV)
 	TabF.Bot:SetPoint("BOTTOMRIGHT", TabF, "BOTTOMRIGHT", 0, 0)
 	return TabF
 end
-function Create.Show_TabBut_R(fuF,Rneirong,tabbut)
+function Create.Show_TabBut_R(fuF,Rneirong,tabbut)---选择子菜单
 	local RNR = {fuF.Bot:GetChildren()}
 	for x=1, #RNR, 1 do
 		RNR[x]:Hide()

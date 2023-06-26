@@ -1,6 +1,6 @@
 
 HidingBarDB = {
-	["tstmp"] = 1687705081,
+	["tstmp"] = 1687798120,
 	["profiles"] = {
 		{
 			["isDefault"] = true,
@@ -11,58 +11,58 @@ HidingBarDB = {
 						["tstmp"] = 1685116610,
 					},
 					["LibDBIcon10_BisTooltipIcon"] = {
-						["tstmp"] = 1687705081,
+						["tstmp"] = 1687798120,
 					},
-					["LibDBIcon10_Decursive"] = {
-						["tstmp"] = 1685459075,
-					},
-					["LibDBIcon10_Leatrix_Plus"] = {
-						["tstmp"] = 1687705081,
-					},
-					["LibDBIcon10_AutoBar"] = {
-						["tstmp"] = 1687705081,
+					["LibDBIcon10_Hekili"] = {
+						["tstmp"] = 1685116610,
 					},
 					["LibDBIcon10_AutoCombatLogger"] = {
-						["tstmp"] = 1687705081,
+						["tstmp"] = 1687798120,
+					},
+					["LibDBIcon10_AutoBar"] = {
+						["tstmp"] = 1687798120,
+					},
+					["LibDBIcon10_HealBot"] = {
+						["tstmp"] = 1685116612,
 					},
 					["LibDBIcon10_DBM"] = {
-						["tstmp"] = 1687705081,
+						["tstmp"] = 1687798120,
 					},
 					["LibDBIcon10_Attune_Broker"] = {
-						["tstmp"] = 1687705081,
+						["tstmp"] = 1687798120,
 					},
-					["LibDBIcon10_Plater"] = {
-						["tstmp"] = 1687705081,
+					["LibDBIcon10_Questie"] = {
+						["tstmp"] = 1687798120,
 					},
-					["LibDBIcon10_WeakAuras"] = {
-						["tstmp"] = 1687705081,
+					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
+						["tstmp"] = 1687798120,
 					},
 					["LibDBIcon10_BugSack"] = {
-						["tstmp"] = 1687705081,
+						["tstmp"] = 1687798120,
 					},
 					["LibDBIcon10_Myslot"] = {
-						["tstmp"] = 1687705081,
+						["tstmp"] = 1687798120,
 					},
 					["WIM3MinimapButton"] = {
-						["tstmp"] = 1687705081,
+						["tstmp"] = 1687798120,
 					},
 					["LibDBIcon10_Details"] = {
-						["tstmp"] = 1687705081,
+						["tstmp"] = 1687798120,
 					},
 					["LibDBIcon10_HandyNotes_NPCs"] = {
-						["tstmp"] = 1687705081,
+						["tstmp"] = 1687798120,
 					},
-					["LibDBIcon10_AtlasLoot"] = {
-						["tstmp"] = 1687705081,
+					["LibDBIcon10_Leatrix_Maps"] = {
+						["tstmp"] = 1687798120,
 					},
 					["LibDBIcon10_Atlas"] = {
 						["tstmp"] = 1686422258,
 					},
-					["CodexBrowserIcon"] = {
-						["tstmp"] = 1683303583,
+					["LibDBIcon10_AtlasLoot"] = {
+						["tstmp"] = 1687798120,
 					},
-					["LibDBIcon10_Leatrix_Maps"] = {
-						["tstmp"] = 1687705081,
+					["LibDBIcon10_GSE GnomeSequencer-增强"] = {
+						["tstmp"] = 1687798120,
 					},
 					["LibDBIcon10_TradeSkillMaster"] = {
 						["tstmp"] = 1686466940,
@@ -74,72 +74,72 @@ HidingBarDB = {
 						["tstmp"] = 1684426755,
 					},
 					["LibDBIcon10_TalentEmu"] = {
-						["tstmp"] = 1687705081,
+						["tstmp"] = 1687798120,
 					},
-					["LibDBIcon10_GSE GnomeSequencer-增强"] = {
-						["tstmp"] = 1687705081,
+					["CodexBrowserIcon"] = {
+						["tstmp"] = 1683303583,
 					},
 					["LibDBIcon10_DetailsStreamer"] = {
-						["tstmp"] = 1687705081,
+						["tstmp"] = 1687798120,
 					},
-					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
-						["tstmp"] = 1687705081,
+					["LibDBIcon10_WeakAuras"] = {
+						["tstmp"] = 1687798120,
 					},
-					["LibDBIcon10_Questie"] = {
-						["tstmp"] = 1687705082,
+					["LibDBIcon10_Plater"] = {
+						["tstmp"] = 1687798120,
 					},
-					["LibDBIcon10_HealBot"] = {
-						["tstmp"] = 1685116612,
+					["LibDBIcon10_Leatrix_Plus"] = {
+						["tstmp"] = 1687798120,
 					},
-					["LibDBIcon10_Hekili"] = {
-						["tstmp"] = 1685116610,
+					["LibDBIcon10_Decursive"] = {
+						["tstmp"] = 1685459075,
 					},
 				},
 				["btnSettings"] = {
 					["AutoBar"] = {
-						["tstmp"] = 1687705081,
-					},
-					["RangeDisplay"] = {
-						["tstmp"] = 1686469304,
+						["tstmp"] = 1687798120,
 					},
 					["Atlas"] = {
 						["tstmp"] = 1686422258,
 					},
-					["WeakAuras"] = {
-						["tstmp"] = 1687705081,
+					["RangeDisplay"] = {
+						["tstmp"] = 1686469304,
 					},
-					["BisTooltipIcon"] = {
-						["tstmp"] = 1687705081,
+					["AutoCombatLogger"] = {
+						["tstmp"] = 1687798120,
+					},
+					["Parrot"] = {
+						["tstmp"] = 1687798120,
 					},
 					["TradeSkillMaster"] = {
 						["tstmp"] = 1686466940,
 					},
 					["HandyNotes_NPCs"] = {
-						["tstmp"] = 1687705081,
+						["tstmp"] = 1687798120,
 					},
 					["DBM"] = {
-						["tstmp"] = 1687705081,
+						["tstmp"] = 1687798120,
 					},
 					["Decursive"] = {
 						["tstmp"] = 1685459075,
 					},
-					["TalentEmu"] = {
-						["tstmp"] = 1687705081,
+					["HidingBar"] = {
+						["tstmp"] = 1687798120,
 					},
 					["LFGBulletinBoard"] = {
-						["tstmp"] = 1687705081,
+						["tstmp"] = 1687798120,
 					},
 					["AtlasLoot"] = {
-						["tstmp"] = 1687705081,
+						["tstmp"] = 1687798120,
 					},
-					["HidingBar"] = {
-						["tstmp"] = 1687705081,
+					["TalentEmu"] = {
+						["tstmp"] = 1687798120,
 					},
-					["Parrot"] = {
-						["tstmp"] = 1687705081,
+					["BisTooltipIcon"] = {
+						["tstmp"] = 1687798120,
 					},
-					["AutoCombatLogger"] = {
-						["tstmp"] = 1687705081,
+					["WeakAuras"] = {
+						["tstmp"] = 1687798120,
 					},
 					["HealBot"] = {
 						["tstmp"] = 1685116610,
@@ -147,10 +147,10 @@ HidingBarDB = {
 				},
 				["grabMinimap"] = true,
 				["grabMinimapAfterN"] = 1,
-				["customGrabList"] = {
-				},
 				["ombGrabQueue"] = {
 					1, -- [1]
+				},
+				["customGrabList"] = {
 				},
 				["ignoreMBtn"] = {
 				},
@@ -204,29 +204,29 @@ HidingBarDB = {
 						["gapSize"] = 0,
 						["interceptTooltip"] = false,
 						["buttonDirection"] = {
-							["V"] = 0,
 							["H"] = 0,
+							["V"] = 0,
 						},
 						["borderOffset"] = 4,
 						["omb"] = {
 							["minimapPos"] = 215.2108018333512,
-							["size"] = 31,
+							["hide"] = false,
 							["distanceToBar"] = 0,
 							["lock"] = true,
 							["anchor"] = "right",
 							["barDisplacement"] = 0,
 							["canGrabbed"] = true,
-							["hide"] = false,
+							["size"] = 31,
 						},
 						["buttonSize"] = 31,
 						["frameStrata"] = 2,
 						["lineBorderSize"] = 2,
-						["barOffset"] = 2,
+						["lock"] = true,
 						["fadeOpacity"] = 0.2,
 						["orientation"] = 0,
-						["hideHandler"] = 2,
 						["borderSize"] = 16,
-						["lock"] = true,
+						["hideHandler"] = 2,
+						["barOffset"] = 2,
 					},
 					["name"] = "框架 1",
 				}, -- [1]

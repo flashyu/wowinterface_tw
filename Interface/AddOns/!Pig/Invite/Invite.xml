@@ -3,4 +3,5 @@
 	<Script file="UI.lua" />
 	<Script file="Chedui.lua" />
 	<Script file="Plane.lua" />
+	<Script file="Zudui.lua" />
 </Ui>

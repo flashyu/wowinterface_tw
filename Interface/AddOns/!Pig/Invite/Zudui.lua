@@ -1,0 +1,1200 @@
+local addonName, addonTable = ...;
+local _, _, _, tocversion = GetBuildInfo()
+local L =addonTable.locale
+local gsub = _G.string.gsub 
+local find = _G.string.find
+local match = _G.string.match
+---------------------------
+local Create=addonTable.Create
+local PIGFrame=Create.PIGFrame
+local PIGLine=Create.PIGLine
+local PIGEnter=Create.PIGEnter
+local PIGButton = Create.PIGButton
+local PIGDownMenu=Create.PIGDownMenu
+local PIGSlider = Create.PIGSlider
+local PIGCheckbutton=Create.PIGCheckbutton
+local PIGCheckbutton_R=Create.PIGCheckbutton_R
+local PIGOptionsList=Create.PIGOptionsList
+local PIGOptionsList_RF=Create.PIGOptionsList_RF
+local PIGOptionsList_R=Create.PIGOptionsList_R
+local PIGFontString=Create.PIGFontString
+local PIGFontStringBG=Create.PIGFontStringBG
+local PIGModCheckbutton=Create.PIGModCheckbutton
+local PIGModbutton=Create.PIGModbutton
+local PIGQuickBut=Create.PIGQuickBut
+local PIGCloseBut=Create.PIGCloseBut
+local PIGSetFont=Create.PIGSetFont
+local Show_TabBut_R=Create.Show_TabBut_R
+------------------
+local InviteFun=addonTable.InviteFun
+local cl_Name=addonTable.Data.cl_Name
+function InviteFun.Zudui()
+-- 	local GnName,GnUI,GnIcon,FrameLevel = InviteFun.GnName,InviteFun.GnUI,InviteFun.GnIcon,InviteFun.FrameLevel
+-- 	local InvF=_G[GnUI]
+-- 	local fujiF,fujiTabBut=PIGOptionsList_R(InvF.F,L["INVITE_ZUDUI"],80,"Bot")
+
+-- 	----------------------
+-- 	local Roles = {"TANK", "HEALER","DAMAGER"}
+-- 	local Roles_List={{},{},{}};
+-- 	local zhizeIcon=addonTable.Data.zhizeIcon
+-- 	local zhiye_F_H,zhiye_but_H=100,20
+-- 	---
+-- 	fujiF.xiugaiRF=PIGFrame(fujiF,nil,{260,300})
+-- 	fujiF.xiugaiRF:PIGSetBackdrop(1)
+-- 	fujiF.xiugaiRF:PIGClose()
+-- 	fujiF.xiugaiRF:Hide()
+-- 	fujiF.xiugaiRF:SetFrameLevel(fujiF.xiugaiRF:GetFrameLevel()+10)
+-- 	fujiF.xiugaiRF.biaoti = PIGFontString(fujiF.xiugaiRF,{"TOP", fujiF.xiugaiRF, "TOP", 0,-3},"", "OUTLINE");
+-- 	local shezhiWH = 24
+-- 	for i=1,MAX_RAID_MEMBERS do
+-- 		local pbut = CreateFrame("Button","Zuidui_xigairzhizeUI_"..i,fujiF.xiugaiRF)
+-- 		pbut:SetSize(shezhiWH,shezhiWH);
+-- 		if i==1 then
+-- 			pbut:SetPoint("TOPLEFT", fujiF.xiugaiRF, "TOPLEFT", 10,-24);
+-- 		elseif i==21 then
+-- 			pbut:SetPoint("TOPLEFT", fujiF.xiugaiRF, "TOPLEFT", 290,-24);
+-- 		else
+-- 			pbut:SetPoint("TOP",_G["Zuidui_xigairzhizeUI_"..(i-1)],"BOTTOM",0,-3);
+-- 		end
+-- 		pbut.Tex = pbut:CreateTexture();
+-- 		pbut.Tex:SetTexture("interface/lfgframe/ui-lfg-icon-roles.blp");
+-- 		pbut.Tex:SetTexCoord(zhizeIcon[1][1],zhizeIcon[1][2],zhizeIcon[1][3],zhizeIcon[1][4]);
+-- 		pbut.Tex:SetSize(shezhiWH,shezhiWH);
+-- 		pbut.Tex:SetPoint("CENTER", pbut, "CENTER", 0,0);
+-- 		pbut:SetScript("OnMouseDown", function (self)
+-- 			self.Tex:SetPoint("CENTER", pbut, "CENTER", 1.5,-1.5);
+-- 		end);
+-- 		pbut:SetScript("OnMouseUp", function (self)
+-- 			self.Tex:SetPoint("CENTER", pbut, "CENTER", 0,0);
+-- 		end);
+-- 		pbut:HookScript("OnClick", function (self)
+-- 			local wanjname = self.name:GetText()
+-- 			for p=1,MAX_RAID_MEMBERS do
+-- 				local name = GetRaidRosterInfo(p);
+-- 				if name then
+-- 					if name==wanjname then
+-- 						UnitSetRole(riad..p, "TANK")--"NONE"
+-- 						break
+-- 					end
+-- 				end
+-- 			end
+-- 			fujiF.xiugaiRF:Hide()
+-- 		end);
+-- 		pbut.zhize2 = CreateFrame("Button",nil,pbut)
+-- 		pbut.zhize2:SetSize(shezhiWH,shezhiWH);
+-- 		pbut.zhize2:SetPoint("LEFT", pbut, "RIGHT", 4,0);
+-- 		pbut.zhize2.Tex = pbut.zhize2:CreateTexture();
+-- 		pbut.zhize2.Tex:SetTexture("interface/lfgframe/ui-lfg-icon-roles.blp");
+-- 		pbut.zhize2.Tex:SetTexCoord(zhizeIcon[2][1],zhizeIcon[2][2],zhizeIcon[2][3],zhizeIcon[2][4]);
+-- 		pbut.zhize2.Tex:SetSize(shezhiWH,shezhiWH);
+-- 		pbut.zhize2.Tex:SetPoint("CENTER", pbut.zhize2, "CENTER", 0,0);
+-- 		pbut.zhize2:SetScript("OnMouseDown", function (self)
+-- 			self.Tex:SetPoint("CENTER", pbut.zhize2, "CENTER", 1.5,-1.5);
+-- 		end);
+-- 		pbut.zhize2:SetScript("OnMouseUp", function (self)
+-- 			self.Tex:SetPoint("CENTER", pbut.zhize2, "CENTER", 0,0);
+-- 		end);
+-- 		pbut.zhize2:HookScript("OnClick", function (self)
+-- 			local fujiku = self:GetParent()
+-- 			local wanjname = fujiku.name:GetText()
+-- 			for p=1,MAX_RAID_MEMBERS do
+-- 				local name = GetRaidRosterInfo(p);
+-- 				if name then
+-- 					if name==wanjname then
+-- 						UnitSetRole(riad..p, "HEALER")
+-- 						break
+-- 					end
+-- 				end
+-- 			end
+-- 			fujiF.xiugaiRF:Hide()
+-- 		end);
+-- 		pbut.zhize3 = CreateFrame("Button",nil,pbut)
+-- 		pbut.zhize3:SetSize(shezhiWH,shezhiWH);
+-- 		pbut.zhize3:SetPoint("LEFT", pbut.zhize2, "RIGHT", 4,0);
+-- 		pbut.zhize3.Tex = pbut.zhize3:CreateTexture();
+-- 		pbut.zhize3.Tex:SetTexture("interface/lfgframe/ui-lfg-icon-roles.blp");
+-- 		pbut.zhize3.Tex:SetTexCoord(zhizeIcon[3][1],zhizeIcon[3][2],zhizeIcon[3][3],zhizeIcon[3][4]);
+-- 		pbut.zhize3.Tex:SetSize(shezhiWH,shezhiWH);
+-- 		pbut.zhize3.Tex:SetPoint("CENTER", pbut.zhize3, "CENTER", 0,0);
+-- 		pbut.zhize3:SetScript("OnMouseDown", function (self)
+-- 			self.Tex:SetPoint("CENTER", pbut.zhize3, "CENTER", 1.5,-1.5);
+-- 		end);
+-- 		pbut.zhize3:SetScript("OnMouseUp", function (self)
+-- 			self.Tex:SetPoint("CENTER", pbut.zhize3, "CENTER", 0,0);
+-- 		end);
+-- 		pbut.zhize3:HookScript("OnClick", function (self)
+-- 			local fujiku = self:GetParent()
+-- 			local wanjname = fujiku.name:GetText()
+-- 			for p=1,MAX_RAID_MEMBERS do
+-- 				local name = GetRaidRosterInfo(p);
+-- 				if name then
+-- 					if name==wanjname then
+-- 						UnitSetRole(riad..p, "DAMAGER")
+-- 						break
+-- 					end
+-- 				end
+-- 			end
+-- 			fujiF.xiugaiRF:Hide()
+-- 		end);
+-- 		pbut.name = PIGFontString(pbut,{"LEFT", pbut.zhize3, "RIGHT", 4,0},"", "OUTLINE");
+-- 	end
+-- 	local function xianshixiugaiUI(self,rid,ZID)
+-- 		fujiF.xiugaiRF:SetPoint("TOP", self, "BOTTOM", 0,-4);
+-- 		fujiF.xiugaiRF.biaoti:SetText(_G[Roles[rid]].."-"..Roles_List[rid][ZID][2])
+-- 		for p=1,MAX_RAID_MEMBERS do
+-- 			local xuanzeli = _G["Zuidui_xigairzhizeUI_"..p]
+-- 			xuanzeli:Hide()
+-- 			if fujiF.Datas_DQList[p] then
+-- 				if fujiF.Datas_DQList[p][3]==Roles[rid] then
+-- 					xuanzeli:Show()
+-- 					xuanzeli.name:SetText(fujiF.Datas_DQList[p][1])
+-- 				end
+-- 			end
+-- 		end
+-- 	end
+-- 	local function ADD_Roles_Frame(xulie)
+-- 		local zhizeF=PIGFrame(fujiF,nil,nil,"zhize_F_"..xulie)
+-- 		zhizeF:SetHeight(zhiye_F_H)
+-- 		zhizeF:PIGSetBackdrop()
+-- 		if xulie==1 then
+-- 			zhizeF:SetPoint("TOPLEFT",fujiF,"TOPLEFT",6,-10);
+-- 			zhizeF:SetPoint("TOPRIGHT", fujiF, "TOPRIGHT", -6, 0);
+-- 		else
+-- 			zhizeF:SetPoint("TOPLEFT",fujiF,"TOPLEFT",6,-10-(xulie-1)*(zhiye_F_H+10));
+-- 			zhizeF:SetPoint("TOPRIGHT", fujiF, "TOPRIGHT", -6, 0);
+-- 		end
+-- 		zhizeF.Tex = zhizeF:CreateTexture(nil, "BORDER");
+-- 		zhizeF.Tex:SetTexture("interface/lfgframe/ui-lfg-icon-roles.blp");
+-- 		zhizeF.Tex:SetTexCoord(zhizeIcon[xulie][1],zhizeIcon[xulie][2],zhizeIcon[xulie][3],zhizeIcon[xulie][4]);
+-- 		zhizeF.Tex:SetSize(zhiye_but_H*3,zhiye_but_H*3);
+-- 		zhizeF.Tex:SetPoint("LEFT", zhizeF, "LEFT", 10,0);
+-- 		--
+-- 		zhizeF.mubiaoAll = PIGFontString(zhizeF,{"LEFT", zhizeF, "LEFT", 70,8},"目标人数", "OUTLINE");
+-- 		zhizeF.mubiaoAll_V = PIGFontString(zhizeF,{"LEFT", zhizeF.mubiaoAll, "RIGHT", 2,0},0, "OUTLINE");
+-- 		zhizeF.mubiaoAll_V:SetTextColor(1,1,1,1);
+-- 		zhizeF.dangqianAll = PIGFontString(zhizeF,{"LEFT", zhizeF, "LEFT", 70,-16},"已组人数", "OUTLINE");
+-- 		zhizeF.dangqianAll_V = PIGFontString(zhizeF,{"LEFT", zhizeF.dangqianAll, "RIGHT", 2,0},0, "OUTLINE");
+-- 		zhizeF.dangqianAll_V:SetTextColor(1,1,1,1);
+		
+-- 		for id=1,#Roles_List[xulie] do
+-- 			local EditBox = CreateFrame("EditBox", "zhize_mubiao_E"..xulie.."_"..id, zhizeF, "InputBoxInstructionsTemplate");
+-- 			EditBox:SetSize(zhiye_but_H+4,zhiye_but_H);
+-- 			if id==1 then
+-- 				EditBox:SetPoint("LEFT", zhizeF.mubiaoAll, "LEFT", 110,0);
+-- 			else
+-- 				EditBox:SetPoint("LEFT",_G["zhize_mubiao_E"..xulie.."_"..(id-1)],"RIGHT",30,0);
+-- 			end
+-- 			PIGSetFont(EditBox,14,"OUTLINE")
+-- 			EditBox:SetJustifyH("CENTER")
+-- 			EditBox:SetNumeric(true)
+-- 			EditBox:SetMaxLetters(2)
+-- 			EditBox:SetAutoFocus(false)
+-- 			EditBox:SetTextColor(0.6, 0.6, 0.6, 0.94)
+-- 			EditBox:SetScript("OnEditFocusLost", function(self)
+-- 				self:SetTextColor(0.6, 0.6, 0.6, 0.94)
+-- 			end);
+-- 			EditBox:SetScript("OnEditFocusGained", function(self) 
+-- 				self:SetTextColor(1, 1, 1, 1)
+-- 			end)
+-- 			EditBox:SetScript("OnEscapePressed", function(self) 
+-- 				self:ClearFocus() 
+-- 			end);
+-- 			EditBox:SetScript("OnEnterPressed", function(self) 
+-- 				self:ClearFocus() 
+-- 				PIGA["Invite"]["Zudui"]["mubiaoNum"][xulie][id]=self:GetNumber();
+-- 				fujiF.GetRaidMubiao()
+-- 			end);
+-- 			EditBox.Icon=PIGFrame(EditBox,{"BOTTOM", EditBox, "TOP", -1,4},{zhiye_but_H+2,zhiye_but_H+2})
+-- 			EditBox.Icon.tex = EditBox.Icon:CreateTexture();
+-- 			EditBox.Icon.tex:SetTexture("Interface/TargetingFrame/UI-Classes-Circles");
+-- 			EditBox.Icon.tex:SetAllPoints(EditBox.Icon)
+-- 			local coords = CLASS_ICON_TCOORDS[Roles_List[xulie][id][1]]
+-- 			EditBox.Icon.tex:SetTexCoord(unpack(coords));
+-- 			EditBox.Icon:SetScript("OnMouseUp", function(self)
+-- 				if fujiF.xiugaiRF:IsShown() then
+-- 					fujiF.xiugaiRF:Hide()
+-- 				else
+-- 					fujiF.xiugaiRF:Show()
+-- 					xianshixiugaiUI(EditBox.Icon,xulie,id)
+-- 				end
+-- 			end)
+
+-- 			EditBox.yizu = PIGFontString(EditBox,{"TOP", EditBox, "BOTTOM", -1,-8},nil,"OUTLINE");
+-- 			EditBox.wancheng = EditBox:CreateTexture();
+-- 			EditBox.wancheng:SetSize(zhiye_but_H,zhiye_but_H-4);
+-- 			EditBox.wancheng:SetPoint("TOP", EditBox.yizu, "BOTTOM", 0,-6);
+-- 		end
+-- 		return zhizeF
+-- 	end
+
+-- 	--提取
+-- 	local function tiquzhize(id)
+-- 		for i=1,#cl_Name do
+-- 			local zhize = cl_Name[i][2]
+-- 			for ii=1,#zhize do
+-- 				if Roles[id]==zhize[ii] then
+-- 					table.insert(Roles_List[id],{cl_Name[i][1],cl_Name[i][3]})
+-- 				end
+-- 			end
+-- 		end
+-- 	end
+
+-- 	tiquzhize(1)
+-- 	tiquzhize(2)
+-- 	tiquzhize(3)
+-- 	---
+-- 	local fubenMoshi ={10,15,20,25,40};
+-- 	local fubenMoshi_peizhi = {}
+-- 	if tocversion<20000 then
+-- 		local englishFaction = UnitFactionGroup("player")
+-- 		if englishFaction=="Alliance" then
+-- 			for id=1,#Roles_List do
+-- 				for ix=#Roles_List[id],1,-1 do
+-- 					if Roles_List[id][ix][1]=="SHAMAN" then
+-- 						table.remove(Roles_List[id],ix)
+-- 					end
+-- 				end
+-- 			end
+-- 			fubenMoshi_peizhi ={
+-- 				[10]={
+-- 					[1]={2},
+-- 					[2]={1,0,1},
+-- 					[3]={0,1,1,2,2},
+-- 				},
+-- 				[15]={
+-- 					[1]={2},
+-- 					[2]={1,1,1},
+-- 					[3]={2,2,2,2,2},
+-- 				},
+-- 				[20]={
+-- 					[1]={2},
+-- 					[2]={2,1,1},
+-- 					[3]={4,2,3,3,2},
+-- 				},
+-- 				[25]={
+-- 					[1]={1,1,1},
+-- 					[2]={2,2,2},
+-- 					[3]={1,5,2,3,4,1},
+-- 				},
+-- 				[40]={
+-- 					[1]={4},
+-- 					[2]={4,2,3},
+-- 					[3]={8,4,6,6,3},
+-- 				},
+-- 			}
+-- 		elseif englishFaction=="Horde" then
+-- 			for id=1,#Roles_List do
+-- 				for ix=#Roles_List[id],1,-1 do
+-- 					if Roles_List[id][ix][1]=="PALADIN" then
+-- 						table.remove(Roles_List[id],ix)
+-- 					end
+-- 				end
+-- 			end
+-- 			fubenMoshi_peizhi ={
+-- 				[10]={
+-- 					[1]={1,1},
+-- 					[2]={1,0,1},
+-- 					[3]={0,2,1,2,1},
+-- 				},
+-- 				[15]={
+-- 					[1]={2},
+-- 					[2]={1,1,1},
+-- 					[3]={2,2,2,2,2},
+-- 				},
+-- 				[20]={
+-- 					[1]={2},
+-- 					[2]={2,1,1},
+-- 					[3]={4,2,3,3,2},
+-- 				},
+-- 				[25]={
+-- 					[1]={2,1},
+-- 					[2]={2,2,2},
+-- 					[3]={1,5,2,3,4,1},
+-- 				},
+-- 				[40]={
+-- 					[1]={4},
+-- 					[2]={4,2,3},
+-- 					[3]={8,4,6,6,3},
+-- 				},
+-- 			}
+-- 		end
+-- 	else
+-- 		fubenMoshi_peizhi ={
+-- 			[10]={
+-- 				[1]={1,1},
+-- 				[2]={1,1,1},
+-- 				[3]={0,1,1,2,1},
+-- 			},
+-- 			[15]={
+-- 				[1]={1,1},
+-- 				[2]={1,1,1,1},
+-- 				[3]={1,1,2,2,1,2},
+-- 			},
+-- 			[20]={
+-- 				[1]={1,1},
+-- 				[2]={1,1,1,1},
+-- 				[3]={4,2,3,3,2},
+-- 			},
+-- 			[25]={
+-- 				[1]={1,1,1},
+-- 				[2]={2,1,1,1},
+-- 				[3]={1,5,3,3,4,1},
+-- 			},
+-- 			[40]={
+-- 				[1]={2,1,1},
+-- 				[2]={2,2,2,2},
+-- 				[3]={6,6,6,4,4,2},
+-- 			},
+-- 		}
+-- 	end
+-- 	ADD_Roles_Frame(1)
+-- 	ADD_Roles_Frame(2)
+-- 	ADD_Roles_Frame(3)
+
+-- 	--载入默认人数配置
+-- 	fujiF.morenpeizhirenshu=PIGDownMenu(fujiF,{"TOPLEFT",fujiF,"TOPLEFT", 10,-346},{120,24})
+-- 	fujiF.morenpeizhirenshu:PIGDownMenu_SetText("导入预设人数")
+-- 	function fujiF.morenpeizhirenshu:PIGDownMenu_Update_But(self)
+-- 		local info = {}
+-- 		info.func = self.PIGDownMenu_SetValue
+-- 		for i=1,#fubenMoshi,1 do
+-- 		    info.text, info.arg1 = "导入"..fubenMoshi[i].."人预设人数", fubenMoshi[i]
+-- 		    info.notCheckable = true;
+-- 			fujiF.morenpeizhirenshu:PIGDownMenu_AddButton(info)
+-- 		end 
+-- 	end
+-- 	function fujiF.morenpeizhirenshu:PIGDownMenu_SetValue(value,arg1)
+-- 		PIGA["Invite"]["Zudui"]["mubiaoNum"]=fubenMoshi_peizhi[arg1]
+-- 		PIG_print("已导入|cffFFFFFF"..arg1.."|r人预设人数");
+-- 		PIGCloseDropDownMenus()
+-- 		fujiF.GetRaidMubiao()
+-- 	end
+-- 	--总人数
+-- 	fujiF.zongrenshu = PIGFontString(fujiF,{"LEFT",fujiF.morenpeizhirenshu,"RIGHT",6,0},"总人数:", "OUTLINE");
+-- 	fujiF.zongrenshu:SetTextColor(0,1, 0, 1)
+-- 	fujiF.zongrenshu_dangqian = PIGFontString(fujiF,{"LEFT",fujiF.zongrenshu,"RIGHT",2,0},0, "OUTLINE",16);
+-- 	fujiF.zongrenshu_dangqian:SetTextColor(1, 1, 1, 1)
+-- 	fujiF.zongrenshu_fenge = PIGFontString(fujiF,{"LEFT",fujiF.zongrenshu_dangqian,"RIGHT",0,0},"/", "OUTLINE");
+-- 	fujiF.zongrenshu_fenge:SetTextColor(0,1, 0, 1)
+-- 	fujiF.zongrenshu_mubiao = PIGFontString(fujiF,{"LEFT",fujiF.zongrenshu_fenge,"RIGHT",0,0},0, "OUTLINE",16);
+-- 	fujiF.zongrenshu_mubiao:SetTextColor(1, 1, 1, 1)
+
+-- 	--进组指令
+-- 	fujiF.jinzuzhiling = PIGFontString(fujiF,{"LEFT",fujiF.zongrenshu,"RIGHT",60,0},"进组指令:", "OUTLINE");
+-- 	fujiF.jinzuzhiling:SetTextColor(0,1, 0, 1)
+-- 	fujiF.jinzuzhiling_E = CreateFrame("EditBox", nil, fujiF,"InputBoxInstructionsTemplate");
+-- 	fujiF.jinzuzhiling_E:SetSize(60,20);
+-- 	fujiF.jinzuzhiling_E:SetPoint("LEFT", fujiF.jinzuzhiling, "RIGHT", 6,-0);
+-- 	fujiF.jinzuzhiling_E:SetFontObject(ChatFontNormal);
+-- 	fujiF.jinzuzhiling_E:SetMaxLetters(6)
+-- 	fujiF.jinzuzhiling_E:SetAutoFocus(false);
+-- 	fujiF.jinzuzhiling_E:SetTextColor(0.6, 0.6, 0.6, 0.94)
+-- 	fujiF.jinzuzhiling_E:SetScript("OnEditFocusLost", function(self)
+-- 		self:SetTextColor(0.6, 0.6, 0.6, 0.94)
+-- 	end);
+-- 	fujiF.jinzuzhiling_E:SetScript("OnEditFocusGained", function(self) 
+-- 		self:SetTextColor(1, 1, 1, 1)
+-- 	end)
+-- 	fujiF.jinzuzhiling_E:SetScript("OnEscapePressed", function(self) 
+-- 		self:ClearFocus()
+-- 	end);
+-- 	fujiF.jinzuzhiling_E:SetScript("OnEnterPressed", function(self)
+-- 		PIGA["Invite"]["Zudui"]["jinzuCMD"]=self:GetText();
+-- 		self:ClearFocus()
+-- 	end);
+-- 	--无限制邀请
+-- 	local INV_tooltip = "收到邀请指令后不再判断职业职责，将直接邀请进组|cff00FF00(注意人数限制功能依然生效，到达人数后将自动停止邀请)|r。";
+-- 	fujiF.INV_wuxianzhi = PIGCheckbutton(fujiF,{"LEFT",fujiF.jinzuzhiling_E,"RIGHT",10,-1},{"忽略职责限制",INV_tooltip})
+-- 	fujiF.INV_wuxianzhi:SetScript("OnClick", function (self)
+-- 		if self:GetChecked() then
+-- 			PIGA["Invite"]["Zudui"]["INV_wuxianzhi"]=true;
+-- 		else
+-- 			PIGA["Invite"]["Zudui"]["INV_wuxianzhi"]=false;
+-- 		end
+-- 	end);
+-- 	----自动邀请
+-- 	fujiF.zidongyaoqingBUT = PIGButton(fujiF,{"LEFT",fujiF.INV_wuxianzhi,"RIGHT",120,1},{100,24},"自动邀请");  
+-- 	fujiF.zidongyaoqingBUT.Text:SetPoint("CENTER",fujiF.zidongyaoqingBUT,"CENTER",8,0);
+-- 	fujiF.zidongyaoqingBUT.Text:SetTextColor(0, 1, 1, 1);
+-- 	fujiF.zidongyaoqingBUT.Tex = fujiF.zidongyaoqingBUT:CreateTexture(nil, "BORDER");
+-- 	fujiF.zidongyaoqingBUT.Tex:SetTexture("interface/common/indicator-gray.blp");
+-- 	fujiF.zidongyaoqingBUT.Tex:SetPoint("RIGHT",fujiF.zidongyaoqingBUT.Text,"LEFT",0,-1);
+-- 	fujiF.zidongyaoqingBUT.Tex:SetSize(23,23);
+-- 	fujiF.zidongyaoqingBUT:HookScript("OnMouseDown", function(self)
+-- 		if self:IsEnabled() then
+-- 			self.Text:SetPoint("CENTER",fujiF.zidongyaoqingBUT,"CENTER",9.5,-1.5);
+-- 		end
+-- 	end);
+-- 	fujiF.zidongyaoqingBUT:HookScript("OnMouseUp", function(self)
+-- 		if self:IsEnabled() then
+-- 			self.Text:SetPoint("CENTER",fujiF.zidongyaoqingBUT,"CENTER",8,0);
+-- 		end
+-- 	end);
+-- 	fujiF.zidongyaoqingBUT:SetScript("OnClick", function (self)
+-- 		if Pig_OptionsUI.autoInvite_daiben then
+-- 			PIG_print("带本助手自动回复邀请处于开启状态，请先关闭带本助手的自动回复");
+-- 		else
+-- 			fujiF.zidongyaoqingFun()
+-- 		end
+-- 	end)
+-- 	--自动邀请
+-- 	--判断人数
+-- 	local function yidarenshusheding()
+-- 		local numGroupMembers = GetNumGroupMembers("LE_PARTY_CATEGORY_HOME")
+-- 		if numGroupMembers>=fujiF.Datas_MB.All then
+-- 			Pig_OptionsUI.autoInvite_shikong=false;
+-- 			fujiF.zidongyaoqingBUT.Tex:SetTexture("interface/common/indicator-gray.blp");
+-- 			fujiF:UnregisterEvent("CHAT_MSG_WHISPER");
+-- 			fujiF:UnregisterEvent("CHAT_MSG_SYSTEM");
+-- 			PIG_print("自动邀请已关闭，已达目标人数");
+-- 			return
+-- 		end	
+-- 	end
+-- 	--判断是否是队长/团长/助理
+-- 	local function panduantuanzhangzhuli()
+-- 		if IsInGroup() then
+-- 			local isLeader = UnitIsGroupLeader("player", "LE_PARTY_CATEGORY_HOME");
+-- 			local isTrue = UnitIsGroupAssistant("player", "LE_PARTY_CATEGORY_HOME");
+-- 			if not isLeader and not isTrue then
+-- 				fujiF.zidongyaoqingBUT.Tex:SetTexture("interface/common/indicator-gray.blp");
+-- 				Pig_OptionsUI.autoInvite_shikong=false;
+-- 				fujiF:UnregisterEvent("CHAT_MSG_WHISPER");
+-- 				fujiF:UnregisterEvent("CHAT_MSG_SYSTEM")
+-- 				PIG_print("自动邀请已关闭，你不是队长/团长/助理");
+-- 				return
+-- 			end
+-- 		end	
+-- 	end
+-- 	--主屏幕眼睛提示===
+-- 	local zuduizhuangtaitishi = CreateFrame("Button",nil,UIParent);
+-- 	zuduizhuangtaitishi:SetHighlightTexture("Interface/Minimap/UI-Minimap-ZoomButton-Highlight");  
+-- 	zuduizhuangtaitishi:SetSize(50,50);
+-- 	zuduizhuangtaitishi:SetPoint("TOP",UIParent,"TOP",0,-100);
+-- 	zuduizhuangtaitishi:SetMovable(true)
+-- 	zuduizhuangtaitishi:EnableMouse(true)
+-- 	zuduizhuangtaitishi:SetClampedToScreen(true)
+-- 	zuduizhuangtaitishi:RegisterForDrag("LeftButton")
+-- 	zuduizhuangtaitishi:RegisterForClicks("LeftButtonUp","RightButtonUp")
+-- 	zuduizhuangtaitishi:Hide()
+-- 	zuduizhuangtaitishi:SetScript("OnDragStart",function(self)
+-- 		self:StartMoving()
+-- 	end)
+-- 	zuduizhuangtaitishi:SetScript("OnDragStop",function(self)
+-- 		self:StopMovingOrSizing()
+-- 	end)
+-- 	zuduizhuangtaitishi:SetScript("OnClick", function()
+-- 		InvF:Show()
+-- 		Show_TabBut_R(InvF.F,fujiF,fujiTabBut)
+-- 	end)
+-- 	zuduizhuangtaitishi.Tex = zuduizhuangtaitishi:CreateTexture();
+-- 	zuduizhuangtaitishi.Tex:SetPoint("CENTER",zuduizhuangtaitishi,"CENTER",0,0);
+-- 	zuduizhuangtaitishi.Tex:SetSize(66,66);
+-- 	local zhuangdongkaishiID=1;
+-- 	local zhuangdongkaishixulie={0,1,2,3,4,3,2,1,0,9,10,11,12,13,14,15,15,17,18,19,20,21,22,23,24,25,26,21,20,27,28};
+-- 	local function UIParent_yanjing()
+-- 		if Pig_OptionsUI.autoInvite_shikong then
+-- 			if InvF:IsShown() then
+-- 				zuduizhuangtaitishi:Hide()
+-- 			else
+-- 				zuduizhuangtaitishi:Show()
+-- 				zuduizhuangtaitishi.Tex:SetTexture("interface/lfgframe/battlenetworking"..zhuangdongkaishixulie[zhuangdongkaishiID]..".blp");
+-- 				if zhuangdongkaishiID==31 then
+-- 					zhuangdongkaishiID=1
+-- 				else
+-- 					zhuangdongkaishiID=zhuangdongkaishiID+1
+-- 				end
+-- 			end
+-- 			C_Timer.After(0.2,UIParent_yanjing)
+-- 		else
+-- 			zuduizhuangtaitishi:Hide()
+-- 		end
+-- 	end
+-- 	---按钮闪动
+-- 	fujiF.zidongyaoqingBUT.shandongID=0;
+-- 	local function zuduizhushoushandong()
+-- 		local butrt = fujiF.zidongyaoqingBUT
+-- 		if Pig_OptionsUI.autoInvite_shikong then
+-- 			if fujiF:IsVisible() then
+-- 				if butrt.shandongID==0 then
+-- 					butrt.shandongID=1
+-- 				else
+-- 					butrt.shandongID=0
+-- 				end
+
+-- 				if butrt.shandongID==0 then
+-- 					butrt:SetBackdropBorderColor(1, 1, 0, 1);
+-- 				elseif butrt.shandongID==1 then
+-- 					butrt:SetBackdropBorderColor(0, 0, 0, 1);
+-- 				end
+-- 			end
+-- 			C_Timer.After(0.5,zuduizhushoushandong)
+-- 		else
+-- 			butrt:SetBackdropBorderColor(0, 0, 0, 1);
+-- 		end
+-- 	end
+-- 	function fujiF.zidongyaoqingFun()
+-- 		panduantuanzhangzhuli()
+-- 		yidarenshusheding()
+-- 		if Pig_OptionsUI.autoInvite_shikong then
+-- 			Pig_OptionsUI.autoInvite_shikong=false
+-- 			fujiF.zidongyaoqingBUT.Tex:SetTexture("interface/common/indicator-gray.blp");
+-- 			fujiF:UnregisterEvent("CHAT_MSG_WHISPER");
+-- 			fujiF:UnregisterEvent("CHAT_MSG_SYSTEM")
+-- 		else
+-- 			Pig_OptionsUI.autoInvite_shikong=true
+-- 			fujiF.zidongyaoqingBUT.Tex:SetTexture("interface/common/indicator-green.blp");
+-- 			fujiF:RegisterEvent("CHAT_MSG_WHISPER");
+-- 			fujiF:RegisterEvent("CHAT_MSG_SYSTEM")
+-- 			zuduizhushoushandong()
+-- 			UIParent_yanjing()
+-- 		end
+-- 	end
+-- 	---喊话
+-- 	fujiF.hanhuaNR = PIGFrame(fujiF,{"TOPLEFT",fujiF,"TOPLEFT", 10,-396});
+-- 	fujiF.hanhuaNR:PIGSetBackdrop(0,1)
+-- 	fujiF.hanhuaNR:SetSize(400,70);
+-- 	fujiF.hanhuaNR.t = PIGFontString(fujiF.hanhuaNR,{"BOTTOMLEFT",fujiF.hanhuaNR,"TOPLEFT", 0,4},"喊话内容");
+-- 	fujiF.hanhuaNR.t:SetTextColor(0, 1, 0, 1);
+-- 	fujiF.hanhuaNR.zifu = PIGFontString(fujiF.hanhuaNR,{"LEFT",fujiF.hanhuaNR.t,"RIGHT", 4,0},"当前字符数:");
+-- 	fujiF.hanhuaNR.zifu:SetTextColor(1, 1, 1, 1);
+-- 	fujiF.hanhuaNR.E = CreateFrame("EditBox", nil, fujiF.hanhuaNR)
+-- 	fujiF.hanhuaNR.E:SetPoint("TOPLEFT", fujiF.hanhuaNR, "TOPLEFT", 4, -6)
+-- 	fujiF.hanhuaNR.E:SetPoint("BOTTOMRIGHT", fujiF.hanhuaNR, "BOTTOMRIGHT", -4, 2)
+-- 	fujiF.hanhuaNR.E:SetFont("Fonts\\ARHei.ttf", 14, "OUTLINE")
+-- 	fujiF.hanhuaNR.E:SetTextColor(0.6, 0.6, 0.6, 1)
+-- 	fujiF.hanhuaNR.E:SetAutoFocus(false)
+-- 	fujiF.hanhuaNR.E:SetMultiLine(true)
+-- 	fujiF.hanhuaNR.E:SetMaxLetters(100)
+-- 	--fujiF.hanhuaNR.E:EnableMouse(true)
+-- 	fujiF.hanhuaNR.E:SetScript("OnEditFocusLost", function(self)
+-- 		self:SetTextColor(0.6, 0.6, 0.6, 0.94)
+-- 	end);
+-- 	fujiF.hanhuaNR.E:SetScript("OnEditFocusGained", function(self) 
+-- 		self:SetTextColor(1, 1, 1, 1)
+-- 	end)
+-- 	fujiF.hanhuaNR.E:SetScript("OnEscapePressed", function(self) 
+-- 		self:ClearFocus()
+-- 	end);
+-- 	fujiF.hanhuaNR.E:SetScript("OnEnterPressed", function(self)
+-- 		self:ClearFocus()
+-- 		PIGA["Invite"]["Zudui"]["hanhuaNR"]=self:GetText();
+-- 		fujiF.NEWhanhuahong()
+-- 	end);
+-- 	fujiF.hanhuaNR.E:SetScript("OnCursorChanged", function(self) 
+-- 		-- local bianji_W=self:GetHeight()
+-- 		-- daiben.hanren.bianjiHanhua.F.hanhuaneirongFFF:SetHeight(bianji_W+12);
+-- 		-- if daiben.hanren.bianjiHanhua.F.hanhuaneirong_dengji:GetChecked() then
+-- 		-- 	if string.len(self:GetText())>230 then
+-- 		-- 		daiben.hanren.bianjiHanhua.F.hanhuaneirong_dengji_T:SetText("当前字符数:"..string.len(self:GetText()).."可能无法发送")
+-- 		-- 		daiben.hanren.bianjiHanhua.F.hanhuaneirong_dengji_T:SetTextColor(1, 0, 0, 1);
+-- 		-- 	else
+-- 		-- 		daiben.hanren.bianjiHanhua.F.hanhuaneirong_dengji_T:SetText("当前字符数:"..string.len(self:GetText()))
+-- 		-- 		daiben.hanren.bianjiHanhua.F.hanhuaneirong_dengji_T:SetTextColor(1, 1, 0, 1);
+-- 		-- 	end
+-- 		-- else
+-- 		-- 	if string.len(self:GetText())>250 then
+-- 		-- 		daiben.hanren.bianjiHanhua.F.hanhuaneirong_dengji_T:SetText("当前字符数:"..string.len(self:GetText()).."可能无法发送")
+-- 		-- 		daiben.hanren.bianjiHanhua.F.hanhuaneirong_dengji_T:SetTextColor(1, 0, 0, 1);
+-- 		-- 	else
+-- 		-- 		daiben.hanren.bianjiHanhua.F.hanhuaneirong_dengji_T:SetText("当前字符数:"..string.len(self:GetText()))
+-- 		-- 		daiben.hanren.bianjiHanhua.F.hanhuaneirong_dengji_T:SetTextColor(1, 1, 0, 1);
+-- 		-- 	end
+-- 		-- end
+-- 	end);
+
+-- 	--喊话频道==========
+-- 	local paichupindaolist ={TRADE,L["CHAT_BENDIFANGWU"],L["CHAT_WORLDFANGWU"]};
+-- 	if GetLocale() == "zhCN" then
+-- 		table.insert(paichupindaolist,"服务")
+-- 	elseif GetLocale() == "zhTW" then
+-- 		table.insert(paichupindaolist,"服務")
+-- 	end
+-- 	fujiF.hanhuapindao=PIGDownMenu(fujiF,{"TOPLEFT",fujiF.hanhuaNR,"TOPRIGHT", 4,0},{100,24})
+-- 	fujiF.hanhuapindao:PIGDownMenu_SetText(CHOOSE..CHANNEL)
+-- 	fujiF.hanhuapindao.chatpindaoList={}
+-- 	local function huoqupindaoxulie()
+-- 		local chatpindaoList = {{SAY,"SAY"},{YELL,"YELL"},{GUILD,"GUILD"}}
+-- 		local channels = {GetChannelList()}
+-- 		for i = 1, #channels, 3 do
+-- 			local id, name, disabled = channels[i], channels[i+1], channels[i+2]
+-- 			local baohanguolvpindao=true
+-- 			for h=1,#paichupindaolist do
+-- 				if paichupindaolist[h]==name then
+-- 					baohanguolvpindao=false
+-- 					break
+-- 				end
+-- 			end
+-- 			if baohanguolvpindao then
+-- 				table.insert(chatpindaoList,{name,"CHANNEL",id})
+-- 			end
+-- 		end
+-- 		fujiF.hanhuapindao.chatpindaoList=chatpindaoList
+-- 	end
+-- 	C_Timer.After(3,huoqupindaoxulie)
+-- 	function fujiF.hanhuapindao:PIGDownMenu_Update_But(self)
+-- 		huoqupindaoxulie()
+-- 		local chatpindaoList=self.chatpindaoList
+-- 		local info = {}
+-- 		info.func = self.PIGDownMenu_SetValue
+-- 		for i=1,#chatpindaoList,1 do
+-- 		    info.text, info.arg1 = chatpindaoList[i][1], chatpindaoList[i][2]
+-- 		    info.checked = PIGA["Invite"]["Zudui"]["hanhuapindao"][chatpindaoList[i][1]]
+-- 		    info.isNotRadio=true
+-- 			fujiF.hanhuapindao:PIGDownMenu_AddButton(info)
+-- 		end 
+-- 	end
+-- 	function fujiF.hanhuapindao:PIGDownMenu_SetValue(value,arg1,arg2,checked)
+-- 		PIGA["Invite"]["Zudui"]["hanhuapindao"][value]=checked
+-- 		fujiF.NEWhanhuahong()
+-- 		PIGCloseDropDownMenus()
+-- 	end
+
+-- 	--喊话宏
+-- 	local hanhuaHongName = {"PIGyell",NEW.."喊话"..MACRO,UPDATE.."喊话"..MACRO}
+-- 	fujiF.New_hong = PIGButton(fujiF,{"TOPLEFT",fujiF.hanhuapindao,"BOTTOMLEFT",0,-12},{100,24});  
+-- 	fujiF.New_hong:SetScript("OnShow", function (self)
+-- 		local macroSlot = GetMacroIndexByName(hanhuaHongName[1])
+-- 		if macroSlot>0 then
+-- 			self:SetText(hanhuaHongName[3]);
+-- 		else
+-- 			self:SetText(hanhuaHongName[2]);
+-- 		end
+-- 	end)
+-- 	fujiF.New_hong:SetScript("OnClick", function (self)
+-- 		local macroSlot = GetMacroIndexByName(hanhuaHongName[1])
+-- 		if macroSlot>0 then
+-- 			fujiF.NEWhanhuahong()
+-- 		else
+-- 			local global = GetNumMacros()
+-- 			if global<120 then
+-- 				StaticPopup_Show ("CHUANGJIANHONGPIG");
+-- 			else
+-- 				PIG_print(L["LIB_MACROERR"]);
+-- 			end
+-- 		end
+-- 	end)
+-- 	StaticPopupDialogs["CHUANGJIANHONGPIG"] = {
+-- 		text = "将创建一个名为<"..hanhuaHongName[1]..">喊话宏\n请拖拽到动作条使用\n确定创建吗？\n\n",
+-- 		button1 = L["LIB_ENT"],
+-- 		button2 = L["LIB_CEL"],
+-- 		OnAccept = function()
+-- 			fujiF.NEWhanhuahong()
+-- 		end,
+-- 		timeout = 0,
+-- 		whileDead = true,
+-- 		hideOnEscape = true,
+-- 	}
+-- 	function fujiF.NEWhanhuahong()
+-- 		huoqupindaoxulie()
+-- 		local chatpindaoList =fujiF.hanhuapindao.chatpindaoList
+-- 		local yijiarupindaolist ={};
+-- 		for i=1,#chatpindaoList do
+-- 			if PIGA["Invite"]["Zudui"]["hanhuapindao"][chatpindaoList[i][1]] then
+-- 				table.insert(yijiarupindaolist,chatpindaoList[i][2]);
+-- 			end
+-- 		end
+-- 		local hanhuaneirong=fujiF.hanhuaNR.E:GetText();
+-- 		local zhilingV = fujiF.jinzuzhiling_E:GetText()
+-- 		if zhilingV~="" and zhilingV~=" " then
+-- 			hanhuaneirong=hanhuaneirong..",密"..zhilingV.."进组";
+-- 		end
+-- 		local hanhuaneirong1="";
+-- 		for i=1,#yijiarupindaolist do
+-- 			hanhuaneirong1=hanhuaneirong1.."/"..yijiarupindaolist[i].." "..hanhuaneirong.."\r"
+-- 		end
+-- 		local macroSlot = GetMacroIndexByName(hanhuaHongName[1])
+-- 		if macroSlot>0 then
+-- 			EditMacro(macroSlot, nil, nil, hanhuaneirong1)
+-- 		else
+-- 			CreateMacro(hanhuaHongName[1], 133742, hanhuaneirong1, nil)	
+-- 		end
+-- 		fujiF.New_hong:SetText(hanhuaHongName[3]);
+-- 	end
+-- 	fujiF.hanrenBUT = PIGButton(fujiF,{"TOPLEFT",fujiF.hanhuapindao,"TOPRIGHT",40,-6},{80,50},"喊话");
+-- 	fujiF.hanrenBUT.daojishiJG=0
+-- 	fujiF.hanrenBUT.hanhuaCD=10
+-- 	local function daojishiCDFUN()
+-- 		local self = fujiF.hanrenBUT
+-- 		local chazhiV = self.hanhuaCD-(GetServerTime()-self.daojishiJG)
+-- 		if chazhiV>0 then
+-- 			self:Disable()
+-- 			self:SetText("冷却中\n("..chazhiV..")");
+-- 		else
+-- 			self:Enable()
+-- 			self:SetText("喊话");
+-- 		end
+-- 		if self:IsVisible() then
+-- 			C_Timer.After(1,daojishiCDFUN)
+-- 		end
+-- 	end
+-- 	fujiF.hanrenBUT:HookScript("OnShow", function(self)
+-- 		daojishiCDFUN()
+-- 	end);
+-- 	fujiF.hanrenBUT:SetScript("OnClick", function (self)
+-- 		self.daojishiJG = GetServerTime();
+-- 		local chatpindaoList =fujiF.hanhuapindao.chatpindaoList
+-- 		local yijiarupindaolist ={};
+-- 		for i=1,#chatpindaoList do
+-- 			if PIGA["Invite"]["Zudui"]["hanhuapindao"][chatpindaoList[i][1]] then
+-- 				table.insert(yijiarupindaolist,{chatpindaoList[i][2],chatpindaoList[i][3]});
+-- 			end
+-- 		end
+-- 		local hanhuaneirong=fujiF.hanhuaNR.E:GetText();
+-- 		if Pig_OptionsUI.autoInvite_shikong then
+-- 			local zhilingV = fujiF.jinzuzhiling_E:GetText()
+-- 			if zhilingV~="" and zhilingV~=" " then
+-- 				hanhuaneirong=hanhuaneirong..",密"..zhilingV.."进组";
+-- 			end
+-- 		end
+-- 		for i=1,#yijiarupindaolist do
+-- 			if yijiarupindaolist[i][1]=="CHANNEL" then
+-- 				SendChatMessage(hanhuaneirong,yijiarupindaolist[i][1],nil,yijiarupindaolist[i][2])
+-- 			else
+-- 				SendChatMessage(hanhuaneirong,yijiarupindaolist[i][1])
+-- 			end
+-- 		end
+-- 	end)
+-- 	--获取目标数据=========
+-- 	function fujiF.GetRaidMubiao()
+-- 		fujiF.Datas_MB={
+-- 			["All"]=0,
+-- 			["Xulie"]={0,0,0},
+-- 			["Xulie_MB"]={{},{},{}},
+-- 		};
+-- 		local renyuanD = PIGA["Invite"]["Zudui"]["mubiaoNum"]
+-- 		for xulie=1,#Roles_List do
+-- 			for id=1,#Roles_List[xulie] do
+-- 				local mubiaoS = renyuanD[xulie][id] or 0
+-- 				fujiF.Datas_MB.All=fujiF.Datas_MB.All+mubiaoS
+-- 				fujiF.Datas_MB.Xulie[xulie]=fujiF.Datas_MB.Xulie[xulie]+mubiaoS
+-- 				local ZhiyeS = fujiF.Datas_MB.Xulie_MB[xulie][id] or 0
+-- 				fujiF.Datas_MB.Xulie_MB[xulie][id]=ZhiyeS+mubiaoS
+-- 			end
+-- 		end
+-- 		if fujiF:IsShown() then fujiF.ShowUpdatePlayers() end
+-- 	end
+-- 	fujiF.GetRaidMubiao()
+-- 	--获取最新人员
+-- 	fujiF.Datas_DQList={}
+-- 	function fujiF.GetRaidPlayers()
+-- 		local renyuanData={};
+-- 		local numGroupMembers = GetNumGroupMembers("LE_PARTY_CATEGORY_HOME")
+-- 		if numGroupMembers>0 then
+-- 			for p=1,MAX_RAID_MEMBERS do
+-- 				local name, rank, subgroup, level, class, fileName, zone, online, isDead, role, isML, combatRole = GetRaidRosterInfo(p);
+-- 				if name then
+-- 					print(combatRole)
+-- 					local renyuaninfo={
+-- 						name,--1玩家名
+-- 						fileName,--2职业
+-- 						combatRole,--职责TND
+-- 					};
+-- 					table.insert(renyuanData,renyuaninfo);
+-- 				end
+-- 			end
+-- 		end
+-- 		for x=1,#renyuanData do
+-- 			for p=1,#fujiF.Datas_DQList do		
+-- 				if renyuanData[x][1]==fujiF.Datas_DQList[p][1] then
+-- 					--renyuanData[x][3]=fujiF.Datas_DQ[p][3]
+-- 				end
+-- 			end
+-- 		end
+-- 		fujiF.Datas_DQList=renyuanData;
+-- 		fujiF.Datas_DQ={
+-- 			["All"]=0,
+-- 			["Xulie"]={0,0,0},
+-- 			["Xulie_MB"]={{},{},{}},
+-- 		};
+-- 		local renyuanNew = fujiF.Datas_DQList
+-- 		for xulie=1,#Roles_List do
+-- 			for id=1,#Roles_List[xulie] do
+-- 				fujiF.Datas_DQ.Xulie_MB[xulie][id]=fujiF.Datas_DQ.Xulie_MB[xulie][id] or 0
+-- 				for p=1,#renyuanNew do
+-- 					fujiF.Datas_DQ.All=fujiF.Datas_DQ.All+1
+-- 					if renyuanNew[p][2]==Roles_List[xulie][id][1] then
+-- 						if renyuanNew[p][3]==Roles[xulie] then
+-- 							fujiF.Datas_DQ.Xulie[xulie]=fujiF.Datas_DQ.Xulie[xulie]+1
+-- 							fujiF.Datas_DQ.Xulie_MB[xulie][id]=fujiF.Datas_DQ.Xulie_MB[xulie][id]+1
+-- 						end
+-- 					end
+-- 				end
+-- 			end
+-- 		end
+-- 		if fujiF:IsShown() then fujiF.ShowUpdatePlayers() end
+-- 		panduantuanzhangzhuli()
+-- 		yidarenshusheding()
+-- 	end
+-- 	fujiF.GetRaidPlayers()
+-- 	--显示更新
+-- 	function fujiF.ShowUpdatePlayers()
+-- 		local renyuanD = fujiF.Datas_MB
+-- 		for xulie=1,#Roles_List do
+-- 			for id=1,#Roles_List[xulie] do
+-- 				_G["zhize_mubiao_E"..xulie.."_"..id]:SetText(fujiF.Datas_MB.Xulie_MB[xulie][id])
+-- 			end
+-- 			_G["zhize_F_"..xulie].mubiaoAll_V:SetText(fujiF.Datas_MB.Xulie[xulie])
+-- 		end
+-- 		fujiF.zongrenshu_mubiao:SetText(renyuanD.All)
+
+-- 		for xulie=1,#Roles_List do
+-- 			for id=1,#Roles_List[xulie] do
+-- 				local fujiku = _G["zhize_mubiao_E"..xulie.."_"..id]
+-- 				fujiku.wancheng:Hide()
+-- 				if fujiF.Datas_DQ.Xulie_MB[xulie][id]==fujiF.Datas_MB.Xulie_MB[xulie][id] then
+-- 					fujiku.wancheng:Show()
+-- 					fujiku.wancheng:SetTexture("interface/raidframe/readycheck-ready.blp");
+-- 				elseif fujiF.Datas_DQ.Xulie_MB[xulie][id]>fujiF.Datas_MB.Xulie_MB[xulie][id] then
+-- 					fujiku.wancheng:Show()
+-- 					fujiku.wancheng:SetTexture("interface/raidframe/readycheck-notready.blp");--X号
+-- 				end
+-- 				fujiku.yizu:SetText(fujiF.Datas_DQ.Xulie_MB[xulie][id])
+-- 			end
+-- 			_G["zhize_F_"..xulie].dangqianAll_V:SetText(fujiF.Datas_DQ.Xulie[xulie])
+-- 		end
+-- 		local numGroupMembers = GetNumGroupMembers("LE_PARTY_CATEGORY_HOME")
+-- 		fujiF.zongrenshu_dangqian:SetText(numGroupMembers)
+-- 		--人数异常再次获取
+-- 		-- if numGroupMembers ~= fujiF.Datas_DQ.All then
+-- 		-- 	fujiF.ShowUpdatePlayers()
+-- 		-- end
+-- 	end
+-- 	---------
+-- 	fujiF:HookScript("OnShow", function(self)
+-- 		self.jinzuzhiling_E:SetText(PIGA["Invite"]["Zudui"]["jinzuCMD"]);
+-- 		self.INV_wuxianzhi:SetChecked(PIGA["Invite"]["Zudui"]["INV_wuxianzhi"])
+-- 		self.hanhuaNR.E:SetText(PIGA["Invite"]["Zudui"]["hanhuaNR"])
+-- 		self.ShowUpdatePlayers()
+-- 	end);
+-- 	--===================================
+-- 	local lishiwanjiaxinxi={};
+-- 	local yizuduiERR=ERR_ALREADY_IN_GROUP_S:gsub("%%s","")
+-- 	local zhiyeweizhiNameQ={"坦克","治疗","输出"}
+-- 	local zhiyeweizhiNameQQ={{"坦克","熊D","熊T","T","MT","坦","战士T","防骑","FQ"},{"治疗","奶","大奶"},{"输出","狂暴战","KBZ", "kbz", "狂暴", "DPS", "dps","惩戒"}}
+-- 	fujiF:RegisterEvent("GROUP_ROSTER_UPDATE")
+-- 	fujiF:HookScript("OnEvent",function(self,event,arg1,_,_,_,arg5,_,_,_,_,_,_,arg12)
+-- 		print(event)
+-- 		if event=="GROUP_ROSTER_UPDATE" then
+-- 			C_Timer.After(1,self.GetRaidPlayers)
+-- 		end
+-- 		if event=="CHAT_MSG_SYSTEM" then	
+-- 			local yijingyouduiwu_fuben=arg1:match(yizuduiERR, 1)
+-- 			if yijingyouduiwu_fuben then
+-- 				local wanjianameXXk=arg1:gsub(yizuduiERR,"")
+-- 				SendChatMessage("[!Pig] 你已有队伍，请退组后再M", "WHISPER", nil, wanjianameXXk);
+-- 			end
+-- 		end
+-- 		if event=="CHAT_MSG_WHISPER" then
+-- 			for i=1,#lishiwanjiaxinxi do
+-- 				if (GetServerTime()-lishiwanjiaxinxi[i][1])>60 then
+-- 					table.remove(lishiwanjiaxinxi, i);
+-- 				end
+-- 			end
+-- 			local feizidonghuifu=arg1:match("[!Pig]", 1)
+-- 			if feizidonghuifu then return end
+-- 			local localizedClass, englishClass= GetPlayerInfoByGUID(arg12)
+
+-- -- 				local function chunshuchuzhiyeyaoqing()
+-- -- 						local zhiyeweizhiID={0,0,0}
+-- -- 						zhiyeweizhiID.all=0
+-- -- 						for i=1,#invite.classes_Name do
+-- -- 							for ii=1,#invite.classes_Name[i] do
+-- -- 								if englishClass==invite.classes_Name[i][ii] then
+-- -- 									zhiyeweizhiID[i]=ii
+-- -- 									zhiyeweizhiID.all=zhiyeweizhiID.all+1
+-- -- 								end
+-- -- 							end
+-- -- 						end
+
+-- -- 						if zhiyeweizhiID.all==1 then
+-- -- 							for i=1,#invite.TND do
+-- -- 								if zhiyeweizhiID[i]>0 then
+-- -- 									if _G[invite.TND[i].."_mubiao_E_"..zhiyeweizhiID[i]]:GetNumber()>tonumber(_G[invite.TND[i].."_yizu_"..zhiyeweizhiID[i]]:GetText()) then
+-- -- 										local numGroupMembers = GetNumGroupMembers("LE_PARTY_CATEGORY_HOME")
+-- -- 										if numGroupMembers==5 then
+-- -- 											ConvertToRaid() 
+-- -- 										end
+-- -- 										PIG_InviteUnit(arg5)
+-- -- 									else
+-- -- 										SendChatMessage("[!Pig] "..localizedClass .. "已满，可换其他职业，感谢支持", "WHISPER", nil, arg5);
+-- -- 									end
+-- -- 								end
+-- -- 							end
+-- -- 						elseif zhiyeweizhiID.all>1 then
+-- -- 							local zuduizhushou_MSG=localizedClass.."尚缺:";
+-- -- 							local chazhiyefenlai={};
+-- -- 							for i=1,#invite.TND do
+-- -- 								if zhiyeweizhiID[i]>0 then
+-- -- 									if _G[invite.TND[i].."_mubiao_E_"..zhiyeweizhiID[i]]:GetNumber()>tonumber(_G[invite.TND[i].."_yizu_"..zhiyeweizhiID[i]]:GetText()) then
+-- -- 										zuduizhushou_MSG=zuduizhushou_MSG..zhiyeweizhiNameQ[i]..",";
+-- -- 										table.insert(chazhiyefenlai,i)
+-- -- 									end
+-- -- 								end
+-- -- 							end
+-- -- 							if #chazhiyefenlai>0 then
+-- -- 								SendChatMessage("[!Pig] "..zuduizhushou_MSG.."请回复职责", "WHISPER", nil, arg5);
+-- -- 								for i=1,#lishiwanjiaxinxi do
+-- -- 									if lishiwanjiaxinxi[i][2]==arg5 then return end
+-- -- 								end
+-- -- 								table.insert(lishiwanjiaxinxi,{GetServerTime(),arg5,chazhiyefenlai})
+-- -- 							else
+-- -- 								SendChatMessage("[!Pig] "..localizedClass.."已满，可换其他职业，感谢支持", "WHISPER", nil, arg5);
+-- -- 							end
+-- -- 						end	
+-- -- 				end
+
+-- -- 				local function hunhezhiyezhizehuifu()
+-- -- 					for i=1,#lishiwanjiaxinxi do
+-- -- 						if arg5 == lishiwanjiaxinxi[i][2] then
+-- -- 							for x=1,#lishiwanjiaxinxi[i][3] do
+-- -- 								for xx=1,#zhiyeweizhiNameQQ[lishiwanjiaxinxi[i][3][x]] do
+-- -- 									local zuduizhushouzhizeYES=arg1:find(zhiyeweizhiNameQQ[lishiwanjiaxinxi[i][3][x]][xx], 1)
+-- -- 									if zuduizhushouzhizeYES then
+-- -- 										for k=1,#invite.classes_Name do
+-- -- 											for kk=1,#invite.classes_Name[k] do
+-- -- 												if englishClass==invite.classes_Name[k][kk] then
+-- -- 													if lishiwanjiaxinxi[i][3][x]==k then
+-- -- 														if _G[invite.TND[k].."_mubiao_E_"..kk]:GetNumber()>tonumber(_G[invite.TND[k].."_yizu_"..kk]:GetText()) then
+-- -- 															local numGroupMembers = GetNumGroupMembers("LE_PARTY_CATEGORY_HOME")
+-- -- 															if numGroupMembers==5 and not IsInRaid("LE_PARTY_CATEGORY_HOME") then
+-- -- 																ConvertToRaid() 
+-- -- 															end
+-- -- 															PIG_InviteUnit(arg5)
+-- -- 														else
+-- -- 															SendChatMessage("[!Pig] "..zhiyeweizhiNameQ[k]..localizedClass .. "已满，可换其他职业/天赋，感谢支持", "WHISPER", nil, arg5);
+-- -- 														end
+-- -- 													end
+-- -- 												end
+-- -- 											end
+-- -- 										end
+-- -- 										table.remove(lishiwanjiaxinxi, i);
+-- -- 										return
+-- -- 									end
+-- -- 								end
+-- -- 							end
+-- -- 							SendChatMessage("[!Pig] 职责不符，本次会话结束，进组需重新回复进组指令", "WHISPER", nil, arg5);
+-- -- 							table.remove(lishiwanjiaxinxi,i);
+-- -- 							break
+-- -- 						end
+-- -- 					end
+-- -- 				end
+-- -- 				--执行邀请
+-- -- 				local cunzaiguanjianzi=arg1:find(PIGA["Invite"]["Zudui"]["jinzuZhiling"], 1)
+-- -- 				if cunzaiguanjianzi then
+-- -- 					if PIGA["Invite"]["Zudui"]["wutiaojianjINV"]=="ON" then
+-- -- 						local numGroupMembers = GetNumGroupMembers("LE_PARTY_CATEGORY_HOME")
+-- -- 						if numGroupMembers==5 and not IsInRaid("LE_PARTY_CATEGORY_HOME") then
+-- -- 							ConvertToRaid() 
+-- -- 						end
+-- -- 						PIG_InviteUnit(arg5)
+-- -- 					else
+-- -- 						chunshuchuzhiyeyaoqing()
+-- -- 					end
+-- -- 				else
+-- -- 					hunhezhiyezhizehuifu()
+-- -- 				end
+-- -- 			end
+-- 		end
+-- 	end)
+end
+
+-- 	--自动喊话====================
+-- 	--过滤频道发言过频提示
+-- 	local function guolvliaotiancuowuINFO(self,event,arg1,...)
+-- 		if arg1=="THROTTLED" then
+-- 			return true;
+-- 		else
+-- 	    	return false, arg1, ...
+-- 		end
+-- 	end
+-- 	ChatFrame_AddMessageEventFilter("CHAT_MSG_CHANNEL_NOTICE",guolvliaotiancuowuINFO)
+-- 	addonTable.RaidRecord_Invite_hanhua=false;
+-- 	local hanhuaxuliebianhaoID=0;
+-- 	local function zidonghanhuaFun()
+-- 		if IsInGroup() then
+-- 			local isLeader = UnitIsGroupLeader("player", "LE_PARTY_CATEGORY_HOME");
+-- 			local isTrue = UnitIsGroupAssistant("player", "LE_PARTY_CATEGORY_HOME");
+-- 			if isLeader~=true and isTrue~=true  then
+-- 				addonTable.RaidRecord_Invite_hanhua=false;
+-- 				PIG_print("自动喊话已停止，你必须是队长/团长/助理");
+-- 			end
+-- 		end
+-- 		if tonumber(invite.yizuzongrenshuX_V:GetText())>=tonumber(invite.mubiaozongrenshuX_V:GetText()) then
+-- 			addonTable.RaidRecord_Invite_hanhua=false;
+-- 			PIG_print("已达目标人数，自动喊话已停止");
+-- 		end
+-- 		if addonTable.RaidRecord_Invite_hanhua==true then
+-- 			if invite_UI:IsShown() then
+-- 				if hanhuaxuliebianhaoID==0 then
+-- 					invite.hanhuakaishi.Tex:SetTexture("interface/common/indicator-green.blp");
+-- 					hanhuaxuliebianhaoID=1
+-- 				else
+-- 					invite.hanhuakaishi.Tex:SetTexture("interface/common/indicator-gray.blp");
+-- 					hanhuaxuliebianhaoID=0
+-- 				end
+-- 			end
+-- 			C_Timer.After(0.5,zidonghanhuaFun)
+-- 		else
+-- 			invite.hanhuakaishi.Tex:SetTexture("interface/common/indicator-gray.blp");
+-- 			addonTable.RaidRecord_Invite_hanhua=false;
+-- 		end
+-- 	end
+-- 	local function zidonghanhuahanshu()
+-- 		local hanhuaneirong="";
+-- 		hanhuaneirong=hanhuaneirong..invite.kaituanhanhua_E:GetText();
+-- 		local zhilingV = invite.jinzuzhiling_E:GetText()
+-- 		if zhilingV~="" and zhilingV~=" " then
+-- 			hanhuaneirong=hanhuaneirong..",密"..zhilingV.."进组";
+-- 		end
+-- 		--公共
+-- 		local yijiarupindaolist ={};
+-- 		local channel1 = {GetChannelList()};
+-- 		for i=1,#channel1 do
+-- 			for ii=1,#pindaolist[2] do
+-- 				if PIGA["Invite"]["Zudui"]["hanhuapindao"][2][ii] ==true then
+-- 					if channel1[i]==pindaolist[2][ii] then
+-- 						table.insert(yijiarupindaolist,channel1[i-1]);
+-- 					end
+-- 				end
+-- 			end
+-- 		end
+-- 		for i=1,#yijiarupindaolist do
+-- 			SendChatMessage(hanhuaneirong,"CHANNEL",nil,yijiarupindaolist[i])
+-- 		end
+-- 	end
+-- 	local function zidonghanhuahanshu_Open()
+-- 		if addonTable.RaidRecord_Invite_hanhua==true then
+-- 			if tonumber(invite.yizuzongrenshuX_V:GetText())<tonumber(invite.mubiaozongrenshuX_V:GetText()) then
+-- 				C_Timer.After(0.1,zidonghanhuahanshu)
+-- 				C_Timer.After(0.2,zidonghanhuahanshu)
+-- 				C_Timer.After(0.3,zidonghanhuahanshu)
+-- 				C_Timer.After(0.4,zidonghanhuahanshu)
+-- 				C_Timer.After(0.5,zidonghanhuahanshu)
+-- 				C_Timer.After(0.6,zidonghanhuahanshu)
+-- 				C_Timer.After(0.7,zidonghanhuahanshu)
+-- 				C_Timer.After(0.8,zidonghanhuahanshu)
+-- 				C_Timer.After(0.9,zidonghanhuahanshu)
+-- 				C_Timer.After(1.0,zidonghanhuahanshu)
+-- 				C_Timer.After(1.1,zidonghanhuahanshu)
+-- 				for s=1,#pindaolist[1] do
+-- 					if PIGA["Invite"]["Zudui"]["hanhuapindao"][1][s] ==true then
+-- 						if pindaolist[1][s]=="GUILD" then
+-- 							local hanhuaneirong="";
+-- 							hanhuaneirong=hanhuaneirong..invite.kaituanhanhua_E:GetText();
+-- 							local zhilingV = invite.jinzuzhiling_E:GetText()
+-- 							if zhilingV and zhilingV then
+-- 								hanhuaneirong=hanhuaneirong..",密"..zhilingV.."进组";
+-- 							end
+-- 							SendChatMessage(hanhuaneirong,pindaolist[1][s],nil)
+-- 							break
+-- 						end
+-- 					end
+-- 				end
+-- 				C_Timer.After(PIGA["Invite"]["Zudui"]["shijianjiange"],zidonghanhuahanshu_Open) 
+-- 			end
+-- 		end
+-- 	end
+
+-- 	---
+-- 	invite.hanhuakaishi = CreateFrame("Button",nil,invite, "UIPanelButtonTemplate");  
+-- 	invite.hanhuakaishi:SetSize(100,28);
+-- 	invite.hanhuakaishi.Text:SetPoint("CENTER",invite.hanhuakaishi,"CENTER",10,0);
+-- 	invite.hanhuakaishi_Font=invite.hanhuakaishi:GetFontString()
+-- 	invite.hanhuakaishi_Font:SetFont(ChatFontNormal:GetFont(), 13);
+-- 	invite.hanhuakaishi_Font:SetTextColor(0, 1, 1, 1);
+-- 	invite.hanhuakaishi:SetText("自动喊话");
+-- 	invite.hanhuakaishi.Tex = invite.hanhuakaishi:CreateTexture(nil, "BORDER");
+-- 	invite.hanhuakaishi.Tex:SetTexture("interface/common/indicator-gray.blp");
+-- 	invite.hanhuakaishi.Tex:SetPoint("RIGHT",invite.hanhuakaishi.Text,"LEFT",0,-2);
+-- 	invite.hanhuakaishi.Tex:SetSize(23,23);
+-- 	invite.hanhuakaishi:SetScript("OnClick", function ()
+-- 		if addonTable.RaidRecord_Invite_hanhua==true then
+-- 			addonTable.RaidRecord_Invite_hanhua=false
+-- 		elseif addonTable.RaidRecord_Invite_hanhua==false then
+-- 			addonTable.RaidRecord_Invite_hanhua=true
+-- 			zidonghanhuaFun()
+-- 			zidonghanhuahanshu_Open()
+-- 			if Pig_OptionsUI.autoInvite_shikong==false then
+-- 				zuduizhushoushandong()
+-- 				yanjingzhuandongkaishi()
+-- 			end
+-- 		end
+-- 	end)
+-- 	---间隔
+-- 	invite.hanhuajiange_E = CreateFrame("EditBox", nil, invite,"InputBoxInstructionsTemplate");
+-- 	invite.hanhuajiange_E:SetSize(zhiye_Height*1.8,zhiye_Height+14);
+-- 	invite.hanhuajiange_E:SetPoint("RIGHT", invite.hanhuakaishi, "LEFT", -4,-0);
+-- 	invite.hanhuajiange_E:SetFontObject(ChatFontNormal);
+-- 	invite.hanhuajiange_E:SetMaxLetters(4)
+-- 	invite.hanhuajiange_E:SetAutoFocus(false);
+-- 	invite.hanhuajiange_E:SetNumeric()
+-- 	invite.hanhuajiange_E:SetScript("OnEscapePressed", function(self) 
+-- 		self:ClearFocus()
+-- 	end);
+-- 	invite.hanhuajiange_E:SetScript("OnEnterPressed", function(self) 
+-- 		self:ClearFocus() 
+-- 	end);
+-- 	invite.hanhuajiange_E:SetScript("OnEditFocusLost", function(self)
+-- 		if self:GetNumber()<300 then
+-- 			self:SetText(300)
+-- 			PIGA["Invite"]["Zudui"]["shijianjiange"]=self:GetNumber();
+-- 			PIG_print("不能小于300秒");
+-- 		else
+-- 			PIGA["Invite"]["Zudui"]["shijianjiange"]=self:GetNumber();
+-- 		end
+-- 	end);
+-- 	invite.hanhuajiange = invite:CreateFontString();
+-- 	invite.hanhuajiange:SetPoint("RIGHT",invite.hanhuajiange_E,"LEFT",-4,0);
+-- 	invite.hanhuajiange:SetFont(ChatFontNormal:GetFont(), 14, "OUTLINE");
+-- 	invite.hanhuajiange:SetText("\124cff00FF00间隔/S：\124r");
+-- 	-----
+-- 	local ADD_ButtonMima=addonTable.ADD_ButtonMima
+-- 	local MIMAWEISHU = 6
+-- 	invite.unlock={}
+-- 	local XIAYIbv = -8
+-- 	local weizhiList = {
+-- 		{"TOPLEFT","TOPLEFT",20,XIAYIbv},
+-- 		{"TOPLEFT","TOPLEFT",60,XIAYIbv},
+-- 		{"TOPLEFT","TOPLEFT",100,XIAYIbv},
+-- 		{"TOPLEFT","TOPLEFT",140,XIAYIbv},
+-- 		{"TOPLEFT","TOPLEFT",180,XIAYIbv},
+-- 		{"TOPLEFT","TOPLEFT",220,XIAYIbv},
+-- 	}
+-- 	local function CZzhuantai(num)
+-- 		for i=1,#num do
+-- 			invite.unlock[num[i]]=nil
+-- 		end
+-- 	end
+-- 	local weizhiListxulie = {[1]={2,3,5,6},[2]={5,6},[3]={2,5,6},[4]={1,2,3,5,6},[5]={},[6]={5}}
+-- 	for i=1,MIMAWEISHU do
+-- 		local Pigbut = ADD_ButtonMima(nil,nil,invite,14,14,weizhiList[i][1],invite,weizhiList[i][2],weizhiList[i][3],weizhiList[i][4],i)
+-- 		Pigbut:SetScript("OnClick", function (self)
+-- 			if invite.yijiesuo then return end
+-- 			local x = 1
+-- 			for but=1,#weizhiListxulie[self:GetID()] do
+-- 				if not invite.unlock[weizhiListxulie[self:GetID()][but]] then
+-- 					CZzhuantai({1,2,3,4,5,6})
+-- 					return
+-- 				end
+-- 			end
+-- 			invite.unlock[self:GetID()]=true
+			
+-- 			for i=1,4 do
+-- 				if not invite.unlock[i] then return end
+-- 			end
+-- 			invite.yijiesuo=true
+-- 			invite.hanhuakaishi:SetPoint("TOPRIGHT",invite,"TOPRIGHT",-10,-392);
+-- 			invite.hanhuajiange_E:SetText(PIGA["Invite"]["Zudui"]["shijianjiange"]);
+-- 		end);
+-- 	end
+-- 	--==========================================
+-- 	invite.hanhuakaishi:SetPoint("TOPRIGHT",invite,"TOPRIGHT",99990,-99999);
+-- 	invite:SetScript("OnShow", function ()
+-- 		if PIGA["Invite"]["Zudui"]["wutiaojianjINV"]=="ON" then
+-- 			invite.INV_wuxianzhiyaoqing:SetChecked(true);
+-- 		end
+-- 		invite.kaituanhanhua_E:SetText(PIGA["Invite"]["Zudui"]["kaituanName"]);
+-- 		invite.jinzuzhiling_E:SetText(PIGA["Invite"]["Zudui"]["jinzuZhiling"]);
+-- 		invite.hanhuajiange_E:SetText(PIGA["Invite"]["Zudui"]["shijianjiange"]);
+-- 		UpdatePlayersINFO();
+-- 	end)

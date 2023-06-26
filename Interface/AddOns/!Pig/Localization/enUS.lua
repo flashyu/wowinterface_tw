@@ -101,11 +101,13 @@ L["CONFIG_DERIVE"] = "Copy the bottom string and paste it to where you want to i
 L["CONFIG_DERIVERL"] = "Import and reload";
 L["CONFIG_DERIVEERROR"] = "Import failed, unrecognized string";
 --
-L["INVITE_NAME"] = "invite";
-L["INVITE_LEISURE"] = "waiting";
-L["INVITE_CHEDUI"] = "team";
+L["INVITE_TABNAME"] = "Space-time gate";
+L["INVITE_CHEDUI"] = "motorcade";
+L["INVITE_HOUCHE"] = "Waiting";
 L["INVITE_PLANE"] = "layer";
+L["INVITE_ZUDUI"] = "Invite";
+L["INVITE_LEISURE"] = "Leisure";
 L["INVITE_RECEIVEDATA"] = "Receiving data...";
-L["INVITE_LFG_JOIN"] = "Join PIGCHANNEL";
-L["INVITE_LFG_LEAVE"] = "Already joined PIGCHANNEL";
+L["INVITE_LFG_JOIN"] = "Join PIG CHANNEL";
+L["INVITE_LFG_LEAVE"] = "Already joined PIG";
 end

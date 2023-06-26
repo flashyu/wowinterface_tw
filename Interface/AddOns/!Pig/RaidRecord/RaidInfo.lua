@@ -27,19 +27,7 @@ function RaidRFun.RaidRecord_RaidInfo()
 	local RaidR=_G[GnUI]
 	local fujiF=PIGOptionsList_R(RaidR.F,"人员信息",80)
 	local cl_iconH=24;
-	local cl_Name={"WARRIOR","PALADIN","HUNTER","ROGUE","PRIEST","SHAMAN","MAGE","WARLOCK","DRUID"};
-	if tocversion>29999 then
-		table.insert(cl_Name,"DEATHKNIGHT");
-	end
-	if tocversion>49999 then
-		table.insert(cl_Name,"MONK");
-	end
-	if tocversion>69999 then
-		table.insert(cl_Name,"DEMONHUNTER");
-	end
-	if tocversion>99999 then
-		table.insert(cl_Name,"EVOKER");
-	end
+	local cl_Name=addonTable.Data.cl_Name
 	--点击提示
 	local iconWH = 22
 	fujiF.yedibuF = PIGLine(fujiF,"BOT",31)
@@ -82,12 +70,12 @@ function RaidRFun.RaidRecord_RaidInfo()
 		classes.Tex:SetTexture("Interface/TargetingFrame/UI-Classes-Circles");
 		classes.Tex:SetPoint("LEFT", classes, "LEFT", 0,0);
 		classes.Tex:SetSize(cl_iconH-2,cl_iconH-2);
-		classes.Tex:SetTexCoord(unpack(CLASS_ICON_TCOORDS[cl_Name[id]]));
+		classes.Tex:SetTexCoord(unpack(CLASS_ICON_TCOORDS[cl_Name[id][1]]));
 		classes.Num = PIGFontString(classes,{"LEFT", classes.Tex, "RIGHT", 0,0},0,"OUTLINE");
 		classes.Num:SetTextColor(1, 1, 1, 1);
 	end
 	---职责补助分类
-	local zhizeIcon=RaidRFun.zhizeIcon
+	local zhizeIcon=addonTable.Data.zhizeIcon
 	local LeftmenuName={"设为<|cff00FF00"..TANK.."|r>补助","设为<|cff00FF00"..HEALS.."|r>补助","设为<|cff00FF00"..DAMAGE.."|r>补助","撤销补助"}
 	local LeftmenuV=RaidRFun.LeftmenuV
 	for id=1,#zhizeIcon do

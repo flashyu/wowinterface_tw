@@ -30,9 +30,7 @@ RaidRFun.lineTOP=lineTOP
 RaidRFun.iconWH=iconWH
 RaidRFun.hang_Height=hang_Height
 RaidRFun.hang_NUM=hang_NUM
---local zhizeIcon = {{0.01,0.26,0.26,0.51},{0.27,0.52,0,0.25},{0.27,0.52,0.25,0.5},{0.01,0.26,0,0.25}}
-local zhizeIcon = {{0.01,0.26,0.26,0.51},{0.27,0.52,0,0.25},{0.27,0.52,0.25,0.5}}
-RaidRFun.zhizeIcon=zhizeIcon
+local zhizeIcon=addonTable.Data.zhizeIcon
 local LeftmenuV={"T","N","D"}
 RaidRFun.LeftmenuV=LeftmenuV
 local buzhuzhize = {TANK,HEALS,DAMAGE}
@@ -598,13 +596,14 @@ function RaidRFun.RaidRecord()
 	local function panduanNewfuben()
 		local FBname, instanceType, difficultyID, difficultyName = GetInstanceInfo()
 		--print(FBname, instanceType, difficultyID, difficultyName)
-		if difficultyID~=0 then
+		--if difficultyID~=0 then
 			if PIGA["RaidRecord"]["instanceName"][1] then
 				if #PIGA["RaidRecord"]["ItemList"]==0 then
 					PIGA["RaidRecord"]["instanceName"]={GetServerTime(),FBname,difficultyName}
 					RaidR.Show_dangqianName()
 				else
-					if PIGA["RaidRecord"]["instanceName"][2]==FBname and PIGA["RaidRecord"]["instanceName"][3]==difficultyName then
+					if PIGA["RaidRecord"]["instanceName"][2]==FBname then
+						--if PIGA["RaidRecord"]["instanceName"][3]==difficultyName then
 						if GetServerTime()-PIGA["RaidRecord"]["instanceName"][1]>43200 then
 							StaticPopup_Show("NEW_WUPIN_LIST","你似乎进入了新的副本\n");
 						end
@@ -616,7 +615,7 @@ function RaidRFun.RaidRecord()
 				PIGA["RaidRecord"]["instanceName"]={GetServerTime(),FBname,difficultyName}
 				RaidR.Show_dangqianName()
 			end
-		end
+		--end
 	end
 	RaidR:RegisterEvent("PLAYER_ENTERING_WORLD");
 	RaidR:SetScript("OnEvent",function (self,event)
@@ -628,11 +627,13 @@ function RaidRFun.RaidRecord()
 			end
 		end
 		local inInstance, instanceType = IsInInstance()
-		if instanceType=="raid" then
-			panduanNewfuben()
-		elseif instanceType=="party" then
-			if PIGA["RaidRecord"]["Rsetting"]["wurenben"] then
+		if inInstance then
+			if instanceType=="raid" then
 				panduanNewfuben()
+			elseif instanceType=="party" then
+				if PIGA["RaidRecord"]["Rsetting"]["wurenben"] then
+					panduanNewfuben()
+				end
 			end
 		end
 	end);

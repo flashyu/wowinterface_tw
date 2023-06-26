@@ -95,8 +95,8 @@ function InviteFun.Invite()
 	InvF.F=PIGOptionsList_RF(InvF,biaotiH,"Bot",{0,0,0})
 	----
 	InviteFun.Chedui()
-	--InviteFun.Leisure()
 	InviteFun.Plane()
+	InviteFun.Zudui()
 end
 
 function InviteFun.GetInfoBut(fuF,Point,butTXT,jindutiaoW,GetButW)

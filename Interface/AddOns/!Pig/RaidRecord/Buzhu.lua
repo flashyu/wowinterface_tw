@@ -30,7 +30,7 @@ function RaidRFun.RaidRecord_Buzhu()
 	local fujiF=PIGOptionsList_R(RaidR.F,"补助/奖励",80)
 	--------------
 	fujiF.line = PIGLine(fujiF,"C",-3)
-	local zhizeIcon=RaidRFun.zhizeIcon
+	local zhizeIcon=addonTable.Data.zhizeIcon
 	local LeftmenuV=RaidRFun.LeftmenuV
 	local buzhuzhize = RaidRFun.buzhuzhize
 	local buzhuName = buzhuzhize[1].."/"..buzhuzhize[2].."/"..buzhuzhize[3]

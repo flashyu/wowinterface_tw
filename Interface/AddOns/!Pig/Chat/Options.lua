@@ -352,7 +352,7 @@ if GetLocale() == "zhTW" then
 	ALLM[3] = {"新手聊天","新"}
 end
 local function jingjianTXT(text)
-	local text=text:gsub("|h%[(%d+)%. 大脚世界频道%]|h", "|h%[%1%. 世%]|h")
+	local text=text:gsub("|h%[(%d+)%. 大脚世界频道%]|h", "|h%[%1%.世%]|h")
 	local text=text:gsub("|h%[(%d+)%. "..ALLM[1][1].."%]|h", "|h%[%1%."..ALLM[1][2].."%]|h")--交易城镇
 	local text=text:gsub("|h%[(%d+)%. "..ALLM[2][1].."%]|h", "|h%[%1%."..ALLM[2][2].."%]|h")--服务交易
 	local text=text:gsub("|h%[(%d+)%. "..ALLM[3][1].."%]|h", "|h%[%1%."..ALLM[3][2].."%]|h")--新手

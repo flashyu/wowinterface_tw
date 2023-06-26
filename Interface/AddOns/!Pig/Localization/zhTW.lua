@@ -237,10 +237,12 @@ L["CVAR_TABNAME2"] = "姓名版";
 L["CVAR_TABNAME3"] = "自身高亮";
 L["CVAR_TABNAME4"] = "高級";
 --Invite
-L["INVITE_NAME"] = "時空之門";
-L["INVITE_LEISURE"] = "候車";
+L["INVITE_TABNAME"] = "時空之門";
 L["INVITE_CHEDUI"] = "車隊";
+L["INVITE_HOUCHE"] = "候車";
 L["INVITE_PLANE"] = "位麵";
+L["INVITE_ZUDUI"] = "喊話";
+L["INVITE_LEISURE"] = "休閒";
 L["INVITE_RECEIVEDATA"] = "正在接收數據...";
 L["INVITE_LFG_JOIN"] = "加入PIG頻道";
 L["INVITE_LFG_LEAVE"] = "已加入PIG頻道";

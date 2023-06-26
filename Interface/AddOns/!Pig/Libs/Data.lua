@@ -2,6 +2,36 @@ local addonName, addonTable = ...;
 local L=addonTable.locale
 local _, _, _, tocversion = GetBuildInfo()
 local Data = {}
+---职业
+local cl_Name={};
+local cl_Name_Role={
+	["WARRIOR"] = {"TANK","DAMAGER"},
+	["PALADIN"] = {"TANK", "HEALER","DAMAGER"},
+	["HUNTER"] = {"DAMAGER"},
+	["ROGUE"] = {"DAMAGER"},
+	["PRIEST"] = {"HEALER","DAMAGER"},
+	["DEATHKNIGHT"] = {"TANK","DAMAGER"},
+	["SHAMAN"] = {"HEALER","DAMAGER"},
+	["MAGE"] = {"DAMAGER"},
+	["WARLOCK"] = {"DAMAGER"},
+	["MONK"] = {"TANK", "HEALER","DAMAGER"},
+	["DRUID"] = {"TANK", "HEALER","DAMAGER"},
+	["DEMONHUNTER"] = {"TANK","DAMAGER"},
+	["EVOKER"] = {"HEALER","DAMAGER"}, 
+}
+for i=1,GetNumClasses() do
+	local className, classFile, classID = GetClassInfo(i)
+	if classFile then
+		--local tank, heal, dps = UnitGetAvailableRoles("player")
+		table.insert(cl_Name,{classFile,cl_Name_Role[classFile],className, classID})
+	end
+end
+Data.cl_Name=cl_Name
+
+--职责
+--local zhizeIcon = {{0.01,0.26,0.26,0.51},{0.27,0.52,0,0.25},{0.27,0.52,0.25,0.5},{0.01,0.26,0,0.25}}
+local zhizeIcon = {{0.01,0.26,0.26,0.51},{0.27,0.52,0,0.25},{0.27,0.52,0.25,0.5}}
+Data.zhizeIcon=zhizeIcon
 
 --装备编号
 Data.InvSlot = {

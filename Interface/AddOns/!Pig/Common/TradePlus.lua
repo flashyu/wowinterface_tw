@@ -7,13 +7,11 @@ local PIGCheckbutton_R=Create.PIGCheckbutton_R
 local PIGFontString=Create.PIGFontString
 local CommonFun=addonTable.CommonFun
 -------
-TradeFrame.PIGinfo={
-	["duixiang"]="",
-	["TargetItem"]={nil,nil,nil,nil,nil,nil},
-	["TargetMoney"]=0,
-	["PlayerItem"]={nil,nil,nil,nil,nil,nil},
-	["PlayerMoney"]=0,
-}
+TradeFrame.PIG_TargetName="none"
+TradeFrame.PIG_TargetMoney=0
+TradeFrame.PIG_TargetItem={[1]=nil,[2]=nil,[3]=nil,[4]=nil,[5]=nil,[6]=nil}
+TradeFrame.PIG_PlayerMoney=0
+TradeFrame.PIG_PlayerItem={[1]=nil,[2]=nil,[3]=nil,[4]=nil,[5]=nil,[6]=nil}
 -- TradeFrame:RegisterEvent("UI_INFO_MESSAGE");--交易信息
 -- TradeFrame:RegisterEvent("TRADE_MONEY_CHANGED");--交易窗口的货币值更改时触发。
 -- TradeFrame:RegisterEvent("TRADE_PLAYER_ITEM_CHANGED");
@@ -24,24 +22,24 @@ TradeFrame.PIGinfo={
 -- TradeFrame:RegisterEvent("PLAYER_TRADE_MONEY");--当玩家进行交易时被触发
 -- TradeFrame:RegisterEvent("TRADE_ACCEPT_UPDATE");--当玩家和目标接受按钮的状态更改时触发。
 TradeFrame:HookScript("OnEvent",function (self,event,arg1,arg2,arg3,arg4,arg5)
-	if event=="TRADE_SHOW" or event=="TRADE_PLAYER_ITEM_CHANGED" or event=="TRADE_TARGET_ITEM_CHANGED" or event=="TRADE_MONEY_CHANGED" then
-		self.PIGinfo.duixiang=TradeFrameRecipientNameText:GetText();
-		self.PIGinfo.TargetMoney=GetTargetTradeMoney();
-		self.PIGinfo.PlayerMoney=GetPlayerTradeMoney();
+	if event=="TRADE_SHOW" or event=="TRADE_ACCEPT_UPDATE" or event=="TRADE_PLAYER_ITEM_CHANGED" or event=="TRADE_TARGET_ITEM_CHANGED" or event=="TRADE_MONEY_CHANGED" then
+		self.PIG_TargetName=TradeFrameRecipientNameText:GetText();
+		self.PIG_TargetMoney=GetTargetTradeMoney();
+		self.PIG_PlayerMoney=GetPlayerTradeMoney();
 		for i=1, MAX_TRADE_ITEMS, 1 do
 			local TargetItemlink=GetTradeTargetItemLink(i)
 			if TargetItemlink then
 				local name, texture, numItems, quality, enchantment, canLoseTransmog, isBound = GetTradeTargetItemInfo(i);
-				self.PIGinfo.TargetItem[i]={TargetItemlink,numItems}
+				self.PIG_TargetItem[i]={TargetItemlink,numItems}
 			else
-				self.PIGinfo.TargetItem[i]=nil
+				self.PIG_TargetItem[i]=nil
 			end
 			local PlayerItemLink=GetTradePlayerItemLink(i)
 			if PlayerItemLink then
 				local name, texture, numItems, quality, enchantment, canLoseTransmog, isBound = GetTradePlayerItemInfo(i);
-				self.PIGinfo.PlayerItem[i]={PlayerItemLink,numItems}
+				self.PIG_PlayerItem[i]={PlayerItemLink,numItems}
 			else
-				self.PIGinfo.PlayerItem[i]=nil
+				self.PIG_PlayerItem[i]=nil
 			end 
 		end
 	end

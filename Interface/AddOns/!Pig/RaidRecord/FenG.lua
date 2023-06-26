@@ -50,7 +50,7 @@ function RaidRFun.RaidRecord_fenG()
 		MailEditBox:SetText("这是你在"..date("%Y-%m-%d",PIGA["RaidRecord"]["instanceName"][1]).."参加".."<"..PIGA["RaidRecord"]["instanceName"][2]..PIGA["RaidRecord"]["instanceName"][3]..">活动薪水，请查收");
 	end
 	--创建队伍角色框架===================
-	local zhizeIcon=RaidRFun.zhizeIcon
+	local zhizeIcon=addonTable.Data.zhizeIcon
 	local fenGbiliIcon=RaidRFun.fenGbiliIcon
 	local LeftmenuV=RaidRFun.LeftmenuV
 	local RightmenuV=RaidRFun.RightmenuV

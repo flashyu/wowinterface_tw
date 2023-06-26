@@ -241,9 +241,11 @@ L["RaidR_TABNAME"] = "开团助手";
 
 --Invite
 L["INVITE_TABNAME"] = "时空之门";
-L["INVITE_LEISURE"] = "候车";
 L["INVITE_CHEDUI"] = "车队";
+L["INVITE_HOUCHE"] = "候车";
 L["INVITE_PLANE"] = "位面";
+L["INVITE_ZUDUI"] = "喊话";
+L["INVITE_LEISURE"] = "休闲";
 L["INVITE_RECEIVEDATA"] = "正在接收数据...";
 L["INVITE_LFG_JOIN"] = "加入PIG频道";
 L["INVITE_LFG_LEAVE"] = "已加入PIG频道"
