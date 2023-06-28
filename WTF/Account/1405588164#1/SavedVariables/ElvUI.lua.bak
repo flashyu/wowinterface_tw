@@ -1,8 +1,8 @@
 
 ElvDB = {
 	["profileKeys"] = {
-		["狂暴專家 - 伊弗斯"] = "Default",
 		["上山打鸟 - 伊弗斯"] = "Default",
+		["狂暴專家 - 伊弗斯"] = "Default",
 	},
 	["DisabledAddOns"] = {
 	},
@@ -13,8 +13,8 @@ ElvDB = {
 	},
 	["class"] = {
 		["伊弗斯"] = {
-			["狂暴專家"] = "WARRIOR",
 			["上山打鸟"] = "HUNTER",
+			["狂暴專家"] = "WARRIOR",
 		},
 	},
 	["profiles"] = {
@@ -61,15 +61,15 @@ ElvDB = {
 				["ShiftAB"] = "BOTTOM,UIParent,BOTTOM,-254,363",
 				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,332,311",
 				["ElvAB_6"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-4,360",
-				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,335,349",
-				["ReputationBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,454,4",
-				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-179",
+				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,338,415",
+				["ElvUF_Raid2Mover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,485",
+				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,417,301",
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-339,415",
 				["VOICECHAT"] = "TOPLEFT,UIParent,TOPLEFT,155,-263",
 				["ElvUF_PartyMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,308",
-				["ExperienceBarMover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,417,301",
-				["ElvUF_Raid2Mover"] = "BOTTOMLEFT,UIParent,BOTTOMLEFT,4,485",
-				["ElvUF_TargetMover"] = "BOTTOM,UIParent,BOTTOM,338,415",
+				["AlertFrameMover"] = "TOP,UIParent,TOP,0,-179",
+				["ReputationBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,454,4",
+				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,335,349",
 			},
 			["unitframe"] = {
 				["targetSound"] = true,
@@ -91,8 +91,8 @@ ElvDB = {
 			["actionbar"] = {
 				["bar3"] = {
 					["buttonsPerRow"] = 12,
-					["buttonSize"] = 40,
 					["buttons"] = 12,
+					["buttonSize"] = 40,
 				},
 				["bar1"] = {
 					["buttonSize"] = 40,
@@ -124,8 +124,18 @@ ElvDB = {
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["狂暴專家"] = 1390422313,
 			["上山打鸟"] = 48503975,
+			["狂暴專家"] = 1393271965,
+		},
+	},
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["faction"] = {
+		["伊弗斯"] = {
+			["上山打鸟"] = "Horde",
+			["狂暴專家"] = "Horde",
 		},
 	},
 	["global"] = {
@@ -188,23 +198,19 @@ ElvDB = {
 			},
 		},
 	},
-	["faction"] = {
-		["伊弗斯"] = {
-			["狂暴專家"] = "Horde",
-			["上山打鸟"] = "Horde",
-		},
-	},
-	["namespaces"] = {
-		["LibDualSpec-1.0"] = {
-		},
-	},
 }
 ElvPrivateDB = {
 	["profileKeys"] = {
-		["狂暴專家 - 伊弗斯"] = "狂暴專家 - 伊弗斯",
 		["上山打鸟 - 伊弗斯"] = "上山打鸟 - 伊弗斯",
+		["狂暴專家 - 伊弗斯"] = "狂暴專家 - 伊弗斯",
 	},
 	["profiles"] = {
+		["上山打鸟 - 伊弗斯"] = {
+			["nameplates"] = {
+				["enable"] = false,
+			},
+			["install_complete"] = 13.32,
+		},
 		["狂暴專家 - 伊弗斯"] = {
 			["bags"] = {
 				["enable"] = false,
@@ -218,12 +224,6 @@ ElvPrivateDB = {
 				["enable"] = false,
 			},
 			["install_complete"] = 13.31,
-		},
-		["上山打鸟 - 伊弗斯"] = {
-			["nameplates"] = {
-				["enable"] = false,
-			},
-			["install_complete"] = 13.32,
 		},
 	},
 }
