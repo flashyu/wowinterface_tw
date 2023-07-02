@@ -215,7 +215,9 @@ PIGTradeFrame:HookScript("OnEvent",function (self,event,arg1,arg2,arg3,arg4,arg5
 			local RRItemList = PIGA["RaidRecord"]["ItemList"]		  
 			for x=1,#RRItemList do
 				--if tonumber(itemID_P)==RRItemList[x][2] then
-				if itemID_P==RRItemList[x][2] then
+				local itemLink=PIG_ItemLink(itemID_P)
+				local itemLink2=PIG_ItemLink(RRItemList[x][2])
+				if itemLink==itemLink2 then
 					if RRItemList[x][8]=="N/A" and RRItemList[x][9]==0 then
 						RRItemList[x][8]=wanjiaName;
 						RRItemList[x][9]=tonumber(jiaoyiG);
@@ -253,7 +255,9 @@ PIGTradeFrame:HookScript("OnEvent",function (self,event,arg1,arg2,arg3,arg4,arg5
 				for x=1,#RRItemList do
 					--local itemID_P = GetItemInfoInstant(itemLink_P) 
 					--if itemID_P==RRItemList[x][11] then
-					if itemLink_P==RRItemList[x][2] then
+					local itemLink=PIG_ItemLink(itemLink_P)
+					local itemLink2=PIG_ItemLink(RRItemList[x][2])
+					if itemLink==itemLink2 then
 						if RRItemList[x][8]=="N/A" and RRItemList[x][9]==0 then
 							RRItemList[x][8]=PIG_TargetName;
 							RRItemList[x][9]=pingjunfenG;

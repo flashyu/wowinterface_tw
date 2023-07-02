@@ -39,7 +39,9 @@ function CommonFun.FastOpen()
 									local itemLink = GetContainerItemLink(bag, k);
 									if itemLink then
 										for i=1,#shujuy do
-											if itemLink==shujuy[i][2] then
+											local itemLink=PIG_ItemLink(itemLink)
+											local itemLink2=PIG_ItemLink(shujuy[i][2])
+											if itemLink==itemLink2 then
 												self:SetAttribute("item", itemLink)
 												return
 											end

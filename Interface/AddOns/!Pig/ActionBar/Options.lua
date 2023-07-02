@@ -405,14 +405,18 @@ if tocversion<100000 then
 			StanceBar_Update(StanceBarFrame)
 			--PetBar_Update(PetActionBarFrame)
 			PetBar_Update(PetActionButton1)
-			MultiCastBar_Update(MultiCastActionBarFrame)
+			if MultiCastActionBarFrame then
+				MultiCastBar_Update(MultiCastActionBarFrame)
+			end
 		end);
 		hooksecurefunc("MultiActionBar_Update",function()	
 			Pig_MultiBar_Update()
 			StanceBar_Update(StanceBarFrame)
 			--PetBar_Update(PetActionBarFrame)
 			PetBar_Update(PetActionButton1)
-			MultiCastBar_Update(MultiCastActionBarFrame)
+			if MultiCastActionBarFrame then
+				MultiCastBar_Update(MultiCastActionBarFrame)
+			end
 		end);
 	end
 	ActionF.BarRight=PIGCheckbutton(ActionF,{"TOPLEFT",ActionF.botline,"TOPLEFT",300,-20},{"移动右边动作条到下方","移动右边竖向动作条到下方动作条之上"})

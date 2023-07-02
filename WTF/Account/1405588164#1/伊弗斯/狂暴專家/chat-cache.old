@@ -1,14 +1,14 @@
-VERSION 7
+VERSION 8
 
 ADDEDVERSION 22
 
 CHANNELS
-寻求组队 1 1 0
-综合 0 2 0
-交易 0 3 0
-本地防务 0 4 0
-PIG 1 5 0
-大脚世界频道 0 6 0
+26 1 1 1
+1 0 2 1
+2 0 3 1
+22 0 4 1
+PIG 1 5 3
+大脚世界频道 0 6 3
 END
 
 ZONECHANNELS 0

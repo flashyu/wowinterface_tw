@@ -48,14 +48,6 @@ end
 ---耐久==================
 local Zihaodaxiao,iwww,ihhh,kuandu = 14,33,15,160
 local XWidth, XHeight =CharacterHeadSlot:GetWidth(),CharacterHeadSlot:GetHeight()
-local function jisuanzongzhuangdeng(data)
-	local zongjizhuangdengall = 0
-	local zhuangbeishu=#data
-	for i=1,zhuangbeishu do
-		zongjizhuangdengall=zongjizhuangdengall+data[i]
-	end
-	return zongjizhuangdengall/zhuangbeishu
-end
 -----------------------
 local function Update_Level_V(framef,unit, ZBID)
 	framef.ZLV:SetText("");
@@ -81,16 +73,22 @@ local function Update_ranse_V(framef,unit,ZBID)
 end
 local function Update_ItemList_V(fjik,duixiang,tiaozui)
 	local newmaxWWWW = kuandu
-	local zhuangdenginfo = {}
+	local zhuangdengindo = {["allleve"]=0,["slots"]=16}
 	for i = 1, #InvSlot["ID"] do
 		local fujikk = _G[fjik..InvSlot["ID"][i]]
 		local itemLink=GetInventoryItemLink(duixiang, InvSlot["ID"][i])
-		if itemLink then	
+		if InvSlot["ID"][i]==16 then
+			zhuangdengindo.zhushou=itemLink
+		end
+		if InvSlot["ID"][i]==17 then
+			zhuangdengindo.fushou=itemLink
+		end
+		if itemLink then
 			fujikk.itemlink:SetText(itemLink)
 			fujikk.itembuwei:SetTextColor(0, 1, 1, 0.8);
 			fujikk.itembuweiF:SetBackdropBorderColor(0, 1, 1, 0.5)
 			local effectiveILvl = GetDetailedItemLevelInfo(itemLink)
-			table.insert(zhuangdenginfo,effectiveILvl)
+			zhuangdengindo.allleve=zhuangdengindo.allleve+effectiveILvl
 			local width = fujikk.itemlink:GetStringWidth()+44
 			if width>newmaxWWWW then
 				newmaxWWWW = width
@@ -101,11 +99,26 @@ local function Update_ItemList_V(fjik,duixiang,tiaozui)
 			fujikk.itemlink:SetText(" ")
 		end
 	end
-	local pingjunLvl = jisuanzongzhuangdeng(zhuangdenginfo)
-	local pingjunLvl = floor(pingjunLvl*10+5)/10
-	tiaozui.ZBLsit.pingjunLV_V:SetText(pingjunLvl)
 	tiaozui.ZBLsit:SetWidth(newmaxWWWW)
+	if GetAverageItemLevel then
+		local avgItemLevel, avgItemLevelEquipped, avgItemLevelPvP = GetAverageItemLevel();
+		tiaozui.ZBLsit.pingjunLV_V:SetText(string.format("%.2f",avgItemLevelEquipped))
+	else
+		if zhuangdengindo.zhushou and zhuangdengindo.fushou then
+			zhuangdengindo.slots=17
+		elseif zhuangdengindo.zhushou then
+			local itemID, itemType, itemSubType, itemEquipLoc = GetItemInfoInstant(zhuangdengindo.zhushou) 
+			if itemEquipLoc~="INVTYPE_2HWEAPON" then
+				zhuangdengindo.slots=17
+			end
+		elseif zhuangdengindo.fushou then
+			zhuangdengindo.slots=17
+		end
+		local pingjunLvl = zhuangdengindo.allleve/zhuangdengindo.slots
+		tiaozui.ZBLsit.pingjunLV_V:SetText(string.format("%.2f",pingjunLvl))
+	end
 end
+
 local function Update_Data()--刷新自身
 	if PIGA["FramePlus"]["Character_naijiu"] then
 		for inv = 1, #InvSlot["ID"] do
@@ -307,7 +320,6 @@ function FramePlusfun.Character_ADD()
 			PaperDollFrame:RegisterEvent("INSPECT_READY");
 		end
 	end
-	Update_Data()
 	PaperDollFrame:HookScript("OnShow",function (self,event)
 		Update_Data()
 	end)
@@ -315,6 +327,7 @@ end
 ----------
 PaperDollFrame:RegisterEvent("UNIT_INVENTORY_CHANGED")
 PaperDollFrame:HookScript("OnEvent", function(self,event,arg1)
+	--print(event)
 	if event=="ADDON_LOADED" and arg1=="Blizzard_InspectUI" then
 		ADD_Inspect()
 	end
@@ -325,7 +338,7 @@ PaperDollFrame:HookScript("OnEvent", function(self,event,arg1)
 			--end
 		end
 	end
-	if event=="PLAYER_EQUIPMENT_CHANGED" or event=="UNIT_INVENTORY_CHANGED" then
+	if event=="PLAYER_EQUIPMENT_CHANGED" or event=="UNIT_INVENTORY_CHANGED" or event=="PLAYER_AVG_ITEM_LEVEL_UPDATE" then
 		if PaperDollFrame:IsVisible() then
 			Update_Data()
 		end

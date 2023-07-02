@@ -17,6 +17,7 @@ local Show_TabBut_R=Create.Show_TabBut_R
 local CommonFun=addonTable.CommonFun
 local GetContainerNumSlots = C_Container and C_Container.GetContainerNumSlots or GetContainerNumSlots
 local GetContainerItemID = C_Container and C_Container.GetContainerItemID or GetContainerItemID
+local GetContainerItemLink = C_Container and C_Container.GetContainerItemLink or GetContainerItemLink
 local PickupContainerItem =C_Container and C_Container.PickupContainerItem or PickupContainerItem
 -------
 function QuickButUI:AutoSellBuy() end
@@ -54,7 +55,9 @@ function CommonFun.FastDiuqi()
 			local bnum=GetContainerNumSlots(arg1)
 			for l=1,bnum do
 				for kk=1,#PIGA["AutoSellBuy"]["Diuqi_List"] do
-					if GetContainerItemID(arg1,l)==PIGA["AutoSellBuy"]["Diuqi_List"][kk][1] then
+					local itemLink=PIG_ItemLink(GetContainerItemLink(arg1,l))
+					local itemLink2=PIG_ItemLink(PIGA["AutoSellBuy"]["Diuqi_List"][kk][2])
+					if itemLink==itemLink2 then
 						QkBut_AutoSellBuy.Height:Show()
 						break
 					end
@@ -108,7 +111,9 @@ function Pig_DelItem()
 			local xx=GetContainerNumSlots(i) 
 			for j=1,xx do
 				for k=1,#PIGA["AutoSellBuy"]["Diuqi_List"] do
-					if GetContainerItemID(i,j)==PIGA["AutoSellBuy"]["Diuqi_List"][k][1] then
+					local itemLink=PIG_ItemLink(GetContainerItemLink(i,j))
+					local itemLink2=PIG_ItemLink(PIGA["AutoSellBuy"]["Diuqi_List"][k][2])
+					if itemLink==itemLink2 then
 						PickupContainerItem(i,j);
 						DeleteCursorItem(i,j);
 					end

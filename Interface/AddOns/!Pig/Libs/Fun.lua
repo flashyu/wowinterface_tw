@@ -2,32 +2,6 @@ local addonName, addonTable = ...;
 local _, _, _, tocversion = GetBuildInfo()
 local Fun = {}
 -------------
-local ChatpindaoMAX = 5
-Fun.ChatpindaoMAX=ChatpindaoMAX
-local function huoqubianhao(Name)
-	local channel,channelName= GetChannelName(Name)
-	if channelName then
-		return channel
-	else
-		return 0
-	end
-end
-function Fun.GetPIGID(chname)
-	local chname = chname or "PIG"
-	local cunzaihao = huoqubianhao(chname)
-	if cunzaihao>0 then
-		return cunzaihao
-	else
-		for x=1,ChatpindaoMAX do
-			local newpindaoname = chname..x
-			local cunzaihao = huoqubianhao(newpindaoname)
-			if cunzaihao>0 then
-				return cunzaihao
-			end
-		end
-	end
-	return 0
-end
 function PIGCopyTable(OldTable)
 	local function PIGCopyfun(old,new)
 		for k,v in pairs(old) do
@@ -58,6 +32,35 @@ end
 function PIGDisable(self)
 	self:Disable() self.Text:SetTextColor(0.4, 0.4, 0.4, 1) 
 end
+--格式化物品信息
+local gsub = _G.string.gsub --替换
+local find = _G.string.find --查找并提取
+function PIG_ItemLink(itemLink)
+	--cffffffff|Hitem 
+	--:1 itemID
+	--:2 enchantID 永久附魔
+	--:3_gemID1，
+	--:4_gemID2:5gemID3，:6_gemID4 
+	--:7 suffixID 随机项目后缀，类似“雄鹰之，耐力之” 
+	--:8 uniqueID 与项目的特定实例有关的数据，不再使用
+	--:9 linkLevel 提供链接玩家级别，用于在适当的级别上渲染缩放传家 
+	--:10 specializationID 提供此链接玩家专精id。用来显示装备上主 
+	--:11 不再使用
+	--:12_s来源(任务奖励/英雄副本/团队) 
+	--:13 --
+	--"需要重置8/9/10
+	local _, _, qianbu = string.find(itemLink, "(|?c?f?f?%x*|?Hitem:?%d+:?%d*:?%d*:?%d*:?%d*:?%d*:?%d*:?).+")
+	--print(qianbu, d1, d2,d3,d4,d5,d6,d7,d8,d9)
+	--print(qianbu:gsub("|","||"))
+	local _, _, hounbu = string.find(itemLink, "|?c?f?f?%x*|?Hitem:?%d+:?%d*:?%d*:?%d*:?%d*:?%d*:?%d*:?%d*:?%d*:?%d*:?%d*:?(.+)")
+	--print(hounbu, d1, d2,d3,d4,d5,d6,d7,d8,d9)
+	--print(hounbu:gsub("|","||"))
+	local hebingLink = qianbu.."::::"..hounbu
+	--print(hebingLink:gsub("|","||"))
+	return hebingLink
+end
+
+--发送消息
 function PIGSendChatRaidParty(txt)
 	--SendChatMessage(txt, "SAY");--测试
 	if IsInRaid() then
@@ -73,6 +76,33 @@ function PIGSendAddonMessage(biaotou,txt)
 	elseif IsInGroup() then
 		C_ChatInfo.SendAddonMessage(biaotou,txt,"PARTY")
 	end
+end
+--获取PIG频道
+local ChatpindaoMAX = 5
+Fun.ChatpindaoMAX=ChatpindaoMAX
+local function huoqubianhao(Name)
+	local channel,channelName= GetChannelName(Name)
+	if channelName then
+		return channel
+	else
+		return 0
+	end
+end
+function Fun.GetPIGID(chname)
+	local chname = chname or "PIG"
+	local cunzaihao = huoqubianhao(chname)
+	if cunzaihao>0 then
+		return cunzaihao
+	else
+		for x=1,ChatpindaoMAX do
+			local newpindaoname = chname..x
+			local cunzaihao = huoqubianhao(newpindaoname)
+			if cunzaihao>0 then
+				return cunzaihao
+			end
+		end
+	end
+	return 0
 end
 --根据等级计算单价
 function Fun.Get_LvDanjia(lv,fbName,danjiaList)

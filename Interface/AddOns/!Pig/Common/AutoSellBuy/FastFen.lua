@@ -47,7 +47,9 @@ function CommonFun.FastFen()
 								for k=1,xx do	
 									local itemLink = GetContainerItemLink(bag, k);
 									for i=1,#shujuy do
-										if itemLink==shujuy[i][2] then
+										local itemLink=PIG_ItemLink(itemLink)
+										local itemLink2=PIG_ItemLink(shujuy[i][2])
+										if itemLink==itemLink2 then
 											local fenspellname = GetSpellInfo(fenspellID)
 											self:SetAttribute("macrotext", string.format(DestroyMacro, fenspellname, bag, k))
 											return

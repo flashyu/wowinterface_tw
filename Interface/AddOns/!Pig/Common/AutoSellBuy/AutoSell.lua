@@ -42,7 +42,9 @@ function CommonFun.AutoSell()
 									end
 								--非灰
 									for i=1,#PIGA["AutoSellBuy"]["Sell_List"] do
-										if itemLink==PIGA["AutoSellBuy"]["Sell_List"][i][2] then
+										local itemLink=PIG_ItemLink(itemLink)
+										local itemLink2=PIG_ItemLink(PIGA["AutoSellBuy"]["Sell_List"][i][2])
+										if itemLink==itemLink2 then
 											local name, link, rarity, level, minLevel, itemtype, subType, stackCount, equipLoc, icon, sellPrice = GetItemInfo(itemID);
 											fujiF.shoumaiG = sellPrice*itemCount+fujiF.shoumaiG;
 											UseContainerItem(bag, slot);
@@ -72,7 +74,9 @@ function CommonFun.AutoSell()
 									end
 								--非灰
 									for i=1,#PIGA["AutoSellBuy"]["Sell_List"] do
-										if ItemInfo.hyperlink==PIGA["AutoSellBuy"]["Sell_List"][i][2] then
+										local itemLink=PIG_ItemLink(ItemInfo.hyperlink)
+										local itemLink2=PIG_ItemLink(PIGA["AutoSellBuy"]["Sell_List"][i][2])
+										if itemLink==itemLink2 then
 											local name, link, rarity, level, minLevel, itemtype, subType, stackCount, equipLoc, icon, sellPrice = GetItemInfo(ItemInfo.hyperlink);
 											fujiF.shoumaiG = sellPrice*ItemInfo.stackCount+fujiF.shoumaiG;
 											C_Container.UseContainerItem(bag, slot);

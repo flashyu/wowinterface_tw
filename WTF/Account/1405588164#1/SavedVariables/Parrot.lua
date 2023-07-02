@@ -1,13 +1,27 @@
 
 ParrotDB = {
 	["profileKeys"] = {
-		["狂暴專家 - 伊弗斯"] = "Default",
 		["上山打鸟 - 伊弗斯"] = "Default",
+		["狂暴專家 - 伊弗斯"] = "Default",
 	},
 	["namespaces"] = {
 		["CombatEvents"] = {
 			["profiles"] = {
 				["Default"] = {
+					["Outgoing"] = {
+						["Skill damage"] = {
+							["tag"] = "[Amount]([Skill])",
+						},
+					},
+					["modifier"] = {
+						["overheal"] = {
+							["enabled"] = false,
+						},
+						["overkill"] = {
+							["enabled"] = false,
+						},
+					},
+					["dbver"] = 5,
 					["Notification"] = {
 						["Enemy debuff gains"] = {
 							["disabled"] = true,
@@ -21,9 +35,6 @@ ParrotDB = {
 						["Item buff fades"] = {
 							["disabled"] = true,
 						},
-						["Skill cooldown finish"] = {
-							["disabled"] = true,
-						},
 						["Item buff gains"] = {
 							["disabled"] = true,
 						},
@@ -33,19 +44,25 @@ ParrotDB = {
 						["Pet debuff fades"] = {
 							["disabled"] = true,
 						},
-						["Pet buff fades"] = {
+						["Buff gains"] = {
 							["disabled"] = true,
 						},
 						["Power loss"] = {
 							["disabled"] = true,
 						},
-						["Buff gains"] = {
+						["Pet buff fades"] = {
 							["disabled"] = true,
 						},
 						["Debuff fades"] = {
 							["disabled"] = true,
 						},
-						["Loot items"] = {
+						["Enemy buff fades"] = {
+							["disabled"] = true,
+						},
+						["Loot money"] = {
+							["disabled"] = true,
+						},
+						["Enemy debuff fades"] = {
 							["disabled"] = true,
 						},
 						["Pet buff gains"] = {
@@ -54,13 +71,10 @@ ParrotDB = {
 						["Target buff stack gains"] = {
 							["disabled"] = true,
 						},
-						["Loot money"] = {
-							["disabled"] = true,
-						},
-						["Target buff gains"] = {
-							["disabled"] = true,
-						},
 						["Enemy buff gains"] = {
+							["disabled"] = true,
+						},
+						["Reputation losses"] = {
 							["disabled"] = true,
 						},
 						["Combo points full"] = {
@@ -75,34 +89,20 @@ ParrotDB = {
 						["Reputation gains"] = {
 							["disabled"] = true,
 						},
-						["Reputation losses"] = {
+						["Skill cooldown finish"] = {
 							["disabled"] = true,
 						},
-						["Enemy debuff fades"] = {
+						["Target buff gains"] = {
 							["disabled"] = true,
 						},
 						["Buff stack gains"] = {
 							["disabled"] = true,
 						},
-						["Enemy buff fades"] = {
+						["Loot items"] = {
 							["disabled"] = true,
 						},
 						["Debuff stack gains"] = {
 							["disabled"] = true,
-						},
-					},
-					["modifier"] = {
-						["overheal"] = {
-							["enabled"] = false,
-						},
-						["overkill"] = {
-							["enabled"] = false,
-						},
-					},
-					["dbver"] = 5,
-					["Outgoing"] = {
-						["Skill damage"] = {
-							["tag"] = "[Amount]([Skill])",
 						},
 					},
 				},
@@ -117,12 +117,22 @@ ParrotDB = {
 						["Notification"] = {
 							["stickyDirection"] = "UP;CENTER",
 							["direction"] = "UP;CENTER",
-							["yOffset"] = 260,
+							["stickyAnimationStyle"] = "Static2",
 							["iconSide"] = "LEFT",
 							["xOffset"] = 0,
 							["size"] = 150,
 							["animationStyle"] = "Static2",
-							["stickyAnimationStyle"] = "Static2",
+							["yOffset"] = 260,
+						},
+						["Incoming"] = {
+							["stickyDirection"] = "UP;RIGHT",
+							["direction"] = "UP;RIGHT",
+							["stickyAnimationStyle"] = "Straight",
+							["iconSide"] = "RIGHT",
+							["xOffset"] = -480,
+							["size"] = 260,
+							["animationStyle"] = "Straight",
+							["yOffset"] = -30,
 						},
 						["Outgoing"] = {
 							["direction"] = "UP;RIGHT",
@@ -131,19 +141,9 @@ ParrotDB = {
 							["stickyDirection"] = "DOWN;LEFT",
 							["iconSide"] = "LEFT",
 							["speed"] = 5,
-							["size"] = 300,
-							["animationStyle"] = "Static",
 							["stickyAnimationStyle"] = "Pow2",
-						},
-						["Incoming"] = {
-							["stickyDirection"] = "UP;RIGHT",
-							["direction"] = "UP;RIGHT",
-							["yOffset"] = -30,
-							["iconSide"] = "RIGHT",
-							["xOffset"] = -480,
-							["size"] = 260,
-							["animationStyle"] = "Straight",
-							["stickyAnimationStyle"] = "Straight",
+							["animationStyle"] = "Static",
+							["size"] = 300,
 						},
 					},
 					["dbver"] = 2,
@@ -163,8 +163,8 @@ ParrotDB = {
 		["Triggers"] = {
 			["profiles"] = {
 				["Default"] = {
-					["dbver3"] = 1,
 					["dbver2"] = 0,
+					["dbver3"] = 1,
 					["triggers2"] = 0,
 				},
 			},
