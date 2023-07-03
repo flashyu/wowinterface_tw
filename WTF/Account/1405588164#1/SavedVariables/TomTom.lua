@@ -1,8 +1,8 @@
 
 TomTomDB = {
 	["profileKeys"] = {
-		["上山打鸟 - 伊弗斯"] = "Default",
 		["狂暴專家 - 伊弗斯"] = "Default",
+		["上山打鸟 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -30,12 +30,10 @@ TomTomDB = {
 TomTomWaypoints = nil
 TomTomWaypointsM = {
 	["profileKeys"] = {
-		["上山打鸟 - 伊弗斯"] = "上山打鸟 - 伊弗斯",
 		["狂暴專家 - 伊弗斯"] = "狂暴專家 - 伊弗斯",
+		["上山打鸟 - 伊弗斯"] = "上山打鸟 - 伊弗斯",
 	},
 	["profiles"] = {
-		["上山打鸟 - 伊弗斯"] = {
-		},
 		["狂暴專家 - 伊弗斯"] = {
 			[1434] = {
 				["1434:484596577.01711:168948655.25672:Meeting Stone"] = {
@@ -52,9 +50,9 @@ TomTomWaypointsM = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["world"] = {
-						},
 						["minimap"] = {
+						},
+						["world"] = {
 						},
 					},
 					["world"] = true,
@@ -91,6 +89,8 @@ TomTomWaypointsM = {
 					["world"] = true,
 				},
 			},
+		},
+		["上山打鸟 - 伊弗斯"] = {
 		},
 	},
 }
