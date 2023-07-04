@@ -1,9 +1,12 @@
 @cont1nuity:
-- Fixing an issue with aura updates not being done properly in some cases.
-- Adding auto-toggle for 'Hide Blizzard Healthbars' based on combat state.
-- Fixing some issues on aura updates to increase performance.
-- More detailed profiling.
-- Refreshing healthbar colors now takes NPC colors into account.
-- Adding more DF S2 units to be forced in combat.
-- Aura tooltips no longer block camera movement.
+- Fixing an issue with aura tracking on classic clients.
+- Adding support for BugSack error tacking and throttling to same error messages.
+- Adding option for the soft-target forced nameplate blizzard setting.
+- Fixing an issue with missing aura icons and aura consolidation in WotLK.
+- Fixing an issue with test auras not working properly when auras are being disabled.
+- Fixing an issue with Ghost Auras not working properly.
+- Fixing personal bar auras showing buffs of other players unintentionally.
+- Cleanup and internal documentation.
+- Keep auras in default sort order of not sorted by time.
+- Possibility to change audio cues channel.
 
