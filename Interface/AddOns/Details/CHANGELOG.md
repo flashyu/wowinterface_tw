@@ -1,6 +1,81 @@
 # Details! Damage Meter
 
-## [Details.20230520.11023.151](https://github.com/Tercioo/Details-Damage-Meter/tree/Details.20230520.11023.151) (2023-05-20)
-[Full Changelog](https://github.com/Tercioo/Details-Damage-Meter/compare/Details.20230520.11022.151...Details.20230520.11023.151) 
+## [Details.20230520.11023.151-51-gebffd6c](https://github.com/Tercioo/Details-Damage-Meter/tree/ebffd6c1b6fe67c9d990035ecd820e1bdc0f76e0) (2023-07-05)
+[Full Changelog](https://github.com/Tercioo/Details-Damage-Meter/compare/Details.20230520.11023.151...ebffd6c1b6fe67c9d990035ecd820e1bdc0f76e0) 
 
-- Hour0 bug fix  
+- Framework update to version 446  
+- Added Details:GetBossEncounterTexture(encounterName); Added combat.bossIcon; Added combat.bossTimers  
+- Details:UnpackDeathTable(deathTable) now return the spec of the character as the last parameter returned  
+- Added: Details:DoesCombatWithUIDExists(uniqueCombatId); Details:GetCombatByUID(uniqueCombatId); combat:GetCombatUID()  
+- classCombat:GetTimeData(chartName) now check if the combat has a TimeData table or return an empty table; Added classCombat:EraseTimeData(chartName)  
+- Code for Dispel has been modernized, deathTable now includes the member .spec  
+- Libraries Update  
+- Merge branch 'master' of https://github.com/Tercioo/Details-Damage-Meter  
+- Added .unixtime into is\_boss to know when the boss was killed  
+- Merge pull request #559 from Flamanis/autoruncode  
+    Actually save to disk auto run code  
+- Move and change run\_code save  
+- Merge pull request #558 from Flamanis/Vessel-damage-change  
+    Ignore vessel periodic damage  
+- Actually save to disk auto run code  
+- Ignore vessel periodic damage  
+- More fixes for Augmentation Evoker on 10.1.5  
+- Code changes, see commit description  
+    Combat Objects which has been discarded due to any reason will have the boolean member:  __destroyed set to true. With this change, 3rd party code can see if the data cached is up to date or obsolete.  
+    - Removed several deprecated code from March 2023 and earlier.  
+    - Large amount of code cleanup and refactoring, some functions got renamed, they are listed below:  
+    * TravarTempos renamed to LockActivityTime.  
+    * ClearTempTables renamed to ClearCacheTables.  
+    * SpellIsDot renamed to SetAsDotSpell.  
+    * FlagCurrentCombat remamed to FlagNewCombat\_PVPState.  
+    * UpdateContainerCombatentes renamed to UpdatePetCache.  
+    * segmentClass:AddCombat(combatObject) renamed to Details222.Combat.AddCombat(combatToBeAdded)  
+    - CurrentCombat.verifica\_combate timer is now obsolete.  
+    - Details.last\_closed\_combat is now obsolete.  
+    - Details.EstaEmCombate is now obsolete.  
+    - Details.options is now obsolete.  
+    - Added: Details:RemoveSegmentByCombatObject(combatObject)  
+    - Spec Guess Timers are now stored within Details222.GuessSpecSchedules.Schedules, all timers are killed at the end of the combat or at a data reset.  
+    - Initial time to send startup signal reduced from 5 to 4 seconds.  
+    - Fixed some division by zero on ptr 10.1.5.  
+    - Fixed DETAILS\_STARTED event not triggering in some cases due to 'event not registered'.  
+- Libraries Update  
+- Fixed Auto Run Code window not closing by click on the close button  
+- fixed a bug on 10.1.5 ptr  
+- Merge pull request #555 from Flamanis/StatusbarInit  
+    Set up statusbar options instead of using metatable  
+- Merge pull request #553 from Flamanis/IgnoreVesselShadow  
+    Ignore Vessel of Seared Shadow ticks from starting combats  
+- More code cleanup and framework update  
+- Set up statusbar options instead of using metatable  
+- Merge pull request #554 from Flamanis/UpdateTocsWrath  
+    Wrath toc bumps  
+- Wrath toc bumps  
+- logs changes  
+- Overall segment load fix  
+- Code cleanup, framework update and bug fixes  
+- Ignore Vessel of Seared Shadow ticks from starting combats  
+- translated code to English and a few bug fixes from latest alpha  
+- More bug fixes for destroyed combats; TimeData code modernizations  
+- More fixes for the "Report to Discord" bugs; Implementations to show plugins in the breakdown window;  
+- Overhall on the script for Damage Taken by Spell, now it uses modern Details API  
+- fixed plugins\_statusbar error  
+- Code cleanups, Bug Fixes, Show plugins in the breakdown window, added damage taken and friendly fire tp breakdown  
+- Split the window\_playerbreakdown\_spells.lua into three more files  
+- Time Machine overhaul  
+- When destroying a combat, it'll call DestroyActor to destroy each actor on each actorContainer  
+- Fixed activity time not working when the user uses effective time  
+- Code Cleanup  
+- Code Revamp; Fixed plugins\_statusbar.lua:664: attempt to call method 'GetCombatTime' (a nil value)  
+- container\_segments 424 error: now it is ensuring to wipe the combatObject that got removed from containerSegments  
+- classic toc rename  
+- Merge branch 'master' of https://github.com/Tercioo/Details-Damage-Meter  
+- Framework Update and Code improvements  
+- Merge pull request #545 from Flamanis/AddIcons  
+    Add IconTexture directive to the TOCs  
+- Add IconTexture directive to the TOCs  
+    Uses the Minimap icon. If a plugin is installed without the base Details it will show a blank icon.  
+- Disabled time captures for spellTables, this should be done by a plugin  
+- Fixing stuff from latest alpha and more development  
+- Replacing table.wipe with Details:Destroy()  
+- Renamed variables, code cleanup  

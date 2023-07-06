@@ -1,3 +1,6 @@
+3.0.139 - 5th July 2023
+- Added flight times.
+
 3.0.138 - 28th June 2023
 - Updated LibDBIcon.
 - Added flight times.
