@@ -1,8 +1,21 @@
 # Details! Damage Meter
 
-## [Details.20230520.11023.151-51-gebffd6c](https://github.com/Tercioo/Details-Damage-Meter/tree/ebffd6c1b6fe67c9d990035ecd820e1bdc0f76e0) (2023-07-05)
-[Full Changelog](https://github.com/Tercioo/Details-Damage-Meter/compare/Details.20230520.11023.151...ebffd6c1b6fe67c9d990035ecd820e1bdc0f76e0) 
+## [Details.20230520.11023.151-62-gbff23a8](https://github.com/Tercioo/Details-Damage-Meter/tree/bff23a8a0b3d589fd0a8f0207c7663e0b516ddca) (2023-07-08)
+[Full Changelog](https://github.com/Tercioo/Details-Damage-Meter/compare/Details.20230520.11023.151...bff23a8a0b3d589fd0a8f0207c7663e0b516ddca) 
 
+- icon updates  
+- removed Breath of Eons from spec detection for augmentation evokers  
+- When DBM/BW send a callback, check if the current combat in details is valid  
+- When the actor is ungroupped players, check if that player has a spec and show the spec icon instead  
+- Merge pull request #564 from Flamanis/Don't-swap-to-overall  
+    Segments locked don't swap windows to overall.  
+- Merge pull request #563 from Flamanis/SetSegmentTooltip  
+    Use new SetSegment over TrocaTabela for the segment selector  
+- Segments locked don't swap windows to overall.  
+- Use new SetSegment over TrocaTabela for the segment selector  
+- Framework,  update  
+- Merge pull request #560 from Numynum/patch-1  
+    Sort damage taken tooltip on damage amount  
 - Framework update to version 446  
 - Added Details:GetBossEncounterTexture(encounterName); Added combat.bossIcon; Added combat.bossTimers  
 - Details:UnpackDeathTable(deathTable) now return the spec of the character as the last parameter returned  
@@ -10,6 +23,7 @@
 - classCombat:GetTimeData(chartName) now check if the combat has a TimeData table or return an empty table; Added classCombat:EraseTimeData(chartName)  
 - Code for Dispel has been modernized, deathTable now includes the member .spec  
 - Libraries Update  
+- Sort damage taken tooltip on damage amount  
 - Merge branch 'master' of https://github.com/Tercioo/Details-Damage-Meter  
 - Added .unixtime into is\_boss to know when the boss was killed  
 - Merge pull request #559 from Flamanis/autoruncode  

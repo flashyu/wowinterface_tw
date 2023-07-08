@@ -2836,14 +2836,14 @@ function HealBot_Update_CPUUsage()
 end
 
 function HealBot_UpdateMaxUnitsAdj()
-    HealBot_luVars["UpdateMaxUnits"]=ceil(HealBot_Globals.CPUUsage/3)
+    HealBot_luVars["UpdateMaxUnits"]=ceil(HealBot_Globals.CPUUsage/2)
     if HealBot_luVars["UpdateMaxUnits"]<2 then
         HealBot_luVars["UpdateMaxUnits"]=2
     elseif HealBot_luVars["UpdateMaxUnits"]>5 then
         HealBot_luVars["UpdateMaxUnits"]=5
     end
     HealBot_UpdateNumUnits()
-    HealBot_luVars["MaxFastQueue"]=ceil(HealBot_Globals.CPUUsage*1.8)
+    HealBot_luVars["MaxFastQueue"]=ceil(HealBot_Globals.CPUUsage*2)
     if HealBot_luVars["MaxFastQueue"]<4 then
         HealBot_luVars["MaxFastQueue"]=4
     elseif HealBot_luVars["MaxFastQueue"]>15 then 
@@ -2855,7 +2855,7 @@ function HealBot_UpdateMaxUnitsAdj()
 end
 
 function HealBot_UpdateNumUnits()
-    HealBot_luVars["UpdateNumUnits"]=ceil(#HealBot_UpdateQueue/5)
+    HealBot_luVars["UpdateNumUnits"]=ceil(#HealBot_UpdateQueue/4)
     if HealBot_luVars["UpdateNumUnits"]>HealBot_luVars["UpdateMaxUnits"] then
         HealBot_luVars["UpdateNumUnits"]=HealBot_luVars["UpdateMaxUnits"]
     end

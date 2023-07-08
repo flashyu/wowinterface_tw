@@ -82,7 +82,7 @@ WeakAurasTemplates: enabled
 WIM: enabled
 xanSoundAlerts: enabled
 TradeSkillMaster: enabled
-AddOnSkins: enabled
+AddOnSkins: disabled
 ElvUI_Libraries: enabled
 ElvUI_OptionsUI: enabled
 ElvUI_Options: enabled

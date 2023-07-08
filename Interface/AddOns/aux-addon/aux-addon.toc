@@ -1,7 +1,7 @@
 ## Interface: 30402
 ## Author: shirsig
 ## Title: aux
-## Version: v3.2.4
+## Version: v3.2.5
 ## Notes: Auction House replacement
 ## SavedVariables: aux
 
