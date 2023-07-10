@@ -1,8 +1,9 @@
 # Details! Damage Meter
 
-## [Details.20230520.11023.151-62-gbff23a8](https://github.com/Tercioo/Details-Damage-Meter/tree/bff23a8a0b3d589fd0a8f0207c7663e0b516ddca) (2023-07-08)
-[Full Changelog](https://github.com/Tercioo/Details-Damage-Meter/compare/Details.20230520.11023.151...bff23a8a0b3d589fd0a8f0207c7663e0b516ddca) 
+## [Details.20230520.11023.151-63-g79353ce](https://github.com/Tercioo/Details-Damage-Meter/tree/79353cee901f99521dbe72704387e86f18606464) (2023-07-08)
+[Full Changelog](https://github.com/Tercioo/Details-Damage-Meter/compare/Details.20230520.11023.151...79353cee901f99521dbe72704387e86f18606464) 
 
+- Fix icon things, improvements to class detection by using GetPlayerInfoByGUID()  
 - icon updates  
 - removed Breath of Eons from spec detection for augmentation evokers  
 - When DBM/BW send a callback, check if the current combat in details is valid  

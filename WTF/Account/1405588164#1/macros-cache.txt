@@ -1,6 +1,11 @@
 VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
 /script DecursiveRootTable.Dcr:Println('没有相关技能')
 END
+VER 3 0000000000000017 "kiss" "135767"
+/use 疣无忧唇膏
+/target 湖蛙
+/kiss
+END
 VER 3 0000000000000002 "RXPTargeting" "Ability_eyeoftheowl"
 //RestedXP 指南 狮心-北美刘嘉玲 汉化版 - current step has no configured targets
 END
