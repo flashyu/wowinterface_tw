@@ -1,121 +1,147 @@
 
 PlaterDB = {
 	["captured_spells"] = {
-		[59829] = {
-			["encounterName"] = "迦尔达拉",
-			["source"] = "迦尔达拉",
+		[66043] = {
+			["encounterName"] = "总冠军",
+			["source"] = "安布罗斯·雷钉",
 			["isChanneled"] = false,
-			["encounterID"] = 390,
+			["encounterID"] = 334,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29306,
+			["npcID"] = 34702,
 		},
-		[59845] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "BUFF",
-			["source"] = "塑铁者斯约尼尔",
-			["npcID"] = 27978,
+		[65868] = {
+			["encounterName"] = "总冠军",
+			["source"] = "娅琳·永歌",
+			["isChanneled"] = false,
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34657,
 		},
-		[3600] = {
-			["event"] = "SPELL_AURA_APPLIED",
+		[413978] = {
+			["encounterName"] = "总冠军",
 			["type"] = "DEBUFF",
-			["source"] = "地缚图腾",
-			["npcID"] = 2630,
+			["source"] = "矮人观众",
+			["encounterID"] = 334,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 34856,
 		},
-		[54801] = {
-			["encounterName"] = "达卡莱巨像",
-			["source"] = "达卡莱元素",
+		[18392] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "奥妮克希亚",
 			["isChanneled"] = false,
-			["encounterID"] = 385,
+			["encounterID"] = 1084,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29573,
+			["npcID"] = 10184,
 		},
-		[75447] = {
+		[59614] = {
+			["isChanneled"] = false,
+			["source"] = "掠龙监工",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24085,
+		},
+		[67749] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "复生的嘉伦·誓日",
+			["isChanneled"] = false,
+			["encounterID"] = 340,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35545,
+		},
+		[59638] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "镜像",
+			["isChanneled"] = false,
+			["encounterID"] = 1084,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 31216,
+		},
+		[66044] = {
+			["encounterName"] = "总冠军",
+			["source"] = "安布罗斯·雷钉",
+			["isChanneled"] = false,
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34702,
+		},
+		[59694] = {
+			["isChanneled"] = false,
+			["source"] = "始祖幼龙训练者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24082,
+		},
+		[66889] = {
+			["encounterName"] = "银色勇士",
 			["type"] = "BUFF",
-			["source"] = "未知目标",
+			["source"] = "纯洁者耶德瑞克",
+			["encounterID"] = 338,
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 3107,
+			["npcID"] = 35119,
 		},
-		[55582] = {
+		[44179] = {
+			["type"] = "BUFF",
+			["source"] = "掠龙设施 I",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 24538,
+		},
+		[67718] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
 			["isChanneled"] = false,
-			["source"] = "达卡莱医师",
+			["encounterID"] = 340,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29826,
+			["npcID"] = 35451,
 		},
-		[55598] = {
-			["isChanneled"] = false,
-			["source"] = "达卡莱医师",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29826,
-		},
-		[55104] = {
-			["encounterName"] = "莫拉比",
-			["source"] = "莫拉比",
-			["isChanneled"] = false,
-			["encounterID"] = 387,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29305,
-		},
-		[59455] = {
-			["encounterName"] = "达卡莱巨像",
+		[412964] = {
 			["type"] = "DEBUFF",
-			["source"] = "达卡莱巨像",
-			["encounterID"] = 385,
+			["source"] = "掠龙铁盔战士",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29307,
+			["npcID"] = 23961,
 		},
-		[32736] = {
+		[68340] = {
+			["encounterName"] = "总冠军",
+			["source"] = "娅琳·永歌",
 			["isChanneled"] = false,
+			["encounterID"] = 334,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队战士",
-			["npcID"] = 32321,
+			["npcID"] = 34657,
 		},
-		[58977] = {
-			["encounterName"] = "达卡莱巨像",
-			["source"] = "达卡莱魔像",
+		[18500] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "奥妮克希亚",
 			["isChanneled"] = false,
-			["encounterID"] = 385,
+			["encounterID"] = 1084,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29832,
+			["npcID"] = 10184,
 		},
-		[23600] = {
+		[59599] = {
 			["isChanneled"] = false,
+			["source"] = "掠龙碎骨者",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队战士",
-			["npcID"] = 32321,
+			["npcID"] = 24069,
 		},
 		[57567] = {
-			["source"] = "基萨昆",
+			["encounterName"] = "奥妮克希亚",
 			["type"] = "BUFF",
+			["source"] = "扎恩迪姆",
+			["encounterID"] = 1084,
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 417,
 		},
-		[22859] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "高阶祭司塞卡尔",
-			["encounterID"] = 789,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 14509,
+		[67719] = {
+			["encounterName"] = "黑骑士",
+			["type"] = "DEBUFF",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 35451,
 		},
-		[12611] = {
+		[67751] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
 			["isChanneled"] = false,
+			["encounterID"] = 340,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队法师",
-			["npcID"] = 32341,
-		},
-		[55814] = {
-			["encounterName"] = "凶残的伊克",
-			["source"] = "凶残的伊克",
-			["isChanneled"] = false,
-			["encounterID"] = 1988,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29932,
-		},
-		[55567] = {
-			["isChanneled"] = false,
-			["source"] = "达卡莱震地者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29829,
+			["npcID"] = 35451,
 		},
 		[68054] = {
 			["type"] = "BUFF",
@@ -123,253 +149,401 @@ PlaterDB = {
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 35642,
 		},
-		[40546] = {
+		[54053] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "扎恩迪姆",
 			["isChanneled"] = false,
-			["source"] = "达卡莱长枪手",
+			["encounterID"] = 1084,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29819,
+			["npcID"] = 417,
+		},
+		[68867] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "奥妮克希亚",
+			["isChanneled"] = false,
+			["encounterID"] = 1084,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 10184,
+		},
+		[59687] = {
+			["isChanneled"] = false,
+			["source"] = "定时炸弹",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 32246,
 		},
 		[6713] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "狂热者洛卡恩",
-			["encounterID"] = 789,
 			["isChanneled"] = false,
+			["source"] = "掠龙武器匠",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11347,
+			["npcID"] = 24080,
 		},
-		[58978] = {
+		[67194] = {
 			["isChanneled"] = false,
-			["source"] = "达卡莱长枪手",
+			["source"] = "银色女祭司",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29819,
+			["npcID"] = 35307,
 		},
-		[21401] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队萨满祭司",
-			["npcID"] = 32340,
-		},
-		[17843] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队牧师",
-			["npcID"] = 32343,
-		},
-		[19134] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队战士",
-			["npcID"] = 32321,
-		},
-		[61353] = {
-			["isChanneled"] = false,
-			["source"] = "达格娜·火石",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29476,
-		},
-		[59839] = {
-			["encounterName"] = "斯拉德兰",
-			["source"] = "斯拉德兰",
-			["isChanneled"] = false,
-			["encounterID"] = 383,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29304,
-		},
-		[54508] = {
-			["event"] = "SPELL_AURA_APPLIED",
+		[68501] = {
 			["type"] = "BUFF",
-			["source"] = "威法倫",
+			["source"] = "银色战斗座狼",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 36558,
+		},
+		[67808] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["isChanneled"] = false,
+			["encounterID"] = 340,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
+		},
+		[67823] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["isChanneled"] = false,
+			["encounterID"] = 340,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
+		},
+		[67761] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["isChanneled"] = false,
+			["encounterID"] = 340,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
+		},
+		[35696] = {
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 17252,
 		},
-		[54261] = {
+		[68868] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "奥妮克希亚",
 			["isChanneled"] = false,
+			["encounterID"] = 1084,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队法师",
-			["npcID"] = 32341,
+			["npcID"] = 10184,
 		},
-		[24529] = {
-			["type"] = "BUFF",
-			["source"] = "未知目标",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 3107,
+		[59695] = {
+			["isChanneled"] = false,
+			["source"] = "始祖幼龙训练者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24082,
 		},
-		[54819] = {
-			["encounterName"] = "达卡莱巨像",
+		[67774] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "复生的嘉伦·誓日",
+			["isChanneled"] = false,
+			["encounterID"] = 340,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35545,
+		},
+		[67255] = {
+			["isChanneled"] = false,
+			["source"] = "银色僧侣",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35305,
+		},
+		[59608] = {
+			["isChanneled"] = false,
+			["source"] = "掠龙熔炼师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24078,
+		},
+		[59616] = {
+			["isChanneled"] = false,
+			["source"] = "掠龙符文法师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 23960,
+		},
+		[67724] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["isChanneled"] = false,
+			["encounterID"] = 340,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
+		},
+		[59606] = {
+			["isChanneled"] = false,
+			["source"] = "掠龙铁盔战士",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 23961,
+		},
+		[13446] = {
+			["isChanneled"] = false,
+			["source"] = "挖掘隧道的食尸鬼",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24084,
+		},
+		[66940] = {
+			["encounterName"] = "银色勇士",
 			["type"] = "DEBUFF",
-			["source"] = "达卡莱元素",
-			["encounterID"] = 385,
+			["source"] = "纯洁者耶德瑞克",
+			["encounterID"] = 338,
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29573,
+			["npcID"] = 35119,
 		},
-		[15496] = {
-			["isChanneled"] = false,
-			["source"] = "达卡莱掠夺者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29982,
+		[67594] = {
+			["encounterName"] = "总冠军",
+			["type"] = "DEBUFF",
+			["source"] = "拉娜·硬锤",
+			["encounterID"] = 334,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 34703,
 		},
-		[55106] = {
-			["encounterName"] = "莫拉比",
-			["source"] = "莫拉比",
+		[59696] = {
 			["isChanneled"] = false,
-			["encounterID"] = 387,
+			["source"] = "始祖幼龙训练者",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29305,
+			["npcID"] = 24082,
+		},
+		[57724] = {
+			["encounterName"] = "奥妮克希亚",
+			["type"] = "DEBUFF",
+			["source"] = "镜像",
+			["encounterID"] = 1084,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 31216,
 		},
 		[47982] = {
-			["isChanneled"] = false,
-			["source"] = "舒纳尔",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 416,
-		},
-		[58971] = {
-			["isChanneled"] = false,
-			["source"] = "达卡莱织火者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29822,
-		},
-		[23836] = {
+			["type"] = "BUFF",
 			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 1863,
-		},
-		[67834] = {
-			["isChanneled"] = false,
-			["source"] = "虫洞",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 35646,
-		},
-		[55218] = {
-			["encounterName"] = "迦尔达拉",
-			["source"] = "迦尔达拉",
-			["isChanneled"] = false,
-			["encounterID"] = 390,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29306,
-		},
-		[12470] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队萨满祭司",
-			["npcID"] = 32340,
-		},
-		[20545] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "狂热者洛卡恩",
-			["encounterID"] = 789,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11347,
-		},
-		[59840] = {
-			["encounterName"] = "斯拉德兰",
-			["source"] = "斯拉德兰",
-			["isChanneled"] = false,
-			["encounterID"] = 383,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29304,
-		},
-		[46604] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队法师",
-			["npcID"] = 32341,
-		},
-		[413174] = {
-			["isChanneled"] = false,
-			["source"] = "喷毒的眼镜蛇",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29774,
-		},
-		[11974] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队牧师",
-			["npcID"] = 32343,
-		},
-		[56103] = {
-			["isChanneled"] = false,
-			["source"] = "被感染的冰虫",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 30148,
-		},
-		[14032] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队牧师",
-			["npcID"] = 32343,
-		},
-		[388378] = {
-			["type"] = "BUFF",
-			["source"] = "小岩",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 194870,
-		},
-		[47983] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 416,
 		},
-		[24187] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "祖利安守护者",
-			["encounterID"] = 789,
+		[67706] = {
+			["encounterName"] = "总冠军",
+			["source"] = "拉娜·硬锤",
 			["isChanneled"] = false,
+			["encounterID"] = 334,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 15068,
+			["npcID"] = 34703,
 		},
-		[58972] = {
-			["isChanneled"] = false,
-			["source"] = "达卡莱织火者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29822,
-		},
-		[58980] = {
-			["isChanneled"] = false,
-			["source"] = "达卡莱医师",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29826,
-		},
-		[55163] = {
-			["isChanneled"] = false,
-			["source"] = "莫拉比",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29305,
-		},
-		[59020] = {
-			["isChanneled"] = false,
-			["source"] = "喷毒的眼镜蛇",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29774,
-		},
-		[67836] = {
-			["isChanneled"] = false,
-			["source"] = "虫洞",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 35646,
-		},
-		[59825] = {
-			["encounterName"] = "迦尔达拉",
+		[67722] = {
+			["encounterName"] = "黑骑士",
 			["type"] = "DEBUFF",
-			["source"] = "迦尔达拉",
-			["encounterID"] = 390,
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29306,
+			["npcID"] = 35451,
+		},
+		[67229] = {
+			["isChanneled"] = false,
+			["source"] = "银色女祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35307,
+		},
+		[51586] = {
+			["isChanneled"] = false,
+			["source"] = "掠龙灵魂师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28410,
+		},
+		[67289] = {
+			["isChanneled"] = false,
+			["source"] = "银色女祭司",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35307,
+		},
+		[23832] = {
+			["isChanneled"] = false,
+			["source"] = "未知目标",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 417,
+		},
+		[66798] = {
+			["isChanneled"] = false,
+			["source"] = "黑骑士",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
+		},
+		[42723] = {
+			["encounterName"] = "掠夺者因格瓦尔",
+			["source"] = "劫掠者因格瓦尔",
+			["isChanneled"] = false,
+			["encounterID"] = 575,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 23954,
+		},
+		[66081] = {
+			["encounterName"] = "总冠军",
+			["source"] = "娅琳·永歌",
+			["isChanneled"] = false,
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34657,
+		},
+		[66862] = {
+			["encounterName"] = "银色勇士",
+			["type"] = "DEBUFF",
+			["source"] = "纯洁者耶德瑞克",
+			["encounterID"] = 338,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 35119,
+		},
+		[59734] = {
+			["encounterName"] = "掠夺者因格瓦尔",
+			["source"] = "劫掠者因格瓦尔",
+			["isChanneled"] = false,
+			["encounterID"] = 575,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 23954,
+		},
+		[59601] = {
+			["isChanneled"] = false,
+			["source"] = "掠龙铸造大师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24079,
+		},
+		[59617] = {
+			["isChanneled"] = false,
+			["source"] = "掠龙符文法师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 23960,
+		},
+		[68504] = {
+			["encounterName"] = "总冠军",
+			["source"] = "娅琳·永歌",
+			["isChanneled"] = false,
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34657,
+		},
+		[67701] = {
+			["encounterName"] = "总冠军",
+			["source"] = "拉娜·硬锤",
+			["isChanneled"] = false,
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34703,
+		},
+		[66045] = {
+			["encounterName"] = "总冠军",
+			["source"] = "安布罗斯·雷钉",
+			["isChanneled"] = false,
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34702,
+		},
+		[67709] = {
+			["encounterName"] = "总冠军",
+			["source"] = "拉娜·硬锤",
+			["isChanneled"] = false,
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34703,
+		},
+		[59613] = {
+			["isChanneled"] = false,
+			["source"] = "掠龙监工",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24085,
+		},
+		[65918] = {
+			["encounterName"] = "总冠军",
+			["type"] = "BUFF",
+			["source"] = "拉娜·硬锤的坐骑",
+			["encounterID"] = 334,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 35636,
+		},
+		[34189] = {
+			["isChanneled"] = false,
+			["source"] = "黑暗游侠玛尔拉",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24137,
+		},
+		[66863] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "纯洁者耶德瑞克",
+			["isChanneled"] = false,
+			["encounterID"] = 338,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35119,
+		},
+		[68284] = {
+			["encounterName"] = "总冠军",
+			["type"] = "BUFF",
+			["source"] = "银色战斗座狼",
+			["encounterID"] = 334,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 36558,
+		},
+		[43935] = {
+			["isChanneled"] = false,
+			["source"] = "掠龙碎骨者",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24069,
+		},
+		[57458] = {
+			["type"] = "BUFF",
+			["source"] = "灵魂兽",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 35189,
+		},
+		[63010] = {
+			["isChanneled"] = false,
+			["source"] = "铁炉堡勇士",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35329,
+		},
+		[68282] = {
+			["isChanneled"] = false,
+			["source"] = "银色战斗座狼",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 36558,
+		},
+		[62575] = {
+			["isChanneled"] = false,
+			["source"] = "银色战斗座狼",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 36558,
+		},
+		[32919] = {
+			["isChanneled"] = false,
+			["source"] = "强壮的野狼",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 31233,
+		},
+		[42724] = {
+			["isChanneled"] = false,
+			["source"] = "掠龙武器匠",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24080,
+		},
+		[66083] = {
+			["encounterName"] = "总冠军",
+			["source"] = "娅琳·永歌",
+			["isChanneled"] = false,
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 34657,
+		},
+		[47481] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "瘟疫吞咽者",
+			["isChanneled"] = false,
+			["encounterID"] = 1084,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 26125,
 		},
 		[35361] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
+			["type"] = "BUFF",
 			["source"] = "林地行者",
+			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 31228,
 		},
-		[12540] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "狂热者扎斯",
-			["encounterID"] = 789,
+		[59708] = {
+			["encounterName"] = "掠夺者因格瓦尔",
+			["source"] = "劫掠者因格瓦尔",
 			["isChanneled"] = false,
+			["encounterID"] = 575,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11348,
+			["npcID"] = 23954,
 		},
 		[12544] = {
 			["isChanneled"] = false,
@@ -377,69 +551,87 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 32170,
 		},
-		[55817] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "未知目标",
-			["npcID"] = 9690,
-		},
-		[55825] = {
+		[67725] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
 			["isChanneled"] = false,
-			["source"] = "雷铸掠夺者",
+			["encounterID"] = 340,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29382,
+			["npcID"] = 35451,
 		},
-		[13323] = {
+		[67247] = {
 			["isChanneled"] = false,
+			["source"] = "银色圣光支配者",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队法师",
-			["npcID"] = 32341,
+			["npcID"] = 35309,
 		},
-		[67837] = {
+		[51588] = {
 			["isChanneled"] = false,
-			["source"] = "虫洞",
+			["source"] = "掠龙灵魂师",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 35646,
+			["npcID"] = 28410,
 		},
-		[55100] = {
-			["encounterName"] = "莫拉比",
-			["source"] = "莫拉比",
+		[66865] = {
 			["isChanneled"] = false,
-			["encounterID"] = 387,
+			["source"] = "纯洁者耶德瑞克",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29305,
+			["npcID"] = 35119,
+		},
+		[59706] = {
+			["encounterName"] = "掠夺者因格瓦尔",
+			["source"] = "劫掠者因格瓦尔",
+			["isChanneled"] = false,
+			["encounterID"] = 575,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 23954,
+		},
+		[42972] = {
+			["isChanneled"] = false,
+			["source"] = "掠龙战略家",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 23956,
 		},
 		[47482] = {
-			["encounterName"] = "斯拉德兰",
-			["source"] = "亡者军团食尸鬼",
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "瘟疫吞咽者",
 			["isChanneled"] = false,
-			["encounterID"] = 383,
+			["encounterID"] = 1084,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 24207,
+			["npcID"] = 26125,
 		},
-		[58981] = {
+		[55077] = {
 			["isChanneled"] = false,
-			["source"] = "达卡莱医师",
+			["source"] = "野蛮的座狼",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29826,
+			["npcID"] = 29735,
 		},
-		[48287] = {
-			["isChanneled"] = false,
-			["source"] = "被感染的冰虫",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 30148,
-		},
-		[23829] = {
-			["source"] = "基尔提普",
-			["type"] = "BUFF",
+		[67710] = {
+			["encounterName"] = "总冠军",
+			["type"] = "DEBUFF",
+			["source"] = "拉娜·硬锤",
+			["encounterID"] = 334,
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 416,
+			["npcID"] = 34703,
 		},
-		[59021] = {
+		[43936] = {
+			["type"] = "DEBUFF",
+			["source"] = "掠龙碎骨者",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 24069,
+		},
+		[42669] = {
+			["encounterName"] = "掠夺者因格瓦尔",
+			["source"] = "劫掠者因格瓦尔",
 			["isChanneled"] = false,
-			["source"] = "坚韧的巨蟒",
+			["encounterID"] = 575,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29768,
+			["npcID"] = 23954,
+		},
+		[57475] = {
+			["type"] = "BUFF",
+			["source"] = "灵魂兽",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 35189,
 		},
 		[36589] = {
 			["isChanneled"] = false,
@@ -453,151 +645,219 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 35646,
 		},
-		[59826] = {
-			["encounterName"] = "迦尔达拉",
-			["source"] = "迦尔达拉",
+		[59692] = {
 			["isChanneled"] = false,
-			["encounterID"] = 390,
+			["source"] = "被奴役的始祖幼龙",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29306,
+			["npcID"] = 24083,
 		},
-		[59842] = {
-			["encounterName"] = "斯拉德兰",
-			["source"] = "斯拉德兰",
-			["isChanneled"] = false,
-			["encounterID"] = 383,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29304,
-		},
-		[8269] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "高阶祭司塞卡尔",
-			["encounterID"] = 789,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 14509,
-		},
-		[55276] = {
-			["encounterName"] = "迦尔达拉",
-			["source"] = "迦尔达拉",
-			["isChanneled"] = false,
-			["encounterID"] = 390,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29306,
-		},
-		[33625] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队萨满祭司",
-			["npcID"] = 32340,
-		},
-		[55563] = {
-			["isChanneled"] = false,
-			["source"] = "达卡莱震地者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29829,
-		},
-		[394449] = {
+		[66085] = {
+			["encounterName"] = "总冠军",
 			["type"] = "BUFF",
-			["source"] = "坚韧的巨蟒",
+			["source"] = "娅琳·永歌",
+			["encounterID"] = 334,
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29768,
+			["npcID"] = 34657,
 		},
-		[55093] = {
-			["encounterName"] = "斯拉德兰",
-			["source"] = "斯拉德兰蟒蛇",
+		[59607] = {
 			["isChanneled"] = false,
-			["encounterID"] = 383,
+			["source"] = "掠龙铁盔战士",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29713,
+			["npcID"] = 23961,
 		},
-		[55101] = {
-			["encounterName"] = "莫拉比",
-			["source"] = "莫拉比",
+		[59603] = {
 			["isChanneled"] = false,
-			["encounterID"] = 387,
+			["source"] = "掠龙裂心者",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29305,
+			["npcID"] = 24071,
 		},
-		[59444] = {
-			["encounterName"] = "莫拉比",
-			["source"] = "莫拉比",
+		[59611] = {
 			["isChanneled"] = false,
-			["encounterID"] = 387,
+			["source"] = "掠龙监工",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29305,
+			["npcID"] = 24085,
 		},
-		[44415] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队牧师",
-			["npcID"] = 32343,
+		[398145] = {
+			["type"] = "DEBUFF",
+			["source"] = "镜像",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 31216,
 		},
-		[55643] = {
+		[67233] = {
 			["isChanneled"] = false,
-			["source"] = "废墟居民",
+			["source"] = "银色僧侣",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29920,
+			["npcID"] = 35305,
 		},
-		[24192] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "高阶祭司塞卡尔",
-			["encounterID"] = 789,
+		[68301] = {
+			["encounterName"] = "总冠军",
+			["source"] = "拉娜·硬锤",
 			["isChanneled"] = false,
+			["encounterID"] = 334,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 14509,
+			["npcID"] = 34703,
+		},
+		[49722] = {
+			["isChanneled"] = false,
+			["source"] = "被奴役的始祖幼龙",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24083,
+		},
+		[1604] = {
+			["encounterName"] = "奥妮克希亚",
+			["type"] = "DEBUFF",
+			["source"] = "奥妮克希亚雏龙",
+			["encounterID"] = 1084,
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 11262,
+		},
+		[59691] = {
+			["isChanneled"] = false,
+			["source"] = "被奴役的始祖幼龙",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24083,
+		},
+		[66867] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "纯洁者耶德瑞克",
+			["isChanneled"] = false,
+			["encounterID"] = 338,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35119,
+		},
+		[59707] = {
+			["encounterName"] = "掠夺者因格瓦尔",
+			["source"] = "劫掠者因格瓦尔",
+			["isChanneled"] = false,
+			["encounterID"] = 575,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 23954,
+		},
+		[414277] = {
+			["type"] = "DEBUFF",
+			["source"] = "人类观众",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 34870,
+		},
+		[51587] = {
+			["isChanneled"] = false,
+			["source"] = "掠龙灵魂师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 28410,
+		},
+		[8599] = {
+			["isChanneled"] = false,
+			["source"] = "掠龙熔炼师",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24078,
 		},
 		[25228] = {
-			["source"] = "未知目标",
 			["type"] = "BUFF",
+			["source"] = "未知目标",
 			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 17252,
 		},
-		[7870] = {
+		[22427] = {
 			["isChanneled"] = false,
-			["source"] = "杜姆拉恩",
+			["source"] = "掠龙武器匠",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 1863,
+			["npcID"] = 24080,
 		},
-		[9080] = {
+		[42702] = {
 			["isChanneled"] = false,
+			["source"] = "挖掘隧道的食尸鬼",
 			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 24084,
+		},
+		[35708] = {
+			["isChanneled"] = false,
+			["source"] = "未知目标",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 17252,
+		},
+		[67729] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "复生的嘉伦·誓日",
+			["isChanneled"] = false,
+			["encounterID"] = 340,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35545,
+		},
+		[67745] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["isChanneled"] = false,
+			["encounterID"] = 340,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
+		},
+		[67251] = {
+			["isChanneled"] = false,
+			["source"] = "银色僧侣",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35305,
+		},
+		[63619] = {
+			["isChanneled"] = false,
+			["source"] = "暗影魔",
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 19668,
+		},
+		[35706] = {
+			["type"] = "BUFF",
+			["source"] = "未知目标",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 17252,
+		},
+		[18431] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "奥妮克希亚",
+			["isChanneled"] = false,
+			["encounterID"] = 1084,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 10184,
+		},
+		[18435] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "奥妮克希亚",
+			["isChanneled"] = false,
+			["encounterID"] = 1084,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 10184,
+		},
+		[47468] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "瘟疫吞咽者",
+			["isChanneled"] = false,
+			["encounterID"] = 1084,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 26125,
+		},
+		[9128] = {
+			["type"] = "BUFF",
 			["source"] = "绿队战士",
+			["event"] = "SPELL_AURA_APPLIED",
 			["npcID"] = 32321,
 		},
-		[55715] = {
-			["isChanneled"] = false,
-			["source"] = "土灵精英",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29980,
-		},
-		[54719] = {
-			["encounterName"] = "达卡莱巨像",
-			["source"] = "达卡莱巨像",
-			["isChanneled"] = false,
-			["encounterID"] = 385,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29307,
-		},
-		[59827] = {
-			["encounterName"] = "迦尔达拉",
-			["source"] = "迦尔达拉",
-			["isChanneled"] = false,
-			["encounterID"] = 390,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29306,
-		},
-		[14514] = {
-			["isChanneled"] = false,
-			["source"] = "绿队法师",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32324,
-		},
-		[54028] = {
-			["type"] = "DEBUFF",
-			["source"] = "银色盟约防御法师",
+		[43930] = {
+			["type"] = "BUFF",
+			["source"] = "掠龙铸造大师",
 			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29254,
+			["npcID"] = 24079,
+		},
+		[412947] = {
+			["type"] = "DEBUFF",
+			["source"] = "掠龙铁盔战士",
+			["event"] = "SPELL_AURA_APPLIED",
+			["npcID"] = 23961,
+		},
+		[67778] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["isChanneled"] = false,
+			["encounterID"] = 340,
+			["event"] = "SPELL_CAST_SUCCESS",
+			["npcID"] = 35451,
 		},
 		[67835] = {
 			["isChanneled"] = false,
@@ -605,356 +865,4654 @@ PlaterDB = {
 			["event"] = "SPELL_CAST_SUCCESS",
 			["npcID"] = 35646,
 		},
-		[20424] = {
+		[15284] = {
 			["isChanneled"] = false,
-			["source"] = "绿队圣骑士",
+			["source"] = "银色圣光支配者",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32342,
+			["npcID"] = 35309,
 		},
-		[55249] = {
-			["encounterName"] = "迦尔达拉",
-			["type"] = "DEBUFF",
-			["source"] = "迦尔达拉",
-			["encounterID"] = 390,
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29306,
-		},
-		[55250] = {
-			["encounterName"] = "迦尔达拉",
-			["source"] = "迦尔达拉",
+		[51963] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "黑锋石像鬼",
 			["isChanneled"] = false,
-			["encounterID"] = 390,
+			["encounterID"] = 1084,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29306,
+			["npcID"] = 27829,
 		},
-		[13704] = {
+		[67237] = {
 			["isChanneled"] = false,
+			["source"] = "银色圣光支配者",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队牧师",
-			["npcID"] = 32343,
+			["npcID"] = 35309,
 		},
-		[59828] = {
-			["encounterName"] = "迦尔达拉",
-			["source"] = "迦尔达拉",
+		[59637] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "镜像",
 			["isChanneled"] = false,
-			["encounterID"] = 390,
+			["encounterID"] = 1084,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29306,
+			["npcID"] = 31216,
 		},
-		[35706] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
-		},
-		[59824] = {
-			["encounterName"] = "迦尔达拉",
-			["source"] = "迦尔达拉",
+		[66042] = {
+			["encounterName"] = "总冠军",
+			["source"] = "安布罗斯·雷钉",
 			["isChanneled"] = false,
-			["encounterID"] = 390,
+			["encounterID"] = 334,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29306,
+			["npcID"] = 34702,
 		},
-		[58967] = {
+		[34942] = {
 			["isChanneled"] = false,
-			["source"] = "达卡莱作战骑兵",
+			["source"] = "银色女祭司",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29836,
+			["npcID"] = 35307,
 		},
-		[58966] = {
+		[59685] = {
 			["isChanneled"] = false,
-			["source"] = "达卡莱作战骑兵",
+			["source"] = "掠龙战略家",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29836,
+			["npcID"] = 23956,
 		},
-		[47468] = {
-			["encounterName"] = "斯拉德兰",
-			["source"] = "亡者军团食尸鬼",
+		[60211] = {
 			["isChanneled"] = false,
-			["encounterID"] = 383,
+			["source"] = "掠龙铸造大师",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 24207,
+			["npcID"] = 24079,
 		},
-		[9128] = {
+		[60227] = {
 			["isChanneled"] = false,
+			["source"] = "掠龙战略家",
 			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队战士",
-			["npcID"] = 32321,
+			["npcID"] = 23956,
 		},
-		[413265] = {
+		[68959] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "奥妮克希亚巢穴守卫",
 			["isChanneled"] = false,
-			["source"] = "坚韧的巨蟒",
+			["encounterID"] = 1084,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29768,
+			["npcID"] = 36561,
 		},
-		[55142] = {
-			["encounterName"] = "莫拉比",
-			["source"] = "莫拉比",
+		[66935] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "纯洁者耶德瑞克",
 			["isChanneled"] = false,
-			["encounterID"] = 387,
+			["encounterID"] = 338,
 			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29305,
+			["npcID"] = 35119,
 		},
-		[58975] = {
-			["encounterName"] = "达卡莱巨像",
-			["source"] = "达卡莱魔像",
-			["isChanneled"] = false,
-			["encounterID"] = 385,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29832,
+	},
+	["captured_casts"] = {
+		[49711] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "蛤蜊主宰老K",
+			["npcID"] = 25800,
 		},
-		[39586] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队萨满祭司",
-			["npcID"] = 32340,
+		[59973] = {
+			["encounterName"] = "先知萨隆亚",
+			["source"] = "先知萨隆亚",
+			["encounterID"] = 375,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26632,
 		},
-		[58991] = {
-			["isChanneled"] = false,
-			["source"] = "达卡莱犀牛",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29931,
+		[65791] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "努兹尔·啸钉",
+			["npcID"] = 34468,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
 		},
-		[49309] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队萨满祭司",
-			["npcID"] = 32340,
+		[63138] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "萨拉",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33134,
 		},
-		[55704] = {
-			["isChanneled"] = false,
-			["source"] = "土灵看守",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29981,
+		[38618] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "德雷森上尉",
+			["npcID"] = 27751,
 		},
-		[55813] = {
-			["encounterName"] = "凶残的伊克",
-			["source"] = "凶残的伊克",
-			["isChanneled"] = false,
-			["encounterID"] = 1988,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29932,
+		[62339] = {
+			["encounterName"] = "托里姆",
+			["source"] = "符印巨像",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32872,
 		},
-		[59023] = {
-			["type"] = "DEBUFF",
-			["source"] = "坚韧的巨蟒",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 29768,
+		[59366] = {
+			["encounterName"] = "看门者克里克希尔",
+			["source"] = "看守者希尔希克",
+			["encounterID"] = 216,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28731,
 		},
-		[54878] = {
-			["encounterName"] = "达卡莱巨像",
-			["source"] = "达卡莱元素",
-			["isChanneled"] = false,
-			["encounterID"] = 385,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29573,
+		[59430] = {
+			["encounterName"] = "阿努巴拉克",
+			["source"] = "阿努巴拉克",
+			["encounterID"] = 218,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29120,
+		},
+		[17503] = {
+			["source"] = "苍白的玛勒基",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10438,
+		},
+		[16496] = {
+			["source"] = "被俘虏的雇佣兵",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32885,
+		},
+		[47378] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "洛纳乌克·冰雾",
+			["npcID"] = 26654,
+		},
+		[66112] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "维兰纳",
+			["npcID"] = 34465,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[19645] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "哀嚎的女妖",
+			["npcID"] = 10464,
+		},
+		[20716] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "青铜巨龙圣地守卫者",
+			["npcID"] = 26277,
+		},
+		[60869] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "恐怖之水",
+			["npcID"] = 30633,
+		},
+		[61924] = {
+			["encounterName"] = "霍迪尔",
+			["source"] = "灵魂行者尤娜",
+			["encounterID"] = 751,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32950,
+		},
+		[59910] = {
+			["encounterName"] = "召唤者诺沃斯",
+			["source"] = "召唤者诺沃斯",
+			["encounterID"] = 371,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26631,
+		},
+		[51758] = {
+			["source"] = "龙骨荒野法师猎手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26280,
+		},
+		[56937] = {
+			["encounterName"] = "大魔导师泰蕾丝塔",
+			["source"] = "大魔导师泰蕾丝塔",
+			["encounterID"] = 520,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26930,
+		},
+		[15537] = {
+			["source"] = "瓦拉纳王子",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25601,
+		},
+		[66880] = {
+			["encounterName"] = "诺森德猛兽",
+			["source"] = "酸喉",
+			["npcID"] = 35144,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 629,
+		},
+		[12492] = {
+			["source"] = "深铁萨满祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 11600,
+		},
+		[66113] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "维兰纳",
+			["npcID"] = 34465,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[15585] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "影月侍僧",
+			["npcID"] = 16594,
+		},
+		[64386] = {
+			["encounterName"] = "欧尔莉亚",
+			["source"] = "欧尔莉亚",
+			["encounterID"] = 750,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33515,
+		},
+		[47059] = {
+			["source"] = "群星之墓哨兵",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26448,
+		},
+		[52238] = {
+			["encounterName"] = "沃尔坎",
+			["source"] = "沃尔坎",
+			["encounterID"] = 557,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28587,
+		},
+		[52270] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "狂心猎人",
+			["npcID"] = 28079,
+		},
+		[62532] = {
+			["encounterName"] = "弗蕾亚",
+			["source"] = "远古监护者",
+			["encounterID"] = 753,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33203,
+		},
+		[64642] = {
+			["source"] = "寒冬亡魂",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34134,
+		},
+		[50416] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "考达拉龙人",
+			["npcID"] = 25728,
+		},
+		[38204] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "自由的先知",
+			["npcID"] = 33422,
+		},
+		[47443] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "阿努巴尔荒芜兽",
+			["npcID"] = 26607,
+		},
+		[48530] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "第七军团斥候",
+			["npcID"] = 27162,
+		},
+		[57801] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "弗约恩",
+			["npcID"] = 29503,
+		},
+		[60902] = {
+			["source"] = "阿尔卡冯守卫者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32353,
+		},
+		[65026] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "巨兽二型",
+			["npcID"] = 34071,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 754,
+		},
+		[52814] = {
+			["source"] = "冷风女王",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26578,
+		},
+		[56938] = {
+			["encounterName"] = "大魔导师泰蕾丝塔",
+			["source"] = "大魔导师泰蕾丝塔",
+			["encounterID"] = 520,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26928,
+		},
+		[38556] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "卡斯卡拉防御者",
+			["npcID"] = 25764,
+		},
+		[15801] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "深铁萨满祭司",
+			["npcID"] = 11600,
+		},
+		[31602] = {
+			["source"] = "奈鲁布恩坎",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10437,
+		},
+		[58153] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "复活的北伐军战士",
+			["npcID"] = 30202,
+		},
+		[49106] = {
+			["source"] = "伊米亚狂战士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26696,
+		},
+		[62437] = {
+			["encounterName"] = "弗蕾亚",
+			["source"] = "弗蕾亚",
+			["encounterID"] = 753,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32906,
+		},
+		[63556] = {
+			["source"] = "红木树人",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33525,
+		},
+		[11829] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "巫师的阴魂",
+			["npcID"] = 16905,
+		},
+		[58537] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "传送门看护者",
+			["npcID"] = 30893,
+		},
+		[62661] = {
+			["encounterName"] = "维扎克斯将军",
+			["source"] = "维扎克斯将军",
+			["encounterID"] = 755,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33271,
+		},
+		[63716] = {
+			["encounterName"] = "科隆加恩",
+			["source"] = "科隆加恩",
+			["encounterID"] = 749,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32930,
+		},
+		[16561] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "杉达拉德鲁伊之魂",
+			["npcID"] = 30863,
+		},
+		[58793] = {
+			["encounterName"] = "萨塔里奥",
+			["source"] = "塔尼布隆",
+			["encounterID"] = 742,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30452,
+		},
+		[16001] = {
+			["source"] = "复活的达卡莱蝙蝠骑兵",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26638,
+		},
+		[47668] = {
+			["encounterName"] = "托尔戈",
+			["source"] = "天灾蛮兵",
+			["encounterID"] = 369,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26623,
+		},
+		[16033] = {
+			["source"] = "受伤的战歌萨满祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27108,
+		},
+		[65123] = {
+			["encounterName"] = "霍迪尔",
+			["source"] = "灵魂行者尤娜",
+			["encounterID"] = 751,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32950,
+		},
+		[59017] = {
+			["source"] = "天灾复活者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26626,
+		},
+		[60072] = {
+			["encounterName"] = "玛里苟斯",
+			["source"] = "玛里苟斯",
+			["npcID"] = 28859,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 734,
+		},
+		[59081] = {
+			["source"] = "掠龙先知",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26554,
+		},
+		[59209] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "碧蓝审讯者",
+			["npcID"] = 27633,
+		},
+		[59241] = {
+			["source"] = "伊米亚猎血者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26670,
+		},
+		[59305] = {
+			["encounterName"] = "伊米隆国王",
+			["source"] = "伊米隆国王",
+			["encounterID"] = 583,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26861,
+		},
+		[63493] = {
+			["encounterName"] = "钢铁议会",
+			["source"] = "断钢者",
+			["encounterID"] = 748,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32867,
+		},
+		[59433] = {
+			["encounterName"] = "阿努巴拉克",
+			["source"] = "阿努巴拉克",
+			["encounterID"] = 218,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29120,
+		},
+		[34945] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "盘牙医师",
+			["npcID"] = 21126,
+		},
+		[59529] = {
+			["encounterName"] = "沃尔坎",
+			["source"] = "沃尔坎",
+			["encounterID"] = 557,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28587,
+		},
+		[57547] = {
+			["source"] = "初生的瓦格里",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29570,
+		},
+		[52496] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "地穴恶魔",
+			["npcID"] = 27734,
+		},
+		[66118] = {
+			["encounterName"] = "阿努巴拉克",
+			["source"] = "阿努巴拉克",
+			["npcID"] = 34564,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 645,
+		},
+		[50578] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "冰霜之球",
+			["npcID"] = 28066,
+		},
+		[24314] = {
+			["encounterName"] = "血领主曼多基尔",
+			["source"] = "血领主曼多基尔",
+			["encounterID"] = 787,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 11382,
+		},
+		[15242] = {
+			["source"] = "深铁矿洞探险者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 13099,
+		},
+		[64005] = {
+			["encounterName"] = "科隆加恩",
+			["source"] = "科隆加恩",
+			["encounterID"] = 749,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32930,
+		},
+		[56908] = {
+			["encounterName"] = "萨塔里奥",
+			["source"] = "萨塔里奥",
+			["npcID"] = 28860,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 742,
+		},
+		[52944] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "亚鲁乌特",
+			["npcID"] = 28121,
+		},
+		[59146] = {
+			["source"] = "达卡莱猎神者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29820,
+		},
+		[32674] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "复活的北伐军战士",
+			["npcID"] = 30202,
+		},
+		[59210] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "碧蓝魔网雏龙",
+			["npcID"] = 27636,
+		},
+		[64389] = {
+			["encounterName"] = "欧尔莉亚",
+			["source"] = "欧尔莉亚",
+			["encounterID"] = 750,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33515,
+		},
+		[17393] = {
+			["source"] = "瑞文戴尔男爵",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10440,
+		},
+		[31747] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "劫掠者瑟菲克斯",
+			["npcID"] = 28083,
+		},
+		[51218] = {
+			["source"] = "始祖龙崽",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 23750,
+		},
+		[59466] = {
+			["encounterName"] = "拉文索尔",
+			["source"] = "拉文索尔",
+			["encounterID"] = 2662,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29312,
+		},
+		[50323] = {
+			["source"] = "诅咒教派腐蚀者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 31738,
+		},
+		[35010] = {
+			["source"] = "黑暗符文施法者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27963,
+		},
+		[58667] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "自由的先知",
+			["npcID"] = 33422,
+		},
+		[57676] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "琳蒂安",
+			["npcID"] = 30656,
+		},
+		[62823] = {
+			["encounterName"] = "霍迪尔",
+			["source"] = "维莎·织焰",
+			["encounterID"] = 751,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32946,
+		},
+		[35234] = {
+			["source"] = "沼泽掘泥者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 18137,
+		},
+		[58827] = {
+			["encounterName"] = "塑血者沙尔拉姆",
+			["source"] = "塑血者沙尔拉姆",
+			["npcID"] = 26530,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 294,
+		},
+		[15498] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "深铁矿洞测量者",
+			["npcID"] = 13098,
+		},
+		[45592] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "收割者伊斯里克斯",
+			["npcID"] = 25453,
+		},
+		[72898] = {
+			["source"] = "水元素",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 37994,
 		},
 		[59019] = {
-			["isChanneled"] = false,
 			["source"] = "喷毒的眼镜蛇",
-			["event"] = "SPELL_CAST_SUCCESS",
+			["event"] = "SPELL_CAST_START",
 			["npcID"] = 29774,
 		},
-		[54850] = {
+		[59083] = {
+			["source"] = "掠龙先知",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26554,
+		},
+		[59147] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "坚钢唤天者",
+			["npcID"] = 28580,
+		},
+		[59179] = {
+			["source"] = "泰坦神铁轰鸣者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28965,
+		},
+		[15586] = {
+			["source"] = "冰冷矿洞测量者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 13097,
+		},
+		[59243] = {
+			["source"] = "伊米亚猎血者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26670,
+		},
+		[64390] = {
+			["encounterName"] = "托里姆",
+			["source"] = "托里姆",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32865,
+		},
+		[64422] = {
+			["encounterName"] = "欧尔莉亚",
+			["source"] = "欧尔莉亚",
+			["encounterID"] = 750,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33515,
+		},
+		[12549] = {
+			["source"] = "风暴骑士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29624,
+		},
+		[33796] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "荣耀堡弓箭手",
+			["npcID"] = 16896,
+		},
+		[51219] = {
+			["source"] = "野蛮的始祖幼龙",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 31265,
+		},
+		[63527] = {
+			["source"] = "雷暴锻铸守护者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33699,
+		},
+		[63559] = {
+			["source"] = "误入歧途的仙子",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33355,
+		},
+		[40062] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "诅咒教派破坏者",
+			["npcID"] = 28538,
+		},
+		[53425] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "哈罗德·兰恩",
+			["npcID"] = 25804,
+		},
+		[61673] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "钢铁巨像",
+			["npcID"] = 30300,
+		},
+		[51475] = {
+			["source"] = "黑暗符文元素师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27962,
+		},
+		[47447] = {
+			["source"] = "冷心冰虫喂食者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26358,
+		},
+		[64966] = {
+			["source"] = "发条机械师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34184,
+		},
+		[67529] = {
+			["encounterName"] = "总冠军",
+			["source"] = "克罗索斯",
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34701,
+		},
+		[50740] = {
+			["source"] = "先锋军黑鸦祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27202,
+		},
+		[58956] = {
+			["encounterName"] = "萨塔里奥",
+			["source"] = "萨塔里奥",
+			["npcID"] = 28860,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 742,
+		},
+		[59020] = {
+			["source"] = "喷毒的眼镜蛇",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29774,
+		},
+		[65867] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "阿莱希娅·月行者",
+			["npcID"] = 34467,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[39647] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "黑岩圣殿卫士",
+			["npcID"] = 30453,
+		},
+		[59148] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "坚钢唤天者",
+			["npcID"] = 28580,
+		},
+		[63272] = {
+			["source"] = "红木树人",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33525,
+		},
+		[25530] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "灼热图腾 VII",
+			["npcID"] = 15480,
+		},
+		[59244] = {
+			["source"] = "伊米亚猎血者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26670,
+		},
+		[20463] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "希尔瓦娜斯·风行者",
+			["npcID"] = 31651,
+		},
+		[49110] = {
+			["source"] = "龙眠神殿守护者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26933,
+		},
+		[64487] = {
+			["encounterName"] = "观察者奥尔加隆",
+			["source"] = "观察者奥尔加隆",
+			["encounterID"] = 757,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32871,
+		},
+		[30741] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "高阶术士奈瑟库斯",
+			["npcID"] = 16807,
+		},
+		[13860] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "操纵者安诺科拉",
+			["npcID"] = 26769,
+		},
+		[50293] = {
+			["source"] = "苔原爬虫",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25454,
+		},
+		[64647] = {
+			["source"] = "寒冬滚石",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34135,
+		},
+		[65868] = {
+			["encounterName"] = "总冠军",
+			["source"] = "娅琳·永歌",
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34657,
+		},
+		[13900] = {
+			["source"] = "伊森迪奥斯",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 9017,
+		},
+		[18609] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "奥妮克希亚",
+			["npcID"] = 10184,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 1084,
+		},
+		[62793] = {
+			["encounterName"] = "霍迪尔",
+			["source"] = "托尔·灰云",
+			["encounterID"] = 751,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32941,
+		},
+		[59852] = {
+			["encounterName"] = "塑铁者斯约尼尔",
+			["source"] = "铸铁穴居人",
+			["encounterID"] = 569,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27979,
+		},
+		[54801] = {
 			["encounterName"] = "达卡莱巨像",
-			["source"] = "达卡莱巨像",
-			["isChanneled"] = false,
+			["source"] = "达卡莱元素",
+			["npcID"] = 29573,
+			["event"] = "SPELL_CAST_START",
 			["encounterID"] = 385,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29307,
 		},
-		[48090] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
+		[51764] = {
+			["source"] = "龙骨荒野法师猎手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26280,
 		},
-		[15786] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队萨满祭司",
-			["npcID"] = 32340,
+		[47736] = {
+			["encounterName"] = "大魔导师泰蕾丝塔",
+			["source"] = "大魔导师泰蕾丝塔",
+			["encounterID"] = 520,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26929,
 		},
-		[4511] = {
-			["source"] = "基尔提普",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 416,
-		},
-		[32919] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "强壮的野狼",
-			["npcID"] = 31233,
-		},
-		[55652] = {
-			["isChanneled"] = false,
-			["source"] = "废墟居民",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29920,
-		},
-		[27577] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队战士",
-			["npcID"] = 32321,
-		},
-		[1604] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "绿队战士",
-			["npcID"] = 32321,
-		},
-		[15532] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队法师",
-			["npcID"] = 32341,
-		},
-		[55633] = {
-			["encounterName"] = "达卡莱巨像",
-			["source"] = "达卡莱魔像",
-			["isChanneled"] = false,
-			["encounterID"] = 385,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29832,
-		},
-		[55815] = {
-			["encounterName"] = "凶残的伊克",
-			["source"] = "凶残的伊克",
-			["isChanneled"] = false,
-			["encounterID"] = 1988,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29932,
-		},
-		[57724] = {
-			["source"] = "未知目标",
-			["type"] = "DEBUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 26125,
-		},
-		[11640] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "绿队牧师",
-			["npcID"] = 32343,
+		[55984] = {
+			["source"] = "通灵主宰安提沃克",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28006,
 		},
 		[15043] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队法师",
-			["npcID"] = 32341,
+			["event"] = "SPELL_CAST_START",
+			["source"] = "审讯者卡勒拉斯",
+			["npcID"] = 25720,
 		},
-		[15581] = {
+		[62250] = {
+			["encounterName"] = "魔网守护者埃雷苟斯",
+			["source"] = "大型魔网雏龙",
+			["npcID"] = 28276,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 534,
+		},
+		[60236] = {
+			["source"] = "咆哮的漩涡",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28547,
+		},
+		[413091] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "镜像",
+			["npcID"] = 205999,
+		},
+		[49111] = {
+			["source"] = "碧蓝巨龙",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27608,
+		},
+		[62442] = {
+			["encounterName"] = "托里姆",
+			["source"] = "黑暗符文助手",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33110,
+		},
+		[64584] = {
+			["encounterName"] = "观察者奥尔加隆",
+			["source"] = "观察者奥尔加隆",
+			["encounterID"] = 757,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32871,
+		},
+		[53363] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "霜巢毁灭者",
+			["npcID"] = 30575,
+		},
+		[48280] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "驯鹿杀手卡琳",
+			["npcID"] = 25803,
+		},
+		[62666] = {
+			["encounterName"] = "锋鳞",
+			["source"] = "锋鳞",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33186,
+		},
+		[65998] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "灼热图腾",
+			["npcID"] = 34687,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[58702] = {
+			["encounterName"] = "维扎克斯将军",
+			["source"] = "灼热图腾 X",
+			["encounterID"] = 755,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 31165,
+		},
+		[63913] = {
+			["source"] = "暮光冰法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33819,
+		},
+		[42526] = {
+			["source"] = "孢子",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 23876,
+		},
+		[51797] = {
+			["source"] = "湍流之针巫师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26257,
+		},
+		[17235] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "奈鲁布恩坎",
+			["npcID"] = 10437,
+		},
+		[65807] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "努兹尔·啸钉",
+			["npcID"] = 34468,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[48920] = {
+			["encounterName"] = "暴龙之王爵德",
+			["source"] = "暴龙之王爵德",
+			["encounterID"] = 373,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27483,
+		},
+		[53044] = {
+			["encounterName"] = "埃雷克姆",
+			["source"] = "埃雷克姆",
+			["encounterID"] = 2658,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29315,
+		},
+		[62315] = {
+			["source"] = "冰虫巨兽",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32882,
+		},
+		[55218] = {
+			["encounterName"] = "迦尔达拉",
+			["source"] = "迦尔达拉",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29306,
+		},
+		[62443] = {
+			["encounterName"] = "托里姆",
+			["source"] = "黑暗符文助手",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33110,
+		},
+		[41056] = {
+			["source"] = "指挥官斯尔加·钢腭",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25359,
+		},
+		[63722] = {
+			["source"] = "无面恐魔",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33772,
+		},
+		[50455] = {
+			["source"] = "通灵主宰安提沃克",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28006,
+		},
+		[16564] = {
+			["source"] = "恩其拉石像鬼",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25387,
+		},
+		[60781] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "遗忘深渊追随者",
+			["npcID"] = 30205,
+		},
+		[50583] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "考达拉缚法者",
+			["npcID"] = 25719,
+		},
+		[59854] = {
+			["encounterName"] = "召唤者诺沃斯",
+			["source"] = "召唤者诺沃斯",
+			["encounterID"] = 371,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26631,
+		},
+		[61964] = {
+			["source"] = "黑暗符文助手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32886,
+		},
+		[20816] = {
+			["source"] = "黑铁暗法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 2577,
+		},
+		[60046] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "希尔瓦娜斯·风行者",
+			["npcID"] = 31651,
+		},
+		[64170] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "弗蕾亚",
+			["npcID"] = 33410,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 756,
+		},
+		[61133] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "巴纳霍格领主",
+			["npcID"] = 31277,
+		},
+		[17843] = {
+			["source"] = "金队牧师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32325,
+		},
+		[15587] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "背叛的恐惧魔王",
+			["npcID"] = 31531,
+		},
+		[59247] = {
+			["encounterName"] = "残忍的斯卡迪",
+			["source"] = "伊米亚巫医",
+			["encounterID"] = 581,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26691,
+		},
+		[54164] = {
+			["encounterName"] = "谢沃兹",
+			["source"] = "灵体之球",
+			["npcID"] = 29271,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 2661,
+		},
+		[15611] = {
+			["source"] = "洞穴雷霆蜥蜴",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 8928,
+		},
+		[49113] = {
+			["source"] = "龙眠神殿幼龙",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26925,
+		},
+		[49241] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "红玉警戒者",
+			["npcID"] = 27542,
+		},
+		[15659] = {
+			["source"] = "狂乱风暴",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26045,
+		},
+		[24173] = {
 			["encounterName"] = "高阶祭司塞卡尔",
 			["source"] = "狂热者扎斯",
 			["encounterID"] = 789,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
+			["event"] = "SPELL_CAST_START",
 			["npcID"] = 11348,
-		},
-		[29385] = {
-			["isChanneled"] = false,
-			["source"] = "绿队圣骑士",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 32342,
-		},
-		[64495] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 20330,
-		},
-		[61362] = {
-			["isChanneled"] = false,
-			["source"] = "达卡莱织火者",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29822,
-		},
-		[24208] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "狂热者洛卡恩",
-			["encounterID"] = 789,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 11347,
-		},
-		[29544] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "绿队战士",
-			["npcID"] = 32321,
-		},
-		[24185] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "高阶祭司塞卡尔",
-			["encounterID"] = 789,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 14509,
 		},
 		[24189] = {
 			["encounterName"] = "高阶祭司塞卡尔",
 			["source"] = "高阶祭司塞卡尔",
 			["encounterID"] = 789,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
+			["event"] = "SPELL_CAST_START",
 			["npcID"] = 14509,
 		},
-		[44178] = {
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["source"] = "金队法师",
-			["npcID"] = 32341,
+		[64746] = {
+			["source"] = "岩浆暴怒者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34086,
+		},
+		[50456] = {
+			["source"] = "闪电使者西亚斯",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28018,
+		},
+		[60814] = {
+			["source"] = "霜巢雏龙",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 31718,
+		},
+		[50648] = {
+			["source"] = "蓝玉巫师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25316,
+		},
+		[34344] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "邪恶通灵师",
+			["npcID"] = 31155,
+		},
+		[67729] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "复生的嘉伦·誓日",
+			["encounterID"] = 340,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35545,
+		},
+		[25420] = {
+			["source"] = "战歌要塞萨满祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25421,
+		},
+		[59024] = {
+			["source"] = "黑暗符文元素师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27962,
+		},
+		[64171] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "托里姆",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33413,
+		},
+		[59152] = {
+			["source"] = "被束缚的气元素",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30418,
+		},
+		[33641] = {
+			["source"] = "先驱者加斯提努斯",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 18966,
+		},
+		[61326] = {
+			["source"] = "碧蓝缚鳞者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26735,
+		},
+		[18435] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "奥妮克希亚",
+			["npcID"] = 10184,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 1084,
+		},
+		[62445] = {
+			["encounterName"] = "托里姆",
+			["source"] = "黑暗符文唤魔师",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32878,
+		},
+		[61550] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "毒尖",
+			["npcID"] = 28358,
+		},
+		[62605] = {
+			["encounterName"] = "托里姆",
+			["source"] = "西芙",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33196,
+		},
+		[38085] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "永恒时空法师",
+			["npcID"] = 27898,
+		},
+		[65940] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "索库尔",
+			["npcID"] = 34475,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[59696] = {
+			["source"] = "始祖幼龙训练者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 24082,
+		},
+		[64971] = {
+			["source"] = "铁矮人修理工",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34198,
+		},
+		[63149] = {
+			["source"] = "被腐蚀的仆从",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33354,
+		},
+		[11975] = {
+			["source"] = "骷髅守护者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10390,
+		},
+		[47964] = {
+			["source"] = "盖尔米尔",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 416,
+		},
+		[62318] = {
+			["source"] = "被俘虏的雇佣兵",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32885,
+		},
+		[64396] = {
+			["encounterName"] = "欧尔莉亚",
+			["source"] = "欧尔莉亚",
+			["encounterID"] = 750,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33515,
+		},
+		[62446] = {
+			["encounterName"] = "托里姆",
+			["source"] = "黑暗符文唤魔师",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32878,
+		},
+		[59537] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "萨尔",
+			["npcID"] = 31650,
+		},
+		[66901] = {
+			["encounterName"] = "诺森德猛兽",
+			["source"] = "酸喉",
+			["npcID"] = 35144,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 629,
+		},
+		[44256] = {
+			["source"] = "战歌上尉",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25446,
+		},
+		[59633] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "伊米海姆防御者",
+			["npcID"] = 31746,
+		},
+		[63789] = {
+			["source"] = "暮光炎术师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33820,
+		},
+		[59761] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "凋零战车",
+			["npcID"] = 31831,
+		},
+		[60848] = {
+			["source"] = "被遗忘的无面者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30414,
+		},
+		[61903] = {
+			["encounterName"] = "钢铁议会",
+			["source"] = "断钢者",
+			["encounterID"] = 748,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32867,
+		},
+		[66902] = {
+			["encounterName"] = "诺森德猛兽",
+			["source"] = "恐鳞",
+			["npcID"] = 34799,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 629,
+		},
+		[59122] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "化学炼金师",
+			["npcID"] = 31482,
+		},
+		[59154] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "雷铸巨人",
+			["npcID"] = 28920,
+		},
+		[33643] = {
+			["source"] = "米尔格隆·高山",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 18969,
+		},
+		[62415] = {
+			["source"] = "冰虫巨兽",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32882,
+		},
+		[18500] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "奥妮克希亚",
+			["npcID"] = 10184,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 1084,
+		},
+		[64653] = {
+			["source"] = "寒冬亡魂",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34134,
+		},
+		[63758] = {
+			["source"] = "暮光冰法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33819,
+		},
+		[54615] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "杉达拉猎人之魂",
+			["npcID"] = 30864,
+		},
+		[64877] = {
+			["source"] = "硬化铁魔像",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34190,
+		},
+		[57780] = {
+			["source"] = "钢铸防御者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33236,
+		},
+		[61968] = {
+			["encounterName"] = "霍迪尔",
+			["source"] = "霍迪尔",
+			["encounterID"] = 751,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32845,
+		},
+		[48733] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "毁灭结界",
+			["npcID"] = 27430,
+		},
+		[65133] = {
+			["encounterName"] = "霍迪尔",
+			["source"] = "灵魂行者塔拉",
+			["encounterID"] = 751,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33332,
+		},
+		[12471] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "影月暗法师",
+			["npcID"] = 17694,
+		},
+		[64174] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "霍迪尔",
+			["npcID"] = 33411,
+		},
+		[42723] = {
+			["encounterName"] = "掠夺者因格瓦尔",
+			["source"] = "劫掠者因格瓦尔",
+			["encounterID"] = 575,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 23954,
+		},
+		[63247] = {
+			["source"] = "自然之刃",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33527,
+		},
+		[52026] = {
+			["encounterName"] = "比亚格里将军",
+			["source"] = "比亚格里将军",
+			["npcID"] = 28586,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 555,
+		},
+		[47966] = {
+			["source"] = "辛克的伐木机",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27061,
+		},
+		[44961] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "被诅咒的水兵",
+			["npcID"] = 24911,
+		},
+		[15620] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "联盟援兵",
+			["npcID"] = 27564,
+		},
+		[49309] = {
+			["source"] = "战歌萨满祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27678,
+		},
+		[50364] = {
+			["source"] = "尼鲁巴尔坑道虫",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25622,
+		},
+		[59603] = {
+			["source"] = "掠龙裂心者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 24071,
+		},
+		[67289] = {
+			["source"] = "银色女祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35307,
+		},
+		[66330] = {
+			["encounterName"] = "诺森德猛兽",
+			["source"] = "穿刺者戈莫克",
+			["npcID"] = 34796,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 629,
+		},
+		[68504] = {
+			["encounterName"] = "总冠军",
+			["source"] = "拉娜·硬锤",
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34703,
+		},
+		[17174] = {
+			["source"] = "被遗忘的火枪手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27225,
+		},
+		[65070] = {
+			["source"] = "零件维修技师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34267,
+		},
+		[48734] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "毁灭结界",
+			["npcID"] = 27430,
+		},
+		[65819] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "塞瑞莎·术轮",
+			["npcID"] = 34474,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[65883] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "阿莱希娅·月行者",
+			["npcID"] = 34467,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[57046] = {
+			["source"] = "狂乱的法力涌动者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26737,
+		},
+		[51963] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "黑锋石像鬼",
+			["npcID"] = 27829,
+		},
+		[60211] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "掠龙铸造大师",
+			["npcID"] = 24079,
+		},
+		[5884] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "奈丝伍德夫人",
+			["npcID"] = 29858,
+		},
+		[59284] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "凋零投石车",
+			["npcID"] = 31526,
+		},
+		[63472] = {
+			["encounterName"] = "掌炉者伊格尼斯",
+			["source"] = "掌炉者伊格尼斯",
+			["encounterID"] = 745,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33118,
+		},
+		[63568] = {
+			["source"] = "自然之刃",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33527,
+		},
+		[64623] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "VX-001",
+			["encounterID"] = 754,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33651,
+		},
+		[13878] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "击碎者提瓦克斯",
+			["npcID"] = 26770,
+		},
+		[7978] = {
+			["source"] = "暗炉农夫",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 8896,
+		},
+		[63760] = {
+			["source"] = "暮光追随者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33818,
+		},
+		[54617] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "狂心清除者",
+			["npcID"] = 28081,
+		},
+		[55704] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "土灵看守",
+			["npcID"] = 29981,
+		},
+		[56919] = {
+			["source"] = "联盟祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26805,
+		},
+		[39592] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "被召唤的灼热图腾",
+			["npcID"] = 22895,
+		},
+		[60084] = {
+			["source"] = "阻挡者卡诺克",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32160,
+		},
+		[57047] = {
+			["source"] = "狂乱的法力涌动者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26737,
+		},
+		[48895] = {
+			["source"] = "达卡莱萨满祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26639,
+		},
+		[16100] = {
+			["encounterName"] = "血卫士伯鲁恩",
+			["source"] = "碎手弓箭手",
+			["npcID"] = 17427,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 1935,
+		},
+		[54138] = {
+			["encounterName"] = "谢沃兹",
+			["source"] = "谢沃兹",
+			["encounterID"] = 2661,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29266,
+		},
+		[46018] = {
+			["source"] = "大法师艾瓦诺尔",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25784,
+		},
+		[33806] = {
+			["source"] = "蛮锤斥候",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 19384,
+		},
+		[64528] = {
+			["encounterName"] = "霍迪尔",
+			["source"] = "维莎·织焰",
+			["encounterID"] = 751,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32946,
+		},
+		[8995] = {
+			["source"] = "黑铁火枪手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 6523,
+		},
+		[64688] = {
+			["encounterName"] = "欧尔莉亚",
+			["source"] = "欧尔莉亚",
+			["encounterID"] = 750,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33515,
+		},
+		[24208] = {
+			["encounterName"] = "高阶祭司塞卡尔",
+			["source"] = "狂热者洛卡恩",
+			["encounterID"] = 789,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 11347,
+		},
+		[66066] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "麦拉多·深谷游者",
+			["encounterID"] = 637,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34469,
+		},
+		[56632] = {
+			["source"] = "安卡哈织网者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30276,
+		},
+		[67229] = {
+			["source"] = "银色女祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35307,
+		},
+		[15241] = {
+			["source"] = "炽热火焰卫士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 8910,
+		},
+		[62321] = {
+			["encounterName"] = "托里姆",
+			["source"] = "黑暗符文唤魔师",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32878,
+		},
+		[64944] = {
+			["source"] = "大厅监督者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34197,
+		},
+		[66067] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "麦拉多·深谷游者",
+			["encounterID"] = 637,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34469,
+		},
+		[60916] = {
+			["source"] = "阿尔卡冯守卫者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32353,
+		},
+		[59376] = {
+			["encounterName"] = "法师领主伊洛姆",
+			["source"] = "法师领主伊洛姆",
+			["npcID"] = 27655,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 532,
+		},
+		[22907] = {
+			["source"] = "联盟游侠",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26802,
+		},
+		[58966] = {
+			["source"] = "达卡莱作战骑兵",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29836,
+		},
+		[63809] = {
+			["encounterName"] = "锋鳞",
+			["source"] = "黑暗符文哨兵",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33453,
+		},
+		[64145] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "重压触须",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33966,
+		},
+		[62131] = {
+			["encounterName"] = "托里姆",
+			["source"] = "托里姆",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32865,
+		},
+		[7162] = {
+			["source"] = "马拉奇修士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 5661,
+		},
+		[51469] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "萨满祭司维克伊克",
+			["npcID"] = 28315,
+		},
+		[41572] = {
+			["source"] = "野蛮的始祖幼龙",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 31265,
 		},
 		[55098] = {
 			["encounterName"] = "莫拉比",
 			["source"] = "莫拉比",
-			["isChanneled"] = false,
 			["encounterID"] = 387,
-			["event"] = "SPELL_CAST_SUCCESS",
+			["event"] = "SPELL_CAST_START",
 			["npcID"] = 29305,
 		},
-		[63619] = {
+		[59215] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "大型魔网雏龙",
+			["npcID"] = 28276,
+		},
+		[59254] = {
+			["source"] = "伊米亚通灵师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28368,
+		},
+		[59280] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "雪花",
+			["npcID"] = 28153,
+		},
+		[38858] = {
+			["source"] = "破碎残阳射手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 24938,
+		},
+		[45046] = {
+			["source"] = "艾瑞达巫师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25033,
+		},
+		[39945] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "战歌萨满祭司",
+			["npcID"] = 27678,
+		},
+		[64529] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "巨兽二型",
+			["npcID"] = 34071,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 754,
+		},
+		[67546] = {
+			["encounterName"] = "总冠军",
+			["source"] = "雅克布·奥勒留斯元帅",
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34705,
+		},
+		[65876] = {
+			["encounterName"] = "瓦格里双子",
+			["source"] = "光明邪使菲奥拉",
+			["npcID"] = 34497,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 641,
+		},
+		[65877] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "阿莱希娅·月行者",
+			["npcID"] = 34467,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[50335] = {
+			["source"] = "恩其拉憎恶",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25383,
+		},
+		[56505] = {
+			["encounterName"] = "玛里苟斯",
+			["source"] = "玛里苟斯",
+			["npcID"] = 28859,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 734,
+		},
+		[65875] = {
+			["encounterName"] = "瓦格里双子",
+			["source"] = "黑暗邪使艾蒂丝",
+			["npcID"] = 34496,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 641,
+		},
+		[59638] = {
+			["encounterName"] = "烈焰巨兽",
+			["source"] = "镜像",
+			["encounterID"] = 744,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 31216,
+		},
+		[48894] = {
+			["source"] = "达卡莱萨满祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26639,
+		},
+		[50495] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "法师领主伊洛姆",
+			["npcID"] = 27655,
+		},
+		[59734] = {
+			["encounterName"] = "掠夺者因格瓦尔",
+			["source"] = "劫掠者因格瓦尔",
+			["encounterID"] = 575,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 23954,
+		},
+		[52889] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "鳄鱼人猎手瑟匹克",
+			["npcID"] = 28216,
+		},
+		[66336] = {
+			["encounterName"] = "加拉克苏斯大王",
+			["source"] = "痛苦女王",
+			["npcID"] = 34826,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 633,
+		},
+		[65809] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "塞瑞莎·术轮",
+			["npcID"] = 34474,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[15493] = {
+			["source"] = "红衣信使",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 12337,
+		},
+		[55802] = {
+			["encounterName"] = "克尔苏加德",
+			["source"] = "克尔苏加德",
+			["npcID"] = 15990,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 1114,
+		},
+		[22686] = {
+			["encounterName"] = "暴龙之王爵德",
+			["source"] = "暴龙之王爵德",
+			["encounterID"] = 373,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27483,
+		},
+		[12470] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "强力火元素",
+			["npcID"] = 15438,
+		},
+		[58967] = {
+			["source"] = "达卡莱作战骑兵",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29836,
+		},
+		[20820] = {
+			["source"] = "斯崔特主教",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27246,
+		},
+		[48801] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "北伐军领主达尔弗斯",
+			["npcID"] = 31003,
+		},
+		[68958] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "奥妮克希亚巢穴守卫",
+			["npcID"] = 36561,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 1084,
+		},
+		[15228] = {
+			["source"] = "白须地占师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 11604,
+		},
+		[6358] = {
+			["source"] = "埃勒利亚娜",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 1863,
+		},
+		[63233] = {
+			["source"] = "白骨卫士斥候",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33550,
+		},
+		[23102] = {
+			["source"] = "暗影拱顶白骨卫士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30312,
+		},
+		[59223] = {
+			["encounterName"] = "法师领主伊洛姆",
+			["source"] = "幻影穿云者",
+			["npcID"] = 27645,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 532,
+		},
+		[21971] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "阿努巴尔荒芜兽",
+			["npcID"] = 26607,
+		},
+		[51103] = {
+			["encounterName"] = "法师领主伊洛姆",
+			["source"] = "法师领主伊洛姆",
+			["npcID"] = 27655,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 532,
+		},
+		[15234] = {
+			["source"] = "盘牙海妖",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 17801,
+		},
+		[31554] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "盘牙卫士",
+			["npcID"] = 17958,
+		},
+		[413172] = {
+			["source"] = "不朽的重压触须",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 206038,
+		},
+		[61461] = {
+			["source"] = "冰霜使者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30286,
+		},
+		[66821] = {
+			["encounterName"] = "诺森德猛兽",
+			["source"] = "恐鳞",
+			["npcID"] = 34799,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 629,
+		},
+		[54195] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "蓝蜂猎手达伊克",
+			["npcID"] = 28215,
+		},
+		[66818] = {
+			["encounterName"] = "诺森德猛兽",
+			["source"] = "酸喉",
+			["npcID"] = 35144,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 629,
+		},
+		[60015] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30624,
+		},
+		[68959] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "奥妮克希亚巢穴守卫",
+			["npcID"] = 36561,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 1084,
+		},
+		[64678] = {
+			["encounterName"] = "欧尔莉亚",
+			["source"] = "欧尔莉亚",
+			["encounterID"] = 750,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33515,
+		},
+		[59469] = {
+			["encounterName"] = "拉文索尔",
+			["source"] = "拉文索尔",
+			["encounterID"] = 2662,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29312,
+		},
+		[66058] = {
+			["encounterName"] = "瓦格里双子",
+			["source"] = "黑暗邪使艾蒂丝",
+			["npcID"] = 34496,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 641,
+		},
+		[50496] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "法师领主伊洛姆",
+			["npcID"] = 27655,
+		},
+		[55643] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "废墟居民",
+			["npcID"] = 29920,
+		},
+		[16869] = {
+			["source"] = "苍白的玛勒基",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10438,
+		},
+		[57753] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "黑岩烈焰法师",
+			["npcID"] = 30681,
+		},
+		[184] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "风险投资公司地质学家",
+			["npcID"] = 1096,
+		},
+		[59863] = {
+			["encounterName"] = "远古法庭",
+			["source"] = "黑暗符文唤雷者",
+			["encounterID"] = 567,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27984,
+		},
+		[67528] = {
+			["encounterName"] = "总冠军",
+			["source"] = "克罗索斯",
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34701,
+		},
+		[61973] = {
+			["encounterName"] = "钢铁议会",
+			["source"] = "符文大师莫尔基姆",
+			["encounterID"] = 748,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32927,
+		},
+		[51500] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "冒烟的恶鬼",
+			["npcID"] = 27363,
+		},
+		[67745] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35451,
+		},
+		[55931] = {
+			["encounterName"] = "塔达拉姆王子",
+			["source"] = "塔达拉姆王子",
+			["encounterID"] = 213,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29308,
+		},
+		[65279] = {
+			["encounterName"] = "风暴看守者埃玛尔隆",
+			["source"] = "风暴看守者埃玛尔隆",
+			["encounterID"] = 774,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33993,
+		},
+		[64652] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "霍迪尔的勇士",
+			["npcID"] = 34133,
+		},
+		[59986] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30622,
+		},
+		[18327] = {
+			["source"] = "安娜丝塔丽男爵夫人",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10436,
+		},
+		[59160] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "雷铸医师",
+			["npcID"] = 28582,
+		},
+		[47939] = {
+			["source"] = "辛克的伐木机",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27061,
+		},
+		[54102] = {
+			["encounterName"] = "谢沃兹",
+			["source"] = "谢沃兹",
+			["encounterID"] = 2661,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29266,
+		},
+		[16997] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "石翼尖啸者",
+			["npcID"] = 10409,
+		},
+		[64607] = {
+			["encounterName"] = "观察者奥尔加隆",
+			["source"] = "有生命的星座",
+			["encounterID"] = 757,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33052,
+		},
+		[15869] = {
+			["source"] = "达卡莱巫医",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27555,
+		},
+		[9739] = {
+			["source"] = "幽灵先知",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25351,
+		},
+		[62529] = {
+			["encounterName"] = "托里姆",
+			["source"] = "黑暗符文唤魔师",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32878,
+		},
+		[59416] = {
+			["encounterName"] = "暴龙之王爵德",
+			["source"] = "暴龙之王爵德",
+			["encounterID"] = 373,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27483,
+		},
+		[65490] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "布瑞娜·沉夜",
+			["npcID"] = 34473,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[56272] = {
+			["encounterName"] = "玛里苟斯",
+			["source"] = "玛里苟斯",
+			["npcID"] = 28859,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 734,
+		},
+		[32914] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "血孢巨蛾",
+			["npcID"] = 25464,
+		},
+		[61590] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "传送门看护者",
+			["npcID"] = 30893,
+		},
+		[56969] = {
+			["source"] = "碧蓝缚鳞者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26735,
+		},
+		[56539] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "被解救的北伐军战士",
+			["npcID"] = 30274,
+		},
+		[33642] = {
+			["source"] = "米尔格隆·高山",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 18969,
+		},
+		[61909] = {
+			["encounterName"] = "霍迪尔",
+			["source"] = "维莎·织焰",
+			["encounterID"] = 751,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32946,
+		},
+		[64383] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "空中指挥单位",
+			["encounterID"] = 754,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33670,
+		},
+		[60919] = {
+			["source"] = "阿尔卡冯守卫者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32353,
+		},
+		[51584] = {
+			["source"] = "冰雪亡魂",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26283,
+		},
+		[59800] = {
+			["encounterName"] = "艾欧纳尔",
+			["source"] = "艾欧纳尔",
+			["encounterID"] = 559,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28546,
+		},
+		[31664] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "狂乱的石像鬼",
+			["npcID"] = 27691,
+		},
+		[62933] = {
+			["source"] = "石树长老",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32914,
+		},
+		[66532] = {
+			["encounterName"] = "加拉克苏斯大王",
+			["source"] = "加拉克苏斯大王",
+			["npcID"] = 34780,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 633,
+		},
+		[62997] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "巨兽二型",
+			["encounterID"] = 754,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34071,
+		},
+		[63059] = {
+			["source"] = "森林游荡者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33431,
+		},
+		[51808] = {
+			["source"] = "魔导师凯尔多努斯",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26828,
+		},
+		[59001] = {
+			["source"] = "复活的达卡莱训练者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26637,
+		},
+		[22883] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "哈卡祭司",
+			["npcID"] = 11830,
+		},
+		[11969] = {
+			["source"] = "血顶萨满祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 697,
+		},
+		[52761] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "鳄鱼人猎手瑟匹克",
+			["npcID"] = 28668,
+		},
+		[59108] = {
+			["source"] = "深渊爬行者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30279,
+		},
+		[31600] = {
+			["source"] = "恩其拉地穴魔",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25386,
+		},
+		[55101] = {
+			["encounterName"] = "莫拉比",
+			["source"] = "莫拉比",
+			["npcID"] = 29305,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 387,
+		},
+		[63317] = {
+			["encounterName"] = "锋鳞",
+			["source"] = "锋鳞",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33186,
+		},
+		[59257] = {
+			["source"] = "碧蓝破法者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 31009,
+		},
+		[47425] = {
+			["source"] = "复活的冰霜巨龙",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26841,
+		},
+		[49091] = {
+			["encounterName"] = "残忍的斯卡迪",
+			["source"] = "伊米亚标枪手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26692,
+		},
+		[41440] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "“犀牛之王”尼达尔",
+			["npcID"] = 25801,
+		},
+		[60003] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30624,
+		},
+		[51787] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "因度雷秘法师",
+			["npcID"] = 26336,
+		},
+		[63541] = {
+			["source"] = "雷暴锻铸守护者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33722,
+		},
+		[9004] = {
+			["source"] = "阿什兰·暗石",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 1073,
+		},
+		[32330] = {
+			["source"] = "暗网隐藏者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26625,
+		},
+		[61591] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "传送门看护者",
+			["npcID"] = 30893,
+		},
+		[56508] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "被驯服的冰虫",
+			["npcID"] = 30301,
+		},
+		[8996] = {
+			["source"] = "黑铁火枪手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 6523,
+		},
+		[46608] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "巴琳达·斯通赫尔斯",
+			["npcID"] = 11949,
+		},
+		[59182] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "自由的火焰风暴",
+			["npcID"] = 28584,
+		},
+		[36176] = {
+			["source"] = "银色女祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35307,
+		},
+		[46406] = {
+			["source"] = "埃霍恩的寒浪战士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25756,
+		},
+		[16868] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "尖叫的女妖",
+			["npcID"] = 10463,
+		},
+		[38446] = {
+			["source"] = "影月暗法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 22081,
+		},
+		[61879] = {
+			["encounterName"] = "钢铁议会",
+			["source"] = "唤雷者布隆迪尔",
+			["encounterID"] = 748,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32857,
+		},
+		[51681] = {
+			["source"] = "阿努巴尔蛛魔领主",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26605,
+		},
+		[50690] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "碧蓝审讯者",
+			["npcID"] = 27633,
+		},
+		[64021] = {
+			["encounterName"] = "锋鳞",
+			["source"] = "锋鳞",
+			["encounterID"] = 746,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33186,
+		},
+		[31601] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "地穴爬行者",
+			["npcID"] = 10412,
+		},
+		[54878] = {
+			["encounterName"] = "达卡莱巨像",
+			["source"] = "达卡莱元素",
+			["encounterID"] = 385,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29573,
+		},
+		[30600] = {
+			["encounterName"] = "战争使者沃姆罗格",
+			["source"] = "战争使者沃姆罗格",
+			["npcID"] = 16809,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 1937,
+		},
+		[63775] = {
+			["source"] = "暮光炎术师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33820,
+		},
+		[63666] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "巨兽二型",
+			["encounterID"] = 754,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34071,
+		},
+		[53333] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "阿努巴尔通灵师",
+			["encounterID"] = 217,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29064,
+		},
+		[59281] = {
+			["encounterName"] = "塞安妮苟萨",
+			["source"] = "塞安妮苟萨",
+			["encounterID"] = 545,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 31134,
+		},
+		[50348] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "龙眠征服者",
+			["npcID"] = 27996,
+		},
+		[49987] = {
+			["source"] = "防御坦克66D型",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25758,
+		},
+		[13323] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "金队法师",
+			["npcID"] = 32341,
+		},
+		[18392] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "奥妮克希亚",
+			["npcID"] = 10184,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 1084,
+		},
+		[31707] = {
+			["source"] = "水元素",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 510,
+		},
+		[6660] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "杉达拉猎人之魂",
+			["npcID"] = 30864,
+		},
+		[65492] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "布瑞娜·沉夜",
+			["npcID"] = 34473,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[16866] = {
+			["source"] = "泼毒者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10417,
+		},
+		[28280] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "格罗布鲁斯",
+			["npcID"] = 15931,
+		},
+		[33417] = {
+			["source"] = "暴风城法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 18949,
+		},
+		[61528] = {
+			["source"] = "闪电构造体",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27972,
+		},
+		[59514] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "希尔瓦娜斯·风行者",
+			["npcID"] = 31651,
+		},
+		[59395] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "背叛的卫兵",
+			["npcID"] = 31532,
+		},
+		[58700] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "灼热图腾 VIII",
+			["npcID"] = 31162,
+		},
+		[50403] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "废土挖掘者",
+			["npcID"] = 28005,
+		},
+		[59183] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "自由的火焰风暴",
+			["npcID"] = 28584,
+		},
+		[62583] = {
+			["encounterName"] = "托里姆",
+			["source"] = "西芙",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33196,
+		},
+		[59706] = {
+			["encounterName"] = "掠夺者因格瓦尔",
+			["source"] = "劫掠者因格瓦尔",
+			["encounterID"] = 575,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 23954,
+		},
+		[63830] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "萨拉",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33134,
+		},
+		[51586] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "掠龙灵魂师",
+			["npcID"] = 28410,
+		},
+		[30633] = {
+			["source"] = "晶化保卫者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26792,
+		},
+		[66536] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "银色神官帕尔崔丝",
+			["encounterID"] = 338,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34928,
+		},
+		[62935] = {
+			["encounterName"] = "弗蕾亚",
+			["source"] = "古代水之精魂",
+			["encounterID"] = 753,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33202,
+		},
+		[32011] = {
+			["source"] = "斯卡德尔",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25226,
+		},
+		[45608] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "灵语者斯纳尔芬",
+			["npcID"] = 25339,
+		},
+		[59994] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30624,
+		},
+		[37488] = {
+			["source"] = "魔法禁锢的恐惧卫士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 21908,
+		},
+		[46772] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "克莉斯塔萨",
+			["npcID"] = 26206,
+		},
+		[59528] = {
+			["encounterName"] = "沃尔坎",
+			["source"] = "沃尔坎",
+			["encounterID"] = 557,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28587,
+		},
+		[37624] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "背叛的恐惧魔王",
+			["npcID"] = 31531,
+		},
+		[55007] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "雷铸追击者",
+			["npcID"] = 29696,
+		},
+		[13748] = {
+			["source"] = "精锐法师猎手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30665,
+		},
+		[65301] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "萨拉",
+			["npcID"] = 33134,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 756,
+		},
+		[59259] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "坚钢狂暴者",
+			["npcID"] = 28579,
+		},
+		[7799] = {
+			["source"] = "匹普尼克",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 416,
+		},
+		[46983] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "大型水元素",
+			["npcID"] = 25040,
+		},
+		[61337] = {
+			["encounterName"] = "谢沃兹",
+			["source"] = "谢沃兹",
+			["encounterID"] = 2661,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29266,
+		},
+		[49317] = {
+			["source"] = "碧蓝幼龙",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27682,
+		},
+		[60954] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "布莉塔",
+			["npcID"] = 30484,
+		},
+		[51203] = {
+			["source"] = "钻雪虫",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26360,
+		},
+		[62488] = {
+			["encounterName"] = "掌炉者伊格尼斯",
+			["source"] = "掌炉者伊格尼斯",
+			["encounterID"] = 745,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33118,
+		},
+		[66665] = {
+			["encounterName"] = "火焰看守者科拉隆",
+			["source"] = "火焰看守者科拉隆",
+			["encounterID"] = 776,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35013,
+		},
+		[46568] = {
+			["source"] = "埃霍恩的冰风战士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25757,
+		},
+		[59515] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "希尔瓦娜斯·风行者",
+			["npcID"] = 31651,
+		},
+		[48294] = {
+			["encounterName"] = "伊米隆国王",
+			["source"] = "伊米隆国王",
+			["encounterID"] = 583,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26861,
+		},
+		[59004] = {
+			["encounterName"] = "召唤者诺沃斯",
+			["source"] = "水晶处理者",
+			["encounterID"] = 371,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26627,
+		},
+		[62680] = {
+			["encounterName"] = "掌炉者伊格尼斯",
+			["source"] = "掌炉者伊格尼斯",
+			["encounterID"] = 745,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33118,
+		},
+		[59643] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "布拉斯的跳跃机器人",
+			["npcID"] = 31785,
+		},
+		[7855] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "尤尔丁控水师",
+			["npcID"] = 30632,
+		},
+		[62776] = {
+			["encounterName"] = "XT-002拆解者",
+			["source"] = "XT-002拆解者",
+			["encounterID"] = 747,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33293,
+		},
+		[66552] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "奥尔加隆的回忆",
+			["encounterID"] = 338,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35052,
+		},
+		[51587] = {
+			["source"] = "掠龙灵魂师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28410,
+		},
+		[64918] = {
+			["source"] = "铁矮人修理工",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34198,
+		},
+		[59835] = {
+			["encounterName"] = "洛肯",
+			["source"] = "洛肯",
+			["encounterID"] = 561,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28923,
+		},
+		[37361] = {
+			["source"] = "骷髅守护者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10390,
+		},
+		[66538] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "银色神官帕尔崔丝",
+			["encounterID"] = 338,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34928,
+		},
+		[31516] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "影月侍僧",
+			["npcID"] = 16594,
+		},
+		[59963] = {
+			["encounterName"] = "先知萨隆亚",
+			["source"] = "先知萨隆亚",
+			["encounterID"] = 375,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26632,
+		},
+		[58972] = {
+			["source"] = "达卡莱织火者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29822,
+		},
+		[66794] = {
+			["encounterName"] = "诺森德猛兽",
+			["source"] = "酸喉",
+			["npcID"] = 35144,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 629,
+		},
+		[51779] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "莎拉苟萨",
+			["npcID"] = 26232,
+		},
+		[61965] = {
+			["source"] = "黑暗符文助手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32886,
+		},
+		[17290] = {
+			["source"] = "法师猎手军官",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26727,
+		},
+		[59252] = {
+			["source"] = "伊米亚黑暗萨满祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26694,
+		},
+		[59346] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "阿努巴尔碾压者",
+			["npcID"] = 28922,
+		},
+		[63689] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "空中指挥单位",
+			["encounterID"] = 754,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33670,
+		},
+		[62597] = {
+			["encounterName"] = "托里姆",
+			["source"] = "西芙",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33196,
+		},
+		[59260] = {
+			["encounterName"] = "法师领主伊洛姆",
+			["source"] = "幻影纳迦",
+			["npcID"] = 27648,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 532,
+		},
+		[61338] = {
+			["encounterName"] = "谢沃兹",
+			["source"] = "谢沃兹",
+			["encounterID"] = 2661,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29266,
+		},
+		[9672] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "蓝玉巫师",
+			["npcID"] = 25316,
+		},
+		[61402] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "魔环领主巫师",
+			["npcID"] = 27639,
+		},
+		[17434] = {
+			["source"] = "瑞文戴尔男爵",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10440,
+		},
+		[64535] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "空中指挥单位",
+			["npcID"] = 33670,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 754,
+		},
+		[54369] = {
+			["encounterName"] = "祖拉玛特",
+			["source"] = "湮灭者祖拉玛特",
+			["npcID"] = 29314,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 2663,
+		},
+		[64599] = {
+			["encounterName"] = "观察者奥尔加隆",
+			["source"] = "有生命的星座",
+			["npcID"] = 33052,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 757,
+		},
+		[61562] = {
+			["source"] = "暮光黑暗法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30319,
+		},
+		[61594] = {
+			["source"] = "传送门看护者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30695,
+		},
+		[62649] = {
+			["encounterName"] = "弗蕾亚",
+			["source"] = "风暴鞭笞者",
+			["encounterID"] = 753,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32919,
+		},
+		[52451] = {
+			["encounterName"] = "塑血者沙尔拉姆",
+			["source"] = "塑血者沙尔拉姆",
+			["npcID"] = 26530,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 294,
+		},
+		[64759] = {
+			["encounterName"] = "锋鳞",
+			["source"] = "黑暗符文哨兵",
+			["encounterID"] = 746,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33453,
+		},
+		[22937] = {
+			["source"] = "拉扎尔",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 11497,
+		},
+		[59708] = {
+			["encounterName"] = "掠夺者因格瓦尔",
+			["source"] = "劫掠者因格瓦尔",
+			["encounterID"] = 575,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 23954,
+		},
+		[16587] = {
+			["source"] = "邪恶导师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 8548,
+		},
+		[52611] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "通灵大师",
+			["npcID"] = 27732,
+		},
+		[66935] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "纯洁者耶德瑞克",
+			["encounterID"] = 338,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35119,
+		},
+		[62042] = {
+			["encounterName"] = "托里姆",
+			["source"] = "托里姆",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32865,
+		},
+		[66796] = {
+			["encounterName"] = "诺森德猛兽",
+			["source"] = "恐鳞",
+			["npcID"] = 34799,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 629,
+		},
+		[45578] = {
+			["source"] = "战歌射手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25244,
+		},
+		[37554] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "北伐军领主达尔弗斯",
+			["npcID"] = 31003,
+		},
+		[20791] = {
+			["source"] = "燃刃术士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 11324,
+		},
+		[58973] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "达卡莱猎神者",
+			["npcID"] = 29820,
+		},
+		[20823] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "风险投资公司修理工",
+			["npcID"] = 677,
+		},
+		[19816] = {
+			["source"] = "卡加尼舒",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25427,
+		},
+		[62324] = {
+			["encounterName"] = "烈焰巨兽",
+			["source"] = "被修复的攻城车",
+			["encounterID"] = 744,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33109,
+		},
+		[59435] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "瓦里玛萨斯",
+			["npcID"] = 31565,
+		},
+		[11986] = {
+			["source"] = "飘雪林地萨满祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26201,
+		},
+		[62809] = {
+			["encounterName"] = "霍迪尔",
+			["source"] = "战斗祭司伊莉莎",
+			["encounterID"] = 751,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32948,
+		},
+		[59016] = {
+			["encounterName"] = "召唤者诺沃斯",
+			["source"] = "复活的暗影法师",
+			["encounterID"] = 371,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27600,
+		},
+		[61897] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "伊米亚元素师",
+			["npcID"] = 31267,
+		},
+		[61353] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "女猎手库拉",
+			["npcID"] = 32711,
+		},
+		[61339] = {
+			["encounterName"] = "谢沃兹",
+			["source"] = "谢沃兹",
+			["npcID"] = 29266,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 2661,
+		},
+		[62335] = {
+			["source"] = "黑暗符文助手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32886,
+		},
+		[59357] = {
+			["encounterName"] = "看门者克里克希尔",
+			["source"] = "阿努巴尔暗影法师",
+			["encounterID"] = 216,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28733,
+		},
+		[8997] = {
+			["source"] = "黑铁火枪手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 6523,
+		},
+		[64536] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "VX-001",
+			["npcID"] = 33651,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 754,
+		},
+		[57407] = {
+			["encounterName"] = "玛里苟斯",
+			["source"] = "玛里苟斯",
+			["npcID"] = 28859,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 734,
+		},
+		[4962] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "遗忘深渊高阶祭司",
+			["npcID"] = 30543,
+		},
+		[59517] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "萨尔",
+			["npcID"] = 31650,
+		},
+		[59246] = {
+			["encounterName"] = "残忍的斯卡迪",
+			["source"] = "伊米亚巫医",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26691,
+		},
+		[64696] = {
+			["encounterName"] = "锋鳞",
+			["source"] = "黑暗符文哨兵",
+			["encounterID"] = 746,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33453,
+		},
+		[62344] = {
+			["source"] = "石树长老",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32914,
+		},
+		[12058] = {
+			["source"] = "战歌上尉",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25446,
+		},
+		[9053] = {
+			["source"] = "暗炉农夫",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 8896,
+		},
+		[56402] = {
+			["source"] = "冰鬃雪人",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29875,
+		},
+		[64157] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "腐蚀触须",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33985,
+		},
+		[62328] = {
+			["encounterName"] = "托里姆",
+			["source"] = "黑暗符文唤魔师",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32878,
+		},
+		[48616] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "燃烧深渊通灵侍僧",
+			["npcID"] = 27356,
+		},
+		[63038] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "尤格-萨隆的卫士",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33136,
+		},
+		[62938] = {
+			["encounterName"] = "弗蕾亚",
+			["source"] = "风暴鞭笞者",
+			["npcID"] = 32919,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 753,
+		},
+		[54850] = {
+			["encounterName"] = "达卡莱巨像",
+			["source"] = "达卡莱巨像",
+			["encounterID"] = 385,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29307,
+		},
+		[17195] = {
+			["source"] = "被束缚的火元素",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30416,
+		},
+		[65647] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "空中指挥单位",
+			["encounterID"] = 754,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33670,
+		},
+		[59997] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30625,
+		},
+		[59006] = {
+			["source"] = "达卡莱萨满祭司",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26639,
+		},
+		[51877] = {
+			["source"] = "冷风女巫",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26577,
+		},
+		[63479] = {
+			["encounterName"] = "钢铁议会",
+			["source"] = "唤雷者布隆迪尔",
+			["encounterID"] = 748,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32857,
+		},
+		[59102] = {
+			["source"] = "安卡哈爆法者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30278,
+		},
+		[63226] = {
+			["source"] = "生命的卫士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33528,
+		},
+		[5106] = {
+			["source"] = "铁腭蜥蜴",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 1551,
+		},
+		[57088] = {
+			["encounterName"] = "埃曼尼塔",
+			["source"] = "埃曼尼塔",
+			["encounterID"] = 1989,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30258,
+		},
+		[56934] = {
+			["encounterName"] = "大魔导师泰蕾丝塔",
+			["source"] = "大魔导师泰蕾丝塔",
+			["encounterID"] = 520,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26731,
+		},
+		[63631] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "巨兽二型",
+			["encounterID"] = 754,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33432,
+		},
+		[57408] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "希弗列尔达风暴之女",
+			["npcID"] = 29323,
+		},
+		[62395] = {
+			["encounterName"] = "烈焰巨兽",
+			["source"] = "烈焰巨兽炮台",
+			["encounterID"] = 744,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33139,
+		},
+		[50538] = {
+			["source"] = "蒸汽鳄鱼人",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25687,
+		},
+		[17435] = {
+			["source"] = "瑞文戴尔男爵",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10440,
+		},
+		[64537] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "VX-001",
+			["npcID"] = 33651,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 754,
+		},
+		[48201] = {
+			["source"] = "药剂师薇吉·莱文",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27248,
+		},
+		[65648] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "空中指挥单位",
+			["npcID"] = 33670,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 754,
+		},
+		[62327] = {
+			["encounterName"] = "托里姆",
+			["source"] = "黑暗符文唤魔师",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32878,
+		},
+		[51901] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "翡翠鞭笞者",
+			["npcID"] = 27254,
+		},
+		[50375] = {
+			["source"] = "蒸汽狂怒者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 24601,
+		},
+		[46315] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "雄性长毛猛犸象",
+			["npcID"] = 25743,
+		},
+		[45324] = {
+			["source"] = "国王姆嘎姆嘎",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25197,
+		},
+		[51494] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "黑暗符文巨人",
+			["npcID"] = 27969,
+		},
+		[64825] = {
+			["source"] = "大厅监督者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34197,
+		},
+		[67247] = {
+			["source"] = "银色圣光支配者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35309,
+		},
+		[27267] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "阿巴塔尔",
+			["npcID"] = 416,
+		},
+		[51622] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "影怒者西诺克",
+			["npcID"] = 26771,
+		},
+		[56837] = {
+			["source"] = "法师猎手军官",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26727,
+		},
+		[11443] = {
+			["source"] = "图萨丁暗影法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10398,
+		},
+		[45580] = {
+			["source"] = "犸格莫斯火焰图腾",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25444,
+		},
+		[49704] = {
+			["source"] = "暗网隐藏者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26625,
+		},
+		[20792] = {
+			["source"] = "魔法上尉艾米·马林",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26762,
+		},
+		[60030] = {
+			["encounterName"] = "耶戈达·觅影者",
+			["source"] = "耶戈达·觅影者",
+			["encounterID"] = 214,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29310,
+		},
+		[12466] = {
+			["source"] = "精锐法师猎手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30665,
+		},
+		[32093] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "帝王眼镜蛇",
+			["npcID"] = 28011,
+		},
+		[33624] = {
+			["source"] = "暴风城法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 18949,
+		},
+		[48873] = {
+			["encounterName"] = "暴龙之王爵德",
+			["source"] = "暴龙之王爵德",
+			["encounterID"] = 373,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27483,
+		},
+		[60158] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "碧蓝袭击者",
+			["npcID"] = 30668,
+		},
+		[59167] = {
+			["source"] = "雷怒亡魂",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28826,
+		},
+		[32173] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "盘牙魔法师",
+			["npcID"] = 17961,
+		},
+		[29120] = {
+			["source"] = "荣耀堡弓箭手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 16896,
+		},
+		[17883] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "盘牙观察者",
+			["npcID"] = 17938,
+		},
+		[50832] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "炮兵队长泽尔哈特",
+			["npcID"] = 27235,
+		},
+		[15547] = {
+			["source"] = "被遗忘的火枪手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27225,
+		},
+		[59359] = {
+			["encounterName"] = "阿努巴拉克",
+			["source"] = "阿努巴尔制毒师",
+			["encounterID"] = 218,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29217,
+		},
+		[49161] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "龙眠神殿防御者",
+			["npcID"] = 27629,
+		},
+		[63242] = {
+			["source"] = "红木树人",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33525,
+		},
+		[64570] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "巨兽二型",
+			["encounterID"] = 754,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33432,
+		},
+		[52080] = {
+			["source"] = "裂骨者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27006,
+		},
+		[59519] = {
+			["source"] = "萨尔",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 31650,
+		},
+		[51806] = {
+			["source"] = "魔导师凯尔多努斯",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26828,
+		},
+		[60923] = {
+			["source"] = "阿尔卡冯守卫者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32353,
+		},
+		[60667] = {
+			["source"] = "霜巢天爪龙",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 31137,
+		},
+		[62872] = {
+			["encounterName"] = "弗蕾亚",
+			["source"] = "弗蕾亚",
+			["npcID"] = 32906,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 753,
+		},
+		[38356] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "天灾邪能兽",
+			["npcID"] = 31528,
+		},
+		[57665] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "恐怖之水",
+			["npcID"] = 30645,
+		},
+		[59169] = {
+			["source"] = "被束缚的气元素",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30418,
+		},
+		[57091] = {
+			["encounterName"] = "克莉斯塔萨",
+			["source"] = "克莉斯塔萨",
+			["encounterID"] = 526,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26723,
+		},
+		[55715] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "土灵精英",
+			["npcID"] = 29980,
+		},
+		[59839] = {
 			["encounterName"] = "斯拉德兰",
-			["source"] = "暗影魔",
-			["isChanneled"] = false,
+			["source"] = "斯拉德兰",
 			["encounterID"] = 383,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 19668,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29304,
 		},
-		[58992] = {
-			["isChanneled"] = false,
-			["source"] = "达卡莱犀牛",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 29931,
+		[9613] = {
+			["source"] = "恩其拉通灵师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25378,
 		},
-		[20615] = {
-			["event"] = "SPELL_AURA_APPLIED",
-			["type"] = "DEBUFF",
-			["source"] = "绿队战士",
-			["npcID"] = 32321,
+		[54137] = {
+			["encounterName"] = "谢沃兹",
+			["source"] = "谢沃兹",
+			["npcID"] = 29266,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 2661,
 		},
-		[59008] = {
-			["isChanneled"] = false,
-			["source"] = "强壮的野狼",
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 31233,
+		[59999] = {
+			["encounterName"] = "传令官沃拉兹",
+			["source"] = "扭曲之容",
+			["encounterID"] = 215,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30622,
 		},
-		[35696] = {
-			["source"] = "未知目标",
-			["type"] = "BUFF",
-			["event"] = "SPELL_AURA_APPLIED",
-			["npcID"] = 17252,
+		[64059] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "尤格-萨隆的大脑",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33890,
 		},
-		[24183] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "高阶祭司塞卡尔",
-			["encounterID"] = 789,
-			["isChanneled"] = false,
-			["event"] = "SPELL_CAST_SUCCESS",
-			["npcID"] = 14509,
+		[20297] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "霜颅大法师",
+			["npcID"] = 31813,
 		},
+		[54916] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "灵鳍神谕者",
+			["npcID"] = 28112,
+		},
+		[51879] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "掘洞冰虫",
+			["npcID"] = 26467,
+		},
+		[65210] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "米米尔隆",
+			["npcID"] = 33412,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 756,
+		},
+		[116] = {
+			["npcID"] = 188027,
+		},
+		[22887] = {
+			["source"] = "古拉巴什掷斧者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 11350,
+		},
+		[59009] = {
+			["encounterName"] = "托尔戈",
+			["source"] = "复活的达卡莱蝙蝠骑兵",
+			["encounterID"] = 369,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26638,
+		},
+		[15575] = {
+			["source"] = "怒锤傀儡",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 8907,
+		},
+		[20825] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "骷髅侍僧",
+			["npcID"] = 1789,
+		},
+		[46988] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "巴琳达·斯通赫尔斯",
+			["npcID"] = 11949,
+		},
+		[51112] = {
+			["encounterName"] = "法师领主伊洛姆",
+			["source"] = "法师领主伊洛姆",
+			["npcID"] = 27655,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 532,
+		},
+		[64443] = {
+			["encounterName"] = "观察者奥尔加隆",
+			["source"] = "观察者奥尔加隆",
+			["npcID"] = 32871,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 757,
+		},
+		[61513] = {
+			["source"] = "冷酷的构造体",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27971,
+		},
+		[16429] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "图萨丁暗影法师",
+			["npcID"] = 10398,
+		},
+		[51240] = {
+			["source"] = "复活的达卡莱死亡骑士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26830,
+		},
+		[59616] = {
+			["source"] = "掠龙符文法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 23960,
+		},
+		[60511] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "吉安娜·普罗德摩尔",
+			["npcID"] = 31418,
+		},
+		[51336] = {
+			["encounterName"] = "审讯者达库斯",
+			["source"] = "审讯者达库斯",
+			["npcID"] = 27654,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 528,
+		},
+		[66867] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "纯洁者耶德瑞克",
+			["encounterID"] = 338,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35119,
+		},
+		[62653] = {
+			["encounterName"] = "弗蕾亚",
+			["source"] = "古代水之精魂",
+			["encounterID"] = 753,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33202,
+		},
+		[46317] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "雄性长毛猛犸象",
+			["npcID"] = 25743,
+		},
+		[25748] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "收割者伊斯里克斯",
+			["npcID"] = 25453,
+		},
+		[66100] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "安塔尔·缮炉者",
+			["npcID"] = 34466,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[64215] = {
+			["encounterName"] = "风暴看守者埃玛尔隆",
+			["source"] = "风暴看守者埃玛尔隆",
+			["encounterID"] = 774,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33993,
+		},
+		[59807] = {
+			["encounterName"] = "托尔戈",
+			["source"] = "托尔戈",
+			["encounterID"] = 369,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26630,
+		},
+		[18651] = {
+			["encounterName"] = "托尔戈",
+			["event"] = "SPELL_CAST_START",
+			["source"] = "怒爪猎人",
+			["npcID"] = 29439,
+		},
+		[62601] = {
+			["encounterName"] = "托里姆",
+			["source"] = "西芙",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33196,
+		},
+		[58817] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "永恒密探",
+			["npcID"] = 27744,
+		},
+		[58849] = {
+			["encounterName"] = "玛尔加尼斯",
+			["source"] = "玛尔加尼斯",
+			["npcID"] = 26533,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 296,
+		},
+		[63802] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "萨拉",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33134,
+		},
+		[56862] = {
+			["source"] = "被束缚的水元素",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30419,
+		},
+		[20793] = {
+			["source"] = "血孢点火者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25470,
+		},
+		[28993] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "达莉亚",
+			["npcID"] = 27680,
+		},
+		[65147] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "奥格瑞玛冠军",
+			["npcID"] = 33744,
+		},
+		[64156] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "腐蚀触须",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33985,
+		},
+		[15799] = {
+			["source"] = "战歌上尉",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25446,
+		},
+		[34232] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "高等精灵魔法祭司",
+			["npcID"] = 27747,
+		},
+		[36631] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "魔枢雏龙",
+			["npcID"] = 26127,
+		},
+		[55077] = {
+			["source"] = "野蛮的座狼",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29735,
+		},
+		[50504] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "奥术浮蛇",
+			["npcID"] = 25721,
+		},
+		[64348] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "VX-001",
+			["encounterID"] = 754,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33651,
+		},
+		[62334] = {
+			["source"] = "黑暗符文助手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32886,
+		},
+		[59965] = {
+			["encounterName"] = "先知萨隆亚",
+			["source"] = "先知萨隆亚",
+			["encounterID"] = 375,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26632,
+		},
+		[58701] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "灼热图腾 IX",
+			["npcID"] = 31164,
+		},
+		[55269] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "魔眼",
+			["npcID"] = 29747,
+		},
+		[50405] = {
+			["source"] = "腐烂的风暴巨人",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27270,
+		},
+		[64654] = {
+			["source"] = "寒冬滚石",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34135,
+		},
+		[22334] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "天灾攻城锻造师",
+			["npcID"] = 27410,
+		},
+		[46987] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "巴琳达·斯通赫尔斯",
+			["npcID"] = 11949,
+		},
+		[59521] = {
+			["encounterName"] = "艾库隆",
+			["source"] = "艾库隆",
+			["npcID"] = 29313,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 2660,
+		},
+		[30990] = {
+			["encounterName"] = "血卫士伯鲁恩",
+			["source"] = "碎手弓箭手",
+			["npcID"] = 17427,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 1935,
+		},
+		[23381] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "牦牛人风怒者",
+			["npcID"] = 27571,
+		},
+		[59617] = {
+			["source"] = "掠龙符文法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 23960,
+		},
+		[62859] = {
+			["encounterName"] = "弗蕾亚",
+			["source"] = "弗蕾亚",
+			["encounterID"] = 753,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32906,
+		},
+		[64152] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "腐蚀触须",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33985,
+		},
+		[50506] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "魔缚古树",
+			["npcID"] = 25707,
+		},
+		[59745] = {
+			["encounterName"] = "祖拉玛特",
+			["source"] = "湮灭者祖拉玛特",
+			["npcID"] = 29314,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 2663,
+		},
+		[50183] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "“银月”哈瑞",
+			["npcID"] = 24539,
+		},
+		[49712] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "布莉塔",
+			["npcID"] = 30484,
+		},
+		[15232] = {
+			["source"] = "图萨丁暗影法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10398,
+		},
+		[58850] = {
+			["encounterName"] = "玛尔加尼斯",
+			["source"] = "玛尔加尼斯",
+			["npcID"] = 26533,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 296,
+		},
+		[64153] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "腐蚀触须",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33985,
+		},
+		[59038] = {
+			["source"] = "闪电构造体",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27972,
+		},
+		[65084] = {
+			["source"] = "XB-488清理机器人",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34273,
+		},
+		[66798] = {
+			["source"] = "黑骑士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35451,
+		},
+		[46824] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "克莉斯塔萨",
+			["npcID"] = 26206,
+		},
+		[63134] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "萨拉",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33134,
+		},
+		[64189] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "尤格-萨隆",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33288,
+		},
+		[55633] = {
+			["source"] = "达卡莱魔像",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29832,
+		},
+		[30481] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "碎手狙击者",
+			["npcID"] = 16704,
+		},
+		[63147] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "萨拉",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33134,
+		},
+		[56504] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "被驯服的冰虫",
+			["npcID"] = 30301,
+		},
+		[47981] = {
+			["encounterName"] = "塑树者奥莫洛克",
+			["source"] = "塑树者奥莫洛克",
+			["encounterID"] = 524,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26794,
+		},
+		[59266] = {
+			["encounterName"] = "法师领主伊洛姆",
+			["source"] = "幻影水元素",
+			["npcID"] = 27653,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 532,
+		},
+		[56860] = {
+			["source"] = "法师猎手新兵",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26728,
+		},
+		[59856] = {
+			["encounterName"] = "召唤者诺沃斯",
+			["source"] = "召唤者诺沃斯",
+			["encounterID"] = 371,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26631,
+		},
+		[59362] = {
+			["encounterName"] = "哈多诺克斯",
+			["source"] = "阿努巴尔织网者",
+			["encounterID"] = 217,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29335,
+		},
+		[59347] = {
+			["source"] = "阿努巴尔地穴魔",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29097,
+		},
+		[62932] = {
+			["source"] = "石树长老",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32914,
+		},
+		[10277] = {
+			["source"] = "暗矛掷斧者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 18970,
+		},
+		[42669] = {
+			["encounterName"] = "掠夺者因格瓦尔",
+			["source"] = "劫掠者因格瓦尔",
+			["encounterID"] = 575,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 23954,
+		},
+		[61568] = {
+			["source"] = "暮光膜拜者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30111,
+		},
+		[62623] = {
+			["encounterName"] = "弗蕾亚",
+			["source"] = "弗蕾亚",
+			["encounterID"] = 753,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32906,
+		},
+		[50379] = {
+			["source"] = "天灾复活者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26626,
+		},
+		[52969] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "亚鲁乌特",
+			["npcID"] = 28121,
+		},
+		[7979] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "风险投资公司修理工",
+			["npcID"] = 677,
+		},
+		[66104] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "安塔尔·缮炉者",
+			["npcID"] = 34466,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[60936] = {
+			["encounterName"] = "玛里苟斯",
+			["source"] = "玛里苟斯",
+			["npcID"] = 28859,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 734,
+		},
+		[63891] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "萨拉",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33134,
+		},
+		[44433] = {
+			["source"] = "斯卡特·弗洛斯普",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 24784,
+		},
+		[45577] = {
+			["source"] = "尼鲁巴尔遮天者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25451,
+		},
+		[59842] = {
+			["encounterName"] = "斯拉德兰",
+			["source"] = "斯拉德兰",
+			["npcID"] = 29304,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 383,
+		},
+		[38391] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "瘤皮",
+			["npcID"] = 30003,
+		},
+		[55814] = {
+			["encounterName"] = "凶残的伊克",
+			["source"] = "凶残的伊克",
+			["npcID"] = 29932,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 1988,
+		},
+		[52770] = {
+			["encounterName"] = "艾欧纳尔",
+			["source"] = "艾欧纳尔",
+			["encounterID"] = 559,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28546,
+		},
+		[62016] = {
+			["encounterName"] = "托里姆",
+			["source"] = "托里姆",
+			["encounterID"] = 752,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32865,
+		},
+		[32063] = {
+			["source"] = "恩其拉通灵师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25378,
+		},
+		[66808] = {
+			["source"] = "烈焰守卫",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35143,
+		},
+		[33844] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "自由的古树",
+			["npcID"] = 30861,
+		},
+		[66537] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "银色神官帕尔崔丝",
+			["encounterID"] = 338,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34928,
+		},
+		[57061] = {
+			["encounterName"] = "埃曼尼塔",
+			["source"] = "有毒的蘑菇",
+			["encounterID"] = 1989,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30435,
+		},
+		[9532] = {
+			["source"] = "冬鳞智者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25216,
+		},
+		[47731] = {
+			["encounterName"] = "大魔导师泰蕾丝塔",
+			["source"] = "大魔导师泰蕾丝塔",
+			["encounterID"] = 520,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26929,
+		},
+		[67751] = {
+			["encounterName"] = "黑骑士",
+			["source"] = "黑骑士",
+			["encounterID"] = 340,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35451,
+		},
+		[6728] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "雪盲唤风者",
+			["npcID"] = 11675,
+		},
+		[61558] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "通灵大师",
+			["npcID"] = 27732,
+		},
+		[50092] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "第七军团火枪手",
+			["npcID"] = 27791,
+		},
+		[59331] = {
+			["encounterName"] = "残忍的斯卡迪",
+			["source"] = "残忍的斯卡迪",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26693,
+		},
+		[62662] = {
+			["encounterName"] = "维扎克斯将军",
+			["source"] = "维扎克斯将军",
+			["encounterID"] = 755,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33271,
+		},
+		[56326] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "风暴之子瓦杜兰",
+			["npcID"] = 29368,
+		},
+		[31730] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "恐怖博士",
+			["npcID"] = 30404,
+		},
+		[63551] = {
+			["source"] = "生命的卫士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33528,
+		},
+		[46982] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "雷铸追踪者",
+			["npcID"] = 29652,
+		},
+		[57477] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "霜巢毁灭者",
+			["npcID"] = 30575,
+		},
+		[22121] = {
+			["source"] = "霜狼弓箭手",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 13359,
+		},
+		[20821] = {
+			["source"] = "睡梦雏龙",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 741,
+		},
+		[32722] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "起泡的腐泥怪",
+			["npcID"] = 16901,
+		},
+		[66042] = {
+			["encounterName"] = "总冠军",
+			["source"] = "安布罗斯·雷钉",
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34702,
+		},
+		[50476] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "法师领主伊洛姆",
+			["npcID"] = 27655,
+		},
+		[59368] = {
+			["encounterName"] = "看门者克里克希尔",
+			["source"] = "看门者克里克希尔",
+			["npcID"] = 28684,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 216,
+		},
+		[16565] = {
+			["source"] = "安娜丝塔丽男爵夫人",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10436,
+		},
+		[15254] = {
+			["source"] = "破坏者奥科索尔",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 9030,
+		},
+		[59255] = {
+			["source"] = "伊米亚通灵师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 28368,
+		},
+		[12675] = {
+			["source"] = "红衣魔术师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 10419,
+		},
+		[52758] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "鳄鱼人猎手瑟匹克",
+			["npcID"] = 28216,
+		},
+		[55815] = {
+			["encounterName"] = "凶残的伊克",
+			["source"] = "凶残的伊克",
+			["npcID"] = 29932,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 1988,
+		},
+		[66725] = {
+			["encounterName"] = "火焰看守者科拉隆",
+			["source"] = "火焰看守者科拉隆",
+			["encounterID"] = 776,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35013,
+		},
+		[58948] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "黑岩圣殿卫士",
+			["npcID"] = 30453,
+		},
+		[58980] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "达卡莱医师",
+			["npcID"] = 29826,
+		},
+		[15530] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "残忍的阿图里斯",
+			["npcID"] = 28659,
+		},
+		[59225] = {
+			["encounterName"] = "法师领主伊洛姆",
+			["source"] = "幻影火元素",
+			["npcID"] = 27651,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 532,
+		},
+		[58053] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "圣洁十字军",
+			["npcID"] = 30189,
+		},
+		[48878] = {
+			["encounterName"] = "暴龙之王爵德",
+			["source"] = "暴龙之王爵德",
+			["encounterID"] = 373,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 27483,
+		},
+		[66043] = {
+			["encounterName"] = "总冠军",
+			["source"] = "安布罗斯·雷钉",
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34702,
+		},
+		[15497] = {
+			["source"] = "荒土奴隶",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 17963,
+		},
+		[60227] = {
+			["source"] = "掠龙战略家",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 23956,
+		},
+		[8800] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "风险投资公司露天矿工",
+			["npcID"] = 674,
+		},
+		[67322] = {
+			["encounterName"] = "阿努巴拉克",
+			["source"] = "蛛魔掘地者",
+			["npcID"] = 34607,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 645,
+		},
+		[52139] = {
+			["source"] = "吉加托尔",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26836,
+		},
+		[6917] = {
+			["source"] = "尼鲁巴尔尸体收割者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25445,
+		},
+		[54249] = {
+			["encounterName"] = "拉文索尔",
+			["source"] = "拉文索尔",
+			["encounterID"] = 2662,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 29312,
+		},
+		[33805] = {
+			["source"] = "蛮锤斥候",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 19384,
+		},
+		[66619] = {
+			["encounterName"] = "银色勇士",
+			["source"] = "奥尔加隆的回忆",
+			["encounterID"] = 338,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 35052,
+		},
+		[66683] = {
+			["encounterName"] = "诺森德猛兽",
+			["source"] = "冰吼",
+			["npcID"] = 34797,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 629,
+		},
+		[11820] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "因度雷渔夫",
+			["npcID"] = 26343,
+		},
+		[64639] = {
+			["source"] = "霍迪尔的勇士",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34133,
+		},
+		[62625] = {
+			["source"] = "奥杜尔巨像",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33237,
+		},
+		[67534] = {
+			["encounterName"] = "总冠军",
+			["source"] = "克罗索斯",
+			["encounterID"] = 334,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 34701,
+		},
+		[61515] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "坚钢唤天者",
+			["npcID"] = 28580,
+		},
+		[64767] = {
+			["source"] = "托里姆",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32865,
+		},
+		[61730] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "冰原徒工",
+			["npcID"] = 26705,
+		},
+		[65866] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "阿莱希娅·月行者",
+			["npcID"] = 34467,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[52886] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "鳄鱼人猎手瑟匹克",
+			["npcID"] = 28216,
+		},
+		[18431] = {
+			["encounterName"] = "奥妮克希亚",
+			["source"] = "奥妮克希亚",
+			["npcID"] = 10184,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 1084,
+		},
+		[63795] = {
+			["encounterName"] = "尤格-萨隆",
+			["source"] = "萨拉",
+			["encounterID"] = 756,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33134,
+		},
+		[56775] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "碧蓝大法师",
+			["npcID"] = 26722,
+		},
+		[59855] = {
+			["encounterName"] = "召唤者诺沃斯",
+			["source"] = "召唤者诺沃斯",
+			["encounterID"] = 371,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26631,
+		},
+		[59575] = {
+			["encounterName"] = "斯卡瓦尔德和达尔隆",
+			["source"] = "控制者达尔隆",
+			["npcID"] = 24201,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 573,
+		},
+		[34984] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "盘牙鳐",
+			["npcID"] = 21128,
+		},
+		[66313] = {
+			["encounterName"] = "诺森德猛兽",
+			["source"] = "雪地狗头人奴隶",
+			["npcID"] = 34800,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 629,
+		},
+		[56935] = {
+			["encounterName"] = "大魔导师泰蕾丝塔",
+			["source"] = "大魔导师泰蕾丝塔",
+			["encounterID"] = 520,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26731,
+		},
+		[59013] = {
+			["source"] = "复活的达卡莱灵魂法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26636,
+		},
+		[65812] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "塞瑞莎·术轮",
+			["npcID"] = 34474,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[66055] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "萨缪尔",
+			["npcID"] = 34470,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[61269] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "鳞誓精英",
+			["npcID"] = 32534,
+		},
+		[14034] = {
+			["source"] = "战歌要塞法师",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25420,
+		},
+		[4979] = {
+			["source"] = "风险投资公司地质学家",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 1096,
+		},
+		[62274] = {
+			["encounterName"] = "钢铁议会",
+			["source"] = "符文大师莫尔基姆",
+			["encounterID"] = 748,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32927,
+		},
+		[64352] = {
+			["encounterName"] = "米米尔隆",
+			["source"] = "VX-001",
+			["encounterID"] = 754,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33651,
+		},
+		[59211] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "碧蓝魔环卫士",
+			["npcID"] = 27638,
+		},
+		[50094] = {
+			["source"] = "冰冷元素",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 25715,
+		},
+		[62402] = {
+			["encounterName"] = "烈焰巨兽",
+			["source"] = "巨兽防御炮台",
+			["encounterID"] = 744,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33142,
+		},
+		[59365] = {
+			["encounterName"] = "看门者克里克希尔",
+			["source"] = "看守者纳尔伊",
+			["npcID"] = 28729,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 216,
+		},
+		[63489] = {
+			["encounterName"] = "钢铁议会",
+			["source"] = "符文大师莫尔基姆",
+			["encounterID"] = 748,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32927,
+		},
+		[66054] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "萨缪尔",
+			["npcID"] = 34470,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[58438] = {
+			["source"] = "自由的欺诈者",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 30856,
+		},
+		[59212] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "碧蓝缚法者",
+			["npcID"] = 27635,
+		},
+		[38047] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "碧蓝缚法者",
+			["npcID"] = 27635,
+		},
+		[59370] = {
+			["encounterName"] = "审讯者达库斯",
+			["source"] = "审讯者达库斯",
+			["npcID"] = 27654,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 528,
+		},
+		[59372] = {
+			["encounterName"] = "瓦尔洛斯·云击",
+			["source"] = "瓦尔洛斯·云击",
+			["npcID"] = 27447,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 530,
+		},
+		[63713] = {
+			["source"] = "无面恐魔",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 33772,
+		},
+		[66046] = {
+			["encounterName"] = "瓦格里双子",
+			["source"] = "光明邪使菲奥拉",
+			["npcID"] = 34497,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 641,
+		},
+		[59685] = {
+			["source"] = "掠龙战略家",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 23956,
+		},
+		[55625] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "达卡莱猎神者",
+			["npcID"] = 29820,
+		},
+		[65801] = {
+			["encounterName"] = "阵营冠军",
+			["source"] = "努兹尔·啸钉",
+			["npcID"] = 34468,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 637,
+		},
+		[43413] = {
+			["source"] = "飘雪林地狼獾人",
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 26198,
+		},
+		[59377] = {
+			["encounterName"] = "法师领主伊洛姆",
+			["source"] = "法师领主伊洛姆",
+			["npcID"] = 27655,
+			["event"] = "SPELL_CAST_START",
+			["encounterID"] = 532,
+		},
+		[59381] = {
+			["encounterName"] = "魔网守护者埃雷苟斯",
+			["event"] = "SPELL_CAST_START",
+			["source"] = "魔网守护者埃雷苟斯",
+			["npcID"] = 27656,
+		},
+		[61923] = {
+			["encounterName"] = "霍迪尔",
+			["source"] = "战斗祭司伊莉莎",
+			["encounterID"] = 751,
+			["event"] = "SPELL_CAST_START",
+			["npcID"] = 32948,
+		},
+		[10326] = {
+			["event"] = "SPELL_CAST_START",
+			["source"] = "银色北伐军战士",
+			["npcID"] = 28029,
+		},
+	},
+	["profileKeys"] = {
+		["狂暴專家 - 伊弗斯"] = "Default",
+		["上山打鸟 - 伊弗斯"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -973,13 +5531,16 @@ PlaterDB = {
 					["Author"] = "Tercioo-Sylvanas",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Add the buff name in the trigger box.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (scriptTable.config.glowEnabled) then\n        envTable.buffIconGlow:Show()\n    end\n    \n    if (scriptTable.config.dotsEnabled) then\n        envTable.dotAnimation = Plater.PlayDotAnimation(self, 6, scriptTable.config.dotsColor, 6, 3) \n    end\n    \nend\n\n\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						398151, -- [1]
 						377738, -- [2]
 						378149, -- [3]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Aura - Buff Alert [Plater]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 6,
@@ -1056,10 +5617,7 @@ PlaterDB = {
 							["Desc"] = "",
 						}, -- [8]
 					},
-					["version"] = -1,
-					["Name"] = "Aura - Buff Alert [Plater]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (scriptTable.config.glowEnabled) then\n        envTable.buffIconGlow:Show()\n    end\n    \n    if (scriptTable.config.dotsEnabled) then\n        envTable.dotAnimation = Plater.PlayDotAnimation(self, 6, scriptTable.config.dotsColor, 6, 3) \n    end\n    \nend\n\n\n\n\n",
 				}, -- [1]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    \n    --set the castbar config\n    envTable.configAltCastBar = {\n        iconTexture = \"\",\n        iconTexcoord = {0.1, 0.9, 0.1, 0.9},\n        iconAlpha = 1,\n        iconSize = 14,\n        \n        text = \"Boom!\",\n        textSize = 9,\n        \n        texture = [[Interface\\AddOns\\Plater\\images\\bar_background]],\n        color = \"silver\",\n        \n        isChanneling = false,\n        canInterrupt = false,\n        \n        height = 2,\n        width = Plater.db.profile.plate_config.enemynpc.health_incombat[1],\n        \n        spellNameAnchor = {side = 3, x = 0, y = -2},\n        timerAnchor = {side = 5, x = 0, y = -2},\n    }    \n    \n    function envTable.ShowAltCastBar(npcInfo, unitFrame, unitId, customTime, customStart)\n        --show the cast bar\n        if (npcInfo.timerId) then\n            local barObject = Plater.GetBossTimer(npcInfo.timerId)\n            if (barObject) then\n                if (npcInfo.remaining) then\n                    local timeLeft = barObject.timer + barObject.start - GetTime()\n                    if (timeLeft > npcInfo.remaining) then\n                        return\n                    end\n                end\n                \n                config.text = npcInfo.name\n                \n                if (npcInfo.spellIcon) then\n                    local _, _, iconTexture = GetSpellInfo(npcInfo.spellIcon)\n                    config.iconTexture = iconTexture\n                else\n                    config.iconTexture = \"\"\n                end\n                \n                Plater.SetAltCastBar(unitFrame.PlateFrame, config, barObject.timer, customStart or barObject.start, npcInfo.altCastId)\n            end\n        else\n            Plater.SetAltCastBar(unitFrame.PlateFrame, config, customTime or npcInfo.timer, customStart, npcInfo.altCastId)            \n        end    \n        \n        \n    end\nend\n\n\n\n\n",
@@ -1075,17 +5633,17 @@ PlaterDB = {
 					["Author"] = "Huugg-Valdrakken",
 					["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 					["Desc"] = "Start extra cast bars for effects after the cast is done. Setup the effect on On Hide script.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						191284, -- [1]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Cast - Effect After Cast [P]",
+					["version"] = -1,
 					["Options"] = {
 					},
-					["version"] = -1,
-					["Name"] = "Cast - Effect After Cast [P]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
 				}, -- [2]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --settings\n    envTable.NameplateSizeOffset = scriptTable.config.castBarHeight\n    envTable.ShowArrow = scriptTable.config.showArrow\n    envTable.ArrowAlpha = scriptTable.config.arrowAlpha\n    \n    --creates the spark to show the cast progress inside the health bar\n    envTable.overlaySpark = envTable.overlaySpark or Plater:CreateImage (unitFrame.healthBar)\n    envTable.overlaySpark:SetBlendMode (\"ADD\")\n    envTable.overlaySpark.width = 16\n    envTable.overlaySpark.height = 36\n    envTable.overlaySpark.alpha = .9\n    envTable.overlaySpark.texture = [[Interface\\AddOns\\Plater\\images\\spark3]]\n    \n    envTable.topArrow = envTable.topArrow or Plater:CreateImage (unitFrame.healthBar)\n    envTable.topArrow:SetBlendMode (\"ADD\")\n    envTable.topArrow.width = scriptTable.config.arrowWidth\n    envTable.topArrow.height = scriptTable.config.arrowHeight\n    envTable.topArrow.alpha = envTable.ArrowAlpha\n    envTable.topArrow.texture = [[Interface\\BUTTONS\\Arrow-Down-Up]]\n    \n    --scale animation\n    envTable.smallScaleAnimation = envTable.smallScaleAnimation or Plater:CreateAnimationHub (unitFrame.healthBar)\n    Plater:CreateAnimation (envTable.smallScaleAnimation, \"SCALE\", 1, 0.075, 1, 1, 1.08, 1.08)\n    Plater:CreateAnimation (envTable.smallScaleAnimation, \"SCALE\", 2, 0.075, 1, 1, 0.95, 0.95)    \n    --envTable.smallScaleAnimation:Play() --envTable.smallScaleAnimation:Stop()\n    \nend\n\n\n\n\n\n\n\n",
@@ -1101,7 +5659,8 @@ PlaterDB = {
 					["Author"] = "Bombad�o-Azralon",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Apply several animations when the explosion orb cast starts on a Mythic Dungeon with Explosion Affix",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.overlaySpark:Show()\n    \n    if (envTable.ShowArrow) then\n        envTable.topArrow:Show()\n    end\n    \n    Plater.FlashNameplateBorder (unitFrame, 0.05)   \n    Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n    \n    envTable.smallScaleAnimation:Play()\n    \n    --increase the nameplate size\n    local nameplateHeight = Plater.db.profile.plate_config.enemynpc.health_incombat [2]\n    unitFrame.healthBar:SetHeight (nameplateHeight + envTable.NameplateSizeOffset)\n    \n    envTable.overlaySpark.height = nameplateHeight + 5\n    \n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.healthBar, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    \n    Plater.SetCastBarColorForScript(self, true, scriptTable.config.castBarColor, envTable)\n    \n    if (scriptTable.config.useNameplateColor) then\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.healthBarColor)\n        Plater.DenyColorChange(unitFrame, true)\n    end       \nend\n\n\n\n\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						240446, -- [1]
 						385339, -- [2]
@@ -1110,6 +5669,8 @@ PlaterDB = {
 						360857, -- [5]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Explosion Affix M+ [Plater]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 2,
@@ -1118,9 +5679,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Fraction"] = false,
 							["Value"] = 3,
-							["Name"] = "Cast Bar Height Mod",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "castBarHeight",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Cast Bar Height Mod",
 						}, -- [1]
 						{
 							["Type"] = 1,
@@ -1166,9 +5727,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Fraction"] = true,
 							["Value"] = 1,
-							["Name"] = "Arrow Alpha",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "arrowAlpha",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Arrow Alpha",
 						}, -- [6]
 						{
 							["Type"] = 2,
@@ -1177,9 +5738,9 @@ PlaterDB = {
 							["Min"] = 4,
 							["Name"] = "Arrow Width",
 							["Value"] = 8,
-							["Key"] = "arrowWidth",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "arrowWidth",
 						}, -- [7]
 						{
 							["Type"] = 2,
@@ -1188,9 +5749,9 @@ PlaterDB = {
 							["Min"] = 4,
 							["Fraction"] = false,
 							["Value"] = 8,
-							["Name"] = "Arrow Height",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "arrowHeight",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Arrow Height",
 						}, -- [8]
 						{
 							["Type"] = 6,
@@ -1228,9 +5789,9 @@ PlaterDB = {
 							["Min"] = -10,
 							["Name"] = "Dot X Offset",
 							["Value"] = 4,
-							["Fraction"] = false,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "xOffset",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = false,
 						}, -- [12]
 						{
 							["Type"] = 2,
@@ -1239,9 +5800,9 @@ PlaterDB = {
 							["Min"] = -10,
 							["Key"] = "yOffset",
 							["Value"] = 3,
-							["Name"] = "Dot Y Offset",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Dot Y Offset",
 						}, -- [13]
 						{
 							["Type"] = 6,
@@ -1281,10 +5842,7 @@ PlaterDB = {
 							["Desc"] = "Health Bar Color",
 						}, -- [17]
 					},
-					["version"] = -1,
-					["Name"] = "Explosion Affix M+ [Plater]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.overlaySpark:Show()\n    \n    if (envTable.ShowArrow) then\n        envTable.topArrow:Show()\n    end\n    \n    Plater.FlashNameplateBorder (unitFrame, 0.05)   \n    Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n    \n    envTable.smallScaleAnimation:Play()\n    \n    --increase the nameplate size\n    local nameplateHeight = Plater.db.profile.plate_config.enemynpc.health_incombat [2]\n    unitFrame.healthBar:SetHeight (nameplateHeight + envTable.NameplateSizeOffset)\n    \n    envTable.overlaySpark.height = nameplateHeight + 5\n    \n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.healthBar, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    \n    Plater.SetCastBarColorForScript(self, true, scriptTable.config.castBarColor, envTable)\n    \n    if (scriptTable.config.useNameplateColor) then\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.healthBarColor)\n        Plater.DenyColorChange(unitFrame, true)\n    end       \nend\n\n\n\n\n\n\n",
 				}, -- [3]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --creates a glow around the icon\n    envTable.buffIconGlow = envTable.buffIconGlow or Plater.CreateIconGlow (self, scriptTable.config.glowColor)\n    \nend\n\n\n",
@@ -1299,10 +5857,13 @@ PlaterDB = {
 					["semver"] = "",
 					["Author"] = "Tercioo-Sylvanas",
 					["Desc"] = "Add the debuff name in the trigger box.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    if (scriptTable.config.glowEnabled) then\n        envTable.buffIconGlow:Show()\n    end\n    \n    if (scriptTable.config.dotsEnabled) then\n        envTable.dotAnimation = Plater.PlayDotAnimation(self, 6, scriptTable.config.dotsColor, 6, 3) \n    end\nend\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Aura - Debuff Alert [Plater]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 6,
@@ -1379,10 +5940,7 @@ PlaterDB = {
 							["Desc"] = "",
 						}, -- [8]
 					},
-					["version"] = -1,
-					["Name"] = "Aura - Debuff Alert [Plater]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    if (scriptTable.config.glowEnabled) then\n        envTable.buffIconGlow:Show()\n    end\n    \n    if (scriptTable.config.dotsEnabled) then\n        envTable.dotAnimation = Plater.PlayDotAnimation(self, 6, scriptTable.config.dotsColor, 6, 3) \n    end\nend\n\n\n",
 				}, -- [4]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --castbar color (when can be interrupted)\n    envTable.CastbarColor = scriptTable.config.castbarColor\n    \n    --flash duration\n    local CONFIG_BACKGROUND_FLASH_DURATION = scriptTable.config.flashDuration\n    \n    --add this value to the cast bar height\n    envTable.CastBarHeightAdd = scriptTable.config.castBarHeight\n    \n    --create a fast flash above the cast bar\n    envTable.FullBarFlash = envTable.FullBarFlash or Plater.CreateFlash (self, 0.05, 1, \"white\")\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n    \n    --create a texture to use for a flash behind the cast bar\n    local backGroundFlashTexture = Plater:CreateImage (self, [[Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Alert-Glow]], self:GetWidth()+60, self:GetHeight()+50, \"background\", {0, 400/512, 0, 170/256})\n    backGroundFlashTexture:SetBlendMode (\"ADD\", 7)\n    backGroundFlashTexture:SetDrawLayer(\"OVERLAY\", 7)\n    backGroundFlashTexture:SetPoint (\"center\", self, \"center\")\n    backGroundFlashTexture:Hide()\n    \n    --create the animation hub to hold the flash animation sequence\n    envTable.BackgroundFlash = envTable.BackgroundFlash or Plater:CreateAnimationHub (backGroundFlashTexture, \n        function()\n            backGroundFlashTexture:Show()\n        end,\n        function()\n            backGroundFlashTexture:Hide()\n        end\n    )\n    \n    --create the flash animation sequence\n    envTable.BackgroundFlash.fadeIn = envTable.BackgroundFlash.fadeIn or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 1, CONFIG_BACKGROUND_FLASH_DURATION/2, 0, .75)\n    envTable.BackgroundFlash.fadeIn:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    envTable.BackgroundFlash.fadeOut = envTable.BackgroundFlash.fadeOut or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 2, CONFIG_BACKGROUND_FLASH_DURATION/2, 1, 0)    \n    envTable.BackgroundFlash.fadeOut:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    --envTable.BackgroundFlash:Play() --envTable.BackgroundFlash:Stop()    \n    \n    \n    \n    \n    \nend\n\n\n\n\n",
@@ -1400,13 +5958,16 @@ PlaterDB = {
 					["Author"] = "Tercioo-Sylvanas",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend",
 					["Desc"] = "Player an animation when the cast start. Start a timer when the cast finishes. Set the time in the options.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castbarColor, envTable)\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						350421, -- [1]
 						355787, -- [2]
 						348513, -- [3]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Cast - Alert + Timer [P]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 6,
@@ -1468,9 +6029,9 @@ PlaterDB = {
 							["Min"] = 0.05,
 							["Key"] = "flashDuration",
 							["Value"] = 0.4,
-							["Fraction"] = true,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Flash Duration",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = true,
 						}, -- [7]
 						{
 							["Type"] = 2,
@@ -1479,9 +6040,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Key"] = "castBarHeight",
 							["Value"] = 5,
-							["Fraction"] = false,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Cast Bar Height Mod",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = false,
 						}, -- [8]
 						{
 							["Type"] = 2,
@@ -1490,9 +6051,9 @@ PlaterDB = {
 							["Min"] = 0.1,
 							["Key"] = "shakeDuration",
 							["Value"] = 0.2,
-							["Fraction"] = true,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Shake Duration",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = true,
 						}, -- [9]
 						{
 							["Type"] = 2,
@@ -1501,9 +6062,9 @@ PlaterDB = {
 							["Min"] = 2,
 							["Key"] = "shakeAmplitude",
 							["Value"] = 8,
-							["Name"] = "Shake Amplitude",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Shake Amplitude",
 						}, -- [10]
 						{
 							["Type"] = 2,
@@ -1512,9 +6073,9 @@ PlaterDB = {
 							["Min"] = 1,
 							["Key"] = "shakeFrequency",
 							["Value"] = 40,
-							["Name"] = "Shake Frequency",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Shake Frequency",
 						}, -- [11]
 						{
 							["Type"] = 7,
@@ -1526,10 +6087,7 @@ PlaterDB = {
 							["Desc"] = "Key is the spellId and value is the amount of time of the Timer",
 						}, -- [12]
 					},
-					["version"] = -1,
-					["Name"] = "Cast - Alert + Timer [P]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castbarColor, envTable)\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n",
 				}, -- [5]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --settings\n    envTable.NameplateSizeOffset = scriptTable.config.castBarHeight\n    envTable.ShowArrow = scriptTable.config.showArrow\n    envTable.ArrowAlpha = scriptTable.config.arrowAlpha\n    \n    --creates the spark to show the cast progress inside the health bar\n    envTable.overlaySpark = envTable.overlaySpark or Plater:CreateImage (unitFrame.healthBar)\n    envTable.overlaySpark:SetBlendMode (\"ADD\")\n    envTable.overlaySpark.width = 16\n    envTable.overlaySpark.height = 36\n    envTable.overlaySpark.alpha = .9\n    envTable.overlaySpark.texture = [[Interface\\AddOns\\Plater\\images\\spark3]]\n    \n    envTable.topArrow = envTable.topArrow or Plater:CreateImage (unitFrame.healthBar)\n    envTable.topArrow:SetBlendMode (\"ADD\")\n    envTable.topArrow.width = scriptTable.config.arrowWidth\n    envTable.topArrow.height = scriptTable.config.arrowHeight\n    envTable.topArrow.alpha = envTable.ArrowAlpha\n    envTable.topArrow.texture = [[Interface\\BUTTONS\\Arrow-Down-Up]]\n    \n    --scale animation\n    envTable.smallScaleAnimation = envTable.smallScaleAnimation or Plater:CreateAnimationHub (unitFrame.healthBar)\n    Plater:CreateAnimation (envTable.smallScaleAnimation, \"SCALE\", 1, 0.075, 1, 1, 1.08, 1.08)\n    Plater:CreateAnimation (envTable.smallScaleAnimation, \"SCALE\", 2, 0.075, 1, 1, 0.95, 0.95)    \n    --envTable.smallScaleAnimation:Play() --envTable.smallScaleAnimation:Stop()\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))    \n    \n    --update the config for the skake here so it wont need a /reload\n    envTable.FrameShake.OriginalAmplitude = scriptTable.config.shakeAmplitude\n    envTable.FrameShake.OriginalDuration = scriptTable.config.shakeDuration\n    envTable.FrameShake.OriginalFrequency = scriptTable.config.shakeFrequency\nend\n\n\n\n\n\n\n\n",
@@ -1545,7 +6103,8 @@ PlaterDB = {
 					["Author"] = "Bombad�o-Azralon",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Used on casts that make the mob explode or transform if the cast passes.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.overlaySpark:Show()\n    \n    if (envTable.ShowArrow) then\n        envTable.topArrow:Show()\n    else\n        envTable.topArrow:Hide()\n    end\n    \n    Plater.FlashNameplateBorder (unitFrame, 0.05)   \n    Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n    \n    envTable.smallScaleAnimation:Play()\n    \n    --increase the nameplate size\n    local nameplateHeight = Plater.db.profile.plate_config.enemynpc.health_incombat [2]\n    unitFrame.healthBar:SetHeight (nameplateHeight + envTable.NameplateSizeOffset)\n    \n    envTable.overlaySpark.height = nameplateHeight + 5\n    \n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.healthBar, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    \n    local customColor = scriptTable.config.castColor[tostring(envTable._SpellID)]\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, customColor or scriptTable.config.castBarColor, envTable)\n    \n    if (scriptTable.config.useNameplateColor) then\n        local npcIdString = tostring(envTable._NpcID)\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.healthBarColor)        \n        Plater.DenyColorChange(unitFrame, true)            \n    end\n    \nend",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						383823, -- [1]
 						382670, -- [2]
@@ -1580,6 +6139,8 @@ PlaterDB = {
 						87618, -- [31]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Cast - Ultra Important [P]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 6,
@@ -1612,9 +6173,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Key"] = "castBarHeight",
 							["Value"] = 3,
-							["Fraction"] = false,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Health Bar Height Mod",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = false,
 						}, -- [4]
 						{
 							["Type"] = 4,
@@ -1697,9 +6258,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Key"] = "arrowAlpha",
 							["Value"] = 0.5,
-							["Fraction"] = true,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Arrow Alpha",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = true,
 						}, -- [13]
 						{
 							["Type"] = 2,
@@ -1708,9 +6269,9 @@ PlaterDB = {
 							["Min"] = 4,
 							["Fraction"] = false,
 							["Value"] = 8,
-							["Name"] = "Arrow Width",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "arrowWidth",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Arrow Width",
 						}, -- [14]
 						{
 							["Type"] = 2,
@@ -1719,9 +6280,9 @@ PlaterDB = {
 							["Min"] = 4,
 							["Key"] = "arrowHeight",
 							["Value"] = 8,
-							["Fraction"] = false,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Arrow Height",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = false,
 						}, -- [15]
 						{
 							["Type"] = 6,
@@ -1759,9 +6320,9 @@ PlaterDB = {
 							["Min"] = -10,
 							["Key"] = "xOffset",
 							["Value"] = 4,
-							["Name"] = "Dot X Offset",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Dot X Offset",
 						}, -- [19]
 						{
 							["Type"] = 2,
@@ -1770,9 +6331,9 @@ PlaterDB = {
 							["Min"] = -10,
 							["Fraction"] = false,
 							["Value"] = 3,
-							["Key"] = "yOffset",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Dot Y Offset",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "yOffset",
 						}, -- [20]
 						{
 							["Type"] = 7,
@@ -1812,10 +6373,7 @@ PlaterDB = {
 							["Desc"] = "Insert the spellId in the Key, and the color name in the Value",
 						}, -- [21]
 					},
-					["version"] = -1,
-					["Name"] = "Cast - Ultra Important [P]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.overlaySpark:Show()\n    \n    if (envTable.ShowArrow) then\n        envTable.topArrow:Show()\n    else\n        envTable.topArrow:Hide()\n    end\n    \n    Plater.FlashNameplateBorder (unitFrame, 0.05)   \n    Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n    \n    envTable.smallScaleAnimation:Play()\n    \n    --increase the nameplate size\n    local nameplateHeight = Plater.db.profile.plate_config.enemynpc.health_incombat [2]\n    unitFrame.healthBar:SetHeight (nameplateHeight + envTable.NameplateSizeOffset)\n    \n    envTable.overlaySpark.height = nameplateHeight + 5\n    \n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.healthBar, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    \n    local customColor = scriptTable.config.castColor[tostring(envTable._SpellID)]\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, customColor or scriptTable.config.castBarColor, envTable)\n    \n    if (scriptTable.config.useNameplateColor) then\n        local npcIdString = tostring(envTable._NpcID)\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.healthBarColor)        \n        Plater.DenyColorChange(unitFrame, true)            \n    end\n    \nend",
 				}, -- [6]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.lifePercent = { --dragonflight\n        [197697] = {50}, --Flamegullet\n        [59544] = {50}, --The Nodding Tiger\n        [186227] = {20}, --Monstrous Decay\n        [184020] = {40}, -- Hulking Berserker\n        [91005] = {20}, --Naraxas\n    }\n    \n    \n    function envTable.CreateMarker(unitFrame)\n        unitFrame.healthMarker = unitFrame.healthBar:CreateTexture(nil, \"overlay\")\n        unitFrame.healthMarker:SetColorTexture(1, 1, 1)\n        unitFrame.healthMarker:SetSize(1, unitFrame.healthBar:GetHeight())\n        \n        unitFrame.healthOverlay = unitFrame.healthBar:CreateTexture(nil, \"overlay\")\n        unitFrame.healthOverlay:SetColorTexture(1, 1, 1)\n        unitFrame.healthOverlay:SetSize(1, unitFrame.healthBar:GetHeight())\n    end\n    \n    function envTable.UpdateMarkers(unitFrame)\n        local markersTable = envTable.lifePercent[envTable._NpcID]\n        if (markersTable) then\n            local unitLifePercent = envTable._HealthPercent / 100\n            for i, percent in ipairs(markersTable) do\n                percent = percent / 100\n                if (unitLifePercent > percent) then\n                    if (not unitFrame.healthMarker) then\n                        envTable.CreateMarker(unitFrame)\n                    end\n                    \n                    unitFrame.healthMarker:Show()\n                    local width = unitFrame.healthBar:GetWidth()\n                    unitFrame.healthMarker:SetPoint(\"left\", unitFrame.healthBar, \"left\", width*percent, 0)\n                    \n                    local overlaySize = width * (unitLifePercent - percent)\n                    unitFrame.healthOverlay:SetWidth(overlaySize)\n                    unitFrame.healthOverlay:SetPoint(\"left\", unitFrame.healthMarker, \"right\", 0, 0)\n                    \n                    unitFrame.healthMarker:SetVertexColor(Plater:ParseColors(scriptTable.config.indicatorColor))\n                    unitFrame.healthMarker:SetAlpha(scriptTable.config.indicatorAlpha)\n                    \n                    unitFrame.healthOverlay:SetVertexColor(Plater:ParseColors(scriptTable.config.fillColor))\n                    unitFrame.healthOverlay:SetAlpha(scriptTable.config.fillAlpha)\n                    \n                    return\n                end\n            end --end for\n            \n            if (unitFrame.healthMarker and unitFrame.healthMarker:IsShown()) then\n                unitFrame.healthMarker:Hide()\n                unitFrame.healthOverlay:Hide()\n            end\n        end\n    end\nend      \n\n\n\n\n\n\n\n\n\n",
@@ -1833,10 +6391,18 @@ PlaterDB = {
 					["Author"] = "Aelerolor-Torghast",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Place a marker into the health bar to indicate when the unit will change phase or cast an important spell.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.UpdateMarkers(unitFrame)\nend\n\n\n",
+					["NpcNames"] = {
+						"197697", -- [1]
+						"59544", -- [2]
+						"186227", -- [3]
+						"184020", -- [4]
+						"91005", -- [5]
+					},
 					["SpellIds"] = {
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Add - Health Markers [P]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 5,
@@ -1874,9 +6440,9 @@ PlaterDB = {
 							["Min"] = 0.1,
 							["Key"] = "indicatorAlpha",
 							["Value"] = 0.79,
-							["Fraction"] = true,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Vertical Line Alpha",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = true,
 						}, -- [4]
 						{
 							["Type"] = 6,
@@ -1906,20 +6472,12 @@ PlaterDB = {
 							["Min"] = 0,
 							["Name"] = "Fill Alpha",
 							["Value"] = 0.2,
-							["Key"] = "fillAlpha",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = true,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "fillAlpha",
 						}, -- [7]
 					},
-					["version"] = -1,
-					["Name"] = "Add - Health Markers [P]",
-					["NpcNames"] = {
-						"197697", -- [1]
-						"59544", -- [2]
-						"186227", -- [3]
-						"184020", -- [4]
-						"91005", -- [5]
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.UpdateMarkers(unitFrame)\nend\n\n\n",
 				}, -- [7]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --flash duration\n    local CONFIG_FLASH_DURATION = scriptTable.config.flashDuration\n    \n    --manually create a new texture for the flash animation\n    if (not envTable.SmallFlashTexture) then\n        envTable.SmallFlashTexture = envTable.SmallFlashTexture or Plater:CreateImage (unitFrame.castBar)\n        envTable.SmallFlashTexture:SetColorTexture (1, 1, 1)\n        envTable.SmallFlashTexture:SetAllPoints()\n    end\n    \n    --manually create a flash animation using the framework\n    if (not envTable.SmallFlashAnimationHub) then \n        \n        local onPlay = function()\n            envTable.SmallFlashTexture:Show()\n        end\n        \n        local onFinished = function()\n            envTable.SmallFlashTexture:Hide()\n        end\n        \n        local animationHub = Plater:CreateAnimationHub (envTable.SmallFlashTexture, onPlay, onFinished)\n        envTable.flashIn = Plater:CreateAnimation (animationHub, \"Alpha\", 1, CONFIG_FLASH_DURATION/2, 0, .6)\n        envTable.flashOut = Plater:CreateAnimation (animationHub, \"Alpha\", 2, CONFIG_FLASH_DURATION/2, 1, 0)\n        \n        envTable.SmallFlashAnimationHub = animationHub\n    end\n    \n    envTable.flashIn:SetDuration(scriptTable.config.flashDuration / 2)\n    envTable.flashOut:SetDuration(scriptTable.config.flashDuration / 2)\n    envTable.SmallFlashTexture:SetColorTexture (Plater:ParseColors(scriptTable.config.flashColor))\n    \nend\n\n\n\n\n\n\n\n",
@@ -1935,7 +6493,8 @@ PlaterDB = {
 					["Author"] = "Tercioo-Sylvanas",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Flashes the Cast Bar when a spell in the trigger list is Cast. Add spell in the Add Trigger field.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.SmallFlashAnimationHub:Play()\n    \nend\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						376851, -- [1]
 						396044, -- [2]
@@ -1973,6 +6532,8 @@ PlaterDB = {
 						372225, -- [34]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Cast - Small Alert [Plater]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 6,
@@ -2013,9 +6574,9 @@ PlaterDB = {
 							["Min"] = 0.1,
 							["Name"] = "Flash Duration",
 							["Value"] = 0.6,
-							["Key"] = "flashDuration",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = true,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "flashDuration",
 						}, -- [5]
 						{
 							["Type"] = 1,
@@ -2031,10 +6592,7 @@ PlaterDB = {
 							["Desc"] = "Color of the Flash",
 						}, -- [6]
 					},
-					["version"] = -1,
-					["Name"] = "Cast - Small Alert [Plater]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.SmallFlashAnimationHub:Play()\n    \nend\n\n\n",
 				}, -- [8]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.NameplateColor = scriptTable.config.nameplateColor\n    envTable.NameplateSizeOffset = scriptTable.config.nameplateSizeOffset\n    \n    unitFrame.UnitImportantSkullTexture = unitFrame.UnitImportantSkullTexture or unitFrame:CreateTexture(nil, \"background\")\n    \n    unitFrame.UnitImportantSkullTexture:Hide()\nend\n\n--[=[\n\n154564 - debug\n\nUsing spellIDs for multi-language support\n\n196548 = ancient branch (academy dungeon)\n195580, 195821, 195820 = nokhub saboteur\n189886 = blazebound firestorm\n75966 = Defiled Spirit\n102019 = Stormforged Obliterator\n    187159 = Shrieking Whelp\n194897 = stormsurge totem\n104251 = duskwatch sentry\n101326 = honored ancestor\n189669 = binding speakl netharius\n192464 = raging ember neltharius\n--]=]\n\n\n",
@@ -2050,10 +6608,29 @@ PlaterDB = {
 					["Author"] = "Izimode-Azralon",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Change the color and highlight a nameplate of an important Add. Add the unit name or NpcID into the trigger box to add more.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    if (envTable.dotAnimation) then\n        Plater.StopDotAnimation(unitFrame.healthBar, envTable.dotAnimation)\n    end\n    \n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.healthBar, 2, scriptTable.config.dotsColor, 3, 4) \n    \n    --increase the nameplate size\n    local nameplateHeight = Plater.db.profile.plate_config.enemynpc.health_incombat [2]\n    unitFrame.healthBar:SetHeight (nameplateHeight + envTable.NameplateSizeOffset)\n    \n    unitFrame.UnitImportantSkullTexture:Show()\n    \n    --color priority:\n    local npcIdString = tostring(envTable._NpcID)\n    envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.npcColor[npcIdString], scriptTable.config.nameplateColor)    \n    \n    if (scriptTable.config.showExtraTexture) then\n        unitFrame.UnitImportantSkullTexture:SetVertexColor(Plater:ParseColors(scriptTable.config.skullColor))\n        unitFrame.UnitImportantSkullTexture:SetAlpha(scriptTable.config.skullAlpha)\n        unitFrame.UnitImportantSkullTexture:SetScale(scriptTable.config.skullScale)\n        unitFrame.UnitImportantSkullTexture:SetTexture([[Interface/AddOns/Plater/media/x_64]])\n        unitFrame.UnitImportantSkullTexture:ClearAllPoints()\n        unitFrame.UnitImportantSkullTexture:SetPoint(\"right\", unitFrame.healthBar, \"left\", -2, 0)\n        unitFrame.UnitImportantSkullTexture:SetSize(28, 28)\n        unitFrame.UnitImportantSkullTexture:Show()\n    else\n        unitFrame.UnitImportantSkullTexture:Hide()\n    end\n    \n    --rules for some npcs\n    if (envTable._NpcID == 194895) then --unstable squall (explode at dying\n        unitFrame.UnitImportantSkullTexture:Hide()\n        Plater.StopDotAnimation(unitFrame.healthBar, envTable.dotAnimation) \n    end\n    \n    if (scriptTable.config.changeNameplateColor) then\n        local npcIdString = tostring(envTable._NpcID)\n        \n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.npcColor[npcIdString], scriptTable.config.nameplateColor)        \n        \n        Plater.DenyColorChange(unitFrame, true)\n    end\n    \nend\n\n\n\n\n",
+					["NpcNames"] = {
+						"196548", -- [1]
+						"195580", -- [2]
+						"195820", -- [3]
+						"195821", -- [4]
+						"189886", -- [5]
+						"75966", -- [6]
+						"102019", -- [7]
+						"187159", -- [8]
+						"194897", -- [9]
+						"104251", -- [10]
+						"101326", -- [11]
+						"189669", -- [12]
+						"192464", -- [13]
+						190381, -- [14]
+						92538, -- [15]
+						192464, -- [16]
+					},
 					["SpellIds"] = {
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Add - Important [P]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 6,
@@ -2107,9 +6684,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Name"] = "Nameplate Size Offset",
 							["Value"] = 3,
-							["Key"] = "nameplateSizeOffset",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "nameplateSizeOffset",
 						}, -- [6]
 						{
 							["Type"] = 6,
@@ -2176,9 +6753,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Fraction"] = true,
 							["Value"] = 0.2,
-							["Key"] = "skullAlpha",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Alpha",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "skullAlpha",
 						}, -- [13]
 						{
 							["Type"] = 2,
@@ -2187,9 +6764,9 @@ PlaterDB = {
 							["Min"] = 0.4,
 							["Name"] = "Scale",
 							["Value"] = 0.6,
-							["Fraction"] = true,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "skullScale",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = true,
 						}, -- [14]
 						{
 							["Type"] = 7,
@@ -2241,26 +6818,7 @@ PlaterDB = {
 							["Desc"] = "Key is the npcID, value is the color name",
 						}, -- [15]
 					},
-					["version"] = -1,
-					["Name"] = "Add - Important [P]",
-					["NpcNames"] = {
-						"196548", -- [1]
-						"195580", -- [2]
-						"195820", -- [3]
-						"195821", -- [4]
-						"189886", -- [5]
-						"75966", -- [6]
-						"102019", -- [7]
-						"187159", -- [8]
-						"194897", -- [9]
-						"104251", -- [10]
-						"101326", -- [11]
-						"189669", -- [12]
-						"192464", -- [13]
-						190381, -- [14]
-						92538, -- [15]
-						192464, -- [16]
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    if (envTable.dotAnimation) then\n        Plater.StopDotAnimation(unitFrame.healthBar, envTable.dotAnimation)\n    end\n    \n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.healthBar, 2, scriptTable.config.dotsColor, 3, 4) \n    \n    --increase the nameplate size\n    local nameplateHeight = Plater.db.profile.plate_config.enemynpc.health_incombat [2]\n    unitFrame.healthBar:SetHeight (nameplateHeight + envTable.NameplateSizeOffset)\n    \n    unitFrame.UnitImportantSkullTexture:Show()\n    \n    --color priority:\n    local npcIdString = tostring(envTable._NpcID)\n    envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.npcColor[npcIdString], scriptTable.config.nameplateColor)    \n    \n    if (scriptTable.config.showExtraTexture) then\n        unitFrame.UnitImportantSkullTexture:SetVertexColor(Plater:ParseColors(scriptTable.config.skullColor))\n        unitFrame.UnitImportantSkullTexture:SetAlpha(scriptTable.config.skullAlpha)\n        unitFrame.UnitImportantSkullTexture:SetScale(scriptTable.config.skullScale)\n        unitFrame.UnitImportantSkullTexture:SetTexture([[Interface/AddOns/Plater/media/x_64]])\n        unitFrame.UnitImportantSkullTexture:ClearAllPoints()\n        unitFrame.UnitImportantSkullTexture:SetPoint(\"right\", unitFrame.healthBar, \"left\", -2, 0)\n        unitFrame.UnitImportantSkullTexture:SetSize(28, 28)\n        unitFrame.UnitImportantSkullTexture:Show()\n    else\n        unitFrame.UnitImportantSkullTexture:Hide()\n    end\n    \n    --rules for some npcs\n    if (envTable._NpcID == 194895) then --unstable squall (explode at dying\n        unitFrame.UnitImportantSkullTexture:Hide()\n        Plater.StopDotAnimation(unitFrame.healthBar, envTable.dotAnimation) \n    end\n    \n    if (scriptTable.config.changeNameplateColor) then\n        local npcIdString = tostring(envTable._NpcID)\n        \n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.npcColor[npcIdString], scriptTable.config.nameplateColor)        \n        \n        Plater.DenyColorChange(unitFrame, true)\n    end\n    \nend\n\n\n\n\n",
 				}, -- [9]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --settings (require a /reload after editing any setting)\n    do\n        --blink and glow\n        envTable.BlinkEnabled = scriptTable.config.blinkEnabled\n        envTable.GlowEnabled = scriptTable.config.glowEnabled \n        envTable.ChangeNameplateColor = scriptTable.config.changeNameplateColor;\n        envTable.TimeLeftToBlink = scriptTable.config.timeleftToBlink;\n        envTable.BlinkSpeed = scriptTable.config.blinkSpeed; \n        envTable.BlinkColor = scriptTable.config.blinkColor; \n        envTable.BlinkMaxAlpha = scriptTable.config.blinkMaxAlpha; \n        envTable.NameplateColor = scriptTable.config.nameplateColor; \n        \n        --text color\n        envTable.TimerColorEnabled = scriptTable.config.timerColorEnabled \n        envTable.TimeLeftWarning = scriptTable.config.timeLeftWarning;\n        envTable.TimeLeftCritical = scriptTable.config.timeLeftCritical;\n        envTable.TextColor_Warning = scriptTable.config.warningColor; \n        envTable.TextColor_Critical = scriptTable.config.criticalColor; \n        \n        --list of spellIDs to ignore\n        envTable.IgnoredSpellID = {\n            [12] = true, --use a simple comma here\n            [13] = true,\n        }\n    end\n    \n    \n    --private\n    do\n        --if not envTable.blinkTexture then\n        envTable.blinkTexture = Plater:CreateImage (self, \"\", 1, 1, \"overlay\")\n        envTable.blinkTexture:SetPoint ('center', 0, 0)\n        envTable.blinkTexture:Hide()\n        \n        local onPlay = function()\n            envTable.blinkTexture:Show() \n            envTable.blinkTexture.color = envTable.BlinkColor\n        end\n        local onStop = function()\n            envTable.blinkTexture:Hide()  \n        end\n        envTable.blinkAnimation = Plater:CreateAnimationHub (envTable.blinkTexture, onPlay, onStop)\n        Plater:CreateAnimation (envTable.blinkAnimation, \"ALPHA\", 1, envTable.BlinkSpeed / 2, 0, envTable.BlinkMaxAlpha)\n        Plater:CreateAnimation (envTable.blinkAnimation, \"ALPHA\", 2, envTable.BlinkSpeed / 2, envTable.BlinkMaxAlpha, 0)\n        --end\n        \n        envTable.glowEffect = envTable.glowEffect or self.overlay or Plater.CreateIconGlow (self)\n        --envTable.glowEffect = envTable.glowEffect or Plater.CreateIconGlow (self)\n        --envTable.glowEffect:Show() --envTable.glowEffect:Hide()\n        \n    end\n    \nend\n\n\n\n\n",
@@ -2276,10 +6834,13 @@ PlaterDB = {
 					["Author"] = "Izimode-Azralon",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Blink, change the number and nameplate color. Add the debuffs int he trigger box. Set settings on constructor script.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.blinkTexture:SetSize (self:GetSize())\n    \nend\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Aura - Blink by Time Left [Plater]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 6,
@@ -2336,9 +6897,9 @@ PlaterDB = {
 							["Min"] = 1,
 							["Fraction"] = true,
 							["Value"] = 3,
-							["Name"] = "Timeleft to Blink",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "timeleftToBlink",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Timeleft to Blink",
 						}, -- [7]
 						{
 							["Type"] = 2,
@@ -2347,9 +6908,9 @@ PlaterDB = {
 							["Min"] = 0.5,
 							["Fraction"] = true,
 							["Value"] = 1,
-							["Name"] = "Blink Speed",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "blinkSpeed",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Blink Speed",
 						}, -- [8]
 						{
 							["Type"] = 2,
@@ -2358,9 +6919,9 @@ PlaterDB = {
 							["Min"] = 0.1,
 							["Fraction"] = true,
 							["Value"] = 0.6,
-							["Name"] = "Blink Max Alpha",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "blinkMaxAlpha",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Blink Max Alpha",
 						}, -- [9]
 						{
 							["Type"] = 1,
@@ -2411,9 +6972,9 @@ PlaterDB = {
 							["Min"] = 1,
 							["Name"] = "Time Left Warning",
 							["Value"] = 8,
-							["Fraction"] = true,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "timeLeftWarning",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = true,
 						}, -- [14]
 						{
 							["Type"] = 2,
@@ -2422,9 +6983,9 @@ PlaterDB = {
 							["Min"] = 1,
 							["Name"] = "Time Left Critical",
 							["Value"] = 3,
-							["Fraction"] = true,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "timeLeftCritical",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = true,
 						}, -- [15]
 						{
 							["Type"] = 1,
@@ -2453,10 +7014,7 @@ PlaterDB = {
 							["Desc"] = "color when the time left is critical",
 						}, -- [17]
 					},
-					["version"] = -1,
-					["Name"] = "Aura - Blink by Time Left [Plater]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.blinkTexture:SetSize (self:GetSize())\n    \nend\n\n\n",
 				}, -- [10]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
@@ -2472,20 +7030,20 @@ PlaterDB = {
 					["Author"] = "Huugg-Valdrakken",
 					["Initialization"] = "function (scriptTable)\n    \n    scriptTable.allAdds = {} \n    scriptTable.nextAddWave = 0\n    scriptTable.waveTime = 20\n    \n    function scriptTable.ArrangeNpcNumbers(GUID)\n        local spawnId = select(7, strsplit (\"-\", GUID))\n        spawnId = tonumber(spawnId, 16)\n        \n        if (spawnId) then\n            --check if this is a new wave of adds\n            if (GetTime() > scriptTable.nextAddWave) then\n                scriptTable.nextAddWave = GetTime() + scriptTable.waveTime\n                scriptTable.allAdds = {}\n            end\n            \n            local bIsAlreadyOnTheList = false\n            \n            for o = 1, #scriptTable.allAdds do\n                if (scriptTable.allAdds[o][1] == GUID) then\n                    bIsAlreadyOnTheList = true\n                end\n            end\n            \n            if (not bIsAlreadyOnTheList) then\n                scriptTable.allAdds[#scriptTable.allAdds+1] = {GUID, spawnId}\n            end\n        end\n        \n        table.sort(scriptTable.allAdds, function(t1, t2) return t1[2] < t2[2] end)\n        \n        --this is a \"loop\" because this is running each time a nameplate is added!\n        \n        for namePlateIndex, plateFrame in ipairs(Plater.GetAllShownPlates()) do\n            local unitFrame = plateFrame.unitFrame\n            \n            --get the unit GUID\n            local unitGUID = unitFrame.namePlateUnitGUID\n            \n            for addId = 1, #scriptTable.allAdds do\n                local addTable = scriptTable.allAdds[addId]\n                local addGUID = addTable[1]\n                \n                if (unitGUID == addGUID) then\n                    scriptTable.TagNameplate(unitFrame, unitGUID, addId)\n                    break\n                end\n            end\n            \n        end\n    end\n    \n    function scriptTable.TagNameplate(unitFrame, GUID, addId)\n        scriptTable.CreateAddWidgetsForNameplate(unitFrame, GUID, addId)\n        \n        if (addId and addId >= 1 and addId <= 8) then\n            unitFrame.AddSpawnIDTexture:Show()\n            unitFrame.AddIcon:Show()\n            unitFrame.AddNumber:Show()\n            \n            local addTexture = \"Interface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_\" .. addId\n            \n            unitFrame.AddIcon:SetTexture(addTexture)\n            unitFrame.AddNumber:SetText(addId)\n        end\n    end\n    \n    function scriptTable.CreateAddWidgetsForNameplate(unitFrame, GUID, addId)\n        if (not unitFrame.AddSpawnIDTexture) then\n            local healthBar = unitFrame.healthBar\n            \n            local textureBackground = healthBar.FrameOverlay:CreateTexture(nil, \"overlay\", nil, 5)\n            local addIcon = healthBar.FrameOverlay:CreateTexture(nil, \"overlay\", nil, 6)\n            local addNumber = healthBar.FrameOverlay:CreateFontString(nil, \"overlay\", \"GameFontNormal\", 6)           \n            \n            unitFrame.AddSpawnIDTexture = textureBackground\n            unitFrame.AddIcon = addIcon\n            unitFrame.AddNumber = addNumber\n        end\n    end    \nend\n\n--Creature-0-2085-1-11042-153285-0002F8DB2B --training dummy for testing\n--195138 Detonating Crystal\n--192955 dracomoc illusion\n--190294 nokhub stormcaster\n--76518 ritual of bones\n\n\n\n\n",
 					["Desc"] = "Put a number above multiples adds, numbers follow their respawn id.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (unitFrame.AddSpawnIDTexture) then\n        unitFrame.AddSpawnIDTexture:Hide()\n        unitFrame.AddIcon:Hide()\n        unitFrame.AddNumber:Hide()\n    end\n    \n    scriptTable.ArrangeNpcNumbers(unitFrame.namePlateUnitGUID)\n    \n    local textureBackground = unitFrame.AddSpawnIDTexture\n    textureBackground:SetSize(22, 10)\n    textureBackground:ClearAllPoints()\n    textureBackground:SetPoint(\"bottomright\", unitFrame.healthBar, \"topright\", 0, 1)\n    \n    textureBackground:SetMask([[Interface\\AddOns\\Plater\\masks\\mask_smallrectangle_rounded1]])\n    textureBackground:SetTexture([[Interface\\AddOns\\Plater\\masks\\mask_smallrectangle_rounded1]])\n    textureBackground:SetVertexColor(0.1215, 0.1176, 0.1294, 1)\n    \n    \n    --textureBackground:SetMask([[Interface/ChatFrame/UI-ChatIcon-HotS]])\n    --    \"Interface/ChatFrame/UI-ChatIcon-HotS\"\n    \n    local addIcon = unitFrame.AddIcon\n    addIcon:ClearAllPoints()\n    addIcon:SetPoint(\"left\", textureBackground, \"left\", 2, 0)\n    addIcon:SetSize(10, 10)\n    \n    local addNumber = unitFrame.AddNumber\n    addNumber:ClearAllPoints()\n    addNumber:SetPoint(\"right\", textureBackground, \"right\", -2, 0)\n    DetailsFramework:SetFontSize(addNumber, 10)\n    \nend\n\n\n",
-					["SpellIds"] = {
-					},
-					["PlaterCore"] = 1,
-					["Options"] = {
-					},
-					["version"] = -1,
-					["Name"] = "Add - Tag Number [P]",
 					["NpcNames"] = {
 						"195138", -- [1]
 						"192955", -- [2]
 						"190294", -- [3]
 						"76518", -- [4]
 					},
+					["SpellIds"] = {
+					},
+					["PlaterCore"] = 1,
+					["Name"] = "Add - Tag Number [P]",
+					["version"] = -1,
+					["Options"] = {
+					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (unitFrame.AddSpawnIDTexture) then\n        unitFrame.AddSpawnIDTexture:Hide()\n        unitFrame.AddIcon:Hide()\n        unitFrame.AddNumber:Hide()\n    end\n    \n    scriptTable.ArrangeNpcNumbers(unitFrame.namePlateUnitGUID)\n    \n    local textureBackground = unitFrame.AddSpawnIDTexture\n    textureBackground:SetSize(22, 10)\n    textureBackground:ClearAllPoints()\n    textureBackground:SetPoint(\"bottomright\", unitFrame.healthBar, \"topright\", 0, 1)\n    \n    textureBackground:SetMask([[Interface\\AddOns\\Plater\\masks\\mask_smallrectangle_rounded1]])\n    textureBackground:SetTexture([[Interface\\AddOns\\Plater\\masks\\mask_smallrectangle_rounded1]])\n    textureBackground:SetVertexColor(0.1215, 0.1176, 0.1294, 1)\n    \n    \n    --textureBackground:SetMask([[Interface/ChatFrame/UI-ChatIcon-HotS]])\n    --    \"Interface/ChatFrame/UI-ChatIcon-HotS\"\n    \n    local addIcon = unitFrame.AddIcon\n    addIcon:ClearAllPoints()\n    addIcon:SetPoint(\"left\", textureBackground, \"left\", 2, 0)\n    addIcon:SetSize(10, 10)\n    \n    local addNumber = unitFrame.AddNumber\n    addNumber:ClearAllPoints()\n    addNumber:SetPoint(\"right\", textureBackground, \"right\", -2, 0)\n    DetailsFramework:SetFontSize(addNumber, 10)\n    \nend\n\n\n",
 				}, -- [11]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    local castBar = unitFrame.castBar\n    local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n    local castBarHeight = castBar:GetHeight()\n    \n    unitFrame.felAnimation = unitFrame.felAnimation or {}\n    \n    if (not unitFrame.felAnimation.textureStretched) then\n        unitFrame.felAnimation.textureStretched = castBar:CreateTexture(nil, \"overlay\", nil, 5)\n    end\n    \n    if (not unitFrame.felAnimation.Textures) then\n        unitFrame.felAnimation.Textures = {}\n        \n        for i = 1, 20 do --max amount of segments is 20\n            local texture = castBar:CreateTexture(nil, \"overlay\", nil, 6)\n            unitFrame.felAnimation.Textures[i] = texture            \n            \n            texture.animGroup = texture.animGroup or texture:CreateAnimationGroup()\n            local animationGroup = texture.animGroup\n            animationGroup:SetToFinalAlpha(true)            \n            animationGroup:SetLooping(\"NONE\")\n            \n            texture:SetTexture([[Interface\\COMMON\\XPBarAnim]])\n            texture:SetTexCoord(0.2990, 0.0010, 0.0010, 0.4159)\n            texture:SetBlendMode(\"ADD\")\n            \n            texture.scale = animationGroup:CreateAnimation(\"SCALE\")\n            texture.scale:SetTarget(texture)\n            \n            texture.alpha = animationGroup:CreateAnimation(\"ALPHA\")\n            texture.alpha:SetTarget(texture)\n            \n            texture.alpha2 = animationGroup:CreateAnimation(\"ALPHA\")\n            texture.alpha2:SetTarget(texture)\n        end\n    end\n    \n    \n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -2501,7 +7059,8 @@ PlaterDB = {
 					["Author"] = "Terciob",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Show a different animation for the cast bar.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (self.channeling) then\n        return \n    end\n    \n    local castBar = unitFrame.castBar\n    envTable.castBarWidth = castBar:GetWidth()\n    castBar.Spark:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.sparkColor))\n    \n    local textureStretched = unitFrame.felAnimation.textureStretched\n    textureStretched:Show()\n    textureStretched:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.glowColor))\n    textureStretched:SetAtlas(\"XPBarAnim-OrangeTrail\")\n    textureStretched:ClearAllPoints()\n    textureStretched:SetPoint(\"right\", castBar.Spark, \"center\", 0, 0)\n    textureStretched:SetHeight(castBar:GetHeight())\n    textureStretched:SetBlendMode(\"ADD\") \n    textureStretched:SetAlpha(0.5)\n    textureStretched:SetDrawLayer(\"overlay\", 7)\n    \n    for i = 1, scriptTable.config.segmentsAmount  do\n        local texture = unitFrame.felAnimation.Textures[i]\n        --texture:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.trailColor))\n        texture:SetVertexColor(1, 1, 1, 1)\n        texture:SetDesaturated(true)\n        \n        local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n        \n        texture:SetSize(castBarPortion+5, castBar:GetHeight())\n        texture:SetDrawLayer(\"overlay\", 6)\n        \n        texture:ClearAllPoints()\n        if (i == scriptTable.config.segmentsAmount) then\n            texture:SetPoint(\"right\", castBar, \"right\", 0, 0)\n        else\n            texture:SetPoint(\"left\", castBar, \"left\", (i-1)*castBarPortion, 2)\n        end\n        \n        texture:SetAlpha(0)\n        texture:Hide()\n        \n        texture.scale:SetOrder(1)\n        texture.scale:SetDuration(0.5)\n        texture.scale:SetScaleFrom(0.2, 1)\n        texture.scale:SetScaleTo(1, 1.5)\n        texture.scale:SetOrigin(\"right\", 0, 0)\n        \n        local durationTime = DetailsFramework:GetBezierPoint(i / scriptTable.config.segmentsAmount, 0.2, 0.01, 0.6)\n        local duration = abs(durationTime-0.6)\n        \n        texture.alpha:SetOrder(1)\n        texture.alpha:SetDuration(0.05)\n        texture.alpha:SetFromAlpha(0)\n        texture.alpha:SetToAlpha(0.4)\n        \n        texture.alpha2:SetOrder(1)\n        texture.alpha2:SetDuration(duration) --0.6\n        texture.alpha2:SetStartDelay(duration)\n        texture.alpha2:SetFromAlpha(0.5)\n        texture.alpha2:SetToAlpha(0)\n    end\n    \n    envTable.CurrentTexture = 1\n    envTable.NextPercent  = 100  / scriptTable.config.segmentsAmount\n    \n    local customColor = scriptTable.config.castColor[tostring(envTable._SpellID)]\n    Plater.SetCastBarColorForScript(self, true, customColor or scriptTable.config.castBarColor, envTable)\nend\n\n\n\n\n\n\n\n\n\n\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						376644, -- [1]
 						386781, -- [2]
@@ -2525,6 +7084,8 @@ PlaterDB = {
 						411002, -- [20]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Cast - Glowing [P]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 2,
@@ -2533,9 +7094,9 @@ PlaterDB = {
 							["Min"] = 5,
 							["Key"] = "segmentsAmount",
 							["Value"] = 7,
-							["Name"] = "Amount of Segments",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Amount of Segments",
 						}, -- [1]
 						{
 							["Type"] = 1,
@@ -2617,10 +7178,7 @@ PlaterDB = {
 							["Desc"] = "Insert the Spell ID in the to Key and a color name into the Value",
 						}, -- [4]
 					},
-					["version"] = -1,
-					["Name"] = "Cast - Glowing [P]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (self.channeling) then\n        return \n    end\n    \n    local castBar = unitFrame.castBar\n    envTable.castBarWidth = castBar:GetWidth()\n    castBar.Spark:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.sparkColor))\n    \n    local textureStretched = unitFrame.felAnimation.textureStretched\n    textureStretched:Show()\n    textureStretched:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.glowColor))\n    textureStretched:SetAtlas(\"XPBarAnim-OrangeTrail\")\n    textureStretched:ClearAllPoints()\n    textureStretched:SetPoint(\"right\", castBar.Spark, \"center\", 0, 0)\n    textureStretched:SetHeight(castBar:GetHeight())\n    textureStretched:SetBlendMode(\"ADD\") \n    textureStretched:SetAlpha(0.5)\n    textureStretched:SetDrawLayer(\"overlay\", 7)\n    \n    for i = 1, scriptTable.config.segmentsAmount  do\n        local texture = unitFrame.felAnimation.Textures[i]\n        --texture:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.trailColor))\n        texture:SetVertexColor(1, 1, 1, 1)\n        texture:SetDesaturated(true)\n        \n        local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n        \n        texture:SetSize(castBarPortion+5, castBar:GetHeight())\n        texture:SetDrawLayer(\"overlay\", 6)\n        \n        texture:ClearAllPoints()\n        if (i == scriptTable.config.segmentsAmount) then\n            texture:SetPoint(\"right\", castBar, \"right\", 0, 0)\n        else\n            texture:SetPoint(\"left\", castBar, \"left\", (i-1)*castBarPortion, 2)\n        end\n        \n        texture:SetAlpha(0)\n        texture:Hide()\n        \n        texture.scale:SetOrder(1)\n        texture.scale:SetDuration(0.5)\n        texture.scale:SetScaleFrom(0.2, 1)\n        texture.scale:SetScaleTo(1, 1.5)\n        texture.scale:SetOrigin(\"right\", 0, 0)\n        \n        local durationTime = DetailsFramework:GetBezierPoint(i / scriptTable.config.segmentsAmount, 0.2, 0.01, 0.6)\n        local duration = abs(durationTime-0.6)\n        \n        texture.alpha:SetOrder(1)\n        texture.alpha:SetDuration(0.05)\n        texture.alpha:SetFromAlpha(0)\n        texture.alpha:SetToAlpha(0.4)\n        \n        texture.alpha2:SetOrder(1)\n        texture.alpha2:SetDuration(duration) --0.6\n        texture.alpha2:SetStartDelay(duration)\n        texture.alpha2:SetFromAlpha(0.5)\n        texture.alpha2:SetToAlpha(0)\n    end\n    \n    envTable.CurrentTexture = 1\n    envTable.NextPercent  = 100  / scriptTable.config.segmentsAmount\n    \n    local customColor = scriptTable.config.castColor[tostring(envTable._SpellID)]\n    Plater.SetCastBarColorForScript(self, true, customColor or scriptTable.config.castBarColor, envTable)\nend\n\n\n\n\n\n\n\n\n\n\n\n\n",
 				}, -- [12]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --create a texture to use for a flash behind the cast bar\n    \n    if (not unitFrame.backGroundFlashTextureImpTarget) then\n        unitFrame.backGroundFlashTextureImpTarget =  Plater:CreateImage (self, [[Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Alert-Glow]], self:GetWidth()+40, self:GetHeight()+20, \"background\", {0, 400/512, 0, 170/256})\n    end\n    \n    local backGroundFlashTexture = unitFrame.backGroundFlashTextureImpTarget\n    backGroundFlashTexture:SetBlendMode (\"ADD\")\n    backGroundFlashTexture:SetDrawLayer(\"OVERLAY\", 7)\n    backGroundFlashTexture:SetPoint (\"center\", self, \"center\")\n    backGroundFlashTexture:Hide()\n    \n    --create the animation hub to hold the flash animation sequence\n    envTable.BackgroundFlash = envTable.BackgroundFlash or Plater:CreateAnimationHub (backGroundFlashTexture, \n        function()\n            backGroundFlashTexture:Show()\n        end,\n        function()\n            backGroundFlashTexture:Hide()\n        end\n    )\n    \n    --create the flash animation sequence\n    local fadeIn = Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 1, scriptTable.config.flashDuration/2, 0, 1)\n    local fadeOut = Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 2, scriptTable.config.flashDuration/2, 1, 0)\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n    \n    --update the config for the flash here so it wont need a /reload\n    fadeIn:SetDuration (scriptTable.config.flashDuration/2)\n    fadeOut:SetDuration (scriptTable.config.flashDuration/2)\n    \n    --update the config for the skake here so it wont need a /reload\n    envTable.FrameShake.OriginalAmplitude = scriptTable.config.shakeAmplitude\n    envTable.FrameShake.OriginalDuration = scriptTable.config.shakeDuration\n    envTable.FrameShake.OriginalFrequency = scriptTable.config.shakeFrequency\n    \n    --create the target unit name box\n    if (not unitFrame.targetBox) then\n        unitFrame.targetBox = CreateFrame(\"frame\", unitFrame:GetName() .. \"ScriptImportantTarget\", unitFrame, \"BackdropTemplate\")\n        unitFrame.targetBox:SetSize(80, 20)\n        unitFrame.targetBox:SetFrameStrata(\"TOOLTIP\")\n        unitFrame.targetBox:Hide()\n        unitFrame.targetBox:SetPoint(\"left\", unitFrame, \"right\", 0, 0)\n        \n        unitFrame.targetBox:SetBackdrop({edgeFile = [[Interface\\Buttons\\WHITE8X8]], edgeSize = 1, bgFile = [[Interface\\AddOns\\Details\\images\\background]], tile = true, tileSize = 16})\n        unitFrame.targetBox:SetBackdropColor(.2, .2, .2, .8)\n        unitFrame.targetBox:SetBackdropBorderColor(0, 0, 0, 1)\n        \n        unitFrame.targetBoxName = unitFrame.targetBox:CreateFontString(nil, \"artwork\", \"GameFontNormal\")\n        unitFrame.targetBoxName:SetPoint(\"center\")\n    end\n    \n    function envTable.UpdateTargetBox(unitFrame, unitId)\n        local targetUnitId = unitId .. \"target\"\n        local unitName = UnitName(targetUnitId)\n        \n        if (unitName) then\n            if (scriptTable.config.colorByClass) then\n                Plater:SetFontColor(unitFrame.targetBoxName, \"white\")\n                unitName = Plater.SetTextColorByClass(targetUnitId, unitName)\n            else\n                Plater:SetFontColor(unitFrame.targetBoxName, scriptTable.config.textColor)\n            end\n            \n            unitFrame.targetBoxName:SetText(unitName)\n            Plater:SetFontSize(unitFrame.targetBoxName, scriptTable.config.targetNameSize)\n            unitFrame.targetBox:SetBackdropColor(Plater:ParseColors(scriptTable.config.targetBgColor))\n            unitFrame.targetBox:SetBackdropBorderColor(Plater:ParseColors(scriptTable.config.targetBgBorderColor))\n            unitFrame.targetBox:Show()\n            \n            unitFrame.targetBox:SetWidth(scriptTable.config.targetFrameWidth)\n            unitFrame.targetBox:SetHeight(scriptTable.config.targetFrameHeight)\n            \n            if (not Plater.HasDotAnimationPlaying(unitFrame.targetBox)) then\n                envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.targetBox, 5, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n            end\n            \n            unitFrame.backGroundFlashTextureImpTarget:SetVertexColor(Plater:ParseColors(scriptTable.config.flashColor))\n            \n            return true\n            \n        end\n    end\n    \nend",
@@ -2636,10 +7194,13 @@ PlaterDB = {
 					["Author"] = "Bombad�o-Azralon",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Highlight the target name",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (envTable.UpdateTargetBox(unitFrame, unitId)) then\n        \n        envTable.BackgroundFlash:Play()\n        \n        Plater.FlashNameplateBorder (unitFrame, 0.05)   \n        Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n        \n        unitFrame:PlayFrameShake (envTable.FrameShake)\n        \n        if (envTable._CanInterrupt) then\n            if (scriptTable.config.useCastbarColor) then\n                self:SetStatusBarColor (Plater:ParseColors (scriptTable.config.castBarColor))\n            end\n        end\n        \n    end\n    \nend\n\n\n\n\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Cast - Important Target [P]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 6,
@@ -2688,9 +7249,9 @@ PlaterDB = {
 							["Min"] = 0.1,
 							["Name"] = "Flash Duration",
 							["Value"] = 0.8,
-							["Key"] = "flashDuration",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = true,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "flashDuration",
 						}, -- [6]
 						{
 							["Type"] = 1,
@@ -2728,9 +7289,9 @@ PlaterDB = {
 							["Min"] = 0.1,
 							["Name"] = "Shake Duration",
 							["Value"] = 0.2,
-							["Key"] = "shakeDuration",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = true,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "shakeDuration",
 						}, -- [10]
 						{
 							["Type"] = 2,
@@ -2739,9 +7300,9 @@ PlaterDB = {
 							["Min"] = 1,
 							["Name"] = "Shake Amplitude",
 							["Value"] = 5,
-							["Key"] = "shakeAmplitude",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "shakeAmplitude",
 						}, -- [11]
 						{
 							["Type"] = 2,
@@ -2750,9 +7311,9 @@ PlaterDB = {
 							["Min"] = 1,
 							["Name"] = "Shake Frequency",
 							["Value"] = 40,
-							["Key"] = "shakeFrequency",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "shakeFrequency",
 						}, -- [12]
 						{
 							["Type"] = 6,
@@ -2790,9 +7351,9 @@ PlaterDB = {
 							["Min"] = -10,
 							["Fraction"] = false,
 							["Value"] = 8,
-							["Key"] = "xOffset",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Dot X Offset",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "xOffset",
 						}, -- [16]
 						{
 							["Type"] = 2,
@@ -2801,9 +7362,9 @@ PlaterDB = {
 							["Min"] = -10,
 							["Name"] = "Dot Y Offset",
 							["Value"] = 3,
-							["Fraction"] = false,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "yOffset",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = false,
 						}, -- [17]
 						{
 							["Type"] = 6,
@@ -2905,9 +7466,9 @@ PlaterDB = {
 							["Min"] = 8,
 							["Name"] = "Text Size",
 							["Value"] = 14,
-							["Key"] = "targetNameSize",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "targetNameSize",
 						}, -- [29]
 						{
 							["Type"] = 4,
@@ -2963,9 +7524,9 @@ PlaterDB = {
 							["Min"] = 30,
 							["Name"] = "Frame Width",
 							["Value"] = 90,
-							["Key"] = "targetFrameWidth",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "targetFrameWidth",
 						}, -- [34]
 						{
 							["Type"] = 2,
@@ -2974,15 +7535,12 @@ PlaterDB = {
 							["Min"] = 8,
 							["Key"] = "targetFrameHeight",
 							["Value"] = 20,
-							["Fraction"] = false,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Frame Height",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = false,
 						}, -- [35]
 					},
-					["version"] = -1,
-					["Name"] = "Cast - Important Target [P]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (envTable.UpdateTargetBox(unitFrame, unitId)) then\n        \n        envTable.BackgroundFlash:Play()\n        \n        Plater.FlashNameplateBorder (unitFrame, 0.05)   \n        Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n        \n        unitFrame:PlayFrameShake (envTable.FrameShake)\n        \n        if (envTable._CanInterrupt) then\n            if (scriptTable.config.useCastbarColor) then\n                self:SetStatusBarColor (Plater:ParseColors (scriptTable.config.castBarColor))\n            end\n        end\n        \n    end\n    \nend\n\n\n\n\n\n\n",
 				}, -- [13]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --castbar color (when can be interrupted)\n    envTable.CastbarColor = scriptTable.config.castbarColor\n    \n    --flash duration\n    local CONFIG_BACKGROUND_FLASH_DURATION = scriptTable.config.flashDuration\n    \n    --add this value to the cast bar height\n    envTable.CastBarHeightAdd = scriptTable.config.castBarHeight\n    \n    --create a fast flash above the cast bar\n    envTable.FullBarFlash = envTable.FullBarFlash or Plater.CreateFlash (self, 0.05, 1, \"white\")\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n    \n    --create a texture to use for a flash behind the cast bar\n    local backGroundFlashTexture = Plater:CreateImage (self, [[Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Alert-Glow]], self:GetWidth()+60, self:GetHeight()+50, \"background\", {0, 400/512, 0, 170/256})\n    backGroundFlashTexture:SetBlendMode (\"ADD\")\n    backGroundFlashTexture:SetDrawLayer(\"OVERLAY\", 7)\n    backGroundFlashTexture:SetPoint (\"center\", self, \"center\")\n    backGroundFlashTexture:Hide()\n    \n    --create the animation hub to hold the flash animation sequence\n    envTable.BackgroundFlash = envTable.BackgroundFlash or Plater:CreateAnimationHub (backGroundFlashTexture, \n        function()\n            backGroundFlashTexture:Show()\n        end,\n        function()\n            backGroundFlashTexture:Hide()\n        end\n    )\n    \n    --create the flash animation sequence\n    envTable.BackgroundFlash.fadeIn = envTable.BackgroundFlash.fadeIn or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 1, CONFIG_BACKGROUND_FLASH_DURATION/2, 0, .75)\n    envTable.BackgroundFlash.fadeIn:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    envTable.BackgroundFlash.fadeOut = envTable.BackgroundFlash.fadeOut or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 2, CONFIG_BACKGROUND_FLASH_DURATION/2, 1, 0)    \n    envTable.BackgroundFlash.fadeOut:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    --envTable.BackgroundFlash:Play() --envTable.BackgroundFlash:Stop()    \n    \n    \n    \n    \n    \nend\n\n\n",
@@ -2998,7 +7556,8 @@ PlaterDB = {
 					["Author"] = "Tercioo-Sylvanas",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend",
 					["Desc"] = "Play a very fast flash when the cast start",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --don't execute on battlegrounds and arenas\n    if (Plater.ZoneInstanceType == \"arena\" or Plater.ZoneInstanceType == \"pvp\") then\n        return\n    end\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castBarColor, envTable)\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						392640, -- [1]
 						397888, -- [2]
@@ -3014,6 +7573,8 @@ PlaterDB = {
 						88186, -- [12]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Cast - Quick Flash [P]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 6,
@@ -3083,9 +7644,9 @@ PlaterDB = {
 							["Min"] = 0.05,
 							["Fraction"] = true,
 							["Value"] = 0.2,
-							["Name"] = "Flash Duration",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "flashDuration",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Flash Duration",
 						}, -- [8]
 						{
 							["Type"] = 2,
@@ -3094,9 +7655,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Fraction"] = false,
 							["Value"] = 0,
-							["Name"] = "Cast Bar Height Mod",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "castBarHeight",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Cast Bar Height Mod",
 						}, -- [9]
 						{
 							["Type"] = 2,
@@ -3105,9 +7666,9 @@ PlaterDB = {
 							["Min"] = 0.1,
 							["Fraction"] = true,
 							["Value"] = 0.1,
-							["Name"] = "Shake Duration",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "shakeDuration",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Shake Duration",
 						}, -- [10]
 						{
 							["Type"] = 2,
@@ -3116,9 +7677,9 @@ PlaterDB = {
 							["Min"] = 10,
 							["Name"] = "Shake Amplitude",
 							["Value"] = 25,
-							["Fraction"] = false,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "shakeAmplitude",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = false,
 						}, -- [11]
 						{
 							["Type"] = 2,
@@ -3127,15 +7688,12 @@ PlaterDB = {
 							["Min"] = 1,
 							["Name"] = "Shake Frequency",
 							["Value"] = 30,
-							["Fraction"] = false,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "shakeFrequency",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = false,
 						}, -- [12]
 					},
-					["version"] = -1,
-					["Name"] = "Cast - Quick Flash [P]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --don't execute on battlegrounds and arenas\n    if (Plater.ZoneInstanceType == \"arena\" or Plater.ZoneInstanceType == \"pvp\") then\n        return\n    end\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castBarColor, envTable)\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n",
 				}, -- [14]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
@@ -3151,16 +7709,16 @@ PlaterDB = {
 					["Author"] = "Keyspell-Azralon",
 					["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 					["Desc"] = "Show power bar where its value is the buff value (usualy shown in the buff tooltip)",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Aura is Shield [P]",
+					["version"] = -1,
 					["Options"] = {
 					},
-					["version"] = -1,
-					["Name"] = "Aura is Shield [P]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
 				}, -- [15]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n--190187 draconic image\n--189893 infused whelp\n--99922 Ebonclaw Packmate\n--104822 flames of woe",
@@ -3176,10 +7734,24 @@ PlaterDB = {
 					["Author"] = "Huugg-Valdrakken",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Change the color of  add",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    unitFrame.onShowAddToKillFlash = unitFrame.onShowAddToKillFlash or Plater.CreateFlash (unitFrame.healthBar, 0.25, 1, \"white\")\n    \n    if (scriptTable.config.useFlash) then\n        unitFrame.onShowAddToKillFlash:Play()\n    end\n    \n    if (scriptTable.config.useNameplateColor) then\n        local npcIdString = tostring(envTable._NpcID)\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.npcColor[npcIdString], scriptTable.config.healthBarColor)\n        Plater.DenyColorChange(unitFrame, true)\n    end\nend\n\n\n\n\n\n\n\n\n\n",
+					["NpcNames"] = {
+						"190187", -- [1]
+						"189893", -- [2]
+						"99922", -- [3]
+						"104822", -- [4]
+						129758, -- [5]
+						190426, -- [6]
+						186696, -- [7]
+						101075, -- [8]
+						100818, -- [9]
+						98081, -- [10]
+						52019, -- [11]
+					},
 					["SpellIds"] = {
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Add - Warning [P]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 4,
@@ -3248,21 +7820,7 @@ PlaterDB = {
 							["Desc"] = "If the npc isn't on this list, use the default color set in the Health Bar Color",
 						}, -- [5]
 					},
-					["version"] = -1,
-					["Name"] = "Add - Warning [P]",
-					["NpcNames"] = {
-						"190187", -- [1]
-						"189893", -- [2]
-						"99922", -- [3]
-						"104822", -- [4]
-						129758, -- [5]
-						190426, -- [6]
-						186696, -- [7]
-						101075, -- [8]
-						100818, -- [9]
-						98081, -- [10]
-						52019, -- [11]
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    unitFrame.onShowAddToKillFlash = unitFrame.onShowAddToKillFlash or Plater.CreateFlash (unitFrame.healthBar, 0.25, 1, \"white\")\n    \n    if (scriptTable.config.useFlash) then\n        unitFrame.onShowAddToKillFlash:Play()\n    end\n    \n    if (scriptTable.config.useNameplateColor) then\n        local npcIdString = tostring(envTable._NpcID)\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.npcColor[npcIdString], scriptTable.config.healthBarColor)\n        Plater.DenyColorChange(unitFrame, true)\n    end\nend\n\n\n\n\n\n\n\n\n\n",
 				}, -- [16]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    local plateFrame = unitFrame.PlateFrame\n    \n    if (not plateFrame.BWC_RedBackground) then\n        plateFrame.BWC_RedBackground = plateFrame:CreateTexture(nil, \"background\")\n        plateFrame.BWC_RedBackground:SetAllPoints()\n    end\n    \n    plateFrame.BWC_RedBackground:SetTexture([[Interface/AddOns/Plater/masks/mask1]])\n    plateFrame.BWC_RedBackground:Hide()\n    \n    function envTable.ShowBackground(unitFrame)\n        local plateFrame = unitFrame.PlateFrame\n        plateFrame.BWC_RedBackground:SetVertexColor(1, 0, 0, 0.4)\n        plateFrame.BWC_RedBackground:Show()\n    end\n    \n    function envTable.HideBackground(unitFrame)\n        plateFrame.BWC_RedBackground:Hide()\n    end\nend\n\n\n\n\n\n\n",
@@ -3278,19 +7836,19 @@ PlaterDB = {
 					["Author"] = "Tiranaa-Azralon",
 					["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 					["Desc"] = "Highlight the nameplate of a unit when has a certain Buff (trigger) and start to cast a spell",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						372743, -- [1]
 						372749, -- [2]
 						384933, -- [3]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Aura While Casting [P]",
+					["version"] = -1,
 					["Options"] = {
 					},
-					["version"] = -1,
-					["Name"] = "Aura While Casting [P]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
 				}, -- [17]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --castbar color (when can be interrupted)\n    envTable.CastbarColor = scriptTable.config.castbarColor\n    \n    --flash duration\n    local CONFIG_BACKGROUND_FLASH_DURATION = scriptTable.config.flashDuration\n    \n    --add this value to the cast bar height\n    envTable.CastBarHeightAdd = scriptTable.config.castBarHeight\n    \n    --create a fast flash above the cast bar\n    envTable.FullBarFlash = envTable.FullBarFlash or Plater.CreateFlash (self, 0.05, 1, \"white\")\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n    \n    --create a texture to use for a flash behind the cast bar\n    local backGroundFlashTexture = Plater:CreateImage (self, [[Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Alert-Glow]], self:GetWidth()+60, self:GetHeight()+50, \"background\", {0, 400/512, 0, 170/256})\n    backGroundFlashTexture:SetBlendMode (\"ADD\", 7)\n    backGroundFlashTexture:SetDrawLayer(\"OVERLAY\", 7)\n    backGroundFlashTexture:SetPoint (\"center\", self, \"center\")\n    backGroundFlashTexture:Hide()\n    \n    --create the animation hub to hold the flash animation sequence\n    envTable.BackgroundFlash = envTable.BackgroundFlash or Plater:CreateAnimationHub (backGroundFlashTexture, \n        function()\n            backGroundFlashTexture:Show()\n        end,\n        function()\n            backGroundFlashTexture:Hide()\n        end\n    )\n    \n    --create the flash animation sequence\n    envTable.BackgroundFlash.fadeIn = envTable.BackgroundFlash.fadeIn or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 1, CONFIG_BACKGROUND_FLASH_DURATION/2, 0, .75)\n    envTable.BackgroundFlash.fadeIn:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    envTable.BackgroundFlash.fadeOut = envTable.BackgroundFlash.fadeOut or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 2, CONFIG_BACKGROUND_FLASH_DURATION/2, 1, 0)    \n    envTable.BackgroundFlash.fadeOut:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    --envTable.BackgroundFlash:Play() --envTable.BackgroundFlash:Stop()    \n    \n    \n    \n    \n    \nend\n\n\n\n\n",
@@ -3306,7 +7864,8 @@ PlaterDB = {
 					["Author"] = "Tercioo-Sylvanas",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend",
 					["Desc"] = "Flash, Bounce and Red Color the CastBar border when when an important cast is happening. Add spell in the Add Trigger field.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --don't execute on battlegrounds and arenas\n    if (not Plater.IsShowingCastBarTest) then\n        if (Plater.ZoneInstanceType == \"arena\" or Plater.ZoneInstanceType == \"pvp\" or Plater.ZoneInstanceType == \"none\") then\n            return\n        end\n    end\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    --set the color of the cast bar to dark orange (only if can be interrupted)\n    --Plater auto set this color to default when a new cast starts, no need to reset this value at OnHide.    \n    if (envTable._CanInterrupt) then\n        if (scriptTable.config.useCastbarColor) then\n            self:SetStatusBarColor (Plater:ParseColors (envTable.CastbarColor))\n        end\n    end\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castbarColor, envTable)\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						396640, -- [1]
 						372743, -- [2]
@@ -3361,6 +7920,8 @@ PlaterDB = {
 						376780, -- [51]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Cast - Big Alert [Plater]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 6,
@@ -3430,9 +7991,9 @@ PlaterDB = {
 							["Min"] = 0.05,
 							["Name"] = "Flash Duration",
 							["Value"] = 0.4,
-							["Key"] = "flashDuration",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = true,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "flashDuration",
 						}, -- [8]
 						{
 							["Type"] = 2,
@@ -3441,9 +8002,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Name"] = "Cast Bar Height Mod",
 							["Value"] = 5,
-							["Key"] = "castBarHeight",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "castBarHeight",
 						}, -- [9]
 						{
 							["Type"] = 2,
@@ -3452,9 +8013,9 @@ PlaterDB = {
 							["Min"] = 0.1,
 							["Name"] = "Shake Duration",
 							["Value"] = 0.2,
-							["Key"] = "shakeDuration",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = true,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "shakeDuration",
 						}, -- [10]
 						{
 							["Type"] = 2,
@@ -3463,9 +8024,9 @@ PlaterDB = {
 							["Min"] = 2,
 							["Fraction"] = false,
 							["Value"] = 8,
-							["Key"] = "shakeAmplitude",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Shake Amplitude",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "shakeAmplitude",
 						}, -- [11]
 						{
 							["Type"] = 2,
@@ -3474,15 +8035,12 @@ PlaterDB = {
 							["Min"] = 1,
 							["Fraction"] = false,
 							["Value"] = 40,
-							["Key"] = "shakeFrequency",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Shake Frequency",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "shakeFrequency",
 						}, -- [12]
 					},
-					["version"] = -1,
-					["Name"] = "Cast - Big Alert [Plater]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --don't execute on battlegrounds and arenas\n    if (not Plater.IsShowingCastBarTest) then\n        if (Plater.ZoneInstanceType == \"arena\" or Plater.ZoneInstanceType == \"pvp\" or Plater.ZoneInstanceType == \"none\") then\n            return\n        end\n    end\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    --set the color of the cast bar to dark orange (only if can be interrupted)\n    --Plater auto set this color to default when a new cast starts, no need to reset this value at OnHide.    \n    if (envTable._CanInterrupt) then\n        if (scriptTable.config.useCastbarColor) then\n            self:SetStatusBarColor (Plater:ParseColors (envTable.CastbarColor))\n        end\n    end\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castbarColor, envTable)\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n",
 				}, -- [18]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    local castBar = unitFrame.castBar\n    local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n    local castBarHeight = castBar:GetHeight()\n    \n    unitFrame.felAnimation = unitFrame.felAnimation or {}\n    \n    if (not unitFrame.felAnimation.textureStretched) then\n        unitFrame.felAnimation.textureStretched = castBar:CreateTexture(nil, \"overlay\", nil, 5)\n    end\n    \n    if (not unitFrame.stopCastingX) then\n        unitFrame.stopCastingX = castBar.FrameOverlay:CreateTexture(nil, \"overlay\", nil, 7)\n        unitFrame.stopCastingX:SetPoint(\"center\", unitFrame.castBar.Spark, \"center\", 0, 0)\n        unitFrame.stopCastingX:SetTexture([[Interface\\AddOns\\Plater\\Media\\stop_64]])\n        unitFrame.stopCastingX:SetSize(16, 16)\n        unitFrame.stopCastingX:Hide()\n    end\n    \n    if (not unitFrame.felAnimation.Textures) then\n        unitFrame.felAnimation.Textures = {}\n        \n        for i = 1, 20 do\n            local texture = castBar:CreateTexture(nil, \"overlay\", nil, 6)\n            unitFrame.felAnimation.Textures[i] = texture            \n            \n            texture.animGroup = texture.animGroup or texture:CreateAnimationGroup()\n            local animationGroup = texture.animGroup\n            animationGroup:SetToFinalAlpha(true)            \n            animationGroup:SetLooping(\"NONE\")\n            \n            texture:SetTexture([[Interface\\COMMON\\XPBarAnim]])\n            texture:SetTexCoord(0.2990, 0.0010, 0.0010, 0.4159)\n            texture:SetBlendMode(\"ADD\")\n            \n            texture.scale = animationGroup:CreateAnimation(\"SCALE\")\n            texture.scale:SetTarget(texture)\n            \n            texture.alpha = animationGroup:CreateAnimation(\"ALPHA\")\n            texture.alpha:SetTarget(texture)\n            \n            texture.alpha2 = animationGroup:CreateAnimation(\"ALPHA\")\n            texture.alpha2:SetTarget(texture)\n        end\n    end\n    \n    \n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -3498,7 +8056,8 @@ PlaterDB = {
 					["Author"] = "Terciob",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Just stop casting",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    local castBar = unitFrame.castBar\n    envTable.castBarWidth = castBar:GetWidth()\n    castBar.Spark:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.sparkColor))\n    \n    local textureStretched = unitFrame.felAnimation.textureStretched\n    textureStretched:Show()\n    textureStretched:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.glowColor))\n    textureStretched:SetAtlas(\"XPBarAnim-OrangeTrail\")\n    textureStretched:ClearAllPoints()\n    textureStretched:SetPoint(\"right\", castBar.Spark, \"center\", 0, 0)\n    textureStretched:SetHeight(castBar:GetHeight())\n    textureStretched:SetBlendMode(\"ADD\") \n    textureStretched:SetAlpha(0.5)\n    textureStretched:SetDrawLayer(\"overlay\", 7)\n    \n    for i = 1, scriptTable.config.segmentsAmount  do\n        local texture = unitFrame.felAnimation.Textures[i]\n        texture:SetVertexColor(1, 1, 1, 1)\n        texture:SetDesaturated(true)\n        \n        local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n        \n        texture:SetSize(castBarPortion+5, castBar:GetHeight())\n        texture:SetDrawLayer(\"overlay\", 6)\n        \n        texture:ClearAllPoints()\n        if (i == scriptTable.config.segmentsAmount) then\n            texture:SetPoint(\"right\", castBar, \"right\", 0, 0)\n        else\n            texture:SetPoint(\"left\", castBar, \"left\", (i-1)*castBarPortion, 2)\n        end\n        \n        texture:SetAlpha(0)\n        texture:Hide()\n        \n        texture.scale:SetOrder(1)\n        texture.scale:SetDuration(0.5)\n        texture.scale:SetScaleFrom(0.2, 1)\n        texture.scale:SetScaleTo(1, 1.5)\n        texture.scale:SetOrigin(\"right\", 0, 0)\n        \n        local durationTime = DetailsFramework:GetBezierPoint(i / scriptTable.config.segmentsAmount, 0.2, 0.01, 0.6)\n        local duration = abs(durationTime-0.6)\n        --local duration = 0.6 --debug\n        \n        texture.alpha:SetOrder(1)\n        texture.alpha:SetDuration(0.05)\n        texture.alpha:SetFromAlpha(0)\n        texture.alpha:SetToAlpha(0.4)\n        \n        texture.alpha2:SetOrder(1)\n        texture.alpha2:SetDuration(duration) --0.6\n        texture.alpha2:SetStartDelay(duration)\n        texture.alpha2:SetFromAlpha(0.5)\n        texture.alpha2:SetToAlpha(0)\n    end\n    \n    unitFrame.stopCastingX:Show()\n    \n    envTable.CurrentTexture = 1\n    envTable.NextPercent  = 100  / scriptTable.config.segmentsAmount\n    \n    self.Text:SetDrawLayer(\"artwork\", 7)\n    self.Spark:SetDrawLayer(\"artwork\", 7)\n    self.Spark:Hide()\nend\n\n\n\n\n\n\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						377004, -- [1]
 						381516, -- [2]
@@ -3506,6 +8065,8 @@ PlaterDB = {
 						199726, -- [4]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Cast - Stop Casting [P]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 2,
@@ -3514,9 +8075,9 @@ PlaterDB = {
 							["Min"] = 5,
 							["Fraction"] = false,
 							["Value"] = 20,
-							["Key"] = "segmentsAmount",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Amount of Segments",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "segmentsAmount",
 						}, -- [1]
 						{
 							["Type"] = 1,
@@ -3545,10 +8106,7 @@ PlaterDB = {
 							["Desc"] = "",
 						}, -- [3]
 					},
-					["version"] = -1,
-					["Name"] = "Cast - Stop Casting [P]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    local castBar = unitFrame.castBar\n    envTable.castBarWidth = castBar:GetWidth()\n    castBar.Spark:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.sparkColor))\n    \n    local textureStretched = unitFrame.felAnimation.textureStretched\n    textureStretched:Show()\n    textureStretched:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.glowColor))\n    textureStretched:SetAtlas(\"XPBarAnim-OrangeTrail\")\n    textureStretched:ClearAllPoints()\n    textureStretched:SetPoint(\"right\", castBar.Spark, \"center\", 0, 0)\n    textureStretched:SetHeight(castBar:GetHeight())\n    textureStretched:SetBlendMode(\"ADD\") \n    textureStretched:SetAlpha(0.5)\n    textureStretched:SetDrawLayer(\"overlay\", 7)\n    \n    for i = 1, scriptTable.config.segmentsAmount  do\n        local texture = unitFrame.felAnimation.Textures[i]\n        texture:SetVertexColor(1, 1, 1, 1)\n        texture:SetDesaturated(true)\n        \n        local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n        \n        texture:SetSize(castBarPortion+5, castBar:GetHeight())\n        texture:SetDrawLayer(\"overlay\", 6)\n        \n        texture:ClearAllPoints()\n        if (i == scriptTable.config.segmentsAmount) then\n            texture:SetPoint(\"right\", castBar, \"right\", 0, 0)\n        else\n            texture:SetPoint(\"left\", castBar, \"left\", (i-1)*castBarPortion, 2)\n        end\n        \n        texture:SetAlpha(0)\n        texture:Hide()\n        \n        texture.scale:SetOrder(1)\n        texture.scale:SetDuration(0.5)\n        texture.scale:SetScaleFrom(0.2, 1)\n        texture.scale:SetScaleTo(1, 1.5)\n        texture.scale:SetOrigin(\"right\", 0, 0)\n        \n        local durationTime = DetailsFramework:GetBezierPoint(i / scriptTable.config.segmentsAmount, 0.2, 0.01, 0.6)\n        local duration = abs(durationTime-0.6)\n        --local duration = 0.6 --debug\n        \n        texture.alpha:SetOrder(1)\n        texture.alpha:SetDuration(0.05)\n        texture.alpha:SetFromAlpha(0)\n        texture.alpha:SetToAlpha(0.4)\n        \n        texture.alpha2:SetOrder(1)\n        texture.alpha2:SetDuration(duration) --0.6\n        texture.alpha2:SetStartDelay(duration)\n        texture.alpha2:SetFromAlpha(0.5)\n        texture.alpha2:SetToAlpha(0)\n    end\n    \n    unitFrame.stopCastingX:Show()\n    \n    envTable.CurrentTexture = 1\n    envTable.NextPercent  = 100  / scriptTable.config.segmentsAmount\n    \n    self.Text:SetDrawLayer(\"artwork\", 7)\n    self.Spark:SetDrawLayer(\"artwork\", 7)\n    self.Spark:Hide()\nend\n\n\n\n\n\n\n\n\n",
 				}, -- [19]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    if (not unitFrame.spitefulTexture) then\n        unitFrame.spitefulTexture = unitFrame.healthBar:CreateTexture(nil, \"overlay\", nil, 6)\n        unitFrame.spitefulTexture:SetPoint('right', 0, 0)\n        unitFrame.spitefulTexture:SetSize(27, 14)\n        unitFrame.spitefulTexture:SetColorTexture(.3, .3, 1, .7)\n        \n        unitFrame.spitefulText = unitFrame.healthBar:CreateFontString(nil, \"overlay\", \"GameFontNormal\", 6)\n        DetailsFramework:SetFontFace (unitFrame.spitefulText, \"2002\")\n        unitFrame.spitefulText:SetPoint(\"right\", unitFrame.spitefulTexture, \"right\", -2, 0)\n        unitFrame.spitefulText:SetJustifyH(\"right\")\n        \n        unitFrame.roleIcon = unitFrame:CreateTexture(nil, \"overlay\")\n        unitFrame.roleIcon:SetPoint(\"left\", unitFrame.healthBar, \"left\", 2, 0)\n        unitFrame.targetName = unitFrame:CreateFontString(nil, \"overlay\", \"GameFontNormal\")\n        unitFrame.targetName:SetPoint(\"left\", unitFrame.roleIcon, \"right\", 2, 0)\n        \n        unitFrame.spitefulTexture:Hide()\n        unitFrame.spitefulText:Hide()\n    end\n    \n    function envTable.UpdateSpitefulWidget(unitFrame)\n        \n        local r, g, b, a = Plater:ParseColors(scriptTable.config.bgColor)\n        unitFrame.spitefulTexture:SetColorTexture(r, g, b, a)\n        unitFrame.spitefulTexture:SetSize(scriptTable.config.bgWidth, unitFrame.healthBar:GetHeight())   \n        Plater:SetFontSize(unitFrame.spitefulText, scriptTable.config.textSize)\n        Plater:SetFontColor(unitFrame.spitefulText, scriptTable.config.textColor)\n        \n        local currentHealth = unitFrame.healthBar.CurrentHealth\n        local maxHealth = unitFrame.healthBar.CurrentHealthMax\n        \n        local healthPercent = currentHealth / maxHealth * 100\n        local timeToDie = format(\"%.1fs\", healthPercent / 8)\n        unitFrame.spitefulText:SetText(timeToDie)\n        \n        unitFrame.spitefulText:Show()\n        unitFrame.spitefulTexture:Show()\n        \n        if scriptTable.config.switchTargetName then\n            local plateFrame = unitFrame.PlateFrame\n            \n            local target = UnitName(unitFrame.namePlateUnitToken .. \"target\") or UnitName(unitFrame.namePlateUnitToken)\n            \n            if (target and target ~= \"\") then\n                local _, class = UnitClass(unitFrame.namePlateUnitToken .. \"target\")\n                if (class) then\n                    target = DetailsFramework:AddClassColorToText(target, class)\n                end\n                \n                local role = UnitGroupRolesAssigned(unitFrame.namePlateUnitToken .. \"target\")\n                if (role and role ~= \"NONE\") then\n                    target = DetailsFramework:AddRoleIconToText(target, role)\n                end\n                \n                plateFrame.namePlateUnitName = target\n                Plater.UpdateUnitName(plateFrame)\n            end\n        end\n        \n        if scriptTable.config.useTargetingColor then\n            local targeted = UnitIsUnit(unitFrame.namePlateUnitToken .. \"target\", \"player\")\n            if targeted then\n                Plater.SetNameplateColor (unitFrame, scriptTable.config.targetingColor)\n            else\n                Plater.RefreshNameplateColor(unitFrame)\n            end\n        end\n    end\nend",
@@ -3564,10 +8122,14 @@ PlaterDB = {
 					["Author"] = "Symantec-Azralon",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Time to die Spiteful affix",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.UpdateSpitefulWidget(unitFrame)\nend\n\n\n",
+					["NpcNames"] = {
+						"174773", -- [1]
+					},
 					["SpellIds"] = {
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "M+ Spiteful",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 5,
@@ -3584,9 +8146,9 @@ PlaterDB = {
 							["Min"] = 10,
 							["Key"] = "bgWidth",
 							["Value"] = 27,
-							["Name"] = "Width",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Width",
 						}, -- [2]
 						{
 							["Type"] = 1,
@@ -3608,9 +8170,9 @@ PlaterDB = {
 							["Min"] = 7,
 							["Key"] = "textSize",
 							["Value"] = 8,
-							["Name"] = "Text Size",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Text Size",
 						}, -- [4]
 						{
 							["Type"] = 1,
@@ -3679,11 +8241,7 @@ PlaterDB = {
 							["Desc"] = "",
 						}, -- [11]
 					},
-					["version"] = -1,
-					["Name"] = "M+ Spiteful",
-					["NpcNames"] = {
-						"174773", -- [1]
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.UpdateSpitefulWidget(unitFrame)\nend\n\n\n",
 				}, -- [20]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    --check for marks\n    function  envTable.CheckMark (unitId, unitFrame)\n        if (not GetRaidTargetIndex(unitId)) then\n            if (scriptTable.config.onlyInCombat) then\n                if (not UnitAffectingCombat(unitId)) then\n                    return\n                end                \n            end\n            \n            SetRaidTarget(unitId, 8)\n        end       \n    end\nend\n\n\n--163520 - forsworn squad-leader\n--163618 - zolramus necromancer - The Necrotic Wake\n--164506 - anciet captain - theater of pain\n\n\n",
@@ -3699,10 +8257,16 @@ PlaterDB = {
 					["Author"] = "Aelerolor-Torghast",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Auto set skull marker",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.CheckMark (unitId, unitFrame)\nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+					["NpcNames"] = {
+						"163520", -- [1]
+						"163618", -- [2]
+						"164506", -- [3]
+					},
 					["SpellIds"] = {
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Auto Set Skull",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 5,
@@ -3729,13 +8293,7 @@ PlaterDB = {
 							["Desc"] = "Set the mark only if the unit is in combat.",
 						}, -- [3]
 					},
-					["version"] = -1,
-					["Name"] = "Auto Set Skull",
-					["NpcNames"] = {
-						"163520", -- [1]
-						"163618", -- [2]
-						"164506", -- [3]
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.CheckMark (unitId, unitFrame)\nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 				}, -- [21]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.EnergyAmount = Plater:CreateLabel (unitFrame, \"\", 16, \"silver\");\n    envTable.EnergyAmount:SetPoint (\"bottom\", unitFrame, \"top\", 0, 18);    \n    \n    envTable.EnergyAmount.fontsize = scriptTable.config.fontSize\n    envTable.EnergyAmount.fontcolor = scriptTable.config.fontColor\n    envTable.EnergyAmount.outline = scriptTable.config.outline\n    \n    \nend\n\n--[=[\n\n164406 = Shriekwing\n164407 = Sludgefist\n162100 = kryxis the voracious\n162099 = general kaal - sanguine depths\n162329 = Xav the Unfallen - threater of pain\n--]=]",
@@ -3751,10 +8309,19 @@ PlaterDB = {
 					["Author"] = "Celian-Sylvanas",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Show the energy amount above the nameplate.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.EnergyAmount:Show()\nend\n\n\n",
+					["NpcNames"] = {
+						"164406", -- [1]
+						"164407", -- [2]
+						"162100", -- [3]
+						"162099", -- [4]
+						"162329", -- [5]
+						"164558", -- [6]
+					},
 					["SpellIds"] = {
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Unit - Show Energy [Plater]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 6,
@@ -3811,9 +8378,9 @@ PlaterDB = {
 							["Min"] = 8,
 							["Name"] = "Text Size",
 							["Value"] = 16,
-							["Fraction"] = false,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "fontSize",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = false,
 						}, -- [7]
 						{
 							["Type"] = 1,
@@ -3837,16 +8404,7 @@ PlaterDB = {
 							["Desc"] = "If enabled, the text uses outline.",
 						}, -- [9]
 					},
-					["version"] = -1,
-					["Name"] = "Unit - Show Energy [Plater]",
-					["NpcNames"] = {
-						"164406", -- [1]
-						"164407", -- [2]
-						"162100", -- [3]
-						"162099", -- [4]
-						"162329", -- [5]
-						"164558", -- [6]
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.EnergyAmount:Show()\nend\n\n\n",
 				}, -- [22]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n\n--Scorchling 194622\n--Scorchling 190205\n--197398  Hungry Lasher\n--77006 corpse skitterling\n\n\n\n\n\n\n\n\n",
@@ -3862,10 +8420,17 @@ PlaterDB = {
 					["Author"] = "Huugg-Valdrakken",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (scriptTable.config.useNameplateColor) then\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.nameplateColor)\n        Plater.DenyColorChange(unitFrame, true)\n    end    \n    \n    unitFrame.healthBar._savedOriginalScale = unitFrame.healthBar:GetScale()\n    \n    if (scriptTable.config.useNameplateScale) then\n        unitFrame.healthBar:SetScale(scriptTable.config.scale)\n    end\n    \nend\n\n\n\n\n",
+					["NpcNames"] = {
+						"194622", -- [1]
+						"190205", -- [2]
+						"197398", -- [3]
+						"77006", -- [4]
+					},
 					["SpellIds"] = {
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Add - Non Elite Trash [P]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 4,
@@ -3911,19 +8476,12 @@ PlaterDB = {
 							["Min"] = 0,
 							["Fraction"] = true,
 							["Value"] = 0.8,
-							["Name"] = "Nameplate Scale",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "scale",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Nameplate Scale",
 						}, -- [5]
 					},
-					["version"] = -1,
-					["Name"] = "Add - Non Elite Trash [P]",
-					["NpcNames"] = {
-						"194622", -- [1]
-						"190205", -- [2]
-						"197398", -- [3]
-						"77006", -- [4]
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (scriptTable.config.useNameplateColor) then\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.nameplateColor)\n        Plater.DenyColorChange(unitFrame, true)\n    end    \n    \n    unitFrame.healthBar._savedOriginalScale = unitFrame.healthBar:GetScale()\n    \n    if (scriptTable.config.useNameplateScale) then\n        unitFrame.healthBar:SetScale(scriptTable.config.scale)\n    end\n    \nend\n\n\n\n\n",
 				}, -- [23]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    local healthBar = unitFrame.healthBar\n    \n    if (not healthBar.absorbBar) then\n        healthBar.absorbBar = healthBar.FrameOverlay:CreateTexture(nil, \"overlay\")\n        healthBar.absorbBar:SetTexture([[Interface\\RaidFrame\\Shield-Fill]])\n        healthBar.absorbBar:Hide()\n    end\n    \n    if (not healthBar.absorbSpark) then\n        healthBar.absorbSpark = healthBar.FrameOverlay:CreateTexture(nil, \"overlay\")\n        healthBar.absorbSpark:SetTexture([[Interface\\CastingBar\\UI-CastingBar-Spark]])\n        healthBar.absorbSpark:SetBlendMode(\"ADD\")\n        healthBar.absorbSpark:Hide()\n    end\n    \nend\n\n\n\n\n",
@@ -3939,18 +8497,18 @@ PlaterDB = {
 					["Author"] = "Huugg-Valdrakken",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "When the caster has a shield and only when the shield is removed the cast can be interrupted",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    if (not UnitGetTotalAbsorbs) then\n        return\n    end\n    \n    local healthBar = unitFrame.healthBar\n    \n    healthBar.absorbBar:Show()\n    healthBar.absorbSpark:Show()\n    \n    healthBar.absorbBar:SetTexture([[Interface\\RaidFrame\\Shield-Fill]])\n    \n    healthBar.absorbBar:ClearAllPoints()    \n    healthBar.absorbBar:SetPoint(\"topleft\", healthBar, \"topleft\", 0, 0)\n    healthBar.absorbBar:SetPoint(\"bottomleft\", healthBar, \"bottomleft\", 0, 0)\n    \n    healthBar.absorbBar:SetAlpha(1)\n    \n    healthBar.absorbBar.MaxValue = UnitGetTotalAbsorbs(unitId) or 0\n    healthBar.absorbBar.MinValue = 0\nend\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						373688, -- [1]
 						391050, -- [2]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Cast - Shield Interrupt [P]",
+					["version"] = -1,
 					["Options"] = {
 					},
-					["version"] = -1,
-					["Name"] = "Cast - Shield Interrupt [P]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    if (not UnitGetTotalAbsorbs) then\n        return\n    end\n    \n    local healthBar = unitFrame.healthBar\n    \n    healthBar.absorbBar:Show()\n    healthBar.absorbSpark:Show()\n    \n    healthBar.absorbBar:SetTexture([[Interface\\RaidFrame\\Shield-Fill]])\n    \n    healthBar.absorbBar:ClearAllPoints()    \n    healthBar.absorbBar:SetPoint(\"topleft\", healthBar, \"topleft\", 0, 0)\n    healthBar.absorbBar:SetPoint(\"bottomleft\", healthBar, \"bottomleft\", 0, 0)\n    \n    healthBar.absorbBar:SetAlpha(1)\n    \n    healthBar.absorbBar.MaxValue = UnitGetTotalAbsorbs(unitId) or 0\n    healthBar.absorbBar.MinValue = 0\nend\n\n\n",
 				}, -- [24]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    function envTable.PlaySwipeAnimation(unitFrame)\n        unitFrame.CastSwipeTexture:Show()\n        unitFrame.CastSwipeAnimation:Play()\n        unitFrame.StartSwipeAnimation:Play()\n    end\n    \n    function envTable.StopSwipeAnimation(unitFrame)\n        unitFrame.EndSwipeAnimation:Play()\n        C_Timer.After(0.21, function()\n                unitFrame.CastSwipeAnimation:Stop()\n                unitFrame.CastSwipeTexture:Hide()\n        end)\n    end\n    \n    function envTable.CreateSwipeTextureAndAnimations(unitFrame)\n        if (unitFrame.CastSwipeTexture) then\n            return\n        end\n        \n        local swipeTexture = unitFrame:CreateTexture(nil, \"overlay\")\n        swipeTexture:SetTexture([[Interface\\AddOns\\Plater\\images\\circular_swipe]])\n        swipeTexture:SetPoint(\"center\", 0, 0)\n        swipeTexture:SetSize(64, 64)\n        swipeTexture:Hide()\n        \n        unitFrame.CastSwipeTexture = swipeTexture\n        \n        --rotation animation\n        unitFrame.CastSwipeAnimation = Plater:CreateAnimationHub(swipeTexture)\n        unitFrame.CastSwipeAnimation:SetLooping(\"repeat\")\n        unitFrame.CastSwipeAnimation.Rotation = Plater:CreateAnimation(unitFrame.CastSwipeAnimation, \"rotation\", 1, 1, 360)\n        \n        --starting animation\n        unitFrame.StartSwipeAnimation = Plater:CreateAnimationHub(swipeTexture, function()swipeTexture:Show() end)\n        unitFrame.StartSwipeAnimation.Alpha = Plater:CreateAnimation(unitFrame.StartSwipeAnimation, \"alpha\", 1, 0.2, 0, 1)\n        unitFrame.StartSwipeAnimation.Scale = Plater:CreateAnimation(unitFrame.StartSwipeAnimation, \"scale\", 1, 0.2, 1.3, 1.3, 1, 1)        \n        \n        --finished animation\n        unitFrame.EndSwipeAnimation = Plater:CreateAnimationHub(swipeTexture, nil, function()swipeTexture:Hide() end)\n        unitFrame.EndSwipeAnimation.Alpha = Plater:CreateAnimation(unitFrame.EndSwipeAnimation, \"alpha\", 1, 0.2, 1, 0)\n        unitFrame.EndSwipeAnimation.Scale = Plater:CreateAnimation(unitFrame.EndSwipeAnimation, \"scale\", 1, 0.2, 1, 1, 1.3, 1.3)\n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -3966,7 +8524,8 @@ PlaterDB = {
 					["Author"] = "Butazzul-Valdrakken",
 					["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 					["Desc"] = "Play a animation when the spell effect is an circular AoE around the caster.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.CreateSwipeTextureAndAnimations(unitFrame)\n    \n    local options = scriptTable.config\n    \n    local targetScale = scriptTable.config.textureScale\n    \n    --swipe rotation duration    \n    unitFrame.CastSwipeAnimation.Rotation:SetDuration(scriptTable.config.rotationDuration)\n    \n    --swipe texture settings\n    unitFrame.CastSwipeTexture:SetVertexColor(Plater:ParseColors(scriptTable.config.textureColor))\n    unitFrame.CastSwipeTexture:SetScale(targetScale)\n    unitFrame.CastSwipeTexture:SetAlpha(scriptTable.config.textureAlpha)  \n    \n    unitFrame.StartSwipeAnimation.Alpha:SetDuration(scriptTable.config.animStartDuration)\n    unitFrame.StartSwipeAnimation.Alpha:SetFromAlpha(scriptTable.config.textureStartAlpha)\n    unitFrame.StartSwipeAnimation.Alpha:SetToAlpha(scriptTable.config.textureAlpha)\n    \n    unitFrame.StartSwipeAnimation.Scale:SetDuration(scriptTable.config.animStartDuration)\n    unitFrame.StartSwipeAnimation.Scale:SetScaleTo(targetScale, targetScale)\n    \n    unitFrame.EndSwipeAnimation.Scale:SetDuration(0.1)\n    unitFrame.EndSwipeAnimation.Alpha:SetDuration(0.1)\n    \n    --start playing\n    envTable.PlaySwipeAnimation(unitFrame)    \n    \nend\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						385916, -- [1]
 						386063, -- [2]
@@ -4004,6 +8563,8 @@ PlaterDB = {
 						372561, -- [34]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Cast - Circle AoE [P]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 2,
@@ -4012,9 +8573,9 @@ PlaterDB = {
 							["Min"] = 0.1,
 							["Fraction"] = true,
 							["Value"] = 0.15,
-							["Key"] = "rotationDuration",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Rotation Duration",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "rotationDuration",
 						}, -- [1]
 						{
 							["Type"] = 6,
@@ -4031,9 +8592,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Name"] = "Animation Start Duration",
 							["Value"] = 0.3,
-							["Key"] = "animStartDuration",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = true,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "animStartDuration",
 						}, -- [3]
 						{
 							["Type"] = 2,
@@ -4042,9 +8603,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Key"] = "textureStartAlpha",
 							["Value"] = 1,
-							["Name"] = "Texture Start Alpha",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = true,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Texture Start Alpha",
 						}, -- [4]
 						{
 							["Type"] = 6,
@@ -4061,9 +8622,9 @@ PlaterDB = {
 							["Min"] = 0.6,
 							["Fraction"] = true,
 							["Value"] = 0.8,
-							["Key"] = "textureScale",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Texture Scale",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "textureScale",
 						}, -- [6]
 						{
 							["Type"] = 2,
@@ -4072,9 +8633,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Fraction"] = true,
 							["Value"] = 1,
-							["Key"] = "textureAlpha",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Texture Alpha",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "textureAlpha",
 						}, -- [7]
 						{
 							["Type"] = 1,
@@ -4090,10 +8651,7 @@ PlaterDB = {
 							["Desc"] = "Texture Color",
 						}, -- [8]
 					},
-					["version"] = -1,
-					["Name"] = "Cast - Circle AoE [P]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.CreateSwipeTextureAndAnimations(unitFrame)\n    \n    local options = scriptTable.config\n    \n    local targetScale = scriptTable.config.textureScale\n    \n    --swipe rotation duration    \n    unitFrame.CastSwipeAnimation.Rotation:SetDuration(scriptTable.config.rotationDuration)\n    \n    --swipe texture settings\n    unitFrame.CastSwipeTexture:SetVertexColor(Plater:ParseColors(scriptTable.config.textureColor))\n    unitFrame.CastSwipeTexture:SetScale(targetScale)\n    unitFrame.CastSwipeTexture:SetAlpha(scriptTable.config.textureAlpha)  \n    \n    unitFrame.StartSwipeAnimation.Alpha:SetDuration(scriptTable.config.animStartDuration)\n    unitFrame.StartSwipeAnimation.Alpha:SetFromAlpha(scriptTable.config.textureStartAlpha)\n    unitFrame.StartSwipeAnimation.Alpha:SetToAlpha(scriptTable.config.textureAlpha)\n    \n    unitFrame.StartSwipeAnimation.Scale:SetDuration(scriptTable.config.animStartDuration)\n    unitFrame.StartSwipeAnimation.Scale:SetScaleTo(targetScale, targetScale)\n    \n    unitFrame.EndSwipeAnimation.Scale:SetDuration(0.1)\n    unitFrame.EndSwipeAnimation.Alpha:SetDuration(0.1)\n    \n    --start playing\n    envTable.PlaySwipeAnimation(unitFrame)    \n    \nend\n\n\n",
 				}, -- [25]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --create a flash texture which keep blinking while the cast in going on\n    self.OGC_BlinkTexture = self.OGC_BlinkTexture or self:CreateTexture(nil, \"overlay\")\n    self.OGC_BlinkTexture:SetColorTexture(1, 1, 1)\n    self.OGC_BlinkTexture:SetAlpha(0)\n    \n    --create the animation group for the blinking texture\n    self.OGC_BlinkAnimation = self.OGC_BlinkAnimation or Plater:CreateAnimationHub(self.OGC_BlinkTexture, function() self.OGC_BlinkTexture:Show() end, function() self.OGC_BlinkTexture:Hide() end)\n    \n    self.OGC_BlinkAnimation.In = self.OGC_BlinkAnimation.In or Plater:CreateAnimation(self.OGC_BlinkAnimation, \"alpha\", 1, 0.5, 0.3, 1)\n    \n    self.OGC_BlinkAnimation.Out = self.OGC_BlinkAnimation.Out or Plater:CreateAnimation(self.OGC_BlinkAnimation, \"alpha\", 2, 0.5, 1, 0.2)    \n    \n    \nend\n\n\n",
@@ -4109,13 +8667,16 @@ PlaterDB = {
 					["Author"] = "Ditador-Azralon",
 					["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 					["Desc"] = "The background of the nameplate blinks a red color indicating the cast is being performed. Useful to indicate channeling spells doing damage overtime.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    self.OGC_BlinkTexture:ClearAllPoints()\n    self.OGC_BlinkTexture:SetPoint(\"topleft\", self, \"topleft\", 0, 0)\n    self.OGC_BlinkTexture:SetPoint(\"bottomright\", self, \"bottomright\", 0, 0)\n    \n    local red, green, blue = Plater:ParseColors(scriptTable.config.blinkColor)\n    self.OGC_BlinkTexture:SetVertexColor(red, green, blue)\n    \n    local blinkSpeed = scriptTable.config.speed\n    \n    self.OGC_BlinkAnimation.In:SetDuration(blinkSpeed)\n    self.OGC_BlinkAnimation.Out:SetDuration(blinkSpeed)\n    \n    local minBlinkAlpha = scriptTable.config.minAlpha\n    local maxBlinkAlpha = scriptTable.config.maxAlpha\n    \n    self.OGC_BlinkAnimation.In:SetFromAlpha(minBlinkAlpha)\n    self.OGC_BlinkAnimation.In:SetToAlpha(maxBlinkAlpha)\n    self.OGC_BlinkAnimation.Out:SetFromAlpha(maxBlinkAlpha)    \n    self.OGC_BlinkAnimation.Out:SetToAlpha(minBlinkAlpha)\n    \n    self.OGC_BlinkAnimation:SetLooping(\"repeat\")\n    self.OGC_BlinkAnimation:Play()\n    \n    envTable.dotAnimation1 = Plater.PlayDotAnimation(self, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    envTable.dotAnimation1.textureInfo.speedMultiplier = 0.3\n    \n    envTable.dotAnimation2 = Plater.PlayDotAnimation(self, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    envTable.dotAnimation2.textureInfo.speedMultiplier = 1\n    \nend",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						388886, -- [1]
 						209676, -- [2]
 						377912, -- [3]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Cast - On Going Cast [P]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 1,
@@ -4137,9 +8698,9 @@ PlaterDB = {
 							["Min"] = -10,
 							["Key"] = "xOffset",
 							["Value"] = 0,
-							["Name"] = "Dots X Offset",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Dots X Offset",
 						}, -- [2]
 						{
 							["Type"] = 2,
@@ -4148,9 +8709,9 @@ PlaterDB = {
 							["Min"] = -10,
 							["Fraction"] = false,
 							["Value"] = 0,
-							["Key"] = "yOffset",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Dots Y Offset",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "yOffset",
 						}, -- [3]
 						{
 							["Type"] = 6,
@@ -4167,9 +8728,9 @@ PlaterDB = {
 							["Min"] = 0.2,
 							["Name"] = "Blink Speed",
 							["Value"] = 0.4,
-							["Fraction"] = true,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "speed",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = true,
 						}, -- [5]
 						{
 							["Type"] = 2,
@@ -4178,9 +8739,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Name"] = "Blink Min Alpha",
 							["Value"] = 0,
-							["Fraction"] = true,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "minAlpha",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = true,
 						}, -- [6]
 						{
 							["Type"] = 2,
@@ -4189,9 +8750,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Key"] = "maxAlpha",
 							["Value"] = 0.5,
-							["Name"] = "Blink Max Alpha",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = true,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Blink Max Alpha",
 						}, -- [7]
 						{
 							["Type"] = 1,
@@ -4207,10 +8768,7 @@ PlaterDB = {
 							["Desc"] = "Color of the blinking texture",
 						}, -- [8]
 					},
-					["version"] = -1,
-					["Name"] = "Cast - On Going Cast [P]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    self.OGC_BlinkTexture:ClearAllPoints()\n    self.OGC_BlinkTexture:SetPoint(\"topleft\", self, \"topleft\", 0, 0)\n    self.OGC_BlinkTexture:SetPoint(\"bottomright\", self, \"bottomright\", 0, 0)\n    \n    local red, green, blue = Plater:ParseColors(scriptTable.config.blinkColor)\n    self.OGC_BlinkTexture:SetVertexColor(red, green, blue)\n    \n    local blinkSpeed = scriptTable.config.speed\n    \n    self.OGC_BlinkAnimation.In:SetDuration(blinkSpeed)\n    self.OGC_BlinkAnimation.Out:SetDuration(blinkSpeed)\n    \n    local minBlinkAlpha = scriptTable.config.minAlpha\n    local maxBlinkAlpha = scriptTable.config.maxAlpha\n    \n    self.OGC_BlinkAnimation.In:SetFromAlpha(minBlinkAlpha)\n    self.OGC_BlinkAnimation.In:SetToAlpha(maxBlinkAlpha)\n    self.OGC_BlinkAnimation.Out:SetFromAlpha(maxBlinkAlpha)    \n    self.OGC_BlinkAnimation.Out:SetToAlpha(minBlinkAlpha)\n    \n    self.OGC_BlinkAnimation:SetLooping(\"repeat\")\n    self.OGC_BlinkAnimation:Play()\n    \n    envTable.dotAnimation1 = Plater.PlayDotAnimation(self, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    envTable.dotAnimation1.textureInfo.speedMultiplier = 0.3\n    \n    envTable.dotAnimation2 = Plater.PlayDotAnimation(self, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    envTable.dotAnimation2.textureInfo.speedMultiplier = 1\n    \nend",
 				}, -- [26]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
@@ -4226,10 +8784,13 @@ PlaterDB = {
 					["Author"] = "Ditador-Azralon",
 					["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 					["Desc"] = "Alert about a unit fixated on the player by using a buff on the enemy unit.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Fixate by Unit Buff [P]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 1,
@@ -4245,10 +8806,7 @@ PlaterDB = {
 							["Desc"] = "Change the enemy nameplate color to this color when fixating you!",
 						}, -- [1]
 					},
-					["version"] = -1,
-					["Name"] = "Fixate by Unit Buff [P]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
 				}, -- [27]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    local movingArrowTexture = unitFrame._movingArrowTexture\n    if (not movingArrowTexture) then\n        movingArrowTexture = self:CreateTexture(nil, \"artwork\", nil, 6)\n        unitFrame._movingArrowTexture = movingArrowTexture\n    end\n    \n    envTable.movingAnimation = envTable.movingAnimation or Plater:CreateAnimationHub (unitFrame._movingArrowTexture, \n        function() \n            unitFrame._movingArrowTexture:Show() \n            unitFrame._movingArrowTexture:SetPoint(\"left\", 0, 0)\n        end, \n        function() unitFrame._movingArrowTexture:Hide() end)\n    \n    envTable.movingAnimation:SetLooping (\"REPEAT\")\n    \n    envTable.arrowAnimation = envTable.arrowAnimation or Plater:CreateAnimation (envTable.movingAnimation, \"translation\", 1, 0.20, self:GetWidth()-16, 0)\n    \n    envTable.arrowAnimation:SetDuration(scriptTable.config.animSpeed)\nend\n\n\n\n\n\n\n",
@@ -4264,7 +8822,8 @@ PlaterDB = {
 					["Author"] = "Izimode-Azralon",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Does an animation for casts that affect the frontal area of the enemy. Add spell in the Add Trigger field.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    unitFrame._movingArrowTexture:SetTexture([[Interface\\PETBATTLES\\PetBattle-StatIcons]])\n    unitFrame._movingArrowTexture:SetSize(16, self:GetHeight() - 2)\n    unitFrame._movingArrowTexture:SetTexCoord(unpack({0, 15/32, 18/32, 30/32}))\n    unitFrame._movingArrowTexture:SetAlpha(scriptTable.config.arrowAlpha)\n    unitFrame._movingArrowTexture:SetDesaturated(scriptTable.config.desaturateArrow)    \n    \n    unitFrame._movingArrowTexture:SetParent(self.FrameOverlay)\n    unitFrame._movingArrowTexture:SetDrawLayer(\"overlay\",  7)\n    \n    envTable.arrowAnimation:SetDuration(scriptTable.config.animSpeed)\n    envTable.movingAnimation:Play()\nend\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						375943, -- [1]
 						385958, -- [2]
@@ -4344,6 +8903,8 @@ PlaterDB = {
 						377204, -- [76]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Cast - Frontal Cone [Plater]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 6,
@@ -4384,9 +8945,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Fraction"] = true,
 							["Value"] = 0.73,
-							["Name"] = "Arrow Alpha",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "arrowAlpha",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Arrow Alpha",
 						}, -- [5]
 						{
 							["Type"] = 2,
@@ -4395,9 +8956,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Fraction"] = true,
 							["Value"] = 0.2,
-							["Name"] = "Animation Speed",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "animSpeed",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Animation Speed",
 						}, -- [6]
 						{
 							["Type"] = 4,
@@ -4408,10 +8969,7 @@ PlaterDB = {
 							["Desc"] = "If enabled, the arrow color will be desaturated.",
 						}, -- [7]
 					},
-					["version"] = -1,
-					["Name"] = "Cast - Frontal Cone [Plater]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    unitFrame._movingArrowTexture:SetTexture([[Interface\\PETBATTLES\\PetBattle-StatIcons]])\n    unitFrame._movingArrowTexture:SetSize(16, self:GetHeight() - 2)\n    unitFrame._movingArrowTexture:SetTexCoord(unpack({0, 15/32, 18/32, 30/32}))\n    unitFrame._movingArrowTexture:SetAlpha(scriptTable.config.arrowAlpha)\n    unitFrame._movingArrowTexture:SetDesaturated(scriptTable.config.desaturateArrow)    \n    \n    unitFrame._movingArrowTexture:SetParent(self.FrameOverlay)\n    unitFrame._movingArrowTexture:SetDrawLayer(\"overlay\",  7)\n    \n    envTable.arrowAnimation:SetDuration(scriptTable.config.animSpeed)\n    envTable.movingAnimation:Play()\nend\n\n\n",
 				}, -- [28]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    function envTable.CreateWidgets()\n        --create a camera shake for the nameplate\n        if (not unitFrame.AddExplosionOnDieShake) then\n            unitFrame.AddExplosionOnDieShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n        end\n        \n        if (not unitFrame.AddExplosionOnDieBackground) then\n            unitFrame.AddExplosionOnDieBackground = unitFrame.healthBar:CreateTexture(nil, \"background\")\n            unitFrame.AddExplosionOnDieBackground:SetAllPoints(unitFrame.healthBar)\n            unitFrame.AddExplosionOnDieBackground:SetColorTexture(1, 0, 0, 1)\n        end\n    end\n    \nend\n\n--194895 = unstable squall\n--105703 = mana wyrm\n--59598 = lesser sha\n--58319 = lesser sha\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -4427,10 +8985,20 @@ PlaterDB = {
 					["Author"] = "Huugg-Valdrakken",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    local healthBar = unitFrame.healthBar\n    \n    if (scriptTable.config.useReverse) then\n        healthBar:SetReverseFill(true)\n    end\n    \n    --unitFrame.AddExplosionOnDieShake\n    \n    envTable.CreateWidgets()\n    \n    unitFrame.AddExplosionOnDieShake.OriginalAmplitude = scriptTable.config.shakeAmplitude\n    unitFrame.AddExplosionOnDieShake.OriginalDuration = 0.120\n    unitFrame.AddExplosionOnDieShake.OriginalFrequency = scriptTable.config.shakeFrequency\n    \n    if (scriptTable.config.useBackground) then\n        unitFrame.AddExplosionOnDieBackground:Show()\n        unitFrame.AddExplosionOnDieBackground:SetAlpha(0)\n    else\n        unitFrame.AddExplosionOnDieBackground:Hide()\n    end\nend\n\n\n\n\n\n\n",
+					["NpcNames"] = {
+						"194895", -- [1]
+						"105703", -- [2]
+						"59598", -- [3]
+						"58319", -- [4]
+						200388, -- [5]
+						189299, -- [6]
+						131402, -- [7]
+					},
 					["SpellIds"] = {
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Add - Explode on Die [P]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 4,
@@ -4463,9 +9031,9 @@ PlaterDB = {
 							["Min"] = 0.05,
 							["Key"] = "shakeAmplitude",
 							["Value"] = 0.2,
-							["Fraction"] = true,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Shake Amplitude",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = true,
 						}, -- [4]
 						{
 							["Type"] = 2,
@@ -4474,9 +9042,9 @@ PlaterDB = {
 							["Min"] = 1,
 							["Key"] = "shakeFrequency",
 							["Value"] = 70,
-							["Fraction"] = true,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Shake Frequency",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = true,
 						}, -- [5]
 						{
 							["Type"] = 6,
@@ -4495,17 +9063,7 @@ PlaterDB = {
 							["Desc"] = "Show Red Background",
 						}, -- [7]
 					},
-					["version"] = -1,
-					["Name"] = "Add - Explode on Die [P]",
-					["NpcNames"] = {
-						"194895", -- [1]
-						"105703", -- [2]
-						"59598", -- [3]
-						"58319", -- [4]
-						200388, -- [5]
-						189299, -- [6]
-						131402, -- [7]
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    local healthBar = unitFrame.healthBar\n    \n    if (scriptTable.config.useReverse) then\n        healthBar:SetReverseFill(true)\n    end\n    \n    --unitFrame.AddExplosionOnDieShake\n    \n    envTable.CreateWidgets()\n    \n    unitFrame.AddExplosionOnDieShake.OriginalAmplitude = scriptTable.config.shakeAmplitude\n    unitFrame.AddExplosionOnDieShake.OriginalDuration = 0.120\n    unitFrame.AddExplosionOnDieShake.OriginalFrequency = scriptTable.config.shakeFrequency\n    \n    if (scriptTable.config.useBackground) then\n        unitFrame.AddExplosionOnDieBackground:Show()\n        unitFrame.AddExplosionOnDieBackground:SetAlpha(0)\n    else\n        unitFrame.AddExplosionOnDieBackground:Hide()\n    end\nend\n\n\n\n\n\n\n",
 				}, -- [29]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable)\n    \n    envTable.FixateTarget = Plater:CreateLabel (unitFrame);\n    envTable.FixateTarget:SetPoint (\"bottom\", unitFrame.BuffFrame, \"top\", 0, 10);    \n    \n    envTable.FixateIcon = Plater:CreateImage (unitFrame, 236188, 16, 16, \"overlay\");\n    envTable.FixateIcon:SetPoint (\"bottom\", envTable.FixateTarget, \"top\", 0, 4);    \n    \n    envTable.FixateTarget:Hide()\n    envTable.FixateIcon:Hide()\nend\n\n--165560 = Gormling Larva - MTS\n\n\n\n\n\n\n",
@@ -4521,17 +9079,17 @@ PlaterDB = {
 					["Author"] = "Celian-Sylvanas",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n\n\n\n\n",
 					["Desc"] = "Show above the nameplate who is the player fixated",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable)\n    \nend\n\n\n",
-					["SpellIds"] = {
-					},
-					["PlaterCore"] = 1,
-					["Options"] = {
-					},
-					["version"] = -1,
-					["Name"] = "Fixate [Plater]",
 					["NpcNames"] = {
 						"165560", -- [1]
 					},
+					["SpellIds"] = {
+					},
+					["PlaterCore"] = 1,
+					["Name"] = "Fixate [Plater]",
+					["version"] = -1,
+					["Options"] = {
+					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable)\n    \nend\n\n\n",
 				}, -- [30]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    envTable.npcInfo = {\n        [164427] = {secondCastBar = true, timer = 20, timerId = 321247, altCastId = \"1\", name = \"Boom!\"}, --reanimated warrior - plaguefall\n        \n        [164414] = {secondCastBar = true, timer = 20, timerId = 321247, altCastId = \"2\", name = \"Boom!\"}, --reanimated mage - plaguefall\n        \n        [164185] = {secondCastBar = true, timer = 20, timerId = 319941, altCastId = \"3\", remaining = 5, name = GetSpellInfo(319941)}, --Echelon - Halls of Atonement\n        \n        [164567] = {secondCastBar = true, altCastId = \"dromanswrath\", debuffTimer = 323059, name = GetSpellInfo(323059), spellIcon = 323059}, --Ingra Maloch -- tirna scythe\n        \n        [165408] = {secondCastBar = true, timer = 20, timerId = 322711, altCastId = \"4\", remaining = 5, name = GetSpellInfo(322711)}, --Halkias - Refracted Sinlight - Halls of Atonement\n        \n        \n        --[154564] = {secondCastBar = true, timerId = \"Test Bar\", altCastId = \"debugcast\", remaining = 5, name = GetSpellInfo(319941), spellIcon = 319941}, --debug \"Test (1)\" BW \"Test Bar\" DBM --DEBUG\n        --[154580] = {secondCastBar = true, altCastId = \"debugcast\", debuffTimer = 204242, name = GetSpellInfo(81297), spellIcon = 81297}, --debug \"Test (1)\" BW \"Test Bar\" DBM --DEBUG\n    }\n    \n    --set the castbar config\n    local config = {\n        iconTexture = \"\",\n        iconTexcoord = {0.1, 0.9, 0.1, 0.9},\n        iconAlpha = 1,\n        iconSize = 14,\n        \n        text = \"Boom!\",\n        textSize = 9,\n        \n        texture = [[Interface\\AddOns\\Plater\\images\\bar_background]],\n        color = \"silver\",\n        \n        isChanneling = false,\n        canInterrupt = false,\n        \n        height = 2,\n        width = Plater.db.profile.plate_config.enemynpc.health_incombat[1],\n        \n        spellNameAnchor = {side = 3, x = 0, y = -2},\n        timerAnchor = {side = 5, x = 0, y = -2},\n    }    \n    \n    function envTable.ShowAltCastBar(npcInfo, unitFrame, unitId, customTime, customStart)\n        --show the cast bar\n        if (npcInfo.timerId) then\n            local barObject = Plater.GetBossTimer(npcInfo.timerId)\n            if (barObject) then\n                if (npcInfo.remaining) then\n                    local timeLeft = barObject.timer + barObject.start - GetTime()\n                    if (timeLeft > npcInfo.remaining) then\n                        return\n                    end\n                end\n                \n                config.text = npcInfo.name\n                \n                if (npcInfo.spellIcon) then\n                    local _, _, iconTexture = GetSpellInfo(npcInfo.spellIcon)\n                    config.iconTexture = iconTexture\n                else\n                    config.iconTexture = \"\"\n                end\n                \n                Plater.SetAltCastBar(unitFrame.PlateFrame, config, barObject.timer, customStart or barObject.start, npcInfo.altCastId)\n            end\n        else\n            Plater.SetAltCastBar(unitFrame.PlateFrame, config, customTime or npcInfo.timer, customStart, npcInfo.altCastId)            \n        end\n        \n        DetailsFramework:TruncateText(unitFrame.castBar2.Text, unitFrame.castBar2:GetWidth() - 16)\n    end\nend",
@@ -4547,14 +9105,6 @@ PlaterDB = {
 					["Author"] = "Aelerolor-Torghast",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Some units has special events without a clear way to show. This script adds a second cast bar to inform the user about it.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    local npcInfo = envTable.npcInfo[envTable._NpcID]\n    \n    if (npcInfo and npcInfo.secondCastBar) then\n        if (npcInfo.debuffTimer) then\n            if (Plater.NameplateHasAura (unitFrame, npcInfo.debuffTimer)) then\n                \n                local name = npcInfo.name\n                local _, _, _, _, duration, expirationTime = AuraUtil.FindAuraByName(name, unitId, \"DEBUFF\")\n                \n                envTable.ShowAltCastBar(npcInfo, unitFrame, unitId, duration, expirationTime-duration)\n            else\n                if (unitFrame.castBar2:IsShown()) then\n                    local altCastId = Plater.GetAltCastBarAltId(unitFrame.PlateFrame)\n                    if (altCastId == npcInfo.altCastId) then\n                        Plater.ClearAltCastBar(unitFrame.PlateFrame)\n                    end                   \n                end                              \n            end\n        else\n            envTable.ShowAltCastBar(npcInfo, unitFrame, unitId)\n        end\n    end\nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
-					["SpellIds"] = {
-					},
-					["PlaterCore"] = 1,
-					["Options"] = {
-					},
-					["version"] = -1,
-					["Name"] = "Countdown",
 					["NpcNames"] = {
 						"164427", -- [1]
 						"164414", -- [2]
@@ -4562,6 +9112,14 @@ PlaterDB = {
 						"164567", -- [4]
 						"165408", -- [5]
 					},
+					["SpellIds"] = {
+					},
+					["PlaterCore"] = 1,
+					["Name"] = "Countdown",
+					["version"] = -1,
+					["Options"] = {
+					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    local npcInfo = envTable.npcInfo[envTable._NpcID]\n    \n    if (npcInfo and npcInfo.secondCastBar) then\n        if (npcInfo.debuffTimer) then\n            if (Plater.NameplateHasAura (unitFrame, npcInfo.debuffTimer)) then\n                \n                local name = npcInfo.name\n                local _, _, _, _, duration, expirationTime = AuraUtil.FindAuraByName(name, unitId, \"DEBUFF\")\n                \n                envTable.ShowAltCastBar(npcInfo, unitFrame, unitId, duration, expirationTime-duration)\n            else\n                if (unitFrame.castBar2:IsShown()) then\n                    local altCastId = Plater.GetAltCastBarAltId(unitFrame.PlateFrame)\n                    if (altCastId == npcInfo.altCastId) then\n                        Plater.ClearAltCastBar(unitFrame.PlateFrame)\n                    end                   \n                end                              \n            end\n        else\n            envTable.ShowAltCastBar(npcInfo, unitFrame, unitId)\n        end\n    end\nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 				}, -- [31]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --create a texture to use for a flash behind the cast bar\n    local backGroundFlashTexture = Plater:CreateImage (self, [[Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Alert-Glow]], self:GetWidth()+40, self:GetHeight()+20, \"background\", {0, 400/512, 0, 170/256})\n    backGroundFlashTexture:SetBlendMode (\"ADD\")\n    backGroundFlashTexture:SetDrawLayer(\"OVERLAY\", 7)\n    backGroundFlashTexture:SetPoint (\"center\", self, \"center\")\n    backGroundFlashTexture:SetVertexColor(Plater:ParseColors(scriptTable.config.flashColor))\n    backGroundFlashTexture:Hide()\n    \n    --create the animation hub to hold the flash animation sequence\n    envTable.BackgroundFlash = envTable.BackgroundFlash or Plater:CreateAnimationHub (backGroundFlashTexture, \n        function()\n            backGroundFlashTexture:Show()\n        end,\n        function()\n            backGroundFlashTexture:Hide()\n        end\n    )\n    \n    --create the flash animation sequence\n    local fadeIn = Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 1, scriptTable.config.flashDuration/2, 0, 1)\n    local fadeOut = Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 2, scriptTable.config.flashDuration/2, 1, 0)\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n    \n    --update the config for the flash here so it wont need a /reload\n    fadeIn:SetDuration (scriptTable.config.flashDuration/2)\n    fadeOut:SetDuration (scriptTable.config.flashDuration/2)\n    \n    --update the config for the skake here so it wont need a /reload\n    envTable.FrameShake.OriginalAmplitude = scriptTable.config.shakeAmplitude\n    envTable.FrameShake.OriginalDuration = scriptTable.config.shakeDuration\n    envTable.FrameShake.OriginalFrequency = scriptTable.config.shakeFrequency\nend",
@@ -4577,7 +9135,8 @@ PlaterDB = {
 					["Author"] = "Bombad�o-Azralon",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Highlight a very important cast applying several effects into the Cast Bar. Add spell in the Add Trigger field.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.castBar, 5, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    \n    envTable.BackgroundFlash:Play()\n    \n    Plater.FlashNameplateBorder (unitFrame, 0.05)   \n    Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castBarColor, envTable)\n    \n    --Dominator on Shadowmoon Burial Grounds\n    if (envTable._SpellID == 154327) then\n        if (UnitHealth(unitId) == UnitHealthMax(unitId)) then\n            if (envTable._Duration == 604800) then\n                Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, {1, 0, 0, 1}, envTable)\n            end\n        end\n    end\nend",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						373046, -- [1]
 						372863, -- [2]
@@ -4621,6 +9180,8 @@ PlaterDB = {
 						384161, -- [40]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Cast - Very Important [Plater]",
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 6,
@@ -4669,9 +9230,9 @@ PlaterDB = {
 							["Min"] = 0.1,
 							["Fraction"] = true,
 							["Value"] = 0.8,
-							["Key"] = "flashDuration",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Flash Duration",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "flashDuration",
 						}, -- [6]
 						{
 							["Type"] = 1,
@@ -4709,9 +9270,9 @@ PlaterDB = {
 							["Min"] = 0.1,
 							["Fraction"] = true,
 							["Value"] = 0.2,
-							["Key"] = "shakeDuration",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Shake Duration",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "shakeDuration",
 						}, -- [10]
 						{
 							["Type"] = 2,
@@ -4720,9 +9281,9 @@ PlaterDB = {
 							["Min"] = 1,
 							["Fraction"] = false,
 							["Value"] = 5,
-							["Key"] = "shakeAmplitude",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Shake Amplitude",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "shakeAmplitude",
 						}, -- [11]
 						{
 							["Type"] = 2,
@@ -4731,9 +9292,9 @@ PlaterDB = {
 							["Min"] = 1,
 							["Fraction"] = false,
 							["Value"] = 40,
-							["Key"] = "shakeFrequency",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Shake Frequency",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "shakeFrequency",
 						}, -- [12]
 						{
 							["Type"] = 6,
@@ -4771,9 +9332,9 @@ PlaterDB = {
 							["Min"] = -10,
 							["Name"] = "Dot X Offset",
 							["Value"] = 8,
-							["Key"] = "xOffset",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "xOffset",
 						}, -- [16]
 						{
 							["Type"] = 2,
@@ -4782,9 +9343,9 @@ PlaterDB = {
 							["Min"] = -10,
 							["Key"] = "yOffset",
 							["Value"] = 3,
-							["Fraction"] = false,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Dot Y Offset",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = false,
 						}, -- [17]
 						{
 							["Type"] = 6,
@@ -4864,10 +9425,7 @@ PlaterDB = {
 							["Desc"] = "Cast bar color.",
 						}, -- [26]
 					},
-					["version"] = -1,
-					["Name"] = "Cast - Very Important [Plater]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.castBar, 5, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    \n    envTable.BackgroundFlash:Play()\n    \n    Plater.FlashNameplateBorder (unitFrame, 0.05)   \n    Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castBarColor, envTable)\n    \n    --Dominator on Shadowmoon Burial Grounds\n    if (envTable._SpellID == 154327) then\n        if (UnitHealth(unitId) == UnitHealthMax(unitId)) then\n            if (envTable._Duration == 604800) then\n                Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, {1, 0, 0, 1}, envTable)\n            end\n        end\n    end\nend",
 				}, -- [32]
 				{
 					["ConstructorCode"] = "--todo: add npc ids for multilanguage support\n\nfunction (self, unitId, unitFrame, envTable)\n    \n    --settings\n    envTable.TextAboveNameplate = \"** On You **\"\n    envTable.NameplateColor = \"green\"\n    \n    --label to show the text above the nameplate\n    envTable.FixateTarget = Plater:CreateLabel (unitFrame);\n    envTable.FixateTarget:SetPoint (\"bottom\", unitFrame.healthBar, \"top\", 0, 30);\n    \n    --the spell casted by the npc in the trigger list needs to be in the list below as well\n    local spellList = {\n        [321891] = \"Freeze Tag Fixation\", --Illusionary Vulpin - MTS\n        \n    }\n    \n    --build the list with localized spell names\n    envTable.FixateDebuffs = {}\n    for spellID, enUSSpellName in pairs (spellList) do\n        local localizedSpellName = GetSpellInfo (spellID)\n        envTable.FixateDebuffs [localizedSpellName or enUSSpellName] = true\n    end\n    \n    --debug - smuggled crawg\n    envTable.FixateDebuffs [\"Jagged Maw\"] = true\n    \nend\n\n--[=[\nNpcIDs:\n136461: Spawn of G'huun (mythic uldir G'huun)\n\n--]=]\n\n\n\n\n",
@@ -4882,7 +9440,8 @@ PlaterDB = {
 					["semver"] = "",
 					["Author"] = "Tecno-Azralon",
 					["Desc"] = "When an enemy places a debuff and starts to chase you. This script changes the nameplate color and place your name above the nameplate as well.",
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable)\n    \nend\n\n\n",
+					["NpcNames"] = {
+					},
 					["SpellIds"] = {
 						"spawn of g'huun", -- [1]
 						"smuggled crawg", -- [2]
@@ -4895,12 +9454,11 @@ PlaterDB = {
 						"rezan", -- [9]
 					},
 					["PlaterCore"] = 1,
+					["Name"] = "Fixate On You [Plater]",
+					["version"] = -1,
 					["Options"] = {
 					},
-					["version"] = -1,
-					["Name"] = "Fixate On You [Plater]",
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable)\n    \nend\n\n\n",
 				}, -- [33]
 			},
 			["saved_cvars_last_change"] = {
@@ -4908,11 +9466,11 @@ PlaterDB = {
 				["nameplateMinAlphaDistance"] = "[string \"=[C]\"]: in function `SetCVar'\n[string \"@Interface/AddOns/Plater/Plater.lua\"]:4781: in function `ForceCVars'\n[string \"@Interface/AddOns/Plater/Plater.lua\"]:4778: in function <Interface/AddOns/Plater/Plater.lua:4778>\n",
 				["nameplateNotSelectedAlpha"] = "[string \"=[C]\"]: in function `SetCVar'\n[string \"@Interface/AddOns/Plater/Plater.lua\"]:4783: in function `ForceCVars'\n[string \"@Interface/AddOns/Plater/Plater.lua\"]:4778: in function <Interface/AddOns/Plater/Plater.lua:4778>\n",
 				["nameplateMaxDistance"] = "[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `SetCVar'\n[string \"SetCVar(\"nameplateMaxDistance\", 41)\"]:1: in main chunk\n[string \"=[C]\"]: in function `RunScript'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:2205: in function `?'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4933: in function <Interface/FrameXML/ChatFrame.lua:4879>\n[string \"=[C]\"]: in function `ChatEdit_ParseText'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4596: in function `ChatEdit_SendText'\n[string \"@Interface/FrameXML/ChatFrame.lua\"]:4632: in function <Interface/FrameXML/ChatFrame.lua:4628>\n[string \"=[C]\"]: in function `ChatEdit_OnEnterPressed'\n[string \"*ChatFrame.xml:121_OnEnterPressed\"]:1: in function <[string \"*ChatFrame.xml:121_OnEnterPressed\"]:1>\n",
-				["nameplateRemovalAnimation"] = "[string \"=[C]\"]: in function `SetCVar'\n[string \"@Interface/AddOns/Plater/Plater.lua\"]:4784: in function `ForceCVars'\n[string \"@Interface/AddOns/Plater/Plater.lua\"]:4778: in function <Interface/AddOns/Plater/Plater.lua:4778>\n",
+				["nameplateSelectedAlpha"] = "[string \"=[C]\"]: in function `SetCVar'\n[string \"@Interface/AddOns/Plater/Plater.lua\"]:4782: in function `ForceCVars'\n[string \"@Interface/AddOns/Plater/Plater.lua\"]:4778: in function <Interface/AddOns/Plater/Plater.lua:4778>\n",
 				["nameplateSelectedScale"] = "[string \"=[C]\"]: in function `SetCVar'\n[string \"@Interface/AddOns/Plater/Plater.lua\"]:2252: in function <Interface/AddOns/Plater/Plater.lua:2233>\n",
 				["nameplateShowEnemies"] = "[string \"=[C]\"]: in function `SetCVar'\n[string \"@Interface/AddOns/Plater/Plater.lua\"]:2252: in function <Interface/AddOns/Plater/Plater.lua:2233>\n",
 				["nameplateShowFriends"] = "[string \"=[C]\"]: in function `SetCVar'\n[string \"@Interface/AddOns/Plater/Plater.lua\"]:2252: in function <Interface/AddOns/Plater/Plater.lua:2233>\n",
-				["nameplateSelectedAlpha"] = "[string \"=[C]\"]: in function `SetCVar'\n[string \"@Interface/AddOns/Plater/Plater.lua\"]:4782: in function `ForceCVars'\n[string \"@Interface/AddOns/Plater/Plater.lua\"]:4778: in function <Interface/AddOns/Plater/Plater.lua:4778>\n",
+				["nameplateRemovalAnimation"] = "[string \"=[C]\"]: in function `SetCVar'\n[string \"@Interface/AddOns/Plater/Plater.lua\"]:4784: in function `ForceCVars'\n[string \"@Interface/AddOns/Plater/Plater.lua\"]:4778: in function <Interface/AddOns/Plater/Plater.lua:4778>\n",
 			},
 			["aura2_y_offset"] = 5,
 			["expansion_triggerwipe"] = {
@@ -6129,6 +10687,11 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
+				[24207] = {
+					"亡者军团食尸鬼", -- [1]
+					"冠军的试炼", -- [2]
+					"zhCN", -- [3]
+				},
 				[35307] = {
 					"银色女祭司", -- [1]
 					"冠军的试炼", -- [2]
@@ -6374,7 +10937,7 @@ PlaterDB = {
 					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[35047] = {
+				[35046] = {
 					"未知目标", -- [1]
 					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
@@ -6389,9 +10952,9 @@ PlaterDB = {
 					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
-				[27653] = {
-					"未知目标", -- [1]
-					"魔环", -- [2]
+				[34469] = {
+					"麦拉多·深谷游者", -- [1]
+					"十字军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[10394] = {
@@ -6399,14 +10962,14 @@ PlaterDB = {
 					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[27645] = {
-					"未知目标", -- [1]
-					"魔环", -- [2]
+				[35013] = {
+					"火焰看守者科拉隆", -- [1]
+					"阿尔卡冯的宝库", -- [2]
 					"zhCN", -- [3]
 				},
-				[27644] = {
+				[25757] = {
 					"未知目标", -- [1]
-					"魔环", -- [2]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[27981] = {
@@ -6414,9 +10977,9 @@ PlaterDB = {
 					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[30418] = {
-					"被束缚的气元素", -- [1]
-					"安卡赫特：古代王国", -- [2]
+				[29395] = {
+					"埃雷克姆卫兵", -- [1]
+					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
 				[33488] = {
@@ -6424,9 +10987,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[28153] = {
+				[35049] = {
 					"未知目标", -- [1]
-					"魔环", -- [2]
+					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[23953] = {
@@ -6444,9 +11007,9 @@ PlaterDB = {
 					"魔环", -- [2]
 					"zhCN", -- [3]
 				},
-				[35051] = {
-					"未知目标", -- [1]
-					"冠军的试炼", -- [2]
+				[8907] = {
+					"怒锤傀儡", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
 				[34703] = {
@@ -6454,14 +11017,14 @@ PlaterDB = {
 					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
-				[34605] = {
-					"虫群甲虫", -- [1]
-					"十字军的试炼", -- [2]
+				[10417] = {
+					"泼毒者", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[30338] = {
-					"安卡哈群行蛛", -- [1]
-					"安卡赫特：古代王国", -- [2]
+				[24200] = {
+					"建筑师斯卡瓦尔德", -- [1]
+					"乌特加德城堡", -- [2]
 					"zhCN", -- [3]
 				},
 				[34799] = {
@@ -6469,9 +11032,9 @@ PlaterDB = {
 					"十字军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
-				[28276] = {
-					"大型魔网雏龙", -- [1]
-					"魔环", -- [2]
+				[34014] = {
+					"圣所警卫", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[17959] = {
@@ -6479,8 +11042,8 @@ PlaterDB = {
 					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
-				[34607] = {
-					"蛛魔掘地者", -- [1]
+				[35465] = {
+					"扎戈瑞姆", -- [1]
 					"十字军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
@@ -6494,9 +11057,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[30283] = {
-					"天灾漫步者", -- [1]
-					"安卡赫特：古代王国", -- [2]
+				[33824] = {
+					"暮光影刃", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[34497] = {
@@ -6509,9 +11072,9 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[34496] = {
-					"黑暗邪使艾蒂丝", -- [1]
-					"十字军的试炼", -- [2]
+				[35590] = {
+					"未知目标", -- [1]
+					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[29340] = {
@@ -6519,14 +11082,14 @@ PlaterDB = {
 					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
-				[33822] = {
-					"暮光守护者", -- [1]
-					"奥杜尔", -- [2]
+				[8983] = {
+					"傀儡统帅阿格曼奇", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
-				[34813] = {
-					"未知目标", -- [1]
-					"十字军的试炼", -- [2]
+				[31233] = {
+					"沙沙", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[34192] = {
@@ -6539,8 +11102,8 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[3825] = {
-					"狼", -- [1]
+				[35305] = {
+					"银色僧侣", -- [1]
 					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
@@ -6569,9 +11132,9 @@ PlaterDB = {
 					"乌特加德城堡", -- [2]
 					"zhCN", -- [3]
 				},
-				[9042] = {
-					"维雷克", -- [1]
-					"黑石深渊", -- [2]
+				[34815] = {
+					"魔焰地狱火", -- [1]
+					"十字军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[34825] = {
@@ -6599,9 +11162,9 @@ PlaterDB = {
 					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
-				[34474] = {
-					"塞瑞莎·术轮", -- [1]
-					"十字军的试炼", -- [2]
+				[25756] = {
+					"未知目标", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[34796] = {
@@ -6619,14 +11182,14 @@ PlaterDB = {
 					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
-				[34800] = {
-					"雪地狗头人奴隶", -- [1]
-					"十字军的试炼", -- [2]
-					"zhCN", -- [3]
-				},
 				[26623] = {
 					"天灾蛮兵", -- [1]
 					"达克萨隆要塞", -- [2]
+					"zhCN", -- [3]
+				},
+				[34800] = {
+					"雪地狗头人奴隶", -- [1]
+					"十字军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[26639] = {
@@ -6634,9 +11197,9 @@ PlaterDB = {
 					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[29316] = {
-					"摩拉格", -- [1]
-					"紫罗兰监狱", -- [2]
+				[34472] = {
+					"伊锐丝·影踪", -- [1]
+					"十字军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[17464] = {
@@ -6714,19 +11277,19 @@ PlaterDB = {
 					"乌特加德城堡", -- [2]
 					"zhCN", -- [3]
 				},
-				[35311] = {
-					"未知目标", -- [1]
-					"冠军的试炼", -- [2]
-					"zhCN", -- [3]
-				},
-				[30961] = {
-					"未知目标", -- [1]
+				[30665] = {
+					"精锐法师猎手", -- [1]
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[166359] = {
-					"祖利安猛虎", -- [1]
-					"祖尔格拉布", -- [2]
+				[34269] = {
+					"XR-949回收机器人", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[33214] = {
+					"机械空运器304-A", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[27982] = {
@@ -6744,9 +11307,9 @@ PlaterDB = {
 					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
-				[34826] = {
-					"痛苦女王", -- [1]
-					"十字军的试炼", -- [2]
+				[23563] = {
+					"织魂者", -- [1]
+					"纳克萨玛斯", -- [2]
 					"zhCN", -- [3]
 				},
 				[23954] = {
@@ -6759,9 +11322,9 @@ PlaterDB = {
 					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[9027] = {
-					"修行者高罗什", -- [1]
-					"黑石深渊", -- [2]
+				[23562] = {
+					"势不可挡的憎恶", -- [1]
+					"纳克萨玛斯", -- [2]
 					"zhCN", -- [3]
 				},
 				[29117] = {
@@ -6774,9 +11337,9 @@ PlaterDB = {
 					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
-				[29874] = {
-					"达卡莱煽动者", -- [1]
-					"古达克", -- [2]
+				[33118] = {
+					"掌炉者伊格尼斯", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[30249] = {
@@ -6784,9 +11347,9 @@ PlaterDB = {
 					"永恒之眼", -- [2]
 					"zhCN", -- [3]
 				},
-				[23561] = {
-					"冰冻废土的士兵", -- [1]
-					"纳克萨玛斯", -- [2]
+				[17940] = {
+					"盘牙技师", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[24082] = {
@@ -6814,9 +11377,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[33121] = {
-					"铁铸像", -- [1]
-					"奥杜尔", -- [2]
+				[27963] = {
+					"黑暗符文施法者", -- [1]
+					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[9028] = {
@@ -6829,14 +11392,14 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[28826] = {
-					"雷怒亡魂", -- [1]
-					"闪电大厅", -- [2]
+				[35330] = {
+					"埃索达勇士", -- [1]
+					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
-				[27732] = {
-					"通灵大师", -- [1]
-					"净化斯坦索姆", -- [2]
+				[32926] = {
+					"未知目标", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[12129] = {
@@ -6844,14 +11407,14 @@ PlaterDB = {
 					"奥妮克希亚的巢穴", -- [2]
 					"zhCN", -- [3]
 				},
-				[205999] = {
-					"未知目标", -- [1]
-					"紫罗兰监狱", -- [2]
+				[26693] = {
+					"残忍的斯卡迪", -- [1]
+					"乌特加德之巅", -- [2]
 					"zhCN", -- [3]
 				},
-				[8913] = {
-					"暮光使者", -- [1]
-					"黑石深渊", -- [2]
+				[25740] = {
+					"埃霍恩", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[33203] = {
@@ -6859,34 +11422,34 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[34928] = {
-					"银色神官帕尔崔丝", -- [1]
-					"冠军的试炼", -- [2]
+				[17942] = {
+					"夸格米拉", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
-				[29832] = {
-					"达卡莱魔像", -- [1]
-					"古达克", -- [2]
+				[9319] = {
+					"驯犬者格雷布玛尔", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
-				[27979] = {
-					"铸铁穴居人", -- [1]
-					"岩石大厅", -- [2]
+				[11517] = {
+					"奥格弗林特", -- [1]
+					"怒焰裂谷", -- [2]
 					"zhCN", -- [3]
 				},
-				[27636] = {
-					"碧蓝魔网雏龙", -- [1]
-					"魔环", -- [2]
+				[34780] = {
+					"加拉克苏斯大王", -- [1]
+					"十字军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
-				[29335] = {
-					"阿努巴尔织网者", -- [1]
-					"艾卓-尼鲁布", -- [2]
-					"zhCN", -- [3]
-				},
-				[16441] = {
-					"寒冰皇冠卫士", -- [1]
+				[2630] = {
+					"地缚图腾", -- [1]
 					"纳克萨玛斯", -- [2]
+					"zhCN", -- [3]
+				},
+				[8912] = {
+					"暮光之锤拷问者", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
 				[26638] = {
@@ -6894,19 +11457,19 @@ PlaterDB = {
 					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[10558] = {
-					"弗雷斯特恩", -- [1]
-					"斯坦索姆", -- [2]
+				[11319] = {
+					"怒焰萨满祭司", -- [1]
+					"怒焰裂谷", -- [2]
 					"zhCN", -- [3]
 				},
-				[28579] = {
-					"坚钢狂暴者", -- [1]
-					"闪电大厅", -- [2]
+				[26533] = {
+					"玛尔加尼斯", -- [1]
+					"净化斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[15989] = {
-					"萨菲隆", -- [1]
-					"纳克萨玛斯", -- [2]
+				[14532] = {
+					"拉扎什毒血蜘蛛", -- [1]
+					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
 				[9017] = {
@@ -6914,9 +11477,9 @@ PlaterDB = {
 					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
-				[1666] = {
-					"卡姆·深怒", -- [1]
-					"暴风城监狱", -- [2]
+				[33651] = {
+					"VX-001", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[1663] = {
@@ -6934,14 +11497,14 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[417] = {
-					"鲁德鲁姆", -- [1]
-					"奥杜尔", -- [2]
+				[1666] = {
+					"卡姆·深怒", -- [1]
+					"暴风城监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[32906] = {
-					"弗蕾亚", -- [1]
-					"奥杜尔", -- [2]
+				[27647] = {
+					"未知目标", -- [1]
+					"魔环", -- [2]
 					"zhCN", -- [3]
 				},
 				[26624] = {
@@ -6949,14 +11512,14 @@ PlaterDB = {
 					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[25755] = {
-					"未知目标", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[35331] = {
+					"诺莫瑞根勇士", -- [1]
+					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
-				[205997] = {
-					"未知目标", -- [1]
-					"紫罗兰监狱", -- [2]
+				[35451] = {
+					"黑骑士", -- [1]
+					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[26672] = {
@@ -6979,9 +11542,9 @@ PlaterDB = {
 					"净化斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[11322] = {
-					"燃刃信徒", -- [1]
-					"怒焰裂谷", -- [2]
+				[10418] = {
+					"红衣卫兵", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[34035] = {
@@ -6994,9 +11557,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[34191] = {
-					"废料", -- [1]
-					"奥杜尔", -- [2]
+				[18176] = {
+					"未知目标", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[26800] = {
@@ -7004,9 +11567,9 @@ PlaterDB = {
 					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
-				[27983] = {
-					"未知目标", -- [1]
-					"岩石大厅", -- [2]
+				[17721] = {
+					"盘牙工程师", -- [1]
+					"盘牙湖泊：蒸汽地窟", -- [2]
 					"zhCN", -- [3]
 				},
 				[28878] = {
@@ -7034,9 +11597,9 @@ PlaterDB = {
 					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[36561] = {
-					"奥妮克希亚巢穴守卫", -- [1]
-					"奥妮克希亚的巢穴", -- [2]
+				[10435] = {
+					"巴瑟拉斯镇长", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[26928] = {
@@ -7049,19 +11612,9 @@ PlaterDB = {
 					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[10419] = {
-					"红衣魔术师", -- [1]
-					"斯坦索姆", -- [2]
-					"zhCN", -- [3]
-				},
-				[33524] = {
+				[27983] = {
 					"未知目标", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[10435] = {
-					"巴瑟拉斯镇长", -- [1]
-					"斯坦索姆", -- [2]
+					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[17801] = {
@@ -7069,19 +11622,29 @@ PlaterDB = {
 					"盘牙湖泊：蒸汽地窟", -- [2]
 					"zhCN", -- [3]
 				},
+				[36561] = {
+					"奥妮克希亚巢穴守卫", -- [1]
+					"奥妮克希亚的巢穴", -- [2]
+					"zhCN", -- [3]
+				},
+				[33524] = {
+					"未知目标", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
 				[17817] = {
 					"大型泥沼龙虾人", -- [1]
 					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
-				[34057] = {
-					"未知目标", -- [1]
-					"奥杜尔", -- [2]
+				[17941] = {
+					"背叛者门努", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
-				[32786] = {
-					"未知目标", -- [1]
-					"达克萨隆要塞", -- [2]
+				[1696] = {
+					"可怕的塔格尔", -- [1]
+					"暴风城监狱", -- [2]
 					"zhCN", -- [3]
 				},
 				[29118] = {
@@ -7089,9 +11652,9 @@ PlaterDB = {
 					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
-				[29306] = {
-					"迦尔达拉", -- [1]
-					"古达克", -- [2]
+				[25865] = {
+					"冰冻核心", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[30962] = {
@@ -7104,9 +11667,9 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[29214] = {
-					"阿努巴尔刺客", -- [1]
-					"艾卓-尼鲁布", -- [2]
+				[27753] = {
+					"达卡莱入侵者", -- [1]
+					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
 				[24083] = {
@@ -7114,14 +11677,14 @@ PlaterDB = {
 					"乌特加德城堡", -- [2]
 					"zhCN", -- [3]
 				},
-				[8477] = {
-					"骷髅仆从", -- [1]
-					"斯坦索姆", -- [2]
+				[29214] = {
+					"阿努巴尔刺客", -- [1]
+					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
-				[34004] = {
-					"未知目标", -- [1]
-					"奥杜尔", -- [2]
+				[21126] = {
+					"盘牙医师", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[32885] = {
@@ -7139,9 +11702,9 @@ PlaterDB = {
 					"暴风城监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[1707] = {
-					"迪菲亚俘虏", -- [1]
-					"暴风城监狱", -- [2]
+				[34004] = {
+					"未知目标", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[29310] = {
@@ -7149,14 +11712,14 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[29314] = {
-					"湮灭者祖拉玛特", -- [1]
-					"紫罗兰监狱", -- [2]
+				[1964] = {
+					"树人", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[32878] = {
-					"黑暗符文唤魔师", -- [1]
-					"奥杜尔", -- [2]
+				[24079] = {
+					"掠龙铸造大师", -- [1]
+					"乌特加德城堡", -- [2]
 					"zhCN", -- [3]
 				},
 				[1711] = {
@@ -7164,9 +11727,9 @@ PlaterDB = {
 					"暴风城监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[10398] = {
-					"图萨丁暗影法师", -- [1]
-					"斯坦索姆", -- [2]
+				[30284] = {
+					"碾骨者", -- [1]
+					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
 				[34196] = {
@@ -7174,14 +11737,14 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[33237] = {
-					"奥杜尔巨像", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
 				[1715] = {
 					"迪菲亚叛军", -- [1]
 					"暴风城监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[33237] = {
+					"奥杜尔巨像", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[1716] = {
@@ -7194,9 +11757,9 @@ PlaterDB = {
 					"暴风城监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[10414] = {
-					"缝补憎恶", -- [1]
-					"斯坦索姆", -- [2]
+				[17816] = {
+					"泥沼龙虾人", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[17960] = {
@@ -7204,9 +11767,9 @@ PlaterDB = {
 					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
-				[33134] = {
-					"萨拉", -- [1]
-					"奥杜尔", -- [2]
+				[28732] = {
+					"阿努巴尔战士", -- [1]
+					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
 				[26796] = {
@@ -7229,19 +11792,19 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
+				[5913] = {
+					"战栗图腾", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
 				[30621] = {
 					"艾丨米", -- [1]
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[26529] = {
-					"肉钩", -- [1]
-					"净化斯坦索姆", -- [2]
-					"zhCN", -- [3]
-				},
-				[27648] = {
-					"未知目标", -- [1]
-					"魔环", -- [2]
+				[26737] = {
+					"狂乱的法力涌动者", -- [1]
+					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
 				[29630] = {
@@ -7259,14 +11822,14 @@ PlaterDB = {
 					"十字军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
-				[29838] = {
-					"达卡莱犀牛", -- [1]
-					"古达克", -- [2]
+				[34069] = {
+					"熔火巨人", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[26625] = {
-					"暗网隐藏者", -- [1]
-					"达克萨隆要塞", -- [2]
+				[27648] = {
+					"未知目标", -- [1]
+					"魔环", -- [2]
 					"zhCN", -- [3]
 				},
 				[26641] = {
@@ -7309,14 +11872,14 @@ PlaterDB = {
 					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
-				[34069] = {
-					"熔火巨人", -- [1]
-					"奥杜尔", -- [2]
+				[29838] = {
+					"达卡莱犀牛", -- [1]
+					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
-				[18177] = {
-					"未知目标", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[11320] = {
+					"钻土虫", -- [1]
+					"怒焰裂谷", -- [2]
 					"zhCN", -- [3]
 				},
 				[34133] = {
@@ -7349,9 +11912,9 @@ PlaterDB = {
 					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
-				[8909] = {
-					"火焰卫士", -- [1]
-					"黑石深渊", -- [2]
+				[17802] = {
+					"盘牙战士", -- [1]
+					"盘牙湖泊：蒸汽地窟", -- [2]
 					"zhCN", -- [3]
 				},
 				[29982] = {
@@ -7364,9 +11927,9 @@ PlaterDB = {
 					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[17802] = {
-					"盘牙战士", -- [1]
-					"盘牙湖泊：蒸汽地窟", -- [2]
+				[33526] = {
+					"铁须鞭笞者", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[27984] = {
@@ -7384,9 +11947,9 @@ PlaterDB = {
 					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
-				[33526] = {
-					"铁须鞭笞者", -- [1]
-					"奥杜尔", -- [2]
+				[8909] = {
+					"火焰卫士", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
 				[23956] = {
@@ -7409,19 +11972,19 @@ PlaterDB = {
 					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
-				[10384] = {
-					"鬼魂市民", -- [1]
+				[32886] = {
+					"黑暗符文助手", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[33846] = {
+					"黑暗符文戒卫", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[10413] = {
+					"地穴兽", -- [1]
 					"斯坦索姆", -- [2]
-					"zhCN", -- [3]
-				},
-				[27909] = {
-					"暗网受害者", -- [1]
-					"达克萨隆要塞", -- [2]
-					"zhCN", -- [3]
-				},
-				[27971] = {
-					"冷酷的构造体", -- [1]
-					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[15111] = {
@@ -7454,9 +12017,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[21127] = {
-					"盘牙狂暴者", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[29311] = {
+					"传令官沃拉兹", -- [1]
+					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
 				[35029] = {
@@ -7464,9 +12027,9 @@ PlaterDB = {
 					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
-				[29311] = {
-					"传令官沃拉兹", -- [1]
-					"安卡赫特：古代王国", -- [2]
+				[21127] = {
+					"盘牙狂暴者", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[11831] = {
@@ -7474,19 +12037,19 @@ PlaterDB = {
 					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
-				[34134] = {
-					"寒冬亡魂", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
 				[17083] = {
 					"邪兽人转化者", -- [1]
 					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[31174] = {
-					"自然抗性图腾 VI", -- [1]
+				[34134] = {
+					"寒冬亡魂", -- [1]
 					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[17958] = {
+					"盘牙卫士", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[30414] = {
@@ -7499,9 +12062,9 @@ PlaterDB = {
 					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[17622] = {
-					"神射手卫士", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
+				[34198] = {
+					"铁矮人修理工", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[33271] = {
@@ -7514,9 +12077,9 @@ PlaterDB = {
 					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[28368] = {
-					"伊米亚通灵师", -- [1]
-					"乌特加德之巅", -- [2]
+				[33806] = {
+					"未知目标", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[16594] = {
@@ -7524,9 +12087,9 @@ PlaterDB = {
 					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[33052] = {
-					"有生命的星座", -- [1]
-					"奥杜尔", -- [2]
+				[11348] = {
+					"狂热者扎斯", -- [1]
+					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
 				[33431] = {
@@ -7539,9 +12102,9 @@ PlaterDB = {
 					"地狱火堡垒：城墙", -- [2]
 					"zhCN", -- [3]
 				},
-				[17961] = {
-					"盘牙魔法师", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[29315] = {
+					"埃雷克姆", -- [1]
+					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
 				[33527] = {
@@ -7549,9 +12112,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[32930] = {
-					"科隆加恩", -- [1]
-					"奥杜尔", -- [2]
+				[10406] = {
+					"食尸抢夺者", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[26530] = {
@@ -7569,19 +12132,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[27649] = {
-					"未知目标", -- [1]
-					"魔环", -- [2]
-					"zhCN", -- [3]
-				},
 				[13321] = {
 					"未知目标", -- [1]
 					"盘牙湖泊：奴隶围栏", -- [2]
-					"zhCN", -- [3]
-				},
-				[27633] = {
-					"碧蓝审讯者", -- [1]
-					"魔环", -- [2]
 					"zhCN", -- [3]
 				},
 				[26626] = {
@@ -7589,9 +12142,19 @@ PlaterDB = {
 					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[32934] = {
-					"右臂", -- [1]
-					"奥杜尔", -- [2]
+				[27633] = {
+					"碧蓝审讯者", -- [1]
+					"魔环", -- [2]
+					"zhCN", -- [3]
+				},
+				[27649] = {
+					"未知目标", -- [1]
+					"魔环", -- [2]
+					"zhCN", -- [3]
+				},
+				[26918] = {
+					"混乱裂隙", -- [1]
+					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
 				[16428] = {
@@ -7619,9 +12182,9 @@ PlaterDB = {
 					"怒焰裂谷", -- [2]
 					"zhCN", -- [3]
 				},
-				[27969] = {
-					"黑暗符文巨人", -- [1]
-					"岩石大厅", -- [2]
+				[33715] = {
+					"未知目标", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[11339] = {
@@ -7659,24 +12222,24 @@ PlaterDB = {
 					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
-				[29713] = {
-					"斯拉德兰蟒蛇", -- [1]
-					"古达克", -- [2]
-					"zhCN", -- [3]
-				},
-				[27651] = {
-					"未知目标", -- [1]
-					"魔环", -- [2]
-					"zhCN", -- [3]
-				},
-				[27635] = {
-					"碧蓝缚法者", -- [1]
-					"魔环", -- [2]
-					"zhCN", -- [3]
-				},
-				[33432] = {
-					"巨兽二型", -- [1]
+				[33819] = {
+					"暮光冰法师", -- [1]
 					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[26628] = {
+					"达卡莱镰爪龙", -- [1]
+					"达克萨隆要塞", -- [2]
+					"zhCN", -- [3]
+				},
+				[33755] = {
+					"黑暗符文破坏者", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[16700] = {
+					"碎手军团士兵", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[26930] = {
@@ -7684,19 +12247,19 @@ PlaterDB = {
 					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
-				[10412] = {
-					"地穴爬行者", -- [1]
-					"斯坦索姆", -- [2]
+				[27969] = {
+					"黑暗符文巨人", -- [1]
+					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[10420] = {
-					"红衣新兵", -- [1]
-					"斯坦索姆", -- [2]
-					"zhCN", -- [3]
-				},
-				[33430] = {
-					"护卫鞭笞者", -- [1]
+				[33432] = {
+					"巨兽二型", -- [1]
 					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[27985] = {
+					"未知目标", -- [1]
+					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[10436] = {
@@ -7719,9 +12282,9 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[26536] = {
-					"无脑的仆从", -- [1]
-					"乌特加德之巅", -- [2]
+				[26722] = {
+					"碧蓝大法师", -- [1]
+					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
 				[29120] = {
@@ -7729,14 +12292,14 @@ PlaterDB = {
 					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
-				[28578] = {
-					"坚钢掠夺者", -- [1]
-					"闪电大厅", -- [2]
+				[30624] = {
+					"Jennifers", -- [1]
+					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[10516] = {
-					"未知目标", -- [1]
-					"斯坦索姆", -- [2]
+				[29216] = {
+					"阿努巴尔守护者", -- [1]
+					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
 				[31214] = {
@@ -7749,9 +12312,9 @@ PlaterDB = {
 					"乌特加德城堡", -- [2]
 					"zhCN", -- [3]
 				},
-				[24085] = {
-					"掠龙监工", -- [1]
-					"乌特加德城堡", -- [2]
+				[10516] = {
+					"未知目标", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[17963] = {
@@ -7789,14 +12352,14 @@ PlaterDB = {
 					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
-				[32882] = {
-					"冰虫巨兽", -- [1]
+				[33344] = {
+					"XM-024击打者", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[17623] = {
-					"狂暴卫兵", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
+				[32918] = {
+					"未知目标", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[33113] = {
@@ -7804,34 +12367,34 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[34135] = {
-					"寒冬滚石", -- [1]
+				[26532] = {
+					"时光领主埃博克", -- [1]
+					"净化斯坦索姆", -- [2]
+					"zhCN", -- [3]
+				},
+				[11830] = {
+					"哈卡祭司", -- [1]
+					"祖尔格拉布", -- [2]
+					"zhCN", -- [3]
+				},
+				[11347] = {
+					"狂热者洛卡恩", -- [1]
+					"祖尔格拉布", -- [2]
+					"zhCN", -- [3]
+				},
+				[30625] = {
+					"清衫", -- [1]
+					"安卡赫特：古代王国", -- [2]
+					"zhCN", -- [3]
+				},
+				[31129] = {
+					"大地之力图腾 VIII", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[26805] = {
-					"联盟祭司", -- [1]
-					"魔枢", -- [2]
-					"zhCN", -- [3]
-				},
-				[10409] = {
-					"石翼尖啸者", -- [1]
-					"斯坦索姆", -- [2]
-					"zhCN", -- [3]
-				},
-				[27598] = {
-					"恶臭的巨魔尸体", -- [1]
-					"达克萨隆要塞", -- [2]
-					"zhCN", -- [3]
-				},
-				[28736] = {
-					"轻快的感染者", -- [1]
-					"艾卓-尼鲁布", -- [2]
-					"zhCN", -- [3]
-				},
-				[27597] = {
-					"笨重的尸体", -- [1]
-					"达克萨隆要塞", -- [2]
+				[30111] = {
+					"暮光膜拜者", -- [1]
+					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
 				[30892] = {
@@ -7844,9 +12407,9 @@ PlaterDB = {
 					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[33136] = {
-					"尤格-萨隆的卫士", -- [1]
-					"奥杜尔", -- [2]
+				[16523] = {
+					"碎手蛮兵", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[33433] = {
@@ -7854,19 +12417,19 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[29312] = {
-					"拉文索尔", -- [1]
-					"紫罗兰监狱", -- [2]
+				[26731] = {
+					"大魔导师泰蕾丝塔", -- [1]
+					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
-				[30963] = {
-					"未知目标", -- [1]
-					"紫罗兰监狱", -- [2]
+				[26782] = {
+					"晶化守护者", -- [1]
+					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
-				[10464] = {
-					"哀嚎的女妖", -- [1]
-					"斯坦索姆", -- [2]
+				[17670] = {
+					"碎手驯犬者", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[30286] = {
@@ -7894,9 +12457,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[26627] = {
-					"水晶处理者", -- [1]
-					"达克萨隆要塞", -- [2]
+				[27650] = {
+					"未知目标", -- [1]
+					"魔环", -- [2]
 					"zhCN", -- [3]
 				},
 				[29680] = {
@@ -7904,14 +12467,14 @@ PlaterDB = {
 					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
-				[17420] = {
-					"碎手蛮兵", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
+				[26627] = {
+					"水晶处理者", -- [1]
+					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[29264] = {
-					"幽灵狼", -- [1]
-					"奥杜尔", -- [2]
+				[10390] = {
+					"骷髅守护者", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[16429] = {
@@ -7929,9 +12492,9 @@ PlaterDB = {
 					"乌特加德之巅", -- [2]
 					"zhCN", -- [3]
 				},
-				[33088] = {
+				[30893] = {
 					"未知目标", -- [1]
-					"奥杜尔", -- [2]
+					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
 				[26723] = {
@@ -7939,9 +12502,9 @@ PlaterDB = {
 					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
-				[29217] = {
-					"阿努巴尔制毒师", -- [1]
-					"艾卓-尼鲁布", -- [2]
+				[17964] = {
+					"荒土工人", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[17669] = {
@@ -7964,9 +12527,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[28838] = {
-					"泰坦神铁先锋", -- [1]
-					"闪电大厅", -- [2]
+				[28730] = {
+					"看守者加什拉", -- [1]
+					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
 				[34034] = {
@@ -7979,19 +12542,14 @@ PlaterDB = {
 					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[30176] = {
-					"安卡哈守护者", -- [1]
-					"安卡赫特：古代王国", -- [2]
+				[33722] = {
+					"雷暴锻铸守护者", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[29920] = {
-					"废墟居民", -- [1]
-					"古达克", -- [2]
-					"zhCN", -- [3]
-				},
-				[28961] = {
-					"泰坦神铁碎岩者", -- [1]
-					"闪电大厅", -- [2]
+				[33985] = {
+					"未知目标", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[31007] = {
@@ -7999,9 +12557,14 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[29153] = {
-					"重生的白骨", -- [1]
-					"艾卓-尼鲁布", -- [2]
+				[28961] = {
+					"泰坦神铁碎岩者", -- [1]
+					"闪电大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[15068] = {
+					"祖利安守护者", -- [1]
+					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
 				[27970] = {
@@ -8039,9 +12602,9 @@ PlaterDB = {
 					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
-				[15068] = {
-					"祖利安守护者", -- [1]
-					"祖尔格拉布", -- [2]
+				[29153] = {
+					"重生的白骨", -- [1]
+					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
 				[31167] = {
@@ -8049,14 +12612,14 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[33985] = {
-					"未知目标", -- [1]
-					"奥杜尔", -- [2]
+				[29920] = {
+					"废墟居民", -- [1]
+					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
-				[33722] = {
-					"雷暴锻铸守护者", -- [1]
-					"奥杜尔", -- [2]
+				[30176] = {
+					"安卡哈守护者", -- [1]
+					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
 				[33754] = {
@@ -8064,9 +12627,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[28730] = {
-					"看守者加什拉", -- [1]
-					"艾卓-尼鲁布", -- [2]
+				[28838] = {
+					"泰坦神铁先锋", -- [1]
+					"闪电大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[33818] = {
@@ -8074,24 +12637,24 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[17964] = {
-					"荒土工人", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[29217] = {
+					"阿努巴尔制毒师", -- [1]
+					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
-				[30893] = {
+				[33088] = {
 					"未知目标", -- [1]
-					"紫罗兰监狱", -- [2]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[10390] = {
-					"骷髅守护者", -- [1]
-					"斯坦索姆", -- [2]
+				[29264] = {
+					"幽灵狼", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[27650] = {
-					"未知目标", -- [1]
-					"魔环", -- [2]
+				[17420] = {
+					"碎手蛮兵", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
 				[32955] = {
@@ -8109,24 +12672,24 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[17670] = {
-					"碎手驯犬者", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
+				[10464] = {
+					"哀嚎的女妖", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[26782] = {
-					"晶化守护者", -- [1]
-					"魔枢", -- [2]
+				[30963] = {
+					"未知目标", -- [1]
+					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[26731] = {
-					"大魔导师泰蕾丝塔", -- [1]
-					"魔枢", -- [2]
+				[29312] = {
+					"拉文索尔", -- [1]
+					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[16523] = {
-					"碎手蛮兵", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
+				[33136] = {
+					"尤格-萨隆的卫士", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[30416] = {
@@ -8139,43 +12702,43 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[30111] = {
-					"暮光膜拜者", -- [1]
-					"安卡赫特：古代王国", -- [2]
+				[27597] = {
+					"笨重的尸体", -- [1]
+					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[31129] = {
-					"大地之力图腾 VIII", -- [1]
+				[28736] = {
+					"轻快的感染者", -- [1]
+					"艾卓-尼鲁布", -- [2]
+					"zhCN", -- [3]
+				},
+				[27598] = {
+					"恶臭的巨魔尸体", -- [1]
+					"达克萨隆要塞", -- [2]
+					"zhCN", -- [3]
+				},
+				[10409] = {
+					"石翼尖啸者", -- [1]
+					"斯坦索姆", -- [2]
+					"zhCN", -- [3]
+				},
+				[26805] = {
+					"联盟祭司", -- [1]
+					"魔枢", -- [2]
+					"zhCN", -- [3]
+				},
+				[34135] = {
+					"寒冬滚石", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[30625] = {
-					"清衫", -- [1]
-					"安卡赫特：古代王国", -- [2]
+				[17623] = {
+					"狂暴卫兵", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[11347] = {
-					"狂热者洛卡恩", -- [1]
-					"祖尔格拉布", -- [2]
-					"zhCN", -- [3]
-				},
-				[11830] = {
-					"哈卡祭司", -- [1]
-					"祖尔格拉布", -- [2]
-					"zhCN", -- [3]
-				},
-				[26532] = {
-					"时光领主埃博克", -- [1]
-					"净化斯坦索姆", -- [2]
-					"zhCN", -- [3]
-				},
-				[32918] = {
-					"未知目标", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[33344] = {
-					"XM-024击打者", -- [1]
+				[32882] = {
+					"冰虫巨兽", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
@@ -8189,19 +12752,19 @@ PlaterDB = {
 					"闪电大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[29216] = {
-					"阿努巴尔守护者", -- [1]
-					"艾卓-尼鲁布", -- [2]
+				[24085] = {
+					"掠龙监工", -- [1]
+					"乌特加德城堡", -- [2]
 					"zhCN", -- [3]
 				},
-				[30624] = {
-					"Jennifers", -- [1]
-					"安卡赫特：古代王国", -- [2]
+				[28578] = {
+					"坚钢掠夺者", -- [1]
+					"闪电大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[26722] = {
-					"碧蓝大法师", -- [1]
-					"魔枢", -- [2]
+				[26536] = {
+					"无脑的仆从", -- [1]
+					"乌特加德之巅", -- [2]
 					"zhCN", -- [3]
 				},
 				[17357] = {
@@ -8209,39 +12772,39 @@ PlaterDB = {
 					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[27985] = {
+				[33430] = {
+					"护卫鞭笞者", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[10420] = {
+					"红衣新兵", -- [1]
+					"斯坦索姆", -- [2]
+					"zhCN", -- [3]
+				},
+				[27635] = {
+					"碧蓝缚法者", -- [1]
+					"魔环", -- [2]
+					"zhCN", -- [3]
+				},
+				[27651] = {
 					"未知目标", -- [1]
-					"岩石大厅", -- [2]
+					"魔环", -- [2]
 					"zhCN", -- [3]
 				},
-				[16700] = {
-					"碎手军团士兵", -- [1]
-					"地狱火堡垒：破碎大厅", -- [2]
+				[29713] = {
+					"斯拉德兰蟒蛇", -- [1]
+					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
-				[33755] = {
-					"黑暗符文破坏者", -- [1]
+				[10412] = {
+					"地穴爬行者", -- [1]
+					"斯坦索姆", -- [2]
+					"zhCN", -- [3]
+				},
+				[32934] = {
+					"右臂", -- [1]
 					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[26628] = {
-					"达卡莱镰爪龙", -- [1]
-					"达克萨隆要塞", -- [2]
-					"zhCN", -- [3]
-				},
-				[33819] = {
-					"暮光冰法师", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[33715] = {
-					"未知目标", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[26918] = {
-					"混乱裂隙", -- [1]
-					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
 				[26692] = {
@@ -8259,19 +12822,19 @@ PlaterDB = {
 					"怒焰裂谷", -- [2]
 					"zhCN", -- [3]
 				},
-				[10406] = {
-					"食尸抢夺者", -- [1]
-					"斯坦索姆", -- [2]
+				[32930] = {
+					"科隆加恩", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[29315] = {
-					"埃雷克姆", -- [1]
-					"紫罗兰监狱", -- [2]
+				[17961] = {
+					"盘牙魔法师", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
-				[11348] = {
-					"狂热者扎斯", -- [1]
-					"祖尔格拉布", -- [2]
+				[33052] = {
+					"有生命的星座", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[11356] = {
@@ -8279,9 +12842,9 @@ PlaterDB = {
 					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
-				[33806] = {
-					"未知目标", -- [1]
-					"奥杜尔", -- [2]
+				[28368] = {
+					"伊米亚通灵师", -- [1]
+					"乌特加德之巅", -- [2]
 					"zhCN", -- [3]
 				},
 				[11372] = {
@@ -8289,14 +12852,14 @@ PlaterDB = {
 					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
-				[34198] = {
-					"铁矮人修理工", -- [1]
-					"奥杜尔", -- [2]
+				[17622] = {
+					"神射手卫士", -- [1]
+					"地狱火堡垒：破碎大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[17958] = {
-					"盘牙卫士", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[31174] = {
+					"自然抗性图腾 VI", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[34267] = {
@@ -8324,19 +12887,19 @@ PlaterDB = {
 					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[10413] = {
-					"地穴兽", -- [1]
+				[27971] = {
+					"冷酷的构造体", -- [1]
+					"岩石大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[27909] = {
+					"暗网受害者", -- [1]
+					"达克萨隆要塞", -- [2]
+					"zhCN", -- [3]
+				},
+				[10384] = {
+					"鬼魂市民", -- [1]
 					"斯坦索姆", -- [2]
-					"zhCN", -- [3]
-				},
-				[33846] = {
-					"黑暗符文戒卫", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[32886] = {
-					"黑暗符文助手", -- [1]
-					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[10437] = {
@@ -8359,9 +12922,9 @@ PlaterDB = {
 					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[11320] = {
-					"钻土虫", -- [1]
-					"怒焰裂谷", -- [2]
+				[18177] = {
+					"未知目标", -- [1]
+					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
 				[32191] = {
@@ -8369,14 +12932,14 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[26737] = {
-					"狂乱的法力涌动者", -- [1]
-					"魔枢", -- [2]
+				[26625] = {
+					"暗网隐藏者", -- [1]
+					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[5913] = {
-					"战栗图腾", -- [1]
-					"奥杜尔", -- [2]
+				[26529] = {
+					"肉钩", -- [1]
+					"净化斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[31216] = {
@@ -8394,9 +12957,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[28732] = {
-					"阿努巴尔战士", -- [1]
-					"艾卓-尼鲁布", -- [2]
+				[33134] = {
+					"萨拉", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[198706] = {
@@ -8404,9 +12967,9 @@ PlaterDB = {
 					"魔枢", -- [2]
 					"zhCN", -- [3]
 				},
-				[17816] = {
-					"泥沼龙虾人", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[10414] = {
+					"缝补憎恶", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[29266] = {
@@ -8414,29 +12977,29 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[30284] = {
-					"碾骨者", -- [1]
-					"安卡赫特：古代王国", -- [2]
+				[10398] = {
+					"图萨丁暗影法师", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[24079] = {
-					"掠龙铸造大师", -- [1]
-					"乌特加德城堡", -- [2]
-					"zhCN", -- [3]
-				},
-				[1964] = {
-					"树人", -- [1]
+				[32878] = {
+					"黑暗符文唤魔师", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[21126] = {
-					"盘牙医师", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[29314] = {
+					"湮灭者祖拉玛特", -- [1]
+					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[27753] = {
-					"达卡莱入侵者", -- [1]
-					"达克萨隆要塞", -- [2]
+				[1707] = {
+					"迪菲亚俘虏", -- [1]
+					"暴风城监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[8477] = {
+					"骷髅仆从", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[30385] = {
@@ -8444,19 +13007,19 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[25865] = {
-					"冰冻核心", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[29306] = {
+					"迦尔达拉", -- [1]
+					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
-				[1696] = {
-					"可怕的塔格尔", -- [1]
-					"暴风城监狱", -- [2]
+				[32786] = {
+					"未知目标", -- [1]
+					"达克萨隆要塞", -- [2]
 					"zhCN", -- [3]
 				},
-				[17941] = {
-					"背叛者门努", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[34057] = {
+					"未知目标", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[30449] = {
@@ -8469,38 +13032,38 @@ PlaterDB = {
 					"乌特加德城堡", -- [2]
 					"zhCN", -- [3]
 				},
-				[17721] = {
-					"盘牙工程师", -- [1]
-					"盘牙湖泊：蒸汽地窟", -- [2]
+				[10419] = {
+					"红衣魔术师", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[18176] = {
+				[34191] = {
+					"废料", -- [1]
+					"奥杜尔", -- [2]
+					"zhCN", -- [3]
+				},
+				[11322] = {
+					"燃刃信徒", -- [1]
+					"怒焰裂谷", -- [2]
+					"zhCN", -- [3]
+				},
+				[205997] = {
+					"未知目标", -- [1]
+					"紫罗兰监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[25755] = {
 					"未知目标", -- [1]
 					"盘牙湖泊：奴隶围栏", -- [2]
 					"zhCN", -- [3]
 				},
-				[10418] = {
-					"红衣卫兵", -- [1]
-					"斯坦索姆", -- [2]
+				[32906] = {
+					"弗蕾亚", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[35451] = {
-					"黑骑士", -- [1]
-					"冠军的试炼", -- [2]
-					"zhCN", -- [3]
-				},
-				[35331] = {
-					"诺莫瑞根勇士", -- [1]
-					"冠军的试炼", -- [2]
-					"zhCN", -- [3]
-				},
-				[27647] = {
-					"未知目标", -- [1]
-					"魔环", -- [2]
-					"zhCN", -- [3]
-				},
-				[33651] = {
-					"VX-001", -- [1]
+				[417] = {
+					"鲁德鲁姆", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
@@ -8509,19 +13072,19 @@ PlaterDB = {
 					"闪电大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[14532] = {
-					"拉扎什毒血蜘蛛", -- [1]
-					"祖尔格拉布", -- [2]
+				[15989] = {
+					"萨菲隆", -- [1]
+					"纳克萨玛斯", -- [2]
 					"zhCN", -- [3]
 				},
-				[26533] = {
-					"玛尔加尼斯", -- [1]
-					"净化斯坦索姆", -- [2]
+				[28579] = {
+					"坚钢狂暴者", -- [1]
+					"闪电大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[11319] = {
-					"怒焰萨满祭司", -- [1]
-					"怒焰裂谷", -- [2]
+				[10558] = {
+					"弗雷斯特恩", -- [1]
+					"斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
 				[205998] = {
@@ -8529,59 +13092,59 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[8912] = {
-					"暮光之锤拷问者", -- [1]
-					"黑石深渊", -- [2]
-					"zhCN", -- [3]
-				},
-				[2630] = {
-					"地缚图腾", -- [1]
+				[16441] = {
+					"寒冰皇冠卫士", -- [1]
 					"纳克萨玛斯", -- [2]
 					"zhCN", -- [3]
 				},
-				[34780] = {
-					"加拉克苏斯大王", -- [1]
-					"十字军的试炼", -- [2]
+				[29335] = {
+					"阿努巴尔织网者", -- [1]
+					"艾卓-尼鲁布", -- [2]
 					"zhCN", -- [3]
 				},
-				[11517] = {
-					"奥格弗林特", -- [1]
-					"怒焰裂谷", -- [2]
+				[27636] = {
+					"碧蓝魔网雏龙", -- [1]
+					"魔环", -- [2]
 					"zhCN", -- [3]
 				},
-				[9319] = {
-					"驯犬者格雷布玛尔", -- [1]
-					"黑石深渊", -- [2]
+				[27979] = {
+					"铸铁穴居人", -- [1]
+					"岩石大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[17942] = {
-					"夸格米拉", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[29832] = {
+					"达卡莱魔像", -- [1]
+					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
-				[25740] = {
-					"埃霍恩", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
-					"zhCN", -- [3]
-				},
-				[26693] = {
-					"残忍的斯卡迪", -- [1]
-					"乌特加德之巅", -- [2]
-					"zhCN", -- [3]
-				},
-				[32926] = {
-					"未知目标", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[35330] = {
-					"埃索达勇士", -- [1]
+				[34928] = {
+					"银色神官帕尔崔丝", -- [1]
 					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
-				[27963] = {
-					"黑暗符文施法者", -- [1]
-					"岩石大厅", -- [2]
+				[8913] = {
+					"暮光使者", -- [1]
+					"黑石深渊", -- [2]
+					"zhCN", -- [3]
+				},
+				[205999] = {
+					"未知目标", -- [1]
+					"紫罗兰监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[27732] = {
+					"通灵大师", -- [1]
+					"净化斯坦索姆", -- [2]
+					"zhCN", -- [3]
+				},
+				[28826] = {
+					"雷怒亡魂", -- [1]
+					"闪电大厅", -- [2]
+					"zhCN", -- [3]
+				},
+				[33121] = {
+					"铁铸像", -- [1]
+					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
 				[29826] = {
@@ -8589,9 +13152,9 @@ PlaterDB = {
 					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
-				[17940] = {
-					"盘牙技师", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[23561] = {
+					"冰冻废土的士兵", -- [1]
+					"纳克萨玛斯", -- [2]
 					"zhCN", -- [3]
 				},
 				[28835] = {
@@ -8599,34 +13162,34 @@ PlaterDB = {
 					"闪电大厅", -- [2]
 					"zhCN", -- [3]
 				},
-				[33118] = {
-					"掌炉者伊格尼斯", -- [1]
-					"奥杜尔", -- [2]
+				[29874] = {
+					"达卡莱煽动者", -- [1]
+					"古达克", -- [2]
 					"zhCN", -- [3]
 				},
-				[23562] = {
-					"势不可挡的憎恶", -- [1]
-					"纳克萨玛斯", -- [2]
+				[9027] = {
+					"修行者高罗什", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
-				[23563] = {
-					"织魂者", -- [1]
-					"纳克萨玛斯", -- [2]
+				[34826] = {
+					"痛苦女王", -- [1]
+					"十字军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
-				[33214] = {
-					"机械空运器304-A", -- [1]
-					"奥杜尔", -- [2]
+				[166359] = {
+					"祖利安猛虎", -- [1]
+					"祖尔格拉布", -- [2]
 					"zhCN", -- [3]
 				},
-				[34269] = {
-					"XR-949回收机器人", -- [1]
-					"奥杜尔", -- [2]
-					"zhCN", -- [3]
-				},
-				[30665] = {
-					"精锐法师猎手", -- [1]
+				[30961] = {
+					"未知目标", -- [1]
 					"紫罗兰监狱", -- [2]
+					"zhCN", -- [3]
+				},
+				[35311] = {
+					"未知目标", -- [1]
+					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[17694] = {
@@ -8639,9 +13202,9 @@ PlaterDB = {
 					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
-				[34472] = {
-					"伊锐丝·影踪", -- [1]
-					"十字军的试炼", -- [2]
+				[29316] = {
+					"摩拉格", -- [1]
+					"紫罗兰监狱", -- [2]
 					"zhCN", -- [3]
 				},
 				[27972] = {
@@ -8659,9 +13222,9 @@ PlaterDB = {
 					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
-				[25756] = {
-					"未知目标", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+				[34474] = {
+					"塞瑞莎·术轮", -- [1]
+					"十字军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[8911] = {
@@ -8684,9 +13247,9 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[34815] = {
-					"魔焰地狱火", -- [1]
-					"十字军的试炼", -- [2]
+				[9042] = {
+					"维雷克", -- [1]
+					"黑石深渊", -- [2]
 					"zhCN", -- [3]
 				},
 				[31185] = {
@@ -8699,24 +13262,24 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[35305] = {
-					"银色僧侣", -- [1]
+				[3825] = {
+					"狼", -- [1]
 					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
-				[31233] = {
-					"沙沙", -- [1]
+				[34813] = {
+					"未知目标", -- [1]
+					"十字军的试炼", -- [2]
+					"zhCN", -- [3]
+				},
+				[33822] = {
+					"暮光守护者", -- [1]
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[8983] = {
-					"傀儡统帅阿格曼奇", -- [1]
-					"黑石深渊", -- [2]
-					"zhCN", -- [3]
-				},
-				[35590] = {
-					"未知目标", -- [1]
-					"冠军的试炼", -- [2]
+				[34496] = {
+					"黑暗邪使艾蒂丝", -- [1]
+					"十字军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[30258] = {
@@ -8724,9 +13287,9 @@ PlaterDB = {
 					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[33824] = {
-					"暮光影刃", -- [1]
-					"奥杜尔", -- [2]
+				[30283] = {
+					"天灾漫步者", -- [1]
+					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
 				[32927] = {
@@ -8734,29 +13297,29 @@ PlaterDB = {
 					"奥杜尔", -- [2]
 					"zhCN", -- [3]
 				},
-				[35465] = {
-					"扎戈瑞姆", -- [1]
+				[34607] = {
+					"蛛魔掘地者", -- [1]
 					"十字军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
-				[34014] = {
-					"圣所警卫", -- [1]
-					"奥杜尔", -- [2]
+				[28276] = {
+					"大型魔网雏龙", -- [1]
+					"魔环", -- [2]
 					"zhCN", -- [3]
 				},
-				[24200] = {
-					"建筑师斯卡瓦尔德", -- [1]
-					"乌特加德城堡", -- [2]
+				[30338] = {
+					"安卡哈群行蛛", -- [1]
+					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[10417] = {
-					"泼毒者", -- [1]
-					"斯坦索姆", -- [2]
+				[34605] = {
+					"虫群甲虫", -- [1]
+					"十字军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
-				[8907] = {
-					"怒锤傀儡", -- [1]
-					"黑石深渊", -- [2]
+				[35051] = {
+					"未知目标", -- [1]
+					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
 				},
 				[28340] = {
@@ -8764,32 +13327,32 @@ PlaterDB = {
 					"净化斯坦索姆", -- [2]
 					"zhCN", -- [3]
 				},
-				[35049] = {
+				[28153] = {
 					"未知目标", -- [1]
-					"冠军的试炼", -- [2]
+					"魔环", -- [2]
 					"zhCN", -- [3]
 				},
-				[29395] = {
-					"埃雷克姆卫兵", -- [1]
-					"紫罗兰监狱", -- [2]
+				[30418] = {
+					"被束缚的气元素", -- [1]
+					"安卡赫特：古代王国", -- [2]
 					"zhCN", -- [3]
 				},
-				[25757] = {
+				[27644] = {
 					"未知目标", -- [1]
-					"盘牙湖泊：奴隶围栏", -- [2]
+					"魔环", -- [2]
 					"zhCN", -- [3]
 				},
-				[35013] = {
-					"火焰看守者科拉隆", -- [1]
-					"阿尔卡冯的宝库", -- [2]
+				[27645] = {
+					"未知目标", -- [1]
+					"魔环", -- [2]
 					"zhCN", -- [3]
 				},
-				[34469] = {
-					"麦拉多·深谷游者", -- [1]
-					"十字军的试炼", -- [2]
+				[27653] = {
+					"未知目标", -- [1]
+					"魔环", -- [2]
 					"zhCN", -- [3]
 				},
-				[35046] = {
+				[35047] = {
 					"未知目标", -- [1]
 					"冠军的试炼", -- [2]
 					"zhCN", -- [3]
@@ -8812,10 +13375,16 @@ PlaterDB = {
 					["Author"] = "Tercioo-Sylvanas",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend",
 					["Desc"] = "Player an animation when the cast start. Start a timer when the cast finishes. Set the time in the options.",
-					["__TrashAt"] = 1683297958,
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    --set the color of the cast bar to dark orange (only if can be interrupted)\n    --Plater auto set this color to default when a new cast starts, no need to reset this value at OnHide.    \n    if (envTable._CanInterrupt) then\n        if (scriptTable.config.useCastbarColor) then\n            self:SetStatusBarColor (Plater:ParseColors (envTable.CastbarColor))\n        end\n    end\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n",
+					["NpcNames"] = {
+					},
+					["SpellIds"] = {
+						350421, -- [1]
+						355787, -- [2]
+						348513, -- [3]
+					},
 					["Name"] = "Cast - Alert + Timer [P]",
 					["PlaterCore"] = 1,
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 6,
@@ -8877,9 +13446,9 @@ PlaterDB = {
 							["Min"] = 0.05,
 							["Key"] = "flashDuration",
 							["Value"] = 0.4,
-							["Name"] = "Flash Duration",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = true,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Flash Duration",
 						}, -- [7]
 						{
 							["Type"] = 2,
@@ -8888,9 +13457,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Key"] = "castBarHeight",
 							["Value"] = 5,
-							["Name"] = "Cast Bar Height Mod",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = false,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Cast Bar Height Mod",
 						}, -- [8]
 						{
 							["Type"] = 2,
@@ -8899,9 +13468,9 @@ PlaterDB = {
 							["Min"] = 0.1,
 							["Key"] = "shakeDuration",
 							["Value"] = 0.2,
-							["Name"] = "Shake Duration",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = true,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Shake Duration",
 						}, -- [9]
 						{
 							["Type"] = 2,
@@ -8910,9 +13479,9 @@ PlaterDB = {
 							["Min"] = 2,
 							["Key"] = "shakeAmplitude",
 							["Value"] = 8,
-							["Fraction"] = false,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Shake Amplitude",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = false,
 						}, -- [10]
 						{
 							["Type"] = 2,
@@ -8921,9 +13490,9 @@ PlaterDB = {
 							["Min"] = 1,
 							["Key"] = "shakeFrequency",
 							["Value"] = 40,
-							["Fraction"] = false,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Shake Frequency",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = false,
 						}, -- [11]
 						{
 							["Type"] = 7,
@@ -8951,14 +13520,8 @@ PlaterDB = {
 							["Desc"] = "Key is the spellId and value is the amount of time of the Timer",
 						}, -- [12]
 					},
-					["version"] = -1,
-					["SpellIds"] = {
-						350421, -- [1]
-						355787, -- [2]
-						348513, -- [3]
-					},
-					["NpcNames"] = {
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    --set the color of the cast bar to dark orange (only if can be interrupted)\n    --Plater auto set this color to default when a new cast starts, no need to reset this value at OnHide.    \n    if (envTable._CanInterrupt) then\n        if (scriptTable.config.useCastbarColor) then\n            self:SetStatusBarColor (Plater:ParseColors (envTable.CastbarColor))\n        end\n    end\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n",
+					["__TrashAt"] = 1683297958,
 				}, -- [1]
 				{
 					["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.lifePercent = { --dragonflight\n        [197697] = {50}, --Flamegullet\n        [59544] = {50}, --The Nodding Tiger\n        \n    }\n    \n    \n    function envTable.CreateMarker(unitFrame)\n        unitFrame.healthMarker = unitFrame.healthBar:CreateTexture(nil, \"overlay\")\n        unitFrame.healthMarker:SetColorTexture(1, 1, 1)\n        unitFrame.healthMarker:SetSize(1, unitFrame.healthBar:GetHeight())\n        \n        unitFrame.healthOverlay = unitFrame.healthBar:CreateTexture(nil, \"overlay\")\n        unitFrame.healthOverlay:SetColorTexture(1, 1, 1)\n        unitFrame.healthOverlay:SetSize(1, unitFrame.healthBar:GetHeight())\n    end\n    \n    function envTable.UpdateMarkers(unitFrame)\n        local markersTable = envTable.lifePercent[envTable._NpcID]\n        if (markersTable) then\n            local unitLifePercent = envTable._HealthPercent / 100\n            for i, percent in ipairs(markersTable) do\n                percent = percent / 100\n                if (unitLifePercent > percent) then\n                    if (not unitFrame.healthMarker) then\n                        envTable.CreateMarker(unitFrame)\n                    end\n                    \n                    unitFrame.healthMarker:Show()\n                    local width = unitFrame.healthBar:GetWidth()\n                    unitFrame.healthMarker:SetPoint(\"left\", unitFrame.healthBar, \"left\", width*percent, 0)\n                    \n                    local overlaySize = width * (unitLifePercent - percent)\n                    unitFrame.healthOverlay:SetWidth(overlaySize)\n                    unitFrame.healthOverlay:SetPoint(\"left\", unitFrame.healthMarker, \"right\", 0, 0)\n                    \n                    unitFrame.healthMarker:SetVertexColor(Plater:ParseColors(scriptTable.config.indicatorColor))\n                    unitFrame.healthMarker:SetAlpha(scriptTable.config.indicatorAlpha)\n                    \n                    unitFrame.healthOverlay:SetVertexColor(Plater:ParseColors(scriptTable.config.fillColor))\n                    unitFrame.healthOverlay:SetAlpha(scriptTable.config.fillAlpha)\n                    \n                    return\n                end\n            end --end for\n            \n            if (unitFrame.healthMarker and unitFrame.healthMarker:IsShown()) then\n                unitFrame.healthMarker:Hide()\n                unitFrame.healthOverlay:Hide()\n            end\n        end\n    end\nend      \n\n\n\n\n\n\n\n\n\n",
@@ -8976,10 +13539,15 @@ PlaterDB = {
 					["Author"] = "Aelerolor-Torghast",
 					["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 					["Desc"] = "Place a marker into the health bar to indicate when the unit will change phase or cast an important spell.",
-					["__TrashAt"] = 1683641609,
-					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.UpdateMarkers(unitFrame)\nend\n\n\n",
+					["NpcNames"] = {
+						"197697", -- [1]
+						"59544", -- [2]
+					},
+					["SpellIds"] = {
+					},
 					["Name"] = "Add - Health Markers [P]",
 					["PlaterCore"] = 1,
+					["version"] = -1,
 					["Options"] = {
 						{
 							["Type"] = 5,
@@ -9017,9 +13585,9 @@ PlaterDB = {
 							["Min"] = 0.1,
 							["Name"] = "Vertical Line Alpha",
 							["Value"] = 0.79,
-							["Key"] = "indicatorAlpha",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = true,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "indicatorAlpha",
 						}, -- [4]
 						{
 							["Type"] = 6,
@@ -9049,18 +13617,13 @@ PlaterDB = {
 							["Min"] = 0,
 							["Fraction"] = true,
 							["Value"] = 0.2,
-							["Name"] = "Fill Alpha",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "fillAlpha",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Fill Alpha",
 						}, -- [7]
 					},
-					["version"] = -1,
-					["SpellIds"] = {
-					},
-					["NpcNames"] = {
-						"197697", -- [1]
-						"59544", -- [2]
-					},
+					["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.UpdateMarkers(unitFrame)\nend\n\n\n",
+					["__TrashAt"] = 1683641609,
 				}, -- [2]
 			},
 			["class_colors"] = {
@@ -9079,8 +13642,8 @@ PlaterDB = {
 				["DEMONHUNTER"] = {
 					["colorStr"] = "ffa22fc8",
 				},
-				["SHAMAN"] = {
-					["colorStr"] = "ff006fdd",
+				["ROGUE"] = {
+					["colorStr"] = "fffff467",
 				},
 				["DRUID"] = {
 					["colorStr"] = "ffff7c09",
@@ -9088,8 +13651,8 @@ PlaterDB = {
 				["EVOKER"] = {
 					["colorStr"] = "ff33937e",
 				},
-				["ROGUE"] = {
-					["colorStr"] = "fffff467",
+				["SHAMAN"] = {
+					["colorStr"] = "ff006fdd",
 				},
 			},
 			["hook_auto_imported"] = {
@@ -9097,14 +13660,14 @@ PlaterDB = {
 				["Dont Have Aura"] = 1,
 				["Players Targetting Amount"] = 4,
 				["Color Automation"] = 1,
-				["Hide Neutral Units"] = 1,
+				["Extra Border"] = 2,
 				["Cast Bar Icon Config"] = 2,
-				["Aura Reorder"] = 3,
-				["Combo Points"] = 6,
+				["Execute Range"] = 1,
+				["Hide Neutral Units"] = 1,
 				["Attacking Specific Unit"] = 2,
 				["Target Color"] = 3,
-				["Execute Range"] = 1,
-				["Extra Border"] = 2,
+				["Aura Reorder"] = 3,
+				["Combo Points"] = 6,
 			},
 			["aura2_x_offset"] = 0,
 			["saved_cvars"] = {
@@ -9112,13 +13675,13 @@ PlaterDB = {
 				["nameplateMinAlphaDistance"] = "-158489.31924611",
 				["nameplateNotSelectedAlpha"] = "1",
 				["nameplateMaxDistance"] = "41",
-				["nameplateRemovalAnimation"] = "1",
+				["nameplateSelectedAlpha"] = "1",
 				["nameplateSelectedScale"] = "1.3499999046326",
 				["nameplateShowEnemies"] = "1",
 				["nameplateShowFriends"] = "0",
-				["nameplateSelectedAlpha"] = "1",
+				["nameplateRemovalAnimation"] = "1",
 			},
-			["login_counter"] = 1558,
+			["login_counter"] = 1576,
 			["plate_config"] = {
 				["global_health_height"] = 12,
 				["global_health_width"] = 112,
@@ -9132,19 +13695,19 @@ PlaterDB = {
 						nil, -- [1]
 						11, -- [2]
 					},
+					["spellname_text_size"] = 10,
+					["actorname_text_size"] = 10,
+					["spellpercent_text_size"] = 10,
+					["level_text_alpha"] = 0.3999999761581421,
+					["percent_text_size"] = 8,
 					["health_incombat"] = {
 						nil, -- [1]
 						10, -- [2]
 					},
-					["spellpercent_text_size"] = 10,
-					["level_text_alpha"] = 0.3999999761581421,
-					["percent_text_size"] = 8,
-					["spellname_text_size"] = 10,
 					["health"] = {
 						nil, -- [1]
 						10, -- [2]
 					},
-					["actorname_text_size"] = 10,
 					["actorname_text_anchor"] = {
 						["y"] = -2.480003356933594,
 					},
@@ -9158,16 +13721,15 @@ PlaterDB = {
 					["Revision"] = 50,
 					["semver"] = "",
 					["LastHookEdited"] = "",
-					["version"] = -1,
+					["Name"] = "Color Automation [Plater]",
 					["Author"] = "Kastfall-Azralon",
-					["HooksTemp"] = {
-					},
+					["Time"] = 1547392935,
 					["Desc"] = "Easy way to change the color of an unit. Open the constructor script and follow the examples.",
 					["Hooks"] = {
-						["Nameplate Updated"] = "function (self, unitId, unitFrame, envTable)\n    \n    --attempt to get the color from the unit color list\n    local color = envTable.NpcColors [unitFrame.namePlateUnitNameLower] or envTable.NpcColors [unitFrame.namePlateUnitName] or envTable.NpcColors [unitFrame.namePlateNpcId]\n    \n    --if the color exists, set the health bar color\n    if (color) then\n        Plater.SetNameplateColor (unitFrame, color)\n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n",
 						["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    \n    --list of npcs and their colors, can be inserted:\n    --name of the unit\n    --name of the unit in lower case\n    --npcID of the unit\n    \n    --color can be added as:\n    --color names: \"red\", \"yellow\"\n    --color hex: \"#FF0000\", \"#FFFF00\"\n    --color table: {1, 0, 0}, {1, 1, 0}    \n    \n    envTable.NpcColors = {\n        \n        --examples, using the unit name in lower case, regular unit name and the unitID:\n        \n        [\"Thunderlord Windreader\"] = \"red\", --using regular mob name and color it as red\n        [\"thunderlord crag-leaper\"] = {1, 1, 0}, --using lower case and coloring it yellow\n        [75790] = \"#00FF00\", --using the ID of the unit and using green as color\n        \n        --insert the new mobs here:\n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n    } --close custom color bracket\n    \nend\n\n\n\n\n",
+						["Nameplate Updated"] = "function (self, unitId, unitFrame, envTable)\n    \n    --attempt to get the color from the unit color list\n    local color = envTable.NpcColors [unitFrame.namePlateUnitNameLower] or envTable.NpcColors [unitFrame.namePlateUnitName] or envTable.NpcColors [unitFrame.namePlateNpcId]\n    \n    --if the color exists, set the health bar color\n    if (color) then\n        Plater.SetNameplateColor (unitFrame, color)\n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n",
 					},
-					["Name"] = "Color Automation [Plater]",
+					["version"] = -1,
 					["PlaterCore"] = 1,
 					["LoadConditions"] = {
 						["talent"] = {
@@ -9182,28 +13744,28 @@ PlaterDB = {
 						},
 						["pvptalent"] = {
 						},
-						["role"] = {
+						["spec"] = {
 						},
 						["affix"] = {
 						},
 						["encounter_ids"] = {
 						},
-						["spec"] = {
+						["role"] = {
 						},
 					},
 					["url"] = "",
 					["Icon"] = "Interface\\AddOns\\Plater\\images\\color_bar",
-					["Time"] = 1547392935,
+					["HooksTemp"] = {
+					},
 				}, -- [1]
 				{
 					["Enabled"] = false,
 					["Revision"] = 73,
 					["semver"] = "",
 					["LastHookEdited"] = "",
-					["version"] = -1,
+					["Name"] = "Hide Neutral Units [Plater]",
 					["Author"] = "Izimode-Azralon",
-					["HooksTemp"] = {
-					},
+					["Time"] = 1541606242,
 					["Desc"] = "Hide neutral units, show when selected, see the constructor script for options.",
 					["Hooks"] = {
 						["Leave Combat"] = "function (self, unitId, unitFrame, envTable)\n    if (unitFrame.namePlateUnitReaction == envTable.REACTION_NEUTRAL) then\n        \n        --plater already handle this\n        if (unitFrame.PlayerCannotAttack) then\n            return\n        end    \n        \n        --check if is only open world\n        if (envTable.OnlyInOpenWorld and Plater.ZoneInstanceType ~= \"none\") then\n            return \n        end\n        \n        --check for only in combat\n        if (envTable.ShowInCombat) then\n            envTable.HideNameplate (unitFrame)\n        end\n    end\nend\n\n\n",
@@ -9214,7 +13776,7 @@ PlaterDB = {
 						["Enter Combat"] = "function (self, unitId, unitFrame, envTable)\n    \n    if (unitFrame.namePlateUnitReaction == envTable.REACTION_NEUTRAL) then\n        \n        --plater already handle this\n        if (unitFrame.PlayerCannotAttack) then\n            return\n        end    \n        \n        --check if is only open world\n        if (envTable.OnlyInOpenWorld and Plater.ZoneInstanceType ~= \"none\") then\n            return \n        end\n        \n        --check for only in combat\n        if (envTable.ShowInCombat) then\n            envTable.ShowNameplate (unitFrame)\n        end\n    end\nend\n\n\n",
 						["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    \n    --settings\n    envTable.OnlyInOpenWorld = true;\n    envTable.ShowInCombat = true;\n    \n    --consts\n    envTable.REACTION_NEUTRAL = 4;\n    \n    --functions to hide and show the healthBar\n    function envTable.HideNameplate (unitFrame)\n        Plater.HideHealthBar (unitFrame)\n        Plater.DisableHighlight (unitFrame)\n        envTable.IsHidden = true\n    end\n    \n    function envTable.ShowNameplate (unitFrame)\n        Plater.ShowHealthBar (unitFrame)\n        Plater.EnableHighlight (unitFrame)\n        envTable.IsHidden = false\n    end\n    \nend\n\n\n\n\n",
 					},
-					["Name"] = "Hide Neutral Units [Plater]",
+					["version"] = -1,
 					["PlaterCore"] = 1,
 					["LoadConditions"] = {
 						["talent"] = {
@@ -9229,21 +13791,23 @@ PlaterDB = {
 						},
 						["pvptalent"] = {
 						},
-						["race"] = {
+						["spec"] = {
 						},
 						["affix"] = {
 						},
 						["encounter_ids"] = {
 						},
-						["spec"] = {
+						["race"] = {
 						},
 					},
 					["url"] = "",
 					["Icon"] = 1990989,
-					["Time"] = 1541606242,
+					["HooksTemp"] = {
+					},
 				}, -- [2]
 				{
-					["LastHookEdited"] = "",
+					["HooksTemp"] = {
+					},
 					["Hooks"] = {
 						["Nameplate Added"] = "\n\n-- exported function Plater.UpdatePlateSize() from Plater.lua\n--this is for advanced users which wants to reorder the nameplate frame at their desire\n\n\n\nfunction (self, unitId, unitFrame, envTable)\n    \n    --check if there's a type of unit on this nameplate\n    local plateFrame = unitFrame:GetParent()\n    if (not plateFrame.actorType) then\n        return\n    end\n    \n    --get all the frames and cache some variables\n    local ACTORTYPE_ENEMY_PLAYER = \"enemyplayer\"\n    local profile = Plater.db.profile\n    local DB_PLATE_CONFIG = profile.plate_config\n    local isInCombat = Plater.IsInCombat()\n    local actorType = plateFrame.actorType\n    \n    local unitFrame = plateFrame.unitFrame\n    local healthBar = unitFrame.healthBar\n    local castBar = unitFrame.castBar\n    local powerBar = unitFrame.powerBar\n    local buffFrame1 = unitFrame.BuffFrame\n    local buffFrame2 = unitFrame.BuffFrame2\n    \n    --use in combat bars when in pvp\n    if (plateFrame.actorType == ACTORTYPE_ENEMY_PLAYER) then\n        if ((Plater.ZoneInstanceType == \"pvp\" or Plater.ZoneInstanceType == \"arena\") and DB_PLATE_CONFIG.player.pvp_always_incombat) then\n            isInCombat = true\n        end\n    end\n    \n    --get the config for this actor type\n    local plateConfigs = DB_PLATE_CONFIG [actorType]\n    --get the config key based if the player is in combat\n    local castBarConfigKey, healthBarConfigKey, manaConfigKey = Plater.GetHashKey (isInCombat)\n    \n    --get the width and height from what the user set in the options panel\n    local healthBarWidth, healthBarHeight = unitFrame.customHealthBarWidth or plateConfigs [healthBarConfigKey][1], unitFrame.customHealthBarHeight or plateConfigs [healthBarConfigKey][2]\n    local castBarWidth, castBarHeight = unitFrame.customCastBarWidth or plateConfigs [castBarConfigKey][1], unitFrame.customCastBarHeight or plateConfigs [castBarConfigKey][2]\n    local powerBarWidth, powerBarHeight = unitFrame.customPowerBarHeight or plateConfigs [manaConfigKey][1], unitFrame.customPowerBarHeight or plateConfigs [manaConfigKey][2]\n    \n    --calculate the offset for the cast bar, this is done due to the cast bar be anchored to topleft and topright\n    local castBarOffSetX = (healthBarWidth - castBarWidth) / 2\n    local castBarOffSetY = plateConfigs.castbar_offset\n    \n    --calculate offsets for the power bar\n    local powerBarOffSetX = (healthBarWidth - powerBarWidth) / 2\n    local powerBarOffSetY = 0\n    \n    --calculate the size deviation for pets\n    local unitType = Plater.GetUnitType (plateFrame)\n    if (unitType == \"pet\") then\n        healthBarHeight = healthBarHeight * Plater.db.profile.pet_height_scale\n        healthBarWidth = healthBarWidth * Plater.db.profile.pet_width_scale\n        \n    elseif (unitType == \"minus\") then\n        healthBarHeight = healthBarHeight * Plater.db.profile.minor_height_scale\n        healthBarWidth = healthBarWidth * Plater.db.profile.minor_width_scale\n    end\n    \n    --unit frame - is set to be the same size as the plateFrame\n    unitFrame:ClearAllPoints()\n    unitFrame:SetAllPoints()\n    \n    --calculates the health bar anchor points\n    --it will always be placed in the center of the nameplate area (where it accepts mouse clicks) \n    local xOffSet = (plateFrame:GetWidth() - healthBarWidth) / 2\n    local yOffSet = (plateFrame:GetHeight() - healthBarHeight) / 2\n    \n    --set the health bar point\n    healthBar:ClearAllPoints()\n    PixelUtil.SetPoint (healthBar, \"topleft\", unitFrame, \"topleft\", xOffSet + profile.global_offset_x, -yOffSet + profile.global_offset_y)\n    PixelUtil.SetPoint (healthBar, \"bottomright\", unitFrame, \"bottomright\", -xOffSet + profile.global_offset_x, yOffSet + profile.global_offset_y)\n    \n    --set the cast bar point and size\n    castBar:ClearAllPoints()\n    PixelUtil.SetPoint (castBar, \"topleft\", healthBar, \"bottomleft\", castBarOffSetX, castBarOffSetY)\n    PixelUtil.SetPoint (castBar, \"topright\", healthBar, \"bottomright\", -castBarOffSetX, castBarOffSetY)\n    PixelUtil.SetHeight (castBar, castBarHeight)\n    PixelUtil.SetSize (castBar.Icon, castBarHeight, castBarHeight)\n    PixelUtil.SetSize (castBar.BorderShield, castBarHeight * 1.4, castBarHeight * 1.4)\n    \n    --set the power bar point and size\n    powerBar:ClearAllPoints()\n    PixelUtil.SetPoint (powerBar, \"topleft\", healthBar, \"bottomleft\", powerBarOffSetX, powerBarOffSetY)\n    PixelUtil.SetPoint (powerBar, \"topright\", healthBar, \"bottomright\", -powerBarOffSetX, powerBarOffSetY)\n    PixelUtil.SetHeight (powerBar, powerBarHeight)\n    \n    --power bar are hidden by default, show it if there's a custom size for it\n    if (unitFrame.customPowerBarWidth and unitFrame.customPowerBarHeight) then\n        powerBar:SetUnit (unitFrame.unit)\n    end\n    \n    --aura frames\n    local bf1Anchor = Plater.db.profile.aura_frame1_anchor\n    Plater.SetAnchor (buffFrame1, {side = bf1Anchor.side, x = bf1Anchor.x, y = bf1Anchor.y + plateConfigs.buff_frame_y_offset}, unitFrame.healthBar, (Plater.db.profile.aura_grow_direction or 2) == 2)\n    \n    local bf2Anchor = Plater.db.profile.aura_frame2_anchor\n    Plater.SetAnchor (buffFrame2, {side = bf2Anchor.side, x = bf2Anchor.x, y = bf2Anchor.y + plateConfigs.buff_frame_y_offset}, unitFrame.healthBar, (Plater.db.profile.aura2_grow_direction or 2) == 2)\n    \nend\n\n\n",
 					},
@@ -9261,28 +13825,27 @@ PlaterDB = {
 						},
 						["pvptalent"] = {
 						},
-						["spec"] = {
+						["race"] = {
 						},
 						["affix"] = {
 						},
 						["encounter_ids"] = {
 						},
-						["race"] = {
+						["spec"] = {
 						},
 					},
 					["url"] = "",
 					["Icon"] = 574574,
 					["Enabled"] = false,
 					["Revision"] = 93,
-					["semver"] = "",
+					["Options"] = {
+					},
 					["Author"] = "Kastfall-Azralon",
 					["Desc"] = "Function Plater.UpdatePlateSize from Plater.lua exported to scritps.",
 					["Name"] = "Reorder Nameplate [Plater]",
 					["PlaterCore"] = 1,
-					["Options"] = {
-					},
-					["HooksTemp"] = {
-					},
+					["semver"] = "",
+					["LastHookEdited"] = "",
 					["version"] = -1,
 				}, -- [3]
 				{
@@ -9290,16 +13853,15 @@ PlaterDB = {
 					["Revision"] = 59,
 					["semver"] = "",
 					["LastHookEdited"] = "",
-					["version"] = -1,
+					["Name"] = "Don't Have Aura [Plater]",
 					["Author"] = "Izimode-Azralon",
-					["HooksTemp"] = {
-					},
+					["Time"] = 1554138845,
 					["Desc"] = "Change the nameplate color when a nameplate does not have the auras set in the constructor script.",
 					["Hooks"] = {
-						["Nameplate Updated"] = "function (self, unitId, unitFrame, envTable)\n    \n    --do nothing if the player isn't in combat\n    if (not Plater.IsInCombat()) then\n        return \n    end\n    \n    --do nothing if the unit isn't in combat\n    if (not unitFrame.InCombat) then\n        return\n    end\n    \n    --do nothing if the unit is the player it self\n    if (unitFrame.IsSelf) then\n        return\n    end\n    \n    --check the auras\n    local hasAura = false\n    \n    for auraName, _ in pairs (envTable.TrackingAuras) do\n        if (Plater.NameplateHasAura (unitFrame, auraName)) then\n            hasAura = true\n            break\n        end\n    end\n    \n    if (not hasAura) then\n        Plater.SetNameplateColor (unitFrame, envTable.NameplateColor)\n    else\n        if (envTable.ForceRefreshNameplateColor) then\n            Plater.RefreshNameplateColor (unitFrame) \n        end\n    end    \n    \nend",
 						["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    --Important: lines starting with double dashes are comments and are not part of the script\n    \n    --set this to true if you are not using threat colors in the health bar\n    envTable.ForceRefreshNameplateColor = true\n    \n    --if the unit does not have any of the following auras, it will be painted with the color listed below\n    --list of spells to track, can be the spell name (case-sensitive) or the spellID\n    envTable.TrackingAuras = {\n        --[\"Nightblade\"] = true, --this is an example using the spell name\n        --[195452] = true, --this is an example using the spellID\n        \n    }\n    \n    --which color the nameplate wil be changed\n    --color can be added as:\n    --color names: \"red\", \"yellow\"\n    --color hex: \"#FF0000\", \"#FFFF00\"\n    --color table: {1, 0, 0}, {1, 1, 0}    \n    --you may also use /plater colors\n    envTable.NameplateColor = \"pink\"\n    \nend",
+						["Nameplate Updated"] = "function (self, unitId, unitFrame, envTable)\n    \n    --do nothing if the player isn't in combat\n    if (not Plater.IsInCombat()) then\n        return \n    end\n    \n    --do nothing if the unit isn't in combat\n    if (not unitFrame.InCombat) then\n        return\n    end\n    \n    --do nothing if the unit is the player it self\n    if (unitFrame.IsSelf) then\n        return\n    end\n    \n    --check the auras\n    local hasAura = false\n    \n    for auraName, _ in pairs (envTable.TrackingAuras) do\n        if (Plater.NameplateHasAura (unitFrame, auraName)) then\n            hasAura = true\n            break\n        end\n    end\n    \n    if (not hasAura) then\n        Plater.SetNameplateColor (unitFrame, envTable.NameplateColor)\n    else\n        if (envTable.ForceRefreshNameplateColor) then\n            Plater.RefreshNameplateColor (unitFrame) \n        end\n    end    \n    \nend",
 					},
-					["Name"] = "Don't Have Aura [Plater]",
+					["version"] = -1,
 					["PlaterCore"] = 1,
 					["LoadConditions"] = {
 						["talent"] = {
@@ -9314,28 +13876,28 @@ PlaterDB = {
 						},
 						["pvptalent"] = {
 						},
-						["spec"] = {
+						["role"] = {
 						},
 						["affix"] = {
 						},
 						["encounter_ids"] = {
 						},
-						["role"] = {
+						["spec"] = {
 						},
 					},
 					["url"] = "",
 					["Icon"] = 136207,
-					["Time"] = 1554138845,
+					["HooksTemp"] = {
+					},
 				}, -- [4]
 				{
 					["Enabled"] = false,
 					["Revision"] = 176,
 					["semver"] = "",
 					["LastHookEdited"] = "",
-					["version"] = -1,
+					["Name"] = "Extra Border [Plater]",
 					["Author"] = "Tecno-Azralon",
-					["HooksTemp"] = {
-					},
+					["Time"] = 1547409079,
 					["Desc"] = "Add another border with more customizations. This border can also be manipulated by other scripts.",
 					["Hooks"] = {
 						["Nameplate Created"] = "function (self, unitId, unitFrame, envTable)\n    \n    --run constructor!\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -9344,7 +13906,7 @@ PlaterDB = {
 						["Destructor"] = "function (self, unitId, unitFrame, envTable)\n    \n    envTable.BorderFrame:Hide()\n    \nend\n\n\n",
 						["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    \n    --border color\n    local borderColor = \"yellow\"\n    \n    --size of the border\n    local borderSize = 1\n    \n    --transparency\n    local borderAlpha = 1\n    \n    --enabled (set to false it you only want to use the extra border in other scripts)\n    local isEnabled = true\n    \n    --export border (allow the border to be used by other scripts)\n    --other scripts can use:\n    --unitFrame.healthBar.extraBorder:Show()\n    --unitFrame.healthBar.extraBorder:SetVertexColor (r, g, b)\n    --unitFrame.healthBar.extraBorder:SetBorderSizes (borderSize)\n    local canExportBorder = true\n    \n    --do not add the border to personal bar\n    local noPersonalBar = true\n    \n    --private\n    do\n        \n        local newBorder = CreateFrame (\"frame\", nil, unitFrame.healthBar, \"NamePlateFullBorderTemplate\")\n        envTable.BorderFrame = newBorder\n        \n        newBorder:SetBorderSizes (borderSize, borderSize, borderSize, borderSize)\n        newBorder:UpdateSizes()\n        \n        local r, g, b = DetailsFramework:ParseColors (borderColor)\n        newBorder:SetVertexColor (r, g, b, borderAlpha)\n        \n        envTable.ShowOnPersonalBar = not noPersonalBar\n        \n        if (canExportBorder) then\n            unitFrame.healthBar.extraBorder = newBorder\n        end\n        \n        if (not isEnabled) then\n            envTable.IsEnabled = false\n        else\n            envTable.IsEnabled = true\n        end\n    end\n    \nend\n\n\n",
 					},
-					["Name"] = "Extra Border [Plater]",
+					["version"] = -1,
 					["PlaterCore"] = 1,
 					["LoadConditions"] = {
 						["talent"] = {
@@ -9359,36 +13921,36 @@ PlaterDB = {
 						},
 						["pvptalent"] = {
 						},
-						["spec"] = {
+						["race"] = {
 						},
 						["affix"] = {
 						},
 						["encounter_ids"] = {
 						},
-						["race"] = {
+						["spec"] = {
 						},
 					},
 					["url"] = "",
 					["Icon"] = 133689,
-					["Time"] = 1547409079,
+					["HooksTemp"] = {
+					},
 				}, -- [5]
 				{
 					["Enabled"] = false,
 					["Revision"] = 93,
 					["semver"] = "",
 					["LastHookEdited"] = "",
-					["version"] = -1,
+					["Name"] = "Current Target Color [Plater]",
 					["Author"] = "Izimode-Azralon",
-					["HooksTemp"] = {
-					},
+					["Time"] = 1552354619,
 					["Desc"] = "Changes the target color to the color set in the constructor script.",
 					["Hooks"] = {
-						["Nameplate Added"] = "function (self, unitId, unitFrame, envTable)\n    envTable.UpdateColor (unitFrame)\nend",
 						["Nameplate Updated"] = "function (self, unitId, unitFrame, envTable)\n    envTable.UpdateColor (unitFrame)\nend",
+						["Nameplate Added"] = "function (self, unitId, unitFrame, envTable)\n    envTable.UpdateColor (unitFrame)\nend",
 						["Target Changed"] = "function (self, unitId, unitFrame, envTable)\n    envTable.UpdateColor (unitFrame)\nend\n\n\n\n\n\n\n\n\n\n\n",
 						["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    \n    --usage: color name e.g \"red\" \"yellow\"; color table e.g {1, 0, 0} {1, 1, 0}; hex string e.g. \"#FF0000\" \"FFFF00\"\n    \n    envTable.TargetColor = \"purple\"\n    --envTable.TargetColor = \"#FF00FF\"\n    --envTable.TargetColor = {252/255, 0/255, 254/255}\n    \n    function envTable.UpdateColor (unitFrame)\n        --do not change the color of the personal bar\n        if (not unitFrame.IsSelf) then\n            \n            --if this nameplate the current target of the player?\n            if (unitFrame.namePlateIsTarget) then\n                Plater.SetNameplateColor (unitFrame, envTable.TargetColor)  --rgb\n            else\n                --refresh the nameplate color\n                Plater.RefreshNameplateColor (unitFrame)\n            end\n        end\n    end\n    \nend\n\n\n\n\n",
 					},
-					["Name"] = "Current Target Color [Plater]",
+					["version"] = -1,
 					["PlaterCore"] = 1,
 					["LoadConditions"] = {
 						["talent"] = {
@@ -9403,24 +13965,26 @@ PlaterDB = {
 						},
 						["pvptalent"] = {
 						},
-						["spec"] = {
+						["role"] = {
 						},
 						["affix"] = {
 						},
 						["encounter_ids"] = {
 						},
-						["role"] = {
+						["spec"] = {
 						},
 					},
 					["url"] = "",
 					["Icon"] = 878211,
-					["Time"] = 1552354619,
+					["HooksTemp"] = {
+					},
 				}, -- [6]
 				{
-					["LastHookEdited"] = "",
+					["HooksTemp"] = {
+					},
 					["Hooks"] = {
-						["Cast Update"] = "function (self, unitId, unitFrame, envTable)\n    \n    envTable.UpdateIconPosition (unitFrame)\n    self.ThrottleUpdate = -1\n    \nend\n\n\n",
 						["Cast Start"] = "function (self, unitId, unitFrame, envTable)\n    \n    unitFrame.castBar.BorderShield:SetDrawLayer(\"artwork\")\n    envTable.UpdateIconPosition (unitFrame)\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+						["Cast Update"] = "function (self, unitId, unitFrame, envTable)\n    \n    envTable.UpdateIconPosition (unitFrame)\n    self.ThrottleUpdate = -1\n    \nend\n\n\n",
 						["Constructor"] = "function (self, unitId, unitFrame, envTable, modTable)\n    \n    --private:\n    function envTable.UpdateIconPosition (unitFrame)\n        local castBar = unitFrame.castBar\n        local icon = castBar.Icon\n        local noInterruptTexture = castBar.BorderShield\n        \n        if (modTable.config.showIcon) then\n            icon:ClearAllPoints()\n            \n            if (modTable.config.iconOnLeftSide) then\n                if (modTable.config.useFullSize) then\n                    icon:SetPoint (\"topright\", unitFrame.healthBar, \"topleft\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomright\", unitFrame.castBar, \"bottomleft\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                    \n                else\n                    \n                    icon:SetPoint (\"topright\", unitFrame.castBar, \"topleft\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomright\", unitFrame.castBar, \"bottomleft\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                end\n                \n            else\n                if (modTable.config.useFullSize) then\n                    icon:SetPoint (\"topleft\", unitFrame.healthBar, \"topright\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomleft\", unitFrame.castBar, \"bottomright\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                    \n                else\n                    \n                    icon:SetPoint (\"topleft\", unitFrame.castBar, \"topright\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomleft\", unitFrame.castBar, \"bottomright\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                end\n            end\n            \n            icon:SetWidth (icon:GetHeight())\n            icon:Show()\n        else\n            icon:Hide()\n        end\n        \n        if (modTable.config.showTexture and not castBar.canInterrupt) then\n            noInterruptTexture:Show()\n            \n            local texturePath = modTable.config.iconTexturePath\n            texturePath = texturePath:gsub(\"//\", \"/\")\n            texturePath = texturePath:gsub(\"\\\\\", \"/\")\n            \n            noInterruptTexture:SetTexture (texturePath)\n            noInterruptTexture:SetTexCoord (0, 1, 0, 1)\n            \n            if (modTable.config.desaturatedTexture) then\n                noInterruptTexture:SetDesaturated (modTable.config.desaturatedTexture)\n            else\n                noInterruptTexture:SetVertexColor (DetailsFramework:ParseColors (modTable.config.textureColor))\n            end\n            \n            noInterruptTexture:SetSize (modTable.config.textureWidth, castBar:GetHeight() + modTable.config.textureHeightMod)\n            noInterruptTexture:ClearAllPoints()\n            noInterruptTexture:SetPoint (\"center\", castBar, \"left\", modTable.config.texturePosition, 0)\n            noInterruptTexture:SetAlpha (modTable.config.textureAlpha)\n        else\n            noInterruptTexture:Hide()\n        end\n    end\nend",
 					},
 					["Time"] = 1597097268,
@@ -9437,24 +14001,19 @@ PlaterDB = {
 						},
 						["pvptalent"] = {
 						},
-						["spec"] = {
+						["race"] = {
 						},
 						["affix"] = {
 						},
 						["encounter_ids"] = {
 						},
-						["race"] = {
+						["spec"] = {
 						},
 					},
 					["url"] = "",
 					["Icon"] = "Interface\\AddOns\\Plater\\images\\castbar_icon",
 					["Enabled"] = false,
 					["Revision"] = 348,
-					["semver"] = "",
-					["Author"] = "Ditador-Azralon",
-					["Desc"] = "Move the icon of the spell cast to the left or right side of the nameplate.",
-					["Name"] = "Cast Bar Icon Settings [P]",
-					["PlaterCore"] = 1,
 					["Options"] = {
 						{
 							["Type"] = 5,
@@ -9495,9 +14054,9 @@ PlaterDB = {
 							["Min"] = 0,
 							["Fraction"] = true,
 							["Value"] = 0,
-							["Key"] = "iconSizeOffset",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Icon Size Offset",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "iconSizeOffset",
 						}, -- [5]
 						{
 							["Type"] = 2,
@@ -9506,9 +14065,9 @@ PlaterDB = {
 							["Min"] = -5,
 							["Name"] = "Icon Padding",
 							["Value"] = 0,
-							["Fraction"] = false,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "iconPadding",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = false,
 						}, -- [6]
 						{
 							["Type"] = 6,
@@ -9570,9 +14129,9 @@ PlaterDB = {
 							["Min"] = 1,
 							["Fraction"] = false,
 							["Value"] = 10,
-							["Key"] = "textureWidth",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Texture Width",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "textureWidth",
 						}, -- [13]
 						{
 							["Type"] = 2,
@@ -9581,9 +14140,9 @@ PlaterDB = {
 							["Min"] = -16,
 							["Name"] = "Texture Height Mod",
 							["Value"] = 0,
-							["Fraction"] = true,
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Key"] = "textureHeightMod",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Fraction"] = true,
 						}, -- [14]
 						{
 							["Type"] = 2,
@@ -9592,9 +14151,9 @@ PlaterDB = {
 							["Min"] = -32,
 							["Fraction"] = false,
 							["Value"] = 0,
-							["Key"] = "texturePosition",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Name"] = "Texture Position",
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Key"] = "texturePosition",
 						}, -- [15]
 						{
 							["Type"] = 2,
@@ -9603,13 +14162,17 @@ PlaterDB = {
 							["Min"] = 0,
 							["Key"] = "textureAlpha",
 							["Value"] = 1,
-							["Name"] = "Texture Alpha",
-							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
 							["Fraction"] = true,
+							["Icon"] = "Interface\\AddOns\\Plater\\images\\option_number",
+							["Name"] = "Texture Alpha",
 						}, -- [16]
 					},
-					["HooksTemp"] = {
-					},
+					["Author"] = "Ditador-Azralon",
+					["Desc"] = "Move the icon of the spell cast to the left or right side of the nameplate.",
+					["Name"] = "Cast Bar Icon Settings [P]",
+					["PlaterCore"] = 1,
+					["semver"] = "",
+					["LastHookEdited"] = "",
 					["version"] = -1,
 				}, -- [7]
 				{
@@ -9617,16 +14180,15 @@ PlaterDB = {
 					["Revision"] = 84,
 					["semver"] = "",
 					["LastHookEdited"] = "",
-					["version"] = -1,
+					["Name"] = "Execute Range [Plater]",
 					["Author"] = "Ahwa-Azralon",
-					["HooksTemp"] = {
-					},
+					["Time"] = 1547406548,
 					["Desc"] = "Add extra effects to execute range. See the constructor script for options.",
 					["Hooks"] = {
-						["Nameplate Updated"] = "function (self, unitId, unitFrame, envTable)\n    \n    if (envTable.UseCustomExecutePercent) then\n        \n        --manual detection\n        local healthBar = unitFrame.healthBar\n        if (healthBar.CurrentHealth / healthBar.CurrentHealthMax <= envTable.ExecutePercent) then\n            envTable.UnitInExecuteRange (unitFrame)\n        end        \n        \n    else\n        \n        --auto detection\n        if (unitFrame.InExecuteRange) then\n            envTable.UnitInExecuteRange (unitFrame)\n        end\n        \n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n",
 						["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    \n    --execute detection, if true the script will handle the execute percent\n    --while false Plater will automatically trigger the execute range\n    --you only want to set this to true in case of Plater not detecting the execute range correctly\n    envTable.UseCustomExecutePercent = false\n    --execute percent, if not detecting automatic, this is the percent to active the execute range\n    --use from zero to one, 0.20 is equal to 20% of the unit life\n    envTable.ExecutePercent = 0.20\n    \n    --allow this script to change the nameplate color when the unit is in execute range\n    envTable.CanChangeColor = true\n    --change the health bar color to this color when the unit is in execute range\n    --color can be set as:\n    --color names: \"red\", \"yellow\"\n    --color hex: \"#FF0000\", \"#FFFF00\"\n    --color table: {1, 0, 0}, {1, 1, 0}\n    envTable.ExecuteColor = \"green\"\n    \n    --border color\n    envTable.CanChangeBorderColor = false\n    envTable.BorderColor = \"red\"\n    \n    --hide the default health divisor and the health execute indicator\n    envTable.HideHealthDivisor = false\n    --if not hidden, adjust the health divisor settings and the health execute indicator\n    envTable.HealthDivisorAlpha = 0.5\n    envTable.HealthDivisorColor = \"white\"\n    envTable.HealthExecuteIndicatorAlpha = 0.15\n    envTable.HealthExecuteIndicatorColor = \"darkred\"\n    \n    \n    --private (internal functions)\n    do\n        function envTable.UnitInExecuteRange (unitFrame)\n            --check if can change the execute color\n            if (envTable.CanChangeColor) then\n                Plater.SetNameplateColor (unitFrame, envTable.ExecuteColor)\n            end\n            \n            if (envTable.CanChangeBorderColor) then\n                Plater.SetBorderColor (unitFrame, envTable.BorderColor)\n            end\n            \n            if (envTable.HideHealthDivisor) then\n                unitFrame.healthBar.healthCutOff:Hide() \n                unitFrame.healthBar.executeRange:Hide()\n                \n            else\n                envTable.UpdateHealthDivisor (unitFrame)\n                \n            end\n        end\n        \n        function envTable.UpdateHealthDivisor (unitFrame)\n            local healthBar = unitFrame.healthBar\n            \n            healthBar.healthCutOff:Show()\n            healthBar.healthCutOff:SetVertexColor (DetailsFramework:ParseColors (envTable.HealthDivisorColor))\n            healthBar.healthCutOff:SetAlpha (envTable.HealthDivisorAlpha)\n            \n            healthBar.executeRange:Show()\n            healthBar.executeRange:SetVertexColor (DetailsFramework:ParseColors (envTable.HealthExecuteIndicatorColor))\n            healthBar.executeRange:SetAlpha (envTable.HealthExecuteIndicatorAlpha)\n            \n            if (envTable.UseCustomExecutePercent) then\n                healthBar.healthCutOff:ClearAllPoints()\n                healthBar.executeRange:ClearAllPoints()\n                \n                healthBar.healthCutOff:SetSize (healthBar:GetHeight(), healthBar:GetHeight())\n                healthBar.healthCutOff:SetPoint (\"center\", healthBar, \"left\", healthBar:GetWidth() * envTable.ExecutePercent, 0)\n                \n                healthBar.executeRange:SetTexCoord (0, envTable.ExecutePercent, 0, 1)\n                healthBar.executeRange:SetHeight (healthBar:GetHeight())\n                healthBar.executeRange:SetPoint (\"left\", healthBar, \"left\", 0, 0)\n                healthBar.executeRange:SetPoint (\"right\", healthBar.healthCutOff, \"center\")\n            end\n            \n        end\n    end\n    \nend",
+						["Nameplate Updated"] = "function (self, unitId, unitFrame, envTable)\n    \n    if (envTable.UseCustomExecutePercent) then\n        \n        --manual detection\n        local healthBar = unitFrame.healthBar\n        if (healthBar.CurrentHealth / healthBar.CurrentHealthMax <= envTable.ExecutePercent) then\n            envTable.UnitInExecuteRange (unitFrame)\n        end        \n        \n    else\n        \n        --auto detection\n        if (unitFrame.InExecuteRange) then\n            envTable.UnitInExecuteRange (unitFrame)\n        end\n        \n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n",
 					},
-					["Name"] = "Execute Range [Plater]",
+					["version"] = -1,
 					["PlaterCore"] = 1,
 					["LoadConditions"] = {
 						["talent"] = {
@@ -9641,21 +14203,23 @@ PlaterDB = {
 						},
 						["pvptalent"] = {
 						},
-						["spec"] = {
+						["role"] = {
 						},
 						["affix"] = {
 						},
 						["encounter_ids"] = {
 						},
-						["role"] = {
+						["spec"] = {
 						},
 					},
 					["url"] = "",
 					["Icon"] = 135358,
-					["Time"] = 1547406548,
+					["HooksTemp"] = {
+					},
 				}, -- [8]
 				{
-					["LastHookEdited"] = "",
+					["HooksTemp"] = {
+					},
 					["Hooks"] = {
 						["Initialization"] = "function (modTable)\n    --list of npcs and their colors, can be inserted:\n    --name of the unit\n    --name of the unit in lower case\n    --npcID of the unit\n    \n    --color can be added as:\n    --color names: \"red\", \"yellow\"\n    --color hex: \"#FF0000\", \"#FFFF00\"\n    --color table: {1, 0, 0}, {1, 1, 0}    \n    \n    modTable.changeBarColor = modTable.config.changeBarColor\n    modTable.changeBorderColor = modTable.config.changeBorderColor\n    modTable.resetColors = modTable.config.resetColors\n    \n    modTable.ListOfNpcs = {\n        [61146] = modTable.config.color, --\"olive\", --monk statue npcID\n        [103822] = modTable.config.color, --\"olive\", --druid treant npcID\n        [15352] = modTable.config.color, --\"olive\", --shaman elemental\n        [95072] = modTable.config.color, --\"olive\", --shaman greater earth elemental npcID\n        [61056] = modTable.config.color, --\"olive\", --shaman primal earth elemental npcID\n        \n    }\nend\n\n\n",
 						["Nameplate Updated"] = "function (self, unitId, unitFrame, envTable, modTable)\n    if not unitId then\n        return\n    end\n    --get the GUID of the target of the unit\n    local targetGUID = UnitGUID (unitId .. \"target\")\n    \n    if (targetGUID) then\n        \n        --get the npcID of the target\n        local npcID = Plater.GetNpcIDFromGUID (targetGUID)\n        local unitName = UnitName (unitId .. \"target\")\n        local unitNameLower = string.lower (unitName)\n        \n        --check if the npcID of this unit is in the npc list \n        local color = modTable.ListOfNpcs [npcID] or modTable.ListOfNpcs [unitName] or modTable.ListOfNpcs [unitNameLower]\n        \n        if color then\n            if modTable.changeBarColor then\n                Plater.SetNameplateColor (unitFrame, color)\n            end\n            if modTable.changeBorderColor then\n                Plater.SetBorderColor (unitFrame, color)\n            end\n            unitFrame.attackingSpecificUnitFromMod = true\n        elseif unitFrame.attackingSpecificUnitFromMod and modTable.resetColors then\n            if modTable.changeBorderColor then\n                Plater.SetBorderColor (unitFrame)\n            end\n            if modTable.changeBarColor then\n                Plater.RefreshNameplateColor (unitFrame)\n            end\n            unitFrame.attackingSpecificUnitFromMod = false\n        end\n    end\nend",
@@ -9674,24 +14238,19 @@ PlaterDB = {
 						},
 						["pvptalent"] = {
 						},
-						["spec"] = {
+						["affix"] = {
 						},
 						["race"] = {
 						},
 						["encounter_ids"] = {
 						},
-						["affix"] = {
+						["spec"] = {
 						},
 					},
 					["url"] = "",
 					["Icon"] = "Interface\\AddOns\\Plater\\images\\icon_attacking_unit",
 					["Enabled"] = false,
 					["Revision"] = 363,
-					["semver"] = "",
-					["Author"] = "Kastfall-Azralon",
-					["Desc"] = "Change the nameplate color if the unit is attacking a specific unit like Monk's Ox Statue or Druid's Treants. You may edit which units it track in the constructor script.",
-					["Name"] = "Attacking Specific Unit [Plater]",
-					["PlaterCore"] = 1,
 					["Options"] = {
 						{
 							["Type"] = 1,
@@ -9731,12 +14290,17 @@ PlaterDB = {
 							["Desc"] = "",
 						}, -- [4]
 					},
-					["HooksTemp"] = {
-					},
+					["Author"] = "Kastfall-Azralon",
+					["Desc"] = "Change the nameplate color if the unit is attacking a specific unit like Monk's Ox Statue or Druid's Treants. You may edit which units it track in the constructor script.",
+					["Name"] = "Attacking Specific Unit [Plater]",
+					["PlaterCore"] = 1,
+					["semver"] = "",
+					["LastHookEdited"] = "",
 					["version"] = -1,
 				}, -- [9]
 				{
-					["LastHookEdited"] = "",
+					["HooksTemp"] = {
+					},
 					["Hooks"] = {
 						["Nameplate Created"] = "function (self, unitId, unitFrame, envTable)\n    \n    --run constructor!\n    --constructor is executed only once when any script of the hook runs.\n    \nend\n\n\n",
 						["Nameplate Added"] = "function (self, unitId, unitFrame, envTable)\n    \n    --check if need update the amount of combo points shown\n    if (envTable.LastPlayerTalentUpdate > envTable.LastUpdate) then\n        envTable.UpdateComboPointAmount()\n    end    \n    \n    if (unitFrame.namePlateIsTarget and not unitFrame.IsSelf) then\n        envTable.ComboPointFrame:Show()\n        envTable.UpdateComboPoints()\n        \n    else\n        envTable.ComboPointFrame:Hide()\n    end    \n    \nend\n\n\n",
@@ -9764,30 +14328,29 @@ PlaterDB = {
 						},
 						["pvptalent"] = {
 						},
-						["affix"] = {
+						["spec"] = {
+							["103"] = true,
+							["Enabled"] = true,
 						},
 						["race"] = {
 						},
 						["encounter_ids"] = {
 						},
-						["spec"] = {
-							["103"] = true,
-							["Enabled"] = true,
+						["affix"] = {
 						},
 					},
 					["url"] = "",
 					["Icon"] = 135426,
 					["Enabled"] = false,
 					["Revision"] = 284,
-					["semver"] = "",
+					["Options"] = {
+					},
 					["Author"] = "Izimode-Azralon",
 					["Desc"] = "Show combo points above the nameplate for Druid Feral and Rogues.",
 					["Name"] = "Combo Points [Plater]",
 					["PlaterCore"] = 1,
-					["Options"] = {
-					},
-					["HooksTemp"] = {
-					},
+					["semver"] = "",
+					["LastHookEdited"] = "",
 					["version"] = -1,
 				}, -- [10]
 				{
@@ -9795,10 +14358,9 @@ PlaterDB = {
 					["Revision"] = 182,
 					["semver"] = "",
 					["LastHookEdited"] = "",
-					["version"] = -1,
+					["Name"] = "Players Targeting a Target [Plater]",
 					["Author"] = "Izimode-Azralon",
-					["HooksTemp"] = {
-					},
+					["Time"] = 1548278227,
 					["Desc"] = "Show how many raid members are targeting the unit",
 					["Hooks"] = {
 						["Leave Combat"] = "function (self, unitId, unitFrame, envTable)\n    envTable.CanShow = false;\n    envTable.TargetAmount:SetText (\"\")\nend\n\n\n",
@@ -9808,7 +14370,7 @@ PlaterDB = {
 						["Enter Combat"] = "function (self, unitId, unitFrame, envTable)\n    \n    --check if can show the amount of targets\n    envTable.CanShow = envTable.CanShowTargetAmount();\n    \n    if (not envTable.CanShow) then\n        envTable.TargetAmount:SetText (\"\") \n    end\nend\n\n\n\n\n",
 						["Constructor"] = "--all gray text like this are comments and do not run as code\n--build the settings and basic functions for the hook\n\nfunction (self, unitId, unitFrame, envTable)\n    \n    --declare setting variables:\n    local textColor = \"orange\";\n    local textSize = 12;\n    \n    local showInRaid = true;\n    local showInDungeon = true;\n    local showInArena = false;\n    local showInBattleground = false;\n    local showInOpenWorld = true;\n    \n    envTable.UpdateInterval = 2; --each 2 updates in the nameplate it'll update the amount of targets\n    \n    local anchor = {\n        side = 6, --1 = topleft 2 = left 3 = bottomleft 4 = bottom 5 = bottom right 6 = right 7 = topright 8 = top\n        x = 4, --x offset\n        y = 0, --y offset\n    };\n    \n    \n    ---------------------------------------------------------------------------------------------------------------------------------------------\n    \n    \n    --frames:\n    \n    --create the text that will show the amount of people targeting the unit\n    if (not  unitFrame.healthBar.TargetAmount) then\n        envTable.TargetAmount = Plater:CreateLabel (unitFrame.healthBar, \"\", textSize, textColor);\n        Plater.SetAnchor (envTable.TargetAmount, anchor);\n        unitFrame.healthBar.TargetAmount = envTable.TargetAmount\n    end\n    \n    --in case Plater wipes the envTable\n    envTable.TargetAmount = unitFrame.healthBar.TargetAmount\n    \n    ---------------------------------------------------------------------------------------------------------------------------------------------           \n    --private variables (they will be used in the other scripts within this hook)\n    envTable.CanShow = false;\n    envTable.UpdateCooldown = 0;\n    envTable.InRaid = false;\n    envTable.InParty = false;\n    \n    ---------------------------------------------------------------------------------------------------------------------------------------------           \n    --functions\n    \n    --update the InRaid or InParty proprieties\n    function envTable.UpdateGroupType()\n        if (IsInRaid()) then\n            envTable.InRaid = true;\n            envTable.InParty = false;     \n            \n        elseif (IsInGroup()) then\n            envTable.InRaid = false;\n            envTable.InParty = true;   \n            \n        else\n            envTable.InRaid = false;            \n            envTable.InParty = false;\n        end\n    end\n    \n    --this function controls if the amount of targets can show following the settings in the top of this script\n    function envTable.CanShowTargetAmount()\n        \n        local _, instanceType, difficultyID, _, _, _, _, instanceMapID, instanceGroupSize = GetInstanceInfo()\n        \n        if (showInRaid and instanceType == \"raid\") then\n            envTable.UpdateGroupType()\n            return true\n        end\n        \n        if (showInDungeon and instanceType == \"party\") then\n            envTable.UpdateGroupType()\n            return true\n        end\n        \n        if (showInArena and instanceType == \"arena\") then\n            envTable.UpdateGroupType()\n            return true\n        end\n        \n        if (showInBattleground and instanceType == \"pvp\") then\n            envTable.UpdateGroupType()\n            return true\n        end\n        \n        if (showInOpenWorld and instanceType == \"none\") then\n            envTable.UpdateGroupType()\n            if (envTable.InRaid or envTable.InParty) then\n                return true\n            end\n        end\n        \n        return false\n    end\n    \n    --get the amount of player targetting the unit in raid or party\n    function envTable.NumTargetsInRaid (unitFrame)\n        local amount = 0\n        for i = 1, GetNumGroupMembers() do\n            local unit = \"raid\" .. i .. \"target\"\n            if (UnitGUID (unit) == unitFrame.namePlateUnitGUID) then\n                amount = amount + 1\n            end\n        end\n        \n        return amount\n    end\n    \n    function envTable.NumTargetsInParty()\n        local amount = 0\n        for i = 1, GetNumGroupMembers() - 1 do\n            local unit = \"party\" .. i .. \"target\"\n            if (UnitGUID (unit) == unitFrame.namePlateUnitGUID) then\n                amount = amount + 1\n            end\n        end\n        \n        local unit = \"playertarget\"\n        if (UnitGUID (unit) == unitFrame.namePlateUnitGUID) then\n            amount = amount + 1\n        end        \n        \n        return amount\n    end\n    \nend",
 					},
-					["Name"] = "Players Targeting a Target [Plater]",
+					["version"] = -1,
 					["PlaterCore"] = 1,
 					["LoadConditions"] = {
 						["talent"] = {
@@ -9823,21 +14385,23 @@ PlaterDB = {
 						},
 						["pvptalent"] = {
 						},
-						["role"] = {
+						["spec"] = {
 						},
 						["affix"] = {
 						},
 						["encounter_ids"] = {
 						},
-						["spec"] = {
+						["role"] = {
 						},
 					},
 					["url"] = "",
 					["Icon"] = 1966587,
-					["Time"] = 1548278227,
+					["HooksTemp"] = {
+					},
 				}, -- [11]
 				{
-					["LastHookEdited"] = "",
+					["HooksTemp"] = {
+					},
 					["Hooks"] = {
 						["Initialization"] = "function (modTable)\n    \n    --ATTENTION: after enabling this mod, you may have to adjust the anchor point at the Buff Settings tab\n    \n    local sortByTime = false\n    local invertSort = false\n    \n    --which auras goes first, assign a value (any number), bigger value goes first\n    local priority = {\n        [\"Vampiric Touch\"] = 50,\n        [\"Shadow Word: Pain\"] = 22,\n        [\"Mind Flay\"] = 5,\n        [\"Pistol Shot\"] = 50,\n        [\"Marked for Death\"] = 99,\n    }\n    \n    -- Sort function - do not touch\n    Plater.db.profile.aura_sort = true\n    \n    \n    function Plater.AuraIconsSortFunction (aura1, aura2)\n        local p1 = priority[aura1.SpellId] or priority[aura1.SpellName] or 1\n        local p2 = priority[aura2.SpellId] or priority[aura2.SpellName] or 1\n        \n        if sortByTime and p1 == p2 then\n            if invertSort then\n                return (aura1.Duration == 0 and 99999999 or aura1.RemainingTime or 0) > (aura2.Duration == 0 and 99999999 or aura2.RemainingTime or 0)\n            else\n                return (aura1.Duration == 0 and 99999999 or aura1.RemainingTime or 0) < (aura2.Duration == 0 and 99999999 or aura2.RemainingTime or 0)\n            end\n        else\n            if invertSort then\n                 return p1 < p2\n            else\n                return p1 > p2\n            end\n        end\n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 					},
@@ -9855,28 +14419,27 @@ PlaterDB = {
 						},
 						["pvptalent"] = {
 						},
-						["affix"] = {
+						["spec"] = {
 						},
 						["race"] = {
 						},
 						["encounter_ids"] = {
 						},
-						["spec"] = {
+						["affix"] = {
 						},
 					},
 					["url"] = "",
 					["Icon"] = "Interface\\AddOns\\Plater\\images\\icon_aura_reorder",
 					["Enabled"] = false,
 					["Revision"] = 356,
-					["semver"] = "",
+					["Options"] = {
+					},
 					["Author"] = "Ditador-Azralon",
 					["Desc"] = "Reorder buffs and debuffs following the settings set in the constructor.",
 					["Name"] = "Aura Reorder [Plater]",
 					["PlaterCore"] = 1,
-					["Options"] = {
-					},
-					["HooksTemp"] = {
-					},
+					["semver"] = "",
+					["LastHookEdited"] = "",
 					["version"] = -1,
 				}, -- [12]
 			},
@@ -9933,4594 +14496,22 @@ PlaterDB = {
 				["Add - Warning [P]"] = 5,
 				["Aura While Casting [P]"] = 1,
 				["Cast - Big Alert"] = 14,
-				["Fixate On You"] = 11,
-				["Cast - Very Important"] = 15,
+				["Unit - Show Energy"] = 11,
+				["Explosion Affix M+"] = 14,
 				["Auto Set Skull"] = 11,
-				["Spiteful Affix"] = 3,
+				["Cast - Quick Flash"] = 2,
 				["Add - Non Elite Trash [P]"] = 4,
+				["Cast - Stop Casting"] = 4,
+				["Add - Explode on Die [P]"] = 1,
 				["Cast - On Going Cast [P]"] = 2,
-				["Fixate"] = 11,
-				["Countdown"] = 11,
 				["Fixate by Unit Buff [P]"] = 2,
 				["Cast - Frontal Cone"] = 15,
-				["Add - Explode on Die [P]"] = 1,
-				["Cast - Stop Casting"] = 4,
-				["Cast - Quick Flash"] = 2,
-				["Explosion Affix M+"] = 14,
-				["Unit - Show Energy"] = 11,
+				["Fixate"] = 11,
+				["Countdown"] = 11,
+				["Spiteful Affix"] = 3,
+				["Cast - Very Important"] = 15,
+				["Fixate On You"] = 11,
 			},
-		},
-	},
-	["profileKeys"] = {
-		["上山打鸟 - 伊弗斯"] = "Default",
-		["狂暴專家 - 伊弗斯"] = "Default",
-	},
-	["captured_casts"] = {
-		[49711] = {
-			["source"] = "蛤蜊主宰老K",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25800,
-		},
-		[59973] = {
-			["encounterName"] = "先知萨隆亚",
-			["source"] = "先知萨隆亚",
-			["npcID"] = 26632,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 375,
-		},
-		[65791] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "努兹尔·啸钉",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34468,
-		},
-		[63138] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["npcID"] = 33134,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[38618] = {
-			["source"] = "德雷森上尉",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27751,
-		},
-		[62339] = {
-			["encounterName"] = "托里姆",
-			["source"] = "符印巨像",
-			["npcID"] = 32872,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[59366] = {
-			["encounterName"] = "看门者克里克希尔",
-			["source"] = "看守者希尔希克",
-			["npcID"] = 28731,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 216,
-		},
-		[59430] = {
-			["encounterName"] = "阿努巴拉克",
-			["source"] = "阿努巴拉克",
-			["npcID"] = 29120,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 218,
-		},
-		[17503] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "苍白的玛勒基",
-			["npcID"] = 10438,
-		},
-		[16496] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "被俘虏的雇佣兵",
-			["npcID"] = 32885,
-		},
-		[47378] = {
-			["source"] = "洛纳乌克·冰雾",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26654,
-		},
-		[66112] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "维兰纳",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34465,
-		},
-		[19645] = {
-			["source"] = "哀嚎的女妖",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10464,
-		},
-		[20716] = {
-			["source"] = "青铜巨龙圣地守卫者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26277,
-		},
-		[60869] = {
-			["source"] = "恐怖之水",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30633,
-		},
-		[61924] = {
-			["encounterName"] = "霍迪尔",
-			["source"] = "灵魂行者尤娜",
-			["npcID"] = 32950,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 751,
-		},
-		[59910] = {
-			["encounterName"] = "召唤者诺沃斯",
-			["source"] = "召唤者诺沃斯",
-			["npcID"] = 26631,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 371,
-		},
-		[51758] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "龙骨荒野法师猎手",
-			["npcID"] = 26280,
-		},
-		[56937] = {
-			["encounterName"] = "大魔导师泰蕾丝塔",
-			["source"] = "大魔导师泰蕾丝塔",
-			["npcID"] = 26930,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 520,
-		},
-		[15537] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "瓦拉纳王子",
-			["npcID"] = 25601,
-		},
-		[66880] = {
-			["encounterName"] = "诺森德猛兽",
-			["source"] = "酸喉",
-			["encounterID"] = 629,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 35144,
-		},
-		[12492] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "深铁萨满祭司",
-			["npcID"] = 11600,
-		},
-		[66113] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "维兰纳",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34465,
-		},
-		[15585] = {
-			["source"] = "影月侍僧",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 16594,
-		},
-		[64386] = {
-			["encounterName"] = "欧尔莉亚",
-			["source"] = "欧尔莉亚",
-			["npcID"] = 33515,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 750,
-		},
-		[47059] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "群星之墓哨兵",
-			["npcID"] = 26448,
-		},
-		[52238] = {
-			["encounterName"] = "沃尔坎",
-			["source"] = "沃尔坎",
-			["npcID"] = 28587,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 557,
-		},
-		[52270] = {
-			["source"] = "狂心猎人",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28079,
-		},
-		[62532] = {
-			["encounterName"] = "弗蕾亚",
-			["source"] = "远古监护者",
-			["npcID"] = 33203,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 753,
-		},
-		[64642] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "寒冬亡魂",
-			["npcID"] = 34134,
-		},
-		[50416] = {
-			["source"] = "考达拉龙人",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25728,
-		},
-		[38204] = {
-			["source"] = "自由的先知",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33422,
-		},
-		[47443] = {
-			["source"] = "阿努巴尔荒芜兽",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26607,
-		},
-		[48530] = {
-			["source"] = "第七军团斥候",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27162,
-		},
-		[57801] = {
-			["source"] = "弗约恩",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29503,
-		},
-		[60902] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "阿尔卡冯守卫者",
-			["npcID"] = 32353,
-		},
-		[65026] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "巨兽二型",
-			["encounterID"] = 754,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34071,
-		},
-		[52814] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "冷风女王",
-			["npcID"] = 26578,
-		},
-		[56938] = {
-			["encounterName"] = "大魔导师泰蕾丝塔",
-			["source"] = "大魔导师泰蕾丝塔",
-			["npcID"] = 26928,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 520,
-		},
-		[38556] = {
-			["source"] = "卡斯卡拉防御者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25764,
-		},
-		[15801] = {
-			["source"] = "深铁萨满祭司",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 11600,
-		},
-		[31602] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "奈鲁布恩坎",
-			["npcID"] = 10437,
-		},
-		[58153] = {
-			["source"] = "复活的北伐军战士",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30202,
-		},
-		[49106] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "伊米亚狂战士",
-			["npcID"] = 26696,
-		},
-		[62437] = {
-			["encounterName"] = "弗蕾亚",
-			["source"] = "弗蕾亚",
-			["npcID"] = 32906,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 753,
-		},
-		[63556] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "红木树人",
-			["npcID"] = 33525,
-		},
-		[11829] = {
-			["source"] = "巫师的阴魂",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 16905,
-		},
-		[58537] = {
-			["source"] = "传送门看护者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30893,
-		},
-		[62661] = {
-			["encounterName"] = "维扎克斯将军",
-			["source"] = "维扎克斯将军",
-			["npcID"] = 33271,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 755,
-		},
-		[63716] = {
-			["encounterName"] = "科隆加恩",
-			["source"] = "科隆加恩",
-			["npcID"] = 32930,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 749,
-		},
-		[16561] = {
-			["source"] = "杉达拉德鲁伊之魂",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30863,
-		},
-		[58793] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "塔尼布隆",
-			["npcID"] = 30452,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 742,
-		},
-		[16001] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "复活的达卡莱蝙蝠骑兵",
-			["npcID"] = 26638,
-		},
-		[47668] = {
-			["encounterName"] = "托尔戈",
-			["source"] = "天灾蛮兵",
-			["npcID"] = 26623,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 369,
-		},
-		[16033] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "受伤的战歌萨满祭司",
-			["npcID"] = 27108,
-		},
-		[65123] = {
-			["encounterName"] = "霍迪尔",
-			["source"] = "灵魂行者尤娜",
-			["npcID"] = 32950,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 751,
-		},
-		[59017] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "天灾复活者",
-			["npcID"] = 26626,
-		},
-		[60072] = {
-			["encounterName"] = "玛里苟斯",
-			["source"] = "玛里苟斯",
-			["encounterID"] = 734,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28859,
-		},
-		[59081] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "掠龙先知",
-			["npcID"] = 26554,
-		},
-		[59209] = {
-			["source"] = "碧蓝审讯者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27633,
-		},
-		[59241] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "伊米亚猎血者",
-			["npcID"] = 26670,
-		},
-		[59305] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "伊米隆国王",
-			["npcID"] = 26861,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 583,
-		},
-		[63493] = {
-			["encounterName"] = "钢铁议会",
-			["source"] = "断钢者",
-			["npcID"] = 32867,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 748,
-		},
-		[59433] = {
-			["encounterName"] = "阿努巴拉克",
-			["source"] = "阿努巴拉克",
-			["npcID"] = 29120,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 218,
-		},
-		[34945] = {
-			["source"] = "盘牙医师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 21126,
-		},
-		[59529] = {
-			["encounterName"] = "沃尔坎",
-			["source"] = "沃尔坎",
-			["npcID"] = 28587,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 557,
-		},
-		[57547] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "初生的瓦格里",
-			["npcID"] = 29570,
-		},
-		[52496] = {
-			["source"] = "地穴恶魔",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27734,
-		},
-		[66118] = {
-			["encounterName"] = "阿努巴拉克",
-			["source"] = "阿努巴拉克",
-			["encounterID"] = 645,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34564,
-		},
-		[50578] = {
-			["source"] = "冰霜之球",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28066,
-		},
-		[24314] = {
-			["encounterName"] = "血领主曼多基尔",
-			["source"] = "血领主曼多基尔",
-			["npcID"] = 11382,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 787,
-		},
-		[15242] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "深铁矿洞探险者",
-			["npcID"] = 13099,
-		},
-		[64005] = {
-			["encounterName"] = "科隆加恩",
-			["source"] = "科隆加恩",
-			["npcID"] = 32930,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 749,
-		},
-		[56908] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "萨塔里奥",
-			["encounterID"] = 742,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28860,
-		},
-		[52944] = {
-			["source"] = "亚鲁乌特",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28121,
-		},
-		[59146] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "达卡莱猎神者",
-			["npcID"] = 29820,
-		},
-		[32674] = {
-			["source"] = "复活的北伐军战士",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30202,
-		},
-		[59210] = {
-			["source"] = "碧蓝魔网雏龙",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27636,
-		},
-		[64389] = {
-			["encounterName"] = "欧尔莉亚",
-			["source"] = "欧尔莉亚",
-			["npcID"] = 33515,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 750,
-		},
-		[17393] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "瑞文戴尔男爵",
-			["npcID"] = 10440,
-		},
-		[31747] = {
-			["source"] = "劫掠者瑟菲克斯",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28083,
-		},
-		[51218] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "始祖龙崽",
-			["npcID"] = 23750,
-		},
-		[59466] = {
-			["encounterName"] = "拉文索尔",
-			["source"] = "拉文索尔",
-			["npcID"] = 29312,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 2662,
-		},
-		[50323] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "诅咒教派腐蚀者",
-			["npcID"] = 31738,
-		},
-		[35010] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "黑暗符文施法者",
-			["npcID"] = 27963,
-		},
-		[58667] = {
-			["source"] = "自由的先知",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33422,
-		},
-		[57676] = {
-			["source"] = "琳蒂安",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30656,
-		},
-		[62823] = {
-			["encounterName"] = "霍迪尔",
-			["source"] = "维莎·织焰",
-			["npcID"] = 32946,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 751,
-		},
-		[35234] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "沼泽掘泥者",
-			["npcID"] = 18137,
-		},
-		[58827] = {
-			["encounterName"] = "塑血者沙尔拉姆",
-			["source"] = "塑血者沙尔拉姆",
-			["encounterID"] = 294,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26530,
-		},
-		[15498] = {
-			["source"] = "深铁矿洞测量者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 13098,
-		},
-		[45592] = {
-			["source"] = "收割者伊斯里克斯",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25453,
-		},
-		[72898] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "水元素",
-			["npcID"] = 37994,
-		},
-		[59019] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "喷毒的眼镜蛇",
-			["npcID"] = 29774,
-		},
-		[59083] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "掠龙先知",
-			["npcID"] = 26554,
-		},
-		[59147] = {
-			["source"] = "坚钢唤天者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28580,
-		},
-		[59179] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "泰坦神铁轰鸣者",
-			["npcID"] = 28965,
-		},
-		[15586] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "冰冷矿洞测量者",
-			["npcID"] = 13097,
-		},
-		[59243] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "伊米亚猎血者",
-			["npcID"] = 26670,
-		},
-		[64390] = {
-			["encounterName"] = "托里姆",
-			["source"] = "托里姆",
-			["npcID"] = 32865,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[64422] = {
-			["encounterName"] = "欧尔莉亚",
-			["source"] = "欧尔莉亚",
-			["npcID"] = 33515,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 750,
-		},
-		[12549] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "风暴骑士",
-			["npcID"] = 29624,
-		},
-		[33796] = {
-			["source"] = "荣耀堡弓箭手",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 16896,
-		},
-		[51219] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "野蛮的始祖幼龙",
-			["npcID"] = 31265,
-		},
-		[63527] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "雷暴锻铸守护者",
-			["npcID"] = 33699,
-		},
-		[63559] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "误入歧途的仙子",
-			["npcID"] = 33355,
-		},
-		[40062] = {
-			["source"] = "诅咒教派破坏者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28538,
-		},
-		[53425] = {
-			["source"] = "哈罗德·兰恩",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25804,
-		},
-		[61673] = {
-			["source"] = "钢铁巨像",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30300,
-		},
-		[51475] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "黑暗符文元素师",
-			["npcID"] = 27962,
-		},
-		[47447] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "冷心冰虫喂食者",
-			["npcID"] = 26358,
-		},
-		[64966] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "发条机械师",
-			["npcID"] = 34184,
-		},
-		[67529] = {
-			["encounterName"] = "总冠军",
-			["source"] = "克罗索斯",
-			["npcID"] = 34701,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 334,
-		},
-		[50740] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "先锋军黑鸦祭司",
-			["npcID"] = 27202,
-		},
-		[58956] = {
-			["encounterName"] = "萨塔里奥",
-			["source"] = "萨塔里奥",
-			["encounterID"] = 742,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28860,
-		},
-		[59020] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "喷毒的眼镜蛇",
-			["npcID"] = 29774,
-		},
-		[65867] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "阿莱希娅·月行者",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34467,
-		},
-		[39647] = {
-			["source"] = "黑岩圣殿卫士",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30453,
-		},
-		[59148] = {
-			["source"] = "坚钢唤天者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28580,
-		},
-		[63272] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "红木树人",
-			["npcID"] = 33525,
-		},
-		[25530] = {
-			["source"] = "灼热图腾 VII",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 15480,
-		},
-		[59244] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "伊米亚猎血者",
-			["npcID"] = 26670,
-		},
-		[20463] = {
-			["source"] = "希尔瓦娜斯·风行者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31651,
-		},
-		[49110] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "龙眠神殿守护者",
-			["npcID"] = 26933,
-		},
-		[64487] = {
-			["encounterName"] = "观察者奥尔加隆",
-			["source"] = "观察者奥尔加隆",
-			["npcID"] = 32871,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 757,
-		},
-		[30741] = {
-			["source"] = "高阶术士奈瑟库斯",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 16807,
-		},
-		[13860] = {
-			["source"] = "操纵者安诺科拉",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26769,
-		},
-		[50293] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "苔原爬虫",
-			["npcID"] = 25454,
-		},
-		[64647] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "寒冬滚石",
-			["npcID"] = 34135,
-		},
-		[65868] = {
-			["encounterName"] = "总冠军",
-			["source"] = "娅琳·永歌",
-			["npcID"] = 34657,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 334,
-		},
-		[13900] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "伊森迪奥斯",
-			["npcID"] = 9017,
-		},
-		[18609] = {
-			["encounterName"] = "奥妮克希亚",
-			["source"] = "奥妮克希亚",
-			["encounterID"] = 1084,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10184,
-		},
-		[62793] = {
-			["encounterName"] = "霍迪尔",
-			["source"] = "托尔·灰云",
-			["npcID"] = 32941,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 751,
-		},
-		[59852] = {
-			["encounterName"] = "塑铁者斯约尼尔",
-			["source"] = "铸铁穴居人",
-			["npcID"] = 27979,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 569,
-		},
-		[54801] = {
-			["encounterName"] = "达卡莱巨像",
-			["source"] = "达卡莱元素",
-			["encounterID"] = 385,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29573,
-		},
-		[51764] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "龙骨荒野法师猎手",
-			["npcID"] = 26280,
-		},
-		[47736] = {
-			["encounterName"] = "大魔导师泰蕾丝塔",
-			["source"] = "大魔导师泰蕾丝塔",
-			["npcID"] = 26929,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 520,
-		},
-		[55984] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "通灵主宰安提沃克",
-			["npcID"] = 28006,
-		},
-		[15043] = {
-			["source"] = "审讯者卡勒拉斯",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25720,
-		},
-		[62250] = {
-			["encounterName"] = "魔网守护者埃雷苟斯",
-			["source"] = "大型魔网雏龙",
-			["encounterID"] = 534,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28276,
-		},
-		[60236] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "咆哮的漩涡",
-			["npcID"] = 28547,
-		},
-		[413091] = {
-			["source"] = "镜像",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 205999,
-		},
-		[49111] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "碧蓝巨龙",
-			["npcID"] = 27608,
-		},
-		[62442] = {
-			["encounterName"] = "托里姆",
-			["source"] = "黑暗符文助手",
-			["npcID"] = 33110,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[64584] = {
-			["encounterName"] = "观察者奥尔加隆",
-			["source"] = "观察者奥尔加隆",
-			["npcID"] = 32871,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 757,
-		},
-		[53363] = {
-			["source"] = "霜巢毁灭者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30575,
-		},
-		[48280] = {
-			["source"] = "驯鹿杀手卡琳",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25803,
-		},
-		[62666] = {
-			["encounterName"] = "锋鳞",
-			["event"] = "SPELL_CAST_START",
-			["source"] = "锋鳞",
-			["npcID"] = 33186,
-		},
-		[65998] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "灼热图腾",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34687,
-		},
-		[58702] = {
-			["encounterName"] = "维扎克斯将军",
-			["source"] = "灼热图腾 X",
-			["npcID"] = 31165,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 755,
-		},
-		[63913] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "暮光冰法师",
-			["npcID"] = 33819,
-		},
-		[42526] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "孢子",
-			["npcID"] = 23876,
-		},
-		[51797] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "湍流之针巫师",
-			["npcID"] = 26257,
-		},
-		[17235] = {
-			["source"] = "奈鲁布恩坎",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10437,
-		},
-		[65807] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "努兹尔·啸钉",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34468,
-		},
-		[48920] = {
-			["encounterName"] = "暴龙之王爵德",
-			["source"] = "暴龙之王爵德",
-			["npcID"] = 27483,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 373,
-		},
-		[53044] = {
-			["encounterName"] = "埃雷克姆",
-			["source"] = "埃雷克姆",
-			["npcID"] = 29315,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 2658,
-		},
-		[62315] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "冰虫巨兽",
-			["npcID"] = 32882,
-		},
-		[55218] = {
-			["encounterName"] = "迦尔达拉",
-			["event"] = "SPELL_CAST_START",
-			["source"] = "迦尔达拉",
-			["npcID"] = 29306,
-		},
-		[62443] = {
-			["encounterName"] = "托里姆",
-			["source"] = "黑暗符文助手",
-			["npcID"] = 33110,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[41056] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "指挥官斯尔加·钢腭",
-			["npcID"] = 25359,
-		},
-		[63722] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "无面恐魔",
-			["npcID"] = 33772,
-		},
-		[50455] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "通灵主宰安提沃克",
-			["npcID"] = 28006,
-		},
-		[16564] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "恩其拉石像鬼",
-			["npcID"] = 25387,
-		},
-		[60781] = {
-			["source"] = "遗忘深渊追随者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30205,
-		},
-		[50583] = {
-			["source"] = "考达拉缚法者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25719,
-		},
-		[59854] = {
-			["encounterName"] = "召唤者诺沃斯",
-			["source"] = "召唤者诺沃斯",
-			["npcID"] = 26631,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 371,
-		},
-		[61964] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "黑暗符文助手",
-			["npcID"] = 32886,
-		},
-		[20816] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "黑铁暗法师",
-			["npcID"] = 2577,
-		},
-		[60046] = {
-			["source"] = "希尔瓦娜斯·风行者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31651,
-		},
-		[64170] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "弗蕾亚",
-			["encounterID"] = 756,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33410,
-		},
-		[61133] = {
-			["source"] = "巴纳霍格领主",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31277,
-		},
-		[17843] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "金队牧师",
-			["npcID"] = 32325,
-		},
-		[15587] = {
-			["source"] = "背叛的恐惧魔王",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31531,
-		},
-		[59247] = {
-			["encounterName"] = "残忍的斯卡迪",
-			["source"] = "伊米亚巫医",
-			["npcID"] = 26691,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 581,
-		},
-		[54164] = {
-			["encounterName"] = "谢沃兹",
-			["source"] = "灵体之球",
-			["encounterID"] = 2661,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29271,
-		},
-		[15611] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "洞穴雷霆蜥蜴",
-			["npcID"] = 8928,
-		},
-		[49113] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "龙眠神殿幼龙",
-			["npcID"] = 26925,
-		},
-		[49241] = {
-			["source"] = "红玉警戒者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27542,
-		},
-		[15659] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "狂乱风暴",
-			["npcID"] = 26045,
-		},
-		[24173] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "狂热者扎斯",
-			["npcID"] = 11348,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 789,
-		},
-		[24189] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "高阶祭司塞卡尔",
-			["npcID"] = 14509,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 789,
-		},
-		[64746] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "岩浆暴怒者",
-			["npcID"] = 34086,
-		},
-		[50456] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "闪电使者西亚斯",
-			["npcID"] = 28018,
-		},
-		[60814] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "霜巢雏龙",
-			["npcID"] = 31718,
-		},
-		[50648] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "蓝玉巫师",
-			["npcID"] = 25316,
-		},
-		[34344] = {
-			["source"] = "邪恶通灵师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31155,
-		},
-		[67729] = {
-			["encounterName"] = "黑骑士",
-			["source"] = "复生的嘉伦·誓日",
-			["npcID"] = 35545,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 340,
-		},
-		[25420] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "战歌要塞萨满祭司",
-			["npcID"] = 25421,
-		},
-		[59024] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "黑暗符文元素师",
-			["npcID"] = 27962,
-		},
-		[64171] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "托里姆",
-			["npcID"] = 33413,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[59152] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "被束缚的气元素",
-			["npcID"] = 30418,
-		},
-		[33641] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "先驱者加斯提努斯",
-			["npcID"] = 18966,
-		},
-		[61326] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "碧蓝缚鳞者",
-			["npcID"] = 26735,
-		},
-		[18435] = {
-			["encounterName"] = "奥妮克希亚",
-			["source"] = "奥妮克希亚",
-			["encounterID"] = 1084,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10184,
-		},
-		[62445] = {
-			["encounterName"] = "托里姆",
-			["source"] = "黑暗符文唤魔师",
-			["npcID"] = 32878,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[61550] = {
-			["source"] = "毒尖",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28358,
-		},
-		[62605] = {
-			["encounterName"] = "托里姆",
-			["source"] = "西芙",
-			["npcID"] = 33196,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[38085] = {
-			["source"] = "永恒时空法师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27898,
-		},
-		[65940] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "索库尔",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34475,
-		},
-		[59696] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "始祖幼龙训练者",
-			["npcID"] = 24082,
-		},
-		[64971] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "铁矮人修理工",
-			["npcID"] = 34198,
-		},
-		[63149] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "被腐蚀的仆从",
-			["npcID"] = 33354,
-		},
-		[11975] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "骷髅守护者",
-			["npcID"] = 10390,
-		},
-		[47964] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "盖尔米尔",
-			["npcID"] = 416,
-		},
-		[62318] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "被俘虏的雇佣兵",
-			["npcID"] = 32885,
-		},
-		[64396] = {
-			["encounterName"] = "欧尔莉亚",
-			["source"] = "欧尔莉亚",
-			["npcID"] = 33515,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 750,
-		},
-		[62446] = {
-			["encounterName"] = "托里姆",
-			["source"] = "黑暗符文唤魔师",
-			["npcID"] = 32878,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[59537] = {
-			["source"] = "萨尔",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31650,
-		},
-		[66901] = {
-			["encounterName"] = "诺森德猛兽",
-			["source"] = "酸喉",
-			["encounterID"] = 629,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 35144,
-		},
-		[44256] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "战歌上尉",
-			["npcID"] = 25446,
-		},
-		[59633] = {
-			["source"] = "伊米海姆防御者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31746,
-		},
-		[63789] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "暮光炎术师",
-			["npcID"] = 33820,
-		},
-		[59761] = {
-			["source"] = "凋零战车",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31831,
-		},
-		[60848] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "被遗忘的无面者",
-			["npcID"] = 30414,
-		},
-		[61903] = {
-			["encounterName"] = "钢铁议会",
-			["source"] = "断钢者",
-			["npcID"] = 32867,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 748,
-		},
-		[66902] = {
-			["encounterName"] = "诺森德猛兽",
-			["source"] = "恐鳞",
-			["encounterID"] = 629,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34799,
-		},
-		[59122] = {
-			["source"] = "化学炼金师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31482,
-		},
-		[59154] = {
-			["source"] = "雷铸巨人",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28920,
-		},
-		[33643] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "米尔格隆·高山",
-			["npcID"] = 18969,
-		},
-		[62415] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "冰虫巨兽",
-			["npcID"] = 32882,
-		},
-		[18500] = {
-			["encounterName"] = "奥妮克希亚",
-			["source"] = "奥妮克希亚",
-			["encounterID"] = 1084,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10184,
-		},
-		[64653] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "寒冬亡魂",
-			["npcID"] = 34134,
-		},
-		[63758] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "暮光冰法师",
-			["npcID"] = 33819,
-		},
-		[54615] = {
-			["source"] = "杉达拉猎人之魂",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30864,
-		},
-		[64877] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "硬化铁魔像",
-			["npcID"] = 34190,
-		},
-		[57780] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "钢铸防御者",
-			["npcID"] = 33236,
-		},
-		[61968] = {
-			["encounterName"] = "霍迪尔",
-			["source"] = "霍迪尔",
-			["npcID"] = 32845,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 751,
-		},
-		[48733] = {
-			["source"] = "毁灭结界",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27430,
-		},
-		[65133] = {
-			["encounterName"] = "霍迪尔",
-			["source"] = "灵魂行者塔拉",
-			["npcID"] = 33332,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 751,
-		},
-		[12471] = {
-			["source"] = "影月暗法师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 17694,
-		},
-		[64174] = {
-			["source"] = "霍迪尔",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33411,
-		},
-		[42723] = {
-			["encounterName"] = "掠夺者因格瓦尔",
-			["source"] = "劫掠者因格瓦尔",
-			["npcID"] = 23954,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 575,
-		},
-		[63247] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "自然之刃",
-			["npcID"] = 33527,
-		},
-		[52026] = {
-			["encounterName"] = "比亚格里将军",
-			["source"] = "比亚格里将军",
-			["encounterID"] = 555,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28586,
-		},
-		[47966] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "辛克的伐木机",
-			["npcID"] = 27061,
-		},
-		[44961] = {
-			["source"] = "被诅咒的水兵",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 24911,
-		},
-		[15620] = {
-			["source"] = "联盟援兵",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27564,
-		},
-		[49309] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "战歌萨满祭司",
-			["npcID"] = 27678,
-		},
-		[50364] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "尼鲁巴尔坑道虫",
-			["npcID"] = 25622,
-		},
-		[59603] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "掠龙裂心者",
-			["npcID"] = 24071,
-		},
-		[67289] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "银色女祭司",
-			["npcID"] = 35307,
-		},
-		[66330] = {
-			["encounterName"] = "诺森德猛兽",
-			["source"] = "穿刺者戈莫克",
-			["encounterID"] = 629,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34796,
-		},
-		[68504] = {
-			["encounterName"] = "总冠军",
-			["source"] = "拉娜·硬锤",
-			["npcID"] = 34703,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 334,
-		},
-		[17174] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "被遗忘的火枪手",
-			["npcID"] = 27225,
-		},
-		[65070] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "零件维修技师",
-			["npcID"] = 34267,
-		},
-		[48734] = {
-			["source"] = "毁灭结界",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27430,
-		},
-		[65819] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "塞瑞莎·术轮",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34474,
-		},
-		[65883] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "阿莱希娅·月行者",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34467,
-		},
-		[57046] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "狂乱的法力涌动者",
-			["npcID"] = 26737,
-		},
-		[51963] = {
-			["source"] = "黑锋石像鬼",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27829,
-		},
-		[60211] = {
-			["source"] = "掠龙铸造大师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 24079,
-		},
-		[5884] = {
-			["source"] = "奈丝伍德夫人",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29858,
-		},
-		[59284] = {
-			["source"] = "凋零投石车",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31526,
-		},
-		[63472] = {
-			["encounterName"] = "掌炉者伊格尼斯",
-			["source"] = "掌炉者伊格尼斯",
-			["npcID"] = 33118,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 745,
-		},
-		[63568] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "自然之刃",
-			["npcID"] = 33527,
-		},
-		[64623] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "VX-001",
-			["npcID"] = 33651,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 754,
-		},
-		[13878] = {
-			["source"] = "击碎者提瓦克斯",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26770,
-		},
-		[7978] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "暗炉农夫",
-			["npcID"] = 8896,
-		},
-		[63760] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "暮光追随者",
-			["npcID"] = 33818,
-		},
-		[54617] = {
-			["source"] = "狂心清除者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28081,
-		},
-		[55704] = {
-			["source"] = "土灵看守",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29981,
-		},
-		[56919] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "联盟祭司",
-			["npcID"] = 26805,
-		},
-		[39592] = {
-			["source"] = "被召唤的灼热图腾",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 22895,
-		},
-		[60084] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "阻挡者卡诺克",
-			["npcID"] = 32160,
-		},
-		[57047] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "狂乱的法力涌动者",
-			["npcID"] = 26737,
-		},
-		[48895] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "达卡莱萨满祭司",
-			["npcID"] = 26639,
-		},
-		[16100] = {
-			["encounterName"] = "血卫士伯鲁恩",
-			["source"] = "碎手弓箭手",
-			["encounterID"] = 1935,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 17427,
-		},
-		[54138] = {
-			["encounterName"] = "谢沃兹",
-			["source"] = "谢沃兹",
-			["npcID"] = 29266,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 2661,
-		},
-		[46018] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "大法师艾瓦诺尔",
-			["npcID"] = 25784,
-		},
-		[33806] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "蛮锤斥候",
-			["npcID"] = 19384,
-		},
-		[64528] = {
-			["encounterName"] = "霍迪尔",
-			["source"] = "维莎·织焰",
-			["npcID"] = 32946,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 751,
-		},
-		[8995] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "黑铁火枪手",
-			["npcID"] = 6523,
-		},
-		[64688] = {
-			["encounterName"] = "欧尔莉亚",
-			["source"] = "欧尔莉亚",
-			["npcID"] = 33515,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 750,
-		},
-		[24208] = {
-			["encounterName"] = "高阶祭司塞卡尔",
-			["source"] = "狂热者洛卡恩",
-			["npcID"] = 11347,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 789,
-		},
-		[10326] = {
-			["source"] = "银色北伐军战士",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28029,
-		},
-		[56632] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "安卡哈织网者",
-			["npcID"] = 30276,
-		},
-		[67229] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "银色女祭司",
-			["npcID"] = 35307,
-		},
-		[61923] = {
-			["encounterName"] = "霍迪尔",
-			["source"] = "战斗祭司伊莉莎",
-			["npcID"] = 32948,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 751,
-		},
-		[59381] = {
-			["encounterName"] = "魔网守护者埃雷苟斯",
-			["source"] = "魔网守护者埃雷苟斯",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27656,
-		},
-		[64944] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "大厅监督者",
-			["npcID"] = 34197,
-		},
-		[59377] = {
-			["encounterName"] = "法师领主伊洛姆",
-			["source"] = "法师领主伊洛姆",
-			["encounterID"] = 532,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27655,
-		},
-		[60916] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "阿尔卡冯守卫者",
-			["npcID"] = 32353,
-		},
-		[59376] = {
-			["encounterName"] = "法师领主伊洛姆",
-			["source"] = "法师领主伊洛姆",
-			["encounterID"] = 532,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27655,
-		},
-		[65801] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "努兹尔·啸钉",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34468,
-		},
-		[58966] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "达卡莱作战骑兵",
-			["npcID"] = 29836,
-		},
-		[55625] = {
-			["source"] = "达卡莱猎神者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29820,
-		},
-		[64145] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "重压触须",
-			["npcID"] = 33966,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[62131] = {
-			["encounterName"] = "托里姆",
-			["source"] = "托里姆",
-			["npcID"] = 32865,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[7162] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "马拉奇修士",
-			["npcID"] = 5661,
-		},
-		[66046] = {
-			["encounterName"] = "瓦格里双子",
-			["source"] = "光明邪使菲奥拉",
-			["encounterID"] = 641,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34497,
-		},
-		[41572] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "野蛮的始祖幼龙",
-			["npcID"] = 31265,
-		},
-		[55098] = {
-			["encounterName"] = "莫拉比",
-			["source"] = "莫拉比",
-			["npcID"] = 29305,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 387,
-		},
-		[59372] = {
-			["encounterName"] = "瓦尔洛斯·云击",
-			["source"] = "瓦尔洛斯·云击",
-			["encounterID"] = 530,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27447,
-		},
-		[59254] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "伊米亚通灵师",
-			["npcID"] = 28368,
-		},
-		[59370] = {
-			["encounterName"] = "审讯者达库斯",
-			["source"] = "审讯者达库斯",
-			["encounterID"] = 528,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27654,
-		},
-		[38858] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "破碎残阳射手",
-			["npcID"] = 24938,
-		},
-		[38047] = {
-			["source"] = "碧蓝缚法者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27635,
-		},
-		[39945] = {
-			["source"] = "战歌萨满祭司",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27678,
-		},
-		[64529] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "巨兽二型",
-			["encounterID"] = 754,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34071,
-		},
-		[59212] = {
-			["source"] = "碧蓝缚法者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27635,
-		},
-		[65876] = {
-			["encounterName"] = "瓦格里双子",
-			["source"] = "光明邪使菲奥拉",
-			["encounterID"] = 641,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34497,
-		},
-		[66054] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "萨缪尔",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34470,
-		},
-		[50335] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "恩其拉憎恶",
-			["npcID"] = 25383,
-		},
-		[56505] = {
-			["encounterName"] = "玛里苟斯",
-			["source"] = "玛里苟斯",
-			["encounterID"] = 734,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28859,
-		},
-		[65875] = {
-			["encounterName"] = "瓦格里双子",
-			["source"] = "黑暗邪使艾蒂丝",
-			["encounterID"] = 641,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34496,
-		},
-		[59638] = {
-			["encounterName"] = "烈焰巨兽",
-			["source"] = "镜像",
-			["npcID"] = 31216,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 744,
-		},
-		[48894] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "达卡莱萨满祭司",
-			["npcID"] = 26639,
-		},
-		[50495] = {
-			["source"] = "法师领主伊洛姆",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27655,
-		},
-		[59734] = {
-			["encounterName"] = "掠夺者因格瓦尔",
-			["source"] = "劫掠者因格瓦尔",
-			["npcID"] = 23954,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 575,
-		},
-		[52889] = {
-			["source"] = "鳄鱼人猎手瑟匹克",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28216,
-		},
-		[66336] = {
-			["encounterName"] = "加拉克苏斯大王",
-			["source"] = "痛苦女王",
-			["encounterID"] = 633,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34826,
-		},
-		[65809] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "塞瑞莎·术轮",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34474,
-		},
-		[15493] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "红衣信使",
-			["npcID"] = 12337,
-		},
-		[55802] = {
-			["encounterName"] = "克尔苏加德",
-			["source"] = "克尔苏加德",
-			["encounterID"] = 1114,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 15990,
-		},
-		[59211] = {
-			["source"] = "碧蓝魔环卫士",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27638,
-		},
-		[12470] = {
-			["source"] = "强力火元素",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 15438,
-		},
-		[58967] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "达卡莱作战骑兵",
-			["npcID"] = 29836,
-		},
-		[20820] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "斯崔特主教",
-			["npcID"] = 27246,
-		},
-		[48801] = {
-			["source"] = "北伐军领主达尔弗斯",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31003,
-		},
-		[68958] = {
-			["encounterName"] = "奥妮克希亚",
-			["source"] = "奥妮克希亚巢穴守卫",
-			["encounterID"] = 1084,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 36561,
-		},
-		[15228] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "白须地占师",
-			["npcID"] = 11604,
-		},
-		[6358] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "埃勒利亚娜",
-			["npcID"] = 1863,
-		},
-		[14034] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "战歌要塞法师",
-			["npcID"] = 25420,
-		},
-		[59223] = {
-			["encounterName"] = "法师领主伊洛姆",
-			["source"] = "幻影穿云者",
-			["encounterID"] = 532,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27645,
-		},
-		[61269] = {
-			["source"] = "鳞誓精英",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32534,
-		},
-		[21971] = {
-			["source"] = "阿努巴尔荒芜兽",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26607,
-		},
-		[51103] = {
-			["encounterName"] = "法师领主伊洛姆",
-			["source"] = "法师领主伊洛姆",
-			["encounterID"] = 532,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27655,
-		},
-		[66055] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "萨缪尔",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34470,
-		},
-		[65812] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "塞瑞莎·术轮",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34474,
-		},
-		[61461] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "冰霜使者",
-			["npcID"] = 30286,
-		},
-		[413172] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "不朽的重压触须",
-			["npcID"] = 206038,
-		},
-		[66821] = {
-			["encounterName"] = "诺森德猛兽",
-			["source"] = "恐鳞",
-			["encounterID"] = 629,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34799,
-		},
-		[66313] = {
-			["encounterName"] = "诺森德猛兽",
-			["source"] = "雪地狗头人奴隶",
-			["encounterID"] = 629,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34800,
-		},
-		[34984] = {
-			["source"] = "盘牙鳐",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 21128,
-		},
-		[68959] = {
-			["encounterName"] = "奥妮克希亚",
-			["source"] = "奥妮克希亚巢穴守卫",
-			["encounterID"] = 1084,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 36561,
-		},
-		[59575] = {
-			["encounterName"] = "斯卡瓦尔德和达尔隆",
-			["source"] = "控制者达尔隆",
-			["encounterID"] = 573,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 24201,
-		},
-		[59855] = {
-			["encounterName"] = "召唤者诺沃斯",
-			["source"] = "召唤者诺沃斯",
-			["npcID"] = 26631,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 371,
-		},
-		[59469] = {
-			["encounterName"] = "拉文索尔",
-			["source"] = "拉文索尔",
-			["npcID"] = 29312,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 2662,
-		},
-		[50496] = {
-			["source"] = "法师领主伊洛姆",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27655,
-		},
-		[63795] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["npcID"] = 33134,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[55643] = {
-			["source"] = "废墟居民",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29920,
-		},
-		[18431] = {
-			["encounterName"] = "奥妮克希亚",
-			["source"] = "奥妮克希亚",
-			["encounterID"] = 1084,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10184,
-		},
-		[57753] = {
-			["source"] = "黑岩烈焰法师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30681,
-		},
-		[52886] = {
-			["source"] = "鳄鱼人猎手瑟匹克",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28216,
-		},
-		[59863] = {
-			["encounterName"] = "远古法庭",
-			["source"] = "黑暗符文唤雷者",
-			["npcID"] = 27984,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 567,
-		},
-		[65866] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "阿莱希娅·月行者",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34467,
-		},
-		[61973] = {
-			["encounterName"] = "钢铁议会",
-			["source"] = "符文大师莫尔基姆",
-			["npcID"] = 32927,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 748,
-		},
-		[61730] = {
-			["source"] = "冰原徒工",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26705,
-		},
-		[67745] = {
-			["encounterName"] = "黑骑士",
-			["source"] = "黑骑士",
-			["npcID"] = 35451,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 340,
-		},
-		[55931] = {
-			["encounterName"] = "塔达拉姆王子",
-			["source"] = "塔达拉姆王子",
-			["npcID"] = 29308,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 213,
-		},
-		[65279] = {
-			["encounterName"] = "风暴看守者埃玛尔隆",
-			["source"] = "风暴看守者埃玛尔隆",
-			["npcID"] = 33993,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 774,
-		},
-		[61515] = {
-			["source"] = "坚钢唤天者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28580,
-		},
-		[67534] = {
-			["encounterName"] = "总冠军",
-			["source"] = "克罗索斯",
-			["npcID"] = 34701,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 334,
-		},
-		[18327] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "安娜丝塔丽男爵夫人",
-			["npcID"] = 10436,
-		},
-		[59160] = {
-			["source"] = "雷铸医师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28582,
-		},
-		[47939] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "辛克的伐木机",
-			["npcID"] = 27061,
-		},
-		[54102] = {
-			["encounterName"] = "谢沃兹",
-			["source"] = "谢沃兹",
-			["npcID"] = 29266,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 2661,
-		},
-		[16997] = {
-			["source"] = "石翼尖啸者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10409,
-		},
-		[11820] = {
-			["source"] = "因度雷渔夫",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26343,
-		},
-		[15869] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "达卡莱巫医",
-			["npcID"] = 27555,
-		},
-		[9739] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "幽灵先知",
-			["npcID"] = 25351,
-		},
-		[66683] = {
-			["encounterName"] = "诺森德猛兽",
-			["source"] = "冰吼",
-			["encounterID"] = 629,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34797,
-		},
-		[59416] = {
-			["encounterName"] = "暴龙之王爵德",
-			["source"] = "暴龙之王爵德",
-			["npcID"] = 27483,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 373,
-		},
-		[65490] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "布瑞娜·沉夜",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34473,
-		},
-		[33805] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "蛮锤斥候",
-			["npcID"] = 19384,
-		},
-		[32914] = {
-			["source"] = "血孢巨蛾",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25464,
-		},
-		[61590] = {
-			["source"] = "传送门看护者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30893,
-		},
-		[56969] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "碧蓝缚鳞者",
-			["npcID"] = 26735,
-		},
-		[56539] = {
-			["source"] = "被解救的北伐军战士",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30274,
-		},
-		[33642] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "米尔格隆·高山",
-			["npcID"] = 18969,
-		},
-		[61909] = {
-			["encounterName"] = "霍迪尔",
-			["source"] = "维莎·织焰",
-			["npcID"] = 32946,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 751,
-		},
-		[67322] = {
-			["encounterName"] = "阿努巴拉克",
-			["source"] = "蛛魔掘地者",
-			["encounterID"] = 645,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34607,
-		},
-		[8800] = {
-			["source"] = "风险投资公司露天矿工",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 674,
-		},
-		[51584] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "冰雪亡魂",
-			["npcID"] = 26283,
-		},
-		[59800] = {
-			["encounterName"] = "艾欧纳尔",
-			["source"] = "艾欧纳尔",
-			["npcID"] = 28546,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 559,
-		},
-		[60227] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "掠龙战略家",
-			["npcID"] = 23956,
-		},
-		[62933] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "石树长老",
-			["npcID"] = 32914,
-		},
-		[66532] = {
-			["encounterName"] = "加拉克苏斯大王",
-			["source"] = "加拉克苏斯大王",
-			["encounterID"] = 633,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34780,
-		},
-		[62997] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "巨兽二型",
-			["npcID"] = 34071,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 754,
-		},
-		[15497] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "荒土奴隶",
-			["npcID"] = 17963,
-		},
-		[51808] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "魔导师凯尔多努斯",
-			["npcID"] = 26828,
-		},
-		[59001] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "复活的达卡莱训练者",
-			["npcID"] = 26637,
-		},
-		[22883] = {
-			["source"] = "哈卡祭司",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 11830,
-		},
-		[11969] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "血顶萨满祭司",
-			["npcID"] = 697,
-		},
-		[52761] = {
-			["source"] = "鳄鱼人猎手瑟匹克",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28668,
-		},
-		[48878] = {
-			["encounterName"] = "暴龙之王爵德",
-			["source"] = "暴龙之王爵德",
-			["npcID"] = 27483,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 373,
-		},
-		[58053] = {
-			["source"] = "圣洁十字军",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30189,
-		},
-		[55101] = {
-			["encounterName"] = "莫拉比",
-			["source"] = "莫拉比",
-			["encounterID"] = 387,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29305,
-		},
-		[63317] = {
-			["encounterName"] = "锋鳞",
-			["event"] = "SPELL_CAST_START",
-			["source"] = "锋鳞",
-			["npcID"] = 33186,
-		},
-		[59257] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "碧蓝破法者",
-			["npcID"] = 31009,
-		},
-		[59225] = {
-			["encounterName"] = "法师领主伊洛姆",
-			["source"] = "幻影火元素",
-			["encounterID"] = 532,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27651,
-		},
-		[49091] = {
-			["encounterName"] = "残忍的斯卡迪",
-			["event"] = "SPELL_CAST_START",
-			["source"] = "伊米亚标枪手",
-			["npcID"] = 26692,
-		},
-		[15530] = {
-			["source"] = "残忍的阿图里斯",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28659,
-		},
-		[58980] = {
-			["source"] = "达卡莱医师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29826,
-		},
-		[58948] = {
-			["source"] = "黑岩圣殿卫士",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30453,
-		},
-		[63541] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "雷暴锻铸守护者",
-			["npcID"] = 33722,
-		},
-		[9004] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "阿什兰·暗石",
-			["npcID"] = 1073,
-		},
-		[32330] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "暗网隐藏者",
-			["npcID"] = 26625,
-		},
-		[61591] = {
-			["source"] = "传送门看护者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30893,
-		},
-		[56508] = {
-			["source"] = "被驯服的冰虫",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30301,
-		},
-		[66725] = {
-			["encounterName"] = "火焰看守者科拉隆",
-			["source"] = "火焰看守者科拉隆",
-			["npcID"] = 35013,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 776,
-		},
-		[55815] = {
-			["encounterName"] = "凶残的伊克",
-			["source"] = "凶残的伊克",
-			["encounterID"] = 1988,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29932,
-		},
-		[52758] = {
-			["source"] = "鳄鱼人猎手瑟匹克",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28216,
-		},
-		[36176] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "银色女祭司",
-			["npcID"] = 35307,
-		},
-		[46406] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "埃霍恩的寒浪战士",
-			["npcID"] = 25756,
-		},
-		[59255] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "伊米亚通灵师",
-			["npcID"] = 28368,
-		},
-		[64021] = {
-			["encounterName"] = "锋鳞",
-			["source"] = "锋鳞",
-			["npcID"] = 33186,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 746,
-		},
-		[61879] = {
-			["encounterName"] = "钢铁议会",
-			["source"] = "唤雷者布隆迪尔",
-			["npcID"] = 32857,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 748,
-		},
-		[51681] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "阿努巴尔蛛魔领主",
-			["npcID"] = 26605,
-		},
-		[50690] = {
-			["source"] = "碧蓝审讯者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27633,
-		},
-		[15254] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "破坏者奥科索尔",
-			["npcID"] = 9030,
-		},
-		[16565] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "安娜丝塔丽男爵夫人",
-			["npcID"] = 10436,
-		},
-		[54878] = {
-			["encounterName"] = "达卡莱巨像",
-			["source"] = "达卡莱元素",
-			["npcID"] = 29573,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 385,
-		},
-		[59368] = {
-			["encounterName"] = "看门者克里克希尔",
-			["source"] = "看门者克里克希尔",
-			["encounterID"] = 216,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28684,
-		},
-		[50476] = {
-			["source"] = "法师领主伊洛姆",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27655,
-		},
-		[63666] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "巨兽二型",
-			["npcID"] = 34071,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 754,
-		},
-		[32722] = {
-			["source"] = "起泡的腐泥怪",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 16901,
-		},
-		[20821] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "睡梦雏龙",
-			["npcID"] = 741,
-		},
-		[22121] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "霜狼弓箭手",
-			["npcID"] = 13359,
-		},
-		[49987] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "防御坦克66D型",
-			["npcID"] = 25758,
-		},
-		[13323] = {
-			["source"] = "金队法师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32341,
-		},
-		[18392] = {
-			["encounterName"] = "奥妮克希亚",
-			["source"] = "奥妮克希亚",
-			["encounterID"] = 1084,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10184,
-		},
-		[31707] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "水元素",
-			["npcID"] = 510,
-		},
-		[6660] = {
-			["source"] = "杉达拉猎人之魂",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30864,
-		},
-		[65492] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "布瑞娜·沉夜",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34473,
-		},
-		[46982] = {
-			["source"] = "雷铸追踪者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29652,
-		},
-		[28280] = {
-			["source"] = "格罗布鲁斯",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 15931,
-		},
-		[31730] = {
-			["source"] = "恐怖博士",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30404,
-		},
-		[61528] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "闪电构造体",
-			["npcID"] = 27972,
-		},
-		[59514] = {
-			["source"] = "希尔瓦娜斯·风行者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31651,
-		},
-		[56326] = {
-			["source"] = "风暴之子瓦杜兰",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29368,
-		},
-		[62662] = {
-			["encounterName"] = "维扎克斯将军",
-			["source"] = "维扎克斯将军",
-			["npcID"] = 33271,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 755,
-		},
-		[50403] = {
-			["source"] = "废土挖掘者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28005,
-		},
-		[59183] = {
-			["source"] = "自由的火焰风暴",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28584,
-		},
-		[62583] = {
-			["encounterName"] = "托里姆",
-			["source"] = "西芙",
-			["npcID"] = 33196,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[59706] = {
-			["encounterName"] = "掠夺者因格瓦尔",
-			["source"] = "劫掠者因格瓦尔",
-			["npcID"] = 23954,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 575,
-		},
-		[63830] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["npcID"] = 33134,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[51586] = {
-			["source"] = "掠龙灵魂师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28410,
-		},
-		[61558] = {
-			["source"] = "通灵大师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27732,
-		},
-		[62935] = {
-			["encounterName"] = "弗蕾亚",
-			["source"] = "古代水之精魂",
-			["npcID"] = 33202,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 753,
-		},
-		[6728] = {
-			["source"] = "雪盲唤风者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 11675,
-		},
-		[32011] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "斯卡德尔",
-			["npcID"] = 25226,
-		},
-		[45608] = {
-			["source"] = "灵语者斯纳尔芬",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25339,
-		},
-		[37488] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "魔法禁锢的恐惧卫士",
-			["npcID"] = 21908,
-		},
-		[67751] = {
-			["encounterName"] = "黑骑士",
-			["source"] = "黑骑士",
-			["npcID"] = 35451,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 340,
-		},
-		[47731] = {
-			["encounterName"] = "大魔导师泰蕾丝塔",
-			["source"] = "大魔导师泰蕾丝塔",
-			["npcID"] = 26929,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 520,
-		},
-		[48294] = {
-			["encounterName"] = "伊米隆国王",
-			["source"] = "伊米隆国王",
-			["npcID"] = 26861,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 583,
-		},
-		[57061] = {
-			["encounterName"] = "埃曼尼塔",
-			["source"] = "有毒的蘑菇",
-			["npcID"] = 30435,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 1989,
-		},
-		[55007] = {
-			["source"] = "雷铸追击者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29696,
-		},
-		[51203] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "钻雪虫",
-			["npcID"] = 26360,
-		},
-		[65301] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["encounterID"] = 756,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33134,
-		},
-		[62488] = {
-			["encounterName"] = "掌炉者伊格尼斯",
-			["source"] = "掌炉者伊格尼斯",
-			["npcID"] = 33118,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 745,
-		},
-		[7799] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "匹普尼克",
-			["npcID"] = 416,
-		},
-		[46983] = {
-			["source"] = "大型水元素",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25040,
-		},
-		[61337] = {
-			["encounterName"] = "谢沃兹",
-			["source"] = "谢沃兹",
-			["npcID"] = 29266,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 2661,
-		},
-		[9532] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "冬鳞智者",
-			["npcID"] = 25216,
-		},
-		[37361] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "骷髅守护者",
-			["npcID"] = 10390,
-		},
-		[66537] = {
-			["encounterName"] = "银色勇士",
-			["source"] = "银色神官帕尔崔丝",
-			["npcID"] = 34928,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 338,
-		},
-		[33844] = {
-			["source"] = "自由的古树",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30861,
-		},
-		[66665] = {
-			["encounterName"] = "火焰看守者科拉隆",
-			["source"] = "火焰看守者科拉隆",
-			["npcID"] = 35013,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 776,
-		},
-		[31516] = {
-			["source"] = "影月侍僧",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 16594,
-		},
-		[59515] = {
-			["source"] = "希尔瓦娜斯·风行者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31651,
-		},
-		[49317] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "碧蓝幼龙",
-			["npcID"] = 27682,
-		},
-		[60954] = {
-			["source"] = "布莉塔",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30484,
-		},
-		[62680] = {
-			["encounterName"] = "掌炉者伊格尼斯",
-			["source"] = "掌炉者伊格尼斯",
-			["npcID"] = 33118,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 745,
-		},
-		[59643] = {
-			["source"] = "布拉斯的跳跃机器人",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31785,
-		},
-		[7855] = {
-			["source"] = "尤尔丁控水师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30632,
-		},
-		[62776] = {
-			["encounterName"] = "XT-002拆解者",
-			["source"] = "XT-002拆解者",
-			["npcID"] = 33293,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 747,
-		},
-		[55814] = {
-			["encounterName"] = "凶残的伊克",
-			["source"] = "凶残的伊克",
-			["encounterID"] = 1988,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29932,
-		},
-		[51587] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "掠龙灵魂师",
-			["npcID"] = 28410,
-		},
-		[64918] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "铁矮人修理工",
-			["npcID"] = 34198,
-		},
-		[59835] = {
-			["encounterName"] = "洛肯",
-			["source"] = "洛肯",
-			["npcID"] = 28923,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 561,
-		},
-		[46568] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "埃霍恩的冰风战士",
-			["npcID"] = 25757,
-		},
-		[66538] = {
-			["encounterName"] = "银色勇士",
-			["source"] = "银色神官帕尔崔丝",
-			["npcID"] = 34928,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 338,
-		},
-		[52770] = {
-			["encounterName"] = "艾欧纳尔",
-			["source"] = "艾欧纳尔",
-			["npcID"] = 28546,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 559,
-		},
-		[59963] = {
-			["encounterName"] = "先知萨隆亚",
-			["source"] = "先知萨隆亚",
-			["npcID"] = 26632,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 375,
-		},
-		[58972] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "达卡莱织火者",
-			["npcID"] = 29822,
-		},
-		[66794] = {
-			["encounterName"] = "诺森德猛兽",
-			["source"] = "酸喉",
-			["encounterID"] = 629,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 35144,
-		},
-		[51779] = {
-			["source"] = "莎拉苟萨",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26232,
-		},
-		[61965] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "黑暗符文助手",
-			["npcID"] = 32886,
-		},
-		[17290] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "法师猎手军官",
-			["npcID"] = 26727,
-		},
-		[45577] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "尼鲁巴尔遮天者",
-			["npcID"] = 25451,
-		},
-		[59346] = {
-			["source"] = "阿努巴尔碾压者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28922,
-		},
-		[63891] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["npcID"] = 33134,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[60936] = {
-			["encounterName"] = "玛里苟斯",
-			["source"] = "玛里苟斯",
-			["encounterID"] = 734,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28859,
-		},
-		[59260] = {
-			["encounterName"] = "法师领主伊洛姆",
-			["source"] = "幻影纳迦",
-			["encounterID"] = 532,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27648,
-		},
-		[61338] = {
-			["encounterName"] = "谢沃兹",
-			["source"] = "谢沃兹",
-			["npcID"] = 29266,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 2661,
-		},
-		[9672] = {
-			["source"] = "蓝玉巫师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25316,
-		},
-		[61402] = {
-			["source"] = "魔环领主巫师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27639,
-		},
-		[17434] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "瑞文戴尔男爵",
-			["npcID"] = 10440,
-		},
-		[64535] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "空中指挥单位",
-			["encounterID"] = 754,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33670,
-		},
-		[64759] = {
-			["encounterName"] = "锋鳞",
-			["source"] = "黑暗符文哨兵",
-			["npcID"] = 33453,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 746,
-		},
-		[64599] = {
-			["encounterName"] = "观察者奥尔加隆",
-			["source"] = "有生命的星座",
-			["encounterID"] = 757,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33052,
-		},
-		[61562] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "暮光黑暗法师",
-			["npcID"] = 30319,
-		},
-		[61594] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "传送门看护者",
-			["npcID"] = 30695,
-		},
-		[62649] = {
-			["encounterName"] = "弗蕾亚",
-			["source"] = "风暴鞭笞者",
-			["npcID"] = 32919,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 753,
-		},
-		[52451] = {
-			["encounterName"] = "塑血者沙尔拉姆",
-			["source"] = "塑血者沙尔拉姆",
-			["encounterID"] = 294,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26530,
-		},
-		[7979] = {
-			["source"] = "风险投资公司修理工",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 677,
-		},
-		[52969] = {
-			["source"] = "亚鲁乌特",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28121,
-		},
-		[59708] = {
-			["encounterName"] = "掠夺者因格瓦尔",
-			["source"] = "劫掠者因格瓦尔",
-			["npcID"] = 23954,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 575,
-		},
-		[16587] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "邪恶导师",
-			["npcID"] = 8548,
-		},
-		[52611] = {
-			["source"] = "通灵大师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27732,
-		},
-		[50379] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "天灾复活者",
-			["npcID"] = 26626,
-		},
-		[58973] = {
-			["source"] = "达卡莱猎神者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29820,
-		},
-		[20823] = {
-			["source"] = "风险投资公司修理工",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 677,
-		},
-		[45578] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "战歌射手",
-			["npcID"] = 25244,
-		},
-		[19816] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "卡加尼舒",
-			["npcID"] = 25427,
-		},
-		[20791] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "燃刃术士",
-			["npcID"] = 11324,
-		},
-		[62042] = {
-			["encounterName"] = "托里姆",
-			["source"] = "托里姆",
-			["npcID"] = 32865,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[66796] = {
-			["encounterName"] = "诺森德猛兽",
-			["source"] = "恐鳞",
-			["encounterID"] = 629,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34799,
-		},
-		[42669] = {
-			["encounterName"] = "掠夺者因格瓦尔",
-			["source"] = "劫掠者因格瓦尔",
-			["npcID"] = 23954,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 575,
-		},
-		[62324] = {
-			["encounterName"] = "烈焰巨兽",
-			["source"] = "被修复的攻城车",
-			["npcID"] = 33109,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 744,
-		},
-		[62932] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "石树长老",
-			["npcID"] = 32914,
-		},
-		[11986] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "飘雪林地萨满祭司",
-			["npcID"] = 26201,
-		},
-		[59347] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "阿努巴尔地穴魔",
-			["npcID"] = 29097,
-		},
-		[59016] = {
-			["encounterName"] = "召唤者诺沃斯",
-			["source"] = "复活的暗影法师",
-			["npcID"] = 27600,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 371,
-		},
-		[59856] = {
-			["encounterName"] = "召唤者诺沃斯",
-			["source"] = "召唤者诺沃斯",
-			["npcID"] = 26631,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 371,
-		},
-		[56860] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "法师猎手新兵",
-			["npcID"] = 26728,
-		},
-		[61339] = {
-			["encounterName"] = "谢沃兹",
-			["source"] = "谢沃兹",
-			["encounterID"] = 2661,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29266,
-		},
-		[59266] = {
-			["encounterName"] = "法师领主伊洛姆",
-			["source"] = "幻影水元素",
-			["encounterID"] = 532,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27653,
-		},
-		[59357] = {
-			["encounterName"] = "看门者克里克希尔",
-			["source"] = "阿努巴尔暗影法师",
-			["npcID"] = 28733,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 216,
-		},
-		[57407] = {
-			["encounterName"] = "玛里苟斯",
-			["source"] = "玛里苟斯",
-			["encounterID"] = 734,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28859,
-		},
-		[64536] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "VX-001",
-			["encounterID"] = 754,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33651,
-		},
-		[8997] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "黑铁火枪手",
-			["npcID"] = 6523,
-		},
-		[56504] = {
-			["source"] = "被驯服的冰虫",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30301,
-		},
-		[59517] = {
-			["source"] = "萨尔",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31650,
-		},
-		[63147] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["npcID"] = 33134,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[64696] = {
-			["encounterName"] = "锋鳞",
-			["source"] = "黑暗符文哨兵",
-			["npcID"] = 33453,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 746,
-		},
-		[30481] = {
-			["source"] = "碎手狙击者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 16704,
-		},
-		[55633] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "达卡莱魔像",
-			["npcID"] = 29832,
-		},
-		[9053] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "暗炉农夫",
-			["npcID"] = 8896,
-		},
-		[56402] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "冰鬃雪人",
-			["npcID"] = 29875,
-		},
-		[63134] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["npcID"] = 33134,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[46824] = {
-			["source"] = "克莉斯塔萨",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26206,
-		},
-		[59006] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "达卡莱萨满祭司",
-			["npcID"] = 26639,
-		},
-		[65084] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "XB-488清理机器人",
-			["npcID"] = 34273,
-		},
-		[62938] = {
-			["encounterName"] = "弗蕾亚",
-			["source"] = "风暴鞭笞者",
-			["encounterID"] = 753,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32919,
-		},
-		[51877] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "冷风女巫",
-			["npcID"] = 26577,
-		},
-		[17195] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "被束缚的火元素",
-			["npcID"] = 30416,
-		},
-		[65647] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "空中指挥单位",
-			["npcID"] = 33670,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 754,
-		},
-		[59997] = {
-			["encounterName"] = "传令官沃拉兹",
-			["source"] = "扭曲之容",
-			["npcID"] = 30625,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 215,
-		},
-		[66798] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "黑骑士",
-			["npcID"] = 35451,
-		},
-		[59038] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "闪电构造体",
-			["npcID"] = 27972,
-		},
-		[64153] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "腐蚀触须",
-			["npcID"] = 33985,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[59102] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "安卡哈爆法者",
-			["npcID"] = 30278,
-		},
-		[63226] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "生命的卫士",
-			["npcID"] = 33528,
-		},
-		[5106] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "铁腭蜥蜴",
-			["npcID"] = 1551,
-		},
-		[57088] = {
-			["encounterName"] = "埃曼尼塔",
-			["source"] = "埃曼尼塔",
-			["npcID"] = 30258,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 1989,
-		},
-		[56934] = {
-			["encounterName"] = "大魔导师泰蕾丝塔",
-			["source"] = "大魔导师泰蕾丝塔",
-			["npcID"] = 26731,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 520,
-		},
-		[49712] = {
-			["source"] = "布莉塔",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30484,
-		},
-		[17435] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "瑞文戴尔男爵",
-			["npcID"] = 10440,
-		},
-		[62395] = {
-			["encounterName"] = "烈焰巨兽",
-			["source"] = "烈焰巨兽炮台",
-			["npcID"] = 33139,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 744,
-		},
-		[59745] = {
-			["encounterName"] = "祖拉玛特",
-			["source"] = "湮灭者祖拉玛特",
-			["encounterID"] = 2663,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29314,
-		},
-		[50183] = {
-			["source"] = "“银月”哈瑞",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 24539,
-		},
-		[64537] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "VX-001",
-			["encounterID"] = 754,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33651,
-		},
-		[48201] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "药剂师薇吉·莱文",
-			["npcID"] = 27248,
-		},
-		[65648] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "空中指挥单位",
-			["encounterID"] = 754,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33670,
-		},
-		[64152] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "腐蚀触须",
-			["npcID"] = 33985,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[62859] = {
-			["encounterName"] = "弗蕾亚",
-			["source"] = "弗蕾亚",
-			["npcID"] = 32906,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 753,
-		},
-		[50375] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "蒸汽狂怒者",
-			["npcID"] = 24601,
-		},
-		[46315] = {
-			["source"] = "雄性长毛猛犸象",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25743,
-		},
-		[45324] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "国王姆嘎姆嘎",
-			["npcID"] = 25197,
-		},
-		[51494] = {
-			["source"] = "黑暗符文巨人",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27969,
-		},
-		[64825] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "大厅监督者",
-			["npcID"] = 34197,
-		},
-		[67247] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "银色圣光支配者",
-			["npcID"] = 35309,
-		},
-		[59617] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "掠龙符文法师",
-			["npcID"] = 23960,
-		},
-		[51622] = {
-			["source"] = "影怒者西诺克",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26771,
-		},
-		[23381] = {
-			["source"] = "牦牛人风怒者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27571,
-		},
-		[45580] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "犸格莫斯火焰图腾",
-			["npcID"] = 25444,
-		},
-		[30990] = {
-			["encounterName"] = "血卫士伯鲁恩",
-			["source"] = "碎手弓箭手",
-			["encounterID"] = 1935,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 17427,
-		},
-		[49704] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "暗网隐藏者",
-			["npcID"] = 26625,
-		},
-		[20792] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "魔法上尉艾米·马林",
-			["npcID"] = 26762,
-		},
-		[12466] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "精锐法师猎手",
-			["npcID"] = 30665,
-		},
-		[60030] = {
-			["encounterName"] = "耶戈达·觅影者",
-			["source"] = "耶戈达·觅影者",
-			["npcID"] = 29310,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 214,
-		},
-		[32093] = {
-			["source"] = "帝王眼镜蛇",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28011,
-		},
-		[17883] = {
-			["source"] = "盘牙观察者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 17938,
-		},
-		[48873] = {
-			["encounterName"] = "暴龙之王爵德",
-			["source"] = "暴龙之王爵德",
-			["npcID"] = 27483,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 373,
-		},
-		[60158] = {
-			["source"] = "碧蓝袭击者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30668,
-		},
-		[59167] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "雷怒亡魂",
-			["npcID"] = 28826,
-		},
-		[32173] = {
-			["source"] = "盘牙魔法师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 17961,
-		},
-		[29120] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "荣耀堡弓箭手",
-			["npcID"] = 16896,
-		},
-		[46987] = {
-			["source"] = "巴琳达·斯通赫尔斯",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 11949,
-		},
-		[22334] = {
-			["source"] = "天灾攻城锻造师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27410,
-		},
-		[64654] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "寒冬滚石",
-			["npcID"] = 34135,
-		},
-		[59359] = {
-			["encounterName"] = "阿努巴拉克",
-			["source"] = "阿努巴尔制毒师",
-			["npcID"] = 29217,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 218,
-		},
-		[49161] = {
-			["source"] = "龙眠神殿防御者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27629,
-		},
-		[50405] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "腐烂的风暴巨人",
-			["npcID"] = 27270,
-		},
-		[64570] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "巨兽二型",
-			["npcID"] = 33432,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 754,
-		},
-		[52080] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "裂骨者",
-			["npcID"] = 27006,
-		},
-		[59519] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "萨尔",
-			["npcID"] = 31650,
-		},
-		[58701] = {
-			["source"] = "灼热图腾 IX",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31164,
-		},
-		[59965] = {
-			["encounterName"] = "先知萨隆亚",
-			["source"] = "先知萨隆亚",
-			["npcID"] = 26632,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 375,
-		},
-		[60667] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "霜巢天爪龙",
-			["npcID"] = 31137,
-		},
-		[62872] = {
-			["encounterName"] = "弗蕾亚",
-			["source"] = "弗蕾亚",
-			["encounterID"] = 753,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32906,
-		},
-		[57665] = {
-			["source"] = "恐怖之水",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30645,
-		},
-		[50504] = {
-			["source"] = "奥术浮蛇",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25721,
-		},
-		[55077] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "野蛮的座狼",
-			["npcID"] = 29735,
-		},
-		[36631] = {
-			["source"] = "魔枢雏龙",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26127,
-		},
-		[55715] = {
-			["source"] = "土灵精英",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29980,
-		},
-		[59839] = {
-			["encounterName"] = "斯拉德兰",
-			["source"] = "斯拉德兰",
-			["npcID"] = 29304,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 383,
-		},
-		[9613] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "恩其拉通灵师",
-			["npcID"] = 25378,
-		},
-		[34232] = {
-			["source"] = "高等精灵魔法祭司",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27747,
-		},
-		[51879] = {
-			["source"] = "掘洞冰虫",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26467,
-		},
-		[64059] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "尤格-萨隆的大脑",
-			["npcID"] = 33890,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[20297] = {
-			["source"] = "霜颅大法师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31813,
-		},
-		[54916] = {
-			["source"] = "灵鳍神谕者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28112,
-		},
-		[15799] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "战歌上尉",
-			["npcID"] = 25446,
-		},
-		[65210] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "米米尔隆",
-			["encounterID"] = 756,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33412,
-		},
-		[116] = {
-			["npcID"] = 188027,
-		},
-		[64156] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "腐蚀触须",
-			["npcID"] = 33985,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[65147] = {
-			["source"] = "奥格瑞玛冠军",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 33744,
-		},
-		[15575] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "怒锤傀儡",
-			["npcID"] = 8907,
-		},
-		[20825] = {
-			["source"] = "骷髅侍僧",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 1789,
-		},
-		[46988] = {
-			["source"] = "巴琳达·斯通赫尔斯",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 11949,
-		},
-		[51112] = {
-			["encounterName"] = "法师领主伊洛姆",
-			["source"] = "法师领主伊洛姆",
-			["encounterID"] = 532,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27655,
-		},
-		[64443] = {
-			["encounterName"] = "观察者奥尔加隆",
-			["source"] = "观察者奥尔加隆",
-			["encounterID"] = 757,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32871,
-		},
-		[56862] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "被束缚的水元素",
-			["npcID"] = 30419,
-		},
-		[63802] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "萨拉",
-			["npcID"] = 33134,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[51240] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "复活的达卡莱死亡骑士",
-			["npcID"] = 26830,
-		},
-		[46317] = {
-			["source"] = "雄性长毛猛犸象",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25743,
-		},
-		[60511] = {
-			["source"] = "吉安娜·普罗德摩尔",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31418,
-		},
-		[51336] = {
-			["encounterName"] = "审讯者达库斯",
-			["source"] = "审讯者达库斯",
-			["encounterID"] = 528,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27654,
-		},
-		[66867] = {
-			["encounterName"] = "银色勇士",
-			["source"] = "纯洁者耶德瑞克",
-			["npcID"] = 35119,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 338,
-		},
-		[62653] = {
-			["encounterName"] = "弗蕾亚",
-			["source"] = "古代水之精魂",
-			["npcID"] = 33202,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 753,
-		},
-		[59616] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "掠龙符文法师",
-			["npcID"] = 23960,
-		},
-		[25748] = {
-			["source"] = "收割者伊斯里克斯",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25453,
-		},
-		[66100] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "安塔尔·缮炉者",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34466,
-		},
-		[64215] = {
-			["encounterName"] = "风暴看守者埃玛尔隆",
-			["source"] = "风暴看守者埃玛尔隆",
-			["npcID"] = 33993,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 774,
-		},
-		[62601] = {
-			["encounterName"] = "托里姆",
-			["source"] = "西芙",
-			["npcID"] = 33196,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[18651] = {
-			["encounterName"] = "托尔戈",
-			["source"] = "怒爪猎人",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29439,
-		},
-		[59807] = {
-			["encounterName"] = "托尔戈",
-			["source"] = "托尔戈",
-			["npcID"] = 26630,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 369,
-		},
-		[58817] = {
-			["source"] = "永恒密探",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27744,
-		},
-		[58849] = {
-			["encounterName"] = "玛尔加尼斯",
-			["source"] = "玛尔加尼斯",
-			["encounterID"] = 296,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26533,
-		},
-		[16429] = {
-			["source"] = "图萨丁暗影法师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10398,
-		},
-		[61513] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "冷酷的构造体",
-			["npcID"] = 27971,
-		},
-		[20793] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "血孢点火者",
-			["npcID"] = 25470,
-		},
-		[28993] = {
-			["source"] = "达莉亚",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27680,
-		},
-		[59009] = {
-			["encounterName"] = "托尔戈",
-			["source"] = "复活的达卡莱蝙蝠骑兵",
-			["npcID"] = 26638,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 369,
-		},
-		[22887] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "古拉巴什掷斧者",
-			["npcID"] = 11350,
-		},
-		[59999] = {
-			["encounterName"] = "传令官沃拉兹",
-			["source"] = "扭曲之容",
-			["npcID"] = 30622,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 215,
-		},
-		[54137] = {
-			["encounterName"] = "谢沃兹",
-			["source"] = "谢沃兹",
-			["encounterID"] = 2661,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29266,
-		},
-		[57091] = {
-			["encounterName"] = "克莉斯塔萨",
-			["source"] = "克莉斯塔萨",
-			["npcID"] = 26723,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 526,
-		},
-		[59169] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "被束缚的气元素",
-			["npcID"] = 30418,
-		},
-		[38356] = {
-			["source"] = "天灾邪能兽",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31528,
-		},
-		[64348] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "VX-001",
-			["npcID"] = 33651,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 754,
-		},
-		[62334] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "黑暗符文助手",
-			["npcID"] = 32886,
-		},
-		[60923] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "阿尔卡冯守卫者",
-			["npcID"] = 32353,
-		},
-		[51806] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "魔导师凯尔多努斯",
-			["npcID"] = 26828,
-		},
-		[55269] = {
-			["source"] = "魔眼",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29747,
-		},
-		[63242] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "红木树人",
-			["npcID"] = 33525,
-		},
-		[15547] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "被遗忘的火枪手",
-			["npcID"] = 27225,
-		},
-		[50832] = {
-			["source"] = "炮兵队长泽尔哈特",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27235,
-		},
-		[33624] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "暴风城法师",
-			["npcID"] = 18949,
-		},
-		[59521] = {
-			["encounterName"] = "艾库隆",
-			["source"] = "艾库隆",
-			["encounterID"] = 2660,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29313,
-		},
-		[11443] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "图萨丁暗影法师",
-			["npcID"] = 10398,
-		},
-		[56837] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "法师猎手军官",
-			["npcID"] = 26727,
-		},
-		[27267] = {
-			["source"] = "阿巴塔尔",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 416,
-		},
-		[51901] = {
-			["source"] = "翡翠鞭笞者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27254,
-		},
-		[62327] = {
-			["encounterName"] = "托里姆",
-			["source"] = "黑暗符文唤魔师",
-			["npcID"] = 32878,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[50506] = {
-			["source"] = "魔缚古树",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25707,
-		},
-		[50538] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "蒸汽鳄鱼人",
-			["npcID"] = 25687,
-		},
-		[57408] = {
-			["source"] = "希弗列尔达风暴之女",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29323,
-		},
-		[63631] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "巨兽二型",
-			["npcID"] = 33432,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 754,
-		},
-		[15232] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "图萨丁暗影法师",
-			["npcID"] = 10398,
-		},
-		[58850] = {
-			["encounterName"] = "玛尔加尼斯",
-			["source"] = "玛尔加尼斯",
-			["encounterID"] = 296,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26533,
-		},
-		[63479] = {
-			["encounterName"] = "钢铁议会",
-			["source"] = "唤雷者布隆迪尔",
-			["npcID"] = 32857,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 748,
-		},
-		[54850] = {
-			["encounterName"] = "达卡莱巨像",
-			["source"] = "达卡莱巨像",
-			["npcID"] = 29307,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 385,
-		},
-		[63038] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "尤格-萨隆的卫士",
-			["npcID"] = 33136,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[48616] = {
-			["source"] = "燃烧深渊通灵侍僧",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27356,
-		},
-		[62328] = {
-			["encounterName"] = "托里姆",
-			["source"] = "黑暗符文唤魔师",
-			["npcID"] = 32878,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[64157] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "腐蚀触须",
-			["npcID"] = 33985,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[64189] = {
-			["encounterName"] = "尤格-萨隆",
-			["source"] = "尤格-萨隆",
-			["npcID"] = 33288,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 756,
-		},
-		[12058] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "战歌上尉",
-			["npcID"] = 25446,
-		},
-		[62344] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "石树长老",
-			["npcID"] = 32914,
-		},
-		[59246] = {
-			["encounterName"] = "残忍的斯卡迪",
-			["event"] = "SPELL_CAST_START",
-			["source"] = "伊米亚巫医",
-			["npcID"] = 26691,
-		},
-		[4962] = {
-			["source"] = "遗忘深渊高阶祭司",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30543,
-		},
-		[47981] = {
-			["encounterName"] = "塑树者奥莫洛克",
-			["source"] = "塑树者奥莫洛克",
-			["npcID"] = 26794,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 524,
-		},
-		[62335] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "黑暗符文助手",
-			["npcID"] = 32886,
-		},
-		[61353] = {
-			["source"] = "女猎手库拉",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 32711,
-		},
-		[61897] = {
-			["source"] = "伊米亚元素师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31267,
-		},
-		[59362] = {
-			["encounterName"] = "哈多诺克斯",
-			["source"] = "阿努巴尔织网者",
-			["npcID"] = 29335,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 217,
-		},
-		[62809] = {
-			["encounterName"] = "霍迪尔",
-			["source"] = "战斗祭司伊莉莎",
-			["npcID"] = 32948,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 751,
-		},
-		[59435] = {
-			["source"] = "瓦里玛萨斯",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31565,
-		},
-		[10277] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "暗矛掷斧者",
-			["npcID"] = 18970,
-		},
-		[37554] = {
-			["source"] = "北伐军领主达尔弗斯",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31003,
-		},
-		[61568] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "暮光膜拜者",
-			["npcID"] = 30111,
-		},
-		[62623] = {
-			["encounterName"] = "弗蕾亚",
-			["source"] = "弗蕾亚",
-			["npcID"] = 32906,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 753,
-		},
-		[66935] = {
-			["encounterName"] = "银色勇士",
-			["source"] = "纯洁者耶德瑞克",
-			["npcID"] = 35119,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 338,
-		},
-		[22937] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "拉扎尔",
-			["npcID"] = 11497,
-		},
-		[54369] = {
-			["encounterName"] = "祖拉玛特",
-			["source"] = "湮灭者祖拉玛特",
-			["encounterID"] = 2663,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29314,
-		},
-		[66104] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "安塔尔·缮炉者",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34466,
-		},
-		[62597] = {
-			["encounterName"] = "托里姆",
-			["source"] = "西芙",
-			["npcID"] = 33196,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[63689] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "空中指挥单位",
-			["npcID"] = 33670,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 754,
-		},
-		[44433] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "斯卡特·弗洛斯普",
-			["npcID"] = 24784,
-		},
-		[59252] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "伊米亚黑暗萨满祭司",
-			["npcID"] = 26694,
-		},
-		[59842] = {
-			["encounterName"] = "斯拉德兰",
-			["source"] = "斯拉德兰",
-			["encounterID"] = 383,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 29304,
-		},
-		[38391] = {
-			["source"] = "瘤皮",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30003,
-		},
-		[66552] = {
-			["encounterName"] = "银色勇士",
-			["source"] = "奥尔加隆的回忆",
-			["npcID"] = 35052,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 338,
-		},
-		[59004] = {
-			["encounterName"] = "召唤者诺沃斯",
-			["source"] = "水晶处理者",
-			["npcID"] = 26627,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 371,
-		},
-		[62016] = {
-			["encounterName"] = "托里姆",
-			["source"] = "托里姆",
-			["npcID"] = 32865,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[32063] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "恩其拉通灵师",
-			["npcID"] = 25378,
-		},
-		[66808] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "烈焰守卫",
-			["npcID"] = 35143,
-		},
-		[59259] = {
-			["source"] = "坚钢狂暴者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28579,
-		},
-		[13748] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "精锐法师猎手",
-			["npcID"] = 30665,
-		},
-		[37624] = {
-			["source"] = "背叛的恐惧魔王",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31531,
-		},
-		[59528] = {
-			["encounterName"] = "沃尔坎",
-			["source"] = "沃尔坎",
-			["npcID"] = 28587,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 557,
-		},
-		[46772] = {
-			["source"] = "克莉斯塔萨",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26206,
-		},
-		[59994] = {
-			["encounterName"] = "传令官沃拉兹",
-			["source"] = "扭曲之容",
-			["npcID"] = 30624,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 215,
-		},
-		[66536] = {
-			["encounterName"] = "银色勇士",
-			["source"] = "银色神官帕尔崔丝",
-			["npcID"] = 34928,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 338,
-		},
-		[30633] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "晶化保卫者",
-			["npcID"] = 26792,
-		},
-		[50092] = {
-			["source"] = "第七军团火枪手",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27791,
-		},
-		[59331] = {
-			["encounterName"] = "残忍的斯卡迪",
-			["event"] = "SPELL_CAST_START",
-			["source"] = "残忍的斯卡迪",
-			["npcID"] = 26693,
-		},
-		[58700] = {
-			["source"] = "灼热图腾 VIII",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31162,
-		},
-		[59395] = {
-			["source"] = "背叛的卫兵",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 31532,
-		},
-		[33417] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "暴风城法师",
-			["npcID"] = 18949,
-		},
-		[63551] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "生命的卫士",
-			["npcID"] = 33528,
-		},
-		[16866] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "泼毒者",
-			["npcID"] = 10417,
-		},
-		[57477] = {
-			["source"] = "霜巢毁灭者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 30575,
-		},
-		[50348] = {
-			["source"] = "龙眠征服者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27996,
-		},
-		[59281] = {
-			["encounterName"] = "塞安妮苟萨",
-			["source"] = "塞安妮苟萨",
-			["npcID"] = 31134,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 545,
-		},
-		[53333] = {
-			["encounterName"] = "哈多诺克斯",
-			["source"] = "阿努巴尔通灵师",
-			["npcID"] = 29064,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 217,
-		},
-		[66042] = {
-			["encounterName"] = "总冠军",
-			["source"] = "安布罗斯·雷钉",
-			["npcID"] = 34702,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 334,
-		},
-		[63775] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "暮光炎术师",
-			["npcID"] = 33820,
-		},
-		[30600] = {
-			["encounterName"] = "战争使者沃姆罗格",
-			["source"] = "战争使者沃姆罗格",
-			["encounterID"] = 1937,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 16809,
-		},
-		[31601] = {
-			["source"] = "地穴爬行者",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10412,
-		},
-		[38446] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "影月暗法师",
-			["npcID"] = 22081,
-		},
-		[16868] = {
-			["source"] = "尖叫的女妖",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 10463,
-		},
-		[12675] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "红衣魔术师",
-			["npcID"] = 10419,
-		},
-		[59182] = {
-			["source"] = "自由的火焰风暴",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28584,
-		},
-		[46608] = {
-			["source"] = "巴琳达·斯通赫尔斯",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 11949,
-		},
-		[8996] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "黑铁火枪手",
-			["npcID"] = 6523,
-		},
-		[51787] = {
-			["source"] = "因度雷秘法师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26336,
-		},
-		[60003] = {
-			["encounterName"] = "传令官沃拉兹",
-			["source"] = "扭曲之容",
-			["npcID"] = 30624,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 215,
-		},
-		[41440] = {
-			["source"] = "“犀牛之王”尼达尔",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 25801,
-		},
-		[47425] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "复活的冰霜巨龙",
-			["npcID"] = 26841,
-		},
-		[31600] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "恩其拉地穴魔",
-			["npcID"] = 25386,
-		},
-		[59108] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "深渊爬行者",
-			["npcID"] = 30279,
-		},
-		[66043] = {
-			["encounterName"] = "总冠军",
-			["source"] = "安布罗斯·雷钉",
-			["npcID"] = 34702,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 334,
-		},
-		[63059] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "森林游荡者",
-			["npcID"] = 33431,
-		},
-		[31664] = {
-			["source"] = "狂乱的石像鬼",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27691,
-		},
-		[60919] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "阿尔卡冯守卫者",
-			["npcID"] = 32353,
-		},
-		[64383] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "空中指挥单位",
-			["npcID"] = 33670,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 754,
-		},
-		[52139] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "吉加托尔",
-			["npcID"] = 26836,
-		},
-		[6917] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "尼鲁巴尔尸体收割者",
-			["npcID"] = 25445,
-		},
-		[54249] = {
-			["encounterName"] = "拉文索尔",
-			["source"] = "拉文索尔",
-			["npcID"] = 29312,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 2662,
-		},
-		[56272] = {
-			["encounterName"] = "玛里苟斯",
-			["source"] = "玛里苟斯",
-			["encounterID"] = 734,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28859,
-		},
-		[66619] = {
-			["encounterName"] = "银色勇士",
-			["source"] = "奥尔加隆的回忆",
-			["npcID"] = 35052,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 338,
-		},
-		[62529] = {
-			["encounterName"] = "托里姆",
-			["source"] = "黑暗符文唤魔师",
-			["npcID"] = 32878,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[64607] = {
-			["encounterName"] = "观察者奥尔加隆",
-			["source"] = "有生命的星座",
-			["npcID"] = 33052,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 757,
-		},
-		[64639] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "霍迪尔的勇士",
-			["npcID"] = 34133,
-		},
-		[62625] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "奥杜尔巨像",
-			["npcID"] = 33237,
-		},
-		[59986] = {
-			["encounterName"] = "传令官沃拉兹",
-			["source"] = "扭曲之容",
-			["npcID"] = 30622,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 215,
-		},
-		[64652] = {
-			["source"] = "霍迪尔的勇士",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34133,
-		},
-		[64767] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "托里姆",
-			["npcID"] = 32865,
-		},
-		[51500] = {
-			["source"] = "冒烟的恶鬼",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 27363,
-		},
-		[67528] = {
-			["encounterName"] = "总冠军",
-			["source"] = "克罗索斯",
-			["npcID"] = 34701,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 334,
-		},
-		[184] = {
-			["source"] = "风险投资公司地质学家",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 1096,
-		},
-		[16869] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "苍白的玛勒基",
-			["npcID"] = 10438,
-		},
-		[66058] = {
-			["encounterName"] = "瓦格里双子",
-			["source"] = "黑暗邪使艾蒂丝",
-			["encounterID"] = 641,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34496,
-		},
-		[56775] = {
-			["source"] = "碧蓝大法师",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 26722,
-		},
-		[64678] = {
-			["encounterName"] = "欧尔莉亚",
-			["source"] = "欧尔莉亚",
-			["npcID"] = 33515,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 750,
-		},
-		[60015] = {
-			["encounterName"] = "传令官沃拉兹",
-			["source"] = "扭曲之容",
-			["npcID"] = 30624,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 215,
-		},
-		[66818] = {
-			["encounterName"] = "诺森德猛兽",
-			["source"] = "酸喉",
-			["encounterID"] = 629,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 35144,
-		},
-		[54195] = {
-			["source"] = "蓝蜂猎手达伊克",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28215,
-		},
-		[56935] = {
-			["encounterName"] = "大魔导师泰蕾丝塔",
-			["source"] = "大魔导师泰蕾丝塔",
-			["npcID"] = 26731,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 520,
-		},
-		[59013] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "复活的达卡莱灵魂法师",
-			["npcID"] = 26636,
-		},
-		[31554] = {
-			["source"] = "盘牙卫士",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 17958,
-		},
-		[15234] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "盘牙海妖",
-			["npcID"] = 17801,
-		},
-		[23102] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "暗影拱顶白骨卫士",
-			["npcID"] = 30312,
-		},
-		[63233] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "白骨卫士斥候",
-			["npcID"] = 33550,
-		},
-		[4979] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "风险投资公司地质学家",
-			["npcID"] = 1096,
-		},
-		[62274] = {
-			["encounterName"] = "钢铁议会",
-			["source"] = "符文大师莫尔基姆",
-			["npcID"] = 32927,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 748,
-		},
-		[64352] = {
-			["encounterName"] = "米米尔隆",
-			["source"] = "VX-001",
-			["npcID"] = 33651,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 754,
-		},
-		[22686] = {
-			["encounterName"] = "暴龙之王爵德",
-			["source"] = "暴龙之王爵德",
-			["npcID"] = 27483,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 373,
-		},
-		[50094] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "冰冷元素",
-			["npcID"] = 25715,
-		},
-		[62402] = {
-			["encounterName"] = "烈焰巨兽",
-			["source"] = "巨兽防御炮台",
-			["npcID"] = 33142,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 744,
-		},
-		[59365] = {
-			["encounterName"] = "看门者克里克希尔",
-			["source"] = "看守者纳尔伊",
-			["encounterID"] = 216,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28729,
-		},
-		[63489] = {
-			["encounterName"] = "钢铁议会",
-			["source"] = "符文大师莫尔基姆",
-			["npcID"] = 32927,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 748,
-		},
-		[65877] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "阿莱希娅·月行者",
-			["encounterID"] = 637,
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 34467,
-		},
-		[58438] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "自由的欺诈者",
-			["npcID"] = 30856,
-		},
-		[67546] = {
-			["encounterName"] = "总冠军",
-			["source"] = "雅克布·奥勒留斯元帅",
-			["npcID"] = 34705,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 334,
-		},
-		[45046] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "艾瑞达巫师",
-			["npcID"] = 25033,
-		},
-		[59280] = {
-			["source"] = "雪花",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28153,
-		},
-		[59215] = {
-			["source"] = "大型魔网雏龙",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28276,
-		},
-		[63713] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "无面恐魔",
-			["npcID"] = 33772,
-		},
-		[51469] = {
-			["source"] = "萨满祭司维克伊克",
-			["event"] = "SPELL_CAST_START",
-			["npcID"] = 28315,
-		},
-		[59685] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "掠龙战略家",
-			["npcID"] = 23956,
-		},
-		[63809] = {
-			["encounterName"] = "锋鳞",
-			["event"] = "SPELL_CAST_START",
-			["source"] = "黑暗符文哨兵",
-			["npcID"] = 33453,
-		},
-		[22907] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "联盟游侠",
-			["npcID"] = 26802,
-		},
-		[43413] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "飘雪林地狼獾人",
-			["npcID"] = 26198,
-		},
-		[66067] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "麦拉多·深谷游者",
-			["npcID"] = 34469,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 637,
-		},
-		[62321] = {
-			["encounterName"] = "托里姆",
-			["source"] = "黑暗符文唤魔师",
-			["npcID"] = 32878,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 752,
-		},
-		[15241] = {
-			["event"] = "SPELL_CAST_START",
-			["source"] = "炽热火焰卫士",
-			["npcID"] = 8910,
-		},
-		[66066] = {
-			["encounterName"] = "阵营冠军",
-			["source"] = "麦拉多·深谷游者",
-			["npcID"] = 34469,
-			["event"] = "SPELL_CAST_START",
-			["encounterID"] = 637,
 		},
 	},
 }
@@ -14530,25 +14521,25 @@ PlaterLanguage = {
 }
 PlaterLogs = {
 	["_general_logs"] = {
-		"2023-07-11 23:39:36 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [1]
-		"2023-07-10 23:31:25 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [2]
-		"2023-07-10 21:48:41 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [3]
-		"2023-07-09 23:34:28 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [4]
-		"2023-07-09 19:08:46 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [5]
-		"2023-07-09 17:20:21 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [6]
-		"2023-07-09 15:38:19 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [7]
-		"2023-07-08 23:59:21 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [8]
-		"2023-07-08 22:03:46 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [9]
-		"2023-07-08 21:57:23 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [10]
-		"2023-07-08 21:52:52 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [11]
-		"2023-07-08 21:26:47 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [12]
-		"2023-07-08 19:09:25 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [13]
-		"2023-07-08 19:06:20 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [14]
-		"2023-07-08 18:10:57 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [15]
-		"2023-07-08 17:30:07 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [16]
-		"2023-07-08 16:44:38 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [17]
-		"2023-07-08 14:09:27 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [18]
-		"2023-07-08 13:51:12 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [19]
+		"2023-07-13 21:58:04 | INIT | Plater-v561.2-Wrath | Framework v448 | 3.4.2 | zhCN | 狂暴專家", -- [1]
+		"2023-07-11 23:39:36 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [2]
+		"2023-07-10 23:31:25 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [3]
+		"2023-07-10 21:48:41 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [4]
+		"2023-07-09 23:34:28 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [5]
+		"2023-07-09 19:08:46 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [6]
+		"2023-07-09 17:20:21 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [7]
+		"2023-07-09 15:38:19 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [8]
+		"2023-07-08 23:59:21 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [9]
+		"2023-07-08 22:03:46 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [10]
+		"2023-07-08 21:57:23 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [11]
+		"2023-07-08 21:52:52 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [12]
+		"2023-07-08 21:26:47 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [13]
+		"2023-07-08 19:09:25 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [14]
+		"2023-07-08 19:06:20 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [15]
+		"2023-07-08 18:10:57 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [16]
+		"2023-07-08 17:30:07 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [17]
+		"2023-07-08 16:44:38 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [18]
+		"2023-07-08 14:09:27 | INIT | Plater-v561.1-Wrath | Framework v447 | 3.4.2 | zhCN | 狂暴專家", -- [19]
 	},
 	["_error_logs"] = {
 	},

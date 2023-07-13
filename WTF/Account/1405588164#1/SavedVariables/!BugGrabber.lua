@@ -1,7 +1,7 @@
 
 BugGrabberDB = {
+	["session"] = 432,
 	["lastSanitation"] = 3,
-	["session"] = 431,
 	["errors"] = {
 		{
 			["message"] = "Interface/AddOns/GTFO/GTFO.lua:2079: attempt to index a nil value",
@@ -29,8 +29,8 @@ BugGrabberDB = {
 		}, -- [3]
 		{
 			["message"] = "Interface/AddOns/ClassicCodex/browser.lua:1 (null)",
-			["time"] = "2023/05/06 00:16:55",
 			["session"] = 8,
+			["time"] = "2023/05/06 00:16:55",
 			["counter"] = 4,
 		}, -- [4]
 		{
@@ -255,14 +255,14 @@ BugGrabberDB = {
 		}, -- [32]
 		{
 			["message"] = "Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
-			["time"] = "2023/05/06 00:16:55",
 			["session"] = 231,
+			["time"] = "2023/05/06 00:16:55",
 			["counter"] = 35,
 		}, -- [33]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/MikScrollingBattleText/MSBTCooldowns.lua:1 (null)",
-			["time"] = "2023/05/06 00:16:55",
 			["session"] = 231,
+			["time"] = "2023/05/06 00:16:55",
 			["counter"] = 35,
 		}, -- [34]
 		{
@@ -306,14 +306,14 @@ BugGrabberDB = {
 		}, -- [39]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Couldn't open Interface/AddOns/HandyNotes_FlightMasters (Classic)/HandyNotes_FlightMasters (Classic)-Wrath.toc",
-			["session"] = 334,
 			["time"] = "2023/06/22 00:32:06",
+			["session"] = 334,
 			["counter"] = 1,
 		}, -- [40]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface_Wrath\\FrameXML\\Bindings.xml:1 Couldn't open Interface/AddOns/HandyNotes_FlightMasters (Classic)/HandyNotes_FlightMasters (Classic)-Wrath.toc",
-			["session"] = 334,
 			["time"] = "2023/06/22 00:32:06",
+			["session"] = 334,
 			["counter"] = 1,
 		}, -- [41]
 		{
@@ -326,14 +326,14 @@ BugGrabberDB = {
 		}, -- [42]
 		{
 			["message"] = "Interface/AddOns/HidingBar/Config.lua:1 (null)",
-			["time"] = "2023/06/21 21:46:00",
 			["session"] = 338,
+			["time"] = "2023/06/21 21:46:00",
 			["counter"] = 10,
 		}, -- [43]
 		{
 			["message"] = "Interface_Wrath\\FrameXML\\Bindings.xml:1 Interface/AddOns/HidingBar/Config.lua:1 (null)",
-			["time"] = "2023/06/21 21:46:00",
 			["session"] = 338,
+			["time"] = "2023/06/21 21:46:00",
 			["counter"] = 10,
 		}, -- [44]
 		{
@@ -488,21 +488,13 @@ BugGrabberDB = {
 			["counter"] = 2,
 		}, -- [63]
 		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'WeakAuras' 尝试调用保护功能 'Frame:SetPoint()'。",
-			["time"] = "2023/05/21 19:30:43",
-			["locals"] = "Skipped (In Encounter)",
-			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:54: in function `SetAnchorPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1311: in function `DoPositionChildrenPerFrame'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1432: in function `DoPositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1289: in function `PositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1270: in function `SortUpdatedChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1064: in function `RunDelayedActions'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1055: in function `Resume'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4392: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4348>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4517: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:1834: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:1826>\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:2195: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:2188>",
-			["session"] = 414,
-			["counter"] = 33,
-		}, -- [64]
-		{
 			["message"] = "Interface/SharedXML/UnitPopupSharedButtonMixins.lua:2571: bad argument #1 to 'IsPlayerUsingVoice' (Usage: local isUsingVoice = C_VoiceChat.IsPlayerUsingVoice(playerLocation))",
 			["time"] = "2023/07/08 15:25:54",
 			["locals"] = "Skipped (In Encounter)",
 			["stack"] = "[string \"=[C]\"]: in function `IsPlayerUsingVoice'\n[string \"@Interface/SharedXML/UnitPopupSharedButtonMixins.lua\"]:2571: in function `CanShow'\n[string \"@Interface/SharedXML/UnitPopupShared.lua\"]:246: in function `OnUpdate'\n[string \"@Interface/SharedXML/UnitPopupShared.lua\"]:275: in function `UnitPopup_OnUpdate'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:386: in function <Interface_Wrath/FrameXML/UIParent.lua:383>",
 			["session"] = 414,
 			["counter"] = 35,
-		}, -- [65]
+		}, -- [64]
 		{
 			["message"] = "Interface/AddOns/Blizzard_RaidUI/Blizzard_RaidUI.lua:125: bad argument #1 to 'getn' (table expected, got nil)",
 			["time"] = "2023/07/08 16:26:15",
@@ -510,7 +502,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/Blizzard_RaidUI/Blizzard_RaidUI.lua\"]:125: in function `RaidClassButton_OnEnter'\n[string \"*Blizzard_RaidUI.xml:45_OnEnter\"]:1: in function <[string \"*Blizzard_RaidUI.xml:45_OnEnter\"]:1>",
 			["session"] = 414,
 			["counter"] = 2,
-		}, -- [66]
+		}, -- [65]
 		{
 			["message"] = "...erface/AddOns/ElvUI/Core/Modules/Tooltip/Tooltip.lua:1034: Usage: SecureHook([object], method, [handler]): Attempting to hook a non existing target",
 			["time"] = "2023/06/22 11:16:54",
@@ -518,7 +510,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceHook-3.0-9/AceHook-3.0.lua\"]:210: in function <...lvUI_Libraries/Core/Ace3/AceHook-3.0/AceHook-3.0.lua:118>\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceHook-3.0-9/AceHook-3.0.lua\"]:340: in function `SecureHook'\n[string \"@Interface/AddOns/ElvUI/Core/Modules/Tooltip/Tooltip.lua\"]:1034: in function <...erface/AddOns/ElvUI/Core/Modules/Tooltip/Tooltip.lua:998>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/ElvUI/Core/General/Core.lua\"]:1813: in function `CallLoadFunc'\n[string \"@Interface/AddOns/ElvUI/Core/General/Core.lua\"]:1828: in function `CallLoadedModule'\n[string \"@Interface/AddOns/ElvUI/Core/General/Core.lua\"]:1854: in function `InitializeModules'\n[string \"@Interface/AddOns/ElvUI/Core/General/Core.lua\"]:1964: in function `Initialize'\n[string \"@Interface/AddOns/ElvUI/Core/init.lua\"]:265: in function <Interface/AddOns/ElvUI/Core/init.lua:264>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceAddon-3.0-13/AceAddon-3.0.lua\"]:66: in function <...UI_Libraries/Core/Ace3/AceAddon-3.0/AceAddon-3.0.lua:61>\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceAddon-3.0-13/AceAddon-3.0.lua\"]:523: in function `EnableAddon'\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceAddon-3.0-13/AceAddon-3.0.lua\"]:626: in function <...UI_Libraries/Core/Ace3/AceAddon-3.0/AceAddon-3.0.lua:611>",
 			["session"] = 415,
 			["counter"] = 8,
-		}, -- [67]
+		}, -- [66]
 		{
 			["message"] = "...AddOns/ElvUI/Wrath/Modules/Skins/BlizzardOptions.lua:293: attempt to index field 'EnableTwitter' (a nil value)",
 			["time"] = "2023/06/22 11:16:55",
@@ -526,15 +518,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface/AddOns/ElvUI/Wrath/Modules/Skins/BlizzardOptions.lua\"]:293: in function <...AddOns/ElvUI/Wrath/Modules/Skins/BlizzardOptions.lua:43>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/ElvUI/Core/Modules/Skins/Skins.lua\"]:1868: in function <Interface/AddOns/ElvUI/Core/Modules/Skins/Skins.lua:1863>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/ElvUI/Core/General/Core.lua\"]:1813: in function `CallLoadFunc'\n[string \"@Interface/AddOns/ElvUI/Core/General/Core.lua\"]:1828: in function `CallLoadedModule'\n[string \"@Interface/AddOns/ElvUI/Core/General/Core.lua\"]:1854: in function `InitializeModules'\n[string \"@Interface/AddOns/ElvUI/Core/General/Core.lua\"]:1964: in function `Initialize'\n[string \"@Interface/AddOns/ElvUI/Core/init.lua\"]:265: in function <Interface/AddOns/ElvUI/Core/init.lua:264>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceAddon-3.0-13/AceAddon-3.0.lua\"]:66: in function <...UI_Libraries/Core/Ace3/AceAddon-3.0/AceAddon-3.0.lua:61>\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceAddon-3.0-13/AceAddon-3.0.lua\"]:523: in function `EnableAddon'\n[string \"@Interface/AddOns/ElvUI_Libraries/Core/Ace3/AceAddon-3.0-13/AceAddon-3.0.lua\"]:626: in function <...UI_Libraries/Core/Ace3/AceAddon-3.0/AceAddon-3.0.lua:611>",
 			["session"] = 415,
 			["counter"] = 8,
-		}, -- [68]
-		{
-			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'HandyNotes' 尝试调用保护功能 'Frame:SetPassThroughButtons()'。",
-			["time"] = "2023/06/22 15:15:54",
-			["locals"] = "_ = Frame {\n RegisterEvent = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:487\n 0 = <userdata>\n UnregisterEvent = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:487\n SetScript = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:487\n}\nevent = \"ADDON_ACTION_BLOCKED\"\nevents = <table> {\n ADDON_ACTION_BLOCKED = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:553\n ADDON_ACTION_FORBIDDEN = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:553\n PLAYER_LOGIN = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:547\n LUA_WARNING = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:562\n ADDON_LOADED = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:507\n}\n",
-			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:481: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:481>\n[string \"=[C]\"]: in function `SetPassThroughButtons'\n[string \"@Interface/AddOns/HandyNotes/HandyNotes.lua\"]:371: in function `OnAcquired'\n[string \"@Interface/AddOns/Blizzard_MapCanvas/Blizzard_MapCanvas.lua\"]:167: in function `AcquirePin'\n[string \"@Interface/AddOns/HandyNotes/HandyNotes.lua\"]:347: in function <Interface/AddOns/HandyNotes/HandyNotes.lua:325>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/HandyNotes/HandyNotes.lua\"]:56: in function <Interface/AddOns/HandyNotes/HandyNotes.lua:51>\n[string \"@Interface/AddOns/HandyNotes/HandyNotes.lua\"]:321: in function `RefreshAllData'\n[string \"@Interface/AddOns/Blizzard_MapCanvas/Blizzard_MapCanvas.lua\"]:420: in function `RefreshAllDataProviders'\n[string \"@Interface/AddOns/Blizzard_MapCanvas/Blizzard_MapCanvas.lua\"]:448: in function `RefreshAll'\n[string \"@Interface/AddOns/Blizzard_MapCanvas/Blizzard_MapCanvas.lua\"]:61: in function `OnShow'\n[string \"@Interface_TBC/AddOns/Blizzard_WorldMap/Blizzard_WorldMap.lua\"]:147: in function <...e_TBC/AddOns/Blizzard_WorldMap/Blizzard_WorldMap.lua:144>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface/AddOns/Leatrix_Maps/Leatrix_Maps.lua\"]:1775: in function `HandleUserActionToggleSelf'\n[string \"@Interface_TBC/AddOns/Blizzard_WorldMap/Blizzard_WorldMap.lua\"]:184: in function `ToggleWorldMap'\n[string \"TOGGLEWORLDMAP\"]:1: in function <[string \"TOGGLEWORLDMAP\"]:1>",
-			["session"] = 425,
-			["counter"] = 8,
-		}, -- [69]
+		}, -- [67]
 		{
 			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'TomTom' 尝试调用保护功能 'TomTomWorldMapClickHandler:SetPassThroughButtons()'。",
 			["time"] = "2023/06/22 15:18:20",
@@ -542,7 +526,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:481: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:481>\n[string \"=[C]\"]: in function `SetPassThroughButtons'\n[string \"@Interface/AddOns/TomTom/TomTom.lua\"]:509: in function <Interface/AddOns/TomTom/TomTom.lua:503>",
 			["session"] = 429,
 			["counter"] = 36,
-		}, -- [70]
+		}, -- [68]
 		{
 			["message"] = "Elv_ABFade:GetAlpha(): C_Timer.NewTicker requires a non-negative duration",
 			["time"] = "2023/05/25 00:06:05",
@@ -550,7 +534,7 @@ BugGrabberDB = {
 			["stack"] = "[string \"=[C]\"]: in function `GetAlpha'\n[string \"@Interface/AddOns/ElvUI/Core/Modules/ActionBars/ActionBars.lua\"]:875: in function <.../AddOns/ElvUI/Core/Modules/ActionBars/ActionBars.lua:865>",
 			["session"] = 429,
 			["counter"] = 13,
-		}, -- [71]
+		}, -- [69]
 		{
 			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:8: attempt to index global 'InspectTalentFrameSpentPoints' (a nil value)",
 			["time"] = "2023/05/16 21:50:27",
@@ -558,13 +542,13 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface/AddOns/Blizzard_InspectUI/Localization.lua\"]:8: in main chunk\n[string \"=[C]\"]: in function `LoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:385: in function `UIParentLoadAddOn'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:428: in function `InspectFrame_LoadUI'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:733: in function `InspectUnit'\n[string \"@Interface/FrameXML/UnitPopupSharedButtonMixins.lua\"]:200: in function `OnClick'\n[string \"@Interface/FrameXML/UnitPopupShared.lua\"]:148: in function `func'\n[string \"@Interface/FrameXML/UIDropDownMenu.lua\"]:956: in function `UIDropDownMenuButton_OnClick'\n[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1: in function <[string \"*UIDropDownMenuTemplates.xml:149_OnClick\"]:1>",
 			["session"] = 431,
 			["counter"] = 36,
-		}, -- [72]
+		}, -- [70]
 		{
 			["message"] = "Interface/AddOns/Blizzard_InspectUI/Localization.lua:1 (null)",
-			["session"] = 431,
 			["time"] = "2023/05/16 21:50:27",
+			["session"] = 431,
 			["counter"] = 72,
-		}, -- [73]
+		}, -- [71]
 		{
 			["message"] = "Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:3317: attempt to index local 'color' (a nil value)",
 			["time"] = "2023/06/22 13:18:53",
@@ -572,6 +556,22 @@ BugGrabberDB = {
 			["stack"] = "[string \"@Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua\"]:3317: in function <Interface/AddOns/ElvUI/Core/Modules/Chat/Chat.lua:3285>\n[string \"=(tail call)\"]: ?\n[string \"=[C]\"]: in function `FCFTab_UpdateColors'\n[string \"@Interface/FrameXML/FloatingChatFrame.lua\"]:2114: in function `FCFDock_UpdateTabs'\n[string \"@Interface/FrameXML/FloatingChatFrame.lua\"]:1498: in function <Interface/FrameXML/FloatingChatFrame.lua:1497>\n[string \"@Interface_Wrath/AddOns/Blizzard_CombatLog/Blizzard_CombatLog.lua\"]:3402: in function `FCF_DockUpdate'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:2702: in function `UIParentManageFramePositions'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:1958: in function <Interface_Wrath/FrameXML/UIParent.lua:1945>\n[string \"=[C]\"]: in function `SetAttribute'\n[string \"@Interface_Wrath/FrameXML/UIParent.lua\"]:2709: in function <Interface_Wrath/FrameXML/UIParent.lua:2707>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `UIParent_ManageFramePositions'\n[string \"@Interface/FrameXML/BuffFrame.lua\"]:379: in function `BuffFrame_UpdateAllBuffAnchors'\n[string \"@Interface/FrameXML/BuffFrame.lua\"]:120: in function `BuffFrame_Update'\n[string \"@Interface/FrameXML/SettingDefinitions/InterfaceOverrides.lua\"]:75: in function <...e/FrameXML/SettingDefinitions/InterfaceOverrides.lua:74>\n[string \"=[C]\"]: ?\n[string \"@Interface/SharedXML/CallbackRegistry.lua\"]:178: in function <Interface/SharedXML/CallbackRegistry.lua:177>\n[string \"=[C]\"]: ?\n[string \"@Interface/SharedXML/CallbackRegistry.lua\"]:181: in function `TriggerEvent'\n[string \"@Interface/SharedXML/CvarUtil.lua\"]:114: in function <Interface/SharedXML/CvarUtil.lua:106>",
 			["session"] = 431,
 			["counter"] = 50,
+		}, -- [72]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'WeakAuras' 尝试调用保护功能 'Frame:SetPoint()'。",
+			["time"] = "2023/05/21 19:30:43",
+			["locals"] = "Skipped (In Encounter)",
+			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:480: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:480>\n[string \"=[C]\"]: in function `SetPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:54: in function `SetAnchorPoint'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1311: in function `DoPositionChildrenPerFrame'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1432: in function `DoPositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1289: in function `PositionChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1270: in function `SortUpdatedChildren'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1064: in function `RunDelayedActions'\n[string \"@Interface/AddOns/WeakAuras/RegionTypes/DynamicGroup.lua\"]:1055: in function `Resume'\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4392: in function <Interface/AddOns/WeakAuras/WeakAuras.lua:4348>\n[string \"@Interface/AddOns/WeakAuras/WeakAuras.lua\"]:4517: in function `UpdatedTriggerState'\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:1834: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:1826>\n[string \"@Interface/AddOns/WeakAuras/BuffTrigger2.lua\"]:2195: in function <Interface/AddOns/WeakAuras/BuffTrigger2.lua:2188>",
+			["session"] = 432,
+			["counter"] = 34,
+		}, -- [73]
+		{
+			["message"] = "[ADDON_ACTION_BLOCKED] 插件 'HandyNotes' 尝试调用保护功能 'Frame:SetPassThroughButtons()'。",
+			["time"] = "2023/06/22 15:15:54",
+			["locals"] = "_ = Frame {\n RegisterEvent = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:487\n 0 = <userdata>\n UnregisterEvent = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:487\n SetScript = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:487\n}\nevent = \"ADDON_ACTION_BLOCKED\"\nevents = <table> {\n ADDON_ACTION_BLOCKED = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:553\n ADDON_ACTION_FORBIDDEN = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:553\n PLAYER_LOGIN = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:547\n LUA_WARNING = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:562\n ADDON_LOADED = <function> defined @Interface/AddOns/!BugGrabber/BugGrabber.lua:507\n}\n",
+			["stack"] = "[string \"@Interface/AddOns/!BugGrabber/BugGrabber.lua\"]:481: in function <Interface/AddOns/!BugGrabber/BugGrabber.lua:481>\n[string \"=[C]\"]: in function `SetPassThroughButtons'\n[string \"@Interface/AddOns/HandyNotes/HandyNotes.lua\"]:371: in function `OnAcquired'\n[string \"@Interface/AddOns/Blizzard_MapCanvas/Blizzard_MapCanvas.lua\"]:167: in function `AcquirePin'\n[string \"@Interface/AddOns/HandyNotes/HandyNotes.lua\"]:347: in function <Interface/AddOns/HandyNotes/HandyNotes.lua:325>\n[string \"=[C]\"]: ?\n[string \"@Interface/AddOns/HandyNotes/HandyNotes.lua\"]:56: in function <Interface/AddOns/HandyNotes/HandyNotes.lua:51>\n[string \"@Interface/AddOns/HandyNotes/HandyNotes.lua\"]:321: in function `RefreshAllData'\n[string \"@Interface/AddOns/Blizzard_MapCanvas/Blizzard_MapCanvas.lua\"]:420: in function `RefreshAllDataProviders'\n[string \"@Interface/AddOns/Blizzard_MapCanvas/Blizzard_MapCanvas.lua\"]:448: in function `RefreshAll'\n[string \"@Interface/AddOns/Blizzard_MapCanvas/Blizzard_MapCanvas.lua\"]:61: in function `OnShow'\n[string \"@Interface_TBC/AddOns/Blizzard_WorldMap/Blizzard_WorldMap.lua\"]:147: in function <...e_TBC/AddOns/Blizzard_WorldMap/Blizzard_WorldMap.lua:144>\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: ?\n[string \"=[C]\"]: in function `Show'\n[string \"@Interface/AddOns/Leatrix_Maps/Leatrix_Maps.lua\"]:1775: in function `HandleUserActionToggleSelf'\n[string \"@Interface_TBC/AddOns/Blizzard_WorldMap/Blizzard_WorldMap.lua\"]:184: in function `ToggleWorldMap'\n[string \"TOGGLEWORLDMAP\"]:1: in function <[string \"TOGGLEWORLDMAP\"]:1>",
+			["session"] = 432,
+			["counter"] = 9,
 		}, -- [74]
 	},
 }
