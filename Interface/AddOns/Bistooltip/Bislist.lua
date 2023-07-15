@@ -30,11 +30,6 @@ local function createItemFrame(item_id, size, with_checkmark)
         local f = AceGUI:Create("Label")
         return f
     end
-    if isHorde == true then
-        if Bistooltip_horde_to_ali[item_id] ~= nil then
-            item_id = Bistooltip_horde_to_ali[item_id]
-        end
-    end
     local item_frame = AceGUI:Create("Icon")
     item_frame:SetImageSize(size, size)
     items[item_id] = Item:CreateFromItemID(item_id);
@@ -141,6 +136,11 @@ local function drawItemSlot(slot)
     spec_frame:AddChild(f)
     spec_frame:AddChild(createEnhancementsFrame(slot.enhs))
     for i, item_id in ipairs(slot) do
+        if isHorde == true then
+            if Bistooltip_horde_to_ali[item_id] ~= nil then
+                item_id = Bistooltip_horde_to_ali[item_id]
+            end
+        end
         if item_id ~= nil and Bistooltip_char_equipment[item_id] ~= nil then
             spec_frame:AddChild(createItemFrame(item_id, 40, true))
         else

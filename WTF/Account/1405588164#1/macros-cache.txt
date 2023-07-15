@@ -1,13 +1,7 @@
-VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
-/script DecursiveRootTable.Dcr:Println('没有相关技能')
-END
 VER 3 0000000000000017 "kiss" "135767"
 /use 疣无忧唇膏
 /target 湖蛙
 /kiss
-END
-VER 3 0000000000000002 "RXPTargeting" "Ability_eyeoftheowl"
-//RestedXP 指南 狮心-北美刘嘉玲 汉化版 - current step has no configured targets
 END
 VER 3 0000000000000013 "一键盾墙" "134400"
 #showtooltip 盾墙
@@ -37,8 +31,8 @@ VER 3 0000000000000008 "开团" "135994"
 /邀请 开团
 END
 VER 3 000000000000000C "开怪" "132222"
-#showtooltip 射击
-/cast 英勇投掷
+#showtooltip [mod:alt]碎裂投掷;英勇投掷
+/cast [mod:alt]碎裂投掷;英勇投掷
 /cast 投掷
 /cast 射击
 END
@@ -81,15 +75,11 @@ VER 3 0000000000000012 "爆发" "135726"
 /cast 死亡之愿
 END
 VER 3 0000000000000005 "目标" "132092"
-/target 金鳞蜥蜴
+/target 军需官
 END
 VER 3 0000000000000015 "萨隆邪铁炸弹" "237295"
 #showtooltip 萨隆邪铁炸弹
 /use [@target] 萨隆邪铁炸弹
-END
-VER 3 0000000000000006 "跟随" "134400"
-/target 臉叔
-/follow
 END
 VER 3 0000000000000014 "通用热力工程炸药" "133035"
 #showtooltip

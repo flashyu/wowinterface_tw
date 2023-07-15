@@ -45,7 +45,7 @@ ParrotDB = {
 						["Loot items"] = {
 							["disabled"] = true,
 						},
-						["Pet buff gains"] = {
+						["Enemy debuff fades"] = {
 							["disabled"] = true,
 						},
 						["Target buff stack gains"] = {
@@ -54,7 +54,7 @@ ParrotDB = {
 						["Loot money"] = {
 							["disabled"] = true,
 						},
-						["Enemy debuff fades"] = {
+						["Target buff gains"] = {
 							["disabled"] = true,
 						},
 						["Enemy buff gains"] = {
@@ -75,10 +75,10 @@ ParrotDB = {
 						["Reputation gains"] = {
 							["disabled"] = true,
 						},
-						["Target buff gains"] = {
+						["Reputation losses"] = {
 							["disabled"] = true,
 						},
-						["Reputation losses"] = {
+						["Pet buff gains"] = {
 							["disabled"] = true,
 						},
 						["Buff stack gains"] = {

@@ -44,6 +44,9 @@ ParrotDB = {
 						["Pet debuff fades"] = {
 							["disabled"] = true,
 						},
+						["Target buff gains"] = {
+							["disabled"] = true,
+						},
 						["Buff gains"] = {
 							["disabled"] = true,
 						},
@@ -72,9 +75,6 @@ ParrotDB = {
 							["disabled"] = true,
 						},
 						["Enemy buff gains"] = {
-							["disabled"] = true,
-						},
-						["Target buff gains"] = {
 							["disabled"] = true,
 						},
 						["Combo points full"] = {

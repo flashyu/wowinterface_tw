@@ -379,7 +379,7 @@ TalentEmuSV = {
 		["minimapPos"] = 185,
 	},
 	["var"] = {
-		["Player-4487-0051C667"] = "!T329E121LPoBoA:08Jn11fIt-9R674p7NS::0cd09S::UO4a85-XG:DpV1!G3221w+9:2EC:G1u+-:k=C:C1u+-:4dE:81u+9:yDC:11u+-:j=C:01u+9:pDC:E1uw+9:7EC:A1u+-:4dE:81u+-:l=C:D1u+9:yDC:11u+-:m=C:=1u+9:VRD:C1u!E320+^+7F=:1dv:155-:1SG-:5E1:9+tB=:2wk9:6E1:9+5F=:1Uv:1wk9:6E1:9+0t2:8E1:9+2F=:1sv:1SG-:1Wl9:5E1:9+DE=:2wk9:1wk9:1wk9:4E1:9+-o=:1jv:1Dn9:1jm9:5E1:9+r7=:1Ks:1wk9:1Wl9:5E1:9+GZ=:15w:1jm9:6E1:9+q5=:1Is:1Dn9:6E1:9+c8=:2SG-:6E1:9+mH=:2wk9:6E1:9+fB=:8E1:9+fT-:8E1:9+ED=:1Js:1wk9:1wk9:5E1:9+KZ=:1Bv:1jm9:1jm9:5E1:9+A7=:1Bv:1wk9:1wk9:5E1:9+k3=:2aA=:6E1:9+HW-:8E1:9",
+		["Player-4487-0051C667"] = "!T329E122LPoBoA:08Jn11fIt-9R674p7PSNU6::0UIB7::kSaa8Bgzs:PpV1!G3222w+9:2EC:G1u+-:k=C:C1u+-:4dE:81u+9:yDC:11u+-:j=C:01u+9:pDC:E1uw+9:7EC:A1u+-:4dE:81u+-:l=C:D1u+9:yDC:11u+-:m=C:=1u+9:VRD:C1u!E320+^+y6=:1ev:1Y6-:1Nm9:5E1:9+tt-:2Kl9:6E1:9+LF=:1Xv:1Nm9:6E1:9+0t2:8E1:9+k5=:2Kl9:1Dl9:5E1:9+Dh9:2Wl9:6E1:9+n5=:8E1:9+i1=:1Ks:7E1:9+r0=:1-w:7E1:9+m5=:8E1:9+T6=:8E1:9+fm9:8E1:9+5D=:8E1:9+kV=:8E1:9+FMB:8E1:9+Gr9:1dm:7E1:9+-6=:8E1:9+F1=:8E1:9+IW-:8E1:9",
 		["Player-4487-005CB746"] = "!T32210110!G32116++++++!E320+^+^+^+^+z1:81:9+^+^+iT1:81:9+jT1:81:9+^+^+^+^+^+^+^+uz2:81:9+^+8b:81:9+^",
 		["savedTalent"] = {
 			["|cffc79c6e战士|r- 武器18 |cff7fbfff狂怒51|r 防护 2"] = "!T329E111LPoBoA:08Jn11fIt-9R674p7",
