@@ -59,7 +59,7 @@ ElvDB = {
 				["ElvAB_3"] = "BOTTOM,ElvUIParent,BOTTOM,0,139",
 				["LootFrameMover"] = "TOPRIGHT,UIParent,TOPRIGHT,-547,-380",
 				["ShiftAB"] = "BOTTOM,UIParent,BOTTOM,-254,363",
-				["ElvUF_FocusMover"] = "BOTTOM,UIParent,BOTTOM,332,311",
+				["ElvUF_FocusMover"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-403,419",
 				["ElvAB_6"] = "BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-4,360",
 				["ElvUF_TargetTargetMover"] = "BOTTOM,UIParent,BOTTOM,335,349",
 				["ReputationBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,454,4",
@@ -84,6 +84,11 @@ ElvDB = {
 							["disableTargetGlow"] = false,
 							["disableMouseoverGlow"] = false,
 							["disableFocusGlow"] = false,
+						},
+					},
+					["focus"] = {
+						["aurabar"] = {
+							["enable"] = true,
 						},
 					},
 				},
@@ -124,7 +129,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["伊弗斯"] = {
-			["狂暴專家"] = 1310448766,
+			["狂暴專家"] = 1436900084,
 			["上山打鸟"] = 48503975,
 		},
 	},

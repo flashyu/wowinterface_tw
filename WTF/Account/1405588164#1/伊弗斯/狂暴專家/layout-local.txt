@@ -9,7 +9,14 @@ H: 240
 Frame: aux_frame
 FrameLevel: 1
 Anchor: TOP
-X: -176
-Y: -60
+X: 222
+Y: -175
 W: 768
 H: 447
+Frame: GroupBulletinBoardFrame
+FrameLevel: 1
+Anchor: CENTER
+X: 213
+Y: 136
+W: 800
+H: 501
