@@ -31,8 +31,8 @@ VER 3 0000000000000008 "开团" "135994"
 /邀请 开团
 END
 VER 3 000000000000000C "开怪" "132222"
-#showtooltip [mod:alt]破裂投掷;英勇投掷
-/cast [mod:alt]破裂投掷;英勇投掷
+#showtooltip [mod:alt]碎裂投掷;英勇投掷
+/cast [mod:alt]碎裂投掷;英勇投掷
 /cast 投掷
 /cast 射击
 END
@@ -75,7 +75,7 @@ VER 3 0000000000000012 "爆发" "135726"
 /cast 死亡之愿
 END
 VER 3 0000000000000005 "目标" "132092"
-/target 金鳞蜥蜴
+/target 军需官
 END
 VER 3 0000000000000015 "萨隆邪铁炸弹" "237295"
 #showtooltip 萨隆邪铁炸弹

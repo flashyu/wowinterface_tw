@@ -498,9 +498,9 @@ AtlasLootClassicDB = {
 			[47691] = "EmblemOfTriumph:75",
 			[24547] = "honor:4750",
 			[29466] = "honor:16650",
-			[42033] = "honor:16590",
 			[47688] = "EmblemOfTriumph:75",
 			[34579] = "honor:3990",
+			[42033] = "honor:16590",
 			[45837] = "EmblemOfConquest:28",
 			[45869] = "SiderealEssence:15",
 			[40786] = "EmblemOfConquest:58",
@@ -567,9 +567,9 @@ AtlasLootClassicDB = {
 			[40692] = "EmblemOfHeroism:40",
 			[40724] = "EmblemOfValor:25",
 			[45871] = "SiderealEssence:15",
-			[28642] = "honor:3800",
-			[28930] = "honor:3800",
 			[43024] = "epicurean:3",
+			[28930] = "honor:3800",
+			[28642] = "honor:3800",
 			[24550] = "honor:9500",
 			[33755] = "honor:8550",
 			[46095] = "SiderealEssence:19",
@@ -701,8 +701,8 @@ AtlasLootClassicDB = {
 				["selected"] = {
 					nil, -- [1]
 					"TrialoftheCrusader", -- [2]
-					8, -- [3]
-					9, -- [4]
+					nil, -- [3]
+					8, -- [4]
 					0, -- [5]
 				},
 			},
