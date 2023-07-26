@@ -148,12 +148,12 @@ alaChatSV = {
 		["GUILD"] = true,
 		["_chatblocked"] = {
 		},
-		["RAID"] = true,
-		["ChannelBlockButton_BLZ"] = true,
-		["LOOK_FOR_GROUP"] = true,
-		["LOCAL_DEFENSE"] = false,
-		["RAID_WARNING"] = true,
 		["BF_WORLD"] = true,
+		["ChannelBlockButton_BLZ"] = true,
+		["RAID_WARNING"] = true,
+		["LOCAL_DEFENSE"] = false,
+		["LOOK_FOR_GROUP"] = true,
+		["RAID"] = true,
 		["_channelblocked"] = {
 		},
 		["UseColor"] = true,

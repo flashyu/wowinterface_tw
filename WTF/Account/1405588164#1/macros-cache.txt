@@ -50,6 +50,10 @@ VER 3 0000000000000016 "换双手武器" "134400"
 /cast [nostance:3] 狂暴姿态
 /equipset KBZ
 END
+VER 3 0000000000000018 "换章" "134138"
+/run local a,b="英雄纹章"; for i=1,33 do b=GetMerchantItemInfo(i) if b==a then BuyMerchantItem(i,1) else end end
+/click StaticPopup1Button1
+END
 VER 3 000000000000000F "撕裂" "134400"
 #showtooltip 撕裂
 /施放 战斗姿态

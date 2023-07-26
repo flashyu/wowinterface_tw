@@ -143,13 +143,13 @@ alaChatSV = {
 		["AutoAddChannelToDefaultChatFrame"] = false,
 		["UseColor"] = true,
 		["ChannelBlockButton_BLZ"] = true,
-		["RAID_WARNING"] = true,
+		["LOOK_FOR_GROUP"] = true,
 		["LOCAL_DEFENSE"] = false,
-		["BF_WORLD"] = true,
 		["RAID"] = true,
+		["BF_WORLD"] = true,
 		["_channelblocked"] = {
 		},
-		["LOOK_FOR_GROUP"] = true,
+		["RAID_WARNING"] = true,
 		["_chatblocked"] = {
 		},
 		["_bfworldcf"] = {

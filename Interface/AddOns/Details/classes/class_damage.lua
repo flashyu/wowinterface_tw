@@ -207,7 +207,7 @@ function Details:IsEnemy() --[[exported]]
 	return false
 end
 	
-function Details:GetSpellList() --[[ exported]]
+function Details:GetSpellList() --[[exported]]
 	return self.spells._ActorTable
 end
 
@@ -405,7 +405,7 @@ end
 
 			--total: amount of damage done
 			total = alphabetical,
-			extra_bar = 0,
+			total_extra = 0,
 			--totalabsorbed: amount of damage done absorbed by shields
 			totalabsorbed = alphabetical,
 			--total_without_pet: amount of damage done without pet damage
@@ -1851,7 +1851,6 @@ function damageClass:RefreshWindow(instancia, combatObject, forcar, exportar, re
 		return Details:EndRefresh(instancia, total, combatObject, showing) --retorna a tabela que precisa ganhar o refresh
 
 	elseif (keyName == "damage_taken_by_spells") then
-
 		local bs_index, total = 0, 0
 		Details:Destroy(bs_index_table)
 
@@ -1993,7 +1992,6 @@ function damageClass:RefreshWindow(instancia, combatObject, forcar, exportar, re
 		return Details:EndRefresh(instancia, bs_index, combatObject, showing)
 
 	elseif (keyName == "voidzones") then
-
 		local index = 0
 		local misc_container = combatObject [4]
 		local voidzone_damage_total = 0
@@ -2589,12 +2587,14 @@ local actor_class_color_r, actor_class_color_g, actor_class_color_b
 	percentText = percentText or ""
 
 	if ((Details.time_type == 3 or (Details.combat_log.evoker_show_realtimedps and Details.playerspecid == 1473)) and Details.in_combat) then --real time
-		local actorSerial = thisLine:GetActor().serial
-		local currentDps = Details.CurrentDps.GetCurrentDps(actorSerial)
-		if (currentDps and currentDps > 0) then
-			currentDps = Details:ToK2(currentDps)
+		if (thisLine:GetActor()) then
+			local actorSerial = thisLine:GetActor().serial
+			local currentDps = Details.CurrentDps.GetCurrentDps(actorSerial)
+			if (currentDps and currentDps > 0) then
+				currentDps = Details:ToK2(currentDps)
+			end
+			perSecondText = currentDps
 		end
-		perSecondText = currentDps
 	end
 
 	--check if the instance is showing total, dps and percent
@@ -2900,35 +2900,54 @@ function damageClass:RefreshLine(instance, lineContainer, whichRowLine, rank, to
 
 	actor_class_color_r, actor_class_color_g, actor_class_color_b = self:GetBarColor()
 
-	return self:RefreshLineValue(thisLine, instance, previousData, forcar, percentNumber, whichRowLine, lineContainer, bUseAnimations)
+	return self:RefreshLineValue(thisLine, instance, previousData, forcar, percentNumber, bUseAnimations, total, instance.top)
 end
 
-local alignExtraBar = function(thisLine, actorObject, instanceObject, percentAmount)
-	local extraAmount = actorObject.extra_bar
-	if (extraAmount > 0 and Details.combat_log.evoker_calc_damage) then
-		local bIsUsingBarStartAfterIcon = instanceObject.row_info.start_after_icon
+---show an extra statusbar on the line, after the main statusbar
+---@param thisLine table
+---@param amount valueamount
+---@param amountPercent number
+---@param extraAmount valueamount
+function Details:ShowExtraStatusbar(thisLine, amount, extraAmount, totalAmount, topAmount, instanceObject)
+	if (extraAmount and extraAmount > 0 and Details.combat_log.evoker_calc_damage) then
+		local extraStatusbar = thisLine.extraStatusbar
 		local initialOffset = 0
+		local icon_offset_x, icon_offset_y = unpack(instanceObject.row_info.icon_offset)
+
+		local bIsUsingBarStartAfterIcon = instanceObject.row_info.start_after_icon
 		if (bIsUsingBarStartAfterIcon) then
-			initialOffset = thisLine.icone_classe:GetWidth()
+			initialOffset = thisLine.icone_classe:GetWidth() + icon_offset_x
 		end
 
-		local whiteBarStartOffset = initialOffset + thisLine:GetWidth() * percentAmount / 100
-		local whiteBarWidth = (extraAmount / actorObject.total) * (percentAmount / 100) * thisLine:GetWidth()
+		local statusBarWidth = thisLine.statusbar:GetWidth()
+		local percent = amount / topAmount
+		local fillTheGapWidth = percent * 4
 
-		thisLine.extraTexture:SetPoint("left", thisLine, "left", whiteBarStartOffset - 7, 0)
-		thisLine.extraTexture:SetWidth(whiteBarWidth)
+		local startExtraStatusbarOffset = percent * statusBarWidth
+		local extraStatusbarWidth = statusBarWidth * (extraAmount / topAmount)
 
-		thisLine.extraTexture:SetHeight(thisLine:GetHeight())
-		thisLine.extraTexture:Show()
+		extraStatusbar:ClearAllPoints()
+		extraStatusbar:SetHeight(thisLine:GetHeight())
+
+		if (bIsUsingBarStartAfterIcon) then
+			extraStatusbar:SetPoint("topleft", thisLine.icone_classe, "topright", startExtraStatusbarOffset - fillTheGapWidth, 0)
+		else
+			extraStatusbar:SetPoint("topleft", thisLine, "topleft", (statusBarWidth * percent) - fillTheGapWidth, 0)
+		end
+
+		extraStatusbar:SetWidth(extraStatusbarWidth)
+
+		--extraStatusbar:SetFrameStrata("TOOLTIP")
+		extraStatusbar:SetFrameLevel(thisLine:GetFrameLevel() + 1)
+
+		extraStatusbar:Show()
 	end
 end
 
-function Details:RefreshLineValue(thisLine, instance, previousData, isForceRefresh, percent, whichRowLine, lineContainer, bUseAnimations) --[[ exported]]
-	if (self.spec ~= 1473) then
-		thisLine.extraTexture:Hide()
-	end
+function Details:RefreshLineValue(thisLine, instance, previousData, isForceRefresh, percent, bUseAnimations, totalValue, topValue) --[[exported]]
+	thisLine.extraStatusbar:Hide()
 
-	if (thisLine.colocacao == 1) then
+	 if (thisLine.colocacao == 1) then
 		thisLine.animacao_ignorar = true
 
 		if (not previousData or previousData ~= thisLine.minha_tabela or isForceRefresh) then
@@ -2955,8 +2974,8 @@ function Details:RefreshLineValue(thisLine, instance, previousData, isForceRefre
 
 			Details.FadeHandler.Fader(thisLine, "out")
 
-			if (self.spec == 1473) then
-				alignExtraBar(thisLine, self, instance, percent)
+			if (self.total_extra and self.total_extra > 0) then
+				Details:ShowExtraStatusbar(thisLine, self.total, self.total_extra, totalValue, topValue, instance)
 			end
 
 			return self:RefreshBarra(thisLine, instance)
@@ -2972,8 +2991,8 @@ function Details:RefreshLineValue(thisLine, instance, previousData, isForceRefre
 
 				thisLine.last_value = percent --reseta o ultimo valor da barra
 
-				if (self.spec == 1473) then
-					alignExtraBar(thisLine, self, instance, percent)
+				if (self.total_extra and self.total_extra > 0) then
+					Details:ShowExtraStatusbar(thisLine, self.total, self.total_extra, totalValue, topValue, instance)
 				end
 
 				return self:RefreshBarra(thisLine, instance)
@@ -2987,11 +3006,15 @@ function Details:RefreshLineValue(thisLine, instance, previousData, isForceRefre
 				end
 				thisLine.last_value = percent
 
-				if (self.spec == 1473) then
-					alignExtraBar(thisLine, self, instance, percent)
+				if (self.total_extra and self.total_extra > 0) then
+					Details:ShowExtraStatusbar(thisLine, self.total, self.total_extra, totalValue, topValue, instance)
 				end
 
 				return self:RefreshBarra(thisLine, instance)
+			else
+				if (self.total_extra and self.total_extra > 0) then
+					Details:ShowExtraStatusbar(thisLine, self.total, self.total_extra, totalValue, topValue, instance)
+				end
 			end
 		end
 	end
@@ -3006,7 +3029,7 @@ local setLineTextSize = function(line, instance)
 end
 
 
-function Details:SetBarLeftText(bar, instance, enemy, arenaEnemy, arenaAlly, usingCustomLeftText) --[[ exported]]
+function Details:SetBarLeftText(bar, instance, enemy, arenaEnemy, arenaAlly, usingCustomLeftText) --[[exported]]
 	local barNumber = ""
 	if (instance.row_info.textL_show_number) then
 		barNumber = bar.colocacao .. ". "
@@ -3087,7 +3110,7 @@ function Details:SetBarLeftText(bar, instance, enemy, arenaEnemy, arenaAlly, usi
 	setLineTextSize (bar, instance)
 end
 
-function Details:SetBarColors(bar, instance, r, g, b, a) --[[exported]]
+function Details:SetBarColors(bar, instance, r, g, b, a) --[[exported]] --~colors
 	a = a or 1
 
 	if (instance.row_info.texture_class_colors) then
@@ -3128,7 +3151,7 @@ end
 ---@param texture texture
 ---@param instance instance
 ---@param class string
-function Details:SetClassIcon(texture, instance, class) --[[ exported]]
+function Details:SetClassIcon(texture, instance, class) --[[exported]] --~icons
 	local customIcon
 	if (Details.immersion_unit_special_icons) then
 		customIcon = Details.Immersion.GetIcon(self.aID)
@@ -3224,7 +3247,7 @@ function Details:SetClassIcon(texture, instance, class) --[[ exported]]
 end
 
 
-function Details:RefreshBarra(thisLine, instance, fromResize) --[[ exported]]
+function Details:RefreshBarra(thisLine, instance, fromResize) --[[exported]]
 	local class, enemy, arenaEnemy, arenaAlly = self.classe, self.enemy, self.arena_enemy, self.arena_ally
 
 	if (not class) then
@@ -6441,6 +6464,7 @@ end
 
 		--sum total damage
 		overallActor.total = overallActor.total + actorObject.total
+		overallActor.total_extra = overallActor.total_extra + actorObject.total_extra
 		overallActor.totalabsorbed = overallActor.totalabsorbed + actorObject.totalabsorbed
 
 		--sum total damage without pet

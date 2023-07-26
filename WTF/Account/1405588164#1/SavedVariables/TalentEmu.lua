@@ -385,7 +385,7 @@ TalentEmuSV = {
 			["|cffc79c6e战士|r- |cff7fbfff武器37|r 狂怒 2 防护32"] = "!T329E111OUKI12QMJQ7kqsA1::EmUa85cUG",
 		},
 		["Player-4487-005CB746"] = "!T32210110!G32116++++++!E320+^+^+^+^+z1:81:9+^+^+iT1:81:9+jT1:81:9+^+^+^+^+^+^+^+uz2:81:9+^+8b:81:9+^",
-		["Player-4487-0051C667"] = "!T329E121LPoBoA:08Jn11fIt-9R674p7PSNU6::0UIB7::kSaa8Bgzs:PpV1!G3221w+9:2EC:G1u+-:k=C:C1u+-:4dE:81u+9:yDC:11u+-:j=C:01u+9:pDC:E1uw+9:7EC:A1u+-:4dE:81u+-:l=C:D1u+9:yDC:11u+-:m=C:=1u+9:VRD:C1u!E320+^+9o=:1dv:1q6-:1Bn9:5E1:9+tB=:2wk9:6E1:9+=o=:1Uv:1SG-:6E1:9+0t2:8E1:9+7o=:1sv:1Kz=:1SG-:5E1:9+DE=:2wk9:1wk9:1wk9:4E1:9+-o=:1jv:1Dn9:1jm9:5E1:9+r7=:1Ks:1wk9:1pm9:5E1:9+GZ=:15w:1jm9:6E1:9+q5=:1Is:1pm9:6E1:9+c8=:2SG-:6E1:9+mH=:2wk9:6E1:9+fB=:8E1:9+fT-:8E1:9+ED=:1Js:1wk9:1wk9:5E1:9+KZ=:1Bv:1jm9:1jm9:5E1:9+A7=:1Bv:1wk9:1wk9:5E1:9+k3=:2aA=:6E1:9+Db8:8E1:9",
+		["Player-4487-0051C667"] = "!T329E121LPoBoA:08Jn11fIt-9R674p7PSNU6::0UIB7::kSaa8Bgzs:PpV1!G3221w+9:2EC:G1u+-:k=C:C1u+-:4dE:81u+9:yDC:11u+-:j=C:01u+9:pDC:E1uw+9:7EC:A1u+-:4dE:81u+-:l=C:D1u+9:yDC:11u+-:m=C:=1u+9:VRD:C1u!E320+^+9o=:1dv:1q6-:1Bn9:5E1:9+tB=:2jm9:6E1:9+=o=:1Uv:1SG-:6E1:9+0t2:8E1:9+7o=:1sv:1Kz=:1SG-:5E1:9+DE=:2jm9:1jm9:1jm9:4E1:9+-o=:1jv:1Dn9:1jm9:5E1:9+VZ=:1Ks:1jm9:1pm9:5E1:9+GZ=:15w:1jm9:6E1:9+q5=:1Is:1pm9:6E1:9+c8=:2SG-:6E1:9+mH=:2jm9:6E1:9+fB=:8E1:9+fT-:8E1:9+ED=:1Js:1jm9:1jm9:5E1:9+KZ=:1Bv:1jm9:1jm9:5E1:9+A7=:1Bv:1wk9:1wk9:5E1:9+4Z=:2jm9:6E1:9+Db8:8E1:9",
 	},
 	["_version"] = 220811,
 	["_GlobalAssign"] = {

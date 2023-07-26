@@ -701,8 +701,8 @@ AtlasLootClassicDB = {
 				["selected"] = {
 					nil, -- [1]
 					"TrialoftheCrusader", -- [2]
-					nil, -- [3]
-					8, -- [4]
+					4, -- [3]
+					10, -- [4]
 					0, -- [5]
 				},
 			},

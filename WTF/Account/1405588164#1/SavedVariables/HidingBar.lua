@@ -1,6 +1,6 @@
 
 HidingBarDB = {
-	["tstmp"] = 1689860319,
+	["tstmp"] = 1690386869,
 	["profiles"] = {
 		{
 			["isDefault"] = true,
@@ -11,25 +11,25 @@ HidingBarDB = {
 						["tstmp"] = 1685116610,
 					},
 					["LibDBIcon10_BisTooltipIcon"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 12,
 					},
 					["LibDBIcon10_Decursive"] = {
 						["tstmp"] = 1685459075,
 					},
 					["LibDBIcon10_BugSack"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 23,
 					},
 					["LibDBIcon10_AutoBar"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 15,
 					},
 					["LibDBIcon10_HealBot"] = {
 						["tstmp"] = 1685116612,
 					},
 					["LibDBIcon10_DBM"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 17,
 					},
 					["LibDBIcon10_Attune_Broker"] = {
@@ -37,31 +37,31 @@ HidingBarDB = {
 						[2] = 14,
 					},
 					["LibDBIcon10_Plater"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 26,
 					},
 					["LibDBIcon10_WeakAuras"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 29,
 					},
 					["LibDBIcon10_Leatrix_Plus"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 24,
 					},
 					["LibDBIcon10_Myslot"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 25,
 					},
 					["WIM3MinimapButton"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 21,
 					},
 					["LibDBIcon10_Details"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 18,
 					},
 					["LibDBIcon10_HandyNotes_NPCs"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 22,
 					},
 					["LibDBIcon10_GSE GnomeSequencer-增强"] = {
@@ -74,7 +74,7 @@ HidingBarDB = {
 						["tstmp"] = 1686466940,
 					},
 					["LibDBIcon10_Leatrix_Maps"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 20,
 					},
 					["CodexBrowserIcon"] = {
@@ -87,27 +87,27 @@ HidingBarDB = {
 						["tstmp"] = 1684426755,
 					},
 					["LibDBIcon10_TalentEmu"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 28,
 					},
 					["LibDBIcon10_AtlasLoot"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 11,
 					},
 					["LibDBIcon10_DetailsStreamer"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 19,
 					},
 					["Lib_GPI_Minimap_LFGBulletinBoard"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 30,
 					},
 					["LibDBIcon10_Questie"] = {
-						["tstmp"] = 1689860320,
+						["tstmp"] = 1690386870,
 						[2] = 27,
 					},
 					["LibDBIcon10_AutoCombatLogger"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 16,
 					},
 					["LibDBIcon10_Hekili"] = {
@@ -116,7 +116,7 @@ HidingBarDB = {
 				},
 				["btnSettings"] = {
 					["AutoBar"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 3,
 					},
 					["RangeDisplay"] = {
@@ -126,49 +126,49 @@ HidingBarDB = {
 						["tstmp"] = 1686422258,
 					},
 					["WeakAuras"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 13,
 					},
 					["BisTooltipIcon"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 2,
 					},
 					["TradeSkillMaster"] = {
 						["tstmp"] = 1686466940,
 					},
 					["HandyNotes_NPCs"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 6,
 					},
 					["DBM"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 5,
 					},
 					["Decursive"] = {
 						["tstmp"] = 1685459075,
 					},
 					["TalentEmu"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 10,
 					},
 					["LFGBulletinBoard"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 8,
 					},
 					["AtlasLoot"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 1,
 					},
 					["HidingBar"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 7,
 					},
 					["Parrot"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 9,
 					},
 					["AutoCombatLogger"] = {
-						["tstmp"] = 1689860319,
+						["tstmp"] = 1690386869,
 						[2] = 4,
 					},
 					["HealBot"] = {

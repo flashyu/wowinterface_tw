@@ -6,13 +6,6 @@ X: 0
 Y: 0
 W: 365
 H: 240
-Frame: aux_frame
-FrameLevel: 1
-Anchor: TOP
-X: -234
-Y: -147
-W: 768
-H: 447
 Frame: GroupBulletinBoardFrame
 FrameLevel: 1
 Anchor: CENTER
@@ -20,3 +13,10 @@ X: 213
 Y: 136
 W: 800
 H: 501
+Frame: aux_frame
+FrameLevel: 1
+Anchor: TOP
+X: 27
+Y: -123
+W: 768
+H: 447
